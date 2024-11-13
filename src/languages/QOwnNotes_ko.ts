@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>포르투갈어 (브라질)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>포르투갈어</translation>
 </message>
 <message>
 <source>Romanian</source>

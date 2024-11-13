@@ -46,7 +46,7 @@ Ahora abra el archivo de configuración del administrador de fragmentos con:
 
 ```bash
 # Configurar el administrador de fragmentos
-control de calidad configurar
+qc configure
 ```
 
 Y coloque la ficha de seguridad en el atributo `token`:
@@ -57,7 +57,7 @@ token = "su_ficha_aquí"
 ```
 
 ::: tip
-En la configuración de QOwnNotes, también puede establecer qué etiqueta de nota se debe usar para buscar comandos en las notas. De forma predeterminada, se utiliza la etiqueta `comandos`.
+En la configuración de QOwnNotes, también puede establecer qué etiqueta de nota se debe usar para buscar comandos en las notas. De forma predeterminada, se utiliza la etiqueta `commands`.
 :::
 
 ## Sintaxis de fragmentos de comando
@@ -81,10 +81,10 @@ Los bloques de código **`bash` o `shell`**, precedidos por un encabezado 2 o su
     ## Haz esto con un bloque de código "bash"
 
     - este texto será ignorado
-    - pero se pueden usar etiquetas: #tag1 #tag2
+    - pero se pueden usar etiquetas: #etiqueta1 #etiqueta2
 
     ```bash
-    eco haz esto
+    echo haz esto
      echo haz eso
     ```
 
@@ -92,8 +92,8 @@ Los bloques de código **`bash` o `shell`**, precedidos por un encabezado 2 o su
     ## Realizar otra cosa con un bloque de código "sh"
 
     ```sh
-    eco haz otra cosa
-     echo hacer otra cosa
+    echo haz otra cosa
+     echo haz algo más
     ```
 
 El ejemplo anterior dará como resultado dos fragmentos de comando, el primero con los dos etiquetas `etiqueta1` y `etiqueta2`.

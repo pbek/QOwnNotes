@@ -3321,7 +3321,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Show %1 panel</source>
-<translation>Toon %1</translation>
+<translation>Paneel %1 weergeven</translation>
 </message>
 <message>
 <source>Show %1</source>

@@ -90,7 +90,7 @@ Si presiona <kbd>Ingrese</kbd> al final de una lista, se creará un nuevo elemen
 
 ## Enlaces
 
-Dos de los usos más simples de los enlaces son apuntar a páginas web u otras notas. There are multiple ways each of these links can look.
+Dos de los usos más simples de los enlaces son apuntar a páginas web u otras notas. Existen múltiples formas en las que cada uno de estos enlaces puede verse.
 
 ### Enlaces externos
 

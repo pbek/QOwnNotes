@@ -5,7 +5,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot.png" alt="Captura de pantalla de QOwnNotes" />
     <div class="sheet">
-      Edite sus notas con resaltado de rebajas, etiquetas de colores y subcarpetas
+      Edite sus notas con resaltado de Markdown, etiquetas de colores y subcarpetas
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -17,7 +17,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-vertical.png" alt="Vista vertical" />
     <div class="sheet">
-      Vea sus notas en una vista de rebaja vertical moviendo los paneles
+      Vea sus notas en una vista vertical de Markdown moviendo los paneles
     </div>
   </v-carousel-item>
   <v-carousel-item>

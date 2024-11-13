@@ -33,5 +33,5 @@ Si desea proponer un script para el **Repositorio de scripts**, siga las instruc
 Si necesita acceder a una determinada funcionalidad en QOwnNotes o tiene preguntas o ideas, abra un problema en la [página de problemas de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-Para iniciar sesión, puede usar el comando `script.log()` para iniciar sesión en el widget de registro.
+For logging, you can use the `script.log()` command to log to the *Log panel*, which you can turn on in the *Window / Panels* menu.
 :::

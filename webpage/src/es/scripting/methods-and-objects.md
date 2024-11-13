@@ -55,19 +55,19 @@ Iniciar un programa externo y esperar la salida
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Envoltorio QML para iniciar un proceso síncrono
-  *
-  * @param executablePath la ruta del ejecutable
-  * @param parámetros una lista de cadenas de parámetros
-  * @param data los datos que se escribirán en el proceso (opcional)
-  * @param workingDirectory el directorio de trabajo para ejecutar el proceso (opcional)
-  * @return el texto que devolvió el proceso
+ * Envoltorio de QML para iniciar un proceso sincrónico
+ *
+ * @param executablePath la ruta del ejecutable
+ * @param parameters una lista de cadenas de parámetros
+ * @param data los datos que se escribirán en el proceso (opcional)
+ * @param workingDirectory el directorio de trabajo para ejecutar el proceso (opcional)
+ * @return el texto que devolvió el proceso
 QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data, QString workingDirectory);
 ```
 
 ### Ejemplo
 ```js
-var result = script.startSynchronousProcess("/ruta/a/mi/programa", ["mi parámetro"], "datos", "/ruta/en/la/cual/ejecutar");
+var resultado = script.startSynchronousProcess("/ruta/a/mi/programa", ["mi parámetro"], "datos", "/ruta/en/la/cual/ejecutar");
 ```
 
 Puede que quiera echar un vistazo al ejemplo [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
@@ -78,10 +78,10 @@ Obtener la ruta de la carpeta de notas actual
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Envoltorio QML para obtener la ruta de la carpeta de notas actual
-  *
-  * @return la ruta de la carpeta de notas actual
-  */
+ * Envoltorio de QML para obtener la ruta de la carpeta de notas actual
+ *
+ * @return la ruta de la carpeta de notas actual
+ */
 QString currentNoteFolderPath ();
 ```
 
@@ -98,9 +98,9 @@ Obtener la nota actual
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Envoltorio QML para obtener la nota actual
-  *
-  * @returns {NoteApi} el objeto de nota actual
+ * Envoltorio de QML para obtener la nota actual
+ *
+ * @returns {NoteApi} el objeto de nota actual
  */
 NoteApi currentNote();
 ```
@@ -118,11 +118,11 @@ Iniciar sesión en el widget de registro
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Envoltorio QML para iniciar sesión en el widget de registro
-  *
-  * @param texto
-  */
-registro vacío (texto QString);
+ * Envoltorio de QML para iniciar sesión en el widget de registro
+ *
+ * @param text texto
+ */
+void log(QString text);
 ```
 
 ### Ejemplo
@@ -136,11 +136,11 @@ Descarga de una URL a una cadena
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Envoltorio QML para descargar una URL y devolverla como texto
-  *
-  * @param url
-  * @return {QString} el contenido de la URL descargada
-  */
+ * Envoltorio de QML para descargar una URL y devolverla como texto
+ *
+ * @param url
+ * @return {QString} el contenido de la URL descargada
+ */
 QString downloadUrlToString(QUrl url);
 ```
 

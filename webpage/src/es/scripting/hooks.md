@@ -57,10 +57,10 @@ Si esta función se define en varios scripts, entonces gana el primer script que
 ### Llamada y parámetros del método
 ```js
 /**
-  * @param fileName cadena la ruta del archivo de medios de origen antes de que se copiara a la carpeta de medios
-  * @param markdownText cadena el texto de la rebaja del archivo multimedia, p. ej. ! [mi-imagen] (media / mi-imagen-4101461585.jpg)
-  * @ return string el nuevo texto de rebaja del archivo multimedia
-  */
+ * @param fileName cadena la ruta del archivo de medios de origen antes de que se copiara a la carpeta de medios
+ * @param markdownText cadena el texto de Markdown del archivo multimedia, p. ej. ! [mi-imagen] (media/mi-imagen-4101461585.jpg)
+ * @ return string el nuevo texto de Markdown del archivo multimedia
+ */
 function insertMediaHook (fileName, markdownText);
 ```
 

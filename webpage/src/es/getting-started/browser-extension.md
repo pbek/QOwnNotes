@@ -35,7 +35,7 @@ Información Si web clipper no funciona, por favor revise si la aplicación de Q
 
 Además, asegúrese de aceptar el cuadro de diálogo de consentimiento, que se muestra la primera vez que pulsa sobre el icono de la extensión en la barra de herramientas del navegador.
 
-Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opcional `Acceder a sus datos en todos los sitios web` en la configuración *Permisos* de la extensión, o de lo contrario podría recibir el error `TypeError: chrome.tabs.captureVisibleTab no es una función`.
+Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opcional `Acceder a sus datos en todos los sitios web` en la configuración *Permisos* de la extensión. De lo contrario, podría recibir el error `TypeError: chrome.tabs.captureVisibleTab no es una función`.
 :::
 
 ::: tip
@@ -68,4 +68,4 @@ Los nuevos marcadores se almacenan en una nota llamada `Marcadores` (también mo
 * [Nombre de la página web] (https://www.ejemplo.com) el carácter de lista alternativo también funciona
 ```
 
-You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.
+Puede buscar nombres, etiquetas de URLs o descripciones en la extensión del navegador. In the current note all other links inside of text are parsed, but without tags or description.

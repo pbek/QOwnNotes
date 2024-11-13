@@ -33,5 +33,5 @@ Script {
 إذا كنت بحاجة إلى الوصول إلى وظيفة معينة في QOwnNotes أو لديك أسئلة أو أفكار، فيرجى فتح مسألة على [صفحة مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-For logging you can use the `script.log()` command to log to the log widget.
+For logging, you can use the `script.log()` command to log to the *Log panel*, which you can turn on in the *Window / Panels* menu.
 :::

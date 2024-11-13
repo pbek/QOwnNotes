@@ -62,7 +62,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
-    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
+    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> le permite buscar y reemplazar en la nota actual
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
@@ -121,7 +121,7 @@
 
 ### En la ventana principal
 
-- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
+- <kbd>⌘ Cmd</kbd> + <kbd>N</kbd> crea una nueva nota con la fecha y hora actuales en el nombre
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>N</kbd> crea una nueva nota en una nueva pestaña
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> le permite buscar notas (en el nombre de la nota y su contenido)
 - <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> le permite buscar notas en todas las etiquetas / subcarpetas
@@ -144,15 +144,15 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
     - también puede cerrarlo con <kbd>Esc</kbd>
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> imprime la nota actual como texto
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como rebaja
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pega notas, imágenes y html desde el portapapeles
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como Markdown
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pega notas, imágenes y HTML desde el portapapeles
 - <kbd>⌘ Cmd</kbd> + <kbd>,</kbd> abre la configuración
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> agrega una nueva etiqueta a una nota
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> recarga la carpeta de notas actual
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> te permite seleccionar una carpeta de notas diferente
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> le permite seleccionar una carpeta de notas diferente
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> recarga el motor de secuencias de comandos
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> oculta o muestra la barra de menú principal
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> te permite buscar acciones
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite buscar acciones
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> guarda manualmente las notas modificadas
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> abre el cuadro de diálogo del repositorio de scripts
 - <kbd>F4</kbd> salta al panel de edición de notas
@@ -196,7 +196,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserta una cita en bloque en la posición actual
 - <kbd>⌘ Cmd</kbd> + <kbd>B</kbd> da formato al texto seleccionado en negrita
 - <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> formatea el texto seleccionado en cursiva
-- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formatea el subrayado del texto seleccionado
+- <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> subraya el texto seleccionado
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> tacha el texto seleccionado
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
 - <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
@@ -224,7 +224,7 @@
 ### En el panel de vista previa de notas
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
-    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y Teclas <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
+    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 
 ### En la lista de tareas pendientes

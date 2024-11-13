@@ -2344,7 +2344,7 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation>Activar funciones IA</translation>
+<translation>Activar funciones de IA</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2360,7 +2360,7 @@
 </message>
 <message>
 <source>Autocomplete, solve equation or open URL</source>
-<translation>Autocompletar, resolver ecuación o abrir LRU</translation>
+<translation>Autocompletar, resolver ecuación o abrir URL</translation>
 </message>
 <message>
 <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
@@ -2380,7 +2380,7 @@
 </message>
 <message>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-<translation>Abrir el canal Gitter de qownnotes, necesitas una cuenta de GitHub o Twitter para iniciar sesión, pero puedes recibir mensajes estando desconectado</translation>
+<translation>Abrir el canal Gitter de qownnotes. Requiere de una cuenta de GitHub o Twitter para iniciar sesión, pero puede recibir mensajes sin conexión</translation>
 </message>
 <message>
 <source>Open chat</source>
@@ -3985,7 +3985,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
-<translation>Por favor, selecciona la carpeta donde se guardarán tus notas</translation>
+<translation>Por favor, seleccione la carpeta donde se guardarán sus notas</translation>
 </message>
 <message>
 <source>Folder will be hidden!</source>
@@ -4047,11 +4047,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>No se encontró la nota, ¿crear nueva nota &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>No se encontró la nota. ¿Desea crear una nueva nota &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>No se encontró la nota ¿Crear una nota nueva &lt;strong&gt;%1&lt;/strong&gt; en la ruta &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>No se encontró la nota. ¿Desea crear una nota nueva &lt;strong&gt;%1&lt;/strong&gt; en la ruta &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Failed to create note</source>
@@ -4074,7 +4074,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>An url was opened at the current cursor position</source>
-<translation>Se abrió un Lru en la posición actual del cursor</translation>
+<translation>Se abrió una URL en la posición actual del cursor</translation>
 </message>
 <message>
 <source>No equation was found in front of the cursor</source>
@@ -4414,7 +4414,7 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-<translation>¡Tu plataforma no es compatible con este script! ¿Deseas instalarlo de todas formas?</translation>
+<translation>¡Su plataforma no es compatible con esta secuencia de órdenes! ¿Desea instalarla de todas formas?</translation>
 </message>
 <message>
 <source>Cancel</source>
@@ -4891,7 +4891,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Your scripts</source>
-<translation>Tus scripts</translation>
+<translation>Sus scripts</translation>
 </message>
 <message>
 <source>&amp;Remove script</source>
@@ -4943,7 +4943,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Path where your notes are stored locally</source>
-<translation>Ruta donde tus notas se almacenan localmente</translation>
+<translation>Ruta donde sus notas se almacenan localmente</translation>
 </message>
 <message>
 <source>"Notes" path on your server</source>
@@ -4976,7 +4976,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Use git to keep a local history of your notes</source>
-<translation>Usar git para mantener un historial local de tus notas</translation>
+<translation>Usar git para mantener un historial local de sus notas</translation>
 </message>
 <message>
 <source>ownCloud support</source>
@@ -5064,7 +5064,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Which cloud connection do you want to use?</source>
-<translation>¿Cuál conexión con la nube desea utilizar?</translation>
+<translation>¿Qué conexión a la nube desea utilizar?</translation>
 </message>
 <message>
 <source>Select the calendars you want to use for the Todo list</source>
@@ -5396,7 +5396,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation>Puede acceder a su servidor ownCloud desde dentro de la aplicación, por ejemplo, para administrar las notas descartadas y las versiones de las notas o para compartir notas. Esta integración no sincroniza archivos de notas. Todavía necesita instalar el cliente de sincronización ownCloud para sincronizar los archivos.</translation>
+<translation>Puede acceder a su servidor ownCloud desde dentro de la aplicación, por ejemplo, para administrar las notas descartadas y las versiones de las notas o para compartir notas. Esta integración no sincroniza los archivos de notas. Todavía necesita instalar el cliente de sincronización ownCloud para sincronizar los archivos.</translation>
 </message>
 <message>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
@@ -5404,11 +5404,11 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation>Habilitar la aplicación QOwnNotesAPI</translation>
+<translation>Habilitar soporte de la aplicación QOwnNotesAPI</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation>Si su contraseña no funciona, cree una contraseña de aplicación (botón a la derecha)</translation>
+<translation>Si su contraseña no funciona, cree una contraseña para la aplicación (botón a la derecha)</translation>
 </message>
 <message>
 <source>Cancel Nextcloud login</source>
@@ -5416,7 +5416,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation>Activar el soporte Nextcloud Deck</translation>
+<translation>Activar el soporte de Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5513,7 +5513,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Note file extensions</source>
-<translation>Tenga en cuenta las extensiones de archivo</translation>
+<translation>Extensiones de archivos de notas</translation>
 </message>
 <message>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
@@ -5549,7 +5549,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Please use this in the issue tracker</source>
-<translation>Por favor, usa esto en el sistema de segumiento de incidentes</translation>
+<translation>Por favor, use esto en el sistema de segumiento de incidentes</translation>
 </message>
 <message>
 <source>&amp;Copy debug information to clipboard</source>
@@ -5557,7 +5557,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Please don't use this in the issue tracker</source>
-<translation>Por favor, no uses esto en el sistema de segumiento de incidentes</translation>
+<translation>Por favor, no use esto en el sistema de segumiento de incidentes</translation>
 </message>
 <message>
 <source>Time to wait before refreshing the preview after typing:</source>
@@ -5738,11 +5738,11 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation>Puede usar la &lt;a href="%1"&gt;aplicación web QOwnNotes&lt;/a&gt; para poder insertar fotos en QOwnNotes en su escritorio desde su teléfono móvil a través de Internet.</translation>
+<translation>Puede usar la &lt;a href="%1"&gt;aplicación web de QOwnNotes&lt;/a&gt; para poder insertar fotos en QOwnNotes en su escritorio desde su teléfono móvil a través de Internet.</translation>
 </message>
 <message>
 <source>QOwnNotes web application</source>
-<translation>Aplicación web QOwnNotes</translation>
+<translation>Aplicación web de QOwnNotes</translation>
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
@@ -5822,7 +5822,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-<translation>Los paneles se pueden activar y desactivar en el menú principal &lt;i&gt;Ventana / Paneles&lt;/i&gt; y también puedes configurar distintos &lt;i&gt;Espacios de Trabajo&lt;/i&gt; para diferentes configuraciones de paneles.</translation>
+<translation>Los paneles se pueden activar y desactivar en el menú principal &lt;i&gt;Ventana / Paneles&lt;/i&gt;. También puede configurar distintos &lt;i&gt;Espacios de Trabajo&lt;/i&gt; para diferentes configuraciones de paneles.</translation>
 </message>
 <message>
 <source>Bookmarks</source>
@@ -5842,7 +5842,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>Por defecto la extensión del navegador mostrará todos los enlaces de la nota actual. También puedes hacer que muestre enlaces especiales a marcadores de notas con una cierta etiqueta. Para obtener más información acerca de la sintaxis de enlaces de marcador, haz clic &lt;a href="%1"&gt;aquí&lt;/a&gt;.</translation>
+<translation>Por defecto la extensión del navegador mostrará todos los enlaces de la nota actual. También puede hacer que muestre enlaces especiales a marcadores de notas con una cierta etiqueta. Para obtener más información acerca de la sintaxis de enlaces de marcador, haga clic &lt;a href="%1"&gt;aquí&lt;/a&gt;.</translation>
 </message>
 <message>
 <source>Bookmarks note name:</source>
@@ -5935,7 +5935,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-<translation>Aquí puedes establecer un nuevo diseño. Ten en cuenta que siempre puedes modificar la posición de los paneles con el botón &lt;i&gt;Desbloquear paneles&lt;/i&gt;.</translation>
+<translation>Aquí puede establecer un nuevo diseño. Tenga en cuenta que siempre puede modificar la posición de los paneles con el botón &lt;i&gt;Desbloquear paneles&lt;/i&gt;.</translation>
 </message>
 <message>
 <source>Reset the cursor width</source>
@@ -5948,12 +5948,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Escribe el comando para mostrar el registro de git (por ejemplo, "gitk")</translation>
+<translation>Escriba un comando para mostrar su registro de git (por ejemplo, "gitk")</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Si utilizas esta configuración tendrás una entrada nueva de menú para mostrar las versiones git al hacer clic derecho en una nota.</translation>
+<translation>Si utiliza esta configuración, tendrá una entrada nueva de menú para mostrar las versiones de git al hacer clic derecho en una nota.</translation>
 </message>
 <message>
 <source>Show all notes of a tag including the notes of their children-tags</source>
@@ -6038,7 +6038,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Opcionalmente puedes utilizar "%notePath%" para indicar la ruta hacia la nota.</translation>
+<translation>Opcionalmente puede utilizar "%notePath%" para indicar la ruta hacia la nota.</translation>
 </message>
 <message>
 <source>Git client</source>
@@ -6050,7 +6050,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Path to git client, leave empty for default</source>
-<translation>Ruta al cliente git, deja en blanco para utilizar por defecto</translation>
+<translation>Ruta al cliente de git. Déjelo en blanco para utilizar el predeterminado</translation>
 </message>
 <message>
 <source>Commit interval</source>
@@ -6075,7 +6075,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Which calendar backend do you want to use?</source>
-<translation>¿Qué servidor de calendarios deseas utilizar?</translation>
+<translation>¿Qué servidor de calendarios desea utilizar?</translation>
 </message>
 <message>
 <source>For most current ownCloud and Nextcloud installations</source>
@@ -6095,15 +6095,15 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Calendar base url:</source>
-<translation>LRU base del calendario:</translation>
+<translation>URL base del calendario:</translation>
 </message>
 <message>
 <source>Please enter the CalDAV base url to your calendar.</source>
-<translation>Introduce el LRU base de CalDAV de tu calendario.</translation>
+<translation>Por favor introduzca la URL base de CalDAV de su calendario.</translation>
 </message>
 <message>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-<translation>Por favor, introduce la contraseña para tu nombre de usuario CalDAV.&lt;br/&gt;Actualmente la contraseña se guardará encriptada con los otros valores, pero no es muy seguro.</translation>
+<translation>Por favor, introduzca la contraseña para su nombre de usuario de CalDAV.&lt;br/&gt;Actualmente la contraseña se guardará encriptada con los otros valores, pero esto no es muy seguro.</translation>
 </message>
 <message>
 <source>Czech</source>
@@ -6203,7 +6203,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
-<translation>Aquí puedes configurar tu propio formato para insertar la hora actual en una nota.</translation>
+<translation>Aquí puede configurar su propio formato para insertar la hora actual en una nota.</translation>
 </message>
 <message>
 <source>Insert current time</source>
@@ -6215,7 +6215,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-<translation>Ingresa tu formato de hora personalizado, como "dd.MM.yyyy hh:mm"</translation>
+<translation>Ingrese su formato de hora personalizado, como "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <source>Editor options</source>
@@ -6235,23 +6235,23 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Your CalDAV calendar base url</source>
-<translation>LRU base del calendario CalDAV</translation>
+<translation>URL base del calendario CalDAV</translation>
 </message>
 <message>
 <source>Please enter the username of your CalDAV server.</source>
-<translation>Por favor, introduce tu nombre de usuario del servidor CalDAV.</translation>
+<translation>Por favor, introduzca su nombre de usuario de su servidor CalDAV.</translation>
 </message>
 <message>
 <source>Your CalDAV username</source>
-<translation>Tu nombre de usuario de CalDAV</translation>
+<translation>Su nombre de usuario de CalDAV</translation>
 </message>
 <message>
 <source>Your CalDAV password</source>
-<translation>Tu contraseña de CalDAV</translation>
+<translation>Su contraseña de CalDAV</translation>
 </message>
 <message>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-<translation>Esto hace que todas las listas de tareas se vuelvan a cargar desde el servidor la próxima vez que abras el diálogo de tareas.</translation>
+<translation>Esto hace que todas las listas de tareas se vuelvan a cargar desde el servidor la próxima vez que abra el diálogo de tareas.</translation>
 </message>
 <message>
 <source>Empty calendar item cache</source>
@@ -6259,7 +6259,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Click here to reload the list of calendars from your calendar server.</source>
-<translation>Haz clic aquí para recargar la lista de calendarios desde el servidor de calendarios.</translation>
+<translation>Haga clic aquí para recargar la lista de calendarios desde su servidor de calendarios.</translation>
 </message>
 <message>
 <source>&amp;Reload calendar list</source>
@@ -6267,7 +6267,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>You may need to restart the application to let these changes take effect</source>
-<translation>Puede que necesites reiniciar la aplicación para que estos cambios se apliquen</translation>
+<translation>Puede que necesite reiniciar la aplicación para que estos cambios se apliquen</translation>
 </message>
 <message>
 <source>Toolbar icon size:</source>
@@ -6430,11 +6430,11 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-<translation>Por favor, no uses esto en el sistema de segumiento de incidentes, copia el texto de la información de depuración directamente en el informe de incidente.</translation>
+<translation>Por favor, no use esto en el sistema de segumiento de incidentes. Copie el texto de la información de depuración directamente en el informe de incidente.</translation>
 </message>
 <message>
 <source>Markdown files</source>
-<translation>Archivos markdown</translation>
+<translation>Archivos Markdown</translation>
 </message>
 <message>
 <source>Disable usage tracking</source>
@@ -6442,7 +6442,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-<translation>Los datos de uso anónimos ayudan a decidir qué partes de QOwnNotes mejorar primero, y encontrar y arreglar errores.&lt;br /&gt; Por favor deshabilitalo sólo si realmente no puedes vivir con ello.&lt;br /&gt;&lt;br /&gt; ¿Deshabilitar el seguimiento de uso?</translation>
+<translation>Los datos de uso anónimos ayudan a decidir qué partes de QOwnNotes mejorar primero, y encontrar y arreglar errores.&lt;br /&gt; Por favor, deshabilítelo sólo si realmente no puede vivir con ello.&lt;br /&gt;&lt;br /&gt; ¿Deshabilitar el seguimiento de uso?</translation>
 </message>
 <message>
 <source>new folder</source>
@@ -6474,11 +6474,11 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Echa un vistazo a la &lt;a href="%1"&gt;documentación de Scripting&lt;/a&gt; para empezar rápido.</translation>
+<translation>Eche un vistazo a la &lt;a href="%1"&gt;documentación de Scripting&lt;/a&gt; para empezar rápidamente.</translation>
 </message>
 <message>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Si necesitas acceso a una cierta funcionalidad en QOwnNotes por favor abre un tema en la &lt;a href="%1"&gt;página de problemas de QOwnNotes&lt;/a&gt;.</translation>
+<translation>Si requiere acceso a una cierta funcionalidad en QOwnNotes, por favor abra un tema en la &lt;a href="%1"&gt;página de problemas de QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
 <source>Check for script updates</source>
@@ -6603,7 +6603,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>¿Quitar el script actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>¿Eliminar el script actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>QML files</source>
@@ -6673,7 +6673,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Please select the path of your git executable</source>
-<translation>Por favor, selecciona la ruta al ejecutable git</translation>
+<translation>Por favor, seleccione la ruta de su ejecutable git</translation>
 </message>
 <message>
 <source>Do you really want to reset the overrides of all message boxes?</source>
@@ -6685,7 +6685,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Puedes descargar un cliente git desde aquí: &lt;a href="%url"&gt;Git para Windows&lt;/a&gt;</translation>
+<translation>Puede descargar un cliente de git desde aquí: &lt;a href="%url"&gt;Git para Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <source>enabled</source>
@@ -6717,7 +6717,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-<translation>Se activará si ejecutas QOwnNotes con el parámetro &lt;code&gt;--portable&lt;/code&gt;.</translation>
+<translation>Se activará si ejecuta QOwnNotes con el parámetro &lt;code&gt;--portable&lt;/code&gt;.</translation>
 </message>
 <message>
 <source>Save debug information</source>
@@ -6739,7 +6739,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-<translation>Encontrarás un archivo &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; en la ruta de tu versión para ejecutar QOwnNotes en modo portátil.</translation>
+<translation>Encontrará un archivo &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; en la ruta de su versión para ejecutar QOwnNotes en modo portátil.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
@@ -6774,7 +6774,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation>Compartir públicamente el archivo de nota actual en tu servidor de ownCloud. Puedes enviar el enlace generado a otros para que puedan ver o descargar el archivo.</translation>
+<translation>Compartir públicamente el archivo de nota actual en tu servidor de ownCloud. Puede enviar el enlace generado a otros para que puedan ver o descargar el archivo.</translation>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
@@ -6876,7 +6876,7 @@ Your notes will stay intact!</source>
 <message>
 <source>with yeyo, modern and old russian</source>
 <comment>dictionary variant</comment>
-<translation>con yeyo, rudo moderno y antiguo</translation>
+<translation>con yeyo, ruso moderno y antiguo</translation>
 </message>
 <message>
 <source>with yo, old russian</source>
@@ -6936,11 +6936,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation>Solo mostrar adjuntos que son usados en la nota actual</translation>
+<translation>Mostrar solo adjuntos que son usados en la nota actual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation>Solo mostrar de la nota actual</translation>
+<translation>Mostrar solo de la nota actual</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -6980,7 +6980,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Last modified at %1</source>
-<translation>Modificado por última vez en %1</translation>
+<translation>Modificado por última vez el %1</translation>
 </message>
 <message>
 <source>Path: %1</source>
@@ -7090,11 +7090,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation>Solo mostrar imágenes usadas en la nota actual</translation>
+<translation>Mostrar solo imágenes usadas en la nota actual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation>Solo mostrar de nota actual</translation>
+<translation>Mostrar solo de la nota actual</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7110,7 +7110,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Last modified at %1</source>
-<translation>Modificado por última vez en %1</translation>
+<translation>Modificado por última vez el %1</translation>
 </message>
 <message>
 <source>Path: %1</source>
@@ -7133,7 +7133,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation>El archivo &lt;strong&gt;%1&lt;/strong&gt; no existe, no puede cambiarle el nombre.</translation>
+<translation>El archivo &lt;strong&gt;%1&lt;/strong&gt; no existe, ¡no puede renombrarlo!</translation>
 </message>
 <message>
 <source>File exists</source>
@@ -7228,7 +7228,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Please select the CSV file you want to import:</source>
-<translation>Por favor, selecciona el archivo CSV que deseas importar:</translation>
+<translation>Por favor, seleccione el archivo CSV que desea importar:</translation>
 </message>
 <message>
 <source>Import clipboard</source>
@@ -7684,15 +7684,15 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>¡Su ejecutable de QOwnNotes '%1' no se puede escribir! El usuario actual debe poder escribirlo para poder actualizarlo.</translation>
+<translation>¡Su ejecutable de QOwnNotes '%1' no posee permisos de escritura! El usuario actual debe poder escribir en él para poder actualizarlo.</translation>
 </message>
 <message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation>¡El archivo temporal '%1' no se pudo convertir en ejecutable! Debe reemplazar '%2' usted mismo.</translation>
+<translation>¡El archivo temporal '%1' no pudo ser convertido en ejecutable! Debe reemplazar '%2' por su propia cuenta.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>¡Su ejecutable antiguo de QOwnNotes '%1' no pudo ser eliminado! Necesita reemplazarlo por su propia cuenta con '%2'.</translation>
 </message>
 <message>
 <source>Restart application</source>
@@ -7736,11 +7736,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation>¡Su viejo ejecutable QOwnNotes '%1' no pudo ser reemplazado por el nuevo archivo '%2'! Necesitas reemplazarlo tú mismo.</translation>
+<translation>¡Su viejo ejecutable QOwnNotes '%1' no pudo ser reemplazado por el nuevo archivo '%2'! Necesita reemplazarlo por su propia cuenta.</translation>
 </message>
 <message>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation>¡El archivo de la aplicación '%1' no se pudo hacer ejecutable! Necesitas hacerlo ejecutable tú mismo.</translation>
+<translation>¡El archivo de la aplicación '%1' no pudo ser convertido en ejecutable! Necesita convertirlo en ejecutable por su propia cuenta.</translation>
 </message>
 <message>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
@@ -7801,7 +7801,7 @@ This cannot be undone!</source>
 <name>WebAppClientService</name>
 <message>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation>QOwnNotes est maintenant connecté via websocket à %1</translation>
+<translation>QOwnNotes ahora está conectado por medio de websocket a %1</translation>
 </message>
 <message>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
@@ -7943,11 +7943,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>Si deseas poder acceder a las versiones de tus notas y a notas eliminadas en tu servidor de ownCloud, puedes configurar QOwnNotes para ello ahora. También puedes hacerlo después.</translation>
+<translation>Si desea poder acceder a las versiones de sus notas y a notas eliminadas en su servidor de ownCloud, ahora puede configurar QOwnNotes para ello. También puede hacerlo más tarde.</translation>
 </message>
 <message>
 <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-<translation>En todo caso, necesitas el cliente de sincronización de ownCloud (u otro cliente de sincronización) para sincronizar tus notas con el servidor de ownCloud.</translation>
+<translation>En todo caso, necesita el cliente de sincronización de ownCloud (u otro cliente de sincronización) para sincronizar sus notas con el servidor de ownCloud.</translation>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
@@ -7971,7 +7971,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-<translation>¡Ten en cuenta que la carpeta de notas se almacenará relativa al directorio donde reside QOwnNotes en modo portable! Así que debe alojarse en el mismo disco.</translation>
+<translation>¡Tenga en cuenta que la carpeta de notas se almacenará relativa al directorio donde reside QOwnNotes en modo portable! Así que debe alojarse en el mismo disco.</translation>
 </message>
 </context>
 <context>
@@ -8002,7 +8002,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Triggers a menu action after the application was started.</source>
-<translation>Activa una acción de menú después de que se inició la aplicación.</translation>
+<translation>Activa una acción de menú después de que se inicie la aplicación.</translation>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
@@ -8010,7 +8010,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
-<translation>¡El modo de aplicación única no es compatible con tu sistema!</translation>
+<translation>¡El modo de aplicación única no es compatible con su sistema!</translation>
 </message>
 <message>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>

@@ -33,5 +33,5 @@ Ha javaslatot akarsz tenni egy szkriptre a **parancsfájl-adattár**hoz, kérjü
 Ha hozzáférésre van szüksége a QOwnNotes bizonyos funkcióihoz, vagy kérdései vagy ötletei vannak, kérjük, nyisson meg egy problémát a [QOwnNotes probléma oldalán](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-Naplózáshoz a ` script.log () ` paranccsal jelentkezhet be a napló widgetbe.
+For logging, you can use the `script.log()` command to log to the *Log panel*, which you can turn on in the *Window / Panels* menu.
 :::

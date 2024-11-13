@@ -40,7 +40,7 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **almacena notas** en su carpeta de notas **como archivos de rebajas**
+- QOwnNotes **almacena notas** en su carpeta de notas **como archivos de Markdown**
 - Puede hablar con su servidor Nextcloud / ownCloud **para compartir notas** públicamente con otras personas
 - También puede **acceder a su historial de notas y a la papelera** en su servidor Nextcloud / ownCloud a través de la [aplicación QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
 - Se puede acceder a las listas de tareas en su servidor Nextcloud / ownCloud desde QOwnNotes
@@ -48,7 +48,7 @@ graph TB
     - La sincronización de archivos es una tarea compleja, ya existen excelentes soluciones de sincronización de archivos (consulte [Cliente de sincronización de escritorio de Nextcloud](#nextcloud-desktop-sync-client))
 
 
-## Archivos de notas de rebajas
+## Archivos de notas de Markdown
 
 - ¡Tú eres **dueño** de todas tus notas y archivos multimedia / adjuntos!
 - Sus notas se almacenan como **archivos Markdown de texto sin formato** en su computadora de escritorio
@@ -61,7 +61,7 @@ graph TB
 Puede administrar los **marcadores de su navegador** con QOwnNotes o usarlo como **web clipper**.
 
 ::: tip
-Las extensiones del navegador funcionan ** sin conexión **, no se necesita conexión a Internet. Por favor visite la [ extensión del navegador QOwnNotes Web Companion](browser-extension.md) para mayor información.
+Las extensiones del navegador funcionan **fuera de línea**. No se requiere de una conexión a Internet. Por favor visite la [ extensión del navegador QOwnNotes Web Companion](browser-extension.md) para mayor información.
 :::
 
 ## Administrador de fragmentos de la línea de comandos de QOwnNotes
@@ -104,12 +104,12 @@ Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o B
 Por favor visite [Aplicación QOwnNotesAPI Nextcloud](qownnotesapi.md) para mayor información.
 :::
 
-## Aplicación de servidor Nextcloud Notes
+## Aplicación de servidor de Nextcloud Notes
 
 Utilice [**Nextcloud Notes**](https://github.com/nextcloud/notes) para editar sus notas en la **web**.
 
 ::: warning
-Tenga en cuenta que Nextcloud Notes actualmente solo admite hasta un nivel de subcarpetas.
+Tenga en cuenta que Nextcloud Notes actualmente solo admite un nivel de subcarpetas.
 :::
 
 ## Aplicación de Nextcloud Deck para servidores
@@ -118,14 +118,14 @@ Es posible utilizar QOwnNotes para crear con rapidez **tarjetas** en [**Nextclou
 
 ## Aplicación móvil Nexcloud Notes
 
-To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
+Para acceder a sus notas de Nextcloud / ownCloud desde su **dispositivo móvil**, puede utilizar diferentes aplicaciones.
 
 ### Android
 
 - [ Nextcloud Notes para Android ](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (terceros)
 
 ::: tip
-You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
+También puede usar cualquier herramienta de sincronización, como *Synchronize Ultimate* o *FolderSync*, para sincronizar sus archivos de notas, y usar software como *neutriNotes* para editarlas.
 :::
 
 ### iOS
