@@ -56,6 +56,7 @@ done
 echo "Copying to src/images"
 cp icon.png ${SRC_IMAGES_DIR}/icon.png
 cp ${INPUT_DARK_SVG} ${SRC_IMAGES_DIR}/icon-dark.svg
+cp ${INPUT_SVG} ${SRC_IMAGES_DIR}/icons/scalable/apps/QOwnNotes.svg
 convert_icon 128 ${SRC_IMAGES_DIR}/icon-dark.png ${INPUT_DARK_SVG}
 
 echo "Icon conversion complete!"

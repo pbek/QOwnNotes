@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 24.11.3
+- A missing icon variation was added (for [#3147](https://github.com/pbek/QOwnNotes/issues/3147))
+
 ## 24.11.2
 - Some effort was made to make the application icon look better on dark backgrounds
   (for [#3147](https://github.com/pbek/QOwnNotes/issues/3147))
