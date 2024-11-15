@@ -23,7 +23,7 @@ if [ ! -f "$INPUT_DARK_SVG" ]; then
 fi
 
 # Function to convert images
-convert_icon() {
+convert_icon_png() {
     local size=$1
     local output_file=$2
     local input_file=$3
@@ -33,25 +33,52 @@ convert_icon() {
         input_file=$INPUT_SVG
     fi
 
-    echo "Converting to ${size}x${size} -> ${output_file}"
+    echo "PNG converting to ${size}x${size} -> ${output_file}"
 #    magick "$input_file" -resize "${size}x${size}" "$output_file"
     rsvg-convert -w "$size" -h "$size" "$input_file" -o "$output_file"
 }
 
+convert_icon_ico() {
+    local output_file=$1
+    local input_file=$2
+
+    # Use fallback to $INPUT_SVG if no local input file is provided
+    if [ -z "$input_file" ]; then
+        input_file=$INPUT_SVG
+    fi
+
+    echo "ICO converting to -> ${output_file}"
+    magick -density 300 -define icon:auto-resize=256,128,96,64,48,32,16 -background none "$input_file" "$output_file"
+}
+
+convert_icon_icns() {
+    local output_file=$1
+    local input_file=$2
+
+    # Use fallback to $INPUT_SVG if no local input file is provided
+    if [ -z "$input_file" ]; then
+        input_file=$INPUT_SVG
+    fi
+
+    echo "ICNS converting to -> ${output_file}"
+#    magick -density 300 -define icon:auto-resize=1024,512,256,128,96,64,48,32,16 -background none "$input_file" "$output_file"
+    magick "$input_file" -resize "1024x1024" "$output_file"
+}
+
 # Generate all sizes
-convert_icon 128 "icon.png"
-convert_icon 16 "icon.icns"
-convert_icon 48 "icon.ico"
-convert_icon 800 "icon-800.png"
-convert_icon 512 "../snap/gui/QOwnNotes.png"
-convert_icon 512 "../build-systems/github/snap.qt6/gui/QOwnNotes.png"
-convert_icon 512 "../build-systems/snap/snapcraft/snap/gui/QOwnNotes.png"
-convert_icon 16 "../src/QOwnNotes.icns"
-convert_icon 48 "../src/QOwnNotes.ico"
+convert_icon_png 128 "icon.png"
+convert_icon_icns "icon.icns"
+convert_icon_ico "icon.ico"
+convert_icon_png 800 "icon-800.png"
+convert_icon_png 512 "../snap/gui/QOwnNotes.png"
+convert_icon_png 512 "../build-systems/github/snap.qt6/gui/QOwnNotes.png"
+convert_icon_png 512 "../build-systems/snap/snapcraft/snap/gui/QOwnNotes.png"
+convert_icon_icns "../src/QOwnNotes.icns"
+convert_icon_ico "../src/QOwnNotes.ico"
 
 # Generate app icons
 for size in "${SIZES_APP[@]}"; do
-    convert_icon ${size} "${SRC_IMAGES_DIR}/icons/${size}x${size}/apps/${APP_NAME}.png"
+    convert_icon_png ${size} "${SRC_IMAGES_DIR}/icons/${size}x${size}/apps/${APP_NAME}.png"
 done
 
 # Copy to src/images
@@ -59,6 +86,6 @@ echo "Copying to src/images"
 cp icon.png ${SRC_IMAGES_DIR}/icon.png
 cp ${INPUT_DARK_SVG} ${SRC_IMAGES_DIR}/icon-dark.svg
 cp ${INPUT_SVG} ${SRC_IMAGES_DIR}/icons/scalable/apps/QOwnNotes.svg
-convert_icon 128 ${SRC_IMAGES_DIR}/icon-dark.png ${INPUT_DARK_SVG}
+convert_icon_png 128 ${SRC_IMAGES_DIR}/icon-dark.png ${INPUT_DARK_SVG}
 
 echo "Icon conversion complete!"

@@ -26,6 +26,7 @@
       gnused
       ripgrep
       librsvg
+      imagemagick
     ];
 
     buildInputs = with pkgs; with qt6; [
