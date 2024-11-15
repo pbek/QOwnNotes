@@ -46,6 +46,8 @@ convert_icon 800 "icon-800.png"
 convert_icon 512 "../snap/gui/QOwnNotes.png"
 convert_icon 512 "../build-systems/github/snap.qt6/gui/QOwnNotes.png"
 convert_icon 512 "../build-systems/snap/snapcraft/snap/gui/QOwnNotes.png"
+convert_icon 16 "../src/QOwnNotes.icns"
+convert_icon 48 "../src/QOwnNotes.ico"
 
 # Generate app icons
 for size in "${SIZES_APP[@]}"; do
