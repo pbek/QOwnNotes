@@ -27,6 +27,7 @@
       ripgrep
       librsvg
       imagemagick
+      libicns
     ];
 
     buildInputs = with pkgs; with qt6; [

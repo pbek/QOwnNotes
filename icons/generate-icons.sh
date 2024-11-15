@@ -61,8 +61,14 @@ convert_icon_icns() {
     fi
 
     echo "ICNS converting to -> ${output_file}"
-#    magick -density 300 -define icon:auto-resize=1024,512,256,128,96,64,48,32,16 -background none "$input_file" "$output_file"
-    magick "$input_file" -resize "1024x1024" "$output_file"
+
+    mkdir iconset
+    for size in 16 32 64 128 256 512 1024; do
+        rsvg-convert -w $size -h $size $INPUT_SVG -o iconset/icon_${size}x${size}.png
+    done
+
+    png2icns "$output_file" iconset/*.png
+    rm -rf iconset
 }
 
 # Generate all sizes
