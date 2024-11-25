@@ -334,12 +334,12 @@ Este gancho se llama cuando se envían datos desde la extensión del navegador Q
 ### Llamada y parámetros del método
 ```js
 /**
- * @param requestType can be "page" or "selection"
- * @param pageUrl the url of the webpage where the request was made
- * @param pageTitle the page title of the webpage where the request was made
- * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
- * @param screenshotDataUrl the data url of the screenshot of the webpage where the request was made
- * @return true if data was handled by a hook
+ * @param requestType puede ser "página" o "selección"
+ * @param pageUrl la URL de la página web donde se realizó la solicitud
+ * @param pageTitle el título de la página web donde se realizó la solicitud
+ * @param rawData los datos que se transmitieron, HTML para requestType "página" o texto sin formato para requestType "selección"
+ * @param screenshotDataUrl la URL de datos de la captura de pantalla de la página web donde se realizó la solicitud
+ * @return verdadero si los datos fueron manejados por un gancho
  */
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
@@ -405,26 +405,26 @@ openAiBackendsHook
 
 Este gancho se llama cuando el servicio de OpenAI se vuelve a cargar. Por ejemplo, esto también sucede cuando el motor de scripts se vuelve a cargar.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
+Puede usarlo para proveer una configuración para motores de OpenAI personalizados, como su propio LLMs compatible con OpenAI.
 
 ### Llamada y parámetros del método
 ```js
 /**
- * This function is called when the OpenAI service config is reloaded
- * It returns a list of objects with config parameters for new OpenAI backends
+ * Esta función se llama cuando se recarga la configuración del servicio de OpenAI
+ * Devuelve una lista de objetos con parámetros de configuración para nuevos motores de OpenAI
  */
 function openAiBackendsHook() {
     return [
         {
-            "id": "my-custom-ai",
-            "name": "My Custom AI",
+            "id": "my-ia-personalizada",
+            "name": "Mi IA personalizada",
             "baseUrl": "http://localhost:5000",
             "apiKey": "kDFJkjk3asdm",
             "models": ["gpt-3.5-turbo", "gpt-4.0-turbo"],
         },
         {
-            "id": "my-custom-ai2",
-            "name": "My Custom AI 2",
+            "id": "my-ia-personalizada2",
+            "name": "Mi IA personalizada 2",
             "baseUrl": "http://localhost:5001",
             "apiKey": "lOikf7eNdb9",
             "models": ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
@@ -434,7 +434,7 @@ function openAiBackendsHook() {
 ```
 
 ::: tip
-You can use [Registering script settings variables](./methods-and-objects.md#registering-script-settings-variables) to store the OpenAI backend settings in the script settings.
+Puede usar las [variables de la configuración del script de registro](./methods-and-objects.md#registering-script-settings-variables) para almacenar la configuración del motor de OpenAI en la configuración del script.
 :::
 
 Puede que quiera echar un vistazo al ejemplo [custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).

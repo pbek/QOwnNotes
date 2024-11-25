@@ -1249,11 +1249,11 @@
 <name>HtmlPreviewWidget</name>
 <message>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiera</translation>
 </message>
 <message>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Kopiera länk</translation>
 </message>
 <message>
 <source>Reset zoom</source>
@@ -2744,7 +2744,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Rad %1, Kolumn %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>

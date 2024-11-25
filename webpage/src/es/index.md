@@ -15,7 +15,7 @@ features:
     details: Aplicación nativa, optimizada para la velocidad y que consume pocos recursos de memoria y procesador.
   - 
     title: Personalización
-    details: Altamente personalizable y programable, usted tiene el control de cómo quiere trabajar con sus notas.
+    details: Altamente personalizable y programable. Usted tiene el control de cómo quiere trabajar con sus notas.
 footer: Hecho por Patrizio Bekerle con ❤️
 ---
 

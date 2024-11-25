@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.11.4
+- Added more Spanish, Brazilian Portuguese, French, Swedish translation
+  (thank you, alejandromoc, camemb3rt, jd-develop, dzenan)
+
 ## 24.11.3
 - All missing and malfunctioning icon variations were generated and added
   (for [#3147](https://github.com/pbek/QOwnNotes/issues/3147))

@@ -8,7 +8,7 @@ Puede insertar fotos de su teléfono móvil en la nota actual en QOwnNotes en su
 
 ![Navegador de la aplicación web de QOwnNotes](/img/blog/web-application-browser.png "Envíe fotos desde su teléfono móvil a QOwnNotes en el escritorio")
 
-La aplicación web de su teléfono se comunica con su aplicación de escritorio QOwnNotes a través de Internet. La comunicación entre QOwnNotes y el servicio web está ** encriptada por transporte **. No se almacenarán imágenes en el servidor.
+La aplicación web de su teléfono se comunica con su aplicación de escritorio QOwnNotes a través de Internet. La comunicación entre QOwnNotes y el servicio web está **encriptada en su transporte **. No se almacenarán imágenes en el servidor.
 
 Hay una **aplicación web** de la página de configuración que añade soporte para la aplicación web.
 

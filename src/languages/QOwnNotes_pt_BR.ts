@@ -82,7 +82,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>Abrir anotação e pesquisar &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -425,11 +425,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>Português (Brasil)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>Português</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -588,7 +588,7 @@
 </message>
 <message>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Numero de anotações importadas</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -624,11 +624,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>XML invalido!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>XML invalido encontrado na anotação &lt;b&gt;%1&lt;/b&gt;! A importação pode ter sido interrompida.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -719,7 +719,7 @@
 </message>
 <message>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Leia .vimrc da localização:</translation>
 </message>
 <message>
 <source>Show position of text marks</source>
@@ -727,11 +727,11 @@
 </message>
 <message>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Passar teclas de controle</translation>
 </message>
 <message>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Passar teclas em modo de inserção</translation>
 </message>
 <message>
 <source>Start of line</source>
@@ -739,11 +739,11 @@
 </message>
 <message>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Tamanho da tabuladora:</translation>
 </message>
 <message>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Tabuladora inteligente</translation>
 </message>
 <message>
 <source>Highlight search results</source>
@@ -751,11 +751,11 @@
 </message>
 <message>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Largura do deslocamento:</translation>
 </message>
 <message>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Expandir tabuladora</translation>
 </message>
 <message>
 <source>Automatic indentation</source>
@@ -771,67 +771,67 @@
 </message>
 <message>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Usar caixa inteligente</translation>
 </message>
 <message>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Ignorar caixa</translation>
 </message>
 <message>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Usar escaneamento de quebra de linha</translation>
 </message>
 <message>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Usar tildeop</translation>
 </message>
 <message>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Mostrar comando parcial</translation>
 </message>
 <message>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Mostrar numeração de linhas relativa ao cursos</translation>
 </message>
 <message>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Cursor piscante</translation>
 </message>
 <message>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Compensação de rolagem:</translation>
 </message>
 <message>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Tecla de Apagar:</translation>
 </message>
 <message>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Caracteres-chave:</translation>
 </message>
 <message>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Usar estilo Vim de edição</translation>
 </message>
 <message>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Mostrar numeração de linhas relativa à linha que estiver digitando.</translation>
 </message>
 <message>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Não interpreta sequencias de teclas como Ctrl-S no FakeVim, tratando-as como atalhos comuns. Isso facilita o acesso à funcionalidade básica em detrimento de algumas funções do FakeVim.</translation>
 </message>
 <message>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Não interpreta algumas teclas no modo de inserção para que o código possa ser propriamente completado e expandido.</translation>
 </message>
 <message>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Opção tabstop do Vim.</translation>
 </message>
 <message>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Deixe vazio para usar o caminho padrão, por exemplo, %USERPROFILE%\_vimrc no Windows ou ~/.vimrc para os outros.</translation>
 </message>
 <message>
 <source>Default: %1</source>
@@ -867,11 +867,11 @@
 </message>
 <message>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Digite Meta-Shift-Y, Meta-Shift-Y para sair do modo FakeVim.</translation>
 </message>
 <message>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Digite Alt-Y, Alt-Y para sair do modo de FakeVim.</translation>
 </message>
 <message>
 <source>Unknown option:</source>
@@ -1226,7 +1226,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Copiar</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1253,7 +1253,7 @@
 </message>
 <message>
 <source>Reset zoom</source>
-<translation>Reiniciar zoom</translation>
+<translation>Redefinir o zoom</translation>
 </message>
 </context>
 <context>
@@ -1334,11 +1334,11 @@
 </message>
 <message>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importar pastas</translation>
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Favor selecionar o 'RAW — Diretório de Exportação Joplin' do qual deseja importar suas anotações:</translation>
 </message>
 <message>
 <source>Select directory</source>
@@ -1370,7 +1370,7 @@
 </message>
 <message>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW — Diretório de Exportação Joplin</translation>
 </message>
 <message>
 <source>Import attachments</source>
@@ -1378,7 +1378,7 @@
 </message>
 <message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Selecionar 'RAW — Diretório de Exportação Joplin' para importar</translation>
 </message>
 </context>
 <context>
@@ -1401,7 +1401,7 @@
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>O aplicativo será reiniciado posteriormente.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1661,11 +1661,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Cabeçalhos</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Backlinks</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1861,7 +1861,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>Modelo de IA</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -1902,11 +1902,11 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Configurar pastas / subpastas de anotações</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Configurar pastas / subpastas de anotações</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -1922,7 +1922,7 @@
 </message>
 <message>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Inserir texto &amp;link</translation>
 </message>
 <message>
 <source>Ctrl+L</source>
@@ -2295,7 +2295,7 @@
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Inserir &amp;note link</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
@@ -2307,39 +2307,39 @@
 </message>
 <message>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Alternar modo sempre-em-cima</translation>
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Carregar itens da Lista de Tarefas</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Inserir link de carta do Nextcloud Deck</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copiar caminho absoluto da anotação</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>Mover para cima na lista de subpastas</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>Mover para baixo na lista de subpastas</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>Mover para cima na lista de tags</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>Mover para baixo na lista de tags</translation>
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>Habilitar suporte para IA</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2727,31 +2727,31 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Ln %1, Col %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Linha %1, Coluna %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n selecionado</numerusform>
+<numerusform>%n selecionados</numerusform>
 </translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Suporte desabilitado para Nextcloud Deck!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>O suporte para Nextcloud Deck está desabilitado ou suas configurações são invalidas. &lt;br /&gt; Favor checar sua configuração do &lt;strong&gt;Nextcloud&lt;/strong&gt; nas opções!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>O caminho da anotação '%1" foi copiado para a área de transferência</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -2825,7 +2825,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>Abrir anotações selecionas em abas</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -2857,9 +2857,9 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Ignorando a cópia de %n anotação (nenhum arquivo markdown ou de texto, ou arquivo ilegível)</numerusform>
+<numerusform>Ignorando a cópia de %n anotações (nenhum arquivo markdown ou de texto, ou arquivos ilegíveis)</numerusform>
 </translation>
 </message>
 <message>
@@ -2868,11 +2868,11 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Mostrar todas as anotações (%1)</translation>
 </message>
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>Mostrar todas as anotações com a tag '%1" (%2)</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
@@ -2942,7 +2942,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Note editing disabled</source>
-<translation type="unfinished">Note editing disabled</translation>
+<translation>Edição de anotação desabilitada</translation>
 </message>
 <message>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
@@ -3934,15 +3934,15 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Seu sistema Linux para estar usando o modo claro. Gostaria de desabilitar o modo escuro do QOwnNotes?</translation>
 </message>
 <message>
 <source>Panel disabled</source>
-<translation type="unfinished">Panel disabled</translation>
+<translation>Painel desabilitado</translation>
 </message>
 <message>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>O painel &lt;strong&gt;%1&lt;/strong&gt; está desabilitado, gostaria de habilita-lo novamente para executar essa função?</translation>
 </message>
 <message>
 <source>Command failed!</source>
@@ -3974,7 +3974,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Sua pasta &lt;b&gt;%1&lt;/b&gt; não foi encontrada, gostaria de selecionar uma nova?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4044,87 +4044,87 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Anotação não encontrada, gostaria de criar uma nova anotação &lt;strong&gt;%1&lt;/strong&gt; no caminho &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Falha ao criar anotação</translation>
 </message>
 <message>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>A criação de anotação falhou</translation>
 </message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Aumentar tamanho da fonte para %1 pt</translation>
 </message>
 <message>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Diminuir o tamanho da fonte para %1 pt</translation>
 </message>
 <message>
 <source>An url was opened at the current cursor position</source>
-<translation type="unfinished">An url was opened at the current cursor position</translation>
+<translation>Uma url foi aberta na posição atual do cursor</translation>
 </message>
 <message>
 <source>No equation was found in front of the cursor</source>
-<translation type="unfinished">No equation was found in front of the cursor</translation>
+<translation>Nenhuma equação foi encontrada na frente do cursor</translation>
 </message>
 <message>
 <source>Result for equation: %1 = %2</source>
-<translation type="unfinished">Result for equation: %1 = %2</translation>
+<translation>Resultado para a equação: %1 = %2</translation>
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Link o texto selecionado</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>Inserir %link</translation>
 </message>
 <message>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation type="unfinished">Block &amp;quote selected text</translation>
+<translation>&amp;quote em bloco do texto selecionado</translation>
 </message>
 <message>
 <source>Insert block &amp;quote</source>
-<translation type="unfinished">Insert block &amp;quote</translation>
+<translation>Inserir bloco de &amp;quote</translation>
 </message>
 <message>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Copiar bloco de código</translation>
 </message>
 <message>
 <source>Print</source>
-<translation type="unfinished">Print</translation>
+<translation>Imprimir</translation>
 </message>
 <message>
 <source>Print selected text</source>
-<translation type="unfinished">Print selected text</translation>
+<translation>Imprimir o texto selecionado</translation>
 </message>
 <message>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>Imprimir o texto selecionado (pré-visualização)</translation>
 </message>
 <message>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Exportar</translation>
 </message>
 <message>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Exportar o texto selecionado como PDF</translation>
 </message>
 <message>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>Exportar o texto selecionado como PDF (pré-visualização)</translation>
 </message>
 <message>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Ações personalizadas</translation>
 </message>
 <message>
 <source>No suggestions for %1</source>
@@ -4140,7 +4140,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Spelling</source>
-<translation type="unfinished">Spelling</translation>
+<translation>Ortografia</translation>
 </message>
 </context>
 <context>
@@ -4340,7 +4340,7 @@ A pasta e os arquivos tem permissão de escrita?</translation>
 </message>
 <message>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Para pesquisar um script favor digitar na caixa de pesquisa.</translation>
 </message>
 <message>
 <source>Minimum app version:</source>
@@ -4449,7 +4449,7 @@ Você deseja instalá-lo de qualquer maneira?</translation>
 </message>
 <message>
 <source>Please select a directory</source>
-<translation type="unfinished">Please select a directory</translation>
+<translation>Favor selecionar um diretório</translation>
 </message>
 <message>
 <source>Please select a file</source>
@@ -5048,7 +5048,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Pilha:</translation>
 </message>
 <message>
 <source>Todo settings</source>
@@ -5380,11 +5380,11 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>IA</translation>
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Experimental</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
@@ -5396,11 +5396,11 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>Você encontrará esse caminho nas configurações do &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Habilitar suporte para o aplicativo QOwnNotesAPI</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5412,7 +5412,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Habilitar suporte para Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5460,15 +5460,15 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Barra de status</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Mostrar caminho da anotação</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Mostrar só o caminho relativo da anotação</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5492,20 +5492,20 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Iniciar programa no modo somente-leitura</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Quando inativo, entrar no modo somente-leitura automaticamente após:</translation>
 </message>
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> s</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Esquecer todas as opções de "Não me pergunte novamente" nas caixas de mensagens</translation>
 </message>
 <message>
 <source>Note file extensions</source>
@@ -5557,15 +5557,15 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Tempo de espera antes de atualizar a pré-visualização após digitar:</translation>
 </message>
 <message>
 <source>Reset the debounce time</source>
-<translation type="unfinished">Reset the debounce time</translation>
+<translation>Redefinir o tempo de rebote</translation>
 </message>
 <message>
 <source>0ms means don't wait for the typing to stop</source>
-<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+<translation>0ms significa "Não esperar a digitação parar"</translation>
 </message>
 <message>
 <source>Use editor highlighting styles also for the preview</source>
@@ -5597,31 +5597,31 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>Anotações maiores que isso não aparecerão na lista de anotações</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>Tamanho máximo do arquivo de anotação:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>Procurar repositório de scripts por scripts de integração de IA</translation>
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>Chaves de API</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>Chave API do OpenAI:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Criar chave API do Groq</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>Criar chave API do OpenAI</translation>
 </message>
 <message>
 <source>Test connection</source>
@@ -5782,7 +5782,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Reset the URL to default</source>
-<translation type="unfinished">Reset the URL to default</translation>
+<translation>Redefinir a URL para o padrão</translation>
 </message>
 <message>
 <source>QOwnNotes web application support</source>
@@ -5862,7 +5862,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Reset the socket server port</source>
-<translation type="unfinished">Reset the socket server port</translation>
+<translation>Redefinir a porta do socket server</translation>
 </message>
 <message>
 <source>Show security token</source>

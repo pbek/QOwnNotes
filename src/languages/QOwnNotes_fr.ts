@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>Portugais (brésilien)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>Portugais</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -6943,11 +6943,11 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Montrer uniquement les pièces jointes utilisées dans la note courante</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Montrer uniquement depuis la note courante</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7097,11 +7097,11 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>Montrer uniquement les images utilisées dans la note courante</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Montrer uniquement depuis la note courante</translation>
 </message>
 <message>
 <source>Used in notes:</source>

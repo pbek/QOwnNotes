@@ -12,9 +12,9 @@ Dispone de un diálogo de importación de Joplin al que puede acceder mediante e
 
 ## Formatos variados
 
-The command line tool [jimmy](https://github.com/marph91/jimmy) can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). Para preservar tantos metadatos como sea posible, se recomienda aplicar [ajustes adicionales](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+La herramienta de órdenes de terminal [jimmy](https://github.com/marph91/jimmy) puede convertir varios formatos a Markdown (como [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) y [más](https://marph91.github.io/jimmy/)). Para preservar tantos metadatos como sea posible, se recomienda aplicar [ajustes adicionales](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
 
-Si existen problemas con la conversión, siéntatse libre de abrir un boleto en [GitHub](https://github.com/marph91/jimmy/issues).
+Si existen problemas con la conversión, siéntanse libre de abrir un boleto en [GitHub](https://github.com/marph91/jimmy/issues).
 
 ## Google Keep
 

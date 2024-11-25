@@ -855,20 +855,20 @@ Si desea inyectar estilos en la vista previa de html para alterar la forma en qu
 If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
-Recargar el motor de secuencia de comandos
+Recargar el motor de secuencias de órdenes
 ------------------------------
 
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Recarga el motor de secuencias de comandos
+ * Recarga el motor de secuencias de órdenes
  */
 void ScriptingService::reloadScriptingEngine();
 ```
 
 ### Ejemplo
 ```js
-// recarga el motor de secuencias de comandos
+// recarga el motor de secuencias de órdenes
 script.reloadScriptingEngine();
 ```
 
@@ -900,9 +900,9 @@ Obtener una nota por su ID
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Fetches a note by its id
+ * Obtiene una nota por su identificador
  *
- * @param id int the id of the note
+ * @param id int el identificador de la nota
  * @return NoteApi*
  */
 NoteApi* ScriptingService::fetchNoteById(int id);
@@ -1078,11 +1078,11 @@ Mostrar un cuadro de diálogo de archivo abierto
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Muestra un cuadro de diálogo de archivo abierto
+  * Muestra un cuadro de diálogo para abrir un archivo
   *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
+ * @param caption (opcional)
+ * @param dir (opcional)
+ * @param filter (opcional)
  * @return QString
  */
 QString ScriptingService::getOpenFileName(QString caption, QString dir,
@@ -1101,15 +1101,15 @@ Mostrar un cuadro de diálogo para guardar archivo
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Muestra un cuadro de diálogo para guardar archivos
-  *
-  * Título @param (opcional)
-  * directorio @param (opcional)
-  * Filtro @param (opcional)
-  * @returnQString
-  */
+ * Muestra un cuadro de diálogo para guardar un archivo
+ *
+ * @param caption (opcional)
+ * @param dir (opcional)
+ * @param filter (opcional)
+ * @return QString
+ */
 QString ScriptingService::getSaveFileName(QString caption, QString dir,
-                                             filtro QString);
+                                            QString filter);
 ```
 
 ### Ejemplo
@@ -1272,10 +1272,10 @@ Cargando variables de configuración de la aplicación
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Loads an application settings variable
+ * Carga una variable de configuración de la aplicación
  *
  * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
@@ -1360,10 +1360,10 @@ Conversión de separadores de ruta en nativos
 ### Llamada y parámetros del método
 ```cpp
 /**
-  * Devuelve la ruta con los separadores '/' convertidos en separadores que son
-  * apropiado para el sistema operativo subyacente.
+ * Devuelve la ruta con los separadores '/' convertidos en separadores que son
+ * apropiados para el sistema operativo subyacente.
  *
- * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
+ * En Windows, toNativeDirSeparators("c:/winnt/system32") devuelve
  * "c:\winnt\system32".
  *
  * @param path
@@ -1374,7 +1374,7 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 
 ### Ejemplo
 ```js
-// will return "c:\winnt\system32" on Windows
+// Devolverá "c:\winnt\system32" en Windows
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
@@ -1385,8 +1385,8 @@ Conversión de separadores de ruta de las nativas
 ```cpp
 /**
  * Devuelve la ruta usando '/' como separador de archivos.
- * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
- * returns "c:/winnt/system32".
+ * En Windows, por ejemplo, fromNativeDirSeparators("c:\\winnt\\system32")
+ * devuelve "c:/winnt/system32".
  *
  * @param path
  * @return
@@ -1396,7 +1396,7 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 
 ### Ejemplo
 ```js
-// will return "c:/winnt/system32" on Windows
+// Devolverá "c:/winnt/system32" en Windows
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
@@ -1415,7 +1415,7 @@ QString ScriptingService::dirSeparator();
 
 ### Ejemplo
 ```js
-// devolverá "\" en Windows
+// Devolverá "\" en Windows
 script.log(script.dirSeparator());
 ```
 
@@ -1427,14 +1427,14 @@ Obtener una lista de las rutas de todas las notas seleccionadas
 /**
  * Devuelve una lista de las rutas de todas las notas seleccionadas
  *
- * @return {QStringList} list of selected note paths
+ * @return {QStringList} lista de rutas de las notas seleccionadas
  */
 QStringList ScriptingService::selectedNotesPaths();
 ```
 
 ### Ejemplo
 ```js
-// devuelve una lista de las rutas de todas las notas seleccionadas
+// Devuelve una lista de las rutas de todas las notas seleccionadas
 script.log(script.selectedNotesPaths());
 ```
 
@@ -1461,7 +1461,7 @@ script.log(script.identificadores de notas seleccionadas());
 
 Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Activar una acción de menú
+Activar una acción del menú
 ------------------------
 
 ### Llamada y parámetros del método
@@ -1478,10 +1478,10 @@ void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 
 ### Ejemplo
 ```js
-// cambia el modo de solo lectura
+// alterna el modo de solo lectura
 script.triggerMenuAction("actionAllow_note_editing");
 
-// deshabilitar el modo de solo lectura
+// deshabilita el modo de solo lectura
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
@@ -1511,7 +1511,7 @@ QString ScriptingService::inputDialogGetItem(
          int actual, bool editable);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`.
 
 ### Ejemplo
 ```js
@@ -1530,9 +1530,9 @@ Abrir un diálogo de entrada con una edición de línea
 /**
  * Abre un cuadro de diálogo de entrada con una edición de línea.
  *
- * @param title {QString} title of the dialog
- * @param label {QString} label text of the dialog
- * @param text {QString} text in the dialog (optional)
+ * @param title {QString} título del diálogo
+ * @param label {QString} texto de etiqueta del diálogo
+ * @param text {QString} texto en el diálogo (opcional)
  * @return
  */
 QString ScriptingService::inputDialogGetText(
@@ -1565,7 +1565,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`.
 
 ### Ejemplo
 ```js
@@ -1580,7 +1580,7 @@ Comprobar si un archivo existe
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Comprobar si existe un archivo
+ * Comprueba si existe un archivo
  * @param filePath
  * @return
  */
@@ -1599,11 +1599,11 @@ Leer texto de un archivo
 ### Llamada y parámetors del método
 ```cpp
 /**
- * Leer texto de un archivo
+ * Lee texto de un archivo
  *
- * @param filePath {QString} path of the file to load
- * @param codec {QString} file encoding (default: UTF-8)
- * @return the file data or null if the file does not exist
+ * @param filePath {QString} ruta del archivo a cargar
+ * @param codec {QString} codificación del archivo (por defecto: UTF-8)
+ * @return los datos del archivo o null si el archivo no existe
  */
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
@@ -1623,11 +1623,11 @@ Escribir texto en un archivo
 ### Llamada y parámetros del método
 ```cpp
 /**
- * Escribe un texto en un archivo.
+ * Escribe un texto en un archivo
  *
  * @param filePath {QString}
  * @param data {QString}
- * @param createParentDirs {bool} optional (default: false)
+ * @param createParentDirs {bool} opcional (por defecto: falso)
  * @return
  */
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
@@ -1641,14 +1641,14 @@ script.log(result);
 
 Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Trabajar con websockets
+Trabajar con zócalos web
 -----------------------
 
 Puede controlar QOwnNotes de forma remota utilizando `WebSocketServer`.
 
-Por favor eche un vistazo al ejemplo [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml). Puede probar el servidor de socket conectándose a él en [Websocket prueba](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Por favor eche un vistazo al ejemplo [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-server.qml). Puede probar el servidor de zócalos conectándose a él en [Prueba de zócalos web](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-También puede escuchar sockets con `WebSocket`. Por favor eche un vistazo al ejemplo [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
+También puede escuchar los zócalos con `WebSocket`. Por favor eche un vistazo al ejemplo [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-client.qml).
 
 Tenga en cuenta que debe tener instalada la biblioteca QML `websocket` de Qt para usar esto. Por ejemplo, en Ubuntu Linux puede instalar `qml-module-qtwebsockets`.
 
@@ -1694,7 +1694,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | H4                         | 15  |
 | H5                         | 16  |
 | H6                         | 17  |
-| BlockQuote                 | 18  |
+| Cita en bloque             | 18  |
 | HorizontalRuler            | 21  |
 | Tabla                      | 22  |
 | InlineCodeBlock            | 23  |

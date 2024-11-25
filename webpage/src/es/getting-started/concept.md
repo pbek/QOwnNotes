@@ -64,17 +64,17 @@ Puede administrar los **marcadores de su navegador** con QOwnNotes o usarlo como
 Las extensiones del navegador funcionan **fuera de línea**. No se requiere de una conexión a Internet. Por favor visite la [ extensión del navegador QOwnNotes Web Companion](browser-extension.md) para mayor información.
 :::
 
-## Administrador de fragmentos de la línea de comandos de QOwnNotes
+## Gestor de fragmentos de órdenes de terminal de QOwnNotes
 
-Puede administrar sus **fragmentos de comando** con QOwnNotes y ejecutarlos en la línea de comandos.
+Puede administrar sus **fragmentos de órdenes** con QOwnNotes y ejecutarlos en las órdenes de terminal.
 
 ::: tip
-Por favor visite el [administrador de fragmentos de la línea de comandos de QOwnNotes](command-line-snippet-manager.md) para mayor información.
+Por favor visite el [gestor de fragmentos de órdenes de terminal de QOwnNotes](command-line-snippet-manager.md) para mayor información.
 :::
 
 ## Cliente de sincronización de escritorio de Nextcloud
 
-**Sincroniza tus notas** con otros dispositivos (desktop & mobile) con tu cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con tu servidor.
+**Sincronice sus notas** con otros dispositivos (desktop & mobile) con su cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con su servidor.
 
 ::: tip
 Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync también se pueden utilizar para sincronizar sus notas y otros archivos.
@@ -133,7 +133,7 @@ También puede usar cualquier herramienta de sincronización, como *Synchronize 
 - [CloudNotes para iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (terceros)
 
 ::: tip
-You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+También puede utilizar [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) y sincronizar sus notas por medio de WebDAV. Hay un buen tutorial en [Tomar notas con Nexcloud, QOwnNotes, y Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org

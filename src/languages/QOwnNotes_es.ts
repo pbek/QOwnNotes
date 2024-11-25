@@ -792,7 +792,7 @@
 </message>
 <message>
 <source>Show partial command</source>
-<translation>Mostrar comando parcial</translation>
+<translation>Mostrar orden parcial</translation>
 </message>
 <message>
 <source>Show line numbers relative to cursor</source>
@@ -836,7 +836,7 @@
 </message>
 <message>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation>Manténgalo vacío para usar la ruta predeterminada, es decir,% USERPROFILE% \ _ vimrc en Windows, ~ / .vimrc en caso contrario.</translation>
+<translation>Manténgalo vacío para usar la ruta predeterminada, es decir,% USERPROFILE%\ _ vimrc en Windows, o ~/.vimrc en caso contrario.</translation>
 </message>
 <message>
 <source>Default: %1</source>
@@ -938,7 +938,7 @@
 </message>
 <message>
 <source>Not an editor command: %1</source>
-<translation>No es un comando del editor: %1</translation>
+<translation>No es una orden del editor: %1</translation>
 </message>
 <message>
 <source>Invalid regular expression: %1</source>
@@ -1635,7 +1635,7 @@
 </message>
 <message>
 <source>Scripting</source>
-<translation>Secuencias de comandos</translation>
+<translation>Secuencias de órdenes</translation>
 </message>
 <message>
 <source>Clear log</source>
@@ -1903,7 +1903,7 @@
 </message>
 <message>
 <source>&amp;Scripting</source>
-<translation>&amp;Secuencias de comandos</translation>
+<translation>&amp;Secuencias de órdenes</translation>
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
@@ -2761,19 +2761,19 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>AI backends</source>
-<translation>Motores IA</translation>
+<translation>Motores de IA</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation>Modelos IA</translation>
+<translation>Modelos de IA</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation>Selector de motor IA</translation>
+<translation>Selector de motor de IA</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation>Selector de modelo IA</translation>
+<translation>Selector de modelo de IA</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3216,11 +3216,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Add tag</source>
-<translation>&amp;añadir tag</translation>
+<translation>&amp;Añadir etiqueta</translation>
 </message>
 <message>
 <source>Tag could not be created!</source>
-<translation>No se pudo crear la etiqueta!</translation>
+<translation>¡No se pudo crear la etiqueta!</translation>
 </message>
 <message>
 <source>Move to this tag</source>
@@ -3252,7 +3252,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation>¡No se pudo encontrar la acción de menú &lt;code&gt;% 1 &lt;/code&gt;! ¿Usted escribe correctamente?</translation>
+<translation>¡No se pudo encontrar la acción de menú &lt;code&gt;%1&lt;/code&gt;! ¿La escribió correctamente?</translation>
 </message>
 <message>
 <source>Subfolders</source>
@@ -3288,7 +3288,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Scripting</source>
-<translation>Secuencias de comandos</translation>
+<translation>Secuencias de órdenes</translation>
 </message>
 <message>
 <source>formatting toolbar</source>
@@ -3304,7 +3304,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>AI toolbar</source>
-<translation>Barra de herramientas IA</translation>
+<translation>Barra de herramientas de IA</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3953,11 +3953,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Command failed!</source>
-<translation>¡El comando falló!</translation>
+<translation>¡La orden falló!</translation>
 </message>
 <message>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation>¡El comando &lt;code&gt;%1&lt;/code&gt; con argumentos &lt;code&gt;%2&lt;/code&gt; falló!</translation>
+<translation>¡La orden &lt;code&gt;%1&lt;/code&gt; con argumentos &lt;code&gt;%2&lt;/code&gt; falló!</translation>
 </message>
 <message>
 <source>New connection</source>
@@ -4006,7 +4006,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
 <translation>
-<numerusform>%n nota están usando este adjunto. ¿Desea renombrar también esos adjuntos en la nota?</numerusform>
+<numerusform>%n nota está usando este adjunto. ¿Desea renombrar también esos adjuntos en la nota?</numerusform>
 <numerusform>%n notas están usando este adjunto. ¿Desea renombrar también esos adjuntos en las notas?</numerusform>
 </translation>
 </message>
@@ -4027,7 +4027,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation>No se pudo iniciar el flujo de inicio de sesión de Nextcloud v2. ¡Asegúrese de que la URL del servidor sea correcta y de que esté utilizando un servidor Nextcloud! &lt;br/&gt;&lt;br/&gt; Si aún tiene problemas, cree una contraseña de aplicación a mano en la página de administración de su servidor.</translation>
+<translation>No se pudo iniciar el flujo de inicio de sesión de Nextcloud v2. ¡Asegúrese de que la URL del servidor sea correcta y de que esté utilizando un servidor de Nextcloud! &lt;br/&gt;&lt;br/&gt; Si aún tiene problemas, por favor cree una contraseña de aplicación a mano en la página de administración de su servidor.</translation>
 </message>
 <message>
 <source>Could not parse login url!</source>
@@ -4095,11 +4095,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation>Marcar el texto seleccionado como cita</translation>
+<translation>Convertir texto seleccionado a cita en bloque</translation>
 </message>
 <message>
 <source>Insert block &amp;quote</source>
-<translation>Insertar cita de blo&amp;que</translation>
+<translation>Insertar cita en blo&amp;que</translation>
 </message>
 <message>
 <source>Copy code block</source>
@@ -4887,7 +4887,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Scripting</source>
-<translation>Scripting</translation>
+<translation>Secuencias de órdenes</translation>
 </message>
 <message>
 <source>Your scripts</source>
@@ -5376,7 +5376,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Browser extension / command snippets</source>
-<translation>Extensión del navegador/fragmentos de comando</translation>
+<translation>Extensión del navegador/fragmentos de órdenes</translation>
 </message>
 <message>
 <source>Web application</source>
@@ -5569,7 +5569,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>0ms means don't wait for the typing to stop</source>
-<translation>0ms significa que no espere a que se detenga la escritura</translation>
+<translation>0ms significa no esperar a que se detenga la escritura</translation>
 </message>
 <message>
 <source>Use editor highlighting styles also for the preview</source>
@@ -5634,15 +5634,15 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation>Los backends de la IA añadidos mediante el motor de secuencia de órdenes</translation>
+<translation>Los motores de IA añadidos mediante el motor de secuencia de órdenes</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation>Para usar los motores IA, puede usar la orden &lt;a href="%1"&gt;aiComplete&lt;/a&gt; o buscar en el repositorio de secuencias de órdenes ya creadas.</translation>
+<translation>Para usar los motores de IA, puede usar la orden &lt;a href="%1"&gt;aiComplete&lt;/a&gt; o buscar en el repositorio de secuencias de órdenes ya creadas.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation>Puede usar el gancho de secuencia de órdenes &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; para añadir más backends compatibles con la API de OpenAI.</translation>
+<translation>Puede usar el gancho de secuencia de órdenes &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; para añadir más motores compatibles con la API de OpenAI.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
@@ -5746,7 +5746,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation>Se abrirá una conexión de zócalo web a este servidor, la cual actuará como puente entre la aplicación web de QOwnNotes y la de escritorio.</translation>
+<translation>Se abrirá una conexión de zócalo web a este servidor, la cual actuará como puente entre la aplicación web de QOwnNotes y la del escritorio.</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -5766,11 +5766,11 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation>Descargue el &lt;a href="%1"&gt;Administrador de fragmentos de la línea de comandos&lt;/a&gt; para ejecutar fragmentos de comandos almacenados en notas en QOwnNotes desde la línea de comandos.</translation>
+<translation>Descargue el &lt;a href="%1"&gt;Gestor de fragmentos de órdenes de terminal&lt;/a&gt; para ejecutar fragmentos de comandos almacenados en notas en QOwnNotes desde las órdenes de terminal.</translation>
 </message>
 <message>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>Puede usar notas con una etiqueta especial para almacenar fragmentos de comandos, que puede ejecutar desde el administrador de fragmentos de la línea de comandos. Para obtener más información sobre la sintaxis del fragmento de comando, haga clic &lt;a href="%1"&gt;aquí&lt;/a&gt;.</translation>
+<translation>Puede usar las notas con una etiqueta especial para almacenar fragmentos de comandos, los cuales puede ejecutar desde el gestor de fragmentos de órdenes de terminal. Para mayor información sobre la sintaxis de los fragmentos de órdenes, haga clic &lt;a href="%1"&gt;aquí&lt;/a&gt;.</translation>
 </message>
 <message>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
@@ -5858,15 +5858,15 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Web socket server</source>
-<translation>Servidor de web sockets</translation>
+<translation>Servidor de zócalos web</translation>
 </message>
 <message>
 <source>Socket server port:</source>
-<translation>Puerto del servidor de sockets:</translation>
+<translation>Puerto del servidor de zócalos:</translation>
 </message>
 <message>
 <source>Reset the socket server port</source>
-<translation>Restablecer el puerto del servidor de socket</translation>
+<translation>Restablecer el puerto del servidor de zócalos</translation>
 </message>
 <message>
 <source>Show security token</source>
@@ -5874,11 +5874,11 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Web socket server support</source>
-<translation>Soporte del servidor de web sockets</translation>
+<translation>Soporte del servidor de zócalos web</translation>
 </message>
 <message>
 <source>Enable socket server</source>
-<translation>Habilitar servidor de sockets</translation>
+<translation>Habilitar servidor de zócalos</translation>
 </message>
 <message>
 <source>Note edit panel</source>
@@ -5943,12 +5943,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>External git log command to show the git versions of a note</source>
-<translation>Comando de git log externo para mostrar las versiones git de una nota</translation>
+<translation>Orden externa de git log para mostrar las versiones git de una nota</translation>
 </message>
 <message>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Escriba un comando para mostrar su registro de git (por ejemplo, "gitk")</translation>
+<translation>Escriba una orden para mostrar su registro de git (por ejemplo, "gitk")</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -5969,7 +5969,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-<translation>No olvide habilitar el soporte de git para sus carpetas de notas y configurar su nombre y dirección de correo electrónico para el cliente de git. Por ejemplo, por medio de estos comandos en la terminal:</translation>
+<translation>No olvide habilitar el soporte de git para sus carpetas de notas y configurar su nombre y dirección de correo electrónico para el cliente de git. Por ejemplo, por medio de estas órdenes en la terminal:</translation>
 </message>
 <message>
 <source>Tags panel</source>
@@ -6075,7 +6075,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Which calendar backend do you want to use?</source>
-<translation>¿Qué servidor de calendarios desea utilizar?</translation>
+<translation>¿Qué motor de calendarios desea utilizar?</translation>
 </message>
 <message>
 <source>For most current ownCloud and Nextcloud installations</source>
@@ -6195,7 +6195,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Fake old version number to trigger update</source>
-<translation>Falsear el número de versión para desencadenar una actualización</translation>
+<translation>Falsear número de versión antigua para desencadenar una actualización</translation>
 </message>
 <message>
 <source>Log file path:</source>
@@ -6323,7 +6323,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-<translation>Marque esto si deseas ignorar todas las modificaciones externas mientras edita la nota actual.</translation>
+<translation>Marque esto si desea ignorar todas las modificaciones externas mientras edita la nota actual.</translation>
 </message>
 <message>
 <source>Ignore all external modifications of the current note</source>
@@ -6426,7 +6426,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation>La base de datos se reinicializó. ¡Reinicie la aplicación ahora!</translation>
+<translation>La base de datos se reinicializó. ¡Por favor reinicie la aplicación ahora!</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -6546,7 +6546,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation>Backend de la IA: %1</translation>
+<translation>Motor de la IA: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
@@ -7267,7 +7267,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Add new tag</source>
-<translation>Añadir etiqueta nueva</translation>
+<translation>Añadir nueva etiqueta</translation>
 </message>
 <message>
 <source>New tag</source>
@@ -7801,11 +7801,11 @@ This cannot be undone!</source>
 <name>WebAppClientService</name>
 <message>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation>QOwnNotes ahora está conectado por medio de websocket a %1</translation>
+<translation>QOwnNotes ahora está conectado por medio de zócalos web a %1</translation>
 </message>
 <message>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation>QOwnNotes ahora está desconectado de websocket a %1</translation>
+<translation>QOwnNotes ahora está desconectado del zócalo web a %1</translation>
 </message>
 <message>
 <source>Web app warning</source>
@@ -8006,7 +8006,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation>Generar código de finalización de shell. Soporta 'fish' y 'bash'.</translation>
+<translation>Genera un código de finalización de la consola. Soporta 'fish' y 'bash'.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

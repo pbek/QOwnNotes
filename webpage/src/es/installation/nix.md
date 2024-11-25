@@ -7,7 +7,7 @@ Véase [QOwnNotes en Nix](https://search.nixos.org/packages?channel=unstable&sho
 Posteriormente, será capaz de ejecutar QOwnNotes con la orden `qownnotes`.
 
 ::: tip
-El gestor de snippets de la línea de comandos de QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
+El gestor de fragmentos de órdenes de terminal de QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
 
 Puede usar `nix-shell -p qc --run qc` para probarlo.
 :::

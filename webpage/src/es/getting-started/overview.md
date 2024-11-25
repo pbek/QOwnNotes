@@ -119,13 +119,13 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
     <div class="sheet">
-      Administre las notas enviadas a la papelera en su servidor Nextcloud
+      Administre las notas enviadas a la papelera en su servidor de Nextcloud
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-versioning.png" alt="screenshot-versioning" />
     <div class="sheet">
-      Administre las versiones de sus notas en su servidor Nextcloud
+      Administre las versiones de sus notas en su servidor de Nextcloud
     </div>
   </v-carousel-item>
 </v-carousel>
@@ -157,7 +157,7 @@
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
 - Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
+- **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Support for **hierarchical note tagging** and **note subfolders**
 - Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar múltiples carpetas de notas)
@@ -166,7 +166,7 @@
 - Compatibilidad con [**revisores ortográficos**](../editor/spellchecking.md)
 - **Modo portátil** para llevar consigo QOwnNotes en memorias USB
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- Implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts
+- Implementación de la **[API de finalización de OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** para su uso en scripts
 - **Modo Vim**
 - **[Aplicación web](web-app.md)** para **insertar fotos desde su teléfono móvil** en la nota actual en QOwnNotes en su escritorio
 

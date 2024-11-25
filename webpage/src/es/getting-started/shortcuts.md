@@ -79,7 +79,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formatea el texto seleccionado en negrita
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formatea el texto seleccionado en cursiva
-- <kbd>Ctrl</kbd> + <kbd>U</kbd> formatea el texto seleccionado subrayado
+- <kbd>Ctrl</kbd> + <kbd>U</kbd> subraya el texto seleccionado
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> tacha el texto seleccionado
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
 - <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
@@ -178,12 +178,12 @@
 ### En el panel de edición de texto de la nota
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
-- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd>te permite buscar en la nota actual
+- <kbd>⌘ Cmd</kbd> + <kbd>F</kbd>le permite buscar en la nota actual
     - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> teclas para saltar a los partidos anteriores y siguientes
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> le permite buscar y reemplazar en la nota actual
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> hace la misma
+    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> hace lo mismo
 - <kbd>⌘ Cmd</kbd> + <kbd>Retroceso</kbd> elimina la línea actual
 - <kbd>⌃ Ctrl</kbd> + <kbd>Retroceso</kbd> elimina la palabra actual
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona en el texto seleccionado)
@@ -211,8 +211,8 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> aumenta el tamaño de fuente del texto de la nota en un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>-</kbd> reduce el tamaño de fuente del texto de la nota en un punto
 - <kbd>⌘ Cmd</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
-- <kbd>⌘ Cmd</kbd> + <kbd>Espacio</kbd> intenta resolver ecuaciones simples como `(4+5)*3=` en la línea actual frente al cursor, automático -completa texto o abre urls
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserta un título del nombre de archivo de la nota en la parte superior de la nota
+- <kbd>⌘ Cmd</kbd> + <kbd>Espacio</kbd> intenta resolver ecuaciones simples como `(4+5)*3=` en la línea actual frente al cursor, completa automáticamente el texto o abre URL
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>H</kbd> inserta un título a partir del nombre de archivo de la nota en la parte superior de la nota
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>X</kbd> divide la nota actual en dos notas en la posición actual del cursor
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>W</kbd> busca el texto seleccionado en la web
 - <kbd>⌘ Cmd</kbd> + <kbd>Up</kbd> desplaza el contenido hacia arriba

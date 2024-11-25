@@ -1,16 +1,14 @@
-# Git versioning
+# Contrôle de version avec git
 
-You can set up QOwnNotes to automatically commit changes in your note folder locally
-to a git repository in your note folder.
+Vous pouvez configurer QOwnNotes pour automatiquement valider (« commit ») les changements de votre dossier de notes localement dans un dépôt git dans votre dossier de notes.
 
-This can be done in the _Git versioning_ settings in the _General settings_.
+La configuration se fait dans _Contrôle de version git_, dans _Général_, dans les paramètres.
 
 ![git-note-folder-settings](/img/git/settings.png)
 
-You need to have git installed on your system and the git executable needs to be in your PATH or
-you can set the path to the git executable in the _Git versioning_ settings.
+Il faut que git soit installé sur votre système, et le chemin vers l’exécutable git doit soit être dans la variable d’environnement PATH, soit peut être spécifié dans les paramètres, dans la section _Contrôle de version git_.
 
-You also need to turn on git support for each note folder you want to use git versioning with!
+Il faut aussi activer le support de git pour chaque dossier de notes pour lequel vous souhaitez utiliser git !
 
 ![git-note-folder-settings](/img/git/note-folder-settings.png)
 
@@ -18,8 +16,8 @@ You also need to turn on git support for each note folder you want to use git ve
 Don't forget to set your git username and email address in the terminal:
 
 ```bash
-git config --global user.email "your-email@domain.com"
-git config --global user.name "Your name"
+git config --global user.email "votre-email@domaine.com"
+git config --global user.name "Votre nom"
 ```
 
 :::

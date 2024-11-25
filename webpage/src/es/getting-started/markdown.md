@@ -4,7 +4,7 @@ Esta hoja de referencia de Markdown está pensada como una referencia rápida y 
 
 ## Encabezados
 
-Use encabezados para estructurar sus textos.
+Utilice los encabezados para estructurar sus textos.
 
 ```markdown
 # H1
@@ -85,7 +85,7 @@ Hay muchas formas de crear listas.
 ```
 
 ::: tip
-Si presiona <kbd>Ingrese</kbd> al final de una lista, se creará un nuevo elemento de lista.
+Si presiona <kbd>Enter</kbd> al final de una lista, se creará un nuevo elemento de lista.
 :::
 
 ## Enlaces
@@ -95,13 +95,13 @@ Dos de los usos más simples de los enlaces son apuntar a páginas web u otras n
 ### Enlaces externos
 
 ```markdown
-[I'm an inline-style link](https://www.google.com)
+[Soy un enlace en estilo de línea](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Soy un enlace en estilo de línea con un título](https://www.google.com "Página de inicio de Google")
 
-[You can use numbers for reference-style link definitions][1]
+[Puede utilizar números para las definiciones de los enlaces en el estilo de referencia][1]
 
-Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Las URL y URL entre paréntesis entre corchetes angulares se convertirán automáticamente en enlaces en la vista previa. 
 http://www.example.com o <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -118,9 +118,9 @@ http://www.example.com o <http://www.example.com>
 ::: tip
 Puede utilizar el [atajo](./shortcuts.md) <kbd>Ctrl + L</kbd> para **crear enlaces a páginas web u otras notas**.
 
-Usando <kbd>Ctrl + Shift + X</kbd> aparecerá un diálogo que le ayudará a **inserta archivos adjuntos** en tu nota.
+<kbd>Ctrl + Shift + X</kbd> abrirá un diálogo que le ayudará a **inserta archivos adjuntos** en su nota.
 
-Puede presionar <kbd>Ctrl + Espacio</kbd> mientras el cursor está en un enlace en la edición de notas para seguir el enlace.
+Puede presionar <kbd>Ctrl + Espacio</kbd> mientras el cursor está en un enlace en la edición de notas para abrir el enlace.
 :::
 
 ### Marcadores
@@ -242,7 +242,7 @@ Se pueden usar virguillas para alinear columnas.
 
 Debe haber al menos 3 guiones separando cada celda de encabezado.
 
-You can also use inline Markdown.
+También puede utilizar Markdown en línea.
 
 | Markdown | Mola | Menos |
 | --- | --- | --- |
@@ -256,21 +256,21 @@ Presione <kbd>Alt + Shift + T</kbd> para activar un cuadro de diálogo que puede
 Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de markdown para formatearla automáticamente.
 :::
 
-## Blockquotes
+## Citas en bloque
 
 ```markdown
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+> Las citas en bloque son muy útiles en los correos electrónicos para emular el texto de respuesta.
+> Esta línea es parte de la misma cita.
 
-Quote break.
+Salto de cita.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> Esta es una línea muy larga que aún se citará adecuadamente cuando la cita termine. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, puede *poner* **Markdown** en una cita en bloque. 
 ```
 
 ::: tip
 Puede decirle a QOwnNotes que resalte completamente las citas en bloque o solo el carácter de la cita en bloque en la *Configuración del editor*
 
-Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> para marcar texto como blockquotes.
+Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> para marcar texto como cita en bloque.
 :::
 
 ## Regla horizontal
@@ -295,7 +295,7 @@ ___
 
 ## Saltos de línea
 
-- Puede dividir un párrafo en más de una sola línea para facilitar la edición, aún se representan como un solo párrafo sin interrupciones.
+- Puede dividir un párrafo en más de una sola línea para facilitar la edición. Las líneas aún se renderizan como un solo párrafo sin interrupciones.
 - Puede forzar un salto de línea dentro de un párrafo terminando una línea con dos espacios.
 - Puede hacer un párrafo separado delimitándolo con líneas vacías.
 
