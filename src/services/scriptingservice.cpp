@@ -44,6 +44,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 #include <QInputDialog>
 #include <QMessageBox>
 
+#include "dialogs/textdiffdialog.h"
 #include "openaiservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
@@ -2145,6 +2146,28 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
     Q_UNUSED(label)
     Q_UNUSED(text)
     return QString();
+#endif
+}
+
+QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
+                                      const QString &text1, const QString &text2) {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    bool ok;
+    auto dialog = new TextDiffDialog(nullptr, title, label, text1, text2);
+    dialog->exec();
+    auto accepted = dialog->resultAccepted();
+    auto text = dialog->resultText();
+
+    return accepted ? text : QLatin1String("");
+#else
+    Q_UNUSED(title)
+    Q_UNUSED(label)
+    Q_UNUSED(text1)
+    Q_UNUSED(text2)
+    return true;
 #endif
 }
 

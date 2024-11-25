@@ -145,6 +145,9 @@ set(SOURCE_FILES
     dialogs/notediffdialog.cpp
     dialogs/notediffdialog.h
     dialogs/notediffdialog.ui
+    dialogs/textdiffdialog.cpp
+    dialogs/textdiffdialog.h
+    dialogs/textdiffdialog.ui
     dialogs/settingsdialog.cpp
     dialogs/settingsdialog.h
     dialogs/settingsdialog.ui

@@ -131,6 +131,7 @@ SOURCES += main.cpp\
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
+    dialogs/textdiffdialog.cpp \
     dialogs/settingsdialog.cpp \
     dialogs/tododialog.cpp \
     dialogs/trashdialog.cpp \
@@ -252,6 +253,7 @@ HEADERS  += mainwindow.h \
     dialogs/aboutdialog.h \
     dialogs/linkdialog.h \
     dialogs/notediffdialog.h \
+    dialogs/textdiffdialog.h \
     dialogs/settingsdialog.h \
     dialogs/tododialog.h \
     dialogs/trashdialog.h \
@@ -342,6 +344,7 @@ FORMS    += mainwindow.ui \
     dialogs/imagedialog.ui \
     dialogs/nextclouddeckdialog.ui \
     dialogs/notediffdialog.ui \
+    dialogs/textdiffdialog.ui \
     dialogs/aboutdialog.ui \
     dialogs/updatedialog.ui \
     dialogs/settingsdialog.ui \
