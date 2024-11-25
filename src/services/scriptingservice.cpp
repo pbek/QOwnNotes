@@ -2167,7 +2167,7 @@ QString ScriptingService::textDiffDialog(const QString &title, const QString &la
     Q_UNUSED(label)
     Q_UNUSED(text1)
     Q_UNUSED(text2)
-    return true;
+    return QString();
 #endif
 }
 
