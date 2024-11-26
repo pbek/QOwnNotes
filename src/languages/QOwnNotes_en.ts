@@ -4702,53 +4702,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1236"/>
+        <location filename="../services/owncloudservice.cpp" line="1237"/>
         <source>No versions found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1237"/>
+        <location filename="../services/owncloudservice.cpp" line="1238"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1257"/>
+        <location filename="../services/owncloudservice.cpp" line="1258"/>
         <source>Done with loading trashed notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1297"/>
+        <location filename="../services/owncloudservice.cpp" line="1298"/>
         <source>No trashed notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1298"/>
+        <location filename="../services/owncloudservice.cpp" line="1299"/>
         <source>No trashed notes were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1320"/>
-        <location filename="../services/owncloudservice.cpp" line="1345"/>
+        <location filename="../services/owncloudservice.cpp" line="1321"/>
+        <location filename="../services/owncloudservice.cpp" line="1346"/>
         <source>Error while loading todo lists!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1321"/>
+        <location filename="../services/owncloudservice.cpp" line="1322"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1346"/>
+        <location filename="../services/owncloudservice.cpp" line="1347"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2024"/>
+        <location filename="../services/owncloudservice.cpp" line="2025"/>
         <source>No bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2025"/>
+        <location filename="../services/owncloudservice.cpp" line="2026"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5042,18 +5042,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2140"/>
-        <location filename="../services/owncloudservice.cpp" line="2154"/>
+        <location filename="../services/owncloudservice.cpp" line="2141"/>
+        <location filename="../services/owncloudservice.cpp" line="2155"/>
         <source>Login flow failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2141"/>
+        <location filename="../services/owncloudservice.cpp" line="2142"/>
         <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server&apos;s admin page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2155"/>
+        <location filename="../services/owncloudservice.cpp" line="2156"/>
         <source>Could not parse login url!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5107,98 +5107,98 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="528"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="530"/>
         <source>An url was opened at the current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="706"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="708"/>
         <source>No equation was found in front of the cursor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="727"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="729"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="889"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="891"/>
         <source>&amp;Link selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="889"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="891"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="896"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="898"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="899"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="901"/>
         <source>Insert block &amp;quote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="913"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="915"/>
         <source>Copy code block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="940"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="942"/>
         <source>Print</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="947"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="949"/>
         <source>Print selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="959"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="961"/>
         <source>Print selected text (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="975"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="977"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="985"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="987"/>
         <source>Export selected text as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="997"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="999"/>
         <source>Export selected text as PDF (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1029"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1031"/>
         <source>Custom actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1104"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1106"/>
         <source>No suggestions for %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1119"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1121"/>
         <source>Ignore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1121"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1123"/>
         <source>Add to Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1131"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1133"/>
         <source>Spelling</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5593,7 +5593,7 @@ Do you want to install it anyway?</source>
 <context>
     <name>ScriptingService</name>
     <message>
-        <location filename="../services/scriptingservice.cpp" line="277"/>
+        <location filename="../services/scriptingservice.cpp" line="278"/>
         <source>file doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9149,6 +9149,24 @@ Your notes will stay intact!</source>
     <message>
         <location filename="../dialogs/tagadddialog.ui" line="47"/>
         <source>New tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextDiffDialog</name>
+    <message>
+        <location filename="../dialogs/textdiffdialog.ui" line="17"/>
+        <source>Text difference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/textdiffdialog.ui" line="48"/>
+        <source>Differences:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/textdiffdialog.ui" line="72"/>
+        <source>Accept change?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
