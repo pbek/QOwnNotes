@@ -2149,6 +2149,15 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
 #endif
 }
 
+/**
+ * Opens a dialog to show the differences between two texts and lets the user edit the result
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text1 {QString} first text
+ * @param text2 {QString} second text
+ * @return
+ */
 QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
                                       const QString &text1, const QString &text2) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
