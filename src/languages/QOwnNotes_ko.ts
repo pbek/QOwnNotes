@@ -7244,6 +7244,21 @@ Your notes will stay intact!</source>
 </message>
 </context>
 <context>
+<name>TextDiffDialog</name>
+<message>
+<source>Text difference</source>
+<translation>텍스트 차이</translation>
+</message>
+<message>
+<source>Differences:</source>
+<translation>차이점:</translation>
+</message>
+<message>
+<source>Accept change?</source>
+<translation>변경을 수락하시겠습니까?</translation>
+</message>
+</context>
+<context>
 <name>TodoDialog</name>
 <message>
 <source>Todo</source>

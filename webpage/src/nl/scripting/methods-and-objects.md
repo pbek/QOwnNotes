@@ -1576,6 +1576,36 @@ var result = script.inputDialogGetMultiLineText(
 script.log(result);
 ```
 
+Een dialoogvenster openen om de verschillen tussen twee teksten weer te geven
+----------------------------------------------------------
+
+### Methodeaanroep en parameters
+```cpp
+/**
+* Opent een dialoogvenster om de verschillen tussen twee teksten weer te geven en laat de gebruiker het resultaat bewerken
+*
+* @param titel {QString} titel van het dialoogvenster
+* @param label {QString} label tekst van het dialoogvenster
+* @param tekst1 {QString} eerste tekst
+* @param tekst2 {QString} tweede tekst
+* @return
+  */
+  QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
+                                           const QString & text1, const QString &text2);
+```
+
+`tekst2` is de tekst die je in het dialoogvenster kunt bewerken. Er wordt een lege tekenreeks geretourneerd als er op `Annuleren` is geklikt of op `Escape` is gedrukt.
+
+### Voorbeeld
+```js
+const text = script.noteTextEditSelectedText();
+const aiPrompt = "Vertaal de tekst naar het Engels";
+const aiResult = script.aiComplete(aiPrompt + ":\n\n" + tekst);
+
+var result = script.textDiffDialog("AI Text Tool", "Resulterende tekst", tekst, aiResult);
+script.log(resultaat);
+```
+
 Controleren of er een bestand bestaat
 -------------------------
 

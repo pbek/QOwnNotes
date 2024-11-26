@@ -1576,10 +1576,40 @@ var result = script.inputDialogGetMultiLineText(
 script.log(result);
 ```
 
+Opening a dialog to show the differences between two texts
+----------------------------------------------------------
+
+### Metoda wywołania i parametry
+```cpp
+/**
+* Opens a dialog to show the differences between two texts and lets the user edit the result
+*
+* @param title {QString} title of the dialog
+* @param label {QString} label text of the dialog
+* @param text1 {QString} first text
+* @param text2 {QString} second text
+* @return
+  */
+  QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
+                                           const QString &text1, const QString &text2);
+```
+
+`text2` is the text you will be able to edit in the dialog. An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
+### Przykład
+```js
+const text = script.noteTextEditSelectedText();
+const aiPrompt = "Translate the text to English";
+const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
+
+var result = script.textDiffDialog("AI Text Tool", "Resulting text", text, aiResult);
+script.log(result);
+```
+
 Sprawdzanie, czy plik istnieje
 -------------------------
 
-### Metoda wywołania i parametry
+### Method call and parameters
 ```cpp
 /**
  * Sprawdź, czy plik istnieje
@@ -1589,7 +1619,7 @@ Sprawdzanie, czy plik istnieje
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
-### Przykład
+### Example
 ```js
 var result = script.fileExists(filePath);
 script.log(result);

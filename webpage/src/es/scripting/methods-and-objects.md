@@ -1574,10 +1574,40 @@ var result = script.inputDialogGetMultiLineText(
 script.log(result);
 ```
 
+Opening a dialog to show the differences between two texts
+----------------------------------------------------------
+
+### Llamada y parámetros del método
+```cpp
+/**
+* Opens a dialog to show the differences between two texts and lets the user edit the result
+*
+* @param title {QString} title of the dialog
+* @param label {QString} label text of the dialog
+* @param text1 {QString} first text
+* @param text2 {QString} second text
+* @return
+  */
+  QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
+                                           const QString &text1, const QString &text2);
+```
+
+`text2` is the text you will be able to edit in the dialog. An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+
+### Ejemplo
+```js
+const text = script.noteTextEditSelectedText();
+const aiPrompt = "Translate the text to English";
+const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
+
+var result = script.textDiffDialog("AI Text Tool", "Resulting text", text, aiResult);
+script.log(result);
+```
+
 Comprobar si un archivo existe
 -------------------------
 
-### Llamada y parámetros del método
+### Llamada y parámetors del método
 ```cpp
 /**
  * Comprueba si existe un archivo
@@ -1596,7 +1626,7 @@ script.log(result);
 Leer texto de un archivo
 ------------------------
 
-### Llamada y parámetors del método
+### Llamada y parámetros del método
 ```cpp
 /**
  * Lee texto de un archivo
@@ -1620,7 +1650,7 @@ if(script.fileExists(filePath)){
 Escribir texto en un archivo
 ----------------------
 
-### Llamada y parámetros del método
+### Llamada y parámetors del método
 ```cpp
 /**
  * Escribe un texto en un archivo
@@ -1657,7 +1687,7 @@ Agregar una regla de resaltado para el editor
 
 Puede inyectar directamente reglas de resaltado en el editor definiendo reglas regulares expresiones y asignarles un estado de resaltado.
 
-### Llamada y parámetors del método
+### Method call and parameters
 ```cpp
 /**
  * Agrega una regla de resaltado al resaltador de sintaxis del editor
@@ -1707,7 +1737,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30  |
 | StUnderline                | 31  |
 
-### Ejemplo
+### Example
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

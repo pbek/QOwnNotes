@@ -8,8 +8,8 @@
     [ai-text-tool.qml](https://github.com/qownnotes/scripts/blob/master/ai-text-tool/ai-text-tool.qml)
   - For more information please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-a-dialog-to-show-the-differences-between-two-texts)
-- Added more Spanish, Brazilian Portuguese, French, Swedish translation
-  (thank you, alejandromoc, camemb3rt, jd-develop, dzenan)
+- Added more Dutch, Korean, Spanish, Brazilian Portuguese, French, Swedish translation
+  (thank you, stephanp, venusgirl, alejandromoc, camemb3rt, jd-develop, dzenan)
 
 ## 24.11.3
 - All missing and malfunctioning icon variations were generated and added

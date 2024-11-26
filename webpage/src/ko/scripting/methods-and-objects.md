@@ -1558,6 +1558,36 @@ var result = script.inputDialogGetMultiLineText(
 script.log(result);
 ```
 
+두 텍스트의 차이점을 표시하는 대화 상자 열기
+----------------------------------------------------------
+
+### 메서드 호출 및 매개 변수
+```cpp
+/**
+* 대화 상자를 열어 두 텍스트의 차이점을 표시하고 사용자가 결과를 편집할 수 있도록 합니다
+*
+* @param title {QString} title of the dialog
+* @param label {QString} label text of the dialog
+* @param text1 {QString} first text
+* @param text2 {QString} second text
+* @return
+  */
+  QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
+                                           const QString &text1, const QString &text2);
+```
+
+`text2`는 대화 상자에서 편집할 수 있는 텍스트입니다. `취소`을 클릭하거나 `Esc`를 누른 경우 빈 문자열이 반환됩니다.
+
+### 예제
+```js
+const text = script.noteTextEditSelectedText();
+const aiPrompt = "텍스트를 한국어로 번역합니다";
+const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
+
+var result = script.textDiffDialog("AI Text Tool", "Resulting text", text, aiResult);
+script.log(result);
+```
+
 파일이 있는지 확인하기
 -------------------------
 
@@ -1641,7 +1671,7 @@ script.log(result);
 
 정규식을 정의하고 강조 표시 상태에 할당하여 강조 표시 규칙을 편집기에 직접 주입할 수 있습니다.
 
-### 메서드 호출 및 매개 변수
+### 메소드 호출 및 매개변수
 ```cpp
 /**
  * 편집기의 구문 강조 표시에 강조 표시 규칙을 추가

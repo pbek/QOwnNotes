@@ -7288,6 +7288,21 @@ Je notities zullen intact blijven!</translation>
 </message>
 </context>
 <context>
+<name>TextDiffDialog</name>
+<message>
+<source>Text difference</source>
+<translation>Tekstuele verschillen</translation>
+</message>
+<message>
+<source>Differences:</source>
+<translation>Verschillen:</translation>
+</message>
+<message>
+<source>Accept change?</source>
+<translation>Verschil accepteren?</translation>
+</message>
+</context>
+<context>
 <name>TodoDialog</name>
 <message>
 <source>Todo</source>

@@ -7440,6 +7440,21 @@ Fanfaidh do nótaí slán!</translation>
 </message>
 </context>
 <context>
+<name>TextDiffDialog</name>
+<message>
+<source>Text difference</source>
+<translation type="unfinished">Text difference</translation>
+</message>
+<message>
+<source>Differences:</source>
+<translation type="unfinished">Differences:</translation>
+</message>
+<message>
+<source>Accept change?</source>
+<translation type="unfinished">Accept change?</translation>
+</message>
+</context>
+<context>
 <name>TodoDialog</name>
 <message>
 <source>Todo</source>
