@@ -2155,7 +2155,6 @@ QString ScriptingService::textDiffDialog(const QString &title, const QString &la
                                                    QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    bool ok;
     auto dialog = new TextDiffDialog(nullptr, title, label, text1, text2);
     dialog->exec();
     auto accepted = dialog->resultAccepted();
