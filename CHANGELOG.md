@@ -1,6 +1,13 @@
 # QOwnNotes Changelog
 
 ## 24.11.4
+- There now is a **new script function `script.textDiffDialog`** that opens a dialog
+  to show the differences between two texts and lets the user edit the result
+  (for [#3163](https://github.com/pbek/QOwnNotes/issues/3163))
+  - There is an example at
+    [ai-text-tool.qml](https://github.com/qownnotes/scripts/blob/master/ai-text-tool/ai-text-tool.qml)
+  - For more information please take a look at the
+    [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-a-dialog-to-show-the-differences-between-two-texts)
 - Added more Spanish, Brazilian Portuguese, French, Swedish translation
   (thank you, alejandromoc, camemb3rt, jd-develop, dzenan)
 
