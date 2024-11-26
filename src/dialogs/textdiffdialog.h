@@ -24,7 +24,10 @@ class TextDiffDialog : public MasterDialog {
    private slots:
     void dialogButtonClicked(QAbstractButton *button);
 
+    void on_plainTextEdit_textChanged();
+
    private:
     Ui::TextDiffDialog *ui;
     bool accepted = false;
+    QString text1;
 };

@@ -11,13 +11,9 @@ TextDiffDialog::TextDiffDialog(QWidget *parent, const QString &title, const QStr
     ui->setupUi(this);
     afterSetupUI();
     this->setWindowTitle(title);
+    this->text1 = text1;
     this->ui->label_2->setText(labelText);
     this->ui->plainTextEdit->setPlainText(text2);
-
-    auto diff = new diff_match_patch();
-    const QList<Diff> diffList = diff->diff_main(text1, text2);
-    const QString html = diff->diff_prettyHtml(diffList);
-    this->ui->textEdit->setHtml(html);
 
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
             SLOT(dialogButtonClicked(QAbstractButton *)));
@@ -34,4 +30,12 @@ void TextDiffDialog::dialogButtonClicked(QAbstractButton *button) {
 bool TextDiffDialog::resultAccepted() { return this->accepted; }
 
 QString TextDiffDialog::resultText() { return this->ui->plainTextEdit->toPlainText(); }
+
+
+void TextDiffDialog::on_plainTextEdit_textChanged() {
+    auto diff = new diff_match_patch();
+    const QList<Diff> diffList = diff->diff_main(this->text1, this->ui->plainTextEdit->toPlainText());
+    const QString html = diff->diff_prettyHtml(diffList);
+    this->ui->textEdit->setHtml(html);
+}
 
