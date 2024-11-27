@@ -5,6 +5,7 @@ set -e
 
 # Configuration
 SRC_IMAGES_DIR="../src/images"
+WEBPAGE_FAVICON="../webpage/src/.vuepress/public/favicon.png"
 INPUT_SVG="icon.svg"
 INPUT_DARK_SVG="icon-dark.svg"
 SIZES_APP=(16 24 32 48 64 96 128 256 512)
@@ -90,6 +91,7 @@ done
 # Copy to src/images
 echo "Copying to src/images"
 cp icon.png ${SRC_IMAGES_DIR}/icon.png
+cp icon.png ${WEBPAGE_FAVICON}
 cp ${INPUT_DARK_SVG} ${SRC_IMAGES_DIR}/icon-dark.svg
 cp ${INPUT_SVG} ${SRC_IMAGES_DIR}/icons/scalable/apps/QOwnNotes.svg
 convert_icon_png 128 ${SRC_IMAGES_DIR}/icon-dark.png ${INPUT_DARK_SVG}
