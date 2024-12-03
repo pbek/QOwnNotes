@@ -120,7 +120,9 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
 
     QString name = scriptInfoJson.name;
 
-    std::unique_ptr<QTreeWidgetItem> item(new QTreeWidgetItem());
+    // We can't use `std::unique_ptr<QTreeWidgetItem> item(new QTreeWidgetItem())` anymore, because
+    // of the use of `QMetaObject::invokeMethod()`
+    auto item = new QTreeWidgetItem();
     item->setText(0, name);
     item->setData(0, Qt::UserRole, scriptInfoJson.identifier);
 
@@ -128,8 +130,13 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
         item->setForeground(0, QColor("#aaaaaa"));
     }
 
-    ui->scriptTreeWidget->addTopLevelItem(item.release());
-    ui->scriptTreeWidget->resizeColumnToContents(0);
+    // Each of these two lines "addTopLevelItem" and "resizeColumnToContents" result in this warning when the
+    // method was called from another thread: `QBasicTimer::start: Timers cannot be started from another thread`
+    // So we need to use QMetaObject::invokeMethod()
+    QMetaObject::invokeMethod(ui->scriptTreeWidget, [this, item]() {
+        ui->scriptTreeWidget->addTopLevelItem(item);
+        ui->scriptTreeWidget->resizeColumnToContents(0);
+    }, Qt::QueuedConnection);
 }
 
 void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script> &scripts) {
