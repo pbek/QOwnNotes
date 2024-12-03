@@ -508,6 +508,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // attempt to quit the application when a logout is initiated
     connect(qApp, &QApplication::commitDataRequest, this, &MainWindow::on_action_Quit_triggered);
 
+    // Register the LogWidget::LogType type so showStatusBarMessage there doesn't throw a warning,
+    // like this: `QMetaMethod::invoke: Unable to handle unregistered datatype 'LogWidget::LogType'`
+    qRegisterMetaType<LogWidget::LogType>("LogWidget::LogType");
+
     automaticScriptUpdateCheck();
 
     // trigger cli parameter menu action if there was any set
