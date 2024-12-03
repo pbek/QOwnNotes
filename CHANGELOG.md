@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 24.12.0
+- There now is a software repository for **Fedora 41**
+  - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
+    for instructions
+
 ## 24.11.4
 - There now is a **new script function `script.textDiffDialog`** that opens a dialog
   to show the differences between two texts and lets the user edit the result
