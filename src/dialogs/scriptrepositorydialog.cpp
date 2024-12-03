@@ -120,7 +120,7 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
 
     QString name = scriptInfoJson.name;
 
-    auto *item = new QTreeWidgetItem();
+    std::unique_ptr<QTreeWidgetItem> item(new QTreeWidgetItem());
     item->setText(0, name);
     item->setData(0, Qt::UserRole, scriptInfoJson.identifier);
 
@@ -128,7 +128,7 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
         item->setForeground(0, QColor("#aaaaaa"));
     }
 
-    ui->scriptTreeWidget->addTopLevelItem(item);
+    ui->scriptTreeWidget->addTopLevelItem(item.release());
     ui->scriptTreeWidget->resizeColumnToContents(0);
 }
 
