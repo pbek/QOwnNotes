@@ -150,7 +150,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> agrega una nueva etiqueta a una nota
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> recarga la carpeta de notas actual
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> le permite seleccionar una carpeta de notas diferente
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> recarga el motor de secuencias de comandos
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> recarga el motor de secuencias de órdenes
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> oculta o muestra la barra de menú principal
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite buscar acciones
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> guarda manualmente las notas modificadas

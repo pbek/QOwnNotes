@@ -269,7 +269,7 @@ function noteTaggingHook(note, action, tagName, newTagName);
     -   agregar una etiqueta a una nota agregará la etiqueta al texto de la nota
     -   eliminar una etiqueta de una nota eliminará la etiqueta del texto de la nota
     -   la eliminación de etiquetas en la lista de etiquetas eliminará esas etiquetas de sus notas
-    -   el cambio de nombre de las etiquetas en la lista de etiquetas cambiará el nombre de esas etiquetas en su notas
+    -   el renombramiento de las etiquetas en la lista de etiquetas renombrará esas etiquetas en sus notas
     -   el etiquetado masivo de notas en la lista de notas agregará esas etiquetas a sus notas
     -   la eliminación masiva de etiquetas de notas en la lista de notas eliminará esas etiquetas de sus notas
     -   la aplicación activará una serie de acciones `agregar` y `eliminar` para todas las etiquetas seleccionadas y sus hijos en todas las notas si las etiquetas se mueven en el panel de etiquetas

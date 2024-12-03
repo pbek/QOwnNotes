@@ -156,16 +156,16 @@
 - Soporte para **compartir notas** en su servidor de **ownCloud** / **Nextcloud**
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
 - Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
+- **Las notas en la papelera** pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
-- Support for **hierarchical note tagging** and **note subfolders**
+- Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
 - Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar múltiples carpetas de notas)
 - Es posible **buscar partes de palabras** en las notas. Los resultados de la búsqueda se resaltan en las notas
 - [**Extensión del navegador**](browser-extension.md) para **agregar notas a partir del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
 - Compatibilidad con [**revisores ortográficos**](../editor/spellchecking.md)
 - **Modo portátil** para llevar consigo QOwnNotes en memorias USB
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **Soporte de secuencias de órdenes** y un [**repositorio de scripts**](https://github.com/qownnotes/scripts) en línea donde puede instalar scripts dentro de la aplicación
 - Implementación de la **[API de finalización de OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** para su uso en scripts
 - **Modo Vim**
 - **[Aplicación web](web-app.md)** para **insertar fotos desde su teléfono móvil** en la nota actual en QOwnNotes en su escritorio

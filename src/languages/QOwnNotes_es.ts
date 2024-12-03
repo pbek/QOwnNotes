@@ -23,11 +23,11 @@
 </message>
 <message>
 <source>Image filename or URL</source>
-<translation>Nombre de la imagen o su URL</translation>
+<translation>Nombre de archivo o URL de la imagen</translation>
 </message>
 <message>
 <source>Path to file or URL</source>
-<translation>Ruta al archivo o su URL</translation>
+<translation>Ruta o URL al archivo</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -1089,7 +1089,7 @@
 </message>
 <message>
 <source>Text preset</source>
-<translation>Texto predefinido</translation>
+<translation>Preajuste de texto</translation>
 </message>
 <message>
 <source>Emphasized text</source>
@@ -1273,7 +1273,7 @@
 </message>
 <message>
 <source>Path to file or URL</source>
-<translation>Ruta al archivo o su URL</translation>
+<translation>Ruta o URL al archivo</translation>
 </message>
 <message>
 <source>Scaling width:</source>
@@ -2232,7 +2232,7 @@
 </message>
 <message>
 <source>Activate context menu</source>
-<translation>Activar menú contextual</translation>
+<translation>Habilitar menú contextual</translation>
 </message>
 <message>
 <source>Import bookmarks from server</source>
@@ -2344,7 +2344,7 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation>Activar funciones de IA</translation>
+<translation>Habilitar funciones de IA</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -3356,7 +3356,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Note editing is disabled, click to enable</source>
-<translation>La edición de notas está desactivada, haz clic para activar</translation>
+<translation>La edición de notas está desactivada, haga clic aquí para habilitarla</translation>
 </message>
 <message>
 <source>Line numbers</source>
@@ -3921,11 +3921,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>El sistema Windows parece ejecutarse en modo oscuro. ¿Quiere activar también el modo oscuro en QOwnNotes?</translation>
+<translation>Su sistema Windows parece ejecutarse en modo oscuro. ¿Desea deshabilitar también el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>El sistema Windows parece ejecutarse en modo claro. ¿Quiere activar también el modo claro en QOwnNotes?</translation>
+<translation>Su sistema Windows parece ejecutarse en modo claro. ¿Desea deshabilitar también el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3937,11 +3937,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Su sistema Linux parece utilizar el modo oscuro. ¿Desea activarlo también en QOwnNotes?</translation>
+<translation>Su sistema Linux parece ejecutarse en modo oscuro. ¿Desea habilitar también el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Su sistema Linux parece utilizar el modo claro. ¿Desea activarlo también en QOwnNotes?</translation>
+<translation>Su sistema Linux parece ejecutarse en modo claro. ¿Desea deshabilitar también el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Panel disabled</source>
@@ -4019,7 +4019,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation>Se activaron las subcarpetas de notas en la carpeta actual para poder importar carpetas.</translation>
+<translation>Se habilitaron las subcarpetas de notas en la carpeta actual para poder importar carpetas.</translation>
 </message>
 <message>
 <source>Login flow failed</source>
@@ -4043,7 +4043,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation>No se ha podido encontrar la nota.&lt;br /&gt;No se ha podido crear automáticamente la nota en esta ubicación porque las subcarpetas están desactivadas en esta carpeta de notas.</translation>
+<translation>No se ha podido encontrar la nota.&lt;br /&gt;No se ha podido crear la nota automáticamente en esta ubicación porque las subcarpetas están desactivadas en la carpeta de notas actual.</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
@@ -4059,7 +4059,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Note creation failed</source>
-<translation>Falló la creación de la nota</translation>
+<translation>Error al crear la nota</translation>
 </message>
 </context>
 <context>
@@ -4669,7 +4669,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Enable dark mode</source>
-<translation>Activar el modo oscuro</translation>
+<translation>Habilitar modo oscuro</translation>
 </message>
 <message>
 <source>You need to restart the application to let this setting take effect</source>
@@ -4685,7 +4685,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Enable markdown highlighting</source>
-<translation>Activar resaltado de Markdown</translation>
+<translation>Habilitar resaltado de Markdown</translation>
 </message>
 <message>
 <source>Interface language</source>
@@ -5244,7 +5244,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Enable dark mode icon theme</source>
-<translation>Enable dark mode icon theme</translation>
+<translation>Habilitar tema de iconos en modo oscuro</translation>
 </message>
 <message>
 <source>System tray</source>
@@ -5416,7 +5416,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation>Activar el soporte de Nextcloud Deck</translation>
+<translation>Habilitar soporte de Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -6231,7 +6231,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Enable automatic removal of matching closing characters</source>
-<translation>Activar la eliminación automática de los caracteres de cierre coincidentes</translation>
+<translation>Habilitar eliminación automática de los caracteres de cierre coincidentes</translation>
 </message>
 <message>
 <source>Your CalDAV calendar base url</source>
@@ -7003,7 +7003,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Rename attachment</source>
-<translation>&amp;Cambiar el nombre del archivo adjunto</translation>
+<translation>&amp;Renombrar archivo adjunto</translation>
 </message>
 <message>
 <source>&amp;Delete attachments</source>
@@ -7019,7 +7019,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation>El archivo &lt;strong&gt;%1&lt;/strong&gt; no existe, no puede cambiarle el nombre.</translation>
+<translation>El archivo &lt;strong&gt;%1&lt;/strong&gt; no existe, ¡no puede renombrarlo!</translation>
 </message>
 <message>
 <source>File exists</source>
@@ -7035,7 +7035,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation>¡Error al cambiar el nombre del archivo &lt;strong&gt;%1&lt;/strong&gt;!</translation>
+<translation>¡Error al renombrar el archivo &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <source>&amp;Open note</source>
@@ -7278,15 +7278,15 @@ Your notes will stay intact!</source>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Diferencia de texto</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>Diferencias:</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>¿Aceptar cambio?</translation>
 </message>
 </context>
 <context>

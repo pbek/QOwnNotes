@@ -279,7 +279,7 @@ También puede asignar accesos directos locales y globales a sus acciones person
 :::
 
 ::: warning
-Tenga en cuenta que los [iconos de temas de escritorio gratuitos](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) están disponibles en su mayoría solo en Linux. Entonces, si realmente desea usar un ícono en macOS o Windows, debe proporcionar uno con su script. Para obtener la ruta de su secuencia de comandos para establecer una ruta adecuada para su icono, puede usar la propiedad [scriptDirPath](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
+Tenga en cuenta que los [iconos de los temas de escritorio gratuitos](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) están disponibles en su mayoría solamente en Linux. Entonces, si realmente desea usar un icono en macOS o Windows, debe proporcionar uno con su script. Para obtener la ruta de su secuencia de comandos para establecer una ruta adecuada para su icono, puede usar la propiedad [scriptDirPath](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
 :::
 
 ### Ejemplo
@@ -360,7 +360,7 @@ script.registerLabel("etiqueta larga", "otro texto muy largo, otro texto muy lar
 script.registerLabel("contra-etiqueta");
 ```
 
-The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
+Las etiquetas serán visibles en el *Panel de secuencia de órdenes*, el cual necesita habilitar en el menú *Ventanas/Paneles*.
 
 Puede utilizar texto sin formato o html en las etiquetas. Se podrá seleccionar el texto y se podrá hacer clic en los enlaces.
 
@@ -390,7 +390,7 @@ Puede utilizar texto sin formato o html en las etiquetas. Se podrá seleccionar 
 Puede que después quiera echar un vistazo al script de ejemplo [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 ::: tip
-The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
+La secuencia de órdenes también soporta **enlaces externos**, así como **enlaces internos** en notas, tareas, tarjetas y más. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
 :::
 
 Crear una nota nueva
@@ -462,7 +462,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 script.noteTextEditWrite("My custom text");
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+Puede que quiera echar un vistazo a la acción personalizada `transformTextRot13` en el ejemplo [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 Puede usar esto junto con `noteTextEditSelectAll` para sobrescribir todo el texto de la nota actual.
 
@@ -485,7 +485,7 @@ QString ScriptingService::noteTextEditSelectedText();
 var text = script.noteTextEditSelectedText();
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+Puede que quiera echar un vistazo a la acción personalizada `transformTextRot13` en el ejemplo [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 Seleccionar todo el texto en la edición de texto de la nota
 -------------------------------------
@@ -682,7 +682,7 @@ Use a completion prompt on the currently selected AI model
 
 The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
 
-The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+El sistema de IA necesita ser activado en la barra de herramientas de IA o en el menú principal para que esto funcione.
 
 ### Llamada y parámetros del método
 ```cpp
@@ -739,7 +739,7 @@ void ScriptingService::tagCurrentNote(QString tagName);
 script.tagCurrentNote("favorite");
 ```
 
-You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
+Puede que quiera echar un vistazo a la acción personalizada `favoriteNote` en el ejemplo [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
 
 Crear o recuperar una etiqueta por su nombre lista de ruta de navegación
 -------------------------------------------------
@@ -847,7 +847,7 @@ El widget base para casi todo es [QWidget](https://doc.qt.io/qt-5/qwidget.html).
 The [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
 :::
 
-Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
+Eche un vistazo a la [Hoja de referencia de estilo](http://doc.qt.io/qt-5/stylesheet-reference.html) para obtener una referencia de los estilos que se encuentran disponibles.
 
 Si desea inyectar estilos en la vista previa de html para alterar la forma en que se previsualizan las notas, por favor eche un vistazo a [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 

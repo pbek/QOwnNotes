@@ -163,7 +163,7 @@ Los bloques de código están delimitados por líneas con tres comillas invertid
 Agregue cuatro espacios delante de su código para marcarlo como bloque de código.
 
 ```markdown
-    s = "Code with space indent"
+    s = "Código con identación de espacio"
     print s
 ```
 
