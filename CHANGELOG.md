@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 24.12.0
+- Several warnings were prevented when scripts updates were present when the
+  application started (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))
 - There now is a software repository for **Fedora 41**
   - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
     for instructions
