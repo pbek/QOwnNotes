@@ -2,6 +2,13 @@
 
 ## 24.12.1
 - The build process was fixed for Qt below 5.10.0 (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))
+- The action `Find note` was renamed to `Find text in notes` and the action
+  `Find notes in all tags / subfolders` was renamed to `Find text in notes in all tags / subfolders`
+  and will now search for the selected text in the current note
+  (for [#3172](https://github.com/pbek/QOwnNotes/issues/3172))
+  - The action `Find text in notes` is now also present in the context menu of
+    the note text edit when there is a selected text
+
 ## 24.12.0
 - Several warnings were prevented when scripts updates were present when the
   application started (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))

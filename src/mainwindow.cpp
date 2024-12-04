@@ -5873,6 +5873,12 @@ void MainWindow::on_action_Find_note_triggered() {
         return;
     }
 
+    // Search for the selected text if there is any
+    const auto selectedText = activeNoteTextEdit()->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        this->ui->searchLineEdit->setText(selectedText);
+    }
+
     changeDistractionFreeMode(false);
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();
@@ -11957,6 +11963,8 @@ QAction *MainWindow::pasteImageAction() { return ui->actionPaste_image; }
 QAction *MainWindow::autocompleteAction() { return ui->actionAutocomplete; }
 
 QAction *MainWindow::splitNoteAtPosAction() { return ui->actionSplit_note_at_cursor_position; }
+
+QAction *MainWindow::findNoteAction() { return ui->action_Find_note; }
 
 QList<QAction *> MainWindow::customTextEditActions() { return _noteTextEditContextMenuActions; }
 

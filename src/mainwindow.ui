@@ -1400,7 +1400,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Find note</string>
+    <string>&amp;Find text in notes</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+F</string>
@@ -2229,7 +2229,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
    </property>
    <property name="text">
-    <string>Find notes in all tags / subfolders</string>
+    <string>Find text in notes in all tags / subfolders</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+F</string>

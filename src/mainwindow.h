@@ -733,6 +733,7 @@ class MainWindow : public QMainWindow {
     QAction *pasteImageAction();
     QAction *autocompleteAction();
     QAction *splitNoteAtPosAction();
+    QAction *findNoteAction();
     QList<QAction *> customTextEditActions();
 
    public:

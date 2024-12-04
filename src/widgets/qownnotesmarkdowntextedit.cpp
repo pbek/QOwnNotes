@@ -906,7 +906,9 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     if (isTextSelected) {
         menu->addAction(MainWindow::instance()->searchTextOnWebAction());
+        menu->addAction(MainWindow::instance()->findNoteAction());
     }
+
     //     searchAction->setEnabled(isTextSelected);
     //     QAction *searchAction =
     //         menu->addAction(ui->actionSearch_text_on_the_web->text());
