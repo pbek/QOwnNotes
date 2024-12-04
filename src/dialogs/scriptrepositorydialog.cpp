@@ -130,6 +130,7 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
         item->setForeground(0, QColor("#aaaaaa"));
     }
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     // Each of these two lines "addTopLevelItem" and "resizeColumnToContents" result in this warning when the
     // method was called from another thread: `QBasicTimer::start: Timers cannot be started from another thread`
     // So we need to use QMetaObject::invokeMethod()
@@ -137,6 +138,10 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
         ui->scriptTreeWidget->addTopLevelItem(item);
         ui->scriptTreeWidget->resizeColumnToContents(0);
     }, Qt::QueuedConnection);
+#else
+    ui->scriptTreeWidget->addTopLevelItem(item);
+    ui->scriptTreeWidget->resizeColumnToContents(0);
+#endif
 }
 
 void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script> &scripts) {

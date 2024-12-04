@@ -1,5 +1,7 @@
 # QOwnNotes Changelog
 
+## 24.12.1
+- The build process was fixed for Qt below 5.10.0 (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))
 ## 24.12.0
 - Several warnings were prevented when scripts updates were present when the
   application started (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))
