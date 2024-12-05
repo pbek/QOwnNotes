@@ -1735,10 +1735,6 @@
 <translation>&amp;צא</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;מצא פתק</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;הסר את הפתק הנוכחי</translation>
 </message>
@@ -1936,6 +1932,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>אודות &amp;QOwnNotes…</translation>
 </message>
@@ -2118,10 +2118,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>הצג רשימת הערות בלוח התגים</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>מצא הערות בכל התגים / תיקיות המשנה</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2476,6 +2472,10 @@
 <message>
 <source>Donate</source>
 <translation>לתרום</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

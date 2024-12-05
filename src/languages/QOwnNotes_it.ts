@@ -1713,10 +1713,6 @@
 <translation>&amp;Esci</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Cerca una nota</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Elimina la nota corrente</translation>
 </message>
@@ -1914,6 +1910,10 @@
 <translation>&amp;Imposta cartelle/sottocartelle delle note</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>Informazioni su &amp;QOwnNotes…</translation>
 </message>
@@ -2096,10 +2096,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Mostra elenco note sotto il pannello delle etichette</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Trova note in ogni etichetta / sotto-cartella</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2449,6 +2445,10 @@
 <message>
 <source>Donate</source>
 <translation>Fai una donazione</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

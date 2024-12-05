@@ -1710,10 +1710,6 @@
 <translation>&amp;Afsluiten</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>Vind notitie</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>Huidige notitie verwijderen</translation>
 </message>
@@ -1911,6 +1907,10 @@
 <translation>Notitiemappen / submappen instellen</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation>Tekst in notities &amp;zoeken</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>Over &amp;QOwnNotes…</translation>
 </message>
@@ -2093,10 +2093,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Notitielijst onder label deelvenster weergeven</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Vind notities in alle labels / submappen</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2449,6 +2445,10 @@
 <message>
 <source>Donate</source>
 <translation>Doneren</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation>Tekst in notities in alle tags/submappen zoeken</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

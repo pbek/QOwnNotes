@@ -1713,10 +1713,6 @@
 <translation>&amp;ondang</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;pangita sa notahan</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;tangtangon ang karon nga notahan</translation>
 </message>
@@ -1914,6 +1910,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>Mahitungod &amp;QOwnNotes…</translation>
 </message>
@@ -2096,10 +2096,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Ipakita ang lista sa nota ubos sa tag panel</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Pangitaa sa mga suwatanan og tanang tags/subfolders</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2454,6 +2450,10 @@
 <message>
 <source>Donate</source>
 <translation>Mahatag</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

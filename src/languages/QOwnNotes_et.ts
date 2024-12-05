@@ -1713,10 +1713,6 @@
 <translation>&amp;Lõpeta</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Leidke märkus</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Eemalda praegune märkus</translation>
 </message>
@@ -1914,6 +1910,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>&amp;QOwnNotesi kohta…</translation>
 </message>
@@ -2096,10 +2096,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Kuva märkmeloend sildipaneeli all</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Märkmeid saate leida kõigist siltidest / alamkaustadest</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2450,6 +2446,10 @@
 <message>
 <source>Donate</source>
 <translation>Anneta</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

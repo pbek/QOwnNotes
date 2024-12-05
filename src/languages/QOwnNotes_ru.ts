@@ -1732,10 +1732,6 @@
 <translation>&amp;Выход</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Найти заметку</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Удалить текущую заметку</translation>
 </message>
@@ -1933,6 +1929,10 @@
 <translation>Настройка папок / подпапок заметок</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>O &amp;QOwnNotes…</translation>
 </message>
@@ -2115,10 +2115,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Показать список заметок под панелью тегов</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Поиск заметок для всех тегов / вложенных папок</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2468,6 +2464,10 @@
 <message>
 <source>Donate</source>
 <translation>Пожертвования</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

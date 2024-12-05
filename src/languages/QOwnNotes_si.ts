@@ -1713,10 +1713,6 @@
 <translation>ඉවත් වන්න</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;සටහන සොයන්න</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>වත්මන් සටහන ඉවත් කරන්න</translation>
 </message>
@@ -1914,6 +1910,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>&amp;QOwnNotes ගැන…</translation>
 </message>
@@ -2096,10 +2096,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>ටැග් පැනලය යටතේ සටහන් ලැයිස්තුව පෙන්වන්න</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>සියලුම ටැග් / උප ෆෝල්ඩර වල සටහන් සොයන්න</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2449,6 +2445,10 @@
 <message>
 <source>Donate</source>
 <translation>පරිත්යාග කරන්න</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

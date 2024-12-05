@@ -1707,10 +1707,6 @@ File: QOwnNotes_en.ts</translation>
 <translation>종료(&amp;Q)</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>노트 찾기(&amp;F)</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>현재 노트 제거(&amp;R)</translation>
 </message>
@@ -1908,6 +1904,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>노트 폴더 / 하위 폴더 설정</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation>노트에서 텍스트 찾기(&amp;F)</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>QOwnNotes 정보</translation>
 </message>
@@ -2090,10 +2090,6 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Show note list under tag panel</source>
 <translation>태그 패널 아래에 노트 목록 표시</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>모든 태그/하위 폴더에서 노트 찾기</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2443,6 +2439,10 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Donate</source>
 <translation>기부</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation>모든 태그 / 하위 폴더의 메모에서 텍스트 찾기</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

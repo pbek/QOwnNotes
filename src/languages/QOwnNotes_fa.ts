@@ -1713,10 +1713,6 @@
 <translation>&amp;انصراف</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;یافتن یادداشت</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;حذف یادداشت کنونی</translation>
 </message>
@@ -1914,6 +1910,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>درباره &amp;QOwnNotes…</translation>
 </message>
@@ -2096,10 +2096,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>نمایش لیست یادداشت در زیر پنل برچسب</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>یافتن یادداشت ها را در همه برچسب ها / زیر پوشه ها</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2451,6 +2447,10 @@
 <message>
 <source>Donate</source>
 <translation>کمک مالی</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

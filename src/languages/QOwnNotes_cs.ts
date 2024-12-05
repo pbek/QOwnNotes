@@ -1732,10 +1732,6 @@
 <translation>&amp;Ukončit</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Najít poznámku</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Odstranit současnou poznámku</translation>
 </message>
@@ -1933,6 +1929,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>O &amp;QOwnNotes…</translation>
 </message>
@@ -2115,10 +2115,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Zobrazit seznam poznámek pod panelem tagů</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Najít poznámky ve všech štítcích / podsložkách</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2473,6 +2469,10 @@
 <message>
 <source>Donate</source>
 <translation>Přispět</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

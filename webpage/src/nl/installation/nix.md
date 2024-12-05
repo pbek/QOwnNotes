@@ -1,13 +1,15 @@
 # Installatie via Nix
 
-U kunt QOwnNotes installeren met de [Nix package manager](https://wiki.nixos.org/wiki/Nix_package_manager) op [NixOS](https://nixos.org/) en andere platforms is de pakketnaam [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+Je kunt QOwnNotes installeren met de [Nix pakketbeheerder](https://nixos.org/download/) op [NixOS](https://nixos.org/), andere Linuxdistributies, macOS en Windows. De pakketnaam is [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+
+Het pakket is gebouwd met Qt6 en biedt shell-integratie voor fish en bash.
 
 Zie [QOwnNotes op nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) voor meer informatie.
 
-Daarna zou u QOwnNotes moeten kunnen uitvoeren met de opdracht `qownnotes`.
+Vervolgens zou je QOwnNotes moeten kunnen uitvoeren met de opdracht `qownnotes` of `QOwnNotes`.
 
 ::: tip
 <0 /> De QOwnNotes command-line snippet manager [qc](https://github.com/qownnotes/qc) kan ook worden geïnstalleerd via de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
 
-U kunt `nix-shell -p qc --run qc` gebruiken om het uit te proberen.
+Je kunt `nix-shell -p qc --run "qc exec"` gebruiken om het uit te proberen.
 :::

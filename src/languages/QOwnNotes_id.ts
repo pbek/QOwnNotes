@@ -1705,10 +1705,6 @@
 <translation>&amp;Keluar</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Temukan catatan</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Buang catatan ini</translation>
 </message>
@@ -1906,6 +1902,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>Tentang &amp;QOwnNotes…</translation>
 </message>
@@ -2088,10 +2088,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Tampilkan daftar catatan di bawah panel tag</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Temukan catatan dalam semua tag / subfolder</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2446,6 +2442,10 @@
 <message>
 <source>Donate</source>
 <translation>Donasi</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

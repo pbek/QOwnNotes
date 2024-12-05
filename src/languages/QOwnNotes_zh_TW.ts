@@ -1704,10 +1704,6 @@
 <translation>離開</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>尋找筆記（&amp;F）</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>移除目前筆記（&amp;R）</translation>
 </message>
@@ -1905,6 +1901,10 @@
 <translation type="unfinished">Setup note folders / subfolders</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>關於 &amp;QOwnNotes...</translation>
 </message>
@@ -2087,10 +2087,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>在標籤面板下顯示筆記列表</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>在所有標籤、子資料夾中尋找筆記</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2443,6 +2439,10 @@
 <message>
 <source>Donate</source>
 <translation>捐款</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

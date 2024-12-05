@@ -1722,10 +1722,6 @@
 <translation>&amp;Završi</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Nađi bilješku</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Izbriši izabranu bilješku</translation>
 </message>
@@ -1923,6 +1919,10 @@
 <translation>Postavi mape/podmape za bilješke</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>O &amp;QOwnNotes-u…</translation>
 </message>
@@ -2105,10 +2105,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Prikaži popis bilješki ispod ploče s oznakama</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Pronađi bilješke u svim oznakama / podmapama</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2458,6 +2454,10 @@
 <message>
 <source>Donate</source>
 <translation>Donirajte</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

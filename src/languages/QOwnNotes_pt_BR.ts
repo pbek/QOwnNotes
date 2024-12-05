@@ -1708,10 +1708,6 @@
 <translation>&amp;Sair</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>&amp;Pesquisar Nota</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>&amp;Excluir a nota atual</translation>
 </message>
@@ -1909,6 +1905,10 @@
 <translation>Configurar pastas / subpastas de anotações</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>Sobre o &amp;QOwnNotes…</translation>
 </message>
@@ -2091,10 +2091,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>Mostrar lista de notas abaixo do painel de tags</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Encontrar notas em todas as tags / subpastas</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2444,6 +2440,10 @@
 <message>
 <source>Donate</source>
 <translation>Doar</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

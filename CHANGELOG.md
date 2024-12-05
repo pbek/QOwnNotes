@@ -8,6 +8,7 @@
   (for [#3172](https://github.com/pbek/QOwnNotes/issues/3172))
   - The action `Find text in notes` is now also present in the context menu of
     the note text edit when there is a selected text
+- Added more Korean, Turkish, Dutch translation (thank you, venusgirl, brtc, stephanp)
 
 ## 24.12.0
 - Several warnings were prevented when scripts updates were present when the

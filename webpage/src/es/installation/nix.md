@@ -1,13 +1,15 @@
 # Instalar por medio de Nix
 
-Puede instalar QOwnNotes con el [administrador de paquetes de NIx](https://wiki.nixos.org/wiki/Nix_package_manager) en [NixOS](https://nixos.org/) y otras plataformas. El nombre del paquete es [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+You can install QOwnNotes with the [Nix package manager](https://nixos.org/download/) on [NixOS](https://nixos.org/), other Linux distributions, macOS and Windows. The package name is [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+
+The package is built with Qt6 and provides shell integration for fish and bash.
 
 Véase [QOwnNotes en Nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) para mayor información.
 
-Posteriormente, será capaz de ejecutar QOwnNotes con la orden `qownnotes`.
+Afterward you should be able to run QOwnNotes with the command `qownnotes` or `QOwnNotes`.
 
 ::: tip
 El gestor de fragmentos de órdenes de terminal de QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
 
-Puede usar `nix-shell -p qc --run qc` para probarlo.
+You can use `nix-shell -p qc --run "qc exec"` to try it out.
 :::

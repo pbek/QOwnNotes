@@ -1713,10 +1713,6 @@
 <translation>&amp;Beenden</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>Notiz &amp;finden</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>Aktuelle Notiz &amp;löschen</translation>
 </message>
@@ -1914,6 +1910,10 @@
 <translation>Notizordner / Unterordner einstellen</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>Über &amp;QOwnNotes…</translation>
 </message>
@@ -2097,10 +2097,6 @@
 <source>Show note list under tag panel</source>
 <translation>Notizliste unter Schlagwortbereich anzeigen
 </translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>Suchen von Notizen in allen Schlagworten/Unterordnern</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2450,6 +2446,10 @@
 <message>
 <source>Donate</source>
 <translation>Spenden</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>

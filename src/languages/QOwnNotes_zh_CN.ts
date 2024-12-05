@@ -1701,10 +1701,6 @@
 <translation>退出(&amp;Q)</translation>
 </message>
 <message>
-<source>&amp;Find note</source>
-<translation>查找笔记(&amp;F)</translation>
-</message>
-<message>
 <source>&amp;Remove current note</source>
 <translation>移除当前笔记(&amp;R)</translation>
 </message>
@@ -1902,6 +1898,10 @@
 <translation>设置笔记文件夹 / 子文件夹</translation>
 </message>
 <message>
+<source>&amp;Find text in notes</source>
+<translation type="unfinished">&amp;Find text in notes</translation>
+</message>
+<message>
 <source>About &amp;QOwnNotes…</source>
 <translation>关于 &amp;QOwnNotes…</translation>
 </message>
@@ -2084,10 +2084,6 @@
 <message>
 <source>Show note list under tag panel</source>
 <translation>在标签面板下显示笔记列表</translation>
-</message>
-<message>
-<source>Find notes in all tags / subfolders</source>
-<translation>在所有标签/子文件夹中查找</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2437,6 +2433,10 @@
 <message>
 <source>Donate</source>
 <translation>捐赠</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
