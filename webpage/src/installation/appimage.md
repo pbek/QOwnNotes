@@ -19,6 +19,11 @@ Then you can change the execute-permissions on the file:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
+::: tip
+AppImages need `libfuse2` to run!
+For example under Ubuntu you can install the library with `sudo apt install libfuse2`.
+:::
+
 Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 ::: warning
