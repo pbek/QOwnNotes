@@ -22,11 +22,12 @@ on:
 jobs:
   build:
     name: 🏗️ Build ${{ matrix.just-recipe }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         just-recipe: ['nix-build', 'nix-build-cmake-qt5']
+        os: ['ubuntu-latest', 'macos-latest', 'macos-14']
     steps:
       - name: ⚙️ Install Nix
         uses: cachix/install-nix-action@v30
