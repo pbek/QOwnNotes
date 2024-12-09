@@ -64,6 +64,7 @@ stdenv.mkDerivation {
   # Wrap application for macOS as lowercase binary
   + lib.optionalString stdenv.isDarwin ''
     mkdir -p $out/Applications
+    find $out
     mv $out/bin/${appname}.app $out/Applications
     makeWrapper $out/Applications/${appname}.app/Contents/MacOS/${appname} $out/bin/${pname}
   '';
