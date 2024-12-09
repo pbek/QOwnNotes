@@ -48,7 +48,7 @@ stdenv.mkDerivation {
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
   ];
 
-  # Install shell completion on Linux (there is no xvfb-run on macOS)
+  # Install shell completion on Linux (with xvfb-run)
   postInstall = lib.optionalString stdenv.isLinux ''
       installShellCompletion --cmd ${appname} \
         --bash <(xvfb-run $out/bin/${appname} --completion bash) \
@@ -56,6 +56,12 @@ stdenv.mkDerivation {
       installShellCompletion --cmd ${pname} \
         --bash <(xvfb-run $out/bin/${appname} --completion bash) \
         --fish <(xvfb-run $out/bin/${appname} --completion fish)
+  ''
+  # Install shell completion on macOS
+  + lib.optionalString stdenv.isDarwin ''
+      installShellCompletion --cmd ${pname} \
+        --bash <($out/bin/${appname} --completion bash) \
+        --fish <($out/bin/${appname} --completion fish)
   ''
   # Create a lowercase symlink for Linux
   + lib.optionalString stdenv.isLinux ''
