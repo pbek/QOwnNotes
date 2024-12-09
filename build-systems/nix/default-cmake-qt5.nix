@@ -62,11 +62,12 @@ stdenv.mkDerivation {
   + lib.optionalString stdenv.isLinux ''
     ln -s $out/bin/${appname} $out/bin/${pname}
   ''
-  # Wrap application for macOS as lowercase binary
+  # Remame application for macOS as lowercase binary
   + lib.optionalString stdenv.isDarwin ''
-    mkdir -p $out/Applications
-    mv $out/bin/${appname}.app $out/Applications
-    makeWrapper $out/Applications/${appname}.app/Contents/MacOS/${appname} $out/bin/${pname}
+    find $out
+    # Prevent "same file" error
+    mv $out/bin/${appname} $out/bin/${pname}.bin
+    mv $out/bin/${pname}.bin $out/bin/${pname}
   '';
 
   meta = with lib; {
