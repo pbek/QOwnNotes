@@ -34,8 +34,7 @@ stdenv.mkDerivation {
     wrapQtAppsHook
     pkg-config
     installShellFiles
-    xvfb-run
-  ] ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
+  ] ++ lib.optionals stdenv.isLinux [ xvfb-run ] ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
 
   buildInputs = [
     qtbase
