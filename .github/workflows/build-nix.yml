@@ -8,6 +8,7 @@ on:
       - '*'
     paths:
       - 'src/**'
+      - 'shell.nix'
       - 'default.nix'
       - 'build-systems/nix/**'
       - '.github/workflows/build-nix.yml'
