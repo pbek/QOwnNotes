@@ -70,7 +70,9 @@ stdenv.mkDerivation {
   # Remame application for macOS as lowercase binary
   + lib.optionalString stdenv.isDarwin ''
     find $out
-    mv $out/bin/${appname} $out/bin/${pname}
+    # Prevent "same file" error
+    mv $out/bin/${appname} $out/bin/${pname}.bin
+    mv $out/bin/${pname}.bin $out/bin/${pname}
   '';
 
   meta = with lib; {
