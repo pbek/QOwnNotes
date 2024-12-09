@@ -12,7 +12,6 @@
       libclang  # for clang-format
       xmlstarlet # for download-icons.sh and download_translations.sh
       lychee  # for link checking
-      lurk  # strace replacement
       procs # fetches process info
       gawk  # for parsing procs output
       fzf # for interactive process selection
@@ -28,6 +27,8 @@
       librsvg
       imagemagick
       libicns
+    ] ++ lib.optionalString stdenv.isLinux [
+      lurk  # strace replacement
     ];
 
     buildInputs = with pkgs; with qt6; [
