@@ -21,7 +21,7 @@ on:
 
 jobs:
   build:
-    name: 🏗️ Build ${{ matrix.just-recipe }}
+    name: 🏗️ Build ${{ matrix.just-recipe }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
