@@ -27,9 +27,9 @@
       librsvg
       imagemagick
       libicns
-    ] ++ lib.optionalString stdenv.isLinux [
-      lurk  # strace replacement
-    ];
+    ] ++ (if pkgs.stdenv.isLinux then [
+      pkgs.lurk # strace replacement
+    ] else []);
 
     buildInputs = with pkgs; with qt6; [
       qtbase
