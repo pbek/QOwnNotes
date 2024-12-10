@@ -5,6 +5,10 @@
   repository works out of the box on Ubuntu 22.04 (for [#2964](https://github.com/pbek/QOwnNotes/issues/2964))
 - The automatic Markdown table formatter now supports trimming tables with
   leading spaces (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
+- The nix package now builds also for macOS on x86_64 and aarch64, aka. Apple Silicon
+  (for [#2912](https://github.com/pbek/QOwnNotes/issues/2912))
+  - There is an open pull request for it at [#363327 on NixOS/nixpkgs](https://github.com/NixOS/nixpkgs/pull/363327)
+  - This could serve as a native package for macOS on Apple Silicon hardware
 
 ## 24.12.1
 - The build process was fixed for Qt below 5.10.0 (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))
