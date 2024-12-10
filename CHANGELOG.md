@@ -3,6 +3,8 @@
 ## 24.12.2
 - The Qt Wayland and platform libraries were added to the Qt6 Ubuntu PPA, so the
   repository works out of the box on Ubuntu 22.04 (for [#2964](https://github.com/pbek/QOwnNotes/issues/2964))
+- The automatic Markdown table formatter now supports trimming tables with
+  leading spaces (for [#3137](https://github.com/pbek/QOwnNotes/issues/3137))
 
 ## 24.12.1
 - The build process was fixed for Qt below 5.10.0 (for [#3171](https://github.com/pbek/QOwnNotes/issues/3171))

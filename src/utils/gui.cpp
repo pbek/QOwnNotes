@@ -534,13 +534,15 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     int endPosition = cursor.position();
     QTextBlock initialBlock = cursor.block();
     QTextBlock block = initialBlock;
+    // We are trimming to support leading spaces, because md4c seems to support up to 3 of it
+    // See https://github.com/pbek/QOwnNotes/issues/3137
+    const QString &tableText = block.text().trimmed();
 
     // return if text doesn't seem to be part of a table
-    if (!block.text().startsWith(QLatin1String("|"))) {
+    if (!tableText.startsWith(QLatin1String("|"))) {
         return false;
     }
 
-    QString tableText = block.text();
     QList<QStringList> tableTextList;
     tableTextList << tableText.split(QStringLiteral("|"));
     int startPosition = block.position();
@@ -555,7 +557,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             break;
         }
 
-        QString prevBlockText = block.text();
+        QString prevBlockText = block.text().trimmed();
         if (!prevBlockText.startsWith(QLatin1String("|"))) {
             break;
         }
@@ -575,7 +577,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             break;
         }
 
-        QString nextBlockText = block.text();
+        QString nextBlockText = block.text().trimmed();
         if (!nextBlockText.startsWith(QLatin1String("|"))) {
             break;
         }
