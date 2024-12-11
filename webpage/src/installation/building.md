@@ -53,7 +53,7 @@ The source archives will be accessible like that:
 
 ## Building with nix
 
-If you have [Nix the package manager](https://nixos.org/download/) available
+If you have the [Nix package manager](https://nixos.org/download/) available
 you can just git-clone the source code, like explained above and build with:
 
 ```bash
