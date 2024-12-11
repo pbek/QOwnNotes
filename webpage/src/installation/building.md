@@ -50,3 +50,19 @@ You will find source archives of QOwnNotes on [QOwnNotes source archive](https:/
 The source archives will be accessible like that:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
+
+## Building with nix
+
+If you have [Nix the package manager](https://nixos.org/download/) available
+you can just git-clone the source code, like explained above and build with:
+
+```bash
+# Open a nix-shell to get all needed tools
+nix-shell
+
+# Build the application
+just nix-build
+
+# Run the built application
+just nix-run
+```
