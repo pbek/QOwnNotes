@@ -76,10 +76,10 @@ Si esta función se define en varios scripts, entonces gana el primer script que
 ### Llamada y parámetros del método
 ```js
 /**
-  * @param fileName cadena la ruta del archivo adjunto de origen antes de que se copiara a la carpeta de adjuntos
-  * @param markdownText cadena el texto de la rebaja del archivo adjunto, p. ej. [mi-archivo.txt] (adjuntos / mi-archivo-4245650967.txt)
-  * @return cadena el nuevo texto de rebaja del archivo adjunto
-  */
+ * @param fileName string la ruta del archivo adjunto de origen antes de que se copiara a la carpeta de adjuntos
+ * @param markdownText string el texto del archivo adjunto en Markdown, p. ej. [mi-archivo.txt] (attachments/mi-archivo-4245650967.txt)
+ * @return string el nuevo texto del archivo adjunto en Markdown
+ */
 function insertAttachmentHook (fileName, markdownText);
 ```
 
@@ -132,15 +132,15 @@ handleNoteNameHook
 ### Llamada y parámetros del método
 ```js
 /**
-  * Esta función se llama cuando se determina el nombre de la nota para una nota
-  *
-  * Te permite modificar el nombre de la nota que se visualiza
-  *
-  * Devuelve una cadena vacía si el nombre de la nota no debe modificarse
-  *
-  * @param {NoteApi} nota: el objeto de nota de la nota almacenada
-  * @return {string} el nombre de la nota
-  */
+ * Esta función se llama cuando se determina el nombre de la nota para una nota
+ *
+ * Le permite modificar el nombre de la nota que se visualiza
+ *
+ * Devuelve una cadena vacía si el nombre de la nota no debe modificarse
+ *
+ * @param {NoteApi} nota: el objeto de nota de la nota almacenada
+ * @return {string} el nombre de la nota
+ */
 function handleNoteNameHook(note);
 ```
 
@@ -156,14 +156,14 @@ handleNewNoteHeadlineHook
 /**
  * Esta función se llama antes de que se cree una nota.
  *
-* Te permite modificar el titular de la nota antes de crearla
-  * Tenga en cuenta que debe tener cuidado con un nombre de nota único, de lo contrario
-  * la nueva nota no se creará, solo se encontrará en la lista de notas
-  *
-  * Puede usar esta función para crear plantillas de notas
+* Le permite modificar el título de la nota antes de crearla
+ * Tenga en cuenta que debe tener cuidado con un nombre de nota único, de lo contrario
+ * la nueva nota no se creará, solo se encontrará en la lista de notas
  *
- * @param headline text that would be used to create the headline
- * @return {string} the headline of the note
+ * Puede usar esta función para crear plantillas de notas
+ *
+ * @param headline texto que sería usado para crear el título
+ * @return {string} el título de la nota
  */
 function handleNewNoteHeadlineHook(headline);
 ```
@@ -260,7 +260,7 @@ Puede implementar su propio mecanismo de etiquetado de notas, por ejemplo, con t
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
--   tan pronto como se active un script que implemente la nueva función `noteTaggingHook` el etiquetado de notas será manejado por esa función
+-   tan pronto como se active un script que implemente la nueva función `noteTaggingHook`, el etiquetado de notas será manejado por esa función
 -   las siguientes funciones deberían funcionar a través de la interfaz de usuario de QOwnNotes
     -   inicialmente importando etiquetas como `@etiqueta` de sus notas y sobrescribiendo su asignación de etiqueta actual
         -   no perderá su árbol de etiquetas, solo la asignación anterior a las notas
@@ -311,16 +311,16 @@ Puede que quiera echar un vistazo al ejemplo [on-note-opened.qml](https://github
 autocompletionHook
 ------------------
 
-Puede devolver una lista de cadenas para agregar a la lista de autocompletar cuando se invoca el autocompletado (por ejemplo, presionando <kbd>Ctrl + Espacio</kbd>).
+Puede devolver una lista de cadenas para agregar a la lista de finalización automática cuando se invoca la finalización automática (por ejemplo, presionando <kbd>Ctrl + Espacio</kbd>).
 
 ### Llamada y parámetros del método
 ```js
 /**
-  * Llama a la función autocompletionHook para todos los componentes del script
-  * Esta función se llama cuando se invoca el autocompletado en una nota
-  *
-  * @return QStringList of text for the autocomplete list
-  */
+ * Llama a la función autocompletionHook para todos los componentes del script
+ * Esta función se llama cuando se invoca la finalización automática en una nota
+ *
+ * @return QStringList de texto para la lista de finalización automática
+ */
 function callAutocompletionHook();
 ```
 

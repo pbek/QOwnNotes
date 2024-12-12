@@ -2718,6 +2718,14 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation>一時画像の保存中</translation>
 </message>
 <message>
+<source>Note folder does not exist!</source>
+<translation type="unfinished">Note folder does not exist!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation type="unfinished">Ln %1, Col %2</translation>

@@ -38,7 +38,7 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **
 ```markdown
 Enfatice, también conocido como cursiva, con *asteriscos*.
 
-Fuerte énfasis, también conocido como negrita, con **asteriscos**.
+Puede usar el énfasis fuerte, también conocido como negrita, con **asteriscos**.
 ```
 
 ::: tip
@@ -158,7 +158,7 @@ Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en texto en l�
 
 Los bloques de código están delimitados por líneas con tres comillas invertidas o indentados con cuatro espacios.
 
-### 4-Spaces fence
+### Valla de 4 espacios
 
 Agregue cuatro espacios delante de su código para marcarlo como bloque de código.
 
@@ -167,7 +167,7 @@ Agregue cuatro espacios delante de su código para marcarlo como bloque de códi
     print s
 ```
 
-### Backtick fence
+### Valla de comillas invertidas
 
 También puede utilizar tres comillas invertidas para crear un bloque de código.
 ~~~markdown
@@ -182,9 +182,9 @@ Puede usar el [atajo] (./ shortcuts.md) <kbd>Ctrl + Shift + C</kbd> en
 varias líneas de texto seleccionadas o en una línea vacía para crear un bloque de código. 
 :::
 
-### Backtick fence with code highlighting
+### Valla de comillas invertidas con resaltado de código
 
-There also is some syntax highlighting with code blocks in QOwnNotes.
+También hay algo de resaltado de sintaxis con bloques de código en QOwnNotes.
 
 ~~~markdown
 ```bash
@@ -264,7 +264,7 @@ Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de markdown para formatearla a
 
 Salto de cita.
 
-> Esta es una línea muy larga que aún se citará adecuadamente cuando la cita termine. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, puede *poner* **Markdown** en una cita en bloque. 
+> Esta es una línea muy larga que aún se citará adecuadamente cuando la cita termine. Vaya, sigamos escribiendo para asegurarnos de que esto sea lo suficientemente largo como para envolver todo. Oh, puede *poner* **Markdown** en una cita en bloque. 
 ```
 
 ::: tip

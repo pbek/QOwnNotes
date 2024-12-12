@@ -55,7 +55,7 @@ También puede **administrar sus marcadores en notas** con la etiqueta de nota `
 Los nuevos marcadores se almacenan en una nota llamada `Marcadores` (también modificable en la configuración).
 
 ::: tip
-¡También puede importar los marcadores de su navegador a QOwnNotes con la extensión del navegador web complementario!
+¡También puede importar los marcadores de su navegador a QOwnNotes con la extensión de navegador Web Companion!
 :::
 
 ### Sintaxis de los enlaces de marcadores

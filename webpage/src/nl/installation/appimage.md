@@ -17,6 +17,10 @@ Vervolgens kunt u de uitvoeringsrechten voor het bestand wijzigen:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
+::: tip
+AppImages hebben `libfuse2` nodig! Onder Ubuntu kun je bijvoorbeeld de bibliotheek installeren met `sudo apt install libfuse2`.
+:::
+
 Daarna zou u de AppImage moeten kunnen uitvoeren om QOwnNotes uit te voeren.
 
 ::: warning

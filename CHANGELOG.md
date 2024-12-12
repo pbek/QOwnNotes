@@ -7,6 +7,8 @@
   - When the application is already running and a note folder was removed outside
     the application, the user will now get a warning that the path doesn't exist
     anymore and is not able to select that note folder
+- Added more Korean, Dutch, Turkish, Spanish translation (thank you, venusgirl,
+  stephanp, brtc, alejandromoc)
 
 ## 24.12.2
 - The Qt Wayland and platform libraries were added to the Qt6 Ubuntu PPA, so the

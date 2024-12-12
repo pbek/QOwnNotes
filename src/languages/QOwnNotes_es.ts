@@ -1089,7 +1089,7 @@
 </message>
 <message>
 <source>Text preset</source>
-<translation>Preajuste de texto</translation>
+<translation>Texto predefinido</translation>
 </message>
 <message>
 <source>Emphasized text</source>
@@ -1911,7 +1911,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>Encontrar texto en notas</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2212,7 +2212,7 @@
 </message>
 <message>
 <source>Manage stored attachments</source>
-<translation>Administrar adjuntos almacenados</translation>
+<translation>Gestionar adjuntos almacenados</translation>
 </message>
 <message>
 <source>Jump to note subfolder panel</source>
@@ -2448,7 +2448,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Encontrar texto en todas las notas / subcarpetas</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2729,6 +2729,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Saving temporary image</source>
 <translation>Guardando imagen temporal</translation>
+</message>
+<message>
+<source>Note folder does not exist!</source>
+<translation type="unfinished">Note folder does not exist!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -5500,7 +5508,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation>Cuando está inactivo, entra en modo de sólo lectura automáticamente después:</translation>
+<translation>Cuando está inactivo, entrar en modo de solo lectura automáticamente después de:</translation>
 </message>
 <message>
 <source> sec</source>
@@ -5814,7 +5822,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Show note folders as buttons instead of in a select box</source>
-<translation>Mostrar las carpetas de notas como botones en vez de en una casilla de selección</translation>
+<translation>Mostrar las carpetas de notas como botones en vez de en un cuadro de selección</translation>
 </message>
 <message>
 <source>Enable local trash to keep a copy of trashed notes</source>
@@ -5898,7 +5906,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Disable auto-completion of previous searches</source>
-<translation>Desactivar el autocompletado de búsquedas anteriores</translation>
+<translation>Desactivar la finalización automática de búsquedas anteriores</translation>
 </message>
 <message>
 <source>Navigation panel</source>
@@ -6936,7 +6944,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation>Mostrar solo adjuntos que son usados en la nota actual</translation>
+<translation>Mostrar solo adjuntos usados en la nota actual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
@@ -6999,11 +7007,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Open attachment</source>
-<translation>Abrir &amp;adjunto</translation>
+<translation>Abrir adjunto</translation>
 </message>
 <message>
 <source>&amp;Rename attachment</source>
-<translation>&amp;Renombrar archivo adjunto</translation>
+<translation>&amp;Renombrar adjunto</translation>
 </message>
 <message>
 <source>&amp;Delete attachments</source>
@@ -7011,7 +7019,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Add attachments to current note</source>
-<translation>&amp;Agregar archivos adjuntos a la nota actual</translation>
+<translation>&amp;Agregar adjuntos a la nota actual</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
@@ -7027,7 +7035,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation>El archivo &lt;strong&gt;%1&lt;/strong&gt; ya existe, debe eliminarlo antes de elegir &lt;strong&gt;%2&lt;/strong&gt; como nuevo nombre de archivo.</translation>
+<translation>El archivo &lt;strong&gt;%1&lt;/strong&gt; ya existe, ¡debe eliminarlo antes de elegir &lt;strong&gt;%2&lt;/strong&gt; como nuevo nombre de archivo!</translation>
 </message>
 <message>
 <source>File renaming failed</source>
@@ -7797,7 +7805,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Diff</source>
-<translation>Diff</translation>
+<translation>Diferencia</translation>
 </message>
 <message>
 <source>Note text</source>

@@ -2713,6 +2713,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>임시 이미지 저장 중</translation>
 </message>
 <message>
+<source>Note folder does not exist!</source>
+<translation>노트 폴더가 존재하지 않습니다!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>줄 %1, 열 %2</translation>

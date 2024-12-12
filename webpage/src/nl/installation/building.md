@@ -44,3 +44,18 @@ U kunt de broncode-archieven van QOwnNotes vinden op [QOwnNotes source archive](
 De bronarchieven zullen als volgt toegankelijk zijn:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
+
+## Bouwen met nix
+
+Als je de [Nix package manager](https://nixos.org/download/) beschikbaar hebt, kun je de broncode gewoon Git-klonen, zoals hierboven uitgelegd, en bouwen met:
+
+```bash
+# Open a nix-shell to get all needed tools
+nix-shell
+
+# Build the application
+just nix-build
+
+# Run the built application
+just nix-run
+```

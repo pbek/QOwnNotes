@@ -42,3 +42,12 @@ make
 소스 아카이브는 다음과 같이 액세스할 수 있습니다:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
+
+## nix로 빌드
+
+[Nix 패키지 관리자](https://nixos.org/download/)을 사용할 수 있다면 위에서 설명한 것처럼 소스 코드를 git-복제하고 빌드하기만 하면 됩니다:
+
+```bash
+# 필요한 모든 도구를 얻으려면 nix-shell을 엽니다
+nix-shell
+```

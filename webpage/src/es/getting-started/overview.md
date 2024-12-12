@@ -11,7 +11,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-minimal.png" alt="Vista mínima" />
     <div class="sheet">
-      Interfaz de usuario mínima predeterminada que se puede quitar aún más
+      Interfaz de usuario mínima predeterminada que se puede simplificar aún más
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -154,18 +154,18 @@
 - **Compatible** con la aplicación de [notas](https://apps.nextcloud.com/apps/notes) de **Nextcloud / ownCloud**, las versiones **móviles** y Nextcloud Text
 - Cree **tarjetas de [Nextcloud Deck](https://apps.nextcloud.com/apps/deck)** y enlácelas a sus notas
 - Soporte para **compartir notas** en su servidor de **ownCloud** / **Nextcloud**
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Administre sus **listas de elementos pendientes** de Nextcloud / ownCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o use otro servidor de **CalDAV** con el cual sincronizar sus tareas
 - Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
 - **Las notas en la papelera** pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
-- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
+- **Cifrado** opcional de notas, AES-256 está integrado, o puede utilizar métodos de cifrado personalizados como **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar múltiples carpetas de notas)
 - Es posible **buscar partes de palabras** en las notas. Los resultados de la búsqueda se resaltan en las notas
 - [**Extensión del navegador**](browser-extension.md) para **agregar notas a partir del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
 - Compatibilidad con [**revisores ortográficos**](../editor/spellchecking.md)
 - **Modo portátil** para llevar consigo QOwnNotes en memorias USB
-- **Soporte de secuencias de órdenes** y un [**repositorio de scripts**](https://github.com/qownnotes/scripts) en línea donde puede instalar scripts dentro de la aplicación
+- **Soporte de secuencias de órdenes** y un [**repositorio de scripts**](https://github.com/qownnotes/scripts) en línea desde el que puede instalar scripts dentro de la aplicación
 - Implementación de la **[API de finalización de OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** para su uso en scripts
 - **Modo Vim**
 - **[Aplicación web](web-app.md)** para **insertar fotos desde su teléfono móvil** en la nota actual en QOwnNotes en su escritorio

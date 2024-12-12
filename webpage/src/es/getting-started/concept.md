@@ -2,20 +2,20 @@
 
 ```mermaid
 graph TB
-    subgraph Your computer
+    subgraph Su computadora
         qon((QOwnNotes))-->md{{"Markdown files"}}
-        sync("Nextcloud Sync")-->md
-        qon-comp("Browser extension")-->qon
-        qc("Command-line snippet manager")-->qon
+        sync("Sincronización de Nextcloud")-->md
+        qon-comp("Extensión del navegador")-->qon
+        qc("Gestor de fragmentos de línea de comandos")-->qon
     end
-    subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+    subgraph Su servidor de NextCloud
+        qon-api("QOwnNotesApi")-->ncs[("Servidor de Nextcloud")]
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
-    nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
-    qon-web-app("QOwnNotes web application")-->qon
+    nc-notes-mob("Aplicación móvil de Nextcloud Notes")-->nc-notes-app
+    qon-web-app("Aplicación web de QOwnNotes")-->qon
     qon-->qon-api
     qon-->ncs
     qon-->nc-deck-app
@@ -24,17 +24,17 @@ graph TB
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
-    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
-    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
-    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
-    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
-    click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
-    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
-    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
-    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
-    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click qon "/getting-started/concept.html#qownnotes" "Aplicación de escritorio QOwnNotes para gestionar sus notas en su computadora de escritorio"
+    click md "/getting-started/concept.html#markdown-note-files" "Archivos Markdown, multimedia y de adjuntos en su carpeta de notas"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "Extensión del navegador de QOwnNotes para gestionar marcadores en archivos Markdown y como recortadora web"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "Gestor de fragmentos de órdenes de terminal de QOwnNotes"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Cliente de sincronización de escritorio de Nextcloud para sincronizar sus notas con su servidor"
+    click ncs "/getting-started/concept.html#nextcloud-server" "Servidor de Nextcloud para alojar sus notas y otros archivos"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "Aplicación QOwnNotesAPI de Nextcloud para acceder a su papelera y versiones de notas del lado del servidor"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Aplicación del servidor de Nextcloud Notes para gestionar sus notas en la web"
+    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Aplicación móvil de Nextcloud Notes para gestionar sus notas en su teléfono móvil"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Aplicación del servidor de Nextcloud Deck para gestionar recordatorios y listas de tareas pendientes en la web"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "Aplicación web de QOwnNotes para enviar fotos desde su teléfono móvil"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 

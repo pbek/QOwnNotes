@@ -64,22 +64,22 @@ class NoteSubFolderApi {
 ```js
 var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
 
-// print all subfolder names
+// imprimir todos los nombres de las subcarpetas
 noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
     script.log(nsf.name);
 });
 
-// get the active note subfolder
+// obtener la subcarpeta de la nota activa
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print the full and relative path of the active note subfolder
+// imprimir la ruta completa y relativa de la subcarpeta de la nota activa
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// iterar a través de las notas en la subcarpeta de la nota
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }
@@ -104,12 +104,12 @@ class TagApi {
 ```js
 // ¡No olvide usar “import QOwnNotesTypes 1.0” en la parte superior de su script!
 
-// Fetch tag "home"
+// Obtener etiqueta "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// Fetch all notes tagged with the tag
+// Obtener todas las notas etiquetadas con la etiqueta
 var notes = tag.notes;
 
-// Iterate through notes of the tag
+// Iterar a través de las notas de la etiqueta
 for (var idx in notes) {
     var note = notes[idx];
     script.log(note.name);
@@ -129,42 +129,42 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // Crea una nueva subcarpeta de notas en la subcarpeta actual
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // Inserta HTML en la nota actual como Markdown
+    // Este método también descarga imágenes remotas y transforma las URL de "data:image"
+    // en imágenes almacenadas en el directorio de medios
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // Recarga la nota actual por ID
+    // Esto es util cuando la ruta o el nombre de archivo de la nota actual ha cambiado
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // Devuelve la lista de los UUID de los espacios de trabajo
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // Devuelve el UUID de un espacio de trabajo, pasando el nombre del espacio de trabajo
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // Establece el espacio de trabajo actual por medio de un UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
-    // Closes a note tab on a specific index (returns true if successful)
+    // Cierra una pestaña de nota en un índice específico(devuelve verdadero si es exitoso)
     Q_INVOKABLE bool removeNoteTab(int index);
-    // Returns a list of note ids that are opened in tabs
+    // Devuelve una lista de IDs de las notas que están abiertas en pestañas
     Q_INVOKABLE QList<int> getNoteTabNoteIdList();
-    // Jumps to a tag in the tag tree
+    // Salta a una etiqueta en el árbol de etiquetas
     Q_INVOKABLE bool jumpToTag(int tagId);
 };
 ```
 
 ### Ejemplo
 ```js
-// Forzar una recarga de la lista de notas
+// Fuerza una recarga de la lista de notas
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crea una nueva subcarpeta de notas "My fancy folder" en la sub carpeta actual
-mainWindow.createNewNoteSubFolder("My fancy folder");
+// Crea una nueva subcarpeta de notas "Mi carpeta estrafalaria" en la subcarpeta actual
+mainWindow.createNewNoteSubFolder("Mi carpeta estrafalaria");
 
-// Inserta html en la nota actual como markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+// Inserta HTML en la nota actual como Markdown
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>mi título</h2>algo de texto");
 
-// Set 'Edit' workspace as current workspace
+// Establece espacio de trabajo 'Edit' como espacio de trabajo actual
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
 // Salta a la etiqueta "test" en el árbol de etiquetas
@@ -173,7 +173,7 @@ https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actio
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Obtener todas las notas de las pestañs que están abiertas 
+// Obtiene todas las notas de las pestañas que están abiertas 
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId){
     var note = script.fetchNoteById(noteId);

@@ -2731,6 +2731,14 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>tijdelijke afbeelding opslaan</translation>
 </message>
 <message>
+<source>Note folder does not exist!</source>
+<translation>Map met notities bestaat niet!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation>Map met notites &lt;b&gt;%1&lt;/b&gt; met pad &lt;b&gt;%2&lt;/b&gt; bestaat niet meer!</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>Rgl %1, Kol %2</translation>

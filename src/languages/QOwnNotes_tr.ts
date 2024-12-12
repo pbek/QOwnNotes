@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>Notu açın ve &lt;code&gt;%1&lt;/code&gt;'i bulun</translation>
 </message>
 </context>
 <context>
@@ -816,15 +816,15 @@
 </message>
 <message>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Vim stili düzenlemeyi kullan</translation>
 </message>
 <message>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Metin imlecini içeren satıra göre satır numaralarını görüntüler.</translation>
 </message>
 <message>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>FakeVim'deki Ctrl-S gibi tuş dizilerini yorumlamaz ancak bunları normal kısayollar olarak işler. Bu, FakeVim'in bazı özelliklerini kaybetme pahasına temel işlevlere daha kolay erişim sağlar.</translation>
 </message>
 <message>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
@@ -836,11 +836,11 @@
 </message>
 <message>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Varsayılan yolu kullanmak için boş bırakın, yani Windows'ta %USERPROFILE%\_vimrc, aksi halde ~/.vimrc.</translation>
 </message>
 <message>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Varsayılan: %1</translation>
 </message>
 <message>
 <source>Unknown option: %1</source>
@@ -967,22 +967,22 @@
 <message numerus="yes">
 <source>%n lines indented.</source>
 <translation>
-<numerusform>%n שורות הוטבעו.</numerusform>
-<numerusform>%n שורות הוטבעו.</numerusform>
+<numerusform>%n satır girintili.</numerusform>
+<numerusform>%n satır girintili.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n lines %1ed %2 time.</source>
 <translation>
-<numerusform>%n קו %1ed %2 זמן</numerusform>
-<numerusform>%n קווים  %1ed %2 זמן</numerusform>
+<numerusform>%n satır %1ed %2 kez.</numerusform>
+<numerusform>%n satır %1ed %2 kez.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n lines yanked.</source>
 <translation>
-<numerusform>%n קו הושיט.</numerusform>
-<numerusform>%n שורות הושיטו.</numerusform>
+<numerusform>%n uzatılmış satır.</numerusform>
+<numerusform>%n uzatılmış satır.</numerusform>
 </translation>
 </message>
 <message>
@@ -1285,7 +1285,7 @@
 </message>
 <message>
 <source>&amp;Crop</source>
-<translation>&amp;חיתוך</translation>
+<translation>&amp;Kırp</translation>
 </message>
 <message>
 <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
@@ -1406,7 +1406,7 @@
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>Uygulama daha sonra yeniden başlatılacaktır.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1536,7 +1536,7 @@
 </message>
 <message>
 <source>Name</source>
-<translation>İsim</translation>
+<translation>Ad</translation>
 </message>
 <message>
 <source>Trashed</source>
@@ -1598,8 +1598,8 @@
 <message numerus="yes">
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
-<numerusform>&lt;strong&gt;%n &lt;/string&gt; düğümü kaldırıldı</numerusform>
-<numerusform>&lt;strong&gt;%n&lt;/strong&gt; düğüm kaldırıldı</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; not kaldırıldı</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; not kaldırıldı</numerusform>
 </translation>
 </message>
 </context>
@@ -1666,7 +1666,7 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Başlıklar</translation>
 </message>
 <message>
 <source>Backlinks</source>
@@ -1694,7 +1694,7 @@
 </message>
 <message>
 <source>Editor width in distraction free mode</source>
-<translation>Oyalama içermeyen modda düzenleyici genişliği</translation>
+<translation>Odaklanma kipi düzenleyici genişliği</translation>
 </message>
 <message>
 <source>Editor width</source>
@@ -1782,7 +1782,7 @@
 </message>
 <message>
 <source>Find or create note sub folder</source>
-<translation>Not alt klasörü bul veya oluştur</translation>
+<translation>Not alt klasörünü bulun veya oluşturun</translation>
 </message>
 <message>
 <source>Find or create tag</source>
@@ -1834,7 +1834,7 @@
 </message>
 <message>
 <source>Format</source>
-<translation>Format</translation>
+<translation>Biçim</translation>
 </message>
 <message>
 <source>Extra</source>
@@ -1911,7 +1911,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>Notlardaki &amp;metni bul</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -1927,7 +1927,7 @@
 </message>
 <message>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Metin bağlantısı &amp;ekle</translation>
 </message>
 <message>
 <source>Ctrl+L</source>
@@ -2011,11 +2011,11 @@
 </message>
 <message>
 <source>&amp;Distraction free mode</source>
-<translation>&amp;Oyalamayan mod</translation>
+<translation>&amp;Odaklanma kipi</translation>
 </message>
 <message>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-<translation>Oyalamayan mod, sağ alt taraftaki düşme ile ondan ayrılabilirsiniz</translation>
+<translation>Odaklanma kipi sağ altta bulunan tuşla çıkabilirsiniz</translation>
 </message>
 <message>
 <source>Show &amp;toolbar</source>
@@ -2087,7 +2087,7 @@
 </message>
 <message>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+<translation>#qownnotes IRC (Kiwi) kanalını açın, yanıt almak için çevrim içi kalmalısınız</translation>
 </message>
 <message>
 <source>Cycle text case</source>
@@ -2108,7 +2108,7 @@
 <message>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>QOwnNotes Matrix (Element) odasını açın</translation>
 </message>
 <message>
 <source>Unlock panels</source>
@@ -2212,7 +2212,7 @@
 </message>
 <message>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>Saklanan ekleri yönet</translation>
 </message>
 <message>
 <source>Jump to note subfolder panel</source>
@@ -2236,11 +2236,11 @@
 </message>
 <message>
 <source>Toggle full-screen mode</source>
-<translation>Tam ekran modunu değiştir</translation>
+<translation>Tam ekran kipini değiştir</translation>
 </message>
 <message>
 <source>Typewriter mode</source>
-<translation>Daktilo modu</translation>
+<translation>Daktilo kipi</translation>
 </message>
 <message>
 <source>Check spelling</source>
@@ -2298,11 +2298,11 @@
 </message>
 <message>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>Gezinme paneline atla</translation>
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Not bağlantısı &amp;ekle</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
@@ -2310,39 +2310,39 @@
 </message>
 <message>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Joplin'den notları içe aktar</translation>
 </message>
 <message>
 <source>Toggle always-on-top mode</source>
-<translation type="unfinished">Toggle always-on-top mode</translation>
+<translation>Her zaman üstte kipine geçiş yap</translation>
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Yapılacaklar listesi öğelerini yükle</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Nextcloud Deck kartı bağlantısı ekleyin</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Notun mutlak yolunu kopyala</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>Alt klasör listesinde yukarı git</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>Alt klasör listesinde aşağı git</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>Etiket listesinde yukarı git</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>Etiket listesinde aşağı git</translation>
 </message>
 <message>
 <source>Enable AI support</source>
@@ -2378,7 +2378,7 @@
 </message>
 <message>
 <source>Manage stored image files</source>
-<translation type="unfinished">Manage stored image files</translation>
+<translation>Hafızadaki görüntü dosyalarını yönetin</translation>
 </message>
 <message>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
@@ -2386,7 +2386,7 @@
 </message>
 <message>
 <source>Open chat</source>
-<translation>Chati aç</translation>
+<translation>Sohbeti aç</translation>
 </message>
 <message>
 <source>Note operations…</source>
@@ -2394,11 +2394,11 @@
 </message>
 <message>
 <source>&amp;Print note (preview)</source>
-<translation>&amp;Notu yazdır (önizleme)</translation>
+<translation>&amp;Notu yazdır (ön izleme)</translation>
 </message>
 <message>
 <source>&amp;Export note as Markdown file</source>
-<translation type="unfinished">&amp;Export note as Markdown file</translation>
+<translation>&amp;Notu Markdown dosyası olarak dışa aktar</translation>
 </message>
 <message>
 <source>Move down in note list</source>
@@ -2435,11 +2435,11 @@
 </message>
 <message>
 <source>Use one column mode</source>
-<translation>Tek kolon modunu kullan</translation>
+<translation>Tek sütun kipini kullan</translation>
 </message>
 <message>
 <source>Use a one column minimal mode (like NVAlt)</source>
-<translation>Bir tek kolon minimal modu kullan (NVAlt gibi)</translation>
+<translation>Tek sütunlu minimal kipi kullanın (NVAlt gibi)</translation>
 </message>
 <message>
 <source>Show menu bar</source>
@@ -2455,7 +2455,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Tüm etiketlerdeki/alt klasörlerdeki metni bulun</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2591,7 +2591,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Move selected notes</source>
-<translation>Seçilen notları kaldır</translation>
+<translation>Seçilen notları taşı</translation>
 </message>
 <message numerus="yes">
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
@@ -2678,7 +2678,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
-<translation type="unfinished">Inserted text as text attachment file</translation>
+<translation>Metin, metin eki dosyası olarak eklendi</translation>
 </message>
 <message>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
@@ -2690,11 +2690,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
+<translation>Ekli dosyaları dışa aktar</translation>
 </message>
 <message>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+<translation>Notun ortam dosyalarını ve eklerini de dışa aktarmak istiyor musunuz? Hedef klasördeki dosyaların üzerine yazılabilir!</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -2739,20 +2739,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Geçici görüntü kaydediliyor</translation>
 </message>
 <message>
+<source>Note folder does not exist!</source>
+<translation type="unfinished">Note folder does not exist!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Str %1, Stn %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Satır %1, Sütun %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n seçildi</numerusform>
+<numerusform>%n seçildi</numerusform>
 </translation>
 </message>
 <message>
@@ -2761,15 +2769,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Nextcloud Deck desteği etkin değil veya ayarlar geçersiz.&lt;br /&gt;Lütfen ayarlarda &lt;strong&gt;Nextcloud&lt;/strong&gt; yapılandırmanızı kontrol edin!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Not yolu '%1' panoya kopyalandı</translation>
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>YZ arka uçları</translation>
 </message>
 <message>
 <source>AI models</source>
@@ -2777,7 +2785,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>YZ arka uç seçici</translation>
 </message>
 <message>
 <source>AI model selector</source>
@@ -2840,7 +2848,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
+<translation>Seçilen notları sekmelerde aç</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -2877,22 +2885,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>%n notun kopyalanması atlandı (Markdown veya metin dosyası yok veya okunamıyor)</numerusform>
+<numerusform>%n notun kopyalanması atlandı (Markdown veya metin dosyası yok veya okunamıyor)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>&amp;HTML'yi Markdown olarak yapıştır</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
+<translation>Tüm notları göster (%1)</translation>
 </message>
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+<translation>'%1' (%2) ile etiketlenen tüm notları göster</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
@@ -2924,7 +2932,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Name:</source>
-<translation>İsim:</translation>
+<translation>Ad:</translation>
 </message>
 <message>
 <source>Note renaming not enabled!</source>
@@ -2966,7 +2974,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>Not düzenleme şu anda devre dışı, düzenlemeye tekrar izin vermek istiyor musunuz?</translation>
 </message>
 <message>
 <source>Select text files to import</source>
@@ -2982,7 +2990,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Leave full-screen mode</source>
-<translation>Tam ekran modundan çık</translation>
+<translation>Tam ekran kipinden çık</translation>
 </message>
 <message>
 <source>Custom editor width</source>
@@ -3195,7 +3203,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Remove notes</source>
-<translation>&amp;Notları kaldır</translation>
+<translation>&amp;Not(lar)ı kaldır</translation>
 </message>
 <message>
 <source>Your tasks are being loaded from your server</source>
@@ -3262,11 +3270,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Eylem bulunamadı!</translation>
 </message>
 <message>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>&lt;code&gt;%1&lt;/code&gt; menü eylemi bulunamadı! Doğru yazdınız mı?</translation>
 </message>
 <message>
 <source>Subfolders</source>
@@ -3342,7 +3350,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Leave distraction free mode</source>
-<translation>Distraksiyon serbest modunu bırakın</translation>
+<translation>Odaklanma kipinden çıkın</translation>
 </message>
 <message>
 <source>Switch to note folder</source>
@@ -3351,7 +3359,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Toolbar could not be loaded without name</source>
-<translation>Araç çubuğu isimsiz olarak yüklenemedi</translation>
+<translation>Araç çubuğu ad olmadan yüklenemedi</translation>
 </message>
 <message>
 <source>Overwriting external changes of: %1</source>
@@ -3408,7 +3416,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
-<translation type="unfinished">Paste as &amp;text file attachment</translation>
+<translation>&amp;Metin dosyası eki olarak yapıştır</translation>
 </message>
 <message>
 <source>Downloading images finished</source>
@@ -3505,19 +3513,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NextcloudDeckService</name>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Kart oluşturulurken hata oluştu</translation>
 </message>
 <message>
 <source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<translation>Kart oluşturma işlemi %1 durum kodu ve şu mesajla başarısız oldu: %2</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Panolar yüklenirken hata oluştu</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Kartların yüklenmesi %1 durum kodu ve şu mesajla başarısız oldu: %2</translation>
 </message>
 </context>
 <context>
@@ -3576,23 +3584,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Göreli not yolu, içerik menüsünü açmak için sağ tıklayın</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Mutlak not yolu, içerik menüsünü açmak için sağ tıklayın</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Notun mutlak yolunu kopyala</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Not alt klasörünün mutlak yolunu kopyala</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Not klasörünün mutlak yolunu kopyala</translation>
 </message>
 </context>
 <context>
@@ -3627,7 +3635,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NoteSubFolderTree</name>
 <message>
 <source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
+<translation>'%1' (%2) klasöründeki notları göster</translation>
 </message>
 <message>
 <source>All notes</source>
@@ -3635,11 +3643,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Tüm not alt klasörlerindeki notları göster (%1)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Notları not kök klasöründe göster (%1)</translation>
 </message>
 <message>
 <source>Note folder</source>
@@ -3663,28 +3671,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; klasör kaldırılsın mı?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosya ve klasörler de kaldırılacak!</numerusform>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; klasör kaldırılsın mı?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosya ve klasörler de kaldırılacak!</numerusform>
 </translation>
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Not alt klasörü kaldırıldı: %1</translation>
 </message>
 </context>
 <context>
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>YZ yanıtını beklerken zaman aşımı</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>YZ sistemi devre dışı bırakıldı. Lütfen ana menüden veya YZ araç çubuğundan etkinleştirin.</translation>
 </message>
 </context>
 <context>
@@ -3727,7 +3735,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>%1 sürümü çok düşük</translation>
 </message>
 <message>
 <source>not enabled</source>
@@ -3844,11 +3852,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>QHotkey</name>
 <message>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>%1 kaydedilemedi. Hata: %2</translation>
 </message>
 <message>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>%1'in kaydı silinemedi. Hata: %2</translation>
 </message>
 </context>
 <context>
@@ -3863,11 +3871,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Renamed note-file was removed: %1</source>
-<translation>Yeniden isimlendirilen not dosyası kaldırıldı: %1</translation>
+<translation>Yeniden adlandırılan not dosyası kaldırıldı: %1</translation>
 </message>
 <message>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-<translation>Yeniden isimlendirilen not dosyası kaldırılamadı: %1 - Hata mesajı: %2</translation>
+<translation>Yeniden adlandırılan not dosyası kaldırılamadı: %1 - Hata mesajı: %2</translation>
 </message>
 <message>
 <source>Note</source>
@@ -3899,8 +3907,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>…and %n more note(s)</source>
 <translation>
-<numerusform>... ועוד %n הערה</numerusform>
-<numerusform>... ו-%n הערות נוספות</numerusform>
+<numerusform>…ve %n not daha</numerusform>
+<numerusform>…ve %n not daha</numerusform>
 </translation>
 </message>
 <message>
@@ -3931,35 +3939,35 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;yol: %1</translation>
 </message>
 <message>
 <source>Dark mode detected</source>
-<translation>Kalanlık mod algılandı</translation>
+<translation>Kalanlık kip algılandı</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Windows sisteminiz karanlık modda görünüyor. QOwnNotes'ta karanlık modu açmak istiyor musunuz?</translation>
+<translation>Windows sisteminiz karanlık kipte görünüyor. QOwnNotes'ta karanlık kipi açmak istiyor musunuz?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Windows sisteminiz aydınlık modda görünüyor. QOwnNotes'ta karanlık modu da kapatmak istiyor musunuz?</translation>
+<translation>Windows sisteminiz aydınlık kipte görünüyor. QOwnNotes'ta karanlık kipi kapatmak istiyor musunuz?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
-<translation>Aydınlık modu algılandı</translation>
+<translation>Aydınlık kip algılandı</translation>
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;son değiştirilme tarihi: %2&lt;br /&gt;dosya boyutu: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>Linux sisteminiz karanlık modu kullanıyor gibi görünüyor. QOwnNotes'ta karanlık modu açmak istiyor musunuz?</translation>
+<translation>Linux sisteminiz karanlık kipi kullanıyor gibi görünüyor. QOwnNotes'ta karanlık kipi açmak istiyor musunuz?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>Linux sisteminiz aydınlık modu kullanıyor gibi görünüyor. QOwnNotes'ta karanlık modu kapatmak istiyor musunuz?</translation>
+<translation>Linux sisteminiz aydınlık kipi kullanıyor gibi görünüyor. QOwnNotes'ta karanlık kipi kapatmak istiyor musunuz?</translation>
 </message>
 <message>
 <source>Panel disabled</source>
@@ -3967,7 +3975,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
-<translation type="unfinished">Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; paneli şu anda devre dışı, bu işlemin çalışması için paneli tekrar açmak istiyor musunuz?</translation>
 </message>
 <message>
 <source>Command failed!</source>
@@ -3975,7 +3983,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>&lt;code&gt;%2&lt;/code&gt; bağımsız değişkenlerine sahip &lt;code&gt;%1&lt;/code&gt; komutu başarısız oldu!</translation>
 </message>
 <message>
 <source>New connection</source>
@@ -3983,11 +3991,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Login flow succeeded</source>
-<translation type="unfinished">Login flow succeeded</translation>
+<translation>Giriş akışı başarılı oldu</translation>
 </message>
 <message>
 <source>Username and password were set successfully!</source>
-<translation type="unfinished">Username and password were set successfully!</translation>
+<translation>Kullanıcı adı ve şifre başarıyla belirlendi!</translation>
 </message>
 <message>
 <source>Default</source>
@@ -3999,7 +4007,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>&lt;b&gt;%1&lt;/b&gt; not klasörünüz bulunamadı! Yeni bir tane seçmek ister misiniz?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4021,57 +4029,57 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>Dosya adı değiştirildi</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>%n not bu eki kullanıyor. Nottaki bu ekleri de yeniden adlandırmak ister misiniz?</numerusform>
+<numerusform>%n not bu eki kullanıyor. Notlardaki bu ekleri de yeniden adlandırmak ister misiniz?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>%n not bu resmi kullanıyor. Nottaki bu görselleri de yeniden adlandırmak ister misiniz?</numerusform>
+<numerusform>%n not bu resmi kullanıyor. Notlardaki bu görselleri de yeniden adlandırmak ister misiniz?</numerusform>
 </translation>
 </message>
 <message>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Klasörleri içe aktarabilmek için mevcut not klasörüne ilişkin not alt klasörleri açıldı.</translation>
 </message>
 <message>
 <source>Login flow failed</source>
-<translation type="unfinished">Login flow failed</translation>
+<translation>Giriş akışı başarısız oldu</translation>
 </message>
 <message>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation type="unfinished">Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</translation>
+<translation>Nextcloud oturum açma akışı v2 başlatılamadı. Sunucu URL'sinin doğru olduğundan ve Nextcloud sunucusu kullandığınızdan emin olun!&lt;br /&gt;&lt;br /&gt;Hala sorun yaşıyorsanız lütfen sunucunuzun yönetici sayfasında elle bir uygulama şifresi oluşturun.</translation>
 </message>
 <message>
 <source>Could not parse login url!</source>
-<translation type="unfinished">Could not parse login url!</translation>
+<translation>Giriş URL'si ayrıştırılamadı!</translation>
 </message>
 <message>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation type="unfinished">You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</translation>
+<translation>Uygulamanın ikinci kez başlatılmasını engelleyen tek uygulama örneği kipini kullanıyorsunuz. Uygulamanın bir sonraki başlatılmasında tek uygulama örneği kipi devre dışı bırakılacak, böylece uygulama bu örnekten çıkmadan önce yeniden başlatılabilecek.</translation>
 </message>
 <message>
 <source>Note was not found</source>
-<translation type="unfinished">Note was not found</translation>
+<translation>Not bulunamadı</translation>
 </message>
 <message>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+<translation>Not bulunamadı.&lt;br /&gt;Geçerli not klasörü için alt klasörler devre dışı bırakıldığından, konumda otomatik olarak not oluşturulamıyor.</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>Not bulunamadı, yeni not &lt;strong&gt;%1&lt;/strong&gt; oluşturulsun mu?</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Not bulunamadı, &lt;strong&gt;%2&lt;/strong&gt; yolunda yeni &lt;strong&gt;%1&lt;/strong&gt; notu oluşturulsun mu?</translation>
 </message>
 <message>
 <source>Failed to create note</source>
@@ -4079,18 +4087,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Not oluşturulamadı</translation>
 </message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
 <source>Increased font size to %1 pt</source>
-<translation type="unfinished">Increased font size to %1 pt</translation>
+<translation>Yazı tipi boyutu %1 puntoya yükseltildi</translation>
 </message>
 <message>
 <source>Decreased font size to %1 pt</source>
-<translation type="unfinished">Decreased font size to %1 pt</translation>
+<translation>Yazı tipi boyutu %1 puntoya düşürüldü</translation>
 </message>
 <message>
 <source>An url was opened at the current cursor position</source>
@@ -4106,11 +4114,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation type="unfinished">&amp;Link selected text</translation>
+<translation>&amp;Seçilen metni bağla</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
-<translation type="unfinished">Insert &amp;link</translation>
+<translation>&amp;Bağlantı ekle</translation>
 </message>
 <message>
 <source>Block &amp;quote selected text</source>
@@ -4135,19 +4143,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Print selected text (preview)</source>
-<translation type="unfinished">Print selected text (preview)</translation>
+<translation>Seçilen metni yazdır (ön izleme)</translation>
 </message>
 <message>
 <source>Export</source>
-<translation type="unfinished">Export</translation>
+<translation>Dışa aktar</translation>
 </message>
 <message>
 <source>Export selected text as PDF</source>
-<translation type="unfinished">Export selected text as PDF</translation>
+<translation>Seçilen metni PDF olarak dışa aktar</translation>
 </message>
 <message>
 <source>Export selected text as PDF (preview)</source>
-<translation type="unfinished">Export selected text as PDF (preview)</translation>
+<translation>Seçilen metni PDF olarak dışa aktar (ön izleme)</translation>
 </message>
 <message>
 <source>Custom actions</source>
@@ -4234,7 +4242,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Mode:</source>
-<translation>Mod:</translation>
+<translation>Kip:</translation>
 </message>
 <message>
 <source>Match case sensitive</source>
@@ -4297,7 +4305,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Mode:</source>
-<translation>Mod:</translation>
+<translation>Kip:</translation>
 </message>
 <message>
 <source>Match case sensitive</source>
@@ -4375,7 +4383,7 @@ Klasör ve dosya yazılabilir mi?</translation>
 </message>
 <message>
 <source>Name</source>
-<translation>İsim</translation>
+<translation>Ad</translation>
 </message>
 <message>
 <source>Enter your query text</source>
@@ -4476,7 +4484,7 @@ Yine de yüklemek istiyor musunuz?</translation>
 </message>
 <message>
 <source>Please select a directory</source>
-<translation type="unfinished">Please select a directory</translation>
+<translation>Lütfen bir dizin seçin</translation>
 </message>
 <message>
 <source>Please select a file</source>
@@ -4684,15 +4692,15 @@ Yine de yüklemek istiyor musunuz?</translation>
 </message>
 <message>
 <source>Optimize preview colors for dark mode desktop themes</source>
-<translation>Daha koyu modlu masaüstü temaları için önizleme renklerini optimize edin</translation>
+<translation>Karanlık kip masaüstü temaları için ön izleme renklerini optimize edin</translation>
 </message>
 <message>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-<translation>Bu karanlık modu aktif eder, arayüz ve simgeler modifiye edilecektir. Yapılanları değiştirmek için uygulamayı yeniden başlatmanız gerekir.</translation>
+<translation>Karanlık kipin aktif edilmesi, arayüzün ve simgelerin değiştirilmesini sağlar. Bu değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekir.</translation>
 </message>
 <message>
 <source>Enable dark mode</source>
-<translation>Karanlık modu etkinleştir</translation>
+<translation>Karanlık kipi etkinleştir</translation>
 </message>
 <message>
 <source>You need to restart the application to let this setting take effect</source>
@@ -4780,7 +4788,7 @@ Yine de yüklemek istiyor musunuz?</translation>
 </message>
 <message>
 <source>Dark mode</source>
-<translation>Karanlık mod</translation>
+<translation>Karanlık kip</translation>
 </message>
 <message>
 <source>Disable tracking of usage data</source>
@@ -4987,7 +4995,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Name:</source>
-<translation>İsim:</translation>
+<translation>Ad:</translation>
 </message>
 <message>
 <source>Note folder path:</source>
@@ -5011,11 +5019,11 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Lütfen &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; 'nın en son sürümünü yükleyin (en az sürüm QOWNNOTESAPI_MIN_VERSION) kendi QCloud sunucunuzda not sürümlerine ve çöpe atılan notlara erişebilmesini istiyorsanız.</translation>
+<translation>QOwnNotes'un not sürümlerine ve çöpe atılan notlara erişebilmesini istiyorsanız lütfen &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;'nin en son sürümünü (en azından QOWNNOTESAPI_MIN_VERSION sürümü) ownCloud sunucunuza yükleyin.</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Yine de &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud senkronizasyon istemcisine &lt;/span&gt; &lt;/a&gt; (veya başka bir masaüstü senkronizasyon istemcisi) ile senkronize edin! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Notlarınızı senkronize etmek için yine de &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud senkronizasyon istemcisi&lt;/span&gt;&lt;/a&gt;ne (veya başka bir masaüstü senkronizasyon istemcisine) ihtiyacınız olacak!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
@@ -5261,15 +5269,15 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Enable dark mode application icon and tray icon</source>
-<translation>Karanlık mod uygulaması butonunu ve ana ekranda butonu etkinleştir</translation>
+<translation>Karanlık kip uygulama simgesini ve tepsi simgesini etkinleştirin</translation>
 </message>
 <message>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>Karanlık modda editör ayarlarında başka bir editör renk şeması seçmek de isteyebilirsiniz.</translation>
+<translation>Ayrıca karanlık kip düzenleyici ayarlarında başka bir düzenleyici renk şeması seçmek isteyebilirsiniz.</translation>
 </message>
 <message>
 <source>Enable dark mode icon theme</source>
-<translation>Karanlık mod simgesi temasını etkinleştir</translation>
+<translation>Karanlık kip simge temasını etkinleştir</translation>
 </message>
 <message>
 <source>System tray</source>
@@ -5301,7 +5309,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>&amp;Add script…</source>
-<translation>&amp;הוסף סקריפט ...</translation>
+<translation>&amp;Komut dosyası ekle…</translation>
 </message>
 <message>
 <source>Use legacy way to link to notes, images and attachments</source>
@@ -5353,7 +5361,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Sorunları yayınlamanın en iyi yolu, &lt;span style = "font-weight: 600;"&gt; Sorunlu asistanı aç &lt;/span&gt; düğmesine basarak sorun yardımcısını kullanmaktır. altta. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sorunları yayınlamanın en iyi yolu, alttaki &lt;span style=" font-weight:600;"&gt;Sorun asistanını aç&lt;/span&gt; düğmesine basarak sorun yardımcısını kullanmaktır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Ignore code font size to allow zooming</source>
@@ -5361,7 +5369,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Rendering</source>
-<translation>Geriverim</translation>
+<translation>Yorumlama</translation>
 </message>
 <message>
 <source>Enable underline rendering</source>
@@ -5377,7 +5385,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-<translation>Vim modunu etkinleştir (bazı QOwnNotes kısayolları çalışmayacak)</translation>
+<translation>Vim kipini etkinleştir (bazı QOwnNotes kısayolları çalışmayacak)</translation>
 </message>
 <message>
 <source>Cloud connection:</source>
@@ -5413,19 +5421,19 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Deneysel</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
-<translation type="unfinished">This also allows note files to be renamed</translation>
+<translation>Bu aynı zamanda not dosyalarının yeniden adlandırılmasını sağlar</translation>
 </message>
 <message>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</translation>
+<translation>Örneğin, çöpe atılan notları ve not sürümlerini yönetmek veya notları paylaşmak için uygulamanın içinden ownCloud sunucunuza erişebilirsiniz. Bu entegrasyon not dosyası eşitlemesi yapmaz. Dosyaları eşitlemek için yine de ownCloud eşitleme istemcisini kurmanız gerekir.</translation>
 </message>
 <message>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>Bu yolu &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; ayarlarında bulacaksınız</translation>
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
@@ -5441,7 +5449,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Nextcloud Deck desteğini etkinleştirin</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5485,7 +5493,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Search for language</source>
-<translation>dilin ara</translation>
+<translation>Dil ara</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -5497,7 +5505,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Sadece göreceli not yolunu göster</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5521,11 +5529,11 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Start application in read-only mode</source>
-<translation type="unfinished">Start application in read-only mode</translation>
+<translation>Uygulamayı salt okunur kipte başlat</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Etkin olmadığında, aşağıdaki işlemlerden sonra otomatik olarak salt okunur kipine geçin:</translation>
 </message>
 <message>
 <source> sec</source>
@@ -5534,35 +5542,35 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+<translation>Mesaj kutularındaki tüm "Bir daha sorma" seçeneklerini unutun</translation>
 </message>
 <message>
 <source>Note file extensions</source>
-<translation type="unfinished">Note file extensions</translation>
+<translation>Not dosya uzantıları</translation>
 </message>
 <message>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
-<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+<translation>Listelenen dosya uzantılarına sahip dosyalar not olarak tanınacak, seçilen dosya uzantısı yeni notlar için kullanılacaktır.</translation>
 </message>
 <message>
 <source>Add a new note file extension</source>
-<translation type="unfinished">Add a new note file extension</translation>
+<translation>Yeni bir not dosya uzantısı ekleyin</translation>
 </message>
 <message>
 <source>Remove selected note file extension</source>
-<translation type="unfinished">Remove selected note file extension</translation>
+<translation>Seçili not dosya uzantısını kaldır</translation>
 </message>
 <message>
 <source>Checks the disk database integrity and fixes problems</source>
-<translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+<translation>Disk veri tabanı bütünlüğünü kontrol eder ve sorunları düzeltir</translation>
 </message>
 <message>
 <source>Check integrity</source>
-<translation type="unfinished">Check integrity</translation>
+<translation>Bütünlüğü kontrol edin</translation>
 </message>
 <message>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+<translation>Veri tabanını yeniden başlatmanın, ön belleğe alınmış yapılacaklar ögelerinizi, yapılandırılmış not klasörlerinizi ve komut dosyalarınızı da kaldıracağını unutmayın!</translation>
 </message>
 <message>
 <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
@@ -5586,7 +5594,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+<translation>Yazdıktan sonra ön izleme yenileme süresi:</translation>
 </message>
 <message>
 <source>Reset the debounce time</source>
@@ -5602,7 +5610,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Exporting</source>
-<translation>Ihracat</translation>
+<translation>Dışa aktarma</translation>
 </message>
 <message>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
@@ -5614,7 +5622,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Note that disabling this will also disable the navigation panel!</source>
-<translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
+<translation>Bu özelliği devre dışı bırakmak, gezinti panelini de devre dışı bırakacaktır!</translation>
 </message>
 <message>
 <source>Disable cursor blinking</source>
@@ -5626,15 +5634,15 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>Daha büyük notlar not listesinde gösterilmeyecektir</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>Azami not dosyası boyutu:</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>YZ entegrasyon komut dosyaları için arama komut dosyası deposu</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -5655,35 +5663,35 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Bağlantıyı test edin</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>Betik motoru aracılığıyla eklenen YZ arka uçları</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>YZ arka uçlarından yararlanmak için &lt;a href="%1"&gt;aiComplete&lt;/a&gt; komut dosyası oluşturma komutunu kullanabilir veya önceden yazılmış komut dosyaları için komut dosyası deposuna bakabilirsiniz.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Daha fazla OpenAI API uyumlu arka uç eklemek için &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; komut dosyası kancasını kullanabilirsiniz.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>Alternatif olarak, önceden oluşturulmuş YZ entegrasyon komut dosyaları için komut dosyası deposuna da bakabilirsiniz.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Groq API anahtarı:</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>API anahtarı</translation>
 </message>
 <message>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Satır numaralarını göster</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>
@@ -5704,15 +5712,15 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>Yok sayılan not klasörleri</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Git ikili dosyasının yolunu seçin</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>Yok sayılacak not klasörlerinin ";" ile ayrılmış düzenli ifadeleri</translation>
 </message>
 <message>
 <source>Ignored subfolders</source>
@@ -5734,7 +5742,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>İmleç konumunu değiştirirken gezinme panelindeki öğeleri otomatik seç</translation>
 </message>
 <message>
 <source>Hide 'Note count' with tags (increases performance)</source>
@@ -5746,35 +5754,35 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Command snippets</source>
-<translation type="unfinished">Command snippets</translation>
+<translation>Komut parçacıkları</translation>
 </message>
 <message>
 <source>Tag name for commands notes</source>
-<translation type="unfinished">Tag name for commands notes</translation>
+<translation>Komut notları için etiket adı</translation>
 </message>
 <message>
 <source>Commands tag:</source>
-<translation type="unfinished">Commands tag:</translation>
+<translation>Komut etiketi:</translation>
 </message>
 <message>
 <source>Commands note name:</source>
-<translation type="unfinished">Commands note name:</translation>
+<translation>Komut notu adı:</translation>
 </message>
 <message>
 <source>Note name for adding new commands</source>
-<translation type="unfinished">Note name for adding new commands</translation>
+<translation>Yeni komutlar eklemek için not adı</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</translation>
+<translation>Cep telefonunuzdan masaüstünüzdeki QOwnNotes'a internet üzerinden fotoğraf ekleyebilmek için &lt;a href="%1"&gt;QOwnNotes Web Uygulamasını&lt;/a&gt; kullanabilirsiniz.</translation>
 </message>
 <message>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>QOwnNotes web uygulaması</translation>
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>QOwnNotes web uygulaması ile QOwnNotes masaüstü uygulaması arasında köprü görevi görecek şekilde bu sunucuya bir web soketi bağlantısı açılacaktır.</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -5790,19 +5798,19 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
-<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</translation>
+<translation>QOwnNotes'u web kırpma aracı veya yer imi yönetimi olarak kullanmak için &lt;a href="%2"&gt;Chrome Web Mağazası&lt;/a&gt; veya &lt;a href="%3"&gt;Firefox Eklentileri sayfası&lt;/a&gt;ndan &lt;a href="%1"&gt;Web Companion tarayıcı uzantısı&lt;/a&gt;nı yükleyin.</translation>
 </message>
 <message>
 <source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</source>
-<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in QOwnNotes from the command line.</translation>
+<translation>QOwnNotes'taki notlarda saklanan komut parçacıklarını komut satırından yürütmek için &lt;a href="%1"&gt;Komut satırı parçacığı yöneticisini&lt;/a&gt; indirin.</translation>
 </message>
 <message>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+<translation>Komut satırı parçacığı yöneticisinden çalıştırabileceğiniz komut parçacıklarını saklamak için özel etiketli notları kullanabilirsiniz. Komut pasajı söz dizimi hakkında daha fazla bilgi için &lt;a href="%1"&gt;buraya&lt;/a&gt; tıklayın.</translation>
 </message>
 <message>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
+<translation>QOwnNotes masaüstü uygulamanızla konuşabilmek için bu belirteci QOwnNotes web uygulamasına girmeniz gerekir.</translation>
 </message>
 <message>
 <source>Copy security token to clipboard</source>
@@ -5814,15 +5822,15 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Reset the URL to default</source>
-<translation type="unfinished">Reset the URL to default</translation>
+<translation>URL'yi varsayılana sıfırla</translation>
 </message>
 <message>
 <source>QOwnNotes web application support</source>
-<translation type="unfinished">QOwnNotes web application support</translation>
+<translation>QOwnNotes web uygulaması desteği</translation>
 </message>
 <message>
 <source>Enable web application support</source>
-<translation type="unfinished">Enable web application support</translation>
+<translation>Web uygulaması desteğini etkinleştir</translation>
 </message>
 <message>
 <source>Note list panel</source>
@@ -5830,7 +5838,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Show notes in the note list with preview</source>
-<translation>Önizleme ile not listesinde notları göster</translation>
+<translation>Not listesindeki notları ön izlemeyle göster</translation>
 </message>
 <message>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
@@ -5847,7 +5855,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Enable local trash to keep a copy of trashed notes</source>
-<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+<translation>Çöpe atılan notların bir kopyasını saklamak için yerel çöp kutusunu etkinleştirin</translation>
 </message>
 <message>
 <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
@@ -5919,7 +5927,8 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation>Pencere veya diğer panellerin yeniden boyutlandırılması durumunda yeniden boyutlandırılmak üzere not düzenleme panelini sabit merkezi widget olarak kullanın</translation>
+<translation>Not düzenleme panelini, pencere ya da diğer paneller boyutlandırıldığında yeniden boyutlandırılabilen 
+sabit bir merkezi widget olarak kullanın</translation>
 </message>
 <message>
 <source>Note search panel</source>
@@ -6022,7 +6031,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Only use editor width setting in distraction free mode</source>
-<translation>Distraksiyon serbest modunda sadece editör genişliği ayarını kullanın</translation>
+<translation>Düzenleyici genişlik ayarını yalnızca odaklanma kipinde kullanın</translation>
 </message>
 <message>
 <source>Alphabetical</source>
@@ -6054,7 +6063,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Hide 'Find or create note subfolder' search</source>
-<translation>'Not altklasörü bul veya oluştur' aramayı gizle</translation>
+<translation>'Not alt klasörünü bulun veya oluşturun' aramasını gizle</translation>
 </message>
 <message>
 <source>Display note subfolders as full tree</source>
@@ -6148,7 +6157,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>The name</source>
-<translation>İsim</translation>
+<translation>Adı</translation>
 </message>
 <message>
 <source>Maximum height:</source>
@@ -6252,7 +6261,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
-<translation>Köşeli parantezleri ve markdown formatı karakterlerinin otomatik tamamlanmasını etkinleştir</translation>
+<translation>Parantezleri ve markdown biçim karakterlerini otomatik tamamlamayı etkinleştir</translation>
 </message>
 <message>
 <source>You have to use the backspace key to remove the opening character</source>
@@ -6428,7 +6437,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>sunucuda &lt;b&gt;%1&lt;/b&gt; not yolu bulundu</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -6457,7 +6466,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>Veri tabanı yeniden başlatıldı. Lütfen uygulamayı şimdi yeniden başlatın!</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -6525,7 +6534,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>Please enter a new note file extension:</source>
-<translation type="unfinished">Please enter a new note file extension:</translation>
+<translation>Lütfen yeni bir not dosyası uzantısı girin:</translation>
 </message>
 <message>
 <source>Markdown file</source>
@@ -6537,7 +6546,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>Remove note file extension</source>
-<translation type="unfinished">Remove note file extension</translation>
+<translation>Not dosya uzantısını kaldır</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -6565,7 +6574,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Kart Kimliği: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
@@ -6573,7 +6582,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>%1 (%2) için API test sonucu</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
@@ -6581,7 +6590,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>API temel URL'si</translation>
 </message>
 <message>
 <source>AI model: %1</source>
@@ -6667,7 +6676,7 @@ Bağlantı hata mesajı: </translation>
 </message>
 <message>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; not dosyası uzantısını gerçekten kaldırmak istiyor musunuz? Bu uzantıya sahip dosyaları artık not listesinde görmeyeceksiniz!</translation>
 </message>
 <message>
 <source>Calendar cache emptied</source>
@@ -6836,32 +6845,32 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 <message>
 <source>-ise suffixes</source>
 <comment>dictionary variant</comment>
-<translation>סיומות -ise</translation>
+<translation>-ise suffixes</translation>
 </message>
 <message>
 <source>-ize suffixes</source>
 <comment>dictionary variant</comment>
-<translation>-ize סיומות</translation>
+<translation>-ize suffixes</translation>
 </message>
 <message>
 <source>-ise suffixes and with accents</source>
 <comment>dictionary variant</comment>
-<translation>סיומות -ise  ועם מבטאים</translation>
+<translation>-ise suffixes and with accents</translation>
 </message>
 <message>
 <source>-ise suffixes and without accents</source>
 <comment>dictionary variant</comment>
-<translation>סיומות -ise וללא מבטאים</translation>
+<translation>-ise suffixes and without accents</translation>
 </message>
 <message>
 <source>-ize suffixes and with accents</source>
 <comment>dictionary variant</comment>
-<translation>סיומות -ize ועם מבטאים</translation>
+<translation>-ize suffixes and with accents</translation>
 </message>
 <message>
 <source>-ize suffixes and without accents</source>
 <comment>dictionary variant</comment>
-<translation>סיומות -ize וללא מבטאים</translation>
+<translation>-ize suffixes and without accents</translation>
 </message>
 <message>
 <source>large</source>
@@ -6896,12 +6905,12 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 <message>
 <source>without accents</source>
 <comment>dictionary variant</comment>
-<translation>ללא מבטאים</translation>
+<translation>without accents</translation>
 </message>
 <message>
 <source>with accents</source>
 <comment>dictionary variant</comment>
-<translation>עם מבטאים</translation>
+<translation>with accents</translation>
 </message>
 <message>
 <source>with ye, modern russian</source>
@@ -6936,7 +6945,7 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -6951,7 +6960,7 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Stored attachments</source>
-<translation type="unfinished">Stored attachments</translation>
+<translation>Depolanan ekler</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -6971,7 +6980,7 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Yalnızca geçerli notta kullanılan ekleri göster</translation>
 </message>
 <message>
 <source>Only show from current note</source>
@@ -6979,35 +6988,35 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
-<translation type="unfinished">Add selected attachments to the current note</translation>
+<translation>Seçili ekleri geçerli nota ekle</translation>
 </message>
 <message>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>Mevcut nota ekle</translation>
 </message>
 <message>
 <source>Open &amp;attachment</source>
-<translation type="unfinished">Open &amp;attachment</translation>
+<translation>&amp;Ek'i aç</translation>
 </message>
 <message>
 <source>Open the attachments folder</source>
-<translation type="unfinished">Open the attachments folder</translation>
+<translation>Ekler klasörünü aç</translation>
 </message>
 <message>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>&amp;Klasörü aç</translation>
 </message>
 <message>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Yenile</translation>
 </message>
 <message>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>Dosya boyutu:</translation>
 </message>
 <message>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>Dosya türü:</translation>
 </message>
 <message>
 <source>File path:</source>
@@ -7015,11 +7024,11 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Son değiştirilme tarihi: %1</translation>
 </message>
 <message>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Yol: %1</translation>
 </message>
 <message>
 <source>Delete selected files</source>
@@ -7027,54 +7036,54 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>&amp;Eki aç</translation>
 </message>
 <message>
 <source>&amp;Rename attachment</source>
-<translation type="unfinished">&amp;Rename attachment</translation>
+<translation>Eki &amp;yeniden adlandır</translation>
 </message>
 <message>
 <source>&amp;Delete attachments</source>
-<translation type="unfinished">&amp;Delete attachments</translation>
+<translation>&amp;Ekleri sil</translation>
 </message>
 <message>
 <source>&amp;Add attachments to current note</source>
-<translation type="unfinished">&amp;Add attachments to current note</translation>
+<translation>&amp;Geçerli nota ekler ekle</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Dosya mevcut değil</translation>
 </message>
 <message>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası mevcut değil, onu yeniden adlandıramazsınız!</translation>
 </message>
 <message>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Dosya mevcut</translation>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası zaten mevcut, yeni dosya adı olarak &lt;strong&gt;%2&lt;/strong&gt;'yi seçmeden önce onu kaldırmanız gerekiyor!</translation>
 </message>
 <message>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Dosya yeniden adlandırma başarısız oldu</translation>
 </message>
 <message>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyasının yeniden adlandırılması başarısız oldu!</translation>
 </message>
 <message>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Notu aç</translation>
 </message>
 </context>
 <context>
@@ -7097,7 +7106,7 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>&amp;Klasörü aç</translation>
 </message>
 <message>
 <source>Open image externally</source>
@@ -7137,7 +7146,7 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>Yalnızca notlarda kullanılmayan görselleri göster</translation>
 </message>
 <message>
 <source>Only show orphaned images</source>
@@ -7145,11 +7154,11 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Son değiştirilme tarihi: %1</translation>
 </message>
 <message>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Yol: %1</translation>
 </message>
 <message>
 <source>Delete selected files</source>
@@ -7157,9 +7166,9 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
 </translation>
 </message>
 <message>
@@ -7168,23 +7177,23 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası mevcut değil, yeniden adlandıramazsınız!</translation>
 </message>
 <message>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Dosya mevcut</translation>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası zaten mevcut, yeni dosya adı olarak &lt;strong&gt;%2&lt;/strong&gt;'yi seçmeden önce onu kaldırmanız gerekiyor!</translation>
 </message>
 <message>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Dosya yeniden adlandırma başarısız oldu</translation>
 </message>
 <message>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyasının yeniden adlandırılması başarısız oldu!</translation>
 </message>
 <message>
 <source>&amp;Open image externally</source>
@@ -7192,19 +7201,19 @@ Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
 <source>&amp;Rename image</source>
-<translation type="unfinished">&amp;Rename image</translation>
+<translation>&amp;Görseli yeniden adlandır</translation>
 </message>
 <message>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>Görselleri &amp;sil</translation>
 </message>
 <message>
 <source>&amp;Add images to current note</source>
-<translation type="unfinished">&amp;Add images to current note</translation>
+<translation>Geçerli &amp;nota görsel ekle</translation>
 </message>
 <message>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>Notu &amp;aç</translation>
 </message>
 </context>
 <context>
@@ -7458,7 +7467,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Name:</source>
-<translation>İsim:</translation>
+<translation>Adı:</translation>
 </message>
 <message>
 <source>New sub-task</source>
@@ -7739,15 +7748,15 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>QOwnNotes yürütülebilir dosyanız '%1' yazılabilir değil! Güncellenebilmesi için mevcut kullanıcı tarafından yazılabilir olması gerekir.</translation>
 </message>
 <message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>'%1' geçici dosyası yürütülebilir hale getirilemedi! '%2'yi kendiniz değiştirmeniz gerekiyor.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Eski QOwnNotes yürütülebilir dosyanız '%1' kaldırılamadı! '%2' ile kendiniz değiştirmeniz gerekiyor.</translation>
 </message>
 <message>
 <source>Restart application</source>
@@ -7755,7 +7764,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Güncelleme işlemini tamamlamak için uygulamayı yeniden başlatmalısınız.</translation>
 </message>
 <message>
 <source>Restart</source>
@@ -7791,11 +7800,11 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Eski QOwnNotes yürütülebilir dosyanız '%1' yeni dosya '%2' ile değiştirilemedi! Kendiniz değiştirmeniz gerekir.</translation>
 </message>
 <message>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation type="unfinished">The app file '%1' could not be made executable! You need to make it executable yourself.</translation>
+<translation>'%1' uygulama dosyası yürütülebilir hale getirilemedi! Bunu kendiniz yürütülebilir hale getirmeniz gerekir.</translation>
 </message>
 <message>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
@@ -7826,7 +7835,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-<translation>Mevcut güncelleme yok.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; son sürümdür.</translation>
+<translation>Yeni güncelleme bulunmuyor.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; en son sürümdür.</translation>
 </message>
 </context>
 <context>
@@ -7856,11 +7865,11 @@ Bu geri alınamaz!</translation>
 <name>WebAppClientService</name>
 <message>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>QOwnNotes websocket aracılığıyla %1'e bağlandı</translation>
 </message>
 <message>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotes'un websocket ile %1 bağlantısı kesildi</translation>
 </message>
 <message>
 <source>Web app warning</source>
@@ -7892,22 +7901,22 @@ Bu geri alınamaz!</translation>
 <message numerus="yes">
 <source>%n bookmark(s) created</source>
 <translation>
-<numerusform>נוצר סימניה %n</numerusform>
-<numerusform>%n סימניות נוצרו</numerusform>
+<numerusform>%n yer işareti oluşturuldu</numerusform>
+<numerusform>%n yer işareti oluşturuldu</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>Yer işareti %n nottan silindi</numerusform>
+<numerusform>Yer işareti %n nottan silindi</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Yer işareti %n notta düzenlendi</numerusform>
+<numerusform>Yer işareti %n notta düzenlendi</numerusform>
 </translation>
 </message>
 <message>
@@ -8065,11 +8074,11 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
-<translation>Tek uygulama modu sisteminizde desteklenmiyor!</translation>
+<translation>Tek uygulama kipi sisteminizde desteklenmiyor!</translation>
 </message>
 <message>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-<translation>Başka bir QOwnNotes örneği zaten başlatıldı! Ayarlardaki tek örnek modunu kapatabilir veya --allow-multiple-örneklerinin parametresini kullanabilirsiniz.</translation>
+<translation>QOwnNotes'un başka bir örneği zaten başlatıldı! Ayarlarda tek örnek kipini kapatabilir veya --allow-multiple-instances parametresini kullanabilirsiniz.</translation>
 </message>
 <message>
 <source>A second instance of QOwnNotes was attempted to be started!</source>

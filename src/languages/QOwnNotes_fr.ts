@@ -2732,6 +2732,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Enregistrement d'une image temporaire</translation>
 </message>
 <message>
+<source>Note folder does not exist!</source>
+<translation type="unfinished">Note folder does not exist!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>L. %1, Col. %2</translation>
