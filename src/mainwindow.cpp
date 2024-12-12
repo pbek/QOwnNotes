@@ -3213,8 +3213,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             QStringList({"Markdown Cheatsheet.md", "Welcome to QOwnNotes.md"});
 
         // copy note files to the notes path
-        for (int i = 0; i < filenames.size(); ++i) {
-            const QString &filename = filenames.at(i);
+        for (const auto & filename : filenames) {
             const QString destinationFile = this->notesPath + QDir::separator() + filename;
             QFile sourceFile(QStringLiteral(":/demonotes/") + filename);
             sourceFile.copy(destinationFile);
