@@ -286,11 +286,28 @@ int mainStartupMisc(const QStringList &arguments) {
         notesPath = Utils::Misc::prependPortableDataPathIfNeeded(notesPath);
     }
 
+    DatabaseService::createConnection();
+    DatabaseService::setupTables();
     QDir dir(notesPath);
 
-    // if this isn't the first run but the note folder doesn't exist any more
-    // let the user select another one
+    // If this isn't the first run and the note folder doesn't exist anymore look for another one
     if (!notesPath.isEmpty() && !dir.exists()) {
+        notesPath = QString();
+
+        // Loop through all note folders and select the first existing one
+        auto noteFolders = NoteFolder::fetchAll();
+        for (const auto &noteFolder : noteFolders) {
+            dir = QDir(noteFolder.getLocalPath());
+            if (dir.exists()) {
+                notesPath = noteFolder.getLocalPath();
+                noteFolder.setAsCurrent();
+                break;
+            }
+        }
+    }
+
+    // If there was no existing note folder found let the user select another one
+    if (notesPath.isEmpty()) {
         if (QMessageBox::question(nullptr, QObject::tr("Note folder not found!"),
                                   QObject::tr("Your note folder <b>%1</b> was not found any more! "
                                               "Do you want to select a new one?")
@@ -314,9 +331,6 @@ int mainStartupMisc(const QStringList &arguments) {
         notesPath = Utils::Misc::prependPortableDataPathIfNeeded(notesPath);
         dir = QDir(notesPath);
     }
-
-    DatabaseService::createConnection();
-    DatabaseService::setupTables();
 
     // if the notes path is empty or doesn't exist open the welcome dialog
     if (notesPath.isEmpty() || !dir.exists()) {

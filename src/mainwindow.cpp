@@ -7382,6 +7382,15 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
     const NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
 
     if (noteFolder.isFetched()) {
+        if (!noteFolder.localPathExists()) {
+            QMessageBox::warning(this, tr("Note folder does not exist!"),
+                                 tr("Note folder <b>%1</b> with path <b>%2</b> does not exist anymore!").arg(
+                                     noteFolder.getName(), noteFolder.getLocalPath()));
+            Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderComboBox,
+                                                   NoteFolder::currentNoteFolderId());
+
+            return;
+        }
         changeNoteFolder(noteFolderId);
         resetBrokenTagNotesLinkFlag();
     }

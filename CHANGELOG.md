@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 24.12.3
+- If the current note folder doesn't exist anymore during the start of the
+  application, now the first existing one will be selected (for [#3179](https://github.com/pbek/QOwnNotes/issues/3179))
+  - If there was only one note folder, the user needs to select a new path
+  - When the application is already running and a note folder was removed outside
+    the application, the user will now get a warning that the path doesn't exist
+    anymore and is not able to select that note folder
+
 ## 24.12.2
 - The Qt Wayland and platform libraries were added to the Qt6 Ubuntu PPA, so the
   repository works out of the box on Ubuntu 22.04 (for [#2964](https://github.com/pbek/QOwnNotes/issues/2964))
