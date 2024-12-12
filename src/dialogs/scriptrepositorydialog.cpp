@@ -131,13 +131,16 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
     }
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-    // Each of these two lines "addTopLevelItem" and "resizeColumnToContents" result in this warning when the
-    // method was called from another thread: `QBasicTimer::start: Timers cannot be started from another thread`
-    // So we need to use QMetaObject::invokeMethod()
-    QMetaObject::invokeMethod(ui->scriptTreeWidget, [this, item]() {
-        ui->scriptTreeWidget->addTopLevelItem(item);
-        ui->scriptTreeWidget->resizeColumnToContents(0);
-    }, Qt::QueuedConnection);
+    // Each of these two lines "addTopLevelItem" and "resizeColumnToContents" result in this warning
+    // when the method was called from another thread: `QBasicTimer::start: Timers cannot be started
+    // from another thread` So we need to use QMetaObject::invokeMethod()
+    QMetaObject::invokeMethod(
+        ui->scriptTreeWidget,
+        [this, item]() {
+            ui->scriptTreeWidget->addTopLevelItem(item);
+            ui->scriptTreeWidget->resizeColumnToContents(0);
+        },
+        Qt::QueuedConnection);
 #else
     ui->scriptTreeWidget->addTopLevelItem(item);
     ui->scriptTreeWidget->resizeColumnToContents(0);

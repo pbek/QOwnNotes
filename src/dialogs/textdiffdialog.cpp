@@ -1,7 +1,10 @@
 #include "textdiffdialog.h"
+
+#include <diff_match_patch.h>
+
 #include <QAbstractButton>
 #include <QDebug>
-#include <diff_match_patch.h>
+
 #include "services/settingsservice.h"
 #include "ui_textdiffdialog.h"
 
@@ -31,11 +34,10 @@ bool TextDiffDialog::resultAccepted() { return this->accepted; }
 
 QString TextDiffDialog::resultText() { return this->ui->plainTextEdit->toPlainText(); }
 
-
 void TextDiffDialog::on_plainTextEdit_textChanged() {
     auto diff = new diff_match_patch();
-    const QList<Diff> diffList = diff->diff_main(this->text1, this->ui->plainTextEdit->toPlainText());
+    const QList<Diff> diffList =
+        diff->diff_main(this->text1, this->ui->plainTextEdit->toPlainText());
     const QString html = diff->diff_prettyHtml(diffList);
     this->ui->textEdit->setHtml(html);
 }
-

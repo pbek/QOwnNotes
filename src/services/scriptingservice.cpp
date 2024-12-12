@@ -2159,7 +2159,7 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
  * @return
  */
 QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
-                                      const QString &text1, const QString &text2) {
+                                         const QString &text1, const QString &text2) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
 

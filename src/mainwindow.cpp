@@ -3213,7 +3213,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             QStringList({"Markdown Cheatsheet.md", "Welcome to QOwnNotes.md"});
 
         // copy note files to the notes path
-        for (const auto & filename : filenames) {
+        for (const auto &filename : filenames) {
             const QString destinationFile = this->notesPath + QDir::separator() + filename;
             QFile sourceFile(QStringLiteral(":/demonotes/") + filename);
             sourceFile.copy(destinationFile);
@@ -7383,9 +7383,10 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
 
     if (noteFolder.isFetched()) {
         if (!noteFolder.localPathExists()) {
-            QMessageBox::warning(this, tr("Note folder does not exist!"),
-                                 tr("Note folder <b>%1</b> with path <b>%2</b> does not exist anymore!").arg(
-                                     noteFolder.getName(), noteFolder.getLocalPath()));
+            QMessageBox::warning(
+                this, tr("Note folder does not exist!"),
+                tr("Note folder <b>%1</b> with path <b>%2</b> does not exist anymore!")
+                    .arg(noteFolder.getName(), noteFolder.getLocalPath()));
             Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderComboBox,
                                                    NoteFolder::currentNoteFolderId());
 
