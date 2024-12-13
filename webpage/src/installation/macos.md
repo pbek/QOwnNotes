@@ -3,11 +3,18 @@
 Download the latest **macOS disk image** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases),
 open it and drag the **QOwnNotes** app to your **application folder**.
 
-The first time you have to right click the application and click **Open** to open QOwnNotes.
+The first time you have to right-click the application and click **Open** to open QOwnNotes.
+
+The GitHub release is currently only built for the x86 platform.
 
 ::: warning
 If you get an error message `QOwnNotes.app cannot be opened because the developer cannot be verified`
 you need to visit your macOS **Security settings** and click on `Open anyway`.
+:::
+
+::: tip
+The application uses its **internal updater** to update itself.
+You can see the latest version on the bottom right of the application.
 :::
 
 ## Homebrew
@@ -23,4 +30,4 @@ brew install qownnotes
 ## Nix
 
 You can also install QOwnNotes with the [Nix package manager](https://wiki.nixos.org/wiki/Nix_package_manager)
-under macOS, see [Install via Nix](./nix.md).
+under macOS natively on **x86 and Apple Silicon**, see [Install via Nix](./nix.md).
