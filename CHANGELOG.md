@@ -3,6 +3,7 @@
 ## 24.12.4
 - The welcome wizard will now be shown again when the application runs for the first time,
   this was a regression from 24.12.3 (for [#3179](https://github.com/pbek/QOwnNotes/issues/3179))
+- Added more Arabic, Turkish, French translation (thank you, noureddin, brtc, jd-develop)
 
 ## 24.12.3
 - If the current note folder doesn't exist anymore during the start of the

@@ -1129,7 +1129,7 @@
 </message>
 <message>
 <source>Code (keyword)</source>
-<translation>Kod (anahtar kelime)</translation>
+<translation>Kod (anahtar sözcük)</translation>
 </message>
 <message>
 <source>Code (type)</source>
@@ -1394,7 +1394,7 @@
 </message>
 <message>
 <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-<translation>Merkezi pencere öğesinin bulunmamasını gerektiren çalışma alanlarının, merkezi pencere öğesi etkinleştirilirse düzgün çalışmadığını unutmayın.</translation>
+<translation>Merkezi pencere ögesinin bulunmamasını gerektiren çalışma alanlarının, merkezi pencere ögesi etkinleştirilirse düzgün çalışmadığını unutmayın.</translation>
 </message>
 <message>
 <source>Use new layout</source>
@@ -2035,11 +2035,11 @@
 </message>
 <message>
 <source>Full</source>
-<translation>Tam</translation>
+<translation>Tam ekran</translation>
 </message>
 <message>
 <source>Paste html or media</source>
-<translation>Html veya meyda yapıştır</translation>
+<translation>HTML veya medyayı yapıştırın</translation>
 </message>
 <message>
 <source>Paste images, notes and html from the clipboard</source>
@@ -2160,7 +2160,7 @@
 </message>
 <message>
 <source>Delete word</source>
-<translation>Kelimeyi sil</translation>
+<translation>Sözcüğü sil</translation>
 </message>
 <message>
 <source>Copy note headline</source>
@@ -2256,7 +2256,7 @@
 </message>
 <message>
 <source>Custom</source>
-<translation>Görenek</translation>
+<translation>Özel</translation>
 </message>
 <message>
 <source>5</source>
@@ -2402,12 +2402,11 @@
 </message>
 <message>
 <source>Move down in note list</source>
-<translation>Bog síos sa liosta nótaí
-</translation>
+<translation>Not listesinde aşağı git</translation>
 </message>
 <message>
 <source>Move up in note list</source>
-<translation>Bog suas ar an liosta nótaí</translation>
+<translation>Not listesinde yukarı git</translation>
 </message>
 <message>
 <source>Insert headline from note filename</source>
@@ -2415,7 +2414,7 @@
 </message>
 <message>
 <source>Use softwrap in note editor and preview</source>
-<translation>Not editöründe ve önizlemede yumuşak sargı kullanma</translation>
+<translation>Not düzenleyici ve önizlemede sözcük kaydır</translation>
 </message>
 <message>
 <source>Show status bar</source>
@@ -3314,15 +3313,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>formatting toolbar</source>
-<translation>araç çubuğu biçimleniyor</translation>
+<translation>biçimlendirme araç çubuğu</translation>
 </message>
 <message>
 <source>inserting toolbar</source>
-<translation>araç çubuğu ekleniyor</translation>
+<translation>ekle araç çubuğu</translation>
 </message>
 <message>
 <source>encryption toolbar</source>
-<translation>araç çubuğu şifreleme</translation>
+<translation>şifreleme araç çubuğu</translation>
 </message>
 <message>
 <source>AI toolbar</source>
@@ -3334,7 +3333,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>custom action toolbar</source>
-<translation>özel göre araç çubuğu</translation>
+<translation>özel eylem araç çubuğu</translation>
 </message>
 <message>
 <source>Workspace selector</source>
@@ -4159,7 +4158,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Custom actions</source>
-<translation type="unfinished">Custom actions</translation>
+<translation>Özel eylemler</translation>
 </message>
 <message>
 <source>No suggestions for %1</source>
@@ -4218,7 +4217,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Whole words</source>
-<translation>Bütün kelimeler</translation>
+<translation>Tüm sözcükler</translation>
 </message>
 <message>
 <source>Regular expression</source>
@@ -4289,7 +4288,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Whole words</source>
-<translation>Tüm kelimeler</translation>
+<translation>Tüm sözcükler</translation>
 </message>
 <message>
 <source>Regular expression</source>
@@ -4850,7 +4849,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>note save interval time [sec]</source>
-<translation>not kaydetme zaman aralığı [sec]</translation>
+<translation>not kaydetme aralığı süresi [sn]</translation>
 </message>
 <message>
 <source>Notify about all external modifications of the current note</source>
@@ -5313,7 +5312,8 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Use legacy way to link to notes, images and attachments</source>
-<translation>Notlara, resimlere ve eklere bağlantı oluşturmak için eski yöntemi kullanın</translation>
+<translation>Notlara, görsellere ve eklere bağlantı 
+vermek için eski yöntemi kullanın</translation>
 </message>
 <message>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
@@ -5533,7 +5533,8 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation>Etkin olmadığında, aşağıdaki işlemlerden sonra otomatik olarak salt okunur kipine geçin:</translation>
+<translation>Etkin olmadığında, aşağıdaki işlemlerden 
+sonra otomatik olarak salt okunur kipine geçin:</translation>
 </message>
 <message>
 <source> sec</source>
@@ -5746,7 +5747,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Hide 'Note count' with tags (increases performance)</source>
-<translation>Anahtar kelimelerle 'not sayısını' gizleyin (performansı artırır)</translation>
+<translation>'Not sayısını' etiketlerle gizleyin (performansı artırır)</translation>
 </message>
 <message>
 <source>Show the number of matches in each note</source>
@@ -5842,7 +5843,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 </message>
 <message>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-<translation>Not listesi yerine tüm alt klasörlerle birlikte bir not ağacı kullanın (not klasörü için açıksa)</translation>
+<translation>Not listesi yerine tüm alt klasörleri içeren bir not ağacı kullanın (eğer not klasörü açıksa)</translation>
 </message>
 <message>
 <source>Note folder panel</source>
@@ -6253,7 +6254,7 @@ sabit bir merkezi widget olarak kullanın</translation>
 </message>
 <message>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-<translation>"gg.aa.yy ss.dd" gibi özel tarih biçiminizi girin</translation>
+<translation>"dd.MM.yyyy hh:mm" gibi özel zaman biçiminizi girin</translation>
 </message>
 <message>
 <source>Editor options</source>
@@ -7498,7 +7499,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Add new Toolbar</source>
-<translation>Yeni Araç çubuğu ekle</translation>
+<translation>Yeni araç çubuğu ekle</translation>
 </message>
 <message>
 <source>New</source>
@@ -7522,7 +7523,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Moves the selected toolbar item up</source>
-<translation>Seçilen araç çubuğu öğesini yukarı taşır</translation>
+<translation>Seçilen araç çubuğu ögesini yukarı taşır</translation>
 </message>
 <message>
 <source>Move &amp;Up</source>
@@ -7534,7 +7535,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>moves the selected toolbar item down</source>
-<translation>seçilen araç çubuğu öğesini aşağı taşır</translation>
+<translation>seçilen araç çubuğu ögesini aşağı taşır</translation>
 </message>
 <message>
 <source>Move &amp;Down</source>
@@ -7546,7 +7547,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Adds the selected menu action to the toolbar</source>
-<translation>Araç çubuğuna seçilen menü görevini ekler</translation>
+<translation>Seçilen menü eylemini araç çubuğuna ekler</translation>
 </message>
 <message>
 <source>&amp;Insert</source>
@@ -7554,7 +7555,7 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Removes the selected item from the active toolbar</source>
-<translation>Aktif araç çubuğundan seçilen öğeleri kaldırır</translation>
+<translation>Seçilen ögeyi etkin araç çubuğundan kaldırır</translation>
 </message>
 <message>
 <source>&amp;Remove</source>
@@ -7574,11 +7575,11 @@ Bu geri alınamaz!</translation>
 </message>
 <message>
 <source>Remove current toolbar</source>
-<translation>Geçerli araç çubuğunu kaldır</translation>
+<translation>Mevcut araç çubuğunu kaldır</translation>
 </message>
 <message>
 <source>Remove the current toolbar?</source>
-<translation>Geçerli araç çubuğu kaldırılsın mı?</translation>
+<translation>Mevcut araç çubuğu kaldırılsın mı?</translation>
 </message>
 </context>
 <context>

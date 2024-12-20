@@ -7,12 +7,12 @@ import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 Script {
-     /**
-         * Wordt uitgevoerd wanneer de script-engine wordt geïnitialiseerd
-         */
-     functie init () {
-         script.log ("Hallo wereld!");
-     }
+    /**
+     * Will be run when the scripting engine initializes
+     */
+    function init() {
+        script.log("Hello world!");
+    }
 }
 ```
 

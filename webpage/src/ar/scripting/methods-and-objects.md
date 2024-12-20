@@ -1206,7 +1206,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+ويمكنك أيضا تغطية `settingsVariables` بالدالة الخاصة `registerSettingsVariables()` مثل:
 
 ### مثال
 ```js
@@ -1575,7 +1575,7 @@ var result = script.inputDialogGetMultiLineText(
 script.log(result);
 ```
 
-Opening a dialog to show the differences between two texts
+فتح مربع حوار لإظهار الاختلافات بين نصين
 ----------------------------------------------------------
 
 ### نداء الدالة ومُعامِلاتها
@@ -1593,7 +1593,7 @@ Opening a dialog to show the differences between two texts
                                            const QString &text1, const QString &text2);
 ```
 
-`text2` is the text you will be able to edit in the dialog. An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+و`text2` هو النص الذي سيظهر في مربع الحوار لتحريره. سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
 ```js
@@ -1688,7 +1688,7 @@ script.log(result);
 
 يمكنك إضافة قواعد تلوين إلى المحرر مباشرةً، بتعريف تعابير نمطية وإسنادها إلى حالة تلوين.
 
-### Method call and parameters
+### نداء الدالة ومُعامِلاتها
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1738,7 +1738,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked        | 30    |
 | StUnderline            | 31    |
 
-### Example
+### مثال
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

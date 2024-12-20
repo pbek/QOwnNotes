@@ -8,8 +8,8 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-        * 스크립팅 엔진이 초기화될 때 실행됩니다
-        */
+     * 스크립트 엔진이 초기화될 때 실행됩니다
+     */
     function init() {
         script.log("Hello world!");
     }

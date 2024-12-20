@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>البرتغالية (البرازيلية)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>البرتغالية</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -1948,7 +1948,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>ا&amp;بحث عن نص في الملاحظات</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2490,7 +2490,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>البحث عن نص في جميع الوسوم والمجلدات الفرعية</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2827,11 +2827,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>مجلد الملاحظات غير موجود!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>مجلد الملاحظات &lt;b&gt;%1&lt;/b&gt; الذي مساره &lt;b&gt;%2&lt;/b&gt; لم يعد موجودًا!</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -7505,15 +7505,15 @@ Your notes will stay intact!</source>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>اختلافات النص</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>الاختلافات:</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>قبول التغييرات؟</translation>
 </message>
 </context>
 <context>

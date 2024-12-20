@@ -3,16 +3,16 @@
 Un script QOwnNotes est principalement **JavaScript** dans des [fichiers Qt QML](https://doc.qt.io/qt-5/qtqml-index.html).
 
 ```js
-importer QtQml 2.0
-importer QOwnNotesTypes 1.0
+import QtQml 2.0
+import QOwnNotesTypes 1.0
 
 Script {
-     /**
-         * Sera exécuté lors de l'initialisation du moteur de script
-         */
-     function init () {
-         script.log ("Bonjour tout le monde!");
-     }
+    /**
+     * Will be run when the scripting engine initializes
+     */
+    function init() {
+        script.log("Hello world!");
+    }
 }
 ```
 

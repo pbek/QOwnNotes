@@ -1911,7 +1911,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>&amp;Chercher du texte dans les notes</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2448,7 +2448,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Chercher du texte dans les notes parmi tous les sous-dossiers / étiquettes</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2733,11 +2733,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>Le dossier de notes n’existe pas !</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>Le dossier de notes &lt;b&gt;%1&lt;/b&gt; dont le chemin est &lt;b&gt;%2&lt;/b&gt; n’existe plus !</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -7297,11 +7297,11 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>Différences :</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>Accepter les changements ?</translation>
 </message>
 </context>
 <context>

@@ -45,17 +45,17 @@ make
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
 
-## Building with nix
+## البناء بـ&nbsp;Nix
 
-If you have the [Nix package manager](https://nixos.org/download/) available you can just git-clone the source code, like explained above and build with:
+إذا كان لديك [مدير الحزم Nix](https://wiki.nixos.org/wiki/Nix_package_manager) فيمكنك استنساخ المصدر بــجت، كما شُرح بالأعلى، ثم بناءه بالأوامر التالية:
 
 ```bash
-# Open a nix-shell to get all needed tools
+# افتح صدفة نِكس لجلب الأدوات المطلوبة
 nix-shell
 
-# Build the application
+# ابنِ التطبيق
 just nix-build
 
-# Run the built application
+# شغّل التطبيق المبني
 just nix-run
 ```
