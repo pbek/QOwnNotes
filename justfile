@@ -135,6 +135,16 @@ git-apply-qownnotes-patch:
 git-apply-qmarkdowntextedit-patch:
     cd ./src/libraries/qmarkdowntextedit && git apply {{ transferDir }}/qmarkdowntextedit.patch
 
+# Apply a git patch to piwiktracker
+[group('patches')]
+git-apply-piwiktracker-patch:
+    cd ./src/libraries/piwiktracker && git apply {{ transferDir }}/piwiktracker.patch
+
+# Apply a git patch to qttoolbareditor
+[group('patches')]
+git-apply-qttoolbareditor-patch:
+    cd ./src/libraries/qttoolbareditor && git apply {{ transferDir }}/qttoolbareditor.patch
+
 # Create a git patch for the project and some libraries
 [group('patches')]
 git-create-patch:
