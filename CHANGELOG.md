@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.12.4
+- The welcome wizard will now be shown again when the application runs for the first time,
+  this was a regression from 24.12.3 (for [#3179](https://github.com/pbek/QOwnNotes/issues/3179))
+
 ## 24.12.3
 - If the current note folder doesn't exist anymore during the start of the
   application, now the first existing one will be selected (for [#3179](https://github.com/pbek/QOwnNotes/issues/3179))
