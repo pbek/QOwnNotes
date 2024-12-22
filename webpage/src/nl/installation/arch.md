@@ -18,9 +18,6 @@ Als je de bouwtijd wilt versnellen, wil je misschien [CCACHE en AUR](https://www
 
 ## pacman
 
-::: waarschuwing [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) lijkt momenteel build-problemen te hebben op Arch Linux. Het is het beste om voorlopig de AUR of de [AppImage](./appimage.md) te gebruiken.
-:::
-
 Voeg de volgende regels toe aan je `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
 
 ```ini

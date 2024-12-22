@@ -16,8 +16,6 @@ yay -S qownnotes
 
 ## pacman
 
-::: 경고 [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)는 현재 Arch Linux에서 빌드 문제가 있는 것 같습니다. 지금은 AUR 또는 [AppImage](./appimage.md)을 사용하는 것이 좋습니다. :::
-
 `sudo nano /etc/pacman.conf`를 사용하여`/etc/pacman.conf`에 다음 행을 추가합니다:
 
 ```ini

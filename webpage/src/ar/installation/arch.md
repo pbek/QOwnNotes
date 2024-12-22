@@ -18,10 +18,6 @@ yay -S qownnotes
 
 ## pacman
 
-::: warning
-يبدو أن خدمة البناء [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) تعاني من مشاكل في بناء حزم آرتش لينكس. فالأفضل استخدام AUR أو [AppImage](./appimage.md) في الوقت الحالي.
-:::
-
 أضف السطور التالية إلى ملف <code dir="ltr">/etc/pacman.conf</code> لديك بأمر التحرير <code dir="ltr">sudo nano /etc/pacman.conf</code>:
 
 ```ini

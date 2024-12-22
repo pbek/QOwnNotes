@@ -18,10 +18,6 @@ Falls Sie den Prozess beschleunigen möchten, interessiert Sie vielleicht [CCACH
 
 ## pacman
 
-::: warning
-[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) scheint momentan Build-Probleme auf Arch Linux zu haben. Nutzen Sie am besten einfach AUR oder das [Applmage](./appimage.md).
-:::
-
 Fügen Sie die folgenden Zeilen zu Ihrem `/etc/pacman.conf` mit `sudo nano /etc/pacman.conf` hinzu:
 
 ```ini

@@ -17,9 +17,6 @@ yay -S qownnotes
 
 ## pacman
 
-::: advertencia [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) actualmente parece tener problemas de compilación en Arch Linux. Mejor utilizar el AUR o la [AppImage](./appimage.md) por ahora.
-:::
-
 Agregue las siguientes líneas a su `/etc/pacman.conf ` con `sudo nano /etc/pacman.conf`:
 
 ```ini

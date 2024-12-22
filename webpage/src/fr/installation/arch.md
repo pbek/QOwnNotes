@@ -18,10 +18,6 @@ Si vous voulez accélérer le processus de construction, référrez-vous à [CCA
 
 ## pacman
 
-::: warning
-[OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) semble actuellement avoir des soucis de construction sous Arch Linux. Pour le moment, utilisez de préférence le paquet AUR ou l'[AppImage](./appimage.md).
-:::
-
 Ajoutez les lignes suivantes à votre `/etc/pacman.conf` avec `sudo nano /etc/pacman.conf` :
 
 ```ini
