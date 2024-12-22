@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.12.5
+- Both note links and the link dialog are now supporting also heading 1, not only
+  heading 2 and up, as long `#` headings are used (for [#3181](https://github.com/pbek/QOwnNotes/issues/3181)) 
+
 ## 24.12.4
 - The welcome wizard will now be shown again when the application runs for the first time,
   this was a regression from 24.12.3 (for [#3179](https://github.com/pbek/QOwnNotes/issues/3179))

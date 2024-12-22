@@ -4109,14 +4109,14 @@ QVector<CommandSnippet> Note::getParsedCommandSnippets() const {
 void Note::resetNoteTextHtmlConversionHash() { _noteTextHtmlConversionHash = QLatin1String(""); }
 
 /**
- * Get a list of all headings in a note starting with ##
+ * Get a list of all headings in a note starting with #
  *
  * @return
  */
 QStringList Note::getHeadingList() {
     QStringList headingList;
 
-    static const QRegularExpression re(QStringLiteral(R"(^##+ (.+)$)"),
+    static const QRegularExpression re(QStringLiteral(R"(^#+ (.+)$)"),
                                        QRegularExpression::MultilineOption);
     QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
 
