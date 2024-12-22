@@ -1472,8 +1472,8 @@
 <context>
 <name>LinkDialog</name>
 <message>
-<source>Link an url or note</source>
-<translation>Link zu URL oder Notiz einfügen</translation>
+<source>Link to a URL or note</source>
+<translation>Link zu einer URL oder Notiz einfügen</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -5626,7 +5626,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI API-Schlüssel</translation>
 </message>
 <message>
 <source>Create Groq API key</source>

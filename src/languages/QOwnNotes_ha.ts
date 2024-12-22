@@ -1472,8 +1472,8 @@
 <context>
 <name>LinkDialog</name>
 <message>
-<source>Link an url or note</source>
-<translation>Kula da rubutu ta wayar da kan jama'a, tare da kulawa da kulawa, kula da kulawa da kulawa sosai</translation>
+<source>Link to a URL or note</source>
+<translation type="unfinished">Link to a URL or note</translation>
 </message>
 <message>
 <source>Enter URL</source>

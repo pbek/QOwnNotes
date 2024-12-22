@@ -2,7 +2,7 @@
 
 Ta ściągawka Markdown ma służyć jako szybkie odniesienie i prezentacja składni Markdown w QOwnNotes.
 
-## Nagłówki
+## Headings
 
 Użyj nagłówków, aby uporządkować swoje teksty.
 

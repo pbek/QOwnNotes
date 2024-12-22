@@ -2,7 +2,7 @@
 
 Esta hoja de referencia de Markdown está pensada como una referencia rápida y una muestra de la sintaxis de Markdown en QOwnNotes.
 
-## Encabezados
+## Headings
 
 Utilice los encabezados para estructurar sus textos.
 

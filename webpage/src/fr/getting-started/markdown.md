@@ -2,7 +2,7 @@
 
 Cette feuille de triche Markdown est conçue comme une référence rapide et une vitrine de la syntaxe de Markdown dans QOwnNotes.
 
-## En-têtes
+## Headings
 
 Utilisez des titres pour structurer vos textes.
 

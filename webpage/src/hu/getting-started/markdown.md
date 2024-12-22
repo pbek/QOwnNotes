@@ -2,7 +2,7 @@
 
 Ez a Markdown-cheatsheet gyors leírása és bemutatása a QOwnNotes markdown szintaxisában.
 
-## Fejlécek
+## Headings
 
 Használja a fejléceket a szövegek strukturálásához.
 

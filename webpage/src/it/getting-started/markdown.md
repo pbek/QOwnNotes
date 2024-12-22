@@ -2,7 +2,7 @@
 
 Questo bigino Markdown è inteso come un riferimento rapido e una vetrina della sintassi markdown in QOwnNotes.
 
-## Intestazioni
+## Headings
 
 Usa i titoli per strutturare i tuoi testi.
 

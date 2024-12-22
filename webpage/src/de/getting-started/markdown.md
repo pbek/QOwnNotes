@@ -2,7 +2,7 @@
 
 Dieses Markdown-Cheatsheet dient als Kurzreferenz und Beispiel für die Markdown-Syntax in QOwnNotes.
 
-## Überschriften
+## Headings
 
 Verwenden Sie Überschriften, um Ihre Texte zu strukturieren.
 

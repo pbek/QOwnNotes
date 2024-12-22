@@ -3,6 +3,7 @@
 ## 24.12.5
 - Both note links and the link dialog are now supporting also heading 1, not only
   heading 2 and up, as long `#` headings are used (for [#3181](https://github.com/pbek/QOwnNotes/issues/3181)) 
+- Added more German translation (thank you, rakekniven)
 
 ## 24.12.4
 - The welcome wizard will now be shown again when the application runs for the first time,

@@ -1483,8 +1483,8 @@ Atributi opombe</translation>
 <context>
 <name>LinkDialog</name>
 <message>
-<source>Link an url or note</source>
-<translation>Poveži Url ali beležko</translation>
+<source>Link to a URL or note</source>
+<translation type="unfinished">Link to a URL or note</translation>
 </message>
 <message>
 <source>Enter URL</source>
