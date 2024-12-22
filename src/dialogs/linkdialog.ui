@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Link an url or note</string>
+   <string>Link to a URL or note</string>
   </property>
   <property name="windowIcon">
    <iconset theme="insert-link" resource="../breeze-qownnotes.qrc">
