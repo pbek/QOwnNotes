@@ -2,7 +2,7 @@
 
 This Markdown cheatsheet is intended as a quick reference and showcase of the markdown syntax in QOwnNotes.
 
-## Headers
+## Headings
 
 Use headings to structure your texts.
 
