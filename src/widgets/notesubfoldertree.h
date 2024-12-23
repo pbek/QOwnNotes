@@ -40,4 +40,7 @@ class NoteSubFolderTree : public QTreeWidget {
     void initConnections();
     QTreeWidgetItem *addNoteSubFolder(QTreeWidgetItem *parentItem,
                                       const NoteSubFolder &noteSubFolder);
+
+   protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 };

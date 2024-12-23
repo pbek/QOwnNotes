@@ -2,6 +2,7 @@
 
 #include <QHeaderView>
 #include <QMenu>
+#include <QKeyEvent>
 #include <memory>
 
 #include "entities/notefolder.h"
@@ -17,7 +18,7 @@ NoteSubFolderTree::NoteSubFolderTree(QWidget *parent) : QTreeWidget(parent) {
         header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
     });
     setContextMenuPolicy(Qt::CustomContextMenu);
-
+    installEventFilter(this);
     initConnections();
 }
 
@@ -427,4 +428,17 @@ void NoteSubFolderTree::onItemSelectionChanged() {
     if (selectedItems().size() > 1) {
         Q_EMIT multipleSubfoldersSelected();
     }
+}
+
+bool NoteSubFolderTree::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::KeyPress) {
+        auto *keyEvent = dynamic_cast<QKeyEvent *>(event);
+
+        if ((keyEvent->key() == Qt::Key_Delete) || (keyEvent->key() == Qt::Key_Backspace)) {
+            removeSelectedNoteSubFolders(this);
+            return true;
+        }
+    }
+
+    return QTreeWidget::eventFilter(obj, event);
 }
