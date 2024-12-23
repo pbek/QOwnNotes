@@ -3,7 +3,7 @@
 ## 24.12.6
 - A possible crash when pasting HTML as Markdown or pasting as text file was fixed
   (for [#3184](https://github.com/pbek/QOwnNotes/issues/3184))
-- It is now possible to allow deleting of subfolders with the `Delete` or `Backspace` key,
+- It is now possible to delete subfolders with the `Delete` or `Backspace` key,
   like for notes and tags (for [#3185](https://github.com/pbek/QOwnNotes/issues/3185))
 
 ## 24.12.5
