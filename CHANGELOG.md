@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 24.12.6
+- A possible crash when pasting HTML as Markdown or pasting as text file was fixed
+  (for [#3184](https://github.com/pbek/QOwnNotes/issues/3184))
+
 ## 24.12.5
 - Both note links and the link dialog are now supporting also heading 1, not only
   heading 2 and up, as long `#` headings are used (for [#3181](https://github.com/pbek/QOwnNotes/issues/3181)) 

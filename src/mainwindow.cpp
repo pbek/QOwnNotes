@@ -7156,15 +7156,20 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         const QPoint globalPos = textEdit->mapToGlobal(rect.bottomRight());
         QMenu menu;
 
+        // We need to fetch the text and html from the mime data here, because the mimeData object
+        // may not be available anymore after the menu was closed and accessing it may cause a crash
+        const auto text = mimeData->text();
+        const auto html = mimeData->html();
+
         QAction *htmlAction = menu.addAction(tr("Paste &HTML as Markdown"));
         QAction *textAttachmentAction = menu.addAction(tr("Paste as &text file attachment"));
         QAction *selectedItem = menu.exec(globalPos);
 
         if (selectedItem == htmlAction) {
-            insertHtmlAsMarkdownIntoCurrentNote(mimeData->html());
+            insertHtmlAsMarkdownIntoCurrentNote(html);
         } else if (selectedItem == textAttachmentAction) {
             // Insert text as attachment file
-            insertTextAsAttachment(mimeData->text());
+            insertTextAsAttachment(text);
         }
     }
 }
