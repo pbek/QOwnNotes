@@ -10,7 +10,7 @@ De GitHub-release is momenteel alleen gebouwd voor het x86-platform.
 :::
 
 ::: tip
-De applicatie gebruikt zijn **interne updater** om zichzelf bij te werken. Rechtsonder in de applicatie wordt de nieuwste versie getoond.
+De applicatie gebruikt een **interne updater** om zichzelf bij te werken. Rechtsonder in de applicatie wordt de nieuwste versie getoond.
 :::
 
 ## Homebrew
@@ -25,4 +25,4 @@ brew install qownnotes
 
 ## Nix
 
-Je kunt QOwnNotes ook installeren met de [Nix pakketbeheerder](https://wiki.nixos.org/wiki/Nix_package_manager) onder macOS native op **x86 en Apple Silicon**, zie [Installatie via Nix](./nix.md).
+Je kunt QOwnNotes ook installeren met de [Nix pakketbeheerder](https://wiki.nixos.org/wiki/Nix_package_manager) onder macOS op **x86 en Apple Silicon**, zie [Installatie via Nix](./nix.md).

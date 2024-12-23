@@ -5,6 +5,7 @@
   (for [#3184](https://github.com/pbek/QOwnNotes/issues/3184))
 - It is now possible to delete subfolders with the `Delete` or `Backspace` key,
   like for notes and tags (for [#3185](https://github.com/pbek/QOwnNotes/issues/3185))
+- Added more Dutch translation (thank you, stephanp)
 
 ## 24.12.5
 - Both note links and the link dialog are now supporting also heading 1, not only
