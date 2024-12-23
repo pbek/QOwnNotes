@@ -5,7 +5,7 @@
 ###
 
 rm .QOwnNotes-wrapped* || true
-nix-shell -p qt6Packages.qt5.wrapQtAppsHook --run "wrapQtApp QOwnNotes"
+nix-shell -p kdePackages.wrapQtAppsHook qt6.qtbase --run "wrapQtApp QOwnNotes"
 ./QOwnNotes "$@"
 exit_status=$?
 rm ./QOwnNotes
