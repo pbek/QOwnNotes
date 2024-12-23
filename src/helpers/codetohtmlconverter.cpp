@@ -156,7 +156,6 @@ QString CodeToHtmlConverter::process(StringView input) const {
         case CodeForth:
             loadForthData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('\\');
-            ;
             break;
         case CodeSystemVerilog:
             loadSystemVerilogData(types, keywords, builtin, literals, others);

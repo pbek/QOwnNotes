@@ -92,10 +92,8 @@ void OpenAiService::initializeBackends() {
     SettingsService settings;
     _backendApiKeys[QStringLiteral("groq")] = CryptoService::instance()->decryptToString(
         settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("groq"))).toString());
-    ;
     _backendApiKeys[QStringLiteral("openai")] = CryptoService::instance()->decryptToString(
         settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("openai"))).toString());
-    ;
 
     _backendNames.clear();
     _backendNames[QStringLiteral("groq")] = QStringLiteral("Groq");

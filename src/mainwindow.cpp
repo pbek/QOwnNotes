@@ -4168,7 +4168,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 }
 
                 return QMainWindow::eventFilter(obj, event);
-                ;
             }
         } else if (obj == ui->searchLineEdit) {
             bool downSelectNote = false;
@@ -4188,7 +4187,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                     // open the completer
                     ui->searchLineEdit->completer()->complete();
                     return QMainWindow::eventFilter(obj, event);
-                    ;
                 } else {
                     // if nothing was found in the completer we want to jump
                     // to the note list
@@ -4215,7 +4213,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
             return QMainWindow::eventFilter(obj, event);
-            ;
         } else if (obj == activeNoteTextEdit()) {
             // check if we want to leave the distraction free mode and the
             // search widget is not visible (because we want to close that
@@ -4228,7 +4225,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             }
 
             return QMainWindow::eventFilter(obj, event);
-            ;
         } else if (obj == ui->noteTreeWidget) {
             // set focus to the note text edit if Key_Return or Key_Tab were
             // pressed in the notes list
@@ -4249,7 +4245,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
             return QMainWindow::eventFilter(obj, event);
-            ;
         } else if (obj == ui->tagTreeWidget) {
             if ((keyEvent->key() == Qt::Key_Delete) || (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedTags();
