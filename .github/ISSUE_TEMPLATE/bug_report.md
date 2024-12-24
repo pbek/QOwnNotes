@@ -8,8 +8,8 @@ assignees: ''
 ---
 
 <!--
-If you are able to open the application the best way gather all needed
-information and post questions, feature requests or issues is to use
+If you are able to open the application, the best way to gather all needed
+information and post questions, feature requests or issues, is to use
 the issue assistant in the "Help menu"!
 
 The menu entry is named "Post questions, feature requests or issues".
