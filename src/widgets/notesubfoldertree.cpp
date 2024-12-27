@@ -1,8 +1,8 @@
 #include "notesubfoldertree.h"
 
 #include <QHeaderView>
-#include <QMenu>
 #include <QKeyEvent>
+#include <QMenu>
 #include <memory>
 
 #include "entities/notefolder.h"
