@@ -15,7 +15,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> abre la lista de tareas pendientes
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en un editor externo
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> abre la nota actual en una vista
-- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> muestra la nota actual en el administrador de archivos
+- <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> muestra la nota actual en el gestor de archivos
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> activa o desactiva la edición de notas
 - <kbd>Alt</kbd> + <kbd>Arriba</kbd> salta a la nota visible anterior
     - el atajo alternativo es <kbd>Ctrl</kbd> + <kbd>Re Pág</kbd>

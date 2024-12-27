@@ -13,6 +13,7 @@
     - This feature needs QOwnNotes 24.12.7 or higher
   - The dependencies were updated
   - More translations were added
+- Added more Spanish translation (thank you, alejandromoc)
 
 ## 24.12.6
 - A possible crash when pasting HTML as Markdown or pasting as text file was fixed

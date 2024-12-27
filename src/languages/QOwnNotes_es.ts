@@ -92,7 +92,7 @@
 <name>DictionaryManagerDialog</name>
 <message>
 <source>Dictionary manager</source>
-<translation>Administrador de diccionarios</translation>
+<translation>Gestor de diccionarios</translation>
 </message>
 <message>
 <source>Cancel</source>
@@ -1473,7 +1473,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>Enlace a URL o nota</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -2732,11 +2732,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>¡La carpeta de notas no existe!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>¡La carpeta de notas &lt;b&gt;%1&lt;/b&gt; con la ruta &lt;b&gt;%2&lt;/b&gt; ya no existe!</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -3141,7 +3141,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Show note in file manager</source>
-<translation>Mostrar nota en administrador de archivos</translation>
+<translation>Mostrar nota en gestor de archivos</translation>
 </message>
 <message>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>

@@ -2,7 +2,7 @@
 
 Deze Markdown-cheatsheet is bedoeld als een snelle referentie en showcase van de markdown-syntaxis in QOwnNotes.
 
-## Headings
+## Koppen
 
 Gebruik koppen om uw teksten te structureren.
 

@@ -6,7 +6,7 @@
 Información QOwnNotes tiene un **Gestor de diccionarios** incorporado (en el menú *Editar*) que puede utilizar para descargar diccionarios o eliminarlos (si su idioma no está presente, consulte a continuación cómo solicitar la adición de un diccionario). Si desea descargar los diccionarios manualmente, puede seguir las instrucciones a continuación.
 :::
 
-- En **Linux** puede instalar los diccionarios Hunspell para su idioma usando el administrador de paquetes de su distribución
+- En **Linux** puede instalar los diccionarios Hunspell para su idioma usando el gestor de paquetes de su distribución
     - Si necesita agregar archivos de idioma adicionales, puede hacerlo en `~/.local/share/hunspell` or `/usr/share/hunspell`.
     - Si está utilizando el paquete Snap de QOwnNotes, también puede usar `~/hunspell` para los archivos de idioma, ya que Snap no puede acceder a `~/.local`
 

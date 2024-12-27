@@ -45,17 +45,17 @@ Los archivos fuente serán accesibles de esta forma:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
 
-## Building with nix
+## Construyendo con Nix
 
-If you have the [Nix package manager](https://nixos.org/download/) available you can just git-clone the source code, like explained above and build with:
+Si tiene el [gestos de paquetes de Nix](https://nixos.org/download/) disponible puede simplemente clonar el código fuente con git-clone, como se explicó anteriormente, y construirlo con:
 
 ```bash
-# Open a nix-shell to get all needed tools
+# Abrir nix-shell para obtener todas las herramientas necesarias
 nix-shell
 
-# Build the application
+# Construir la aplicación
 just nix-build
 
-# Run the built application
+# Ejecutar la aplicación construida
 just nix-run
 ```

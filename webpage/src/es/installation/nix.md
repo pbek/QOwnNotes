@@ -1,6 +1,6 @@
-# Instalar por medio de Nix
+# Instalar mediante Nix
 
-You can install QOwnNotes with the [Nix package manager](https://nixos.org/download/) on [NixOS](https://nixos.org/), other **Linux** distributions, **macOS** and **Windows**. El nombre del paquete es [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+Puede instalar QOwnNotes con el [gestor de paquetes de Nix](https://nixos.org/download/) en [NixOS](https://nixos.org/), otras distribuciones **Linux**, **macOS** y **Windows**. El nombre del paquete es [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
 
 El paquete está construido con Qt6 y provee integración de la consola en fish y bash.
 
@@ -16,5 +16,5 @@ Puede usar `nix-shell -p qc --run "qc exec"` para probarlo.
 
 ::: tip
 Info
-On **macOS** the package works natively on **x86 and Apple Silicon**!
+¡En **macOS** el paquete funciona de forma nativa en **x86 y Apple Silicon**!
 :::

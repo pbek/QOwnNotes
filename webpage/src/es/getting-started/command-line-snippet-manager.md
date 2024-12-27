@@ -42,10 +42,10 @@ Antes de usar el gestor de fragmentos, debe habilitar el *servidor de zócalo we
 
 Luego, debe mostrar la ficha de seguridad (3) y copiarla (4).
 
-Ahora abra el archivo de configuración del administrador de fragmentos con:
+Ahora abra el archivo de configuración del gestor de fragmentos con:
 
 ```bash
-# Configurar el administrador de fragmentos
+# Configurar el gestor de fragmentos
 qc configure
 ```
 
