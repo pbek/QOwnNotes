@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 24.12.7
+- The [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  can now tell QOwnNotes to not send bookmarks and links from the current note
+  (for [#70](https://github.com/qownnotes/web-companion/issues/70))
+- There was a new release of the **QOwnNotes Web Companion browser extension** 2024.12.0
+  - The private mode switch got moved to the drawer menu, so it doesn't take up space in the popup anymore
+    (for [#76](https://github.com/qownnotes/web-companion/issues/76))
+  - There now is a new switch in the drawer menu to **hide bookmarks and links from the current note**
+    (for [#70](https://github.com/qownnotes/web-companion/issues/70))
+    - Bookmarks can still contain the `Current` tag, for example if the current note is a bookmark note
+    - This feature needs QOwnNotes 24.12.7 or higher
+  - The dependencies were updated
+  - More translations were added
+
 ## 24.12.6
 - A possible crash when pasting HTML as Markdown or pasting as text file was fixed
   (for [#3184](https://github.com/pbek/QOwnNotes/issues/3184))

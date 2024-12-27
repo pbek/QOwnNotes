@@ -204,7 +204,8 @@ void WebSocketServerService::processMessage(const QString &message) {
         //                R"({ "type": "bookmarks", "data": [ { "name": "Test1",
         //                "url": "https://www.qownnotes.org" } ] })");
 
-        QString jsonText = getBookmarksJsonText();
+        const bool hideCurrent = jsonObject.value(QStringLiteral("hideCurrent")).toBool();
+        QString jsonText = getBookmarksJsonText(hideCurrent);
 
         if (jsonText.isEmpty()) {
             return;
@@ -247,7 +248,8 @@ void WebSocketServerService::processMessage(const QString &message) {
 
         pSender->sendTextMessage(getNoteFolderSwitchedJsonText(switched));
 
-        QString jsonText = getBookmarksJsonText();
+        const bool hideCurrent = jsonObject.value(QStringLiteral("hideCurrent")).toBool();
+        QString jsonText = getBookmarksJsonText(hideCurrent);
         pSender->sendTextMessage(jsonText);
 #endif
     } else if (type == QLatin1String("getNoteFolders")) {
@@ -478,7 +480,7 @@ int WebSocketServerService::editBookmark(const QJsonObject &jsonObject) {
     return noteCount;
 }
 
-QString WebSocketServerService::getBookmarksJsonText() {
+QString WebSocketServerService::getBookmarksJsonText(bool hideCurrent) {
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow == nullptr) {
         return {};
@@ -496,12 +498,14 @@ QString WebSocketServerService::getBookmarksJsonText() {
         Bookmark::mergeListInList(noteBookmarks, bookmarks);
     }
 
-    // extract links from the current note
-    QVector<Bookmark> currentNoteBookmarks =
-        Bookmark::parseBookmarks(mainWindow->activeNoteTextEdit()->toPlainText(), true);
+    if (!hideCurrent) {
+        // extract links from the current note
+        QVector<Bookmark> currentNoteBookmarks =
+            Bookmark::parseBookmarks(mainWindow->activeNoteTextEdit()->toPlainText(), true);
 
-    // merge bookmark lists
-    Bookmark::mergeListInList(currentNoteBookmarks, bookmarks);
+        // merge bookmark lists
+        Bookmark::mergeListInList(currentNoteBookmarks, bookmarks);
+    }
 
     QString jsonText = Bookmark::bookmarksWebServiceJsonText(bookmarks);
 

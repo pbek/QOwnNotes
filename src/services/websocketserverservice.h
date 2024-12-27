@@ -63,7 +63,7 @@ class WebSocketServerService : public QObject {
     QList<QWebSocket *> m_clients;
     quint16 m_port{};
 
-    static QString getBookmarksJsonText();
+    static QString getBookmarksJsonText(bool hideCurrent = false);
 
     static QString getCommandSnippetsJsonText();
 
