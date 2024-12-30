@@ -3,6 +3,8 @@
 ## 25.1.0
 - All status messages got an emoji to make them more recognizable
   (for [#3194](https://github.com/pbek/QOwnNotes/issues/3194))
+- The regular expression performance in the editor was improved
+  (for [#213](https://github.com/pbek/qmarkdowntextedit/issues/213))
 
 ## 24.12.7
 - The [Web Companion browser extension](https://github.com/qownnotes/web-companion)
