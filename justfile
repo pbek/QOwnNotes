@@ -145,9 +145,9 @@ git-apply-piwiktracker-patch:
 git-apply-qttoolbareditor-patch:
     cd ./src/libraries/qttoolbareditor && git apply {{ transferDir }}/qttoolbareditor.patch
 
-# Create a git patch for the project and some libraries
+# Create git patches for the project and some libraries
 [group('patches')]
-git-create-patch:
+git-create-patches:
     @echo "transferDir: {{ transferDir }}"
     git diff --no-ext-diff --staged --binary > {{ transferDir }}/qownnotes.patch
     cd src/libraries/qmarkdowntextedit && git diff --no-ext-diff --staged --binary > {{ transferDir }}/qmarkdowntextedit.patch
