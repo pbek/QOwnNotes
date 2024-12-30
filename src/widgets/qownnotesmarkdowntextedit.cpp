@@ -103,10 +103,10 @@ void QOwnNotesMarkdownTextEdit::onZoom(bool in) {
         setPaperMargins();
         if (in) {
             mainWindow->showStatusBarMessage(tr("Increased font size to %1 pt").arg(fontSize),
-                                             3000);
+                                             QStringLiteral("🔤"), 3000);
         } else {
             mainWindow->showStatusBarMessage(tr("Decreased font size to %1 pt").arg(fontSize),
-                                             3000);
+                                             QStringLiteral("🔤"), 3000);
         }
     }
 
@@ -527,7 +527,7 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     // try to open a link at the cursor position
     if (openLinkAtCursorPosition()) {
         MainWindow::instance()->showStatusBarMessage(
-            tr("An url was opened at the current cursor position"), 5000);
+            tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
         return;
     }
 
@@ -705,7 +705,7 @@ bool QOwnNotesMarkdownTextEdit::solveEquation(double &returnValue) {
     if (!match.hasMatch()) {
         if (equation.trimmed().endsWith(QChar('='))) {
             MainWindow::instance()->showStatusBarMessage(
-                tr("No equation was found in front of the cursor"), 5000);
+                tr("No equation was found in front of the cursor"), QStringLiteral("🧮"), 5000);
         }
 
         return false;
@@ -726,7 +726,8 @@ bool QOwnNotesMarkdownTextEdit::solveEquation(double &returnValue) {
     }
 
     MainWindow::instance()->showStatusBarMessage(
-        tr("Result for equation: %1 = %2").arg(equation, QString::number(resultValue)), 10000);
+        tr("Result for equation: %1 = %2").arg(equation, QString::number(resultValue)),
+        QStringLiteral("🧮"), 10000);
 
     // check if cursor is after the "="
     match = QRegularExpression(QStringLiteral("=\\s*$")).match(text);

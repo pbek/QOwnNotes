@@ -146,7 +146,10 @@ class MainWindow : public QMainWindow {
 
     void enableShowTrashButton();
 
-    void showStatusBarMessage(const QString &message, const int timeout = 4000);
+    void showStatusBarMessage(const QString &message, const QString &symbol = QString(),
+                              int timeout = 4000);
+
+    void showStatusBarMessage(const QString &message, int timeout = 4000);
 
     void handleInsertingFromMimeData(const QMimeData *mimeData);
 

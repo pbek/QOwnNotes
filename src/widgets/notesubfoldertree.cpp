@@ -350,7 +350,8 @@ void NoteSubFolderTree::removeSelectedNoteSubFolders(QTreeWidget *parent) {
             // remove the directory recursively from the file system
             if (noteSubFolder.removeFromFileSystem()) {
                 mainWindow->showStatusBarMessage(
-                    tr("Removed note subfolder: %1").arg(noteSubFolder.fullPath()));
+                    tr("Removed note subfolder: %1").arg(noteSubFolder.fullPath()),
+                    QStringLiteral("📁"));
             }
         }
 
