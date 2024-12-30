@@ -24,23 +24,35 @@ if [ -z "$FMT" ]; then
     exit 1
 fi
 
-$FMT -i src/*.cpp
-$FMT -i src/*.h
-$FMT -i src/entities/*.cpp
-$FMT -i src/entities/*.h
-$FMT -i src/utils/*.cpp
-$FMT -i src/utils/*.h
-$FMT -i src/helpers/*.cpp
-$FMT -i src/helpers/*.h
-$FMT -i src/services/*.cpp
-$FMT -i src/services/*.h
-$FMT -i src/widgets/*.cpp
-$FMT -i src/widgets/*.h
-$FMT -i src/dialogs/*.cpp
-$FMT -i src/dialogs/*.h
-$FMT -i src/api/*.cpp
-$FMT -i src/api/*.h
+# Function to run clang-format on all *.cpp and *.h files in a directory (optionally recursively)
+format_directory() {
+    directory="$1"
+    recursive="$2"
 
-$FMT -i tests/unit_tests/*.cpp
-$FMT -i tests/unit_tests/testcases/app/*.cpp
-$FMT -i tests/unit_tests/testcases/app/*.h
+    if [ "$recursive" = "true" ]; then
+        files=$(find "$directory" -type f \( -name '*.cpp' -or -name '*.h' \))
+    else
+        files=$(ls "$directory"/*.cpp "$directory"/*.h 2>/dev/null)
+    fi
+    for file in $files; do
+        echo "Formatting $file"
+        $FMT -i "$file"
+    done
+}
+
+# Use format_directory on the src and tests directories
+format_directory src false
+format_directory src/entities true
+format_directory src/utils true
+format_directory src/helpers true
+format_directory src/services true
+format_directory src/widgets true
+format_directory src/dialogs true
+format_directory src/api true
+format_directory src/dialogs true
+format_directory src/dialogs true
+format_directory src/dialogs true
+format_directory src/libraries/piwiktracker true
+format_directory src/libraries/qmarkdowntextedit true
+
+format_directory tests/unit_tests true
