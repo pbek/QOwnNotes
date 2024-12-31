@@ -7,7 +7,13 @@ The first time you have to right-click the application and click **Open** to ope
 The GitHub release is currently only built for the x86 platform.
 
 ::: warning
-Se ricevi un messaggio di errore `Impossibile aprire QOwnNotes.app perché lo sviluppatore non può essere verificato` devi visitare le **Impostazioni di sicurezza** di macOS e fare clic su `Apri comunque`.
+If you get an error message `QOwnNotes.app cannot be opened because the developer cannot be verified` you need to visit your macOS **Security settings** and click on `Open anyway`.
+
+To take the application out of the quarantine you can also run the following command in the terminal:
+
+```bash
+xattr -r -d com.apple.quarantine /Applications/QOwnNotes.app
+```
 :::
 
 ::: tip

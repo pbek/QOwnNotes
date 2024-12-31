@@ -7,7 +7,13 @@
 الإصدارة المتاحة حاليًّا على GitHub ليست متاحة إلا لمعمارية x86.
 
 ::: warning
-إذا واجهتك رسالة الخطأ `تعذر فتح QOwnNotes.app لعدم القدرة على التحقق من المطور` (أو `QOwnNotes.app cannot be opened because the developer cannot be verified`)، فعليك زيارة **إعدادات الأمان** في نظامك (أو **Security settings**) والضغط على `فتح على أي حال` (أو `Open anyway`).
+If you get an error message `QOwnNotes.app cannot be opened because the developer cannot be verified` you need to visit your macOS **Security settings** and click on `Open anyway`.
+
+To take the application out of the quarantine you can also run the following command in the terminal:
+
+```bash
+xattr -r -d com.apple.quarantine /Applications/QOwnNotes.app
+```
 :::
 
 ::: tip
