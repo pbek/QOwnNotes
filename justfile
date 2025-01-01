@@ -18,6 +18,7 @@ alias linter-fix := clang-format
 alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
+alias nixfmt := nix-format
 
 # Build the translations
 [group('translations')]
@@ -174,6 +175,11 @@ process-trace:
 [group('icons')]
 generate-icons:
     cd icons &&./generate-icons.sh
+
+# Format the nix files
+[group('linter')]
+nix-format:
+    nix-shell -p fd nixfmt-rfc-style --run "fd -e nix --exec-batch nixfmt"
 
 # Format all justfiles
 [group('linter')]
