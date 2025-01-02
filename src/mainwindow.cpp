@@ -7372,14 +7372,14 @@ void MainWindow::on_actionFormat_text_italic_triggered() { applyFormatter(QStrin
  * Increases the note text font size by one
  */
 void MainWindow::on_action_Increase_note_text_size_triggered() {
-    Q_EMIT activeNoteTextEdit() -> zoomIn();
+    Q_EMIT activeNoteTextEdit()->zoomIn();
 }
 
 /**
  * Decreases the note text font size by one
  */
 void MainWindow::on_action_Decrease_note_text_size_triggered() {
-    Q_EMIT activeNoteTextEdit() -> zoomOut();
+    Q_EMIT activeNoteTextEdit()->zoomOut();
 }
 
 /**
