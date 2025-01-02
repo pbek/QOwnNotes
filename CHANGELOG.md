@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.1.2
+- A regression was fixed when too much text was removed while automatically removing
+  a list item (for [#3192](https://github.com/pbek/QOwnNotes/issues/3192))
+
 ## 25.1.1
 - If you press `Enter` at the start of the line of a checkbox list item or
   unordered list item, a new list item will be created above the current line
