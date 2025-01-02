@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.1.1
+- If you press `Enter` at the start of the line of a checkbox list item or
+  unordered list item, a new list item will be created above the current line
+  (for [#3192](https://github.com/pbek/QOwnNotes/issues/3192))
+
 ## 25.1.0
 - All status messages got an emoji to make them more recognizable
   (for [#3194](https://github.com/pbek/QOwnNotes/issues/3194))
