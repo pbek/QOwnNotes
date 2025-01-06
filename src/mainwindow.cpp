@@ -266,13 +266,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     ui->actionPaste_image->setShortcut(Qt::CTRL | Qt::ALT | Qt::Key_V);
 #endif
 
-    // adding some alternate shortcuts for changing the current note
-    auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+PgDown")), this);
-    connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_note_triggered);
-
-    shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+PgUp")), this);
-    connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_Note_triggered);
-
     _autoReadOnlyModeTimer = new QTimer(this);
     _autoReadOnlyModeTimer->setSingleShot(true);
     connect(_autoReadOnlyModeTimer, &QTimer::timeout, this, &MainWindow::autoReadOnlyModeTimerSlot);
