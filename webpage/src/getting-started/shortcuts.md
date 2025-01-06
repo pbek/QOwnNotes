@@ -18,9 +18,7 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> shows the current note in the file manager
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
-    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
-    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
 - <kbd>Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> closes the current note tab
@@ -139,9 +137,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> jumps to the previous visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> jumps to the next visible note
-    - alternate shortcut is <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> jumps to the previous note tab
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> closes the current note tab
