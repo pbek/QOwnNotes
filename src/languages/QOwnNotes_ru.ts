@@ -1484,7 +1484,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>Ссылка на URL-адрес или заметку</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1930,7 +1930,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>&amp;Найти текст в заметках</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2467,7 +2467,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Поиск текста в заметах для всех тегов / подпапок</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2778,11 +2778,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>Папка с заметками больше не существует!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>Папка с заметками &lt;b&gt;%1&lt;/b&gt; с путём &lt;b&gt;%2&lt;/b&gt; больше не сушествует!</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -7378,15 +7378,15 @@ Your notes will stay intact!</source>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Различия в тексте</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>Различия:</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>Применить изменения?</translation>
 </message>
 </context>
 <context>
@@ -8098,6 +8098,10 @@ This cannot be undone!</source>
 </context>
 <context>
 <name>main</name>
+<message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
 <message>
 <source>Runs the application in portable mode.</source>
 <translation>Запускает приложение в портативном режиме.</translation>

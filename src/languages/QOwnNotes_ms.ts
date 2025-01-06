@@ -7973,6 +7973,10 @@ Versi nota di pelayan ownCloud anda tidak akan dipulihkan dan nota akan kekal di
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Menjalankan aplikasi dalam mod mudah alih.</translation>
 </message>

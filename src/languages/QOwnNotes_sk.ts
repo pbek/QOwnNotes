@@ -8131,6 +8131,10 @@ To nie je možné vrátiť späť!</translation>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Spustí aplikáciu v prenosnom režime.</translation>
 </message>

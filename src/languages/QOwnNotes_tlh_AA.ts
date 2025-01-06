@@ -8009,6 +8009,10 @@ This cannot be undone!</translation>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation type="unfinished">Runs the application in portable mode.</translation>
 </message>

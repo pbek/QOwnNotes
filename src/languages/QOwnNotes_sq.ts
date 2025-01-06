@@ -8030,6 +8030,10 @@ Shënimi do të rikthehet në serverin tuaj të fshehtë me të gjitha versionet
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Drejton aplikacionin në modalitetin e lëvizshëm.</translation>
 </message>

@@ -8013,6 +8013,10 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>De toepassing wordt uitgevoerd in de draagbare modus.</translation>
 </message>

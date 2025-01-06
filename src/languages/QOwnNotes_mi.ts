@@ -7976,6 +7976,10 @@ Ka taea e koe te whakahoki tonu i te tuhipoka me ona waahanga a muri ake nei. &l
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Ka whakahaerehia te tono i te aratau kawe.</translation>
 </message>

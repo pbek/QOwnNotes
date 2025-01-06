@@ -7,6 +7,7 @@
   notes in the note list were removed, because users can set those shortcuts
   themselves and they will be in the way for using them otherwise
   (for [#3203](https://github.com/pbek/QOwnNotes/issues/3203))
+- Added more Russian translation (thank you, catmenmilota)
 
 ## 25.1.2
 - A regression was fixed when too much text was removed while automatically removing

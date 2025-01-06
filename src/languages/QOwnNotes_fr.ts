@@ -8012,6 +8012,10 @@ Cela ne peut être annuler !</translation>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Exécute l’application en mode portable.</translation>
 </message>

@@ -8029,6 +8029,10 @@ Ba za a sake yin wannan ba!</translation>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Yana gudanar da aikace-aikacen a yanayin aiki.</translation>
 </message>

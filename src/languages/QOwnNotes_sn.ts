@@ -8045,6 +8045,10 @@ Izvi hazvigone kuitika</translation>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>Inomhanya chishandiso mune inotakurika modhi.</translation>
 </message>

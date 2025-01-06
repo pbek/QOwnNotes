@@ -7967,6 +7967,10 @@ This cannot be undone!</source>
 <context>
 <name>main</name>
 <message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
 <source>Runs the application in portable mode.</source>
 <translation>응용 프로그램을 휴대용 모드로 실행합니다.</translation>
 </message>
