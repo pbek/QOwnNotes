@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.1.3
+- The `--help-all` option will now not be shown in the help command line function,
+  because it didn't do anything (for [#3204](https://github.com/pbek/QOwnNotes/issues/3204))
+
 ## 25.1.2
 - A regression was fixed when too much text was removed while automatically removing
   a list item (for [#3192](https://github.com/pbek/QOwnNotes/issues/3192))

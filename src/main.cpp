@@ -96,7 +96,13 @@ int mainStartupMisc(const QStringList &arguments) {
     QList<QCommandLineOption> allOptions;
 
     parser.setApplicationDescription("QOwnNotes " + QString(VERSION));
-    const QCommandLineOption helpOption = parser.addHelpOption();
+
+    // We don't use parser.addHelpOption(), because it added a --help-all option that didn't work
+    const QCommandLineOption helpOption(
+        QStringList() << "h" << "help",
+        QCoreApplication::translate("main", "Displays help on commandline options."));
+    parser.addOption(helpOption);
+
     const QCommandLineOption portableOption(
         QStringLiteral("portable"), QCoreApplication::translate("main",
                                                                 "Runs the "
