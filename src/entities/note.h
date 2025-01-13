@@ -25,6 +25,8 @@ struct BacklinkHit {
         return markdown == other.markdown && text == other.text;
     }
 
+    friend QDebug operator<<(QDebug dbg, const BacklinkHit &hit);
+
     QString markdown;
     QString text;
 };
@@ -272,7 +274,7 @@ class Note {
 
     QVector<int> findLinkedNoteIds() const;
 
-    bool handleNoteMoving(const Note &oldNote);
+    bool handleNoteMoving(Note oldNote);
 
     static QString createNoteHeader(const QString &name);
 
@@ -422,6 +424,9 @@ class Note {
 
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern);
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);
+    bool handleReverseLinkedNotesAfterMoving(
+        const Note &oldNote, const QHash<Note, QSet<BacklinkHit>> &reverseLinkNotes);
+    bool handleLinkedNotesAfterMoving(const Note &oldNote, const QVector<int> &noteIdList);
 };
 
 inline uint qHash(const Note &note, uint seed) { return qHash(note.getId(), seed); }

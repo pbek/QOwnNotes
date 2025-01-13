@@ -3414,14 +3414,27 @@ QString Note::relativeFilePath(const QString &path) const {
  * @param oldNote
  * @return true if we had to change the current note
  */
-bool Note::handleNoteMoving(const Note &oldNote) {
+bool Note::handleNoteMoving(Note oldNote) {
     const QVector<int> noteIdList = oldNote.findLinkedNoteIds();
     const int noteCount = noteIdList.count();
 
-    if (noteCount == 0) {
-        return false;
+    const auto reverseLinkNotes = oldNote.findReverseLinkNotes();
+    const int reverseLinkNotesCount = reverseLinkNotes.count();
+    bool result = false;
+
+    if (noteCount >= 0) {
+        result = handleLinkedNotesAfterMoving(oldNote, noteIdList);
     }
 
+    if (reverseLinkNotesCount > 0) {
+        result |= handleReverseLinkedNotesAfterMoving(oldNote, reverseLinkNotes);
+    }
+
+    return result;
+}
+
+bool Note::handleLinkedNotesAfterMoving(const Note &oldNote, const QVector<int> &noteIdList) {
+    const int noteCount = noteIdList.count();
     const QString oldUrl = getNoteURL(oldNote.getName());
     const QString newUrl = getNoteURL(_name);
 
@@ -3438,7 +3451,7 @@ bool Note::handleNoteMoving(const Note &oldNote) {
             QStringLiteral("note-replace-links")) == QMessageBox::Yes) {
         // replace the urls in all found notes
         for (const int noteId : noteIdList) {
-            Note note = Note::fetch(noteId);
+            Note note = fetch(noteId);
 
             if (!note.isFetched()) {
                 continue;
@@ -3499,6 +3512,23 @@ bool Note::handleNoteMoving(const Note &oldNote) {
 
     // return true if we had to change the current note
     return noteIdList.contains(_id);
+}
+
+bool Note::handleReverseLinkedNotesAfterMoving(
+    const Note &oldNote, const QHash<Note, QSet<BacklinkHit>> &reverseLinkNotes) {
+    // Iterate over reverseLinkNotes
+    for (auto it = reverseLinkNotes.begin(); it != reverseLinkNotes.end(); ++it) {
+        const Note &backlinkNote = it.key();
+        const QSet<BacklinkHit> &linkTextList = it.value();
+
+        qDebug() << __func__ << " - 'oldNote': " << oldNote;
+
+        qDebug() << __func__ << " - 'backlinkNote': " << backlinkNote;
+        qDebug() << __func__ << " - 'linkTextList': " << linkTextList;
+    }
+
+    // TODO: Change to true if we had to change the current note
+    return false;
 }
 
 QSet<Note> Note::findBacklinks() const {
@@ -4169,4 +4199,9 @@ QDebug operator<<(QDebug dbg, const Note &note) {
 bool Note::operator==(const Note &note) const {
     return _id == note.getId() && _fileName == note.getFileName() &&
            _noteSubFolderId == note.getNoteSubFolderId();
+}
+
+QDebug operator<<(QDebug dbg, const BacklinkHit &hit) {
+    dbg.nospace() << "BacklinkHit(markdown: " << hit.markdown << ", text: " << hit.text << ')';
+    return dbg.space();
 }
