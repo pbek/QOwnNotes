@@ -3417,17 +3417,21 @@ QString Note::relativeFilePath(const QString &path) const {
 bool Note::handleNoteMoving(Note oldNote) {
     const QVector<int> noteIdList = oldNote.findLinkedNoteIds();
     const int noteCount = noteIdList.count();
-
-    const auto reverseLinkNotes = oldNote.findReverseLinkNotes();
-    const int reverseLinkNotesCount = reverseLinkNotes.count();
     bool result = false;
 
+    // Handle incoming note links
     if (noteCount >= 0) {
         result = handleLinkedNotesAfterMoving(oldNote, noteIdList);
     }
 
-    if (reverseLinkNotesCount > 0) {
-        result |= handleReverseLinkedNotesAfterMoving(oldNote, reverseLinkNotes);
+    // Handle outgoing note links (only needed if subfolder was changed)
+    if (oldNote.getNoteSubFolderId() != getNoteSubFolderId()) {
+        const auto reverseLinkNotes = oldNote.findReverseLinkNotes();
+        const int reverseLinkNotesCount = reverseLinkNotes.count();
+
+        if (reverseLinkNotesCount > 0) {
+            result |= handleReverseLinkedNotesAfterMoving(oldNote, reverseLinkNotes);
+        }
     }
 
     return result;
