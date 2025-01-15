@@ -65,7 +65,7 @@ void BacklinkWidget::findBacklinks(Note note) {
     // Iterate over reverseLinkNotes
     for (auto it = reverseLinkNotes.begin(); it != reverseLinkNotes.end(); ++it) {
         const Note &backlinkNote = it.key();
-        const QSet<BacklinkHit> &linkTextList = it.value();
+        const QSet<LinkHit> &linkTextList = it.value();
 
         auto *topItem = new QTreeWidgetItem();
 
@@ -76,7 +76,7 @@ void BacklinkWidget::findBacklinks(Note note) {
 
         addTopLevelItem(topItem);
 
-        for (const BacklinkHit &linkHit : linkTextList) {
+        for (const LinkHit &linkHit : linkTextList) {
             auto *item = new QTreeWidgetItem();
 
             item->setText(0, linkHit.text);

@@ -14,25 +14,25 @@ class QFile;
 class QUrl;
 class QSqlQuery;
 
-struct BacklinkHit {
-    BacklinkHit(QString markdown, QString text) noexcept
+struct LinkHit {
+    LinkHit(QString markdown, QString text) noexcept
         : markdown(std::move(markdown)), text(std::move(text)) {}
 
     bool isEmpty() const noexcept { return markdown.isEmpty() && text.isEmpty(); }
 
     // Add operator== for comparison
-    bool operator==(const BacklinkHit &other) const {
+    bool operator==(const LinkHit &other) const {
         return markdown == other.markdown && text == other.text;
     }
 
-    friend QDebug operator<<(QDebug dbg, const BacklinkHit &hit);
+    friend QDebug operator<<(QDebug dbg, const LinkHit &hit);
 
     QString markdown;
     QString text;
 };
 
-// Add hash function for BacklinkHit
-inline uint qHash(const BacklinkHit &hit, uint seed = 0) {
+// Add hash function for LinkHit
+inline uint qHash(const LinkHit &hit, uint seed = 0) {
     return qHash(hit.markdown, seed) ^ qHash(hit.text, seed);
 }
 
@@ -272,7 +272,7 @@ class Note {
 
     static QVector<int> fetchAllIds(int limit = -1, int offset = -1);
 
-    QVector<int> findLinkedNoteIds() const;
+    QVector<int> findBacklinkedNoteIds() const;
 
     bool handleNoteMoving(Note oldNote);
 
@@ -385,7 +385,9 @@ class Note {
 
     QSet<Note> findBacklinks() const;
 
-    QHash<Note, QSet<BacklinkHit>> findReverseLinkNotes();
+    QHash<Note, QSet<LinkHit>> findLinkedNotes();
+
+    QHash<Note, QSet<LinkHit>> findReverseLinkNotes();
 
    protected:
     int _id;
@@ -407,7 +409,7 @@ class Note {
     int _shareId;
     unsigned int _sharePermissions;
     bool _hasDirtyData;
-    QHash<Note, QSet<BacklinkHit>> _backlinkNoteHash;
+    QHash<Note, QSet<LinkHit>> _backlinkNoteHash;
 
     static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
@@ -418,15 +420,15 @@ class Note {
 
     void restoreCreatedDate();
 
-    static BacklinkHit findAndReturnBacklinkHit(const QString &text, const QString &pattern);
-    static QSet<BacklinkHit> findAndReturnBacklinkHit(const QString &text,
+    static LinkHit findAndReturnBacklinkHit(const QString &text, const QString &pattern);
+    static QSet<LinkHit> findAndReturnBacklinkHit(const QString &text,
                                                       const QRegularExpression &regex);
 
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern);
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);
-    bool handleReverseLinkedNotesAfterMoving(
-        const Note &oldNote, const QHash<Note, QSet<BacklinkHit>> &reverseLinkNotes);
-    bool handleLinkedNotesAfterMoving(const Note &oldNote, const QVector<int> &noteIdList);
+    bool handleLinkedNotesAfterMoving(
+        const Note &oldNote, const QHash<Note, QSet<LinkHit>> &linkedNoteHits);
+    bool handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<int> &noteIdList);
 };
 
 inline uint qHash(const Note &note, uint seed) { return qHash(note.getId(), seed); }
