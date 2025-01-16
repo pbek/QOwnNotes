@@ -410,6 +410,7 @@ class Note {
     unsigned int _sharePermissions;
     bool _hasDirtyData;
     QHash<Note, QSet<LinkHit>> _backlinkNoteHash;
+    QHash<Note, QSet<LinkHit>> _linkedNoteHash;
 
     static QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText() const;
@@ -420,14 +421,18 @@ class Note {
 
     void restoreCreatedDate();
 
-    static LinkHit findAndReturnBacklinkHit(const QString &text, const QString &pattern);
-    static QSet<LinkHit> findAndReturnBacklinkHit(const QString &text,
-                                                      const QRegularExpression &regex);
+    static LinkHit findAndReturnLinkHit(const QString &text, const QString &pattern);
+    static QSet<LinkHit> findAndReturnLinkHits(const QString &text,
+                                               const QRegularExpression &regex);
 
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern);
+    void addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteText,
+                                        const QString &pattern);
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);
-    bool handleLinkedNotesAfterMoving(
-        const Note &oldNote, const QHash<Note, QSet<LinkHit>> &linkedNoteHits);
+    void addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteText,
+                                        const QRegularExpression &pattern);
+    bool handleLinkedNotesAfterMoving(const Note &oldNote,
+                                      const QHash<Note, QSet<LinkHit>> &linkedNoteHits);
     bool handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<int> &noteIdList);
 };
 

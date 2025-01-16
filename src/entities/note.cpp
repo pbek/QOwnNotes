@@ -3140,13 +3140,12 @@ QVector<int> Note::findBacklinkedNoteIds() const {
     return noteIdList;
 }
 
-LinkHit Note::findAndReturnBacklinkHit(const QString &text, const QString &pattern) {
+LinkHit Note::findAndReturnLinkHit(const QString &text, const QString &pattern) {
     return text.contains(pattern) ? LinkHit(pattern, pattern) : LinkHit("", "");
 }
 
-QSet<LinkHit> Note::findAndReturnBacklinkHit(const QString &text,
-                                                 const QRegularExpression &regex) {
-    QSet<LinkHit> backlinkHits;
+QSet<LinkHit> Note::findAndReturnLinkHits(const QString &text, const QRegularExpression &regex) {
+    QSet<LinkHit> linkHits;
     QRegularExpressionMatchIterator iterator = regex.globalMatch(text);
 
     while (iterator.hasNext()) {
@@ -3155,40 +3154,104 @@ QSet<LinkHit> Note::findAndReturnBacklinkHit(const QString &text,
         QString linkUrl = match.captured(2);
         // Do something with the link text and URL
 
-        backlinkHits.insert(LinkHit(match.captured(0), match.captured(1)));
+        linkHits.insert(LinkHit(match.captured(0), match.captured(1)));
     }
 
-    return backlinkHits;
+    return linkHits;
 }
 
 void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QString &pattern) {
-    const LinkHit backlinkHit = findAndReturnBacklinkHit(note.getNoteText(), pattern);
+    const LinkHit linkHit = findAndReturnLinkHit(note.getNoteText(), pattern);
 
-    if (!backlinkHit.isEmpty()) {
+    if (!linkHit.isEmpty()) {
         if (!_backlinkNoteHash.contains(note)) {
-            _backlinkNoteHash.insert(note, {backlinkHit});
+            _backlinkNoteHash.insert(note, {linkHit});
         } else {
-            _backlinkNoteHash[note] << backlinkHit;
+            _backlinkNoteHash[note] << linkHit;
+        }
+    }
+}
+
+void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteText,
+                                          const QString &pattern) {
+    const LinkHit linkHit = findAndReturnLinkHit(noteText, pattern);
+
+    if (!linkHit.isEmpty()) {
+        if (!_linkedNoteHash.contains(note)) {
+            _linkedNoteHash.insert(note, {linkHit});
+        } else {
+            _linkedNoteHash[note] << linkHit;
         }
     }
 }
 
 void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern) {
-    const auto backlinkHits = findAndReturnBacklinkHit(note.getNoteText(), pattern);
+    const auto linkHits = findAndReturnLinkHits(note.getNoteText(), pattern);
 
-    if (!backlinkHits.isEmpty()) {
+    if (!linkHits.isEmpty()) {
         if (!_backlinkNoteHash.contains(note)) {
-            _backlinkNoteHash.insert(note, backlinkHits);
+            _backlinkNoteHash.insert(note, linkHits);
         } else {
-            _backlinkNoteHash[note] = backlinkHits;
+            _backlinkNoteHash[note] = linkHits;
         }
     }
 }
 
+void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteText,
+                                          const QRegularExpression &pattern) {
+    const auto linkHits = findAndReturnLinkHits(noteText, pattern);
+
+    if (!linkHits.isEmpty()) {
+        if (!_linkedNoteHash.contains(note)) {
+            _linkedNoteHash.insert(note, linkHits);
+        } else {
+            _linkedNoteHash[note] = linkHits;
+        }
+    }
+}
+
+/**
+ * Finds notes that the current note is linking to
+ *
+ * @return Hash of notes and the link hits
+ */
 QHash<Note, QSet<LinkHit>> Note::findLinkedNotes() {
-    // TODO: Implement this, but with linked notes
-    const QVector<int> noteIdList = this->findBacklinkedNoteIds();
-    return {};
+    auto linkedNoteHash = QHash<Note, QSet<LinkHit>>{};
+    const auto noteText = getNoteText();
+    _linkedNoteHash.clear();
+
+    // Fetch all notes and look if the current note contains a link to those notes
+    // We don't need to care about legacy links, because they don't know subfolders
+    const auto noteList = Note::fetchAll();
+    for (const Note &note : noteList) {
+        const QString linkText = getNoteURL(note.getName());
+        const QString &relativePathToNote = getFilePathRelativeToNote(note);
+
+        // We now don't escape slashes in the relative file path, but previously we did,
+        // so we need to search for both
+        for (bool escapeSlashes : {true, false}) {
+            const QString relativeFilePath =
+                Note::urlEncodeNoteUrl(relativePathToNote, escapeSlashes);
+
+            // Search for links to the relative file path in note
+            // The "#" is for notes with a fragment (link to heading in note)
+            addTextToLinkedNoteHashIfFound(
+                note, noteText, QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+            addTextToLinkedNoteHashIfFound(
+                note, noteText,
+                QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                       QRegularExpression::escape(relativeFilePath) +
+                                       QStringLiteral(R"(\))"),
+                                   QRegularExpression::MultilineOption));
+            addTextToLinkedNoteHashIfFound(
+                note, noteText,
+                QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                   QRegularExpression::escape(relativeFilePath) +
+                                   QStringLiteral(R"(#.+\))")));
+        }
+    }
+
+    return _linkedNoteHash;
 }
 
 QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes() {
@@ -3434,6 +3497,7 @@ bool Note::handleNoteMoving(Note oldNote) {
     if (oldNote.getNoteSubFolderId() != getNoteSubFolderId()) {
         const auto linkedNoteHits = oldNote.findLinkedNotes();
         const int linkedNotesCount = linkedNoteHits.count();
+        qDebug() << __func__ << " - 'linkedNoteHits': " << linkedNoteHits;
 
         if (linkedNotesCount > 0) {
             result |= handleLinkedNotesAfterMoving(oldNote, linkedNoteHits);
@@ -3524,21 +3588,41 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
     return noteIdList.contains(_id);
 }
 
-bool Note::handleLinkedNotesAfterMoving(
-    const Note &oldNote, const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
-    // Iterate over linkedNoteHits
+bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
+                                        const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
+    QString noteText = getNoteText();
+    bool changed = false;
+    qDebug() << __func__ << " - 'oldNote': " << oldNote;
+
+    // Iterate over linkedNoteHits and update the links to the containing notes
     for (auto it = linkedNoteHits.begin(); it != linkedNoteHits.end(); ++it) {
         const Note &linkedNote = it.key();
-        const QSet<LinkHit> &linkTextList = it.value();
-
-        qDebug() << __func__ << " - 'oldNote': " << oldNote;
+        const QSet<LinkHit> &linkHits = it.value();
 
         qDebug() << __func__ << " - 'linkedNote': " << linkedNote;
-        qDebug() << __func__ << " - 'linkTextList': " << linkTextList;
+        qDebug() << __func__ << " - 'linkHits': " << linkHits;
+
+        for (const LinkHit &linkHit : linkHits) {
+            const QString oldMarkdown = linkHit.markdown;
+
+            // TODO: Get the real new relative note url
+            const QString newUrl = getNoteURL(_name);
+            // TODO: Find Markdown for all use cases
+            const QString newMarkdown = "[" + linkedNote.getName() + "](" + newUrl + ")";
+
+            if (noteText.contains(oldMarkdown)) {
+                noteText.replace(oldMarkdown, newMarkdown);
+                changed = true;
+            }
+        }
     }
 
-    // TODO: Change to true if we had to change the current note
-    return false;
+    if (changed) {
+        // TODO: Uncomment if done
+        //        storeNewText(std::move(noteText));
+    }
+
+    return changed;
 }
 
 QSet<Note> Note::findBacklinks() const {
