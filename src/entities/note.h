@@ -15,7 +15,7 @@ class QUrl;
 class QSqlQuery;
 
 struct LinkHit {
-    LinkHit(QString markdown, QString text) noexcept
+    explicit LinkHit(QString markdown = "", QString text = "") noexcept
         : markdown(std::move(markdown)), text(std::move(text)) {}
 
     bool isEmpty() const noexcept { return markdown.isEmpty() && text.isEmpty(); }

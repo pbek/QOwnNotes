@@ -3141,7 +3141,7 @@ QVector<int> Note::findBacklinkedNoteIds() const {
 }
 
 LinkHit Note::findAndReturnLinkHit(const QString &text, const QString &pattern) {
-    return text.contains(pattern) ? LinkHit(pattern, pattern) : LinkHit("", "");
+    return text.contains(pattern) ? LinkHit(pattern, {}) : LinkHit();
 }
 
 QSet<LinkHit> Note::findAndReturnLinkHits(const QString &text, const QRegularExpression &regex) {
@@ -3150,10 +3150,6 @@ QSet<LinkHit> Note::findAndReturnLinkHits(const QString &text, const QRegularExp
 
     while (iterator.hasNext()) {
         QRegularExpressionMatch match = iterator.next();
-        QString linkText = match.captured(1);
-        QString linkUrl = match.captured(2);
-        // Do something with the link text and URL
-
         linkHits.insert(LinkHit(match.captured(0), match.captured(1)));
     }
 
@@ -3205,7 +3201,7 @@ void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteT
         if (!_linkedNoteHash.contains(note)) {
             _linkedNoteHash.insert(note, linkHits);
         } else {
-            _linkedNoteHash[note] = linkHits;
+            _linkedNoteHash[note].unite(linkHits);
         }
     }
 }
@@ -3216,7 +3212,6 @@ void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteT
  * @return Hash of notes and the link hits
  */
 QHash<Note, QSet<LinkHit>> Note::findLinkedNotes() {
-    auto linkedNoteHash = QHash<Note, QSet<LinkHit>>{};
     const auto noteText = getNoteText();
     _linkedNoteHash.clear();
 
@@ -3224,7 +3219,6 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes() {
     // We don't need to care about legacy links, because they don't know subfolders
     const auto noteList = Note::fetchAll();
     for (const Note &note : noteList) {
-        const QString linkText = getNoteURL(note.getName());
         const QString &relativePathToNote = getFilePathRelativeToNote(note);
 
         // We now don't escape slashes in the relative file path, but previously we did,
@@ -3594,6 +3588,8 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
     bool changed = false;
     qDebug() << __func__ << " - 'oldNote': " << oldNote;
 
+    // TODO: Show a dialog, like in Note::handleBacklinkedNotesAfterMoving
+
     // Iterate over linkedNoteHits and update the links to the containing notes
     for (auto it = linkedNoteHits.begin(); it != linkedNoteHits.end(); ++it) {
         const Note &linkedNote = it.key();
@@ -3604,11 +3600,14 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
 
         for (const LinkHit &linkHit : linkHits) {
             const QString oldMarkdown = linkHit.markdown;
-
-            // TODO: Get the real new relative note url
-            const QString newUrl = getNoteURL(_name);
-            // TODO: Find Markdown for all use cases
-            const QString newMarkdown = "[" + linkedNote.getName() + "](" + newUrl + ")";
+            const QString linkText = linkHit.text;
+            const QString relativeFilePath =
+                urlEncodeNoteUrl(getFilePathRelativeToNote(linkedNote));
+            const QString newMarkdown = linkText.isEmpty()
+                                            ? "<" + relativeFilePath + ">"
+                                            : "[" + linkText + "](" + relativeFilePath + ")";
+            qDebug() << __func__ << " - 'oldMarkdown': " << oldMarkdown;
+            qDebug() << __func__ << " - 'newMarkdown': " << newMarkdown;
 
             if (noteText.contains(oldMarkdown)) {
                 noteText.replace(oldMarkdown, newMarkdown);
@@ -3618,8 +3617,21 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
     }
 
     if (changed) {
-        // TODO: Uncomment if done
+        qDebug() << __func__ << " - 'noteText': " << noteText;
+
+        // TODO: Why is this not stored in the note? refetch() also fails, id seems to stay the same
+        //        refetch();
+        qDebug() << __func__ << " - 'refetch();': " << refetch();
+
         //        storeNewText(std::move(noteText));
+        qDebug() << __func__
+                 << " - 'storeNewText(std::move(noteText))': " << storeNewText(std::move(noteText));
+
+        //        storeNoteTextFileToDisk();
+        qDebug() << __func__ << " - 'storeNoteTextFileToDisk()': " << storeNoteTextFileToDisk();
+
+        qDebug() << __func__ << " - 'oldNote': " << oldNote;
+        qDebug() << __func__ << " - 'this': " << *this;
     }
 
     return changed;
