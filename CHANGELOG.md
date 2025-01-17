@@ -7,6 +7,8 @@
   moved or renamed (for [#3200](https://github.com/pbek/QOwnNotes/issues/3200))
 - If the application is built in debug mode the IDs of the notes, note-subfolders and tags
   are now shown in the tooltips of their list panels (for [#3200](https://github.com/pbek/QOwnNotes/issues/3200))
+- `index.php` will now not be used in Nextcloud Deck links anymore, since it seems
+  to mess up the deep link to a card (for [#3210](https://github.com/pbek/QOwnNotes/issues/3210))
 
 ## 25.1.3
 - The `--help-all` option will now not be shown in the help command line function,

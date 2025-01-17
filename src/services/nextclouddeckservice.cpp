@@ -131,7 +131,7 @@ int NextcloudDeckService::createCard(const QString& title, const QString& descri
 QString NextcloudDeckService::getCardLinkForId(int cardId) {
     qDebug() << __func__ << " - 'boardId': " << this->boardId;
 
-    return QStringLiteral("%1/index.php/apps/deck/#/board/%2/card/%3")
+    return QStringLiteral("%1/apps/deck/#/board/%2/card/%3")
         .arg(this->serverUrl, QString::number(this->boardId), QString::number(cardId));
 }
 
