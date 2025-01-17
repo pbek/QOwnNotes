@@ -3192,7 +3192,7 @@ void Note::addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpr
         if (!_backlinkNoteHash.contains(note)) {
             _backlinkNoteHash.insert(note, linkHits);
         } else {
-            _backlinkNoteHash[note] = linkHits;
+            _linkedNoteHash[note].unite(linkHits);
         }
     }
 }

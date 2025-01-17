@@ -3,6 +3,8 @@
 ## 25.1.4
 - More key combinations, like `Ctrl + Enter` or `Ctrl + Z` are now respecting the read-only
   mode and will not perform their operation (for [#3208](https://github.com/pbek/QOwnNotes/issues/3208))
+- An issue was fixed where some links to a note were not adapted when the note was
+  moved or renamed (for [#3200](https://github.com/pbek/QOwnNotes/issues/3200))
 
 ## 25.1.3
 - The `--help-all` option will now not be shown in the help command line function,
