@@ -8956,7 +8956,6 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
                 // tag the note again
                 for (const Tag &tag : tags) {
                     tag.linkToNote(note);
-                    //                    tag.linkToNote(note);
                 }
 
                 // handle the replacing of all note links from other notes
