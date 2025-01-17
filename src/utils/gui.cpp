@@ -1003,6 +1003,10 @@ void Utils::Gui::setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const No
         toolTipText += QObject::tr("<br />path: %1").arg(noteSubFolder.relativePath());
     }
 
+#ifdef QT_DEBUG
+    toolTipText += QStringLiteral("<br />id: %1").arg(note.getId());
+#endif
+
     item->setToolTip(0, toolTipText);
 
     // TODO: handle item widget too

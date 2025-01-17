@@ -128,7 +128,11 @@ QTreeWidgetItem *NoteSubFolderTree::addNoteSubFolder(QTreeWidgetItem *parentItem
     SettingsService settings;
     const int linkCount = Note::countByNoteSubFolderId(
         id, settings.value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool());
-    QString toolTip = tr("show notes in folder '%1' (%2)").arg(name, QString::number(linkCount));
+    QString toolTip = tr("Show notes in folder '%1' (%2)").arg(name, QString::number(linkCount));
+
+#ifdef QT_DEBUG
+    toolTip += QStringLiteral("<br />id: %1").arg(noteSubFolder.getId());
+#endif
 
     auto *item = new QTreeWidgetItem();
     item->setText(0, name);

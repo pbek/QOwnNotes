@@ -7671,8 +7671,13 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent, cons
         linkCount = uniqueLinkedNoteIds.count();
     }
 
-    const QString toolTip =
+    QString toolTip =
         tr("Show all notes tagged with '%1' (%2)").arg(name, QString::number(linkCount));
+
+#ifdef QT_DEBUG
+    toolTip += QStringLiteral("<br />id: %1").arg(tag._id);
+#endif
+
     auto *item = new QTreeWidgetItem();
     item->setData(0, Qt::UserRole, tagId);
     item->setText(0, name);
