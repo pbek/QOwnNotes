@@ -3620,6 +3620,7 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
         qDebug() << __func__ << " - 'noteText': " << noteText;
 
         // TODO: Why is this not stored in the note? refetch() also fails, id seems to stay the same
+        // Note is not existing, not listed in fetchAll()
         //        refetch();
         qDebug() << __func__ << " - 'refetch();': " << refetch();
 
