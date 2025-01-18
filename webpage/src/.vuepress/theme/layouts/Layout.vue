@@ -38,3 +38,9 @@ export default {
     text-align: right;
   }
 </style>
+
+<style>
+  .theme-default-content:not(.custom) {
+    max-width: 900px;
+  }
+</style>
