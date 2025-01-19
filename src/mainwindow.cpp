@@ -8914,6 +8914,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
         _noteExternallyRemovedCheckEnabled = false;
 
         const auto selectedItems = ui->noteTreeWidget->selectedItems();
+        bool forceReload = false;
         for (QTreeWidgetItem *item : selectedItems) {
             if (item->data(0, Qt::UserRole + 1) != NoteType) {
                 continue;
@@ -8963,6 +8964,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
                 if (note.handleNoteMoving(oldNote)) {
                     // reload the current note if we had to change it
                     reloadCurrentNoteByNoteId(true);
+                    forceReload = true;
                 }
 
                 // re-link images
@@ -8983,7 +8985,14 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
         if (noteSubFolderCount > 0) {
             // for some reason this only works with a small delay, otherwise
             // not all changes will be recognized
-            QTimer::singleShot(150, this, SLOT(buildNotesIndexAndLoadNoteDirectoryList()));
+            QTimer::singleShot(150, this, [this, forceReload] {
+                // If the outgoing links to other notes were changed, we have to really reload the note folder
+                if (forceReload) {
+                    buildNotesIndexAndLoadNoteDirectoryList(true, true);
+                } else {
+                    buildNotesIndexAndLoadNoteDirectoryList();
+                }
+            });
         }
 
         showStatusBarMessage(

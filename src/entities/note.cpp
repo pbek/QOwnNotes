@@ -3586,7 +3586,6 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
                                         const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
     QString noteText = getNoteText();
     bool changed = false;
-    qDebug() << __func__ << " - 'oldNote': " << oldNote;
 
     // TODO: Show a dialog, like in Note::handleBacklinkedNotesAfterMoving
 
@@ -3594,9 +3593,6 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
     for (auto it = linkedNoteHits.begin(); it != linkedNoteHits.end(); ++it) {
         const Note &linkedNote = it.key();
         const QSet<LinkHit> &linkHits = it.value();
-
-        qDebug() << __func__ << " - 'linkedNote': " << linkedNote;
-        qDebug() << __func__ << " - 'linkHits': " << linkHits;
 
         for (const LinkHit &linkHit : linkHits) {
             const QString oldMarkdown = linkHit.markdown;
@@ -3606,8 +3602,6 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
             const QString newMarkdown = linkText.isEmpty()
                                             ? "<" + relativeFilePath + ">"
                                             : "[" + linkText + "](" + relativeFilePath + ")";
-            qDebug() << __func__ << " - 'oldMarkdown': " << oldMarkdown;
-            qDebug() << __func__ << " - 'newMarkdown': " << newMarkdown;
 
             if (noteText.contains(oldMarkdown)) {
                 noteText.replace(oldMarkdown, newMarkdown);
@@ -3617,22 +3611,12 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
     }
 
     if (changed) {
-        qDebug() << __func__ << " - 'noteText': " << noteText;
-
-        // TODO: Why is this not stored in the note? refetch() also fails, id seems to stay the same
-        // Note is not existing, not listed in fetchAll()
-        //        refetch();
-        qDebug() << __func__ << " - 'refetch();': " << refetch();
-
-        //        storeNewText(std::move(noteText));
-        qDebug() << __func__
-                 << " - 'storeNewText(std::move(noteText))': " << storeNewText(std::move(noteText));
-
-        //        storeNoteTextFileToDisk();
-        qDebug() << __func__ << " - 'storeNoteTextFileToDisk()': " << storeNoteTextFileToDisk();
-
-        qDebug() << __func__ << " - 'oldNote': " << oldNote;
-        qDebug() << __func__ << " - 'this': " << *this;
+        // At this time the note is not existing anymore in the database, so we need to store a new note
+        _id = 0;
+        this->_noteText = std::move(noteText);
+        this->_hasDirtyData = true;
+        store();
+        storeNoteTextFileToDisk();
     }
 
     return changed;
