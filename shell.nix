@@ -54,6 +54,6 @@ pkgs.mkShell {
     ];
 
   shellHook = ''
-    echo "qmake:  $(qmake  --version)"
+    ./scripts/nix-update-qmake-symlinks.sh
   '';
 }
