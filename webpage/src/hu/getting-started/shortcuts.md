@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> nézetben megnyitja az aktuális jegyzetet
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> megjeleníti az aktuális jegyzetet a fájlkezelőben
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> engedélyezi vagy letiltja a jegyzetek szerkesztését
-- <kbd>Alt</kbd> + <kbd>Up</kbd> az előző látható jegyzetre ugrik
-    - alternatív parancsikon <kbd>Ctrl</kbd> + <kbd>Pg Up</kbd>
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>Down</kbd> a következő látható jegyzethez ugrik
-    - alternatív billentyűparancs a <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> az előző jegyzethez ugrik
 - <kbd>Alt</kbd> + <kbd>Page Down</kbd> a következő jegyzetlapra ugrik
 - A <kbd>Ctrl</kbd> + <kbd>W</kbd> bezárja az aktuális jegyzetfület
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> megnyitja az aktuális jegyzet mappáját a keresőben
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> engedélyezi vagy letiltja a jegyzetek szerkesztését
 - <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> az előző látható hangjegyre ugrik
-    - alternatív parancsikon <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>Le</kbd> a következő látható jegyzethez ugrik
-    - alternatív parancsikon <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> az előző hangjegy fülre ugrik
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> a következő jegyzetlapra ugrik
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> bezárja az aktuális jegyzet lapot

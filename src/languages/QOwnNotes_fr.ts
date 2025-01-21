@@ -1473,7 +1473,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>Lier une note ou une URL</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -3618,16 +3618,16 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>afficher les notes dans le dossier « %1 » (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Toutes les notes</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>Afficher les notes de tous les sous-dossiers (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3878,6 +3878,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>
 <numerusform>Un changement dans le chemin de la note a été détecté. Souhaitez-vous remplacer toutes les occurrences des liens &lt;strong&gt;%1&lt;/strong&gt; par &lt;strong&gt;%2&lt;/strong&gt; et les liens avec le nom de fichier &lt;strong&gt;%3&lt;/strong&gt; par &lt;strong&gt;%4&lt;/strong&gt; dans &lt;strong&gt;%n&lt;/strong&gt; fichier de notes ?</numerusform>
 <numerusform>Un changement dans le chemin de la note a été détecté. Souhaitez-vous remplacer toutes les occurrences des liens &lt;strong&gt;%1&lt;/strong&gt; par &lt;strong&gt;%2&lt;/strong&gt; et les liens avec le nom de fichier &lt;strong&gt;%3&lt;/strong&gt; par &lt;strong&gt;%4&lt;/strong&gt; dans &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes ?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -8013,7 +8020,7 @@ Cela ne peut être annuler !</translation>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Affiche de l’aide sur les options de ligne de commande.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>

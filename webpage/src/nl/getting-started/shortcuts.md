@@ -1,4 +1,4 @@
-# Snelkoppelingen
+# Sneltoetsen
 
 ## Linux / Windows
 
@@ -18,9 +18,7 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> toont de huidige notitie in de bestandsbeheerder
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> schakelt het bewerken van notities in of uit
 - <kbd>Alt</kbd> + <kbd>Up</kbd> springt naar de vorige zichtbare notitie
-    - alternatieve snelkoppeling is <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> springt naar de volgende zichtbare noot
-    - alternatieve snelkoppeling is <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> springt naar het vorige notitietabblad
 - <kbd>Alt</kbd> + <kbd>PgDn</kbd> springt naar het volgende notitietabblad
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> sluit het huidige notitietabblad
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opent de map van de huidige notitie in Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> schakelt het bewerken van notities in of uit
 - <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> springt naar de vorige zichtbare notitie
-    - alternatieve snelkoppeling is <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> springt naar de volgende zichtbare noot
-    - alternatieve snelkoppeling is <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> springt naar het vorige notitietabblad
 - <kbd>⌥ Alt</kbd> + <kbd>PgDn</kbd> springt naar het volgende notitietabblad
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> sluit het huidige notitietabblad

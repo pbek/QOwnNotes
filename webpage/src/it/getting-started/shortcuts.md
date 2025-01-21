@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> apre la nota corrente in una vista
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> mostra la nota corrente nel gestore file
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> abilita o disabilita la modifica delle note
-- <kbd>Alt</kbd> + <kbd>↑</kbd> salta alla nota visibile precedente
-    - la scorciatoia alternativa è <kbd>Ctrl</kbd> + <kbd>Pag↑</kbd>
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>↓</kbd> passa alla successiva nota visibile
-    - la scorciatoia alternativa è <kbd>Ctrl</kbd> + <kbd>Pag↓</kbd>
 - <kbd>Alt</kbd> + <kbd>Pag↑</kbd> salta alla scheda note precedente
 - <kbd>Alt</kbd> + <kbd>Pag↓</kbd> passa alla scheda note successiva
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> chiude la scheda note corrente
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> apre la cartella della nota corrente nel Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> abilita o disabilita la modifica delle note
 - <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> salta alla nota visibile precedente
-    - la scorciatoia alternativa è <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> passa alla nota vista successivamente
-    - la scorciatoia alternativa è <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Pag↑</kbd> salta alla scheda note precedente
 - <kbd>⌥ Alt</kbd> + <kbd>Pag↓</kbd> passa alla scheda note successiva
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> chiude la scheda della nota corrente

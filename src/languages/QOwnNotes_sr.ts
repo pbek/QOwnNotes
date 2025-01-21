@@ -3670,16 +3670,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation type="unfinished">All notes</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3932,6 +3932,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Откривена је промена путање белешке. Да ли бисте желели да замените све појаве &lt;strong&gt;%1&lt;/strong&gt; веза са &lt;strong&gt;%2&lt;/strong&gt; и линкове са именом датотеке &lt;strong&gt;%3 &lt;/strong&gt; са &lt;strong&gt;%4 &lt;/strong&gt; у &lt;strong&gt;%n&lt;/strong&gt; датотеци са напоменама?</numerusform>
 <numerusform>Откривена је промена путање белешке. Да ли бисте желели да замените све појаве &lt;strong&gt;%1&lt;/strong&gt; веза са &lt;strong&gt;%2&lt;/strong&gt; и линкове са именом датотеке &lt;strong&gt;%3 &lt;/strong&gt; са &lt;strong&gt;%4 &lt;/strong&gt; у &lt;strong&gt;%n&lt;/strong&gt; датотекама са напоменама?</numerusform>
 <numerusform>Откривена је промена путање белешке. Да ли бисте желели да замените све појаве &lt;strong&gt;%1&lt;/strong&gt; веза са &lt;strong&gt;%2&lt;/strong&gt; и линкове са именом датотеке &lt;strong&gt;%3 &lt;/strong&gt; са &lt;strong&gt;%4 &lt;/strong&gt; у &lt;strong&gt;%n&lt;/strong&gt; датотекама са напоменама?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

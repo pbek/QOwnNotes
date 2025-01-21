@@ -3585,16 +3585,16 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation type="unfinished">All notes</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3843,6 +3843,12 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Kua kitea he huringa o te ara panui. Kei te hiahia koe ki te whakakapi i nga mahinga katoa o te hononga ki te &lt;strong&gt;% 1 &lt;/strong&gt; me te &lt;strong&gt;% 2 &lt;/strong&gt; me nga hononga me te ingoa nama &lt;strong&gt;% 3 &lt;/strong&gt; me te &lt;strong&gt;% 4 &lt;/strong&gt; &gt; i te &lt;strong&gt;% n &lt;/strong&gt; konae tuhi(s)?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

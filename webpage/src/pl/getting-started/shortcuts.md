@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> otwiera bieżącą notatkę w widoku
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> pokazuje bieżącą notatkę w menedżerze plików
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> włącza lub wyłącza edycję notatek
-- <kbd>Alt</kbd> + <kbd>W górę</kbd> przeskakuje do poprzedniej widocznej notatki
-    - alternatywny skrót to <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>W dół</kbd> przeskakuje do następnej widocznej nuty
-    - alternatywny skrót to <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> przeskakuje do poprzedniej zakładki notatki
 - <kbd>Alt</kbd> + <kbd>Page Down</kbd> przeskakuje do następnej zakładki notatki
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> zamyka bieżącą kartę notatek
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> otwiera folder bieżącej notatki w Finderze
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> włącza lub wyłącza edycję notatek
 - <kbd>⌃ Ctrl</kbd> + <kbd>W górę</kbd> przeskakuje do poprzedniej widocznej notatki
-    - alternatywny skrót to <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>W dół</kbd> przeskakuje do następnej widocznej notatki
-    - alternatywny skrót to <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> przeskakuje do poprzedniej zakładki notatki
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> przeskakuje do następnej zakładki notatki
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> zamyka bieżącą kartę notatek

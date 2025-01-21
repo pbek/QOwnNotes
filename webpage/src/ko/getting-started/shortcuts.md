@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> 보기에서 현재 노트를 엽니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> 파일 관리자의 현재 노트를 표시합니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> 노트 편집 사용 또는 사용 안 함
-- <kbd>Alt</kbd> + <kbd>Up</kbd> 이전에 볼 수 있는 노트로 이동합니다
-    - 대체 단축키는 <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>입니다
+- <kbd>Alt</kbd> + <kbd>Up</kbd> 이 이전에 표시된 음으로 점프합니다
 - <kbd>Alt</kbd> + <kbd>Down</kbd> 다음으로 보이는 노트로 이동합니다
-    - 대체 단축키는 <kbd>Ctrl</kbd> + <kbd>Page Down</kbd>입니다
 - <kbd>Alt</kbd> + <kbd>Page Up</kbd> 이전 노트 탭으로 이동합니다
 - <kbd>Alt</kbd> + <kbd>Page Down</kbd> 다음 노트 탭으로 이동합니다
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> 현재 노트 탭을 닫습니다
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> 파인더에서 현재 노트의 폴더를 엽니다
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> 노트 편집을 활성화 또는 비활성화합니다
 - <kbd>⌃ Ctrl</kbd> + <kbd>Up</kbd> 이전에 볼 수 있는 노트로 이동합니다
-    - 대체 바로 가기는 <kbd>⌘ Cmd</kbd> + <kbd>Page Up</kbd>입니다
 - <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> 보이는 다음 노트로 이동합니다
-    - 대체 바로 가기는 <kbd>⌘ Cmd</kbd> + <kbd>Page Down</kbd>입니다
 - <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> 이전 노트 탭으로 이동합니다
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> 다음 노트 탭으로 이동합니다
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> 현재 노트 탭을 닫습니다

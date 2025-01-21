@@ -3618,16 +3618,16 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>notities weergeven in de map '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Alle notities</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>Toon notities uit alle submappen van notities (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation>Notities weergeven in map '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3880,6 +3880,13 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>
 <numerusform>Er is een wijziging van het notitiepad gedetecteerd. Wilt u alle exemplaren van &lt;strong&gt;%1&lt;/strong&gt; links vervangen door &lt;strong&gt;%2&lt;/strong&gt; en links met bestandsnaam &lt;strong&gt;%3&lt;/strong&gt; door &lt;strong&gt;%4&lt;/strong &gt; in &lt;strong&gt;%n&lt;/strong&gt; notitiebestand?</numerusform>
 <numerusform>Er is een wijziging van het notitiepad gedetecteerd. Wilt u alle exemplaren van &lt;strong&gt;%1&lt;/strong&gt; links vervangen door &lt;strong&gt;%2&lt;/strong&gt; en links met bestandsnaam &lt;strong&gt;%3&lt;/strong&gt; door &lt;strong&gt;%4&lt;/strong &gt; in &lt;strong&gt;%n&lt;/strong&gt; notitiebestand?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation>
+<numerusform>Verandering van het notitiepad gedetecteerd. Wil je alle uitgaande links vervangen door &lt;strong&gt;%n&lt;/strong&gt; notitiebestand(en)?</numerusform>
+<numerusform>Verandering van het notitiepad gedetecteerd. Wil je alle uitgaande links vervangen door &lt;strong&gt;%n&lt;/strong&gt; notitiebestanden?</numerusform>
 </translation>
 </message>
 <message>
@@ -8014,7 +8021,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Geeft hulp weer bij opdrachtregelopties.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>

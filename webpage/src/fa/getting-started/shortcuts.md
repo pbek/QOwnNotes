@@ -17,10 +17,8 @@
 - <kbd>O</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Alt</kbd> یادداشت کنونی را در یک نما باز می کند
 - <kbd>F</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Alt</kbd> یادداشت کنونی را در مدیر پرونده نشان می دهد
 - <kbd>E</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Alt</kbd> ویرایش کردن یادداشت ها را فعال یا غیر فعال می سازد
-- <kbd>Alt</kbd> + <kbd>بالا</kbd> به یادداشت قابل مشاهده قبلی پرش می کند
-    - میانبر جایگزین <kbd>Page Up</kbd> + <kbd>Ctrl</kbd> است
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>پایین</kbd> به یادداشت قابل مشاهده بعدی پرش می کند
-    - میانبر جایگزین <kbd>Page Down</kbd> + <kbd>Ctrl</kbd> است
 - <kbd>Page Up</kbd> + <kbd>Alt</kbd> به زبانه یادداشت قبلی پرش می کند
 - <kbd>Page Down</kbd> + <kbd>Alt</kbd> به زبانه یادداشت بعدی پرش می کند
 - <kbd>W</kbd> + <kbd>Ctrl</kbd> زبانه یادداشت کنونی را می بندد
@@ -135,9 +133,7 @@
 - <kbd>F</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> پوشه یادداشت کنونی را در یابنده باز می کند
 - <kbd>E</kbd> + <kbd>⇧ Shift</kbd> + <kbd>⌃ Ctrl</kbd> ویرایش کردن یادداشت ها را فعال یا غیر فعال می سازد
 - <kbd>⌃ Ctrl</kbd> + <kbd>بالا</kbd> به یادداشت قابل مشاهده قبلی پرش می کند
-    - میانبر جایگزین <kbd>Page Up</kbd> + <kbd>⌘ Cmd</kbd> است
 - <kbd>⌃ Ctrl</kbd> + <kbd>پایین</kbd> به یادداشت قابل مشاهده بعدی پرش می کند
-    - میانبر جایگزین <kbd>Page Down</kbd> + <kbd>⌘ Cmd</kbd> است
 - <kbd>Page Up</kbd> + <kbd>⌥ Alt</kbd> به زبانه یادداشت قبلی پرش می کند
 - <kbd>Page Down</kbd> + <kbd>⌥ Alt</kbd> به زبانه یادداشت بعدی پرش می کند
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> زبانه یادداشت کنونی را می بندد

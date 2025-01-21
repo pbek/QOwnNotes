@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>O</kbd> يفتح الملاحظة الحالية بنافذة جديدة
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> يُظهر الملاحظة الحالية في مدير الملفات
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> يُفعّل أو يُعطّل تحرير الملاحظات
-- <kbd>Alt</kbd> + <kbd>الأعلى</kbd> ينتقل إلى الملاحظة الظاهرة السابقة
-    - اختصار بديل هو <kbd>Ctrl</kbd> + <kbd>PageUp</kbd>
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>الأسفل</kbd> ينتقل إلى الملاحظة الظاهرة التالية
-    - اختصار بديل هو <kbd>Ctrl</kbd> + <kbd>PageDown</kbd>
 - <kbd>Alt</kbd> + <kbd>PageUp</kbd> ينتقل إلى علامة تبويب الملاحظة السابقة
 - <kbd>Alt</kbd> + <kbd>PageDown</kbd> ينتقل إلى علامة تبويب الملاحظة التالية
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> يُغلق علامة التبويب الحالية
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> يفتح مجلد الملاحظة الحالية في فايندر
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> يُفعّل أو يُعطّل تحرير الملاحظات
 - <kbd>⌃ Ctrl</kbd> + <kbd>الأعلى</kbd> ينتقل إلى الملاحظة الظاهرة السابقة
-    - اختصار بديل هو <kbd>⌘ Cmd</kbd> + <kbd>PageUp</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>الأسفل</kbd> ينتقل إلى الملاحظة الظاهرة التالية
-    - اختصار بديل هو <kbd>⌘ Cmd</kbd> + <kbd>PageDown</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Page Up</kbd> ينتقل إلى علامة تبويب الملاحظة السابقة
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> ينتقل إلى علامة تبويب الملاحظة التالية
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> يُغلق علامة التبويب الحالية

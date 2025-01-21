@@ -3588,16 +3588,16 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation type="unfinished">All notes</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3846,6 +3846,12 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>Perubahan laluan nota telah dikesan. Adakah anda ingin menggantikan semua kejadian pautan &lt;strong&gt;%1&lt;/ strong&gt; dengan &lt;strong&gt;%2 &lt;/ strong&gt; dan pautan dengan nama fail &lt;strong&gt;%3&lt;/ strong&gt; dengan &lt;strong&gt;%4&lt;/ strong &gt; dalam fail nota &lt;strong&gt;%n&lt;/ strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

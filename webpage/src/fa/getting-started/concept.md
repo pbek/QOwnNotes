@@ -1,5 +1,14 @@
 # مفاهیم
 
+<style scoped>
+  /* Remove max-width for content so there is enough space for the Mermaid diagram */
+  /* We need "scoped" or this will leak to all other pages! */
+  /* We need "main" to be more specific than the default style */
+  main .theme-default-content:not(.custom) {
+    max-width: none;
+  }
+</style>
+
 ```mermaid
 graph TB
     subgraph Your computer

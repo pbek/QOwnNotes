@@ -3611,16 +3611,16 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>mostrar notas na pasta '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Todas as notas</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3871,6 +3871,13 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <translation>
 <numerusform>Foi detectada uma alteração no nome do arquivo da nota. Você gostaria de substituir todas as ocorrências &lt;strong&gt;%1&lt;/strong&gt; com &lt;strong&gt;%2&lt;/strong&gt; em &lt;strong&gt;%n&lt;/strong&gt; arquivo de nota?</numerusform>
 <numerusform>Foram detectadas alterações nos nomes dos arquivos das notas. Você gostaria de substituir todas as ocorrências &lt;strong&gt;%1&lt;/strong&gt; com &lt;strong&gt;%2&lt;/strong&gt; em &lt;strong&gt;%n&lt;/strong&gt; arquivos de notas?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

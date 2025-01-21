@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Maj</kbd> + <kbd>O</kbd> ouvre la note courante dans une vue
 - <kbd>Alt</kbd> + <kbd>⇧ Maj</kbd> + <kbd>F</kbd> affiche la note courante dans le gestionnaire de fichiers
 - <kbd>Alt</kbd> + <kbd>⇧ Maj</kbd> + <kbd>E</kbd> active ou désactive l'édition des notes
-- <kbd>Alt</kbd> + <kbd>Up</kbd> passe à la note visible précédente
-    - le raccourci alternatif est <kbd>Ctrl</kbd> + <kbd>Pg. Préc</kbd>
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>Down</kbd> passe à la note visible suivante
-    - le raccourci alternatif est <kbd>Ctrl</kbd> + <kbd>Pg. Suiv</kbd>
 - <kbd>Alt</kbd> + <kbd>Pg. Préc</kbd> bascule vers l'onglet de note précédent
 - <kbd>⌥ Alt</kbd> + <kbd>Pg. Suiv</kbd> bascule vers l'onglet de note suivant
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> ferme l'onglet de note actuel
@@ -135,9 +133,7 @@
 - <kbd>^ Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>F</kbd> ouvre le dossier de la note actuelle dans le Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>E</kbd> active ou désactive l'édition des notes
 - <kbd>^ Ctrl</kbd> + <kbd>↑ Haut</kbd> passe à la note visible précédente
-    - le raccourci alternatif est <kbd>⌘ Cmd</kbd> + <kbd>Pg. Préc</kbd>
 - <kbd>^ Ctrl</kbd> + <kbd>↓ Bas</kbd> passe à la note visible suivante
-    - le raccourci alternatif est <kbd>⌘ Cmd</kbd> + <kbd>Pg. Suiv</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Pg. Préc</kbd> bascule vers l'onglet de note précédent
 - <kbd>⌥ Alt</kbd> + <kbd>Pg. Suiv</kbd> bascule vers l'onglet de note suivant
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> ferme l'onglet de note courant

@@ -3619,16 +3619,16 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>Notizen im Ordner '%1' (%2) anzeigen</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Alle Notizen</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>Notizen aus allen Notizunterordnern anzeigen (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3879,6 +3879,13 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>
 <numerusform>Der Notizpfad wurde geändert. Sollen alle Vorkommnisse von &lt;strong&gt;%1&lt;/strong&gt; Links durch &lt;strong&gt;%2&lt;/strong&gt;und Links mit Dateinamen &lt;strong&gt;%3&lt;/strong&gt; durch &lt;strong&gt;%4&lt;/strong&gt; in der Notizdatei ersetzt werden?</numerusform>
 <numerusform>Der Notizpfad wurde geändert. Sollen alle Vorkommnisse von &lt;strong&gt;%1&lt;/strong&gt; Links durch &lt;strong&gt;%2&lt;/strong&gt;und Links mit Dateinamen &lt;strong&gt;%3&lt;/strong&gt; durch &lt;strong&gt;%4&lt;/strong&gt; in den &lt;strong&gt;%n&lt;/strong&gt; Notizdateien ersetzt werden?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

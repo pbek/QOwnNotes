@@ -17,10 +17,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einer Ansicht
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> zeigt die aktuelle Notiz im Datei-Explorer
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>E</kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen
-- <kbd>Alt</kbd> + <kbd>Pfeil nach oben</kbd> springt zur vorherigen sichtbaren Notiz
-    - die alternative Tastenkombination ist <kbd>Strg</kbd> + <kbd>Bild nach oben</kbd>
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
 - <kbd>Alt</kbd> + <kbd>Pfeil nach unten</kbd> springt zur nächsten sichtbaren Notiz
-    - die alternative Tastenkombination ist <kbd>Strg</kbd> + <kbd>Bild nach unten</kbd>
 - <kbd>Alt</kbd> + <kbd>Bild nach oben</kbd> springt zum vorherigen Notiz-Tab
 - <kbd>Alt</kbd> + <kbd>Bild nach unten</kbd> springt zum nächsten Notiz-Tab
 - <kbd>Strg</kbd> + <kbd>W</kbd> schließt den aktuellen Notiz-Tab
@@ -135,9 +133,7 @@
 - <kbd>⌃ Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> öffnet den Ordner der aktuellen Notiz im Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>E</kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen
 - <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach oben</kbd> springt zur vorherigen sichtbaren Notiz
-    - die alternative Tastenkombination ist <kbd>⌘ Cmd</kbd> + <kbd>Bild nach oben</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach unten</kbd> springt zur nächsten sichtbaren Notiz
-    - alternativer Shortcut ist <kbd>⌘ Cmd</kbd> + <kbd>Bild nach unten</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Bild nach oben</kbd> springt zum vorherigen Notiz-Tab
 - <kbd>⌥ Alt</kbd> + <kbd>Bild nach unten</kbd> springt zum nächsten Notiz-Tab
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> schließt den aktuellen Notiz-Tab

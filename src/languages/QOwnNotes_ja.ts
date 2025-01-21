@@ -3598,16 +3598,16 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>'%1' フォルダー内のノートを表示 (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>すべてのノート</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>すべてのメモサブフォルダからのメモを表示する（％1）</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3856,6 +3856,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>ノートパスの変更が検出されました。 出現するすべての&lt;strong&gt;％1 &lt;/ strong&gt;リンクを&lt;strong&gt;％2 &lt;/ strong&gt;に、ファイル名が&lt;strong&gt;％3 &lt;/ strong&gt;のリンクを&lt;strong&gt;％4 &lt;/ strongに置き換えますか &gt; &lt;strong&gt;％n &lt;/ strong&gt;ノートファイルにありますか？</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

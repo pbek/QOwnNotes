@@ -3617,16 +3617,16 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>mostra note nella cartella '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Tutte le note</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>Mostra note da tutte le sottocartelle di note (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3877,6 +3877,13 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>
 <numerusform>È stato rilevato un cambiamento del nome del file della nota. Sostituire tutte le ricorrenze di &lt;strong&gt;%1&lt;/strong&gt; collegamenti con &lt;strong&gt;%2&lt;/strong&gt; e i collegamenti con nome di file &lt;strong&gt;%3&lt;/strong&gt; con &lt;strong&gt;%4&lt;/strong&gt; nei &lt;strong&gt;%n&lt;/strong&gt; file delle note?</numerusform>
 <numerusform>È stato rilevato un cambiamento del nome del file della nota. Sostituire tutte le ricorrenze di &lt;strong&gt;%1&lt;/strong&gt; collegamenti con &lt;strong&gt;%2&lt;/strong&gt; e i collegamenti con nome di file &lt;strong&gt;%3&lt;/strong&gt; con &lt;strong&gt;%4&lt;/strong&gt; nel &lt;strong&gt;%n&lt;/strong&gt; file delle note?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

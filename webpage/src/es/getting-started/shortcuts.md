@@ -18,9 +18,7 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> muestra la nota actual en el gestor de archivos
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> activa o desactiva la edición de notas
 - <kbd>Alt</kbd> + <kbd>Arriba</kbd> salta a la nota visible anterior
-    - el atajo alternativo es <kbd>Ctrl</kbd> + <kbd>Re Pág</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> salta a la siguiente nota visible
-    - el atajo alternativo es <kbd>Ctrl</kbd> + <kbd>Av Pág</kbd>
 - <kbd>Alt</kbd> + <kbd>Re Pág</kbd> salta a la pestaña de la nota anterior
 - <kbd>Alt</kbd> + <kbd>Av Pág</kbd> salta a la pestaña de la siguiente nota
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> cierra la pestaña de la nota actual
@@ -135,9 +133,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> abre la carpeta de la nota actual en Finder
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>E</kbd> activa o desactiva la edición de notas
 - <kbd>⌃ Ctrl</kbd> + <kbd>Arriba</kbd> salta a la nota visible anterior
-    - el atajo alternativo es <kbd>⌘ Cmd</kbd> + <kbd>Re Pág</kbd>
 - <kbd>⌃ Ctrl</kbd> + <kbd>Abajo</kbd> salta a la siguiente nota visible
-    - el atajo alternativo es <kbd>⌘ Cmd</kbd> + <kbd>AvPág</kbd>
 - <kbd>⌥ Alt</kbd> + <kbd>Re Pág</kbd> salta a la pestaña de la nota anterior
 - <kbd>⌥ Alt</kbd> + <kbd>Av Pág</kbd> salta a la pestaña de la siguiente nota
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> cierra la pestaña de nota actual

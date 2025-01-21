@@ -3623,16 +3623,16 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation type="unfinished">show notes in folder '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation type="unfinished">All notes</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3883,6 +3883,13 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <translation>
 <numerusform>Ang isang pagbabago ng landas ng tala ay napansin. Nais mo bang palitan ang lahat ng mga naganap na &lt;strong&gt;%1&lt;/strong&gt; na may &lt;strong&gt;%2&lt;/strong&gt; at mga link na may filename &lt;strong&gt;%3&lt;/strong&gt; na may &lt;strong&gt;%4&lt;/strong&gt; sa &lt;strong&gt;%n &lt;/strong&gt; file ng tala?</numerusform>
 <numerusform>Ang isang pagbabago ng landas ng tala ay napansin. Nais mo bang palitan ang lahat ng mga naganap na &lt;strong&gt;%1&lt;/strong&gt; na may &lt;strong&gt;%2&lt;/strong&gt; at mga link na may filename &lt;strong&gt;%3&lt;/strong&gt; na may &lt;strong&gt;%4&lt;/strong&gt; sa &lt;strong&gt;%n &lt;/strong&gt; file ng mga tala?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

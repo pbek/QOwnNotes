@@ -3617,16 +3617,16 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>mostrar notas en la carpeta '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Todas las notas</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>Mostrar notas de todas las subcarpetas de notas (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3877,6 +3877,13 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>
 <numerusform>Se detectó un cambio en la ruta a la nota. ¿Te gustaría reemplazar todos los enlaces a &lt;strong&gt;%1&lt;/strong&gt; con &lt;strong&gt;%2&lt;/strong&gt; y los enlaces al archivo &lt;strong&gt;%3&lt;/strong&gt; con &lt;strong&gt;%4&lt;/strong&gt; en &lt;strong&gt;%n&lt;/strong&gt; archivo de notas?</numerusform>
 <numerusform>Se detectó un cambio en la ruta a la nota. ¿Te gustaría reemplazar todos los enlaces a &lt;strong&gt;%1&lt;/strong&gt; con &lt;strong&gt;%2&lt;/strong&gt; y los enlaces al archivo &lt;strong&gt;%3&lt;/strong&gt; con &lt;strong&gt;%4&lt;/strong&gt; en &lt;strong&gt;%n&lt;/strong&gt; archivos de notas?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -8001,7 +8008,7 @@ This cannot be undone!</source>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Muestra ayuda sobre las opciones de la línea de órdenes.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>

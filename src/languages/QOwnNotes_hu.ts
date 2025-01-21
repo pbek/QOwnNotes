@@ -3617,16 +3617,16 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>megjeleníti a jegyzeteket a mappában '%1' (%2)</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>Az összes jegyzet</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>Jegyzetek megjelenítése az összes jegyzetalmappából (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3877,6 +3877,13 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>
 <numerusform>A jegyzék elérési útjának megváltozását észleltem. A &lt;strong&gt;%1 &lt;/strong&gt; hivatkozások minden előfordulását ki szeretné cserélni a &lt;strong&gt;%2 &lt;/strong&gt; -ra, a &lt;strong&gt;%3 &lt;/strong&gt; fájlnévvel ellátott linkekre pedig &lt;strong&gt;%4 &lt;/strong&gt; &gt; a &lt;strong&gt;%n &lt;/strong&gt; megjegyzés fájlban?</numerusform>
 <numerusform>A jegyzék elérési útjának megváltozását észleltem. A &lt;strong&gt;%1 &lt;/strong&gt; hivatkozások minden előfordulását ki szeretné cserélni a &lt;strong&gt;%2 &lt;/strong&gt; -ra, a &lt;strong&gt;%3 &lt;/strong&gt; fájlnévvel ellátott linkekre pedig &lt;strong&gt;%4 &lt;/strong&gt; &gt; a &lt;strong&gt;%n &lt;/strong&gt; megjegyzés fájlokban?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>

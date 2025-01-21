@@ -3587,16 +3587,16 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>폴더 '%1' (%2) 에 노트 표시</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>모든 노트</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>모든 노트 하위 폴더의 노트 표시 (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation>폴더 '%1' (%2)에 노트 표시</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3845,6 +3845,12 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>노트 경로 변경이 탐지되었습니다. &lt;strong&gt;%n&lt;/strong&gt; 노트 파일에서 발생하는 모든 &lt;strong&gt;%1&lt;/strong&gt; 링크를 &lt;strong&gt;%2&lt;/strong&gt;로 바꾸고 파일 이름 &lt;strong&gt;%3&lt;/strong&gt;을 &lt;strong&gt;%4&lt;/strong&gt;로 바꾸시겠습니까?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation>
+<numerusform>노트 경로의 변경이 감지되었습니다. &lt;strong&gt;%n&lt;/strong&gt; 노트 파일로 나가는 모든 링크를 교체하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
@@ -7968,7 +7974,7 @@ This cannot be undone!</source>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>명령줄 옵션에 도움말을 표시합니다.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>

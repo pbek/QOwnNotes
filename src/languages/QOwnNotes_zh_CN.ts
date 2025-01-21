@@ -3577,16 +3577,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NoteSubFolderTree</name>
 <message>
-<source>show notes in folder '%1' (%2)</source>
-<translation>显示文件夹“%1”(%2) 中的笔记</translation>
-</message>
-<message>
 <source>All notes</source>
 <translation>所有笔记</translation>
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
 <translation>显示所有笔记子文件夹中的笔记 (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3835,6 +3835,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;%2&lt;/strong&gt; 替换所有出现的&lt;strong&gt;%1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;%n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;%4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;%3&lt;/strong&gt; 的链接 ？</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
 <message>
