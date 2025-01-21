@@ -3584,10 +3584,18 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
 
 bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
                                         const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
+    const int noteCount = linkedNoteHits.count();
+    if (Utils::Gui::questionNoSkipOverride(
+        nullptr, QObject::tr("Note file path changed"),
+        QObject::tr("A change of the note path was detected. Would you "
+                    "like to replace all outgoing links to <strong>%n</strong> note file(s)?",
+                    "", noteCount),
+        QStringLiteral("note-replace-outgoing-links")) != QMessageBox::Yes) {
+        return false;
+    }
+
     QString noteText = getNoteText();
     bool changed = false;
-
-    // TODO: Show a dialog, like in Note::handleBacklinkedNotesAfterMoving
 
     // Iterate over linkedNoteHits and update the links to the containing notes
     for (auto it = linkedNoteHits.begin(); it != linkedNoteHits.end(); ++it) {
