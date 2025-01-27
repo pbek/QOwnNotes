@@ -715,7 +715,7 @@ You may want to take a look at the example
 Use a completion prompt on the currently selected AI model
 ----------------------------------------------------------
 
-The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model, like ChatGPT, Claude or systems like Ollama.
 
 The AI system needs to be enabled in the AI toolbar or main menu for this to work.
 
