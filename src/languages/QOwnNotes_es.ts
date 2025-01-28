@@ -31,7 +31,7 @@
 </message>
 <message>
 <source>Select file</source>
-<translation>Selecciona el archivo</translation>
+<translation>Seleccione el archivo</translation>
 </message>
 <message>
 <source>Title of the image link</source>
@@ -52,7 +52,7 @@
 </message>
 <message>
 <source>Select file to insert</source>
-<translation>Selecciona el archivo a insertar</translation>
+<translation>Seleccione el archivo a insertar</translation>
 </message>
 <message>
 <source>Download error</source>
@@ -136,7 +136,7 @@
 </message>
 <message>
 <source>English (American)</source>
-<translation>Inglés (Americano)</translation>
+<translation>Inglés (Estadounidense)</translation>
 </message>
 <message>
 <source>German (Austrian)</source>
@@ -585,11 +585,11 @@
 </message>
 <message>
 <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-<translation>Para obtener un archivo enex necesitarás seleccionar una o varias notas en tu cliente de escritorio de Evernote y hacer clic en "Exportar notas…" en el menú Archivo.</translation>
+<translation>Para obtener un archivo enex necesitará seleccionar una o varias notas en su cliente de escritorio de Evernote y hacer clic en "Exportar notas…" en el menú Archivo.</translation>
 </message>
 <message>
 <source>Please select the Evernote enex file you want to import:</source>
-<translation>Por favor, selecciona el archivo enex de Evernote que deseas importar:</translation>
+<translation>Por favor, seleccione el archivo enex de Evernote que desea importar:</translation>
 </message>
 <message>
 <source>Number of imported notes</source>
@@ -597,7 +597,7 @@
 </message>
 <message>
 <source>Select file</source>
-<translation>Selecciona el archivo</translation>
+<translation>Seleccione el archivo</translation>
 </message>
 <message>
 <source>Import images</source>
@@ -625,7 +625,7 @@
 </message>
 <message>
 <source>Select Evernote enex file to import</source>
-<translation>Selecciona el archivo enex de Evernote a importar</translation>
+<translation>Seleccione el archivo enex de Evernote a importar</translation>
 </message>
 <message>
 <source>Invalid XML!</source>
@@ -1305,7 +1305,7 @@
 </message>
 <message>
 <source>Select image file</source>
-<translation>Seleccionar el archivo de imagen</translation>
+<translation>Seleccione el archivo de imagen</translation>
 </message>
 <message>
 <source>Image files</source>
@@ -1317,7 +1317,7 @@
 </message>
 <message>
 <source>Select image to insert</source>
-<translation>Selecciona la imagen a insertar</translation>
+<translation>Seleccione la imagen a insertar</translation>
 </message>
 </context>
 <context>
@@ -1347,7 +1347,7 @@
 </message>
 <message>
 <source>Select directory</source>
-<translation>Seleccionar directorio</translation>
+<translation>Seleccione el directorio</translation>
 </message>
 <message>
 <source>Import images</source>
@@ -1402,7 +1402,7 @@
 </message>
 <message>
 <source>Do you want to use the selected layout?</source>
-<translation>¿Deseas utilizar el diseño seleccionado?</translation>
+<translation>¿Desea utilizar el diseño seleccionado?</translation>
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
@@ -1485,7 +1485,7 @@
 </message>
 <message>
 <source>Select local file or directory to link to</source>
-<translation>Selecciona el archivo o directorio local al que enlazar</translation>
+<translation>Seleccione el archivo o directorio local al que enlazar</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1521,7 +1521,7 @@
 </message>
 <message>
 <source>Select directory to link to</source>
-<translation>Selecciona el directorio al que enlazar</translation>
+<translation>Seleccione el directorio al que enlazar</translation>
 </message>
 </context>
 <context>
@@ -2515,7 +2515,7 @@ Restore current note?</source>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored</source>
-<translation>Por favor selecciona la carpeta donde se almacenarán las notas</translation>
+<translation>Por favor seleccione la carpeta donde se almacenarán las notas</translation>
 </message>
 <message>
 <source>No folder was selected</source>
@@ -2523,7 +2523,7 @@ Restore current note?</source>
 </message>
 <message>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
-<translation>Tiene que seleccionar la carpeta de notas de ownCloud para hacer este software trabaje!</translation>
+<translation>¡Debe seleccionar su carpeta de notas de ownCloud para hacer este programa funcione!</translation>
 </message>
 <message>
 <source>&amp;Retry</source>
@@ -2594,7 +2594,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Copy selected notes</source>
-<translation>Copia las notas seleccionadas</translation>
+<translation>Copiar las notas seleccionadas</translation>
 </message>
 <message numerus="yes">
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
@@ -2674,7 +2674,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>La nota será descifrada y almacenada nuevamente como texto sin formato. ¡Ten en cuenta que la nota sin cifrar se sincronizará posiblemente a tu servidor y algún texto sensible puede quedar expuesto!&lt;br /&gt;¿Deseas descifrar la nota?</translation>
+<translation>La nota será descifrada y almacenada nuevamente como texto sin formato. ¡Tenga en cuenta que la nota sin cifrar se sincronizará posiblemente a su servidor y algún texto sensible puede quedar expuesto!&lt;br /&gt;¿Desea descifrar la nota?</translation>
 </message>
 <message>
 <source>Markdown files</source>
@@ -2964,7 +2964,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Select text files to import</source>
-<translation>Selecciona los archivos de texto a importar</translation>
+<translation>Seleccione los archivos de texto a importar</translation>
 </message>
 <message>
 <source>Importing: %1</source>
@@ -3626,7 +3626,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Mostrar notas en la carpeta "%1" (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3881,9 +3881,9 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Se detectó un cambio en la ruta de la nota. ¿Le gustaría reemplazar todos los enlaces salientes de &lt;strong&gt;%n&lt;/strong&gt; archivo de notas?</numerusform>
+<numerusform>Se detectó un cambio en la ruta de la nota. ¿Le gustaría reemplazar todos los enlaces salientes de &lt;strong&gt;%n&lt;/strong&gt; archivos de notas?</numerusform>
 </translation>
 </message>
 <message>
@@ -4101,7 +4101,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation>Enlazarar texto seleccionado</translation>
+<translation>Enlazar el texto seleccionado</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
@@ -4472,7 +4472,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Please select a file</source>
-<translation>Por favor, selecciona un archivo</translation>
+<translation>Por favor, seleccione un archivo</translation>
 </message>
 </context>
 <context>
@@ -5011,7 +5011,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Select a connection to edit</source>
-<translation>Selecciona una conexión para editar</translation>
+<translation>Seleccione una conexión para editar</translation>
 </message>
 <message>
 <source>Add connection</source>
@@ -5083,7 +5083,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Select the calendars you want to use for the Todo list</source>
-<translation>Selecciona los calendarios que deseas utilizar para la lista de tareas</translation>
+<translation>Seleccione los calendarios que desea utilizar para la lista de tareas</translation>
 </message>
 <message>
 <source>Todo list settings</source>
@@ -6692,7 +6692,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>¿Realmente deseas restablecer todas las cajas de mensajes?</translation>
+<translation>¿Realmente desea restablecer todas las cajas de mensajes?</translation>
 </message>
 <message>
 <source>New script</source>
@@ -7235,7 +7235,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Select file</source>
-<translation>Selecciona el archivo</translation>
+<translation>Seleccione el archivo</translation>
 </message>
 <message>
 <source>Import CSV file / clipboard</source>
@@ -7271,7 +7271,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Select CSV file to import</source>
-<translation>Selecciona el archivo CSV para importar</translation>
+<translation>Seleccione el archivo CSV para importar</translation>
 </message>
 </context>
 <context>
@@ -7448,7 +7448,7 @@ This cannot be undone!</source>
 <name>Toolbar_Editor</name>
 <message>
 <source>Select a menu</source>
-<translation>Selecciona un menú</translation>
+<translation>Seleccione un menú</translation>
 </message>
 <message>
 <source>Lists the available menus to get the corresponding actions</source>
@@ -7945,7 +7945,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Select folder</source>
-<translation>Selecciona la carpeta</translation>
+<translation>Seleccione la carpeta</translation>
 </message>
 <message>
 <source>Panel layout</source>
