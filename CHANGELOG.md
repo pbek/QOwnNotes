@@ -3,6 +3,8 @@
 ## 25.1.6
 - The available AI models for Groq have been updated
   (for [#3216](https://github.com/pbek/QOwnNotes/issues/3216), thank you, @Weej1)
+- An issue with combinations or strong and em tags preview was fixed
+  (for [#3218](https://github.com/pbek/QOwnNotes/issues/3218))
 
 ## 25.1.5
 - After moving a note to a new subfolder, outgoing links to other notes can now be
