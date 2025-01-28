@@ -1,8 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.1.6
+- The available AI models for Groq have been updated
+  (for [#3200](https://github.com/pbek/QOwnNotes/issues/3200), thank you, Weej1)
+
 ## 25.1.5
 - After moving a note to a new subfolder, outgoing links to other notes can now be
-  automatically adapted (for [#3200](https://github.com/pbek/QOwnNotes/issues/3200)) 
+  automatically adapted (for [#3200](https://github.com/pbek/QOwnNotes/issues/3200))
 - Added more Korean, Dutch, Spanish, French translation (thank you, venusgirl,
   stephanp, alejandromoc, jd-develop)
 
