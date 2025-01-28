@@ -3586,11 +3586,11 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
                                         const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
     const int noteCount = linkedNoteHits.count();
     if (Utils::Gui::questionNoSkipOverride(
-        nullptr, QObject::tr("Note file path changed"),
-        QObject::tr("A change of the note path was detected. Would you "
-                    "like to replace all outgoing links to <strong>%n</strong> note file(s)?",
-                    "", noteCount),
-        QStringLiteral("note-replace-outgoing-links")) != QMessageBox::Yes) {
+            nullptr, QObject::tr("Note file path changed"),
+            QObject::tr("A change of the note path was detected. Would you "
+                        "like to replace all outgoing links to <strong>%n</strong> note file(s)?",
+                        "", noteCount),
+            QStringLiteral("note-replace-outgoing-links")) != QMessageBox::Yes) {
         return false;
     }
 
@@ -3619,7 +3619,8 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
     }
 
     if (changed) {
-        // At this time the note is not existing anymore in the database, so we need to store a new note
+        // At this time the note is not existing anymore in the database, so we need to store a new
+        // note
         _id = 0;
         this->_noteText = std::move(noteText);
         this->_hasDirtyData = true;

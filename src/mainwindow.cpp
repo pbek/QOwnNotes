@@ -8986,7 +8986,8 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
             // for some reason this only works with a small delay, otherwise
             // not all changes will be recognized
             QTimer::singleShot(150, this, [this, forceReload] {
-                // If the outgoing links to other notes were changed, we have to really reload the note folder
+                // If the outgoing links to other notes were changed, we have to really reload the
+                // note folder
                 if (forceReload) {
                     buildNotesIndexAndLoadNoteDirectoryList(true, true);
                 } else {
