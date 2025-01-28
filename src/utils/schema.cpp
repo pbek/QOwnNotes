@@ -459,7 +459,16 @@ QString Utils::Schema::encodeCssStyleForState(MarkdownHighlighter::HighlighterSt
                                               const QString& htmlTag) {
     QTextCharFormat format;
     Utils::Schema::schemaSettings->setFormatStyle(index, format);
-    return QStringLiteral("%1 {%2}").arg(htmlTag, encodeCssTextCharFormat(format));
+    QString cssString = encodeCssTextCharFormat(format);
+
+    // Allow italic inside bold tags, like `**bold *and italic***`
+    // https://github.com/pbek/QOwnNotes/issues/3218
+    // Unfortunately, the QTextBrowser still doesn't render it correctly
+    if (index == MarkdownHighlighter::Italic) {
+        cssString.remove(QStringLiteral("font-weight: normal;"));
+    }
+
+    return QStringLiteral("%1 {%2}").arg(htmlTag, cssString);
 }
 
 /**
