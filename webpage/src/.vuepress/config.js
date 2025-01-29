@@ -59,6 +59,7 @@ const installationNavItems = [
 
 const editorNavItems = [
   'editor/spellchecking',
+  'editor/ai',
   'editor/time-formats',
 ];
 
