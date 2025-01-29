@@ -405,7 +405,7 @@ openAiBackendsHook
 
 This hook is called, when the OpenAI service config is reloaded. For example, this is also done when the script engine is reloaded.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
+You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
 
 ### Method call and parameters
 ```js

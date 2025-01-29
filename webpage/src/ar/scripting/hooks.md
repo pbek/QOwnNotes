@@ -433,7 +433,7 @@ openAiBackendsHook (خطاف خدمات الذكاء المصطنع)
 
 يُنادى هذا الخطاف عند إعادة تحميل تهيئة خدمات OpenAI. يحدث هذا مثلا عند إعادة تحميل محرك البرمجة.
 
-يمكنك استعماله لتهيئة خدمات OpenAI مخصصة، مثل نماذج LLM خاصة بك (على أن تكون متوافقة مع OpenAI API).
+You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
 
 ### نداء الدالة ومُعامِلاتها
 ```js

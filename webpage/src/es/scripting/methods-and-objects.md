@@ -680,7 +680,7 @@ Puede que quiera echar un vistazo al ejemplo [ai-autocompletion.qml](https://git
 Usar un prompt de finalización en el modelo de IA seleccionado actualmente
 ----------------------------------------------------------
 
-El prompt de finalización de IA es una característica que le permite usar un prompt en el modelo de IA seleccionado actualmente.
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model, like ChatGPT, Claude or systems like Ollama.
 
 El sistema de IA necesita ser activado en la barra de herramientas de IA o en el menú principal para que esto funcione.
 
