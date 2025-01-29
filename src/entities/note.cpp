@@ -477,7 +477,9 @@ QStringList Note::getMediaFileList() const {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileName = match.captured(1);
-        fileList << fileName;
+        // We want to decode the file name parsed from the note, because it can be encoded
+        // For example the image dialog will automatically encode the file name
+        fileList << QUrl::fromPercentEncoding(fileName.toUtf8());
     }
 
     return fileList;
@@ -531,7 +533,10 @@ QStringList Note::getAttachmentsFileList() const {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileName = match.captured(1);
-        fileList << fileName;
+
+        // We want to decode the file name parsed from the note, because it can be encoded
+        // For example the attachment dialog will automatically encode the file name
+        fileList << QUrl::fromPercentEncoding(fileName.toUtf8());
     }
 
     return fileList;
@@ -3766,6 +3771,10 @@ QString Note::mediaUrlStringForFileName(const QString &fileName) const {
         urlString += QStringLiteral("media/") + fileName;
     }
 
+    // Make sure all spaces and brackets are escaped
+    // For example this is important in file names like "image (1).png"
+    urlString = Utils::Misc::encodeFilePath(urlString);
+
     return urlString;
 }
 
@@ -3784,6 +3793,10 @@ QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
 
         urlString += QStringLiteral("attachments/") + fileName;
     }
+
+    // Make sure all spaces and brackets are escaped
+    // For example this is important in file names like "text (1).txt"
+    urlString = Utils::Misc::encodeFilePath(urlString);
 
     return urlString;
 }

@@ -169,6 +169,7 @@ QString getBaseUrlFromUrlString(const QString &urlString, bool withBasePath = fa
 QString createAbsolutePathsInHtml(const QString &html, const QString &url);
 int getPreviewRefreshDebounceTime();
 int getMaximumNoteFileSize();
+QString encodeFilePath(const QString& filePath);
 }    // namespace Misc
 }    // namespace Utils
 

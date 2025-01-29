@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.1.7
+- When inserting an image or attachment file via their insert dialogs or via
+  drag and drop the filenames will now be urlencoded to prevent problems with
+  special characters in the filenames (for [#3215](https://github.com/pbek/QOwnNotes/issues/3215)) 
+  - The management dialogs for images and attachments can now also recognize
+    urlencoded filenames to show the files correctly
+
 ## 25.1.6
 - The available AI models for Groq have been updated
   (for [#3216](https://github.com/pbek/QOwnNotes/issues/3216), thank you, @Weej1)

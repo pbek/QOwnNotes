@@ -2656,3 +2656,22 @@ int Utils::Misc::getPreviewRefreshDebounceTime() {
 int Utils::Misc::getMaximumNoteFileSize() {
     return SettingsService().value(QStringLiteral("maxNoteFileSize"), 1048576).toInt();
 }
+
+/**
+ * Percent encode each individual segment of a file path
+ * @param filePath
+ * @return
+ */
+QString Utils::Misc::encodeFilePath(const QString& filePath) {
+    // Split the path into segments to preserve the directory separators
+    QStringList segments = filePath.split('/');
+
+    // URL encode each segment individually
+    for (int i = 0; i < segments.size(); ++i) {
+        // Use QUrl::toPercentEncoding to properly encode special characters
+        segments[i] = QUrl::toPercentEncoding(segments[i], "/");
+    }
+
+    // Join the segments back together with forward slashes
+    return segments.join('/');
+}
