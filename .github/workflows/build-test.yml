@@ -34,9 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # https://github.com/actions/runner-images?tab=readme-ov-file#available-images
-        # ubuntu-22.04 is needed, because of https://github.com/pbek/QOwnNotes/issues/3212
-        os: [ubuntu-22.04, macos-latest, windows-2019]
+        os: [ubuntu-latest, macos-latest, windows-2019]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
@@ -44,7 +42,7 @@ jobs:
         experimental: [false]
         exclude:
           # Failing SSL Tests
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             qt-version: '5.9.9'
           # tests.exe not found
           - os: windows-2019
@@ -89,7 +87,7 @@ jobs:
 #            qt-version: '5.15.1'
           # botan 32bit error
         include:
-#          - os: ubuntu-22.04
+#          - os: ubuntu-latest
 #            qt-version: '6.3.0'
 #            experimental: true
 #          - os: macos-latest
@@ -197,7 +195,7 @@ jobs:
       # Do tests
       #
 
-    - if: contains( matrix.os, 'ubuntu-22.04')
+    - if: contains( matrix.os, 'ubuntu-latest')
       name: Do Linux tests
       run: |
         cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
@@ -246,7 +244,7 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'macos')
+    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
