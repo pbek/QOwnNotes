@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.0
+- Added GDScript support to the note edit code block syntax highlighter
+  (for [#3222](https://github.com/pbek/QOwnNotes/issues/3222), thank you, @DarienMC)
+
 ## 25.1.7
 - When inserting an image or attachment file via their insert dialogs or via
   drag and drop the filenames will now be urlencoded to prevent problems with
