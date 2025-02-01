@@ -245,7 +245,7 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
+    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'macos')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
@@ -256,11 +256,7 @@ jobs:
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -j 8
         ../build-systems/github/macos/create-dmg.sh
-#    - if: contains( matrix.os, 'ubuntu-22')
-#      name: Build QOwnNotes Ubuntu 20.04
-#      run: |
-#        lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
-    - if: contains( matrix.os, 'ubuntu-22')
+    - if: contains( matrix.os, 'ubuntu-22') && ( matrix.qt-version == '5.15.2' )
       name: Build for Snapcraft
       uses: snapcore/action-build@v1
 
