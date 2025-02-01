@@ -51,7 +51,8 @@ class CodeToHtmlConverter {
         CodeMake,
         CodeNix,
         CodeForth,
-        CodeSystemVerilog
+        CodeSystemVerilog,
+        CodeGDScript
     };
 
    public:
