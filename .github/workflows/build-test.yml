@@ -217,6 +217,7 @@ jobs:
         make
         copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+        dir /a /b /s ..
         copy ..\bin\tests\tests.exe .
         # echo set
         # gci env:* | sort-object name
