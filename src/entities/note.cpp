@@ -4265,7 +4265,8 @@ QStringList Note::getHeadingList() {
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
-        headingList << match.captured(1);
+        // Trim the heading text, in case there are trailing carriage return characters leaking in Windows
+        headingList << match.captured(1).trimmed();
     }
 
     return headingList;

@@ -110,9 +110,10 @@ Note LinkDialog::getSelectedNote() const {
 }
 
 QString LinkDialog::getSelectedHeading() const {
+    // Trim the heading text, in case there are trailing carriage return characters leaking in Windows
     return ui->headingListWidget->selectedItems().isEmpty()
                ? ""
-               : ui->headingListWidget->currentItem()->text();
+               : ui->headingListWidget->currentItem()->text().trimmed();
 }
 
 QString LinkDialog::getURL() const {
