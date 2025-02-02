@@ -2662,7 +2662,7 @@ int Utils::Misc::getMaximumNoteFileSize() {
  * @param filePath
  * @return
  */
-QString Utils::Misc::encodeFilePath(const QString& filePath) {
+QString Utils::Misc::encodeFilePath(const QString &filePath) {
     // Split the path into segments to preserve the directory separators
     QStringList segments = filePath.split('/');
 

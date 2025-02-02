@@ -67,7 +67,10 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     setupFileUrlMenu();
 }
 
-LinkDialog::~LinkDialog() { delete ui; delete _markdownTextEdit; }
+LinkDialog::~LinkDialog() {
+    delete ui;
+    delete _markdownTextEdit;
+}
 
 void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     // search notes when at least 2 characters were entered
@@ -112,7 +115,8 @@ Note LinkDialog::getSelectedNote() const {
 }
 
 QString LinkDialog::getSelectedHeading() const {
-    // Trim the heading text, in case there are trailing carriage return characters leaking in Windows
+    // Trim the heading text, in case there are trailing carriage return characters leaking in
+    // Windows
     return ui->headingListWidget->selectedItems().isEmpty()
                ? ""
                : ui->headingListWidget->currentItem()->text().trimmed();
@@ -403,7 +407,7 @@ void LinkDialog::loadNoteHeadings() const {
     auto nodes = NavigationWidget::parseDocument(_markdownTextEdit->document());
     QStringList headingTexts;
     std::transform(nodes.begin(), nodes.end(), std::back_inserter(headingTexts),
-                   [](const Node& node) { return node.text; });
+                   [](const Node &node) { return node.text; });
 
     ui->headingListWidget->clear();
     ui->headingListWidget->addItems(headingTexts);
