@@ -29,7 +29,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     // We need to set the internal variable to true, because we start with a highlighter
     _highlightingEnabled = true;
     _highlighter = nullptr;
-    if (parent->objectName() != QStringLiteral("LogWidget")) {
+    if (!parent || parent->objectName() != QStringLiteral("LogWidget")) {
         _highlighter = new QOwnNotesMarkdownHighlighter(document());
 
         setStyles();

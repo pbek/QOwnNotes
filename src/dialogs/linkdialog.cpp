@@ -17,6 +17,7 @@
 
 #include "services/settingsservice.h"
 #include "ui_linkdialog.h"
+#include "widgets/navigationwidget.h"
 
 LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LinkDialog) {
@@ -25,6 +26,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     ui->tabWidget->setCurrentIndex(page);
     on_tabWidget_currentChanged(page);
     ui->downloadProgressBar->hide();
+    _markdownTextEdit = new QOwnNotesMarkdownTextEdit();
     _networkManager = new QNetworkAccessManager(this);
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
                      SLOT(slotReplyFinished(QNetworkReply *)));
@@ -65,7 +67,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     setupFileUrlMenu();
 }
 
-LinkDialog::~LinkDialog() { delete ui; }
+LinkDialog::~LinkDialog() { delete ui; delete _markdownTextEdit; }
 
 void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     // search notes when at least 2 characters were entered
@@ -397,9 +399,14 @@ void LinkDialog::on_headingSearchLineEdit_textChanged(const QString &arg1) {
 
 void LinkDialog::loadNoteHeadings() const {
     auto note = getSelectedNote();
+    _markdownTextEdit->setPlainText(note.getNoteText());
+    auto nodes = NavigationWidget::parseDocument(_markdownTextEdit->document());
+    QStringList headingTexts;
+    std::transform(nodes.begin(), nodes.end(), std::back_inserter(headingTexts),
+                   [](const Node& node) { return node.text; });
 
     ui->headingListWidget->clear();
-    ui->headingListWidget->addItems(note.getHeadingList());
+    ui->headingListWidget->addItems(headingTexts);
 }
 
 void LinkDialog::on_notesListWidget_currentItemChanged(QListWidgetItem *current,

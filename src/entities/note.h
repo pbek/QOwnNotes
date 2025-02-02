@@ -379,8 +379,6 @@ class Note {
 
     static QString removeNameSearchPrefix(QString searchTerm);
 
-    QStringList getHeadingList();
-
     static bool applyIgnoredNotesSetting(QStringList &fileNames);
 
     QSet<Note> findBacklinks() const;

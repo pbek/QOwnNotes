@@ -4250,27 +4250,6 @@ QVector<CommandSnippet> Note::getParsedCommandSnippets() const {
 
 void Note::resetNoteTextHtmlConversionHash() { _noteTextHtmlConversionHash = QLatin1String(""); }
 
-/**
- * Get a list of all headings in a note starting with #
- *
- * @return
- */
-QStringList Note::getHeadingList() {
-    QStringList headingList;
-
-    static const QRegularExpression re(QStringLiteral(R"(^#+ (.+)$)"),
-                                       QRegularExpression::MultilineOption);
-    QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
-
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        // Trim the heading text, in case there are trailing carriage return characters leaking in Windows
-        headingList << match.captured(1).trimmed();
-    }
-
-    return headingList;
-}
-
 bool Note::applyIgnoredNotesSetting(QStringList &fileNames) {
     const SettingsService settings;
     const QStringList ignoredFileRegExpList =

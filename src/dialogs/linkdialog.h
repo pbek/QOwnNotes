@@ -4,6 +4,7 @@
 #include <QNetworkAccessManager>
 
 #include "masterdialog.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
 namespace Ui {
 class LinkDialog;
@@ -54,6 +55,7 @@ class LinkDialog : public MasterDialog {
     bool eventFilter(QObject *obj, QEvent *event) override;
     QString selectedNoteText;
     QNetworkAccessManager *_networkManager;
+    QOwnNotesMarkdownTextEdit *_markdownTextEdit;
     void setupFileUrlMenu();
     void loadNoteHeadings() const;
     void doAccept();
