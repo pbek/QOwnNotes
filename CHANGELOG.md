@@ -4,7 +4,8 @@
 - The heading detection in the link dialog and when jumping to the heading in a
   note link was re-implemented und now uses the highlighting states of note
   editor components (for [#3181](https://github.com/pbek/QOwnNotes/issues/3181))
-  - Now also the "underline-ish style" headings are recognized
+  - Now also the "underline-ish style" headings are recognized and there are no
+    issues with comments in code blocks that are detected as headings anymore  
 - Support was added SQL comments in code blocks for the SQL syntax highlighter
   (for [#215](https://github.com/pbek/qmarkdowntextedit/pull/215), thank you, @LockeBirdsey)
 - Added more Dutch translation (thank you, stephanp)
