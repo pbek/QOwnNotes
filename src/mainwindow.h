@@ -264,6 +264,8 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE void focusNoteTextEdit();
 
+    void onNavigationWidgetPositionClicked(int position);
+
    private slots:
 
     void on_noteTextEdit_textChanged();
@@ -447,8 +449,6 @@ class MainWindow : public QMainWindow {
     void tagSelectedNotesToTagId(int tagId);
 
     void on_actionReplace_in_current_note_triggered();
-
-    void onNavigationWidgetPositionClicked(int position);
 
     void onBacklinkWidgetNoteClicked(int noteId, QString markdown);
 
