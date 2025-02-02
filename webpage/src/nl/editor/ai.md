@@ -1,27 +1,25 @@
-# AI support
+# AI-ondersteuning
 
-You can opt-in to use your favorite AI model (LLM) to help you with your notes.
-There is built-in support for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**,
-but the internal API is designed to be easily extendable to other AI models with scripts.
-There are several AI backend integrations scripts available in the script repository to get you started.
+Je kunt ervoor kiezen om je favoriete AI-model (LLM) te gebruiken om je te helpen met je notities.
+Er is ingebouwde ondersteuning voor **[Groq](https://groq.com/)** (omdat je gratis API-sleutels kunt krijgen) en **[OpenAI](https://openai.com/)**, maar de interne API is ontworpen om gemakkelijk uit te breiden naar andere AI-modellen met scripts.
+Er zijn verschillende scripts voor AI-backend-integraties beschikbaar in de script-opslagplaats om je op weg te helpen.
 
 :::tip
-The **OpenAI completion API** was implemented to be used in **scripts**.
-This way you can do whatever you want and experiment with it.
+De **OpenAI-voltooiings-API** is geïmplementeerd om te worden gebruikt in **scripts**.
+Zo kun je doen wat je wilt en ermee experimenteren.
 :::
 
-- There is an **AI toolbar** and a section in the **Edit main menu**, where can turn
-  the service on, and you can select the AI backend and model
-- You can add an [OpenAI](https://openai.com/) and [Groq](https://groq.com/) API key in the new **AI settings**
-  - Look for more **AI backend integrations**, like _Ollama_ and _llama.cpp_ in the script repository
-- Use the new `script.aiComplete(prompt)` scripting command to your own imagination
-  - For more information please take a look at the
-    [Scripting documentation](../scripting/methods-and-objects.md#use-a-completion-prompt-on-the-currently-selected-ai-model)
-- In the **script repository**, as a first step, there is a script
-  [AI Autocompletion](https://github.com/qownnotes/scripts/tree/master/ai-autocompletion),
-  that uses the selected AI model to **autocomplete the current selection** in the note text edit,
-  and a script [AI Text Tool](https://github.com/qownnotes/scripts/tree/master/ai-text-tool),
-  that uses the selected AI model to **process the current selection** in the note text edit,
-  for example to summarize it, to translate it or to fix typos and grammar errors
+- Er is een **AI-werkbalk** en een sectie in het **Hoofdmenu bewerken**, waar je de service aan kunt zetten, en de AI-backend en het AI-model selecteren
+- Je kunt een [OpenAI](https://openai.com/) en [Groq](https://groq.com/) API-sleutel toevoegen in de nieuwe **AI-instellingen**
+  - Zoek naar meer **AI-backend-integraties**, zoals _Ollama_ en _llama.cpp_ in de script-opslagplaats
+- Gebruik het nieuwe scriptcommando 'script.aiComplete(prompt)' naar je eigen idee
+  - Voor meer informatie kun je de
+    [Documentatie voor scripts](.. /scripting/methods-and-objects.md#use-a-completion-prompt-on-the-currently-selected-ai-model) bestuderen
+- In de **script-opslagplaats** is er om te beginnen een script
+  [AI-automatische voltooiing](https://github.com/qownnotes/scripts/tree/master/ai-autocompletion),
+  die het geselecteerde AI-model gebruikt om **de huidige selectie automatisch aan te vullen** in de tekstbewerking van de notitie,
+  en een script [AI Text Tool](https://github.com/qownnotes/scripts/tree/master/ai-text-tool),
+  die het geselecteerde AI-model gebruikt om **de huidige selectie te verwerken** in de tekstbewerking van de notitie,
+  bijvoorbeeld om het samen te vatten, te vertalen of om typefouten en grammaticale fouten te herstellen
 
-![ai-settings](/img/editor/ai-settings.webp)
+![ai-instellingen](/img/editor/ai-settings.webp)

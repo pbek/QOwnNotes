@@ -680,7 +680,7 @@ Bestudeer het voorbeeld eens [ai-autocompletion.qml](https://github.com/pbek/QOw
 Gebruik een voltooiingsprompt op het geselecteerde AI-model
 ----------------------------------------------------------
 
-The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model, like ChatGPT, Claude or systems like Ollama.
+De AI-voltooiingsprompt is een functie waarmee je een voltooiingsprompt kunt gebruiken op het momenteel geselecteerde AI-model, zoals ChatGPT, Claude of systemen zoals Ollama.
 
 Om dit te laten werken moet het AI-systeem worden ingeschakeld in de AI-werkbalk of het hoofdmenu.
 

@@ -403,7 +403,7 @@ openAiBackendsHook
 
 이 후크는 OpenAI 서비스 구성이 다시 로드될 때 호출됩니다. 예를들면, 이 작업은 스크립트 엔진이 다시 로드될 때도 수행됩니다.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
+사용자 지정 OpenAI 백엔드에 대한 구성을 제공하는 데 사용할 수 있습니다 ChatGPT API 호환 LLM, 예를 들어 OpenAI, Claude 또는 Ollama와 같은 시스템입니다.
 
 ### 메소드 호출 및 매개변수
 ```js

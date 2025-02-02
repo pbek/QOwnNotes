@@ -405,7 +405,7 @@ openAiBackendsHook
 
 Deze hook wordt aangeroepen bij het laden van de OpenAI-serviceconfiguratie. Dit wordt bijv. ook gedaan wanneer de scriptengine opnieuw wordt geladen.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
+Je kunt het gebruiken om configuratie te bieden voor aangepaste OpenAI-backends, zoals die van eigen OpenAI API-compatibele LLM's, zoals ChatGPT, Claude of systemen zoals Ollama.
 
 ### Methode-aanroep en parameters
 ```js

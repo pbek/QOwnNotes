@@ -671,7 +671,7 @@ var text = script.noteTextEditCurrentBlock();
 현재 선택된 AI 모델에서 완료 프롬프트 사용
 ----------------------------------------------------------
 
-The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model, like ChatGPT, Claude or systems like Ollama.
+AI 완료 프롬프트는 ChatGPT, Claude, Ollama와 같은 시스템과 같이 현재 선택된 AI 모델에서 완료 프롬프트를 사용할 수 있게 해주는 기능입니다.
 
 AI 도구모음 또는 기본 메뉴에서 AI 시스템을 활성화해야 작동할 수 있습니다.
 

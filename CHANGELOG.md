@@ -7,6 +7,7 @@
   - Now also the "underline-ish style" headings are recognized
 - Support was added SQL comments in code blocks for the SQL syntax highlighter
   (for [#215](https://github.com/pbek/qmarkdowntextedit/pull/215), thank you, @LockeBirdsey)
+- Added more Dutch translation (thank you, stephanp)
 
 ## 25.2.0
 - Added GDScript support to the note edit code block syntax highlighter

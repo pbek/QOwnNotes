@@ -2185,7 +2185,7 @@
 </message>
 <message>
 <source>Find scripts in script repository</source>
-<translation>Vind scripts in script archief</translation>
+<translation>Scripts zoeken in de script-opslagplaats</translation>
 </message>
 <message>
 <source>Script settings</source>
@@ -2852,7 +2852,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-<translation>Updates van uw scripts zijn gevonden in de scriptrepository! Wil je ze updaten?</translation>
+<translation>Updates van je scripts zijn gevonden in de script-opslagplaats! Wil je ze updaten?</translation>
 </message>
 <message>
 <source>No script updates were found</source>
@@ -4339,7 +4339,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 <name>ScriptRepositoryDialog</name>
 <message>
 <source>Script repository</source>
-<translation>Script archief</translation>
+<translation>Script-opslagplasts</translation>
 </message>
 <message>
 <source>Currently installed version:</source>
@@ -4347,7 +4347,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Installs the script</source>
-<translation>Installeer het script</translation>
+<translation>Installeert het script</translation>
 </message>
 <message>
 <source>Install</source>
@@ -4379,7 +4379,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Find script</source>
-<translation>Vind script</translation>
+<translation>Script zoeken</translation>
 </message>
 <message>
 <source>Script updates</source>
@@ -4391,7 +4391,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Authors</source>
-<translation>Auteur(s)</translation>
+<translation>Auteurs</translation>
 </message>
 <message>
 <source>Author</source>
@@ -4399,7 +4399,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Supported platforms</source>
-<translation>Ondersteunde platformen</translation>
+<translation>Ondersteunde platforms</translation>
 </message>
 <message>
 <source>Supported platform</source>
@@ -4407,32 +4407,32 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Open repository</source>
-<translation>Open archief</translation>
+<translation>Opslagplaats openen</translation>
 </message>
 <message>
 <source>Update</source>
-<translation>Update</translation>
+<translation>Bijwerken</translation>
 </message>
 <message>
 <source>Updates the script</source>
-<translation>Update het script</translation>
+<translation>Werkt het script bij</translation>
 </message>
 <message>
 <source>Reinstall</source>
-<translation>Herinstalleren</translation>
+<translation>Opnieuw installeren</translation>
 </message>
 <message>
 <source>Reinstalls the script</source>
-<translation>Herinstalleer het script</translation>
+<translation>Installeert het script weer opnieuw</translation>
 </message>
 <message>
 <source>Platform not supported!</source>
-<translation>Het platform wordt niet ondersteund!</translation>
+<translation>Platform wordt niet ondersteund!</translation>
 </message>
 <message>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-<translation>Uw platform wordt niet ondersteund door dit script! Wilt u het toch installeren?</translation>
+<translation>Dit platform wordt niet ondersteund door dit script! Wil je het toch installeren?</translation>
 </message>
 <message>
 <source>Cancel</source>
@@ -4440,11 +4440,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Update app</source>
-<translation>Update app</translation>
+<translation>App bijwerken</translation>
 </message>
 <message>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-<translation>Vergeet niet uw installatie van QOwnNotes om dit script werken bijwerken!</translation>
+<translation>Vergeet niet je installatie van QOwnNotes bij te werken om dit script te laten functioneren!</translation>
 </message>
 <message>
 <source>Install successful</source>
@@ -5629,7 +5629,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation>Scriptrepository doorzoeken op AI-integratiescripts</translation>
+<translation>Script-opslagplaats doorzoeken op AI-integratiescripts</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -5658,7 +5658,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation>Om gebruik te maken van de AI-backends, kunt u de opdracht scripting gebruiken &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, of kijk in de scriptrepository voor reeds geschreven scripts.</translation>
+<translation>Om gebruik te maken van de AI-backends, kunt u de opdracht scripting gebruiken &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, of kijk in de script-opslagplaats voor reeds geschreven scripts.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
@@ -5666,7 +5666,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation>Als alternatief kunt u ook in de scriptrepository zoeken naar reeds gemaakte AI-integratiescripts.</translation>
+<translation>Als alternatief kunt u ook in de script-opslagplaats zoeken naar reeds gemaakte AI-integratiescripts.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
@@ -6056,7 +6056,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Search script repository</source>
-<translation>Zoek script archief</translation>
+<translation>Script-opslagplaats doorzoeken</translation>
 </message>
 <message>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
@@ -6178,7 +6178,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Repository:</source>
-<translation>Archief:</translation>
+<translation>Opslagplaats:</translation>
 </message>
 <message>
 <source>Author(s):</source>
@@ -6590,7 +6590,7 @@ Verbinding foutbericht: </translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
-<translation>Vind een script in het script archief</translation>
+<translation>Een script zoeken in de script-opslagplaats</translation>
 </message>
 <message>
 <source>Menu bar</source>
@@ -6641,7 +6641,7 @@ Verbinding foutbericht: </translation>
 </message>
 <message>
 <source>Open repository</source>
-<translation>Open archief</translation>
+<translation>Opslagplaats openen</translation>
 </message>
 <message>
 <source>Your script seems to be valid</source>
