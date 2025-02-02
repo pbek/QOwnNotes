@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.1
+- Support was added SQL comments in code blocks for the SQL syntax highlighter
+  (for [#215](https://github.com/pbek/qmarkdowntextedit/pull/215), thank you, @LockeBirdsey)
+
 ## 25.2.0
 - Added GDScript support to the note edit code block syntax highlighter
   (for [#3222](https://github.com/pbek/QOwnNotes/issues/3222), thank you, @DarienMC)
