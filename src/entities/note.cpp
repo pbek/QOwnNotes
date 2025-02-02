@@ -3499,7 +3499,7 @@ bool Note::handleNoteMoving(Note oldNote) {
         qDebug() << __func__ << " - 'linkedNoteHits': " << linkedNoteHits;
 
         if (linkedNotesCount > 0) {
-            result |= handleLinkedNotesAfterMoving(oldNote, linkedNoteHits);
+            result |= handleLinkedNotesAfterMoving(linkedNoteHits);
         }
     }
 
@@ -3587,8 +3587,7 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
     return noteIdList.contains(_id);
 }
 
-bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
-                                        const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
+bool Note::handleLinkedNotesAfterMoving(const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
     const int noteCount = linkedNoteHits.count();
     if (Utils::Gui::questionNoSkipOverride(
             nullptr, QObject::tr("Note file path changed"),

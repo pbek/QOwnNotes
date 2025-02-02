@@ -431,8 +431,7 @@ class Note {
     void addTextToBacklinkNoteHashIfFound(const Note &note, const QRegularExpression &pattern);
     void addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteText,
                                         const QRegularExpression &pattern);
-    bool handleLinkedNotesAfterMoving(const Note &oldNote,
-                                      const QHash<Note, QSet<LinkHit>> &linkedNoteHits);
+    bool handleLinkedNotesAfterMoving(const QHash<Note, QSet<LinkHit>> &linkedNoteHits);
     bool handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<int> &noteIdList);
 };
 
