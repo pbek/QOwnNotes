@@ -2,7 +2,7 @@
 
 ## 25.2.1
 - The heading detection in the link dialog and when jumping to the heading in a
-  note link was re-implemented und now uses the highlighting states of note
+  note link was re-implemented and now uses the highlighting states of a note
   editor components (for [#3181](https://github.com/pbek/QOwnNotes/issues/3181))
   - Now also the "underline-ish style" headings are recognized and there are no
     issues with comments in code blocks that are detected as headings anymore  
