@@ -27,6 +27,9 @@ defaults:
   run:
     working-directory: src
 
+env:
+  QT_MODULES: "qtwebsockets"
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -164,7 +167,7 @@ jobs:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw
-        modules: qtwebsockets
+        modules: ${{env.QT_MODULES}}
         cache: true
     - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
       name: Install Qt 6 on Windows
@@ -173,7 +176,7 @@ jobs:
         aqtversion: '==2.1.*'
         version: ${{ matrix.qt-version }}
         arch: win64_mingw
-        modules: qtwebsockets
+        modules: ${{env.QT_MODULES}}
         cache: true
     - if: false == contains( matrix.os, 'windows') && false == startsWith( matrix.qt-version, '6.' )
       name: Install Qt < 6 on Linux/macOS
@@ -188,8 +191,11 @@ jobs:
       with:
         aqtversion: '==2.0.0'
         version: ${{ matrix.qt-version }}
-        modules: qtwebsockets
+        modules: ${{env.QT_MODULES}}
         cache: true
+    - if: false == contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+      name: Make sure MSVC is found on Windows for Qt 6
+      uses: ilammy/msvc-dev-cmd@v1
 
       #
       # Do tests
@@ -229,23 +235,23 @@ jobs:
         windeployqt --debug tests.exe
         # echo test2
         .\tests.exe -txt
-#    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
-#      name: Do Qt 6.3+ Windows tests
-#      run: |
-#        cd ..\tests
-#        qmake6 DEFINES+=INTEGRATION_TESTS
-#        make
-#        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
-#        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
-#        copy ..\bin\tests\tests.exe .
-#        windeployqt --debug tests.exe
-#        .\tests.exe -txt
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+      name: Do Qt 6.3+ Windows tests
+      run: |
+        cd ..\tests
+        qmake6 DEFINES+=INTEGRATION_TESTS
+        nmake
+        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
+        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+        copy ..\bin\tests\tests.exe .
+        windeployqt --debug tests.exe
+        .\tests.exe -txt
 
       #
       # Build QOwnNotes
       #
 
-    - if: true && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
+    - if: true && !(contains( matrix.os, 'windows') && (matrix.qt-version == '5.15.2' || startsWith( matrix.qt-version, '6.' ))) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
@@ -259,6 +265,11 @@ jobs:
     - if: contains( matrix.os, 'ubuntu-22') && ( matrix.qt-version == '5.15.2' )
       name: Build for Snapcraft
       uses: snapcore/action-build@v1
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+      name: Build QOwnNotes for Windows with Qt 6
+      run: |
+        qmake6 CONFIG+=debug QOwnNotes.pro CONFIG+=DEV_MODE
+        nmake
 
       #
       # Build QOwnNotes Windows Release and store it as artifact
