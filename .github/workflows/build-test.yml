@@ -193,7 +193,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         modules: ${{env.QT_MODULES}}
         cache: true
-    - if: false == contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
       name: Make sure MSVC is found on Windows for Qt 6
       uses: ilammy/msvc-dev-cmd@v1
 
