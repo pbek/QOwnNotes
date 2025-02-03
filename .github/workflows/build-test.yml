@@ -160,22 +160,12 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw81
         cache: true
-    - if: contains( matrix.os, 'windows') && matrix.qt-version == '6.2.4'
-      name: Install Qt Qt 6.2.4 on Windows
-      uses: jurplel/install-qt-action@v4
-      with:
-        aqtversion: '==2.0.0'
-        version: ${{ matrix.qt-version }}
-        arch: win64_mingw
-        modules: ${{env.QT_MODULES}}
-        cache: true
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && matrix.qt-version != '6.2.4'
+    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
       name: Install Qt 6 on Windows
       uses: jurplel/install-qt-action@v4
       with:
-        aqtversion: '==2.1.*'
+        aqtversion: '==2.0.*'
         version: ${{ matrix.qt-version }}
-        arch: win64_mingw
         modules: ${{env.QT_MODULES}}
         cache: true
     - if: false == contains( matrix.os, 'windows') && false == startsWith( matrix.qt-version, '6.' )
