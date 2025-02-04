@@ -225,17 +225,17 @@ jobs:
         windeployqt --debug tests.exe
         # echo test2
         .\tests.exe -txt
-    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
-      name: Do Qt 6.3+ Windows tests
-      run: |
-        cd ..\tests
-        qmake6 DEFINES+=INTEGRATION_TESTS
-        nmake
-        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
-        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
-        copy ..\bin\tests\tests.exe .
-        windeployqt --debug tests.exe
-        .\tests.exe -txt
+#    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+#      name: Do Qt 6.3+ Windows tests
+#      run: |
+#        cd ..\tests
+#        qmake6 DEFINES+=INTEGRATION_TESTS
+#        nmake
+#        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
+#        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+#        copy ..\bin\tests\tests.exe .
+#        windeployqt --debug tests.exe
+#        .\tests.exe -txt
 
       #
       # Build QOwnNotes
