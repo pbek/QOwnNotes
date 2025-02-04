@@ -62,9 +62,9 @@ jobs:
           - os: windows-2019
             qt-version: '6.5.3'
             experimental: false
-          - os: windows-2019
-            qt-version: '6.6.3'
-            experimental: false
+#          - os: windows-2019
+#            qt-version: '6.6.3'
+#            experimental: false
           # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
           # See https://github.com/pbek/QOwnNotes/issues/3018
           - os: macos-latest
@@ -97,18 +97,18 @@ jobs:
 #            qt-version: '6.3.0'
 #            experimental: true
           # Other 6.2 releases didn't work
-          - os: windows-2019
-            qt-version: '6.2.4'
-            experimental: true
-          - os: windows-2019
-            qt-version: '6.4.3'
-            experimental: true
-          - os: windows-2019
-            qt-version: '6.5.3'
-            experimental: true
-          - os: windows-2019
-            qt-version: '6.6.3'
-            experimental: true
+#          - os: windows-2019
+#            qt-version: '6.2.4'
+#            experimental: true
+#          - os: windows-2019
+#            qt-version: '6.4.3'
+#            experimental: true
+#          - os: windows-2019
+#            qt-version: '6.5.3'
+#            experimental: true
+#          - os: windows-2019
+#            qt-version: '6.6.3'
+#            experimental: true
           # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
           # See https://github.com/pbek/QOwnNotes/issues/3018
           - os: macos-latest
