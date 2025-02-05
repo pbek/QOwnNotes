@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.2
+- The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
+  was updated to version 25.2.0 for Nextcloud 31 (for [#51](https://github.com/pbek/qownnotesapi/issues/51))
+
 ## 25.2.1
 - The heading detection in the link dialog and when jumping to the heading in a
   note link was re-implemented and now uses the highlighting states of the note
