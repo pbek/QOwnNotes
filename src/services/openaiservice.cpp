@@ -235,7 +235,7 @@ QString OpenAiService::getModelId() {
     // If still not set get the first of the models
     if (this->_modelId.isEmpty()) {
         const QStringList& models = getModelsForCurrentBackend();
-        this->_modelId = models.isEmpty() ? QStringLiteral("") : models.first();
+        this->_modelId = models.isEmpty() ? QLatin1String("") : models.first();
     }
 
     return this->_modelId;

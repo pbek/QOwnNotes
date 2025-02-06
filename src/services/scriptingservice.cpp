@@ -2086,7 +2086,7 @@ QString ScriptingService::inputDialogGetItem(const QString &title, const QString
     bool ok;
     QString result = QInputDialog::getItem(nullptr, title, label, items, current, editable, &ok);
 
-    return ok ? result : QStringLiteral("");
+    return ok ? result : QLatin1String("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -2114,7 +2114,7 @@ QString ScriptingService::inputDialogGetText(const QString &title, const QString
     bool ok;
     QString result = QInputDialog::getText(nullptr, title, label, QLineEdit::Normal, text, &ok);
 
-    return ok ? result : QStringLiteral("");
+    return ok ? result : QLatin1String("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -2140,7 +2140,7 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
     bool ok;
     QString result = QInputDialog::getMultiLineText(nullptr, title, label, text, &ok);
 
-    return ok ? result : QStringLiteral("");
+    return ok ? result : QLatin1String("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)

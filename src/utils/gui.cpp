@@ -900,7 +900,7 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
                 // create a new tab if there are too few tabs
                 if ((tabWidget->count() - 1) < i) {
                     auto *widgetPage = new QWidget();
-                    tabWidget->addTab(widgetPage, QStringLiteral(""));
+                    tabWidget->addTab(widgetPage, QLatin1String(""));
                 }
 
                 // set the current tab index and the note data
