@@ -163,7 +163,7 @@ class ScriptingService : public QObject {
                                                     const QString &text = QString());
 
     Q_INVOKABLE QString textDiffDialog(const QString &title, const QString &label,
-                                       const QString &text1, const QString &text2);
+                                       QString text1, QString text2);
 
     Q_INVOKABLE void setPersistentVariable(const QString &key, const QVariant &value);
 

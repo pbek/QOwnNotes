@@ -10299,7 +10299,7 @@ QString MainWindow::selectedNoteTextEditText() {
     const QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
     selectedText.replace(newLine, QStringLiteral("\n"));
 
-    return selectedText;
+    return selectedText.isNull() ? QString() : selectedText;
 }
 
 /**

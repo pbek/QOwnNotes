@@ -2159,9 +2159,17 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
  * @return
  */
 QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
-                                         const QString &text1, const QString &text2) {
+                                         QString text1, QString text2) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
+
+    if (text1.isNull()) {
+        text1 = QLatin1String("");
+    }
+
+    if (text2.isNull()) {
+        text2 = QLatin1String("");
+    }
 
 #ifndef INTEGRATION_TESTS
     auto dialog = new TextDiffDialog(nullptr, title, label, text1, text2);
@@ -2173,8 +2181,6 @@ QString ScriptingService::textDiffDialog(const QString &title, const QString &la
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
-    Q_UNUSED(text1)
-    Q_UNUSED(text2)
     return QString();
 #endif
 }
