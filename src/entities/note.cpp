@@ -3488,7 +3488,7 @@ bool Note::handleNoteMoving(Note oldNote) {
     bool result = false;
 
     // Handle incoming note links
-    if (noteCount >= 0) {
+    if (noteCount > 0) {
         result = handleBacklinkedNotesAfterMoving(oldNote, noteIdList);
     }
 
