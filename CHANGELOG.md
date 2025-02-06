@@ -1,13 +1,11 @@
 # QOwnNotes Changelog
 
-## 25.2.3
+## 25.2.2
 - A regression was fixed where you get a dialog `A change of the note path was detected`
   after renaming a note, regardless if there were backlinks to the note that needed
   to be updated (for [#3228](https://github.com/pbek/QOwnNotes/issues/3228))
 - Fix an issue with the `script.textDiffDialog()` scripting command, where a null string
   could crash the application (for [#257](https://github.com/qownnotes/scripts/issues/257))
-
-## 25.2.2
 - The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 25.2.0 for Nextcloud 31 (for [#51](https://github.com/pbek/qownnotesapi/issues/51))
 
