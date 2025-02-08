@@ -5,7 +5,7 @@
   to support `$NodePath` and `%UniqueNode` constructs highlighted as literals
   (for [#216](https://github.com/pbek/qmarkdowntextedit/pull/216), thank you, @DarienMC)
 - Added TOML support to the note edit code block syntax highlighter
-  (for [#217](https://github.com/pbek/qmarkdowntextedit/pull/217), thank you, @DarienMC)
+  (for [#217](https://github.com/pbek/qmarkdowntextedit/pull/217), thank you, @LockeBirdsey)
 
 ## 25.2.2
 - A regression was fixed where you get a dialog `A change of the note path was detected`
