@@ -195,7 +195,7 @@ int mainStartupMisc(const QStringList &arguments) {
     }
 
     // apply custom style to hide menu icons
-    const bool hideMenuIcons = Utils::Misc::hideIconsInMenus();
+    const bool hideMenuIcons = Utils::Misc::areMenuIconsHidden();
     if (hideMenuIcons) {
         QApplication::setStyle(new NoMenuIconStyle);
     }

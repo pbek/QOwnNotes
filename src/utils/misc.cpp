@@ -1305,7 +1305,7 @@ bool Utils::Misc::isNoteEditingAllowed() {
  *
  * @return
  */
-bool Utils::Misc::hideIconsInMenus() {
+bool Utils::Misc::areMenuIconsHidden() {
     return SettingsService().value(QStringLiteral("hideIconsInMenus"), true).toBool();
 }
 
