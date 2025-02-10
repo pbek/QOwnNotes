@@ -58,6 +58,9 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
                const QModelIndex &index) const override {
         QStyleOptionViewItem options = option;
         initStyleOption(&options, index);
+        SettingsService settings;
+        const bool hideMenuIcons = settings.value(QStringLiteral("disableIconsInMenus"), false).toBool();
+        if (hideMenuIcons) options.icon = QIcon(); // remove icon
 
         QTextDocument doc;
 
@@ -110,7 +113,7 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
             auto r = options.widget->style()->subElementRect(QStyle::SE_ItemViewItemText, &options,
                                                              options.widget);
             auto hasIcon = index.data(Qt::DecorationRole).value<QIcon>().isNull();
-            if (hasIcon)
+            if (hasIcon && !hideMenuIcons)
                 doc.setTextWidth(r.width() - 25);
             else
                 doc.setTextWidth(r.width());
@@ -120,7 +123,7 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
         painter->translate(option.rect.x(), option.rect.y());
         // leave space for icon
 
-        if (!rtl) painter->translate(25, 0);
+        if (!rtl && !hideMenuIcons) painter->translate(25, 0);
 
         QAbstractTextDocumentLayout::PaintContext ctx;
         ctx.palette.setColor(QPalette::Text, options.palette.text().color());

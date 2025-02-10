@@ -192,6 +192,13 @@ int mainStartupMisc(const QStringList &arguments) {
         QApplication::setStyle(interfaceStyle);
     }
 
+    // apply custom style to hide menu icons
+    const bool hideMenuIcons = settings.value(QStringLiteral("disableIconsInMenus"), false).toBool();
+    if (hideMenuIcons) {
+        QApplication::setStyle(new NoMenuIconStyle);
+    }
+
+
 #ifdef Q_OS_WIN32
     Utils::Gui::doWindowsDarkModeCheck();
 #endif

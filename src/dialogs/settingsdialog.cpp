@@ -223,6 +223,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
+    connect(ui->disableIconsInMenusCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
@@ -758,6 +759,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("darkModeIconTheme"),
                       ui->darkModeIconThemeCheckBox->isChecked());
 
+    settings.setValue(QStringLiteral("disableIconsInMenus"),
+                      ui->disableIconsInMenusCheckBox->isChecked());
+
     settings.setValue(QStringLiteral("showStatusBarNotePath"),
                       ui->showStatusBarNotePathCheckBox->isChecked());
 
@@ -1159,6 +1163,9 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("darkModeTrayIcon")).toBool());
 
     ui->darkModeIconThemeCheckBox->setChecked(Utils::Misc::isDarkModeIconTheme());
+
+    ui->disableIconsInMenusCheckBox->setChecked(
+        settings.value(QStringLiteral("disableIconsInMenus")).toBool());
 
     ui->internalIconThemeCheckBox->setChecked(
         settings.value(QStringLiteral("internalIconTheme")).toBool());

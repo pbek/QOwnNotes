@@ -3209,6 +3209,16 @@
                        </property>
                       </widget>
                      </item>
+                     <item row="4" column="0">
+                      <widget class="QCheckBox" name="disableIconsInMenusCheckBox">
+                       <property name="toolTip">
+                        <string>Disable icons in menus as well as the "Find action" dialog. Requires restart to take effect</string>
+                       </property>
+                       <property name="text">
+                        <string>Disable menu icons</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </widget>
                   </item>
