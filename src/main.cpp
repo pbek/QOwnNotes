@@ -21,7 +21,7 @@
 #include "release.h"
 #include "version.h"
 
-#include "NoMenuIconStyle.h"
+#include "helpers/nomenuiconstyle.h"
 
 // define the base class for SingleApplication
 #define QAPPLICATION_CLASS QApplication

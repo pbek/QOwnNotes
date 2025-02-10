@@ -1,4 +1,4 @@
-#include "NoMenuIconStyle.h"
+#include "nomenuiconstyle.h"
 
 void NoMenuIconStyle::drawControl(ControlElement element, const QStyleOption *option, 
                                   QPainter *painter, const QWidget *widget) const {
