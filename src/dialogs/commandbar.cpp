@@ -79,7 +79,6 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
                                   QStringLiteral(": </span>");
 
         str = component + str;
-        SettingsService settings;
         bool overrideInterfaceFontSize =
             settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
         if (overrideInterfaceFontSize) {
