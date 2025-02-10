@@ -1301,6 +1301,15 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if "hideIconsInMenus" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::hideIconsInMenus() {
+    return SettingsService().value(QStringLiteral("hideIconsInMenus"), true).toBool();
+}
+
+/**
  * Returns if "useInternalExportStyling" is turned on
  *
  * @return

@@ -21,6 +21,8 @@
 #include "release.h"
 #include "version.h"
 
+#include "NoMenuIconStyle.h"
+
 // define the base class for SingleApplication
 #define QAPPLICATION_CLASS QApplication
 
@@ -191,6 +193,17 @@ int mainStartupMisc(const QStringList &arguments) {
     if (!interfaceStyle.isEmpty()) {
         QApplication::setStyle(interfaceStyle);
     }
+
+    // apply custom style to hide menu icons
+    const bool hideMenuIcons = Utils::Misc::hideIconsInMenus();
+    if (hideMenuIcons) {
+        QApplication::setStyle(new NoMenuIconStyle);
+    }
+
+#ifdef Q_OS_MAC
+    QApplication::setStyle(new NoMenuIconStyle);
+#endif
+
 
 #ifdef Q_OS_WIN32
     Utils::Gui::doWindowsDarkModeCheck();
