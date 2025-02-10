@@ -197,6 +197,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     ui->actionToggle_fullscreen->setShortcut(QKeySequence(QStringLiteral("Ctrl+F11")));
 #endif
 
+#ifdef Q_OS_MAC
+    // hide icons in menus by default on macOS
+    if (!settings.contains(QStringLiteral("hideIconsInMenus"))) {
+        settings.value(QStringLiteral("hideIconsInMenus"), true);
+    }
+#endif
+
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
     _isNotesDirectoryWasModifiedDisabled = false;

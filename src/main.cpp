@@ -200,11 +200,6 @@ int mainStartupMisc(const QStringList &arguments) {
         QApplication::setStyle(new NoMenuIconStyle);
     }
 
-#ifdef Q_OS_MAC
-    QApplication::setStyle(new NoMenuIconStyle);
-#endif
-
-
 #ifdef Q_OS_WIN32
     Utils::Gui::doWindowsDarkModeCheck();
 #endif
