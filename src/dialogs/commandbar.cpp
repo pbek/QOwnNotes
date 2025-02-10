@@ -59,7 +59,7 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
         QStyleOptionViewItem options = option;
         initStyleOption(&options, index);
         SettingsService settings;
-        const bool hideMenuIcons = settings.value(QStringLiteral("disableIconsInMenus"), false).toBool();
+        const bool hideMenuIcons = settings.value(QStringLiteral("hideIconsInMenus"), false).toBool();
         if (hideMenuIcons) options.icon = QIcon(); // remove icon
 
         QTextDocument doc;
