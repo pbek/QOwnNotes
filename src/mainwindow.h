@@ -23,10 +23,6 @@
 #include <QMainWindow>
 #include <QSystemTrayIcon>
 
-#include <QProxyStyle>
-#include <QStyleOptionMenuItem>
-#include <QMenu>
-
 #include "entities/notehistory.h"
 
 #define SORT_ALPHABETICAL 0
@@ -83,24 +79,6 @@ struct TagHeader;
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
 class SettingsDialog;
-
-/* See: https://stackoverflow.com/questions/44745459/remove-icon-space-from-qmenu */
-class NoMenuIconStyle : public QProxyStyle {
-public:
-    void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const override {
-        if (element == CE_MenuItem && widget && qobject_cast<const QMenu *>(widget)) {
-            if (const QStyleOptionMenuItem *menuItem = qstyleoption_cast<const QStyleOptionMenuItem *>(option)) {
-                QStyleOptionMenuItem opt(*menuItem); // Copy the original option
-                opt.icon = QIcon(); // Remove the icon
-                opt.maxIconWidth = 0; // Prevents icon space allocation
-
-                QProxyStyle::drawControl(element, &opt, painter, widget);
-                return;
-            }
-        }
-        QProxyStyle::drawControl(element, option, painter, widget);
-    }
-};
 
 class MainWindow : public QMainWindow {
     Q_OBJECT

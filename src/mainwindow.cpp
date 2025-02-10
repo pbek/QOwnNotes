@@ -64,6 +64,7 @@
 #include <QJSEngine>
 #include <QKeyEvent>
 #include <QListWidgetItem>
+#include <QMenu>
 #include <QMessageBox>
 #include <QMimeData>
 #include <QPageSetupDialog>
@@ -71,6 +72,7 @@
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QProgressDialog>
+#include <QProxyStyle>
 #include <QQmlApplicationEngine>
 #include <QQmlComponent>
 #include <QQmlContext>
@@ -81,6 +83,7 @@
 #include <QScreen>
 #include <QScrollBar>
 #include <QShortcut>
+#include <QStyleOptionMenuItem>
 #include <QSystemTrayIcon>
 #include <QTemporaryFile>
 #include <QTextBlock>
@@ -126,6 +129,24 @@
 #include "version.h"
 #include "widgets/htmlpreviewwidget.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
+
+/* special class to properly remove icons from menus (including empty space) */
+class NoMenuIconStyle : public QProxyStyle {
+public:
+    void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const override {
+        if (element == CE_MenuItem && widget && qobject_cast<const QMenu *>(widget)) {
+            if (const QStyleOptionMenuItem *menuItem = qstyleoption_cast<const QStyleOptionMenuItem *>(option)) {
+                QStyleOptionMenuItem opt(*menuItem); // Copy the original option
+                opt.icon = QIcon(); // Remove the icon
+                opt.maxIconWidth = 0; // Prevents icon space allocation
+
+                QProxyStyle::drawControl(element, &opt, painter, widget);
+                return;
+            }
+        }
+        QProxyStyle::drawControl(element, option, painter, widget);
+    }
+};
 
 static MainWindow *s_self = nullptr;
 
