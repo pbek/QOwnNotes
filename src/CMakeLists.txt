@@ -258,8 +258,8 @@ set(SOURCE_FILES
     helpers/qownspellchecker.h
     helpers/codetohtmlconverter.cpp
     helpers/codetohtmlconverter.h
-    helpers/nomenuiconsstlye.cpp
-    helpers/nomenuiconsstlye.h
+    helpers/nomenuiconstyle.cpp
+    helpers/nomenuiconstyle.h
     api/noteapi.cpp
     api/noteapi.h
     api/notesubfolderapi.cpp
