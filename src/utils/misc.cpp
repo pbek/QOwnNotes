@@ -1308,19 +1308,12 @@ bool Utils::Misc::isNoteEditingAllowed() {
 bool Utils::Misc::areMenuIconsHidden() {
 #ifdef Q_OS_MAC
     // hide icons in menus by default on macOS
-    bool hideIconsInMenusDefault = true;
+    const bool defaultValue = true;
 #else
-    bool hideIconsInMenusDefault = false;
+    const bool defaultValue = false;
 #endif
 
-    SettingsService settings;
-
-    if (!settings.contains(QStringLiteral("hideIconsInMenus"))) {
-        settings.value(QStringLiteral("hideIconsInMenus"), hideIconsInMenusDefault).toBool();
-        return hideIconsInMenusDefault;
-    }
-
-    return settings.value(QStringLiteral("hideIconsInMenus"), true).toBool();
+    return SettingsService().value(QStringLiteral("hideIconsInMenus"), defaultValue).toBool();
 }
 
 /**
