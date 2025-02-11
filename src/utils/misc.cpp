@@ -1301,6 +1301,22 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if "hideIconsInMenus" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::areMenuIconsHidden() {
+#ifdef Q_OS_MAC
+    // hide icons in menus by default on macOS
+    const bool defaultValue = true;
+#else
+    const bool defaultValue = false;
+#endif
+
+    return SettingsService().value(QStringLiteral("hideIconsInMenus"), defaultValue).toBool();
+}
+
+/**
  * Returns if "useInternalExportStyling" is turned on
  *
  * @return

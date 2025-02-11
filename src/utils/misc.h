@@ -112,6 +112,7 @@ QDataStream &dataStreamRead(QDataStream &is, QPrinter &printer);
 void storePrinterSettings(QPrinter *printer, const QString &settingsKey);
 void loadPrinterSettings(QPrinter *printer, const QString &settingsKey);
 bool isNoteEditingAllowed();
+bool areMenuIconsHidden();
 bool useInternalExportStylingForPreview();
 bool isSocketServerEnabled();
 bool isWebAppSupportEnabled();

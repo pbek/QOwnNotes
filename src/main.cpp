@@ -21,6 +21,8 @@
 #include "release.h"
 #include "version.h"
 
+#include "helpers/nomenuiconstyle.h"
+
 // define the base class for SingleApplication
 #define QAPPLICATION_CLASS QApplication
 
@@ -190,6 +192,12 @@ int mainStartupMisc(const QStringList &arguments) {
     // restore the interface style
     if (!interfaceStyle.isEmpty()) {
         QApplication::setStyle(interfaceStyle);
+    }
+
+    // apply custom style to hide menu icons
+    const bool hideMenuIcons = Utils::Misc::areMenuIconsHidden();
+    if (hideMenuIcons) {
+        QApplication::setStyle(new NoMenuIconStyle);
     }
 
 #ifdef Q_OS_WIN32

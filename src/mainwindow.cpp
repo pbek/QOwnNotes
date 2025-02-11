@@ -149,11 +149,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     s_self = this;
     ui = new Ui::MainWindow;
 
-#ifdef Q_OS_MAC
-    // disable icons in the menu
-    QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
-#endif
-
     ui->setupUi(this);
 
     _logWidget = new LogWidget(this);
@@ -194,10 +189,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     initWorkspaceComboBox();
 
 #ifdef Q_OS_MAC
-    // disable icons in the menu that weren't handled by
-    // Qt::AA_DontShowIconsInMenus
-    ui->actionShare_note->setIconVisibleInMenu(false);
-
     // set another shortcut for delete line under macOS
     ui->actionDelete_line->setShortcut(QKeySequence(QStringLiteral("Ctrl+Backspace")));
     ui->actionDelete_word->setShortcut(QKeySequence(QStringLiteral("Alt+Backspace")));

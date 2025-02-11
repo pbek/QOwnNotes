@@ -115,6 +115,7 @@ lessThan(QT_MAJOR_VERSION, 6) {
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
 SOURCES += main.cpp\
+    helpers/nomenuiconstyle.cpp \
     dialogs/attachmentdialog.cpp \
     dialogs/nextclouddeckdialog.cpp \
     entities/cloudconnection.cpp \
@@ -224,6 +225,7 @@ SOURCES += main.cpp\
     utils/urlhandler.cpp
 
 HEADERS  += mainwindow.h \
+    helpers/nomenuiconstyle.h \
     build_number.h \
     dialogs/attachmentdialog.h \
     dialogs/nextclouddeckdialog.h \
