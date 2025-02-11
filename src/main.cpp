@@ -16,12 +16,11 @@
 
 #include "dialogs/welcomedialog.h"
 #include "entities/notefolder.h"
+#include "helpers/nomenuiconstyle.h"
 #include "libraries/singleapplication/singleapplication.h"
 #include "mainwindow.h"
 #include "release.h"
 #include "version.h"
-
-#include "helpers/nomenuiconstyle.h"
 
 // define the base class for SingleApplication
 #define QAPPLICATION_CLASS QApplication
