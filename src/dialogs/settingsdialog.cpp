@@ -1164,8 +1164,7 @@ void SettingsDialog::readSettings() {
 
     ui->darkModeIconThemeCheckBox->setChecked(Utils::Misc::isDarkModeIconTheme());
 
-    ui->hideIconsInMenusCheckBox->setChecked(
-        settings.value(QStringLiteral("hideIconsInMenus")).toBool());
+    ui->hideIconsInMenusCheckBox->setChecked(Utils::Misc::areMenuIconsHidden());
 
     ui->internalIconThemeCheckBox->setChecked(
         settings.value(QStringLiteral("internalIconTheme")).toBool());
