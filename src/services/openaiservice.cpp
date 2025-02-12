@@ -79,7 +79,7 @@ void OpenAiService::initializeBackends() {
     _backendModels[QStringLiteral("openai")] =
         QStringList{"gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
     _backendModels[QStringLiteral("groq")] =
-        QStringList{"deepseek-r1-distill-llama-70b", "llama-3.1-8b-instant", "llama-3.2-11b-vision-preview", "llama-3.2-1b-preview", "llama-3.2-3b-preview", "llama-3.2-90b-vision-preview", "llama-3.3-70b-specdec", "llama-3.3-70b-versatile", "llama3-70b-8192", "llama3-8b-8192", "llama-guard-3-8b", "mixtral-8x7b-32768",
+        QStringList{"qwen-2.5-32b", "deepseek-r1-distill-qwen-32b", "deepseek-r1-distill-llama-70b", "llama-3.1-8b-instant", "llama-3.2-11b-vision-preview", "llama-3.2-1b-preview", "llama-3.2-3b-preview", "llama-3.2-90b-vision-preview", "llama-3.3-70b-specdec", "llama-3.3-70b-versatile", "llama3-70b-8192", "llama3-8b-8192", "llama-guard-3-8b", "mixtral-8x7b-32768",
                     "gemma2-9b-it"};
 
     _backendApiBaseUrls.clear();
