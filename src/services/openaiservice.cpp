@@ -78,7 +78,9 @@ void OpenAiService::initializeBackends() {
     _backendModels.clear();
     _backendModels[QStringLiteral("openai")] =
         QStringList{"gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
-    _backendModels[QStringLiteral("groq")] = QStringList{"deepseek-r1-distill-llama-70b",
+    _backendModels[QStringLiteral("groq")] = QStringList{"qwen-2.5-32b",
+                                                         "deepseek-r1-distill-qwen-32b",
+                                                         "deepseek-r1-distill-llama-70b",
                                                          "llama-3.1-8b-instant",
                                                          "llama-3.2-11b-vision-preview",
                                                          "llama-3.2-1b-preview",
