@@ -155,5 +155,6 @@ void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tag);
 bool enableDockWidgetQuestion(QDockWidget *dockWidget);
 void fixDarkModeIcons(QWidget *widget);
 QAction *findActionByData(QMenu *menu, const QVariant &data);
+void applyInterfaceStyle();
 }    // namespace Gui
 }    // namespace Utils

@@ -1429,10 +1429,11 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
 
     if (!interfaceStyle.isEmpty()) {
         ui->interfaceStyleComboBox->setCurrentText(interfaceStyle);
-        QApplication::setStyle(interfaceStyle);
     } else {
         ui->interfaceStyleComboBox->setCurrentIndex(0);
     }
+
+    Utils::Gui::applyInterfaceStyle();
 }
 
 /**

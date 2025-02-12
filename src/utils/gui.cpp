@@ -33,11 +33,13 @@
 #include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
+#include <QStyleFactory>
 #include <QTextBlock>
 #include <QTextCursor>
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
 
+#include "helpers/nomenuiconstyle.h"
 #include "services/settingsservice.h"
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
@@ -1257,4 +1259,25 @@ QAction *Utils::Gui::findActionByData(QMenu *menu, const QVariant &data) {
     }
     // Return nullptr if no matching action is found
     return nullptr;
+}
+
+void Utils::Gui::applyInterfaceStyle() {
+    QSettings settings;
+    QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
+
+    // Apply custom style to hide menu icons
+    if (Utils::Misc::areMenuIconsHidden()) {
+        if (!interfaceStyle.isEmpty()) {
+            // Apply the selected interface style and the custom style
+            QStyle *interfaceStyleClass =
+                QStyleFactory::create(interfaceStyle);    // or whatever style you want
+            QApplication::setStyle(new NoMenuIconStyle(interfaceStyleClass));
+        } else {
+            // Apply the custom style only
+            QApplication::setStyle(new NoMenuIconStyle);
+        }
+    } else if (!interfaceStyle.isEmpty()) {
+        // Restore the interface style
+        QApplication::setStyle(interfaceStyle);
+    }
 }

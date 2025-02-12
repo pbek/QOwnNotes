@@ -8,7 +8,7 @@
 
 class NoMenuIconStyle : public QProxyStyle {
    public:
-    NoMenuIconStyle() = default;    // Explicitly define constructor
+    explicit NoMenuIconStyle(QStyle *style = nullptr) : QProxyStyle(style) {}
     void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter,
                      const QWidget *widget) const override;
 };
