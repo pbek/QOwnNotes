@@ -5445,6 +5445,14 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <translation>Mencari bahasa</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation type="unfinished">Hide menu icons</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation type="unfinished">Status bar</translation>
 </message>

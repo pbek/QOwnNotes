@@ -14,13 +14,13 @@ Lo mismo se aplica a la selección de idiomas preferidos por parte del usuario, 
 
 Las métricas se transmiten y almacenan en un servidor [Matomo](https://matomo.org/) autohospedado. Solo los dos desarrolladores principales tienen acceso a los datos. **No se comparten datos con terceros.**
 
-## How are metrics collected?
+## ¿Cómo se recopilan las métricas?
 
 Las métricas se **anonimizan** (p. ej., se elimina la dirección IP) en el servidor de Matomo después de recibirlas.
 
 ¡Ninguna información personal, como el texto que ingresó o los nombres de las notas, se recopila o almacena en el servidor!
 
-## ¿Qué se recoge?
+## ¿Qué se recopila?
 
 Se transmite cierta información básica como la resolución de pantalla, el sistema operativo y la versión de QOwnNotes utilizada.
 

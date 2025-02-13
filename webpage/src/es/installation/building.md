@@ -1,4 +1,4 @@
-# Construyendo QOwnNotes
+# Construir QOwnNotes
 
 ## Construyendo desde GitHub
 
@@ -45,7 +45,7 @@ Los archivos fuente serán accesibles de esta forma:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
 
-## Construyendo con Nix
+## Construir con Nix
 
 Si tiene el [gestos de paquetes de Nix](https://nixos.org/download/) disponible puede simplemente clonar el código fuente con git-clone, como se explicó anteriormente, y construirlo con:
 

@@ -5513,6 +5513,14 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
 <translation>Tsvaga mutauro</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation type="unfinished">Hide menu icons</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation type="unfinished">Status bar</translation>
 </message>

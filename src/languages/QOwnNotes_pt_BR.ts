@@ -5474,6 +5474,14 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <translation>Procurar pelo idioma</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation type="unfinished">Hide menu icons</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Barra de status</translation>
 </message>

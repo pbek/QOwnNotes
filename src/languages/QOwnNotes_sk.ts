@@ -5587,6 +5587,14 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
 <translation>Vyhľadajte jazyk</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation type="unfinished">Hide menu icons</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation type="unfinished">Status bar</translation>
 </message>

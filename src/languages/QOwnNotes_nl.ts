@@ -5482,6 +5482,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Zoek naar taal</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation>Pictogrammen verbergen in menu's en in het dialoogvenster "Actie zoeken". Vereist herstart om van kracht te worden</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation>Menupictogrammen verbergen</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Statusbalk</translation>
 </message>

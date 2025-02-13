@@ -5443,6 +5443,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>언어 검색</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation>메뉴와 "작업 찾기" 대화 상자에 아이콘 숨기기. 적용하려면 재시작이 필요합니다</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation>메뉴 아이콘 숨기기</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>상태 표시줄</translation>
 </message>
