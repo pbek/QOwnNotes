@@ -1261,16 +1261,16 @@ QAction *Utils::Gui::findActionByData(QMenu *menu, const QVariant &data) {
     return nullptr;
 }
 
-void Utils::Gui::applyInterfaceStyle() {
-    QSettings settings;
-    QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
+void Utils::Gui::applyInterfaceStyle(QString interfaceStyle) {
+    if (interfaceStyle.isEmpty()) {
+        interfaceStyle = SettingsService().value(QStringLiteral("interfaceStyle")).toString();
+    }
 
     // Apply custom style to hide menu icons
     if (Utils::Misc::areMenuIconsHidden()) {
         if (!interfaceStyle.isEmpty()) {
             // Apply the selected interface style and the custom style
-            QStyle *interfaceStyleClass =
-                QStyleFactory::create(interfaceStyle);    // or whatever style you want
+            QStyle *interfaceStyleClass = QStyleFactory::create(interfaceStyle);
             QApplication::setStyle(new NoMenuIconStyle(interfaceStyleClass));
         } else {
             // Apply the custom style only

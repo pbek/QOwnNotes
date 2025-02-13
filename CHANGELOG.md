@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.5
+- The main menu and command bar now has a cleaner user experience when icons are hidden
+  on GTK-based Linux desktops (for [#3230](https://github.com/pbek/QOwnNotes/pull/3230))
+
 ## 25.2.4
 - There now is a setting to hide the icons in the main menu and command bar in the *Interface settings*
   (for [#3230](https://github.com/pbek/QOwnNotes/pull/3230), thank you, @andrei-a-papou)

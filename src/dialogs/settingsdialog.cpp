@@ -3807,7 +3807,7 @@ void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
 }
 
 void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(const QString &arg1) {
-    QApplication::setStyle(arg1);
+    Utils::Gui::applyInterfaceStyle(arg1);
 
     // if the interface style was set to automatic we need a restart
     if (ui->interfaceStyleComboBox->currentIndex() == 0) {
