@@ -92,6 +92,7 @@
 #include <QWidgetAction>
 #include <QtConcurrent>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
+#include <libraries/qtwaitingspinner/waitingspinnerwidget.h>
 #include <memory>
 #include <utility>
 
@@ -3101,6 +3102,10 @@ void MainWindow::setupStatusBarWidgets() {
     _noteFilePathLabel = new NoteFilePathLabel(this);
     ui->statusBar->addWidget(_noteFilePathLabel);
 
+    initializeOpenAiActivitySpinner();
+    ui->statusBar->addPermanentWidget(_openAiActivitySpinner);
+    _openAiActivitySpinner->start();
+
     /*
      * setup of readonly button
      */
@@ -3140,6 +3145,21 @@ void MainWindow::setupStatusBarWidgets() {
             &MainWindow::on_actionCheck_for_updates_triggered);
 
     ui->statusBar->addPermanentWidget(_updateAvailableButton);
+}
+
+void MainWindow::initializeOpenAiActivitySpinner() {
+    _openAiActivitySpinner = new WaitingSpinnerWidget(0, false, false);
+    //    spinner->setMaximumHeight(ui->statusBar->height());
+
+    //    spinner->setRoundness(70.0);
+    //    spinner->setMinimumTrailOpacity(15.0);
+    //    spinner->setTrailFadePercentage(70.0);
+    _openAiActivitySpinner->setNumberOfLines(12);
+    _openAiActivitySpinner->setLineLength(5);
+    _openAiActivitySpinner->setLineWidth(2);
+    _openAiActivitySpinner->setInnerRadius(3);
+    _openAiActivitySpinner->setRevolutionsPerSecond(1);
+    _openAiActivitySpinner->setToolTip(tr("Waiting for answer from AI"));
 }
 
 void MainWindow::showUpdateAvailableButton(const QString &version) {

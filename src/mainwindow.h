@@ -73,6 +73,7 @@ class FakeVimHandler;
 class WebSocketServerService;
 class QOwnNotesMarkdownTextEdit;
 class CommandBar;
+class WaitingSpinnerWidget;
 class NoteFilePathLabel;
 struct TagHeader;
 
@@ -859,6 +860,9 @@ class MainWindow : public QMainWindow {
     bool _scriptUpdateFound = false;
     bool _isMaximizedBeforeFullScreen = false;
     bool _isMinimizedBeforeFullScreen = false;
+    WaitingSpinnerWidget *_openAiActivitySpinner = nullptr;
+
+    void initializeOpenAiActivitySpinner();
 
     void initTreeWidgets();
 
