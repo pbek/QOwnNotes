@@ -295,6 +295,8 @@ set(SOURCE_FILES
     libraries/qtcsv/src/sources/reader.cpp
     libraries/qtcsv/src/sources/filechecker.h
     libraries/qtcsv/src/sources/symbols.h
+    libraries/qtwaitingspinner/waitingspinnerwidget.h
+    libraries/qtwaitingspinner/waitingspinnerwidget.cpp
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp

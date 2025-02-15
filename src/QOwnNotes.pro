@@ -129,6 +129,7 @@ SOURCES += main.cpp\
     libraries/md4c/src/md4c.c \
     libraries/md4c/src/md4c-html.c \
     libraries/md4c/src/entity.c \
+    libraries/qtwaitingspinner/waitingspinnerwidget.cpp \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
@@ -338,6 +339,7 @@ HEADERS  += mainwindow.h \
     models/commandmodel.h \
     libraries/fuzzy/kfuzzymatcher.h \
     libraries/qr-code-generator/QrCode.hpp \
+    libraries/qtwaitingspinner/waitingspinnerwidget.h \
     widgets/notesubfoldertree.h \
     utils/urlhandler.h \
 
