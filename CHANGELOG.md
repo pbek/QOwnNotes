@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.7
+- The AI activity spinner will use white color in dark mode now
+  (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
+
 ## 25.2.6
 - There now is a setting to increase the API response timeout in the *AI settings*
   (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))

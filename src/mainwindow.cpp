@@ -3148,17 +3148,15 @@ void MainWindow::setupStatusBarWidgets() {
 
 void MainWindow::initializeOpenAiActivitySpinner() {
     _openAiActivitySpinner = new WaitingSpinnerWidget(0, false, false);
-    //    spinner->setMaximumHeight(ui->statusBar->height());
-
-    //    spinner->setRoundness(70.0);
-    //    spinner->setMinimumTrailOpacity(15.0);
-    //    spinner->setTrailFadePercentage(70.0);
     _openAiActivitySpinner->setNumberOfLines(12);
     _openAiActivitySpinner->setLineLength(5);
     _openAiActivitySpinner->setLineWidth(2);
     _openAiActivitySpinner->setInnerRadius(3);
     _openAiActivitySpinner->setRevolutionsPerSecond(1);
     _openAiActivitySpinner->setToolTip(tr("Waiting for answer from AI"));
+
+    const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
+    _openAiActivitySpinner->setColor(darkMode ? Qt::white : Qt::black);
 }
 
 void MainWindow::showUpdateAvailableButton(const QString &version) {
