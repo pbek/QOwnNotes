@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.6
+- Now a loading spinner is shown in the status bar during OpenAI activity
+  (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
+
 ## 25.2.5
 - The main menu and command bar now has a cleaner user experience when icons are hidden
   on GTK-based Linux desktops (for [#3230](https://github.com/pbek/QOwnNotes/pull/3230))
