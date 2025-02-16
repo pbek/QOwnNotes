@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 25.2.6
+- There now is a setting to increase the API response timeout in the *AI settings*
+  (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
 - Now a loading spinner is shown in the status bar during OpenAI activity
   (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
 

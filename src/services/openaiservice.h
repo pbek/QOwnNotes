@@ -54,6 +54,7 @@ class OpenAiService : public QObject {
     QStringList getModelsForBackend(const QString& backendId);
     QStringList getModelsForCurrentBackend();
     static OpenAiService* instance();
+    static int getResponseTimeout();
     static void deleteInstance();
     bool setBackendId(const QString& id);
     QString getBackendId();

@@ -910,6 +910,8 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("ai/openai/apiKey"),
                       CryptoService::instance()->encryptToString(ui->openAiApiKeyLineEdit->text()));
+    settings.setValue(QStringLiteral("ai/responseTimeout"),
+                      ui->openAiResponseTimeoutSpinBox->value());
 }
 
 /**
@@ -1378,6 +1380,8 @@ void SettingsDialog::readSettings() {
 
     ui->openAiApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ai/openai/apiKey")).toString()));
+
+    ui->openAiResponseTimeoutSpinBox->setValue(OpenAiService::getResponseTimeout());
 }
 
 /**

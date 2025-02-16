@@ -60,6 +60,10 @@ OpenAiService* OpenAiService::instance() {
     return service;
 }
 
+int OpenAiService::getResponseTimeout() {
+    return SettingsService().value(QStringLiteral("ai/responseTimeout"), 15).toInt();
+}
+
 /**
  * Creates a global instance of the class
  */
@@ -318,8 +322,8 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
     QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
 
-    // 15 sec timeout for the request
-    timer.start(15000);
+    // 15 sec timeout for the response by default
+    timer.start(OpenAiService::getResponseTimeout() * 1000);
 
     QUrl url(apiBaseUrl);
     QNetworkRequest request(url);
