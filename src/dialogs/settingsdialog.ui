@@ -3212,7 +3212,7 @@
                      <item row="4" column="0">
                       <widget class="QCheckBox" name="hideIconsInMenusCheckBox">
                        <property name="toolTip">
-                        <string>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</string>
+                        <string>Hide icons in menus as well as the &quot;Find action&quot; dialog. Requires restart to take effect</string>
                        </property>
                        <property name="text">
                         <string>Hide menu icons</string>
