@@ -3345,6 +3345,10 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Klik di sini untuk melihat apa yang telah berubah dan boleh dikemaskini kepada versi terkini</translation>
 </message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
+</message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
@@ -5623,6 +5627,23 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <translation type="unfinished">Test connection</translation>
 </message>
 <message>
+<source>API settings</source>
+<translation type="unfinished">API settings</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation type="unfinished">Response timeout:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>sec</translation>
+</message>
+<message>
 <source>AI backends added via the scripting engine</source>
 <translation type="unfinished">AI backends added via the scripting engine</translation>
 </message>
@@ -6049,7 +6070,7 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation>sec</translation>
+<translation type="unfinished">sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>

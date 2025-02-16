@@ -3357,6 +3357,10 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Nhấn vào đây để xem những gì đã thay đổi và để có thể cập nhật lên phiên bản mới nhất</translation>
 </message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
+</message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
@@ -5641,6 +5645,23 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <translation type="unfinished">Test connection</translation>
 </message>
 <message>
+<source>API settings</source>
+<translation type="unfinished">API settings</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation type="unfinished">Response timeout:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>giây</translation>
+</message>
+<message>
 <source>AI backends added via the scripting engine</source>
 <translation type="unfinished">AI backends added via the scripting engine</translation>
 </message>
@@ -6071,7 +6092,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation>giây</translation>
+<translation type="unfinished">sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>

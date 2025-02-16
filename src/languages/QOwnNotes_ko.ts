@@ -3347,6 +3347,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>변경된 내용을 확인하고 최신 버전으로 업데이트하려면 여기를 클릭하십시오</translation>
 </message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
+</message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
@@ -5621,6 +5625,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>연결 테스트</translation>
 </message>
 <message>
+<source>API settings</source>
+<translation type="unfinished">API settings</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation type="unfinished">Response timeout:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>초</translation>
+</message>
+<message>
 <source>AI backends added via the scripting engine</source>
 <translation>스크립팅 엔진을 통해 추가된 AI 백엔드</translation>
 </message>
@@ -6047,7 +6068,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation>초</translation>
+<translation type="unfinished">sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
