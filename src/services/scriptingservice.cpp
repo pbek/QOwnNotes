@@ -1471,10 +1471,21 @@ QString ScriptingService::aiComplete(const QString &prompt) {
 #ifndef INTEGRATION_TESTS
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != nullptr) {
+        mainWindow->enableOpenAiActivitySpinner();
+    }
 
-    return OpenAiService::instance()->complete(prompt);
+    const auto result = OpenAiService::instance()->complete(prompt);
+
+    if (mainWindow != nullptr) {
+        mainWindow->enableOpenAiActivitySpinner(false);
+    }
+
+    return result;
 #else
     Q_UNUSED(prompt)
+    return {};
 #endif
 }
 

@@ -235,6 +235,8 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE bool jumpToTag(int tagId);
 
+    void enableOpenAiActivitySpinner(bool enable = true);
+
    protected:
     void changeEvent(QEvent *event) override;
 

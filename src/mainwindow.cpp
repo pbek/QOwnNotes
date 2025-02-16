@@ -3104,7 +3104,6 @@ void MainWindow::setupStatusBarWidgets() {
 
     initializeOpenAiActivitySpinner();
     ui->statusBar->addPermanentWidget(_openAiActivitySpinner);
-    _openAiActivitySpinner->start();
 
     /*
      * setup of readonly button
@@ -12137,4 +12136,16 @@ void MainWindow::on_navigationTabWidget_currentChanged(int index) {
     Q_UNUSED(index)
 
     startNavigationParser();
+}
+
+void MainWindow::enableOpenAiActivitySpinner(bool enable) {
+    if (_openAiActivitySpinner == nullptr) {
+        return;
+    }
+
+    if (enable) {
+        _openAiActivitySpinner->start();
+    } else {
+        _openAiActivitySpinner->stop();
+    }
 }
