@@ -3376,7 +3376,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Esperando la respuesta de la IA</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -5661,15 +5661,15 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>Configuración de la API</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Tiempo de espera de respuesta:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>El tiempo que la aplicación esperará una respuesta del servidor antes de agotar el tiempo y devolver un mensaje de error.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6103,7 +6103,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation type="unfinished">sec</translation>
+<translation>segundo(s)</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>

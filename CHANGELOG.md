@@ -2,6 +2,7 @@
 
 ## 25.2.8
 - The latest available language models were added to the list of available OpenAI models
+- Added more Spanish, Korean, Dutch translation (thank you, alejandromoc, venusgirl, stephanp)
 
 ## 25.2.7
 - The AI activity spinner will use white color in dark mode now

@@ -3349,7 +3349,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>AI의 답변을 기다리는 중</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -5626,15 +5626,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>API 설정</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>응답 시간 초과:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>응용 프로그램이 서버의 응답을 기다렸다가 시간을 초과하고 오류 메시지를 반환하는 시간입니다.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6068,7 +6068,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation type="unfinished">sec</translation>
+<translation>초</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>

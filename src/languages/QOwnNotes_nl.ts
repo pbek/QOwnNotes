@@ -3377,7 +3377,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Wachten op antwoord van AI</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -5666,15 +5666,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>API-instellingen</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Time-out voor reactie:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>De tijd die de applicatie wacht op een reactie van de server voordat er een time-out optreedt en een foutmelding wordt geretourneerd.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6111,7 +6111,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation type="unfinished">sec</translation>
+<translation>sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
