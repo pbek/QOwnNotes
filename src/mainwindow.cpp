@@ -37,6 +37,7 @@
 #include <helpers/fakevimproxy.h>
 #include <helpers/flowlayout.h>
 #include <helpers/toolbarcontainer.h>
+#include <libraries/qtwaitingspinner/waitingspinnerwidget.h>
 #include <services/cryptoservice.h>
 #include <services/scriptingservice.h>
 #include <utils/git.h>
@@ -92,7 +93,6 @@
 #include <QWidgetAction>
 #include <QtConcurrent>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
-#include <libraries/qtwaitingspinner/waitingspinnerwidget.h>
 #include <memory>
 #include <utility>
 
