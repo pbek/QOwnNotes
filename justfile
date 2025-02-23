@@ -176,6 +176,11 @@ process-trace:
 generate-icons:
     cd icons &&./generate-icons.sh
 
+# Generate the SNAP_TOKEN_GH token for the snap GitHub release action (see https://github.com/canonical/action-publish)
+[group('snap')]
+snap-generate-token:
+    nix-shell -p snapcraft --run "snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -"
+
 # Format the nix files
 [group('linter')]
 nix-format:
