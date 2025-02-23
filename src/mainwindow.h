@@ -723,6 +723,8 @@ class MainWindow : public QMainWindow {
 
     void on_navigationTabWidget_currentChanged(int index);
 
+    void on_actionReattach_panels_triggered();
+
    public:
     /** Settings access **/
     static bool isInDistractionFreeMode();
@@ -1150,4 +1152,5 @@ class MainWindow : public QMainWindow {
     void generateAiModelComboBox();
     void generateAiModelMainMenu();
     void aiModelMainMenuSetCurrentItem();
+    static void handleDockWidgetLocking(QDockWidget *dockWidget);
 };

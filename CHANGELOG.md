@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.2.9
+- There now is a new action in the *Window menu* to reattach all floating panels in case
+  they can't be reattached manually anymore (for [#3109](https://github.com/pbek/QOwnNotes/pull/3109))
+
 ## 25.2.8
 - The latest available language models were added to the list of available OpenAI models
 - Added more Spanish, Korean, Dutch translation (thank you, alejandromoc, venusgirl, stephanp)

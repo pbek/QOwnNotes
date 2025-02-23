@@ -10332,13 +10332,7 @@ void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
                 continue;
             }
 
-            // remove the title bar widget
-            dockWidget->setTitleBarWidget(new QWidget());
-
-#ifndef Q_OS_MAC
-            // set 3px top margin for the enclosed widget
-            dockWidget->widget()->setContentsMargins(0, 3, 0, 0);
-#endif
+            handleDockWidgetLocking(dockWidget);
         }
     } else {
         // add the old title bar widgets to all dock widgets
@@ -10363,6 +10357,16 @@ void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
             dockWidget->widget()->setContentsMargins(0, 0, 0, 0);
         }
     }
+}
+
+void MainWindow::handleDockWidgetLocking(QDockWidget *dockWidget) {
+    // Remove the title bar widget
+    dockWidget->setTitleBarWidget(new QWidget());
+
+#ifndef Q_OS_MAC
+    // Set 3px top margin for the enclosed widget
+    dockWidget->widget()->setContentsMargins(0, 3, 0, 0);
+#endif
 }
 
 /**
@@ -12145,5 +12149,25 @@ void MainWindow::enableOpenAiActivitySpinner(bool enable) {
         _openAiActivitySpinner->start();
     } else {
         _openAiActivitySpinner->stop();
+    }
+}
+
+/**
+ * Reattaches all floating panels in case they can't be reattached manually anymore
+ */
+void MainWindow::on_actionReattach_panels_triggered() {
+    const QList<QDockWidget *> dockWidgets = findChildren<QDockWidget *>();
+
+    for (QDockWidget *dockWidget : dockWidgets) {
+        if (!dockWidget->isFloating()) {
+            continue;
+        }
+
+        dockWidget->setFloating(false);
+
+        // Remove the title bar if panels are locked
+        if (!ui->actionUnlock_panels->isChecked()) {
+            handleDockWidgetLocking(dockWidget);
+        }
     }
 }

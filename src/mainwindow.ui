@@ -1291,6 +1291,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="menuPanels"/>
     <addaction name="menuWorkspaces"/>
     <addaction name="actionUnlock_panels"/>
+    <addaction name="actionReattach_panels"/>
     <addaction name="separator"/>
     <addaction name="menuWorkspace"/>
     <addaction name="separator"/>
@@ -2317,6 +2318,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Unlock panels</string>
+   </property>
+  </action>
+  <action name="actionReattach_panels">
+   <property name="text">
+    <string>Reattach floating panels</string>
+   </property>
+   <property name="toolTip">
+    <string>Reattaches all floating panels</string>
    </property>
   </action>
   <action name="actionRemove_current_workspace">
