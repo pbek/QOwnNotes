@@ -223,6 +223,7 @@ SOURCES += main.cpp\
     libraries/fuzzy/kfuzzymatcher.cpp \
     libraries/qr-code-generator/QrCode.cpp \
     widgets/notesubfoldertree.cpp \
+    widgets/noterelationscene.cpp \
     utils/urlhandler.cpp
 
 HEADERS  += mainwindow.h \
@@ -341,6 +342,7 @@ HEADERS  += mainwindow.h \
     libraries/qr-code-generator/QrCode.hpp \
     libraries/qtwaitingspinner/waitingspinnerwidget.h \
     widgets/notesubfoldertree.h \
+    widgets/noterelationscene.h \
     utils/urlhandler.h \
 
 FORMS    += mainwindow.ui \

@@ -1153,4 +1153,5 @@ class MainWindow : public QMainWindow {
     void generateAiModelMainMenu();
     void aiModelMainMenuSetCurrentItem();
     static void handleDockWidgetLocking(QDockWidget *dockWidget);
+    void setupNoteRelationScene() const;
 };

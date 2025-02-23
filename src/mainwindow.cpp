@@ -61,6 +61,7 @@
 #include <QDirIterator>
 #include <QDockWidget>
 #include <QFile>
+#include <QGraphicsView>
 #include <QInputDialog>
 #include <QJSEngine>
 #include <QKeyEvent>
@@ -126,6 +127,7 @@
 #include "utils/urlhandler.h"
 #include "version.h"
 #include "widgets/htmlpreviewwidget.h"
+#include "widgets/noterelationscene.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
 static MainWindow *s_self = nullptr;
@@ -890,6 +892,9 @@ void MainWindow::initDockWidgets() {
     _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget, Qt::Horizontal);
 
+    // TODO: Enable if ready
+    //    setupNoteRelationScene();
+
     _logDockWidget = new QDockWidget(tr("Log"), this);
     _logDockWidget->setObjectName(QStringLiteral("logDockWidget"));
     _logDockWidget->setWidget(_logWidget);
@@ -954,6 +959,22 @@ void MainWindow::initDockWidgets() {
 
     // initialize the panel menu
     initPanelMenu();
+}
+
+void MainWindow::setupNoteRelationScene() const {
+    // TODO: Do real implementation
+    auto *scene = new NoteRelationScene();
+    scene->setSceneRect(0, 0, 800, 600);
+    scene->init();
+
+    auto *view = new QGraphicsView(scene);
+    view->setRenderHint(QPainter::Antialiasing);
+    view->setBackgroundBrush(QBrush(Qt::lightGray));
+    view->resize(850, 650);
+    view->setWindowTitle("Note Relation Editor");
+
+    view->show();
+    ui->noteViewFrame->layout()->addWidget(view);
 }
 
 /**

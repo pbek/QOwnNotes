@@ -401,6 +401,8 @@ set(SOURCE_FILES
     widgets/htmlpreviewwidget.cpp
     widgets/notesubfoldertree.cpp
     widgets/notesubfoldertree.h
+    widgets/noterelationscene.cpp
+    widgets/noterelationscene.h
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp
