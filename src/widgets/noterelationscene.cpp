@@ -129,6 +129,8 @@ void NoteRelationScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
 }
 
 void NoteRelationScene::createNote(const QPointF &pos, const QString &noteName) {
+    Q_UNUSED(noteName)
+
     // TODO: Handle memory leak
     auto *note = new NoteItem(0, 0, 100, 60);
     note->setPos(pos - QPointF(50, 30));
