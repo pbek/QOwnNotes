@@ -697,6 +697,9 @@
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QGraphicsView" name="noteGraphicsView"/>
+             </item>
             </layout>
            </widget>
           </item>

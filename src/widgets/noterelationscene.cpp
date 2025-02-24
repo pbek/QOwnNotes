@@ -13,6 +13,8 @@
 
 #include "noterelationscene.h"
 
+#include <QDebug>
+
 // NoteItem Implementation
 NoteItem::NoteItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent)
     : QGraphicsRectItem(x, y, width, height, parent) {
@@ -60,6 +62,7 @@ void ConnectionLine::updatePosition() {
     if (!m_startItem || !m_endItem) return;
 
     QPointF startCenter = m_startItem->rect().center() + m_startItem->pos();
+    // TODO: Fix crash after scene was cleared and new items were created
     QPointF endCenter = m_endItem->rect().center() + m_endItem->pos();
 
     setLine(QLineF(startCenter, endCenter));
@@ -125,19 +128,26 @@ void NoteRelationScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
     }
 }
 
-void NoteRelationScene::createNote(const QPointF &pos) {
+void NoteRelationScene::createNote(const QPointF &pos, const QString &noteName) {
+    // TODO: Handle memory leak
     auto *note = new NoteItem(0, 0, 100, 60);
     note->setPos(pos - QPointF(50, 30));
     addItem(note);
 }
 
 void NoteRelationScene::createConnection(NoteItem *startItem, NoteItem *endItem) {
+    // TODO: Handle memory leak
     auto *connection = new ConnectionLine(startItem, endItem);
     addItem(connection);
     m_connections.push_back(connection);
 }
 
-void NoteRelationScene::init() {
+void NoteRelationScene::drawForNote(const Note &note) {
+    clear();
+    qDebug() << __func__ << " - 'note': " << note;
+
+    // TODO: Draw note item from note data
+    // TODO: Write note name on note item
     createNote(QPointF(100, 100));
     createNote(QPointF(300, 100));
     createNote(QPointF(200, 200));

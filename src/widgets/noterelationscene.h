@@ -20,6 +20,8 @@
 #include <QPainter>
 #include <vector>
 
+#include "entities/note.h"
+
 class NoteItem;
 class ConnectionLine;
 
@@ -54,7 +56,7 @@ class NoteRelationScene : public QGraphicsScene {
 
    public:
     explicit NoteRelationScene(QObject *parent = nullptr);
-    void init();
+    void drawForNote(const Note &note);
 
    protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
@@ -62,7 +64,7 @@ class NoteRelationScene : public QGraphicsScene {
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
 
    private:
-    void createNote(const QPointF &pos);
+    void createNote(const QPointF &pos, const QString &noteName = QString());
     void createConnection(NoteItem *startItem, NoteItem *endItem);
 
     bool m_connecting;

@@ -892,8 +892,15 @@ void MainWindow::initDockWidgets() {
     _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget, Qt::Horizontal);
 
-    // TODO: Enable if ready
-    //    setupNoteRelationScene();
+    _noteGraphicsViewDockWidget = new QDockWidget(tr("Note relations"), this);
+    _noteGraphicsViewDockWidget->setObjectName(QStringLiteral("noteGraphicsViewDockWidget"));
+    _noteGraphicsViewDockWidget->setWidget(ui->noteGraphicsView);
+    _noteGraphicsViewDockTitleBarWidget = _noteGraphicsViewDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _noteGraphicsViewDockWidget, Qt::Horizontal);
+    _noteGraphicsViewDockWidget->hide();
+    // Prevent that widget can't be seen when enabled
+    _noteGraphicsViewDockWidget->setMinimumHeight(20);
+    setupNoteRelationScene();
 
     _logDockWidget = new QDockWidget(tr("Log"), this);
     _logDockWidget->setObjectName(QStringLiteral("logDockWidget"));
@@ -961,20 +968,10 @@ void MainWindow::initDockWidgets() {
     initPanelMenu();
 }
 
-void MainWindow::setupNoteRelationScene() const {
-    // TODO: Do real implementation
-    auto *scene = new NoteRelationScene();
-    scene->setSceneRect(0, 0, 800, 600);
-    scene->init();
-
-    auto *view = new QGraphicsView(scene);
-    view->setRenderHint(QPainter::Antialiasing);
-    view->setBackgroundBrush(QBrush(Qt::lightGray));
-    view->resize(850, 650);
-    view->setWindowTitle("Note Relation Editor");
-
-    view->show();
-    ui->noteViewFrame->layout()->addWidget(view);
+void MainWindow::setupNoteRelationScene() {
+    _noteRelationScene = new NoteRelationScene();
+    ui->noteGraphicsView->setScene(_noteRelationScene);
+    ui->noteGraphicsView->setRenderHint(QPainter::Antialiasing);
 }
 
 /**
@@ -3891,6 +3888,10 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     Note::externalImageHash()->clear();
 
     ui->actionToggle_distraction_free_mode->setEnabled(true);
+
+    if (_noteRelationScene && _noteGraphicsViewDockWidget->isVisible()) {
+        _noteRelationScene->drawForNote(currentNote);
+    }
 }
 
 void MainWindow::updateCurrentTabData(const Note &note) const {
@@ -10372,6 +10373,7 @@ void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
         _notePreviewDockWidget->setTitleBarWidget(_notePreviewDockTitleBarWidget);
         _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
         _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
+        _noteGraphicsViewDockWidget->setTitleBarWidget(_noteGraphicsViewDockTitleBarWidget);
 
         for (QDockWidget *dockWidget : dockWidgets) {
             // reset the top margin of the enclosed widget
@@ -10639,6 +10641,7 @@ void MainWindow::restoreCurrentWorkspace() {
         _noteNavigationDockWidget->setVisible(false);
         _noteTagDockWidget->setVisible(false);
         _notePreviewDockWidget->setVisible(false);
+        _noteGraphicsViewDockWidget->setVisible(false);
         createNewWorkspace(tr("minimal", "minimal workspace"));
 
         // TODO: maybe still create those workspaces initially?

@@ -75,6 +75,7 @@ class QOwnNotesMarkdownTextEdit;
 class CommandBar;
 class WaitingSpinnerWidget;
 class NoteFilePathLabel;
+class NoteRelationScene;
 struct TagHeader;
 
 // forward declaration because of "xxx does not name a type"
@@ -816,6 +817,7 @@ class MainWindow : public QMainWindow {
     QDockWidget *_notePreviewDockWidget;
     QDockWidget *_logDockWidget;
     QDockWidget *_scriptingDockWidget;
+    QDockWidget *_noteGraphicsViewDockWidget;
     class LogWidget *_logWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
@@ -828,6 +830,8 @@ class MainWindow : public QMainWindow {
     QWidget *_notePreviewDockTitleBarWidget;
     QWidget *_logDockTitleBarWidget;
     QWidget *_scriptingDockTitleBarWidget;
+    QWidget *_noteGraphicsViewDockTitleBarWidget;
+    NoteRelationScene *_noteRelationScene;
     QComboBox *_workspaceComboBox;
     QComboBox *_aiBackendComboBox;
     QComboBox *_aiModelComboBox;
@@ -1153,5 +1157,5 @@ class MainWindow : public QMainWindow {
     void generateAiModelMainMenu();
     void aiModelMainMenuSetCurrentItem();
     static void handleDockWidgetLocking(QDockWidget *dockWidget);
-    void setupNoteRelationScene() const;
+    void setupNoteRelationScene();
 };
