@@ -1453,6 +1453,10 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
             newVisibility =
                 NoteFolder::isCurrentShowSubfolders() && !Utils::Misc::isEnableNoteTree();
         }
+    } else if (objectName == QStringLiteral("noteGraphicsViewDockWidget")) {
+        if (newVisibility) {
+            _noteRelationScene->drawForNote(currentNote);
+        }
     }
 
     dockWidget->setVisible(newVisibility);

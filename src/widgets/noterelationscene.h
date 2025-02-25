@@ -28,12 +28,13 @@ class ConnectionLine;
 // Note rectangle item representing a note
 class NoteItem : public QGraphicsRectItem {
    public:
-    NoteItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr);
+    NoteItem(const QString &noteName, qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr);
 
    protected:
     QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
+    QString _noteName;
 
    private:
     void emit_position_changed();
@@ -56,7 +57,7 @@ class NoteRelationScene : public QGraphicsScene {
 
    public:
     explicit NoteRelationScene(QObject *parent = nullptr);
-    void drawForNote(const Note &note);
+    void drawForNote(Note &note);
 
    protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event) override;

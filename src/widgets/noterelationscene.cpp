@@ -16,7 +16,7 @@
 #include <QDebug>
 
 // NoteItem Implementation
-NoteItem::NoteItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent)
+NoteItem::NoteItem(const QString &noteName, qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent)
     : QGraphicsRectItem(x, y, width, height, parent) {
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
@@ -24,6 +24,7 @@ NoteItem::NoteItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *p
 
     setBrush(QBrush(Qt::white));
     setPen(QPen(Qt::black, 2));
+    _noteName = noteName;
 }
 
 QVariant NoteItem::itemChange(GraphicsItemChange change, const QVariant &value) {
@@ -35,7 +36,7 @@ QVariant NoteItem::itemChange(GraphicsItemChange change, const QVariant &value) 
 
 void NoteItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
     QGraphicsRectItem::paint(painter, option, widget);
-    painter->drawText(rect().adjusted(5, 5, -5, -5), Qt::AlignCenter, "Note");
+    painter->drawText(rect().adjusted(5, 5, -5, -5), Qt::AlignCenter, _noteName);
 }
 
 void NoteItem::mousePressEvent(QGraphicsSceneMouseEvent *event) {
@@ -61,6 +62,7 @@ ConnectionLine::ConnectionLine(NoteItem *startItem, NoteItem *endItem, QGraphics
 void ConnectionLine::updatePosition() {
     if (!m_startItem || !m_endItem) return;
 
+    // TODO: Fix crash after scene was cleared and new items were created
     QPointF startCenter = m_startItem->rect().center() + m_startItem->pos();
     // TODO: Fix crash after scene was cleared and new items were created
     QPointF endCenter = m_endItem->rect().center() + m_endItem->pos();
@@ -132,8 +134,9 @@ void NoteRelationScene::createNote(const QPointF &pos, const QString &noteName) 
     Q_UNUSED(noteName)
 
     // TODO: Handle memory leak
-    auto *note = new NoteItem(0, 0, 100, 60);
+    auto *note = new NoteItem(noteName, 0, 0, 100, 60);
     note->setPos(pos - QPointF(50, 30));
+    // The scene is taking ownership over the note item
     addItem(note);
 }
 
@@ -144,17 +147,25 @@ void NoteRelationScene::createConnection(NoteItem *startItem, NoteItem *endItem)
     m_connections.push_back(connection);
 }
 
-void NoteRelationScene::drawForNote(const Note &note) {
+void NoteRelationScene::drawForNote(Note &note) {
     clear();
     qDebug() << __func__ << " - 'note': " << note;
 
     // TODO: Draw note item from note data
-    // TODO: Write note name on note item
-    createNote(QPointF(100, 100));
-    createNote(QPointF(300, 100));
-    createNote(QPointF(200, 200));
-    createConnection(dynamic_cast<NoteItem *>(items().at(0)),
-                     dynamic_cast<NoteItem *>(items().at(1)));
-    createConnection(dynamic_cast<NoteItem *>(items().at(1)),
-                     dynamic_cast<NoteItem *>(items().at(2)));
+    createNote(QPointF(100, 100), note.getName());
+    auto linkedNotes = note.findLinkedNotes();
+
+    for (const auto& linkedNote : linkedNotes.keys()) {
+        // TODO: Spread note around the root note
+        createNote(QPointF(200, 200), linkedNote.getName());
+        createConnection(dynamic_cast<NoteItem *>(items().at(0)),
+                         dynamic_cast<NoteItem *>(items().at(1)));
+    }
+
+//    createNote(QPointF(300, 100));
+//    createNote(QPointF(200, 200));
+//    createConnection(dynamic_cast<NoteItem *>(items().at(0)),
+//                     dynamic_cast<NoteItem *>(items().at(1)));
+//    createConnection(dynamic_cast<NoteItem *>(items().at(1)),
+//                     dynamic_cast<NoteItem *>(items().at(2)));
 }
