@@ -3084,6 +3084,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
             // reload the directory list if note name has changed
             loadNoteDirectoryList();
         }
+
+        updateNoteGraphicsView();
     }
 }
 
@@ -3893,6 +3895,10 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
 
     ui->actionToggle_distraction_free_mode->setEnabled(true);
 
+    updateNoteGraphicsView();
+}
+
+void MainWindow::updateNoteGraphicsView() {
     if (_noteRelationScene && _noteGraphicsViewDockWidget->isVisible()) {
         _noteRelationScene->drawForNote(currentNote);
     }
