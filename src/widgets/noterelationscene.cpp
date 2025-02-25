@@ -89,8 +89,8 @@ void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
 NoteItem* NoteRelationScene::createNoteItem(const QPointF &pos, const QString &noteName, int level) {
     Q_UNUSED(noteName)
 
-    qreal xpos = fmax(120 - level * 10, 80);
-    qreal ypos = fmax(80 - level * 6, 40);
+    qreal xpos = fmax(140 - level * 20, 80);
+    qreal ypos = fmax(90 - level * 15, 40);
     auto *noteItem = new NoteItem(noteName, 0, 0, xpos, ypos);
     noteItem->setPos(pos - QPointF(xpos / 2, ypos / 2));
     // The scene is taking ownership over the note item
