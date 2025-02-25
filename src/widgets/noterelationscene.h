@@ -60,16 +60,15 @@ class NoteRelationScene : public QGraphicsScene {
     void drawForNote(Note &note);
 
    protected:
-    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
 
    private:
-    void createNote(const QPointF &pos, const QString &noteName = QString());
+    NoteItem* createNoteItem(const QPointF &pos, const QString &noteName = QString(), int level = 0);
     void createConnection(NoteItem *startItem, NoteItem *endItem);
 
     bool m_connecting;
     QGraphicsLineItem *m_tempLine;
     NoteItem *m_startItem;
     std::vector<ConnectionLine *> m_connections;
+    static QPointF calculateRadialPosition(QPointF center, int index, int total, qreal radius);
 };
