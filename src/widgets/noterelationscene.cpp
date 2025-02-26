@@ -14,6 +14,10 @@
 #include "noterelationscene.h"
 
 #include <QDebug>
+#include <QGraphicsView>
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#include <QRandomGenerator>
+#endif
 #include <cmath>
 
 #include "mainwindow.h"
@@ -27,8 +31,8 @@ NoteItem::NoteItem(Note &note, qreal x, qreal y, qreal width, qreal height, int 
     setFlag(QGraphicsItem::ItemSendsGeometryChanges);
 
     setBrush(QBrush(Qt::white));
-    // TODO: Take level into account
-    setPen(QPen(Qt::black, 2));
+    const int penWidth = std::max(5 - level, 2);
+    setPen(QPen(Qt::black, penWidth));
     setToolTip(QObject::tr("Double-click to open note"));
     _noteName = note.getName();
     _noteId = note.getId();
@@ -82,9 +86,7 @@ void ConnectionLine::updatePosition() {
 
 // NoteRelationScene Implementation
 NoteRelationScene::NoteRelationScene(QObject *parent)
-    : QGraphicsScene(parent), m_connecting(false), m_tempLine(nullptr), m_startItem(nullptr) {
-    //    setItemIndexMethod(QGraphicsScene::ItemIndexMethod::NoIndex);
-}
+    : QGraphicsScene(parent), m_connecting(false), m_tempLine(nullptr), m_startItem(nullptr) {}
 
 void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     if (m_connecting && m_tempLine && m_startItem) {
@@ -102,8 +104,25 @@ void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
 NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note &note, int level) {
     qreal xpos = fmax(140 - level * 20, 80);
     qreal ypos = fmax(90 - level * 15, 40);
+    auto posPoint = QPointF(pos - QPointF(xpos / 2, ypos / 2));
+
+    int tries = 0;
+    while (!items(posPoint).empty() && tries++ < 10) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+        int randomX = qrand();
+        int randomY = qrand();
+#else
+        auto randomX = QRandomGenerator::global()->generate();
+        auto randomY = QRandomGenerator::global()->generate();
+#endif
+
+        int randX = static_cast<int>(randomX % 150) - 75;
+        int randY = static_cast<int>(randomY % 150) - 75;
+        posPoint = QPointF(pos - QPointF(randX, randY));
+    }
+
     auto *noteItem = new NoteItem(note, 0, 0, xpos, ypos, level);
-    noteItem->setPos(pos - QPointF(xpos / 2, ypos / 2));
+    noteItem->setPos(posPoint);
     // The scene is taking ownership over the note item
     addItem(noteItem);
 
