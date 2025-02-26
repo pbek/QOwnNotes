@@ -16,16 +16,22 @@
 #include <QDebug>
 #include <cmath>
 
+#include "mainwindow.h"
+
 // NoteItem Implementation
-NoteItem::NoteItem(const QString &noteName, qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent)
+NoteItem::NoteItem(Note &note, qreal x, qreal y, qreal width, qreal height, int level,
+                   QGraphicsItem *parent)
     : QGraphicsRectItem(x, y, width, height, parent) {
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
     setFlag(QGraphicsItem::ItemSendsGeometryChanges);
 
     setBrush(QBrush(Qt::white));
+    // TODO: Take level into account
     setPen(QPen(Qt::black, 2));
-    _noteName = noteName;
+    setToolTip(QObject::tr("Double-click to open note"));
+    _noteName = note.getName();
+    _noteId = note.getId();
 }
 
 QVariant NoteItem::itemChange(GraphicsItemChange change, const QVariant &value) {
@@ -40,10 +46,15 @@ void NoteItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
     painter->drawText(rect().adjusted(5, 5, -5, -5), Qt::AlignCenter, _noteName);
 }
 
-void NoteItem::mousePressEvent(QGraphicsSceneMouseEvent *event) {
+void NoteItem::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
-//        setSelected(true);
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow != nullptr) {
+            mainWindow->setCurrentNoteFromNoteId(_noteId);
+            return;
+        }
     }
+
     QGraphicsRectItem::mousePressEvent(event);
 }
 
@@ -71,7 +82,9 @@ void ConnectionLine::updatePosition() {
 
 // NoteRelationScene Implementation
 NoteRelationScene::NoteRelationScene(QObject *parent)
-    : QGraphicsScene(parent), m_connecting(false), m_tempLine(nullptr), m_startItem(nullptr) {}
+    : QGraphicsScene(parent), m_connecting(false), m_tempLine(nullptr), m_startItem(nullptr) {
+    //    setItemIndexMethod(QGraphicsScene::ItemIndexMethod::NoIndex);
+}
 
 void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     if (m_connecting && m_tempLine && m_startItem) {
@@ -86,12 +99,10 @@ void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     }
 }
 
-NoteItem* NoteRelationScene::createNoteItem(const QPointF &pos, const QString &noteName, int level) {
-    Q_UNUSED(noteName)
-
+NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note &note, int level) {
     qreal xpos = fmax(140 - level * 20, 80);
     qreal ypos = fmax(90 - level * 15, 40);
-    auto *noteItem = new NoteItem(noteName, 0, 0, xpos, ypos);
+    auto *noteItem = new NoteItem(note, 0, 0, xpos, ypos, level);
     noteItem->setPos(pos - QPointF(xpos / 2, ypos / 2));
     // The scene is taking ownership over the note item
     addItem(noteItem);
@@ -109,33 +120,8 @@ void NoteRelationScene::drawForNote(Note &note) {
     m_connections.clear();
     clear();
 
-    auto rootNoteItem = createNoteItem(QPointF(100, 100), note.getName());
-    auto linkedNotes = note.findLinkedNotes();
-
-    // Get root note position (center)
-    QPointF rootCenter = rootNoteItem->pos() + rootNoteItem->rect().center();
-
-    // Calculate radius based on number of notes
-    qreal radius = 200.0; // Base radius
-    if (linkedNotes.size() > 5) {
-        radius = 200.0 + (linkedNotes.size() - 5) * 20.0; // Increase radius for more notes
-    }
-
-    // Create linked notes around the root
-    int index = 0;
-    const int level = 1;
-    for (auto it = linkedNotes.begin(); it != linkedNotes.end(); ++it) {
-        // Calculate position in a circle around the root note
-        QPointF notePos = calculateRadialPosition(rootCenter, index, linkedNotes.size(), radius);
-
-        // Create note at calculated position
-        NoteItem* linkedNote = createNoteItem(notePos, it.key().getName(), level);
-
-        // Create connection between root and this note
-        createConnection(rootNoteItem, linkedNote);
-
-        index++;
-    }
+    auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
+    createLinkedNoteItems(note, rootNoteItem);
 
     // Update all connections
     for (auto connection : m_connections) {
@@ -146,7 +132,42 @@ void NoteRelationScene::drawForNote(Note &note) {
     update();
 }
 
-QPointF NoteRelationScene::calculateRadialPosition(QPointF center, int index, int total, qreal radius) {
+void NoteRelationScene::createLinkedNoteItems(Note &note, NoteItem *rootNoteItem, int level) {
+    auto linkedNotes = note.findLinkedNotes();
+
+    // Get root note position (center)
+    QPointF rootCenter = rootNoteItem->pos() + rootNoteItem->rect().center();
+
+    // Calculate radius based on number of notes
+    qreal radius = 200.0;    // Base radius
+    if (linkedNotes.size() > 5) {
+        radius = 200.0 + (linkedNotes.size() - 5) * 20.0;    // Increase radius for more notes
+    }
+
+    // Create linked notes around the root
+    int index = 0;
+    level = level + 1;
+    for (auto it = linkedNotes.begin(); it != linkedNotes.end(); ++it) {
+        // Calculate position in a circle around the root note item
+        QPointF notePos = calculateRadialPosition(rootCenter, index, linkedNotes.size(), radius);
+        Note linkedNote = it.key();
+
+        // Create note item at calculated position
+        NoteItem *linkedNoteItem = createNoteItem(notePos, linkedNote, level);
+
+        // Create connection between root and this note
+        createConnection(rootNoteItem, linkedNoteItem);
+
+        if (level < 4) {
+            createLinkedNoteItems(linkedNote, linkedNoteItem, level);
+        }
+
+        index++;
+    }
+}
+
+QPointF NoteRelationScene::calculateRadialPosition(QPointF center, int index, int total,
+                                                   qreal radius) {
     if (total <= 0) return center;
 
     // Calculate angle

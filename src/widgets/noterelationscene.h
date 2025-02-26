@@ -28,13 +28,15 @@ class ConnectionLine;
 // Note rectangle item representing a note
 class NoteItem : public QGraphicsRectItem {
    public:
-    NoteItem(const QString &noteName, qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr);
+    NoteItem(Note &note, qreal x, qreal y, qreal width, qreal height, int level = 0,
+             QGraphicsItem *parent = nullptr);
 
    protected:
     QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
-    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
+    void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
     QString _noteName;
+    int _noteId;
 
    private:
     void emit_position_changed();
@@ -63,7 +65,7 @@ class NoteRelationScene : public QGraphicsScene {
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
 
    private:
-    NoteItem* createNoteItem(const QPointF &pos, const QString &noteName = QString(), int level = 0);
+    NoteItem *createNoteItem(const QPointF &pos, Note &note, int level = 0);
     void createConnection(NoteItem *startItem, NoteItem *endItem);
 
     bool m_connecting;
@@ -71,4 +73,5 @@ class NoteRelationScene : public QGraphicsScene {
     NoteItem *m_startItem;
     std::vector<ConnectionLine *> m_connections;
     static QPointF calculateRadialPosition(QPointF center, int index, int total, qreal radius);
+    void createLinkedNoteItems(Note &note, NoteItem *rootNoteItem, int level = 0);
 };
