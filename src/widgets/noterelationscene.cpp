@@ -33,7 +33,7 @@ NoteItem::NoteItem(Note &note, qreal x, qreal y, qreal width, qreal height, int 
     setBrush(QBrush(Qt::white));
     const int penWidth = std::max(5 - level, 2);
     setPen(QPen(Qt::black, penWidth));
-    setToolTip(QObject::tr("Double-click to open note"));
+    setToolTip(QStringLiteral("<b>") + note.getName() + QStringLiteral("</b><br>") + QObject::tr("Double-click to open note"));
     _noteName = note.getName();
     _noteId = note.getId();
 }
