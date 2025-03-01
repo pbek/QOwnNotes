@@ -105,9 +105,10 @@ NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note &note, int 
     qreal xpos = fmax(140 - level * 20, 80);
     qreal ypos = fmax(90 - level * 15, 40);
     auto posPoint = QPointF(pos - QPointF(xpos / 2, ypos / 2));
+    auto rect = QRectF(pos, QSizeF(xpos, ypos));
 
     int tries = 0;
-    while (!items(posPoint).empty() && tries++ < 10) {
+    while (!items(rect).empty() && tries++ < 10) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
         int randomX = qrand();
         int randomY = qrand();
@@ -119,6 +120,8 @@ NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note &note, int 
         int randX = static_cast<int>(randomX % 150) - 75;
         int randY = static_cast<int>(randomY % 150) - 75;
         posPoint = QPointF(pos - QPointF(randX, randY));
+        rect = QRectF(posPoint - QPointF(xpos / 2, ypos / 2), QSizeF(xpos, ypos));
+        // qDebug() << __func__ << " - 'tries': " << tries;
     }
 
     auto *noteItem = new NoteItem(note, 0, 0, xpos, ypos, level);
