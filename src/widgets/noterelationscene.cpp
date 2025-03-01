@@ -177,7 +177,7 @@ void NoteRelationScene::createLinkedNoteItems(Note &note, NoteItem *rootNoteItem
         // Create connection between root and this note
         createConnection(rootNoteItem, linkedNoteItem);
 
-        if (level < 4) {
+        if (level < 3) {
             createLinkedNoteItems(linkedNote, linkedNoteItem, level);
         }
 
