@@ -2115,6 +2115,14 @@
 <translation>Sblocca pannelli</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Rimuovi area di lavoro attuale</translation>
 </message>
@@ -3291,6 +3299,10 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Anteprima nota</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Registro</translation>
 </message>
@@ -4078,6 +4090,10 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <source>Note creation failed</source>
 <translation>Creazione nota non riuscita</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

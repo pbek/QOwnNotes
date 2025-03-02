@@ -2115,6 +2115,14 @@
 <translation>Panelek feloldása</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Aktuális munkaterület eltávolítása</translation>
 </message>
@@ -3291,6 +3299,10 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>Jegyzet előnézet</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Napló</translation>
 </message>
@@ -4078,6 +4090,10 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <source>Note creation failed</source>
 <translation>A jegyzet létrehozása nem sikerült</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

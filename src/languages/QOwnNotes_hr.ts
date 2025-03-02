@@ -2124,6 +2124,14 @@
 <translation>Otključaj kontrolnu ploču</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Ukloni izabrani radni prostor</translation>
 </message>
@@ -3320,6 +3328,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Pregled bilješke</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Protokol</translation>
 </message>
@@ -4118,6 +4130,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Note creation failed</source>
 <translation>Neuspjela izrada bilješke</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

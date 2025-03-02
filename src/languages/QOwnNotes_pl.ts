@@ -2133,6 +2133,14 @@
 <translation>Odblokuj panele</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Usuń bieżący obszar roboczy</translation>
 </message>
@@ -3359,6 +3367,10 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation>Podgląd notatki</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Dziennik zdarzeń</translation>
 </message>
@@ -4166,6 +4178,10 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 <message>
 <source>Note creation failed</source>
 <translation>Utworzenie notatki nie powiodło się</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

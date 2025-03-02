@@ -2106,6 +2106,14 @@
 <translation>パネルの固定解除</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>現在のワークスペースを削除</translation>
 </message>
@@ -3272,6 +3280,10 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation>ノートのプレビュー</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>ログ</translation>
 </message>
@@ -4058,6 +4070,10 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>Note creation failed</source>
 <translation>メモの作成に失敗しました</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

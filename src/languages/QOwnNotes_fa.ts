@@ -2115,6 +2115,14 @@
 <translation>گشودن پنل ها</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>حذف فضای کاری کنونی</translation>
 </message>
@@ -3295,6 +3303,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>پیش نمایش یادداشت</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>سیاهه</translation>
 </message>
@@ -4089,6 +4101,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Note creation failed</source>
 <translation>ایجاد یادداشت انجام نشد</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

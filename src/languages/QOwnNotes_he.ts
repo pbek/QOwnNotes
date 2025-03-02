@@ -2137,6 +2137,14 @@
 <translation>בטל נעילת לוחות</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>הסר את סביבת העבודה הנוכחית</translation>
 </message>
@@ -3370,6 +3378,10 @@ n note הועבר לתיקיית המשנה הערה "%2"</numerusform>
 <translation>הערה בתצוגה מקדימה</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>יומן</translation>
 </message>
@@ -4233,6 +4245,10 @@ n note הועבר לתיקיית המשנה הערה "%2"</numerusform>
 <message>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

@@ -2106,6 +2106,14 @@
 <translation>解鎖面板</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>移除目前工作空間</translation>
 </message>
@@ -3263,6 +3271,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>筆記預覽</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>日誌</translation>
 </message>
@@ -4049,6 +4061,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

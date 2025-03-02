@@ -2109,6 +2109,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>패널 잠금 해제</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>플로팅 패널 다시 부착</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>모든 플로팅 패널을 다시 부착</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>현재 작업 공간 제거</translation>
 </message>
@@ -3264,6 +3272,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트 미리보기</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>로그</translation>
 </message>
@@ -4042,6 +4054,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Note creation failed</source>
 <translation>노트 만들기 실패</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

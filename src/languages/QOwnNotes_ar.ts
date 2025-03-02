@@ -2152,6 +2152,14 @@
 <translation>فكّ قفل اللوحات</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>أزل مساحة العمل الحالية</translation>
 </message>
@@ -3426,6 +3434,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>معاينة الملاحظة</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>سجل</translation>
 </message>
@@ -4256,6 +4268,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Note creation failed</source>
 <translation>فشل إنشاء الملاحظة</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

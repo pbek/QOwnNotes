@@ -17,5 +17,5 @@ Las diversas formas de involucrarse con QOwnNotes
 - Comparta sus scripts en la [**Scripts de QOwnNotes** página de GitHub](https://github.com/qownnotes/scripts)
 
 ::: tip
-Importante Lea el [código de conducta](./code-of-conduct.md) antes de involucrarse.
+Importante ¡Lea el [código de conducta](./code-of-conduct.md) antes de involucrarse!
 :::

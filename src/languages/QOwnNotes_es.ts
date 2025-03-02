@@ -2115,6 +2115,14 @@
 <translation>Desbloquear paneles</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>Volver a colocar los paneles flotantes</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>Vuelve a colocar todos los paneles flotantes</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Eliminar espacio de trabajo actual</translation>
 </message>
@@ -3291,6 +3299,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Vista previa de notas</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Registro</translation>
 </message>
@@ -4079,6 +4091,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Note creation failed</source>
 <translation>Error al crear la nota</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

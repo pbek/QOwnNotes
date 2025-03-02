@@ -2109,6 +2109,14 @@
 <translation>Fixa/allibera panells</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Elmina l'espai de treball actual</translation>
 </message>
@@ -3284,6 +3292,10 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <translation>Previsualització de la nota</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Registres</translation>
 </message>
@@ -4071,6 +4083,10 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <source>Note creation failed</source>
 <translation>Creació de nota fallida</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>

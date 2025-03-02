@@ -2112,6 +2112,14 @@
 <translation>Ontgrendel panelen</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>Zwevende panelen opnieuw vastmaken</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>Maakt alle zwevende panelen weer vast</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Huidige werkruimte verwijderen</translation>
 </message>
@@ -3292,6 +3300,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Notitie preview</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Logboek</translation>
 </message>
@@ -4081,6 +4093,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Note creation failed</source>
 <translation>Notitie maken is mislukt</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
 </message>
 </context>
 <context>
