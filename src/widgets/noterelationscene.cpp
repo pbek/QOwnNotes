@@ -161,10 +161,13 @@ void NoteRelationScene::createLinkedNoteItems(Note &note, NoteItem *rootNoteItem
     QPointF rootCenter = rootNoteItem->pos() + rootNoteItem->rect().center();
 
     // Calculate radius based on number of notes
-    qreal radius = 200.0;    // Base radius
+    qreal radius = 250.0;    // Base radius
     if (linkedNotes.size() > 5) {
-        radius = 200.0 + (linkedNotes.size() - 5) * 20.0;    // Increase radius for more notes
+        radius += (linkedNotes.size() - 5) * 20.0;    // Increase radius for more notes
     }
+
+    // Decrease radius based on level
+    radius = radius - level * 60;
 
     // Create linked notes around the root
     int index = 0;
