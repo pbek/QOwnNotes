@@ -2,7 +2,7 @@
 
 ## 25.2.9
 - There now is a new action in the *Window menu* to reattach all floating panels in case
-  they can't be reattached manually anymore (for [#3109](https://github.com/pbek/QOwnNotes/pull/3109))
+  they can't be reattached manually anymore (for [#3109](https://github.com/pbek/QOwnNotes/issues/3109))
 
 ## 25.2.8
 - The latest available language models were added to the list of available OpenAI models
@@ -10,14 +10,14 @@
 
 ## 25.2.7
 - The AI activity spinner will use white color in dark mode now
-  (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
+  (for [#3231](https://github.com/pbek/QOwnNotes/issues/3231))
 - Added more Spanish translation (thank you, alejandromoc)
 
 ## 25.2.6
 - There now is a setting to increase the API response timeout in the *AI settings*
-  (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
+  (for [#3231](https://github.com/pbek/QOwnNotes/issues/3231))
 - Now a loading spinner is shown in the status bar during AI activity
-  (for [#3231](https://github.com/pbek/QOwnNotes/pull/3231))
+  (for [#3231](https://github.com/pbek/QOwnNotes/issues/3231))
 
 ## 25.2.5
 - The main menu and command bar now has a cleaner user experience when icons are hidden
