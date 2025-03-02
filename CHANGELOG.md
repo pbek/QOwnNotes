@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.3.0
+- There now is a new **note relations panel**, that shows links to other notes in a graph
+  for the current note, up to the 3rd level (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
+  - By double-clicking on a note in the graph, you can open the note
+
 ## 25.2.9
 - There now is a new action in the *Window menu* to reattach all floating panels in case
   they can't be reattached manually anymore (for [#3109](https://github.com/pbek/QOwnNotes/issues/3109))
