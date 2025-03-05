@@ -1453,10 +1453,6 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
             newVisibility =
                 NoteFolder::isCurrentShowSubfolders() && !Utils::Misc::isEnableNoteTree();
         }
-    } else if (objectName == QStringLiteral("noteGraphicsViewDockWidget")) {
-        if (newVisibility) {
-            _noteRelationScene->drawForNote(currentNote);
-        }
     }
 
     dockWidget->setVisible(newVisibility);
@@ -1467,6 +1463,10 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
     // Ensure we have the latest note preview
     if (dockWidget == _notePreviewDockWidget && dockWidget->isVisible()) {
         refreshNotePreview(true);
+    }
+
+    if (objectName == QStringLiteral("noteGraphicsViewDockWidget")) {
+        updateNoteGraphicsView();
     }
 }
 
