@@ -18,6 +18,7 @@
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QRandomGenerator>
 #endif
+#include <QtConcurrent/QtConcurrentRun>
 #include <cmath>
 
 #include "mainwindow.h"
@@ -102,7 +103,7 @@ void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     }
 }
 
-NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note &note, int level) {
+NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note note, int level) {
     qreal xpos = fmax(140 - level * 20, 80);
     qreal ypos = fmax(90 - level * 15, 40);
     auto posPoint = QPointF(pos - QPointF(xpos / 2, ypos / 2));
@@ -139,24 +140,29 @@ void NoteRelationScene::createConnection(NoteItem *startItem, NoteItem *endItem)
     m_connections.push_back(connection);
 }
 
-void NoteRelationScene::drawForNote(Note &note) {
+void NoteRelationScene::drawForNote(const Note& note) {
     m_connections.clear();
     clear();
+    const auto noteList = Note::fetchAll();
 
-    auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
-    createLinkedNoteItems(note, rootNoteItem);
+//#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+//    QFuture<void> future = QtConcurrent::run([this, note, noteList]() {
+        auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
+        createLinkedNoteItems(noteList, note, rootNoteItem);
 
-    // Update all connections
-    for (auto connection : m_connections) {
-        connection->updatePosition();
-    }
+        // Update all connections
+        for (auto connection : m_connections) {
+            connection->updatePosition();
+        }
 
-    // Update the scene
-    update();
+        // Update the scene
+        update();
+//    });
+//#endif
 }
 
-void NoteRelationScene::createLinkedNoteItems(Note &note, NoteItem *rootNoteItem, int level) {
-    auto linkedNotes = note.findLinkedNotes();
+void NoteRelationScene::createLinkedNoteItems(const QVector<Note>& noteList, Note note, NoteItem *rootNoteItem, int level) {
+    auto linkedNotes = note.findLinkedNotes(noteList);
 
     // Get root note position (center)
     QPointF rootCenter = rootNoteItem->pos() + rootNoteItem->rect().center();
@@ -176,7 +182,7 @@ void NoteRelationScene::createLinkedNoteItems(Note &note, NoteItem *rootNoteItem
     for (auto it = linkedNotes.begin(); it != linkedNotes.end(); ++it) {
         // Calculate position in a circle around the root note item
         QPointF notePos = calculateRadialPosition(rootCenter, index, linkedNotes.size(), radius);
-        Note linkedNote = it.key();
+        const Note& linkedNote = it.key();
 
         // Create note item at calculated position
         NoteItem *linkedNoteItem = createNoteItem(notePos, linkedNote, level);
@@ -185,7 +191,7 @@ void NoteRelationScene::createLinkedNoteItems(Note &note, NoteItem *rootNoteItem
         createConnection(rootNoteItem, linkedNoteItem);
 
         if (level < 3) {
-            createLinkedNoteItems(linkedNote, linkedNoteItem, level);
+            createLinkedNoteItems(noteList, linkedNote, linkedNoteItem, level);
         }
 
         index++;

@@ -3216,13 +3216,16 @@ void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteT
  *
  * @return Hash of notes and the link hits
  */
-QHash<Note, QSet<LinkHit>> Note::findLinkedNotes() {
+QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList) {
     const auto noteText = getNoteText();
     _linkedNoteHash.clear();
 
-    // Fetch all notes and look if the current note contains a link to those notes
+    if (noteList.isEmpty()) {
+        noteList = Note::fetchAll();
+    }
+
+    // Check all notes and look if the current note contains a link to those notes
     // We don't need to care about legacy links, because they don't know subfolders
-    const auto noteList = Note::fetchAll();
     for (const Note &note : noteList) {
         const QString &relativePathToNote = getFilePathRelativeToNote(note);
 

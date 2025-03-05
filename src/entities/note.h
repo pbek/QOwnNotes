@@ -383,7 +383,7 @@ class Note {
 
     QSet<Note> findBacklinks() const;
 
-    QHash<Note, QSet<LinkHit>> findLinkedNotes();
+    QHash<Note, QSet<LinkHit>> findLinkedNotes(QVector<Note> noteList = QVector<Note>());
 
     QHash<Note, QSet<LinkHit>> findReverseLinkNotes();
 

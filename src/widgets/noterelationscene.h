@@ -59,13 +59,13 @@ class NoteRelationScene : public QGraphicsScene {
 
    public:
     explicit NoteRelationScene(QObject *parent = nullptr);
-    void drawForNote(Note &note);
+    void drawForNote(const Note& note);
 
    protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
 
    private:
-    NoteItem *createNoteItem(const QPointF &pos, Note &note, int level = 0);
+    NoteItem *createNoteItem(const QPointF &pos, Note note, int level = 0);
     void createConnection(NoteItem *startItem, NoteItem *endItem);
 
     bool m_connecting;
@@ -73,5 +73,5 @@ class NoteRelationScene : public QGraphicsScene {
     NoteItem *m_startItem;
     std::vector<ConnectionLine *> m_connections;
     static QPointF calculateRadialPosition(QPointF center, int index, int total, qreal radius);
-    void createLinkedNoteItems(Note &note, NoteItem *rootNoteItem, int level = 0);
+    void createLinkedNoteItems(const QVector<Note>& noteList, Note note, NoteItem *rootNoteItem, int level = 0);
 };
