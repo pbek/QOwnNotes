@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 25.3.1
+- Made a small speed improvement in the note relations panel (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
+
 ## 25.3.0
 - There now is a new **note relations panel**, that shows links to other notes in a graph
   for the current note, up to the 3rd level (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
