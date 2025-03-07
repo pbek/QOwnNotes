@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 25.3.1
+- Added a **new editor color schema** *Simple* by @nobodyF34R
+  (for [#3238](https://github.com/pbek/QOwnNotes/issues/3238))
 - Made a small speed improvement in the note relations panel (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
 
 ## 25.3.0
