@@ -73,5 +73,5 @@ class NoteRelationScene : public QGraphicsScene {
     NoteItem *m_startItem;
     std::vector<ConnectionLine *> m_connections;
     static QPointF calculateRadialPosition(QPointF center, int index, int total, qreal radius);
-    void createLinkedNoteItems(const QVector<Note>& noteList, Note note, NoteItem *rootNoteItem, int level = 0);
+    void createLinkedNoteItems(const QVector<Note>& noteList, const QString &connectionName, Note note, NoteItem *rootNoteItem, int level = 0);
 };

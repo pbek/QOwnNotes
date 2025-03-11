@@ -82,8 +82,8 @@ bool Note::isShared() const { return this->_shareId > 0; }
 
 QString Note::getFileName() const { return this->_fileName; }
 
-NoteSubFolder Note::getNoteSubFolder() const {
-    return NoteSubFolder::fetch(this->_noteSubFolderId);
+NoteSubFolder Note::getNoteSubFolder(const QString &connectionName) const {
+    return NoteSubFolder::fetch(this->_noteSubFolderId, connectionName);
 }
 
 int Note::getNoteSubFolderId() const { return this->_noteSubFolderId; }
@@ -1760,12 +1760,12 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
     return canonicalFilePath;
 }
 
-QString Note::getFilePathRelativeToNote(const Note &note) const {
-    const QDir dir(fullNoteFilePath());
+QString Note::getFilePathRelativeToNote(const Note &note, const QString &connectionName) const {
+    const QDir dir(fullNoteFilePath(connectionName));
 
     // for some reason there is a leading "../" too much
     static const QRegularExpression re(QStringLiteral(R"(^\.\.\/)"));
-    QString path = dir.relativeFilePath(note.fullNoteFilePath()).remove(re);
+    QString path = dir.relativeFilePath(note.fullNoteFilePath(connectionName)).remove(re);
 
     // if "note" is the current note we want to use the real filename
     if (path == QChar('.')) {
@@ -1831,7 +1831,9 @@ QString Note::urlDecodeNoteUrl(QString url) {
 /**
  * Returns the full path of the note file
  */
-QString Note::fullNoteFilePath() const { return getFullFilePathForFile(relativeNoteFilePath()); }
+QString Note::fullNoteFilePath(const QString &connectionName) const {
+    return getFullFilePathForFile(relativeNoteFilePath(QString(), connectionName));
+}
 
 /**
  * Returns the full path of directory of the note file
@@ -1845,7 +1847,7 @@ QString Note::fullNoteFileDirPath() const {
 /**
  * Returns the relative path of the note file
  */
-QString Note::relativeNoteFilePath(QString separator) const {
+QString Note::relativeNoteFilePath(QString separator, const QString &connectionName) const {
     QString fullFileName = _fileName;
 
     if (separator.isEmpty()) {
@@ -1853,9 +1855,9 @@ QString Note::relativeNoteFilePath(QString separator) const {
     }
 
     if (_noteSubFolderId > 0) {
-        const NoteSubFolder noteSubFolder = getNoteSubFolder();
+        const NoteSubFolder noteSubFolder = getNoteSubFolder(connectionName);
         if (noteSubFolder.isFetched()) {
-            fullFileName.prepend(noteSubFolder.relativePath() + separator);
+            fullFileName.prepend(noteSubFolder.relativePath('/', connectionName) + separator);
         }
     }
 
@@ -3216,7 +3218,7 @@ void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteT
  *
  * @return Hash of notes and the link hits
  */
-QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList) {
+QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList, const QString &connectionName) {
     const auto noteText = getNoteText();
     _linkedNoteHash.clear();
 
@@ -3227,7 +3229,7 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList) {
     // Check all notes and look if the current note contains a link to those notes
     // We don't need to care about legacy links, because they don't know subfolders
     for (const Note &note : noteList) {
-        const QString &relativePathToNote = getFilePathRelativeToNote(note);
+        const QString &relativePathToNote = getFilePathRelativeToNote(note, connectionName);
 
         // We now don't escape slashes in the relative file path, but previously we did,
         // so we need to search for both

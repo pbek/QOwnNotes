@@ -22,6 +22,7 @@
 #include <cmath>
 
 #include "mainwindow.h"
+#include "services/databaseservice.h"
 
 // NoteItem Implementation
 NoteItem::NoteItem(Note &note, qreal x, qreal y, qreal width, qreal height, int level,
@@ -145,10 +146,15 @@ void NoteRelationScene::drawForNote(const Note& note) {
     clear();
     const auto noteList = Note::fetchAll();
 
-//#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
-//    QFuture<void> future = QtConcurrent::run([this, note, noteList]() {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+    QFuture<void> future = QtConcurrent::run([this, note, noteList]() {
+        const QString connectionName = DatabaseService::generateConnectionName();
+        qDebug() << __func__ << " - 'connectionName': " << connectionName;
+
+        QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
+
         auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
-        createLinkedNoteItems(noteList, note, rootNoteItem);
+        createLinkedNoteItems(noteList, connectionName, note, rootNoteItem);
 
         // Update all connections
         for (auto connection : m_connections) {
@@ -157,12 +163,16 @@ void NoteRelationScene::drawForNote(const Note& note) {
 
         // Update the scene
         update();
-//    });
-//#endif
+
+        db.close();
+        QSqlDatabase::removeDatabase(connectionName);
+        qDebug() << __func__ << " - 'connectionName' closed: " << connectionName;
+    });
+#endif
 }
 
-void NoteRelationScene::createLinkedNoteItems(const QVector<Note>& noteList, Note note, NoteItem *rootNoteItem, int level) {
-    auto linkedNotes = note.findLinkedNotes(noteList);
+void NoteRelationScene::createLinkedNoteItems(const QVector<Note>& noteList, const QString &connectionName, Note note, NoteItem *rootNoteItem, int level) {
+    auto linkedNotes = note.findLinkedNotes(noteList, connectionName);
 
     // Get root note position (center)
     QPointF rootCenter = rootNoteItem->pos() + rootNoteItem->rect().center();
@@ -191,7 +201,7 @@ void NoteRelationScene::createLinkedNoteItems(const QVector<Note>& noteList, Not
         createConnection(rootNoteItem, linkedNoteItem);
 
         if (level < 3) {
-            createLinkedNoteItems(noteList, linkedNote, linkedNoteItem, level);
+            createLinkedNoteItems(noteList, connectionName, linkedNote, linkedNoteItem, level);
         }
 
         index++;

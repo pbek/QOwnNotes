@@ -117,7 +117,7 @@ class Note {
 
     static QString getFullFilePathForFile(const QString &fileName);
 
-    QString getFilePathRelativeToNote(const Note &note) const;
+    QString getFilePathRelativeToNote(const Note &note, const QString &connectionName = QStringLiteral("memory")) const;
 
     static int storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged = nullptr,
                                      bool *noteWasRenamed = nullptr,
@@ -182,7 +182,7 @@ class Note {
 
     QUrl fullNoteFileUrl() const;
 
-    QString fullNoteFilePath() const;
+    QString fullNoteFilePath(const QString &connectionName = QStringLiteral("memory")) const;
 
     QString fullNoteFileDirPath() const;
 
@@ -221,7 +221,7 @@ class Note {
 
     QString fileBaseName(bool withFullName = false);
 
-    NoteSubFolder getNoteSubFolder() const;
+    NoteSubFolder getNoteSubFolder(const QString &connectionName = QStringLiteral("memory")) const;
 
     void setNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
@@ -239,7 +239,7 @@ class Note {
 
     bool isInCurrentNoteSubFolder() const;
 
-    QString relativeNoteFilePath(QString separator = QString()) const;
+    QString relativeNoteFilePath(QString separator = QString(), const QString &connectionName = QStringLiteral("memory")) const;
 
     QString relativeNoteSubFolderPath() const;
 
@@ -383,7 +383,7 @@ class Note {
 
     QSet<Note> findBacklinks() const;
 
-    QHash<Note, QSet<LinkHit>> findLinkedNotes(QVector<Note> noteList = QVector<Note>());
+    QHash<Note, QSet<LinkHit>> findLinkedNotes(QVector<Note> noteList = QVector<Note>(), const QString &connectionName = QStringLiteral("memory"));
 
     QHash<Note, QSet<LinkHit>> findReverseLinkNotes();
 

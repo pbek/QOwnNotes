@@ -14,6 +14,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QStandardPaths>
+#include <QUuid>
 
 #include "entities/calendaritem.h"
 #include "mainwindow.h"
@@ -95,10 +96,28 @@ bool DatabaseService::checkDiskDatabaseIntegrity() {
     return false;
 }
 
+QString DatabaseService::generateConnectionName() {
+//    return "memory";
+    return QString("connection-%1").arg(QUuid::createUuid().toString());
+}
+
+QSqlDatabase DatabaseService::createSharedMemoryDatabase(const QString& connectionName) {
+    QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connectionName);
+    db.setDatabaseName(QStringLiteral("file:memory?mode=memory&cache=shared"));
+//    db.setDatabaseName(QStringLiteral(":memory:"));
+    db.setConnectOptions("QSQLITE_OPEN_URI");
+
+    return db;
+}
+
+QSqlDatabase DatabaseService::getSharedMemoryDatabase(const QString& connectionName) {
+    return connectionName == QStringLiteral("memory") ?
+                QSqlDatabase::database(QStringLiteral("memory")) :
+                createSharedMemoryDatabase(connectionName);
+}
+
 bool DatabaseService::createMemoryConnection() {
-    QSqlDatabase dbMemory =
-        QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("memory"));
-    dbMemory.setDatabaseName(QStringLiteral(":memory:"));
+    QSqlDatabase dbMemory = createSharedMemoryDatabase(QStringLiteral("memory"));
 
     if (!dbMemory.open()) {
         QMessageBox::critical(nullptr, QWidget::tr("Cannot open memory database"),
