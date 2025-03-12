@@ -97,23 +97,23 @@ bool DatabaseService::checkDiskDatabaseIntegrity() {
 }
 
 QString DatabaseService::generateConnectionName() {
-//    return "memory";
+    //    return "memory";
     return QString("connection-%1").arg(QUuid::createUuid().toString());
 }
 
 QSqlDatabase DatabaseService::createSharedMemoryDatabase(const QString& connectionName) {
     QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connectionName);
     db.setDatabaseName(QStringLiteral("file:memory?mode=memory&cache=shared"));
-//    db.setDatabaseName(QStringLiteral(":memory:"));
+    //    db.setDatabaseName(QStringLiteral(":memory:"));
     db.setConnectOptions("QSQLITE_OPEN_URI");
 
     return db;
 }
 
 QSqlDatabase DatabaseService::getSharedMemoryDatabase(const QString& connectionName) {
-    return connectionName == QStringLiteral("memory") ?
-                QSqlDatabase::database(QStringLiteral("memory")) :
-                createSharedMemoryDatabase(connectionName);
+    return connectionName == QStringLiteral("memory")
+               ? QSqlDatabase::database(QStringLiteral("memory"))
+               : createSharedMemoryDatabase(connectionName);
 }
 
 bool DatabaseService::createMemoryConnection() {

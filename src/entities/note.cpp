@@ -3218,7 +3218,8 @@ void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteT
  *
  * @return Hash of notes and the link hits
  */
-QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList, const QString &connectionName) {
+QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
+                                                 const QString &connectionName) {
     const auto noteText = getNoteText();
     _linkedNoteHash.clear();
 

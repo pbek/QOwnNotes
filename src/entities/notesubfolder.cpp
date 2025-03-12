@@ -23,7 +23,7 @@ int NoteSubFolder::getId() const { return _id; }
 
 int NoteSubFolder::getParentId() const { return _parentId; }
 
-NoteSubFolder NoteSubFolder::getParent(const QString &connectionName) const {
+NoteSubFolder NoteSubFolder::getParent(const QString& connectionName) const {
     return NoteSubFolder::fetch(_parentId, connectionName);
 }
 
@@ -39,7 +39,7 @@ void NoteSubFolder::setParentId(int parentId) { _parentId = parentId; }
 
 bool NoteSubFolder::isFetched() const { return (_id > 0); }
 
-NoteSubFolder NoteSubFolder::fetch(int id, const QString &connectionName) {
+NoteSubFolder NoteSubFolder::fetch(int id, const QString& connectionName) {
     const QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
     query.prepare(QStringLiteral("SELECT * FROM noteSubFolder WHERE id = :id"));
@@ -84,8 +84,10 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name, int par
 /**
  * Gets the relative path name of the note sub folder
  */
-QString NoteSubFolder::relativePath(char separator, const QString &connectionName) const {
-    return _parentId == 0 ? _name : getParent(connectionName).relativePath(separator, connectionName) + separator + _name;
+QString NoteSubFolder::relativePath(char separator, const QString& connectionName) const {
+    return _parentId == 0 ? _name
+                          : getParent(connectionName).relativePath(separator, connectionName) +
+                                separator + _name;
 }
 
 /**
