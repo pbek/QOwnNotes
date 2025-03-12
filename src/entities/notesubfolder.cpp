@@ -40,59 +40,22 @@ void NoteSubFolder::setParentId(int parentId) { _parentId = parentId; }
 bool NoteSubFolder::isFetched() const { return (_id > 0); }
 
 NoteSubFolder NoteSubFolder::fetch(int id, const QString &connectionName) {
+    const QSqlDatabase db = QSqlDatabase::database(connectionName);
+    QSqlQuery query(db);
+    query.prepare(QStringLiteral("SELECT * FROM noteSubFolder WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), id);
+
     auto noteSubFolder = NoteSubFolder();
-//    bool closeDb = connectionName != QStringLiteral("memory");
-    bool closeDb = false;
 
-    {
-//        QSqlDatabase db = DatabaseService::getSharedMemoryDatabase(connectionName);
-        qDebug() << __func__ << " - 'connectionName': " << connectionName;
-        qDebug() << __func__ << " - 'id': " << id;
-
-        //        if (connectionName == QStringLiteral("memory")) {
-//            void* array[50];
-//            int size = backtrace(array, 50);
-//            char** messages = backtrace_symbols(array, size);
-//
-//            // Print the stack trace
-//            for (int i = 0; i < size && messages != nullptr; ++i) {
-//                qDebug() << "[" << i << "]" << messages[i];
-//            }
-//            free(messages);
-//        }
-
-        const QSqlDatabase db = QSqlDatabase::database(connectionName);
-
-//        if (!db.open()) {
-//            qWarning() << "Failed to open database in thread:" << db.lastError().text();
-//            if (closeDb) {
-//                QSqlDatabase::removeDatabase(connectionName);
-//            }
-//            return {};
-//        }
-
-        QSqlQuery query(db);
-        query.prepare(QStringLiteral("SELECT * FROM noteSubFolder WHERE id = :id"));
-        query.bindValue(QStringLiteral(":id"), id);
-
-        if (!query.exec()) {
-            qWarning() << __func__ << ": " << query.lastError();
-        } else {
-            if (query.first()) {
-                noteSubFolder = noteSubFolderFromQuery(query);
-            }
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        if (query.first()) {
+            noteSubFolder = noteSubFolderFromQuery(query);
         }
-
-        query.finish();
-
-//        if (closeDb) {
-//            db.close();
-//        }
-    } // db goes out of scope here
-
-    if (closeDb) {
-        QSqlDatabase::removeDatabase(connectionName);
     }
+
+    query.finish();
 
     return noteSubFolder;
 }
