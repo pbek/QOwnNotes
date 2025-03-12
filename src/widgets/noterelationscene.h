@@ -13,6 +13,7 @@
 
 #pragma once
 
+#include <QFuture>
 #include <QGraphicsLineItem>
 #include <QGraphicsRectItem>
 #include <QGraphicsScene>
@@ -59,7 +60,8 @@ class NoteRelationScene : public QGraphicsScene {
 
    public:
     explicit NoteRelationScene(QObject *parent = nullptr);
-    void drawForNote(const Note& note);
+    void drawForNote(const Note &note);
+    void stopDrawing();
 
    protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
@@ -69,9 +71,21 @@ class NoteRelationScene : public QGraphicsScene {
     void createConnection(NoteItem *startItem, NoteItem *endItem);
 
     bool m_connecting;
+    bool m_allowDrawing = true;
     QGraphicsLineItem *m_tempLine;
     NoteItem *m_startItem;
     std::vector<ConnectionLine *> m_connections;
+    QFuture<void> m_drawFuture;
     static QPointF calculateRadialPosition(QPointF center, int index, int total, qreal radius);
-    void createLinkedNoteItems(const QVector<Note>& noteList, const QString &connectionName, Note note, NoteItem *rootNoteItem, int level = 0);
+    void createLinkedNoteItems(const QVector<Note> &noteList, const QString &connectionName,
+                               Note note, NoteItem *rootNoteItem, int level = 0);
+    void setAllowDrawing(bool allow = true);
+
+   signals:
+    // Signal to be emitted from worker thread
+    void addItemRequested(QGraphicsItem *item);
+
+   public slots:
+    // This will run in the GUI thread
+    void addItemToScene(QGraphicsItem *item);
 };

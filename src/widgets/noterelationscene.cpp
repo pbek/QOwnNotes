@@ -89,7 +89,11 @@ void ConnectionLine::updatePosition() {
 
 // NoteRelationScene Implementation
 NoteRelationScene::NoteRelationScene(QObject *parent)
-    : QGraphicsScene(parent), m_connecting(false), m_tempLine(nullptr), m_startItem(nullptr) {}
+    : QGraphicsScene(parent), m_connecting(false), m_tempLine(nullptr), m_startItem(nullptr) {
+    // Connect the signal to the slot with a queued connection
+    connect(this, &NoteRelationScene::addItemRequested, this, &NoteRelationScene::addItemToScene,
+            Qt::QueuedConnection);
+}
 
 void NoteRelationScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     if (m_connecting && m_tempLine && m_startItem) {
@@ -130,48 +134,90 @@ NoteItem *NoteRelationScene::createNoteItem(const QPointF &pos, Note note, int l
     auto *noteItem = new NoteItem(note, 0, 0, xpos, ypos, level);
     noteItem->setPos(posPoint);
     // The scene is taking ownership over the note item
-    addItem(noteItem);
+    //    addItem(noteItem);
+    emit addItemRequested(noteItem);
 
     return noteItem;
 }
 
 void NoteRelationScene::createConnection(NoteItem *startItem, NoteItem *endItem) {
     auto *connection = new ConnectionLine(startItem, endItem);
-    addItem(connection);
+    //    addItem(connection);
+    emit addItemRequested(connection);
     m_connections.push_back(connection);
 }
 
-void NoteRelationScene::drawForNote(const Note& note) {
-    m_connections.clear();
-    clear();
-    const auto noteList = Note::fetchAll();
-
-#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
-    QFuture<void> future = QtConcurrent::run([this, note, noteList]() {
-        const QString connectionName = DatabaseService::generateConnectionName();
-        qDebug() << __func__ << " - 'connectionName': " << connectionName;
-
-        QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
-
-        auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
-        createLinkedNoteItems(noteList, connectionName, note, rootNoteItem);
-
-        // Update all connections
-        for (auto connection : m_connections) {
-            connection->updatePosition();
-        }
-
-        // Update the scene
-        update();
-
-        db.close();
-        QSqlDatabase::removeDatabase(connectionName);
-        qDebug() << __func__ << " - 'connectionName' closed: " << connectionName;
-    });
-#endif
+void NoteRelationScene::addItemToScene(QGraphicsItem *item) {
+    // This will run in the GUI thread
+    addItem(item);
 }
 
-void NoteRelationScene::createLinkedNoteItems(const QVector<Note>& noteList, const QString &connectionName, Note note, NoteItem *rootNoteItem, int level) {
+void NoteRelationScene::drawForNote(const Note &note) {
+    qDebug() << __func__
+             << " - 'this->m_drawFuture.isRunning()': " << this->m_drawFuture.isRunning();
+    // Disallow more drawing and cancel the current thread
+    stopDrawing();
+
+    // Fetch all notes while waiting for the previous thread to finish
+    const auto noteList = Note::fetchAll();
+
+    // Wait a little more for if the thread is still running
+    if (this->m_drawFuture.isRunning()) {
+        this->m_drawFuture.waitForFinished();
+    }
+
+    // Allow drawing again and clear the scene
+    setAllowDrawing();
+    m_connections.clear();
+    clear();
+
+    // This runs the gathering of note relations in a different thread
+    // The drawing of the note items and connections will be done in the GUI thread, because the
+    // QGraphicsView framework is not designed for multithreading (QTimer errors)
+    // A different database connection to the memory database will also be use, because you cannot
+    // use the same connection in different threads
+    this->m_drawFuture = QtConcurrent::run([this, note, noteList]() {
+        const QString connectionName = DatabaseService::generateConnectionName();
+
+        {
+            QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
+
+            auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
+            createLinkedNoteItems(noteList, connectionName, note, rootNoteItem);
+
+            // Update all connections
+            for (auto connection : m_connections) {
+                connection->updatePosition();
+            }
+
+            // Update the scene
+            update();
+
+            db.close();
+        }    // db goes out of scope and is removed, so the database can be removed
+
+        // Remove database connection after the database is closed
+        QSqlDatabase::removeDatabase(connectionName);
+    });
+}
+
+void NoteRelationScene::stopDrawing() {
+    if (m_drawFuture.isRunning()) {
+        // Disallow more drawing and cancel the thread
+        setAllowDrawing(false);
+        m_drawFuture.cancel();
+    }
+}
+
+void NoteRelationScene::setAllowDrawing(bool allow) { m_allowDrawing = allow; }
+
+void NoteRelationScene::createLinkedNoteItems(const QVector<Note> &noteList,
+                                              const QString &connectionName, Note note,
+                                              NoteItem *rootNoteItem, int level) {
+    if (!this->m_allowDrawing) {
+        return;
+    }
+
     auto linkedNotes = note.findLinkedNotes(noteList, connectionName);
 
     // Get root note position (center)
@@ -190,9 +236,13 @@ void NoteRelationScene::createLinkedNoteItems(const QVector<Note>& noteList, con
     int index = 0;
     level = level + 1;
     for (auto it = linkedNotes.begin(); it != linkedNotes.end(); ++it) {
+        if (!this->m_allowDrawing) {
+            break;
+        }
+
         // Calculate position in a circle around the root note item
         QPointF notePos = calculateRadialPosition(rootCenter, index, linkedNotes.size(), radius);
-        const Note& linkedNote = it.key();
+        const Note &linkedNote = it.key();
 
         // Create note item at calculated position
         NoteItem *linkedNoteItem = createNoteItem(notePos, linkedNote, level);

@@ -743,6 +743,7 @@ bool MainWindow::restoreActiveNoteHistoryItem() {
 }
 
 MainWindow::~MainWindow() {
+    _noteRelationScene->stopDrawing();
     disableFullScreenMode();
 
     const bool forceQuit = qApp->property("clearAppDataAndExit").toBool();

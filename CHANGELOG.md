@@ -1,9 +1,13 @@
 # QOwnNotes Changelog
 
 ## 25.3.1
+- In the **note relation panel** the gathering of note relations will now be done
+  in a **different thread** (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
+  - This results in a huge speed improvement and being able to interact with the
+    user interface while the relations are gathered and drawn
+  - The gathering of note relations and drawing is stopped when another note is selected
 - Added a **new editor color schema** *Simple* by @nobodyF34R
   (for [#3238](https://github.com/pbek/QOwnNotes/issues/3238))
-- Made a small speed improvement in the note relations panel (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
 
 ## 25.3.0
 - There now is a new **note relations panel**, that shows links to other notes in a graph
