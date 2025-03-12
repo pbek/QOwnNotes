@@ -8,6 +8,7 @@
   - The gathering of note relations and drawing is stopped when another note is selected
 - Added a **new editor color schema** *Simple* by @nobodyF34R
   (for [#3238](https://github.com/pbek/QOwnNotes/issues/3238))
+- Added more Spanish, Korean, Dutch translation (thank you, alejandromoc, venusgirl, stephanp)
 
 ## 25.3.0
 - There now is a new **note relations panel**, that shows links to other notes in a graph

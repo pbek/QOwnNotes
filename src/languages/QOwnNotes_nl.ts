@@ -3301,7 +3301,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Notitierelaties</translation>
 </message>
 <message>
 <source>Log</source>
@@ -4096,7 +4096,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Dubbelkliken om notitie te openen</translation>
 </message>
 </context>
 <context>

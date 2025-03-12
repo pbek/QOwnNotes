@@ -3273,7 +3273,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>노트 관계</translation>
 </message>
 <message>
 <source>Log</source>
@@ -4057,7 +4057,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>노트를 열려면 두 번 클릭합니다</translation>
 </message>
 </context>
 <context>

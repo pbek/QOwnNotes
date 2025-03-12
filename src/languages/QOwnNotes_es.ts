@@ -3300,7 +3300,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Relaciones de la nota</translation>
 </message>
 <message>
 <source>Log</source>
@@ -4094,7 +4094,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Doble clic para abrir la nota</translation>
 </message>
 </context>
 <context>
