@@ -170,9 +170,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _noteEditIsCentralWidget =
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     ui->noteEditTabWidget->setTabBarAutoHide(true);
-#endif
     ui->noteEditTabWidget->tabBar()->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested, this,
             &MainWindow::showNoteEditTabWidgetContextMenu);
@@ -11271,7 +11269,6 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
  * the user wants to update them (if the dialog wasn't disabled)
  */
 void MainWindow::automaticScriptUpdateCheck() {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     // Sqlite isn't available in a separate thread, so we need to fetch the scripts before that
     auto scripts = Script::fetchAll();
 
@@ -11321,7 +11318,6 @@ void MainWindow::automaticScriptUpdateCheck() {
             _scriptUpdateFound = false;
         }
     });
-#endif
 }
 
 void MainWindow::updateJumpToActionsAvailability() {
