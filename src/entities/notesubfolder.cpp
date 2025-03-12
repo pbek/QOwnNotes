@@ -122,7 +122,7 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name, int par
  * Gets the relative path name of the note sub folder
  */
 QString NoteSubFolder::relativePath(char separator, const QString &connectionName) const {
-    return _parentId == 0 ? _name : getParent(connectionName).relativePath(separator) + separator + _name;
+    return _parentId == 0 ? _name : getParent(connectionName).relativePath(separator, connectionName) + separator + _name;
 }
 
 /**
