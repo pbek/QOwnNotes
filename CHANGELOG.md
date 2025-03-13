@@ -1,12 +1,12 @@
 # QOwnNotes Changelog
 
 ## 25.3.2
-- In the **note relation panel** notes can now have **circular relations**
+- In the **note relation panel**, notes can now have **circular relations**
   between each other, no new note items will be drawn for notes that are already
   in the scene (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
 
 ## 25.3.1
-- In the **note relation panel** the gathering of note relations will now be done
+- In the **note relation panel**, the gathering of note relations will now be done
   in a **different thread** (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
   - This results in a huge speed improvement and being able to interact with the
     user interface while the relations are gathered and drawn
