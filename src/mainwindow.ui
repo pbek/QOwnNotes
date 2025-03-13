@@ -698,7 +698,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QGraphicsView" name="noteGraphicsView"/>
+              <widget class="ZoomableGraphicsView" name="noteGraphicsView"/>
              </item>
             </layout>
            </widget>
@@ -2896,6 +2896,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <class>NoteSubFolderTree</class>
    <extends>QTreeWidget</extends>
    <header>widgets/notesubfoldertree.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ZoomableGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">widgets/noterelationscene.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

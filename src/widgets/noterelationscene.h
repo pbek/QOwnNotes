@@ -18,7 +18,9 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
+#include <QGraphicsView>
 #include <QPainter>
+#include <QWheelEvent>
 #include <vector>
 
 #include "entities/note.h"
@@ -89,4 +91,15 @@ class NoteRelationScene : public QGraphicsScene {
    public slots:
     // This will run in the GUI thread
     void addItemToScene(QGraphicsItem *item);
+};
+
+class ZoomableGraphicsView : public QGraphicsView {
+   public:
+    explicit ZoomableGraphicsView(QWidget *parent = nullptr);
+
+   protected:
+    void wheelEvent(QWheelEvent *event) override;
+
+   private:
+    double scaleFactor = 1.15;    // Zoom factor when scrolling
 };

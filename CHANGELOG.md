@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.3.3
+- You can now **zoom** in the **note relation panel** with the mouse wheel
+  (for [#2074](https://github.com/pbek/QOwnNotes/issues/2074))
+
 ## 25.3.2
 - In the **note relation panel**, notes can now have **circular relations**
   between each other, no new note items will be drawn for notes that are already

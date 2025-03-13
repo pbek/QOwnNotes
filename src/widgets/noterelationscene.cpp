@@ -282,3 +282,22 @@ QPointF NoteRelationScene::calculateRadialPosition(QPointF center, int index, in
 
     return {x, y};
 }
+
+ZoomableGraphicsView::ZoomableGraphicsView(QWidget *parent) : QGraphicsView(parent) {
+    // Set view properties
+    setRenderHint(QPainter::Antialiasing);
+    setDragMode(QGraphicsView::ScrollHandDrag);
+    setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+    setResizeAnchor(QGraphicsView::AnchorUnderMouse);
+}
+
+void ZoomableGraphicsView::wheelEvent(QWheelEvent *event) {
+    // Zoom in or out depending on wheel direction
+    if (event->angleDelta().y() > 0) {
+        // Zoom in
+        scale(scaleFactor, scaleFactor);
+    } else {
+        // Zoom out
+        scale(1.0 / scaleFactor, 1.0 / scaleFactor);
+    }
+}
