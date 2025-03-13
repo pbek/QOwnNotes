@@ -169,6 +169,7 @@ void NoteRelationScene::drawForNote(const Note &note) {
     // Allow drawing again and clear the scene
     setAllowDrawing();
     m_connections.clear();
+    m_noteItems.clear();
     clear();
 
     // This runs the gathering of note relations in a different thread
@@ -183,6 +184,8 @@ void NoteRelationScene::drawForNote(const Note &note) {
             QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
 
             auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
+            m_noteItems[note.getId()] = rootNoteItem;
+
             createLinkedNoteItems(noteList, connectionName, note, rootNoteItem);
 
             // Update all connections
@@ -243,9 +246,16 @@ void NoteRelationScene::createLinkedNoteItems(const QVector<Note> &noteList,
         // Calculate position in a circle around the root note item
         QPointF notePos = calculateRadialPosition(rootCenter, index, linkedNotes.size(), radius);
         const Note &linkedNote = it.key();
+        int linkedNoteId = linkedNote.getId();
 
-        // Create note item at calculated position
-        NoteItem *linkedNoteItem = createNoteItem(notePos, linkedNote, level);
+        // Check if note item already exists
+        NoteItem *linkedNoteItem = m_noteItems[linkedNoteId];
+
+        if (linkedNoteItem == nullptr) {
+            // Create note item at calculated position
+            linkedNoteItem = createNoteItem(notePos, linkedNote, level);
+            m_noteItems[linkedNoteId] = linkedNoteItem;
+        }
 
         // Create connection between root and this note
         createConnection(rootNoteItem, linkedNoteItem);
