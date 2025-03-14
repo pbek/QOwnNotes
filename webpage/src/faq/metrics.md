@@ -2,8 +2,7 @@
 
 ## Why are metrics useful?
 
-QOwnNotes (as in the application itself) is **developed by one and sometimes two persons
-in their spare time**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 Releases are built for a lot of platforms and distributions (often very old versions of them).
 Keeping them up is a lot of work.
