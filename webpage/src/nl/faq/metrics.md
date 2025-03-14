@@ -2,7 +2,7 @@
 
 ## Waarom zijn statistieken nuttig?
 
-QOwnNotes (zoals in de applicatie zelf) is **ontwikkeld door één en soms twee personen in hun vrije tijd**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 Releases zijn gebouwd voor veel platforms en distributies (vaak zeer oude versies ervan). Het is veel werk om ze bij te houden.
 

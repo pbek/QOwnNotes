@@ -2,7 +2,7 @@
 
 ## ¿Por qué son útiles las métricas?
 
-QOwnNotes (como en la propia aplicación) es **desarrollado por una y a veces dos personas en su tiempo libre**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 Los lanzamientos se crean para muchas plataformas y distribuciones (a menudo, versiones muy antiguas de las mismas). Mantenerlas es mucho trabajo.
 

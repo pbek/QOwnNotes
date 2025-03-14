@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Hordozható üzemmód" />
     <div class="sheet">
       Hordozható mód USB-meghajtókhoz

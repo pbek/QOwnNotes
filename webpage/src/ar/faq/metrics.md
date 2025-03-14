@@ -2,7 +2,7 @@
 
 ## لماذا المقاييس مفيدة؟
 
-QOwnNotes (التطبيق نفسه) **يطوره شخص واحد وأحيانا شخصان في وقت فراغهما**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 يتم بناء الإصدارات للعديد من المنصات والتوزيعات (غالبا نسخ قديمة جدا منها). والحفاظ عليهم مستمرين لهُو عمل شاق.
 

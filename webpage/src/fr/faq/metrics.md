@@ -2,7 +2,7 @@
 
 ## En quoi les statistiques d'utilisation sont-elles utiles ?
 
-QOwnNotes (l'application elle-même) est **développée par une ou parfois deux personnes sur leur temps libre**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 Les versions sont compilées pour un grand nombre de plate-formes (souvent de très vieilles versions de ces dernières). Les garder à jour représente beaucoup de travail.
 

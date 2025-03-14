@@ -2,7 +2,7 @@
 
 ## Perché le metriche sono utili?
 
-QOwnNotes (l'applicazione) è **sviluppata da una persona, qualche volta due, nel tempo libero**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 I rilasci sono preparati per molte piattaforme e distribuzioni (spesso per versioni molto vecchie delle stesse). Mantenerle attive costa un sacco di lavoro.
 

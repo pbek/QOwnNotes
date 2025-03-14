@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="휴대용 모드" />
     <div class="sheet">
       USB 스틱용 휴대용 모드

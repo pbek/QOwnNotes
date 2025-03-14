@@ -2,7 +2,7 @@
 
 ## Dlaczego metryki są przydatne?
 
-QOwnNotes (jak i sama aplikacja) jest **rozwijana przez jedną, a czasem dwie osoby w wolnym czasie**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 Wydania są budowane dla wielu platform i dystrybucji (często bardzo starych wersji). Utrzymanie ich to dużo pracy.
 

@@ -2,7 +2,7 @@
 
 ## Miért hasznosak a mutatók?
 
-A QOwnNotes-t (mint magában az alkalmazásban is) **egy, néha két személy fejleszti szabadidejében**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 A kiadások sok platformhoz és disztribúcióhoz készültek (gyakran ezek nagyon régi verziói). Fenntartásuk rengeteg munka.
 
