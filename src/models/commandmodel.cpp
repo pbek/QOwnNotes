@@ -10,13 +10,9 @@
 
 #include "utils/misc.h"
 
-CommandModel::CommandModel(QObject *parent)
-    : QAbstractTableModel(parent)
-{
-}
+CommandModel::CommandModel(QObject *parent) : QAbstractTableModel(parent) {}
 
-void CommandModel::refresh(QVector<QPair<QString, QAction*>> actionList)
-{
+void CommandModel::refresh(QVector<QPair<QString, QAction *>> actionList) {
     QVector<Item> temp;
     temp.reserve(actionList.size());
     for (auto action : actionList) {
@@ -28,38 +24,35 @@ void CommandModel::refresh(QVector<QPair<QString, QAction*>> actionList)
     endResetModel();
 }
 
-QVariant CommandModel::data(const QModelIndex &index, int role) const
-{
-    if (!index.isValid())
-        return {};
+QVariant CommandModel::data(const QModelIndex &index, int role) const {
+    if (!index.isValid()) return {};
 
     auto entry = m_rows[index.row()];
     int col = index.column();
 
-    switch (role)
-    {
-    case Qt::DisplayRole:
-        if (col == 0)
-            return QString(Utils::Misc::removeAcceleratorMarker(entry.component) + QStringLiteral(": ") + Utils::Misc::removeAcceleratorMarker(entry.action->text()));
-        else
-            return entry.action->shortcut().toString();
-    case Qt::DecorationRole:
-        if (col == 0)
-            return entry.action->icon();
-        break;
-    case Qt::TextAlignmentRole:
-        if (col == 0)
-            return Qt::AlignLeft;
-        else
-            return Qt::AlignRight;
-    case Qt::UserRole:
-    {
-        QVariant v;
-        v.setValue(entry.action);
-        return v;
-    }
-    case Role::Score:
-        return entry.score;
+    switch (role) {
+        case Qt::DisplayRole:
+            if (col == 0)
+                return QString(Utils::Misc::removeAcceleratorMarker(entry.component) +
+                               QStringLiteral(": ") +
+                               Utils::Misc::removeAcceleratorMarker(entry.action->text()));
+            else
+                return entry.action->shortcut().toString();
+        case Qt::DecorationRole:
+            if (col == 0) return entry.action->icon();
+            break;
+        case Qt::TextAlignmentRole:
+            if (col == 0)
+                return Qt::AlignLeft;
+            else
+                return Qt::AlignRight;
+        case Qt::UserRole: {
+            QVariant v;
+            v.setValue(entry.action);
+            return v;
+        }
+        case Role::Score:
+            return entry.score;
     }
 
     return {};

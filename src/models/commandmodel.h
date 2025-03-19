@@ -11,41 +11,35 @@
 
 class QAction;
 
-class CommandModel : public QAbstractTableModel
-{
-    struct Item
-    {
+class CommandModel : public QAbstractTableModel {
+    struct Item {
         QString component;
-        QAction* action;
+        QAction *action;
         int score;
     };
 
     Q_OBJECT
-public:
-    CommandModel(QObject* parent = nullptr);
+   public:
+    CommandModel(QObject *parent = nullptr);
 
     enum Role { Score = Qt::UserRole + 1 };
 
-    void refresh(QVector<QPair<QString, QAction*>> actionList);
+    void refresh(QVector<QPair<QString, QAction *>> actionList);
 
-    int rowCount(const QModelIndex & parent = QModelIndex()) const override
-    {
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override {
         if (parent.isValid()) {
             return 0;
         }
         return m_rows.size();
     }
 
-    int columnCount(const QModelIndex & parent = QModelIndex()) const override
-    {
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override {
         Q_UNUSED(parent);
         return 2;
     }
 
-    bool setData(const QModelIndex &index, const QVariant &value, int role) override
-    {
-        if (!index.isValid())
-            return false;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override {
+        if (!index.isValid()) return false;
         if (role == Role::Score) {
             auto row = index.row();
             m_rows[row].score = value.toInt();
@@ -55,9 +49,8 @@ public:
 
     QVariant data(const QModelIndex &index, int role) const override;
 
-private:
+   private:
     QVector<Item> m_rows;
-
 };
 
-#endif // COMMANDMODEL_H
+#endif    // COMMANDMODEL_H
