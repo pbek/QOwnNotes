@@ -121,7 +121,7 @@ src-build-run: src-build src-run
 clang-format:
     ./scripts/clang-format-project.sh
 
-# Do a clang format on the project via the treefmt tool
+# Format the project
 [group('linter')]
 format:
     treefmt

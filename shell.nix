@@ -1,7 +1,10 @@
-{ pkgs ? import <nixpkgs> { }, }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 pkgs.mkShell {
   # nativeBuildInputs is usually what you want -- tools you need to run
-  nativeBuildInputs = with pkgs;
+  nativeBuildInputs =
+    with pkgs;
     with qt6;
     [
       just
@@ -15,7 +18,7 @@ pkgs.mkShell {
       treefmt # formatting tool
       nodePackages.prettier # for webpage formatting
       shfmt # for shell formatting
-      nixfmt # for nix formatting
+      nixfmt-rfc-style # for nix formatting
       xmlstarlet # for download-icons.sh and download_translations.sh
       lychee # for link checking
       procs # fetches process info
@@ -33,15 +36,20 @@ pkgs.mkShell {
       librsvg
       imagemagick
       libicns
-    ] ++ (if pkgs.stdenv.isLinux then
-      [
-        pkgs.lurk # strace replacement
-      ]
-    else
-      [ ]);
+    ]
+    ++ (
+      if pkgs.stdenv.isLinux then
+        [
+          pkgs.lurk # strace replacement
+        ]
+      else
+        [ ]
+    );
 
-  buildInputs = with pkgs;
-    with qt6; [
+  buildInputs =
+    with pkgs;
+    with qt6;
+    [
       qtbase
       qtwebsockets
       qtdeclarative
