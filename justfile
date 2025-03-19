@@ -19,6 +19,7 @@ alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
 alias nixfmt := nix-format
+alias fmt := format
 
 # Build the translations
 [group('translations')]
