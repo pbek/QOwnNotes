@@ -1,6 +1,6 @@
 # Wyszukiwanie notatek
 
-Aby wyszukać notatki lub tekst w notatkach, możesz użyć skrótu <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (lub <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> w systemie macOS), aby przejść do *panelu wyszukiwania notatek*.
+Aby wyszukać notatki lub tekst w notatkach, możesz użyć skrótu <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (lub <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> w systemie macOS), aby przejść do _panelu wyszukiwania notatek_.
 
 Istnieją różne sposoby wyszukiwania notatek:
 

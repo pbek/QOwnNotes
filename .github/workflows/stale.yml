@@ -10,8 +10,8 @@ permissions:
 jobs:
   close-issues:
     permissions:
-      issues: write  # for actions/stale to close stale issues
-      pull-requests: write  # for actions/stale to close stale PRs
+      issues: write # for actions/stale to close stale issues
+      pull-requests: write # for actions/stale to close stale PRs
     runs-on: ubuntu-latest
     steps:
       # https://github.com/marketplace/actions/close-stale-issues
@@ -22,7 +22,7 @@ jobs:
           stale-issue-label: "Stale"
           stale-issue-message: "This issue is stale because it has been open for 30 days with no activity."
           close-issue-message: "This issue was closed because it has been inactive for 14 days since being marked as stale."
-          any-of-labels: 'Type: Support,Webpage: Support'
+          any-of-labels: "Type: Support,Webpage: Support"
           days-before-pr-stale: -1
           days-before-pr-close: -1
           repo-token: ${{ secrets.GITHUB_TOKEN }}

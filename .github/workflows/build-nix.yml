@@ -5,20 +5,20 @@ on:
     branches-ignore:
       - release
     tags-ignore:
-      - '*'
+      - "*"
     paths:
-      - 'src/**'
-      - 'shell.nix'
-      - 'default.nix'
-      - 'build-systems/nix/**'
-      - '.github/workflows/build-nix.yml'
+      - "src/**"
+      - "shell.nix"
+      - "default.nix"
+      - "build-systems/nix/**"
+      - ".github/workflows/build-nix.yml"
   pull_request:
     paths:
-      - 'src/**'
-      - 'shell.nix'
-      - 'default.nix'
-      - 'build-systems/nix/**'
-      - '.github/workflows/build-nix.yml'
+      - "src/**"
+      - "shell.nix"
+      - "default.nix"
+      - "build-systems/nix/**"
+      - ".github/workflows/build-nix.yml"
   workflow_dispatch:
 
 jobs:
@@ -28,8 +28,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        just-recipe: ['nix-build', 'nix-build-cmake-qt5']
-        os: ['ubuntu-latest', 'macos-latest', 'macos-14']
+        just-recipe: ["nix-build", "nix-build-cmake-qt5"]
+        os: ["ubuntu-latest", "macos-latest", "macos-14"]
     steps:
       - name: ⚙️ Install Nix
         uses: cachix/install-nix-action@v31

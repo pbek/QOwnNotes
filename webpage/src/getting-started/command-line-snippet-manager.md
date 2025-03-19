@@ -28,6 +28,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Dependencies
@@ -45,8 +46,8 @@ with `qc configure`.
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the *Web socket server* (2)
-in the *Browser extension / command snippets* (1) settings in QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2)
+in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Then you need to show the security token (3) and copy it (4).
 
@@ -79,10 +80,13 @@ found in the **current note** regardless of note tags.
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
+
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
+
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 
 <!-- Example for asking for user input -->
+
 - `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
@@ -91,17 +95,17 @@ can also be used for command snippets. Tags are also supported if they are betwe
 the heading and the code block.
 
     ## Do this with a "bash" code block
-    
+
     - this text will be ignored text
     - but tags can be used: #tag1 #tag2
-    
+
     ```bash
     echo do this
     echo do that
     ```
-    
+
     ## Do something else with a "sh" code block
-    
+
     ```sh
     echo do something else
     echo do something other

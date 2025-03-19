@@ -33,5 +33,5 @@ In the **Scripting settings** you can also install scripts directly from the [**
 در صورت نیاز به دسترسی برای عملکرد معینی در QOwnNotes یا داشتن سؤال و ایده ای، لطفاً یک مسئله را در [صفحه مسائل QOwnNotes](https://github.com/pbek/QOwnNotes/issues) باز کنید.
 
 ::: tip
-For logging, you can use the `script.log()` command to log to the *Log panel*, which you can turn on in the *Window / Panels* menu.
+For logging, you can use the `script.log()` command to log to the _Log panel_, which you can turn on in the _Window / Panels_ menu.
 :::

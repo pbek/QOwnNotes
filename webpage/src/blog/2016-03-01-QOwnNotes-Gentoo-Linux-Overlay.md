@@ -13,4 +13,4 @@ Finally **QOwnNotes** has an overlay for **Gentoo Linux**.
 
 Please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Gentoo) for details on how to use it.
 
- ![gentoo-linux](/img/blog/gentoo-linux_reference.jpg "gentoo-linux")
+![gentoo-linux](/img/blog/gentoo-linux_reference.jpg "gentoo-linux")

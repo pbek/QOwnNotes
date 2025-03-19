@@ -9,4 +9,3 @@ If you have problems with the packages or repositories please report them at the
 ::: tip Info
 Take a look in the menu for all the different ways to install QOwnNotes
 :::
-

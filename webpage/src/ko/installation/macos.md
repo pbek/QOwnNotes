@@ -13,6 +13,7 @@ GitHub 릴리스는 현재 x86 플랫폼용으로만 제작되었습니다.
 ```bash
 xattr -r -d com.apple.quarantine /Applications/QOwnNotes.app
 ```
+
 :::
 
 ::: 팁 응용 프로그램은 자체 업데이트를 위해 ** 내부 업데이트 프로그램**을 사용합니다. 응용 프로그램 오른쪽 하단에서 최신 버전을 확인할 수 있습니다. :::

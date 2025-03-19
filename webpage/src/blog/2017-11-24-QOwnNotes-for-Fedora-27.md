@@ -15,6 +15,6 @@ Visit the [installation](https://www.qownnotes.org/installation/fedora.html) pag
 
 Note: There is no debug build for Fedora 27, because [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) had problems building it.
 
- ![Fedora 27](/img/blog/Fedora-27_reference.jpg "Fedora 27")
- 
- (image by [www.fosslinux.com](http://www.fosslinux.com))
+![Fedora 27](/img/blog/Fedora-27_reference.jpg "Fedora 27")
+
+(image by [www.fosslinux.com](http://www.fosslinux.com))

@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Afhankelijkheden
@@ -38,7 +39,7 @@ Standaard wordt `fzf` gebruikt om te zoeken, maar u kunt `peco` gebruiken door d
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Voordat u de snippetmanager gebruikt, moet u de *Websocketserver* (2) inschakelen in de instellingen voor *Browserextensie / opdrachtfragmenten* (1) in QOwnNotes.
+Voordat u de snippetmanager gebruikt, moet u de _Websocketserver_ (2) inschakelen in de instellingen voor _Browserextensie / opdrachtfragmenten_ (1) in QOwnNotes.
 
 Dan moet je het security token (3) laten zien en kopiëren (4).
 
@@ -68,7 +69,9 @@ Als je een `cmd:` toevoegt voor het in-line codeblok, zal het commando ook gevon
 
 ```markdown
 - `echo ik ben een commando` ik ben een beschrijving #tag1 #tag2 #tag3
+
 * `echo ik ben ook een commando` ik ben een beschrijving #tag3 #tag4 #tag5
+
 - cmd: `echo I zal worden gevonden in de huidige notitie` Dit commando zal worden gevonden in de huidige notitie, ongeacht notitietags
 
 <!-- Voorbeeld om gebruikersinvoer te vragen -->

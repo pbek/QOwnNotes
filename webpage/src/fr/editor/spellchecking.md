@@ -2,16 +2,17 @@
 
 Faites corriger vos fautes d'orthographe !
 
-::: Astuce Info QOwnNotes a un **Gestionnaire de dictionnaires** intégré (dans le menu *Édition*) que vous pouvez utiliser pour télécharger des dictionnaires ou les supprimer (si vous êtes votre langue est manquante, voir ci-dessous comment demander l'ajout d'un dictionnaire). Si vous souhaitez télécharger les dictionnaires manuellement, vous pouvez suivre les instructions ci-dessous.
+::: Astuce Info QOwnNotes a un **Gestionnaire de dictionnaires** intégré (dans le menu _Édition_) que vous pouvez utiliser pour télécharger des dictionnaires ou les supprimer (si vous êtes votre langue est manquante, voir ci-dessous comment demander l'ajout d'un dictionnaire). Si vous souhaitez télécharger les dictionnaires manuellement, vous pouvez suivre les instructions ci-dessous.
 :::
 
 - Sous **Linux**, vous pouvez installer les dictionnaires Hunspell pour votre langue en utilisant le gestionnaire de pkg de votre distribution
-    - Si vous devez ajouter des fichiers de langue supplémentaires, vous pouvez le faire dans `~/.local/share/hunspell` ou `/usr/share/hunspell`.
-    - Si vous utilisez le package Snap de QOwnNotes, vous pouvez également utiliser `~/hunspell` pour les fichiers de langue, car le Snap ne peut pas accéder à  `~/.local`
+
+  - Si vous devez ajouter des fichiers de langue supplémentaires, vous pouvez le faire dans `~/.local/share/hunspell` ou `/usr/share/hunspell`.
+  - Si vous utilisez le package Snap de QOwnNotes, vous pouvez également utiliser `~/hunspell` pour les fichiers de langue, car le Snap ne peut pas accéder à `~/.local`
 
 - Sous **Windows**, vous devez copier les dictionnaires Hunspell pour votre langue dans un dossier `dicts` dans votre dossier d’application QOwnNotes ou dans `C:\Users\[username]\dicts`
-    - Vous pouvez télécharger des dictionnaires à partir de [dictionnaires LibreOffice](https://github.com/LibreOffice/dictionaries)
-    - Sous **macOS**, vous devez copier les dictionnaires Hunspell pour votre langue dans `/Library/Spelling` ou `~/Library/Spelling`. Si le répertoire n'existe pas, vous devez le créer.
+  - Vous pouvez télécharger des dictionnaires à partir de [dictionnaires LibreOffice](https://github.com/LibreOffice/dictionaries)
+  - Sous **macOS**, vous devez copier les dictionnaires Hunspell pour votre langue dans `/Library/Spelling` ou `~/Library/Spelling`. Si le répertoire n'existe pas, vous devez le créer.
 
 Les dictionnaires peuvent être téléchargés à partir de [dictionnaires QOwnNotes](https://github.com/qownnotes/dictionaries). Utilisez le tableau à la fin de ce document pour trouver votre langue et son code de langue respectif.
 

@@ -9,6 +9,7 @@ Als je [jq](https://stedolan.github.io/jq/) hebt geïnstalleerd, kun je ook down
 # query the latest Linux release from the QOwnNotes API, parse the JSON for the URL and download it
 curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
 ```
+
 :::
 
 Vervolgens kunt u de uitvoeringsrechten voor het bestand wijzigen:

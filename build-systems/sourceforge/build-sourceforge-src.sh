@@ -20,11 +20,10 @@ BRANCH=main
 
 PROJECT_PATH="/tmp/QOwnNotes-sourceforge-$$"
 
-
 echo "Started the SourceForge packaging process, using latest '$BRANCH' git tree"
 
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi
 
 mkdir $PROJECT_PATH
@@ -46,15 +45,15 @@ lrelease src/QOwnNotes.pro
 rm -Rf .git
 
 if [ -z $QOWNNOTES_VERSION ]; then
-    # get version from version.h
-    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+  # get version from version.h
+  QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
-    # set new version if we want to override it
-    echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
+  # set new version if we want to override it
+  echo "#define VERSION \"$QOWNNOTES_VERSION\"" >src/version.h
 fi
 
 # set the release string
-echo "#define RELEASE \"SourceForge\"" > src/release.h
+echo '#define RELEASE "SourceForge"' >src/release.h
 
 echo "Using version $QOWNNOTES_VERSION..."
 
@@ -75,18 +74,18 @@ archiveFile="$qownnotesSrcDir.tar.xz"
 echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
 
-md5sum $archiveFile > $archiveFile.md5
-sha256sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha256
-sha512sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha512
+md5sum $archiveFile >$archiveFile.md5
+sha256sum $archiveFile | awk '{ print $1 }' >$archiveFile.sha256
+sha512sum $archiveFile | awk '{ print $1 }' >$archiveFile.sha512
 
 remotePath="patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src"
 sourceForgeReadme="sourceforge-readme.md"
 
 # generate the readme for sourceforge with a screenshot from GitHub
-cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/main\\/screenshots\\/screenshot.png/g" >> ${sourceForgeReadme}
-echo >> ${sourceForgeReadme}
-echo >> ${sourceForgeReadme}
-cat CHANGELOG.md >> ${sourceForgeReadme}
+cat README.md | sed 's/screenshots\/screenshot.png/https:\/\/raw.githubusercontent.com\/pbek\/QOwnNotes\/main\/screenshots\/screenshot.png/g' >>${sourceForgeReadme}
+echo >>${sourceForgeReadme}
+echo >>${sourceForgeReadme}
+cat CHANGELOG.md >>${sourceForgeReadme}
 
 echo "Uploading files to SourceForge..."
 
@@ -102,5 +101,5 @@ rsync -ahv --progress ${archiveFile}* ${remotePath}
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi

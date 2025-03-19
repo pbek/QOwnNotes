@@ -10,7 +10,7 @@ Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](http
 
 ### حالت قابل حمل
 
-برای اجرای QOwnNotes در **حالت قابل حمل** که در آن هر چیزی (از جمله یادداشت های شما) فقط در پوشه `QOwnNotes` شما ذخیره می شوند از  `QOwnNotesPortable.bat` استفاده کنید.
+برای اجرای QOwnNotes در **حالت قابل حمل** که در آن هر چیزی (از جمله یادداشت های شما) فقط در پوشه `QOwnNotes` شما ذخیره می شوند از `QOwnNotesPortable.bat` استفاده کنید.
 
 ::: tip
 در صورتی که که اجازه مدیریت رایانه خود را ندارید، نیازی هم به حالت قابل حمل نخواهید داشت. QOwnNotes نیازی به نصب شدن ندارد!
@@ -32,7 +32,7 @@ Info
 
 ## چاکلتلی
 
-یک بسته نگهداری شده جمعی از QOwnNotes در  [Chocolatey](https://chocolatey.org/packages/qownnotes/) موجود می باشد.
+یک بسته نگهداری شده جمعی از QOwnNotes در [Chocolatey](https://chocolatey.org/packages/qownnotes/) موجود می باشد.
 
 می توانید آن را با عبارت زیر نصب کنید:
 

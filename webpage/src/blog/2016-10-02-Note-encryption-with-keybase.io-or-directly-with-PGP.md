@@ -18,6 +18,6 @@ You now can use your **custom method** to **encrypt and decrypt notes** via the 
 - to check on which platform the script is running you can use script.platformIsLinux(), script.platformIsOSX() and script.platformIsWindows()
 - for more information on the new commands please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html)
 
- ![keybase.io logo](/img/blog/keybase.io-logo_reference.png "keybase.io logo")
- 
- (image by keybase.io)
+![keybase.io logo](/img/blog/keybase.io-logo_reference.png "keybase.io logo")
+
+(image by keybase.io)

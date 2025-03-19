@@ -10,4 +10,3 @@ Ha problémái vannak a csomagokkal vagy az adattárakkal, kérjük, jelezze azo
 Info
 Vessen egy pillantást a menüre a QOwnNotes telepítésének különféle módjairól
 :::
-

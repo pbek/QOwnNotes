@@ -18,16 +18,17 @@
 
 ## Support for HTML and CSS standards
 
-Unfortunately **litehtml** is not fully compatible with HTML/CSS standards. There is lots of work to do to make **litehtml** work as well as modern browsers. But **litehtml** supports most HTML tags and CSS properties. You can find the list of supported CSS properties in  [this table](https://docs.google.com/spreadsheet/ccc?key=0AvHXl5n24PuhdHdELUdhaUl4OGlncXhDcDJuM1JpMnc&usp=sharing). For most simple usecases the HTML/CSS features supported by **litehtml** are enough. Right now **litehtml** supports even some pages with very complex HTML/CSS designs. As an example the pages created with [bootstrap framework](http://getbootstrap.com/) are usually well formatted by **litehtml**.
+Unfortunately **litehtml** is not fully compatible with HTML/CSS standards. There is lots of work to do to make **litehtml** work as well as modern browsers. But **litehtml** supports most HTML tags and CSS properties. You can find the list of supported CSS properties in [this table](https://docs.google.com/spreadsheet/ccc?key=0AvHXl5n24PuhdHdELUdhaUl4OGlncXhDcDJuM1JpMnc&usp=sharing). For most simple usecases the HTML/CSS features supported by **litehtml** are enough. Right now **litehtml** supports even some pages with very complex HTML/CSS designs. As an example the pages created with [bootstrap framework](http://getbootstrap.com/) are usually well formatted by **litehtml**.
 
 ## Testing litehtml
 
 You can [download the simple browser](http://www.litehtml.com/download.html) (**litebrowser**) to test the **litehtml** rendering engine.
 
 The litebrowser source codes are available on GitHub:
-  * [For Windows](https://github.com/litehtml/litebrowser)
-  * [For Linux](https://github.com/litehtml/litebrowser-linux)
-  * [For Haiku](https://github.com/adamfowleruk/litebrowser-haiku)
+
+- [For Windows](https://github.com/litehtml/litebrowser)
+- [For Linux](https://github.com/litehtml/litebrowser-linux)
+- [For Haiku](https://github.com/adamfowleruk/litebrowser-haiku)
 
 ## License
 

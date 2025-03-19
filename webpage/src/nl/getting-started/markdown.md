@@ -8,10 +8,15 @@ Gebruik koppen om uw teksten te structureren.
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -22,11 +27,9 @@ Het **Navigatiepaneel** toont de structuur van uw rubrieken.
 Als alternatief, voor H1 en H2, een onderstreepte stijl:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: tip
@@ -36,7 +39,7 @@ Standaard creëert QOwnNotes de **bestandsnaam van een notitie** uit de **kop 1*
 ## Nadruk
 
 ```markdown
-Nadruk, ook bekend als cursief, met *asterisks*.
+Nadruk, ook bekend als cursief, met _asterisks_.
 
 Sterke nadruk, ook bekend als vetgedrukt, met **asterisks**.
 ```
@@ -47,7 +50,7 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + B</kbd> gebruiken om tekst vet
 
 ## Onderstrepen
 
-Er is ook een optionele instelling om onderstreping we te geven in de *Voorbeeldweergave instellingen*.
+Er is ook een optionele instelling om onderstreping we te geven in de _Voorbeeldweergave instellingen_.
 
 ```markdown
 _underline_
@@ -74,14 +77,16 @@ Er zijn veel manieren om lijsten te maken.
 ```markdown
 1. Eerste geordende lijstitem
 2. Een ander item
-   * Ongeordende sublijst.
-1. Werkelijke cijfers doen er niet toe, alleen dat het een nummer is
+   - Ongeordende sublijst.
+3. Werkelijke cijfers doen er niet toe, alleen dat het een nummer is
    1. Geordende sublijst (werkt alleen in de editor, niet in de voorbeeldweergave)
 4. En nog een item.
 
-* Ongeordende lijst kan asterisks gebruiken
-- Of minnen
-+ Of plussen
+- Ongeordende lijst kan asterisks gebruiken
+
+* Of minnen
+
+- Of plussen
 ```
 
 ::: tip
@@ -101,7 +106,7 @@ Twee van de eenvoudigere toepassingen voor koppelingen zijn het verwijzen naar w
 
 [You can use numbers for reference-style link definitions][1]
 
-Gewone URL's en URL's tussen hoekhaken worden automatisch omgezet tot koppelingen in de voorbeeldweergave. 
+Gewone URL's en URL's tussen hoekhaken worden automatisch omgezet tot koppelingen in de voorbeeldweergave.
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -145,7 +150,6 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> gebruiken om e
 U kunt ook rechtstreeks een afbeelding van het klembord in uw notitie plakken met <kbd>Ctrl + Shift + V</kbd>.
 :::
 
-
 ## Inline code en codeblokken
 
 ```markdown
@@ -170,84 +174,85 @@ Voeg vier spaties toe vóór uw code om deze als codeblok te markeren.
 ### Backtick-begrenzing
 
 U kunt ook drie tildetekens gebruiken om een ​​codeblok aan te maken.
-~~~markdown
+
+````markdown
 ```
 Hier komt code
 Hier komt code
 ```
-~~~
+````
 
 ::: tip
-U kunt de [shortcut] (./ shortcuts.md) <kbd> Ctrl + Shift + C </kbd> toepassen op meerdere geselecteerde tekstregels of in een lege regel om een codeblok aan te maken. 
+U kunt de [shortcut] (./ shortcuts.md) <kbd> Ctrl + Shift + C </kbd> toepassen op meerdere geselecteerde tekstregels of in een lege regel om een codeblok aan te maken.
 :::
 
 ### Backtick-begrenzing met code-markering
 
 Er is ook enige syntaxisaccentuering met codeblokken in QOwnNotes.
 
-~~~markdown
+````markdown
 ```bash
 # Dit is een opmerking
 cd Notes
 ```
-~~~
+````
 
 Ondersteunde talen (en codeblok-ID's):
 
-* BASh scripting, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- BASh scripting, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- Shell scripting, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
 ## Tabellen
 
-Tabellen maken geen deel uit van de basis Markdown-specificatie, maar de QOwnNotes-voorbeeldweergave ondersteunt deze. 
+Tabellen maken geen deel uit van de basis Markdown-specificatie, maar de QOwnNotes-voorbeeldweergave ondersteunt deze.
 
-~~~markdown
+```markdown
 Sluistekens (verticale strepen) kunnen worden gebruikt om kolommen uit te lijnen.
 
-| Tabellen      | Zijn             | Vet   |
-| ------------- |:----------------:| -----:|
+| Tabellen      |       Zijn       |   Vet |
+| ------------- | :--------------: | ----: |
 | kol 3 is      | rechts-uitgevuld | $1600 |
-| kol 2 is      | gecentreerd      |   $12 |
-| zebra strepen | zijn mooi        |    $1 |
+| kol 2 is      |   gecentreerd    |   $12 |
+| zebra strepen |    zijn mooi     |    $1 |
 
 Elke koptekstcel moet met minimaal 3 streepjes gescheiden worden.
 
 U kunt ook inline Markdown gebruiken.
 
-| Minder | Fraaie | Markdown |
-| --- | --- | --- |
-| *Toch* | `correct` | **weergegeven** |
-| 1 | 2 | 3 |
-~~~
+| Minder | Fraaie    | Markdown        |
+| ------ | --------- | --------------- |
+| _Toch_ | `correct` | **weergegeven** |
+| 1      | 2         | 3               |
+```
 
 ::: tip
 Druk op <kbd>Alt + Shift + T</kbd> om een dialoogvenster te activeren waarmee u tabellen kunt maken. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
@@ -263,11 +268,11 @@ Gebruik <kbd>Ctrl + Space</kbd> in een markdown-tabel om deze automatisch op te 
 
 Citaatafbreking.
 
-> Dit is een zeer lange zin die correct wordt geciteerd wanneer deze over meerdere regels wordt verdeeld. Oh jongen, laten we blijven schrijven om er zeker van te zijn dat dit lang genoeg is om voor iedereen omgeslagen te worden. Oh, je kunt **Markdown** in een blokcitaat *plaatsen*. 
+> Dit is een zeer lange zin die correct wordt geciteerd wanneer deze over meerdere regels wordt verdeeld. Oh jongen, laten we blijven schrijven om er zeker van te zijn dat dit lang genoeg is om voor iedereen omgeslagen te worden. Oh, je kunt **Markdown** in een blokcitaat _plaatsen_.
 ```
 
 ::: tip
-U kunt QOwnNotes vertellen om blockquotes of alleen het blokcitaat-teken volledig te markeren in de *Editor instellingen*
+U kunt QOwnNotes vertellen om blockquotes of alleen het blokcitaat-teken volledig te markeren in de _Editor instellingen_
 
 U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> gebruiken om tekst als blokcitaat te markeren.
 :::
@@ -285,11 +290,11 @@ Afbreektekens
 
 Asterisks
 
-***
+---
 
 Lage streepjes
 
-___
+---
 ```
 
 ## Nieuwe regel
@@ -305,10 +310,10 @@ Je kunt twee spaties en een nieuwe regel invoeren met <kbd>⇧ Shift</kbd> + <kb
 ```markdown
 Hier is een regel om mee te beginnen.
 
-Deze regel is door twee nieuwe regels van de vorige gescheiden en daarmee wordt het een *afzonderlijke alinea*.
+Deze regel is door twee nieuwe regels van de vorige gescheiden en daarmee wordt het een _afzonderlijke alinea_.
 
 Deze regel begint ook een aparte alinea, maar...  
-Deze regel wordt allen gescheiden door twee spaties en een enkele nieuwe lijn en daarmee wordt het een aparte regel in de *dezelfde alinea*.
+Deze regel wordt allen gescheiden door twee spaties en een enkele nieuwe lijn en daarmee wordt het een aparte regel in de _dezelfde alinea_.
 ```
 
 ::: tip
@@ -320,7 +325,7 @@ Spaties aan het eind van de regel worden standaard gemarkeerd in de editor.
 Opmerkingen worden niet weergegeven in het voorbeeld.
 
 ```markdown
-[comment]: # (Deze opmerking verschijnt niet in het voorbeeld)
+[comment]: # "Deze opmerking verschijnt niet in het voorbeeld"
 
 <!-- HTML opmerkingen blijven ook verborgen -->
 ```
@@ -357,4 +362,4 @@ description: Een beschrijving
 Wat tekst
 ```
 
-De bestandsnaam van deze voorbeeldnotitie zou ` Notitiekop begint hier.md ` zijn.
+De bestandsnaam van deze voorbeeldnotitie zou `Notitiekop begint hier.md` zijn.

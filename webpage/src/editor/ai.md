@@ -13,7 +13,7 @@ This way you can do whatever you want and experiment with it.
 - There is an **AI toolbar** and a section in the **Edit main menu**, where can turn
   the service on, and you can select the AI backend and model
 - You can add an [OpenAI](https://openai.com/) and [Groq](https://groq.com/) API key in the new **AI settings**
-  - Look for more **AI backend integrations**, like *Ollama* and *llama.cpp* in the script repository
+  - Look for more **AI backend integrations**, like _Ollama_ and _llama.cpp_ in the script repository
 - Use the new `script.aiComplete(prompt)` scripting command to your own imagination
   - For more information please take a look at the
     [Scripting documentation](../scripting/methods-and-objects.md#use-a-completion-prompt-on-the-currently-selected-ai-model)

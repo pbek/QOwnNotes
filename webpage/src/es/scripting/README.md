@@ -33,5 +33,5 @@ Si desea proponer un script para el **Repositorio de scripts**, siga las instruc
 Si necesita acceder a una determinada funcionalidad en QOwnNotes o tiene preguntas o ideas, abra un problema en la [página de problemas de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-Para el registro, puede utilizar la orden `script.log()` para acceder al *Panel de registros*, que puede encender en el menú *Ventanas/Paneles*.
+Para el registro, puede utilizar la orden `script.log()` para acceder al _Panel de registros_, que puede encender en el menú _Ventanas/Paneles_.
 :::

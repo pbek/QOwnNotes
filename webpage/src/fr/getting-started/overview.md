@@ -139,8 +139,8 @@
 
 <v-divider />
 
-**Q** pour le [framework Qt](https://www.qt.io/) utilisé   
-**Own** parce que vous possédez ("to own") vos propres notes   
+**Q** pour le [framework Qt](https://www.qt.io/) utilisé  
+**Own** parce que vous possédez ("to own") vos propres notes  
 **Notes** pour les notes que vous prenez
 
 <v-divider />
@@ -154,6 +154,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 [Comprendre le concept de QOwnNotes](concept.md)
 
 ## Caractéristiques
+
 - Vous pouvez utiliser vos **fichiers texte ou Markdown existants**, pas besoin de les importer
 - QOwnNotes est écrit en C++ et optimisé pour une **faible consommation des ressources** (ce n'est pas une app Electron gourmande en CPU et en mémoire)
 - **Import depuis Evernote et Joplin**
@@ -176,8 +177,8 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - **Mode Vim**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-
 ## Apparence de l'interface
+
 - **Mise en évidence du Markdown** des notes et un **mode de prévisualisation de Markdown**
 - **Prise en charge du thème du mode sombre**
 - **Theming support** for the **Markdown syntax highlighting**
@@ -188,6 +189,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - **Les différences** entre la note actuelle et la note modifiée depuis l'extérieur sont **affichées** dans une boîte de dialogue
 
 ## Langues
+
 - **Disponible dans plus de 60 langues différentes** comme l'anglais, l'allemand, le français, le polonais, le chinois, le japonais, le russe, le portugais, le hongrois, le néerlandais et l'espagnol
   - [Votre aide](../contributing/translation.md) est très appréciée pour améliorer ces traductions ou pour traduire QOwnNotes dans plus de langues
 

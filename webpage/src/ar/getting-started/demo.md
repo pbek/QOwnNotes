@@ -7,11 +7,11 @@ Note
 
 يمكنك تجربة **QOwnNotes** في متصفحك بغير تثبيته، باتباع هذه التعليمات:
 
-١) انقر على هذا الرابط: [Play with Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). ٢) انقر على زر **Login / Start** (انظر النقطة **1** في لقطات الشاشة) وسجّل دخولك باستخدام حسابك على Docker   (تحتاج إلى إنشاء حساب إذا لم يكن لديك واحدا بالفعل).
+١) انقر على هذا الرابط: [Play with Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). ٢) انقر على زر **Login / Start** (انظر النقطة **1** في لقطات الشاشة) وسجّل دخولك باستخدام حسابك على Docker (تحتاج إلى إنشاء حساب إذا لم يكن لديك واحدا بالفعل).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-٣) انظر حتى ينتهي إنشاء الحاوية وتبدأ في العمل. عندئذ يمكنك النقر على **6080** في الأعلى (انظر النقطة **2** في لقطات الشاشة). إذا واجهك خطأ، برجاء الانتظار قليلا ثم حاول النقر على *6080* من جديد؛ قد تحتاج بيئة سطح المكتب لبعض الوقت حتى تحمّل.
+٣) انظر حتى ينتهي إنشاء الحاوية وتبدأ في العمل. عندئذ يمكنك النقر على **6080** في الأعلى (انظر النقطة **2** في لقطات الشاشة). إذا واجهك خطأ، برجاء الانتظار قليلا ثم حاول النقر على _6080_ من جديد؛ قد تحتاج بيئة سطح المكتب لبعض الوقت حتى تحمّل.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
@@ -19,6 +19,6 @@ Note
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
-٥) ستظهر شاشة تثبيت **QOwnNotes**، انقر خلالها واضغط *Finish* حتى ترى شاشة QOwnNotes الرئيسية.
+٥) ستظهر شاشة تثبيت **QOwnNotes**، انقر خلالها واضغط _Finish_ حتى ترى شاشة QOwnNotes الرئيسية.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

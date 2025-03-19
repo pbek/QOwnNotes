@@ -34,7 +34,7 @@ Puoi usare questa pagina per costruire un formato orario personalizzato. Puoi in
 | `z`             | i millisecondi senza zero iniziale (da 0 a 999)                               |
 | `zzz`           | i millisecondi con uno zero iniziale (da 000 a 999)                           |
 | `AP` oppure `A` | mostra AM/PM. A/AP verrà sostituito da `AM` o `PM` rispettivamente.           |
-| `ap` oppure `a` | mostra AM/PM. a/ap verrà sostituito da  `am` o `pm` rispettivamente.          |
+| `ap` oppure `a` | mostra AM/PM. a/ap verrà sostituito da `am` o `pm` rispettivamente.           |
 | `t`             | il fuso orario (per esempio `CEST`)                                           |
 
 ## Esempio di stringhe di formato

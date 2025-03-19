@@ -4,7 +4,6 @@
 
 <!-- <Content :page-key="getPageKey($site.pages, '/installation/ubuntu.md')" /> -->
 
-
 ## Minden openSUSE verzión
 
 A QOwnNotes az [OBS Package Installer](https://github.com/openSUSE/opi) eszközzel telepíthető.

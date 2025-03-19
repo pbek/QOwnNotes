@@ -13,4 +13,4 @@ Finally there also is a **Slackware repository** for **QOwnNotes**.
 
 Please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Slackware) for details on how to use it.
 
- ![Slackware Logo](/img/blog/Slackware-Logo_reference.png "Slackware Logo")  (Slackware logo by [www.unixstickers.com](http://www.unixstickers.com))
+![Slackware Logo](/img/blog/Slackware-Logo_reference.png "Slackware Logo") (Slackware logo by [www.unixstickers.com](http://www.unixstickers.com))

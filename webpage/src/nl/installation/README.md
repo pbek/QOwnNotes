@@ -10,4 +10,3 @@ Als u problemen heeft met de pakketten of repositories, meld deze dan op de [QOw
 Info
 Kijk in het menu voor alle verschillende manieren om QOwnNotes te installeren
 :::
-

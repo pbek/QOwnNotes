@@ -9,6 +9,7 @@ Se hai installato [jq](https://stedolan.github.io/jq/) puoi anche scaricate dire
 # interroga l'ultima release Linux tramite le API QOwnNotes, analizza il JSON per cercare l'URL e lo scarica
 curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
 ```
+
 :::
 
 Quindi puoi modificare i permessi di esecuzione del file:

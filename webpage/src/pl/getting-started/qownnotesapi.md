@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) może obsłużyć dla Ciebie **dostęp** do **notatek w koszu** i **wersji notatek**.
@@ -10,7 +9,7 @@ Możesz włączyć QOwnNotesAPI bezpośrednio w instancji **Nextcloud** lub **ow
 
 - [Strona aplikacji NextCloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - [strona ownCloud Apps](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 Udostępnianie notatek odbywa się za pośrednictwem interfejsu API dostarczanego przez Nextcloud / ownCloud. Dostęp do zadań można uzyskać bezpośrednio przez CalDAV.
 

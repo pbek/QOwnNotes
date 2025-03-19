@@ -1,9 +1,9 @@
 # Hooks
 
-onNoteStored
-------------
+## onNoteStored
 
 ### Methodeaanroep en parameters
+
 ```js
 / **
   * Deze functie wordt aangeroepen wanneer een notitie op schijf wordt opgeslagen
@@ -17,10 +17,10 @@ functie onNoteStored (Notizie);
 
 Misschien wilt u het voorbeeld bekijken [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
-noteOpenedHook
---------------
+## noteOpenedHook
 
 ### Methodeaanroep en parameters
+
 ```js
 / **
   * Deze functie wordt aangeroepen nadat een notitie is geopend
@@ -32,10 +32,10 @@ functie noteOpenedHook (note);
 
 Misschien wilt u het voorbeeld bekijken [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
-noteDoubleClickedHook
----------------------
+## noteDoubleClickedHook
 
 ### Methodeaanroep en parameters
+
 ```js
 / **
     * Deze functie wordt aangeroepen nadat een notitie is geopend
@@ -47,14 +47,14 @@ functie noteOpenedHook (note);
 
 Misschien wilt u het voorbeeld bekijken [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
 
-insertMediaHook
----------------
+## insertMediaHook
 
 Deze functie wordt aangeroepen wanneer een mediabestand in de huidige notitie wordt ingevoegd.
 
 Als deze functie in meerdere scripts is gedefinieerd, wint het eerste script dat een niet-lege tekenreeks retourneert.
 
 ### Methodeaanroep en parameters
+
 ```js
 // **
   * @param fileName string het bestandspad van het bronmediabestand voordat het naar de mediamap werd gekopieerd
@@ -66,14 +66,14 @@ functie insertMediaHook (bestandsnaam, markdownText);
 
 Misschien wilt u het voorbeeld bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-insertAttachmentHook
---------------------
+## insertAttachmentHook
 
 Deze functie wordt aangeroepen wanneer een mediabestand in de huidige notitie wordt ingevoegd.
 
 Als deze functie in meerdere scripts is gedefinieerd, wint het eerste script dat een niet-lege tekenreeks retourneert.
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * @param fileName string het bestandspad van het bronbijlagebestand voordat het naar de bijlagemap werd gekopieerd
@@ -85,10 +85,10 @@ functie insertAttachmentHook (bestandsnaam, markdownText);
 
 Misschien wilt u het voorbeeld bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-insertingFromMimeDataHook
--------------------------
+## insertingFromMimeDataHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen wanneer html of een mediabestand in een notitie wordt geplakt met `Ctrl + Shift + V`
@@ -102,10 +102,10 @@ functie insertingFromMimeDataHook (tekst, html);
 
 Misschien wilt u het voorbeeld bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) of [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
-handleNoteTextFileNameHook
---------------------------
+## handleNoteTextFileNameHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen wanneer een notitie op schijf wordt opgeslagen als
@@ -126,10 +126,10 @@ functie handleNoteTextFileNameHook (opmerking);
 
 Misschien wilt u het voorbeeld eens bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) of [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-handleNoteNameHook
-------------------
+## handleNoteNameHook
 
 ### Methodeaanroep en parameters
+
 ```js
 / **
   * Deze functie wordt aangeroepen wanneer de nootnaam voor een noot wordt bepaald
@@ -148,10 +148,10 @@ Misschien wilt u het voorbeeld bekijken [ example.qml ](https://github.com/pbek/
 
 Het is misschien geen goed idee om deze hook te gebruiken als de instelling om de bestandsnaam als nootnaam te gebruiken actief is.
 
-handleNewNoteHeadlineHook
--------------------------
+## handleNewNoteHeadlineHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen voordat een noot wordt gemaakt
@@ -170,10 +170,10 @@ function handleNewNoteHeadlineHook(headline);
 
 Misschien wilt u het voorbeeld bekijken [ custom-new-note-headline.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
 
-preNoteToMarkdownHtmlHook
--------------------------
+## preNoteToMarkdownHtmlHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen voordat de markdown-html van een notitie wordt gegenereerd
@@ -195,10 +195,10 @@ functie preNoteToMarkdownHtmlHook(note, markdown, forExport);
 
 Misschien wilt u het voorbeeld bekijken [ preview-styling.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
-noteToMarkdownHtmlHook
-----------------------
+## noteToMarkdownHtmlHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen wanneer de markdown-html van een notitie wordt gegenereerd
@@ -220,10 +220,10 @@ Misschien wilt u het voorbeeld bekijken [ example.qml ](https://github.com/pbek/
 
 Raadpleeg de [ondersteunde HTML Subset](http://doc.qt.io/qt-5/richtext-html-subset.html) documentatie voor een lijst met alle ondersteunde css-stijlen.
 
-encryptionHook
---------------
+## encryptionHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen wanneer tekst moet worden gecodeerd of gedecodeerd
@@ -238,12 +238,12 @@ functie encryptionHook (tekst, wachtwoord, decoderen);
 
 Misschien wilt u het voorbeeld eens bekijken [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) of [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
 
-noteTaggingHook
----------------
+## noteTaggingHook
 
 U kunt uw eigen tagging-mechanisme voor notities implementeren met bijvoorbeeld speciale tekst in uw notitie, zoals `@tag1`, `@tag2`, `@tag3`.
 
 ### Methodeaanroep en parameters
+
 ```js
 / **
   * Verwerkt notitie-tagging voor een notitie
@@ -260,19 +260,19 @@ U kunt uw eigen tagging-mechanisme voor notities implementeren met bijvoorbeeld 
 functie noteTaggingHook (note, action, tagName, newTagName);
 ```
 
--   zodra een script is geactiveerd dat de nieuwe functie `noteTaggingHook` implementeert, wordt het taggen van opmerkingen door die functie afgehandeld
--   zodra een script is geactiveerd dat de nieuwe functie <0>noteTaggingHook</0> implementeert, wordt het taggen van opmerkingen door die afgehandeld
-    -   in eerste instantie tags zoals `@tag` uit je notities importeren en je huidige tag-toewijzing overschrijven
-        -   je raakt je tags-boom niet kwijt, alleen de vorige toewijzing aan notities
-        -   u kunt nog steeds tags naar andere tags verplaatsen
-        -   als meer dan één tag dezelfde naam heeft in uw tagboom, wordt de eerste treffer toegewezen
-    -   door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
-    -   door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
-    -   als u tags in de taglijst verwijdert, worden die tags uit uw notities verwijderd
-    -   het hernoemen van tags in de tag-lijst zal de naam van die tags in uw notities
-    -   bulksgewijs taggen van notities in de notitielijst zal die tags aan uw notities
-    -   het bulksgewijs verwijderen van tags uit notities in de notitielijst zal die tags uit uw notities verwijderen
-    -   de applicatie activeert een reeks `toevoegen` en `verwijderen` acties voor alle geselecteerde tags en hun kinderen op alle notities als tags worden verplaatst in het tagpaneel
+- zodra een script is geactiveerd dat de nieuwe functie `noteTaggingHook` implementeert, wordt het taggen van opmerkingen door die functie afgehandeld
+- zodra een script is geactiveerd dat de nieuwe functie <0>noteTaggingHook</0> implementeert, wordt het taggen van opmerkingen door die afgehandeld
+  - in eerste instantie tags zoals `@tag` uit je notities importeren en je huidige tag-toewijzing overschrijven
+    - je raakt je tags-boom niet kwijt, alleen de vorige toewijzing aan notities
+    - u kunt nog steeds tags naar andere tags verplaatsen
+    - als meer dan één tag dezelfde naam heeft in uw tagboom, wordt de eerste treffer toegewezen
+  - door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
+  - door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
+  - als u tags in de taglijst verwijdert, worden die tags uit uw notities verwijderd
+  - het hernoemen van tags in de tag-lijst zal de naam van die tags in uw notities
+  - bulksgewijs taggen van notities in de notitielijst zal die tags aan uw notities
+  - het bulksgewijs verwijderen van tags uit notities in de notitielijst zal die tags uit uw notities verwijderen
+  - de applicatie activeert een reeks `toevoegen` en `verwijderen` acties voor alle geselecteerde tags en hun kinderen op alle notities als tags worden verplaatst in het tagpaneel
 
 Misschien wilt u het voorbeeld bekijken [ note-tagging.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) om uw eigen tagging-mechanisme te implementeren.
 
@@ -280,8 +280,7 @@ Misschien wilt u het voorbeeld bekijken [ note-tagging.qml ](https://github.com/
 Zorg ervoor dat uw `lijst` -actie echt snel is, want deze wordt voor elke notitie uitgevoerd telkens wanneer de notitiemap opnieuw wordt geladen!
 :::
 
-noteTaggingByObjectHook
-----------------------
+## noteTaggingByObjectHook
 
 Net als bij [noteTaggingHook](#notetagginghook) kunt u uw eigen mechanisme voor het taggen van notities implementeren, maar u bent niet gebonden aan het taggen van namen in de root van de tagboom. Op deze manier kunt u gebruik maken van de hele tagboom in plaats van alleen een taglijst.
 
@@ -290,6 +289,7 @@ Met `noteTaggingByObjectHook` krijg je een `TagApi` -object als parameter, in pl
 Dit betekent ook dat u zelf ontbrekende tags moet maken om een lijst met reeds bestaande tag-ID's voor de `list` -actie te kunnen leveren.
 
 ### Methodeaanroep en parameters
+
 ```js
 / **
   * Verwerkt notitie-tagging voor een notitie
@@ -308,12 +308,12 @@ functie noteTaggingByObjectHook (opmerking, actie, tag, newTagName);
 
 Misschien wilt u het voorbeeld bekijken [ notice-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) om uw eigen tagging-mechanisme te implementeren.
 
-autocompletionHook
-------------------
+## autocompletionHook
 
 U kunt een lijst met tekenreeksen retourneren die aan de autocomplete-lijst moeten worden toegevoegd wanneer ze automatisch worden aangeroepen (bijvoorbeeld door op <kbd>Ctrl + Space</kbd> te drukken).
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Roept de functie autocompletionHook aan voor alle scriptcomponenten
@@ -326,12 +326,12 @@ functie callAutocompletionHook ();
 
 Misschien wilt u het voorbeeld bekijken [ autocompletion.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-websocketRawDataHook
---------------------
+## websocketRawDataHook
 
 Deze hook wordt aangeroepen wanneer gegevens worden verzonden vanuit de QOwnNotes Web Companion-browserextensie via het contextmenu van de webbrowser.
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
  * @param requestType can be "page" or "selection"
@@ -346,12 +346,12 @@ function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData
 
 Misschien wilt u de voorbeelden eens bekijken [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) en [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
-onDetachedProcessCallback
--------------------------
+## onDetachedProcessCallback
 
 Deze hook wordt aangeroepen wanneer een scriptthread van [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) klaar is met uitvoeren.
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen wanneer een scriptthread klaar is met uitvoeren.
@@ -367,10 +367,10 @@ functie onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread);
 
 Misschien wilt u het voorbeeld bekijken [ callback-example.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
 
-windowStateChangedHook
---------------
+## windowStateChangedHook
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
   * Deze functie wordt aangeroepen nadat een WindowStateChange-gebeurtenis is geactiveerd
@@ -382,12 +382,12 @@ functie windowStateChangedHook (windowState);
 
 Misschien wilt u het voorbeeld bekijken [ window-state-changed.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
 
-workspaceSwitchedHook
-----------------------
+## workspaceSwitchedHook
 
 Deze haak wordt aangeroepen wanneer werkplekken worden geschakeld.
 
 ### Methodeaanroep en parameters
+
 ```js
 /**
  * This function is called when workspaces are switched
@@ -400,36 +400,36 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 
 Misschien wilt u het voorbeeld bekijken [ websocket-raw-data-new-note.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
 
-openAiBackendsHook
-------------------
+## openAiBackendsHook
 
 Deze hook wordt aangeroepen bij het laden van de OpenAI-serviceconfiguratie. Dit wordt bijv. ook gedaan wanneer de scriptengine opnieuw wordt geladen.
 
 Je kunt het gebruiken om configuratie te bieden voor aangepaste OpenAI-backends, zoals die van eigen OpenAI API-compatibele LLM's, zoals ChatGPT, Claude of systemen zoals Ollama.
 
 ### Methode-aanroep en parameters
+
 ```js
 /**
  * Deze functie wordt aangeroepen wanneer de OpenAI-serviceconfiguratie wordt geladen
  * Het retourneert een lijst met objecten met configuratieparameters voor nieuwe OpenAI-backends
  */
 function openAiBackendsHook() {
-    return [
-        {
-            "id": "my-custom-ai",
-            "name": "My Custom AI",
-            "baseUrl": "http://localhost:5000",
-            "apiKey": "kDFJkjk3asdm",
-            "models": ["gpt-3.5-turbo", "gpt-4.0-turbo"],
-        },
-        {
-            "id": "my-custom-ai2",
-            "name": "My Custom AI 2",
-            "baseUrl": "http://localhost:5001",
-            "apiKey": "lOikf7eNdb9",
-            "models": ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
-        },
-    ];
+  return [
+    {
+      id: "my-custom-ai",
+      name: "My Custom AI",
+      baseUrl: "http://localhost:5000",
+      apiKey: "kDFJkjk3asdm",
+      models: ["gpt-3.5-turbo", "gpt-4.0-turbo"],
+    },
+    {
+      id: "my-custom-ai2",
+      name: "My Custom AI 2",
+      baseUrl: "http://localhost:5001",
+      apiKey: "lOikf7eNdb9",
+      models: ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
+    },
+  ];
 }
 ```
 

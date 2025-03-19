@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Dipendenze
@@ -38,7 +39,7 @@ Per impostazione predefinita viene utilizzato `fzf` per la ricerca, ma puoi util
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Prima di utilizzare lo snippet manager è necessario abilitare il *server Web socket* (2) nelle impostazioni *Estensione del browser / frammenti di comando* (1) in QOwnNotes.
+Prima di utilizzare lo snippet manager è necessario abilitare il _server Web socket_ (2) nelle impostazioni _Estensione del browser / frammenti di comando_ (1) in QOwnNotes.
 
 Quindi devi mostrare il token di sicurezza (3) e copiarlo (4).
 
@@ -68,7 +69,9 @@ Se aggiungi un `cmd:` prima del blocco di codice in linea, il comando si trover�
 
 ```markdown
 - `echo sono un comando` sono una descrizione #tag1 #tag2 #tag3
+
 * `echo sono anche un comando` Sono una descrizione #tag3 #tag4 #tag5
+
 - cmd: `echo sarò trovato nella nota corrente` Questo comando sarà trovato nella nota corrente indipendentemente dai tag della nota
 
 <!-- Esempio di richiesta di input da parte dell'utente -->

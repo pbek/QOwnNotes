@@ -1,6 +1,6 @@
 # Alla ricerca di note
 
-Per cercare note o testo all'interno delle note puoi utilizzare la scorciatoia <kbd>Ctrl</kbd> + <kbd>⇧ Maiusc</kbd> + <kbd>F</kbd> (o <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> su macOS) per passare al *riquadro di ricerca delle note*.
+Per cercare note o testo all'interno delle note puoi utilizzare la scorciatoia <kbd>Ctrl</kbd> + <kbd>⇧ Maiusc</kbd> + <kbd>F</kbd> (o <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> su macOS) per passare al _riquadro di ricerca delle note_.
 
 Esistono diversi modi per cercare le note:
 

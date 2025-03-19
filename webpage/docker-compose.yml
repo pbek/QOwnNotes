@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   dev:
     image: node:20
@@ -7,8 +7,7 @@ services:
     user: 1000:1000
     ports:
       - "8080:8080"
-    command: ['/bin/bash', '-c', 'cd /app && npm install && npm run dev']
-
+    command: ["/bin/bash", "-c", "cd /app && npm install && npm run dev"]
 #  web:
 #    image: img-qownnotes-webpage
 #    build: .

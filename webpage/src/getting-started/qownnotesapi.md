@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) can handle the **access** to **trashed notes**
@@ -12,7 +11,7 @@ in your server's **Apps page** at `https://<your-cloud-domain>/settings/apps`.
 
 - [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 Note sharing is done via the API provided by Nextcloud / ownCloud. Tasks are accessed directly via CalDAV.
 

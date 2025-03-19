@@ -1,6 +1,6 @@
 # Zainstaluj na macOS™
 
-Pobierz najnowszy **obraz dysku macOS** z [QOwnNotes Releases na GitHub](https://github.com/pbek/QOwnNotes/releases), otwórz go i przeciągnij aplikację **QOwnNotes** do **folderu aplikacji</0 >.</p>
+Pobierz najnowszy **obraz dysku macOS** z [QOwnNotes Releases na GitHub](https://github.com/pbek/QOwnNotes/releases), otwórz go i przeciągnij aplikację **QOwnNotes** do \*\*folderu aplikacji</0 >.</p>
 
 The first time you have to right-click the application and click **Open** to open QOwnNotes.
 
@@ -14,6 +14,7 @@ To take the application out of the quarantine you can also run the following com
 ```bash
 xattr -r -d com.apple.quarantine /Applications/QOwnNotes.app
 ```
+
 :::
 
 ::: tip

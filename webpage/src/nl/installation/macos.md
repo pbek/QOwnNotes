@@ -13,6 +13,7 @@ Om de applicatie uit de quarantaine te halen, kunt u ook de volgende opdrachtreg
 ```bash
 xattr -r -d com.apple.quarantine /Applications/QOwnNotes.app
 ```
+
 :::
 
 ::: tip

@@ -2,7 +2,7 @@
 
 ## Evernote
 
-Er is een Evernote-importdialoog welke u kunt bereiken in het menu ` Notitie / Importeren ` om * Enex* -bestanden te importeren.
+Er is een Evernote-importdialoog welke u kunt bereiken in het menu `Notitie / Importeren` om _ Enex_ -bestanden te importeren.
 
 Afbeeldingen, bijlagen, labels, basisopmaak en metagegevens worden ook geïmporteerd.
 
@@ -19,14 +19,13 @@ Als er problemen zijn met de conversie, open dan gerust een ticket op [GitHub](h
 ## Google Keep
 
 > Download Keep-taken met Google Takeout
-> 
+>
 > Archief uitpakken
-> 
+>
 > Download keep_to_markdown.py naar map naast map met uitgepakte Keep-taken
-> 
+>
 >     python keep_to_markdown.py Keep out/
->     
-> 
+>
 > Vervang Keep door de map met notities in JSON-formaat. De out-map wordt aangemaakt als deze niet bestaat.
 
 Van <https://gitlab.com/-/snippets/2002921>

@@ -9,10 +9,10 @@ Les paramètres suivants peuvent être utilisés dans l'interface en ligne de co
 | `--portable`                 | Exécute l'application en mode portable                                                                                                                        |
 | `--clear-settings`           | Efface les paramétrages et exécute l'application                                                                                                              |
 | `--dump-settings`            | Affiche l'ensemble des paramètres ainsi que d'autres informations à propos de l'application et de l'environnement en MarkDown Github puis ferme l'application |
-| `--session <name>`     | Exécute l'application dans un contexte de paramètres et de fichiers internes différent                                                                        |
+| `--session <name>`           | Exécute l'application dans un contexte de paramètres et de fichiers internes différent                                                                        |
 | `--allow-multiple-instances` | Autorise l'exécution simultanée de plusieurs instances de QOwnNotes, même si cela est interdit dans les paramètres                                            |
-| `--action <name>`      | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                                            |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                                                      |
+| `--action <name>`            | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                                            |
+| `--completion <shell>`       | Generate shell completion code. Supports `fish`, `bash`.                                                                                                      |
 
 ::: tip
 Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous pouvez démarrer l'application avec de nouveaux paramètres sans perdre vos paramètres actuels en utilisant le paramètre `--session`.
@@ -20,6 +20,7 @@ Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous pou
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Le lancement de l'application via la ligne de commande se fait différemment selon le système d'exploitation :
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Déclencher des actions de menu après le démarrage

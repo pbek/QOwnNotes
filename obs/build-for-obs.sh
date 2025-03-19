@@ -21,11 +21,10 @@ BRANCH=main
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
 
-
 echo "Started the OBS source packaging process, using latest '$BRANCH' git tree"
 
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi
 
 mkdir $PROJECT_PATH
@@ -47,15 +46,15 @@ lrelease src/QOwnNotes.pro
 rm -Rf .git
 
 if [ -z $QOWNNOTES_VERSION ]; then
-    # get version from version.h
-    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+  # get version from version.h
+  QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
-    # set new version if we want to override it
-    echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
+  # set new version if we want to override it
+  echo "#define VERSION \"$QOWNNOTES_VERSION\"" >src/version.h
 fi
 
 # set the release string
-echo "#define RELEASE \"OBS\"" > src/release.h
+echo '#define RELEASE "OBS"' >src/release.h
 
 # replace the version in the spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec
@@ -84,21 +83,21 @@ mv src $qownnotesSrcDir
 changelogPath=obs/qownnotes.bin
 
 # create the changelog file
-echo "-------------------------------------------------------------------" > $changelogPath
-echo "$DATE - patrizio@bekerle.com" >> $changelogPath
-echo "" >> $changelogPath
-echo "- $changelogText" >> $changelogPath
+echo "-------------------------------------------------------------------" >$changelogPath
+echo "$DATE - patrizio@bekerle.com" >>$changelogPath
+echo "" >>$changelogPath
+echo "- $changelogText" >>$changelogPath
 
 cat $changelogPath
 
 # create the Debian changelog file
 debChangelogPath=obs/debian.changelog
 versionPart="$QOWNNOTES_VERSION-1debian"
-echo "qownnotes ($versionPart) debian; urgency=low" > $debChangelogPath
-echo "" >> $debChangelogPath
-echo "  * $changelogText" >> $debChangelogPath
-echo "" >> $debChangelogPath
-echo " -- Patrizio Bekerle <patrizio@bekerle.com>  $DATE" >> $debChangelogPath
+echo "qownnotes ($versionPart) debian; urgency=low" >$debChangelogPath
+echo "" >>$debChangelogPath
+echo "  * $changelogText" >>$debChangelogPath
+echo "" >>$debChangelogPath
+echo " -- Patrizio Bekerle <patrizio@bekerle.com>  $DATE" >>$debChangelogPath
 
 cat $debChangelogPath
 
@@ -162,5 +161,5 @@ osc commit -m "$changelogText"
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi

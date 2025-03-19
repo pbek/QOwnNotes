@@ -101,7 +101,6 @@ echo "Remove all translated webpage folders, but German, Hungarian, Persian and 
 # Remove all active languages here!
 find webpage/src -type d -regextype posix-egrep -regex ".+src\/(am|be|bg|bn|bs|ca|ceb|cs|da|el|et|eu|fi|fil|ga|gl|ha|he|hi|hil|hr|id|is|ja|km|ku|lt|lv|mi|mk|ms|no|pa|pcm|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|ta|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
 
-
 #
 # Fix Crowdin translation bugs
 #

@@ -1,5 +1,4 @@
-QtWaitingSpinner
-================
+# QtWaitingSpinner
 
 QtWaitingSpinner is a highly configurable, custom Qt widget for showing "waiting" or "loading" spinner icons in Qt applications, e.g. the spinners below are all QtWaitingSpinner widgets differing only in their configuration:
 
@@ -9,15 +8,15 @@ QtWaitingSpinner is a highly configurable, custom Qt widget for showing "waiting
 
 The following properties can all be controlled directly through their corresponding setters:
 
-* Colour of the widget
-* "Roundness" of the lines
-* Speed (rotations per second)
-* Number of lines to be drawn
-* Line length
-* Line width
-* Radius of the spinner's "dead space" or inner circle
-* The percentage fade of the "trail"
-* The minimum opacity of the "trail"
+- Colour of the widget
+- "Roundness" of the lines
+- Speed (rotations per second)
+- Number of lines to be drawn
+- Line length
+- Line width
+- Radius of the spinner's "dead space" or inner circle
+- The percentage fade of the "trail"
+- The minimum opacity of the "trail"
 
 ### Usage
 
@@ -62,8 +61,8 @@ https://github.com/cybercatalyst/qt-pods
 
 ### Thanks
 
-QtWaitingSpinner was inspired by the [spin.js](http://fgnass.github.io/spin.js/)  project.
-
+QtWaitingSpinner was inspired by the [spin.js](http://fgnass.github.io/spin.js/) project.
 
 ### Forks
+
 There is also [QtWaitingSpinner for Python!](https://github.com/z3ntu/QtWaitingSpinner) Thanks to [z3ntu](https://github.com/z3ntu) for porting it.

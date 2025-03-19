@@ -1,9 +1,9 @@
 # 해설 클래스
 
-노트
-----
+## 노트
 
 ### 속성 및 방식
+
 ```cpp
 클래스 NoteApi {
     Q_PROPERTY(int id)
@@ -32,6 +32,7 @@
 [날짜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)의 방식을 사용하여 만든 `fileCreated` 또는 `fileLastModified`로 작업할 수 있습니다.
 
 ### 예제
+
 ```js
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
@@ -43,10 +44,10 @@ note.renameNoteFile("new name");
 script.log(note.allowDifferentFileName());
 ```
 
-노트 하위 폴더
-----
+## 노트 하위 폴더
 
 ### 속성 및 방식
+
 ```cpp
 클래스 NoteSubFolderApi {
     Q_PROPERTY(int id)
@@ -61,13 +62,20 @@ script.log(note.allowDifferentFileName());
 ```
 
 ### 예제
+
 ```js
-var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+var noteSubFolderQmlObj = Qt.createQmlObject(
+  "import QOwnNotesTypes 1.0; NoteSubFolder{}",
+  mainWindow,
+  "noteSubFolder",
+);
 
 // 모든 하위 폴더 이름 인쇄
-noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+noteSubFolderQmlObj
+  .fetchNoteSubFoldersByParentId(parentId)
+  .forEach(function (nsf) {
     script.log(nsf.name);
-});
+  });
 
 // 활성 노트 하위 폴더 가져오기
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
@@ -81,14 +89,14 @@ script.log(noteSubFolder.name);
 
 // 노트 하위 폴더의 노트를 통해 반복
 for (var idx in noteSubFolder.notes) {
-    var note = noteSubFolder.notes[idx];
+  var note = noteSubFolder.notes[idx];
 }
 ```
 
-태그
----
+## 태그
 
 ### 속성 및 방식
+
 ```cpp
 클래스 TagApi {
     Q_PROPERTY(int id)
@@ -100,6 +108,7 @@ for (var idx in noteSubFolder.notes) {
 ```
 
 ### 예제
+
 ```js
 // "QownNotes 가져오기"를 사용하는 것을 잊지 마십시오. 스크립트 상단에 1.0"을 입력합니다!
 
@@ -110,17 +119,17 @@ var notes = tag.notes;
 
 // 태그의 메모 반복
 for (var idx in notes) {
-    var note = notes[idx];
-    script.log(note.name);
+  var note = notes[idx];
+  script.log(note.name);
 }
 ```
 
 TagApi가 [ note-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml)에서 사용되는 더 많은 예를 찾을 수 있습니다.
 
-기본창
-----------
+## 기본창
 
 ### 속성 및 방법
+
 ```cpp
 클래스 MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -153,6 +162,7 @@ TagApi가 [ note-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/
 ```
 
 ### 예제
+
 ```js
 // 노트 목록 강제 다시 불러오기
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
@@ -173,10 +183,9 @@ mainWindow.jumpToTag(tag.id);
 
 // 탭에 열려 있는 모든 노트를 가져오기
 var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
+noteIds.forEach(function (noteId) {
+  var note = script.fetchNoteById(noteId);
 
-    // 노트로 무엇을 하세요
+  // 노트로 무엇을 하세요
 });
-
 ```

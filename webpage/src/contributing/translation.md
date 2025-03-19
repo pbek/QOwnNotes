@@ -30,7 +30,7 @@ experience more reliable and convenient by checking and if necessary, correcting
 unapproved translations. You need to ask the owner for the permission to be a
 proofreader for your language.
 
-Click here to see if your language is among the translated ones! 
+Click here to see if your language is among the translated ones!
 
 [QOwnNotes on Crowdin](https://translate.qownnotes.org/)
 
@@ -53,12 +53,12 @@ The target needs to represent the source exactly and with no omissions or additi
 
 If you need more context, or help with a certain string, and you happen to know another language,
 you can change the language and see what other translators made out of the segment.
-But feel free to leave a message and ask for clarification on the right side of the page. 
+But feel free to leave a message and ask for clarification on the right side of the page.
 
 ### Frequently used key terms
 
 It is necessary to check and use the same translations for the frequently used key terms,
-for example, "note" must be translated always in the same way. 
+for example, "note" must be translated always in the same way.
 
 If `trashed notes` is `gelöschte Dateien` in German, you would always translate it using this expression.
 Exception would be when you grammatically are bound to use an alternative, but keep it simple.
@@ -102,7 +102,7 @@ as in original but does not have to.
 Strings like `::: tip`, `::: warning` and `::: info` in the documentation are markers for
 [custom containers](https://vuepress.vuejs.org/guide/markdown.html#custom-containers) in VuePress
 and shouldn't be translated.
-   
+
 ### Other strings not to be translated
 
 Some segments we don't translate in the Documentation:

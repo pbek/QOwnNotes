@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Abhängigkeiten
@@ -38,7 +39,7 @@ Standardmäßig wird `fzf` für die Suche verwendet, aber Sie können `peco` ver
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Bevor Sie den Snippet-Manager verwenden, müssen Sie den *Socket-Server* (2) in den Einstellungen *Browsererweiterung / Befehlsschnipsel* (1) in QOwnNotes aktivieren.
+Bevor Sie den Snippet-Manager verwenden, müssen Sie den _Socket-Server_ (2) in den Einstellungen _Browsererweiterung / Befehlsschnipsel_ (1) in QOwnNotes aktivieren.
 
 Dann müssen Sie das Sicherheitstoken vorzeigen (3) und kopieren (4).
 
@@ -68,7 +69,9 @@ Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch i
 
 ```markdown
 - `Echo Ich bin ein Befehl` Ich bin eine Beschreibung #tag1 #tag2 #tag3
+
 * `Echo Ich bin auch ein Befehl` Ich bin eine Beschreibung #tag3 #tag4 #tag5
+
 - cmd: `echo I wird in der aktuellen Notiz gefunden` Dieser Befehl wird in der aktuellen Notiz unabhängig von Notiz-Tags gefunden
 
 <!-- Beispiel für das Abfragen von Benutzereingaben -->

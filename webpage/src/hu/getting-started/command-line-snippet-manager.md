@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Függőségek
@@ -38,7 +39,7 @@ Alapértelmezés szerint az `fzf` kifejezést használja a kereséshez, de haszn
 
 ![socket-server-token](/img/socket-server-token.png)
 
-A kódrészletkezelő használata előtt engedélyeznie kell a *Web socket szervert* (2) a QOwnNotes *Böngészőbővítmény / parancsrészletek* (1) beállításainál.
+A kódrészletkezelő használata előtt engedélyeznie kell a _Web socket szervert_ (2) a QOwnNotes _Böngészőbővítmény / parancsrészletek_ (1) beállításainál.
 
 Ezután meg kell mutatnia a biztonsági tokent (3), és ki kell másolnia (4).
 
@@ -68,7 +69,9 @@ Ha a soron belüli kódblokk elé egy `cmd:` karakterláncot ad hozzá, a paranc
 
 ```markdown
 - `visszhang Én vagyok a parancs` Leírás vagyok #tag1 #tag2 #tag3
+
 * `visszhang Én is parancs vagyok` Leírás vagyok #tag3 #tag4 #tag5
+
 - cmd: `echo I megtalálható lesz az aktuális jegyzetben` Ez a parancs megtalálható az aktuális jegyzetben a jegyzetcímkéktől függetlenül
 
 <!-- Példa a felhasználói bevitel kérésére -->

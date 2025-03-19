@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) puede manejar el **acceso** a **notas en la papelera** y **versiones de notas** por usted.
@@ -10,7 +9,7 @@ Puede habilitar QOwnNotesAPI directamente en su instancia de **Nextcloud** o **o
 
 - [Página de aplicaciones de Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - [página de aplicaciones ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 El intercambio de notas se realiza a través de la API proporcionada por Nextcloud / ownCloud. Se accede a las tareas directamente a través de CalDAV.
 

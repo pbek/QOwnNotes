@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## الاعتماديات
@@ -38,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-قبل أن تستخدم مدير القصاصات عليك تفعيل *خادم Web socket* (2) في شاشة إعدادات *إضافة المتصفح وقصاصات الأوامر* (1) في QOwnNotes.
+قبل أن تستخدم مدير القصاصات عليك تفعيل _خادم Web socket_ (2) في شاشة إعدادات _إضافة المتصفح وقصاصات الأوامر_ (1) في QOwnNotes.
 
 ثم يجب عليك إظهار رمز الأمان (3) ونسخه (4).
 
@@ -67,7 +68,9 @@ token = "رمز الأمان الخاص بك هنا"
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
+
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
+
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 
 <!-- Example for asking for user input -->

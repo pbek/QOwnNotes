@@ -1,6 +1,5 @@
 # App QOwnNotesAPI Nextcloud
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) peut gérer l'**accès** aux **notes mises à la corbeille** et aux **notes de versions** pour vous.
@@ -10,7 +9,7 @@ Vous pouvez activer QOwnNotesAPI directement dans votre instance **Nextcloud** o
 
 - [Page des Apps de Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - [page des Apps d'ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 Le partage des notes se fait via l'API fournie par Nextcloud / ownCloud. L'accès aux tâches se fait directement via CalDAV.
 

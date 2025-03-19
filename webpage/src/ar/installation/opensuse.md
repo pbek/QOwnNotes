@@ -4,7 +4,6 @@
 
 <!-- <Content :page-key="getPageKey($site.pages, '/installation/ubuntu.md')" /> -->
 
-
 ## جميع نسخ أوبن سوزي
 
 يمكنك تثبيت QOwnNotes باستخدام أداة [مثبت حزم OBS](https://github.com/openSUSE/opi).

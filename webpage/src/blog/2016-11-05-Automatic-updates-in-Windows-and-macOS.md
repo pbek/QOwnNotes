@@ -17,10 +17,10 @@ After the update QOwnNotes will be started again.
 
 ![Debug options](/img/blog/Debug-options_medium.png "Debug options")
 
-Please use the checkbox ***Fake old version number*** in the **Debug options** to trigger an update and click ***Check for updates*** in the *Help* main menu to **test the update process** and **provide feedback**.
+Please use the checkbox **_Fake old version number_** in the **Debug options** to trigger an update and click **_Check for updates_** in the _Help_ main menu to **test the update process** and **provide feedback**.
 
 Under **macOS** please use this issue for feedback: [Issue #102](https://github.com/pbek/QOwnNotes/issues/102)
 
 Under **Windows** please use this issue for feedback: [Issue #376](https://github.com/pbek/QOwnNotes/issues/376)
 
- ![QOwnNotes updater](https://www.qownnotes.org/var/bekerle/storage/images/media/images/qownnotes-updater/4266-1-eng-GB/QOwnNotes-updater_reference.png "QOwnNotes updater")
+![QOwnNotes updater](https://www.qownnotes.org/var/bekerle/storage/images/media/images/qownnotes-updater/4266-1-eng-GB/QOwnNotes-updater_reference.png "QOwnNotes updater")

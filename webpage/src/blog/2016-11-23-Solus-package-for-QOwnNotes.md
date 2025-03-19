@@ -17,6 +17,6 @@ A big thank you to **Joshua Strobl** on [⚓ T1687 QOwnNotes](https://dev.solus-
 
 Edit 2016-11-25: QOwnNotes is now in the Solus **main repository**.
 
- ![Solus Project](/img/blog/Solus-Project_reference.png "Solus Project")
- 
- (image by [Solus Project](https://solus-project.com/))
+![Solus Project](/img/blog/Solus-Project_reference.png "Solus Project")
+
+(image by [Solus Project](https://solus-project.com/))

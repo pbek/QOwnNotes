@@ -154,6 +154,7 @@
 [مفهوم QOwnNotes را درک کنید](concept.md)
 
 ## ویژگی ها
+
 - You can use your **existing text or markdown files**, no need for an import
 - QOwnNotes در ++C نوشته شده و برای **مصرف منابع کم** بهینه سازی شده است (بدون برنامه الکترونی نیازمند (hungry Electron app) به حافظه و CPU).
 - **ورودی اورنوت و جاپلین**
@@ -176,8 +177,8 @@
 - **Vim mode**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-
 ## ظاهر
+
 - **برجسته سازی مارک داون** یادداشت ها و **حالت پیش نمایش مارک داون**
 - **پشتیبانی از پوسته حالت تاریک**
 - **Theming support** for the **Markdown syntax highlighting**
@@ -188,6 +189,7 @@
 - **تفاوت های** بین یادداشت کنونی و یادداشتی که به صورت خارجی تغییر یافته است در یک کادر گفتگو **نشان** داده می شود
 
 ## زبان ها
+
 - **در دسترس برای بیش از 60 زبان مختلف** مانند انگلیسی، آلمانی، فرانسوی، لهستانی، چینی، ژاپنی، روسی، پرتغالی، مجاری، هلندی و اسپانیایی
   - [کمک شما](../contributing/translation.md) برای بهبود این ترجمه ها یا ترجمه QOwnNotes به زبان های بیشتر بسیار مایه خشنودی خواهد بود
 

@@ -11,4 +11,4 @@ order: 20160226212932
 
 QOwnNotes is now translatable on **Crowdin**! Join the fun at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes) and make it available in your favorite language!
 
- ![Crowdin](/img/blog/Crowdin_reference.png "Crowdin")
+![Crowdin](/img/blog/Crowdin_reference.png "Crowdin")

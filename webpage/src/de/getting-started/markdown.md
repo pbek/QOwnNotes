@@ -8,10 +8,15 @@ Verwenden Sie Überschriften, um Ihre Texte zu strukturieren.
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -22,11 +27,9 @@ Das Bedienfeld **Navigation** zeigt die Struktur Ihrer Überschriften.
 Alternativ für H1 und H2 eine unterstrichene Schriftweise:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: tip
@@ -36,7 +39,7 @@ Standardmäßig erstellt QOwnNotes den **Dateinamen einer Notiz** aus der **Übe
 ## Hervorhebung
 
 ```markdown
-Hervorhebung durch "Kursivschrift", mit *Sternchen*.
+Hervorhebung durch "Kursivschrift", mit _Sternchen_.
 
 Starke Hervorhebung, auch: "fett", mit **Sternchen**.
 ```
@@ -47,7 +50,7 @@ Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + B</kbd> verwende
 
 ## Unterstreichen
 
-Es gibt auch eine optionale Einstellung in den *Vorschau-Einstellungen*, um das Unterstreichen zu aktivieren.
+Es gibt auch eine optionale Einstellung in den _Vorschau-Einstellungen_, um das Unterstreichen zu aktivieren.
 
 ```markdown
 _unterstreichen_
@@ -74,14 +77,16 @@ Es gibt viele Möglichkeiten, Listen zu erstellen.
 ```markdown
 1. Erster geordneter Listeneintrag
 2. Ein weiterer Eintrag
-   * Ungeordnete Unterliste.
-1. Tatsächliche Zahlen spielen keine Rolle, nur dass es eine Zahl ist!
+   - Ungeordnete Unterliste.
+3. Tatsächliche Zahlen spielen keine Rolle, nur dass es eine Zahl ist!
    1. Geordnete Unterliste (funktioniert nur im Editor, nicht in der Vorschau)
 4. Und noch ein Eintrag.
 
-* Ungeordnete Liste kann Sternchen verwenden
-- Oder Minusse
-+ Oder Plusse
+- Ungeordnete Liste kann Sternchen verwenden
+
+* Oder Minusse
+
+- Oder Plusse
 ```
 
 ::: tip
@@ -101,7 +106,7 @@ Zwei einfachere Verwendungen von Links ist das Verweisen auf Webseiten oder ande
 
 [Sie können Nummern für Referenzlink-Definitionen benutzen][1]
 
-Klartext URLs und URLs in spitzen Klammern werden in der Vorschau automatisch zu Links. 
+Klartext URLs und URLs in spitzen Klammern werden in der Vorschau automatisch zu Links.
 http://www.example.com oder <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -145,7 +150,6 @@ Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + Umschalt + I</kb
 Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd>Strg + Umschalt + V</kbd> in Ihre Notiz einfügen.
 :::
 
-
 ## Inline-Code und Code-Blöcke
 
 ```markdown
@@ -169,84 +173,85 @@ Fügen Sie vier Leerzeichen vor Ihrem Code hinzu, um ihn als Codeblock zu markie
 ### Code-Blöcke mit Backticks
 
 Sie können auch drei Backticks verwenden, um einen Codeblock zu erstellen.
-~~~markdown
+
+````markdown
 ```
 Code kommt hierher
 Code kommt hierher
 ```
-~~~
+````
 
 ::: tip
-Du kannst den [shortcut](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> auf mehreren ausgewählten Textzeilen oder in einer leeren Zeile benutzen, um einen Codeblock zu generieren. 
+Du kannst den [shortcut](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> auf mehreren ausgewählten Textzeilen oder in einer leeren Zeile benutzen, um einen Codeblock zu generieren.
 :::
 
 ### Backtick-Zaun mit Code-Hervorhebung
 
 Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
 
-~~~markdown
+````markdown
 ```bash
 # Ich bin ein Kommentar
 cd Notes
 ```
-~~~
+````
 
 Momentan unterstützte Sprachen (und Codeblock Identifier) sind:
 
-* BASh scripting, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- BASh scripting, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- Shell scripting, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
 ## Tabellen
 
-Tabellen sind nicht Teil vom Kern-Markdown, aber QOwnNotes unterstützt sie. 
+Tabellen sind nicht Teil vom Kern-Markdown, aber QOwnNotes unterstützt sie.
 
-~~~markdown
+```markdown
 Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
 
-| Tabellen      | Sind          | Cool  |
-| ------------- |:-------------:| -----:|
-| Spalte 3 ist  | rechtsbündig  | $1600 |
-| Spalte 3 ist  | zentriert     |   $12 |
-| Zebrastreifen | sind toll     |    $1 |
+| Tabellen      |     Sind     |  Cool |
+| ------------- | :----------: | ----: |
+| Spalte 3 ist  | rechtsbündig | $1600 |
+| Spalte 3 ist  |  zentriert   |   $12 |
+| Zebrastreifen |  sind toll   |    $1 |
 
 Die Kopfzeilen-Zellen müssen immer durch mindestens drei Bindestriche getrennt werden.
 
 Sie können auch inline-Markdown verwenden.
 
-| Markdown | Weniger | Hübsch |
-| --- | --- | --- |
-| *Rendert* | `immernoch` | **schön** |
-| 1 | 2 | 3 |
-~~~
+| Markdown  | Weniger     | Hübsch    |
+| --------- | ----------- | --------- |
+| _Rendert_ | `immernoch` | **schön** |
+| 1         | 2           | 3         |
+```
 
 ::: tip
 Drücken Sie <kbd>Alt + Umschalt + T</kbd>, um ein Dialogfeld zu aktivieren, mit dem Sie Tabellen erstellen können. In diesem Dialog können Sie sogar CSV-Dateien importieren!
@@ -262,11 +267,11 @@ Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie auto
 
 Zitatpause.
 
-> Das ist eine sehr lange Zeile, die nach einem Zeilenumbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass es lang genug ist, um tatsächlich für alle umgebrochen zu werden. Oh, Sie können **Markdown** in ein Blockquote *packen*. 
+> Das ist eine sehr lange Zeile, die nach einem Zeilenumbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass es lang genug ist, um tatsächlich für alle umgebrochen zu werden. Oh, Sie können **Markdown** in ein Blockquote _packen_.
 ```
 
 ::: tip
-Sie können QOwnNotes anweisen, Blockzitate oder nur das Blockzitatzeichen in den *Editoreinstellungen* vollständig hervorzuheben
+Sie können QOwnNotes anweisen, Blockzitate oder nur das Blockzitatzeichen in den _Editoreinstellungen_ vollständig hervorzuheben
 
 Sie können die [ Verknüpfung ](./shortcuts.md) <kbd> Strg + Umschalt + B </kbd> verwenden, um Text als Blockzitat zu markieren.
 :::
@@ -284,11 +289,11 @@ Bindestriche
 
 Sternchen
 
-***
+---
 
 Unterstriche
 
-___
+---
 ```
 
 ## Zeilenumbrüche
@@ -304,10 +309,10 @@ Mit <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> können Sie zwei Leerzeichen und ei
 ```markdown
 Hier ist eine Zeile für den Anfang.
 
-Diese Zeile ist von der vorherigen getrennt, weshalb sie ein *separater Absatz* ist.
+Diese Zeile ist von der vorherigen getrennt, weshalb sie ein _separater Absatz_ ist.
 
 Diese Zeile fängt ebenfalls einen separaten Absatz an, aber...  
-Diese Zeile wird nur durch zwei anhängende Leerzeichen und einen einzigen Zeilenumbruch getrennt, weshalb sie eine separate Zeile im *selben Absatz* ist.
+Diese Zeile wird nur durch zwei anhängende Leerzeichen und einen einzigen Zeilenumbruch getrennt, weshalb sie eine separate Zeile im _selben Absatz_ ist.
 ```
 
 ::: tip
@@ -319,7 +324,7 @@ Nachgestellte Leerzeichen werden im Editor standardmäßig hervorgehoben.
 Kommentare werden in der Vorschau nicht angezeigt.
 
 ```markdown
-[comment]: # (Dieser Kommentar erscheint nicht in der Vorschau)
+[comment]: # "Dieser Kommentar erscheint nicht in der Vorschau"
 
 <!-- HTML Kommentare werden ebenfalls verborgen -->
 ```

@@ -8,20 +8,21 @@ Maakt het mogelijk om vanaf een browserpagina te knippen en browserbladwijzers t
 
 ::: tip
 Info
+
 - QOwnNotes moet actief zijn om de Web Companion-browserextensie te laten werken.
 - Geen internetverbinding nodig. De browserextensies werken **offline**.
-:::
+  :::
 
 ## Installatie
 
 1. Verkrijg de extensie
-    - [Chrome webshop](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons-pagina](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
+   - [Chrome webshop](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Firefox Add-ons-pagina](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
 2. Voeg het beveiligingstoken toe om de extensie te configureren.
-    - De eerste keer dat u op het QOwnNotes-pictogram voor de browserextensie klikt, ontvangt u een dialoogvenster met een beveiligingstoken. Kopieer de token.
-    - Ga naar de locatie voor extensiebeheer van uw browser. Klik in de details van de QOwnNotes-extensie.
-    - Plak het token in het veld Beveiligingstoken.
+   - De eerste keer dat u op het QOwnNotes-pictogram voor de browserextensie klikt, ontvangt u een dialoogvenster met een beveiligingstoken. Kopieer de token.
+   - Ga naar de locatie voor extensiebeheer van uw browser. Klik in de details van de QOwnNotes-extensie.
+   - Plak het token in het veld Beveiligingstoken.
 3. Om de privémodus te gebruiken, moet u in de extensie-instellingen toestemming verlenen om de extensie in privévensters te laten draaien.
 
 ## Webclipper
@@ -34,7 +35,7 @@ Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webc
 
 Zorg ervoor dat bij het klikken van het extensiepictogram in de browsertaakbalk dat ook het toestemmingsdialoogvenster wordt geaccepteerd.
 
-Als u Firefox gebruikt, moet u er ook voor zorgen dat u de optionele toestemming hebt ingeschakeld. ` Toegang tot uw gegevens voor alle websites ` in de * Toestemming * extensieinstellingen, anders krijgt u mogelijk een foutmelding ` TypeError: chrome.tabs.captureVisibleTab is geen functie `.
+Als u Firefox gebruikt, moet u er ook voor zorgen dat u de optionele toestemming hebt ingeschakeld. `Toegang tot uw gegevens voor alle websites` in de _ Toestemming _ extensieinstellingen, anders krijgt u mogelijk een foutmelding `TypeError: chrome.tabs.captureVisibleTab is geen functie`.
 :::
 
 ::: tip
@@ -64,6 +65,7 @@ U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-brows
 - [Webpaginanaam](https://www.example.com) #tag1 #tag2
 - [Webpaginanaam](https://www.example.com) slechts een beschrijving
 - [Webpaginanaam](https://www.example.com) #tag1 #tag2 een beschrijving en tags
+
 * [Webpaginanaam](https://www.example.com) het alternatieve lijstteken werkt ook
 ```
 

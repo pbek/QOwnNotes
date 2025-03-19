@@ -140,7 +140,7 @@
 <v-divider />
 
 **Q** voor het [Qt framework](https://www.qt.io/) dat wordt gebruikt  
-**Own** omdat je je eigen notities   
+**Own** omdat je je eigen notities  
 bezit **Notes** voor de notities die u maakt
 
 <v-divider />
@@ -154,6 +154,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 [Begrijp het concept van QOwnNotes](concept.md)
 
 ## Kenmerken
+
 - U kunt uw **bestaande tekst- of markdown-bestanden** gebruiken. U hoeft niets te importeren
 - QOwnNotes is geschreven in C++ en geoptimaliseerd voor **laag verbruik van bronnen** (geen CPU en geheugenverslindende Electron-app)
 - **Evernote en Joplin importeren**
@@ -176,8 +177,8 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Vim-modus**
 - **[Webapplicatie](web-app.md)** om **foto's van uw mobiele telefoon toe te voegen** in de huidige notitie in QOwnNotes op uw PC/laptop
 
-
 ## Uiterlijk
+
 - **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
 - **Thema-ondersteuning voor donkere modus**
 - Ondersteuning voor **Thema's** bij de **Markdown syntaxisaccentuering**
@@ -188,6 +189,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Verschillen** tussen huidige notitie en extern gewijzigde notitie worden **getoond** in een dialoogvenster
 
 ## Talen
+
 - **Beschikbaar in meer dan 60 verschillende talen** zoals Engels, Duits, Frans, Pools, Chinees, Japans, Russisch, Portugees, Hongaars, Nederlands en Spaans
   - [Uw hulp](../contributing/translation.md) wordt zeer op prijs gesteld om deze vertalingen te verbeteren of om QOwnNotes in meer talen te vertalen
 

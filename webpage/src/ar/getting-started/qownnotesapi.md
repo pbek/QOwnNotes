@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 يتيح [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) لك **الوصول** إلى **الملاحظات المهملة** و**نسخ الملاحظات**.
@@ -10,7 +9,7 @@
 
 - [صفحة تطبيقات Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - [صفحة تطبيقات ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 تتم مشاركة الملاحظات عبر API الذي يوفره Nextcloud / ownCloud. يتم الوصول إلى المهام مباشرةً عبر CalDAV.
 

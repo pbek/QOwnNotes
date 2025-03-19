@@ -154,10 +154,11 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 [Comprendere il concetto di QOwnNotes](concept.md)
 
 ## Caratteristiche
+
 - Puoi usare i tuoi **pre-esistenti documenti di testo o markdown** senza la necessità di importarli
 - QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
 - **Importa Evernote e Joplin**
-- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile** e Nextcloud Text</p></li>
+- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile\*\* e Nextcloud Text</p></li>
 - Crea un **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** e collegalo alle tue note
 - Supporto per la **condivisione delle note** sul tuo server **ownCLoud** / **Nextcloud**
 - Gestisci la tua **lista delle cose da fare** di Nextcloud / OwnCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o usa un altro **server CalDAV** per sincronizzare i tuoi incarichi
@@ -176,8 +177,8 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 - **Modalità Vim**
 - **[Applicazione web](web-app.md)** per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop</ul>
 
-
 ## Aspetto
+
 - **Evidenziazione del markdown** delle note e **modalità di anteprima del markdown**
 - **Supporto per temi in modalità scura**
 - **Supporto dei temi** per l'**evidenziazione della sintassi di Markdown**
@@ -188,6 +189,7 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 - **Le differenze** tra la nota corrente e la nota modificata esternamente sono **mostrate** in una finestra di dialogo
 
 ## Lingue
+
 - **Disponibile in più di 60 lingue diverse** come inglese, tedesco, francese, polacco, cinese, giapponese, russo, portoghese, ungherese, olandese e spagnolo
   - [Il tuo aiuto](../contributing/translation.md) è molto apprezzato per migliorare queste traduzioni o per tradurre QOwnNotes in più lingue
 

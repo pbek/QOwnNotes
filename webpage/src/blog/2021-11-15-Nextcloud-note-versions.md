@@ -17,4 +17,3 @@ All versions will be loaded and shown in a dialog, you can **show the difference
 Click `Restore selected version` to restore the selected past version of the note.
 
 ![qownnotes-media-AfAQYL](./media/qownnotes-media-AfAQYL.png)
-

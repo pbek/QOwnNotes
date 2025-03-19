@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) kan de **toegang** tot **weggegooide notities** en **notitieversies** voor u afhandelen.
@@ -9,7 +8,7 @@ U kunt QOwnNotesAPI rechtstreeks inschakelen in uw **Nextcloud** of **ownCloud**
 
 - [Nextcloud Apps-pagina](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps pagina](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 Het delen van notities gebeurt via de API van Nextcloud / ownCloud. Taken zijn rechtstreeks toegankelijk via CalDAV.
 

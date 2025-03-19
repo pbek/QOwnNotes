@@ -1,6 +1,5 @@
 # برنامه نکست کلود QOwnNotesAPI
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) می تواند **دسترسی** به **یادداشت های حذف شده** و **نسخه های یادداشت** را برای شما فراهم کند.
@@ -10,7 +9,7 @@
 
 - [صفحه برنامه های نکست کلود](https://apps.nextcloud.com/apps/qownnotesapi)
 - [صفحه برنامه های اون کلود](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 به اشتراک گذاری یادداشت از طریق API فراهم شده توسط نکست کلود یا اون کلود صورت می پذیرد. وظایف مستقیماً از طریق CalDAV در دسترس هستند.
 

@@ -10,11 +10,10 @@ order: 20201027000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 There now is a **QOwnNotes** release for **Fedora Linux 33**.
 
 Visit the [installation](/installation/fedora.html#fedora-33) page for more information on how to install the **Fedora 33** release of QOwnNotes.
 
 ![Fedora 25](/img/blog/monitor-fedoralogo.png "Fedora 33")
 
- (image by [getfedora.org](https://getfedora.org/))
+(image by [getfedora.org](https://getfedora.org/))

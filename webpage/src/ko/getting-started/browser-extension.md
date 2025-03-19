@@ -7,19 +7,20 @@ image: /img/bookmarks.png
 브라우저 페이지에서 클리핑하고 브라우저 및 운영 체제에서 브라우저 북마크를 관리할 수 있습니다.
 
 ::: 팁 정보
+
 - 웹 지원 브라우저 확장이 작동하려면 QOnNotes가 실행 중이어야 합니다.
 - 인터넷 연결이 필요하지 않습니다. 브라우저 확장은 **오프라인**으로 작동합니다. :::
 
 ## 설치
 
 1. 확장 가져오기
-    - [Chrome 웹 스토어](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox 부가 기능 페이지](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - [GitHub](https://github.com/qownnotes/web-companion/)에서도 확장 버전을 찾을 수 있습니다.
+   - [Chrome 웹 스토어](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Firefox 부가 기능 페이지](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - [GitHub](https://github.com/qownnotes/web-companion/)에서도 확장 버전을 찾을 수 있습니다.
 2. 확장을 구성하려면 보안 토큰을 추가하십시오.
-    - QOnNotes 브라우저 확장 아이콘을 처음 누르면 보안 토큰이 있는 대화상자가 나타납니다. 토큰을 복사합니다.
-    - 브라우저의 확장 관리 위치로 이동합니다. QOnNotes 확장 세부사항을 누릅니다.
-    - 토큰을 보안 토큰 필드에 붙여넣습니다.
+   - QOnNotes 브라우저 확장 아이콘을 처음 누르면 보안 토큰이 있는 대화상자가 나타납니다. 토큰을 복사합니다.
+   - 브라우저의 확장 관리 위치로 이동합니다. QOnNotes 확장 세부사항을 누릅니다.
+   - 토큰을 보안 토큰 필드에 붙여넣습니다.
 3. 개인 모드를 사용하려면 확장 설정에서 개인 창에서 확장이 실행되도록 허용해야 합니다.
 
 ## 웹 클리퍼
@@ -32,7 +33,7 @@ image: /img/bookmarks.png
 
 또한 브라우저 도구 모음에서 확장 아이콘을 처음 눌렀을 때 동의 대화 상자를 수락했는지 확인합니다.
 
-Firefox를 사용하는 경우 *권한* 확장 설정에서 `모든 웹 사이트에 대한 데이터에 액세스`할 수 있는 옵션 권한도 설정했는지 확인해야 합니다. 그렇지 않으면 `TypeError: chrome.tabs.captureVisibleTab is not a function`은 기능이 아닙니다. :::
+Firefox를 사용하는 경우 _권한_ 확장 설정에서 `모든 웹 사이트에 대한 데이터에 액세스`할 수 있는 옵션 권한도 설정했는지 확인해야 합니다. 그렇지 않으면 `TypeError: chrome.tabs.captureVisibleTab is not a function`은 기능이 아닙니다. :::
 
 ::: 팁 웹 클리퍼는 또한 스크립팅이 가능합니다! 웹 페이지에서 클리핑한 내용을 제어하려면 [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook)을 살펴 보십시오. :::
 
@@ -59,6 +60,7 @@ Firefox를 사용하는 경우 *권한* 확장 설정에서 `모든 웹 사이�
 - [Webpage name](https://www.example.com) #tag1 #tag2
 - [Webpage name](https://www.example.com) 일부 설명만
 - [Webpage name](https://www.example.com) #tag1 #tag2 일부 설명 및 태그
+
 * [Webpage name](https://www.example.com) 대체 목록 문자도 작동합니다
 ```
 

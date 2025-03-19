@@ -23,6 +23,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## 의존성
@@ -35,7 +36,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-스니펫 관리자를 사용하기 전에 QOwnNotes의 *브라우저 확장 / 명령 스니펫* (1) 설정에서 *Web socket server* (2) 를 사용 가능으로 설정해야 합니다.
+스니펫 관리자를 사용하기 전에 QOwnNotes의 _브라우저 확장 / 명령 스니펫_ (1) 설정에서 _Web socket server_ (2) 를 사용 가능으로 설정해야 합니다.
 
 그런 다음 보안 토큰 (3)을 표시하고 복사해야 합니다 (4).
 
@@ -62,7 +63,9 @@ token = "yourtokenhere"
 
 ```markdown
 - `echo I am a command` 나는 설명 #tag1 #tag2 #tag3
+
 * `echo I am also a command` 나는 설명 #tag3 #tag4 #tag5
+
 - cmd: `echo I will be found in the current note` 이 명령은 노트 태그에 관계없이 현재 노트에서 찾을 수 있습니다
 
 <!-- 사용자 입력 요청 예제 -->

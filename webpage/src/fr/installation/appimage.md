@@ -9,6 +9,7 @@ Si [jq](https://stedolan.github.io/jq/) est installé vous pouvez également té
 # demander la version Linux la plus récente depuis l'API QOwnNotes, faire l'analyse syntaxique du JSON pour obtenir son URL et la télécharger
 curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
 ```
+
 :::
 
 Vous pouvez ensuite modifier les autorisations d'exécution du fichier :

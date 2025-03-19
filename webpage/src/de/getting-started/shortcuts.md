@@ -23,7 +23,7 @@
 - <kbd>Alt</kbd> + <kbd>Bild nach unten</kbd> springt zum nächsten Notiz-Tab
 - <kbd>Strg</kbd> + <kbd>W</kbd> schließt den aktuellen Notiz-Tab
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus an/ab
-    - Sie können ihn auch mit <kbd>Esc</kbd> schließen
+  - Sie können ihn auch mit <kbd>Esc</kbd> schließen
 - <kbd>Strg</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text aus
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Markdown
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>V</kbd> fügt Notizen, Bilder und HTML aus der Zwischenablage ein
@@ -60,11 +60,11 @@
 
 - <kbd>Strg</kbd> + <kbd>Klicken</kbd> Sie auf einen Link, um ihn zu öffnen
 - Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Element zu springen
-    - <kbd>Esc</kbd> schließt die Suchleiste
+  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Element zu springen
+  - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>Strg</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>Strg</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
-    - <kbd>Strg</kbd> + <kbd>Alt</kbd> + <kbd>Pfeil nach unten</kbd> macht dasselbe
+  - <kbd>Strg</kbd> + <kbd>Alt</kbd> + <kbd>Pfeil nach unten</kbd> macht dasselbe
 - <kbd>Alt</kbd> + <kbd>Rücktaste</kbd> löscht die aktuelle Zeile
 - <kbd>Strg</kbd> + <kbd>Rücktaste</kbd> löscht das aktuelle Wort
 - <kbd>Strg</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Textlinks (funktioniert auch bei markiertem Text)
@@ -81,12 +81,12 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>S</kbd> streicht den markierten Text durch
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>U</kbd> blättert durch die Groß- und Kleinschreibung des ausgewählten Textes
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
-    - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
+  - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
 - <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
-    - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
+  - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
 - <kbd>Enter</kbd> in Listen erstellt ein neues Listenelement
 - <kbd>Alt</kbd> + <kbd>Pfeil nach links</kbd> springt im Notizverlauf ein Element zurück
-    - <kbd>Alt</kbd> + <kbd>Pfeil nach rechts</kbd> springt im Notizverlauf ein Element vorwärts
+  - <kbd>Alt</kbd> + <kbd>Pfeil nach rechts</kbd> springt im Notizverlauf ein Element vorwärts
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
 - <kbd>Strg</kbd> + <kbd>1..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichenplatz 1..9
 - <kbd>Strg</kbd> + <kbd>+</kbd> vergrößert den Notiztext um einen Punkt
@@ -105,15 +105,14 @@
 ### In der Notizvorschau
 
 - Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-    - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
-    - <kbd>Esc</kbd> schließt die Suchleiste
+  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
+  - <kbd>Esc</kbd> schließt die Suchleiste
 
 ### In der To-do-Liste
 
 - <kbd>Strg</kbd> + <kbd>S</kbd> speichert das aktuelle Aufgabenelement
 - <kbd>Strg</kbd> + <kbd>I</kbd> speichert das aktuelle Aufgabenelement und fügt es in die aktuelle Notiz ein
 - <kbd>Strg</kbd> + <kbd>R</kbd> entfernt das aktuelle Aufgabenelement
-
 
 ## macOS
 
@@ -138,7 +137,7 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Bild nach unten</kbd> springt zum nächsten Notiz-Tab
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> schließt den aktuellen Notiz-Tab
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
-    - Sie können ihn auch mit <kbd>Esc</kbd> schließen
+  - Sie können ihn auch mit <kbd>Esc</kbd> schließen
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Markdown
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> fügt Notizen, Bilder und HTML aus der Zwischenablage ein
@@ -175,11 +174,11 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Klicken</kbd> Sie auf einen Link, um ihn zu öffnen
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> ermöglicht die Suche in der aktuellen Notiz
-    - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
-    - <kbd>Esc</kbd> schließt die Suchleiste
+  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
+  - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach unten</kbd> macht dasselbe
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach unten</kbd> macht dasselbe
 - <kbd>⌘ Cmd</kbd> + <kbd>Rücktaste</kbd> löscht die aktuelle Zeile
 - <kbd>⌃ Ctrl</kbd> + <kbd>Rücktaste</kbd> löscht das aktuelle Wort
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Textlinks (funktioniert auch bei markiertem Text)
@@ -196,12 +195,12 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>S</kbd> streicht den markierten Text durch
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>U</kbd> wechselt die Groß-/Kleinschreibung des ausgewählten Textes
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
-    - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
+  - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
 - <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
-    - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung eines Listenelements nach einem ungeordneten Listenzeichen auf
+  - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung eines Listenelements nach einem ungeordneten Listenzeichen auf
 - <kbd>Enter</kbd> in Listen erstellt ein neues Listenelement
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach links</kbd> springt im Notizverlauf zurück
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach rechts</kbd> springt im Notizverlauf vorwärts
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach rechts</kbd> springt im Notizverlauf vorwärts
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf Lesezeichenplatz 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> springt zum Notiz-Lesezeichen auf Lesezeichenplatz 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> erhöht die Schriftgröße des Notiztextes um einen Punkt
@@ -220,8 +219,8 @@
 ### Im Notizvorschaufenster
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> ermöglicht die Suche in der aktuellen Notiz
-    - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
-    - <kbd>Esc</kbd> schließt die Suchleiste
+  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
+  - <kbd>Esc</kbd> schließt die Suchleiste
 
 ### In der To-do-Liste
 

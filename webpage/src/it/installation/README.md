@@ -8,4 +8,3 @@ Se hai problemi con i pacchetti o i repository, segnalali nella [pagina dei prob
 
 ::: tip Info
 Dai un'occhiata nel menù per tutti i diversi modi per installare QOwnNotes
-

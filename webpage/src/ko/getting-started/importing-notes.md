@@ -19,14 +19,13 @@
 ## Google Keep
 
 > Google 테이크아웃을 사용하여 Keep 작업 다운로드
-> 
+>
 > 압축파일 추출
-> 
+>
 > 추출된 Keep 폴더 옆의 디렉터리에 keep_to_markdown.py를 다운로드
-> 
+>
 >     python keep_to_markdown.py Keep out/
->     
-> 
+>
 > JSON 형식의 노트가 들어 있는 폴더로 Keep을 대체합니다. 아웃 폴더가 없으면 아웃 폴더가 생성됩니다.
 
 <https://gitlab.com/-/snippets/2002921>에서

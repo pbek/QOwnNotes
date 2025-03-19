@@ -8,34 +8,35 @@ image: /img/bookmarks.png
 
 ::: tip
 Info
+
 - QOwnNote باید اجرا شود تا افزونه مرورگر همراه وب کار کند.
 - نیازی به اتصال اینترنت نیست. افزونه های مرورگر به صورت **آفلاین** کار می کنند.
-:::
+  :::
 
 ## نصب
 
 1. دریافت افزونه
-    - [کروم وب استور](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [صفحه افزونه های فایرفاکس](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - شما می توانید افزونه را در [گیت هاب](https://github.com/qownnotes/web-companion/) نیز پیدا کنید.
+   - [کروم وب استور](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [صفحه افزونه های فایرفاکس](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - شما می توانید افزونه را در [گیت هاب](https://github.com/qownnotes/web-companion/) نیز پیدا کنید.
 2. برای پیکربندی افزونه توکن امنیتی را اضافه کنید.
-    - نخستین باری که روی آیکون افزونه مرورگر QOwnNotes کلیک کنید، کادر محاوره ای دارای توکن امنیتی دریافت خواهید کرد. رونوشت برداری توکن.
-    - به مکان مدیریت افزونه مرورگر خود بروید. روی جزئیات افزونه QOwnNotes کلیک کنید.
-    - توکن را در قسمت توکن امنیتی بچسبانید.
+   - نخستین باری که روی آیکون افزونه مرورگر QOwnNotes کلیک کنید، کادر محاوره ای دارای توکن امنیتی دریافت خواهید کرد. رونوشت برداری توکن.
+   - به مکان مدیریت افزونه مرورگر خود بروید. روی جزئیات افزونه QOwnNotes کلیک کنید.
+   - توکن را در قسمت توکن امنیتی بچسبانید.
 3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## وب کلیپر
 
 ![وب کلیپر](/img/web-clipper.png)
 
-به منظور استفاده کارآمد از **وب کلیپر** بر روی یک صفحه وب یا متن منتخب کلیک راست کنید.  علاوه بر این، می توانید یک یادداشت جدید را با **نماگرفتی** از صفحه وب کنونی ایجاد نمایید.
+به منظور استفاده کارآمد از **وب کلیپر** بر روی یک صفحه وب یا متن منتخب کلیک راست کنید. علاوه بر این، می توانید یک یادداشت جدید را با **نماگرفتی** از صفحه وب کنونی ایجاد نمایید.
 
 ::: warning
 Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
 
 Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
 
-If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -65,6 +66,7 @@ By default, the browser extension will show all **links of the current note** in
 - [نام صفحه وب](https://www.example.com) #برچسب1 #برچسب2
 - [نام صفحه وب](https://www.example.com) فقط مقداری توضیح
 - [نام صفحه وب](https://www.example.com) #برچسب1 #برچسب2 مقداری توضیح و برچسب ها
+
 * [نام صفحه وب](https://www.example.com) نویسه لیست جایگزین هم کار می کند
 ```
 

@@ -18,13 +18,13 @@ environment:
 
   matrix:
     # latest Qt 32 bit
-#    - QTDIR: C:\Qt\5.13\mingw73_32
-#      TOOLCHAIN_VERSION: 730_32
-#      gpp: win32-g++
+    #    - QTDIR: C:\Qt\5.13\mingw73_32
+    #      TOOLCHAIN_VERSION: 730_32
+    #      gpp: win32-g++
     # latest Qt 64 bit (broken)
-#    - QTDIR: C:\Qt\latest\mingw73_64
-#      TOOLCHAIN_VERSION: 730_64
-#      gpp: g++
+    #    - QTDIR: C:\Qt\latest\mingw73_64
+    #      TOOLCHAIN_VERSION: 730_64
+    #      gpp: g++
     # Qt 5.7 (for Windows XP)
     - QTDIR: C:\Qt\5.7\mingw53_32
       TOOLCHAIN_VERSION: 530_32
@@ -41,8 +41,8 @@ cache:
 
 install:
   # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
-#  - set QTDIR=C:\Qt\5.7\mingw53_32
-#  - set QTDIR=C:\Qt\5.10.1\mingw53_32
+  #  - set QTDIR=C:\Qt\5.7\mingw53_32
+  #  - set QTDIR=C:\Qt\5.10.1\mingw53_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\QtCreator\bin;C:\Qt\Tools\mingw%TOOLCHAIN_VERSION%\bin
   - echo PATH=%PATH%
   - set RELEASE_PATH=appveyor\release
@@ -64,7 +64,7 @@ before_build:
   # we need to modify that to make it running on AppVeyor
   #- sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x\nQMAKE_CXX=ccache %gpp%/g" QOwnNotesTests.pro
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotesTests.pro
-  - "echo #define RELEASE \"AppVeyor\" > release.h"
+  - 'echo #define RELEASE "AppVeyor" > release.h'
   - qmake QOwnNotesTests.pro DEFINES+=INTEGRATION_TESTS CONFIG+=ccache
   - mingw32-make
   # creating the test path
@@ -98,13 +98,13 @@ build_script:
   # we need to modify that to make it running on AppVeyor
   #- sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x\nQMAKE_CXX=ccache %gpp%/g" QOwnNotes.pro
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
-  - "echo #define RELEASE \"AppVeyor\" > release.h"
+  - 'echo #define RELEASE "AppVeyor" > release.h'
   # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"
-#  - qmake QOwnNotes.pro -r -spec win32-g++
-#  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache QMAKE_CXX="ccache $$QMAKE_CXX"
+  #  - qmake QOwnNotes.pro -r -spec win32-g++
+  #  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache QMAKE_CXX="ccache $$QMAKE_CXX"
   - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache
-#  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
+  #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - lrelease QOwnNotes.pro
   - mingw32-make
   # creating the release path

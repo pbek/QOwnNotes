@@ -154,6 +154,7 @@ Dołącz do naszej [grupy telegramów](https://t.me/QOwnNotes), aby dyskutować,
 [Zrozum pojęcie QOwnNotes](concept.md)
 
 ## Funkcje
+
 - You can use your **existing text or markdown files**, no need for an import
 - QOwnNotes jest napisany w C++ i zoptymalizowany pod kątem **niskiego zużycia zasobów** (bez aplikacji Electron, która wymaga dużej ilości procesora i pamięci)
 - **Import z Evernote i Joplin**
@@ -176,8 +177,8 @@ Dołącz do naszej [grupy telegramów](https://t.me/QOwnNotes), aby dyskutować,
 - **Vim mode**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-
 ## Wygląd zewnętrzny
+
 - **Podświetlanie przecen** notatek i **tryb podglądu przecen**
 - **Obsługa motywów trybu ciemnego**
 - **Theming support** for the **Markdown syntax highlighting**
@@ -188,6 +189,7 @@ Dołącz do naszej [grupy telegramów](https://t.me/QOwnNotes), aby dyskutować,
 - **Różnice** między bieżącą notatką a zewnętrznie zmienioną notatką są **pokazane** w oknie dialogowym
 
 ## Języki
+
 - **Dostępne w ponad 60 różnych językach**, takich jak angielski, niemiecki, francuski, polski, chiński, japoński, rosyjski, portugalski, węgierski, holenderski i hiszpański
   - [Twoja pomoc](../contributing/translation.md) jest bardzo ceniona w ulepszaniu tych tłumaczeń lub w tłumaczeniu QOwnNotes na więcej języków
 

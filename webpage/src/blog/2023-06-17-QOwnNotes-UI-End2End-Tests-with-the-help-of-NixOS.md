@@ -26,4 +26,3 @@ nix-build . -A nixosTests.qownnotes
 Text is read via OCR from the screen and tested for validity.
 
 ![end2end-test](./media/end2end-test.png)
-

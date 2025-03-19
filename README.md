@@ -29,7 +29,6 @@
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/qownnotes/localized.svg)](https://crowdin.com/project/qownnotes)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 
-
 [QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with
 [**Markdown support**](https://github.com/pbek/QOwnNotes/blob/main/src/demonotes/Markdown%20Cheatsheet.md)
 and **todo list manager** for **GNU/Linux**, **macOS** and **Windows**,
@@ -66,8 +65,8 @@ To access your ownCloud notes from your **mobile device** you may want to get on
 - For Android and Nextcloud: [Notes](https://f-droid.org/packages/it.niedermann.owncloud.notes)
 - For iOS: [CloudNotes](https://itunes.apple.com/app/cloudnotes-owncloud-notes/id813973264)
 
-On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync*
-to sync your note files and use software like *neutriNotes* or
+On Android you could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_
+to sync your note files and use software like _neutriNotes_ or
 [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 
 On iOS [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)
@@ -88,7 +87,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
   (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - **trashed notes** can be restored from your Nextcloud / ownCloud server
   (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
-    - there also is a local trash
+  - there also is a local trash
 - sub-string searching of notes is possible and search results are highlighted in the notes
 - application can be operated with **customizable keyboard shortcuts**
 - external changes of note files are watched (notes or note list are reloaded)
@@ -101,14 +100,14 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts
 - [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
   to a add notes from the selected text and other features
-	- visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-	  page to install the app on Google Chrome
-	- visit the [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-	  page to install the app on Mozilla Firefox
+  - visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+    page to install the app on Google Chrome
+  - visit the [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+    page to install the app on Mozilla Firefox
 - notes are getting their name from the first line of the note text (just like
   in the Nextcloud / ownCloud notes web-application) and the note text files are
   automatically renamed, if the first line changes
-    - this feature can also be turned off, and you can use any filename you like
+  - this feature can also be turned off, and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - create [Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards and link to them in your notes
 - **encryption of notes** (AES-256 is built in, or you can use custom encryption methods like
@@ -128,11 +127,11 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - Evernote (now with large files) and Joplin import
 - QOwnNotes is **available in over 60 different languages** like English, German,
   French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
-	- [Your help](https://www.qownnotes.org/contributing/translation.html) is
-	  very much appreciated to improve these translations or to translate
-	  QOwnNotes in more languages
-	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes)**
-	  to **help** with the **translations**
+  - [Your help](https://www.qownnotes.org/contributing/translation.html) is
+    very much appreciated to improve these translations or to translate
+    QOwnNotes in more languages
+  - Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes)**
+    to **help** with the **translations**
 
 ## Installation
 
@@ -157,7 +156,7 @@ git submodule update --init
 Then download [Qt Creator](https://www.qt.io/download-open-source), you will also
 need the packages `qtwebsockets` to build QOwnNotes with Qt6
 (only `qtwebsockets` for Qt5). If you build under Windows, you want to stick to
-*MinGw 64-bit*.
+_MinGw 64-bit_.
 
 Afterward open the project file `src/QOwnNotes.pro` and click on
 **Build** / **Build Project QOwnNotes**.

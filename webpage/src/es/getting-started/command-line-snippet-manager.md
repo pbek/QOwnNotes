@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Dependencias
@@ -38,7 +39,7 @@ De forma predeterminada, `fzf` se usa para buscar, pero puede usar `peco` config
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Antes de usar el gestor de fragmentos, debe habilitar el *servidor de zócalo web* (2) en la configuración de *extensión del navegador/fragmentos de comando* (1) en QOwnNotes.
+Antes de usar el gestor de fragmentos, debe habilitar el _servidor de zócalo web_ (2) en la configuración de _extensión del navegador/fragmentos de comando_ (1) en QOwnNotes.
 
 Luego, debe mostrar la ficha de seguridad (3) y copiarla (4).
 
@@ -68,7 +69,9 @@ Si agrega un `cmd:` antes del bloque de código en terminal, la orden también s
 
 ```markdown
 - `echo Soy una órden` Soy una descripción #etiqueta1 #etiqueta2 #etiqueta3
+
 * `echo Tambien soy una órden` Soy una descripcion #etiqueta3 #etiqueta4 #etiqueta5
+
 - cmd: `echo Seré encontrada en la nota actual` Esta órden se encontrará en la nota actual independientemente de las etiquetas de nota
 
 <!-- Ejemplo para solicitar la entrada del usuario -->

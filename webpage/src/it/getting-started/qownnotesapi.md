@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) può gestire l'**accesso** alle **note spostate nel cestino** e alle **versioni delle note** per te.
@@ -10,7 +9,7 @@ Puoi abilitare QOwnNotesAPI direttamente nella tua istanza **Nextcloud** o **own
 
 - [Pagina delle App Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - [Pagina delle App ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
-:::
+  :::
 
 La condivisione delle note viene eseguita tramite l'API fornita da Nextcloud / ownCloud. Le attività sono accessibili direttamente tramite CalDAV.
 

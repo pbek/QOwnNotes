@@ -9,10 +9,10 @@ Możesz użyć tych parametrów w interfejsie wiersza poleceń (CLI), aby kontro
 | `--portable`                 | Uruchamia aplikację w trybie przenośnym                                                                                       |
 | `--clear-settings`           | Czyści ustawienia i uruchamia aplikację                                                                                       |
 | `--dump-settings`            | Wyświetla zrzut ustawień i innych informacji o programie i środowisku w formacie GitHub Markdown, a następnie zamyka program. |
-| `--session <name>`     | Uruchamia aplikację w innym kontekście – dotyczy ustawień i plików wewnętrznych.                                              |
+| `--session <name>`           | Uruchamia aplikację w innym kontekście – dotyczy ustawień i plików wewnętrznych.                                              |
 | `--allow-multiple-instances` | Pozwala na uruchomienie kilku instancji QOwnNotes, nawet jeśli jest to niedozwolone w ustawieniach.                           |
-| `--action <name>`      | Uruchamia akcję menu po uruchomieniu aplikacji (patrz poniżej)                                                                |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                      |
+| `--action <name>`            | Uruchamia akcję menu po uruchomieniu aplikacji (patrz poniżej)                                                                |
+| `--completion <shell>`       | Generate shell completion code. Supports `fish`, `bash`.                                                                      |
 
 ::: tip
 Jeśli napotkasz problemy z instalacją QOwnNotes, możesz uruchomić aplikację ze świeżymi ustawieniami bez utraty bieżących ustawień, używając parametru `--session`.
@@ -20,6 +20,7 @@ Jeśli napotkasz problemy z instalacją QOwnNotes, możesz uruchomić aplikację
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Możesz uruchomić aplikację poprzez wiersz poleceń na różnych systemach operacyjnych:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Wyzwalaj akcje menu po uruchomieniu

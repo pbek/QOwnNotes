@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Dépendances
@@ -38,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Avant d'utiliser le gestionnaire d'extraits de commandes vous devez activer le *serveur Web socket * (2) dans la section *Extension de navigateur / extraits de commandes* (1) dans les paramètres de QOwnNotes.
+Avant d'utiliser le gestionnaire d'extraits de commandes vous devez activer le _serveur Web socket _ (2) dans la section _Extension de navigateur / extraits de commandes_ (1) dans les paramètres de QOwnNotes.
 
 Vous devez ensuite afficher le jeton de sécurité (3) et le copier (4).
 
@@ -68,7 +69,9 @@ Si vous ajoutez un `cmd:` avant le bloc de code en ligne, la commande sera aussi
 
 ```markdown
 - `echo Je suis une commande` Je suis une description #tag1 #tag2 #tag3
+
 * `echo Je suis également une commande` Je suis une description #tag3 #tag4 #tag5
+
 - cmd: `echo Je serai présente dans la note courante` Cette commande se retrouvera dans la note courante quelles que soient ses étiquettesT
 
 <!-- Example de demande d'une entrée utilisateur -->

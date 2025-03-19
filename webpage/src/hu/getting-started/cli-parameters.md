@@ -9,10 +9,10 @@ Ezeket a paramétereket használhatja a parancssori felületen (CLI) az alkalmaz
 | `--portable`                 | Hordozható üzemmódban fut az alkalmazás                                                                                                  |
 | `--clear-settings`           | Törli a beállításokat és futtatja az alkalmazást                                                                                         |
 | `--dump-settings`            | Kiírja a GitHub Markdown beállításainak és az alkalmazással és a környezettel kapcsolatos egyéb információkat, és kilép az alkalmazásból |
-| `--session <name>`     | Az alkalmazást a beállításoknál és a belső fájloknál egy különböző környezetben futtat                                                   |
+| `--session <name>`           | Az alkalmazást a beállításoknál és a belső fájloknál egy különböző környezetben futtat                                                   |
 | `--allow-multiple-instances` | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
-| `--action <name>`      | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                                 |
+| `--action <name>`            | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
+| `--completion <shell>`       | Generate shell completion code. Supports `fish`, `bash`.                                                                                 |
 
 ::: tip
 Ha problémái adódnak a QOwnNotes telepítésével, akkor érdemes új beállításokkal indítani az alkalmazást anélkül, hogy elveszítené az aktuális beállításokat a `--session` paraméter használatával.
@@ -20,6 +20,7 @@ Ha problémái adódnak a QOwnNotes telepítésével, akkor érdemes új beáll�
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Különböző operációs rendszereken futtathatja az alkalmazást a parancssori felületen:
@@ -46,11 +47,12 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Indítsa el a menüműveleteket az indítás után
 
-A ` --action <name> ` paraméterrel kiválaszthatja a menüműveleteket az alkalmazás elindítása után.
+A `--action <name>` paraméterrel kiválaszthatja a menüműveleteket az alkalmazás elindítása után.
 
 Például a Todo lista párbeszédpanel megnyitásához indítás után:
 

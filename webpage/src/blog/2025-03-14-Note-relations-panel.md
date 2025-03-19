@@ -14,11 +14,11 @@ The note relations panel shows the **relations between the current note and link
 
 ![note-relations](/screenshots/screenshot-note-relations.png)
 
-Relations between notes can be created by **linking to another note**, for example with the *Note link* dialog.
+Relations between notes can be created by **linking to another note**, for example with the _Note link_ dialog.
 
 The syntax for a note link is for example `[My note](path/to/My%20note.md)`.
 
-You can turn on the panel in the *Window / Panels* menu.
+You can turn on the panel in the _Window / Panels_ menu.
 
 For more information visit the [note relations](../getting-started/note-relations.md) page.
 

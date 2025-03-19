@@ -2,7 +2,7 @@
 
 ## Evernote
 
-C'è una voce per importare le note di Evernote che puoi raggiungere in `Nota / Importa ` menù per importare * File Enex di Evernote * files.
+C'è una voce per importare le note di Evernote che puoi raggiungere in `Nota / Importa ` menù per importare _ File Enex di Evernote _ files.
 
 Saranno automaticamente importati anche immagini, allegati, etichette, formattazione standard e i metadati.
 
@@ -19,14 +19,13 @@ If there are any issues with the conversion, feel free to open a ticket at [GitH
 ## Google Keep
 
 > Scarica i Task di Keep usando Google Takeout
-> 
+>
 > Estrai un archivio
-> 
+>
 > Scarica keep_to_markdown.py nella cartella dov'è stata estratta la cartella di Keep
-> 
+>
 >     python keep_to_markdown.py Keep out/
->     
-> 
+>
 > Sostituisci Keep con la cartella contenente i file nel formato JSON. La cartella di output verrà creata se non esistente.
 
 From <https://gitlab.com/-/snippets/2002921>

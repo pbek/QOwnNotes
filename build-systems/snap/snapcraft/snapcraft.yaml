@@ -16,15 +16,15 @@ apps:
     # "=" is not allowed in the command anymore in core20
     command: "./wrapper.sh"
     environment:
-        DISABLE_WAYLAND: 1
-        QT_QPA_PLATFORMTHEME: gtk3
-        GIT_EXEC_PATH: $SNAP/usr/lib/git-core
-        GIT_TEMPLATE_DIR: $SNAP/usr/share/git-core/templates
-        GIT_AUTHOR_NAME: "QOwnNotes"
-        GIT_AUTHOR_EMAIL: "snap@qownnotes.git"
-        GIT_COMMITTER_NAME: "QOwnNotes"
-        GIT_COMMITTER_EMAIL: "snap@qownnotes.git"
-        EMAIL: "snap@qownnotes.git"
+      DISABLE_WAYLAND: 1
+      QT_QPA_PLATFORMTHEME: gtk3
+      GIT_EXEC_PATH: $SNAP/usr/lib/git-core
+      GIT_TEMPLATE_DIR: $SNAP/usr/share/git-core/templates
+      GIT_AUTHOR_NAME: "QOwnNotes"
+      GIT_AUTHOR_EMAIL: "snap@qownnotes.git"
+      GIT_COMMITTER_NAME: "QOwnNotes"
+      GIT_COMMITTER_EMAIL: "snap@qownnotes.git"
+      EMAIL: "snap@qownnotes.git"
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
@@ -32,7 +32,7 @@ apps:
       - network
       - network-bind
       - home
-#      - kde-frameworks-5-plug
+      #      - kde-frameworks-5-plug
       - desktop
       - desktop-legacy
       - removable-media
@@ -65,12 +65,12 @@ parts:
     source: https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-VERSION-STRING.tar.xz
     source-checksum: sha256/ARCHIVE-SHA256
     # see https://snapcraft.io/docs/qmake-plugin
-#    plugin: qmake
+    #    plugin: qmake
     plugin: make
-#    qmake-parameters:
-#      - CONFIG+=release
-#      - CONFIG+=snapcraft
-#    qmake-project-file: ./src/QOwnNotes.pro
+    #    qmake-parameters:
+    #      - CONFIG+=release
+    #      - CONFIG+=snapcraft
+    #    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
       export QT_SELECT=qt5
       # remove the default desktop file
@@ -108,39 +108,39 @@ parts:
     after: [desktop-qt5]
 
   desktop-qt5:
-      source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
-      source-subdir: qt
-      plugin: make
-      make-parameters: ["FLAVOR=qt5"]
-      build-packages:
-        - build-essential
-        - qtbase5-dev
-        - dpkg-dev
-      stage-packages:
-        - libxkbcommon0
-#        - ttf-ubuntu-font-family
-        - dmz-cursor-theme
-        - light-themes
-        - adwaita-icon-theme
-        - gnome-themes-standard
-        - shared-mime-info
-        - libqt5gui5
-        - libgdk-pixbuf2.0-0
-#        - libgtk2.0-0 # snapcraft was complaining about missing libgtk-x11-2.0.so.0
-        - libqt5svg5 # for loading icon themes which are svg
-#        - appmenu-qt5
-        - locales-all
-        - xdg-user-dirs
-        - fcitx-frontend-qt5
-        - libglib2.0-0
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: qt
+    plugin: make
+    make-parameters: ["FLAVOR=qt5"]
+    build-packages:
+      - build-essential
+      - qtbase5-dev
+      - dpkg-dev
+    stage-packages:
+      - libxkbcommon0
+      #        - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      - libqt5gui5
+      - libgdk-pixbuf2.0-0
+      #        - libgtk2.0-0 # snapcraft was complaining about missing libgtk-x11-2.0.so.0
+      - libqt5svg5 # for loading icon themes which are svg
+      #        - appmenu-qt5
+      - locales-all
+      - xdg-user-dirs
+      - fcitx-frontend-qt5
+      - libglib2.0-0
 
   plasma-integration:
     plugin: nil
     stage-packages:
-#      - plasma-integration # causes the KDE file selector to be used that didn't work
+      #      - plasma-integration # causes the KDE file selector to be used that didn't work
       - kde-style-breeze
       - breeze-icon-theme
-#      - kio # runtime slaves for kio, but does not seem to work
+    #      - kio # runtime slaves for kio, but does not seem to work
     prime:
       - "-usr/share/wallpapers/*"
       - "-usr/share/fonts/*"

@@ -8,10 +8,15 @@ Használja a fejléceket a szövegek strukturálásához.
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -22,11 +27,9 @@ A **Navigációs panel** mutatja a címsorok felépítését.
 Alternatív megoldásként H1 és H2 esetében aláhúzás-stílus stílus:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: tip
@@ -36,7 +39,7 @@ Alapértelmezés szerint a QOwnNotes létrehozza a jegyzet **fájlnevét** az **
 ## Hangsúly
 
 ```markdown
-Kiemelés, más néven dőlt betű, *csillaggal*.
+Kiemelés, más néven dőlt betű, _csillaggal_.
 
 Erős hangsúly, más néven félkövér, **csillaggal**.
 ```
@@ -47,7 +50,7 @@ Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + B</kbd> a félkövér
 
 ## Aláhúzás
 
-Van egy opcionális beállítás is, amely lehetővé teszi az aláhúzás megjelenítését az *Előnézet beállításai* alatt.
+Van egy opcionális beállítás is, amely lehetővé teszi az aláhúzás megjelenítését az _Előnézet beállításai_ alatt.
 
 ```markdown
 _underline_
@@ -74,14 +77,18 @@ A listák létrehozásának számos módja van.
 ```markdown
 1. Első rendezett listaelem
 2. Egy másik elem
-  * Rendezetlen allista.
-1. A tényleges számok nem számítanak, csak az, hogy ez egy szám
-  1. Rendezett allista (csak a szerkesztőben működik, az előnézetben nem)
-4. És még egy elem.
 
-* A rendezetlen lista csillagokat használhat
-- Vagy mínuszok
-+ Vagy pluszok
+- Rendezetlen allista.
+
+1. A tényleges számok nem számítanak, csak az, hogy ez egy szám
+1. Rendezett allista (csak a szerkesztőben működik, az előnézetben nem)
+1. És még egy elem.
+
+- A rendezetlen lista csillagokat használhat
+
+* Vagy mínuszok
+
+- Vagy pluszok
 ```
 
 ::: tip
@@ -101,7 +108,7 @@ Two of the simpler uses for links are pointing to webpages or other notes. There
 
 [You can use numbers for reference-style link definitions][1]
 
-Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview.
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -145,7 +152,6 @@ Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> a ké
 A vágólapról közvetlenül beilleszthet egy képet a jegyzetébe a <kbd>Ctrl + Shift + V</kbd> gombbal.
 :::
 
-
 ## Beépített kód és kódblokkok
 
 ```markdown
@@ -170,85 +176,86 @@ Tegyen négy szóközt a kód elé, hogy kódblokkként jelölje meg.
 ### Backtick fence
 
 Három backticket is használhat egy kódblokk létrehozásához.
-~~~markdown
+
+````markdown
 ```
 Code goes here
 Code goes here
 ```
-~~~
+````
 
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
-multiple selected lines of text or in an empty line to create a code block. 
+multiple selected lines of text or in an empty line to create a code block.
 :::
 
 ### Backtick fence with code highlighting
 
 There also is some syntax highlighting with code blocks in QOwnNotes.
 
-~~~markdown
+````markdown
 ```bash
 # I am a comment
 cd Notes
 ```
-~~~
+````
 
 Currently, supported languages (and code block identifiers) are:
 
-* BASh scripting, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- BASh scripting, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- Shell scripting, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-~~~markdown
+```markdown
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 There must be at least 3 dashes separating each header cell.
 
 You can also use inline Markdown.
 
-| Markdown | Less | Pretty |
-| --- | --- | --- |
-| *Still* | `renders` | **nicely** |
-| 1 | 2 | 3 |
-~~~
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+```
 
 ::: tip
 Nyomja meg az <kbd>Alt+Shift+T</kbd> billentyűkombinációt egy párbeszédpanel aktiválásához, amely segíthet a táblázatok létrehozásában. Akár CSV fájlokat is importálhat abban a párbeszédpanelen.
@@ -264,11 +271,11 @@ Használja a <kbd>Ctrl + szóköz</kbd>t egy jelölési táblázatban az automat
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 ::: tip
-Azt mondhatja a QOwnNotes-nak, hogy a *Szerkesztő beállításai*-ban jelölje ki teljesen a blokk idézeteket vagy csak a blokk idézet karaktert.
+Azt mondhatja a QOwnNotes-nak, hogy a _Szerkesztő beállításai_-ban jelölje ki teljesen a blokk idézeteket vagy csak a blokk idézet karaktert.
 
 Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> a szöveg blokk idézetként történő megjelölésére.
 :::
@@ -286,11 +293,11 @@ Hyphens
 
 Asterisks
 
-***
+---
 
 Underscores
 
-___
+---
 ```
 
 ## Sortörések
@@ -306,10 +313,10 @@ Két szóközt és egy újsort írhat be a <kbd>⇧ Shift</kbd> + <kbd>Return</k
 ```markdown
 Here's a line for us to start with.
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
 This line is also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -321,7 +328,7 @@ A szóközöket a szerkesztő alapértelmezés szerint kiemeli.
 A jegyzet nem jelenik meg az előnézetben.
 
 ```markdown
-[comment]: # (This comment will not appear in the preview)
+[comment]: # "This comment will not appear in the preview"
 
 <!-- HTML comments are also hidden -->
 ```

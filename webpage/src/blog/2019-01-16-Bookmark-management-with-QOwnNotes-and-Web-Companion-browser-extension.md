@@ -15,4 +15,4 @@ Don't forget to update your installation of QOwnNotes as well!
 
 For more information about the **syntax** of the **bookmark links** and everything else please visit the **[QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)** knowledge page entry.
 
- ![qownnotes-web-companion-bookmarks](/img/blog/qownnotes-web-companion-bookmarks_reference.png "qownnotes-web-companion-bookmarks")
+![qownnotes-web-companion-bookmarks](/img/blog/qownnotes-web-companion-bookmarks_reference.png "qownnotes-web-companion-bookmarks")

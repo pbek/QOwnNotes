@@ -4,7 +4,6 @@
 
 <!-- <Content :page-key="getPageKey($site.pages, '/installation/ubuntu.md')" /> -->
 
-
 ## 모든 openSUSE에서
 
 [OBS패키지 설치](https://github.com/openSUSE/opi) 도구를 사용하여 QOnNotes를 설치할 수 있습니다.

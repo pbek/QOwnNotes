@@ -11,4 +11,4 @@ BIN_DIR="$(pwd)/bin"
 mkdir -p "${BIN_DIR}"
 ln -sf "$(which qmake)" "${BIN_DIR}/qmake6" && "${BIN_DIR}/qmake6" --version
 # Run a pure shell so the shell.nix will not be loaded again by direnv
-nix-shell --pure -p which libsForQt5.qt5.qtbase --run "ln -sf \$(which qmake | tail -n1) \$PWD/bin/qmake5" && "${BIN_DIR}/qmake5" --version
+nix-shell --pure -p which libsForQt5.qt5.qtbase --run 'ln -sf $(which qmake | tail -n1) $PWD/bin/qmake5' && "${BIN_DIR}/qmake5" --version

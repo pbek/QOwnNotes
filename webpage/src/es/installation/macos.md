@@ -14,6 +14,7 @@ Para sacar la aplicación de la cuarentena también puede ejecutar el siguiente 
 ```bash
 xattr -r -d com.apple.quarantine /Applications/QOwnNotes.app
 ```
+
 :::
 
 ::: tip

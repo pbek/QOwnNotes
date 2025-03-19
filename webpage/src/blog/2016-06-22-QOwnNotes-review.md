@@ -11,8 +11,7 @@ order: 20160622123545
 
 I want to share a very comprehensive review of QOwnNotes by [geckolinux](https://github.com/geckolinux).
 
-Review of QOwnNotes
--------------------
+## Review of QOwnNotes
 
 ![QOwnNotes review](/img/blog/QOwnNotes-review_medium.png "QOwnNotes review")
 
@@ -33,7 +32,6 @@ I've been extensively researching Markdown editors with live preview and export 
 
 This is an extremely full-featured and well thought-out program. It definitely feels like a far better alternative to the likes of Haroopad. Thanks for creating it!
 
-Footnote
---------
+## Footnote
 
 You can see his original post at [GitHub](https://github.com/pbek/QOwnNotes/issues/225) and another posting on [Reddit](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor).

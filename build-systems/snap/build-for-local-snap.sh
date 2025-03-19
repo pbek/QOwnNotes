@@ -11,7 +11,6 @@
 # https://github.com/pbek/QOwnNotes/releases
 #
 
-
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.07.3
 
@@ -21,11 +20,10 @@ BRANCH=main
 PROJECT_PATH="/tmp/QOwnNotes-local-snap-$$"
 CUR_DIR=$(pwd)
 
-
 echo "Started the Snap building process, using latest '$BRANCH' git tree"
 
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi
 
 mkdir $PROJECT_PATH
@@ -38,8 +36,8 @@ git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 if [ -z $QOWNNOTES_VERSION ]; then
-    # get version from version.h
-    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+  # get version from version.h
+  QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi
 
 cd build-systems/snap/snapcraft
@@ -64,5 +62,5 @@ snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release stable
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi

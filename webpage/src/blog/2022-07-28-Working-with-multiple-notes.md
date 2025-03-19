@@ -14,7 +14,7 @@ I usually just **search for a relevant string** in the note search. Most of the 
 
 If I need a reference to another note I just do a **note link to that note** on the top of the note. I most of the times add a **back-link** in those notes too.
 
-If a *really* need to have a 2nd note open, then I **open the the note in a different window read-only** (right click on the note in the note list).
+If a _really_ need to have a 2nd note open, then I **open the the note in a different window read-only** (right click on the note in the note list).
 
 If I quickly need to navigate between points in notes I use **"bookmark" shortcuts** (e.g. `Ctrl + Shift + 1`) and jump between passages that way (e.g. back with `Ctrl + 1`).
 

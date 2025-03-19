@@ -10,4 +10,3 @@ Si encuentra problemas con los paquetes o repositorios, por favor repórtelos a 
 Información
 Eche un vistazo en el menú para todas las formas diferentes de instalar QOwnNotes
 :::
-

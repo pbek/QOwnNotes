@@ -9,10 +9,10 @@ Sie können diese Parameter über das Kommandozeilenschnittstelle (CLI) verwende
 | `--portable`                 | Führt die Anwendung im portablen Modus aus                                                                                                        |
 | `--clear-settings`           | Löscht die Einstellungen und führt die Anwendung aus                                                                                              |
 | `--dump-settings`            | Gibt einen Speicherauszug der Einstellungen und anderer Informationen zur Anwendung und Umgebung in GitHub Markdown aus und beendet die Anwendung |
-| `--session <name>`     | Führt die Anwendung in einem anderen Kontext für Einstellungen und interne Dateien aus                                                            |
+| `--session <name>`           | Führt die Anwendung in einem anderen Kontext für Einstellungen und interne Dateien aus                                                            |
 | `--allow-multiple-instances` | Ermöglicht das Starten mehrerer Instanzen von QOwnNotes, auch wenn dies in den Einstellungen abgeschaltet ist                                     |
-| `--action <name>`      | Löst eine Menüaktion aus, nachdem die Anwendung gestartet wurde (siehe unten)                                                                     |
-| `--completion <shell>` | Erzeugt Shell-Vervollständigungscode. Unterstützt `fish`,`bash`.                                                                                  |
+| `--action <name>`            | Löst eine Menüaktion aus, nachdem die Anwendung gestartet wurde (siehe unten)                                                                     |
+| `--completion <shell>`       | Erzeugt Shell-Vervollständigungscode. Unterstützt `fish`,`bash`.                                                                                  |
 
 ::: tip
 Falls bei der Installation von QOwnNotes Probleme auftreten, sollten Sie die Anwendung möglicherweise mit neuen Einstellungen starten, ohne Ihre aktuellen Einstellungen zu verlieren, indem Sie den Parameter `--session` verwenden.
@@ -20,6 +20,7 @@ Falls bei der Installation von QOwnNotes Probleme auftreten, sollten Sie die Anw
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Sie können die Anwendung auf der Kommandozeilenschnittstelle unter verschiedenen Betriebssystemen unterschiedlich ausführen:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Menüaktionen nach dem Start auslösen

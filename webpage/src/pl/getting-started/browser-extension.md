@@ -8,20 +8,21 @@ Umożliwia wycinanie ze strony przeglądarki i zarządzanie zakładkami przeglą
 
 ::: tip
 Info
+
 - Aby rozszerzenie przeglądarki Web Companion działało, aplikacja QOwnNotes musi być uruchomiona.
 - Nie wymaga połączenia z Internetem. Rozszerzenia przeglądarki działają **w trybie offline**.
-:::
+  :::
 
 ## Instalacja
 
 1. Pobierz rozszerzenie
-    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - Rozszerzenie znajdziesz również w [GitHub](https://github.com/qownnotes/web-companion/).
+   - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - Rozszerzenie znajdziesz również w [GitHub](https://github.com/qownnotes/web-companion/).
 2. Dodaj token zabezpieczający, aby skonfigurować rozszerzenie.
-    - Po pierwszym kliknięciu ikony rozszerzenia przeglądarki QOwnNotes pojawi się okno dialogowe z tokenem bezpieczeństwa. Skopiuj token.
-    - Przejdź do lokalizacji zarządzania rozszerzeniami przeglądarki. Kliknij w szczegóły rozszerzenia QOwnNotes.
-    - Wklej token w polu Token bezpieczeństwa.
+   - Po pierwszym kliknięciu ikony rozszerzenia przeglądarki QOwnNotes pojawi się okno dialogowe z tokenem bezpieczeństwa. Skopiuj token.
+   - Przejdź do lokalizacji zarządzania rozszerzeniami przeglądarki. Kliknij w szczegóły rozszerzenia QOwnNotes.
+   - Wklej token w polu Token bezpieczeństwa.
 3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Schowek sieciowy
@@ -35,7 +36,7 @@ Info If the web clipper doesn't work, please check if the QOwnNotes desktop appl
 
 Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
 
-If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -65,6 +66,7 @@ Możesz też zaimportować zakładki ze swojej przeglądarki do QOwnNotes za pom
 - [Nazwa strony](https://www.example.com) #tag1 #tag2
 - [Nazwa strony](https://www.example.com) tylko część opisu
 - [Nazwa strony](https://www.example.com) #tag1 #tag2 część opisu i tagi
+
 * [Nazwa strony](https://www.example.com) znak listy alternatywnej również działa
 ```
 

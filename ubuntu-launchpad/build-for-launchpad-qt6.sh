@@ -16,8 +16,7 @@ BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=( "jammy" "noble" "oracular" )
-
+UBUNTU_RELEASES=("jammy" "noble" "oracular")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
@@ -30,21 +29,22 @@ export DEBEMAIL="patrizio@bekerle.com"
 #echo "/usr/share/cdbs/1/class/qmake.mk"
 #cat /usr/share/cdbs/1/class/qmake.mk
 
-while test $# -gt 0
-do
-    case "$1" in
-        --no-upload) UPLOAD="false"
-            ;;
-        --no-orig-tar-upload) DEBUILD_ARGS="-sd"
-            ;;
-    esac
-    shift
+while test $# -gt 0; do
+  case "$1" in
+  --no-upload)
+    UPLOAD="false"
+    ;;
+  --no-orig-tar-upload)
+    DEBUILD_ARGS="-sd"
+    ;;
+  esac
+  shift
 done
 
 echo "Started the debian source packaging process, using latest '$BRANCH' git tree"
 
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi
 
 # checkout the source code
@@ -58,15 +58,15 @@ git submodule update --init
 lrelease src/QOwnNotes.pro
 
 if [ -z $QOWNNOTES_VERSION ]; then
-    # get version from version.h
-    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+  # get version from version.h
+  QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
-    # set new version if we want to override it
-    echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
+  # set new version if we want to override it
+  echo "#define VERSION \"$QOWNNOTES_VERSION\"" >src/version.h
 fi
 
 # set release string to disable the update check
-echo "#define RELEASE \"Launchpad PPA Qt6\"" > src/release.h
+echo '#define RELEASE "Launchpad PPA Qt6"' >src/release.h
 
 changelogText="Released version $QOWNNOTES_VERSION"
 
@@ -89,41 +89,39 @@ changelogPath=debian/changelog
 gpg --list-secret-keys
 
 # build for every Ubuntu release
-for ubuntuRelease in "${UBUNTU_RELEASES[@]}"
-do
-    :
-    echo "Building for $ubuntuRelease..."
-    cd $qownnotesSrcDir || exit 1
+for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
+  :
+  echo "Building for $ubuntuRelease..."
+  cd $qownnotesSrcDir || exit 1
 
-    # get the modified qt6 files in place
-#    cp ../ubuntu-launchpad/qt6/* debian
-    cp /QOwnNotes/ubuntu-launchpad/qt6/* debian
+  # get the modified qt6 files in place
+  #    cp ../ubuntu-launchpad/qt6/* debian
+  cp /QOwnNotes/ubuntu-launchpad/qt6/* debian
 
-    versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
+  versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 
-    # update the changelog file
-    #dch -v $versionPart $changelogText
-    #dch -r $changelogText
-    
-    # create the changelog file
-    echo "qownnotes-qt6 ($versionPart) $ubuntuRelease; urgency=low" > $changelogPath
-    echo "" >> $changelogPath
-    echo "  * $changelogText" >> $changelogPath
-    echo "" >> $changelogPath
-    echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE" >> $changelogPath
+  # update the changelog file
+  #dch -v $versionPart $changelogText
+  #dch -r $changelogText
 
-    # launch debuild
-    debuild -S -sa -k$SIGNING_EMAIL $DEBUILD_ARGS
-    cd ..
+  # create the changelog file
+  echo "qownnotes-qt6 ($versionPart) $ubuntuRelease; urgency=low" >$changelogPath
+  echo "" >>$changelogPath
+  echo "  * $changelogText" >>$changelogPath
+  echo "" >>$changelogPath
+  echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE" >>$changelogPath
 
-    # send to launchpad
-    if [ "$UPLOAD" = "true" ]; then
-        dput ppa:pbek/qownnotes-qt6 qownnotes-qt6_${versionPart}_source.changes
-    fi;
+  # launch debuild
+  debuild -S -sa -k$SIGNING_EMAIL $DEBUILD_ARGS
+  cd ..
+
+  # send to launchpad
+  if [ "$UPLOAD" = "true" ]; then
+    dput ppa:pbek/qownnotes-qt6 qownnotes-qt6_${versionPart}_source.changes
+  fi
 done
-
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi

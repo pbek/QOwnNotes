@@ -33,5 +33,5 @@ Jeśli chcesz zaproponować skrypt dla **repozytorium skryptów**, postępuj zgo
 Jeśli potrzebujesz dostępu do określonej funkcji w QOwnNotes lub masz pytania lub pomysły, otwórz problem na [stronie problemu QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-For logging, you can use the `script.log()` command to log to the *Log panel*, which you can turn on in the *Window / Panels* menu.
+For logging, you can use the `script.log()` command to log to the _Log panel_, which you can turn on in the _Window / Panels_ menu.
 :::

@@ -21,4 +21,4 @@ I prepared some **[examples and documentation](https://github.com/pbek/QOwnNotes
 
 If you need access to a certain functionality in QOwnNotes or have **questions or ideas** please open an issue on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues).
 
- ![Scripting support with QML and JavaScript](/img/blog/QOwnNotes-scripting-with-QML-and-JavaScript_reference.png "Scripting support with QML and JavaScript")
+![Scripting support with QML and JavaScript](/img/blog/QOwnNotes-scripting-with-QML-and-JavaScript_reference.png "Scripting support with QML and JavaScript")

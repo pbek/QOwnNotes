@@ -9,6 +9,7 @@
 <span dir="rtl"># استعلم عن إصدارة لينكس الأخيرة عبر QOwnNotes API، وحلل JSON الناتج للحصول على الرابط، ونزّلها</span>
 curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
 ```
+
 :::
 
 عندئذٍ يمكنك جعل الملف قابلا للتنفيذ:

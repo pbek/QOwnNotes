@@ -10,7 +10,6 @@ order: 20201110000001
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 If you are having troubles understanding Markdown the new [Markdown](../getting-started/markdown.md) page can you help improve your Markdown syntax skills.
 
 You will also find a lot of related QOwnNotes tips on the page.

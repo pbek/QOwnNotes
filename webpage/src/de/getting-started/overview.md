@@ -139,7 +139,7 @@
 
 <v-divider />
 
-**Q** für das verwendete [Qt-Framework](https://www.qt.io/)   
+**Q** für das verwendete [Qt-Framework](https://www.qt.io/)  
 **Own**, weil Sie Ihre eigenen Notizen besitzen  
 **Notes** für die Notizen, die Sie erstellen
 
@@ -154,6 +154,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
 
 ## Features
+
 - Sie können Ihre **bereits vorhandenen Text- oder Markdowndateien** verwenden; kein Import nötig
 - QOwnNotes ist in C++ geschrieben und für **geringen Ressourcenverbrauch** optimiert (keine CPU- und speicherhungrige Electron-App)
 - **Evernote- und Joplin-Import**
@@ -176,8 +177,8 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - **Vim-Modus**
 - **[Web-App](web-app.md)** um **Fotos von Ihrem mobilen Telefon** in Notizen auf QOwnNote auf Ihrem Desktop einzufügen
 
-
 ## Aussehen
+
 - **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
 - **Unterstützung für Schemata im Dunkelmodus**
 - **Schemata-Unterstützung** für die Hervorhebung von **Markdown-Syntax**
@@ -188,6 +189,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - **Unterschiede** zwischen aktueller Notiz und extern geänderter Notiz werden in einem Dialog **angezeigt**
 
 ## Sprachen
+
 - **Verfügbar in mehr als 60 verschiedenen Sprachen** wie Englisch, Deutsch, Französisch, Polnisch, Chinesisch, Japanisch, Russisch, Portugiesisch, Ungarisch, Niederländisch und Spanisch
   - [Ihre Hilfe](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen
 

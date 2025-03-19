@@ -8,10 +8,15 @@ Usa i titoli per strutturare i tuoi testi.
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -22,11 +27,9 @@ Il **pannello di navigazione** mostra la struttura delle intestazioni.
 In alternativa, per H1 e H2, uno stile sottolineato:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: tip
@@ -36,7 +39,7 @@ Per impostazione predefinita QOwnNotes crea il **nome file di una nota** dall'in
 ## Enfasi
 
 ```markdown
-Enfasi, alias corsivo, con *asterischi*.
+Enfasi, alias corsivo, con _asterischi_.
 
 Forte enfasi, ovvero grassetto, con **asterischi**.
 ```
@@ -47,7 +50,7 @@ Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + B</kbd> per rendere
 
 ## Sottolineato
 
-Esiste anche un'impostazione opzionale per abilitare il rendering sottolineato nelle *Impostazioni anteprima*.
+Esiste anche un'impostazione opzionale per abilitare il rendering sottolineato nelle _Impostazioni anteprima_.
 
 ```markdown
 _sottolineato_
@@ -74,14 +77,18 @@ Esistono molti modi per creare elenchi.
 ```markdown
 1. Primo elemento di una lista ordinata
 2. Un altro elemento
-  * Sotto-lista non ordinata
-1. I numeri usati non sono importanti, basta che sia un numero
-  1. Sotto-lista ordinata (funziona solo nell'editor, non nell'anteprima)
-4. E un altro elemento.
 
-* Le lista non ordinate possono usare gli asterichi
-- O i meno
-+ o i più
+- Sotto-lista non ordinata
+
+1. I numeri usati non sono importanti, basta che sia un numero
+1. Sotto-lista ordinata (funziona solo nell'editor, non nell'anteprima)
+1. E un altro elemento.
+
+- Le lista non ordinate possono usare gli asterichi
+
+* O i meno
+
+- o i più
 ```
 
 ::: tip
@@ -101,7 +108,7 @@ Due degli usi più semplici per i collegamenti sono puntare a pagine Web o ad al
 
 [È possibile utilizzare i numeri per le definizioni dei collegamenti in stile riferimento] [1]
 
-Gli URL semplici e gli URL tra parentesi angolari verranno automaticamente trasformati in collegamenti nell'anteprima. 
+Gli URL semplici e gli URL tra parentesi angolari verranno automaticamente trasformati in collegamenti nell'anteprima.
 http://www.example.com oppure <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -144,7 +151,6 @@ Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + I</kbd> per ins
 Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <kbd>Ctrl + Maiusc + V</kbd>.
 :::
 
-
 ## Codice in linea e blocchi di codice
 
 ```markdown
@@ -169,84 +175,85 @@ Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codi
 ### Delimitazioni con apici inversi
 
 Puoi anche usare tre apici inversi per creare un blocco di codice.
-~~~markdown
+
+````markdown
 ```
 Metti qui il tuo codice sorgente
 Metti qui il tuo codice sorgente
 ```
-~~~
+````
 
 ::: tip
-Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> su più linee di testo selezionate o sua una linea vuota per creare un blocco di codice. 
+Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> su più linee di testo selezionate o sua una linea vuota per creare un blocco di codice.
 :::
 
 ### Blocco con apice inverso con evidenziazione del codice
 
 C'è anche un po' di evidenziazione della sintassi nei blocchi di codice di QOwnNotes.
 
-~~~markdown
+````markdown
 ```bash
 # Questo è un commento
 cd Note
 ```
-~~~
+````
 
 Al momento i linguaggi supportati (e gli identificatori dei codici) sono:
 
-* codice BASH, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* codice Shell, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- codice BASH, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- codice Shell, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
 ## Tabelle
 
-Le tabelle non sono parte integrante di Markdown, ma l'anteprima di QOwnNotes le supporta. 
+Le tabelle non sono parte integrante di Markdown, ma l'anteprima di QOwnNotes le supporta.
 
-~~~markdown
+```markdown
 I due punti possono essere usati per allineare il contenuto delle colonne.
 
-| Le Tabelle              | Sono               | Belle |
-| ----------------------- |:------------------:| -----:|
-| la colonna 3 è          | allineata-a-destra | $1600 |
-| la colonna 2 è          | centrata           |   $12 |
-| Le strisce delle zebre  | sono eccezionali   |    $1 |
+| Le Tabelle             |        Sono        | Belle |
+| ---------------------- | :----------------: | ----: |
+| la colonna 3 è         | allineata-a-destra | $1600 |
+| la colonna 2 è         |      centrata      |   $12 |
+| Le strisce delle zebre |  sono eccezionali  |    $1 |
 
 Ci devono essere almeno tre trattini per separare ogni intestazione per cella.
 
 Puoi anche usare il Markdown in linea.
 
-| Markdown | Meno | Carino |
-| --- | --- | --- |
-| *Tuttavia* | `si mostra` | **correttamente** |
-| 1 | 2 | 3 |
-~~~
+| Markdown   | Meno        | Carino            |
+| ---------- | ----------- | ----------------- |
+| _Tuttavia_ | `si mostra` | **correttamente** |
+| 1          | 2           | 3                 |
+```
 
 ::: tip
 Premi <kbd>Alt + Maiusc + T</kbd> per attivare una finestra di dialogo che può aiutarti a creare tabelle. Puoi persino importare file CSV in quella finestra di dialogo.
@@ -262,11 +269,11 @@ Usa <kbd>Ctrl + Spazio</kbd> all'interno di una tabella di markdown per formatta
 
 Interruzione della citazione.
 
-> Questa è una linea molto lunga che verrà comunque citata correttamente nonostante venga avvolta. Oh mamma mia, continuiamo a scrivere per essere sicuri sia abbastanza lunga per farla avvolgere a chiunque. Ah, inoltre puoi *inserire* **Markdown** in un blocco di citazione. 
+> Questa è una linea molto lunga che verrà comunque citata correttamente nonostante venga avvolta. Oh mamma mia, continuiamo a scrivere per essere sicuri sia abbastanza lunga per farla avvolgere a chiunque. Ah, inoltre puoi _inserire_ **Markdown** in un blocco di citazione.
 ```
 
 ::: tip
-Puoi dire a QOwnNotes di evidenziare completamente le citazioni o solo il carattere della citazione nelle *Impostazioni dell'editor*
+Puoi dire a QOwnNotes di evidenziare completamente le citazioni o solo il carattere della citazione nelle _Impostazioni dell'editor_
 
 Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + B</kbd> per segnare il testo come citazione.
 :::
@@ -284,11 +291,11 @@ Trattini
 
 Asterischi
 
-***
+---
 
 Trattini bassi
 
-___
+---
 ```
 
 ## Interruzioni di riga
@@ -307,7 +314,7 @@ Questa è una riga con cui possiamo cominciare.
 Questa linea è separata dalla precedente con 2 invii.
 
 Anche questa riga inizia un nuovo paragrafo, ma...  
-Questa riga è separata solo da 2 spazi e un singolo invio, quindi è una riga separata nello *stesso paragrafo*.
+Questa riga è separata solo da 2 spazi e un singolo invio, quindi è una riga separata nello _stesso paragrafo_.
 ```
 
 ::: tip
@@ -319,7 +326,7 @@ Gli spazi finali sono evidenziati per impostazione predefinita nell'editor.
 I commenti non vengono visualizzati nell'anteprima.
 
 ```markdown
-[commento]: # (Questo commento non apparirà nell'anteprima)
+[commento]: # "Questo commento non apparirà nell'anteprima"
 
 <!-- Anche i commenti in HTML vengono nascosti -->
 ```
