@@ -121,6 +121,11 @@ src-build-run: src-build src-run
 clang-format:
     ./scripts/clang-format-project.sh
 
+# Do a clang format on the project via the treefmt tool
+[group('linter')]
+format:
+    treefmt
+
 # Check links in the markdown files
 [group('linter')]
 link-check:
