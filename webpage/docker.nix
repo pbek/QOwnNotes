@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> { }, }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 let
   nodejs = pkgs.nodejs;
@@ -9,8 +11,7 @@ let
     version = "1.0.0";
     src = ./.;
 
-    npmDepsHash =
-      "sha256-2dE7SCHZ3VOYV8jW19hukYMqU0dQQ1Rxcv75T4TVacc="; # You'll need to replace this
+    npmDepsHash = "sha256-2dE7SCHZ3VOYV8jW19hukYMqU0dQQ1Rxcv75T4TVacc="; # You'll need to replace this
 
     buildInputs = [ pkgs.bash ];
 
@@ -35,11 +36,15 @@ let
     '';
   };
 
-in pkgs.dockerTools.buildLayeredImage {
+in
+pkgs.dockerTools.buildLayeredImage {
   name = "qowonnotes-webpage";
   tag = "latest";
 
-  contents = [ nginx npmPackage ];
+  contents = [
+    nginx
+    npmPackage
+  ];
 
   config = {
     Cmd = [
@@ -49,7 +54,9 @@ in pkgs.dockerTools.buildLayeredImage {
       "-g"
       "daemon off;"
     ];
-    ExposedPorts = { "80/tcp" = { }; };
+    ExposedPorts = {
+      "80/tcp" = { };
+    };
   };
 
   #   extraCommands = ''
