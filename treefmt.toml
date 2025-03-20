@@ -5,6 +5,7 @@ on-unmatched = "info"
 
 [formatter.clang-format]
 command = "clang-format"
+options = ["-i"]
 
 # Only target the exact directories we want
 includes = [
