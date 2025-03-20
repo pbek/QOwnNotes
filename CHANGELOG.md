@@ -11223,8 +11223,8 @@ modifications` (for [#161](https://github.com/pbek/QOwnNotes/issues/161))
   (for [#137](https://github.com/pbek/QOwnNotes/issues/137))
   - there is a number right of each tag name in the tag tree that indicates
     how many notes are tagged with the tag
-  - you are able to search for tags in your tag tree with the `find or create 
-tag` line edit by typing in it
+  - you are able to search for tags in your tag tree with the `find or create tag`
+    line edit by typing in it
     - if you press enter a new tag with the content of the line edit is
       created at the root level
   - you are able to move selected tags to another tag by right-clicking on
