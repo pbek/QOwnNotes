@@ -122,10 +122,10 @@ src-build-run: src-build src-run
 clang-format:
     ./scripts/clang-format-project.sh
 
-# Format the project
+# Format all files
 [group('linter')]
 format:
-    treefmt
+    nix-shell -p treefmt libclang nodePackages.prettier shfmt nixfmt-rfc-style taplo --run treefmt
 
 # Check links in the markdown files
 [group('linter')]

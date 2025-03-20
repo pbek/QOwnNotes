@@ -15,10 +15,6 @@ pkgs.mkShell {
       wrapQtAppsHook
       pkg-config
       libclang # for clang-format
-      treefmt # formatting tool
-      nodePackages.prettier # for webpage formatting
-      shfmt # for shell formatting
-      nixfmt-rfc-style # for nix formatting
       xmlstarlet # for download-icons.sh and download_translations.sh
       lychee # for link checking
       procs # fetches process info
