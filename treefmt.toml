@@ -50,6 +50,7 @@ excludes = [
 
 [formatter.prettier]
 command = "prettier"
+options = ["--write"]
 includes = ["webpage/**/*.vue", "webpage/**/*.js", "*.md", "*.yaml", "*.yml"]
 
 [formatter.shfmt]
