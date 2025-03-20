@@ -227,7 +227,7 @@ Currently supported languages (and code block identifiers) are:
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-````markdown
+```markdown
 I due punti possono essere utilizzati per allineare le colonne.
 
 | Tabelle        |        Sono        | Belle |
@@ -244,8 +244,7 @@ Puoi anche utilizzare Markdown in linea.
 | -------- | ------ | ----------------- |
 | _Ma_     | `reso` | **correttamente** |
 | 1        | 2      | 3                 |
-
-````
+```
 
 ::: tip
 Premi <kbd>Alt + Maiusc + T</kbd> per attivare una finestra di dialogo che può aiutarti a creare tabelle. Puoi persino importare file CSV in quella finestra di dialogo.
@@ -261,8 +260,9 @@ Usa <kbd>Ctrl + Spazio</kbd> all'interno di una tabella di markdown per formatta
 
 Pausa citazione.
 
-> Questa è una linea molto lunga che verrà comunque citata correttamente quando si concluderà. Oh, okay, continuiamo a scrivere per assicurarci che sia abbastanza a lungo da andare a capo davvero per tutti. Oh, puoi *mettere* **Markdown** in una citazione.
-````
+> Questa è una linea molto lunga che verrà comunque citata correttamente quando si concluderà. Oh, okay, continuiamo a scrivere per assicurarci che sia abbastanza a lungo da andare a capo davvero per tutti. Oh, puoi _mettere_ **Markdown** in una citazione.
+```
+
 ````
 
 ::: tip
@@ -353,3 +353,4 @@ Del testo
 ```
 
 Il nome del file di questa nota di esempio sarebbe `Il titolo della nota inizia qui.md`.
+````

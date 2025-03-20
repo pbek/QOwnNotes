@@ -227,7 +227,7 @@ Currently supported languages (and code block identifiers) are:
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-````markdown
+```markdown
 A kettőspontok használhatók az oszlopok igazítására.
 
 | Tables        |      Are      |  Cool |
@@ -244,8 +244,7 @@ Használhatja az inline Markdown funkciót is.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-
-````
+```
 
 ::: tip
 Nyomja meg az <kbd>Alt + Shift + T</kbd> billentyűkombinációt egy párbeszédpanel aktiválásához, amely segíthet táblázatok létrehozásában. Akár CSV fájlokat is importálhat abban a párbeszédpanelen.
@@ -261,8 +260,9 @@ Használja a <kbd>Ctrl + szóköz</kbd>t egy jelölési táblázatban az automat
 
 Idézet szünet.
 
-> Ez egy nagyon hosszú sor, amelyet még mindig megfelelően idézünk, amikor megtörik. Ó, fiú, írjunk tovább, hogy megbizonyosodjunk arról, hogy ez elég hosszú ahhoz, hogy mindenkinek beburkolhasson. Ó, *beteheti* a **Markdown**-t egy blokk idézetbe.
-````
+> Ez egy nagyon hosszú sor, amelyet még mindig megfelelően idézünk, amikor megtörik. Ó, fiú, írjunk tovább, hogy megbizonyosodjunk arról, hogy ez elég hosszú ahhoz, hogy mindenkinek beburkolhasson. Ó, _beteheti_ a **Markdown**-t egy blokk idézetbe.
+```
+
 ````
 
 ::: tip
@@ -353,3 +353,4 @@ Némi szöveg
 ```
 
 Ennek a példafájlnak a neve `Note headline starts here.md` lenne.
+````
