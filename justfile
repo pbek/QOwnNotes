@@ -124,8 +124,8 @@ clang-format:
 
 # Format all files
 [group('linter')]
-format:
-    nix-shell -p treefmt libclang nodePackages.prettier shfmt nixfmt-rfc-style taplo --run treefmt
+format args='':
+    nix-shell -p treefmt nodePackages.prettier nixfmt-rfc-style statix taplo --run "treefmt {{ args }}"
 
 # Check links in the markdown files
 [group('linter')]
