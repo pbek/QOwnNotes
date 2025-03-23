@@ -16,7 +16,6 @@ pkgs.mkShell {
       pkg-config
       libclang # for clang-format
       xmlstarlet # for download-icons.sh and download_translations.sh
-      lychee # for link checking
       procs # fetches process info
       gawk # for parsing procs output
       fzf # for interactive process selection

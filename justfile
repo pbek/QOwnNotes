@@ -130,7 +130,7 @@ format args='':
 # Check links in the markdown files
 [group('linter')]
 link-check:
-    lychee './**/*.md'
+    nix-shell -p lychee --run "lychee './**/*.md'"
 
 # Apply a git patch to the project
 [group('patches')]
