@@ -122,11 +122,6 @@ src-build-run: src-build src-run
 clang-format:
     ./scripts/clang-format-project.sh
 
-# Format all files
-[group('linter')]
-format args='':
-    nix-shell -p treefmt nodePackages.prettier shfmt nixfmt-rfc-style statix taplo --run "treefmt {{ args }}"
-
 # Check links in the markdown files
 [group('linter')]
 link-check:
@@ -208,3 +203,13 @@ add-git-blame-ignore-revs:
     git log --pretty=format:"%H" --grep="^lint" >> .git-blame-ignore-revs
     sort .git-blame-ignore-revs | uniq > .git-blame-ignore-revs.tmp
     mv .git-blame-ignore-revs.tmp .git-blame-ignore-revs
+
+# Format all files
+[group('linter')]
+format args='':
+    nix-shell -p treefmt libclang nodePackages.prettier shfmt nixfmt-rfc-style statix taplo --run "treefmt {{ args }}"
+
+# Run a GitHub workflow
+[group('linter')]
+run-github-workflow args='format-check':
+    nix-shell -p act --run "act -j {{ args }}"
