@@ -15,7 +15,6 @@ pkgs.mkShell {
       wrapQtAppsHook
       pkg-config
       libclang # for clang-format
-      xmlstarlet # for download-icons.sh and download_translations.sh
       procs # fetches process info
       gawk # for parsing procs output
       fzf # for interactive process selection

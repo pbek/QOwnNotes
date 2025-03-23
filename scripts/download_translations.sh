@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#! /usr/bin/env nix-shell
+#! nix-shell --pure -i bash -p crowdin-cli xmlstarlet
 #
 # Use this script in $ProjectFileDir$ to download the translations from Crowdin
 #
