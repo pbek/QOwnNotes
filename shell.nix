@@ -58,7 +58,7 @@ pkgs.mkShell {
     # If we are in the repository root
     if [ "$REPO_ROOT" = "$(pwd)" ]; then
         # Symlink the pre-commit hook into the .git/hooks directory
-        ln -sf ./scripts/pre-commit.sh .git/hooks/pre-commit
+        ln -sf ../../scripts/pre-commit.sh .git/hooks/pre-commit
 
         ./scripts/nix-update-qmake-symlinks.sh
     fi
