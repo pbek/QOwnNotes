@@ -260,19 +260,19 @@ U kunt uw eigen tagging-mechanisme voor notities implementeren met bijvoorbeeld 
 functie noteTaggingHook (note, action, tagName, newTagName);
 ```
 
-- zodra een script is geactiveerd dat de nieuwe functie `noteTaggingHook` implementeert, wordt het taggen van opmerkingen door die functie afgehandeld
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
 - zodra een script is geactiveerd dat de nieuwe functie <0>noteTaggingHook</0> implementeert, wordt het taggen van opmerkingen door die afgehandeld
-  - in eerste instantie tags zoals `@tag` uit je notities importeren en je huidige tag-toewijzing overschrijven
-    - je raakt je tags-boom niet kwijt, alleen de vorige toewijzing aan notities
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
     - u kunt nog steeds tags naar andere tags verplaatsen
-    - als meer dan één tag dezelfde naam heeft in uw tagboom, wordt de eerste treffer toegewezen
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
   - door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
   - door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
-  - als u tags in de taglijst verwijdert, worden die tags uit uw notities verwijderd
-  - het hernoemen van tags in de tag-lijst zal de naam van die tags in uw notities
-  - bulksgewijs taggen van notities in de notitielijst zal die tags aan uw notities
-  - het bulksgewijs verwijderen van tags uit notities in de notitielijst zal die tags uit uw notities verwijderen
-  - de applicatie activeert een reeks `toevoegen` en `verwijderen` acties voor alle geselecteerde tags en hun kinderen op alle notities als tags worden verplaatst in het tagpaneel
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 Misschien wilt u het voorbeeld bekijken [ note-tagging.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) om uw eigen tagging-mechanisme te implementeren.
 
@@ -410,8 +410,8 @@ Je kunt het gebruiken om configuratie te bieden voor aangepaste OpenAI-backends,
 
 ```js
 /**
- * Deze functie wordt aangeroepen wanneer de OpenAI-serviceconfiguratie wordt geladen
- * Het retourneert een lijst met objecten met configuratieparameters voor nieuwe OpenAI-backends
+ * This function is called when the OpenAI service config is reloaded
+ * It returns a list of objects with config parameters for new OpenAI backends
  */
 function openAiBackendsHook() {
   return [

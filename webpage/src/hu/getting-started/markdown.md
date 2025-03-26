@@ -39,7 +39,7 @@ Alapértelmezés szerint a QOwnNotes létrehozza a jegyzet **fájlnevét** az **
 ## Hangsúly
 
 ```markdown
-Kiemelés, más néven dőlt betű, _csillaggal_.
+Emphasis, aka italics, with _asterisks_.
 
 Erős hangsúly, más néven félkövér, **csillaggal**.
 ```
@@ -50,7 +50,7 @@ Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + B</kbd> a félkövér
 
 ## Aláhúzás
 
-Van egy opcionális beállítás is, amely lehetővé teszi az aláhúzás megjelenítését az _Előnézet beállításai_ alatt.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _underline_
@@ -76,19 +76,19 @@ A listák létrehozásának számos módja van.
 
 ```markdown
 1. Első rendezett listaelem
-2. Egy másik elem
+2. Another item
 
-- Rendezetlen allista.
+- Unordered sub-list.
 
-1. A tényleges számok nem számítanak, csak az, hogy ez egy szám
-1. Rendezett allista (csak a szerkesztőben működik, az előnézetben nem)
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
 1. És még egy elem.
 
-- A rendezetlen lista csillagokat használhat
+- Unordered list can use asterisks
 
-* Vagy mínuszok
+* Or minuses
 
-- Vagy pluszok
+- Or pluses
 ```
 
 ::: tip
@@ -200,6 +200,8 @@ cd Notes
 ```
 ````
 
+````
+
 Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
@@ -255,7 +257,7 @@ You can also use inline Markdown.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-```
+````
 
 ::: tip
 Nyomja meg az <kbd>Alt+Shift+T</kbd> billentyűkombinációt egy párbeszédpanel aktiválásához, amely segíthet a táblázatok létrehozásában. Akár CSV fájlokat is importálhat abban a párbeszédpanelen.
@@ -275,7 +277,7 @@ Quote break.
 ```
 
 ::: tip
-Azt mondhatja a QOwnNotes-nak, hogy a _Szerkesztő beállításai_-ban jelölje ki teljesen a blokk idézeteket vagy csak a blokk idézet karaktert.
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> a szöveg blokk idézetként történő megjelölésére.
 :::

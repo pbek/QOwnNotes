@@ -2,14 +2,14 @@
 image: /screenshots/screenshot-note-relations.png
 ---
 
-# Note relations panel
+# Paneel Notitierelaties
 
-The note relations panel shows the **relations between the current note and linked notes** several levels deep.
+Het paneel Notitierelaties toont de **relaties tussen de huidige notitie en gekoppelde notities**, op verschillende niveaus.
 
-![note-relations](/screenshots/screenshot-note-relations.png)
+![notiterelaties](/screenshots/screenshot-note-relations.png)
 
 - Relations between notes can be created by **linking to another note**, for example with the _Note link_ dialog
-- The syntax for a note link is for example `[My note](path/to/My%20note.md)`
+- De syntaxis voor een notitielink is bijvoorbeeld `[Mijn notitie](pad/naar/Mijn%20notitie.md)`
 - You can turn on the panel in the _Window / Panels_ menu
-- The panel allows zooming with the mouse wheel, and you can double-click on a note to open it
-- Gathering of relations is done in the background, so you can continue working while the relations are being gathered
+- Het paneel maakt zoomen met het muiswiel mogelijk en je kunt dubbelklikken op een notitie om deze te openen
+- Het verzamelen van relaties gebeurt op de achtergrond, zodat je kunt blijven werken terwijl de relaties worden verzameld

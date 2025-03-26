@@ -132,7 +132,7 @@ Um auf Ihre Nextcloud / ownCloud Notizen von Ihrem **mobilen Endgerät** aus zuz
 - [Nextcloud Notes für Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (Drittanbieter)
 
 ::: tip
-Sie könnten auch ein Sync-Tool wie _Synchronize Ultimate_ oder _FolderSync_ benutzen, um Ihre Notizdateien zu synchronisieren, und Software wie _neutriNotes_, um Ihre Notizen zu bearbeiten.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ to edit your notes.
 :::
 
 ### iOS

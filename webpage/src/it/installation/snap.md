@@ -11,5 +11,5 @@ snap install qownnotes
 Successivamente dovresti essere in grado di avviare QOwnNotes con il comando `qownnotes`.
 
 ::: tip
-[Gli snap](http://snapcraft.io) stanno funzionando su molte distribuzioni Linux come Ubuntu, Arch Linux, Debian, Fedora, openSUSE, Gentoo Linux, OpenWRT, open embedded e yocto project.
+[Snaps](http://snapcraft.io) are working on many Linux distributions like Ubuntu, Arch Linux, Debian, Fedora, openSUSE, Gentoo Linux, OpenWRT, open embedded and yocto project.
 :::

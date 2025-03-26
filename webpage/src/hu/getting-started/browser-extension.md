@@ -64,10 +64,10 @@ A böngésző könyvjelzőit a webkísérő böngésző kiterjesztéssel is impo
 ```markdown
 - [Webpage name](https://www.example.com)
 - [Webpage name](https://www.example.com) #tag1 #tag2
-- [Webpage name](https://www.example.com) csak néhány leírás
-- [Webpage name](https://www.example.com) #tag1 #tag2 néhány leírás és címke
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Webpage name](https://www.example.com) az alternatív lista karakter is működik
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

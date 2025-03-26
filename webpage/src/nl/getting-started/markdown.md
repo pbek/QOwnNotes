@@ -39,7 +39,7 @@ Standaard creëert QOwnNotes de **bestandsnaam van een notitie** uit de **kop 1*
 ## Nadruk
 
 ```markdown
-Nadruk, ook bekend als cursief, met _asterisks_.
+Emphasis, aka italics, with _asterisks_.
 
 Sterke nadruk, ook bekend als vetgedrukt, met **asterisks**.
 ```
@@ -50,7 +50,7 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + B</kbd> gebruiken om tekst vet
 
 ## Onderstrepen
 
-Er is ook een optionele instelling om onderstreping we te geven in de _Voorbeeldweergave instellingen_.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _underline_
@@ -76,17 +76,19 @@ Er zijn veel manieren om lijsten te maken.
 
 ```markdown
 1. Eerste geordende lijstitem
-2. Een ander item
-   - Ongeordende sublijst.
-3. Werkelijke cijfers doen er niet toe, alleen dat het een nummer is
-   1. Geordende sublijst (werkt alleen in de editor, niet in de voorbeeldweergave)
-4. En nog een item.
+2. Another item
 
-- Ongeordende lijst kan asterisks gebruiken
+- Unordered sub-list.
 
-* Of minnen
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. En nog een item.
 
-- Of plussen
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: tip
@@ -192,12 +194,14 @@ Er is ook enige syntaxisaccentuering met codeblokken in QOwnNotes.
 
 ````markdown
 ```bash
-# Dit is een opmerking
+# I am a comment
 cd Notes
 ```
 ````
 
-Ondersteunde talen (en codeblok-ID's):
+````
+
+Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -231,28 +235,28 @@ Ondersteunde talen (en codeblok-ID's):
 - YAML, `yml`
 - YAML, `yaml`
 
-## Tabellen
+## Tables
 
-Tabellen maken geen deel uit van de basis Markdown-specificatie, maar de QOwnNotes-voorbeeldweergave ondersteunt deze.
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
 ```markdown
-Sluistekens (verticale strepen) kunnen worden gebruikt om kolommen uit te lijnen.
+Colons can be used to align columns.
 
-| Tabellen      |       Zijn       |   Vet |
-| ------------- | :--------------: | ----: |
-| kol 3 is      | rechts-uitgevuld | $1600 |
-| kol 2 is      |   gecentreerd    |   $12 |
-| zebra strepen |    zijn mooi     |    $1 |
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-Elke koptekstcel moet met minimaal 3 streepjes gescheiden worden.
+There must be at least 3 dashes separating each header cell.
 
 U kunt ook inline Markdown gebruiken.
 
-| Minder | Fraaie    | Markdown        |
-| ------ | --------- | --------------- |
-| _Toch_ | `correct` | **weergegeven** |
-| 1      | 2         | 3               |
-```
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+````
 
 ::: tip
 Druk op <kbd>Alt + Shift + T</kbd> om een dialoogvenster te activeren waarmee u tabellen kunt maken. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
@@ -268,11 +272,11 @@ Gebruik <kbd>Ctrl + Space</kbd> in een markdown-tabel om deze automatisch op te 
 
 Citaatafbreking.
 
-> Dit is een zeer lange zin die correct wordt geciteerd wanneer deze over meerdere regels wordt verdeeld. Oh jongen, laten we blijven schrijven om er zeker van te zijn dat dit lang genoeg is om voor iedereen omgeslagen te worden. Oh, je kunt **Markdown** in een blokcitaat _plaatsen_.
+> Dit is een zeer lange zin die correct wordt geciteerd wanneer deze over meerdere regels wordt verdeeld. Oh jongen, laten we blijven schrijven om er zeker van te zijn dat dit lang genoeg is om voor iedereen omgeslagen te worden. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 ::: tip
-U kunt QOwnNotes vertellen om blockquotes of alleen het blokcitaat-teken volledig te markeren in de _Editor instellingen_
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> gebruiken om tekst als blokcitaat te markeren.
 :::
@@ -284,7 +288,7 @@ Er zijn drie manieren om een ​​horizontale regel te krijgen: koppeltekens, s
 ```markdown
 Drie of meer...
 
-Afbreektekens
+Hyphens
 
 ---
 
@@ -292,7 +296,7 @@ Asterisks
 
 ---
 
-Lage streepjes
+Underscores
 
 ---
 ```
@@ -310,10 +314,10 @@ Je kunt twee spaties en een nieuwe regel invoeren met <kbd>⇧ Shift</kbd> + <kb
 ```markdown
 Hier is een regel om mee te beginnen.
 
-Deze regel is door twee nieuwe regels van de vorige gescheiden en daarmee wordt het een _afzonderlijke alinea_.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-Deze regel begint ook een aparte alinea, maar...  
-Deze regel wordt allen gescheiden door twee spaties en een enkele nieuwe lijn en daarmee wordt het een aparte regel in de _dezelfde alinea_.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -325,9 +329,9 @@ Spaties aan het eind van de regel worden standaard gemarkeerd in de editor.
 Opmerkingen worden niet weergegeven in het voorbeeld.
 
 ```markdown
-[comment]: # "Deze opmerking verschijnt niet in het voorbeeld"
+[comment]: # "This comment will not appear in the preview"
 
-<!-- HTML opmerkingen blijven ook verborgen -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip

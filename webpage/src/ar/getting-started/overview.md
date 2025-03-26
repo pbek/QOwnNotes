@@ -148,7 +148,7 @@
 [QOwnNotes](https://www.qownnotes.org/) هو تطبيق **حر ومفتوح المصدر** (بترخيص GPL) **لتدوين الملاحظات بصيغة ماركداون** في ملفات نصية مجردة، لأنظمة **غنو/لينكس** و**ماك&nbsp;أو&nbsp;إس** و**ويندوز**، والذي (اختياريًا) يعمل مع [**تطبيق Notes**](https://github.com/nextcloud/notes) من [Nextcloud](https://nextcloud.com/) و&nbsp;[ownCloud](https://owncloud.org/).
 
 ::: tip
-انضم إلى [مجموعتنا على تيليجرام](https://t.me/QOwnNotes) للنقاش والتعلم والتواصل مع مجتمع QOwnNotes.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [نظرة على مفاهيم QOwnNotes](concept.md)

@@ -35,7 +35,7 @@ Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webc
 
 Zorg ervoor dat bij het klikken van het extensiepictogram in de browsertaakbalk dat ook het toestemmingsdialoogvenster wordt geaccepteerd.
 
-Als u Firefox gebruikt, moet u er ook voor zorgen dat u de optionele toestemming hebt ingeschakeld. `Toegang tot uw gegevens voor alle websites` in de _ Toestemming _ extensieinstellingen, anders krijgt u mogelijk een foutmelding `TypeError: chrome.tabs.captureVisibleTab is geen functie`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -61,12 +61,12 @@ U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-brows
 ### Syntaxis van bladwijzerkoppelingen
 
 ```markdown
-- [Webpaginanaam](https://www.example.com)
-- [Webpaginanaam](https://www.example.com) #tag1 #tag2
-- [Webpaginanaam](https://www.example.com) slechts een beschrijving
-- [Webpaginanaam](https://www.example.com) #tag1 #tag2 een beschrijving en tags
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Webpaginanaam](https://www.example.com) het alternatieve lijstteken werkt ook
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 Je kunt zoeken op naam, url-tags of beschrijving in de browserextensie. In de huidige notitie worden alle andere koppelingen in de tekst doorzocht, maar zonder tags of beschrijving.

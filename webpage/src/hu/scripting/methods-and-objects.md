@@ -290,7 +290,7 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-Helyi és globális parancsikonokat is rendelhet az egyéni műveletekhez a _Shortcuts settings_ részben.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: Figyelem Ne feledje, hogy az [ingyenes asztali téma ikonok](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) többnyire csak Linux alatt érhetők el. Tehát ha valóban ikont szeretne használni alatta macOS vagy Windows rendszert kell biztosítania a szkripthez. A [scriptDirPath tulajdonság](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script) használatával lekérheti a szkript elérési útját, hogy beállítsa az ikon megfelelő elérési útját.
@@ -304,25 +304,25 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Inicializálja az egyéni műveleteket
+     * Initializes the custom actions
      */
     function init() {
-        // egyéni művelet hozzáadása gomb nélkül
+        // add a custom action without a button
         script.registerCustomAction("mycustomaction1", "Menu text");
 
-        // egyéni művelet hozzáadása gombbal
+        // add a custom action with a button
         script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-        // egyéni művelet hozzáadása gombbal és ingyenes asztali téma ikonnal
+        // add a custom action with a button and freedesktop theme icon
         script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
 
-        // egyéni művelet hozzáadása gombbal és ikonnal egy fájlból
+        // add a custom action with a button and an icon from a file
         script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
-     * Ez a funkció akkor kerül meghívásra, amikor egyéni műveletet indítanak el
-     * menüben vagy gombbal
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
      *
      * @param identifier string the identifier defined in registerCustomAction
      */
@@ -375,10 +375,10 @@ script.registerLabel(
 
 script.registerLabel(
   "long-label",
-  "egy másik nagyon hosszú, egy másik nagyon hosszú, egy másik nagyon hosszú, egy másik nagyon hosszú, egy másik nagyon hosszú, egy másik nagyon hosszú, egy másik nagyon hosszú, egy másik nagyon hosszú szöveg , egy másik nagyon hosszú szöveg, egy másik nagyon hosszú szöveg, egy másik nagyon hosszú szöveg, amely be fog burkolni ",
+  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
 );
 
-script.registerLabel("ellencímke");
+script.registerLabel("counter-label");
 ```
 
 The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
@@ -584,7 +584,7 @@ void ScriptingService :: noteTextEditSetSelection (int kezdet, int vég);
 ### Példa
 
 ```js
-// egy karakterrel kibontja az aktuális választást
+// expands the current selection by one character
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -756,7 +756,7 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // Csak akkor kerül végrehajtásra, ha Linux alatt
+  // Will be executed only if under Linux
 }
 ```
 
@@ -851,12 +851,12 @@ QList<int>ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ### Példa
 
 ```js
-var noteIds = script.fetchNoteIdsByNoteTextPart ("mytext");
+var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 
-noteIds.forEach function (noteId){
-     var note = script.fetchNoteById(noteId);
+noteIds.forEach(function (noteId) {
+  var note = script.fetchNoteById(noteId);
 
-     // tegyen valamit a jegyzettel
+  // do something with the note
 });
 ```
 
@@ -1116,11 +1116,11 @@ int ScriptingService :: questionMessageBox(
 ### Példa
 
 ```js
-// kérdéses üzenetdoboz megjelenítése egy alkalmazással és egy súgó gombbal
-// lásd: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// show a question message box with an apply and a help button
+// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-  "A megjeleníteni kívánt szöveg",
-  "Néhány választható cím",
+  "The text I want to show",
+  "Some optional title",
   0x01000000 | 0x02000000,
   0x02000000,
 );
@@ -1151,7 +1151,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 ### Example
 
 ```js
-// nyitott fájl párbeszédpanel megjelenítése
+// show an open file dialog
 var fileName = script.getOpenFileName(
   "Please select an image",
   "/home/user/images",
@@ -1179,7 +1179,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ### Példa
 
 ```js
-// a fájl mentése párbeszédpanel megjelenítése
+// show a save file dialog
 var fileName = script.getSaveFileName(
   "Please select HTML file to save",
   "output.html",
@@ -1326,10 +1326,10 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ### Példa
 
 ```js
-// perzisztens változó tárolása
+// store persistent variable
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// perzisztens változó betöltése és naplózása
+// load and log persistent variable
 script.log(
   script.getPersistentVariable(
     "PersistentVariablesTest/myVar",
@@ -1409,7 +1409,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ### Példa
 
 ```js
-// törölje a gyorsítótár könyvtárát a my-script-id-ből
+// clear cache directory of my-script-id
 script.clearCacheDir("my-script-id");
 ```
 
@@ -1601,11 +1601,11 @@ An empty string will be returned, if `Cancel` was clicked or `Escape` was presse
 ### Példa
 
 ```js
-var result = script.inputDialogGetItem(
-  "combo box",
-  "Kérjük, válasszon egy elemet",
-  ["Item 1", "Item 2", "Item 3"],
-);
+var result = script.inputDialogGetItem("combo box", "Please select an item", [
+  "Item 1",
+  "Item 2",
+  "Item 3",
+]);
 script.log(result);
 ```
 
@@ -1635,7 +1635,7 @@ An empty string will be returned, if `Cancel` was clicked or `Escape` was presse
 ```js
 var result = script.inputDialogGetText(
   "line edit",
-  "Kérjük, adjon meg egy nevet",
+  "Please enter a name",
   "current text",
 );
 script.log(result);

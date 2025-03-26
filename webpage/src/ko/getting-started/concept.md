@@ -123,7 +123,7 @@ QOwnNotes를 사용하여 [**Nextcloud Deck**](https://github.com/nextcloud/deck
 
 - [Android용 Nextcloud 노트](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (타사 제품)
 
-::: 팁 또한 _Synchronize Ultimate_ 또는 *FolderSync*와 같은 동기화 도구를 사용하여 노트 파일을 동기화하고 *neutriNotes*와 같은 소프트웨어를 사용하여 노트를 편집할 수 있습니다. :::
+::: tip You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ to edit your notes. :::
 
 ### iOS
 

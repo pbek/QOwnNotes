@@ -2,7 +2,7 @@
 
 ## Evernote
 
-`노트 / 가져오기`메뉴에서 *Enex*파일을 가져올 수 있는 Evernote 가져오기 대화상자가 있습니다.
+There is an Evernote import dialog you can reach in the `Note / Import` menu to import _Enex_ files.
 
 이미지, 첨부 파일, 태그, 기본 형식 및 메타데이터도 가져옵니다.
 

@@ -2,11 +2,12 @@
 
 Vous pouvez configurer QOwnNotes pour automatiquement valider (« commit ») les changements de votre dossier de notes localement dans un dépôt git dans votre dossier de notes.
 
-La configuration se fait dans _Contrôle de version git_, dans _Général_, dans les paramètres.
+This can be done in the _Git versioning_ settings in the _General settings_.
 
 ![git-note-folder-settings](/img/git/settings.png)
 
-Il faut que git soit installé sur votre système, et le chemin vers l’exécutable git doit soit être dans la variable d’environnement PATH, soit peut être spécifié dans les paramètres, dans la section _Contrôle de version git_.
+You need to have git installed on your system and the git executable needs to be in your PATH or
+you can set the path to the git executable in the _Git versioning_ settings.
 
 Il faut aussi activer le support de git pour chaque dossier de notes pour lequel vous souhaitez utiliser git !
 

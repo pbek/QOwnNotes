@@ -36,7 +36,7 @@ Info Se il web clipper non funziona, si prega di controlare che l'applicazione d
 
 Inoltre assicurati di aver accettato il consenso tramite la finestra di avviso che compare quando clicchi l'icona dell'estensione sulla barra degli strumenti del browser.
 
-Se stai usando Firefox dovresti accertarti di aver attivato il permesso facoltativo ` Accedere ai dati dei siti web` nelle impostazioni dei _permessi_ dell'estensione. Altrimenti potresti riscontrare l'errore `TypeError: chrome.tabs.captureVisibleTab non sta funzionando`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -62,12 +62,12 @@ Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione 
 ### Sintassi dei collegamenti segnalibri
 
 ```markdown
-- [Nome pagina web](https://www.example.com)
-- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2
-- [Nome pagina web](https://www.example.com) solo descrizione
-- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2 descrizione e etichette
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Nome pagina web](https://www.example.com) funziona anche il carattere lista alternativo
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

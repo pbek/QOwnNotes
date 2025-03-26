@@ -62,12 +62,12 @@ By default, the browser extension will show all **links of the current note** in
 ### چیدمان پیوندهای نشانک
 
 ```markdown
-- [نام صفحه وب](https://www.example.com)
-- [نام صفحه وب](https://www.example.com) #برچسب1 #برچسب2
-- [نام صفحه وب](https://www.example.com) فقط مقداری توضیح
-- [نام صفحه وب](https://www.example.com) #برچسب1 #برچسب2 مقداری توضیح و برچسب ها
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [نام صفحه وب](https://www.example.com) نویسه لیست جایگزین هم کار می کند
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

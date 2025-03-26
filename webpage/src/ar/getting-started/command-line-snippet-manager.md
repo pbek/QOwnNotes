@@ -39,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-قبل أن تستخدم مدير القصاصات عليك تفعيل _خادم Web socket_ (2) في شاشة إعدادات _إضافة المتصفح وقصاصات الأوامر_ (1) في QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 ثم يجب عليك إظهار رمز الأمان (3) ونسخه (4).
 

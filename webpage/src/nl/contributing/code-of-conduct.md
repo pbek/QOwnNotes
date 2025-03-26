@@ -36,7 +36,7 @@ Deze gedragscode is van toepassing binnen alle gemeenschappelijke ruimtes en is 
 
 ## Handhaving
 
-Gevallen van misbruik, intimidatie of anderszins onaanvaardbaar gedrag kunnen worden gemeld aan de gemeenschapsleiders die verantwoordelijk zijn voor handhaving (zie menu _Contact_ op [www.qownnotes.org](https://www.qownnotes.org/)). Alle klachten worden snel en eerlijk onderzocht en beoordeeld.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Alle klachten worden snel en eerlijk onderzocht en beoordeeld.
 
 Alle gemeenschapsleiders zijn verplicht om de privacy en veiligheid van de aangever van een incident te respecteren.
 

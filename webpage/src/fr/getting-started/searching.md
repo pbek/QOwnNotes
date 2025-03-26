@@ -1,6 +1,6 @@
 # Recherche de notes
 
-Pour rechercher des notes ou du texte à l'intérieur de notes, vous pouvez utiliser le raccourci <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>F</kbd> (ou <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>F</kbd> sur macOS) pour accéder au _Panneau de recherche de note_.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 Il existe différentes manières de rechercher des notes :
 

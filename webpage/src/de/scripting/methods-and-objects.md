@@ -290,7 +290,7 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-Sie können Ihren benutzerdefinierten Aktionen auch lokale und globale Verknüpfungen in den _Verknüpfungseinstellungen_ zuweisen.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -305,27 +305,27 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Initialisiert die benutzerdefinierten Funktionen
+     * Initializes the custom actions
      */
     function init() {
-        // füge eine benutzerdefinierte Funktion ohne Button hinzu
+        // add a custom action without a button
         script.registerCustomAction("mycustomaction1", "Menu text");
 
-        // füge eine benutzerdefinierte Funktion mit einem Button hinzu
+        // add a custom action with a button
         script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-        // füge eine benutzerdefinierte Funktion mit einem Button und freedesktop theme-Icon hinzu
+        // add a custom action with a button and freedesktop theme icon
         script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
 
-        // füge eine benutzerdefinierte Funktion mit einem Button und Icon aus einer Datei hinzu
+        // add a custom action with a button and an icon from a file
         script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
-     * Diese Funktion wird aufgerufen, wenn eine benutzerdefinierte Funktion
-     * im Menü oder mit einem Button ausgelöst wird
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
      *
-     * @param identifier string Der Identifier, der in registerCustomAction definiert wurde
+     * @param identifier string the identifier defined in registerCustomAction
      */
     function customActionInvoked(identifier) {
         switch (identifier) {
@@ -376,13 +376,13 @@ script.registerLabel(
 
 script.registerLabel(
   "long-label",
-  "ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, ein anderer sehr langer Text, der umbrochen wird ",
+  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
 );
 
 script.registerLabel("counter-label");
 ```
 
-Die Labels sind im _Skript-Bedienfeld_ sichtbar, das Sie im Menü _Fenster / Bedienfelder_ aktivieren müssen.
+The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
 
 Sie können sowohl einfachen Text als auch HTML in den Labels verwenden. Der Text kann ausgewählt werden und Links können angeklickt werden.
 
@@ -585,7 +585,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ### Beispiel
 
 ```js
-// erweitert die aktuelle Auswahl um ein Zeichen
+// expands the current selection by one character
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -757,7 +757,7 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // Wird nur unter Linux ausgeführt
+  // Will be executed only if under Linux
 }
 ```
 
@@ -856,7 +856,7 @@ var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // mach etwas mit der Notiz
+  // do something with the note
 });
 ```
 
@@ -1120,11 +1120,11 @@ int ScriptingService::questionMessageBox(
 ### Beispiel
 
 ```js
-// ein Fragenmeldungsfeld mit einer zum Anwenden-Schaltfläche und einer Hilfe-Schaltfläche anzeigen
-// siehe: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// show a question message box with an apply and a help button
+// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-  "Der Text, den ich anzeigen möchte",
-  "Ein optionaler Titel",
+  "The text I want to show",
+  "Some optional title",
   0x01000000 | 0x02000000,
   0x02000000,
 );
@@ -1155,9 +1155,9 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ### Example
 
 ```js
-// zeige einen Dialog zum Öffnen einer Datei
+// show an open file dialog
 var fileName = script.getOpenFileName(
-  "Bitte wählen Sie ein Bild aus",
+  "Please select an image",
   "/home/user/images",
   "Images (*.png *.xpm *.jpg)",
 );
@@ -1183,7 +1183,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ### Beispiel
 
 ```js
-// zeige einen Dialog zum Speichern von Dateien
+// show a save file dialog
 var fileName = script.getSaveFileName(
   "Please select HTML file to save",
   "output.html",
@@ -1291,7 +1291,7 @@ In addition, you can override the `settingsVariables` with a special function `r
  */
 function registerSettingsVariables() {
   if (script.platformIsWindows()) {
-    // überschreibt den myFile-Standardwert
+    // override the myFile default value
     settingsVariables[3].default = "pandoc.exe";
   }
 }
@@ -1330,10 +1330,10 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ### Beispiel
 
 ```js
-// persistente Variable speichern
+// store persistent variable
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// persistente Variable laden und protokollieren
+// load and log persistent variable
 script.log(
   script.getPersistentVariable(
     "PersistentVariablesTest/myVar",
@@ -1412,7 +1412,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ### Beispiel
 
 ```js
-// Löscht das Cache-Verzeichnis von my-script-id
+// clear cache directory of my-script-id
 script.clearCacheDir("my-script-id");
 ```
 
@@ -1604,11 +1604,11 @@ An empty string will be returned, if `Cancel` was clicked or `Escape` was presse
 ### Beispiel
 
 ```js
-var result = script.inputDialogGetItem(
-  "Kombinationsfeld",
-  "Bitte wählen Sie einen Artikel aus",
-  ["Artikel 1", "Artikel 2", "Artikel 3"],
-);
+var result = script.inputDialogGetItem("combo box", "Please select an item", [
+  "Item 1",
+  "Item 2",
+  "Item 3",
+]);
 script.log(result);
 ```
 
@@ -1637,9 +1637,9 @@ An empty string will be returned, if `Cancel` was clicked or `Escape` was presse
 
 ```js
 var result = script.inputDialogGetText(
-  "Zeilenbearbeitung",
-  "Bitte geben Sie einen Namen ein",
-  "aktueller Text",
+  "line edit",
+  "Please enter a name",
+  "current text",
 );
 script.log(result);
 ```

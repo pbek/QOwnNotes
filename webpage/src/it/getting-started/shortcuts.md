@@ -48,7 +48,7 @@
 ### Nella barra di ricerca delle note
 
 - <kbd>↓</kbd> or <kbd>Tab</kbd> imposta lo stato attivo sull'elenco delle note
-- <kbd>Invio</kbd> crea una nuova nota con il testo della barra di ricerca come titolo
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Nell'elenco delle note
 
@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>clic</kbd> su un collegamento per aprirlo
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> ti permette di cercare nella nota corrente
-  - usa i tasti <kbd>↑</kbd> e <kbd>↓</kbd> o <kbd>F3</kbd> e <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> chiude la barra di ricerca
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> consente di cercare e sostituire nella nota corrente
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplica la riga corrente o il testo selezionato
@@ -82,9 +82,9 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> scorre le occorrenze di testo selezionato
 - <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
-- <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> dopo un carattere di elenco non ordinato annulla il rientro della voce dell'elenco
-- <kbd>Invio</kbd> negli elenchi crea un nuovo elemento dell'elenco
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Sinistra</kbd> torna indietro nella cronologia delle note
   - <kbd>Alt</kbd> + <kbd>Right</kbd> salta in avanti nella cronologia delle note
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> imposta un segnalibro nota nell'indice segnalibro 1..9
@@ -105,7 +105,7 @@
 ### Nel pannello di anteprima della nota
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> ti permette di cercare nella nota corrente
-  - usa i tasti <kbd>↑</kbd> e <kbd>↓</kbd> o <kbd>F3</kbd> e <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> chiude la barra di ricerca
 
 ### Nell'elenco delle Todo
@@ -162,7 +162,7 @@
 ### Nella barra di ricerca delle note
 
 - <kbd>⇩</kbd> or <kbd>Tab</kbd> imposta lo stato attivo sull'elenco delle note
-- <kbd>Invio</kbd> crea una nuova nota con il testo della barra di ricerca come titolo
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Nell'elenco delle note
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> su un link per aprirlo
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> consente di cercare nella nota corrente
-  - usa i tasti <kbd>↑</kbd> e <kbd>↓</kbd> o <kbd>F3</kbd> e <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> chiude la barra di ricerca
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> consente di cercare e sostituire nella nota corrente
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplica la riga corrente o il testo selezionato
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> scorre le occorrenze di testo selezionato
 - <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
-- <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> dopo un carattere di elenco non ordinato annulla il rientro della voce dell'elenco
-- <kbd>Invio</kbd> negli elenchi crea un nuovo elemento dell'elenco
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> salta indietro nella cronologia delle note
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> salta in avanti nella cronologia delle note
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> imposta un segnalibro nota nell'indice segnalibro 1..9
@@ -219,7 +219,7 @@
 ### Nel pannello di anteprima della nota
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> consente di cercare nella nota corrente
-  - usa i tasti <kbd>↑</kbd> e <kbd>↓</kbd> o <kbd>F3</kbd> e <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> chiude la barra di ricerca
 
 ### Nell'elenco delle Todo

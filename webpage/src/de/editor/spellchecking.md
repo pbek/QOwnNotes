@@ -3,13 +3,13 @@
 Lassen Sie Ihre Rechtschreibfehler korrigieren!
 
 ::: tip Info
-QOwnNotes verfügt über eine integrierte **Wörterbuchverwaltung** (im _Bearbeiten_-Menü), mit dem Sie Wörterbücher herunterladen oder löschen können (wenn Sie Ihre Sprache vermissen, lesen Sie weiter unten, wie Sie das Hinzufügen eines Wörterbuchs anfordern können). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen.
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen.
 :::
 
 - Unter **Linux** können Sie die Hunspell-Wörterbücher für Ihre Sprache mit dem pkg-Manager Ihrer Distribution installieren
 
-  - Wenn Sie zusätzliche Sprachdateien hinzufügen müssen, können Sie dies in `~/.local/share/hunspell` oder `/usr/share/hunspell` tun.
-  - Wenn Sie das Snap-Paket von QOwnNotes verwenden, können Sie auch `~/hunspell` für Sprachdateien verwenden, da der Snap nicht auf `~/.local` zugreifen kann
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - Unter **Windows** müssen Sie Hunspell-Wörterbücher für Ihre Sprache in einen Ordner `dicts` kopieren, der sich in Ihrem QOwnNotes-Anwendungsordner oder in `C:\Benutzer\[username]\dicts` befindet
   - Sie können Wörterbücher aus [LibreOffice-Wörterbüchern](https://github.com/LibreOffice/dictionaries) herunterladen

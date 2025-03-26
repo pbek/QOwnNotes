@@ -1,5 +1,5 @@
 # التثبيت على CentOS Linux
 
-يتعهد المجتمع حزمة لـ&nbsp;**CentOS السابعة والثامنة و&nbsp;AlmaLinux الثامنة و&nbsp;RockyLinux الثامنة** من _Jörg Woll_ على [حزم QOwnNotes لـ&nbsp;x86_64 لـ&nbsp;el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html)، و[حزم QOwnNotes لـ&nbsp;ARM لـ&nbsp;el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html)، و[حزم QOwnNotes لـ&nbsp;x86_64 لـ&nbsp;el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html).
+There are community-created packages for **CentOS 7/8, AlmaLinux 8 and RockyLinux 8** by _Jörg Woll_ at [QOwnNotes packages for x86_64 for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html), [QOwnNotes packages for ARM for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html) and [QOwnNotes packages for x86_64 for el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html).
 
 شكرا جزيلا لـ&nbsp;Jörg!

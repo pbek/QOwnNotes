@@ -36,7 +36,7 @@ Questo Codice di Condotta viene applicato a tutti gli spazi comunitari e anche q
 
 ## Applicazione
 
-Casi di comportamento abusivo, molesto o in altro modo inaccettabile possono essere segnalati ai dirigenti della community responsabili dell'adempimento di tali regole (guarda il menu dei _Contatti_ su [www.qownnotes.org](https://www.qownnotes.org/)). Tutti i reclami saranno verificati e studiati adeguatamente.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Tutti i reclami saranno verificati e studiati adeguatamente.
 
 Tutti i dirigenti della community sono obbligati a rispettare la privacy e la sicurezza del mittente dell'incidente.
 

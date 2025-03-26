@@ -2303,7 +2303,7 @@
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation>Voeg een &amp;notitielink in</translation>
+<translation>&amp;Notitielink invoegen</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>

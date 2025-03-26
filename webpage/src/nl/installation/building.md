@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Voor foutopsporing is het het gemakkelijkst om QtCreator te gebruiken. Met het downloaden van [Qt Creator](https://www.qt.io/download-qt-installer-oss), heb je ook het pakket `qtwebsockets` nodig om QOwnNotes te bouwen met Qt6. Als je onder Windows bouwt, blijf dan bij _MinGw 64-bit_. Op Linux heb je waarschijnlijk een pakket voor QtCreator in je repository.
+Voor foutopsporing is het het gemakkelijkst om QtCreator te gebruiken. Met het downloaden van [Qt Creator](https://www.qt.io/download-qt-installer-oss), heb je ook het pakket `qtwebsockets` nodig om QOwnNotes te bouwen met Qt6. If you build under Windows, you want to stick to _MinGw 64-bit_. Op Linux heb je waarschijnlijk een pakket voor QtCreator in je repository.
 
 Open daarna het projectbestand `src/QOwnNotes.pro` en klik op **Build** / **Build Project QOwnNotes**.
 
@@ -34,7 +34,7 @@ Voel je vrij om broncode aan dit project bij te dragen, suggesties te doen of me
 Bezoek [QOwnNotes op GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Als u broncode aan het project wilt bijdragen, dient u uw pull-verzoeken in naar de `main` tak.
+If you want to contribute source code to the project please make your pull requests to the `main` branch.
 :::
 
 ## Bronarchief

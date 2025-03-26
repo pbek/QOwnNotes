@@ -148,7 +148,7 @@
 [QOwnNotes](https://www.qownnotes.org/) برنامه **یادداشت برداری مارک داون** پرونده با متن ساده و **متن باز** (GPL) برای سیستم عامل های **لینوکس (GNU)**، **مکینتاش X** و **ویندوز** است که (به طور اختیاری) با هم با [**برنامه یادداشت**](https://github.com/nextcloud/notes) [نکست کلود](https://nextcloud.com/) و [اون کلود](https://owncloud.org/) کار می کند.
 
 ::: tip
-برای بحث، آموزش و ارتباط با انجمن QOwnNotes به [گروه تلگرامی](https://t.me/QOwnNotes) ما بپیوندید.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [مفهوم QOwnNotes را درک کنید](concept.md)

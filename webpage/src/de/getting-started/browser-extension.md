@@ -62,12 +62,12 @@ Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browsererweiteru
 ### Syntax von Lesezeichen-Links
 
 ```markdown
-- [Name der Webseite] (https://www.example.com)
-- [Name der Webseite] (https://www.example.com) #tag1 #tag2
-- [Name der Webseite] (https://www.example.com) nur eine Beschreibung
-- [Name der Webseite] (https://www.example.com) #tag1 #tag2 einige Beschreibungen und Tags
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Name der Webseite] (https://www.example.com) das alternative Listenzeichen funktioniert ebenfalls
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

@@ -36,7 +36,7 @@ Der Verhaltenskodex gilt in allen Community-Räumen, sowie wenn ein Individuum d
 
 ## Durchsetzung
 
-Fälle von missbrauchendem, belästigendem, oder anderweitig inakzeptablem Verhalten sollte den Community-Sprechern, die für die Durchsetzung verantwortlich sind, gemeldet werden (siehe _Kontakt_-Menüpunkt auf [www.qownnotes.org](https://www.qownnotes.org/)). Alle Beschwerden werden umgehend und fair überprüft und untersucht.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Alle Beschwerden werden umgehend und fair überprüft und untersucht.
 
 Alle Community-Sprecher sind dazu verpflichtet, die Privatsphäre und Sicherheit der Berichterstatter eines Vorfalls zu respektieren.
 

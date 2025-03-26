@@ -36,7 +36,7 @@ Información Si web clipper no funciona, por favor revise si la aplicación de Q
 
 Además, asegúrese de aceptar el cuadro de diálogo de consentimiento, que se muestra la primera vez que pulsa sobre el icono de la extensión en la barra de herramientas del navegador.
 
-Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opcional `Acceder a sus datos en todos los sitios web` en la configuración _Permisos_ de la extensión. De lo contrario, podría recibir el error `TypeError: chrome.tabs.captureVisibleTab no es una función`.
+Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opcional `Acceder a sus datos en todos los sitios web` en la configuración de _Permisos_ de la extensión. De lo contrario, podría recibir el error `TypeError: chrome.tabs.captureVisibleTab no es una función`.
 :::
 
 ::: tip

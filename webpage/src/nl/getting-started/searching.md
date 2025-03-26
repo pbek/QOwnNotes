@@ -1,6 +1,6 @@
 # Zoeken naar notities
 
-Om te zoeken naar notities of naar tekst in notities, kun je de snelkoppeling gebruiken <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (of <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> op macOS) om naar het _zoekvenster voor notities_ te gaan.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 Er zijn verschillende manieren om naar notities te zoeken:
 

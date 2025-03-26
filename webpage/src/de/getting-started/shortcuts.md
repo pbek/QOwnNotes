@@ -48,7 +48,7 @@
 ### In der Notizsuchleiste
 
 - <kbd>Pfeil nach unten</kbd> oder <kbd>Tab</kbd> legt den Fokus auf die Notizenliste
-- <kbd>Eingabe</kbd> erstellt eine neue Notiz mit dem Text aus der Suchleiste als Überschrift
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### In der Notizliste
 
@@ -60,7 +60,7 @@
 
 - <kbd>Strg</kbd> + <kbd>Klicken</kbd> Sie auf einen Link, um ihn zu öffnen
 - Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Element zu springen
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>Strg</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>Strg</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
@@ -82,9 +82,9 @@
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>U</kbd> blättert durch die Groß- und Kleinschreibung des ausgewählten Textes
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
   - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
-- <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
-  - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
-- <kbd>Enter</kbd> in Listen erstellt ein neues Listenelement
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Pfeil nach links</kbd> springt im Notizverlauf ein Element zurück
   - <kbd>Alt</kbd> + <kbd>Pfeil nach rechts</kbd> springt im Notizverlauf ein Element vorwärts
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf den Lesezeichen-Slot 1..9
@@ -105,7 +105,7 @@
 ### In der Notizvorschau
 
 - Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
-  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> schließt die Suchleiste
 
 ### In der To-do-Liste
@@ -162,7 +162,7 @@
 ### In der Notizsuchleiste
 
 - <kbd>Pfeil nach unten</kbd> oder <kbd>Tab</kbd> richtet den Fokus auf die Notizenliste
-- <kbd>Enter</kbd> erstellt eine neue Notiz mit dem Text aus der Suchleiste als Überschrift
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### In der Notizliste
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Klicken</kbd> Sie auf einen Link, um ihn zu öffnen
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> ermöglicht die Suche in der aktuellen Notiz
-  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> schließt die Suchleiste
 - Mit <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>U</kbd> wechselt die Groß-/Kleinschreibung des ausgewählten Textes
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
   - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
-- <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
-  - <kbd>⇧ Umschalt</kbd> + <kbd>Tab</kbd> hebt die Einrückung eines Listenelements nach einem ungeordneten Listenzeichen auf
-- <kbd>Enter</kbd> in Listen erstellt ein neues Listenelement
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach links</kbd> springt im Notizverlauf zurück
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Pfeil nach rechts</kbd> springt im Notizverlauf vorwärts
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>1..9</kbd> setzt ein Notiz-Lesezeichen auf Lesezeichenplatz 1..9
@@ -219,7 +219,7 @@
 ### Im Notizvorschaufenster
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> ermöglicht die Suche in der aktuellen Notiz
-  - verwenden Sie dazu die Tasten <kbd>Pfeil nach oben</kbd> und <kbd>Pfeil nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧ Umschalt</kbd> + <kbd>F3</kbd> um zum vorherigen und nächsten Ergebnis zu springen
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> schließt die Suchleiste
 
 ### In der To-do-Liste

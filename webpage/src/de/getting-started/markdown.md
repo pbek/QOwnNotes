@@ -39,7 +39,7 @@ Standardmäßig erstellt QOwnNotes den **Dateinamen einer Notiz** aus der **Übe
 ## Hervorhebung
 
 ```markdown
-Hervorhebung durch "Kursivschrift", mit _Sternchen_.
+Emphasis, aka italics, with _asterisks_.
 
 Starke Hervorhebung, auch: "fett", mit **Sternchen**.
 ```
@@ -50,7 +50,7 @@ Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + B</kbd> verwende
 
 ## Unterstreichen
 
-Es gibt auch eine optionale Einstellung in den _Vorschau-Einstellungen_, um das Unterstreichen zu aktivieren.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _unterstreichen_
@@ -76,17 +76,19 @@ Es gibt viele Möglichkeiten, Listen zu erstellen.
 
 ```markdown
 1. Erster geordneter Listeneintrag
-2. Ein weiterer Eintrag
-   - Ungeordnete Unterliste.
-3. Tatsächliche Zahlen spielen keine Rolle, nur dass es eine Zahl ist!
-   1. Geordnete Unterliste (funktioniert nur im Editor, nicht in der Vorschau)
-4. Und noch ein Eintrag.
+2. Another item
 
-- Ungeordnete Liste kann Sternchen verwenden
+- Unordered sub-list.
 
-* Oder Minusse
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. Und noch ein Eintrag.
 
-- Oder Plusse
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: tip
@@ -191,12 +193,14 @@ Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
 
 ````markdown
 ```bash
-# Ich bin ein Kommentar
+# I am a comment
 cd Notes
 ```
 ````
 
-Momentan unterstützte Sprachen (und Codeblock Identifier) sind:
+````
+
+Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -230,28 +234,28 @@ Momentan unterstützte Sprachen (und Codeblock Identifier) sind:
 - YAML, `yml`
 - YAML, `yaml`
 
-## Tabellen
+## Tables
 
-Tabellen sind nicht Teil vom Kern-Markdown, aber QOwnNotes unterstützt sie.
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
 ```markdown
-Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
+Colons can be used to align columns.
 
-| Tabellen      |     Sind     |  Cool |
-| ------------- | :----------: | ----: |
-| Spalte 3 ist  | rechtsbündig | $1600 |
-| Spalte 3 ist  |  zentriert   |   $12 |
-| Zebrastreifen |  sind toll   |    $1 |
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-Die Kopfzeilen-Zellen müssen immer durch mindestens drei Bindestriche getrennt werden.
+There must be at least 3 dashes separating each header cell.
 
 Sie können auch inline-Markdown verwenden.
 
-| Markdown  | Weniger     | Hübsch    |
-| --------- | ----------- | --------- |
-| _Rendert_ | `immernoch` | **schön** |
-| 1         | 2           | 3         |
-```
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+````
 
 ::: tip
 Drücken Sie <kbd>Alt + Umschalt + T</kbd>, um ein Dialogfeld zu aktivieren, mit dem Sie Tabellen erstellen können. In diesem Dialog können Sie sogar CSV-Dateien importieren!
@@ -267,11 +271,11 @@ Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie auto
 
 Zitatpause.
 
-> Das ist eine sehr lange Zeile, die nach einem Zeilenumbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass es lang genug ist, um tatsächlich für alle umgebrochen zu werden. Oh, Sie können **Markdown** in ein Blockquote _packen_.
+> Das ist eine sehr lange Zeile, die nach einem Zeilenumbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass es lang genug ist, um tatsächlich für alle umgebrochen zu werden. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 ::: tip
-Sie können QOwnNotes anweisen, Blockzitate oder nur das Blockzitatzeichen in den _Editoreinstellungen_ vollständig hervorzuheben
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 Sie können die [ Verknüpfung ](./shortcuts.md) <kbd> Strg + Umschalt + B </kbd> verwenden, um Text als Blockzitat zu markieren.
 :::
@@ -283,15 +287,15 @@ Es gibt drei Möglichkeiten, um eine horizontale Linie zu erhalten: Bindestriche
 ```markdown
 Drei oder mehr...
 
-Bindestriche
+Hyphens
 
 ---
 
-Sternchen
+Asterisks
 
 ---
 
-Unterstriche
+Underscores
 
 ---
 ```
@@ -309,10 +313,10 @@ Mit <kbd>⇧ Shift</kbd> + <kbd>Return</kbd> können Sie zwei Leerzeichen und ei
 ```markdown
 Hier ist eine Zeile für den Anfang.
 
-Diese Zeile ist von der vorherigen getrennt, weshalb sie ein _separater Absatz_ ist.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-Diese Zeile fängt ebenfalls einen separaten Absatz an, aber...  
-Diese Zeile wird nur durch zwei anhängende Leerzeichen und einen einzigen Zeilenumbruch getrennt, weshalb sie eine separate Zeile im _selben Absatz_ ist.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -324,9 +328,9 @@ Nachgestellte Leerzeichen werden im Editor standardmäßig hervorgehoben.
 Kommentare werden in der Vorschau nicht angezeigt.
 
 ```markdown
-[comment]: # "Dieser Kommentar erscheint nicht in der Vorschau"
+[comment]: # "This comment will not appear in the preview"
 
-<!-- HTML Kommentare werden ebenfalls verborgen -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip

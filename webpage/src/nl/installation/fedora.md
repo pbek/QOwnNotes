@@ -66,7 +66,7 @@ dnf install qownnotes
 
 ### Problemen met GPG-keys?
 
-Veranderingen in het cryptografische beleid van Fedora kunnen betekenen dat "oude" (verlopen) repositorysleutels niet _automatisch_ uitgebreid zijn. Dit kan tot problemen leiden bij het _updaten_ van QOwnNotes.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
 
 **Detail:** Als u een probleem heeft met ongeldige sleutels (d.w.z. GPG-fouten) zoalss `certificaat is niet geldig` en/of `sleutel is niet geldig` vanwege het verstrijken van de sleutel, moet deze opdracht op de terminal de verlopen sleutel verwijderen:
 
@@ -76,4 +76,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 Gedetailleerde uitleg van de opdracht is beschikbaar op GitHub in een [onderwerp](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) gerelateerd aan dit exacte probleem.
 
-Zodra de verlopen sleutel is verwijderd, moet u opnieuw _importeren_ de ** huidige ** sleutel handmatig zoals beschreven in het begin van deze installatie-instructies.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

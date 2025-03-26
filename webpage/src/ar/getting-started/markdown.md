@@ -7,17 +7,17 @@
 استخدم العنوان لتنظيم نصوصك.
 
 ```markdown
-# عنوان مستوى أول
+# H1
 
-## عنوان مستوى ثان
+## H2
 
-### عنوان مستوى ثالث
+### H3
 
-#### عنوان مستوى رابع
+#### H4
 
-##### عنوان مستوى خامس
+##### H5
 
-###### عنوان مستوى سادس
+###### H6
 ```
 
 ::: tip
@@ -27,9 +27,9 @@
 كبديل، للعناوين من المستويين الأول والثاني، يمكن تسطيرهم هكذا:
 
 ```markdown
-# شكل بديل لعناوين المستوى الأول
+# Alt-H1
 
-## شكل بديل لعناوين المستوى الثاني
+## Alt-H2
 ```
 
 ::: tip
@@ -39,7 +39,7 @@
 ## التوكيد
 
 ```markdown
-التوكيد البسيط، أو الخط المائل، يكون _بنجمة واحدة على كل جانب_.
+Emphasis, aka italics, with _asterisks_.
 
 التوكيد القوي، أو الخط العريض، يكون **بنجمتين اثنتين على كل جانب**.
 ```
@@ -50,7 +50,7 @@
 
 ## التسطير
 
-يوجد كذلك إعداد اختياري لتفعيل عرض التسطير في _إعدادات المعاينة_.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _مسطر_
@@ -76,19 +76,19 @@ _مسطر_
 
 ```markdown
 1. العنصر الأول في قائمة مرقمة
-2. عنصر آخر
+2. Another item
 
-- قائمة منقوطة فرعية.
+- Unordered sub-list.
 
-1. الرقم الفعلي غير مهم؛ المهم أنه رقم
-1. قائمة مرقمة فرعية (تعمل فقط في المحرر، ولا تعمل في المعاينة)
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
 1. وعنصر آخر.
 
-- القوائم المنقوطة قد تستخدم النجوم
+- Unordered list can use asterisks
 
-* أو الشرطات
+* Or minuses
 
-- أو علامات الجمع
+- Or pluses
 ```
 
 ::: tip
@@ -193,16 +193,16 @@ http://www.example.com أو <http://www.example.com>
 
 يوجد كذلك شيء من التلوين النحوي لكتل الأكواد في QOwnNotes.
 
-<div dir="ltr">
-~~~markdown
+````markdown
 ```bash
-# أنا تعليق
+# I am a comment
 cd Notes
-</div>
 ```
-~~~
+````
 
-اللغات المدعومة حاليا (ومعرِّفات كتل الأكواد) هي:
+````
+
+Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -236,28 +236,28 @@ cd Notes
 - YAML, `yml`
 - YAML, `yaml`
 
-## الجداول
+## Tables
 
-الجداول ليست جزءًا من جوهر مواصفات ماركداون، لكن معاينة QOwnNotes تدعمها.
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
 ```markdown
-يمكن استخدام النقطتين الرأسيتين لمحاذاة الأعمدة.
+Colons can be used to align columns.
 
-| الجداول            |    رائعة     |   حقا |
-| ------------------ | :----------: | ----: |
-| العمود الثالث      | محاذى لليمين | $1600 |
-| العمود الثاني      |    ممركز     |   $12 |
-| خطوط الحمار الوحشي | جميلة وأنيقة |    $1 |
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-يجب فصل كل خلية ترويسة بثلاث شرطات على الأقل.
+There must be at least 3 dashes separating each header cell.
 
 يمكنك أيضا استخدام ماركداون داخل خلايا الجداول.
 
-| ماركداون | أقل     | جمالا      |
-| -------- | ------- | ---------- |
-| _ما زال_ | `يُعرض` | **بإتقان** |
-| 1        | 2       | 3          |
-```
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+````
 
 ::: tip
 اضغط <kbd>Alt + Shift + T</kbd> لإظهار حوار يساعدك في إنشاء الجداول. يمكنك حتى استيراد ملفات CSV في ذلك الحوار.
@@ -273,13 +273,11 @@ cd Notes
 
 كسر الاقتباس.
 
-> هذا سطر طويل جدا ولكنه سيُنسّق بشكل سليم كاقتباس عندما يلف إلى السطر التالي. ياه يا فتى، لنستمر في الكتابة حتى نضمن أن هذا بالطول الكافي لكي يلف فعلا عند الجميع. آه، يمكنك _وضع_ **ماركداون** داخل كتلة اقتباس.
+> هذا سطر طويل جدا ولكنه سيُنسّق بشكل سليم كاقتباس عندما يلف إلى السطر التالي. ياه يا فتى، لنستمر في الكتابة حتى نضمن أن هذا بالطول الكافي لكي يلف فعلا عند الجميع. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
-````
-
 ::: tip
-يمكنك إخبار QOwnNotes أن يظلّل كتل الاقتباس بكاملها أو أن يظلّل حرف الاقتباس فقط، في _إعدادات المحرر_
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 يمكنك استخدام [الاختصار](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> لجعل النص المحدد كتلة اقتباس.
 :::
@@ -291,15 +289,15 @@ cd Notes
 ```markdown
 ثلاث أو أكثر...
 
-شرطات
+Hyphens
 
 ---
 
-شرطات سفلية
+Asterisks
 
 ---
 
-نجوم
+Underscores
 
 ---
 ```
@@ -317,10 +315,10 @@ cd Notes
 ```markdown
 إليك سطر لنبدأ به.
 
-هذا السطر مفصول عن سابقه بسطرين جديدين، لذا فإنه يكون _فقرة منفصلة_.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-وأيضا هذا السطر يبدأ فقرة منفصلة، لكن...
-هذا السطر مفصول فقط بمسافتين وسطر جديد واحد، لذا فإنه سطر منفصل في _نفس الفقرة_.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -332,9 +330,9 @@ cd Notes
 لا تظهر التعليقات في المعاينة.
 
 ```markdown
-[comment]: # "لن يظهر هذا التعليق في المعاينة"
+[comment]: # "This comment will not appear in the preview"
 
-<!-- تعليقات هتمل مخفية أيضا -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip
@@ -370,4 +368,3 @@ description: شيءٌ من الوصف
 ```
 
 اسم ملف الملاحظة في هذا المثال سيكون `العنوان الرئيسي للملاحظة يبدأ هنا.md`.
-````

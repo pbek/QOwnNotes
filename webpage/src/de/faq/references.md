@@ -239,8 +239,7 @@ Was andere über QOwnNotes gesagt haben…
 - [Чем заменить продукты Google: подборка альтернатив, которые не будут за вами следить](https://tproger.ru/digest/list-of-alternatives-to-google-products/#16)
 - [Zettlr markdown editor - Solus Forum](https://discuss.getsol.us/d/2120-zettlr-markdown-editor/2)
 - [Alternatives to Google Products (Complete List) | Restore Privacy](https://restoreprivacy.com/google-alternatives/)
-- [أفضل برامج المفكرة NOTEPAD لأجهزة الحاسوب | التقنية](https://www.th3tec.com/الأفضلtop/أفضل-برامج-المفكرة-notepad-لأجهزة-الحاسوب.html) [LINUX Unplugged 307: What's your NextCloud?](https://linuxunplugged.com/307)
-  - 0:55:09
+- [أفضل برامج المفكرة NOTEPAD لأجهزة الحاسوب | التقنية](https://www.th3tec.com/الأفضلtop/أفضل-برامج-المفكرة-notepad-لأجهزة-الحاسوب.html) [LINUX Unplugged 307: What's your NextCloud?](https://linuxunplugged.com/307) - 0:55:09
 - [Outliner Software: Search](https://www.outlinersoftware.com/search/index/qownnotes)
 - [Write Markdown with 8 Exceptional Open Source Editors - OSS Blog](https://www.ossblog.org/markdown-editors/)
 - [Note Taking Application / Applications & Desktop Environments / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=228115)

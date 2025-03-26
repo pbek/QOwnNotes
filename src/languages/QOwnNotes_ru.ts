@@ -2135,7 +2135,7 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>Переприсоединить плавающие панели</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
@@ -2928,9 +2928,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation>
+<numerusform>Пропущено копирование %n заметки(ок) (нет Markdown или текстовый файл нечитаем)</numerusform>
+<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 <numerusform>Пропущено копирование %n заметки (нет Markdown или текстовый файл нечитаемый)</numerusform>
-<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
-<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 <numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 </translation>
 </message>

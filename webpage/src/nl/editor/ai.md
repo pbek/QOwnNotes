@@ -11,7 +11,7 @@ Zo kun je doen wat je wilt en ermee experimenteren.
 
 - Er is een **AI-werkbalk** en een sectie in het **Hoofdmenu bewerken**, waar je de service aan kunt zetten, en de AI-backend en het AI-model selecteren
 - Je kunt een [OpenAI](https://openai.com/) en [Groq](https://groq.com/) API-sleutel toevoegen in de nieuwe **AI-instellingen**
-  - Zoek naar meer **AI-backend-integraties**, zoals _Ollama_ en _llama.cpp_ in de script-opslagplaats
+  - Look for more **AI backend integrations**, like _Ollama_ and _llama.cpp_ in the script repository
 - Gebruik het nieuwe scriptcommando 'script.aiComplete(prompt)' naar je eigen idee
   - Voor meer informatie kun je de
     [Documentatie voor scripts](.. /scripting/methods-and-objects.md#use-a-completion-prompt-on-the-currently-selected-ai-model) bestuderen

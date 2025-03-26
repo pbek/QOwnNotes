@@ -39,7 +39,7 @@ Per impostazione predefinita viene utilizzato `fzf` per la ricerca, ma puoi util
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Prima di utilizzare lo snippet manager è necessario abilitare il _server Web socket_ (2) nelle impostazioni _Estensione del browser / frammenti di comando_ (1) in QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Quindi devi mostrare il token di sicurezza (3) e copiarlo (4).
 
@@ -68,15 +68,15 @@ Puoi utilizzare **elenchi non ordinati con blocchi di codice in linea** per memo
 Se aggiungi un `cmd:` prima del blocco di codice in linea, il comando si troverà anche nella **nota corrente** indipendentemente dai tag della nota.
 
 ```markdown
-- `echo sono un comando` sono una descrizione #tag1 #tag2 #tag3
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
 
-* `echo sono anche un comando` Sono una descrizione #tag3 #tag4 #tag5
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
 
-- cmd: `echo sarò trovato nella nota corrente` Questo comando sarà trovato nella nota corrente indipendentemente dai tag della nota
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 
-<!-- Esempio di richiesta di input da parte dell'utente -->
+<!-- Example for asking for user input -->
 
-- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Richiedi l'ID della richiesta pull e la richiesta pull checkout
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 I blocchi di codice **`bash` o `shell`**, preceduti da un'intestazione 2 o superiore come descrizione, possono essere utilizzati anche per frammenti di comando. I tag sono supportati anche se si trovano tra l'intestazione e il blocco di codice.

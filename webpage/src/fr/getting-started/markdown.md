@@ -39,7 +39,7 @@ Par défaut, QOwnNotes crée le nom de fichier **d'une note** à partir de l'en-
 ## Accentuation
 
 ```markdown
-Accentuation, aka italique, avec _astérisques_.
+Emphasis, aka italics, with _asterisks_.
 
 Emphase forte, aka gras, avec **astérisques**.
 ```
@@ -50,7 +50,7 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + B</kbd> pour met
 
 ## Souligné
 
-Il existe également un paramètre facultatif pour activer le rendu souligné dans les _Paramètres d'aperçu_.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _souligner_
@@ -76,17 +76,19 @@ Il existe de nombreuses façons de créer des listes.
 
 ```markdown
 1. Premier élément de liste commandé
-2. Un autre article
-   - Sous-liste non ordonnée.
-3. Les chiffres réels n'ont pas d'importance, juste que c'est un nombre
-   1. Sous-liste ordonnée (ne fonctionne que dans l'éditeur, pas dans l'aperçu)
-4. Et un autre article.
+2. Another item
 
-- La liste non ordonnée peut utiliser des astérisques
+- Unordered sub-list.
 
-* Ou moins
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. Et un autre article.
 
-- Ou avantages
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: tip
@@ -198,6 +200,8 @@ cd Notes
 ```
 ````
 
+````
+
 Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
@@ -253,7 +257,7 @@ You can also use inline Markdown.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-```
+````
 
 ::: tip
 Appuyez sur <kbd>Alt + Maj + T</kbd> pour faire apparaître une boîte de dialogue qui vous aidera à créer des tableaux. Vous pouvez même importer des fichiers CSV dans cette boîte de dialogue.
@@ -273,7 +277,7 @@ Quote break.
 ```
 
 ::: tip
-Vous pouvez dire à QOwnNotes de surligner entièrement les blockquotes ou juste le caractère blockquote dans les _Paramètres de l'éditeur_
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + B</kbd> pour marquer le texte comme blockquote.
 :::

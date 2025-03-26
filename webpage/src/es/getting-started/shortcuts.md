@@ -48,7 +48,7 @@
 ### En la barra de búsqueda de notas
 
 - <kbd>Abajo </kbd> o <kbd>Tab</kbd> establece el foco en la lista de notas
-- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como titular
+- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como título
 
 ### En la lista de notas
 
@@ -82,8 +82,8 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
 - <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> elimina la sangría del texto seleccionado
-- <kbd>Tab</kbd> después de que un carácter de lista desordenado sangra el elemento de la lista
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de lista desordenado quita la sangría del elemento de la lista
+- <kbd>Tab</kbd> después de un carácter de una lista desordenada sangra el elemento de la lista
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de una lista desordenada elimina la sangría del elemento de la lista
 - <kbd>Enter</kbd> en listas crea un nuevo elemento de lista
 - <kbd>Alt</kbd> + <kbd>Left</kbd> retrocede en el historial de notas
   - <kbd>Alt</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
@@ -162,7 +162,7 @@
 ### En la barra de búsqueda de notas
 
 - <kbd>Abajo</kbd> or <kbd>Tab</kbd> establece el foco en la lista de notas
-- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como titular
+- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como título
 
 ### En la lista de notas
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd>le permite buscar en la nota actual
-  - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a las concidencias anteriores y siguientes
+  - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
   - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> le permite buscar y reemplazar en la nota actual
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
@@ -196,8 +196,8 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
 - <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> elimina la sangría del texto seleccionado
-- <kbd>Tab</kbd> después de que un carácter de lista desordenado sangra el elemento de la lista
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de lista desordenado quita la sangría del elemento de la lista
+- <kbd>Tab</kbd> después de un carácter de una lista desordenada sangra el elemento de la lista
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de una lista desordenada elimina la sangría del elemento de la lista
 - <kbd>Enter</kbd> en listas crea un nuevo elemento de lista
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Izquierda</kbd> retrocede en el historial de notas
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Derecha</kbd> salta hacia adelante en el historial de notas

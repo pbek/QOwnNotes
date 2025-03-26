@@ -4,6 +4,7 @@
 
 - An issue with importing a table with UTF-8 characters from the clipboard in the
   _Insert table_ dialog was fixed (for [#3245](https://github.com/pbek/QOwnNotes/issues/3245))
+- Added more French, Russian, Dutch translation (thank you, jd-develop, catmenmilota, stephanp)
 
 ## 25.3.3
 

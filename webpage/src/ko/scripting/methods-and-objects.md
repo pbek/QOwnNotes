@@ -289,7 +289,7 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
-::: 팁 *단축키설정*에서 사용자 지정 작업에 로컬 및 전역 단축키를 할당할 수도 있습니다. :::
+::: tip You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_. :::
 
 ::: 경고 [무료 데스크톱 테마 아이콘](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)은 대부분 Linux에서만 사용할 수 있습니다. 따라서 macOS나 Windows에서 아이콘을 사용하려면 스크립트와 함께 아이콘을 제공해야 합니다. 스크립트 경로를 통해 아이콘에 대한 올바른 경로를 설정하려면 [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script)을 사용합니다. :::
 
@@ -301,7 +301,7 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * 사용자 지정 작업 초기화
+     * Initializes the custom actions
      */
     function init() {
         // add a custom action without a button
@@ -376,7 +376,7 @@ script.registerLabel(
 script.registerLabel("counter-label");
 ```
 
-레이블은 *스크립트 패널*에 표시되며, _창 / 패널_ 메뉴에서 활성화해야 합니다.
+The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
 
 레이블에는 일반 텍스트 또는 html을 모두 사용할 수 있습니다. 텍스트를 선택할 수 있고 링크를 클릭할 수 있습니다.
 
@@ -576,7 +576,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ### 예제
 
 ```js
-// 현재 선택 영역을 한 문자씩 확장
+// expands the current selection by one character
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -1102,8 +1102,8 @@ int ScriptingService::questionMessageBox(
 ### 예제
 
 ```js
-// 응용 프로그램 및 도움말 버튼이 있는 질문 메시지 상자 표시
-// 참조: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// show a question message box with an apply and a help button
+// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
   "The text I want to show",
   "Some optional title",
@@ -1137,7 +1137,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 ### 예제
 
 ```js
-// 열려 있는 파일 대화 상자 표시
+// show an open file dialog
 var fileName = script.getOpenFileName(
   "Please select an image",
   "/home/user/images",
@@ -1165,7 +1165,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ### 예제
 
 ```js
-// 파일 저장 대화 상자 표시
+// show a save file dialog
 var fileName = script.getSaveFileName(
   "Please select HTML file to save",
   "output.html",
@@ -1385,10 +1385,10 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ### 예제
 
 ```js
-// 영구 변수 저장
+// store persistent variable
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// 영구 변수 로드 및 로그
+// load and log persistent variable
 script.log(
   script.getPersistentVariable(
     "PersistentVariablesTest/myVar",
@@ -1468,7 +1468,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ### 예제
 
 ```js
-// my-script-id 의 캐시 디렉터리 지우기
+// clear cache directory of my-script-id
 script.clearCacheDir("my-script-id");
 ```
 
@@ -1752,7 +1752,7 @@ script.log(result);
 
 ```js
 const text = script.noteTextEditSelectedText();
-const aiPrompt = "텍스트를 한국어로 번역합니다";
+const aiPrompt = "Translate the text to English";
 const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
 
 var result = script.textDiffDialog(

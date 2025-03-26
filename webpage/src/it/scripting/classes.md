@@ -70,24 +70,24 @@ var noteSubFolderQmlObj = Qt.createQmlObject(
   "noteSubFolder",
 );
 
-// mostra i nomi di tutte le sottoscartelle
+// print all subfolder names
 noteSubFolderQmlObj
   .fetchNoteSubFoldersByParentId(parentId)
   .forEach(function (nsf) {
     script.log(nsf.name);
   });
 
-// restituisce il nome della sottocartella della nota attiva
+// get the active note subfolder
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// Mostra il percorso assoluto e relativo della sottocartella della nota attiva
+// print the full and relative path of the active note subfolder
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// cicla tutte le note della sottocartella note
+// iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
   var note = noteSubFolder.notes[idx];
 }
@@ -113,12 +113,12 @@ class TagApi {
 ```js
 // Non dimenticarti di usare "import QOwnNotesTypes 1.0" in cima al tuo script!
 
-// Leggi l'etichetta "home"
+// Fetch tag "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// Leggi tutte le note con quell'etichetta
+// Fetch all notes tagged with the tag
 var notes = tag.notes;
 
-// Itera le note dell'etichetta
+// Iterate through notes of the tag
 for (var idx in notes) {
   var note = notes[idx];
   script.log(note.name);
@@ -165,28 +165,28 @@ class MainWindow {
 ### Esempio
 
 ```js
-// Forza il ricaricamento della lista delle note
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crea una nuova sottocartella "La mia cartella elegante" nella cartella corrente
-mainWindow.createNewNoteSubFolder("La mia cartella elegante");
+// Creates a new note subfolder "My fancy folder" in the current subfolder
+mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserisci html nella nota corrente come markdown
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Imposta lo spazio di lavoro "modifica" come spazio di lavoro corrente
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Modifica"));
+// Set 'Edit' workspace as current workspace
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Salta all'etichetta "test" nell'albero delle etichette
+// Jump to the tag "test" in the tag tree
 // There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Prendi tutte le note che sono aperte nelle schede
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // Fai qualcosa con le note
+  // do something with the note
 });
 ```

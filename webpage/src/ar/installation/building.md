@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-للتنقيح، من الأسهل استعمال QtCreator. عند تنزيل [Qt Creator](https://www.qt.io/download-qt-installer-oss)، ستحتاج كذلك إلى حزمة `qtwebsockets` لبناء QOwnNotes على Qt6. وإذا كنت تبني على ويندوز، ربما تفضل البقاء مع _MinGw 64-bit_. على لينكس، غالبا ستجد QtCreator في مستودعات توزيعتك.
+للتنقيح، من الأسهل استعمال QtCreator. عند تنزيل [Qt Creator](https://www.qt.io/download-qt-installer-oss)، ستحتاج كذلك إلى حزمة `qtwebsockets` لبناء QOwnNotes على Qt6. If you build under Windows, you want to stick to _MinGw 64-bit_. على لينكس، غالبا ستجد QtCreator في مستودعات توزيعتك.
 
 بعدئذٍ، افتح ملف المشروع `src/QOwnNotes.pro` وانقر على **Build** ثم **Build Project QOwnNotes**.
 
@@ -34,7 +34,7 @@ make
 قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-إذا أردت المساهمة في المشروع بمصدر برمجي، نرجو إنشاء طلبات الجذب إلى الفرع `main`.
+If you want to contribute source code to the project please make your pull requests to the `main` branch.
 :::
 
 ## ملفات المصدر البرمجي المضغوطة

@@ -39,7 +39,7 @@ Domyślnie do wyszukiwania używane jest `fzf`, ale możesz użyć `peco`, ustaw
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Przed użyciem menedżera fragmentów kodu musisz włączyć _serwer gniazd sieciowych_ (2) w ustawieniach _Rozszerzenie przeglądarki / fragmenty poleceń_ (1) w QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Następnie musisz pokazać token bezpieczeństwa (3) i skopiować go (4).
 

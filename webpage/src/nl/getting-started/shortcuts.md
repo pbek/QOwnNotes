@@ -48,7 +48,7 @@
 ### In de notitie-zoekbalk
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> stelt de focus in op de notitielijst
-- <kbd>Return</kbd> maakt een nieuwe notitie aan met de tekst uit de zoekbalk als kop
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### In de notitielijst
 
@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> op een link om het te openen
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> laat je zoeken in de huidige notitie
-  - Gebruik <kbd>Up</kbd> en <kbd>Down</kbd> toetsen of <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> toetsen om naar de vorige en volgende overeenkomsten te gaan
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> sluit de zoekbalk
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> laat je zoeken en vervangen in de huidige notitie
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> dupliceert de huidige regel of de geselecteerde tekst
@@ -82,9 +82,9 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> doorloopt de gevallen van de geselecteerde tekst
 - <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
-- <kbd>Tab</kbd> nadat een ongeordend lijstteken het lijstitem inspringt
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> nadat een ongeordend lijstteken de inspringing van het lijstitem opheft
-- <kbd>Return</kbd> in lijsten maakt een nieuw lijstitem
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Links</kbd> springt terug in de notitiegeschiedenis
   - <kbd>Alt</kbd> + <kbd>Rechts</kbd> springt vooruit in de notitiegeschiedenis
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> zet een notitiebladwijzer op bladwijzervak 1..9
@@ -105,7 +105,7 @@
 ### In het notitievoorbeeldpaneel
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> laat je zoeken in de huidige notitie
-  - Gebruik <kbd>Up</kbd> en <kbd>Down</kbd> toetsen of <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> toetsen om naar de vorige en volgende overeenkomsten te gaan
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> sluit de zoekbalk
 
 ### In de Todo-lijst
@@ -162,7 +162,7 @@
 ### In de notitie-zoekbalk
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> stelt de focus in op de notitielijst
-- <kbd>Return</kbd> maakt een nieuwe notitie aan met de tekst uit de zoekbalk als kop
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### In de notitielijst
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> op een link om het te openen
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> laat je zoeken in de huidige notitie
-  - Gebruik <kbd>Up</kbd> en <kbd>Down</kbd> toetsen of <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> toetsen om naar de vorige en volgende overeenkomsten te gaan
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> sluit de zoekbalk
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> kunt u zoeken en vervangen in de huidige notitie
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> dupliceert de huidige regel of de geselecteerde tekst
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> bladert door de hoofdletters van de geselecteerde tekst
 - <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> maakt het inspringen van de geselecteerde tekst ongedaan
-- <kbd>Tab</kbd> nadat een ongeordend lijstteken het lijstitem inspringt
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> nadat een ongeordend lijstteken de inspringing van het lijstitem opheft
-- <kbd>Return</kbd> in lijsten maakt een nieuw lijstitem
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Links</kbd> springt terug in de notengeschiedenis
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Rechts</kbd> springt vooruit in de notengeschiedenis
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> stelt een notitiebladwijzer in op bladwijzersleuf 1..9
@@ -219,7 +219,7 @@
 ### In het notitievoorbeeldpaneel
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> laat je zoeken in de huidige noot
-  - gebruik de toetsen <kbd>Omhoog</kbd> en <kbd>Omlaag</kbd> of <kbd>F3</kbd> en <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> om spring naar de vorige en volgende wedstrijden
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> sluit de zoekbalk
 
 ### In de Todo-lijst

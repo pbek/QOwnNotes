@@ -62,12 +62,12 @@ Możesz też zaimportować zakładki ze swojej przeglądarki do QOwnNotes za pom
 ### Składnia linków zakładek
 
 ```markdown
-- [Nazwa strony](https://www.example.com)
-- [Nazwa strony](https://www.example.com) #tag1 #tag2
-- [Nazwa strony](https://www.example.com) tylko część opisu
-- [Nazwa strony](https://www.example.com) #tag1 #tag2 część opisu i tagi
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Nazwa strony](https://www.example.com) znak listy alternatywnej również działa
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

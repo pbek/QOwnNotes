@@ -305,7 +305,7 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Inicializa las acciones personalizadas
+     * Inicializar las acciones personalizadas
      */
     function init() {
         // añadir una acción personalizada sin un botón
@@ -370,16 +370,16 @@ void ScriptingService::registerLabel(QString identifier, QString text);
 
 ```js
 script.registerLabel(
-  "html-label",
+  "etiqueta-html",
   "Texto HTML <strong>fuerte</strong> <br />con tres líneas<br />y un <a href='https://www.qownnotes.org'>enlace a un sitio web</a>.",
 );
 
 script.registerLabel(
-  "long-label",
+  "etiqueta-larga",
   "otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo, otro texto muy largo que se envolverá",
 );
 
-script.registerLabel("counter-label");
+script.registerLabel("contraetiqueta");
 ```
 
 Las etiquetas serán visibles en el _Panel de secuencia de órdenes_, el cual necesita habilitar en el menú _Ventanas/Paneles_.
@@ -441,8 +441,8 @@ Puede que quiera echar un vistazo al ejemplo [custom-actions.qml](https://github
 Si desactivó que el título de su nota determine el nombre del archivo de la nota, debe luego renombrar archivo de nota por su cuenta de la siguiente manera:
 
 ```js
-var note = script.currentNote();
-note.renameNoteFile("su-nombre-de-archivo");
+var nota = script.currentNote();
+nota.renameNoteFile("su-nombre-de-archivo");
 ```
 
 :::
@@ -851,10 +851,10 @@ QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ### Ejemplo
 
 ```js
-var noteIds = script.fetchNoteIdsByNoteTextPart("mi texto");
+var noteIds = script.fetchNoteIdsByNoteTextPart("mitexto");
 
 noteIds.forEach(function (noteId) {
-  var note = script.fetchNoteById(noteId);
+  var nota = script.fetchNoteById(noteId);
 
   // hacer algo más con la nota
 });
@@ -1122,13 +1122,13 @@ int ScriptingService::questionMessageBox (
 ```js
 // mostrar un cuadro de mensaje de pregunta con una solicitud y un botón de ayuda
 // vease: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-var result = script.questionMessageBox(
+var resultado = script.questionMessageBox(
   "El texto que quiero mostrar",
   "Algún título opcional",
   0x01000000 | 0x02000000,
   0x02000000,
 );
-script.log(result);
+script.log(resultado);
 ```
 
 Para obtener información sobre los botones, consulte [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
@@ -1156,7 +1156,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 
 ```js
 // mostrar un diálogo de archivo abierto
-var fileName = script.getOpenFileName(
+var nombreDeArchivo = script.getOpenFileName(
   "Por favor seleccione una imagen",
   "/home/user/images",
   "Images (*.png *.xpm *.jpg)",
@@ -1330,13 +1330,16 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ### Ejemplo
 
 ```js
-// almacenar variable persistente
-script.setPersistentVariable("PersistentVariablesTest/myVar", result);
+// almacenar una variable persistente
+script.setPersistentVariable(
+  "PruebaDeVariablesPersistentes/miVariable",
+  result,
+);
 
-// cargar y registrar variable persistente
+// cargar y registrar una variable persistente
 script.log(
   script.getPersistentVariable(
-    "PersistentVariablesTest/myVar",
+    "PruebaDeVariablesPersistentes/miVariable",
     "no hay nada todavía",
   ),
 );
@@ -1413,8 +1416,8 @@ bool ScriptingService::clearCacheDir (const QString & subDir) const;
 ### Ejemplo
 
 ```js
-// borrar el directorio de caché de my-script-id
-script.clearCacheDir("my-script-id");
+// borrar el directorio de caché de mi-ID-de-script
+script.clearCacheDir("mi-ID-de-script");
 ```
 
 ## Leer la ruta al directorio de su script
@@ -1605,12 +1608,12 @@ Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`
 ### Ejemplo
 
 ```js
-var result = script.inputDialogGetItem(
+var resultado = script.inputDialogGetItem(
   "cuadro combinado",
   "Por favor seleccione un elemento",
   ["Elemento 1", "Elemento 2", "Elemento 3"],
 );
-script.log(result);
+script.log(resultado);
 ```
 
 Puede que quiera echar un vistazo al ejemplo [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
@@ -1637,12 +1640,12 @@ Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`
 ### Ejemplo
 
 ```js
-var result = script.inputDialogGetText(
-  "line edit",
+var resultado = script.inputDialogGetText(
+  "edición de línea",
   "Por favor ingrese un nombre",
-  "current text",
+  "texto actual",
 );
-script.log(result);
+script.log(resultado);
 ```
 
 ## Abrir un diálogo de entrada con un editor de texto multirrenglón
@@ -1667,12 +1670,12 @@ Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`
 ### Ejemplo
 
 ```js
-var result = script.inputDialogGetMultiLineText(
+var resultado = script.inputDialogGetMultiLineText(
   "edición multi línea",
   "Por favor ingrese un texto",
   "texto actual",
 );
-script.log(result);
+script.log(resultado);
 ```
 
 ## Abrir un diálogo para mostrar las diferencias entre dos textos
@@ -1698,17 +1701,17 @@ script.log(result);
 ### Ejemplo
 
 ```js
-const text = script.noteTextEditSelectedText();
-const aiPrompt = "Traduce el texto a inglés";
-const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
+const texto = script.noteTextEditSelectedText();
+const promptIA = "Traduce el texto a inglés";
+const resultadoIA = script.aiComplete(promptIA + ":\n\n" + texto);
 
-var result = script.textDiffDialog(
-  "Herramienta de texto de IA",
+var resultado = script.textDiffDialog(
+  "Herramienta de texto con IA",
   "Texto resultante",
-  text,
-  aiResult,
+  texto,
+  resultadoIA,
 );
-script.log(result);
+script.log(resultado);
 ```
 
 ## Comprobar si un archivo existe
@@ -1749,9 +1752,9 @@ QString ScriptingService::readFromFile(const QString &filePath, const QString &c
 ### Ejemplo
 
 ```js
-if (script.fileExists(filePath)) {
-  var data = script.readFromFile(filePath);
-  script.log(data);
+if (script.fileExists(rutaArchivo)) {
+  var datos = script.readFromFile(rutaArchivo);
+  script.log(datos);
 }
 ```
 

@@ -281,19 +281,19 @@ Puoi implementare il tuo meccanismo di etichettatura delle note, ad esempio con 
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
-- non appena viene attivato uno script che implementa la nuova funzione `noteTaggingHook` l'etichettatura delle note sarà gestita da quella funzione
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
 - le seguenti funzionalità dovrebbero essere disponibili tramite l'interfaccia utente QOwnNotes
-  - inizialmente importando le etichette `@tag` dalle note e sovrascrivendo l'assegnazione dell'etichetta corrente
-    - non perderai il tuo albero delle etichette, solo il precedente assegnamento alle note
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
     - puoi comunque spostare le etichette in altre etichette
-    - se ci sono più etichette collo stesso nome nel tuo albero delle etichette, verrà assegnata la prima corrispondenza
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
   - l'aggiunta di un'etichetta a una nota aggiungerà l'etichetta al testo della nota
   - la rimozione di un'etichetta da una nota rimuoverà l'etichetta dal testo della nota
-  - la rimozione di etichette dall'elenco rimuoverà le etichette dalle tue note
-  - rinominare le etichette nell'elenco rinominerà le etichette nelle note
-  - l'etichettatura collettiva delle note nell'elenco delle note aggiungerà tali etichette alle note
-  - la rimozione collettiva di etichette dalle note nell'elenco delle note rimuoverà tali etichette dalle note
-  - l'applicazione attiverà una serie di azioni `aggiungi` e `rimuovi` per tutte le etichette selezionate e i loro figli su tutte le note se le etichette vengono spostate nel pannello delle etichette
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 Potresti voler dare un'occhiata all'esempio [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) per implementare il suo personale sistema di etichettatura.
 
@@ -446,8 +446,8 @@ You can use it to provide config for custom OpenAI backends, like your own OpenA
 
 ```js
 /**
- * Questa funzione viene richiamata quando la configurazione del servizio OpenAI viene ricaricata
- * Restituisce una lista di ggetti con i parametri della configurazione per i nuovi backends di OpenAI
+ * This function is called when the OpenAI service config is reloaded
+ * It returns a list of objects with config parameters for new OpenAI backends
  */
 function openAiBackendsHook() {
   return [

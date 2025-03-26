@@ -39,7 +39,7 @@
 ## تکیه
 
 ```markdown
-تکیه (که با نام ایتالیک نیز شناخته می شود) با علامت _ستاره_.
+Emphasis, aka italics, with _asterisks_.
 
 تکیه مؤکد (که به صورت پررنگ نیز شناخته می شود) با علامت **ستاره**.
 ```
@@ -50,7 +50,7 @@
 
 ## خط زیرین
 
-علاوه بر این، یک گزینه اختیاری در تنظیمات برای فعال کردن خط زیرین وجود دارد که در _ تنظیمات پیش نمایش_ قابل اجرا می باشد.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _خط زیرین_
@@ -76,17 +76,19 @@ _خط زیرین_
 
 ```markdown
 1. نخستین مورد لیست مرتب شده
-2. مورد بعدی
-   \*زیر فهرست مرتب نشده.
-3. اعداد حقیقی اهمیتی ندارند بلکه فقط عدد هستند
-4. زیرفهرست مرتب شده (تنها در ویرایشگر کار می کند نه در پیش نمایش)
-5. و موردی دیگر.
+2. Another item
 
-- برای لیست مرتب نشده می توان از ستاره
+- Unordered sub-list.
 
-* یا منها
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. و موردی دیگر.
 
-- یا بعلاوه استفاده کرد
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: tip
@@ -175,7 +177,7 @@ Blocks of code are either fenced by lines with three backticks, or are indented 
 
 علاوه بر این می توانید از سه بک تیک برای ایجاد یک کد پلاک استفاده کنید.
 
-````مارک داون
+````markdown
 ```
 Code goes here
 Code goes here
@@ -196,6 +198,8 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 # I am a comment
 cd Notes
 ```
+````
+
 ````
 
 Currently, supported languages (and code block identifiers) are:
@@ -253,7 +257,7 @@ You can also use inline Markdown.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-```
+````
 
 ::: tip
 <kbd>Alt + Shift + T</kbd> را فشار دهید تا یک کادر گفتگو فعال شود که می تواند به شما در ایجاد جداول کمک کند. حتی می توانید پرونده های CSV را در آن کادر گفتگو وارد کنید.
@@ -273,7 +277,7 @@ Quote break.
 ```
 
 ::: tip
-می توانید به QOwnNotes بگویید که نقل قول های بلند یا فقط نویسه نقل قول را به طور کامل در _ تنظیمات ویرایشگر_ برجسته کند
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 می توانید از [میانبر](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> برای علامت گذاری متن به صورت نقل قول بلند استفاده کنید.
 :::

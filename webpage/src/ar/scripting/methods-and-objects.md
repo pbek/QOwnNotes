@@ -290,7 +290,7 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-يمكنك أيضا تعيين اختصارات محلية أو عامة لإجراءاتك المخصصة في _إعدادات الاختصارات_.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -585,7 +585,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ### مثال
 
 ```js
-// زيادة النص المحدد حاليا بمحرف واحد في الاتجاهين
+// expands the current selection by one character
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -757,7 +757,7 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // سينفذ فقط عند العمل على لينكس
+  // Will be executed only if under Linux
 }
 ```
 

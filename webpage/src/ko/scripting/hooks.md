@@ -260,19 +260,19 @@ function encryptionHook(text, password, decrypt);
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
-- 새 기능을 구현하는 스크립트가 활성화되는 즉시 `noteTaggingHook`후크 노트 태그 지정은 해당 기능으로 처리됩니다
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
 - 다음 기능은 QOwnNotes 사용자 인터페이스를 통해 작동해야 합니다
-  - 처음에 노트에서 `@tag` 와 같은 태그를 가져오고 현재 태그 할당을 덮어씁니다
-    - 태그 트리를 잃지 않고 노트에 대한 이전 할당만 손실됩니다
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
     - 여전히 태그를 다른 태그로 이동할 수 있습니다
-    - 태그 트리에 같은 이름의 태그가 둘 이상 있는 경우 첫 번째 히트가 할당됩니다
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
   - 노트에 태그를 추가하면 노트 텍스트에 태그가 추가됩니다
   - 노트에서 태그를 제거하면 노트 텍스트에서 태그가 제거됩니다
-  - 태그 목록에서 태그를 제거하면 노트에서 해당 태그가 제거됩니다
-  - 태그 목록의 태그 이름을 바꾸면 노트의 태그 이름이 바뀝니다
-  - 노트 목록에 있는 노트에 대량 태그를 지정하면 해당 태그가 노트에 추가됩니다
-  - 노트 목록의 노트에서 태그를 대량으로 제거하면 노트에서 태그가 제거됩니다
-  - 태그 패널에서 태그가 이동된 경우 응용 프로그램은 선택한 모든 태그와 모든 노트의 하위 태그에 대해 일련의 `추가` 및 `제거` 작업을 트리거합니다
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) 예제를 보고 자체 태그 메커니즘을 구현할 수 있습니다.
 
@@ -408,8 +408,8 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 
 ```js
 /**
- * 이 함수는 OpenAI 서비스 구성을 다시 로드할 때 호출됩니다
- * 새 OpenAI 백엔드에 대한 구성 매개 변수가 있는 개체 목록을 반환합니다
+ * This function is called when the OpenAI service config is reloaded
+ * It returns a list of objects with config parameters for new OpenAI backends
  */
 function openAiBackendsHook() {
   return [

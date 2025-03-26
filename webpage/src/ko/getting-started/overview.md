@@ -21,9 +21,9 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <img src="/screenshots/screenshot-note-relations.png" alt="노트 관계" />
     <div class="sheet">
-      Note relations panel
+      노트 관계 패널
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -147,7 +147,7 @@
 
 [QOwnNotes](https://www.qownnotes.org/)는 **GNU/리눅스**, **macOS** 및 **Windows**용 응용 프로그램을 사용하는 **오픈 소스** (GPL) **일반 텍스트 파일 마크다운 노트**로, (선택적으로) [Nextcloud](https://nextcloud.com/) 및 [ownCloud](https://owncloud.org/)의 [Notes 응용 프로그램](https://github.com/nextcloud/notes)과 함께 작동합니다.
 
-::: 팁 [Telegram 그룹](https://t.me/QOwnNotes)에 가입하여 QOnNotes 커뮤니티에 대해 토론하고, 배우고, 연결하십시오. :::
+::: tip Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community. :::
 
 [QOwnNotes의 개념 이해](concept.md)
 

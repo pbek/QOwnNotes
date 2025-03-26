@@ -259,19 +259,19 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
  */
 ```
 
-- amint egy szkript aktiválódik, amely végrehajtja az új függvényt, a `noteTaggingHook` jegyzet címkézést ez a függvény kezeli.
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
 - a következő funkcióknak a QOwnNotes felhasználói felületén keresztül kell működniük
-  - kezdetben olyan címkéket importál a jegyzeteiből, mint a `@tag`, és felülírja az aktuális címkekiosztást
-    - nem veszíti el a címkék fáját, csak a jegyzetekhez való korábbi hozzárendelést
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
     - továbbra is áthelyezhet címkéket más címkékbe
-    - ha egynél több címkének ugyanaz a neve a címkefájában, akkor az első találatot hozzárendelik
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
   - címke hozzáadása egy jegyzethez hozzáadja a címkét a jegyzet szövegéhez
   - címke eltávolítása egy jegyzetből eltávolítja a címkét a jegyzet szövegéből
-  - a címkék eltávolításával a címkékből eltávolítja ezeket a címkéket a jegyzeteiből
-  - a címkék listáján szereplő címkék átnevezése átnevezi a jegyzetekben szereplő címkéket
-  - A jegyzetek listájában a jegyzetek tömeges címkézése hozzáadja ezeket a címkéket a jegyzeteihez
-  - A címkék tömeges eltávolítása a jegyzetlista jegyzeteiből eltávolítja ezeket a címkéket a jegyzeteiből
-  - az alkalmazás elindít egy sor `add` és `remove` műveletet az összes kijelölt címkéhez és gyermekéhez az összes jegyzethez, ha a címkéket áthelyezi a címke panelre
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
 

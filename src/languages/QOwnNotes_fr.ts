@@ -2116,11 +2116,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>Ré-attacher les panneaux flottants</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>Ré-attache tous les panneaux flottants</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2695,7 +2695,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation>Voulez-vous également exporter les fichiers multimédia et pièces joints à la note ? Des fichiers risquent d'être écrasés à l'emplacement de destination!</translation>
+<translation>Voulez-vous également exporter les fichiers multimédia et pièces joints à la note ? Des fichiers risquent d'être écrasés à l'emplacement de destination !</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -3389,7 +3389,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Attente de la réponse de l’IA</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3643,7 +3643,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Montrer les notes dans le dossier « %1 » (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3898,9 +3898,9 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Un changement du chemin de la note a été détecté. Souhaitez-vous remplacer tous les liens de &lt;strong&gt;%n&lt;/strong&gt; fichier de note ?</numerusform>
+<numerusform>Un changement du chemin de la note a été détecté. Souhaitez-vous remplacer tous les liens de &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes ?</numerusform>
 </translation>
 </message>
 <message>
@@ -4094,7 +4094,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Double-cliquer pour ouvrir la note</translation>
 </message>
 </context>
 <context>
@@ -5501,11 +5501,11 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>Cache les icônes dans les menus ainsi que la boîte de dialogue « Trouver une action ». Requiert un redémarrage pour prendre effet</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
-<translation type="unfinished">Hide menu icons</translation>
+<translation>Cacher les icônes des menus</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -5679,15 +5679,15 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>Paramètres d’API</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Temps maximal de réponse :</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>Le temps que l’application attendra une réponse du serveur avant de renvoyer un message d’erreur.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6121,7 +6121,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation type="unfinished">sec</translation>
+<translation>sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
@@ -7353,7 +7353,7 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation>Accepter les changements ?</translation>
+<translation>Accepter le changement ?</translation>
 </message>
 </context>
 <context>

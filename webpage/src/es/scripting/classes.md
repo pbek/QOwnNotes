@@ -89,7 +89,7 @@ script.log(noteSubFolder.name);
 
 // iterar a través de las notas en la subcarpeta de la nota
 for (var idx in noteSubFolder.notes) {
-  var note = noteSubFolder.notes[idx];
+  var nota = noteSubFolder.notes[idx];
 }
 ```
 
@@ -114,14 +114,14 @@ class TagApi {
 // ¡No olvide usar “import QOwnNotesTypes 1.0” en la parte superior de su script!
 
 // Obtener etiqueta "home"
-var tag = script.getTagByNameBreadcrumbList(["home"]);
+var etiqueta = script.getTagByNameBreadcrumbList(["home"]);
 // Obtener todas las notas etiquetadas con la etiqueta
-var notes = tag.notes;
+var notas = etiqueta.notes;
 
 // Iterar a través de las notas de la etiqueta
-for (var idx in notes) {
-  var note = notes[idx];
-  script.log(note.name);
+for (var idx in notas) {
+  var nota = notas[idx];
+  script.log(nota.name);
 }
 ```
 
@@ -165,30 +165,30 @@ class MainWindow {
 ### Ejemplo
 
 ```js
-// Fuerza una recarga de la lista de notas
+// Forzar una recarga de la lista de notas
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crea una nueva subcarpeta de notas "Mi carpeta estrafalaria" en la subcarpeta actual
+// Crear una nueva subcarpeta de notas "Mi carpeta estrafalaria" en la subcarpeta actual
 mainWindow.createNewNoteSubFolder("Mi carpeta estrafalaria");
 
-// Inserta HTML en la nota actual como Markdown
+// Insertar HTML en la nota actual como Markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote(
   "<h2>mi título</h2>algo de texto",
 );
 
-// Establece espacio de trabajo 'Edit' como espacio de trabajo actual
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+// Establecer el espacio de trabajo "Edición" como espacio de trabajo actual
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edición"));
 
-// Salta a la etiqueta "test" en el árbol de etiquetas
-// Hay un ejemplo en
-//github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
-https: var tag = script.getTagByNameBreadcrumbList(["test"]);
-mainWindow.jumpToTag(tag.id);
+// Saltar a la etiqueta "prueba" en el árbol de etiquetas
+// Hay un ejemplo en https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+var etiqueta = script.getTagByNameBreadcrumbList(["prueba"]);
+mainWindow.jumpToTag(etiqueta.id);
 
-// Obtiene todas las notas de las pestañas que están abiertas
-var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId) {
-  var note = script.fetchNoteById(noteId);
-  // Haz algo con la nota
+// Obtener todas las notas de las pestañas que están abiertas
+var IDnotas = mainWindow.getNoteTabNoteIdList();
+IDnotas.forEach(function (IDnota) {
+  var nota = script.fetchNoteById(IDnota);
+
+  // Hacer algo con la nota
 });
 ```

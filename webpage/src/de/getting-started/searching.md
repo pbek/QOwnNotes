@@ -1,6 +1,6 @@
 # Nach Notizen suchen
 
-Um nach Notizen oder Text in Notizen zu suchen, können Sie die Verknüpfung <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>F</kbd> verwenden (oder <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> unter macOS), um zum _Suchfeld für Notizen_ zu springen.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 Es gibt verschiedene Möglichkeiten, nach Notizen zu suchen:
 

@@ -39,7 +39,7 @@ Per impostazione predefinita QOwnNotes crea il **nome file di una nota** dall'in
 ## Enfasi
 
 ```markdown
-Enfasi, alias corsivo, con _asterischi_.
+Emphasis, aka italics, with _asterisks_.
 
 Forte enfasi, ovvero grassetto, con **asterischi**.
 ```
@@ -50,7 +50,7 @@ Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + B</kbd> per rendere
 
 ## Sottolineato
 
-Esiste anche un'impostazione opzionale per abilitare il rendering sottolineato nelle _Impostazioni anteprima_.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _sottolineato_
@@ -76,19 +76,19 @@ Esistono molti modi per creare elenchi.
 
 ```markdown
 1. Primo elemento di una lista ordinata
-2. Un altro elemento
+2. Another item
 
-- Sotto-lista non ordinata
+- Unordered sub-list.
 
-1. I numeri usati non sono importanti, basta che sia un numero
-1. Sotto-lista ordinata (funziona solo nell'editor, non nell'anteprima)
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
 1. E un altro elemento.
 
-- Le lista non ordinate possono usare gli asterichi
+- Unordered list can use asterisks
 
-* O i meno
+* Or minuses
 
-- o i più
+- Or pluses
 ```
 
 ::: tip
@@ -193,14 +193,16 @@ C'è anche un po' di evidenziazione della sintassi nei blocchi di codice di QOwn
 
 ````markdown
 ```bash
-# Questo è un commento
-cd Note
+# I am a comment
+cd Notes
 ```
 ````
 
-Al momento i linguaggi supportati (e gli identificatori dei codici) sono:
+````
 
-- codice BASH, `bash`
+Currently, supported languages (and code block identifiers) are:
+
+- BASh scripting, `bash`
 - C, `c`
 - C++, `cpp`
 - C++, `cxx`
@@ -222,7 +224,7 @@ Al momento i linguaggi supportati (e gli identificatori dei codici) sono:
 - Python, `python`
 - QML, `qml`
 - Rust, `rust`
-- codice Shell, `sh`
+- Shell scripting, `sh`
 - SQL, `sql`
 - TypeScript, `ts`
 - TypeScript, `typescript`
@@ -232,28 +234,28 @@ Al momento i linguaggi supportati (e gli identificatori dei codici) sono:
 - YAML, `yml`
 - YAML, `yaml`
 
-## Tabelle
+## Tables
 
-Le tabelle non sono parte integrante di Markdown, ma l'anteprima di QOwnNotes le supporta.
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
 ```markdown
-I due punti possono essere usati per allineare il contenuto delle colonne.
+Colons can be used to align columns.
 
-| Le Tabelle             |        Sono        | Belle |
-| ---------------------- | :----------------: | ----: |
-| la colonna 3 è         | allineata-a-destra | $1600 |
-| la colonna 2 è         |      centrata      |   $12 |
-| Le strisce delle zebre |  sono eccezionali  |    $1 |
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-Ci devono essere almeno tre trattini per separare ogni intestazione per cella.
+There must be at least 3 dashes separating each header cell.
 
 Puoi anche usare il Markdown in linea.
 
-| Markdown   | Meno        | Carino            |
-| ---------- | ----------- | ----------------- |
-| _Tuttavia_ | `si mostra` | **correttamente** |
-| 1          | 2           | 3                 |
-```
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+````
 
 ::: tip
 Premi <kbd>Alt + Maiusc + T</kbd> per attivare una finestra di dialogo che può aiutarti a creare tabelle. Puoi persino importare file CSV in quella finestra di dialogo.
@@ -269,11 +271,11 @@ Usa <kbd>Ctrl + Spazio</kbd> all'interno di una tabella di markdown per formatta
 
 Interruzione della citazione.
 
-> Questa è una linea molto lunga che verrà comunque citata correttamente nonostante venga avvolta. Oh mamma mia, continuiamo a scrivere per essere sicuri sia abbastanza lunga per farla avvolgere a chiunque. Ah, inoltre puoi _inserire_ **Markdown** in un blocco di citazione.
+> Questa è una linea molto lunga che verrà comunque citata correttamente nonostante venga avvolta. Oh mamma mia, continuiamo a scrivere per essere sicuri sia abbastanza lunga per farla avvolgere a chiunque. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 ::: tip
-Puoi dire a QOwnNotes di evidenziare completamente le citazioni o solo il carattere della citazione nelle _Impostazioni dell'editor_
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + B</kbd> per segnare il testo come citazione.
 :::
@@ -285,15 +287,15 @@ Esistono tre modi per ottenere una regola orizzontale: trattini, asterischi o tr
 ```markdown
 Tre o più...
 
-Trattini
+Hyphens
 
 ---
 
-Asterischi
+Asterisks
 
 ---
 
-Trattini bassi
+Underscores
 
 ---
 ```
@@ -311,10 +313,10 @@ Puoi inserire due spazi e un a capo con <kbd>⇧ Shift</kbd> + <kbd>Invio</kbd>.
 ```markdown
 Questa è una riga con cui possiamo cominciare.
 
-Questa linea è separata dalla precedente con 2 invii.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-Anche questa riga inizia un nuovo paragrafo, ma...  
-Questa riga è separata solo da 2 spazi e un singolo invio, quindi è una riga separata nello _stesso paragrafo_.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -326,9 +328,9 @@ Gli spazi finali sono evidenziati per impostazione predefinita nell'editor.
 I commenti non vengono visualizzati nell'anteprima.
 
 ```markdown
-[commento]: # "Questo commento non apparirà nell'anteprima"
+[comment]: # "This comment will not appear in the preview"
 
-<!-- Anche i commenti in HTML vengono nascosti -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip

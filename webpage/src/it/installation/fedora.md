@@ -66,7 +66,7 @@ dnf install qownnotes
 
 ### Problemi con la chiave GPG?
 
-I cambiamenti nei criteri crittografici di Fedora potrebbero rendere "obsolete" (scadute) le chiavi del repository, le quali non vengono _automaticamente_ aggiornate. Ciò potrebbe portare a problemi nell'_aggiornare_ QOwnNotes.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
 
 **Dettagli:** se si hanno problemi con l'invalidità delle chiavi (es.: Errori GPG) come `certificate is not alive` (il certificato non è disponibile) e/o `key is not alive` (la chiave non è disponibile) a causa della scadenza di essi i seguenti comandi dovrebbero eliminare la chiave scaduta:
 
@@ -76,4 +76,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 La guida dettagliata dei comandi è disponibile su GitHub nel [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) riguardante questa esatta problematica.
 
-Una volta che la chiave scaduta è stata eliminata si deve nuovamente _importare_ la chiave **corrente** manualmente come descritto all'inizio di queste istruzioni per l'installazione.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

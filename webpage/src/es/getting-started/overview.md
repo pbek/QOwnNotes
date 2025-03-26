@@ -21,9 +21,9 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <img src="/screenshots/screenshot-note-relations.png" alt="Relaciones de la nota" />
     <div class="sheet">
-      Note relations panel
+      Panel de relaciones de notas
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -148,7 +148,7 @@
 [QOwnNotes](https://www.qownnotes.org/) es la aplicación de **bloc de notas en formato Markdown** en archivos de texto plano de **código abierto** (GPL) para **GNU/Linux**, **macOS** y **Windows**, que (opcionalmente) funciona junto a las [**aplicaciones de notas**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) y [ownCloud](https://owncloud.org/).
 
 ::: tip
-Únase a nuestro [Telegram Group](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad de QOwnNotes.
+Únase a nuestro [grupo de Telegram](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad de QOwnNotes.
 :::
 
 [Comprender el concepto de QOwnNotes](concept.md)

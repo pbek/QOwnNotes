@@ -70,24 +70,24 @@ var noteSubFolderQmlObj = Qt.createQmlObject(
   "noteSubFolder",
 );
 
-// alle namen van submappen afdrukken
+// print all subfolder names
 noteSubFolderQmlObj
   .fetchNoteSubFoldersByParentId(parentId)
   .forEach(function (nsf) {
     script.log(nsf.name);
   });
 
-// verkrijg de actieve notitie-submap
+// get the active note subfolder
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print het volledige en relatieve pad van de actieve notitie-submap
+// print the full and relative path of the active note subfolder
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// itereren door notities in de submap van notities
+// iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
   var note = noteSubFolder.notes[idx];
 }

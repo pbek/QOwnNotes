@@ -48,7 +48,7 @@
 ### Dans la barre de recherche de notes
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> définit le focus sur la liste de notes
-- <kbd>Return</kbd> crée une nouvelle note avec le texte de la barre de recherche comme titre
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Dans la liste des notes
 
@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> sur un lien pour l'ouvrir
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> vous permet de rechercher dans la note actuelle
-  - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd> pour passer aux correspondances précédentes et suivantes respectivement
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> ferme la barre de recherche
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> vous permet de rechercher et de remplacer dans la note actuelle
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplique la ligne courante ou le texte sélectionné
@@ -82,9 +82,9 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>U</kbd> fait défiler les casses pour le texte sélectionné
 - <kbd>Tab</kbd> indente le texte sélectionné (fonctionne également sur plusieurs lignes)
   - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> désindente le texte sélectionné
-- <kbd>Tab</kbd> après un caractère de liste non ordonné indente l'élément de liste
-  - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> après un élément de liste non ordonnée le désindente
-- <kbd>Entrée</kbd> dans les listes crée un nouvel élément de liste
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>← Gauche</kbd> revient en arrière dans l'historique des notes
   - <kbd>Alt</kbd> + <kbd>→ Droite</kbd> saute en avant dans l'historique des notes
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>1…9</kbd> définit un signet de note sur l'emplacement de signet 1…9
@@ -105,7 +105,7 @@
 ### Dans le panneau d'aperçu de la note
 
 - <kbd> Ctrl </kbd> + <kbd> F </kbd> vous permet de rechercher dans la note actuellevous permet de rechercher dans la note actuelle
-  - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd> pour passer aux correspondances précédentes et suivantes respectivement
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> ferme la barre de recherche
 
 ### Dans la liste Todo
@@ -162,7 +162,7 @@
 ### Dans la barre de recherche de notes
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> définit le focus sur la liste de notes
-- <kbd>Return</kbd> crée une nouvelle note avec le texte de la barre de recherche comme titre
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Dans la liste des notes
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> sur un lien pour l'ouvrir
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> permet de faire une recherche dans la note courante
-  - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd> pour passer aux correspondances précédentes et suivantes respectivement
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> ferme la barre de recherche
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> permet de rechercher et de remplacer dans la note actuelle
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplique la ligne courante ou le texte sélectionné
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>U</kbd> fait défiler les casses pour le texte sélectionné
 - <kbd>Tab</kbd> indente le texte sélectionné (fonctionne également sur plusieurs lignes)
   - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> désindente le texte sélectionné
-- <kbd>Tab</kbd> après un caractère de liste non-ordonné l'indente
-  - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> après un élément de liste non ordonnée le désindente
-- <kbd>Entrée</kbd> dans les listes crée un nouvel élément de liste
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>← Gauche</kbd> remonte à rebours l'historique des notes
   - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>→ Droite</kbd> avance dans l'historique des notes
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>1…9</kbd> définit un signet de note sur l'emplacement de signet 1…9
@@ -219,7 +219,7 @@
 ### Dans le panneau d'aperçu de la note
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> permet de faire une recherche dans la note courante
-  - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd> pour passer aux correspondances précédentes et suivantes respectivement
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> ferme la barre de recherche
 
 ### Dans la liste des tâches

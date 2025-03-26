@@ -48,7 +48,7 @@
 ### در نوار جستجوی یادداشت
 
 - <kbd>پایین</kbd> یا <kbd>Tab</kbd> بر روی لیست یادداشت متمرکز می شود
-- <kbd>Return</kbd> یادداشت جدیدی را با متنی از نوار جستجو به صورت سرخط ایجاد می کند
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### در لیست یادداشت
 
@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>کلیک</kbd> روی یک پیوند برای باز کردن آن
 - <kbd>Ctrl</kbd> یا <kbd>ّF</kbd> به شما این امکان را می دهد که در یادداشت کنونی جستجو کنید
-  - جهت پرش به روگرفت های قبلی و بعدی از کلیدهای <kbd>بالا</kbd> و <kbd>پایین</kbd> یا کلیدهای <kbd>F3</kbd> و <kbd>F3</kbd> + <kbd>⇧ Shift</kbd> استفاده کنید
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> نوار جستجو را می بندد
 - <kbd>Ctrl</kbd> یا <kbd>ّR</kbd> به شما این امکان را می دهد که در یادداشت کنونی جستجو و جایگزینی انجام دهید
 - <kbd>D</kbd> + <kbd>Ctrl</kbd> از خط کنونی یا متن منتخب رونوشت بر می دارد
@@ -82,9 +82,9 @@
 - <kbd>U</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> از میان منابع متن منتخب می چرخد
 - <kbd>Tab</kbd> متن منتخب را برجسته می سازد (در چندین خط نیز کار می کند)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> متن منتخب را از حالت برجسته خارج می کند
-- <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را برجسته می سازد
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را از حالت برجسته خارج می کند
-- <kbd>Return</kbd> در لیست ها مورد لیست جدیدی ایجاد می کند
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>چپ</kbd> در تاریخچه یادداشت پرش به عقب می کند
   - <kbd>Alt</kbd> + <kbd>راست</kbd> در تاریخچه یادداشت پرش به جلو می کند
 - <kbd>1..9</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> نشانک یادداشت را در شکاف نشانک 1..9 تنظیم می کند
@@ -105,7 +105,7 @@
 ### در پنل پیش نمایش یادداشت
 
 - <kbd>Ctrl</kbd> یا <kbd>ّF</kbd> به شما این امکان را می دهد که در یادداشت کنونی جستجو انجام دهید
-  - جهت پرش به روگرفت های قبلی و بعدی از کلیدهای <kbd>بالا</kbd> و <kbd>پایین</kbd> یا کلیدهای <kbd>F3</kbd> و <kbd>F3</kbd> + <kbd>⇧ Shift</kbd> استفاده کنید
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> نوار جستجو را می بندد
 
 ### در لیست انجام دادنی
@@ -162,7 +162,7 @@
 ### در نوار جستجوی یادداشت
 
 - <kbd>پایین</kbd> یا <kbd>Tab</kbd> بر روی لیست یادداشت متمرکز می شود
-- <kbd>Return</kbd> یادداشت جدیدی را با متنی از نوار جستجو به صورت سرخط ایجاد می کند
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### در لیست یادداشت
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-  - جهت پرش به روگرفت های قبلی و بعدی از کلیدهای <kbd>بالا</kbd> و <kbd>پایین</kbd> یا کلیدهای <kbd>F3</kbd> و <kbd>F3</kbd> + <kbd>⇧ Shift</kbd> استفاده کنید
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> نوار جستجو را می بندد
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> متن منتخب را برجسته می سازد (در چندین خط نیز کار می کند)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> متن منتخب را از حالت برجسته خارج می کند
-- <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را برجسته می سازد
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را از حالت برجسته خارج می کند
-- <kbd>Return</kbd> در لیست ها مورد لیست جدیدی ایجاد می کند
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
@@ -219,7 +219,7 @@
 ### در پنل پیش نمایش یادداشت
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-  - جهت پرش به روگرفت های قبلی و بعدی از کلیدهای <kbd>بالا</kbd> و <kbd>پایین</kbd> یا کلیدهای <kbd>F3</kbd> و <kbd>F3</kbd> + <kbd>⇧ Shift</kbd> استفاده کنید
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> نوار جستجو را می بندد
 
 ### در لیست انجام دادنی

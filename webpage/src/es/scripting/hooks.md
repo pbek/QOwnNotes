@@ -417,14 +417,14 @@ function openAiBackendsHook() {
   return [
     {
       id: "my-ia-personalizada",
-      name: "Mi IA personalizada",
+      name: "My IA personalizada",
       baseUrl: "http://localhost:5000",
       apiKey: "kDFJkjk3asdm",
       models: ["gpt-3.5-turbo", "gpt-4.0-turbo"],
     },
     {
-      id: "my-ia-personalizada2",
-      name: "Mi IA personalizada 2",
+      id: "mi-ia-personalizada2",
+      name: "My IA personalizada 2",
       baseUrl: "http://localhost:5001",
       apiKey: "lOikf7eNdb9",
       models: ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],

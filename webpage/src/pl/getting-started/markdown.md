@@ -39,7 +39,7 @@ Domyślnie QOwnNotes tworzy **nazwę pliku notatki** z **nagłówka 1** (h1).
 ## Nacisk
 
 ```markdown
-Wyróżnienie (aka kursywa) z _gwiazdkami_.
+Emphasis, aka italics, with _asterisks_.
 
 Silne wyróżnienie, czyli pogrubienie, z **gwiazdkami**.
 ```
@@ -76,19 +76,19 @@ Istnieje wiele sposobów tworzenia list.
 
 ```markdown
 1. Pierwsza zamówiona pozycja na liście
-2. Kolejny przedmiot
+2. Another item
 
 - Unordered sub-list.
 
-1. Rzeczywiste liczby nie mają znaczenia, tylko to, że to liczba
-1. Uporządkowana podlista (działa tylko w edytorze, nie w podglądzie)
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
 1. I kolejny przedmiot.
 
-- Lista nieuporządkowana może zawierać gwiazdki
+- Unordered list can use asterisks
 
-* Lub minusy
+* Or minuses
 
-- I plusy
+- Or pluses
 ```
 
 ::: tip
@@ -200,6 +200,8 @@ cd Notes
 ```
 ````
 
+````
+
 Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
@@ -255,7 +257,7 @@ You can also use inline Markdown.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-```
+````
 
 ::: tip
 Naciśnij klawisze <kbd>Alt + Shift + T</kbd>, aby aktywować okno dialogowe, które może pomóc w tworzeniu tabel. Możesz nawet importować pliki CSV w tym oknie dialogowym.
@@ -275,7 +277,7 @@ Quote break.
 ```
 
 ::: tip
-Możesz powiedzieć QOwnNotes, aby w pełni podświetlał cytaty lub tylko znak cytatu w _ustawieniach edytora_
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd>, aby zaznaczyć tekst jako cytat blokowy.
 :::

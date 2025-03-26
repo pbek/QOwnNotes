@@ -287,7 +287,7 @@ void ScriptingService :: registerCustomAction (identificatore QString,
 ```
 
 ::: tip
-Puoi anche assegnare scorciatoie locali e globali alle tue azioni personalizzate nelle _Impostazioni dei collegamenti_.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -297,22 +297,50 @@ Ricorda che le [icone a tema freedesktop](https://specifications.freedesktop.org
 ### Esempio
 
 ```js
-importa QtQml 2.0
+import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 Script {
-     /**
-      * Inizializza le azioni personalizzate
-      */
-     funzione init() {
-         // aggiungi un'azione personalizzata senza un pulsante
+    /**
+     * Initializes the custom actions
+     */
+    function init() {
+        // add a custom action without a button
         script.registerCustomAction("mycustomaction1", "Menu text");
 
-         // aggiungi un'azione personalizzata con un pulsante
+        // add a custom action with a button
         script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-         // aggiungi un'azione personalizzata con un pulsante e l'icona del tema freedesktop
+        // add a custom action with a button and freedesktop theme icon
         script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
+
+        // add a custom action with a button and an icon from a file
+        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+    }
+
+    /**
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
+     *
+     * @param identifier string the identifier defined in registerCustomAction
+     */
+    function customActionInvoked(identifier) {
+        switch (identifier) {
+            case "mycustomaction1":
+                script.log("Action 1");
+            break;
+            case "mycustomaction2":
+                script.log("Action 2");
+            break;
+            case "mycustomaction3":
+                script.log("Action 3");
+            break;
+            case "mycustomaction4":
+                script.log("Action 4");
+            break;
+        }
+    }
+}
 ```
 
 For some more examples please see [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
@@ -344,8 +372,8 @@ script.registerLabel(
 );
 
 script.registerLabel(
-  "etichetta lunga",
-  "un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo , un altro testo molto lungo, un altro testo molto lungo, un altro testo molto lungo che andrà a capo",
+  "long-label",
+  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
 );
 
 script.registerLabel("counter-label");
@@ -727,7 +755,7 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // Verrà eseguito solo se sotto Linux
+  // Will be executed only if under Linux
 }
 ```
 
@@ -828,7 +856,7 @@ var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // fare qualcosa con la nota
+  // do something with the note
 });
 ```
 
@@ -1089,7 +1117,7 @@ int ScriptingService::questionMessageBox(
 ### Esempio
 
 ```js
-// mostra una finestra di messaggio con una domanda con un pulsante Applica e un pulsante di aiuto
+// show a question message box with an apply and a help button
 // see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
   "The text I want to show",
@@ -1124,7 +1152,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 ### Example
 
 ```js
-// mostra una finestra di dialogo del file aperto
+// show an open file dialog
 var fileName = script.getOpenFileName(
   "Please select an image",
   "/home/user/images",
@@ -1152,7 +1180,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ### Esempio
 
 ```js
-// mostra una finestra di dialogo di salvataggio del file
+// show a save file dialog
 var fileName = script.getSaveFileName(
   "Please select HTML file to save",
   "output.html",
@@ -1299,10 +1327,10 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ### Esempio
 
 ```js
-// memorizzare variabile persistente
+// store persistent variable
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// caricare e registrare la variabile persistente
+// load and log persistent variable
 script.log(
   script.getPersistentVariable(
     "PersistentVariablesTest/myVar",
@@ -1382,7 +1410,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ### Esempio
 
 ```js
-// svuota la directory della cache di my-script-id
+// clear cache directory of my-script-id
 script.clearCacheDir("my-script-id");
 ```
 

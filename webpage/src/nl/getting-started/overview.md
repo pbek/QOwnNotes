@@ -21,9 +21,9 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <img src="/screenshots/screenshot-note-relations.png" alt="Notitierelaties" />
     <div class="sheet">
-      Note relations panel
+      Paneel Notitierelaties
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -148,7 +148,7 @@ bezit **Notes** voor de notities die u maakt
 [QOwnNotes](https://www.qownnotes.org/) is het **open source** (GPL) platte tekstbestand **markdown notitie**-applicatie **voor GNU / Linux**, **MacOS** en **Windows**, die (optioneel) samenwerkt met de [**notitietoepassing**](https://github.com/nextcloud/notes) van [Nextcloud](https://nextcloud.com/) en [ownCloud](https://owncloud.org/) (opent nieuw venster).
 
 ::: tip
-Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, te leren en contact te maken met de QOwnNotes-gemeenschap.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [Begrijp het concept van QOwnNotes](concept.md)

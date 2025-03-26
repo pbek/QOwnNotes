@@ -39,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![توکن-سرور-سوکت](/img/socket-server-token.png)
 
-قبل از استفاده از مدیر تکه کد، باید _سرور سوکت وب_ (2) را در قسمت تنظیمات _افزونه مرورگر / تکه کدهای دستوری_ (1) در QOwnNotes فعال کنید.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 سپس باید توکن امنیتی را نشان داده (3) و از آن رونوشت برداری کنید (4).
 

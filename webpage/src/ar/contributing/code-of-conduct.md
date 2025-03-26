@@ -36,7 +36,7 @@
 
 ## الإنفاذ
 
-يمكن إبلاغ قادة المجتمع المسؤولين عن إنفاذ ميثاق السلوك، عن حالات التطاول أو المضايقات أو أي سلوك مرفوض (انظر قائمة _تواصل_ على [www.qownnotes.org/ar](https://www.qownnotes.org/ar/)). سنراجع جميع الشكاوى ونحقق فيها فورا وبإنصاف.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). سنراجع جميع الشكاوى ونحقق فيها فورا وبإنصاف.
 
 يلتزم جميع قادة المجتمع باحترام خصوصية وتأمين مَن يبلغ عن أي حادث.
 

@@ -48,7 +48,7 @@
 ### W pasku wyszukiwania notatek
 
 - <kbd>Down</kbd> lub <kbd>Tab</kbd> ustawia fokus na listę notatek
-- <kbd>Return</kbd> tworzy nową notatkę z tekstem z paska wyszukiwania jako nagłówek
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Na liście notatek
 
@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>klik</kbd> na linku aby go otworzyć
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> umożliwia wyszukiwanie w bieżącej notatce
-  - użyj klawiszy <kbd>w górę</kbd> i <kbd>w dół</kbd> lub <kbd>F3</kbd> i <kbd>⇧ Shift</kbd> + <kbd>F3</kbd>, aby przejść do poprzedniego i następnego dopasowania
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> zamyka pasek wyszukiwania
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> pozwala wyszukiwać i zamieniać w bieżącej notatce
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplikuje bieżącą linię lub wybrany tekst
@@ -82,9 +82,9 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> przełącza wielkości liter wybranego tekstu
 - <kbd>Tab</kbd> wcina zaznaczony tekst (działa również na wielu liniach)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> usuwa wcięcie zaznaczonego tekstu
-- <kbd>Tab</kbd> po nieuporządkowanym znaku listy wcina element listy
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> po nieuporządkowanym znaku listy wcina element listy
-- <kbd>Return</kbd> na listach tworzy nowy element listy
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Ctrl</kbd> + <kbd>W lewo</kbd> przeskakuje z powrotem w historii notatek
   - <kbd>Alt</kbd> + <kbd>W prawo</kbd> przeskakuje do przodu w historii notatek
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> ustawia zakładkę notatki w gnieździe zakładek 1..9
@@ -105,7 +105,7 @@
 ### W panelu podglądu notatek
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> umożliwia wyszukiwanie w bieżącej notatce
-  - użyj klawiszy <kbd>w górę</kbd> i <kbd>w dół</kbd> lub <kbd>F3</kbd> i <kbd>⇧ Shift</kbd> + <kbd>F3</kbd>, aby przejść do poprzedniego i następnego dopasowania
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> zamyka pasek wyszukiwania
 
 ### Na liście rzeczy do zrobienia
@@ -162,7 +162,7 @@
 ### Na pasku wyszukiwania notatek
 
 - <kbd>W dół</kbd> lub <kbd>Tab</kbd> ustawia fokus na liście notatek
-- <kbd>Return</kbd> tworzy nową notatkę z tekstem z paska wyszukiwania jako nagłówek
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Na liście notatek
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Kliknij</kbd> link, aby go otworzyć
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> umożliwia wyszukiwanie w bieżącej notatce
-  - użyj klawiszy <kbd>w górę</kbd> i <kbd>w dół</kbd> lub <kbd>F3</kbd> i <kbd>⇧ Shift</kbd> + <kbd>F3</kbd>, aby przejść do poprzedniego i następnego dopasowania
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> zamyka pasek wyszukiwania
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> umożliwia wyszukiwanie i zamienianie w bieżącej notatce
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplikuje bieżącą linię lub zaznaczony tekst
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> przełącza wielkości liter w wybranym tekście
 - <kbd>Tab</kbd> wcina zaznaczony tekst (działa również na wielu liniach)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> usuwa wcięcie zaznaczonego tekstu
-- <kbd>Tab</kbd> po nieuporządkowanym znaku listy wcina element listy
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> po nieuporządkowanym znaku listy wcina element listy
-- <kbd>Powrót</kbd> na listach tworzy nowy element listy
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>W lewo</kbd> przeskakuje z powrotem w historii notatek
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>W prawo</kbd> przeskakuje do przodu w historii notatek
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> ustawia zakładkę notatki w gnieździe zakładek 1..9
@@ -219,7 +219,7 @@
 ### W panelu podglądu notatek
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> umożliwia wyszukiwanie w bieżącej notatce
-  - użyj klawiszy <kbd>w górę</kbd> i <kbd>w dół</kbd> lub <kbd>F3</kbd> i <kbd>⇧ Shift</kbd> + <kbd>F3</kbd>, aby przejść do poprzedniego i następnego dopasowania
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> zamyka pasek wyszukiwania
 
 ### Na liście rzeczy do zrobienia

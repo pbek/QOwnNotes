@@ -71,7 +71,7 @@
 - [Joplin – یک برنامه یادداشت برداری و انجام دادنی با سازه هایی برای دسکتاپ، تلفن همراه، ترمینال | Hacker News](https://news.ycombinator.com/item?id=15815040)
 - <http://www.thumbapps.org/2017/07/QOwnNotes-portable-text-markdown-editor-and-todo-list-manager.html>
   - آنها همچنین `QOwnNotesPortable_17.06.6_Build_3071.paf` خود را ایجاد کرده اند [نحوه نصب QOWNNOTES در اوبونتو 16.04 -یک نرم افزار یادداشت برداری برای لینوکس](http://www.elinuxbook.com/install-qownnotes-in-ubuntu-16-04-a-note-taking-software-for-linux/)
-- [QOwnNotes یک برنامه یادداشت برداری عالی برای لینوکس است - LinuxAndUbuntu - Linux News | Apps Reviews | Linux Tutorials HowTo](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
+- [QOwnNotes A Great Note Taking App For Linux - LinuxAndUbuntu - Linux News | Apps Reviews | Linux Tutorials HowTo](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
 - [کاربران سولوس لینوکس کرنل 4.8.10، ویوالدی 1.5 و نیز QOwnNotes Lands را دریافت می کنند](http://news.softpedia.com/news/solus-users-receive-linux-kernel-4-8-10-and-vivaldi-1-5-qownnotes-lands-as-well-510481.shtml)
 - **[Notizverwaltung : QOwnNotes 17.09.6 | c't Magazin](https://www.heise.de/ct/ausgabe/2017-21-Notizverwaltung-QOwnNotes-17-09-6-3840130.html)**
 - [نرم افزار: Tux Machines | Notes ،Green Recorder ،VirtualBox ،QOwnNotes](http://www.tuxmachines.org/node/103720)
@@ -239,14 +239,13 @@
 - [Чем заменить продукты Google: подборка альтернатив, которые не будут за вами следить](https://tproger.ru/digest/list-of-alternatives-to-google-products/#16)
 - [ویرایشگر مارک داون Zettlr - تالار گفتگوی سولوس](https://discuss.getsol.us/d/2120-zettlr-markdown-editor/2)
 - [جایگزین های محصولات گوگل (لیست کامل) | بازیابی حریم خصوصی](https://restoreprivacy.com/google-alternatives/)
-- [أفضل برامج المفكرة NOTEPAD لأجهزة الحاسوب | التقنية](https://www.th3tec.com/الأفضلtop/أفضل-برامج-المفكرة-notepad-لأجهزة-الحاسوب.html) [LINUX Unplugged 307: نکست کلود شما چیست؟](https://linuxunplugged.com/307)
-  - 0:55:09
+- [أفضل برامج المفكرة NOTEPAD لأجهزة الحاسوب | التقنية](https://www.th3tec.com/الأفضلtop/أفضل-برامج-المفكرة-notepad-لأجهزة-الحاسوب.html) [LINUX Unplugged 307: What's your NextCloud?](https://linuxunplugged.com/307) - 0:55:09
 - [Outliner Software: جستجو](https://www.outlinersoftware.com/search/index/qownnotes)
 - [نوشتن مارک داون با 8 ویراستار متن باز استثنایی - OSS Blog](https://www.ossblog.org/markdown-editors/)
 - [برنامه یادداشت برداری / برنامه ها و محیط های دسکتاپ / تالار گفتگوی آرچ لینوکس](https://bbs.archlinux.org/viewtopic.php?id=228115)
 - [نتایج جستجوی مربوط به پرس و جو : MalwareTips Community | qownnotes](https://malwaretips.com/search/137933/?q=qownnotes&o=relevance)
 - [برنامه مورد علاقه و کمتر شناخته شده شما چیست؟ - مبحث عمومی - تالار گفتگوی مانجارو لینوکس](https://forum.manjaro.org/t/favorite-lesser-known-apps/57320/400)
-- [گوگل زدایی از زندگی من - بخش 5 از ¯/_(ツ)_\¯: پشتیبان ها](https://blog.rogs.me/2019/11/27/de-google-my-life-part-5-of-_-tu-_-backups/)
+- [De-Google my life - Part 5 of ¯\_(ツ)\_/¯: Backups](https://blog.rogs.me/2019/11/27/de-google-my-life-part-5-of-_-tu-_-backups/)
 - [یادداشت برداری: خود میزبان](https://www.reddit.com/r/selfhosted/comments/erb7kj/taking_notes/)
 - [Поиск по сайту - qownnotes](https://www.linux.org.ru/search.jsp?q=qownnotes&range=ALL&interval=ALL&user=&_usertopic=on)
 - [El cliente oficial de Evernote para Linux llegará este año](https://www.muylinux.com/2020/01/20/cliente-oficial-evernote-para-linux/) #comment
@@ -269,7 +268,7 @@
   - Alan Pope
 - [LXDE یا LXQY، کدام را ترجیح می دهید؟ - مبحث عمومی - تالار گفتگوی مانجارو لینوکس](https://forum.manjaro.org/t/lxde-vs-lxqt-which-is-better/76943/8)
 - [QOwnNotes و مارکور | Brent Huisman](https://brent.huisman.pl/qownnotes-and-markor/)
-- **[خود میزبان 18: Ring Doorbell Alternative ](https://selfhosted.show/18)\***
+- **[Self-Hosted 18: Ring Doorbell Alternative](https://selfhosted.show/18)\***
   - [https://selfhosted.show/18?t=1088 ](https://selfhosted.show/18?t=1088) چند دقیقه درباره QON
 - [/s/ - بهترین نرم افزار متن باز برای ویندوز](https://2ch.hk/s/res/2764147.html)
 - [/s/ - Ищу программу...](https://2ch.hk/s/res/2127464.html#2766133)

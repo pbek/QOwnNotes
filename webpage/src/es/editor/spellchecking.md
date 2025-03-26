@@ -8,8 +8,8 @@ Información QOwnNotes tiene un **Gestor de diccionarios** incorporado (en el me
 
 - En **Linux** puede instalar los diccionarios Hunspell para su idioma usando el gestor de paquetes de su distribución
 
-  - Si necesita agregar archivos de idioma adicionales, puede hacerlo en `~/.local/share/hunspell` or `/usr/share/hunspell`.
-  - Si está utilizando el paquete Snap de QOwnNotes, también puede usar `~/hunspell` para los archivos de idioma, ya que Snap no puede acceder a `~/.local`
+  - Si necesita agregar archivos de idioma adicionales, puede hacerlo en `~/.local/share/hunspell` o `/usr/share/hunspell`.
+  - Si está utilizando el paquete Snap de QOwnNotes, también puede usar `~/hunspell` para los archivos de idiomas, ya que el Snap no puede acceder a `~/.local`
 
 - En **Windows **, debe copiar los diccionarios Hunspell en su idioma en una carpeta `dicts` en la carpeta de su aplicación QOwnNotes o en `C:\Users\[username]\dicts`
   - Puede descargar diccionarios desde los [Diccionarios de LibreOffice](https://github.com/LibreOffice/dictionaries)

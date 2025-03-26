@@ -290,7 +290,7 @@ void ScriptingService::registerCustomAction (identyfikator QString,
 ```
 
 ::: tip
-Możesz także przypisać lokalne i globalne skróty do swoich działań niestandardowych w _ustawieniach skrótów_.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -300,47 +300,47 @@ Pamiętaj, że [ikony motywów freedesktop](https://specifications.freedesktop.o
 ### Przykład
 
 ```js
-importuj QtQml 2.0
+import QtQml 2.0
 import QOwnNotesTypes 1.0
 
-Skrypt {
+Script {
     /**
-     * Inicjuje akcje niestandardowe
+     * Initializes the custom actions
      */
-    funkcja init() {
-        // dodaj niestandardową akcję bez przycisku
-        script.registerCustomAction("mycustomaction1", "Tekst menu");
+    function init() {
+        // add a custom action without a button
+        script.registerCustomAction("mycustomaction1", "Menu text");
 
-        // dodaj niestandardową akcję za pomocą przycisku
-        script.registerCustomAction("mycustomaction2", "Tekst menu", "Tekst przycisku");
+        // add a custom action with a button
+        script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-        // dodaj niestandardową akcję z przyciskiem i ikoną motywu freedesktop
-        script.registerCustomAction("mycustomaction3", "Tekst menu", "Tekst przycisku", "zadanie-nowe");
+        // add a custom action with a button and freedesktop theme icon
+        script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
 
-        // dodaj niestandardową akcję z przyciskiem i ikoną z pliku
-        script.registerCustomAction("mycustomaction4", "Tekst menu", "Tekst przycisku", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+        // add a custom action with a button and an icon from a file
+        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
-     * Ta funkcja jest wywoływana po uruchomieniu niestandardowej akcji
-     * w menu lub przyciskiem
+     * This function is invoked when a custom action is triggered
+     * in the menu or via button
      *
-     * @param identyfikator string identyfikator zdefiniowany w registerCustomAction
+     * @param identifier string the identifier defined in registerCustomAction
      */
-    function customActionInvoked(identyfikator) {
-        przełącznik (identyfikator) {
-            przypadek „mojaniestandardowa1”:
-                script.log("Akcja 1");
-            przerwanie;
-            przypadek "moja niestandardowa akcja2":
-                script.log("Akcja 2");
-            przerwanie;
-            przypadek "moja niestandardowa akcja3":
-                script.log("Akcja 3");
-            przerwanie;
-            przypadek „mojeniestandardowe4”:
-                script.log("Akcja 4");
-            przerwanie;
+    function customActionInvoked(identifier) {
+        switch (identifier) {
+            case "mycustomaction1":
+                script.log("Action 1");
+            break;
+            case "mycustomaction2":
+                script.log("Action 2");
+            break;
+            case "mycustomaction3":
+                script.log("Action 3");
+            break;
+            case "mycustomaction4":
+                script.log("Action 4");
+            break;
         }
     }
 }
@@ -371,15 +371,15 @@ void ScriptingService::registerLabel(Identyfikator QString, tekst QString);
 ```js
 script.registerLabel(
   "html-label",
-  "<strong>Silny</strong> tekst HTML<br />z trzema liniami<br />i <a href='https://www.qownnotes.org'>linkiem do strony internetowej<//2>.",
+  "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.",
 );
 
 script.registerLabel(
   "long-label",
-  "inny bardzo długi tekst, inny bardzo długi tekst, inny bardzo długi tekst, inny bardzo długi tekst, inny bardzo długi tekst, inny bardzo długi tekst, inny bardzo długi tekst, inny bardzo długi tekst , kolejny bardzo długi tekst, kolejny bardzo długi tekst, kolejny bardzo długi tekst, który będzie zawijany",
+  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
 );
 
-script.registerLabel("przeciwetykieta");
+script.registerLabel("counter-label");
 ```
 
 The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
@@ -585,7 +585,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ### Przykład
 
 ```js
-// rozszerza aktualny wybór o jeden znak
+// expands the current selection by one character
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -1153,7 +1153,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 ### Example
 
 ```js
-// pokaż okno dialogowe otwierania pliku
+// show an open file dialog
 var fileName = script.getOpenFileName(
   "Please select an image",
   "/home/user/images",
@@ -1637,7 +1637,7 @@ An empty string will be returned, if `Cancel` was clicked or `Escape` was presse
 ```js
 var result = script.inputDialogGetText(
   "line edit",
-  "Proszę podać nazwę",
+  "Please enter a name",
   "current text",
 );
 script.log(result);

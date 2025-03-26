@@ -133,7 +133,7 @@ Per accedere alle tue note Nextcloud/Owncloud dal tuo **dispositivo mobile** puo
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (terze parti)
 
 ::: tip
-Puoi anche usare qualsiasi strumento di sincronizzazione come _Synchronize Ultimate_ o _Folder Sync_ per sincronizzare i files delle tue note. Inoltre puoi usare programmi come _neutriNotes_ per modificare le tue note.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ to edit your notes.
 :::
 
 ### iOS

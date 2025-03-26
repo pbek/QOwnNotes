@@ -260,19 +260,19 @@ Vous pouvez implémenter votre propre mécanisme de marquage de note, par exempl
 function noteTaggingHook (note, action, tagName, newTagName);
 ```
 
-- dès qu'un script est activé qui implémente la nouvelle fonction `noteTaggingHook` le marquage des notes sera géré par cette fonction
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
 - les fonctionnalités suivantes doivent fonctionner via l'interface utilisateur QOwnNotes
-  - importation initiale de balises telles que `@tag` à partir de vos notes et écrasement de votre attribution de balise actuelle
-    - vous ne perdrez pas votre arbre de balises, juste l'ancienne affectation aux notes
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
     - vous pouvez toujours déplacer des balises dans d'autres balises
-    - si plus d'une balise porte le même nom dans votre arborescence de balises, le premier hit sera attribué
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
   - l'ajout d'une balise à une note ajoutera la balise au texte de la note
   - la suppression d'une étiquette d'une note supprimera l'étiquette du texte de la note
-  - la suppression des balises dans la liste des balises supprimera ces balises de votre notes
-  - renommer les balises dans la liste des balises renomme ces balises dans votre Notes
-  - le marquage en masse des notes dans la liste de notes ajoutera ces balises à votre Notes
-  - la suppression massive des balises des notes de la liste de notes supprimera ces balises de vos notes
-  - l'application déclenchera une série d'actions `ajouter` et `supprimer` pour toutes les balises sélectionnées et leurs enfants sur toutes les notes si les balises sont déplacées dans le panneau des balises
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) pour implémenter votre propre mécanisme de balisage.
 

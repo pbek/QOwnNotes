@@ -35,7 +35,7 @@ Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes
 
 وتأكد كذلك أنك قبلت تجميع بيانات المستخدم عندما ضغطت على أيقونة الإضافة أول مرة في شريط المتصفح.
 
-وإذا كنت تستخدم فيرفكس، فتحتاج كذلك أن تتأكد أنك فعّلت الصلاحية الاختيارية `الوصول إلى بياناتك لكل المواقع` في إعدادات _صلاحيات_ الإضافة، وإلا فقد تقابل الخطأ: `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -61,12 +61,12 @@ Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes
 ### صيغ روابط الإشارات المرجعية
 
 ```markdown
-- [اسم صفحة الوب](https://www.example.com)
-- [اسم صفحة الوب](https://www.example.com) #وسم١ #وسم٢
-- [اسم صفحة الوب](https://www.example.com) شيء من الوصف فقط
-- [اسم صفحة الوب](https://www.example.com) #وسم١ #وسم٢ شيء من الوصف والوسوم
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [اسم صفحة الوب](https://www.example.com) رمز عناصر القائمة البديل صالح أيضا
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 يمكنك البحث في إضافة المتصفح بالاسم أو وسوم الرابط أو الوصف. تُحلَّل كل الروابط الأخرى في الملاحظة الحالية، لكن بغير وسوم أو وصف.

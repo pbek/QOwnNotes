@@ -1,6 +1,6 @@
 # البحث عن الملاحظات
 
-للبحث عن ملاحظات أو عن نص داخل الملاحظات، يمكنك استخدام الاختصار <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (أو <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> على أنظمة ماك) للانتقال إلى _لوحة البحث عن الملاحظات_.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 توجد عدة طرق مختلفة للبحث عن الملاحظات:
 

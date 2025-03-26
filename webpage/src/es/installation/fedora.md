@@ -66,7 +66,7 @@ dnf install qownnotes
 
 ### ¿Problemas con claves GPG?
 
-Los cambios en las políticas criptográficas de Fedora puede significar que las claves "antiguas" (expiradas) del repositorio no sean extendidas _automáticamente_. Esto puede provocar problemas al _actualizar_ QOwnNotes.
+Los cambios en las políticas criptográficas de Fedora pueden significar que las claves "antiguas" (expiradas) del repositorio no son extendidas _automáticamente_. Esto puede provocar problemas al _actualizar_ QOwnNotes.
 
 **Detalle:** Si tiene un problema con claves inválidas (por ejemplo errores GPG) como que el `certificado no esté activo` y/o que la `clave no esté activa` debido a su expiración, este comando de terminal debería eliminar la clave expirada:
 

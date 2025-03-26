@@ -7,17 +7,17 @@ Esta hoja de referencia de Markdown está pensada como una referencia rápida y 
 Utilice los encabezados para estructurar sus textos.
 
 ```markdown
-# H1
+# Encabezado 1
 
-## H2
+## Encabezado 2
 
-### H3
+### Encabezado 3
 
-#### H4
+#### Encabezado 4
 
-##### H5
+##### Encabezado 5
 
-###### H6
+###### Encabezado 6
 ```
 
 ::: tip
@@ -27,9 +27,9 @@ El **panel de navegación** muestra la estructura de sus encabezados.
 Alternativamente, para H1 y H2, un estilo de subrayado:
 
 ```markdown
-# Alt-H1
+# Encabezado 1 Alternativo
 
-## Alt-H2
+## Encabezado 2 Alternativo
 ```
 
 ::: tip
@@ -39,7 +39,7 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **
 ## Énfasis
 
 ```markdown
-Enfatice, también conocido como cursiva, con _asteriscos_.
+Utilice el énfasis, también conocido como cursiva, con _asteriscos_.
 
 Puede usar el énfasis fuerte, también conocido como negrita, con **asteriscos**.
 ```
@@ -77,10 +77,12 @@ Hay muchas formas de crear listas.
 ```markdown
 1. Primer elemento de lista ordenada
 2. Otro articulo
-   - Sublista desordenada.
-3. Los números reales no importan, solo que sean números
-   1. Sublista ordenada (solo funciona en el editor, no en la vista previa)
-4. Y otro artículo.
+
+- Sublista desordenada.
+
+1. Los números reales no importan, solo que sean números
+1. Sublista ordenada (solo funciona en el editor, no en la vista previa)
+1. Y otro artículo.
 
 - La lista desordenada puede usar asteriscos
 
@@ -198,6 +200,8 @@ cd Notas
 ```
 ````
 
+```
+
 Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 
 - BASh scripting, `bash`
@@ -236,23 +240,23 @@ Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 
 Las tablas no forman parte de la especificación principal de Markdown, pero la vista previa de QOwnNotes las admite.
 
-```markdown
+~~~markdown
 Se pueden usar virguillas para alinear columnas.
 
-| Las           |        Tablas         | Molan |
-| ------------- | :-------------------: | ----: |
-| la col 3 está | alineada a la derecha | $1600 |
-| la col 2 is   |       centrada        |   $12 |
-| las plecas    |     son elegantes     |    $1 |
+| Las        |      Tablas      |  Molan |
+| ------------- | :-----------: | ----: |
+| la col 3 está      | alineada a la derecha | $1600 |
+| la col 2 is      |   centrada    |   $12 |
+| las plecas |   son elegantes    |    $1 |
 
 Debe haber al menos 3 guiones separando cada celda de encabezado.
 
 También puede utilizar Markdown en línea.
 
-| Markdown      | Mola         | Menos             |
-| ------------- | ------------ | ----------------- |
-| _Sin embargo_ | `se muestra` | **correctamente** |
-| 1             | 2            | 3                 |
+| Markdown | Menos      | Chulo     |
+| -------- | --------- | ---------- |
+| _Aun_  | `se renderiza` | **bellamente** |
+| 1        | 2         | 3          |
 ```
 
 ::: tip

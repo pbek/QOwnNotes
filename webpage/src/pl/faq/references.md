@@ -71,7 +71,7 @@ Co inni mówią o QOwnNotes:
 - [Wątek „Joplin – aplikacja do tworzenia notatek i list zadań z kompilacjami na komputer, urządzenia mobilne i terminalową” w Hacker News](https://news.ycombinator.com/item?id=15815040)
 - <http://www.thumbapps.org/2017/07/QOwnNotes-portable-text-markdown-editor-and-todo-list-manager.html>
   - Tutaj znajdziesz też `QOwnNotesPortable_17.06.6_Build_3071.paf` [JAK ZAINSTALOWAĆ QOWNNOTES W UBUNTU 16.04 – OPROGRAMOWANIE DO ROBIENIA NOTATEK NA LINUKSA](http://www.elinuxbook.com/install-qownnotes-in-ubuntu-16-04-a-note-taking-software-for-linux/)
-- [Artykuł „QOwnNotes: świetna aplikacja do tworzenia notatek w Linuksie” na platformie LinuxAndUbuntu – Nowości Linux | Recenzje aplikacji | Samouczki Linux](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
+- [QOwnNotes A Great Note Taking App For Linux - LinuxAndUbuntu - Linux News | Apps Reviews | Linux Tutorials HowTo](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
 - [Artykuł „Użytkownicy dystrybucji Solus otrzymują Linux Kernel 4.8.10 i Vivaldi 1.5, plus premiera QOwnNotes”](http://news.softpedia.com/news/solus-users-receive-linux-kernel-4-8-10-and-vivaldi-1-5-qownnotes-lands-as-well-510481.shtml)
 - **[Notizverwaltung: QOwnNotes 17.09.6 w c't Magazin](https://www.heise.de/ct/ausgabe/2017-21-Notizverwaltung-QOwnNotes-17-09-6-3840130.html)**
 - [„Oprogramowanie: QOwnNotes, VirtualBox, Green Recorder, Notes” w witrynie Tux Machines](http://www.tuxmachines.org/node/103720)
@@ -135,7 +135,7 @@ Co inni mówią o QOwnNotes:
 - [Pobierz bezpłatnie najnowszą wersję QOwnNotes® 2019 z witryny Download82.com](http://www.download82.com/download/windows/qownnotes/)
 - [Pobieranie QOwnNotes 20.1.12 w kompilacji 5295: Tạo và quản lý, in ấn các ghi](https://taimienphi.vn/download-qownnotes-38957)
 - [QOwnNotes 5092](https://www.warp2search.net/story/qownnotes-5092/)
-- [QOwnNotes w witrynie Clear Linux\* Project](https://clearlinux.org/software/flathub/qownnotes)
+- [QOwnNotes | Clear Linux\* Project](https://clearlinux.org/software/flathub/qownnotes)
 - <https://freewarebuzz.com/utilities-records.html#qownnotes>
 - [QOwnNotes, скачать бесплатно. Программы для Linux](https://pingvinus.ru/program/qownnotes)
   - [Органайзеры и заметки. Программы для Linux](https://pingvinus.ru/programs/office/personal-information-managers)
@@ -239,14 +239,13 @@ Co inni mówią o QOwnNotes:
 - [Чем заменить продукты Google: подборка альтернатив, которые не будут за вами следить](https://tproger.ru/digest/list-of-alternatives-to-google-products/#16)
 - [Wątek „Edytor języka znaczników Mardown Zettlr” na forum Solus](https://discuss.getsol.us/d/2120-zettlr-markdown-editor/2)
 - [Artykuł „Alternatywy dla produktów Google (pełna lista)” w witrynie Restore Privacy](https://restoreprivacy.com/google-alternatives/)
-- [أفضل برامج المفكرة NOTEPAD لأجهزة الحاسوب | التقنية](https://www.th3tec.com/الأفضلtop/أفضل-برامج-المفكرة-notepad-لأجهزة-الحاسوب.html) [LINUX Unplugged 307: What's your NextCloud?](https://linuxunplugged.com/307)
-  - 0:55:09
+- [أفضل برامج المفكرة NOTEPAD لأجهزة الحاسوب | التقنية](https://www.th3tec.com/الأفضلtop/أفضل-برامج-المفكرة-notepad-لأجهزة-الحاسوب.html) [LINUX Unplugged 307: What's your NextCloud?](https://linuxunplugged.com/307) - 0:55:09
 - [Outliner Software: wyszukiwanie](https://www.outlinersoftware.com/search/index/qownnotes)
 - [Artykuł „Pisz w Markdown przy pomocy 8 wyjątkowych otwartych edytorów” w witrynie OSS Blog](https://www.ossblog.org/markdown-editors/)
 - [Wątek „Aplikacja do tworzenia notatek” w sekcji Aplikacje i środowiska pulpitu forum Arch Linux](https://bbs.archlinux.org/viewtopic.php?id=228115)
 - [Wyniki wyszukiwania dla zapytania „qownnotes” w społeczności MalwareTips](https://malwaretips.com/search/137933/?q=qownnotes&o=relevance)
 - [Ulubione mniej znane aplikacje? – Dyskusja ogólna – forum Manjaro Linux](https://forum.manjaro.org/t/favorite-lesser-known-apps/57320/400)
-- [Post „Odgooglować swoje życie – cz.5 serii ¯\_(ツ)\_/¯: kopie zapasowe”](https://blog.rogs.me/2019/11/27/de-google-my-life-part-5-of-_-tu-_-backups/)
+- [De-Google my life - Part 5 of ¯\_(ツ)\_/¯: Backups](https://blog.rogs.me/2019/11/27/de-google-my-life-part-5-of-_-tu-_-backups/)
 - [Post „Tworzenie notatek” w kanale selfhosted](https://www.reddit.com/r/selfhosted/comments/erb7kj/taking_notes/)
 - [Поиск по сайту – qownnotes](https://www.linux.org.ru/search.jsp?q=qownnotes&range=ALL&interval=ALL&user=&_usertopic=on)
 - Artykuł [„El cliente oficial de Evernote para Linux llegará este año”](https://www.muylinux.com/2020/01/20/cliente-oficial-evernote-para-linux/) – komentarz
@@ -269,7 +268,7 @@ Co inni mówią o QOwnNotes:
   - Alan Pope
 - [„LXDE kontra LXQT – który jest lepszy?” – Dyskusja ogólna – forum Manjaro Linux](https://forum.manjaro.org/t/lxde-vs-lxqt-which-is-better/76943/8)
 - [„QOwnNotes i Markor” w witrynie Brent Huisman](https://brent.huisman.pl/qownnotes-and-markor/)
-- **[Odcinek 18 podcastu Self-Hosted: Alternatywa dla Ring Doorbell](https://selfhosted.show/18)\***
+- **[Self-Hosted 18: Ring Doorbell Alternative](https://selfhosted.show/18)\***
   - <https://selfhosted.show/18?t=1088> część poświęcona QON
 - [/s/ – Najlepsze programy typu open source pod Windowsa](https://2ch.hk/s/res/2764147.html)
 - [/s/ – Ищу программу...](https://2ch.hk/s/res/2127464.html#2766133)

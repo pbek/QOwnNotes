@@ -290,7 +290,7 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-شما قادر به اختصاص میانبرهای محلی و جهانی به فعالیت های سفارشی تان نیز در _تنظیمات میانبرها_ هستید.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -757,7 +757,7 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // only will be executed if under Linux
+  // Will be executed only if under Linux
 }
 ```
 

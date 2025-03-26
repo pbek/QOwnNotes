@@ -64,11 +64,11 @@ Vous pouvez également importer les favoris de votre navigateur dans QOwnNotes a
 
 ```markdown
 - [Webpage name](https://www.example.com)
-- [Webpage name](https://www.example.com) #étiquette1 #étiquette2
-- [Webpage name](https://www.example.com) juste une description
-- [Webpage name](https://www.example.com) #étiquette1 #étiquette2 une description et des étiquettes
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Webpage name](https://www.example.com) le caractère alternatif pour un élément de liste fonctionne également
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

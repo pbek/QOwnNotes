@@ -33,7 +33,7 @@ image: /img/bookmarks.png
 
 또한 브라우저 도구 모음에서 확장 아이콘을 처음 눌렀을 때 동의 대화 상자를 수락했는지 확인합니다.
 
-Firefox를 사용하는 경우 _권한_ 확장 설정에서 `모든 웹 사이트에 대한 데이터에 액세스`할 수 있는 옵션 권한도 설정했는지 확인해야 합니다. 그렇지 않으면 `TypeError: chrome.tabs.captureVisibleTab is not a function`은 기능이 아닙니다. :::
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`. :::
 
 ::: 팁 웹 클리퍼는 또한 스크립팅이 가능합니다! 웹 페이지에서 클리핑한 내용을 제어하려면 [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook)을 살펴 보십시오. :::
 
@@ -58,10 +58,10 @@ Firefox를 사용하는 경우 _권한_ 확장 설정에서 `모든 웹 사이�
 ```markdown
 - [Webpage name](https://www.example.com)
 - [Webpage name](https://www.example.com) #tag1 #tag2
-- [Webpage name](https://www.example.com) 일부 설명만
-- [Webpage name](https://www.example.com) #tag1 #tag2 일부 설명 및 태그
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 
-* [Webpage name](https://www.example.com) 대체 목록 문자도 작동합니다
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 브라우저 확장자에서 이름, URL 태그 또는 설명을 검색할 수 있습니다. 현재 노트에서는 텍스트 내부의 다른 모든 링크는 구문 분석되지만 태그나 설명은 없습니다.

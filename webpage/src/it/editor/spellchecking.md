@@ -3,13 +3,13 @@
 Fai correggere i tuoi errori di ortografia!
 
 ::: tip Info
-QOwnNotes ha un **Dictionary Manager** integrato (nel menu _Modifica_) che puoi usare per scaricare dizionari o cancellarli (se manca la tua lingua vedi sotto su come richiedere l'aggiunta di un dizionario). Se desideri scaricare manualmente i dizionari, puoi seguire le seguenti istruzioni.
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). Se desideri scaricare manualmente i dizionari, puoi seguire le seguenti istruzioni.
 :::
 
 - Sotto **Linux** puoi installare i dizionari Hunspell per la tua lingua usando il gestore di pacchetti della tua distribuzione
 
-  - Se è necessario aggiungere altri file di lingua, è possibile farlo in `~/.local/share/hunspell` oppure `/usr/share/hunspell`.
-  - Se stai usando il pacchetto Snap di QOwnNotes puoi anche usare `~/hunspell` per i file di lingua, poiché lo Snap non può accedere a `~/.local`
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - In **Windows** devi copiare i dizionari Hunspell per la tua lingua in una cartella `dicts` nella cartella dell'applicazione QOwnNotes o in `C:\Users\[username]\dicts`
   - Puoi scaricare dizionari da [dizionari LibreOffice](https://github.com/LibreOffice/dictionaries)

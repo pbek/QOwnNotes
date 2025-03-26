@@ -36,7 +36,7 @@ Este código de conducta aplica a todos los espacios dentro de la comunidad y ta
 
 ## Ejecución
 
-Casos de abuso, acoso o alguna otra forma de comportamiento inapropiado puede ser reportado a los líderes de la comunidad responsables de ejecución a través de la pestaña contacto (_Contacto_ [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
+Los casos de abuso, acoso o alguna otra forma de comportamiento inapropiado pueden ser reportados a los líderes de la comunidad responsables del cumplimiento (vease el menú de _Contacto_ en [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
 
 Todos los líderes de la comunidad están obligados a respetar la privacidad y seguridad del informador en cualquier tipo de incidente.
 

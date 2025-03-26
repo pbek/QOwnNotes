@@ -290,7 +290,7 @@ void ScriptingService :: registerCustomAction (QString identifier,
 ```
 
 ::: tip
-U kunt ook lokale en algemene snelkoppelingen aan uw aangepaste acties toewijzen in de _Sneltoets-instellingen_.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -376,13 +376,13 @@ script.registerLabel(
 
 script.registerLabel(
   "long-label",
-  "nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst, nog een zeer lange tekst die zal omlopen",
+  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
 );
 
 script.registerLabel("counter-label");
 ```
 
-De labels zijn zichtbaar in het _Scripting panel _, dat u moet inschakelen in het menu _Window / Panels _.
+The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
 
 U kunt zowel platte tekst als html in de labels gebruiken. De tekst kan worden geselecteerd en er kan op links worden geklikt.
 
@@ -585,7 +585,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ### Voorbeeld
 
 ```js
-// breidt de huidige selectie uit met één teken
+// expands the current selection by one character
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -757,7 +757,7 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // Wordt alleen uitgevoerd onder Linux
+  // Will be executed only if under Linux
 }
 ```
 
@@ -856,7 +856,7 @@ var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // doe iets met de notitie
+  // do something with the note
 });
 ```
 
@@ -1120,15 +1120,15 @@ int ScriptingService::questionMessageBox(
 ### Voorbeeld
 
 ```js
-// toon een vraagberichtvenster met een sollicitatie- en een helpknop
-// zie: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-var resultaat = script.questionMessageBox(
-  "De tekst die ik wil laten zien",
-  "Een optionele titel",
+// show a question message box with an apply and a help button
+// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+var result = script.questionMessageBox(
+  "The text I want to show",
+  "Some optional title",
   0x01000000 | 0x02000000,
   0x02000000,
 );
-script.log(resultaat);
+script.log(result);
 ```
 
 Zie voor informatie over knoppen [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
@@ -1155,7 +1155,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 ### Voorbeeld
 
 ```js
-// toon een open bestandsdialoog
+// show an open file dialog
 var fileName = script.getOpenFileName(
   "Please select an image",
   "/home/user/images",
@@ -1183,7 +1183,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ### Voorbeeld
 
 ```js
-// toon een dialoogvenster voor het opslaan van bestanden
+// show a save file dialog
 var fileName = script.getSaveFileName(
   "Please select HTML file to save",
   "output.html",
@@ -1669,8 +1669,8 @@ Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Esc
 ```js
 var result = script.inputDialogGetMultiLineText(
   "multi-line edit",
-  "Voer een tekst in",
-  "huidige tekst",
+  "Please enter a text",
+  "current text",
 );
 script.log(result);
 ```
@@ -1699,16 +1699,16 @@ script.log(result);
 
 ```js
 const text = script.noteTextEditSelectedText();
-const aiPrompt = "Vertaal de tekst naar het Engels";
-const aiResult = script.aiComplete(aiPrompt + ":\n\n" + tekst);
+const aiPrompt = "Translate the text to English";
+const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
 
 var result = script.textDiffDialog(
   "AI Text Tool",
-  "Resulterende tekst",
-  tekst,
+  "Resulting text",
+  text,
   aiResult,
 );
-script.log(resultaat);
+script.log(result);
 ```
 
 ## Controleren of er een bestand bestaat

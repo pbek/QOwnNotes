@@ -292,11 +292,11 @@ function noteTaggingHook(note, action, tagName, newTagName);
     - if more than one tag has the same name in your tag tree the first hit will be assigned
   - إضافة وسم إلى ملاحظة سيضيف الوسم إلى نص الملاحظة
   - إزالة وسم من ملاحظة سيزيل الوسم من نص الملاحظة
-  - إزالة وسوم من قائمة الوسوم سيزيل هذه الوسوم من ملاحظاتك
-  - إعادة تسمية وسوم في قائمة الوسوم سيعيد تسمية هذه الوسوم في ملاحظاتك
-  - وسم كمية من الملاحظات في قائمة الملاحظات سيضيف هذه الوسوم إلى ملاحظاتك
-  - إزالة كمية من الوسوم من الملاحظات في قائمة الملاحظات سيزيل هذه الوسوم من ملاحظاتك
-  - إذا تم نقل وسوم في لوحة الوسوم، فسينفذ التطبيق سلسلة من إجراءات الإضافة (`add`) والإزالة (`remove`) لجميع الوسوم المحددة ووسومها الفرعية في جميع الملاحظات
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 ربما تحب أن تلقي نظرة على المثال [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) لتنفيذ آلية وسم خاصة بك.
 

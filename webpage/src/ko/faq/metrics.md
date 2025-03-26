@@ -2,7 +2,7 @@
 
 ## 메트릭스가 유용한 이유는 무엇입니까?
 
-QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
+QOwnNotes (응용프로그램 자체에서와 같이)는 **주로 여가 시간에 한 사람이 개발합니다**.
 
 릴리스는 많은 플랫폼 및 배포 (종종 매우 오래된 버전)를 위해 구축되었습니다. 그것들을 유지하는 것은 많은 일입니다.
 

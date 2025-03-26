@@ -132,7 +132,7 @@ graph TB
 - [Nextcloud Notes لأندرويد](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (من طرف ثالث)
 
 ::: tip
-يمكنك أيضا استخدام أي أداة مزامنة مثل _Synchronize Ultimate_ أو _FolderSync_ لمزامنة ملفات ملاحظاتك، وتطبيق مثل _neutriNotes_ لتحريرها.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ to edit your notes.
 :::
 
 ### آي أو إس

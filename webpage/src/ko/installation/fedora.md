@@ -62,7 +62,7 @@ dnf install qownnotes
 
 ### GPG 키에 문제가 있습니까?
 
-Fedora의 암호화 정책 변경은 "오래된" (만료된) 저장소 키가 *자동*으로 확장되지 않음을 의미할 수 있습니다. 이로 인해 QOwnNotes *업데이트*에 문제가 발생할 수 있습니다.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
 
 **세부 정보:** <0>인증서가 살아있지 않거나</0> 키 만료로 인해 키 만료로 인해 키가 `살아있지 않는` 등 잘못된 키 (예, GPG 오류) 에 문제가 있는 경우 이 터미널 명령은 만료된 키를 삭제해야 합니다:
 
@@ -72,4 +72,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 명령에 대한 자세한 설명은 GitHub에서 이 정확한 문제와 관련된 [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) 에서 확인할 수 있습니다.
 
-만료된 키를 삭제한 후에는 설치 지침의 처음에 설명된 대로 **현재** 키를 수동으로 새로 _가져와야_ 합니다.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

@@ -48,7 +48,7 @@
 ### في شريط بحث الملاحظات
 
 - <kbd>الأسفل</kbd> أو <kbd>Tab</kbd> ينقل التركيز إلى قائمة الملاحظات
-- <kbd>Enter</kbd> يُنشئ ملاحظة جديدة عنوانها هو النص الذي في شريط البحث
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### في قائمة الملاحظات
 
@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>النقر</kbd> على رابط لفتحه
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> يتيح لك البحث في الملاحظة الحالية
-  - استخدم زرّي الأسهم <kbd>الأعلى</kbd> و<kbd>الأسفل</kbd> أو الأزرار <kbd>F3</kbd> و&nbsp; <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> للانتقال إلى المطابقات السابقة والتالية
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> يُغلق شريط البحث
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> يتيح لك البحث والاستبدال في الملاحظة الحالية
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> يكرر السطر الحالي أو النص المحدد
@@ -82,9 +82,9 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> تبديل حالة حروف النص المحدد
 - <kbd>Tab</kbd> يزيد المسافة البادئة للنص المحدد (يعمل أيضا على سطور متعددة)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> يقلل المسافة البادئة للنص المحدد
-- <kbd>Tab</kbd> بعد محرف قائمة منقوطة يُزيد المسافة البادئة للعنصر
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> بعد محرف قائمة منقوطة يُنقص المسافة البادئة للعنصر
-- <kbd>Enter</kbd> في القوائم ينشئ عنصر قائمة جديد
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Left</kbd> للرجوع في تاريخ الملاحظة
   - <kbd>Alt</kbd> + <kbd>Right</kbd> للتقدم في تاريخ الملاحظة
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> يضيف إشارة مرجعية إلى موقع الملاحظة في الفتحة رقم ١..٩ (نفس رقم الزر)
@@ -105,7 +105,7 @@
 ### في لوحة معاينة الملاحظة
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> يتيح لك البحث في الملاحظة الحالية
-  - استخدم زرّي الأسهم <kbd>الأعلى</kbd> و<kbd>الأسفل</kbd> أو الأزرار <kbd>F3</kbd> و&nbsp; <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> للانتقال إلى المطابقات السابقة والتالية
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> يُغلق شريط البحث
 
 ### في قائمة المهام
@@ -162,7 +162,7 @@
 ### في شريط بحث الملاحظات
 
 - <kbd>الأسفل</kbd> أو <kbd>Tab</kbd> ينقل التركيز إلى قائمة الملاحظات
-- <kbd>Enter</kbd> يُنشئ ملاحظة جديدة عنوانها هو النص الذي في شريط البحث
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### في قائمة الملاحظات
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>النقر</kbd> على رابط لفتحه
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> يتيح لك البحث في الملاحظة الحالية
-  - استخدم زرّي الأسهم <kbd>الأعلى</kbd> و<kbd>الأسفل</kbd> أو الأزرار <kbd>F3</kbd> و&nbsp; <kbd>Shift</kbd> + <kbd>F3</kbd> للانتقال إلى المطابقات السابقة والتالية
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> يُغلق شريط البحث
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> يتيح لك البحث والاستبدال في الملاحظة الحالية
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> يكرر السطر الحالي أو النص المحدد
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> تبديل حالة حروف النص المحدد
 - <kbd>Tab</kbd> يزيد المسافة البادئة للنص المحدد (يعمل أيضا على سطور متعددة)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> يقلل المسافة البادئة للنص المحدد
-- <kbd>Tab</kbd> بعد محرف قائمة منقوطة يُزيد المسافة البادئة للعنصر
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> بعد محرف قائمة منقوطة يُنقص المسافة البادئة للعنصر
-- <kbd>Enter</kbd> في القوائم ينشئ عنصر قائمة جديد
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> للرجوع في تاريخ الملاحظة
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> للتقدم في تاريخ الملاحظة
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> يضيف إشارة مرجعية إلى موقع الملاحظة في الفتحة رقم ١..٩ (نفس رقم الزر)
@@ -219,7 +219,7 @@
 ### في لوحة معاينة الملاحظة
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> يتيح لك البحث في الملاحظة الحالية
-  - استخدم زرّي الأسهم <kbd>الأعلى</kbd> و<kbd>الأسفل</kbd> أو الأزرار <kbd>F3</kbd> و&nbsp; <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> للانتقال إلى المطابقات السابقة والتالية
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
   - <kbd>Esc</kbd> يُغلق شريط البحث
 
 ### في قائمة المهام

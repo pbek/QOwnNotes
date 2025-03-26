@@ -70,24 +70,24 @@ var noteSubFolderQmlObj = Qt.createQmlObject(
   "noteSubFolder",
 );
 
-// gib alle Unterordnernamen aus
+// print all subfolder names
 noteSubFolderQmlObj
   .fetchNoteSubFoldersByParentId(parentId)
   .forEach(function (nsf) {
     script.log(nsf.name);
   });
 
-// hole den aktuellen Notiz-Unterordner
+// get the active note subfolder
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// gib den vollständigen und relativen Pfad des aktuellen Notiz-Unterordners aus
+// print the full and relative path of the active note subfolder
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iteriere durch die Notizen im Notizen-Unterordner
+// iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
   var note = noteSubFolder.notes[idx];
 }
@@ -113,12 +113,12 @@ class TagApi {
 ```js
 // Vergessen Sie nicht, "import QOwnNotesTypes 1.0" am Anfang Ihres Skripts zu verwenden!
 
-// hole das Schlagwort "home"
+// Fetch tag "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// hole alle Notizen mit dem Schlagwort
+// Fetch all notes tagged with the tag
 var notes = tag.notes;
 
-// iteriere durch die Notizen des Schlagwortes
+// Iterate through notes of the tag
 for (var idx in notes) {
   var note = notes[idx];
   script.log(note.name);
@@ -165,28 +165,28 @@ class MainWindow {
 ### Beispiel
 
 ```js
-// Erzwinge das Neuladen der Notizliste
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Erstellt einen neuen Unterordner "My fancy folder" im aktuellen Unterordner
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Fügt HTML in die aktuelle Notiz als Markdown ein
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Legt "Edit"-Arbeitsumgebung als aktuelle Arbeitsumgebung fest
+// Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Springt zum Schlagwort "test" im Schlagwortbaum
-// Es gibt ein Beispiel auf https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Erhalte alle Notizen, die in Tabs geöffnet sind
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // mach was mit der Notiz
+  // do something with the note
 });
 ```

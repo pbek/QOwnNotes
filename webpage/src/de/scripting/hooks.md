@@ -260,19 +260,19 @@ Sie können Ihren eigenen Notiz-Schlagwortmechanismus beispielsweise mit speziel
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
-- sobald ein Skript aktiviert ist, das die neue Funktion `noteTaggingHook` implementiert, werden die Notiz-Schlagworte von dieser Funktion verarbeitet
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
 - die folgenden Funktionen sollten über die QOwnNotes-Benutzeroberfläche funktionieren
-  - importieren Sie zunächst Schlagworte wie `@tag` aus Ihren Notizen und überschreiben Sie Ihre aktuelle Schlagwort-Zuweisung
-    - Sie werden Ihren Schlagwortbaum nicht verlieren, sondern nur die frühere Zuordnung zu Notizen
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
     - Sie können Schlagwörter weiterhin in andere Schlagwörter verschieben
-    - wenn mehr als ein Schlagwort denselben Namen in Ihrem Schlagwortbaum hat, wird der erste Treffer zugewiesen
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
   - durch Hinzufügen eines Schlagwortes zu einer Notiz wird das Schlagwort zum Notiztext hinzugefügt
   - durch Entfernen eines Schlagwortes aus einer Notiz wird das Schlagwort aus dem Notiztext entfernt
-  - durch das Entfernen von Schlagwörtern in der Schlagwortliste werden diese Schlagwörter aus Ihren Notizen entfernt
-  - durch das Umbenennen von Schlagworten in der Schlagwortliste werden diese Schlagwörter in Ihren Notizen umbenannt
-  - durch Massen-Taggen von Notizen in der Notizliste werden diese Schlagworte zu Ihren Notizen hinzugefügt
-  - durch das Massenentfernen von Schlagworten aus Notizen in der Notizliste werden diese Schlagworte aus Ihren Notizen entfernt
-  - die Anwendung löst eine Reihe von `add`- und `remove`-Aktionen aus für alle ausgewählten Schlagworte und ihre Unterelemente in allen Notizen, wenn Schlagworte im Schlagwortbedienfeld entfernt werden
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 Schauen Sie sich dazu das Beispiel auf [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) an, um eigene Schlagwortmechanismen zu implementieren.
 
