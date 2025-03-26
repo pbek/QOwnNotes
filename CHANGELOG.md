@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.3.4
+
+- An issue with importing a table with UTF-8 characters from the clipboard in the
+  _Insert table_ dialog was fixed (for [#3245](https://github.com/pbek/QOwnNotes/issues/3245))
+
 ## 25.3.3
 
 - You can now **zoom** in the **note relation panel** with the mouse wheel
