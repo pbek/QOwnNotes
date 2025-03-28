@@ -2798,6 +2798,11 @@ void MainWindow::notesWereModified(const QString &str) {
         return;
     }
 
+    // We are ignoring changes in the .git folder
+    if (str.contains(QStringLiteral("/.git/"))) {
+        return;
+    }
+
     QFileInfo fi(str);
     Note note = Note::fetchByFileUrl(QUrl::fromLocalFile(str));
 
@@ -2961,6 +2966,11 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
 
     // if we should ignore all changes return here
     if (SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
+        return;
+    }
+
+    // We are ignoring changes in the .git folder
+    if (str.contains(QStringLiteral("/.git/"))) {
         return;
     }
 
@@ -3550,6 +3560,21 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
                          QStringLiteral("🗄️"));
 }
 
+void MainWindow::addDirectoryToDirectoryWatcher(const QString &path) {
+    QDir dir(path);
+    QFileInfoList entries =
+        dir.entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden);
+
+    for (const QFileInfo &entryInfo : entries) {
+        QString entryPath = entryInfo.filePath();
+        noteDirectoryWatcher.addPath(entryPath);
+
+        if (entryInfo.isDir()) {
+            addDirectoryToDirectoryWatcher(entryPath);    // Recursively add subdirectories
+        }
+    }
+}
+
 /**
  * Updates the note directory watcher
  */
@@ -3566,6 +3591,12 @@ void MainWindow::updateNoteDirectoryWatcher() {
     if (QDir(notePath).exists()) {
         // watch the notes directory for changes
         noteDirectoryWatcher.addPath(notePath);
+    }
+
+    // Add the .git folder to the watcher if it exists
+    const QString gitPath = notePath + QDir::separator() + QStringLiteral(".git");
+    if (QDir(gitPath).exists()) {
+        addDirectoryToDirectoryWatcher(gitPath);
     }
 
     if (hasSubfolders) {

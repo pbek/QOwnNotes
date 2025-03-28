@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.3.5
+
+- The ignoring of changes of files in the `.git` folder inside note folders has
+  been improved (for [#3247](https://github.com/pbek/QOwnNotes/issues/3247))
+  - This should result in lesser reloading of the note folder with the message
+    `Notes directory was modified externally` when editing notes with enabled git support
+
 ## 25.3.4
 
 - An issue with importing a table with UTF-8 characters from the clipboard in the

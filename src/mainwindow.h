@@ -1159,4 +1159,5 @@ class MainWindow : public QMainWindow {
     static void handleDockWidgetLocking(QDockWidget *dockWidget);
     void setupNoteRelationScene();
     void updateNoteGraphicsView();
+    void addDirectoryToDirectoryWatcher(const QString &path);
 };
