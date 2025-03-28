@@ -3563,10 +3563,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
     //    }
 
     const QString notePath = Utils::Misc::removeIfEndsWith(this->notesPath, QDir::separator());
-
-    const QDir notesDir(notePath);
-
-    if (notesDir.exists()) {
+    if (QDir(notePath).exists()) {
         // watch the notes directory for changes
         noteDirectoryWatcher.addPath(notePath);
     }
