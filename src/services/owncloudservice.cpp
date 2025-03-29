@@ -718,7 +718,26 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "REPORT", buffer);
+    // Use a local QNetworkAccessManager
+    auto *calNetworkManager = new QNetworkAccessManager(this);
+
+    // Connect the finished signal to a lambda function
+    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            QByteArray responseData = reply->readAll();
+            // Parse the responseData to extract the to-do items
+            // Update the todoDialog with the retrieved to-do items
+
+            qDebug() << __func__ << " - 'responseData': " << responseData;
+        } else {
+            // Handle the error
+            qDebug() << "Error:" << reply->errorString();
+        }
+        reply->deleteLater();
+        calNetworkManager->deleteLater();
+    });
+
+    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
