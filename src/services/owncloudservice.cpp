@@ -360,13 +360,6 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     //                    qDebug() << __func__ << " - 'calItem':
                     //                    " << calItem;
                 }
-            } else {
-                // this should be the reply of a calendar item list request
-                qDebug() << "Reply from ownCloud calendar todo list page";
-                //                qDebug() << data;
-
-                // load the task items
-                loadTodoItems(data);
             }
         } else if (urlPath.startsWith(serverUrlPath % webdavPath())) {
             // this should be the reply of a calendar item list request
@@ -667,6 +660,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
  */
 void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *dialog) {
     this->todoDialog = dialog;
+    // TODO: Don't set the calendarName globally after all requests are made with lambda functions!
     this->calendarName = calendarName;
 
     SettingsService settings;
@@ -690,6 +684,7 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     QString calendarUrl = settings.value(QStringLiteral("ownCloud/todoCalendarEnabledUrlList"))
                               .toStringList()
                               .at(index);
+    qDebug() << __func__ << " - 'calendarUrl': " << calendarUrl;
 
     QUrl url(calendarUrl);
     QNetworkRequest r(url);
@@ -718,7 +713,32 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "REPORT", buffer);
+    // Use a local QNetworkAccessManager
+    auto *calNetworkManager = new QNetworkAccessManager(this);
+
+    // Connect the finished signal to a lambda function
+    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            QByteArray responseData = reply->readAll();
+            QString data = QString(responseData);
+
+            qDebug() << "Reply from ownCloud calendar todo list page";
+            qDebug() << __func__ << " - 'responseData': " << responseData;
+
+            // Parse the responseData to extract the to-do items
+            loadTodoItems(data);
+        } else {
+            // Handle the error
+            qDebug() << __func__ << " - 'reply->errorString()': " << reply->errorString();
+        }
+
+        reply->deleteLater();
+        calNetworkManager->deleteLater();
+    });
+
+    //    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "REPORT", buffer);
+
+    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
