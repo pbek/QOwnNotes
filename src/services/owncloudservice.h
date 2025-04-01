@@ -124,7 +124,6 @@ class OwnCloudService : public QObject {
     QString trashDeletePath;
     QPointer<SettingsDialog> settingsDialog;
     TodoDialog *todoDialog;
-    QString calendarName;
 
     void checkAppInfo(QNetworkReply *reply);
 
@@ -143,7 +142,7 @@ class OwnCloudService : public QObject {
 
     QList<CalDAVCalendarData> parseCalendarData(QString &data);
 
-    void loadTodoItems(QString &data);
+    void loadTodoItems(const QString &calendarName, QString &data);
 
     static void ignoreSslErrorsIfAllowed(QNetworkReply *reply);
 

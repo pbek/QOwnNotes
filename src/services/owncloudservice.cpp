@@ -314,53 +314,6 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             if (settingsDialog != nullptr) {
                 settingsDialog->refreshTodoCalendarList(calendarDataList);
             }
-        } else if (!todoCalendarServerUrlPath.isEmpty() &&
-                   urlPath.startsWith(todoCalendarServerUrlPath)) {
-            // check if we have a reply from a calendar item request
-            if (urlPath.endsWith(QStringLiteral(".ics"))) {
-                qDebug() << "Reply from ownCloud calendar item ics page";
-                // qDebug() << data;
-
-                // a workaround for a ownCloud error message
-                if (data.indexOf(QStringLiteral("<s:message>Unable to generate a URL for the named"
-                                                " route \"tasksplus.page.index\" as such route"
-                                                " does not exist.</s:message>")) > 20) {
-                    data = QString();
-                }
-
-                if (todoDialog != nullptr) {
-                    // this will mostly happen after the PUT request to update
-                    // or create a task item
-                    if (data.isEmpty()) {
-                        // reload the task list from server
-                        todoDialog->reloadTodoList();
-                    }
-
-                    // increment the progress bar
-                    todoDialog->todoItemLoadingProgressBarIncrement();
-                }
-
-                // fetch the calendar item, that was already stored
-                // by loadTodoItems()
-                CalendarItem calItem =
-                    CalendarItem::fetchByUrlAndCalendar(url.toString(), calendarName);
-                if (calItem.isFetched()) {
-                    // update the item with the ics data
-                    bool wasUpdated = calItem.updateWithICSData(data);
-
-                    // if item wasn't updated (for example because it was no
-                    // VTODO item) we will remove it
-                    if (!wasUpdated) {
-                        calItem.remove();
-                    } else if (todoDialog != nullptr) {
-                        // reload the task list items
-                        todoDialog->reloadTodoListItems();
-                    }
-
-                    //                    qDebug() << __func__ << " - 'calItem':
-                    //                    " << calItem;
-                }
-            }
         } else if (urlPath.startsWith(serverUrlPath % webdavPath())) {
             // this should be the reply of a calendar item list request
             qDebug() << "Reply from ownCloud webdav";
@@ -660,9 +613,6 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
  */
 void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *dialog) {
     this->todoDialog = dialog;
-    // TODO: Don't set the calendarName globally after all requests are made with lambda functions!
-    this->calendarName = calendarName;
-
     SettingsService settings;
     QStringList todoCalendarEnabledList =
         settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
@@ -716,6 +666,10 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     // Use a local QNetworkAccessManager
     auto *calNetworkManager = new QNetworkAccessManager(this);
 
+    QObject::connect(calNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
+
     // Connect the finished signal to a lambda function
     connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
         if (reply->error() == QNetworkReply::NoError) {
@@ -726,10 +680,12 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
             qDebug() << __func__ << " - 'responseData': " << responseData;
 
             // Parse the responseData to extract the to-do items
-            loadTodoItems(data);
+            loadTodoItems(calendarName, data);
         } else {
-            // Handle the error
-            qDebug() << __func__ << " - 'reply->errorString()': " << reply->errorString();
+            // For error codes see http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+            qWarning() << "QNetworkReply error " + QString::number(reply->error()) + " from url " +
+                              url.toString() + ":"
+                       << reply->errorString();
         }
 
         reply->deleteLater();
@@ -1463,7 +1419,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     return resultList;
 }
 
-void OwnCloudService::loadTodoItems(QString &data) {
+void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) {
     QDomDocument doc;
     doc.setContent(data, true);
 
@@ -1549,7 +1505,81 @@ void OwnCloudService::loadTodoItems(QString &data) {
                             QNetworkRequest r(calendarItemUrl);
                             addCalendarAuthHeader(&r);
 
-                            QNetworkReply *reply = calendarNetworkManager->get(r);
+                            // Use a local QNetworkAccessManager
+                            auto *calNetworkManager = new QNetworkAccessManager(this);
+
+                            QObject::connect(
+                                calNetworkManager,
+                                SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)),
+                                this,
+                                SLOT(slotCalendarAuthenticationRequired(QNetworkReply *,
+                                                                        QAuthenticator *)));
+
+                            // Connect the finished signal to a lambda function
+                            connect(
+                                calNetworkManager, &QNetworkAccessManager::finished,
+                                [=](QNetworkReply *reply) {
+                                    QUrl url = reply->url();
+
+                                    if (reply->error() == QNetworkReply::NoError) {
+                                        QByteArray responseData = reply->readAll();
+                                        QString data = QString(responseData);
+                                        qDebug() << "Reply from ownCloud calendar item ics page"
+                                                 << calendarItemUrl;
+                                        // qDebug() << data;
+
+                                        // Workaround for a ownCloud error message
+                                        if (data.indexOf(QStringLiteral(
+                                                "<s:message>Unable to generate a URL for the named"
+                                                " route \"tasksplus.page.index\" as such route"
+                                                " does not exist.</s:message>")) > 20) {
+                                            data = QString();
+                                        }
+
+                                        if (todoDialog != nullptr) {
+                                            // This will mostly happen after the PUT request to
+                                            // update or create a task item
+                                            if (data.isEmpty()) {
+                                                // Reload the task list from server
+                                                todoDialog->reloadTodoList();
+                                            }
+
+                                            // Increment the progress bar
+                                            todoDialog->todoItemLoadingProgressBarIncrement();
+                                        }
+
+                                        // Fetch the calendar item, that was already stored by
+                                        // loadTodoItems()
+                                        CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar(
+                                            url.toString(), calendarName);
+                                        if (calItem.isFetched()) {
+                                            // Update the item with the ics data
+                                            bool wasUpdated = calItem.updateWithICSData(data);
+
+                                            // If item wasn't updated (for example because it was no
+                                            // VTODO item) we will remove it
+                                            if (!wasUpdated) {
+                                                calItem.remove();
+                                            } else if (todoDialog != nullptr) {
+                                                // reload the task list items
+                                                todoDialog->reloadTodoListItems();
+                                            }
+                                        }
+                                    } else {
+                                        // For error codes see
+                                        // http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+                                        qWarning() << "QNetworkReply error " +
+                                                          QString::number(reply->error()) +
+                                                          " from url " + url.toString() + ":"
+                                                   << reply->errorString();
+                                    }
+
+                                    reply->deleteLater();
+                                    calNetworkManager->deleteLater();
+                                });
+
+                            // QNetworkReply *reply = calendarNetworkManager->get(r);
+                            QNetworkReply *reply = calNetworkManager->get(r);
                             ignoreSslErrorsIfAllowed(reply);
 
                             requestCount++;
