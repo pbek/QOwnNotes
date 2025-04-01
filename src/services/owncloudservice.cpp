@@ -1536,6 +1536,7 @@ void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) 
                                             data = QString();
                                         }
 
+#ifndef INTEGRATION_TESTS
                                         if (todoDialog != nullptr) {
                                             // This will mostly happen after the PUT request to
                                             // update or create a task item
@@ -1547,6 +1548,7 @@ void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) 
                                             // Increment the progress bar
                                             todoDialog->todoItemLoadingProgressBarIncrement();
                                         }
+#endif
 
                                         // Fetch the calendar item, that was already stored by
                                         // loadTodoItems()
@@ -1561,8 +1563,10 @@ void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) 
                                             if (!wasUpdated) {
                                                 calItem.remove();
                                             } else if (todoDialog != nullptr) {
+#ifndef INTEGRATION_TESTS
                                                 // reload the task list items
                                                 todoDialog->reloadTodoListItems();
+#endif
                                             }
                                         }
                                     } else {
