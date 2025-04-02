@@ -109,7 +109,6 @@ class OwnCloudService : public QObject {
     bool appQOwnNotesAPICheckEnabled;
     QString todoCalendarPassword;
     QNetworkAccessManager *networkManager;
-    QNetworkAccessManager *calendarNetworkManager;
     ShareDialog *shareDialog;
     static const QString rootPath;
     static const QString format;

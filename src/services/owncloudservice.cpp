@@ -44,18 +44,10 @@ const QString NS_DAV(QStringLiteral("DAV:"));
 
 OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent) : QObject(parent) {
     networkManager = new QNetworkAccessManager(this);
-    calendarNetworkManager = new QNetworkAccessManager(this);
-
     QObject::connect(networkManager,
                      SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
                      SLOT(slotAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
     QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)), this,
-                     SLOT(slotReplyFinished(QNetworkReply *)));
-
-    QObject::connect(calendarNetworkManager,
-                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
-                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
-    QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)), this,
                      SLOT(slotReplyFinished(QNetworkReply *)));
 
     readSettings(cloudConnectionId);
@@ -66,7 +58,6 @@ OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent) : QObje
 
 void OwnCloudService::resetNetworkManagerCookieJar() {
     networkManager->setCookieJar(new QNetworkCookieJar(this));
-    calendarNetworkManager->setCookieJar(new QNetworkCookieJar(this));
 }
 
 /**
