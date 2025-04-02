@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.4.0
+
+- All TODO calendar network requests were reimplemented to use their own,
+  distinct network manager to prevent data being stored for the wrong calendar
+  (for [#3248](https://github.com/pbek/QOwnNotes/issues/3248))
+
 ## 25.3.5
 
 - The ignoring of changes of files in the `.git` folder inside note folders has
