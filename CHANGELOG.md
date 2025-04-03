@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.4.1
+
+- In the TODO dialog, now it was made sure that the editing pane is disabled and
+  the data is reset, when no item is selected, an item was deleted or no items
+  are present (for [#3249](https://github.com/pbek/QOwnNotes/issues/3249))
+
 ## 25.4.0
 
 - All TODO calendar network requests were reimplemented to use their own,
