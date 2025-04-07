@@ -55,3 +55,8 @@ command = "nixfmt"
 excludes = []
 includes = ["*.nix"]
 options = []
+
+[formatter.cmake-format]
+command = "cmake-format"
+includes = ["**/*.cmake", "**/CMakeLists.txt"]
+options = ["--in-place"]

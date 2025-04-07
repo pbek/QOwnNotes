@@ -207,7 +207,7 @@ add-git-blame-ignore-revs:
 # Format all files
 [group('linter')]
 format args='':
-    nix-shell -p treefmt libclang nodePackages.prettier shfmt nixfmt-rfc-style statix taplo --run "treefmt {{ args }}"
+    nix-shell -p treefmt libclang nodePackages.prettier shfmt nixfmt-rfc-style statix taplo cmake-format --run "treefmt {{ args }}"
 
 # Run a GitHub workflow
 [group('linter')]
