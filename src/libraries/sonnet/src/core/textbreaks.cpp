@@ -25,39 +25,22 @@
 #include "textbreaks_p.h"
 
 namespace Sonnet {
-class TextBreaksPrivate
-{
-public:
-    TextBreaksPrivate()
-    {
-    }
+class TextBreaksPrivate {
+   public:
+    TextBreaksPrivate() {}
 
     QString text;
 };
 
-TextBreaks::TextBreaks(const QString &text)
-    : d(new TextBreaksPrivate())
-{
-    setText(text);
-}
+TextBreaks::TextBreaks(const QString &text) : d(new TextBreaksPrivate()) { setText(text); }
 
-TextBreaks::~TextBreaks()
-{
-    delete d;
-}
+TextBreaks::~TextBreaks() { delete d; }
 
-QString TextBreaks::text() const
-{
-    return d->text;
-}
+QString TextBreaks::text() const { return d->text; }
 
-void TextBreaks::setText(const QString &text)
-{
-    d->text = text;
-}
+void TextBreaks::setText(const QString &text) { d->text = text; }
 
-TextBreaks::Positions TextBreaks::wordBreaks(const QString &text)
-{
+TextBreaks::Positions TextBreaks::wordBreaks(const QString &text) {
     Positions breaks;
 
     if (text.isEmpty()) {
@@ -86,15 +69,14 @@ TextBreaks::Positions TextBreaks::wordBreaks(const QString &text)
         }
         breaks.append(pos);
 
-//        if (boundaryFinder.toNextBoundary() == -1) {
-//            break;
-//        }
+        //        if (boundaryFinder.toNextBoundary() == -1) {
+        //            break;
+        //        }
     }
     return breaks;
 }
 
-TextBreaks::Positions TextBreaks::sentenceBreaks(const QString &text)
-{
+TextBreaks::Positions TextBreaks::sentenceBreaks(const QString &text) {
     Positions breaks;
 
     if (text.isEmpty()) {
@@ -119,13 +101,7 @@ TextBreaks::Positions TextBreaks::sentenceBreaks(const QString &text)
     return breaks;
 }
 
-TextBreaks::Positions TextBreaks::wordBreaks() const
-{
-    return wordBreaks(d->text);
-}
+TextBreaks::Positions TextBreaks::wordBreaks() const { return wordBreaks(d->text); }
 
-TextBreaks::Positions TextBreaks::sentenceBreaks() const
-{
-    return sentenceBreaks(d->text);
-}
-}
+TextBreaks::Positions TextBreaks::sentenceBreaks() const { return sentenceBreaks(d->text); }
+}    // namespace Sonnet

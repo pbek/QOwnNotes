@@ -4,15 +4,11 @@
 
 using namespace litehtml;
 
-extern const litehtml::tchar_t master_css[] =
-{
+extern const litehtml::tchar_t master_css[] = {
 #include "master.css.inc"
-, 0
-};
+    , 0};
 
-
-TEST(ContextTest, LoadMasterStylesheet)
-{
-    context ctx;
-    ctx.load_master_stylesheet(master_css);
+TEST(ContextTest, LoadMasterStylesheet) {
+  context ctx;
+  ctx.load_master_stylesheet(master_css);
 }

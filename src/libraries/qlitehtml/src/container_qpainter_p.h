@@ -133,9 +133,10 @@ public: // document_container API
                   bool valid_y) override;
     void del_clip() override;
     void get_client_rect(litehtml::position &client) const override;
-    std::shared_ptr<litehtml::element> create_element(const litehtml::tchar_t *tag_name,
-                                                      const litehtml::string_map &attributes,
-                                                      const std::shared_ptr<litehtml::document> &doc) override;
+    std::shared_ptr<litehtml::element> create_element(
+        const litehtml::tchar_t *tag_name,
+        const litehtml::string_map &attributes,
+        const std::shared_ptr<litehtml::document> &doc) override;
     void get_media_features(litehtml::media_features &media) const override;
     void get_language(litehtml::tstring &language, litehtml::tstring &culture) const override;
 

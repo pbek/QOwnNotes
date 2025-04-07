@@ -19,19 +19,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301  USA
  */
-#include "settings_p.h"
-
-#include "loader_p.h"
-
-#include <QMap>
 #include <QLocale>
+#include <QMap>
 #include <QSettings>
 
+#include "loader_p.h"
+#include "settings_p.h"
+
 namespace Sonnet {
-class SettingsPrivate
-{
-public:
-    Loader *loader = nullptr;  //can't be a Ptr since we don't want to hold a ref on it
+class SettingsPrivate {
+   public:
+    Loader *loader = nullptr;    // can't be a Ptr since we don't want to hold a ref on it
     bool modified = false;
 
     QString defaultLanguage;
@@ -50,9 +48,7 @@ public:
     QMap<QString, bool> ignore;
 };
 
-Settings::Settings(Loader *loader)
-    : d(new SettingsPrivate)
-{
+Settings::Settings(Loader *loader) : d(new SettingsPrivate) {
     d->loader = loader;
 
     d->modified = false;
@@ -60,16 +56,11 @@ Settings::Settings(Loader *loader)
     restore();
 }
 
-Settings::~Settings()
-{
-    delete d;
-}
+Settings::~Settings() { delete d; }
 
-bool Settings::setDefaultLanguage(const QString &lang)
-{
+bool Settings::setDefaultLanguage(const QString &lang) {
     const QStringList cs = d->loader->languages();
-    if (cs.indexOf(lang) != -1
-        && d->defaultLanguage != lang) {
+    if (cs.indexOf(lang) != -1 && d->defaultLanguage != lang) {
         d->defaultLanguage = lang;
         d->modified = true;
         d->loader->changed();
@@ -78,13 +69,9 @@ bool Settings::setDefaultLanguage(const QString &lang)
     return false;
 }
 
-QString Settings::defaultLanguage() const
-{
-    return d->defaultLanguage;
-}
+QString Settings::defaultLanguage() const { return d->defaultLanguage; }
 
-bool Settings::setPreferredLanguages(const QStringList &lang)
-{
+bool Settings::setPreferredLanguages(const QStringList &lang) {
     if (d->preferredLanguages != lang) {
         d->modified = true;
         d->preferredLanguages = lang;
@@ -94,16 +81,12 @@ bool Settings::setPreferredLanguages(const QStringList &lang)
     return false;
 }
 
-QStringList Settings::preferredLanguages() const
-{
-    return d->preferredLanguages;
-}
+QStringList Settings::preferredLanguages() const { return d->preferredLanguages; }
 
-bool Settings::setDefaultClient(const QString &client)
-{
-    //Different from setDefaultLanguage because
-    //the number of clients can't be even close
-    //as big as the number of languages
+bool Settings::setDefaultClient(const QString &client) {
+    // Different from setDefaultLanguage because
+    // the number of clients can't be even close
+    // as big as the number of languages
     if (d->loader->clients().contains(client)) {
         d->defaultClient = client;
         d->modified = true;
@@ -113,13 +96,9 @@ bool Settings::setDefaultClient(const QString &client)
     return false;
 }
 
-QString Settings::defaultClient() const
-{
-    return d->defaultClient;
-}
+QString Settings::defaultClient() const { return d->defaultClient; }
 
-bool Settings::setCheckUppercase(bool check)
-{
+bool Settings::setCheckUppercase(bool check) {
     if (d->checkUppercase != check) {
         d->modified = true;
         d->checkUppercase = check;
@@ -128,13 +107,9 @@ bool Settings::setCheckUppercase(bool check)
     return false;
 }
 
-bool Settings::checkUppercase() const
-{
-    return d->checkUppercase;
-}
+bool Settings::checkUppercase() const { return d->checkUppercase; }
 
-bool Settings::setAutodetectLanguage(bool detect)
-{
+bool Settings::setAutodetectLanguage(bool detect) {
     if (d->autodetectLanguage != detect) {
         d->modified = true;
         d->autodetectLanguage = detect;
@@ -143,13 +118,9 @@ bool Settings::setAutodetectLanguage(bool detect)
     return false;
 }
 
-bool Settings::autodetectLanguage() const
-{
-    return d->autodetectLanguage;
-}
+bool Settings::autodetectLanguage() const { return d->autodetectLanguage; }
 
-bool Settings::setSkipRunTogether(bool skip)
-{
+bool Settings::setSkipRunTogether(bool skip) {
     if (d->skipRunTogether != skip) {
         d->modified = true;
         d->skipRunTogether = skip;
@@ -158,13 +129,9 @@ bool Settings::setSkipRunTogether(bool skip)
     return false;
 }
 
-bool Settings::skipRunTogether() const
-{
-    return d->skipRunTogether;
-}
+bool Settings::skipRunTogether() const { return d->skipRunTogether; }
 
-bool Settings::setCheckerEnabledByDefault(bool check)
-{
+bool Settings::setCheckerEnabledByDefault(bool check) {
     if (d->checkerEnabledByDefault != check) {
         d->modified = true;
         d->checkerEnabledByDefault = check;
@@ -173,13 +140,9 @@ bool Settings::setCheckerEnabledByDefault(bool check)
     return false;
 }
 
-bool Settings::checkerEnabledByDefault() const
-{
-    return d->checkerEnabledByDefault;
-}
+bool Settings::checkerEnabledByDefault() const { return d->checkerEnabledByDefault; }
 
-bool Settings::setBackgroundCheckerEnabled(bool enable)
-{
+bool Settings::setBackgroundCheckerEnabled(bool enable) {
     if (d->backgroundCheckerEnabled != enable) {
         d->modified = true;
         d->backgroundCheckerEnabled = enable;
@@ -188,37 +151,27 @@ bool Settings::setBackgroundCheckerEnabled(bool enable)
     return false;
 }
 
-bool Settings::backgroundCheckerEnabled() const
-{
-    return d->backgroundCheckerEnabled;
-}
+bool Settings::backgroundCheckerEnabled() const { return d->backgroundCheckerEnabled; }
 
-bool Settings::setCurrentIgnoreList(const QStringList &ignores)
-{
+bool Settings::setCurrentIgnoreList(const QStringList &ignores) {
     bool changed = setQuietIgnoreList(ignores);
     d->modified = true;
     return changed;
 }
 
-bool Settings::setQuietIgnoreList(const QStringList &ignores)
-{
+bool Settings::setQuietIgnoreList(const QStringList &ignores) {
     bool changed = false;
-    d->ignore = QMap<QString, bool>();//clear out
-    for (QStringList::const_iterator itr = ignores.begin();
-         itr != ignores.end(); ++itr) {
+    d->ignore = QMap<QString, bool>();    // clear out
+    for (QStringList::const_iterator itr = ignores.begin(); itr != ignores.end(); ++itr) {
         d->ignore.insert(*itr, true);
         changed = true;
     }
     return changed;
 }
 
-QStringList Settings::currentIgnoreList() const
-{
-    return d->ignore.keys();
-}
+QStringList Settings::currentIgnoreList() const { return d->ignore.keys(); }
 
-bool Settings::addWordToIgnore(const QString &word)
-{
+bool Settings::addWordToIgnore(const QString &word) {
     if (!d->ignore.contains(word)) {
         d->modified = true;
         d->ignore.insert(word, true);
@@ -227,23 +180,13 @@ bool Settings::addWordToIgnore(const QString &word)
     return false;
 }
 
-bool Settings::ignore(const QString &word)
-{
-    return d->ignore.contains(word);
-}
+bool Settings::ignore(const QString &word) { return d->ignore.contains(word); }
 
-int Settings::disablePercentageWordError() const
-{
-    return d->disablePercentage;
-}
+int Settings::disablePercentageWordError() const { return d->disablePercentage; }
 
-int Settings::disableWordErrorCount() const
-{
-    return d->disableWordCount;
-}
+int Settings::disableWordErrorCount() const { return d->disableWordCount; }
 
-void Settings::save()
-{
+void Settings::save() {
     QSettings settings(QStringLiteral("KDE"), QStringLiteral("Sonnet"));
     settings.setValue(QStringLiteral("defaultClient"), d->defaultClient);
     settings.setValue(QStringLiteral("defaultLanguage"), d->defaultLanguage);
@@ -262,8 +205,7 @@ void Settings::save()
 }
 
 // A static list of KDE specific words that we want to recognize
-static QStringList kdeWords()
-{
+static QStringList kdeWords() {
     QStringList l;
     l.append(QStringLiteral("KMail"));
     l.append(QStringLiteral("KOrganizer"));
@@ -283,25 +225,24 @@ static QStringList kdeWords()
     return l;
 }
 
-void Settings::restore()
-{
+void Settings::restore() {
     QSettings settings(QStringLiteral("KDE"), QStringLiteral("Sonnet"));
     d->defaultClient = settings.value(QStringLiteral("defaultClient"), QString()).toString();
-    d->defaultLanguage = settings.value(QStringLiteral("defaultLanguage"),
-                                        QLocale::system().name()).toString();
+    d->defaultLanguage =
+        settings.value(QStringLiteral("defaultLanguage"), QLocale::system().name()).toString();
     d->preferredLanguages = settings.value(QStringLiteral("preferredLanguages")).toStringList();
 
-    //same defaults are in the default filter (filter.cpp)
+    // same defaults are in the default filter (filter.cpp)
     d->checkUppercase = settings.value(QStringLiteral("checkUppercase"), true).toBool();
     d->skipRunTogether = settings.value(QStringLiteral("skipRunTogether"), true).toBool();
-    d->backgroundCheckerEnabled
-        = settings.value(QStringLiteral("backgroundCheckerEnabled"), true).toBool();
-    d->checkerEnabledByDefault
-        = settings.value(QStringLiteral("checkerEnabledByDefault"), false).toBool();
-    d->disablePercentage
-        = settings.value(QStringLiteral("Sonnet_AsYouTypeDisablePercentage"), 90).toInt();
-    d->disableWordCount
-        = settings.value(QStringLiteral("Sonnet_AsYouTypeDisableWordCount"), 100).toInt();
+    d->backgroundCheckerEnabled =
+        settings.value(QStringLiteral("backgroundCheckerEnabled"), true).toBool();
+    d->checkerEnabledByDefault =
+        settings.value(QStringLiteral("checkerEnabledByDefault"), false).toBool();
+    d->disablePercentage =
+        settings.value(QStringLiteral("Sonnet_AsYouTypeDisablePercentage"), 90).toInt();
+    d->disableWordCount =
+        settings.value(QStringLiteral("Sonnet_AsYouTypeDisableWordCount"), 100).toInt();
     d->autodetectLanguage = settings.value(QStringLiteral("autodetectLanguage"), true).toBool();
 
     const QString ignoreEntry = QStringLiteral("ignore_%1").arg(d->defaultLanguage);
@@ -309,14 +250,8 @@ void Settings::restore()
     setQuietIgnoreList(ignores);
 }
 
-bool Settings::modified() const
-{
-    return d->modified;
-}
+bool Settings::modified() const { return d->modified; }
 
-void Settings::setModified(bool modified)
-{
-    d->modified = modified;
-}
+void Settings::setModified(bool modified) { d->modified = modified; }
 
-} // namespace Sonnet
+}    // namespace Sonnet

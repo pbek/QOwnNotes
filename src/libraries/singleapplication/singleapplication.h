@@ -23,12 +23,12 @@
 #ifndef SINGLE_APPLICATION_H
 #define SINGLE_APPLICATION_H
 
-#include <functional>
 #include <QtCore/QtGlobal>
 #include <QtNetwork/QLocalSocket>
+#include <functional>
 
 #ifndef QAPPLICATION_CLASS
-  #define QAPPLICATION_CLASS QCoreApplication
+#define QAPPLICATION_CLASS QCoreApplication
 #endif
 
 #include QT_STRINGIFY(QAPPLICATION_CLASS)
@@ -40,13 +40,12 @@ class SingleApplicationPrivate;
  * Application
  * @see QCoreApplication
  */
-class SingleApplication : public QAPPLICATION_CLASS
-{
+class SingleApplication : public QAPPLICATION_CLASS {
     Q_OBJECT
 
     typedef QAPPLICATION_CLASS app_t;
 
-public:
+   public:
     /**
      * @brief Mode of operation of SingleApplication.
      * Whether the block should be user-wide or system-wide and whether the
@@ -58,11 +57,11 @@ public:
      * @enum
      */
     enum Mode {
-        User                    = 1 << 0,
-        System                  = 1 << 1,
-        SecondaryNotification   = 1 << 2,
-        ExcludeAppVersion       = 1 << 3,
-        ExcludeAppPath          = 1 << 4
+        User = 1 << 0,
+        System = 1 << 1,
+        SecondaryNotification = 1 << 2,
+        ExcludeAppVersion = 1 << 3,
+        ExcludeAppPath = 1 << 4
     };
     Q_DECLARE_FLAGS(Options, Mode)
 
@@ -86,7 +85,9 @@ public:
      * Usually 4*timeout would be the worst case (fail) scenario.
      * @see See the corresponding QAPPLICATION_CLASS constructor for reference
      */
-    explicit SingleApplication( int &argc, char *argv[], bool allowSecondary = false, Options options = Mode::User, int timeout = 1000, std::function<void()> instanceAbortedFunction = nullptr );
+    explicit SingleApplication(int &argc, char *argv[], bool allowSecondary = false,
+                               Options options = Mode::User, int timeout = 1000,
+                               std::function<void()> instanceAbortedFunction = nullptr);
     ~SingleApplication();
 
     /**
@@ -126,17 +127,17 @@ public:
      * @note sendMessage() will return false if invoked from the primary
      * instance.
      */
-    bool sendMessage( const QByteArray& message, int timeout = 100 );
+    bool sendMessage(const QByteArray &message, int timeout = 100);
 
-Q_SIGNALS:
+   Q_SIGNALS:
     void instanceStarted();
-    void receivedMessage( quint32 instanceId, QByteArray message );
+    void receivedMessage(quint32 instanceId, QByteArray message);
 
-private:
+   private:
     SingleApplicationPrivate *d_ptr;
     Q_DECLARE_PRIVATE(SingleApplication)
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(SingleApplication::Options)
 
-#endif // SINGLE_APPLICATION_H
+#endif    // SINGLE_APPLICATION_H

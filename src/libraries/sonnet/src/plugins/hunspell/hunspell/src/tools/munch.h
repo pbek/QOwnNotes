@@ -49,8 +49,7 @@
 
 #define ROTATE_LEN 5
 
-#define ROTATE(v, q) \
-  (v) = ((v) << (q)) | (((v) >> (32 - q)) & ((1 << (q)) - 1));
+#define ROTATE(v, q) (v) = ((v) << (q)) | (((v) >> (32 - q)) & ((1 << (q)) - 1));
 
 #define SET_SIZE 256
 
@@ -59,19 +58,19 @@
 /* the affix table entry */
 
 struct affent {
-  char* appnd;
-  char* strip;
-  short appndl;
-  short stripl;
-  char achar;
-  char xpflg;
-  short numconds;
-  char conds[SET_SIZE];
+    char* appnd;
+    char* strip;
+    short appndl;
+    short stripl;
+    char achar;
+    char xpflg;
+    short numconds;
+    char conds[SET_SIZE];
 };
 
 struct affixptr {
-  struct affent* aep;
-  int num;
+    struct affent* aep;
+    int num;
 };
 
 /* the prefix and suffix table */
@@ -86,9 +85,9 @@ struct affixptr stable[MAX_SUFFIXES];
 
 /* data structure to store results of lookups */
 struct matches {
-  struct hentry* hashent; /* hash table entry */
-  struct affent* prefix;  /* Prefix used, or NULL */
-  struct affent* suffix;  /* Suffix used, or NULL */
+    struct hentry* hashent; /* hash table entry */
+    struct affent* prefix;  /* Prefix used, or NULL */
+    struct affent* suffix;  /* Suffix used, or NULL */
 };
 
 int numroots;                    /* number of root words found */
@@ -97,10 +96,10 @@ struct matches roots[MAX_ROOTS]; /* list of root words found */
 /* hashing stuff */
 
 struct hentry {
-  char* word;
-  char* affstr;
-  struct hentry* next;
-  int keep;
+    char* word;
+    char* affstr;
+    struct hentry* next;
+    int keep;
 };
 
 int tablesize;
@@ -110,8 +109,8 @@ struct hentry* tableptr;
 
 int numwords; /* number of words found */
 struct dwords {
-  char* word;
-  int pallow;
+    char* word;
+    int pallow;
 };
 
 struct dwords wlist[MAX_WORDS]; /* list words found */
@@ -134,11 +133,7 @@ void aff_chk(const char* word, int len);
 
 void pfx_chk(const char* word, int len, struct affent* ep, int num);
 
-void suf_chk(const char* word,
-             int len,
-             struct affent* ep,
-             int num,
-             struct affent* pfxent,
+void suf_chk(const char* word, int len, struct affent* ep, int num, struct affent* pfxent,
              int cpflag);
 
 void add_affix_char(struct hentry* hent, char ac);

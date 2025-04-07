@@ -21,13 +21,12 @@
 #ifndef KSPELL_NSSPELLDICT_H
 #define KSPELL_NSSPELLDICT_H
 
-#include "spellerplugin_p.h"
-
 #import <Foundation/Foundation.h>
 
-class NSSpellCheckerDict : public Sonnet::SpellerPlugin
-{
-public:
+#include "spellerplugin_p.h"
+
+class NSSpellCheckerDict : public Sonnet::SpellerPlugin {
+   public:
     explicit NSSpellCheckerDict(const QString &lang);
     ~NSSpellCheckerDict();
     virtual bool isCorrect(const QString &word) const;
@@ -38,7 +37,8 @@ public:
 
     virtual bool addToPersonal(const QString &word);
     virtual bool addToSession(const QString &word);
-private:
+
+   private:
 #ifdef __OBJC__
     NSString *m_langCode;
     NSInteger m_tag;

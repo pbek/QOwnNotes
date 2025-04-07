@@ -12,12 +12,9 @@ public:
 
     void parse_attributes() override;
 
-    void draw(litehtml::uint_ptr hdc, int x, int y, const litehtml::position* clip) override;
+    void draw(litehtml::uint_ptr hdc, int x, int y, const litehtml::position *clip) override;
 
-    void set_checked(bool checked)
-    {
-        m_checked = checked;
-    }
+    void set_checked(bool checked) { m_checked = checked; }
 
 private:
     void addProperty(const litehtml::tchar_t *name, const litehtml::tchar_t *defaultValue);

@@ -22,6 +22,7 @@
 #define ABSTRACTTOKENIZER_H
 
 #include <QString>
+
 #include "sonnetcore_export.h"
 
 namespace Sonnet {
@@ -30,42 +31,31 @@ struct Token {
     QString token;
     int positionInBuffer = -1;
 
-    QString toString() const
-    {
-        return token;
-    }
+    QString toString() const { return token; }
 
     /**
      * @brief length of this token
      */
-    int length() const
-    {
-        return token.length();
-    }
+    int length() const { return token.length(); }
 
     /**
      * @brief position in buffer of which the @ref token is a view
      */
-    int position() const
-    {
-        return positionInBuffer;
-    }
+    int position() const { return positionInBuffer; }
 };
 
 /**
  * @short AbstractTokenizer breaks text into smaller pieces - words, sentences, paragraphs.
  *
- * AbstractTokenizer is an abstract class that must be subclassed to be used. It provides API modelled
- * after Java-style iterators. During tokenization buffer can be modified using provided replace() method.
+ * AbstractTokenizer is an abstract class that must be subclassed to be used. It provides API
+ * modelled after Java-style iterators. During tokenization buffer can be modified using provided
+ * replace() method.
  *
  * @since 4.3
-*/
-class AbstractTokenizer
-{
-public:
-    virtual ~AbstractTokenizer()
-    {
-    }
+ */
+class AbstractTokenizer {
+   public:
+    virtual ~AbstractTokenizer() {}
 
     /**
      * Sets text to tokenize. It also resets tokenizer state.
@@ -116,9 +106,8 @@ while (t.hasNext()) {
 This example checks spelling of given buffer
  * @since 4.3
 */
-class WordTokenizer : public AbstractTokenizer
-{
-public:
+class WordTokenizer : public AbstractTokenizer {
+   public:
     /**
      * Constructor for word tokenizer
      * @param buffer
@@ -132,14 +121,17 @@ public:
     QString buffer() const override;
     void replace(int position, int len, const QString &newWord) override;
 
-    /** Returns true if this word should be spell checked. This ignores email addresses, URLs and other things according to configuration */
+    /** Returns true if this word should be spell checked. This ignores email addresses, URLs and
+     * other things according to configuration */
     bool isSpellcheckable() const;
 
-    /** If ignore uppercase is true, then any word containing only uppercase letters will be considered unsuitable for spell check */
+    /** If ignore uppercase is true, then any word containing only uppercase letters will be
+     * considered unsuitable for spell check */
     void setIgnoreUppercase(bool val);
     int count() const;
     void reset();
-private:
+
+   private:
     bool isUppercase(const QString &word) const;
     BreakTokenizerPrivate *const d;
 };
@@ -150,9 +142,8 @@ private:
 SentenceTokenizer splits buffer into sentences according to rules from Unicode standard 5.1.
  * @since 4.3
 */
-class SentenceTokenizer : public AbstractTokenizer
-{
-public:
+class SentenceTokenizer : public AbstractTokenizer {
+   public:
     SentenceTokenizer(const QString &buffer = QString());
     ~SentenceTokenizer() override;
     void setBuffer(const QString &buffer) override;
@@ -160,8 +151,9 @@ public:
     Token next() override;
     QString buffer() const override;
     void replace(int position, int len, const QString &newWord) override;
-private:
+
+   private:
     BreakTokenizerPrivate *const d;
 };
-}
+}    // namespace Sonnet
 #endif

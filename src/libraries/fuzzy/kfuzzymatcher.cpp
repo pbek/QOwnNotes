@@ -21,10 +21,7 @@ using String = QString;
  * Custom toLower function which is much faster than
  * c.toLower() directly
  */
-static inline QChar toLower(QChar c)
-{
-    return c.isLower() ? c : c.toLower();
-}
+static inline QChar toLower(QChar c) { return c.isLower() ? c : c.toLower(); }
 
 // internal
 // clang-format off
@@ -191,8 +188,8 @@ static bool match_recursive(String::const_iterator pattern,
 }
 // clang-format on
 
-static bool match_internal(StringType pattern, StringType str, int &outScore, unsigned char *matches)
-{
+static bool match_internal(StringType pattern, StringType str, int &outScore,
+                           unsigned char *matches) {
     if (pattern.isEmpty()) {
         return true;
     }
@@ -204,14 +201,13 @@ static bool match_internal(StringType pattern, StringType str, int &outScore, un
     const auto patternEnd = pattern.cend();
     const auto strEnd = str.cend();
 
-    return match_recursive(patternIt, strIt, outScore, strIt, strEnd, patternEnd,
-                           nullptr, matches, 0, recursionCount);
+    return match_recursive(patternIt, strIt, outScore, strIt, strEnd, patternEnd, nullptr, matches,
+                           0, recursionCount);
 }
 
 /**************************************************************/
 
-bool KFuzzyMatcher::matchSimple(StringType pattern, StringType str)
-{
+bool KFuzzyMatcher::matchSimple(StringType pattern, StringType str) {
     auto patternIt = pattern.cbegin();
     for (auto strIt = str.cbegin(); strIt != str.cend() && patternIt != pattern.cend(); ++strIt) {
         if (strIt->toLower() == patternIt->toLower()) {
@@ -221,8 +217,7 @@ bool KFuzzyMatcher::matchSimple(StringType pattern, StringType str)
     return patternIt == pattern.cend();
 }
 
-KFuzzyMatcher::Result KFuzzyMatcher::match(StringType pattern, StringType str)
-{
+KFuzzyMatcher::Result KFuzzyMatcher::match(StringType pattern, StringType str) {
     uint8_t matches[256];
     int score = 0;
     const bool matched = match_internal(pattern, str, score, matches);
@@ -232,12 +227,9 @@ KFuzzyMatcher::Result KFuzzyMatcher::match(StringType pattern, StringType str)
     return result;
 }
 
-
-QString KFuzzyMatcher::toFuzzyMatchedDisplayString(const QString &pattern,
-                                                   const QString &str,
+QString KFuzzyMatcher::toFuzzyMatchedDisplayString(const QString &pattern, const QString &str,
                                                    const QString &htmlTag,
-                                                   const QString &htmlTagClose)
-{
+                                                   const QString &htmlTagClose) {
     if (pattern.isEmpty()) {
         return str;
     }
@@ -254,7 +246,7 @@ QString KFuzzyMatcher::toFuzzyMatchedDisplayString(const QString &pattern,
     QString string = str;
     int offset = 0;
     for (int i = 0; i < 256; ++i) {
-        if (matches[i] == 255){
+        if (matches[i] == 255) {
             break;
         }
         string.insert(matches[i] + offset, htmlTag);
@@ -263,5 +255,4 @@ QString KFuzzyMatcher::toFuzzyMatchedDisplayString(const QString &pattern,
         offset += htmlTagClose.size();
     }
     return string;
-
 }

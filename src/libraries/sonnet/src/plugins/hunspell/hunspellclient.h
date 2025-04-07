@@ -21,38 +21,32 @@
 #ifndef KSPELL_HUNSPELLCLIENT_H
 #define KSPELL_HUNSPELLCLIENT_H
 
-#include "client_p.h"
 #include <QMap>
+
+#include "client_p.h"
 
 namespace Sonnet {
 class SpellerPlugin;
 }
 using Sonnet::SpellerPlugin;
 
-class HunspellClient : public Sonnet::Client
-{
+class HunspellClient : public Sonnet::Client {
     Q_OBJECT
     Q_INTERFACES(Sonnet::Client)
     Q_PLUGIN_METADATA(IID "org.kde.Sonnet.HunspellClient")
-public:
+   public:
     explicit HunspellClient(QObject *parent = nullptr);
     ~HunspellClient() override;
 
-    int reliability() const override
-    {
-        return 40;
-    }
+    int reliability() const override { return 40; }
 
     SpellerPlugin *createSpeller(const QString &language) override;
 
     QStringList languages() const override;
 
-    QString name() const override
-    {
-        return QStringLiteral("Hunspell");
-    }
+    QString name() const override { return QStringLiteral("Hunspell"); }
 
-private:
+   private:
     QMap<QString, QString> m_languagePaths;
 };
 

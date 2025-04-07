@@ -2,14 +2,14 @@
 #include <string>
 
 class SomeClass {
-public:
+   public:
     SomeClass(const std::string &var) : m_var(var) {}
-private:
+
+   private:
     std::string m_var;
 };
 
-int main(int argc, const char *argv[])
-{
+int main(int argc, const char *argv[]) {
     using namespace std;
     cout << "TESTING...";
     cout << "1";

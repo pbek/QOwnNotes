@@ -45,8 +45,7 @@
 
 #define ROTATE_LEN 5
 
-#define ROTATE(v, q) \
-  (v) = ((v) << (q)) | (((v) >> (32 - q)) & ((1 << (q)) - 1));
+#define ROTATE(v, q) (v) = ((v) << (q)) | (((v) >> (32 - q)) & ((1 << (q)) - 1));
 
 #define SET_SIZE 256
 
@@ -55,19 +54,19 @@
 /* the affix table entry */
 
 struct affent {
-  char* appnd;
-  char* strip;
-  short appndl;
-  short stripl;
-  char achar;
-  char xpflg;
-  short numconds;
-  char conds[SET_SIZE];
+    char* appnd;
+    char* strip;
+    short appndl;
+    short stripl;
+    char achar;
+    char xpflg;
+    short numconds;
+    char conds[SET_SIZE];
 };
 
 struct affixptr {
-  struct affent* aep;
-  int num;
+    struct affent* aep;
+    int num;
 };
 
 /* the prefix and suffix table */
@@ -84,8 +83,8 @@ int fullstrip;
 
 int numwords; /* number of words found */
 struct dwords {
-  char* word;
-  int pallow;
+    char* word;
+    int pallow;
 };
 
 struct dwords wlist[MAX_WORDS]; /* list words found */

@@ -3,16 +3,14 @@
 
 #include "html_tag.h"
 
-namespace litehtml
-{
-	class el_link : public html_tag
-	{
-	public:
-		explicit el_link(const std::shared_ptr<litehtml::document>& doc);
+namespace litehtml {
+class el_link : public html_tag {
+ public:
+  explicit el_link(const std::shared_ptr<litehtml::document>& doc);
 
-	protected:
-		void parse_attributes() override;
-	};
-}
+ protected:
+  void parse_attributes() override;
+};
+}  // namespace litehtml
 
 #endif  // LH_EL_LINK_H

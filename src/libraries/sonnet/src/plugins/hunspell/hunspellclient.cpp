@@ -19,38 +19,37 @@
  * 02110-1301  USA
  */
 #include "hunspellclient.h"
-#include "hunspelldict.h"
-#include "hunspelldebug.h"
 
 #include <utils/misc.h>
+
 #include <QDir>
-#include <QString>
-#include <QStandardPaths>
 #include <QRegularExpression>
 #include <QSettings>
+#include <QStandardPaths>
+#include <QString>
+
+#include "hunspelldebug.h"
+#include "hunspelldict.h"
 
 using namespace Sonnet;
 
-HunspellClient::HunspellClient(QObject *parent)
-    : Client(parent)
-{
+HunspellClient::HunspellClient(QObject *parent) : Client(parent) {
 #ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL) << " HunspellClient::HunspellClient";
 #endif
     QStringList dirList;
     QSettings settings;
-    bool disableExternalDictionaries = settings.value(QStringLiteral("disableExternalDictionaries")).toBool();
+    bool disableExternalDictionaries =
+        settings.value(QStringLiteral("disableExternalDictionaries")).toBool();
 
     if (!disableExternalDictionaries) {
         // search QStandardPaths
-        dirList.append(QStandardPaths::locateAll(
-                           QStandardPaths::GenericDataLocation,
-                           QStringLiteral("hunspell"),
-                           QStandardPaths::LocateDirectory));
+        dirList.append(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                                                 QStringLiteral("hunspell"),
+                                                 QStandardPaths::LocateDirectory));
     }
 
-    auto maybeAddPath = [&dirList](const QString &path)
-    {
+    auto maybeAddPath = [&dirList](const QString &path) {
         if (QFileInfo::exists(path)) {
             dirList.append(path);
 
@@ -58,36 +57,35 @@ HunspellClient::HunspellClient(QObject *parent)
             for (const QString &subDir : dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
                 dirList.append(dir.absoluteFilePath(subDir));
             }
-
         }
     };
 
     if (!disableExternalDictionaries) {
-        //custom paths
-        #ifdef Q_OS_WIN
+// custom paths
+#ifdef Q_OS_WIN
         //    maybeAddPath(QStringLiteral(SONNET_INSTALL_PREFIX "/bin/data/hunspell/"));
-              QString home = QDir::homePath() + "/dicts";
-              QString current = QDir::currentPath() + "/dicts";
-              maybeAddPath(home);
-              maybeAddPath(current);
-        #endif
-        #ifdef Q_OS_LINUX
-            maybeAddPath(QStringLiteral("/usr/share/hunspell/"));
-            maybeAddPath(QStringLiteral("/usr/share/myspell/"));
-            maybeAddPath(QStringLiteral("~/.local/share/hunspell/"));
-            maybeAddPath(QStringLiteral("~/.local/share/myspell/"));
+        QString home = QDir::homePath() + "/dicts";
+        QString current = QDir::currentPath() + "/dicts";
+        maybeAddPath(home);
+        maybeAddPath(current);
+#endif
+#ifdef Q_OS_LINUX
+        maybeAddPath(QStringLiteral("/usr/share/hunspell/"));
+        maybeAddPath(QStringLiteral("/usr/share/myspell/"));
+        maybeAddPath(QStringLiteral("~/.local/share/hunspell/"));
+        maybeAddPath(QStringLiteral("~/.local/share/myspell/"));
 
-            // for snap packages
-            // note that ~/.local is not readable for snaps
-            QString snapDictPath = QDir::homePath() + QStringLiteral("/hunspell/");
-            snapDictPath.remove(QRegularExpression(R"(snap\/qownnotes\/\w\d+\/)"));
-            maybeAddPath(snapDictPath);
-        #endif
-        #ifdef Q_OS_MACOS
-            //Waqar: enable this one only if we use hunspell for mac
-            maybeAddPath(QStringLiteral("/System/Library/Spelling"));
-            maybeAddPath(QDir::homePath() + QStringLiteral("/Library/Spelling"));
-        #endif
+        // for snap packages
+        // note that ~/.local is not readable for snaps
+        QString snapDictPath = QDir::homePath() + QStringLiteral("/hunspell/");
+        snapDictPath.remove(QRegularExpression(R"(snap\/qownnotes\/\w\d+\/)"));
+        maybeAddPath(snapDictPath);
+#endif
+#ifdef Q_OS_MACOS
+        // Waqar: enable this one only if we use hunspell for mac
+        maybeAddPath(QStringLiteral("/System/Library/Spelling"));
+        maybeAddPath(QDir::homePath() + QStringLiteral("/Library/Spelling"));
+#endif
     }
 
     maybeAddPath(Utils::Misc::localDictionariesPath());
@@ -101,21 +99,15 @@ HunspellClient::HunspellClient(QObject *parent)
     }
 }
 
-HunspellClient::~HunspellClient()
-{
-}
+HunspellClient::~HunspellClient() {}
 
-SpellerPlugin *HunspellClient::createSpeller(const QString &language)
-{
+SpellerPlugin *HunspellClient::createSpeller(const QString &language) {
 #ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL)
-    << " SpellerPlugin *HunspellClient::createSpeller(const QString &language) ;" << language;
+        << " SpellerPlugin *HunspellClient::createSpeller(const QString &language) ;" << language;
 #endif
     HunspellDict *ad = new HunspellDict(language, m_languagePaths.value(language));
     return ad;
 }
 
-QStringList HunspellClient::languages() const
-{
-    return m_languagePaths.keys();
-}
+QStringList HunspellClient::languages() const { return m_languagePaths.keys(); }

@@ -83,17 +83,15 @@ using std::experimental::in_place;
 
 // TODO: make_optional is a copy, since there is no sensible way to import functions in C++
 template <class T>
-constexpr optional<typename std::decay<T>::type> make_optional(T&& v)
-{
-  return optional<typename std::decay<T>::type>(std::experimental::constexpr_forward<T>(v));
+constexpr optional<typename std::decay<T>::type> make_optional(T&& v) {
+    return optional<typename std::decay<T>::type>(std::experimental::constexpr_forward<T>(v));
 }
 
 template <class X>
-constexpr optional<X&> make_optional(std::reference_wrapper<X> v)
-{
-  return optional<X&>(v.get());
+constexpr optional<X&> make_optional(std::reference_wrapper<X> v) {
+    return optional<X&>(v.get());
 }
 
-} // Utils
+}    // namespace Utils
 
-//#endif
+// #endif

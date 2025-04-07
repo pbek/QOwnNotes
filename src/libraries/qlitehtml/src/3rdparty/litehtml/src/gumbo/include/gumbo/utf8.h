@@ -81,8 +81,7 @@ bool utf8_is_invalid_code_point(int c);
 
 // Initializes a new Utf8Iterator from the given byte buffer.  The source does
 // not have to be NUL-terminated, but the length must be passed in explicitly.
-void utf8iterator_init(struct GumboInternalParser* parser, const char* source,
-    size_t source_length, Utf8Iterator* iter);
+void utf8iterator_init(struct GumboInternalParser* parser, const char* source, size_t source_length, Utf8Iterator* iter);
 
 // Advances the current position by one code point.
 void utf8iterator_next(Utf8Iterator* iter);
@@ -91,8 +90,7 @@ void utf8iterator_next(Utf8Iterator* iter);
 int utf8iterator_current(const Utf8Iterator* iter);
 
 // Retrieves and fills the output parameter with the current source position.
-void utf8iterator_get_position(
-    const Utf8Iterator* iter, GumboSourcePosition* output);
+void utf8iterator_get_position(const Utf8Iterator* iter, GumboSourcePosition* output);
 
 // Retrieves a character pointer to the start of the current character.
 const char* utf8iterator_get_char_pointer(const Utf8Iterator* iter);
@@ -109,8 +107,7 @@ const char* utf8iterator_get_end_pointer(const Utf8Iterator* iter);
 // this returns false.  Note that prefix should not contain null bytes because
 // of the use of strncmp/strncasecmp internally.  All existing use-cases adhere
 // to this.
-bool utf8iterator_maybe_consume_match(
-    Utf8Iterator* iter, const char* prefix, size_t length, bool case_sensitive);
+bool utf8iterator_maybe_consume_match(Utf8Iterator* iter, const char* prefix, size_t length, bool case_sensitive);
 
 // "Marks" a particular location of interest in the input stream, so that it can
 // later be reset() to.  There's also the ability to record an error at the
@@ -123,8 +120,7 @@ void utf8iterator_reset(Utf8Iterator* iter);
 
 // Sets the position and original text fields of an error to the value at the
 // mark.
-void utf8iterator_fill_error_at_mark(
-    Utf8Iterator* iter, struct GumboInternalError* error);
+void utf8iterator_fill_error_at_mark(Utf8Iterator* iter, struct GumboInternalError* error);
 
 #ifdef __cplusplus
 }

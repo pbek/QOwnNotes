@@ -21,40 +21,32 @@
 #ifndef KSPELL_ASPELLCLIENT_H
 #define KSPELL_ASPELLCLIENT_H
 
-#include "client_p.h"
-
 #include "aspell.h"
+#include "client_p.h"
 
 namespace Sonnet {
 class SpellerPlugin;
 }
 using Sonnet::SpellerPlugin;
 
-class ASpellClient : public Sonnet::Client
-{
-    //Q_OBJECT
+class ASpellClient : public Sonnet::Client {
+    // Q_OBJECT
     Q_INTERFACES(Sonnet::Client)
     Q_PLUGIN_METADATA(IID "org.kde.Sonnet.ASpellClient")
 
-public:
+   public:
     explicit ASpellClient(QObject *parent = nullptr);
     ~ASpellClient() override;
 
-    int reliability() const override
-    {
-        return 20;
-    }
+    int reliability() const override { return 20; }
 
     SpellerPlugin *createSpeller(const QString &language) override;
 
     QStringList languages() const override;
 
-    QString name() const override
-    {
-        return QStringLiteral("ASpell");
-    }
+    QString name() const override { return QStringLiteral("ASpell"); }
 
-private:
+   private:
     AspellConfig *m_config;
 };
 

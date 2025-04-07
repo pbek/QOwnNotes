@@ -21,8 +21,8 @@
 #define SONNET_CLIENT_P_H
 
 #include <QObject>
-#include <QStringList>
 #include <QString>
+#include <QStringList>
 /*
  * The fact that this class inherits from QObject makes me
  * hugely unhappy. The reason for as of this writing is that
@@ -36,10 +36,9 @@ class SpellerPlugin;
  * \internal
  * Client
  */
-class Client : public QObject
-{
+class Client : public QObject {
     Q_OBJECT
-public:
+   public:
     explicit Client(QObject *parent = nullptr);
 
     /**
@@ -69,8 +68,8 @@ public:
      */
     virtual QString name() const = 0;
 };
-}
+}    // namespace Sonnet
 
 Q_DECLARE_INTERFACE(Sonnet::Client, "org.kde.sonnet.Client")
 
-#endif // SONNET_CLIENT_P_H
+#endif    // SONNET_CLIENT_P_H

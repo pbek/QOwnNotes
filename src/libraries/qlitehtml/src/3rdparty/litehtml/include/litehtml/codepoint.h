@@ -46,6 +46,6 @@ bool is_url_reserved_codepoint(litehtml::tchar_t c);
 // https://datatracker.ietf.org/doc/html/rfc3986#section-3.1
 bool is_url_scheme_codepoint(litehtml::tchar_t c);
 
-} // namespace litehtml
+}  // namespace litehtml
 
-#endif // LITEHTML_CODEPOINT_H__
+#endif  // LITEHTML_CODEPOINT_H__

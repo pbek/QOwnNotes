@@ -29,9 +29,8 @@
 
 namespace FakeVim {
 
-struct Tr
-{
+struct Tr {
     Q_DECLARE_TR_FUNCTIONS(FakeVim)
 };
 
-} // namespace FakeVim
+}    // namespace FakeVim

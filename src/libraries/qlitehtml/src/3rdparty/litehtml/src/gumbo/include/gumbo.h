@@ -100,15 +100,13 @@ extern const GumboStringPiece kGumboEmptyString;
  * Compares two GumboStringPieces, and returns true if they're equal or false
  * otherwise.
  */
-bool gumbo_string_equals(
-    const GumboStringPiece* str1, const GumboStringPiece* str2);
+bool gumbo_string_equals(const GumboStringPiece* str1, const GumboStringPiece* str2);
 
 /**
  * Compares two GumboStringPieces ignoring case, and returns true if they're
  * equal or false otherwise.
  */
-bool gumbo_string_equals_ignore_case(
-    const GumboStringPiece* str1, const GumboStringPiece* str2);
+bool gumbo_string_equals_ignore_case(const GumboStringPiece* str1, const GumboStringPiece* str2);
 
 /**
  * A simple vector implementation.  This stores a pointer to a data array and a
@@ -318,11 +316,7 @@ typedef struct GumboInternalNode GumboNode;
 /**
  * http://www.whatwg.org/specs/web-apps/current-work/complete/dom.html#quirks-mode
  */
-typedef enum {
-  GUMBO_DOCTYPE_NO_QUIRKS,
-  GUMBO_DOCTYPE_QUIRKS,
-  GUMBO_DOCTYPE_LIMITED_QUIRKS
-} GumboQuirksModeEnum;
+typedef enum { GUMBO_DOCTYPE_NO_QUIRKS, GUMBO_DOCTYPE_QUIRKS, GUMBO_DOCTYPE_LIMITED_QUIRKS } GumboQuirksModeEnum;
 
 /**
  * Namespaces.
@@ -331,11 +325,7 @@ typedef enum {
  * <math> tag is in the MathML namespace, and anything else is inside the HTML
  * namespace.  No other namespaces are supported, so this can be an enum only.
  */
-typedef enum {
-  GUMBO_NAMESPACE_HTML,
-  GUMBO_NAMESPACE_SVG,
-  GUMBO_NAMESPACE_MATHML
-} GumboNamespaceEnum;
+typedef enum { GUMBO_NAMESPACE_HTML, GUMBO_NAMESPACE_SVG, GUMBO_NAMESPACE_MATHML } GumboNamespaceEnum;
 
 /**
  * Parse flags.
@@ -658,8 +648,7 @@ GumboOutput* gumbo_parse(const char* buffer);
  * Extended version of gumbo_parse that takes an explicit options structure,
  * buffer, and length.
  */
-GumboOutput* gumbo_parse_with_options(
-    const GumboOptions* options, const char* buffer, size_t buffer_length);
+GumboOutput* gumbo_parse_with_options(const GumboOptions* options, const char* buffer, size_t buffer_length);
 
 /** Release the memory used for the parse tree & parse errors. */
 void gumbo_destroy_output(const GumboOptions* options, GumboOutput* output);

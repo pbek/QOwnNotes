@@ -20,8 +20,8 @@
 #ifndef SONNET_SPELLERPLUGIN_P_H
 #define SONNET_SPELLERPLUGIN_P_H
 
-#include <QStringList>
 #include <QString>
+#include <QStringList>
 
 namespace Sonnet {
 /**
@@ -32,9 +32,8 @@ namespace Sonnet {
  * @short class used for actuall spell checking
  */
 class SpellerPluginPrivate;
-class SpellerPlugin
-{
-public:
+class SpellerPlugin {
+   public:
     virtual ~SpellerPlugin();
 
     /**
@@ -85,11 +84,12 @@ public:
      */
     QString language() const;
 
-protected:
+   protected:
     SpellerPlugin(const QString &lang);
-private:
+
+   private:
     SpellerPluginPrivate *const d;
 };
-}
+}    // namespace Sonnet
 
 #endif

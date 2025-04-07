@@ -29,49 +29,46 @@
 
 #include "litehtml/tstring_view.h"
 
-#include <iostream>
-
 #include <gtest/gtest.h>
+
+#include <iostream>
 
 using namespace litehtml;
 
-TEST(TStringViewTest, DefaultConstructor)
-{
-    tstring_view view;
+TEST(TStringViewTest, DefaultConstructor) {
+  tstring_view view;
 
-    EXPECT_EQ(nullptr, view.data());
-    EXPECT_EQ(0, view.size());
-    EXPECT_TRUE(view.empty());
+  EXPECT_EQ(nullptr, view.data());
+  EXPECT_EQ(0, view.size());
+  EXPECT_TRUE(view.empty());
 }
 
-TEST(TStringViewTest, Constructor)
-{
-    constexpr size_t offset = 5;
-    constexpr size_t length = 10;
+TEST(TStringViewTest, Constructor) {
+  constexpr size_t offset = 5;
+  constexpr size_t length = 10;
 
-    tstring string = _t("the quick brown fox jumps over the lazy dog");
-    tstring_view view(string.data() + offset, length);
+  tstring string = _t("the quick brown fox jumps over the lazy dog");
+  tstring_view view(string.data() + offset, length);
 
-    EXPECT_EQ(string.data() + offset, view.data());
-    EXPECT_EQ(length, view.size());
-    EXPECT_FALSE(view.empty());
+  EXPECT_EQ(string.data() + offset, view.data());
+  EXPECT_EQ(length, view.size());
+  EXPECT_FALSE(view.empty());
 
-    for (size_t i = 0; i < view.size(); i++) {
-        EXPECT_EQ(string[offset + i], view[i]);
-    }
+  for (size_t i = 0; i < view.size(); i++) {
+    EXPECT_EQ(string[offset + i], view[i]);
+  }
 }
 
-TEST(TStringViewTest, RangeForLoop)
-{
-    constexpr size_t offset = 5;
-    constexpr size_t length = 10;
+TEST(TStringViewTest, RangeForLoop) {
+  constexpr size_t offset = 5;
+  constexpr size_t length = 10;
 
-    tstring string = _t("the quick brown fox jumps over the lazy dog");
-    tstring_view view(string.data() + offset, length);
+  tstring string = _t("the quick brown fox jumps over the lazy dog");
+  tstring_view view(string.data() + offset, length);
 
-    for (auto c : view) {
-        // TODO: How can we automatically (rather than manually) verify the
-        // iterator is working properly here?
-        std::cout << c << std::endl;
-    }
+  for (auto c : view) {
+    // TODO: How can we automatically (rather than manually) verify the
+    // iterator is working properly here?
+    std::cout << c << std::endl;
+  }
 }
