@@ -2,51 +2,32 @@
 # https://github.com/numtide/treefmt-nix
 
 on-unmatched = "info"
+excludes = [
+  "build/**",
+  "build-*/**",
+  "src/build/**",
+  "src/build-*/**",
+  "src/cmake-build-debug/**",
+  "src/Qt5-Debug/**",
+  "bin/**",
+  "doc/build/**",
+  "stage/**",
+  "parts/**",
+  "secrets/**",
+  "src/libraries/build-*/**",
+  "src/libraries/qkeysequencewidget/**",
+  "src/libraries/qttoolbareditor/**",
+  "src/libraries/qtcsv/**",
+  "src/libraries/md4c/**",
+  "src/libraries/qhotkey/**",
+]
 
 [formatter.clang-format]
 command = "clang-format"
 options = ["-i"]
-
-# Only target the exact directories we want
-includes = [
-  # Non-recursive for src root
-  "src/*.cpp",
-  "src/*.h",
-
-  # Recursive for specific subdirectories
-  "src/entities/**/*.cpp",
-  "src/entities/**/*.h",
-  "src/utils/**/*.cpp",
-  "src/utils/**/*.h",
-  "src/helpers/**/*.cpp",
-  "src/helpers/**/*.h",
-  "src/services/**/*.cpp",
-  "src/services/**/*.h",
-  "src/widgets/**/*.cpp",
-  "src/widgets/**/*.h",
-  "src/dialogs/**/*.cpp",
-  "src/dialogs/**/*.h",
-  "src/api/**/*.cpp",
-  "src/api/**/*.h",
-  "src/libraries/piwiktracker/**/*.cpp",
-  "src/libraries/piwiktracker/**/*.h",
-  "src/libraries/qmarkdowntextedit/**/*.cpp",
-  "src/libraries/qmarkdowntextedit/**/*.h",
-
-  # Recursive for tests
-  "tests/unit_tests/**/*.cpp",
-  "tests/unit_tests/**/*.h",
-]
-
-# Explicitly exclude everything else
+includes = ["*.cpp", "*.h"]
 excludes = [
-  # Exclude everything not explicitly included
-  "src/libraries/**/*.cpp",
-  "src/libraries/**/*.cxx",
-  "src/libraries/**/*.c",
-  "src/libraries/**/*.h",
-  "src/libraries/**/*.hxx",
-  # You can add more specific exclusions here as needed
+  "src/libraries/diff_match_patch/**", # Library was broken by clang-format
 ]
 
 [formatter.prettier]
