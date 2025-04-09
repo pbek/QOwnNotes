@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.4.2
+
+- The cloud connections test will now not be made automatically, when switching
+  to the _Nextcloud settings_ page, because that will store the settings, which
+  takes a while (for [#3250](https://github.com/pbek/QOwnNotes/issues/3250))
+
 ## 25.4.1
 
 - In the TODO dialog, now it was made sure that the editing pane is disabled and

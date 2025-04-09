@@ -3336,9 +3336,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     if (index == DebugPage) {
         outputSettings();
     } else if (index == OwnCloudPage) {
-        if (connectionTestCanBeStarted()) {
-            on_connectButton_clicked();
-        }
+        resetOKLabelData();
     } else if (index == AiPage) {
         buildAiScriptingTreeWidget();
     }
