@@ -4249,7 +4249,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      <number>1</number>
                     </property>
                     <property name="maximum">
-                     <number>999</number>
+                     <number>999999</number>
                     </property>
                     <property name="value">
                      <number>10</number>

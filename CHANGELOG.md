@@ -8,6 +8,8 @@
 - The cloud connections test will now not be made automatically, when switching
   to the **Nextcloud settings** page, because that will store the settings,
   which takes a while (for [#3250](https://github.com/pbek/QOwnNotes/issues/3250))
+- The maximum note save interval time was increased to 6 digits in the
+  **General settings** (for [#3254](https://github.com/pbek/QOwnNotes/issues/3254))
 
 ## 25.4.1
 
