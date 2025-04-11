@@ -2,9 +2,12 @@
 
 ## 25.4.2
 
+- Most of the initialization of the pages in the **Settings dialog** will now be
+  done once when the page is shown, not when the settings dialog is created, to
+  speed up the opening of the dialog (for [#3250](https://github.com/pbek/QOwnNotes/issues/3250))
 - The cloud connections test will now not be made automatically, when switching
-  to the _Nextcloud settings_ page, because that will store the settings, which
-  takes a while (for [#3250](https://github.com/pbek/QOwnNotes/issues/3250))
+  to the **Nextcloud settings** page, because that will store the settings,
+  which takes a while (for [#3250](https://github.com/pbek/QOwnNotes/issues/3250))
 
 ## 25.4.1
 

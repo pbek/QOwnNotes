@@ -361,6 +361,7 @@ class SettingsDialog : public MasterDialog {
     QString _newScriptName;
     CloudConnection _selectedCloudConnection;
     int _loginFlowPollCount = 0;
+    QHash<int, bool> _pageInitialized;
 
     void storeSettings();
 
@@ -452,6 +453,8 @@ class SettingsDialog : public MasterDialog {
     void buildAiScriptingTreeWidget();
 
     void runAiApiTest(QString backend, QString model, QString apiKey = QString());
+
+    bool initializePage(int index);
 };
 
 #endif    // SETTINGSDIALOG_H
