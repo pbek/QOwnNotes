@@ -3194,7 +3194,7 @@ bool SettingsDialog::initializePage(int index) {
         case SettingsPages::NetworkPage: {
             // do the network proxy tab setup
             setupProxyPage();
-        }
+        } break;
         case SettingsPages::ExperimentalPage: {
             if (!ui->enableNoteTreeCheckBox->text().contains(QLatin1String("work in progress"))) {
                 ui->enableNoteTreeCheckBox->setText(ui->enableNoteTreeCheckBox->text() +
