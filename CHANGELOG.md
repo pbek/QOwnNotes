@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.4.3
+
+- A PPA for Ubuntu 25.04 (Plucky Puffin) was added
+
 ## 25.4.2
 
 - Most of the initialization of the pages in the **Settings dialog** will now be
