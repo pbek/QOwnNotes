@@ -1057,7 +1057,7 @@ QString quoteUnprintable(const QString &ba) {
         else if (cc == '\n')
             res += "<CR>";
         else
-            res += QStringLiteral("\\x%1").arg(c.unicode(), 2, 16, QLatin1Char('0'));
+            res += QStringLiteral("\\x%1").arg(int16_t(c.unicode()), 2, 16, QLatin1Char('0'));
     }
     return res;
 }

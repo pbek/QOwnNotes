@@ -2,6 +2,7 @@
 
 ## 25.4.3
 
+- A build error in _fakevim_ with Qt 6.9 was fixed (for [#3258](https://github.com/pbek/QOwnNotes/issues/3258))
 - A PPA for Ubuntu 25.04 (Plucky Puffin) was added
 
 ## 25.4.2
