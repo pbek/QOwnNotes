@@ -76,6 +76,11 @@ nix-build-qt5-force:
 nix-build-qt5153-force:
     nix build '.?submodules=1#qownnotes-qt5153' --rebuild
 
+# Build the application with Qt 6.9 for nix
+[group('nix')]
+nix-build-qt69 args='':
+    nix build '.?submodules=1#qownnotes-qt69' {{ args }}
+
 # Build the application with Qt6 for nix with a trace
 [group('nix')]
 nix-build-trace:
