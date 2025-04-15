@@ -175,7 +175,7 @@ fix-settings-ui-file:
 # Attach to the QOwnNotes process with lurk
 [group('debug')]
 process-trace:
-    sudo lurk --attach `procs QOwnNotes | fzf --height 40% --layout reverse | awk '{print $1}'`
+    nix-shell -p lurk --run "sudo lurk --attach `procs QOwnNotes | fzf --height 40% --layout reverse | awk '{print $1}'`"
 
 # Generate the icons for the whole project based on icons/icon.svg and icons/icon-dark.svg
 [group('icons')]
