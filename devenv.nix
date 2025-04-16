@@ -54,7 +54,7 @@
   # The symlinks are to be used in Qt Creator and CLion
   scripts.update-qmake-symlinks.exec = ''
     BIN_DIR="''${DEVENV_ROOT}/bin"
-    echo "Updating qmake symlinks in ''${BIN_DIR}..."
+    echo "🔗 Updating qmake symlinks in ''${BIN_DIR}..."
 
     mkdir -p "''${BIN_DIR}"
     ln -sf "${pkgs.kdePackages.qtbase}/bin/qmake" "''${BIN_DIR}/qmake6"
