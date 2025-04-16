@@ -38,6 +38,7 @@
       libicns
 
       # Packages for treefmt
+      treefmt
       libclang
       nodePackages.prettier
       shfmt

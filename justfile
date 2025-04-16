@@ -18,7 +18,6 @@ alias linter-fix := clang-format
 alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
-alias nixfmt := nix-format
 alias fmt := format
 
 # Build the translations
@@ -187,21 +186,6 @@ generate-icons:
 snap-generate-token:
     nix-shell -p snapcraft --run "snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -"
 
-# Format the nix files
-[group('linter')]
-nix-format:
-    nix-shell -p fd nixfmt-rfc-style --run "fd -e nix --exec-batch nixfmt"
-
-# Format all justfiles
-[group('linter')]
-just-format:
-    #!/usr/bin/env bash
-    # Find all files named "justfile" recursively and run just --fmt --unstable on them
-    find . -type f -name "justfile" -print0 | while IFS= read -r -d '' file; do
-        echo "Formatting $file"
-        just --fmt --unstable -f "$file"
-    done
-
 # Add git commit hashes to the .git-blame-ignore-revs file
 [group('linter')]
 add-git-blame-ignore-revs:
@@ -212,7 +196,7 @@ add-git-blame-ignore-revs:
 # Format all files
 [group('linter')]
 format args='':
-    nix-shell -p treefmt libclang nodePackages.prettier shfmt nixfmt-rfc-style statix taplo cmake-format --run "treefmt {{ args }}"
+    treefmt {{ args }}
 
 # Run a GitHub workflow
 [group('linter')]
