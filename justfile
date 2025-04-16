@@ -167,7 +167,7 @@ git-create-patches:
 open-crowdin-webpage:
     xdg-open https://crowdin.com/project/qownnotes/activity-stream
 
-# Fig the settings.ui file after QtCreator has destroyed it
+# Fix the settings.ui file after QtCreator has destroyed it
 [group('linter')]
 fix-settings-ui-file:
     ./scripts/fix-settings-ui-file.sh
