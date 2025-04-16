@@ -35,9 +35,15 @@ jobs:
         uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixos-unstable
+      - name: 🔒 Cache dependencies
+        uses: cachix/cachix-action@v14
+        with:
+          name: devenv
+      - name: 🔧 Install devenv.sh
+        run: nix profile install nixpkgs#devenv
       - name: 🧰 Checkout code
         uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: 🚧 Build nix package
-        run: nix-shell --run "just ${{ matrix.just-recipe }}"
+        run: devenv shell just ${{ matrix.just-recipe }}
