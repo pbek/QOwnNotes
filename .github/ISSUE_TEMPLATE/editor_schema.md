@@ -2,7 +2,7 @@
 name: Editor schema
 about: Share your editor schema exported from "Editor fonts & colors" settings.
 title: "[EDITOR SCHEMA] "
-labels: "Type: Feature"
+labels: ["Type: Feature", "Importance: Low"]
 assignees: "pbek"
 ---
 
