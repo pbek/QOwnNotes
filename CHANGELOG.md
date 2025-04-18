@@ -4,7 +4,7 @@
 
 - The format of the date and time in the name of new notes was changed to resemble
   `Note 2025-04-18 11h54s09` to be visually more pleasing and containing no `.`
-  characters
+  characters (for [#3259](https://github.com/pbek/QOwnNotes/issues/3259))
   - The text `Note` will now also be translated
 
 ## 25.4.3
