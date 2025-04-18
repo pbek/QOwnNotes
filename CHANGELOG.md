@@ -6,6 +6,8 @@
   `Note 2025-04-18 11h54s09` to be visually more pleasing and containing no `.`
   characters (for [#3259](https://github.com/pbek/QOwnNotes/issues/3259))
   - The text `Note` will now also be translated
+- When a new note is created, now [handleNoteNameHook](https://www.qownnotes.org/scripting/hooks.html#handlenewnoteheadlinehook)
+  is also applied (for [#3260](https://github.com/pbek/QOwnNotes/issues/3260))
 
 ## 25.4.3
 

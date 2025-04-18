@@ -6039,6 +6039,15 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
                                            : tr("Current note could not be stored to disk"),
                              noteWasStored ? QStringLiteral("💾") : QStringLiteral("❌"), 3000);
 
+        // Check if a name was set in a script
+        // We need to do that in the end or the changed name will leak into the note filename
+        const QString hookName = ScriptingService::instance()->callHandleNoteNameHook(&note);
+
+        if (!hookName.isEmpty()) {
+            note.setName(hookName);
+            note.store();
+        }
+
         {
             const QSignalBlocker blocker2(ui->noteTreeWidget);
             Q_UNUSED(blocker2)
