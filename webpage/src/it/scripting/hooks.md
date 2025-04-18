@@ -159,6 +159,8 @@ Puoi dare un'occhiata all'esempio [esempio.qml](https://github.com/pbek/QOwnNote
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 Puoi dare un'occhiata all'esempio [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Potrebbe non essere una buona idea usare questo hook se l'impostazione per usare il nome del file come nome della nota è attiva.
@@ -425,7 +427,7 @@ Questo hook è chiamato quando quando lo spazio di lavoro viene cambiato.
 
 ```js
 /**
- * Questa funzione è chiamata quando quando lo spazio di lavoro
+ * Questa funzione è chiamata quando quando lo spazio di lavoro 
  * viene cambiato
  *
  * @param oldUuid vecchio uuid dello spazio di lavoro

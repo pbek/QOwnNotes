@@ -917,7 +917,7 @@ void ScriptingService :: reloadScriptingEngine ();
 
 ```js
 // recharger le moteur de script
-script.reloadScriptingEngine();
+script.reloadScriptingEngine ();
 ```
 
 ## Récupérer une note par son nom de fichier
@@ -940,7 +940,7 @@ NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
 
 ```js
 // récupère la note par nom de fichier
-script.fetchNoteByFileName("ma note.md");
+script.fetchNoteByFileName ("ma note.md");
 ```
 
 ## Récupérer une note par son identifiant
@@ -961,7 +961,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 
 ```js
 // récupère la note par identifiant
-script.fetchNoteById(243);
+script.fetchNoteById (243);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
@@ -988,7 +988,7 @@ booléen ScriptingService :: noteExistsByFileName (QString fileName,
 
 ```js
 // vérifie si la note existe, mais ignore l'id de "note"
-script.noteExistsByFileName("ma note.md", note.id);
+script.noteExistsByFileName ("ma note.md", note.id);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
@@ -1011,7 +1011,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 
 ```js
 // copie du texte dans le presse-papiers
-script.setClipboardText("texte à copier");
+script.setClipboardText ("texte à copier");
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
@@ -1090,10 +1090,7 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 
 ```js
 // affiche une boîte de message d'information
-script.informationMessageBox(
-  "Le texte que je veux afficher",
-  "Un titre facultatif",
-);
+script.informationMessageBox ("Le texte que je veux afficher", "Un titre facultatif");
 ```
 
 ## Affichage d'une boîte de message de question
@@ -1366,7 +1363,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 
 ```js
 // charger et enregistrer une variable de paramètres d'application
-script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
+script.log (script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
 Gardez à l'esprit que les paramètres peuvent être vides, vous devez vous en occuper vous-même. `defaultValue` n'est utilisé que si le paramètre n'existe nulle part.
@@ -1391,7 +1388,7 @@ QString ScriptingService :: cacheDir (const QString & subDir) const;
 
 ```js
 // crée le répertoire cache pour mon-id-de-script
-var cacheDirForScript = script.cacheDir("mon-id-de-script");
+var cacheDirForScript = script.cacheDir ("mon-id-de-script");
 ```
 
 ## Vider un répertoire cache
@@ -1568,10 +1565,10 @@ void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 
 ```js
 // basculer en mode lecture seule
-script.triggerMenuAction("actionAllow_note_editing");
+script.triggerMenuAction ("actionAllow_note_editing");
 
 // désactiver le mode lecture seule
-script.triggerMenuAction("actionAllow_note_editing", 1);
+script.triggerMenuAction ("actionAllow_note_editing", 1);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/disable-readonly-mode.qml).

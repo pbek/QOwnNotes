@@ -11,7 +11,7 @@ Info
 
 - Aby rozszerzenie przeglądarki Web Companion działało, aplikacja QOwnNotes musi być uruchomiona.
 - Nie wymaga połączenia z Internetem. Rozszerzenia przeglądarki działają **w trybie offline**.
-  :::
+:::
 
 ## Instalacja
 

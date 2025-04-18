@@ -54,13 +54,13 @@
 - [QOwnNotes در LinuxHints](https://www.linuxhint.com/install-qownnotes-linux/)
 - [QOwnNotes：一款记录笔记和待办事项的应用，集成 ownCloud 云服务-软件 ◆ 分享|Linux.中国-开源社区](https://linux.cn/article-7769-1.html)
 - [QOwnNotes در Chocolatey](https://chocolatey.org/packages/qownnotes)
-- [پس از اورنت چه چیزی می آید؟ مروزی بر QOwnNotes | JawFodder](http://www.jawfodder.com/what-comes-after-evernote-a-qownnotes-review/)
+- [پس از اورنت چه چیزی می آید؟ مروزی بر QOwnNotes  | JawFodder](http://www.jawfodder.com/what-comes-after-evernote-a-qownnotes-review/)
 - [یادداشت برداری با نکست کلود، QOwnNotes و Notebooks](https://lifemeetscode.com/blog/2017/05/03/taking-notes-nextcloud-qownnotes-notebooks/)
   - استفاده از [Notebooks](http://www.notebooksapp.com/) برای همگام سازی یادداشت ها از طریق WebDAV در iOS
 - [برنامه های یادداشت برداری مرتبه ای: لینوکس](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
 - [QownNotes - De la prise de notes chiffrées sur votre cloud personnel - Korben](https://korben.info/qownnotes.html)
 - [6 نمونه از بهترین برنامه های جایگزین نوت پد ویندوز](http://www.makeuseof.com/tag/best-windows-notepad-alternatives/)
-- [Synchronisation des notes (QOwnNotes) — Wiki de la mère Zaclys](<https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes)>)
+- [Synchronisation des notes (QOwnNotes) — Wiki de la mère Zaclys](https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes))
 - [QOwnNotes 17.06.06 z notatkami w chmurach | przystajnik](https://404.g-net.pl/2017/06/qownnotes-17-06-06-notatkami-chmurach/)
 - [نحوه نصب مدیر لیست انجام دادنی و یادداشت برداری QOwnNotes در اوبونتو | UbuntuHandbook](http://ubuntuhandbook.org/index.php/2017/06/install-qownnotes-ubuntu/)
 - [نحوه نصب QOwnNotes در اوبونتو | CONNECTwww.com](https://connectwww.com/how-to-install-qownnotes-on-ubuntu/5518/)
@@ -256,11 +256,11 @@
 - [برنامه های یادداشت برداری](https://atarnotes.com/forum/index.php?topic=190238.0)
 - [آیا می خواهید برنامه های جدیدی در ecloud.global اضافه کنید؟ - ویژگی ها و برنامه ها - e/ community/](https://community.e.foundation/t/adding-new-apps-at-ecloud-global/12404/9)
 - [KDE Neon - PCGuia](https://www.pcguia.pt/2019/07/kde-neon/)
-- [یادداشت برداری - آیا ویرایشگر متنی لینوکس به همراه پشتیبانی از تصویرسازی ها، فولدینگ و فونت های متفاوت سراغ دارید؟ - توصیه های نرم افزاری Stack Exchange](https://softwarerecs.stackexchange.com/questions/72663/linux-text-editor-with-su)
+- [یادداشت برداری - آیا ویرایشگر متنی لینوکس به همراه پشتیبانی از تصویرسازی ها، فولدینگ و فونت های متفاوت سراغ دارید؟  - توصیه های نرم افزاری Stack Exchange](https://softwarerecs.stackexchange.com/questions/72663/linux-text-editor-with-su)
   - توضیح
 - [سرور من - AlternativeTo.net](https://alternativeto.net/list/8220/my-server)
 - [50 پروژه برتر متن باز یادداشت برداری](https://awesomeopensource.com/projects/note-taking)
-- [QOwnNotes - QOwnNotes mac برای مکینتاش (专业私有云笔记) V20.4.2免费版 - 未来Mac下载](https://mac.orsoon.com/Mac/164313.html)
+- [QOwnNotes  - QOwnNotes mac برای مکینتاش (专业私有云笔记) V20.4.2免费版 - 未来Mac下载](https://mac.orsoon.com/Mac/164313.html)
   - آنها از نصب کننده سیستم عامل مکینتاش خود برای QOwnNotes بهره مند هستند!
 - [در مورد دسکتاپ لینوکس با 7 برنامه ضروری مبتکر باشید | Snapcraft](https://snapcraft.io/blog/get-productive-on-the-linux-desktop-with-7-essential-apps)
   - Martin Wimpress
@@ -308,6 +308,6 @@
 
 ## QOwnNotes در سایر سیستم عامل ها
 
-- الپاین لینوکس: <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
+- الپاین لینوکس:  <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
 - nixos: <https://search.nixos.org/packages?query=qownnotes>
   - <https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/office/qownnotes/default.nix>

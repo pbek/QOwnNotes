@@ -19,13 +19,14 @@ There is an Evernote import dialog you can reach in the `Note / Import` menu to 
 ## Google Keep
 
 > استخدم Google Takeout لتنزيل مهام Keep
->
+> 
 > استخرج محتويات الملف المضغوط
->
+> 
 > نزّل keep_to_markdown.py إلى جوار مجلد Keep الذي استخرجته
->
+> 
 >     python keep_to_markdown.py Keep out/
->
+>     
+> 
 > أبدل الاسم Keep في الأمر باسم المجلد الذي فيه الملاحظات بصيغة JSON. ومجلد out سيُنشأ إذا لم يكن موجودا.
 
 من <https://gitlab.com/-/snippets/2002921>

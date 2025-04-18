@@ -172,9 +172,7 @@ mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 mainWindow.createNewNoteSubFolder("Mi carpeta estrafalaria");
 
 // Insertar HTML en la nota actual como Markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote(
-  "<h2>mi título</h2>algo de texto",
-);
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>mi título</h2>algo de texto");
 
 // Establecer el espacio de trabajo "Edición" como espacio de trabajo actual
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edición"));
@@ -184,9 +182,9 @@ mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edición"));
 var etiqueta = script.getTagByNameBreadcrumbList(["prueba"]);
 mainWindow.jumpToTag(etiqueta.id);
 
-// Obtener todas las notas de las pestañas que están abiertas
+// Obtener todas las notas de las pestañas que están abiertas 
 var IDnotas = mainWindow.getNoteTabNoteIdList();
-IDnotas.forEach(function (IDnota) {
+IDnotas.forEach(function (IDnota){
   var nota = script.fetchNoteById(IDnota);
 
   // Hacer algo con la nota

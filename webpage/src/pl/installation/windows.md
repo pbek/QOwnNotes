@@ -24,7 +24,7 @@ Musisz samodzielnie pobrać plik ZIP z [AppVeyor](https://ci.appveyor.com/projec
 
 Następnie możesz bezpośrednio uruchomić `QOwnNotes.exe` z tego folderu, nie jest wymagana żadna instalacja.
 
-::: wskazówka Info
+::: wskazówka Info 
 Mechanizm automatycznej aktualizacji nie działa z kompilacją AppVeyor dla Windows XP!
 Będziesz musiał sam pobrać nowe wersje.
 :::

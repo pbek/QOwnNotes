@@ -9,7 +9,7 @@ Sie können QOwnNotesAPI direkt in Ihrer **Nextcloud**- oder **ownCloud**-Instan
 
 - [Nextcloud Apps-Seite](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps-Seite](https://marketplace.owncloud.com/apps/qownnotesapi)
-  :::
+:::
 
 Das Teilen von Notizen erfolgt über die von Nextcloud / ownCloud bereitgestellte API. Auf Aufgaben wird direkt über CalDAV zugegriffen.
 

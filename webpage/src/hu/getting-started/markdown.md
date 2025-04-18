@@ -176,7 +176,6 @@ Tegyen négy szóközt a kód elé, hogy kódblokkként jelölje meg.
 ### Backtick fence
 
 Három backticket is használhat egy kódblokk létrehozásához.
-
 ````markdown
 ```
 Code goes here
@@ -197,9 +196,7 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

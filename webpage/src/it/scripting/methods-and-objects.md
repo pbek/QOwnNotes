@@ -1281,10 +1281,10 @@ In addition, you can override the `settingsVariables` with a special function `r
 
 ```js
 /**
- * Registra nuovamente le variabili delle impostazioni
- *
- * Utilizzare questo metodo se si desidera utilizzare il codice per sovrascrivere le variabili, ad esempio l'impostazione
- * valori predefiniti a seconda del sistema operativo.
+  * Registra nuovamente le variabili delle impostazioni
+  *
+  * Utilizzare questo metodo se si desidera utilizzare il codice per sovrascrivere le variabili, ad esempio l'impostazione
+  * valori predefiniti a seconda del sistema operativo.
  */
 function registerSettingsVariables() {
   if (script.platformIsWindows()) {

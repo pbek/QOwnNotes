@@ -68,10 +68,10 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 
 ```js
 var resultado = script.startSynchronousProcess(
-  "/ruta/a/mi/programa",
-  ["mi parámetro"],
-  "datos",
-  "/ruta/en/la/cual/ejecutar",
+  "/ruta/a/mi/programa", 
+  ["mi parámetro"], 
+  "datos", 
+  "/ruta/en/la/cual/ejecutar"
 );
 ```
 
@@ -277,7 +277,7 @@ Puede que quiera echar un vistazo al ejemplo [scribble.qml](https://github.com/p
  * de la edición de la nota (por defecto: falso)
  * @param hideButtonInToolbar si es verdadero, el botón no se mostrará en el
  * barra de herramientas de acciones personalizadas (por defecto: falso)
- * @param useInNoteListContextMenu si es verdadero, usar la acción del menú contextual
+ * @param useInNoteListContextMenu si es verdadero, usar la acción del menú contextual 
  * de la lista de la nota (por defecto: falso)
  */
 void ScriptingService:: registerCustomAction (identificador QString,
@@ -806,7 +806,7 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 // crea todas las etiquetas hasta el tercer nivel y devuelve el objeto de etiqueta para
 // la etiqueta "nivel3", que se vería así en el árbol de etiquetas:
 // nivel1 > nivel2 > nivel3
-var tag = script.getTagByNameBreadcrumbList(["nivel1", "nivel2", "nivel3"]);
+var tag = script.getTagByNameBreadcrumbList (["nivel1", "nivel2", "nivel3"]);
 ```
 
 ## Buscar etiquetas por nombre
@@ -853,7 +853,7 @@ QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```js
 var noteIds = script.fetchNoteIdsByNoteTextPart("mitexto");
 
-noteIds.forEach(function (noteId) {
+noteIds.forEach(function (noteId){
   var nota = script.fetchNoteById(noteId);
 
   // hacer algo más con la nota
@@ -1090,10 +1090,7 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 
 ```js
 // muestra un cuadro de mensaje de información
-script.informationMessageBox(
-  "El texto que quiero mostrar",
-  "Algún título opcional",
-);
+script.informationMessageBox ("El texto que quiero mostrar", "Algún título opcional");
 ```
 
 ## Mostrar un cuadro de mensaje de pregunta
@@ -1125,7 +1122,7 @@ int ScriptingService::questionMessageBox (
 var resultado = script.questionMessageBox(
   "El texto que quiero mostrar",
   "Algún título opcional",
-  0x01000000 | 0x02000000,
+  0x01000000|0x02000000,
   0x02000000,
 );
 script.log(resultado);
@@ -1292,7 +1289,7 @@ Además, puede sobreescribir `settingsVariables` con una función especial `regi
 function registerSettingsVariables() {
   if (script.platformIsWindows()) {
     // sobreescribir el valor predeterminado de miArchivo
-    settingsVariables[3].default = "pandoc.exe";
+    settingsVariables[3].default = "pandoc.exe"
   }
 }
 ```
@@ -1331,10 +1328,7 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 
 ```js
 // almacenar una variable persistente
-script.setPersistentVariable(
-  "PruebaDeVariablesPersistentes/miVariable",
-  result,
-);
+script.setPersistentVariable("PruebaDeVariablesPersistentes/miVariable", result);
 
 // cargar y registrar una variable persistente
 script.log(
@@ -1369,7 +1363,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 
 ```js
 // cargar y registrar una variable de configuración de la aplicación
-script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
+script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
 Tenga en cuenta que la configuración en realidad puede estar vacía. Debe ocuparse de eso por su propia cuenta. `defaultValue` solo se usa si la configuración no existe en absoluto.
@@ -1608,11 +1602,11 @@ Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`
 ### Ejemplo
 
 ```js
-var resultado = script.inputDialogGetItem(
-  "cuadro combinado",
-  "Por favor seleccione un elemento",
-  ["Elemento 1", "Elemento 2", "Elemento 3"],
-);
+var resultado = script.inputDialogGetItem("cuadro combinado", "Por favor seleccione un elemento", [
+  "Elemento 1",
+  "Elemento 2",
+  "Elemento 3",
+]);
 script.log(resultado);
 ```
 
@@ -1673,7 +1667,7 @@ Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`
 var resultado = script.inputDialogGetMultiLineText(
   "edición multi línea",
   "Por favor ingrese un texto",
-  "texto actual",
+  "texto actual"
 );
 script.log(resultado);
 ```
@@ -1752,7 +1746,7 @@ QString ScriptingService::readFromFile(const QString &filePath, const QString &c
 ### Ejemplo
 
 ```js
-if (script.fileExists(rutaArchivo)) {
+if(script.fileExists(rutaArchivo)){
   var datos = script.readFromFile(rutaArchivo);
   script.log(datos);
 }

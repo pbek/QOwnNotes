@@ -50,7 +50,7 @@ There also is an optional setting to enable underline rendering in the _Preview 
 _밑줄_
 ```
 
-::: 팁 [단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다. :::
+:::  팁 [단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다. :::
 
 ## 취소선
 

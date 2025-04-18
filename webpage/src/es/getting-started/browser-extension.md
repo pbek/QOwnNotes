@@ -11,7 +11,7 @@ Información
 
 - QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion.
 - No se necesita una conexión a Internet. Las extensiones del navegador funcionan **sin conexión**.
-  :::
+:::
 
 ## Instalación
 

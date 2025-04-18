@@ -176,7 +176,6 @@ Blocks of code are either fenced by lines with three backticks, or are indented 
 ### Backtick fence
 
 علاوه بر این می توانید از سه بک تیک برای ایجاد یک کد پلاک استفاده کنید.
-
 ````markdown
 ```
 Code goes here
@@ -197,9 +196,7 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

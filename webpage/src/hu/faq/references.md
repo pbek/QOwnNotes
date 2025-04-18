@@ -60,7 +60,7 @@ Amit mások mondtak a QOwnNotes-ról ...
 - [hierarchical note taking applications : linux](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
 - [QownNotes - De la prise de notes chiffrées sur votre cloud personnel - Korben](https://korben.info/qownnotes.html)
 - [The 6 Best Windows Notepad Alternatives](http://www.makeuseof.com/tag/best-windows-notepad-alternatives/)
-- [Synchronisation des notes (QOwnNotes) — Wiki de la mère Zaclys](<https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes)>)
+- [Synchronisation des notes (QOwnNotes) — Wiki de la mère Zaclys](https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes))
 - [QOwnNotes 17.06.06 z notatkami w chmurach | przystajnik](https://404.g-net.pl/2017/06/qownnotes-17-06-06-notatkami-chmurach/)
 - [How to Install QOwnNotes Note-taking & Todo List Manager in Ubuntu | UbuntuHandbook](http://ubuntuhandbook.org/index.php/2017/06/install-qownnotes-ubuntu/)
 - [How to install QOwnNotes on Ubuntu | CONNECTwww.com](https://connectwww.com/how-to-install-qownnotes-on-ubuntu/5518/)

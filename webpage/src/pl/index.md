@@ -7,11 +7,14 @@ tagline: Bezpłatna notatka z otwartym kodem tekstowym w postaci zwykłego tekst
 actionText: Szybki start →
 actionLink: getting-started/overview
 features:
-  - title: Posiadaj swoje notatki
+  - 
+    title: Posiadaj swoje notatki
     details: Wszystkie notatki są przechowywane jako zwykłe pliki tekstowe przecen na komputerze, bez „blokowania dostawcy” Korzystaj z usług synchronizacji, takich jak Nextcloud, do synchronizowania notatek na różnych urządzeniach.
-  - title: Mały ślad
+  - 
+    title: Mały ślad
     details: Aplikacja natywna, zoptymalizowana pod kątem szybkości i zużywająca niewiele zasobów procesora i pamięci.
-  - title: Dostosowywanie
+  - 
+    title: Dostosowywanie
     details: Dzięki możliwości dostosowania i skryptowania, masz kontrolę nad tym, jak chcesz pracować z notatkami.
 footer: Wykonane przez Patrizio Bekerle z ❤️
 ---

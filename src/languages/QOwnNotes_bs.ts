@@ -2688,6 +2688,11 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation type="unfinished">Note</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>Napomena mape</translation>
 </message>

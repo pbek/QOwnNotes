@@ -144,6 +144,8 @@ You may want to take a look at the example [example.qml](https://github.com/pbek
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 در صورتی که تنظیماتی که از نام پرونده به عنوان نام یادداشت استفاده می کند فعال باشد، استفاده از این هوک ایده خوبی به نظر نمی رسد.
@@ -240,7 +242,7 @@ You may want to take a look at the example [encryption-keybase.qml](https://gith
 
 ## noteTaggingHook
 
-شما می توانید مکانیسم برچسب گذاری یادداشت خود را مثلاً با متن خاصی در یادداشت تان مانند `@tag1`، `@tag2` یا `@tag3` پیاده سازی کنید.
+شما می توانید مکانیسم برچسب گذاری یادداشت خود را مثلاً با متن خاصی در یادداشت تان مانند  `@tag1`، `@tag2` یا  `@tag3` پیاده سازی کنید.
 
 ### فراخوانی شگرد و پارامترها
 

@@ -176,7 +176,6 @@ http://www.example.com أو <http://www.example.com>
 ### سور الفاصلات العليا المائلة
 
 يمكنك أيضا استخدام ثلاث فاصلات عليا مائلة لإنشاء كتلة كود.
-
 ````markdown
 ```
 الكود يأتي هنا
@@ -197,9 +196,7 @@ http://www.example.com أو <http://www.example.com>
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

@@ -11,7 +11,7 @@ Info
 
 - QOwnNotes muss ausgeführt werden, damit die Web Companion-Browsererweiterung funktioniert.
 - Es ist keine Internetverbindung erforderlich. Die Browsererweiterungen funktionieren **offline**.
-  :::
+:::
 
 ## Installation
 

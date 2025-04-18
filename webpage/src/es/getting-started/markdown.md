@@ -39,7 +39,7 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **
 ## Énfasis
 
 ```markdown
-Utilice el énfasis, también conocido como cursiva, con _asteriscos_.
+Utilice el énfasis, también conocido como cursiva, con *asteriscos*.
 
 Puede usar el énfasis fuerte, también conocido como negrita, con **asteriscos**.
 ```
@@ -176,7 +176,6 @@ Agregue cuatro espacios delante de su código para marcarlo como bloque de códi
 ### Valla de comillas invertidas
 
 También puede utilizar tres comillas invertidas para crear un bloque de código.
-
 ````markdown
 ```
 El código va aquí
@@ -197,10 +196,8 @@ También hay algo de resaltado de sintaxis con bloques de código en QOwnNotes.
 ```bash
 # Soy un comentario
 cd Notas
-```
 ````
-
-```
+````
 
 Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 
@@ -257,7 +254,7 @@ También puede utilizar Markdown en línea.
 | -------- | --------- | ---------- |
 | _Aun_  | `se renderiza` | **bellamente** |
 | 1        | 2         | 3          |
-```
+````
 
 ::: tip
 Presione <kbd>Alt + Shift + T</kbd> para activar un cuadro de diálogo que puede ayudarlo a crear tablas. Incluso puede importar archivos CSV en ese cuadro de diálogo.

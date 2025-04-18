@@ -144,6 +144,8 @@ You may want to take a look at the example [example.qml](https://github.com/pbek
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Lehet, hogy nem jó ötlet ezt a kampót használni, ha a fájlnév jegyzetnévként történő használata aktív.
@@ -246,17 +248,17 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
 
 ```js
 /**
- * Kezeli a jegyzet címkézését
- *
- * Ezt a funkciót akkor hívják meg, amikor címkéket adnak hozzá, eltávolítanak belőlük vagy átnevezik
- * egy jegyzetet vagy egy jegyzet címkéit fel kell tüntetni
- *
- * @param jegyzet
- * A @param művelet lehet "hozzáadás", "eltávolítás", "átnevezés" vagy "lista"
- * @param tagName címke neve hozzáadni, eltávolítani vagy átnevezni
- * @param newTagName címke neve átnevezésre, ha action = "átnevezés"
- * @return note szöveges karaktersorozat vagy a címkék nevének string-listája (ha action = "list")
- */
+  * Kezeli a jegyzet címkézését
+  *
+  * Ezt a funkciót akkor hívják meg, amikor címkéket adnak hozzá, eltávolítanak belőlük vagy átnevezik
+  * egy jegyzetet vagy egy jegyzet címkéit fel kell tüntetni
+  *
+  * @param jegyzet
+  * A @param művelet lehet "hozzáadás", "eltávolítás", "átnevezés" vagy "lista"
+  * @param tagName címke neve hozzáadni, eltávolítani vagy átnevezni
+  * @param newTagName címke neve átnevezésre, ha action = "átnevezés"
+  * @return note szöveges karaktersorozat vagy a címkék nevének string-listája (ha action = "list")
+  */
 ```
 
 - as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
@@ -276,7 +278,7 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
 You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
 
 ::: warning
-Győződjön meg arról, hogy a `list` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül!
+Győződjön meg arról, hogy a ` list ` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül!
 :::
 
 ## noteTaggingByObjectHook

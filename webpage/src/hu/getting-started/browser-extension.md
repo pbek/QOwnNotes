@@ -11,7 +11,7 @@ Információ
 
 - A Web Companion böngészőbővítmény működéséhez a QOwnNotes-nak futnia kell.
 - Nincs szükség internet kapcsolatra. A böngészőbővítmények **offline** működnek.
-  :::
+:::
 
 ## Telepítés
 

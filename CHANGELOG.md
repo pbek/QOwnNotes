@@ -8,6 +8,7 @@
   - The text `Note` will now also be translated
 - When a new note is created, now [handleNoteNameHook](https://www.qownnotes.org/scripting/hooks.html#handlenewnoteheadlinehook)
   is also applied (for [#3260](https://github.com/pbek/QOwnNotes/issues/3260))
+- Added more Korean translation (thank you, venusgirl)
 
 ## 25.4.3
 

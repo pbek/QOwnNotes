@@ -162,6 +162,8 @@ function handleNoteTextFileNameHook(note);
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 ربما تحب أن تلقي نظرة على المثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 ليس مستحسنا استخدام هذا الخطاف إذا فعّل المستخدم خيار السماح لاسم الملف أن يختلف عن اسم الملاحظة.

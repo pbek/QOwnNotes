@@ -144,6 +144,8 @@ Vous voudrez peut-être jeter un coup d'œil aux exemples [example.qml](https://
 function handleNoteNameHook (note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Ce n'est peut-être pas une bonne idée d'utiliser ce hook si le paramètre permettant d'utiliser le nom de fichier comme nom de note est actif.

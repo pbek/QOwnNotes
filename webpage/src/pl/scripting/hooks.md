@@ -144,6 +144,8 @@ Może zechcesz rzucić okiem na przykład [example.qml](https://github.com/pbek/
 funkcja handleNoteNameHook(uwaga);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 Może zechcesz rzucić okiem na przykład [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Używanie tego haka może nie być dobrym pomysłem, jeśli ustawienie używania nazwy pliku jako nazwy notatki jest aktywne.

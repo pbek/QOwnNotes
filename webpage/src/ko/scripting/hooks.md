@@ -7,7 +7,7 @@
 ```js
 /**
  * 이 기능은 노트가 디스크에 저장될 때 호출됩니다
- * 저장된 노트는 수정할 수 없습니다. 수작업으로 수정할 가능성이
+ * 저장된 노트는 수정할 수 없습니다. 수작업으로 수정할 가능성이 
  * 높기 때문에 혼란스러울 수 있습니다.
  *
  * @param {NoteApi} note - the note object of the stored note
@@ -143,6 +143,8 @@ function handleNoteTextFileNameHook(note);
  */
 function handleNoteNameHook(note);
 ```
+
+노트 이름은 주로 목록에 노트를 표시할 때 사용됩니다.
 
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 

@@ -48,7 +48,7 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 - [PC Advisor에서 QOwnNotes](http://www.pcadvisor.co.uk/download/system-desktop-tools/qownnotes-1625-3331133/)
 - **[QOwnNotes – 금주의 앱 – ownCloud](https://owncloud.org/news/qownnotes-app-week/)**
 - [사용해야 하는 Linux 앱 10개](https://youtu.be/oSSyLNb8jA8?t=2m19s)
-- [QOwnNotes 17.01.3 휴대용 - 프로그램 휴대용](http://portable.info.pl/qownnotes-portable/)
+- [QOwnNotes 17.01.3  휴대용 - 프로그램 휴대용](http://portable.info.pl/qownnotes-portable/)
 - [filecluster에서 QOwnNotes](http://www.filecluster.com/Business-Office/PIMS-Organizers/Download-QOwnNotes.html)
 - [QOwnNotes - ownCloud와 연동도 가능한 마크다운 편집기 MOONGIFT](http://www.moongift.jp/2017/03/qownnotes-owncloud%E3%81%A8%E9%80%A3%E6%90%BA%E3%82%82%E5%8F%AF%E8%83%BD%E3%81%AAmarkdown%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/)
 - [LinuxHints에 QOwnNotes](https://www.linuxhint.com/install-qownnotes-linux/)
@@ -60,7 +60,7 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 - [계층적 메모: 응용 프로그램 : Linux](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
 - [QownNotes - 개인 클라우드에 암호화된 노트 작성 - Korben](https://korben.info/qownnotes.html)
 - [Windows 메모장의 6가지 대안](http://www.makeuseof.com/tag/best-windows-notepad-alternatives/)
-- [노트 동기화 (QOwnNotes) — Wiki de la mère Zaclys](<https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes)>)
+- [노트 동기화 (QOwnNotes) — Wiki de la mère Zaclys](https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes))
 - [QOwnNotes 17.06.06 z notatkami w chmurach | przystajnik](https://404.g-net.pl/2017/06/qownnotes-17-06-06-notatkami-chmurach/)
 - [Ubuntu에 QOwnNotes 메모 작성 및 할 일 목록 관리자를 설치하는 방법 | 우분투핸드북](http://ubuntuhandbook.org/index.php/2017/06/install-qownnotes-ubuntu/)
 - [Ubuntu에 QOwnNotes를 설치하는 방법 | CONNECTwww.com](https://connectwww.com/how-to-install-qownnotes-on-ubuntu/5518/)

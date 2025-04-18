@@ -9,7 +9,7 @@
 
 - [صفحة تطبيقات Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - [صفحة تطبيقات ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
-  :::
+:::
 
 تتم مشاركة الملاحظات عبر API الذي يوفره Nextcloud / ownCloud. يتم الوصول إلى المهام مباشرةً عبر CalDAV.
 

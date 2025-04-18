@@ -176,7 +176,6 @@ Dodaj cztery spacje przed kodem, aby oznaczyć go jako blok kodu.
 ### Backtick fence
 
 Możesz także użyć trzech lewych apostrofów, aby utworzyć blok kodu.
-
 ````markdown
 ```
 Code goes here
@@ -197,9 +196,7 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

@@ -485,7 +485,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ```js
 // szöveget ír a jegyzet szövegszerkesztésébe
-script.noteTextEditWrite("Saját szöveg");
+script.noteTextEditWrite ("Saját szöveg");
 ```
 
 You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
@@ -777,7 +777,7 @@ void ScriptingService :: tagCurrentNote (QString tagName);
 
 ```js
 // adjon hozzá egy "kedvenc" címkét az aktuális jegyzethez
-script.tagCurrentNote("kedvenc");
+script.tagCurrentNote ("kedvenc");
 ```
 
 You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
@@ -805,7 +805,7 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 // az összes címkét létrehozza a 3. szintig, és visszaadja a címke objektumot
 // tag "level3", amely így nézne ki a címkefában:
 // szint1 > 2. szint > szint3
-var tag = script.getTagByNameBreadcrumbList(["szint1", "szint2", "szint3"]);
+var tag = script.getTagByNameBreadcrumbList (["szint1", "szint2", "szint3"]);
 ```
 
 ## Címkék keresése név szerint
@@ -940,7 +940,7 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
 
 ```js
 // jegyzet letöltése fájlnév szerint
-script.fetchNoteByFileName("jegyzetem.md");
+script.fetchNoteByFileName ("jegyzetem.md");
 ```
 
 ## Megjegyzés behozása az azonosítója alapján
@@ -961,7 +961,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 
 ```js
 // a jegyzet lehívása azonosító szerint
-script.fetchNoteById(243);
+script.fetchNoteById (243);
 ```
 
 You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
@@ -1280,10 +1280,10 @@ In addition, you can override the `settingsVariables` with a special function `r
 
 ```js
 /**
- * Újra regisztrálja a beállítási változókat
- *
- * Használja ezt a módszert, ha kódot szeretne használni a változók felülírásához, például a beállításhoz
- * az alapértelmezett értékek az operációs rendszertől függtek.
+  * Újra regisztrálja a beállítási változókat
+  *
+  * Használja ezt a módszert, ha kódot szeretne használni a változók felülírásához, például a beállításhoz
+  * az alapértelmezett értékek az operációs rendszertől függtek.
  */
 function registerSettingsVariables() {
   if (script.platformIsWindows()) {
@@ -1387,7 +1387,7 @@ QString ScriptingService::cacheDir(const QString &subDir) const;
 
 ```js
 // létrehozza a cache könyvtárat a my-script-id számára
-var cacheDirForScript = script.cacheDir("my-script-id");
+var cacheDirForScript = script.cacheDir ("my-script-id");
 ```
 
 ## Gyorsítótár könyvtár törlése
@@ -1517,7 +1517,7 @@ QStringList ScriptingService :: selectedNotesPaths ();
 
 ```js
 // az összes kijelölt jegyzet elérési útjának listáját adja vissza
-script.log(script.selectedNotesPaths());
+script.log (script.selectedNotesPaths());
 ```
 
 You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml).

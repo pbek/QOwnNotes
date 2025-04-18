@@ -60,7 +60,7 @@ Co inni mówią o QOwnNotes:
 - [Hierarchiczne aplikacje do tworzenia notatek w Linuksie](https://www.reddit.com/r/linux/comments/5me4wv/hierarchical_note_taking_applications/)
 - [Artykuł „QownNotes – De la prise de notes chiffrées sur votre cloud personnel” w witrynie Korben](https://korben.info/qownnotes.html)
 - [6 najlepszych alternatyw dla Windows Notepad](http://www.makeuseof.com/tag/best-windows-notepad-alternatives/)
-- [Synchronisation des notes (QOwnNotes) — Wiki de la Mère Zaclys](<https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes)>)
+- [Synchronisation des notes (QOwnNotes) — Wiki de la Mère Zaclys](https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes))
 - [Post „QOwnNotes 17.06.06 z notatkami w chmurach” na blogu przystajnik (w j. polskim)](https://404.g-net.pl/2017/06/qownnotes-17-06-06-notatkami-chmurach/)
 - [Artykuł „Jak zainstalować Menedżera do tworzenia notatek i list zadań QOwnNotes w Ubuntu” w witrynie UbuntuHandbook](http://ubuntuhandbook.org/index.php/2017/06/install-qownnotes-ubuntu/)
 - [Artykuł „Jak zainstalować QOwnNotes w Ubuntu” w witrynie CONNECTwww.com](https://connectwww.com/how-to-install-qownnotes-on-ubuntu/5518/)

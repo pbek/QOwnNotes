@@ -486,7 +486,7 @@ void ScriptingService :: noteTextEditWrite (QString-tekst);
 
 ```js
 // schrijf tekst naar de notitie tekst bewerken
-script.noteTextEditWrite("Mijn aangepaste tekst");
+script.noteTextEditWrite ("Mijn aangepaste tekst");
 ```
 
 Misschien wilt u kijken naar de aangepaste actie `transformTextRot13 ` in voorbeeld [custom-actions.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
@@ -509,8 +509,8 @@ QString ScriptingService :: noteTextEditSelectedText ();
 ### Voorbeeld
 
 ```js
-// lees de geselecteerde tekst uit de notitietekst bewerk
-var text = script.noteTextEditSelectedText();
+// lees de geselecteerde tekst uit de notitietekst bewerk 
+var text = script.noteTextEditSelectedText ();
 ```
 
 Misschien wilt u kijken naar de aangepaste actie `transformTextRot13 ` in voorbeeld [custom-actions.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
@@ -806,7 +806,7 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 // maakt alle tags tot het 3e niveau en retourneert het tag-object voor
 // tag "level3", die er zo uitziet in de tagboom:
 // level1 > level2 > level3
-var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
+var tag = script.getTagByNameBreadcrumbList (["level1", "level2", "level3"]);
 ```
 
 ## Zoek naar tags op naam
@@ -884,7 +884,7 @@ script.addStyleSheet("QTreeWidget # noteTreeWidget {font-size: 30px;}");
 
 Misschien wilt u het voorbeeld bekijken [custom-stylesheet.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-stylesheet.qml).
 
-U kunt de widgetnamen ophalen uit de `*.ui` -bestanden, bijvoorbeeld het hoofdvenster [mainwindow.ui ](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
+U kunt de widgetnamen ophalen uit de ` *.ui ` -bestanden, bijvoorbeeld het hoofdvenster [mainwindow.ui ](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui).
 
 De Qt-documentatie (bijvoorbeeld [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)) kan u helpen te zien hoe de widgets aan elkaar gerelateerd zijn (zoek naar `Erfenissen` op de pagina's).
 
@@ -1062,10 +1062,10 @@ bool ScriptingService :: jumpToNoteSubFolder (const QString & amp; noteSubFolder
 
 ```js
 // spring naar de submap notitie "een submap"
-script.jumpToNoteSubFolder("een submap");
+script.jumpToNoteSubFolder ("een submap");
 
 // spring naar de submap "sub" van de notitie in "een submap"
-script.jumpToNoteSubFolder("een submap / sub");
+script.jumpToNoteSubFolder ("een submap / sub");
 ```
 
 ::: tip
@@ -1090,10 +1090,7 @@ void ScriptingService:: informationMessageBox (QString-tekst, QString-titel);
 
 ```js
 // toon een informatieberichtvenster
-script.informationMessageBox(
-  "De tekst die ik wil laten zien",
-  "Een optionele titel",
-);
+script.informationMessageBox ("De tekst die ik wil laten zien", "Een optionele titel");
 ```
 
 ## Er wordt een berichtvenster met een vraag weergegeven
@@ -1284,10 +1281,10 @@ Daarnaast kunt u de `settingsVariables` als volgt overschrijven met een speciale
 
 ```js
 /**
- * Registreert de instellingsvariabelen opnieuw
- *
- * Gebruik deze methode als u code wilt gebruiken om uw variabelen te overschrijven, zoals instelling
- * standaardwaarden zijn afhankelijk van het besturingssysteem.
+  * Registreert de instellingsvariabelen opnieuw
+  *
+  * Gebruik deze methode als u code wilt gebruiken om uw variabelen te overschrijven, zoals instelling
+  * standaardwaarden zijn afhankelijk van het besturingssysteem.
  */
 function registerSettingsVariables() {
   if (script.platformIsWindows()) {
@@ -1459,7 +1456,7 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 
 ```js
 // retourneert "c:\winnt\system32" op Windows
-script.log(script.toNativeDirSeparators("c:/winnt/system32"));
+script.log (script.toNativeDirSeparators ("c:/winnt/system32"));
 ```
 
 ## Padscheidingstekens omzetten van native

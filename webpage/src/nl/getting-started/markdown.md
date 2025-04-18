@@ -176,7 +176,6 @@ Voeg vier spaties toe vóór uw code om deze als codeblok te markeren.
 ### Backtick-begrenzing
 
 U kunt ook drie tildetekens gebruiken om een ​​codeblok aan te maken.
-
 ````markdown
 ```
 Hier komt code
@@ -196,9 +195,7 @@ Er is ook enige syntaxisaccentuering met codeblokken in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:
@@ -366,4 +363,4 @@ description: Een beschrijving
 Wat tekst
 ```
 
-De bestandsnaam van deze voorbeeldnotitie zou `Notitiekop begint hier.md` zijn.
+De bestandsnaam van deze voorbeeldnotitie zou ` Notitiekop begint hier.md ` zijn.

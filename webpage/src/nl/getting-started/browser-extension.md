@@ -11,7 +11,7 @@ Info
 
 - QOwnNotes moet actief zijn om de Web Companion-browserextensie te laten werken.
 - Geen internetverbinding nodig. De browserextensies werken **offline**.
-  :::
+:::
 
 ## Installatie
 

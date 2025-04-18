@@ -144,6 +144,8 @@ Schauen Sie sich die Beispiele auf [example.qml](https://github.com/pbek/QOwnNot
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 Schauen Sie sich dazu das Beispiel auf [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) an.
 
 Es ist möglicherweise keine gute Idee, diesen Hook zu verwenden, wenn die Einstellung zur Verwendung des Dateinamens als Notizname aktiv ist.

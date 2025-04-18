@@ -144,6 +144,8 @@ Misschien wilt u het voorbeeld eens bekijken [example.qml](https://github.com/pb
 functie handleNoteNameHook (opmerking);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 Misschien wilt u het voorbeeld bekijken [ example.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Het is misschien geen goed idee om deze hook te gebruiken als de instelling om de bestandsnaam als nootnaam te gebruiken actief is.

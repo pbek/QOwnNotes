@@ -1805,9 +1805,9 @@ Możesz bezpośrednio wstrzyknąć reguły podświetlania do edytora, definiują
  * @param maskedGroup {int} grupa przechwytująca dla wzorca do użycia maskowania (domyślnie: 0)
  */
 void ScriptingService::addHighlightingRule(const QString &pattern,
-                                           const QString &shouldContain,
-                                           int state,
-                                           int capturingGroup,
+                                           const QString &shouldContain, 
+                                           int state, 
+                                           int capturingGroup, 
                                            int maskedGroup);
 ```
 

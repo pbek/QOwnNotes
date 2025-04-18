@@ -9,10 +9,10 @@ Puoi usare questi parametri sull'interfaccia della riga di comando (CLI) per con
 | `--portable`                 | Esegue l'applicazione in modalità portatile                                                                                                 |
 | `--clear-settings`           | Azzera le impostazioni e avvia l'applicazione                                                                                               |
 | `--dump-settings`            | Mostra una lista di impostazioni e altre informazioni sull'applicazione e l'ambiente, in formato GitHub Markdown, ed esce dall'applicazione |
-| `--session <name>`           | Esegue l'applicazione in un contesto differente per le impostazioni e i file interni                                                        |
+| `--session <name>`     | Esegue l'applicazione in un contesto differente per le impostazioni e i file interni                                                        |
 | `--allow-multiple-instances` | Consente di avviare più istanze di QOwnNotes anche se non consentito nelle impostazioni                                                     |
-| `--action <name>`            | Attiva un'azione di menu dopo l'avvio dell'applicazione (vedi sotto)                                                                        |
-| `--completion <shell>`       | Genera un codice per l'autocompilazione nella shell. Supporta `fish` e `bash`.                                                              |
+| `--action <name>`      | Attiva un'azione di menu dopo l'avvio dell'applicazione (vedi sotto)                                                                        |
+| `--completion <shell>` | Genera un codice per l'autocompilazione nella shell. Supporta `fish` e `bash`.                                                              |
 
 ::: tip
 Se si verificano problemi con l'installazione di QOwnNotes, è possibile avviare l'applicazione con nuove impostazioni senza perdere le impostazioni correnti utilizzando il parametro `--session`.
@@ -35,13 +35,13 @@ QOwnNotes --session test
 Per copiare direttaemnte le impostazioni di dump nel gestore degli appunti per inserirlo su un post in [GitHub issue](https://github.com/pbek/QOwnNotes/issues) puoi usare `xclip` o `xsel` su Linux, `pbcopy` su macOS e `clip` su Windows:
 
 ```bash
-# su Linux copia le impostazioni di dump nel gestore degli appunti con xclip
+# su Linux copia le impostazioni di dump nel gestore degli appunti con xclip 
 QOwnNotes --dump-settings | xclip -selection clipboard
 
-# su Linux copia le impostazioni di dump nel gestore degli appunti con xsel
+# su Linux copia le impostazioni di dump nel gestore degli appunti con xsel 
 QOwnNotes --dump-settings | xsel --clipboard
 
-# su MacOS copia le impostazioni di dump nel gestore degli appunti con pbcopy
+# su MacOS copia le impostazioni di dump nel gestore degli appunti con pbcopy 
 QOwnNotes --dump-settings | pbcopy
 
 # su Windows copia le impostazioni di dump nel gestore degli appunti con clip

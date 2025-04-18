@@ -2649,6 +2649,11 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation>노트</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>노트 폴더</translation>
 </message>

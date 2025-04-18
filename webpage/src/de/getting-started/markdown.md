@@ -175,7 +175,6 @@ Fügen Sie vier Leerzeichen vor Ihrem Code hinzu, um ihn als Codeblock zu markie
 ### Code-Blöcke mit Backticks
 
 Sie können auch drei Backticks verwenden, um einen Codeblock zu erstellen.
-
 ````markdown
 ```
 Code kommt hierher
@@ -195,9 +194,7 @@ Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

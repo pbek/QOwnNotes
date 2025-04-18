@@ -175,7 +175,6 @@ Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codi
 ### Delimitazioni con apici inversi
 
 Puoi anche usare tre apici inversi per creare un blocco di codice.
-
 ````markdown
 ```
 Metti qui il tuo codice sorgente
@@ -195,9 +194,7 @@ C'è anche un po' di evidenziazione della sintassi nei blocchi di codice di QOwn
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

@@ -10,9 +10,9 @@ Permet de capturer du contenu depuis une page affichée dans un navigateur et de
 Info
 
 - ::: tip Info
-  QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
+QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
 - Une connexion Internet n'est pas nécessaire. L'extension de navigateur fonctionne **hors-ligne**.
-  :::
+:::
 
 ## Installation
 

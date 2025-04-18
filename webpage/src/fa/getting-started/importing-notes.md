@@ -19,13 +19,14 @@ If there are any issues with the conversion, feel free to open a ticket at [GitH
 ## Google Keep
 
 > Download Keep tasks using Google Takeout
->
+> 
 > Extract archive
->
+> 
 > Download keep_to_markdown.py to directory next to extracted Keep folder
->
+> 
 >     python keep_to_markdown.py Keep out/
->
+>     
+> 
 > Replace Keep by the folder containing notes in JSON format. The out folder will be created if it doesn't exist.
 
 From <https://gitlab.com/-/snippets/2002921>
@@ -39,7 +40,7 @@ You might install python2 to make the script work. It will convert your Tomboy n
 For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later). This may be easier/safer in a chroot or Docker container, if you have that option (will be documented here later).
 
 ```bash
- python2 python-is-python2 ،sudo apt را نصب می کند
+ python2 python-is-python2 ،sudo apt را نصب می کند 
 ```
 
 Download the trombone file from GitHub, extract and jump into that folder:

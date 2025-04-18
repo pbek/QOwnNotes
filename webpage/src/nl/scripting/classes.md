@@ -34,14 +34,14 @@ U kunt de methoden van [Datum](https://developer.mozilla.org/en-US/docs/Web/Java
 ### Voorbeeld
 
 ```js
-script.log(note.fileCreated.toISOString());
-script.log(note.fileLastModified.getFullYear());
+script.log (note.fileCreated.toISOString());
+script.log (note.fileLastModified.getFullYear());
 
 // hernoemt een notitie naar "nieuwe naam.md"
-note.renameNoteFile("nieuwe naam");
+note.renameNoteFile ("nieuwe naam");
 
 // controleer of het is toegestaan om een andere notitiebestandsnaam te hebben dan de kop
-script.log(note.allowDifferentFileName());
+script.log (note.allowDifferentFileName());
 ```
 
 ## NoteSubFolder

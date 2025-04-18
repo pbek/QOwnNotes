@@ -1090,10 +1090,7 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 
 ```js
 // ein Informationsmeldungsfeld anzeigen
-script.informationMessageBox(
-  "Der Text, den ich anzeigen möchte",
-  "Ein optionaler Titel",
-);
+script.informationMessageBox("Der Text, den ich anzeigen möchte", "Ein optionaler Titel");
 ```
 
 ## Anzeigen eines Fragenmeldungsfelds

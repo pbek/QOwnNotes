@@ -17,7 +17,7 @@ curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-::: 팁 AppImages를 실행하려면 `libfuse2`이 필요합니다! 예를 들어, Ubuntu 아래에서 <`sudo apt install libfuse2`로 라이브러리를 설치할 수 있습니다. :::
+::: 팁 AppImages를 실행하려면  `libfuse2`이 필요합니다! 예를 들어, Ubuntu 아래에서 <`sudo apt install libfuse2`로 라이브러리를 설치할 수 있습니다. :::
 
 그런 다음 AppImage를 실행하여 QOwnNotes를 실행할 수 있습니다.
 

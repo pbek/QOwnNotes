@@ -176,7 +176,6 @@ Ajoutez quatre espaces devant votre code pour le marquer comme bloc de code.
 ### Backtick fence
 
 Vous pouvez également utiliser trois backticks pour créer un bloc de code.
-
 ````markdown
 ```
 Code goes here
@@ -197,9 +196,7 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
 ````
-
 ````
 
 Currently, supported languages (and code block identifiers) are:

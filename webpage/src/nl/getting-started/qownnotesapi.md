@@ -8,7 +8,7 @@ U kunt QOwnNotesAPI rechtstreeks inschakelen in uw **Nextcloud** of **ownCloud**
 
 - [Nextcloud Apps-pagina](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps pagina](https://marketplace.owncloud.com/apps/qownnotesapi)
-  :::
+:::
 
 Het delen van notities gebeurt via de API van Nextcloud / ownCloud. Taken zijn rechtstreeks toegankelijk via CalDAV.
 

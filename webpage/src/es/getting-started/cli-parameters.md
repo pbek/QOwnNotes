@@ -9,10 +9,10 @@ Puede utilizar estos parámetros en la interfaz de las órdenes de terminal (CLI
 | `--portable`                 | Ejecuta la aplicación en modo portable                                                                                                   |
 | `--clear-settings`           | Elimina los ajustes y ejecuta la aplicación                                                                                              |
 | `--dump-settings`            | Imprime un volcado de la configuración y otra información sobre la aplicación y el entorno de GitHub en markdown y sale de la aplicación |
-| `--session <name>`           | Ejecuta la aplicación en un contexto diferente para la configuración y archivos internos                                                 |
+| `--session <name>`     | Ejecuta la aplicación en un contexto diferente para la configuración y archivos internos                                                 |
 | `--allow-multiple-instances` | Permite iniciar varias instancias de QOwnNotes, incluso si no está permitido en la configuración                                         |
-| `--action <name>`            | Activa una acción de menú después de que se inicie la aplicación (vea abajo)                                                             |
-| `--completion <shell>`       | Genera un código de finalización de consola. Soporta `fish` y `bash`.                                                                    |
+| `--action <name>`      | Activa una acción de menú después de que se inicie la aplicación (vea abajo)                                                             |
+| `--completion <shell>` | Genera un código de finalización de consola. Soporta `fish` y `bash`.                                                                    |
 
 ::: tip
 Si tiene problemas con la instalación de QOwnNotes, es posible que desee iniciar la aplicación con una configuración nueva sin perder la configuración actual mediante el parámetro `--session`.
@@ -52,7 +52,7 @@ QOwnNotes --dump-settings | clip
 
 ## Activar acciones del menú después del inicio
 
-Con el parámetro `--action <name>` puede activar acciones de menú después de que se inicie la aplicación.
+Con el parámetro ` --action <name> ` puede activar acciones de menú después de que se inicie la aplicación.
 
 Por ejemplo, para abrir el cuadro de diálogo de la lista de tareas pendientes después del inicio utilice:
 

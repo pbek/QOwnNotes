@@ -139,7 +139,7 @@
 
 <v-divider />
 
-**Q** für das verwendete [Qt-Framework](https://www.qt.io/)  
+**Q** für das verwendete [Qt-Framework](https://www.qt.io/)   
 **Own**, weil Sie Ihre eigenen Notizen besitzen  
 **Notes** für die Notizen, die Sie erstellen
 
