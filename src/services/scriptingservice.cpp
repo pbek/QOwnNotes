@@ -657,7 +657,7 @@ QString ScriptingService::callInsertingFromMimeDataHookForObject(QObject *object
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -678,7 +678,7 @@ QString ScriptingService::callInsertingFromMimeDataHook(const QMimeData *mimeDat
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -699,7 +699,7 @@ QString ScriptingService::callHandleNoteTextFileNameHookForObject(QObject *objec
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -718,7 +718,7 @@ QString ScriptingService::callHandleNoteTextFileNameHook(Note *note) {
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -734,7 +734,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(QObject *object
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -782,7 +782,7 @@ QString ScriptingService::callHandleNoteNameHook(Note *note) {
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -801,7 +801,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(const QString &headline)
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -839,7 +839,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(ScriptComponent *s
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -948,7 +948,7 @@ QString ScriptingService::callEncryptionHookForObject(QObject *object, const QSt
         return result.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -976,7 +976,7 @@ QString ScriptingService::callEncryptionHook(const QString &text, const QString 
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -1522,7 +1522,7 @@ QString ScriptingService::insertMediaFile(const QString &mediaFilePath, bool ret
     auto *mediaFile = new QFile(mediaFilePath);
 
     if (!mediaFile->exists()) {
-        return QString();
+        return {};
     }
 
     return _currentNote->getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
@@ -1949,7 +1949,7 @@ QString ScriptingService::getOpenFileName(const QString &caption, const QString 
     Q_UNUSED(filter)
 #endif
 
-    return QString();
+    return {};
 }
 
 /**
@@ -1976,7 +1976,7 @@ QString ScriptingService::getSaveFileName(const QString &caption, const QString 
     Q_UNUSED(filter)
 #endif
 
-    return QString();
+    return {};
 }
 
 /**
@@ -2353,13 +2353,13 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data,
  */
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec) const {
     if (filePath.isEmpty()) {
-        return QString();
+        return {};
     }
 
     QFile file(filePath);
 
     if (!file.open(QFile::ReadOnly)) {
-        return QString();
+        return {};
     }
 
     QTextStream in(&file);
