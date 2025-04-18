@@ -156,6 +156,8 @@ or
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 You may want to take a look at the example
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
