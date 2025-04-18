@@ -6127,16 +6127,15 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
     show();
 
     if (noteName.isEmpty()) {
-        noteName = QStringLiteral("Note");
+        noteName = tr("Note", "name for new note");
     }
 
     if (withNameAppend) {
         QDateTime currentDate = QDateTime::currentDateTime();
 
-        // replacing ":" with "_" for Windows systems
-        noteName =
-            noteName + QStringLiteral(" ") +
-            currentDate.toString(Qt::ISODate).replace(QStringLiteral(":"), QStringLiteral("."));
+        // Format the date and time like "2025-04-18 11h54s09"
+        noteName = noteName + QStringLiteral(" ") +
+                   currentDate.toString(QStringLiteral("yyyy-MM-dd HH'h'mm's'ss"));
     }
 
     const QSignalBlocker blocker(ui->searchLineEdit);

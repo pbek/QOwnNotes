@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.4.4
+
+- The format of the date and time in the name of new notes was changed to resemble
+  `Note 2025-04-18 11h54s09` to be visually more pleasing and containing no `.`
+  characters
+  - The text `Note` will now also be translated
+
 ## 25.4.3
 
 - A build error in _fakevim_ with Qt 6.9 was fixed (for [#3258](https://github.com/pbek/QOwnNotes/issues/3258))
