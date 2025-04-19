@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.4.5
+
+- The AppImage build process now uses Ubuntu 22.04, because Ubuntu 20.04 was
+  sunsetted by GitHub (for [#3261](https://github.com/pbek/QOwnNotes/issues/3261))
+
 ## 25.4.4
 
 - The format of the date and time in the name of new notes was changed to resemble
