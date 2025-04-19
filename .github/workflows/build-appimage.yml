@@ -2,15 +2,15 @@ name: 📣 Build AppImage
 
 on:
   workflow_dispatch:
-  push:
-    branches-ignore:
-      - release
-    tags-ignore:
-      - "*"
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
-    paths:
-      - "src/**"
-      - ".github/workflows/build-appimage.yml"
+#  push:
+#    branches-ignore:
+#      - release
+#    tags-ignore:
+#      - "*"
+#    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+#    paths:
+#      - "src/**"
+#      - ".github/workflows/build-appimage.yml"
 
 defaults:
   run:
