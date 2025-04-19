@@ -7,6 +7,10 @@ on:
       - release
     tags-ignore:
       - "*"
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    paths:
+      - "src/**"
+      - ".github/workflows/build-appimage.yml"
 
 defaults:
   run:
@@ -92,14 +96,13 @@ jobs:
           ls -hal *.AppImage
           find -iname "*.AppImage"
           pwd
-
       - name: "📤 Upload artifact: AppImage"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage
       - name: "📤 Upload artifact: AppImage sha256sum"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
