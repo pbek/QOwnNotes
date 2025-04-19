@@ -79,7 +79,7 @@ jobs:
   #
   build-appimage:
     needs: create_release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       QT_VERSION: 5.15.2
       BUILD_DIR: build
@@ -169,7 +169,7 @@ jobs:
   #
   build-appimage-qt6:
     needs: create_release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       QT_VERSION: 6.5.3
       BUILD_DIR: build
