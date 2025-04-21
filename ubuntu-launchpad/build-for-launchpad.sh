@@ -16,7 +16,7 @@ BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=("bionic" "focal" "jammy" "noble" "oracular" "plucky")
+UBUNTU_RELEASES=("bionic" "focal" "jammy" "noble" "oracular" "plucky" "questing")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
