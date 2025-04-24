@@ -5,6 +5,9 @@
 }:
 
 {
+  # Try to disable cachix to get served from local cache
+  cachix.enable = false;
+
   # https://devenv.sh/supported-languages/cplusplus/
   languages.cplusplus.enable = true;
 
