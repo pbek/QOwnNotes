@@ -171,7 +171,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-22.04
     env:
-      QT_VERSION: 6.5.3
+      QT_VERSION: 6.5.0
       BUILD_DIR: build
     name: "🐧 AppImage Qt 6.5.3"
     steps:
