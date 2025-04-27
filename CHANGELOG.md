@@ -2,6 +2,8 @@
 
 ## 25.4.5
 
+- Added a **new editor color schema** _Blue Sky_ by @rkirner
+  (for [#3264](https://github.com/pbek/QOwnNotes/issues/3264))
 - The AppImage build process was fixed and now uses Ubuntu 22.04, because Ubuntu 20.04
   was sunsetted by GitHub (for [#3261](https://github.com/pbek/QOwnNotes/issues/3261))
 - A PPA for Ubuntu 25.10 (Questing Quokka) was added
