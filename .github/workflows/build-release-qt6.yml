@@ -93,7 +93,7 @@ jobs:
     env:
       QT_VERSION: 6.5.0
       BUILD_DIR: build
-    name: "🐧 AppImage Ubuntu 20.04"
+    name: "🐧 AppImage Ubuntu 22.04"
     steps:
       - name: "🧰 Checkout"
         uses: actions/checkout@v4
