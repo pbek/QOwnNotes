@@ -2,7 +2,7 @@
 
 ## 25.5.0
 
-- If you middle-click on a note tab it will now close (for [#2569](https://github.com/pbek/QOwnNotes/issues/2569))
+- If you middle-click on a note tab, it will now close (for [#2569](https://github.com/pbek/QOwnNotes/issues/2569))
 - If you double-click on the empty area next to the note tabs, a new note in a
   new tab it will be opened (for [#2569](https://github.com/pbek/QOwnNotes/issues/2569))
 
