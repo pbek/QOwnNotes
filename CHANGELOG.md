@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.5.0
+
+- If you middle-click on a note tab it will now close (for [#2569](https://github.com/pbek/QOwnNotes/issues/2569))
+
 ## 25.4.5
 
 - Added a **new editor color schema** _Blue Sky_ by @rkirner

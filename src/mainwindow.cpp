@@ -343,6 +343,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     ui->tagTreeWidget->installEventFilter(this);
     ui->newNoteTagLineEdit->installEventFilter(this);
     ui->selectedTagsToolButton->installEventFilter(this);
+    ui->noteEditTabWidget->tabBar()->installEventFilter(this);
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -4347,6 +4348,16 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
     } else if (event->type() == QEvent::MouseButtonPress && obj == ui->selectedTagsToolButton) {
         // we don't want to make the button clickable
         return true;
+    } else if (obj == ui->noteEditTabWidget->tabBar() &&
+               event->type() == QEvent::MouseButtonPress) {
+        auto *mouseEvent = static_cast<QMouseEvent *>(event);
+        int tabIndex = ui->noteEditTabWidget->tabBar()->tabAt(mouseEvent->pos());
+
+        // Close the note tab on the middle-click
+        if (mouseEvent->button() == Qt::MiddleButton && tabIndex != -1) {
+            ui->noteEditTabWidget->removeTab(tabIndex);
+            return true;
+        }
     }
 
     return QMainWindow::eventFilter(obj, event);
