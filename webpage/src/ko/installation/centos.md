@@ -1,5 +1,3 @@
 # CentOS Linux에 설치
 
-There are community-created packages for **CentOS 7/8, AlmaLinux 8 and RockyLinux 8** by _Jörg Woll_ at [QOwnNotes packages for x86_64 for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html), [QOwnNotes packages for ARM for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html) and [QOwnNotes packages for x86_64 for el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html).
-
-Jörg에게 큰 감사를 드립니다!
+커뮤니티에서 만든 **RHEL 8/9, AlmaLinux 8/9, RockyLinux 8/9, CentOS 8/9 및 Oracle 8/9용 패키지**는 _Jörg Woll_의 다음 링크에서 확인할 수 있습니다. [el7용 x86_64용 QOwnNotes 패키지](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html)는 CentOS 7 EOL에서 지원 중단되었습니다, [el7용 ARM용 QOwnNotes 패키지](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html)는 CentOS 7 EOL을 지원 되었습니다, [el8용 x86_64용 QOwnNotes 패키지](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html)입니다. [el9용 x86_64용 QOwnNotes 패키지입니다](http://wilhelm949.spdns.org:10443/w3bservice/9/x86_64/w3bservice/Packages/repoview/qownnotes.html).

@@ -144,7 +144,7 @@ Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pb
 function handleNoteNameHook(note);
 ```
 
-The note name is mainly used when showing the note in the lists.
+El nombre de la nota se utiliza principalmente cuando se muestra la nota en las listas.
 
 Puede que quiera echar un vistazo al ejemplo [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 

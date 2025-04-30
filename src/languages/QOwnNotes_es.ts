@@ -2667,7 +2667,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>Nota</translation>
 </message>
 <message>
 <source>Note folders</source>
