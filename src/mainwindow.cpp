@@ -11982,6 +11982,14 @@ QList<int> MainWindow::getNoteTabNoteIdList() const {
 }
 
 void MainWindow::on_noteEditTabWidget_tabBarDoubleClicked(int index) {
+    // If the empty area of the tab widget is clicked, open a new note in a new tab
+    if (index == -1) {
+        createNewNote();
+        openCurrentNoteInTab();
+        return;
+    }
+
+    // Make the note tab "sticky"
     Utils::Gui::setTabWidgetTabSticky(
         ui->noteEditTabWidget, index,
         !Utils::Gui::isTabWidgetTabSticky(ui->noteEditTabWidget, index));
