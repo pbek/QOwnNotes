@@ -171,7 +171,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-22.04
     env:
-      QT_VERSION: 6.5.0
+      QT_VERSION: 6.5.3
       BUILD_DIR: build
     name: "🐧 AppImage Qt 6.5.3"
     steps:
@@ -201,8 +201,8 @@ jobs:
           make -j${{env.CORES}}
       - name: "⚙️ Install linuxdeploy"
         run: |
-          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20240109-1/linuxdeploy-x86_64.AppImage
-          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/1-alpha-20240109-1/linuxdeploy-plugin-qt-x86_64.AppImage
+          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
           chmod +x linuxdeploy-x86_64.AppImage
           chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
       - name: "📦 Create AppImage"
