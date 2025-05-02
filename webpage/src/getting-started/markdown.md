@@ -117,6 +117,8 @@ http://www.example.com or <http://www.example.com>
 
 ### Internal links
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
@@ -132,6 +134,15 @@ Using <kbd>Ctrl + Shift + X</kbd> will bring up a dialog that helps you to
 
 You can press <kbd>Ctrl + Space</kbd> while the cursor in on a link in the
 note edit to follow the link.
+:::
+
+::: warning Info
+Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bookmarks
@@ -156,6 +167,15 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> to insert
 The image can also be in the clipboard, the dialog will detect it and show a preview.
 
 You can also directly paste an image from the clipboard into your note with <kbd>Ctrl + Shift + V</kbd>.
+:::
+
+::: warning Info
+Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Inline code and code blocks
