@@ -2,7 +2,13 @@ Source: qownnotes
 Priority: optional
 Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
 Section: editors
-Build-Depends: debhelper (>= 9), cdbs, qt5-qmake, qtbase5-dev, libqt5svg5-dev, qtdeclarative5-dev, libqt5websockets5-dev, libqt5x11extras5-dev
+Build-Depends: debhelper (>= 9),
+               cmake,
+               qtbase5-dev,
+               libqt5svg5-dev,
+               qtdeclarative5-dev,
+               libqt5websockets5-dev,
+               libqt5x11extras5-dev
 Standards-Version: 3.9.6
 Homepage: https://www.qownnotes.org
 Vcs-Git: https://github.com/pbek/QOwnNotes.git
