@@ -24,6 +24,9 @@ echo
 echo "Renaming translation files..."
 pushd ${TRANSLATION_PATH} || exit 1
 
+# Remove en_GB translation for now
+rm QOwnNotes_en_GB.ts
+
 mv QOwnNotes_ar_SA.ts QOwnNotes_ar.ts
 mv QOwnNotes_ca_ES.ts QOwnNotes_ca.ts
 mv QOwnNotes_cs_CZ.ts QOwnNotes_cs.ts
@@ -100,7 +103,7 @@ popd || exit 1
 
 echo "Remove all translated webpage folders, but German, Hungarian, Persian and Dutch..."
 # Remove all active languages here!
-find webpage/src -type d -regextype posix-egrep -regex ".+src\/(am|be|bg|bn|bs|ca|ceb|cs|da|el|et|eu|fi|fil|ga|gl|ha|he|hi|hil|hr|id|is|ja|km|ku|lt|lv|mi|mk|ms|no|pa|pcm|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|ta|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
+find webpage/src -type d -regextype posix-egrep -regex ".+src\/(am|be|bg|bn|bs|ca|ceb|cs|da|en|el|et|eu|fi|fil|ga|gl|ha|he|hi|hil|hr|id|is|ja|km|ku|lt|lv|mi|mk|ms|no|pa|pcm|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|ta|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
 
 #
 # Fix Crowdin translation bugs
