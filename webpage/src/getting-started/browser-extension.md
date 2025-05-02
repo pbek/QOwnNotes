@@ -34,7 +34,7 @@ Right-click on a webpage or selected text to use the **web-clipper** functionali
 If the web clipper doesn't work, please check if the QOwnNotes desktop application is
 running, and the Web Companion browser extension is configured with the security token.
 
-Also, make sure you accepted the consent dialog, when you first clicked the extension
+Also, make sure you accept the consent dialog when you first click the extension
 icon in the browser toolbar.
 
 If you are using Firefox, you also need to make sure that you have turned on the optional
