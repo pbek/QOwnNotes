@@ -6640,14 +6640,44 @@ void MainWindow::insertNoteText(const QString &text) {
 /**
  * Inserts text as a file attachment into the current note
  */
-bool MainWindow::insertTextAsAttachment(const QString &text, const QString &title) {
+bool MainWindow::insertTextAsAttachment(const QString &text) {
     if (text.isEmpty()) {
         return false;
     }
 
-    // create a temporary file for the attachment
-    auto *tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
-                                        QStringLiteral("text-XXXXXX.txt"));
+    // Select the file extension
+    QStringList fileExtensions;
+    fileExtensions << QStringLiteral("txt") << QStringLiteral("json") << QStringLiteral("xml")
+                   << QStringLiteral("log") << QStringLiteral("csv");
+
+    bool ok;
+    QString fileExtension =
+        QInputDialog::getItem(this, tr("File extension"), tr("Extension of file attachment:"),
+                              fileExtensions, 0, true, &ok);
+
+    if (!ok) {
+        return false;
+    }
+
+    QString fileBaseName = QInputDialog::getText(
+        this, tr("File base name"),
+        tr("Base name of file attachment:") + QStringLiteral("<br><i>") +
+            tr("Leave empty for automatic name", "Leave the base name empty for automatic name") +
+            QStringLiteral("</i>"),
+        QLineEdit::Normal, QString(), &ok);
+
+    if (!ok) {
+        return false;
+    }
+
+    QString templateName = QDir::tempPath() + QDir::separator() + QStringLiteral("text-XXXXXX");
+
+    if (!fileExtension.isEmpty()) {
+        templateName += QStringLiteral(".") + fileExtension;
+    }
+
+    // Create a temporary file for the attachment
+    auto *tempFile = new QTemporaryFile(templateName);
 
     if (!tempFile->open()) {
         showStatusBarMessage(tr("Temporary file can't be opened"), QStringLiteral("❌"), 3000);
@@ -6660,17 +6690,27 @@ bool MainWindow::insertTextAsAttachment(const QString &text, const QString &titl
     tempFile->flush();
     tempFile->close();
 
-    // we need a reference to tempFile or else it will be gone before inserted
+    // We need a reference to tempFile, or else it will be gone before inserted
     auto *file = new QFile(tempFile->fileName());
 
-    bool result = insertAttachment(file, title);
+    // Determine the filename for the attachment
+    QString fileName;
+    if (!fileBaseName.isEmpty()) {
+        fileName = fileBaseName;
+
+        if (!fileExtension.isEmpty()) {
+            fileName += QStringLiteral(".") + fileExtension;
+        }
+    }
+
+    bool result = insertAttachment(file, fileName, fileName);
 
     if (result) {
         showStatusBarMessage(tr("Inserted text as text attachment file"), QStringLiteral("📄"),
                              3000);
     }
 
-    // for some reason the temp file on disk will not be removed automatically
+    // For some reason the temp file on disk will not be removed automatically
     // without deleting the pointer manually
     delete tempFile;
 
@@ -6680,8 +6720,8 @@ bool MainWindow::insertTextAsAttachment(const QString &text, const QString &titl
 /**
  * Inserts a file attachment into the current note
  */
-bool MainWindow::insertAttachment(QFile *file, const QString &title) {
-    QString text = currentNote.getInsertAttachmentMarkdown(file, title);
+bool MainWindow::insertAttachment(QFile *file, const QString &title, const QString &fileName) {
+    QString text = currentNote.getInsertAttachmentMarkdown(file, title, false, fileName);
 
     if (!text.isEmpty()) {
         ScriptingService *scriptingService = ScriptingService::instance();
@@ -7265,7 +7305,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         if (selectedItem == htmlAction) {
             insertHtmlAsMarkdownIntoCurrentNote(html);
         } else if (selectedItem == textAttachmentAction) {
-            // Insert text as attachment file
+            // Insert text as an attachment file
             insertTextAsAttachment(text);
         }
     }

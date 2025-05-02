@@ -2139,8 +2139,14 @@ QString Utils::Misc::makeFileNameRandom(const QString &fileName, const QString &
     const quint32 number = QRandomGenerator::global()->generate();
 #endif
 
-    return baseName + QChar('-') + QString::number(number) + QChar('.') +
-           (overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix);
+    const QString &suffix = overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix;
+    QString randomName = baseName + QChar('-') + QString::number(number);
+
+    if (!suffix.isEmpty()) {
+        randomName += QChar('.') + suffix;
+    }
+
+    return randomName;
 }
 
 /**
@@ -2154,16 +2160,26 @@ QString Utils::Misc::findAvailableFileName(const QString &filePath, const QStrin
     baseName.truncate(200);
     const QString newSuffix = fileInfo.suffix();
     QString newBaseName = baseName;
-    QString newFileName = newBaseName + QStringLiteral(".") + newSuffix;
+    QString newFileName = newBaseName;
+
+    if (!newSuffix.isEmpty()) {
+        newFileName += QChar('.') + newSuffix;
+    }
+
     QString newFilePath = directoryPath + QDir::separator() + newFileName;
     QFile file(newFilePath);
     int nameCount = 0;
 
-    // check if file with this filename already exists
+    // Check if a file with this filename already exists
     while (file.exists()) {
-        // find new filename for the file
+        // Find a new filename for the file
         newBaseName = baseName + QStringLiteral("-") + QString::number(++nameCount);
-        newFileName = newBaseName + QStringLiteral(".") + newSuffix;
+        newFileName = newBaseName;
+
+        if (!newSuffix.isEmpty()) {
+            newFileName += QChar('.') + newSuffix;
+        }
+
         newFilePath = directoryPath + QDir::separator() + newFileName;
         file.setFileName(newFilePath);
 

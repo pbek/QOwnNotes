@@ -1085,9 +1085,10 @@ class MainWindow : public QMainWindow {
 
     void selectAllNotesInNoteSubFolderTreeWidget() const;
 
-    bool insertAttachment(QFile *file, const QString &title = QString());
+    bool insertAttachment(QFile *file, const QString &title = QString(),
+                          const QString &fileName = QString());
 
-    bool insertTextAsAttachment(const QString &text, const QString &title = QString());
+    bool insertTextAsAttachment(const QString &text);
 
     void updatePanelsSortOrder();
 

@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 25.5.1
+
+- If you paste text as attachment, you now optionally can choose the file extension
+  and the basename for the file (for [#3269](https://github.com/pbek/QOwnNotes/issues/3269))
+  - You can choose from several file extensions, like `txt`, `json`, `xml` or
+    use can set your own
+    - Using no file extension is also possible
+  - If the filename already exists in the attachment folder, a number will be
+    appended automatically to the basename of the file
+
 ## 25.5.0
 
 - If you middle-click on a note tab, it will now close (for [#2569](https://github.com/pbek/QOwnNotes/issues/2569))
