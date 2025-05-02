@@ -116,6 +116,8 @@ http://www.example.com oppure <http://www.example.com>
 
 ### Collegamenti interni
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [Collego la nota per il diario](Diario.md).
 <Journal.md> Funziona similarmente.
@@ -127,6 +129,15 @@ Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + L</kbd> per **crear
 Usando <kbd>Ctrl + Maiusc + X</kbd> verrà visualizzata una finestra di dialogo che ti aiuterà a **inserire allegati** nella nota.
 
 Puoi premere <kbd>Ctrl + Spazio</kbd> mentre il cursore si trova su un collegamento nella modifica della nota per seguire il collegamento.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Segnalibri
@@ -149,6 +160,15 @@ Le immagini possono essere incorporate in QOwnNotes. Verranno mostrate nell'ante
 Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + I</kbd> per inserire un'immagine in una nota. L'immagine può anche essere negli appunti, la finestra di dialogo la rileverà e mostrerà un'anteprima.
 
 Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <kbd>Ctrl + Maiusc + V</kbd>.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Codice in linea e blocchi di codice

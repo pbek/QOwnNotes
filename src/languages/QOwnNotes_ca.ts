@@ -809,6 +809,10 @@
 <translation>Caràcters de les paraules clau:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Utilitzar edició a l'estil de Vim</translation>
 </message>
@@ -2673,6 +2677,27 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Les notes esborrades es recuperen del vostre servidor ownCloud</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>

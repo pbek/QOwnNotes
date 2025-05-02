@@ -116,6 +116,8 @@ http://www.example.com or <http://www.example.com>
 
 ### Internal links
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
@@ -128,6 +130,15 @@ Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + L</kbd>, aby **utworzyć ł
 Użycie klawiszy <kbd>Ctrl + Shift + X</kbd> spowoduje wyświetlenie okna dialogowego ułatwiającego **wstawianie załączników** do notatki.
 
 Możesz nacisnąć klawisze <kbd>Ctrl + spacja</kbd>, gdy kursor znajduje się na łączu w edycji notatki, aby podążać za linkiem.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bookmarks
@@ -150,6 +161,15 @@ Obrazy można osadzać w QOwnNotes. Zostaną wyświetlone w podglądzie.
 Możesz użyć [skrótu](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd>, aby wstawić obraz do notatki. Obraz może również znajdować się w schowku, okno dialogowe wykryje go i pokaże podgląd.
 
 Możesz także wkleić obraz ze schowka bezpośrednio do notatki za pomocą <kbd>Ctrl + Shift + V</kbd>.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Kod wbudowany i bloki kodu

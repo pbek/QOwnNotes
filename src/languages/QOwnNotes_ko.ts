@@ -818,6 +818,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>키워드 문자:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Vim 스타일 편집 사용</translation>
 </message>
@@ -2664,6 +2668,27 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>쓰레기 노트를 현재 ownCloud 서버에서 불러왔습니다</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>

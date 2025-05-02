@@ -35,7 +35,7 @@ Cliquez avec le bouton droit sur une page Web ou sur du texte sélectionné pour
 ::: warning
 Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
 
-Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
 If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::

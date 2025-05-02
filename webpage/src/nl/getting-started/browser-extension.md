@@ -33,7 +33,7 @@ Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webc
 
 ::: waarschuwing Info Als de webclipper niet werkt, controleer dan of de QOwnNotes-desktopapplicatie wel actief is en de browserextensie Web Companion is geconfigureerd met het beveiligingstoken.
 
-Zorg ervoor dat bij het klikken van het extensiepictogram in de browsertaakbalk dat ook het toestemmingsdialoogvenster wordt geaccepteerd.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
 If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::

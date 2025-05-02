@@ -815,6 +815,10 @@
 <translation>Kulcsszó karakterek:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Használja a Vim stílusú szerkesztést</translation>
 </message>
@@ -2680,6 +2684,27 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>A törölt jegyzetek jelenleg töltöttek az ownCloud szerveren</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>

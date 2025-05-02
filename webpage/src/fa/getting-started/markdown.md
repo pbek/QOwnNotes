@@ -116,6 +116,8 @@ http://www.example.com or <http://www.example.com>
 
 ### Internal links
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
@@ -128,6 +130,15 @@ http://www.example.com or <http://www.example.com>
 استفاده از <kbd>Ctrl + Shift + X</kbd> یک کادر گفتگو را ظاهر می کند که به شما کمک می کند تا ** پیوست ها** را در یادداشت خود درج کنید.
 
 می توانید با فشار دادن <kbd>Ctrl + Space</kbd> و در حالی که مکان نما را بر روی پیوند در ویرایش یادداشت نگه داشته اید، پیوند را دنبال کنید.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bookmarks
@@ -150,6 +161,15 @@ http://www.example.com or <http://www.example.com>
 می توانید از [میانبر](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> برای درج تصویر در یادداشت استفاده کنید. همچنین تصاویر می‌توانند در کلیپ بورد قرار بگیرند؛ به طوری که کادر گفتگو آن را شناسایی کرده و یک پیش نمایش نشان می دهد.
 
 علاوه بر این، می‌توانید با <kbd>Ctrl + Shift + V</kbd> یک تصویر را مستقیماً از کلیپ بورد به یادداشت خود بچسبانید.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## کد توکار و کد بلاک ها

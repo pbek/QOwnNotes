@@ -34,7 +34,7 @@ Haga clic con el botón derecho en una página web o en el texto seleccionado pa
 ::: warning
 Información Si web clipper no funciona, por favor revise si la aplicación de QOwnNotes para escritorio está ejecutándose, y si la extensión del navegador Web Companion está configurada con la ficha de seguridad.
 
-Además, asegúrese de aceptar el cuadro de diálogo de consentimiento, que se muestra la primera vez que pulsa sobre el icono de la extensión en la barra de herramientas del navegador.
+Además, asegúrese de aceptar el cuadro de diálogo de consentimiento cuando haga clic por primera vez en el ícono de la extensión en la barra de herramientas del navegador.
 
 Si utiliza Firefox, también debe cerciorarse de que ha activado el permiso opcional `Acceder a sus datos en todos los sitios web` en la configuración de _Permisos_ de la extensión. De lo contrario, podría recibir el error `TypeError: chrome.tabs.captureVisibleTab no es una función`.
 :::

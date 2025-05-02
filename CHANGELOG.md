@@ -9,6 +9,7 @@
     - Using no file extension is also possible
   - If the filename already exists in the attachment folder, a number will be
     appended automatically to the basename of the file
+- Added more Spanish translation (thank you, alejandromoc)
 
 ## 25.5.0
 

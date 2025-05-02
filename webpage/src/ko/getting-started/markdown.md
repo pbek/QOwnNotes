@@ -111,6 +111,10 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   내부 링크
 </h3>
 
+<p spaces-before="0">
+  You can link to other notes or attachments like this:
+</p>
+
 <pre><code class="markdown">[Journal.md 노트에 링크합니다] (Journal.md)
 &lt;Journal.md&gt; 비슷하게 작동합니다.
 </code></pre>
@@ -125,6 +129,17 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 
 <p spaces-before="0">
   노트의 링크에서 커서를 편집하여 링크를 따라가는 동안 <kbd>Ctrl + Space</kbd>를 누를 수 있습니다. :::
+</p>
+
+<p spaces-before="0">
+  ::: warning Info Internal links with a title are not supported:
+</p>
+
+<pre><code class="markdown">[I link to the Journal.md note](Journal.md "Title not supported")
+</code></pre>
+
+<p spaces-before="0">
+  :::
 </p>
 
 <h3 spaces-before="0">
@@ -155,6 +170,17 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 
 <p spaces-before="0">
   <kbd>Ctrl + Shift + V</kbd>을 사용하여 클립보드의 이미지를 노트에 직접 붙여넣을 수도 있습니다. :::
+</p>
+
+<p spaces-before="0">
+  ::: warning Info Image links with a title are not supported:
+</p>
+
+<pre><code class="markdown">![alt text](media/my-image.jpg "Title not supported")
+</code></pre>
+
+<p spaces-before="0">
+  :::
 </p>
 
 <h2 spaces-before="0">

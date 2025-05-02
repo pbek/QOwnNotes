@@ -815,6 +815,10 @@
 <translation>نویسه های کلیدواژه:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>استفاده از ویرایش Vim-style</translation>
 </message>
@@ -2683,6 +2687,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>یادداشت های حذف شده در حال حاضر از سرور اون کلاود شما بارگذاری می شوند</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>

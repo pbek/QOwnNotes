@@ -33,7 +33,7 @@ image: /img/bookmarks.png
 ::: warning
 Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes الحاسوبي مفتوح، وأن رمز الأمان مضبوط في إضافة المتصفح الرفيقة.
 
-وتأكد كذلك أنك قبلت تجميع بيانات المستخدم عندما ضغطت على أيقونة الإضافة أول مرة في شريط المتصفح.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
 If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::

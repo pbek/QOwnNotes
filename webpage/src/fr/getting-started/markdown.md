@@ -116,6 +116,8 @@ http://www.example.com ou <http://www.example.com>
 
 ### Internal links
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
@@ -128,6 +130,15 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd> Ctrl + L</kbd> pour **
 L'utilisation de <kbd>Ctrl + Maj + X</kbd> fera apparaître une boîte de dialogue qui vous aidera à **insérer des pièces jointes** dans votre note.
 
 Vous pouvez appuyer sur <kbd>Ctrl + Espace</kbd> pendant que le curseur se trouve sur un lien dans l'édition de note pour suivre le lien.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bookmarks
@@ -150,6 +161,15 @@ Les images peuvent être intégrées dans QOwnNotes. Ils seront affichés dans l
 Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + I</kbd> pour insérer une image dans une note. L'image peut également être dans le presse-papiers, la boîte de dialogue la détectera et affichera un aperçu.
 
 Vous pouvez également coller directement une image du presse-papiers dans votre note avec <kbd>Ctrl + Maj + V</kbd>.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Code en ligne et blocs de code

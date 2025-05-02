@@ -116,6 +116,8 @@ http://www.example.com o <http://www.example.com>
 
 ### Enlaces internos
 
+Puede enlazar a otras notas o archivos adjuntos de esta forma:
+
 ```markdown
 [Yo enlazo a la nota Diario.md](Diario.md)
 
@@ -128,6 +130,15 @@ Puede utilizar el [atajo](./shortcuts.md) <kbd>Ctrl + L</kbd> para **crear enlac
 <kbd>Ctrl + Shift + X</kbd> abrirá un diálogo que le ayudará a **inserta archivos adjuntos** en su nota.
 
 Puede presionar <kbd>Ctrl + Espacio</kbd> mientras el cursor está en un enlace en la edición de notas para abrir el enlace.
+:::
+
+::: warning
+Información No se admiten enlaces internos con un título:
+
+```markdown
+[Yo enlazo a la nota de Diario.md](Diario.md "Título no soportado")
+```
+
 :::
 
 ### Marcadores
@@ -150,6 +161,15 @@ Las imágenes se pueden incrustar en QOwnNotes. Estas se mostrarán en la vista 
 Puede usar el [atajo](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> para insertar una imagen en una nota. La imagen también puede estar en el portapapeles, el diálogo la detectará y mostrará una vista previa.
 
 También puede pegar directamente una imagen del portapapeles en su nota con <kbd>Ctrl + Shift + V</kbd>.
+:::
+
+::: warning
+Info No se admiten enlaces de imágenes con un título:
+
+```markdown
+![texto alternativo](multimedia/mi-imagen.jpg "Título no soportado")
+```
+
 :::
 
 ## Código en línea y bloques de código

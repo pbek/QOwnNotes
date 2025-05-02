@@ -116,6 +116,8 @@ http://www.example.com أو <http://www.example.com>
 
 ### الروابط الداخلية
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [هذا رابط لملف ملاحظة اسمه Journal.md](Journal.md)
 
@@ -128,6 +130,15 @@ http://www.example.com أو <http://www.example.com>
 اضغط <kbd>Ctrl + Shift + X</kbd> لإظهار حوار يساعدك في **إدراج مرفق** في الملاحظة.
 
 يمكنك ضغط <kbd>Ctrl + Space</kbd> والمؤشر على رابط في محرر الملاحظات لفتحه.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### الإشارات المرجعية
@@ -150,6 +161,15 @@ http://www.example.com أو <http://www.example.com>
 استخدم [الاختصار](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> لإدراج صورة في الملاحظة. يمكن أن تكون الصورة أيضا في الحافظة؛ سيكتشفها الحوار ويظهر معاينة لها.
 
 يمكنك أيضا لصق الصورة من الحافظة مباشرةً في الملاحظة بالاختصار <kbd>Ctrl + Shift + V</kbd>.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## الأكواد المضمّنة وكتل الأكواد

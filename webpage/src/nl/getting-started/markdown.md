@@ -116,6 +116,8 @@ http://www.example.com or <http://www.example.com>
 
 ### Interne koppelingen
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
@@ -128,6 +130,15 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + L</kbd> gebruiken om **links n
 Als u <kbd>Ctrl + Shift + X</kbd> gebruikt, wordt een dialoogvenster geopend waarmee u **bijlagen** in uw notitie kunt invoegen.
 
 U kunt op <kbd>Ctrl + spatiebalk</kbd> drukken terwijl de cursor op een koppeling in de notitiebewerking staat om deze te volgen.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bladwijzers
@@ -150,6 +161,15 @@ Afbeeldingen kunnen worden ingesloten in QOwnNotes. Ze worden getoond in de prev
 U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> gebruiken om een afbeelding in een notitie in te voegen. De afbeelding kan ook op het klembord staan, het dialoogvenster zal het detecteren en een voorbeeld tonen.
 
 U kunt ook rechtstreeks een afbeelding van het klembord in uw notitie plakken met <kbd>Ctrl + Shift + V</kbd>.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Inline code en codeblokken

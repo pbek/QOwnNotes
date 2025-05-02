@@ -116,6 +116,8 @@ http://www.example.com oder <http://www.example.com>
 
 ### Interne Links
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [Ich verlinke zur Notiz Journal.md](Journal.md)
 
@@ -128,6 +130,15 @@ Sie können den [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> verwenden: **Erst
 Wenn Sie <kbd>Strg + Umschalt + X</kbd> verwenden, wird ein Dialogfeld angezeigt, durch das Sie in Ihre Notiz **Anhänge einfügen** können.
 
 Sie können <kbd>Strg + Leertaste</kbd> drücken, während sich der Cursor auf einem Link in der Notizbearbeitung befindet, um dem Link zu folgen.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Lesezeichen
@@ -150,6 +161,15 @@ Bilder können in QOwnNotes eingebettet werden. Sie werden in der Vorschau angez
 Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + Umschalt + I</kbd> verwenden, um ein Bild in eine Notiz einzufügen. Das Bild kann sich auch in der Zwischenablage befinden. Das Dialogfeld erkennt es und zeigt eine Vorschau an.
 
 Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd>Strg + Umschalt + V</kbd> in Ihre Notiz einfügen.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Inline-Code und Code-Blöcke

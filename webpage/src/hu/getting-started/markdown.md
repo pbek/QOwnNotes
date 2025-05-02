@@ -116,6 +116,8 @@ http://www.example.com or <http://www.example.com>
 
 ### Internal links
 
+You can link to other notes or attachments like this:
+
 ```markdown
 [I link to the Journal.md note](Journal.md)
 
@@ -128,6 +130,15 @@ Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + L</kbd> **hozzon lét
 A <kbd>Ctrl + Shift + X</kbd> használatával megjelenik egy párbeszédpanel, amely segít **csatolni a mellékleteket** a jegyzetbe.
 
 Nyomja meg a <kbd>Ctrl + szóköz</kbd> billentyűt, miközben a kurzor a jegyzet szerkesztésében egy linken van, hogy kövesse a linket.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bookmarks
@@ -150,6 +161,15 @@ A képek beágyazhatók a QOwnNotes programba. Megjelennek az előnézetben.
 Használhatja a [parancsikont](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> a kép beszúrásához egy jegyzetbe. A kép a vágólapon is lehet, a párbeszédpanel észleli és előnézetet mutat.
 
 A vágólapról közvetlenül beilleszthet egy képet a jegyzetébe a <kbd>Ctrl + Shift + V</kbd> gombbal.
+:::
+
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
 :::
 
 ## Beépített kód és kódblokkok

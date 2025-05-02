@@ -815,6 +815,10 @@
 <translation>Caracteres de palabras clave:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Usar edición al estilo Vim</translation>
 </message>
@@ -2680,6 +2684,27 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Las notas eliminadas actualmente se cargan desde el servidor de ownCloud</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation>Extensión del archivo</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation>Extensión del archivo adjunto:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation>Nombre base del archivo</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation>Nombre base del archivo adjunto:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation>Déjelo en blanco para un nombre automático</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
