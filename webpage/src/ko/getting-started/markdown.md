@@ -66,9 +66,9 @@ _밑줄_
 
 ```markdown
 1. 첫 번째 정렬된 목록 항목
-2. Another item
+2. 다른 항목
 
-- Unordered sub-list.
+- 정렬되지 않은 하위 목록입니다.
 
 1. Actual numbers don't matter, just that it's a number
 1. Ordered sub-list (only works in the editor, not the preview)
@@ -112,7 +112,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </h3>
 
 <p spaces-before="0">
-  You can link to other notes or attachments like this:
+  다음과 같은 다른 노트나 첨부 파일에 연결할 수 있습니다:
 </p>
 
 <pre><code class="markdown">[Journal.md 노트에 링크합니다] (Journal.md)
@@ -132,10 +132,10 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  ::: warning Info Internal links with a title are not supported:
+  ::: 경고 정보 제목이 있는 내부 링크는 지원되지 않습니다:
 </p>
 
-<pre><code class="markdown">[I link to the Journal.md note](Journal.md "Title not supported")
+<pre><code class="markdown">[Journal.md 노트에 링크합니다](Journal.md "제목 지원되지 않음")
 </code></pre>
 
 <p spaces-before="0">
@@ -173,10 +173,10 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  ::: warning Info Image links with a title are not supported:
+  ::: 경고 정보 제목이 있는 이미지 링크는 지원되지 않습니다:
 </p>
 
-<pre><code class="markdown">![alt text](media/my-image.jpg "Title not supported")
+<pre><code class="markdown">![alt text](media/my-image.jpg "제목 지원되지 않음")
 </code></pre>
 
 <p spaces-before="0">
@@ -219,7 +219,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  ````markdown
+  ````마크다운
 </p>
 
 <pre><code>코드는 여기에 있습니다
@@ -243,7 +243,7 @@ cd Notes
 </code></pre>
 
 <pre><code>
-Currently, supported languages (and code block identifiers) are:
+현재 지원되는 언어 (및 코드 블록 식별자)는 다음과 같습니다:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -277,12 +277,10 @@ Currently, supported languages (and code block identifiers) are:
 - YAML, `yml`
 - YAML, `yaml`
 
-## Tables
+## 테이블
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
-
-```markdown
-Colons can be used to align columns.
+```마크다운
+콜론은 열을 정렬하는 데 사용할 수 있습니다.
 
 | Tables        |      Are      |  Cool |
 | ------------- | :-----------: | ----: |

@@ -9,6 +9,7 @@
     for instructions and report issues
 - If you paste text as attachment, some file formats can now be detected if they
   match a certain pattern (for [#3269](https://github.com/pbek/QOwnNotes/issues/3269))
+- Added more Korean translation (thank you, venusgirl)
 
 ## 25.5.1
 

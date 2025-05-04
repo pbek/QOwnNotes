@@ -1,5 +1,32 @@
 # Debian Linux에 설치
 
+## Debian Unstable
+
+다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+
+```bash
+SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
+sudo mkdir -p "$(dirname "${SIGNED_BY}")"
+curl --silent --show-error --location http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_Unstable/Release.key | gpg --dearmor | sudo tee "${SIGNED_BY}" > /dev/null
+sudo chmod u=rw,go=r "${SIGNED_BY}"
+```
+
+다음 셸 명령을 실행하여 저장소를 추가하고 여기서 QOwnNotes를 설치합니다.
+
+```bash
+SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
+ARCHITECTURE="$(dpkg --print-architecture)"
+echo "deb [arch=${ARCHITECTURE} signed-by=${SIGNED_BY}] http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_Unstable/ /" | sudo tee /etc/apt/sources.list.d/qownnotes.list > /dev/null
+sudo apt update
+sudo apt install qownnotes
+```
+
+::: tip
+This package is built with Qt6.
+:::
+
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_Unstable)
+
 ## Debian 12.0
 
 다음 셸 명령을 실행하여 저장소를 신뢰합니다.
@@ -21,7 +48,9 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: 팁 다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.15** 이상의 **Qt**가 설치되어 있어야 합니다. :::
+::: tip
+This package is built with Qt6.
+:::
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12)
 
@@ -52,13 +81,13 @@ sudo apt install qownnotes
 
 ## Debian 10.0
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+저장소를 신뢰하려면 다음 셸 명령을 실행합니다.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
 ```
 
-다음 셸 명령을 실행하여 저장소를 추가하고 여기서 QOwnNotes를 설치합니다.
+다음 셸 명령을 실행하여 리포지토리를 추가하고 여기서 QOwnNotes를 설치합니다.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -72,13 +101,13 @@ sudo apt-get install qownnotes
 
 ## Debian 9.0
 
-저장소를 신뢰하려면 다음 셸 명령을 실행합니다.
+Run the following shell commands to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
-다음 셸 명령을 실행하여 리포지토리를 추가하고 여기서 QOwnNotes를 설치합니다.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -88,4 +117,4 @@ sudo apt-get install qownnotes
 
 ::: 팁 다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.5** 이상의 **Qt**가 설치되어 있어야 합니다. :::
 
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

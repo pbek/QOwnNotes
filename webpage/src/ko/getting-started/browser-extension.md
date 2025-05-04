@@ -31,7 +31,7 @@ image: /img/bookmarks.png
 
 ::: 경고 정보 웹 클리퍼가 작동하지 않는 경우 QOwnNotes 데스크톱 응용 프로그램이 실행되고 있는지, Web Companion 브라우저 확장 프로그램이 보안 토큰으로 구성되어 있는지 확인하십시오.
 
-Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
+또한 브라우저 도구 모음에서 확장 아이콘을 처음 클릭할 때 동의 대화 상자를 수락해야 합니다.
 
 If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`. :::
 

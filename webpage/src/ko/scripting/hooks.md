@@ -271,10 +271,10 @@ function noteTaggingHook(note, action, tagName, newTagName);
   - 노트에 태그를 추가하면 노트 텍스트에 태그가 추가됩니다
   - 노트에서 태그를 제거하면 노트 텍스트에서 태그가 제거됩니다
   - removing of tags in the tag list will remove those tags from your notes
-  - renaming of tags in the tag list will rename those tags in your notes
+  - 태그 목록에서 태그 이름을 변경하면 노트에 있는 태그 이름이 변경됩니다
   - bulk tagging of notes in the note list will add those tags to your notes
-  - bulk removing of tags from notes in the note list will remove those tags from your notes
-  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
+  - 노트 목록에서 태그를 대량으로 제거하면 해당 태그가 노트에서 제거됩니다
+  - 태그가 이동하면 응용 프로그램은 모든 노트에서 선택한 모든 태그와 그 하위에 대해 일련의 `추가` 및 `제거` 작업을 트리거합니다
 
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) 예제를 보고 자체 태그 메커니즘을 구현할 수 있습니다.
 
@@ -410,8 +410,8 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 
 ```js
 /**
- * This function is called when the OpenAI service config is reloaded
- * It returns a list of objects with config parameters for new OpenAI backends
+* 이 기능은 OpenAI 서비스 구성이 다시 로드될 때 호출됩니다.
+* 새로운 OpenAI 백엔드에 대한 구성 매개변수가 있는 객체 목록을 반환합니다.
  */
 function openAiBackendsHook() {
   return [

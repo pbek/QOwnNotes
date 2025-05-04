@@ -289,7 +289,7 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             bool useInNoteListContextMenu);
 ```
 
-::: tip You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_. :::
+::: 팁 _ 단축키 설정_에서 사용자 지정 작업에 로컬 및 글로벌 바로 가기를 할당할 수도 있습니다. :::
 
 ::: 경고 [무료 데스크톱 테마 아이콘](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)은 대부분 Linux에서만 사용할 수 있습니다. 따라서 macOS나 Windows에서 아이콘을 사용하려면 스크립트와 함께 아이콘을 제공해야 합니다. 스크립트 경로를 통해 아이콘에 대한 올바른 경로를 설정하려면 [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script)을 사용합니다. :::
 
@@ -301,25 +301,25 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Initializes the custom actions
+* 사용자 지정 작업을 초기화합니다
      */
     function init() {
-        // add a custom action without a button
+        // 버튼 없이 사용자 지정 작업 추가
         script.registerCustomAction("mycustomaction1", "Menu text");
 
-        // add a custom action with a button
+        // 버튼으로 사용자 지정 작업 추가
         script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
 
-        // add a custom action with a button and freedesktop theme icon
+        // 버튼과 무료 데스크톱 테마 아이콘으로 사용자 지정 작업 추가
         script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
 
-        // add a custom action with a button and an icon from a file
+        // 파일에서 버튼과 아이콘으로 사용자 지정 작업 추가
         script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
-     * This function is invoked when a custom action is triggered
-     * in the menu or via button
+     * 이 기능은 메뉴 또는 버튼을 통해 사용자 지정 작업이
+     * 트리거될 때 호출됩니다
      *
      * @param identifier string the identifier defined in registerCustomAction
      */
