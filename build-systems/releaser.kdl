@@ -27,7 +27,7 @@ layout {
     }
     pane split_direction="vertical" {
       pane name="snap" command="snap/build-for-launchpad-snap.sh"
-      pane focus=true
+      pane name="obs-cmake-qt6" command="obs/cmake-qt6/build-for-obs.sh"
     }
     pane size=1 borderless=true {
       plugin location="zellij:status-bar"

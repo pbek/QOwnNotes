@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 25.5.2
+
+- The OBS packages for Debian 12 and Debian Unstable are now built with cmake
+  and Qt6, because CDBS doesn't support qmake after Debian 12 anymore
+  (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
+  - Please visit the [Debian installation page](https://www.qownnotes.org/installation/debian.html)
+    for instructions and report issues
+
 ## 25.5.1
 
 - If you paste text as attachment, you now optionally can choose the file extension
