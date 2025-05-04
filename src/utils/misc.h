@@ -171,6 +171,7 @@ QString createAbsolutePathsInHtml(const QString &html, const QString &url);
 int getPreviewRefreshDebounceTime();
 int getMaximumNoteFileSize();
 QString encodeFilePath(const QString &filePath);
+QString detectFileFormat(const QString &text);
 }    // namespace Misc
 }    // namespace Utils
 

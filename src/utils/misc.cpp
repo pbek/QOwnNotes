@@ -2707,3 +2707,59 @@ QString Utils::Misc::encodeFilePath(const QString &filePath) {
     // Join the segments back together with forward slashes
     return segments.join('/');
 }
+
+QString Utils::Misc::detectFileFormat(const QString &text) {
+    // Static regular expressions for format detection
+    static const QRegularExpression jsonRegex(R"(\{.*\})");
+    static const QRegularExpression xmlRegex("<\\?xml.*\\?>");
+    static const QRegularExpression htmlRegex("<!DOCTYPE html>|<html>");
+    static const QRegularExpression csvRegex(
+        R"(^[^,\n]+(?:,[^,\n]+)*\n(?:[^,\n]+(?:,[^,\n]+)*)*$)");
+    static const QRegularExpression cppRegex(R"(#include\s*<[^>]+>|#include\s*"[^"]+")");
+    static const QRegularExpression nixRegex(R"(\{ pkgs \? import <nixpkgs> \{\}|fetchurl \{)");
+    static const QRegularExpression markdownRegex(R"(^#+\s.*|\*\*.*\*\*|_.*_|\[.*\]\(.*\))");
+    static const QRegularExpression iniRegex("^\\[.*\\]|.*=.*");
+
+    // Markdown detection
+    if (markdownRegex.globalMatch(text).hasNext()) {
+        return "md";
+    }
+
+    // JSON detection
+    if (jsonRegex.globalMatch(text).hasNext()) {
+        return "json";
+    }
+
+    // XML detection
+    if (xmlRegex.globalMatch(text).hasNext()) {
+        return "xml";
+    }
+
+    // HTML detection
+    if (htmlRegex.globalMatch(text).hasNext()) {
+        return "html";
+    }
+
+    // CSV detection
+    if (csvRegex.globalMatch(text).hasNext()) {
+        return "csv";
+    }
+
+    // CPP detection
+    if (cppRegex.globalMatch(text).hasNext()) {
+        return "cpp";
+    }
+
+    // Nix detection
+    if (nixRegex.globalMatch(text).hasNext()) {
+        return "nix";
+    }
+
+    // INI detection
+    if (iniRegex.globalMatch(text).hasNext()) {
+        return "ini";
+    }
+
+    // If no format is detected, return "txt"
+    return "txt";
+}

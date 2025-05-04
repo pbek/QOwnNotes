@@ -6648,12 +6648,16 @@ bool MainWindow::insertTextAsAttachment(const QString &text) {
     // Select the file extension
     QStringList fileExtensions;
     fileExtensions << QStringLiteral("txt") << QStringLiteral("json") << QStringLiteral("xml")
-                   << QStringLiteral("log") << QStringLiteral("csv");
+                   << QStringLiteral("log") << QStringLiteral("csv") << QStringLiteral("md")
+                   << QStringLiteral("cpp") << QStringLiteral("nix") << QStringLiteral("html");
+
+    QString extension = Utils::Misc::detectFileFormat(text);
+    int index = fileExtensions.indexOf(extension);
 
     bool ok;
     QString fileExtension =
         QInputDialog::getItem(this, tr("File extension"), tr("Extension of file attachment:"),
-                              fileExtensions, 0, true, &ok);
+                              fileExtensions, index, true, &ok);
 
     if (!ok) {
         return false;
