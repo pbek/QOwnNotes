@@ -24,9 +24,6 @@ echo
 echo "Renaming translation files..."
 pushd ${TRANSLATION_PATH} || exit 1
 
-# Remove en_GB translation for now
-rm QOwnNotes_en_GB.ts
-
 mv QOwnNotes_ar_SA.ts QOwnNotes_ar.ts
 mv QOwnNotes_ca_ES.ts QOwnNotes_ca.ts
 mv QOwnNotes_cs_CZ.ts QOwnNotes_cs.ts
