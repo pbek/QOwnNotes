@@ -1,6 +1,6 @@
 # Debian Linux에 설치
 
-## Debian Unstable
+## Debian 불안정
 
 다음 셸 명령을 실행하여 저장소를 신뢰합니다.
 
@@ -21,8 +21,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: tip
-This package is built with Qt6.
+::: 팁
+이 패키지는 Qt6으로 제작되었습니다.
 :::
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_Unstable)
@@ -48,8 +48,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: tip
-This package is built with Qt6.
+::: 팁
+이 패키지는 Qt6으로 제작되었습니다.
 :::
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12)
@@ -101,13 +101,13 @@ sudo apt-get install qownnotes
 
 ## Debian 9.0
 
-Run the following shell commands to trust the repository.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+다음 셸 명령을 실행하여 리포지토리를 추가하고 거기에서 QOwnNotes를 설치합니다.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -117,4 +117,4 @@ sudo apt-get install qownnotes
 
 ::: 팁 다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.5** 이상의 **Qt**가 설치되어 있어야 합니다. :::
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
