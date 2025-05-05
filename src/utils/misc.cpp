@@ -2710,56 +2710,94 @@ QString Utils::Misc::encodeFilePath(const QString &filePath) {
 
 QString Utils::Misc::detectFileFormat(const QString &text) {
     // Static regular expressions for format detection
-    static const QRegularExpression jsonRegex(R"(\{.*\})");
-    static const QRegularExpression xmlRegex("<\\?xml.*\\?>");
-    static const QRegularExpression htmlRegex("<!DOCTYPE html>|<html>");
+    static const QRegularExpression xmlRegex(
+        R"(^\s*(<\?xml\s+version\s*=\s*['"][0-9.]+['"](?:\s+encoding\s*=\s*['"][^'"]+['"])?(?:\s+standalone\s*=\s*['"](?:yes|no)['"])?\s*\?>|<[a-zA-Z][a-zA-Z0-9_\:-]*(?:\s+[a-zA-Z_][a-zA-Z0-9_\:-]*(?:\s*=\s*(?:"[^"]*"|'[^']*'))?)*\s*/?>))",
+        QRegularExpression::DotMatchesEverythingOption);
+
+    static const QRegularExpression htmlRegex(
+        R"(^\s*(?:<!DOCTYPE\s+html[^>]*>|<html\b[^>]*>))",
+        QRegularExpression::MultilineOption | QRegularExpression::CaseInsensitiveOption);
+
+    static const QRegularExpression cppRegex(
+        R"(^\s*(?:#include\s*(?:<[^>]+>|"[^"]+")|#define\s+\w+\s|#pragma\s+\w+|#ifndef\s+\w+|using\s+namespace\s+\w+\s*;|class\s+\w+\s*[{:]\s|namespace\s+\w+\s*\{))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression nixRegex(
+        R"(^\s*(?:\{\s*pkgs\s*(?:\?|=)\s*import\s+<nixpkgs>\s*\{\}|with\s+pkgs\s*;|stdenv\.mkDerivation\s+\{))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression sqlRegex(
+        R"(^\s*(?:SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|DROP|WITH)\s+)",
+        QRegularExpression::MultilineOption | QRegularExpression::CaseInsensitiveOption);
+
+    static const QRegularExpression pythonRegex(
+        R"(^\s*(?:import\s+\w+\s*(?:,\s*\w+)*\s*(?:;|$)|from\s+\w+\s+import\s+\w+|def\s+\w+\s*\([^)]*\)\s*:|class\s+\w+(?:\s*\([\w\s,]*\))?\s*:))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression javascriptRegex(
+        R"(^\s*(?:function\s+\w+\s*\([^)]*\)\s*\{|const\s+\w+\s*=\s*(?:[^;]+;|\{)|let\s+\w+\s*=\s*(?:[^;]+;|\{)|var\s+\w+\s*=\s*(?:[^;]+;|\{)|import\s+(?:\{[^}]*\}\s+from\s+)?['"][^'"]+['"]))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression iniRegex(
+        R"(^\s*(?:(?:\[[\w\s\-\.]+\]\s*$)|(?:[\w\.\-]+\s*=\s*[^\r\n]*$)|(?:;[^\r\n]*$)))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression yamlRegex(
+        R"(^\s*(?:---\s*$|(?:[a-zA-Z0-9_-]+\s*:\s*(?:(?:[^#\r\n]*)?$|(?:\r?\n\s+[^\s#-][^\r\n]*)+))|-\s+[^\s#][^\r\n]*(?:\r?\n\s+[^\s#-][^\r\n]*)*$))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression jsonRegex(R"(^\s*(\{[\s\S]*\}|\[[\s\S]*\])\s*$)",
+                                              QRegularExpression::MultilineOption);
+
     static const QRegularExpression csvRegex(
-        R"(^[^,\n]+(?:,[^,\n]+)*\n(?:[^,\n]+(?:,[^,\n]+)*)*$)");
-    static const QRegularExpression cppRegex(R"(#include\s*<[^>]+>|#include\s*"[^"]+")");
-    static const QRegularExpression nixRegex(R"(\{ pkgs \? import <nixpkgs> \{\}|fetchurl \{)");
-    static const QRegularExpression markdownRegex(R"(^#+\s.*|\*\*.*\*\*|_.*_|\[.*\]\(.*\))");
-    static const QRegularExpression iniRegex("^\\[.*\\]|.*=.*");
+        R"(^(?:[^=\r\n"]*|"(?:[^"]|"")*")(?:,(?:[^=\r\n"]*|"(?:[^"]|"")*"))+(?:\r?\n|$)(?:(?:[^=\r\n"]*|"(?:[^"]|"")*")(?:,(?:[^=\r\n"]*|"(?:[^"]|"")*"))+(?:\r?\n|$))*)",
+        QRegularExpression::MultilineOption);
 
-    // Markdown detection
-    if (markdownRegex.globalMatch(text).hasNext()) {
-        return "md";
-    }
-
-    // JSON detection
-    if (jsonRegex.globalMatch(text).hasNext()) {
-        return "json";
-    }
-
-    // XML detection
+    // XML detection (specific, check early)
     if (xmlRegex.globalMatch(text).hasNext()) {
         return "xml";
     }
 
-    // HTML detection
+    // HTML detection (specific, check early)
     if (htmlRegex.globalMatch(text).hasNext()) {
         return "html";
     }
 
-    // CSV detection
-    if (csvRegex.globalMatch(text).hasNext()) {
-        return "csv";
-    }
-
-    // CPP detection
-    if (cppRegex.globalMatch(text).hasNext()) {
-        return "cpp";
-    }
-
-    // Nix detection
+    // Nix detection (specific Nix syntax)
     if (nixRegex.globalMatch(text).hasNext()) {
         return "nix";
     }
 
-    // INI detection
+    // SQL detection (SQL keywords)
+    if (sqlRegex.globalMatch(text).hasNext()) {
+        return "sql";
+    }
+
+    // JavaScript detection (JS-specific constructs)
+    if (javascriptRegex.globalMatch(text).hasNext()) {
+        return "js";
+    }
+
+    // INI detection (section headers or key-value pairs)
     if (iniRegex.globalMatch(text).hasNext()) {
         return "ini";
     }
 
-    // If no format is detected, return "txt"
+    // YAML detection (key-value pairs or list items)
+    if (yamlRegex.globalMatch(text).hasNext()) {
+        return "yaml";
+    }
+
+    // JSON detection (object or array structure)
+    if (jsonRegex.globalMatch(text).hasNext()) {
+        return "json";
+    }
+
+    // CSV detection (comma-separated values with multiple lines)
+    if (csvRegex.globalMatch(text).hasNext()) {
+        return "csv";
+    }
+
+    // Default to plain text if no format is detected
     return "txt";
 }

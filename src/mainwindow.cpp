@@ -6649,7 +6649,9 @@ bool MainWindow::insertTextAsAttachment(const QString &text) {
     QStringList fileExtensions;
     fileExtensions << QStringLiteral("txt") << QStringLiteral("json") << QStringLiteral("xml")
                    << QStringLiteral("log") << QStringLiteral("csv") << QStringLiteral("md")
-                   << QStringLiteral("cpp") << QStringLiteral("nix") << QStringLiteral("html");
+                   << QStringLiteral("cpp") << QStringLiteral("nix") << QStringLiteral("html")
+                   << QStringLiteral("yaml") << QStringLiteral("sql") << QStringLiteral("py")
+                   << QStringLiteral("js") << QStringLiteral("ini");
 
     QString extension = Utils::Misc::detectFileFormat(text);
     int index = fileExtensions.indexOf(extension);

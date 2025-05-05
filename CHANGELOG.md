@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.5.3
+
+- The detection for text formats when pasting text as attachment was improved
+  (for [#3269](https://github.com/pbek/QOwnNotes/issues/3269))
+
 ## 25.5.2
 
 - The OBS packages for Debian 12 and Debian Unstable are now built with cmake
