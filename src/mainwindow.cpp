@@ -6701,12 +6701,17 @@ bool MainWindow::insertTextAsAttachment(const QString &text) {
 
     // Determine the filename for the attachment
     QString fileName;
-    if (!fileBaseName.isEmpty()) {
+    if (fileBaseName.isEmpty()) {
+        auto currentDate = QDateTime::currentDateTime();
+        fileName = QStringLiteral("file-") +
+                   currentDate.toString(QStringLiteral("yyyy-MM-dd-HH'h'mm's'ss"));
+    } else {
         fileName = fileBaseName;
+    }
 
-        if (!fileExtension.isEmpty()) {
-            fileName += QStringLiteral(".") + fileExtension;
-        }
+    // If there is a file extension, append it to the filename
+    if (!fileExtension.isEmpty()) {
+        fileName += QStringLiteral(".") + fileExtension;
     }
 
     bool result = insertAttachment(file, fileName, fileName);

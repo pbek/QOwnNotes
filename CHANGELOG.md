@@ -4,6 +4,8 @@
 
 - The detection for text formats when pasting text as attachment was improved
   (for [#3269](https://github.com/pbek/QOwnNotes/issues/3269))
+- When pasting text as attachment, by default the current date and time will be
+  used in the filename (for [#3269](https://github.com/pbek/QOwnNotes/issues/3269))
 
 ## 25.5.2
 
