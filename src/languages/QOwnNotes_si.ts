@@ -4366,9 +4366,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>'%1' ගොනුව සමඟ දත්ත සමුදා සම්බන්ධතාවයක් ඇති කිරීමට නොහැකි විය.
-ෆෝල්ඩරය සහ ගොනුව ලිවිය හැකිද?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4377,12 +4383,6 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Cannot open database</source>
 <translation>දත්ත සමුදාය විවෘත කළ නොහැක</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>'%1' ඒකාබද්ධ කිරීම සඳහා සටහන් ෆෝල්ඩරයේ දත්ත සමුදාය සමඟ දත්ත සමුදා සම්බන්ධතාවයක් ඇති කළ නොහැක.
-ෆෝල්ඩරය සහ ගොනුව ලිවිය හැකිද?</translation>
 </message>
 </context>
 <context>
@@ -5494,6 +5494,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7798,10 +7802,6 @@ This cannot be undone!</source>
 <translation>අවසර දෝෂයකි</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
@@ -7848,6 +7848,10 @@ This cannot be undone!</source>
 <message>
 <source>Proceed with update</source>
 <translation>යාවත්කාලීන කිරීම සමඟ ඉදිරියට යන්න</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

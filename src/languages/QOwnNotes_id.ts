@@ -4344,9 +4344,15 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Tidak bisa membuat koneksi basis data dengan berkas '%1'.
-Apakah folder dan berkas tersebut bisa ditransfer?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4355,12 +4361,6 @@ Apakah folder dan berkas tersebut bisa ditransfer?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Tidak bisa membuka basis data</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Tidak dapat membuat koneksi basis data dengan basis data folder catatan untuk menggabungkan '%1'.
-Apakah folder dan file bisa ditransfer?</translation>
 </message>
 </context>
 <context>
@@ -5473,6 +5473,10 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Jika anda ingin membantu menerjemahkan QOwnNotes atau meningkatkan terjemahan yang sudah ada silakan baca: &lt;a href="%1"&gt;Bagaimana saya membantu menerjemahkan QOwnNotes?&lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7785,10 +7789,6 @@ Ini tidak dapat dibatalkan!</translation>
 <translation>Kesalahan izin</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>Apalikasi QOwnNotes Anda '%1' tidak dapat ditulis! Itu harus dapat ditulis oleh pengguna saat ini untuk dapat diperbarui.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Berkas sementara '%1' tidak dapat dieksekusi/dijalankan! Anda harus mengganti sendiri '%2'.</translation>
 </message>
@@ -7835,6 +7835,10 @@ Ini tidak dapat dibatalkan!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Lanjutkan dengan pembaruan</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

@@ -4358,9 +4358,15 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Não é possível estabelecer a conexão com o banco de dados com o arquivo '%1'.
-A pasta e os arquivos tem permissão de escrita?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4369,12 +4375,6 @@ A pasta e os arquivos tem permissão de escrita?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Não é possível abrir o banco de dados</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Não foi possível estabelecer uma conexão com o banco de dados da pasta de anotações para mesclar '%1'.
-A pasta e os arquivos tem permissão de escrita?</translation>
 </message>
 </context>
 <context>
@@ -5486,6 +5486,10 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Se você quer ajudar a traduzir o QOwnNotes ou atualizar uma tradução existente por favor leia: &lt;a href="%1"&gt;Como eu posso ajudar a traduzir o OwnNotes?&lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7792,10 +7796,6 @@ Isso não poderá ser desfeito!</translation>
 <translation type="unfinished">Permission error</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>O executável do QOwnNotes '%1' não tem permissões de escrita! Ela é necessária para para que à atualização seja feita.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Não foi possível tornar o arquivo temporário '%1' executável. Você precisa substituir '%2' manualmente.</translation>
 </message>
@@ -7842,6 +7842,10 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Prosseguir com a atualização</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

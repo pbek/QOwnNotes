@@ -4376,9 +4376,15 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Në pamundësi për të vendosur një lidhje të bazës së të dhënave me skedarin "%1".
-A janë dosjet dhe skedari i shkrueshëm?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4387,12 +4393,6 @@ A janë dosjet dhe skedari i shkrueshëm?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Nuk mund të hapet baza e të dhënave</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Në pamundësi për të krijuar një lidhje të bazës së të dhënave me bazën e të dhënave të dosjeve të shënimeve për të shkrirë "%1".
-A janë dosjet dhe skedari i shkrueshëm?</translation>
 </message>
 </context>
 <context>
@@ -5506,6 +5506,10 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Nëse doni të ndihmoni për të përkthyer QOwnNotes ose për të azhurnuar një përkthim ekzistues, ju lutemi lexoni: &lt;a href="%1"&gt; Si mund të ndihmoj për të përkthyer QOwnNotes? &lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7818,10 +7822,6 @@ Shënimi do të rikthehet në serverin tuaj të fshehtë me të gjitha versionet
 <translation type="unfinished">Permission error</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
@@ -7868,6 +7868,10 @@ Shënimi do të rikthehet në serverin tuaj të fshehtë me të gjitha versionet
 <message>
 <source>Proceed with update</source>
 <translation>Vazhdoni me azhurnimin</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

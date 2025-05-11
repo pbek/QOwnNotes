@@ -4375,9 +4375,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>برقراری ارتباط پایگاه داده با پرونده "%1" امکان پذیر نیست.
-آیا پوشه و پرونده قابل نوشتن هستند؟</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4386,12 +4392,6 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Cannot open database</source>
 <translation>باز کردن پایگاه داده امکان پذیر نیست</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>برای ادغام "%1" برقراری ارتباط پایگاه داده با پایگاه داده پوشه یادداشت امکان پذیر نیست.
-آیا پوشه و پرونده قابل نوشتن هستند؟</translation>
 </message>
 </context>
 <context>
@@ -5587,6 +5587,10 @@ QOwnNotesAPI
 &lt;a href="%1"&gt;
 چطور می توانم به ترجمه QOwnNotes کمک کنم؟
 &lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7972,10 +7976,6 @@ This cannot be undone!</source>
 <translation>خطای دسترسی</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>فایل اجرایی QOwnNotes '%1' قابل درج نیست! به منظور به روز رسانی باید توسط کاربر فعلی قابل درج شود.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>پرونده موقت '%1' نمی تواند به صورت اجرایی ایجاد شود! شما باید '%2' را شخصاً جایگزین کنید.</translation>
 </message>
@@ -8022,6 +8022,10 @@ This cannot be undone!</source>
 <message>
 <source>Proceed with update</source>
 <translation>ادامه با بروز رسانی</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

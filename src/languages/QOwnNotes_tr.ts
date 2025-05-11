@@ -4384,9 +4384,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Dosya '%1' ile bellek veritabanı bağlantısı kurulamadı.
-Klasör ve dosya yazılabilir mi?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4395,12 +4401,6 @@ Klasör ve dosya yazılabilir mi?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Veritabanı açılamıyor</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>'%1' birleştirmek için not klasörü veritabanıyla veritabanı bağlantısı kurulamıyor.
-Klasör ve dosya yazılabilir mi?</translation>
 </message>
 </context>
 <context>
@@ -5515,6 +5515,10 @@ vermek için eski yöntemi kullanın</translation>
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>QOwnNotes'u çevirmeye veya mevcut bir çeviriyi güncellemeye yardım etmek istiyorsanız, lütfen okuyun: &lt;a href="%1"&gt; QOwnNotes'u çevirmeye nasıl yardımcı olabilirim? &lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7830,10 +7834,6 @@ Bu geri alınamaz!</translation>
 <translation>İzin hatası</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>QOwnNotes yürütülebilir dosyanız '%1' yazılabilir değil! Güncellenebilmesi için mevcut kullanıcı tarafından yazılabilir olması gerekir.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>'%1' geçici dosyası yürütülebilir hale getirilemedi! '%2'yi kendiniz değiştirmeniz gerekiyor.</translation>
 </message>
@@ -7880,6 +7880,10 @@ Bu geri alınamaz!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Güncelleme ile devam et</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

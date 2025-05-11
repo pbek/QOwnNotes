@@ -4507,9 +4507,15 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Ní féidir nasc bunachar sonraí a bhunú leis an gcomhad '%1'.
-An bhfuil an fillteán agus an comhad scríofa?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4518,12 +4524,6 @@ An bhfuil an fillteán agus an comhad scríofa?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Ní féidir bunachar sonraí a oscailt</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Ní féidir nasc bunachar sonraí a bhunú le bunachar fillteán nótaí chun '%1' a chumasc.
-An bhfuil an fillteán agus an comhad scríofa?</translation>
 </message>
 </context>
 <context>
@@ -5641,6 +5641,10 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Más mian leat cabhrú le QOwnNotes a aistriú nó aistriúchán atá ann cheana a nuashonrú léigh: &lt;a href="%1"&gt; Conas is féidir liom cabhrú le QOwnNotes a aistriú? &lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7961,10 +7965,6 @@ Ní féidir é seo a dhiúltú!</translation>
 <translation type="unfinished">Permission error</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
@@ -8011,6 +8011,10 @@ Ní féidir é seo a dhiúltú!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Lean ar aghaidh leis an nuashonrú</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

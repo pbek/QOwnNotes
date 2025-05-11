@@ -4364,9 +4364,15 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Nem sikerült adatbázis-kapcsolatot létesíteni a"%1"-es fájllal. 
-A mappa és a fájl írható?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4375,12 +4381,6 @@ A mappa és a fájl írható?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Nem lehet megnyitni az adatbázist</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Nem sikerült adatbázis-kapcsolatot létrehozni a jegyzetmappák adatbázisával a(z) '%1' egyesítéséhez.
-Írható a mappa és a fájl?</translation>
 </message>
 </context>
 <context>
@@ -5492,6 +5492,10 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Ha szeretne segíteni a QOwnNotes fordításában vagy egy meglévő fordítás frissítésében, olvassa el: &lt;a href="%1"&gt; Hogyan segíthetek a QOwnNotes fordításában?&lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7795,10 +7799,6 @@ Nem lehet visszavonni!</translation>
 <translation>Engedélyezési hiba</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>QOwnNotes '%1' futtatható fájlja nem írható! A frissítéshez az aktuális felhasználónak írhatónak kell lennie.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>A(z) '%1' ideiglenes fájlt nem lehet futtathatóvá tenni! A „%2” szót magának kell kicserélnie.</translation>
 </message>
@@ -7845,6 +7845,10 @@ Nem lehet visszavonni!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Folytatja a frissítést</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

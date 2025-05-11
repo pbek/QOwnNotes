@@ -1,3 +1,5 @@
 # Sponsorzy
 
-- Ogromne podziękowania dla [JetBrains](http://www.jetbrains.com) za udostępnienie bezpłatnej licencji na ich narzędzia do tworzenia oprogramowania.
+A big thank-you to [JetBrains](http://www.jetbrains.com) for a free license to their development products!
+
+[![JetBrains logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSource)

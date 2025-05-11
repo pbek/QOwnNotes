@@ -4467,9 +4467,15 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Nepodarilo sa vytvoriť databázové spojenie so súborom '%1'.
-Sú priečinok a súbor zapisovateľný?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4478,12 +4484,6 @@ Sú priečinok a súbor zapisovateľný?</translation>
 <message>
 <source>Cannot open database</source>
 <translation>Nie je možné otvoriť databázu</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Nie je možné nadviazať spojenie s databázou priečinkov s poznámkami a zlúčiť '%1'.
-Je priečinok a súbor zapisovateľný?</translation>
 </message>
 </context>
 <context>
@@ -5599,6 +5599,10 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Ak chcete pomôcť s prekladom QOwnNotes alebo aktualizovať existujúci preklad, prečítajte si: &lt;a href="%1"&gt; Ako môžem pomôcť s prekladom QOwnNotes? &lt;/a&gt;</translation>
+</message>
+<message>
+<source>en_GB</source>
+<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -7915,10 +7919,6 @@ To nie je možné vrátiť späť!</translation>
 <translation type="unfinished">Permission error</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
@@ -7965,6 +7965,10 @@ To nie je možné vrátiť späť!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Pokračujte v aktualizácii</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
