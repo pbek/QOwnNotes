@@ -95,7 +95,8 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_mk.ts \
     languages/QOwnNotes_ko.ts \
     languages/QOwnNotes_et.ts \
-    languages/QOwnNotes_sq.ts
+    languages/QOwnNotes_sq.ts \
+    languages/QOwnNotes_en_GB.ts
 
 CODECFORTR = UTF-8
 lessThan(QT_MAJOR_VERSION, 6) {

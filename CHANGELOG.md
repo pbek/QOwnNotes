@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.5.4
+
+- Added **British English translation** (for [#3269](https://github.com/pbek/QOwnNotes/issues/3269), thank you, @tbjgolden)
+  - Visit [QOwnNotes Translation](https://www.qownnotes.org/contributing/translation.html)
+    if you want to make QOwnNotes available in more languages or help with the
+    current translation
+
 ## 25.5.3
 
 - The detection for text formats when pasting text as attachment was improved

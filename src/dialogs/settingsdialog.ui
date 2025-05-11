@@ -2451,6 +2451,14 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">English (British)</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string>en_GB</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Español</string>
                         </property>
                         <property name="toolTip">

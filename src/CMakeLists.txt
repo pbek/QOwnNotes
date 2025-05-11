@@ -553,7 +553,8 @@ set(QON_TS_FILES
     languages/QOwnNotes_bs.ts
     languages/QOwnNotes_mk.ts
     languages/QOwnNotes_ko.ts
-    languages/QOwnNotes_et.ts)
+    languages/QOwnNotes_et.ts
+    languages/QOwnNotes_en_GB.ts)
 
 if(QON_QT6_BUILD)
   qt6_add_translation(QON_QM_FILES ${QON_TS_FILES})
