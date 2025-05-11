@@ -139,7 +139,7 @@ bool DatabaseService::createDiskConnection() {
         QMessageBox::critical(nullptr, QWidget::tr("Cannot open disk database"),
                               QWidget::tr("Unable to establish a database connection with "
                                           "file '%1'.\nAre the folder and the file "
-                                          "writeable?")
+                                          "writable?")
                                   .arg(path),
                               QMessageBox::Ok);
         return false;
@@ -161,7 +161,7 @@ bool DatabaseService::createNoteFolderConnection() {
         QMessageBox::critical(nullptr, QWidget::tr("Cannot open note folder database"),
                               QWidget::tr("Unable to establish a database connection with "
                                           "file '%1'.\nAre the folder and the file "
-                                          "writeable?")
+                                          "writable?")
                                   .arg(path),
                               QMessageBox::Ok);
         return false;
@@ -951,7 +951,7 @@ bool DatabaseService::mergeNoteFolderDatabase(const QString& path) {
         QMessageBox::critical(nullptr, QWidget::tr("Cannot open database"),
                               QWidget::tr("Unable to establish a database connection with "
                                           "note folder database to merge '%1'.\nAre the folder "
-                                          "and the file writeable?")
+                                          "and the file writable?")
                                   .arg(path),
                               QMessageBox::Ok);
 

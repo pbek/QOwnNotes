@@ -2120,7 +2120,7 @@ bool Note::deleteAll() {
 bool Note::fileExists() const { return Utils::Misc::fileExists(fullNoteFilePath()); }
 
 /**
- * Checks if file of note exists in the filesystem and is writeable
+ * Checks if file of note exists in the filesystem and is writable
  *
  * @return bool
  */
