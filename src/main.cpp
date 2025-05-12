@@ -52,13 +52,9 @@ void loadTranslations(QTranslator *translator, const QString &locale) {
     loadTranslation(translator[5], appPath + "/languages/QOwnNotes_" + locale);
     loadTranslation(translator[6], appPath + "/QOwnNotes_" + locale);
     loadTranslation(translator[7], "../src/languages/QOwnNotes_" + locale);
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    loadTranslation(translator[8], "../share/qt6/translations/QOwnNotes_" + locale);
-    loadTranslation(translator[9], appPath + "/../share/qt6/translations/QOwnNotes_" + locale);
-#else
-    loadTranslation(translator[8], "../share/qt5/translations/QOwnNotes_" + locale);
-    loadTranslation(translator[9], appPath + "/../share/qt5/translations/QOwnNotes_" + locale);
-#endif
+    loadTranslation(translator[8], "../share/QOwnNotes/translations/QOwnNotes_" + locale);
+    loadTranslation(translator[9],
+                    appPath + "/../share/QOwnNotes/translations/QOwnNotes_" + locale);
     loadTranslation(translator[10], "QOwnNotes_" + locale);
 }
 
@@ -67,11 +63,7 @@ void loadTranslations(QTranslator *translator, const QString &locale) {
  */
 inline void loadReleaseTranslations(QTranslator &translatorRelease, const QString &locale) {
     loadTranslation(translatorRelease,
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-                    "/usr/share/qt6/translations/"
-#else
-                    "/usr/share/qt5/translations/"
-#endif
+                    "/usr/share/QOwnNotes/translations/"
                     "QOwnNotes_" +
                         locale);
 }

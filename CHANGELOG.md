@@ -4,6 +4,8 @@
 
 - Missing libraries were added to the OBS Debian / Ubuntu builds with Qt and cmake
   (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
+- The translations paths were reorganized because of Debian / Ubuntu build issues
+  (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
 
 ## 25.5.4
 

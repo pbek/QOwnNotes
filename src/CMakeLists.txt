@@ -603,10 +603,19 @@ add_compile_definitions(QAPPLICATION_CLASS=QApplication)
 # Installation
 
 install(TARGETS QOwnNotes DESTINATION bin)
-install(DIRECTORY images/icons DESTINATION share/icons/hicolor)
+foreach(
+  SIZE
+  16x16
+  24x24
+  32x32
+  48x48
+  64x64
+  96x96
+  128x128
+  256x256
+  512x512
+  scalable)
+  install(DIRECTORY images/icons/${SIZE} DESTINATION share/icons/hicolor)
+endforeach()
 install(FILES PBE.QOwnNotes.desktop DESTINATION share/applications)
-if(QON_QT6_BUILD)
-  install(FILES ${QON_QM_FILES} DESTINATION share/qt6/translations)
-else()
-  install(FILES ${QON_QM_FILES} DESTINATION share/qt5/translations)
-endif()
+install(FILES ${QON_QM_FILES} DESTINATION share/QOwnNotes/translations)

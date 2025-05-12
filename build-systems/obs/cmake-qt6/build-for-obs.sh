@@ -131,7 +131,6 @@ cp $buildSystemPath/debian.control $obsRepoPath
 cp $buildSystemPath/debian.copyright $obsRepoPath
 cp $buildSystemPath/debian.compat $obsRepoPath
 cp $buildSystemPath/debian.rules $obsRepoPath
-cp $buildSystemPath/debian.series $obsRepoPath
 cp $buildSystemPath/debian.qownnotes.install $obsRepoPath
 cp $buildSystemPath/qownnotes.dsc $obsRepoPath
 cp $buildSystemPath/debian.qownnotes-i18n.install $obsRepoPath
