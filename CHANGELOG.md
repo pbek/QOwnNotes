@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.5.6
+
+- The translations path was fixed for repositories with the old path
+  (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
+
 ## 25.5.5
 
 - Missing libraries were added to the OBS Debian / Ubuntu builds with Qt and cmake
