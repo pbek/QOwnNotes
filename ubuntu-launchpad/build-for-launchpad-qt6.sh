@@ -9,14 +9,18 @@
 # Also a ~/.dput.cf has to be in place
 #
 
+# Exit immediately if any command fails
+set -e
+
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=23.3.0.1
+#QOWNNOTES_VERSION=25.5.4.2
 
 BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=("jammy" "noble" "oracular" "plucky" "questing")
+# UBUNTU_RELEASES=("jammy" "noble" "oracular" "plucky" "questing")
+UBUNTU_RELEASES=("questing")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
@@ -25,6 +29,15 @@ DEBUILD_ARGS=""
 SIGNING_EMAIL=patrizio@bekerle.com
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
+
+# This is used inside the release docker container
+if [ "$1" = "--docker" ]; then
+  echo "Importing PGP key..."
+  gpg --import ~/private.pgp
+  echo "Adding AUR ssh key..."
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/aur_rsa
+fi
 
 #echo "/usr/share/cdbs/1/class/qmake.mk"
 #cat /usr/share/cdbs/1/class/qmake.mk
@@ -48,11 +61,9 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 # checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
+#rsync -avh --exclude-from=/QOwnNotes/.gitignore --exclude .git --exclude secrets --exclude webpage /QOwnNotes/ "$PROJECT_PATH/"
+git clone --recurse-submodules --depth=1 https://github.com/pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
 cd $PROJECT_PATH || exit 1
-
-# checkout submodules
-git submodule update --init
 
 # build binary translation files
 lrelease src/QOwnNotes.pro

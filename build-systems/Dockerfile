@@ -21,10 +21,11 @@ RUN apt-get -y install bash \
          libqt5websockets5-dev libqt5x11extras5-dev \
          qt6-base-dev qt6-declarative-dev libqt6svg6-dev libqt6websockets6-dev \
          libqt6svg6 libqt6svgwidgets6 libqt6websockets6 libqt6core5compat6 \
-         libqt6core5compat6-dev gh curl python3-m2crypto
+         libqt6core5compat6-dev gh curl python3-m2crypto \
+         cmake pkg-config qt6-l10n-tools qt6-tools-dev qt6-tools-dev-tools
 
 # Download and extract zellij
-RUN curl -L https://github.com/zellij-org/zellij/releases/download/v0.39.2/zellij-x86_64-unknown-linux-musl.tar.gz -o zellij.tar.gz \
+RUN curl -L https://github.com/zellij-org/zellij/releases/download/v0.42.2/zellij-x86_64-unknown-linux-musl.tar.gz -o zellij.tar.gz \
     && tar -xzvf zellij.tar.gz \
     && rm zellij.tar.gz \
     && chmod +x zellij \
