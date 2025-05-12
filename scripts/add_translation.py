@@ -56,8 +56,8 @@ insert_in_file('src/QOwnNotes.pro',
                '    languages/QOwnNotes_he.ts \\',
                r'    languages/QOwnNotes_{}.ts \\'.format(iso_qon))
 insert_in_file('src/debian/qownnotes.install',
-               'languages/QOwnNotes_he.qm usr/share/QOwnNotes/translations',
-               'languages/QOwnNotes_{}.qm usr/share/QOwnNotes/translations'.format(
+               'languages/QOwnNotes_he.qm usr/share/qt5/translations',
+               'languages/QOwnNotes_{}.qm usr/share/qt5/translations'.format(
                    iso_qon))
 insert_in_file('CHANGELOG.md',
                '# QOwnNotes Changelog',

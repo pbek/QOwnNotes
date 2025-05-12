@@ -428,7 +428,13 @@ unix {
       desktop.files += PBE.QOwnNotes.desktop
   }
 
-  i18n.path = $$DATADIR/QOwnNotes/translations
+  # The qt5/qt6 paths qre needed by the Fedora and openSUSE builds on OBS
+  # Keep in mind that Debian and Ubuntu don't work with those paths with cmake and Qt6
+  lessThan(QT_MAJOR_VERSION, 6) {
+      i18n.path = $$DATADIR/qt5/translations
+  } else {
+      i18n.path = $$DATADIR/qt6/translations
+  }
   i18n.files += languages/*.qm
 
   icons.path = $$DATADIR/icons/hicolor

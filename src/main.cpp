@@ -52,20 +52,34 @@ void loadTranslations(QTranslator *translator, const QString &locale) {
     loadTranslation(translator[5], appPath + "/languages/QOwnNotes_" + locale);
     loadTranslation(translator[6], appPath + "/QOwnNotes_" + locale);
     loadTranslation(translator[7], "../src/languages/QOwnNotes_" + locale);
-    loadTranslation(translator[8], "../share/QOwnNotes/translations/QOwnNotes_" + locale);
-    loadTranslation(translator[9],
-                    appPath + "/../share/QOwnNotes/translations/QOwnNotes_" + locale);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    loadTranslation(translator[8], "../share/qt6/translations/QOwnNotes_" + locale);
+    loadTranslation(translator[9], appPath + "/../share/qt6/translations/QOwnNotes_" + locale);
+#else
+    loadTranslation(translator[8], "../share/qt5/translations/QOwnNotes_" + locale);
+    loadTranslation(translator[9], appPath + "/../share/qt5/translations/QOwnNotes_" + locale);
+#endif
     loadTranslation(translator[10], "QOwnNotes_" + locale);
+    loadTranslation(translator[11], "../share/QOwnNotes/translations/QOwnNotes_" + locale);
+    loadTranslation(translator[12],
+                    appPath + "/../share/QOwnNotes/translations/QOwnNotes_" + locale);
 }
 
 /**
  * Function for loading the release translations
  */
-inline void loadReleaseTranslations(QTranslator &translatorRelease, const QString &locale) {
-    loadTranslation(translatorRelease,
-                    "/usr/share/QOwnNotes/translations/"
+inline void loadReleaseTranslations(QTranslator *translatorsRelease, const QString &locale) {
+    // The qt5/qt6 paths qre needed by the Fedora and openSUSE builds on OBS
+    loadTranslation(translatorsRelease[0],
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+                    "/usr/share/qt6/translations/"
+#else
+                    "/usr/share/qt5/translations/"
+#endif
                     "QOwnNotes_" +
                         locale);
+    // Debian and Ubuntu don't work with qt5/qt6 paths with cmake and Qt6
+    loadTranslation(translatorsRelease[1], "/usr/share/QOwnNotes/translations/QOwnNotes_" + locale);
 }
 
 /**
@@ -573,9 +587,9 @@ int main(int argc, char *argv[]) {
     Utils::Schema::schemaSettings = new Utils::Schema::Settings();
 
 #ifndef QT_DEBUG
-    QTranslator translatorRelease;
+    QTranslator translatorsRelease[2];
 #endif
-    QTranslator translators[11];
+    QTranslator translators[13];
 #ifdef Q_OS_MAC
     QTranslator translatorOSX;
     QTranslator translatorOSX2;
@@ -628,7 +642,7 @@ int main(int argc, char *argv[]) {
 
         setAppProperties(app, release, arguments, true, snap, portable, action);
 #ifndef QT_DEBUG
-        loadReleaseTranslations(translatorRelease, locale);
+        loadReleaseTranslations(translatorsRelease, locale);
 #endif
 
         loadTranslations(translators, locale);
@@ -686,7 +700,7 @@ int main(int argc, char *argv[]) {
         setAppProperties(app, release, arguments, false, snap, portable, action);
 
 #ifndef QT_DEBUG
-        loadReleaseTranslations(translatorRelease, locale);
+        loadReleaseTranslations(translatorsRelease, locale);
 #endif
 
         loadTranslations(translators, locale);

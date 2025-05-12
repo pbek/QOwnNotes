@@ -36,6 +36,6 @@ package() {
     install -D -m644 "images/icons/scalable/apps/QOwnNotes.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/QOwnNotes.svg"
 
     # install languages
-    install -d "${pkgdir}/usr/share/QOwnNotes/translations/"
-    install -D -m644 languages/*.qm "${pkgdir}/usr/share/QOwnNotes/translations/"
+    install -d "${pkgdir}/usr/share/qt5/translations/"
+    install -D -m644 languages/*.qm "${pkgdir}/usr/share/qt5/translations/"
 }
