@@ -37,6 +37,8 @@ Depends:
  libqt6websockets6,
  qt6-wayland,
  qt6-qpa-plugins,
+ qml6-module-qtqml-workerscript,
+ qml6-module-qtqml-models,
  openssl
 Description: Plain-text file markdown note taking with Nextcloud/ownCloud integration
  Plain-text file markdown note taking with Nextcloud/ownCloud
