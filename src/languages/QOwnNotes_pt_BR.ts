@@ -2788,6 +2788,10 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </translation>
 </message>
 <message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Suporte desabilitado para Nextcloud Deck!</translation>
 </message>
@@ -5679,6 +5683,10 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <source>Maximum note file size:</source>
 <translation>Tamanho máximo do arquivo de anotação:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

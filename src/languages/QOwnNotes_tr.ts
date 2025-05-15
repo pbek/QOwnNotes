@@ -2801,6 +2801,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Nextcloud Deck desteği devre dışı!</translation>
 </message>
@@ -5709,6 +5713,10 @@ sonra otomatik olarak salt okunur kipine geçin:</translation>
 <message>
 <source>Maximum note file size:</source>
 <translation>Azami not dosyası boyutu:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

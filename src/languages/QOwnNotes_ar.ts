@@ -2893,6 +2893,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>دعم Nextcloud Deck معطل!</translation>
 </message>
@@ -5893,6 +5897,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Maximum note file size:</source>
 <translation>الحجم الأقصى لملف الملاحظة:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

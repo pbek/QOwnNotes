@@ -7,6 +7,7 @@
   - A menu entry to close a tab was aded to the tab context menu
 - Missing libraries for the scripting engine were added to the OBS Debian / Ubuntu
   builds with Qt and cmake (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
+- Added more Korean, Spanish translation (thank you, venusgirl, alejandromoc)
 
 ## 25.5.7
 

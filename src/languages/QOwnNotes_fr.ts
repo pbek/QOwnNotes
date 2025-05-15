@@ -2795,6 +2795,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </translation>
 </message>
 <message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Support de Nextcloud Deck désactivé !</translation>
 </message>
@@ -5686,6 +5690,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>Maximum note file size:</source>
 <translation>Taille maximum de fichier de note :</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

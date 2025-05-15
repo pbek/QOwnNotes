@@ -2775,6 +2775,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </translation>
 </message>
 <message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>Next Cloud Deck 지원이 비활성화되었습니다!</translation>
 </message>
@@ -4329,14 +4333,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>파일 '%1'로 데이터베이스 연결을 설정할 수 없습니다.
+폴더와 파일을 쓸 수 있나요?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>노트 폴더 데이터베이스와 데이터베이스 연결을 설정하여 '%1'을 병합할 수 없습니다.
+폴더와 파일을 쓸 수 있나요?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -5458,7 +5462,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
+<translation>ko_KR</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -5648,6 +5652,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Maximum note file size:</source>
 <translation>최대 노트 파일 크기:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -7810,7 +7818,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>QOwnNotes 실행 파일 '%1'은 쓰기 불가능합니다! 업데이트하려면 현재 사용자가 쓰기 가능해야 합니다.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

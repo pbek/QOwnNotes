@@ -2794,6 +2794,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </translation>
 </message>
 <message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+<message>
 <source>Nextcloud Deck support disabled!</source>
 <translation>¡El soporte de Nextcloud Deck está desactivado!</translation>
 </message>
@@ -4366,14 +4370,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>Incapaz de establecer una conexión de base de datos con el archivo "%1".
+¿La carpeta y el archivo son escribibles?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Incapaz de establecer una conexión con la base de datos de la carpeta de notas a fusionar "%1".
+¿La carpeta y archivo son escribibles?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -5495,7 +5499,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
+<translation>en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
@@ -5685,6 +5689,10 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Maximum note file size:</source>
 <translation>Tamaño máximo de archivo de notas:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -7843,7 +7851,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>¡Su ejecutable de QOwnNotes "%1" no posee permisos de escritura! El usuario actual debe poder escribir en él para poder actualizarlo.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

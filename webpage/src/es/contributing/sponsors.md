@@ -1,5 +1,5 @@
 # Patrocinadores
 
-A big thank-you to [JetBrains](http://www.jetbrains.com) for a free license to their development products!
+¡Un gran agradecimiento a [JetBrains](http://www.jetbrains.com) por una licencia gratuita para sus productos de desarrollo!
 
-[![JetBrains logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSource)
+[![Logo de JetBrains](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSource)
