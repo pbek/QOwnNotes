@@ -13,7 +13,7 @@
 set -e
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=25.5.4.2
+#QOWNNOTES_VERSION=25.5.8.3
 
 BRANCH=main
 #BRANCH=release
