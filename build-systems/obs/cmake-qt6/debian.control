@@ -44,7 +44,7 @@ Description: Plain-text file markdown note taking with Nextcloud/ownCloud integr
  Plain-text file markdown note taking with Nextcloud/ownCloud
  integration. You own your own notes! All notes are stored as
  plain-text files on your desktop computer. Sync them over devices
- (desktop & mobile) with ownCloud. Use ownCloud Notes to edit your
+ (desktop & mobile) with Nextcloud. Use Nextcloud Notes to edit your
  notes in the web.
 
 Package: qownnotes-l10n
