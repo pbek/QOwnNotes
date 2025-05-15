@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.5.8
+
+- Missing libraries for the scripting engine were added to the OBS Debian / Ubuntu
+  builds with Qt and cmake (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
+
 ## 25.5.7
 
 - Fixed translations path again for openSUSE and Fedora
