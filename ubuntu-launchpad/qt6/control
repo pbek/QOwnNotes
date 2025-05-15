@@ -4,7 +4,7 @@ Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
 Section: editors
 Build-Depends:
  cmake (>= 3.16),
- debhelper (>= 9),
+ debhelper-compat (= 13),
  pkg-config,
  qt6-base-dev,
  qt6-declarative-dev,
@@ -37,12 +37,14 @@ Depends:
  libqt6websockets6,
  qt6-wayland,
  qt6-qpa-plugins,
+ qml6-module-qtqml-workerscript,
+ qml6-module-qtqml-models,
  openssl
 Description: Plain-text file markdown note taking with Nextcloud/ownCloud integration
  Plain-text file markdown note taking with Nextcloud/ownCloud integration.
  You own your own notes! All notes are stored as plain-text files on your desktop computer.
  Sync them over devices (desktop & mobile) with ownCloud.
- Use ownCloud Notes to edit your notes in the web.
+ Use Nextcloud Notes to edit your notes in the web.
 
 Package: qownnotes-qt6-l10n
 Architecture: all
