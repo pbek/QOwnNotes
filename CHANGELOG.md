@@ -2,6 +2,9 @@
 
 ## 25.5.8
 
+- There now is an option to hide the tab close button in the _Panels settings_
+  (for [#3271](https://github.com/pbek/QOwnNotes/issues/3271))
+  - A menu entry to close a tab was aded to the tab context menu
 - Missing libraries for the scripting engine were added to the OBS Debian / Ubuntu
   builds with Qt and cmake (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
 

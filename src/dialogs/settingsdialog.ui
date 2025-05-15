@@ -6079,6 +6079,13 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Note edit panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_67">
+                <item row="1" column="1" colspan="2">
+                 <widget class="QCheckBox" name="restoreNoteTabsCheckBox">
+                  <property name="text">
+                   <string>Restore open note tabs at application startup and when note folders are switched</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="1" colspan="2">
                  <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
                   <property name="toolTip">
@@ -6089,10 +6096,10 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1" colspan="2">
-                 <widget class="QCheckBox" name="restoreNoteTabsCheckBox">
+                <item row="2" column="1" colspan="2">
+                 <widget class="QCheckBox" name="hideTabCloseButtonCheckBox">
                   <property name="text">
-                   <string>Restore open note tabs at application startup and when note folders are switched</string>
+                   <string>Hide tab close button</string>
                   </property>
                  </widget>
                 </item>
@@ -7264,11 +7271,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                <layout class="QGridLayout" name="gridLayout_89">
                 <item row="0" column="0">
                  <widget class="QLabel" name="openAiResponseTimeoutLabel">
-                  <property name="text">
-                   <string>Response timeout:</string>
-                  </property>
                   <property name="toolTip">
                    <string>Time the application will wait for a response from the server before timing out and returning an error message.</string>
+                  </property>
+                  <property name="text">
+                   <string>Response timeout:</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>

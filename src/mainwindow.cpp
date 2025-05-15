@@ -171,6 +171,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
 
     ui->noteEditTabWidget->setTabBarAutoHide(true);
+    ui->noteEditTabWidget->setTabsClosable(
+        !settings.value(QStringLiteral("hideTabCloseButton")).toBool());
     ui->noteEditTabWidget->tabBar()->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested, this,
             &MainWindow::showNoteEditTabWidgetContextMenu);
@@ -12081,8 +12083,8 @@ void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
             [this, tabIndex]() { on_noteEditTabWidget_tabBarDoubleClicked(tabIndex); });
 
     // Close other note tabs
-    auto *closeAction = menu->addAction(tr("Close other note tabs"));
-    connect(closeAction, &QAction::triggered, this, [this, tabIndex]() {
+    auto *closeOtherAction = menu->addAction(tr("Close other note tabs"));
+    connect(closeOtherAction, &QAction::triggered, this, [this, tabIndex]() {
         const int maxIndex = ui->noteEditTabWidget->count() - 1;
         const int keepNoteId = Utils::Gui::getTabWidgetNoteId(ui->noteEditTabWidget, tabIndex);
 
@@ -12094,6 +12096,11 @@ void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
             }
         }
     });
+
+    // Close note tab
+    auto *closeAction = menu->addAction(tr("Close note tab"));
+    connect(closeAction, &QAction::triggered, this,
+            [this, tabIndex]() { removeNoteTab(tabIndex); });
 
     menu->exec(ui->noteEditTabWidget->tabBar()->mapToGlobal(point));
 }
