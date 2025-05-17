@@ -2453,8 +2453,11 @@
                         <property name="text">
                          <string notr="true">English (British)</string>
                         </property>
+                        <property name="toolTip">
+                         <string>English (British)</string>
+                        </property>
                         <property name="whatsThis">
-                         <string>en_GB</string>
+                         <string notr="true">en_GB</string>
                         </property>
                        </item>
                        <item>
