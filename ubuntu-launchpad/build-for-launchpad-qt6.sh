@@ -13,14 +13,13 @@
 set -e
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=25.5.8.3
+#QOWNNOTES_VERSION=25.5.8.10
 
 BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-# UBUNTU_RELEASES=("jammy" "noble" "oracular" "plucky" "questing")
-UBUNTU_RELEASES=("questing")
+UBUNTU_RELEASES=("noble" "oracular" "plucky" "questing")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
@@ -109,14 +108,11 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   #    cp ../ubuntu-launchpad/qt6/* debian
   cp /QOwnNotes/ubuntu-launchpad/qt6/* debian
 
-  # What's in there?
-  ls debian
-
   # Remove obsolete compat file, we are using "debhelper-compat (= 13)"
-  rm debian/compat
+  rm -f debian/compat
 
   # Remove obsolete install file for Qt5 build
-  rm debian/qownnotes.install
+  rm -f debian/qownnotes.install
 
   versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 

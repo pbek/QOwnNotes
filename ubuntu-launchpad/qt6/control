@@ -45,13 +45,3 @@ Description: Plain-text file markdown note taking with Nextcloud/ownCloud integr
  You own your own notes! All notes are stored as plain-text files on your desktop computer.
  Sync them over devices (desktop & mobile) with ownCloud.
  Use Nextcloud Notes to edit your notes in the web.
-
-Package: qownnotes-qt6-l10n
-Architecture: all
-Multi-Arch: foreign
-Section: localization
-Depends:
- ${misc:Depends},
- qt6-translations-l10n
-Description: Language package for qownnotes
- This package contains the l10n files needed by the qownnotes.
