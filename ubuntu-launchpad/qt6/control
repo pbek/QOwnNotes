@@ -4,7 +4,7 @@ Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
 Section: editors
 Build-Depends:
  cmake (>= 3.16),
- debhelper,
+ debhelper-compat (= 13),
  pkg-config,
  qt6-base-dev,
  qt6-declarative-dev,

@@ -109,6 +109,15 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   #    cp ../ubuntu-launchpad/qt6/* debian
   cp /QOwnNotes/ubuntu-launchpad/qt6/* debian
 
+  # What's in there?
+  ls debian
+
+  # Remove obsolete compat file, we are using "debhelper-compat (= 13)"
+  rm debian/compat
+
+  # Remove obsolete install file for Qt5 build
+  rm debian/qownnotes.install
+
   versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 
   # update the changelog file
