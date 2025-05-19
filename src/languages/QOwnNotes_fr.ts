@@ -5183,6 +5183,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Basque</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonien</translation>
 </message>
@@ -5497,10 +5501,6 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Si vous souhaitez aider à traduire QOwnNotes ou mettre à jour une traduction existante, veuillez lire : &lt;a href="%1"&gt;Comment puis-je aider à traduire QOwnNotes ?&lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

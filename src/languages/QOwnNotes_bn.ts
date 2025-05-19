@@ -5188,6 +5188,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>বাস্ক</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>এস্তোনীয়</translation>
 </message>
@@ -5502,10 +5506,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>QOwnNotes অনুবাদে সাহায্য করতে চাইলে অথবা বিদ্যমান অনুবাদ হালনাগাদ করতে চাইলে দয়া করে পড়ুনঃ কিভাবে আমি QOwnNotes অনুবাদে সাহায্য করতে পারি?</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

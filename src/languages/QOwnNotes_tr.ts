@@ -5204,6 +5204,10 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
 <translation>Bask</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonyalı</translation>
 </message>
@@ -5519,10 +5523,6 @@ vermek için eski yöntemi kullanın</translation>
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>QOwnNotes'u çevirmeye veya mevcut bir çeviriyi güncellemeye yardım etmek istiyorsanız, lütfen okuyun: &lt;a href="%1"&gt; QOwnNotes'u çevirmeye nasıl yardımcı olabilirim? &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

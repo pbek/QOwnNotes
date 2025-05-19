@@ -105,13 +105,13 @@ Falls Sie dieses Repository für andere Debian Linux-Versionen verwenden, gehen 
 
 ## Debian 9.0
 
-Run the following shell commands to trust the repository.
+Führen Sie die folgenden Shell-Befehle aus um den Paketquellen zu vertrauen.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+Führen Sie die folgenden Shell-Befehle aus, um die Paketquellen für die Installation hinzuzufügen und QOwnNotes von dort zu installieren.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -123,4 +123,4 @@ sudo apt-get install qownnotes
 Falls Sie dieses Repository für andere Debian Linux-Versionen verwenden, gehen Sie sicher, dass Sie **Qt** mindestens auf **Version 5.5** installiert haben.
 :::
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)
+[Direkter Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

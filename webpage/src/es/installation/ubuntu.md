@@ -18,7 +18,7 @@ sudo apt-get install qownnotes
 
 ## Vista previa de QOwnNotes con Qt6
 
-Si desea poner a prueba los paquetes con Qt6 desde ahora y se encuentra en Ubuntu 22.04 o más reciente, puede utilizar este repositorio:
+If you already want to try the Qt6 packages, built with cmake and are on Ubuntu 24.04 or newer, you can use this repository:
 
 ```bash
 # Eliminar el PPA de Qt5 si lo ha instalado
@@ -34,7 +34,7 @@ sudo apt-get install qownnotes
 
 [Descarga directa](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-Si encuentra cualquier problema, ¡por favor repórtelos en los [problemas de QOwnNotes en GItHub](https://github.com/pbek/QOwnNotes/issues)!
+If you find any issues, please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
 
 ## Distribuciones y derivados más antiguos de Ubuntu Linux
 
@@ -50,23 +50,23 @@ Posteriormente, debería ser capaz de ejecutar la AppImage para abrir QOwnNotes.
 
 ## Repositorio de OBS
 
-También puede usar QOwnNotes en versiones de Ubuntu que ya no se actualizan más en Ubuntu Launchpad. Luego puede usar los repositorios de [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop). The packages for Ubuntu 24.04+ are built with cmake and Qt6.
 
-A continuación se muestran llamadas de ejemplo para el repositorio de xUbuntu 20.04.
+Below are example calls for the xUbuntu 24.04 repository.
 
 Ejecute la orden de consola siguiente para marcar el repositorio como de fiar.
 
 ```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/Release.key -O - | sudo apt-key add -
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04/Release.key -O - | sudo apt-key add -
 ```
 
 Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 sudo su -
-sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04/ /' >> /etc/apt/sources.list.d/qownnotes.list"
+sh -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 apt-get update
 apt-get install qownnotes
 ```
 
-[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_20.04)
+[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)

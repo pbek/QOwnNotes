@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.5.9
+
+- Added more Croatian, Spanish, Korean translation (thank you, milotype, alejandromoc, venusgirl)
+
 ## 25.5.8
 
 - There now is an option to hide the tab close button in the _Panels settings_

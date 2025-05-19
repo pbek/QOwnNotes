@@ -5240,6 +5240,10 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <translation>Bască</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Eston</translation>
 </message>
@@ -5555,10 +5559,6 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Dacă doriți să ajutați la traducerea QOwnNotes sau să actualizați o traducere existentă, vă rugăm să citiți: &lt;a href="%1"&gt; Cum pot ajuta la traducerea QOwnNotes? &lt;/a&gt;
 </translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

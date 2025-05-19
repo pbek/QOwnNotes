@@ -5189,6 +5189,10 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <translation>Euskal</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estoniera</translation>
 </message>
@@ -5503,10 +5507,6 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>QOwnNotes itzultzen lagundu nahi baduzu edo lehendik dagoen itzulpena eguneratzen irakurri: &lt;a href="%1"&gt; Nola lagun dezaket QOwnNotes itzultzen? &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

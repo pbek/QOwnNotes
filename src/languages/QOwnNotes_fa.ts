@@ -5263,6 +5263,10 @@ QOwnNotesAPI
 <translation>باسکی</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>استونیایی</translation>
 </message>
@@ -5591,10 +5595,6 @@ QOwnNotesAPI
 &lt;a href="%1"&gt;
 چطور می توانم به ترجمه QOwnNotes کمک کنم؟
 &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

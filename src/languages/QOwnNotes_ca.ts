@@ -5175,6 +5175,10 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <translation>Basc</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonià</translation>
 </message>
@@ -5489,10 +5493,6 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Si voleu ajudar a traduïr QOwnNotes o actualitzar una traducció existent llegiu, si us plau: &lt;a href="%1"&gt;Com puc ajudar a traduïr QOwnNotes?&lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

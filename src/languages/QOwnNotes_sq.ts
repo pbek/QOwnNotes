@@ -5196,6 +5196,10 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <translation>Bask</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonisht</translation>
 </message>
@@ -5510,10 +5514,6 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Nëse doni të ndihmoni për të përkthyer QOwnNotes ose për të azhurnuar një përkthim ekzistues, ju lutemi lexoni: &lt;a href="%1"&gt; Si mund të ndihmoj për të përkthyer QOwnNotes? &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

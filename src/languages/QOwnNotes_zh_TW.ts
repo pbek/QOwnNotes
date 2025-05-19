@@ -5152,6 +5152,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>巴斯克</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>愛沙尼亞語</translation>
 </message>
@@ -5466,10 +5470,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>如果您想幫助翻譯 QOwnNotes 或更新現有翻譯，請閱讀：&lt;a href="%1"&gt;我如何幫助翻譯 QOwnNotes？&lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

@@ -2795,7 +2795,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>Cerrar pestaña de la nota</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -5182,6 +5182,10 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <translation>Vasco</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation>Inglés (Británico)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonio</translation>
 </message>
@@ -5498,10 +5502,6 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <translation>Si desea ayudar a traducir QOwnNotes o actualizar una traducción existente, lea: &lt;a href="%1"&gt; ¿Cómo puedo ayudar a traducir QOwnNotes? &lt;/a&gt;</translation>
 </message>
 <message>
-<source>en_GB</source>
-<translation>en_GB</translation>
-</message>
-<message>
 <source>Khmer</source>
 <translation>Camboyano</translation>
 </message>
@@ -5692,7 +5692,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>Ocultar botón de cerrar la pestaña</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

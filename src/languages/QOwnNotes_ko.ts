@@ -2776,7 +2776,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>노트 탭 닫기</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -5145,6 +5145,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>바스크어</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation>영어 (영국식)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>에스토니아어</translation>
 </message>
@@ -5461,10 +5465,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>QOwnNotes를 번역하거나 기존 번역을 업데이트하는 데 도움이 되고 싶다면 다음을 읽어보십시오: &lt;a href="%1"&gt;QOWNNotes를 번역하려면 어떻게 해야 합니까?&lt;/a&gt;</translation>
 </message>
 <message>
-<source>en_GB</source>
-<translation>ko_KR</translation>
-</message>
-<message>
 <source>Khmer</source>
 <translation>크메르어</translation>
 </message>
@@ -5655,7 +5655,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>탭 닫기 버튼 숨기기</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

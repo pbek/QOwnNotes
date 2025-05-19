@@ -5182,6 +5182,10 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <translation>Baszk</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Észt</translation>
 </message>
@@ -5496,10 +5500,6 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Ha szeretne segíteni a QOwnNotes fordításában vagy egy meglévő fordítás frissítésében, olvassa el: &lt;a href="%1"&gt; Hogyan segíthetek a QOwnNotes fordításában?&lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

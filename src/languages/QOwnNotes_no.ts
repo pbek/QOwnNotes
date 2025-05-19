@@ -5205,6 +5205,10 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
 <translation>Basque</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estisk</translation>
 </message>
@@ -5519,10 +5523,6 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Hvis du vil hjelpe deg med å oversette QOwnNotes eller oppdatere en eksisterende oversettelse, kan du lese: &lt;a href="%1"&gt; Hvordan kan jeg hjelpe til med å oversette QOwnNotes? &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

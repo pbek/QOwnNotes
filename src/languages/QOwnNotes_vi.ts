@@ -5164,6 +5164,10 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <translation>Basque</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Tiếng Estonia</translation>
 </message>
@@ -5478,10 +5482,6 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Nếu bạn muốn giúp dịch QOwnNotes hoặc cập nhật bản dịch hiện có, vui lòng đọc: &lt;a href="%1"&gt; Tôi có thể giúp dịch QOwnNotes như thế nào? &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

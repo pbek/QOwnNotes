@@ -5201,6 +5201,10 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
 <translation>Basco</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estoniano</translation>
 </message>
@@ -5515,10 +5519,6 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Se você quiser ajudar a traduzir QOwnNotes ou atualizar uma tradução existente, leia: &lt;a href="%1"&gt; Como posso ajudar a traduzir QOwnNotes? &lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

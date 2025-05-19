@@ -5146,6 +5146,10 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation type="unfinished">Basque</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation type="unfinished">Estonian</translation>
 </message>
@@ -5460,10 +5464,6 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>

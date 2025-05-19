@@ -1,4 +1,4 @@
-# AI support
+# KI Unterstützung
 
 You can opt-in to use your favorite AI model (LLM) to help you with your notes.
 There is built-in support for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**,

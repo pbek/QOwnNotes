@@ -5289,6 +5289,10 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
 <translation>Baskický</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estónsky</translation>
 </message>
@@ -5603,10 +5607,6 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>Ak chcete pomôcť s prekladom QOwnNotes alebo aktualizovať existujúci preklad, prečítajte si: &lt;a href="%1"&gt; Ako môžem pomôcť s prekladom QOwnNotes? &lt;/a&gt;</translation>
-</message>
-<message>
-<source>en_GB</source>
-<translation type="unfinished">en_GB</translation>
 </message>
 <message>
 <source>Khmer</source>
