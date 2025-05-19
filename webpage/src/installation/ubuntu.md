@@ -18,7 +18,7 @@ sudo apt-get install qownnotes
 
 ## QOwnNotes Qt6 Preview
 
-If you already want to try the Qt6 packages, built with cmake and are on
+If you already want to try the Qt6 packages built with cmake and are on
 Ubuntu 24.04 or newer, you can use this repository:
 
 ```bash
