@@ -2,6 +2,12 @@
 
 ## 25.5.9
 
+- The packages on the Ubuntu repositories for Qt6 on Launchpad are now built with
+  Qt6 and cmake, because of the dropped qmake support on Ubuntu 25.10+
+  - See [Install on Ubuntu](https://www.qownnotes.org/installation/ubuntu.html#qownnotes-qt6-preview)
+    for more information
+  - This took a long time to complete, but scripting still doesn't seem to work
+    in those packages
 - Added more Croatian, Spanish, Korean translation (thank you, milotype, alejandromoc, venusgirl)
 
 ## 25.5.8
