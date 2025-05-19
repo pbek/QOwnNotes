@@ -18,8 +18,8 @@ sudo apt-get install qownnotes
 
 ## QOwnNotes Qt6 Preview
 
-If you already want to try the Qt6 packages and are on Ubuntu 24.04 or newer,
-you can use this repository:
+If you already want to try the Qt6 packages, built with cmake and are on
+Ubuntu 24.04 or newer, you can use this repository:
 
 ```bash
 # Remove Qt5 PPA in case you had it installed
@@ -53,6 +53,7 @@ Afterward you should be able to execute the AppImage to run QOwnNotes.
 
 You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can
 use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+The packages for Ubuntu 24.04+ are built with cmake and Qt6.
 
 Below are example calls for the xUbuntu 24.04 repository.
 
