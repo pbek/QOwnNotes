@@ -4,7 +4,7 @@ You can download the latest AppImage from the [QOwnNotes releases page](https://
 It should be named like `QOwnNotes-x86_64.AppImage` on that page.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq/) installed you can also
+If you have [jq](https://stedolan.github.io/jq/) installed, you can also
 download the latest AppImage directly:
 
 ```bash
