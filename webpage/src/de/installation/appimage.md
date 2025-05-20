@@ -3,7 +3,7 @@
 Sie können das neueste AppImage von der Seite [QOwnNotes-Versionen](https://github.com/pbek/QOwnNotes/releases) herunterladen. Es sollte auf dieser Seite in etwa `QOwnNotes-x86_64.AppImage` heißen.
 
 ::: tip
-Wenn Sie [jq](https://stedolan.github.io/jq/) installiert haben, können Sie auch das neueste AppImage direkt herunterladen:
+If you have [jq](https://stedolan.github.io/jq/) installed, you can also download the latest AppImage directly:
 
 ```bash
 # fragen Sie die neueste Linux-Version von der QOwnNotes-API ab, parsen Sie die JSON nach der URL und laden Sie sie runter

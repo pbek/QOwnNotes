@@ -1,24 +1,12 @@
 # Telepítse az Ubuntu Linux-ra, az elemi operációs rendszerre és a Linux Mint-re
 
-## Ubuntu Linux 18.04 vagy újabb, elemi operációs rendszer, Linux Mint 18 vagy újabb
+## Ubuntu Linux 24.04 or newer, elementary OS, Linux Mint 22.1 or newer
 
-Telepítse a **QOwnNotes** alkalmazást az **Ubuntu Linux** operációs rendszerre (minimum 18.04) a PPA adattár használatával.
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 24.04) using the PPA repository. This version of QOwnNotes is built with Qt6.
 
 Vegye figyelembe, hogy az ARM számára is vannak csomagok az adattárban, arra az esetre, ha a QOwnNotes alkalmazást egy **Raspberry Pi** rendszeren szeretné használni.
 
 Nyissa meg a terminált, és írja be a következő sorokat az adattár hozzáadásához és a QOwnNotes telepítéséhez.
-
-```bash
-sudo add-apt-repository ppa:pbek/qownnotes
-sudo apt-get update
-sudo apt-get install qownnotes
-```
-
-[Közvetlen letöltés](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
-
-## QOwnNotes Qt6 Preview
-
-If you already want to try the Qt6 packages, built with cmake and are on Ubuntu 24.04 or newer, you can use this repository:
 
 ```bash
 # Remove Qt5 PPA in case you had it installed
@@ -32,21 +20,33 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+[Közvetlen letöltés](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
 If you find any issues, please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+
+## QOwnNotes Qt5 legacy
+
+For older versions of Ubuntu Linux, like 18.04 or newer, elementary OS, Linux Mint 18 or newer, you can use the Qt5 version of QOwnNotes.
+
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 18.04) using the PPA repository.
+
+Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
+
+Open a terminal and enter the following lines to add the repository and install QOwnNotes.
+
+```bash
+sudo add-apt-repository ppa:pbek/qownnotes
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
+[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
 ## Older Ubuntu Linux distributions and derivatives
 
 Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-Then you can change the execute-permissions on the file:
-
-```bash
-chmod a+x QOwnNotes-*.AppImage
-```
-
-Afterward you should be able to execute the AppImage to run QOwnNotes.
+See [Install as AppImage](./appimage.md) for more information.
 
 ## OBS Repository
 

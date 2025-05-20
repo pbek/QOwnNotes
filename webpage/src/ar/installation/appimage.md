@@ -3,7 +3,7 @@
 يمكنك تنزيل AppImage الأخيرة من [صفحة إصدارات QOwnNotes](https://github.com/pbek/QOwnNotes/releases). من المفترض أن يكون اسم ملفها شيئا مثل `QOwnNotes-x86_64.AppImage` في هذه الصفحة.
 
 ::: tip
-إذا كان مثبتًا لديك [jq](https://stedolan.github.io/jq/) فيمكنك أيضا تنزيل AppImage الأخيرة مباشرةً:
+If you have [jq](https://stedolan.github.io/jq/) installed, you can also download the latest AppImage directly:
 
 ```bash
 <span dir="rtl"># استعلم عن إصدارة لينكس الأخيرة عبر QOwnNotes API، وحلل JSON الناتج للحصول على الرابط، ونزّلها</span>

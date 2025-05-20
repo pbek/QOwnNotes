@@ -16,7 +16,7 @@ Sie können **QOwnNotes** in Ihrem Webbrowser ohne Installation testen, indem Si
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-4. A new browser tab should open producing a desktop. Click on the **bottom left symbol** on the screen (in the task bar), hover over **Accessories** and click on **QOwnNotes** (see screenshot bullet **3**).
+4. A new browser tab should open producing a desktop. Klicken Sie auf das **bottom left symbol** auf dem Bildschirm (in der Task-Leiste), schweben Sie mit der Maus über  **Accessories**  und klicken Sie auf **QOwnNotes** (siehe Screenshot **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 

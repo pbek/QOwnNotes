@@ -1,6 +1,6 @@
 # KI Unterstützung
 
-You can opt-in to use your favorite AI model (LLM) to help you with your notes.
+Sie können ihr favorisiertes KI-Modell (LLM) aktivieren, das Sie bei ihren Notizen unterstützen soll.
 There is built-in support for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**,
 but the internal API is designed to be easily extendable to other AI models with scripts.
 There are several AI backend integrations scripts available in the script repository to get you started.

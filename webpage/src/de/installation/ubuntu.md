@@ -1,33 +1,21 @@
 # Installieren unter Ubuntu Linux, Elementary OS und Linux Mint
 
-## Ubuntu Linux 18.04 oder neuer, elementary OS, Linux Mint 18 oder neuer
+## Ubuntu Linux 24.04 or newer, elementary OS, Linux Mint 22.1 or newer
 
-Installieren Sie **QOwnNotes** unter **Ubuntu Linux** (mindestens 18.04) mithilfe des PPA-Repositorys.
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 24.04) using the PPA repository. This version of QOwnNotes is built with Qt6.
 
 Beachten Sie, dass das Repository auch Pakete für ARM enthält, falls Sie QOwnNotes auf einem **Raspberry Pi** verwenden möchten.
 
 Öffnen Sie ein Terminal und geben Sie die folgenden Zeilen ein, um das Repository hinzuzufügen und QOwnNotes zu installieren.
 
 ```bash
-sudo add-apt-repository ppa:pbek/qownnotes
-sudo apt-get update
-sudo apt-get install qownnotes
-```
-
-[Direkter Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
-
-## QOwnNotes Qt6 Preview
-
-If you already want to try the Qt6 packages, built with cmake and are on Ubuntu 24.04 or newer, you can use this repository:
-
-```bash
-# Entfernt Qt5 PPA, falls Sie das installiert hatten
+# Remove Qt5 PPA in case you had it installed
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Fügt Qt6 PPA hinzu
+# Add Qt6 PPA
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Installiert QOwnNotes
+# Install QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
@@ -36,17 +24,29 @@ sudo apt-get install qownnotes
 
 If you find any issues, please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
 
-## Ältere Ubuntu Linux-Distributionen und -Derivate
+## QOwnNotes Qt5 legacy
 
-Am Besten probieren Sie das AppImage von [QOwnNotes Versionen auf GitHub](https://github.com/pbek/QOwnNotes/releases).
+For older versions of Ubuntu Linux, like 18.04 or newer, elementary OS, Linux Mint 18 or newer, you can use the Qt5 version of QOwnNotes.
 
-Dann können Sie die Ausführungsberechtigungen für die Datei ändern:
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 18.04) using the PPA repository.
+
+Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
+
+Open a terminal and enter the following lines to add the repository and install QOwnNotes.
 
 ```bash
-chmod a+x QOwnNotes-*.AppImage
+sudo add-apt-repository ppa:pbek/qownnotes
+sudo apt-get update
+sudo apt-get install qownnotes
 ```
 
-Danach sollten Sie das AppImage ausführen können, um QOwnNotes zu starten.
+[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
+
+## Ältere Ubuntu Linux-Distributionen und -Derivate
+
+Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+
+See [Install as AppImage](./appimage.md) for more information.
 
 ## OBS-Repository
 
@@ -54,13 +54,13 @@ You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore
 
 Below are example calls for the xUbuntu 24.04 repository.
 
-Führen Sie die folgenden Befehle aus, um dem Repository zu vertrauen.
+Run the following shell command to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04/Release.key -O - | sudo apt-key add -
 ```
 
-Führen Sie die folgenden Shell-Befehle aus, um das Repository hinzuzufügen und von dort aus QOwnNotes zu installieren.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 sudo su -
@@ -69,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direkter Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)

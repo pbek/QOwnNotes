@@ -3,7 +3,7 @@
 Lassen Sie Ihre Rechtschreibfehler korrigieren!
 
 ::: tip Info
-QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen.
+QOwnNotes hat einen  **Dictionary Manager** (im _Edit_ Menü) den Sie nutzen können, um Wörterbücher herunterzuladen oder zu entfernen (wenn das von Ihnen benötigte Wörterbuch fehlen sollte, finden Sie unten eine Anleitung wie Sie das Hinzufügen dieses Wörterbuchs beantragen können). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen.
 :::
 
 - Unter **Linux** können Sie die Hunspell-Wörterbücher für Ihre Sprache mit dem pkg-Manager Ihrer Distribution installieren
