@@ -37,6 +37,7 @@ Depends:
  libqt6websockets6,
  qt6-wayland,
  qt6-qpa-plugins,
+ qml6-module-qtqml,
  qml6-module-qtqml-workerscript,
  qml6-module-qtqml-models,
  openssl
