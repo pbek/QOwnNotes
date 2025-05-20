@@ -3,7 +3,7 @@
 ## 25.5.10
 
 - One more missing library for the scripting engine was added to the OBS
-  Debian / Ubuntu builds with Qt6 and for the Qt6 builds for Ubuntu Launchpad
+  Debian / Ubuntu builds with Qt6 and to the Qt6 builds for Ubuntu Launchpad
   (for [#3267](https://github.com/pbek/QOwnNotes/issues/3267))
 
 ## 25.5.9
