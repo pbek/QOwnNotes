@@ -6,6 +6,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
 option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
+option(USE_KDE_FRAMEWORKS "Enable KDE Frameworks integration (Qt6 only)" ON)
 # END options
 
 if(QON_QT6_BUILD)
@@ -13,6 +14,8 @@ if(QON_QT6_BUILD)
   set(QT_DEFAULT_MAJOR_VERSION 6)
 else()
   set(QT_VERSION_MAJOR 5)
+  # Disable KDE Frameworks for Qt5 builds
+  set(USE_KDE_FRAMEWORKS OFF)
 endif()
 
 # put the QOwnNotes.exe in build directory
@@ -106,6 +109,30 @@ find_package(
   WebSockets
   Qml
   Concurrent)
+
+# KDE Frameworks 6 integration (Qt6 only)
+if(QON_QT6_BUILD AND USE_KDE_FRAMEWORKS)
+  message("Searching for KDE Frameworks 6...")
+
+  find_package(KF6WidgetsAddons REQUIRED)
+  find_package(KF6KIO REQUIRED)
+  find_package(KF6GuiAddons REQUIRED)
+  find_package(KF6XmlGui REQUIRED)
+  find_package(KF6ConfigWidgets REQUIRED)
+  find_package(KF6Notifications REQUIRED)
+  find_package(KF6IconThemes REQUIRED)
+
+  message("KDE Frameworks 6 found - enabling KDE integration")
+  add_definitions(-DUSE_KDE_FRAMEWORKS=1)
+  set(KDE_FRAMEWORKS_AVAILABLE TRUE)
+else()
+  set(KDE_FRAMEWORKS_AVAILABLE FALSE)
+  if(QON_QT6_BUILD)
+    message("KDE Frameworks integration disabled")
+  else()
+    message("KDE Frameworks only available for Qt6 builds")
+  endif()
+endif()
 
 find_program(CCACHE_FOUND ccache)
 
@@ -583,6 +610,31 @@ target_link_libraries(
           Botan::Botan
           fakevim
           Google::DiffMatchPatch)
+
+# KDE Frameworks 6 libraries (Qt6 only)
+if(KDE_FRAMEWORKS_AVAILABLE)
+  if(TARGET KF6::WidgetsAddons)
+    target_link_libraries(QOwnNotes PRIVATE KF6::WidgetsAddons)
+  endif()
+  if(TARGET KF6::KIO)
+    target_link_libraries(QOwnNotes PRIVATE KF6::KIO)
+  endif()
+  if(TARGET KF6::GuiAddons)
+    target_link_libraries(QOwnNotes PRIVATE KF6::GuiAddons)
+  endif()
+  if(TARGET KF6::XmlGui)
+    target_link_libraries(QOwnNotes PRIVATE KF6::XmlGui)
+  endif()
+  if(TARGET KF6::ConfigWidgets)
+    target_link_libraries(QOwnNotes PRIVATE KF6::ConfigWidgets)
+  endif()
+  if(TARGET KF6::Notifications)
+    target_link_libraries(QOwnNotes PRIVATE KF6::Notifications)
+  endif()
+  if(TARGET KF6::IconThemes)
+    target_link_libraries(QOwnNotes PRIVATE KF6::IconThemes)
+  endif()
+endif()
 
 if(USE_QLITEHTML)
   target_link_libraries(QOwnNotes PRIVATE qlitehtml::qlitehtml)

@@ -13,10 +13,10 @@
 
 #pragma once
 
-#include <QComboBox>
+#include <KComboBox>
 class QWidget;
 
-class ComboBox : public QComboBox {
+class ComboBox : public KComboBox {
     Q_OBJECT
 
    public:

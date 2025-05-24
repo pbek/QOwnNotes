@@ -16,7 +16,7 @@
 #include <QApplication>
 #include <QDebug>
 
-ComboBox::ComboBox(QWidget *parent) : QComboBox(parent) {
+ComboBox::ComboBox(QWidget *parent) : KComboBox(parent) {
     // we (sadly) have to watch for all focus changes of the whole app,
     // there is no other way I know of that works reliably with QComboBox
     connect(qApp, SIGNAL(focusChanged(QWidget *, QWidget *)), this,
