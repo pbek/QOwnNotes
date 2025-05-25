@@ -31,6 +31,17 @@ include_directories(libraries/sonnet/src/core)
 # some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
+set(QT_MIN_VERSION "6.6.0")
+set(KF_MIN_VERSION "6.0.0")
+
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+# include(FeatureSummary)
+
 add_executable(QOwnNotes "")
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
