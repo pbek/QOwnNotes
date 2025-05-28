@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.6.0
+
+- The filename in checksum files of the Qt6 AppImages in the releases on GitHub was fixed
+  (for [#3286](https://github.com/pbek/QOwnNotes/issues/3286))
+
 ## 25.5.10
 
 - One more missing library for the scripting engine was added to the OBS
