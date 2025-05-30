@@ -2,7 +2,7 @@ INCLUDEPATH += $$PWD
 #TARGET = sonnet-core
 #TEMPLATE = lib
 #CONFIG += staticlib c++11
-CONFIG += c++11
+CONFIG += c++20
 QT -= gui
 
 #Sonnet Core
