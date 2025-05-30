@@ -15,6 +15,7 @@
   packages =
     with pkgs;
     with qt6;
+    with qt6Packages;
     [
       just
       crowdin-cli
@@ -22,6 +23,13 @@
       qmake
       qttools
       wrapQtAppsHook
+
+      # Packages for "just src-build"
+      qtbase
+      qtdeclarative
+      qtsvg
+      qtwebsockets
+
       pkg-config
       libclang # for clang-format
       procs # fetches process info
