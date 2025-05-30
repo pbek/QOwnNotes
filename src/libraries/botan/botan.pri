@@ -1,6 +1,7 @@
 INCLUDEPATH *= $$PWD/..
 INCLUDEPATH += $$PWD
 HEADERS += $$PWD/botan_all.h
+CONFIG += c++20
 
 equals(USE_SYSTEM_BOTAN, 1) {
     DEFINES += USE_SYSTEM_BOTAN
