@@ -11,7 +11,7 @@
 #include <botan/secmem.h>
 #include <botan/system_rng.h>
 #else
-#include "botan.h"
+#include "botan_all.h"
 #endif
 
 BotanWrapper::BotanWrapper() {

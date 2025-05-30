@@ -205,5 +205,5 @@ run-github-workflow args='format-check':
 
 # Build botan3 amalgamation
 [group('maintenance')]
-build-botan3-amalgamation:
-    nix-build -E 'with import <nixpkgs> {}; callPackage ./scripts/botan3-amalgamation.nix {}'
+build-botan3-amalgamation args='':
+    nix-build -E 'with import <nixpkgs> {}; callPackage ./scripts/botan3-amalgamation.nix {}' {{ args }}

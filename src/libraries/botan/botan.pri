@@ -1,7 +1,6 @@
 INCLUDEPATH *= $$PWD/..
 INCLUDEPATH += $$PWD
-HEADERS += $$PWD/botan.h \
-           $$PWD/botan_internal.h
+HEADERS += $$PWD/botan_all.h
 
 equals(USE_SYSTEM_BOTAN, 1) {
     DEFINES += USE_SYSTEM_BOTAN
@@ -9,7 +8,7 @@ equals(USE_SYSTEM_BOTAN, 1) {
     PKGCONFIG += botan-3
 } else {
 
-SOURCES += $$PWD/botan.cpp
+SOURCES += $$PWD/botan_all.cpp
 
 CONFIG += exceptions
 

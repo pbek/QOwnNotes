@@ -28,8 +28,11 @@ stdenv.mkDerivation rec {
     # We only need the amalgamation, so we can use --no-install-python-module
     # and other minimal flags to avoid building the full library
     python3 configure.py \
-      --amalgamation \
-      --no-install-python-module \
+      --cc=gcc --cc-bin=g++ --cpu=x86_64 --amalgamation --minimized-build \
+      --disable-shared \
+      --enable-modules=aes,base,base64,block,cbc,checksum,cmac,filters,hash,hash_id,hex,hmac,hmac_drbg,kdf,kdf2,pbkdf,pbkdf2,sha1 \
+      --without-documentation --disable-sse2 --disable-ssse3 --disable-sse4.1 --disable-sse4.2 \
+      --disable-aes-ni --disable-sha-ni --cxxflags=-pipe \
       --prefix=$out
 
     runHook postConfigure

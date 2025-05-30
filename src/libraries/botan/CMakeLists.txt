@@ -29,7 +29,7 @@ if(BUILD_WITH_SYSTEM_BOTAN)
   return()
 endif()
 
-target_sources(botan PRIVATE botan.h botan.cpp botan_internal.h)
+target_sources(botan PRIVATE botan_all.cpp botan_all.h)
 
 # add some Botan defines for Linux
 if(UNIX)
