@@ -98,7 +98,14 @@ nix-run:
 # Build the application direclty from the source
 [group('src-build')]
 src-build:
-    mkdir -p {{ sourceBuildDir }}; cd {{ sourceBuildDir }} && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro && make -j$(nproc)
+    qmake --version
+    mkdir -p {{ sourceBuildDir }}; cd {{ sourceBuildDir }} && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro CONFIG+=DEV_MODE && make -j$(nproc)
+
+# Build the application direclty from the source
+[group('src-build')]
+src-build-internal-botan:
+    qmake --version
+    mkdir -p {{ sourceBuildDir }}; cd {{ sourceBuildDir }} && qmake "CONFIG+=debug" ../src/QOwnNotes.pro CONFIG+=DEV_MODE && make -j$(nproc)
 
 # Build the application direclty from the source
 [group('src-build')]
