@@ -60,7 +60,7 @@
               qtwebsockets
               qtdeclarative
               qtsvg
-              botan2
+              botan3
             ];
 
           shellHook = ''
