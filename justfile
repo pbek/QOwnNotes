@@ -202,3 +202,8 @@ format args='':
 [group('linter')]
 run-github-workflow args='format-check':
     nix-shell -p act --run "act -j {{ args }}"
+
+# Build botan3 amalgamation
+[group('maintenance')]
+build-botan3-amalgamation:
+    nix-build -E 'with import <nixpkgs> {}; callPackage ./scripts/botan3-amalgamation.nix {}'
