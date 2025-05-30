@@ -944,10 +944,9 @@ void TodoDialog::reloadCurrentTags() {
         const QString buttonText = QString(tag).replace("\\,", ",").replace("\\\\", "\\");
         QPushButton *tagButton = new QPushButton(buttonText, ui->tagsFrame);
         tagButton->setIcon(QIcon::fromTheme("tag-delete"));
-        connect(tagButton, &QPushButton::released, this, [=]() {
-            _todoTagsList.removeOne(tag);
-            reloadCurrentTags();
-        });
+        _todoTagsList.removeOne(tag);
+        reloadCurrentTags();
+        connect(tagButton, &QPushButton::released, this, [this]() {});
         ui->tagsFrame->layout()->addWidget(tagButton);
     }
     _todoTagsScrollArea->setVisible(true);
