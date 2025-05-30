@@ -59,7 +59,7 @@
 #define BOTAN_MP_WORD_BITS 64
 
 #define BOTAN_INSTALL_PREFIX R"(/usr/local)"
-#define BOTAN_INSTALL_HEADER_DIR "include/botan-2"
+#define BOTAN_INSTALL_HEADER_DIR "include/botan-3"
 #define BOTAN_INSTALL_LIB_DIR "/usr/local/lib"
 #define BOTAN_LIB_LINK ""
 #define BOTAN_LINK_FLAGS "-fstack-protector -m64 -pthread"

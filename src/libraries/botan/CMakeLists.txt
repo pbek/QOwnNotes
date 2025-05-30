@@ -16,12 +16,12 @@ target_link_libraries(botan PUBLIC Qt${QT_VERSION_MAJOR}::Core)
 target_include_directories(botan PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 
 if(BUILD_WITH_SYSTEM_BOTAN)
-  find_package(Botan2 REQUIRED)
-  if(NOT TARGET Botan2::Botan2)
-    message(FATAL_ERROR "Could not find system Botan 2 library using PkgConfig")
+  find_package(Botan3 REQUIRED)
+  if(NOT TARGET Botan3::Botan3)
+    message(FATAL_ERROR "Could not find system Botan 3 library using PkgConfig")
   endif()
 
-  target_link_libraries(botan PUBLIC Botan2::Botan2)
+  target_link_libraries(botan PUBLIC Botan3::Botan3)
 
   target_compile_definitions(botan PUBLIC USE_SYSTEM_BOTAN)
 
