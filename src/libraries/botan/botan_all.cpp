@@ -1773,11 +1773,6 @@ Vector base_decode_to_vec(Base&& base, const char input[], size_t input_length, 
  *  - OS: linux
  */
 
-/*
- * Configuration
- */
-#define BOTAN_CT_VALUE_BARRIER_USE_ASM
-
 [[maybe_unused]] static constexpr bool OptimizeForSize = false;
 
 #if defined(BOTAN_HAS_VALGRIND)
