@@ -7,7 +7,7 @@ TARGET = tests
 TEMPLATE = app
 
 CONFIG += debug
-CONFIG += c++11
+CONFIG += c++20
 
 PROJECT_ROOT = $$PWD/../..//
 SRC_DIR = $$PROJECT_ROOT/src//
