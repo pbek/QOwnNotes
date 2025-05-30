@@ -12,7 +12,7 @@
   qtx11extras,
   makeWrapper,
   wrapQtAppsHook,
-  botan2,
+  botan3,
   pkg-config,
   xvfb-run,
   installShellFiles,
@@ -49,7 +49,7 @@ stdenv.mkDerivation {
     qtsvg
     qtwebsockets
     qtx11extras
-    botan2
+    botan3
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
   cmakeFlags = [
