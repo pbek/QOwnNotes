@@ -8,6 +8,8 @@ TEMPLATE = app
 
 CONFIG += debug
 CONFIG += c++20
+QMAKE_CXXFLAGS += -std=c++20
+# QMAKE_CXX_FLAGS += -std=c++20
 
 PROJECT_ROOT = $$PWD/../..//
 SRC_DIR = $$PROJECT_ROOT/src//

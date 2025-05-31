@@ -204,7 +204,7 @@ jobs:
       - if: contains( matrix.os, 'ubuntu-latest')
         name: Do Linux tests
         run: |
-          cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
+          cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -j 8
           ../bin/tests/tests -platform minimal -txt
       # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
       # See https://github.com/pbek/QOwnNotes/issues/3018

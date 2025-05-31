@@ -1,4 +1,5 @@
- 
+CONFIG += c++20
+
 APP_SRC_DIR = $$PWD/../../../../src/
 
 INCLUDEPATH += $$APP_SRC_DIR

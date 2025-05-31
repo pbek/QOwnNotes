@@ -108,6 +108,16 @@ lessThan(QT_MAJOR_VERSION, 6) {
     } else {
         QMAKE_CXXFLAGS += "-std=c++20"
     }
+
+    # C++20 mitigation for:
+    # error: bitwise operation between different enumeration types ‘QSizePolicy::Policy’ and ‘QSizePolicy::PolicyFlag’ is deprecated
+    QMAKE_CXXFLAGS += -Wno-deprecated-enum-enum-conversion
+    # C++20 mitigation for:
+    # qtconcurrentthreadengine.h:250:50: error: invalid declarator before ‘*’ token
+    # qtconcurrentthreadengine.h:250:49: error: expected ‘)’ before ‘*’ token
+    # QMAKE_CXXFLAGS += -Wno-error
+    QMAKE_CXXFLAGS += -fpermissive
+    QMAKE_CXXFLAGS += -w
 } else {
     win32:CONFIG += entrypoint
     CONFIG += c++20
@@ -441,13 +451,15 @@ unix {
   icons.files += images/icons/*
 }
 
-!win32-msvc: QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef"
+greaterThan(QT_MAJOR_VERSION, 5) {
+    !win32-msvc: QMAKE_CXXFLAGS += "-Wall -Wextra -Wundef"
 
-# Enable Werror on unixes except mac
-CONFIG(DEV_MODE) {
-    unix:!mac {
-        message("Werror enabled")
-        QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror -pedantic"
+    # Enable Werror on unixes except mac
+    CONFIG(DEV_MODE) {
+        unix:!mac {
+            message("Werror enabled")
+            QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror -pedantic"
+        }
     }
 }
 
