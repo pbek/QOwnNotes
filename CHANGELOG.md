@@ -2,7 +2,7 @@
 
 ## 25.6.0
 
-- QOwnNotes now builds with with Botan 3, when built with the system Botan library
+- QOwnNotes now builds with Botan 3, when built with the system Botan library
   (cmake build parameter `-DBUILD_WITH_SYSTEM_BOTAN=ON`), because of the end of life of Botan 2
   (for [#2786](https://github.com/pbek/QOwnNotes/issues/2786))
   - Keep in mind that Botan 3 needs C++20, which causes issues on Qt5
