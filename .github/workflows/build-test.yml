@@ -254,7 +254,8 @@ jobs:
       - if: true && !(contains( matrix.os, 'windows') && (matrix.qt-version == '5.15.2' || startsWith( matrix.qt-version, '6.' ))) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
         name: Build QOwnNotes
         run: |
-          lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
+          # lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
+          lrelease QOwnNotes.pro && qmake CONFIG+=release && make -j 8
       # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
       # See https://github.com/pbek/QOwnNotes/issues/3018
       - if: contains( matrix.os, 'macos')
