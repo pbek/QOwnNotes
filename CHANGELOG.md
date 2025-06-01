@@ -2,6 +2,12 @@
 
 ## 25.6.0
 
+- QOwnNotes now builds with with Botan 3, when built with the system Botan library
+  (cmake build parameter `-DBUILD_WITH_SYSTEM_BOTAN=ON`), because of the end of life of Botan 2
+  (for [#2786](https://github.com/pbek/QOwnNotes/issues/2786))
+  - Keep in mind that Botan 3 needs C++20, which causes issues on Qt5
+  - QMake and Qt5 will still use the internal Botan 2 amalgamation
+  - Creating an amalgamation Botan 3 did work, but caused major issues with various build processes
 - The filename in checksum files of the Qt6 AppImages in the releases on GitHub was fixed
   (for [#3286](https://github.com/pbek/QOwnNotes/issues/3286))
 
