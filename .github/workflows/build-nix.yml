@@ -8,6 +8,7 @@ on:
       - "*"
     paths:
       - "src/**"
+      - "flake.*"
       - "shell.nix"
       - "default.nix"
       - "build-systems/nix/**"
@@ -15,6 +16,7 @@ on:
   pull_request:
     paths:
       - "src/**"
+      - "flake.*"
       - "shell.nix"
       - "default.nix"
       - "build-systems/nix/**"
