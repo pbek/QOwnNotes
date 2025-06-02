@@ -148,6 +148,11 @@ git-apply-qownnotes-patch:
 git-apply-qmarkdowntextedit-patch:
     cd ./src/libraries/qmarkdowntextedit && git apply {{ transferDir }}/qmarkdowntextedit.patch
 
+# Apply a git patch to qhotkey
+[group('patches')]
+git-apply-qhotkey-patch:
+    cd ./src/libraries/qhotkey && git apply {{ transferDir }}/qhotkey.patch
+
 # Apply a git patch to piwiktracker
 [group('patches')]
 git-apply-piwiktracker-patch:
@@ -164,9 +169,10 @@ git-create-patches:
     @echo "transferDir: {{ transferDir }}"
     git diff --no-ext-diff --staged --binary > {{ transferDir }}/qownnotes.patch
     cd src/libraries/qmarkdowntextedit && git diff --no-ext-diff --staged --binary > {{ transferDir }}/qmarkdowntextedit.patch
+    cd src/libraries/qhotkey && git diff --no-ext-diff --staged --binary > {{ transferDir }}/qhotkey.patch
     cd src/libraries/piwiktracker && git diff --no-ext-diff --staged  --binary > {{ transferDir }}/piwiktracker.patch
     cd src/libraries/qttoolbareditor && git diff --no-ext-diff --staged  --binary > {{ transferDir }}/qttoolbareditor.patch
-    ls -l1t {{ transferDir }} | head -5
+    ls -l1t {{ transferDir }} | head -6
 
 # Open the Crowdin webpage
 [group('translations')]
