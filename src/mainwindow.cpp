@@ -88,6 +88,7 @@
 #include <QTextBlock>
 #include <QTextDocumentFragment>
 #include <QTextLength>
+#include <QThread>
 #include <QTimer>
 #include <QTreeWidgetItem>
 #include <QUuid>
@@ -765,6 +766,9 @@ MainWindow::~MainWindow() {
                                                    QStringLiteral("app end"));
 
     storeUpdatedNotesToDisk();
+
+    // Wait for threads exiting
+    QThread::wait();
 
     // commit the changes in the current note folder to git
     // (#1269, may cause an interruption of the shutdown process)
