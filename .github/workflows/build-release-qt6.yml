@@ -129,25 +129,32 @@ jobs:
         run: |
           export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
           export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+
+          # Set the extra Qt modules to include
+          export EXTRA_QT_MODULES="Qml;QmlWorkerScript;QmlModels"
+
           cp ../icons/icon.png QOwnNotes.png
-          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
+
+          # Copy additional resources
           mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
           mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
-          find ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/lib
-          cp -rL ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/lib/libQt6QmlWorkerScript.so.6 ${{env.BUILD_DIR}}/usr/lib
-          cp -rL ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/lib/libQt6QmlModels.so.6 ${{env.BUILD_DIR}}/usr/lib
+
+          # Single linuxdeploy run - the Qt plugin will automatically include the extra modules
+          ./linuxdeploy-x86_64.AppImage \
+            --appdir ${{env.BUILD_DIR}} \
+            -e ${{env.UNIXNAME}} \
+            -i ${{env.UNIXNAME}}.png \
+            -d PBE.QOwnNotes.desktop \
+            --plugin qt \
+            --output appimage
+
           find ${{env.BUILD_DIR}}
-          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
-          rm linuxdeploy-x86_64.AppImage
-          rm linuxdeploy-plugin-qt-x86_64.AppImage
-          ls -hal *.AppImage
-          find -iname "*.AppImage"
-          # It's ok if no file needs to be renamed
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage ||:
+
+          # Cleanup
+          rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage
           sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           ls -hal *.AppImage
-          find -iname "*.AppImage"
-          pwd
 
       - name: "📤 Upload artifact: AppImage"
         uses: actions/upload-artifact@v4
