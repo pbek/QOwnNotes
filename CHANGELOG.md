@@ -5,9 +5,9 @@
 - A segmentation fault when quitting the application on ARM macOS was fixed
   (for [#3290](https://github.com/pbek/QOwnNotes/issues/3290))
 - There now is a new scripting method `note.getNoteUrlForLinkingToNoteId` to return
-  the Markdown note url for linking to a note (for [#268](https://github.com/qownnotes/scripts/pull/268))
-  - For more information please take a look at
-    [Opening an input dialog with a multi-line text edit](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-multi-line-text-edit)
+  the Markdown note URL for linking to a note (for [#268](https://github.com/qownnotes/scripts/pull/268))
+  - For more information, please take a look at the
+    [scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
 
 ## 25.6.0
 
