@@ -26,6 +26,8 @@ class NoteApi {
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
     Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
     Q_INVOKABLE bool allowDifferentFileName()
+    // Returns the Markdown note url for linking to the note with noteId
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
 };
 ```
 
