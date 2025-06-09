@@ -152,7 +152,7 @@ jobs:
 
           # Cleanup
           rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage || true
           sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           ls -hal *.AppImage
 
