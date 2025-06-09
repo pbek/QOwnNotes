@@ -364,7 +364,14 @@ void LogWidget::logMessageOutput(QtMsgType type, const QMessageLogContext &conte
  * @param msg
  */
 void LogWidget::logToFileIfAllowed(LogType logType, const QString &msg) {
+    // There was a segmentation fault when quitting the application on ARM macOS
+    // when using SettingsService, see https://github.com/pbek/QOwnNotes/issues/3290
+#if defined(Q_OS_MACOS) && defined(Q_PROCESSOR_ARM)
+    QSettings settings;
+#else
     SettingsService settings;
+#endif
+
     if (settings.value(QStringLiteral("Debug/fileLogging")).toBool()) {
         QFile logFile(Utils::Misc::logFilePath());
         if (logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
