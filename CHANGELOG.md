@@ -8,6 +8,7 @@
   the Markdown note URL for linking to a note (for [#268](https://github.com/qownnotes/scripts/pull/268))
   - For more information, please take a look at the
     [scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
+- Added more Spanish, Thai translation (thank you, alejandromoc, achn.syps)
 
 ## 25.6.0
 

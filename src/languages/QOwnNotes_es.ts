@@ -1501,7 +1501,7 @@
 </message>
 <message>
 <source>Enter the name of the link (optional)</source>
-<translation>Escribe el nombre del enlace (opcional)</translation>
+<translation>Escriba el nombre del enlace (opcional)</translation>
 </message>
 <message>
 <source>Name of link (optional)</source>
@@ -1509,7 +1509,7 @@
 </message>
 <message>
 <source>Enter a description for the link (optional)</source>
-<translation>Escribe una descripción para el enlace (opcional)</translation>
+<translation>Escriba una descripción para el enlace (opcional)</translation>
 </message>
 <message>
 <source>Description of link (optional)</source>
@@ -1678,7 +1678,7 @@
 </message>
 <message>
 <source>Add a tag to the current note</source>
-<translation>Agregar una etiqueta a la nota actual</translation>
+<translation>Añadir una etiqueta a la nota actual</translation>
 </message>
 <message>
 <source>&amp;Note</source>
@@ -1802,7 +1802,7 @@
 </message>
 <message>
 <source>Add a tag to the selected notes</source>
-<translation>Agregar una etiqueta a las notas seleccionadas</translation>
+<translation>Añadir una etiqueta a las notas seleccionadas</translation>
 </message>
 <message>
 <source>New tag</source>
@@ -2547,15 +2547,15 @@ Restore current note?</source>
 </message>
 <message>
 <source>Remove current note</source>
-<translation>Elimina nota actual</translation>
+<translation>Elimina la nota actual</translation>
 </message>
 <message>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>Elimina nota actual: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>¿Elimina la nota actual: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-<translation>Por favor entra la &lt;strong&gt;contraseña&lt;/strong&gt; de esta nota cifrada.</translation>
+<translation>Por favor, introduzca la &lt;strong&gt;contraseña&lt;/strong&gt; de esta nota cifrada.</translation>
 </message>
 <message>
 <source>Note can't be decrypted!</source>
@@ -2659,7 +2659,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-<translation>Has deshabilitado las listas de tareas. &lt;br /&gt; ¡Por favor, comprueba tu configuración de &lt;strong&gt;Tareas&lt;/strong&gt; en las preferencias!</translation>
+<translation>Ha deshabilitado las listas de tareas. &lt;br /&gt; Por favor, ¡compruebe su configuración de &lt;strong&gt;Tareas&lt;/strong&gt; en la configuración!</translation>
 </message>
 <message numerus="yes">
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
@@ -3095,7 +3095,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Export current note as PDF</source>
-<translation>Exporta la nota actual a pdf</translation>
+<translation>Exportar la nota actual como PDF</translation>
 </message>
 <message>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
@@ -3243,7 +3243,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Stored current note to disk</source>
-<translation>Se guardó la nota actual en disco</translation>
+<translation>Se guardó la nota actual en el disco</translation>
 </message>
 <message>
 <source>Note was modified externally: %1</source>
@@ -3402,7 +3402,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Current note could not be stored to disk</source>
-<translation>La nota actual no pudo ser almacenada en disco</translation>
+<translation>La nota actual no pudo ser almacenada en el disco</translation>
 </message>
 <message>
 <source>Read-only</source>
@@ -3418,7 +3418,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
-<translation>Haz clic aquí para ver lo que ha cambiado y para poder actualizar a la última versión</translation>
+<translation>Haga clic aquí para ver lo que ha cambiado y para poder actualizar a la última versión</translation>
 </message>
 <message>
 <source>Waiting for answer from AI</source>
@@ -3479,7 +3479,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-<translation>&lt;br /&gt;podrás editar tu nota cifrada.</translation>
+<translation>&lt;br /&gt;Podrá editar su nota cifrada.</translation>
 </message>
 <message>
 <source>Export current note as Markdown file</source>
@@ -3780,7 +3780,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>Por favor considera actualizar tu aplicación de QOwnNotesAPI en el servidor, la versión %1 es demasiado baja y puede causar problemas en QOwnNotes.</translation>
+<translation>Por favor, considere actualizar su aplicación de QOwnNotesAPI en el servidor. Su versión de la aplicación, %1, es demasiado baja, y puede causar problemas en QOwnNotes.</translation>
 </message>
 <message>
 <source>ownCloud server connection error</source>
@@ -4212,7 +4212,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Add to Dictionary</source>
-<translation>Agregar al diccionario</translation>
+<translation>Añadir al diccionario</translation>
 </message>
 <message>
 <source>Spelling</source>
@@ -4572,7 +4572,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>&amp;Add folder</source>
-<translation>&amp;Agregar carpeta</translation>
+<translation>&amp;Añadir carpeta</translation>
 </message>
 <message>
 <source>&amp;Remove folder</source>
@@ -4788,7 +4788,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Do this at your own risk!</source>
-<translation>¡Haz esto bajo tu propio riesgo!</translation>
+<translation>¡Haga esto bajo su propio riesgo!</translation>
 </message>
 <message>
 <source>Ignore all external note folder changes</source>
@@ -5071,7 +5071,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Add connection</source>
-<translation>Agregar conexión</translation>
+<translation>Añadir conexión</translation>
 </message>
 <message>
 <source>Remove connection</source>
@@ -5083,7 +5083,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Your ownCloud username</source>
-<translation>Tu nombre de usuario ownCloud</translation>
+<translation>Su nombre de usuario de ownCloud</translation>
 </message>
 <message>
 <source>Password:</source>
@@ -5091,7 +5091,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Your ownCloud password</source>
-<translation>Tu contraseña de ownCloud</translation>
+<translation>Su contraseña de ownCloud</translation>
 </message>
 <message>
 <source>&amp;Connect to ownCloud server</source>
@@ -5604,7 +5604,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Add a new note file extension</source>
-<translation>Agregar una nueva extensión de archivo de nota</translation>
+<translation>Añadir una nueva extensión de archivo de nota</translation>
 </message>
 <message>
 <source>Remove selected note file extension</source>
@@ -6052,7 +6052,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Enter a command to be used to show a git log (like for example "gitk")</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Escriba una orden para mostrar su registro de git (por ejemplo, "gitk")</translation>
+<translation>Escriba una orden para mostrar un registro de git (por ejemplo, "gitk")</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -6558,7 +6558,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>Eliminar la carpeta de notas actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>¿Eliminar la carpeta de notas actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -6874,11 +6874,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>The public url of your note</source>
-<translation>La URL pública de tu nota</translation>
+<translation>La URL pública de su nota</translation>
 </message>
 <message>
 <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation>Compartir públicamente el archivo de nota actual en tu servidor de ownCloud. Puede enviar el enlace generado a otros para que puedan ver o descargar el archivo.</translation>
+<translation>Compartir públicamente el archivo de nota actual en su servidor de ownCloud. Puede enviar el enlace generado a otros para que puedan ver o descargar el archivo.</translation>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
@@ -7048,11 +7048,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
-<translation>Agregar archivos adjuntos seleccionados a la nota actual</translation>
+<translation>Añadir archivos adjuntos seleccionados a la nota actual</translation>
 </message>
 <message>
 <source>Add to current note</source>
-<translation>Agregar a la nota actual</translation>
+<translation>Añadir a la nota actual</translation>
 </message>
 <message>
 <source>Open &amp;attachment</source>
@@ -7115,7 +7115,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Add attachments to current note</source>
-<translation>&amp;Agregar adjuntos a la nota actual</translation>
+<translation>&amp;Añadir adjuntos a la nota actual</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
@@ -7158,7 +7158,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Add selected images to the current note</source>
-<translation>Agregar imágenes seleccionadas a la nota actual</translation>
+<translation>Añadir imágenes seleccionadas a la nota actual</translation>
 </message>
 <message>
 <source>Open the media folder</source>
@@ -7178,7 +7178,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Add to current note</source>
-<translation>Agregar a la nota actual</translation>
+<translation>Añadir a la nota actual</translation>
 </message>
 <message>
 <source>Delete selected images</source>
@@ -7269,7 +7269,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Add images to current note</source>
-<translation>&amp;Agregar imágenes a la nota actual</translation>
+<translation>&amp;Añadir imágenes a la nota actual</translation>
 </message>
 <message>
 <source>&amp;Open note</source>
@@ -7367,7 +7367,7 @@ Your notes will stay intact!</source>
 <name>TagAddDialog</name>
 <message>
 <source>Add a new tag</source>
-<translation>Agregar una nueva etiqueta</translation>
+<translation>Añadir una nueva etiqueta</translation>
 </message>
 <message>
 <source>Add new tag</source>

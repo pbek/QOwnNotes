@@ -4,7 +4,7 @@
 
 소스 코드에서 직접 QOwnNotes를 빌드할 수도 있습니다.
 
-Git 저장소에서 직접 코드를 체크아웃합니다:
+git 저장소에서 마지막 릴리스의 코드를 직접 확인하세요:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -48,6 +48,15 @@ make
 [Nix 패키지 관리자](https://nixos.org/download/)을 사용할 수 있다면 위에서 설명한 것처럼 소스 코드를 git-복제하고 빌드하기만 하면 됩니다:
 
 ```bash
-# 필요한 모든 도구를 얻으려면 nix-shell을 엽니다
-nix-shell
+# 아직 개발되지 않은 경우 개발 환경 보호
+nix-shell -p devenv
+
+# 필요한 모든 도구로 셸 열기
+devenv shell
+
+# 응용 프로그램 빌드
+just nix-build
+
+# 빌드된 응용 프로그램실행
+just nix-run
 ```

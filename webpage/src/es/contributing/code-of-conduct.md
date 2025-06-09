@@ -28,7 +28,7 @@ Ejemplos de conductas inaceptables son:
 
 Líderes de comunidad son responsables de clarificar y aplicar nuestros estándares de comportamiento y tomarán acciones correctivas justas y apropiadas ante cualquier comportamiento que ellos consideren inapropiado, amenazante, ofensivo o nocivo.
 
-Líderes de comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, "commits", código, ediciones de la wiki, problemas y otras contribuciones que no estén alineadas con el código de conducta y comunicaran las razones de su moderación cuando sea apropiado.
+Los líderes de la comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, "commits", código, ediciones de la wiki, problemas y otras contribuciones que no estén alineadas con el código de conducta, y comunicaran las razones de su moderación cuando sea apropiado.
 
 ## Alcance
 
@@ -36,7 +36,7 @@ Este código de conducta aplica a todos los espacios dentro de la comunidad y ta
 
 ## Ejecución
 
-Los casos de abuso, acoso o alguna otra forma de comportamiento inapropiado pueden ser reportados a los líderes de la comunidad responsables del cumplimiento (vease el menú de _Contacto_ en [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
+Los casos de abuso, acoso o alguna otra forma de comportamiento inapropiado pueden ser reportados a los líderes de la comunidad responsables del cumplimiento (véase el menú de _Contacto_ en [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
 
 Todos los líderes de la comunidad están obligados a respetar la privacidad y seguridad del informador en cualquier tipo de incidente.
 

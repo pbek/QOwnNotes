@@ -4,7 +4,7 @@
 
 U kunt QOwnNotes ook zelf bouwen vanuit de broncode.
 
-Check de code rechtstreeks uit de git-repository:
+Checkout the code of the last release directly from the git repository:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -50,8 +50,11 @@ De bronarchieven zullen als volgt toegankelijk zijn:
 Als je de [Nix package manager](https://nixos.org/download/) beschikbaar hebt, kun je de broncode gewoon Git-klonen, zoals hierboven uitgelegd, en bouwen met:
 
 ```bash
-# Open a nix-shell to get all needed tools
-nix-shell
+# Get devenv if you don't have it already
+nix-shell -p devenv
+
+# Open a shell with all the tools you need
+devenv shell
 
 # Build the application
 just nix-build

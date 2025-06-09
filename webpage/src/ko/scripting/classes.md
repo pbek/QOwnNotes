@@ -5,7 +5,7 @@
 ### 속성 및 방식
 
 ```cpp
-클래스 NoteApi {
+class NoteApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(QString fileName)
@@ -26,6 +26,8 @@
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
     Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
     Q_INVOKABLE bool allowDifferentFileName()
+    // Returns the Markdown note url for linking to the note with noteId
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
 };
 ```
 

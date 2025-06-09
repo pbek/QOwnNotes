@@ -62,7 +62,7 @@ dnf install qownnotes
 
 ### GPG 키에 문제가 있습니까?
 
-Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. 이로 인해 _ 업데이트_ QOwnNotes 문제가 발생할 수 있습니다.
 
 **세부 정보:** <0>인증서가 살아있지 않거나</0> 키 만료로 인해 키 만료로 인해 키가 `살아있지 않는` 등 잘못된 키 (예, GPG 오류) 에 문제가 있는 경우 이 터미널 명령은 만료된 키를 삭제해야 합니다:
 

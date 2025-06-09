@@ -48,3 +48,23 @@ scoop bucket add extras
 scoop update
 scoop install qownnotes
 ```
+
+## WinGet
+
+Hay un [paquete de QOwnNotes mantenido por la comunidad](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) en [WinGet](https://github.com/microsoft/winget-cli).
+
+Puede instalarlo con:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+Hay un [paquete de QOwnNotes mantenido por la comunidad](https://packages.msys2.org/base/mingw-w64-qownnotes) en [MSYS2](hhttps://www.msys2.org/).
+
+Puede instalarlo con:
+
+```shell
+pacman -S mingw-w64-qownnotes
+```

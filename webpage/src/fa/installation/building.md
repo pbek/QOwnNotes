@@ -4,7 +4,7 @@
 
 شما هم می توانید خودتان QOwnNotes را از کد منبع بسازید.
 
-کد را مستقیماً از مخزن گیت وارسی کنید:
+Checkout the code of the last release directly from the git repository:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -50,8 +50,11 @@ The source archives will be accessible like that:
 If you have the [Nix package manager](https://nixos.org/download/) available you can just git-clone the source code, like explained above and build with:
 
 ```bash
-# Open a nix-shell to get all needed tools
-nix-shell
+# Get devenv if you don't have it already
+nix-shell -p devenv
+
+# Open a shell with all the tools you need
+devenv shell
 
 # Build the application
 just nix-build

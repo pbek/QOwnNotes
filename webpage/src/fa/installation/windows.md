@@ -32,7 +32,7 @@ Info
 
 ## چاکلتلی
 
-یک بسته نگهداری شده جمعی از QOwnNotes در  [Chocolatey](https://chocolatey.org/packages/qownnotes/) موجود می باشد.
+There is a community-maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
 می توانید آن را با عبارت زیر نصب کنید:
 
@@ -42,10 +42,30 @@ choco install qownnotes
 
 ## اسکوپ
 
-یک [بسته نگهداری شده جمعی از QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) در [اسکوپ](https://scoop.sh/) در دسترس قرار دارد. در صورت افزودن باکت افزونه ها (Extras)، برای نصب QOwnNotes به شکل قابل حمل می توانید از آن استفاده کنید.
+There is a [community-maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket, you can use it to install QOwnNotes in portable mode.
 
 ```shell
 scoop bucket add extras
 scoop update
 scoop install qownnotes
+```
+
+## WinGet
+
+There is a [community-maintained package of QOwnNotes](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) for [WinGet](https://github.com/microsoft/winget-cli).
+
+You can install it with:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+There is a [community-maintained package of QOwnNotes](https://packages.msys2.org/base/mingw-w64-qownnotes) for [MSYS2](hhttps://www.msys2.org/).
+
+You can install it with:
+
+```shell
+pacman -S mingw-w64-qownnotes
 ```

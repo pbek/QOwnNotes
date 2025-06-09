@@ -804,7 +804,7 @@
 </message>
 <message>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>เลื่อนออฟเซ็ต:</translation>
 </message>
 <message>
 <source>Backspace:</source>
@@ -876,7 +876,7 @@
 </message>
 <message>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>ใช้ Meta-Shift-Y, Meta-Shift-Y เพื่อออกจากโหมด FakeVim</translation>
 </message>
 <message>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>

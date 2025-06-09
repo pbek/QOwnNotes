@@ -32,7 +32,7 @@ Dovrai scaricare tu le nuove versioni.
 
 ## Chocolatey
 
-In [Chocolatey](https://chocolatey.org/packages/qownnotes/) c'è un pacchetto di QOwnNotes gestito dalla comunità.
+There is a community-maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
 Puoi installarlo con:
 
@@ -42,10 +42,30 @@ choco install qownnotes
 
 ## Scoop
 
-In [Scoop](https://scoop.sh/) c'è un [pacchetto di QOwnNotes gestito dalla comunità](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json). Se aggiungi il bucket Extras puoi usare QOwnNotes in modalità portabile.
+There is a [community-maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket, you can use it to install QOwnNotes in portable mode.
 
 ```shell
 scoop bucket add extras
 scoop update
 scoop install qownnotes
+```
+
+## WinGet
+
+There is a [community-maintained package of QOwnNotes](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) for [WinGet](https://github.com/microsoft/winget-cli).
+
+You can install it with:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+There is a [community-maintained package of QOwnNotes](https://packages.msys2.org/base/mingw-w64-qownnotes) for [MSYS2](hhttps://www.msys2.org/).
+
+You can install it with:
+
+```shell
+pacman -S mingw-w64-qownnotes
 ```

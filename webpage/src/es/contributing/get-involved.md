@@ -12,8 +12,8 @@ Las diversas formas de involucrarse con QOwnNotes
 - Suscríbase al [**feed RSS del blog** de QOwnNotes](https://feeds.feedburner.com/QOwnNotesBlog)
 - Suscríbase al [**feed RSS de los lanzamientos** de QOwnNotes](https://feeds.feedburner.com/QOwnNotesReleases)
 - Contribuir [**traducciones** a QOwnNotes](translation.md)
-- Informar problemas o compartir ideas para nuevas funciones en la página [QOwnNotes** Problemas de GitHub**](https://github.com/pbek/QOwnNotes/issues)
-- Informar problemas o compartir ideas para nuevas funciones en la página [QOwnNotes **Problemas de GitHub**](https://github.com/pbek/QOwnNotes/issues)
+- Informe problemas o comparta ideas para nuevas funciones en la página de [** problemas de GitHub** de QOwnNotes](https://github.com/pbek/QOwnNotes/issues)
+- Si ha creado un excelente esquema de editor, publíquelo también en la [página de **problemas de GitHub**](https://github.com/pbek/QOwnNotes/issues)
 - Comparta sus scripts en la [**Scripts de QOwnNotes** página de GitHub](https://github.com/qownnotes/scripts)
 
 ::: tip

@@ -1,38 +1,38 @@
 # Ubuntu Linux, elementary OS 및 Linux Mint에 설치
 
-## Ubuntu Linux 24.04 or newer, elementary OS, Linux Mint 22.1 or newer
+## Ubuntu Linux 24.04 이상, elementary OS, Linux Mint 22.1 이상
 
-Install **QOwnNotes** on **Ubuntu Linux** (minimum 24.04) using the PPA repository. This version of QOwnNotes is built with Qt6.
+PPA 저장소를 사용하여 **Ubuntu Linux** (최소 24.04)에 **QOwnNotes**을 설치합니다. 이 버전의 QOwnNotes는 Qt6으로 제작되었습니다.
 
 **Raspberry Pi**에서 QOnNotes를 사용하려는 경우 저장소에 ARM용 패키지도 있습니다.
 
 터미널을 열고 다음 행을 입력하여 저장소를 추가하고 QOwnNotes를 설치합니다.
 
 ```bash
-# Remove Qt5 PPA in case you had it installed
+# Qt5 PPA가 설치된 경우 제거
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Add Qt6 PPA
+# Qt6 PPA 추가
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Install QOwnNotes
+# QOwnNotes 설치
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
 [직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-If you find any issues, please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
+문제가 발견되면 [GitHub의 QOwnNotes 이슈](https://github.com/pbek/QOwnNotes/issues)에 대해 보고해 주세요!
 
-## QOwnNotes Qt5 legacy
+## QOwnNotes Qt5 레거시
 
-For older versions of Ubuntu Linux, like 18.04 or newer, elementary OS, Linux Mint 18 or newer, you can use the Qt5 version of QOwnNotes.
+Ubuntu Linux의 이전 버전인 18.04 이상, 기본 OS, Linux Mint 18 이상의 경우 QOwnNotes의 Qt5 버전을 사용할 수 있습니다.
 
-Install **QOwnNotes** on **Ubuntu Linux** (minimum 18.04) using the PPA repository.
+PPA 저장소를 사용하여 **Ubuntu Linux** (최소 18.04)에 **QOwnNotes**을 설치합니다.
 
-Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
+저장소에는 **Raspberry Pi**에서 QOwnNotes를 사용하려는 경우를 대비한 ARM 패키지도 있습니다.
 
-Open a terminal and enter the following lines to add the repository and install QOwnNotes.
+터미널을 열고 다음 줄을 입력하여 저장소를 추가하고 QOwnNotes를 설치합니다.
 
 ```bash
 sudo add-apt-repository ppa:pbek/qownnotes
@@ -40,27 +40,27 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
+[직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
 ## 이전 Ubuntu Linux 배포 및 파생 제품
 
-Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
+[GitHub에서 QOwnNotes 릴리스](https://github.com/pbek/QOwnNotes/releases)의 AppImage를 사용해 보세요.
 
-See [Install as AppImage](./appimage.md) for more information.
+자세한 내용은 [AppImage로 설치](./appimage.md)을 참조하세요.
 
 ## OBS 저장소
 
-You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop). The packages for Ubuntu 24.04+ are built with cmake and Qt6.
+Ubuntu Launchpad에서 더 이상 업데이트되지 않은 Ubuntu 버전에서도 QOwnNotes를 사용할 수 있으며, 그 후에는 [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)의 저장소를 사용할 수 있습니다. Ubuntu 24.04+용 패키지는 cmake와 Qt6로 제작되었습니다.
 
-Below are example calls for the xUbuntu 24.04 repository.
+다음은 xUbuntu 24.04 리포지토리에 대한 예제 호출입니다.
 
-Run the following shell command to trust the repository.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04/Release.key -O - | sudo apt-key add -
 ```
 
-Run the following shell commands to add the repository and install QOwnNotes from there.
+다음 셸 명령을 실행하여 저장소를 추가하고 거기에서 QOwnNotes를 설치합니다.
 
 ```bash
 sudo su -
@@ -69,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)

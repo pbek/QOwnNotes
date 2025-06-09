@@ -32,7 +32,7 @@ Magának le kell töltenie az új kiadásokat.
 
 ## Chocolatey
 
-Van egy közösség által karbantartott QOwnNotes csomag a [Chocolatey](https://chocolatey.org/packages/qownnotes/) címen.
+There is a community-maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
 Telepítheti:
 
@@ -42,10 +42,30 @@ choco install qownnotes
 
 ## Scoop
 
-Van egy [közösségi karbantartott QOwnNotes-csomag](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) a [Scoop](https://scoop.sh/)-nál. Ha hozzáadja az Extras tárolót, akkor a QOwnNotes hordozható módban történő telepítéséhez használhatja.
+There is a [community-maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket, you can use it to install QOwnNotes in portable mode.
 
 ```shell
 scoop bucket add extras
 scoop update
 scoop install qownnotes
+```
+
+## WinGet
+
+There is a [community-maintained package of QOwnNotes](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) for [WinGet](https://github.com/microsoft/winget-cli).
+
+You can install it with:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+There is a [community-maintained package of QOwnNotes](https://packages.msys2.org/base/mingw-w64-qownnotes) for [MSYS2](hhttps://www.msys2.org/).
+
+You can install it with:
+
+```shell
+pacman -S mingw-w64-qownnotes
 ```
