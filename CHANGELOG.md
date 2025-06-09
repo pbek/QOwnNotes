@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.6.1
+
+- A segmentation fault when quitting the application on ARM macOS was fixed
+  (for [#3290](https://github.com/pbek/QOwnNotes/issues/3290))
+
 ## 25.6.0
 
 - QOwnNotes now builds with Botan 3, when built with the system Botan library
