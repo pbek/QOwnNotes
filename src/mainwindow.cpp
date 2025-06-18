@@ -462,6 +462,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         QString::number(schemaCount) + QStringLiteral(" schemas"), schemaCount);
 
     _actionDialog = nullptr;
+    _commandBar = nullptr;
     _todoDialog = nullptr;
     _storedImagesDialog = nullptr;
     _storedAttachmentsDialog = nullptr;
@@ -10983,10 +10984,29 @@ void MainWindow::on_actionFind_action_triggered() {
         }
     }
 
-    CommandBar commandBar(this);
-    commandBar.updateBar(actions);
-    commandBar.setFocus();
-    commandBar.exec();
+    if (_commandBar != nullptr) {
+        delete _commandBar;
+    }
+
+    // We need to instantiate the class every time, otherwise no and then it's not drawn correctly
+    _commandBar = new CommandBar(this);
+
+    _commandBar->updateBar(actions);
+    _commandBar->setFocus();
+
+    // Keep in mind this call is not synchronous anymore for some reason, so we can't delete the
+    // instance
+    _commandBar->exec();
+
+    //    QPointer<CommandBar> commandBar = new CommandBar(this);
+    //
+    //    commandBar->updateBar(actions);
+    //    commandBar->setFocus();
+    //    QAction *action = commandBar->exec();
+    //
+    //    delete commandBar;
+    //
+    //    qDebug() << __func__ << " - 'action': " << action;
 }
 
 /**

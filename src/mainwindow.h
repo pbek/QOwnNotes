@@ -841,6 +841,7 @@ class MainWindow : public QMainWindow {
     bool _noteSubFolderDockWidgetVisible;
     bool _closeEventWasFired;
     ActionDialog *_actionDialog;
+    CommandBar *_commandBar;
     TodoDialog *_todoDialog;
     IssueAssistantDialog *_issueAssistantDialog;
     StoredImagesDialog *_storedImagesDialog;

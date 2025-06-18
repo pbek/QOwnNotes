@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.6.2
+
+- The _Find action_ dialog is now working again
+  (for [#3294](https://github.com/pbek/QOwnNotes/issues/3294))
+
 ## 25.6.1
 
 - A segmentation fault when quitting the application on ARM macOS was fixed
