@@ -5,7 +5,7 @@
 ### 속성 및 방식
 
 ```cpp
-class NoteApi {
+클래스 NoteApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(QString fileName)
@@ -28,7 +28,6 @@ class NoteApi {
     Q_INVOKABLE bool allowDifferentFileName()
     // Returns the Markdown note url for linking to the note with noteId
     Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
-};
 ```
 
 [날짜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)의 방식을 사용하여 만든 `fileCreated` 또는 `fileLastModified`로 작업할 수 있습니다.

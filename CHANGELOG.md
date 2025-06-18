@@ -4,6 +4,7 @@
 
 - The _Find action_ dialog is now working again
   (for [#3294](https://github.com/pbek/QOwnNotes/issues/3294))
+- Added more French translation (thank you, jd-develop)
 
 ## 25.6.1
 

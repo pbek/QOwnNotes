@@ -2672,7 +2672,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>Note</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -2688,24 +2688,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>File extension</source>
-<translation type="unfinished">File extension</translation>
+<translation>Extension de fichier</translation>
 </message>
 <message>
 <source>Extension of file attachment:</source>
-<translation type="unfinished">Extension of file attachment:</translation>
+<translation>Extension du fichier joint :</translation>
 </message>
 <message>
 <source>File base name</source>
-<translation type="unfinished">File base name</translation>
+<translation>Nom de base du fichier</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation type="unfinished">Base name of file attachment:</translation>
+<translation>Nom de base du fichier joint :</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
 <comment>Leave the base name empty for automatic name</comment>
-<translation type="unfinished">Leave empty for automatic name</translation>
+<translation>Laisser vide pour un nom automatique</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2790,13 +2790,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation>
-<numerusform>%n sélectionné</numerusform>
-<numerusform>%n sélectionnés</numerusform>
+<numerusform>%n sélectionné(e)</numerusform>
+<numerusform>%n sélectionné(e)s</numerusform>
 </translation>
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>Fermet l’onglet de note</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -3335,7 +3335,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Relations entre les notes</translation>
 </message>
 <message>
 <source>Log</source>
@@ -4370,14 +4370,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>Impossible d'établir une connexion de base de données avec le fichier « %1 ».
+Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Impossible d'établir une connexion à la base de données du dossier de notes pour fusionner « %1 ».
+Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -5184,7 +5184,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>English (British)</source>
-<translation type="unfinished">English (British)</translation>
+<translation>Anglais (britannique)</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -5693,7 +5693,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>Masquer le bouton de fermeture d’onglet</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -7862,7 +7862,7 @@ Cela ne peut être annuler !</translation>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>Votre exécutable QOwnNotes « %1 » n’est pas accessible en écriture ! Il doit être accessible en écriture par l’utilisateur courant pour pouvoir être mis à jour.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
