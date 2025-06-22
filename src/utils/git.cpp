@@ -24,6 +24,10 @@
 #include "misc.h"
 #include "services/settingsservice.h"
 
+#ifdef USE_LIBGIT2
+#include <git2.h>
+#endif
+
 /**
  * Checks if the current note folder uses git
  *
@@ -40,9 +44,13 @@ void Utils::Git::commitCurrentNoteFolder() {
         return;
     }
 
+#ifdef USE_LIBGIT2
+    initRepository(NoteFolder::currentLocalPath());
+    commitAll(NoteFolder::currentLocalPath(), "QOwnNotes commit");
+#else
     const auto git = gitCommand();
 
-    auto* process = new QProcess();
+    auto *process = new QProcess();
     process->setWorkingDirectory(NoteFolder::currentLocalPath());
 
     if (!executeGitCommand(git, QStringList{"init"}, process) ||
@@ -52,6 +60,7 @@ void Utils::Git::commitCurrentNoteFolder() {
     }
 
     delete (process);
+#endif
 }
 
 /**
@@ -61,8 +70,8 @@ void Utils::Git::commitCurrentNoteFolder() {
  * @param process
  * @return
  */
-bool Utils::Git::executeCommand(const QString& command, const QStringList& arguments,
-                                QProcess* process, bool withErrorDialog) {
+bool Utils::Git::executeCommand(const QString &command, const QStringList &arguments,
+                                QProcess *process, bool withErrorDialog) {
     if (process == nullptr) {
         process = new QProcess();
     }
@@ -105,8 +114,8 @@ bool Utils::Git::executeCommand(const QString& command, const QStringList& argum
  * @param process
  * @return
  */
-bool Utils::Git::executeGitCommand(const QString& gitExe, const QStringList& arguments,
-                                   QProcess* process, bool withErrorDialog) {
+bool Utils::Git::executeGitCommand(const QString &gitExe, const QStringList &arguments,
+                                   QProcess *process, bool withErrorDialog) {
     return executeCommand(gitExe, arguments, process, withErrorDialog);
 }
 
@@ -154,7 +163,7 @@ bool Utils::Git::hasLogCommand() {
  *
  * @param filePath
  */
-void Utils::Git::showLog(const QString& filePath) {
+void Utils::Git::showLog(const QString &filePath) {
     SettingsService settings;
     QString gitLogCommand = settings.value("gitLogCommand").toString();
 
@@ -184,3 +193,76 @@ void Utils::Git::showLog(const QString& filePath) {
 
     Utils::Misc::startDetachedProcess(command, parameters, NoteFolder::currentLocalPath());
 }
+
+#ifdef USE_LIBGIT2
+bool Utils::Git::initRepository(const QString &path) {
+    git_libgit2_init();
+
+    git_repository *repo = nullptr;
+    int error = git_repository_init(&repo, path.toUtf8().constData(), 0);
+
+    if (error != 0) {
+        const git_error *e = git_error_last();
+        qWarning() << "Failed to initialize repo:" << (e ? e->message : "unknown");
+        return false;
+    }
+
+    git_repository_free(repo);
+    qDebug() << "Initialized repository at" << path;
+    return true;
+}
+
+bool Utils::Git::commitAll(const QString &path, const QString &message) {
+    git_libgit2_init();
+
+    git_repository *repo = nullptr;
+    if (git_repository_open(&repo, path.toUtf8().constData()) != 0) {
+        qWarning() << "Failed to open repository at" << path;
+        return false;
+    }
+
+    git_index *index = nullptr;
+    git_oid tree_oid, commit_oid;
+
+    if (git_repository_index(&index, repo) != 0) {
+        qWarning() << "Failed to get index";
+        git_repository_free(repo);
+        return false;
+    }
+
+    git_index_add_all(index, nullptr, 0, nullptr, nullptr);
+    git_index_write(index);
+    git_index_write_tree(&tree_oid, index);
+
+    git_tree *tree = nullptr;
+    git_tree_lookup(&tree, repo, &tree_oid);
+
+    git_signature *sig = nullptr;
+    git_signature_now(&sig, "QOwnNotes", "noreply@qownnotes.org");
+
+    git_commit *parent = nullptr;
+    git_reference *ref = nullptr;
+    if (git_repository_head(&ref, repo) == 0) {
+        git_reference_peel(reinterpret_cast<git_object **>(&parent), ref, GIT_OBJECT_COMMIT);
+    }
+
+    int error = git_commit_create_v(&commit_oid, repo, "HEAD", sig, sig, nullptr,
+                                    message.toUtf8().constData(), tree, parent ? 1 : 0, parent);
+
+    git_signature_free(sig);
+    git_tree_free(tree);
+    git_index_free(index);
+    git_commit_free(parent);
+    git_reference_free(ref);
+    git_repository_free(repo);
+
+    if (error != 0) {
+        const git_error *e = git_error_last();
+        qWarning() << "Failed to create commit:" << (e ? e->message : "unknown");
+        return false;
+    }
+
+    qDebug() << "Created commit in" << path;
+    return true;
+}
+#endif

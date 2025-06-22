@@ -8,6 +8,8 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
 option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
+
+option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
 # END options
 
 if(QON_QT6_BUILD)
@@ -29,6 +31,17 @@ add_subdirectory(libraries/botan)
 include_directories(libraries/sonnet/src/core)
 # some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
+
+if(BUILD_WITH_LIBGIT2)
+  # Find libgit2
+  find_package(PkgConfig REQUIRED)
+  pkg_check_modules(LIBGIT2 REQUIRED libgit2)
+
+  include_directories(${LIBGIT2_INCLUDE_DIRS})
+  link_directories(${LIBGIT2_LIBRARY_DIRS})
+
+  target_compile_definitions(botan PUBLIC USE_LIBGIT2)
+endif()
 
 add_executable(QOwnNotes "")
 
@@ -583,11 +596,16 @@ target_link_libraries(
           Qt${QT_VERSION_MAJOR}::Concurrent
           QHotkey::QHotkey
           Botan::Botan
+          # ${LIBGIT2_LIBRARIES}
           fakevim
           Google::DiffMatchPatch)
 
 if(USE_QLITEHTML)
   target_link_libraries(QOwnNotes PRIVATE qlitehtml::qlitehtml)
+endif()
+
+if(BUILD_WITH_LIBGIT2)
+  target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
 endif()
 
 if(MINGW OR MSVC)

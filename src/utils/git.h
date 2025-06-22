@@ -30,5 +30,9 @@ QString gitCommand();
 void showLog(const QString& filePath);
 bool hasLogCommand();
 bool isCurrentNoteFolderUseGit();
+#ifdef USE_LIBGIT2
+bool initRepository(const QString& path);
+bool commitAll(const QString& path, const QString& message);
+#endif
 }    // namespace Git
 }    // namespace Utils
