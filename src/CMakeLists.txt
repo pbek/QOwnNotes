@@ -37,13 +37,23 @@ if(BUILD_WITH_LIBGIT2)
   find_package(PkgConfig REQUIRED)
   pkg_check_modules(LIBGIT2 REQUIRED libgit2)
 
+  if(NOT LIBGIT2_FOUND)
+    message(
+      FATAL_ERROR
+        "libgit2 was not found. Please install libgit2-dev or the appropriate package for your system."
+    )
+  endif()
+
   include_directories(${LIBGIT2_INCLUDE_DIRS})
   link_directories(${LIBGIT2_LIBRARY_DIRS})
-
-  target_compile_definitions(botan PUBLIC USE_LIBGIT2)
 endif()
 
 add_executable(QOwnNotes "")
+
+if(BUILD_WITH_LIBGIT2)
+  target_compile_definitions(QOwnNotes PUBLIC USE_LIBGIT2)
+  target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
+endif()
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
   message("Debug build configuration detected")
@@ -596,7 +606,6 @@ target_link_libraries(
           Qt${QT_VERSION_MAJOR}::Concurrent
           QHotkey::QHotkey
           Botan::Botan
-          # ${LIBGIT2_LIBRARIES}
           fakevim
           Google::DiffMatchPatch)
 
