@@ -1622,6 +1622,14 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output += prepareDebugInformationLine(QStringLiteral("System Botan"), systemBotan,
                                           withGitHubLineBreaks);
 
+    QString useLibGit2 = QStringLiteral("no");
+#ifdef USE_LIBGIT2
+    useLibGit2 = QStringLiteral("yes");
+#endif
+
+    output +=
+        prepareDebugInformationLine(QStringLiteral("Libgit2"), useLibGit2, withGitHubLineBreaks);
+
     output += prepareDebugInformationLine(QStringLiteral("Locale (system)"),
                                           QLocale::system().name(), withGitHubLineBreaks);
     output += prepareDebugInformationLine(
