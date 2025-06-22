@@ -44,14 +44,16 @@ void Utils::Git::commitCurrentNoteFolder() {
         return;
     }
 
+    const QString &localPath = NoteFolder::currentLocalPath();
+
 #ifdef USE_LIBGIT2
-    initRepository(NoteFolder::currentLocalPath());
-    commitAll(NoteFolder::currentLocalPath(), "QOwnNotes commit");
+    initRepository(localPath);
+    commitAll(localPath, "QOwnNotes commit");
 #else
     const auto git = gitCommand();
 
     auto *process = new QProcess();
-    process->setWorkingDirectory(NoteFolder::currentLocalPath());
+    process->setWorkingDirectory(localPath);
 
     if (!executeGitCommand(git, QStringList{"init"}, process) ||
         !executeGitCommand(git, QStringList{"config", "commit.gpgsign", "false"}, process) ||
@@ -199,6 +201,14 @@ bool Utils::Git::initRepository(const QString &path) {
     git_libgit2_init();
 
     git_repository *repo = nullptr;
+    // First, check if the directory is already a git repository
+    if (git_repository_open(&repo, path.toUtf8().constData()) == 0) {
+        // Already a git repo
+        git_repository_free(repo);
+        return true;
+    }
+
+    // Not a repo, so initialize
     int error = git_repository_init(&repo, path.toUtf8().constData(), 0);
 
     if (error != 0) {
@@ -234,6 +244,33 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
     git_index_write(index);
     git_index_write_tree(&tree_oid, index);
 
+    // Compare with HEAD tree OID
+    git_oid head_tree_oid;
+    bool hasChanges = true;
+    git_reference *head_ref = nullptr;
+    if (git_repository_head(&head_ref, repo) == 0) {
+        git_commit *head_commit = nullptr;
+        if (git_reference_peel(reinterpret_cast<git_object **>(&head_commit), head_ref,
+                               GIT_OBJECT_COMMIT) == 0) {
+            git_tree *head_tree = nullptr;
+            if (git_commit_tree(&head_tree, head_commit) == 0) {
+                git_oid_cpy(&head_tree_oid, git_tree_id(head_tree));
+                if (git_oid_cmp(&tree_oid, &head_tree_oid) == 0) {
+                    hasChanges = false;
+                }
+                git_tree_free(head_tree);
+            }
+            git_commit_free(head_commit);
+        }
+        git_reference_free(head_ref);
+    }
+
+    if (!hasChanges) {
+        git_index_free(index);
+        git_repository_free(repo);
+        return true;    // No changes to commit
+    }
+
     git_tree *tree = nullptr;
     git_tree_lookup(&tree, repo, &tree_oid);
 
@@ -242,12 +279,14 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
 
     git_commit *parent = nullptr;
     git_reference *ref = nullptr;
+    int parent_count = 0;
     if (git_repository_head(&ref, repo) == 0) {
         git_reference_peel(reinterpret_cast<git_object **>(&parent), ref, GIT_OBJECT_COMMIT);
+        parent_count = parent ? 1 : 0;
     }
 
     int error = git_commit_create_v(&commit_oid, repo, "HEAD", sig, sig, nullptr,
-                                    message.toUtf8().constData(), tree, parent ? 1 : 0, parent);
+                                    message.toUtf8().constData(), tree, parent_count, parent);
 
     git_signature_free(sig);
     git_tree_free(tree);
