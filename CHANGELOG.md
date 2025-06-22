@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 25.6.4
+
+- Support for **libgit2** was added to QOwnNotes, so it can be built with git support
+  without the need for the `git` command line tool (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+  - This is an experimental feature and needs to be enabled with the cmake build
+    parameter `-DBUILD_WITH_LIBGIT2=ON`
+  - Keep in mind that you need to have the `libgit2` development files installed
+    on your system to build QOwnNotes with this feature
+
 ## 25.6.3
 
 - The _Split note at cursor position_ action now has a confirmation dialog to
