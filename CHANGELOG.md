@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.6.3
+
+- The _Split note at cursor position_ action now has a confirmation dialog to
+  prevent accidental splits (for [#3293](https://github.com/pbek/QOwnNotes/issues/3293))
+
 ## 25.6.2
 
 - The _Find action_ dialog is now working again

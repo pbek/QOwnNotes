@@ -10225,6 +10225,14 @@ void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
  * Splits the current note into two notes at the current cursor position
  */
 void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
+    if (Utils::Gui::question(this, tr("Split note"),
+                             tr("Split note at current cursor position? "
+                                "The text after the cursor will be moved to a new note. "
+                                "The new note will be linked to the old note."),
+                             QStringLiteral("split-note")) != QMessageBox::Yes) {
+        return;
+    }
+
     QString name = currentNote.getName();
     const QVector<Tag> tags = Tag::fetchAllOfNote(currentNote);
 
