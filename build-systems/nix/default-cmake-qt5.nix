@@ -13,6 +13,7 @@
   makeWrapper,
   wrapQtAppsHook,
   botan3,
+  libgit2,
   pkg-config,
   xvfb-run,
   installShellFiles,
@@ -50,11 +51,13 @@ stdenv.mkDerivation {
     qtwebsockets
     qtx11extras
     botan3
+    libgit2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
   cmakeFlags = [
     #    "-DQON_QT6_BUILD=ON"
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
+    "-DBUILD_WITH_LIBGIT2=ON"
   ];
 
   postInstall =

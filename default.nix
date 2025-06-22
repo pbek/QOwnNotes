@@ -12,6 +12,7 @@
   makeWrapper,
   wrapQtAppsHook,
   botan3,
+  libgit2,
   pkg-config,
   xvfb-run,
   installShellFiles,
@@ -48,11 +49,13 @@ stdenv.mkDerivation {
     qtsvg
     qtwebsockets
     botan3
+    libgit2
   ] ++ lib.optionals stdenv.hostPlatform.isLinux [ qtwayland ];
 
   cmakeFlags = [
     "-DQON_QT6_BUILD=ON"
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
+    "-DBUILD_WITH_LIBGIT2=ON"
   ];
 
   # Install shell completion on Linux (with xvfb-run)

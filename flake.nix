@@ -61,6 +61,7 @@
               qtdeclarative
               qtsvg
               botan3
+              libgit2
             ];
 
           shellHook = ''
