@@ -4,6 +4,8 @@
 
 - The _Split note at cursor position_ action now has a confirmation dialog to
   prevent accidental splits (for [#3293](https://github.com/pbek/QOwnNotes/issues/3293))
+- In the _Debug settings_, there now is a line to show whether the system Botan library
+  is used or the internal Botan amalgamation (for [#2786](https://github.com/pbek/QOwnNotes/issues/2786))
 
 ## 25.6.2
 

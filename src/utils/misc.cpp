@@ -1614,6 +1614,14 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
 
     output += prepareDebugInformationLine(QStringLiteral("Qt Debug"), debug, withGitHubLineBreaks);
 
+    QString systemBotan = QStringLiteral("no");
+#ifdef USE_SYSTEM_BOTAN
+    systemBotan = QStringLiteral("yes");
+#endif
+
+    output += prepareDebugInformationLine(QStringLiteral("System Botan"), systemBotan,
+                                          withGitHubLineBreaks);
+
     output += prepareDebugInformationLine(QStringLiteral("Locale (system)"),
                                           QLocale::system().name(), withGitHubLineBreaks);
     output += prepareDebugInformationLine(
