@@ -1607,9 +1607,9 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
         qApp->property("arguments").toStringList().join(QStringLiteral("`, `")),
         withGitHubLineBreaks);
 
-    QString debug = QStringLiteral("0");
+    QString debug = QStringLiteral("no");
 #ifdef QT_DEBUG
-    debug = QStringLiteral("1");
+    debug = QStringLiteral("yes");
 #endif
 
     output += prepareDebugInformationLine(QStringLiteral("Qt Debug"), debug, withGitHubLineBreaks);
