@@ -99,8 +99,21 @@ echo "QOWNNOTES_ARCHIVE_SIZE=$QOWNNOTES_ARCHIVE_SIZE" >>${_QQwnNotesCheckSumVarF
 
 echo "Uploading files to GitHub..."
 
-# upload archive and checksum files (we need to be in a git repo for that!)
-gh release upload --clobber v$QOWNNOTES_VERSION ${archiveFile}*
+# Upload archive and checksum files for 5minutes, retrying every 5 seconds
+# We need to be in a git repo for that
+timeout=$((5 * 60))
+interval=5
+start_time=$(date +%s)
+while ! gh release upload --clobber v$QOWNNOTES_VERSION ${archiveFile}*; do
+  now=$(date +%s)
+  elapsed=$((now - start_time))
+  if [ $elapsed -ge $timeout ]; then
+    echo "Upload failed after 5 minutes."
+    exit 1
+  fi
+  echo "Upload failed, retrying in $interval seconds..."
+  sleep $interval
+done
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
