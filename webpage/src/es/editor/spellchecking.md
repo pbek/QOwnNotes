@@ -13,7 +13,7 @@ Información QOwnNotes tiene un **Gestor de diccionarios** incorporado (en el me
 
 - En **Windows **, debe copiar los diccionarios Hunspell en su idioma en una carpeta `dicts` en la carpeta de su aplicación QOwnNotes o en `C:\Users\[username]\dicts`
   - Puede descargar diccionarios desde los [Diccionarios de LibreOffice](https://github.com/LibreOffice/dictionaries)
-  - En **macOS** debe copiar los diccionarios Hunspell para su idioma a `/Library/Spelling` o `~/Library/Spelling`. Si el directorio no existe, debe crearlo.
+  - En **macOS**, debe copiar los diccionarios Hunspell para su idioma a `/Library/Spelling` o `~/Library/Spelling`. Si el directorio no existe, debe crearlo.
 
 Los diccionarios pueden ser descargados desde los [Diccionarios de QOwnNotes](https://github.com/qownnotes/dictionaries). Utilice la tabla al final de este documento para encontrar su idioma y su código de idioma respectivo.
 

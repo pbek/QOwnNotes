@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>portugali (brasilialainen)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>portugali</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -593,7 +593,7 @@
 </message>
 <message>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>Tuodut muistiinpanot</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -629,11 +629,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Virheellinen XML!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>Virheellinen XML muistiinpanossa &lt;b&gt;%1&lt;/b&gt;! Tuominen saattaa keskeytyä.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -720,11 +720,11 @@
 <name>FakeVim</name>
 <message>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Käytä FakeVimiä</translation>
 </message>
 <message>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Lue .vimrc kohteesta:</translation>
 </message>
 <message>
 <source>Show position of text marks</source>
@@ -1113,7 +1113,7 @@
 </message>
 <message>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>Alleviivattu teksti</translation>
 </message>
 <message>
 <source>Link</source>
@@ -1235,7 +1235,7 @@
 <message>
 <source>Copy</source>
 <comment>as noun</comment>
-<translation type="unfinished">Copy</translation>
+<translation>Kopioi</translation>
 </message>
 <message>
 <source>Remove schema</source>
@@ -1254,15 +1254,15 @@
 <name>HtmlPreviewWidget</name>
 <message>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopioi</translation>
 </message>
 <message>
 <source>Copy link</source>
-<translation type="unfinished">Copy link</translation>
+<translation>Kopioi linkki</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Palauta lähennys</translation>
 </message>
 </context>
 <context>
@@ -1328,11 +1328,11 @@
 <name>IssueAssistantDialog</name>
 <message>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>Vähintään 8 merkkiä</translation>
 </message>
 <message>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>Vähintään 10 merkkiä</translation>
 </message>
 </context>
 <context>
@@ -1343,7 +1343,7 @@
 </message>
 <message>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Tuo kansioita</translation>
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
@@ -1935,7 +1935,7 @@
 </message>
 <message>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <source>Auto format table</source>
@@ -2091,7 +2091,7 @@
 </message>
 <message>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+<translation>Avaa #qownnotes IRC (Kiwi) kanava, sinun täytyy olla paikalla saadaksesi vastauksen</translation>
 </message>
 <message>
 <source>Cycle text case</source>
@@ -2112,7 +2112,7 @@
 <message>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>Avaa QOwnNotes Matrix (Element) -huone</translation>
 </message>
 <message>
 <source>Unlock panels</source>
@@ -2777,6 +2777,14 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
 <translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+</message>
+<message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -5695,6 +5703,18 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Poista loput välilyönnit automaattisesti huomautuksen tekstistä</translation>
+</message>
+<message>
+<source>Git library</source>
+<translation type="unfinished">Git library</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

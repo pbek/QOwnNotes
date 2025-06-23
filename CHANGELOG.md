@@ -5,6 +5,7 @@
 - In the _Git settings_ you now can configure a git client only if the app was not
   built with libgit2 support, otherwise you will get the information that support
   for the git library libgit2 is activated (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+- Added more Spanish, Korean, Finnish translation (thank you, alejandromoc, venusgirl, tommihanhikoski)
 
 ## 25.6.4
 

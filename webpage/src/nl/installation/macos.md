@@ -33,3 +33,7 @@ brew install qownnotes
 ## Nix
 
 Je kunt QOwnNotes ook installeren met de [Nix pakketbeheerder](https://wiki.nixos.org/wiki/Nix_package_manager) onder macOS op **x86 en Apple Silicon**, zie [Installatie via Nix](./nix.md).
+
+::: tip
+Best use the NixOS Unstable channel to get the latest version of QOwnNotes!
+:::

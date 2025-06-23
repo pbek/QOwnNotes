@@ -2759,6 +2759,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
 </message>
 <message>
+<source>Split note</source>
+<translation>노트 분할</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation>현재 커서 위치에서 노트를 분할하시겠습니까? 커서 뒤의 텍스트가 새 노트로 이동합니다. 새 노트는 이전 노트와 연결됩니다.</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>줄 %1, 열 %2</translation>
@@ -5644,6 +5652,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>노트 텍스트에서 자동으로 후행 공백 제거</translation>
+</message>
+<message>
+<source>Git library</source>
+<translation>Git 라이브러리</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation>Git 라이브러리 libgit2에 대한 지원이 활성화되었습니다.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation>노트 폴더에 대해 git 지원을 활성화하는 것을 잊지 마세요.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

@@ -2777,6 +2777,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>¡La carpeta de notas &lt;b&gt;%1&lt;/b&gt; con la ruta &lt;b&gt;%2&lt;/b&gt; ya no existe!</translation>
 </message>
 <message>
+<source>Split note</source>
+<translation>Dividir nota</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation>¿Dividir la nota en la posición actual del cursor? El texto después del cursor se moverá a una nueva nota. Esta nueva nota se enlazará a la anterior.</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>Línea %1, col. %2</translation>
@@ -5681,6 +5689,18 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Automatically remove trailing spaces in the note text</source>
 <translation>Eliminar automáticamente los espacios finales en el texto de la nota</translation>
+</message>
+<message>
+<source>Git library</source>
+<translation>Biblioteca de Git</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation>El soporte para la biblioteca de git, libgit2, está activado.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation>No olvide activar el soporte de git para sus carpetas de notas.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

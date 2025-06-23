@@ -19,7 +19,7 @@ chmod a+x QOwnNotes-*.AppImage
 ```
 
 ::: tip
-¡AppImages necesita `libfuse2` para ejecutarse! Por ejemplo, en Ubuntu puede instalar la librería con `sudo apt install libfuse2`.
+¡AppImages necesita `libfuse2` para ejecutarse! Por ejemplo, en Ubuntu puede instalar la biblioteca con `sudo apt install libfuse2`.
 :::
 
 Posteriormente, debería ser capaz de ejecutar la AppImage para usar QOwnNotes.
