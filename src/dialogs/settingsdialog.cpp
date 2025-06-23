@@ -118,6 +118,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->automaticNoteFolderDatabaseClosingCheckBox->hide();
 #endif
 
+#ifdef USE_LIBGIT2
+    ui->gitClientGroupBox->hide();
+#else
+    ui->gitLibraryGroupBox->hide();
+#endif
+
     readSettings();
 
     // initializes the main splitter

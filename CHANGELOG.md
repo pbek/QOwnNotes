@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.6.5
+
+- In the _Git settings_ you now can configure a git client only if the app was not
+  built with libgit2 support, otherwise you will get the information that support
+  for the git library libgit2 is activated (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+
 ## 25.6.4
 
 - Support for **libgit2** was added to QOwnNotes, so it can be built with git support

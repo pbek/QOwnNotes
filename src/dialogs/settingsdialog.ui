@@ -5700,7 +5700,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </widget>
              </item>
              <item row="0" column="1" rowspan="2">
-              <widget class="QGroupBox" name="groupBox_20">
+              <widget class="QGroupBox" name="gitClientGroupBox">
                <property name="title">
                 <string>Git client</string>
                </property>
@@ -5773,6 +5773,29 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                   <property name="openExternalLinks">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QGroupBox" name="gitLibraryGroupBox">
+               <property name="title">
+                <string>Git library</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_90">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_39">
+                  <property name="text">
+                   <string>Support for the git library libgit2 is activated.</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_40">
+                  <property name="text">
+                   <string>Don't forget to enable git support for your note folders.</string>
                   </property>
                  </widget>
                 </item>
