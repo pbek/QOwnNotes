@@ -4,8 +4,7 @@
 
 - Support for **libgit2** was added to QOwnNotes, so it can be built with git support
   without the need for the `git` command line tool (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
-  - This is an experimental feature and needs to be enabled with the CMake build
-    parameter `-DBUILD_WITH_LIBGIT2=ON`
+  - This feature needs to be enabled with the CMake build parameter `-DBUILD_WITH_LIBGIT2=ON`
   - Keep in mind that you need to have the `libgit2` development files installed
     on your system to build QOwnNotes with this feature
 
