@@ -26,6 +26,10 @@
 
 #ifdef USE_LIBGIT2
 #include <git2.h>
+
+#include <QJSEngine>
+
+#include "diff_match_patch.h"
 #endif
 
 /**
@@ -303,5 +307,118 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
 
     qDebug() << "Created commit in" << path;
     return true;
+}
+
+/**
+ * Gets the note versions from the Git repository
+ *
+ * We want to get something like this:
+ * [
+ *   {
+ *     "timestamp": 1750925008,
+ *     "humanReadableTimestamp": "2 minutes ago",
+ *     "diffHtml": "Version test\n============\n\n- new<del>\n- new2</del>",
+ *     "data": "Version test\n============\n\n- new"
+ *   },
+ *   {
+ *     "timestamp": 1750924988,
+ *     "humanReadableTimestamp": "2 minutes ago",
+ *     "diffHtml": "Version test\n============\n\n<del>- new\n- new2</del>",
+ *     "data": "Version test\n============\n\n"
+ *   }
+ * ]
+ *
+ * @param note
+ * @return
+ */
+QJSValue Utils::Git::getNoteVersions(const Note &note) {
+    QJSEngine engine;
+    QJSValue versions = engine.newArray();
+
+    if (!note.exists()) {
+        // Return an empty array if note does not exist
+        return versions;
+    }
+
+    // Get the Git repository
+    git_repository *repo = nullptr;
+    QString noteFolderPath = NoteFolder::currentLocalPath();
+    if (git_repository_open(&repo, noteFolderPath.toUtf8().constData()) != 0) {
+        return versions;
+    }
+
+    // Get the file path relative to the repository root
+    QString relativePath = note.relativeNoteFilePath();
+    qDebug() << __func__ << " - 'relativePath': " << relativePath;
+
+    // Create a diff match patch instance for showing differences
+    diff_match_patch differ;
+
+    // Get all commits that modified this file
+    git_revwalk *walker;
+    git_revwalk_new(&walker, repo);
+    git_revwalk_push_head(walker);
+
+    git_oid oid;
+    QString previousContent;
+    bool isFirst = true;
+    int versionIndex = 0;
+
+    while (git_revwalk_next(&oid, walker) == 0) {
+        git_commit *commit;
+        if (git_commit_lookup(&commit, repo, &oid) == 0) {
+            git_tree *tree;
+            if (git_commit_tree(&tree, commit) == 0) {
+                git_tree_entry *entry = nullptr;
+                if (git_tree_entry_bypath(&entry, tree, relativePath.toUtf8().constData()) == 0) {
+                    git_blob *blob = nullptr;
+                    if (git_blob_lookup(&blob, repo, git_tree_entry_id(entry)) == 0) {
+                        const char *content = (const char *)git_blob_rawcontent(blob);
+                        QString currentContent = QString::fromUtf8(content);
+
+                        QJSValue version = engine.newObject();
+
+                        // Get commit timestamp
+                        git_time_t timestamp = git_commit_time(commit);
+                        QDateTime datetime = QDateTime::fromSecsSinceEpoch(timestamp);
+                        qDebug() << __func__ << " - 'datetime': " << datetime;
+                        version.setProperty("timestamp",
+                                            engine.toScriptValue(static_cast<qint64>(timestamp)));
+                        version.setProperty("humanReadableTimestamp",
+                                            datetime.toString(QLocale::system().dateTimeFormat(
+                                                QLocale::ShortFormat)));
+
+                        // Store the content
+                        version.setProperty("data", currentContent);
+
+                        // Generate diff HTML if not the first version
+                        if (!isFirst) {
+                            QList<Diff> diffs = differ.diff_main(currentContent, previousContent);
+                            differ.diff_cleanupSemantic(diffs);
+                            QString diffHtml = differ.diff_prettyHtml(diffs);
+                            version.setProperty("diffHtml", diffHtml);
+                        } else {
+                            version.setProperty("diffHtml", "");
+                            isFirst = false;
+                        }
+
+                        previousContent = currentContent;
+                        versions.setProperty(versionIndex++, version);
+                        //                        versionsArray.setProperty(versionsArray.property("length").toInt(),
+                        //                        version);
+                        git_blob_free(blob);
+                    }
+                    git_tree_entry_free(entry);
+                }
+                git_tree_free(tree);
+            }
+            git_commit_free(commit);
+        }
+    }
+
+    git_revwalk_free(walker);
+    git_repository_free(repo);
+
+    return versions;
 }
 #endif

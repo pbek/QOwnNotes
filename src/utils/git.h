@@ -17,6 +17,12 @@
 #include <QProcess>
 #include <QString>
 
+#ifdef USE_LIBGIT2
+#include <QJSValue>
+
+#include "entities/note.h"
+#endif
+
 /*  Git functions that can be useful */
 
 namespace Utils {
@@ -33,6 +39,7 @@ bool isCurrentNoteFolderUseGit();
 #ifdef USE_LIBGIT2
 bool initRepository(const QString& path);
 bool commitAll(const QString& path, const QString& message);
+QJSValue getNoteVersions(const Note& note);
 #endif
 }    // namespace Git
 }    // namespace Utils

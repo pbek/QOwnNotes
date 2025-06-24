@@ -1261,6 +1261,8 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
 #ifndef INTEGRATION_TESTS
+    qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
+
     VersionDialog *dialog = new VersionDialog(versions);
     dialog->exec();
 #endif

@@ -108,6 +108,7 @@
 #include "dialogs/storedattachmentsdialog.h"
 #include "dialogs/storedimagesdialog.h"
 #include "dialogs/tododialog.h"
+#include "dialogs/versiondialog.h"
 #include "entities/calendaritem.h"
 #include "helpers/qownnotesmarkdownhighlighter.h"
 #include "libraries/fakevim/fakevim/fakevimactions.h"
@@ -6415,6 +6416,15 @@ void MainWindow::on_actionShow_versions_triggered() {
     if (!currentNote.exists()) {
         return;
     }
+
+#ifdef USE_LIBGIT2
+    auto versions = Utils::Git::getNoteVersions(currentNote);
+    qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
+#endif
+
+    //    VersionDialog *dialog = new VersionDialog(versions);
+    //    dialog->exec();
+    //    return;
 
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
