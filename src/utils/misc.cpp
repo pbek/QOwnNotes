@@ -32,6 +32,8 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QHttpMultiPart>
+#include <QJSValue>
+#include <QJsonDocument>
 #include <QMimeDatabase>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -2816,4 +2818,10 @@ QString Utils::Misc::detectFileFormat(const QString &text) {
 
     // Default to plain text if no format is detected
     return "txt";
+}
+
+QString Utils::Misc::jsValueToJsonString(const QJSValue &value) {
+    QVariant variant = value.toVariant();
+    QJsonDocument doc = QJsonDocument::fromVariant(variant);
+    return doc.toJson(QJsonDocument::Indented);
 }

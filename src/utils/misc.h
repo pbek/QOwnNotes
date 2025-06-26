@@ -24,6 +24,7 @@ struct TerminalCmd;
 class QFile;
 class QDataStream;
 class QPrinter;
+class QJSValue;
 
 /*  Miscellaneous functions that can be useful */
 namespace Utils {
@@ -172,6 +173,7 @@ int getPreviewRefreshDebounceTime();
 int getMaximumNoteFileSize();
 QString encodeFilePath(const QString &filePath);
 QString detectFileFormat(const QString &text);
+QString jsValueToJsonString(const QJSValue &value);
 }    // namespace Misc
 }    // namespace Utils
 
