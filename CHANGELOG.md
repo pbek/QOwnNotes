@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.6.6
+
+- There now is a dialog to ask you to enable git support for the current note folders
+  if you use the _Show note git versions_ action (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+
 ## 25.6.5
 
 - In the _Git settings_ you now can configure a git client only if the app was not

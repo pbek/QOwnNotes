@@ -11223,6 +11223,22 @@ void MainWindow::gitCommitCurrentNoteFolder() { Utils::Git::commitCurrentNoteFol
  * Shows a git log of the current note
  */
 void MainWindow::on_actionShow_note_git_versions_triggered() {
+    if (!Utils::Git::isCurrentNoteFolderUseGit()) {
+        if (QMessageBox::information(this, QStringLiteral("Git support"),
+                                     tr("Git support is not enabled for the current note folder, "
+                                        "do you want to enable it in the settings?"),
+                                     tr("Open &settings"), tr("&Cancel"), QString(), 0, 1) == 0) {
+            openSettingsDialog(SettingsDialog::NoteFolderPage);
+        } else {
+            // User doesn't want to enable git support
+            return;
+        }
+
+        if (!Utils::Git::isCurrentNoteFolderUseGit()) {
+            return;
+        }
+    }
+
 #ifdef USE_LIBGIT2
     auto versions = Utils::Git::getNoteVersions(currentNote);
     qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
