@@ -594,6 +594,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionShow_note_git_versions_triggered();
 
+    void on_actionShow_note_git_versions_external_triggered();
+
     void on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item);
 
     void on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item);

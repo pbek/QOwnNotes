@@ -1162,6 +1162,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </property>
      <addaction name="actionShow_versions"/>
      <addaction name="actionShow_note_git_versions"/>
+     <addaction name="actionShow_note_git_versions_external"/>
     </widget>
     <widget class="QMenu" name="menuEncryption">
      <property name="title">
@@ -1356,6 +1357,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <addaction name="action_Remove_note"/>
    <addaction name="action_Open_note_in_external_editor"/>
    <addaction name="actionShow_local_trash"/>
+   <addaction name="actionShow_note_git_versions"/>
    <addaction name="actionAllow_note_editing"/>
    <addaction name="separator"/>
    <addaction name="action_Back_in_note_history"/>
@@ -2499,6 +2501,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Show note git versions</string>
+   </property>
+  </action>
+  <action name="actionShow_note_git_versions_external">
+   <property name="icon">
+    <iconset theme="appointment-new" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show note git versions externally</string>
    </property>
   </action>
   <action name="actionScript_repository">

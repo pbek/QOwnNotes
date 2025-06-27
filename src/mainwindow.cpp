@@ -2671,7 +2671,13 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     initSavedSearchesCompleter();
 
     // show or hide the note git version menu entry
+#ifdef USE_LIBGIT2
+    ui->actionShow_note_git_versions->setVisible(true);
+    ui->actionShow_note_git_versions_external->setVisible(Utils::Git::hasLogCommand());
+#else
     ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
+    ui->actionShow_note_git_versions_external->setVisible(false);
+#endif
 
     // show or hide 'Find or create ...' search in Note Subfolders & Tags Panels
     ui->noteSubFolderLineEdit->setHidden(
@@ -6416,15 +6422,6 @@ void MainWindow::on_actionShow_versions_triggered() {
     if (!currentNote.exists()) {
         return;
     }
-
-#ifdef USE_LIBGIT2
-    auto versions = Utils::Git::getNoteVersions(currentNote);
-    qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
-#endif
-
-    //    VersionDialog *dialog = new VersionDialog(versions);
-    //    dialog->exec();
-    //    return;
 
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
@@ -11226,21 +11223,20 @@ void MainWindow::gitCommitCurrentNoteFolder() { Utils::Git::commitCurrentNoteFol
  * Shows a git log of the current note
  */
 void MainWindow::on_actionShow_note_git_versions_triggered() {
+#ifdef USE_LIBGIT2
+    auto versions = Utils::Git::getNoteVersions(currentNote);
+    qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
+
+    auto *dialog = new VersionDialog(versions);
+    dialog->exec();
+#else
     QString relativeFilePath = currentNote.relativeNoteFilePath();
-    //    QString dirPath = NoteFolder::currentLocalPath();
+    Utils::Git::showLog(relativeFilePath);
+#endif
+}
 
-    //    qDebug() << __func__ << " - 'relativeFilePath': " << relativeFilePath;
-    //    qDebug() << __func__ << " - 'dirPath': " << dirPath;
-    //
-    //
-    //    QString result = Utils::Misc::startSynchronousProcess(
-    //            "/bin/bash",
-    //            QStringList() << "-c" << "cd \"" + dirPath + "\" && " +
-    //                                  "git log -p \"" + relativeFilePath +
-    //                                  "\"");
-    //
-    //    qDebug() << __func__ << " - 'result': " << result;
-
+void MainWindow::on_actionShow_note_git_versions_external_triggered() {
+    QString relativeFilePath = currentNote.relativeNoteFilePath();
     Utils::Git::showLog(relativeFilePath);
 }
 
