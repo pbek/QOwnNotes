@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 25.6.6
+## 25.7.0
 
 - When restoring a note with the version dialog, now the application will go out
   of read-only mode automatically (for [#3303](https://github.com/pbek/QOwnNotes/issues/3303))
