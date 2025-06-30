@@ -359,7 +359,7 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
     git_revwalk_push_head(walker);
 
     git_oid oid;
-    QString previousContent;
+    const QString previousContent = note.getNoteText();
     bool isFirst = true;
     int versionIndex = 0;
 
@@ -374,6 +374,14 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
                     if (git_blob_lookup(&blob, repo, git_tree_entry_id(entry)) == 0) {
                         const char *content = (const char *)git_blob_rawcontent(blob);
                         QString currentContent = QString::fromUtf8(content);
+
+                        if (isFirst && currentContent == previousContent) {
+                            // Skip the first version if it matches the current content
+                            git_blob_free(blob);
+                            git_tree_entry_free(entry);
+                            isFirst = false;
+                            continue;
+                        }
 
                         QJSValue version = engine.newObject();
 
@@ -390,18 +398,12 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
                         // Store the content
                         version.setProperty("data", currentContent);
 
-                        // Generate diff HTML if not the first version
-                        if (!isFirst) {
-                            QList<Diff> diffs = differ.diff_main(currentContent, previousContent);
-                            differ.diff_cleanupSemantic(diffs);
-                            QString diffHtml = differ.diff_prettyHtml(diffs);
-                            version.setProperty("diffHtml", diffHtml);
-                        } else {
-                            version.setProperty("diffHtml", "");
-                            isFirst = false;
-                        }
+                        // Generate diff HTML
+                        QList<Diff> diffs = differ.diff_main(previousContent, currentContent);
+                        differ.diff_cleanupSemantic(diffs);
+                        QString diffHtml = differ.diff_prettyHtml(diffs);
+                        version.setProperty("diffHtml", diffHtml);
 
-                        previousContent = currentContent;
                         versions.setProperty(versionIndex++, version);
                         //                        versionsArray.setProperty(versionsArray.property("length").toInt(),
                         //                        version);
