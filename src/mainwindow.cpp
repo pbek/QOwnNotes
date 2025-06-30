@@ -11241,7 +11241,10 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     }
 
 #ifdef USE_LIBGIT2
-    auto versions = Utils::Git::getNoteVersions(currentNote);
+    // Providing a QJSEngine instance to the Utils::Git::getNoteVersions is important, otherwise
+    // the returned versions will not be usable
+    QJSEngine engine;
+    auto versions = Utils::Git::getNoteVersions(engine, currentNote);
     qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
 
     auto *dialog = new VersionDialog(versions);

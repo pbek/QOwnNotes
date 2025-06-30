@@ -331,8 +331,7 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
  * @param note
  * @return
  */
-QJSValue Utils::Git::getNoteVersions(const Note &note) {
-    QJSEngine engine;
+QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
     QJSValue versions = engine.newArray();
 
     if (!note.exists()) {
