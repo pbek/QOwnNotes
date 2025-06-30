@@ -4597,6 +4597,7 @@ void MainWindow::startNavigationParser() {
  * @param text
  */
 void MainWindow::setCurrentNoteText(QString text) {
+    allowNoteEditing();
     currentNote.setNoteText(std::move(text));
     setNoteTextFromNote(&currentNote, false);
 }
