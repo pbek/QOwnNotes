@@ -8,6 +8,8 @@
   if you use the _Show note git versions_ action (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
 - With enabled libgit2 support you will now have an extra version dialog to show
   the note versions of the current note (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+- The build process for Windows was fixed to use `windows-latest`, because `windows-2019`
+  has been sunsetted (for [#3305](https://github.com/pbek/QOwnNotes/issues/3305))
 - Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.6.5
