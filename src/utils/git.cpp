@@ -348,7 +348,6 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
 
     // Get the file path relative to the repository root
     QString relativePath = note.relativeNoteFilePath();
-    qDebug() << __func__ << " - 'relativePath': " << relativePath;
 
     // Create a diff match patch instance for showing differences
     diff_match_patch differ;
@@ -388,7 +387,6 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
                         // Get commit timestamp
                         git_time_t timestamp = git_commit_time(commit);
                         QDateTime datetime = QDateTime::fromSecsSinceEpoch(timestamp);
-                        qDebug() << __func__ << " - 'datetime': " << datetime;
                         version.setProperty("timestamp",
                                             engine.toScriptValue(static_cast<qint64>(timestamp)));
                         version.setProperty("humanReadableTimestamp",
@@ -405,8 +403,6 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
                         version.setProperty("diffHtml", diffHtml);
 
                         versions.setProperty(versionIndex++, version);
-                        //                        versionsArray.setProperty(versionsArray.property("length").toInt(),
-                        //                        version);
                         git_blob_free(blob);
                     }
                     git_tree_entry_free(entry);

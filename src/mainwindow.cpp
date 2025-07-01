@@ -11245,7 +11245,6 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     // the returned versions will not be usable
     QJSEngine engine;
     auto versions = Utils::Git::getNoteVersions(engine, currentNote);
-    qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
 
     auto *dialog = new VersionDialog(versions);
     dialog->exec();
