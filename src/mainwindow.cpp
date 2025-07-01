@@ -11247,6 +11247,7 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     auto versions = Utils::Git::getNoteVersions(engine, currentNote);
 
     auto *dialog = new VersionDialog(versions);
+    dialog->setWindowTitle(tr("Git versions of note: %1").arg(currentNote.getFileName()));
     dialog->exec();
 #else
     QString relativeFilePath = currentNote.relativeNoteFilePath();
