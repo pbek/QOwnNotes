@@ -262,9 +262,8 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: "🧊 Windows Server 2019"
+    name: "🧊 Windows Server Latest"
     needs: create_release
-    # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-latest
     env:
       # Qt 6.5 windeployqt doesn't deploy DLLs!
