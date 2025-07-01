@@ -2208,6 +2208,10 @@
 <translation>Prikaži git verzije bilješke</translation>
 </message>
 <message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
+</message>
+<message>
 <source>Find scripts in script repository</source>
 <translation>Potraži skripte u repozitoriju skripti</translation>
 </message>
@@ -2819,6 +2823,14 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <numerusform>%n odabarna</numerusform>
 <numerusform>%n odabarnih</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>Git versions of note: %1</source>
+<translation type="unfinished">Git versions of note: %1</translation>
 </message>
 <message>
 <source>Close note tab</source>

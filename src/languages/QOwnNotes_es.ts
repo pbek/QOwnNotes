@@ -200,7 +200,7 @@
 </message>
 <message>
 <source>Ancient Greek</source>
-<translation>Griego antiguo</translation>
+<translation>Griego Antiguo</translation>
 </message>
 <message>
 <source>Arabic</source>
@@ -240,7 +240,7 @@
 </message>
 <message>
 <source>Catalan (Valencian)</source>
-<translation>Catalán (Valencia)</translation>
+<translation>Catalán (Valenciano)</translation>
 </message>
 <message>
 <source>Chuvash (Russia)</source>
@@ -816,7 +816,7 @@
 </message>
 <message>
 <source/>
-<translation type="unfinished"/>
+<translation/>
 </message>
 <message>
 <source>Use Vim-style Editing</source>
@@ -1041,7 +1041,7 @@
 </message>
 <message>
 <source>If you have created a nice color schema please export it and share it with everyone!</source>
-<translation>¡Si has creado un esquema de color agradable, por favor expórtalo y compártelo con todos!</translation>
+<translation>Si ha creado un esquema de color agradable, ¡por favor expórtelo y compártalo con todos!</translation>
 </message>
 <message>
 <source>Copy schema</source>
@@ -1359,7 +1359,7 @@
 </message>
 <message>
 <source>%v of %m file(s) imported</source>
-<translation>%v de %m archivo(s) importados</translation>
+<translation>%v de %m archivo(s) importado(s)</translation>
 </message>
 <message>
 <source>Import notes</source>
@@ -1387,7 +1387,7 @@
 </message>
 <message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation>Seleccione 'RAW - Directorio de exportación de Joplin' para importar</translation>
+<translation>Seleccione "RAW - Directorio de exportación de Joplin" para importar</translation>
 </message>
 </context>
 <context>
@@ -1762,7 +1762,7 @@
 </message>
 <message>
 <source>Select &amp;all notes</source>
-<translation>Seleccionar todas las notas</translation>
+<translation>Seleccion&amp;ar todas las notas</translation>
 </message>
 <message>
 <source>&amp;Find in current note</source>
@@ -1931,7 +1931,7 @@
 </message>
 <message>
 <source>Insert text &amp;link</source>
-<translation>Insertar texto y enlace</translation>
+<translation>Insertar en&amp;lace de texto</translation>
 </message>
 <message>
 <source>Ctrl+L</source>
@@ -1955,7 +1955,7 @@
 </message>
 <message>
 <source>Insert current &amp;time</source>
-<translation>Insertar hora actual</translation>
+<translation>Insertar hora ac&amp;tual</translation>
 </message>
 <message>
 <source>Show &amp;Todo List</source>
@@ -1975,7 +1975,7 @@
 </message>
 <message>
 <source>&amp;Print note (text)</source>
-<translation>Imprimir nota (texto)</translation>
+<translation>Im&amp;primir nota (texto)</translation>
 </message>
 <message>
 <source>Insert &amp;image</source>
@@ -1983,7 +1983,7 @@
 </message>
 <message>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Insertar imagen (la imagen se copiará en la carpeta 'media' en la actual carpeta de notas)</translation>
+<translation>Insertar imagen (la imagen se copiará en la carpeta "media" en la actual carpeta de notas)</translation>
 </message>
 <message>
 <source>Show &amp;changelog</source>
@@ -2015,7 +2015,7 @@
 </message>
 <message>
 <source>&amp;Distraction free mode</source>
-<translation>Modo sin distracciones</translation>
+<translation>Modo sin &amp;distracciones</translation>
 </message>
 <message>
 <source>Distraction free mode, you can leave it with a button on the bottom right</source>
@@ -2197,6 +2197,10 @@
 <message>
 <source>Show note git versions</source>
 <translation>Mostrar versiones git de las notas</translation>
+</message>
+<message>
+<source>Show note git versions externally</source>
+<translation>Mostrar versiones de git de notas externamente</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2468,7 +2472,7 @@
 </message>
 <message>
 <source>Note was removed externally!</source>
-<translation>Nota modificada externamente!</translation>
+<translation>¡La nota fue modificada externamente!</translation>
 </message>
 <message>
 <source>Current note was removed outside of this application!
@@ -2574,12 +2578,12 @@ Restore current note?</source>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
 <translation>
-<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionada(s)?
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota seleccionada?
 
-Si la papelera está habilitada en su servidor ownCloud debería poder restaurarla(s) desde allí.</numerusform>
-<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionada(s)?
+Si la papelera está habilitada en su servidor ownCloud debería poder restaurarla desde allí.</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; notas seleccionadas?
 
-Si la papelera está habilitada en su servidor ownCloud debería poder restaurarla(s) desde allí.</numerusform>
+Si la papelera está habilitada en su servidor ownCloud debería poder restaurarlas desde allí.</numerusform>
 </translation>
 </message>
 <message>
@@ -2589,8 +2593,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
-<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; etiqueta(s) seleccionada(s)? Ninguna nota se eliminará en este proceso.</numerusform>
-<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; etiqueta(s) seleccionada(s)? Ninguna nota se eliminará en este proceso.</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; etiqueta seleccionada? Ninguna nota se eliminará en este proceso.</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; etiquetas seleccionadas? Ninguna nota se eliminará en este proceso.</numerusform>
 </translation>
 </message>
 <message>
@@ -2633,8 +2637,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>¿Etiquetar %n nota(s) seleccionada(s) con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>¿Etiquetar %n nota(s) seleccionada(s) con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>¿Etiquetar %n nota seleccionada con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>¿Etiquetar %n notas seleccionadas con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -2800,6 +2804,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <numerusform>%n seleccionado</numerusform>
 <numerusform>%n seleccionados</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation>El soporte de Git no está habilitado para la carpeta de notas actual. ¿Desea habilitarlo en la configuración?</translation>
+</message>
+<message>
+<source>Git versions of note: %1</source>
+<translation>Versiones de Git de la nota: %1</translation>
 </message>
 <message>
 <source>Close note tab</source>
@@ -3058,15 +3070,15 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
-<numerusform>¿Eliminar etiqueta &lt;strong&gt;%1&lt;/strong&gt; de %n nota(s) seleccionada(s)?</numerusform>
-<numerusform>¿Eliminar etiqueta &lt;strong&gt;%1&lt;/strong&gt; de %n nota(s) seleccionada(s)?</numerusform>
+<numerusform>¿Eliminar etiqueta &lt;strong&gt;%1&lt;/strong&gt; de %n nota seleccionada?</numerusform>
+<numerusform>¿Eliminar etiqueta &lt;strong&gt;%1&lt;/strong&gt; de %n notas seleccionadas?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
-<numerusform>La etiqueta &lt;strong&gt;%1&lt;/strong&gt; se quitó de %n nota(s)</numerusform>
-<numerusform>La etiqueta &lt;strong&gt;%1&lt;/strong&gt; se quitó de %n nota(s)</numerusform>
+<numerusform>La etiqueta &lt;strong&gt;%1&lt;/strong&gt; se quitó de %n nota</numerusform>
+<numerusform>La etiqueta &lt;strong&gt;%1&lt;/strong&gt; se quitó de %n notas</numerusform>
 </translation>
 </message>
 <message>
@@ -3290,11 +3302,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Cannot move tag '%1' to this tag</source>
-<translation>No se puede mover la etiqueta '%1' a esta etiqueta</translation>
+<translation>No se puede mover la etiqueta "%1" a esta etiqueta</translation>
 </message>
 <message>
 <source>Moved tag '%1' to new tag</source>
-<translation>Etiqueta '%1' movida a nueva etiqueta</translation>
+<translation>Etiqueta "%1" movida a nueva etiqueta</translation>
 </message>
 <message>
 <source>&amp;Remove tags</source>
@@ -4086,8 +4098,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message numerus="yes">
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation>
-<numerusform>Una nota usa esta imagen. ¿También le gustaría cambiar el nombre de esas imágenes en la nota?</numerusform>
-<numerusform>%n notas están usando esta imagen. ¿También le gustaría cambiar el nombre de esas imágenes en las notas?</numerusform>
+<numerusform>%n nota usa esta imagen. ¿También le gustaría cambiar el nombre de esas imágenes en la nota?</numerusform>
+<numerusform>%n notas usan esta imagen. ¿También le gustaría cambiar el nombre de esas imágenes en las notas?</numerusform>
 </translation>
 </message>
 <message>
@@ -4493,7 +4505,7 @@ Are the folder and the file writable?</source>
 <message>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-<translation>¡Su plataforma no es compatible con esta secuencia de órdenes! ¿Desea instalarla de todas formas?</translation>
+<translation>¡Su plataforma no es compatible con esta secuencia de órdenes! ¿Desea instalarlo de todas formas?</translation>
 </message>
 <message>
 <source>Cancel</source>
@@ -4568,7 +4580,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <source>Settings</source>
-<translation>Herramientas</translation>
+<translation>Configuración</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -6594,7 +6606,7 @@ Mensaje de error de conexión: </translation>
 </message>
 <message>
 <source>Loading folders in '%1' from server</source>
-<translation>Cargando carpetas en '%1' desde el servidor</translation>
+<translation>Cargando carpetas en "%1" desde el servidor</translation>
 </message>
 <message>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
@@ -7879,7 +7891,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation>¡El archivo de la aplicación '%1' no pudo ser convertido en ejecutable! Necesita convertirlo en ejecutable por su propia cuenta.</translation>
+<translation>¡El archivo de la aplicación "%1" no pudo ser convertido en un ejecutable! Necesita convertirlo en ejecutable por su propia cuenta.</translation>
 </message>
 <message>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>

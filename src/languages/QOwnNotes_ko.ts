@@ -2193,6 +2193,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>노트 Git 버전 표시</translation>
 </message>
 <message>
+<source>Show note git versions externally</source>
+<translation>외부에서 노트 git 버전 표시</translation>
+</message>
+<message>
 <source>Find scripts in script repository</source>
 <translation>스크립트 저장소에서 스크립트 찾기</translation>
 </message>
@@ -2781,6 +2785,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>
 <numerusform>%n개 선택됨</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation>현재 노트 폴더에 대해 Git 지원이 활성화되어 있지 않습니다. 설정에서 활성화하시겠습니까?</translation>
+</message>
+<message>
+<source>Git versions of note: %1</source>
+<translation>노트의 Git 버전: %1</translation>
 </message>
 <message>
 <source>Close note tab</source>

@@ -2217,6 +2217,10 @@
 <translation>Показати нотатки Git-версії</translation>
 </message>
 <message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
+</message>
+<message>
 <source>Find scripts in script repository</source>
 <translation>Знайти скрипти у сховищі скриптів</translation>
 </message>
@@ -2845,6 +2849,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>%n selected</numerusform>
 <numerusform>%n selected</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>Git versions of note: %1</source>
+<translation type="unfinished">Git versions of note: %1</translation>
 </message>
 <message>
 <source>Close note tab</source>

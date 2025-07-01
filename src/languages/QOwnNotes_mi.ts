@@ -2190,6 +2190,10 @@
 <translation>Whakaatuhia nga tohu git</translation>
 </message>
 <message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
+</message>
+<message>
 <source>Find scripts in script repository</source>
 <translation>Најдете скрипти во складиштето со скрипти</translation>
 </message>
@@ -2778,6 +2782,14 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <translation type="unfinished">
 <numerusform>%n selected</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>Git versions of note: %1</source>
+<translation type="unfinished">Git versions of note: %1</translation>
 </message>
 <message>
 <source>Close note tab</source>
