@@ -6,6 +6,8 @@
   of read-only mode automatically (for [#3303](https://github.com/pbek/QOwnNotes/issues/3303))
 - There now is a dialog to ask you to enable git support for the current note folders
   if you use the _Show note git versions_ action (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+- With enabled libgit2 support you will now have an extra version dialog to show
+  the note versions of the current note (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
 
 ## 25.6.5
 
