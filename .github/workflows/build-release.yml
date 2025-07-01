@@ -317,7 +317,7 @@ jobs:
     name: "🧊 Windows Qt 5.15.2"
     needs: create_release
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
-    runs-on: windows-2019
+    runs-on: windows-latest
     env:
       QT_VERSION: 5.15.2
     continue-on-error: true
