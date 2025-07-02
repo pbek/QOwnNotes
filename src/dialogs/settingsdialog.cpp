@@ -2675,6 +2675,9 @@ void SettingsDialog::reloadScriptList() const {
 
     // disable the edit frame if there is no item
     ui->scriptEditFrame->setEnabled(scriptsCount > 0);
+    if (scriptsCount > 0) {
+        ui->scriptEditFrame->setVisible(true);
+    }
 
     // disable the remove button if there is no item
     ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
@@ -2735,6 +2738,7 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
 
         // disable the edit frame if there is no item
         ui->scriptEditFrame->setEnabled(scriptsAvailable);
+        ui->scriptEditFrame->setVisible(scriptsAvailable);
 
         // reload the scripting engine
         ScriptingService::instance()->reloadEngine();
