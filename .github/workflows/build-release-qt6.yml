@@ -262,7 +262,7 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: "🧊 Windows Server Latest"
+    name: "🧊 Windows Server 2025"
     needs: create_release
     runs-on: windows-2025
     env:
