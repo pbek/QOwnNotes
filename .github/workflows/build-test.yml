@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-2025]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
@@ -58,21 +58,21 @@ jobs:
           - os: ubuntu-latest
             qt-version: "5.9.9"
           # tests.exe not found
-          - os: windows-latest
+          - os: windows-2025
             qt-version: "5.9.9"
           # we want to do it Qt 6.2.0
-          - os: windows-latest
+          - os: windows-2025
             qt-version: "6.2.4"
             experimental: false
           # we want to do it with "experimental: true"
-          - os: windows-latest
+          - os: windows-2025
             qt-version: "6.4.3"
             experimental: false
           # we want to do it with "experimental: true"
-          - os: windows-latest
+          - os: windows-2025
             qt-version: "6.5.3"
             experimental: false
-          #          - os: windows-latest
+          #          - os: windows-2025
           #            qt-version: '6.6.3'
           #            experimental: false
           # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
@@ -90,13 +90,13 @@ jobs:
             qt-version: "6.6.3"
             experimental: false
           # Qt installation times out too often
-        #          - os: windows-latest
+        #          - os: windows-2025
         #            qt-version: '5.13.2'
         # win64_mingw73 not found
-        #          - os: windows-latest
+        #          - os: windows-2025
         #            qt-version: '5.15.0'
         #          # qt.conf not found (https://github.com/jurplel/install-qt-action/issues/54)
-        #          - os: windows-latest
+        #          - os: windows-2025
         #            qt-version: '5.15.1'
         # botan 32bit error
         include:
@@ -107,16 +107,16 @@ jobs:
           #            qt-version: '6.3.0'
           #            experimental: true
           # Other 6.2 releases didn't work
-          #          - os: windows-latest
+          #          - os: windows-2025
           #            qt-version: '6.2.4'
           #            experimental: true
-          #          - os: windows-latest
+          #          - os: windows-2025
           #            qt-version: '6.4.3'
           #            experimental: true
-          #          - os: windows-latest
+          #          - os: windows-2025
           #            qt-version: '6.5.3'
           #            experimental: true
-          #          - os: windows-latest
+          #          - os: windows-2025
           #            qt-version: '6.6.3'
           #            experimental: true
           # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225

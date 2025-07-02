@@ -264,7 +264,7 @@ jobs:
   build-windows:
     name: "🧊 Windows Server Latest"
     needs: create_release
-    runs-on: windows-latest
+    runs-on: windows-2025
     env:
       # Qt 6.5 windeployqt doesn't deploy DLLs!
       QT_VERSION: 6.6.1
