@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.7.1
+
+- The Windows build now switched to Qt 6.6.1, because the Qt 5 build could not be executed
+  anymore, when built with Windows Server 2025 (for [#3306](https://github.com/pbek/QOwnNotes/issues/3306))
+
 ## 25.7.0
 
 - When restoring a note with the version dialog, now the application will go out

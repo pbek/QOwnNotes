@@ -314,12 +314,13 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: "🧊 Windows Qt 5.15.2"
+    name: "🧊 Windows Qt 6.6.1"
     needs: create_release
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-2025
     env:
-      QT_VERSION: 5.15.2
+      # Qt 6.5 windeployqt doesn't deploy DLLs!
+      QT_VERSION: 6.6.1
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
@@ -332,10 +333,10 @@ jobs:
         with:
           aqtversion: "==2.0.0"
           version: ${{env.QT_VERSION}}
+          # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
           # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
           # https://ddalcino.github.io/aqt-list-server/
-          arch: win64_mingw81
-          modules: ${{env.QT_MODULES}}
+          modules: ${{env.QT6_MODULES}}
           cache: true
 
       - name: "⚙️ Set Env"
@@ -344,6 +345,9 @@ jobs:
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
+      - name: Make sure MSVC is found
+        uses: ilammy/msvc-dev-cmd@v1
+
       - name: "⚙️ Printenv"
         shell: bash
         run: |
@@ -351,7 +355,7 @@ jobs:
           printenv
 
       - name: "🚧 Compile application"
-        run: '& ..\build-systems\github\windows\build-zip.ps1'
+        run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
       #      - name: '📤 Upload artifact: Windows'
       #        uses: actions/upload-artifact@v4
