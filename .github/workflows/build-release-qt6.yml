@@ -91,7 +91,8 @@ jobs:
     env:
       # aqt Qt versions: https://ddalcino.github.io/aqt-list-server/
       # Qt 6.10.0: ERROR: Could not find dependency: libmimerapi.so
-      QT_VERSION: 6.9.1
+      # Qt 6.9.1: ERROR: Could not find dependency: libmimerapi.so
+      QT_VERSION: 6.8.3
       BUILD_DIR: build
     name: "🐧 AppImage Ubuntu 22.04"
     steps:
