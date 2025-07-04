@@ -26,6 +26,10 @@ class Label : public QLabel {
    public Q_SLOTS:
     void setText(const QString &text);
 
+   public:
+    void setEnabled(bool enabled);
+
    protected:
-    static QString injectCSS(const QString &text);
+    static QString injectCSS(const QString &text, bool disabled = false);
+    QString m_originalText;
 };
