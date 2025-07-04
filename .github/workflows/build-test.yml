@@ -51,6 +51,8 @@ jobs:
             "6.4.3",
             "6.5.3",
             "6.6.3",
+            "6.9.1",
+            "6.10.0",
           ]
         experimental: [false]
         exclude:

@@ -267,7 +267,7 @@ jobs:
     runs-on: windows-2025
     env:
       # Qt 6.5 windeployqt doesn't deploy DLLs!
-      QT_VERSION: 6.6.1
+      QT_VERSION: 6.10.0
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
