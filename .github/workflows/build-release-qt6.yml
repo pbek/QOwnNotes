@@ -2,10 +2,8 @@ name: Build release of QOwnNotes Qt6
 
 on:
   push:
-    branches:
-      #      - release
-      # For testing also on main branch
-      - main
+    branches-ignore:
+      - release
     tags-ignore:
       - "*"
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
