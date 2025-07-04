@@ -45,6 +45,11 @@ command = "prettier"
 options = ["--write"]
 includes = ["webpage/**/*.vue", "webpage/**/*.js", "*.md", "*.yaml", "*.yml"]
 
+[formatter.prettier-qss]
+command = "prettier"
+options = ["--write", "--parser", "css"]
+includes = ["*.qss"]
+
 [formatter.shfmt]
 command = "shfmt"
 excludes = []
