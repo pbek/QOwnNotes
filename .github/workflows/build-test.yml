@@ -171,7 +171,6 @@ jobs:
         name: Install Qt 5.15.2 on Windows
         uses: jurplel/install-qt-action@v4
         with:
-          aqtversion: "==2.0.0"
           version: ${{ matrix.qt-version }}
           arch: win64_mingw81
           cache: true
@@ -179,7 +178,6 @@ jobs:
         name: Install Qt 6 on Windows
         uses: jurplel/install-qt-action@v4
         with:
-          aqtversion: "==2.0.*"
           version: ${{ matrix.qt-version }}
           modules: ${{env.QT_MODULES}}
           cache: true
@@ -187,14 +185,12 @@ jobs:
         name: Install Qt < 6 on Linux/macOS
         uses: jurplel/install-qt-action@v4
         with:
-          aqtversion: "==2.0.0"
           version: ${{ matrix.qt-version }}
           cache: true
       - if: false == contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
         name: Install Qt 6 on Linux/macOS
         uses: jurplel/install-qt-action@v4
         with:
-          aqtversion: "==2.0.0"
           version: ${{ matrix.qt-version }}
           modules: ${{env.QT_MODULES}}
           cache: true
