@@ -16,9 +16,9 @@ Verwenden Sie `QOwnNotesPortable.bat`, um QOwnNotes im **portablen Modus** auszu
 Sie benötigen den portablen Modus nicht, wenn Sie lediglich keine Administratorrechte für Ihren Computer haben. QOwnNotes muss nicht installiert werden!
 :::
 
-## Windows XP
+## Windows 8.1 and older
 
-Qt hat die Unterstützung für Windows XP mit Version 5.8 eingestellt, aber QOwnNotes wurde jetzt auch mit Qt 5.7 erstellt, damit Windows XP-Benutzer es weiterhin verwenden können.
+Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
 
 Sie müssen die ZIP-Datei von [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) selbst herunterladen und in einen Ordner Ihrer Wahl entpacken.
 

@@ -428,7 +428,7 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>script</translation>
 </message>
 <message>
 <source>Portuguese</source>
@@ -4987,7 +4987,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>&amp;Remove script</source>
-<translation>Skript _entfernen</translation>
+<translation>Skript &amp;entfernen</translation>
 </message>
 <message>
 <source>Click here to select your QML script</source>

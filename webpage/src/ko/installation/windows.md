@@ -14,9 +14,9 @@
 컴퓨터에 대한 관리 권한이 없는 경우에는 휴대용 모드가 필요하지 않습니다. QOwnNotes 를 설치할 필요가 없습니다!
 :::
 
-## Windows XP
+## Windows 8.1 이상
 
-Qt는 버전 5.8에서 Windows XP에 대한 지원을 중단했지만, QOwnNotes도 이제 Qt 5.7로 구축되어 Windows XP 사용자가 계속 사용할 수 있습니다.
+Qt는 버전 5.8의 Windows XP 지원을 중단했지만, 이제 QOwnNotes도 Qt 5.7과 함께 구축되어 Windows XP 사용자가 계속 사용할 수 있게 되었습니다. Windows 8.1은 최신 Windows SDK를 기반으로 구축되었기 때문에 일반적인 QOwnNotes 빌드에 문제가 있습니다.
 
 직접 [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts)에서 ZIP 파일을 다운로드하여 원하는 폴더에 압축을 풀어야 합니다.
 

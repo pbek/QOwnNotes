@@ -16,9 +16,9 @@ Gebruik `QOwnNotesPortable.bat` om QOwnNotes in **draagbare modus** uit te voere
 U hebt het draagbare modus niet nodig als u gewoon geen beheerdersrechten voor uw computer hebt. QOwnNotes hoeft niet te worden geïnstalleerd!
 :::
 
-## Windows XP
+## Windows 8.1 and older
 
-Qt heeft de ondersteuning voor Windows XP met versie 5.8 laten vallen, maar QOwnNotes is nu ook gebouwd met Qt 5.7 zodat Windows XP-gebruikers het nog steeds kunnen gebruiken.
+Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
 
 Je moet het ZIP-bestand zelf downloaden van [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) en het uitpakken in een map naar keuze.
 

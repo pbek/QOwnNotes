@@ -16,9 +16,9 @@
 لستَ مضطرًا إلى استخدام الوضع المحمول إن لم تكن لديك صلاحيات إدارية في حاسوبك. لا يحتاج QOwnNotes إلى تثبيته ليعمل!
 :::
 
-## ويندوز إكس بي
+## Windows 8.1 and older
 
-أوقف إطار Qt دعم ويندوز إكس&nbsp;بي منذ النسخة 5.8، لكن يتم بناء QOwnNotes الآن بنسخة 5.7 من Qt لجعله متاحًا لمستخدمي ويندوز إكس&nbsp;بي.
+Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
 
 عليك تنزيل مِلف ZIP من [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) بنفسك واستخراجه إلى أي مجلد تشاء.
 

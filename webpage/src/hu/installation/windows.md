@@ -16,9 +16,9 @@ A `QOwnNotesPortable.bat` használatával futtathatja a QOwnNotes **hordozható 
 Nincs szüksége a hordozható módra, ha csak nincs adminisztrációs engedélye a számítógépéhez. A QOwnNotes programot nem kell telepíteni!
 :::
 
-## Windows XP
+## Windows 8.1 and older
 
-A Qt elvetette az 5.8-as verziójú Windows XP támogatását, de a QOwnNotes mostantól a Qt 5.7-tel is fel van építve, hogy a Windows XP felhasználói továbbra is használhassák.
+Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
 
 Saját magának kell letöltenie a ZIP-fájlt az [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) webhelyről, és ki kell csomagolnia egy tetszőleges mappába.
 

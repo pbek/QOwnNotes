@@ -16,9 +16,9 @@ Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](http
 در صورتی که که اجازه مدیریت رایانه خود را ندارید، نیازی هم به حالت قابل حمل نخواهید داشت. QOwnNotes نیازی به نصب شدن ندارد!
 :::
 
-## ویندوز XP
+## Windows 8.1 and older
 
-Qt با نسخه 5.8 از ویندوز XP پشتیبانی نمی کند ولی QOwnNotes در حال حاضر نیز با Qt 5.7 ایجاد شده است تا به کاربران ویندوز XP همچنان امکان استفاده از آن را بدهد.
+Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
 
 شما باید فایل فشرده را از [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) دانلود کرده و به داخل پوشه مورد نظر از حالت فشرده خارج کنید.
 
