@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.7.2
+
+- Build issues with Qt 6.10 were fixed (for [#3316](https://github.com/pbek/QOwnNotes/issues/3316))
+
 ## 25.7.1
 
 - The Windows build now switched to Qt 6.6.1, because the Qt 5 build could not be executed
