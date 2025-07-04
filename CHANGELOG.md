@@ -2,6 +2,8 @@
 
 ## 25.7.2
 
+- The link color in disabled labels was changed to be more toned down
+  (for [#3314](https://github.com/pbek/QOwnNotes/issues/3314))
 - Build issues with Qt 6.10 were fixed (for [#3316](https://github.com/pbek/QOwnNotes/issues/3316))
 
 ## 25.7.1
