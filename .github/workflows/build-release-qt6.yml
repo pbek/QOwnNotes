@@ -91,7 +91,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-22.04
     env:
-      QT_VERSION: 6.5.0
+      QT_VERSION: 6.10.0
       BUILD_DIR: build
     name: "🐧 AppImage Ubuntu 22.04"
     steps:
@@ -105,7 +105,6 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
-          aqtversion: "==2.0.0"
           cache: true
 
       - name: "⚙️ Install dependencies"
@@ -192,7 +191,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     env:
-      QT_VERSION: 6.5.0
+      QT_VERSION: 6.10.0
     continue-on-error: true
     name: "🐧 Snap Ubuntu 18.04"
     steps:
@@ -212,7 +211,6 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
-          aqtversion: "==2.0.0"
           cache: true
 
       - name: "⚙️ Printenv"
@@ -278,7 +276,6 @@ jobs:
       - name: "⚙️ Install Qt"
         uses: jurplel/install-qt-action@v4
         with:
-          aqtversion: "==2.0.0"
           version: ${{env.QT_VERSION}}
           # https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_650/qt.qt6.650.win64_mingw/
           # https://aqtinstall.readthedocs.io/en/latest/getting_started.html
@@ -348,7 +345,7 @@ jobs:
     runs-on: macos-latest
     env:
       # Qt 6.5 doesn't support macOS 10 anymore!
-      QT_VERSION: 6.4.2
+      QT_VERSION: 6.10.0
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
@@ -362,7 +359,6 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
-          aqtversion: "==2.0.0"
           cache: true
 
       - name: "⚙️ Set Env"
