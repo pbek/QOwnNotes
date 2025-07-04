@@ -41,6 +41,7 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
+        # aqt Qt versions: https://ddalcino.github.io/aqt-list-server/
         qt-version:
           [
             "5.9.9",
