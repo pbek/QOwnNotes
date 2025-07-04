@@ -11655,7 +11655,11 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
         QFileInfo fileInfo(file);
         progressDialog.setLabelText(tr("Importing: %1").arg(fileInfo.fileName()));
 
-        file.open(QFile::ReadOnly | QFile::Text);
+        if (!file.open(QFile::ReadOnly | QFile::Text)) {
+            qWarning() << "Failed to open file:" << file.fileName();
+            continue;
+        }
+
         QTextStream ts(&file);
         QString text = ts.readAll().trimmed();
 

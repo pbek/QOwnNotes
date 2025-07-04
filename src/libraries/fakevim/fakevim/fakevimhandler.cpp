@@ -6038,7 +6038,12 @@ bool FakeVimHandler::Private::handleExReadCommand(const ExCommand &cmd) {
 
     m_currentFileName = replaceTildeWithHome(cmd.args);
     QFile file(m_currentFileName);
-    file.open(QIODevice::ReadOnly);
+
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << "Failed to open file:" << file.fileName();
+        return false;
+    }
+
     QTextStream ts(&file);
     QString data = ts.readAll();
     insertText(data);
