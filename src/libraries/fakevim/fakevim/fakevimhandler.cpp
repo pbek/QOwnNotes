@@ -6009,13 +6009,18 @@ bool FakeVimHandler::Private::handleExWriteCommand(const ExCommand &cmd) {
         }
         // Check result by reading back.
         QFile file3(fileName);
-        file3.open(QIODevice::ReadOnly);
-        QByteArray ba = file3.readAll();
-        showMessage(MessageInfo, Tr::tr("\"%1\" %2 %3L, %4C written.")
-                                     .arg(fileName)
-                                     .arg(exists ? QStringLiteral(" ") : Tr::tr(" [New] "))
-                                     .arg(ba.count('\n'))
-                                     .arg(ba.size()));
+        if (file3.open(QIODevice::ReadOnly)) {
+            QByteArray ba = file3.readAll();
+            showMessage(MessageInfo, Tr::tr("\"%1\" %2 %3L, %4C written.")
+                                         .arg(fileName)
+                                         .arg(exists ? QStringLiteral(" ") : Tr::tr(" [New] "))
+                                         .arg(ba.count('\n'))
+                                         .arg(ba.size()));
+            file3.close();
+        } else {
+            qWarning() << "Failed to open file:" << file3.fileName();
+        }
+
         // if (quitAll)
         //     passUnknownExCommand(forced ? "qa!" : "qa");
         // else if (quit)

@@ -352,7 +352,11 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     }
 
     // read the content of the updater script
-    f.open(QFile::ReadOnly | QFile::Text);
+    if (!f.open(QFile::ReadOnly | QFile::Text)) {
+        qWarning() << "Failed to open file:" << f.fileName();
+        return false;
+    }
+
     QTextStream ts(&f);
     QString scriptContent = ts.readAll();
     f.close();

@@ -4004,7 +4004,11 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
     const QPixmap &pixmap = QPixmap::fromImage(
         image.scaled(width, height, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    file.open(QIODevice::WriteOnly);
+    if (!file.open(QIODevice::WriteOnly)) {
+        qWarning() << "Failed to open file for writing:" << file.fileName();
+        return false;
+    }
+
     pixmap.save(&file);
     file.close();
 

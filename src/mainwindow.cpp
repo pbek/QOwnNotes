@@ -1552,10 +1552,12 @@ void MainWindow::initStyling() {
         QFile f(QStringLiteral(":qdarkstyle/style.qss"));
         if (!f.exists()) {
             qWarning("Unable to set stylesheet, file not found!");
+        } else if (!f.open(QFile::ReadOnly | QFile::Text)) {
+            qWarning() << "Failed to open file:" << f.fileName();
         } else {
-            f.open(QFile::ReadOnly | QFile::Text);
             QTextStream ts(&f);
             appStyleSheet = ts.readAll();
+            f.close();
         }
 
         // QTextEdit background color of qdarkstyle
