@@ -57,8 +57,6 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
-          aqtversion: "==2.0.0"
-          setup-python: false
           cache: true
 
       - name: "⚙️ Install dependencies"
