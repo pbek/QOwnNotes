@@ -264,8 +264,9 @@ jobs:
     needs: create_release
     runs-on: windows-2025
     env:
-      # Qt 6.5 windeployqt doesn't deploy DLLs!
-      QT_VERSION: 6.10.0
+      # Qt 6.5: windeployqt doesn't deploy DLLs!
+      # Qt 6.10.0: Graphical issues
+      QT_VERSION: 6.9.1
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
