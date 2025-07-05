@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.7.3
+
+- The build process for the AppImage on GitHub was fixed
+  (for [#3317](https://github.com/pbek/QOwnNotes/issues/3317))
+
 ## 25.7.2
 
 - The link color in disabled labels was changed to be more toned down
