@@ -265,8 +265,8 @@ jobs:
     runs-on: windows-2025
     env:
       # Qt 6.5: windeployqt doesn't deploy DLLs!
-      # Qt 6.10.0: Graphical issues
-      QT_VERSION: 6.9.1
+      # Qt 6.10.0, 6.9.1: Graphical issues with checkboxes in the settings dialog
+      QT_VERSION: 6.8.3
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
