@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.7.4
+
+- The `drawmode` property assignments for the toolbars was removed to fix the warning
+  `QTabBar(0x3121e2c0, name="qt_tabwidget_tabbar") does not have a property named "drawbase"`
+  on newer Qt versions (for [#3319](https://github.com/pbek/QOwnNotes/issues/3319))
+
 ## 25.7.3
 
 - The build process for the AppImage on GitHub was fixed
