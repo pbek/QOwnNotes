@@ -721,7 +721,6 @@ QTabWidget::pane {
 }
 
 QTabBar {
-  qproperty-drawbase: 0;
   left: 5px; /* move to the right by 5px */
 }
 
