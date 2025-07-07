@@ -341,9 +341,9 @@ jobs:
   # macOS build
   #
   build-macos:
-    name: "🍎 macOS Monterey"
+    name: "🍎 macOS"
     needs: create_release
-    runs-on: macos-latest
+    runs-on: macos-15
     env:
       # Qt 6.5 doesn't support macOS 10 anymore!
       QT_VERSION: 6.10.0

@@ -400,7 +400,7 @@ jobs:
   build-macos:
     name: "🍎 macOS Qt 5.15.2"
     needs: create_release
-    runs-on: macos-latest
+    runs-on: macos-15
     env:
       QT_VERSION: 5.15.2
     steps:
