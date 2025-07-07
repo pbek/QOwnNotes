@@ -39,7 +39,7 @@ bool isCurrentNoteFolderUseGit();
 #ifdef USE_LIBGIT2
 bool initRepository(const QString& path);
 bool commitAll(const QString& path, const QString& message);
-QJSValue getNoteVersions(QJSEngine& engine, const Note& note);
+QJSValue getNoteVersions(QJSEngine& engine, const Note& note, int limit = 100);
 #endif
 }    // namespace Git
 }    // namespace Utils

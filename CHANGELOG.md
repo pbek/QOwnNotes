@@ -2,6 +2,9 @@
 
 ## 25.7.4
 
+- With enabled libgit2 support, the amount of note versions gathered from the local
+  git repository was limited to 100 to prevent performance issues with huge note folders
+  and lots of git commits (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
 - The `drawmode` property assignment for the toolbars was removed to fix the warning
   `QTabBar(0x3121e2c0, name="qt_tabwidget_tabbar") does not have a property named "drawbase"`
   on newer Qt versions (for [#3319](https://github.com/pbek/QOwnNotes/issues/3319))

@@ -331,7 +331,7 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
  * @param note
  * @return
  */
-QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
+QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int limit) {
     QJSValue versions = engine.newArray();
 
     if (!note.exists()) {
@@ -362,7 +362,7 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note) {
     bool isFirst = true;
     int versionIndex = 0;
 
-    while (git_revwalk_next(&oid, walker) == 0) {
+    while (git_revwalk_next(&oid, walker) == 0 && versionIndex < limit) {
         git_commit *commit;
         if (git_commit_lookup(&commit, repo, &oid) == 0) {
             git_tree *tree;

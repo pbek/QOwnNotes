@@ -11246,10 +11246,22 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     // Providing a QJSEngine instance to the Utils::Git::getNoteVersions is important, otherwise
     // the returned versions will not be usable
     QJSEngine engine;
-    auto versions = Utils::Git::getNoteVersions(engine, currentNote);
 
+    // Limit the number of versions to load, because loading all versions
+    // can take a long time and use a lot of memory
+    const int limit = 100;
+
+    showStatusBarMessage(
+        tr("Latest %n note versions are currently gathered from your local git repository", "",
+           limit),
+        QStringLiteral("🗃️"), 20000);
+
+    auto versions = Utils::Git::getNoteVersions(engine, currentNote, limit);
+    showStatusBarMessage(tr("Done with gathering note versions from git"), QStringLiteral("🕒"),
+                         2000);
     auto *dialog = new VersionDialog(versions);
-    dialog->setWindowTitle(tr("Git versions of note: %1").arg(currentNote.getFileName()));
+    dialog->setWindowTitle(
+        tr("Latest %n git versions of note: %1", "", limit).arg(currentNote.getFileName()));
     dialog->exec();
 #else
     QString relativeFilePath = currentNote.relativeNoteFilePath();
