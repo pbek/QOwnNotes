@@ -922,6 +922,11 @@ QTreeView::branch:open:has-children:has-siblings:hover {
   image: url(:/qss_icons/rc/branch_open-on.png);
 }
 
+/* Explicitly set color for Windows 11 with Qt >= 6.8 */
+QListView::item {
+  color: #bbb;
+}
+
 QListView::item:!selected:hover,
 QListView::item:!selected:hover,
 QTreeView::item:!selected:hover {
