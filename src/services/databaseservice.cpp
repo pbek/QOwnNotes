@@ -20,6 +20,7 @@
 #include "mainwindow.h"
 #include "owncloudservice.h"
 #include "services/settingsservice.h"
+#include "services/websocketserverservice.h"
 
 DatabaseService::DatabaseService() = default;
 
@@ -878,8 +879,7 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 40) {
-        const auto bookmarksNoteName =
-            settings.value(QStringLiteral("webSocketServerService/bookmarksNoteName")).toString();
+        const auto bookmarksNoteName = WebSocketServerService::getBookmarksNoteName();
 
         // fix overwritten bookmarksNoteName
         if (bookmarksNoteName == QStringLiteral("Commands")) {

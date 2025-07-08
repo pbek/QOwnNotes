@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.7.5
+
+- The default bookmarks note name will now be set properly on new installations,
+  so storing of bookmarks works properly with the QOwnNotes browser extension
+  (for [#3323](https://github.com/pbek/QOwnNotes/issues/3323))
+
 ## 25.7.4
 
 - With enabled libgit2 support, the amount of note versions gathered from the local
