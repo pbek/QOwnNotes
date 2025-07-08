@@ -879,6 +879,7 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 40) {
+#ifndef INTEGRATION_TESTS
         const auto bookmarksNoteName = WebSocketServerService::getBookmarksNoteName();
 
         // fix overwritten bookmarksNoteName
@@ -886,7 +887,7 @@ bool DatabaseService::setupTables() {
             settings.setValue(QStringLiteral("webSocketServerService/bookmarksNoteName"),
                               QStringLiteral("Bookmarks"));
         }
-
+#endif
         version = 40;
     }
 
