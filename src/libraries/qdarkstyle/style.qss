@@ -80,16 +80,30 @@ QCheckBox:disabled {
   color: #777777;
 }
 QCheckBox::indicator,
+QListView::indicator,
 QGroupBox::indicator {
   width: 18px;
   height: 18px;
 }
+
 QGroupBox::indicator {
   margin-left: 2px;
 }
 
+/*
+QListView::item:hover {
+  margin-right: 5px;
+}
+
+QListView::item:focus:hover {
+  margin-right: 0;
+}
+*/
+
 QCheckBox::indicator:unchecked,
 QCheckBox::indicator:unchecked:hover,
+QListView::indicator:unchecked,
+QListView::indicator:unchecked:hover,
 QGroupBox::indicator:unchecked,
 QGroupBox::indicator:unchecked:hover {
   image: url(:/qss_icons/rc/checkbox_unchecked.png);
@@ -97,6 +111,8 @@ QGroupBox::indicator:unchecked:hover {
 
 QCheckBox::indicator:unchecked:focus,
 QCheckBox::indicator:unchecked:pressed,
+QListView::indicator:unchecked:focus,
+QListView::indicator:unchecked:pressed,
 QGroupBox::indicator:unchecked:focus,
 QGroupBox::indicator:unchecked:pressed {
   border: none;
@@ -105,6 +121,8 @@ QGroupBox::indicator:unchecked:pressed {
 
 QCheckBox::indicator:checked,
 QCheckBox::indicator:checked:hover,
+QListView::indicator:checked,
+QListView::indicator:checked:hover,
 QGroupBox::indicator:checked,
 QGroupBox::indicator:checked:hover {
   image: url(:/qss_icons/rc/checkbox_checked.png);
@@ -112,6 +130,8 @@ QGroupBox::indicator:checked:hover {
 
 QCheckBox::indicator:checked:focus,
 QCheckBox::indicator:checked:pressed,
+QListView::indicator:checked:focus,
+QListView::indicator:checked:pressed,
 QGroupBox::indicator:checked:focus,
 QGroupBox::indicator:checked:pressed {
   border: none;
@@ -120,23 +140,30 @@ QGroupBox::indicator:checked:pressed {
 
 QCheckBox::indicator:indeterminate,
 QCheckBox::indicator:indeterminate:hover,
-QCheckBox::indicator:indeterminate:pressed QGroupBox::indicator:indeterminate,
+QCheckBox::indicator:indeterminate:pressed,
+QListView::indicator:indeterminate,
+QListView::indicator:indeterminate:hover,
+QListView::indicator:indeterminate:pressed,
+QGroupBox::indicator:indeterminate,
 QGroupBox::indicator:indeterminate:hover,
 QGroupBox::indicator:indeterminate:pressed {
   image: url(:/qss_icons/rc/checkbox_indeterminate.png);
 }
 
 QCheckBox::indicator:indeterminate:focus,
+QListView::indicator:indeterminate:focus,
 QGroupBox::indicator:indeterminate:focus {
   image: url(:/qss_icons/rc/checkbox_indeterminate_focus.png);
 }
 
 QCheckBox::indicator:checked:disabled,
+QListView::indicator:checked:disabled,
 QGroupBox::indicator:checked:disabled {
   image: url(:/qss_icons/rc/checkbox_checked_disabled.png);
 }
 
 QCheckBox::indicator:unchecked:disabled,
+QListView::indicator:unchecked:disabled,
 QGroupBox::indicator:unchecked:disabled {
   image: url(:/qss_icons/rc/checkbox_unchecked_disabled.png);
 }
@@ -920,11 +947,6 @@ QTreeView::branch:closed:has-children:has-siblings:hover {
 QTreeView::branch:open:has-children:!has-siblings:hover,
 QTreeView::branch:open:has-children:has-siblings:hover {
   image: url(:/qss_icons/rc/branch_open-on.png);
-}
-
-/* Explicitly set color for Windows 11 with Qt >= 6.8 */
-QListView::item {
-  color: #bbb;
 }
 
 QListView::item:!selected:hover,
