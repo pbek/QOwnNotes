@@ -5,6 +5,8 @@
 - The default bookmarks note name will now be set properly on new installations,
   so storing of bookmarks works properly with the QOwnNotes browser extension
   (for [#3323](https://github.com/pbek/QOwnNotes/issues/3323))
+- Windows dark mode support was improved and the Windows build will now be done with
+  Qt 6.9.1 to fix some other graphical glitches (for [#3310](https://github.com/pbek/QOwnNotes/issues/3310))
 
 ## 25.7.4
 
