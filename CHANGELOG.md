@@ -4,6 +4,8 @@
 
 - Try to fix a crash on macOS Apple Silicon on Qt6 while quitting the app with
   log panel turned on (for [#2912](https://github.com/pbek/QOwnNotes/issues/2912))
+- The release build process for Windows with Qt 6.9.1 was fixed
+  (for [#3310](https://github.com/pbek/QOwnNotes/issues/3310))
 
 ## 25.7.5
 
