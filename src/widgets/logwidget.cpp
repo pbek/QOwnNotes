@@ -164,7 +164,14 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
 
     QString type = logTypeText(logType);
     QColor color = QColor(Qt::black);
+
+#ifdef Q_OS_MAC
+    // Try to fix crash when quitting the app with turned on log panel on macOS with Qt6 on Apple
+    // Silicon https://github.com/pbek/QOwnNotes/issues/2912#issuecomment-3066625378
+    const bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
+#else
     const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
+#endif
 
     switch (logType) {
         case DebugLogType:

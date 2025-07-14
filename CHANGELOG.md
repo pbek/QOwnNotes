@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.7.6
+
+- Try to fix a crash on macOS Apple Silicon on Qt6 while quitting the app with
+  log panel turned on (for [#2912](https://github.com/pbek/QOwnNotes/issues/2912))
+
 ## 25.7.5
 
 - The default bookmarks note name will now be set properly on new installations,
