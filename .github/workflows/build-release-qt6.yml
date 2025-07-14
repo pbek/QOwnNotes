@@ -12,6 +12,8 @@ on:
       - "tests/**"
       - ".github/workflows/build-release-qt6.yml"
       - "build-systems/github/snap.qt6/**"
+      - "build-systems/github/macos/create-dmg-qt6.sh"
+      - "build-systems/github/windows/build-zip-qt6.ps1"
   # For testing also on pull requests
   pull_request:
     paths:
