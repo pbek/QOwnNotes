@@ -54,6 +54,9 @@ if [ "$?" -ne "0" ]; then
   exit 1
 fi
 
+echo "Showing contents of the application bundle"
+find ./$APP.app
+
 ##
 ## macdeployqtfix doesn't seem to be needed on Qt 5.15.1
 ##
