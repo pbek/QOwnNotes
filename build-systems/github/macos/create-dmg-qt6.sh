@@ -44,7 +44,7 @@ cp ${QT_ROOT_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
 
 # use macdeployqt to deploy the application
 echo "Calling macdeployqt"
-${QT_ROOT_DIR}/bin/macdeployqt -verbose=3 ./$APP.app
+${QT_ROOT_DIR}/bin/macdeployqt ./$APP.app -verbose=3
 # Qt 6.4.2 can't find macdeployqt6
 #${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
 #macdeployqt ./$APP.app
