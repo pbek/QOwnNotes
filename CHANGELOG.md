@@ -4,7 +4,7 @@
 
 - Fixed a possible crash when locally diffing notes with enabled libgit2 support
   (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
-- In the _Interface settings_ there now is a setting to override the **interface scale factor**
+- In the _Interface settings_, there now is a setting to override the **interface scale factor**
   if you have scaling issues (for [#3324](https://github.com/pbek/QOwnNotes/issues/3324))
   - Keep in mind that if you are disabling this setting and had it previously
     enabled, you need to restart the application manually so the previous environment
