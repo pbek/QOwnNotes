@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.7.7
+
+- Fixed a possible crash when locally diffing notes with enabled libgit2 support
+  (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))
+
 ## 25.7.6
 
 - Try to fix a crash on macOS Apple Silicon on Qt6 while quitting the app with
