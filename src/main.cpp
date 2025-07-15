@@ -576,6 +576,16 @@ int main(int argc, char *argv[]) {
     }
 
     QSettings settings;
+
+    // Override the interface scale factor if the setting is enabled
+    if (settings.value(QStringLiteral("overrideInterfaceScalingFactor")).toBool()) {
+        qputenv("QT_SCALE_FACTOR",
+                QString::number(
+                    settings.value(QStringLiteral("interfaceScalingFactor"), 100).toDouble() / 100,
+                    'f', 1)
+                    .toUtf8());
+    }
+
     QString locale = settings.value(QStringLiteral("interfaceLanguage")).toString();
 
     if (locale.isEmpty()) {

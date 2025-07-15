@@ -3365,6 +3365,57 @@
                    </widget>
                   </item>
                   <item>
+                   <widget class="QGroupBox" name="overrideInterfaceScalingFactorGroupBox">
+                    <property name="title">
+                     <string>Override interface scaling factor</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_18">
+                     <item>
+                      <widget class="QLabel" name="interfaceScalingFactorSpinBoxLabel">
+                       <property name="text">
+                        <string>Interface scaling factor:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="interfaceScalingFactorSpinBox">
+                       <property name="suffix">
+                        <string notr="true">%</string>
+                       </property>
+                       <property name="minimum">
+                        <number>10</number>
+                       </property>
+                       <property name="maximum">
+                        <number>100000</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>10</number>
+                       </property>
+                       <property name="value">
+                        <number>100</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_23">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
                    <widget class="QGroupBox" name="statusBarGroupBox">
                     <property name="title">
                      <string>Status bar</string>

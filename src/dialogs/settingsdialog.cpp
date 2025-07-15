@@ -546,6 +546,10 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("overrideInterfaceFontSize"),
                       ui->overrideInterfaceFontSizeGroupBox->isChecked());
     settings.setValue(QStringLiteral("interfaceFontSize"), ui->interfaceFontSizeSpinBox->value());
+    settings.setValue(QStringLiteral("overrideInterfaceScalingFactor"),
+                      ui->overrideInterfaceScalingFactorGroupBox->isChecked());
+    settings.setValue(QStringLiteral("interfaceScalingFactor"),
+                      ui->interfaceScalingFactorSpinBox->value());
     settings.setValue(QStringLiteral("itemHeight"), ui->itemHeightSpinBox->value());
     settings.setValue(QStringLiteral("MainWindow/mainToolBar.iconSize"),
                       ui->toolbarIconSizeSpinBox->value());
@@ -1003,6 +1007,16 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool());
     ui->interfaceFontSizeSpinBox->setValue(
         settings.value(QStringLiteral("interfaceFontSize"), 11).toInt());
+
+    const QSignalBlocker overrideInterfaceScalingFactorGroupBoxBlocker(
+        ui->overrideInterfaceScalingFactorGroupBox);
+    Q_UNUSED(overrideInterfaceScalingFactorGroupBoxBlocker)
+    const QSignalBlocker interfaceScalingFactorSpinBoxBlocker(ui->interfaceScalingFactorSpinBox);
+    Q_UNUSED(interfaceScalingFactorSpinBoxBlocker)
+    ui->overrideInterfaceScalingFactorGroupBox->setChecked(
+        settings.value(QStringLiteral("overrideInterfaceScalingFactor"), false).toBool());
+    ui->interfaceScalingFactorSpinBox->setValue(
+        settings.value(QStringLiteral("interfaceScalingFactor"), 100).toInt());
 
     QTreeWidget treeWidget(this);
     auto *treeWidgetItem = new QTreeWidgetItem();
@@ -4531,4 +4545,22 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
 void SettingsDialog::on_searchScriptRepositoryButton_clicked() {
     searchScriptInRepository();
     buildAiScriptingTreeWidget();
+}
+
+void SettingsDialog::on_overrideInterfaceScalingFactorGroupBox_toggled(bool arg1) {
+    if (!arg1) {
+        Utils::Gui::information(
+            this, tr("Override interface scaling factor"),
+            tr("If you had this setting enabled, you now need to restart the application manually "
+               "so the previous environment variable that overrides the scale factor is not in "
+               "your environment again."),
+            QStringLiteral("settings-override-interface-scale-factor-off"));
+    } else {
+        needRestart();
+    }
+}
+
+void SettingsDialog::on_interfaceScalingFactorSpinBox_valueChanged(int arg1) {
+    Q_UNUSED(arg1);
+    needRestart();
 }

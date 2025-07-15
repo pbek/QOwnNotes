@@ -340,6 +340,10 @@ class SettingsDialog : public MasterDialog {
 
     void on_searchScriptRepositoryButton_clicked();
 
+    void on_overrideInterfaceScalingFactorGroupBox_toggled(bool arg1);
+
+    void on_interfaceScalingFactorSpinBox_valueChanged(int arg1);
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
