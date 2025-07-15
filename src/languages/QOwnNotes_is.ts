@@ -2818,10 +2818,6 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
 </message>
 <message>
-<source>Git versions of note: %1</source>
-<translation type="unfinished">Git versions of note: %1</translation>
-</message>
-<message>
 <source>Close note tab</source>
 <translation type="unfinished">Close note tab</translation>
 </message>
@@ -3025,6 +3021,24 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <message>
 <source>Rename workspace</source>
 <translation>Endurnefna vinnusvæði</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -5590,6 +5604,14 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
 <translation type="unfinished">Hide menu icons</translation>
 </message>
 <message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation type="unfinished">Status bar</translation>
 </message>
@@ -6731,6 +6753,10 @@ Villuboð tengingar: </translation>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation type="unfinished">Test connection to %1 (%2)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

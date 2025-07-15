@@ -2783,11 +2783,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>Scinder la note</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>Scinder la note à la position de curseur actuelle ? Le texte après le curseur sera déplacé vers une nouvelle note. Un lien entre la nouvelle et l’ancienne note sera créé.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -2808,11 +2808,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
-</message>
-<message>
-<source>Git versions of note: %1</source>
-<translation type="unfinished">Git versions of note: %1</translation>
+<translation>Le support git n’est pas activé pour le dossier de notes courant, voulez-vous l’activer dans les paramètres ?</translation>
 </message>
 <message>
 <source>Close note tab</source>
@@ -3012,6 +3008,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Rename workspace</source>
 <translation>Renommer l’espace de travail</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -5567,6 +5581,14 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Cacher les icônes des menus</translation>
 </message>
 <message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Barre de statut</translation>
 </message>
@@ -5705,15 +5727,15 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Bibliothèque git</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>Le support de la bibliothèque git libgit2 est activé.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>N’oubliez pas d’activer le support de git pour vos dossiers de notes.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -6686,7 +6708,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation>Back-end d’IA : %1</translation>
+<translation>Back-end d’IA&amp;nbsp;: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
@@ -6704,6 +6726,10 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation>Tester la connexion à %1 (%2)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7420,7 +7446,7 @@ Vos notes resteront intactes!</translation>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Différence textuelle</translation>
 </message>
 <message>
 <source>Differences:</source>

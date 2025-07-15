@@ -2791,10 +2791,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>현재 노트 폴더에 대해 Git 지원이 활성화되어 있지 않습니다. 설정에서 활성화하시겠습니까?</translation>
 </message>
 <message>
-<source>Git versions of note: %1</source>
-<translation>노트의 Git 버전: %1</translation>
-</message>
-<message>
 <source>Close note tab</source>
 <translation>노트 탭 닫기</translation>
 </message>
@@ -2992,6 +2988,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Rename workspace</source>
 <translation>작업 공간 이름 바꾸기</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation>
+<numerusform>최신 %n 노트 버전은 현재 로컬 git 저장소에서 수집됩니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation>Git에서 노트 버전 수집 완료</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation>
+<numerusform>최신 %n git 버전 노트: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -5529,6 +5541,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>메뉴 아이콘 숨기기</translation>
 </message>
 <message>
+<source>Override interface scaling factor</source>
+<translation>인터페이스 스케일링 계수 재정의</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation>인터페이스 스케일링 계수:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>상태 표시줄</translation>
 </message>
@@ -6666,6 +6686,10 @@ Connection error message: </source>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation>1 (%2)에 대한 연결 테스트</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation>이 설정을 활성화한 경우, 이제 응용 프로그램을 수동으로 재시작하여 스케일 계수를 재정의하는 이전 환경 변수가 다시 환경에 포함되지 않도록 해야 합니다.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

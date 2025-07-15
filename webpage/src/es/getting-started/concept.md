@@ -58,7 +58,7 @@ graph TB
 
 ## Archivos de notas de Markdown
 
-- ¡Tú eres **dueño** de todas tus notas y archivos multimedia / adjuntos!
+- ¡Usted es **dueño** de todas sus notas y archivos multimedia/adjuntos!
 - Sus notas se almacenan como **archivos Markdown de texto sin formato** en su computadora de escritorio
 - Puede utilizar cualquier editor de texto que desee junto a QOwnNotes para ver o editar sus archivos de notas
 - **Sincronice sus notas** con otros dispositivos (escritorio y móvil) con su cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con su servidor

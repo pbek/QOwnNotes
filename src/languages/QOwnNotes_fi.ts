@@ -220,7 +220,7 @@
 </message>
 <message>
 <source>Belarusian</source>
-<translation>Valko</translation>
+<translation>Valko-Venäjä</translation>
 </message>
 <message>
 <source>Bulgarian</source>
@@ -605,7 +605,7 @@
 </message>
 <message>
 <source>Metadata to import</source>
-<translation>Metatiedot tuoda</translation>
+<translation>Tuo metatiedot</translation>
 </message>
 <message>
 <source>Import notes</source>
@@ -625,7 +625,7 @@
 </message>
 <message>
 <source>Select Evernote enex file to import</source>
-<translation>Valitse tuoda Evernote enex-tiedosto</translation>
+<translation>Valitse tuotava Evernote enex-tiedosto</translation>
 </message>
 <message>
 <source>Invalid XML!</source>
@@ -991,11 +991,11 @@
 </message>
 <message>
 <source>Already at oldest change.</source>
-<translation>Jo vanhin muutos.</translation>
+<translation>Jo vanhimmassa muutoksessa.</translation>
 </message>
 <message>
 <source>Already at newest change.</source>
-<translation>Jo uusimmissa muutoksissa.</translation>
+<translation>Jo uusimmassa muutoksessa.</translation>
 </message>
 </context>
 <context>
@@ -2812,10 +2812,6 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
 </message>
 <message>
-<source>Git versions of note: %1</source>
-<translation type="unfinished">Git versions of note: %1</translation>
-</message>
-<message>
 <source>Close note tab</source>
 <translation type="unfinished">Close note tab</translation>
 </message>
@@ -3019,6 +3015,24 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <message>
 <source>Rename workspace</source>
 <translation>Nimeä työtila uudelleen</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -5580,6 +5594,14 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
 <translation type="unfinished">Hide menu icons</translation>
 </message>
 <message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation type="unfinished">Status bar</translation>
 </message>
@@ -6721,6 +6743,10 @@ Yhteysvirheilmoitus: </translation>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation type="unfinished">Test connection to %1 (%2)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>

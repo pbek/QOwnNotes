@@ -9,6 +9,7 @@
   - Keep in mind that if you are disabling this setting and had it previously
     enabled, you need to restart the application manually so the previous environment
     variable that overrides the scale factor is not in your environment again
+- Added more Spanish, Finnish, Korean, French translation (thank you, alejandromoc, samlehtonen, venusgirl, jd-develop)
 
 ## 25.7.6
 

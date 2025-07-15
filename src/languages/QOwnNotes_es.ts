@@ -907,7 +907,7 @@
 </message>
 <message>
 <source>File "%1" exists (add ! to override)</source>
-<translation>¡El archivo "%1" ya existe! (agregar ! para reemplazar)</translation>
+<translation>¡El archivo "%1" ya existe! (agregue ! para reemplazarlo)</translation>
 </message>
 <message>
 <source>Cannot open file "%1" for writing</source>
@@ -2810,10 +2810,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>El soporte de Git no está habilitado para la carpeta de notas actual. ¿Desea habilitarlo en la configuración?</translation>
 </message>
 <message>
-<source>Git versions of note: %1</source>
-<translation>Versiones de Git de la nota: %1</translation>
-</message>
-<message>
 <source>Close note tab</source>
 <translation>Cerrar pestaña de la nota</translation>
 </message>
@@ -3011,6 +3007,24 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Rename workspace</source>
 <translation>Renombrar espacio de trabajo</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation>
+<numerusform>La última %n versión de la nota se recopila actualmente desde su repositorio local de git</numerusform>
+<numerusform>Las últimas %n versiones de la nota se recopilan actualmente desde su repositorio local de git</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation>Recopiladas las versiones de notas desde git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation>
+<numerusform>Última %n versiones de git de la nota: %1</numerusform>
+<numerusform>Últimas %n versiones de git de la nota: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -5566,6 +5580,14 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <translation>Ocultar iconos de menú</translation>
 </message>
 <message>
+<source>Override interface scaling factor</source>
+<translation>Redefinir factor de escala de interfaz</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation>Factor de escala de interfaz:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Barra de estado</translation>
 </message>
@@ -6700,6 +6722,10 @@ Mensaje de error de conexión: </translation>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation>Probar conexión a %1 (%2)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation>Si tenía esta configuración habilitada, ahora debe reiniciar la aplicación manualmente para que la variable de entorno anterior que redefine el factor de escala no esté nuevamente en su entorno.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
