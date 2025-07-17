@@ -32,8 +32,8 @@ sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
 # removing backup plist
 rm -f ${PLIST}-e
 
-echo "Showing content of {QT_ROOT_DIR}"
-find "{QT_ROOT_DIR}"
+echo "Showing content of ${QT_ROOT_DIR}"
+find "${QT_ROOT_DIR}"
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
