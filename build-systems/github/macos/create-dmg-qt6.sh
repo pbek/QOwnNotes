@@ -57,6 +57,9 @@ if [ "$?" -ne "0" ]; then
   exit 1
 fi
 
+echo "Copy missing Qt framework QtConcurrent to the application bundle"
+cp -R ${QT_ROOT_DIR}/lib/QtConcurrent.framework ./$APP.app/Contents/Frameworks
+
 echo "Showing contents of the application bundle"
 find ./$APP.app
 
