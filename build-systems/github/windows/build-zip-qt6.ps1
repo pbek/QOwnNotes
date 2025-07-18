@@ -35,8 +35,6 @@ windeployqt -core -gui -widgets -sql -svg -network -xml -printsupport -qml -webs
 
 # Create zip archive
 Get-ChildItem
-Get-ChildItem D:\a\QOwnNotes\QOwnNotes\release
-tree D:\a\QOwnNotes\QOwnNotes\release
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
 # Get sha256 checksum
 $Checksum = [string] (Get-FileHash -Path '..\QOwnNotes.zip' -Algorithm 'SHA256').'Hash'.ToLower()
