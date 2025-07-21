@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.7.8
+
+- An issue with storing settings in the settings dialog would overwrite the toolbar
+  settings in some circumstances was fixed (for [#3318](https://github.com/pbek/QOwnNotes/issues/3318))
+
 ## 25.7.7
 
 - Fixed a possible crash when locally diffing notes with enabled libgit2 support

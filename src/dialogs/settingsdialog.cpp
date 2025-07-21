@@ -3582,16 +3582,22 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     //    settings.remove("");
     //    settings.endGroup();
 
-    settings.beginWriteArray(QStringLiteral("toolbar"), toolbarContainers.size());
+    int size = static_cast<int>(toolbarContainers.size());
 
-    for (int i = 0; i < toolbarContainers.size(); i++) {
-        settings.setArrayIndex(i);
-        settings.setValue(QStringLiteral("name"), toolbarContainers[i].name);
-        settings.setValue(QStringLiteral("title"), toolbarContainers[i].title);
-        settings.setValue(QStringLiteral("items"), toolbarContainers[i].actions);
+    // For some reason there are no ToolbarContainer sometimes, we don't want to overwrite the
+    // toolbar settings then
+    if (size > 0) {
+        settings.beginWriteArray(QStringLiteral("toolbar"), size);
+
+        for (int i = 0; i < size; i++) {
+            settings.setArrayIndex(i);
+            settings.setValue(QStringLiteral("name"), toolbarContainers[i].name);
+            settings.setValue(QStringLiteral("title"), toolbarContainers[i].title);
+            settings.setValue(QStringLiteral("items"), toolbarContainers[i].actions);
+        }
+
+        settings.endArray();
     }
-
-    settings.endArray();
 }
 
 void SettingsDialog::on_resetToolbarPushButton_clicked() {
