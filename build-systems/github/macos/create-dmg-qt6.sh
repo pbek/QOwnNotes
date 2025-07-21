@@ -32,8 +32,8 @@ sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
 # removing backup plist
 rm -f ${PLIST}-e
 
-echo "Showing content of ${QT_ROOT_DIR}"
-find "${QT_ROOT_DIR}"
+#echo "Showing content of ${QT_ROOT_DIR}"
+#find "${QT_ROOT_DIR}"
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
@@ -45,9 +45,11 @@ cp ${QT_ROOT_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
 #chmod a+x ../travis/osx/update.command
 #cp ../travis/osx/update.command $APP.app/Contents/MacOS
 
-# use macdeployqt to deploy the application
+# Use macdeployqt to deploy the application
+# Use "-verbose=3" for more output
+# To fix permission warning dialogs use -codesign=-, see https://github.com/pbek/QOwnNotes/issues/2912#issuecomment-3094868110
 echo "Calling macdeployqt"
-${QT_ROOT_DIR}/bin/macdeployqt ./$APP.app -verbose=3
+${QT_ROOT_DIR}/bin/macdeployqt ./$APP.app -codesign=-
 # Qt 6.4.2 can't find macdeployqt6
 #${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
 #macdeployqt ./$APP.app
@@ -57,8 +59,9 @@ if [ "$?" -ne "0" ]; then
   exit 1
 fi
 
-echo "Copy missing Qt framework QtConcurrent to the application bundle"
-cp -R ${QT_ROOT_DIR}/lib/QtConcurrent.framework ./$APP.app/Contents/Frameworks
+# This should be fixed by adding QT += quick
+#echo "Copy missing Qt framework QtConcurrent to the application bundle"
+#cp -R ${QT_ROOT_DIR}/lib/QtConcurrent.framework ./$APP.app/Contents/Frameworks
 
 echo "Showing contents of the application bundle"
 find ./$APP.app

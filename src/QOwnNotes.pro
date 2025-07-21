@@ -8,7 +8,10 @@ QT       += core gui widgets sql svg network xml printsupport qml websockets con
 
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
-#QT       += quick
+# It looks like it is needed for Qt 6 for macOS, see https://github.com/pbek/QOwnNotes/issues/2912#issuecomment-3094868110
+greaterThan(QT_MAJOR_VERSION, 5) {
+QT       += quick
+}
 
 CONFIG += with_aspell
 
