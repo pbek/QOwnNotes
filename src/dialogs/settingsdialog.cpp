@@ -3562,8 +3562,8 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     foreach (QToolBar *toolbar, mainWindow->findChildren<QToolBar *>()) {
         QString name = toolbar->objectName();
 
-        // don't store the custom actions toolbar and toolbars that are
-        // not in the toolbar edit widget any more (for some reason they
+        // Don't store the custom actions toolbar and toolbars that are
+        // not in the toolbar edit widget anymore (for some reason they
         // are still found by findChildren)
         if (name == QLatin1String("customActionsToolbar") || !toolbarObjectNames.contains(name)) {
             continue;
