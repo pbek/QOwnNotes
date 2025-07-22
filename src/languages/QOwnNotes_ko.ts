@@ -504,7 +504,7 @@
 </message>
 <message>
 <source>Turkish</source>
-<translation>터키어</translation>
+<translation>튀르기예어</translation>
 </message>
 <message>
 <source>Turkmen</source>
@@ -1475,7 +1475,7 @@ File: QOwnNotes_en.ts</translation>
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>URL 또는 노트 링크</translation>
 </message>
 <message>
 <source>Enter URL</source>

@@ -16,6 +16,7 @@
     for more information
 - An issue with storing settings in the settings dialog would overwrite the toolbar
   settings in some circumstances was fixed (for [#3318](https://github.com/pbek/QOwnNotes/issues/3318))
+- Added more Spanish, Thai, Korean translation (thank you, alejandromoc, tony.chompoo, venusgirl)
 
 ## 25.7.7
 

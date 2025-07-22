@@ -832,7 +832,7 @@
 </message>
 <message>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>ห้ามกดปุ่มใดๆในโหมดแทรกเพื่อให้สามารถกรอกและขยายโค้ดได้อย่างถูกต้อง</translation>
 </message>
 <message>
 <source>Vim tabstop option.</source>
@@ -1350,7 +1350,7 @@
 </message>
 <message>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>นำเข้ารูปภาพ </translation>
 </message>
 <message>
 <source>%v of %m file(s) imported</source>
@@ -1926,7 +1926,7 @@
 </message>
 <message>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <source>Auto format table</source>

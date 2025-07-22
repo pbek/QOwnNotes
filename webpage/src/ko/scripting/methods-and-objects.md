@@ -1194,11 +1194,11 @@ property string myFile;
 property string myDirectory;
 property string mySelection;
 
-// register your settings variables so the user can set them in the script settings
+// 사용자가 스크립트 설정에서 설정할 수 있도록 설정 변수를 등록합니다
 //
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
+// 안타깝게도 Qt에는 QVariantHash가 없으며,
+// QVariantMap (임의의 순서가 없는) 또는 QVariantList(
+// 적어도 임의로 주문할 수 있는)만 사용할 수 있습니다
 property variant settingsVariables: [
     {
         "identifier": "myString",
@@ -1267,11 +1267,11 @@ property string myFile;
 property string myDirectory;
 property string mySelection;
 
-// register your settings variables so the user can set them in the script settings
+// 사용자가 스크립트 설정에서 설정할 수 있도록 설정 변수를 등록합니다
 //
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
+// 안타깝게도 Qt에는 QVariantHash가 없으며, 
+// QVariantMap(임의의 순서가 없는) 또는 QVariantList(
+// 임의로 주문할 수 있는)만 사용할 수 있습니다
 property variant settingsVariables: [
     {
         "identifier": "myString",

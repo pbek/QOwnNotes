@@ -5097,7 +5097,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¡Todavía necesitarás el &lt;a href="https://owncloud.org/"&gt;&lt;span style="font-weight:600"&gt;cliente de sincronización de ownCloud&lt;/span&gt;&lt;/a&gt; (u otro cliente de sincronización de escritorio) para sincronizar sus notas!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¡Todavía necesitará el &lt;a href="https://owncloud.org/"&gt;&lt;span style="font-weight:600"&gt;cliente de sincronización de ownCloud&lt;/span&gt;&lt;/a&gt; (u otro cliente de sincronización de escritorio) para sincronizar sus notas!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>

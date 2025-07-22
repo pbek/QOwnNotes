@@ -4,7 +4,9 @@ Descargue la última **imagen de disco de macOS** desde los[lanzamientos de QOwn
 
 La primera vez, debe hacer clic derecho en la aplicación y hacer clic en **Abrir** para abrir QOwnNotes.
 
-El lanzamiento de GitHub actualmente solo está construido para la plataforma x86.
+El lanzamiento de GitHub `QOwnNotes.dmg` es un **binario universal**, creado con **Qt6**. Necesita al menos macOS 13 (Ventura) para ejecutar el binario universal.
+
+La versión legado de Qt5 está disponible como `QOwnNotesQt5.dmg`. No puede usar el actualizador interno con esta versión, por lo que tendrá que descargar nuevas versiones manualmente.
 
 ::: warning
 Si recibe un mensaje de error `QOwnNotes.app no se puede abrir porque no se puede verificar el desarrollador`, debe visitar su **Configuración de seguridad** de macOS y hacer clic en `Abrir de todos modos`.

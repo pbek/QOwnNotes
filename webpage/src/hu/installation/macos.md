@@ -4,7 +4,9 @@ Töltse le a legújabb **macOS lemezképet** a [QOwnNotes Releases on GitHub web
 
 The first time you have to right-click the application and click **Open** to open QOwnNotes.
 
-The GitHub release is currently only built for the x86 platform.
+The GitHub release `QOwnNotes.dmg` is a **universal binary**, built with **Qt6**. You need at least macOS 13 (Ventura) to run the universal binary.
+
+The Qt5 legacy version is available as `QOwnNotesQt5.dmg`. You can't use the internal updater with this version, so you have to download new versions manually.
 
 ::: warning
 If you get an error message `QOwnNotes.app cannot be opened because the developer cannot be verified` you need to visit your macOS **Security settings** and click on `Open anyway`.

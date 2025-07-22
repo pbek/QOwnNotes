@@ -2,7 +2,7 @@
 
 QOwnNotes에 대해 다른 사람들이 한 말입니다…
 
-- [Notes: ditching Joplin and back to a simpler solution using QOwnNotes on FreeBSD](https://www.ncartron.org/notes-ditching-joplin-and-back-to-a-simpler-solution.html)
+- [참고: Joplin을 버리고 FreeBSD에서 QOwnNotes를 사용하여 더 간단한 솔루션으로 돌아가기](https://www.ncartron.org/notes-ditching-joplin-and-back-to-a-simpler-solution.html)
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: QOwnNotes에 대한 정보](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
 - [무료 및 오픈 소스 리소스 교육자: 메모 소프트웨어](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
@@ -72,11 +72,11 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 - <http://www.thumbapps.org/2017/07/QOwnNotes-portable-text-markdown-editor-and-todo-list-manager.html>
   - 또한 자체적으로 `QOwnNotesPortable_17.06.6_Build_3071.paf`을 만들었습니다 [UBUNTU 16.04에 Qownnotes를 설치하는 방법 - Linux용 참고 소프트웨어 ](http://www.elinuxbook.com/install-qownnotes-in-ubuntu-16-04-a-note-taking-software-for-linux/)
 - [QOwnNotes Linux용 앱 - LinuxAndUbuntu - Linux 뉴스 | 앱 리뷰 | Linux 튜토리얼 방법](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
-- [Solus Users Receive Linux Kernel 4.8.10 and Vivaldi 1.5, QOwnNotes Lands as Well](http://news.softpedia.com/news/solus-users-receive-linux-kernel-4-8-10-and-vivaldi-1-5-qownnotes-lands-as-well-510481.shtml)
+- [Solus 사용자는 Linux 커널 4.8.10 및 Vivaldi 1.5, QOwnNotes Lands도 사용할 수 있습니다](http://news.softpedia.com/news/solus-users-receive-linux-kernel-4-8-10-and-vivaldi-1-5-qownnotes-lands-as-well-510481.shtml)
 - **[Notizverwaltung : QOwnNotes 17.09.6 | c't Magazin](https://www.heise.de/ct/ausgabe/2017-21-Notizverwaltung-QOwnNotes-17-09-6-3840130.html)**
 - [Software: QOwnNotes, VirtualBox, Green Recorder, Notes | Tux Machines](http://www.tuxmachines.org/node/103720)
-  - [Software and howtos: QOwnNotes, MPV Player 0.27, Qt 5.10 Alpha and More | Tux Machines](http://www.tuxmachines.org/node/104778)
-- [QOwnNotes - Cross Platform Open Source Note-Taking App for Ubuntu](https://www.ubuntupit.com/qownnotes-cross-platform-open-source-note-taking-app-ubuntu/)
+  - [소프트웨어 및 사용 방법: QOwnNotes, MPV Player 0.27, Qt 5.10 알파 및 그 외 | Tux Machines](http://www.tuxmachines.org/node/104778)
+- [QOwnNotes - Ubuntu용 크로스 플랫폼 오픈 소스 노트 필기 앱](https://www.ubuntupit.com/qownnotes-cross-platform-open-source-note-taking-app-ubuntu/)
 - [QOwnNotes Review - Slant](https://www.slant.co/improve/options/22491/~qownnotes-review)
 - [QOwnNotes - libellules.ch](http://www.libellules.ch/dotclear/index.php?post/2017/11/08/QOwnNotes)
 - [7 Free Evernote Alternatives - Best Note Taking App With Simple Interface](https://www.geckoandfly.com/24387/note-taking-app/)
@@ -105,7 +105,7 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 - [QOwnNotes - Make Tech Easier Software](https://www.maketecheasier.com/software/qownnotes/)
 - [QOwnNotes 18.11.3 ~ Software182 | Free Download Software Updates !](https://www.software182.com/2018/11/qownnotes.html)
 - [第530回 QOwnNotesでメモを取る：Ubuntu Weekly Recipe｜gihyo.jp … 技術評論社](https://gihyo.jp/admin/serial/01/ubuntu-recipe/0530)
-  - Japanese screenshots
+  - 일본어 스크린샷
 - Article in magazine of [PC Press PC #260](http://pc.pcpress.rs/broj.php?broj=260)
 - [Er zijn veel open source Linux apps om notities te nemen en taken bij te houden. QOwnNotes doet beiden. QOwnNotes slaat notities op in tekstbestanden en ondersteunt de opmaakstandaard Markdown. : PindaNet](https://www.reddit.com/r/PindaNet/comments/acw0sr/er_zijn_veel_open_source_linux_apps_om_notities/)
 - [QownNotes 19.2.5 скачать – менеджер заметок с функцией синхронизацией.](https://zoomexe.net/ofis/organizers/3649-qownnotes.html)
