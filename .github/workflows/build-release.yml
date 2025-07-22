@@ -312,7 +312,7 @@ jobs:
   # Windows build
   #
   build-windows:
-    name: "🧊 Windows Qt 6.9.1"
+    name: "🧊 Windows Qt6"
     needs: create_release
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-2025
@@ -393,10 +393,65 @@ jobs:
           asset_content_type: text/plain
 
   #
-  # macOS build
+  # macOS Qt6 build
   #
   build-macos:
-    name: "🍎 macOS Qt 5.15.2"
+    name: "🍎 macOS Qt6"
+    needs: create_release
+    runs-on: macos-15
+    env:
+      # Qt 6.5 doesn't support macOS 10 anymore!
+      QT_VERSION: 6.9.1
+    steps:
+      - name: "🧰 Checkout"
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      # https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
+      - name: "⚙️ Install Qt"
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: ${{env.QT6_MODULES}}
+          cache: true
+
+      - name: "⚙️ Set Env"
+        shell: bash
+        run: |
+          export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: "⚙️ Printenv"
+        shell: bash
+        run: |
+          echo "VERSION=${VERSION}"
+          printenv
+
+      - name: "🚧 Compile application"
+        run: |
+          echo "#define RELEASE \"GitHub Actions\"" > release.h
+          lrelease QOwnNotes.pro
+          #ls ${Qt5_Dir}/bin
+          ${{env.QMAKE}} QOwnNotes.pro CONFIG+=release QMAKE_APPLE_DEVICE_ARCHS="x86_64 arm64"
+          make -j ${{env.CORES}}
+          ../build-systems/github/macos/create-dmg-qt6.sh
+
+      - name: "📤 Release DMG"
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: src/QOwnNotes.dmg
+          asset_name: QOwnNotes.dmg
+          asset_content_type: application/x-apple-diskimage
+
+  #
+  # macOS Qt5 build
+  #
+  build-macos-qt5:
+    name: "🍎 macOS Qt5"
     needs: create_release
     runs-on: macos-15
     env:
@@ -452,12 +507,12 @@ jobs:
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
           asset_path: src/QOwnNotes.dmg
-          asset_name: QOwnNotes.dmg
+          asset_name: QOwnNotesQt5.dmg
           asset_content_type: application/x-apple-diskimage
 #  publish_release:
 #    name: 📣 Publish release
 #    runs-on: ubuntu-latest
-#    needs: [create_release, build-appimage, build-windows, build-macos, build-snap]
+#    needs: [create_release, build-appimage, build-windows, build-macos, build-macos-qt5, build-snap]
 #    steps:
 #      - name: 📣 Publish draft release
 #        uses: eregon/publish-release@v1
