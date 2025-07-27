@@ -30,7 +30,7 @@ Copy-Item languages\*.qm ..\release
 Set-Location ..\release
 # Fetching dependencies of QT app
 # https://doc.qt.io/qt-6/windows-deployment.html
-windeployqt -core -gui -widgets -sql -svg -network -xml -printsupport -qml -quick -qmltooling -quickwidgets -websockets -concurrent QOwnNotes.exe
+windeployqt -core -gui -widgets -sql -svg -network -xml -printsupport -qml -quick -quickwidgets -websockets -concurrent QOwnNotes.exe
 
 # Create zip archive
 Get-ChildItem
