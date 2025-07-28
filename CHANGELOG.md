@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.7.9
+
+- More libraries were added to the Windows release of QOwnNotes to improve the
+  compatibility with certain scripts from the script repository
+  (for [#3332](https://github.com/pbek/QOwnNotes/issues/3332))
+
 ## 25.7.8
 
 - After a huge amount of work over many weeks, there now is a **universal binary**
