@@ -7473,9 +7473,16 @@ bool MainWindow::undoFormatting(const QString &formatter) {
 void MainWindow::applyFormatter(const QString &formatter) {
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    const QString selectedText = c.selectedText();
+    QString selectedText = c.selectedText();
 
-    // first try to undo an existing formatting
+    // Check if selected text ends with a line break (ParagraphSeparator = U+2029)
+    bool endsWithLineBreak = false;
+    if (!selectedText.isEmpty() && selectedText.endsWith(QChar::ParagraphSeparator)) {
+        endsWithLineBreak = true;
+        selectedText.chop(1);    // remove the trailing paragraph separator
+    }
+
+    // First try to undo an existing formatting
     if (undoFormatting(formatter)) {
         return;
     }
@@ -7488,8 +7495,12 @@ void MainWindow::applyFormatter(const QString &formatter) {
         QRegularExpressionMatch match =
             QRegularExpression(QStringLiteral(R"(^(\s*)(.+?)(\s*)$)")).match(selectedText);
         if (match.hasMatch()) {
-            c.insertText(match.captured(1) + formatter + match.captured(2) + formatter +
-                         match.captured(3));
+            QString formattedText =
+                match.captured(1) + formatter + match.captured(2) + formatter + match.captured(3);
+            if (endsWithLineBreak) {
+                formattedText += QChar::ParagraphSeparator;
+            }
+            c.insertText(formattedText);
         }
     }
 }

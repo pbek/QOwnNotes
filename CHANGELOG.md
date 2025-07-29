@@ -2,6 +2,9 @@
 
 ## 25.7.9
 
+- When applying a formatter like bold, italic or underline to a text selection,
+  a trailing paragraph separator will now be removed from the selection, so the
+  formatting is applied to the line without the separator (for [#3312](https://github.com/pbek/QOwnNotes/issues/3312))
 - More libraries were added to the Windows release of QOwnNotes to improve the
   compatibility with certain scripts from the script repository
   (for [#3332](https://github.com/pbek/QOwnNotes/issues/3332))
