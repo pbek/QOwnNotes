@@ -5,7 +5,8 @@
 # Stop on error
 $ErrorActionPreference = "Stop"
 
-dir -s ..\..\Qt
+#dir -s $Env:Qt6_DIR
+dir -s $Env:QTDIR
 
 Write-Host $Env:QT_VERSION
 Write-Output "#define RELEASE ""GitHub Actions""" > release.h
