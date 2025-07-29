@@ -193,7 +193,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     env:
-      QT_VERSION: 6.10.0
+      QT_VERSION: 6.9.1
     continue-on-error: true
     name: "🐧 Snap Ubuntu 18.04"
     steps:
