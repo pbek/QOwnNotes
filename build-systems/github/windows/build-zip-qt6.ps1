@@ -5,10 +5,11 @@
 # Stop on error
 $ErrorActionPreference = "Stop"
 
-dir -s $Env:Qt6_DIR
-#dir -s $Env:QTDIR
-
 Write-Host $Env:QT_VERSION
+
+Write-Host "Print content of $Env:QT_ROOT_DIR"
+dir -s $Env:QT_ROOT_DIR
+
 Write-Output "#define RELEASE ""GitHub Actions""" > release.h
 qmake6 CONFIG+=release QOwnNotes.pro -r
 lrelease QOwnNotes.pro
