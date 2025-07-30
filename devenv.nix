@@ -53,21 +53,27 @@ in
       librsvg
       imagemagick
       libicns
-
-      # Packages for treefmt
-      treefmt
-      libclang
-      nodePackages.prettier
-      shfmt
-      nixfmt-rfc-style
-      statix
-      taplo
-      cmake-format
     ]
     ++ unstableQtPkgs;
 
   # https://devenv.sh/git-hooks/
-  git-hooks.hooks.treefmt.enable = true;
+  git-hooks.hooks = {
+    # https://devenv.sh/reference/options/#git-hookshookstreefmt
+    # https://github.com/numtide/treefmt
+    # https://github.com/numtide/treefmt-nix
+    treefmt = {
+      enable = true;
+      settings.formatters = with pkgs; [
+        libclang
+        nodePackages.prettier
+        shfmt
+        nixfmt-rfc-style
+        statix
+        taplo
+        cmake-format
+      ];
+    };
+  };
 
   # This script updates the symlinks to the qmake binaries in the nix store
   # The symlinks are to be used in Qt Creator and CLion
