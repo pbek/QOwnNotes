@@ -143,6 +143,11 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
          text.contains(QLatin1String("[Botan Error]  Invalid CBC padding")) ||
          text.contains(QLatin1String("Invalid version or not a cyphertext")) ||
          text.contains(QLatin1String("QTextCursor::setPosition: Position")) ||
+         text.contains(QLatin1String("which does not match the current topmost grabbing popup,")) ||
+         text.contains(QLatin1String(
+             "QObject::disconnect: wildcard call disconnects from destroyed signal of")) ||
+         text.contains(
+             QLatin1String("This plugin supports grabbing the mouse only for popup windows")) ||
          text.contains(
              QLatin1String("QFont::setPointSizeF: Point size <= 0")) ||    // we don't even use that
                                                                            // method directly
