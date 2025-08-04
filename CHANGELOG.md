@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.8.0
+
+- More warning log messages were ignored for Qt 6.9.1 (for [#3334](https://github.com/pbek/QOwnNotes/issues/3334))
+
 ## 25.7.9
 
 - When applying a formatter like bold, italic or underline to a text selection,
