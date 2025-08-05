@@ -49,6 +49,8 @@ class LinkDialog : public MasterDialog {
 
     void on_tabWidget_currentChanged(int index);
 
+    void on_refreshButton_clicked();
+
    private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;

@@ -449,3 +449,8 @@ void LinkDialog::startTitleFetchRequest(const QUrl &url) {
     connect(reply, SIGNAL(downloadProgress(qint64, qint64)), this,
             SLOT(downloadProgress(qint64, qint64)));
 }
+
+void LinkDialog::on_refreshButton_clicked() {
+    ui->nameLineEdit->clear();
+    on_urlEdit_textChanged(ui->urlEdit->text());
+}

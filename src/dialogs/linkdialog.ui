@@ -64,7 +64,24 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="1" colspan="2">
+         <item row="1" column="3">
+          <widget class="QPushButton" name="fileUrlButton">
+           <property name="toolTip">
+            <string>Select local file or directory to link to</string>
+           </property>
+           <property name="text">
+            <string notr="true">…</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="3">
+          <widget class="QProgressBar" name="downloadProgressBar">
+           <property name="value">
+            <number>24</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="3">
           <spacer name="verticalSpacer">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -78,19 +95,19 @@
           </spacer>
          </item>
          <item row="1" column="2">
-          <widget class="QPushButton" name="fileUrlButton">
+          <widget class="QPushButton" name="refreshButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="toolTip">
-            <string>Select local file or directory to link to</string>
+            <string>Clear link name and fetch title of webpage again</string>
            </property>
-           <property name="text">
-            <string notr="true">…</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1" colspan="2">
-          <widget class="QProgressBar" name="downloadProgressBar">
-           <property name="value">
-            <number>24</number>
+           <property name="icon">
+            <iconset theme="QIcon::ThemeIcon::ViewRefresh" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
            </property>
           </widget>
          </item>
