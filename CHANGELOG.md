@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.8.1
+
+- A new shortcut `Ctrl + Shift + Enter` was added to add a new line above the current
+  (for [#3335](https://github.com/pbek/QOwnNotes/issues/3335))
+
 ## 25.8.0
 
 - More warning log messages were ignored for Qt 6.9.1 (for [#3334](https://github.com/pbek/QOwnNotes/issues/3334))
