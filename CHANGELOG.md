@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.8.2
+
+- The shortcut `Ctrl + Shift + Enter` to add a new line above the current is now also
+  moving the cursor to the new line (for [#3335](https://github.com/pbek/QOwnNotes/issues/3335))
+
 ## 25.8.1
 
 - A new shortcut `Ctrl + Shift + Enter` was added to add a new line above the current
