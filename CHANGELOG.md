@@ -4,7 +4,7 @@
 
 - A new shortcut `Ctrl + Shift + Enter` was added to add a new line above the current
   (for [#3335](https://github.com/pbek/QOwnNotes/issues/3335))
-- In the link dialog there now is a new button to clear the link name an fetch
+- In the link dialog, there now is a new button to clear the link name an fetch
   the webpage title again (for [#3336](https://github.com/pbek/QOwnNotes/issues/3336))
 
 ## 25.8.0
