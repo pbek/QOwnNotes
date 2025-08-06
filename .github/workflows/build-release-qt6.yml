@@ -95,6 +95,7 @@ jobs:
       # Qt 6.10.0, 6.9.1, 6.8.3, 6.7.3, 6.6.3: ERROR: Could not find dependency: libmimerapi.so
       QT_VERSION: 6.5.3
       BUILD_DIR: build
+      APPIMAGE_NAME: "QOwnNotes-x86_64-Qt6.AppImage"
     name: "🐧 AppImage Ubuntu 22.04"
     steps:
       - name: "🧰 Checkout"
@@ -153,20 +154,20 @@ jobs:
 
           # Cleanup
           rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage || true
-          sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          mv *.AppImage ${{env.APPIMAGE_NAME}} ||:
+          sha256sum ${{env.APPIMAGE_NAME}} > ${{env.APPIMAGE_NAME}}.sha256sum
           ls -hal *.AppImage
 
       - name: "📤 Upload artifact: AppImage"
         uses: actions/upload-artifact@v4
         with:
-          name: ${{env.EXECUTABLE}}-x86_64.AppImage
-          path: src/${{env.EXECUTABLE}}-x86_64.AppImage
+          name: ${{env.APPIMAGE_NAME}}
+          path: src/${{env.APPIMAGE_NAME}}
       - name: "📤 Upload artifact: AppImage sha256sum"
         uses: actions/upload-artifact@v4
         with:
-          name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
-          path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          name: ${{env.APPIMAGE_NAME}}.sha256sum
+          path: src/${{env.APPIMAGE_NAME}}.sha256sum
   #      - name: '📤 Release AppImage for Linux'
   #        uses: actions/upload-release-asset@v1
   #        env:

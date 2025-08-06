@@ -171,6 +171,7 @@ jobs:
     env:
       QT_VERSION: 6.5.3
       BUILD_DIR: build
+      APPIMAGE_NAME: "QOwnNotes-x86_64-Qt6-experimental.AppImage"
     name: "🐧 AppImage Qt 6.5.3"
     steps:
       - name: "🧰 Checkout"
@@ -219,8 +220,8 @@ jobs:
           ls -hal *.AppImage
           find -iname "*.AppImage"
           # It's ok if no file needs to be renamed
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64-Qt6.AppImage ||:
-          sha256sum ${{env.EXECUTABLE}}-x86_64-Qt6.AppImage > ${{env.EXECUTABLE}}-x86_64-Qt6.AppImage.sha256sum
+          mv *.AppImage ${{env.APPIMAGE_NAME}} ||:
+          sha256sum ${{env.APPIMAGE_NAME}} > ${{env.APPIMAGE_NAME}}.sha256sum
           ls -hal *.AppImage
           find -iname "*.AppImage"
           pwd
@@ -231,8 +232,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./src/QOwnNotes-x86_64-Qt6.AppImage
-          asset_name: QOwnNotes-x86_64-Qt6.AppImage
+          asset_path: ./src/${{env.APPIMAGE_NAME}}
+          asset_name: ${{env.APPIMAGE_NAME}}
           asset_content_type: application/vnd.appimage
       - name: "📤 Release AppImage Qt6 sha256sum"
         uses: actions/upload-release-asset@v1
@@ -240,8 +241,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./src/QOwnNotes-x86_64-Qt6.AppImage.sha256sum
-          asset_name: QOwnNotes-x86_64-Qt6.AppImage.sha256sum
+          asset_path: ./src/${{env.APPIMAGE_NAME}}.sha256sum
+          asset_name: ${{env.APPIMAGE_NAME}}.sha256sum
           asset_content_type: text/plain
 
   #
