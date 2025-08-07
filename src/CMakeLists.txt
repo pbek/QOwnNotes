@@ -59,15 +59,6 @@ if(BUILD_WITH_ASPELL)
     )
   endif()
   include_directories(${ASPELL_INCLUDE_DIR})
-  list(
-    APPEND
-    SOURCE_FILES
-    libraries/sonnet/src/plugins/aspell/aspellclient.cpp
-    libraries/sonnet/src/plugins/aspell/aspellclient.h
-    libraries/sonnet/src/plugins/aspell/aspelldebug.cpp
-    libraries/sonnet/src/plugins/aspell/aspelldebug.h
-    libraries/sonnet/src/plugins/aspell/aspelldict.cpp
-    libraries/sonnet/src/plugins/aspell/aspelldict.h)
 endif()
 
 add_executable(QOwnNotes "")
@@ -534,6 +525,16 @@ list(
   libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.hxx
   libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.cxx
   libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx)
+
+if(BUILD_WITH_ASPELL)
+  list(
+    APPEND
+    SOURCE_FILES
+    libraries/sonnet/src/plugins/aspell/aspellclient.cpp
+    libraries/sonnet/src/plugins/aspell/aspellclient.h
+    libraries/sonnet/src/plugins/aspell/aspelldict.cpp
+    libraries/sonnet/src/plugins/aspell/aspelldict.h)
+endif()
 
 # md4c
 list(APPEND SOURCE_FILES libraries/md4c/src/md4c.c
