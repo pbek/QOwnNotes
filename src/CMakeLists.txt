@@ -10,6 +10,7 @@ option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
 option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
 
 option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
+option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
 # END options
 
 if(QON_QT6_BUILD)
@@ -48,11 +49,37 @@ if(BUILD_WITH_LIBGIT2)
   link_directories(${LIBGIT2_LIBRARY_DIRS})
 endif()
 
+if(BUILD_WITH_ASPELL)
+  find_path(ASPELL_INCLUDE_DIR aspell.h)
+  find_library(ASPELL_LIBRARIES aspell)
+  if(NOT ASPELL_INCLUDE_DIR OR NOT ASPELL_LIBRARIES)
+    message(
+      FATAL_ERROR
+        "aspell library or headers not found. Please install aspell-devel or libaspell-dev."
+    )
+  endif()
+  include_directories(${ASPELL_INCLUDE_DIR})
+  list(
+    APPEND
+    SOURCE_FILES
+    libraries/sonnet/src/plugins/aspell/aspellclient.cpp
+    libraries/sonnet/src/plugins/aspell/aspellclient.h
+    libraries/sonnet/src/plugins/aspell/aspelldebug.cpp
+    libraries/sonnet/src/plugins/aspell/aspelldebug.h
+    libraries/sonnet/src/plugins/aspell/aspelldict.cpp
+    libraries/sonnet/src/plugins/aspell/aspelldict.h)
+endif()
+
 add_executable(QOwnNotes "")
 
 if(BUILD_WITH_LIBGIT2)
   target_compile_definitions(QOwnNotes PUBLIC USE_LIBGIT2)
   target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
+endif()
+
+if(BUILD_WITH_ASPELL)
+  target_compile_definitions(QOwnNotes PUBLIC ASPELL_ENABLED)
+  target_link_libraries(QOwnNotes PRIVATE ${ASPELL_LIBRARIES})
 endif()
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
@@ -615,6 +642,10 @@ endif()
 
 if(BUILD_WITH_LIBGIT2)
   target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
+endif()
+
+if(BUILD_WITH_ASPELL)
+  target_link_libraries(QOwnNotes PRIVATE ${ASPELL_LIBRARIES})
 endif()
 
 if(MINGW OR MSVC)

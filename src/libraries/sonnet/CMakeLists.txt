@@ -39,5 +39,7 @@ add_library(
 
 # The hunspell library
 add_subdirectory(src/plugins/hunspell/hunspell)
+add_subdirectory(src/plugins/hunspell/aspell)
 
-target_link_libraries(Sonnet PRIVATE Qt${QT_VERSION_MAJOR}::Core Hunspell)
+target_link_libraries(Sonnet PRIVATE Qt${QT_VERSION_MAJOR}::Core Hunspell
+                                     Aspell)
