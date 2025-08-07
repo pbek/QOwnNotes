@@ -16,6 +16,7 @@
   pkg-config,
   xvfb-run,
   installShellFiles,
+  aspell,
 }:
 
 let
@@ -50,12 +51,14 @@ stdenv.mkDerivation {
     qtwebsockets
     botan3
     libgit2
+    aspell
   ] ++ lib.optionals stdenv.hostPlatform.isLinux [ qtwayland ];
 
   cmakeFlags = [
     "-DQON_QT6_BUILD=ON"
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
     "-DBUILD_WITH_LIBGIT2=ON"
+    "-DBUILD_WITH_ASPELL=ON"
   ];
 
   # Install shell completion on Linux (with xvfb-run)
