@@ -1490,6 +1490,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>연결할 로컬 파일 또는 디렉터리 선택</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation>링크 이름을 지우고 웹페이지 제목을 다시 가져옵니다</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>노트</translation>
 </message>

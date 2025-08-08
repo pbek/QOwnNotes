@@ -1497,6 +1497,10 @@
 <translation>Atlasiet vietējo failu vai direktoriju, ar kuru saistīt</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Piezīme</translation>
 </message>

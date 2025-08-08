@@ -1492,6 +1492,10 @@
 <translation>Sarudza faira yemuno kana dhairekitori yekubatanidza nayo</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Cherechedzo</translation>
 </message>

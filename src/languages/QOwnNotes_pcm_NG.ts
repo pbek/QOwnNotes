@@ -1492,6 +1492,10 @@
 <translation type="unfinished">Select local file or directory to link to</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation type="unfinished">Note</translation>
 </message>

@@ -1491,6 +1491,10 @@
 <translation>Välj lokal fil eller katalog som du vill länka till</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Anteckning</translation>
 </message>

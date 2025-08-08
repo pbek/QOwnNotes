@@ -1487,6 +1487,10 @@
 <translation>Chọn tập tin hoặc thư mục cục bộ để liên kết đến</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Ghi chú</translation>
 </message>

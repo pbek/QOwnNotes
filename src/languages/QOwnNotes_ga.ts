@@ -1507,6 +1507,10 @@
 <translation>Roghnaigh comhad áitiúil nó eolaire chun nasc a dhéanamh leis</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Nóta</translation>
 </message>

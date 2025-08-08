@@ -1492,6 +1492,10 @@
 <translation>Sélectionnez le fichier ou le répertoire local à lier</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Note</translation>
 </message>

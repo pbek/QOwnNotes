@@ -1492,6 +1492,10 @@
 <translation>Seleccione el archivo o directorio local al que enlazar</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation>Borrar el nombre del enlace y recuperar el título de la página web nuevamente</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Nota</translation>
 </message>

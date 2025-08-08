@@ -1492,6 +1492,10 @@
 <translation>Veldu staðbundna skrá eða skrá til að tengjast</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Athugið</translation>
 </message>

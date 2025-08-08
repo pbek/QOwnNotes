@@ -1497,6 +1497,10 @@
 <translation>Odaberite lokalnu datoteku ili direktorij s poveznicom</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Bilješka</translation>
 </message>

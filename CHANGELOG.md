@@ -7,6 +7,7 @@
 - When built with CMake, QOwnNotes now also supports the `-DBUILD_WITH_ASPELL=ON`
   build parameter, so it can be built with the Aspell library for spell checking
   (for [#3335](https://github.com/pbek/QOwnNotes/issues/3335))
+- Added more Korean, Spanish translation (thank you, venusgirl, alejandromoc)
 
 ## 25.8.1
 

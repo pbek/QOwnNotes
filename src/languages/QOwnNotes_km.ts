@@ -1487,6 +1487,10 @@
 <translation>ជ្រើសឯកសារមូលដ្ឋានឬថតឯកសារដើម្បីភ្ជាប់ទៅ</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>ចំណាំ</translation>
 </message>

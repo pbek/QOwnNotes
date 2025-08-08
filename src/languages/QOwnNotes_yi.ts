@@ -1495,6 +1495,10 @@
 <translation>סעלעקט היגע טעקע אָדער וועגווייַזער צו לינק צו</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>נאטיץ</translation>
 </message>

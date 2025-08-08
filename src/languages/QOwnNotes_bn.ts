@@ -1492,6 +1492,10 @@
 <translation>লিঙ্ক করতে স্থানীয় ফাইল বা ডিরেক্টরি নির্বাচন করুন</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>নোট</translation>
 </message>

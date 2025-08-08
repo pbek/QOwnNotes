@@ -1484,6 +1484,10 @@
 <translation>选择要链接到的本地文件或目录</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>笔记</translation>
 </message>

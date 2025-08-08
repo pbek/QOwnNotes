@@ -1503,6 +1503,10 @@ Atributi opombe</translation>
 <translation>Izberite lokalno datoteko ali imenik, na katerega se želite povezati</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Opomba</translation>
 </message>

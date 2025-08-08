@@ -1492,6 +1492,10 @@
 <translation>Piliin ang lokal na file o direktoryo upang mai-link sa</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Tala</translation>
 </message>

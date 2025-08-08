@@ -1492,6 +1492,10 @@
 <translation>लिंक करने के लिए स्थानीय फ़ाइल या निर्देशिका का चयन करें</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>नोट</translation>
 </message>

@@ -1492,6 +1492,10 @@
 <translation>Bog'lanish uchun mahalliy fayl yoki katalogni tanlang</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Eslatma</translation>
 </message>

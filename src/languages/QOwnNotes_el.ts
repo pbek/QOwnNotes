@@ -1492,6 +1492,10 @@
 <translation>Επιλέξτε το τοπικό αρχείο ή τον κατάλογο με τον οποίο θέλετε να συνδεθείτε</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Σημείωση</translation>
 </message>
