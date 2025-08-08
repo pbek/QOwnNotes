@@ -4,6 +4,9 @@
 
 - The shortcut `Ctrl + Shift + Enter` to add a new line above the current is now also
   moving the cursor to the new line (for [#3335](https://github.com/pbek/QOwnNotes/issues/3335))
+- When built with CMake, QOwnNotes now also supports the `-DBUILD_WITH_ASPELL=ON`
+  build parameter, so it can be built with the Aspell library for spell checking
+  (for [#3335](https://github.com/pbek/QOwnNotes/issues/3335))
 
 ## 25.8.1
 
