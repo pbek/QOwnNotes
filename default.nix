@@ -33,16 +33,15 @@ stdenv.mkDerivation {
     name = "qownnotes";
   };
 
-  nativeBuildInputs =
-    [
-      cmake
-      qttools
-      wrapQtAppsHook
-      pkg-config
-      installShellFiles
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ xvfb-run ]
-    ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
+  nativeBuildInputs = [
+    cmake
+    qttools
+    wrapQtAppsHook
+    pkg-config
+    installShellFiles
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ xvfb-run ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
 
   buildInputs = [
     qtbase
@@ -52,7 +51,8 @@ stdenv.mkDerivation {
     botan3
     libgit2
     aspell
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [ qtwayland ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ qtwayland ];
 
   cmakeFlags = [
     "-DQON_QT6_BUILD=ON"

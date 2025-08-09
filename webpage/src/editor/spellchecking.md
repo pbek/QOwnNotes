@@ -11,7 +11,6 @@ instructions below.
 :::
 
 - Under **Linux** you can install the Hunspell dictionaries for your language using your distro's pkg manager
-
   - If you need to add additional language files you can do so
     in `~/.local/share/hunspell` or `/usr/share/hunspell`.
   - If you are using the Snap package of QOwnNotes you can also
