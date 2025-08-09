@@ -19,6 +19,7 @@ alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
 alias fmt := format
+alias fmta := format-all
 
 # Build the translations
 [group('translations')]
@@ -206,10 +207,15 @@ add-git-blame-ignore-revs:
     sort .git-blame-ignore-revs | uniq > .git-blame-ignore-revs.tmp
     mv .git-blame-ignore-revs.tmp .git-blame-ignore-revs
 
-# Format all files
+# Format all files using treefmt
 [group('linter')]
 format args='':
     treefmt {{ args }}
+
+# Format all files using pre-commit
+[group('linter')]
+format-all args='':
+    pre-commit run --all-files {{ args }}
 
 # Run a GitHub workflow
 [group('linter')]
