@@ -5,3 +5,7 @@ inputs:
     # url: github:NixOS/nixpkgs/nixos-unstable
   nixpkgs-unstable:
     url: github:NixOS/nixpkgs/nixos-unstable
+  nixpkgs-qt69:
+    url: github:nixos/nixpkgs/85dbfc7aaf52ecb755f87e577ddbe6dbbdbc1054
+  nixpkgs-qt5153:
+    url: github:nixos/nixpkgs/72bbea9db7d727ed044e60b5f5febc60a3c5c955

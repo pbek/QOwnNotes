@@ -44,7 +44,7 @@ translations-update-files:
 # Build the application for nix
 [group('nix')]
 nix-build:
-    nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })'
+    devenv shell app:build:qt6
 
 # Build the application for nix for aaarch64 (throws errors while building Qt6)
 [group('nix')]
@@ -54,17 +54,17 @@ nix-build-aarch64:
 # Build the application with cmake and Qt5 for nix
 [group('nix')]
 nix-build-cmake-qt5:
-    nix-build -E '((import <nixpkgs> {}).libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { })'
+    devenv shell app:build:qt5-cmake
 
 # Build the application with Qt5 for nix
 [group('nix')]
 nix-build-qt5:
-    nix build '.?submodules=1#qownnotes-qt5'
+    devenv shell app:build:qt5-qmake
 
 # Build the application with Qt 5.15.3 for nix
 [group('nix')]
 nix-build-qt5153:
-    nix build '.?submodules=1#qownnotes-qt5153'
+    devenv shell app:build:qt5153-qmake
 
 # Force a rebuild of the application with Qt5 for nix
 [group('nix')]
