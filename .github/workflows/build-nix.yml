@@ -9,6 +9,7 @@ on:
     paths:
       - "src/**"
       - "flake.*"
+      - "devenv.*"
       - "shell.nix"
       - "default.nix"
       - "build-systems/nix/**"
@@ -17,6 +18,7 @@ on:
     paths:
       - "src/**"
       - "flake.*"
+      - "devenv.*"
       - "shell.nix"
       - "default.nix"
       - "build-systems/nix/**"
