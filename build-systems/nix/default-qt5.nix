@@ -87,5 +87,6 @@ stdenv.mkDerivation {
       totoroot
     ];
     platforms = platforms.unix;
+    mainProgram = pname;
   };
 }
