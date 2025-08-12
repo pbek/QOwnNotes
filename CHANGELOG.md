@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.8.3
+
+- Added a **new editor color schema** _Shark - Origami_ by @Inventhrice
+  (for [#3340](https://github.com/pbek/QOwnNotes/issues/3340))
+
 ## 25.8.2
 
 - The shortcut `Ctrl + Shift + Enter` to add a new line above the current is now also
