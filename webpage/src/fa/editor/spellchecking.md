@@ -7,7 +7,6 @@ QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you ca
 :::
 
 - در **لینوکس** می توانید واژه نامه های هانسپل مربوط به زبان مورد نظرتان را با استفاده از مدیر بسته توزیع نصب کنید
-
   - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
   - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 

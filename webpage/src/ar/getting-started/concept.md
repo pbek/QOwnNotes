@@ -132,7 +132,7 @@ graph TB
 - [Nextcloud Notes لأندرويد](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (من طرف ثالث)
 
 ::: tip
-You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ to edit your notes.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 :::
 
 ### آي أو إس

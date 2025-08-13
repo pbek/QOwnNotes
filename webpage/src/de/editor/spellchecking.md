@@ -7,7 +7,6 @@ QOwnNotes hat einen  **Dictionary Manager** (im _Edit_ Menü) den Sie nutzen kö
 :::
 
 - Unter **Linux** können Sie die Hunspell-Wörterbücher für Ihre Sprache mit dem pkg-Manager Ihrer Distribution installieren
-
   - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
   - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
