@@ -391,6 +391,8 @@ class Note {
 
     QHash<Note, QSet<LinkHit>> findReverseLinkNotes();
 
+    [[nodiscard]] QString getDecryptedNoteText(const QString &encryptedNoteText) const;
+
    protected:
     int _id;
     int _noteSubFolderId;

@@ -2954,34 +2954,39 @@ QString Note::getDecryptedNoteText() const { return _decryptedNoteText; }
  * The crypto key has to be set in the object
  */
 QString Note::fetchDecryptedNoteText() const {
-    // if there is "dirty data" it means that the encrypted note was recently
+    // If there is "dirty data" it means that the encrypted note was recently
     // changed, but not stored yet
-    // in that case we want to return the already decrypted text, because that
+    // In that case we want to return the already decrypted text, because that
     // text is the most current one
     if (_hasDirtyData && !_decryptedNoteText.isEmpty()) {
         return _decryptedNoteText;
     }
 
-    QString noteText = getNoteText();
     const QString encryptedNoteText = getEncryptedNoteText();
 
     if (encryptedNoteText.isEmpty()) {
-        return noteText;
+        return getNoteText();
     }
 
-    // check if we have an external decryption method
+    return getDecryptedNoteText(encryptedNoteText);
+}
+
+QString Note::getDecryptedNoteText(
+    const QString &encryptedNoteText) const {    // check if we have an external decryption method
+    QString noteText = getNoteText();
+
     QString decryptedNoteText =
         ScriptingService::instance()->callEncryptionHook(encryptedNoteText, _cryptoPassword, true);
 
-    // check if a hook changed the text
+    // Check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
-        // decrypt the note text
+        // Decrypt the note text
         BotanWrapper botanWrapper;
         botanWrapper.setPassword(_cryptoPassword);
         botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
         decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
 
-        // fallback to SimpleCrypt
+        // Fallback to SimpleCrypt
         if (decryptedNoteText.isEmpty()) {
             auto *crypto = new SimpleCrypt(static_cast<quint64>(_cryptoKey));
             decryptedNoteText = crypto->decryptToString(encryptedNoteText);
@@ -2993,10 +2998,10 @@ QString Note::fetchDecryptedNoteText() const {
         return noteText;
     }
 
-    // get regular expression for the encrypted string
+    // Get regular expression for the encrypted string
     static const QRegularExpression re = getEncryptedNoteTextRegularExpression();
 
-    // replace the encrypted text with the decrypted text
+    // Replace the encrypted text with the decrypted text
     noteText.replace(re, decryptedNoteText);
     return noteText;
 }
