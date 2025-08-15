@@ -50,6 +50,18 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     ui->versionListWidget->clear();
     diffList = new QStringList();
     dataList = new QStringList();
+    auto currentNote = MainWindow::instance()->getCurrentNote();
+    bool canDecryptNoteText = currentNote.canDecryptNoteText();
+
+    qDebug() << __func__
+             << " - 'currentNote.canDecryptNoteText()': " << currentNote.canDecryptNoteText();
+
+    //    if (currentNote.canDecryptNoteText()) {
+    //        const QSignalBlocker blocker(ui->encryptedNoteTextEdit);
+    //        Q_UNUSED(blocker)
+    //
+    //        ui->noteTextEdit->hide();
+    //        const auto text = currentNote.fetchDecryptedNoteText();
 
     // Init the iterator for the versions
     QJSValueIterator versionsIterator(versions);
@@ -82,7 +94,13 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
 
         ui->versionListWidget->addItem(itemName);
         diffList->append(diffHtml);
-        dataList->append(versionsIterator.value().property(QStringLiteral("data")).toString());
+        const QString &noteText =
+            versionsIterator.value().property(QStringLiteral("data")).toString();
+
+        qDebug() << __func__ << " - 'noteText': " << noteText;
+
+        dataList->append(canDecryptNoteText ? currentNote.getDecryptedNoteText(noteText)
+                                            : noteText);
     }
 
     ui->versionListWidget->setCurrentRow(0);
