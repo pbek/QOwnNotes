@@ -19,7 +19,7 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     setWindowTitle(Utils::Misc::replaceOwnCloudText(windowTitle()));
     ui->tabWidget->setCurrentIndex(0);
 
-    // init the note text edit search frame
+    // Init the note text edit search-frame
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
 
     setupMainSplitter();
@@ -51,15 +51,15 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     diffList = new QStringList();
     dataList = new QStringList();
 
-    // init the iterator for the versions
+    // Init the iterator for the versions
     QJSValueIterator versionsIterator(versions);
 
-    // this seems to report a has next even if there aren't any items
+    // This seems to report a hasNext even if there aren't any items
     if (!versionsIterator.hasNext()) {
         return;
     }
 
-    // iterate over the versions
+    // Iterate over the versions
     while (versionsIterator.hasNext()) {
         versionsIterator.next();
         QJSValue property =
