@@ -2,6 +2,9 @@
 
 ## 25.8.4
 
+- Allow decrypting of the note text in the version dialog if the note was decrypted
+  in the note edit panel (for [#3342](https://github.com/pbek/QOwnNotes/issues/3342))
+  - In addition, when doing git versioning with libgit2 support also the diff will be decrypted
 - There now is a software repository for **Debian Linux 13.0**
   - Please visit the [Debian installation page](https://www.qownnotes.org/installation/debian.html)
     for instructions (for [#3341](https://github.com/pbek/QOwnNotes/issues/3341))
