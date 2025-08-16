@@ -358,7 +358,13 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
     git_revwalk_push_head(walker);
 
     git_oid oid;
-    const QString previousContent = note.getNoteText();
+    QString previousContent = note.getNoteText();
+    bool canDecryptNoteText = note.canDecryptNoteText();
+
+    if (canDecryptNoteText) {
+        previousContent = note.getDecryptedNoteText(Note::parseEncryptedNoteText(previousContent));
+    }
+
     bool isFirst = true;
     int versionIndex = 0;
 
@@ -372,7 +378,13 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
                     git_blob *blob = nullptr;
                     if (git_blob_lookup(&blob, repo, git_tree_entry_id(entry)) == 0) {
                         const char *content = (const char *)git_blob_rawcontent(blob);
-                        QString currentContent = QString::fromUtf8(content);
+                        const QString &originalCurrentContent = QString::fromUtf8(content);
+                        QString currentContent = originalCurrentContent;
+
+                        if (canDecryptNoteText) {
+                            currentContent = note.getDecryptedNoteText(
+                                Note::parseEncryptedNoteText(currentContent));
+                        }
 
                         if (isFirst && currentContent == previousContent) {
                             // Skip the first version if it matches the current content
@@ -394,7 +406,7 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
                                                 QLocale::ShortFormat)));
 
                         // Store the content
-                        version.setProperty("data", currentContent);
+                        version.setProperty("data", originalCurrentContent);
 
                         // Generate diff HTML
                         QList<Diff> diffs = differ.diff_main(previousContent, currentContent);

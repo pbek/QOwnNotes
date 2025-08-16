@@ -2887,13 +2887,13 @@ QRegularExpression Note::getEncryptedNoteTextRegularExpression() {
 /**
  * Returns encrypted note text if it is encrypted
  */
-QString Note::getEncryptedNoteText() const {
-    const QString noteText = getNoteText();
+QString Note::getEncryptedNoteText() const { return parseEncryptedNoteText(getNoteText()); }
 
-    // get regular expression for the encrypted string
+QString Note::parseEncryptedNoteText(const QString &noteText) {
+    // Get regular expression for the encrypted string
     static const QRegularExpression re = getEncryptedNoteTextRegularExpression();
 
-    // check if we have an encrypted note text and return it if so
+    // Check if we have an encrypted note text and return it if so
     const QRegularExpressionMatch match = re.match(noteText);
     return match.hasMatch() ? match.captured(1) : QLatin1String("");
 }

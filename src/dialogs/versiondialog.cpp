@@ -94,13 +94,14 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
 
         ui->versionListWidget->addItem(itemName);
         diffList->append(diffHtml);
-        const QString &noteText =
-            versionsIterator.value().property(QStringLiteral("data")).toString();
+        QString noteText = versionsIterator.value().property(QStringLiteral("data")).toString();
 
-        qDebug() << __func__ << " - 'noteText': " << noteText;
+        // Decrypt the note text if possible
+        if (canDecryptNoteText) {
+            noteText = currentNote.getDecryptedNoteText(Note::parseEncryptedNoteText(noteText));
+        }
 
-        dataList->append(canDecryptNoteText ? currentNote.getDecryptedNoteText(noteText)
-                                            : noteText);
+        dataList->append(noteText);
     }
 
     ui->versionListWidget->setCurrentRow(0);

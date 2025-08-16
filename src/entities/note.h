@@ -393,6 +393,8 @@ class Note {
 
     [[nodiscard]] QString getDecryptedNoteText(const QString &encryptedNoteText) const;
 
+    static QString parseEncryptedNoteText(const QString &noteText);
+
    protected:
     int _id;
     int _noteSubFolderId;
