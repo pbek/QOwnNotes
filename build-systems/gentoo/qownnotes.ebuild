@@ -1,4 +1,4 @@
-# Copyright 2014-2021 Patrizio Bekerle
+# Copyright 2014-2025 Patrizio Bekerle, Patrick Nagel
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,27 +12,14 @@ inherit qmake-utils desktop xdg-utils
 
 DESCRIPTION="A plain-text file markdown note taking with Nextcloud/ownCloud integration"
 HOMEPAGE="https://www.qownnotes.org/"
-SRC_URI="https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/${P}.tar.xz"
+SRC_URI="https://github.com/pbek/QOwnNotes/releases/download/v${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="
-	dev-qt/qtwidgets:5
-	dev-qt/qtgui:5
-	dev-qt/qtcore:5
-	dev-qt/qtconcurrent:5
-	dev-qt/qtsql:5
-	dev-qt/qtsvg:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtdeclarative:5
-	dev-qt/qtxml:5
-	dev-qt/qtprintsupport:5
-	dev-qt/qtwebsockets:5
-	dev-qt/qtx11extras:5
-"
+DEPEND=">=dev-qt/qtbase-6.7.2:6[gui]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -48,8 +35,8 @@ src_install() {
 	emake
 	dobin QOwnNotes
 
-	dodir /usr/share/qt5/translations
-	insinto /usr/share/qt5/translations
+	dodir /usr/share/qt6/translations
+	insinto /usr/share/qt6/translations
 
 	doins languages/*.qm
 
