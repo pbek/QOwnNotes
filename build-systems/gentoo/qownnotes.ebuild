@@ -6,7 +6,7 @@
 # QOwnNotes VERSION-STRING
 #
 
-EAPI=7
+EAPI=8
 
 inherit qmake-utils desktop xdg-utils
 
@@ -28,7 +28,7 @@ src_prepare() {
 }
 
 src_compile() {
-	eqmake5 QOwnNotes.pro -r
+	eqmake6 QOwnNotes.pro -r
 }
 
 src_install() {
