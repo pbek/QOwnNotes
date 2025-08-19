@@ -64,6 +64,7 @@
 #include <QGraphicsView>
 #include <QInputDialog>
 #include <QJSEngine>
+#include <QJSValueIterator>
 #include <QKeyEvent>
 #include <QListWidgetItem>
 #include <QMessageBox>
@@ -11270,6 +11271,30 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     auto versions = Utils::Git::getNoteVersions(engine, currentNote, limit);
     showStatusBarMessage(tr("Done with gathering note versions from git"), QStringLiteral("🕒"),
                          2000);
+
+    // Init the iterator for checking if there are versions
+    QJSValueIterator versionsCheckIterator(versions);
+
+    // QJSValueIterator may report hasNext as true even if there are no valid items,
+    // so we check for at least one valid version with a humanReadableTimestamp property.
+    bool hasValidVersion = false;
+    while (versionsCheckIterator.hasNext()) {
+        versionsCheckIterator.next();
+        QJSValue property =
+            versionsCheckIterator.value().property(QStringLiteral("humanReadableTimestamp"));
+        if (!property.isUndefined() && !property.toString().isEmpty()) {
+            hasValidVersion = true;
+            break;
+        }
+    }
+
+    if (!hasValidVersion) {
+        Utils::Gui::information(this, tr("No versions available"),
+                                tr("No versions are available for this note."),
+                                QStringLiteral("git-no-versions"));
+        return;
+    }
+
     auto *dialog = new VersionDialog(versions);
     dialog->setWindowTitle(
         tr("Latest %n git versions of note: %1", "", limit).arg(currentNote.getFileName()));
