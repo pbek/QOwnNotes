@@ -64,8 +64,14 @@ ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
 cd ../overlay/app-office/qownnotes/ || exit 1
 cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
 
-# replace the version in the ebuild file
-sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.ebuild
+# create metadata file
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <upstream>
+                <remote-id type="github">pbek/QOwnNotes</remote-id>
+        </upstream>
+</pkgmetadata>' >metadata.xml
 
 # update the Manifest file
 echo "DIST ${ARCHIVE_FILE} ${QOWNNOTES_ARCHIVE_SIZE} SHA512 ${QOWNNOTES_ARCHIVE_SHA512}" >>Manifest
@@ -75,7 +81,7 @@ mv qownnotes.ebuild ${eBuildFile}
 
 echo "Committing changes..."
 git add ${eBuildFile}
-git commit -m "releasing version $QOWNNOTES_VERSION" ${eBuildFile} Manifest
+git commit -m "releasing version $QOWNNOTES_VERSION" ${eBuildFile} Manifest metadata.xml
 git push
 
 # remove everything after we are done
