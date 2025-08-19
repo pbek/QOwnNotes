@@ -90,15 +90,7 @@ ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
 
 cd ../overlay/app-office/qownnotes/ || exit 1
 cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
-
-# create metadata file
-echo '<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-        <upstream>
-                <remote-id type="github">pbek/QOwnNotes</remote-id>
-        </upstream>
-</pkgmetadata>' >metadata.xml
+cp ../../../QOwnNotes/build-systems/gentoo/metadata.xml .
 
 ebuilds_to_delete="$(list_old_ebuilds_to_delete)"
 
