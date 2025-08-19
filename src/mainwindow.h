@@ -122,7 +122,7 @@ class MainWindow : public QMainWindow {
 
     void reloadOpenAiControls();
 
-    void setCurrentNoteText(QString text);
+    void setCurrentNoteText(const QString &text);
 
     void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true,
                         bool addPreviousNoteToHistory = true);

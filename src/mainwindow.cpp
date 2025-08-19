@@ -4599,10 +4599,20 @@ void MainWindow::startNavigationParser() {
  * @brief MainWindow::setCurrentNoteText
  * @param text
  */
-void MainWindow::setCurrentNoteText(QString text) {
+void MainWindow::setCurrentNoteText(const QString &text) {
+    bool canDecryptNoteText = currentNote.canDecryptNoteText();
     allowNoteEditing();
-    currentNote.setNoteText(std::move(text));
-    setNoteTextFromNote(&currentNote, false);
+
+    // If the note can be decrypted, we need to show the encrypted note text edit and set the text
+    // there
+    if (canDecryptNoteText) {
+        ui->encryptedNoteTextEdit->setText(text);
+        ui->encryptedNoteTextEdit->show();
+        ui->noteTextEdit->hide();
+    } else {
+        currentNote.setNoteText(std::move(text));
+        setNoteTextFromNote(&currentNote, false);
+    }
 }
 
 /**

@@ -2,8 +2,9 @@
 
 ## 25.8.4
 
-- Allow decrypting of the note text in the version dialog if the note was decrypted
+- Now the version dialog can show decrypted note content if the note was decrypted
   in the note edit panel (for [#3342](https://github.com/pbek/QOwnNotes/issues/3342))
+  - The note text will also be restored correctly, depending on if it was encrypted or not
   - In addition, when doing git versioning with libgit2 support also the diff will be decrypted
 - When viewing note version with enabled libgit2 support, now a message box will be shown
   that there are no versions if there are none (for [#3296](https://github.com/pbek/QOwnNotes/issues/3296))

@@ -33,8 +33,8 @@ class VersionDialog : public MasterDialog {
 
     Ui::VersionDialog *ui;
     QSplitter *versionSplitter;
-    QStringList *diffList;
-    QStringList *dataList;
+    QStringList *_diffList;
+    QStringList *_dataList;
     void setupMainSplitter();
 };
 
