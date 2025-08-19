@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=QOwnNotes
 Comment=Plain-text file markdown note taking with Nextcloud/ownCloud integration
+Comment[de]=Plaintext Markdown Notizprogramm mit Nextcloud/ownCloud-Integration
 Comment[ru]=Ведение заметок в виде текстовых файлов с поддержкой Markdown и интеграцией c Nextcloud/ownCloud
 Exec=QOwnNotes
 Keywords=markdown;owncloud;nextcloud;notes;
+Keywords[de]=markdown;owncloud;nextcloud;Notizen
 Icon=QOwnNotes
 Type=Application
 Terminal=false
@@ -14,12 +16,14 @@ Actions=NewNote;ShowTodoList;
 
 [Desktop Action NewNote]
 Name=New note
+Name[de]=Neue Notiz
 Name[ru]=Новая заметка
 Icon=document-new
 Exec=QOwnNotes --action action_New_note
 
 [Desktop Action ShowTodoList]
 Name=Show todo list
+Name[de]=ToDo-Liste anzeigen
 Name[ru]=Показать список задач
 Icon=view-calendar-tasks
 Exec=QOwnNotes --action actionShow_Todo_List
