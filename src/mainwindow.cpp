@@ -4610,7 +4610,7 @@ void MainWindow::setCurrentNoteText(const QString &text) {
         ui->encryptedNoteTextEdit->show();
         ui->noteTextEdit->hide();
     } else {
-        currentNote.setNoteText(std::move(text));
+        currentNote.setNoteText(text);
         setNoteTextFromNote(&currentNote, false);
     }
 }
