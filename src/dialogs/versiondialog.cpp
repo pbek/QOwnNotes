@@ -51,7 +51,15 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     _diffList = new QStringList();
     _dataList = new QStringList();
     const auto currentNote = MainWindow::instance()->getCurrentNote();
-    bool canDecryptNoteText = currentNote.canDecryptNoteText();
+    const bool canDecryptNoteText = currentNote.canDecryptNoteText();
+
+    // If the text was decrypted, we use the styling of the encrypted note text edit
+    if (canDecryptNoteText) {
+        static const QString encryptedStyle =
+            "QTextEdit,QPlainTextEdit {border: 3px dashed #aa0000;}";
+        ui->noteTextEdit->setStyleSheet(encryptedStyle);
+        ui->diffBrowser->setStyleSheet(encryptedStyle);
+    }
 
     // Init the iterator for the versions
     QJSValueIterator versionsIterator(versions);

@@ -2,6 +2,8 @@
 
 ## 25.8.5
 
+- In the version dialog, if the text was decrypted, we are now using the styling
+  of the encrypted note text edit (for [#3342](https://github.com/pbek/QOwnNotes/issues/3342))
 - The Gentoo ebuilds were updated to now use Qt6 instead of Qt5
   (for [#3343](https://github.com/pbek/QOwnNotes/pull/3343), thank you, @nagelp)
 
