@@ -6,6 +6,7 @@
   of the encrypted note text edit (for [#3342](https://github.com/pbek/QOwnNotes/issues/3342))
 - The Gentoo ebuilds were updated to now use Qt6 instead of Qt5
   (for [#3343](https://github.com/pbek/QOwnNotes/pull/3343), thank you, @nagelp)
+- Added more French translation (thank you, jd-develop)
 
 ## 25.8.4
 

@@ -27,6 +27,33 @@ This package is built with Qt6.
 
 [Közvetlen letöltés](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_Unstable)
 
+## Debian 13.0
+
+Futtassa a következő shell parancsokat, hogy megbízhasson az adattárban.
+
+```bash
+SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
+sudo mkdir -p "$(dirname "${SIGNED_BY}")"
+curl --silent --show-error --location http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_13/Release.key | gpg --dearmor | sudo tee "${SIGNED_BY}" > /dev/null
+sudo chmod u=rw,go=r "${SIGNED_BY}"
+```
+
+Futtassa a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes telepítéséhez onnan.
+
+```bash
+SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
+ARCHITECTURE="$(dpkg --print-architecture)"
+echo "deb [arch=${ARCHITECTURE} signed-by=${SIGNED_BY}] http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_13/ /" | sudo tee /etc/apt/sources.list.d/qownnotes.list > /dev/null
+sudo apt update
+sudo apt install qownnotes
+```
+
+::: tip
+This package is built with Qt6.
+:::
+
+[Közvetlen letöltés](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_13)
+
 ## Debian 12.0
 
 Futtassa a következő shell parancsokat, hogy megbízhasson az adattárban.
@@ -56,7 +83,7 @@ This package is built with Qt6.
 
 ## Debian 11.0
 
-Futtassa a következő shell parancsokat, hogy megbízhasson az adattárban.
+Run the following shell commands to trust the repository.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -65,7 +92,7 @@ curl --silent --show-error --location http://download.opensuse.org/repositories/
 sudo chmod u=rw,go=r "${SIGNED_BY}"
 ```
 
-Futtassa a következő shell parancsokat az adattár hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -79,7 +106,7 @@ sudo apt install qownnotes
 If you use this repository for other Debian Linux versions please make sure that you have **Qt** installed at least at **version 5.11**.
 :::
 
-[Közvetlen letöltés](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11)
 
 ## Debian 10.0
 

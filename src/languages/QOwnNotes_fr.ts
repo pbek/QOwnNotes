@@ -1367,7 +1367,7 @@
 </message>
 <message>
 <source>Import tags</source>
-<translation>Importer des étiquettes</translation>
+<translation>Importer des tags</translation>
 </message>
 <message>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
@@ -1455,17 +1455,17 @@
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>La plupart des panneaux ressemblent à ceux qui se trouvent au centre de la balise et le panneau est celui qui est activé par défaut.</translation>
+<translation>La plupart des panneaux, comme la liste de notes sur la gauche, les panneaux de tags, le panneau d’édition de la note au centre et le panneau de prévisualisation à droite sont activés par défaut.</translation>
 </message>
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
-<translation>La plupart des panneaux, comme la liste des notes à gauche, les panneaux de balisage et seul le panneau d'aperçu à droite sont activés par défaut. Vous aurez besoin d'un autre espace de travail pour éditer réellement des notes !</translation>
+<translation>La plupart des panneaux, comme la liste de notes sur la gauche, les panneaux de tags, et seulement le panneau de prévisualisation à droite sont activés par défaut. Vous aurez besoin d’un autre espace de travail pour réellement modifier des notes !</translation>
 </message>
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>La plupart des panneaux, comme la liste de notes à gauche, les panneaux de marquage, sont les plus importants.</translation>
+<translation>La plupart des panneaux, comme la liste de notes à gauche, les panneaux de tags, le panneau d’édition de notes à droite et le panneau de prévisualisation au-dessus de celui d’édition sont activés par défaut.</translation>
 </message>
 <message>
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
@@ -1493,7 +1493,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>Supprime le titre du lien et re-télécharge le titre de la page web</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1674,7 +1674,7 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Titres de sections</translation>
 </message>
 <message>
 <source>Backlinks</source>
@@ -1874,7 +1874,7 @@
 </message>
 <message>
 <source>To&amp;do</source>
-<translation>À &amp;faire</translation>
+<translation>&amp;Liste de tâches</translation>
 </message>
 <message>
 <source>&amp;Window</source>
@@ -2103,7 +2103,7 @@
 </message>
 <message>
 <source>Show note list under tag panel</source>
-<translation>Afficher la liste des notes sous le panneau des labels</translation>
+<translation>Afficher la liste des notes sous le panneau des tags</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2204,7 +2204,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>Voir les versions git de la note dans un logiciel externe</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2240,7 +2240,7 @@
 </message>
 <message>
 <source>Jump to tags panel</source>
-<translation>Aller au panneau des labels</translation>
+<translation>Aller au panneau des tags</translation>
 </message>
 <message>
 <source>Jump to note list panel</source>
@@ -2468,7 +2468,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation>Chercher du texte dans les notes parmi tous les sous-dossiers / étiquettes</translation>
+<translation>Chercher du texte dans les notes parmi tous les sous-dossiers / tags</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -3015,20 +3015,20 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>La dernière version de la note provient de votre dépôt git local</numerusform>
+<numerusform>Les %n dernières versions de la note proviennent de votre dépôt git local</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>Chargement des versions de la note depuis git terminé</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>Dernière version git de la note : %1</numerusform>
+<numerusform>%n dernières versions git de la note : %1</numerusform>
 </translation>
 </message>
 <message>
@@ -3242,7 +3242,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Untagged notes</source>
-<translation>Notes non tagués</translation>
+<translation>Notes non taguées</translation>
 </message>
 <message>
 <source>Export current note as HTML file</source>
@@ -5586,11 +5586,11 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>Écraser le facteur de grossissement de l’interface</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>Facteur de grossissement de l’interface :</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -6733,7 +6733,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
-<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+<translation>Si ce paramètre était activé, vous devez redémarrer l’application manuellement afin que l’ancienne variable d’environnement qui écrasait votre facteur de grossissement ne soit plus dans votre environnement.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
