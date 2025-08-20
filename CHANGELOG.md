@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.8.5
+
+- The Gentoo ebuilds were updated to now use Qt6 instead of Qt5
+  (for [#3343](https://github.com/pbek/QOwnNotes/pull/3343), thank you, @nagelp)
+
 ## 25.8.4
 
 - Now the version dialog can show decrypted note content if the note was decrypted
