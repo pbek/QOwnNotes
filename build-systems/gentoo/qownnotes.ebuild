@@ -15,7 +15,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=dev-qt/qtbase-6.9:6[widgets,gui,concurrent,sql,network,xml]"
+DEPEND="
+>=dev-qt/qtbase-6.9:6[widgets,gui,concurrent,sql,network,xml]
+>=dev-qt/qtwebsockets-6.9:6
+>=dev-qt/qtdeclarative-6.9:6
+>=dev-qt/qtsvg-6.9:6
+"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
