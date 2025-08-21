@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.8.6
+
+- Missing dependencies were added to the Gentoo build process
+  (for [#3345](https://github.com/pbek/QOwnNotes/issues/3345), thank you, @nagelp)
+
 ## 25.8.5
 
 - In the version dialog, if the text was decrypted, we are now using the styling
