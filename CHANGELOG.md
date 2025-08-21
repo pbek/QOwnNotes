@@ -2,6 +2,8 @@
 
 ## 25.8.6
 
+- The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
+  was updated to version 25.8.0 for Nextcloud 32 (for [#52](https://github.com/pbek/qownnotesapi/issues/52))
 - Missing dependencies were added to the Gentoo build process
   (for [#3345](https://github.com/pbek/QOwnNotes/issues/3345), thank you, @nagelp)
 
