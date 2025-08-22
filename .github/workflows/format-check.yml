@@ -11,7 +11,7 @@ on:
 
 jobs:
   format-check:
-    name: 📄 Check code formatting with "just fmt"
+    name: 📄 Check code formatting with "just format-all"
     runs-on: ubuntu-latest
     steps:
       - name: 🧰 Checkout code
