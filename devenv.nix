@@ -73,6 +73,15 @@ in
         cmake-format
       ];
     };
+
+    # https://devenv.sh/reference/options/#git-hookshooksdeadnix
+    # https://github.com/astro/deadnix
+    deadnix = {
+      enable = true;
+      settings = {
+        edit = true; # Allow to edit the file if it is not formatted
+      };
+    };
   };
 
   enterShell = ''
