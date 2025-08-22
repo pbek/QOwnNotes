@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🧰 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: ⚙️ Install Nix
         uses: cachix/install-nix-action@v31
         with:
@@ -27,4 +27,4 @@ jobs:
       - name: 🔧 Install devenv.sh
         run: nix profile install nixpkgs#devenv
       - name: 🌳 Format code
-        run: devenv shell "treefmt --ci"
+        run: devenv shell "just format-all"
