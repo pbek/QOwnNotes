@@ -2,6 +2,9 @@
 
 ## 25.8.6
 
+- When entering distraction-free mode the app will now also go into fullscreen mode,
+  after leaving the distraction free mode it will leave fullscreen mode again
+  (for [#3300](https://github.com/pbek/QOwnNotes/issues/3300))
 - The [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 25.8.0 for Nextcloud 32 (for [#52](https://github.com/pbek/qownnotesapi/issues/52))
 - Missing dependencies were added to the Gentoo build process

@@ -1537,6 +1537,12 @@ void MainWindow::toggleDistractionFreeMode() {
     settings.setValue(QStringLiteral("DistractionFreeMode/isEnabled"), isInDistractionFreeMode);
 
     setDistractionFreeMode(isInDistractionFreeMode);
+
+    // Enter or leave fullscreen mode if we are in or left distraction-free mode
+    if ((isInDistractionFreeMode && !isFullScreen()) ||
+        (!isInDistractionFreeMode && isFullScreen())) {
+        on_actionToggle_fullscreen_triggered();
+    }
 }
 
 /**
