@@ -1516,24 +1516,24 @@ bool MainWindow::isInDistractionFreeMode() {
  * Toggles the distraction free mode
  */
 void MainWindow::toggleDistractionFreeMode() {
-    // leave the one column mode if active
+    // Leave the one-column mode if active
     if (ui->actionUse_one_column_mode->isChecked()) {
         ui->actionUse_one_column_mode->toggle();
     }
 
     SettingsService settings;
-    bool isInDistractionFreeMode = this->isInDistractionFreeMode();
+    bool isInDistractionFreeMode = MainWindow::isInDistractionFreeMode();
 
     qDebug() << __func__ << " - 'isInDistractionFreeMode': " << isInDistractionFreeMode;
 
-    // store the window settings before we go into distraction free mode
+    // Store the window settings before we go into distraction-free mode
     if (!isInDistractionFreeMode) {
         storeSettings();
     }
 
     isInDistractionFreeMode = !isInDistractionFreeMode;
 
-    // remember that we were using the distraction free mode
+    // Remember that we were using the distraction-free mode
     settings.setValue(QStringLiteral("DistractionFreeMode/isEnabled"), isInDistractionFreeMode);
 
     setDistractionFreeMode(isInDistractionFreeMode);
