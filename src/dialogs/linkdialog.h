@@ -36,8 +36,8 @@ class LinkDialog : public MasterDialog {
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
     void on_urlEdit_textChanged(const QString &arg1);
-    void addFileUrl();
-    void addDirectoryUrl();
+    void addFileUrl(bool relative);
+    void addDirectoryUrl(bool relative);
     void slotReplyFinished(QNetworkReply *reply);
     void downloadProgress(qint64 bytesReceived, qint64 bytesTotal);
 

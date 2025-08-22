@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.8.7
+
+- In the link dialog, you can now also do relative links to files and directories
+  (for [#3350](https://github.com/pbek/QOwnNotes/issues/3350))
+  - A link name will be automatically generated from the filename if the
+    link name field is empty, to be supported by Markdown viewers
+
 ## 25.8.6
 
 - When entering distraction-free mode, the app will now also go into full-screen mode,

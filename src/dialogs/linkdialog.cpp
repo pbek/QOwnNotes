@@ -15,6 +15,8 @@
 #include <QRegularExpression>
 #include <QTimer>
 
+#include "entities/notefolder.h"
+#include "mainwindow.h"
 #include "services/settingsservice.h"
 #include "ui_linkdialog.h"
 #include "widgets/navigationwidget.h"
@@ -125,7 +127,8 @@ QString LinkDialog::getSelectedHeading() const {
 QString LinkDialog::getURL() const {
     QString url = ui->urlEdit->text().trimmed();
 
-    if (!url.isEmpty() && !url.contains(QStringLiteral("://"))) {
+    if (!url.isEmpty() && !url.contains(QStringLiteral("://")) &&
+        !url.startsWith(QStringLiteral("./"))) {
         url = QStringLiteral("http://") + url;
     }
 
@@ -291,7 +294,7 @@ void LinkDialog::slotReplyFinished(QNetworkReply *reply) {
 /**
  * Selects a local file to link to
  */
-void LinkDialog::addFileUrl() {
+void LinkDialog::addFileUrl(bool relative) {
     SettingsService settings;
     // load last url
     QUrl fileUrl = settings.value(QStringLiteral("LinkDialog/lastSelectedFileUrl")).toUrl();
@@ -317,6 +320,20 @@ void LinkDialog::addFileUrl() {
         // store url for the next time
         settings.setValue(QStringLiteral("LinkDialog/lastSelectedFileUrl"), fileUrlString);
 
+        fileUrl = QUrl(fileUrlString);
+        if (relative && fileUrl.isLocalFile()) {
+            auto note = MainWindow::instance()->getCurrentNote();
+            // Make path relative to the current note
+            QString relativePath = note.relativeFilePath(fileUrl.toLocalFile());
+            fileUrlString = QStringLiteral("./") + relativePath;
+
+            // Also set the link name if it's empty
+            if (ui->nameLineEdit->text().isEmpty()) {
+                QFileInfo fileInfo(relativePath);
+                ui->nameLineEdit->setText(fileInfo.fileName());
+            }
+        }
+
         // write the file-url to the url text-edit
         ui->urlEdit->setText(fileUrlString);
     }
@@ -325,7 +342,7 @@ void LinkDialog::addFileUrl() {
 /**
  * Selects a local directory to link to
  */
-void LinkDialog::addDirectoryUrl() {
+void LinkDialog::addDirectoryUrl(bool relative) {
     SettingsService settings;
     // load last url
     QUrl directoryUrl =
@@ -355,6 +372,20 @@ void LinkDialog::addDirectoryUrl() {
         settings.setValue(QStringLiteral("LinkDialog/lastSelectedDirectoryUrl"),
                           directoryUrlString);
 
+        directoryUrl = QUrl(directoryUrlString);
+        if (relative && directoryUrl.isLocalFile()) {
+            auto note = MainWindow::instance()->getCurrentNote();
+            // Make path relative to the current note
+            QString relativePath = note.relativeFilePath(directoryUrl.toLocalFile());
+            directoryUrlString = QStringLiteral("./") + relativePath;
+
+            // Also set the link name if it's empty
+            if (ui->nameLineEdit->text().isEmpty()) {
+                QFileInfo directoryInfo(directoryUrl.toLocalFile());
+                ui->nameLineEdit->setText(directoryInfo.fileName());
+            }
+        }
+
         // write the directory-url to the url text-edit
         ui->urlEdit->setText(directoryUrlString);
     }
@@ -376,17 +407,32 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
 void LinkDialog::setupFileUrlMenu() {
     auto addMenu = std::make_unique<QMenu>(this);
 
-    QAction *addFileAction = addMenu->addAction(tr("Select file to link to"));
-    addFileAction->setIcon(
+    QAction *addFileRelativeAction = addMenu->addAction(tr("Select file to link to (relative)"));
+    addFileRelativeAction->setIcon(
         QIcon::fromTheme(QStringLiteral("document-open"),
                          QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/document-open.svg"))));
-    connect(addFileAction, SIGNAL(triggered()), this, SLOT(addFileUrl()));
+    connect(addFileRelativeAction, &QAction::triggered, this, [this]() { addFileUrl(true); });
 
-    QAction *addDirectoryAction = addMenu->addAction(tr("Select directory to link to"));
-    addDirectoryAction->setIcon(
+    QAction *addFileAbsoluteAction = addMenu->addAction(tr("Select file to link to (absolute)"));
+    addFileAbsoluteAction->setIcon(
+        QIcon::fromTheme(QStringLiteral("document-open"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/document-open.svg"))));
+    connect(addFileAbsoluteAction, SIGNAL(triggered()), this, SLOT(addFileUrl()));
+
+    QAction *addDirectoryRelativeAction =
+        addMenu->addAction(tr("Select directory to link to (relative)"));
+    addDirectoryRelativeAction->setIcon(
         QIcon::fromTheme(QStringLiteral("folder"),
                          QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
-    connect(addDirectoryAction, SIGNAL(triggered()), this, SLOT(addDirectoryUrl()));
+    connect(addDirectoryRelativeAction, &QAction::triggered, this,
+            [this]() { addDirectoryUrl(true); });
+
+    QAction *addDirectoryAbsoluteAction =
+        addMenu->addAction(tr("Select directory to link to (absolute)"));
+    addDirectoryAbsoluteAction->setIcon(
+        QIcon::fromTheme(QStringLiteral("folder"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+    connect(addDirectoryAbsoluteAction, SIGNAL(triggered()), this, SLOT(addDirectoryUrl()));
 
     ui->fileUrlButton->setMenu(addMenu.release());
 }
