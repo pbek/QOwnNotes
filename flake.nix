@@ -10,7 +10,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       nixpkgs-qt69,
       nixpkgs-qt5153,
