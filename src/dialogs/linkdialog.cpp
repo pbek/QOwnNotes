@@ -21,6 +21,10 @@
 #include "ui_linkdialog.h"
 #include "widgets/navigationwidget.h"
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
+#include <memory>
+#endif
+
 LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LinkDialog) {
     ui->setupUi(this);
