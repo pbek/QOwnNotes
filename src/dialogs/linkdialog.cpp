@@ -374,7 +374,7 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
 }
 
 void LinkDialog::setupFileUrlMenu() {
-    auto *addMenu = new QMenu(this);
+    auto addMenu = std::make_unique<QMenu>(this);
 
     QAction *addFileAction = addMenu->addAction(tr("Select file to link to"));
     addFileAction->setIcon(
@@ -388,7 +388,7 @@ void LinkDialog::setupFileUrlMenu() {
                          QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
     connect(addDirectoryAction, SIGNAL(triggered()), this, SLOT(addDirectoryUrl()));
 
-    ui->fileUrlButton->setMenu(addMenu);
+    ui->fileUrlButton->setMenu(addMenu.release());
 }
 
 void LinkDialog::on_buttonBox_accepted() {
