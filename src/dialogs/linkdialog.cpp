@@ -405,7 +405,8 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
 }
 
 void LinkDialog::setupFileUrlMenu() {
-    auto addMenu = std::make_unique<QMenu>(this);
+    // std::make_unique needs C++14
+    auto addMenu = std::unique_ptr<QMenu>(new QMenu(this));
 
     QAction *addFileRelativeAction = addMenu->addAction(tr("Select file to link to (relative)"));
     addFileRelativeAction->setIcon(
