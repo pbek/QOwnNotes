@@ -6,6 +6,7 @@
   (for [#3350](https://github.com/pbek/QOwnNotes/issues/3350))
   - A link name will be automatically generated from the filename if the
     link name field is empty, to be supported by Markdown viewers
+- Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.8.6
 

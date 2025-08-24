@@ -1525,6 +1525,22 @@
 <source>Select directory to link to</source>
 <translation>Seleccioneu el directori a enllaçar</translation>
 </message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation type="unfinished">Select file to link to (relative)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation type="unfinished">Select file to link to (absolute)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation type="unfinished">Select directory to link to (relative)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation type="unfinished">Select directory to link to (absolute)</translation>
+</message>
 </context>
 <context>
 <name>LocalTrashDialog</name>
@@ -2805,6 +2821,14 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
 <translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation type="unfinished">No versions available</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation type="unfinished">No versions are available for this note.</translation>
 </message>
 <message>
 <source>Close note tab</source>

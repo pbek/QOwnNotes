@@ -1531,6 +1531,22 @@
 <source>Select directory to link to</source>
 <translation>Seleccione el directorio al que enlazar</translation>
 </message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation>Seleccionar archivo para vincular (relativo)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation>Seleccionar archivo para vincular (absoluto)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation>Seleccionar directorio para vincular (relativo)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation>Seleccionar directorio para vincular (absoluto)</translation>
+</message>
 </context>
 <context>
 <name>LocalTrashDialog</name>
@@ -2812,6 +2828,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
 <translation>El soporte de Git no está habilitado para la carpeta de notas actual. ¿Desea habilitarlo en la configuración?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation>No hay versiones disponibles</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation>No hay versiones disponibles para esta nota.</translation>
 </message>
 <message>
 <source>Close note tab</source>

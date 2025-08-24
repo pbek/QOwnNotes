@@ -1529,6 +1529,22 @@ File: QOwnNotes_en.ts</translation>
 <source>Select directory to link to</source>
 <translation>연결할 디렉터리 선택</translation>
 </message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation>링크할 파일 선택 (상대적)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation>링크할 파일 선택 (절대적)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation>링크할 디렉터리 선택 (상대적)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation>링크할 디렉터리 선택 (절대적)</translation>
+</message>
 </context>
 <context>
 <name>LocalTrashDialog</name>
@@ -2793,6 +2809,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
 <translation>현재 노트 폴더에 대해 Git 지원이 활성화되어 있지 않습니다. 설정에서 활성화하시겠습니까?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation>사용 가능한 버전 없음</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation>이 노트에는 사용할 수 있는 버전이 없습니다.</translation>
 </message>
 <message>
 <source>Close note tab</source>
