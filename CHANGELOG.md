@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.8.8
+
+- The build process for Arch Linux was brought from Qt5 to Qt6 for OBS and the AUR
+  (for [#3353](https://github.com/pbek/QOwnNotes/issues/3353))
+
 ## 25.8.7
 
 - In the link dialog, you can now also do relative links to files and directories
