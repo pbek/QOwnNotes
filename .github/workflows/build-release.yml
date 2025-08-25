@@ -38,7 +38,7 @@ jobs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
       release_id: ${{ steps.create_release.outputs.id }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set Env
         run: |
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
@@ -86,7 +86,7 @@ jobs:
     name: "🐧 AppImage Qt 5.15.2"
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -175,7 +175,7 @@ jobs:
     name: "🐧 AppImage Qt 6.5.3"
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -256,7 +256,7 @@ jobs:
     name: "🐧 Snap Qt 5.15.2"
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -322,7 +322,7 @@ jobs:
       QT_VERSION: 6.9.1
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -405,7 +405,7 @@ jobs:
       QT_VERSION: 6.9.1
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -459,7 +459,7 @@ jobs:
       QT_VERSION: 5.15.2
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
