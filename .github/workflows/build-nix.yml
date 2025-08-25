@@ -46,7 +46,7 @@ jobs:
       - name: 🔧 Install devenv.sh
         run: nix profile install nixpkgs#devenv
       - name: 🧰 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: 🚧 Build nix package
