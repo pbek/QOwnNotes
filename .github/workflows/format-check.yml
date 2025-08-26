@@ -26,5 +26,5 @@ jobs:
           name: devenv
       - name: 🔧 Install devenv.sh
         run: nix profile install nixpkgs#devenv
-      - name: 🌳 Format code
-        run: devenv tasks run format:all
+      - name: 🔨 Build the devenv shell and run any pre-commit hooks
+        run: devenv test
