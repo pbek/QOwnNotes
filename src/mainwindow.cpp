@@ -7718,8 +7718,8 @@ void MainWindow::reloadTagTree() {
         ui->tagTreeWidget->addTopLevelItem(untaggedItem);
     }
 
-    // decorate root if there are multiple levels to be able to collapse them,
-    // because double clicking will not collapse the first level, but edit
+    // Decorate root if there are multiple levels to be able to collapse them,
+    // because double-clicking will not collapse the first level, but edit
     // the clicked tag
     ui->tagTreeWidget->setRootIsDecorated(Tag::countAllParentId(0) != Tag::countAll());
 
