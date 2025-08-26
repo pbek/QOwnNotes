@@ -14,3 +14,7 @@ There are different ways to search for notes:
   name or file name
 
 ![Searching](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::
