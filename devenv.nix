@@ -131,38 +131,42 @@ in
     };
   };
 
-  #  tasks = {
-  #    "app:build:qt6" = {
-  #      description = "Builds the app with Qt 6";
-  #      exec = ''
-  #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-unstable} {}; in pkgs.qt6Packages.callPackage ./default.nix { }'
-  #      '';
-  #    };
-  #    "app:build:qt69" = {
-  #      description = "Builds the app with Qt 6.9";
-  #      exec = ''
-  #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-qt69} {}; in pkgs.qt6Packages.callPackage ./default.nix { }'
-  #      '';
-  #    };
-  #    "app:build:qt5-qmake" = {
-  #      description = "Builds the app with Qt 5 using qmake";
-  #      exec = ''
-  #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-unstable} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { }'
-  #      '';
-  #    };
-  #    "app:build:qt5-cmake" = {
-  #      description = "Builds the app with Qt 5 using CMake";
-  #      exec = ''
-  #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-unstable} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { }'
-  #      '';
-  #    };
-  #    "app:build:qt5153-qmake" = {
-  #      description = "Builds the app with Qt 5.15.3 using qmake";
-  #      exec = ''
-  #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-qt5153} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { }'
-  #      '';
-  #    };
-  #  };
+  tasks = {
+    "format:all" = {
+      description = "Formats all source files";
+      exec = "pre-commit run --all-files";
+    };
+    #    "app:build:qt6" = {
+    #      description = "Builds the app with Qt 6";
+    #      exec = ''
+    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-unstable} {}; in pkgs.qt6Packages.callPackage ./default.nix { }'
+    #      '';
+    #    };
+    #    "app:build:qt69" = {
+    #      description = "Builds the app with Qt 6.9";
+    #      exec = ''
+    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-qt69} {}; in pkgs.qt6Packages.callPackage ./default.nix { }'
+    #      '';
+    #    };
+    #    "app:build:qt5-qmake" = {
+    #      description = "Builds the app with Qt 5 using qmake";
+    #      exec = ''
+    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-unstable} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { }'
+    #      '';
+    #    };
+    #    "app:build:qt5-cmake" = {
+    #      description = "Builds the app with Qt 5 using CMake";
+    #      exec = ''
+    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-unstable} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { }'
+    #      '';
+    #    };
+    #    "app:build:qt5153-qmake" = {
+    #      description = "Builds the app with Qt 5.15.3 using qmake";
+    #      exec = ''
+    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-qt5153} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { }'
+    #      '';
+    #    };
+  };
 
   # See full reference at https://devenv.sh/reference/options/
 }
