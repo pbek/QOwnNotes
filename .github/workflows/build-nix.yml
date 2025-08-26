@@ -42,7 +42,9 @@ jobs:
       - name: 🔒 Cache dependencies
         uses: cachix/cachix-action@v16
         with:
-          name: devenv
+          # https://app.cachix.org/cache/qownnotes-devenv
+          name: qownnotes-devenv
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: 🔧 Install devenv.sh
         run: nix profile install nixpkgs#devenv
       - name: 🧰 Checkout code
