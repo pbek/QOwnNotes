@@ -20,6 +20,12 @@ let
   ];
 in
 {
+  # https://devenv.sh/reference/options/#cachixpull
+  cachix.pull = [
+    "devenv"
+    "qownnotes-devenv"
+  ];
+
   # https://devenv.sh/supported-languages/cplusplus/
   languages.cplusplus.enable = true;
 
