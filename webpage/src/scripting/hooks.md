@@ -318,7 +318,9 @@ to implement your own tagging mechanism.
 
 ::: warning
 Make sure your `list` action is really fast, because it will be executed for
-every note every time the note folder is reloaded!
+every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
 ## noteTaggingByObjectHook
