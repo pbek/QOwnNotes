@@ -303,7 +303,9 @@ function noteTaggingHook(note, action, tagName, newTagName);
 ربما تحب أن تلقي نظرة على المثال [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) لتنفيذ آلية وسم خاصة بك.
 
 ::: warning
-اجعل إجراء السرد، `list`، الخاص بك سريعا جدا، لأنه سينفذ لكل ملاحظة كل مرة يُعاد فيها تحميل مجلدها!
+Make sure your `list` action is really fast, because it will be executed for every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
 ## noteTaggingByObjectHook (خطاف وسم الملاحظات الكائني)

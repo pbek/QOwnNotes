@@ -9,3 +9,7 @@ Il existe différentes manières de rechercher des notes :
 - `n: livre` ou `nom: livre` recherchera les notes avec `livre` juste dans le nom de la note ou le nom du fichier
 
 ![Recherche en cours](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

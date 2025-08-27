@@ -9,3 +9,7 @@ To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl<
 - `n:book` یا `name:book` با کلمه `book` در میان یادداشت ها و درست در نام یادداشت یا نام پرونده جستجو می شود
 
 ![جستجو](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

@@ -9,3 +9,7 @@ Esistono diversi modi per cercare le note:
 - `n:book` o `name:book` cercherà le note con `book` solo nel nome della nota o nel nome del file
 
 ![Ricerca](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

@@ -278,7 +278,9 @@ function noteTaggingHook(note, action, tagName, newTagName);
 
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) 예제를 보고 자체 태그 메커니즘을 구현할 수 있습니다.
 
-::: 경고 노트 폴더를 다시 로드할 때마다 모든 노트에 대해 목록 작업이 실행되므로 `목록` 작업이 매우 빠릅니다! :::
+::: 경고 노트 폴더나 태그 트리가 새로고침될 때마다 모든 노트에 대해 실행되므로 `목록` 작업이 정말 빠르다는 것을 확인하세요!
+
+[mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp)에서 `reloadTagTree`을 찾을 때마다 그렇습니다. :::
 
 ## noteTaggingByObjectHook
 

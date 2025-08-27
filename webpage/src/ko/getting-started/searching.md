@@ -9,3 +9,7 @@ To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl<
 - `n:북` 또는 `이름:북`은 노트 이름 또는 파일 이름에 `북` 이 있는 노트를 검색합니다
 
 ![검색](/img/searching.png)
+
+::: 팁
+검색은 적어도 하나의 문자를 입력한 후에 시작됩니다.
+:::

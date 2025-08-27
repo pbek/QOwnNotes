@@ -9,3 +9,7 @@ Es gibt verschiedene Möglichkeiten, nach Notizen zu suchen:
 - `n:Buch` oder `name:Buch` sucht nach Notizen, wobei `Buch` nur im Name der Notiz oder im Dateinamen enthalten ist
 
 ![Suchen](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

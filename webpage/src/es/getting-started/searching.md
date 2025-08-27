@@ -9,3 +9,7 @@ Hay diferentes formas de buscar notas:
 - `n:cuaderno` o `name:cuaderno` buscará notas con `cuaderno` solo en el nombre de la nota o el nombre del archivo
 
 ![Buscando](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

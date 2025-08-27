@@ -278,7 +278,9 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
 You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
 
 ::: warning
-Győződjön meg arról, hogy a ` list ` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül!
+Make sure your `list` action is really fast, because it will be executed for every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
 ## noteTaggingByObjectHook

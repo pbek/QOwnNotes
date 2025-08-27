@@ -9,3 +9,7 @@ Er zijn verschillende manieren om naar notities te zoeken:
 - `n: boek` of `naam: boek` zoekt naar notities met `boek` alleen in de naam van de notitie of de bestandsnaam
 
 ![Zoeken](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

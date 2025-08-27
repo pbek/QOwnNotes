@@ -9,3 +9,7 @@ Istnieją różne sposoby wyszukiwania notatek:
 - `n:book` lub `name:book` wyszuka notatki z `book` tylko w nazwie pliku lub notatce
 
 ![Wyszukiwanie](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

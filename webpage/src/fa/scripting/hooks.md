@@ -279,7 +279,9 @@ function noteTaggingHook(note, action, tagName, newTagName);
 You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
 
 ::: warning
-مطمئن شوید که فعالیت `لیست` شما به واقع سریع است زیرا برای هر یادداشت و در هر زمانی که پوشه یادداشت مجدداً بارگذاری می شود، اجرا خواهد شد!
+Make sure your `list` action is really fast, because it will be executed for every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
 ## noteTaggingByObjectHook

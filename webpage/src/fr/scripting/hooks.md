@@ -279,7 +279,9 @@ function noteTaggingHook (note, action, tagName, newTagName);
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) pour implémenter votre propre mécanisme de balisage.
 
 ::: warning
-Assurez-vous que votre action `liste` est vraiment rapide car elle sera exécutée pour chaque note à chaque rechargement du dossier de notes !
+Make sure your `list` action is really fast, because it will be executed for every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
 ## noteTaggingByObjectHook

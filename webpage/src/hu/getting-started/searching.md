@@ -9,3 +9,7 @@ A jegyzetek keresésére többféle lehetőség van:
 - Az `n:könyv` vagy a `név:könyv` feljegyzéseket keres a `könyv` felirattal, csak a jegyzet vagy fájl nevében.
 
 ![Keresés](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::
