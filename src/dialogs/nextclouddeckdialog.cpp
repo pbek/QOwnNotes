@@ -25,18 +25,20 @@ NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
 
 void NextcloudDeckDialog::setupUi() {
     setupMainSplitter();
+    refreshUi();
 
     ui->newItemEdit->installEventFilter(this);
     ui->cardItemTreeWidget->installEventFilter(this);
     ui->newItemEdit->setFocus();
 
     // Adding shortcuts not working when defined in the ui file
-    auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+S")), this);
-    QObject::connect(shortcut, SIGNAL(activated()), this, SLOT(on_saveButton_clicked()));
-    shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+I")), this);
-    QObject::connect(shortcut, SIGNAL(activated()), this, SLOT(onSaveAndInsertButtonClicked()));
-    shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+R")), this);
-    QObject::connect(shortcut, SIGNAL(activated()), this, SLOT(on_removeButton_clicked()));
+    //    auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+S")), this);
+    //    QObject::connect(shortcut, SIGNAL(activated()), this, SLOT(on_saveButton_clicked()));
+    //    shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+I")), this);
+    //    QObject::connect(shortcut, SIGNAL(activated()), this,
+    //    SLOT(onSaveAndInsertButtonClicked())); shortcut = new
+    //    QShortcut(QKeySequence(QStringLiteral("Ctrl+R")), this); QObject::connect(shortcut,
+    //    SIGNAL(activated()), this, SLOT(on_removeButton_clicked()));
 
     /*
      * Set up the note button menu
@@ -49,14 +51,14 @@ void NextcloudDeckDialog::setupUi() {
     insertAction->setToolTip(
         tr("Save the current todo item and insert a link"
            " to it into the current note"));
-    connect(insertAction, SIGNAL(triggered()), this, SLOT(onSaveAndInsertButtonClicked()));
+    //    connect(insertAction, SIGNAL(triggered()), this, SLOT(onSaveAndInsertButtonClicked()));
 
     QAction *importAction = noteMenu->addAction(tr("Import as note"));
     importAction->setIcon(
         QIcon::fromTheme(QStringLiteral("document-import"),
                          QIcon(":icons/breeze-qownnotes/16x16/document-import.svg")));
     importAction->setToolTip(tr("Import the current todo item as new note"));
-    connect(importAction, SIGNAL(triggered()), this, SLOT(onImportAsNoteButtonClicked()));
+    //    connect(importAction, SIGNAL(triggered()), this, SLOT(onImportAsNoteButtonClicked()));
 
     //    ui->noteButton->setMenu(noteMenu);
 
@@ -153,4 +155,43 @@ void NextcloudDeckDialog::setupMainSplitter() {
     this->mainSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(this->mainSplitter);
+}
+
+void NextcloudDeckDialog::refreshUi() { reloadCardList(); }
+
+void NextcloudDeckDialog::reloadCardList() {
+    NextcloudDeckService nextcloudDeckService(this);
+    auto cards = nextcloudDeckService.getCards();
+
+    qDebug() << __func__ << " - 'cards': " << cards;
+
+    // Clear existing items
+    ui->cardItemTreeWidget->clear();
+
+    // Populate the tree widget with cards
+    for (const auto &card : cards) {
+        auto *item = new QTreeWidgetItem(ui->cardItemTreeWidget);
+
+        // Set the summary (title) in the first column
+        item->setText(0, card.title);
+
+        // Set the due date in the second column
+        if (card.duedate.isValid()) {
+            item->setText(1, card.duedate.toString("yyyy-MM-dd hh:mm"));
+        } else {
+            item->setText(1, tr("No due date"));
+        }
+
+        // Store the card ID as user data for later reference
+        item->setData(0, Qt::UserRole, card.id);
+
+        // Set tooltip with description if available
+        if (!card.description.isEmpty()) {
+            item->setToolTip(0, card.description);
+        }
+    }
+
+    // Auto-resize columns to content
+    ui->cardItemTreeWidget->resizeColumnToContents(0);
+    ui->cardItemTreeWidget->resizeColumnToContents(1);
 }

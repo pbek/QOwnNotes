@@ -2,6 +2,7 @@
 #define QOWNNOTES_NEXTCLOUDDECKSERVICE_H
 
 #include <QDateTime>
+#include <QDebug>
 #include <QObject>
 #include <QtNetwork/QNetworkRequest>
 
@@ -34,6 +35,15 @@ class NextcloudDeckService : public QObject {
         QString type;
         QDateTime createdAt;
         QDateTime lastModified;
+
+        friend QDebug operator<<(QDebug dbg, const Card& card) {
+            dbg.nospace() << "Card: <id>" << card.id << " <title>" << card.title << " <description>"
+                          << card.description << " <duedate>" << card.duedate.toString(Qt::ISODate)
+                          << " <order>" << card.order << " <type>" << card.type << " <createdAt>"
+                          << card.createdAt.toString(Qt::ISODate) << " <lastModified>"
+                          << card.lastModified.toString(Qt::ISODate);
+            return dbg.space();
+        }
     };
 
    public:

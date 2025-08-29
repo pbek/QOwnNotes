@@ -254,8 +254,9 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
     // 10 sec timeout for the request
     timer.start(10000);
 
+    // Use the boards endpoint with details to get all cards from all stacks
     QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" + QString::number(this->boardId) +
-             "/stacks/" + QString::number(this->stackId) + "/cards");
+             "/stacks?details=true");
     qDebug() << __func__ << " - 'url': " << url;
 
     QNetworkRequest networkRequest = QNetworkRequest(url);
@@ -289,38 +290,57 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
         if (returnStatusCode >= 200 && returnStatusCode < 300) {
             // get the data from the network reply
             data = reply->readAll();
+            qDebug() << __func__ << " - 'data': " << data;
+
             QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
 
             if (jsonDoc.isArray()) {
-                QJsonArray jsonArray = jsonDoc.array();
+                QJsonArray stacksArray = jsonDoc.array();
 
-                for (auto jsonValue : jsonArray) {
-                    QJsonObject object = jsonValue.toObject();
+                for (auto stackValue : stacksArray) {
+                    QJsonObject stackObject = stackValue.toObject();
+                    int currentStackId = stackObject["id"].toInt();
 
-                    NextcloudDeckService::Card card;
-                    card.id = object["id"].toInt();
-                    card.title = object["title"].toString();
-                    card.description = object["description"].toString();
-                    card.order = object["order"].toInt();
-                    card.type = object["type"].toString();
+                    // Only process cards from the configured stack
+                    if (currentStackId == this->stackId) {
+                        QJsonArray cardsArray = stackObject["cards"].toArray();
 
-                    // Parse datetime fields if they exist
-                    QString duedateStr = object["duedate"].toString();
-                    if (!duedateStr.isEmpty()) {
-                        card.duedate = QDateTime::fromString(duedateStr, Qt::ISODate);
+                        for (auto cardValue : cardsArray) {
+                            QJsonObject object = cardValue.toObject();
+
+                            NextcloudDeckService::Card card;
+                            card.id = object["id"].toInt();
+                            card.title = object["title"].toString();
+                            card.description = object["description"].toString();
+                            card.order = object["order"].toInt();
+                            card.type = object["type"].toString();
+
+                            // Parse datetime fields from Unix timestamps
+                            qint64 duedateTimestamp = object["duedate"].toVariant().toLongLong();
+                            if (duedateTimestamp > 0) {
+                                card.duedate = QDateTime::fromSecsSinceEpoch(duedateTimestamp);
+                            }
+
+                            qint64 createdAtTimestamp =
+                                object["createdAt"].toVariant().toLongLong();
+                            if (createdAtTimestamp > 0) {
+                                card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
+                            }
+
+                            qint64 lastModifiedTimestamp =
+                                object["lastModified"].toVariant().toLongLong();
+                            if (lastModifiedTimestamp > 0) {
+                                card.lastModified =
+                                    QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
+                            }
+
+                            qDebug() << __func__ << " - found card: " << card;
+                            cards.append(card);
+                        }
+
+                        // We found our stack, no need to continue
+                        break;
                     }
-
-                    QString createdAtStr = object["createdAt"].toString();
-                    if (!createdAtStr.isEmpty()) {
-                        card.createdAt = QDateTime::fromString(createdAtStr, Qt::ISODate);
-                    }
-
-                    QString lastModifiedStr = object["lastModified"].toString();
-                    if (!lastModifiedStr.isEmpty()) {
-                        card.lastModified = QDateTime::fromString(lastModifiedStr, Qt::ISODate);
-                    }
-
-                    cards.append(card);
                 }
             }
 

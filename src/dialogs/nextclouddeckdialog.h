@@ -37,11 +37,14 @@ class NextcloudDeckDialog : public MasterDialog {
 
     void on_dueDateTimeCheckBox_toggled(bool checked);
 
+    void reloadCardList();
+
    private:
     Ui::NextcloudDeckDialog *ui;
     void setupMainSplitter();
     QSplitter *mainSplitter;
     void setupUi();
+    void refreshUi();
 };
 
 #endif    // NEXTCLOUDDECKDIALOG_H
