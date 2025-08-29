@@ -2,6 +2,7 @@
 #define NEXTCLOUDDECKDIALOG_H
 
 #include <QDialog>
+#include <QSplitter>
 
 #include "masterdialog.h"
 
@@ -38,6 +39,9 @@ class NextcloudDeckDialog : public MasterDialog {
 
    private:
     Ui::NextcloudDeckDialog *ui;
+    void setupMainSplitter();
+    QSplitter *mainSplitter;
+    void setupUi();
 };
 
 #endif    // NEXTCLOUDDECKDIALOG_H
