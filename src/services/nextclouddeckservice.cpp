@@ -257,6 +257,7 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
     // Use the boards endpoint with details to get all cards from all stacks
     QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" + QString::number(this->boardId) +
              "/stacks?details=true");
+    // QUrl url(serverUrl + "/index.php/apps/deck/stacks/" + QString::number(this->boardId));
     qDebug() << __func__ << " - 'url': " << url;
 
     QNetworkRequest networkRequest = QNetworkRequest(url);
@@ -315,10 +316,10 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
                             card.order = object["order"].toInt();
                             card.type = object["type"].toString();
 
-                            // Parse datetime fields from Unix timestamps
-                            qint64 duedateTimestamp = object["duedate"].toVariant().toLongLong();
-                            if (duedateTimestamp > 0) {
-                                card.duedate = QDateTime::fromSecsSinceEpoch(duedateTimestamp);
+                            // Parse datetime fields from ISO 8601 strings
+                            QString duedateString = object["duedate"].toString();
+                            if (!duedateString.isEmpty() && duedateString != "null") {
+                                card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
                             }
 
                             qint64 createdAtTimestamp =
