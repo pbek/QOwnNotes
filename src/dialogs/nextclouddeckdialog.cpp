@@ -19,6 +19,12 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent)
     ui->saveButton->setEnabled(false);
     ui->dueDateTimeCheckBox->setChecked(true);
     ui->titleLineEdit->setFocus();
+
+    // Hide currently unused UI elements
+    ui->newItemEdit->setHidden(true);
+    ui->cardItemLoadingProgressBar->setHidden(true);
+    ui->showDueTodayItemsOnlyCheckBox->setHidden(true);
+    ui->showCompletedItemsCheckBox->setHidden(true);
 }
 
 NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
@@ -139,10 +145,6 @@ void NextcloudDeckDialog::on_dueDateTimeCheckBox_toggled(bool checked) {
 void NextcloudDeckDialog::setTitle(const QString &title) { ui->titleLineEdit->setText(title); }
 
 void NextcloudDeckDialog::setupMainSplitter() {
-    // TODO: Show select frame
-    ui->selectFrame->setVisible(false);
-    return;
-
     this->mainSplitter = new QSplitter(this);
 
     this->mainSplitter->addWidget(ui->selectFrame);
