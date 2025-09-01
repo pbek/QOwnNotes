@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 25.8.8
+## 25.9.0
 
 - The build process for Arch Linux was brought from Qt5 to Qt6 for OBS and the AUR
   (for [#3353](https://github.com/pbek/QOwnNotes/issues/3353))
