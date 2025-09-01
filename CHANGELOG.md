@@ -2,6 +2,8 @@
 
 ## 25.9.0
 
+- The Nextcloud Deck dialog can now show the cards from the stack (no editing yet)
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - The build process for Arch Linux was brought from Qt5 to Qt6 for OBS and the AUR
   (for [#3353](https://github.com/pbek/QOwnNotes/issues/3353))
 
