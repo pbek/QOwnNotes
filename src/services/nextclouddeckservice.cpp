@@ -325,14 +325,22 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
                             qint64 createdAtTimestamp =
                                 object["createdAt"].toVariant().toLongLong();
                             if (createdAtTimestamp > 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
+                                card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
+#else
                                 card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
+#endif
                             }
 
                             qint64 lastModifiedTimestamp =
                                 object["lastModified"].toVariant().toLongLong();
                             if (lastModifiedTimestamp > 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
+                                card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
+#else
                                 card.lastModified =
                                     QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
+#endif
                             }
 
                             qDebug() << __func__ << " - found card: " << card;
