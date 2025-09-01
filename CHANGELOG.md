@@ -6,6 +6,7 @@
   (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - The build process for Arch Linux was brought from Qt5 to Qt6 for OBS and the AUR
   (for [#3353](https://github.com/pbek/QOwnNotes/issues/3353))
+- Added more French translation (thank you, jd-develop)
 
 ## 25.8.7
 

@@ -1533,19 +1533,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>Sélectionnez le fichier vers lequel établir un lien (chemin relatif)</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>Sélectionnez le fichier vers lequel établir un lien (chemin absolu)</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>Sélectionnez le répertoire vers lequel établir un lien (chemin relatif)</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>Sélectionnez le répertoire vers lequel établir un lien (chemin absolu)</translation>
 </message>
 </context>
 <context>
@@ -1694,7 +1694,7 @@
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Liens de référencement</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -2822,8 +2822,8 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation>
-<numerusform>%n sélectionné(e)</numerusform>
-<numerusform>%n sélectionné(e)s</numerusform>
+<numerusform>%n sélectionné</numerusform>
+<numerusform>%n sélectionnés</numerusform>
 </translation>
 </message>
 <message>
@@ -2832,11 +2832,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>Aucune version disponible</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>Aucune version n’est disponible pour cette note.</translation>
 </message>
 <message>
 <source>Close note tab</source>
