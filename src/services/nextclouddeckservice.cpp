@@ -51,17 +51,16 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QString urlString = serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
-                        QString::number(this->boardId) + "/stacks/" +
-                        QString::number(this->stackId) + "/cards";
     bool isUpdate = (cardId > 0);
+    QUrl url;
 
     if (isUpdate) {
-        // URL for updating an existing card
-        urlString += "/" + QString::number(cardId);
+        url = QUrl(serverUrl + "/index.php/apps/deck/cards/" + QString::number(cardId));
+    } else {
+        url = QUrl(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
+                   QString::number(this->boardId) + "/stacks/" + QString::number(this->stackId) +
+                   "/cards");
     }
-
-    const QUrl url(urlString);
 
     qDebug() << __func__ << " - 'url': " << url;
     qDebug() << __func__ << " - 'isUpdate': " << isUpdate;
@@ -70,7 +69,13 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     bodyJson["title"] = title;
     bodyJson["type"] = "plain";
 
-    if (!isUpdate) {
+    if (isUpdate) {
+        bodyJson["id"] = cardId;
+        bodyJson["stackId"] = this->stackId;
+        bodyJson["boardId"] = this->boardId;
+        // TODO: What do we set the order to?
+        bodyJson["order"] = 0;
+    } else {
         bodyJson["order"] = 0;
     }
 
