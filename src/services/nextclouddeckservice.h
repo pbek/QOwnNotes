@@ -26,6 +26,7 @@ class NextcloudDeckService : public QObject {
         //        }
     };
 
+   public:
     struct Card {
         int id;
         QString title;
@@ -46,15 +47,14 @@ class NextcloudDeckService : public QObject {
         }
     };
 
-   public:
     explicit NextcloudDeckService(QObject* parent, int cloudConnectionId = -1);
-    int createCard(const QString& title, const QString& description = "",
-                   QDateTime* dueDateTime = nullptr);
+    int storeCard(const QString& title, const QString& description = "",
+                  QDateTime* dueDateTime = nullptr, int cardId = -1);
     QString getCardLinkForId(int cardId);
     bool isEnabledAndValid();
     bool isEnabled();
     QList<Board> getBoards();
-    QList<Card> getCards();
+    QHash<int, Card> getCards();
 
    private:
     CloudConnection cloudConnection;

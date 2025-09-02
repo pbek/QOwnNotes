@@ -36,9 +36,9 @@ bool NextcloudDeckService::isEnabled() {
            this->cloudConnection.getNextcloudDeckEnabled();
 }
 
-int NextcloudDeckService::createCard(const QString& title, const QString& description,
-                                     QDateTime* dueDateTime) {
-    int cardId = -1;
+int NextcloudDeckService::storeCard(const QString& title, const QString& description,
+                                    QDateTime* dueDateTime, int cardId) {
+    int resultCardId = -1;
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -51,14 +51,28 @@ int NextcloudDeckService::createCard(const QString& title, const QString& descri
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" + QString::number(this->boardId) +
-             "/stacks/" + QString::number(this->stackId) + "/cards");
+    QString urlString = serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
+                        QString::number(this->boardId) + "/stacks/" +
+                        QString::number(this->stackId) + "/cards";
+    bool isUpdate = (cardId > 0);
+
+    if (isUpdate) {
+        // URL for updating an existing card
+        urlString += "/" + QString::number(cardId);
+    }
+
+    const QUrl url(urlString);
+
     qDebug() << __func__ << " - 'url': " << url;
+    qDebug() << __func__ << " - 'isUpdate': " << isUpdate;
 
     QJsonObject bodyJson;
     bodyJson["title"] = title;
     bodyJson["type"] = "plain";
-    bodyJson["order"] = 0;
+
+    if (!isUpdate) {
+        bodyJson["order"] = 0;
+    }
 
     if (description != "") {
         bodyJson["description"] = description;
@@ -90,7 +104,11 @@ int NextcloudDeckService::createCard(const QString& title, const QString& descri
     networkRequest.setRawHeader("OCS-APIRequest", "true");
     addAuthHeader(networkRequest);
 
-    reply = manager->post(networkRequest, bodyJsonDoc.toJson());
+    if (isUpdate) {
+        reply = manager->put(networkRequest, bodyJsonDoc.toJson());
+    } else {
+        reply = manager->post(networkRequest, bodyJsonDoc.toJson());
+    }
 
     loop.exec();
 
@@ -106,16 +124,23 @@ int NextcloudDeckService::createCard(const QString& title, const QString& descri
 
             QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
             QJsonObject jsonObject = jsonDoc.object();
-            cardId = jsonObject["id"].toInt();
+            resultCardId = jsonObject["id"].toInt();
 
-            qDebug() << __func__ << " - 'cardId': " << cardId;
+            // If we're updating, use the original cardId if the response doesn't contain one
+            if (isUpdate && resultCardId <= 0) {
+                resultCardId = cardId;
+            }
+
+            qDebug() << __func__ << " - 'resultCardId': " << resultCardId;
             qDebug() << __func__ << " - 'jsonDoc': " << jsonDoc;
         } else {
             QString errorString = reply->errorString();
-            Utils::Gui::warning(nullptr, tr("Error while creating card"),
-                                tr("Creating a card failed with status code %1 and message: %2")
+            QString operation = isUpdate ? tr("updating") : tr("creating");
+            Utils::Gui::warning(nullptr, tr("Error while %1 card").arg(operation),
+                                tr("%1 a card failed with status code %2 and message: %3")
+                                    .arg(operation.left(1).toUpper() + operation.mid(1))
                                     .arg(QString::number(returnStatusCode), errorString),
-                                "nextcloud-deck-create-failed");
+                                "nextcloud-deck-create-update-failed");
 
             qDebug() << __func__ << " - error: " << returnStatusCode;
             qDebug() << __func__ << " - 'errorString': " << errorString;
@@ -125,7 +150,7 @@ int NextcloudDeckService::createCard(const QString& title, const QString& descri
     reply->deleteLater();
     delete (manager);
 
-    return cardId;
+    return resultCardId;
 }
 
 QString NextcloudDeckService::getCardLinkForId(int cardId) {
@@ -241,7 +266,7 @@ QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
     return boards;
 }
 
-QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
+QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards() {
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -280,7 +305,7 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
     reply = manager->get(networkRequest);
 
     loop.exec();
-    QList<NextcloudDeckService::Card> cards;
+    QHash<int, NextcloudDeckService::Card> cards;
 
     // if we didn't get a timeout let us return the content
     if (timer.isActive()) {
@@ -344,7 +369,7 @@ QList<NextcloudDeckService::Card> NextcloudDeckService::getCards() {
                             }
 
                             qDebug() << __func__ << " - found card: " << card;
-                            cards.append(card);
+                            cards[card.id] = card;
                         }
 
                         // We found our stack, no need to continue
