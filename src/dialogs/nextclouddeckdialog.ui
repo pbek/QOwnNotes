@@ -17,10 +17,10 @@
    <item row="0" column="1">
     <widget class="QFrame" name="editFrame">
      <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
+      <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
+      <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0" colspan="3">
@@ -50,7 +50,7 @@
       <item row="3" column="1" colspan="2">
        <widget class="QDateTimeEdit" name="dueDateTimeEdit">
         <property name="currentSection">
-         <enum>QDateTimeEdit::Section::HourSection</enum>
+         <enum>QDateTimeEdit::HourSection</enum>
         </property>
         <property name="calendarPopup">
          <bool>true</bool>
@@ -102,10 +102,10 @@
       <item row="6" column="0" colspan="3">
        <widget class="QFrame" name="buttonFrame">
         <property name="frameShape">
-         <enum>QFrame::Shape::NoFrame</enum>
+         <enum>QFrame::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Shadow::Plain</enum>
+         <enum>QFrame::Plain</enum>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <property name="leftMargin">
@@ -123,7 +123,7 @@
          <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
+            <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -159,10 +159,10 @@
    <item row="0" column="0">
     <widget class="QFrame" name="selectFrame">
      <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
+      <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
+      <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="4" column="0">
@@ -237,10 +237,7 @@
       <item row="1" column="0">
        <widget class="QTreeWidget" name="cardItemTreeWidget">
         <property name="contextMenuPolicy">
-         <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
-        </property>
-        <property name="dragDropMode">
-         <enum>QAbstractItemView::DragDropMode::InternalMove</enum>
+         <enum>Qt::CustomContextMenu</enum>
         </property>
         <property name="sortingEnabled">
          <bool>true</bool>
