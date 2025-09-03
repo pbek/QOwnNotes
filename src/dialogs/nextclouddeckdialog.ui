@@ -263,7 +263,21 @@
   </customwidget>
  </customwidgets>
  <tabstops>
+  <tabstop>newItemEdit</tabstop>
+  <tabstop>cardItemTreeWidget</tabstop>
+  <tabstop>titleLineEdit</tabstop>
+  <tabstop>descriptionTextEdit</tabstop>
+  <tabstop>dueDateTimeCheckBox</tabstop>
+  <tabstop>dueDateTimeEdit</tabstop>
   <tabstop>saveButton</tabstop>
+  <tabstop>add10MinButton</tabstop>
+  <tabstop>add1HourButton</tabstop>
+  <tabstop>add1DayButton</tabstop>
+  <tabstop>sub10MinButton</tabstop>
+  <tabstop>sub1HourButton</tabstop>
+  <tabstop>subd1DayButton</tabstop>
+  <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
+  <tabstop>reloadCardListButton</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>

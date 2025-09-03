@@ -9,6 +9,7 @@
 #include "services/nextclouddeckservice.h"
 #include "services/settingsservice.h"
 #include "ui_nextclouddeckdialog.h"
+#include "utils/gui.h"
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog) {
@@ -20,15 +21,15 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime());
     ui->saveButton->setEnabled(false);
     ui->dueDateTimeCheckBox->setChecked(true);
-    ui->titleLineEdit->setFocus();
 
     // Hide currently unused UI elements
-    ui->newItemEdit->setHidden(true);
     ui->showDueTodayItemsOnlyCheckBox->setHidden(true);
 
     if (listMode) {
         setWindowTitle(tr("Manage Nextcloud Deck Cards"));
+        ui->newItemEdit->setFocus();
     } else {
+        ui->titleLineEdit->setFocus();
         ui->selectFrame->setHidden(true);
     }
 }
@@ -274,4 +275,18 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetIt
     } else {
         resetEditFrameControls();
     }
+}
+
+void NextcloudDeckDialog::on_newItemEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInTreeWidget(
+        ui->cardItemTreeWidget, arg1,
+        Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+}
+
+void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
+    resetEditFrameControls();
+    ui->editFrame->setEnabled(true);
+    ui->titleLineEdit->setText(ui->newItemEdit->text());
+    ui->descriptionTextEdit->setFocus();
+    ui->newItemEdit->clear();
 }

@@ -46,6 +46,10 @@ class NextcloudDeckDialog : public MasterDialog {
     void on_cardItemTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                   QTreeWidgetItem *previous);
 
+    void on_newItemEdit_textChanged(const QString &arg1);
+
+    void on_newItemEdit_returnPressed();
+
    private:
     Ui::NextcloudDeckDialog *ui;
     void setupMainSplitter();
