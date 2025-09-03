@@ -12299,18 +12299,27 @@ void MainWindow::on_actionToggle_Always_on_top_triggered() {
 
 void MainWindow::on_action_Load_Todo_Items_triggered() { reloadTodoLists(); }
 
-void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() {
+bool MainWindow::nextCloudDeckCheck() {
     NextcloudDeckService nextcloudDeckService(this);
 
     if (!nextcloudDeckService.isEnabled()) {
         if (QMessageBox::warning(
-                nullptr, tr("Nextcloud Deck support disabled!"),
-                tr("Nextcloud Deck support is not enabled or the settings are invalid.<br />"
-                   "Please check your <strong>Nextcloud</strong> configuration in the settings!"),
-                tr("Open &settings"), tr("&Cancel"), QString(), 0, 1) == 0) {
+                nullptr, QObject::tr("Nextcloud Deck support disabled!"),
+                QObject::tr(
+                    "Nextcloud Deck support is not enabled or the settings are invalid.<br />"
+                    "Please check your <strong>Nextcloud</strong> configuration in the settings!"),
+                QObject::tr("Open &settings"), QObject::tr("&Cancel"), QString(), 0, 1) == 0) {
             openSettingsDialog(SettingsDialog::OwnCloudPage);
         }
 
+        return false;
+    }
+
+    return true;
+}
+
+void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() {
+    if (!nextCloudDeckCheck()) {
         return;
     }
 
@@ -12438,4 +12447,13 @@ void MainWindow::on_actionReattach_panels_triggered() {
             handleDockWidgetLocking(dockWidget);
         }
     }
+}
+
+void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() {
+    if (!nextCloudDeckCheck()) {
+        return;
+    }
+
+    auto *dialog = new NextcloudDeckDialog(this, true);
+    dialog->exec();
 }

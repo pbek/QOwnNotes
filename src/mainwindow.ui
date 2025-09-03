@@ -1222,6 +1222,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </property>
     <addaction name="actionShow_Todo_List"/>
     <addaction name="action_Load_Todo_Items"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Nextcloud_Deck_cards"/>
+    <addaction name="actionInsert_Nextcloud_Deck_card"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -2868,6 +2871,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Enable AI support</string>
+   </property>
+  </action>
+  <action name="actionManage_Nextcloud_Deck_cards">
+   <property name="icon">
+    <iconset theme="folder-cloud" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/folder-cloud.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-cloud.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Manage Nextcloud Deck cards</string>
    </property>
   </action>
  </widget>

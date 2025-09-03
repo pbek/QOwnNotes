@@ -10,7 +10,7 @@
 #include "services/settingsservice.h"
 #include "ui_nextclouddeckdialog.h"
 
-NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent)
+NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog) {
     ui->setupUi(this);
     afterSetupUI();
@@ -24,9 +24,13 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent)
 
     // Hide currently unused UI elements
     ui->newItemEdit->setHidden(true);
-    ui->cardItemLoadingProgressBar->setHidden(true);
     ui->showDueTodayItemsOnlyCheckBox->setHidden(true);
-    ui->showCompletedItemsCheckBox->setHidden(true);
+
+    if (listMode) {
+        setWindowTitle(tr("Manage Nextcloud Deck Cards"));
+    } else {
+        ui->selectFrame->setHidden(true);
+    }
 }
 
 NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }

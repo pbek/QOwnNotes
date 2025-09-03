@@ -728,6 +728,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionReattach_panels_triggered();
 
+    void on_actionManage_Nextcloud_Deck_cards_triggered();
+
    public:
     /** Settings access **/
     static bool isInDistractionFreeMode();
@@ -1164,4 +1166,5 @@ class MainWindow : public QMainWindow {
     void setupNoteRelationScene();
     void updateNoteGraphicsView();
     void addDirectoryToDirectoryWatcher(const QString &path);
+    bool nextCloudDeckCheck();
 };

@@ -18,7 +18,7 @@ class NextcloudDeckDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit NextcloudDeckDialog(QWidget *parent = nullptr);
+    explicit NextcloudDeckDialog(QWidget *parent = nullptr, bool listMode = false);
     ~NextcloudDeckDialog();
     void setTitle(const QString &title);
 
