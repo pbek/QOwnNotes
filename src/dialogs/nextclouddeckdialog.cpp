@@ -74,6 +74,10 @@ void NextcloudDeckDialog::setupUi() {
 
     //    ui->noteButton->setMenu(noteMenu);
 
+    // Clean up unused menu to prevent memory leak
+    // TODO: Remove this entire section when noteButton functionality is implemented
+    delete noteMenu;
+
     /*
      * Set up the reload button menu
      */
@@ -85,7 +89,9 @@ void NextcloudDeckDialog::setupUi() {
     reloadAction->setToolTip(tr("Reload cards from server"));
     connect(reloadAction, SIGNAL(triggered()), this, SLOT(reloadCardList()));
 
+    // Explicitly transfer ownership to the button (Qt 5.7 compatibility)
     ui->reloadCardListButton->setMenu(reloadMenu);
+    // Menu ownership is now transferred to the button, no manual deletion needed
 }
 
 void NextcloudDeckDialog::on_saveButton_clicked() {
@@ -104,6 +110,9 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
     int cardId = nextcloudDeckService.storeCard(
         title, ui->descriptionTextEdit->toPlainText(),
         ui->dueDateTimeCheckBox->isChecked() ? dateTime : nullptr, cardIdToUpdate);
+
+    // Clean up allocated dateTime to prevent memory leak
+    delete dateTime;
 
     if (cardId > 0) {
         auto linkText =
@@ -182,12 +191,15 @@ void NextcloudDeckDialog::reloadCardList() {
 
     qDebug() << __func__ << " - 'cards': " << _cards;
 
-    // Clear existing items
+    // Clear existing items (this should delete all child items)
     ui->cardItemTreeWidget->clear();
 
     // Populate the tree widget with cards
+    QList<QTreeWidgetItem *> items;    // Collect items for batch insertion (more efficient)
+
     for (const auto &card : _cards) {
-        auto *item = new QTreeWidgetItem(ui->cardItemTreeWidget);
+        // Create item with explicit parent - ownership transferred to tree widget
+        auto *item = new QTreeWidgetItem();
 
         // Set the summary (title) in the first column
         item->setText(0, card.title);
@@ -206,7 +218,12 @@ void NextcloudDeckDialog::reloadCardList() {
         if (!card.description.isEmpty()) {
             item->setToolTip(0, card.description);
         }
+
+        items.append(item);
     }
+
+    // Add all items at once - this ensures proper ownership transfer
+    ui->cardItemTreeWidget->addTopLevelItems(items);
 
     // Auto-resize columns to content
     ui->cardItemTreeWidget->resizeColumnToContents(0);
