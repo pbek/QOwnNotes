@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.9.1
+
+- There now is a new menu entry in the _Todo menu_ to open the **Nextcloud Deck dialog**
+  for editing cards from the stack (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+
 ## 25.9.0
 
 - The Nextcloud Deck dialog can now show the cards from the stack (no editing yet)
