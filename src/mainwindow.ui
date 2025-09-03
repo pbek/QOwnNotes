@@ -2815,9 +2815,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="text">
     <string>Insert Nextcloud Deck card link</string>
    </property>
-   <property name="shortcut">
-    <string notr="true">Ctrl+Alt+D</string>
-   </property>
   </action>
   <action name="actionCopy_path_to_note_to_clipboard">
    <property name="text">
@@ -2880,6 +2877,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Manage Nextcloud Deck cards</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+D</string>
    </property>
   </action>
  </widget>

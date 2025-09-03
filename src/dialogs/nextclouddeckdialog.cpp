@@ -13,25 +13,20 @@
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog) {
+    Q_UNUSED(listMode)
     ui->setupUi(this);
     afterSetupUI();
     setupUi();
     _currentCard = NextcloudDeckService::Card();
-
-    ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime());
     ui->saveButton->setEnabled(false);
     ui->dueDateTimeCheckBox->setChecked(true);
+    ui->newItemEdit->setFocus();
+
+    // Set default due date to one hour from now
+    ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
 
     // Hide currently unused UI elements
     ui->showDueTodayItemsOnlyCheckBox->setHidden(true);
-
-    if (listMode) {
-        setWindowTitle(tr("Manage Nextcloud Deck Cards"));
-        ui->newItemEdit->setFocus();
-    } else {
-        ui->titleLineEdit->setFocus();
-        ui->selectFrame->setHidden(true);
-    }
 }
 
 NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
@@ -128,6 +123,9 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
 
         // Reload the card list to reflect the changes
         reloadCardList();
+
+        ui->newItemEdit->clear();
+        ui->newItemEdit->setFocus();
     }
 
     if (cardIdToUpdate == -1) {
@@ -236,7 +234,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->titleLineEdit->setText(QString());
     ui->descriptionTextEdit->setPlainText(QString());
     ui->dueDateTimeCheckBox->setChecked(false);
-    ui->dueDateTimeEdit->hide();
+    ui->dueDateTimeEdit->setEnabled(false);
     ui->saveButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
 }
@@ -289,4 +287,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     ui->titleLineEdit->setText(ui->newItemEdit->text());
     ui->descriptionTextEdit->setFocus();
     ui->newItemEdit->clear();
+    // Set default due date to one hour from now
+    ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
+    ui->dueDateTimeCheckBox->setChecked(true);
 }

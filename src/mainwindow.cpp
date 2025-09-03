@@ -12450,10 +12450,5 @@ void MainWindow::on_actionReattach_panels_triggered() {
 }
 
 void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() {
-    if (!nextCloudDeckCheck()) {
-        return;
-    }
-
-    auto *dialog = new NextcloudDeckDialog(this, true);
-    dialog->exec();
+    on_actionInsert_Nextcloud_Deck_card_triggered();
 }
