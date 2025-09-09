@@ -75,8 +75,14 @@ cp qownnotes.SlackBuild ${path14_2}
 cp qownnotes.info ${path14_2}
 cp dobuild.sh ${path14_2}
 
+path15_0="../../15.0/qownnotes"
+cp qownnotes.SlackBuild ${path15_0}
+cp qownnotes.info ${path15_0}
+sed -i 's/REQUIRES="qt5 libproxy"/REQUIRES=""/' ${path15_0}/qownnotes.info
+cp dobuild.sh ${path15_0}
+
 echo "Committing changes..."
-git commit -m "releasing version $QOWNNOTES_VERSION" * ${path14_2}/*
+git commit -m "releasing version $QOWNNOTES_VERSION" * ${path14_2}/* ${path15_0}/*
 git push
 
 # remove everything after we are done
