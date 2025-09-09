@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.9.2
+
+- The Slackware Build process was updated to use CMake and a 15.0 directory was added
+  (for [#3363](https://github.com/pbek/QOwnNotes/issues/3363), thank you, @fsLeg)
+
 ## 25.9.1
 
 - There now is a new menu entry in the _Todo menu_ to open the **Nextcloud Deck dialog**
