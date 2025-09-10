@@ -83,21 +83,23 @@ void OpenAiService::initializeBackends() {
     _backendModels[QStringLiteral("openai")] =
         QStringList{"gpt-4o",     "chatgpt-4o-latest", "gpt-4o-mini",   "o1-mini",
                     "o1-preview", "gpt-4-turbo",       "gpt-3.5-turbo", "gpt-4"};
-    _backendModels[QStringLiteral("groq")] = QStringList{"qwen-2.5-32b",
-                                                         "deepseek-r1-distill-qwen-32b",
-                                                         "deepseek-r1-distill-llama-70b",
-                                                         "llama-3.1-8b-instant",
-                                                         "llama-3.2-11b-vision-preview",
-                                                         "llama-3.2-1b-preview",
-                                                         "llama-3.2-3b-preview",
-                                                         "llama-3.2-90b-vision-preview",
-                                                         "llama-3.3-70b-specdec",
-                                                         "llama-3.3-70b-versatile",
-                                                         "llama3-70b-8192",
-                                                         "llama3-8b-8192",
-                                                         "llama-guard-3-8b",
-                                                         "mixtral-8x7b-32768",
-                                                         "gemma2-9b-it"};
+    _backendModels[QStringLiteral("groq")] =
+        QStringList{"llama-3.1-8b-instant",
+                    "deepseek-r1-distill-llama-70b",
+                    "gemma2-9b-it",
+                    "llama-3.3-70b-versatile",
+                    "qwen/qwen3-32b",
+                    "groq/compound",
+                    "groq/compound-mini",
+                    "meta-llama/llama-4-maverick-17b-128e-instruct",
+                    "meta-llama/llama-4-scout-17b-16e-instruct",
+                    "meta-llama/llama-guard-4-12b",
+                    "meta-llama/llama-prompt-guard-2-86m",
+                    "meta-llama/llama-prompt-guard-2-22m",
+                    "moonshotai/kimi-k2-instruct",
+                    "moonshotai/kimi-k2-instruct-0905",
+                    "openai/gpt-oss-120b",
+                    "openai/gpt-oss-20b"};
 
     _backendApiBaseUrls.clear();
     _backendApiBaseUrls[QStringLiteral("openai")] =
