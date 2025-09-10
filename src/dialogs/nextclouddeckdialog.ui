@@ -134,6 +134,34 @@
           </spacer>
          </item>
          <item>
+          <widget class="QPushButton" name="archiveCardButton">
+           <property name="toolTip">
+            <string>Archive card</string>
+           </property>
+           <property name="text">
+            <string>Archive</string>
+           </property>
+           <property name="icon">
+            <iconset theme="archive-extract" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/archive-extract.svg</normaloff>:/icons/breeze-qownnotes/16x16/archive-extract.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="deleteCardButton">
+           <property name="toolTip">
+            <string>Delete card</string>
+           </property>
+           <property name="text">
+            <string>Delete</string>
+           </property>
+           <property name="icon">
+            <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QPushButton" name="saveButton">
            <property name="toolTip">
             <string>Create card and insert link into current note</string>
@@ -226,7 +254,7 @@
          <item>
           <widget class="QPushButton" name="reloadCardListButton">
            <property name="toolTip">
-            <string>Reload the todo list from server</string>
+            <string>Reload the card item list from server</string>
            </property>
            <property name="text">
             <string>Reload…</string>
@@ -278,6 +306,8 @@
   <tabstop>subd1DayButton</tabstop>
   <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
   <tabstop>reloadCardListButton</tabstop>
+  <tabstop>archiveCardButton</tabstop>
+  <tabstop>deleteCardButton</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>

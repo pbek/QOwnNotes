@@ -19,6 +19,8 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     setupUi();
     _currentCard = NextcloudDeckService::Card();
     ui->saveButton->setEnabled(false);
+    ui->archiveCardButton->setEnabled(false);
+    ui->deleteCardButton->setEnabled(false);
     ui->dueDateTimeCheckBox->setChecked(true);
     ui->newItemEdit->setFocus();
 
@@ -57,16 +59,8 @@ void NextcloudDeckDialog::setupUi() {
     insertAction->setIcon(QIcon::fromTheme(
         QStringLiteral("document-save"), QIcon(":icons/breeze-qownnotes/16x16/document-save.svg")));
     insertAction->setToolTip(
-        tr("Save the current todo item and insert a link"
-           " to it into the current note"));
+        tr("Save the current card item and insert a link to it into the current note"));
     //    connect(insertAction, SIGNAL(triggered()), this, SLOT(onSaveAndInsertButtonClicked()));
-
-    QAction *importAction = noteMenu->addAction(tr("Import as note"));
-    importAction->setIcon(
-        QIcon::fromTheme(QStringLiteral("document-import"),
-                         QIcon(":icons/breeze-qownnotes/16x16/document-import.svg")));
-    importAction->setToolTip(tr("Import the current todo item as new note"));
-    //    connect(importAction, SIGNAL(triggered()), this, SLOT(onImportAsNoteButtonClicked()));
 
     //    ui->noteButton->setMenu(noteMenu);
 
@@ -240,6 +234,8 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->dueDateTimeCheckBox->setChecked(false);
     ui->dueDateTimeEdit->setEnabled(false);
     ui->saveButton->setEnabled(false);
+    ui->archiveCardButton->setEnabled(false);
+    ui->deleteCardButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
 }
 
@@ -273,6 +269,8 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetIt
         }
 
         ui->saveButton->setEnabled(true);
+        ui->archiveCardButton->setEnabled(true);
+        ui->deleteCardButton->setEnabled(true);
         ui->editFrame->setEnabled(true);
     } else {
         resetEditFrameControls();
@@ -295,3 +293,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
     ui->dueDateTimeCheckBox->setChecked(true);
 }
+
+void NextcloudDeckDialog::on_deleteCardButton_clicked() {}
+
+void NextcloudDeckDialog::on_archiveCardButton_clicked() {}

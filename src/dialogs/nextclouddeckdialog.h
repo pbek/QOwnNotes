@@ -50,6 +50,10 @@ class NextcloudDeckDialog : public MasterDialog {
 
     void on_newItemEdit_returnPressed();
 
+    void on_deleteCardButton_clicked();
+
+    void on_archiveCardButton_clicked();
+
    private:
     Ui::NextcloudDeckDialog *ui;
     void setupMainSplitter();
