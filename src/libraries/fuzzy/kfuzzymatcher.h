@@ -74,14 +74,12 @@ using StringType = const QString&;
  * @short Namespace for fuzzy matching of strings
  * @author Waqar Ahmed <waqar.17a@gmail.com>
  */
-namespace KFuzzyMatcher
-{
+namespace KFuzzyMatcher {
 
 /**
  * @brief The result of a fuzzy match
  */
-struct Result
-{
+struct Result {
     /** Score of this match. This can be negative. if matched is @c false
         then the score will be zero.
     */
@@ -126,9 +124,7 @@ bool matchSimple(StringType pattern, StringType str);
  */
 Result match(StringType pattern, StringType str);
 
-QString toFuzzyMatchedDisplayString(const QString& pattern,
-                                    const QString& str,
-                                    const QString& htmlTag,
-                                    const QString& htmlTagClose);
+QString toFuzzyMatchedDisplayString(const QString& pattern, const QString& str,
+                                    const QString& htmlTag, const QString& htmlTagClose);
 
-} // namespace KFuzzyMatcher
+}    // namespace KFuzzyMatcher

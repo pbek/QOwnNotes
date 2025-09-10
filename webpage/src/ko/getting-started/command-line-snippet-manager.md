@@ -23,6 +23,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## 의존성
@@ -35,7 +36,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-스니펫 관리자를 사용하기 전에 QOwnNotes의 *브라우저 확장 / 명령 스니펫* (1) 설정에서 *Web socket server* (2) 를 사용 가능으로 설정해야 합니다.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 그런 다음 보안 토큰 (3)을 표시하고 복사해야 합니다 (4).
 
@@ -61,11 +62,13 @@ token = "yourtokenhere"
 인라인 코드 블록 앞에 `cmd:`를 추가하면 노트 태그에 관계없이 **현재 노트**에서도 명령어를 찾을 수 있습니다.
 
 ```markdown
-- `echo I am a command` 나는 설명 #tag1 #tag2 #tag3
-* `echo I am also a command` 나는 설명 #tag3 #tag4 #tag5
-- cmd: `echo I will be found in the current note` 이 명령은 노트 태그에 관계없이 현재 노트에서 찾을 수 있습니다
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
 
-<!-- 사용자 입력 요청 예제 -->
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
+
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
 
 - `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```

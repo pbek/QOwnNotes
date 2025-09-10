@@ -54,16 +54,14 @@ graph TB
 - También puede **acceder a su historial de notas y a la papelera** en su servidor Nextcloud / ownCloud a través de la [aplicación QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
 - Se puede acceder a las listas de tareas en su servidor Nextcloud / ownCloud desde QOwnNotes
 - **¡QOwnNotes no sincroniza sus notas** y archivos multimedia / adjuntos!
-    - La sincronización de archivos es una tarea compleja, ya existen excelentes soluciones de sincronización de archivos (consulte [Cliente de sincronización de escritorio de Nextcloud](#nextcloud-desktop-sync-client))
-
+  - La sincronización de archivos es una tarea compleja, ya existen excelentes soluciones de sincronización de archivos (consulte [Cliente de sincronización de escritorio de Nextcloud](#nextcloud-desktop-sync-client))
 
 ## Archivos de notas de Markdown
 
-- ¡Tú eres **dueño** de todas tus notas y archivos multimedia / adjuntos!
+- ¡Usted es **dueño** de todas sus notas y archivos multimedia/adjuntos!
 - Sus notas se almacenan como **archivos Markdown de texto sin formato** en su computadora de escritorio
 - Puede utilizar cualquier editor de texto que desee junto a QOwnNotes para ver o editar sus archivos de notas
 - **Sincronice sus notas** con otros dispositivos (escritorio y móvil) con su cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con su servidor
-
 
 ## Extensión del navegador QOwnNotes
 
@@ -134,7 +132,7 @@ Para acceder a sus notas de Nextcloud / ownCloud desde su **dispositivo móvil**
 - [ Nextcloud Notes para Android ](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (terceros)
 
 ::: tip
-También puede usar cualquier herramienta de sincronización, como *Synchronize Ultimate* o *FolderSync*, para sincronizar sus archivos de notas, y usar software como *neutriNotes* para editarlas.
+También puede usar cualquier herramienta de sincronización, como _Synchronize Ultimate_ o _FolderSync_, para sincronizar sus archivos de notas, y usar software como _neutriNotes_ o [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) para editarlas.
 :::
 
 ### iOS

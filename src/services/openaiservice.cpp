@@ -60,6 +60,10 @@ OpenAiService* OpenAiService::instance() {
     return service;
 }
 
+int OpenAiService::getResponseTimeout() {
+    return SettingsService().value(QStringLiteral("ai/responseTimeout"), 15).toInt();
+}
+
 /**
  * Creates a global instance of the class
  */
@@ -77,27 +81,29 @@ void OpenAiService::deleteInstance() {
 void OpenAiService::initializeBackends() {
     _backendModels.clear();
     _backendModels[QStringLiteral("openai")] =
-        QStringList{"gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo", "gpt-4"};
+    QStringList{"gpt-4o",     "chatgpt-4o-latest", "gpt-4o-mini",   "o1-mini",
+                    "o1-preview", "gpt-4-turbo",       "gpt-3.5-turbo", "gpt-4"};
     _backendModels[QStringLiteral("groq")] = QStringList{
-        // Models to keep
-        "llama-3.1-8b-instant",
-        "deepseek-r1-distill-llama-70b",
-        "gemma2-9b-it",
-        "llama-3.3-70b-versatile",
-        // Newly added models
-        "qwen/qwen3-32b",
-        "groq/compound",
-        "groq/compound-mini",
-        "meta-llama/llama-4-maverick-17b-128e-instruct",
-        "meta-llama/llama-4-scout-17b-16e-instruct",
-        "meta-llama/llama-guard-4-12b",
-        "meta-llama/llama-prompt-guard-2-86m",
-        "meta-llama/llama-prompt-guard-2-22m",
-        "moonshotai/kimi-k2-instruct",
-        "moonshotai/kimi-k2-instruct-0905",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-20b"
+          // Models to keep
+          "llama-3.1-8b-instant",
+          "deepseek-r1-distill-llama-70b",
+          "gemma2-9b-it",
+          "llama-3.3-70b-versatile",
+          // Newly added models
+          "qwen/qwen3-32b",
+          "groq/compound",
+          "groq/compound-mini",
+          "meta-llama/llama-4-maverick-17b-128e-instruct",
+          "meta-llama/llama-4-scout-17b-16e-instruct",
+          "meta-llama/llama-guard-4-12b",
+          "meta-llama/llama-prompt-guard-2-86m",
+          "meta-llama/llama-prompt-guard-2-22m",
+          "moonshotai/kimi-k2-instruct",
+          "moonshotai/kimi-k2-instruct-0905",
+          "openai/gpt-oss-120b",
+          "openai/gpt-oss-20b"
     };
+main
 
     _backendApiBaseUrls.clear();
     _backendApiBaseUrls[QStringLiteral("openai")] =
@@ -242,7 +248,7 @@ QString OpenAiService::getModelId() {
     // If still not set get the first of the models
     if (this->_modelId.isEmpty()) {
         const QStringList& models = getModelsForCurrentBackend();
-        this->_modelId = models.isEmpty() ? QStringLiteral("") : models.first();
+        this->_modelId = models.isEmpty() ? QLatin1String("") : models.first();
     }
 
     return this->_modelId;
@@ -323,8 +329,8 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
     QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
 
-    // 15 sec timeout for the request
-    timer.start(15000);
+    // 15 sec timeout for the response by default
+    timer.start(OpenAiService::getResponseTimeout() * 1000);
 
     QUrl url(apiBaseUrl);
     QNetworkRequest request(url);

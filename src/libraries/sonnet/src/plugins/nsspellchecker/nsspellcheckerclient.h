@@ -28,12 +28,11 @@ class SpellerPlugin;
 }
 using Sonnet::SpellerPlugin;
 
-class NSSpellCheckerClient : public Sonnet::Client
-{
+class NSSpellCheckerClient : public Sonnet::Client {
     Q_OBJECT
     Q_INTERFACES(Sonnet::Client)
     Q_PLUGIN_METADATA(IID "org.kde.Sonnet.NSSpellClient")
-public:
+   public:
     explicit NSSpellCheckerClient(QObject *parent = nullptr);
     ~NSSpellCheckerClient();
 
@@ -41,10 +40,7 @@ public:
 
     SpellerPlugin *createSpeller(const QString &language);
     QStringList languages() const;
-    QString name() const
-    {
-        return QStringLiteral("NSSpellChecker");
-    }
+    QString name() const { return QStringLiteral("NSSpellChecker"); }
 };
 
 #endif

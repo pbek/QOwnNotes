@@ -220,7 +220,7 @@ bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
         DatabaseService::getAppData(QStringLiteral("database_version")).toInt();
 
     this->accountId = databaseVersion >= 41 ? query.value(QStringLiteral("account_id")).toString()
-                                            : QStringLiteral("");
+                                            : QLatin1String("");
 
     this->appQOwnNotesAPIEnabled =
         databaseVersion >= 34 ? query.value(QStringLiteral("qownnotesapi_enabled")).toBool() : true;

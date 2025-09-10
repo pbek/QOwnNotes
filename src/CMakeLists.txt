@@ -1,18 +1,23 @@
 cmake_minimum_required(VERSION 3.5)
 project(QOwnNotes)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
 option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
+
+option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
+option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
 # END options
 
-if (QON_QT6_BUILD)
-    set(QT_VERSION_MAJOR 6)
-    set(QT_DEFAULT_MAJOR_VERSION 6)
+if(QON_QT6_BUILD)
+  set(QT_VERSION_MAJOR 6)
+  set(QT_DEFAULT_MAJOR_VERSION 6)
 else()
-    set(QT_VERSION_MAJOR 5)
+  set(QT_VERSION_MAJOR 5)
 endif()
 
 # put the QOwnNotes.exe in build directory
@@ -23,55 +28,90 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 # include some Botan settings
 add_subdirectory(libraries/botan)
-#include sonnet core directory, required for building plugins
+# include sonnet core directory, required for building plugins
 include_directories(libraries/sonnet/src/core)
-#some hunspell settings for windows
+# some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
+
+if(BUILD_WITH_LIBGIT2)
+  # Find libgit2
+  find_package(PkgConfig REQUIRED)
+  pkg_check_modules(LIBGIT2 REQUIRED libgit2)
+
+  if(NOT LIBGIT2_FOUND)
+    message(
+      FATAL_ERROR
+        "libgit2 was not found. Please install libgit2-dev or the appropriate package for your system."
+    )
+  endif()
+
+  include_directories(${LIBGIT2_INCLUDE_DIRS})
+  link_directories(${LIBGIT2_LIBRARY_DIRS})
+endif()
+
+if(BUILD_WITH_ASPELL)
+  find_path(ASPELL_INCLUDE_DIR aspell.h)
+  find_library(ASPELL_LIBRARIES aspell)
+  if(NOT ASPELL_INCLUDE_DIR OR NOT ASPELL_LIBRARIES)
+    message(
+      FATAL_ERROR
+        "aspell library or headers not found. Please install aspell-devel or libaspell-dev."
+    )
+  endif()
+  include_directories(${ASPELL_INCLUDE_DIR})
+endif()
 
 add_executable(QOwnNotes "")
 
-if (CMAKE_BUILD_TYPE MATCHES Debug)
-    message("Debug build configuration detected")
-    add_definitions(-DQT_DEBUG)
+if(BUILD_WITH_LIBGIT2)
+  target_compile_definitions(QOwnNotes PUBLIC USE_LIBGIT2)
+  target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
+endif()
+
+if(BUILD_WITH_ASPELL)
+  target_compile_definitions(QOwnNotes PUBLIC ASPELL_ENABLED)
+  target_link_libraries(QOwnNotes PRIVATE ${ASPELL_LIBRARIES})
+endif()
+
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  message("Debug build configuration detected")
+  add_definitions(-DQT_DEBUG)
 else()
-    message("Non-debug build configuration detected")
+  message("Non-debug build configuration detected")
 endif()
 
-set_target_properties(QOwnNotes PROPERTIES
-    CXX_STANDARD 11
-    CXX_STANDARD_REQUIRED ON
-    AUTOMOC ON
-    AUTOUIC ON
-    AUTORCC ON
-)
+set_target_properties(
+  QOwnNotes
+  PROPERTIES CXX_STANDARD 11
+             CXX_STANDARD_REQUIRED ON
+             AUTOMOC ON
+             AUTOUIC ON
+             AUTORCC ON)
 
-if (UNIX AND DEV_MODE)
-    if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-        target_compile_options(QOwnNotes PRIVATE
-            -Wall -Wextra -pedantic -Wno-gnu-zero-variadic-macro-arguments -Wno-error=deprecated-declarations
-        )
-    else()
-        target_compile_options(QOwnNotes PRIVATE
-            -Wall -Wextra -pedantic -Wno-error=deprecated-declarations
-        )
-    endif()
+if(UNIX AND DEV_MODE)
+  if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    target_compile_options(
+      QOwnNotes
+      PRIVATE -Wall -Wextra -pedantic -Wno-gnu-zero-variadic-macro-arguments
+              -Wno-error=deprecated-declarations)
+  else()
+    target_compile_options(QOwnNotes PRIVATE -Wall -Wextra -pedantic
+                                             -Wno-error=deprecated-declarations)
+  endif()
 
-    # enable werror on linux
-    if (NOT APPLE)
-        message("Werror enabled on linux")
-        target_compile_options(QOwnNotes PRIVATE -Werror)
-    endif()
+  # enable werror on linux
+  if(NOT APPLE)
+    message("Werror enabled on linux")
+    target_compile_options(QOwnNotes PRIVATE -Werror)
+  endif()
 endif()
 
-target_include_directories(QOwnNotes PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}
-    ${CMAKE_CURRENT_BINARY_DIR}
-)
+target_include_directories(QOwnNotes PRIVATE ${CMAKE_CURRENT_LIST_DIR}
+                                             ${CMAKE_CURRENT_BINARY_DIR})
 
 # Disable shared library building of libraries
 set(BUILD_SHARED_LIBS OFF)
-# QHotKey library
-# Disable building tests inside QHotKey library
+# QHotKey library Disable building tests inside QHotKey library
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 set(QHOTKEY_EXAMPLES OFF)
 add_subdirectory(libraries/qhotkey EXCLUDE_FROM_ALL)
@@ -79,41 +119,43 @@ add_subdirectory(libraries/qhotkey EXCLUDE_FROM_ALL)
 # FakeVim library
 set(CREATE_STATIC_LIBRARY ON)
 if(MSVC)
-    add_compile_definitions(FAKEVIM_STATIC_DEFINE QTCREATOR_UTILS_STATIC_LIB)
+  add_compile_definitions(FAKEVIM_STATIC_DEFINE QTCREATOR_UTILS_STATIC_LIB)
 endif()
 add_subdirectory(libraries/fakevim EXCLUDE_FROM_ALL)
 add_subdirectory(libraries/diff_match_patch EXCLUDE_FROM_ALL)
 
 option(USE_QLITE_HTML "Build using QLiteHtml for preview" OFF)
-if (USE_QLITEHTML)
-    add_definitions(-DUSE_QLITEHTML=1)
-    add_subdirectory(libraries/qlitehtml EXCLUDE_FROM_ALL)
+if(USE_QLITEHTML)
+  add_definitions(-DUSE_QLITEHTML=1)
+  add_subdirectory(libraries/qlitehtml EXCLUDE_FROM_ALL)
 endif()
 
 message("Using Qt version ${QT_VERSION_MAJOR}")
 set(QT_NO_CREATE_VERSIONLESS_FUNCTIONS ON)
 
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS REQUIRED
-    LinguistTools
-    Core
-    Widgets
-    Gui
-    Sql
-    Svg
-    Network
-    Xml
-    PrintSupport
-    WebSockets
-    Qml
-    Concurrent
-)
+find_package(
+  Qt${QT_VERSION_MAJOR}
+  COMPONENTS
+  REQUIRED
+  LinguistTools
+  Core
+  Widgets
+  Gui
+  Sql
+  Svg
+  Network
+  Xml
+  PrintSupport
+  WebSockets
+  Qml
+  Concurrent)
 
 find_program(CCACHE_FOUND ccache)
 
 if(CCACHE_FOUND)
-    message(STATUS "ccache found")
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
+  message(STATUS "ccache found")
+  set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
+  set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif(CCACHE_FOUND)
 
 set(RESOURCE_FILES
@@ -126,8 +168,7 @@ set(RESOURCE_FILES
     configurations.qrc
     libraries/qmarkdowntextedit/media.qrc
     libraries/qdarkstyle/style.qrc
-    libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc
-)
+    libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc)
 
 set(SOURCE_FILES
     dialogs/welcomedialog.cpp
@@ -258,6 +299,8 @@ set(SOURCE_FILES
     helpers/qownspellchecker.h
     helpers/codetohtmlconverter.cpp
     helpers/codetohtmlconverter.h
+    helpers/nomenuiconstyle.cpp
+    helpers/nomenuiconstyle.h
     api/noteapi.cpp
     api/noteapi.h
     api/notesubfolderapi.cpp
@@ -293,6 +336,8 @@ set(SOURCE_FILES
     libraries/qtcsv/src/sources/reader.cpp
     libraries/qtcsv/src/sources/filechecker.h
     libraries/qtcsv/src/sources/symbols.h
+    libraries/qtwaitingspinner/waitingspinnerwidget.h
+    libraries/qtwaitingspinner/waitingspinnerwidget.cpp
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp
@@ -343,10 +388,8 @@ set(SOURCE_FILES
     libraries/fuzzy/kfuzzymatcher.cpp
     libraries/qr-code-generator/QrCode.hpp
     libraries/qr-code-generator/QrCode.cpp
-
     threads/scriptthread.cpp
     threads/scriptthread.h
-
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     widgets/navigationwidget.cpp
@@ -397,6 +440,8 @@ set(SOURCE_FILES
     widgets/htmlpreviewwidget.cpp
     widgets/notesubfoldertree.cpp
     widgets/notesubfoldertree.h
+    widgets/noterelationscene.cpp
+    widgets/noterelationscene.h
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp
@@ -422,71 +467,81 @@ set(SOURCE_FILES
     services/websocketserverservice.h
     services/webappclientservice.cpp
     services/webappclientservice.h
-    entities/bookmark.h entities/bookmark.cpp
-    entities/commandsnippet.h entities/commandsnippet.cpp)
+    entities/bookmark.h
+    entities/bookmark.cpp
+    entities/commandsnippet.h
+    entities/commandsnippet.cpp)
 
 # spellchecker
-list(APPEND SOURCE_FILES
-    libraries/sonnet/src/plugins/hunspell/hunspellclient.cpp
-    libraries/sonnet/src/plugins/hunspell/hunspellclient.h
-    libraries/sonnet/src/plugins/hunspell/hunspelldebug.cpp
-    libraries/sonnet/src/plugins/hunspell/hunspelldebug.h
-    libraries/sonnet/src/plugins/hunspell/hunspelldict.cpp
-    libraries/sonnet/src/plugins/hunspell/hunspelldict.h
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affentry.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affentry.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affixmgr.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affixmgr.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/atypes.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/baseaffix.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/csutil.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/csutil.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/filemgr.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/filemgr.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hashmgr.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hashmgr.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/htypes.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.h
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunvisapi.h
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunvisapi.h.in
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunzip.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunzip.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/langnum.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/phonet.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/phonet.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/replist.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/replist.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/suggestmgr.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/suggestmgr.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/utf_info.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/w_char.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/firstparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/firstparser.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/htmlparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/htmlparser.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/latexparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/latexparser.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/manparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/manparser.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/odfparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/odfparser.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.hxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.cxx
-    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx
-)
+list(
+  APPEND
+  SOURCE_FILES
+  libraries/sonnet/src/plugins/hunspell/hunspellclient.cpp
+  libraries/sonnet/src/plugins/hunspell/hunspellclient.h
+  libraries/sonnet/src/plugins/hunspell/hunspelldebug.cpp
+  libraries/sonnet/src/plugins/hunspell/hunspelldebug.h
+  libraries/sonnet/src/plugins/hunspell/hunspelldict.cpp
+  libraries/sonnet/src/plugins/hunspell/hunspelldict.h
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affentry.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affentry.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affixmgr.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affixmgr.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/atypes.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/baseaffix.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/csutil.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/csutil.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/filemgr.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/filemgr.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hashmgr.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hashmgr.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/htypes.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.h
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunvisapi.h
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunvisapi.h.in
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunzip.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunzip.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/langnum.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/phonet.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/phonet.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/replist.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/replist.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/suggestmgr.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/suggestmgr.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/utf_info.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/w_char.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/firstparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/firstparser.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/htmlparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/htmlparser.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/latexparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/latexparser.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/manparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/manparser.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/odfparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/odfparser.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.hxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.cxx
+  libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx)
+
+if(BUILD_WITH_ASPELL)
+  list(
+    APPEND
+    SOURCE_FILES
+    libraries/sonnet/src/plugins/aspell/aspellclient.cpp
+    libraries/sonnet/src/plugins/aspell/aspellclient.h
+    libraries/sonnet/src/plugins/aspell/aspelldict.cpp
+    libraries/sonnet/src/plugins/aspell/aspelldict.h)
+endif()
 
 # md4c
-list(APPEND SOURCE_FILES
-    libraries/md4c/src/md4c.c
-    libraries/md4c/src/md4c-html.c
-    libraries/md4c/src/entity.c
-)
+list(APPEND SOURCE_FILES libraries/md4c/src/md4c.c
+     libraries/md4c/src/md4c-html.c libraries/md4c/src/entity.c)
 
 # Translation files
-SET(QON_TS_FILES
+set(QON_TS_FILES
     languages/QOwnNotes_en.ts
     languages/QOwnNotes_de.ts
     languages/QOwnNotes_fr.ts
@@ -552,68 +607,76 @@ SET(QON_TS_FILES
     languages/QOwnNotes_mk.ts
     languages/QOwnNotes_ko.ts
     languages/QOwnNotes_et.ts
-)
+    languages/QOwnNotes_en_GB.ts)
 
-if (QON_QT6_BUILD)
-    qt6_add_translation(QON_QM_FILES ${QON_TS_FILES})
+if(QON_QT6_BUILD)
+  qt6_add_translation(QON_QM_FILES ${QON_TS_FILES})
 else()
-    qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})
+  qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})
 endif()
 
 add_custom_target(translations DEPENDS ${QON_QM_FILES})
 
-target_sources(QOwnNotes PRIVATE
-    ${SOURCE_FILES}
-    ${RESOURCE_FILES}
-    ${QON_QM_FILES}
-)
+target_sources(QOwnNotes PRIVATE ${SOURCE_FILES} ${RESOURCE_FILES}
+                                 ${QON_QM_FILES})
 
 # The Qt5::Widgets target will also link Qt::Gui and Qt::Core targets
-target_link_libraries(QOwnNotes PRIVATE
-    Qt${QT_VERSION_MAJOR}::Widgets
-    Qt${QT_VERSION_MAJOR}::Sql
-    Qt${QT_VERSION_MAJOR}::Svg
-    Qt${QT_VERSION_MAJOR}::Network
-    Qt${QT_VERSION_MAJOR}::Xml
-    Qt${QT_VERSION_MAJOR}::PrintSupport
-    Qt${QT_VERSION_MAJOR}::WebSockets
-    Qt${QT_VERSION_MAJOR}::Qml
-    Qt${QT_VERSION_MAJOR}::Concurrent
-    QHotkey::QHotkey
-    Botan::Botan
-    fakevim
-    Google::DiffMatchPatch
-)
+target_link_libraries(
+  QOwnNotes
+  PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
+          Qt${QT_VERSION_MAJOR}::Sql
+          Qt${QT_VERSION_MAJOR}::Svg
+          Qt${QT_VERSION_MAJOR}::Network
+          Qt${QT_VERSION_MAJOR}::Xml
+          Qt${QT_VERSION_MAJOR}::PrintSupport
+          Qt${QT_VERSION_MAJOR}::WebSockets
+          Qt${QT_VERSION_MAJOR}::Qml
+          Qt${QT_VERSION_MAJOR}::Concurrent
+          QHotkey::QHotkey
+          Botan::Botan
+          fakevim
+          Google::DiffMatchPatch)
 
-if (USE_QLITEHTML)
-    target_link_libraries(QOwnNotes PRIVATE
-        qlitehtml::qlitehtml
-    )
+if(USE_QLITEHTML)
+  target_link_libraries(QOwnNotes PRIVATE qlitehtml::qlitehtml)
+endif()
+
+if(BUILD_WITH_LIBGIT2)
+  target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
+endif()
+
+if(BUILD_WITH_ASPELL)
+  target_link_libraries(QOwnNotes PRIVATE ${ASPELL_LIBRARIES})
 endif()
 
 if(MINGW OR MSVC)
-    # Qt 5 does not define UNICODE for CMake
-    # only qmake automatically define UNICODE
-    target_compile_definitions(QOwnNotes PRIVATE
-        UNICODE _UNICODE
-    )
+  # Qt 5 does not define UNICODE for CMake only qmake automatically define
+  # UNICODE
+  target_compile_definitions(QOwnNotes PRIVATE UNICODE _UNICODE)
 endif()
 
 if(MSVC)
-    target_compile_definitions(QOwnNotes PRIVATE
-        NOMINMAX
-    )
+  target_compile_definitions(QOwnNotes PRIVATE NOMINMAX)
 endif()
 
 add_compile_definitions(QAPPLICATION_CLASS=QApplication)
 
-## Installation
+# Installation
 
 install(TARGETS QOwnNotes DESTINATION bin)
-install(DIRECTORY images/icons DESTINATION share/icons/hicolor)
+foreach(
+  SIZE
+  16x16
+  24x24
+  32x32
+  48x48
+  64x64
+  96x96
+  128x128
+  256x256
+  512x512
+  scalable)
+  install(DIRECTORY images/icons/${SIZE} DESTINATION share/icons/hicolor)
+endforeach()
 install(FILES PBE.QOwnNotes.desktop DESTINATION share/applications)
-if (QON_QT6_BUILD)
-    install(FILES ${QON_QM_FILES} DESTINATION share/qt6/translations)
-else()
-    install(FILES ${QON_QM_FILES} DESTINATION share/qt5/translations)
-endif()
+install(FILES ${QON_QM_FILES} DESTINATION share/QOwnNotes/translations)

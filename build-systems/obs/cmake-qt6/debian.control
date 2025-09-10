@@ -1,0 +1,59 @@
+Source: qownnotes
+Section: editors
+Priority: optional
+Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
+Build-Depends:
+ cmake (>= 3.16),
+ debhelper-compat (= 13),
+ pkg-config,
+ qt6-base-dev,
+ qt6-declarative-dev,
+ qt6-l10n-tools,
+ qt6-svg-dev,
+ qt6-tools-dev,
+ qt6-tools-dev-tools,
+ qt6-websockets-dev
+Rules-Requires-Root: no
+Standards-Version: 4.6.2
+Homepage: https://github.com/pbek/QOwnNotes
+Vcs-Git: https://github.com/pbek/QOwnNotes.git
+Vcs-Browser: https://github.com/pbek/QOwnNotes/
+
+Package: qownnotes
+Architecture: any
+Recommends: qownnotes-l10n
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ libqt6core6,
+ libqt6gui6,
+ libqt6sql6,
+ libqt6sql6-sqlite,
+ libqt6svg6,
+ libqt6widgets6,
+ libqt6qml6,
+ libqt6network6,
+ libqt6xml6,
+ libqt6websockets6,
+ qt6-wayland,
+ qt6-qpa-plugins,
+ qml6-module-qtqml,
+ qml6-module-qtqml-workerscript,
+ qml6-module-qtqml-models,
+ openssl
+Description: Plain-text file markdown note taking with Nextcloud/ownCloud integration
+ Plain-text file markdown note taking with Nextcloud/ownCloud
+ integration. You own your own notes! All notes are stored as
+ plain-text files on your desktop computer. Sync them over devices
+ (desktop & mobile) with Nextcloud. Use Nextcloud Notes to edit your
+ notes in the web.
+
+Package: qownnotes-l10n
+Architecture: all
+Multi-Arch: foreign
+Section: localization
+Depends:
+ ${misc:Depends},
+ qt6-translations-l10n
+Description: Language package for qownnotes
+ This package contains the l10n files needed by the qownnotes.

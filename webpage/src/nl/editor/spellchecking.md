@@ -3,16 +3,16 @@
 Laat uw spelfouten corrigeren!
 
 ::: tip Info
-QOwnNotes heeft een ingebouwde **Dictionary Manager** (in het menu *Bewerken*) die u kunt gebruiken om woordenboeken te downloaden of te verwijderen (als u uw taal mist, kijk dan hieronder hoe u het toevoegen van een woordenboek kunt aanvragen). Als u de woordenboeken handmatig wilt downloaden, kunt u onderstaande instructies volgen.
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). Als u de woordenboeken handmatig wilt downloaden, kunt u onderstaande instructies volgen.
 :::
 
 - Onder **Linux** kunt u de Hunspell-woordenboeken voor uw taal installeren met behulp van de pkg-manager van uw distro
-    - Als u extra taalbestanden moet toevoegen, kunt u dit doen in `~/.local/share/hunspell` of `/usr/share/hunspell`.
-    - Als je het Snap-pakket van QOwnNotes gebruikt, kun je ook `~/hunspell` gebruiken voor taalbestanden, aangezien de Snap geen toegang heeft tot `~/.local`
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - Onder **Windows** moet u Hunspell-woordenboeken voor uw taal kopiëren naar een map `dicts` in uw QOwnNotes-toepassingsmap of in ` C:\Users\[gebruikersnaam]\dicts`
-    - U kunt woordenboeken downloaden van [LibreOffice-woordenboeken](https://github.com/LibreOffice/dictionaries)
-    - Onder **macOS** moet u Hunspell-woordenboeken voor uw taal kopiëren naar `/Library/Spelling` of `~/Library/Spelling`. Als de directory niet bestaat, moet u deze maken.
+  - U kunt woordenboeken downloaden van [LibreOffice-woordenboeken](https://github.com/LibreOffice/dictionaries)
+  - Onder **macOS** moet u Hunspell-woordenboeken voor uw taal kopiëren naar `/Library/Spelling` of `~/Library/Spelling`. Als de directory niet bestaat, moet u deze maken.
 
 Woordenboeken kunnen worden gedownload van [QOwnNotes dictionaries](https://github.com/qownnotes/dictionaries). Gebruik de tabel aan het einde van dit document om uw taal en de bijbehorende taalcode te vinden.
 

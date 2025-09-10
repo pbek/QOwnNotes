@@ -13,4 +13,4 @@ QOwnNotes now has its own **IRC channel** [\#qownnotes](irc://#qownnotes@freenod
 
 Click at [\#qownnotes](irc://#qownnotes@freenode.net) to open your IRC client or click on [QOwnNotes Webchat](http://webchat.freenode.net/?channels=qownnotes) for a web version.
 
- [ ![IRC Networking](/img/blog/IRC-Networking_reference.jpg "IRC Networking") ](irc://#qownnotes@freenode.net)
+[ ![IRC Networking](/img/blog/IRC-Networking_reference.jpg "IRC Networking") ](irc://#qownnotes@freenode.net)

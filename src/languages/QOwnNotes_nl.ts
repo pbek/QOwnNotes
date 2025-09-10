@@ -812,6 +812,10 @@
 <translation>Trefwoord tekens:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Bewerken in Vim-stijl gebruiken</translation>
 </message>
@@ -1485,6 +1489,10 @@
 <translation>Selecteer lokaal bestand of map om naar te linken</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Notitie</translation>
 </message>
@@ -1519,6 +1527,22 @@
 <message>
 <source>Select directory to link to</source>
 <translation>Selecteer map om naar te linken</translation>
+</message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation type="unfinished">Select file to link to (relative)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation type="unfinished">Select file to link to (absolute)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation type="unfinished">Select directory to link to (relative)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation type="unfinished">Select directory to link to (absolute)</translation>
 </message>
 </context>
 <context>
@@ -2112,6 +2136,14 @@
 <translation>Ontgrendel panelen</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>Zwevende panelen opnieuw vastmaken</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>Maakt alle zwevende panelen weer vast</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Huidige werkruimte verwijderen</translation>
 </message>
@@ -2184,8 +2216,12 @@
 <translation>Toon notitie git versies</translation>
 </message>
 <message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
+</message>
+<message>
 <source>Find scripts in script repository</source>
-<translation>Vind scripts in script archief</translation>
+<translation>Scripts zoeken in de script-opslagplaats</translation>
 </message>
 <message>
 <source>Script settings</source>
@@ -2295,7 +2331,7 @@
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation>Voeg een &amp;notitielink in</translation>
+<translation>&amp;Notitielink invoegen</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
@@ -2657,6 +2693,11 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation type="unfinished">Note</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>Notitie bestanden</translation>
 </message>
@@ -2667,6 +2708,27 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Verwijderde notities zijn van je ownCloud server geladen</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2739,6 +2801,14 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Map met notites &lt;b&gt;%1&lt;/b&gt; met pad &lt;b&gt;%2&lt;/b&gt; bestaat niet meer!</translation>
 </message>
 <message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>Rgl %1, Kol %2</translation>
@@ -2754,6 +2824,22 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <numerusform>%n geselecteerd</numerusform>
 <numerusform>%n geselecteerd</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation type="unfinished">No versions available</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation type="unfinished">No versions are available for this note.</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -2852,7 +2938,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-<translation>Updates van uw scripts zijn gevonden in de scriptrepository! Wil je ze updaten?</translation>
+<translation>Updates van je scripts zijn gevonden in de script-opslagplaats! Wil je ze updaten?</translation>
 </message>
 <message>
 <source>No script updates were found</source>
@@ -2950,6 +3036,24 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Rename workspace</source>
 <translation>Naam van de werkruimte</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -3292,6 +3396,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Notitie preview</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation>Notitierelaties</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Logboek</translation>
 </message>
@@ -3374,6 +3482,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Klik hier om te zien wat er veranderd is en om bij te werken naar de nieuwste versie</translation>
+</message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation>Wachten op antwoord van AI</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -4078,6 +4190,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <source>Note creation failed</source>
 <translation>Notitie maken is mislukt</translation>
 </message>
+<message>
+<source>Double-click to open note</source>
+<translation>Dubbelkliken om notitie te openen</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4317,8 +4433,15 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Niet in staat om een databaseverbinding met bestand '%1' te maken. Zijn de map en het bestand beschrijfbaar?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4328,18 +4451,12 @@ Are the folder and the file writeable?</source>
 <source>Cannot open database</source>
 <translation>Kan database niet openen</translation>
 </message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Kan geen databaseverbinding tot stand brengen met notitemapmap om %1 samen te voegen.
-Zijn de map en het bestand beschrijfbaar?</translation>
-</message>
 </context>
 <context>
 <name>ScriptRepositoryDialog</name>
 <message>
 <source>Script repository</source>
-<translation>Script archief</translation>
+<translation>Script-opslagplasts</translation>
 </message>
 <message>
 <source>Currently installed version:</source>
@@ -4347,7 +4464,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Installs the script</source>
-<translation>Installeer het script</translation>
+<translation>Installeert het script</translation>
 </message>
 <message>
 <source>Install</source>
@@ -4379,7 +4496,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Find script</source>
-<translation>Vind script</translation>
+<translation>Script zoeken</translation>
 </message>
 <message>
 <source>Script updates</source>
@@ -4391,7 +4508,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Authors</source>
-<translation>Auteur(s)</translation>
+<translation>Auteurs</translation>
 </message>
 <message>
 <source>Author</source>
@@ -4399,7 +4516,7 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Supported platforms</source>
-<translation>Ondersteunde platformen</translation>
+<translation>Ondersteunde platforms</translation>
 </message>
 <message>
 <source>Supported platform</source>
@@ -4407,32 +4524,32 @@ Zijn de map en het bestand beschrijfbaar?</translation>
 </message>
 <message>
 <source>Open repository</source>
-<translation>Open archief</translation>
+<translation>Opslagplaats openen</translation>
 </message>
 <message>
 <source>Update</source>
-<translation>Update</translation>
+<translation>Bijwerken</translation>
 </message>
 <message>
 <source>Updates the script</source>
-<translation>Update het script</translation>
+<translation>Werkt het script bij</translation>
 </message>
 <message>
 <source>Reinstall</source>
-<translation>Herinstalleren</translation>
+<translation>Opnieuw installeren</translation>
 </message>
 <message>
 <source>Reinstalls the script</source>
-<translation>Herinstalleer het script</translation>
+<translation>Installeert het script weer opnieuw</translation>
 </message>
 <message>
 <source>Platform not supported!</source>
-<translation>Het platform wordt niet ondersteund!</translation>
+<translation>Platform wordt niet ondersteund!</translation>
 </message>
 <message>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-<translation>Uw platform wordt niet ondersteund door dit script! Wilt u het toch installeren?</translation>
+<translation>Dit platform wordt niet ondersteund door dit script! Wil je het toch installeren?</translation>
 </message>
 <message>
 <source>Cancel</source>
@@ -4440,11 +4557,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Update app</source>
-<translation>Update app</translation>
+<translation>App bijwerken</translation>
 </message>
 <message>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-<translation>Vergeet niet uw installatie van QOwnNotes om dit script werken bijwerken!</translation>
+<translation>Vergeet niet je installatie van QOwnNotes bij te werken om dit script te laten functioneren!</translation>
 </message>
 <message>
 <source>Install successful</source>
@@ -5130,6 +5247,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Baskisch</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estlands</translation>
 </message>
@@ -5482,6 +5603,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Zoek naar taal</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation>Pictogrammen verbergen in menu's en in het dialoogvenster "Actie zoeken". Vereist herstart om van kracht te worden</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation>Menupictogrammen verbergen</translation>
+</message>
+<message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Statusbalk</translation>
 </message>
@@ -5620,6 +5757,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Verwijder automatisch volgspaties in de notitietekst</translation>
 </message>
 <message>
+<source>Git library</source>
+<translation type="unfinished">Git library</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
 <translation>Notities die groter zijn dan dit, worden niet weergegeven in de notitielijst</translation>
 </message>
@@ -5628,8 +5777,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Maximale bestandsgrootte van notities:</translation>
 </message>
 <message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
+</message>
+<message>
 <source>Search script repository for AI integration scripts</source>
-<translation>Scriptrepository doorzoeken op AI-integratiescripts</translation>
+<translation>Script-opslagplaats doorzoeken op AI-integratiescripts</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -5653,12 +5806,29 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Verbinding testen</translation>
 </message>
 <message>
+<source>API settings</source>
+<translation>API-instellingen</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation>Time-out voor reactie:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation>De tijd die de applicatie wacht op een reactie van de server voordat er een time-out optreedt en een foutmelding wordt geretourneerd.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>sec</translation>
+</message>
+<message>
 <source>AI backends added via the scripting engine</source>
 <translation>AI backends toegevoegd via de scripting engine</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation>Om gebruik te maken van de AI-backends, kunt u de opdracht scripting gebruiken &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, of kijk in de scriptrepository voor reeds geschreven scripts.</translation>
+<translation>Om gebruik te maken van de AI-backends, kunt u de opdracht scripting gebruiken &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, of kijk in de script-opslagplaats voor reeds geschreven scripts.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
@@ -5666,7 +5836,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation>Als alternatief kunt u ook in de scriptrepository zoeken naar reeds gemaakte AI-integratiescripts.</translation>
+<translation>Als alternatief kunt u ook in de script-opslagplaats zoeken naar reeds gemaakte AI-integratiescripts.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
@@ -6056,7 +6226,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Search script repository</source>
-<translation>Zoek script archief</translation>
+<translation>Script-opslagplaats doorzoeken</translation>
 </message>
 <message>
 <source>You optionally can use "%notePath%" for the path of the note.</source>
@@ -6178,7 +6348,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Repository:</source>
-<translation>Archief:</translation>
+<translation>Opslagplaats:</translation>
 </message>
 <message>
 <source>Author(s):</source>
@@ -6589,8 +6759,12 @@ Verbinding foutbericht: </translation>
 <translation>Verbinding met %1 (%2) testen</translation>
 </message>
 <message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+</message>
+<message>
 <source>Find a script in the script repository</source>
-<translation>Vind een script in het script archief</translation>
+<translation>Een script zoeken in de script-opslagplaats</translation>
 </message>
 <message>
 <source>Menu bar</source>
@@ -6641,7 +6815,7 @@ Verbinding foutbericht: </translation>
 </message>
 <message>
 <source>Open repository</source>
-<translation>Open archief</translation>
+<translation>Opslagplaats openen</translation>
 </message>
 <message>
 <source>Your script seems to be valid</source>
@@ -7726,10 +7900,6 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <translation>Toestemmingsfout</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>Het uitvoerbare bestand '%1' van QOwnNotes is niet beschrijfbaar! Het moet beschrijfbaar zijn door de huidige gebruiker om te kunnen worden bijgewerkt.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Het tijdelijke bestand '%1' kon niet uitvoerbaar worden gemaakt! U moet '%2' zelf vervangen.</translation>
 </message>
@@ -7776,6 +7946,10 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Doorgaan met bijwerken</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

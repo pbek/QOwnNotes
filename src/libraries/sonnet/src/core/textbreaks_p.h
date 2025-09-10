@@ -38,10 +38,8 @@ class TextBreaksPrivate;
  * @author Jacob Rideout <kde@jacobrideout.net>
  * @since 4.3
  */
-class TextBreaks
-{
-public:
-
+class TextBreaks {
+   public:
     struct Position {
         int start, length;
     };
@@ -102,8 +100,8 @@ public:
      */
     virtual Positions sentenceBreaks() const;
 
-private:
+   private:
     TextBreaksPrivate *const d;
 };
-}
+}    // namespace Sonnet
 #endif

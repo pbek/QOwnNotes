@@ -8,6 +8,7 @@ Consente di ritagliare da una pagina del browser e gestire i segnalibri del brow
 
 ::: tip
 Info
+
 - QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Companion funzioni.
 - Non è necessaria una connessione Internet. L'estensione del browser lavora **offline**.
 :::
@@ -15,13 +16,13 @@ Info
 ## Installazione
 
 1. Scarica l'estensione
-    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Pagina delle Estensioni Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - Puoi trovare l'estensione anche su [GitHub](https://github.com/qownnotes/web-companion/).
+   - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Pagina delle Estensioni Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - Puoi trovare l'estensione anche su [GitHub](https://github.com/qownnotes/web-companion/).
 2. Aggiungi il token di sicurezza per configurare l'estensione.
-    - La prima volta che clicchi sull'icona dell'estensione del browser di QOwnNotes, vedrai una finestra di dialogo col token di sicurezza. Copialo.
-    - Vai alla gestione delle tue estensioni del browser. Clicca sui dettagli dell'estensione QOwnNotes.
-    - Incolla il token nel campo del token di sicurezza.
+   - La prima volta che clicchi sull'icona dell'estensione del browser di QOwnNotes, vedrai una finestra di dialogo col token di sicurezza. Copialo.
+   - Vai alla gestione delle tue estensioni del browser. Clicca sui dettagli dell'estensione QOwnNotes.
+   - Incolla il token nel campo del token di sicurezza.
 3. Per usare la modalità in incognito devi prima consentire all'estensione di funzionare nelle finestre in incognito dalle impostazioni.
 
 ## Strumento di ritaglio web
@@ -33,9 +34,9 @@ Fai clic con il pulsante destro del mouse su una pagina web o sul testo selezion
 ::: warning
 Info Se il web clipper non funziona, si prega di controlare che l'applicazione desktop di QOwnNotes sia aperta e che l'estensione web di supporto sia configurata con il token di sicurezza.
 
-Inoltre assicurati di aver accettato il consenso tramite la finestra di avviso che compare quando clicchi l'icona dell'estensione sulla barra degli strumenti del browser.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
-Se stai usando Firefox dovresti accertarti di aver attivato il permesso facoltativo ` Accedere ai dati dei siti web` nelle impostazioni dei *permessi* dell'estensione. Altrimenti potresti riscontrare l'errore `TypeError: chrome.tabs.captureVisibleTab non sta funzionando`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -61,11 +62,12 @@ Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione 
 ### Sintassi dei collegamenti segnalibri
 
 ```markdown
-- [Nome pagina web](https://www.example.com)
-- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2
-- [Nome pagina web](https://www.example.com) solo descrizione
-- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2 descrizione e etichette
-* [Nome pagina web](https://www.example.com) funziona anche il carattere lista alternativo
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

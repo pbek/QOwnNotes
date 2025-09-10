@@ -71,8 +71,7 @@ typedef struct GumboInternalToken {
 
 // Initializes the tokenizer state within the GumboParser object, setting up a
 // parse of the specified text.
-void gumbo_tokenizer_state_init(
-    struct GumboInternalParser* parser, const char* text, size_t text_length);
+void gumbo_tokenizer_state_init(struct GumboInternalParser* parser, const char* text, size_t text_length);
 
 // Destroys the tokenizer state within the GumboParser object, freeing any
 // dynamically-allocated structures within it.
@@ -81,15 +80,13 @@ void gumbo_tokenizer_state_destroy(struct GumboInternalParser* parser);
 // Sets the tokenizer state to the specified value.  This is needed by some
 // parser states, which alter the state of the tokenizer in response to tags
 // seen.
-void gumbo_tokenizer_set_state(
-    struct GumboInternalParser* parser, GumboTokenizerEnum state);
+void gumbo_tokenizer_set_state(struct GumboInternalParser* parser, GumboTokenizerEnum state);
 
 // Flags whether the current node is a foreign content element.  This is
 // necessary for the markup declaration open state, where the tokenizer must be
 // aware of the state of the parser to properly tokenize bad comment tags.
 // http://www.whatwg.org/specs/web-apps/current-work/multipage/tokenization.html#markup-declaration-open-state
-void gumbo_tokenizer_set_is_current_node_foreign(
-    struct GumboInternalParser* parser, bool is_foreign);
+void gumbo_tokenizer_set_is_current_node_foreign(struct GumboInternalParser* parser, bool is_foreign);
 
 // Lexes a single token from the specified buffer, filling the output with the
 // parsed GumboToken data structure.  Returns true for a successful

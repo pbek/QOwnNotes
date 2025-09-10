@@ -13,32 +13,27 @@
  */
 
 #include "scriptthread.h"
+
 #include <QDebug>
 
 QMap<QString, int> ScriptThread::threadCounter;
 
-ScriptThread::ScriptThread(ScriptingService *ss,
-                           const TerminalCmd &cmd,
-                           const QString &identifier,
-                           const QVariant &callbackParameter) : QThread() {
+ScriptThread::ScriptThread(ScriptingService *ss, const TerminalCmd &cmd, const QString &identifier,
+                           const QVariant &callbackParameter)
+    : QThread() {
     this->cmd = cmd;
     this->identifier = identifier;
     this->callbackParameter = callbackParameter;
     increaseThreadCounter();
-    ScriptThread::connect(this, SIGNAL(callBack(ScriptThread*)), ss, SLOT(onScriptThreadDone(ScriptThread*)));
+    ScriptThread::connect(this, SIGNAL(callBack(ScriptThread *)), ss,
+                          SLOT(onScriptThreadDone(ScriptThread *)));
 }
 
-void ScriptThread::increaseThreadCounter() {
-    threadCounter[identifier]++;
-}
+void ScriptThread::increaseThreadCounter() { threadCounter[identifier]++; }
 
-void ScriptThread::decreaseThreadCounter() {
-    threadCounter[identifier]--;
-}
+void ScriptThread::decreaseThreadCounter() { threadCounter[identifier]--; }
 
-int ScriptThread::getThreadCounter() {
-    return threadCounter[identifier];
-}
+int ScriptThread::getThreadCounter() { return threadCounter[identifier]; }
 
 // We override the QThread's run() method here
 // run() will be called when a thread starts
@@ -46,6 +41,5 @@ int ScriptThread::getThreadCounter() {
 void ScriptThread::run() {
     Utils::Misc::startSynchronousResultProcess(cmd);
     decreaseThreadCounter();
-    emit callBack(this) ;//emit is not a function
+    emit callBack(this);    // emit is not a function
 }
-

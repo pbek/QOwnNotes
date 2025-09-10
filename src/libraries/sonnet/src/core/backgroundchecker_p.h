@@ -22,21 +22,18 @@
 #define SONNET_BACKGROUNDCHECKER_P_H
 
 #include <QObject>
+
 #include "backgroundchecker.h"
 #include "languagefilter_p.h"
-#include "tokenizer_p.h"
 #include "speller.h"
+#include "tokenizer_p.h"
 
 using namespace Sonnet;
 
-class BackgroundCheckerPrivate : public QObject
-{
+class BackgroundCheckerPrivate : public QObject {
     Q_OBJECT
-public:
-    BackgroundCheckerPrivate() : mainTokenizer(new SentenceTokenizer)
-        , sentenceOffset(-1)
-    {
-    }
+   public:
+    BackgroundCheckerPrivate() : mainTokenizer(new SentenceTokenizer), sentenceOffset(-1) {}
 
     void start();
     void continueChecking();
@@ -47,11 +44,11 @@ public:
     Speller currentDict;
     int sentenceOffset;
 
-    virtual ~BackgroundCheckerPrivate(){ }
+    virtual ~BackgroundCheckerPrivate() {}
 
-private slots:
+   private slots:
     void checkNext();
-signals:
+   signals:
     void misspelling(const QString &, int);
     void done();
 };

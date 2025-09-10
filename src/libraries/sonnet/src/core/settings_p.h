@@ -20,8 +20,8 @@
 #ifndef SONNET_SETTINGS_P_H
 #define SONNET_SETTINGS_P_H
 
-#include <QStringList>
 #include <QString>
+#include <QStringList>
 
 namespace Sonnet {
 class Loader;
@@ -29,9 +29,8 @@ class SettingsPrivate;
 /**
  * Settings class
  */
-class Settings
-{
-public:
+class Settings {
+   public:
     ~Settings();
 
     Settings(const Settings &) = delete;
@@ -75,16 +74,17 @@ public:
     int disablePercentageWordError() const;
     int disableWordErrorCount() const;
 
-private:
+   private:
     void readIgnoreList();
     bool setQuietIgnoreList(const QStringList &ignores);
 
-private:
+   private:
     friend class Loader;
     explicit Settings(Loader *loader);
-private:
+
+   private:
     SettingsPrivate *const d;
 };
-}
+}    // namespace Sonnet
 
-#endif // SONNET_SETTINGS_P_H
+#endif    // SONNET_SETTINGS_P_H

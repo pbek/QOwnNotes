@@ -16,38 +16,30 @@ project_id: 158883
 
 preserve_hierarchy: true
 files:
-  -
-    # source files filter
-    source: '/src/languages/QOwnNotes_en.ts'
+  - # source files filter
+    source: "/src/languages/QOwnNotes_en.ts"
     # where translations live
-    translation: '/src/languages/QOwnNotes_%locale_with_underscore%.ts'
+    translation: "/src/languages/QOwnNotes_%locale_with_underscore%.ts"
     #translation: '/src/languages/QOwnNotes_%locale%.ts'
     #translation: 'src/languages/QOwnNotes_%two_letters_code%.ts'
     #"languages_mapping" : {
-      #"two_letters_code" : {
-        #"pt" : "pt_PT",
-        #"pt-BR" : "pt_BR"
-      #}
+    #"two_letters_code" : {
+    #"pt" : "pt_PT",
+    #"pt-BR" : "pt_BR"
     #}
-    dest: '/QOwnNotes_en.ts'
-  -
-    source: '/webpage/src/index.md'
-    translation: '/webpage/src/%two_letters_code%/%original_file_name%'
-  -
-    source: '/webpage/src/contributing/*.md'
-    translation: '/webpage/src/%two_letters_code%/contributing/%original_file_name%'
-  -
-    source: '/webpage/src/editor/*.md'
-    translation: '/webpage/src/%two_letters_code%/editor/%original_file_name%'
-  -
-    source: '/webpage/src/faq/*.md'
-    translation: '/webpage/src/%two_letters_code%/faq/%original_file_name%'
-  -
-    source: '/webpage/src/getting-started/*.md'
-    translation: '/webpage/src/%two_letters_code%/getting-started/%original_file_name%'
-  -
-    source: '/webpage/src/installation/*.md'
-    translation: '/webpage/src/%two_letters_code%/installation/%original_file_name%'
-  -
-    source: '/webpage/src/scripting/*.md'
-    translation: '/webpage/src/%two_letters_code%/scripting/%original_file_name%'
+    #}
+    dest: "/QOwnNotes_en.ts"
+  - source: "/webpage/src/index.md"
+    translation: "/webpage/src/%two_letters_code%/%original_file_name%"
+  - source: "/webpage/src/contributing/*.md"
+    translation: "/webpage/src/%two_letters_code%/contributing/%original_file_name%"
+  - source: "/webpage/src/editor/*.md"
+    translation: "/webpage/src/%two_letters_code%/editor/%original_file_name%"
+  - source: "/webpage/src/faq/*.md"
+    translation: "/webpage/src/%two_letters_code%/faq/%original_file_name%"
+  - source: "/webpage/src/getting-started/*.md"
+    translation: "/webpage/src/%two_letters_code%/getting-started/%original_file_name%"
+  - source: "/webpage/src/installation/*.md"
+    translation: "/webpage/src/%two_letters_code%/installation/%original_file_name%"
+  - source: "/webpage/src/scripting/*.md"
+    translation: "/webpage/src/%two_letters_code%/scripting/%original_file_name%"

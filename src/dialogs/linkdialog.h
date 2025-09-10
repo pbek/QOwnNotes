@@ -4,6 +4,7 @@
 #include <QNetworkAccessManager>
 
 #include "masterdialog.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
 namespace Ui {
 class LinkDialog;
@@ -35,8 +36,8 @@ class LinkDialog : public MasterDialog {
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
     void on_urlEdit_textChanged(const QString &arg1);
-    void addFileUrl();
-    void addDirectoryUrl();
+    void addFileUrl(bool relative = false);
+    void addDirectoryUrl(bool relative = false);
     void slotReplyFinished(QNetworkReply *reply);
     void downloadProgress(qint64 bytesReceived, qint64 bytesTotal);
 
@@ -48,12 +49,15 @@ class LinkDialog : public MasterDialog {
 
     void on_tabWidget_currentChanged(int index);
 
+    void on_refreshButton_clicked();
+
    private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event) override;
     QString selectedNoteText;
     QNetworkAccessManager *_networkManager;
+    QOwnNotesMarkdownTextEdit *_markdownTextEdit;
     void setupFileUrlMenu();
     void loadNoteHeadings() const;
     void doAccept();

@@ -11,5 +11,5 @@ snap install qownnotes
 Afterward you should be able to run QOwnNotes with the command `qownnotes`.
 
 ::: tip
-[ اسنپ ها](http://snapcraft.io) در حال کار روی بسیاری از توزیع های لینوکس نظیر اوبونتو، آرچ لینوکس، دبیان، فدورا، اوپن سوزه، جنتو لینوکس، OpenWRT، OpenEmbedded و پروزه یوکتو هستند.
+[Snaps](http://snapcraft.io) are working on many Linux distributions like Ubuntu, Arch Linux, Debian, Fedora, openSUSE, Gentoo Linux, OpenWRT, open embedded and yocto project.
 :::

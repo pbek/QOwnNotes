@@ -340,6 +340,10 @@ class SettingsDialog : public MasterDialog {
 
     void on_searchScriptRepositoryButton_clicked();
 
+    void on_overrideInterfaceScalingFactorGroupBox_toggled(bool arg1);
+
+    void on_interfaceScalingFactorSpinBox_valueChanged(int arg1);
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
@@ -361,6 +365,7 @@ class SettingsDialog : public MasterDialog {
     QString _newScriptName;
     CloudConnection _selectedCloudConnection;
     int _loginFlowPollCount = 0;
+    QHash<int, bool> _pageInitialized;
 
     void storeSettings();
 
@@ -452,6 +457,8 @@ class SettingsDialog : public MasterDialog {
     void buildAiScriptingTreeWidget();
 
     void runAiApiTest(QString backend, QString model, QString apiKey = QString());
+
+    bool initializePage(int index);
 };
 
 #endif    // SETTINGSDIALOG_H

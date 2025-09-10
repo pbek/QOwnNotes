@@ -7,18 +7,19 @@ Note
 
 يمكنك تجربة **QOwnNotes** في متصفحك بغير تثبيته، باتباع هذه التعليمات:
 
-١) انقر على هذا الرابط: [Play with Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). ٢) انقر على زر **Login / Start** (انظر النقطة **1** في لقطات الشاشة) وسجّل دخولك باستخدام حسابك على Docker   (تحتاج إلى إنشاء حساب إذا لم يكن لديك واحدا بالفعل).
+1. Click on this [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) link.
+2. Click the **Login / Start** button (see screenshot bullet **1**) and login with your Docker account (you need to create one if you don't already have one).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-٣) انظر حتى ينتهي إنشاء الحاوية وتبدأ في العمل. عندئذ يمكنك النقر على **6080** في الأعلى (انظر النقطة **2** في لقطات الشاشة). إذا واجهك خطأ، برجاء الانتظار قليلا ثم حاول النقر على *6080* من جديد؛ قد تحتاج بيئة سطح المكتب لبعض الوقت حتى تحمّل.
+3. Wait until the container is created and spun up. Then you should be able to click on **6080** on the top (see screenshot bullet **2**). If you get an error please wait a bit more and try to click _6080_ again, it takes a while for the desktop environment to load.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-٤) سيفتح المتصفح لسانا جديدا فيه سطح مكتب. انقر على **الرمز يسار أسفل** الشاشة (في شريط المهام)، وقف على **Accessories**، وانقر على **QOwnNotes** (انظر النقطة **3** في لقطات الشاشة).
+4. A new browser tab should open producing a desktop. Click on the **bottom left symbol** on the screen (in the task bar), hover over **Accessories** and click on **QOwnNotes** (see screenshot bullet **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
-٥) ستظهر شاشة تثبيت **QOwnNotes**، انقر خلالها واضغط *Finish* حتى ترى شاشة QOwnNotes الرئيسية.
+5. The **QOwnNotes** install dialog should open, click through it and press _Finish_ to see the QOwnNotes main window.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

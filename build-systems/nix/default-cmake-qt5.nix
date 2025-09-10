@@ -1,7 +1,6 @@
 {
   lib,
   stdenv,
-  fetchurl,
   cmake,
   qttools,
   qtbase,
@@ -12,10 +11,12 @@
   qtx11extras,
   makeWrapper,
   wrapQtAppsHook,
-  botan2,
+  botan3,
+  libgit2,
   pkg-config,
   xvfb-run,
   installShellFiles,
+  aspell,
 }:
 
 let
@@ -49,12 +50,16 @@ stdenv.mkDerivation {
     qtsvg
     qtwebsockets
     qtx11extras
-    botan2
+    botan3
+    libgit2
+    aspell
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
   cmakeFlags = [
     #    "-DQON_QT6_BUILD=ON"
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
+    "-DBUILD_WITH_LIBGIT2=ON"
+    "-DBUILD_WITH_ASPELL=ON"
   ];
 
   postInstall =

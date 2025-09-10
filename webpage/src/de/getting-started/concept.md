@@ -54,8 +54,7 @@ graph TB
 - Sie können auch auf Ihrem Nextcloud / ownCloud-Server über die [QOwnNotesApi Nextcloud-App](#qownnotesapi-nextcloud-app) auf Ihren **Notizverlauf und Papierkorb** zugreifen
 - Auf To-do-Listen auf Ihrem Nextcloud / ownCloud-Server kann über QOwnNotes zugegriffen werden
 - Medien- / Anhangsdateien werden **nicht von QOwnNotes synchronisiert**!
-    - Die Dateisynchronisierung ist ein komplexes Unterfangen. Es gibt bereits großartige Dateisynchronisierungslösungen (siehe [Nextcloud Desktop Sync Client](#nextcloud-desktop-sync-client)).
-
+  - Die Dateisynchronisierung ist ein komplexes Unterfangen. Es gibt bereits großartige Dateisynchronisierungslösungen (siehe [Nextcloud Desktop Sync Client](#nextcloud-desktop-sync-client)).
 
 ## Markdown-Notizdateien
 
@@ -63,7 +62,6 @@ graph TB
 - Ihre Notizen werden als **Klartext Markdowndateien** auf Ihrem Desktop-PC gespeichert
 - Sie können einen beliebigen Texteditor neben QOwnNotes verwenden, um Ihre Notizdateien anzuzeigen oder zu bearbeiten
 - **Synchronisieren Sie Ihre Notizen** auf anderen Geräten (Desktop & Mobile) mit Ihrem [Nextcloud](https://nextcloud.com/) oder [ownCloud](https://owncloud.org/)-Client auf Ihrem Server
-
 
 ## QOwnNotes-Browsererweiterung
 
@@ -134,7 +132,7 @@ Um auf Ihre Nextcloud / ownCloud Notizen von Ihrem **mobilen Endgerät** aus zuz
 - [Nextcloud Notes für Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (Drittanbieter)
 
 ::: tip
-Sie könnten auch ein Sync-Tool wie *Synchronize Ultimate* oder *FolderSync* benutzen, um Ihre Notizdateien zu synchronisieren, und Software wie *neutriNotes*, um Ihre Notizen zu bearbeiten.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 :::
 
 ### iOS

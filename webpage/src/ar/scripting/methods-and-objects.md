@@ -1,10 +1,9 @@
 # الدوال والكائنات التي يوفرها QOwnNotes
 
-بدء برنامج خارجي في الخلفية
-----------------------------------------------
-
+## بدء برنامج خارجي في الخلفية
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to start a detached process
@@ -34,14 +33,14 @@ script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
 
 ```js
 for (var i = 0; i < 100; i++) {
-    var dur = Math.floor(Math.random() * 10) + 1;
-    script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
+  var dur = Math.floor(Math.random() * 10) + 1;
+  script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
 }
 
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
-    if (callbackIdentifier == "my-callback") {
-        script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
-    }
+  if (callbackIdentifier == "my-callback") {
+    script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
+  }
 }
 ```
 
@@ -49,10 +48,10 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 
 وربما تحب أيضا أن تلقي نظرة على خطاف [onDetachedProcessCallback (عند رد عملية منفصلة)](hooks.html#ondetachedprocesscallback).
 
-بدء برنامج خارجي وانتظار ناتجه
-----------------------------------------------------
+## بدء برنامج خارجي وانتظار ناتجه
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to start a synchronous process
@@ -66,16 +65,22 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 ```
 
 ### مثال
+
 ```js
-var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data", "/path/to/execute/in");
+var result = script.startSynchronousProcess(
+  "/path/to/my/program",
+  ["my parameter"],
+  "data",
+  "/path/to/execute/in",
+);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml).
 
-الحصول على مسار مجلد الملاحظة الحالية
--------------------------------------------
+## الحصول على مسار مجلد الملاحظة الحالية
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to get the current note folder path
@@ -86,16 +91,17 @@ QString currentNoteFolderPath();
 ```
 
 ### مثال
+
 ```js
 var path = script.currentNoteFolderPath();
 ```
 
 ربما تحب أن تلقي نظرة على المثال [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/absolute-media-links.qml).
 
-الحصول على الملاحظة الحالية
-------------------------
+## الحصول على الملاحظة الحالية
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to get the current note
@@ -106,16 +112,17 @@ NoteApi currentNote();
 ```
 
 ### مثال
+
 ```js
 var note = script.currentNote();
 ```
 
 ربما تحب أن تلقي نظرة على المثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
-الكتابة في نافذة السجل
--------------------------
+## الكتابة في نافذة السجل
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to log to the log widget
@@ -126,14 +133,15 @@ void log(QString text);
 ```
 
 ### مثال
+
 ```js
 script.log("رسالتي النصية");
 ```
 
-تنزيل رابط إلى سلسلة نصية
-------------------------------
+## تنزيل رابط إلى سلسلة نصية
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to download an url and returning it as text
@@ -145,16 +153,17 @@ QString downloadUrlToString(QUrl url);
 ```
 
 ### مثال
+
 ```js
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
 ربما تحب أن تلقي نظرة على المثال [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
-تنزيل رابط إلى مجلد الوسائط
---------------------------------------
+## تنزيل رابط إلى مجلد الوسائط
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to download an url to the media folder and returning the media
@@ -168,16 +177,19 @@ QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 ```
 
 ### مثال
+
 ```js
-var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
+var markdown = script.downloadUrlToMedia(
+  "http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}",
+);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/paste-latex-image.qml).
 
-إضافة ملف وسائط إلى مجلد الوسائط
---------------------------------------------
+## إضافة ملف وسائط إلى مجلد الوسائط
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to insert a media file into the media folder and returning
@@ -192,16 +204,17 @@ QString ScriptingService::insertMediaFile(QString mediaFilePath,
 ```
 
 ### مثال
+
 ```js
 var markdown = script.insertMediaFile("/path/to/your/image.png");
 ```
 
 ربما تحب أن تلقي نظرة على المثال [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
-إضافة ملف مرفق إلى مجلد المرفقات
---------------------------------------------------------
+## إضافة ملف مرفق إلى مجلد المرفقات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
  * QML wrapper to insert an attachment file into the `attachments` folder and
  * returning the attachment url or the markdown text of the attachment
@@ -219,16 +232,17 @@ QString ScriptingService::insertAttachmentFile(const QString &attachmentFilePath
 ```
 
 ### مثال
+
 ```js
 var markdown = script.insertAttachmentFile("/path/to/your/file.png");
 ```
 
-إعادة توليد معاينة الملاحظة
------------------------------
+## إعادة توليد معاينة الملاحظة
 
 تنعش معاينة الملاحظة.
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * يعيد توليد معاينة الملاحظة
@@ -237,16 +251,17 @@ QString ScriptingService::regenerateNotePreview();
 ```
 
 ### مثال
+
 ```js
 script.regenerateNotePreview();
 ```
 
 ربما تحب أن تلقي نظرة على المثال [scribble.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scribble.qml).
 
-تسجيل إجراء مخصص
----------------------------
+## تسجيل إجراء مخصص
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Registers a custom action
@@ -275,7 +290,7 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-يمكنك أيضا تعيين اختصارات محلية أو عامة لإجراءاتك المخصصة في *إعدادات الاختصارات*.
+You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
 :::
 
 ::: warning
@@ -309,7 +324,7 @@ Script {
     /**
      * This function is invoked when a custom action is triggered
      * in the menu or via button
-     * 
+     *
      * @param identifier string the identifier defined in registerCustomAction
      */
     function customActionInvoked(identifier) {
@@ -337,10 +352,10 @@ Script {
 يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل <code dir="ltr">--action customAction_&lt;المعرِّف&gt;</code>. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
-Registering a label
--------------------
+## Registering a label
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Registers a label to write to
@@ -352,24 +367,31 @@ void ScriptingService::registerLabel(QString identifier, QString text);
 ```
 
 ### مثال
-```js
-script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
 
-script.registerLabel("long-label", "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap");
+```js
+script.registerLabel(
+  "html-label",
+  "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.",
+);
+
+script.registerLabel(
+  "long-label",
+  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
+);
 
 script.registerLabel("counter-label");
 ```
 
-The labels will be visible in the *Scripting panel*, which you need to enable in the *Window / Panels* menu.
+The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
 
 You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
 
 ربما تحب أن تلقي نظرة على مثال البُريمج [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
-Setting the text of a registered label
---------------------------------------
+## Setting the text of a registered label
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Sets the text of a registered label
@@ -381,6 +403,7 @@ void ScriptingService::setLabelText(QString identifier, QString text);
 ```
 
 ### مثال
+
 ```js
 script.setLabelText("counter-label", "counter text");
 ```
@@ -393,10 +416,10 @@ You can use both plain text or html in the labels. The text will be selectable a
 The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
 :::
 
-إنشاء ملاحظة جديدة
--------------------
+## إنشاء ملاحظة جديدة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Creates a new note
@@ -407,6 +430,7 @@ void ScriptingService::createNote(QString text);
 ```
 
 ### مثال
+
 ```js
 script.createNote("My note headline\n===\n\nMy text");
 ```
@@ -418,14 +442,15 @@ If you turned off that your note headline determines the note filename then you 
 
 ```js
 var note = script.currentNote();
-note.renameNoteFile('your-filename');
+note.renameNoteFile("your-filename");
 ```
+
 :::
 
-الوصول إلى الحافظة
------------------------
+## الوصول إلى الحافظة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * يرجع محتوى الحافظة كنص أو هتمل
@@ -436,6 +461,7 @@ QString ScriptingService::clipboard(bool asHtml);
 ```
 
 ### مثال
+
 ```js
 var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
@@ -443,10 +469,10 @@ var clipboardHtml = script.clipboard(true);
 
 ربما تحب أن تلقي نظرة على المثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
-كتابة نص إلى محرر نص الملاحظات
---------------------------------
+## كتابة نص إلى محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * تكتب النص المعطى عند موضع المؤشر الحالي في محرر نص الملاحظات
@@ -457,6 +483,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 ```
 
 ### مثال
+
 ```js
 // اكتب نصا في محرر نص الملاحظات
 script.noteTextEditWrite("نصي المخصص");
@@ -466,10 +493,10 @@ script.noteTextEditWrite("نصي المخصص");
 
 ويمكنك استخدام هذه الدالة مع `noteTextEditSelectAll` لاستبدال كل نص الملاحظة الحالية.
 
-قراءة النص المحدد في محرر نص الملاحظات
---------------------------------------------
+## قراءة النص المحدد في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * ترجع النص المحدد حاليا في محرر نص الملاحظات
@@ -480,6 +507,7 @@ QString ScriptingService::noteTextEditSelectedText();
 ```
 
 ### مثال
+
 ```js
 // اقرأ النص المحدد حاليا في محرر نص الملاحظات
 var text = script.noteTextEditSelectedText();
@@ -487,10 +515,10 @@ var text = script.noteTextEditSelectedText();
 
 ربما تحب أن تلقي نظرة على الإجراء المخصص `transformTextRot13` في المثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
-تحديد كل النص الذي في محرر نص الملاحظات
--------------------------------------
+## تحديد كل النص الذي في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * تحدد كل النص الذي في محرر نص الملاحظات
@@ -499,16 +527,17 @@ void ScriptingService::noteTextEditSelectAll();
 ```
 
 ### مثال
+
 ```js
 script.noteTextEditSelectAll();
 ```
 
 يمكنك استخدمها مع `noteTextEditWrite` لتغيير كامل نص الملاحظة الحالية.
 
-تحديد نص السطر الحالي في محرر نص الملاحظات
----------------------------------------------
+## تحديد نص السطر الحالي في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * تحدد السطر الحالي في محرر نص الملاحظات
@@ -517,14 +546,15 @@ void ScriptingService::noteTextEditSelectCurrentLine();
 ```
 
 ### مثال
+
 ```js
 script.noteTextEditSelectCurrentLine();
 ```
 
-تحديد الكلمة الحالية في محرر نص الملاحظات
----------------------------------------------
+## تحديد الكلمة الحالية في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * تحدد الكلمة الحالية في محرر نص الملاحظات
@@ -533,14 +563,15 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
 ### مثال
+
 ```js
 script.noteTextEditSelectCurrentWord();
 ```
 
-تعيين التحديد الحالي في محرر نص الملاحظات
------------------------------------------------------
+## تعيين التحديد الحالي في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Sets the currently selected text in the note text edit
@@ -552,17 +583,19 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ```
 
 ### مثال
+
 ```js
-// زيادة النص المحدد حاليا بمحرف واحد في الاتجاهين
+// expands the current selection by one character
 script.noteTextEditSetSelection(
-    script.noteTextEditSelectionStart() - 1,
-    script.noteTextEditSelectionEnd() + 1);
+  script.noteTextEditSelectionStart() - 1,
+  script.noteTextEditSelectionEnd() + 1,
+);
 ```
 
-الحصول على موضع بداية التحديد الحالي في محرر نص الملاحظات
----------------------------------------------------------------------
+## الحصول على موضع بداية التحديد الحالي في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * ترجع موضع بداية النص المحدد حاليا في محرر نص الملاحظات
@@ -571,14 +604,15 @@ int ScriptingService::noteTextEditSelectionStart();
 ```
 
 ### مثال
+
 ```js
 script.log(script.noteTextEditSelectionStart());
 ```
 
-الحصول على موضع نهاية التحديد الحالي في محرر نص الملاحظات
--------------------------------------------------------------------
+## الحصول على موضع نهاية التحديد الحالي في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * ترجع موضع نهاية النص المحدد حاليا في محرر نص الملاحظات
@@ -587,14 +621,15 @@ int ScriptingService::noteTextEditSelectionEnd();
 ```
 
 ### مثال
+
 ```js
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-تعيين موضع مؤشر النص في محرر نص الملاحظات
----------------------------------------------------------------
+## تعيين موضع مؤشر النص في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Sets the text cursor in the note text edit to a certain position
@@ -607,6 +642,7 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 ```
 
 ### مثال
+
 ```js
 // انتقل إلى المحرف الحادي عشر في الملاحظة (الترقيم يبدأ من الصفر)
 script.noteTextEditSetCursorPosition(10);
@@ -615,10 +651,10 @@ script.noteTextEditSetCursorPosition(10);
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-الحصول على الموضع الحالي لمؤشر النص في محرر نص الملاحظات
------------------------------------------------------------------
+## الحصول على الموضع الحالي لمؤشر النص في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * ترجع الموضع الحالي لمؤشر النص في محرر نص الملاحظات
@@ -628,14 +664,15 @@ int ScriptingService::noteTextEditCursorPosition();
 ```
 
 ### مثال
+
 ```js
 script.log(script.noteTextEditCursorPosition());
 ```
 
-قراءة الكلمة الحالية في محرر نص الملاحظات
----------------------------------------------
+## قراءة الكلمة الحالية في محرر نص الملاحظات
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Reads the current word in the note text edit
@@ -649,6 +686,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 ```
 
 ### مثال
+
 ```js
 // اقرأ الكلمة الحالية في محرر نص الملاحظات
 var text = script.noteTextEditCurrentWord();
@@ -656,10 +694,10 @@ var text = script.noteTextEditCurrentWord();
 
 ربما تحب أن تلقي نظرة على المثال [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-Read the current block from the note text edit
-----------------------------------------------
+## Read the current block from the note text edit
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Reads the current block in the note text edit
@@ -670,6 +708,7 @@ QString ScriptingService::noteTextEditCurrentBlock();
 ```
 
 ### مثال
+
 ```js
 // Read the current block in the note text edit
 var text = script.noteTextEditCurrentBlock();
@@ -677,14 +716,14 @@ var text = script.noteTextEditCurrentBlock();
 
 ربما تحب أن تلقي نظرة على المثال [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
-Use a completion prompt on the currently selected AI model
-----------------------------------------------------------
+## Use a completion prompt on the currently selected AI model
 
-The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model.
+The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model, like ChatGPT, Claude or systems like Ollama.
 
 The AI system needs to be enabled in the AI toolbar or main menu for this to work.
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * QML wrapper to use the AI Completer
@@ -696,6 +735,7 @@ QString ScriptingService::aiComplete(const QString& prompt);
 ```
 
 ### مثال
+
 ```js
 // Ask the currently selected AI model to complete the prompt
 var text = script.aiComplete("Tell me how do you feel today?");
@@ -703,10 +743,10 @@ var text = script.aiComplete("Tell me how do you feel today?");
 
 ربما تحب أن تلقي نظرة على المثال [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
-معرفة ما إذا كانت المنصة لينكس أم ماك أم ويندوز
-------------------------------------------------
+## معرفة ما إذا كانت المنصة لينكس أم ماك أم ويندوز
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 bool ScriptingService::platformIsLinux();
 bool ScriptingService::platformIsOSX();
@@ -714,16 +754,17 @@ bool ScriptingService::platformIsWindows();
 ```
 
 ### مثال
+
 ```js
 if (script.platformIsLinux()) {
-    // سينفذ فقط عند العمل على لينكس
+  // Will be executed only if under Linux
 }
 ```
 
-وسم الملاحظة الحالية
---------------------
+## وسم الملاحظة الحالية
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Tags the current note with a tag named tagName
@@ -734,6 +775,7 @@ void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
 ### مثال
+
 ```js
 // add a "favorite" tag to the current note
 script.tagCurrentNote("favorite");
@@ -741,10 +783,10 @@ script.tagCurrentNote("favorite");
 
 ربما تحب إلقاء نظرة على الإجراء المخصص `favoriteNote` في المثال [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
 
-Create or fetch a tag by its name breadcrumb list
--------------------------------------------------
+## Create or fetch a tag by its name breadcrumb list
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Fetches or creates a tag by its "breadcrumb list" of tag names
@@ -759,6 +801,7 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 ```
 
 ### مثال
+
 ```js
 // creates all tags until the 3rd level and returns the tag object for
 // tag "level3", which would look like that in the tag tree:
@@ -766,10 +809,10 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
 
-ابحث عن وسوم بالاسم
------------------------
+## ابحث عن وسوم بالاسم
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Fetches all tags by doing a substring search on the name field
@@ -781,6 +824,7 @@ QStringList ScriptingService::searchTagsByName(QString name);
 ```
 
 ### مثال
+
 ```js
 // searches for all tags with the word game in it
 var tags = script.searchTagsByName("game");
@@ -788,10 +832,10 @@ var tags = script.searchTagsByName("game");
 
 ربما تحب أن تلقي نظرة على المثال [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-ابحث عن ملاحظات بنص الملاحظة
------------------------------
+## ابحث عن ملاحظات بنص الملاحظة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns a list of note ids of all notes with a certain text in the note text
@@ -805,22 +849,23 @@ QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```
 
 ### مثال
+
 ```js
 var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
+noteIds.forEach(function (noteId) {
+  var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+  // do something with the note
 });
 ```
 
 ربما تحب أن تلقي نظرة على المثال [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/unique-note-id.qml).
 
-Add a custom stylesheet
------------------------
+## Add a custom stylesheet
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Adds a custom stylesheet to the application
@@ -831,6 +876,7 @@ void ScriptingService::addStyleSheet(QString stylesheet);
 ```
 
 ### مثال
+
 ```js
 // make the text in the note list bigger
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
@@ -856,10 +902,10 @@ If you want to inject styles into html preview to alter the way notes are previe
 If you actually want to see how the dialogs look and what their names are you could download [Qt Creator](https://www.qt.io/product/development-tools) and open the `*.ui` files in it.
 :::
 
-إعادة تحميل محرك البرمجة
-------------------------------
+## إعادة تحميل محرك البرمجة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * يعيد تحميل محرك البرمجة
@@ -868,15 +914,16 @@ void ScriptingService::reloadScriptingEngine();
 ```
 
 ### مثال
+
 ```js
 // أعد تحميل محرك البرمجة
 script.reloadScriptingEngine();
 ```
 
-جلب ملاحظة باسم ملفها
---------------------------------
+## جلب ملاحظة باسم ملفها
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Fetches a note by its file name
@@ -890,15 +937,16 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
 ```
 
 ### مثال
+
 ```js
 // اجلب ملاحظة باسم ملفها
 script.fetchNoteByFileName("ملاحظتي.md");
 ```
 
-جلب ملاحظة بمُعرِّفها
--------------------------
+## جلب ملاحظة بمُعرِّفها
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Fetches a note by its id
@@ -910,6 +958,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
 ### مثال
+
 ```js
 // اجلب ملاحظة بمعرفها
 script.fetchNoteById(243);
@@ -917,10 +966,10 @@ script.fetchNoteById(243);
 
 ربما تحب أن تلقي نظرة على المثال [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-التحقق من وجود ملاحظة باسم ملفها
-------------------------------------------
+## التحقق من وجود ملاحظة باسم ملفها
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Checks if a note file exists by its file name
@@ -936,6 +985,7 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 ```
 
 ### مثال
+
 ```js
 // check if note exists, but ignore the id of "note"
 script.noteExistsByFileName("my note.md", note.id);
@@ -943,10 +993,10 @@ script.noteExistsByFileName("my note.md", note.id);
 
 ربما تحب أن تلقي نظرة على المثال [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-نسخ نص إلى الحافظة
--------------------------------
+## نسخ نص إلى الحافظة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Copies text into the clipboard as plain text or html mime data
@@ -958,6 +1008,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
 ### مثال
+
 ```js
 // انسخ نصا إلى الحافظة
 script.setClipboardText("نص النسخ");
@@ -965,10 +1016,10 @@ script.setClipboardText("نص النسخ");
 
 ربما تحب أن تلقي نظرة على المثال [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
-الانتقال إلى ملاحظة
------------------
+## الانتقال إلى ملاحظة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Sets the current note if the note is visible in the note list
@@ -980,6 +1031,7 @@ void ScriptingService::setCurrentNote(NoteApi *note, bool asTab = false);
 ```
 
 ### مثال
+
 ```js
 // jump to the note
 script.setCurrentNote(note);
@@ -990,10 +1042,10 @@ script.setCurrentNote(note, true);
 
 ربما تحب أن تلقي نظرة على المثال [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
 
-الانتقال إلى مجلد فرعي لملاحظة
----------------------------
+## الانتقال إلى مجلد فرعي لملاحظة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Jumps to a note subfolder
@@ -1007,6 +1059,7 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
 ```
 
 ### مثال
+
 ```js
 // jump to the note subfolder "a sub folder"
 script.jumpToNoteSubFolder("a sub folder");
@@ -1019,10 +1072,10 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 يمكنك إنشاء مجلد ملاحظات فرعي في المجلد الفرعي الحالي بنداء [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
-إظهار صندوق رسالة معلومة
-----------------------------------
+## إظهار صندوق رسالة معلومة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Shows an information message box
@@ -1034,15 +1087,16 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 ```
 
 ### مثال
+
 ```js
 // show a information message box
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
-إظهار صندوق رسالة سؤال
-------------------------------
+## إظهار صندوق رسالة سؤال
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Shows a question message box
@@ -1061,11 +1115,16 @@ int ScriptingService::questionMessageBox(
 ```
 
 ### مثال
+
 ```js
 // show a question message box with an apply and a help button
 // see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
+  "The text I want to show",
+  "Some optional title",
+  0x01000000 | 0x02000000,
+  0x02000000,
+);
 script.log(result);
 ```
 
@@ -1073,10 +1132,10 @@ script.log(result);
 
 ربما تحب أيضا أن تلقي نظرة على المثال [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
-إظهار حوار فتح ملف
----------------------------
+## إظهار حوار فتح ملف
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Shows an open file dialog
@@ -1091,15 +1150,20 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 ```
 
 ### مثال
+
 ```js
 // show an open file dialog
-var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
+var fileName = script.getOpenFileName(
+  "Please select an image",
+  "/home/user/images",
+  "Images (*.png *.xpm *.jpg)",
+);
 ```
 
-إظهار حوار حفظ ملف
---------------------------
+## إظهار حوار حفظ ملف
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Shows a save file dialog
@@ -1114,21 +1178,26 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 ```
 
 ### مثال
+
 ```js
 // show a save file dialog
-var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
+var fileName = script.getSaveFileName(
+  "Please select HTML file to save",
+  "output.html",
+  "HTML (*.html)",
+);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-تسجيل متغيرات إعدادات البُريمج
--------------------------------------
+## تسجيل متغيرات إعدادات البُريمج
 
 عليك تعريف متغيرات إعداداتك على أنها خصائص في بُريمِجك وتسجيلها في خاصية تسمى `settingsVariables`.
 
 عندئذٍ يستطيع المستخدم ضبط هذه الخصائص في إعدادات البُريمج.
 
 ### مثال
+
 ```js
 // you have to define your registered variables so you can access them later
 property string myString;
@@ -1209,6 +1278,7 @@ property variant settingsVariables: [
 ويمكنك أيضا تغطية `settingsVariables` بالدالة الخاصة `registerSettingsVariables()` مثل:
 
 ### مثال
+
 ```js
 /**
  * Registers the settings variables again
@@ -1217,19 +1287,19 @@ property variant settingsVariables: [
  * default values depending on the operating system.
  */
 function registerSettingsVariables() {
-    if (script.platformIsWindows()) {
-        // override the myFile default value
-        settingsVariables[3].default = "pandoc.exe"
-    }
+  if (script.platformIsWindows()) {
+    // override the myFile default value
+    settingsVariables[3].default = "pandoc.exe";
+  }
 }
 ```
 
 ربما تحب أيضا أن تلقي نظرة على المثال [variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/variables.qml).
 
-تخزين وقراءة متغيرات مستديمة
-----------------------------------------
+## تخزين وقراءة متغيرات مستديمة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Stores a persistent variable
@@ -1255,22 +1325,28 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ```
 
 ### مثال
+
 ```js
 // store persistent variable
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
 // load and log persistent variable
-script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
+script.log(
+  script.getPersistentVariable(
+    "PersistentVariablesTest/myVar",
+    "nothing here yet",
+  ),
+);
 ```
 
 أسبِق أسماء متغيراتك المستديمة بعبارة مميزة، مثل: `PersistentVariablesTest/myVar` لأن جميع البُريمجات تستطيع الوصول إلى جميع المتغيرات المستديمة.
 
 ربما تحب أيضا أن تلقي نظرة على المثال [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml).
 
-تحميل متغيرات إعدادات التطبيق
---------------------------------------
+## تحميل متغيرات إعدادات التطبيق
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Loads an application settings variable
@@ -1284,6 +1360,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 ```
 
 ### مثال
+
 ```js
 // load and log an application settings variable
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
@@ -1291,12 +1368,12 @@ script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 
 تذكر أن الإعدادات يمكنها أن تكون فارغة؛ عليك التعامل مع هذا الأمر بنفسك. تُستخدم `defaultValue` فقط عندما لا يكون الإعداد موجودا من الأساس.
 
-Creating a cache directory
---------------------------
+## Creating a cache directory
 
 You can cache files at the default cache location of your system.
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns a cache directory for a script
@@ -1308,17 +1385,18 @@ QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
 ### مثال
+
 ```js
 // create the cache directory for my-script-id
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
-Clearing a cache directory
---------------------------
+## Clearing a cache directory
 
 You can clear the cache directory of your script by passing its name to clearCacheDir().
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Clears the cache directory for a script
@@ -1330,17 +1408,18 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ```
 
 ### مثال
+
 ```js
-// clear cache directory of my-script-id 
+// clear cache directory of my-script-id
 script.clearCacheDir("my-script-id");
 ```
 
-قراءة مسار مجلد بُريمجك
-------------------------------------------------
+## قراءة مسار مجلد بُريمجك
 
 إذا احتجت إلى الحصول على مسار المجلد الذي يقع بُريمِجك فيه، لتحميل ملفات أخرى مثلا، عليك تسجيل الخاصية النصية `scriptDirPath` (بالكود <code dir="ltr">property string scriptDirPath;</code>). ستُضبط هذه الخاصية إلى مسار مجلد بُريمِجك.
 
 ### مثال
+
 ```js
 import QtQml 2.0
 import QOwnNotesTypes 1.0
@@ -1355,10 +1434,10 @@ Script {
 }
 ```
 
-تحويل فواصل المسار إلى الفواصل الخاصة بالنظام
------------------------------------------
+## تحويل فواصل المسار إلى الفواصل الخاصة بالنظام
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns path with the '/' separators converted to separators that are
@@ -1374,15 +1453,16 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 ```
 
 ### مثال
+
 ```js
 // will return "c:\winnt\system32" on Windows
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
-تحويل فواصل المسار من الفواصل الخاصة بالنظام
--------------------------------------------
+## تحويل فواصل المسار من الفواصل الخاصة بالنظام
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns path using '/' as file separator.
@@ -1396,15 +1476,16 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 ```
 
 ### مثال
+
 ```js
 // will return "c:/winnt/system32" on Windows
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-جلب فاصل المسارات الخاص بالنظام
---------------------------------------
+## جلب فاصل المسارات الخاص بالنظام
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns the native directory separator "/" or "\" on Windows
@@ -1415,15 +1496,16 @@ QString ScriptingService::dirSeparator();
 ```
 
 ### مثال
+
 ```js
 // will return "\" on Windows
 script.log(script.dirSeparator());
 ```
 
-جلب قائمة بمسارات الملاحظات المحددة
--------------------------------------------------
+## جلب قائمة بمسارات الملاحظات المحددة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns a list of the paths of all selected notes
@@ -1434,6 +1516,7 @@ QStringList ScriptingService::selectedNotesPaths();
 ```
 
 ### مثال
+
 ```js
 // ستُرجع قائمة بمسارات الملاحظات المحددة جميعها
 script.log(script.selectedNotesPaths());
@@ -1441,10 +1524,10 @@ script.log(script.selectedNotesPaths());
 
 ربما تحب أن تلقي نظرة على المثال [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-diff.qml).
 
-جلب قائمة بمُعرِّفات الملاحظات المحددة
------------------------------------------------
+## جلب قائمة بمُعرِّفات الملاحظات المحددة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Returns a list of the ids of all selected notes
@@ -1455,6 +1538,7 @@ QList<int> ScriptingService::selectedNotesIds();
 ```
 
 ### مثال
+
 ```js
 // ستُرجع قائمة بمعرفات الملاحظات المحددة جميعها
 script.log(script.selectedNotesIds());
@@ -1462,10 +1546,10 @@ script.log(script.selectedNotesIds());
 
 ربما تحب أن تلقي نظرة على المثال [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-تفعيل إجراء قائمة
-------------------------
+## تفعيل إجراء قائمة
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Triggers a menu action
@@ -1478,6 +1562,7 @@ void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 ```
 
 ### مثال
+
 ```js
 // تبديل وضع القراءة فقط
 script.triggerMenuAction("actionAllow_note_editing");
@@ -1492,10 +1577,10 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
 :::
 
-إظهار حوار إدخال بصندوق اختيار
------------------------------------------
+## إظهار حوار إدخال بصندوق اختيار
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Opens an input dialog with a select box
@@ -1515,18 +1600,22 @@ QString ScriptingService::inputDialogGetItem(
 سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
+
 ```js
-var result = script.inputDialogGetItem(
-    "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
+var result = script.inputDialogGetItem("combo box", "Please select an item", [
+  "Item 1",
+  "Item 2",
+  "Item 3",
+]);
 script.log(result);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
-إظهار حوار لإدخال سطر نصي
-----------------------------------------
+## إظهار حوار لإدخال سطر نصي
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Opens an input dialog with a line edit
@@ -1543,16 +1632,20 @@ QString ScriptingService::inputDialogGetText(
 سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
+
 ```js
 var result = script.inputDialogGetText(
-    "line edit", "Please enter a name", "current text");
+  "line edit",
+  "Please enter a name",
+  "current text",
+);
 script.log(result);
 ```
 
-إظهار حوار لإدخال سطور نصية
----------------------------------------------------
+## إظهار حوار لإدخال سطور نصية
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Opens an input dialog with a multi-line text edit
@@ -1569,16 +1662,20 @@ QString ScriptingService::inputDialogGetMultiLineText(
 سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
+
 ```js
 var result = script.inputDialogGetMultiLineText(
-    "multi-line edit", "Please enter a text", "current text");
+  "multi-line edit",
+  "Please enter a text",
+  "current text",
+);
 script.log(result);
 ```
 
-فتح مربع حوار لإظهار الاختلافات بين نصين
-----------------------------------------------------------
+## فتح مربع حوار لإظهار الاختلافات بين نصين
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
 * Opens a dialog to show the differences between two texts and lets the user edit the result
@@ -1596,19 +1693,25 @@ script.log(result);
 و`text2` هو النص الذي سيظهر في مربع الحوار لتحريره. سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
 ### مثال
+
 ```js
 const text = script.noteTextEditSelectedText();
 const aiPrompt = "Translate the text to English";
 const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
 
-var result = script.textDiffDialog("AI Text Tool", "Resulting text", text, aiResult);
+var result = script.textDiffDialog(
+  "AI Text Tool",
+  "Resulting text",
+  text,
+  aiResult,
+);
 script.log(result);
 ```
 
-التحقق من وجود ملف
--------------------------
+## التحقق من وجود ملف
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * تتحقق من وجود ملف
@@ -1619,15 +1722,16 @@ bool ScriptingService::fileExists(QString &filePath);
 ```
 
 ### مثال
+
 ```js
 var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-قراءة نص من ملف
-------------------------
+## قراءة نص من ملف
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Read text from a file
@@ -1640,18 +1744,18 @@ QString ScriptingService::readFromFile(const QString &filePath, const QString &c
 ```
 
 ### مثال
+
 ```js
-if(script.fileExists(filePath)){
-    var data = script.readFromFile(filePath);
-    script.log(data);
+if (script.fileExists(filePath)) {
+  var data = script.readFromFile(filePath);
+  script.log(data);
 }
 ```
 
-
-كتابة نص إلى ملف
-----------------------
+## كتابة نص إلى ملف
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Writes a text to a file
@@ -1665,6 +1769,7 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data,
 ```
 
 ### مثال
+
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
@@ -1672,8 +1777,7 @@ script.log(result);
 
 ربما تحب أن تلقي نظرة على المثال [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
-العمل مع مقابس الويب
------------------------
+## العمل مع مقابس الويب
 
 يمكنك التحكم في QOwnNotes عن بعد باستخدام `WebSocketServer` (خادم مقبس الويب).
 
@@ -1683,12 +1787,12 @@ script.log(result);
 
 تذكر أنك بحاجة إلى أن تكون مكتبة `websocket` من Qt QML مثبتة على جهازك. مثلا على أوبنتو، يمكنك تثبيت حزمة `qml-module-qtwebsockets`.
 
-إضافة قاعدة تلوين إلى المحرر
------------------------------------------
+## إضافة قاعدة تلوين إلى المحرر
 
 يمكنك إضافة قواعد تلوين إلى المحرر مباشرةً، بتعريف تعابير نمطية وإسنادها إلى حالة تلوين.
 
 ### نداء الدالة ومُعامِلاتها
+
 ```cpp
 /**
  * Adds a highlighting rule to the syntax highlighter of the editor
@@ -1739,6 +1843,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | StUnderline            | 31    |
 
 ### مثال
+
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);

@@ -54,8 +54,7 @@ graph TB
 - Je hebt ook **toegang tot je notitiegeschiedenis en prullenbak** op je Nextcloud / ownCloud-server via de [QOwnNotesApi Nextcloud-app](#qownnotesapi-nextcloud-app)
 - Todo-lijsten op uw Nextcloud / ownCloud-server zijn toegankelijk vanuit QOwnNotes
 - **QOwnNotes synchroniseert uw notities niet** en media- / bijlagebestanden!
-    - Bestandssynchronisatie is een complexe onderneming, er zijn al geweldige oplossingen voor het synchroniseren van bestanden beschikbaar (zie [Nextcloud desktop-synchronisatieclient](#nextcloud-desktop-sync-client))
-
+  - Bestandssynchronisatie is een complexe onderneming, er zijn al geweldige oplossingen voor het synchroniseren van bestanden beschikbaar (zie [Nextcloud desktop-synchronisatieclient](#nextcloud-desktop-sync-client))
 
 ## Markdown-notitiebestanden
 
@@ -63,7 +62,6 @@ graph TB
 - Uw notities worden opgeslagen als **platte tekst Markdown-bestanden** op uw desktopcomputer
 - U kunt naast QOwnNotes elke gewenste teksteditor gebruiken om uw notitiebestanden te bekijken of te bewerken
 - **Synchroniseer uw notities** met andere apparaten (desktop en mobiel) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server
-
 
 ## QOwnNotes-browserextensie
 
@@ -134,7 +132,7 @@ Om toegang te krijgen tot uw Nextcloud / ownCloud-notities vanaf uw **mobiele ap
 - [Nextcloud Notes voor Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (derde partij)
 
 ::: tip
-U kunt ook elke synchronisatietool zoals *Synchronize Ultimate* of *FolderSync* gebruiken om uw notitiebestanden te synchroniseren en software zoals *neutriNotes* gebruiken om uw notities te bewerken.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 :::
 
 ### iOS

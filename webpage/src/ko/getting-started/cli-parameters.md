@@ -19,6 +19,7 @@
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 명령행 인터페이스에서 응용 프로그램을 다른 운영 체제에서 다르게 실행할 수 있습니다:
@@ -44,6 +45,7 @@ QOwnNotes --dump-settings | pbcopy
 # Windows에서 clip으로 설정 덤프를 클립보드에 복사
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## 시작 후 메뉴 작업 트리거

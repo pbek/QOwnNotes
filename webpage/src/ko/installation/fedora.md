@@ -24,6 +24,7 @@ dnf install qownnotes
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 위 코드의 "Fedora_40" 부분은 사용 중인 Fedora 버전 (즉, "Fedora_39", "Fedora_38" 등)을 반영해야 합니다 :::
 
 ## 레거시 설치 방법
@@ -35,6 +36,7 @@ Fedora 버전이 `config-manager` dnf 플러그인을 지원하지 않는 경우
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 다시: 위 코드의 "Fedora_40" 부분은 사용 중인 Fedora 버전 (즉, "Fedora_39", "Fedora_38" 등)을 반영해야 합니다
 
 그런 다음 다음 다음 셸 명령을 root으로 실행하여 리포지토리를 추가하고 거기에서 QOwnNotes를 설치합니다.
@@ -60,7 +62,7 @@ dnf install qownnotes
 
 ### GPG 키에 문제가 있습니까?
 
-Fedora의 암호화 정책 변경은 "오래된" (만료된) 저장소 키가 *자동*으로 확장되지 않음을 의미할 수 있습니다. 이로 인해 QOwnNotes *업데이트*에 문제가 발생할 수 있습니다.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. 이로 인해 _ 업데이트_ QOwnNotes 문제가 발생할 수 있습니다.
 
 **세부 정보:** <0>인증서가 살아있지 않거나</0> 키 만료로 인해 키 만료로 인해 키가 `살아있지 않는` 등 잘못된 키 (예, GPG 오류) 에 문제가 있는 경우 이 터미널 명령은 만료된 키를 삭제해야 합니다:
 
@@ -70,4 +72,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 명령에 대한 자세한 설명은 GitHub에서 이 정확한 문제와 관련된 [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) 에서 확인할 수 있습니다.
 
-만료된 키를 삭제한 후에는 설치 지침의 처음에 설명된 대로 **현재** 키를 수동으로 새로 *가져와야* 합니다.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

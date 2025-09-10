@@ -19,7 +19,7 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     setWindowTitle(Utils::Misc::replaceOwnCloudText(windowTitle()));
     ui->tabWidget->setCurrentIndex(0);
 
-    // init the note text edit search frame
+    // Init the note text edit search-frame
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
 
     setupMainSplitter();
@@ -48,18 +48,23 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     QString itemName;
     QString diffHtml;
     ui->versionListWidget->clear();
-    diffList = new QStringList();
-    dataList = new QStringList();
+    _diffList = new QStringList();
+    _dataList = new QStringList();
+    const auto currentNote = MainWindow::instance()->getCurrentNote();
+    const bool canDecryptNoteText = currentNote.canDecryptNoteText();
 
-    // init the iterator for the versions
-    QJSValueIterator versionsIterator(versions);
-
-    // this seems to report a has next even if there aren't any items
-    if (!versionsIterator.hasNext()) {
-        return;
+    // If the text was decrypted, we use the styling of the encrypted note text edit
+    if (canDecryptNoteText) {
+        static const QString encryptedStyle =
+            "QTextEdit,QPlainTextEdit {border: 3px dashed #aa0000;}";
+        ui->noteTextEdit->setStyleSheet(encryptedStyle);
+        ui->diffBrowser->setStyleSheet(encryptedStyle);
     }
 
-    // iterate over the versions
+    // Init the iterator for the versions
+    QJSValueIterator versionsIterator(versions);
+
+    // Iterate over the versions
     while (versionsIterator.hasNext()) {
         versionsIterator.next();
         QJSValue property =
@@ -81,12 +86,21 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
         diffHtml.replace(QLatin1String("\n"), QLatin1String("<br />"));
 
         ui->versionListWidget->addItem(itemName);
-        diffList->append(diffHtml);
-        dataList->append(versionsIterator.value().property(QStringLiteral("data")).toString());
+        _diffList->append(diffHtml);
+        QString noteText = versionsIterator.value().property(QStringLiteral("data")).toString();
+
+        // Decrypt the note text if possible
+        if (canDecryptNoteText) {
+            noteText = currentNote.getDecryptedNoteText(Note::parseEncryptedNoteText(noteText));
+        }
+
+        _dataList->append(noteText);
     }
 
-    ui->versionListWidget->setCurrentRow(0);
-    ui->diffBrowser->setHtml(diffList->at(0));
+    if (!_diffList->isEmpty()) {
+        ui->versionListWidget->setCurrentRow(0);
+        ui->diffBrowser->setHtml(_diffList->at(0));
+    }
 }
 
 void VersionDialog::setupMainSplitter() {
@@ -112,8 +126,8 @@ void VersionDialog::storeSettings() {
 VersionDialog::~VersionDialog() { delete ui; }
 
 void VersionDialog::on_versionListWidget_currentRowChanged(int currentRow) {
-    ui->diffBrowser->setHtml(diffList->value(currentRow));
-    ui->noteTextEdit->setPlainText(dataList->value(currentRow));
+    ui->diffBrowser->setHtml(_diffList->value(currentRow));
+    ui->noteTextEdit->setPlainText(_dataList->value(currentRow));
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
@@ -121,7 +135,7 @@ void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
 
     if (actionRole == Restore) {
         MainWindow::instance()->setCurrentNoteText(
-            dataList->value(ui->versionListWidget->currentRow()));
+            _dataList->value(ui->versionListWidget->currentRow()));
     }
 
     this->close();

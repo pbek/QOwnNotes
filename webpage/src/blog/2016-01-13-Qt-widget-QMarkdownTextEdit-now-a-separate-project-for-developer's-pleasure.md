@@ -14,14 +14,13 @@ For the pleasure of you developers I extracted the markdown widget functionality
 It's name is **QMarkdownTextEdit** and you'll find it on **[QMarkdownTextEdit on GitHub](https://github.com/pbek/qmarkdowntextedit/)**.
 
 ![QMarkdownTextEdit screenshot](/img/blog/QMarkdownTextEdit-screenshot_large.png "QMarkdownTextEdit screenshot")
- 
-Current features
-----------------
+
+## Current features
 
 - markdown highlighting
 - clickable links with Ctrl + Click
 - block indent with Tab and Shift + Tab
 - duplicate text with Ctrl + Alt + Down
-- searching of text with Ctrl + F 
+- searching of text with Ctrl + F
   - jump between search results with Up and Down
   - close search field with Escape

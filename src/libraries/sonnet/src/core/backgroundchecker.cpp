@@ -19,26 +19,23 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301  USA
  */
-#include "backgroundchecker_p.h"
 #include "backgroundchecker.h"
 
+#include "backgroundchecker_p.h"
 #include "core_debug.h"
 
 using namespace Sonnet;
 
-void BackgroundCheckerPrivate::start()
-{
+void BackgroundCheckerPrivate::start() {
     sentenceOffset = -1;
     continueChecking();
 }
 
-void BackgroundCheckerPrivate::continueChecking()
-{
+void BackgroundCheckerPrivate::continueChecking() {
     metaObject()->invokeMethod(this, "checkNext", Qt::QueuedConnection);
 }
 
-void BackgroundCheckerPrivate::checkNext()
-{
+void BackgroundCheckerPrivate::checkNext() {
     do {
         // go over current sentence
         while (sentenceOffset != -1 && words.hasNext()) {
@@ -50,7 +47,7 @@ void BackgroundCheckerPrivate::checkNext()
             // ok, this is valid word, do something
             if (currentDict.isMisspelled(word.toString())) {
                 lastMisspelled = word;
-                emit misspelling(word.toString(), word.position()+sentenceOffset);
+                emit misspelling(word.toString(), word.position() + sentenceOffset);
                 return;
             }
         }
@@ -78,103 +75,67 @@ void BackgroundCheckerPrivate::checkNext()
 }
 
 BackgroundChecker::BackgroundChecker(QObject *parent)
-    : QObject(parent)
-    , d(new BackgroundCheckerPrivate)
-{
-    connect(d, SIGNAL(misspelling(QString,int)),
-            SIGNAL(misspelling(QString,int)));
-    connect(d, SIGNAL(done()),
-            SLOT(slotEngineDone()));
+    : QObject(parent), d(new BackgroundCheckerPrivate) {
+    connect(d, SIGNAL(misspelling(QString, int)), SIGNAL(misspelling(QString, int)));
+    connect(d, SIGNAL(done()), SLOT(slotEngineDone()));
 }
 
 BackgroundChecker::BackgroundChecker(const Speller &speller, QObject *parent)
-    : QObject(parent)
-    , d(new BackgroundCheckerPrivate)
-{
+    : QObject(parent), d(new BackgroundCheckerPrivate) {
     d->currentDict = speller;
-    connect(d, &BackgroundCheckerPrivate::misspelling,
-            this, &BackgroundChecker::misspelling);
-    connect(d, &BackgroundCheckerPrivate::done,
-            this, &BackgroundChecker::slotEngineDone);
+    connect(d, &BackgroundCheckerPrivate::misspelling, this, &BackgroundChecker::misspelling);
+    connect(d, &BackgroundCheckerPrivate::done, this, &BackgroundChecker::slotEngineDone);
 }
 
-BackgroundChecker::~BackgroundChecker()
-{
-    delete d;
-}
+BackgroundChecker::~BackgroundChecker() { delete d; }
 
-void BackgroundChecker::setText(const QString &text)
-{
+void BackgroundChecker::setText(const QString &text) {
     d->mainTokenizer.setBuffer(text);
     d->start();
 }
 
-void BackgroundChecker::start()
-{
+void BackgroundChecker::start() {
     // ## what if d->currentText.isEmpty()?
 
-    //TODO: carry state from last buffer
+    // TODO: carry state from last buffer
     d->mainTokenizer.setBuffer(fetchMoreText());
     d->start();
 }
 
-void BackgroundChecker::stop()
-{
+void BackgroundChecker::stop() {
     //    d->stop();
 }
 
-QString BackgroundChecker::fetchMoreText()
-{
-    return QString();
-}
+QString BackgroundChecker::fetchMoreText() { return QString(); }
 
-void BackgroundChecker::finishedCurrentFeed()
-{
-}
+void BackgroundChecker::finishedCurrentFeed() {}
 
-void BackgroundChecker::setSpeller(const Speller &speller)
-{
-    d->currentDict = speller;
-}
+void BackgroundChecker::setSpeller(const Speller &speller) { d->currentDict = speller; }
 
-Speller BackgroundChecker::speller() const
-{
-    return d->currentDict;
-}
+Speller BackgroundChecker::speller() const { return d->currentDict; }
 
-bool BackgroundChecker::checkWord(const QString &word)
-{
-    return d->currentDict.isCorrect(word);
-}
+bool BackgroundChecker::checkWord(const QString &word) { return d->currentDict.isCorrect(word); }
 
-bool BackgroundChecker::addWordToPersonal(const QString &word)
-{
+bool BackgroundChecker::addWordToPersonal(const QString &word) {
     return d->currentDict.addToPersonal(word);
 }
 
-bool BackgroundChecker::addWordToSession(const QString &word)
-{
+bool BackgroundChecker::addWordToSession(const QString &word) {
     return d->currentDict.addToSession(word);
 }
 
-QStringList BackgroundChecker::suggest(const QString &word) const
-{
+QStringList BackgroundChecker::suggest(const QString &word) const {
     return d->currentDict.suggest(word);
 }
 
-void BackgroundChecker::changeLanguage(const QString &lang)
-{
+void BackgroundChecker::changeLanguage(const QString &lang) {
     // this sets language only for current sentence
     d->currentDict.setLanguage(lang);
 }
 
-void BackgroundChecker::continueChecking()
-{
-    d->continueChecking();
-}
+void BackgroundChecker::continueChecking() { d->continueChecking(); }
 
-void BackgroundChecker::slotEngineDone()
-{
+void BackgroundChecker::slotEngineDone() {
     finishedCurrentFeed();
     const QString currentText = fetchMoreText();
 
@@ -186,30 +147,24 @@ void BackgroundChecker::slotEngineDone()
     }
 }
 
-QString BackgroundChecker::text() const
-{
-    return d->mainTokenizer.buffer();
-}
+QString BackgroundChecker::text() const { return d->mainTokenizer.buffer(); }
 
-QString BackgroundChecker::currentContext() const
-{
+QString BackgroundChecker::currentContext() const {
     int len = 60;
-    //we don't want the expression underneath casted to an unsigned int
-    //which would cause it to always evaluate to false
-    int currentPosition = d->lastMisspelled.position()+d->sentenceOffset;
-    bool begin = ((currentPosition - len/2) <= 0) ? true : false;
+    // we don't want the expression underneath casted to an unsigned int
+    // which would cause it to always evaluate to false
+    int currentPosition = d->lastMisspelled.position() + d->sentenceOffset;
+    bool begin = ((currentPosition - len / 2) <= 0) ? true : false;
 
     QString buffer = d->mainTokenizer.buffer();
     buffer.replace(currentPosition, d->lastMisspelled.length(),
-                            QStringLiteral("<b>%1</b>").arg(d->lastMisspelled.toString()));
+                   QStringLiteral("<b>%1</b>").arg(d->lastMisspelled.toString()));
 
     QString context;
     if (begin) {
-        context = QStringLiteral("%1...")
-                  .arg(buffer.mid(0, len));
+        context = QStringLiteral("%1...").arg(buffer.mid(0, len));
     } else {
-        context = QStringLiteral("...%1...")
-                  .arg(buffer.mid(currentPosition - 20, len));
+        context = QStringLiteral("...%1...").arg(buffer.mid(currentPosition - 20, len));
     }
 
     context.replace(QLatin1Char('\n'), QLatin1Char(' '));
@@ -217,10 +172,9 @@ QString BackgroundChecker::currentContext() const
     return context;
 }
 
-void Sonnet::BackgroundChecker::replace(int start, const QString &oldText, const QString &newText)
-{
-    //FIXME: here we assume that replacement is in current fragment. So 'words' has
-    //to be adjusted and sentenceOffset does not
-    d->words.replace(start-(d->sentenceOffset), oldText.length(), newText);
+void Sonnet::BackgroundChecker::replace(int start, const QString &oldText, const QString &newText) {
+    // FIXME: here we assume that replacement is in current fragment. So 'words' has
+    // to be adjusted and sentenceOffset does not
+    d->words.replace(start - (d->sentenceOffset), oldText.length(), newText);
     d->mainTokenizer.replace(start, oldText.length(), newText);
 }

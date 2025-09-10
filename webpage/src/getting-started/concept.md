@@ -50,14 +50,13 @@ graph TB
 ## QOwnNotes
 
 - QOwnNotes **stores notes** to your **note folder as markdown files**
-- It can talk to your Nextcloud / ownCloud server **to publicly share notes** with other people 
+- It can talk to your Nextcloud / ownCloud server **to publicly share notes** with other people
 - You can also **access your note history and trash** on your Nextcloud / ownCloud server
   via the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - Todo lists on your Nextcloud / ownCloud server can be accessed from within QOwnNotes
 - **QOwnNotes does not sync your notes** and media / attachment files!
-    - File syncing is a complex endeavor, there are already great file syncing solutions
-      out there (see [Nextcloud desktop sync client](#nextcloud-desktop-sync-client))
-
+  - File syncing is a complex endeavor, there are already great file syncing solutions
+    out there (see [Nextcloud desktop sync client](#nextcloud-desktop-sync-client))
 
 ## Markdown note files
 
@@ -66,7 +65,6 @@ graph TB
 - You can use any text editor you like beside QOwnNotes to view or edit your note files
 - **Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/)
   or [ownCloud](https://owncloud.org/) sync client to your server
-
 
 ## QOwnNotes browser extension
 
@@ -94,7 +92,7 @@ or [ownCloud](https://owncloud.org/) sync client to your server.
 Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used
 too to sync your notes and other files.
 
-You can also use **git** to sync with tools like [gitomatic](https://github.com/muesli/gitomatic/). 
+You can also use **git** to sync with tools like [gitomatic](https://github.com/muesli/gitomatic/).
 :::
 
 ## Nextcloud server
@@ -144,8 +142,9 @@ To access your Nextcloud / ownCloud notes from your **mobile device** you can us
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (3rd party)
 
 ::: tip
-You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files
-and use software like *neutriNotes* to edit your notes.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files
+and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/)
+to edit your notes.
 :::
 
 ### iOS

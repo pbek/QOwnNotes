@@ -2,17 +2,17 @@
 
 أصلح أخطاءك الإملائية!
 
-::: tip
-معلومة لدى QOwnNotes **مدير قواميس** مدمج (في قائمة *تحرير*) والذي يمكنك استخدامه لتنزيل قواميس أو حذفها (إذا كنت تفتقد لغتك، انظر بالأسفل لمعرفة كيف تطلب إضافة قاموس). إذا أردت تنزيل القواميس يدويًا، يمكنك اتباع الخطوات التالية.
+::: tip Info
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). إذا أردت تنزيل القواميس يدويًا، يمكنك اتباع الخطوات التالية.
 :::
 
 - في **لينكس** يمكنك تثبيت قواميس Hunspell للغتك باستخدام مدير الحزم الخاص بتوزيعتك
-    - إذا احتجتَ إلى إضافة ملفات لغات إضافية، يمكنك فعل ذلك في <code dir="ltr">~/.local/share/hunspell</code> أو <code dir="ltr">/usr/share/hunspell</code>.
-    - إذا كنت تستخدم حزمة Snap من QOwnNotes، يمكنك أيضا استخدام <code dir="ltr">~/hunspell</code> لملفات اللغات، لإن Snap لا يستطيع الوصول إلى <code dir="ltr">~/.local</code>
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - في **ويندوز** عليك نسخ قواميس Hunspell للغتك إلى مجلد `dicts` في مجلد تطبيق QOwnNotes أو في `C:\Users\[username]\dicts`
-    - يمكنك تنزيل القواميس من [قواميس ليبر أوفيس](https://github.com/LibreOffice/dictionaries)
-    - في **ماك أو إس** عليك نسخ قواميس Hunspell للغتك إلى <code dir="ltr">/Library/Spelling</code> أو <code dir="ltr">~/Library/Spelling</code>. إذا لم يكن هذا المجلد موجودا، عليك إنشاؤه.
+  - يمكنك تنزيل القواميس من [قواميس ليبر أوفيس](https://github.com/LibreOffice/dictionaries)
+  - في **ماك أو إس** عليك نسخ قواميس Hunspell للغتك إلى <code dir="ltr">/Library/Spelling</code> أو <code dir="ltr">~/Library/Spelling</code>. إذا لم يكن هذا المجلد موجودا، عليك إنشاؤه.
 
 يمكن تنزيل القواميس من [قواميس QOwnNotes](https://github.com/qownnotes/dictionaries). استخدم الجدول الذي في نهاية هذا المستند لتجد لغتك والرمز المناظر لها.
 

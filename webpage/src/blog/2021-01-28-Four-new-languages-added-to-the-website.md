@@ -10,7 +10,6 @@ order: 20210128000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 Four new translations were integrated into the webpage! A big thank you to all the translators for the tremendous effort they put in!
 
 - [QOwnNotes webpage in French](https://www.qownnotes.org/fr)

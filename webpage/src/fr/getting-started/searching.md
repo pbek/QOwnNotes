@@ -1,6 +1,6 @@
 # Recherche de notes
 
-Pour rechercher des notes ou du texte à l'intérieur de notes, vous pouvez utiliser le raccourci <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>F</kbd> (ou <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>F</kbd> sur macOS) pour accéder au *Panneau de recherche de note*.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 Il existe différentes manières de rechercher des notes :
 
@@ -9,3 +9,7 @@ Il existe différentes manières de rechercher des notes :
 - `n: livre` ou `nom: livre` recherchera les notes avec `livre` juste dans le nom de la note ou le nom du fichier
 
 ![Recherche en cours](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

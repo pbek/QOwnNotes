@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) puede manejar el **acceso** a **notas en la papelera** y **versiones de notas** por usted.

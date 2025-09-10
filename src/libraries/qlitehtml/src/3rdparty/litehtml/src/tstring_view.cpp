@@ -31,16 +31,12 @@
 
 namespace litehtml {
 
+std::basic_ostream<tstring_view::value_type>& operator<<(std::basic_ostream<tstring_view::value_type>& os, tstring_view str) {
+  if (os.good()) {
+    os.write(str.data(), str.size());
+  }
 
-std::basic_ostream<tstring_view::value_type>& operator<<(
-    std::basic_ostream<tstring_view::value_type>& os,
-    tstring_view str)
-{
-    if (os.good()) {
-        os.write(str.data(), str.size());
-    }
-
-    return os;
+  return os;
 }
 
-} // namespace litehtml
+}  // namespace litehtml

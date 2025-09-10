@@ -7,18 +7,19 @@ This might not always work, depending on the current state of the demo environme
 
 Puoi provare **QOwnNotes** nel tuo browser web senza installarlo seguendo queste istruzioni:
 
-1) Fai clic sul link [Riproduci con Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop). 2) Fai clic sul pulsante **Accedi / Avvia** (vedi screenshot punto **1**) e accedi con il tuo account Docker (devi crearne uno se non ne hai già uno).
+1. Click on this [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) link.
+2. Click the **Login / Start** button (see screenshot bullet **1**) and login with your Docker account (you need to create one if you don't already have one).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-3) Attendi finché il contenitore non è stato creato e avviato. Quindi dovresti essere in grado di fare clic su **6080** in alto (vedi screenshot punto **2**). Se vedi un errore, attendi ancora un po' e prova a fare di nuovo clic su *6080*, il caricamento dell'ambiente desktop richiede un po' di tempo.
+3. Wait until the container is created and spun up. Then you should be able to click on **6080** on the top (see screenshot bullet **2**). If you get an error please wait a bit more and try to click _6080_ again, it takes a while for the desktop environment to load.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-4) Dovrebbe aprirsi una nuova scheda del browser, mostrando un desktop. Fai clic sul **simbolo in basso a sinistra** sullo schermo (nella barra delle applicazioni), vai con il mouse su **Accessori** e fai clic su **QOwnNotes** (vedi screenshot punto **3**).
+4. A new browser tab should open producing a desktop. Click on the **bottom left symbol** on the screen (in the task bar), hover over **Accessories** and click on **QOwnNotes** (see screenshot bullet **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
-5) Dovrebbe aprirsi la finestra di dialogo di installazione **QOwnNotes**, fai clic e premi *Fine* per visualizzare la finestra principale di QOwnNotes.
+5. The **QOwnNotes** install dialog should open, click through it and press _Finish_ to see the QOwnNotes main window.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

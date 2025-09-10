@@ -8,7 +8,7 @@ order: 20181223152404
 
 <v-subheader class="blog">Date: 2018-12-23</v-subheader>
 
-Right for Christmas comes *version 18.12.5*, the **500th release of QOwnNotes**!
+Right for Christmas comes _version 18.12.5_, the **500th release of QOwnNotes**!
 
 A lot has changed between the first release in end of 2014 and now over the course of 3593 commits. The [changelog](https://www.qownnotes.org/changelog/QOwnNotes) will tell you the (almost) whole story.
 

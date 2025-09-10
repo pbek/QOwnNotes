@@ -39,92 +39,55 @@
 namespace litehtml {
 
 class url {
-public:
-    url() = default;
+ public:
+  url() = default;
 
-    explicit url(const tstring& str);
+  explicit url(const tstring& str);
 
-    url(const tstring& scheme,
-        const tstring& authority,
-        const tstring& path,
-        const tstring& query,
-        const tstring& fragment);
+  url(const tstring& scheme, const tstring& authority, const tstring& path, const tstring& query, const tstring& fragment);
 
-    const tstring& string() const
-    {
-        return str_;
-    }
+  const tstring& string() const { return str_; }
 
-    const tstring& scheme() const
-    {
-        return scheme_;
-    }
+  const tstring& scheme() const { return scheme_; }
 
-    bool has_scheme() const
-    {
-        return !scheme_.empty();
-    }
+  bool has_scheme() const { return !scheme_.empty(); }
 
-    const tstring& authority() const
-    {
-        return authority_;
-    }
+  const tstring& authority() const { return authority_; }
 
-    bool has_authority() const
-    {
-        return !authority_.empty();
-    }
+  bool has_authority() const { return !authority_.empty(); }
 
-    const tstring& path() const
-    {
-        return path_;
-    }
+  const tstring& path() const { return path_; }
 
-    bool has_path() const
-    {
-        return !path_.empty();
-    }
+  bool has_path() const { return !path_.empty(); }
 
-    const tstring& query() const
-    {
-        return query_;
-    }
+  const tstring& query() const { return query_; }
 
-    bool has_query() const
-    {
-        return !query_.empty();
-    }
+  bool has_query() const { return !query_.empty(); }
 
-    const tstring& fragment() const
-    {
-        return fragment_;
-    }
+  const tstring& fragment() const { return fragment_; }
 
-    bool has_fragment() const
-    {
-        return !fragment_.empty();
-    }
+  bool has_fragment() const { return !fragment_.empty(); }
 
-protected:
-    tstring str_;
+ protected:
+  tstring str_;
 
-    // Assume URLs are relative by default.  See RFC 3986 Section 4.3 for
-    // information on which URLs are considered relative and which URLs are
-    // considered absolute:
-    //
-    //   https://datatracker.ietf.org/doc/html/rfc3986#section-4.3
+  // Assume URLs are relative by default.  See RFC 3986 Section 4.3 for
+  // information on which URLs are considered relative and which URLs are
+  // considered absolute:
+  //
+  //   https://datatracker.ietf.org/doc/html/rfc3986#section-4.3
 
-    bool absolute_ = false;
+  bool absolute_ = false;
 
-    tstring scheme_;
+  tstring scheme_;
 
-    tstring authority_;
+  tstring authority_;
 
-    tstring path_;
+  tstring path_;
 
-    tstring query_;
+  tstring query_;
 
-    tstring fragment_;
+  tstring fragment_;
 };
 
 // Returns a URL that is resolved from the reference URL that might be
@@ -134,6 +97,6 @@ protected:
 
 url resolve(const url& base, const url& reference);
 
-} // namespace litehtml
+}  // namespace litehtml
 
-#endif // LITEHTML_URL_H__
+#endif  // LITEHTML_URL_H__

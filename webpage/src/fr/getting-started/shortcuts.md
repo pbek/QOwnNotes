@@ -23,7 +23,7 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Pg. Suiv</kbd> bascule vers l'onglet de note suivant
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> ferme l'onglet de note actuel
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>D</kbd> active ou désactive le mode sans distraction
-    - vous pouvez également le fermer avec <kbd>Esc</kbd>
+  - vous pouvez également le fermer avec <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> imprime la note actuelle sous forme de texte
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>P</kbd> imprime la note courante sous forme de Markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>V</kbd> colle des notes, des images ou du code HTML à partir du presse-papiers
@@ -48,7 +48,7 @@
 ### Dans la barre de recherche de notes
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> définit le focus sur la liste de notes
-- <kbd>Return</kbd> crée une nouvelle note avec le texte de la barre de recherche comme titre
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Dans la liste des notes
 
@@ -60,11 +60,11 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> sur un lien pour l'ouvrir
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> vous permet de rechercher dans la note actuelle
-    - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd>  pour passer aux correspondances précédentes et suivantes respectivement
-    - <kbd>Esc</kbd> ferme la barre de recherche
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> ferme la barre de recherche
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> vous permet de rechercher et de remplacer dans la note actuelle
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplique la ligne courante ou le texte sélectionné
-    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> fait la même chose
+  - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> fait la même chose
 - <kbd> Alt </kbd> + <kbd>Backspace</kbd> supprime la ligne courante
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> supprime le mot courant
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> ouvre une boîte de dialogue pour ajouter un lien texte (fonctionne également sur le texte sélectionné)
@@ -81,12 +81,12 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Maj</kbd> + <kbd>S</kbd> raye le texte sélectionné
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>U</kbd> fait défiler les casses pour le texte sélectionné
 - <kbd>Tab</kbd> indente le texte sélectionné (fonctionne également sur plusieurs lignes)
-    - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> désindente le texte sélectionné
-- <kbd>Tab</kbd> après un caractère de liste non ordonné indente l'élément de liste
-    - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> après un élément de liste non ordonnée le désindente
-- <kbd>Entrée</kbd> dans les listes crée un nouvel élément de liste
+  - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> désindente le texte sélectionné
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>← Gauche</kbd> revient en arrière dans l'historique des notes
-    - <kbd>Alt</kbd> + <kbd>→ Droite</kbd> saute en avant dans l'historique des notes
+  - <kbd>Alt</kbd> + <kbd>→ Droite</kbd> saute en avant dans l'historique des notes
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>1…9</kbd> définit un signet de note sur l'emplacement de signet 1…9
 - <kbd>Ctrl</kbd> + <kbd>1…9</kbd> bascule vers le signet de note sur l'emplacement de signet 1…9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> augmente la taille de la police du texte de la note d'un point
@@ -105,15 +105,14 @@
 ### Dans le panneau d'aperçu de la note
 
 - <kbd> Ctrl </kbd> + <kbd> F </kbd> vous permet de rechercher dans la note actuellevous permet de rechercher dans la note actuelle
-    - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd>  pour passer aux correspondances précédentes et suivantes respectivement
-    - <kbd>Esc</kbd> ferme la barre de recherche
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> ferme la barre de recherche
 
 ### Dans la liste Todo
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> enregistre l'élément de tâche actuel
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> enregistre l'élément de tâche actuel et l'insère dans la note actuelle
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> supprime l'élément de tâche actuel
-
 
 ## macOS
 
@@ -138,7 +137,7 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Pg. Suiv</kbd> bascule vers l'onglet de note suivant
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> ferme l'onglet de note courant
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>D</kbd> active ou désactive le mode sans distraction
-    - vous pouvez également le fermer avec <kbd>Esc</kbd>
+  - vous pouvez également le fermer avec <kbd>Esc</kbd>
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> imprime la note courante sous forme de texte
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>P</kbd> imprime la note courante sous forme de Markdown
 - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>V</kbd> colle des notes, des images ou du HTML à partir du presse-papiers
@@ -163,7 +162,7 @@
 ### Dans la barre de recherche de notes
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> définit le focus sur la liste de notes
-- <kbd>Return</kbd> crée une nouvelle note avec le texte de la barre de recherche comme titre
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### Dans la liste des notes
 
@@ -175,11 +174,11 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> sur un lien pour l'ouvrir
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> permet de faire une recherche dans la note courante
-    - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd>  pour passer aux correspondances précédentes et suivantes respectivement
-    - <kbd>Esc</kbd> ferme la barre de recherche
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> ferme la barre de recherche
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> permet de rechercher et de remplacer dans la note actuelle
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplique la ligne courante ou le texte sélectionné
-    - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>Down</kbd> fait la même chose
+  - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>Down</kbd> fait la même chose
 - <kbd>⌘ Cmd</kbd> + <kbd>Retour arrière</kbd> supprime la ligne courante
 - <kbd>^ Ctrl</kbd> + <kbd>Retour arrière</kbd> supprime le mot courant
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> ouvre une boîte de dialogue pour ajouter un lien texte (fonctionne également sur le texte sélectionné)
@@ -196,12 +195,12 @@
 - <kbd>^ Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>S</kbd> raye le texte sélectionné
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>U</kbd> fait défiler les casses pour le texte sélectionné
 - <kbd>Tab</kbd> indente le texte sélectionné (fonctionne également sur plusieurs lignes)
-    - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> désindente le texte sélectionné
-- <kbd>Tab</kbd> après un caractère de liste non-ordonné l'indente
-    - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> après un élément de liste non ordonnée le désindente
-- <kbd>Entrée</kbd> dans les listes crée un nouvel élément de liste
+  - <kbd>⇧ Maj</kbd> + <kbd>Tab</kbd> désindente le texte sélectionné
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>← Gauche</kbd> remonte à rebours l'historique des notes
-    - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>→ Droite</kbd> avance dans l'historique des notes
+  - <kbd>⌘ Cmd</kbd> + <kbd>^ Ctrl</kbd> + <kbd>→ Droite</kbd> avance dans l'historique des notes
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>1…9</kbd> définit un signet de note sur l'emplacement de signet 1…9
 - <kbd>⌘ Cmd</kbd> + <kbd>1…9</kbd> bascule vers le signet de note sur l'emplacement de signet 1…9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> augmente la taille de la police du texte de la note d'un point
@@ -220,8 +219,8 @@
 ### Dans le panneau d'aperçu de la note
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> permet de faire une recherche dans la note courante
-    - utilisez les touches directionnelles <kbd>↑ Haut</kbd> et <kbd>↓ Bas</kbd> ou bien <kbd>F3</kbd> et <kbd>⇧ Maj</kbd> + <kbd>F3</kbd>  pour passer aux correspondances précédentes et suivantes respectivement
-    - <kbd>Esc</kbd> ferme la barre de recherche
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> ferme la barre de recherche
 
 ### Dans la liste des tâches
 

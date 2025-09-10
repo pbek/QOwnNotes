@@ -1,5 +1,3 @@
 # التثبيت على CentOS Linux
 
-يتعهد المجتمع حزمة لـ&nbsp;**CentOS السابعة والثامنة و&nbsp;AlmaLinux الثامنة و&nbsp;RockyLinux الثامنة** من *Jörg Woll* على [حزم QOwnNotes لـ&nbsp;x86_64 لـ&nbsp;el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html)، و[حزم QOwnNotes لـ&nbsp;ARM لـ&nbsp;el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html)، و[حزم QOwnNotes لـ&nbsp;x86_64 لـ&nbsp;el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html).
-
-شكرا جزيلا لـ&nbsp;Jörg!
+There are community-created packages for **RHEL 8/9, AlmaLinux 8/9, RockyLinux 8/9, CentOS 8/9 and Oracle 8/9** by _Jörg Woll_ at [QOwnNotes packages for x86_64 for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html) deprecated CentOS 7 EOL, [QOwnNotes packages for ARM for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html) deprecated CentOS 7 EOL, [QOwnNotes packages for x86_64 for el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html). [QOwnNotes packages for x86_64 for el9](http://wilhelm949.spdns.org:10443/w3bservice/9/x86_64/w3bservice/Packages/repoview/qownnotes.html).

@@ -20,6 +20,7 @@ Jeśli napotkasz problemy z instalacją QOwnNotes, możesz uruchomić aplikację
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Możesz uruchomić aplikację poprzez wiersz poleceń na różnych systemach operacyjnych:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Wyzwalaj akcje menu po uruchomieniu

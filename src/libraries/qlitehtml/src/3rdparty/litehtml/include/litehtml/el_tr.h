@@ -3,16 +3,14 @@
 
 #include "html_tag.h"
 
-namespace litehtml
-{
-	class el_tr : public html_tag
-	{
-	public:
-		explicit el_tr(const std::shared_ptr<litehtml::document>& doc);
+namespace litehtml {
+class el_tr : public html_tag {
+ public:
+  explicit el_tr(const std::shared_ptr<litehtml::document>& doc);
 
-		void parse_attributes() override;
-		void get_inline_boxes(position::vector& boxes) override;
-	};
-}
+  void parse_attributes() override;
+  void get_inline_boxes(position::vector& boxes) override;
+};
+}  // namespace litehtml
 
 #endif  // LH_EL_TR_H

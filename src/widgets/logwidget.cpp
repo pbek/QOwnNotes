@@ -143,6 +143,11 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
          text.contains(QLatin1String("[Botan Error]  Invalid CBC padding")) ||
          text.contains(QLatin1String("Invalid version or not a cyphertext")) ||
          text.contains(QLatin1String("QTextCursor::setPosition: Position")) ||
+         text.contains(QLatin1String("which does not match the current topmost grabbing popup,")) ||
+         text.contains(QLatin1String(
+             "QObject::disconnect: wildcard call disconnects from destroyed signal of")) ||
+         text.contains(
+             QLatin1String("This plugin supports grabbing the mouse only for popup windows")) ||
          text.contains(
              QLatin1String("QFont::setPointSizeF: Point size <= 0")) ||    // we don't even use that
                                                                            // method directly
@@ -164,7 +169,14 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
 
     QString type = logTypeText(logType);
     QColor color = QColor(Qt::black);
+
+#ifdef Q_OS_MAC
+    // Try to fix crash when quitting the app with turned on log panel on macOS with Qt6 on Apple
+    // Silicon https://github.com/pbek/QOwnNotes/issues/2912#issuecomment-3066625378
+    const bool darkMode = QSettings().value(QStringLiteral("darkMode")).toBool();
+#else
     const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
+#endif
 
     switch (logType) {
         case DebugLogType:
@@ -364,7 +376,14 @@ void LogWidget::logMessageOutput(QtMsgType type, const QMessageLogContext &conte
  * @param msg
  */
 void LogWidget::logToFileIfAllowed(LogType logType, const QString &msg) {
+    // There was a segmentation fault when quitting the application on ARM macOS
+    // when using SettingsService, see https://github.com/pbek/QOwnNotes/issues/3290
+#if defined(Q_OS_MACOS) && defined(Q_PROCESSOR_ARM)
+    QSettings settings;
+#else
     SettingsService settings;
+#endif
+
     if (settings.value(QStringLiteral("Debug/fileLogging")).toBool()) {
         QFile logFile(Utils::Misc::logFilePath());
         if (logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {

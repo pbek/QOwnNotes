@@ -8,6 +8,7 @@
 #include "entities/notesubfolder.h"
 #include "mainwindow.h"
 #include "utils/gui.h"
+#include "widgets/navigationwidget.h"
 #include "widgets/notesubfoldertree.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
@@ -110,15 +111,17 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
         // set current note
         mw->setCurrentNote(std::move(note));
 
-        // jump to the Markdown heading in the note that is represented by the url fragment
+        // Jump to the Markdown heading in the note that is represented by the url fragment
         if (!fragment.isEmpty()) {
-            // Search with a regular expression for the fragment to make sure
-            // we are searching for the full heading
-            auto searchTerm =
-                QStringLiteral("# ") + QRegularExpression::escape(fragment) + QStringLiteral("$");
-            mw->activeNoteTextEdit()->doSearch(searchTerm,
-                                               QPlainTextEditSearchWidget::RegularExpressionMode);
-            mw->activeNoteTextEdit()->searchWidget()->deactivate();
+            auto nodes = NavigationWidget::parseDocument(mw->activeNoteTextEdit()->document());
+
+            // Search in the nodes for the fragment
+            for (const auto &node : nodes) {
+                if (node.text.contains(fragment)) {
+                    mw->onNavigationWidgetPositionClicked(node.pos);
+                    break;
+                }
+            }
         }
     } else {
         QString fileName;

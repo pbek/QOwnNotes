@@ -815,6 +815,10 @@
 <translation>Символы ключевых слов:</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Использовать редактирование в стиле Vim</translation>
 </message>
@@ -1499,6 +1503,10 @@
 <translation>Выберите локальный файл или каталог для ссылки</translation>
 </message>
 <message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
 <source>Note</source>
 <translation>Заметка</translation>
 </message>
@@ -1533,6 +1541,22 @@
 <message>
 <source>Select directory to link to</source>
 <translation>Выберите каталог для ссылки</translation>
+</message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation type="unfinished">Select file to link to (relative)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation type="unfinished">Select file to link to (absolute)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation type="unfinished">Select directory to link to (relative)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation type="unfinished">Select directory to link to (absolute)</translation>
 </message>
 </context>
 <context>
@@ -2134,6 +2158,14 @@
 <translation>Разблокировать панель</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>Переприсоединить плавающие панели</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Удалить текущую рабочую область</translation>
 </message>
@@ -2204,6 +2236,10 @@
 <message>
 <source>Show note git versions</source>
 <translation>Показать Git-версии заметки</translation>
+</message>
+<message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2699,6 +2735,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation type="unfinished">Note</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>Папки заметок</translation>
 </message>
@@ -2709,6 +2750,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Удаленные заметки в настоящее время загружены с сервера ownCloud</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2785,6 +2847,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Папка с заметками &lt;b&gt;%1&lt;/b&gt; с путём &lt;b&gt;%2&lt;/b&gt; больше не сушествует!</translation>
 </message>
 <message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>Лн %1, Клн %2</translation>
@@ -2802,6 +2872,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>%n выбраны</numerusform>
 <numerusform>%n выбранных</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation type="unfinished">No versions available</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation type="unfinished">No versions are available for this note.</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -2920,9 +3006,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation>
+<numerusform>Пропущено копирование %n заметки(ок) (нет Markdown или текстовый файл нечитаем)</numerusform>
+<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 <numerusform>Пропущено копирование %n заметки (нет Markdown или текстовый файл нечитаемый)</numerusform>
-<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
-<numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 <numerusform>Пропущено копирование %n заметок (нет Markdown или текстовый файл нечитаемый)</numerusform>
 </translation>
 </message>
@@ -2999,6 +3085,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Rename workspace</source>
 <translation>Переименовать рабочую область</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -3357,6 +3465,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Просмотр заметки</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Журнал</translation>
 </message>
@@ -3439,6 +3551,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Нажмите здесь, чтобы увидеть, что изменилось и быть в состоянии обновить до последней версии</translation>
+</message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -4159,6 +4275,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Note creation failed</source>
 <translation>Создание заметки не удалось</translation>
 </message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4398,8 +4518,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Не удается установить подключение к базе данных в файле «%1». Папка и файл доступны для записи?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4408,12 +4535,6 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Cannot open database</source>
 <translation>Не удается открыть базу данных</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Невозможно установить соединение с базой данных с папкой для заметок для объединения '%1'.
-Папка и файл доступны для записи?</translation>
 </message>
 </context>
 <context>
@@ -5212,6 +5333,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Баскский</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Эстонский</translation>
 </message>
@@ -5564,6 +5689,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Поиск по языку</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation type="unfinished">Hide menu icons</translation>
+</message>
+<message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Панель состояния</translation>
 </message>
@@ -5701,12 +5842,28 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Автоматически удалять завершающие пробелы в тексте заметки</translation>
 </message>
 <message>
+<source>Git library</source>
+<translation type="unfinished">Git library</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
 <translation>Заметки большего размера не будут отображаться в списке заметок</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
 <translation>Максимальный размер файла заметки:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -5732,6 +5889,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
 <translation>Тестовое соединение</translation>
+</message>
+<message>
+<source>API settings</source>
+<translation type="unfinished">API settings</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation type="unfinished">Response timeout:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>сек</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -6160,7 +6334,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation>сек</translation>
+<translation type="unfinished">sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
@@ -6668,6 +6842,10 @@ Connection error message: </source>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation>Тест соединения к %1 (%2)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7808,10 +7986,6 @@ This cannot be undone!</source>
 <translation>Недостаточно прав доступа</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>Ваш исполняемый файл QOwnNotes '%1' недоступен для записи. Для обновления он должен быть доступен для записи текущим пользователем.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Временный файл '%1' не может быть исполняемым! Вам необходимо заменить '%2' самостоятельно.</translation>
 </message>
@@ -7858,6 +8032,10 @@ This cannot be undone!</source>
 <message>
 <source>Proceed with update</source>
 <translation>Продолжить обновление</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

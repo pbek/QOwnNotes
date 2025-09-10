@@ -23,7 +23,7 @@
 - <kbd>Alt</kbd> + <kbd>Page Down</kbd> a következő jegyzetlapra ugrik
 - A <kbd>Ctrl</kbd> + <kbd>W</kbd> bezárja az aktuális jegyzetfület
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> átkapcsolja a figyelemelvonás mentes módot
-    - bezárhatja az <kbd>Esc</kbd> gombbal is
+  - bezárhatja az <kbd>Esc</kbd> gombbal is
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> a figyelemelterelés nélküli mód váltása
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> kinyomtatja az aktuális jegyzetet leértékelésként
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> jegyzeteket, képeket és html fájlokat illeszt be a vágólapról
@@ -48,7 +48,7 @@
 ### A jegyzet keresősávban
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> a fókuszt a jegyzetlistára állítja
-- <kbd>Return</kbd> új jegyzetet hoz létre, amelynek címsoraként a keresősáv szövege található
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### A jegyzetlistában
 
@@ -60,11 +60,11 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> linkre kattintva nyissa meg
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - használja a<kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd>  billentyűket gombokkal az előző és a következő megfelelökre ugorhat
-    - Az <kbd>Esc</kbd> bezárja a keresősávot
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - Az <kbd>Esc</kbd> bezárja a keresősávot
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> lehetővé teszi az aktuális jegyzet keresését és cseréjét
 - A <kbd>Ctrl</kbd> + <kbd>D</kbd> másolja az aktuális sort vagy a kijelölt szöveget
-    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> ugyanezt teszi
+  - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> ugyanezt teszi
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> törli az aktuális sort
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> törli az aktuális szót
 - A <kbd>Ctrl</kbd> + <kbd>L</kbd> megnyit egy párbeszédpanelt szöveges hivatkozás hozzáadásához (a kiválasztott szövegen is működik)
@@ -81,12 +81,12 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> kihúzza a kijelölt szöveget
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> körbejárja a kiválasztott szöveg eseteit
 - <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> megszünteti a kijelölt szöveg behúzását
-- <kbd>Tab</kbd> egy rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
-- <kbd>Return</kbd> listákban létrehoz egy új listaelemet
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> megszünteti a kijelölt szöveg behúzását
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Left</kbd> visszaugrik a jegyzettörténetbe
-    - előreugrik a jegyzettörténetben
+  - előreugrik a jegyzettörténetben
 - <kbd>Shift</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> jegyzet könyvjelzőt állít be az 1..9 könyvjelző nyílásba
 - A <kbd>Ctrl</kbd> + <kbd>1..9</kbd> a jegyzet könyvjelzőjére ugrik az 1..9. könyvjelzőhelyen
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
@@ -105,15 +105,14 @@
 ### A jegyzet előnézeti paneljén
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lehetővé teszi az aktuális jegyzetben történő keresést
-    - használja a <kbd>Fel</kbd> és <kbd>Le</kbd> vagy az <kbd>F3</kbd> és <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> billentyűk az előző és a következő egyezésre ugráshoz
-    - Az <kbd>Esc</kbd> bezárja a keresősávot
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - Az <kbd>Esc</kbd> bezárja a keresősávot
 
 ### A Todo listában
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> elmenti az aktuális aktuális elemet
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> menti az aktuális aktuális elemet, és beszúrja az aktuális jegyzetbe
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> eltávolítja az aktuális aktuális elemet
-
 
 ## macOS
 
@@ -138,7 +137,7 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> a következő jegyzetlapra ugrik
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> bezárja az aktuális jegyzet lapot
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> átkapcsolja a figyelemelvonás mentes módot
-    - bezárhatja az <kbd>Esc</kbd> gombbal is
+  - bezárhatja az <kbd>Esc</kbd> gombbal is
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> kinyomtatja az aktuális jegyzetet szövegként
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> kinyomtatja az aktuális jegyzetet leértékelésként
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> jegyzeteket, képeket és html fájlokat illeszt be a vágólapról
@@ -163,7 +162,7 @@
 ### A jegyzet keresősávban
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> a fókuszt a jegyzetlistára állítja
-- <kbd>Return</kbd> új jegyzetet hoz létre, amelynek címsoraként a keresősáv szövege található
+- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
 
 ### A jegyzetlistában
 
@@ -175,11 +174,11 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lehetővé teszi a keresést az aktuális jegyzetben
-    - használja a <kbd>Fel</kbd> és <kbd>Le</kbd> vagy az <kbd>F3</kbd> és <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> billentyűk az előző és a következő egyezésre ugráshoz
-    - Az <kbd>Esc</kbd> bezárja a keresősávot
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - Az <kbd>Esc</kbd> bezárja a keresősávot
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> lehetővé teszi az aktuális jegyzet keresését és cseréjét
 - A <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> másolja az aktuális sort vagy a kijelölt szöveget
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> ugyanezt teszi
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> ugyanezt teszi
 - <kbd>⌘ Cmd</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> törli az aktuális sort
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
@@ -196,12 +195,12 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> kihúzza a kijelölt szöveget
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> körbejárja a kiválasztott szöveg eseteit
 - <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> megszünteti a kijelölt szöveg behúzását
-- <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> egy rendezetlen listakarakter után behúzza a listaelemet
-- <kbd>Return</kbd> listákban létrehoz egy új listaelemet
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> megszünteti a kijelölt szöveg behúzását
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> visszaugrik a hangjegytörténetben
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> előreugrik a hangjegytörténetben
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> előreugrik a hangjegytörténetben
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> jegyzetkönyvjelzőt állít be az 1. könyvjelzőnyílásba...9
 - <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> a jegyzet könyvjelzőjére ugrik az 1. könyvjelzőnyíláson...9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> egy ponttal növeli a jegyzet szövegének betűméretét
@@ -220,8 +219,8 @@
 ### A jegyzet előnézeti paneljén
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lehetővé teszi a keresést az aktuális jegyzetben
-    - használja a <kbd>Fel</kbd> és <kbd>Le</kbd> vagy az <kbd>F3</kbd> és <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> billentyűk az előző és a következő egyezésre ugráshoz
-    - Az <kbd>Esc</kbd> bezárja a keresősávot
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - Az <kbd>Esc</kbd> bezárja a keresősávot
 
 ### A Todo listában
 

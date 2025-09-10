@@ -192,6 +192,17 @@ QString NoteApi::getFileURLFromFileName(const QString& localFileName) {
     return _note.getFileURLFromFileName(localFileName);
 }
 
+/**
+ * Returns the Markdown note url for linking to the note with noteId
+ *
+ * @param noteId
+ * @return
+ */
+QString NoteApi::getNoteUrlForLinkingToNoteId(int noteId) {
+    const Note note = Note::fetch(noteId);
+    return _note.getNoteUrlForLinkingTo(note);
+}
+
 void NoteApi::copy(const Note& note) {
     _note = note;
 

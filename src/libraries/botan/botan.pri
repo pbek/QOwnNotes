@@ -6,7 +6,7 @@ HEADERS += $$PWD/botan.h \
 equals(USE_SYSTEM_BOTAN, 1) {
     DEFINES += USE_SYSTEM_BOTAN
     CONFIG += link_pkgconfig
-    PKGCONFIG += botan-2
+    PKGCONFIG += botan-3
 } else {
 
 SOURCES += $$PWD/botan.cpp

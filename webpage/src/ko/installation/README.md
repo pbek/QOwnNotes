@@ -7,4 +7,3 @@
 패키지 또는 리포지토리에 문제가 있는 경우 [QOwnNotes 문제 페이지](https://github.com/pbek/QOwnNotes/issues)에서 보고하십시오.
 
 ::: 팁 정보 메뉴에서 QOwnNotes를 설치하는 다양한 방법을 확인하십시오
-

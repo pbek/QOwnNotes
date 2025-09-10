@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) kan de **toegang** tot **weggegooide notities** en **notitieversies** voor u afhandelen.

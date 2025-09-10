@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud 앱
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi)은 **휴지통에 버린 노트** 및 **노트 버전**에 대한 액세스를 처리할 수 있습니다.

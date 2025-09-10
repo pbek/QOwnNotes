@@ -5,20 +5,24 @@ on:
     branches-ignore:
       - release
     tags-ignore:
-      - '*'
+      - "*"
     paths:
-      - 'src/**'
-      - 'shell.nix'
-      - 'default.nix'
-      - 'build-systems/nix/**'
-      - '.github/workflows/build-nix.yml'
+      - "src/**"
+      - "flake.*"
+      - "devenv.*"
+      - "shell.nix"
+      - "default.nix"
+      - "build-systems/nix/**"
+      - ".github/workflows/build-nix.yml"
   pull_request:
     paths:
-      - 'src/**'
-      - 'shell.nix'
-      - 'default.nix'
-      - 'build-systems/nix/**'
-      - '.github/workflows/build-nix.yml'
+      - "src/**"
+      - "flake.*"
+      - "devenv.*"
+      - "shell.nix"
+      - "default.nix"
+      - "build-systems/nix/**"
+      - ".github/workflows/build-nix.yml"
   workflow_dispatch:
 
 jobs:
@@ -28,16 +32,24 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        just-recipe: ['nix-build', 'nix-build-cmake-qt5']
-        os: ['ubuntu-latest', 'macos-latest', 'macos-14']
+        just-recipe: ["nix-build", "nix-build-cmake-qt5"]
+        os: ["ubuntu-latest", "macos-15", "macos-14"]
     steps:
       - name: ⚙️ Install Nix
-        uses: cachix/install-nix-action@v30
+        uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixos-unstable
+      - name: 🔒 Cache dependencies
+        uses: cachix/cachix-action@v16
+        with:
+          # https://app.cachix.org/cache/qownnotes-devenv
+          name: qownnotes-devenv
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+      - name: 🔧 Install devenv.sh
+        run: nix profile install nixpkgs#devenv
       - name: 🧰 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: 🚧 Build nix package
-        run: nix-shell --run "just ${{ matrix.just-recipe }}"
+        run: devenv shell just ${{ matrix.just-recipe }}

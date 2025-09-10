@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Abhängigkeiten
@@ -38,7 +39,7 @@ Standardmäßig wird `fzf` für die Suche verwendet, aber Sie können `peco` ver
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Bevor Sie den Snippet-Manager verwenden, müssen Sie den *Socket-Server* (2) in den Einstellungen *Browsererweiterung / Befehlsschnipsel* (1) in QOwnNotes aktivieren.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Dann müssen Sie das Sicherheitstoken vorzeigen (3) und kopieren (4).
 
@@ -67,13 +68,15 @@ Sie können **ungeordnete Listen mit Inline-Codeblöcken** verwenden, um Befehls
 Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch in der **aktuellen Notiz** gefunden, unabhängig von Notiz-Tags.
 
 ```markdown
-- `Echo Ich bin ein Befehl` Ich bin eine Beschreibung #tag1 #tag2 #tag3
-* `Echo Ich bin auch ein Befehl` Ich bin eine Beschreibung #tag3 #tag4 #tag5
-- cmd: `echo I wird in der aktuellen Notiz gefunden` Dieser Befehl wird in der aktuellen Notiz unabhängig von Notiz-Tags gefunden
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
 
-<!-- Beispiel für das Abfragen von Benutzereingaben -->
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
 
-- `read -p "PR ID: " id && git holt den Ursprung pull/$id/head:pull-$id && git checkout pull-$id` Fragen Sie nach der Pull-Request-ID und Checkout-Pull-Request
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 **`Bash`- oder `Shell`-Codeblöcke**, denen eine Überschrift 2 oder höher als Beschreibung vorangestellt ist, können auch für Befehlsschnipsel verwendet werden. Tags werden auch unterstützt, wenn sie sich zwischen der Überschrift und dem Codeblock befinden.

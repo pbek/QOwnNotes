@@ -2,7 +2,7 @@
 
 ## Evernote
 
-C'è una voce per importare le note di Evernote che puoi raggiungere in `Nota / Importa ` menù per importare * File Enex di Evernote * files.
+There is an Evernote import dialog you can reach in the `Note / Import` menu to import _Enex_ files.
 
 Saranno automaticamente importati anche immagini, allegati, etichette, formattazione standard e i metadati.
 

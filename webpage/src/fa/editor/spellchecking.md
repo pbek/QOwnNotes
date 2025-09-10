@@ -3,28 +3,20 @@
 اشتباهات املایی خود را تصحیح کنید!
 
 ::: tip Info
-QOwnNotes حاوی یک ** مدیر واژه نامه ** توکار (در منوی *ویرایش*) است که می توانید با استفاده از آن واژه نامه ها را بارگیری یا حذف کنید (در صورت فقدان زبان مورد نظرتان، درباره نحوه درخواست برای افزودن یک واژه نامه مطلب زیر را ببینید). اگر می‌خواهید واژه نامه ها را به صورت دستی بارگیری کنید، می توانید دستورالعمل های زیر را دنبال کنید.
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). اگر می‌خواهید واژه نامه ها را به صورت دستی بارگیری کنید، می توانید دستورالعمل های زیر را دنبال کنید.
 :::
 
 - در **لینوکس** می توانید واژه نامه های هانسپل مربوط به زبان مورد نظرتان را با استفاده از مدیر بسته توزیع نصب کنید
-    - در صورت نیاز به افزودن پرونده های اضافی زبان، می توانید این کار را در`
-~/.local/share/hunspell
-` یا `
-/usr/share/hunspell
-` انجام دهید.
-    - در صورت استفاده از بسته اسنپ QOwnNotes، همچنین می توانید از `
-~/hunspell
-` برای پرونده های زبان استفاده کنید چرا که اسنپ به `
-~/.local
-` دسترسی ندارد
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - در **ویندوز** باید واژه نامه های هانسپل مربوط به زبان مورد نظرتان را در پوشه `
 dicts
 ` در پوشه برنامه QOwnNotes خود یا در `
 C:\Users\[username]\dicts
 ` کپی کنید
-    - شما می توانید واژه نامه ها را از [واژه نامه های لیبرا آفیس](https://github.com/LibreOffice/dictionaries) بارگیری نمایید
-    - در **سیستم عامل مکینتاش** باید واژه نامه های هانسپل مربوط به زبان مورد نظرتان را در `
+  - شما می توانید واژه نامه ها را از [واژه نامه های لیبرا آفیس](https://github.com/LibreOffice/dictionaries) بارگیری نمایید
+  - در **سیستم عامل مکینتاش** باید واژه نامه های هانسپل مربوط به زبان مورد نظرتان را در `
 /Library/Spelling
 ` یا `
 ~/Library/Spelling

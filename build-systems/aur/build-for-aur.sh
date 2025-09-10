@@ -27,22 +27,22 @@ CUR_DIR=$(pwd)
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
 
 if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
-	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-github-src.sh must be run ahead of build script!"
-	exit 1
+  echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-github-src.sh must be run ahead of build script!"
+  exit 1
 fi
 
 source ${_QQwnNotesCheckSumVarFile}
 
 # check checksum variable from build-systems/github/build-github-src.sh
 if [ -z ${QOWNNOTES_ARCHIVE_SHA256} ]; then
-    echo "QOWNNOTES_ARCHIVE_SHA256 was not set!"
-	exit 1
+  echo "QOWNNOTES_ARCHIVE_SHA256 was not set!"
+  exit 1
 fi
 
 echo "Started the AUR packaging process, using latest '$BRANCH' git tree"
 
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi
 
 mkdir $PROJECT_PATH
@@ -57,12 +57,12 @@ git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes || exit 1
 
-gitCommitHash=`git rev-parse HEAD`
+gitCommitHash=$(git rev-parse HEAD)
 echo "Current commit: $gitCommitHash"
 
 if [ -z $QOWNNOTES_VERSION ]; then
-    # get version from version.h
-    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+  # get version from version.h
+  QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi
 
 cd ../aur || exit 1
@@ -82,12 +82,11 @@ echo "Archive sha256: ${QOWNNOTES_ARCHIVE_SHA256}"
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
 
-
 echo "Committing changes..."
 git commit -m "releasing version $QOWNNOTES_VERSION" PKGBUILD .SRCINFO
 git push
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
-    rm -rf $PROJECT_PATH
+  rm -rf $PROJECT_PATH
 fi

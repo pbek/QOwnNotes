@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2024 Patrizio Bekerle -- <patrizio@bekerle.com>
+ * Copyright (c) 2014-2025 Patrizio Bekerle -- <patrizio@bekerle.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +17,12 @@
 #include <QProcess>
 #include <QString>
 
+#ifdef USE_LIBGIT2
+#include <QJSValue>
+
+#include "entities/note.h"
+#endif
+
 /*  Git functions that can be useful */
 
 namespace Utils {
@@ -30,5 +36,10 @@ QString gitCommand();
 void showLog(const QString& filePath);
 bool hasLogCommand();
 bool isCurrentNoteFolderUseGit();
+#ifdef USE_LIBGIT2
+bool initRepository(const QString& path);
+bool commitAll(const QString& path, const QString& message);
+QJSValue getNoteVersions(QJSEngine& engine, const Note& note, int limit = 100);
+#endif
 }    // namespace Git
 }    // namespace Utils

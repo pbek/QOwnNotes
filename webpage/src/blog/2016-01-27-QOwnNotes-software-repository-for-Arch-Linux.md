@@ -15,4 +15,4 @@ The repository uses the openSUSE build service.
 
 Please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Arch) for details on how to use it.
 
- ![arch-linux-logo](/img/blog/arch-linux-logo_large.png "arch-linux-logo")
+![arch-linux-logo](/img/blog/arch-linux-logo_large.png "arch-linux-logo")

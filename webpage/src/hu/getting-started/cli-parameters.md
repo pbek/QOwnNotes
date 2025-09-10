@@ -20,6 +20,7 @@ Ha problémái adódnak a QOwnNotes telepítésével, akkor érdemes új beáll�
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Különböző operációs rendszereken futtathatja az alkalmazást a parancssori felületen:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Indítsa el a menüműveleteket az indítás után

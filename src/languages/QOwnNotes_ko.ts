@@ -504,7 +504,7 @@
 </message>
 <message>
 <source>Turkish</source>
-<translation>터키어</translation>
+<translation>튀르기예어</translation>
 </message>
 <message>
 <source>Turkmen</source>
@@ -816,6 +816,10 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Keyword characters:</source>
 <translation>키워드 문자:</translation>
+</message>
+<message>
+<source/>
+<translation type="unfinished"/>
 </message>
 <message>
 <source>Use Vim-style Editing</source>
@@ -1471,7 +1475,7 @@ File: QOwnNotes_en.ts</translation>
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>URL 또는 노트 링크</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1484,6 +1488,10 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Select local file or directory to link to</source>
 <translation>연결할 로컬 파일 또는 디렉터리 선택</translation>
+</message>
+<message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation>링크 이름을 지우고 웹페이지 제목을 다시 가져옵니다</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1520,6 +1528,22 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Select directory to link to</source>
 <translation>연결할 디렉터리 선택</translation>
+</message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation>링크할 파일 선택 (상대적)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation>링크할 파일 선택 (절대적)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation>링크할 디렉터리 선택 (상대적)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation>링크할 디렉터리 선택 (절대적)</translation>
 </message>
 </context>
 <context>
@@ -2109,6 +2133,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>패널 잠금 해제</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>플로팅 패널 다시 부착</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>모든 플로팅 패널을 다시 부착</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>현재 작업 공간 제거</translation>
 </message>
@@ -2179,6 +2211,10 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Show note git versions</source>
 <translation>노트 Git 버전 표시</translation>
+</message>
+<message>
+<source>Show note git versions externally</source>
+<translation>외부에서 노트 git 버전 표시</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2641,6 +2677,11 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation>노트</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>노트 폴더</translation>
 </message>
@@ -2651,6 +2692,27 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>쓰레기 노트를 현재 ownCloud 서버에서 불러왔습니다</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation>파일 확장자</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation>파일 첨부 파일 확장자:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation>파일 기본 이름</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation>파일 첨부 파일의 기본 이름:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation>자동 이름을 위해 비워두기</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2721,6 +2783,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
 </message>
 <message>
+<source>Split note</source>
+<translation>노트 분할</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation>현재 커서 위치에서 노트를 분할하시겠습니까? 커서 뒤의 텍스트가 새 노트로 이동합니다. 새 노트는 이전 노트와 연결됩니다.</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>줄 %1, 열 %2</translation>
@@ -2735,6 +2805,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>
 <numerusform>%n개 선택됨</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation>현재 노트 폴더에 대해 Git 지원이 활성화되어 있지 않습니다. 설정에서 활성화하시겠습니까?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation>사용 가능한 버전 없음</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation>이 노트에는 사용할 수 있는 버전이 없습니다.</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation>노트 탭 닫기</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -2930,6 +3016,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Rename workspace</source>
 <translation>작업 공간 이름 바꾸기</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation>
+<numerusform>최신 %n 노트 버전은 현재 로컬 git 저장소에서 수집됩니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation>Git에서 노트 버전 수집 완료</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation>
+<numerusform>최신 %n git 버전 노트: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -3264,6 +3366,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트 미리보기</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation>노트 관계</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>로그</translation>
 </message>
@@ -3346,6 +3452,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>변경된 내용을 확인하고 최신 버전으로 업데이트하려면 여기를 클릭하십시오</translation>
+</message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation>AI의 답변을 기다리는 중</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -4039,6 +4149,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>Note creation failed</source>
 <translation>노트 만들기 실패</translation>
 </message>
+<message>
+<source>Double-click to open note</source>
+<translation>노트를 열려면 두 번 클릭합니다</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4278,9 +4392,15 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>'%1' 파일과 데이터베이스 연결을 설정할 수 없습니다.
-쓰기 가능한 폴더와 파일입니까?</translation>
+Are the folder and the file writable?</source>
+<translation>파일 '%1'로 데이터베이스 연결을 설정할 수 없습니다.
+폴더와 파일을 쓸 수 있나요?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation>노트 폴더 데이터베이스와 데이터베이스 연결을 설정하여 '%1'을 병합할 수 없습니다.
+폴더와 파일을 쓸 수 있나요?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4289,12 +4409,6 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Cannot open database</source>
 <translation>데이터베이스를 열 수 없습니다</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>'%1'을(를) 병합하기 위한 노트 폴더 데이터베이스와의 데이터베이스 연결을 설정할 수 없습니다.
-쓰기 가능한 폴더와 파일입니까?</translation>
 </message>
 </context>
 <context>
@@ -5091,6 +5205,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>바스크어</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation>영어 (영국식)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>에스토니아어</translation>
 </message>
@@ -5443,6 +5561,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>언어 검색</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation>메뉴와 "작업 찾기" 대화 상자에 아이콘 숨기기. 적용하려면 재시작이 필요합니다</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation>메뉴 아이콘 숨기기</translation>
+</message>
+<message>
+<source>Override interface scaling factor</source>
+<translation>인터페이스 스케일링 계수 재정의</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation>인터페이스 스케일링 계수:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>상태 표시줄</translation>
 </message>
@@ -5580,12 +5714,28 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>노트 텍스트에서 자동으로 후행 공백 제거</translation>
 </message>
 <message>
+<source>Git library</source>
+<translation>Git 라이브러리</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation>Git 라이브러리 libgit2에 대한 지원이 활성화되었습니다.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation>노트 폴더에 대해 git 지원을 활성화하는 것을 잊지 마세요.</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
 <translation>이보다 큰 메모는 메모 목록에 표시되지 않습니다</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
 <translation>최대 노트 파일 크기:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation>탭 닫기 버튼 숨기기</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -5611,6 +5761,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
 <translation>연결 테스트</translation>
+</message>
+<message>
+<source>API settings</source>
+<translation>API 설정</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation>응답 시간 초과:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation>응용 프로그램이 서버의 응답을 기다렸다가 시간을 초과하고 오류 메시지를 반환하는 시간입니다.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>초</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -6547,6 +6714,10 @@ Connection error message: </source>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation>1 (%2)에 대한 연결 테스트</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation>이 설정을 활성화한 경우, 이제 응용 프로그램을 수동으로 재시작하여 스케일 계수를 재정의하는 이전 환경 변수가 다시 환경에 포함되지 않도록 해야 합니다.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7682,10 +7853,6 @@ This cannot be undone!</source>
 <translation>권한 오류</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>QOWNNotes 실행 파일 '%1'을(를) 쓸 수 없습니다! 업데이트하려면 현재 사용자가 이 파일을 쓸 수 있어야 합니다.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>임시 파일 '%1'을(를) 실행할 수 없습니다! '%2'를 직접 교체해야 합니다.</translation>
 </message>
@@ -7732,6 +7899,10 @@ This cannot be undone!</source>
 <message>
 <source>Proceed with update</source>
 <translation>업데이트 진행</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation>QOwnNotes 실행 파일 '%1'은 쓰기 불가능합니다! 업데이트하려면 현재 사용자가 쓰기 가능해야 합니다.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

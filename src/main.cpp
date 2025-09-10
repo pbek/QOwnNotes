@@ -16,6 +16,7 @@
 
 #include "dialogs/welcomedialog.h"
 #include "entities/notefolder.h"
+#include "helpers/nomenuiconstyle.h"
 #include "libraries/singleapplication/singleapplication.h"
 #include "mainwindow.h"
 #include "release.h"
@@ -59,13 +60,17 @@ void loadTranslations(QTranslator *translator, const QString &locale) {
     loadTranslation(translator[9], appPath + "/../share/qt5/translations/QOwnNotes_" + locale);
 #endif
     loadTranslation(translator[10], "QOwnNotes_" + locale);
+    loadTranslation(translator[11], "../share/QOwnNotes/translations/QOwnNotes_" + locale);
+    loadTranslation(translator[12],
+                    appPath + "/../share/QOwnNotes/translations/QOwnNotes_" + locale);
 }
 
 /**
  * Function for loading the release translations
  */
-inline void loadReleaseTranslations(QTranslator &translatorRelease, const QString &locale) {
-    loadTranslation(translatorRelease,
+inline void loadReleaseTranslations(QTranslator *translatorsRelease, const QString &locale) {
+    // The qt5/qt6 paths qre needed by the Fedora and openSUSE builds on OBS
+    loadTranslation(translatorsRelease[0],
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
                     "/usr/share/qt6/translations/"
 #else
@@ -73,6 +78,8 @@ inline void loadReleaseTranslations(QTranslator &translatorRelease, const QStrin
 #endif
                     "QOwnNotes_" +
                         locale);
+    // Debian and Ubuntu don't work with qt5/qt6 paths with cmake and Qt6
+    loadTranslation(translatorsRelease[1], "/usr/share/QOwnNotes/translations/QOwnNotes_" + locale);
 }
 
 /**
@@ -184,13 +191,7 @@ int mainStartupMisc(const QStringList &arguments) {
         return 0;    // Exit after generating the completion script
     }
 
-    QSettings settings;
-    QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
-
-    // restore the interface style
-    if (!interfaceStyle.isEmpty()) {
-        QApplication::setStyle(interfaceStyle);
-    }
+    Utils::Gui::applyInterfaceStyle();
 
 #ifdef Q_OS_WIN32
     Utils::Gui::doWindowsDarkModeCheck();
@@ -200,6 +201,7 @@ int mainStartupMisc(const QStringList &arguments) {
     Utils::Gui::doLinuxDarkModeCheck();
 #endif
 
+    QSettings settings;
     bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
 
     if (!systemIconTheme) {
@@ -574,6 +576,16 @@ int main(int argc, char *argv[]) {
     }
 
     QSettings settings;
+
+    // Override the interface scale factor if the setting is enabled
+    if (settings.value(QStringLiteral("overrideInterfaceScalingFactor")).toBool()) {
+        qputenv("QT_SCALE_FACTOR",
+                QString::number(
+                    settings.value(QStringLiteral("interfaceScalingFactor"), 100).toDouble() / 100,
+                    'f', 1)
+                    .toUtf8());
+    }
+
     QString locale = settings.value(QStringLiteral("interfaceLanguage")).toString();
 
     if (locale.isEmpty()) {
@@ -585,9 +597,9 @@ int main(int argc, char *argv[]) {
     Utils::Schema::schemaSettings = new Utils::Schema::Settings();
 
 #ifndef QT_DEBUG
-    QTranslator translatorRelease;
+    QTranslator translatorsRelease[2];
 #endif
-    QTranslator translators[11];
+    QTranslator translators[13];
 #ifdef Q_OS_MAC
     QTranslator translatorOSX;
     QTranslator translatorOSX2;
@@ -640,7 +652,7 @@ int main(int argc, char *argv[]) {
 
         setAppProperties(app, release, arguments, true, snap, portable, action);
 #ifndef QT_DEBUG
-        loadReleaseTranslations(translatorRelease, locale);
+        loadReleaseTranslations(translatorsRelease, locale);
 #endif
 
         loadTranslations(translators, locale);
@@ -698,7 +710,7 @@ int main(int argc, char *argv[]) {
         setAppProperties(app, release, arguments, false, snap, portable, action);
 
 #ifndef QT_DEBUG
-        loadReleaseTranslations(translatorRelease, locale);
+        loadReleaseTranslations(translatorsRelease, locale);
 #endif
 
         loadTranslations(translators, locale);

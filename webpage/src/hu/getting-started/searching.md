@@ -1,6 +1,6 @@
 # Jegyzetek keresése
 
-Jegyzetek vagy a jegyzeteken belüli szöveg kereséséhez használja a parancsikont <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (vagy <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> macOS rendszeren) a *Jegyzetkereső panelre* való ugráshoz.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 A jegyzetek keresésére többféle lehetőség van:
 
@@ -9,3 +9,7 @@ A jegyzetek keresésére többféle lehetőség van:
 - Az `n:könyv` vagy a `név:könyv` feljegyzéseket keres a `könyv` felirattal, csak a jegyzet vagy fájl nevében.
 
 ![Keresés](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

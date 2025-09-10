@@ -32,7 +32,17 @@ Label::Label(const QString &text, QWidget *parent, Qt::WindowFlags f) {
  *
  * @param text
  */
-void Label::setText(const QString &text) { QLabel::setText(injectCSS(text)); }
+void Label::setText(const QString &text) {
+    m_originalText = text;
+    QLabel::setText(injectCSS(text, !isEnabled()));
+}
+
+void Label::setEnabled(bool enabled) {
+    QLabel::setEnabled(enabled);
+
+    // Re-apply text with correct CSS for enabled/disabled state
+    QLabel::setText(injectCSS(m_originalText, !enabled));
+}
 
 /**
  * Injects CSS styles into the text
@@ -40,12 +50,21 @@ void Label::setText(const QString &text) { QLabel::setText(injectCSS(text)); }
  * @param text
  * @return
  */
-QString Label::injectCSS(const QString &text) {
-    //    text = text.remove("<html>").remove("</html>").remove("<head/>");
+QString Label::injectCSS(const QString &text, bool disabled) {
     QString ret;
-    ret.reserve(text.size() + 15 + Utils::Misc::genericCSS().size() + text.size());
+    const QString &genericCss = Utils::Misc::genericCSS();
+    const int tagSize = disabled ? 94 : 15;    // 15 for enabled, 94 for disabled links
+
+    ret.reserve(text.size() + tagSize + genericCss.size() + text.size());
     ret.append(QStringLiteral("<style>"));
-    ret.append(Utils::Misc::genericCSS());
+    ret.append(genericCss);
+
+    if (disabled) {
+        // Set a different color for disabled links
+        ret.append(QStringLiteral(
+            "a { color: gray !important; pointer-events: none; text-decoration: underline; }"));
+    }
+
     ret.append(QStringLiteral("</style>"));
     ret.append(text);
     return ret;

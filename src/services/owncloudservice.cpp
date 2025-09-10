@@ -44,18 +44,10 @@ const QString NS_DAV(QStringLiteral("DAV:"));
 
 OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent) : QObject(parent) {
     networkManager = new QNetworkAccessManager(this);
-    calendarNetworkManager = new QNetworkAccessManager(this);
-
     QObject::connect(networkManager,
                      SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
                      SLOT(slotAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
     QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)), this,
-                     SLOT(slotReplyFinished(QNetworkReply *)));
-
-    QObject::connect(calendarNetworkManager,
-                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
-                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
-    QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)), this,
                      SLOT(slotReplyFinished(QNetworkReply *)));
 
     readSettings(cloudConnectionId);
@@ -66,7 +58,6 @@ OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent) : QObje
 
 void OwnCloudService::resetNetworkManagerCookieJar() {
     networkManager->setCookieJar(new QNetworkCookieJar(this));
-    calendarNetworkManager->setCookieJar(new QNetworkCookieJar(this));
 }
 
 /**
@@ -313,60 +304,6 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             if (settingsDialog != nullptr) {
                 settingsDialog->refreshTodoCalendarList(calendarDataList);
-            }
-        } else if (!todoCalendarServerUrlPath.isEmpty() &&
-                   urlPath.startsWith(todoCalendarServerUrlPath)) {
-            // check if we have a reply from a calendar item request
-            if (urlPath.endsWith(QStringLiteral(".ics"))) {
-                qDebug() << "Reply from ownCloud calendar item ics page";
-                // qDebug() << data;
-
-                // a workaround for a ownCloud error message
-                if (data.indexOf(QStringLiteral("<s:message>Unable to generate a URL for the named"
-                                                " route \"tasksplus.page.index\" as such route"
-                                                " does not exist.</s:message>")) > 20) {
-                    data = QString();
-                }
-
-                if (todoDialog != nullptr) {
-                    // this will mostly happen after the PUT request to update
-                    // or create a task item
-                    if (data.isEmpty()) {
-                        // reload the task list from server
-                        todoDialog->reloadTodoList();
-                    }
-
-                    // increment the progress bar
-                    todoDialog->todoItemLoadingProgressBarIncrement();
-                }
-
-                // fetch the calendar item, that was already stored
-                // by loadTodoItems()
-                CalendarItem calItem =
-                    CalendarItem::fetchByUrlAndCalendar(url.toString(), calendarName);
-                if (calItem.isFetched()) {
-                    // update the item with the ics data
-                    bool wasUpdated = calItem.updateWithICSData(data);
-
-                    // if item wasn't updated (for example because it was no
-                    // VTODO item) we will remove it
-                    if (!wasUpdated) {
-                        calItem.remove();
-                    } else if (todoDialog != nullptr) {
-                        // reload the task list items
-                        todoDialog->reloadTodoListItems();
-                    }
-
-                    //                    qDebug() << __func__ << " - 'calItem':
-                    //                    " << calItem;
-                }
-            } else {
-                // this should be the reply of a calendar item list request
-                qDebug() << "Reply from ownCloud calendar todo list page";
-                //                qDebug() << data;
-
-                // load the task items
-                loadTodoItems(data);
             }
         } else if (urlPath.startsWith(serverUrlPath % webdavPath())) {
             // this should be the reply of a calendar item list request
@@ -657,8 +594,38 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/xml"));
     r.setRawHeader(QByteArray("Depth"), QByteArray("1"));
     auto *buffer = new QBuffer(dataToSend);
+    auto *calNetworkManager = new QNetworkAccessManager(this);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "PROPFIND", buffer);
+    QObject::connect(calNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
+
+    // Connect the finished signal to a lambda function
+    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            QByteArray responseData = reply->readAll();
+            QString data = QString(responseData);
+            qDebug() << "Reply from calendar page after PROPFIND" << data;
+
+            QList<CalDAVCalendarData> calendarDataList = parseCalendarData(data);
+
+#ifndef INTEGRATION_TESTS
+            if (settingsDialog != nullptr) {
+                settingsDialog->refreshTodoCalendarList(calendarDataList);
+            }
+#endif
+        } else {
+            // For error codes see http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+            qWarning() << "QNetworkReply error " + QString::number(reply->error()) + " from url " +
+                              url.toString() + ":"
+                       << reply->errorString();
+        }
+
+        reply->deleteLater();
+        calNetworkManager->deleteLater();
+    });
+
+    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "PROPFIND", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -667,8 +634,6 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
  */
 void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *dialog) {
     this->todoDialog = dialog;
-    this->calendarName = calendarName;
-
     SettingsService settings;
     QStringList todoCalendarEnabledList =
         settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
@@ -690,6 +655,7 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     QString calendarUrl = settings.value(QStringLiteral("ownCloud/todoCalendarEnabledUrlList"))
                               .toStringList()
                               .at(index);
+    qDebug() << __func__ << " - 'calendarUrl': " << calendarUrl;
 
     QUrl url(calendarUrl);
     QNetworkRequest r(url);
@@ -718,7 +684,33 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName, TodoDialog *d
     r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "REPORT", buffer);
+    auto *calNetworkManager = new QNetworkAccessManager(this);
+
+    QObject::connect(calNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
+
+    // Connect the finished signal to a lambda function
+    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            QByteArray responseData = reply->readAll();
+            QString data = QString(responseData);
+            qDebug() << "Reply from calendar page after REPORT" << data;
+
+            // Parse the responseData to extract the to-do items
+            loadTodoItems(calendarName, data);
+        } else {
+            // For error codes see http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+            qWarning() << "QNetworkReply error " + QString::number(reply->error()) + " from url " +
+                              url.toString() + ":"
+                       << reply->errorString();
+        }
+
+        reply->deleteLater();
+        calNetworkManager->deleteLater();
+    });
+
+    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -898,8 +890,35 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem, TodoDialog *dialo
     QUrl url(calItem.getUrl());
     QNetworkRequest r(url);
     addCalendarAuthHeader(&r);
+    auto *calNetworkManager = new QNetworkAccessManager(this);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "DELETE");
+    QObject::connect(calNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
+
+    // Connect the finished signal to a lambda function
+    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            qDebug() << "Reply from calendar page after DELETE" << url;
+
+#ifndef INTEGRATION_TESTS
+            if (todoDialog != nullptr) {
+                // Reload the task list from server
+                todoDialog->reloadTodoList();
+            }
+#endif
+        } else {
+            // For error codes see http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+            qWarning() << "QNetworkReply error " + QString::number(reply->error()) + " from url " +
+                              url.toString() + ":"
+                       << reply->errorString();
+        }
+
+        reply->deleteLater();
+        calNetworkManager->deleteLater();
+    });
+
+    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "DELETE");
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -1242,7 +1261,9 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    VersionDialog *dialog = new VersionDialog(versions);
+    qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
+
+    auto *dialog = new VersionDialog(versions);
     dialog->exec();
 #endif
 }
@@ -1443,7 +1464,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     return resultList;
 }
 
-void OwnCloudService::loadTodoItems(QString &data) {
+void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) {
     QDomDocument doc;
     doc.setContent(data, true);
 
@@ -1529,7 +1550,84 @@ void OwnCloudService::loadTodoItems(QString &data) {
                             QNetworkRequest r(calendarItemUrl);
                             addCalendarAuthHeader(&r);
 
-                            QNetworkReply *reply = calendarNetworkManager->get(r);
+                            auto *calNetworkManager = new QNetworkAccessManager(this);
+
+                            QObject::connect(
+                                calNetworkManager,
+                                SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)),
+                                this,
+                                SLOT(slotCalendarAuthenticationRequired(QNetworkReply *,
+                                                                        QAuthenticator *)));
+
+                            // Connect the finished signal to a lambda function
+                            connect(
+                                calNetworkManager, &QNetworkAccessManager::finished,
+                                [=](QNetworkReply *reply) {
+                                    QUrl url = reply->url();
+
+                                    if (reply->error() == QNetworkReply::NoError) {
+                                        QByteArray responseData = reply->readAll();
+                                        QString data = QString(responseData);
+                                        qDebug() << "Reply from ownCloud calendar item ics page "
+                                                    "after GET"
+                                                 << calendarItemUrl;
+                                        // qDebug() << data;
+
+                                        // Workaround for a ownCloud error message
+                                        if (data.indexOf(QStringLiteral(
+                                                "<s:message>Unable to generate a URL for the named"
+                                                " route \"tasksplus.page.index\" as such route"
+                                                " does not exist.</s:message>")) > 20) {
+                                            data = QString();
+                                        }
+
+#ifndef INTEGRATION_TESTS
+                                        if (todoDialog != nullptr) {
+                                            // This will mostly happen after the PUT request to
+                                            // update or create a task item
+                                            if (data.isEmpty()) {
+                                                // Reload the task list from server
+                                                todoDialog->reloadTodoList();
+                                            }
+
+                                            // Increment the progress bar
+                                            todoDialog->todoItemLoadingProgressBarIncrement();
+                                        }
+#endif
+
+                                        // Fetch the calendar item, that was already stored by
+                                        // loadTodoItems()
+                                        CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar(
+                                            url.toString(), calendarName);
+                                        if (calItem.isFetched()) {
+                                            // Update the item with the ics data
+                                            bool wasUpdated = calItem.updateWithICSData(data);
+
+                                            // If item wasn't updated (for example because it was no
+                                            // VTODO item) we will remove it
+                                            if (!wasUpdated) {
+                                                calItem.remove();
+                                            } else if (todoDialog != nullptr) {
+#ifndef INTEGRATION_TESTS
+                                                // reload the task list items
+                                                todoDialog->reloadTodoListItems();
+#endif
+                                            }
+                                        }
+                                    } else {
+                                        // For error codes see
+                                        // http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+                                        qWarning() << "QNetworkReply error " +
+                                                          QString::number(reply->error()) +
+                                                          " from url " + url.toString() + ":"
+                                                   << reply->errorString();
+                                    }
+
+                                    reply->deleteLater();
+                                    calNetworkManager->deleteLater();
+                                });
+
+                            QNetworkReply *reply = calNetworkManager->get(r);
                             ignoreSslErrorsIfAllowed(reply);
 
                             requestCount++;
@@ -1914,8 +2012,35 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem, TodoDi
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 QStringLiteral("application/x-www-form-urlencoded"));
     auto *buffer = new QBuffer(dataToSend);
+    auto *calNetworkManager = new QNetworkAccessManager(this);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(r, "PUT", buffer);
+    QObject::connect(calNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
+
+    // Connect the finished signal to a lambda function
+    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
+        if (reply->error() == QNetworkReply::NoError) {
+            qDebug() << "Reply from calendar page after PUT" << url;
+
+#ifndef INTEGRATION_TESTS
+            if (todoDialog != nullptr) {
+                // Reload the task list from server
+                todoDialog->reloadTodoList();
+            }
+#endif
+        } else {
+            // For error codes see http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+            qWarning() << "QNetworkReply error " + QString::number(reply->error()) + " from url " +
+                              url.toString() + ":"
+                       << reply->errorString();
+        }
+
+        reply->deleteLater();
+        calNetworkManager->deleteLater();
+    });
+
+    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "PUT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 

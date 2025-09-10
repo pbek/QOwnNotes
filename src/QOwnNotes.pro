@@ -8,7 +8,10 @@ QT       += core gui widgets sql svg network xml printsupport qml websockets con
 
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
-#QT       += quick
+# It looks like it is needed for Qt 6 for macOS, see https://github.com/pbek/QOwnNotes/issues/2912#issuecomment-3094868110
+greaterThan(QT_MAJOR_VERSION, 5) {
+QT       += quick
+}
 
 CONFIG += with_aspell
 
@@ -95,7 +98,8 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_mk.ts \
     languages/QOwnNotes_ko.ts \
     languages/QOwnNotes_et.ts \
-    languages/QOwnNotes_sq.ts
+    languages/QOwnNotes_sq.ts \
+    languages/QOwnNotes_en_GB.ts
 
 CODECFORTR = UTF-8
 lessThan(QT_MAJOR_VERSION, 6) {
@@ -115,6 +119,7 @@ lessThan(QT_MAJOR_VERSION, 6) {
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
 SOURCES += main.cpp\
+    helpers/nomenuiconstyle.cpp \
     dialogs/attachmentdialog.cpp \
     dialogs/nextclouddeckdialog.cpp \
     entities/cloudconnection.cpp \
@@ -128,6 +133,7 @@ SOURCES += main.cpp\
     libraries/md4c/src/md4c.c \
     libraries/md4c/src/md4c-html.c \
     libraries/md4c/src/entity.c \
+    libraries/qtwaitingspinner/waitingspinnerwidget.cpp \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
@@ -221,9 +227,11 @@ SOURCES += main.cpp\
     libraries/fuzzy/kfuzzymatcher.cpp \
     libraries/qr-code-generator/QrCode.cpp \
     widgets/notesubfoldertree.cpp \
+    widgets/noterelationscene.cpp \
     utils/urlhandler.cpp
 
 HEADERS  += mainwindow.h \
+    helpers/nomenuiconstyle.h \
     build_number.h \
     dialogs/attachmentdialog.h \
     dialogs/nextclouddeckdialog.h \
@@ -336,7 +344,9 @@ HEADERS  += mainwindow.h \
     models/commandmodel.h \
     libraries/fuzzy/kfuzzymatcher.h \
     libraries/qr-code-generator/QrCode.hpp \
+    libraries/qtwaitingspinner/waitingspinnerwidget.h \
     widgets/notesubfoldertree.h \
+    widgets/noterelationscene.h \
     utils/urlhandler.h \
 
 FORMS    += mainwindow.ui \
@@ -421,6 +431,8 @@ unix {
       desktop.files += PBE.QOwnNotes.desktop
   }
 
+  # The qt5/qt6 paths qre needed by the Fedora and openSUSE builds on OBS
+  # Keep in mind that Debian and Ubuntu don't work with those paths with cmake and Qt6
   lessThan(QT_MAJOR_VERSION, 6) {
       i18n.path = $$DATADIR/qt5/translations
   } else {

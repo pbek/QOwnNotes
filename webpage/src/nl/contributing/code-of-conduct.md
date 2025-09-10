@@ -10,19 +10,19 @@ We beloven te handelen en te communiceren op manieren die bijdraagt aan een open
 
 Voorbeelden van gedrag dat bijdraagt aan een positieve omgeving voor onze gemeenschap omvatten:
 
-* Empathie en vriendelijkheid tonen jegens andere mensen
-* Respect hebben voor verschillende meningen, standpunten en ervaringen
-* Het geven en dankbaar accepteren van constructieve feedback
-* Verantwoordelijkheid nemen en onze excuses aanbieden aan degenen die door onze fouten zijn getroffen en leren van de ervaring
-* Focussen op wat het beste is, niet alleen voor ons als individu, maar voor de gemeenschap als geheel
+- Empathie en vriendelijkheid tonen jegens andere mensen
+- Respect hebben voor verschillende meningen, standpunten en ervaringen
+- Het geven en dankbaar accepteren van constructieve feedback
+- Verantwoordelijkheid nemen en onze excuses aanbieden aan degenen die door onze fouten zijn getroffen en leren van de ervaring
+- Focussen op wat het beste is, niet alleen voor ons als individu, maar voor de gemeenschap als geheel
 
 Voorbeelden van ongewenst gedrag zijn onder meer:
 
-* Het gebruik van geseksualiseerde taal of beelden, en seksuele aandacht of elke vorm van seksuele toenadering
-* Trollende, beledigende of denigrerende opmerkingen en persoonlijke of politieke aanvallen
-* Openbare of privé-intimidatie
-* Het publiceren van privé-informatie van anderen, zoals een fysiek of e-mailadres zonder uitdrukkelijke toestemming
-* Ander gedrag dat redelijkerwijs als ongepast kan worden beschouwd in een professionele omgeving
+- Het gebruik van geseksualiseerde taal of beelden, en seksuele aandacht of elke vorm van seksuele toenadering
+- Trollende, beledigende of denigrerende opmerkingen en persoonlijke of politieke aanvallen
+- Openbare of privé-intimidatie
+- Het publiceren van privé-informatie van anderen, zoals een fysiek of e-mailadres zonder uitdrukkelijke toestemming
+- Ander gedrag dat redelijkerwijs als ongepast kan worden beschouwd in een professionele omgeving
 
 ## Handhavingsverantwoordelijkheden
 
@@ -36,7 +36,7 @@ Deze gedragscode is van toepassing binnen alle gemeenschappelijke ruimtes en is 
 
 ## Handhaving
 
-Gevallen van misbruik, intimidatie of anderszins onaanvaardbaar gedrag kunnen worden gemeld aan de gemeenschapsleiders die verantwoordelijk zijn voor handhaving (zie menu *Contact* op [www.qownnotes.org](https://www.qownnotes.org/)). Alle klachten worden snel en eerlijk onderzocht en beoordeeld.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Alle klachten worden snel en eerlijk onderzocht en beoordeeld.
 
 Alle gemeenschapsleiders zijn verplicht om de privacy en veiligheid van de aangever van een incident te respecteren.
 
@@ -81,4 +81,3 @@ Voor antwoorden op veelgestelde vragen over deze gedragscode, zie de FAQ op [htt
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
-

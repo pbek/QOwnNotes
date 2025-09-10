@@ -1,7 +1,6 @@
 {
   lib,
   stdenv,
-  fetchurl,
   qmake,
   qttools,
   qtbase,
@@ -53,9 +52,7 @@ stdenv.mkDerivation {
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
-  qmakeFlags = [
-    "USE_SYSTEM_BOTAN=1"
-  ];
+  qmakeFlags = [ "USE_SYSTEM_BOTAN=1" ];
 
   postInstall =
     ''
@@ -89,5 +86,6 @@ stdenv.mkDerivation {
       totoroot
     ];
     platforms = platforms.unix;
+    mainProgram = pname;
   };
 }

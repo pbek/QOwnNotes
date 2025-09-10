@@ -49,9 +49,7 @@ typedef struct {
 // errors to the GumboParser's errors vector, if the spec calls for it.  Pass a
 // space for the "additional allowed char" when the spec says "with no
 // additional allowed char".  Returns false on parse error, true otherwise.
-bool consume_char_ref(struct GumboInternalParser* parser,
-    struct GumboInternalUtf8Iterator* input, int additional_allowed_char,
-    bool is_in_attribute, OneOrTwoCodepoints* output);
+bool consume_char_ref(struct GumboInternalParser* parser, struct GumboInternalUtf8Iterator* input, int additional_allowed_char, bool is_in_attribute, OneOrTwoCodepoints* output);
 
 #ifdef __cplusplus
 }

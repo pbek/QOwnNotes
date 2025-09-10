@@ -20,6 +20,7 @@ Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous pou
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Le lancement de l'application via la ligne de commande se fait différemment selon le système d'exploitation :
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Déclencher des actions de menu après le démarrage

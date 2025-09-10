@@ -8,6 +8,7 @@ Maakt het mogelijk om vanaf een browserpagina te knippen en browserbladwijzers t
 
 ::: tip
 Info
+
 - QOwnNotes moet actief zijn om de Web Companion-browserextensie te laten werken.
 - Geen internetverbinding nodig. De browserextensies werken **offline**.
 :::
@@ -15,13 +16,13 @@ Info
 ## Installatie
 
 1. Verkrijg de extensie
-    - [Chrome webshop](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons-pagina](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
+   - [Chrome webshop](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Firefox Add-ons-pagina](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
 2. Voeg het beveiligingstoken toe om de extensie te configureren.
-    - De eerste keer dat u op het QOwnNotes-pictogram voor de browserextensie klikt, ontvangt u een dialoogvenster met een beveiligingstoken. Kopieer de token.
-    - Ga naar de locatie voor extensiebeheer van uw browser. Klik in de details van de QOwnNotes-extensie.
-    - Plak het token in het veld Beveiligingstoken.
+   - De eerste keer dat u op het QOwnNotes-pictogram voor de browserextensie klikt, ontvangt u een dialoogvenster met een beveiligingstoken. Kopieer de token.
+   - Ga naar de locatie voor extensiebeheer van uw browser. Klik in de details van de QOwnNotes-extensie.
+   - Plak het token in het veld Beveiligingstoken.
 3. Om de privémodus te gebruiken, moet u in de extensie-instellingen toestemming verlenen om de extensie in privévensters te laten draaien.
 
 ## Webclipper
@@ -32,9 +33,9 @@ Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webc
 
 ::: waarschuwing Info Als de webclipper niet werkt, controleer dan of de QOwnNotes-desktopapplicatie wel actief is en de browserextensie Web Companion is geconfigureerd met het beveiligingstoken.
 
-Zorg ervoor dat bij het klikken van het extensiepictogram in de browsertaakbalk dat ook het toestemmingsdialoogvenster wordt geaccepteerd.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
-Als u Firefox gebruikt, moet u er ook voor zorgen dat u de optionele toestemming hebt ingeschakeld. ` Toegang tot uw gegevens voor alle websites ` in de * Toestemming * extensieinstellingen, anders krijgt u mogelijk een foutmelding ` TypeError: chrome.tabs.captureVisibleTab is geen functie `.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -60,11 +61,12 @@ U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-brows
 ### Syntaxis van bladwijzerkoppelingen
 
 ```markdown
-- [Webpaginanaam](https://www.example.com)
-- [Webpaginanaam](https://www.example.com) #tag1 #tag2
-- [Webpaginanaam](https://www.example.com) slechts een beschrijving
-- [Webpaginanaam](https://www.example.com) #tag1 #tag2 een beschrijving en tags
-* [Webpaginanaam](https://www.example.com) het alternatieve lijstteken werkt ook
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 Je kunt zoeken op naam, url-tags of beschrijving in de browserextensie. In de huidige notitie worden alle andere koppelingen in de tekst doorzocht, maar zonder tags of beschrijving.

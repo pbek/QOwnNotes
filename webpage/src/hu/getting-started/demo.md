@@ -7,18 +7,19 @@ This might not always work, depending on the current state of the demo environme
 
 A következő utasításokat követve kipróbálhatja a **QOwnNotes** t webböngészőjében telepítés nélkül.
 
-1) Kattintson erre a [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) linkre. 2) Kattintson a **Bejelentkezés / Indítás** gombra (lásd a(z) **1** képernyőképet), és jelentkezzen be a Docker-fiókjával (létre kell hoznia, ha még nincs ilyen).
+1. Click on this [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) link.
+2. Click the **Login / Start** button (see screenshot bullet **1**) and login with your Docker account (you need to create one if you don't already have one).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-3) Várja meg, amíg a tartály létrejön és felpörög. Ezután képesnek kell lennie a tetején a **6080** gombra kattintani (lásd a képernyőképes **2-es** pontot). Ha hibát észlel, várjon még egy kicsit, és próbálkozzon újra a *6080* gombra kattintással, eltart egy ideig, amíg az asztali környezet betöltődik.
+3. Wait until the container is created and spun up. Then you should be able to click on **6080** on the top (see screenshot bullet **2**). If you get an error please wait a bit more and try to click _6080_ again, it takes a while for the desktop environment to load.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-4) Meg kell nyitni egy új böngésző lapot, amely létrehoz egy asztalt. Kattintson a képernyőn a **bal alsó szimbólumra** (a tálcán), vigye az egérmutatót a **Kiegészítők** fölé, és kattintson a **QOwnNotes** elemre (lásd a képernyőképet bullet **3**).
+4. A new browser tab should open producing a desktop. Click on the **bottom left symbol** on the screen (in the task bar), hover over **Accessories** and click on **QOwnNotes** (see screenshot bullet **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
-5) Meg kell nyitni a ** QOwnNotes ** telepítési párbeszédpanelt, kattintson rá, és nyomja meg a * Befejezés * gombot a QOwnNotes főablakának megtekintéséhez.
+5. The **QOwnNotes** install dialog should open, click through it and press _Finish_ to see the QOwnNotes main window.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

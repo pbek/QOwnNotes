@@ -20,6 +20,7 @@ Falls bei der Installation von QOwnNotes Probleme auftreten, sollten Sie die Anw
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Sie können die Anwendung auf der Kommandozeilenschnittstelle unter verschiedenen Betriebssystemen unterschiedlich ausführen:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Menüaktionen nach dem Start auslösen

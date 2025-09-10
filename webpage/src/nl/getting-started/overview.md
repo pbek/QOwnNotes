@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Notitierelaties" />
+    <div class="sheet">
+      Paneel Notitierelaties
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Draagbare modus" />
     <div class="sheet">
       Draagbare modus voor USB-sticks
@@ -142,12 +148,13 @@ bezit **Notes** voor de notities die u maakt
 [QOwnNotes](https://www.qownnotes.org/) is het **open source** (GPL) platte tekstbestand **markdown notitie**-applicatie **voor GNU / Linux**, **MacOS** en **Windows**, die (optioneel) samenwerkt met de [**notitietoepassing**](https://github.com/nextcloud/notes) van [Nextcloud](https://nextcloud.com/) en [ownCloud](https://owncloud.org/) (opent nieuw venster).
 
 ::: tip
-Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, te leren en contact te maken met de QOwnNotes-gemeenschap.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [Begrijp het concept van QOwnNotes](concept.md)
 
 ## Kenmerken
+
 - U kunt uw **bestaande tekst- of markdown-bestanden** gebruiken. U hoeft niets te importeren
 - QOwnNotes is geschreven in C++ en geoptimaliseerd voor **laag verbruik van bronnen** (geen CPU en geheugenverslindende Electron-app)
 - **Evernote en Joplin importeren**
@@ -170,8 +177,8 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Vim-modus**
 - **[Webapplicatie](web-app.md)** om **foto's van uw mobiele telefoon toe te voegen** in de huidige notitie in QOwnNotes op uw PC/laptop
 
-
 ## Uiterlijk
+
 - **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
 - **Thema-ondersteuning voor donkere modus**
 - Ondersteuning voor **Thema's** bij de **Markdown syntaxisaccentuering**
@@ -182,6 +189,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Verschillen** tussen huidige notitie en extern gewijzigde notitie worden **getoond** in een dialoogvenster
 
 ## Talen
+
 - **Beschikbaar in meer dan 60 verschillende talen** zoals Engels, Duits, Frans, Pools, Chinees, Japans, Russisch, Portugees, Hongaars, Nederlands en Spaans
   - [Uw hulp](../contributing/translation.md) wordt zeer op prijs gesteld om deze vertalingen te verbeteren of om QOwnNotes in meer talen te vertalen
 

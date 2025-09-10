@@ -23,7 +23,7 @@
 - <kbd>Alt</kbd> + <kbd>Av Pág</kbd> salta a la pestaña de la siguiente nota
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> cierra la pestaña de la nota actual
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
-    - también puedes cerrarlo con <kbd>Esc</kbd>
+  - también puedes cerrarlo con <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> imprime la nota actual como texto
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pega notas, imágenes y html desde el portapapeles
@@ -48,7 +48,7 @@
 ### En la barra de búsqueda de notas
 
 - <kbd>Abajo </kbd> o <kbd>Tab</kbd> establece el foco en la lista de notas
-- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como titular
+- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como título
 
 ### En la lista de notas
 
@@ -60,11 +60,11 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
-    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
-    - <kbd>Esc</kbd> cierra la barra de búsqueda
+  - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
+  - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> le permite buscar y reemplazar en la nota actual
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
-    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> hace lo mismo
+  - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> hace lo mismo
 - <kbd>Alt</kbd> + <kbd>Retroceso</kbd> elimina la línea actual
 - <kbd>Ctrl</kbd> + <kbd>Retroceso</kbd> elimina la palabra actual
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona con el texto seleccionado)
@@ -81,12 +81,12 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> tacha el texto seleccionado
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
 - <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> elimina la sangría del texto seleccionado
-- <kbd>Tab</kbd> después de que un carácter de lista desordenado sangra el elemento de la lista
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de lista desordenado quita la sangría del elemento de la lista
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> elimina la sangría del texto seleccionado
+- <kbd>Tab</kbd> después de un carácter de una lista desordenada sangra el elemento de la lista
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de una lista desordenada elimina la sangría del elemento de la lista
 - <kbd>Enter</kbd> en listas crea un nuevo elemento de lista
 - <kbd>Alt</kbd> + <kbd>Left</kbd> retrocede en el historial de notas
-    - <kbd>Alt</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
+  - <kbd>Alt</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> establece un marcador de nota en la ranura de marcador 1..9
 - <kbd>Ctrl</kbd> + <kbd>1..9</kbd> salta al marcador de notas en la ranura de marcador 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> aumenta el tamaño de la fuente del texto de la nota en un punto
@@ -105,15 +105,14 @@
 ### En el panel de vista previa de notas
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
-    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
-    - <kbd>Esc</kbd> cierra la barra de búsqueda
+  - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
+  - <kbd>Esc</kbd> cierra la barra de búsqueda
 
 ### En la lista de tareas pendientes
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> guarda el elemento pendiente actual
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> guarda el elemento de tarea actual y lo inserta en la nota actual
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> elimina el elemento pendiente actual
-
 
 ## macOS
 
@@ -138,7 +137,7 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Av Pág</kbd> salta a la pestaña de la siguiente nota
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> cierra la pestaña de nota actual
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
-    - también puede cerrarlo con <kbd>Esc</kbd>
+  - también puede cerrarlo con <kbd>Esc</kbd>
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> imprime la nota actual como texto
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como Markdown
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pega notas, imágenes y HTML desde el portapapeles
@@ -163,7 +162,7 @@
 ### En la barra de búsqueda de notas
 
 - <kbd>Abajo</kbd> or <kbd>Tab</kbd> establece el foco en la lista de notas
-- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como titular
+- <kbd>Enter</kbd> crea una nueva nota con el texto de la barra de búsqueda como título
 
 ### En la lista de notas
 
@@ -175,11 +174,11 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd>le permite buscar en la nota actual
-    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a las concidencias anteriores y siguientes
-    - <kbd>Esc</kbd> cierra la barra de búsqueda
+  - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
+  - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> le permite buscar y reemplazar en la nota actual
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Abajo</kbd> hace lo mismo
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Abajo</kbd> hace lo mismo
 - <kbd>⌘ Cmd</kbd> + <kbd>Retroceso</kbd> elimina la línea actual
 - <kbd>⌃ Ctrl</kbd> + <kbd>Retroceso</kbd> elimina la palabra actual
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona en el texto seleccionado)
@@ -196,12 +195,12 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> tacha el texto seleccionado
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
 - <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> elimina la sangría del texto seleccionado
-- <kbd>Tab</kbd> después de que un carácter de lista desordenado sangra el elemento de la lista
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de lista desordenado quita la sangría del elemento de la lista
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> elimina la sangría del texto seleccionado
+- <kbd>Tab</kbd> después de un carácter de una lista desordenada sangra el elemento de la lista
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> después de un carácter de una lista desordenada elimina la sangría del elemento de la lista
 - <kbd>Enter</kbd> en listas crea un nuevo elemento de lista
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Izquierda</kbd> retrocede en el historial de notas
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Derecha</kbd> salta hacia adelante en el historial de notas
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Derecha</kbd> salta hacia adelante en el historial de notas
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> establece un marcador de nota en la ranura de marcador 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> salta al marcador de notas en la ranura de marcador 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> aumenta el tamaño de fuente del texto de la nota en un punto
@@ -220,8 +219,8 @@
 ### En el panel de vista previa de notas
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> le permite buscar en la nota actual
-    - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
-    - <kbd>Esc</kbd> cierra la barra de búsqueda
+  - use las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o las teclas <kbd>F3</kbd> y <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> para saltar a la coincidencia anterior y siguiente
+  - <kbd>Esc</kbd> cierra la barra de búsqueda
 
 ### En la lista de tareas pendientes
 

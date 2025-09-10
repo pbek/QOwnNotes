@@ -395,8 +395,8 @@ QLiteHtmlWidget::QLiteHtmlWidget(QWidget *parent)
             fullUrl.setFragment(url.fragment(QUrl::FullyEncoded));
         }
         // delay because document may not be changed directly during this callback
-        QMetaObject::invokeMethod(this, [this, fullUrl] { emit linkClicked(fullUrl); },
-                 Qt::QueuedConnection);
+        QMetaObject::invokeMethod(
+            this, [this, fullUrl] { emit linkClicked(fullUrl); }, Qt::QueuedConnection);
     });
     d->documentContainer.setClipboardCallback([this](bool yes) { emit copyAvailable(yes); });
 
@@ -419,8 +419,7 @@ void QLiteHtmlWidget::setUrl(const QUrl &url)
     const QString basePath = lastSlash >= 0 ? path.left(lastSlash) : QString();
     baseUrl.setPath(basePath);
     d->documentContainer.setBaseUrl(baseUrl.toString(QUrl::FullyEncoded));
-    QMetaObject::invokeMethod(this, [this] { updateHightlightedLink(); },
-             Qt::QueuedConnection);
+    QMetaObject::invokeMethod(this, [this] { updateHightlightedLink(); }, Qt::QueuedConnection);
 }
 
 QUrl QLiteHtmlWidget::url() const
@@ -436,8 +435,7 @@ void QLiteHtmlWidget::setHtml(const QString &content)
     verticalScrollBar()->setValue(0);
     horizontalScrollBar()->setValue(0);
     render();
-    QMetaObject::invokeMethod(this, [this] { updateHightlightedLink(); },
-             Qt::QueuedConnection);
+    QMetaObject::invokeMethod(this, [this] { updateHightlightedLink(); }, Qt::QueuedConnection);
 }
 
 QString QLiteHtmlWidget::html() const
@@ -565,7 +563,9 @@ void QLiteHtmlWidget::mousePressEvent(QMouseEvent *event)
     QPoint viewportPos;
     QPoint pos;
     htmlPos(event->pos(), &viewportPos, &pos);
-    const QVector<QRect> areas = d->documentContainer.mousePressEvent(pos, viewportPos, event->button());
+    const QVector<QRect> areas = d->documentContainer.mousePressEvent(pos,
+                                                                      viewportPos,
+                                                                      event->button());
     for (const QRect &r : areas)
         viewport()->update(fromVirtual(r.translated(-scrollPosition())));
 }
@@ -575,7 +575,9 @@ void QLiteHtmlWidget::mouseReleaseEvent(QMouseEvent *event)
     QPoint viewportPos;
     QPoint pos;
     htmlPos(event->pos(), &viewportPos, &pos);
-    const QVector<QRect> areas = d->documentContainer.mouseReleaseEvent(pos, viewportPos, event->button());
+    const QVector<QRect> areas = d->documentContainer.mouseReleaseEvent(pos,
+                                                                        viewportPos,
+                                                                        event->button());
     for (const QRect &r : areas)
         viewport()->update(fromVirtual(r.translated(-scrollPosition())));
 }
@@ -585,7 +587,9 @@ void QLiteHtmlWidget::mouseDoubleClickEvent(QMouseEvent *event)
     QPoint viewportPos;
     QPoint pos;
     htmlPos(event->pos(), &viewportPos, &pos);
-    const QVector<QRect> areas = d->documentContainer.mouseDoubleClickEvent(pos, viewportPos, event->button());
+    const QVector<QRect> areas = d->documentContainer.mouseDoubleClickEvent(pos,
+                                                                            viewportPos,
+                                                                            event->button());
     for (const QRect &r : areas) {
         viewport()->update(fromVirtual(r.translated(-scrollPosition())));
     }

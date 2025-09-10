@@ -10,25 +10,25 @@ Nos comprometemos a actuar e interactuar de manera que contribuyan a una comunid
 
 Ejemplos de conductas que contribuyen a un entorno positivo para nuestra comunidad son:
 
-* Demostrar empatía y amabilidad hacia los demás
-* Respetar las opiniones, puntos de vista y experiencias ajenas
-* Aportar y aceptar comentarios constructivos
-* Aceptar la responsabilidad de nuestros errores, disculparse por ellos ante los afectados y aprender de la experiencia
-* Enfocarse en lo que es mejor, no para nosotros como individuos, pero para la comunidad en general
+- Demostrar empatía y amabilidad hacia los demás
+- Respetar las opiniones, puntos de vista y experiencias ajenas
+- Aportar y aceptar comentarios constructivos
+- Aceptar la responsabilidad de nuestros errores, disculparse por ellos ante los afectados y aprender de la experiencia
+- Enfocarse en lo que es mejor, no para nosotros como individuos, pero para la comunidad en general
 
 Ejemplos de conductas inaceptables son:
 
-* El uso de lenguaje o imágenes sexualizadas, insinuaciones sexuales o de cualquier tipo
-* Molestar, insultar o usar comentarios insultantes o despectivos y ataques personales o políticos
-* Acoso público o privado
-* Publicar información privada de otras personas como, dirección física o de correo electrónico sin la previa autorización de la persona
-* Cualquier otra conducta que pueda ser considerada inapropiada en un ambiente profesional
+- El uso de lenguaje o imágenes sexualizadas, insinuaciones sexuales o de cualquier tipo
+- Molestar, insultar o usar comentarios insultantes o despectivos y ataques personales o políticos
+- Acoso público o privado
+- Publicar información privada de otras personas como, dirección física o de correo electrónico sin la previa autorización de la persona
+- Cualquier otra conducta que pueda ser considerada inapropiada en un ambiente profesional
 
 ## Responsabilidades de Ejecución
 
 Líderes de comunidad son responsables de clarificar y aplicar nuestros estándares de comportamiento y tomarán acciones correctivas justas y apropiadas ante cualquier comportamiento que ellos consideren inapropiado, amenazante, ofensivo o nocivo.
 
-Líderes de comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, "commits", código, ediciones de la wiki, problemas y otras contribuciones que no estén alineadas con el código de conducta y comunicaran las razones de su moderación cuando sea apropiado.
+Los líderes de la comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, "commits", código, ediciones de la wiki, problemas y otras contribuciones que no estén alineadas con el código de conducta, y comunicaran las razones de su moderación cuando sea apropiado.
 
 ## Alcance
 
@@ -36,7 +36,7 @@ Este código de conducta aplica a todos los espacios dentro de la comunidad y ta
 
 ## Ejecución
 
-Casos de abuso, acoso o alguna otra forma de comportamiento inapropiado puede ser reportado a los líderes de la comunidad responsables de ejecución a través de la pestaña contacto (*Contacto* [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
+Los casos de abuso, acoso o alguna otra forma de comportamiento inapropiado pueden ser reportados a los líderes de la comunidad responsables del cumplimiento (véase el menú de _Contacto_ en [www.qownnotes.org](https://www.qownnotes.org/)). Todas las reclamaciones serán revisadas e investigadas inmediatamente y de manera justa.
 
 Todos los líderes de la comunidad están obligados a respetar la privacidad y seguridad del informador en cualquier tipo de incidente.
 
@@ -81,4 +81,3 @@ Para obtener respuestas a las preguntas más habituales sobre este código de co
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
-

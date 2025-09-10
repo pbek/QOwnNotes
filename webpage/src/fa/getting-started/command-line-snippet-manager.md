@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## متعلقات
@@ -38,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![توکن-سرور-سوکت](/img/socket-server-token.png)
 
-قبل از استفاده از مدیر تکه کد، باید *سرور سوکت وب* (2) را در قسمت تنظیمات *افزونه مرورگر / تکه کدهای دستوری* (1) در QOwnNotes فعال کنید.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 سپس باید توکن امنیتی را نشان داده (3) و از آن رونوشت برداری کنید (4).
 
@@ -68,7 +69,9 @@ token = "yourtokenhere"
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
+
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
+
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 
 <!-- Example for asking for user input -->

@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 A [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) képes kezelni az **hozzáférést** az **kukába helyezett jegyzetekhez** és az **jegyzetek verzióihoz**.

@@ -13,6 +13,6 @@ The ownCloud / Nextcloud API application **QOwnNotesAPI** for QOwnNotes is now a
 
 You will find it here: [QOwnNotesAPI Marketplace page](https://marketplace.owncloud.com/apps/qownnotesapi)
 
-If you are interested in *OwnBackup*, the simple database backup solutions for your ownCloud or Nextcloud installation, you can also find it in the ownCloud Marketplace: [OwnBackup Marketplace page](https://marketplace.owncloud.com/apps/ownbackup)
+If you are interested in _OwnBackup_, the simple database backup solutions for your ownCloud or Nextcloud installation, you can also find it in the ownCloud Marketplace: [OwnBackup Marketplace page](https://marketplace.owncloud.com/apps/ownbackup)
 
- ![QOwnNotesAPI ownCloud Marketplace](/img/blog/QOwnNotesAPI-ownCloud-Marketplace_reference.jpg "QOwnNotesAPI ownCloud Marketplace")
+![QOwnNotesAPI ownCloud Marketplace](/img/blog/QOwnNotesAPI-ownCloud-Marketplace_reference.jpg "QOwnNotesAPI ownCloud Marketplace")

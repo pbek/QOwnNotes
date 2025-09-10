@@ -15,9 +15,9 @@ Utilice `QOwnNotesPortable.bat` para ejecutar QOwnNotes en **modo portátil**, d
 No necesita el modo portátil si simplemente no tiene permisos de administración en su computadora. ¡QOwnNotes no necesita ser instalado!
 :::
 
-## Windows XP
+## Windows 8.1 y anteriores
 
-Qt eliminó el soporte para Windows XP con la versión 5.8, pero QOwnNotes ahora también está construido con Qt 5.7 para permitir que los usuarios de Windows XP aún lo usen.
+Qt eliminó el soporte para Windows XP con la versión 5.8, pero QOwnNotes ahora también está construido con Qt 5.7 para permitir que los usuarios de Windows XP aún lo usen. Windows 8.1 tiene problemas con la compilación normal de QOwnNotes, porque se creó sobre un SDK de Windows más nuevo.
 
 Debe descargar el archivo ZIP de [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) por su cuenta y descomprimirlo en una carpeta de su agrado.
 
@@ -47,4 +47,24 @@ Hay un [paquete de QOwnNotes mantenido por la comunidad](https://github.com/Scoo
 scoop bucket add extras
 scoop update
 scoop install qownnotes
+```
+
+## WinGet
+
+Hay un [paquete de QOwnNotes mantenido por la comunidad](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) en [WinGet](https://github.com/microsoft/winget-cli).
+
+Puede instalarlo con:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+Hay un [paquete de QOwnNotes mantenido por la comunidad](https://packages.msys2.org/base/mingw-w64-qownnotes) en [MSYS2](hhttps://www.msys2.org/).
+
+Puede instalarlo con:
+
+```shell
+pacman -S mingw-w64-qownnotes
 ```

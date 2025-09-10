@@ -82,8 +82,8 @@ bool Note::isShared() const { return this->_shareId > 0; }
 
 QString Note::getFileName() const { return this->_fileName; }
 
-NoteSubFolder Note::getNoteSubFolder() const {
-    return NoteSubFolder::fetch(this->_noteSubFolderId);
+NoteSubFolder Note::getNoteSubFolder(const QString &connectionName) const {
+    return NoteSubFolder::fetch(this->_noteSubFolderId, connectionName);
 }
 
 int Note::getNoteSubFolderId() const { return this->_noteSubFolderId; }
@@ -477,7 +477,9 @@ QStringList Note::getMediaFileList() const {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileName = match.captured(1);
-        fileList << fileName;
+        // We want to decode the file name parsed from the note, because it can be encoded
+        // For example the image dialog will automatically encode the file name
+        fileList << QUrl::fromPercentEncoding(fileName.toUtf8());
     }
 
     return fileList;
@@ -531,7 +533,10 @@ QStringList Note::getAttachmentsFileList() const {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileName = match.captured(1);
-        fileList << fileName;
+
+        // We want to decode the file name parsed from the note, because it can be encoded
+        // For example the attachment dialog will automatically encode the file name
+        fileList << QUrl::fromPercentEncoding(fileName.toUtf8());
     }
 
     return fileList;
@@ -1755,12 +1760,12 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
     return canonicalFilePath;
 }
 
-QString Note::getFilePathRelativeToNote(const Note &note) const {
-    const QDir dir(fullNoteFilePath());
+QString Note::getFilePathRelativeToNote(const Note &note, const QString &connectionName) const {
+    const QDir dir(fullNoteFilePath(connectionName));
 
     // for some reason there is a leading "../" too much
     static const QRegularExpression re(QStringLiteral(R"(^\.\.\/)"));
-    QString path = dir.relativeFilePath(note.fullNoteFilePath()).remove(re);
+    QString path = dir.relativeFilePath(note.fullNoteFilePath(connectionName)).remove(re);
 
     // if "note" is the current note we want to use the real filename
     if (path == QChar('.')) {
@@ -1826,7 +1831,9 @@ QString Note::urlDecodeNoteUrl(QString url) {
 /**
  * Returns the full path of the note file
  */
-QString Note::fullNoteFilePath() const { return getFullFilePathForFile(relativeNoteFilePath()); }
+QString Note::fullNoteFilePath(const QString &connectionName) const {
+    return getFullFilePathForFile(relativeNoteFilePath(QString(), connectionName));
+}
 
 /**
  * Returns the full path of directory of the note file
@@ -1840,7 +1847,7 @@ QString Note::fullNoteFileDirPath() const {
 /**
  * Returns the relative path of the note file
  */
-QString Note::relativeNoteFilePath(QString separator) const {
+QString Note::relativeNoteFilePath(QString separator, const QString &connectionName) const {
     QString fullFileName = _fileName;
 
     if (separator.isEmpty()) {
@@ -1848,9 +1855,9 @@ QString Note::relativeNoteFilePath(QString separator) const {
     }
 
     if (_noteSubFolderId > 0) {
-        const NoteSubFolder noteSubFolder = getNoteSubFolder();
+        const NoteSubFolder noteSubFolder = getNoteSubFolder(connectionName);
         if (noteSubFolder.isFetched()) {
-            fullFileName.prepend(noteSubFolder.relativePath() + separator);
+            fullFileName.prepend(noteSubFolder.relativePath('/', connectionName) + separator);
         }
     }
 
@@ -2113,7 +2120,7 @@ bool Note::deleteAll() {
 bool Note::fileExists() const { return Utils::Misc::fileExists(fullNoteFilePath()); }
 
 /**
- * Checks if file of note exists in the filesystem and is writeable
+ * Checks if file of note exists in the filesystem and is writable
  *
  * @return bool
  */
@@ -2880,13 +2887,13 @@ QRegularExpression Note::getEncryptedNoteTextRegularExpression() {
 /**
  * Returns encrypted note text if it is encrypted
  */
-QString Note::getEncryptedNoteText() const {
-    const QString noteText = getNoteText();
+QString Note::getEncryptedNoteText() const { return parseEncryptedNoteText(getNoteText()); }
 
-    // get regular expression for the encrypted string
+QString Note::parseEncryptedNoteText(const QString &noteText) {
+    // Get regular expression for the encrypted string
     static const QRegularExpression re = getEncryptedNoteTextRegularExpression();
 
-    // check if we have an encrypted note text and return it if so
+    // Check if we have an encrypted note text and return it if so
     const QRegularExpressionMatch match = re.match(noteText);
     return match.hasMatch() ? match.captured(1) : QLatin1String("");
 }
@@ -2947,34 +2954,39 @@ QString Note::getDecryptedNoteText() const { return _decryptedNoteText; }
  * The crypto key has to be set in the object
  */
 QString Note::fetchDecryptedNoteText() const {
-    // if there is "dirty data" it means that the encrypted note was recently
+    // If there is "dirty data" it means that the encrypted note was recently
     // changed, but not stored yet
-    // in that case we want to return the already decrypted text, because that
+    // In that case we want to return the already decrypted text, because that
     // text is the most current one
     if (_hasDirtyData && !_decryptedNoteText.isEmpty()) {
         return _decryptedNoteText;
     }
 
-    QString noteText = getNoteText();
     const QString encryptedNoteText = getEncryptedNoteText();
 
     if (encryptedNoteText.isEmpty()) {
-        return noteText;
+        return getNoteText();
     }
 
-    // check if we have an external decryption method
+    return getDecryptedNoteText(encryptedNoteText);
+}
+
+QString Note::getDecryptedNoteText(
+    const QString &encryptedNoteText) const {    // check if we have an external decryption method
+    QString noteText = getNoteText();
+
     QString decryptedNoteText =
         ScriptingService::instance()->callEncryptionHook(encryptedNoteText, _cryptoPassword, true);
 
-    // check if a hook changed the text
+    // Check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
-        // decrypt the note text
+        // Decrypt the note text
         BotanWrapper botanWrapper;
         botanWrapper.setPassword(_cryptoPassword);
         botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
         decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
 
-        // fallback to SimpleCrypt
+        // Fallback to SimpleCrypt
         if (decryptedNoteText.isEmpty()) {
             auto *crypto = new SimpleCrypt(static_cast<quint64>(_cryptoKey));
             decryptedNoteText = crypto->decryptToString(encryptedNoteText);
@@ -2986,10 +2998,10 @@ QString Note::fetchDecryptedNoteText() const {
         return noteText;
     }
 
-    // get regular expression for the encrypted string
+    // Get regular expression for the encrypted string
     static const QRegularExpression re = getEncryptedNoteTextRegularExpression();
 
-    // replace the encrypted text with the decrypted text
+    // Replace the encrypted text with the decrypted text
     noteText.replace(re, decryptedNoteText);
     return noteText;
 }
@@ -3211,15 +3223,19 @@ void Note::addTextToLinkedNoteHashIfFound(const Note &note, const QString &noteT
  *
  * @return Hash of notes and the link hits
  */
-QHash<Note, QSet<LinkHit>> Note::findLinkedNotes() {
+QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
+                                                 const QString &connectionName) {
     const auto noteText = getNoteText();
     _linkedNoteHash.clear();
 
-    // Fetch all notes and look if the current note contains a link to those notes
+    if (noteList.isEmpty()) {
+        noteList = Note::fetchAll();
+    }
+
+    // Check all notes and look if the current note contains a link to those notes
     // We don't need to care about legacy links, because they don't know subfolders
-    const auto noteList = Note::fetchAll();
     for (const Note &note : noteList) {
-        const QString &relativePathToNote = getFilePathRelativeToNote(note);
+        const QString &relativePathToNote = getFilePathRelativeToNote(note, connectionName);
 
         // We now don't escape slashes in the relative file path, but previously we did,
         // so we need to search for both
@@ -3483,7 +3499,7 @@ bool Note::handleNoteMoving(Note oldNote) {
     bool result = false;
 
     // Handle incoming note links
-    if (noteCount >= 0) {
+    if (noteCount > 0) {
         result = handleBacklinkedNotesAfterMoving(oldNote, noteIdList);
     }
 
@@ -3494,7 +3510,7 @@ bool Note::handleNoteMoving(Note oldNote) {
         qDebug() << __func__ << " - 'linkedNoteHits': " << linkedNoteHits;
 
         if (linkedNotesCount > 0) {
-            result |= handleLinkedNotesAfterMoving(oldNote, linkedNoteHits);
+            result |= handleLinkedNotesAfterMoving(linkedNoteHits);
         }
     }
 
@@ -3582,15 +3598,14 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
     return noteIdList.contains(_id);
 }
 
-bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
-                                        const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
+bool Note::handleLinkedNotesAfterMoving(const QHash<Note, QSet<LinkHit>> &linkedNoteHits) {
     const int noteCount = linkedNoteHits.count();
     if (Utils::Gui::questionNoSkipOverride(
-        nullptr, QObject::tr("Note file path changed"),
-        QObject::tr("A change of the note path was detected. Would you "
-                    "like to replace all outgoing links to <strong>%n</strong> note file(s)?",
-                    "", noteCount),
-        QStringLiteral("note-replace-outgoing-links")) != QMessageBox::Yes) {
+            nullptr, QObject::tr("Note file path changed"),
+            QObject::tr("A change of the note path was detected. Would you "
+                        "like to replace all outgoing links to <strong>%n</strong> note file(s)?",
+                        "", noteCount),
+            QStringLiteral("note-replace-outgoing-links")) != QMessageBox::Yes) {
         return false;
     }
 
@@ -3619,7 +3634,8 @@ bool Note::handleLinkedNotesAfterMoving(const Note &oldNote,
     }
 
     if (changed) {
-        // At this time the note is not existing anymore in the database, so we need to store a new note
+        // At this time the note is not existing anymore in the database, so we need to store a new
+        // note
         _id = 0;
         this->_noteText = std::move(noteText);
         this->_hasDirtyData = true;
@@ -3765,6 +3781,10 @@ QString Note::mediaUrlStringForFileName(const QString &fileName) const {
         urlString += QStringLiteral("media/") + fileName;
     }
 
+    // Make sure all spaces and brackets are escaped
+    // For example this is important in file names like "image (1).png"
+    urlString = Utils::Misc::encodeFilePath(urlString);
+
     return urlString;
 }
 
@@ -3784,6 +3804,10 @@ QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
         urlString += QStringLiteral("attachments/") + fileName;
     }
 
+    // Make sure all spaces and brackets are escaped
+    // For example this is important in file names like "text (1).txt"
+    urlString = Utils::Misc::encodeFilePath(urlString);
+
     return urlString;
 }
 
@@ -3791,7 +3815,7 @@ QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
  * Returns the Markdown of the inserted attachment file into a note
  */
 QString Note::getInsertAttachmentMarkdown(QFile *file, QString title, bool returnUrlOnly,
-                                          QString fileBaseName) const {
+                                          QString fileName) const {
     // file->exists() was false for QTemporaryFile, so we are using file->size() only
     if (file->size() > 0) {
         const QDir dir(NoteFolder::currentAttachmentsPath());
@@ -3804,20 +3828,20 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString title, bool retur
         const QFileInfo fileInfo(file->fileName());
         const QString suffix = fileInfo.suffix();
 
-        if (fileBaseName.isEmpty()) {
-            fileBaseName = file->fileName();
+        if (fileName.isEmpty()) {
+            fileName = file->fileName();
         }
 
         // find an available filename for the new file
         const QString newFileName =
-            Utils::Misc::findAvailableFileName(fileBaseName, dir.path(), suffix);
+            Utils::Misc::findAvailableFileName(fileName, dir.path(), suffix);
 
         const QString newFilePath = dir.path() + QDir::separator() + newFileName;
 
         // copy the file to the attachments folder
         file->copy(newFilePath);
 
-        const QString attachmentUrlString = attachmentUrlStringForFileName(newFileName);
+        QString attachmentUrlString = attachmentUrlStringForFileName(newFileName);
 
         // check if we only want to return the attachment url string
         if (returnUrlOnly) {
@@ -3985,7 +4009,11 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
     const QPixmap &pixmap = QPixmap::fromImage(
         image.scaled(width, height, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    file.open(QIODevice::WriteOnly);
+    if (!file.open(QIODevice::WriteOnly)) {
+        qWarning() << "Failed to open file for writing:" << file.fileName();
+        return false;
+    }
+
     pixmap.save(&file);
     file.close();
 
@@ -4236,26 +4264,6 @@ QVector<CommandSnippet> Note::getParsedCommandSnippets() const {
 }
 
 void Note::resetNoteTextHtmlConversionHash() { _noteTextHtmlConversionHash = QLatin1String(""); }
-
-/**
- * Get a list of all headings in a note starting with #
- *
- * @return
- */
-QStringList Note::getHeadingList() {
-    QStringList headingList;
-
-    static const QRegularExpression re(QStringLiteral(R"(^#+ (.+)$)"),
-                                       QRegularExpression::MultilineOption);
-    QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
-
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        headingList << match.captured(1);
-    }
-
-    return headingList;
-}
 
 bool Note::applyIgnoredNotesSetting(QStringList &fileNames) {
     const SettingsService settings;

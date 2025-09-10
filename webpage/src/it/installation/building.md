@@ -4,7 +4,7 @@
 
 Puoi anche creare QOwnNotes da solo dal codice sorgente.
 
-Ottieni il codice direttamente dal repository git:
+Checkout the code of the last release directly from the git repository:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Per il debugging, la strada più facile è usando QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the package `qtwebsockets` to build QOwnNotes with Qt6. Se fai un build in Windows, cerca di usare *MinGw 64-bit*. Su linux, molto probabilmente, hai il pacchetto per QtCreator nella tua repository.
+Per il debugging, la strada più facile è usando QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the package `qtwebsockets` to build QOwnNotes with Qt6. If you build under Windows, you want to stick to _MinGw 64-bit_. Su linux, molto probabilmente, hai il pacchetto per QtCreator nella tua repository.
 
 Successivamente apri il file del progetto `src/QOwnNotes.pro` e clicca su **Build**/**Build Project QOwnNotes**.
 
@@ -34,7 +34,7 @@ Sentiti libero di contribuire con il codice sorgente a questo progetto, dare sug
 Visita [QOwnNotes su GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Se vuoi contribuire con il codice sorgente al progetto, invia le tue richieste pull al ramo `develop`.
+If you want to contribute source code to the project please make your pull requests to the `main` branch.
 :::
 
 ## Archivio sorgente
@@ -50,8 +50,11 @@ Gli archivi sorgente saranno accessibili in questo modo:
 If you have the [Nix package manager](https://nixos.org/download/) available you can just git-clone the source code, like explained above and build with:
 
 ```bash
-# Open a nix-shell to get all needed tools
-nix-shell
+# Get devenv if you don't have it already
+nix-shell -p devenv
+
+# Open a shell with all the tools you need
+devenv shell
 
 # Build the application
 just nix-build

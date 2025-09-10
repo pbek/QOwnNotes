@@ -1,5 +1,4 @@
-SingleApplication
-=================
+# SingleApplication
 
 This is a replacement of the QtSingleApplication for `Qt5`.
 
@@ -7,8 +6,7 @@ Keeps the Primary Instance of your Application and kills each subsequent
 instances. It can (if enabled) spawn secondary (non-related to the primary)
 instances and can send data to the primary instance from secondary instances.
 
-Usage
------
+## Usage
 
 The `SingleApplication` class inherits from whatever `Q[Core|Gui]Application`
 class you specify via the `QAPPLICATION_CLASS` macro (`QCoreApplication` is the
@@ -59,8 +57,7 @@ include(singleapplication/singleapplication.pri)
 DEFINES += QAPPLICATION_CLASS=QApplication
 ```
 
-The `Instance Started` signal
-------------------------
+## The `Instance Started` signal
 
 The SingleApplication class implements a `instanceStarted()` signal. You can
 bind to that signal to raise your application's window when a new instance had
@@ -80,13 +77,11 @@ Using `SingleApplication::instance()` is a neat way to get the
 `SingleApplication` instance for binding to it's signals anywhere in your
 program.
 
-__Note:__ On Windows the ability to bring the application windows to the
+**Note:** On Windows the ability to bring the application windows to the
 foreground is restricted. See [Windows specific implementations](Windows.md)
 for a workaround and an example implementation.
 
-
-Secondary Instances
--------------------
+## Secondary Instances
 
 If you want to be able to launch additional Secondary Instances (not related to
 your Primary Instance) you have to enable that with the third parameter of the
@@ -109,9 +104,9 @@ int main(int argc, char *argv[])
 }
 ```
 
-*__Note:__ A secondary instance won't cause the emission of the
+_**Note:** A secondary instance won't cause the emission of the
 `instanceStarted()` signal by default. See `SingleApplication::Mode` for more
-details.*
+details._
 
 You can check whether your instance is a primary or secondary with the following
 methods:
@@ -122,11 +117,10 @@ app.isPrimary();
 app.isSecondary();
 ```
 
-*__Note:__ If your Primary Instance is terminated a newly launched instance
-will replace the Primary one even if the Secondary flag has been set.*
+_**Note:** If your Primary Instance is terminated a newly launched instance
+will replace the Primary one even if the Secondary flag has been set._
 
-API
----
+## API
 
 ### Members
 
@@ -142,15 +136,15 @@ used to notify the primary instance whenever a secondary instance had been
 started (disabled by default). `timeout` specifies the maximum time in
 milliseconds to wait for blocking operations.
 
-*__Note:__ `argc` and `argv` may be changed as Qt removes arguments that it
-recognizes.*
+_**Note:** `argc` and `argv` may be changed as Qt removes arguments that it
+recognizes._
 
-*__Note:__ `Mode::SecondaryNotification` only works if set on both the primary
-and the secondary instance.*
+_**Note:** `Mode::SecondaryNotification` only works if set on both the primary
+and the secondary instance._
 
-*__Note:__ Operating system can restrict the shared memory blocks to the same
+_**Note:** Operating system can restrict the shared memory blocks to the same
 user, in which case the User/System modes will have no effect and the block will
-be user wide.*
+be user wide._
 
 ---
 
@@ -174,6 +168,7 @@ Returns if the instance is the primary instance.
 ```cpp
 bool SingleApplication::isSecondary()
 ```
+
 Returns if the instance is a secondary instance.
 
 ---
@@ -217,28 +212,27 @@ Triggered whenever there is a message received from a secondary instance.
 enum SingleApplication::Mode
 ```
 
-*   `Mode::User` - The SingleApplication block should apply user wide. This adds
-    user specific data to the key used for the shared memory and server name.
-    This is the default functionality.
-*   `Mode::System` – The SingleApplication block applies system-wide.
-*   `Mode::SecondaryNotification` – Whether to trigger `instanceStarted()` even
-    whenever secondary instances are started.
-*   `Mode::ExcludeAppPath` – Excludes the application path from the server name
-    (and memory block) hash.
-*   `Mode::ExcludeAppVersion` – Excludes the application version from the server
-    name (and memory block) hash.
+- `Mode::User` - The SingleApplication block should apply user wide. This adds
+  user specific data to the key used for the shared memory and server name.
+  This is the default functionality.
+- `Mode::System` – The SingleApplication block applies system-wide.
+- `Mode::SecondaryNotification` – Whether to trigger `instanceStarted()` even
+  whenever secondary instances are started.
+- `Mode::ExcludeAppPath` – Excludes the application path from the server name
+  (and memory block) hash.
+- `Mode::ExcludeAppVersion` – Excludes the application version from the server
+  name (and memory block) hash.
 
-*__Note:__ `Mode::SecondaryNotification` only works if set on both the primary
-and the secondary instance.*
+_**Note:** `Mode::SecondaryNotification` only works if set on both the primary
+and the secondary instance._
 
-*__Note:__ Operating system can restrict the shared memory blocks to the same
+_**Note:** Operating system can restrict the shared memory blocks to the same
 user, in which case the User/System modes will have no effect and the block will
-be user wide.*
+be user wide._
 
 ---
 
-Versioning
-----------
+## Versioning
 
 Each major version introduces either very significant changes or is not
 backwards compatible with the previous version. Minor versions only add
@@ -246,20 +240,19 @@ additional features, bug fixes or performance improvements and are backwards
 compatible with the previous release. See [`CHANGELOG.md`](CHANGELOG.md) for
 more details.
 
-Implementation
---------------
+## Implementation
 
 The library is implemented with a QSharedMemory block which is thread safe and
 guarantees a race condition will not occur. It also uses a QLocalSocket to
 notify the main process that a new instance had been spawned and thus invoke the
 `instanceStarted()` signal and for messaging the primary instance.
 
-Additionally the library can recover from being forcefully killed on *nix
+Additionally the library can recover from being forcefully killed on \*nix
 systems and will reset the memory block given that there are no other
 instances running.
 
-License
--------
+## License
+
 This library and it's supporting documentation are released under
 `The MIT License (MIT)` with the exception of the Qt calculator examples which
 is distributed under the BSD license.

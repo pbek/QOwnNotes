@@ -10,19 +10,19 @@ Wir versprechen, in einer Art und Weise zu handeln, die zu einer offenen, einlad
 
 Verhaltensbeispiele, die zu einem positiven Umfeld für unsere Community beitragen:
 
-* Empathie und Freundlichkeit anderen Menschen gegenüber aufzeigen
-* Abweichende Meinungen, Standpunkte und Erfahrungen respektieren
-* Konstruktives Feedback geben und würdevoll annehmen
-* Verantwortung übernehmen und sich bei denjenigen entschuldigen, die durch unsere Fehler in Mitleidenschaft gezogen wurden, und aus dieser Erfahrung lernen
-* Sich auf das Gemeinwohl fokussieren, anstatt nur auf das individuelle Wohl zu achten
+- Empathie und Freundlichkeit anderen Menschen gegenüber aufzeigen
+- Abweichende Meinungen, Standpunkte und Erfahrungen respektieren
+- Konstruktives Feedback geben und würdevoll annehmen
+- Verantwortung übernehmen und sich bei denjenigen entschuldigen, die durch unsere Fehler in Mitleidenschaft gezogen wurden, und aus dieser Erfahrung lernen
+- Sich auf das Gemeinwohl fokussieren, anstatt nur auf das individuelle Wohl zu achten
 
 Verhaltensbeispiele, die inakzeptables Verhalten zeigen:
 
-* Sich sexualisierter Sprache oder Symbolik bedienen, sowie sexuelle Aufmerksamkeit oder Annäherungen jeder Art
-* Beleidigende, herablassende, oder Troll-Kommentare, sowie persönliche oder politische Angriffe
-* Öffentliche oder private Belästigung
-* Das Veröffentlichen privater Informationen anderer, wie physische oder E-Mail-Adressen, ohne deren explizite Erlaubnis
-* Jegliche andere Verhaltensweisen, die nach vernünftigem Ermessen in einem professionellen Umfeld als unangemessen angesehen werden können
+- Sich sexualisierter Sprache oder Symbolik bedienen, sowie sexuelle Aufmerksamkeit oder Annäherungen jeder Art
+- Beleidigende, herablassende, oder Troll-Kommentare, sowie persönliche oder politische Angriffe
+- Öffentliche oder private Belästigung
+- Das Veröffentlichen privater Informationen anderer, wie physische oder E-Mail-Adressen, ohne deren explizite Erlaubnis
+- Jegliche andere Verhaltensweisen, die nach vernünftigem Ermessen in einem professionellen Umfeld als unangemessen angesehen werden können
 
 ## Durchsetzungsverantwortungen
 
@@ -36,7 +36,7 @@ Der Verhaltenskodex gilt in allen Community-Räumen, sowie wenn ein Individuum d
 
 ## Durchsetzung
 
-Fälle von missbrauchendem, belästigendem, oder anderweitig inakzeptablem Verhalten sollte den Community-Sprechern, die für die Durchsetzung verantwortlich sind, gemeldet werden (siehe *Kontakt*-Menüpunkt auf [www.qownnotes.org](https://www.qownnotes.org/)). Alle Beschwerden werden umgehend und fair überprüft und untersucht.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Alle Beschwerden werden umgehend und fair überprüft und untersucht.
 
 Alle Community-Sprecher sind dazu verpflichtet, die Privatsphäre und Sicherheit der Berichterstatter eines Vorfalls zu respektieren.
 
@@ -81,4 +81,3 @@ Für Antworten zu allgemeinen Fragen über diesen Verhaltenskodex, schaue auf de
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
-

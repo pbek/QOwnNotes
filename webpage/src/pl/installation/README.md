@@ -10,4 +10,3 @@ Jeśli masz problemy z pakietami lub repozytoriami, zgłoś je na [stronie probl
 Info
 Spójrz w menu na różne sposoby instalacji QOwnNotes
 :::
-

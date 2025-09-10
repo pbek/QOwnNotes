@@ -1,18 +1,18 @@
 #!/bin/bash
 files_to_update=(
-    fakevimactions.cpp
-    fakevimactions.h
-    fakevimhandler.cpp
-    fakevimhandler.h
-    fakevimtr.h
+  fakevimactions.cpp
+  fakevimactions.h
+  fakevimhandler.cpp
+  fakevimhandler.h
+  fakevimtr.h
 
-    utils/hostosinfo.h
-    utils/optional.h
-    utils/qtcassert.cpp
-    utils/qtcassert.h
-    utils/utils_global.h
+  utils/hostosinfo.h
+  utils/optional.h
+  utils/qtcassert.cpp
+  utils/qtcassert.h
+  utils/utils_global.h
 
-    3rdparty/optional/optional.hpp
+  3rdparty/optional/optional.hpp
 )
 
 qtc_home=$1
@@ -21,14 +21,14 @@ script_dir=$(dirname "$(readlink -f "$0")")
 base_dir=$script_dir/..
 
 die() {
-    echo "$1" 1>&2
-    exit 1
+  echo "$1" 1>&2
+  exit 1
 }
 
 set -e
 
 [ -n "$qtc_home" ] ||
-    die "Usage: $0 PATH_TO_QT_CREATOR"
+  die "Usage: $0 PATH_TO_QT_CREATOR"
 
 echo "--- Fetching latest development code for Qt Creator"
 cd "$qtc_home"
@@ -39,14 +39,14 @@ commit=$(git rev-parse --short HEAD)
 echo "--- Updating source files"
 cd "$base_dir/fakevim"
 for file in "${files_to_update[@]}"; do
-    echo "-- $file"
-    if [[ "$file" == fakevim* ]]; then
-        dir=plugins/fakevim
-    else
-        dir=libs
-    fi
-    rsync --mkpath -- "$qtc_home/src/$dir/$file" "$file"
-    git add -- "$file"
+  echo "-- $file"
+  if [[ $file == fakevim* ]]; then
+    dir=plugins/fakevim
+  else
+    dir=libs
+  fi
+  rsync --mkpath -- "$qtc_home/src/$dir/$file" "$file"
+  git add -- "$file"
 done
 
 echo "--- Patching source files and creating commit"

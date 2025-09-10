@@ -88,7 +88,9 @@ QVector<Node> NavigationWidget::parseDocument(const QTextDocument *const documen
             continue;
         }
         static const QRegularExpression re(QStringLiteral("^#+\\s+"));
-        QString text = block.text().remove(re);
+        // Trim the heading text, in case there are trailing carriage return characters leaking in
+        // Windows
+        QString text = block.text().remove(re).trimmed();
 
         if (text.isEmpty()) {
             continue;

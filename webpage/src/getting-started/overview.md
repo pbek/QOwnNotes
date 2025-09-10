@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Portable mode" />
     <div class="sheet">
       Portable mode for USB sticks
@@ -145,12 +151,13 @@
 of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 
 ::: tip
-  Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [Understand the concept of QOwnNotes](concept.md)
 
 ## Features
+
 - You can use your **existing text or markdown files**, no need for an import
 - QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
 - **Evernote and Joplin import**
@@ -177,18 +184,19 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - **Vim mode**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-
 ## Appearance
+
 - **Markdown highlighting** of notes and a **markdown preview mode**
 - **Dark mode theme support**
 - **Theming support** for the **Markdown syntax highlighting**
 - All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
-- **Line numbers**  
+- **Line numbers**
 - **Differences** between current note and externally changed note are **showed** in a dialog
 
 ## Languages
+
 - **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
   - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 

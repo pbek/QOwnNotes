@@ -4,7 +4,7 @@ You can use these parameters on the command line interface (CLI) to control
 the behavior of the application:
 
 | Parameter                    | Description                                                                                                                                |
-|------------------------------| ------------------------------------------------------------------------------------------------------------------------------------------ |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--help`                     | Shows the help screen                                                                                                                      |
 | `--version`                  | Prints out the version number of the application                                                                                           |
 | `--portable`                 | Runs the application in portable mode                                                                                                      |
@@ -23,6 +23,7 @@ the `--session` parameter.
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 You may run the application on the command line interface differently on
@@ -52,6 +53,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Trigger menu actions after startup

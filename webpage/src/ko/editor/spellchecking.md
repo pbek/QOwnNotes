@@ -2,15 +2,15 @@
 
 맞춤법 오류를 수정하세요!
 
-::: 팁 정보 QOWNNotes에는 사전을 다운로드하거나 삭제하는 데 사용할 수 있는 **사전 관리자**(*편집*메뉴)가 내장되어 있습니다 (언어가 누락된 경우 사전 추가 요청 방법에 대한 아래 참조). 사전을 수동으로 다운로드하려면 아래 지침을 따르십시오. :::
+::: 팁 정보 QOwnNotes에는 사전을 다운로드하거나 삭제하는 데 사용할 수 있는 **사전 관리자** (_편집_ 메뉴)가 내장되어 있습니다( 언어가 누락된 경우 사전 추가를 요청하는 방법은 아래를 참조하세요). 사전을 수동으로 다운로드하려면 아래 지침을 따르십시오. :::
 
 - **Linux**에서 distro의 pkg 관리자를 사용하여 해당 언어의 Hunspell 사전을 설치할 수 있습니다
-    - 언어 파일을 추가해야 하는 경우 `~.local/share/hunspell` 또는 `/usr/share/hunspell`에서 추가할 수 있습니다.
-    - QOwnNotes의 Snap 패키지를 사용하는 경우 스냅에서 `~/.local`에 액세스할 수 없으므로 언어 파일에 대해 `~/hunspell`을 사용할 수도 있습니다
+  - 언어 파일을 추가해야 하는 경우 `~/.local/share/hunspell` 또는 `/usr/share/hunspell`에서 추가할 수 있습니다.
+  - QOwnNotes의 Snap 패키지를 사용하는 경우, Snap이 `~/.local`에 액세스할 수 없으므로 언어 파일에 대해서도 `~/hunspell`을 사용할 수 있습니다
 
 - **Windows**에서는 Qownnotes 응용 프로그램 폴더 또는 `C:\Users\[username]\dicts`에서 언어에 대한 Hunspell 사전을 폴더 `dicts`에 복사해야합니다.
-    - 사전은 [LibreOffice 사전](https://github.com/LibreOffice/dictionaries)에서 다운로드할 수 있습니다
-    - **macOS** 에서 해당 언어의 Hunspell 사전을 `/Library/Spelling` 또는 `~/Library/Spelling`로 복사해야 합니다. 디렉터리가 존재하지 않으면 디렉터리를 만들어야 합니다.
+  - 사전은 [LibreOffice 사전](https://github.com/LibreOffice/dictionaries)에서 다운로드할 수 있습니다
+  - **macOS** 에서 해당 언어의 Hunspell 사전을 `/Library/Spelling` 또는 `~/Library/Spelling`로 복사해야 합니다. 디렉터리가 존재하지 않으면 디렉터리를 만들어야 합니다.
 
 사전은 [QOwnNotes 사잔](https://github.com/qownnotes/dictionaries)에서 다운로드할 수 있습니다. 이 문서의 끝에 있는 표를 사용하여 해당 언어와 해당 언어 코드를 찾으십시오.
 

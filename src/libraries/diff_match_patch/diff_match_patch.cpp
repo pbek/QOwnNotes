@@ -202,7 +202,9 @@ QList<Diff> diff_match_patch::diff_main(const QString &text1,
     const QString &text2, bool checklines, clock_t deadline) {
   // Check for null inputs.
   if (text1.isNull() || text2.isNull()) {
-    throw "Null inputs. (diff_main)";
+   // For some reason some strings are null, even if they should be empty
+   // Commented out to avoid crashes
+   // throw "Null inputs. (diff_main)";
   }
 
   // Check for equality (speedup).

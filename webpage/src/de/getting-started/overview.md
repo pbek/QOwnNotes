@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Portabler Modus" />
     <div class="sheet">
       Tragbarer Modus für USB-Sticks
@@ -142,12 +148,13 @@
 [QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) Klartextdatei-**Markdown-Notizanwendung** für **GNU/Linux**, **MacOS** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
-Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
 
 ## Features
+
 - Sie können Ihre **bereits vorhandenen Text- oder Markdowndateien** verwenden; kein Import nötig
 - QOwnNotes ist in C++ geschrieben und für **geringen Ressourcenverbrauch** optimiert (keine CPU- und speicherhungrige Electron-App)
 - **Evernote- und Joplin-Import**
@@ -170,8 +177,8 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - **Vim-Modus**
 - **[Web-App](web-app.md)** um **Fotos von Ihrem mobilen Telefon** in Notizen auf QOwnNote auf Ihrem Desktop einzufügen
 
-
 ## Aussehen
+
 - **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
 - **Unterstützung für Schemata im Dunkelmodus**
 - **Schemata-Unterstützung** für die Hervorhebung von **Markdown-Syntax**
@@ -182,6 +189,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - **Unterschiede** zwischen aktueller Notiz und extern geänderter Notiz werden in einem Dialog **angezeigt**
 
 ## Sprachen
+
 - **Verfügbar in mehr als 60 verschiedenen Sprachen** wie Englisch, Deutsch, Französisch, Polnisch, Chinesisch, Japanisch, Russisch, Portugiesisch, Ungarisch, Niederländisch und Spanisch
   - [Ihre Hilfe](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen
 

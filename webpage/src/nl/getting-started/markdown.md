@@ -8,10 +8,15 @@ Gebruik koppen om uw teksten te structureren.
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -22,11 +27,9 @@ Het **Navigatiepaneel** toont de structuur van uw rubrieken.
 Als alternatief, voor H1 en H2, een onderstreepte stijl:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: tip
@@ -36,7 +39,7 @@ Standaard creëert QOwnNotes de **bestandsnaam van een notitie** uit de **kop 1*
 ## Nadruk
 
 ```markdown
-Nadruk, ook bekend als cursief, met *asterisks*.
+Emphasis, aka italics, with _asterisks_.
 
 Sterke nadruk, ook bekend als vetgedrukt, met **asterisks**.
 ```
@@ -47,7 +50,7 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + B</kbd> gebruiken om tekst vet
 
 ## Onderstrepen
 
-Er is ook een optionele instelling om onderstreping we te geven in de *Voorbeeldweergave instellingen*.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _underline_
@@ -73,15 +76,19 @@ Er zijn veel manieren om lijsten te maken.
 
 ```markdown
 1. Eerste geordende lijstitem
-2. Een ander item
-   * Ongeordende sublijst.
-1. Werkelijke cijfers doen er niet toe, alleen dat het een nummer is
-   1. Geordende sublijst (werkt alleen in de editor, niet in de voorbeeldweergave)
-4. En nog een item.
+2. Another item
 
-* Ongeordende lijst kan asterisks gebruiken
-- Of minnen
-+ Of plussen
+- Unordered sub-list.
+
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. En nog een item.
+
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: tip
@@ -101,13 +108,15 @@ Twee van de eenvoudigere toepassingen voor koppelingen zijn het verwijzen naar w
 
 [You can use numbers for reference-style link definitions][1]
 
-Gewone URL's en URL's tussen hoekhaken worden automatisch omgezet tot koppelingen in de voorbeeldweergave. 
+Gewone URL's en URL's tussen hoekhaken worden automatisch omgezet tot koppelingen in de voorbeeldweergave.
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
 
 ### Interne koppelingen
+
+You can link to other notes or attachments like this:
 
 ```markdown
 [I link to the Journal.md note](Journal.md)
@@ -121,6 +130,15 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + L</kbd> gebruiken om **links n
 Als u <kbd>Ctrl + Shift + X</kbd> gebruikt, wordt een dialoogvenster geopend waarmee u **bijlagen** in uw notitie kunt invoegen.
 
 U kunt op <kbd>Ctrl + spatiebalk</kbd> drukken terwijl de cursor op een koppeling in de notitiebewerking staat om deze te volgen.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bladwijzers
@@ -145,6 +163,14 @@ U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> gebruiken om e
 U kunt ook rechtstreeks een afbeelding van het klembord in uw notitie plakken met <kbd>Ctrl + Shift + V</kbd>.
 :::
 
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
+:::
 
 ## Inline code en codeblokken
 
@@ -170,84 +196,84 @@ Voeg vier spaties toe vóór uw code om deze als codeblok te markeren.
 ### Backtick-begrenzing
 
 U kunt ook drie tildetekens gebruiken om een ​​codeblok aan te maken.
-~~~markdown
+````markdown
 ```
 Hier komt code
 Hier komt code
 ```
-~~~
+````
 
 ::: tip
-U kunt de [shortcut] (./ shortcuts.md) <kbd> Ctrl + Shift + C </kbd> toepassen op meerdere geselecteerde tekstregels of in een lege regel om een codeblok aan te maken. 
+U kunt de [shortcut] (./ shortcuts.md) <kbd> Ctrl + Shift + C </kbd> toepassen op meerdere geselecteerde tekstregels of in een lege regel om een codeblok aan te maken.
 :::
 
 ### Backtick-begrenzing met code-markering
 
 Er is ook enige syntaxisaccentuering met codeblokken in QOwnNotes.
 
-~~~markdown
+````markdown
 ```bash
-# Dit is een opmerking
+# I am a comment
 cd Notes
-```
-~~~
+````
+````
 
-Ondersteunde talen (en codeblok-ID's):
+Currently, supported languages (and code block identifiers) are:
 
-* BASh scripting, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- BASh scripting, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- Shell scripting, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
-## Tabellen
+## Tables
 
-Tabellen maken geen deel uit van de basis Markdown-specificatie, maar de QOwnNotes-voorbeeldweergave ondersteunt deze. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-~~~markdown
-Sluistekens (verticale strepen) kunnen worden gebruikt om kolommen uit te lijnen.
+```markdown
+Colons can be used to align columns.
 
-| Tabellen      | Zijn             | Vet   |
-| ------------- |:----------------:| -----:|
-| kol 3 is      | rechts-uitgevuld | $1600 |
-| kol 2 is      | gecentreerd      |   $12 |
-| zebra strepen | zijn mooi        |    $1 |
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-Elke koptekstcel moet met minimaal 3 streepjes gescheiden worden.
+There must be at least 3 dashes separating each header cell.
 
 U kunt ook inline Markdown gebruiken.
 
-| Minder | Fraaie | Markdown |
-| --- | --- | --- |
-| *Toch* | `correct` | **weergegeven** |
-| 1 | 2 | 3 |
-~~~
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+````
 
 ::: tip
 Druk op <kbd>Alt + Shift + T</kbd> om een dialoogvenster te activeren waarmee u tabellen kunt maken. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
@@ -263,11 +289,11 @@ Gebruik <kbd>Ctrl + Space</kbd> in een markdown-tabel om deze automatisch op te 
 
 Citaatafbreking.
 
-> Dit is een zeer lange zin die correct wordt geciteerd wanneer deze over meerdere regels wordt verdeeld. Oh jongen, laten we blijven schrijven om er zeker van te zijn dat dit lang genoeg is om voor iedereen omgeslagen te worden. Oh, je kunt **Markdown** in een blokcitaat *plaatsen*. 
+> Dit is een zeer lange zin die correct wordt geciteerd wanneer deze over meerdere regels wordt verdeeld. Oh jongen, laten we blijven schrijven om er zeker van te zijn dat dit lang genoeg is om voor iedereen omgeslagen te worden. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 ::: tip
-U kunt QOwnNotes vertellen om blockquotes of alleen het blokcitaat-teken volledig te markeren in de *Editor instellingen*
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> gebruiken om tekst als blokcitaat te markeren.
 :::
@@ -279,17 +305,17 @@ Er zijn drie manieren om een ​​horizontale regel te krijgen: koppeltekens, s
 ```markdown
 Drie of meer...
 
-Afbreektekens
+Hyphens
 
 ---
 
 Asterisks
 
-***
+---
 
-Lage streepjes
+Underscores
 
-___
+---
 ```
 
 ## Nieuwe regel
@@ -305,10 +331,10 @@ Je kunt twee spaties en een nieuwe regel invoeren met <kbd>⇧ Shift</kbd> + <kb
 ```markdown
 Hier is een regel om mee te beginnen.
 
-Deze regel is door twee nieuwe regels van de vorige gescheiden en daarmee wordt het een *afzonderlijke alinea*.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-Deze regel begint ook een aparte alinea, maar...  
-Deze regel wordt allen gescheiden door twee spaties en een enkele nieuwe lijn en daarmee wordt het een aparte regel in de *dezelfde alinea*.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -320,9 +346,9 @@ Spaties aan het eind van de regel worden standaard gemarkeerd in de editor.
 Opmerkingen worden niet weergegeven in het voorbeeld.
 
 ```markdown
-[comment]: # (Deze opmerking verschijnt niet in het voorbeeld)
+[comment]: # "This comment will not appear in the preview"
 
-<!-- HTML opmerkingen blijven ook verborgen -->
+<!-- HTML comments are also hidden -->
 ```
 
 ::: tip

@@ -1,9 +1,9 @@
 # Blootgestelde klassen
 
-Notitie
-----
+## Notitie
 
 ### Eigenschappen en methoden
+
 ```cpp
 class NoteApi {
     Q_PROPERTY(int id)
@@ -26,12 +26,15 @@ class NoteApi {
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
     Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
     Q_INVOKABLE bool allowDifferentFileName()
+    // Returns the Markdown note url for linking to the note with noteId
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
 };
 ```
 
 U kunt de methoden van [Datum](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) gebruiken om met `fileCreated` of `fileLastModified` te werken.
 
 ### Voorbeeld
+
 ```js
 script.log (note.fileCreated.toISOString());
 script.log (note.fileLastModified.getFullYear());
@@ -43,10 +46,10 @@ note.renameNoteFile ("nieuwe naam");
 script.log (note.allowDifferentFileName());
 ```
 
-NoteSubFolder
-----
+## NoteSubFolder
 
 ### Eigenschappen en methoden
+
 ```cpp
 class NoteSubFolderApi {
     Q_PROPERTY(int id)
@@ -61,34 +64,41 @@ class NoteSubFolderApi {
 ```
 
 ### Voorbeeld
+
 ```js
-var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+var noteSubFolderQmlObj = Qt.createQmlObject(
+  "import QOwnNotesTypes 1.0; NoteSubFolder{}",
+  mainWindow,
+  "noteSubFolder",
+);
 
-// alle namen van submappen afdrukken
-noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+// print all subfolder names
+noteSubFolderQmlObj
+  .fetchNoteSubFoldersByParentId(parentId)
+  .forEach(function (nsf) {
     script.log(nsf.name);
-});
+  });
 
-// verkrijg de actieve notitie-submap
+// get the active note subfolder
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print het volledige en relatieve pad van de actieve notitie-submap
+// print the full and relative path of the active note subfolder
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// itereren door notities in de submap van notities
+// iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
-    var note = noteSubFolder.notes[idx];
+  var note = noteSubFolder.notes[idx];
 }
 ```
 
-Tag
----
+## Tag
 
 ### Eigenschappen en methoden
+
 ```cpp
 class TagApi {
     Q_PROPERTY(int id)
@@ -101,6 +111,7 @@ class TagApi {
 ```
 
 ### Voorbeeld
+
 ```js
 // Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
 
@@ -111,17 +122,17 @@ var notes = tag.notes;
 
 // Iterate through notes of the tag
 for (var idx in notes) {
-    var note = notes[idx];
-    script.log(note.name);
+  var note = notes[idx];
+  script.log(note.name);
 }
 ```
 
 U vindt meer voorbeelden waar TagApi wordt gebruikt [ notice-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
-MainWindow
-----------
+## MainWindow
 
 ### Eigenschappen en methoden
+
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -154,6 +165,7 @@ class MainWindow {
 ```
 
 ### Voorbeeld
+
 ```js
 // Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
@@ -174,10 +186,9 @@ mainWindow.jumpToTag(tag.id);
 
 // Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
+noteIds.forEach(function (noteId) {
+  var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+  // do something with the note
 });
-
 ```

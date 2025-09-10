@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#! /usr/bin/env nix-shell
+#! nix-shell --pure -i bash -p xmlstarlet curl
 #
 # Downloads and extract the given icon and save it to the breeze-qownnotes and
 # breeze-dark-qownnotes folders and adds file entries to the resource files
@@ -13,30 +14,30 @@ iconThemeUrl="https://download.kde.org/stable/frameworks/${kdeFrameworkVersion}/
 
 # Download icon from the first parameter from GitHub
 downloadIcon() {
-    iconName=$1
-#    curl -L "${iconUrlPrefix}${iconName}.svg" -o "breeze-qownnotes/16x16/${iconName}.svg"
-#    curl -L "${darkIconUrlPrefix}${iconName}.svg" -o "breeze-dark-qownnotes/16x16/${iconName}.svg"
+  iconName=$1
+  #    curl -L "${iconUrlPrefix}${iconName}.svg" -o "breeze-qownnotes/16x16/${iconName}.svg"
+  #    curl -L "${darkIconUrlPrefix}${iconName}.svg" -o "breeze-dark-qownnotes/16x16/${iconName}.svg"
 
-    # Download iconThemeUrl to a temporary folder (because dark icons aren't hosted on GitHub any more, they are generated)
-    tmpDir=$(mktemp -d)
-    echo "Downloading breeze-icons to ${tmpDir}..."
-    curl -L "${iconThemeUrl}" -o "${tmpDir}/breeze-icons.tar.xz"
+  # Download iconThemeUrl to a temporary folder (because dark icons aren't hosted on GitHub any more, they are generated)
+  tmpDir=$(mktemp -d)
+  echo "Downloading breeze-icons to ${tmpDir}..."
+  curl -L "${iconThemeUrl}" -o "${tmpDir}/breeze-icons.tar.xz"
 
-    # Extract icon files
-    echo "Extracting breeze-icons to breeze-qownnotes/16x16 and breeze-dark-qownnotes/16x16..."
-    tar -xf "${tmpDir}/breeze-icons.tar.xz" -C "breeze-qownnotes/16x16" --strip-components=4 "breeze-icons-${kdeFrameworkVersion}.0/icons/actions/22/${iconName}.svg"
-    tar -xf "${tmpDir}/breeze-icons.tar.xz" -C "breeze-dark-qownnotes/16x16" --strip-components=4 "breeze-icons-${kdeFrameworkVersion}.0/icons-dark/actions/22/${iconName}.svg"
+  # Extract icon files
+  echo "Extracting breeze-icons to breeze-qownnotes/16x16 and breeze-dark-qownnotes/16x16..."
+  tar -xf "${tmpDir}/breeze-icons.tar.xz" -C "breeze-qownnotes/16x16" --strip-components=4 "breeze-icons-${kdeFrameworkVersion}.0/icons/actions/22/${iconName}.svg"
+  tar -xf "${tmpDir}/breeze-icons.tar.xz" -C "breeze-dark-qownnotes/16x16" --strip-components=4 "breeze-icons-${kdeFrameworkVersion}.0/icons-dark/actions/22/${iconName}.svg"
 
-    # Remove the temporary folder
-    echo "Removing ${tmpDir}..."
-    rm -rf "${tmpDir}"
+  # Remove the temporary folder
+  echo "Removing ${tmpDir}..."
+  rm -rf "${tmpDir}"
 }
 
 # Check if the first parameter is empty
 if [ -z "$1" ]; then
-    echo "Please specify the icon name as the first parameter!"
-    echo "Example: $0 edit-delete"
-    exit 1
+  echo "Please specify the icon name as the first parameter!"
+  echo "Example: $0 edit-delete"
+  exit 1
 fi
 
 # Change to the current directory

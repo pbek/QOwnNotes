@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>Portugalski (brazilski)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>Portugalski</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -776,19 +776,19 @@
 </message>
 <message>
 <source>Use smartcase</source>
-<translation>Koristi pametno razlikovanje velikih/malih slova</translation>
+<translation>Koristi smartcase</translation>
 </message>
 <message>
 <source>Use ignorecase</source>
-<translation>Koristi nerazlikovanje velikih/malih slova</translation>
+<translation>Koristi ignorecase</translation>
 </message>
 <message>
 <source>Use wrapscan</source>
-<translation>Koristite wrapscan</translation>
+<translation>Koristi wrapscan</translation>
 </message>
 <message>
 <source>Use tildeop</source>
-<translation>Koristite tildeop</translation>
+<translation>Koristi tildeop</translation>
 </message>
 <message>
 <source>Show partial command</source>
@@ -813,6 +813,10 @@
 <message>
 <source>Keyword characters:</source>
 <translation>Znakovi ključne riječi:</translation>
+</message>
+<message>
+<source/>
+<translation type="unfinished"/>
 </message>
 <message>
 <source>Use Vim-style Editing</source>
@@ -1478,7 +1482,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>Poveznica na URL ili bilješku</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1491,6 +1495,10 @@
 <message>
 <source>Select local file or directory to link to</source>
 <translation>Odaberite lokalnu datoteku ili direktorij s poveznicom</translation>
+</message>
+<message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1527,6 +1535,22 @@
 <message>
 <source>Select directory to link to</source>
 <translation>Odaberite direktorij koji želite povezati</translation>
+</message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation type="unfinished">Select file to link to (relative)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation type="unfinished">Select file to link to (absolute)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation type="unfinished">Select directory to link to (relative)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation type="unfinished">Select directory to link to (absolute)</translation>
 </message>
 </context>
 <context>
@@ -1920,7 +1944,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>&amp;Pronađi tekst u bilješkama</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2124,6 +2148,14 @@
 <translation>Otključaj kontrolnu ploču</translation>
 </message>
 <message>
+<source>Reattach floating panels</source>
+<translation>Ponovo prikvači plutajuće ploče</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>Ponovo prikvače sve plutajuće ploče</translation>
+</message>
+<message>
 <source>Remove current workspace</source>
 <translation>Ukloni izabrani radni prostor</translation>
 </message>
@@ -2194,6 +2226,10 @@
 <message>
 <source>Show note git versions</source>
 <translation>Prikaži git verzije bilješke</translation>
+</message>
+<message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2457,7 +2493,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Pronađi tekst u bilješkama u svim oznakama / podmapama</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2673,6 +2709,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation>Bilješka</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>Mape s bilješkama</translation>
 </message>
@@ -2683,6 +2724,27 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Izbrisane bilješke trenutno se učitavaju s poslužitelja ownCloud</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation>Sufiks datoteke</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation>Sufiks priložene datoteke:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation>Osnovno ime datoteke</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation>Osnovno ime priložene datoteke:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation>Ostavi prazno za automatsko ime</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2750,11 +2812,19 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>Mapa bilješki ne postoji!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>Napomena: mapa &lt;b&gt;%1&lt;/b&gt; sa stazom &lt;b&gt;%2&lt;/b&gt; više ne postoji!</translation>
+</message>
+<message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -2773,6 +2843,22 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <numerusform>%n odabarna</numerusform>
 <numerusform>%n odabarnih</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation type="unfinished">No versions available</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation type="unfinished">No versions are available for this note.</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation>Zatvori karticu bilješke</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -2970,6 +3056,26 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Rename workspace</source>
 <translation>Preimenuj radnu površinu</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -3320,6 +3426,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Pregled bilješke</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Protokol</translation>
 </message>
@@ -3403,6 +3513,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Kliknite ovdje da biste vidjeli promjene te da ažurirate na najnoviju inačicu</translation>
+</message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation>Čeka se odgovor od UI-a</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3500,7 +3614,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Stvori karticu i umetni poveznicu u trenutačnu bilješku</translation>
 </message>
 <message>
 <source>&amp;Save</source>
@@ -3659,7 +3773,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Prikaži bilješke u mapi „%1” (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3709,7 +3823,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>UI sustav je deaktiviran. Aktiviraj ga u glavnom izborniku ili UI alatnoj traci.</translation>
 </message>
 </context>
 <context>
@@ -3972,11 +4086,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Čini se da tvoj Windows sustav koristi tamni način rada. Želiš li također uključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Čini se da tvoj Windows sustav koristi svijetli način rada. Želiš li isključiti tamni način rada u QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -3984,7 +4098,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;zadnja promjena: %2&lt;br /&gt;veličina datoteke: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4032,7 +4146,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Tvoja mapa bilješki &lt;b&gt;%1&lt;/b&gt; više nije pronađena! Želiš li odabrati novu?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4114,6 +4228,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Note creation failed</source>
 <translation>Neuspjela izrada bilješke</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation>Dvoklik za otvaranje bilješke</translation>
 </message>
 </context>
 <context>
@@ -4354,8 +4472,15 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Ne mogu povezati bazu podataka s datotekom '%1'. Može li se snimati u mapu i datoteku?</translation>
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4364,12 +4489,6 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Cannot open database</source>
 <translation>Nemoguće otvoriti bazu podataka</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Nemoguće uspostaviti vezu s bazom podataka s bazom podataka mape bilješki za spajanje '%1'.
-Mogu li se mapa i datoteka zapisati?</translation>
 </message>
 </context>
 <context>
@@ -5170,6 +5289,10 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <translation>Baskijski</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation>Engleski (britanski)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonski</translation>
 </message>
@@ -5522,6 +5645,22 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <translation>Traži jezik</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation>Sakrij ikone izbornika</translation>
+</message>
+<message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Traka stanja</translation>
 </message>
@@ -5659,12 +5798,28 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <translation>Automatski ukloni zaostale prostore u tekstu bilješke</translation>
 </message>
 <message>
+<source>Git library</source>
+<translation type="unfinished">Git library</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>Bilješke dulje od ove vrijednosti se neće prikazivati ​​na popisu bilješki</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>Maksimalna veličina datoteke bilješke:</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation>Sakrij gumb za zatvaranje kartice</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -5690,6 +5845,23 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
 <translation>Provjeri vezu</translation>
+</message>
+<message>
+<source>API settings</source>
+<translation>API postavke</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation type="unfinished">Response timeout:</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>sekunda</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -5760,7 +5932,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Klikom na karticu bilješke se poništava odabir „Sve bilješke”</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -6122,7 +6294,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation>sekunda</translation>
+<translation>s</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
@@ -6632,6 +6804,10 @@ Poruka o pogrešci veze: </translation>
 <translation>Provjeri vezu na %1 (%2)</translation>
 </message>
 <message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+</message>
+<message>
 <source>Find a script in the script repository</source>
 <translation>Pronađi skriptu u spremištu skripti</translation>
 </message>
@@ -7007,11 +7183,11 @@ Vaše bilješke će ostati netaknute!</translation>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Prikaži samo priloge koji se koriste u trenutačnoj bilješci</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Prikaži samo od trenutačne bilješke</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7162,11 +7338,11 @@ Vaše bilješke će ostati netaknute!</translation>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>Prikaži samo slike koje se koriste u trenutačnoj bilješci</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Prikaži samo od trenutačne bilješke</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7351,15 +7527,15 @@ Vaše bilješke će ostati netaknute!</translation>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Razlike u tekstu</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>Razlike:</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>Prihvatiti promjene?</translation>
 </message>
 </context>
 <context>
@@ -7775,10 +7951,6 @@ This cannot be undone!</source>
 <translation>Greška dozvole</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>Vaš QOwnNotes izvršni '%1' ne može se pisati! Trenutačni korisnik mora moći pisati da bi se mogao ažurirati.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Privremenu datoteku '%1' nije moguće učiniti izvršnom! Morate sami zamijeniti '%2'.</translation>
 </message>
@@ -7825,6 +7997,10 @@ This cannot be undone!</source>
 <message>
 <source>Proceed with update</source>
 <translation>Nastavi s ažuriranjem</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

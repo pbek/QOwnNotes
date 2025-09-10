@@ -1,9 +1,9 @@
 # Clases expuestas
 
-Nota
-----
+## Nota
 
 ### Propiedades y métodos
+
 ```cpp
 class NoteApi {
     Q_PROPERTY(int id)
@@ -26,12 +26,15 @@ class NoteApi {
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
     Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
     Q_INVOKABLE bool allowDifferentFileName()
+    // Devuelve la URL de la nota de Markdown para vincular a la nota con noteId
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
 };
 ```
 
 Puede utilizar los métodos de [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) para trabajar con `fileCreated` o `fileLastModified`.
 
 ### Ejemplo
+
 ```js
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
@@ -43,10 +46,10 @@ note.renameNoteFile("nuevo nombre");
 script.log(note.allowDifferentFileName());
 ```
 
-NoteSubFolder
-----
+## NoteSubFolder
 
 ### Propiedades y métodos
+
 ```cpp
 class NoteSubFolderApi {
     Q_PROPERTY(int id)
@@ -61,13 +64,20 @@ class NoteSubFolderApi {
 ```
 
 ### Ejemplo
+
 ```js
-var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+var noteSubFolderQmlObj = Qt.createQmlObject(
+  "import QOwnNotesTypes 1.0; NoteSubFolder{}",
+  mainWindow,
+  "noteSubFolder",
+);
 
 // imprimir todos los nombres de las subcarpetas
-noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+noteSubFolderQmlObj
+  .fetchNoteSubFoldersByParentId(parentId)
+  .forEach(function (nsf) {
     script.log(nsf.name);
-});
+  });
 
 // obtener la subcarpeta de la nota activa
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
@@ -81,14 +91,14 @@ script.log(noteSubFolder.name);
 
 // iterar a través de las notas en la subcarpeta de la nota
 for (var idx in noteSubFolder.notes) {
-    var note = noteSubFolder.notes[idx];
+  var nota = noteSubFolder.notes[idx];
 }
 ```
 
-Etiqueta
----
+## Etiqueta
 
 ### Propiedades y métodos
+
 ```cpp
 class TagApi {
     Q_PROPERTY(int id)
@@ -101,27 +111,28 @@ class TagApi {
 ```
 
 ### Ejemplo
+
 ```js
 // ¡No olvide usar “import QOwnNotesTypes 1.0” en la parte superior de su script!
 
 // Obtener etiqueta "home"
-var tag = script.getTagByNameBreadcrumbList(["home"]);
+var etiqueta = script.getTagByNameBreadcrumbList(["home"]);
 // Obtener todas las notas etiquetadas con la etiqueta
-var notes = tag.notes;
+var notas = etiqueta.notes;
 
 // Iterar a través de las notas de la etiqueta
-for (var idx in notes) {
-    var note = notes[idx];
-    script.log(note.name);
+for (var idx in notas) {
+  var nota = notas[idx];
+  script.log(nota.name);
 }
 ```
 
 Puede encontrar mas ejemplos donde se usa TagApi en [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
-MainWindow
-----------
+## MainWindow
 
 ### Propiedades y métodos
+
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -154,30 +165,30 @@ class MainWindow {
 ```
 
 ### Ejemplo
+
 ```js
-// Fuerza una recarga de la lista de notas
+// Forzar una recarga de la lista de notas
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crea una nueva subcarpeta de notas "Mi carpeta estrafalaria" en la subcarpeta actual
+// Crear una nueva subcarpeta de notas "Mi carpeta estrafalaria" en la subcarpeta actual
 mainWindow.createNewNoteSubFolder("Mi carpeta estrafalaria");
 
-// Inserta HTML en la nota actual como Markdown
+// Insertar HTML en la nota actual como Markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>mi título</h2>algo de texto");
 
-// Establece espacio de trabajo 'Edit' como espacio de trabajo actual
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+// Establecer el espacio de trabajo "Edición" como espacio de trabajo actual
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edición"));
 
-// Salta a la etiqueta "test" en el árbol de etiquetas
-// Hay un ejemplo en 
-https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
-var tag = script.getTagByNameBreadcrumbList(["test"]);
-mainWindow.jumpToTag(tag.id);
+// Saltar a la etiqueta "prueba" en el árbol de etiquetas
+// Hay un ejemplo en https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+var etiqueta = script.getTagByNameBreadcrumbList(["prueba"]);
+mainWindow.jumpToTag(etiqueta.id);
 
-// Obtiene todas las notas de las pestañas que están abiertas 
-var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
-    // Haz algo con la nota
+// Obtener todas las notas de las pestañas que están abiertas 
+var IDnotas = mainWindow.getNoteTabNoteIdList();
+IDnotas.forEach(function (IDnota){
+  var nota = script.fetchNoteById(IDnota);
+
+  // Hacer algo con la nota
 });
-
 ```

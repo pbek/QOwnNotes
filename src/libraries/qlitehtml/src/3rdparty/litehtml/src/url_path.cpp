@@ -31,56 +31,48 @@
 
 namespace litehtml {
 
-bool is_url_path_absolute(const tstring& path)
-{
-    return path.length() > 0 && path[0] == _t('/');
+bool is_url_path_absolute(const tstring& path) { return path.length() > 0 && path[0] == _t('/'); }
+
+tstring url_path_directory_name(const tstring& path) {
+  size_t offset = path.find_last_of(_t('/'));
+  if (offset == tstring::npos) {
+    return _t(".");
+  } else {
+    return path.substr(0, offset + 1);
+  }
 }
 
-tstring url_path_directory_name(const tstring& path)
-{
-    size_t offset = path.find_last_of(_t('/'));
-    if (offset == tstring::npos) {
-        return _t(".");
-    } else {
-        return path.substr(0, offset + 1);
-    }
+tstring url_path_base_name(const tstring& path) {
+  size_t offset = path.find_last_of(_t('/'));
+  if (offset == tstring::npos) {
+    return path;
+  } else {
+    return path.substr(offset + 1);
+  }
 }
 
-tstring url_path_base_name(const tstring& path)
-{
-    size_t offset = path.find_last_of(_t('/'));
-    if (offset == tstring::npos) {
-        return path;
-    } else {
-        return path.substr(offset + 1);
-    }
+tstring url_path_append(const tstring& base, const tstring& path) {
+  tstring result(base);
+
+  // Only append a separator if both base and path are not empty and if the
+  // last character of base is not already a separator.
+  if (!result.empty() && !path.empty() && result.back() != _t('/')) {
+    result.append(1, _t('/'));
+  }
+
+  result.append(path);
+
+  return result;
 }
 
-tstring url_path_append(const tstring& base, const tstring& path)
-{
-    tstring result(base);
+tstring url_path_resolve(const tstring& base, const tstring& path) {
+  // If the possibly relative path is an absolute path then it is not
+  // relative and the base path is irrelevant.
+  if (is_url_path_absolute(path)) {
+    return path;
+  }
 
-    // Only append a separator if both base and path are not empty and if the
-    // last character of base is not already a separator.
-    if (!result.empty() && !path.empty() && result.back() != _t('/')) {
-        result.append(1, _t('/'));
-    }
-
-    result.append(path);
-
-    return result;
+  return url_path_append(url_path_directory_name(base), path);
 }
 
-tstring url_path_resolve(const tstring& base, const tstring& path)
-{
-
-    // If the possibly relative path is an absolute path then it is not
-    // relative and the base path is irrelevant.
-    if (is_url_path_absolute(path)) {
-        return path;
-    }
-
-    return url_path_append(url_path_directory_name(base), path);
-}
-
-} // namespace litehtml
+}  // namespace litehtml

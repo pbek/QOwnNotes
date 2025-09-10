@@ -10,7 +10,6 @@ order: 20210116000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 You can now try out **QOwnNotes** in your web-browser without installing it!
 Visit the [QOwnNotes Demo](../getting-started/demo.md) page and follow the instructions.
 

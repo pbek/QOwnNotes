@@ -21,11 +21,10 @@
 #ifndef SONNET_BACKGROUNDCHECKER_H
 #define SONNET_BACKGROUNDCHECKER_H
 
-#include "speller.h"
+#include <QObject>
 
 #include "backgroundchecker_p.h"
-
-#include <QObject>
+#include "speller.h"
 class BackgroundCheckerPrivate;
 
 /**
@@ -51,10 +50,9 @@ class Speller;
  * @author Zack Rusin <zack@kde.org>
  * @short class used for spell checking in the background
  */
-class BackgroundChecker : public QObject
-{
+class BackgroundChecker : public QObject {
     Q_OBJECT
-public:
+   public:
     explicit BackgroundChecker(QObject *parent = nullptr);
     explicit BackgroundChecker(const Speller &speller, QObject *parent = nullptr);
     ~BackgroundChecker();
@@ -85,7 +83,7 @@ public:
      */
     bool addWordToSession(const QString &word);
 
-public Q_SLOTS:
+   public Q_SLOTS:
     virtual void start();
     virtual void stop();
     void replace(int start, const QString &oldText, const QString &newText);
@@ -98,7 +96,7 @@ public Q_SLOTS:
      */
     virtual void continueChecking();
 
-Q_SIGNALS:
+   Q_SIGNALS:
     /**
      * Emitted whenever a misspelled word is found
      */
@@ -109,7 +107,7 @@ Q_SIGNALS:
      */
     void done();
 
-protected:
+   protected:
     /**
      * This function is called to get the text to spell check.
      * It will be called continuesly until it returns QString()
@@ -126,11 +124,12 @@ protected:
      */
     virtual void finishedCurrentFeed();
 
-protected Q_SLOTS:
+   protected Q_SLOTS:
     void slotEngineDone();
-private:
+
+   private:
     BackgroundCheckerPrivate *const d;
 };
-}
+}    // namespace Sonnet
 
 #endif

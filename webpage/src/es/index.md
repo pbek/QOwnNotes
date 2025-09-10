@@ -8,7 +8,7 @@ actionText: Inicio rápido →
 actionLink: getting-started/overview
 features:
   - 
-    title: Aduéñate de tus notas
+    title: Aduéñese de sus notas
     details: Todas las notas se almacenan como archivos Markdown de texto plano en su ordenador, sin «bloqueo de vendedor». Utilice servicios de sincronización como Nextcloud para sincronizar notas entre dispositivos.
   - 
     title: Huella pequeña

@@ -15,6 +15,6 @@ You can listen to the full episode here: [Linux Voice Podcast - Season 4 Episode
 
 [Linux Voice](https://www.linuxvoice.com) is really a great magazine (I subscribed to it a few month ago) and it's all about free software and free speech. You can download all back issues (Creative Commons BY-SA license) for free at [back issues](https://www.linuxvoice.com/creative-commons-issues/).
 
- ![linux-voice-podcast-logo](/img/blog/linux-voice-podcast-logo_reference.png "linux-voice-podcast-logo")
- 
- (image by [www.linuxvoice.com](http://www.linuxvoice.com))
+![linux-voice-podcast-logo](/img/blog/linux-voice-podcast-logo_reference.png "linux-voice-podcast-logo")
+
+(image by [www.linuxvoice.com](http://www.linuxvoice.com))

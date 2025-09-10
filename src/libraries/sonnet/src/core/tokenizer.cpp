@@ -20,44 +20,33 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <QVector>
 #include <QString>
-//#include <QDebug>
+#include <QVector>
+// #include <QDebug>
 
-#include "tokenizer_p.h"
 #include "textbreaks_p.h"
+#include "tokenizer_p.h"
 
 namespace Sonnet {
-class BreakTokenizerPrivate
-{
-public:
-    enum Type {
-        Words, Sentences
-    };
+class BreakTokenizerPrivate {
+   public:
+    enum Type { Words, Sentences };
 
     BreakTokenizerPrivate(Type s)
-        : breakFinder(new TextBreaks)
-        , type(s)
-        , itemPosition(-1)
-        , cacheValid(false)
-        , inAddress(false)
-        , ignoreUppercase(false)
-    {
-    }
+        : breakFinder(new TextBreaks),
+          type(s),
+          itemPosition(-1),
+          cacheValid(false),
+          inAddress(false),
+          ignoreUppercase(false) {}
 
-    ~BreakTokenizerPrivate()
-    {
-        delete breakFinder;
-    }
+    ~BreakTokenizerPrivate() { delete breakFinder; }
 
     TextBreaks::Positions breaks() const;
     void invalidate();
     void shiftBreaks(int from, int offset);
     void replace(int pos, int len, const QString &newWord);
-    void reset()
-    {
-        itemPosition = -1;
-    }
+    void reset() { itemPosition = -1; }
 
     TextBreaks *breakFinder;
     Token last;
@@ -71,34 +60,30 @@ public:
 
     bool hasNext() const;
     Token next();
-    void setBuffer(const QString &b)
-    {
+    void setBuffer(const QString &b) {
         invalidate();
         buffer = b;
     }
 
-private:
+   private:
     void regenerateCache() const;
     mutable TextBreaks::Positions cachedBreaks;
 };
 
-void BreakTokenizerPrivate::invalidate()
-{
+void BreakTokenizerPrivate::invalidate() {
     cacheValid = false;
     itemPosition = -1;
 }
 
-bool BreakTokenizerPrivate::hasNext() const
-{
-    if (itemPosition >= (breaks().size()-1)) {
+bool BreakTokenizerPrivate::hasNext() const {
+    if (itemPosition >= (breaks().size() - 1)) {
         return false;
     }
 
     return true;
 }
 
-TextBreaks::Positions BreakTokenizerPrivate::breaks() const
-{
+TextBreaks::Positions BreakTokenizerPrivate::breaks() const {
     if (!cacheValid) {
         regenerateCache();
     }
@@ -106,8 +91,7 @@ TextBreaks::Positions BreakTokenizerPrivate::breaks() const
     return cachedBreaks;
 }
 
-void BreakTokenizerPrivate::shiftBreaks(int from, int offset)
-{
+void BreakTokenizerPrivate::shiftBreaks(int from, int offset) {
     auto size = cachedBreaks.size();
     for (int i = 0; i < size; i++) {
         if (cachedBreaks[i].start > from) {
@@ -116,8 +100,7 @@ void BreakTokenizerPrivate::shiftBreaks(int from, int offset)
     }
 }
 
-void BreakTokenizerPrivate::regenerateCache() const
-{
+void BreakTokenizerPrivate::regenerateCache() const {
     if (!breakFinder || buffer.isEmpty()) {
         cachedBreaks = TextBreaks::Positions();
     }
@@ -135,8 +118,7 @@ void BreakTokenizerPrivate::regenerateCache() const
     cacheValid = true;
 }
 
-Token BreakTokenizerPrivate::next()
-{
+Token BreakTokenizerPrivate::next() {
     Token block;
 
     if (!hasNext()) {
@@ -155,10 +137,9 @@ Token BreakTokenizerPrivate::next()
     return last;
 }
 
-void BreakTokenizerPrivate::replace(int pos, int len, const QString &newWord)
-{
+void BreakTokenizerPrivate::replace(int pos, int len, const QString &newWord) {
     buffer.replace(pos, len, newWord);
-    int offset = len-newWord.length();
+    int offset = len - newWord.length();
     if (cacheValid) {
         shiftBreaks(pos, offset);
     }
@@ -167,57 +148,42 @@ void BreakTokenizerPrivate::replace(int pos, int len, const QString &newWord)
 /*-----------------------------------------------------------*/
 
 WordTokenizer::WordTokenizer(const QString &buffer)
-    : d(new BreakTokenizerPrivate(BreakTokenizerPrivate::Words))
-{
+    : d(new BreakTokenizerPrivate(BreakTokenizerPrivate::Words)) {
     setBuffer(buffer);
 }
 
-WordTokenizer::~WordTokenizer()
-{
-    delete d;
-}
+WordTokenizer::~WordTokenizer() { delete d; }
 
-bool WordTokenizer::hasNext() const
-{
-    return d->hasNext();
-}
+bool WordTokenizer::hasNext() const { return d->hasNext(); }
 
-void WordTokenizer::setBuffer(const QString &buffer)
-{
-    d->setBuffer(buffer);
-}
+void WordTokenizer::setBuffer(const QString &buffer) { d->setBuffer(buffer); }
 
-Token WordTokenizer::next()
-{
+Token WordTokenizer::next() {
     Token n = d->next();
 
     // end of address of url?
-    if (d->inAddress && n.position() > 0 && d->buffer[n.position()-1].isSpace()) {
+    if (d->inAddress && n.position() > 0 && d->buffer[n.position() - 1].isSpace()) {
         d->inAddress = false;
     }
 
     // check if this word starts an email address of url
     if (!d->inAddress || hasNext()) {
-        int pos = n.position()+n.length();
+        int pos = n.position() + n.length();
         if (pos < d->buffer.size() && d->buffer.at(pos) == QLatin1Char('@')) {
             d->inAddress = true;
         }
         if (pos < d->buffer.size() && d->buffer.at(pos) == QLatin1Char(':') &&
-            pos + 1 < d->buffer.size() && d->buffer.at(pos+1) == QLatin1Char('/')
-            && d->buffer[pos+2] == QLatin1Char('/')) {
+            pos + 1 < d->buffer.size() && d->buffer.at(pos + 1) == QLatin1Char('/') &&
+            d->buffer[pos + 2] == QLatin1Char('/')) {
             d->inAddress = true;
         }
     }
     return n;
 }
 
-QString WordTokenizer::buffer() const
-{
-    return d->buffer;
-}
+QString WordTokenizer::buffer() const { return d->buffer; }
 
-bool WordTokenizer::isUppercase(const QString &word) const
-{
+bool WordTokenizer::isUppercase(const QString &word) const {
     auto len = word.length();
     for (int i = 0; i < len; ++i) {
         if (word.at(i).isLetter() && !word.at(i).isUpper()) {
@@ -227,28 +193,17 @@ bool WordTokenizer::isUppercase(const QString &word) const
     return true;
 }
 
-void WordTokenizer::setIgnoreUppercase(bool val)
-{
-    d->ignoreUppercase = val;
-}
+void WordTokenizer::setIgnoreUppercase(bool val) { d->ignoreUppercase = val; }
 
-int WordTokenizer::count() const
-{
-    return d->breaks().size();
-}
+int WordTokenizer::count() const { return d->breaks().size(); }
 
-void WordTokenizer::reset()
-{
-    d->reset();
-}
+void WordTokenizer::reset() { d->reset(); }
 
-void WordTokenizer::replace(int pos, int len, const QString &newWord)
-{
+void WordTokenizer::replace(int pos, int len, const QString &newWord) {
     d->replace(pos, len, newWord);
 }
 
-bool WordTokenizer::isSpellcheckable() const
-{
+bool WordTokenizer::isSpellcheckable() const {
     if (d->last.token.isNull() || d->last.token.isEmpty()) {
         return false;
     }
@@ -267,38 +222,21 @@ bool WordTokenizer::isSpellcheckable() const
 /* --------------------------------------------------------------------*/
 
 SentenceTokenizer::SentenceTokenizer(const QString &buffer)
-    : d(new BreakTokenizerPrivate(BreakTokenizerPrivate::Sentences))
-{
+    : d(new BreakTokenizerPrivate(BreakTokenizerPrivate::Sentences)) {
     setBuffer(buffer);
 }
 
-SentenceTokenizer::~SentenceTokenizer()
-{
-    delete d;
-}
+SentenceTokenizer::~SentenceTokenizer() { delete d; }
 
-bool SentenceTokenizer::hasNext() const
-{
-    return d->hasNext();
-}
+bool SentenceTokenizer::hasNext() const { return d->hasNext(); }
 
-void SentenceTokenizer::setBuffer(const QString &buffer)
-{
-    d->setBuffer(buffer);
-}
+void SentenceTokenizer::setBuffer(const QString &buffer) { d->setBuffer(buffer); }
 
-Token SentenceTokenizer::next()
-{
-    return d->next();
-}
+Token SentenceTokenizer::next() { return d->next(); }
 
-QString SentenceTokenizer::buffer() const
-{
-    return d->buffer;
-}
+QString SentenceTokenizer::buffer() const { return d->buffer; }
 
-void SentenceTokenizer::replace(int pos, int len, const QString &newWord)
-{
+void SentenceTokenizer::replace(int pos, int len, const QString &newWord) {
     d->replace(pos, len, newWord);
 }
-}
+}    // namespace Sonnet

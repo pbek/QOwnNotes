@@ -284,3 +284,286 @@ void TestUtilsMisc::testCreateAbsolutePathsInHtml() {
 
     QVERIFY(createAbsolutePathsInHtml(html, url) == expectedHtml);
 }
+
+void TestUtilsMisc::testDetectFileFormatTxt() {
+    QString text =
+        "This is a plain text file.\nIt doesn't match any of the specific formats.\nJust regular "
+        "text content.";
+    QCOMPARE(detectFileFormat(text), QString("txt"));
+}
+
+void TestUtilsMisc::testDetectFileFormatJson() {
+    QString text = R"({
+  "name": "John Doe",
+  "age": 30,
+  "email": "john@example.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "zip": "12345"
+  },
+  "phoneNumbers": [
+    "555-1234",
+    "555-5678"
+  ]
+})";
+    QCOMPARE(detectFileFormat(text), QString("json"));
+}
+
+void TestUtilsMisc::testDetectFileFormatXml() {
+    QString text = R"(<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <person id="1">
+    <name>John Doe</name>
+    <age>30</age>
+    <email>john@example.com</email>
+  </person>
+  <person id="2">
+    <name>Jane Smith</name>
+    <age>28</age>
+    <email>jane@example.com</email>
+  </person>
+</root>)";
+    QCOMPARE(detectFileFormat(text), QString("xml"));
+}
+
+void TestUtilsMisc::testDetectFileFormatXmlWithoutDeclaration() {
+    QString text = R"(<AppDeliveryID>12399_AE_W_Rsa_1</AppDeliveryID>
+<Status>
+<Code>0</Code>
+<Text>SUCCESS</Text>
+</Status>
+<DualDeliveryID>131506</DualDeliveryID>
+<ns4:AddressingResults/>)";
+    QCOMPARE(detectFileFormat(text), QString("xml"));
+}
+
+void TestUtilsMisc::testDetectFileFormatHtml() {
+    QString text = R"(<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Page</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This is a sample HTML page.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+</body>
+</html>)";
+    QCOMPARE(detectFileFormat(text), QString("html"));
+}
+
+void TestUtilsMisc::testDetectFileFormatCsv() {
+    QString text = R"(Name,Age,Email,Department
+John Doe,30,john@example.com,Engineering
+Jane Smith,28,jane@example.com,Marketing
+Bob Johnson,35,bob@example.com,Finance
+Alice Williams,32,alice@example.com,HR)";
+    QCOMPARE(detectFileFormat(text), QString("csv"));
+}
+
+void TestUtilsMisc::testDetectFileFormatIni() {
+    QString text = R"([Database]
+host=localhost
+port=3306
+user=root
+password=secret
+
+[Application]
+debug=true
+log_level=info
+cache_enabled=1
+
+; This is a comment
+timeout=30)";
+    QCOMPARE(detectFileFormat(text), QString("ini"));
+}
+
+void TestUtilsMisc::testDetectFileFormatNix() {
+    QString text = R"({ pkgs ? import <nixpkgs> {} }:
+
+with pkgs;
+
+stdenv.mkDerivation {
+  name = "my-application";
+  version = "1.0.0";
+
+  src = fetchurl {
+    url = "https://example.com/my-application-1.0.0.tar.gz";
+    sha256 = "0000000000000000000000000000000000000000000000000000";
+  };
+
+  buildInputs = [
+    gcc
+    cmake
+    zlib
+  ];
+
+  configurePhase = ''
+    cmake .
+  '';
+
+  buildPhase = ''
+    make
+  '';
+
+  installPhase = ''
+    make install
+  '';
+})";
+    QCOMPARE(detectFileFormat(text), QString("nix"));
+}
+
+void TestUtilsMisc::testDetectFileFormatYaml() {
+    QString text = R"(name: project-config
+version: 1.0.0
+description: Sample YAML configuration file
+
+environment:
+  production:
+    database:
+      host: db.example.com
+      port: 5432
+      user: admin
+      password: secret
+    cache:
+      enabled: true
+      ttl: 3600
+
+  development:
+    database:
+      host: localhost
+      port: 5432
+      user: dev
+      password: dev123
+    cache:
+      enabled: false
+
+dependencies:
+  - name: library1
+    version: "^2.0.0"
+  - name: library2
+    version: "~1.5.0"
+
+logging:
+  level: info
+  format: json
+  path: /var/log/app.log)";
+    QCOMPARE(detectFileFormat(text), QString("yaml"));
+}
+
+void TestUtilsMisc::testDetectFileFormatSql() {
+    QString text = R"(CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    hire_date DATE NOT NULL,
+    salary NUMERIC(10, 2),
+    department_id INTEGER REFERENCES departments(id)
+);
+
+INSERT INTO employees (first_name, last_name, email, hire_date, salary, department_id)
+VALUES
+    ('John', 'Doe', 'john.doe@example.com', '2023-01-15', 75000.00, 1),
+    ('Jane', 'Smith', 'jane.smith@example.com', '2023-02-20', 82000.00, 2),
+    ('Bob', 'Johnson', 'bob.johnson@example.com', '2023-03-10', 65000.00, 1);
+
+SELECT e.first_name, e.last_name, d.name AS department
+FROM employees e
+JOIN departments d ON e.department_id = d.id
+WHERE e.salary > 70000
+ORDER BY e.last_name ASC;)";
+    QCOMPARE(detectFileFormat(text), QString("sql"));
+}
+
+void TestUtilsMisc::testDetectFileFormatJavaScript() {
+    QString text = R"(// Sample JavaScript module for data processing
+import { formatDate } from './utils.js';
+import * as math from 'mathjs';
+
+const CONFIG = {
+  precision: 2,
+  dateFormat: 'YYYY-MM-DD',
+  threshold: 0.5
+};
+
+class DataAnalyzer {
+  constructor(data) {
+    this.data = data;
+    this.results = null;
+  }
+
+  preprocess() {
+    // Filter out invalid entries
+    return this.data.filter(item => item.value !== null && !isNaN(item.value));
+  }
+
+  analyze() {
+    const processed = this.preprocess();
+
+    // Calculate statistics
+    const values = processed.map(item => item.value);
+    const result = {
+      mean: math.mean(values).toFixed(CONFIG.precision),
+      median: math.median(values).toFixed(CONFIG.precision),
+      stdDev: math.std(values).toFixed(CONFIG.precision),
+      timestamp: formatDate(new Date(), CONFIG.dateFormat)
+    };
+
+    this.results = result;
+    return result;
+  }
+
+  generateReport() {
+    if (!this.results) {
+      this.analyze();
+    }
+
+    return `
+      Data Analysis Report
+      --------------------
+      Date: ${this.results.timestamp}
+      Sample size: ${this.data.length}
+      Mean value: ${this.results.mean}
+      Median value: ${this.results.median}
+      Standard deviation: ${this.results.stdDev}
+    `;
+  }
+}
+
+function processDataset(dataset) {
+  const analyzer = new DataAnalyzer(dataset);
+  const results = analyzer.analyze();
+
+  if (results.mean > CONFIG.threshold) {
+    console.log("Warning: Mean value exceeds threshold");
+  }
+
+  return analyzer.generateReport();
+}
+
+export default {
+  DataAnalyzer,
+  processDataset
+};)";
+    QCOMPARE(detectFileFormat(text), QString("js"));
+}
+
+void TestUtilsMisc::testDetectFileFormatEdgeCases() {
+    // Empty file
+    QCOMPARE(detectFileFormat(""), QString("txt"));
+
+    // Short text that doesn't match any format
+    QCOMPARE(detectFileFormat("Hello world"), QString("txt"));
+
+    // File with ambiguous format (INI vs CSV test case)
+    QString ambiguousText = R"(zend_extension=xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_autostart=1)";
+    QCOMPARE(detectFileFormat(ambiguousText), QString("ini"));
+}

@@ -36,33 +36,27 @@ enum OsType { OsTypeWindows, OsTypeLinux, OsTypeMac, OsTypeOtherUnix, OsTypeOthe
 
 namespace OsSpecificAspects {
 
-inline QString withExecutableSuffix(OsType osType, const QString &executable)
-{
+inline QString withExecutableSuffix(OsType osType, const QString &executable) {
     QString finalName = executable;
-    if (osType == OsTypeWindows)
-        finalName += QLatin1String(QTC_WIN_EXE_SUFFIX);
+    if (osType == OsTypeWindows) finalName += QLatin1String(QTC_WIN_EXE_SUFFIX);
     return finalName;
 }
 
-inline Qt::CaseSensitivity fileNameCaseSensitivity(OsType osType)
-{
+inline Qt::CaseSensitivity fileNameCaseSensitivity(OsType osType) {
     return osType == OsTypeWindows || osType == OsTypeMac ? Qt::CaseInsensitive : Qt::CaseSensitive;
 }
 
-inline Qt::CaseSensitivity envVarCaseSensitivity(OsType osType)
-{
+inline Qt::CaseSensitivity envVarCaseSensitivity(OsType osType) {
     return fileNameCaseSensitivity(osType);
 }
 
-inline QChar pathListSeparator(OsType osType)
-{
+inline QChar pathListSeparator(OsType osType) {
     return QLatin1Char(osType == OsTypeWindows ? ';' : ':');
 }
 
-inline Qt::KeyboardModifier controlModifier(OsType osType)
-{
+inline Qt::KeyboardModifier controlModifier(OsType osType) {
     return osType == OsTypeMac ? Qt::MetaModifier : Qt::ControlModifier;
 }
 
-} // namespace OsSpecificAspects
-} // namespace Utils
+}    // namespace OsSpecificAspects
+}    // namespace Utils

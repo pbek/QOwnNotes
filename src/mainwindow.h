@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2024 Patrizio Bekerle -- <patrizio@bekerle.com>
+ * Copyright (c) 2014-2025 Patrizio Bekerle -- <patrizio@bekerle.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -73,7 +73,9 @@ class FakeVimHandler;
 class WebSocketServerService;
 class QOwnNotesMarkdownTextEdit;
 class CommandBar;
+class WaitingSpinnerWidget;
 class NoteFilePathLabel;
+class NoteRelationScene;
 struct TagHeader;
 
 // forward declaration because of "xxx does not name a type"
@@ -120,7 +122,7 @@ class MainWindow : public QMainWindow {
 
     void reloadOpenAiControls();
 
-    void setCurrentNoteText(QString text);
+    void setCurrentNoteText(const QString &text);
 
     void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true,
                         bool addPreviousNoteToHistory = true);
@@ -234,6 +236,8 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE bool jumpToTag(int tagId);
 
+    void enableOpenAiActivitySpinner(bool enable = true);
+
    protected:
     void changeEvent(QEvent *event) override;
 
@@ -263,6 +267,8 @@ class MainWindow : public QMainWindow {
     void openCurrentNoteInTab();
 
     Q_INVOKABLE void focusNoteTextEdit();
+
+    void onNavigationWidgetPositionClicked(int position);
 
    private slots:
 
@@ -448,8 +454,6 @@ class MainWindow : public QMainWindow {
 
     void on_actionReplace_in_current_note_triggered();
 
-    void onNavigationWidgetPositionClicked(int position);
-
     void onBacklinkWidgetNoteClicked(int noteId, QString markdown);
 
     void startNavigationParser();
@@ -590,6 +594,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionShow_note_git_versions_triggered();
 
+    void on_actionShow_note_git_versions_external_triggered();
+
     void on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item);
 
     void on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item);
@@ -720,6 +726,10 @@ class MainWindow : public QMainWindow {
 
     void on_navigationTabWidget_currentChanged(int index);
 
+    void on_actionReattach_panels_triggered();
+
+    void on_actionManage_Nextcloud_Deck_cards_triggered();
+
    public:
     /** Settings access **/
     static bool isInDistractionFreeMode();
@@ -811,6 +821,7 @@ class MainWindow : public QMainWindow {
     QDockWidget *_notePreviewDockWidget;
     QDockWidget *_logDockWidget;
     QDockWidget *_scriptingDockWidget;
+    QDockWidget *_noteGraphicsViewDockWidget;
     class LogWidget *_logWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
@@ -823,6 +834,8 @@ class MainWindow : public QMainWindow {
     QWidget *_notePreviewDockTitleBarWidget;
     QWidget *_logDockTitleBarWidget;
     QWidget *_scriptingDockTitleBarWidget;
+    QWidget *_noteGraphicsViewDockTitleBarWidget;
+    NoteRelationScene *_noteRelationScene;
     QComboBox *_workspaceComboBox;
     QComboBox *_aiBackendComboBox;
     QComboBox *_aiModelComboBox;
@@ -832,6 +845,7 @@ class MainWindow : public QMainWindow {
     bool _noteSubFolderDockWidgetVisible;
     bool _closeEventWasFired;
     ActionDialog *_actionDialog;
+    CommandBar *_commandBar;
     TodoDialog *_todoDialog;
     IssueAssistantDialog *_issueAssistantDialog;
     StoredImagesDialog *_storedImagesDialog;
@@ -859,6 +873,9 @@ class MainWindow : public QMainWindow {
     bool _scriptUpdateFound = false;
     bool _isMaximizedBeforeFullScreen = false;
     bool _isMinimizedBeforeFullScreen = false;
+    WaitingSpinnerWidget *_openAiActivitySpinner = nullptr;
+
+    void initializeOpenAiActivitySpinner();
 
     void initTreeWidgets();
 
@@ -1073,9 +1090,10 @@ class MainWindow : public QMainWindow {
 
     void selectAllNotesInNoteSubFolderTreeWidget() const;
 
-    bool insertAttachment(QFile *file, const QString &title = QString());
+    bool insertAttachment(QFile *file, const QString &title = QString(),
+                          const QString &fileName = QString());
 
-    bool insertTextAsAttachment(const QString &text, const QString &title = QString());
+    bool insertTextAsAttachment(const QString &text);
 
     void updatePanelsSortOrder();
 
@@ -1144,4 +1162,9 @@ class MainWindow : public QMainWindow {
     void generateAiModelComboBox();
     void generateAiModelMainMenu();
     void aiModelMainMenuSetCurrentItem();
+    static void handleDockWidgetLocking(QDockWidget *dockWidget);
+    void setupNoteRelationScene();
+    void updateNoteGraphicsView();
+    void addDirectoryToDirectoryWatcher(const QString &path);
+    bool nextCloudDeckCheck();
 };

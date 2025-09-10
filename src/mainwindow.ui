@@ -697,6 +697,9 @@
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="ZoomableGraphicsView" name="noteGraphicsView"/>
+             </item>
             </layout>
            </widget>
           </item>
@@ -1159,6 +1162,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </property>
      <addaction name="actionShow_versions"/>
      <addaction name="actionShow_note_git_versions"/>
+     <addaction name="actionShow_note_git_versions_external"/>
     </widget>
     <widget class="QMenu" name="menuEncryption">
      <property name="title">
@@ -1218,6 +1222,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </property>
     <addaction name="actionShow_Todo_List"/>
     <addaction name="action_Load_Todo_Items"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Nextcloud_Deck_cards"/>
+    <addaction name="actionInsert_Nextcloud_Deck_card"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -1291,6 +1298,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="menuPanels"/>
     <addaction name="menuWorkspaces"/>
     <addaction name="actionUnlock_panels"/>
+    <addaction name="actionReattach_panels"/>
     <addaction name="separator"/>
     <addaction name="menuWorkspace"/>
     <addaction name="separator"/>
@@ -1352,6 +1360,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <addaction name="action_Remove_note"/>
    <addaction name="action_Open_note_in_external_editor"/>
    <addaction name="actionShow_local_trash"/>
+   <addaction name="actionShow_note_git_versions"/>
    <addaction name="actionAllow_note_editing"/>
    <addaction name="separator"/>
    <addaction name="action_Back_in_note_history"/>
@@ -2319,6 +2328,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <string>Unlock panels</string>
    </property>
   </action>
+  <action name="actionReattach_panels">
+   <property name="text">
+    <string>Reattach floating panels</string>
+   </property>
+   <property name="toolTip">
+    <string>Reattaches all floating panels</string>
+   </property>
+  </action>
   <action name="actionRemove_current_workspace">
    <property name="icon">
     <iconset theme="list-remove" resource="breeze-dark-qownnotes.qrc">
@@ -2487,6 +2504,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Show note git versions</string>
+   </property>
+  </action>
+  <action name="actionShow_note_git_versions_external">
+   <property name="icon">
+    <iconset theme="appointment-new" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show note git versions externally</string>
    </property>
   </action>
   <action name="actionScript_repository">
@@ -2789,9 +2815,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="text">
     <string>Insert Nextcloud Deck card link</string>
    </property>
-   <property name="shortcut">
-    <string notr="true">Ctrl+Alt+D</string>
-   </property>
   </action>
   <action name="actionCopy_path_to_note_to_clipboard">
    <property name="text">
@@ -2847,6 +2870,18 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <string>Enable AI support</string>
    </property>
   </action>
+  <action name="actionManage_Nextcloud_Deck_cards">
+   <property name="icon">
+    <iconset theme="folder-cloud" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/folder-cloud.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-cloud.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Manage Nextcloud Deck cards</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+D</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2884,6 +2919,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <class>NoteSubFolderTree</class>
    <extends>QTreeWidget</extends>
    <header>widgets/notesubfoldertree.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ZoomableGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">widgets/noterelationscene.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

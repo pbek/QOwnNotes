@@ -16,9 +16,9 @@ Utilisez `QOwnNotesPortable.bat` pour exécuter QOwnNotes en **mode portable** d
 Vous n'avez pas absolument besoin du mode portable si vous ne disposez pas des autorisations d'administration sur votre ordinateur. QOwnNotes n'a pas besoin d'être installé !
 :::
 
-## Windows XP
+## Windows 8.1 and older
 
-Qt a abandonné la prise en charge de Windows XP avec la version 5.8, mais QOwnNotes est désormais également compilé avec Qt 5.7 pour permettre aux utilisateurs de Windows XP de continuer à l'utiliser.
+Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
 
 Vous devrez vous-même télécharger le fichier ZIP d'[AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) et le dézipper dans le dossier de votre choix.
 
@@ -32,7 +32,7 @@ Vous devrez télécharger vous-même les nouvelles versions.
 
 ## Chocolatey
 
-Il existe un package de QOwnNotes géré par la communauté [Chocolatey](https://chocolatey.org/packages/qownnotes/).
+There is a community-maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
 Vous pouvez l'installer en tapant :
 
@@ -42,10 +42,30 @@ choco install qownnotes
 
 ## Scoop
 
-Il existe un [paquet QOwnNotes maintenu par la communauté](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) sur [Scoop](https://scoop.sh/). Si vous ajoutez le « bucket » Extras vous pourrez l'utiliser pour installer QOwnNotes en mode portable.
+There is a [community-maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket, you can use it to install QOwnNotes in portable mode.
 
 ```shell
 scoop bucket add extras
 scoop update
 scoop install qownnotes
+```
+
+## WinGet
+
+There is a [community-maintained package of QOwnNotes](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) for [WinGet](https://github.com/microsoft/winget-cli).
+
+You can install it with:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+There is a [community-maintained package of QOwnNotes](https://packages.msys2.org/base/mingw-w64-qownnotes) for [MSYS2](hhttps://www.msys2.org/).
+
+You can install it with:
+
+```shell
+pacman -S mingw-w64-qownnotes
 ```

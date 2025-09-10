@@ -2,7 +2,7 @@
 
 ## Evernote
 
-يمكنك الوصول إلى صندوق حوار استيراد Evernote من قائمة `ملاحظة > استيراد` لاستيراد ملفات *Enex*.
+There is an Evernote import dialog you can reach in the `Note / Import` menu to import _Enex_ files.
 
 سيستورد أيضا الصور والملحقات والوسوم والبيانات الوصفية والتنسيق الأساسي للنصوص.
 

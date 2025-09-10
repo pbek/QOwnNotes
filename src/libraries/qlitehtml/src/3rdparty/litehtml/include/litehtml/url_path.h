@@ -46,6 +46,6 @@ tstring url_path_append(const tstring& base, const tstring& path);
 
 tstring url_path_resolve(const tstring& base, const tstring& path);
 
-} // namespace litehtml
+}  // namespace litehtml
 
-#endif // LITEHTML_URL_PATH_H__
+#endif  // LITEHTML_URL_PATH_H__

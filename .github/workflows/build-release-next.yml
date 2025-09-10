@@ -12,7 +12,7 @@ on:
 ##      - 'src/**'
 ##      - 'tests/**'
 #      - '.github/workflows/build-release-next.yml'
-  # For testing also on pull requests
+# For testing also on pull requests
 #  pull_request:
 #    paths:
 #      - 'src/**'
@@ -38,15 +38,15 @@ env:
 
 jobs:
   create_release:
-    name: '🗃️️ Prepare release'
+    name: "🗃️️ Prepare release"
     permissions:
-      contents: write  # for actions/create-release to create a release
+      contents: write # for actions/create-release to create a release
     runs-on: ubuntu-latest
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
       release_id: ${{ steps.create_release.outputs.id }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set Env
         run: |
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
@@ -65,65 +65,64 @@ jobs:
           echo "TAG=${TAG}"
           echo "RELEASE_TEXT=${RELEASE_TEXT}"
           printenv
-#      - name: Create release
-#        id: create_release
-#        uses: actions/create-release@v1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          tag_name: ${{ env.TAG }}
-#          release_name: Release v${{ env.VERSION }}
-#          body: ${{ env.RELEASE_TEXT }}
-#          draft: true
-#          prerelease: false
+  #      - name: Create release
+  #        id: create_release
+  #        uses: actions/create-release@v1
+  #        env:
+  #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #        with:
+  #          tag_name: ${{ env.TAG }}
+  #          release_name: Release v${{ env.VERSION }}
+  #          body: ${{ env.RELEASE_TEXT }}
+  #          draft: true
+  #          prerelease: false
 
-#--------------------------------------------------------------------------------
-# Workflow jobs (GNU/Linux, macOS & Windows)
-#--------------------------------------------------------------------------------
+  #--------------------------------------------------------------------------------
+  # Workflow jobs (GNU/Linux, macOS & Windows)
+  #--------------------------------------------------------------------------------
 
   #
   # AppImage build
   #
   build-appimage:
     needs: create_release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       QT_VERSION: 5.15.2
       BUILD_DIR: build
-    name: '🐧 AppImage Qt 5.15.2'
+    name: "🐧 AppImage Qt 5.15.2"
     steps:
-
-      - name: '🧰 Checkout'
-        uses: actions/checkout@v4
+      - name: "🧰 Checkout"
+        uses: actions/checkout@v5
         with:
           submodules: recursive
 
-      - name: '⚙️ Install Qt'
+      - name: "⚙️ Install Qt"
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT_MODULES}}
-          aqtversion: '==2.0.0'
+          aqtversion: "==2.0.0"
           setup-python: false
           cache: true
 
-      - name: '⚙️ Install dependencies'
+      - name: "⚙️ Install dependencies"
         run: |
           sudo apt-get update
           sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
-      - name: '🚧 Compile application'
+      - name: "🚧 Compile application"
         run: |
           echo "#define RELEASE \"AppImage\"" > release.h
           ${{env.QMAKE}} ${{env.QMAKE_PROJECT}} CONFIG+=release PREFIX=/usr
           lrelease QOwnNotes.pro
           make -j${{env.CORES}}
-      - name: '⚙️ Install linuxdeploy'
+      - name: "⚙️ Install linuxdeploy"
         run: |
           wget https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20240109-1/linuxdeploy-x86_64.AppImage
           wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/1-alpha-20240109-1/linuxdeploy-plugin-qt-x86_64.AppImage
           chmod +x linuxdeploy-x86_64.AppImage
           chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
-      - name: '📦 Create AppImage'
+      - name: "📦 Create AppImage"
         run: |
           export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
           export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
@@ -143,17 +142,16 @@ jobs:
           find -iname "*.AppImage"
           pwd
 
-      - name: '📤 Upload artifact: AppImage'
+      - name: "📤 Upload artifact: AppImage"
         uses: actions/upload-artifact@v4
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage
-      - name: '📤 Upload artifact: AppImage sha256sum'
+      - name: "📤 Upload artifact: AppImage sha256sum"
         uses: actions/upload-artifact@v4
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
-
 #  #
 #  # Snap build
 #  #
@@ -169,7 +167,7 @@ jobs:
 #    steps:
 #
 #      - name: '🧰 Checkout'
-#        uses: actions/checkout@v4
+#        uses: actions/checkout@v5
 #        with:
 #          submodules: recursive
 #

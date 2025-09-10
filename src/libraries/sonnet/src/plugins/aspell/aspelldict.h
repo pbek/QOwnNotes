@@ -21,13 +21,11 @@
 #ifndef KSPELL_ASPELLDICT_H
 #define KSPELL_ASPELLDICT_H
 
+#include "aspell.h"
 #include "spellerplugin_p.h"
 
-#include "aspell.h"
-
-class ASpellDict : public Sonnet::SpellerPlugin
-{
-public:
+class ASpellDict : public Sonnet::SpellerPlugin {
+   public:
     explicit ASpellDict(const QString &lang);
     ~ASpellDict() override;
     bool isCorrect(const QString &word) const override;
@@ -38,7 +36,8 @@ public:
 
     bool addToPersonal(const QString &word) override;
     bool addToSession(const QString &word) override;
-private:
+
+   private:
     AspellConfig *m_config = nullptr;
     AspellSpeller *m_speller = nullptr;
 };

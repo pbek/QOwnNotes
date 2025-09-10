@@ -20,7 +20,6 @@ fi
 echo "Previous year: $1"
 echo "New year: $2"
 
-
 echo
 echo Updating QOwnNotes...
 echo

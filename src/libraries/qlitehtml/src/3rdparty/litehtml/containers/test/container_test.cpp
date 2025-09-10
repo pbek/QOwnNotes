@@ -23,8 +23,8 @@ void container_test::get_image_size(const litehtml::tchar_t* src, const litehtml
 void container_test::draw_background(litehtml::uint_ptr hdc, const litehtml::background_paint& bg) {}
 void container_test::make_url(const litehtml::tchar_t* url, const litehtml::tchar_t* basepath, litehtml::tstring& out) { out = url; }
 void container_test::draw_borders(litehtml::uint_ptr hdc, const litehtml::borders& borders, const litehtml::position& draw_pos, bool root) {}
-void container_test::set_caption(const litehtml::tchar_t* caption){};    //: set_caption
-void container_test::set_base_url(const litehtml::tchar_t* base_url){};  //: set_base_url
+void container_test::set_caption(const litehtml::tchar_t* caption) {};    //: set_caption
+void container_test::set_base_url(const litehtml::tchar_t* base_url) {};  //: set_base_url
 void container_test::link(const std::shared_ptr<litehtml::document>& ptr, const litehtml::element::ptr& el) {}
 void container_test::on_anchor_click(const litehtml::tchar_t* url, const litehtml::element::ptr& el) {}  //: on_anchor_click
 void container_test::set_cursor(const litehtml::tchar_t* cursor) {}                                      //: set_cursor

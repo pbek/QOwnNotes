@@ -1,9 +1,9 @@
 # Hooks
 
-onNoteStored
-------------
+## onNoteStored
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót akkor hívják fel, amikor egy jegyzet lemezre kerül
@@ -17,10 +17,10 @@ function onNoteStored(note);
 
 You may want to take a look at the example [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
-noteOpenedHook
---------------
+## noteOpenedHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót egy jegyzet megnyitása után hívják meg
@@ -32,10 +32,10 @@ function noteOpenedHook(note);
 
 You may want to take a look at the example [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
-noteDoubleClickedHook
----------------------
+## noteDoubleClickedHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót akkor hívják meg, ha egy jegyzetre duplán kattintottak
@@ -47,14 +47,14 @@ function noteDoubleClickedHook (jegyzet);
 
 You may want to take a look at the example [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
 
-insertMediaHook
----------------
+## insertMediaHook
 
 Ezt a funkciót akkor hívják meg, amikor médiafájlt illesztenek az aktuális jegyzetbe.
 
 Ha ezt a függvényt több szkript definiálja, akkor az első olyan szkript nyer, amely nem üres karakterláncot ad vissza.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * @param fileName karaktersorozat a forrás média fájl elérési útját, mielőtt átmásolták volna a média mappába
@@ -66,14 +66,14 @@ function insertMediaHook(fileName, markdownText);
 
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-insertAttachmentHook
---------------------
+## insertAttachmentHook
 
 Ezt a funkciót akkor hívják meg, ha egy mellékletfájlt illesztenek be az aktuális jegyzetbe.
 
 Ha ezt a függvényt több szkript definiálja, akkor az első olyan szkript nyer, amely nem üres karakterláncot ad vissza.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * @param fileName karakterlánc a forrás melléklet fájljának elérési útja, mielőtt átmásolták volna a melléklet mappájába
@@ -85,10 +85,10 @@ function insertAttachmentHook(fileName, markdownText);
 
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-insertingFromMimeDataHook
--------------------------
+## insertingFromMimeDataHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót akkor hívjuk meg, ha html vagy médiafájl be van illesztve egy jegyzetbe a „Ctrl + Shift + V” billentyűvel.
@@ -102,10 +102,10 @@ function insertingFromMimeDataHook(text, html);
 
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) or [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
-handleNoteTextFileNameHook
---------------------------
+## handleNoteTextFileNameHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót akkor hívják meg, ha egy jegyzet lemezre kerül, ha
@@ -126,10 +126,10 @@ function handleNoteTextFileNameHook(note);
 
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) or [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-handleNoteNameHook
-------------------
+## handleNoteNameHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót akkor hívják meg, ha a jegyzethez meghatározzák a jegyzet nevét
@@ -144,14 +144,16 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 Lehet, hogy nem jó ötlet ezt a kampót használni, ha a fájlnév jegyzetnévként történő használata aktív.
 
-handleNewNoteHeadlineHook
--------------------------
+## handleNewNoteHeadlineHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
  * Ez a függvény a jegyzet létrehozása előtt meghívásra kerül
@@ -170,10 +172,10 @@ function handleNewNoteHeadlineHook(headline);
 
 You may want to take a look at the example [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
 
-preNoteToMarkdownHtmlHook
--------------------------
+## preNoteToMarkdownHtmlHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a függvényt a rendszer a jegyzet markdown html-jének generálása előtt hívja meg
@@ -195,10 +197,10 @@ függvény preNoteToMarkdownHtmlHook(note, markdown, forExport);
 
 You may want to take a look at the example [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
-noteToMarkdownHtmlHook
-----------------------
+## noteToMarkdownHtmlHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a függvényt akkor hívják meg, amikor egy jegyzet leíró html-jét generálják
@@ -220,10 +222,10 @@ You may want to take a look at the example [example.qml](https://github.com/pbek
 
 Kérjük, olvassa el a [Támogatott HTML részhalmaz](http://doc.qt.io/qt-5/richtext-html-subset.html) dokumentációt az összes támogatott css stílus felsorolásához.
 
-encryptionHook
---------------
+## encryptionHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót akkor hívjuk meg, ha a szöveget titkosítani vagy visszafejteni kell
@@ -238,12 +240,12 @@ függvény encryptionHook (szöveg, jelszó, visszafejtés);
 
 You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
 
-noteTaggingHook
----------------
+## noteTaggingHook
 
 Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet speciális szövegével, például `@ tag1`, `@ tag2`, `@ tag3`.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Kezeli a jegyzet címkézését
@@ -259,28 +261,29 @@ Megvalósíthatja saját jegyzetcímkézési mechanizmusát, például a jegyzet
   */
 ```
 
--   amint egy szkript aktiválódik, amely végrehajtja az új függvényt, a `noteTaggingHook` jegyzet címkézést ez a függvény kezeli.
--   a következő funkcióknak a QOwnNotes felhasználói felületén keresztül kell működniük
-    -   kezdetben olyan címkéket importál a jegyzeteiből, mint a `@tag`, és felülírja az aktuális címkekiosztást
-        -   nem veszíti el a címkék fáját, csak a jegyzetekhez való korábbi hozzárendelést
-        -   továbbra is áthelyezhet címkéket más címkékbe
-        -   ha egynél több címkének ugyanaz a neve a címkefájában, akkor az első találatot hozzárendelik
-    -   címke hozzáadása egy jegyzethez hozzáadja a címkét a jegyzet szövegéhez
-    -   címke eltávolítása egy jegyzetből eltávolítja a címkét a jegyzet szövegéből
-    -   a címkék eltávolításával a címkékből eltávolítja ezeket a címkéket a jegyzeteiből
-    -   a címkék listáján szereplő címkék átnevezése átnevezi a jegyzetekben szereplő címkéket
-    -   A jegyzetek listájában a jegyzetek tömeges címkézése hozzáadja ezeket a címkéket a jegyzeteihez
-    -   A címkék tömeges eltávolítása a jegyzetlista jegyzeteiből eltávolítja ezeket a címkéket a jegyzeteiből
-    -   az alkalmazás elindít egy sor `add` és `remove` műveletet az összes kijelölt címkéhez és gyermekéhez az összes jegyzethez, ha a címkéket áthelyezi a címke panelre
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
+- a következő funkcióknak a QOwnNotes felhasználói felületén keresztül kell működniük
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
+    - továbbra is áthelyezhet címkéket más címkékbe
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
+  - címke hozzáadása egy jegyzethez hozzáadja a címkét a jegyzet szövegéhez
+  - címke eltávolítása egy jegyzetből eltávolítja a címkét a jegyzet szövegéből
+  - removing of tags in the tag list will remove those tags from your notes
+  - renaming of tags in the tag list will rename those tags in your notes
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - bulk removing of tags from notes in the note list will remove those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
 
 You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
 
 ::: warning
-Győződjön meg arról, hogy a ` list ` művelete valóban gyors, mert minden jegyzetnél végrehajtásra kerül, minden alkalommal, amikor a jegyzetmappa újratöltésre kerül!
+Make sure your `list` action is really fast, because it will be executed for every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
-noteTaggingByObjectHook
-----------------------
+## noteTaggingByObjectHook
 
 A [noteTaggingHook](#notetagginghook) hez hasonlóan megvalósíthatja saját jegyzetcímkézési mechanizmusát, de a címkefa gyökerében nem kötelező a címkék neve. Így a teljes címkefát használhatja fel, nem csak címkézési lista helyett.
 
@@ -289,6 +292,7 @@ A `noteTaggingByObjectHook` paranccsal egy `TagApi` objektumot kapunk paraméter
 Ez azt is jelenti, hogy magának kell létrehoznia hiányzó címkéket, hogy meg tudja adni a már meglévő címkeazonosítók listáját a `list` művelethez.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Kezeli a jegyzet címkézését
@@ -307,12 +311,12 @@ function noteTaggingByObjectHook(note, action, tag, newTagName);
 
 You may want to take a look at the example [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) to implement your own tagging mechanism.
 
-autocompletionHook
-------------------
+## autocompletionHook
 
 Visszaadhatja az automatikus kiegészítés listájához hozzáadandó karaktersorozatok listáját, amikor meghívják az automatikus kiegészítést (például a <kbd>Ctrl + szóköz</kbd> megnyomásával).
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Meghívja az autocompletionHook függvényt az összes szkriptösszetevőhöz
@@ -325,12 +329,12 @@ függvény callAutocompletionHook ();
 
 You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-websocketRawDataHook
---------------------
+## websocketRawDataHook
 
 Ezt a horgot akkor hívják meg, amikor az adatokat a QOwnNotes Web Companion böngészőbővítményből küldi a webböngésző helyi menüjén keresztül.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
  * @param requestType can be "page" or "selection"
@@ -345,12 +349,12 @@ function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData
 
 You may want to take a look at the examples [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) and [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
-onDetachedProcessCallback
--------------------------
+## onDetachedProcessCallback
 
 Ezt a horgot akkor hívják meg, amikor a [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) parancsfájl szála végrehajtásra kerül.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
  * Ezt a függvényt akkor hívjuk meg, amikor a parancsfájl szála végrehajtásra kerül.
@@ -366,10 +370,10 @@ függvény onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread
 
 You may want to take a look at the example [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
 
-windowStateChangedHook
---------------
+## windowStateChangedHook
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
   * Ezt a funkciót egy WindowStateChange esemény elindítása után hívják meg
@@ -381,12 +385,12 @@ függvény windowStateChangedHook (windowState);
 
 You may want to take a look at the example [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
 
-workspaceSwitchedHook
-----------------------
+## workspaceSwitchedHook
 
 This hook is called when workspaces are switched.
 
 ### Módszerhívás és paraméterek
+
 ```js
 /**
  * This function is called when workspaces are switched
@@ -399,36 +403,36 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 
 You may want to take a look at the example [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
 
-openAiBackendsHook
-------------------
+## openAiBackendsHook
 
 This hook is called, when the OpenAI service config is reloaded. For example, this is also done when the script engine is reloaded.
 
-You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs.
+You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when the OpenAI service config is reloaded
  * It returns a list of objects with config parameters for new OpenAI backends
  */
 function openAiBackendsHook() {
-    return [
-        {
-            "id": "my-custom-ai",
-            "name": "My Custom AI",
-            "baseUrl": "http://localhost:5000",
-            "apiKey": "kDFJkjk3asdm",
-            "models": ["gpt-3.5-turbo", "gpt-4.0-turbo"],
-        },
-        {
-            "id": "my-custom-ai2",
-            "name": "My Custom AI 2",
-            "baseUrl": "http://localhost:5001",
-            "apiKey": "lOikf7eNdb9",
-            "models": ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
-        },
-    ];
+  return [
+    {
+      id: "my-custom-ai",
+      name: "My Custom AI",
+      baseUrl: "http://localhost:5000",
+      apiKey: "kDFJkjk3asdm",
+      models: ["gpt-3.5-turbo", "gpt-4.0-turbo"],
+    },
+    {
+      id: "my-custom-ai2",
+      name: "My Custom AI 2",
+      baseUrl: "http://localhost:5001",
+      apiKey: "lOikf7eNdb9",
+      models: ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
+    },
+  ];
 }
 ```
 

@@ -20,6 +20,7 @@ Si tiene problemas con la instalación de QOwnNotes, es posible que desee inicia
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 Puede ejecutar la aplicación en la interfaz de órdenes de terminal de manera diferente en diferentes sistemas operativos:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copiar el volcado de configuración en el portapapeles con clip en LinuxWindows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Activar acciones del menú después del inicio

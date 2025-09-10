@@ -13,4 +13,4 @@ order: 20171001070311
 
 You will find the article in the print magazine or here: [Cloud-Notizen](https://www.heise.de/ct/ausgabe/2017-21-Notizverwaltung-QOwnNotes-17-09-6-3840130.html)
 
- ![QOwnNotes c't](/img/blog/QOwnNotes-c-t_reference.jpg "QOwnNotes c't")
+![QOwnNotes c't](/img/blog/QOwnNotes-c-t_reference.jpg "QOwnNotes c't")

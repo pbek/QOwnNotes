@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Portable mode" />
     <div class="sheet">
       الوضع المحمول لوحدات تخزين USB
@@ -142,12 +148,13 @@
 [QOwnNotes](https://www.qownnotes.org/) هو تطبيق **حر ومفتوح المصدر** (بترخيص GPL) **لتدوين الملاحظات بصيغة ماركداون** في ملفات نصية مجردة، لأنظمة **غنو/لينكس** و**ماك&nbsp;أو&nbsp;إس** و**ويندوز**، والذي (اختياريًا) يعمل مع [**تطبيق Notes**](https://github.com/nextcloud/notes) من [Nextcloud](https://nextcloud.com/) و&nbsp;[ownCloud](https://owncloud.org/).
 
 ::: tip
-انضم إلى [مجموعتنا على تيليجرام](https://t.me/QOwnNotes) للنقاش والتعلم والتواصل مع مجتمع QOwnNotes.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [نظرة على مفاهيم QOwnNotes](concept.md)
 
 ## الخصائص
+
 - يمكنك استخدام **ملفاتك الحالية، النصية أو التي بصيغة ماركداون**؛ لا تحتاج إلى استيرادها
 - QOwnNotes مكتوب بلغة سي++ ومحسَّن **لتقليل استهلاك الموارد** (ليس تطبيق Electron متعطش للذاكرة والمعالج)
 - **استيراد من Evernote و&nbsp;Joplin**
@@ -170,8 +177,8 @@
 - **وضع Vim**
 - **[تطبيق ويب](web-app.md)** ليمكنك **إضافة صور من محمولك** إلى الملاحظة الحالية في QOwnNotes على حاسوبك
 
-
 ## المظهر
+
 - **تلوين ماركداون** للملاحظات **ووضع معاينة لماركداون**
 - **دعم سِمة الوضع المظلم**
 - **دعم السمات** في **تلوين ماركداون**
@@ -182,6 +189,7 @@
 - **الفروقات** بين الملاحظة الحالية والملاحظة المعدّلة خارج التطبيق **تظهر** في صندوق حوار
 
 ## اللغات
+
 - **متاح بأكثر من ٦٠ لغة مختلفة** مثل العربية والإنجليزية والفرنسية والألمانية والإسبانية والبولندية والصينية واليابانية والروسية والبرتغالية والمجرية والهولندية
   - [مساعدتك](../contributing/translation.md) مرحب بها جدا لتحسين هذه الترجمات أو لترجمة QOwnNotes إلى لغات أخرى
 

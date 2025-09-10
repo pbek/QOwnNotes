@@ -2,9 +2,8 @@
 name: Question / Support
 about: What do you want to ask?
 title: "[SUPPORT] "
-labels: 'Type: Support'
-assignees: ''
-
+labels: "Type: Support"
+assignees: ""
 ---
 
 <!--
@@ -18,7 +17,6 @@ If you have an issue with a script please open an issue on
 https://github.com/qownnotes/scripts/issues and mention the authors of the script.
 You will find the authors in the *Script repository*.
 -->
-
 
 #### Question
 

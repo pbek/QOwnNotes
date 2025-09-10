@@ -23,15 +23,15 @@
 - <kbd>Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> closes the current note tab
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
-    - you can also close it with <kbd>Esc</kbd>
+  - you can also close it with <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> opens the settings
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder 
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
-- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine 
+- <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> manually saves modified notes
@@ -48,7 +48,7 @@
 ### In the note search bar
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
-- <kbd>Return</kbd> creates a new note with the text from the search bar as 
+- <kbd>Return</kbd> creates a new note with the text from the search bar as
   headline
 
 ### In the note list
@@ -61,12 +61,12 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
-      <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
-    - <kbd>Esc</kbd> closes the search bar
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and
+    <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> closes the search bar
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
-    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
+  - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
@@ -83,13 +83,13 @@
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character 
-      un-indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character
+    un-indents the list item
 - <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
+  - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
@@ -108,16 +108,15 @@
 ### In the note preview panel
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
-      <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
-    - <kbd>Esc</kbd> closes the search bar
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and
+    <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> closes the search bar
 
 ### In the Todo list
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> saves the current todo item
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> saves the current todo item and inserts in into the current note
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current todo item
-
 
 ## macOS
 
@@ -142,15 +141,15 @@
 - <kbd>⌥ Alt</kbd> + <kbd>Page Down</kbd> jumps to the next note tab
 - <kbd>⌘ Cmd</kbd> + <kbd>W</kbd> closes the current note tab
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> toggles the distraction free mode
-    - you can also close it with <kbd>Esc</kbd>
+  - you can also close it with <kbd>Esc</kbd>
 - <kbd>⌘ Cmd</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>⌘ Cmd</kbd> + <kbd>,</kbd> opens the settings
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> adds a new tag to a note
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder 
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>R</kbd> reloads the current note folder
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>F</kbd> lets you select a different note folder
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine 
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> manually saves modified notes
@@ -167,7 +166,7 @@
 ### In the note search bar
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
-- <kbd>Return</kbd> creates a new note with the text from the search bar as 
+- <kbd>Return</kbd> creates a new note with the text from the search bar as
   headline
 
 ### In the note list
@@ -180,12 +179,12 @@
 
 - <kbd>⌘ Cmd</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
-      <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
-    - <kbd>Esc</kbd> closes the search bar
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and
+    <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> closes the search bar
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> does the same
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Down</kbd> does the same
 - <kbd>⌘ Cmd</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>⌃ Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
 - <kbd>⌘ Cmd</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
@@ -202,13 +201,13 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> strikes out the selected text
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item
-    - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character 
-      un-indents the list item
+  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character
+    un-indents the list item
 - <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
+  - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>1..9</kbd> jumps to the note bookmark on bookmark slot 1..9
 - <kbd>⌘ Cmd</kbd> + <kbd>+</kbd> increases the note text font size by one point
@@ -227,9 +226,9 @@
 ### In the note preview panel
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
-      <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
-    - <kbd>Esc</kbd> closes the search bar
+  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and
+    <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Esc</kbd> closes the search bar
 
 ### In the Todo list
 

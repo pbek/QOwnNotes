@@ -19,7 +19,7 @@ class NoteSubFolder {
 
     void setName(QString text);
 
-    static NoteSubFolder fetch(int id);
+    static NoteSubFolder fetch(int id, const QString& connectionName = QStringLiteral("memory"));
 
     static QVector<NoteSubFolder> fetchAll(int limit = -1);
 
@@ -49,11 +49,12 @@ class NoteSubFolder {
 
     void setParentId(int parentId);
 
-    QString relativePath(char separator = '/') const;
+    QString relativePath(char separator = '/',
+                         const QString& connectionName = QStringLiteral("memory")) const;
 
     QString fullPath() const;
 
-    NoteSubFolder getParent() const;
+    NoteSubFolder getParent(const QString& connectionName = QStringLiteral("memory")) const;
 
     static QVector<NoteSubFolder> fetchAllByParentId(
         int parentId, const QString& sortBy = QStringLiteral("file_last_modified DESC"));

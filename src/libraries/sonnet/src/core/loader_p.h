@@ -21,9 +21,9 @@
 #define SONNET_LOADER_P_H
 
 #include <QObject>
-#include <QStringList>
-#include <QString>
 #include <QSharedPointer>
+#include <QString>
+#include <QStringList>
 
 namespace Sonnet {
 class Settings;
@@ -37,10 +37,9 @@ class LoaderPrivate;
  * Sonnet class, you can think of it as the kernel or manager
  * of the Sonnet architecture.
  */
-class Loader : public QObject
-{
+class Loader : public QObject {
     Q_OBJECT
-public:
+   public:
     /**
      * Constructs the loader.
      *
@@ -51,7 +50,7 @@ public:
      */
     static Loader *openLoader();
 
-public:
+   public:
     Loader();
     ~Loader();
 
@@ -69,8 +68,8 @@ public:
      *               reliability value is returned.
      *
      */
-    SpellerPlugin *createSpeller(
-        const QString &language = QString(), const QString &client = QString()) const;
+    SpellerPlugin *createSpeller(const QString &language = QString(),
+                                 const QString &client = QString()) const;
 
     /**
      * Returns a shared, cached, dictionary for the given language.
@@ -118,7 +117,7 @@ public:
      * Returns the Settings object used by the loader.
      */
     Settings *settings() const;
-Q_SIGNALS:
+   Q_SIGNALS:
     /**
      * Signal is emitted whenever the Settings object
      * associated with this Loader changes.
@@ -134,15 +133,17 @@ Q_SIGNALS:
      */
     void loadingDictionaryFailed(const QString &language) const;
 
-protected:
+   protected:
     friend class Settings;
     void changed();
-private:
+
+   private:
     void loadPlugins();
     void loadPlugin(const QString &pluginPath);
-private:
+
+   private:
     LoaderPrivate *const d;
 };
-}
+}    // namespace Sonnet
 
-#endif // SONNET_LOADER_P_H
+#endif    // SONNET_LOADER_P_H

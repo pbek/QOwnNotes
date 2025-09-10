@@ -25,6 +25,11 @@ class DatabaseService {
     static bool mergeNoteFolderDatabase(const QString& path);
     static QByteArray generateDatabaseTableSha1Signature(QSqlDatabase& db, const QString& table);
     static bool checkDiskDatabaseIntegrity();
+    static QString generateConnectionName();
+    static QSqlDatabase createSharedMemoryDatabase(
+        const QString& connectionName = QStringLiteral("memory"));
+    static QSqlDatabase getSharedMemoryDatabase(
+        const QString& connectionName = QStringLiteral("memory"));
 
    private:
     static bool createMemoryConnection();

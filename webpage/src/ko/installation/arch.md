@@ -31,7 +31,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/
 sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB
 ```
 
-명령`sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB`이 실패하고 다음과 같은 메시지가 표시될 경우: `오류: FFC43FC94539B8B0를 로컬로 서명할 수 없습니다.`, 다운로드한 키, 즉 명령 (및 출력)을 사용하여 실제 *keyid* 를 먼저 확인할 수 있습니다:
+If the command `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` fails with a message like: `ERROR: FFC43FC94539B8B0 could not be locally signed.`, you could first find out the actual _keyid_ of the downloaded key, i.e. with the command (and output):
 
 ```bash
 gpg /path/to/downloaded/home_pbek_QOwnNotes_Arch_Extra.key

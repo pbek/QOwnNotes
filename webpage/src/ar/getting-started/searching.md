@@ -1,6 +1,6 @@
 # البحث عن الملاحظات
 
-للبحث عن ملاحظات أو عن نص داخل الملاحظات، يمكنك استخدام الاختصار <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (أو <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> على أنظمة ماك) للانتقال إلى *لوحة البحث عن الملاحظات*.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 توجد عدة طرق مختلفة للبحث عن الملاحظات:
 
@@ -9,3 +9,7 @@
 - ستبحث العبارة `n:كشكول` أو `name:كشكول` عن الملاحظات التي فيها كلمة `كشكول` فقط في اسم الملاحظة أو اسم الملف
 
 ![البحث عن الملاحظات](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

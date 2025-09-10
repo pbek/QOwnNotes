@@ -20,6 +20,7 @@ Se si verificano problemi con l'installazione di QOwnNotes, è possibile avviare
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 È possibile eseguire l'applicazione sull'interfaccia della riga di comando in modo diverso su diversi sistemi operativi:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # su Windows copia le impostazioni di dump nel gestore degli appunti con clip
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Attiva le azioni del menu dopo l'avvio

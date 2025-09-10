@@ -33,50 +33,37 @@
 
 namespace {
 
-bool lookup(const uint32_t* table, litehtml::tchar_t c)
-{
-    return table[c >> 5] & (1 << (c & 0x1f));
-}
+bool lookup(const uint32_t* table, litehtml::tchar_t c) { return table[c >> 5] & (1 << (c & 0x1f)); }
 
-} // namespace
+}  // namespace
 
 namespace litehtml {
 
-bool is_ascii_codepoint(litehtml::tchar_t c)
-{
-    return (c < 128);
-}
+bool is_ascii_codepoint(litehtml::tchar_t c) { return (c < 128); }
 
 // https://datatracker.ietf.org/doc/html/rfc3986#section-2.2
-bool is_url_reserved_codepoint(litehtml::tchar_t c)
-{
-    static const uint32_t reserved_lookup[] = {
-        0x00000000,
-        0xac009fda,
-        0x28000001,
-        0x00000000
-    };
+bool is_url_reserved_codepoint(litehtml::tchar_t c) {
+  static const uint32_t reserved_lookup[] = {0x00000000, 0xac009fda, 0x28000001, 0x00000000};
 
-    if (!is_ascii_codepoint(c)) {
-        return false;
-    }
-    return lookup(reserved_lookup, c);
+  if (!is_ascii_codepoint(c)) {
+    return false;
+  }
+  return lookup(reserved_lookup, c);
 }
 
 // https://datatracker.ietf.org/doc/html/rfc3986#section-3.1
-bool is_url_scheme_codepoint(litehtml::tchar_t c)
-{
-    static const uint32_t scheme_lookup[] = {
-        0x00000000,
-        0x03ff6800,
-        0x07fffffe,
-        0x07fffffe,
-    };
+bool is_url_scheme_codepoint(litehtml::tchar_t c) {
+  static const uint32_t scheme_lookup[] = {
+      0x00000000,
+      0x03ff6800,
+      0x07fffffe,
+      0x07fffffe,
+  };
 
-    if (!is_ascii_codepoint(c)) {
-        return false;
-    }
-    return lookup(scheme_lookup, c);
+  if (!is_ascii_codepoint(c)) {
+    return false;
+  }
+  return lookup(scheme_lookup, c);
 }
 
-} // namespace litehtml
+}  // namespace litehtml

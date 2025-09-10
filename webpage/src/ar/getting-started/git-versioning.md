@@ -2,11 +2,12 @@
 
 يمكن ضبط QOwnNotes ليتابع التعديلات التي تتم في مجلد ملاحظاتك ويودعها آليًّا في مستودع git في مجلد ملاحظاتك.
 
-يمكن ضبطه من إعدادات «إدارة الإصدارات عبر git» في شاشة الإعدادات «عام».
+This can be done in the _Git versioning_ settings in the _General settings_.
 
 ![git-note-folder-settings](/img/git/settings.png)
 
-تحتاج إلى وجود git مثبتًّا على نظامك، وأن يكون في المسارات التنفيذية (PATH) وإلا فحدد مسار ملفه التنفيذي في إعدادات «إدارة الإصدارات عبر git».
+You need to have git installed on your system and the git executable needs to be in your PATH or
+you can set the path to the git executable in the _Git versioning_ settings.
 
 تحتاج كذلك إلى تفعيل دعم git في كل مجلد ملاحظات تريد إداراته عبر git!
 

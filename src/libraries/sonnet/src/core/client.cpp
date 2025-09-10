@@ -21,7 +21,4 @@
 
 using namespace Sonnet;
 
-Client::Client(QObject *parent)
-    : QObject(parent)
-{
-}
+Client::Client(QObject *parent) : QObject(parent) {}

@@ -1,10 +1,10 @@
-# Construyendo QOwnNotes
+# Construir QOwnNotes
 
 ## Construyendo desde GitHub
 
 También puede crear QOwnNotes usted mismo a partir del código fuente.
 
-Obtenga el código directamente desde el repositorio de git:
+Obtenga el código del último lanzamiento directamente desde el repositorio de git:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Para la depuración, es más fácil usar QtCreator. Al descargar [Qt Creator](https://www.qt.io/download-qt-installer-oss), también necesitará el paquete `qtwebsockets` para construir QOwnNotes con Qt6. Si lo construye en Windows, querrá ceñirse a *MinGw 64-bit*. En Linux, lo más probable es que tenga un paquete para QtCreator en su repositorio.
+Para la depuración, es más fácil usar QtCreator. Al descargar [Qt Creator](https://www.qt.io/download-qt-installer-oss), también necesitará el paquete `qtwebsockets` para construir QOwnNotes con Qt6. Si lo construye en Windows, querrá ceñirse a _MinGw de 64-bits_. En Linux, lo más probable es que tenga un paquete para QtCreator en su repositorio.
 
 Posteriormente, abra el archivo de proyecto `src/QOwnNotes.pro` y haga clic en **Construir** / **Construir Proyecto QOwnNotes**.
 
@@ -45,13 +45,16 @@ Los archivos fuente serán accesibles de esta forma:
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
 
-## Construyendo con Nix
+## Construir con Nix
 
 Si tiene el [gestos de paquetes de Nix](https://nixos.org/download/) disponible puede simplemente clonar el código fuente con git-clone, como se explicó anteriormente, y construirlo con:
 
 ```bash
-# Abrir nix-shell para obtener todas las herramientas necesarias
-nix-shell
+# Obtener devenv si aún no lo tiene
+nix-shell -p devenv
+
+# Abrir una consola con todas las herramientas que necesita
+devenv shell
 
 # Construir la aplicación
 just nix-build

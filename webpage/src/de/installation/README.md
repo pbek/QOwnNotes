@@ -10,4 +10,3 @@ Wenn Sie Probleme mit den Paketen oder Repositories haben, melden Sie diese bitt
 Info
 Schauen Sie im Menü nach, wie Sie QOwnNotes auf verschiedene Arten installieren können
 :::
-

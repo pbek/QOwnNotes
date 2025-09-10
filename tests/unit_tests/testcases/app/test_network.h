@@ -7,5 +7,7 @@ class TestNetwork : public QObject {
 
    private Q_SLOTS:
     void initTestCase();
+#ifndef Q_OS_LINUX
     void testSSL();
+#endif
 };

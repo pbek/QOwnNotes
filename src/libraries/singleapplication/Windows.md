@@ -1,8 +1,6 @@
-Windows Specific Implementations
-================================
+# Windows Specific Implementations
 
-Setting the foreground window
------------------------------
+## Setting the foreground window
 
 In the `instanceStarted()` example in the `README` we demonstrated how an
 application can bring it's primary instance window whenever a second copy

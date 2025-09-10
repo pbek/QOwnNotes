@@ -9,7 +9,7 @@ order: 20160712103407
 
 <v-subheader class="blog">Date: 2016-07-12</v-subheader>
 
-Finally there also is a ****snap**** for **QOwnNotes**.
+Finally there also is a \***\*snap\*\*** for **QOwnNotes**.
 
 You can visit the [QOwnNotes uApp Explorer page](https://uappexplorer.com/app/qownnotes.pbek) to get more information.
 
@@ -19,6 +19,6 @@ Please visit the [QOwnNotes installation page](https://www.qownnotes.org/install
 
 Also see what the [Ubuntu Community Q&amp;A](https://youtu.be/St46dvUruSg?t=3m27s) has to say about QOwnNotes.
 
- ![Snapcraft](/img/blog/Snapcraft_reference.png "Snapcraft")
- 
- (image by [snapcraft.io](http://snapcraft.io/))
+![Snapcraft](/img/blog/Snapcraft_reference.png "Snapcraft")
+
+(image by [snapcraft.io](http://snapcraft.io/))

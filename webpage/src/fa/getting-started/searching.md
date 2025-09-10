@@ -1,6 +1,6 @@
 # جستجوی یادداشت ها
 
-به منظور جستجوی یادداشت ها یا متن داخل یادداشت ها می توانید از کلید میانبر <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (یا <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> در مکینتاش) برای پرش به *پنل جستجوی یادداشت* استفاده کنید.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 روش های مختلفی برای جستجوی یادداشت ها وجود دارد:
 
@@ -9,3 +9,7 @@
 - `n:book` یا `name:book` با کلمه `book` در میان یادداشت ها و درست در نام یادداشت یا نام پرونده جستجو می شود
 
 ![جستجو](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

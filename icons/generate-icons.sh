@@ -13,63 +13,63 @@ APP_NAME="QOwnNotes"
 
 # Check if input file exists
 if [ ! -f "$INPUT_SVG" ]; then
-    echo "Error: Input file '$INPUT_SVG' not found!"
-    exit 1
+  echo "Error: Input file '$INPUT_SVG' not found!"
+  exit 1
 fi
 
 #Check if dark input file exists
 if [ ! -f "$INPUT_DARK_SVG" ]; then
-    echo "Error: Input file '$INPUT_DARK_SVG' not found!"
-    exit 1
+  echo "Error: Input file '$INPUT_DARK_SVG' not found!"
+  exit 1
 fi
 
 # Function to convert images
 convert_icon_png() {
-    local size=$1
-    local output_file=$2
-    local input_file=$3
+  local size=$1
+  local output_file=$2
+  local input_file=$3
 
-    # Use fallback to $INPUT_SVG if no local input file is provided
-    if [ -z "$input_file" ]; then
-        input_file=$INPUT_SVG
-    fi
+  # Use fallback to $INPUT_SVG if no local input file is provided
+  if [ -z "$input_file" ]; then
+    input_file=$INPUT_SVG
+  fi
 
-    echo "PNG converting to ${size}x${size} -> ${output_file}"
-#    magick "$input_file" -resize "${size}x${size}" "$output_file"
-    rsvg-convert -w "$size" -h "$size" "$input_file" -o "$output_file"
+  echo "PNG converting to ${size}x${size} -> ${output_file}"
+  #    magick "$input_file" -resize "${size}x${size}" "$output_file"
+  rsvg-convert -w "$size" -h "$size" "$input_file" -o "$output_file"
 }
 
 convert_icon_ico() {
-    local output_file=$1
-    local input_file=$2
+  local output_file=$1
+  local input_file=$2
 
-    # Use fallback to $INPUT_SVG if no local input file is provided
-    if [ -z "$input_file" ]; then
-        input_file=$INPUT_SVG
-    fi
+  # Use fallback to $INPUT_SVG if no local input file is provided
+  if [ -z "$input_file" ]; then
+    input_file=$INPUT_SVG
+  fi
 
-    echo "ICO converting to -> ${output_file}"
-    magick -density 300 -define icon:auto-resize=256,128,96,64,48,32,16 -background none "$input_file" "$output_file"
+  echo "ICO converting to -> ${output_file}"
+  magick -density 300 -define icon:auto-resize=256,128,96,64,48,32,16 -background none "$input_file" "$output_file"
 }
 
 convert_icon_icns() {
-    local output_file=$1
-    local input_file=$2
+  local output_file=$1
+  local input_file=$2
 
-    # Use fallback to $INPUT_SVG if no local input file is provided
-    if [ -z "$input_file" ]; then
-        input_file=$INPUT_SVG
-    fi
+  # Use fallback to $INPUT_SVG if no local input file is provided
+  if [ -z "$input_file" ]; then
+    input_file=$INPUT_SVG
+  fi
 
-    echo "ICNS converting to -> ${output_file}"
+  echo "ICNS converting to -> ${output_file}"
 
-    mkdir iconset
-    for size in 16 32 64 128 256 512 1024; do
-        rsvg-convert -w $size -h $size $INPUT_SVG -o iconset/icon_${size}x${size}.png
-    done
+  mkdir iconset
+  for size in 16 32 64 128 256 512 1024; do
+    rsvg-convert -w $size -h $size $INPUT_SVG -o iconset/icon_${size}x${size}.png
+  done
 
-    png2icns "$output_file" iconset/*.png
-    rm -rf iconset
+  png2icns "$output_file" iconset/*.png
+  rm -rf iconset
 }
 
 # Generate all sizes
@@ -85,7 +85,7 @@ convert_icon_ico "../src/QOwnNotes.ico"
 
 # Generate app icons
 for size in "${SIZES_APP[@]}"; do
-    convert_icon_png ${size} "${SRC_IMAGES_DIR}/icons/${size}x${size}/apps/${APP_NAME}.png"
+  convert_icon_png ${size} "${SRC_IMAGES_DIR}/icons/${size}x${size}/apps/${APP_NAME}.png"
 done
 
 # Copy to src/images

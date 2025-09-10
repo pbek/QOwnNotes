@@ -3,16 +3,16 @@
 Javítsa ki a helyesírási hibákat!
 
 ::: tip Info
-A QOwnNotes beépített **szótárkezelővel** található (a *Szerkesztés* menüben), amely képes szótárakat tölthet le vagy törölhet (ha hiányzik a nyelve, olvassa el alább, hogyan kérheti szótár hozzáadását). Ha manuálisan szeretné letölteni a szótárakat, kövesse az alábbi utasításokat.
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). Ha manuálisan szeretné letölteni a szótárakat, kövesse az alábbi utasításokat.
 :::
 
 - A **Linux** alatt telepítheti a nyelvéhez tartozó Hunspell szótárakat a disztribútor pkg kezelőjével.
-    - Ha további nyelvi fájlokat kell hozzáadnia, megteheti a `~/.local/share/hunspell` or `/usr/share/hunspell` fájlban.
-    - Ha a QOwnNotes Snap csomagját használja, akkor a `~/hunspell` t is használhatja nyelvi fájlokhoz, mivel a Snap nem fér hozzá a `~/.local` fájlhoz
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - A **Windows** alatt másolnia kell a nyelvéhez tartozó Hunspell szótárakat a QOwnNotes alkalmazás mappájában található `dicts` mappába vagy a  `C:\Users\[username]\dicts`
-    - Szótárakat a [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)-böl tölthet le
-    - A **macOS** alatt le kell másolnia a Hunspell szótárakat nyelv <1 / Library / Spelling </ 1> vagy `~/Library/Spelling`. Ha a könyvtár nem létezik, létre kell hoznia.
+  - Szótárakat a [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)-böl tölthet le
+  - A **macOS** alatt le kell másolnia a Hunspell szótárakat nyelv <1 / Library / Spelling </ 1> vagy `~/Library/Spelling`. Ha a könyvtár nem létezik, létre kell hoznia.
 
 A szótárak letölthetők a [QOwnNotes szótárakból](https://github.com/qownnotes/dictionaries). Használja a dokumentum végén található táblázatot, hogy megtalálja nyelvét és annak megfelelő nyelvi kódját.
 

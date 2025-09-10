@@ -20,39 +20,26 @@
 #include "spellerplugin_p.h"
 
 namespace Sonnet {
-class SpellerPluginPrivate
-{
-public:
+class SpellerPluginPrivate {
+   public:
     QString language;
 };
 
-SpellerPlugin::SpellerPlugin(const QString &lang)
-    : d(new SpellerPluginPrivate)
-{
+SpellerPlugin::SpellerPlugin(const QString &lang) : d(new SpellerPluginPrivate) {
     d->language = lang;
 }
 
-SpellerPlugin::~SpellerPlugin()
-{
-    delete d;
-}
+SpellerPlugin::~SpellerPlugin() { delete d; }
 
-QString SpellerPlugin::language() const
-{
-    return d->language;
-}
+QString SpellerPlugin::language() const { return d->language; }
 
-bool SpellerPlugin::isMisspelled(const QString &word) const
-{
-    return !isCorrect(word);
-}
+bool SpellerPlugin::isMisspelled(const QString &word) const { return !isCorrect(word); }
 
-bool SpellerPlugin::checkAndSuggest(const QString &word, QStringList &suggestions) const
-{
+bool SpellerPlugin::checkAndSuggest(const QString &word, QStringList &suggestions) const {
     bool c = isCorrect(word);
     if (!c) {
         suggestions = suggest(word);
     }
     return c;
 }
-}
+}    // namespace Sonnet

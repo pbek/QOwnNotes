@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1722421184,
-        "narHash": "sha256-/DJBI6trCeVnasdjUo9pbnodCLZcFqnVZiLUfqLH4jA=",
+        "lastModified": 1754725699,
+        "narHash": "sha256-iAcj9T/Y+3DBy2J0N+yF9XQQQ8IEb5swLFzs23CdP88=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9f918d616c5321ad374ae6cb5ea89c9e04bf3e58",
+        "rev": "85dbfc7aaf52ecb755f87e577ddbe6dbbdbc1054",
         "type": "github"
       },
       "original": {
@@ -32,10 +32,27 @@
         "type": "github"
       }
     },
+    "nixpkgs-qt69": {
+      "locked": {
+        "lastModified": 1743577216,
+        "narHash": "sha256-7mxrKLUzRC3CHcwD8Re3MNZtLHZx6BuSHHQ9iW9U9y4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "6f095be4bda67105d2428224f4fb4899234ce683",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "6f095be4bda67105d2428224f4fb4899234ce683",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nixpkgs-qt5153": "nixpkgs-qt5153"
+        "nixpkgs-qt5153": "nixpkgs-qt5153",
+        "nixpkgs-qt69": "nixpkgs-qt69"
       }
     }
   },

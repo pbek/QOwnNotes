@@ -4,7 +4,7 @@
 
 يمكنك كذلك بناء QOwnNotes بنفسك من المصدر البرمجي.
 
-استنسخ المصدر مباشرةً من مستودع جت:
+Checkout the code of the last release directly from the git repository:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-للتنقيح، من الأسهل استعمال QtCreator. عند تنزيل [Qt Creator](https://www.qt.io/download-qt-installer-oss)، ستحتاج كذلك إلى حزمة `qtwebsockets` لبناء QOwnNotes على Qt6. وإذا كنت تبني على ويندوز، ربما تفضل البقاء مع *MinGw 64-bit*. على لينكس، غالبا ستجد QtCreator في مستودعات توزيعتك.
+للتنقيح، من الأسهل استعمال QtCreator. عند تنزيل [Qt Creator](https://www.qt.io/download-qt-installer-oss)، ستحتاج كذلك إلى حزمة `qtwebsockets` لبناء QOwnNotes على Qt6. If you build under Windows, you want to stick to _MinGw 64-bit_. على لينكس، غالبا ستجد QtCreator في مستودعات توزيعتك.
 
 بعدئذٍ، افتح ملف المشروع `src/QOwnNotes.pro` وانقر على **Build** ثم **Build Project QOwnNotes**.
 
@@ -34,7 +34,7 @@ make
 قم بزيارة [QOwnNotes على GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-إذا أردت المساهمة في المشروع بمصدر برمجي، نرجو إنشاء طلبات الجذب إلى الفرع `main`.
+If you want to contribute source code to the project please make your pull requests to the `main` branch.
 :::
 
 ## ملفات المصدر البرمجي المضغوطة
@@ -50,12 +50,15 @@ make
 إذا كان لديك [مدير الحزم Nix](https://wiki.nixos.org/wiki/Nix_package_manager) فيمكنك استنساخ المصدر بــجت، كما شُرح بالأعلى، ثم بناءه بالأوامر التالية:
 
 ```bash
-# افتح صدفة نِكس لجلب الأدوات المطلوبة
-nix-shell
+# Get devenv if you don't have it already
+nix-shell -p devenv
 
-# ابنِ التطبيق
+# Open a shell with all the tools you need
+devenv shell
+
+# Build the application
 just nix-build
 
-# شغّل التطبيق المبني
+# Run the built application
 just nix-run
 ```

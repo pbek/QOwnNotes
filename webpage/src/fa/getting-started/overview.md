@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="حالت قابل حمل" />
     <div class="sheet">
       حالت قابل حمل برای USB فلش ها
@@ -142,12 +148,13 @@
 [QOwnNotes](https://www.qownnotes.org/) برنامه **یادداشت برداری مارک داون** پرونده با متن ساده و **متن باز** (GPL) برای سیستم عامل های **لینوکس (GNU)**، **مکینتاش X** و **ویندوز** است که (به طور اختیاری) با هم با [**برنامه یادداشت**](https://github.com/nextcloud/notes) [نکست کلود](https://nextcloud.com/) و [اون کلود](https://owncloud.org/) کار می کند.
 
 ::: tip
-برای بحث، آموزش و ارتباط با انجمن QOwnNotes به [گروه تلگرامی](https://t.me/QOwnNotes) ما بپیوندید.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [مفهوم QOwnNotes را درک کنید](concept.md)
 
 ## ویژگی ها
+
 - You can use your **existing text or markdown files**, no need for an import
 - QOwnNotes در ++C نوشته شده و برای **مصرف منابع کم** بهینه سازی شده است (بدون برنامه الکترونی نیازمند (hungry Electron app) به حافظه و CPU).
 - **ورودی اورنوت و جاپلین**
@@ -170,8 +177,8 @@
 - **Vim mode**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-
 ## ظاهر
+
 - **برجسته سازی مارک داون** یادداشت ها و **حالت پیش نمایش مارک داون**
 - **پشتیبانی از پوسته حالت تاریک**
 - **Theming support** for the **Markdown syntax highlighting**
@@ -182,6 +189,7 @@
 - **تفاوت های** بین یادداشت کنونی و یادداشتی که به صورت خارجی تغییر یافته است در یک کادر گفتگو **نشان** داده می شود
 
 ## زبان ها
+
 - **در دسترس برای بیش از 60 زبان مختلف** مانند انگلیسی، آلمانی، فرانسوی، لهستانی، چینی، ژاپنی، روسی، پرتغالی، مجاری، هلندی و اسپانیایی
   - [کمک شما](../contributing/translation.md) برای بهبود این ترجمه ها یا ترجمه QOwnNotes به زبان های بیشتر بسیار مایه خشنودی خواهد بود
 

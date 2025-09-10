@@ -8,10 +8,15 @@
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -20,11 +25,9 @@
 또는 H1과 H2의 경우 밑줄이 있는 스타일:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: 팁 기본적으로 QOwnNotes는 **머리글 1** (h1)에서 **노트의 파일 이름**을 작성합니다. :::
@@ -32,7 +35,7 @@ Alt-H2
 ## 강조
 
 ```markdown
-강조, 별칭 기울임꼴로 *별표*를 사용합니다.
+Emphasis, aka italics, with _asterisks_.
 
 **애스터리스크**로 굵게 강조합니다.
 ```
@@ -41,7 +44,7 @@ Alt-H2
 
 ## 밑줄
 
-*미리보기 설정*에서 밑줄 렌더링을 활성화하는 옵션 설정도 있습니다.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _밑줄_
@@ -64,14 +67,18 @@ _밑줄_
 ```markdown
 1. 첫 번째 정렬된 목록 항목
 2. 다른 항목
-  * 정렬되지 않은 하위 목록입니다.
-1. 실제 숫자는 중요하지 않습니다. 단지 숫자일 뿐입니다
-  1. 정렬된 하위 목록 (미리보기가 아닌 편집기에서만 작동)
-4. 그리고 다른 아이템입니다.
 
-* 정렬되지 않은 목록은 별표를 사용할 수 있습니다
-- 또는 마이너스
-+ 또는 플러스
+- 정렬되지 않은 하위 목록입니다.
+
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. 그리고 다른 아이템입니다.
+
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: 팁 목록 끝에 있는 <kbd>Enter<0>을 누르면 새 목록 항목이 생성됩니다. :::</p>
@@ -94,7 +101,7 @@ _밑줄_
 
 [참조 스타일 링크 정의에 숫자를 사용할 수 있습니다][1]
 
-각 괄호 안의 일반 URL과 URL은 미리보기에서 자동으로 링크로 바뀝니다. 
+각 괄호 안의 일반 URL과 URL은 미리보기에서 자동으로 링크로 바뀝니다.
 http://www.example.com 또는 &lt;http://www.example.com&gt;
 
 [1]: https://www.qownnotes.org
@@ -103,6 +110,10 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 <h3 spaces-before="0">
   내부 링크
 </h3>
+
+<p spaces-before="0">
+  다음과 같은 다른 노트나 첨부 파일에 연결할 수 있습니다:
+</p>
 
 <pre><code class="markdown">[Journal.md 노트에 링크합니다] (Journal.md)
 &lt;Journal.md&gt; 비슷하게 작동합니다.
@@ -118,6 +129,17 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 
 <p spaces-before="0">
   노트의 링크에서 커서를 편집하여 링크를 따라가는 동안 <kbd>Ctrl + Space</kbd>를 누를 수 있습니다. :::
+</p>
+
+<p spaces-before="0">
+  ::: 경고 정보 제목이 있는 내부 링크는 지원되지 않습니다:
+</p>
+
+<pre><code class="markdown">[Journal.md 노트에 링크합니다](Journal.md "제목 지원되지 않음")
+</code></pre>
+
+<p spaces-before="0">
+  :::
 </p>
 
 <h3 spaces-before="0">
@@ -150,6 +172,16 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
   <kbd>Ctrl + Shift + V</kbd>을 사용하여 클립보드의 이미지를 노트에 직접 붙여넣을 수도 있습니다. :::
 </p>
 
+<p spaces-before="0">
+  ::: 경고 정보 제목이 있는 이미지 링크는 지원되지 않습니다:
+</p>
+
+<pre><code class="markdown">![alt text](media/my-image.jpg "제목 지원되지 않음")
+</code></pre>
+
+<p spaces-before="0">
+  :::
+</p>
 
 <h2 spaces-before="0">
   인라인 코드 및 코드 블록
@@ -187,7 +219,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  ~~~markdown
+  ````마크다운
 </p>
 
 <pre><code>코드는 여기에 있습니다
@@ -197,75 +229,73 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 <pre><code>
 ::: 팁
  [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd>를 선택한
- 여러 텍스트 행 또는 빈 행에서 사용하여 코드 블록을 만들 수 있습니다. 
+ 여러 텍스트 행 또는 빈 행에서 사용하여 코드 블록을 만들 수 있습니다.
 :::
 
 ### 코드 강조 표시가 있는 백틱 울타리
 
 QOwnNotes에는 코드 블록을 사용하여 구문을 강조 표시하는 기능도 있습니다.
 
-~~ 마크다운
-'''bash
-# 저는 주석입니다
+````markdown
+```bash
+# I am a comment
 cd Notes
 </code></pre>
 
 <pre><code>
-현재 지원되는 언어 (및 코드 블록 식별자) 는 다음과 같습니다:
+현재 지원되는 언어 (및 코드 블록 식별자)는 다음과 같습니다:
 
-* BASh scripting, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- BASh scripting, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- Shell scripting, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
-# 표
+## 테이블
 
-표는 핵심 마크다운 사양의 일부가 아니지만 QOwnNotes 미리보기는 표를 지원합니다. 
+```마크다운
+콜론은 열을 정렬하는 데 사용할 수 있습니다.
 
-~~ 마크다운
-열을 정렬하는 데 콜론을 사용할 수 있습니다.
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| 열 3 은      | 오른쪽 정렬 | $1600 |
-| 열 2 는      | 가운데      |   $12 |
-| 얼룩말 줄무늬 | 깔끔하다      |    $1 |
-
-각 머리말 셀을 구분하는 대시가 3개 이상 있어야 합니다.
+There must be at least 3 dashes separating each header cell.
 
 인라인 마크다운을 사용할 수도 있습니다.
 
-| 마크다운 | 더 적은 | 예쁜 |
-| --- | --- | --- |
-| *Still* | `renders` | **nicely** |
-| 1 | 2 | 3 |
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 </code></pre>
 
 <p spaces-before="0">
@@ -285,11 +315,11 @@ cd Notes
 
 따옴표로 묶습니다.
 
-&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 모든 사람이 실제로 감싸기에 충분한 길이인지 확인하기 위해 계속 작성해 보겠습니다. 아, 블록 따옴표에 **마크다운**을 *입력*할 수 있습니다. 
+&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 모든 사람이 실제로 감싸기에 충분한 길이인지 확인하기 위해 계속 작성해 보겠습니다. Oh, you can _put_ **Markdown** into a blockquote.
 </code></pre>
 
 <p spaces-before="0">
-  ::: 팁 QOwnNotes에서 블록 따옴표를 완전히 강조 표시하거나 <em x-id="3">편집기 설정</em>에서 블록 따옴표 문자만 강조 표시하도록 지정할 수 있습니다
+  ::: tip You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the <em x-id="4">Editor settings</em>
 </p>
 
 <p spaces-before="0">
@@ -306,17 +336,17 @@ cd Notes
 
 <pre><code class="markdown">3개 이상...
 
-하이픈
+Hyphens
 
 ---
 
-별표
+Asterisks
 
-***
+---
 
-밑줄
+Underscores
 
-___
+---
 </code></pre>
 
 <h2 spaces-before="0">
@@ -341,10 +371,10 @@ ___
 
 <pre><code class="markdown">여기부터 시작할 수 있는 줄이 있습니다.
 
-이 줄은 위의 줄과 두 줄로 분리되어 있으므로 *별도의 단락*이 될 것입니다.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-이 행은 또한 별도의 단락으로 시작합니다. 하지만...  
-이 줄은 두 개의 후행 공백과 하나의 새 줄로만 구분되므로 *동일한 문단*에서 별도의 줄입니다.
+This line is also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 </code></pre>
 
 <p spaces-before="0">
@@ -361,8 +391,9 @@ ___
   설명은 미리보기에 표시되지 않습니다.
 </p>
 
-<pre><code class="markdown">[comment]: # (이 설명은 미리보기에 나타나지 않습니다)
-&lt;!-- HTML 주석도 숨겨집니다 --&gt;
+<pre><code class="markdown">[comment]: # "This comment will not appear in the preview"
+
+&lt;!-- HTML comments are also hidden --&gt;
 </code></pre>
 
 <p spaces-before="0">

@@ -7,12 +7,12 @@ tagline: Free open source plain-text file markdown note-taking with Nextcloud / 
 actionText: Quick Start →
 actionLink: getting-started/overview
 features:
-- title: Own your notes
-  details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in". Use sync services like Nextcloud to sync notes across devices.
-- title: Small footprint
-  details: Native application, optimized for speed and consuming little processor and memory resources.
-- title: Customization
-  details: Heavily customizable and scriptable, you are in control of on how you want to work with your notes.
+  - title: Own your notes
+    details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in". Use sync services like Nextcloud to sync notes across devices.
+  - title: Small footprint
+    details: Native application, optimized for speed and consuming little processor and memory resources.
+  - title: Customization
+    details: Heavily customizable and scriptable, you are in control of on how you want to work with your notes.
 footer: Made by Patrizio Bekerle with ❤️
 ---
 

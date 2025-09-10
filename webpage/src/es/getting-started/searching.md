@@ -1,6 +1,6 @@
 # Buscar notas
 
-Para buscar notas o texto dentro de las notas, puede usar el atajo <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (o <kbd> ⌘ Cmd </kbd> + <kbd> ⇧ Shift </kbd> + <kbd> F </kbd> en macOS) para saltar al *Panel de búsqueda de notas*.
+Para buscar notas o texto dentro de las notas, puede usar el atajo <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (o <kbd> ⌘ Cmd </kbd> + <kbd> ⇧ Shift </kbd> + <kbd> F </kbd> en macOS) para saltar al _Panel de búsqueda de notas_.
 
 Hay diferentes formas de buscar notas:
 
@@ -9,3 +9,7 @@ Hay diferentes formas de buscar notas:
 - `n:cuaderno` o `name:cuaderno` buscará notas con `cuaderno` solo en el nombre de la nota o el nombre del archivo
 
 ![Buscando](/img/searching.png)
+
+::: tip
+La búsqueda comienza después de escribir al menos un carácter.
+:::

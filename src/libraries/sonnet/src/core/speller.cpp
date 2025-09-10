@@ -16,30 +16,24 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301  USA
-*/
+ */
 #include "speller.h"
 
+#include <QCache>
+
+#include "core_debug.h"
 #include "loader_p.h"
 #include "settings_p.h"
 #include "spellerplugin_p.h"
 
-#include <QCache>
-#include "core_debug.h"
-
 namespace Sonnet {
-class SpellerPrivate
-{
-public:
-    SpellerPrivate()
-    {
-    }
+class SpellerPrivate {
+   public:
+    SpellerPrivate() {}
 
-    ~SpellerPrivate()
-    {
-    }
+    ~SpellerPrivate() {}
 
-    void init(const QString &lang)
-    {
+    void init(const QString &lang) {
         Loader *loader = Loader::openLoader();
         settings = loader->settings();
 
@@ -50,13 +44,9 @@ public:
         updateDict();
     }
 
-    void updateDict()
-    {
-        dict = Loader::openLoader()->cachedSpeller(language);
-    }
+    void updateDict() { dict = Loader::openLoader()->cachedSpeller(language); }
 
-    bool isValid()
-    {
+    bool isValid() {
         if (settings->modified()) {
             recreateDict();
             settings->setModified(false);
@@ -64,8 +54,7 @@ public:
         return !dict.isNull();
     }
 
-    void recreateDict()
-    {
+    void recreateDict() {
         Loader::openLoader()->clearSpellerCache();
         updateDict();
     }
@@ -75,195 +64,159 @@ public:
     QString language;
 };
 
-Speller::Speller(const QString &lang)
-    : d(new SpellerPrivate)
-{
-    d->init(lang);
-}
+Speller::Speller(const QString &lang) : d(new SpellerPrivate) { d->init(lang); }
 
-Speller::~Speller()
-{
-//     qDebug() << "deleting" << this << "for" << d->language;
+Speller::~Speller() {
+    //     qDebug() << "deleting" << this << "for" << d->language;
     delete d;
 }
 
-Speller::Speller(const Speller &speller)
-    : d(new SpellerPrivate)
-{
+Speller::Speller(const Speller &speller) : d(new SpellerPrivate) {
     d->language = speller.language();
     d->init(d->language);
 }
 
-Speller &Speller::operator=(const Speller &speller)
-{
+Speller &Speller::operator=(const Speller &speller) {
     d->language = speller.language();
     d->updateDict();
     return *this;
 }
 
-bool Speller::isCorrect(const QString &word) const
-{
+bool Speller::isCorrect(const QString &word) const {
     if (!d->isValid()) {
         return true;
     }
     return d->dict->isCorrect(word);
 }
 
-bool Speller::isMisspelled(const QString &word) const
-{
-//    if (!d->isValid()) {
-//        return false;
-//    }
+bool Speller::isMisspelled(const QString &word) const {
+    //    if (!d->isValid()) {
+    //        return false;
+    //    }
     return d->dict->isMisspelled(word);
 }
 
-QStringList Speller::suggest(const QString &word) const
-{
+QStringList Speller::suggest(const QString &word) const {
     if (!d->isValid()) {
         return QStringList();
     }
     return d->dict->suggest(word);
 }
 
-bool Speller::checkAndSuggest(const QString &word, QStringList &suggestions) const
-{
+bool Speller::checkAndSuggest(const QString &word, QStringList &suggestions) const {
     if (!d->isValid()) {
         return true;
     }
     return d->dict->checkAndSuggest(word, suggestions);
 }
 
-bool Speller::storeReplacement(const QString &bad, const QString &good)
-{
+bool Speller::storeReplacement(const QString &bad, const QString &good) {
     if (!d->isValid()) {
         return false;
     }
     return d->dict->storeReplacement(bad, good);
 }
 
-bool Speller::addToPersonal(const QString &word)
-{
+bool Speller::addToPersonal(const QString &word) {
     if (!d->isValid()) {
         return false;
     }
     return d->dict->addToPersonal(word);
 }
 
-bool Speller::addToSession(const QString &word)
-{
+bool Speller::addToSession(const QString &word) {
     if (!d->isValid()) {
         return false;
     }
     return d->dict->addToSession(word);
 }
 
-QString Speller::language() const
-{
+QString Speller::language() const {
     if (!d->isValid()) {
         return QString();
     }
     return d->dict->language();
 }
 
-void Speller::save()
-{
+void Speller::save() {
     if (d->settings) {
         d->settings->save();
     }
 }
 
-void Speller::restore()
-{
+void Speller::restore() {
     if (d->settings) {
         d->settings->restore();
         d->recreateDict();
     }
 }
 
-QString Speller::availableBackends() const
-{
+QString Speller::availableBackends() const {
     Loader *l = Loader::openLoader();
     return l->clients();
 }
 
-QStringList Speller::availableLanguages()
-{
+QStringList Speller::availableLanguages() {
     Loader *l = Loader::openLoader();
     return l->languages();
 }
 
-QStringList Speller::availableLanguageNames()
-{
+QStringList Speller::availableLanguageNames() {
     Loader *l = Loader::openLoader();
     return l->languageNames();
 }
 
-void Speller::setDefaultLanguage(const QString &lang)
-{
+void Speller::setDefaultLanguage(const QString &lang) {
     if (d->settings->setDefaultLanguage(lang)) {
         d->settings->save();
     }
 }
 
-QString Speller::defaultLanguage() const
-{
-    return d->settings->defaultLanguage();
-}
+QString Speller::defaultLanguage() const { return d->settings->defaultLanguage(); }
 
-void Speller::setDefaultClient(const QString &client)
-{
+void Speller::setDefaultClient(const QString &client) {
     if (d->settings->setDefaultClient(client)) {
         d->settings->save();
     }
 }
 
-QString Speller::defaultClient() const
-{
-    return d->settings->defaultClient();
-}
+QString Speller::defaultClient() const { return d->settings->defaultClient(); }
 
-void Speller::setAttribute(Attribute attr, bool b)
-{
+void Speller::setAttribute(Attribute attr, bool b) {
     switch (attr) {
-    case CheckUppercase:
-        d->settings->setCheckUppercase(b);
-        break;
-    case SkipRunTogether:
-        d->settings->setSkipRunTogether(b);
-        break;
-    case AutoDetectLanguage:
-        d->settings->setAutodetectLanguage(b);
-        break;
+        case CheckUppercase:
+            d->settings->setCheckUppercase(b);
+            break;
+        case SkipRunTogether:
+            d->settings->setSkipRunTogether(b);
+            break;
+        case AutoDetectLanguage:
+            d->settings->setAutodetectLanguage(b);
+            break;
     }
     d->settings->save();
 }
 
-bool Speller::testAttribute(Attribute attr) const
-{
+bool Speller::testAttribute(Attribute attr) const {
     switch (attr) {
-    case CheckUppercase:
-        return d->settings->checkUppercase();
-    case SkipRunTogether:
-        return d->settings->skipRunTogether();
-    case AutoDetectLanguage:
-        return d->settings->autodetectLanguage();
+        case CheckUppercase:
+            return d->settings->checkUppercase();
+        case SkipRunTogether:
+            return d->settings->skipRunTogether();
+        case AutoDetectLanguage:
+            return d->settings->autodetectLanguage();
     }
     return false;
 }
 
-bool Speller::isValid() const
-{
-    return !d->dict.isNull();
-}
+bool Speller::isValid() const { return !d->dict.isNull(); }
 
-void Speller::setLanguage(const QString &lang)
-{
+void Speller::setLanguage(const QString &lang) {
     d->language = lang;
     d->updateDict();
 }
 
-QMap<QString, QString> Sonnet::Speller::availableDictionaries() const
-{
+QMap<QString, QString> Sonnet::Speller::availableDictionaries() const {
     Loader *l = Loader::openLoader();
     const QStringList lst = l->languages();
     QMap<QString, QString> langs;
@@ -275,8 +228,7 @@ QMap<QString, QString> Sonnet::Speller::availableDictionaries() const
     return langs;
 }
 
-QMap<QString, QString> Speller::preferredDictionaries() const
-{
+QMap<QString, QString> Speller::preferredDictionaries() const {
     Loader *l = Loader::openLoader();
     QMap<QString, QString> langs;
 
@@ -287,4 +239,4 @@ QMap<QString, QString> Speller::preferredDictionaries() const
     return langs;
 }
 
-} // namespace Sonnet
+}    // namespace Sonnet

@@ -8,10 +8,15 @@ Utilisez des titres pour structurer vos textes.
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -22,11 +27,9 @@ Le **panneau de navigation** montre la structure de vos en-têtes.
 Alternativement, pour H1 et H2, un style souligné:
 
 ```markdown
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 ```
 
 ::: tip
@@ -36,7 +39,7 @@ Par défaut, QOwnNotes crée le nom de fichier **d'une note** à partir de l'en-
 ## Accentuation
 
 ```markdown
-Accentuation, aka italique, avec *astérisques*.
+Emphasis, aka italics, with _asterisks_.
 
 Emphase forte, aka gras, avec **astérisques**.
 ```
@@ -47,7 +50,7 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + B</kbd> pour met
 
 ## Souligné
 
-Il existe également un paramètre facultatif pour activer le rendu souligné dans les *Paramètres d'aperçu*.
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
 _souligner_
@@ -73,15 +76,19 @@ Il existe de nombreuses façons de créer des listes.
 
 ```markdown
 1. Premier élément de liste commandé
-2. Un autre article
-   * Sous-liste non ordonnée.
-1. Les chiffres réels n'ont pas d'importance, juste que c'est un nombre
-   1. Sous-liste ordonnée (ne fonctionne que dans l'éditeur, pas dans l'aperçu)
-4. Et un autre article.
+2. Another item
 
-* La liste non ordonnée peut utiliser des astérisques
-- Ou moins
-+ Ou avantages
+- Unordered sub-list.
+
+1. Actual numbers don't matter, just that it's a number
+1. Ordered sub-list (only works in the editor, not the preview)
+1. Et un autre article.
+
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 ```
 
 ::: tip
@@ -101,13 +108,15 @@ Two of the simpler uses for links are pointing to webpages or other notes. There
 
 [You can use numbers for reference-style link definitions][1]
 
-Plain URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview.
 http://www.example.com ou <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
 
 ### Internal links
+
+You can link to other notes or attachments like this:
 
 ```markdown
 [I link to the Journal.md note](Journal.md)
@@ -121,6 +130,15 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd> Ctrl + L</kbd> pour **
 L'utilisation de <kbd>Ctrl + Maj + X</kbd> fera apparaître une boîte de dialogue qui vous aidera à **insérer des pièces jointes** dans votre note.
 
 Vous pouvez appuyer sur <kbd>Ctrl + Espace</kbd> pendant que le curseur se trouve sur un lien dans l'édition de note pour suivre le lien.
+:::
+
+::: warning
+Info Internal links with a title are not supported:
+
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
+
 :::
 
 ### Bookmarks
@@ -145,6 +163,14 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + I</kbd> po
 Vous pouvez également coller directement une image du presse-papiers dans votre note avec <kbd>Ctrl + Maj + V</kbd>.
 :::
 
+::: warning
+Info Image links with a title are not supported:
+
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
+:::
 
 ## Code en ligne et blocs de code
 
@@ -170,85 +196,85 @@ Ajoutez quatre espaces devant votre code pour le marquer comme bloc de code.
 ### Backtick fence
 
 Vous pouvez également utiliser trois backticks pour créer un bloc de code.
-~~~markdown
+````markdown
 ```
 Code goes here
 Code goes here
 ```
-~~~
+````
 
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
-multiple selected lines of text or in an empty line to create a code block. 
+multiple selected lines of text or in an empty line to create a code block.
 :::
 
 ### Backtick fence with code highlighting
 
 There also is some syntax highlighting with code blocks in QOwnNotes.
 
-~~~markdown
+````markdown
 ```bash
 # I am a comment
 cd Notes
-```
-~~~
+````
+````
 
 Currently, supported languages (and code block identifiers) are:
 
-* BASh scripting, `bash`
-* C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
-* CMake, `cmake`
-* C#, `csharp`
-* CSS, `css`
-* Go, `go`
-* HTML, `html`
-* INI, `ini`
-* Java, `java`
-* JavaScript, `javascript`
-* JavaScript, `js`
-* JSON, `json`
-* Makefile, `make`
-* PHP, `php`
-* Python, `py`
-* Python, `python`
-* QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
-* SQL, `sql`
-* TypeScript, `ts`
-* TypeScript, `typescript`
-* V, `v`
-* Vex, `vex`
-* XML, `xml`
-* YAML, `yml`
-* YAML, `yaml`
+- BASh scripting, `bash`
+- C, `c`
+- C++, `cpp`
+- C++, `cxx`
+- C++, `c++`
+- C#, `c#`
+- CMake, `cmake`
+- C#, `csharp`
+- CSS, `css`
+- Go, `go`
+- HTML, `html`
+- INI, `ini`
+- Java, `java`
+- JavaScript, `javascript`
+- JavaScript, `js`
+- JSON, `json`
+- Makefile, `make`
+- PHP, `php`
+- Python, `py`
+- Python, `python`
+- QML, `qml`
+- Rust, `rust`
+- Shell scripting, `sh`
+- SQL, `sql`
+- TypeScript, `ts`
+- TypeScript, `typescript`
+- V, `v`
+- Vex, `vex`
+- XML, `xml`
+- YAML, `yml`
+- YAML, `yaml`
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-~~~markdown
+```markdown
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 There must be at least 3 dashes separating each header cell.
 
 You can also use inline Markdown.
 
-| Markdown | Less | Pretty |
-| --- | --- | --- |
-| *Still* | `renders` | **nicely** |
-| 1 | 2 | 3 |
-~~~
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
+````
 
 ::: tip
 Appuyez sur <kbd>Alt + Maj + T</kbd> pour faire apparaître une boîte de dialogue qui vous aidera à créer des tableaux. Vous pouvez même importer des fichiers CSV dans cette boîte de dialogue.
@@ -264,11 +290,11 @@ Utilisez <kbd>Ctrl + Espace</kbd> dans un tableau de démarquage pour le formate
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 ::: tip
-Vous pouvez dire à QOwnNotes de surligner entièrement les blockquotes ou juste le caractère blockquote dans les *Paramètres de l'éditeur*
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
 
 Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + B</kbd> pour marquer le texte comme blockquote.
 :::
@@ -286,11 +312,11 @@ Hyphens
 
 Asterisks
 
-***
+---
 
 Underscores
 
-___
+---
 ```
 
 ## Sauts de ligne
@@ -306,10 +332,10 @@ Vous pouvez insérer deux espaces et un retour à la ligne avec <kbd>⇧ Shift</
 ```markdown
 Here's a line for us to start with.
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
 This line is also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip
@@ -321,7 +347,7 @@ Les espaces de fin sont mis en évidence par défaut dans l'éditeur.
 Les commentaires ne sont pas affichés dans l'aperçu.
 
 ```markdown
-[comment]: # (This comment will not appear in the preview)
+[comment]: # "This comment will not appear in the preview"
 
 <!-- HTML comments are also hidden -->
 ```

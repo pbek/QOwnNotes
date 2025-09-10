@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) może obsłużyć dla Ciebie **dostęp** do **notatek w koszu** i **wersji notatek**.

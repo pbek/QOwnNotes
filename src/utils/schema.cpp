@@ -399,8 +399,17 @@ QString Utils::Schema::getSchemaStyles() {
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H5, QStringLiteral("h5"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H6, QStringLiteral("h6"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Link, QStringLiteral("a"));
-    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Bold, QStringLiteral("b, strong"));
-    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Italic, QStringLiteral("i, em"));
+
+    // We are adding also style combinations for bold and italic, because QTextBrowser doesn't
+    // inherit the styles correctly (https://github.com/pbek/QOwnNotes/issues/3218)
+    schemaStyles += encodeCssStyleForState(
+        MarkdownHighlighter::Bold,
+        QStringLiteral(
+            "b, strong, i b, em b, i strong, em strong, b i, strong i, b em, strong em"));
+    schemaStyles += encodeCssStyleForState(
+        MarkdownHighlighter::Italic,
+        QStringLiteral("i, em, i b, em b, i strong, em strong, b i, strong i, b em, strong em"));
+
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::CodeBlock,
                                            QStringLiteral("code, pre > code, pre"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::InlineCodeBlock,
@@ -459,7 +468,16 @@ QString Utils::Schema::encodeCssStyleForState(MarkdownHighlighter::HighlighterSt
                                               const QString& htmlTag) {
     QTextCharFormat format;
     Utils::Schema::schemaSettings->setFormatStyle(index, format);
-    return QStringLiteral("%1 {%2}").arg(htmlTag, encodeCssTextCharFormat(format));
+    QString cssString = encodeCssTextCharFormat(format);
+
+    // Allow italic inside bold tags, like `**bold *and italic***`
+    // https://github.com/pbek/QOwnNotes/issues/3218
+    // Unfortunately, that's not enough for the QTextBrowser to render it correctly
+    if (index == MarkdownHighlighter::Italic) {
+        cssString.remove(QStringLiteral("font-weight: normal;"));
+    }
+
+    return QStringLiteral("%1 {%2}").arg(htmlTag, cssString);
 }
 
 /**

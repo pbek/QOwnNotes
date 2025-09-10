@@ -44,10 +44,8 @@ class GuessLanguagePrivate;
  * @author Jacob Rideout <kde@jacobrideout.net>
  * @since 4.3
  */
-class GuessLanguage
-{
-public:
-
+class GuessLanguage {
+   public:
     /** Constructor
      * Creates a new GuessLanguage instance. If @p text is specified,
      * it sets the text to be checked.
@@ -63,14 +61,14 @@ public:
     GuessLanguage &operator=(const GuessLanguage &) = delete;
 
     /**
-     * Sets limits to number of languages returned by identify(). The confidence for each language is computed
-     * as difference between this and next language on the list normalized to 0-1 range. Reasonable value to get
-     * fairly sure result is 0.1 . Default is returning best guess without caring about confidence - exactly
-     * as after call to setLimits(1,0).
+     * Sets limits to number of languages returned by identify(). The confidence for each language
+     * is computed as difference between this and next language on the list normalized to 0-1 range.
+     * Reasonable value to get fairly sure result is 0.1 . Default is returning best guess without
+     * caring about confidence - exactly as after call to setLimits(1,0).
      * @param maxItems The list returned by identify() will never have more than maxItems item
      * @param minConfidence The list will have only enough items for their summary confidence equal
      * or exceed minConfidence.
-    */
+     */
     void setLimits(int maxItems, double minConfidence);
 
     /**
@@ -78,14 +76,14 @@ public:
      * set text and. Three digits are returned only in the case where a 2 digit
      * code does not exist. If @p text isn't empty, set the text to checked.
      * @param text to be identified
-     * @return list of the presumed languages of the text, sorted by decreasing confidence. Empty list means
-     * it is impossible to determine language with confidence required by setLimits
+     * @return list of the presumed languages of the text, sorted by decreasing confidence. Empty
+     * list means it is impossible to determine language with confidence required by setLimits
      */
     QString identify(const QString &text, const QStringList &suggestions = QStringList()) const;
 
-private:
+   private:
     GuessLanguagePrivate *const d;
 };
-}
+}    // namespace Sonnet
 
 #endif

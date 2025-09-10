@@ -69,7 +69,7 @@ namespace Qt {
 namespace {
 auto constexpr SkipEmptyParts = QString::SkipEmptyParts;
 }
-}
+} // namespace Qt
 #endif
 
 static QFont toQFont(litehtml::uint_ptr hFont)
@@ -631,7 +631,7 @@ void DocumentContainerPrivate::load_image(const litehtml::tchar_t *src,
     const auto qtBaseUrl = QString::fromUtf8(baseurl);
     Q_UNUSED(redraw_on_ready)
     qDebug() << "load_image:" << QStringLiteral("src = \"%1\";").arg(qtSrc).toUtf8().constData()
-                << QStringLiteral("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
+             << QStringLiteral("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
     const QUrl url = resolveUrl(qtSrc, qtBaseUrl);
     if (m_pixmaps.contains(url))
         return;
@@ -650,7 +650,8 @@ void DocumentContainerPrivate::get_image_size(const litehtml::tchar_t *src,
     const auto qtBaseUrl = QString::fromUtf8(baseurl);
     if (qtSrc.isEmpty()) // for some reason that happens
         return;
-    qDebug(log) << "get_image_size:" << QStringLiteral("src = \"%1\";").arg(qtSrc).toUtf8().constData()
+    qDebug(log) << "get_image_size:"
+                << QStringLiteral("src = \"%1\";").arg(qtSrc).toUtf8().constData()
                 << QStringLiteral("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
     const QPixmap pm = getPixmap(qtSrc, qtBaseUrl);
     sz.width = pm.width();
@@ -991,7 +992,8 @@ void DocumentContainerPrivate::get_media_features(litehtml::media_features &medi
     qDebug(log) << "get_media_features";
 }
 
-void DocumentContainerPrivate::get_language(litehtml::tstring &language, litehtml::tstring &culture) const
+void DocumentContainerPrivate::get_language(litehtml::tstring &language,
+                                            litehtml::tstring &culture) const
 {
     // TODO
     qDebug(log) << "get_language";
@@ -1013,7 +1015,9 @@ void DocumentContainer::setDocument(const QByteArray &data, DocumentContainerCon
 {
     d->m_pixmaps.clear();
     d->clearSelection();
-    d->m_document = litehtml::document::createFromUTF8(data.constData(), d.get(), &context->d->context);
+    d->m_document = litehtml::document::createFromUTF8(data.constData(),
+                                                       d.get(),
+                                                       &context->d->context);
     d->buildIndex();
 }
 
@@ -1059,7 +1063,8 @@ int DocumentContainer::anchorY(const QString &anchorName) const
     litehtml::element::ptr element = d->m_document->root()->select_one(
         QStringLiteral("#%1").arg(anchorName).toStdString());
     if (!element) {
-        element = d->m_document->root()->select_one(QStringLiteral("[name=%1]").arg(anchorName).toStdString());
+        element = d->m_document->root()->select_one(
+            QStringLiteral("[name=%1]").arg(anchorName).toStdString());
     }
     if (element)
         return element->get_placement().y;
@@ -1084,8 +1089,11 @@ QVector<QRect> DocumentContainer::mousePressEvent(const QPoint &documentPos,
                                                       d->m_selection.mode);
     // post to litehtml
     litehtml::position::vector redrawBoxes;
-    if (d->m_document->on_lbutton_down(
-            documentPos.x(), documentPos.y(), viewportPos.x(), viewportPos.y(), redrawBoxes)) {
+    if (d->m_document->on_lbutton_down(documentPos.x(),
+                                       documentPos.y(),
+                                       viewportPos.x(),
+                                       viewportPos.y(),
+                                       redrawBoxes)) {
         for (const litehtml::position &box : redrawBoxes)
             redrawRects.append(toQRect(box));
     }
@@ -1101,7 +1109,8 @@ QVector<QRect> DocumentContainer::mouseMoveEvent(const QPoint &documentPos,
     // selection
     if (d->m_selection.isSelecting
         || (!d->m_selection.selectionStartDocumentPos.isNull()
-            && (d->m_selection.selectionStartDocumentPos - documentPos).manhattanLength() >= kDragDistance
+            && (d->m_selection.selectionStartDocumentPos - documentPos).manhattanLength()
+                   >= kDragDistance
             && d->m_selection.startElem.element)) {
         const Selection::Element element = deepest_child_at_point(d->m_document,
                                                                   documentPos,
@@ -1109,7 +1118,8 @@ QVector<QRect> DocumentContainer::mouseMoveEvent(const QPoint &documentPos,
                                                                   d->m_selection.mode);
         if (element.element) {
             redrawRects.append(
-                d->m_selection.boundingRect() /*.adjusted(-1, -1, +1, +1)*/); // redraw old selection area
+                d->m_selection
+                    .boundingRect() /*.adjusted(-1, -1, +1, +1)*/); // redraw old selection area
             d->m_selection.endElem = element;
             d->updateSelection();
             redrawRects.append(d->m_selection.boundingRect());
@@ -1117,8 +1127,11 @@ QVector<QRect> DocumentContainer::mouseMoveEvent(const QPoint &documentPos,
         d->m_selection.isSelecting = true;
     }
     litehtml::position::vector redrawBoxes;
-    if (d->m_document->on_mouse_over(
-            documentPos.x(), documentPos.y(), viewportPos.x(), viewportPos.y(), redrawBoxes)) {
+    if (d->m_document->on_mouse_over(documentPos.x(),
+                                     documentPos.y(),
+                                     viewportPos.x(),
+                                     viewportPos.y(),
+                                     redrawBoxes)) {
         for (const litehtml::position &box : redrawBoxes)
             redrawRects.append(toQRect(box));
     }
@@ -1140,8 +1153,11 @@ QVector<QRect> DocumentContainer::mouseReleaseEvent(const QPoint &documentPos,
     else
         d->clearSelection();
     litehtml::position::vector redrawBoxes;
-    if (d->m_document->on_lbutton_up(
-            documentPos.x(), documentPos.y(), viewportPos.x(), viewportPos.y(), redrawBoxes)) {
+    if (d->m_document->on_lbutton_up(documentPos.x(),
+                                     documentPos.y(),
+                                     viewportPos.x(),
+                                     viewportPos.y(),
+                                     redrawBoxes)) {
         for (const litehtml::position &box : redrawBoxes)
             redrawRects.append(toQRect(box));
     }
@@ -1195,8 +1211,11 @@ QUrl DocumentContainer::linkAt(const QPoint &documentPos, const QPoint &viewport
 {
     if (!d->m_document)
         return {};
-    const litehtml::element::ptr element = d->m_document->root()->get_element_by_point(
-        documentPos.x(), documentPos.y(), viewportPos.x(), viewportPos.y());
+    const litehtml::element::ptr element = d->m_document->root()
+                                               ->get_element_by_point(documentPos.x(),
+                                                                      documentPos.y(),
+                                                                      viewportPos.x(),
+                                                                      viewportPos.y());
     if (!element)
         return {};
     const char *href = element->get_attr("href");

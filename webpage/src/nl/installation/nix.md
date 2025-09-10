@@ -2,7 +2,11 @@
 
 Je kunt QOwnNotes met de [Nix pakketbeheerder](https://nixos.org/download/) installeren op [NixOS](https://nixos.org/), andere **Linux**-versies, **macOS** en **Windows**. De pakketnaam is [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
 
-Het pakket is gebouwd met Qt6 en biedt shell-integratie voor fish en bash.
+::: tip
+Best use the NixOS Unstable channel to get the latest version of QOwnNotes!
+:::
+
+The package is built with Qt6, uses the system botan3 library and libgit2 and provides shell integration for fish and bash.
 
 Zie [QOwnNotes op nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) voor meer informatie.
 

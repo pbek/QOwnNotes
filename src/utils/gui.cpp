@@ -33,11 +33,13 @@
 #include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
+#include <QStyleFactory>
 #include <QTextBlock>
 #include <QTextCursor>
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
 
+#include "helpers/nomenuiconstyle.h"
 #include "services/settingsservice.h"
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
@@ -900,7 +902,7 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
                 // create a new tab if there are too few tabs
                 if ((tabWidget->count() - 1) < i) {
                     auto *widgetPage = new QWidget();
-                    tabWidget->addTab(widgetPage, QStringLiteral(""));
+                    tabWidget->addTab(widgetPage, QLatin1String(""));
                 }
 
                 // set the current tab index and the note data
@@ -1257,4 +1259,25 @@ QAction *Utils::Gui::findActionByData(QMenu *menu, const QVariant &data) {
     }
     // Return nullptr if no matching action is found
     return nullptr;
+}
+
+void Utils::Gui::applyInterfaceStyle(QString interfaceStyle) {
+    if (interfaceStyle.isEmpty()) {
+        interfaceStyle = SettingsService().value(QStringLiteral("interfaceStyle")).toString();
+    }
+
+    // Apply custom style to hide menu icons
+    if (Utils::Misc::areMenuIconsHidden()) {
+        if (!interfaceStyle.isEmpty()) {
+            // Apply the selected interface style and the custom style
+            QStyle *interfaceStyleClass = QStyleFactory::create(interfaceStyle);
+            QApplication::setStyle(new NoMenuIconStyle(interfaceStyleClass));
+        } else {
+            // Apply the custom style only
+            QApplication::setStyle(new NoMenuIconStyle);
+        }
+    } else if (!interfaceStyle.isEmpty()) {
+        // Restore the interface style
+        QApplication::setStyle(interfaceStyle);
+    }
 }

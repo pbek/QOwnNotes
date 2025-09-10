@@ -1,6 +1,6 @@
 # Zoeken naar notities
 
-Om te zoeken naar notities of naar tekst in notities, kun je de snelkoppeling gebruiken <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (of <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> op macOS) om naar het *zoekvenster voor notities* te gaan.
+To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 Er zijn verschillende manieren om naar notities te zoeken:
 
@@ -9,3 +9,7 @@ Er zijn verschillende manieren om naar notities te zoeken:
 - `n: boek` of `naam: boek` zoekt naar notities met `boek` alleen in de naam van de notitie of de bestandsnaam
 
 ![Zoeken](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

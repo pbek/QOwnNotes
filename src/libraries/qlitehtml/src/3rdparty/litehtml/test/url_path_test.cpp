@@ -29,122 +29,81 @@
 
 #include "litehtml/url_path.h"
 
+#include <gtest/gtest.h>
+
 #include <iostream>
 #include <utility>
 #include <vector>
-
-#include <gtest/gtest.h>
 
 using namespace litehtml;
 
 namespace {
 
 struct url_path_testcase {
-    tstring base;
-    tstring path;
-    tstring expected;
+  tstring base;
+  tstring path;
+  tstring expected;
 };
 
-} // namespace
+}  // namespace
 
-TEST(URLPathTest, Absolute)
-{
-    std::vector<std::pair<tstring, bool>> testcases = {
-        { _t(""), false },
-        { _t("a"), false },
-        { _t("a/"), false },
-        { _t("a/b"), false },
-        { _t("a/b/"), false },
-        { _t("a/b/c"), false },
-        { _t("a/b/c/"), false },
+TEST(URLPathTest, Absolute) {
+  std::vector<std::pair<tstring, bool>> testcases = {
+      {_t(""), false}, {_t("a"), false}, {_t("a/"), false}, {_t("a/b"), false}, {_t("a/b/"), false}, {_t("a/b/c"), false}, {_t("a/b/c/"), false},
 
-        { _t("/"), true },
-        { _t("/a"), true },
-        { _t("/a/"), true },
-        { _t("/a/b"), true },
-        { _t("/a/b/"), true },
-        { _t("/a/b/c"), true },
-        { _t("/a/b/c/"), true },
-    };
+      {_t("/"), true}, {_t("/a"), true}, {_t("/a/"), true}, {_t("/a/b"), true}, {_t("/a/b/"), true}, {_t("/a/b/c"), true}, {_t("/a/b/c/"), true},
+  };
 
-    for (auto& testcase : testcases) {
-        EXPECT_EQ(testcase.second, is_url_path_absolute(testcase.first));
-    }
+  for (auto& testcase : testcases) {
+    EXPECT_EQ(testcase.second, is_url_path_absolute(testcase.first));
+  }
 }
 
-TEST(URLPathTest, DirectoryName)
-{
-    std::vector<std::pair<tstring, tstring>> testcases = {
-        { _t(""), _t(".") },
-        { _t("a"), _t(".") },
-        { _t("a/"), _t("a/") },
-        { _t("a/b"), _t("a/") },
-        { _t("a/b/"), _t("a/b/") },
-        { _t("a/b/c"), _t("a/b/") },
-        { _t("a/b/c/"), _t("a/b/c/") },
+TEST(URLPathTest, DirectoryName) {
+  std::vector<std::pair<tstring, tstring>> testcases = {
+      {_t(""), _t(".")},  {_t("a"), _t(".")},  {_t("a/"), _t("a/")},   {_t("a/b"), _t("a/")},   {_t("a/b/"), _t("a/b/")},   {_t("a/b/c"), _t("a/b/")},   {_t("a/b/c/"), _t("a/b/c/")},
 
-        { _t("/"), _t("/") },
-        { _t("/a"), _t("/") },
-        { _t("/a/"), _t("/a/") },
-        { _t("/a/b"), _t("/a/") },
-        { _t("/a/b/"), _t("/a/b/") },
-        { _t("/a/b/c"), _t("/a/b/") },
-        { _t("/a/b/c/"), _t("/a/b/c/") },
-    };
+      {_t("/"), _t("/")}, {_t("/a"), _t("/")}, {_t("/a/"), _t("/a/")}, {_t("/a/b"), _t("/a/")}, {_t("/a/b/"), _t("/a/b/")}, {_t("/a/b/c"), _t("/a/b/")}, {_t("/a/b/c/"), _t("/a/b/c/")},
+  };
 
-    for (auto& testcase : testcases) {
-        EXPECT_EQ(testcase.second, url_path_directory_name(testcase.first));
-    }
+  for (auto& testcase : testcases) {
+    EXPECT_EQ(testcase.second, url_path_directory_name(testcase.first));
+  }
 }
 
-TEST(URLPathTest, BaseName)
-{
-    std::vector<std::pair<tstring, tstring>> testcases = {
-        { _t(""), _t("") },
-        { _t("a"), _t("a") },
-        { _t("a/"), _t("") },
-        { _t("a/b"), _t("b") },
-        { _t("a/b/"), _t("") },
-        { _t("a/b/c"), _t("c") },
-        { _t("a/b/c/"), _t("") },
+TEST(URLPathTest, BaseName) {
+  std::vector<std::pair<tstring, tstring>> testcases = {
+      {_t(""), _t("")},  {_t("a"), _t("a")},  {_t("a/"), _t("")},  {_t("a/b"), _t("b")},  {_t("a/b/"), _t("")},  {_t("a/b/c"), _t("c")},  {_t("a/b/c/"), _t("")},
 
-        { _t("/"), _t("") },
-        { _t("/a"), _t("a") },
-        { _t("/a/"), _t("") },
-        { _t("/a/b"), _t("b") },
-        { _t("/a/b/"), _t("") },
-        { _t("/a/b/c"), _t("c") },
-        { _t("/a/b/c/"), _t("") },
-    };
+      {_t("/"), _t("")}, {_t("/a"), _t("a")}, {_t("/a/"), _t("")}, {_t("/a/b"), _t("b")}, {_t("/a/b/"), _t("")}, {_t("/a/b/c"), _t("c")}, {_t("/a/b/c/"), _t("")},
+  };
 
-    for (auto& testcase : testcases) {
-        EXPECT_EQ(testcase.second, url_path_base_name(testcase.first));
-    }
+  for (auto& testcase : testcases) {
+    EXPECT_EQ(testcase.second, url_path_base_name(testcase.first));
+  }
 }
 
-TEST(URLPathTest, Append)
-{
-    std::vector<url_path_testcase> testcases = {
-        { _t(""), _t("a"), _t("a") },
-        { _t("/"), _t("a"), _t("/a") },
-        { _t("/a"), _t(""), _t("/a") },
-        { _t("/a"), _t("b"), _t("/a/b") },
-    };
+TEST(URLPathTest, Append) {
+  std::vector<url_path_testcase> testcases = {
+      {_t(""), _t("a"), _t("a")},
+      {_t("/"), _t("a"), _t("/a")},
+      {_t("/a"), _t(""), _t("/a")},
+      {_t("/a"), _t("b"), _t("/a/b")},
+  };
 
-    for (auto& testcase : testcases) {
-        EXPECT_EQ(testcase.expected, url_path_append(testcase.base, testcase.path));
-    }
+  for (auto& testcase : testcases) {
+    EXPECT_EQ(testcase.expected, url_path_append(testcase.base, testcase.path));
+  }
 }
 
-TEST(URLPathTest, Resolve)
-{
-    std::vector<url_path_testcase> testcases = {
-        { _t("/"), _t("a"), _t("/a") },
-        { _t("/a"), _t("b"), _t("/b") },
-        { _t("/a"), _t("/b"), _t("/b") },
-    };
+TEST(URLPathTest, Resolve) {
+  std::vector<url_path_testcase> testcases = {
+      {_t("/"), _t("a"), _t("/a")},
+      {_t("/a"), _t("b"), _t("/b")},
+      {_t("/a"), _t("/b"), _t("/b")},
+  };
 
-    for (auto& testcase : testcases) {
-        EXPECT_EQ(testcase.expected, url_path_resolve(testcase.base, testcase.path));
-    }
+  for (auto& testcase : testcases) {
+    EXPECT_EQ(testcase.expected, url_path_resolve(testcase.base, testcase.path));
+  }
 }

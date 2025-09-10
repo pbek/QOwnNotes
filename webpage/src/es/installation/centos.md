@@ -1,5 +1,3 @@
 # Instalar en CentOS Linux
 
-Hay paquetes creados por la comunidad para **CenOS 7/8, AlmaLinux 8 y RockLinux 8** por *Jörg Woll* en [paquetes de QOwnNotes para x86_64 para el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html), [paquetes de QOwnNotes para ARM para el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html) y [paquetes de QOwnNotes para x86_64 para el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html).
-
-¡Muchísimas gracias a Jörg!
+Hay paquetes creados por la comunidad para **RHEL 8/9, AlmaLinux 8/9, RockyLinux 8/9, CentOS 8/9 y Oracle 8/9** por _Jörg Woll_ en [Paquetes de QOwnNotes para x86_64 para EL7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html), con CentOS 7 EOL obsoleto, [Paquetes de QOwnNotes para ARM para EL7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html), con CentOS 7 EOL obsoleto, [Paquetes de QOwnNotes para x86_64 para EL8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html). [Paquetes de QOwnNotes para x86_64 para EL9](http://wilhelm949.spdns.org:10443/w3bservice/9/x86_64/w3bservice/Packages/repoview/qownnotes.html).

@@ -27,6 +27,7 @@ Als u problemen heeft, importeert u de sleutel handmatig met:
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 Houd er rekening mee dat het gedeelte "Fedora_40" in de bovenstaande code uw gebruikte versie van Fedora moet weerspiegelen (d.w.z. "Fedora_39", "Fedora_38" enz.)
 :::
 
@@ -39,6 +40,7 @@ Voer de volgende shell-opdracht uit als root om de opslagplaats te vertrouwen.
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 Nogmaals: merk op dat het gedeelte "Fedora_40" in de bovenstaande code uw gebruikte versie van Fedora moet weerspiegelen (d.w.z. "Fedora_39", "Fedora_38" enz.)
 
 Voer vervolgens de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
@@ -64,7 +66,7 @@ dnf install qownnotes
 
 ### Problemen met GPG-keys?
 
-Veranderingen in het cryptografische beleid van Fedora kunnen betekenen dat "oude" (verlopen) repositorysleutels niet *automatisch* uitgebreid zijn. Dit kan tot problemen leiden bij het *updaten* van QOwnNotes.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
 
 **Detail:** Als u een probleem heeft met ongeldige sleutels (d.w.z. GPG-fouten) zoalss `certificaat is niet geldig` en/of `sleutel is niet geldig` vanwege het verstrijken van de sleutel, moet deze opdracht op de terminal de verlopen sleutel verwijderen:
 
@@ -74,4 +76,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 Gedetailleerde uitleg van de opdracht is beschikbaar op GitHub in een [onderwerp](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) gerelateerd aan dit exacte probleem.
 
-Zodra de verlopen sleutel is verwijderd, moet u opnieuw *importeren* de ** huidige ** sleutel handmatig zoals beschreven in het begin van deze installatie-instructies.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

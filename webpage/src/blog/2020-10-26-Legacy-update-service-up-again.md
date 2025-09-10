@@ -9,7 +9,6 @@ order: 20201026000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 The legacy update service is up again for older versions of QOwnNotes.
 
 There already was a legacy update service implemented for [api.qownnotes.org](https://api.qownnotes.org/), but the proxying to it didn't work properly.

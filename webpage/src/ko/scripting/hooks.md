@@ -1,9 +1,9 @@
 # Hooks
 
-NoteStored에서
-------------
+## NoteStored에서
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 기능은 노트가 디스크에 저장될 때 호출됩니다
@@ -17,10 +17,10 @@ function onNoteStored(note);
 
 [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml) 예제를 살펴보는 것이 좋습니다.
 
-noteOpenedHook
---------------
+## noteOpenedHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 노트가 열린 후에 호출됩니다
@@ -32,10 +32,10 @@ function noteOpenedHook(note);
 
 [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml) 예제를 살펴보는 것이 좋습니다.
 
-noteDoubleClickedHook
----------------------
+## noteDoubleClickedHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 함수는 노트를 더블클릭한 후 호출됩니다
@@ -47,14 +47,14 @@ function noteDoubleClickedHook(note);
 
 [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml) 예제를 살펴보는 것이 좋습니다.
 
-insertMediaHook
----------------
+## insertMediaHook
 
 이 기능은 현재 노트에 미디어 파일을 삽입할 때 호출됩니다.
 
 이 함수가 여러 스크립트에 정의된 경우 비어 있지 않은 문자열을 반환하는 첫 번째 스크립트가 승리합니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * @param fileName string the file path of the source media file before it was copied to the media folder
@@ -66,14 +66,14 @@ function insertMediaHook(fileName, markdownText);
 
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
-insertAttachmentHook
---------------------
+## insertAttachmentHook
 
 이 기능은 첨부 파일이 현재 노트에 삽입될 때 호출됩니다.
 
 이 함수가 여러 스크립트에 정의된 경우 비어 있지 않은 문자열을 반환하는 첫 번째 스크립트가 승리합니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
@@ -85,10 +85,10 @@ function insertAttachmentHook(fileName, markdownText);
 
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
-insertingFromMimeDataHook
--------------------------
+## insertingFromMimeDataHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 `Ctrl + Shift + V`를 사용해 노트에 HTML 또는 미디어 파일을 붙여넣을 때 호출됩니다
@@ -102,10 +102,10 @@ function insertingFromMimeDataHook(text, html);
 
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) 또는 [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml) 예제를 살펴보는 것이 좋습니다.
 
-handleNoteTextFileNameHook
---------------------------
+## handleNoteTextFileNameHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 노트가 디스크에 저장될 때 다음과 같은 경우에 호출됩니다
@@ -126,10 +126,10 @@ function handleNoteTextFileNameHook(note);
 
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 또는 [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml) 예제를 살펴보는 것이 좋습니다.
 
-handleNoteNameHook
-------------------
+## handleNoteNameHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 기능은 노트에 대한 노트 이름이 결정될 때 호출됩니다
@@ -144,14 +144,16 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
+노트 이름은 주로 목록에 노트를 표시할 때 사용됩니다.
+
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
 파일 이름을 노트 이름으로 사용하도록 설정이 활성화되어 있는 경우, 이 훅을 사용하는 것이 좋지 않을 수 있습니다.
 
-handleNewNoteHeadlineHook
--------------------------
+## handleNewNoteHeadlineHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 노트를 만들기 전에 이 함수를 호출합니다
@@ -170,10 +172,10 @@ function handleNewNoteHeadlineHook(headline);
 
 [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml) 예제를 살펴보는 것이 좋습니다.
 
-preNoteToMarkdownHtmlHook
--------------------------
+## preNoteToMarkdownHtmlHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 노트의 마크다운 HTML이 생성되기 전에 호출됩니다
@@ -195,10 +197,10 @@ function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 
 [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml) 예제를 살펴보는 것이 좋습니다.
 
-noteToMarkdownHtmlHook
-----------------------
+## noteToMarkdownHtmlHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 노트의 마크다운 html이 생성될 때 호출됩니다
@@ -220,10 +222,10 @@ function noteToMarkdownHtmlHook(note, html, forExport);
 
 지원되는 모든 css 스타일 목록은 [지원되는 HTML 하위 집합 문서](http://doc.qt.io/qt-5/richtext-html-subset.html)를 참조하세요.
 
-encryptionHook
---------------
+## encryptionHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 텍스트를 암호화하거나 해독해야 할 때 호출됩니다
@@ -238,12 +240,12 @@ function encryptionHook(text, password, decrypt);
 
 [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml) 또는 [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml)의 예를 살펴볼 수 있습니다.
 
-noteTaggingHook
----------------
+## noteTaggingHook
 
 예를 들어 노트에 `@tag1`, `@tag2`, `@tag3`와 같은 특수 텍스트를 사용하여 고유한 노트 태그 지정 메커니즘을 구현할 수 있습니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 노트에 대한 노트 태그 지정 처리
@@ -260,26 +262,27 @@ noteTaggingHook
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
--   새 기능을 구현하는 스크립트가 활성화되는 즉시 `noteTaggingHook`후크 노트 태그 지정은 해당 기능으로 처리됩니다
--   다음 기능은 QOwnNotes 사용자 인터페이스를 통해 작동해야 합니다
-    -   처음에 노트에서 `@tag` 와 같은 태그를 가져오고 현재 태그 할당을 덮어씁니다
-        -   태그 트리를 잃지 않고 노트에 대한 이전 할당만 손실됩니다
-        -   여전히 태그를 다른 태그로 이동할 수 있습니다
-        -   태그 트리에 같은 이름의 태그가 둘 이상 있는 경우 첫 번째 히트가 할당됩니다
-    -   노트에 태그를 추가하면 노트 텍스트에 태그가 추가됩니다
-    -   노트에서 태그를 제거하면 노트 텍스트에서 태그가 제거됩니다
-    -   태그 목록에서 태그를 제거하면 노트에서 해당 태그가 제거됩니다
-    -   태그 목록의 태그 이름을 바꾸면 노트의 태그 이름이 바뀝니다
-    -   노트 목록에 있는 노트에 대량 태그를 지정하면 해당 태그가 노트에 추가됩니다
-    -   노트 목록의 노트에서 태그를 대량으로 제거하면 노트에서 태그가 제거됩니다
-    -   태그 패널에서 태그가 이동된 경우 응용 프로그램은 선택한 모든 태그와 모든 노트의 하위 태그에 대해 일련의 `추가` 및 `제거` 작업을 트리거합니다
+- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
+- 다음 기능은 QOwnNotes 사용자 인터페이스를 통해 작동해야 합니다
+  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment to notes
+    - 여전히 태그를 다른 태그로 이동할 수 있습니다
+    - if more than one tag has the same name in your tag tree the first hit will be assigned
+  - 노트에 태그를 추가하면 노트 텍스트에 태그가 추가됩니다
+  - 노트에서 태그를 제거하면 노트 텍스트에서 태그가 제거됩니다
+  - removing of tags in the tag list will remove those tags from your notes
+  - 태그 목록에서 태그 이름을 변경하면 노트에 있는 태그 이름이 변경됩니다
+  - bulk tagging of notes in the note list will add those tags to your notes
+  - 노트 목록에서 태그를 대량으로 제거하면 해당 태그가 노트에서 제거됩니다
+  - 태그가 이동하면 응용 프로그램은 모든 노트에서 선택한 모든 태그와 그 하위에 대해 일련의 `추가` 및 `제거` 작업을 트리거합니다
 
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) 예제를 보고 자체 태그 메커니즘을 구현할 수 있습니다.
 
-::: 경고 노트 폴더를 다시 로드할 때마다 모든 노트에 대해 목록 작업이 실행되므로 `목록` 작업이 매우 빠릅니다! :::
+::: 경고 노트 폴더나 태그 트리가 새로고침될 때마다 모든 노트에 대해 실행되므로 `목록` 작업이 정말 빠르다는 것을 확인하세요!
 
-noteTaggingByObjectHook
-----------------------
+[mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp)에서 `reloadTagTree`을 찾을 때마다 그렇습니다. :::
+
+## noteTaggingByObjectHook
 
 [noteTaggingHook](#notetagginghook)과 유사하게 자신만의 노트 태그 지정 메커니즘을 구현할 수 있지만, 태그 트리 루트의 이름에 태그를 지정할 필요는 없습니다. 이렇게 하면 태그 목록만 사용하는 대신 전체 태그 트리를 사용할 수 있습니다.
 
@@ -288,6 +291,7 @@ noteTaggingByObjectHook
 또한 목록 작업에 대해 이미 존재하는 태그 Id `목록`을 제공하려면 누락된 태그를 직접 만들어야 합니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 노트에 대한 노트 태그 지정 처리
@@ -306,12 +310,12 @@ function noteTaggingByObjectHook(note, action, tag, newTagName);
 
 고유한 태그 지정 메커니즘을 구현하기 위해 [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml) 예제를 살펴볼 수 있습니다.
 
-autocompletionHook
-------------------
+## autocompletionHook
 
 자동 완성이 호출될 때 자동 완성 목록에 추가할 문자열 목록을 반환할 수 있습니다 (예를들면 <kbd>Ctrl + 스페이스 누르기</kbd>).
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 자동 완성을 호출합니다모든 스크립트 구성 요소에 대한 후크 기능
@@ -324,12 +328,12 @@ function callAutocompletionHook();
 
 [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml) 예제를 살펴볼 수 있습니다.
 
-websocketRawDataHook
---------------------
+## websocketRawDataHook
 
 이 후크는 웹 브라우저의 상황에 맞는 메뉴를 통해 QOwnNotes Web Companion 브라우저 확장에서 데이터를 전송할 때 호출됩니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * @param requestType은 "page" 또는 "selection"일 수 있습니다
@@ -344,12 +348,12 @@ function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData
 
 [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-new-note.qml) 및 [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml)의 예를 살펴볼 수 있습니다.
 
-onDetachedProcessCallback
--------------------------
+## onDetachedProcessCallback
 
 [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background)의 스크립트 스레드 실행이 완료되면 이 후크가 호출됩니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 스크립트 스레드 실행이 완료되면 호출됩니다.
@@ -365,10 +369,10 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 
 [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml) 예제를 살펴볼 수 있습니다.
 
-windowStateChangedHook
---------------
+## windowStateChangedHook
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 함수는 WindowStateChange 이벤트가 트리거된 후 호출됩니다
@@ -380,12 +384,12 @@ function windowStateChangedHook(windowState);
 
 [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml) 예제를 살펴볼 수 있습니다.
 
-workspaceSwitchedHook
-----------------------
+## workspaceSwitchedHook
 
 이 후크는 작업 공간이 전환될 때 호출됩니다.
 
 ### 메서드 호출 및 매개 변수
+
 ```js
 /**
  * 이 기능은 작업 공간이 전환될 때 호출됩니다
@@ -398,36 +402,36 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 
 [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml) 예제를 살펴볼 수 있습니다.
 
-openAiBackendsHook
-------------------
+## openAiBackendsHook
 
 이 후크는 OpenAI 서비스 구성이 다시 로드될 때 호출됩니다. 예를들면, 이 작업은 스크립트 엔진이 다시 로드될 때도 수행됩니다.
 
-사용자의 OpenAI API 호환 LLM과 같이 사용자 정의 OpenAI 백엔드에 대한 구성을 제공할 수 있습니다.
+사용자 지정 OpenAI 백엔드에 대한 구성을 제공하는 데 사용할 수 있습니다 ChatGPT API 호환 LLM, 예를 들어 OpenAI, Claude 또는 Ollama와 같은 시스템입니다.
 
 ### 메소드 호출 및 매개변수
+
 ```js
 /**
-* 이 함수는 OpenAI 서비스 구성을 다시 로드할 때 호출됩니다
-* 새 OpenAI 백엔드에 대한 구성 매개 변수가 있는 개체 목록을 반환합니다
+* 이 기능은 OpenAI 서비스 구성이 다시 로드될 때 호출됩니다.
+* 새로운 OpenAI 백엔드에 대한 구성 매개변수가 있는 객체 목록을 반환합니다.
  */
 function openAiBackendsHook() {
-    return [
-        {
-            "id": "my-custom-ai",
-            "name": "My Custom AI",
-            "baseUrl": "http://localhost:5000",
-            "apiKey": "kDFJkjk3asdm",
-            "models": ["gpt-3.5-turbo", "gpt-4.0-turbo"],
-        },
-        {
-            "id": "my-custom-ai2",
-            "name": "My Custom AI 2",
-            "baseUrl": "http://localhost:5001",
-            "apiKey": "lOikf7eNdb9",
-            "models": ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
-        },
-    ];
+  return [
+    {
+      id: "my-custom-ai",
+      name: "My Custom AI",
+      baseUrl: "http://localhost:5000",
+      apiKey: "kDFJkjk3asdm",
+      models: ["gpt-3.5-turbo", "gpt-4.0-turbo"],
+    },
+    {
+      id: "my-custom-ai2",
+      name: "My Custom AI 2",
+      baseUrl: "http://localhost:5001",
+      apiKey: "lOikf7eNdb9",
+      models: ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
+    },
+  ];
 }
 ```
 

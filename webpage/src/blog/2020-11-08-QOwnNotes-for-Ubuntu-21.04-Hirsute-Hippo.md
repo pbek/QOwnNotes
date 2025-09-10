@@ -9,7 +9,6 @@ order: 20201108000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 QOwnNotes 20.11.3 is now available for Ubuntu 21.04 Hirsute Hippo via our PPA at [Ubuntu Launchpad](https://www.qownnotes.org/installation/ubuntu.html#ubuntu-linux-18-04-or-newer-elementary-os-linux-mint-18-or-newer).
 
 You can install it the usual way:

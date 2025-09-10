@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2024 Patrizio Bekerle -- <patrizio@bekerle.com>
+ * Copyright (c) 2014-2025 Patrizio Bekerle -- <patrizio@bekerle.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@ struct TerminalCmd;
 class QFile;
 class QDataStream;
 class QPrinter;
+class QJSValue;
 
 /*  Miscellaneous functions that can be useful */
 namespace Utils {
@@ -112,6 +113,7 @@ QDataStream &dataStreamRead(QDataStream &is, QPrinter &printer);
 void storePrinterSettings(QPrinter *printer, const QString &settingsKey);
 void loadPrinterSettings(QPrinter *printer, const QString &settingsKey);
 bool isNoteEditingAllowed();
+bool areMenuIconsHidden();
 bool useInternalExportStylingForPreview();
 bool isSocketServerEnabled();
 bool isWebAppSupportEnabled();
@@ -169,6 +171,9 @@ QString getBaseUrlFromUrlString(const QString &urlString, bool withBasePath = fa
 QString createAbsolutePathsInHtml(const QString &html, const QString &url);
 int getPreviewRefreshDebounceTime();
 int getMaximumNoteFileSize();
+QString encodeFilePath(const QString &filePath);
+QString detectFileFormat(const QString &text);
+QString jsValueToJsonString(const QJSValue &value);
 }    // namespace Misc
 }    // namespace Utils
 

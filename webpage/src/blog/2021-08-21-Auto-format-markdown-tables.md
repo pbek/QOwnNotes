@@ -13,11 +13,11 @@ order: 20210821000000
 Did you know you can auto-format Markdown tables with the simple shortcut <kbd>Ctrl</kbd> + <kbd>Space</kbd> while the cursor in inside the table?
 
 ```markdown
-|    Tables        | Are           | Cool  |
-| -------------------- |:-------------:| ------------:|
-| col 3 is      | right-aligned     | $1600 |
-|  col 2 is      | centered      |   $12     |
-| zebra stripes    | are neat      |        $1 |
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 ```
 
 becomes...

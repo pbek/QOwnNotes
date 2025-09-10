@@ -2,17 +2,17 @@
 
 Skorzystaj z opcji poprawiania błędów w pisowni.
 
-::: tip
-Wskazówka QOwnNotes ma wbudowany **Menedżer słownika** (w menu *Edycja*), który umożliwia pobieranie i usuwanie słowników (jeśli nie możesz znaleźć swojego języka, poniżej znajdziesz instrukcje, jak poprosić o dodanie słownika). Jeśli chcesz pobrać słowniki ręcznie, możesz skorzystać z poniższych instrukcji.
+::: tip Info
+QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). Jeśli chcesz pobrać słowniki ręcznie, możesz skorzystać z poniższych instrukcji.
 :::
 
 - W systemie **Linux** możesz zainstalować słowniki Hunspell dla swojego języka, korzystając z menedżera pakietów swojej dystrybucji.
-    - Jeśli potrzebujesz dodać kolejne pliki językowe, możesz to zrobić w lokalizacji `~/.local/share/hunspell` lub `/usr/share/hunspell`.
-    - Jeśli korzystasz z pakietu Snap oprogramowania QOwnNotes, dla plików językowych również możesz użyć lokalizacji `~/hunspell`, ponieważ Snap nie ma dostępu do `~/.local`.
+  - If you need to add additional language files you can do so in `~/.local/share/hunspell` or `/usr/share/hunspell`.
+  - If you are using the Snap package of QOwnNotes you can also use `~/hunspell` for language files, since the Snap can't access `~/.local`
 
 - W systemie **Windows** musisz skopiować słowniki Hunspell dla swojego języka do folderu `dicts` w folderze aplikacji QOwnNotes lub w ścieżce `C:\Użytkownicy\[username]\dicts`.
-    - Słowniki możesz pobrać z sekcji [słowników LibreOffice](https://github.com/LibreOffice/dictionaries).
-    - W systemie **macOS** musisz skopiować słowniki Hunspell dla swojego języka do lokalizacji `/Library/Spelling` lub `~/Library/Spelling`. Jeśli ten katalog nie istnieje, musisz go utworzyć.
+  - Słowniki możesz pobrać z sekcji [słowników LibreOffice](https://github.com/LibreOffice/dictionaries).
+  - W systemie **macOS** musisz skopiować słowniki Hunspell dla swojego języka do lokalizacji `/Library/Spelling` lub `~/Library/Spelling`. Jeśli ten katalog nie istnieje, musisz go utworzyć.
 
 Słowniki możesz pobrać z sekcji [słowników QOwnNotes](https://github.com/qownnotes/dictionaries). Aby znaleźć swój język i odpowiadający mu kod języka, posłuż się tabelą na końcu tego dokumentu.
 

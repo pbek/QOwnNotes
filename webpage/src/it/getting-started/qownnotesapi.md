@@ -1,6 +1,5 @@
 # QOwnNotesAPI Nextcloud App
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) può gestire l'**accesso** alle **note spostate nel cestino** e alle **versioni delle note** per te.

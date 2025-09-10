@@ -28,31 +28,28 @@
 #define FAKEVIM_STANDALONE
 
 #ifdef FAKEVIM_STANDALONE
-//#   include "private/fakevim_export.h"
+// #   include "private/fakevim_export.h"
 #endif
 
 #include <QObject>
 #include <QTextEdit>
-
 #include <functional>
 #include <vector>
 
 namespace FakeVim {
 namespace Internal {
 
-enum RangeMode
-{
+enum RangeMode {
     // Reordering first three enum items here will break
     // compatibility with clipboard format stored by Vim.
-    RangeCharMode,         // v
-    RangeLineMode,         // V
-    RangeBlockMode,        // Ctrl-v
+    RangeCharMode,     // v
+    RangeLineMode,     // V
+    RangeBlockMode,    // Ctrl-v
     RangeLineModeExclusive,
-    RangeBlockAndTailMode // Ctrl-v for D and X
+    RangeBlockAndTailMode    // Ctrl-v for D and X
 };
 
-struct Range
-{
+struct Range {
     Range() = default;
     Range(int b, int e, RangeMode m = RangeCharMode);
     QString toString() const;
@@ -63,11 +60,9 @@ struct Range
     RangeMode rangemode = RangeCharMode;
 };
 
-struct ExCommand
-{
+struct ExCommand {
     ExCommand() = default;
-    ExCommand(const QString &cmd, const QString &args = QString(),
-        const Range &range = Range());
+    ExCommand(const QString &cmd, const QString &args = QString(), const Range &range = Range());
 
     bool matches(const QString &min, const QString &full) const;
 
@@ -79,40 +74,35 @@ struct ExCommand
 };
 
 // message levels sorted by severity
-enum MessageLevel
-{
-    MessageMode,    // show current mode (format "-- %1 --")
-    MessageCommand, // show last Ex command or search
-    MessageInfo,    // result of a command
-    MessageWarning, // warning
-    MessageError,   // error
-    MessageShowCmd  // partial command
+enum MessageLevel {
+    MessageMode,       // show current mode (format "-- %1 --")
+    MessageCommand,    // show last Ex command or search
+    MessageInfo,       // result of a command
+    MessageWarning,    // warning
+    MessageError,      // error
+    MessageShowCmd     // partial command
 };
 
 template <typename Type>
-class Signal
-{
-public:
+class Signal {
+   public:
     using Callable = std::function<Type>;
 
     void connect(const Callable &callable) { m_callables.push_back(callable); }
 
-    template <typename ...Args>
-    void operator()(Args ...args) const
-    {
-        for (const Callable &callable : m_callables)
-            callable(args...);
-   }
+    template <typename... Args>
+    void operator()(Args... args) const {
+        for (const Callable &callable : m_callables) callable(args...);
+    }
 
-private:
+   private:
     std::vector<Callable> m_callables;
 };
 
-class FakeVimHandler : public QObject
-{
+class FakeVimHandler : public QObject {
     Q_OBJECT
 
-public:
+   public:
     explicit FakeVimHandler(QWidget *widget, QObject *parent = nullptr);
     ~FakeVimHandler() override;
 
@@ -123,7 +113,7 @@ public:
 
     static void updateGlobalMarksFilenames(const QString &oldFileName, const QString &newFileName);
 
-public:
+   public:
     void setCurrentFileName(const QString &fileName);
     QString currentFileName() const;
 
@@ -159,11 +149,12 @@ public:
 
     bool eventFilter(QObject *ob, QEvent *ev) override;
 
-    Signal<void(const QString &msg, int cursorPos, int anchorPos, int messageLevel)> commandBufferChanged;
+    Signal<void(const QString &msg, int cursorPos, int anchorPos, int messageLevel)>
+        commandBufferChanged;
     Signal<void(const QString &msg)> statusDataChanged;
     Signal<void(const QString &msg)> extraInformationChanged;
     Signal<void(const QList<QTextEdit::ExtraSelection> &selection)> selectionChanged;
-    Signal<void(const QString &needle)>  highlightMatches;
+    Signal<void(const QString &needle)> highlightMatches;
     Signal<void(bool *moved, bool *forward, QTextCursor *cursor)> moveToMatchingParenthesis;
     Signal<void(bool *result, QChar c)> checkForElectricCharacter;
     Signal<void(int beginLine, int endLine, QChar typedChar)> indentRegion;
@@ -186,14 +177,14 @@ public:
     Signal<void()> tabPreviousRequested;
     Signal<void()> tabNextRequested;
 
-public:
+   public:
     class Private;
 
-private:
+   private:
     Private *d;
 };
 
-} // namespace Internal
-} // namespace FakeVim
+}    // namespace Internal
+}    // namespace FakeVim
 
 Q_DECLARE_METATYPE(FakeVim::Internal::ExCommand)

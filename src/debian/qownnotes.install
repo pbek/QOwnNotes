@@ -74,4 +74,5 @@ languages/QOwnNotes_bs.qm usr/share/qt5/translations
 languages/QOwnNotes_mk.qm usr/share/qt5/translations
 languages/QOwnNotes_ko.qm usr/share/qt5/translations
 languages/QOwnNotes_et.qm usr/share/qt5/translations
+languages/QOwnNotes_en_GB.qm usr/share/qt5/translations
 QOwnNotes usr/bin

@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Relaciones de la nota" />
+    <div class="sheet">
+      Panel de relaciones de notas
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Modo portátil" />
     <div class="sheet">
       Modo portátil para memorias USB
@@ -142,12 +148,13 @@
 [QOwnNotes](https://www.qownnotes.org/) es la aplicación de **bloc de notas en formato Markdown** en archivos de texto plano de **código abierto** (GPL) para **GNU/Linux**, **macOS** y **Windows**, que (opcionalmente) funciona junto a las [**aplicaciones de notas**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) y [ownCloud](https://owncloud.org/).
 
 ::: tip
-Únase a nuestro [Telegram Group](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad de QOwnNotes.
+Únase a nuestro [grupo de Telegram](https://t.me/QOwnNotes) para discutir, aprender y conectarse con la comunidad de QOwnNotes.
 :::
 
 [Comprender el concepto de QOwnNotes](concept.md)
 
 ## Características
+
 - Puede usar sus **archivos de texto o markdown existentes**, sin necesidad de importarlos
 - QOwnNotes está escrito en C ++ y optimizado para **bajo consumo de recursos** (sin CPU y aplicación de Electron que consume mucha memoria)
 - **Importación de Evernote y Joplin**
@@ -170,8 +177,8 @@
 - **Modo Vim**
 - **[Aplicación web](web-app.md)** para **insertar fotos desde su teléfono móvil** en la nota actual en QOwnNotes en su escritorio
 
-
 ## Apariencia
+
 - **Resaltado de Markdown** de notas y un **modo de vista previa de Markdown**
 - **Soporte de tema de modo oscuro**
 - **Soporte de temas** para el **resaltador de sintáxis de Markdown**
@@ -182,6 +189,7 @@
 - **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
 
 ## Idioma
+
 - **Disponible en más de 60 idiomas diferentes** como inglés, alemán, francés, polaco, chino, japonés, ruso, portugués, húngaro, holandés y español
   - [Su ayuda](../contributing/translation.md) es muy apreciada para mejorar estas traducciones o para traducir QOwnNotes en más idiomas.
 

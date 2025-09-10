@@ -32,6 +32,8 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QHttpMultiPart>
+#include <QJSValue>
+#include <QJsonDocument>
 #include <QMimeDatabase>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -1301,6 +1303,22 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if "hideIconsInMenus" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::areMenuIconsHidden() {
+#ifdef Q_OS_MAC
+    // hide icons in menus by default on macOS
+    const bool defaultValue = true;
+#else
+    const bool defaultValue = false;
+#endif
+
+    return SettingsService().value(QStringLiteral("hideIconsInMenus"), defaultValue).toBool();
+}
+
+/**
  * Returns if "useInternalExportStyling" is turned on
  *
  * @return
@@ -1591,12 +1609,28 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
         qApp->property("arguments").toStringList().join(QStringLiteral("`, `")),
         withGitHubLineBreaks);
 
-    QString debug = QStringLiteral("0");
+    QString debug = QStringLiteral("no");
 #ifdef QT_DEBUG
-    debug = QStringLiteral("1");
+    debug = QStringLiteral("yes");
 #endif
 
     output += prepareDebugInformationLine(QStringLiteral("Qt Debug"), debug, withGitHubLineBreaks);
+
+    QString systemBotan = QStringLiteral("no");
+#ifdef USE_SYSTEM_BOTAN
+    systemBotan = QStringLiteral("yes");
+#endif
+
+    output += prepareDebugInformationLine(QStringLiteral("System Botan"), systemBotan,
+                                          withGitHubLineBreaks);
+
+    QString useLibGit2 = QStringLiteral("no");
+#ifdef USE_LIBGIT2
+    useLibGit2 = QStringLiteral("yes");
+#endif
+
+    output +=
+        prepareDebugInformationLine(QStringLiteral("Libgit2"), useLibGit2, withGitHubLineBreaks);
 
     output += prepareDebugInformationLine(QStringLiteral("Locale (system)"),
                                           QLocale::system().name(), withGitHubLineBreaks);
@@ -2123,8 +2157,14 @@ QString Utils::Misc::makeFileNameRandom(const QString &fileName, const QString &
     const quint32 number = QRandomGenerator::global()->generate();
 #endif
 
-    return baseName + QChar('-') + QString::number(number) + QChar('.') +
-           (overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix);
+    const QString &suffix = overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix;
+    QString randomName = baseName + QChar('-') + QString::number(number);
+
+    if (!suffix.isEmpty()) {
+        randomName += QChar('.') + suffix;
+    }
+
+    return randomName;
 }
 
 /**
@@ -2138,16 +2178,26 @@ QString Utils::Misc::findAvailableFileName(const QString &filePath, const QStrin
     baseName.truncate(200);
     const QString newSuffix = fileInfo.suffix();
     QString newBaseName = baseName;
-    QString newFileName = newBaseName + QStringLiteral(".") + newSuffix;
+    QString newFileName = newBaseName;
+
+    if (!newSuffix.isEmpty()) {
+        newFileName += QChar('.') + newSuffix;
+    }
+
     QString newFilePath = directoryPath + QDir::separator() + newFileName;
     QFile file(newFilePath);
     int nameCount = 0;
 
-    // check if file with this filename already exists
+    // Check if a file with this filename already exists
     while (file.exists()) {
-        // find new filename for the file
+        // Find a new filename for the file
         newBaseName = baseName + QStringLiteral("-") + QString::number(++nameCount);
-        newFileName = newBaseName + QStringLiteral(".") + newSuffix;
+        newFileName = newBaseName;
+
+        if (!newSuffix.isEmpty()) {
+            newFileName += QChar('.') + newSuffix;
+        }
+
         newFilePath = directoryPath + QDir::separator() + newFileName;
         file.setFileName(newFilePath);
 
@@ -2655,4 +2705,123 @@ int Utils::Misc::getPreviewRefreshDebounceTime() {
 
 int Utils::Misc::getMaximumNoteFileSize() {
     return SettingsService().value(QStringLiteral("maxNoteFileSize"), 1048576).toInt();
+}
+
+/**
+ * Percent encode each individual segment of a file path
+ * @param filePath
+ * @return
+ */
+QString Utils::Misc::encodeFilePath(const QString &filePath) {
+    // Split the path into segments to preserve the directory separators
+    QStringList segments = filePath.split('/');
+
+    // URL encode each segment individually
+    for (int i = 0; i < segments.size(); ++i) {
+        // Use QUrl::toPercentEncoding to properly encode special characters
+        segments[i] = QUrl::toPercentEncoding(segments[i], "/");
+    }
+
+    // Join the segments back together with forward slashes
+    return segments.join('/');
+}
+
+QString Utils::Misc::detectFileFormat(const QString &text) {
+    // Static regular expressions for format detection
+    static const QRegularExpression xmlRegex(
+        R"(^\s*(<\?xml\s+version\s*=\s*['"][0-9.]+['"](?:\s+encoding\s*=\s*['"][^'"]+['"])?(?:\s+standalone\s*=\s*['"](?:yes|no)['"])?\s*\?>|<[a-zA-Z][a-zA-Z0-9_\:-]*(?:\s+[a-zA-Z_][a-zA-Z0-9_\:-]*(?:\s*=\s*(?:"[^"]*"|'[^']*'))?)*\s*/?>))",
+        QRegularExpression::DotMatchesEverythingOption);
+
+    static const QRegularExpression htmlRegex(
+        R"(^\s*(?:<!DOCTYPE\s+html[^>]*>|<html\b[^>]*>))",
+        QRegularExpression::MultilineOption | QRegularExpression::CaseInsensitiveOption);
+
+    static const QRegularExpression cppRegex(
+        R"(^\s*(?:#include\s*(?:<[^>]+>|"[^"]+")|#define\s+\w+\s|#pragma\s+\w+|#ifndef\s+\w+|using\s+namespace\s+\w+\s*;|class\s+\w+\s*[{:]\s|namespace\s+\w+\s*\{))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression nixRegex(
+        R"(^\s*(?:\{\s*pkgs\s*(?:\?|=)\s*import\s+<nixpkgs>\s*\{\}|with\s+pkgs\s*;|stdenv\.mkDerivation\s+\{))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression sqlRegex(
+        R"(^\s*(?:SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|DROP|WITH)\s+)",
+        QRegularExpression::MultilineOption | QRegularExpression::CaseInsensitiveOption);
+
+    static const QRegularExpression pythonRegex(
+        R"(^\s*(?:import\s+\w+\s*(?:,\s*\w+)*\s*(?:;|$)|from\s+\w+\s+import\s+\w+|def\s+\w+\s*\([^)]*\)\s*:|class\s+\w+(?:\s*\([\w\s,]*\))?\s*:))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression javascriptRegex(
+        R"(^\s*(?:function\s+\w+\s*\([^)]*\)\s*\{|const\s+\w+\s*=\s*(?:[^;]+;|\{)|let\s+\w+\s*=\s*(?:[^;]+;|\{)|var\s+\w+\s*=\s*(?:[^;]+;|\{)|import\s+(?:\{[^}]*\}\s+from\s+)?['"][^'"]+['"]))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression iniRegex(
+        R"(^\s*(?:(?:\[[\w\s\-\.]+\]\s*$)|(?:[\w\.\-]+\s*=\s*[^\r\n]*$)|(?:;[^\r\n]*$)))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression yamlRegex(
+        R"(^\s*(?:---\s*$|(?:[a-zA-Z0-9_-]+\s*:\s*(?:(?:[^#\r\n]*)?$|(?:\r?\n\s+[^\s#-][^\r\n]*)+))|-\s+[^\s#][^\r\n]*(?:\r?\n\s+[^\s#-][^\r\n]*)*$))",
+        QRegularExpression::MultilineOption);
+
+    static const QRegularExpression jsonRegex(R"(^\s*(\{[\s\S]*\}|\[[\s\S]*\])\s*$)",
+                                              QRegularExpression::MultilineOption);
+
+    static const QRegularExpression csvRegex(
+        R"(^(?:[^=\r\n"]*|"(?:[^"]|"")*")(?:,(?:[^=\r\n"]*|"(?:[^"]|"")*"))+(?:\r?\n|$)(?:(?:[^=\r\n"]*|"(?:[^"]|"")*")(?:,(?:[^=\r\n"]*|"(?:[^"]|"")*"))+(?:\r?\n|$))*)",
+        QRegularExpression::MultilineOption);
+
+    // XML detection (specific, check early)
+    if (xmlRegex.globalMatch(text).hasNext()) {
+        return "xml";
+    }
+
+    // HTML detection (specific, check early)
+    if (htmlRegex.globalMatch(text).hasNext()) {
+        return "html";
+    }
+
+    // Nix detection (specific Nix syntax)
+    if (nixRegex.globalMatch(text).hasNext()) {
+        return "nix";
+    }
+
+    // SQL detection (SQL keywords)
+    if (sqlRegex.globalMatch(text).hasNext()) {
+        return "sql";
+    }
+
+    // JavaScript detection (JS-specific constructs)
+    if (javascriptRegex.globalMatch(text).hasNext()) {
+        return "js";
+    }
+
+    // INI detection (section headers or key-value pairs)
+    if (iniRegex.globalMatch(text).hasNext()) {
+        return "ini";
+    }
+
+    // YAML detection (key-value pairs or list items)
+    if (yamlRegex.globalMatch(text).hasNext()) {
+        return "yaml";
+    }
+
+    // JSON detection (object or array structure)
+    if (jsonRegex.globalMatch(text).hasNext()) {
+        return "json";
+    }
+
+    // CSV detection (comma-separated values with multiple lines)
+    if (csvRegex.globalMatch(text).hasNext()) {
+        return "csv";
+    }
+
+    // Default to plain text if no format is detected
+    return "txt";
+}
+
+QString Utils::Misc::jsValueToJsonString(const QJSValue &value) {
+    QVariant variant = value.toVariant();
+    QJsonDocument doc = QJsonDocument::fromVariant(variant);
+    return doc.toJson(QJsonDocument::Indented);
 }

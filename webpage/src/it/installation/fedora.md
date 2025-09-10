@@ -27,6 +27,7 @@ Se si ha qualche problema si può importare manualmente la chiave con:
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 Si noti che la porzione "Fedora_40" del codice antecedente si riferisce alla versione di Fedora attualmente in uso dall'utente (es: "Fedora_39", "Fedora_38", ecc...)
 :::
 
@@ -39,6 +40,7 @@ Eseguire il seguente comando shell come root per rendere attendibile il reposito
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 Di nuovo: si noti che la porzione "Fedora_40" del codice antecedente si riferisce alla versione di Fedora attualmente in uso dall'utente (es: "Fedora_39", "Fedora_38", ecc...)
 
 Dunque eseguire i seguenti comandi come root per aggiungere il repository e installare QOwnNotes da esso.
@@ -64,7 +66,7 @@ dnf install qownnotes
 
 ### Problemi con la chiave GPG?
 
-I cambiamenti nei criteri crittografici di Fedora potrebbero rendere "obsolete" (scadute) le chiavi del repository, le quali non vengono *automaticamente* aggiornate. Ciò potrebbe portare a problemi nell'*aggiornare* QOwnNotes.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
 
 **Dettagli:** se si hanno problemi con l'invalidità delle chiavi (es.: Errori GPG) come `certificate is not alive` (il certificato non è disponibile) e/o `key is not alive` (la chiave non è disponibile) a causa della scadenza di essi i seguenti comandi dovrebbero eliminare la chiave scaduta:
 
@@ -74,4 +76,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 La guida dettagliata dei comandi è disponibile su GitHub nel [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) riguardante questa esatta problematica.
 
-Una volta che la chiave scaduta è stata eliminata si deve nuovamente *importare* la chiave **corrente** manualmente come descritto all'inizio di queste istruzioni per l'installazione.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

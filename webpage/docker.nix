@@ -3,7 +3,6 @@
 }:
 
 let
-  nodejs = pkgs.nodejs;
   nginx = pkgs.nginx;
 
   npmPackage = pkgs.buildNpmPackage {

@@ -32,7 +32,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/
 sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB
 ```
 
-Jeśli wykonanie polecenia `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` się nie powiodło i pojawił się komunikat: `ERROR: FFC43FC94539B8B0 nie można podpisać lokalnie.`, możesz najpierw sprawdzić rzeczywisty identyfikator klucza *keyid*, np. za pomocą polecenia (i danych wyjściowych):
+If the command `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` fails with a message like: `ERROR: FFC43FC94539B8B0 could not be locally signed.`, you could first find out the actual _keyid_ of the downloaded key, i.e. with the command (and output):
 
 ```bash
 gpg /path/to/downloaded/home_pbek_QOwnNotes_Arch_Extra.key

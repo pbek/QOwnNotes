@@ -1,0 +1,32 @@
+name: 📄 Check formatting
+
+on:
+  push:
+    branches-ignore:
+      - release
+    tags-ignore:
+      - "*"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  format-check:
+    name: 📄 Check code formatting with "just format-all"
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧰 Checkout code
+        uses: actions/checkout@v5
+      - name: ⚙️ Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - name: 🔒 Cache dependencies
+        uses: cachix/cachix-action@v16
+        with:
+          # https://app.cachix.org/cache/qownnotes-devenv
+          name: qownnotes-devenv
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+      - name: 🔧 Install devenv.sh
+        run: nix profile install nixpkgs#devenv
+      - name: 🔨 Build the devenv shell and run any pre-commit hooks
+        run: devenv test

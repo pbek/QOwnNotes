@@ -1,6 +1,6 @@
+#include <assert.h>
 #include <gtest/gtest.h>
 
-#include <assert.h>
 #include "litehtml.h"
 #include "test/container_test.h"
 using namespace litehtml;

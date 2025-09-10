@@ -32,13 +32,11 @@ using namespace Utils;
 Qt::CaseSensitivity HostOsInfo::m_overrideFileNameCaseSensitivity = Qt::CaseSensitive;
 bool HostOsInfo::m_useOverrideFileNameCaseSensitivity = false;
 
-void HostOsInfo::setOverrideFileNameCaseSensitivity(Qt::CaseSensitivity sensitivity)
-{
+void HostOsInfo::setOverrideFileNameCaseSensitivity(Qt::CaseSensitivity sensitivity) {
     m_useOverrideFileNameCaseSensitivity = true;
     m_overrideFileNameCaseSensitivity = sensitivity;
 }
 
-void HostOsInfo::unsetOverrideFileNameCaseSensitivity()
-{
+void HostOsInfo::unsetOverrideFileNameCaseSensitivity() {
     m_useOverrideFileNameCaseSensitivity = false;
 }

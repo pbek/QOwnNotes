@@ -1,9 +1,9 @@
 # Hooks
 
-onNoteStored
-------------
+## onNoteStored
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when a note gets stored to disk
@@ -18,10 +18,10 @@ function onNoteStored(note);
 You may want to take a look at the example
 [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
-noteOpenedHook
---------------
+## noteOpenedHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called after a note was opened
@@ -34,10 +34,10 @@ function noteOpenedHook(note);
 You may want to take a look at the example
 [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/on-note-opened.qml).
 
-noteDoubleClickedHook
----------------------
+## noteDoubleClickedHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called after a note was double clicked
@@ -50,14 +50,14 @@ function noteDoubleClickedHook(note);
 You may want to take a look at the example
 [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/external-note-open.qml).
 
-insertMediaHook
----------------
+## insertMediaHook
 
 This function is called when a media file is inserted into the current note.
 
 If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
 
 ### Method call and parameters
+
 ```js
 /**
  * @param fileName string the file path of the source media file before it was copied to the media folder
@@ -70,14 +70,14 @@ function insertMediaHook(fileName, markdownText);
 You may want to take a look at the example
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-insertAttachmentHook
---------------------
+## insertAttachmentHook
 
 This function is called when an attachment file is inserted into the current note.
 
 If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
- 
+
 ### Method call and parameters
+
 ```js
 /**
  * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
@@ -90,10 +90,10 @@ function insertAttachmentHook(fileName, markdownText);
 You may want to take a look at the example
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
-insertingFromMimeDataHook
--------------------------
+## insertingFromMimeDataHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when html or a media file is pasted to a note with `Ctrl + Shift + V`
@@ -111,10 +111,10 @@ You may want to take a look at the example
 or
 [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
-handleNoteTextFileNameHook
---------------------------
+## handleNoteTextFileNameHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when a note gets stored to disk if
@@ -138,10 +138,10 @@ You may want to take a look at the example
 or
 [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
 
-handleNoteNameHook
-------------------
+## handleNoteNameHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when the note name is determined for a note
@@ -156,16 +156,18 @@ handleNoteNameHook
 function handleNoteNameHook(note);
 ```
 
+The note name is mainly used when showing the note in the lists.
+
 You may want to take a look at the example
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
 It may not be a good idea to use this hook if the setting to use the
 file name as note name is active.
 
-handleNewNoteHeadlineHook
--------------------------
+## handleNewNoteHeadlineHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called before a note is created
@@ -185,10 +187,10 @@ function handleNewNoteHeadlineHook(headline);
 You may want to take a look at the example
 [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-new-note-headline.qml).
 
-preNoteToMarkdownHtmlHook
--------------------------
+## preNoteToMarkdownHtmlHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called before the markdown html of a note is generated
@@ -211,10 +213,10 @@ function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 You may want to take a look at the example
 [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/preview-styling.qml).
 
-noteToMarkdownHtmlHook
-----------------------
+## noteToMarkdownHtmlHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when the markdown html of a note is generated
@@ -241,10 +243,10 @@ Please refer to the [Supported HTML
 Subset](http://doc.qt.io/qt-5/richtext-html-subset.html) documentation
 for a list of all supported css styles.
 
-encryptionHook
---------------
+## encryptionHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when text has to be encrypted or decrypted
@@ -263,13 +265,13 @@ You may want to take a look at the example
 or
 [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-rot13.qml).
 
-noteTaggingHook
----------------
+## noteTaggingHook
 
 You can implement your own note tagging mechanism for example with
 special text in your note like `@tag1`, `@tag2`, `@tag3`.
 
 ### Method call and parameters
+
 ```js
 /**
  * Handles note tagging for a note
@@ -286,29 +288,29 @@ special text in your note like `@tag1`, `@tag2`, `@tag3`.
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
--   as soon as a script is activated that implements the new function
-    `noteTaggingHook` note tagging will be handled by that function
--   following features should work via the QOwnNotes user interface
-    -   initially importing tags like `@tag` from your notes and
-        overwriting your current tag assignment
-        -   you will not lose your tags tree, just the former assignment
-            to notes
-        -   you can still move tags into other tags
-        -   if more than one tag has the same name in your tag tree the
-            first hit will be assigned
-    -   adding a tag to a note will add the tag to the note text
-    -   removing a tag from a note will remove the tag from the note text
-    -   removing of tags in the tag list will remove those tags from your
-        notes
-    -   renaming of tags in the tag list will rename those tags in your
-        notes
-    -   bulk tagging of notes in the note list will add those tags to your
-        notes
-    -   bulk removing of tags from notes in the note list will remove
-        those tags from your notes
-    -   the application will trigger a series of `add` and `remove` actions for
-        all selected tags and their children on all notes if tags are moved
-        in the tag panel
+- as soon as a script is activated that implements the new function
+  `noteTaggingHook` note tagging will be handled by that function
+- following features should work via the QOwnNotes user interface
+  - initially importing tags like `@tag` from your notes and
+    overwriting your current tag assignment
+    - you will not lose your tags tree, just the former assignment
+      to notes
+    - you can still move tags into other tags
+    - if more than one tag has the same name in your tag tree the
+      first hit will be assigned
+  - adding a tag to a note will add the tag to the note text
+  - removing a tag from a note will remove the tag from the note text
+  - removing of tags in the tag list will remove those tags from your
+    notes
+  - renaming of tags in the tag list will rename those tags in your
+    notes
+  - bulk tagging of notes in the note list will add those tags to your
+    notes
+  - bulk removing of tags from notes in the note list will remove
+    those tags from your notes
+  - the application will trigger a series of `add` and `remove` actions for
+    all selected tags and their children on all notes if tags are moved
+    in the tag panel
 
 You may want to take a look at the example
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml)
@@ -316,11 +318,12 @@ to implement your own tagging mechanism.
 
 ::: warning
 Make sure your `list` action is really fast, because it will be executed for
-every note every time the note folder is reloaded!
+every note every time the note folder or the tag tree is reloaded!
+
+That is every time you find `reloadTagTree` in [mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp).
 :::
 
-noteTaggingByObjectHook
-----------------------
+## noteTaggingByObjectHook
 
 Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note
 tagging mechanism, but you are not bound to tag names in the tag tree root.
@@ -331,9 +334,10 @@ of a tag name. And as result for the `list` action you need to provide a list of
 tag ids.
 
 This also means you need to create missing tags yourself to be able to provide
-a list of already existing tag ids for the `list` action.  
+a list of already existing tag ids for the `list` action.
 
 ### Method call and parameters
+
 ```js
 /**
  * Handles note tagging for a note
@@ -354,13 +358,13 @@ You may want to take a look at the example
 [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml)
 to implement your own tagging mechanism.
 
-autocompletionHook
-------------------
+## autocompletionHook
 
 You can return a list of strings to be added to the autocompletion list
 when the autocompletion is invoked (for example by pressing <kbd>Ctrl + Space</kbd>).
 
 ### Method call and parameters
+
 ```js
 /**
  * Calls the autocompletionHook function for all script components
@@ -374,13 +378,13 @@ function callAutocompletionHook();
 You may want to take a look at the example
 [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-websocketRawDataHook
---------------------
+## websocketRawDataHook
 
 This hook is called when data is sent from the QOwnNotes Web Companion browser
 extension via the web browser's context menu.
 
 ### Method call and parameters
+
 ```js
 /**
  * @param requestType can be "page" or "selection"
@@ -398,13 +402,13 @@ You may want to take a look at the examples
 and
 [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
-onDetachedProcessCallback
--------------------------
+## onDetachedProcessCallback
 
 This hook is called when a script thread of [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background)
 is done executing.
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when a script thread is done executing.
@@ -421,10 +425,10 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 You may want to take a look at the example
 [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/callback.qml).
 
-windowStateChangedHook
---------------
+## windowStateChangedHook
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called after a WindowStateChange event was triggered
@@ -437,12 +441,12 @@ function windowStateChangedHook(windowState);
 You may want to take a look at the example
 [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/window-state-changed.qml).
 
-workspaceSwitchedHook
-----------------------
+## workspaceSwitchedHook
 
 This hook is called when workspaces are switched.
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when workspaces are switched
@@ -456,8 +460,7 @@ function workspaceSwitchedHook(oldUuid, newUuid);
 You may want to take a look at the example
 [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/workspaces.qml).
 
-openAiBackendsHook
-------------------
+## openAiBackendsHook
 
 This hook is called, when the OpenAI service config is reloaded. For example,
 this is also done when the script engine is reloaded.
@@ -466,28 +469,29 @@ You can use it to provide config for custom OpenAI backends, like your own
 OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
 
 ### Method call and parameters
+
 ```js
 /**
  * This function is called when the OpenAI service config is reloaded
  * It returns a list of objects with config parameters for new OpenAI backends
  */
 function openAiBackendsHook() {
-    return [
-        {
-            "id": "my-custom-ai",
-            "name": "My Custom AI",
-            "baseUrl": "http://localhost:5000",
-            "apiKey": "kDFJkjk3asdm",
-            "models": ["gpt-3.5-turbo", "gpt-4.0-turbo"],
-        },
-        {
-            "id": "my-custom-ai2",
-            "name": "My Custom AI 2",
-            "baseUrl": "http://localhost:5001",
-            "apiKey": "lOikf7eNdb9",
-            "models": ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
-        },
-    ];
+  return [
+    {
+      id: "my-custom-ai",
+      name: "My Custom AI",
+      baseUrl: "http://localhost:5000",
+      apiKey: "kDFJkjk3asdm",
+      models: ["gpt-3.5-turbo", "gpt-4.0-turbo"],
+    },
+    {
+      id: "my-custom-ai2",
+      name: "My Custom AI 2",
+      baseUrl: "http://localhost:5001",
+      apiKey: "lOikf7eNdb9",
+      models: ["gpt-3.5-turbo2", "gpt-4.0-turbo2"],
+    },
+  ];
 }
 ```
 

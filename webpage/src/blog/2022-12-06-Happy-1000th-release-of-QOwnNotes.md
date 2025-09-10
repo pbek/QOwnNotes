@@ -1,6 +1,6 @@
 ---
 title: Happy 1000th release of QOwnNotes
-description: 
+description:
 image: /assets/img/1000th-release-QOwnNotes.webp
 date: 2022-12-06
 order: 20221206000000

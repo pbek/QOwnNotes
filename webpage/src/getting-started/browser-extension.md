@@ -7,20 +7,21 @@ image: /img/bookmarks.png
 Allows for clipping from a browser page and managing browser bookmarks across browsers and operating systems.
 
 ::: tip Info
+
 - QOwnNotes must be running for the Web Companion browser extension to work.
 - No internet connection needed. The browser extensions works **offline**.
-:::
+  :::
 
 ## Installation
 
 1. Get the extension
-    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
+   - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
 2. Add the Security Token to configure the extension.
-    - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
-    - Go to your browser's extension management location. Click into the QOwnNotes extension details.
-    - Paste the token into the Security Token field.
+   - The first time you click on the QOwnNotes browser extension icon you will receive a dialog box with a security token. Copy the token.
+   - Go to your browser's extension management location. Click into the QOwnNotes extension details.
+   - Paste the token into the Security Token field.
 3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Web clipper
@@ -33,11 +34,11 @@ Right-click on a webpage or selected text to use the **web-clipper** functionali
 If the web clipper doesn't work, please check if the QOwnNotes desktop application is
 running, and the Web Companion browser extension is configured with the security token.
 
-Also, make sure you accepted the consent dialog, when you first clicked the extension
+Also, make sure you accept the consent dialog when you first click the extension
 icon in the browser toolbar.
 
 If you are using Firefox, you also need to make sure that you have turned on the optional
-permission `Access your data for all websites` in the *Permission* extension settings,
+permission `Access your data for all websites` in the _Permission_ extension settings,
 otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
@@ -68,6 +69,7 @@ You can also import your browser bookmarks into QOwnNotes with the web companion
 - [Webpage name](https://www.example.com) #tag1 #tag2
 - [Webpage name](https://www.example.com) some description only
 - [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+
 * [Webpage name](https://www.example.com) the alternative list character also works
 ```
 

@@ -4,7 +4,7 @@
 
 소스 코드에서 직접 QOwnNotes를 빌드할 수도 있습니다.
 
-Git 저장소에서 직접 코드를 체크아웃합니다:
+git 저장소에서 마지막 릴리스의 코드를 직접 확인하세요:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-디버깅을 위해서는 QtCreator를 사용하는 것이 가장 쉽습니다. [Qt Creator](https://www.qt.io/download-qt-installer-oss)을 다운로드할 때 Qt6로 QOwnNotes를 구축하려면 패키지 `qtwebsockets`도 필요합니다. Windows에서 빌드할 경우 *MinGw 64-비트*를 고수해야 합니다. 리눅스의 경우 저장소에 QtCreator용 패키지가 있을 가능성이 높습니다.
+디버깅을 위해서는 QtCreator를 사용하는 것이 가장 쉽습니다. [Qt Creator](https://www.qt.io/download-qt-installer-oss)을 다운로드할 때 Qt6로 QOwnNotes를 구축하려면 패키지 `qtwebsockets`도 필요합니다. If you build under Windows, you want to stick to _MinGw 64-bit_. 리눅스의 경우 저장소에 QtCreator용 패키지가 있을 가능성이 높습니다.
 
 그런 다음 프로젝트 파일 `src/QOwnNotes.pro`를 열고 **빌드** / **빌드 프로젝트 QOwnNotes**를 클릭합니다.
 
@@ -33,7 +33,7 @@ make
 
 [GitHub의 QOnNotes](https://github.com/pbek/QOwnNotes)를 방문합니다.
 
-::: 팁 만약 당신이 프로젝트에 소스 코드를 제공하고 싶다면, 당신의 풀 요청을 `메인` 브랜치에 하세요. :::
+::: tip If you want to contribute source code to the project please make your pull requests to the `main` branch. :::
 
 ## 원본 보관소
 
@@ -48,6 +48,15 @@ make
 [Nix 패키지 관리자](https://nixos.org/download/)을 사용할 수 있다면 위에서 설명한 것처럼 소스 코드를 git-복제하고 빌드하기만 하면 됩니다:
 
 ```bash
-# 필요한 모든 도구를 얻으려면 nix-shell을 엽니다
-nix-shell
+# 아직 개발되지 않은 경우 개발 환경 보호
+nix-shell -p devenv
+
+# 필요한 모든 도구로 셸 열기
+devenv shell
+
+# 응용 프로그램 빌드
+just nix-build
+
+# 빌드된 응용 프로그램실행
+just nix-run
 ```

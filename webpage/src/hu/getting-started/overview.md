@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Hordozható üzemmód" />
     <div class="sheet">
       Hordozható mód USB-meghajtókhoz
@@ -142,12 +148,13 @@
 A [QOwnNotes](https://www.qownnotes.org/) a **nyílt forráskódú** (GPL) sima szövegű fájl **macOS** és **Windows**, amelyek (opcionálisan) együtt működnek a [Nextcloud](https://nextcloud.com/) és az [ownCloud](https://owncloud.org/) [**Notes alkalmazással**](https://github.com/nextcloud/notes).
 
 ::: tip
-Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, tanulás és egymással kapcsolatba lépésünk érdekében a QOwnNotes közösséggel.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [Értse meg a QOwnNotes fogalmát](concept.md)
 
 ## Funkciók
+
 - You can use your **existing text or markdown files**, no need for an import
 - A QOwnNotes C++ nyelven íródott, és **alacsony erőforrás-fogyasztásra** van optimalizálva (nincs CPU és memóriaéhes Electron alkalmazás)
 - **Evernote és Joplin import**
@@ -170,8 +177,8 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - **Vim mode**
 - **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-
 ## Megjelenés
+
 - A jegyzetek **jelölésének kiemelése** és egy **jelölés előnézeti mód**
 - **Sötét módú téma támogatás**
 - **Theming support** for the **Markdown syntax highlighting**
@@ -182,6 +189,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - **Az aktuális és a külsőleg megváltozott jegyzet közötti különbségeket** egy párbeszédpanelen **mutatják**
 
 ## Nyelvek
+
 - **Több mint 60 különböző nyelven érhető el**, mint például angol, német, francia, lengyel, kínai, japán, orosz, portugál, magyar, holland és spanyol
   - [Segítségét](../contributing/translation.md) nagyra értékelik ezen fordítások fejlesztése vagy a QOwnNotes több nyelvre történő lefordítása érdekében
 

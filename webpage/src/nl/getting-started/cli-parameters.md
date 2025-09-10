@@ -20,6 +20,7 @@ Als u problemen ondervindt met uw installatie van QOwnNotes, wilt u misschien de
 ```bash
 QOwnNotes --session test
 ```
+
 :::
 
 U kunt de toepassing op de opdrachtregelinterface op verschillende besturingssystemen op verschillende manieren uitvoeren:
@@ -47,6 +48,7 @@ QOwnNotes --dump-settings | pbcopy
 # Kopieer de instellingendump naar het klembord met clip op Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## Menuacties activeren na opstarten

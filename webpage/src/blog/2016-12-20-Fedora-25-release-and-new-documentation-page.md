@@ -16,6 +16,6 @@ Visit the [installation](https://www.qownnotes.org/installation/fedora.html) pag
 The **new documentation page** you will find on **[docs.qownnotes.org](http://docs.qownnotes.org/)**. It currently mainly exists of the scripting documentation.  
 If you want to **help** writing documentation you can add **reStrucuturedText files** in the [documentation folder on GitHub](https://github.com/pbek/QOwnNotes/tree/main/doc).
 
- ![Fedora 25](/img/blog/Fedora-25_reference.jpg "Fedora 25")
- 
- (image by [fossbytes.com](https://fossbytes.com))
+![Fedora 25](/img/blog/Fedora-25_reference.jpg "Fedora 25")
+
+(image by [fossbytes.com](https://fossbytes.com))

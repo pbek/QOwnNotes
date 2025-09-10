@@ -1,4 +1,4 @@
-# Formatos de hora:
+# Formatos de hora
 
 Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 

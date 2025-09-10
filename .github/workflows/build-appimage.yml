@@ -1,0 +1,106 @@
+name: 📣 Build AppImage
+
+on:
+  workflow_dispatch:
+#  push:
+#    branches-ignore:
+#      - release
+#    tags-ignore:
+#      - "*"
+#    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+#    paths:
+#      - "src/**"
+#      - ".github/workflows/build-appimage.yml"
+
+defaults:
+  run:
+    working-directory: src
+
+#--------------------------------------------------------------------------------
+# Define application name & version
+#--------------------------------------------------------------------------------
+
+env:
+  EXECUTABLE: "QOwnNotes"
+  APPLICATION: "QOwnNotes"
+  UNIXNAME: "QOwnNotes"
+  QMAKE_PROJECT: "QOwnNotes.pro"
+  PUBLISHER: "Patrizio Bekerle"
+  REPO_DIR: "/home/runner/work/QOwnNotes"
+  QT_MODULES: ""
+  QT6_MODULES: "qtwebsockets"
+  QMAKE: qmake
+  CORES: 16
+
+jobs:
+  #--------------------------------------------------------------------------------
+  # Workflow jobs (GNU/Linux, macOS & Windows)
+  #--------------------------------------------------------------------------------
+
+  #
+  # AppImage build
+  #
+  build-appimage:
+    runs-on: ubuntu-22.04
+    env:
+      QT_VERSION: 5.15.2
+      BUILD_DIR: build
+    name: "🐧 AppImage Qt 5.15.2"
+    steps:
+      - name: "🧰 Checkout"
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: "⚙️ Install Qt"
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{env.QT_VERSION}}
+          modules: ${{env.QT_MODULES}}
+          cache: true
+
+      - name: "⚙️ Install dependencies"
+        run: |
+          sudo apt-get update
+          sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
+      - name: "🚧 Compile application"
+        run: |
+          echo "#define RELEASE \"AppImage\"" > release.h
+          ${{env.QMAKE}} ${{env.QMAKE_PROJECT}} CONFIG+=release PREFIX=/usr
+          lrelease QOwnNotes.pro
+          make -j${{env.CORES}}
+      - name: "⚙️ Install linuxdeploy"
+        run: |
+          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
+          chmod +x linuxdeploy-x86_64.AppImage
+          chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
+      - name: "📦 Create AppImage"
+        run: |
+          export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
+          export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+          export EXTRA_QT_PLUGINS="svg;"
+          cp ../icons/icon.png QOwnNotes.png
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
+          mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
+          find ${{env.BUILD_DIR}}
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
+          rm linuxdeploy-x86_64.AppImage
+          rm linuxdeploy-plugin-qt-x86_64.AppImage
+          ls -hal *.AppImage
+          find -iname "*.AppImage"
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage || true
+          sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          ls -hal *.AppImage
+          find -iname "*.AppImage"
+          pwd
+      - name: "📤 Upload artifact: AppImage"
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{env.EXECUTABLE}}-x86_64.AppImage
+          path: src/${{env.EXECUTABLE}}-x86_64.AppImage
+      - name: "📤 Upload artifact: AppImage sha256sum"
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum

@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Zależności
@@ -38,7 +39,7 @@ Domyślnie do wyszukiwania używane jest `fzf`, ale możesz użyć `peco`, ustaw
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Przed użyciem menedżera fragmentów kodu musisz włączyć *serwer gniazd sieciowych* (2) w ustawieniach *Rozszerzenie przeglądarki / fragmenty poleceń* (1) w QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Następnie musisz pokazać token bezpieczeństwa (3) i skopiować go (4).
 
@@ -68,7 +69,9 @@ Jeśli dodasz `cmd:` przed blokiem kodu w wierszu, polecenie zostanie również 
 
 ```markdown
 - `echo I am a command` I am a description #tag1 #tag2 #tag3
+
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
+
 - cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
 
 <!-- Example for asking for user input -->

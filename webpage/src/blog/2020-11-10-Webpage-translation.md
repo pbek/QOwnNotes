@@ -9,7 +9,6 @@ order: 20201110000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-
 Since a week efforts are made to translate the webpage on [Crowdin](../contributing/translation.md).
 
 Currently the German translation of the webpage is [already online](https://www.qownnotes.org/de/) as "work in progress".

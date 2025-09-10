@@ -13,6 +13,6 @@ QOwnNotes was reviewed on webupd8.org. You will find the article at: [QOwnNotes 
 
 Thank you, Lionel R. for your interventions!
 
- ![QOwnNotes on webupd8.org](/img/blog/QOwnNotes-on-webupd8.org_reference.png "QOwnNotes on webupd8.org")
- 
- (image by [webupd8.org](http://www.webupd8.org/))
+![QOwnNotes on webupd8.org](/img/blog/QOwnNotes-on-webupd8.org_reference.png "QOwnNotes on webupd8.org")
+
+(image by [webupd8.org](http://www.webupd8.org/))

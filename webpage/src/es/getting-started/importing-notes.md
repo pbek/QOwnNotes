@@ -2,7 +2,7 @@
 
 ## Evernote
 
-Dispone de un cuadro de diálogo de importación desde Evernote que puede abrir mediante el menú `Nota▸Importar` para importar archivos *Enex*.
+Dispone de un cuadro de diálogo de importación desde Evernote que puede abrir mediante el menú `Nota/Importar` para importar archivos _Enex_.
 
 Se importarán asimismo las imágenes, los archivos adjuntos, las etiquetas, el formato básico y los metadatos.
 

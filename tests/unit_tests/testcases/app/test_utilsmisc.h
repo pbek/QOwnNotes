@@ -25,6 +25,18 @@ class TestUtilsMisc : public QObject {
     void testTransformEvernoteImportHyperlinks();
     void testGetBaseUrlFromUrlString();
     void testCreateAbsolutePathsInHtml();
+    void testDetectFileFormatTxt();
+    void testDetectFileFormatJson();
+    void testDetectFileFormatXml();
+    void testDetectFileFormatXmlWithoutDeclaration();
+    void testDetectFileFormatHtml();
+    void testDetectFileFormatCsv();
+    void testDetectFileFormatIni();
+    void testDetectFileFormatNix();
+    void testDetectFileFormatYaml();
+    void testDetectFileFormatSql();
+    void testDetectFileFormatJavaScript();
+    void testDetectFileFormatEdgeCases();
 };
 
 #endif    // TESTUTILSMISC_H

@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
+    <div class="sheet">
+      Note relations panel
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Modalità portatile" />
     <div class="sheet">
       Modalità portabile per chiavette USB
@@ -142,12 +148,13 @@
 [QOwnNotes](https://www.qownnotes.org/) è l'applicazione **open source** (GPL) file di testo semplice per **prendere note in markdown** per **GNU / Linux**, **macOS** e **Windows**, che (opzionalmente) funziona insieme all '[**applicazione note**](https://github.com/nextcloud/notes) di [Nextcloud](https://nextcloud.com/) e [ownCloud](https://owncloud.org/).
 
 ::: tip
-Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, imparare e entrare in contatto con la comunità QOwnNotes.
+Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
 [Comprendere il concetto di QOwnNotes](concept.md)
 
 ## Caratteristiche
+
 - Puoi usare i tuoi **pre-esistenti documenti di testo o markdown** senza la necessità di importarli
 - QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
 - **Importa Evernote e Joplin**
@@ -170,8 +177,8 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 - **Modalità Vim**
 - **[Applicazione web](web-app.md)** per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop</ul>
 
-
 ## Aspetto
+
 - **Evidenziazione del markdown** delle note e **modalità di anteprima del markdown**
 - **Supporto per temi in modalità scura**
 - **Supporto dei temi** per l'**evidenziazione della sintassi di Markdown**
@@ -182,6 +189,7 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 - **Le differenze** tra la nota corrente e la nota modificata esternamente sono **mostrate** in una finestra di dialogo
 
 ## Lingue
+
 - **Disponibile in più di 60 lingue diverse** come inglese, tedesco, francese, polacco, cinese, giapponese, russo, portoghese, ungherese, olandese e spagnolo
   - [Il tuo aiuto](../contributing/translation.md) è molto apprezzato per migliorare queste traduzioni o per tradurre QOwnNotes in più lingue
 

@@ -14,9 +14,9 @@
 컴퓨터에 대한 관리 권한이 없는 경우에는 휴대용 모드가 필요하지 않습니다. QOwnNotes 를 설치할 필요가 없습니다!
 :::
 
-## Windows XP
+## Windows 8.1 이상
 
-Qt는 버전 5.8에서 Windows XP에 대한 지원을 중단했지만, QOwnNotes도 이제 Qt 5.7로 구축되어 Windows XP 사용자가 계속 사용할 수 있습니다.
+Qt는 버전 5.8의 Windows XP 지원을 중단했지만, 이제 QOwnNotes도 Qt 5.7과 함께 구축되어 Windows XP 사용자가 계속 사용할 수 있게 되었습니다. Windows 8.1은 최신 Windows SDK를 기반으로 구축되었기 때문에 일반적인 QOwnNotes 빌드에 문제가 있습니다.
 
 직접 [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts)에서 ZIP 파일을 다운로드하여 원하는 폴더에 압축을 풀어야 합니다.
 
@@ -29,7 +29,7 @@ Qt는 버전 5.8에서 Windows XP에 대한 지원을 중단했지만, QOwnNotes
 
 ## Chocolatey
 
-[ Chocolatey](https://chocolatey.org/packages/qownnotes/)에는 커뮤니티에서 관리하는 QOwnotes 패키지가 있습니다.
+There is a community-maintained package of QOwnNotes at [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
 다음을 사용하여 설치할 수 있습니다:
 
@@ -39,10 +39,30 @@ choco install qownnotes
 
 ## Scoop
 
-[Scop](https://scoop.sh/)에 커뮤니티에서 관리하는 [QOwnotes ](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) 패키지가 있습니다. 엑스트라 버킷을 추가하면 휴대용 모드에서 QOwnNotes를 설치하는 데 사용할 수 있습니다.
+There is a [community-maintained package of QOwnNotes](https://github.com/ScoopInstaller/Extras/blob/master/bucket/qownnotes.json) at [Scoop](https://scoop.sh/). If you add the Extras bucket, you can use it to install QOwnNotes in portable mode.
 
 ```shell
 scoop bucket add extras
 scoop update
 scoop install qownnotes
+```
+
+## WinGet
+
+There is a [community-maintained package of QOwnNotes](https://github.com/microsoft/winget-pkgs/tree/master/manifests/p/pbek/QOwnNotes) for [WinGet](https://github.com/microsoft/winget-cli).
+
+You can install it with:
+
+```shell
+winget install qownnotes
+```
+
+## MSYS2
+
+There is a [community-maintained package of QOwnNotes](https://packages.msys2.org/base/mingw-w64-qownnotes) for [MSYS2](hhttps://www.msys2.org/).
+
+You can install it with:
+
+```shell
+pacman -S mingw-w64-qownnotes
 ```

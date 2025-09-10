@@ -36,6 +36,7 @@ HEADERS  += \
     $$APP_SRC_DIR/helpers/htmlentities.h \
     $$APP_SRC_DIR/helpers/clientproxy.h \
     $$APP_SRC_DIR/helpers/codetohtmlconverter.h \
+    $$APP_SRC_DIR/helpers/nomenuiconstyle.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
     $$APP_SRC_DIR/libraries/md4c/src/md4c.h \
     $$APP_SRC_DIR/libraries/md4c/src/md4c-html.h \
@@ -78,6 +79,7 @@ SOURCES += \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
     $$APP_SRC_DIR/helpers/clientproxy.cpp \
     $$APP_SRC_DIR/helpers/codetohtmlconverter.cpp \
+    $$APP_SRC_DIR/helpers/nomenuiconstyle.cpp \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
     $$APP_SRC_DIR/libraries/md4c/src/md4c.c \
     $$APP_SRC_DIR/libraries/md4c/src/md4c-html.c \

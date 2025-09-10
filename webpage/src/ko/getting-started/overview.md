@@ -21,6 +21,12 @@
     </div>
   </v-carousel-item>
   <v-carousel-item>
+    <img src="/screenshots/screenshot-note-relations.png" alt="노트 관계" />
+    <div class="sheet">
+      노트 관계 패널
+    </div>
+  </v-carousel-item>
+  <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="휴대용 모드" />
     <div class="sheet">
       USB 스틱용 휴대용 모드
@@ -141,11 +147,12 @@
 
 [QOwnNotes](https://www.qownnotes.org/)는 **GNU/리눅스**, **macOS** 및 **Windows**용 응용 프로그램을 사용하는 **오픈 소스** (GPL) **일반 텍스트 파일 마크다운 노트**로, (선택적으로) [Nextcloud](https://nextcloud.com/) 및 [ownCloud](https://owncloud.org/)의 [Notes 응용 프로그램](https://github.com/nextcloud/notes)과 함께 작동합니다.
 
-::: 팁 [Telegram 그룹](https://t.me/QOwnNotes)에 가입하여 QOnNotes 커뮤니티에 대해 토론하고, 배우고, 연결하십시오. :::
+::: tip Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community. :::
 
 [QOwnNotes의 개념 이해](concept.md)
 
 ## 기능
+
 - 가져오기 없이 **기존 텍스트 또는 마크다운 파일**을 사용할 수 있습니다
 - QOwnNotes는 C++로 작성되었으며 **낮은 리소스 소비**에 최적화되어 있습니다 (CPU 및 메모리 사용량이 많은 일렉트론 앱 없음)
 - **Evernote 및 Joplin 가져오기**
@@ -168,8 +175,8 @@
 - **Vim 모드**
 - 바탕 화면의 QOwnNotes에서 **휴대폰의 사진을 현재 노트에 삽입**하는 **[웹 응용 프로그램](web-app.md)**
 
-
 ## 외관
+
 - 노트의 **마크다운 강조 표시** 및 **마크다운 미리 보기 모드**
 - **어두운 모드 테마 지원**
 - **마크다운 구문 강조**에 대한 **디밍 지원**
@@ -180,6 +187,7 @@
 - 현재 노트와 외부적으로 변경된 노트 간의 **차이**가 대화 상자에 **표시**됩니다
 
 ## 언어
+
 - 영어, 한국어, 독일어, 프랑스어, 폴란드어, 중국어, 일본어, 러시아어, 포르투갈어, 헝가리어, 네덜란드어 및 스페인어와 같은 **60개 이상의 다양한 언어**로 제공됩니다
   - 이러한 번역을 개선하거나 QOnNotes를 더 많은 언어로 번역할 수 있도록 [도움](../contributing/translation.md)을 주시면 감사하겠습니다
 

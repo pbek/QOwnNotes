@@ -22,8 +22,9 @@
 #define LANGUAGEFILTER_H
 
 #include <QString>
-#include "tokenizer_p.h"
+
 #include "sonnetcore_export.h"
+#include "tokenizer_p.h"
 
 namespace Sonnet {
 class LanguageFilterPrivate;
@@ -35,11 +36,10 @@ This class takes fragments produced by supplied tokenizer and provides additiona
 language used in each fragment and if there is spell and grammar checker suitable for the fragment.
 
 */
-class LanguageFilter : public AbstractTokenizer
-{
-public:
-    /** Creates language filter for given tokenizer. LanguageFilter takes complete ownership of given tokenizer.
-    This means that no source's methods should be called anymore.
+class LanguageFilter : public AbstractTokenizer {
+   public:
+    /** Creates language filter for given tokenizer. LanguageFilter takes complete ownership of
+    given tokenizer. This means that no source's methods should be called anymore.
     */
     LanguageFilter(AbstractTokenizer *source);
     LanguageFilter(const LanguageFilter &other);
@@ -53,14 +53,15 @@ public:
     bool isSpellcheckable() const;
 
     /** Returns true if there is grammar checker installed for last token's language */
-//  bool isGrammarCheckable() const;
+    //  bool isGrammarCheckable() const;
     void setBuffer(const QString &buffer) override;
     bool hasNext() const override;
     Token next() override;
     QString buffer() const override;
     void replace(int position, int len, const QString &newWord) override;
-private:
+
+   private:
     LanguageFilterPrivate *const d;
 };
-}
+}    // namespace Sonnet
 #endif

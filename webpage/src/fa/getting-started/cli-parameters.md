@@ -20,6 +20,7 @@
 ```bash
 QOwnNotes --تست دوره
 ```
+
 :::
 
 شما می توانید برنامه را به صورتی متفاوت با رابط خط فرمان در سیستم عامل های مختلف اجرا کنید:
@@ -46,6 +47,7 @@ QOwnNotes --dump-settings | pbcopy
 # Copy the settings dump to the clipboard with clip on Windows
 QOwnNotes --dump-settings | clip
 ```
+
 :::
 
 ## پس از شروع به کار، منو اکشن ها را راه اندازی کنید

@@ -1,9 +1,9 @@
 # 해설 클래스
 
-노트
-----
+## 노트
 
 ### 속성 및 방식
+
 ```cpp
 클래스 NoteApi {
     Q_PROPERTY(int id)
@@ -26,12 +26,14 @@
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
     Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
     Q_INVOKABLE bool allowDifferentFileName()
-};
+    // Returns the Markdown note url for linking to the note with noteId
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
 ```
 
 [날짜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)의 방식을 사용하여 만든 `fileCreated` 또는 `fileLastModified`로 작업할 수 있습니다.
 
 ### 예제
+
 ```js
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
@@ -43,10 +45,10 @@ note.renameNoteFile("new name");
 script.log(note.allowDifferentFileName());
 ```
 
-노트 하위 폴더
-----
+## 노트 하위 폴더
 
 ### 속성 및 방식
+
 ```cpp
 클래스 NoteSubFolderApi {
     Q_PROPERTY(int id)
@@ -61,34 +63,41 @@ script.log(note.allowDifferentFileName());
 ```
 
 ### 예제
+
 ```js
-var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+var noteSubFolderQmlObj = Qt.createQmlObject(
+  "import QOwnNotesTypes 1.0; NoteSubFolder{}",
+  mainWindow,
+  "noteSubFolder",
+);
 
-// 모든 하위 폴더 이름 인쇄
-noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+// print all subfolder names
+noteSubFolderQmlObj
+  .fetchNoteSubFoldersByParentId(parentId)
+  .forEach(function (nsf) {
     script.log(nsf.name);
-});
+  });
 
-// 활성 노트 하위 폴더 가져오기
+// get the active note subfolder
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// 활성 노트 하위 폴더의 전체 경로 및 상대 경로 인쇄
+// print the full and relative path of the active note subfolder
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// 노트 하위 폴더의 노트를 통해 반복
+// iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
-    var note = noteSubFolder.notes[idx];
+  var note = noteSubFolder.notes[idx];
 }
 ```
 
-태그
----
+## 태그
 
 ### 속성 및 방식
+
 ```cpp
 클래스 TagApi {
     Q_PROPERTY(int id)
@@ -100,27 +109,28 @@ for (var idx in noteSubFolder.notes) {
 ```
 
 ### 예제
+
 ```js
 // "QownNotes 가져오기"를 사용하는 것을 잊지 마십시오. 스크립트 상단에 1.0"을 입력합니다!
 
-// 태그 "home" 가져오기
+// Fetch tag "home"
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// 태그가 지정된 모든 노트 가져오기
+// Fetch all notes tagged with the tag
 var notes = tag.notes;
 
-// 태그의 메모 반복
+// Iterate through notes of the tag
 for (var idx in notes) {
-    var note = notes[idx];
-    script.log(note.name);
+  var note = notes[idx];
+  script.log(note.name);
 }
 ```
 
 TagApi가 [ note-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml)에서 사용되는 더 많은 예를 찾을 수 있습니다.
 
-기본창
-----------
+## 기본창
 
 ### 속성 및 방법
+
 ```cpp
 클래스 MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -153,30 +163,30 @@ TagApi가 [ note-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/
 ```
 
 ### 예제
+
 ```js
-// 노트 목록 강제 다시 불러오기
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// 현재 하위 폴더에 새 노트 하위 폴더 "내 마음에 드는 폴더"를 만들기
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// 현재 노트에 HTML을 마크다운으로 삽입
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// '편집' 작업영역을 현재 작업영역으로 설정
+// Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// 태그 트리의 "테스트" 태그로 이동
-// https에는 예가 있습니다://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// 탭에 열려 있는 모든 노트를 가져오기
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
+noteIds.forEach(function (noteId) {
+  var note = script.fetchNoteById(noteId);
 
-    // 노트로 무엇을 하세요
+  // do something with the note
 });
-
 ```

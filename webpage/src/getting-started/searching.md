@@ -1,8 +1,8 @@
 # Searching for notes
 
 To search for notes or for text inside notes you can use the shortcut
-<kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or 
-<kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the *Note search panel*.
+<kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or
+<kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
 
 There are different ways to search for notes:
 
@@ -14,3 +14,7 @@ There are different ways to search for notes:
   name or file name
 
 ![Searching](/img/searching.png)
+
+::: tip
+Searching starts after typing at least one character.
+:::

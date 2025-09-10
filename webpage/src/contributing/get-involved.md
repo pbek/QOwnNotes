@@ -9,7 +9,7 @@ The various ways to get involved with QOwnNotes
 - Join the [**qownnotes Gitter** room](https://gitter.im/qownnotes/qownnotes)
 - Like [QOwnNotes on **Facebook**](https://www.facebook.com/QOwnNotes/)
 - Follow [QOwnNotes on **Twitter**](https://twitter.com/QOwnNotes)
-- Subscribe to the [QOwnNotes **blog RSS Feed**](https://feeds.feedburner.com/QOwnNotesBlog) 
+- Subscribe to the [QOwnNotes **blog RSS Feed**](https://feeds.feedburner.com/QOwnNotesBlog)
 - Subscribe to the [QOwnNotes **releases RSS feed**](https://feeds.feedburner.com/QOwnNotesReleases)
 - Contribute [**translations** to QOwnNotes](translation.md)
 - Report problems or share ideas for new features on the [QOwnNotes **GitHub issues** page](https://github.com/pbek/QOwnNotes/issues)

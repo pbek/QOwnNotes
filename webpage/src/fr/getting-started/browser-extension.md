@@ -8,6 +8,7 @@ Permet de capturer du contenu depuis une page affichée dans un navigateur et de
 
 ::: tip
 Info
+
 - ::: tip Info
 QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
 - Une connexion Internet n'est pas nécessaire. L'extension de navigateur fonctionne **hors-ligne**.
@@ -16,13 +17,13 @@ QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur We
 ## Installation
 
 1. Obtenir l'extension
-    - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - Vous pouvez également trouver l'extension sur [GitHub](https://github.com/qownnotes/web-companion/).
+   - [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - Vous pouvez également trouver l'extension sur [GitHub](https://github.com/qownnotes/web-companion/).
 2. Ajouter le jeton de sécurité pour configurer l'extension.
-    - Une boîte de dialogue contenant un jeton de sécurité sera affichée la première fois que vous cliquerez sur l'extension de navigateur QOwnNotes. Copiez le jeton.
-    - Ouvrez l'emplacement de gestion des extensions de votre navigateur. Cliquez sur les détails de l'extension QOwnNotes.
-    - Copiez le jeton dans le champ "Jeton de sécurité".
+   - Une boîte de dialogue contenant un jeton de sécurité sera affichée la première fois que vous cliquerez sur l'extension de navigateur QOwnNotes. Copiez le jeton.
+   - Ouvrez l'emplacement de gestion des extensions de votre navigateur. Cliquez sur les détails de l'extension QOwnNotes.
+   - Copiez le jeton dans le champ "Jeton de sécurité".
 3. To use the private mode, you need to allow the extension to run in private windows in the extension settings.
 
 ## Clipper Web
@@ -34,9 +35,9 @@ Cliquez avec le bouton droit sur une page Web ou sur du texte sélectionné pour
 ::: warning
 Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.
 
-Also, make sure you accepted the consent dialog, when you first clicked the extension icon in the browser toolbar.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
-If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the *Permission* extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -63,10 +64,11 @@ Vous pouvez également importer les favoris de votre navigateur dans QOwnNotes a
 
 ```markdown
 - [Webpage name](https://www.example.com)
-- [Webpage name](https://www.example.com) #étiquette1 #étiquette2
-- [Webpage name](https://www.example.com) juste une description
-- [Webpage name](https://www.example.com) #étiquette1 #étiquette2 une description et des étiquettes
-* [Webpage name](https://www.example.com) le caractère alternatif pour un élément de liste fonctionne également
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.

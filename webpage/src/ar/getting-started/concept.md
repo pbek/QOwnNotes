@@ -54,8 +54,7 @@ graph TB
 - تستطيع أيضا **الوصول إلى تاريخ ملاحظاتك وملاحظاتك المهملة** على خادم Nextcloud أو ownCloud الخاص بك عبر [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - يمكن الوصول إلى قوائم مهامك على خادم Nextcloud أو ownCloud من داخل QOwnNotes
 - **QOwnNotes لا يزامن ملاحظاتك** ولا ملفات الوسائط أو المرفقات!
-    - مزامنة الملفات هي مَسعًى معقد، ويوجد بالفعل حلول مزامنة ملفات عظيمة (انظر [عميل مزامنة Nextcloud الحاسوبي](#nextcloud-desktop-sync-client))
-
+  - مزامنة الملفات هي مَسعًى معقد، ويوجد بالفعل حلول مزامنة ملفات عظيمة (انظر [عميل مزامنة Nextcloud الحاسوبي](#nextcloud-desktop-sync-client))
 
 ## ملفات ملاحظات ماركداون
 
@@ -63,7 +62,6 @@ graph TB
 - يتم تخزين ملاحظاتك **كملفات نصية مجردة بصيغة ماركداون** على حاسوبك
 - تستطيع استخدام أي محرر نصوص تريده بجانب QOwnNotes لعرض أو تعديل ملفات ملاحظاتك
 - **زامن ملاحظاتك** مع الأجهزة الأخرى (الحاسوب والمحمول) باستخدام عميل مزامنة [Nextcloud](https://nextcloud.com/) أو [ownCloud](https://owncloud.org/) مع&nbsp;خادمك
-
 
 ## إضافة متصفح QOwnNotes
 
@@ -134,7 +132,7 @@ graph TB
 - [Nextcloud Notes لأندرويد](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (من طرف ثالث)
 
 ::: tip
-يمكنك أيضا استخدام أي أداة مزامنة مثل *Synchronize Ultimate* أو *FolderSync* لمزامنة ملفات ملاحظاتك، وتطبيق مثل *neutriNotes* لتحريرها.
+You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 :::
 
 ### آي أو إس

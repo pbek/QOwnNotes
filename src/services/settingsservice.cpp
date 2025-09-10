@@ -100,6 +100,11 @@ QStringList SettingsService::allKeys() const { return m_settings.allKeys(); }
 void SettingsService::clear() {
     cache()->clear();
     m_settings.clear();
+    m_settings.sync();
+    m_group.clear();
+    m_arrayStack.clear();
+    m_arrayIndex = 0;
+    m_arrayPrefix.clear();
 }
 
 void SettingsService::beginGroup(const QString &prefix) {

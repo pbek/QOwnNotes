@@ -27,6 +27,7 @@ dnf install qownnotes
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 لاحظ أن "Fedora_40" في الأمر السابق يجب أن تغيّرها إلى ما يناسب نسخة توزيعتك (أي "Fedora_39" أو "Fedora_38" إلخ).
 :::
 
@@ -39,6 +40,7 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
 ```
+
 مجددا، لاحظ أن "Fedora_40" في الأمر السابق يجب أن تغيّرها إلى ما يناسب نسخة توزيعتك (أي "Fedora_39" أو "Fedora_38" إلخ).
 
 ثم نفّذ الأوامر التالية في الطرفية بصلاحيات الجذر لإضافة المستودع وتثبيت QOwnNotes منه.
@@ -64,7 +66,7 @@ dnf install qownnotes
 
 ### مشاكل مع مفاتيح GPG؟
 
-التغيير في سياسات فيدورا الأمنية قد يعني أن مفاتيح المستودع «القديمة» (أي المنتهية) لا تُمدّ *آليًّا*. هذا قد يعرقل *ترقية* QOwnNotes.
+Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
 
 **التفصيل:** إذا واجهت مشكلة مع المفاتيح التالفة (أيْ أخطاء GPG) بسبب انتهاء المفتاح، مثل `certificate is not alive` أو `key is not alive` أو كليهما، فإن تنفيذ هذا الأمر في الطرفية سيحذف المفتاح المنتهي:
 
@@ -74,4 +76,4 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 
 ستجد شرحًا مفصلًا لهذا الأمر في [نقاش على GitHub](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) بخصوص هذه العلة نفسها.
 
-ما إن تحذف المفتاح المنتهي، عليك أن *تستورد* يدويًّا المفتاح **الحالي** من جديد بالطريقة الموصوفة في أول هذا الشرح.
+Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.

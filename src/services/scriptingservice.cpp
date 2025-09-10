@@ -657,7 +657,7 @@ QString ScriptingService::callInsertingFromMimeDataHookForObject(QObject *object
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -678,7 +678,7 @@ QString ScriptingService::callInsertingFromMimeDataHook(const QMimeData *mimeDat
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -699,7 +699,7 @@ QString ScriptingService::callHandleNoteTextFileNameHookForObject(QObject *objec
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -718,7 +718,7 @@ QString ScriptingService::callHandleNoteTextFileNameHook(Note *note) {
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -734,7 +734,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(QObject *object
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -782,7 +782,7 @@ QString ScriptingService::callHandleNoteNameHook(Note *note) {
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -801,7 +801,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(const QString &headline)
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -839,7 +839,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(ScriptComponent *s
         return text.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -948,7 +948,7 @@ QString ScriptingService::callEncryptionHookForObject(QObject *object, const QSt
         return result.toString();
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -976,7 +976,7 @@ QString ScriptingService::callEncryptionHook(const QString &text, const QString 
         }
     }
 
-    return QString();
+    return {};
 }
 
 /**
@@ -1471,10 +1471,21 @@ QString ScriptingService::aiComplete(const QString &prompt) {
 #ifndef INTEGRATION_TESTS
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != nullptr) {
+        mainWindow->enableOpenAiActivitySpinner();
+    }
 
-    return OpenAiService::instance()->complete(prompt);
+    const auto result = OpenAiService::instance()->complete(prompt);
+
+    if (mainWindow != nullptr) {
+        mainWindow->enableOpenAiActivitySpinner(false);
+    }
+
+    return result;
 #else
     Q_UNUSED(prompt)
+    return {};
 #endif
 }
 
@@ -1511,7 +1522,7 @@ QString ScriptingService::insertMediaFile(const QString &mediaFilePath, bool ret
     auto *mediaFile = new QFile(mediaFilePath);
 
     if (!mediaFile->exists()) {
-        return QString();
+        return {};
     }
 
     return _currentNote->getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
@@ -1938,7 +1949,7 @@ QString ScriptingService::getOpenFileName(const QString &caption, const QString 
     Q_UNUSED(filter)
 #endif
 
-    return QString();
+    return {};
 }
 
 /**
@@ -1965,7 +1976,7 @@ QString ScriptingService::getSaveFileName(const QString &caption, const QString 
     Q_UNUSED(filter)
 #endif
 
-    return QString();
+    return {};
 }
 
 /**
@@ -2086,7 +2097,7 @@ QString ScriptingService::inputDialogGetItem(const QString &title, const QString
     bool ok;
     QString result = QInputDialog::getItem(nullptr, title, label, items, current, editable, &ok);
 
-    return ok ? result : QStringLiteral("");
+    return ok ? result : QLatin1String("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -2114,7 +2125,7 @@ QString ScriptingService::inputDialogGetText(const QString &title, const QString
     bool ok;
     QString result = QInputDialog::getText(nullptr, title, label, QLineEdit::Normal, text, &ok);
 
-    return ok ? result : QStringLiteral("");
+    return ok ? result : QLatin1String("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -2140,7 +2151,7 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
     bool ok;
     QString result = QInputDialog::getMultiLineText(nullptr, title, label, text, &ok);
 
-    return ok ? result : QStringLiteral("");
+    return ok ? result : QLatin1String("");
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -2158,10 +2169,18 @@ QString ScriptingService::inputDialogGetMultiLineText(const QString &title, cons
  * @param text2 {QString} second text
  * @return
  */
-QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
-                                         const QString &text1, const QString &text2) {
+QString ScriptingService::textDiffDialog(const QString &title, const QString &label, QString text1,
+                                         QString text2) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
+
+    if (text1.isNull()) {
+        text1 = QLatin1String("");
+    }
+
+    if (text2.isNull()) {
+        text2 = QLatin1String("");
+    }
 
 #ifndef INTEGRATION_TESTS
     auto dialog = new TextDiffDialog(nullptr, title, label, text1, text2);
@@ -2173,8 +2192,6 @@ QString ScriptingService::textDiffDialog(const QString &title, const QString &la
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
-    Q_UNUSED(text1)
-    Q_UNUSED(text2)
     return QString();
 #endif
 }
@@ -2336,13 +2353,13 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data,
  */
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec) const {
     if (filePath.isEmpty()) {
-        return QString();
+        return {};
     }
 
     QFile file(filePath);
 
     if (!file.open(QFile::ReadOnly)) {
-        return QString();
+        return {};
     }
 
     QTextStream in(&file);

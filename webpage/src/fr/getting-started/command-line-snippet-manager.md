@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Dépendances
@@ -38,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Avant d'utiliser le gestionnaire d'extraits de commandes vous devez activer le *serveur Web socket * (2) dans la section *Extension de navigateur / extraits de commandes* (1) dans les paramètres de QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Vous devez ensuite afficher le jeton de sécurité (3) et le copier (4).
 
@@ -67,13 +68,15 @@ Vous pouvez utiliser des **listes non-ordonnées avec des blocs de code en ligne
 Si vous ajoutez un `cmd:` avant le bloc de code en ligne, la commande sera aussi trouvée dans la **note courante** quelles que soient les étiquettes de cette dernière.
 
 ```markdown
-- `echo Je suis une commande` Je suis une description #tag1 #tag2 #tag3
-* `echo Je suis également une commande` Je suis une description #tag3 #tag4 #tag5
-- cmd: `echo Je serai présente dans la note courante` Cette commande se retrouvera dans la note courante quelles que soient ses étiquettesT
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
 
-<!-- Example de demande d'une entrée utilisateur -->
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
 
-- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Récupérer l'ID de la pull request et la valider
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 Des **blocs de code `bash` ou `shell`** précédés par un en-tête niveau 2 ou plus élevé peuvent également être utilisés pour des extraits de commandes. Les étiquettes sont également prises en charge si elles sont placées entre un en-tête et un bloc de code.

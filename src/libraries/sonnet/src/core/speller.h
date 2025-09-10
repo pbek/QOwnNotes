@@ -20,9 +20,9 @@
 #ifndef SONNET_SPELLER_H
 #define SONNET_SPELLER_H
 
-#include <QStringList>
-#include <QString>
 #include <QMap>
+#include <QString>
+#include <QStringList>
 
 namespace Sonnet {
 class SpellerPrivate;
@@ -31,9 +31,8 @@ class SpellerPrivate;
  *
  * @short class used for actuall spell checking
  */
-class Speller
-{
-public:
+class Speller {
+   public:
     explicit Speller(const QString &lang = QString());
     ~Speller();
 
@@ -99,12 +98,8 @@ public:
      */
     bool addToSession(const QString &word);
 
-public: // Configuration API
-    enum Attribute {
-        CheckUppercase,
-        SkipRunTogether,
-        AutoDetectLanguage
-    };
+   public:    // Configuration API
+    enum Attribute { CheckUppercase, SkipRunTogether, AutoDetectLanguage };
     void save();
     void restore();
 
@@ -148,8 +143,9 @@ public: // Configuration API
 
     void setAttribute(Attribute attr, bool b = true);
     bool testAttribute(Attribute attr) const;
-private:
+
+   private:
     SpellerPrivate *const d;
 };
-}
+}    // namespace Sonnet
 #endif

@@ -51,6 +51,7 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     ui->tagCloudLayout->setSizeConstraint(QLayout::SetFixedSize);
     ui->tagsLayout->addWidget(_todoTagsScrollArea);
     _todoTagsScrollArea->setVisible(false);
+    ui->editFrame->setEnabled(false);
 }
 
 void TodoDialog::updateCalendarItem(CalendarItem item) {
@@ -413,6 +414,7 @@ void TodoDialog::clearTodoList() {
 }
 
 void TodoDialog::resetEditFrameControls() {
+    ui->editFrame->setEnabled(false);
     ui->summaryEdit->setText(QString());
     ui->descriptionEdit->setPlainText(QString());
     ui->tagsLineEdit->setText(QString());
@@ -480,6 +482,8 @@ void TodoDialog::on_todoListSelector_currentIndexChanged(int index) {
     Q_UNUSED(index)
 
     ui->newItemEdit->clear();
+
+    resetEditFrameControls();
 
     // store the todoListSelectorSelectedItem
     storeSettings();
@@ -616,6 +620,8 @@ void TodoDialog::on_removeButton_clicked() {
         // (this will reload the task list as well)
         OwnCloudService *ownCloud = OwnCloudService::instance();
         ownCloud->removeCalendarItem(calItem, this);
+
+        resetEditFrameControls();
     }
 }
 
@@ -859,6 +865,7 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->saveButton->setEnabled(true);
         ui->noteButton->setEnabled(true);
         ui->removeButton->setEnabled(true);
+        ui->editFrame->setEnabled(true);
     }
 }
 

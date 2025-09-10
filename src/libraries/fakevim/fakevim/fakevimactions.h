@@ -28,9 +28,9 @@
 #define FAKEVIM_STANDALONE
 
 #ifdef FAKEVIM_STANDALONE
-//#   include "private/fakevim_export.h"
+// #   include "private/fakevim_export.h"
 #else
-#   include <utils/savedaction.h>
+#include <utils/savedaction.h>
 #endif
 
 #include <QCoreApplication>
@@ -43,9 +43,8 @@ namespace FakeVim {
 namespace Internal {
 
 #ifdef FAKEVIM_STANDALONE
-class FvBaseAspect
-{
-public:
+class FvBaseAspect {
+   public:
     FvBaseAspect();
     virtual ~FvBaseAspect() {}
 
@@ -59,34 +58,30 @@ public:
     void setDisplayName(const QString &) {}
     void setToolTip(const QString &) {}
 
-private:
+   private:
     QVariant m_value;
     QVariant m_defaultValue;
     QString m_settingsGroup;
     QString m_settingsKey;
 };
 
-class FvBoolAspect : public FvBaseAspect
-{
-public:
+class FvBoolAspect : public FvBaseAspect {
+   public:
     bool value() const { return FvBaseAspect::value().toBool(); }
 };
 
-class FvIntegerAspect : public FvBaseAspect
-{
-public:
+class FvIntegerAspect : public FvBaseAspect {
+   public:
     qint64 value() const { return FvBaseAspect::value().toLongLong(); }
 };
 
-class FvStringAspect : public FvBaseAspect
-{
-public:
+class FvStringAspect : public FvBaseAspect {
+   public:
     QString value() const { return FvBaseAspect::value().toString(); }
 };
 
-class FvAspectContainer : public FvBaseAspect
-{
-public:
+class FvAspectContainer : public FvBaseAspect {
+   public:
 };
 
 #else
@@ -99,11 +94,10 @@ using FvStringAspect = Utils::StringAspect;
 
 #endif
 
-class FakeVimSettings final : public FvAspectContainer
-{
+class FakeVimSettings final : public FvAspectContainer {
     Q_DECLARE_TR_FUNCTIONS(FakeVim)
 
-public:
+   public:
     FakeVimSettings();
     ~FakeVimSettings();
 
@@ -160,11 +154,9 @@ public:
 
     FvBoolAspect blinkingCursor;
 
-private:
-    void setup(FvBaseAspect *aspect, const QVariant &value,
-                      const QString &settingsKey,
-                      const QString &shortName,
-                      const QString &label);
+   private:
+    void setup(FvBaseAspect *aspect, const QVariant &value, const QString &settingsKey,
+               const QString &shortName, const QString &label);
 
     QHash<QString, FvBaseAspect *> m_nameToAspect;
     QHash<FvBaseAspect *, QString> m_aspectToName;
@@ -172,5 +164,5 @@ private:
 
 FakeVimSettings *fakeVimSettings();
 
-} // namespace Internal
-} // namespace FakeVim
+}    // namespace Internal
+}    // namespace FakeVim

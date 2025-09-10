@@ -10,4 +10,3 @@ If not stated otherwise you can run QOwnNotes afterward by executing `QOwnNotes`
 Info
 به منظور نصب QOwnNotes نگاهی به همه روش های مختلف در فهرست بیندازید
 :::
-

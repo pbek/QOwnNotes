@@ -97,9 +97,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         ui->settingsStackedWidget->addWidget(scrollArea);
     }
 
-    ui->groqApiTestButton->setDisabled(true);
-    ui->openAiApiTestButton->setDisabled(true);
-    ui->aiScriptingGroupBox->setHidden(true);
     ui->loginFlowCancelButton->hide();
     ui->qrCodeWidget->hide();
     ui->connectionTestLabel->hide();
@@ -121,64 +118,21 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->automaticNoteFolderDatabaseClosingCheckBox->hide();
 #endif
 
-    _noteNotificationButtonGroup = new QButtonGroup(this);
-    _noteNotificationButtonGroup->addButton(ui->notifyAllExternalModificationsCheckBox);
-    _noteNotificationButtonGroup->addButton(ui->ignoreAllExternalModificationsCheckBox);
-    _noteNotificationButtonGroup->addButton(ui->acceptAllExternalModificationsCheckBox);
-
-    // create a hidden checkbox so we can un-check above checkboxes
-    _noteNotificationNoneCheckBox = new QCheckBox(this);
-    _noteNotificationNoneCheckBox->setHidden(true);
-    _noteNotificationButtonGroup->addButton(_noteNotificationNoneCheckBox);
-    connect(_noteNotificationButtonGroup, SIGNAL(buttonPressed(QAbstractButton *)), this,
-            SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
-
-    resetOKLabelData();
-
-    // add the QOwnNotesAPI minimum version number to the info text
-    QString html = ui->installInfoTextLabel1->text();
-    html.replace(QLatin1String("QOWNNOTESAPI_MIN_VERSION"), QOWNNOTESAPI_MIN_VERSION);
-    ui->installInfoTextLabel1->setText(html);
-
-    // do the network proxy tab setup
-    setupProxyPage();
-
-    if (!fromWelcomeDialog) {
-        // set up the note folder tab
-        setupNoteFolderPage();
-
-        // set up the scripting tab
-        setupScriptingPage();
-    }
+#ifdef USE_LIBGIT2
+    ui->gitClientGroupBox->hide();
+#else
+    ui->gitLibraryGroupBox->hide();
+#endif
 
     readSettings();
 
     // initializes the main splitter
     initMainSplitter();
 
-    if (connectionTestCanBeStarted()) {
-        // start a connection test
-        startConnectionTest();
-    }
-
-    // init the debug info search frame
-    ui->debugInfoTextEdit->initSearchFrame(ui->debugInfoTextEditSearchFrame);
-
     // set the current page
     // must be done in the end so that the settings are loaded first when
     // doing a connection test
     setCurrentPage(page);
-
-#ifdef Q_OS_MAC
-    // we don't need app instance settings on OS X
-    ui->appInstanceGroupBox->setVisible(false);
-    ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
-
-    // Qt::TargetMoveAction seems to be broken on macOS, the item vanishes after
-    // dropping Qt::CopyAction seens to be the only action that works
-    ui->noteFolderListWidget->setDefaultDropAction(Qt::CopyAction);
-    ui->scriptListWidget->setDefaultDropAction(Qt::CopyAction);
-#endif
 
     // disable the shortcut page if there is no main window yet
     if (mainWindow == nullptr) {
@@ -191,28 +145,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     // expand all items in the settings tree widget
     ui->settingsTreeWidget->expandAll();
 
-    // initialize the portable mode page
-    initPortableModePage();
-
-    // init the toolbar editor
-    ui->toolbarEditor->setTargetWindow(MainWindow::instance());
-    ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
-
-    QStringList disabledToolbarNames(QStringList() << QStringLiteral("windowToolbar")
-                                                   << QStringLiteral("customActionsToolbar"));
-    ui->toolbarEditor->setDisabledToolbarNames(disabledToolbarNames);
-
-    QStringList disabledMenuNames(QStringList() << QStringLiteral("noteFoldersMenu"));
-    ui->toolbarEditor->setDisabledMenuNames(disabledMenuNames);
-
-    //    QStringList disabledMenuActionNames(QStringList() << "");
-    //    ui->toolbarEditor->setDisabledMenuActionNames(disabledMenuActionNames);
-
-    ui->toolbarEditor->updateBars();
-
-    // show the log file path
-    ui->logFileLabel->setText(QDir::toNativeSeparators(Utils::Misc::logFilePath()));
-
     // replace the "ownCloud" text by "ownCloud / NextCloud"
     replaceOwnCloudText();
 
@@ -223,6 +155,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
+    connect(ui->hideIconsInMenusCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
@@ -246,78 +179,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
     //            this, SLOT(needRestart()));
 
-    // connect the panel sort radio buttons
-    connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
-            ui->notesPanelOrderGroupBox, SLOT(setEnabled(bool)));
-    connect(ui->noteSubfoldersPanelShowRootFolderNameCheckBox, SIGNAL(toggled(bool)),
-            ui->noteSubfoldersPanelShowFullPathCheckBox, SLOT(setEnabled(bool)));
-    connect(ui->noteSubfoldersPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
-            ui->noteSubfoldersPanelOrderGroupBox, SLOT(setEnabled(bool)));
-    connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
-            ui->tagsPanelOrderGroupBox, SLOT(setEnabled(bool)));
-
-    // handle cloud connection storing
-    connect(ui->cloudServerConnectionNameLineEdit, SIGNAL(textChanged(QString)), this,
-            SLOT(storeSelectedCloudConnection()));
-    connect(ui->serverUrlEdit, SIGNAL(textChanged(QString)), this,
-            SLOT(storeSelectedCloudConnection()));
-    connect(ui->userNameEdit, SIGNAL(textChanged(QString)), this,
-            SLOT(storeSelectedCloudConnection()));
-    connect(ui->passwordEdit, SIGNAL(textChanged(QString)), this,
-            SLOT(storeSelectedCloudConnection()));
-    connect(ui->appQOwnNotesAPICheckBox, SIGNAL(toggled(bool)), this,
-            SLOT(storeSelectedCloudConnection()));
-
-    // set up the search engine combo-box
-    initSearchEngineComboBox();
-
-#ifdef Q_OS_MAC
-    // there is no system tray in OS X
-    ui->systemTrayGroupBox->setTitle(tr("Menu bar"));
-    ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
-#endif
-
     if (fromWelcomeDialog) {
         // hide the whole left side frame with the settings menu tree
         ui->leftSideFrame->setVisible(false);
     }
-
-    if (!ui->noteListPreviewCheckBox->text().contains(QLatin1String("(experimental)"))) {
-        ui->noteListPreviewCheckBox->setText(ui->noteListPreviewCheckBox->text() +
-                                             " (experimental)");
-    }
-
-    if (!ui->enableNoteTreeCheckBox->text().contains(QLatin1String("work in progress"))) {
-        ui->enableNoteTreeCheckBox->setText(ui->enableNoteTreeCheckBox->text() +
-                                            " (work in progress)");
-    }
-
-    ui->webCompannionLabel->setText(ui->webCompannionLabel->text().arg(
-        "https://github.com/qownnotes/web-companion",
-        "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
-        "pkgkfnampapjbopomdpnkckbjdnpkbkp",
-        "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
-    ui->webAppLabel->setText(ui->webAppLabel->text().arg("https://app.qownnotes.org/"));
-    ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
-        "https://www.qownnotes.org/getting-started/browser-extension.html"));
-    ui->helpTranslateLabel->setText(ui->helpTranslateLabel->text().arg(
-        "https://www.qownnotes.org/contributing/translation.html"));
-    ui->commandLineSnippetManagerLabel->setText(
-        ui->commandLineSnippetManagerLabel->text().arg("https://github.com/qownnotes/qc"));
-    ui->commandSnippetTagLabel->setText(ui->commandSnippetTagLabel->text().arg(
-        "https://www.qownnotes.org/getting-started/command-line-snippet-manager.html"));
-    ui->commandSnippetsNoteNameLabel->hide();
-    ui->commandSnippetsNoteNameLineEdit->hide();
-    ui->openAiScriptingLabel->setText(ui->openAiScriptingLabel->text().arg(
-        "https://www.qownnotes.org/scripting/hooks.html#openaibackendshook"));
-    ui->openAiScriptingLabel3->setText(ui->openAiScriptingLabel3->text().arg(
-        "https://www.qownnotes.org/scripting/"
-        "methods-and-objects.html#use-a-completion-prompt-on-the-currently-selected-ai-model"));
-
-#ifndef Q_OS_LINUX
-    ui->systemIconThemeCheckBox->setHidden(true);
-    ui->systemIconThemeCheckBox->setChecked(false);
-#endif
 }
 
 void SettingsDialog::resetOKLabelData() {
@@ -681,6 +546,10 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("overrideInterfaceFontSize"),
                       ui->overrideInterfaceFontSizeGroupBox->isChecked());
     settings.setValue(QStringLiteral("interfaceFontSize"), ui->interfaceFontSizeSpinBox->value());
+    settings.setValue(QStringLiteral("overrideInterfaceScalingFactor"),
+                      ui->overrideInterfaceScalingFactorGroupBox->isChecked());
+    settings.setValue(QStringLiteral("interfaceScalingFactor"),
+                      ui->interfaceScalingFactorSpinBox->value());
     settings.setValue(QStringLiteral("itemHeight"), ui->itemHeightSpinBox->value());
     settings.setValue(QStringLiteral("MainWindow/mainToolBar.iconSize"),
                       ui->toolbarIconSizeSpinBox->value());
@@ -697,6 +566,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       ui->noteEditCentralWidgetCheckBox->isChecked());
     settings.setValue(QStringLiteral("restoreNoteTabs"), ui->restoreNoteTabsCheckBox->isChecked());
+    settings.setValue(QStringLiteral("hideTabCloseButton"),
+                      ui->hideTabCloseButtonCheckBox->isChecked());
     settings.setValue(QStringLiteral("useNoteFolderButtons"),
                       ui->noteFolderButtonsCheckBox->isChecked());
     settings.setValue(QStringLiteral("MainWindow/noteTextView.rtl"),
@@ -757,6 +628,9 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("darkModeIconTheme"),
                       ui->darkModeIconThemeCheckBox->isChecked());
+
+    settings.setValue(QStringLiteral("hideIconsInMenus"),
+                      ui->hideIconsInMenusCheckBox->isChecked());
 
     settings.setValue(QStringLiteral("showStatusBarNotePath"),
                       ui->showStatusBarNotePathCheckBox->isChecked());
@@ -906,6 +780,8 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("ai/openai/apiKey"),
                       CryptoService::instance()->encryptToString(ui->openAiApiKeyLineEdit->text()));
+    settings.setValue(QStringLiteral("ai/responseTimeout"),
+                      ui->openAiResponseTimeoutSpinBox->value());
 }
 
 /**
@@ -1111,6 +987,8 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool());
     ui->restoreNoteTabsCheckBox->setChecked(
         settings.value(QStringLiteral("restoreNoteTabs"), true).toBool());
+    ui->hideTabCloseButtonCheckBox->setChecked(
+        settings.value(QStringLiteral("hideTabCloseButton")).toBool());
     ui->noteFolderButtonsCheckBox->setChecked(
         settings.value(QStringLiteral("useNoteFolderButtons")).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(
@@ -1129,6 +1007,16 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool());
     ui->interfaceFontSizeSpinBox->setValue(
         settings.value(QStringLiteral("interfaceFontSize"), 11).toInt());
+
+    const QSignalBlocker overrideInterfaceScalingFactorGroupBoxBlocker(
+        ui->overrideInterfaceScalingFactorGroupBox);
+    Q_UNUSED(overrideInterfaceScalingFactorGroupBoxBlocker)
+    const QSignalBlocker interfaceScalingFactorSpinBoxBlocker(ui->interfaceScalingFactorSpinBox);
+    Q_UNUSED(interfaceScalingFactorSpinBoxBlocker)
+    ui->overrideInterfaceScalingFactorGroupBox->setChecked(
+        settings.value(QStringLiteral("overrideInterfaceScalingFactor"), false).toBool());
+    ui->interfaceScalingFactorSpinBox->setValue(
+        settings.value(QStringLiteral("interfaceScalingFactor"), 100).toInt());
 
     QTreeWidget treeWidget(this);
     auto *treeWidgetItem = new QTreeWidgetItem();
@@ -1159,6 +1047,8 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("darkModeTrayIcon")).toBool());
 
     ui->darkModeIconThemeCheckBox->setChecked(Utils::Misc::isDarkModeIconTheme());
+
+    ui->hideIconsInMenusCheckBox->setChecked(Utils::Misc::areMenuIconsHidden());
 
     ui->internalIconThemeCheckBox->setChecked(
         settings.value(QStringLiteral("internalIconTheme")).toBool());
@@ -1372,6 +1262,8 @@ void SettingsDialog::readSettings() {
 
     ui->openAiApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ai/openai/apiKey")).toString()));
+
+    ui->openAiResponseTimeoutSpinBox->setValue(OpenAiService::getResponseTimeout());
 }
 
 /**
@@ -1423,10 +1315,11 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
 
     if (!interfaceStyle.isEmpty()) {
         ui->interfaceStyleComboBox->setCurrentText(interfaceStyle);
-        QApplication::setStyle(interfaceStyle);
     } else {
         ui->interfaceStyleComboBox->setCurrentIndex(0);
     }
+
+    Utils::Gui::applyInterfaceStyle();
 }
 
 /**
@@ -2796,6 +2689,9 @@ void SettingsDialog::reloadScriptList() const {
 
     // disable the edit frame if there is no item
     ui->scriptEditFrame->setEnabled(scriptsCount > 0);
+    if (scriptsCount > 0) {
+        ui->scriptEditFrame->setVisible(true);
+    }
 
     // disable the remove button if there is no item
     ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
@@ -2856,6 +2752,7 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
 
         // disable the edit frame if there is no item
         ui->scriptEditFrame->setEnabled(scriptsAvailable);
+        ui->scriptEditFrame->setVisible(scriptsAvailable);
 
         // reload the scripting engine
         ScriptingService::instance()->reloadEngine();
@@ -3312,6 +3209,179 @@ void SettingsDialog::on_settingsTreeWidget_currentItemChanged(QTreeWidgetItem *c
     }
 }
 
+bool SettingsDialog::initializePage(int index) {
+    if (_pageInitialized[index]) {
+        return false;
+    }
+
+    switch (index) {
+        case SettingsPages::NoteFolderPage: {
+            // set up the note folder tab
+            setupNoteFolderPage();
+        } break;
+        case SettingsPages::NetworkPage: {
+            // do the network proxy tab setup
+            setupProxyPage();
+        } break;
+        case SettingsPages::ExperimentalPage: {
+            if (!ui->enableNoteTreeCheckBox->text().contains(QLatin1String("work in progress"))) {
+                ui->enableNoteTreeCheckBox->setText(ui->enableNoteTreeCheckBox->text() +
+                                                    " (work in progress)");
+            }
+        } break;
+        case SettingsPages::WebApplicationPage: {
+            ui->webAppLabel->setText(ui->webAppLabel->text().arg("https://app.qownnotes.org/"));
+        } break;
+        case SettingsPages::WebCompanionPage: {
+            ui->webCompannionLabel->setText(ui->webCompannionLabel->text().arg(
+                "https://github.com/qownnotes/web-companion",
+                "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
+                "pkgkfnampapjbopomdpnkckbjdnpkbkp",
+                "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
+            ui->commandLineSnippetManagerLabel->setText(
+                ui->commandLineSnippetManagerLabel->text().arg("https://github.com/qownnotes/qc"));
+            ui->commandSnippetTagLabel->setText(ui->commandSnippetTagLabel->text().arg(
+                "https://www.qownnotes.org/getting-started/command-line-snippet-manager.html"));
+            ui->commandSnippetsNoteNameLabel->hide();
+            ui->commandSnippetsNoteNameLineEdit->hide();
+            ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
+                "https://www.qownnotes.org/getting-started/browser-extension.html"));
+        } break;
+        case SettingsPages::PanelsPage: {
+            // connect the panel sort radio buttons
+            connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
+                    ui->notesPanelOrderGroupBox, SLOT(setEnabled(bool)));
+            connect(ui->noteSubfoldersPanelShowRootFolderNameCheckBox, SIGNAL(toggled(bool)),
+                    ui->noteSubfoldersPanelShowFullPathCheckBox, SLOT(setEnabled(bool)));
+            connect(ui->noteSubfoldersPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
+                    ui->noteSubfoldersPanelOrderGroupBox, SLOT(setEnabled(bool)));
+            connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
+                    ui->tagsPanelOrderGroupBox, SLOT(setEnabled(bool)));
+
+            if (!ui->noteListPreviewCheckBox->text().contains(QLatin1String("(experimental)"))) {
+                ui->noteListPreviewCheckBox->setText(ui->noteListPreviewCheckBox->text() +
+                                                     " (experimental)");
+            }
+        } break;
+        case SettingsPages::ToolbarPage: {
+            // init the toolbar editor
+            ui->toolbarEditor->setTargetWindow(MainWindow::instance());
+            ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
+
+            QStringList disabledToolbarNames(QStringList()
+                                             << QStringLiteral("windowToolbar")
+                                             << QStringLiteral("customActionsToolbar"));
+            ui->toolbarEditor->setDisabledToolbarNames(disabledToolbarNames);
+
+            QStringList disabledMenuNames(QStringList() << QStringLiteral("noteFoldersMenu"));
+            ui->toolbarEditor->setDisabledMenuNames(disabledMenuNames);
+
+            //    QStringList disabledMenuActionNames(QStringList() << "");
+            //    ui->toolbarEditor->setDisabledMenuActionNames(disabledMenuActionNames);
+
+            ui->toolbarEditor->updateBars();
+        } break;
+        case SettingsPages::PortableModePage: {
+            // initialize the portable mode page
+            initPortableModePage();
+        } break;
+        case SettingsPages::InterfacePage: {
+            ui->helpTranslateLabel->setText(ui->helpTranslateLabel->text().arg(
+                "https://www.qownnotes.org/contributing/translation.html"));
+#ifdef Q_OS_MAC
+            // there is no system tray in OS X
+            ui->systemTrayGroupBox->setTitle(tr("Menu bar"));
+            ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
+#endif
+#ifndef Q_OS_LINUX
+            ui->systemIconThemeCheckBox->setHidden(true);
+            ui->systemIconThemeCheckBox->setChecked(false);
+#endif
+        } break;
+        case SettingsPages::GeneralPage: {
+            _noteNotificationButtonGroup = new QButtonGroup(this);
+            _noteNotificationButtonGroup->addButton(ui->notifyAllExternalModificationsCheckBox);
+            _noteNotificationButtonGroup->addButton(ui->ignoreAllExternalModificationsCheckBox);
+            _noteNotificationButtonGroup->addButton(ui->acceptAllExternalModificationsCheckBox);
+
+            // create a hidden checkbox so we can un-check above checkboxes
+            _noteNotificationNoneCheckBox = new QCheckBox(this);
+            _noteNotificationNoneCheckBox->setHidden(true);
+            _noteNotificationButtonGroup->addButton(_noteNotificationNoneCheckBox);
+            connect(_noteNotificationButtonGroup, SIGNAL(buttonPressed(QAbstractButton *)), this,
+                    SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
+
+            // set up the search engine combo-box
+            initSearchEngineComboBox();
+
+#ifdef Q_OS_MAC
+            // we don't need app instance settings on OS X
+            ui->appInstanceGroupBox->setVisible(false);
+            ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
+
+            // Qt::TargetMoveAction seems to be broken on macOS, the item vanishes after
+            // dropping Qt::CopyAction seens to be the only action that works
+            ui->noteFolderListWidget->setDefaultDropAction(Qt::CopyAction);
+            ui->scriptListWidget->setDefaultDropAction(Qt::CopyAction);
+#endif
+        } break;
+        case SettingsPages::DebugPage: {
+            // init the debug info search frame
+            ui->debugInfoTextEdit->initSearchFrame(ui->debugInfoTextEditSearchFrame);
+
+            // show the log file path
+            ui->logFileLabel->setText(QDir::toNativeSeparators(Utils::Misc::logFilePath()));
+        } break;
+        case SettingsPages::ScriptingPage: {
+            // set up the scripting tab
+            setupScriptingPage();
+        } break;
+        case SettingsPages::OwnCloudPage: {
+            resetOKLabelData();
+
+            // add the QOwnNotesAPI minimum version number to the info text
+            auto html = ui->installInfoTextLabel1->text();
+            html.replace(QLatin1String("QOWNNOTESAPI_MIN_VERSION"), QOWNNOTESAPI_MIN_VERSION);
+            ui->installInfoTextLabel1->setText(html);
+
+            if (connectionTestCanBeStarted()) {
+                // start a connection test
+                startConnectionTest();
+            }
+
+            // handle cloud connection storing
+            connect(ui->cloudServerConnectionNameLineEdit, SIGNAL(textChanged(QString)), this,
+                    SLOT(storeSelectedCloudConnection()));
+            connect(ui->serverUrlEdit, SIGNAL(textChanged(QString)), this,
+                    SLOT(storeSelectedCloudConnection()));
+            connect(ui->userNameEdit, SIGNAL(textChanged(QString)), this,
+                    SLOT(storeSelectedCloudConnection()));
+            connect(ui->passwordEdit, SIGNAL(textChanged(QString)), this,
+                    SLOT(storeSelectedCloudConnection()));
+            connect(ui->appQOwnNotesAPICheckBox, SIGNAL(toggled(bool)), this,
+                    SLOT(storeSelectedCloudConnection()));
+        } break;
+        case SettingsPages::AiPage: {
+            ui->groqApiTestButton->setDisabled(true);
+            ui->openAiApiTestButton->setDisabled(true);
+            ui->aiScriptingGroupBox->setHidden(true);
+
+            ui->openAiScriptingLabel->setText(ui->openAiScriptingLabel->text().arg(
+                "https://www.qownnotes.org/scripting/hooks.html#openaibackendshook"));
+            ui->openAiScriptingLabel3->setText(
+                ui->openAiScriptingLabel3->text().arg("https://www.qownnotes.org/scripting/"
+                                                      "methods-and-objects.html#use-a-completion-"
+                                                      "prompt-on-the-currently-selected-ai-model"));
+        } break;
+        default:
+            break;
+    }
+
+    _pageInitialized[index] = true;
+
+    return true;
+}
+
 void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     QTreeWidgetItem *item = findSettingsTreeWidgetItemByPage(index);
     if (item != nullptr) {
@@ -3322,12 +3392,13 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
         ui->headlineLabel->setText("<h3>" + item->text(0) + "</h3>");
     }
 
+    // Initialize the page if not already done
+    this->initializePage(index);
+
     if (index == DebugPage) {
         outputSettings();
     } else if (index == OwnCloudPage) {
-        if (connectionTestCanBeStarted()) {
-            on_connectButton_clicked();
-        }
+        resetOKLabelData();
     } else if (index == AiPage) {
         buildAiScriptingTreeWidget();
     }
@@ -3491,8 +3562,8 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     foreach (QToolBar *toolbar, mainWindow->findChildren<QToolBar *>()) {
         QString name = toolbar->objectName();
 
-        // don't store the custom actions toolbar and toolbars that are
-        // not in the toolbar edit widget any more (for some reason they
+        // Don't store the custom actions toolbar and toolbars that are
+        // not in the toolbar edit widget anymore (for some reason they
         // are still found by findChildren)
         if (name == QLatin1String("customActionsToolbar") || !toolbarObjectNames.contains(name)) {
             continue;
@@ -3511,16 +3582,22 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     //    settings.remove("");
     //    settings.endGroup();
 
-    settings.beginWriteArray(QStringLiteral("toolbar"), toolbarContainers.size());
+    int size = static_cast<int>(toolbarContainers.size());
 
-    for (int i = 0; i < toolbarContainers.size(); i++) {
-        settings.setArrayIndex(i);
-        settings.setValue(QStringLiteral("name"), toolbarContainers[i].name);
-        settings.setValue(QStringLiteral("title"), toolbarContainers[i].title);
-        settings.setValue(QStringLiteral("items"), toolbarContainers[i].actions);
+    // For some reason there are no ToolbarContainer sometimes, we don't want to overwrite the
+    // toolbar settings then
+    if (size > 0) {
+        settings.beginWriteArray(QStringLiteral("toolbar"), size);
+
+        for (int i = 0; i < size; i++) {
+            settings.setArrayIndex(i);
+            settings.setValue(QStringLiteral("name"), toolbarContainers[i].name);
+            settings.setValue(QStringLiteral("title"), toolbarContainers[i].title);
+            settings.setValue(QStringLiteral("items"), toolbarContainers[i].actions);
+        }
+
+        settings.endArray();
     }
-
-    settings.endArray();
 }
 
 void SettingsDialog::on_resetToolbarPushButton_clicked() {
@@ -3800,7 +3877,7 @@ void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
 }
 
 void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(const QString &arg1) {
-    QApplication::setStyle(arg1);
+    Utils::Gui::applyInterfaceStyle(arg1);
 
     // if the interface style was set to automatic we need a restart
     if (ui->interfaceStyleComboBox->currentIndex() == 0) {
@@ -4474,4 +4551,22 @@ void SettingsDialog::buildAiScriptingTreeWidget() {
 void SettingsDialog::on_searchScriptRepositoryButton_clicked() {
     searchScriptInRepository();
     buildAiScriptingTreeWidget();
+}
+
+void SettingsDialog::on_overrideInterfaceScalingFactorGroupBox_toggled(bool arg1) {
+    if (!arg1) {
+        Utils::Gui::information(
+            this, tr("Override interface scaling factor"),
+            tr("If you had this setting enabled, you now need to restart the application manually "
+               "so the previous environment variable that overrides the scale factor is not in "
+               "your environment again."),
+            QStringLiteral("settings-override-interface-scale-factor-off"));
+    } else {
+        needRestart();
+    }
+}
+
+void SettingsDialog::on_interfaceScalingFactorSpinBox_valueChanged(int arg1) {
+    Q_UNUSED(arg1);
+    needRestart();
 }

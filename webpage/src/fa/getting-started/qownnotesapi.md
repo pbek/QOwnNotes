@@ -1,6 +1,5 @@
 # برنامه نکست کلود QOwnNotesAPI
 
-
 ![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) می تواند **دسترسی** به **یادداشت های حذف شده** و **نسخه های یادداشت** را برای شما فراهم کند.

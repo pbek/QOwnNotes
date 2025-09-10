@@ -13,7 +13,7 @@ order: 20160325064650
 
 You can get **[issue 25 of Linux Voice](http://shop.linuxvoice.com/products/single-issues)** on their webpage.
 
-Thanks a lot to *Graham* from *Linux Voice* to provide me with the article!
+Thanks a lot to _Graham_ from _Linux Voice_ to provide me with the article!
 
 Now I know why lately more people are assuming that QOwnNotes is using the notes from **OwnNote**, which it doesn't. :)
 
@@ -22,4 +22,4 @@ OwnNote uses HTML in the database.
 
 Please read [Does QOwnNotes support ownNote](https://www.qownnotes.org/Knowledge-base/Does-QOwnNotes-support-ownNote) for more information.
 
- ![screenshot-linuxvoice25](/img/blog/screenshot-linuxvoice25_reference.png "screenshot-linuxvoice25")
+![screenshot-linuxvoice25](/img/blog/screenshot-linuxvoice25_reference.png "screenshot-linuxvoice25")

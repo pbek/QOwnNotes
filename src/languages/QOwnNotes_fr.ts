@@ -815,6 +815,10 @@
 <translation>Caractères des mots clés :</translation>
 </message>
 <message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
 <source>Use Vim-style Editing</source>
 <translation>Utiliser l'édition de style Vim</translation>
 </message>
@@ -1363,7 +1367,7 @@
 </message>
 <message>
 <source>Import tags</source>
-<translation>Importer des étiquettes</translation>
+<translation>Importer des tags</translation>
 </message>
 <message>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
@@ -1451,17 +1455,17 @@
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>La plupart des panneaux ressemblent à ceux qui se trouvent au centre de la balise et le panneau est celui qui est activé par défaut.</translation>
+<translation>La plupart des panneaux, comme la liste de notes sur la gauche, les panneaux de tags, le panneau d’édition de la note au centre et le panneau de prévisualisation à droite sont activés par défaut.</translation>
 </message>
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
-<translation>La plupart des panneaux, comme la liste des notes à gauche, les panneaux de balisage et seul le panneau d'aperçu à droite sont activés par défaut. Vous aurez besoin d'un autre espace de travail pour éditer réellement des notes !</translation>
+<translation>La plupart des panneaux, comme la liste de notes sur la gauche, les panneaux de tags, et seulement le panneau de prévisualisation à droite sont activés par défaut. Vous aurez besoin d’un autre espace de travail pour réellement modifier des notes !</translation>
 </message>
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>La plupart des panneaux, comme la liste de notes à gauche, les panneaux de marquage, sont les plus importants.</translation>
+<translation>La plupart des panneaux, comme la liste de notes à gauche, les panneaux de tags, le panneau d’édition de notes à droite et le panneau de prévisualisation au-dessus de celui d’édition sont activés par défaut.</translation>
 </message>
 <message>
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
@@ -1486,6 +1490,10 @@
 <message>
 <source>Select local file or directory to link to</source>
 <translation>Sélectionnez le fichier ou le répertoire local à lier</translation>
+</message>
+<message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation>Supprime le titre du lien et re-télécharge le titre de la page web</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1522,6 +1530,22 @@
 <message>
 <source>Select directory to link to</source>
 <translation>Sélectionnez le répertoire vers lequel établir un lien</translation>
+</message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation>Sélectionnez le fichier vers lequel établir un lien (chemin relatif)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation>Sélectionnez le fichier vers lequel établir un lien (chemin absolu)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation>Sélectionnez le répertoire vers lequel établir un lien (chemin relatif)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation>Sélectionnez le répertoire vers lequel établir un lien (chemin absolu)</translation>
 </message>
 </context>
 <context>
@@ -1666,11 +1690,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Titres de sections</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Liens de référencement</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1866,7 +1890,7 @@
 </message>
 <message>
 <source>To&amp;do</source>
-<translation>À &amp;faire</translation>
+<translation>&amp;Liste de tâches</translation>
 </message>
 <message>
 <source>&amp;Window</source>
@@ -2095,7 +2119,7 @@
 </message>
 <message>
 <source>Show note list under tag panel</source>
-<translation>Afficher la liste des notes sous le panneau des labels</translation>
+<translation>Afficher la liste des notes sous le panneau des tags</translation>
 </message>
 <message>
 <source>Import notes from text files</source>
@@ -2113,6 +2137,14 @@
 <message>
 <source>Unlock panels</source>
 <translation>Déverrouiller les panneaux</translation>
+</message>
+<message>
+<source>Reattach floating panels</source>
+<translation>Ré-attacher les panneaux flottants</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation>Ré-attache tous les panneaux flottants</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2187,6 +2219,10 @@
 <translation>Afficher les versions git de cette note</translation>
 </message>
 <message>
+<source>Show note git versions externally</source>
+<translation>Voir les versions git de la note dans un logiciel externe</translation>
+</message>
+<message>
 <source>Find scripts in script repository</source>
 <translation>Trouver des scripts dans le dépôt</translation>
 </message>
@@ -2220,7 +2256,7 @@
 </message>
 <message>
 <source>Jump to tags panel</source>
-<translation>Aller au panneau des labels</translation>
+<translation>Aller au panneau des tags</translation>
 </message>
 <message>
 <source>Jump to note list panel</source>
@@ -2448,7 +2484,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation>Chercher du texte dans les notes parmi tous les sous-dossiers / étiquettes</translation>
+<translation>Chercher du texte dans les notes parmi tous les sous-dossiers / tags</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2658,6 +2694,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </translation>
 </message>
 <message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation>Note</translation>
+</message>
+<message>
 <source>Note folders</source>
 <translation>Dossiers de notes</translation>
 </message>
@@ -2668,6 +2709,27 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Les notes dans la corbeille sont en cours de récupération depuis votre serveur ownCloud</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation>Extension de fichier</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation>Extension du fichier joint :</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation>Nom de base du fichier</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation>Nom de base du fichier joint :</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation>Laisser vide pour un nom automatique</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2687,7 +2749,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation>Voulez-vous également exporter les fichiers multimédia et pièces joints à la note ? Des fichiers risquent d'être écrasés à l'emplacement de destination!</translation>
+<translation>Voulez-vous également exporter les fichiers multimédia et pièces joints à la note ? Des fichiers risquent d'être écrasés à l'emplacement de destination !</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -2740,6 +2802,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Le dossier de notes &lt;b&gt;%1&lt;/b&gt; dont le chemin est &lt;b&gt;%2&lt;/b&gt; n’existe plus !</translation>
 </message>
 <message>
+<source>Split note</source>
+<translation>Scinder la note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation>Scinder la note à la position de curseur actuelle ? Le texte après le curseur sera déplacé vers une nouvelle note. Un lien entre la nouvelle et l’ancienne note sera créé.</translation>
+</message>
+<message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
 <translation>L. %1, Col. %2</translation>
@@ -2755,6 +2825,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <numerusform>%n sélectionné</numerusform>
 <numerusform>%n sélectionnés</numerusform>
 </translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation>Le support git n’est pas activé pour le dossier de notes courant, voulez-vous l’activer dans les paramètres ?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation>Aucune version disponible</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation>Aucune version n’est disponible pour cette note.</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation>Fermet l’onglet de note</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -2950,6 +3036,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Rename workspace</source>
 <translation>Renommer l’espace de travail</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation>
+<numerusform>La dernière version de la note provient de votre dépôt git local</numerusform>
+<numerusform>Les %n dernières versions de la note proviennent de votre dépôt git local</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation>Chargement des versions de la note depuis git terminé</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation>
+<numerusform>Dernière version git de la note : %1</numerusform>
+<numerusform>%n dernières versions git de la note : %1</numerusform>
+</translation>
 </message>
 <message>
 <source>Disallow all note editing</source>
@@ -3162,7 +3266,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Untagged notes</source>
-<translation>Notes non tagués</translation>
+<translation>Notes non taguées</translation>
 </message>
 <message>
 <source>Export current note as HTML file</source>
@@ -3292,6 +3396,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Aperçu de la note</translation>
 </message>
 <message>
+<source>Note relations</source>
+<translation>Relations entre les notes</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Journal</translation>
 </message>
@@ -3374,6 +3482,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Cliquer ici pour voir ce qui a changé et pour pouvoir mettre à jour vers la dernière version</translation>
+</message>
+<message>
+<source>Waiting for answer from AI</source>
+<translation>Attente de la réponse de l’IA</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3627,7 +3739,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Montrer les notes dans le dossier « %1 » (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3882,9 +3994,9 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Un changement du chemin de la note a été détecté. Souhaitez-vous remplacer tous les liens de &lt;strong&gt;%n&lt;/strong&gt; fichier de note ?</numerusform>
+<numerusform>Un changement du chemin de la note a été détecté. Souhaitez-vous remplacer tous les liens de &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes ?</numerusform>
 </translation>
 </message>
 <message>
@@ -4075,6 +4187,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Note creation failed</source>
 <translation>La création de la note a échoué</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation>Double-cliquer pour ouvrir la note</translation>
 </message>
 </context>
 <context>
@@ -4315,8 +4431,15 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</source>
-<translation>Impossible d'établir une connexion de base de données avec le fichier '%1'. Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
+Are the folder and the file writable?</source>
+<translation>Impossible d'établir une connexion de base de données avec le fichier « %1 ».
+Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation>Impossible d'établir une connexion à la base de données du dossier de notes pour fusionner « %1 ».
+Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4325,12 +4448,6 @@ Are the folder and the file writeable?</source>
 <message>
 <source>Cannot open database</source>
 <translation>Impossible d'ouvrir la base de données</translation>
-</message>
-<message>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writeable?</source>
-<translation>Impossible d'établir une connexion à la base de données avec la base de données du dossier de notes pour fusionner "%1".
-Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 </context>
 <context>
@@ -5128,6 +5245,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Basque</translation>
 </message>
 <message>
+<source>English (British)</source>
+<translation>Anglais (britannique)</translation>
+</message>
+<message>
 <source>Estonian</source>
 <translation>Estonien</translation>
 </message>
@@ -5480,6 +5601,22 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Recherche de langue</translation>
 </message>
 <message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation>Cache les icônes dans les menus ainsi que la boîte de dialogue « Trouver une action ». Requiert un redémarrage pour prendre effet</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation>Cacher les icônes des menus</translation>
+</message>
+<message>
+<source>Override interface scaling factor</source>
+<translation>Écraser le facteur de grossissement de l’interface</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation>Facteur de grossissement de l’interface :</translation>
+</message>
+<message>
 <source>Status bar</source>
 <translation>Barre de statut</translation>
 </message>
@@ -5617,12 +5754,28 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Supprimer automatiquement les espaces en fin de ligne dans le texte de la note</translation>
 </message>
 <message>
+<source>Git library</source>
+<translation>Bibliothèque git</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation>Le support de la bibliothèque git libgit2 est activé.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation>N’oubliez pas d’activer le support de git pour vos dossiers de notes.</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
 <translation>Les notes plus grandes ne seront pas affichées dans la liste de notes</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
 <translation>Taille maximum de fichier de note :</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation>Masquer le bouton de fermeture d’onglet</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -5648,6 +5801,23 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
 <translation>Tester la connexion</translation>
+</message>
+<message>
+<source>API settings</source>
+<translation>Paramètres d’API</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation>Temps maximal de réponse :</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation>Le temps que l’application attendra une réponse du serveur avant de renvoyer un message d’erreur.</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation>sec</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -6566,7 +6736,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation>Back-end d’IA : %1</translation>
+<translation>Back-end d’IA&amp;nbsp;: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
@@ -6584,6 +6754,10 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Test connection to %1 (%2)</source>
 <translation>Tester la connexion à %1 (%2)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation>Si ce paramètre était activé, vous devez redémarrer l’application manuellement afin que l’ancienne variable d’environnement qui écrasait votre facteur de grossissement ne soit plus dans votre environnement.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7300,7 +7474,7 @@ Vos notes resteront intactes!</translation>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Différence textuelle</translation>
 </message>
 <message>
 <source>Differences:</source>
@@ -7308,7 +7482,7 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation>Accepter les changements ?</translation>
+<translation>Accepter le changement ?</translation>
 </message>
 </context>
 <context>
@@ -7725,10 +7899,6 @@ Cela ne peut être annuler !</translation>
 <translation>Erreur d'autorisation</translation>
 </message>
 <message>
-<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation>Votre exécutable QOwnNotes '%1' n'est pas accessible en écriture ! Il doit être accessible en écriture par l'utilisateur courant pour être mis à jour.</translation>
-</message>
-<message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
 <translation>Le fichier temporaire '%1' n'a pas pu être rendu exécutable ! Vous devez remplacer '%2' vous-même.</translation>
 </message>
@@ -7775,6 +7945,10 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Proceed with update</source>
 <translation>Faire la mise à jour</translation>
+</message>
+<message>
+<source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation>Votre exécutable QOwnNotes « %1 » n’est pas accessible en écriture ! Il doit être accessible en écriture par l’utilisateur courant pour pouvoir être mis à jour.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>

@@ -352,7 +352,11 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
     }
 
     // read the content of the updater script
-    f.open(QFile::ReadOnly | QFile::Text);
+    if (!f.open(QFile::ReadOnly | QFile::Text)) {
+        qWarning() << "Failed to open file:" << f.fileName();
+        return false;
+    }
+
     QTextStream ts(&f);
     QString scriptContent = ts.readAll();
     f.close();
@@ -424,11 +428,11 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
     QFileInfo fileInfo(appPath);
 
     if (!fileInfo.isWritable()) {
-        qCritical() << __func__ << " - 'appPath' is not writeable: " << appPath;
+        qCritical() << __func__ << " - 'appPath' is not writable: " << appPath;
 
         QMessageBox::critical(nullptr, tr("Permission error"),
-                              tr("Your QOwnNotes executable '%1' is not writeable! It must be "
-                                 "writeable by the current user in order to be updated.")
+                              tr("Your QOwnNotes executable '%1' is not writable! It must be "
+                                 "writable by the current user in order to be updated.")
                                   .arg(appPath));
 
         return false;

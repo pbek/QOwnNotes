@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   releaser:
     build: .
@@ -17,8 +17,8 @@ services:
       - ../secrets/private.pgp:/home/ubuntu/private.pgp
       - ../secrets/gh/hosts.yml:/home/ubuntu/.config/gh/hosts.yml
       - ../secrets/gh/config.yml:/home/ubuntu/.config/gh/config.yml
-#      - ../secrets/id_rsa:/home/ubuntu/.ssh/id_rsa:ro
-#      - ../secrets/id_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
+    #      - ../secrets/id_rsa:/home/ubuntu/.ssh/id_rsa:ro
+    #      - ../secrets/id_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
     # fakeroot became terribly slow
     # this helped: https://github.com/moby/moby/issues/45436#issuecomment-1528445371
     ulimits:

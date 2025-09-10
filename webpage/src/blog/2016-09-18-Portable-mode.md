@@ -13,14 +13,14 @@ There now is a **portable mode** for **QOwnNotes**, for example to carry around 
 
 In portable mode
 
-- the internal sqlite **database** and the **settings** will be stored inside a ***Data* folder** at the binary's location
+- the internal sqlite **database** and the **settings** will be stored inside a **_Data_ folder** at the binary's location
 - the settings will be stored in an **ini file**
-- the **note folders** will be automatically stored relative to the ***Data* folder** so that the correct note folders will be loaded regardless where your QOwnNotes installation is currently located
+- the **note folders** will be automatically stored relative to the **_Data_ folder** so that the correct note folders will be loaded regardless where your QOwnNotes installation is currently located
 
-It will be activated if you run QOwnNotes with the **parameter *--portable***.
+It will be activated if you run QOwnNotes with the **parameter _--portable_**.
 
-On **Windows** there is a ***QOwnNotesPortable.bat*** in your release path to start QOwnNotes in **portable mode**.
+On **Windows** there is a **_QOwnNotesPortable.bat_** in your release path to start QOwnNotes in **portable mode**.
 
 Note: QOwnNotesPortable.exe was dropped because of anti virus false positives.
 
- ![Portable mode for USB sticks](/img/blog/Portable-mode_reference.png "Portable mode for USB sticks") **Portable mode** for USB sticks
+![Portable mode for USB sticks](/img/blog/Portable-mode_reference.png "Portable mode for USB sticks") **Portable mode** for USB sticks

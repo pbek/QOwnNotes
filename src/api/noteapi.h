@@ -43,5 +43,6 @@ class NoteApi : public QObject, public Note {
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true);
     Q_INVOKABLE QString getFileURLFromFileName(const QString &localFileName);
     Q_INVOKABLE static bool allowDifferentFileName();
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId);
     void copy(const Note &note);
 };

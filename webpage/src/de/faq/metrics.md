@@ -2,7 +2,7 @@
 
 ## Warum sind Metriken nützlich?
 
-QOwnNotes (im Sinne der Anwendung selbst) wird **von einer und manchmal auch von zwei Personen in ihrer Freizeit entwickelt**.
+QOwnNotes (as in the application itself) is **developed by mostly one person in his spare time**.
 
 Versionen werden für viele (häufig sehr alte Versionen von) Plattformen und Distributionen erstellt. Sie aufrechtzuerhalten ist viel Arbeit.
 

@@ -28,4 +28,4 @@ Script {
 
 QOwnNotes의 특정 기능에 대한 액세스가 필요하거나 질문이나 아이디어가 있는 경우 [QOwnNotes 문제 페이지](https://github.com/pbek/QOwnNotes/issues)에서 문제를 여십시오.
 
-::: 팁 로그를 기록하려면 `script.log()`명령을 사용하여 *로그 패널*에 로그할 수 있으며, 이는 *창 / 패널* 메뉴에서 켤 수 있습니다. :::
+::: tip For logging, you can use the `script.log()` command to log to the _Log panel_, which you can turn on in the _Window / Panels_ menu. :::

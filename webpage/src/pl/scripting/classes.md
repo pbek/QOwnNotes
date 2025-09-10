@@ -1,9 +1,9 @@
 # Odsłonięte zajęcia
 
-Notatka
-----
+## Notatka
 
 ### Właściwości i metody
+
 ```cpp
 class NoteApi {
     Q_PROPERTY(int id)
@@ -26,12 +26,15 @@ class NoteApi {
     Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
     Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
     Q_INVOKABLE bool allowDifferentFileName()
+    // Returns the Markdown note url for linking to the note with noteId
+    Q_INVOKABLE QString getNoteUrlForLinkingToNoteId(int noteId)
 };
 ```
 
 Możesz użyć metod z [Data](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) do pracy z `fileCreated` lub `fileLastModified`.
 
 ### Przykład
+
 ```js
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
@@ -43,10 +46,10 @@ note.renameNoteFile("new name");
 script.log(note.allowDifferentFileName());
 ```
 
-NoteSubFolder
-----
+## NoteSubFolder
 
 ### Właściwości i metody
+
 ```cpp
 class NoteSubFolderApi {
     Q_PROPERTY(int id)
@@ -61,13 +64,20 @@ class NoteSubFolderApi {
 ```
 
 ### Przykład
+
 ```js
-var noteSubFolderQmlObj = Qt.createQmlObject("import QOwnNotesTypes 1.0; NoteSubFolder{}", mainWindow, "noteSubFolder");
+var noteSubFolderQmlObj = Qt.createQmlObject(
+  "import QOwnNotesTypes 1.0; NoteSubFolder{}",
+  mainWindow,
+  "noteSubFolder",
+);
 
 // print all subfolder names
-noteSubFolderQmlObj.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+noteSubFolderQmlObj
+  .fetchNoteSubFoldersByParentId(parentId)
+  .forEach(function (nsf) {
     script.log(nsf.name);
-});
+  });
 
 // get the active note subfolder
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
@@ -81,14 +91,14 @@ script.log(noteSubFolder.name);
 
 // iterate through notes in note subfolder
 for (var idx in noteSubFolder.notes) {
-    var note = noteSubFolder.notes[idx];
+  var note = noteSubFolder.notes[idx];
 }
 ```
 
-Etykietka
----
+## Etykietka
 
 ### Właściwości i metody
+
 ```cpp
 class TagApi {
     Q_PROPERTY(int id)
@@ -101,6 +111,7 @@ class TagApi {
 ```
 
 ### Example
+
 ```js
 // Don't forget to use "import QOwnNotesTypes 1.0" at the top of your script!
 
@@ -111,17 +122,17 @@ var notes = tag.notes;
 
 // Iterate through notes of the tag
 for (var idx in notes) {
-    var note = notes[idx];
-    script.log(note.name);
+  var note = notes[idx];
+  script.log(note.name);
 }
 ```
 
 Znajdziesz więcej przykładów, w których używany jest Tag Api na [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging-by-object.qml).
 
-MainWindow
-----------
+## MainWindow
 
 ### Properties and methods
+
 ```cpp
 class MainWindow {
     Q_INVOKABLE void reloadTagTree();
@@ -154,30 +165,30 @@ class MainWindow {
 ```
 
 ### Przykład
+
 ```js
-// Wymuś ponowne załadowanie listy notatek
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Tworzy nowy podfolder notatek „Mój ozdobny folder” w bieżącym podfolderze
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Wstawia html do bieżącej notatki jako markdown
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Ustaw obszar roboczy „Edytuj” jako bieżący obszar roboczy
+// Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Przejdź do tagu „test” na drzewie tagów
-// Jest przykład na https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Pobierz wszystkie notatki, które są otwarte w kartach
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
-noteIds.forEach(function (noteId){
-    var note = script.fetchNoteById(noteId);
+noteIds.forEach(function (noteId) {
+  var note = script.fetchNoteById(noteId);
 
-    // zrób coś z notatką
+  // do something with the note
 });
-
 ```

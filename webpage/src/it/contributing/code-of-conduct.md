@@ -10,19 +10,19 @@ Ci impegniamo ad agire e interagire in modo tale da contribuire a una community 
 
 Esempi di comportamenti che contribuiscono a un ambiente positivo per la nostra community includono:
 
-* Dimostrare empatia e gentilezza verso le altre persone
-* Rispettare le diverse opinioni, punti di vista ed esperienze
-* Dare e ricevere con garbo un riscontro costruttivo
-* Accettare la responsabilità e scusarsi con quelli coinvolti dai nostri errori e imparare dall'esperienza
-* Concentrarsi su cosa sia meglio non solo per noi come individui, ma per l'intera community
+- Dimostrare empatia e gentilezza verso le altre persone
+- Rispettare le diverse opinioni, punti di vista ed esperienze
+- Dare e ricevere con garbo un riscontro costruttivo
+- Accettare la responsabilità e scusarsi con quelli coinvolti dai nostri errori e imparare dall'esperienza
+- Concentrarsi su cosa sia meglio non solo per noi come individui, ma per l'intera community
 
 Esempi di comportamenti inaccettabili:
 
-* L'uso di linguaggio o immaginario sessualizzante e avances o sessualizzazione di ogni tipo
-* Trolleggio, insulti o commenti denigratori e attacchi alle ideologie politiche o alla persona
-* Molestie pubbliche o private
-* Pubblicare le informazioni personali di altri come l'indirizzo email o di casa senza il loro consenso
-* Altri comportamenti che potrebberi essere ragionevolmente considerati inappropriati un contesto lavorativo
+- L'uso di linguaggio o immaginario sessualizzante e avances o sessualizzazione di ogni tipo
+- Trolleggio, insulti o commenti denigratori e attacchi alle ideologie politiche o alla persona
+- Molestie pubbliche o private
+- Pubblicare le informazioni personali di altri come l'indirizzo email o di casa senza il loro consenso
+- Altri comportamenti che potrebberi essere ragionevolmente considerati inappropriati un contesto lavorativo
 
 ## Responsabilità di esecuzione
 
@@ -36,7 +36,7 @@ Questo Codice di Condotta viene applicato a tutti gli spazi comunitari e anche q
 
 ## Applicazione
 
-Casi di comportamento abusivo, molesto o in altro modo inaccettabile possono essere segnalati ai dirigenti della community responsabili dell'adempimento di tali regole (guarda il menu dei *Contatti* su [www.qownnotes.org](https://www.qownnotes.org/)). Tutti i reclami saranno verificati e studiati adeguatamente.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Tutti i reclami saranno verificati e studiati adeguatamente.
 
 Tutti i dirigenti della community sono obbligati a rispettare la privacy e la sicurezza del mittente dell'incidente.
 
@@ -81,4 +81,3 @@ Per risposte alle domande più comuni riguardo a questo codice condotta, guarda 
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
-

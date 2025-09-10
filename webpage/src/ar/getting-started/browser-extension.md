@@ -7,6 +7,7 @@ image: /img/bookmarks.png
 تتيح لك قص المحتوى من صفحات المتصفح وكذلك إدارة إشارات المتصفح المرجعية عبر المتصفحات وأنظمة التشغيل المختلفة.
 
 ::: tip
+
 - يجب أن يكون QOwnNotes مفتوحا حتى تعمل إضافة المتصفح رفيقة الويب.
 - لا حاجة للاتصال بالإنترنت. إضافة المتصفح تعمل **بدون اتصال**.
 :::
@@ -14,13 +15,13 @@ image: /img/bookmarks.png
 ## التثبيت
 
 1. الحصول على الإضافة
-    - [‏سوق Chrome الإلكتروني](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-    - [صفحة إضافات فيرفكس](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
-    - يمكنك أيضا أن تجد الإضافة على [GitHub](https://github.com/qownnotes/web-companion/).
+   - [‏سوق Chrome الإلكتروني](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+   - [صفحة إضافات فيرفكس](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+   - يمكنك أيضا أن تجد الإضافة على [GitHub](https://github.com/qownnotes/web-companion/).
 2. إضافة رمز الأمان لإعداد الإضافة.
-    - المرة الأولى التي ستنقر فيها على أيقونة إضافة المتصفح QOwnNotes، سيظهر لك صندوق حواري فيه رمز أمان. انسخ الرمز.
-    - اذهب إلى مكان إدارة الإضافات في متصفحك. انقر على تفاصيل إضافة QOwnNotes.
-    - ألصق الرمز إلى خانة رمز الأمان.
+   - المرة الأولى التي ستنقر فيها على أيقونة إضافة المتصفح QOwnNotes، سيظهر لك صندوق حواري فيه رمز أمان. انسخ الرمز.
+   - اذهب إلى مكان إدارة الإضافات في متصفحك. انقر على تفاصيل إضافة QOwnNotes.
+   - ألصق الرمز إلى خانة رمز الأمان.
 3. لاستعمال الوضع الخصوصي، عليك السماح للإضافة بالعمل في النوافذ الخصوصية، في إعدادات الإضافة.
 
 ## مقص الويب
@@ -32,9 +33,9 @@ image: /img/bookmarks.png
 ::: warning
 Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes الحاسوبي مفتوح، وأن رمز الأمان مضبوط في إضافة المتصفح الرفيقة.
 
-وتأكد كذلك أنك قبلت تجميع بيانات المستخدم عندما ضغطت على أيقونة الإضافة أول مرة في شريط المتصفح.
+Also, make sure you accept the consent dialog when you first click the extension icon in the browser toolbar.
 
-وإذا كنت تستخدم فيرفكس، فتحتاج كذلك أن تتأكد أنك فعّلت الصلاحية الاختيارية `الوصول إلى بياناتك لكل المواقع` في إعدادات *صلاحيات* الإضافة، وإلا فقد تقابل الخطأ: `TypeError: chrome.tabs.captureVisibleTab is not a function`.
+If you are using Firefox, you also need to make sure that you have turned on the optional permission `Access your data for all websites` in the _Permission_ extension settings, otherwise you might get an error `TypeError: chrome.tabs.captureVisibleTab is not a function`.
 :::
 
 ::: tip
@@ -60,11 +61,12 @@ Info إن لم يعمل مقص الويب، فتأكد أن تطبيق QOwnNotes
 ### صيغ روابط الإشارات المرجعية
 
 ```markdown
-- [اسم صفحة الوب](https://www.example.com)
-- [اسم صفحة الوب](https://www.example.com) #وسم١ #وسم٢
-- [اسم صفحة الوب](https://www.example.com) شيء من الوصف فقط
-- [اسم صفحة الوب](https://www.example.com) #وسم١ #وسم٢ شيء من الوصف والوسوم
-* [اسم صفحة الوب](https://www.example.com) رمز عناصر القائمة البديل صالح أيضا
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 يمكنك البحث في إضافة المتصفح بالاسم أو وسوم الرابط أو الوصف. تُحلَّل كل الروابط الأخرى في الملاحظة الحالية، لكن بغير وسوم أو وصف.

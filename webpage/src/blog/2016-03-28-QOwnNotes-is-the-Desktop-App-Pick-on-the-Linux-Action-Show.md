@@ -15,4 +15,4 @@ Chris almost got all facts right, beside from that the QOwnNotes companion ownCl
 
 You can watch the part on **YouTube** at [QOwnNotes at Linux Action Show 410](https://youtu.be/PAVL--BgA7E?t=11m16s).
 
- ![QOwnNotes on LAS 410](/img/blog/QOwnNotes-on-LAS-410_reference.png "QOwnNotes on LAS 410")
+![QOwnNotes on LAS 410](/img/blog/QOwnNotes-on-LAS-410_reference.png "QOwnNotes on LAS 410")

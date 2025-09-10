@@ -46,91 +46,58 @@ namespace litehtml {
 // (e.g., via a using statement).
 
 class tstring_view {
-public:
-    using value_type = tchar_t;
+ public:
+  using value_type = tchar_t;
 
-    using pointer = tchar_t*;
+  using pointer = tchar_t*;
 
-    using const_pointer = const tchar_t*;
+  using const_pointer = const tchar_t*;
 
-    using reference = tchar_t&;
+  using reference = tchar_t&;
 
-    using const_reference = const tchar_t&;
+  using const_reference = const tchar_t&;
 
-    using iterator = const_pointer;
+  using iterator = const_pointer;
 
-    using const_iterator = const_pointer;
+  using const_iterator = const_pointer;
 
-    using size_type = size_t;
+  using size_type = size_t;
 
-    using difference_type = std::ptrdiff_t;
+  using difference_type = std::ptrdiff_t;
 
-public:
-    tstring_view() = default;
+ public:
+  tstring_view() = default;
 
-    tstring_view(const tstring_view& other) = default;
+  tstring_view(const tstring_view& other) = default;
 
-    tstring_view(const_pointer s, size_type size)
-    : data_(s)
-    , size_(size)
-    {
-    }
+  tstring_view(const_pointer s, size_type size) : data_(s), size_(size) {}
 
-    constexpr const_iterator begin() const
-    {
-        return data_;
-    }
+  constexpr const_iterator begin() const { return data_; }
 
-    constexpr const_iterator cbegin() const
-    {
-        return data_;
-    }
+  constexpr const_iterator cbegin() const { return data_; }
 
-    constexpr const_iterator end() const
-    {
-        return data_ + size_;
-    }
+  constexpr const_iterator end() const { return data_ + size_; }
 
-    constexpr const_iterator cend() const
-    {
-        return data_ + size_;
-    }
+  constexpr const_iterator cend() const { return data_ + size_; }
 
-    constexpr const_reference operator[](size_type offset) const
-    {
-        return *(data_ + offset);
-    }
+  constexpr const_reference operator[](size_type offset) const { return *(data_ + offset); }
 
-    constexpr const_pointer data() const
-    {
-        return data_;
-    }
+  constexpr const_pointer data() const { return data_; }
 
-    size_type size() const
-    {
-        return size_;
-    }
+  size_type size() const { return size_; }
 
-    size_type length() const
-    {
-        return size_;
-    }
+  size_type length() const { return size_; }
 
-    bool empty() const
-    {
-        return (size_ == 0);
-    }
+  bool empty() const { return (size_ == 0); }
 
-private:
-    const_pointer data_ = nullptr;
+ private:
+  const_pointer data_ = nullptr;
 
-    size_type size_ = 0;
+  size_type size_ = 0;
 };
 
-std::basic_ostream<tstring_view::value_type>& operator<<(
-    std::basic_ostream<tstring_view::value_type>&,
-    tstring_view str);
+std::basic_ostream<tstring_view::value_type>& operator<<(std::basic_ostream<tstring_view::value_type>&, tstring_view str);
 
-} // namespace litehtml
+}  // namespace litehtml
 
-#endif // LITEHTML_TSTRING_VIEW_H__
+#endif  // LITEHTML_TSTRING_VIEW_H__

@@ -19,4 +19,4 @@ And **AppVeyor** is used for creating the builds for **Microsoft Windows**, visi
 
 You will find all the **new binaries** in the **[download area of the project page](http://www.qownnotes.org/#downloads)**.
 
- ![Edit your notes with markdown highlighting, colored tags and subfolders](/img/blog/QOwnNotes-Main-Screen-Linux_reference.png "Edit your notes with markdown highlighting, colored tags and subfolders")
+![Edit your notes with markdown highlighting, colored tags and subfolders](/img/blog/QOwnNotes-Main-Screen-Linux_reference.png "Edit your notes with markdown highlighting, colored tags and subfolders")

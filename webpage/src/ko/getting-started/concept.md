@@ -54,8 +54,7 @@ graph TB
 - 또한 [QOwnNotesApi Nextcloud 앱](#qownnotesapi-nextcloud-app)을 통해 Nextcloud / ownCloud 서버의 **노트 기록 및 휴지통에 액세스**할 수 있습니다
 - QOwnNotes 내에서 Nextcloud / ownCloud 서버의 작업관리 목록에 액세스할 수 있습니다
 - **QOwnNotes**QOwnNotes 는 노트와 미디어/첨부 파일을 <0>동기화하지 않습니다</0>!
-    - 파일 동기화는 복잡한 작업입니다. 이미 우수한 파일 동기화 솔루션이 있습니다 ([Nextcloud 데스크탑 동기화 클라이언트](#nextcloud-desktop-sync-client) 참조)
-
+  - 파일 동기화는 복잡한 작업입니다. 이미 우수한 파일 동기화 솔루션이 있습니다 ([Nextcloud 데스크탑 동기화 클라이언트](#nextcloud-desktop-sync-client) 참조)
 
 ## 마크다운 노트 파일
 
@@ -63,7 +62,6 @@ graph TB
 - 노트는 데스크톱 컴퓨터에 **일반 텍스트 마크다운 파일**로 저장됩니다
 - QOwnNotes 옆에서 원하는 텍스트 편집기를 사용하여 노트 파일을 보거나 편집할 수 있습니다
 - [Nextcloud](https://nextcloud.com/) 또는 [ownCloud](https://owncloud.org/) 동기화 클라이언트를 사용하여 다른 장치( 데스크톱 및 모바일)와 서버에 **노트를 동기화**
-
 
 ## QOwnNotes 브라우저 확장
 
@@ -141,7 +139,7 @@ QOwnNotes를 사용하여 [**Nextcloud Deck**](https://github.com/nextcloud/deck
 
 - [Android용 Nextcloud 노트](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (타사 제품)
 
-::: 팁 또한 *Synchronize Ultimate* 또는 *FolderSync*와 같은 동기화 도구를 사용하여 노트 파일을 동기화하고 *neutriNotes*와 같은 소프트웨어를 사용하여 노트를 편집할 수 있습니다. :::
+::: 팁 또한 _ynchronize Ultimate_ 또는 _FolderSync_과 같은 동기화 도구를 사용하여 노트 파일을 동기화하고 _neutriNotes_ 또는 [**Markor**](https://f-droid.org/packages/net.gsantner.markor/)과 같은 소프트웨어를 사용하여 노트를 편집할 수도 있습니다. :::
 
 
 

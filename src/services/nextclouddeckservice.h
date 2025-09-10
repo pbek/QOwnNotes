@@ -2,6 +2,7 @@
 #define QOWNNOTES_NEXTCLOUDDECKSERVICE_H
 
 #include <QDateTime>
+#include <QDebug>
 #include <QObject>
 #include <QtNetwork/QNetworkRequest>
 
@@ -26,13 +27,34 @@ class NextcloudDeckService : public QObject {
     };
 
    public:
+    struct Card {
+        int id;
+        QString title;
+        QString description;
+        QDateTime duedate;
+        int order;
+        QString type;
+        QDateTime createdAt;
+        QDateTime lastModified;
+
+        friend QDebug operator<<(QDebug dbg, const Card& card) {
+            dbg.nospace() << "Card: <id>" << card.id << " <title>" << card.title << " <description>"
+                          << card.description << " <duedate>" << card.duedate.toString(Qt::ISODate)
+                          << " <order>" << card.order << " <type>" << card.type << " <createdAt>"
+                          << card.createdAt.toString(Qt::ISODate) << " <lastModified>"
+                          << card.lastModified.toString(Qt::ISODate);
+            return dbg.space();
+        }
+    };
+
     explicit NextcloudDeckService(QObject* parent, int cloudConnectionId = -1);
-    int createCard(const QString& title, const QString& description = "",
-                   QDateTime* dueDateTime = nullptr);
+    int storeCard(const QString& title, const QString& description = "",
+                  QDateTime* dueDateTime = nullptr, int cardId = -1);
     QString getCardLinkForId(int cardId);
     bool isEnabledAndValid();
     bool isEnabled();
     QList<Board> getBoards();
+    QHash<int, Card> getCards();
 
    private:
     CloudConnection cloudConnection;

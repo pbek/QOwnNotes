@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Függőségek
@@ -38,7 +39,7 @@ Alapértelmezés szerint az `fzf` kifejezést használja a kereséshez, de haszn
 
 ![socket-server-token](/img/socket-server-token.png)
 
-A kódrészletkezelő használata előtt engedélyeznie kell a *Web socket szervert* (2) a QOwnNotes *Böngészőbővítmény / parancsrészletek* (1) beállításainál.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Ezután meg kell mutatnia a biztonsági tokent (3), és ki kell másolnia (4).
 
@@ -67,13 +68,15 @@ Használhat **soron belüli kódblokkokkal rendelkező rendezetlen listákat** a
 Ha a soron belüli kódblokk elé egy `cmd:` karakterláncot ad hozzá, a parancs az **aktuális jegyzetben** is megtalálható lesz, függetlenül a jegyzetcímkéktől.
 
 ```markdown
-- `visszhang Én vagyok a parancs` Leírás vagyok #tag1 #tag2 #tag3
-* `visszhang Én is parancs vagyok` Leírás vagyok #tag3 #tag4 #tag5
-- cmd: `echo I megtalálható lesz az aktuális jegyzetben` Ez a parancs megtalálható az aktuális jegyzetben a jegyzetcímkéktől függetlenül
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
 
-<!-- Példa a felhasználói bevitel kérésére -->
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
 
-- `read -p "PR ID: " id && git lekérési eredet pull/$id/head:pull-$id && git checkout pull-$id` Kérjen lekérési azonosítót és lekérési kérést
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 A **`bash` vagy `shell` kódblokkok**, amelyeket leírásként 2-es vagy magasabb címsor előz meg, szintén használhatók parancsrészletekhez. A címkék is támogatottak, ha a címsor és a kódblokk között vannak.

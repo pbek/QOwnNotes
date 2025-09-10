@@ -1,7 +1,6 @@
 {
   lib,
   stdenv,
-  fetchurl,
   qmake,
   qttools,
   qtbase,
@@ -50,9 +49,7 @@ stdenv.mkDerivation {
     botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
-  qmakeFlags = [
-    "USE_SYSTEM_BOTAN=1"
-  ];
+  qmakeFlags = [ "USE_SYSTEM_BOTAN=1" ];
 
   # Install shell completion on Linux (there is no xvfb-run on macOS)
   postInstall =

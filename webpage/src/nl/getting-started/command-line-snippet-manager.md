@@ -24,6 +24,7 @@ rm /tmp/qc.tar.gz && \
 sudo mv /tmp/qc /usr/local/bin/qc && \
 /usr/local/bin/qc --version
 ```
+
 :::
 
 ## Afhankelijkheden
@@ -38,7 +39,7 @@ Standaard wordt `fzf` gebruikt om te zoeken, maar u kunt `peco` gebruiken door d
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Voordat u de snippetmanager gebruikt, moet u de *Websocketserver* (2) inschakelen in de instellingen voor *Browserextensie / opdrachtfragmenten* (1) in QOwnNotes.
+Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
 
 Dan moet je het security token (3) laten zien en kopiëren (4).
 
@@ -67,13 +68,15 @@ U kunt **ongeordende lijsten met in-line codeblokken** gebruiken om opdrachtfrag
 Als je een `cmd:` toevoegt voor het in-line codeblok, zal het commando ook gevonden worden in de **huidige notitie** ongeacht notitietags.
 
 ```markdown
-- `echo ik ben een commando` ik ben een beschrijving #tag1 #tag2 #tag3
-* `echo ik ben ook een commando` ik ben een beschrijving #tag3 #tag4 #tag5
-- cmd: `echo I zal worden gevonden in de huidige notitie` Dit commando zal worden gevonden in de huidige notitie, ongeacht notitietags
+- `echo I am a command` I am a description #tag1 #tag2 #tag3
 
-<!-- Voorbeeld om gebruikersinvoer te vragen -->
+* `echo I am also a command` I am a description #tag3 #tag4 #tag5
 
-- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Vraag om een pull-verzoek-ID en check-out pull-verzoek
+- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+
+<!-- Example for asking for user input -->
+
+- `read -p "PR ID: " id && git fetch origin pull/$id/head:pull-$id && git checkout pull-$id` Ask for pull request ID and checkout pull request
 ```
 
 **`bash` of `shell` codeblokken**, voorafgegaan door een kop 2 of hoger als beschrijving, kunnen ook worden gebruikt voor opdrachtfragmenten. Tags worden ook ondersteund als ze tussen de kop en het codeblok staan.
