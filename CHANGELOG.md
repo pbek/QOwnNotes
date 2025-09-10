@@ -7,6 +7,11 @@
 - The Groq AI model list was updated (for [#3365](https://github.com/pbek/QOwnNotes/issues/3365), thank you, @Weej1)
 - The Slackware Build process was updated to use CMake and a 15.0 directory was added
   (for [#3363](https://github.com/pbek/QOwnNotes/issues/3363), thank you, @fsLeg)
+- There was a new release of the **QOwnNotes Web Companion browser extension** 2025.9.0
+  - The extension was migrated to the latest version of Quasar to mitigate security issues
+    in those and other packages (for [#86](https://github.com/qownnotes/web-companion/issues/86))
+  - The dependencies were updated
+  - More translations were added
 
 ## 25.9.1
 
