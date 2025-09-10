@@ -115,9 +115,12 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
             QStringLiteral("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
 
 #ifndef INTEGRATION_TESTS
-        MainWindow *mainWindow = MainWindow::instance();
-        if (mainWindow != nullptr) {
-            mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
+        // Only insert the link if we're creating a new card, not updating an existing one
+        if (cardIdToUpdate == -1) {
+            MainWindow *mainWindow = MainWindow::instance();
+            if (mainWindow != nullptr) {
+                mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
+            }
         }
 #endif
 
@@ -128,6 +131,7 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
         ui->newItemEdit->setFocus();
     }
 
+    // Close the dialog if we just created a new card and not updated an existing one
     if (cardIdToUpdate == -1) {
         close();
     }

@@ -2,6 +2,8 @@
 
 ## 25.9.2
 
+- The save button in the **Nextcloud Deck dialog** will now only insert a link
+  into the current note for new cards (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - The Slackware Build process was updated to use CMake and a 15.0 directory was added
   (for [#3363](https://github.com/pbek/QOwnNotes/issues/3363), thank you, @fsLeg)
 
