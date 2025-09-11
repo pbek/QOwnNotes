@@ -294,6 +294,32 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     ui->dueDateTimeCheckBox->setChecked(true);
 }
 
-void NextcloudDeckDialog::on_deleteCardButton_clicked() {}
+void NextcloudDeckDialog::on_deleteCardButton_clicked() {
+    if (Utils::Gui::question(this, tr("Delete card"),
+                             tr("Do you want to delete the current Nextcloud Deck card?"),
+                             QStringLiteral("nextcloud-deck-delete")) != QMessageBox::Yes) {
+        return;
+    }
 
-void NextcloudDeckDialog::on_archiveCardButton_clicked() {}
+    NextcloudDeckService nextcloudDeckService(this);
+    bool isSuccess = nextcloudDeckService.deleteCard(_currentCard.id);
+
+    if (isSuccess) {
+        reloadCardList();
+    }
+}
+
+void NextcloudDeckDialog::on_archiveCardButton_clicked() {
+    if (Utils::Gui::question(this, tr("Archive card"),
+                             tr("Do you want to archive the current Nextcloud Deck card?"),
+                             QStringLiteral("nextcloud-deck-archive")) != QMessageBox::Yes) {
+        return;
+    }
+
+    NextcloudDeckService nextcloudDeckService(this);
+    bool isSuccess = nextcloudDeckService.archiveCard(_currentCard.id);
+
+    if (isSuccess) {
+        reloadCardList();
+    }
+}

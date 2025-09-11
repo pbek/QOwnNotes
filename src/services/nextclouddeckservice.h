@@ -55,6 +55,8 @@ class NextcloudDeckService : public QObject {
     bool isEnabled();
     QList<Board> getBoards();
     QHash<int, Card> getCards();
+    bool archiveCard(int cardId);
+    bool deleteCard(int cardId);
 
    private:
     CloudConnection cloudConnection;

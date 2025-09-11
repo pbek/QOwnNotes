@@ -158,6 +158,123 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     return resultCardId;
 }
 
+bool NextcloudDeckService::archiveCard(int cardId) {
+    auto* manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QUrl url =
+        QUrl(serverUrl + "/index.php/apps/deck/cards/" + QString::number(cardId) + "/archive");
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+    networkRequest.setHeader(QNetworkRequest::UserAgentHeader,
+                             Utils::Misc::friendlyUserAgentString());
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+
+    networkRequest.setRawHeader("OCS-APIRequest", "true");
+    addAuthHeader(networkRequest);
+
+    QNetworkReply* reply = manager->put(networkRequest, std::nullptr_t());
+
+    loop.exec();
+    bool result = false;
+
+    if (timer.isActive()) {
+        int returnStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+        if (returnStatusCode >= 200 && returnStatusCode < 300) {
+            result = true;
+        } else {
+            QString errorString = reply->errorString();
+            Utils::Gui::warning(nullptr, tr("Error while archiving card"),
+                                tr("Archiving the card failed with status code %2 and message: %3")
+                                    .arg(QString::number(returnStatusCode), errorString),
+                                "nextcloud-deck-archive-failed");
+
+            qDebug() << __func__ << " - error: " << returnStatusCode;
+            qDebug() << __func__ << " - 'errorString': " << errorString;
+        }
+    } else {
+        qDebug() << __func__ << " - 'timer' timed out";
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    return result;
+}
+
+bool NextcloudDeckService::deleteCard(int cardId) {
+    auto* manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QUrl url = QUrl(serverUrl + "/index.php/apps/deck/cards/" + QString::number(cardId));
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+    networkRequest.setHeader(QNetworkRequest::UserAgentHeader,
+                             Utils::Misc::friendlyUserAgentString());
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    networkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+
+    networkRequest.setRawHeader("OCS-APIRequest", "true");
+    addAuthHeader(networkRequest);
+
+    QNetworkReply* reply = manager->sendCustomRequest(networkRequest, "DELETE");
+
+    loop.exec();
+    bool result = false;
+
+    if (timer.isActive()) {
+        int returnStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+        if (returnStatusCode >= 200 && returnStatusCode < 300) {
+            result = true;
+        } else {
+            QString errorString = reply->errorString();
+            Utils::Gui::warning(nullptr, tr("Error while deleting card"),
+                                tr("Deleting the card failed with status code %2 and message: %3")
+                                    .arg(QString::number(returnStatusCode), errorString),
+                                "nextcloud-deck-delete-failed");
+
+            qDebug() << __func__ << " - error: " << returnStatusCode;
+            qDebug() << __func__ << " - 'errorString': " << errorString;
+        }
+    } else {
+        qDebug() << __func__ << " - 'timer' timed out";
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    return result;
+}
+
 QString NextcloudDeckService::getCardLinkForId(int cardId) {
     qDebug() << __func__ << " - 'boardId': " << this->boardId;
 

@@ -2,13 +2,15 @@
 
 ## 25.9.2
 
-- Try to mitigate Nextcloud sync errors by not triggering an expiration of
+- Try to **mitigate Nextcloud sync errors** by not triggering an expiration of
   trashed notes periodically, rather we want to do it after the note folder
   was reloaded (for [#3359](https://github.com/pbek/QOwnNotes/issues/3359))
 - The save button in the **Nextcloud Deck dialog** will now only insert a link
   into the current note for new cards (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
-- The Groq AI model list was updated (for [#3365](https://github.com/pbek/QOwnNotes/issues/3365), thank you, @Weej1)
-- The Slackware Build process was updated to use CMake and a 15.0 directory was added
+- You can now **archive** and **delete cards** in the **Nextcloud Deck dialog**
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+- The **Groq AI model list was updated** (for [#3365](https://github.com/pbek/QOwnNotes/issues/3365), thank you, @Weej1)
+- The **Slackware Build process was updated** to use CMake and a 15.0 directory was added
   (for [#3363](https://github.com/pbek/QOwnNotes/issues/3363), thank you, @fsLeg)
 - There was a new release of the **QOwnNotes Web Companion browser extension** 2025.9.0
   - The extension was migrated to the latest version of Quasar to mitigate security issues
