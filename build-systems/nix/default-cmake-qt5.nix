@@ -75,7 +75,7 @@ stdenv.mkDerivation {
     + lib.optionalString stdenv.isLinux ''
       ln -s $out/bin/${appname} $out/bin/${pname}
     ''
-    # Remame application for macOS as lowercase binary
+    # Rename application for macOS as lowercase binary
     + lib.optionalString stdenv.isDarwin ''
       find $out
       # Prevent "same file" error
