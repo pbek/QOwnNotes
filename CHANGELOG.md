@@ -2,7 +2,7 @@
 
 ## 25.9.3
 
-- Fixed a build issue with Qt < 6.8 (for [#3359](https://github.com/pbek/QOwnNotes/issues/3359))
+- Fixed a build issue with Qt < 6.8 (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 
 ## 25.9.2
 
