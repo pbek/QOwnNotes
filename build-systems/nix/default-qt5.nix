@@ -64,14 +64,14 @@ stdenv.mkDerivation {
     # Create a lowercase symlink for Linux
     + lib.optionalString stdenv.isLinux ''
       ln -s $out/bin/${appname} $out/bin/${pname}
-    ''
-    # Rename application for macOS as lowercase binary
-    + lib.optionalString stdenv.isDarwin ''
-      find $out
-      # Prevent "same file" error
-      mv $out/bin/${appname} $out/bin/${pname}.bin
-      mv $out/bin/${pname}.bin $out/bin/${pname}
     '';
+#    # Rename application for macOS as lowercase binary
+#    + lib.optionalString stdenv.isDarwin ''
+#      find $out
+#      # Prevent "same file" error
+#      mv $out/bin/${appname} $out/bin/${pname}.bin
+#      mv $out/bin/${pname}.bin $out/bin/${pname}
+#    '';
 
   meta = with lib; {
     description = "Plain-text file notepad and todo-list manager with Markdown support and Nextcloud/ownCloud integration";
