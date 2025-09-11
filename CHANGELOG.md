@@ -2,6 +2,9 @@
 
 ## 25.9.2
 
+- Try to mitigate Nextcloud sync errors by not triggering an expiration of
+  trashed notes periodically, rather we want to do it after the note folder
+  was reloaded (for [#3359](https://github.com/pbek/QOwnNotes/issues/3359))
 - The save button in the **Nextcloud Deck dialog** will now only insert a link
   into the current note for new cards (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - The Groq AI model list was updated (for [#3365](https://github.com/pbek/QOwnNotes/issues/3365), thank you, @Weej1)

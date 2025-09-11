@@ -1073,6 +1073,11 @@ void MainWindow::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild, bool f
 
     if (wasBuilt || forceLoad) {
         loadNoteDirectoryList();
+
+        // Expire trashed items
+        // It is safer to do that here than in MainWindow::frequentPeriodicChecker(), to avoid
+        // sync errors after resuming from suspend
+        TrashItem::expireItems();
     }
 
     if (wasBuilt && reloadTabs) {
@@ -3139,9 +3144,6 @@ void MainWindow::frequentPeriodicChecker() {
     } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
         // check for updates every 1h
         updateService->checkForUpdates(UpdateService::Periodic);
-
-        // expire trashed items
-        TrashItem::expireItems();
     }
 }
 
