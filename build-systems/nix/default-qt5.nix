@@ -11,7 +11,6 @@
   qtx11extras,
   makeWrapper,
   wrapQtAppsHook,
-  botan2,
   pkg-config,
   xvfb-run,
   installShellFiles,
@@ -49,10 +48,10 @@ stdenv.mkDerivation {
     qtsvg
     qtwebsockets
     qtx11extras
-    botan2
   ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
-  qmakeFlags = [ "USE_SYSTEM_BOTAN=1" ];
+  # Internal Botan2 is required to build with QMake
+  qmakeFlags = [ "USE_SYSTEM_BOTAN=0" ];
 
   postInstall =
     ''
