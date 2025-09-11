@@ -24,7 +24,7 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     ui->dueDateTimeCheckBox->setChecked(true);
     ui->newItemEdit->setFocus();
 
-    // Set default due date to one hour from now
+    // Set the default due date to one hour from now
     ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
 
     // Hide currently unused UI elements
@@ -289,7 +289,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     ui->titleLineEdit->setText(ui->newItemEdit->text());
     ui->descriptionTextEdit->setFocus();
     ui->newItemEdit->clear();
-    // Set default due date to one hour from now
+    // Set the default due date to one hour from now
     ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
     ui->dueDateTimeCheckBox->setChecked(true);
 }
