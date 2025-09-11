@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.9.3
+
+- Fixed a build issue with Qt < 6.8 (for [#3359](https://github.com/pbek/QOwnNotes/issues/3359))
+
 ## 25.9.2
 
 - Try to **mitigate Nextcloud sync errors** by not triggering an expiration of

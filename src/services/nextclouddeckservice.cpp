@@ -187,7 +187,7 @@ bool NextcloudDeckService::archiveCard(int cardId) {
     networkRequest.setRawHeader("OCS-APIRequest", "true");
     addAuthHeader(networkRequest);
 
-    QNetworkReply* reply = manager->put(networkRequest, std::nullptr_t());
+    QNetworkReply* reply = manager->put(networkRequest, QByteArray());
 
     loop.exec();
     bool result = false;
