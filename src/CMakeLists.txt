@@ -40,9 +40,8 @@ if(BUILD_WITH_LIBGIT2)
 
   if(NOT LIBGIT2_FOUND)
     message(
-      FATAL_ERROR
-        "libgit2 was not found. Please install libgit2-dev or the appropriate package for your system."
-    )
+      FATAL_ERROR "libgit2 was not found. Please install libgit2-dev or the "
+                  "appropriate package for your system.")
   endif()
 
   include_directories(${LIBGIT2_INCLUDE_DIRS})
@@ -55,8 +54,8 @@ if(BUILD_WITH_ASPELL)
   if(NOT ASPELL_INCLUDE_DIR OR NOT ASPELL_LIBRARIES)
     message(
       FATAL_ERROR
-        "aspell library or headers not found. Please install aspell-devel or libaspell-dev."
-    )
+        "aspell library or headers not found. Please install aspell-devel "
+        "or libaspell-dev.")
   endif()
   include_directories(${ASPELL_INCLUDE_DIR})
 endif()
@@ -615,7 +614,10 @@ else()
   qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})
 endif()
 
-add_custom_target(translations DEPENDS ${QON_QM_FILES})
+add_custom_target(
+  translations
+  DEPENDS ${QON_QM_FILES}
+  COMMENT "Generate translation files")
 
 target_sources(QOwnNotes PRIVATE ${SOURCE_FILES} ${RESOURCE_FILES}
                                  ${QON_QM_FILES})
@@ -665,7 +667,7 @@ add_compile_definitions(QAPPLICATION_CLASS=QApplication)
 
 install(TARGETS QOwnNotes DESTINATION bin)
 foreach(
-  SIZE
+  size
   16x16
   24x24
   32x32
@@ -676,7 +678,7 @@ foreach(
   256x256
   512x512
   scalable)
-  install(DIRECTORY images/icons/${SIZE} DESTINATION share/icons/hicolor)
+  install(DIRECTORY images/icons/${size} DESTINATION share/icons/hicolor)
 endforeach()
 install(FILES PBE.QOwnNotes.desktop DESTINATION share/applications)
 install(FILES ${QON_QM_FILES} DESTINATION share/QOwnNotes/translations)
