@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.9.4
+
+- Added a **new editor color schema** _Joplike Dark_ by @R-Dew
+  (for [#3367](https://github.com/pbek/QOwnNotes/issues/3367))
+
 ## 25.9.3
 
 - Fixed a build issue with Qt < 6.8 (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
