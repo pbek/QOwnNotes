@@ -57,6 +57,8 @@ class NextcloudDeckService : public QObject {
     QHash<int, Card> getCards();
     bool archiveCard(int cardId);
     bool deleteCard(int cardId);
+    int parseCardIdFromUrl(const QString& url) const;
+    static bool isCardUrl(const QString& url);
 
    private:
     CloudConnection cloudConnection;

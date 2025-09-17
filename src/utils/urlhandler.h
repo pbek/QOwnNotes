@@ -17,14 +17,15 @@ class UrlHandler {
    public:
     UrlHandler();
 
-    static bool isUrlSchemeLocal(const QUrl &url);
+    static bool isUrlSchemeLocal(const QUrl& url);
 
     void openUrl(QString urlString);
 
    private:
-    void handleNoteIdUrl(QString urlString);
-    void handleNoteUrl(QString urlString, const QString &fragment);
-    void handleCheckboxUrl(QString urlString);
-    void handleFileUrl(QString urlString);
-    void handleFileAttachmentUrl(QString urlString);
+    static void handleNoteIdUrl(const QString& urlString);
+    static void handleNoteUrl(const QString& urlString, const QString& fragment);
+    void handleCheckboxUrl(const QString& urlString);
+    static void handleNextcloudDeckUrl(const QString& urlString);
+    static void handleFileUrl(QString urlString);
+    static void handleFileAttachmentUrl(QString urlString);
 };

@@ -217,6 +217,33 @@ bool NextcloudDeckService::archiveCard(int cardId) {
     return result;
 }
 
+bool NextcloudDeckService::isCardUrl(const QString& url) {
+    if (url.isEmpty()) {
+        return false;
+    }
+
+    static const QRegularExpression re(QStringLiteral(R"(\/apps\/deck\/#\/board\/\d+\/card\/)"));
+    QRegularExpressionMatch match = re.match(url);
+
+    return match.hasMatch();
+}
+
+int NextcloudDeckService::parseCardIdFromUrl(const QString& url) const {
+    if (!url.startsWith(serverUrl + "/apps/deck/#/board/" + QString::number(this->boardId) +
+                        "/card/")) {
+        return -1;
+    }
+
+    static const QRegularExpression re(QStringLiteral(R"(\/card\/(\d+))"));
+    QRegularExpressionMatch match = re.match(url);
+
+    if (match.hasMatch()) {
+        return match.captured(1).toInt();
+    }
+
+    return -1;
+}
+
 bool NextcloudDeckService::deleteCard(int cardId) {
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;

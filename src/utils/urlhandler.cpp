@@ -7,6 +7,7 @@
 #include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
 #include "mainwindow.h"
+#include "services/nextclouddeckservice.h"
 #include "utils/gui.h"
 #include "widgets/navigationwidget.h"
 #include "widgets/notesubfoldertree.h"
@@ -72,10 +73,27 @@ void UrlHandler::openUrl(QString urlString) {
         if (!res) {
             qWarning() << "Failed to open url" << url << urlString;
         }
+    } else if ((scheme == QStringLiteral("http") || scheme == QStringLiteral("https")) &&
+               NextcloudDeckService::isCardUrl(urlString)) {
+        qDebug() << __func__ << "Nextcloud Deck URL found, urlString: " << urlString;
+        handleNextcloudDeckUrl(urlString);
     }
 }
 
-void UrlHandler::handleNoteIdUrl(QString urlString) {
+void UrlHandler::handleNextcloudDeckUrl(const QString &urlString) {
+    NextcloudDeckService nextcloudDeckService(MainWindow::instance());
+
+    if (nextcloudDeckService.isEnabled()) {
+        auto cardId = nextcloudDeckService.parseCardIdFromUrl(urlString);
+        qDebug() << __func__ << "cardId: " << cardId;
+
+        if (cardId > 0) {
+            // TODO: Open the Nextcloud Deck dialog with the card details
+        }
+    }
+}
+
+void UrlHandler::handleNoteIdUrl(const QString &urlString) {
     static const QRegularExpression re(QStringLiteral(R"(^noteid:\/\/note-(\d+)$)"));
     QRegularExpressionMatch match = re.match(urlString);
 
@@ -91,7 +109,7 @@ void UrlHandler::handleNoteIdUrl(QString urlString) {
     }
 }
 
-void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
+void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment) {
     Note note;
     const QUrl url(urlString);
     auto mw = MainWindow::instance();
@@ -239,7 +257,7 @@ void UrlHandler::handleNoteUrl(QString urlString, const QString &fragment) {
  *
  * @param urlString
  */
-void UrlHandler::handleCheckboxUrl(QString urlString) {
+void UrlHandler::handleCheckboxUrl(const QString &urlString) {
     auto mw = MainWindow::instance();
 
     // Check if read-only mode is enabled and allow to get out of it
@@ -312,5 +330,4 @@ void UrlHandler::handleFileAttachmentUrl(QString urlString) {
                           QStringLiteral("/attachments"));
 
     QDesktopServices::openUrl(QUrl(urlString));
-    return;
 }
