@@ -21,6 +21,7 @@ class NextcloudDeckDialog : public MasterDialog {
     explicit NextcloudDeckDialog(QWidget *parent = nullptr, bool listMode = false);
     ~NextcloudDeckDialog();
     void setTitle(const QString &title);
+    void setCardId(int id);
 
    private slots:
     void on_saveButton_clicked();
@@ -61,6 +62,7 @@ class NextcloudDeckDialog : public MasterDialog {
     void setupUi();
     void refreshUi();
     void resetEditFrameControls();
+    void jumpToCard(int id);
     QHash<int, NextcloudDeckService::Card> _cards;
     NextcloudDeckService::Card _currentCard;
 };

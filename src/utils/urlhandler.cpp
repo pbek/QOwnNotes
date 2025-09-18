@@ -88,7 +88,8 @@ void UrlHandler::handleNextcloudDeckUrl(const QString &urlString) {
         qDebug() << __func__ << "cardId: " << cardId;
 
         if (cardId > 0) {
-            // TODO: Open the Nextcloud Deck dialog with the card details
+            // Open the Nextcloud Deck dialog with the cardId
+            MainWindow::instance()->openNextcloudDeckDialog(cardId);
         }
     }
 }

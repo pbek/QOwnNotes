@@ -6215,7 +6215,7 @@ void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
 /*
  * Handles note urls
  */
-void MainWindow::openLocalUrl(QString urlString) { UrlHandler().openUrl(urlString); }
+void MainWindow::openLocalUrl(QString urlString) { UrlHandler().openUrl(std::move(urlString)); }
 
 /*
  * Manually check for updates
@@ -12320,17 +12320,25 @@ bool MainWindow::nextCloudDeckCheck() {
     return true;
 }
 
-void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() {
+void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() { openNextcloudDeckDialog(); }
+
+void MainWindow::openNextcloudDeckDialog(int cardId) {
     if (!nextCloudDeckCheck()) {
         return;
     }
 
     auto *dialog = new NextcloudDeckDialog(this);
+    qDebug() << __func__ << "cardId: " << cardId;
 
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QString selectedText = textEdit->textCursor().selectedText();
-    if (!selectedText.isEmpty()) {
-        dialog->setTitle(selectedText);
+    if (cardId > 0) {
+        dialog->setCardId(cardId);
+    } else {
+        QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+        QString selectedText = textEdit->textCursor().selectedText();
+
+        if (!selectedText.isEmpty()) {
+            dialog->setTitle(selectedText);
+        }
     }
 
     dialog->exec();

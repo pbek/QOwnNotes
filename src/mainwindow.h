@@ -226,6 +226,8 @@ class MainWindow : public QMainWindow {
 
     void openTodoDialog(const QString &taskUid = QString());
 
+    void openNextcloudDeckDialog(int cardId = -1);
+
     class QOwnNotesMarkdownTextEdit *noteTextEdit();
 
     void refreshNotePreview(bool force = false);
@@ -350,7 +352,7 @@ class MainWindow : public QMainWindow {
 
     void on_actionShow_changelog_triggered();
 
-    void openLocalUrl(QString urlString);
+    static void openLocalUrl(QString urlString);
 
     void on_action_Find_text_in_note_triggered();
 

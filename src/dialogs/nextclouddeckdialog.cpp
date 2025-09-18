@@ -239,21 +239,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     _currentCard = NextcloudDeckService::Card();
 }
 
-void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetItem *current,
-                                                                   QTreeWidgetItem *previous) {
-    Q_UNUSED(previous)
-
-    // in case all items were removed
-    if (current == nullptr) {
-        resetEditFrameControls();
-        return;
-    }
-
-    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("deck/card/changed"));
-
-    int id = current->data(0, Qt::UserRole).toInt();
-
-    // Find the card in our hash using the ID
+void NextcloudDeckDialog::jumpToCard(int id) {
     if (_cards.contains(id)) {
         _currentCard = _cards[id];
 
@@ -274,6 +260,40 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetIt
         ui->editFrame->setEnabled(true);
     } else {
         resetEditFrameControls();
+    }
+}
+
+void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                                   QTreeWidgetItem *previous) {
+    Q_UNUSED(previous)
+
+    // in case all items were removed
+    if (current == nullptr) {
+        resetEditFrameControls();
+        return;
+    }
+
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("deck/card/changed"));
+
+    const int id = current->data(0, Qt::UserRole).toInt();
+
+    // Find the card in our hash using the ID
+    jumpToCard(id);
+}
+
+void NextcloudDeckDialog::setCardId(const int id) {
+    if (id < 1) {
+        return;
+    }
+
+    if (ui->cardItemTreeWidget->topLevelItemCount() == 0) {
+        reloadCardList();
+    }
+
+    const auto item = Utils::Gui::getTreeWidgetItemWithUserData(ui->cardItemTreeWidget, id);
+
+    if (item != nullptr) {
+        ui->cardItemTreeWidget->setCurrentItem(item);
     }
 }
 
