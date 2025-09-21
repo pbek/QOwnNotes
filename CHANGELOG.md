@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.9.5
+
+- Fixed a build issue with ancient C++ and Qt versions
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+
 ## 25.9.4
 
 - Nextcloud Deck links will now be opened in the **Nextcloud Deck dialog**

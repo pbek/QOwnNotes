@@ -6,6 +6,8 @@
 #include <QJsonObject>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 #include <QTimeZone>
 #include <QTimer>
 
