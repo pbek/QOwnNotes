@@ -2,6 +2,9 @@
 
 ## 25.9.4
 
+- Nextcloud Deck links will now be opened in the **Nextcloud Deck dialog**
+  instead of the browser, so they can be managed there directly
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - Added a **new editor color schema** _Joplike Dark_ by @R-Dew
   (for [#3367](https://github.com/pbek/QOwnNotes/issues/3367))
 
