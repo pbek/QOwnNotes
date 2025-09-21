@@ -512,6 +512,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     // check if we want to start the application hidden
     initShowHidden();
+
+    // Update the ignored click url regexps for the note text edits
+    ui->encryptedNoteTextEdit->updateIgnoredClickUrlRegexps();
+    ui->noteTextEdit->updateIgnoredClickUrlRegexps();
 }
 
 void MainWindow::initTreeWidgets() {
@@ -2083,6 +2087,10 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
     generateSystemTrayContextMenu();
     updateWindowTitle();
     _lastNoteId = 0;
+
+    // Update the ignored click url regexps for the note text edits
+    ui->encryptedNoteTextEdit->updateIgnoredClickUrlRegexps();
+    ui->noteTextEdit->updateIgnoredClickUrlRegexps();
 
     return true;
 }

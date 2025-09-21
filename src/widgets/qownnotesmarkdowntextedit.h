@@ -84,6 +84,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
     QSize minimumSizeHint() const;
 
+    void updateIgnoredClickUrlRegexps();
+
    protected:
     // we must not override _highlighter or Windows will create a
     // QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance

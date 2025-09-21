@@ -20,6 +20,7 @@
 #include "helpers/qownspellchecker.h"
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
 #include "mainwindow.h"
+#include "services/nextclouddeckservice.h"
 #include "services/scriptingservice.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
@@ -1202,4 +1203,15 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     }
 
     return QMarkdownTextEdit::eventFilter(obj, event);
+}
+
+void QOwnNotesMarkdownTextEdit::updateIgnoredClickUrlRegexps() {
+    NextcloudDeckService nextcloudDeckService(this);
+
+    if (nextcloudDeckService.isEnabledAndValid()) {
+        QList<QRegularExpression> ignoredClickUrlRegexps;
+        ignoredClickUrlRegexps.append(QRegularExpression(
+            QRegularExpression::escape(nextcloudDeckService.getCardUrlPattern())));
+        setIgnoredClickUrlRegexps(ignoredClickUrlRegexps);
+    }
 }

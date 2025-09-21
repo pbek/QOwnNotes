@@ -228,9 +228,14 @@ bool NextcloudDeckService::isCardUrl(const QString& url) {
     return match.hasMatch();
 }
 
+QString NextcloudDeckService::getCardUrlPattern() const {
+    return serverUrl + QStringLiteral("/apps/deck/#/board/") + QString::number(this->boardId) +
+           QStringLiteral("/card/");
+}
+
 int NextcloudDeckService::parseCardIdFromUrl(const QString& url) const {
-    if (!url.startsWith(serverUrl + "/apps/deck/#/board/" + QString::number(this->boardId) +
-                        "/card/")) {
+    qDebug() << __func__ << "getCardUrlPattern(): " << getCardUrlPattern();
+    if (!url.startsWith(getCardUrlPattern())) {
         return -1;
     }
 
