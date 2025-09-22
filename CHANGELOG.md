@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 25.9.6
+
+- There now is a software repository for **openSUSE Leap 16.0**
+  - Please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
+    for instructions
+- There now is a software repository for **Fedora 42**
+  - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
+    for instructions
+
 ## 25.9.5
 
 - Fixed a build issue with ancient C++ and Qt versions

@@ -31,6 +31,18 @@ Also check that the chosen repo is the official `home:pbek:QOwnNotes` and not a 
 You need to choose the option to keep the repository after installation to get updates.
 :::
 
+## openSUSE Leap 16.0
+
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/16.0/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
+
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/16.0)
+
 ## openSUSE Leap 15.6
 
 Run the following shell commands as root to add the repository and install QOwnNotes from there.
