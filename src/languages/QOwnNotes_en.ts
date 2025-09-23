@@ -4621,52 +4621,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="146"/>
-        <source>Error while %1 card</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../services/nextclouddeckservice.cpp" line="147"/>
-        <source>%1 a card failed with status code %2 and message: %3</source>
+        <source>Error while updating card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="204"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="148"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="153"/>
+        <source>Updating a card failed with status code %1 and message: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/nextclouddeckservice.cpp" line="152"/>
+        <source>Error while creating card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/nextclouddeckservice.cpp" line="210"/>
         <source>Error while archiving card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="205"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="211"/>
         <source>Archiving the card failed with status code %2 and message: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="294"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="300"/>
         <source>Error while deleting card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="295"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="301"/>
         <source>Deleting the card failed with status code %2 and message: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="409"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="415"/>
         <source>Error while loading boards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="410"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="416"/>
         <source>Loading the boards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="539"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="545"/>
         <source>Error while loading cards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="540"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="546"/>
         <source>Loading the cards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
