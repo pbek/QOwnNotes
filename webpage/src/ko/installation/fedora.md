@@ -2,9 +2,9 @@
 
 **Fedora 28 이상**에 대한 QOwnNotes저장소가 있습니다.
 
-::: 팁 QOwnNotes는 [Fedora 리포지토리](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/)에서 제공됩니다. 해당 버전은 일반적으로 마스터 리포지토리 뒤에 있는 하나 또는 두 개의 패치 버전입니다 아래 지침을 통해 사용할 수 있습니다.
+::: 팁 QOwnNotes는 [Fedora 저장소](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/)에서 업스트림으로 제공됩니다. 하지만 해당 버전은 일반적으로 최신 QOwnNotes 릴리스보다 훨씬 뒤처져 있습니다.
 
-대부분의 사용자의 경우 터미널 창에서 `dnf install qownnotes`을 발행할 수 있습니다. **최신 버전**을 원하신다면 계속 읽어주시기 바랍니다. :::
+대부분의 사용자는 터미널 창에서 `dnf install qownnotes`를 사용하여 업스트림 버전을 설치하면 됩니다. **최신 버전**을 원하신다면 계속 읽어주시기 바랍니다. :::
 
 ## Config-manager dnf 플러그인이 있는 시스템
 
@@ -22,10 +22,10 @@ dnf install qownnotes
 문제가 있는 경우 다음을 사용하여 키를 수동으로 가져옵니다:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/repodata/repomd.xml.key
 ```
 
-위 코드의 "Fedora_40" 부분은 사용 중인 Fedora 버전 (즉, "Fedora_39", "Fedora_38" 등)을 반영해야 합니다 :::
+위 코드의 `Fedora_42` 부분은 현재 사용 중인 Fedora 버전(예: `Fedora_39`, `Fedora_38` 등)을 반영해야 합니다 :::
 
 ## 레거시 설치 방법
 
@@ -34,10 +34,10 @@ Fedora 버전이 `config-manager` dnf 플러그인을 지원하지 않는 경우
 다음 셸 명령을 root으로 실행하여 저장소를 신뢰합니다.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/repodata/repomd.xml.key
 ```
 
-다시: 위 코드의 "Fedora_40" 부분은 사용 중인 Fedora 버전 (즉, "Fedora_39", "Fedora_38" 등)을 반영해야 합니다
+다시 한번 말씀드리지만, 위 코드의 `Fedora_42` 부분은 여러분이 사용하고 있는 Fedora 버전 (예: `Fedora_39`, `Fedora_38` 등)을 반영해야 합니다
 
 그런 다음 다음 다음 셸 명령을 root으로 실행하여 리포지토리를 추가하고 거기에서 QOwnNotes를 설치합니다.
 
@@ -56,7 +56,7 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (이 예제 링크는 Fedora 40용)
+[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42) (이 예시 링크는 Fedora 42용입니다)
 
 ## Fedora에 대한 QOwnNotes 버전 업데이트 참고 사항
 

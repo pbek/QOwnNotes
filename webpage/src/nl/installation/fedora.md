@@ -3,9 +3,9 @@
 Er zijn QOwnNotes-repositories voor **Fedora 28 and higher**.
 
 ::: tip
-QOwnNotes is beschikbaar in de [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). Die versie loopt in het algemeen een of twee patch-versies achter de masterrepository beschikbaar via de onderstaande instructies.
+QOwnNotes is provided upstream in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). But that version is generally a lot behind the latest release of QOwnNotes.
 
-Voor de meeste gebruikers, voer gewoon `dnf install qownnotes` in in een terminalvenster. Als je de **meest recente versie** wenst, lees dan verder.
+For most users you can just use `dnf install qownnotes` in a terminal window to install the upstream version. Als je de **meest recente versie** wenst, lees dan verder.
 :::
 
 ## Op systemen met config-manager dnf plugin
@@ -25,10 +25,10 @@ Mogelijk moet u de repo-sleutel accepteren voordat u deze kunt downloaden.
 Als u problemen heeft, importeert u de sleutel handmatig met:
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/repodata/repomd.xml.key
 ```
 
-Houd er rekening mee dat het gedeelte "Fedora_40" in de bovenstaande code uw gebruikte versie van Fedora moet weerspiegelen (d.w.z. "Fedora_39", "Fedora_38" enz.)
+Please note that the portion `Fedora_42` in the above code should reflect the version of Fedora you are using (i.e. `Fedora_39`, `Fedora_38` etc.)
 :::
 
 ## Verouderde installatiemethode
@@ -38,10 +38,10 @@ Gebruik deze methode als je Fedora-versie de `config-manager` dnf-plug-in niet o
 Voer de volgende shell-opdracht uit als root om de opslagplaats te vertrouwen.
 
 ```bash
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/repodata/repomd.xml.key
 ```
 
-Nogmaals: merk op dat het gedeelte "Fedora_40" in de bovenstaande code uw gebruikte versie van Fedora moet weerspiegelen (d.w.z. "Fedora_39", "Fedora_38" enz.)
+Again: note that the portion `Fedora_42` in the above code should reflect the version of Fedora you are using (i.e. `Fedora_39`, `Fedora_38` etc.)
 
 Voer vervolgens de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
 
@@ -60,7 +60,7 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_40) (deze voorbeeldlink is voor Fedora 40)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42) (this example link is for Fedora 42)
 
 ## QOwnNotes versie-updating notities voor Fedora
 

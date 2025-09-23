@@ -2373,6 +2373,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>AI 지원 활성화</translation>
 </message>
 <message>
+<source>Manage Nextcloud Deck cards</source>
+<translation>Nextcloud 덱 카드 관리</translation>
+</message>
+<message>
+<source>Ctrl+Alt+D</source>
+<translation>Ctrl+Alt+D</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>
@@ -2821,14 +2829,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Close note tab</source>
 <translation>노트 탭 닫기</translation>
-</message>
-<message>
-<source>Nextcloud Deck support disabled!</source>
-<translation>Next Cloud Deck 지원이 비활성화되었습니다!</translation>
-</message>
-<message>
-<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation>Next Cloud 데크 지원이 활성화되지 않았거나 설정이 잘못되었습니다.&lt;br /&gt;설정에서 &lt;strong&gt;Nextcloud&lt;/strong&gt; 구성을 확인하십시오!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3542,8 +3542,44 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>-1일</translation>
 </message>
 <message>
-<source>Insert Nextcloud Deck card link</source>
-<translation>Nextcloud 데크 카드 링크 삽입</translation>
+<source>Archive card</source>
+<translation>카드 압축</translation>
+</message>
+<message>
+<source>Archive</source>
+<translation>압축</translation>
+</message>
+<message>
+<source>Delete card</source>
+<translation>카드 삭제</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation>삭제</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation>하위 항목에는 작동하지 않습니다. 상위 항목에 의해 숨겨질 수 있기 때문입니다!</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation>오늘 마감된 항목만 표시</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation>요약</translation>
+</message>
+<message>
+<source>Reload the card item list from server</source>
+<translation>서버에서 카드 항목 목록 다시 불러오기</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation>다시 불러오기…</translation>
+</message>
+<message>
+<source>Search or create card</source>
+<translation>카드 검색 또는 만들기</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3573,16 +3609,80 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>Due date</source>
 <translation>만기 날짜</translation>
 </message>
+<message>
+<source>Manage Nextcloud Deck Cards</source>
+<translation>Nextcloud 덱 카드 관리</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation>저장하고 노트에 삽입</translation>
+</message>
+<message>
+<source>Save the current card item and insert a link to it into the current note</source>
+<translation>현재 카드 항목을 저장하고 현재 노트에 링크 삽입</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation>서버에서 다시 불러오기</translation>
+</message>
+<message>
+<source>Reload cards from server</source>
+<translation>서버에서 카드 다시 불러오기</translation>
+</message>
+<message>
+<source>No due date</source>
+<translation>마감일 없음</translation>
+</message>
+<message>
+<source>Do you want to delete the current Nextcloud Deck card?</source>
+<translation>현재 Nextcloud Deck 카드를 삭제하시겠습니까?</translation>
+</message>
+<message>
+<source>Do you want to archive the current Nextcloud Deck card?</source>
+<translation>현재 Nextcloud Deck 카드를 보관하시겠습니까?</translation>
+</message>
+<message>
+<source>&amp;Open card in browser</source>
+<translation type="unfinished">&amp;Open card in browser</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<source>Error while creating card</source>
-<translation>카드를 만드는 중 오류 발생</translation>
+<source>updating</source>
+<translation>업데이트</translation>
 </message>
 <message>
-<source>Creating a card failed with status code %1 and message: %2</source>
-<translation>상태 코드 %1 및 메시지 %2으로 카드를 만들지 못했습니다</translation>
+<source>creating</source>
+<translation>만들기</translation>
+</message>
+<message>
+<source>Error while updating card</source>
+<translation type="unfinished">Error while updating card</translation>
+</message>
+<message>
+<source>Updating a card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while creating card</source>
+<translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Error while archiving card</source>
+<translation>카드 압축 중 오류 발생</translation>
+</message>
+<message>
+<source>Archiving the card failed with status code %2 and message: %3</source>
+<translation>상태 코드 %2 및 메시지로 카드 압축에 실패: %3</translation>
+</message>
+<message>
+<source>Error while deleting card</source>
+<translation>카드 삭제 중 오류 발생</translation>
+</message>
+<message>
+<source>Deleting the card failed with status code %2 and message: %3</source>
+<translation>상태 코드 %2와 메시지로 카드 삭제 실패: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
@@ -3591,6 +3691,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
 <translation>보드를 로드하지 못했습니다. 상태 코드 %1 및 메시지: %2</translation>
+</message>
+<message>
+<source>Error while loading cards</source>
+<translation>카드 불러오는 중 오류 발생</translation>
+</message>
+<message>
+<source>Loading the cards failed with status code %1 and message: %2</source>
+<translation>상태 코드 %1과 메시지 %2로 카드를 불러오지 못했습니다</translation>
 </message>
 </context>
 <context>
@@ -4152,6 +4260,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Double-click to open note</source>
 <translation>노트를 열려면 두 번 클릭합니다</translation>
+</message>
+<message>
+<source>Nextcloud Deck support disabled!</source>
+<translation>Nextcloud 덱 지원이 비활성화되었습니다!</translation>
+</message>
+<message>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation>Nextcloud 덱 지원이 활성화되지 않았거나 설정이 잘못되었습니다.&lt;br /&gt;설정에서 &lt;strong&gt;Nextcloud&lt;/strong&gt; 구성을 확인해 주세요!</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation>설정 열기(&amp;S)</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>취소(&amp;C)</translation>
 </message>
 </context>
 <context>

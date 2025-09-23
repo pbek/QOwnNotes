@@ -2379,6 +2379,14 @@
 <translation>Activer le support de l’IA</translation>
 </message>
 <message>
+<source>Manage Nextcloud Deck cards</source>
+<translation>Gérer les cartes Nextcloud Deck</translation>
+</message>
+<message>
+<source>Ctrl+Alt+D</source>
+<translation>Ctrl+Alt+D</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Disposition &amp;verticale de l'aperçu</translation>
 </message>
@@ -2841,14 +2849,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Close note tab</source>
 <translation>Fermet l’onglet de note</translation>
-</message>
-<message>
-<source>Nextcloud Deck support disabled!</source>
-<translation>Support de Nextcloud Deck désactivé !</translation>
-</message>
-<message>
-<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation>Le support de Nextcloud Deck n’est pas activé ou les paramètres sont invalides.&lt;br /&gt;Merci de vérifier votre configuration &lt;strong&gt;Nextcloud&lt;/strong&gt; dans les paramètres !</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3575,8 +3575,44 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>-1 j</translation>
 </message>
 <message>
-<source>Insert Nextcloud Deck card link</source>
-<translation>Insérer un lien vers une carte NextCloud Deck</translation>
+<source>Archive card</source>
+<translation>Archiver la carte</translation>
+</message>
+<message>
+<source>Archive</source>
+<translation>Archiver</translation>
+</message>
+<message>
+<source>Delete card</source>
+<translation>Supprimer la carte</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation>Supprimer</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation>Cela ne fonctionne pas pour les sous-éléments car ils peuvent être masqués par l'élément parent !</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation>Afficher uniquement les éléments dus aujourd'hui</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation>Titre</translation>
+</message>
+<message>
+<source>Reload the card item list from server</source>
+<translation type="unfinished">Reload the card item list from server</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation>Recharger…</translation>
+</message>
+<message>
+<source>Search or create card</source>
+<translation>Rechercher ou créer une carte</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3606,16 +3642,80 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <source>Due date</source>
 <translation>Date d'échéance</translation>
 </message>
+<message>
+<source>Manage Nextcloud Deck Cards</source>
+<translation>Gérer les cartes Nextcloud Deck</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation>Enregistrer et insérer dans la note</translation>
+</message>
+<message>
+<source>Save the current card item and insert a link to it into the current note</source>
+<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation>Recharger depuis le serveur</translation>
+</message>
+<message>
+<source>Reload cards from server</source>
+<translation>Recharger les cartes depuis le serveur</translation>
+</message>
+<message>
+<source>No due date</source>
+<translation>Pas d’échéance</translation>
+</message>
+<message>
+<source>Do you want to delete the current Nextcloud Deck card?</source>
+<translation>Voulez-vous supprimer la carte Nextcloud Deck ?</translation>
+</message>
+<message>
+<source>Do you want to archive the current Nextcloud Deck card?</source>
+<translation>Voulez-vous archiver la carte Nextcloud Deck ?</translation>
+</message>
+<message>
+<source>&amp;Open card in browser</source>
+<translation type="unfinished">&amp;Open card in browser</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<source>Error while creating card</source>
-<translation>Erreur lors de la création de la carte</translation>
+<source>updating</source>
+<translation>mise à jour</translation>
 </message>
 <message>
-<source>Creating a card failed with status code %1 and message: %2</source>
-<translation>La création de la carte a échoué avec le code de statut %1 et le message : %2</translation>
+<source>creating</source>
+<translation>création</translation>
+</message>
+<message>
+<source>Error while updating card</source>
+<translation type="unfinished">Error while updating card</translation>
+</message>
+<message>
+<source>Updating a card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while creating card</source>
+<translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Error while archiving card</source>
+<translation>Erreur lors de l’archivage de la carte</translation>
+</message>
+<message>
+<source>Archiving the card failed with status code %2 and message: %3</source>
+<translation>L’archivage de la carte a échoué avec le code de statut %2 et le message : %3</translation>
+</message>
+<message>
+<source>Error while deleting card</source>
+<translation>Erreur lors de la suppression de la carte</translation>
+</message>
+<message>
+<source>Deleting the card failed with status code %2 and message: %3</source>
+<translation>La suppression de la carte a échoué avec le code de statut %2 et le message : %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
@@ -3624,6 +3724,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
 <translation>Le chargement des tableaux a échoué avec le code de statut %1 et le message : %2</translation>
+</message>
+<message>
+<source>Error while loading cards</source>
+<translation>Erreur lors du chargement des cartes</translation>
+</message>
+<message>
+<source>Loading the cards failed with status code %1 and message: %2</source>
+<translation>Le chargement des cartes a échoué avec le code de statut %1 et le message : %2</translation>
 </message>
 </context>
 <context>
@@ -4191,6 +4299,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Double-click to open note</source>
 <translation>Double-cliquer pour ouvrir la note</translation>
+</message>
+<message>
+<source>Nextcloud Deck support disabled!</source>
+<translation>Support de Nextcloud Deck désactivé !</translation>
+</message>
+<message>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation>Le support de Nextcloud Deck n’est pas activé ou les paramètres sont invalides.&lt;br /&gt;Merci de vérifier votre configuration &lt;strong&gt;Nextcloud&lt;/strong&gt; dans les paramètres !</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation>Ouvrir les &amp;paramètres</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;Annuler</translation>
 </message>
 </context>
 <context>

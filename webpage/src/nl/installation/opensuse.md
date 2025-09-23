@@ -30,6 +30,18 @@ Controleer ook of de gekozen repo de officiële `home:pbek:QOwnNotes` is en niet
 U moet de optie kiezen om de repository na installatie te behouden om updates te krijgen.
 :::
 
+## openSUSE Leap 16.0
+
+Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/16.0/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
+
+[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/16.0)
+
 ## openSUSE Leap 15.6
 
 Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
@@ -104,7 +116,7 @@ zypper install qownnotes
 
 ## SLE 15
 
-Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15/home:pbek:QOwnNotes.repo
@@ -112,4 +124,4 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Directe download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)

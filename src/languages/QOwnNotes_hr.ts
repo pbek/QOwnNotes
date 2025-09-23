@@ -2388,6 +2388,14 @@
 <translation>Aktiviraj podršku za UI</translation>
 </message>
 <message>
+<source>Manage Nextcloud Deck cards</source>
+<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+</message>
+<message>
+<source>Ctrl+Alt+D</source>
+<translation type="unfinished">Ctrl+Alt+D</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Upotrijebi &amp;vertikalni pretpregled izgleda</translation>
 </message>
@@ -2859,14 +2867,6 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Close note tab</source>
 <translation>Zatvori karticu bilješke</translation>
-</message>
-<message>
-<source>Nextcloud Deck support disabled!</source>
-<translation>Podrška za Nextcloud Deck je deaktivirana!</translation>
-</message>
-<message>
-<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation>Podrška za Nextcloud Deck je deaktivirana ili su postavke neispravne.&lt;br /&gt;Provjeri svoju &lt;strong&gt;Nextcloud&lt;/strong&gt; konfiguraciju u postavkama!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3609,8 +3609,44 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>−1 dan</translation>
 </message>
 <message>
-<source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<source>Archive card</source>
+<translation type="unfinished">Archive card</translation>
+</message>
+<message>
+<source>Archive</source>
+<translation type="unfinished">Archive</translation>
+</message>
+<message>
+<source>Delete card</source>
+<translation type="unfinished">Delete card</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation type="unfinished">Delete</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation type="unfinished">Summary</translation>
+</message>
+<message>
+<source>Reload the card item list from server</source>
+<translation type="unfinished">Reload the card item list from server</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation type="unfinished">Reload…</translation>
+</message>
+<message>
+<source>Search or create card</source>
+<translation type="unfinished">Search or create card</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3640,16 +3676,80 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <source>Due date</source>
 <translation>Datum dospijeća</translation>
 </message>
+<message>
+<source>Manage Nextcloud Deck Cards</source>
+<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation type="unfinished">Save and insert into note</translation>
+</message>
+<message>
+<source>Save the current card item and insert a link to it into the current note</source>
+<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation type="unfinished">Reload from server</translation>
+</message>
+<message>
+<source>Reload cards from server</source>
+<translation type="unfinished">Reload cards from server</translation>
+</message>
+<message>
+<source>No due date</source>
+<translation type="unfinished">No due date</translation>
+</message>
+<message>
+<source>Do you want to delete the current Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+</message>
+<message>
+<source>Do you want to archive the current Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+</message>
+<message>
+<source>&amp;Open card in browser</source>
+<translation type="unfinished">&amp;Open card in browser</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<source>Error while creating card</source>
-<translation>Greška kod izrade kartice</translation>
+<source>updating</source>
+<translation type="unfinished">updating</translation>
 </message>
 <message>
-<source>Creating a card failed with status code %1 and message: %2</source>
-<translation>Izrada kartice nije uspjela as oznakom statusa %1 i porukom: %2</translation>
+<source>creating</source>
+<translation type="unfinished">creating</translation>
+</message>
+<message>
+<source>Error while updating card</source>
+<translation type="unfinished">Error while updating card</translation>
+</message>
+<message>
+<source>Updating a card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while creating card</source>
+<translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Error while archiving card</source>
+<translation type="unfinished">Error while archiving card</translation>
+</message>
+<message>
+<source>Archiving the card failed with status code %2 and message: %3</source>
+<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+</message>
+<message>
+<source>Error while deleting card</source>
+<translation type="unfinished">Error while deleting card</translation>
+</message>
+<message>
+<source>Deleting the card failed with status code %2 and message: %3</source>
+<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
@@ -3658,6 +3758,14 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
 <translation>Učitavanje ploča nije uspjelo s kodom stanja %1 i porukom: %2</translation>
+</message>
+<message>
+<source>Error while loading cards</source>
+<translation type="unfinished">Error while loading cards</translation>
+</message>
+<message>
+<source>Loading the cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4232,6 +4340,22 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Double-click to open note</source>
 <translation>Dvoklik za otvaranje bilješke</translation>
+</message>
+<message>
+<source>Nextcloud Deck support disabled!</source>
+<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+</message>
+<message>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation type="unfinished">Open &amp;settings</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>

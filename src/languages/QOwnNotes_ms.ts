@@ -2370,6 +2370,14 @@
 <translation type="unfinished">Enable AI support</translation>
 </message>
 <message>
+<source>Manage Nextcloud Deck cards</source>
+<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+</message>
+<message>
+<source>Ctrl+Alt+D</source>
+<translation type="unfinished">Ctrl+Alt+D</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Gunakan &amp;susun atur pratonton menegak</translation>
 </message>
@@ -2819,14 +2827,6 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
 <message>
 <source>Close note tab</source>
 <translation type="unfinished">Close note tab</translation>
-</message>
-<message>
-<source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
-</message>
-<message>
-<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3541,8 +3541,44 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <translation type="unfinished">-1d</translation>
 </message>
 <message>
-<source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<source>Archive card</source>
+<translation type="unfinished">Archive card</translation>
+</message>
+<message>
+<source>Archive</source>
+<translation type="unfinished">Archive</translation>
+</message>
+<message>
+<source>Delete card</source>
+<translation type="unfinished">Delete card</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation type="unfinished">Delete</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation type="unfinished">Summary</translation>
+</message>
+<message>
+<source>Reload the card item list from server</source>
+<translation type="unfinished">Reload the card item list from server</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation type="unfinished">Reload…</translation>
+</message>
+<message>
+<source>Search or create card</source>
+<translation type="unfinished">Search or create card</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3572,16 +3608,80 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <source>Due date</source>
 <translation type="unfinished">Due date</translation>
 </message>
+<message>
+<source>Manage Nextcloud Deck Cards</source>
+<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation type="unfinished">Save and insert into note</translation>
+</message>
+<message>
+<source>Save the current card item and insert a link to it into the current note</source>
+<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation type="unfinished">Reload from server</translation>
+</message>
+<message>
+<source>Reload cards from server</source>
+<translation type="unfinished">Reload cards from server</translation>
+</message>
+<message>
+<source>No due date</source>
+<translation type="unfinished">No due date</translation>
+</message>
+<message>
+<source>Do you want to delete the current Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+</message>
+<message>
+<source>Do you want to archive the current Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+</message>
+<message>
+<source>&amp;Open card in browser</source>
+<translation type="unfinished">&amp;Open card in browser</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
+<message>
+<source>updating</source>
+<translation type="unfinished">updating</translation>
+</message>
+<message>
+<source>creating</source>
+<translation type="unfinished">creating</translation>
+</message>
+<message>
+<source>Error while updating card</source>
+<translation type="unfinished">Error while updating card</translation>
+</message>
+<message>
+<source>Updating a card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+</message>
 <message>
 <source>Error while creating card</source>
 <translation type="unfinished">Error while creating card</translation>
 </message>
 <message>
-<source>Creating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating a card failed with status code %1 and message: %2</translation>
+<source>Error while archiving card</source>
+<translation type="unfinished">Error while archiving card</translation>
+</message>
+<message>
+<source>Archiving the card failed with status code %2 and message: %3</source>
+<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+</message>
+<message>
+<source>Error while deleting card</source>
+<translation type="unfinished">Error while deleting card</translation>
+</message>
+<message>
+<source>Deleting the card failed with status code %2 and message: %3</source>
+<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
@@ -3590,6 +3690,14 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
 <translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while loading cards</source>
+<translation type="unfinished">Error while loading cards</translation>
+</message>
+<message>
+<source>Loading the cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4153,6 +4261,22 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
 <message>
 <source>Double-click to open note</source>
 <translation type="unfinished">Double-click to open note</translation>
+</message>
+<message>
+<source>Nextcloud Deck support disabled!</source>
+<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+</message>
+<message>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation type="unfinished">Open &amp;settings</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>

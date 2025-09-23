@@ -200,7 +200,7 @@
 </message>
 <message>
 <source>Ancient Greek</source>
-<translation>Griego Antiguo</translation>
+<translation>Griego antiguo</translation>
 </message>
 <message>
 <source>Arabic</source>
@@ -264,7 +264,7 @@
 </message>
 <message>
 <source>English (Medical Dictionary)</source>
-<translation>Inglés (Diccionario Médico)</translation>
+<translation>Inglés (diccionario médico)</translation>
 </message>
 <message>
 <source>English (South African)</source>
@@ -304,7 +304,7 @@
 </message>
 <message>
 <source>German (Medical Dictionary)</source>
-<translation>Alemán (Diccionario Médico)</translation>
+<translation>Alemán (diccionario médico)</translation>
 </message>
 <message>
 <source>Greek</source>
@@ -444,7 +444,7 @@
 </message>
 <message>
 <source>Russian Medical Dictionary</source>
-<translation>Diccionario Médico Ruso</translation>
+<translation>Diccionario médico ruso</translation>
 </message>
 <message>
 <source>Rusyn / Ruthene (Slovakia)</source>
@@ -532,7 +532,7 @@
 </message>
 <message>
 <source>Venetian</source>
-<translation>Véneto / Veneciano</translation>
+<translation>Véneto/veneciano</translation>
 </message>
 <message>
 <source>Vietnamese</source>
@@ -557,7 +557,7 @@
 <message>
 <source>Error while downloading:
 %1</source>
-<translation>Error al descargar:
+<translation>Error durante la descarga:
 %1</translation>
 </message>
 <message>
@@ -2379,6 +2379,14 @@
 <translation>Habilitar funciones de IA</translation>
 </message>
 <message>
+<source>Manage Nextcloud Deck cards</source>
+<translation>Gestionar tarjetas de Nextcloud Deck</translation>
+</message>
+<message>
+<source>Ctrl+Alt+D</source>
+<translation>Ctrl+Alt+D</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Plantilla de vista &amp;vertical</translation>
 </message>
@@ -2840,14 +2848,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Close note tab</source>
 <translation>Cerrar pestaña de la nota</translation>
-</message>
-<message>
-<source>Nextcloud Deck support disabled!</source>
-<translation>¡El soporte de Nextcloud Deck está desactivado!</translation>
-</message>
-<message>
-<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation>¡El soporte de Nextcloud Deck no está activado o la configuración es inválida!&lt;br /&gt; Por favor, compruebe su configuración de &lt;strong&gt;Nextcloud&lt;/strong&gt; en la pestaña de configuración!</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3574,8 +3574,44 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>-1d</translation>
 </message>
 <message>
-<source>Insert Nextcloud Deck card link</source>
-<translation>Insertar el enlace de la tarjeta Nextcloud Deck</translation>
+<source>Archive card</source>
+<translation>Archivar tarjeta</translation>
+</message>
+<message>
+<source>Archive</source>
+<translation>Archivar</translation>
+</message>
+<message>
+<source>Delete card</source>
+<translation>Eliminar tarjeta</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation>Eliminar</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation>Esto no funciona para los subelementos, ¡ya que pueden estar ocultos por el elemento principal!</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation>Mostrar solo los elementos que vencen hoy</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation>Resumen</translation>
+</message>
+<message>
+<source>Reload the card item list from server</source>
+<translation>Recargar la lista de tarjetas desde el servidor</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation>Volver a cargar…</translation>
+</message>
+<message>
+<source>Search or create card</source>
+<translation>Buscar o crear tarjeta</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3605,24 +3641,96 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <source>Due date</source>
 <translation>Fecha límite</translation>
 </message>
+<message>
+<source>Manage Nextcloud Deck Cards</source>
+<translation>Gestionar tarjetas de Nextcloud Deck</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation>Guardar e insertar en la nota</translation>
+</message>
+<message>
+<source>Save the current card item and insert a link to it into the current note</source>
+<translation>Guardar la tarjeta actual e insertar un enlace a ella en la nota actual</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation>Recargar desde el servidor</translation>
+</message>
+<message>
+<source>Reload cards from server</source>
+<translation>Recargar tarjetas desde el servidor</translation>
+</message>
+<message>
+<source>No due date</source>
+<translation>Sin fecha de vencimiento</translation>
+</message>
+<message>
+<source>Do you want to delete the current Nextcloud Deck card?</source>
+<translation>¿Desea eliminar la tarjeta actual de Nextcloud Deck?</translation>
+</message>
+<message>
+<source>Do you want to archive the current Nextcloud Deck card?</source>
+<translation>¿Desea archivar la tarjeta actual de Nextcloud Deck?</translation>
+</message>
+<message>
+<source>&amp;Open card in browser</source>
+<translation type="unfinished">&amp;Open card in browser</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
-<source>Error while creating card</source>
-<translation>Error durante la creación de la tarjeta</translation>
+<source>updating</source>
+<translation>actualizando</translation>
 </message>
 <message>
-<source>Creating a card failed with status code %1 and message: %2</source>
-<translation>La creación de una tarjeta ha fallado con el código de estado %1 y el mensaje: %2</translation>
+<source>creating</source>
+<translation>creando</translation>
+</message>
+<message>
+<source>Error while updating card</source>
+<translation type="unfinished">Error while updating card</translation>
+</message>
+<message>
+<source>Updating a card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while creating card</source>
+<translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Error while archiving card</source>
+<translation>Error al archivar la tarjeta</translation>
+</message>
+<message>
+<source>Archiving the card failed with status code %2 and message: %3</source>
+<translation>El archivado de la tarjeta falló con el código de estado %2 y el mensaje: %3</translation>
+</message>
+<message>
+<source>Error while deleting card</source>
+<translation>Error al eliminar la tarjeta</translation>
+</message>
+<message>
+<source>Deleting the card failed with status code %2 and message: %3</source>
+<translation>La eliminación de la tarjeta falló con el código de estado %2 y el mensaje: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation>Error mientras se estaban cargando los tableros</translation>
+<translation>Error al cargar los tableros</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation>La carga de los tableros ha fallado con el código de estado %1 y el mensaje: %2</translation>
+<translation>La carga de los tableros falló con el código de estado %1 y el mensaje: %2</translation>
+</message>
+<message>
+<source>Error while loading cards</source>
+<translation>Error al cargar las tarjetas</translation>
+</message>
+<message>
+<source>Loading the cards failed with status code %1 and message: %2</source>
+<translation>La carga de las tarjetas falló con el código de estado %1 y el mensaje: %2</translation>
 </message>
 </context>
 <context>
@@ -4191,6 +4299,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Double-click to open note</source>
 <translation>Doble clic para abrir la nota</translation>
+</message>
+<message>
+<source>Nextcloud Deck support disabled!</source>
+<translation>¡El soporte de Nextcloud Deck está desactivado!</translation>
+</message>
+<message>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation>¡El soporte de Nextcloud Deck no está habilitado o la configuración es inválida!&lt;br /&gt; Por favor, ¡compruebe su configuración de &lt;strong&gt;Nextcloud&lt;/strong&gt; en la pestaña de configuración!</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation>Abrir configuración</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;Cancelar</translation>
 </message>
 </context>
 <context>
@@ -7563,7 +7687,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Import the current todo item as new note</source>
-<translation>Importar el elemento pendiente actual como una nota nueva</translation>
+<translation>Importar la tarea pendiente actual como una nota nueva</translation>
 </message>
 <message>
 <source>Import as note</source>
@@ -7778,7 +7902,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Deleting trashed note failed with status code: %1</source>
-<translation>Fallo al eliminar la nota de la papelera con código de estado: %1</translation>
+<translation>La eliminación de la nota enviada a la papelera falló con el código de estado: %1</translation>
 </message>
 </context>
 <context>

@@ -11,6 +11,7 @@
 - There now is a software repository for **Fedora 42**
   - Please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html)
     for instructions
+- Added more Spanish, Korean, French translation (thank you, alejandromoc, venusgirl, jd-develop)
 
 ## 25.9.5
 
