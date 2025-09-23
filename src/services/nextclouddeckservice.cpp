@@ -145,12 +145,12 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
             QString operation = isUpdate ? tr("updating") : tr("creating");
             if (isUpdate) {
                 Utils::Gui::warning(nullptr, tr("Error while updating card").arg(operation),
-                                    tr("Updating a card failed with status code %1 and message: %2")
+                                    tr("Updating card failed with status code %1 and message: %2")
                                         .arg(QString::number(returnStatusCode), errorString),
                                     "nextcloud-deck-update-failed");
             } else {
                 Utils::Gui::warning(nullptr, tr("Error while creating card").arg(operation),
-                                    tr("Updating a card failed with status code %1 and message: %2")
+                                    tr("Creating card failed with status code %1 and message: %2")
                                         .arg(QString::number(returnStatusCode), errorString),
                                     "nextcloud-deck-create-failed");
             }

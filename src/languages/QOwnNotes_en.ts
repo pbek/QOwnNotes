@@ -4627,13 +4627,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../services/nextclouddeckservice.cpp" line="148"/>
-        <location filename="../services/nextclouddeckservice.cpp" line="153"/>
-        <source>Updating a card failed with status code %1 and message: %2</source>
+        <source>Updating card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../services/nextclouddeckservice.cpp" line="152"/>
         <source>Error while creating card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/nextclouddeckservice.cpp" line="153"/>
+        <source>Creating card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
