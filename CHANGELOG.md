@@ -2,6 +2,9 @@
 
 ## 25.9.6
 
+- You can now **open the URL to a card** in the **Nextcloud Deck dialog** in the
+  browser by right-clicking on the card and choosing _Open in browser_ or double-clicking
+  on the card in the list (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - There now is a software repository for **openSUSE Leap 16.0**
   - Please visit the [openSUSE installation page](https://www.qownnotes.org/installation/opensuse.html)
     for instructions

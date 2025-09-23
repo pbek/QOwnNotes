@@ -55,6 +55,10 @@ class NextcloudDeckDialog : public MasterDialog {
 
     void on_archiveCardButton_clicked();
 
+    void on_cardItemTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_cardItemTreeWidget_customContextMenuRequested(const QPoint &pos);
+
    private:
     Ui::NextcloudDeckDialog *ui;
     void setupMainSplitter();
@@ -65,6 +69,8 @@ class NextcloudDeckDialog : public MasterDialog {
     void jumpToCard(int id);
     QHash<int, NextcloudDeckService::Card> _cards;
     NextcloudDeckService::Card _currentCard;
+
+    void openUrlInBrowserForItem(const QTreeWidgetItem *item);
 };
 
 #endif    // NEXTCLOUDDECKDIALOG_H

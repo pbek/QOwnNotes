@@ -1,5 +1,6 @@
 #include "nextclouddeckdialog.h"
 
+#include <QDesktopServices>
 #include <QMenu>
 #include <QShortcut>
 #include <QTimeZone>
@@ -337,9 +338,45 @@ void NextcloudDeckDialog::on_archiveCardButton_clicked() {
     }
 
     NextcloudDeckService nextcloudDeckService(this);
-    bool isSuccess = nextcloudDeckService.archiveCard(_currentCard.id);
+    const bool isSuccess = nextcloudDeckService.archiveCard(_currentCard.id);
 
     if (isSuccess) {
         reloadCardList();
+    }
+}
+
+void NextcloudDeckDialog::openUrlInBrowserForItem(const QTreeWidgetItem *item) {
+    if (item == nullptr) {
+        return;
+    }
+
+    QDesktopServices::openUrl(
+        QUrl(NextcloudDeckService(this).getCardLinkForId(item->data(0, Qt::UserRole).toInt())));
+}
+
+void NextcloudDeckDialog::on_cardItemTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                                                  int column) {
+    Q_UNUSED(column)
+
+    openUrlInBrowserForItem(item);
+}
+
+void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const QPoint &pos) {
+    const QPoint globalPos = ui->cardItemTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    QAction *openUrlAction = menu.addAction(tr("&Open card in browser"));
+    openUrlAction->setIcon(QIcon::fromTheme(QStringLiteral("text-html"),
+                                            QIcon(":icons/breeze-qownnotes/16x16/text-html.svg")));
+    QAction *selectedItem = menu.exec(globalPos);
+
+    if (selectedItem == nullptr) {
+        return;
+    }
+
+    QTreeWidgetItem *item = ui->cardItemTreeWidget->currentItem();
+
+    if (selectedItem == openUrlAction) {
+        openUrlInBrowserForItem(item);
     }
 }
