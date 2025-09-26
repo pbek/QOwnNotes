@@ -25,6 +25,7 @@ class QString;
 class WebAppClientService : public QObject {
     Q_OBJECT
    public:
+    void initClipboardService();
     explicit WebAppClientService(QObject *parent = nullptr);
     ~WebAppClientService() override;
 

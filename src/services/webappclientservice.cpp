@@ -21,6 +21,8 @@
 
 #include <utils/misc.h>
 
+#include <QApplication>
+#include <QClipboard>
 #include <QJsonDocument>
 #include <QSslError>
 #include <QWebSocket>
@@ -49,6 +51,8 @@ WebAppClientService::WebAppClientService(QObject *parent) : QObject(parent) {
     connect(&_timerReconnect, SIGNAL(timeout()), this, SLOT(onReconnect()));
 
     open();
+
+    initClipboardService();
 }
 
 void WebAppClientService::open() {
@@ -61,6 +65,41 @@ void WebAppClientService::open() {
 void WebAppClientService::close() {
     _webSocket->close();
     _url = "";
+}
+
+void WebAppClientService::initClipboardService() {
+    const QClipboard *clipboard = QApplication::clipboard();
+
+    // react to clipboard changes
+    connect(clipboard, &QClipboard::dataChanged, [this, clipboard]() {
+        if (!_webSocket->isValid()) {
+            return;
+        }
+
+        const QMimeData *mimeData = clipboard->mimeData();
+        qDebug() << __func__ << "mimeData: " << mimeData->text();
+
+        if (mimeData->hasImage()) {
+            const QPixmap pixmap = clipboard->pixmap();
+            QByteArray byteArray;
+            QBuffer buffer(&byteArray);
+            buffer.open(QIODevice::WriteOnly);
+            pixmap.save(&buffer, "PNG");
+            const QString content = byteArray.toBase64();
+
+            _webSocket->sendTextMessage(
+                R"({"command": "insertClipboard", "mimeType": "image/png", "content": )" + content +
+                "\"}");
+        } else if (mimeData->hasHtml()) {
+            _webSocket->sendTextMessage(
+                R"({"command": "insertClipboard", "mimeType": "text/html", "content": ")" +
+                mimeData->html() + "\"}");
+        } else if (mimeData->hasText()) {
+            _webSocket->sendTextMessage(
+                R"({"command": "insertClipboard", "mimeType": "text/plain", "content": ")" +
+                mimeData->text() + "\"}");
+        }
+    });
 }
 
 QString WebAppClientService::getServerUrl() {
@@ -143,8 +182,28 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
             mainWindow->insertDataUrlAsFileIntoCurrentNote(fileDataUrl);
         }
 
-        _webSocket->sendTextMessage("{\"command\": \"confirmInsert\"}");
+        _webSocket->sendTextMessage(R"({"command": "confirmInsert"})");
 #endif
+    } else if (command == "insertIntoClipboard") {
+        QClipboard *clipboard = QApplication::clipboard();
+        const QString mimeType = jsonObject.value(QStringLiteral("mimeType")).toString();
+        const QString content = jsonObject.value(QStringLiteral("content")).toString();
+
+        if (mimeType == "text/plain") {
+            clipboard->setText(content, QClipboard::Clipboard);
+        } else if (mimeType == "text/html") {
+            clipboard->setText(content, QClipboard::Clipboard);
+        } else if (mimeType == "image") {
+            const QByteArray imageData = QByteArray::fromBase64(content.toUtf8());
+            QImage image;
+            image.loadFromData(imageData);
+            clipboard->setImage(image, QClipboard::Clipboard);
+        } else {
+            qWarning() << "Unknown mime data type from web app: " << mimeType;
+            return;
+        }
+
+        _webSocket->sendTextMessage(R"({"command": "confirmInsertIntoClipboard"})");
     } else {
         qWarning() << "Unknown message from web app: " << message;
     }
