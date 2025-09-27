@@ -88,15 +88,15 @@ void WebAppClientService::initClipboardService() {
             const QString content = byteArray.toBase64();
 
             _webSocket->sendTextMessage(
-                R"({"command": "insertClipboard", "mimeType": "image/png", "content": )" + content +
-                "\"}");
+                R"({"command": "insertIntoClipboard", "mimeType": "image/png", "content": )" +
+                content + "\"}");
         } else if (mimeData->hasHtml()) {
             _webSocket->sendTextMessage(
-                R"({"command": "insertClipboard", "mimeType": "text/html", "content": ")" +
+                R"({"command": "insertIntoClipboard", "mimeType": "text/html", "content": ")" +
                 mimeData->html() + "\"}");
         } else if (mimeData->hasText()) {
             _webSocket->sendTextMessage(
-                R"({"command": "insertClipboard", "mimeType": "text/plain", "content": ")" +
+                R"({"command": "insertIntoClipboard", "mimeType": "text/plain", "content": ")" +
                 mimeData->text() + "\"}");
         }
     });
@@ -158,6 +158,7 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
     QJsonObject jsonObject = jsonResponse.object();
     const QString command = jsonObject.value(QStringLiteral("command")).toString();
     MetricsService::instance()->sendVisitIfEnabled("webapp/command/" + command);
+    qDebug() << __func__ << "command: " << command;
 
     if (command == "showWarning") {
         const QString msg = jsonObject.value(QStringLiteral("msg")).toString();
