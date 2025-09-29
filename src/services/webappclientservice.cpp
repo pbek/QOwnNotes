@@ -158,6 +158,7 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
     QJsonObject jsonObject = jsonResponse.object();
     const QString command = jsonObject.value(QStringLiteral("command")).toString();
     MetricsService::instance()->sendVisitIfEnabled("webapp/command/" + command);
+    qDebug() << __func__ << "message: " << message;
     qDebug() << __func__ << "command: " << command;
 
     if (command == "showWarning") {
@@ -203,8 +204,6 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
             qWarning() << "Unknown mime data type from web app: " << mimeType;
             return;
         }
-
-        _webSocket->sendTextMessage(R"({"command": "confirmInsertIntoClipboard"})");
     } else {
         qWarning() << "Unknown message from web app: " << message;
     }
