@@ -41,6 +41,7 @@ WebAppClientService::WebAppClientService(QObject *parent) : QObject(parent) {
     }
 
     _webSocket = new QWebSocket();
+    _heartbeatText = "qon-ping";
 
     connect(_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
     connect(_webSocket, &QWebSocket::disconnected, this, &WebAppClientService::onDisconnected);
