@@ -161,6 +161,11 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
     qDebug() << __func__ << "message: " << message;
     qDebug() << __func__ << "command: " << command;
 
+    if (message == _heartbeatText) {
+        // Ignore heartbeat messages
+        return;
+    }
+
     if (command == "showWarning") {
         const QString msg = jsonObject.value(QStringLiteral("msg")).toString();
         qWarning() << "Web app warning: " << msg;
@@ -212,10 +217,9 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
 void WebAppClientService::onSslErrors(const QList<QSslError> &errors) { qCritical() << errors; }
 
 void WebAppClientService::onSendHeartbeatText() {
-    const QString &heartbeatText = "qon-ping";
-    auto sendByte = _webSocket->sendTextMessage(heartbeatText);
+    auto sendByte = _webSocket->sendTextMessage(_heartbeatText);
 
-    if (sendByte != heartbeatText.toLocal8Bit().length()) {
+    if (sendByte != _heartbeatText.toLocal8Bit().length()) {
         _heartbeatFailedCount++;
         qDebug() << "WebAppClientService heartbeat failed";
 

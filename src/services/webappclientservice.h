@@ -54,4 +54,5 @@ class WebAppClientService : public QObject {
     int _reconnectFailedCount = 0;       // reconnection failures
     QTimer _timerHeartbeat;              // send heartbeat timer
     QTimer _timerReconnect;              // reconnection timer
+    const QString &_heartbeatText = "qon-ping";
 };
