@@ -42,6 +42,7 @@ WebAppClientService::WebAppClientService(QObject *parent) : QObject(parent) {
 
     _webSocket = new QWebSocket();
     _heartbeatText = "qon-ping";
+    generateSessionId();
 
     connect(_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
     connect(_webSocket, &QWebSocket::disconnected, this, &WebAppClientService::onDisconnected);
@@ -88,19 +89,24 @@ void WebAppClientService::initClipboardService() {
             pixmap.save(&buffer, "PNG");
             const QString content = byteArray.toBase64();
 
-            _webSocket->sendTextMessage(
-                R"({"command": "insertIntoClipboard", "mimeType": "image/png", "content": )" +
-                content + "\"}");
+            sendInsertIntoClipboard("image/png", content);
         } else if (mimeData->hasHtml()) {
-            _webSocket->sendTextMessage(
-                R"({"command": "insertIntoClipboard", "mimeType": "text/html", "content": ")" +
-                mimeData->html() + "\"}");
+            sendInsertIntoClipboard("text/html", mimeData->html());
         } else if (mimeData->hasText()) {
-            _webSocket->sendTextMessage(
-                R"({"command": "insertIntoClipboard", "mimeType": "text/plain", "content": ")" +
-                mimeData->text() + "\"}");
+            sendInsertIntoClipboard("text/plain", mimeData->text());
         }
     });
+}
+
+void WebAppClientService::sendInsertIntoClipboard(const QString &mimeType,
+                                                  const QString &content) const {
+    if (!_webSocket->isValid()) {
+        return;
+    }
+
+    _webSocket->sendTextMessage(R"({"command": "insertIntoClipboard", "mimeType": ")" + mimeType +
+                                R"(", "sessionId": ")" + _sessionId + R"(", "content": ")" +
+                                content + "\"}");
 }
 
 QString WebAppClientService::getServerUrl() {
@@ -119,6 +125,10 @@ QString WebAppClientService::getOrGenerateToken() {
     }
 
     return token;
+}
+
+void WebAppClientService::generateSessionId() {
+    _sessionId = Utils::Misc::generateRandomString(20);
 }
 
 QString WebAppClientService::getDefaultServerUrl() {
@@ -193,6 +203,14 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
         _webSocket->sendTextMessage(R"({"command": "confirmInsert"})");
 #endif
     } else if (command == "insertIntoClipboard") {
+        const QString sessionId = jsonObject.value(QStringLiteral("sessionId")).toString();
+
+        // Skip messages from our own session to prevent clipboard loops
+        if (sessionId == _sessionId) {
+            qDebug() << "Skipping insertIntoClipboard from own session";
+            return;
+        }
+
         QClipboard *clipboard = QApplication::clipboard();
         const QString mimeType = jsonObject.value(QStringLiteral("mimeType")).toString();
         const QString content = jsonObject.value(QStringLiteral("content")).toString();

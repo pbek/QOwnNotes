@@ -55,4 +55,8 @@ class WebAppClientService : public QObject {
     QTimer _timerHeartbeat;              // send heartbeat timer
     QTimer _timerReconnect;              // reconnection timer
     QString _heartbeatText;
+    QString _sessionId;
+
+    void generateSessionId();
+    void sendInsertIntoClipboard(const QString &mimeType, const QString &content) const;
 };
