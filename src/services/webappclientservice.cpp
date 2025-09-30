@@ -80,9 +80,8 @@ void WebAppClientService::initClipboardService() {
 
         const QMimeData *mimeData = clipboard->mimeData();
         qDebug() << __func__ << "mimeData: " << mimeData->text();
-
-        if (mimeData->hasImage()) {
-            const QPixmap pixmap = clipboard->pixmap();
+        const QPixmap pixmap = clipboard->pixmap();
+        if (!pixmap.isNull()) {
             QByteArray byteArray;
             QBuffer buffer(&byteArray);
             buffer.open(QIODevice::WriteOnly);
@@ -90,10 +89,10 @@ void WebAppClientService::initClipboardService() {
             const QString content = byteArray.toBase64();
 
             sendInsertIntoClipboard("image/png", content);
-        } else if (mimeData->hasHtml()) {
-            sendInsertIntoClipboard("text/html", mimeData->html());
         } else if (mimeData->hasText()) {
-            sendInsertIntoClipboard("text/plain", mimeData->text());
+            sendInsertIntoClipboard("text/plain", clipboard->text());
+        } else if (mimeData->hasHtml()) {
+            sendInsertIntoClipboard("text/html", clipboard->text());
         }
     });
 }
@@ -104,9 +103,14 @@ void WebAppClientService::sendInsertIntoClipboard(const QString &mimeType,
         return;
     }
 
-    _webSocket->sendTextMessage(R"({"command": "insertIntoClipboard", "mimeType": ")" + mimeType +
-                                R"(", "sessionId": ")" + _sessionId + R"(", "content": ")" +
-                                content + "\"}");
+    QJsonObject jsonObject;
+    jsonObject["command"] = "insertIntoClipboard";
+    jsonObject["mimeType"] = mimeType;
+    jsonObject["sessionId"] = _sessionId;
+    jsonObject["content"] = content;
+
+    QJsonDocument jsonDoc(jsonObject);
+    _webSocket->sendTextMessage(jsonDoc.toJson(QJsonDocument::Compact));
 }
 
 QString WebAppClientService::getServerUrl() {
