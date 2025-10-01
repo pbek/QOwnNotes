@@ -3,6 +3,7 @@
 ## 25.9.7
 
 - A tooltip for the tray icon was added
+- A crash on wayland was fixed when a global shortcut was set
 
 ## 25.9.6
 
