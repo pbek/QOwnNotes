@@ -110,6 +110,7 @@ void WebAppClientService::initClipboardService() {
 
     // React to clipboard changes
     connect(clipboard, &QClipboard::dataChanged, [this]() {
+        // We need to store the clipboard ourselves to preserve external clipboard changes
         keepClipboard();
         // sendClipboard();
     });
