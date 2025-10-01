@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.9.7
+
+- A tooltip for the tray icon was added
+
 ## 25.9.6
 
 - You can now **open the URL to a card** in the **Nextcloud Deck dialog** in the
