@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 25.9.7
+## 25.10.0
 
 - A tooltip for the tray icon was added
 - A crash on wayland was fixed when a global shortcut was set
