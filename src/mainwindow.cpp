@@ -6322,7 +6322,11 @@ void MainWindow::generateSystemTrayContextMenu() {
     menu->setTitle(QStringLiteral("QOwnNotes"));
 
     // add menu entry to open the app
-    QAction *openAction = menu->addAction(tr("Open QOwnNotes"));
+    QString openActionText = tr("Open QOwnNotes");
+#ifdef QT_DEBUG
+    openActionText += QStringLiteral(" (Debug)");
+#endif
+    QAction *openAction = menu->addAction(openActionText);
     openAction->setIcon(getSystemTrayIcon());
 
     connect(openAction, &QAction::triggered, this, &MainWindow::showWindow);
@@ -6440,6 +6444,11 @@ void MainWindow::generateSystemTrayContextMenu() {
     connect(quitAction, &QAction::triggered, this, &MainWindow::on_action_Quit_triggered);
 
     trayIcon->setContextMenu(menu);
+#ifdef QT_DEBUG
+    trayIcon->setToolTip(QStringLiteral("QOwnNotes (Debug)"));
+#else
+    trayIcon->setToolTip(QStringLiteral("QOwnNotes"));
+#endif
 }
 
 void MainWindow::on_action_Settings_triggered() {
