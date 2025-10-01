@@ -18,6 +18,7 @@
 #include <QSslError>
 #include <QTimer>
 
+class QClipboard;
 class QWebSocket;
 class QSslError;
 class QString;
@@ -34,6 +35,7 @@ class WebAppClientService : public QObject {
     static QString getOrGenerateToken();
     void open();
     void close();
+    bool sendClipboard() const;
 
    private slots:
     void onConnected();
@@ -45,6 +47,8 @@ class WebAppClientService : public QObject {
 
    private:
     QWebSocket *_webSocket{};
+    QString _clipboardMimeType;
+    QString _clipboardContent;
     QString _url;
     const int _heartbeatTime = 600000;    // heartbeat data transmission time interval in ms
     const int _reconnectHeartbeatTimerCount =
@@ -59,4 +63,5 @@ class WebAppClientService : public QObject {
 
     void generateSessionId();
     void sendInsertIntoClipboard(const QString &mimeType, const QString &content) const;
+    bool keepClipboard();
 };

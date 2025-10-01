@@ -69,31 +69,49 @@ void WebAppClientService::close() {
     _url = "";
 }
 
+bool WebAppClientService::keepClipboard() {
+    QClipboard *clipboard = QApplication::clipboard();
+    const QMimeData *mimeData = clipboard->mimeData();
+    const QPixmap pixmap = clipboard->pixmap();
+    if (!pixmap.isNull()) {
+        QByteArray byteArray;
+        QBuffer buffer(&byteArray);
+        buffer.open(QIODevice::WriteOnly);
+        pixmap.save(&buffer, "PNG");
+        const QString content = byteArray.toBase64();
+
+        _clipboardMimeType = "image/png";
+        _clipboardContent = content;
+    } else if (mimeData->hasText()) {
+        qDebug() << __func__ << "clipboard->text(): " << clipboard->text();
+        _clipboardMimeType = "text/plain";
+        _clipboardContent = clipboard->text();
+    } else if (mimeData->hasHtml()) {
+        _clipboardMimeType = "text/html";
+        _clipboardContent = clipboard->text();
+    } else {
+        return false;
+    }
+
+    return true;
+}
+
+bool WebAppClientService::sendClipboard() const {
+    if (_clipboardContent == "" || _clipboardMimeType == "") {
+        return false;
+    }
+
+    sendInsertIntoClipboard(_clipboardMimeType, _clipboardContent);
+    return true;
+}
+
 void WebAppClientService::initClipboardService() {
-    const QClipboard *clipboard = QApplication::clipboard();
+    QClipboard *clipboard = QApplication::clipboard();
 
-    // react to clipboard changes
-    connect(clipboard, &QClipboard::dataChanged, [this, clipboard]() {
-        if (!_webSocket->isValid()) {
-            return;
-        }
-
-        const QMimeData *mimeData = clipboard->mimeData();
-        qDebug() << __func__ << "mimeData: " << mimeData->text();
-        const QPixmap pixmap = clipboard->pixmap();
-        if (!pixmap.isNull()) {
-            QByteArray byteArray;
-            QBuffer buffer(&byteArray);
-            buffer.open(QIODevice::WriteOnly);
-            pixmap.save(&buffer, "PNG");
-            const QString content = byteArray.toBase64();
-
-            sendInsertIntoClipboard("image/png", content);
-        } else if (mimeData->hasText()) {
-            sendInsertIntoClipboard("text/plain", clipboard->text());
-        } else if (mimeData->hasHtml()) {
-            sendInsertIntoClipboard("text/html", clipboard->text());
-        }
+    // React to clipboard changes
+    connect(clipboard, &QClipboard::dataChanged, [this]() {
+        keepClipboard();
+        // sendClipboard();
     });
 }
 

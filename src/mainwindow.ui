@@ -1206,6 +1206,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="menuEncryption"/>
     <addaction name="actionManage_stored_images"/>
     <addaction name="actionManage_stored_attachments"/>
+    <addaction name="actionSend_clipboard"/>
     <addaction name="menuExtra"/>
     <addaction name="separator"/>
     <addaction name="actionCheck_spelling"/>
@@ -2880,6 +2881,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="shortcut">
     <string>Ctrl+Alt+D</string>
+   </property>
+  </action>
+  <action name="actionSend_clipboard">
+   <property name="icon">
+    <iconset theme="document-share" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Send clipboard</string>
    </property>
   </action>
  </widget>

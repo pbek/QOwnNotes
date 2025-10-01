@@ -2760,6 +2760,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     }
 
     initGlobalKeyboardShortcuts();
+    ui->actionSend_clipboard->setEnabled(Utils::Misc::isWebAppSupportEnabled());
 }
 
 /**
@@ -6331,6 +6332,8 @@ void MainWindow::generateSystemTrayContextMenu() {
 
     connect(openAction, &QAction::triggered, this, &MainWindow::showWindow);
 
+    menu->addSeparator();
+    menu->addAction(ui->actionSend_clipboard);
     menu->addSeparator();
 
     const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
@@ -12478,4 +12481,12 @@ void MainWindow::on_actionReattach_panels_triggered() {
 
 void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() {
     on_actionInsert_Nextcloud_Deck_card_triggered();
+}
+
+void MainWindow::on_actionSend_clipboard_triggered() {
+    if (_webAppClientService->sendClipboard()) {
+        showStatusBarMessage(tr("Clipboard sent successfully"), QStringLiteral("✅"), 3000);
+    } else {
+        showStatusBarMessage(tr("Failed to send clipboard"), QStringLiteral("⚠️"), 5000);
+    }
 }

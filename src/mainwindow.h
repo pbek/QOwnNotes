@@ -732,6 +732,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionManage_Nextcloud_Deck_cards_triggered();
 
+    void on_actionSend_clipboard_triggered();
+
    public:
     /** Settings access **/
     static bool isInDistractionFreeMode();
