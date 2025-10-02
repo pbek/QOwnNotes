@@ -90,6 +90,7 @@ bool WebAppClientService::keepClipboard() {
     } else if (mimeData->hasText()) {
         _clipboardMimeType = "text/plain";
         _clipboardContent = clipboard->text();
+        // qDebug() << __func__ << "_clipboardContent: " << _clipboardContent;
     } else if (mimeData->hasHtml()) {
         _clipboardMimeType = "text/html";
         _clipboardContent = clipboard->text();

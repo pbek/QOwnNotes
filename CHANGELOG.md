@@ -7,6 +7,8 @@
   (for [#3371](https://github.com/pbek/QOwnNotes/issues/3371))
   - You need to set the same security token in both instances to be able to
     send clipboard content
+  - The tray action will also bring the app to focus, because it can happen that
+    the app needs to get focus first before the correct clipboard content can be read
 - A tooltip for the tray icon was added
 - A crash on wayland was fixed when a global shortcut was set
 

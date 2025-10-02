@@ -6303,6 +6303,9 @@ void MainWindow::showWindow() {
     setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
     raise();    // for MacOS
 
+    // Really show the window, by bringing it to focus
+    setFocus();
+
     // parse the current note for the navigation panel in case it wasn't parsed
     // while the mainwindow was hidden (https://github.com/pbek/QOwnNotes/issues/2110)
     startNavigationParser();
@@ -12484,9 +12487,16 @@ void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() {
 }
 
 void MainWindow::on_actionSend_clipboard_triggered() {
-    if (_webAppClientService->sendClipboard()) {
-        showStatusBarMessage(tr("Clipboard sent successfully"), QStringLiteral("✅"), 3000);
-    } else {
-        showStatusBarMessage(tr("Failed to send clipboard"), QStringLiteral("⚠️"), 5000);
-    }
+    // We need to show the window because on some systems the clipboard
+    // can't be accessed if the app is not focused
+    showWindow();
+
+    // We need a delay because otherwise the clipboard can't be properly accessed on some systems
+    QTimer::singleShot(1000, this, [this] {
+        if (_webAppClientService->sendClipboard()) {
+            showStatusBarMessage(tr("Clipboard sent successfully"), QStringLiteral("✅"), 3000);
+        } else {
+            showStatusBarMessage(tr("Failed to send clipboard"), QStringLiteral("⚠️"), 5000);
+        }
+    });
 }
