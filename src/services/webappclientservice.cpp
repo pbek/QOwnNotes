@@ -84,10 +84,9 @@ bool WebAppClientService::keepClipboard() {
         QBuffer buffer(&byteArray);
         buffer.open(QIODevice::WriteOnly);
         pixmap.save(&buffer, "PNG");
-        const QString content = byteArray.toBase64();
 
         _clipboardMimeType = "image/png";
-        _clipboardContent = content;
+        _clipboardContent = byteArray.toBase64();
     } else if (mimeData->hasText()) {
         _clipboardMimeType = "text/plain";
         _clipboardContent = clipboard->text();
@@ -105,6 +104,9 @@ bool WebAppClientService::sendClipboard() const {
     if (_clipboardContent == "" || _clipboardMimeType == "") {
         return false;
     }
+
+    qDebug() << __func__ << "_clipboardMimeType: " << _clipboardMimeType;
+    qDebug() << __func__ << "_clipboardContent: " << _clipboardContent;
 
     sendInsertIntoClipboard(_clipboardMimeType, _clipboardContent);
     return true;
@@ -242,20 +244,34 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
         QClipboard *clipboard = QApplication::clipboard();
         const QString mimeType = jsonObject.value(QStringLiteral("mimeType")).toString();
         const QString content = jsonObject.value(QStringLiteral("content")).toString();
+        qDebug() << __func__ << "mimeType: " << mimeType;
+        qDebug() << __func__ << "content: " << content.left(200);
+
+#ifndef INTEGRATION_TESTS
+        MainWindow *mainWindow = MainWindow::instance();
 
         if (mimeType == "text/plain") {
             clipboard->setText(content, QClipboard::Clipboard);
+            mainWindow->showStatusBarMessage(
+                tr("Text received from web app and copied to clipboard"), QStringLiteral("📋"),
+                5000);
         } else if (mimeType == "text/html") {
             clipboard->setText(content, QClipboard::Clipboard);
+            mainWindow->showStatusBarMessage(
+                tr("HTML received from web app and copied to clipboard"), QStringLiteral("📋"),
+                5000);
         } else if (mimeType == "image") {
             const QByteArray imageData = QByteArray::fromBase64(content.toUtf8());
             QImage image;
             image.loadFromData(imageData);
             clipboard->setImage(image, QClipboard::Clipboard);
+            mainWindow->showStatusBarMessage(
+                tr("Image received from web app and copied to clipboard"), QStringLiteral("📋"),
+                5000);
         } else {
             qWarning() << "Unknown mime data type from web app: " << mimeType;
-            return;
         }
+#endif
     } else {
         qWarning() << "Unknown message from web app: " << message;
     }
