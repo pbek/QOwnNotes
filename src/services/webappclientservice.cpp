@@ -22,6 +22,7 @@
 #include <utils/misc.h>
 
 #include <QApplication>
+#include <QBuffer>
 #include <QClipboard>
 #include <QJsonDocument>
 #include <QSslError>
@@ -69,6 +70,11 @@ void WebAppClientService::close() {
     _url = "";
 }
 
+/**
+ * Keeps the current clipboard content
+ *
+ * @return true if something was kept
+ */
 bool WebAppClientService::keepClipboard() {
     QClipboard *clipboard = QApplication::clipboard();
     const QMimeData *mimeData = clipboard->mimeData();
@@ -83,7 +89,6 @@ bool WebAppClientService::keepClipboard() {
         _clipboardMimeType = "image/png";
         _clipboardContent = content;
     } else if (mimeData->hasText()) {
-        qDebug() << __func__ << "clipboard->text(): " << clipboard->text();
         _clipboardMimeType = "text/plain";
         _clipboardContent = clipboard->text();
     } else if (mimeData->hasHtml()) {
@@ -110,9 +115,9 @@ void WebAppClientService::initClipboardService() {
 
     // React to clipboard changes
     connect(clipboard, &QClipboard::dataChanged, [this]() {
-        // We need to store the clipboard ourselves to preserve external clipboard changes
+        // We need to store the clipboard ourselves to preserve external clipboard changes we would
+        // not catch otherwise
         keepClipboard();
-        // sendClipboard();
     });
 }
 

@@ -2,6 +2,11 @@
 
 ## 25.10.0
 
+- There now is a new menu action and tray icon action to **send the clipboard**
+  content via the QOwnNotes web application to **another instance of QOwnNotes**
+  (for [#3371](https://github.com/pbek/QOwnNotes/issues/3371))
+  - You need to set the same security token in both instances to be able to
+    send clipboard content
 - A tooltip for the tray icon was added
 - A crash on wayland was fixed when a global shortcut was set
 
