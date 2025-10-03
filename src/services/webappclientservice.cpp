@@ -89,7 +89,7 @@ bool WebAppClientService::keepClipboard() {
         _clipboardContent = byteArray.toBase64();
     } else if (mimeData->hasHtml()) {
         _clipboardMimeType = "text/html";
-        _clipboardContent = clipboard->text();
+        _clipboardContent = mimeData->html();
     } else if (mimeData->hasText()) {
         _clipboardMimeType = "text/plain";
         _clipboardContent = clipboard->text();
