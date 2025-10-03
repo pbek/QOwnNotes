@@ -2387,6 +2387,10 @@
 <translation>Ctrl+Alt+D</translation>
 </message>
 <message>
+<source>Send clipboard</source>
+<translation type="unfinished">Send clipboard</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Disposition &amp;verticale de l'aperçu</translation>
 </message>
@@ -2869,6 +2873,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>AI model selector</source>
 <translation>Sélecteur de modèle d’IA</translation>
+</message>
+<message>
+<source>Clipboard sent successfully</source>
+<translation type="unfinished">Clipboard sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard</source>
+<translation type="unfinished">Failed to send clipboard</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3676,7 +3688,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>&amp;Ouvrir la carte dans le navigateur</translation>
 </message>
 </context>
 <context>
@@ -3691,15 +3703,19 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Erreur lors de la mise à jour de la carte</translation>
 </message>
 <message>
-<source>Updating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+<source>Updating card failed with status code %1 and message: %2</source>
+<translation>La mise à jour de la carte a échoué avec le code de statut %1 et le message : %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Erreur lors de la création de la carte</translation>
+</message>
+<message>
+<source>Creating card failed with status code %1 and message: %2</source>
+<translation>La création de la carte a échoué avec le code de statut %1 et le message : %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
@@ -8158,6 +8174,18 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Insert image received from QOwnNotes web application?</source>
 <translation>Insérer une image reçue de l'application Web QOwnNotes?</translation>
+</message>
+<message>
+<source>Text received from web app and copied to clipboard</source>
+<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+</message>
+<message>
+<source>HTML received from web app and copied to clipboard</source>
+<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+</message>
+<message>
+<source>Image received from web app and copied to clipboard</source>
+<translation type="unfinished">Image received from web app and copied to clipboard</translation>
 </message>
 </context>
 <context>

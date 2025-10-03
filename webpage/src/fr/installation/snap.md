@@ -1,4 +1,4 @@
-# Install as Snap
+# Installer depuis Snap
 
 Il existe un snap `qownnotes` dans le [Snap store](https://snapcraft.io/qownnotes).
 
@@ -8,8 +8,7 @@ Vous pouvez l'installer en tapant :
 snap install qownnotes
 ```
 
-Afterward you should be able to run QOwnNotes with the command `qownnotes`.
+Vous devriez ensuite pouvoir exécuter QOwnNotes avec la commande `qownnotes`.
 
-::: tip
-[Snaps](http://snapcraft.io) are working on many Linux distributions like Ubuntu, Arch Linux, Debian, Fedora, openSUSE, Gentoo Linux, OpenWRT, open embedded and yocto project.
+Les [Snaps](http://snapcraft.io) fonctionnent sur de nombreuses distributions Linux comme Ubuntu, Arch Linux, Debian, Fedora, openSUSE, Gentoo Linux, OpenWRT, open embedded et yocto project.
 :::

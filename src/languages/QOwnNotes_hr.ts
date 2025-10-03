@@ -2396,6 +2396,10 @@
 <translation type="unfinished">Ctrl+Alt+D</translation>
 </message>
 <message>
+<source>Send clipboard</source>
+<translation>Pošalji međuspremnik</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Upotrijebi &amp;vertikalni pretpregled izgleda</translation>
 </message>
@@ -2887,6 +2891,14 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>AI model selector</source>
 <translation>Selektor modela UI-a</translation>
+</message>
+<message>
+<source>Clipboard sent successfully</source>
+<translation>Međuspremnik je uspješno poslan</translation>
+</message>
+<message>
+<source>Failed to send clipboard</source>
+<translation>Neuspjelo slanje međuspremnika</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3728,12 +3740,16 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation type="unfinished">Error while updating card</translation>
 </message>
 <message>
-<source>Updating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+<source>Updating card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
 <translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Creating card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
@@ -8210,6 +8226,18 @@ This cannot be undone!</source>
 <message>
 <source>Insert image received from QOwnNotes web application?</source>
 <translation>Umetnuti sliku primljenu iz web programa QOwnNotes?</translation>
+</message>
+<message>
+<source>Text received from web app and copied to clipboard</source>
+<translation>Primljeni tekst od web aplikacije i kopiran u međuspremnik</translation>
+</message>
+<message>
+<source>HTML received from web app and copied to clipboard</source>
+<translation>Primljeni HTML od web aplikacije i kopiran u međuspremnik</translation>
+</message>
+<message>
+<source>Image received from web app and copied to clipboard</source>
+<translation>Primljena slika od web aplikacije i kopirana u međuspremnik</translation>
 </message>
 </context>
 <context>

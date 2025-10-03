@@ -1,21 +1,21 @@
-# Installer sur Ubuntu Linux, OS élémentaire et Linux Mint
+# Installer sur Ubuntu Linux, elementary OS et Linux Mint
 
-## Ubuntu Linux 24.04 or newer, elementary OS, Linux Mint 22.1 or newer
+## Ubuntu Linux 24.04 ou ultérieur, elementary OS, Linux Mint 22.1 ou ultérieur
 
-Install **QOwnNotes** on **Ubuntu Linux** (minimum 24.04) using the PPA repository. This version of QOwnNotes is built with Qt6.
+Installez **QOwnNotes** sur **Ubuntu Linux** (minimum 24.04) à l'aide du dépôt PPA. Cette version de QOwnNotes est compilée avec Qt6.
 
 Notez qu'il existe également des paquets pour ARM dans le dépôt, au cas où vous souhaiteriez utiliser QOwnNotes sur un **Raspberry Pi **.
 
 Ouvrez un terminal et entrez les commandes suivantes pour ajouter le dépôt et installer QOwnNotes.
 
 ```bash
-# Remove Qt5 PPA in case you had it installed
+# Suppression du PPA de Qt5 au cas où vous l’auriez déjà installé
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Add Qt6 PPA
+# Ajout du PPA de Qt6
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# Install QOwnNotes
+# Installation de QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
@@ -40,7 +40,7 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
+[Téléchargement direct](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
 ## Anciennes distributions et dérivés d'Ubuntu Linux
 
@@ -69,4 +69,4 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)
+[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)

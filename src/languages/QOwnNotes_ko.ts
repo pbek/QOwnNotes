@@ -2381,6 +2381,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>Ctrl+Alt+D</translation>
 </message>
 <message>
+<source>Send clipboard</source>
+<translation>클립보드 보내기</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>
@@ -2849,6 +2853,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>AI model selector</source>
 <translation>AI 모델 선택기</translation>
+</message>
+<message>
+<source>Clipboard sent successfully</source>
+<translation>클립보드가 성공적으로 전송되었습니다</translation>
+</message>
+<message>
+<source>Failed to send clipboard</source>
+<translation>클립보드를 보내지 못했습니다</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3643,7 +3655,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>브라우저에서 카드 열기(&amp;O)</translation>
 </message>
 </context>
 <context>
@@ -3658,15 +3670,19 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>카드 업데이트 중 오류 발생</translation>
 </message>
 <message>
-<source>Updating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+<source>Updating card failed with status code %1 and message: %2</source>
+<translation>상태 코드 %1과 메시지 %2로 카드 업데이트에 실패했습니다</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>카드 생성 중 오류 발생</translation>
+</message>
+<message>
+<source>Creating card failed with status code %1 and message: %2</source>
+<translation>상태 코드 %1과 메시지 %2로 카드를 생성하지 못했습니다</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
@@ -8112,6 +8128,18 @@ This cannot be undone!</source>
 <message>
 <source>Insert image received from QOwnNotes web application?</source>
 <translation>QOownNotes 웹 응용프로그램에서 받은 이미지를 삽입하시겠습니까?</translation>
+</message>
+<message>
+<source>Text received from web app and copied to clipboard</source>
+<translation>웹 앱에서 받은 텍스트를 클립보드에 복사합니다</translation>
+</message>
+<message>
+<source>HTML received from web app and copied to clipboard</source>
+<translation>웹 앱에서 HTML을 받아 클립보드에 복사했습니다</translation>
+</message>
+<message>
+<source>Image received from web app and copied to clipboard</source>
+<translation>웹 앱에서 이미지를 받아 클립보드에 복사했습니다</translation>
 </message>
 </context>
 <context>

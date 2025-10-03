@@ -4,6 +4,8 @@
 
 - You now are also able to **send and receive HTML and image clipboard content**
   (for [#3371](https://github.com/pbek/QOwnNotes/issues/3371))
+- Added more Croatian, Spanish, Korean, French translation (thank you, milotype,
+  alejandromoc, venusgirl, jd-develop)
 
 ## 25.10.0
 

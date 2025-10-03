@@ -2387,6 +2387,10 @@
 <translation>Ctrl+Alt+D</translation>
 </message>
 <message>
+<source>Send clipboard</source>
+<translation>Enviar portapapeles</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Plantilla de vista &amp;vertical</translation>
 </message>
@@ -2868,6 +2872,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>AI model selector</source>
 <translation>Selector de modelo de IA</translation>
+</message>
+<message>
+<source>Clipboard sent successfully</source>
+<translation>Portapapeles enviado correctamente</translation>
+</message>
+<message>
+<source>Failed to send clipboard</source>
+<translation>Error al enviar el portapapeles</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3675,7 +3687,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>Abrir tarjeta en el navegador</translation>
 </message>
 </context>
 <context>
@@ -3690,15 +3702,19 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Error al actualizar la tarjeta</translation>
 </message>
 <message>
-<source>Updating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+<source>Updating card failed with status code %1 and message: %2</source>
+<translation>La actualización de una tarjeta ha fallado con el código de estado %1 y el mensaje: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Error al crear la tarjeta</translation>
+</message>
+<message>
+<source>Creating card failed with status code %1 and message: %2</source>
+<translation>La creación de una tarjeta ha fallado con el código de estado %1 y el mensaje: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
@@ -8147,6 +8163,18 @@ This cannot be undone!</source>
 <message>
 <source>Insert image received from QOwnNotes web application?</source>
 <translation>¿Insertar imagen recibida de la aplicación web QOwnNotes?</translation>
+</message>
+<message>
+<source>Text received from web app and copied to clipboard</source>
+<translation>Texto recibido de la aplicación web y copiado al portapapeles</translation>
+</message>
+<message>
+<source>HTML received from web app and copied to clipboard</source>
+<translation>HTML recibido de la aplicación web y copiado al portapapeles</translation>
+</message>
+<message>
+<source>Image received from web app and copied to clipboard</source>
+<translation>Imagen recibida de la aplicación web y copiada al portapapeles</translation>
 </message>
 </context>
 <context>

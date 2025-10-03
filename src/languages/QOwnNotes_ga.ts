@@ -2419,6 +2419,10 @@
 <translation type="unfinished">Ctrl+Alt+D</translation>
 </message>
 <message>
+<source>Send clipboard</source>
+<translation type="unfinished">Send clipboard</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Úsáid &amp;leagan amach ingearach</translation>
 </message>
@@ -2944,6 +2948,14 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
 <message>
 <source>AI model selector</source>
 <translation type="unfinished">AI model selector</translation>
+</message>
+<message>
+<source>Clipboard sent successfully</source>
+<translation type="unfinished">Clipboard sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard</source>
+<translation type="unfinished">Failed to send clipboard</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3819,12 +3831,16 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <translation type="unfinished">Error while updating card</translation>
 </message>
 <message>
-<source>Updating a card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating a card failed with status code %1 and message: %2</translation>
+<source>Updating card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
 <translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Creating card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
@@ -8324,6 +8340,18 @@ Ní féidir é seo a dhiúltú!</translation>
 <message>
 <source>Insert image received from QOwnNotes web application?</source>
 <translation type="unfinished">Insert image received from QOwnNotes web application?</translation>
+</message>
+<message>
+<source>Text received from web app and copied to clipboard</source>
+<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+</message>
+<message>
+<source>HTML received from web app and copied to clipboard</source>
+<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+</message>
+<message>
+<source>Image received from web app and copied to clipboard</source>
+<translation type="unfinished">Image received from web app and copied to clipboard</translation>
 </message>
 </context>
 <context>
