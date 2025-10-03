@@ -261,7 +261,7 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
             mainWindow->showStatusBarMessage(
                 tr("HTML received from web app and copied to clipboard"), QStringLiteral("📋"),
                 5000);
-        } else if (mimeType == "image") {
+        } else if (mimeType == "image/png") {
             const QByteArray imageData = QByteArray::fromBase64(content.toUtf8());
             QImage image;
             image.loadFromData(imageData);
