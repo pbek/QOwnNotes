@@ -87,13 +87,13 @@ bool WebAppClientService::keepClipboard() {
 
         _clipboardMimeType = "image/png";
         _clipboardContent = byteArray.toBase64();
+    } else if (mimeData->hasHtml()) {
+        _clipboardMimeType = "text/html";
+        _clipboardContent = clipboard->text();
     } else if (mimeData->hasText()) {
         _clipboardMimeType = "text/plain";
         _clipboardContent = clipboard->text();
         // qDebug() << __func__ << "_clipboardContent: " << _clipboardContent;
-    } else if (mimeData->hasHtml()) {
-        _clipboardMimeType = "text/html";
-        _clipboardContent = clipboard->text();
     } else {
         return false;
     }
