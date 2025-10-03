@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.10.1
+
+- You now are also able to **send and receive HTML and image clipboard content**
+  (for [#3371](https://github.com/pbek/QOwnNotes/issues/3371))
+
 ## 25.10.0
 
 - There now is a new menu action and tray icon action to **send the clipboard**
