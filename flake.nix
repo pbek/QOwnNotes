@@ -67,5 +67,9 @@
             echo "qmake:  $(qmake --version)"
           '';
         };
+
+      checks.x86_64-linux = {
+        qownnotes = pkgs.testers.runNixOSTest ./tests/vm/qownnotes.nix;
+      };
     };
 }

@@ -231,3 +231,15 @@ run-github-workflow args='format-check':
 [group('maintenance')]
 build-botan3-amalgamation:
     nix-build -E 'with import <nixpkgs> {}; callPackage ./scripts/botan3-amalgamation.nix {}'
+
+# Run the VM tests
+[group('tests')]
+vm-test:
+    nix build .#checks.x86_64-linux.qownnotes -L --no-link
+
+# Run the interactive VM test
+[group('tests')]
+vm-test-interactive:
+    nix build .#checks.x86_64-linux.qownnotes.driverInteractive
+    echo "To interact with the test VM, run: start_all()"
+    ./result/bin/nixos-test-driver
