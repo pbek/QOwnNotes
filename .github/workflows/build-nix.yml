@@ -53,3 +53,27 @@ jobs:
           submodules: recursive
       - name: 🚧 Build nix package
         run: devenv shell just ${{ matrix.just-recipe }}
+
+  vm-test:
+    name: "🧪 Run VM tests"
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: read
+    steps:
+      - name: "📥 Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "📦 Install Nix"
+        uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: 🔒 Cache dependencies
+        uses: cachix/cachix-action@v16
+        with:
+          # https://app.cachix.org/cache/qownnotes-devenv
+          name: qownnotes-devenv
+
+      - name: "🧪 Run QOwnNotes integration test"
+        run: nix build .?submodules=1#checks.x86_64-linux.qownnotes -L --no-link
