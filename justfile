@@ -235,11 +235,21 @@ build-botan3-amalgamation:
 # Run the VM tests
 [group('tests')]
 vm-test:
-    nix build .#checks.x86_64-linux.qownnotes -L --no-link
+    nix build .?submodules=1#checks.x86_64-linux.qownnotes -L --no-link
 
 # Run the interactive VM test
 [group('tests')]
 vm-test-interactive:
-    nix build .#checks.x86_64-linux.qownnotes.driverInteractive
+    nix build .?submodules=1#checks.x86_64-linux.qownnotes.driverInteractive
     echo "To interact with the test VM, run: start_all()"
     ./result/bin/nixos-test-driver
+
+# Build the application with Qt6 for nix with submodules
+[group('nix')]
+nix-build-qt6:
+    nix build '.?submodules=1#qownnotes-qt6'
+
+# Force a rebuild of the application with Qt6 (submodules, new FORCE_REBUILD tag)
+[group('nix')]
+nix-build-qt6-force:
+    FORCE_REBUILD=$(date +%s) nix build '.?submodules=1#qownnotes-qt6' --impure --rebuild

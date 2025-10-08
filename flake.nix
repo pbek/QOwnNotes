@@ -10,6 +10,8 @@
 
   outputs =
     {
+      # deadnix: skip
+      self, # to prevent: error: function 'outputs' called with unexpected argument 'self'
       nixpkgs,
       nixpkgs-qt69,
       nixpkgs-qt5153,
@@ -22,8 +24,8 @@
     in
     {
       packages.${system} = {
-        qownnotes-qt6 = pkgs.qt6Packages.callPackage (import ./default.nix) { };
-        qownnotes-qt69 = pkgs-qt69.qt6Packages.callPackage (import ./default.nix) { };
+        qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
+        qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
         qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
         qownnotes-qt5153 =
           pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)

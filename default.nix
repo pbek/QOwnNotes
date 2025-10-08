@@ -1,15 +1,9 @@
 {
   lib,
   stdenv,
+  qt6Packages,
   cmake,
-  qttools,
-  qtbase,
-  qtdeclarative,
-  qtsvg,
-  qtwayland,
-  qtwebsockets,
   makeWrapper,
-  wrapQtAppsHook,
   botan3,
   libgit2,
   pkg-config,
@@ -24,7 +18,7 @@ let
   #  version = builtins.head (builtins.match "#define VERSION \"([0-9.]+)\"" (builtins.readFile ./src/version.h));
   version = "local-build";
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   inherit pname appname version;
 
   src = builtins.path {
@@ -34,8 +28,8 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     cmake
-    qttools
-    wrapQtAppsHook
+    qt6Packages.qttools
+    qt6Packages.wrapQtAppsHook
     pkg-config
     installShellFiles
   ]
@@ -43,15 +37,15 @@ stdenv.mkDerivation {
   ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
 
   buildInputs = [
-    qtbase
-    qtdeclarative
-    qtsvg
-    qtwebsockets
+    qt6Packages.qtbase
+    qt6Packages.qtdeclarative
+    qt6Packages.qtsvg
+    qt6Packages.qtwebsockets
     botan3
     libgit2
     aspell
   ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [ qtwayland ];
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ qt6Packages.qtwayland ];
 
   cmakeFlags = [
     "-DQON_QT6_BUILD=ON"
@@ -63,41 +57,42 @@ stdenv.mkDerivation {
   # Install shell completion on Linux (with xvfb-run)
   postInstall =
     lib.optionalString stdenv.hostPlatform.isLinux ''
-      installShellCompletion --cmd ${appname} \
-        --bash <(xvfb-run $out/bin/${appname} --completion bash) \
-        --fish <(xvfb-run $out/bin/${appname} --completion fish)
-      installShellCompletion --cmd ${pname} \
-        --bash <(xvfb-run $out/bin/${appname} --completion bash) \
-        --fish <(xvfb-run $out/bin/${appname} --completion fish)
+      installShellCompletion --cmd ${finalAttrs.appname} \
+        --bash <(xvfb-run $out/bin/${finalAttrs.appname} --completion bash) \
+        --fish <(xvfb-run $out/bin/${finalAttrs.appname} --completion fish)
+      installShellCompletion --cmd ${finalAttrs.pname} \
+        --bash <(xvfb-run $out/bin/${finalAttrs.appname} --completion bash) \
+        --fish <(xvfb-run $out/bin/${finalAttrs.appname} --completion fish)
     ''
     # Install shell completion on macOS
-    + lib.optionalString stdenv.isDarwin ''
-      installShellCompletion --cmd ${pname} \
-        --bash <($out/bin/${appname} --completion bash) \
-        --fish <($out/bin/${appname} --completion fish)
+    + lib.optionalString stdenv.hostPlatform.isDarwin ''
+      installShellCompletion --cmd ${finalAttrs.pname} \
+        --bash <($out/bin/${finalAttrs.appname} --completion bash) \
+        --fish <($out/bin/${finalAttrs.appname} --completion fish)
     ''
     # Create a lowercase symlink for Linux
     + lib.optionalString stdenv.hostPlatform.isLinux ''
-      ln -s $out/bin/${appname} $out/bin/${pname}
+      ln -s $out/bin/${finalAttrs.appname} $out/bin/${finalAttrs.pname}
     ''
     # Rename application for macOS as lowercase binary
     + lib.optionalString stdenv.hostPlatform.isDarwin ''
       # Prevent "same file" error
-      mv $out/bin/${appname} $out/bin/${pname}.bin
-      mv $out/bin/${pname}.bin $out/bin/${pname}
+      mv $out/bin/${finalAttrs.appname} $out/bin/${finalAttrs.pname}.bin
+      mv $out/bin/${finalAttrs.pname}.bin $out/bin/${finalAttrs.pname}
     '';
 
-  meta = with lib; {
-    description = "Plain-text file notepad and todo-list manager with Markdown support and Nextcloud/ownCloud integration";
+  meta = {
+    description = "Plain-text file notepad and todo-list manager with markdown support and Nextcloud/ownCloud integration";
     homepage = "https://www.qownnotes.org/";
     changelog = "https://www.qownnotes.org/changelog.html";
-    downloadPage = "https://github.com/pbek/QOwnNotes/releases/tag/v${version}";
-    license = licenses.gpl2Only;
-    maintainers = with maintainers; [
+    downloadPage = "https://github.com/pbek/QOwnNotes/releases/tag/v${finalAttrs.version}";
+    license = lib.licenses.gpl2Only;
+    maintainers = with lib.maintainers; [
       pbek
       totoroot
+      matthiasbeyer
     ];
-    platforms = platforms.unix;
-    mainProgram = pname;
+    platforms = lib.platforms.unix;
+    mainProgram = "qownnotes";
   };
-}
+})
