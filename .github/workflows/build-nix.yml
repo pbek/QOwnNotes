@@ -74,5 +74,10 @@ jobs:
           # https://app.cachix.org/cache/qownnotes-devenv
           name: qownnotes-devenv
 
+      - name: 🧰 Checkout code
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
       - name: "🧪 Run QOwnNotes integration test"
         run: nix build .?submodules=1#checks.x86_64-linux.qownnotes -L --no-link
