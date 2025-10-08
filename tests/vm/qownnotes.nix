@@ -24,6 +24,7 @@ in
     };
 
   enableOCR = true;
+  interactive.sshBackdoor.enable = true; # provides ssh-config & vsock access (needs host vsock support)
 
   # https://nixos.org/manual/nixos/stable/#ssec-machine-objects
   testScript =
