@@ -91,6 +91,7 @@ in
   };
 
   enterShell = ''
+    echo "🛠️ QOwnNotes Dev Shell"
     update-qmake-symlinks
   '';
 
