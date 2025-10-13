@@ -86,33 +86,7 @@ in
       };
     };
     excludes = [
-      "build/.*"
-      "build-.*/.*"
-      "src/build/.*"
-      "src/build-.*/.*"
-      "src/cmake-build-debug/.*"
-      "src/Qt5-Debug/.*"
-      "bin/.*"
-      "doc/build/.*"
-      "stage/.*"
-      "parts/.*"
-      "secrets/.*"
-      "src/libraries/build-.*/.*"
-      "src/libraries/qkeysequencewidget/.*"
-      "src/libraries/qttoolbareditor/.*"
-      "src/libraries/qtcsv/.*"
-      "src/libraries/md4c/.*"
-      "src/libraries/qhotkey/.*"
-      "webpage/src/ar/.*"
-      "webpage/src/de/.*"
-      "webpage/src/es/.*"
-      "webpage/src/fa/.*"
-      "webpage/src/fr/.*"
-      "webpage/src/hu/.*"
-      "webpage/src/it/.*"
-      "webpage/src/ko/.*"
-      "webpage/src/nl/.*"
-      "webpage/src/pl/.*"
+      "webpage/src/(ar|de|es|fa|fr|hu|it|ko|nl|pl)/.*"
     ];
   };
 
