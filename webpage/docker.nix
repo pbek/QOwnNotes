@@ -3,7 +3,7 @@
 }:
 
 let
-  nginx = pkgs.nginx;
+  inherit (pkgs) nginx;
 
   npmPackage = pkgs.buildNpmPackage {
     pname = "qowonnotes-webpage-npm";

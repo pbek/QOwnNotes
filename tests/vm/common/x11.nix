@@ -5,15 +5,18 @@
     ./auto.nix
   ];
 
-  services.xserver.enable = true;
+  services = {
+    xserver = {
+      enable = true;
+      # Use IceWM as the window manager.
+      windowManager.icewm.enable = true;
+    };
+    # Don't use a desktop manager.
+    displayManager.defaultSession = lib.mkDefault "none+icewm";
+  };
 
   # Automatically log in.
   test-support.displayManager.auto.enable = true;
-
-  # Use IceWM as the window manager.
-  # Don't use a desktop manager.
-  services.displayManager.defaultSession = lib.mkDefault "none+icewm";
-  services.xserver.windowManager.icewm.enable = true;
 
   # Help with OCR
   environment.etc."icewm/theme".text = ''
