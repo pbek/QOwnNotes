@@ -1,35 +1,35 @@
 {
-	"app-id": "org.qownnotes.QOwnNotes",
-	"runtime": "org.kde.Platform",
-	"runtime-version": "5.10",
-	"sdk": "org.kde.Sdk",
-	"command": "QOwnNotes",
-	"rename-desktop-file": "PBE.QOwnNotes.desktop",
-	"rename-icon": "QOwnNotes",
-	"finish-args": [
-		"--socket=wayland",
-		"--socket=x11",
-		"--share=ipc",
-		"--share=network",
-		"--device=dri"
-	],
-	"modules": [
-		{
-			"name": "QOwnNotes",
-			"buildsystem": "qmake",
-			"subdir": "src",
-			"sources": [
-				{
-					"type": "git",
-					"url": "https://github.com/pbek/QOwnNotes",
-					"tag": "linux-b3632-171559",
-					"commit": "4c8f78cc4797161f21f17556662c37a2f5784664"
-				},
-				{
-					"type": "file",
-					"path": "org.qownnotes.QOwnNotes.appdata.xml"
-				}
-			]
-		}
-	]
+  "app-id": "org.qownnotes.QOwnNotes",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "5.10",
+  "sdk": "org.kde.Sdk",
+  "command": "QOwnNotes",
+  "rename-desktop-file": "PBE.QOwnNotes.desktop",
+  "rename-icon": "QOwnNotes",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=x11",
+    "--share=ipc",
+    "--share=network",
+    "--device=dri"
+  ],
+  "modules": [
+    {
+      "name": "QOwnNotes",
+      "buildsystem": "qmake",
+      "subdir": "src",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/pbek/QOwnNotes",
+          "tag": "linux-b3632-171559",
+          "commit": "4c8f78cc4797161f21f17556662c37a2f5784664"
+        },
+        {
+          "type": "file",
+          "path": "org.qownnotes.QOwnNotes.appdata.xml"
+        }
+      ]
+    }
+  ]
 }

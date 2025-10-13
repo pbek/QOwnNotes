@@ -47,12 +47,12 @@ list_old_ebuilds_to_delete() {
 
     if [[ $major -eq $latest_major ]]; then
       # Keep the last 3 for latest major
-      if (( ${#files[@]} > 3 )); then
+      if ((${#files[@]} > 3)); then
         to_delete+=("${files[@]:0:${#files[@]}-3}")
       fi
     else
       # Keep only the last one for older majors
-      if (( ${#files[@]} > 1 )); then
+      if ((${#files[@]} > 1)); then
         to_delete+=("${files[@]:0:${#files[@]}-1}")
       fi
     fi
@@ -95,12 +95,12 @@ cp ../../../QOwnNotes/build-systems/gentoo/metadata.xml .
 ebuilds_to_delete="$(list_old_ebuilds_to_delete)"
 
 # Remove to-be-deleted versions from Manifest
-read -r -a ebuilds_to_delete_array <<< ${ebuilds_to_delete}
+read -r -a ebuilds_to_delete_array <<<${ebuilds_to_delete}
 patterns=$(for f in "${ebuilds_to_delete_array[@]}"; do
   base=${f%.ebuild}
   echo "DIST ${base}.tar.xz"
 done)
-grep -vF -f <(printf '%s\n' "$patterns") Manifest > Manifest.new && mv Manifest.new Manifest
+grep -vF -f <(printf '%s\n' "$patterns") Manifest >Manifest.new && mv Manifest.new Manifest
 
 # update the Manifest file
 echo "DIST ${ARCHIVE_FILE} ${QOWNNOTES_ARCHIVE_SIZE} SHA512 ${QOWNNOTES_ARCHIVE_SHA512}" >>Manifest

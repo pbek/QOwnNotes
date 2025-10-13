@@ -30,16 +30,15 @@ stdenv.mkDerivation {
     name = "qownnotes";
   };
 
-  nativeBuildInputs =
-    [
-      qmake
-      qttools
-      wrapQtAppsHook
-      pkg-config
-      installShellFiles
-    ]
-    ++ lib.optionals stdenv.isLinux [ xvfb-run ]
-    ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
+  nativeBuildInputs = [
+    qmake
+    qttools
+    wrapQtAppsHook
+    pkg-config
+    installShellFiles
+  ]
+  ++ lib.optionals stdenv.isLinux [ xvfb-run ]
+  ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
 
   buildInputs = [
     qtbase
@@ -47,7 +46,8 @@ stdenv.mkDerivation {
     qtsvg
     qtwebsockets
     botan2
-  ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
+  ]
+  ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
   qmakeFlags = [ "USE_SYSTEM_BOTAN=1" ];
 
@@ -65,13 +65,13 @@ stdenv.mkDerivation {
     + lib.optionalString stdenv.isLinux ''
       ln -s $out/bin/${appname} $out/bin/${pname}
     '';
-#    # Rename application for macOS as lowercase binary
-#    + lib.optionalString stdenv.isDarwin ''
-#      find $out
-#      # Prevent "same file" error
-#      mv $out/bin/${appname} $out/bin/${pname}.bin
-#      mv $out/bin/${pname}.bin $out/bin/${pname}
-#    '';
+  #    # Rename application for macOS as lowercase binary
+  #    + lib.optionalString stdenv.isDarwin ''
+  #      find $out
+  #      # Prevent "same file" error
+  #      mv $out/bin/${appname} $out/bin/${pname}.bin
+  #      mv $out/bin/${pname}.bin $out/bin/${pname}
+  #    '';
 
   meta = with lib; {
     description = "Plain-text file notepad and todo-list manager with Markdown support and Nextcloud/ownCloud integration";

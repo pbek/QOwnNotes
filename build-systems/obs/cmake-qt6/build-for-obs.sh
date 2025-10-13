@@ -48,11 +48,11 @@ if [ -z $QOWNNOTES_VERSION ]; then
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
   # set new version if we want to override it
-  echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
+  echo "#define VERSION \"$QOWNNOTES_VERSION\"" >src/version.h
 fi
 
 # set the release string
-echo '#define RELEASE "OBS"' > src/release.h
+echo '#define RELEASE "OBS"' >src/release.h
 
 # replace the version in the spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" $buildSystemPath/qownnotes.spec

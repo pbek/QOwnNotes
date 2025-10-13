@@ -33,16 +33,15 @@ stdenv.mkDerivation {
     name = "qownnotes";
   };
 
-  nativeBuildInputs =
-    [
-      cmake
-      qttools
-      wrapQtAppsHook
-      pkg-config
-      installShellFiles
-    ]
-    ++ lib.optionals stdenv.isLinux [ xvfb-run ]
-    ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
+  nativeBuildInputs = [
+    cmake
+    qttools
+    wrapQtAppsHook
+    pkg-config
+    installShellFiles
+  ]
+  ++ lib.optionals stdenv.isLinux [ xvfb-run ]
+  ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
 
   buildInputs = [
     qtbase
@@ -53,7 +52,8 @@ stdenv.mkDerivation {
     botan3
     libgit2
     aspell
-  ] ++ lib.optionals stdenv.isLinux [ qtwayland ];
+  ]
+  ++ lib.optionals stdenv.isLinux [ qtwayland ];
 
   cmakeFlags = [
     #    "-DQON_QT6_BUILD=ON"
@@ -62,26 +62,25 @@ stdenv.mkDerivation {
     "-DBUILD_WITH_ASPELL=ON"
   ];
 
-  postInstall =
-    ''
-      #    installShellCompletion --cmd ${appname} \
-      #      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
-      #      --fish <(xvfb-run $out/bin/${appname} --completion fish)
-      #    installShellCompletion --cmd ${pname} \
-      #      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
-      #      --fish <(xvfb-run $out/bin/${appname} --completion fish)
-    ''
-    # Create a lowercase symlink for Linux
-    + lib.optionalString stdenv.isLinux ''
-      ln -s $out/bin/${appname} $out/bin/${pname}
-    ''
-    # Rename application for macOS as lowercase binary
-    + lib.optionalString stdenv.isDarwin ''
-      find $out
-      # Prevent "same file" error
-      mv $out/bin/${appname} $out/bin/${pname}.bin
-      mv $out/bin/${pname}.bin $out/bin/${pname}
-    '';
+  postInstall = ''
+    #    installShellCompletion --cmd ${appname} \
+    #      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
+    #      --fish <(xvfb-run $out/bin/${appname} --completion fish)
+    #    installShellCompletion --cmd ${pname} \
+    #      --bash <(xvfb-run $out/bin/${appname} --completion bash) \
+    #      --fish <(xvfb-run $out/bin/${appname} --completion fish)
+  ''
+  # Create a lowercase symlink for Linux
+  + lib.optionalString stdenv.isLinux ''
+    ln -s $out/bin/${appname} $out/bin/${pname}
+  ''
+  # Rename application for macOS as lowercase binary
+  + lib.optionalString stdenv.isDarwin ''
+    find $out
+    # Prevent "same file" error
+    mv $out/bin/${appname} $out/bin/${pname}.bin
+    mv $out/bin/${pname}.bin $out/bin/${pname}
+  '';
 
   meta = with lib; {
     description = "Plain-text file notepad and todo-list manager with Markdown support and Nextcloud/ownCloud integration";
