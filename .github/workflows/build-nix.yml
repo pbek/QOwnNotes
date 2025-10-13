@@ -61,7 +61,7 @@ jobs:
       contents: read
     steps:
       - name: "📥 Checkout repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: "📦 Install Nix"
         uses: cachix/install-nix-action@v31
