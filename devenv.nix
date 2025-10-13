@@ -38,6 +38,7 @@ in
       just
       crowdin-cli
       cmake
+      prettier # for formatting QSS files
 
       # Packages for "just src-build"
       botan3
@@ -63,31 +64,56 @@ in
     ++ unstableQtPkgs;
 
   # https://devenv.sh/git-hooks/
-  git-hooks.hooks = {
-    # https://devenv.sh/reference/options/#git-hookshookstreefmt
-    # https://github.com/numtide/treefmt
-    # https://github.com/numtide/treefmt-nix
-    treefmt = {
-      enable = true;
-      settings.formatters = with pkgs; [
-        libclang
-        nodePackages.prettier
-        shfmt
-        nixfmt-rfc-style
-        statix
-        taplo
-        cmake-format
-      ];
-    };
-
-    # https://devenv.sh/reference/options/#git-hookshooksdeadnix
-    # https://github.com/astro/deadnix
-    deadnix = {
-      enable = true;
-      settings = {
-        edit = true; # Allow to edit the file if it is not formatted
+  git-hooks = {
+    hooks = {
+      cmake-format.enable = true;
+      taplo.enable = true;
+      clang-format = {
+        enable = true;
+        files = "\\.(cpp|h)$";
+        excludes = [
+          "src/libraries/diff_match_patch/" # Library was broken by clang-format
+        ];
+      };
+      prettier-qss = {
+        enable = true;
+        name = "prettier-qss";
+        description = "Format QSS files with prettier";
+        files = "\\.(qss)$";
+        entry = "${pkgs.prettier}/bin/prettier --write --parser css";
+        language = "system";
+        pass_filenames = true;
       };
     };
+    excludes = [
+      "build/.*"
+      "build-.*/.*"
+      "src/build/.*"
+      "src/build-.*/.*"
+      "src/cmake-build-debug/.*"
+      "src/Qt5-Debug/.*"
+      "bin/.*"
+      "doc/build/.*"
+      "stage/.*"
+      "parts/.*"
+      "secrets/.*"
+      "src/libraries/build-.*/.*"
+      "src/libraries/qkeysequencewidget/.*"
+      "src/libraries/qttoolbareditor/.*"
+      "src/libraries/qtcsv/.*"
+      "src/libraries/md4c/.*"
+      "src/libraries/qhotkey/.*"
+      "webpage/src/ar/.*"
+      "webpage/src/de/.*"
+      "webpage/src/es/.*"
+      "webpage/src/fa/.*"
+      "webpage/src/fr/.*"
+      "webpage/src/hu/.*"
+      "webpage/src/it/.*"
+      "webpage/src/ko/.*"
+      "webpage/src/nl/.*"
+      "webpage/src/pl/.*"
+    ];
   };
 
   enterShell = ''
@@ -169,7 +195,7 @@ in
     #    "app:build:qt5153-qmake" = {
     #      description = "Builds the app with Qt 5.15.3 using qmake";
     #      exec = ''
-    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-qt5153} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { }'
+    #        nix-build -E 'let pkgs = import ${inputs.nixpkgs-qt5153} {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { }' -- $1
     #      '';
     #    };
   };

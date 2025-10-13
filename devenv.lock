@@ -142,7 +142,23 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "pre-commit-hooks": [
           "git-hooks"
-        ]
+        ],
+        "shared": "shared"
+      }
+    },
+    "shared": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760386695,
+        "owner": "pbek",
+        "repo": "nix-shared",
+        "rev": "2ec09f9dfa65fd3a2343d0dff8155a3daa6835e4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pbek",
+        "repo": "nix-shared",
+        "type": "github"
       }
     }
   },
