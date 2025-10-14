@@ -71,6 +71,7 @@ class NextcloudDeckDialog : public MasterDialog {
     NextcloudDeckService::Card _currentCard;
 
     void openUrlInBrowserForItem(const QTreeWidgetItem *item);
+    void addCardLinkToCurrentNote(const QTreeWidgetItem *item);
 };
 
 #endif    // NEXTCLOUDDECKDIALOG_H

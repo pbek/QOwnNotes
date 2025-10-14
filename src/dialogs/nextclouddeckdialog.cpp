@@ -368,6 +368,10 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
     QAction *openUrlAction = menu.addAction(tr("&Open card in browser"));
     openUrlAction->setIcon(QIcon::fromTheme(QStringLiteral("text-html"),
                                             QIcon(":icons/breeze-qownnotes/16x16/text-html.svg")));
+    QAction *cardLinkAction = menu.addAction(tr("&Add card link to note"));
+    openUrlAction->setIcon(QIcon::fromTheme(
+        QStringLiteral("document-new"), QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
+
     QAction *selectedItem = menu.exec(globalPos);
 
     if (selectedItem == nullptr) {
@@ -378,5 +382,25 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
 
     if (selectedItem == openUrlAction) {
         openUrlInBrowserForItem(item);
+    } else if (selectedItem == cardLinkAction) {
+        addCardLinkToCurrentNote(item);
+    }
+}
+
+void NextcloudDeckDialog::addCardLinkToCurrentNote(const QTreeWidgetItem *item) {
+    const int cardId = item->data(0, Qt::UserRole).toInt();
+
+    if (cardId > 0) {
+        const auto title = item->text(0);
+        const auto linkText = QStringLiteral("[%1](%2)")
+                                  .arg(title, NextcloudDeckService(this).getCardLinkForId(cardId));
+
+#ifndef INTEGRATION_TESTS
+        // Only insert the link if we're creating a new card, not updating an existing one
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow != nullptr) {
+            mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
+        }
+#endif
     }
 }

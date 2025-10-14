@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.10.2
+
+- You can now **add a link to a card** to the current note in the
+  **Nextcloud Deck dialog** (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+
 ## 25.10.1
 
 - You now are also able to **send and receive HTML and image clipboard content**
