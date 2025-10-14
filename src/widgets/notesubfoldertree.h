@@ -20,6 +20,7 @@ class NoteSubFolderTree : public QTreeWidget {
     void reload();
 
     static QMenu *contextMenu(QTreeWidget *parent);
+    static void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
 
    public Q_SLOTS:
     void onItemExpanded(QTreeWidgetItem *item);
@@ -29,8 +30,6 @@ class NoteSubFolderTree : public QTreeWidget {
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemChanged(QTreeWidgetItem *item, int column);
     void onItemSelectionChanged();
-
-    static void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
 
    Q_SIGNALS:
     void currentSubFolderChanged();

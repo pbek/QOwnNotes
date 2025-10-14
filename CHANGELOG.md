@@ -4,6 +4,8 @@
 
 - You can now **add a link to a card** to the current note in the
   **Nextcloud Deck dialog** (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+- In _note tree mode_, if only one folder is selected, you can delete it with the `Del` key
+  (for [#3374](https://github.com/pbek/QOwnNotes/issues/3374))
 
 ## 25.10.1
 

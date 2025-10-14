@@ -4704,9 +4704,15 @@ void MainWindow::removeSelectedNotes() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    const int selectedItemsCount = getSelectedNotesCount();
+    const auto selItems = ui->noteTreeWidget->selectedItems();
+    const int selectedItemsCount = selItems.count();
 
     if (selectedItemsCount == 0) {
+        return;
+    }
+    if (selectedItemsCount == 1 && selItems[0]->data(0, Qt::UserRole + 1) == FolderType) {
+        // If just one folder is selected, remove the folder
+        NoteSubFolderTree::removeSelectedNoteSubFolders(ui->noteTreeWidget);
         return;
     }
 
@@ -4741,7 +4747,6 @@ void MainWindow::removeSelectedNotes() {
             const QSignalBlocker blocker1(ui->noteTreeWidget);
             Q_UNUSED(blocker1)
 
-            const auto selItems = ui->noteTreeWidget->selectedItems();
             for (QTreeWidgetItem *item : selItems) {
                 if (item->data(0, Qt::UserRole + 1) != NoteType) {
                     continue;
