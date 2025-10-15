@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.10.3
+
+- [qc](https://github.com/qownnotes/qc) v0.6.2 was released
+  - Refactor the code to fix deprecations and issues and to make it cleaner and easier to maintain
+  - Update dependencies
+
 ## 25.10.2
 
 - You can now **add a link to a card** to the current note in the
