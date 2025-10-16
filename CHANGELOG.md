@@ -3,6 +3,8 @@
 ## 25.10.4
 
 - A PPA for Ubuntu 26.04 (Resolute Raccoon) was added
+  - See [Install on Ubuntu](https://www.qownnotes.org/installation/ubuntu.html)
+    for more information on how to install the PPA
 
 ## 25.10.3
 
