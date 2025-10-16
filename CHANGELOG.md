@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 25.10.4
+
+- A PPA for Ubuntu 26.04 (Resolute Raccoon) was added
+
 ## 25.10.3
 
 - You can now **search for a card link** in all notes from the **Nextcloud Deck dialog**
