@@ -1,6 +1,8 @@
 # Use `just <recipe>` to run a recipe
 # https://just.systems/man/en/
 
+import ".shared/common.just"
+
 # By default, run the `--list` command
 default:
     @just --list
@@ -18,7 +20,6 @@ alias linter-fix := clang-format
 alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
-alias fmt := format
 
 # Build the translations
 [group('translations')]
@@ -203,18 +204,6 @@ generate-icons:
 [group('snap')]
 snap-generate-token:
     nix-shell -p snapcraft --run "snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -"
-
-# Add git commit hashes to the .git-blame-ignore-revs file
-[group('linter')]
-add-git-blame-ignore-revs:
-    git log --pretty=format:"%H" --grep="^lint" >> .git-blame-ignore-revs
-    sort .git-blame-ignore-revs | uniq > .git-blame-ignore-revs.tmp
-    mv .git-blame-ignore-revs.tmp .git-blame-ignore-revs
-
-# Format all files using pre-commit
-[group('linter')]
-format args='':
-    pre-commit run --all-files {{ args }}
 
 # Run a GitHub workflow
 [group('linter')]

@@ -14,4 +14,4 @@ inputs:
     flake: false
 
 imports:
-  - shared/devenv/common.nix
+  - shared/common

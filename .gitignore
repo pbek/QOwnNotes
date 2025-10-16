@@ -26,7 +26,7 @@ ui_*.h
 /src/Makefile
 /src/QOwnNotes
 secrets/*
-
+.shared
 
 # Devenv
 .devenv*
