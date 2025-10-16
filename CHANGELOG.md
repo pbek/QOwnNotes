@@ -7,6 +7,7 @@
 - [qc](https://github.com/qownnotes/qc) v0.6.2 was released
   - Refactor the code to fix deprecations and issues and to make it cleaner and easier to maintain
   - Update dependencies
+- Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.10.2
 

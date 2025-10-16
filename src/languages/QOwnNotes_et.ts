@@ -3697,6 +3697,14 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <source>&amp;Open card in browser</source>
 <translation type="unfinished">&amp;Open card in browser</translation>
 </message>
+<message>
+<source>&amp;Add card link to note</source>
+<translation type="unfinished">&amp;Add card link to note</translation>
+</message>
+<message>
+<source>&amp;Search for card link in notes</source>
+<translation type="unfinished">&amp;Search for card link in notes</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>

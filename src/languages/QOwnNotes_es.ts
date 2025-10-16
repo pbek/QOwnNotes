@@ -3689,6 +3689,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <source>&amp;Open card in browser</source>
 <translation>Abrir tarjeta en el navegador</translation>
 </message>
+<message>
+<source>&amp;Add card link to note</source>
+<translation>&amp;Añadir enlace de carta a nota</translation>
+</message>
+<message>
+<source>&amp;Search for card link in notes</source>
+<translation type="unfinished">&amp;Search for card link in notes</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>

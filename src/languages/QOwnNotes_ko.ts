@@ -3657,6 +3657,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>&amp;Open card in browser</source>
 <translation>브라우저에서 카드 열기(&amp;O)</translation>
 </message>
+<message>
+<source>&amp;Add card link to note</source>
+<translation>노트에 카드 링크 추가(&amp;A)</translation>
+</message>
+<message>
+<source>&amp;Search for card link in notes</source>
+<translation type="unfinished">&amp;Search for card link in notes</translation>
+</message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
