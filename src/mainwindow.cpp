@@ -12356,6 +12356,9 @@ void MainWindow::openNextcloudDeckDialog(int cardId) {
     }
 
     auto *dialog = new NextcloudDeckDialog(this);
+    connect(dialog, &NextcloudDeckDialog::searchInNotes, this,
+            [this](const QString &searchText) { ui->searchLineEdit->setText(searchText); });
+
     qDebug() << __func__ << "cardId: " << cardId;
 
     if (cardId > 0) {

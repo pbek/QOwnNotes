@@ -370,7 +370,10 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
                                             QIcon(":icons/breeze-qownnotes/16x16/text-html.svg")));
     QAction *cardLinkAction = menu.addAction(tr("&Add card link to note"));
     openUrlAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("document-new"), QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
+        QStringLiteral("insert-link"), QIcon(":icons/breeze-qownnotes/16x16/insert-link.svg")));
+    QAction *searchInNotesAction = menu.addAction(tr("&Search for card link in notes"));
+    searchInNotesAction->setIcon(QIcon::fromTheme(
+        QStringLiteral("edit-find"), QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
 
     QAction *selectedItem = menu.exec(globalPos);
 
@@ -384,23 +387,39 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
         openUrlInBrowserForItem(item);
     } else if (selectedItem == cardLinkAction) {
         addCardLinkToCurrentNote(item);
+    } else if (selectedItem == searchInNotesAction) {
+        searchLinkInNotes(item);
     }
+}
+
+void NextcloudDeckDialog::searchLinkInNotes(QTreeWidgetItem *item) {
+    const int cardId = item->data(0, Qt::UserRole).toInt();
+
+    if (cardId < 1) {
+        return;
+    }
+
+    const auto link = NextcloudDeckService(this).getCardLinkForId(cardId);
+    Q_EMIT searchInNotes(link);
+    close();
 }
 
 void NextcloudDeckDialog::addCardLinkToCurrentNote(const QTreeWidgetItem *item) {
     const int cardId = item->data(0, Qt::UserRole).toInt();
+    if (cardId < 1) {
+        return;
+    }
 
-    if (cardId > 0) {
-        const auto title = item->text(0);
-        const auto linkText = QStringLiteral("[%1](%2)")
-                                  .arg(title, NextcloudDeckService(this).getCardLinkForId(cardId));
+    const auto title = item->text(0);
+    const auto linkText =
+        QStringLiteral("[%1](%2)").arg(title, NextcloudDeckService(this).getCardLinkForId(cardId));
 
 #ifndef INTEGRATION_TESTS
-        // Only insert the link if we're creating a new card, not updating an existing one
-        MainWindow *mainWindow = MainWindow::instance();
-        if (mainWindow != nullptr) {
-            mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
-        }
-#endif
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != nullptr) {
+        mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
     }
+#endif
+
+    close();
 }

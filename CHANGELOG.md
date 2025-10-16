@@ -2,6 +2,8 @@
 
 ## 25.10.3
 
+- You can now **search for a card link** in all notes from the **Nextcloud Deck dialog**
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - [qc](https://github.com/qownnotes/qc) v0.6.2 was released
   - Refactor the code to fix deprecations and issues and to make it cleaner and easier to maintain
   - Update dependencies

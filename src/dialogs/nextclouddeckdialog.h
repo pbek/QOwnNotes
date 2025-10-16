@@ -16,6 +16,8 @@ class NextcloudDeckDialog;
 
 class NextcloudDeckDialog : public MasterDialog {
     Q_OBJECT
+   Q_SIGNALS:
+    void searchInNotes(QString text);
 
    public:
     explicit NextcloudDeckDialog(QWidget *parent = nullptr, bool listMode = false);
@@ -58,6 +60,8 @@ class NextcloudDeckDialog : public MasterDialog {
     void on_cardItemTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
     void on_cardItemTreeWidget_customContextMenuRequested(const QPoint &pos);
+
+    void searchLinkInNotes(QTreeWidgetItem *item);
 
    private:
     Ui::NextcloudDeckDialog *ui;
