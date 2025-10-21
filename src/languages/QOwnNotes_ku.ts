@@ -2392,6 +2392,10 @@
 <translation type="unfinished">Send clipboard</translation>
 </message>
 <message>
+<source>Send clipboard as text</source>
+<translation type="unfinished">Send clipboard as text</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Sêwirana pêşgotina &amp;vertical bikar bînin</translation>
 </message>
@@ -2882,6 +2886,14 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <message>
 <source>Failed to send clipboard</source>
 <translation type="unfinished">Failed to send clipboard</translation>
+</message>
+<message>
+<source>Clipboard text sent successfully</source>
+<translation type="unfinished">Clipboard text sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard text</source>
+<translation type="unfinished">Failed to send clipboard text</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>

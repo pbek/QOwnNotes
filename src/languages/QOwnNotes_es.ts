@@ -2391,6 +2391,10 @@
 <translation>Enviar portapapeles</translation>
 </message>
 <message>
+<source>Send clipboard as text</source>
+<translation type="unfinished">Send clipboard as text</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>Plantilla de vista &amp;vertical</translation>
 </message>
@@ -2880,6 +2884,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Failed to send clipboard</source>
 <translation>Error al enviar el portapapeles</translation>
+</message>
+<message>
+<source>Clipboard text sent successfully</source>
+<translation type="unfinished">Clipboard text sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard text</source>
+<translation type="unfinished">Failed to send clipboard text</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3695,7 +3707,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>Bu&amp;scar un enlace de carta en notas</translation>
 </message>
 </context>
 <context>

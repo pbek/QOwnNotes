@@ -2388,6 +2388,10 @@
 <translation type="unfinished">Send clipboard</translation>
 </message>
 <message>
+<source>Send clipboard as text</source>
+<translation type="unfinished">Send clipboard as text</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>プレビューを上下に分割して表示</translation>
 </message>
@@ -2866,6 +2870,14 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>Failed to send clipboard</source>
 <translation type="unfinished">Failed to send clipboard</translation>
+</message>
+<message>
+<source>Clipboard text sent successfully</source>
+<translation type="unfinished">Clipboard text sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard text</source>
+<translation type="unfinished">Failed to send clipboard text</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>

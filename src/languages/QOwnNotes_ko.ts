@@ -2385,6 +2385,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>클립보드 보내기</translation>
 </message>
 <message>
+<source>Send clipboard as text</source>
+<translation type="unfinished">Send clipboard as text</translation>
+</message>
+<message>
 <source>Use &amp;vertical preview layout</source>
 <translation>세로 미리보기 레이아웃 사용(&amp;V)</translation>
 </message>
@@ -2861,6 +2865,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Failed to send clipboard</source>
 <translation>클립보드를 보내지 못했습니다</translation>
+</message>
+<message>
+<source>Clipboard text sent successfully</source>
+<translation type="unfinished">Clipboard text sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard text</source>
+<translation type="unfinished">Failed to send clipboard text</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3663,7 +3675,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>노트에서 카드 링크 검색(&amp;S)</translation>
 </message>
 </context>
 <context>

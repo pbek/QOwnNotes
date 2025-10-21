@@ -9,6 +9,7 @@
 - A PPA for Ubuntu 26.04 (Resolute Raccoon) was added
   - See [Install on Ubuntu](https://www.qownnotes.org/installation/ubuntu.html)
     for more information on how to install the PPA
+- Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.10.3
 
