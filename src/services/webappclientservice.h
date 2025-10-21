@@ -36,6 +36,7 @@ class WebAppClientService : public QObject {
     void open();
     void close();
     bool sendClipboard() const;
+    bool sendClipboardAsText() const;
 
    private slots:
     void onConnected();
@@ -49,6 +50,7 @@ class WebAppClientService : public QObject {
     QWebSocket *_webSocket{};
     QString _clipboardMimeType;
     QString _clipboardContent;
+    QString _clipboardTextContent;
     QString _url;
     const int _heartbeatTime = 600000;    // heartbeat data transmission time interval in ms
     const int _reconnectHeartbeatTimerCount =

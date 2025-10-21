@@ -734,6 +734,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionSend_clipboard_triggered();
 
+    void on_actionSend_clipboard_as_text_triggered();
+
    public:
     /** Settings access **/
     static bool isInDistractionFreeMode();

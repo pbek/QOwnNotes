@@ -28,6 +28,7 @@
 #include <QSslError>
 #include <QWebSocket>
 #include <QtWebSockets>
+#include <memory>
 
 #include "metricsservice.h"
 #include "services/settingsservice.h"
@@ -77,6 +78,7 @@ void WebAppClientService::close() {
  */
 bool WebAppClientService::keepClipboard() {
     QClipboard *clipboard = QApplication::clipboard();
+    _clipboardTextContent = clipboard->text();
     const QMimeData *mimeData = clipboard->mimeData();
     const QPixmap pixmap = clipboard->pixmap();
     if (!pixmap.isNull()) {
@@ -110,6 +112,17 @@ bool WebAppClientService::sendClipboard() const {
     qDebug() << __func__ << "_clipboardContent: " << _clipboardContent;
 
     sendInsertIntoClipboard(_clipboardMimeType, _clipboardContent);
+    return true;
+}
+
+bool WebAppClientService::sendClipboardAsText() const {
+    if (_clipboardTextContent == "") {
+        return false;
+    }
+
+    qDebug() << __func__ << "_clipboardTextContent: " << _clipboardTextContent;
+
+    sendInsertIntoClipboard(QStringLiteral("text/plain"), _clipboardTextContent);
     return true;
 }
 

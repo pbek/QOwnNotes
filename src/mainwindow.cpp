@@ -2760,7 +2760,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     }
 
     initGlobalKeyboardShortcuts();
-    ui->actionSend_clipboard->setEnabled(Utils::Misc::isWebAppSupportEnabled());
+
+    const bool isWebAppSupportEnabled = Utils::Misc::isWebAppSupportEnabled();
+    ui->actionSend_clipboard->setEnabled(isWebAppSupportEnabled);
+    ui->actionSend_clipboard_as_text->setEnabled(isWebAppSupportEnabled);
 }
 
 /**
@@ -6342,6 +6345,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 
     menu->addSeparator();
     menu->addAction(ui->actionSend_clipboard);
+    menu->addAction(ui->actionSend_clipboard_as_text);
     menu->addSeparator();
 
     const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
@@ -12505,6 +12509,22 @@ void MainWindow::on_actionSend_clipboard_triggered() {
             showStatusBarMessage(tr("Clipboard sent successfully"), QStringLiteral("✅"), 3000);
         } else {
             showStatusBarMessage(tr("Failed to send clipboard"), QStringLiteral("⚠️"), 5000);
+        }
+    });
+}
+
+void MainWindow::on_actionSend_clipboard_as_text_triggered() {
+    // We need to show the window because on some systems the clipboard
+    // can't be accessed if the app is not focused
+    showWindow();
+
+    // We need a delay because otherwise the clipboard can't be properly accessed on some systems
+    QTimer::singleShot(1000, this, [this] {
+        if (_webAppClientService->sendClipboardAsText()) {
+            showStatusBarMessage(tr("Clipboard text sent successfully"), QStringLiteral("✅"),
+                                 3000);
+        } else {
+            showStatusBarMessage(tr("Failed to send clipboard text"), QStringLiteral("⚠️"), 5000);
         }
     });
 }
