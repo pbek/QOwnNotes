@@ -257,7 +257,12 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
                 tr("Text received from web app and copied to clipboard"), QStringLiteral("📋"),
                 5000);
         } else if (mimeType == "text/html") {
-            clipboard->setText(content, QClipboard::Clipboard);
+            std::unique_ptr<QMimeData> mimeData(new QMimeData());
+            mimeData->setHtml(content);
+            // clipboard->setText(content, QClipboard::Clipboard);
+            // clipboard->setText(mimeData->text(), QClipboard::Clipboard);
+            // TODO: This doesn't seem to get into the global clipboard yet
+            clipboard->setMimeData(mimeData.release(), QClipboard::Clipboard);
             mainWindow->showStatusBarMessage(
                 tr("HTML received from web app and copied to clipboard"), QStringLiteral("📋"),
                 5000);

@@ -2,6 +2,7 @@
 
 ## 25.10.4
 
+- Sending of HTML clipboard content was fixed (for [#3371](https://github.com/pbek/QOwnNotes/issues/3371))
 - A PPA for Ubuntu 26.04 (Resolute Raccoon) was added
   - See [Install on Ubuntu](https://www.qownnotes.org/installation/ubuntu.html)
     for more information on how to install the PPA
