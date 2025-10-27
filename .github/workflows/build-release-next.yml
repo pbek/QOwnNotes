@@ -143,12 +143,12 @@ jobs:
           pwd
 
       - name: "📤 Upload artifact: AppImage"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage
       - name: "📤 Upload artifact: AppImage sha256sum"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
@@ -249,13 +249,13 @@ jobs:
 #  #        release: stable
 #
 #      - name: '📤 Upload artifact: Snap'
-#        uses: actions/upload-artifact@v4
+#        uses: actions/upload-artifact@v5
 #        with:
 #          name: qownnotes_${{ env.VERSION }}_amd64.snap
 #          path: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
 #
 #      - name: '📤 Upload artifact: Snap logs'
-#        uses: actions/upload-artifact@v4
+#        uses: actions/upload-artifact@v5
 #        with:
 #          name: snapcraft-logs
 #          path: /home/runner/.cache/snapcraft/log/snapcraft-*.log

@@ -95,12 +95,12 @@ jobs:
           find -iname "*.AppImage"
           pwd
       - name: "📤 Upload artifact: AppImage"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage
       - name: "📤 Upload artifact: AppImage sha256sum"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
           path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
