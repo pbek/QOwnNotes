@@ -161,8 +161,8 @@ QString Note::getNextcloudFileLink() const {
 
     // Construct the Nextcloud file link
     // Format: https://server/apps/files/files/FILEID?dir=/path&opendetails=true
-    QString fileLink = serverUrl % QStringLiteral("/apps/files/files/") % fileId %
-                       QStringLiteral("?dir=") % QUrl::toPercentEncoding(dirPath) %
+    QString fileLink = serverUrl + QStringLiteral("/apps/files/files/") + fileId +
+                       QStringLiteral("?dir=") + QUrl::toPercentEncoding(dirPath) +
                        QStringLiteral("&opendetails=true");
 
     return fileLink;
