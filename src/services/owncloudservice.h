@@ -96,6 +96,8 @@ class OwnCloudService : public QObject {
 
     void unsetShareDialog();
 
+    QString fetchNoteFileId(const Note &note);
+
    private:
     QString serverUrl;
     QString todoCalendarServerUrl;

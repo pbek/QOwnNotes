@@ -395,6 +395,8 @@ class Note {
 
     static QString parseEncryptedNoteText(const QString &noteText);
 
+    QString getNextcloudFileLink() const;
+
    protected:
     int _id;
     int _noteSubFolderId;

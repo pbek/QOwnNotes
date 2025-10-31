@@ -23,6 +23,7 @@
 #include <utility>
 
 #include "api/noteapi.h"
+#include "cloudconnection.h"
 #include "entities/bookmark.h"
 #include "entities/commandsnippet.h"
 #include "helpers/codetohtmlconverter.h"
@@ -118,6 +119,54 @@ void Note::setShareUrl(QString url) { this->_shareUrl = std::move(url); }
 void Note::setShareId(int id) { this->_shareId = id; }
 
 void Note::setSharePermissions(unsigned int permissions) { this->_sharePermissions = permissions; }
+
+/**
+ * Gets the Nextcloud file link for this note
+ *
+ * @return the Nextcloud file link URL, empty if not available
+ */
+QString Note::getNextcloudFileLink() const {
+    if (!OwnCloudService::isOwnCloudSupportEnabled()) {
+        return QString();
+    }
+
+    // Get the OwnCloud service instance
+    OwnCloudService *ownCloudService = OwnCloudService::instance();
+    if (ownCloudService == nullptr) {
+        return QString();
+    }
+
+    // Fetch the file ID from Nextcloud
+    QString fileId = ownCloudService->fetchNoteFileId(*this);
+    if (fileId.isEmpty()) {
+        return QString();
+    }
+
+    // Get the server URL and construct the file link
+    auto cloudConnection = CloudConnection::currentCloudConnection();
+    QString serverUrl = cloudConnection.getServerUrlWithoutPath();
+
+    if (serverUrl.isEmpty()) {
+        return QString();
+    }
+
+    // Get the directory path for the "dir" parameter
+    QString noteRelativePath = relativeNoteFilePath(QStringLiteral("/"));
+    QString notesPath = NoteFolder::currentRemotePath();
+    QString fullPath = notesPath + QStringLiteral("/") + noteRelativePath;
+
+    // Extract the directory part
+    QFileInfo fileInfo(fullPath);
+    QString dirPath = fileInfo.dir().path();
+
+    // Construct the Nextcloud file link
+    // Format: https://server/apps/files/files/FILEID?dir=/path&opendetails=true
+    QString fileLink = serverUrl % QStringLiteral("/apps/files/files/") % fileId %
+                       QStringLiteral("?dir=") % QUrl::toPercentEncoding(dirPath) %
+                       QStringLiteral("&opendetails=true");
+
+    return fileLink;
+}
 
 void Note::setCryptoKey(const qint64 cryptoKey) { this->_cryptoKey = cryptoKey; }
 

@@ -2369,3 +2369,90 @@ QString OwnCloudService::fetchNextcloudAccountId(const QString &serverUrl, const
 }
 
 void OwnCloudService::unsetShareDialog() { shareDialog = nullptr; }
+
+/**
+ * Fetches the file ID for a note from Nextcloud
+ *
+ * @param note
+ * @return the file ID as a QString, empty if not found
+ */
+QString OwnCloudService::fetchNoteFileId(const Note &note) {
+    if (!isOwnCloudSupportEnabled()) {
+        return {};
+    }
+
+    auto *manager = new QNetworkAccessManager(this);
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    // Get the relative path of the note file on the server
+    QString noteRelativePath = note.relativeNoteFilePath(QStringLiteral("/"));
+    QString notesPath = NoteFolder::currentRemotePath();
+    QString filePath = notesPath + QStringLiteral("/") + noteRelativePath;
+
+    QUrl url(serverUrl % webdavPath() % QStringLiteral("/") % filePath);
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+
+    // Build the PROPFIND request body to get the file ID
+    QString body = QStringLiteral(
+        "<?xml version=\"1.0\"?>"
+        "<d:propfind xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\">"
+        "<d:prop>"
+        "<oc:fileid />"
+        "</d:prop>"
+        "</d:propfind>");
+
+    auto dataToSend = new QByteArray(body.toUtf8());
+    r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
+    r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/xml"));
+    auto *buffer = new QBuffer(dataToSend);
+
+    QNetworkReply *reply = manager->sendCustomRequest(r, "PROPFIND", buffer);
+    ignoreSslErrorsIfAllowed(reply);
+    loop.exec();
+
+    QString fileId;
+
+    // if we didn't get a timeout let us parse the response
+    if (timer.isActive()) {
+        int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+        // only get the data if the status code was "success"
+        if (statusCode >= 200 && statusCode < 300) {
+            QString data = QString(reply->readAll());
+
+            QDomDocument doc;
+            doc.setContent(data, true);
+
+            // Parse the WebDAV XML response to get the file ID
+            QDomNodeList responseNodes =
+                doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
+
+            if (responseNodes.count() > 0) {
+                QDomNode responseNode = responseNodes.at(0);
+                if (responseNode.isElement()) {
+                    QDomElement elem = responseNode.toElement();
+                    QDomNodeList fileIdNodes = elem.elementsByTagNameNS(
+                        QStringLiteral("http://owncloud.org/ns"), QStringLiteral("fileid"));
+
+                    if (fileIdNodes.length() > 0) {
+                        fileId = fileIdNodes.at(0).toElement().text();
+                    }
+                }
+            }
+        }
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    return fileId;
+}
