@@ -1,10 +1,15 @@
- 
 APP_SRC_DIR = $$PWD/../../../../src/
 
 INCLUDEPATH += $$APP_SRC_DIR
 
+# Don't use wildcards here, because nmake under Windows cant't handle them
 HEADERS  += \
-    $$PWD/test_*.h \
+    $$PWD/test_htmlentities.h \
+    $$PWD/test_metricsservice.h \
+    $$PWD/test_network.h \
+    $$PWD/test_notes.h \
+    $$PWD/test_settingsservice.h \
+    $$PWD/test_utilsmisc.h \
     $$APP_SRC_DIR/version.h \
     $$APP_SRC_DIR/release.h \
     $$APP_SRC_DIR/services/databaseservice.h \
@@ -48,8 +53,14 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.h \
     $$APP_SRC_DIR/threads/scriptthread.h \
 
+# Don't use wildcards here, because nmake under Windows cant't handle them
 SOURCES += \
-    $$PWD/test_*.cpp \
+    $$PWD/test_htmlentities.cpp \
+    $$PWD/test_metricsservice.cpp \
+    $$PWD/test_network.cpp \
+    $$PWD/test_notes.cpp \
+    $$PWD/test_settingsservice.cpp \
+    $$PWD/test_utilsmisc.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
     $$APP_SRC_DIR/api/noteapi.cpp \
     $$APP_SRC_DIR/api/notesubfolderapi.cpp \

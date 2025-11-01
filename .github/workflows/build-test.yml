@@ -214,39 +214,42 @@ jobs:
         run: |
           cd ../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -s -j 8
           ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-      #    - if: contains( matrix.os, 'windows') && (startsWith( matrix.qt-version, '5.' ) || matrix.qt-version == '6.2.4')
-      - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '5.' )
-        name: Do Qt5 / Qt 6.2.4 Windows tests
+      # Disable Qt5 Windows tests, because build tools are missing and we build Qt6 only now
+      #      - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '5.' )
+      #        name: Do Qt5 Windows tests
+      #        run: |
+      #          $ErrorActionPreference = 'Stop'
+      #          cd ..\tests
+      #          qmake DEFINES+=INTEGRATION_TESTS
+      #          make
+      #          copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
+      #          copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+      #          Get-ChildItem -Recurse -Force ..
+      #          copy ..\bin\tests\tests.exe .
+      #          # echo set
+      #          # gci env:* | sort-object name
+      #          # echo path
+      #          # echo echo $env:PATH
+      #          # cd ..\bin\tests
+      #          # echo test1
+      #          # .\tests.exe -txt
+      #          # echo windeployqt
+      #          windeployqt --debug tests.exe
+      #          # echo test2
+      #          .\tests.exe -txt
+      - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
+        name: Do Qt 6.3+ Windows tests
         run: |
+          $ErrorActionPreference = 'Stop'
           cd ..\tests
-          qmake DEFINES+=INTEGRATION_TESTS
-          make
+          qmake6 DEFINES+=INTEGRATION_TESTS
+          nmake
           copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
           copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
           Get-ChildItem -Recurse -Force ..
           copy ..\bin\tests\tests.exe .
-          # echo set
-          # gci env:* | sort-object name
-          # echo path
-          # echo echo $env:PATH
-          # cd ..\bin\tests
-          # echo test1
-          # .\tests.exe -txt
-          # echo windeployqt 
           windeployqt --debug tests.exe
-          # echo test2
           .\tests.exe -txt
-      #    - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
-      #      name: Do Qt 6.3+ Windows tests
-      #      run: |
-      #        cd ..\tests
-      #        qmake6 DEFINES+=INTEGRATION_TESTS
-      #        nmake
-      #        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
-      #        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
-      #        copy ..\bin\tests\tests.exe .
-      #        windeployqt --debug tests.exe
-      #        .\tests.exe -txt
 
       #
       # Build QOwnNotes
