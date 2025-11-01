@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.11.0
+
+- You can now **open a note in Nextcloud Files** via the context menu in the note list
+  if Nextcloud support was enabled (for [#3383](https://github.com/pbek/QOwnNotes/issues/3383))
+
 ## 25.10.4
 
 - There now is a menu action to the **send clipboard as text** to another instance
