@@ -62,48 +62,36 @@ jobs:
           # Failing SSL Tests
           - os: ubuntu-latest
             qt-version: "5.9.9"
-          # tests.exe not found
+          # Build tools not found
           - os: windows-2025
             qt-version: "5.9.9"
-          # we want to do it Qt 6.2.0
+          # Build tools not found
+          - os: windows-2025
+            qt-version: "5.13.2"
+          # Build tools not found
+          - os: windows-2025
+            qt-version: "5.14.2"
+          # Build tools not found
+          - os: windows-2025
+            qt-version: "5.15.2"
+          # We only want 6.9.1+ for Windows
           - os: windows-2025
             qt-version: "6.2.4"
-            experimental: false
-          # we want to do it with "experimental: true"
+          # We only want 6.9.1+ for Windows
           - os: windows-2025
             qt-version: "6.4.3"
-            experimental: false
-          # we want to do it with "experimental: true"
+          # We only want 6.9.1+ for Windows
           - os: windows-2025
             qt-version: "6.5.3"
-            experimental: false
-          #          - os: windows-2025
-          #            qt-version: '6.6.3'
-          #            experimental: false
-          # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
-          # See https://github.com/pbek/QOwnNotes/issues/3018
-          - os: macos-15
-            qt-version: "6.2.4"
-            experimental: false
-          - os: macos-15
-            qt-version: "6.4.3"
-            experimental: false
-          - os: macos-15
-            qt-version: "6.5.3"
-            experimental: false
-          - os: macos-15
+          # We only want 6.9.1+ for Windows
+          - os: windows-2025
             qt-version: "6.6.3"
-            experimental: false
-          # Qt installation times out too often
-        #          - os: windows-2025
-        #            qt-version: '5.13.2'
-        # win64_mingw73 not found
-        #          - os: windows-2025
-        #            qt-version: '5.15.0'
-        #          # qt.conf not found (https://github.com/jurplel/install-qt-action/issues/54)
-        #          - os: windows-2025
-        #            qt-version: '5.15.1'
-        # botan 32bit error
+          # We only want 6.9.1+ for Windows
+          - os: windows-2025
+            qt-version: "6.7.3"
+          # We only want 6.9.1+ for Windows
+          - os: windows-2025
+            qt-version: "6.8.3"
         include:
           #          - os: ubuntu-latest
           #            qt-version: '6.3.0'
@@ -111,33 +99,6 @@ jobs:
           #          - os: macos-15
           #            qt-version: '6.3.0'
           #            experimental: true
-          # Other 6.2 releases didn't work
-          #          - os: windows-2025
-          #            qt-version: '6.2.4'
-          #            experimental: true
-          #          - os: windows-2025
-          #            qt-version: '6.4.3'
-          #            experimental: true
-          #          - os: windows-2025
-          #            qt-version: '6.5.3'
-          #            experimental: true
-          #          - os: windows-2025
-          #            qt-version: '6.6.3'
-          #            experimental: true
-          # Qt6 builds of macOS are currently breaking because of the workaround for https://bugreports.qt.io/browse/QTBUG-117225
-          # See https://github.com/pbek/QOwnNotes/issues/3018
-          - os: macos-15
-            qt-version: "6.2.4"
-            experimental: true
-          - os: macos-15
-            qt-version: "6.4.3"
-            experimental: true
-          - os: macos-15
-            qt-version: "6.5.3"
-            experimental: true
-          - os: macos-15
-            qt-version: "6.6.3"
-            experimental: true
           # Snapcraft
           - os: ubuntu-22.04
             qt-version: "5.15.2"
