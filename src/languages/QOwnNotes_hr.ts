@@ -2835,6 +2835,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Napomena: mapa &lt;b&gt;%1&lt;/b&gt; sa stazom &lt;b&gt;%2&lt;/b&gt; više ne postoji!</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>

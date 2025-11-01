@@ -2388,11 +2388,11 @@
 </message>
 <message>
 <source>Send clipboard</source>
-<translation type="unfinished">Send clipboard</translation>
+<translation>Envoyer le presse-papiers</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Envoyer le presse-papiers en tant que texte</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2818,6 +2818,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Le dossier de notes &lt;b&gt;%1&lt;/b&gt; dont le chemin est &lt;b&gt;%2&lt;/b&gt; n’existe plus !</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation>Scinder la note</translation>
 </message>
@@ -2880,19 +2884,19 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Clipboard sent successfully</source>
-<translation type="unfinished">Clipboard sent successfully</translation>
+<translation>Presse-papiers envoyé avec succès</translation>
 </message>
 <message>
 <source>Failed to send clipboard</source>
-<translation type="unfinished">Failed to send clipboard</translation>
+<translation>Échec de l’envoi du presse-papiers</translation>
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Texte du presse-papiers envoyé avec succès</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Échec de l’envoi du texte du presse-papiers</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3704,11 +3708,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>&amp;Ajouter un lien vers une carte dans la note</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>&amp;Chercher le lien de cette carte dans les notes</translation>
 </message>
 </context>
 <context>
@@ -8197,15 +8201,15 @@ Cela ne peut être annuler !</translation>
 </message>
 <message>
 <source>Text received from web app and copied to clipboard</source>
-<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+<translation>Texte reçu de l’application web et copié dans le presse-papiers</translation>
 </message>
 <message>
 <source>HTML received from web app and copied to clipboard</source>
-<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+<translation>HTML reçu de l’application web et copié dans le presse-papiers</translation>
 </message>
 <message>
 <source>Image received from web app and copied to clipboard</source>
-<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+<translation>Image reçue de l’application web et copiée dans le presse-papiers</translation>
 </message>
 </context>
 <context>

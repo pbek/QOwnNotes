@@ -2386,7 +2386,7 @@ File: QOwnNotes_en.ts</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>클립보드를 텍스트로 보내기</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2799,6 +2799,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation>노트 분할</translation>
 </message>
@@ -2868,11 +2872,11 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>클립보드 텍스트가 성공적으로 전송되었습니다</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>클립보드 텍스트를 보내지 못했습니다</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>

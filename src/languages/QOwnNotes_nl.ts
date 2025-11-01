@@ -2817,6 +2817,10 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>Map met notites &lt;b&gt;%1&lt;/b&gt; met pad &lt;b&gt;%2&lt;/b&gt; bestaat niet meer!</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>

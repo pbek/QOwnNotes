@@ -2392,7 +2392,7 @@
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Enviar portapapeles como texto</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2817,6 +2817,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>¡La carpeta de notas &lt;b&gt;%1&lt;/b&gt; con la ruta &lt;b&gt;%2&lt;/b&gt; ya no existe!</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation>Dividir nota</translation>
 </message>
@@ -2887,11 +2891,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Texto del portapapeles enviado correctamente</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Error al enviar texto del portapapeles</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>

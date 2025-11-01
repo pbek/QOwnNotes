@@ -2912,6 +2912,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>مجلد الملاحظات &lt;b&gt;%1&lt;/b&gt; الذي مساره &lt;b&gt;%2&lt;/b&gt; لم يعد موجودًا!</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>

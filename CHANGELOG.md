@@ -4,6 +4,7 @@
 
 - You can now **open a note in Nextcloud Files** via the context menu in the note list
   if Nextcloud support was enabled (for [#3383](https://github.com/pbek/QOwnNotes/issues/3383))
+- Added more Spanish, French, Korean translation (thank you, alejandromoc, jd-develop, venusgirl)
 
 ## 25.10.4
 
