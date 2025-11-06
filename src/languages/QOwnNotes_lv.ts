@@ -2851,6 +2851,10 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
 <translation type="unfinished">Open note in Nextcloud Files</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>

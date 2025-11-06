@@ -6,6 +6,7 @@
   if Nextcloud support was enabled (for [#3385](https://github.com/pbek/QOwnNotes/issues/3385))
   - This only works if the Nextcloud Notes app is installed and configured properly
     and the same Notes path is used in QOwnNotes and Nextcloud Notes
+- Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.11.0
 

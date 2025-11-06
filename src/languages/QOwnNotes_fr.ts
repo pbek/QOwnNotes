@@ -2822,6 +2822,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation type="unfinished">Open note in Nextcloud Files</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation>Scinder la note</translation>
 </message>

@@ -2844,6 +2844,10 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <translation type="unfinished">Open note in Nextcloud Files</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>

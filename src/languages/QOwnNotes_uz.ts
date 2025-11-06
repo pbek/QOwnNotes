@@ -2829,6 +2829,10 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <translation type="unfinished">Open note in Nextcloud Files</translation>
 </message>
 <message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>
