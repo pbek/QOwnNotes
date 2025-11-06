@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 25.11.1
+
+- You can now **open a note in Nextcloud Notes** via the context menu in the note list
+  if Nextcloud support was enabled (for [#3385](https://github.com/pbek/QOwnNotes/issues/3385))
+  - This only works if the Nextcloud Notes app is installed and configured properly
+    and the same Notes path is used in QOwnNotes and Nextcloud Notes
+
 ## 25.11.0
 
 - You can now **open a note in Nextcloud Files** via the context menu in the note list

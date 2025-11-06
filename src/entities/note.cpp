@@ -127,19 +127,19 @@ void Note::setSharePermissions(unsigned int permissions) { this->_sharePermissio
  */
 QString Note::getNextcloudFileLink() const {
     if (!OwnCloudService::isOwnCloudSupportEnabled()) {
-        return QString();
+        return {};
     }
 
     // Get the OwnCloud service instance
     OwnCloudService *ownCloudService = OwnCloudService::instance();
     if (ownCloudService == nullptr) {
-        return QString();
+        return {};
     }
 
     // Fetch the file ID from Nextcloud
     QString fileId = ownCloudService->fetchNoteFileId(*this);
     if (fileId.isEmpty()) {
-        return QString();
+        return {};
     }
 
     // Get the server URL and construct the file link
@@ -147,7 +147,7 @@ QString Note::getNextcloudFileLink() const {
     QString serverUrl = cloudConnection.getServerUrlWithoutPath();
 
     if (serverUrl.isEmpty()) {
-        return QString();
+        return {};
     }
 
     // Get the directory path for the "dir" parameter
@@ -161,11 +161,48 @@ QString Note::getNextcloudFileLink() const {
 
     // Construct the Nextcloud file link
     // Format: https://server/apps/files/files/FILEID?dir=/path&opendetails=true
-    QString fileLink = serverUrl + QStringLiteral("/apps/files/files/") + fileId +
-                       QStringLiteral("?dir=") + QUrl::toPercentEncoding(dirPath) +
-                       QStringLiteral("&opendetails=true");
+    const QString fileLink = serverUrl + QStringLiteral("/apps/files/files/") + fileId +
+                             QStringLiteral("?dir=") + QUrl::toPercentEncoding(dirPath) +
+                             QStringLiteral("&opendetails=true");
 
     return fileLink;
+}
+
+/**
+ * Gets the Nextcloud Notes link for this note
+ *
+ * @return the Nextcloud Notes link URL, empty if not available
+ */
+QString Note::getNextcloudNotesLink() const {
+    if (!OwnCloudService::isOwnCloudSupportEnabled()) {
+        return {};
+    }
+
+    // Get the OwnCloud service instance
+    OwnCloudService *ownCloudService = OwnCloudService::instance();
+    if (ownCloudService == nullptr) {
+        return {};
+    }
+
+    // Fetch the file ID from Nextcloud
+    QString fileId = ownCloudService->fetchNoteFileId(*this);
+    if (fileId.isEmpty()) {
+        return {};
+    }
+
+    // Get the server URL and construct the file link
+    auto cloudConnection = CloudConnection::currentCloudConnection();
+    QString serverUrl = cloudConnection.getServerUrlWithoutPath();
+
+    if (serverUrl.isEmpty()) {
+        return {};
+    }
+
+    // Construct the Nextcloud Notes link
+    // Format: https://server/apps/notes/note/FILEID
+    const QString link = serverUrl + QStringLiteral("/apps/notes/note/") + fileId;
+
+    return link;
 }
 
 void Note::setCryptoKey(const qint64 cryptoKey) { this->_cryptoKey = cryptoKey; }

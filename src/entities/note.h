@@ -397,6 +397,8 @@ class Note {
 
     QString getNextcloudFileLink() const;
 
+    QString getNextcloudNotesLink() const;
+
    protected:
     int _id;
     int _noteSubFolderId;

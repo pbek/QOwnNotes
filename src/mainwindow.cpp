@@ -9823,6 +9823,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
     QAction *openInExternalEditorAction = nullptr;
     QAction *openNoteWindowAction = nullptr;
     QAction *openNoteInNextcloudFilesAction = nullptr;
+    QAction *openNoteInNextcloudNotesAction = nullptr;
     QAction *showInFileManagerAction = nullptr;
     QAction *showNoteGitLogAction = nullptr;
     QAction *copyNotePathToClipboardAction = nullptr;
@@ -9842,6 +9843,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
         openNoteWindowAction = noteMenu.addAction(tr("Open note in different window"));
         if (OwnCloudService::isOwnCloudSupportEnabled()) {
             openNoteInNextcloudFilesAction = noteMenu.addAction(tr("Open note in Nextcloud Files"));
+            openNoteInNextcloudNotesAction = noteMenu.addAction(tr("Open note in Nextcloud Notes"));
         };
         showInFileManagerAction = noteMenu.addAction(tr("Show note in file manager"));
         copyNotePathToClipboardAction = noteMenu.addAction(tr("Copy absolute path of note"));
@@ -9905,6 +9907,10 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
             auto fileUrl = currentNote.getNextcloudFileLink();
             qDebug() << __func__ << "fileUrl: " << fileUrl;
             QDesktopServices::openUrl(fileUrl);
+        } else if (selectedItem == openNoteInNextcloudNotesAction) {
+            auto url = currentNote.getNextcloudNotesLink();
+            qDebug() << __func__ << "url: " << url;
+            QDesktopServices::openUrl(url);
         } else if (selectedItem == showInFileManagerAction) {
             // show the current note in the file manager
             on_actionShow_note_in_file_manager_triggered();
