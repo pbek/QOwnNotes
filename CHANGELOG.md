@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.11.2
+
+- Amd64v3 support was added to the Ubuntu Launchpad build matrix for the Ubuntu Linux builds
+  (for [#3389](https://github.com/pbek/QOwnNotes/issues/3389))
+
 ## 25.11.1
 
 - You can now **open a note in Nextcloud Notes** via the context menu in the note list
