@@ -2804,7 +2804,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Nextcloud 노트에서 노트 열기</translation>
 </message>
 <message>
 <source>Split note</source>

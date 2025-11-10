@@ -2822,7 +2822,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Abrir nota en Nextcloud Notes</translation>
 </message>
 <message>
 <source>Split note</source>

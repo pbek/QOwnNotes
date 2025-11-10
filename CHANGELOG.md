@@ -7,6 +7,7 @@
   (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - Amd64v3 support was added to the Ubuntu Launchpad build matrix for the Ubuntu Linux builds
   (for [#3389](https://github.com/pbek/QOwnNotes/issues/3389))
+- Added more Korean, Spanish translation (thank you, venusgirl, alejandromoc)
 
 ## 25.11.1
 
