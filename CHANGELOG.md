@@ -2,6 +2,9 @@
 
 ## 25.11.2
 
+- When inserting text into the note from the Nextcloud Deck or Table dialog,
+  the application will now also automatically go into edit mode
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - Amd64v3 support was added to the Ubuntu Launchpad build matrix for the Ubuntu Linux builds
   (for [#3389](https://github.com/pbek/QOwnNotes/issues/3389))
 

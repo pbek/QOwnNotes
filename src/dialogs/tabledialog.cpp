@@ -125,7 +125,7 @@ void TableDialog::importCSV() {
     }
 
     // insert the table into the text edit
-    MainWindow::instance()->activeNoteTextEdit()->insertPlainText(text);
+    MainWindow::instance()->writeToNoteTextEdit(text);
 }
 
 /**
@@ -164,7 +164,7 @@ void TableDialog::createMarkdownTable() {
     }
 
     // insert the table into the text edit
-    MainWindow::instance()->activeNoteTextEdit()->insertPlainText(text);
+    MainWindow::instance()->writeToNoteTextEdit(text);
 }
 
 /**

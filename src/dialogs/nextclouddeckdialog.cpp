@@ -114,7 +114,7 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
         if (cardIdToUpdate == -1) {
             MainWindow *mainWindow = MainWindow::instance();
             if (mainWindow != nullptr) {
-                mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
+                mainWindow->writeToNoteTextEdit(linkText);
             }
         }
 #endif
@@ -417,7 +417,7 @@ void NextcloudDeckDialog::addCardLinkToCurrentNote(const QTreeWidgetItem *item) 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != nullptr) {
-        mainWindow->activeNoteTextEdit()->insertPlainText(linkText);
+        mainWindow->writeToNoteTextEdit(linkText);
     }
 #endif
 

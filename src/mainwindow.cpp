@@ -10510,11 +10510,17 @@ void MainWindow::on_actionManage_stored_images_triggered() {
 }
 
 /**
- * Writes text to the note text edit (for ScriptingService)
+ * Writes text to the note text edit
  *
  * @param text
  */
 void MainWindow::writeToNoteTextEdit(const QString &text) {
+    // Enable note editing if it is disabled
+    if (!Utils::Misc::isNoteEditingAllowed()) {
+        on_actionAllow_note_editing_triggered(true);
+        ui->actionAllow_note_editing->setChecked(true);
+    }
+
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     textEdit->insertPlainText(text);
 }
