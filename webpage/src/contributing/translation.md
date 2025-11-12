@@ -4,6 +4,11 @@ Thank you for helping out!
 
 How can I help to translate QOwnNotes?
 
+::: warning
+Please don't attempt to edit the translation files in `src/languages` directly.
+They are all generated automatically via [Crowdin](https://crowdin.com/project/qownnotes).
+:::
+
 ## Join us on Crowdin to translate QOwnNotes
 
 ![crowdin](/img/crowdin.png)
