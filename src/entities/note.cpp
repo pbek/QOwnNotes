@@ -1490,7 +1490,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
             // If checksums don't match, the file was modified externally
             if (currentChecksum != _fileChecksum) {
                 qWarning() << "Note file was modified externally, showing diff dialog";
-
+#ifndef INTEGRATION_TESTS
                 // Show diff dialog to let user decide what to do
                 TextDiffDialog dialog(
                     nullptr, QObject::tr("Note file was modified externally"),
@@ -1533,6 +1533,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
                     return false;
                 }
+#endif
             }
         }
     }
