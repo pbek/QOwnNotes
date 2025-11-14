@@ -64,7 +64,11 @@ class Note {
 
     QString getCryptoPassword() const;
 
+    QString getFileChecksum() const;
+
     void setCryptoKey(const qint64 cryptoKey);
+
+    void setFileChecksum(const QString &checksum);
 
     static bool addNote(const QString &name, const QString &fileName, const QString &text);
 
@@ -108,7 +112,8 @@ class Note {
 
     bool storeNewText(QString text);
 
-    bool storeNoteTextFileToDisk(bool &currentNoteTextChanged);
+    bool storeNoteTextFileToDisk(bool &currentNoteTextChanged,
+                                 bool *wasCancelledDueToExternalModification = nullptr);
     bool storeNoteTextFileToDisk();
 
     static QString defaultNoteFileExtension();
@@ -166,6 +171,8 @@ class Note {
     static QString generateTextForLink(QString text);
 
     static qint64 qint64Hash(const QString &str);
+
+    static QString calculateChecksum(const QString &text);
 
     QString encryptNoteText();
 
@@ -410,6 +417,7 @@ class Note {
     QString _decryptedNoteText;
     QString _cryptoPassword;
     QString _shareUrl;
+    QString _fileChecksum;
     QDateTime _fileCreated;
     QDateTime _fileLastModified;
     QDateTime _created;

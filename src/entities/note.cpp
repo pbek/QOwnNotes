@@ -24,6 +24,7 @@
 
 #include "api/noteapi.h"
 #include "cloudconnection.h"
+#include "dialogs/textdiffdialog.h"
 #include "entities/bookmark.h"
 #include "entities/commandsnippet.h"
 #include "helpers/codetohtmlconverter.h"
@@ -63,6 +64,10 @@ QDateTime Note::getModified() const { return this->_modified; }
 qint64 Note::getCryptoKey() const { return this->_cryptoKey; }
 
 QString Note::getCryptoPassword() const { return this->_cryptoPassword; }
+
+QString Note::getFileChecksum() const { return this->_fileChecksum; }
+
+void Note::setFileChecksum(const QString &checksum) { this->_fileChecksum = checksum; }
 
 QString Note::getShareUrl() const { return this->_shareUrl; }
 
@@ -757,6 +762,7 @@ Note Note::fillFromQuery(const QSqlQuery &query) {
     _cryptoKey = query.value(QStringLiteral("crypto_key")).toLongLong();
     _fileSize = query.value(QStringLiteral("file_size")).toLongLong();
     _cryptoPassword = query.value(QStringLiteral("crypto_password")).toString();
+    _fileChecksum = query.value(QStringLiteral("file_checksum")).toString();
     _hasDirtyData = query.value(QStringLiteral("has_dirty_data")).toInt() == 1;
     _fileCreated = query.value(QStringLiteral("file_created")).toDateTime();
     _fileLastModified = query.value(QStringLiteral("file_last_modified")).toDateTime();
@@ -1344,6 +1350,7 @@ bool Note::store() {
                            "file_created = :file_created,"
                            "crypto_key = :crypto_key,"
                            "crypto_password = :crypto_password,"
+                           "file_checksum = :file_checksum,"
                            "modified = :modified "
                            "WHERE id = :id"));
         query.bindValue(QStringLiteral(":id"), _id);
@@ -1354,13 +1361,13 @@ bool Note::store() {
                            "file_size, note_text, has_dirty_data, "
                            "file_last_modified, file_created, crypto_key,"
                            "modified, crypto_password, decrypted_note_text, "
-                           "note_sub_folder_id) "
+                           "note_sub_folder_id, file_checksum) "
                            "VALUES (:name, :share_url, :share_id, :share_permissions, "
                            ":file_name, :file_size, :note_text,"
                            ":has_dirty_data, :file_last_modified,"
                            ":file_created, :crypto_key, :modified,"
                            ":crypto_password, :decrypted_note_text,"
-                           ":note_sub_folder_id)"));
+                           ":note_sub_folder_id, :file_checksum)"));
     }
 
     const QDateTime modified = QDateTime::currentDateTime();
@@ -1383,6 +1390,7 @@ bool Note::store() {
     query.bindValue(QStringLiteral(":file_last_modified"), _fileLastModified);
     query.bindValue(QStringLiteral(":crypto_key"), _cryptoKey);
     query.bindValue(QStringLiteral(":crypto_password"), _cryptoPassword);
+    query.bindValue(QStringLiteral(":file_checksum"), _fileChecksum);
     query.bindValue(QStringLiteral(":modified"), modified);
 
     // on error
@@ -1417,9 +1425,12 @@ bool Note::storeNoteTextFileToDisk() {
  * The file name will be changed if needed
  *
  * @param currentNoteTextChanged true if the note text was changed during a rename
+ * @param wasCancelledDueToExternalModification true if the save was cancelled because file was
+ * modified externally
  * @return true if note was stored
  */
-bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
+bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
+                                   bool *wasCancelledDueToExternalModification) {
     const Note oldNote = *this;
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
@@ -1459,6 +1470,71 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
 
     if (!useUNIXNewline) {
         flags |= QIODevice::Text;
+    }
+
+    // Check if the file was modified externally by comparing checksums
+    if (fileExists() && !_fileChecksum.isEmpty()) {
+        // Read the current file content
+        QFile checkFile(fullNoteFilePath());
+        if (checkFile.open(QIODevice::ReadOnly)) {
+            QTextStream checkIn(&checkFile);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+            checkIn.setCodec("UTF-8");
+#endif
+            QString currentFileText = checkIn.readAll();
+            checkFile.close();
+
+            // Calculate checksum of current file content
+            QString currentChecksum = calculateChecksum(currentFileText);
+
+            // If checksums don't match, the file was modified externally
+            if (currentChecksum != _fileChecksum) {
+                qWarning() << "Note file was modified externally, showing diff dialog";
+
+                // Show diff dialog to let user decide what to do
+                TextDiffDialog dialog(
+                    nullptr, QObject::tr("Note file was modified externally"),
+                    QObject::tr(
+                        "The note file '%1' was modified externally while you had unsaved "
+                        "changes.\n\n"
+                        "The editor below shows YOUR version. The differences view shows changes "
+                        "between "
+                        "the external file (in red) and your version (in green).\n\n"
+                        "Click 'OK' to save YOUR version and overwrite the external changes.\n"
+                        "Click 'Cancel' to discard your changes and keep the external version.")
+                        .arg(_fileName),
+                    currentFileText, _noteText);
+
+                if (dialog.exec() == QDialog::Accepted) {
+                    if (dialog.resultAccepted()) {
+                        // User chose to use their edited text from the dialog
+                        _noteText = dialog.resultText();
+                    } else {
+                        // User chose to cancel, keep the external version
+                        _noteText = currentFileText;
+                        _fileChecksum = currentChecksum;
+
+                        // Mark that we cancelled due to external modification
+                        if (wasCancelledDueToExternalModification != nullptr) {
+                            *wasCancelledDueToExternalModification = true;
+                        }
+
+                        return false;
+                    }
+                } else {
+                    // Dialog was closed without accepting, keep the external version
+                    _noteText = currentFileText;
+                    _fileChecksum = currentChecksum;
+
+                    // Mark that we cancelled due to external modification
+                    if (wasCancelledDueToExternalModification != nullptr) {
+                        *wasCancelledDueToExternalModification = true;
+                    }
+
+                    return false;
+                }
+            }
+        }
     }
 
     qDebug() << "storing note file: " << this->_fileName;
@@ -1517,6 +1593,9 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged) {
     out.flush();
     file.flush();
     file.close();
+
+    // Update the checksum after writing to disk
+    this->_fileChecksum = calculateChecksum(text);
 
     this->_hasDirtyData = false;
     this->_fileLastModified = QDateTime::currentDateTime();
@@ -1810,6 +1889,9 @@ bool Note::updateNoteTextFromDisk() {
     // strangely it sometimes gets null
     if (this->_noteText.isNull()) this->_noteText = QLatin1String("");
 
+    // Calculate and store the checksum of the loaded text
+    this->_fileChecksum = calculateChecksum(this->_noteText);
+
     return true;
 }
 
@@ -2023,7 +2105,23 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged, boo
     for (int r = 0; query.next(); r++) {
         Note note = noteFromQuery(query);
         const QString &oldName = note.getName();
-        const bool noteWasStored = note.storeNoteTextFileToDisk(*currentNoteTextChanged);
+        bool wasCancelledDueToExternalModification = false;
+        const bool noteWasStored = note.storeNoteTextFileToDisk(
+            *currentNoteTextChanged, &wasCancelledDueToExternalModification);
+
+        // If the save was cancelled due to external modification and this is the current note,
+        // we need to reload the note text to show the external version
+        if (wasCancelledDueToExternalModification && note.isSameFile(currentNote)) {
+            // Update the current note with the external version
+            currentNote = note;
+            *currentNoteTextChanged = true;
+
+            // Store the note to persist the new checksum and text
+            note.setHasDirtyData(false);
+            note.store();
+
+            qDebug() << "Note save cancelled due to external modification, reloading current note";
+        }
 
         // continue if note couldn't be stored
         if (!noteWasStored) {
@@ -2871,6 +2969,14 @@ qint64 Note::qint64Hash(const QString &str) {
     qint64 a, b;
     stream >> a >> b;
     return a ^ b;
+}
+
+/**
+ * Calculates SHA256 checksum of text
+ */
+QString Note::calculateChecksum(const QString &text) {
+    const QByteArray hash = QCryptographicHash::hash(text.toUtf8(), QCryptographicHash::Sha256);
+    return QString::fromLatin1(hash.toHex());
 }
 
 /**

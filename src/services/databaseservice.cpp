@@ -454,6 +454,7 @@ bool DatabaseService::setupTables() {
                        "share_url VARCHAR(255),"
                        "share_id int,"
                        "share_permissions int,"
+                       "file_checksum VARCHAR(64),"
                        "created DATETIME default current_timestamp,"
                        "modified DATETIME default current_timestamp)"));
     queryMemory.exec(
