@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.11.3
+
+- Fixed dependencies of `.SRCINFO` file being not consistent with those of
+  `PKGBUILD` on the AUR (for [#3392](https://github.com/pbek/QOwnNotes/issues/3392))
+
 ## 25.11.2
 
 - When inserting text into the note from the Nextcloud Deck or Table dialog,
