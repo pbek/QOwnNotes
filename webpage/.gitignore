@@ -12,6 +12,7 @@ config.local.js
 basement_dist
 /scripts/vendor/
 .shared
+.vitepress/cache
 
 # Devenv
 .devenv*

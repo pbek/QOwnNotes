@@ -9,27 +9,13 @@
   },
   "repository": "/qownnotes-webpage",
   "scripts": {
-    "dev": "./scripts/run-dev.sh",
-    "build": "./scripts/run-build.sh"
+    "dev": "vitepress dev src",
+    "build": "./scripts/run-build.sh",
+    "preview": "vitepress preview src"
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuejs-community/vue-filter-date-format": "^1.6.2",
-    "@vuejs-community/vue-filter-date-parse": "^1.2.0",
-    "@vuepress/plugin-back-to-top": "^1.6.0",
-    "@vuepress/plugin-medium-zoom": "^1.6.0",
-    "markdown-it": "^12.3.2",
-    "markdown-it-meta": "^0.0.1",
-    "vuepress": "^1.9.0",
-    "vuepress-plugin-canonical": "^1.0.0",
-    "vuepress-plugin-feed": "^0.1.8",
-    "vuepress-plugin-matomo": "^1.0.2",
-    "vuepress-plugin-mermaidjs": "^1.8.0",
-    "vuepress-plugin-seo": "^0.1.4",
-    "vuepress-plugin-sitemap": "^2.3.1"
-  },
-  "dependencies": {
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuetify": "^2.6.10"
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.24"
   }
 }

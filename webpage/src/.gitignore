@@ -1,1 +1,3 @@
 changelog.md
+.vitepress/cache
+.vitepress/dist

@@ -1,31 +1,47 @@
 ---
+layout: home
 title: QOwnNotes
 description: یادداشت برداری مارک داون متن باز به کار رفته برای لینوکس، مکینتاش و ویندوز که باهم با یادداشت‌های نکست کلود کار می کنند
-home: true
-heroImage: /screenshots/screenshot.png
-tagline: یادداشت برداری مارک داون پرونده با متن ساده و به صورت متن باز و رایگان که به انضمام نکست کلود یا اون کلود بکار می رود
-actionText: شروع سریع⬅
-actionLink: getting-started/overview
+
+hero:
+  name: QOwnNotes
+  text: یادداشت برداری مارک داون پرونده با متن ساده
+  tagline: به صورت متن باز و رایگان که به انضمام نکست کلود یا اون کلود بکار می رود
+  image:
+    src: /screenshots/screenshot.png
+    alt: QOwnNotes screenshot
+  actions:
+    - theme: brand
+      text: شروع سریع⬅
+      link: /fa/getting-started/overview
+    - theme: alt
+      text: مشاهده در GitHub
+      link: https://github.com/pbek/QOwnNotes
+
 features:
-  - 
+  - icon: 📝
     title: یادداشت های خود را داشته باشید
     details: تمام یادداشت ها به صورت پرونده های مارک داون با متن ساده در رایانه شما و نه به صورت "وابستگی به فروشنده" ذخیره سازی می شوند. به منظور همگام سازی یادداشت ها در میان ابزارهای مختلف از خدمات همگام سازی نظیر نکست کلود استفاده کنید.
-  - 
+  - icon: ⚡
     title: ردپای کوچک
     details: برنامه بومی که از نظر سرعت و مصرف کم منابع حافظه و پردازنده بهینه‌سازی شده است.
-  - 
+  - icon: 🎨
     title: سفارشی سازی
     details: با توجه به کاملاً قابل سفارشی سازی و قابل اسکریپت نویسی بودن، می توانید نحوه کار خود با یادداشت هایتان را تحت کنترل داشته باشید.
-footer: ارائه شده توسط پاتریزیو بکرله همراه با ❤️
 ---
 
 <div class="rss-block">
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">وبلاگ RSS</a></v-chip>
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">RSS انتشارها</a></v-chip>
+    <a href="https://feeds.feedburner.com/QOwnNotesBlog">📰 وبلاگ RSS</a> | 
+    <a href="https://feeds.feedburner.com/QOwnNotesReleases">🚀 RSS انتشارها</a>
 </div>
 
-<Poll />
-
 <style>
-    .rss-block { text-align: center; margin-bottom: 20px; }
+    .rss-block { 
+        text-align: center; 
+        margin: 20px 0;
+        font-size: 16px;
+    }
+    .rss-block a {
+        margin: 0 10px;
+    }
 </style>

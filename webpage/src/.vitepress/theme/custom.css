@@ -1,0 +1,33 @@
+/* Custom styles for QOwnNotes documentation */
+
+:root {
+  --vp-c-brand: #3eaf7c;
+  --vp-c-brand-light: #4abf8a;
+  --vp-c-brand-lighter: #63d4a3;
+  --vp-c-brand-dark: #389d70;
+  --vp-c-brand-darker: #2d8659;
+}
+
+.rss-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rss-block a {
+  text-decoration: none;
+  color: var(--vp-c-brand);
+  margin: 0 10px;
+}
+
+/* RTL support for Arabic and Persian */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .VPNav,
+[dir="rtl"] .VPSidebar,
+[dir="rtl"] .VPDoc {
+  direction: rtl;
+}
+
