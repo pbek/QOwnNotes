@@ -15,7 +15,7 @@ pkgbase = qownnotes
 	depends = qt6-declarative
 	depends = qt6-websockets
 	depends = aspell
-	source = https://github.com/pbek/QOwnNotes/releases/download/v${pkgver}/qownnotes-${pkgver}.tar.xz
+	source = https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-$VERSION-STRING.tar.xz
 	sha256sums = ARCHIVE-SHA256
 
 pkgname = qownnotes
