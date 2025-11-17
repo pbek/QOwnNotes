@@ -3522,6 +3522,20 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     if (noteSubFolderId == 0) {
         removeConflictedNotesDatabaseCopies();
+
+        // Log checksum calculation statistics for the entire note folder
+        qint64 totalTime = 0;
+        int callCount = 0;
+        Note::getChecksumStats(totalTime, callCount);
+        qDebug() << "====================================================";
+        qDebug() << "Note folder loading complete - Checksum statistics:";
+        qDebug() << "  Total calculateChecksum() calls:" << callCount;
+        qDebug() << "  Total time spent:" << (totalTime / 1000000.0) << "ms";
+        if (callCount > 0) {
+            qDebug() << "  Average time per call:" << (totalTime / callCount / 1000.0)
+                     << "microseconds";
+        }
+        qDebug() << "====================================================";
     }
 
     return wasModified;

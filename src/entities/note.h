@@ -174,6 +174,10 @@ class Note {
 
     static QString calculateChecksum(const QString &text);
 
+    static void getChecksumStats(qint64 &totalTime, int &callCount);
+
+    static void resetChecksumStats();
+
     QString encryptNoteText();
 
     QString fetchDecryptedNoteText() const;

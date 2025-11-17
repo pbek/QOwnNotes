@@ -11,6 +11,7 @@
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QDir>
+#include <QElapsedTimer>
 #include <QMessageBox>
 #include <QMimeDatabase>
 #include <QRegularExpression>
@@ -2240,6 +2241,10 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
 #endif
 
         this->_fileLastModified = fileInfo.lastModified();
+
+        // Calculate the checksum before storing
+        this->_fileChecksum = calculateChecksum(this->_noteText);
+
         this->store();
 
         if (withNoteNameHook) {
@@ -2972,12 +2977,50 @@ qint64 Note::qint64Hash(const QString &str) {
     return a ^ b;
 }
 
+// Namespace-scoped variables for checksum timing statistics
+namespace {
+qint64 g_totalChecksumTime = 0;
+int g_checksumCallCount = 0;
+}    // namespace
+
 /**
  * Calculates SHA256 checksum of text
  */
 QString Note::calculateChecksum(const QString &text) {
+    QElapsedTimer timer;
+    timer.start();
+
     const QByteArray hash = QCryptographicHash::hash(text.toUtf8(), QCryptographicHash::Sha256);
-    return QString::fromLatin1(hash.toHex());
+    const QString result = QString::fromLatin1(hash.toHex());
+
+    const qint64 elapsed = timer.nsecsElapsed();
+    g_totalChecksumTime += elapsed;
+    g_checksumCallCount++;
+
+    //    qDebug() << "Note::calculateChecksum - Call #" << g_checksumCallCount
+    //             << "took" << (elapsed / 1000.0) << "microseconds"
+    //             << "| Total time:" << (g_totalChecksumTime / 1000000.0) << "ms"
+    //             << "| Average:" << (g_totalChecksumTime / g_checksumCallCount / 1000.0) <<
+    //             "microseconds";
+
+    return result;
+}
+
+/**
+ * Gets checksum calculation statistics
+ */
+void Note::getChecksumStats(qint64 &totalTime, int &callCount) {
+    totalTime = g_totalChecksumTime;
+    callCount = g_checksumCallCount;
+}
+
+/**
+ * Resets checksum calculation statistics
+ */
+void Note::resetChecksumStats() {
+    g_totalChecksumTime = 0;
+    g_checksumCallCount = 0;
+    qDebug() << "Note::resetChecksumStats - Checksum statistics have been reset";
 }
 
 /**
