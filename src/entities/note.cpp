@@ -1473,8 +1473,12 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         flags |= QIODevice::Text;
     }
 
+    // Check if we should ignore all changes
+    const bool ignoreAllExternalModifications =
+        settings.value(QStringLiteral("ignoreAllExternalModifications")).toBool();
+
     // Check if the file was modified externally by comparing checksums
-    if (fileExists() && !_fileChecksum.isEmpty()) {
+    if (!ignoreAllExternalModifications && fileExists() && !_fileChecksum.isEmpty()) {
         // Read the current file content
         QFile checkFile(fullNoteFilePath());
         if (checkFile.open(QIODevice::ReadOnly)) {
