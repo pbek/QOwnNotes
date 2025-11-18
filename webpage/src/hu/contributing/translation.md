@@ -4,6 +4,10 @@ Köszönjük a segítségét!
 
 Hogyan segíthetek a QOwnNotes fordításában?
 
+::: warning
+Please don't attempt to edit the translation files in `src/languages` directly. They are all generated automatically via [Crowdin](https://crowdin.com/project/qownnotes).
+:::
+
 ## Csatlakozzon hozzánk Crowdin webalkalmazáson a QOwnNotes fordításához
 
 ![crowdin](/img/crowdin.png)

@@ -23,11 +23,11 @@
 </message>
 <message>
 <source>Image filename or URL</source>
-<translation>图片文件名或URL</translation>
+<translation>图片文件名或 URL</translation>
 </message>
 <message>
 <source>Path to file or URL</source>
-<translation>文件或URL路径</translation>
+<translation>文件或 URL 路径</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -61,7 +61,7 @@
 <message>
 <source>Error while downloading:
 %1</source>
-<translation>下载时出错: %1</translation>
+<translation>下载时出错： %1</translation>
 </message>
 <message>
 <source>File error</source>
@@ -70,19 +70,19 @@
 <message>
 <source>Could not open temporary file:
 %1</source>
-<translation>无法打开临时文件: %1</translation>
+<translation>无法打开临时文件： %1</translation>
 </message>
 <message>
 <source>Could not store downloaded file:
 %1</source>
-<translation>无法存储下载的文件: %1</translation>
+<translation>无法存储下载的文件： %1</translation>
 </message>
 </context>
 <context>
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>打开笔记与查找 &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -169,7 +169,7 @@
 </message>
 <message>
 <source>Aragonese</source>
-<translation>阿拉贡人</translation>
+<translation>阿拉贡语</translation>
 </message>
 <message>
 <source>Gujarati</source>
@@ -177,7 +177,7 @@
 </message>
 <message>
 <source>Danish</source>
-<translation>丹麦文</translation>
+<translation>丹麦语</translation>
 </message>
 <message>
 <source>Swedish</source>
@@ -197,7 +197,7 @@
 </message>
 <message>
 <source>Ancient Greek</source>
-<translation>古希腊</translation>
+<translation>古希腊语</translation>
 </message>
 <message>
 <source>Arabic</source>
@@ -205,7 +205,7 @@
 </message>
 <message>
 <source>Armenian</source>
-<translation>亚美尼亚人</translation>
+<translation>亚美尼亚语</translation>
 </message>
 <message>
 <source>Albanian</source>
@@ -213,7 +213,7 @@
 </message>
 <message>
 <source>Basque</source>
-<translation>巴斯克</translation>
+<translation>巴斯克语</translation>
 </message>
 <message>
 <source>Belarusian</source>
@@ -237,7 +237,7 @@
 </message>
 <message>
 <source>Catalan (Valencian)</source>
-<translation>加泰罗尼亚语（瓦伦西亚）</translation>
+<translation>加泰罗尼亚语（瓦伦西亚地区）</translation>
 </message>
 <message>
 <source>Chuvash (Russia)</source>
@@ -257,7 +257,7 @@
 </message>
 <message>
 <source>English (Canadian)</source>
-<translation>英文（加拿大）</translation>
+<translation>英语（加拿大）</translation>
 </message>
 <message>
 <source>English (Medical Dictionary)</source>
@@ -313,7 +313,7 @@
 </message>
 <message>
 <source>Gurani</source>
-<translation>瓜拉尼语</translation>
+<translation>古拉尼语</translation>
 </message>
 <message>
 <source>Hebrew</source>
@@ -385,7 +385,7 @@
 </message>
 <message>
 <source>Luxembourgish (Letzeburgesch)</source>
-<translation>卢森堡语（卢森堡）</translation>
+<translation>卢森堡语</translation>
 </message>
 <message>
 <source>Macedonian</source>
@@ -413,11 +413,11 @@
 </message>
 <message>
 <source>Occitan</source>
-<translation>欧舒丹</translation>
+<translation>奥克语</translation>
 </message>
 <message>
 <source>Papiamentu</source>
-<translation>帕皮阿门托</translation>
+<translation>帕皮阿门托语</translation>
 </message>
 <message>
 <source>Persian</source>
@@ -425,11 +425,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>葡萄牙语 (巴西)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>葡萄牙语</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -437,7 +437,7 @@
 </message>
 <message>
 <source>Romansh</source>
-<translation>罗曼什</translation>
+<translation>罗曼什语</translation>
 </message>
 <message>
 <source>Russian Medical Dictionary</source>
@@ -445,15 +445,15 @@
 </message>
 <message>
 <source>Rusyn / Ruthene (Slovakia)</source>
-<translation>Rusyn / Ruthene（斯洛伐克）</translation>
+<translation>卢森尼亚语（斯洛伐克）</translation>
 </message>
 <message>
 <source>Serbian (Cyrillic)</source>
-<translation>塞尔维亚文（西里尔文）</translation>
+<translation>塞尔维亚语（西里尔文）</translation>
 </message>
 <message>
 <source>Serbian (Latin)</source>
-<translation>塞尔维亚文（拉丁文）</translation>
+<translation>塞尔维亚语（拉丁文）</translation>
 </message>
 <message>
 <source>Shona</source>
@@ -509,7 +509,7 @@
 </message>
 <message>
 <source>Udmurt (Russia)</source>
-<translation>乌德穆特(俄罗斯）</translation>
+<translation>乌德穆尔特语(俄罗斯）</translation>
 </message>
 <message>
 <source>Ukrainian</source>
@@ -545,7 +545,7 @@
 </message>
 <message>
 <source>Zulu</source>
-<translation>祖鲁族</translation>
+<translation>祖鲁语</translation>
 </message>
 <message>
 <source>Download error</source>
@@ -554,7 +554,7 @@
 <message>
 <source>Error while downloading:
 %1</source>
-<translation>下载时出错: 
+<translation>下载时出错： 
 %1</translation>
 </message>
 <message>
@@ -564,7 +564,7 @@
 <message>
 <source>Could not store downloaded file:
 %1</source>
-<translation>无法存储下载的文件: 
+<translation>无法存储下载的文件： 
 %1</translation>
 </message>
 <message>
@@ -582,11 +582,11 @@
 </message>
 <message>
 <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-<translation>要获得 enex 文件，您需要在 Evernotes 桌面客户端中选择一个或多个笔记，然后在 “文件”菜单中单击“导出笔记...”。</translation>
+<translation>要获得 enex 文件，您需要在 Evernotes 桌面客户端中选择一个或多个笔记，然后在“文件”菜单中单击“导出笔记…”。</translation>
 </message>
 <message>
 <source>Please select the Evernote enex file you want to import:</source>
-<translation>请选择您要导入的 Evernote enex 文件︰</translation>
+<translation>请选择您要导入的 Evernote enex 文件：</translation>
 </message>
 <message>
 <source>Number of imported notes</source>
@@ -618,19 +618,19 @@
 </message>
 <message>
 <source>Enex files</source>
-<translation>Enex文件</translation>
+<translation>Enex 文件</translation>
 </message>
 <message>
 <source>Select Evernote enex file to import</source>
-<translation>选择要导入的 Evernote enex文件</translation>
+<translation>选择要导入的 Evernote enex 文件</translation>
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>无效的 XML！</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>在注释&lt;b&gt;%1&lt;/b&gt;中发现无效 XML！导入操作可能在此处停止。</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -821,7 +821,7 @@
 </message>
 <message>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation>显示相对包含文本游标的行的行号</translation>
+<translation>显示相对包含文本光标行的行号。</translation>
 </message>
 <message>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
@@ -837,19 +837,19 @@
 </message>
 <message>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation>留空以使用默认路径，例如在 Windows 上是 %USERPROFILE%\_vimrc, 其他系统上是 ~/.vimrc.</translation>
+<translation>留空以使用默认路径，例如在 Windows 上是 %USERPROFILE%\_vimrc，其他系统上是 ~/.vimrc。</translation>
 </message>
 <message>
 <source>Default: %1</source>
-<translation>默认: %1</translation>
+<translation>默认： %1</translation>
 </message>
 <message>
 <source>Unknown option: %1</source>
-<translation>未知选项: %1</translation>
+<translation>未知选项： %1</translation>
 </message>
 <message>
 <source>Argument must be positive: %1=%2</source>
-<translation>参数必须为正数: %1=%2</translation>
+<translation>参数必须为正数： %1=%2</translation>
 </message>
 <message>
 <source>Mark "%1" not set.</source>
@@ -869,15 +869,15 @@
 </message>
 <message>
 <source>Not implemented in FakeVim.</source>
-<translation>FakeVim中未实现。</translation>
+<translation>FakeVim 中未实现。</translation>
 </message>
 <message>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation>输入 Meta-Shift-Y, Meta-Shift-Y 退出 FakeVim 模式。</translation>
+<translation>输入 Meta-Shift-Y，Meta-Shift-Y 退出 FakeVim 模式。</translation>
 </message>
 <message>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation>按 Alt-Y, Alt-Y 键退出 FakeVim 模式</translation>
+<translation>按 Alt-Y，Alt-Y 键退出 FakeVim 模式。</translation>
 </message>
 <message>
 <source>Unknown option:</source>
@@ -903,7 +903,7 @@
 </message>
 <message>
 <source>File "%1" exists (add ! to override)</source>
-<translation>文件"%1"已存在（加上!覆盖该文件）</translation>
+<translation>文件"%1"已存在（加上 ! 覆盖该文件）</translation>
 </message>
 <message>
 <source>Cannot open file "%1" for writing</source>
@@ -911,19 +911,19 @@
 </message>
 <message>
 <source>"%1" %2 %3L, %4C written.</source>
-<translation>"%1" %2 %3行, %4字符已写入。</translation>
+<translation>"%1" %2 %3行，%4字符已写入。</translation>
 </message>
 <message>
 <source> [New] </source>
-<translation>[新建]</translation>
+<translation> [新建] </translation>
 </message>
 <message>
 <source>Cannot open file "%1" for reading</source>
-<translation>无法打开文件"%1"以读取</translation>
+<translation>无法打开文件 "%1" 以读取</translation>
 </message>
 <message>
 <source>"%1" %2L, %3C</source>
-<translation>”%1“ %2行, %3字符</translation>
+<translation>“%1” %2行，%3字符</translation>
 </message>
 <message numerus="yes">
 <source>%n lines filtered.</source>
@@ -945,7 +945,7 @@
 </message>
 <message>
 <source>Pattern not found: %1</source>
-<translation>找不到模式: %1</translation>
+<translation>找不到模式： %1</translation>
 </message>
 <message>
 <source>Search hit BOTTOM, continuing at TOP.</source>
@@ -957,11 +957,11 @@
 </message>
 <message>
 <source>Search hit BOTTOM without match for: %1</source>
-<translation>搜索到达底部，无匹配项: %1</translation>
+<translation>搜索到达底部，无匹配项： %1</translation>
 </message>
 <message>
 <source>Search hit TOP without match for: %1</source>
-<translation>搜索到达顶部，无匹配项：%1</translation>
+<translation>搜索到达顶部，无匹配项： %1</translation>
 </message>
 <message numerus="yes">
 <source>%n lines indented.</source>
@@ -1005,7 +1005,7 @@
 </message>
 <message>
 <source>Size:</source>
-<translation>大小︰</translation>
+<translation>大小：</translation>
 </message>
 <message>
 <source>Family:</source>
@@ -1013,11 +1013,11 @@
 </message>
 <message>
 <source>Color schema</source>
-<translation>配色配置</translation>
+<translation>配色方案</translation>
 </message>
 <message>
 <source>Delete schema</source>
-<translation>删除配置</translation>
+<translation>删除方案</translation>
 </message>
 <message>
 <source>Delete</source>
@@ -1025,7 +1025,7 @@
 </message>
 <message>
 <source>Export schema</source>
-<translation>导出配置</translation>
+<translation>导出方案</translation>
 </message>
 <message>
 <source>Export</source>
@@ -1033,11 +1033,11 @@
 </message>
 <message>
 <source>If you have created a nice color schema please export it and share it with everyone!</source>
-<translation>如果您已经创建了一个美观的配色请将其导出，和大家一起分享 ！</translation>
+<translation>如果您已经创建了一个美观的配色请将其导出，和大家一起分享！</translation>
 </message>
 <message>
 <source>Copy schema</source>
-<translation>复制配置</translation>
+<translation>复制方案</translation>
 </message>
 <message>
 <source>Copy</source>
@@ -1045,7 +1045,7 @@
 </message>
 <message>
 <source>Import schema</source>
-<translation>导入配置</translation>
+<translation>导入方案</translation>
 </message>
 <message>
 <source>Import</source>
@@ -1053,7 +1053,7 @@
 </message>
 <message>
 <source>Font:</source>
-<translation>字体:</translation>
+<translation>字体：</translation>
 </message>
 <message>
 <source>Share schema</source>
@@ -1077,7 +1077,7 @@
 </message>
 <message>
 <source>Adapt font size:</source>
-<translation>调整字体大小︰</translation>
+<translation>调整字体大小：</translation>
 </message>
 <message>
 <source>Underline</source>
@@ -1218,7 +1218,7 @@
 </message>
 <message>
 <source>Copy color schema</source>
-<translation>复制颜色配置</translation>
+<translation>复制颜色方案</translation>
 </message>
 <message>
 <source>Color schema name</source>
@@ -1231,11 +1231,11 @@
 </message>
 <message>
 <source>Remove schema</source>
-<translation>删除配置</translation>
+<translation>删除方案</translation>
 </message>
 <message>
 <source>Remove current schema? This cannot be undone!</source>
-<translation>删除当前配置？操作不能撤消 ！</translation>
+<translation>删除当前方案？操作不能撤消！</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -1339,7 +1339,7 @@
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation>请从你想要导入笔记的文件夹选择 "RAW-Joplin导出文件夹"：</translation>
+<translation>请从你想要导入笔记的文件夹选择"RAW - Joplin 导出目录"：</translation>
 </message>
 <message>
 <source>Select directory</source>
@@ -1452,7 +1452,7 @@
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
-<translation>默认情况下，大多数面板（如左侧的笔记列表，标签面板和右侧的预览面板）均处于启用状态。 您将需要另一个工作区来实际编辑笔记！</translation>
+<translation>默认情况下，大多数面板（如左侧的笔记列表，标签面板和右侧的预览面板）均处于启用状态。您将需要另一个工作区来实际编辑笔记！</translation>
 </message>
 <message>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
@@ -1469,7 +1469,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>链接到一个网址或笔记</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1485,7 +1485,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>清除链接名称并重新获取网页标题</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1525,19 +1525,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>选择要链接的文件（相对路径）</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>选择要链接的文件（绝对路径）</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>选择要链接到的目录（相对路径）</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>选择要链接到的目录（绝对路径）</translation>
 </message>
 </context>
 <context>
@@ -1580,12 +1580,12 @@
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-<translation>文件&lt;strong&gt;%1&lt;/ strong&gt;不可读，无法还原！</translation>
+<translation>文件&lt;strong&gt;%1&lt;/strong&gt;不可读，无法还原！</translation>
 </message>
 <message numerus="yes">
 <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
-<numerusform>恢复&lt;strong&gt;％n &lt;/ strong&gt;个选定的笔记？</numerusform>
+<numerusform>恢复&lt;strong&gt;%n&lt;/strong&gt;个选定的笔记？</numerusform>
 </translation>
 </message>
 <message>
@@ -1595,13 +1595,13 @@
 <message numerus="yes">
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
 <translation>
-<numerusform>&lt;strong&gt;％n &lt;/ strong&gt;个笔记已恢复</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt;个笔记已恢复</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
-<numerusform>删除&lt;strong&gt;％n &lt;/ strong&gt;个选定的笔记？</numerusform>
+<numerusform>删除&lt;strong&gt;%n&lt;/strong&gt;个选定的笔记？</numerusform>
 </translation>
 </message>
 <message>
@@ -1682,7 +1682,7 @@
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>反向链接</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1778,7 +1778,7 @@
 </message>
 <message>
 <source>Find text in current note</source>
-<translation>在当前笔记搜索文本</translation>
+<translation>在当前笔记查找文本</translation>
 </message>
 <message>
 <source>&amp;Duplicate text</source>
@@ -1874,7 +1874,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>AI 模型</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -1915,19 +1915,19 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation>设置笔记文件夹 / 子文件夹(&amp;S)</translation>
+<translation>设置笔记文件夹/子文件夹(&amp;S)</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation>设置笔记文件夹 / 子文件夹</translation>
+<translation>设置笔记文件夹/子文件夹</translation>
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>在笔记中查找文本(&amp;F)</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
-<translation>关于 &amp;QOwnNotes…</translation>
+<translation>关于 QOwnNotes(&amp;Q)…</translation>
 </message>
 <message>
 <source>Post questions, feature requests or problems with the help of the issue assistant</source>
@@ -1967,11 +1967,11 @@
 </message>
 <message>
 <source>Show &amp;Todo List</source>
-<translation>显示 Todo 列表(&amp;T)</translation>
+<translation>显示 Todo 清单(&amp;T)</translation>
 </message>
 <message>
 <source>&amp;Export note as PDF (preview)</source>
-<translation>将笔记导出为PDF（预览）（&amp;E）</translation>
+<translation>将笔记导出为 PDF（预览）(&amp;E)</translation>
 </message>
 <message>
 <source>Export note as PDF (preview)</source>
@@ -1979,7 +1979,7 @@
 </message>
 <message>
 <source>&amp;Export note as PDF (text)</source>
-<translation>导出PDF（文本格式笔记）(&amp;E)</translation>
+<translation>导出 PDF（文本格式笔记）(&amp;E)</translation>
 </message>
 <message>
 <source>&amp;Print note (text)</source>
@@ -1995,7 +1995,7 @@
 </message>
 <message>
 <source>Show &amp;changelog</source>
-<translation>显示软件改进 Changelog(&amp;C)</translation>
+<translation>显示更新日志(&amp;C)</translation>
 </message>
 <message>
 <source>&amp;Encrypt note</source>
@@ -2055,7 +2055,7 @@
 </message>
 <message>
 <source>Paste images, notes and html from the clipboard</source>
-<translation>从剪贴板中粘贴图像、 注释和 html</translation>
+<translation>从剪贴板中粘贴图像、笔记和 html</translation>
 </message>
 <message>
 <source>Show note in &amp;file manager</source>
@@ -2115,7 +2115,7 @@
 </message>
 <message>
 <source>Open the Telegram group</source>
-<translation>打开电报组</translation>
+<translation>打开 Telegram 组</translation>
 </message>
 <message>
 <source>Open the QOwnNotes Matrix (Element) room</source>
@@ -2128,11 +2128,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>重新停靠浮动面板</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>重新停靠所有浮动面板</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2180,11 +2180,11 @@
 </message>
 <message>
 <source>Delete word</source>
-<translation>删除单词</translation>
+<translation>删除字符</translation>
 </message>
 <message>
 <source>Copy note headline</source>
-<translation>复制记事标题</translation>
+<translation>复制笔记标题</translation>
 </message>
 <message>
 <source>Open note in different window</source>
@@ -2204,15 +2204,15 @@
 </message>
 <message>
 <source>Show note git versions</source>
-<translation>显示笔记 git 版本</translation>
+<translation>显示笔记的 git 版本</translation>
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>在外部显示笔记的 git 版本</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
-<translation>在脚本库中查找脚本</translation>
+<translation>在脚本仓库中查找脚本</translation>
 </message>
 <message>
 <source>Script settings</source>
@@ -2280,7 +2280,7 @@
 </message>
 <message>
 <source>Custom</source>
-<translation>子定义</translation>
+<translation>自定义</translation>
 </message>
 <message>
 <source>5</source>
@@ -2320,7 +2320,7 @@
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation>插入笔记链接</translation>
+<translation>插入笔记链接(&amp;N)</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
@@ -2336,11 +2336,11 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation>加载待办事项列表(&amp;L)</translation>
+<translation>加载 Todo 清单(&amp;L)</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>插入 Nextcloud Deck 卡片链接</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
@@ -2364,23 +2364,23 @@
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>启用 AI 支持</translation>
 </message>
 <message>
 <source>Manage Nextcloud Deck cards</source>
-<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+<translation>管理 Nextcloud Deck 卡片</translation>
 </message>
 <message>
 <source>Ctrl+Alt+D</source>
-<translation type="unfinished">Ctrl+Alt+D</translation>
+<translation>Ctrl+Alt+D</translation>
 </message>
 <message>
 <source>Send clipboard</source>
-<translation type="unfinished">Send clipboard</translation>
+<translation>发送到剪贴板</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>将剪贴板内容作为文本发送</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2428,7 +2428,7 @@
 </message>
 <message>
 <source>&amp;Print note (preview)</source>
-<translation>打印便笺（预览）(&amp;P)</translation>
+<translation>打印笔记（预览）(&amp;P)</translation>
 </message>
 <message>
 <source>&amp;Export note as Markdown file</source>
@@ -2444,11 +2444,11 @@
 </message>
 <message>
 <source>Insert headline from note filename</source>
-<translation>插入笔记名称为标题</translation>
+<translation>插入笔记文件名为标题</translation>
 </message>
 <message>
 <source>Use softwrap in note editor and preview</source>
-<translation>在笔记编辑器和预览使用软换行</translation>
+<translation>在笔记编辑器和预览使用自动换行</translation>
 </message>
 <message>
 <source>Show status bar</source>
@@ -2460,7 +2460,7 @@
 </message>
 <message>
 <source>Markdown cheatsheet</source>
-<translation>Markdown 说明</translation>
+<translation>Markdown 语法速查表</translation>
 </message>
 <message>
 <source>Strike out text</source>
@@ -2488,7 +2488,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>在所有标签/子文件夹中的笔记内查找文本</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2496,7 +2496,7 @@
 </message>
 <message>
 <source>Note was removed externally!</source>
-<translation>笔记已被删除!</translation>
+<translation>笔记已被删除！</translation>
 </message>
 <message>
 <source>Current note was removed outside of this application!
@@ -2531,7 +2531,7 @@ Restore current note?</source>
 </message>
 <message>
 <source>Could not remove duplicate conflicted database: %1</source>
-<translation>无法删除重复的冲突数据库： %1</translation>
+<translation>无法删除重复的冲突数据库：%1</translation>
 </message>
 <message>
 <source>Removed merged conflicted database: %1</source>
@@ -2561,7 +2561,7 @@ Restore current note?</source>
 </message>
 <message>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
-<translation>你必须选择你的ownCloud笔记文件夹，以使本软件的工作正常！</translation>
+<translation>你必须选择你的 ownCloud 笔记文件夹，以使本软件的工作正常！</translation>
 </message>
 <message>
 <source>&amp;Retry</source>
@@ -2585,22 +2585,24 @@ Restore current note?</source>
 </message>
 <message>
 <source>Note can't be decrypted!</source>
-<translation>注意无法被解密 ！</translation>
+<translation>注意无法被解密！</translation>
 </message>
 <message>
 <source>It seems that your password is not valid!</source>
-<translation>密码似乎无效 ！</translation>
+<translation>密码似乎无效！</translation>
 </message>
 <message>
 <source>Remove selected notes</source>
-<translation>删除所选的笔记</translation>
+<translation>删除选中的笔记</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
 <translation>
-<numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 所选择的笔记？ 如果你 ownCloud 服务器上启用了回收站，你可以从服务器还原它们。</numerusform>
+<numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 所选择的笔记？
+
+如果你在 ownCloud 服务器上启用了回收站，你可以从服务器还原它们。</numerusform>
 </translation>
 </message>
 <message>
@@ -2620,7 +2622,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>移动%n个选定的笔记到 &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>移动%n个选定的笔记到 &lt;strong&gt;%2&lt;/strong&gt;？</numerusform>
 </translation>
 </message>
 <message>
@@ -2630,7 +2632,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>复制%n个选定的笔记到 &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>复制%n个选定的笔记到 &lt;strong&gt;%2&lt;/strong&gt;？</numerusform>
 </translation>
 </message>
 <message>
@@ -2650,7 +2652,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>使用&lt;strong&gt;%2&lt;/strong&gt;标记%n个所选笔记?</numerusform>
+<numerusform>使用&lt;strong&gt;%2&lt;/strong&gt;标记%n个所选笔记？</numerusform>
 </translation>
 </message>
 <message>
@@ -2659,7 +2661,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
-<translation>您可能需要重启程序以便更改生效.</translation>
+<translation>您可能需要重启程序以便更改生效。</translation>
 </message>
 <message>
 <source>Restart</source>
@@ -2671,22 +2673,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Todo lists disabled!</source>
-<translation>待办事项列表已禁用！</translation>
+<translation>Todo 清单已禁用！</translation>
 </message>
 <message>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-<translation>您已禁用待办事项列表。&lt;br /&gt;请检查设置中的&lt;strong&gt;待办事项&lt;/strong&gt;配置！</translation>
+<translation>您已禁用待办事项清单。&lt;br/&gt;请检查设置中的&lt;strong&gt;待办事项&lt;/strong&gt;配置！</translation>
 </message>
 <message numerus="yes">
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
-<numerusform>发现任何 &lt;strong&gt;%1&lt;/strong&gt; 出现  &lt;strong&gt;%n&lt;/strong&gt; 次</numerusform>
+<numerusform>在&lt;strong&gt;%1&lt;/strong&gt;中找到了&lt;strong&gt;%n&lt;/strong&gt;个匹配项</numerusform>
 </translation>
 </message>
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>笔记</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -2702,24 +2704,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>File extension</source>
-<translation type="unfinished">File extension</translation>
+<translation>文件扩展名</translation>
 </message>
 <message>
 <source>Extension of file attachment:</source>
-<translation type="unfinished">Extension of file attachment:</translation>
+<translation>文件附件扩展名：</translation>
 </message>
 <message>
 <source>File base name</source>
-<translation type="unfinished">File base name</translation>
+<translation>文件主名</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation type="unfinished">Base name of file attachment:</translation>
+<translation>文件附件的主名：</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
 <comment>Leave the base name empty for automatic name</comment>
-<translation type="unfinished">Leave empty for automatic name</translation>
+<translation>留空以自动命名</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2727,7 +2729,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>你的笔记将会被解密并再次保存为纯文本格式。请注意，未加密的笔记可能会与服务器同步，从而泄露您的敏感信息。&lt;br /&gt;您确定要解密笔记？</translation>
+<translation>你的笔记将会被解密并再次保存为纯文本格式。请注意，未加密的笔记可能会与服务器同步，从而泄露您的敏感信息。&lt;br/&gt;您确定要解密笔记？</translation>
 </message>
 <message>
 <source>Markdown files</source>
@@ -2747,7 +2749,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Jumped to bookmark position at slot %1</source>
-<translation>跳到插槽 %1 书签位置</translation>
+<translation>跳到收藏位置 %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2783,59 +2785,59 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>注意：文件夹不存在！</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>注意：路径为&lt;b&gt;%2&lt;/b&gt;的文件夹&lt;b&gt;%1&lt;/b&gt;已不存在！</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>在 Nextcloud Files 中打开笔记</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>在 Nextcloud Notes 中打开笔记</translation>
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>拆分笔记</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>在当前光标位置拆分笔记？光标后的文本将移至新笔记。新笔记将与原笔记建立关联。</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>行 %1，列 %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>行 %1，列 %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n 被选中</numerusform>
 </translation>
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+<translation>当前笔记文件夹未启用Git支持，是否要在设置中启用该功能？</translation>
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>暂无可用版本</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>此笔记暂无可用版本。</translation>
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>关闭笔记标签页</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -2843,35 +2845,35 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>AI 后端</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>AI 模型</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>AI 后端选择</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>AI 模型选择</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
-<translation type="unfinished">Clipboard sent successfully</translation>
+<translation>剪贴板发送成功</translation>
 </message>
 <message>
 <source>Failed to send clipboard</source>
-<translation type="unfinished">Failed to send clipboard</translation>
+<translation>剪贴板发送失败</translation>
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>剪贴板文本发送成功</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>剪贴板文本发送失败</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -2879,7 +2881,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Downloading %1</source>
-<translation>正在下载%1</translation>
+<translation>正在下载 %1</translation>
 </message>
 <message>
 <source>Reset font size to %1 pt</source>
@@ -2908,7 +2910,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Move tags to…</source>
-<translation>将标签移到…(&amp;M)</translation>
+<translation>将标签移动到…(&amp;M)</translation>
 </message>
 <message>
 <source>Move to the root</source>
@@ -2929,7 +2931,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Open selected notes in tabs</source>
-<translation>在标签页里打开选中笔记</translation>
+<translation>在标签页里打开选中的笔记</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -2941,7 +2943,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-<translation>在脚本存储库中找到了脚本的更新！ 您要更新吗？</translation>
+<translation>在脚本存储库中找到了脚本的更新！您要更新吗？</translation>
 </message>
 <message>
 <source>No script updates were found</source>
@@ -2949,11 +2951,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Toggle note stickiness</source>
-<translation>切换笔记附着性</translation>
+<translation>切换笔记的固定状态</translation>
 </message>
 <message>
 <source>Close other note tabs</source>
-<translation>关闭其他笔记标签页</translation>
+<translation>关闭其它的笔记标签页</translation>
 </message>
 <message>
 <source>Rename note</source>
@@ -2967,7 +2969,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation>粘贴 HTML 为 Markdown (&amp;H)</translation>
+<translation>粘贴 HTML 为 Markdown(&amp;H)</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -2983,7 +2985,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Move notes to…</source>
-<translation>将笔记移到…(&amp;M)</translation>
+<translation>将笔记移动到…(&amp;M)</translation>
 </message>
 <message>
 <source>&amp;Copy notes to…</source>
@@ -2991,7 +2993,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Move notes to subfolder…</source>
-<translation>将笔记移至子文件夹…</translation>
+<translation>将笔记移动到子文件夹…</translation>
 </message>
 <message>
 <source>Copy notes to subfolder…</source>
@@ -2999,7 +3001,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>&amp;Tag selected notes with…</source>
-<translation>用... 标记所选笔记（&amp;T）</translation>
+<translation>将选中的笔记标记为…(&amp;T)</translation>
 </message>
 <message>
 <source>&amp;Remove tag from selected notes…</source>
@@ -3011,7 +3013,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note renaming not enabled!</source>
-<translation>注意：没有启用重命名 ！</translation>
+<translation>注意：没有启用重命名！</translation>
 </message>
 <message>
 <source>Create new workspace</source>
@@ -3019,7 +3021,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Workspace name:</source>
-<translation>工作区名称︰</translation>
+<translation>工作区名称：</translation>
 </message>
 <message>
 <source>full</source>
@@ -3041,18 +3043,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>正在从您的本地 git 仓库中获取 %n 个最近的笔记版本</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>从Git中获取笔记版本的工作已完成</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>笔记： %1 最新的 git 版本 %n</numerusform>
 </translation>
 </message>
 <message>
@@ -3089,7 +3091,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Characters:</source>
-<translation>字符:</translation>
+<translation>字符：</translation>
 </message>
 <message numerus="yes">
 <source>%n notes selected</source>
@@ -3112,22 +3114,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
-<numerusform>从 %n 个选定的笔记移除标签&lt;strong&gt;%1&lt;/strong&gt; ?</numerusform>
+<numerusform>从 %n 个选定的笔记移除标签 &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
-<numerusform>标签&lt;strong&gt;%1&lt;/strong&gt;已从%n个笔记中移除</numerusform>
+<numerusform>标签 &lt;strong&gt;%1&lt;/strong&gt; 已从 %n 个笔记中移除</numerusform>
 </translation>
 </message>
 <message>
 <source>Current notes folder: </source>
-<translation>当前笔记目录: </translation>
+<translation>当前笔记目录： </translation>
 </message>
 <message>
 <source>Set the notes folder. Current notes folder: </source>
-<translation>设置笔记目录。当前笔记目录︰ </translation>
+<translation>设置笔记目录。当前笔记目录： </translation>
 </message>
 <message>
 <source>Print note</source>
@@ -3151,7 +3153,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Orientation:</source>
-<translation>方向:</translation>
+<translation>方向：</translation>
 </message>
 <message>
 <source>Export current note as PDF</source>
@@ -3159,7 +3161,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-<translation>未选择任何todo列表，&lt;br/&gt;请检查设置中的&lt;strong&gt;Todo&lt;/strong&gt;配置 ！</translation>
+<translation>未选择任何待办事项清单，&lt;br/&gt;请检查设置中的 &lt;strong&gt;待办事项&lt;/strong&gt; 配置！</translation>
 </message>
 <message>
 <source>Open QOwnNotes</source>
@@ -3171,11 +3173,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Recent notes</source>
-<translation>近期的笔记</translation>
+<translation>最近的笔记</translation>
 </message>
 <message>
 <source>Show todo lists</source>
-<translation>显示 Todo 列表</translation>
+<translation>显示待办事项清单</translation>
 </message>
 <message>
 <source>Recent tasks</source>
@@ -3243,7 +3245,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>如果您想要重命名笔记，您必须启用该选项，才能修改笔记的文件名（默认为笔记首行内容）。</translation>
+<translation>笔记文件名默认为首行内容，如需重命名请启用设置项：允许笔记文件名与标题不同。</translation>
 </message>
 <message>
 <source>Create a new folder</source>
@@ -3251,7 +3253,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Folder name:</source>
-<translation>文件夹名称︰</translation>
+<translation>文件夹名称：</translation>
 </message>
 <message>
 <source>show all untagged notes (%1)</source>
@@ -3263,11 +3265,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Export current note as HTML file</source>
-<translation>导出当前笔记为HTML文件</translation>
+<translation>导出当前笔记为 HTML 文件</translation>
 </message>
 <message>
 <source>Page size</source>
-<translation>页面大小︰</translation>
+<translation>页面大小</translation>
 </message>
 <message>
 <source>quit toolbar</source>
@@ -3275,11 +3277,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Page size:</source>
-<translation>页面大小︰</translation>
+<translation>页面大小：</translation>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes 会记录匿名使用数据, 帮助分析出 QOwnNotes 接下来的改进方向和发现问题. 你可以在偏好设定中关闭这一功能.</translation>
+<translation>QOwnNotes 会记录匿名使用数据，帮助分析出 QOwnNotes 接下来的改进方向和发现问题。你可以在设置中关闭这一功能。</translation>
 </message>
 <message>
 <source>&amp;Ok</source>
@@ -3303,7 +3305,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note was modified externally: %1</source>
-<translation>笔记已被外部修改: %1</translation>
+<translation>笔记已被外部修改： %1</translation>
 </message>
 <message>
 <source>Notes directory was modified externally</source>
@@ -3325,7 +3327,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Tag could not be created!</source>
-<translation>无法创建标签!</translation>
+<translation>无法创建标签！</translation>
 </message>
 <message>
 <source>Move to this tag</source>
@@ -3333,7 +3335,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Tag this</source>
-<translation>追加这个标签</translation>
+<translation>使用本标签标记</translation>
 </message>
 <message>
 <source>Cannot move tag '%1' to this tag</source>
@@ -3349,7 +3351,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>No selected todo lists!</source>
-<translation>没有选定的待办事项列表 ！</translation>
+<translation>没有选定的待办事项清单！</translation>
 </message>
 <message>
 <source>Action not found!</source>
@@ -3357,7 +3359,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation>无法找到菜单动作&lt;code&gt;%1&lt;/code&gt;! 拼写是否正确？</translation>
+<translation>无法找到菜单动作&lt;code&gt;%1&lt;/code&gt;！拼写是否正确？</translation>
 </message>
 <message>
 <source>Subfolders</source>
@@ -3389,7 +3391,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>笔记关系</translation>
 </message>
 <message>
 <source>Log</source>
@@ -3413,7 +3415,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>AI 工具栏</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3449,11 +3451,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Overwriting external changes of: %1</source>
-<translation>覆盖外部更改: %1</translation>
+<translation>覆盖外部更改： %1</translation>
 </message>
 <message>
 <source>Loading external changes from: %1</source>
-<translation>加载外部更改: %1</translation>
+<translation>加载外部更改： %1</translation>
 </message>
 <message>
 <source>Current note could not be stored to disk</source>
@@ -3477,18 +3479,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>等待 AI 的回答</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
-<numerusform>继续自动删除 &lt;strong&gt;％n&lt;/ strong&gt; 个冲突的数据库副本？ 这可能会阻止您的 ownCloud同步过程。</numerusform>
+<numerusform>是否继续自动删除可能阻塞 ownCloud 同步进程的 &lt;strong&gt;%n&lt;/strong&gt; 个冲突数据库副本？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n个笔记被标记为"%2"</numerusform>
+<numerusform>%n 个笔记被标记为 "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3499,11 +3501,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note headline</source>
-<translation>备注标题</translation>
+<translation>笔记标题</translation>
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
-<translation>粘贴为文本附件文件</translation>
+<translation>粘贴为文本附件文件(&amp;T)</translation>
 </message>
 <message>
 <source>Downloading images finished</source>
@@ -3535,7 +3537,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Export current note as Markdown file</source>
-<translation>导出当前笔记为Markdown 文件</translation>
+<translation>导出当前笔记为 Markdown 文件</translation>
 </message>
 </context>
 <context>
@@ -3549,63 +3551,63 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
-<translation type="unfinished">-10min</translation>
+<translation>-10分钟</translation>
 </message>
 <message>
 <source>+10min</source>
-<translation type="unfinished">+10min</translation>
+<translation>+10分钟</translation>
 </message>
 <message>
 <source>+1d</source>
-<translation type="unfinished">+1d</translation>
+<translation>+1d</translation>
 </message>
 <message>
 <source>-1d</source>
-<translation type="unfinished">-1d</translation>
+<translation>-1d</translation>
 </message>
 <message>
 <source>Archive card</source>
-<translation type="unfinished">Archive card</translation>
+<translation>存档卡片</translation>
 </message>
 <message>
 <source>Archive</source>
-<translation type="unfinished">Archive</translation>
+<translation>存档</translation>
 </message>
 <message>
 <source>Delete card</source>
-<translation type="unfinished">Delete card</translation>
+<translation>删除卡片</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>删除</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>这对于子项无效，因为它们可能会被父项隐藏！</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>仅显示今天到期的事项</translation>
 </message>
 <message>
 <source>Summary</source>
-<translation type="unfinished">Summary</translation>
+<translation>摘要</translation>
 </message>
 <message>
 <source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
+<translation>从服务器重新加载卡片项目列表</translation>
 </message>
 <message>
 <source>Reload…</source>
-<translation type="unfinished">Reload…</translation>
+<translation>重新加载…</translation>
 </message>
 <message>
 <source>Search or create card</source>
-<translation type="unfinished">Search or create card</translation>
+<translation>搜索或创建卡片</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>创建卡片并将链接插入当前笔记</translation>
 </message>
 <message>
 <source>&amp;Save</source>
@@ -3613,126 +3615,126 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>+1h</source>
-<translation type="unfinished">+1h</translation>
+<translation>+1小时</translation>
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>标题</translation>
 </message>
 <message>
 <source>-1h</source>
-<translation type="unfinished">-1h</translation>
+<translation>-1小时</translation>
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>备注：</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>截止日期</translation>
 </message>
 <message>
 <source>Manage Nextcloud Deck Cards</source>
-<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+<translation>管理 Nextcloud Deck 卡片</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation type="unfinished">Save and insert into note</translation>
+<translation>保存并插入到笔记中</translation>
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
-<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+<translation>保存当前卡片条目，并将链接插入当前笔记中</translation>
 </message>
 <message>
 <source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
+<translation>从服务器重新加载</translation>
 </message>
 <message>
 <source>Reload cards from server</source>
-<translation type="unfinished">Reload cards from server</translation>
+<translation>从服务器重新加载卡片</translation>
 </message>
 <message>
 <source>No due date</source>
-<translation type="unfinished">No due date</translation>
+<translation>无截止日期</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+<translation>您是否要删除当前的 Nextcloud Deck 卡片？</translation>
 </message>
 <message>
 <source>Do you want to archive the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+<translation>您是否要归档当前的 Nextcloud Deck 卡片？</translation>
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>打开卡片到浏览器(&amp;O)</translation>
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>在笔记中添加卡片链接(&amp;A)</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>在笔记中查找卡片链接(&amp;S)</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>updating</source>
-<translation type="unfinished">updating</translation>
+<translation>更新中</translation>
 </message>
 <message>
 <source>creating</source>
-<translation type="unfinished">creating</translation>
+<translation>创建中</translation>
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>更新卡片时出错</translation>
 </message>
 <message>
 <source>Updating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
+<translation>更新卡片失败，状态代码为 %1，错误信息： %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>创建卡片时出错</translation>
 </message>
 <message>
 <source>Creating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
+<translation>创建卡片失败，状态码为 %1，错误信息： %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
-<translation type="unfinished">Error while archiving card</translation>
+<translation>存档卡片时出错</translation>
 </message>
 <message>
 <source>Archiving the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+<translation>存档卡片失败，状态代码为 %2，错误信息为： %3</translation>
 </message>
 <message>
 <source>Error while deleting card</source>
-<translation type="unfinished">Error while deleting card</translation>
+<translation>删除卡片时出错</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
+<translation>删除卡片失败，状态代码为 %2，错误信息为： %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>加载看板时出错</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>加载看板失败，状态代码为 %1，错误信息为： %2</translation>
 </message>
 <message>
 <source>Error while loading cards</source>
-<translation type="unfinished">Error while loading cards</translation>
+<translation>加载卡片时出错</translation>
 </message>
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+<translation>加载卡片失败，状态代码为 %1，错误信息为： %2</translation>
 </message>
 </context>
 <context>
@@ -3758,11 +3760,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>The current note was modified outside of this application!</source>
-<translation>这篇笔记在其他程序里被修改了!</translation>
+<translation>这篇笔记在其他程序里被修改了！</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation>差异:</translation>
+<translation>差异：</translation>
 </message>
 <message>
 <source>Always accept external changes in the future</source>
@@ -3789,23 +3791,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>笔记的相对路径，右键点击可打开上下文菜单</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>笔记的绝对路径，右键点击可打开上下文菜单</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>复制笔记的绝对路径</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>复制笔记子文件夹的绝对路径</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>复制笔记文件夹的绝对路径</translation>
 </message>
 </context>
 <context>
@@ -3848,7 +3850,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>在文件夹 '%1' 中显示笔记 (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -3889,14 +3891,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>超时，正在等待 AI 响应</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>AI 系统已被禁用。请在主菜单或 AI 工具栏中启用。</translation>
 </message>
 </context>
 <context>
@@ -3915,7 +3917,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your calendar username or password is incorrect!</source>
-<translation>你的日历的用户名或密码不正确!</translation>
+<translation>你的日历的用户名或密码不正确！</translation>
 </message>
 <message>
 <source>ok</source>
@@ -3951,19 +3953,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>请考虑更新您服务器上的 QOwnNotesAPI 。当前版本 %1 太低，可能无法使 QOwnNotes 正常运作。</translation>
+<translation>请考虑更新您服务器上的 QOwnNotesAPI。当前版本 %1 太低，可能无法使 QOwnNotes 正常运作。</translation>
 </message>
 <message>
 <source>ownCloud server connection error</source>
-<translation>ownCloud服务器连接错误</translation>
+<translation>ownCloud 服务器连接错误</translation>
 </message>
 <message>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-<translation>ownCloud 服务器错误: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;请检查你的ownCloud配置。</translation>
+<translation>ownCloud 服务器错误： &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;请检查你的ownCloud配置。</translation>
 </message>
 <message>
 <source>You need to setup your ownCloud server!</source>
-<translation>您需要设置你的ownCloud服务器！</translation>
+<translation>您需要设置你的 ownCloud 服务器！</translation>
 </message>
 <message>
 <source>Open &amp;settings</source>
@@ -3999,15 +4001,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Error while loading todo lists!</source>
-<translation>加载 todo列表时出现错误！</translation>
+<translation>加载待办事项清单时出现错误！</translation>
 </message>
 <message>
 <source>Your CalDAV server didn't reply anything!</source>
-<translation>您的 CalDAV 服务器没有任何应答 ！</translation>
+<translation>您的 CalDAV 服务器没有任何应答！</translation>
 </message>
 <message>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>你的 CalDAV 服务器的错误消息︰&lt;strong&gt;%1&lt;/strong&gt;</translation>
+<translation>你的 CalDAV 服务器的错误消息： &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
 <source>No bookmarks</source>
@@ -4026,7 +4028,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Enter your password:</source>
-<translation>输入密码:</translation>
+<translation>输入密码：</translation>
 </message>
 <message>
 <source>Password</source>
@@ -4034,11 +4036,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Re-enter password</source>
-<translation>再输入一次密码以确认</translation>
+<translation>请再次输入密码以确认</translation>
 </message>
 <message>
 <source>Passwords don't match!</source>
-<translation>两次输入的密码必须一致!</translation>
+<translation>两次输入的密码必须一致！</translation>
 </message>
 </context>
 <context>
@@ -4070,12 +4072,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>默认</translation>
 </message>
 <message>
+<source>Note file was modified externally</source>
+<translation type="unfinished">Note file was modified externally</translation>
+</message>
+<message>
+<source>The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</source>
+<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</translation>
+</message>
+<message>
 <source>Could not store note file: %1 - Error message: %2</source>
-<translation>无法存储笔记文件: %1 - 错误消息: %2</translation>
+<translation>无法存储笔记文件： %1 - 错误消息： %2</translation>
 </message>
 <message>
 <source>Renamed note-file was removed: %1</source>
-<translation>重命名的笔记文件已经被删除: %1</translation>
+<translation>重命名的笔记文件已经被删除： %1</translation>
 </message>
 <message>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
@@ -4087,7 +4107,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Could not read image file: %1</source>
-<translation>无法读取图像文件: %1</translation>
+<translation>无法读取图像文件： %1</translation>
 </message>
 <message>
 <source>Note file path changed</source>
@@ -4096,18 +4116,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
-<numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;%2&lt;/strong&gt; 替换所有出现的&lt;strong&gt;%1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;%n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;%4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;%3&lt;/strong&gt; 的链接 ？</numerusform>
+<numerusform>检测到笔记路径已更改。您是否要用 &lt;strong&gt;%2&lt;/strong&gt; 替换所有出现的&lt;strong&gt;%1&lt;/strong&gt; 链接，并在 &lt;strong&gt;%n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;%4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;%3&lt;/strong&gt; 的链接？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>检测到笔记路径变更。是否替换所有指向 &lt;strong&gt;%n&lt;/strong&gt; 笔记文件的外部链接？</numerusform>
 </translation>
 </message>
 <message>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>图像文件已存在</translation>
 </message>
 <message>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
@@ -4116,7 +4136,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>…and %n more note(s)</source>
 <translation>
-<numerusform>…以及 ％n 个笔记</numerusform>
+<numerusform>…以及 %n 个笔记</numerusform>
 </translation>
 </message>
 <message>
@@ -4129,27 +4149,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Don't ask again!</source>
-<translation>不再询问</translation>
+<translation>不再询问！</translation>
 </message>
 <message>
 <source>Don't show again!</source>
-<translation>不再显示</translation>
+<translation>不再显示！</translation>
 </message>
 <message>
 <source>Double-click to unstick note from tab</source>
-<translation>双击从标签页中取消笔记附着</translation>
+<translation>双击取消固定笔记标签页</translation>
 </message>
 <message>
 <source>Double-click to stick note to tab</source>
-<translation>双击将笔记附着至标签页</translation>
+<translation>双击固定笔记到标签页</translation>
 </message>
 <message>
 <source>&lt;br /&gt;path: %1</source>
-<translation>&lt;br /&gt;路径: %1</translation>
+<translation>&lt;br/&gt;路径： %1</translation>
 </message>
 <message>
 <source>Dark mode detected</source>
-<translation>检测到暗色模式</translation>
+<translation>检测到深色模式</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4157,23 +4177,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>当前 Windows 系统似乎处于亮色模式，需要关闭 QOwnNotes 的深色模式吗？</translation>
+<translation>当前 Windows 系统似乎处于浅色模式，需要关闭 QOwnNotes 的深色模式吗？</translation>
 </message>
 <message>
 <source>Light mode detected</source>
-<translation>检测到亮色模式</translation>
+<translation>检测到浅色模式</translation>
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;最后修改时间： %2&lt;br/&gt;文件大小： %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation>您的 Linux 系统似乎使用暗模式。 您还想在 QOwnNotes 中打开暗模式吗？</translation>
+<translation>您的 Linux 系统似乎使用深色模式。 您还想在 QOwnNotes 中打开深色模式吗？</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation>您的 Linux 系统似乎使用了 light 模式。 您还想在 QOwnNotes 中关闭暗模式吗？</translation>
+<translation>您的 Linux 系统似乎使用了浅色模式。 您还想在 QOwnNotes 中关闭深色模式吗？</translation>
 </message>
 <message>
 <source>Panel disabled</source>
@@ -4213,7 +4233,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>您的笔记文件夹 &lt;b&gt;%1&lt;/b&gt; 已不存在！是否选择新的文件夹？</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4225,11 +4245,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-<translation>无法创建名称为&lt;b&gt;%1&lt;/b&gt;的文件夹，因为该文件夹在应用程序内部使用！</translation>
+<translation>无法创建名称为 &lt;b&gt;%1&lt;/b&gt; 的文件夹，因为该文件夹在应用程序内部使用！</translation>
 </message>
 <message>
 <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-<translation>无法创建名称为&lt;b&gt;%1&lt;/b&gt;的文件夹，因为该文件夹位于忽略的子文件夹列表中！ 您可以在&lt;i&gt;面板设置&lt;/i&gt;中进行更改。</translation>
+<translation>无法创建名称为 &lt;b&gt;%1&lt;/b&gt; 的文件夹，因为该文件夹位于忽略的子文件夹列表中！您可以在 &lt;i&gt;面板设置&lt;/i&gt; 中进行更改。</translation>
 </message>
 <message>
 <source>File name changed</source>
@@ -4257,11 +4277,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
-<translation>Nextcloud 登录 flow v2 无法初始化。请确认服务器 url 正确并且是一个 Nextcloud 服务器!&lt;br /&gt;&lt;br /&gt;如果仍然有问题，请在你的服务器管理页面创建一个应用密码。</translation>
+<translation>Nextcloud 登录 flow v2 无法初始化。请确认服务器 url 正确并且是一个 Nextcloud 服务器！&lt;br/&gt;&lt;br/&gt;如果仍然有问题，请在你的服务器管理页面创建一个应用密码。</translation>
 </message>
 <message>
 <source>Could not parse login url!</source>
-<translation>无法解析登录 url!</translation>
+<translation>无法解析登录 url！</translation>
 </message>
 <message>
 <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
@@ -4273,7 +4293,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation>无法找到笔记。&lt;br /&gt;未能在指定的位置自动创建笔记，因为当前笔记文件夹是禁用子文件夹内的。</translation>
+<translation>无法找到笔记。&lt;br/&gt;未能在指定的位置自动创建笔记，因为当前笔记文件夹是禁用子文件夹内的。</translation>
 </message>
 <message>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
@@ -4293,23 +4313,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>双击打开笔记</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Nextcloud Deck 支持已禁用！</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Nextcloud Deck 支持未启用或设置无效。&lt;br/&gt;请在设置中检查您的 &lt;strong&gt;Nextcloud&lt;/strong&gt; 配置！</translation>
 </message>
 <message>
 <source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
+<translation>打开设置(&amp;S)</translation>
 </message>
 <message>
 <source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
+<translation>取消(&amp;C)</translation>
 </message>
 </context>
 <context>
@@ -4332,7 +4352,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Result for equation: %1 = %2</source>
-<translation>公式的结果：%1=%2</translation>
+<translation>公式的结果：%1 = %2</translation>
 </message>
 <message>
 <source>&amp;Link selected text</source>
@@ -4345,11 +4365,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
-<translation>阻止 &amp;quote 选定的文本</translation>
+<translation>块引用选定文本(&amp;Q)</translation>
 </message>
 <message>
 <source>Insert block &amp;quote</source>
-<translation>插入块引用</translation>
+<translation>插入块引用(&amp;Q)</translation>
 </message>
 <message>
 <source>Copy code block</source>
@@ -4365,7 +4385,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Print selected text (preview)</source>
-<translation>打印所选文字（预览）</translation>
+<translation>打印选定的文本（预览）</translation>
 </message>
 <message>
 <source>Export</source>
@@ -4373,11 +4393,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Export selected text as PDF</source>
-<translation>导出选定的文字为 PDF</translation>
+<translation>导出选定的文本为 PDF</translation>
 </message>
 <message>
 <source>Export selected text as PDF (preview)</source>
-<translation>导出选定的文字为 PDF（预览）</translation>
+<translation>导出选定的文本为 PDF（预览）</translation>
 </message>
 <message>
 <source>Custom actions</source>
@@ -4404,7 +4424,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <name>QPlainTextEditSearchWidget</name>
 <message>
 <source>Find:</source>
-<translation>查找︰</translation>
+<translation>查找：</translation>
 </message>
 <message>
 <source>Advanced search / replace text</source>
@@ -4432,7 +4452,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Replace:</source>
-<translation>替换︰</translation>
+<translation>替换：</translation>
 </message>
 <message>
 <source>Plain text</source>
@@ -4448,7 +4468,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Replace one text occurrence</source>
-<translation>替换出现的文本一次</translation>
+<translation>逐次替换匹配到的文本</translation>
 </message>
 <message>
 <source>Replace</source>
@@ -4456,7 +4476,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Replace all text occurrences</source>
-<translation>替换所有出现的文本</translation>
+<translation>替换所有匹配到的文本</translation>
 </message>
 <message>
 <source>Replace all</source>
@@ -4464,7 +4484,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Mode:</source>
-<translation>模式︰</translation>
+<translation>模式：</translation>
 </message>
 <message>
 <source>Match case sensitive</source>
@@ -4479,7 +4499,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Find:</source>
-<translation>查找︰</translation>
+<translation>查找：</translation>
 </message>
 <message>
 <source>close search</source>
@@ -4503,7 +4523,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Replace:</source>
-<translation>替换︰</translation>
+<translation>替换：</translation>
 </message>
 <message>
 <source>Plain text</source>
@@ -4527,7 +4547,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Mode:</source>
-<translation>模式︰</translation>
+<translation>模式：</translation>
 </message>
 <message>
 <source>Match case sensitive</source>
@@ -4551,14 +4571,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>无法与文件 ‘%1’ 建立数据库连接。
+文件夹和文件是否具有写入权限？</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>无法与笔记文件夹数据库建立数据库连接以合并 ‘%1’。
+文件夹和文件是否具有写入权限？</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4661,12 +4681,12 @@ Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>Platform not supported!</source>
-<translation>不支持的平台 ！</translation>
+<translation>不支持的平台！</translation>
 </message>
 <message>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-<translation>您的平台不支持此脚本 ！
+<translation>您的平台不支持此脚本！
 无论如何也要安装它吗？</translation>
 </message>
 <message>
@@ -4679,7 +4699,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-<translation>请记得更新 QOwnNotes 以支持该脚本运行 ！</translation>
+<translation>请记得更新 QOwnNotes 以支持该脚本运行！</translation>
 </message>
 <message>
 <source>Install successful</source>
@@ -4687,7 +4707,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>The script was successfully installed!</source>
-<translation>脚本安装成功!</translation>
+<translation>脚本安装成功！</translation>
 </message>
 <message>
 <source>Download failed</source>
@@ -4695,7 +4715,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>The script could not be downloaded!</source>
-<translation>无法下载该脚本!</translation>
+<translation>无法下载该脚本！</translation>
 </message>
 </context>
 <context>
@@ -4706,11 +4726,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Please select a directory</source>
-<translation>请选择一个目录</translation>
+<translation>请选择目录</translation>
 </message>
 <message>
 <source>Please select a file</source>
-<translation>请选择一个文件</translation>
+<translation>请选择文件</translation>
 </message>
 </context>
 <context>
@@ -4728,12 +4748,12 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>%v of %m bookmark(s) imported</source>
-<translation>已导入 ％m 个书签中的 ％v 个</translation>
+<translation>已导入 %m 个收藏中的 %v 个</translation>
 </message>
 <message numerus="yes">
 <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
 <translation>
-<numerusform>在服务器上找到了&lt;strong&gt;％n 个书签&lt;/strong&gt;</numerusform>
+<numerusform>在服务器上找到了&lt;strong&gt;%n 个收藏&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 </context>
@@ -4741,7 +4761,7 @@ Do you want to install it anyway?</source>
 <name>SettingsDialog</name>
 <message>
 <source>Settings</source>
-<translation>设定</translation>
+<translation>设置</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -4765,7 +4785,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-<translation>在您的 ownCloud 服务器上设置笔记文件夹同步路径.</translation>
+<translation>在您的 ownCloud 服务器上设置笔记文件夹同步路径。</translation>
 </message>
 <message>
 <source>Use as active note folder</source>
@@ -4777,19 +4797,19 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>ownCloud server url:</source>
-<translation>ownCloud 服务器地址:</translation>
+<translation>ownCloud 服务器地址：</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入你的 ownCloud 服务器地址, 例如: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入你的 ownCloud 服务器 url，例如： &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入你的 ownCloud 服务器上的用户名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入你的 ownCloud 服务器上的用户名。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入登录密码.&lt;br/&gt;目前这个密码会以加密形式跟其他设定一起存储, 但不能保证绝对安全.(如果有极私密资料请另外做安全措施)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入登录密码。&lt;br/&gt;目前这个密码会以加密形式跟其他设定一起存储，但不能保证绝对安全。(如果有极私密资料请另外做安全措施)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>connection to web server</source>
@@ -4813,7 +4833,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击这里测试 ownCloud 服务器连接.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击这里测试 ownCloud 服务器连接。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>versions app enabled on server</source>
@@ -4829,7 +4849,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在浏览器打开你的 ownCloud 服务器 &lt;span style=" font-weight:600;"&gt;设定&lt;/span&gt; 页面以安装或更新 QOwnNotesAPI 并激活核心功能: &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; 和 &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在浏览器打开你的 ownCloud 服务器中的 &lt;span style=" font-weight:600;"&gt;设定&lt;/span&gt; 页面，以安装或更新 QOwnNotesAPI 并激活核心功能：&lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; 和 &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>path</source>
@@ -4901,7 +4921,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Interface</source>
-<translation>外观</translation>
+<translation>界面</translation>
 </message>
 <message>
 <source>Other CalDAV server</source>
@@ -4925,7 +4945,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>You need to restart the application to let this setting take effect</source>
-<translation>您可能需要重新启动应用程序以使更改生效.</translation>
+<translation>您可能需要重新启动应用程序以使更改生效</translation>
 </message>
 <message>
 <source>Item sizes in the main window</source>
@@ -4957,11 +4977,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Default font:</source>
-<translation>默认字体︰</translation>
+<translation>默认字体：</translation>
 </message>
 <message>
 <source>Code font:</source>
-<translation>代码字体︰</translation>
+<translation>代码字体：</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>
@@ -4969,7 +4989,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Do this at your own risk!</source>
-<translation>这样做风险由你自己承担 ！</translation>
+<translation>这样做风险由你自己承担！</translation>
 </message>
 <message>
 <source>Ignore all external note folder changes</source>
@@ -5021,7 +5041,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Disable heartbeat</source>
-<translation>禁用心跳包</translation>
+<translation>禁用周期性状态监测功能</translation>
 </message>
 <message>
 <source>Russian</source>
@@ -5029,15 +5049,15 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;你可以在&lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;申请免费的 SSL 证书 。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;你可以在&lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;申请免费的 SSL 证书。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
-<translation>重启后生效 Restart the application for the changes to take action.</translation>
+<translation>如果您更改了语言，需要重新启动应用程序才能使更改生效。</translation>
 </message>
 <message>
 <source>You need to reload the scripting engine if you modify a script file</source>
-<translation>修改的脚本文件需重新加载脚本引擎</translation>
+<translation>修改脚本文件后，需重新加载脚本引擎</translation>
 </message>
 <message>
 <source>Reload scripting engine</source>
@@ -5057,12 +5077,12 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选这个框，你会收到所有外部修改提醒，即使被修改的笔记并不是正在被编辑. 推荐 &lt;span style=" font-style:italic;"&gt;不要勾选&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选这个框，你会收到所有外部修改提醒，即使被修改的笔记并不是正在被编辑。推荐&lt;span style=" font-style:italic;"&gt;不要勾选&lt;/span&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation>如果设定低于 10秒, 在跟旧版 ownCloud 同步时会遇到同步问题. 请先测试, 如果有同步冲突问题请调高这一数值.</translation>
+<translation>如果设定低于10秒，在跟旧版 ownCloud 同步时会遇到同步问题。请先测试，如果有同步冲突问题请调高这一数值。</translation>
 </message>
 <message>
 <source>Japanese</source>
@@ -5082,15 +5102,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Reinitialize Database</source>
-<translation>数据库出厂状态复位</translation>
+<translation>重新初始化数据库</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
-<translation>清除应用程序的数据并退出</translation>
+<translation>清除应用数据并退出</translation>
 </message>
 <message>
 <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-<translation>此按钮允许您清理所有设置,移除本地待办事项数据库和退出 QOwnNotes.</translation>
+<translation>此按钮允许您清除所有设置，移除本地待办事项数据库和退出 QOwnNotes。</translation>
 </message>
 <message>
 <source>Clear app data and exit</source>
@@ -5106,7 +5126,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>path to external editor, leave empty for default</source>
-<translation>外部编辑器的路径,留空为默认</translation>
+<translation>外部编辑器的路径，留空为默认</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -5118,7 +5138,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-<translation>匿名的使用数据能帮助分析出 QOwnNotes 接下来的改进方向和发现问题. 如果你真的无法接受，请关闭这一选项.</translation>
+<translation>匿名的使用数据能帮助分析出 QOwnNotes 接下来的改进方向和发现问题。如果你真的无法接受，请关闭这一选项。</translation>
 </message>
 <message>
 <source>This data includes anonymous information about what features of the app are used.</source>
@@ -5126,11 +5146,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>App heartbeat</source>
-<translation>该程序的心跳包</translation>
+<translation>该程序的周期性状态监测功能</translation>
 </message>
 <message>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-<translation>运行QOwnNotes时会定期发送心跳包，使开发人员高兴知道有人正在使用QOwnNotes。</translation>
+<translation>运行 QOwnNotes 时会定期发送周期性状态监测数据，使开发人员高兴知道有人正在使用 QOwnNotes。</translation>
 </message>
 <message>
 <source>Italian</source>
@@ -5207,23 +5227,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Please select your note folder on your ownCloud server:</source>
-<translation>请从ownCloud 服务器上选择你的笔记文件夹:</translation>
+<translation>请从 ownCloud 服务器上选择你的笔记文件夹：</translation>
 </message>
 <message>
 <source>Path on your ownCloud server:</source>
-<translation>指向你的ownCloud服务器︰</translation>
+<translation>指向你的 ownCloud 服务器：</translation>
 </message>
 <message>
 <source>Name:</source>
-<translation>名称︰</translation>
+<translation>名称：</translation>
 </message>
 <message>
 <source>Note folder path:</source>
-<translation>笔记文件夹路径:</translation>
+<translation>笔记文件夹路径：</translation>
 </message>
 <message>
 <source>You need to have git installed to make this work!</source>
-<translation>要使用这项功能, 你需要安装git.</translation>
+<translation>你需要安装 git 以启用此功能！</translation>
 </message>
 <message>
 <source>Use git to keep a local history of your notes</source>
@@ -5239,7 +5259,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>如果您希望 QOwnNotes 能够访问笔记版本和已回收笔记，请在您的 ownCloud 服务器上安装最新版本的&lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;a href="https://github.com/pbek/qownnotesapi"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;（至低 version QOWNNOTESAPI_MIN_VERSION) 。</translation>
+<translation>如果您希望 QOwnNotes 能够访问笔记版本和已回收笔记，请在您的 ownCloud 服务器上安装最新版本的&lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;a href="https://github.com/pbek/qownnotesapi"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;（至低 version QOWNNOTESAPI_MIN_VERSION）。</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -5259,7 +5279,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Username:</source>
-<translation>用户名:</translation>
+<translation>用户名：</translation>
 </message>
 <message>
 <source>Your ownCloud username</source>
@@ -5267,7 +5287,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Password:</source>
-<translation>密码:</translation>
+<translation>密码：</translation>
 </message>
 <message>
 <source>Your ownCloud password</source>
@@ -5287,7 +5307,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-<translation>请注意，ownCloud notes  应用程序不支持子文件夹！</translation>
+<translation>请注意，ownCloud notes 应用不支持子文件夹！</translation>
 </message>
 <message>
 <source>Use note subfolders</source>
@@ -5295,7 +5315,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation>登录 flow v2 仅可用于 Nextcloud 不能用于 ownCloud. 如果遇到问题，你需要手动创建一个应用密码。</translation>
+<translation>登录 flow v2 仅可用于 Nextcloud 不能用于 ownCloud。如果遇到问题，你需要手动创建一个应用密码。</translation>
 </message>
 <message>
 <source>Login to Nextcloud to grant access</source>
@@ -5303,11 +5323,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Stack：</translation>
 </message>
 <message>
 <source>Todo settings</source>
-<translation>待办事项设置</translation>
+<translation>Todo 设置</translation>
 </message>
 <message>
 <source>Enable todo calendar support</source>
@@ -5319,15 +5339,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Select the calendars you want to use for the Todo list</source>
-<translation>选择你想在 Todo 列表使用的日历</translation>
+<translation>选择你想在 Todo 清单中使用的日历</translation>
 </message>
 <message>
 <source>Todo list settings</source>
-<translation>Todo 列表设置</translation>
+<translation>Todo 清单设置</translation>
 </message>
 <message>
 <source>Saving an item also closes the Todo list</source>
-<translation>保存项目也会关闭 Todo 列表</translation>
+<translation>保存项目也会关闭 Todo 清单</translation>
 </message>
 <message>
 <source>Indonesian</source>
@@ -5351,19 +5371,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Cebuano</source>
-<translation>宿务</translation>
+<translation>宿务语</translation>
 </message>
 <message>
 <source>Danish</source>
-<translation>丹麦文</translation>
+<translation>丹麦语</translation>
 </message>
 <message>
 <source>Basque</source>
-<translation>巴斯克</translation>
+<translation>巴斯克语</translation>
 </message>
 <message>
 <source>English (British)</source>
-<translation type="unfinished">English (British)</translation>
+<translation>英语（英国）</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -5375,15 +5395,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Finnish</source>
-<translation>芬兰</translation>
+<translation>芬兰语</translation>
 </message>
 <message>
 <source>Irish</source>
-<translation>爱尔兰人</translation>
+<translation>爱尔兰语</translation>
 </message>
 <message>
 <source>Galician</source>
-<translation>加利西亚人</translation>
+<translation>加利西亚语</translation>
 </message>
 <message>
 <source>Greek</source>
@@ -5391,7 +5411,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hausa</source>
-<translation>豪萨</translation>
+<translation>豪萨语</translation>
 </message>
 <message>
 <source>Hebrew</source>
@@ -5399,23 +5419,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hindi</source>
-<translation>不行</translation>
+<translation>印地语</translation>
 </message>
 <message>
 <source>Hiligaynon</source>
-<translation>希利盖农</translation>
+<translation>希利盖农语</translation>
 </message>
 <message>
 <source>Icelandic</source>
-<translation>冰岛的</translation>
+<translation>冰岛语</translation>
 </message>
 <message>
 <source>Korean</source>
-<translation>韩语</translation>
+<translation>朝鲜语</translation>
 </message>
 <message>
 <source>Kurdish</source>
-<translation>库尔德</translation>
+<translation>库尔德语</translation>
 </message>
 <message>
 <source>Latvian</source>
@@ -5431,7 +5451,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Norwegian</source>
-<translation>挪威</translation>
+<translation>挪威语</translation>
 </message>
 <message>
 <source>Uzbek</source>
@@ -5451,7 +5471,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Serbian</source>
-<translation>塞尔维亚</translation>
+<translation>塞尔维亚语</translation>
 </message>
 <message>
 <source>Albanian</source>
@@ -5459,11 +5479,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Slovak</source>
-<translation>斯洛伐克文</translation>
+<translation>斯洛伐克语</translation>
 </message>
 <message>
 <source>Slovenian</source>
-<translation>斯洛文尼亚文</translation>
+<translation>斯洛文尼亚语</translation>
 </message>
 <message>
 <source>Swedish</source>
@@ -5495,11 +5515,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>在暗色模式下， 你可能想在编辑器设置中选择另一种编辑器配色方案。</translation>
+<translation>在深色模式下，你可能想在编辑器设置中选择另一种编辑器配色方案。</translation>
 </message>
 <message>
 <source>Enable dark mode icon theme</source>
-<translation>启用暗色模式图标主题</translation>
+<translation>启用深色模式图标主题</translation>
 </message>
 <message>
 <source>System tray</source>
@@ -5511,7 +5531,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Start application hidden</source>
-<translation>启动后隐藏</translation>
+<translation>启动时隐藏应用</translation>
 </message>
 <message>
 <source>Interface style</source>
@@ -5543,11 +5563,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>By default the headline will generated automatically</source>
-<translation>默认情况下, 标题将自动生成</translation>
+<translation>默认情况下，标题将自动生成</translation>
 </message>
 <message>
 <source>The shortcut to create a new note asks for a headline</source>
-<translation>创建新便笺的快捷方式要求标题</translation>
+<translation>快速创建新笔记时需要输入标题</translation>
 </message>
 <message>
 <source>Automatically close the note folder database to prevent problems with sync tools</source>
@@ -5604,7 +5624,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Note-edit cursor width:</source>
-<translation>编辑笔记时的光标宽度:</translation>
+<translation>编辑笔记时的光标宽度：</translation>
 </message>
 <message>
 <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
@@ -5624,7 +5644,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Māori</source>
-<translation>毛利人</translation>
+<translation>毛利语</translation>
 </message>
 <message>
 <source>Malay</source>
@@ -5640,7 +5660,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI</source>
-<translation type="unfinished">AI</translation>
+<translation>AI 相关</translation>
 </message>
 <message>
 <source>Experimental</source>
@@ -5648,7 +5668,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
-<translation>这允许笔记文件被重命名</translation>
+<translation>勾选此项将会允许笔记文件被重命名</translation>
 </message>
 <message>
 <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
@@ -5660,7 +5680,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>启用 QOwnNotesAPI 应用支持</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5672,11 +5692,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>启用 Nextcloud Deck 支持</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation>你可以通过访问你的 ownCloud 服务器或者通用 CalDAV 服务器来管理你的代办事项。</translation>
+<translation>你可以通过访问你的 ownCloud 服务器或者通用 CalDAV 服务器来管理你的代办事项清单。</translation>
 </message>
 <message>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
@@ -5684,11 +5704,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Khmer</source>
-<translation>高棉</translation>
+<translation>高棉语</translation>
 </message>
 <message>
 <source>Shona</source>
-<translation>庄名</translation>
+<translation>绍纳语</translation>
 </message>
 <message>
 <source>Sinhala</source>
@@ -5696,15 +5716,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Thai</source>
-<translation>泰国</translation>
+<translation>泰语</translation>
 </message>
 <message>
 <source>Vietnamese</source>
-<translation>越南文</translation>
+<translation>越南语</translation>
 </message>
 <message>
 <source>Xhosa</source>
-<translation>科萨</translation>
+<translation>科萨语</translation>
 </message>
 <message>
 <source>Yiddish</source>
@@ -5712,7 +5732,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Zulu</source>
-<translation>祖鲁族</translation>
+<translation>祖鲁语</translation>
 </message>
 <message>
 <source>Search for language</source>
@@ -5720,31 +5740,31 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>隐藏菜单中的图标以及“查找操作”对话框中的图标。需重启才能生效</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
-<translation type="unfinished">Hide menu icons</translation>
+<translation>隐藏菜单图标</translation>
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>覆盖界面缩放比例</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>界面缩放比例：</translation>
 </message>
 <message>
 <source>Status bar</source>
-<translation>状态条</translation>
+<translation>状态栏</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>显示笔记路径</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>仅显示相对笔记路径</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -5760,15 +5780,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Disable this if you want to launch the application without opening a note</source>
-<translation>如果要启动应用程序而不打开笔记，请禁用此功能</translation>
+<translation>如果只启动应用而不打开笔记，请禁用此功能</translation>
 </message>
 <message>
 <source>Open last accessed note at application startup</source>
-<translation>在应用程序启动时打开上次访问的笔记</translation>
+<translation>在应用启动时打开上次访问的笔记</translation>
 </message>
 <message>
 <source>Start application in read-only mode</source>
-<translation>以只读模式启动应用程序</translation>
+<translation>以只读模式启动应用</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
@@ -5777,7 +5797,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> sec</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
@@ -5801,7 +5821,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Checks the disk database integrity and fixes problems</source>
-<translation>检查磁盘数据库的完整性并修复问题。</translation>
+<translation>检查磁盘数据库的完整性并修复问题</translation>
 </message>
 <message>
 <source>Check integrity</source>
@@ -5825,7 +5845,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>&amp;Copy debug information to clipboard</source>
-<translation>将调试信息复制到剪贴板 （&amp;C）</translation>
+<translation>将调试信息复制到剪贴板(&amp;C)</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker</source>
@@ -5833,15 +5853,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Time to wait before refreshing the preview after typing:</source>
-<translation>键入后刷新预览之前的等待时间：</translation>
+<translation>输入后刷新预览前的等待时间：</translation>
 </message>
 <message>
 <source>Reset the debounce time</source>
-<translation>重置去抖动时间</translation>
+<translation>恢复默认等待时间</translation>
 </message>
 <message>
 <source>0ms means don't wait for the typing to stop</source>
-<translation>0ms 表示不要等待输入停止</translation>
+<translation>0ms 表示无需等待输入结束</translation>
 </message>
 <message>
 <source>Use editor highlighting styles also for the preview</source>
@@ -5873,39 +5893,39 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Git 仓库</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>对 git 仓库 libgit2 的支持已启用。</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>别忘了为您的笔记文件夹启用 Git 支持。</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>超过此大小的笔记将不会显示在笔记列表中</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation>最大注释文件大小:</translation>
+<translation>最大笔记文件大小：</translation>
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>隐藏标签页关闭按钮</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation>搜索人工智能集成脚本库</translation>
+<translation>搜索 AI 集成脚本库</translation>
 </message>
 <message>
 <source>API keys</source>
-<translation>API秘钥</translation>
+<translation>API 秘钥</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation>OpenAI API 密钥:</translation>
+<translation>OpenAI API 密钥：</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
@@ -5913,7 +5933,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation>创建 Groq API 密钥</translation>
+<translation>创建 OpenAI API 密钥</translation>
 </message>
 <message>
 <source>Test connection</source>
@@ -5922,20 +5942,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>API 设置</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>响应超时：</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>应用程序等待服务器响应的时间，超过该时间后将超时并返回错误消息。</translation>
 </message>
 <message>
 <source>sec</source>
 <comment>seconds</comment>
-<translation>秒</translation>
+<translation>sec</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
@@ -5947,19 +5967,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>您可以使用脚本挂钩&lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt;来添加更多兼容OpenAI API的后端。</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>或者，您也可以在脚本库中查找已创建的 AI 集成脚本。</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation>Groq API 密钥:</translation>
+<translation>Groq API 密钥：</translation>
 </message>
 <message>
 <source>API key</source>
-<translation>API秘钥</translation>
+<translation>API 秘钥</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6003,11 +6023,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>点击笔记标签页将取消“所有笔记”的选中状态</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
-<translation>在应用程序启动时和切换笔记文件夹时还原打开的笔记标签页</translation>
+<translation>在应用启动时和切换笔记文件夹时还原打开的笔记标签页</translation>
 </message>
 <message>
 <source>Auto-select items in navigation panel when changing cursor position</source>
@@ -6015,7 +6035,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide 'Note count' with tags (increases performance)</source>
-<translation>隐藏标签的“笔记数”（提高性能）</translation>
+<translation>隐藏带有标签的“笔记计数”（提高性能）</translation>
 </message>
 <message>
 <source>Show the number of matches in each note</source>
@@ -6055,7 +6075,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Server URL:</source>
-<translation>服务器 URL:</translation>
+<translation>服务器 URL：</translation>
 </message>
 <message>
 <source>Show QR code</source>
@@ -6063,7 +6083,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Security token:</source>
-<translation>安全 token:</translation>
+<translation>安全 token：</translation>
 </message>
 <message>
 <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper or for bookmark management.</source>
@@ -6075,7 +6095,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>您可以使用带有特殊标签的注释来存储命令片段，您可以从命令行片段管理器执行这些命令片段。 有关命令片段语法的详细信息，请单击&lt;a href="%1"&gt;此处&lt;/a&gt;。</translation>
+<translation>您可以使用带有特殊标签的注释来存储命令片段，您可以从命令行片段管理器执行这些命令片段。有关命令片段语法的详细信息，请单击&lt;a href="%1"&gt;此处&lt;/a&gt;。</translation>
 </message>
 <message>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
@@ -6111,7 +6131,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-<translation>使用带有所有子文件夹的笔记树, 而不是笔记列表（如果它们已作为笔记文件夹开启）</translation>
+<translation>使用带有所有子文件夹的笔记树，而不是笔记列表（如果它们已作为笔记文件夹开启）</translation>
 </message>
 <message>
 <source>Note folder panel</source>
@@ -6147,7 +6167,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>默认情况下，浏览器扩展将显示当前笔记的所有链接。 您还可以使其显示带有特定标签的笔记的特殊书签链接。 有关书签链接语法的更多信息，请单击 &lt;a href="%1"&gt;此处&lt;/a&gt;。</translation>
+<translation>默认情况下，浏览器扩展将显示当前笔记的所有链接。您还可以使其显示带有特定标签的笔记的特殊书签链接。有关书签链接语法的更多信息，请单击 &lt;a href="%1"&gt;此处&lt;/a&gt;。</translation>
 </message>
 <message>
 <source>Bookmarks note name:</source>
@@ -6155,7 +6175,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
-<translation>该笔记将用于从浏览器扩展中添加新书签。</translation>
+<translation>该笔记将用于从浏览器扩展中添加新书签</translation>
 </message>
 <message>
 <source>Note name for adding new bookmarks</source>
@@ -6163,7 +6183,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Web socket server</source>
-<translation>Web套接字服务器</translation>
+<translation>Web 套接字服务器</translation>
 </message>
 <message>
 <source>Socket server port:</source>
@@ -6179,7 +6199,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Web socket server support</source>
-<translation>Web套接字服务器支持</translation>
+<translation>Web 套接字服务器支持</translation>
 </message>
 <message>
 <source>Enable socket server</source>
@@ -6219,7 +6239,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Remove trashed notes after:</source>
-<translation>在此时间后清除已回收的笔记：</translation>
+<translation>在此时间后清理已回收的笔记：</translation>
 </message>
 <message>
 <source> days</source>
@@ -6228,7 +6248,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Automatically remove trashed notes after a certain time</source>
-<translation>一定时间后自动清除已回收的笔记</translation>
+<translation>一定时间后自动清理已回收的笔记</translation>
 </message>
 <message>
 <source>Local trash support</source>
@@ -6240,7 +6260,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-<translation>您可以在此处设置新的布局。 请记住，您始终可以使用&lt;i&gt;解锁面板&lt;/i&gt;按钮修改面板的位置。</translation>
+<translation>您可以在此处设置新的布局。请记住，您始终可以使用&lt;i&gt;解锁面板&lt;/i&gt;按钮修改面板的位置。</translation>
 </message>
 <message>
 <source>Reset the cursor width</source>
@@ -6258,7 +6278,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>如果使用此设置, 您将获得一个新的菜单项, 以显示 git 版本 (如果您右键单击某个便笺)。</translation>
+<translation>若启用此设置，右键点击笔记时将出现新菜单项，用于显示Git版本信息。</translation>
 </message>
 <message>
 <source>Show all notes of a tag including the notes of their children-tags</source>
@@ -6266,7 +6286,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-<translation>显示文件夹中的所有便笺 (包括子目录) (仅当打开子文件夹时有效)</translation>
+<translation>显示文件夹中的所有笔记及其子文件夹（仅在启用子文件夹功能时有效）</translation>
 </message>
 <message>
 <source>Highlight the current line</source>
@@ -6274,7 +6294,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-<translation>别忘了为你的笔记文件夹启用git支持，并配置git的用户名和email地址。例如，使用这些终端指令：</translation>
+<translation>别忘了为你的笔记文件夹启用 git 支持，并配置 git 的用户名和 email 地址。例如，使用这些终端指令：</translation>
 </message>
 <message>
 <source>Tags panel</source>
@@ -6282,7 +6302,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Order</source>
-<translation>排序顺序</translation>
+<translation>排列顺序</translation>
 </message>
 <message>
 <source>Ascending</source>
@@ -6310,7 +6330,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide 'Find or create tag' search</source>
-<translation>隐藏"查找或创建标签"搜索框</translation>
+<translation>隐藏“查找或创建标签”搜索框</translation>
 </message>
 <message>
 <source>Note subfolders panel</source>
@@ -6330,7 +6350,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide 'Find or create note subfolder' search</source>
-<translation>隐藏"查找或创建笔记子目录" 搜索框</translation>
+<translation>隐藏“查找或创建笔记子目录”搜索框</translation>
 </message>
 <message>
 <source>Display note subfolders as full tree</source>
@@ -6351,11 +6371,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Path to git executable:</source>
-<translation>Git 可执行文件的路径︰</translation>
+<translation>Git 可执行文件的路径：</translation>
 </message>
 <message>
 <source>Path to git client, leave empty for default</source>
-<translation>外部git命令的路径, 留空使用系统默认路径</translation>
+<translation>外部 git 命令的路径，留空使用系统默认路径</translation>
 </message>
 <message>
 <source>Commit interval</source>
@@ -6364,7 +6384,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>sec</source>
 <extracomment>seconds</extracomment>
-<translation type="unfinished">sec</translation>
+<translation>sec</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
@@ -6380,7 +6400,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Which calendar backend do you want to use?</source>
-<translation>你想使用哪一个日历后端?</translation>
+<translation>你想使用哪一个日历后端？</translation>
 </message>
 <message>
 <source>For most current ownCloud and Nextcloud installations</source>
@@ -6388,7 +6408,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>For older versions of ownCloud where the default setting doesn't work</source>
-<translation>对于那些较低版本的ownCloud（默认设置无效）</translation>
+<translation>对于那些较低版本的 ownCloud 默认设置无效</translation>
 </message>
 <message>
 <source>Legacy ownCloud calendar</source>
@@ -6396,19 +6416,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>CalDAV server settings</source>
-<translation>CalDAV 服务器设置：</translation>
+<translation>CalDAV 服务器设置</translation>
 </message>
 <message>
 <source>Calendar base url:</source>
-<translation>日历默认地址:</translation>
+<translation>日历默认地址：</translation>
 </message>
 <message>
 <source>Please enter the CalDAV base url to your calendar.</source>
-<translation>请输入 CalDAV 默认地址到您的日历.</translation>
+<translation>请输入 CalDAV 默认地址到您的日历。</translation>
 </message>
 <message>
 <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-<translation>请输入你的的CalDAV密码。&lt;br/&gt;目前密码将通过其他设置加密存储的，但不是非常安全。</translation>
+<translation>请输入你的 CalDAV 密码。&lt;br/&gt;目前密码将通过其他设置加密存储的，但不是非常安全。</translation>
 </message>
 <message>
 <source>Czech</source>
@@ -6428,11 +6448,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Maximum height:</source>
-<translation>最大高度︰</translation>
+<translation>最大高度：</translation>
 </message>
 <message>
 <source>Maximum width:</source>
-<translation>最大宽度︰</translation>
+<translation>最大宽度：</translation>
 </message>
 <message>
 <source>Scale images down when inserted into notes</source>
@@ -6460,7 +6480,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Repository:</source>
-<translation>库：</translation>
+<translation>仓库：</translation>
 </message>
 <message>
 <source>Author(s):</source>
@@ -6480,7 +6500,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Restore cursor position when opening a note</source>
-<translation>打开笔记时重置光标位置</translation>
+<translation>打开笔记时恢复光标位置</translation>
 </message>
 <message>
 <source>Apply toolbar configuration</source>
@@ -6504,7 +6524,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Log file path:</source>
-<translation>日志文件路径︰</translation>
+<translation>日志文件路径：</translation>
 </message>
 <message>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
@@ -6516,11 +6536,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Time format:</source>
-<translation>时间格式:</translation>
+<translation>时间格式：</translation>
 </message>
 <message>
 <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-<translation>输入您的自定义时间格式, 比如 "dd.MM.yyyy hh:mm"</translation>
+<translation>输入您的自定义时间格式，比如 "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <source>Editor options</source>
@@ -6528,7 +6548,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable automatic closing of brackets and markdown formatting characters</source>
-<translation>启用括号自动补全和markdown格式</translation>
+<translation>启用括号自动补全和 markdown 格式化功能</translation>
 </message>
 <message>
 <source>You have to use the backspace key to remove the opening character</source>
@@ -6540,7 +6560,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Your CalDAV calendar base url</source>
-<translation>你 CalDAV 日历的base url</translation>
+<translation>你的 CalDAV 日历的基础 url</translation>
 </message>
 <message>
 <source>Please enter the username of your CalDAV server.</source>
@@ -6556,7 +6576,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-<translation>这会导致下一次您打开您的待办事项对话框时,全部待办事项从您的服务器上重新加载.</translation>
+<translation>这会导致下一次您打开您的待办事项对话框时，全部待办事项从您的服务器上重新加载。</translation>
 </message>
 <message>
 <source>Empty calendar item cache</source>
@@ -6564,23 +6584,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Click here to reload the list of calendars from your calendar server.</source>
-<translation>点击此处重新从服务器读取日历列表。</translation>
+<translation>点击此处重新加载服务器中的日历列表。</translation>
 </message>
 <message>
 <source>&amp;Reload calendar list</source>
-<translation>刷新日历列表(&amp;R)</translation>
+<translation>重新加载日历列表(&amp;R)</translation>
 </message>
 <message>
 <source>You may need to restart the application to let these changes take effect</source>
-<translation>您可能需要重新启动应用程序以使更改生效。</translation>
+<translation>您可能需要重新启动应用程序以使更改生效</translation>
 </message>
 <message>
 <source>Toolbar icon size:</source>
-<translation>工具栏图标大小:</translation>
+<translation>工具栏图标大小：</translation>
 </message>
 <message>
 <source>List and tree item height:</source>
-<translation>列表和树状项目高度:</translation>
+<translation>列表和树状项目高度：</translation>
 </message>
 <message>
 <source>Reset the icon size</source>
@@ -6604,7 +6624,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Arabic</source>
-<translation>阿拉伯</translation>
+<translation>阿拉伯语</translation>
 </message>
 <message>
 <source>Icons</source>
@@ -6616,7 +6636,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Script path:</source>
-<translation>脚本路径︰</translation>
+<translation>脚本路径：</translation>
 </message>
 <message>
 <source>Note folder name</source>
@@ -6628,27 +6648,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-<translation>选中此项如果你希望忽略当前正在编辑的笔记的所有外部修改通知</translation>
+<translation>勾选此选项可忽略编辑当前笔记时所有外部修改的通知消息。</translation>
 </message>
 <message>
 <source>Ignore all external modifications of the current note</source>
-<translation>当前笔记被外部修改时无视通知</translation>
+<translation>当前笔记被外部修改时无视通知消息</translation>
 </message>
 <message>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-<translation>如果你在ownCloud/Nextcloud笔记应用上换行符失效（如Windows平台上），你可以使用该设置</translation>
+<translation>如在Windows平台上，你 ownCloud/Nextcloud 笔记应用上的换行符失效，可勾选此设置项解决</translation>
 </message>
 <message>
 <source>App instance</source>
-<translation>应用程序外观</translation>
+<translation>应用实例</translation>
 </message>
 <message>
 <source>Only allow one app instance at the same time</source>
-<translation>同时只允许一个应用程序实例</translation>
+<translation>仅允许同时运行一个应用实例</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
-<translation>外部编辑器的路径︰</translation>
+<translation>外部编辑器的路径：</translation>
 </message>
 <message>
 <source>Don't show the update dialog automatically</source>
@@ -6668,7 +6688,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Debug</source>
-<translation>Debug调试</translation>
+<translation>Debug 调试</translation>
 </message>
 <message>
 <source>Debug information</source>
@@ -6680,7 +6700,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>&amp;Save debug information</source>
-<translation>保存Debug调试信息(&amp;S)</translation>
+<translation>保存 Debug 调试信息(&amp;S)</translation>
 </message>
 <message>
 <source>hostname of proxy server</source>
@@ -6696,7 +6716,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>HTTP(S) proxy</source>
-<translation>HTTP (S) 代理</translation>
+<translation>HTTP(S) 代理</translation>
 </message>
 <message>
 <source>SOCKS5 proxy</source>
@@ -6704,11 +6724,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation>已在服务器找到笔记路径 &lt;b&gt;%1&lt;/b&gt;</translation>
+<translation>笔记路径 &lt;b&gt;%1&lt;/b&gt; 已在服务器上找到</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
-<translation>自动 （需要重新启动）</translation>
+<translation>自动（需要重新启动）</translation>
 </message>
 <message>
 <source>Shortcut already assigned</source>
@@ -6718,18 +6738,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-<translation>建立连接成功！服务器版本︰ %1 QOwnNotesAPI 版本︰ %2</translation>
+<translation>建立连接成功！
+服务器版本： %1
+QOwnNotesAPI 版本： %2</translation>
 </message>
 <message>
 <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-<translation>连接到 ownCloud 服务器时出错 ！你必须安装并启用 QOwnNotesAPI 程序！ 连接错误消息︰ </translation>
+<translation>连接到 ownCloud 服务器时出错！
+你必须安装并启用 QOwnNotesAPI 程序！
+
+连接错误消息： </translation>
 </message>
 <message>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation>数据库重初始化完成。请重启应用！</translation>
+<translation>数据库重新初始化完成。请重启应用！</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -6745,7 +6770,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-<translation>匿名的使用数据能帮助分析出 QOwnNotes 的问题和接下来的改进方向. &lt;br /&gt;如果你真的无法接受，请关闭这一选项.&lt;br /&gt;&lt;br /&gt;真的要禁用使用跟踪吗?</translation>
+<translation>匿名的使用数据能帮助分析出 QOwnNotes 的问题和接下来的改进方向。&lt;br/&gt;如果你真的无法接受，请关闭这一选项。&lt;br/&gt;&lt;br/&gt;真的要禁用使用跟踪吗？</translation>
 </message>
 <message>
 <source>new folder</source>
@@ -6777,11 +6802,11 @@ Connection error message: </source>
 </message>
 <message>
 <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>看一下 &lt;a href="%1"&gt;脚本文档&lt;/a&gt; 快速入门.</translation>
+<translation>看一下 &lt;a href="%1"&gt;脚本文档&lt;/a&gt; 快速入门。</translation>
 </message>
 <message>
 <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>如果您需要使用 QOwnNotes 的某一个功能, 请在 &lt;a href="%1"&gt; QOwnNotes 问题页面&lt;/a&gt;新建一个问题.</translation>
+<translation>如果您需要使用 QOwnNotes 的某一个功能，请在 &lt;a href="%1"&gt; QOwnNotes 问题页面&lt;/a&gt;新建一个问题。</translation>
 </message>
 <message>
 <source>Check for script updates</source>
@@ -6833,44 +6858,44 @@ Connection error message: </source>
 </message>
 <message>
 <source>The integrity of the disk database is not valid!</source>
-<translation>磁盘数据库完整性无效。</translation>
+<translation>磁盘数据库完整性无效！</translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>Board Id： %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>Stack Id： %1</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>API 测试结果为 %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>AI 后端： %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>API 基础 URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>AI 模型： %1</translation>
 </message>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>测试</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>测试连接到 %1 (%2)</translation>
 </message>
 <message>
 <source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
-<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+<translation>若您启用了此设置，现在需要手动重启应用程序，以确保先前覆盖缩放比例的环境变量不再出现在您的环境中。</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -6902,7 +6927,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt; 快捷键已分配给&lt;strong&gt;%2&lt;/strong&gt; ！ 您要跳到该快捷键吗？</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;快捷键已分配给&lt;strong&gt;%2&lt;/strong&gt;！您要跳到该快捷键吗？</translation>
 </message>
 <message>
 <source>Remove script</source>
@@ -6931,7 +6956,8 @@ Connection error message: </source>
 <message>
 <source>There were script errors:
 %1</source>
-<translation>存在错误︰%1</translation>
+<translation>存在错误：
+%1</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -6939,7 +6965,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
-<translation>确定移除笔记文件扩展名 &lt;strong&gt;%1&lt;/strong&gt;？ 你将不再在笔记列表中看到此扩展名的文件！</translation>
+<translation>确定移除笔记文件扩展名 &lt;strong&gt;%1&lt;/strong&gt;？你将不再在笔记列表中看到此扩展名的文件！</translation>
 </message>
 <message>
 <source>Calendar cache emptied</source>
@@ -6955,7 +6981,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-<translation>您真的想要重置全部工具栏吗? 应用程序将会被关闭, 默认工具栏将会在重启时恢复.</translation>
+<translation>您真的想要重置全部工具栏吗？应用程序将会被关闭，默认工具栏将会在重启时恢复。</translation>
 </message>
 <message>
 <source>Reset and &amp;exit</source>
@@ -6991,7 +7017,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-<translation>您可以在此下载您的 git 客户端: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+<translation>您可以在此下载您的 git 客户端： &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <source>enabled</source>
@@ -7003,15 +7029,15 @@ Connection error message: </source>
 </message>
 <message>
 <source>Portable mode is currently:</source>
-<translation>便携模式状态:</translation>
+<translation>便携模式状态：</translation>
 </message>
 <message>
 <source>In portable mode</source>
-<translation>在便携模式中</translation>
+<translation>处于便携模式时</translation>
 </message>
 <message>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-<translation>内部 sqlite数据和设置将会存储在二进制位置 &lt;code&gt;Data&lt;/code&gt; 文件夹</translation>
+<translation>内部 sqlite 数据和设置将会存储在二进制位置 &lt;code&gt;Data&lt;/code&gt; 文件夹</translation>
 </message>
 <message>
 <source>the settings will be stored in an ini file</source>
@@ -7019,11 +7045,11 @@ Connection error message: </source>
 </message>
 <message>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-<translation>笔记文件夹,脚本路径和外部编辑器路径会自动存储在相对的 &lt;code&gt;Data&lt;/code&gt; 文件夹,以便无论你的 QOwnNotes 当前安装位置在哪里都能正确加载笔记文件夹,脚本和外部编辑器</translation>
+<translation>笔记文件夹、脚本路径和外部编辑器路径会自动存储在相对的 &lt;code&gt;Data&lt;/code&gt; 文件夹，无论你的 QOwnNotes 当前安装位置在哪里都能正确加载笔记文件夹、脚本和外部编辑器</translation>
 </message>
 <message>
 <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-<translation>如果您使用参数运行 QOwnNotes &lt;code&gt;--portable&lt;/code&gt;,它将被激活.</translation>
+<translation>如果您使用参数运行 QOwnNotes &lt;code&gt;--portable&lt;/code&gt;，它将被激活。</translation>
 </message>
 <message>
 <source>Save debug information</source>
@@ -7033,11 +7059,13 @@ Connection error message: </source>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-<translation>是否要清除所有设置、 删除数据库并退出 QOwnNotes ？ 你的笔记将不会保存 ！</translation>
+<translation>是否要清除所有设置、删除数据库并退出 QOwnNotes？
+
+你的笔记将不会保存！</translation>
 </message>
 <message>
 <source>Clear and &amp;exit</source>
-<translation>清除和并退出(&amp;E)</translation>
+<translation>清除并退出(&amp;E)</translation>
 </message>
 <message>
 <source>&amp;Cancel</source>
@@ -7045,11 +7073,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-<translation>您会在程序目录中找到 &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; 以便启用 QOwnNotes 的便携模式 .</translation>
+<translation>您会在程序目录中找到 &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; 以便启用 QOwnNotes 的便携模式。</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-<translation>是否要清除本地数据库吗？这也将删除你的配置笔记目录和缓存的 todo 项目 ！</translation>
+<translation>是否要清除本地数据库吗？这也将删除你的配置笔记目录和缓存的待办事项！</translation>
 </message>
 <message>
 <source>Clear &amp;database</source>
@@ -7080,7 +7108,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation>在您的 ownCloud 服务器上公开共享当前笔记文件。 您可以将生成的链接发送给其他人，以便其他人可以查看或下载文件。</translation>
+<translation>在您的 ownCloud 服务器上公开共享当前笔记文件。您可以将生成的链接发送给其他人，以便其他人可以查看或下载文件。</translation>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
@@ -7182,12 +7210,12 @@ Your notes will stay intact!</source>
 <message>
 <source>with yeyo, modern and old russian</source>
 <comment>dictionary variant</comment>
-<translation>现代和古老的俄罗斯</translation>
+<translation>现代和古俄语</translation>
 </message>
 <message>
 <source>with yo, old russian</source>
 <comment>dictionary variant</comment>
-<translation>老俄罗斯</translation>
+<translation>古俄语</translation>
 </message>
 <message>
 <source>extended</source>
@@ -7207,7 +7235,7 @@ Your notes will stay intact!</source>
 <message>
 <source>%1 (%2)</source>
 <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-<translation type="unfinished">%1 (%2)</translation>
+<translation>%1 (%2)</translation>
 </message>
 </context>
 <context>
@@ -7242,11 +7270,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>仅显示当前笔记中使用的附件</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>仅显示当前笔记</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7258,7 +7286,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Open &amp;attachment</source>
-<translation>打开附件</translation>
+<translation>打开附件(&amp;A)</translation>
 </message>
 <message>
 <source>Open the attachments folder</source>
@@ -7266,7 +7294,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Open &amp;folder</source>
-<translation>打开文件夹</translation>
+<translation>打开文件夹(&amp;F)</translation>
 </message>
 <message>
 <source>Refresh</source>
@@ -7304,19 +7332,19 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Open attachment</source>
-<translation>打开附件</translation>
+<translation>打开附件(&amp;O)</translation>
 </message>
 <message>
 <source>&amp;Rename attachment</source>
-<translation>重命名附件</translation>
+<translation>重命名附件(&amp;R)</translation>
 </message>
 <message>
 <source>&amp;Delete attachments</source>
-<translation>删除附件</translation>
+<translation>删除附件(&amp;D)</translation>
 </message>
 <message>
 <source>&amp;Add attachments to current note</source>
-<translation>添加附件到当前笔记</translation>
+<translation>添加附件到当前笔记(&amp;A)</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
@@ -7324,7 +7352,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation>文件&lt;strong&gt;%1&lt;/strong&gt; 不存在，无法重命名！</translation>
+<translation>文件 &lt;strong&gt;%1&lt;/strong&gt; 不存在，无法重命名！</translation>
 </message>
 <message>
 <source>File exists</source>
@@ -7363,11 +7391,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Open the media folder</source>
-<translation>打开 media 文件夹</translation>
+<translation>打开 多媒体 文件夹</translation>
 </message>
 <message>
 <source>Open &amp;folder</source>
-<translation>打开文件夹</translation>
+<translation>打开文件夹(&amp;F)</translation>
 </message>
 <message>
 <source>Open image externally</source>
@@ -7395,11 +7423,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>仅显示当前笔记中使用的图片</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>仅显示当前笔记</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7437,7 +7465,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation>文件&lt;strong&gt;%1&lt;/strong&gt; 不存在，无法重命名！</translation>
+<translation>文件 &lt;strong&gt;%1&lt;/strong&gt; 不存在，无法重命名！</translation>
 </message>
 <message>
 <source>File exists</source>
@@ -7457,23 +7485,23 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>&amp;Open image externally</source>
-<translation>通过外部应用打开图像</translation>
+<translation>通过外部应用打开图像(&amp;O)</translation>
 </message>
 <message>
 <source>&amp;Rename image</source>
-<translation>重命名图像</translation>
+<translation>重命名图像(&amp;R)</translation>
 </message>
 <message>
 <source>&amp;Delete images</source>
-<translation>删除图像</translation>
+<translation>删除图像(&amp;D)</translation>
 </message>
 <message>
 <source>&amp;Add images to current note</source>
-<translation>添加图像到当前笔记</translation>
+<translation>添加图像到当前笔记(&amp;A)</translation>
 </message>
 <message>
 <source>&amp;Open note</source>
-<translation>打开笔记</translation>
+<translation>打开笔记(&amp;O)</translation>
 </message>
 </context>
 <context>
@@ -7488,19 +7516,19 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Column width:</source>
-<translation>列宽度︰</translation>
+<translation>列宽度：</translation>
 </message>
 <message>
 <source>Insert a table heading separator</source>
-<translation>插入表格标题分隔</translation>
+<translation>插入表格标题分隔符</translation>
 </message>
 <message>
 <source>Columns:</source>
-<translation>列︰</translation>
+<translation>列：</translation>
 </message>
 <message>
 <source>Rows:</source>
-<translation>行︰</translation>
+<translation>行：</translation>
 </message>
 <message>
 <source>The amount of spaces in a column</source>
@@ -7512,7 +7540,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Separator column width:</source>
-<translation>分隔列宽度:</translation>
+<translation>分隔列宽度：</translation>
 </message>
 <message>
 <source>The amount of dash characters in the separator</source>
@@ -7520,7 +7548,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Separator:</source>
-<translation>分隔符︰</translation>
+<translation>分隔符：</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -7532,7 +7560,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Please select the CSV file you want to import:</source>
-<translation>请选择您需要导入的 CSV 文件:</translation>
+<translation>请选择您需要导入的 CSV 文件：</translation>
 </message>
 <message>
 <source>Import clipboard</source>
@@ -7548,7 +7576,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Text-delimiter:</source>
-<translation>文本分隔符︰</translation>
+<translation>文本分隔符：</translation>
 </message>
 <message>
 <source>CSV files</source>
@@ -7582,15 +7610,15 @@ Your notes will stay intact!</source>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>文本差异</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>差异：</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>接受更改？</translation>
 </message>
 </context>
 <context>
@@ -7617,7 +7645,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Note…</source>
-<translation>注...</translation>
+<translation>备注…</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
@@ -7625,11 +7653,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation>仅显示今日到期项</translation>
+<translation>仅显示今天到期的事项</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation>保存并插入笔记</translation>
+<translation>保存并插入到笔记中</translation>
 </message>
 <message>
 <source>Remove</source>
@@ -7637,35 +7665,35 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Show completed items</source>
-<translation>显示已经完成项目</translation>
+<translation>显示已完成的项目</translation>
 </message>
 <message>
 <source>Reload the todo list from server</source>
-<translation>从服务器重新载入 todo 列表</translation>
+<translation>从服务器重新载入待办事项清单</translation>
 </message>
 <message>
 <source>Reload…</source>
-<translation>刷新...</translation>
+<translation>重新加载…</translation>
 </message>
 <message>
 <source>Search or create todo item</source>
-<translation>搜索或创建新 todo 项</translation>
+<translation>搜索或创建新待办事项</translation>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>便签</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>添加新便签</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation>到期日期</translation>
+<translation>截止日期</translation>
 </message>
 <message>
 <source>select your todo list</source>
-<translation>选择你的 todo 列表</translation>
+<translation>选择你的待办事项清单</translation>
 </message>
 <message>
 <source>Save the current todo item</source>
@@ -7689,7 +7717,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Todo list items are being loaded from the server</source>
-<translation>Todo 列表已经从服务器读取载入</translation>
+<translation>Todo 清单已经从服务器读取载入</translation>
 </message>
 <message>
 <source>Reload from server</source>
@@ -7714,8 +7742,8 @@ Your notes will stay intact!</source>
 <message>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
-<translation>移除所选待办事项?
-这不能撤销!</translation>
+<translation>移除选中的待办事项？
+这不能撤销！</translation>
 </message>
 <message>
 <source>Create sub-task</source>
@@ -7727,7 +7755,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Name:</source>
-<translation>名称︰</translation>
+<translation>名称：</translation>
 </message>
 <message>
 <source>New sub-task</source>
@@ -7738,7 +7766,7 @@ This cannot be undone!</source>
 <name>Toolbar_Editor</name>
 <message>
 <source>Select a menu</source>
-<translation>选择一个菜单</translation>
+<translation>选择菜单</translation>
 </message>
 <message>
 <source>Lists the available menus to get the corresponding actions</source>
@@ -7750,7 +7778,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>List the available toolbars. The selected one will be edited</source>
-<translation>列出允许的工具栏.选中的将被编辑.</translation>
+<translation>列出允许的工具栏，选中的将被编辑</translation>
 </message>
 <message>
 <source>Lists the actions in the selected toolbar</source>
@@ -7782,7 +7810,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Moves the selected toolbar item up</source>
-<translation>向上移选中的工具栏项目</translation>
+<translation>向上移动选中的工具栏项目</translation>
 </message>
 <message>
 <source>Move &amp;Up</source>
@@ -7794,7 +7822,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>moves the selected toolbar item down</source>
-<translation>向下移选中的工具栏项目</translation>
+<translation>向下移动选中的工具栏项目</translation>
 </message>
 <message>
 <source>Move &amp;Down</source>
@@ -7857,7 +7885,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-<translation>&lt;h3&gt;比较慢, 但带有笔记版本&lt;/h3&gt;&lt;p&gt;将会在您的 ownCloud 服务器上恢复所有版本.&lt;/p&gt;&lt;p&gt;您将要等待一会直到 ownCloud 同步到了 QOwnNotes.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;比较慢，但带有笔记版本&lt;/h3&gt;&lt;p&gt;将会在您的 ownCloud 服务器上恢复所有版本。&lt;/p&gt;&lt;p&gt;您需要等待 ownCloud 同步服务将其同步到 QOwnNotes。&lt;/p&gt;</translation>
 </message>
 <message>
 <source>&amp;Download selected note</source>
@@ -7865,7 +7893,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-<translation>&lt;h3&gt;较快, 但不带版本&lt;/h3&gt;&lt;p&gt;笔记将会从预览中的文本创建.&lt;/p&gt;&lt;p&gt;笔记版本在ownCloud 服务器不会被恢复并且笔记仍然在回收站中.&lt;/p&gt;&lt;p&gt;以后您可以一直恢复笔记和它的版本.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;较快，但不带版本&lt;/h3&gt;&lt;p&gt;笔记将会从预览中的文本创建。&lt;/p&gt;&lt;p&gt;笔记版本在ownCloud 服务器不会被恢复并且笔记仍然在回收站中。&lt;/p&gt;&lt;p&gt;以后您可以一直恢复笔记和它的版本。&lt;/p&gt;</translation>
 </message>
 <message>
 <source>&amp;Delete</source>
@@ -7893,7 +7921,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Deleting trashed note failed with status code: %1</source>
-<translation>删除已删除的便笺失败，状态码为%1</translation>
+<translation>删除回收站中的笔记失败，状态码为：%1</translation>
 </message>
 </context>
 <context>
@@ -7904,7 +7932,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>A new update of QOwnNotes is available!</source>
-<translation>QOwnNotes 有新的更新!</translation>
+<translation>QOwnNotes 有新的更新！</translation>
 </message>
 <message>
 <source>Do you want to download the new version?</source>
@@ -7912,11 +7940,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>QOwnNotes will be downloaded in your default browser.</source>
-<translation>QOwnNotes 将会在你的默认浏览器里开始下载.</translation>
+<translation>QOwnNotes 将会在你的默认浏览器里开始下载。</translation>
 </message>
 <message>
 <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-<translation>请记住, QOwnNotes 需要从您有写访问权限的位置运行, 以便自动更新工作!</translation>
+<translation>请记住，QOwnNotes 需要从您有写访问权限的位置运行，以便自动更新工作！</translation>
 </message>
 <message>
 <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
@@ -7936,7 +7964,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>&amp;Download latest</source>
-<translation>下载最新版</translation>
+<translation>下载最新版(&amp;D)</translation>
 </message>
 <message>
 <source>&amp;Skip version</source>
@@ -7961,12 +7989,12 @@ This cannot be undone!</source>
 <message>
 <source>Error while downloading:
 %1</source>
-<translation>下载时出错:
+<translation>下载时出错：
 %1</translation>
 </message>
 <message>
 <source>network error: %1</source>
-<translation>网络错误: %1</translation>
+<translation>网络错误：%1</translation>
 </message>
 <message>
 <source>File error</source>
@@ -7975,13 +8003,13 @@ This cannot be undone!</source>
 <message>
 <source>Could not open temporary file:
 %1</source>
-<translation>无法打开临时文件:
+<translation>无法打开临时文件：
 %1</translation>
 </message>
 <message>
 <source>Could not store downloaded file:
 %1</source>
-<translation>无法存储下载的文件:
+<translation>无法存储下载的文件：
 %1</translation>
 </message>
 <message>
@@ -7995,7 +8023,7 @@ This cannot be undone!</source>
 <message>
 <source>Could not find updater file:
 %1</source>
-<translation>无法找到更新器文件:
+<translation>无法找到更新器文件：
 %1</translation>
 </message>
 <message>
@@ -8004,11 +8032,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation>临时文件 '%1' 无法被设置为可执行！ 你需要自行将其替换为 '%2'.</translation>
+<translation>临时文件 '%1' 无法被设置为可执行！你需要自行将其替换为 '%2'。</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation>你的旧 QOwnNotes 可执行文件 '%1' 无法被移除！ 你需要手动将其替换为 '%2'.</translation>
+<translation>你的旧 QOwnNotes 可执行文件 '%1' 无法被移除！你需要手动将其替换为 '%2'。</translation>
 </message>
 <message>
 <source>Restart application</source>
@@ -8016,7 +8044,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>You now can restart the application to complete the update process.</source>
-<translation>现在可以重启应用以完成更新流程</translation>
+<translation>现在可以重启应用以完成更新流程。</translation>
 </message>
 <message>
 <source>Restart</source>
@@ -8028,43 +8056,43 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>
-<translation>更新器脚本 '%1' 不存在!</translation>
+<translation>更新器脚本 '%1' 不存在！</translation>
 </message>
 <message>
 <source>Updater unzip executable '%1' doesn't exist!</source>
-<translation>更新器解压程序 '%1' 不存在!</translation>
+<translation>更新器解压程序 '%1' 不存在！</translation>
 </message>
 <message>
 <source>Could not copy updater script '%1' to '%2'!</source>
-<translation>无法复制更新器脚本 '%1' 到 '%2'!</translation>
+<translation>无法复制更新器脚本 '%1' 到 '%2'！</translation>
 </message>
 <message>
 <source>Couldn't find updater script: %1</source>
-<translation>无法找到更新器脚本: %1</translation>
+<translation>无法找到更新器脚本：%1</translation>
 </message>
 <message>
 <source>Couldn't find unzip executable: %1</source>
-<translation>无法找到解压程序: %1</translation>
+<translation>无法找到解压程序：%1</translation>
 </message>
 <message>
 <source>Proceed with update</source>
-<translation>继续更新</translation>
+<translation>继续进行更新</translation>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>您的 QOwnNotes 可执行文件 ‘%1’ 没有写入权限！当前用户必须具有写入权限才能更新该文件。</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation>您的旧 QOwnNotes 可执行文件 '%1' 无法被新文件 '%2' 替换！ 您需要自己更换。</translation>
+<translation>您的旧 QOwnNotes 可执行文件 '%1' 无法被新文件 '%2' 替换！您需要自己更换。</translation>
 </message>
 <message>
 <source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
-<translation>无法使应用程序文件“%1”成为可执行文件！ 您需要自己使其可执行。</translation>
+<translation>无法使应用程序文件“%1”成为可执行文件！您需要自己使其可执行。</translation>
 </message>
 <message>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-<translation>已完成下载.您想要更新并重启 QOwnNotes 吗?</translation>
+<translation>已完成下载。您想要更新并重启 QOwnNotes 吗?</translation>
 </message>
 </context>
 <context>
@@ -8075,15 +8103,15 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Network reply error: %1</source>
-<translation>网络应答错误: %1</translation>
+<translation>网络应答错误： %1</translation>
 </message>
 <message>
 <source>No data was received by the network request!</source>
-<translation>网络请求未收到任何数据!</translation>
+<translation>网络请求未收到任何数据！</translation>
 </message>
 <message>
 <source>The data from the network request could not be interpreted!</source>
-<translation>无法解释来自网络请求的数据!</translation>
+<translation>无法解析来自网络请求的数据！</translation>
 </message>
 <message>
 <source>No updates</source>
@@ -8091,14 +8119,14 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-<translation>无可用更新，&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; 是最新版本。</translation>
+<translation>无可用更新，&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; 已是最新版本。</translation>
 </message>
 </context>
 <context>
 <name>VersionDialog</name>
 <message>
 <source>Note versions on your ownCloud server</source>
-<translation>你的 ownCloud 服务器上的笔记版本</translation>
+<translation>你在 ownCloud 服务器上的笔记版本</translation>
 </message>
 <message>
 <source>Diff</source>
@@ -8110,11 +8138,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>&amp;Restore selected version</source>
-<translation>&amp;恢复到选择的版本</translation>
+<translation>恢复到选择的版本(&amp;R)</translation>
 </message>
 <message>
 <source>&amp;Cancel</source>
-<translation>&amp;取消</translation>
+<translation>取消(&amp;C)</translation>
 </message>
 </context>
 <context>
@@ -8137,19 +8165,19 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation>插入从QOwnNotes Web应用收到的图像?</translation>
+<translation>插入从 QOwnNotes Web 应用收到的图像？</translation>
 </message>
 <message>
 <source>Text received from web app and copied to clipboard</source>
-<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+<translation>从网页应用接收的文本已复制到剪贴板</translation>
 </message>
 <message>
 <source>HTML received from web app and copied to clipboard</source>
-<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+<translation>从网页应用接收的 HTML 内容已复制到剪贴板</translation>
 </message>
 <message>
 <source>Image received from web app and copied to clipboard</source>
-<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+<translation>从网页应用接收的图像已复制到剪贴板</translation>
 </message>
 </context>
 <context>
@@ -8160,33 +8188,33 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Could not start QOwnNotes server on port %1!</source>
-<translation>无法在端口 %1上启动 QOwnNotes 服务器！</translation>
+<translation>无法在端口 %1 上启动 QOwnNotes 服务器！</translation>
 </message>
 <message>
 <source>%1 connected to QOwnNotes server!</source>
-<translation>%1已连接到 QOwnNotes 服务器！</translation>
+<translation>%1 已连接到 QOwnNotes 服务器！</translation>
 </message>
 <message numerus="yes">
 <source>%n bookmark(s) created</source>
 <translation>
-<numerusform>已创建 ％n 个书签</numerusform>
+<numerusform>已创建 %n 个收藏</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>收藏已从 %n 条笔记中删除</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>收藏编辑于 %n 条笔记中</numerusform>
 </translation>
 </message>
 <message>
 <source>%1 was disconnected from QOwnNotes server</source>
-<translation>%1已从 QOwnNotes 服务器断开连接</translation>
+<translation>%1 已从 QOwnNotes 服务器断开连接</translation>
 </message>
 </context>
 <context>
@@ -8260,11 +8288,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Please select where you want to store your notes:</source>
-<translation>请选择要将笔记保存在何处:</translation>
+<translation>请选择要将笔记保存在何处：</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>支持纯文本文件、采用Markdown格式的笔记应用，并具备ownCloud集成功能</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -8272,7 +8300,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>如果您希望能够在您的 ownCloud 服务器上使用您的笔记版本和已回收笔记,您可以现在对  QOwnNotes 进行配置.您也可以以后进行.</translation>
+<translation>如果您希望能够在您的 ownCloud 服务器上使用您的笔记版本和已回收笔记，您可以现在对 QOwnNotes 进行配置。您也可以以后进行。</translation>
 </message>
 <message>
 <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
@@ -8280,19 +8308,19 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes 会记录匿名使用数据，帮助分析出 QOwnNotes 接下来的改进方向和发现问题。你可以在偏好设定中关闭这一功能。</translation>
+<translation>QOwnNotes 会记录匿名使用数据，帮助分析出 QOwnNotes 接下来的改进方向和发现问题。你可以在设置中关闭这一功能。</translation>
 </message>
 <message>
 <source>Cannot create note path! You have to create the note folder manually!</source>
-<translation>无法创建笔记路径！ 您必须手动创建笔记文件夹！</translation>
+<translation>无法创建笔记路径！您必须手动创建笔记文件夹！</translation>
 </message>
 <message>
 <source>Cannot create note path!</source>
-<translation>无法创建笔记文件夹!</translation>
+<translation>无法创建笔记文件夹！</translation>
 </message>
 <message>
 <source>This note path doesn't exist!</source>
-<translation>此路径不存在!</translation>
+<translation>此路径不存在！</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -8307,7 +8335,7 @@ This cannot be undone!</source>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>显示命令行选项的帮助信息。</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>
@@ -8319,7 +8347,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Prints out the version number.</source>
-<translation>打印版本号</translation>
+<translation>打印版本号。</translation>
 </message>
 <message>
 <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
@@ -8339,7 +8367,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>生成Shell补全代码。支持`fish`、`bash`。</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

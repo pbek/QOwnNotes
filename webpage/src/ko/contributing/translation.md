@@ -4,6 +4,8 @@
 
 QOWNNotes 번역을 어떻게 도와드릴까요?
 
+::: 경고 번역 파일을 `src/languages`로 직접 편집하려고 하지 마세요. 그들은 모두 [Crowdin](https://crowdin.com/project/qownnotes)을 통해 자동으로 생성됩니다. :::
+
 ## Crowdin에 참여하여 QOwnNotes를 번역하십시오
 
 ![crowdin](/img/crowdin.png)

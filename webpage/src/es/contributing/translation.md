@@ -4,6 +4,10 @@
 
 ¿Cómo puedo ayudar a traducir QOwnNotes?
 
+::: warning
+Por favor, no intente editar los archivos de traducción en `src/languages` directamente. Todos se generan automáticamente mediante [Crowdin](https://crowdin.com/project/qownnotes).
+:::
+
 ## Únase a nosotros en Crowdin para traducir QOwnNotes
 
 ![crowdin](/img/crowdin.png)

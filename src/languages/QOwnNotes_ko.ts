@@ -4080,6 +4080,24 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>기본값</translation>
 </message>
 <message>
+<source>Note file was modified externally</source>
+<translation>노트 파일이 외부에서 수정되었습니다</translation>
+</message>
+<message>
+<source>The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</source>
+<translation>노트 파일 '%1'이 저장되지 않은 변경 사항이 있을 때 외부에서 수정되었습니다.
+
+아래 편집기는 귀하의 버전을 보여줍니다. 차이점 보기는 외부 파일 (빨간색)과 귀하의 버전 (녹색) 간의 변경 사항을 보여줍니다.
+
+'확인'을 클릭하여 버전을 저장하고 외부 변경 사항을 덮어쓰세요.
+변경 사항을 삭제하고 외부 버전을 유지하려면 '취소'를 클릭하세요.</translation>
+</message>
+<message>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>노트 파일을 저장할 수 없습니다: %1 - 오류 메시지: %2</translation>
 </message>

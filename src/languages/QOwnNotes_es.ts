@@ -4113,6 +4113,24 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>predeterminado</translation>
 </message>
 <message>
+<source>Note file was modified externally</source>
+<translation>El archivo de la nota actual fue modificado externamente</translation>
+</message>
+<message>
+<source>The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</source>
+<translation>El archivo de notas "%1" se modificó externamente mientras tenías cambios no guardados.
+
+El editor de abajo muestra SU versión. La vista de diferencias muestra los cambios entre el archivo externo (en rojo) y tu versión (en verde).
+
+Haga clic en "OK" para guardar SU versión y sobrescribir los cambios externos.
+Haga clic en "Cancelar" para descartar tus cambios y conservar la versión externa.</translation>
+</message>
+<message>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>No se pudo almacenar el archivo de nota: %1 - Mensaje de error: %2</translation>
 </message>

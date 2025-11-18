@@ -4195,6 +4195,24 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 <translation>Domyślny</translation>
 </message>
 <message>
+<source>Note file was modified externally</source>
+<translation type="unfinished">Note file was modified externally</translation>
+</message>
+<message>
+<source>The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</source>
+<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</translation>
+</message>
+<message>
 <source>Could not store note file: %1 - Error message: %2</source>
 <translation>Ni można zapisać pliku notatki: %1 – komunikat błędu: %2</translation>
 </message>

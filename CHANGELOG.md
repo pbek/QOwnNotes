@@ -13,6 +13,8 @@
     is enabled, or the _note diff dialog_ is shown (for the current note)
 - Fixed dependencies of `.SRCINFO` file being not consistent with those of
   `PKGBUILD` on the AUR (for [#3392](https://github.com/pbek/QOwnNotes/issues/3392))
+- Added more Spanish, Korean, Chinese Simplified translation (thank you,
+  alejandromoc, venusgirl, sr79368142)
 
 ## 25.11.2
 
