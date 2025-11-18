@@ -2,6 +2,15 @@
 
 ## 25.11.3
 
+- There now is an extra detection of external changes to note files while your
+  changes to notes were not yet written to disk, to prevent overwriting external
+  changes (for [#3366](https://github.com/pbek/QOwnNotes/issues/3366))
+  - This also works if you change multiple notes in a row and they are supposed
+    to be stored to disk at a later time
+  - Checksums are created for all notes to detect differences
+  - A _text diff dialog_ will be shown if such a change is detected
+  - The _text diff dialog_ will not be shown if `ignoreAllExternalModifications`
+    is enabled or the _note diff dialog_ is shown (for the current note)
 - Fixed dependencies of `.SRCINFO` file being not consistent with those of
   `PKGBUILD` on the AUR (for [#3392](https://github.com/pbek/QOwnNotes/issues/3392))
 
