@@ -5727,6 +5727,13 @@ void MainWindow::filterNotes(bool searchForText) {
 bool MainWindow::isTagsEnabled() { return _taggingDockWidget->isVisible(); }
 
 /**
+ * Checks if the NoteDiffDialog is currently open
+ */
+bool MainWindow::isNoteDiffDialogOpen() {
+    return noteDiffDialog != nullptr && noteDiffDialog->isVisible();
+}
+
+/**
  * Checks if the Markdown view is enabled
  */
 bool MainWindow::isMarkdownViewEnabled() {

@@ -32,6 +32,7 @@
 #include "libraries/md4c/src/md4c-html.h"
 #include "libraries/md4c/src/md4c.h"
 #include "libraries/simplecrypt/simplecrypt.h"
+#include "mainwindow.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
 #include "services/settingsservice.h"
@@ -1496,6 +1497,21 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
             if (currentChecksum != _fileChecksum) {
                 qWarning() << "Note file was modified externally, showing diff dialog";
 #ifndef INTEGRATION_TESTS
+                // Check if NoteDiffDialog is open - if so, skip showing the diff dialog
+                MainWindow *mainWindow = MainWindow::instance();
+                if (mainWindow != nullptr && mainWindow->isNoteDiffDialogOpen()) {
+                    qDebug() << "NoteDiffDialog is open, skipping TextDiffDialog";
+                    // Just update the checksum and return false to prevent saving
+                    _noteText = currentFileText;
+                    _fileChecksum = currentChecksum;
+
+                    if (wasCancelledDueToExternalModification != nullptr) {
+                        *wasCancelledDueToExternalModification = true;
+                    }
+
+                    return false;
+                }
+
                 // Show diff dialog to let user decide what to do
                 TextDiffDialog dialog(
                     nullptr, QObject::tr("Note file was modified externally"),

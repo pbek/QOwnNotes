@@ -765,6 +765,7 @@ class MainWindow : public QMainWindow {
    public:
     void clearNoteDirectoryWatcher();
     void updateNoteDirectoryWatcher();
+    bool isNoteDiffDialogOpen();
 
    private:
     Ui::MainWindow *ui;
