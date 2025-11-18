@@ -1478,6 +1478,9 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     const bool ignoreAllExternalModifications =
         settings.value(QStringLiteral("ignoreAllExternalModifications")).toBool();
 
+    // Static set to track files that currently have a TextDiffDialog open
+    static QSet<QString> filesWithOpenDiffDialog;
+
     // Check if the file was modified externally by comparing checksums
     if (!ignoreAllExternalModifications && fileExists() && !_fileChecksum.isEmpty()) {
         // Read the current file content
@@ -1497,6 +1500,8 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
             if (currentChecksum != _fileChecksum) {
                 qWarning() << "Note file was modified externally, showing diff dialog";
 #ifndef INTEGRATION_TESTS
+                const QString noteFilePath = fullNoteFilePath();
+
                 // Check if NoteDiffDialog is open - if so, skip showing the diff dialog
                 MainWindow *mainWindow = MainWindow::instance();
                 if (mainWindow != nullptr && mainWindow->isNoteDiffDialogOpen()) {
@@ -1512,6 +1517,23 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
                     return false;
                 }
 
+                // Check if TextDiffDialog is already open for this file
+                if (filesWithOpenDiffDialog.contains(noteFilePath)) {
+                    qDebug() << "TextDiffDialog is already open for this file, skipping";
+                    // Just update the checksum and return false to prevent saving
+                    _noteText = currentFileText;
+                    _fileChecksum = currentChecksum;
+
+                    if (wasCancelledDueToExternalModification != nullptr) {
+                        *wasCancelledDueToExternalModification = true;
+                    }
+
+                    return false;
+                }
+
+                // Mark this file as having a dialog open
+                filesWithOpenDiffDialog.insert(noteFilePath);
+
                 // Show diff dialog to let user decide what to do
                 TextDiffDialog dialog(
                     nullptr, QObject::tr("Note file was modified externally"),
@@ -1526,7 +1548,12 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
                         .arg(_fileName),
                     currentFileText, _noteText);
 
-                if (dialog.exec() == QDialog::Accepted) {
+                int dialogResult = dialog.exec();
+
+                // Remove file from tracking set when dialog closes
+                filesWithOpenDiffDialog.remove(noteFilePath);
+
+                if (dialogResult == QDialog::Accepted) {
                     if (dialog.resultAccepted()) {
                         // User chose to use their edited text from the dialog
                         _noteText = dialog.resultText();
