@@ -10,7 +10,7 @@
   - Checksums are created for all notes to detect differences
   - A _text diff dialog_ will be shown if such a change is detected
   - The _text diff dialog_ will not be shown if `ignoreAllExternalModifications`
-    is enabled or the _note diff dialog_ is shown (for the current note)
+    is enabled, or the _note diff dialog_ is shown (for the current note)
 - Fixed dependencies of `.SRCINFO` file being not consistent with those of
   `PKGBUILD` on the AUR (for [#3392](https://github.com/pbek/QOwnNotes/issues/3392))
 
