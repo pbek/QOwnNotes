@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.11.4
+
+- In the diff dialog shown the checksum checking of [#3366](https://github.com/pbek/QOwnNotes/issues/3366)
+  doesn't match you can now choose not to show the dialog again, then the selected
+  dialog result will be chosen automatically the next time [#3396](https://github.com/pbek/QOwnNotes/issues/3396)
+
 ## 25.11.3
 
 - There now is an extra detection of external changes to note files while your

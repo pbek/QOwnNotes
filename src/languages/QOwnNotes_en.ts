@@ -9627,6 +9627,11 @@ Your notes will stay intact!</source>
     </message>
     <message>
         <location filename="../dialogs/textdiffdialog.ui" line="72"/>
+        <source>Don&apos;t show dialog again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/textdiffdialog.ui" line="79"/>
         <source>Accept change?</source>
         <translation type="unfinished"></translation>
     </message>

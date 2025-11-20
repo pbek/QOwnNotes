@@ -1546,7 +1546,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
                         "Click 'OK' to save YOUR version and overwrite the external changes.\n"
                         "Click 'Cancel' to discard your changes and keep the external version.")
                         .arg(_fileName),
-                    currentFileText, _noteText);
+                    currentFileText, _noteText, QStringLiteral("note-checksum-diff"));
 
                 int dialogResult = dialog.exec();
 

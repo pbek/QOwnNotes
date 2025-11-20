@@ -16,7 +16,8 @@ class TextDiffDialog : public MasterDialog {
    public:
     explicit TextDiffDialog(QWidget *parent = nullptr, const QString &title = QString(),
                             const QString &labelText = QString(), const QString &text1 = QString(),
-                            const QString &text2 = QString());
+                            const QString &text2 = QString(),
+                            const QString &identifier = QString());
     ~TextDiffDialog();
     bool resultAccepted();
     QString resultText();
@@ -30,4 +31,5 @@ class TextDiffDialog : public MasterDialog {
     Ui::TextDiffDialog *ui;
     bool accepted = false;
     QString text1;
+    QString identifier;
 };

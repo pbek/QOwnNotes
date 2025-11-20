@@ -67,6 +67,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </widget>
      </item>
      <item>
+      <widget class="QCheckBox" name="dontShowAgainCheckBox">
+       <property name="text">
+        <string>Don't show dialog again</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Accept change?</string>
