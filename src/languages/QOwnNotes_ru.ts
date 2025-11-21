@@ -6142,6 +6142,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Игнорировать файлы заметок</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation>Выбрать путь к двоичному файлу git</translation>
 </message>
@@ -7756,6 +7760,10 @@ Your notes will stay intact!</source>
 <message>
 <source>Differences:</source>
 <translation>Различия:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
 </message>
 <message>
 <source>Accept change?</source>

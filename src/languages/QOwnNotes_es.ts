@@ -6053,6 +6053,10 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <translation>Archivos de nota ignorados</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation>Usar suma de verificación para detectar modificaciones externas en notas sin guardar</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation>Seleccione la ruta al binario de Git</translation>
 </message>
@@ -7659,6 +7663,10 @@ Your notes will stay intact!</source>
 <message>
 <source>Differences:</source>
 <translation>Diferencias:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation>No volver a mostrar este diálogo</translation>
 </message>
 <message>
 <source>Accept change?</source>

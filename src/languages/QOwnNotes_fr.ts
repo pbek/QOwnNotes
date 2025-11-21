@@ -6054,6 +6054,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Fichier de notes ignoré</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation>Sélectionner le chemin vers le binaire git</translation>
 </message>
@@ -7665,6 +7669,10 @@ Vos notes resteront intactes!</translation>
 <message>
 <source>Differences:</source>
 <translation>Différences :</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
 </message>
 <message>
 <source>Accept change?</source>

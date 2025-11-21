@@ -6006,6 +6006,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>已忽略的笔记文件</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation>选择 git 二进制文件的路径</translation>
 </message>
@@ -7615,6 +7619,10 @@ Your notes will stay intact!</source>
 <message>
 <source>Differences:</source>
 <translation>差异：</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
 </message>
 <message>
 <source>Accept change?</source>

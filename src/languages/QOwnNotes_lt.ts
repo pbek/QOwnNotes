@@ -6165,6 +6165,10 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
 <translation type="unfinished">Ignored note files</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation type="unfinished">Select the path of the git binary</translation>
 </message>
@@ -7786,6 +7790,10 @@ Jūsų užrašai liks nepažeisti!</translation>
 <message>
 <source>Differences:</source>
 <translation type="unfinished">Differences:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
 </message>
 <message>
 <source>Accept change?</source>

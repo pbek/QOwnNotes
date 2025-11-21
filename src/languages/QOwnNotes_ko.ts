@@ -6014,6 +6014,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>무시된 노트 파일</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation>체크섬을 사용하여 저장되지 않은 노트의 외부 수정 사항 감지</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation>Git 이진의 경로 선택</translation>
 </message>
@@ -7623,6 +7627,10 @@ Your notes will stay intact!</source>
 <message>
 <source>Differences:</source>
 <translation>차이점:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation>대화 상자를 다시 표시하지 않음</translation>
 </message>
 <message>
 <source>Accept change?</source>

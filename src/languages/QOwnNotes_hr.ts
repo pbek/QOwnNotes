@@ -6099,6 +6099,10 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <translation>Zanemarene datoteke bilješki</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation type="unfinished">Select the path of the git binary</translation>
 </message>
@@ -7718,6 +7722,10 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <source>Differences:</source>
 <translation>Razlike:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
 </message>
 <message>
 <source>Accept change?</source>

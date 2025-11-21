@@ -6058,6 +6058,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Genegeerde notitiebestanden</translation>
 </message>
 <message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
 <source>Select the path of the git binary</source>
 <translation>Selecteer het pad van het git binaire bestand</translation>
 </message>
@@ -7671,6 +7675,10 @@ Je notities zullen intact blijven!</translation>
 <message>
 <source>Differences:</source>
 <translation>Verschillen:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
 </message>
 <message>
 <source>Accept change?</source>
