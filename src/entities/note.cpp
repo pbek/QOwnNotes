@@ -1478,11 +1478,16 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     const bool ignoreAllExternalModifications =
         settings.value(QStringLiteral("ignoreAllExternalModifications")).toBool();
 
+    // Check if checksum checks are enabled
+    const bool enableNoteChecksumChecks =
+        settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
+
     // Static set to track files that currently have a TextDiffDialog open
     static QSet<QString> filesWithOpenDiffDialog;
 
     // Check if the file was modified externally by comparing checksums
-    if (!ignoreAllExternalModifications && fileExists() && !_fileChecksum.isEmpty()) {
+    if (enableNoteChecksumChecks && !ignoreAllExternalModifications && fileExists() &&
+        !_fileChecksum.isEmpty()) {
         // Read the current file content
         QFile checkFile(fullNoteFilePath());
         if (checkFile.open(QIODevice::ReadOnly)) {
@@ -1643,8 +1648,12 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     file.flush();
     file.close();
 
-    // Update the checksum after writing to disk
-    this->_fileChecksum = calculateChecksum(text);
+    // Update the checksum after writing to disk (if enabled)
+    if (enableNoteChecksumChecks) {
+        this->_fileChecksum = calculateChecksum(text);
+    } else {
+        this->_fileChecksum.clear();
+    }
 
     this->_hasDirtyData = false;
     this->_fileLastModified = QDateTime::currentDateTime();
@@ -1938,8 +1947,15 @@ bool Note::updateNoteTextFromDisk() {
     // strangely it sometimes gets null
     if (this->_noteText.isNull()) this->_noteText = QLatin1String("");
 
-    // Calculate and store the checksum of the loaded text
-    this->_fileChecksum = calculateChecksum(this->_noteText);
+    // Calculate and store the checksum of the loaded text (if enabled)
+    const SettingsService settings;
+    const bool enableNoteChecksumChecks =
+        settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
+    if (enableNoteChecksumChecks) {
+        this->_fileChecksum = calculateChecksum(this->_noteText);
+    } else {
+        this->_fileChecksum.clear();
+    }
 
     return true;
 }
@@ -2289,8 +2305,15 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
 
         this->_fileLastModified = fileInfo.lastModified();
 
-        // Calculate the checksum before storing
-        this->_fileChecksum = calculateChecksum(this->_noteText);
+        // Calculate the checksum before storing (if enabled)
+        const SettingsService settings;
+        const bool enableNoteChecksumChecks =
+            settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
+        if (enableNoteChecksumChecks) {
+            this->_fileChecksum = calculateChecksum(this->_noteText);
+        } else {
+            this->_fileChecksum.clear();
+        }
 
         this->store();
 

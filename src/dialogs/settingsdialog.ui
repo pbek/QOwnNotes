@@ -4106,73 +4106,6 @@
                   <string>Notes</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
-                  <item row="0" column="0" colspan="2">
-                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="text">
-                     <string>Notify about all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="9" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
-                    <property name="toolTip">
-                     <string>Disable this if you want to launch the application without opening a note</string>
-                    </property>
-                    <property name="text">
-                     <string>Open last accessed note at application startup</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
-                    </property>
-                    <property name="text">
-                     <string>Ignore all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="7" column="0" colspan="2">
-                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
-                    <property name="toolTip">
-                     <string>By default the headline will generated automatically</string>
-                    </property>
-                    <property name="text">
-                     <string>The shortcut to create a new note asks for a headline</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="15" column="0" colspan="2">
-                   <widget class="QCheckBox" name="startInReadOnlyModeCheckBox">
-                    <property name="toolTip">
-                     <string notr="true">note://, file://media, file://attachments</string>
-                    </property>
-                    <property name="text">
-                     <string>Start application in read-only mode</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="12" column="0" colspan="2">
-                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
-                    <property name="text">
-                     <string>Scale images down when inserted into notes</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="8" column="0" colspan="2">
-                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
-                    <property name="toolTip">
-                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
-                    </property>
-                    <property name="text">
-                     <string>Use UNIX newline instead of native newline characters</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="2" column="0" colspan="2">
                    <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
                     <property name="toolTip">
@@ -4183,7 +4116,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="4" column="1">
+                  <item row="5" column="1">
                    <widget class="QLabel" name="noteSaveIntervalTimeLabel">
                     <property name="toolTip">
                      <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
@@ -4194,17 +4127,47 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="11" column="0" colspan="2">
-                   <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
                     <property name="toolTip">
-                     <string>Automatically close the note folder database to prevent problems with sync tools</string>
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="text">
-                     <string>Automatically close the note folder database</string>
+                     <string>Notify about all external modifications of the current note</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="13" column="0" colspan="2">
+                  <item row="8" column="0" colspan="2">
+                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
+                    <property name="toolTip">
+                     <string>By default the headline will generated automatically</string>
+                    </property>
+                    <property name="text">
+                     <string>The shortcut to create a new note asks for a headline</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="16" column="0" colspan="2">
+                   <widget class="QCheckBox" name="startInReadOnlyModeCheckBox">
+                    <property name="toolTip">
+                     <string notr="true">note://, file://media, file://attachments</string>
+                    </property>
+                    <property name="text">
+                     <string>Start application in read-only mode</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
+                    <property name="toolTip">
+                     <string>Do this at your own risk!</string>
+                    </property>
+                    <property name="text">
+                     <string>Ignore all external note folder changes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="14" column="0" colspan="2">
                    <widget class="QFrame" name="imageScalingFrame">
                     <property name="frameShape">
                      <enum>QFrame::Shape::NoFrame</enum>
@@ -4269,37 +4232,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </layout>
                    </widget>
                   </item>
-                  <item row="3" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
-                    <property name="toolTip">
-                     <string>Do this at your own risk!</string>
-                    </property>
-                    <property name="text">
-                     <string>Ignore all external note folder changes</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="10" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
-                    <property name="toolTip">
-                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
-                    </property>
-                    <property name="text">
-                     <string>Restore cursor position when opening a note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="14" column="0" colspan="2">
-                   <widget class="QCheckBox" name="legacyLinkingCheckBox">
-                    <property name="toolTip">
-                     <string notr="true">note://, file://media, file://attachments</string>
-                    </property>
-                    <property name="text">
-                     <string>Use legacy way to link to notes, images and attachments</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="0">
+                  <item row="5" column="0">
                    <widget class="QSpinBox" name="noteSaveIntervalTime">
                     <property name="toolTip">
                      <string/>
@@ -4318,7 +4251,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="16" column="0" colspan="2">
+                  <item row="9" column="0" colspan="2">
+                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
+                    <property name="toolTip">
+                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
+                    </property>
+                    <property name="text">
+                     <string>Use UNIX newline instead of native newline characters</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="17" column="0" colspan="2">
                    <widget class="QFrame" name="autoReadOnlyModeFrame">
                     <property name="frameShape">
                      <enum>QFrame::Shape::NoFrame</enum>
@@ -4373,6 +4316,73 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                       </spacer>
                      </item>
                     </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="text">
+                     <string>Ignore all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="15" column="0" colspan="2">
+                   <widget class="QCheckBox" name="legacyLinkingCheckBox">
+                    <property name="toolTip">
+                     <string notr="true">note://, file://media, file://attachments</string>
+                    </property>
+                    <property name="text">
+                     <string>Use legacy way to link to notes, images and attachments</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="11" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
+                    <property name="toolTip">
+                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
+                    </property>
+                    <property name="text">
+                     <string>Restore cursor position when opening a note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="12" column="0" colspan="2">
+                   <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
+                    <property name="toolTip">
+                     <string>Automatically close the note folder database to prevent problems with sync tools</string>
+                    </property>
+                    <property name="text">
+                     <string>Automatically close the note folder database</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="13" column="0" colspan="2">
+                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
+                    <property name="text">
+                     <string>Scale images down when inserted into notes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
+                    <property name="toolTip">
+                     <string>Disable this if you want to launch the application without opening a note</string>
+                    </property>
+                    <property name="text">
+                     <string>Open last accessed note at application startup</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0" colspan="2">
+                   <widget class="QCheckBox" name="enableNoteChecksumChecks">
+                    <property name="toolTip">
+                     <string>Do this at your own risk!</string>
+                    </property>
+                    <property name="text">
+                     <string>Use checksums to detect external modifications to unsaved notes</string>
+                    </property>
                    </widget>
                   </item>
                  </layout>

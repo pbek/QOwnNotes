@@ -516,6 +516,8 @@ void SettingsDialog::storeSettings() {
                       ui->acceptAllExternalModificationsCheckBox->isChecked());
     settings.setValue(QStringLiteral("ignoreAllExternalNoteFolderChanges"),
                       ui->ignoreAllExternalNoteFolderChangesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("enableNoteChecksumChecks"),
+                      ui->enableNoteChecksumChecks->isChecked());
     settings.setValue(QStringLiteral("newNoteAskHeadline"),
                       ui->newNoteAskHeadlineCheckBox->isChecked());
     settings.setValue(QStringLiteral("useUNIXNewline"), ui->useUNIXNewlineCheckBox->isChecked());
@@ -916,6 +918,8 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("acceptAllExternalModifications")).toBool());
     ui->ignoreAllExternalNoteFolderChangesCheckBox->setChecked(
         settings.value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool());
+    ui->enableNoteChecksumChecks->setChecked(
+        settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool());
     ui->newNoteAskHeadlineCheckBox->setChecked(
         settings.value(QStringLiteral("newNoteAskHeadline")).toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
