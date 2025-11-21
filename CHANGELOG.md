@@ -2,7 +2,7 @@
 
 ## 25.11.5
 
-- There now is checkbox in the _General settings_ to enable the checksum checking
+- There now is a checkbox in the _General settings_ to enable the checksum checking
   (for [#3366](https://github.com/pbek/QOwnNotes/issues/3366))
   - By default this feature is now turned off, because of too many side effects
 - Possible flickering of the text diff dialog when disabled has been improved
