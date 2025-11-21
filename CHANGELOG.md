@@ -7,6 +7,7 @@
   - By default this feature is now turned off, because of too many side effects
 - Possible flickering of the text diff dialog when disabled has been improved
   [#3396](https://github.com/pbek/QOwnNotes/issues/3396)
+- Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.11.4
 
@@ -14,7 +15,6 @@
   doesn't match you can now choose not to show the dialog again, then the selected
   dialog result will be chosen automatically the next time [#3396](https://github.com/pbek/QOwnNotes/issues/3396)
   - You can reset that decision in the _General settings_
-- Added more Spanish, Korean translation (thank you, alejandromoc, venusgirl)
 
 ## 25.11.3
 
