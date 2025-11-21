@@ -13,6 +13,21 @@ TextDiffDialog::TextDiffDialog(QWidget *parent, const QString &title, const QStr
                                const QString &text1, const QString &text2,
                                const QString &identifier)
     : MasterDialog(parent), ui(new Ui::TextDiffDialog) {
+    if (!identifier.isEmpty()) {
+        // Check if user has previously chosen to not show this dialog
+        QString settingsKey = QStringLiteral("MessageBoxOverride/") + identifier;
+        QVariant storedResult = SettingsService::instance().value(settingsKey);
+
+        if (storedResult.isValid()) {
+            // Use the stored result and close immediately
+            this->accepted = storedResult.toBool();
+            QTimer::singleShot(0, this, &TextDiffDialog::close);
+
+            // We don't need to set up the UI since the dialog won't be shown
+            return;
+        }
+    }
+
     ui->setupUi(this);
     afterSetupUI();
     this->setWindowTitle(title);
@@ -23,19 +38,7 @@ TextDiffDialog::TextDiffDialog(QWidget *parent, const QString &title, const QStr
 
     // Show or hide the "don't show again" checkbox based on identifier
     if (identifier.isEmpty()) {
-        this->ui->dontShowAgainCheckBox->setVisible(false);
-    } else {
-        this->ui->dontShowAgainCheckBox->setVisible(true);
-
-        // Check if user has previously chosen to not show this dialog
-        QString settingsKey = QStringLiteral("MessageBoxOverride/") + identifier;
-        QVariant storedResult = SettingsService::instance().value(settingsKey);
-
-        if (storedResult.isValid()) {
-            // Use the stored result and close immediately
-            this->accepted = storedResult.toBool();
-            QTimer::singleShot(0, this, &TextDiffDialog::close);
-        }
+        this->ui->dontShowAgainCheckBox->setVisible(!identifier.isEmpty());
     }
 
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.11.5
+
+- Possible flickering of the text diff dialog when disabled has been improved
+  [#3396](https://github.com/pbek/QOwnNotes/issues/3396)
+
 ## 25.11.4
 
 - In the diff dialog shown the checksum checking of [#3366](https://github.com/pbek/QOwnNotes/issues/3366)
