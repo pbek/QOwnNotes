@@ -48,7 +48,7 @@ jobs:
       - name: 🔧 Install devenv.sh
         run: nix profile add nixpkgs#devenv
       - name: 🧰 Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: 🚧 Build nix package
@@ -61,7 +61,7 @@ jobs:
       contents: read
     steps:
       - name: "📥 Checkout repository"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: "📦 Install Nix"
         uses: cachix/install-nix-action@v31
@@ -75,7 +75,7 @@ jobs:
           name: qownnotes-devenv
 
       - name: 🧰 Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
 

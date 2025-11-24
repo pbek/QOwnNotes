@@ -104,7 +104,7 @@ jobs:
             qt-version: "5.15.2"
             experimental: false
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: true
 
