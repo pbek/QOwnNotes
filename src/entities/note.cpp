@@ -1927,7 +1927,7 @@ bool Note::updateNoteTextFromDisk() {
     QFile file(fullNoteFilePath());
 
     QFile::OpenMode flags = QIODevice::ReadOnly;
-    flags |= QIODevice::Text;
+    // flags |= QIODevice::Text;
 
     if (!file.open(flags)) {
         qDebug() << __func__ << " - 'file': " << file.fileName();
@@ -1952,7 +1952,7 @@ bool Note::updateNoteTextFromDisk() {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
 #endif
-    this->_noteText = in.readAll();
+    this->_noteText = Utils::Misc::transformLineFeeds(in.readAll());
     file.close();
 
     // strangely it sometimes gets null
