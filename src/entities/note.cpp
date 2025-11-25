@@ -1926,7 +1926,10 @@ bool Note::updateNoteTextFromDisk() {
 
     QFile file(fullNoteFilePath());
 
-    if (!file.open(QIODevice::ReadOnly)) {
+    QFile::OpenMode flags = QIODevice::ReadOnly;
+    flags |= QIODevice::Text;
+
+    if (!file.open(flags)) {
         qDebug() << __func__ << " - 'file': " << file.fileName();
         qDebug() << __func__ << " - " << file.errorString();
         return false;
@@ -1936,6 +1939,14 @@ bool Note::updateNoteTextFromDisk() {
     QFileInfo fileInfo;
     fileInfo.setFile(file);
     this->_fileLastModified = fileInfo.lastModified();
+
+    // QFile::OpenMode flags = QIODevice::ReadOnly;
+    // const SettingsService settings;
+    // const bool useUNIXNewline = settings.value(QStringLiteral("useUNIXNewline")).toBool();
+    //
+    // if (!useUNIXNewline) {
+    // flags |= QIODevice::Text;
+    // }
 
     QTextStream in(&file);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
