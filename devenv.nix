@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
@@ -65,6 +66,9 @@ in
 
   # https://devenv.sh/git-hooks/
   git-hooks = {
+    # prek 0.2.4 is crashing for this project, so we force using prek from nixpkgs-unstable for prek 0.2.18
+    package = lib.mkForce unstablePkgs.prek;
+
     hooks = {
       cmake-format.enable = true;
       taplo.enable = true;
