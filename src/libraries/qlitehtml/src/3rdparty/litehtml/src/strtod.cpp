@@ -63,10 +63,10 @@ static double powersOf10[] = {      /* Table giving binary powers of 10.  Entry 
  *----------------------------------------------------------------------
  */
 
-double litehtml::t_strtod(const litehtml::tchar_t *string, litehtml::tchar_t **endPtr) {
+double litehtml::t_strtod(const litehtml::tchar_t* string, litehtml::tchar_t** endPtr) {
   int sign, expSign = FALSE;
   double fraction, dblExp, *d;
-  const litehtml::tchar_t *p;
+  const litehtml::tchar_t* p;
   int c;
   int exp = 0;                   /* Exponent read from "EX" field. */
   int fracExp = 0;               /* Exponent that derives from the fractional
@@ -81,7 +81,7 @@ double litehtml::t_strtod(const litehtml::tchar_t *string, litehtml::tchar_t **e
   int mantSize;                  /* Number of digits in mantissa. */
   int decPt;                     /* Number of mantissa digits BEFORE decimal
                                   * point. */
-  const litehtml::tchar_t *pExp; /* Temporarily holds location of exponent
+  const litehtml::tchar_t* pExp; /* Temporarily holds location of exponent
                                   * in string. */
 
   /*
@@ -226,7 +226,7 @@ double litehtml::t_strtod(const litehtml::tchar_t *string, litehtml::tchar_t **e
 
 done:
   if (endPtr != nullptr) {
-    *endPtr = (litehtml::tchar_t *)p;
+    *endPtr = (litehtml::tchar_t*)p;
   }
 
   if (sign) {
