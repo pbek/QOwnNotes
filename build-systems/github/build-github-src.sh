@@ -45,7 +45,7 @@ cd QOwnNotes || exit 1
 # build binary translation files
 lrelease src/QOwnNotes.pro
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
@@ -67,38 +67,40 @@ cp CHANGELOG.md src
 cp webpage/src/getting-started/shortcuts.md src
 
 # rename the src directory
-mv src $qownnotesSrcDir
+mv src "$qownnotesSrcDir"
 
 archiveFile="$qownnotesSrcDir.tar.xz"
 
 # archive the source code
 echo "Creating archive $archiveFile..."
-tar -cJf $archiveFile $qownnotesSrcDir
+tar -cJf "$archiveFile" "$qownnotesSrcDir"
 
-QOWNNOTES_ARCHIVE_MD5=$(md5sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.md5)
-QOWNNOTES_ARCHIVE_SHA256=$(sha256sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.sha256)
-QOWNNOTES_ARCHIVE_SHA512=$(sha512sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.sha512)
-QOWNNOTES_ARCHIVE_SIZE=$(stat -c "%s" ${archiveFile})
+QOWNNOTES_ARCHIVE_MD5=$(md5sum "${archiveFile}" | awk '{ print $1 }' | tee "${archiveFile}.md5")
+QOWNNOTES_ARCHIVE_SHA256=$(sha256sum "${archiveFile}" | awk '{ print $1 }' | tee "${archiveFile}.sha256")
+QOWNNOTES_ARCHIVE_SHA512=$(sha512sum "${archiveFile}" | awk '{ print $1 }' | tee "${archiveFile}.sha512")
+QOWNNOTES_ARCHIVE_SIZE=$(stat -c "%s" "${archiveFile}")
 
 # also create checksum files that are compatible with sha256sum and sha512sum
-sha256sum ${archiveFile} >${archiveFile}.sha256sum
-sha512sum ${archiveFile} >${archiveFile}.sha512sum
+sha256sum "${archiveFile}" >"${archiveFile}.sha256sum"
+sha512sum "${archiveFile}" >"${archiveFile}.sha512sum"
 
 echo ""
 echo "Sums:"
-echo $QOWNNOTES_ARCHIVE_MD5
-echo $QOWNNOTES_ARCHIVE_SHA256
-echo $QOWNNOTES_ARCHIVE_SHA512
+echo "$QOWNNOTES_ARCHIVE_MD5"
+echo "$QOWNNOTES_ARCHIVE_SHA256"
+echo "$QOWNNOTES_ARCHIVE_SHA512"
 echo ""
 echo "Size:"
-echo $QOWNNOTES_ARCHIVE_SIZE
+echo "$QOWNNOTES_ARCHIVE_SIZE"
 
 # write temporary checksum variable file for the deployment scripts
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
-echo "QOWNNOTES_ARCHIVE_MD5=$QOWNNOTES_ARCHIVE_MD5" >${_QQwnNotesCheckSumVarFile}
-echo "QOWNNOTES_ARCHIVE_SHA256=$QOWNNOTES_ARCHIVE_SHA256" >>${_QQwnNotesCheckSumVarFile}
-echo "QOWNNOTES_ARCHIVE_SHA512=$QOWNNOTES_ARCHIVE_SHA512" >>${_QQwnNotesCheckSumVarFile}
-echo "QOWNNOTES_ARCHIVE_SIZE=$QOWNNOTES_ARCHIVE_SIZE" >>${_QQwnNotesCheckSumVarFile}
+{
+  echo "QOWNNOTES_ARCHIVE_MD5=$QOWNNOTES_ARCHIVE_MD5"
+  echo "QOWNNOTES_ARCHIVE_SHA256=$QOWNNOTES_ARCHIVE_SHA256"
+  echo "QOWNNOTES_ARCHIVE_SHA512=$QOWNNOTES_ARCHIVE_SHA512"
+  echo "QOWNNOTES_ARCHIVE_SIZE=$QOWNNOTES_ARCHIVE_SIZE"
+} >"${_QQwnNotesCheckSumVarFile}"
 
 echo "Uploading files to GitHub..."
 
@@ -107,7 +109,7 @@ echo "Uploading files to GitHub..."
 timeout=$((5 * 60))
 interval=5
 start_time=$(date +%s)
-while ! gh release upload --clobber v$QOWNNOTES_VERSION ${archiveFile}*; do
+while ! gh release upload --clobber "v$QOWNNOTES_VERSION" "${archiveFile}"*; do
   now=$(date +%s)
   elapsed=$((now - start_time))
   if [ $elapsed -ge $timeout ]; then

@@ -44,7 +44,7 @@ lrelease src/QOwnNotes.pro
 # remove huge .git folder
 rm -Rf .git
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
@@ -66,40 +66,42 @@ cp CHANGELOG.md src
 cp webpage/src/getting-started/shortcuts.md src
 
 # rename the src directory
-mv src $qownnotesSrcDir
+mv src "$qownnotesSrcDir"
 
 archiveFile="$qownnotesSrcDir.tar.xz"
 
 # archive the source code
 echo "Creating archive $archiveFile..."
-tar -cJf $archiveFile $qownnotesSrcDir
+tar -cJf "$archiveFile" "$qownnotesSrcDir"
 
-md5sum $archiveFile >$archiveFile.md5
-sha256sum $archiveFile | awk '{ print $1 }' >$archiveFile.sha256
-sha512sum $archiveFile | awk '{ print $1 }' >$archiveFile.sha512
+md5sum "$archiveFile" >"$archiveFile.md5"
+sha256sum "$archiveFile" | awk '{ print $1 }' >"$archiveFile.sha256"
+sha512sum "$archiveFile" | awk '{ print $1 }' >"$archiveFile.sha512"
 
 remotePath="patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src"
 sourceForgeReadme="sourceforge-readme.md"
 
 # generate the readme for sourceforge with a screenshot from GitHub
-cat README.md | sed 's/screenshots\/screenshot.png/https:\/\/raw.githubusercontent.com\/pbek\/QOwnNotes\/main\/screenshots\/screenshot.png/g' >>${sourceForgeReadme}
-echo >>${sourceForgeReadme}
-echo >>${sourceForgeReadme}
-cat CHANGELOG.md >>${sourceForgeReadme}
+{
+  cat README.md | sed 's/screenshots\/screenshot.png/https:\/\/raw.githubusercontent.com\/pbek\/QOwnNotes\/main\/screenshots\/screenshot.png/g'
+  echo
+  echo
+  cat CHANGELOG.md
+} >>"${sourceForgeReadme}"
 
 echo "Uploading files to SourceForge..."
 
 # upload the changelog file as README.md
 # it will be viewed on the sourceforge webpage
-rsync -ahv --progress ${sourceForgeReadme} ${remotePath}/README.md
+rsync -ahv --progress "${sourceForgeReadme}" "${remotePath}/README.md"
 
 ## upload the screenshots
 #rsync -ahv --progress screenshots/* ${remotePath}/screenshots
 
 # upload archive and checksum files
-rsync -ahv --progress ${archiveFile}* ${remotePath}
+rsync -ahv --progress "${archiveFile}"* "${remotePath}"
 
 # remove everything after we are done
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi

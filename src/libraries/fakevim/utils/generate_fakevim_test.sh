@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 VIM=vim
 FAKEVIM=${FAKEVIM:-example/example}
 diff=meld
@@ -15,7 +15,7 @@ print_help() {
 
 print() {
   for arg in "$@"; do
-    if [ "$arg" == "N" ]; then
+    if [ "$arg" = "N" ]; then
       printf '\n'
     else
       printf "%s" "$arg"
@@ -24,7 +24,7 @@ print() {
 }
 
 print_content() {
-  local file=$1
+  local file="$1"
   sed \
     -e 's/"/\\"/g' \
     -e 's/^/'"$INDENT"'"/' \
@@ -39,7 +39,7 @@ vim_exec() {
 }
 
 run_vim() {
-  local file=$1
+  local file="$1"
   shift
   "$VIM" \
     -c "$options" \
@@ -49,7 +49,7 @@ run_vim() {
 }
 
 run_fakevim() {
-  local file=$1
+  local file="$1"
   shift
   find_fakevim
   "$FAKEVIM" "$file" \
@@ -66,9 +66,9 @@ find_fakevim() {
 }
 
 print_test() {
-  local header=$1
-  local file=$2
-  local footer=$3
+  local header="$1"
+  local file="$2"
+  local footer="$3"
 
   print "$header" N
   print_content "$file"
@@ -87,7 +87,7 @@ main() {
     exit 1
   fi
 
-  local file=$1
+  local file="$1"
   shift # rest are commands
 
   rm -f "$cmdfile"
@@ -96,13 +96,13 @@ main() {
   print_test 'data.setText(' "$file" ');'
 
   # run command through Vim
-  local vimoutfile=${file}.vim
+  local vimoutfile="${file}.vim"
   cp "$file" "$vimoutfile"
   run_vim "$vimoutfile" "$@"
 
   print_test "KEYS(\"$*\"," "$vimoutfile" ');'
 
-  local fakevimoutfile=${file}.fakevim
+  local fakevimoutfile="${file}.fakevim"
   cp "$file" "$fakevimoutfile"
   run_fakevim "$fakevimoutfile" "$@"
 

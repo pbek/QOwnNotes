@@ -45,7 +45,7 @@ popd || exit 3
 echo
 echo Updating year "$1" to "$2"...
 echo
-sed -E "s/$1 Patrizio/$2 Patrizio/" -i $(find src -name '*.c' -o -name '*.cpp' -o -name '*.h' -o -name 'copyright' -o -name 'LICENSE')
+find src \( -name '*.c' -o -name '*.cpp' -o -name '*.h' -o -name 'copyright' -o -name 'LICENSE' \) -exec sed -E "s/$1 Patrizio/$2 Patrizio/" -i {} +
 
 echo
 echo "Are there any $1 entries left? (should return nothing)"

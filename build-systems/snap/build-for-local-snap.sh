@@ -18,29 +18,28 @@ BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-local-snap-$$"
-CUR_DIR=$(pwd)
 
 echo "Started the Snap building process, using latest '$BRANCH' git tree"
 
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi
 
-mkdir $PROJECT_PATH
-cd $PROJECT_PATH
+mkdir "$PROJECT_PATH"
+cd "$PROJECT_PATH" || exit
 
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
-git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH
-cd QOwnNotes
+git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b "$BRANCH"
+cd QOwnNotes || exit
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi
 
-cd build-systems/snap/snapcraft
+cd build-systems/snap/snapcraft || exit
 
 # replace the version in the snapcraft.yaml file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" snapcraft.yaml
@@ -51,7 +50,7 @@ echo "Building snap..."
 snapcraft
 
 echo "Uploading snap..."
-snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release stable
+snapcraft push "qownnotes_${QOWNNOTES_VERSION}_amd64.snap" --release stable
 
 #echo "Releasing snap..."
 # snapcraft release qownnotes --release ${REVISION} stable

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -14,5 +14,10 @@ cp ../CHANGELOG.md src/changelog.md || true
 NODE_OPTIONS=--openssl-legacy-provider node --max_old_space_size=8192 ./node_modules/vuepress/cli.js build src
 
 # Set more RTL styles
-sed -E 's/^<html /&dir="rtl" /' -i $(find src/.vuepress/dist/fa -name '*.html')
-sed -E 's/^<html /&dir="rtl" /' -i $(find src/.vuepress/dist/ar -name '*.html')
+while IFS= read -r -d '' file; do
+  sed -E 's/^<html /&dir="rtl" /' -i "$file"
+done < <(find src/.vuepress/dist/fa -name '*.html' -print0)
+
+while IFS= read -r -d '' file; do
+  sed -E 's/^<html /&dir="rtl" /' -i "$file"
+done < <(find src/.vuepress/dist/ar -name '*.html' -print0)

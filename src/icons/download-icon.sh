@@ -1,5 +1,6 @@
 #! /usr/bin/env nix-shell
 #! nix-shell --pure -i bash -p xmlstarlet curl
+# shellcheck shell=bash
 #
 # Downloads and extract the given icon and save it to the breeze-qownnotes and
 # breeze-dark-qownnotes folders and adds file entries to the resource files

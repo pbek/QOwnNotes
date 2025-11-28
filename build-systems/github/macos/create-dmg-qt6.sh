@@ -7,7 +7,6 @@
 APP=QOwnNotes
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
-SIGNATURE="Patrizio Bekerle"
 NAME=$(uname)
 PLIST=$APP.app/Contents/Info.plist
 
@@ -37,7 +36,7 @@ rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
-cp ${QT_ROOT_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
+cp "${QT_ROOT_DIR}"/translations/qtbase_*.qm $APP.app/Contents/Resources
 #cp ${QT_ROOT_DIR}/translations/qt_*.qm $APP.app/Contents/Resources
 #rm $APP.app/Contents/Resources/qt_help_*.qm
 
@@ -49,12 +48,7 @@ cp ${QT_ROOT_DIR}/translations/qtbase_*.qm $APP.app/Contents/Resources
 # Use "-verbose=3" for more output
 # To fix permission warning dialogs use -codesign=-, see https://github.com/pbek/QOwnNotes/issues/2912#issuecomment-3094868110
 echo "Calling macdeployqt"
-${QT_ROOT_DIR}/bin/macdeployqt ./$APP.app -codesign=-
-# Qt 6.4.2 can't find macdeployqt6
-#${Qt6_DIR}/bin/macdeployqt6 ./$APP.app
-#macdeployqt ./$APP.app
-
-if [ "$?" -ne "0" ]; then
+if ! "${QT_ROOT_DIR}/bin/macdeployqt" ./$APP.app -codesign=-; then
   echo "Failed to run macdeployqt"
   exit 1
 fi
@@ -80,32 +74,28 @@ find ./$APP.app
 
 echo "Create $TEMPDIR"
 #Create a temporary directory if one doesn't exist
-mkdir -p $TEMPDIR
-if [ "$?" -ne "0" ]; then
+if ! mkdir -p $TEMPDIR; then
   echo "Failed to create temporary folder"
   exit 1
 fi
 
 echo "Clean $TEMPDIR"
 #Delete the contents of any previous builds
-rm -Rf ./$TEMPDIR/*
-if [ "$?" -ne "0" ]; then
+if ! rm -Rf ./$TEMPDIR/*; then
   echo "Failed to clean temporary folder"
   exit 1
 fi
 
 echo "Move application bundle"
 #Move the application to the temporary directory
-mv ./$APP.app ./$TEMPDIR
-if [ "$?" -ne "0" ]; then
+if ! mv ./$APP.app ./$TEMPDIR; then
   echo "Failed to move application bundle"
   exit 1
 fi
 
 echo "Create symbolic link"
 #Create a symbolic link to the applications folder
-ln -s /Applications ./$TEMPDIR/Applications
-if [ "$?" -ne "0" ]; then
+if ! ln -s /Applications ./$TEMPDIR/Applications; then
   echo "Failed to create link to /Applications"
   exit 1
 fi
@@ -113,15 +103,13 @@ fi
 echo "Create new disk image"
 #Create the disk image
 rm -f ./$APP.dmg
-hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg
-if [ "$?" -ne "0" ]; then
+if ! hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg; then
   echo "Failed to create disk image"
   exit 1
 fi
 
 # delete the temporary directory
-rm -Rf ./$TEMPDIR/*
-if [ "$?" -ne "0" ]; then
+if ! rm -Rf ./$TEMPDIR/*; then
   echo "Failed to clean temporary folder"
   exit 1
 fi

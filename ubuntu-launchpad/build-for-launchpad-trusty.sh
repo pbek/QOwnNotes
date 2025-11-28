@@ -25,7 +25,6 @@ UBUNTU_RELEASES=("trusty")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
-CUR_DIR=$(pwd)
 UPLOAD="true"
 DEBUILD_ARGS="-d"
 GPG_PUBLIC_KEY=F5161BD3
@@ -51,13 +50,13 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 # checkout the source code
-git clone --depth=1 https://github.com/pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
-cd $PROJECT_PATH
+git clone --depth=1 https://github.com/pbek/QOwnNotes.git "$PROJECT_PATH" -b "$BRANCH"
+cd "$PROJECT_PATH" || exit
 
 # checkout submodules
 git submodule update --init
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
@@ -75,10 +74,10 @@ echo "Using version $QOWNNOTES_VERSION..."
 qownnotesSrcDir="qownnotes_${QOWNNOTES_VERSION}"
 
 # copy the src directory
-cp -R src $qownnotesSrcDir
+cp -R src "$qownnotesSrcDir"
 
 # archive the source code
-tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
+tar -czf "$qownnotesSrcDir.orig.tar.gz" "$qownnotesSrcDir"
 
 changelogPath=debian/changelog
 
@@ -86,7 +85,7 @@ changelogPath=debian/changelog
 for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   :
   echo "Building for $ubuntuRelease..."
-  cd $qownnotesSrcDir
+  cd "$qownnotesSrcDir" || exit
 
   # get the modified trusty files in place
   cp ../ubuntu-launchpad/trusty/* debian
@@ -99,20 +98,24 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   #dch -r $changelogText
 
   # create the changelog file
-  echo "qownnotes ($versionPart) $ubuntuRelease; urgency=low" >$changelogPath
-  echo "" >>$changelogPath
-  echo "  * $changelogText" >>$changelogPath
-  echo "" >>$changelogPath
-  echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE" >>$changelogPath
+  {
+    echo "qownnotes ($versionPart) $ubuntuRelease; urgency=low"
+    echo ""
+    echo "  * $changelogText"
+    echo ""
+    echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE"
+  } >"$changelogPath"
 
   # launch debuild
   debuild -S -sa -k$GPG_PUBLIC_KEY $DEBUILD_ARGS
-  cd ..
+  (
+    cd .. || exit
 
-  # send to launchpad
-  if [ "$UPLOAD" = "true" ]; then
-    dput ppa:pbek/qownnotes-trusty qownnotes_${versionPart}_source.changes
-  fi
+    # send to launchpad
+    if [ "$UPLOAD" = "true" ]; then
+      dput ppa:pbek/qownnotes-trusty "qownnotes_${versionPart}_source.changes"
+    fi
+  )
 done
 
 # remove everything after we are done

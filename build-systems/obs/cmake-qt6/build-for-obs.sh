@@ -43,7 +43,7 @@ lrelease src/QOwnNotes.pro
 # remove huge .git folder
 rm -Rf .git
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
@@ -76,34 +76,38 @@ cp CHANGELOG.md src
 cp webpage/src/getting-started/shortcuts.md src
 
 # rename the src directory
-mv src $qownnotesSrcDir
+mv src "$qownnotesSrcDir"
 
 changelogPath=$buildSystemPath/qownnotes.bin
 
 # create the changelog file
-echo "-------------------------------------------------------------------" >$changelogPath
-echo "$DATE - patrizio@bekerle.com" >>$changelogPath
-echo "" >>$changelogPath
-echo "- $changelogText" >>$changelogPath
+{
+  echo "-------------------------------------------------------------------"
+  echo "$DATE - patrizio@bekerle.com"
+  echo ""
+  echo "- $changelogText"
+} >"$changelogPath"
 
-cat $changelogPath
+cat "$changelogPath"
 
 # create the Debian changelog file
 debChangelogPath=$buildSystemPath/debian.changelog
 versionPart="$QOWNNOTES_VERSION-1debian"
-echo "qownnotes ($versionPart) debian; urgency=low" >$debChangelogPath
-echo "" >>$debChangelogPath
-echo "  * $changelogText" >>$debChangelogPath
-echo "" >>$debChangelogPath
-echo " -- Patrizio Bekerle <patrizio@bekerle.com>  $DATE" >>$debChangelogPath
+{
+  echo "qownnotes ($versionPart) debian; urgency=low"
+  echo ""
+  echo "  * $changelogText"
+  echo ""
+  echo " -- Patrizio Bekerle <patrizio@bekerle.com>  $DATE"
+} >"$debChangelogPath"
 
-cat $debChangelogPath
+cat "$debChangelogPath"
 
 archiveFile="$qownnotesSrcDir.tar.xz"
 
 # archive the source code
 echo "Creating archive $archiveFile..."
-tar -cJf $archiveFile $qownnotesSrcDir
+tar -cJf "$archiveFile" "$qownnotesSrcDir"
 
 echo "Checking out OBS repository..."
 
@@ -114,31 +118,31 @@ obsRepoPath="home:pbek:QOwnNotes/desktop-cmake3"
 
 # remove other archives
 echo "Removing old archives..."
-cd $obsRepoPath || exit 1
-osc rm *.xz
+cd "$obsRepoPath" || exit 1
+osc rm -- *.xz
 cd ../..
 
 # copying new files to repository
-mv $archiveFile $obsRepoPath
-cp $buildSystemPath/qownnotes.bin $obsRepoPath
-#cp $buildSystemPath/qownnotes.spec $obsRepoPath
-#cp $buildSystemPath/appimage.yml $obsRepoPath
-#cp $buildSystemPath/_service $obsRepoPath
-#cp $buildSystemPath/qownnotes.appdata.xml $obsRepoPath
-cp $debChangelogPath $obsRepoPath
-cp $buildSystemPath/PKGBUILD $obsRepoPath
-cp $buildSystemPath/debian.control $obsRepoPath
-cp $buildSystemPath/debian.copyright $obsRepoPath
-cp $buildSystemPath/debian.compat $obsRepoPath
-cp $buildSystemPath/debian.rules $obsRepoPath
-cp $buildSystemPath/debian.qownnotes.install $obsRepoPath
-cp $buildSystemPath/qownnotes.dsc $obsRepoPath
-cp $buildSystemPath/debian.qownnotes-i18n.install $obsRepoPath
+mv "$archiveFile" "$obsRepoPath"
+cp $buildSystemPath/qownnotes.bin "$obsRepoPath"
+#cp $buildSystemPath/qownnotes.spec "$obsRepoPath"
+#cp $buildSystemPath/appimage.yml "$obsRepoPath"
+#cp $buildSystemPath/_service "$obsRepoPath"
+#cp $buildSystemPath/qownnotes.appdata.xml "$obsRepoPath"
+cp "$debChangelogPath" "$obsRepoPath"
+cp $buildSystemPath/PKGBUILD "$obsRepoPath"
+cp $buildSystemPath/debian.control "$obsRepoPath"
+cp $buildSystemPath/debian.copyright "$obsRepoPath"
+cp $buildSystemPath/debian.compat "$obsRepoPath"
+cp $buildSystemPath/debian.rules "$obsRepoPath"
+cp $buildSystemPath/debian.qownnotes.install "$obsRepoPath"
+cp $buildSystemPath/qownnotes.dsc "$obsRepoPath"
+cp $buildSystemPath/debian.qownnotes-i18n.install "$obsRepoPath"
 
-cd $obsRepoPath || exit 1
+cd "$obsRepoPath" || exit 1
 
 # add all new files
-osc add $archiveFile
+osc add "$archiveFile"
 #osc add qownnotes.bin
 #osc add qownnotes.spec
 #osc add PKGBUILD

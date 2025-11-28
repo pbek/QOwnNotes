@@ -24,22 +24,23 @@ if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
   exit 1
 fi
 
-source ${_QQwnNotesCheckSumVarFile}
+# shellcheck source=/dev/null
+source "${_QQwnNotesCheckSumVarFile}"
 
 # check checksum variable from build-systems/github/build-github-src.sh
-if [ -z ${QOWNNOTES_ARCHIVE_MD5} ]; then
+if [ -z "${QOWNNOTES_ARCHIVE_MD5}" ]; then
   echo "QOWNNOTES_ARCHIVE_MD5 was not set!"
   exit 1
 fi
 
 echo "Started the slackware packaging process, using latest '$BRANCH' git tree"
 
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi
 
-mkdir $PROJECT_PATH
-cd $PROJECT_PATH || exit 1
+mkdir "$PROJECT_PATH"
+cd "$PROJECT_PATH" || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
@@ -47,10 +48,10 @@ echo "Project path: $PROJECT_PATH"
 git clone --depth=1 git@github.com:pbek/qownnotes-slackbuilds.git slackbuilds
 
 # checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b "$BRANCH"
 cd QOwnNotes || exit 1
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi
@@ -82,10 +83,11 @@ sed -i 's/REQUIRES="qt5 libproxy"/REQUIRES=""/' ${path15_0}/qownnotes.info
 cp dobuild.sh ${path15_0}
 
 echo "Committing changes..."
-git commit -m "releasing version $QOWNNOTES_VERSION" * ${path14_2}/* ${path15_0}/*
+# shellcheck disable=SC2035
+git commit -m "releasing version $QOWNNOTES_VERSION" -- * ${path14_2}/* ${path15_0}/*
 git push
 
 # remove everything after we are done
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi

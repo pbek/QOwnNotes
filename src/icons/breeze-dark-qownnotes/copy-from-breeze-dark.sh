@@ -4,4 +4,6 @@
 breezeDarkIconPath="/run/current-system/sw/share/icons/breeze-dark/actions/16/"
 
 cd ../breeze-qownnotes/16x16 || exit
-find *.svg | xargs -I %% cp ${breezeDarkIconPath}%% ../../breeze-dark-qownnotes/16x16
+find . -name '*.svg' -exec basename {} \; | while IFS= read -r file; do
+  cp "${breezeDarkIconPath}${file}" ../../breeze-dark-qownnotes/16x16/
+done

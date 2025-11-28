@@ -42,13 +42,13 @@ done
 
 echo "Started the debian source packaging process, using latest '$BRANCH' git tree"
 
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi
 
 # checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
-cd $PROJECT_PATH || exit 1
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git "$PROJECT_PATH" -b "$BRANCH"
+cd "$PROJECT_PATH" || exit 1
 
 # checkout submodules
 git submodule update --init
@@ -56,7 +56,7 @@ git submodule update --init
 # build binary translation files
 lrelease src/QOwnNotes.pro
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 else
@@ -74,10 +74,10 @@ echo "Using version $QOWNNOTES_VERSION..."
 qownnotesSrcDir="qownnotes_${QOWNNOTES_VERSION}"
 
 # copy the src directory
-cp -R src $qownnotesSrcDir
+cp -R src "$qownnotesSrcDir"
 
 # archive the source code
-tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
+tar -czf "$qownnotesSrcDir.orig.tar.gz" "$qownnotesSrcDir"
 
 changelogPath=debian/changelog
 
@@ -88,7 +88,7 @@ gpg --list-secret-keys
 for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   :
   echo "Building for $ubuntuRelease..."
-  cd $qownnotesSrcDir || exit 1
+  cd "$qownnotesSrcDir" || exit 1
 
   versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 
@@ -97,23 +97,25 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   #dch -r $changelogText
 
   # create the changelog file
-  echo "qownnotes ($versionPart) $ubuntuRelease; urgency=low" >$changelogPath
-  echo "" >>$changelogPath
-  echo "  * $changelogText" >>$changelogPath
-  echo "" >>$changelogPath
-  echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE" >>$changelogPath
+  {
+    echo "qownnotes ($versionPart) $ubuntuRelease; urgency=low"
+    echo ""
+    echo "  * $changelogText"
+    echo ""
+    echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE"
+  } >"$changelogPath"
 
   # launch debuild
   debuild -S -sa -k$SIGNING_EMAIL $DEBUILD_ARGS
-  cd ..
+  cd .. || exit 1
 
   # send to launchpad
   if [ "$UPLOAD" = "true" ]; then
-    dput ppa:pbek/qownnotes qownnotes_${versionPart}_source.changes
+    dput ppa:pbek/qownnotes "qownnotes_${versionPart}_source.changes"
   fi
 done
 
 # remove everything after we are done
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi

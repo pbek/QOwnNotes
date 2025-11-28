@@ -6,8 +6,10 @@
 #
 
 # Define the original and replacement lines
+# shellcheck disable=SC2016
 original_line1='(new Date($page.frontmatter.date)).toISOString()'
 replacement_line1="(Number.isNaN(new Date(\$page.frontmatter.date).getTime()) ? '' : new Date(\$page.frontmatter.date).toISOString())"
+# shellcheck disable=SC2016
 original_line2='(new Date($page.lastUpdated)).toISOString()'
 replacement_line2="(Number.isNaN(new Date(\$page.lastUpdated).getTime()) ? '' : new Date(\$page.lastUpdated).toISOString())"
 

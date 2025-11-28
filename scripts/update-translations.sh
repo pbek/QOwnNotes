@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 #
 # Use this script in $ProjectFileDir$ to update all translation files
 #

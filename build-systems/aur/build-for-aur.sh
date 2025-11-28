@@ -21,7 +21,6 @@ BRANCH=main
 #BRANCH=release
 
 PROJECT_PATH="/tmp/QOwnNotes-aur-$$"
-CUR_DIR=$(pwd)
 
 # use temporary checksum variable file
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
@@ -31,22 +30,23 @@ if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
   exit 1
 fi
 
-source ${_QQwnNotesCheckSumVarFile}
+# shellcheck source=/dev/null
+source "${_QQwnNotesCheckSumVarFile}"
 
 # check checksum variable from build-systems/github/build-github-src.sh
-if [ -z ${QOWNNOTES_ARCHIVE_SHA256} ]; then
+if [ -z "${QOWNNOTES_ARCHIVE_SHA256}" ]; then
   echo "QOWNNOTES_ARCHIVE_SHA256 was not set!"
   exit 1
 fi
 
 echo "Started the AUR packaging process, using latest '$BRANCH' git tree"
 
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi
 
-mkdir $PROJECT_PATH
-cd $PROJECT_PATH || exit 1
+mkdir "$PROJECT_PATH"
+cd "$PROJECT_PATH" || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
@@ -54,13 +54,13 @@ echo "Project path: $PROJECT_PATH"
 git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
 
 # checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b "$BRANCH"
 cd QOwnNotes || exit 1
 
 gitCommitHash=$(git rev-parse HEAD)
 echo "Current commit: $gitCommitHash"
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi

@@ -23,27 +23,29 @@ if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
   exit 1
 fi
 
-source ${_QQwnNotesCheckSumVarFile}
+# shellcheck source=/dev/null
+source "${_QQwnNotesCheckSumVarFile}"
 
 # check checksum variable from build-systems/github/build-github-src.sh
-if [ -z ${QOWNNOTES_ARCHIVE_SHA512} ]; then
+if [ -z "${QOWNNOTES_ARCHIVE_SHA512}" ]; then
   echo "QOWNNOTES_ARCHIVE_SHA512 was not set!"
   exit 1
 fi
 
-if [ -z ${QOWNNOTES_ARCHIVE_SIZE} ]; then
+if [ -z "${QOWNNOTES_ARCHIVE_SIZE}" ]; then
   echo "QOWNNOTES_ARCHIVE_SIZE was not set!"
   exit 1
 fi
 
 list_old_ebuilds_to_delete() {
-  all_files=($(find . -maxdepth 1 -type f -name 'qownnotes-*.ebuild' -printf '%f\n'))
+  local all_files majors latest_major to_delete files
+  mapfile -t all_files < <(find . -maxdepth 1 -type f -name 'qownnotes-*.ebuild' -printf '%f\n')
   majors=$(printf '%s\n' "${all_files[@]}" | sed -E 's/^qownnotes-([0-9]+)\..*/\1/' | sort -u)
-  latest_major=$(printf '%s\n' $majors | sort -n | tail -n 1)
+  latest_major=$(printf '%s\n' "$majors" | sort -n | tail -n 1)
   to_delete=()
 
   for major in ${majors}; do
-    files=($(printf '%s\n' "${all_files[@]}" | grep "^qownnotes-${major}\." | sort -V))
+    mapfile -t files < <(printf '%s\n' "${all_files[@]}" | grep "^qownnotes-${major}\." | sort -V)
 
     if [[ $major -eq $latest_major ]]; then
       # Keep the last 3 for latest major
@@ -65,12 +67,12 @@ list_old_ebuilds_to_delete() {
 
 echo "Started the ebuild packaging process, using latest '$BRANCH' git tree"
 
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi
 
-mkdir $PROJECT_PATH
-cd $PROJECT_PATH || exit 1
+mkdir "$PROJECT_PATH"
+cd "$PROJECT_PATH" || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
@@ -78,10 +80,10 @@ echo "Project path: $PROJECT_PATH"
 git clone --depth=1 git@github.com:qownnotes/gentoo-overlay.git overlay
 
 # checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b "$BRANCH"
 cd QOwnNotes || exit 1
 
-if [ -z $QOWNNOTES_VERSION ]; then
+if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi
@@ -95,7 +97,7 @@ cp ../../../QOwnNotes/build-systems/gentoo/metadata.xml .
 ebuilds_to_delete="$(list_old_ebuilds_to_delete)"
 
 # Remove to-be-deleted versions from Manifest
-read -r -a ebuilds_to_delete_array <<<${ebuilds_to_delete}
+read -r -a ebuilds_to_delete_array <<<"${ebuilds_to_delete}"
 patterns=$(for f in "${ebuilds_to_delete_array[@]}"; do
   base=${f%.ebuild}
   echo "DIST ${base}.tar.xz"
@@ -106,15 +108,17 @@ grep -vF -f <(printf '%s\n' "$patterns") Manifest >Manifest.new && mv Manifest.n
 echo "DIST ${ARCHIVE_FILE} ${QOWNNOTES_ARCHIVE_SIZE} SHA512 ${QOWNNOTES_ARCHIVE_SHA512}" >>Manifest
 
 eBuildFile="qownnotes-$QOWNNOTES_VERSION.ebuild"
-mv qownnotes.ebuild ${eBuildFile}
+mv qownnotes.ebuild "${eBuildFile}"
 
 echo "Committing changes..."
+# shellcheck disable=SC2086
 [ -n "${ebuilds_to_delete}" ] && git rm ${ebuilds_to_delete}
-git add ${eBuildFile}
-git commit -m "releasing version $QOWNNOTES_VERSION" ${eBuildFile} Manifest metadata.xml ${ebuilds_to_delete}
+git add "${eBuildFile}"
+# shellcheck disable=SC2086
+git commit -m "releasing version $QOWNNOTES_VERSION" "${eBuildFile}" Manifest metadata.xml ${ebuilds_to_delete}
 git push
 
 # remove everything after we are done
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi

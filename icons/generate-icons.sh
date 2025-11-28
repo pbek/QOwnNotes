@@ -85,7 +85,7 @@ convert_icon_ico "../src/QOwnNotes.ico"
 
 # Generate app icons
 for size in "${SIZES_APP[@]}"; do
-  convert_icon_png ${size} "${SRC_IMAGES_DIR}/icons/${size}x${size}/apps/${APP_NAME}.png"
+  convert_icon_png "${size}" "${SRC_IMAGES_DIR}/icons/${size}x${size}/apps/${APP_NAME}.png"
 done
 
 # Copy to src/images

@@ -8,7 +8,7 @@ if [ "$1" = "--docker" ]; then
   echo "Importing PGP key..."
   gpg --import ~/private.pgp
   echo "Adding AUR ssh key..."
-  eval $(ssh-agent -s)
+  eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/aur_rsa
 fi
 
