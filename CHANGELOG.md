@@ -3,6 +3,7 @@
 ## 25.12.0
 
 - Fixed PDF export from markdown preview now renders in color instead of grayscale
+  (for [#3399](https://github.com/pbek/QOwnNotes/issues/3399))
   - The printer color mode is now explicitly set to color when exporting notes as PDF
 
 ## 25.11.5
