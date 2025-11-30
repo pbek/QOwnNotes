@@ -5527,6 +5527,7 @@ void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
  */
 void MainWindow::exportNoteAsPDF(QTextDocument *doc) {
     auto *printer = new QPrinter(QPrinter::HighResolution);
+    printer->setColorMode(QPrinter::Color);
 
     if (prepareExportNoteAsPDFPrinter(printer)) {
         doc->print(printer);

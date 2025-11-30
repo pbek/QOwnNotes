@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.12.0
+
+- Fixed PDF export from markdown preview now renders in color instead of grayscale
+  - The printer color mode is now explicitly set to color when exporting notes as PDF
+
 ## 25.11.5
 
 - There now is a checkbox in the _General settings_ to enable the checksum checking
