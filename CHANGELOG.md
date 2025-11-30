@@ -5,6 +5,17 @@
 - Fixed PDF export from markdown preview now renders in color instead of grayscale
   (for [#3399](https://github.com/pbek/QOwnNotes/issues/3399))
   - The printer color mode is now explicitly set to color when exporting notes as PDF
+- Added comprehensive protection against overwriting notes with empty or corrupted content
+  (for [#3400](https://github.com/pbek/QOwnNotes/issues/3400))
+  - Notes with more than 100 bytes of content are now protected from being overwritten by empty files
+  - Protection applies when loading notes from disk (`updateNoteTextFromDisk`)
+  - Protection applies when creating notes from files (`createFromFile`)
+  - Protection applies when writing notes to disk (`storeNoteTextFileToDisk`)
+  - Protection applies when storing note text in memory (`storeNewText`)
+  - Additional safeguards prevent loading files that have suspiciously shrunk by more than 90%
+  - Warning messages are logged when protection is triggered to help with troubleshooting
+  - This prevents data loss from file corruption, sync conflicts, external program errors, and accidental deletions
+  - Small notes under 100 bytes can still be intentionally cleared without restrictions
 
 ## 25.11.5
 

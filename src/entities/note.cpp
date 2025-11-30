@@ -1263,6 +1263,14 @@ bool Note::storeNewText(QString text) {
         return false;
     }
 
+    // Prevent storing empty text over existing note content
+    // This protects against accidentally clearing notes with substantial content
+    if (text.isEmpty() && _fileSize > 100) {
+        qWarning() << __func__ << " - Refusing to store empty text over existing note with size"
+                   << _fileSize << " - file:" << fullNoteFilePath();
+        return false;
+    }
+
     this->_noteText = std::move(text);
     this->_hasDirtyData = true;
 
@@ -1631,6 +1639,15 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     // (maybe the ownCloud-sync works better then)
     const QString text = Utils::Misc::transformLineFeeds(this->_noteText);
 
+    // Prevent writing empty notes to disk if the note previously had content
+    // This protects against accidentally overwriting notes with empty content
+    if (text.isEmpty() && _fileSize > 100 && fileExists) {
+        qWarning() << __func__ << " - Refusing to write empty note to disk when note previously had"
+                   << _fileSize << "bytes - file:" << file.fileName();
+        file.close();
+        return false;
+    }
+
     //    diff_match_patch *diff = new diff_match_patch();
     //    QList<Diff> diffList = diff->diff_main( this->noteText, text );
 
@@ -1937,6 +1954,29 @@ bool Note::updateNoteTextFromDisk() {
     fileInfo.setFile(file);
     this->_fileLastModified = fileInfo.lastModified();
 
+    // Check the file size before reading
+    const qint64 fileSize = fileInfo.size();
+
+    // Prevent overwriting notes with empty or suspiciously small files
+    // If the current note has content (file size > 0) and the file on disk is empty or very small,
+    // this might indicate file corruption or accidental truncation
+    if (_fileSize > 100 && fileSize == 0) {
+        qWarning() << __func__ << " - Refusing to load empty file over existing note with size"
+                   << _fileSize << " - file:" << file.fileName();
+        file.close();
+        return false;
+    }
+
+    // If the file size dropped significantly (more than 90% reduction) and is now very small,
+    // this is suspicious and might indicate corruption
+    if (_fileSize > 1000 && fileSize > 0 && fileSize < 50 && fileSize < (_fileSize * 0.1)) {
+        qWarning() << __func__ << " - Refusing to load suspiciously small file (size" << fileSize
+                   << ") over existing note with size" << _fileSize
+                   << " - file:" << file.fileName();
+        file.close();
+        return false;
+    }
+
     QTextStream in(&file);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
@@ -1946,6 +1986,15 @@ bool Note::updateNoteTextFromDisk() {
 
     // strangely it sometimes gets null
     if (this->_noteText.isNull()) this->_noteText = QLatin1String("");
+
+    // Additional safety check: if we loaded an empty text but previously had content,
+    // refuse the update
+    if (this->_noteText.isEmpty() && _fileSize > 100) {
+        qWarning() << __func__
+                   << " - Refusing to overwrite existing note with empty content - file:"
+                   << fullNoteFilePath();
+        return false;
+    }
 
     // Calculate and store the checksum of the loaded text (if enabled)
     const SettingsService settings;
@@ -2273,6 +2322,17 @@ QString Note::detectNewlineCharacters() {
 
 void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHook) {
     if (file.open(QIODevice::ReadOnly)) {
+        QFileInfo fileInfo;
+        fileInfo.setFile(file);
+
+        // Check file size before reading - skip empty files as they might indicate corruption
+        const qint64 fileSize = fileInfo.size();
+        if (fileSize == 0) {
+            qWarning() << __func__ << " - Skipping empty file:" << file.fileName();
+            file.close();
+            return;
+        }
+
         QTextStream in(&file);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         in.setCodec("UTF-8");
@@ -2282,8 +2342,11 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
         const QString noteText = in.readAll();
         file.close();
 
-        QFileInfo fileInfo;
-        fileInfo.setFile(file);
+        // Verify that we actually read some content
+        if (noteText.isEmpty()) {
+            qWarning() << __func__ << " - Read empty text from file:" << file.fileName();
+            return;
+        }
 
         // create a nicer name by removing the extension
         // TODO(pbek): make sure name is ownCloud Notes conform
