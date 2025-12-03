@@ -1351,9 +1351,14 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     QDomDocument doc;
     qDebug() << __func__ << " - 'data': " << data;
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    // Qt6.5+: use ParseOption enum
     doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    // Qt6.0-6.4: ParseOptions doesn't exist, fall back to bool overload
+    doc.setContent(data, true);
 #else
+    // Qt5: use the bool overload (namespace processing)
     doc.setContent(data, true);
 #endif
 
@@ -1471,9 +1476,14 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
 
 void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) {
     QDomDocument doc;
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    // Qt6.5+: use ParseOption enum
     doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    // Qt6.0-6.4: ParseOptions doesn't exist, fall back to bool overload
+    doc.setContent(data, true);
 #else
+    // Qt5: use the bool overload (namespace processing)
     doc.setContent(data, true);
 #endif
 
@@ -1936,9 +1946,14 @@ void OwnCloudService::updateNoteShareStatus(QDomNodeList &dataElements, bool upd
 
 void OwnCloudService::loadDirectory(QString &data) {
     QDomDocument doc;
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    // Qt6.5+: use ParseOption enum
     doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    // Qt6.0-6.4: ParseOptions doesn't exist, fall back to bool overload
+    doc.setContent(data, true);
 #else
+    // Qt5: use the bool overload (namespace processing)
     doc.setContent(data, true);
 #endif
 
@@ -2443,9 +2458,14 @@ QString OwnCloudService::fetchNoteFileId(const Note &note) {
             QString data = QString(reply->readAll());
 
             QDomDocument doc;
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+            // Qt6.5+: use ParseOption enum
             doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+            // Qt6.0-6.4: ParseOptions doesn't exist, fall back to bool overload
+            doc.setContent(data, true);
 #else
+            // Qt5: use the bool overload (namespace processing)
             doc.setContent(data, true);
 #endif
 
