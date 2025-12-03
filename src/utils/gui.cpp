@@ -82,7 +82,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget, const QStrin
         treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
-    if (text.count() >= 1) {
+    if (text.size() >= 1) {
         int searchColumnCount =
             searchFlags & TreeWidgetSearchFlag::AllColumnsSearch ? treeWidget->columnCount() : 1;
 
@@ -143,7 +143,7 @@ void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget, const QStrin
         listWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
-    if (text.count() >= 1) {
+    if (text.size() >= 1) {
         // hide all not found items
         Q_FOREACH (QListWidgetItem *item, allItems) {
             bool show = item->text().contains(text, Qt::CaseInsensitive);
@@ -586,7 +586,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
 
         const QStringList &stringList = nextBlockText.split(QStringLiteral("|"));
         tableTextList.append(stringList);
-        endPosition = block.position() + nextBlockText.count();
+        endPosition = block.position() + nextBlockText.size();
         maxColumns = std::max(maxColumns, (int)stringList.count());
     }
 
@@ -619,7 +619,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
                 continue;
             }
 
-            maxTextLength = std::max((int)text.count(), maxTextLength);
+            maxTextLength = std::max((int)text.size(), maxTextLength);
         }
 
         // a minimum of 3 headline separator characters are needed for

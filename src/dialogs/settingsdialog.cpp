@@ -2061,11 +2061,12 @@ void SettingsDialog::on_legacyOwnCloudCalendarRadioButton_toggled(bool checked) 
 }
 
 void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
-    if (QMessageBox::information(this, tr("Database"),
-                                 tr("Do you really want to clear the local database? "
-                                    "This will also remove your configured note "
-                                    "folders and your cached todo items!"),
-                                 tr("Clear &database"), tr("&Cancel"), QString(), 1) == 0) {
+    if (QMessageBox::question(this, tr("Database"),
+                              tr("Do you really want to clear the local database? "
+                                 "This will also remove your configured note "
+                                 "folders and your cached todo items!"),
+                              QMessageBox::Yes | QMessageBox::Cancel,
+                              QMessageBox::Cancel) == QMessageBox::Yes) {
         DatabaseService::reinitializeDiskDatabase();
         NoteFolder::migrateToNoteFolders();
 
@@ -2133,11 +2134,12 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked) {
  * Allows the user to clear all settings and the database and exit the app
  */
 void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
-    if (QMessageBox::information(this, tr("Clear app data and exit"),
-                                 tr("Do you really want to clear all settings, remove the "
-                                    "database and exit QOwnNotes?\n\n"
-                                    "Your notes will stay intact!"),
-                                 tr("Clear and &exit"), tr("&Cancel"), QString(), 1) == 0) {
+    if (QMessageBox::question(this, tr("Clear app data and exit"),
+                              tr("Do you really want to clear all settings, remove the "
+                                 "database and exit QOwnNotes?\n\n"
+                                 "Your notes will stay intact!"),
+                              QMessageBox::Yes | QMessageBox::Cancel,
+                              QMessageBox::Cancel) == QMessageBox::Yes) {
         SettingsService settings;
         settings.clear();
         DatabaseService::removeDiskDatabase();
@@ -3146,7 +3148,7 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(const QString &arg1) 
         ui->shortcutTreeWidget->findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
-    if (arg1.count() >= 1) {
+    if (arg1.size() >= 1) {
         // search for items in the description
         QList<QTreeWidgetItem *> foundItems =
             ui->shortcutTreeWidget->findItems(arg1, Qt::MatchContains | Qt::MatchRecursive);
@@ -3605,12 +3607,13 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
 }
 
 void SettingsDialog::on_resetToolbarPushButton_clicked() {
-    if (QMessageBox::information(this, tr("Reset toolbars and exit"),
-                                 tr("Do you really want to reset all toolbars? "
-                                    "The application will be closed in the process, the "
-                                    "default toolbars will be restored when you start it "
-                                    "again."),
-                                 tr("Reset and &exit"), tr("&Cancel"), QLatin1String(""), 1) == 0) {
+    if (QMessageBox::question(this, tr("Reset toolbars and exit"),
+                              tr("Do you really want to reset all toolbars? "
+                                 "The application will be closed in the process, the "
+                                 "default toolbars will be restored when you start it "
+                                 "again."),
+                              QMessageBox::Yes | QMessageBox::Cancel,
+                              QMessageBox::Cancel) == QMessageBox::Yes) {
         SettingsService settings;
 
         // remove all settings in the group
@@ -3642,7 +3645,7 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
         ui->settingsTreeWidget->findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
-    if (arg1.count() >= 1) {
+    if (arg1.size() >= 1) {
         QList<int> pageIndexList;
 
         // search in the tree widget items themselves

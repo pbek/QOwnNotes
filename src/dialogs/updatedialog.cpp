@@ -491,11 +491,11 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
         return false;
     }
 
-    if (QMessageBox::information(
+    if (QMessageBox::question(
             this, tr("Restart application"),
             tr("You now can restart the application to complete the update process.") +
                 Utils::Misc::appendSingleAppInstanceTextIfNeeded(),
-            tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
+            QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Yes) == QMessageBox::Yes) {
         Utils::Misc::restartApplication();
     }
 

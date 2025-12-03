@@ -385,10 +385,11 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
 
     // check if platform is supported
     if (!infoJson.platformSupported &&
-        QMessageBox::information(this, tr("Platform not supported!"),
-                                 tr("Your platform is not supported by this script!\n"
-                                    "Do you want to install it anyway?"),
-                                 tr("Install"), tr("Cancel"), QString(), 0, 1) != 0) {
+        QMessageBox::question(this, tr("Platform not supported!"),
+                              tr("Your platform is not supported by this script!\n"
+                                 "Do you want to install it anyway?"),
+                              QMessageBox::Yes | QMessageBox::No,
+                              QMessageBox::No) == QMessageBox::No) {
         return;
     }
 

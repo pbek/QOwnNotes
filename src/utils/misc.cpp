@@ -1899,21 +1899,25 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
             output += prepareDebugInformationLine(key, QStringLiteral("<hidden>"),
                                                   withGitHubLineBreaks, value.typeName());
         } else {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+            switch (value.typeId()) {
+#else
             switch (value.type()) {
-                case QVariant::StringList:
+#endif
+                case QMetaType::QStringList:
                     output += prepareDebugInformationLine(
                         key, value.toStringList().join(QStringLiteral(", ")), withGitHubLineBreaks,
                         value.typeName());
                     break;
-                case QVariant::List:
+                case QMetaType::QVariantList:
                     output +=
                         prepareDebugInformationLine(key,
                                                     QStringLiteral("<variant list with %1 item(s)>")
                                                         .arg(value.toList().count()),
                                                     withGitHubLineBreaks, value.typeName());
                     break;
-                case QVariant::ByteArray:
-                case QVariant::UserType:
+                case QMetaType::QByteArray:
+                case QMetaType::User:
                     output += prepareDebugInformationLine(key, QStringLiteral("<binary data>"),
                                                           withGitHubLineBreaks, value.typeName());
                     break;
@@ -2560,8 +2564,8 @@ int levenshteinDistance(const QString &source, const QString &target) {
         return 0;
     }
 
-    const int sourceCount = source.count();
-    const int targetCount = target.count();
+    const int sourceCount = source.size();
+    const int targetCount = target.size();
 
     if (source.isEmpty()) {
         return targetCount;

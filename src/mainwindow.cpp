@@ -180,8 +180,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
             &MainWindow::showNoteEditTabWidgetContextMenu);
 
     // Set the two shortcuts for the "increase note text size" action
-    const QList<QKeySequence> shortcuts = {QKeySequence(Qt::CTRL + Qt::Key_Plus),
-                                           QKeySequence(Qt::CTRL + Qt::Key_Equal)};
+    const QList<QKeySequence> shortcuts = {QKeySequence(Qt::CTRL | Qt::Key_Plus),
+                                           QKeySequence(Qt::CTRL | Qt::Key_Equal)};
     ui->action_Increase_note_text_size->setShortcuts(shortcuts);
 
     initTreeWidgets();
@@ -3808,22 +3808,19 @@ QString MainWindow::selectOwnCloudNotesFolder() {
         updateCurrentFolderTooltip();
     } else {
         if (this->notesPath.isEmpty()) {
-            switch (QMessageBox::information(
-                this, tr("No folder was selected"),
-                Utils::Misc::replaceOwnCloudText(tr("You have to select your ownCloud notes "
-                                                    "folder to make this software work!")),
-                tr("&Retry"), tr("&Exit"), QString(), 0, 1)) {
-                case 0:
-                    selectOwnCloudNotesFolder();
-                    break;
-                case 1:
-                default:
-                    // No other way to quit the application worked
-                    // in the constructor
-                    // Waqar144: this doesn't seem very wise...
-                    QTimer::singleShot(0, this, SLOT(quitApp()));
-                    QTimer::singleShot(100, this, SLOT(quitApp()));
-                    break;
+            if (QMessageBox::question(
+                    this, tr("No folder was selected"),
+                    Utils::Misc::replaceOwnCloudText(tr("You have to select your ownCloud notes "
+                                                        "folder to make this software work!")),
+                    QMessageBox::Retry | QMessageBox::Close,
+                    QMessageBox::Retry) == QMessageBox::Retry) {
+                selectOwnCloudNotesFolder();
+            } else {
+                // No other way to quit the application worked
+                // in the constructor
+                // Waqar144: this doesn't seem very wise...
+                QTimer::singleShot(0, this, SLOT(quitApp()));
+                QTimer::singleShot(100, this, SLOT(quitApp()));
             }
         }
     }
@@ -5281,11 +5278,12 @@ bool MainWindow::showRestartNotificationIfNeeded(bool force) {
 
     qApp->setProperty("needsRestart", false);
 
-    if (QMessageBox::information(this, tr("Restart application"),
-                                 tr("You may need to restart the application to let the "
-                                    "changes take effect.") +
-                                     Utils::Misc::appendSingleAppInstanceTextIfNeeded(),
-                                 tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
+    if (QMessageBox::question(this, tr("Restart application"),
+                              tr("You may need to restart the application to let the "
+                                 "changes take effect.") +
+                                  Utils::Misc::appendSingleAppInstanceTextIfNeeded(),
+                              QMessageBox::Yes | QMessageBox::Cancel,
+                              QMessageBox::Yes) == QMessageBox::Yes) {
         storeSettings();
         Utils::Misc::restartApplication();
 
@@ -5759,7 +5757,7 @@ void MainWindow::filterNotesBySearchLineEditText(bool searchInNote) {
     ui->noteTreeWidget->setColumnCount(1);
 
     // search notes when at least 2 characters were entered
-    if (searchText.count() >= 2) {
+    if (searchText.size() >= 2) {
         if (searchInNote) {
             // open search dialog
             doSearchInNote(searchText);
@@ -7155,7 +7153,7 @@ void MainWindow::gotoNextNote() {
  * Activate the context menu in the currently focused widget
  */
 void MainWindow::activateContextMenu() {
-    auto *event = new QContextMenuEvent(QContextMenuEvent::Keyboard, QPoint());
+    auto *event = new QContextMenuEvent(QContextMenuEvent::Keyboard, QPoint(), QPoint());
     QApplication::postEvent(focusWidget(), event);
 }
 
@@ -11190,7 +11188,7 @@ void MainWindow::noteEditCursorPositionChanged() {
 
     if (!selectedText.isEmpty()) {
         const QString textAdd = QStringLiteral(" (") +
-                                tr("%n selected", "Characters selected", selectedText.count()) +
+                                tr("%n selected", "Characters selected", selectedText.size()) +
                                 QStringLiteral(")");
         text += textAdd;
         toolTip += textAdd;
@@ -12379,12 +12377,12 @@ bool MainWindow::nextCloudDeckCheck() {
     NextcloudDeckService nextcloudDeckService(this);
 
     if (!nextcloudDeckService.isEnabled()) {
-        if (QMessageBox::warning(
+        if (QMessageBox::question(
                 nullptr, QObject::tr("Nextcloud Deck support disabled!"),
                 QObject::tr(
                     "Nextcloud Deck support is not enabled or the settings are invalid.<br />"
                     "Please check your <strong>Nextcloud</strong> configuration in the settings!"),
-                QObject::tr("Open &settings"), QObject::tr("&Cancel"), QString(), 0, 1) == 0) {
+                QMessageBox::Open | QMessageBox::Cancel, QMessageBox::Open) == QMessageBox::Open) {
             openSettingsDialog(SettingsDialog::OwnCloudPage);
         }
 

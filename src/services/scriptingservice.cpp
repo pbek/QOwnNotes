@@ -1269,7 +1269,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end) {
         QTextCursor c = textEdit->textCursor();
 
         start = std::max<int>(start, 0);
-        end = std::min<int>(end, textEdit->toPlainText().count());
+        end = std::min<int>(end, textEdit->toPlainText().size());
 
         c.setPosition(start);
         c.setPosition(end, QTextCursor::KeepAnchor);
@@ -1296,7 +1296,7 @@ void ScriptingService::noteTextEditSetCursorPosition(int position) {
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != nullptr) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
-        position = std::min<int>(position, textEdit->toPlainText().count());
+        position = std::min<int>(position, textEdit->toPlainText().size());
         QTextCursor c = textEdit->textCursor();
 
         if (position < 0) {

@@ -1158,8 +1158,9 @@ void OwnCloudService::showOwnCloudMessage(QString headline, QString message,
     }
 
     if (withSettingsButton) {
-        if (QMessageBox::warning(nullptr, headline, message, tr("Open &settings"), tr("&Cancel"),
-                                 QString(), 0, 1) == 0) {
+        if (QMessageBox::question(nullptr, headline, message,
+                                  QMessageBox::Open | QMessageBox::Cancel,
+                                  QMessageBox::Open) == QMessageBox::Open) {
 #ifndef INTEGRATION_TESTS
             MainWindow *mainWindow = MainWindow::instance();
 
@@ -1350,7 +1351,11 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     QDomDocument doc;
     qDebug() << __func__ << " - 'data': " << data;
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#else
     doc.setContent(data, true);
+#endif
 
     QDomNodeList errorNodes = doc.elementsByTagNameNS(NS_DAV, QStringLiteral("error"));
 
@@ -1466,7 +1471,11 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
 
 void OwnCloudService::loadTodoItems(const QString &calendarName, QString &data) {
     QDomDocument doc;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#else
     doc.setContent(data, true);
+#endif
 
     // fetch all urls that are currently in the calendar
     QList<QUrl> calendarItemUrlRemoveList = CalendarItem::fetchAllUrlsByCalendar(calendarName);
@@ -1927,7 +1936,11 @@ void OwnCloudService::updateNoteShareStatus(QDomNodeList &dataElements, bool upd
 
 void OwnCloudService::loadDirectory(QString &data) {
     QDomDocument doc;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#else
     doc.setContent(data, true);
+#endif
 
     if (data.isEmpty()) {
         showOwnCloudServerErrorMessage(QString(), false);
@@ -2430,7 +2443,11 @@ QString OwnCloudService::fetchNoteFileId(const Note &note) {
             QString data = QString(reply->readAll());
 
             QDomDocument doc;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+            doc.setContent(data, QDomDocument::ParseOption::UseNamespaceProcessing);
+#else
             doc.setContent(data, true);
+#endif
 
             // Parse the WebDAV XML response to get the file ID
             QDomNodeList responseNodes =

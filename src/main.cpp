@@ -44,7 +44,11 @@ void loadTranslations(QTranslator *translator, const QString &locale) {
     //    loadTranslation(translator[0], "qt_" + QLocale::system().name(),
     //                       QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     loadTranslation(translator[1], "qt_" + locale,
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+                    QLibraryInfo::path(QLibraryInfo::TranslationsPath));
+#else
                     QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+#endif
     QString appPath = QCoreApplication::applicationDirPath();
     loadTranslation(translator[2], "qt_" + locale, appPath + "/translations");
     loadTranslation(translator[3], appPath + "/../src/languages/QOwnNotes_" + locale);

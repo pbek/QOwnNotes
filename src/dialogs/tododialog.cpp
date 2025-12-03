@@ -664,7 +664,7 @@ void TodoDialog::on_newItemEdit_textChanged() {
         QLatin1String(""), Qt::MatchContains | Qt::MatchRecursive);
 
     // search todo item if at least 2 characters were entered
-    if (arg1.count() >= 2) {
+    if (arg1.size() >= 2) {
         QList<QString> uidList =
             CalendarItem::searchAsUidList(arg1, ui->todoListSelector->currentText());
 
@@ -707,7 +707,7 @@ void TodoDialog::searchForSearchLineTextInNoteTextEdit() {
 void TodoDialog::searchInDescriptionTextEdit(QString &str) {
     QList<QTextEdit::ExtraSelection> extraSelections;
 
-    if (str.count() >= 2) {
+    if (str.size() >= 2) {
         ui->descriptionEdit->moveCursor(QTextCursor::Start);
         QColor color = QColor(0, 180, 0, 100);
 
