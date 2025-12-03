@@ -546,9 +546,11 @@ QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
                 StringView tag = input.mid(i, found - i);
 
                 static const QRegularExpression re(R"(([a-zA-Z0-9]+(\s*=\s*"[^"]*")?))");
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+                // Qt 6.5+: use globalMatchView with StringView
                 QRegularExpressionMatchIterator matchIt = re.globalMatchView(tag);
 #else
+                // Qt 5.x and Qt 6.0-6.4: use globalMatch with QString
                 QRegularExpressionMatchIterator matchIt = re.globalMatch(TO_QSTRING(tag));
 #endif
 
