@@ -5551,7 +5551,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
                               "and to find and fix bugs. You can disable that "
                               "behaviour in the settings."),
                            QMessageBox::NoButton, this);
-        QPushButton *okButton = msgBox.addButton(tr("&Ok"), QMessageBox::AcceptRole);
+        msgBox.addButton(tr("&Ok"), QMessageBox::AcceptRole);
         QPushButton *settingsButton =
             msgBox.addButton(tr("Open &settings"), QMessageBox::ActionRole);
         msgBox.setDefaultButton(settingsButton);
@@ -6977,7 +6977,7 @@ void MainWindow::on_actionDecrypt_note_triggered() {
                           "synced to your server and sensitive text may be exposed!"
                           "<br />Do you want to decrypt your note?"),
                        QMessageBox::NoButton, this);
-    QPushButton *decryptButton = msgBox.addButton(tr("&Decrypt"), QMessageBox::AcceptRole);
+    msgBox.addButton(tr("&Decrypt"), QMessageBox::AcceptRole);
     QPushButton *cancelButton = msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
     msgBox.setDefaultButton(cancelButton);
     msgBox.exec();
@@ -11368,7 +11368,7 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
                            QMessageBox::NoButton, this);
         QPushButton *settingsButton =
             msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
-        QPushButton *cancelButton = msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+        msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
         msgBox.setDefaultButton(settingsButton);
         msgBox.exec();
 
