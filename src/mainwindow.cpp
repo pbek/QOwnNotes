@@ -4425,7 +4425,7 @@ void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections2;
     QList<QTextEdit::ExtraSelection> extraSelections3;
 
-    if (str.count() >= 2) {
+    if (str.size() >= 2) {
         // do an in-note search
         doSearchInNote(str);
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
@@ -5545,12 +5545,19 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
     if (showDialog) {
         settings.setValue(QStringLiteral("appMetrics/notificationShown"), true);
 
-        if (QMessageBox::information(this, QStringLiteral("QOwnNotes"),
-                                     tr("QOwnNotes will track anonymous usage data, that helps to "
-                                        "decide what parts of QOwnNotes to improve next "
-                                        "and to find and fix bugs. You can disable that "
-                                        "behaviour in the settings."),
-                                     tr("&Ok"), tr("Open &settings"), QString(), 0, 1) == 1) {
+        QMessageBox msgBox(QMessageBox::Information, QStringLiteral("QOwnNotes"),
+                           tr("QOwnNotes will track anonymous usage data, that helps to "
+                              "decide what parts of QOwnNotes to improve next "
+                              "and to find and fix bugs. You can disable that "
+                              "behaviour in the settings."),
+                           QMessageBox::NoButton, this);
+        QPushButton *okButton = msgBox.addButton(tr("&Ok"), QMessageBox::AcceptRole);
+        QPushButton *settingsButton =
+            msgBox.addButton(tr("Open &settings"), QMessageBox::ActionRole);
+        msgBox.setDefaultButton(settingsButton);
+        msgBox.exec();
+
+        if (msgBox.clickedButton() == settingsButton) {
             openSettingsDialog(SettingsDialog::NetworkPage);
         }
     }
@@ -5561,11 +5568,18 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
  */
 void MainWindow::openTodoDialog(const QString &taskUid) {
     if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
-        if (QMessageBox::warning(nullptr, tr("Todo lists disabled!"),
-                                 tr("You have disabled the todo lists.<br />"
-                                    "Please check your <strong>Todo</strong> "
-                                    "configuration in the settings!"),
-                                 tr("Open &settings"), tr("&Cancel"), QString(), 0, 1) == 0) {
+        QMessageBox msgBox(QMessageBox::Warning, tr("Todo lists disabled!"),
+                           tr("You have disabled the todo lists.<br />"
+                              "Please check your <strong>Todo</strong> "
+                              "configuration in the settings!"),
+                           QMessageBox::NoButton, nullptr);
+        QPushButton *settingsButton =
+            msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
+        msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+        msgBox.setDefaultButton(settingsButton);
+        msgBox.exec();
+
+        if (msgBox.clickedButton() == settingsButton) {
             openSettingsDialog(SettingsDialog::TodoPage);
         }
 
@@ -5581,11 +5595,18 @@ void MainWindow::openTodoDialog(const QString &taskUid) {
 
     // check if we have got any task list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
-        if (QMessageBox::warning(nullptr, tr("No selected todo lists!"),
-                                 tr("You have not selected any todo lists.<br />"
-                                    "Please check your <strong>Todo</strong> "
-                                    "configuration in the settings!"),
-                                 tr("Open &settings"), tr("&Cancel"), QString(), 0, 1) == 0) {
+        QMessageBox msgBox(QMessageBox::Warning, tr("No selected todo lists!"),
+                           tr("You have not selected any todo lists.<br />"
+                              "Please check your <strong>Todo</strong> "
+                              "configuration in the settings!"),
+                           QMessageBox::NoButton, nullptr);
+        QPushButton *settingsButton =
+            msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
+        msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+        msgBox.setDefaultButton(settingsButton);
+        msgBox.exec();
+
+        if (msgBox.clickedButton() == settingsButton) {
             openSettingsDialog(SettingsDialog::TodoPage);
         }
 
@@ -6950,12 +6971,18 @@ void MainWindow::on_actionDecrypt_note_triggered() {
         return;
     }
 
-    if (QMessageBox::warning(this, tr("Decrypt note and store it as plain text"),
-                             tr("Your note will be decrypted and stored as plain text again. "
-                                "Keep in mind that the unencrypted note will possibly be "
-                                "synced to your server and sensitive text may be exposed!"
-                                "<br />Do you want to decrypt your note?"),
-                             tr("&Decrypt"), tr("&Cancel"), QString(), 0, 1) == 1) {
+    QMessageBox msgBox(QMessageBox::Warning, tr("Decrypt note and store it as plain text"),
+                       tr("Your note will be decrypted and stored as plain text again. "
+                          "Keep in mind that the unencrypted note will possibly be "
+                          "synced to your server and sensitive text may be exposed!"
+                          "<br />Do you want to decrypt your note?"),
+                       QMessageBox::NoButton, this);
+    QPushButton *decryptButton = msgBox.addButton(tr("&Decrypt"), QMessageBox::AcceptRole);
+    QPushButton *cancelButton = msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+    msgBox.setDefaultButton(cancelButton);
+    msgBox.exec();
+
+    if (msgBox.clickedButton() == cancelButton) {
         return;
     }
 
@@ -9957,12 +9984,18 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
                     ui->noteTreeWidget->editItem(item);
                 }
             } else {
-                if (QMessageBox::warning(this, tr("Note renaming not enabled!"),
-                                         tr("If you want to rename your note you have to enable "
-                                            "the option to allow the note filename to be "
-                                            "different from the headline."),
-                                         tr("Open &settings"), tr("&Cancel"), QString(), 0,
-                                         1) == 0) {
+                QMessageBox msgBox(QMessageBox::Warning, tr("Note renaming not enabled!"),
+                                   tr("If you want to rename your note you have to enable "
+                                      "the option to allow the note filename to be "
+                                      "different from the headline."),
+                                   QMessageBox::NoButton, this);
+                QPushButton *settingsButton =
+                    msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
+                msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+                msgBox.setDefaultButton(settingsButton);
+                msgBox.exec();
+
+                if (msgBox.clickedButton() == settingsButton) {
                     openSettingsDialog(SettingsDialog::NoteFolderPage);
                 }
             }
@@ -11329,10 +11362,17 @@ void MainWindow::gitCommitCurrentNoteFolder() { Utils::Git::commitCurrentNoteFol
  */
 void MainWindow::on_actionShow_note_git_versions_triggered() {
     if (!Utils::Git::isCurrentNoteFolderUseGit()) {
-        if (QMessageBox::information(this, QStringLiteral("Git support"),
-                                     tr("Git support is not enabled for the current note folder, "
-                                        "do you want to enable it in the settings?"),
-                                     tr("Open &settings"), tr("&Cancel"), QString(), 0, 1) == 0) {
+        QMessageBox msgBox(QMessageBox::Information, QStringLiteral("Git support"),
+                           tr("Git support is not enabled for the current note folder, "
+                              "do you want to enable it in the settings?"),
+                           QMessageBox::NoButton, this);
+        QPushButton *settingsButton =
+            msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
+        QPushButton *cancelButton = msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+        msgBox.setDefaultButton(settingsButton);
+        msgBox.exec();
+
+        if (msgBox.clickedButton() == settingsButton) {
             openSettingsDialog(SettingsDialog::NoteFolderPage);
         } else {
             // User doesn't want to enable git support

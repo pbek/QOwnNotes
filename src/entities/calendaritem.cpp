@@ -13,6 +13,9 @@
 #include <QSqlQuery>
 #include <QSqlRecord>
 #include <QUuid>
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include <QTimeZone>
+#endif
 
 #include "services/settingsservice.h"
 
@@ -797,7 +800,11 @@ QDateTime CalendarItem::getDateTimeFromString(const QString &dateString) {
     // see: https://github.com/pbek/QOwnNotes/issues/1966
     if (!dateTime.isValid()) {
         dateTime = QDateTime::fromString(dateString, ICS_DATETIME_FORMAT_UTC);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        dateTime = QDateTime(dateTime.date(), dateTime.time(), QTimeZone::utc()).toLocalTime();
+#else
         dateTime = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC).toLocalTime();
+#endif
     }
 
     return dateTime;

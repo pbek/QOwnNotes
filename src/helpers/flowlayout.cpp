@@ -126,7 +126,9 @@ QSize FlowLayout::sizeHint() const { return minimumSize(); }
 
 QSize FlowLayout::minimumSize() const {
     QSize size;
-#if QT_VERSION >= 0x050700
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    for (const QLayoutItem *item : std::as_const(itemList))
+#elif QT_VERSION >= 0x050700
     for (const QLayoutItem *item : qAsConst(itemList))
 #else
     for (const QLayoutItem *item : itemList)
@@ -150,7 +152,9 @@ int FlowLayout::doLayout(const QRect &rect, bool testOnly) const {
 //! [9]
 
 //! [10]
-#if QT_VERSION >= 0x050700
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    for (QLayoutItem *item : std::as_const(itemList)) {
+#elif QT_VERSION >= 0x050700
     for (QLayoutItem *item : qAsConst(itemList)) {
 #else
     for (QLayoutItem *item : itemList) {
