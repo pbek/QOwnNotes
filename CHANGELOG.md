@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.12.1
+
+- A lot of refactoring was done to fix build warnings for Qt6, while maintaining
+  compatibility with Qt5 and older Qt6 versions (for [#3403](https://github.com/pbek/QOwnNotes/issues/3403))
+
 ## 25.12.0
 
 - Fixed PDF export from markdown preview now renders in color instead of grayscale
