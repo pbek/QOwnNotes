@@ -4,6 +4,7 @@
 
 - A lot of refactoring was done to fix build warnings for Qt6, while maintaining
   compatibility with Qt5 and older Qt6 versions (for [#3403](https://github.com/pbek/QOwnNotes/issues/3403))
+- Added more Croatian, Chinese Simplified translation (thank you, milotype, sr79368142)
 
 ## 25.12.0
 

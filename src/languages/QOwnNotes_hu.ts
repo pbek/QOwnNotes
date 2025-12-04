@@ -2578,14 +2578,6 @@ Restore current note?</source>
 <translation>Válassza ki a saját ownCloud jegyzetmappáját, hogy ez a szoftver működjön!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Újra</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Kilépés</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Aktuális jegyzet eltávolítása</translation>
 </message>
@@ -2684,10 +2676,6 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>A módosítások érvénybe lépéséhez szükséges lehet újraindítani az alkalmazást.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Újból indít</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4009,14 +3997,6 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
 <translation>Telepítse az ownCloud szerverét!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Megnyitja a &amp;beállításokat</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Mégse</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>A jegyzetváltozatok töltése befejeződött</translation>
 </message>
@@ -4368,14 +4348,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4734,10 +4706,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Ez a parancsfájl nem támogatja az Ön platform-ját.
 Mégis telepíti?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Mégse</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7034,10 +7002,6 @@ Kapcsolathiba üzenet: </translation>
 <translation>Biztosan visszaállítja alaphelyzetbe az eszköztárakat? Az alkalmazás zárva lesz a folyamat alatt, újraindítás után visszaáll az alapértelmezett eszköztár.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Alaphelyzetbe állít és &amp;kilép</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Log fájl törölve</translation>
 </message>
@@ -7114,24 +7078,12 @@ Your notes will stay intact!</source>
 A jegyzetek érintetlenül maradnak!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Törlés és &amp;kilépés</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Mégse</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Talál egy &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; -ot a elérési útban, a QOwnNotes indításához hordozható módban.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Valóban törli a helyi adatbázist? Ezzel a beállított jegyzetekmappáit és a tárolt teendőelemeit is eltávolítja!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Töröli az &amp;adatbázist</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8101,14 +8053,6 @@ Nem lehet visszavonni!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Most újraindíthatja az alkalmazást a frissítési folyamat befejezéséhez.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Újból indít</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Mégse</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

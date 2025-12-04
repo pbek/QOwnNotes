@@ -2586,14 +2586,6 @@ Restore current note?</source>
 <translation>इस सॉफ़्टवेयर का काम करने के लिए आपको अपने खुद के क्लॉइड नोट फ़ोल्डर का चयन करना होगा!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;पुन: प्रयास</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;बाहर जाएं</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>वर्तमान नोट निकालें</translation>
 </message>
@@ -2692,10 +2684,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>परिवर्तनों को प्रभावी होने के लिए आपको अनुप्रयोग को पुनरारंभ करने की आवश्यकता हो सकती है.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>पुनःआरंभ करें</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4024,14 +4012,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>आपको अपना स्वयं का क्लाउड सर्वर सेटअप करने की आवश्यकता है!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>खोलें &amp;सेटिंग्स</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;रद्द करें</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>नोट संस्करण लोड करने के साथ किया गया</translation>
 </message>
@@ -4388,14 +4368,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4754,10 +4726,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>आपका स्क्रिप्ट इस स्क्रिप्ट द्वारा समर्थित नहीं है!
 क्या आप इसे वैसे भी इंस्टॉल करना चाहते हैं?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>रद्दकरना</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7062,10 +7030,6 @@ Connection error message: </source>
 <translation>क्या आप वास्तव में सभी टूलबार रीसेट करना चाहते हैं? एप्लिकेशन को प्रक्रिया में बंद कर दिया जाएगा, जब आप इसे फिर से शुरू करेंगे तो डिफ़ॉल्ट टूलबार बहाल हो जाएगा।</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>रीसेट करें &amp;बाहर निकलें</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>लॉग फ़ाइल साफ़ की गई</translation>
 </message>
@@ -7140,24 +7104,12 @@ Your notes will stay intact!</source>
 <translation>क्या आप सचमुच सभी सेटिंग्स को साफ़ करना चाहते हैं, डाटाबेस निकाल सकते हैं और क्यूओननोट्स से बाहर निकलना चाहते हैं?</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>साफ़ करें और &amp; बाहर निकलें</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;रद्द करना</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>आपको पोर्टेबल मोड में क्यूओननोट्स को शुरू करने के लिए अपने रिलीज पथ में एक &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; मिलेगा।</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>क्या आप वास्तव में स्थानीय डेटाबेस को साफ़ करना चाहते हैं? यह आपके कॉन्फ़िगर नोट फ़ोल्डर और आपके कैश कार्य आइटम भी निकाल देगा!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>साफ़ करें &amp;डेटाबेस</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8130,14 +8082,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

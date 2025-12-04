@@ -2569,14 +2569,6 @@ Restore current note?</source>
 <translation>คุณต้องเลือกโฟลเดอร์บันทึกย่อบนคลาวด์ของคุณเองเพื่อให้ซอฟต์แวร์นี้ใช้งานได้!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;ลองใหม่</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;ทางออก</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>ลบบันทึกย่อปัจจุบัน</translation>
 </message>
@@ -2667,10 +2659,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>คุณอาจต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงมีผล</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>เริ่มต้นใหม่</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3973,14 +3961,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>คุณต้องตั้งค่าเซิร์ฟเวอร์ ownCloud ของคุณ!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>เปิด &amp;การตั้งค่า</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;ยกเลิก</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>เสร็จสิ้นการโหลดเวอร์ชันโน้ต</translation>
 </message>
@@ -4327,14 +4307,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4693,10 +4665,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>แพลตฟอร์มของคุณไม่รองรับสคริปต์นี้!
 คุณต้องการติดตั้งหรือไม่?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>ยกเลิก</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -6993,10 +6961,6 @@ Connection error message: </source>
 <translation>คุณต้องการรีเซ็ตแถบเครื่องมือทั้งหมดหรือไม่ แอปพลิเคชันจะถูกปิดในกระบวนการแถบเครื่องมือเริ่มต้นจะถูกกู้คืนเมื่อคุณเริ่มต้นอีกครั้ง</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>รีเซ็ตและ &amp;ออก</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>ล้างไฟล์บันทึกแล้ว</translation>
 </message>
@@ -7073,24 +7037,12 @@ Your notes will stay intact!</source>
 บันทึกย่อของคุณจะยังคงอยู่!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>ล้างและ &amp;ออก</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;ยกเลิก</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>คุณจะพบ &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; ในเส้นทางการปล่อยเพื่อเริ่ม QOwnNotes ในโหมดพกพา</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>คุณต้องการล้างฐานข้อมูลท้องถิ่นหรือไม่ นี่จะเป็นการลบโฟลเดอร์บันทึกย่อที่กำหนดค่าไว้และรายการสิ่งที่ต้องทำแคช!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>ล้าง &amp;ฐานข้อมูล</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8058,14 +8010,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

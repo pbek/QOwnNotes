@@ -2571,14 +2571,6 @@ Restore current note?</source>
 <translation>您必須選取一個ownCloud筆記資料夾以便使用本軟體！</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>重試(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>離開(&amp;E)</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>移除目前筆記</translation>
 </message>
@@ -2669,10 +2661,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>您必須重新啟動程式以使修改生效。</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>重新啟動</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3978,14 +3966,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>您必須設定您的ownCloud伺服器！</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>開啟設定(&amp;S)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>取消(&amp;C)</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>載入筆記版本完成</translation>
 </message>
@@ -4337,14 +4317,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4703,10 +4675,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>腳本不支援您的平台！
 您仍要安裝嗎？</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>取消</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7004,10 +6972,6 @@ Connection error message: </source>
 <translation>您是否真的要重設全部的工具列？本程式將關閉，並在下次啟動時回復預設狀態。</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>重設並離開(&amp;E)</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>日誌檔已清空</translation>
 </message>
@@ -7084,24 +7048,12 @@ Your notes will stay intact!</source>
 您的筆記將毫髮無傷！</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>清除並離開(&amp;E)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>取消(&amp;C)</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>您將在輸出位置中找到 &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; 以讓您在可攜模式中啟動QOwnNotes。</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>您確定要清除本機資料庫？這將同時移除您設定好的筆記資料夾與快取中的待辦事項！</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>清空資料庫(&amp;D)</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8073,14 +8025,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

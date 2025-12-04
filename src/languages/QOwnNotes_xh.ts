@@ -2580,14 +2580,6 @@ Buyisela inqaku langoku?</translation>
 <translation>Kuya kufuneka ukhethe eyakho incwadi eneenkcukachaCloud ukuze wenze le software isebenze!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Phinda uzame</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Phuma</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Susa inqaku langoku</translation>
 </message>
@@ -2686,10 +2678,6 @@ Ukuba inkunkuma inikwe amandla kwiserver yakho ownCloud kuya kufuneka ukwazi uku
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Kuya kufuneka uqale kwakhona isicelo ukuze iinguqulelo zisebenze.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Phinda Uqalele</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4016,14 +4004,6 @@ Nceda ujonge uqwalaselo lwakho lwe &lt;strong&gt; Todo &lt;/strong&gt; kuseto!</
 <translation>Kufuneka ucwangcise iiseva ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Vula &amp;useto</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Rhoxisa</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Yenziwe ngokulayisha inqaku</translation>
 </message>
@@ -4375,14 +4355,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4741,10 +4713,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Iqonga lakho alixhaswanga ngulo mbhalo!
 Ngaba uyafuna ukuyifaka?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Rhoxisa</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7056,10 +7024,6 @@ Ngaba ngokwenene ukhubaza umkhondo wokusetyenziswa?</translation>
 <translation>Ngaba ufuna ngokwenene ukucwangcisa zonke iibar zesixhobo? Isicelo sizakuvalwa kwinkqubo, iibar zesixhobo ezingapheliyo ziya kubuyiselwa xa uqala kwakhona.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Setha kwakhona kwaye &amp;uphume</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Ifayile yelog icinyiwe</translation>
 </message>
@@ -7136,24 +7100,12 @@ Your notes will stay intact!</source>
 Amanqaku akho aya kuhlala eme kakuhle!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Cacisa kwaye &amp;uphume</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Rhoxisa</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Uya kufumana i &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; kwindlela yakho yokukhupha ukuqala ii-QOwnNotes kwimodi ephathekayo.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Ufuna ngokwenene ukucima indawo ekugcinwa kuyo? Oku kuyakususa iifolda zakho ezimiselweyo kunye nezinto zakho ze-todo ezigciniweyo!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Sula &amp;idatha</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8130,14 +8082,6 @@ Unokuhlala uyibuyisela inqaku kunye neenguqulelo zalo kamva. &lt;/p&gt;</transla
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

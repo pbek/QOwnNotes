@@ -2580,14 +2580,6 @@ Nîşeya heyî ji nû ve vegerin?</translation>
 <translation>Pêdivî ye ku hûn peldanka xweya ownCloud hilbijêrin da ku vê nermalavê bixebitin!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Ribandin</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Jêçûn</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Nîşeya heyî hilweşînin</translation>
 </message>
@@ -2686,10 +2678,6 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Hûn hewce ne ku serîlêdanê ji nû ve bidin dest pê kirin da ku guhartinan bidin dest pê kirin.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Destpêkirin</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4018,14 +4006,6 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
 <translation>Pêdivî ye ku hûn servera ownCloud saz bikin!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Vebijêrin &amp;mîhengan</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Bişûndekirin</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Digel guhertoyên nîşana barkirinê</translation>
 </message>
@@ -4378,14 +4358,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4744,10 +4716,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Platforma we ji hêla vê skrîptê ve nayê piştgirî kirin!
 Ma hûn dixwazin wê yekê jî saz bikin?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Bişûndekirin</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7059,10 +7027,6 @@ Peyama çewtiya girêdanê:</translation>
 <translation>Ma hûn bi rastî dixwazin hemî amûrên bargiraniyê ji nû ve saz bikin? Serlêdan dê di pêvajoyê de girtî bimîne, gava ku hûn careke din dest pê bikin dê pêvekên toolbar were sererastkirin.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Veşandin û &amp;derketin</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Pelê log zelal kirin</translation>
 </message>
@@ -7137,24 +7101,12 @@ Your notes will stay intact!</source>
 <translation>Bi rastî hûn dixwazin hemî mîhengan paqij bikin, databasayê derxînin û QOwnNotes derxînin!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Paqij û &amp;derketin</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Bişûndekirin</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Hûn ê di riya serbestberdana we de &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; bibînin da ku QOwnNotes di moda portable de dest pê bikin.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Ma hûn bi rastî hûn dixwazin databasa herêmî paqij bikin? Ev ê di heman demê de peldanka weya nîşankirî û tiştên kevnare yên weyên cachedê jî derxe!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Databasta &amp;paqij bike</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8132,14 +8084,6 @@ Hûn her dem dikarin paş nîşan û guhertoyên wê paşde bikin. &lt;/p&gt;</t
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

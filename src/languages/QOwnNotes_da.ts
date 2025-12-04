@@ -2580,14 +2580,6 @@ Gendan nuværende notat?</translation>
 <translation>Du skal vælge din egenCloud noter mappe for at gøre denne software arbejde!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Prøve igen</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Afslut</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Fjern nuværende notat</translation>
 </message>
@@ -2686,10 +2678,6 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Du skal muligvis genstarte programmet for at lade ændringerne træde i kraft.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Genstart</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4015,14 +4003,6 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
 <translation>Du skal konfigurere din ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Åbn &amp;indstillinger</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuller</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Udført med notatversioner</translation>
 </message>
@@ -4376,14 +4356,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4742,10 +4714,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Din platform understøttes ikke af dette script!
 Vil du installere det alligevel?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuller</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7051,10 +7019,6 @@ Forbindelsesfejlmeddelelse: </translation>
 <translation>Vil du virkelig nulstille alle værktøjslinjer? Programmet lukkes i processen, standardværktøjslinjerne gendannes, når du starter det igen.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Nulstil og &amp;afslut</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Logfil slettet</translation>
 </message>
@@ -7131,24 +7095,12 @@ Your notes will stay intact!</source>
 Dine noter forbliver intakte!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Klare og &amp;exit</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuller</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Du finder en &lt;code&gt; QOwnNotesPortable.bat &lt;/ code&gt; i din frigivelsessti for at starte QOwnNotes i bærbar tilstand.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Vil du virkelig slette den lokale database? Dette vil også fjerne dine konfigurerede notatmapper og dine cacherede todoartikler!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Ryd &amp;database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8122,14 +8074,6 @@ Dette kan ikke fortrydes!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Du kan nu genstarte applikationen for at fuldføre opdateringsprocessen.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Genstart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuller</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

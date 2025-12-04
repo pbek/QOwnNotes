@@ -2609,14 +2609,6 @@ Atkurti dabartinį užrašą?</translation>
 <translation>Norėdami, kad ši programinė įranga veiktų, turite pasirinkti aplanką ownCloud!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Pabandykite dar kartą</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Išeik</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Pašalinti dabartinį užrašą</translation>
 </message>
@@ -2731,10 +2723,6 @@ Jei šiukšliadėžė įgalinta jūsų ownCloud serveryje, turėtumėte galėti 
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Jei norite, kad pakeitimai įsigaliotų, gali reikėti iš naujo paleisti programą.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Perkrauti</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4102,14 +4090,6 @@ Jei šiukšliadėžė įgalinta jūsų ownCloud serveryje, turėtumėte galėti 
 <translation>Turite nustatyti „ownCloud“ serverį!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Atidarykite &amp;nustatymus</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Atšaukti</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Nebegalima pakraunant užrašų versijų</translation>
 </message>
@@ -4477,14 +4457,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4841,10 +4813,6 @@ Are the folder and the file writable?</translation>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>Šis scenarijus nepalaiko jūsų platformos! Ar vis tiek norite jį įdiegti?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Atšaukti</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7153,10 +7121,6 @@ Ryšio klaidos pranešimas:</translation>
 <translation>Ar tikrai norite atkurti visas įrankių juostas? Programa bus uždaryta procese, numatytosios įrankių juostos bus atstatytos, kai ją vėl paleisite.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Atstatyti ir &amp;išeiti</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Žurnalo failas išvalytas</translation>
 </message>
@@ -7233,24 +7197,12 @@ Your notes will stay intact!</source>
 Jūsų užrašai liks nepažeisti!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Išvalykite ir &amp;išvažiuokite</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Atšaukti</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Savo leidimo kelyje rasite &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;, kad paleistumėte QOwnNotes nešiojamu režimu.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Ar tikrai norite išvalyti vietinę duomenų bazę? Tai taip pat pašalins sukonfigūruotus užrašų aplankus ir talpykloje esančius „todo“ elementus!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Išvalyti &amp;duomenų bazę</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8228,14 +8180,6 @@ Tai negali būti anuliuota!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

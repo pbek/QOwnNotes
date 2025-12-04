@@ -2568,14 +2568,6 @@ Whakaora i te tuhipoka o naianei?</translation>
 <translation>E koe ki te tīpako i to ake kōpaki tuhipoka ki te mahi i tenei mahi!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Whakahaungia anō</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Atu</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Tangohia te tuhipoka o naianei</translation>
 </message>
@@ -2666,10 +2658,6 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ka hiahia pea koe ki te whakahou i te tono kia whakamana nga huringa.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Tīmata anō</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3974,14 +3962,6 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation>Me whakariterite e koe to ake kaiwhakahaere tūmau!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Tautuhi &amp;tuwhera</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Whakakore</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Ka oti me nga putanga kaute</translation>
 </message>
@@ -4328,14 +4308,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4694,10 +4666,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Kaore i te tautokohia to papaatautoko e tenei tuhinga!
 Kei te hiahia koe ki te whakauru i tena?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Whakakore</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7000,10 +6968,6 @@ Karere o te hononga honohono:</translation>
 <translation>Kei te hiahia mau ano koe ki te tautuhi taputapu katoa? Ka tutakina te tono i roto i te mahinga, ka whakahokia mai nga taonga taputapu taunoa i te wa ka tiimata ano koe.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Tautuhi me te &amp;puta atu</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Kua tae te konae</translation>
 </message>
@@ -7080,24 +7044,12 @@ Your notes will stay intact!</source>
 Ka noho tonu o au tuhinga ki roto!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Me maama me &amp;putanga</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Whakakore</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Ka kite koe i te &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; i to ara tuku mo te tiimata ki te QOwnNotes i te aratau kawe.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Kei te hiahia tika koe ki te horoi i te papanga raraunga o te rohe? Ka whakakorea ano hoki e koe nga kōpaki tuhipoka kua whirihorahia me o taonga tohe ki a koe!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Maama me te &amp;papamahi</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8070,14 +8022,6 @@ Ka taea e koe te whakahoki tonu i te tuhipoka me ona waahanga a muri ake nei. &l
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

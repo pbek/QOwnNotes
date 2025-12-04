@@ -2574,14 +2574,6 @@ Deseja restaurá-la?</translation>
 <translation>Você precisa selecionar uma pasta no diretório do OwnCloud para que o software funcione!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Repetir</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Sair</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Excluir a nota atual</translation>
 </message>
@@ -2678,10 +2670,6 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Você precisa reiniciar a aplicação para que as alterações sejam aplicadas.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Reiniciar</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4003,14 +3991,6 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <translation>Você precisa configurar seu servidor ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Abrir &amp;configurações</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Cancelar</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Versões de notas carregadas</translation>
 </message>
@@ -4362,14 +4342,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4728,10 +4700,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Sua plataforma não é suportada por este script!
 Você deseja instalá-lo de qualquer maneira?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Cancelar</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7030,10 +6998,6 @@ Mensagem de erro: </translation>
 <translation>Você realmente deseja redefinir todas as barras de ferramentas? O aplicativo será fechado no processo, as barras de ferramentas padrão serão restauradas quando você iniciá-lo novamente.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Redefinir e &amp;sair</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Arquivo de log limpo</translation>
 </message>
@@ -7110,24 +7074,12 @@ Your notes will stay intact!</source>
 Suas notas continuarão intactas!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Limpar e &amp;Sair</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Cancelar</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Você encontrará &lt;code&gt;QOwnNotes.bat&lt;/code&gt; no seu caminho relativo para iniciar o QOwnNotes no modo portátil.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Você realmente deseja limpar o banco de dados local? Isso também irá remover suas configurações das suas pastas de notas e o cache da lista de tarefas!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Limpar o &amp;banco de dados</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8098,14 +8050,6 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Agora você pode reiniciar a aplicação para completar o processo de atualização.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Reiniciar</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Cancelar</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

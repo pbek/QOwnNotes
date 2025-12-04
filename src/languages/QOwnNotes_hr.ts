@@ -2401,7 +2401,7 @@
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Pošalji međuspremnik kao tekst</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2589,14 +2589,6 @@ Restore current note?</source>
 <translation>Morate odabrati mapu ownCloud bilješki kako bi program radio!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Ponovi</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Izlaz</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>&amp;Izbriši izabranu bilješku</translation>
 </message>
@@ -2699,10 +2691,6 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Da aktivirate promjene ponovno pokrenite aplikaciju.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Ponovno pokretanje</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -2914,11 +2902,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Tekst međuspremnika je uspješno poslan</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Neuspjelo slanje teksta međuspremnika</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -4045,14 +4033,6 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>ownCloud poslužitelj mora bili konfiguriran!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Otvori &amp;postavke</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Odustani</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Završeno učitavanje verzija bilješki</translation>
 </message>
@@ -4411,14 +4391,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4776,10 +4748,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Vaša platforma ne podržava ovu skriptu!
 Želite li je ipak instalirati?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Odustani</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7087,10 +7055,6 @@ Poruka o pogrešci veze: </translation>
 <translation>Želite li zaista resetirati sve alatne trake? Aplikacija će biti zatvorena u procesu, zadane alatne trake bit će vraćene kada ga ponovno pokrenete.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Resetiraj i &amp;izađi</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Log datoteka je izbrisana</translation>
 </message>
@@ -7167,24 +7131,12 @@ Your notes will stay intact!</source>
 Vaše bilješke će ostati netaknute!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Obriši i izađi</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Odustani</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Pronaći ćete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; u vašoj stazi za oslobađanje za pokretanje QOwnNotes-a u prijenosnom načinu rada.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Želite li zaista izbrisati lokalnu bazu podataka? Tako ćete ukloniti i konfigurirane mape bilješki i predmemorirane predmete u programu!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Obriši &amp;bazu podataka</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8159,14 +8111,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Za završavanje aktualiziranja sada možeš ponovo pokrenuti program.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Ponovno pokretanje</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Odustani</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

@@ -2579,14 +2579,6 @@ Voulez vous restaurer la note courante ?</translation>
 <translation>Vous devez sélectionner le répertoire des notes ownCloud pour que le logiciel fonctionne !</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Réessayer</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Quitter</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Supprimer la note courante</translation>
 </message>
@@ -2685,10 +2677,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Vous devrez peut-être redémarrer le programme pour que les modifications soient appliquées.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Redémarrer</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4010,14 +3998,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Vous devez configurer votre serveur ownCloud !</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Ouvrir les &amp;paramètres</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuler</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Téléchargement des versions des notes terminé</translation>
 </message>
@@ -4369,14 +4349,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation>Le support de Nextcloud Deck n’est pas activé ou les paramètres sont invalides.&lt;br /&gt;Merci de vérifier votre configuration &lt;strong&gt;Nextcloud&lt;/strong&gt; dans les paramètres !</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation>Ouvrir les &amp;paramètres</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuler</translation>
 </message>
 </context>
 <context>
@@ -4735,10 +4707,6 @@ Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 Do you want to install it anyway?</source>
 <translation>Votre plateforme n'est pas prise en charge par ce script !
 Voulez-vous quand même l'installer ?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuler</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7036,10 +7004,6 @@ Le message d'erreur de connexion est : </translation>
 <translation>Voulez-vous vraiment réinitialiser toutes les barres d'outils? Le programme va se terminer, et les barres d'outils standard seront restaurées au prochain démarrage.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Réinitialiser et &amp;quitter</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Fichier de journal vidé</translation>
 </message>
@@ -7116,24 +7080,12 @@ Your notes will stay intact!</source>
 Vos notes resteront intactes!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Effacer et &amp;quitter</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuler</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Vous trouverez un fichier &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; dans le répertoire d'installation pour démarrer QOwnNotes en mode portable.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Voulez-vous vraiment effacer la base de données locale ? Ceci supprimera également vos dossiers de notes configurés et vos tâches "à faire" mis en cache !</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Effacer la &amp;base de données</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8107,14 +8059,6 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Vous pouvez maintenant redémarrer l'application pour terminer le processus de mise à jour.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Redémarrer</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuler</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

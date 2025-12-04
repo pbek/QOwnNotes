@@ -2585,14 +2585,6 @@ Gjenopprett gjeldende notat?</translation>
 <translation>Du må velge din ownCloud notater mappe for å gjøre denne programvaren arbeid!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Prøv på nytt</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Exit</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Fjerne gjeldende notat</translation>
 </message>
@@ -2691,10 +2683,6 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Du må kanskje starte programmet på nytt for å la endringene tre i kraft.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Omstart</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4025,14 +4013,6 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
 <translation>Du må konfigurere din ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Åpne &amp;innstillinger</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Avbryt</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Utført med laste notatversjoner</translation>
 </message>
@@ -4389,14 +4369,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4755,10 +4727,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Din plattform støttes ikke av dette skriptet!
 Vil du installere det uansett?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Avbryt</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7065,10 +7033,6 @@ Tilkoblingsfeilmelding: </translation>
 <translation>Vil du virkelig tilbakestille alle verktøylinjer? Søknaden vil bli stengt i prosessen, standard verktøylinjer vil bli gjenopprettet når du starter den på nytt.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Tilbakestill og &amp;avslutt</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Loggfil slettet</translation>
 </message>
@@ -7145,24 +7109,12 @@ Your notes will stay intact!</source>
 Notatene dine forblir intakte!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Fjern og avslutt</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Avbryt</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Du finner en &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; i utgivelsesbanen din for å starte QOwnNotes i bærbar modus.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Vil du virkelig slette den lokale databasen? Dette vil også fjerne dine konfigurerte notatmapper og dine bufrette todo-elementer!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Klar &amp;database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8132,14 +8084,6 @@ Dette kan ikke angres!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

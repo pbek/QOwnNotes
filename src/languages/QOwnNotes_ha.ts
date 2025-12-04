@@ -2586,14 +2586,6 @@ Dawo da bayanin kula na yanzu?</translation>
 <translation>Dole ne a zaɓi babban fayil ɗin bayanin kula naka don sa wannan software ta yi aiki!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Sake gwadawa</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Fita</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Cire bayanin kula na yanzu</translation>
 </message>
@@ -2690,10 +2682,6 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Wataƙila kuna buƙatar sake kunna aikace-aikacen don bari canje-canje ya ci nasara.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Sake kunnawa</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4021,14 +4009,6 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <translation>Kuna buƙatar saita sabar ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Bude &amp;saiti</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Soke</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Anyi tare da juzu'in bayanin kula</translation>
 </message>
@@ -4381,14 +4361,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4747,10 +4719,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Ba za a iya tallafawa dandamali ba ta wannan rubutun!
 Kuna so ku saka shi ta wata hanya?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Soke</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7056,10 +7024,6 @@ Saƙon kuskuren haɗin: </translation>
 <translation>Shin kana son sake saita duk kayan aikin? Aikace-aikacen za a rufe su a cikin tsari, za a dawo da kayan aiki na ainihi lokacin da kuka sake farawa.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Sake saita da &amp;fita</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>An share fayil ɗin log</translation>
 </message>
@@ -7136,24 +7100,12 @@ Your notes will stay intact!</source>
 Bayanan kula ku za su zauna lafiya!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Share kuma &amp;fita</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Soke</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Zaka sami &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; a hanyarka ta sakin layi don fara QOwnNotes a yanayin canji.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Shin kuna son share bayanan gida? Hakanan zai cire manyan fayilolin bayanin kula da abubuwanda aka adana!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Share &amp;bayanai</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8123,14 +8075,6 @@ Ba za a sake yin wannan ba!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

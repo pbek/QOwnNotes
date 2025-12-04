@@ -2580,14 +2580,6 @@ Palauta nykyinen muistiinpano?</translation>
 <translation>Sinun on valittava ownCloud-komennot, jotta tämä ohjelmisto toimii!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Yritä uudelleen</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Lopeta</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Poista nykyinen huomautus</translation>
 </message>
@@ -2686,10 +2678,6 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Saatat joutua käynnistämään sovelluksen uudelleen, jotta muutokset tulevat voimaan.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Uudelleenkäynnistää</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4019,14 +4007,6 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
 <translation>Sinun on määritettävä ownCloud-palvelin!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Avaa &amp;asetukset</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Peruuta</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Tehdä lastaus huomautus versiot</translation>
 </message>
@@ -4379,14 +4359,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4745,10 +4717,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Tämä skripti ei tue alustasi!
 Haluatko asentaa sen joka tapauksessa?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Peruuta</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7056,10 +7024,6 @@ Yhteysvirheilmoitus: </translation>
 <translation>Haluatko todella palauttaa kaikki työkalurivit? Sovellus suljetaan prosessissa, oletustyökalurivit palautetaan, kun käynnistät sen uudelleen.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Palauttaa ja &amp;sulje</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Lokitiedosto tyhjennetään</translation>
 </message>
@@ -7136,24 +7100,12 @@ Your notes will stay intact!</source>
 Muistiinpanosi pysyvät ennallaan!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Selkeä ja &amp;sulje</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Peruuta</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>&lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; löytyy julkaisupolkuasi, jos haluat käynnistää QOwnNotes-sovelluksen kannettavassa tilassa.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Haluatko todella poistaa paikallisen tietokannan? Tämä poistaa myös määritetyt huomautuskansiot ja välimuistiin tallennetut todisteet!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Tyhjennä &amp;tietokanta</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8127,14 +8079,6 @@ Tätä ei voi peruuttaa!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

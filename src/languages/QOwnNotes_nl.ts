@@ -2578,14 +2578,6 @@ Restore current note?</source>
 <translation>Je moet je ownCloud notitie map selecteren om deze software te laten werken!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;opnieuw proberen</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Afsluiten</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Huidige notitie verwijderen</translation>
 </message>
@@ -2684,10 +2676,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>U moet de applicatie wellicht opnieuw opstarten om deze wijzigingen toe te passen.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Opnieuw opstarten</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4012,14 +4000,6 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <translation>U moet uw eigen ownCloud server opstellen!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Open &amp;instellingen</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuleren</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Klaar met het laden van notitie versies</translation>
 </message>
@@ -4371,14 +4351,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4736,10 +4708,6 @@ Are the folder and the file writable?</translation>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>Dit platform wordt niet ondersteund door dit script! Wil je het toch installeren?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuleren</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7042,10 +7010,6 @@ Verbinding foutbericht: </translation>
 <translation>Wilt u echt alle werkbalken herstellen? De toepassing zal worden gesloten in het proces, de standaardwerkbalken zullen worden hersteld als u het opnieuw start.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Reset en &amp;afsluiten</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Logboekbestand gewist</translation>
 </message>
@@ -7122,24 +7086,12 @@ Your notes will stay intact!</source>
 Je notities zullen intact blijven!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Verwijder gegevens en &amp;afsluiten</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annuleer</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Je vindt een &lt;code&gt;QOwnNotesPortable.exe&lt;/code&gt; in jouw release pad als je QOwnNotes in portable modus start.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Wilt u echt de lokale database wissen? Dit zal ook uw geconfigureerde notitie mappen en je gecachde taken items verwijderen!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>&amp;database wissen</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8108,14 +8060,6 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>U kunt de toepassing nu opnieuw starten om het updateproces te voltooien.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Opnieuw opstarten</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuleren</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

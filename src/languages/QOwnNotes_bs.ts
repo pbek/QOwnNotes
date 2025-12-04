@@ -2592,14 +2592,6 @@ Restore current note?</source>
 <translation>Da biste učinili ovaj softver morate odabrati svoju ownCloud notes!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Pokušaj</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Izlaz</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Uklonite trenutnu bilješku</translation>
 </message>
@@ -2706,10 +2698,6 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Možda ćete trebati ponovo pokrenuti aplikaciju da bi promjene stupile na snagu.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Ponovo pokreni</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4051,14 +4039,6 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <translation>Trebate postaviti svoj ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Otvorite &amp;postavke</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Otkaži</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Završeno s učitavanjem verzija napomena</translation>
 </message>
@@ -4417,14 +4397,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4782,10 +4754,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Ova skripta ne podržava vašu platformu!
 Želite li ga svejedno instalirati?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Otkaži</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7094,10 +7062,6 @@ Poruka o grešci u vezi:</translation>
 <translation>Želite li stvarno resetirati sve trake s alatima? Aplikacija će se zatvoriti u procesu, zadane alatne trake vratit će se kada je ponovo pokrenete.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Resetujte i &amp;izađite</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Datoteka dnevnika je izbrisana</translation>
 </message>
@@ -7174,24 +7138,12 @@ Your notes will stay intact!</source>
 Bilješke će ostati netaknute!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Očistite i &amp;izađite</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Otkaži</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Pronaći ćete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; na putu puštanja da pokrenete QOwnNotes u prijenosnom režimu.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Želite li zaista izbrisati lokalnu bazu podataka? Ovo će također ukloniti konfigurirane mape bilješki i vaše predmemorirane stavke todoa!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Izbriši bazu &amp;podataka</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8167,14 +8119,6 @@ Ovo se ne može poništiti!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

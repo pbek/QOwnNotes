@@ -2585,14 +2585,6 @@ Restore current note?</source>
 <translation>Du måste välja din anteckningsmapp i ownCloud för att denna mjukvara ska fungera!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Försök igen</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Avsluta</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Ta bort aktuell anteckning</translation>
 </message>
@@ -2691,10 +2683,6 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Du kan behöva starta om applikationen för att ändringarna ska få effekt.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Starta om</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4023,14 +4011,6 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <translation>Du måste konfigurera din ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Öppna &amp;inställningar</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Avbryt</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Utförd med laddningsanteckningsversioner</translation>
 </message>
@@ -4387,14 +4367,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4753,10 +4725,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Din plattform stöds inte av detta skript.
 Vill du installera det i alla fall?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Avbryt</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7061,10 +7029,6 @@ Connection error message: </source>
 <translation>Vill du verkligen återställa alla verktygsfält? Applikationen stängs i processen, standardverktygsfälten återställs när du startar den igen.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Återställ och &amp;avsluta</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Loggfil rensad</translation>
 </message>
@@ -7141,24 +7105,12 @@ Your notes will stay intact!</source>
 Dina anteckningar kommer att förbli intakta!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Rensa och &amp;avsluta</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Avbryt</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Du hittar en &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; i din släppväg för att starta QOwnNotes i portabelt läge.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Vill du verkligen rensa den lokala databasen? Detta kommer även ta bort dina konfigurerade mappar för anteckningar och dina cachelagrade todo objekt!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Rensa &amp;databas</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8132,14 +8084,6 @@ Detta kan inte göras ogjort!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Avbryt</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

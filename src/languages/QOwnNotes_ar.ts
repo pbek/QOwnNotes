@@ -2629,14 +2629,6 @@ Restore current note?</source>
 <translation>عليك اختيار مجلد الملاحظات لـ ownCloud لأجل أن يعمل هذا البرنامج!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;أعد المحاولة</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;أخرج</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>احذف الملاحظة الحالية</translation>
 </message>
@@ -2767,10 +2759,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>قد تحتاج إلى إعادة تشغيل التطبيق للسماح بتنفيذ التغييرات.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>اعادة التشغيل</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4168,14 +4156,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>تحتاج إلى إعداد خادم ownCloud خاصتك!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>افتح الإ&amp;عدادات</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>ألغ</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>انتهى تحميل نُسخ الملاحظة</translation>
 </message>
@@ -4555,14 +4535,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4920,10 +4892,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>منصتك لا يدعمها هذا البُريمج!
 أترغب بتثبيته على أيّة حال؟</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>إلغاء</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7251,10 +7219,6 @@ Connection error message: </source>
 <translation>هل تريد حقاً إعادة تعيين جميع أشرطة الأدوات؟ سيتم اغلاق البرنامج خلال العملية، وأشرطة الأدوات الافتراضية ستسعاد حين تقوم بتشغيله مجدداً.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>أعد التعيين واخرج</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>تم إخلاء ملف السجل</translation>
 </message>
@@ -7331,24 +7295,12 @@ Your notes will stay intact!</source>
 ستبقى ملاحظاتك دون أن تمس!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>امسح وغادر</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>ألغ</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>ستجد ملف &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; في مسار إصدارك لأجل تشغيل برنامج كيو-أون-نوتس في الوضع المحمول.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>هل تريد حقًا مسح قاعدة البيانات المحلية؟ سيزيل هذا أيضًا إعدادات مجلدات ملاحظاتك، وعناصر قوائم المهام التي في الذاكرة المؤقتة!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>امسح قاعدة البيانات</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8323,14 +8275,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>يمكنك الآن إعادة تشغيل التطبيق لإكمال عملية التحديث.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>أعد التشغيل</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>إلغاء</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

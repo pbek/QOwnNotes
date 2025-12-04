@@ -2583,14 +2583,6 @@ Restore current note?</source>
 <translation>Dapat mong piliin ang ownCloud mga tala folder sa gumawa ng trabaho software!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp; Umulit</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp; Lumabas</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Tanggalin ang kasalukuyang note</translation>
 </message>
@@ -2689,10 +2681,6 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Maaaring kailanganin mong i-restart ang application upang magkabisa ang mga pagbabago.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>I-restart</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4015,14 +4003,6 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
 <translation>Kailangan mong mag sef up saiyong ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Buksan &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Kanselahin</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Tapos may nag loading na tala sa bersyon</translation>
 </message>
@@ -4375,14 +4355,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4741,10 +4713,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Iyong platform ay hindi suporta sa itong script!
 Gusto mo ba i-install ito gayun paman?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Kanselahin</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7052,10 +7020,6 @@ Linyang error na mensahe: </translation>
 <translation>Talaga gusto mo bang magreset ng lahat ng kasangkapan bar? Ang application ay isasara sa proseso, ang mga default kasangkapan-bar ay ibabalik kapag muli mong simulan ang mga ito.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>I-reset ang at &amp; lumabas</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Mga file ng log na clear</translation>
 </message>
@@ -7130,24 +7094,12 @@ Your notes will stay intact!</source>
 <translation>Gusto mo ba talagang upang i-clear ang lahat ng mga setting, alisin ang database at lumabas ng QOwnNotes? Iyong mga tala ay manatiling buo!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Malinaw at &amp; lumabas</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp; Kanselahin</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Makikita ninyo ang isang &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; sa iyong paglaya landas upang simulan ang QOwnNotes sa portable mode.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Gusto mo ba talagang limasin ang lokal na database? Din ito ay alisin ang iyong mga folder sa nakaayos na paalala at iyong naka-cache todo bagay!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Malinaw &amp; database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8117,14 +8069,6 @@ ito ay hindi ma tapos!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

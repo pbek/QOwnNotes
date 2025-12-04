@@ -2585,14 +2585,6 @@ Restore current note?</source>
 <translation>Треба да изберете ваша сопствена папка за белешки на Cloud за да го направите овој софтвер!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Обидете се повторно</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Излез</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Отстранете ја тековната нота</translation>
 </message>
@@ -2691,10 +2683,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Можеби треба да ја рестартирате апликацијата за да ги ставите во сила промените.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Рестарт</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4024,14 +4012,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Вие треба да ги конфигурирате вашите ownCloud сервер!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Отворете ги &amp;поставките</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Откажи</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Готово со верзии за вчитување на белешки</translation>
 </message>
@@ -4388,14 +4368,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4754,10 +4726,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Вашата платформа не е поддржана од оваа скрипта!
 Дали сакате да го инсталирате како и да е?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Откажи</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7065,10 +7033,6 @@ Connection error message: </source>
 <translation>Дали навистина сакате да ги ресетирате сите ленти со алатки? Апликацијата ќе биде затворена во процес, стандардните ленти со алатки ќе бидат обновени кога повторно ќе ја стартувате.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Ресетирајте и &amp;излезете</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Датотеката е најавена</translation>
 </message>
@@ -7145,24 +7109,12 @@ Your notes will stay intact!</source>
 Вашите белешки ќе останат недопрени!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Исчистете и &amp;излезете</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Откажи</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Pathе најдете &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; во патеката за ослободување за да започнете QOwnNotes во преносен режим.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Дали навистина сакате да ја исчистите локалната база на податоци? Ова исто така ќе ги отстрани вашите конфигурирани папки за белешки и вашите зачувани тодо-предмети!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Јасна &amp;база на податоци</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8136,14 +8088,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

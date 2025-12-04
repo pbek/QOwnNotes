@@ -2590,14 +2590,6 @@ Restabiliți nota curentă?</translation>
 <translation>Trebuie să selectați folderul dvs. de note separate pentru a face acest software să funcționeze!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Reîncercați</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Ieșire</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Eliminați nota curentă</translation>
 </message>
@@ -2704,10 +2696,6 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Este posibil să fie necesar să reporniți aplicația pentru a permite modificările să aibă efect.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Repornire</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4056,14 +4044,6 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <translation>Trebuie să configurați serverul ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Deschidere &amp;setările</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Revocare</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Făcut cu nota versiuni de încărcare</translation>
 </message>
@@ -4426,14 +4406,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4791,10 +4763,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Platforma dvs. nu este acceptată de acest script!
 Doriți să o instalați oricum?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Revocare</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7103,10 +7071,6 @@ Mesaj de eroare de conectare: </translation>
 <translation>Chiar doriți să resetați toate barele de instrumente? Aplicația va fi închisă în timpul procesului, barele de instrumente implicite vor fi restabilite când îl porniți din nou.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Resetați și &amp;ieșiți</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Fișierul jurnal a fost șters</translation>
 </message>
@@ -7183,24 +7147,12 @@ Your notes will stay intact!</source>
 Notele dvs. vor rămâne intacte!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Șterge și iese</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Revocare</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Veți găsi un &lt;code&gt; QOwnNotesPortable.bat &lt;/ code&gt; în calea de eliberare pentru a începe QOwnNotes în modul portabil.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Chiar doriți să ștergeți baza de date locală? Acest lucru va elimina, de asemenea, dosarele dvs. de note configurat și obiectele dvs. de cedăr todo!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Clear &amp;database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8172,14 +8124,6 @@ Acest lucru nu poate fi anulat!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

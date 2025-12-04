@@ -2584,14 +2584,6 @@ Rivendosni shënimin aktual?</translation>
 <translation>Ju duhet të zgjidhni dosjen tuaj të shënimeveCloud për ta bërë këtë softuer të funksionojë!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Rigjykoj</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Dalje</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Hiq shënimin aktual</translation>
 </message>
@@ -2690,10 +2682,6 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ju mund të duhet të rindizni aplikacionin për të lejuar ndryshimet të hyjnë në fuqi.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Rifillo</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4016,14 +4004,6 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
 <translation>Ju duhet për të setup serverin tuaj ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Hapni &amp;cilësimet</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Anuloj</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Mbarohet me versionet e shënimeve të ngarkimit</translation>
 </message>
@@ -4380,14 +4360,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4746,10 +4718,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Platforma juaj nuk mbështetet nga ky skenar!
 Dëshiron ta instalosh gjithsesi?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Anuloj</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7052,10 +7020,6 @@ Mesazhi i gabimit në lidhje:</translation>
 <translation>A doni vërtet të rivendosni të gjitha shiritat e veglave? Aplikacioni do të mbyllet gjatë procesit, shiritat e veglave të paracaktuar do të rikthehen kur të filloni përsëri.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Rivendosni dhe &amp;dilni</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Skedari i logit u pastrua</translation>
 </message>
@@ -7132,24 +7096,12 @@ Your notes will stay intact!</source>
 Shënimet tuaja do të qëndrojnë të paprekura!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Pastroni dhe &amp;dilni</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Anuloj</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Ju do të gjeni një &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; në rrugën tuaj të lëshimit për të filluar QOwnNotes në modalitetin e lëvizshëm.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>A doni vërtet të pastroni bazën e të dhënave lokale? Kjo gjithashtu do të heq dosjet tuaja të konfiguruara të shënimeve dhe artikujt tuaj të memorizuar në to!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Baza e të &amp;dhënave e qartë</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8124,14 +8076,6 @@ Shënimi do të rikthehet në serverin tuaj të fshehtë me të gjitha versionet
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

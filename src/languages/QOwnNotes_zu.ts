@@ -2580,14 +2580,6 @@ Buyisela inothi yamanje?</translation>
 <translation>Kufanele ukhethe ifolda yakho yamanothi ownCloud ukwenza le software isebenze!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Zama futhi</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Phuma</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Susa inothi yamanje</translation>
 </message>
@@ -2686,10 +2678,6 @@ Uma udoti unikwe amandla kwiseva yakho ownCloud kufanele ukwazi ukubuyisela laph
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ungadinga ukuqala kabusha uhlelo lokusebenza ukuvumela izinguquko zisebenze.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Qala kabusha</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4014,14 +4002,6 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
 <translation>Udinga ukusetha iseva yakho ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Vula &amp;izilungiselelo</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Khansela</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Iqedile ngokulayisha izinguqulo zenothi</translation>
 </message>
@@ -4376,14 +4356,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4742,10 +4714,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Ipulatifomu yakho ayisekelwa yilesi skripthi!
 Ngabe ufuna ukuyifaka noma kunjalo?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Khansela</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7062,10 +7030,6 @@ Umlayezo wephutha lokuxhumeka:</translation>
 <translation>Ngabe ufuna ngempela ukusetha wonke amabha wamathuluzi? Uhlelo luzovalwa kwinqubo, amabhuleki wamathuluzi azenzakalelayo azobuyiselwa uma uqala futhi.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Setha kabusha futhi &amp;uphume</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Ifayela lokungena selicishiwe</translation>
 </message>
@@ -7142,24 +7106,12 @@ Your notes will stay intact!</source>
 Amanothi akho azohlala ethembekile!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Sula futhi &amp;uphume</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Khansela</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Uzothola i- &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; esendleleni yakho yokukhishwa ukuze uqale ama-QOwnNotes kumodi ephathekayo.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Ngabe ufuna ngempela ukusula imininingwane yendawo? Lokhu kuzosusa namafolda akho enothi amisiwe nezinto zakho ze-todo ezilondoloziwe!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Sula imininingo &amp;egciniwe</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8131,14 +8083,6 @@ Ungahlala ubuyisela inothi nezinguqulo zalo ngokuhamba kwesikhathi. &lt;/p&gt;</
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

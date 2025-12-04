@@ -2578,14 +2578,6 @@ Restore current note?</source>
 <translation>¡Debe seleccionar su carpeta de notas de ownCloud para hacer este programa funcione!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Reintentar</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>Salir</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Elimina la nota actual</translation>
 </message>
@@ -2684,10 +2676,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Puede que necesites reiniciar la aplicación para que los cambios se apliquen.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Reiniciar</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4009,14 +3997,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>¡Necesita configurar su servidor ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Abrir &amp;configuración</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Cancelar</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Terminó la carga de versiones de notas</translation>
 </message>
@@ -4369,14 +4349,6 @@ Haga clic en "Cancelar" para descartar tus cambios y conservar la versión exter
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation>¡El soporte de Nextcloud Deck no está habilitado o la configuración es inválida!&lt;br /&gt; Por favor, ¡compruebe su configuración de &lt;strong&gt;Nextcloud&lt;/strong&gt; en la pestaña de configuración!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation>Abrir configuración</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Cancelar</translation>
 </message>
 </context>
 <context>
@@ -4734,10 +4706,6 @@ Are the folder and the file writable?</source>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>¡Su plataforma no es compatible con esta secuencia de órdenes! ¿Desea instalarlo de todas formas?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Cancelar</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7032,10 +7000,6 @@ Mensaje de error de conexión: </translation>
 <translation>¿Desea restablecer todas las barras de herramientas? La aplicación se cerrará en el proceso, las barras de herramientas por defecto serán restauradas cuando la inicies otra vez.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>R&amp;establecer y salir</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Se vació el archivo de registro</translation>
 </message>
@@ -7110,24 +7074,12 @@ Your notes will stay intact!</source>
 <translation>¿Realmente desea eliminar toda la configuración, eliminar la base de datos y salir de QOwnNotes? Las notas permanecerán intactas!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Limpiar y salir</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>Cancelar</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Encontrará un archivo &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; en la ruta de su versión para ejecutar QOwnNotes en modo portátil.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>¿Realmente desea borrar la base de datos local? Esto también eliminará las carpetas de notas configuradas y sus tareas!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Limpiar la base de &amp;datos</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8096,14 +8048,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Ahora puede reiniciar la aplicación para completar el proceso de actualización.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Reiniciar</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Cancelar</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

@@ -2618,14 +2618,6 @@ Athchóirigh nóta reatha?</translation>
 <translation>Caithfidh tú d'fhillteán nótaí ownCloud a roghnú chun an obair bogearraí seo a dhéanamh!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Atosaigh</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;An slí amach</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Bain an nóta reatha</translation>
 </message>
@@ -2748,10 +2740,6 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>B'fhéidir go mbeidh ort an t-iarratas a atosú chun ligean do na hathruithe teacht i bhfeidhm.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Tosaigh arís</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4138,14 +4126,6 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <translation>Ní mór duit do fhreastalaí ownCloud a chur ar bun!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Suíomhanna &amp;oscailte</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Cealaigh</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Arna dhéanamh le leaganacha nóta luchtaithe</translation>
 </message>
@@ -4518,14 +4498,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4883,10 +4855,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Ní thacaíonn an script seo le do ardán!
 Ar mhaith leat é a shuiteáil ar aon nós?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Cealaigh</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7196,10 +7164,6 @@ Teachtaireacht earráide ceangail:</translation>
 <translation>An bhfuil tú cinnte gur mian leat gach barra uirlisí a athshocrú? Dúnfar an t-iarratas sa phróiseas, athchóirítear na barraí uirlisí réamhshocraithe nuair a thosaíonn tú é arís.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Athshocraigh agus &amp;scoir</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Glanadh an comhad logála</translation>
 </message>
@@ -7276,24 +7240,12 @@ Your notes will stay intact!</source>
 Fanfaidh do nótaí slán!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Glan agus &amp;imeacht</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Cealaigh</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Gheobhaidh tú &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; i do chosán scaoileadh chun QOwnNotes a thosú i mód iniompartha.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Ar mhaith leat an bunachar áitiúil a ghlanadh? Bainfidh sé seo freisin do fhillteáin nóta cumraithe agus do mhíreanna todo taisce!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Bunachar sonraí &amp;soiléir</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8273,14 +8225,6 @@ Ní féidir é seo a dhiúltú!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

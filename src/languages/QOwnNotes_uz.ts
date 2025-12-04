@@ -2586,14 +2586,6 @@ Hozirgi qayd qayta tiklansinmi?</translation>
 <translation>Ushbu dasturiy ta'minot ishlashi uchun siz ownCloud eslatmalar papkangizni tanlashingiz kerak!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Qayta urinish</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Chiqish</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Joriy qaydni olib tashlang</translation>
 </message>
@@ -2692,10 +2684,6 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>O'zgarishlar kuchga kirishi uchun ilovani qayta ishga tushirishingiz kerak bo'lishi mumkin.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Qayta ishga tushirish</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4026,14 +4014,6 @@ Agar axlat o'zingizning ownCloud serveringizda yoqilgan bo'lsa, ularni o'sha erd
 <translation>Siz ownCloud serveringizni sozlashingiz kerak!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Sozlamalarni &amp;oching</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Bekor qilish</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Qayd versiyalari yuklanmoqda</translation>
 </message>
@@ -4395,14 +4375,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4760,10 +4732,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Sizning platformangiz ushbu skript tomonidan qo'llab-quvvatlanmaydi!
 Uni baribir o'rnatmoqchimisiz?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Bekor qilish</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7071,10 +7039,6 @@ Ulanish xatosi haqida xabar: </translation>
 <translation>Haqiqatan ham barcha asboblar panelini asl holatiga qaytarishni xohlaysizmi? Dastur ish jarayonida yopiladi, uni qayta ishga tushirganingizda standart panellar tiklanadi.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Qayta tiklash va &amp;chiqish</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Jurnal fayli o'chirildi</translation>
 </message>
@@ -7151,24 +7115,12 @@ Your notes will stay intact!</source>
 Qaydlaringiz saqlanib qoladi!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Tozalash va &amp;chiqish</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Bekor qilish</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>QOwnNotes-ni ko'chma rejimda ishga tushirish uchun siz bo'shatish yo'lingizda &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; -ni topasiz.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Haqiqatan ham mahalliy ma'lumotlar bazasini tozalashni xohlaysizmi? Bu sizning konfiguratsiyalangan qayd jildlaringizni va keshlangan todo elementlarini olib tashlaydi!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Ma'lumotlar &amp;bazasini tozalash</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8143,14 +8095,6 @@ Buni bekor qilib bo‘lmaydi!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

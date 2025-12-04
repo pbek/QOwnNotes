@@ -2586,14 +2586,6 @@ Endurheimta núverandi athugasemd?</translation>
 <translation>Þú verður að velja þína eiginCloud minnismiða möppu til að láta þennan hugbúnað virka!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Reyndu aftur</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Hætta</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Fjarlægðu núverandi athugasemd</translation>
 </message>
@@ -2692,10 +2684,6 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Þú gætir þurft að endurræsa forritið til að láta breytingarnar taka gildi.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Endurræsa</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4026,14 +4014,6 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
 <translation>Þú þarft að setja upp ownCloud netþjón þinn!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Opna &amp;stillingar</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Hætta við</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Gert með útgáfu af hleðslubréfum</translation>
 </message>
@@ -4390,14 +4370,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4756,10 +4728,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Pallurinn þinn er ekki studdur af þessu handriti!
 Viltu setja það upp samt?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Hætta við</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7066,10 +7034,6 @@ Villuboð tengingar: </translation>
 <translation>Viltu virkilega endurstilla allar tækjastikur? Forritinu verður lokað í ferlinu, sjálfgefnu tækjastikurnar verða endurheimtar þegar þú ræsir það aftur.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Endurstilla og &amp;hætta</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Annáll hreinsaður</translation>
 </message>
@@ -7146,24 +7110,12 @@ Your notes will stay intact!</source>
 Skýringar þínar haldast óbreyttir!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Hreinsa og &amp;hætta</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Hætta við</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Þú finnur &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; á losunarleiðinni til að hefja QOwnNotes í flytjanlegri stillingu.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Viltu virkilega hreinsa staðbundna gagnagrunninn? Þetta mun einnig fjarlægja uppsetta athugasemdarmöppur þínar og skyndiminni í skyndiminni!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Hreinsa &amp;gagnagrunn</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8137,14 +8089,6 @@ Ekki er hægt að afturkalla þetta!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

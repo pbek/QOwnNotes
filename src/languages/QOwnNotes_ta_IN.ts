@@ -2579,14 +2579,6 @@ Restore current note?</translation>
 <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation type="unfinished">&amp;Retry</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation type="unfinished">&amp;Exit</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation type="unfinished">Remove current note</translation>
 </message>
@@ -2685,10 +2677,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4010,14 +3998,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">You need to setup your ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation type="unfinished">Done with loading note versions</translation>
 </message>
@@ -4369,14 +4349,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4735,10 +4707,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation type="unfinished">Your platform is not supported by this script!
 Do you want to install it anyway?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7036,10 +7004,6 @@ Connection error message: </translation>
 <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation type="unfinished">Reset and &amp;exit</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation type="unfinished">Log file cleared</translation>
 </message>
@@ -7116,24 +7080,12 @@ Your notes will stay intact!</source>
 Your notes will stay intact!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation type="unfinished">Clear and &amp;exit</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation type="unfinished">Clear &amp;database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8103,14 +8055,6 @@ This cannot be undone!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

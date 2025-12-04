@@ -2571,14 +2571,6 @@ Restore current note?</source>
 <translation>이 소프트웨어가 작동하려면 사용자 ownCloud 노트 폴더를 선택해야 합니다!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>재시도(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>종료(&amp;E)</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>현재 노트 제거</translation>
 </message>
@@ -2669,10 +2661,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>변경 내용을 적용하려면 응용 프로그램을 다시 시작해야 할 수도 있습니다.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>다시 시작</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3976,14 +3964,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>ownCloud 서버를 설정해야 합니다!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>설정 열기(&amp;S)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>취소(&amp;C)</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>노트 버전 불러오기 완료</translation>
 </message>
@@ -4330,14 +4310,6 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation>Nextcloud 덱 지원이 활성화되지 않았거나 설정이 잘못되었습니다.&lt;br /&gt;설정에서 &lt;strong&gt;Nextcloud&lt;/strong&gt; 구성을 확인해 주세요!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation>설정 열기(&amp;S)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>취소(&amp;C)</translation>
 </message>
 </context>
 <context>
@@ -4696,10 +4668,6 @@ Are the folder and the file writable?</source>
 Do you want to install it anyway?</source>
 <translation>플랫폼이 이 스크립트에서 지원되지 않습니다!
 그래도 설치하시겠습니까?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>취소</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -6996,10 +6964,6 @@ Connection error message: </source>
 <translation>모든 도구 모음을 재설정하시겠습니까? 응용 프로그램이 프로세스에서 닫히고 다시 시작하면 기본 도구 모음이 복원됩니다.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>재설정 및 종료(&amp;E)</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>로그 파일이 지워졌습니다</translation>
 </message>
@@ -7076,24 +7040,12 @@ Your notes will stay intact!</source>
 노트는 그대로 유지됩니다!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>지우고 종료(&amp;E)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>취소(&amp;C)</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>릴리스 경로에 &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; 이 있으면 QOwnNotes를 포터블 모드로 시작할 수 있습니다.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>로컬 데이터베이스를 지우시겠습니까? 구성된 노트 폴더와 캐시된 할 일 항목도 제거됩니다!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>데이터베이스 지우기( &amp;D)</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8061,14 +8013,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>이제 응용 프로그램을 다시 시작하여 업데이트 프로세스를 완료할 수 있습니다.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>다시 시작</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>취소</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

@@ -2585,14 +2585,6 @@ Restore current note?</source>
 <translation>آپ کواس سافٹ ویئرکو کام میں لانے کے لۓ اپنے ownCloud نوٹس فولڈر کو منتخب کرنا ہوگا!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;دوبار کوشش</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;باہر نکلیں</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>موجودہ نوٹ ہٹائیں</translation>
 </message>
@@ -2689,10 +2681,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>تبدیلیوں کو اثر انداز ہونے دینے کے لئے آپ کو ایپلی کیشن کو دوبارہ شروع کرنے کی ضرورت پڑسکتی ہے۔.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>دوبارہ شروع کریں</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4038,14 +4026,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>آپ کو اپنا اپنا کلاؤڈ سرور ترتیب دینے کی ضرورت ہے!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>کھلی تر&amp;تیبات</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;منسوخ کریں</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>نوٹ ورژن لوڈ ہو رہا ہے</translation>
 </message>
@@ -4415,14 +4395,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4780,10 +4752,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>آپ کا پلیٹ فارم اس اسکرپٹ کے ذریعہ تعاون یافتہ نہیں ہے!
 کیا آپ اسے ابھی بھی انسٹال کرنا چاہتے ہیں؟</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>منسوخ کریں</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7164,10 +7132,6 @@ QOwnNotes صفحہ جاری کریں
 <translation>کیا آپ واقعی میں تمام ٹول بار کو دوبارہ ترتیب دینا چاہتے ہیں؟ اس عمل کو اطلاق میں بند کردیا جائے گا ، جب آپ اسے دوبارہ شروع کریں گے تو طے شدہ ٹول بار کو بحال کیا جائے گا۔.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>دوبارہ ترتیب دیں اور باہر &amp;نکلیں</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>لاگ فائل کو صاف کردیا گیا</translation>
 </message>
@@ -7247,14 +7211,6 @@ Your notes will stay intact!</source>
 آپ کے نوٹ برقرار رہیں گے!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>صاف اور باہر &amp;نکلیں</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;منسوخ کریں</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>آپ کو ایک مل جائے گا
 &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt;
@@ -7263,10 +7219,6 @@ Your notes will stay intact!</source>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>کیا آپ واقعی مقامی ڈیٹا بیس کو صاف کرنا چاہتے ہیں؟ اس سے آپ کے تشکیل شدہ نوٹ فولڈرز اور آپ کے ذخیرے والے ٹوڈو آئٹمز بھی ختم ہوجائیں گے!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>صاف &amp;ڈیٹا بیس</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8236,14 +8188,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

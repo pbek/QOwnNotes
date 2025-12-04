@@ -2584,14 +2584,6 @@ Restore current note?</source>
 <translation>Πρέπει να επιλέξετε τον φάκελο σημειώσεων ownCloud για να κάνετε αυτό το λογισμικό να λειτουργήσει!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Επανάληψη</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Έξοδος</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Κατάργηση τρέχουσας σημείωσης</translation>
 </message>
@@ -2690,10 +2682,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Ίσως χρειαστεί να επανεκκινήσετε την εφαρμογή για να επιτραπεί η πραγματοποίηση των αλλαγών.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Επανεκκίνηση</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4017,14 +4005,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Πρέπει να ρυθμίσετε τον διακομιστή σας ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Ανοίξτε τις &amp;ρυθμίσεις</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Ακύρωση</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Ολοκλήρωση φόρτωσης των εκδόσεων σημειώσεων </translation>
 </message>
@@ -4381,14 +4361,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4747,10 +4719,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Η πλατφόρμα σας δεν υποστηρίζεται από αυτό το σενάριο!
 Θέλετε να το εγκαταστήσετε ούτως ή άλλως;</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Ακύρωση</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7058,10 +7026,6 @@ Connection error message: </source>
 <translation>Επιθυμείτε πραγματικά να επαναφέρετε όλες τις γραμμές εργαλείων; Η εφαρμογή θα κλείσει κατά τη διαδικασία, οι προεπιλεγμένες γραμμές εργαλείων θα αποκατασταθούν όταν την επανεκκινήσετε.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Επαναφορά και &amp;έξοδος</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Το αρχείο καταγραφής διαγράφηκε</translation>
 </message>
@@ -7138,24 +7102,12 @@ Your notes will stay intact!</source>
 Οι σημειώσεις σας θα παραμείνουν άθικτες!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Εκκαθάριση και έξοδος</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Ακύρωση</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Θα βρείτε ένα αρχείο &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; στη διαδρομή - φάκελο του προγράμματος, για να ξεκινήσετε το QOwnNotes σε φορητή λειτουργία.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Επιθυμείτε πραγματικά να διαγράψετε την τοπική βάση δεδομένων; Αυτό θα αφαιρέσει επίσης τους διαμορφωμένους φακέλους σημειώσεων και τα στοιχεία εκκρεμών εργασιών σας που είναι αποθηκευμένα στην κρυφή μνήμη!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Εκκαθάριση &amp;βάσης δεδομένων</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8125,14 +8077,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

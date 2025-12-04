@@ -2575,14 +2575,6 @@ Khôi phục lưu ý hiện tại?</translation>
 <translation>Bạn phải chọn ghi chú ownCloud của bạn thư mục để làm cho công việc phần mềm này!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Thử lại</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Lối thoát hiểm</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Xóa ghi chú hiện tại</translation>
 </message>
@@ -2673,10 +2665,6 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Bạn có thể cần phải khởi động lại ứng dụng để thay đổi có hiệu lực.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Khởi động lại</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3988,14 +3976,6 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 <translation>Bạn cần phải thiết lập máy chủ ownCloud của bạn!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Mở &amp;cài đặt</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Hủy bỏ</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Thực hiện với tải phiên bản ghi chú</translation>
 </message>
@@ -4347,14 +4327,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4713,10 +4685,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Nền tảng của bạn không được hỗ trợ bởi tập lệnh này!
 Bạn có muốn cài đặt nó không?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Hủy bỏ</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7023,10 +6991,6 @@ Thông báo lỗi kết nối: </translation>
 <translation>Bạn có thực sự muốn thiết lập lại tất cả các thanh công cụ? Ứng dụng sẽ được đóng trong quá trình, các thanh công cụ mặc định sẽ được khôi phục khi bạn khởi động lại.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Đặt &amp;lại và thoát</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Xóa tệp nhật ký</translation>
 </message>
@@ -7103,24 +7067,12 @@ Your notes will stay intact!</source>
 Ghi chú của bạn sẽ được giữ nguyên!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Xóa và &amp;thoát</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Hủy bỏ</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Bạn sẽ tìm thấy &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; trong đường dẫn phát hành của mình để bắt đầu QOwnNotes ở chế độ di động.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Bạn có thực sự muốn xóa cơ sở dữ liệu địa phương? Điều này cũng sẽ loại bỏ các thư mục ghi chú được cấu hình của bạn và các mục việc cần lưu trong bộ nhớ cache của bạn!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Xóa &amp;cơ sở dữ liệu</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8093,14 +8045,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

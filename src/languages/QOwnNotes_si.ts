@@ -2579,14 +2579,6 @@ Restore current note?</source>
 <translation>මෙම මෘදුකාංගය ක්‍රියාත්මක කිරීම සඳහා ඔබ ඔබේම ක්ලවුඩ් සටහන් ෆෝල්ඩරය තෝරා ගත යුතුය!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;නැවත උත්සාහ කරන්න</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;පිටවීම</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>වත්මන් සටහන ඉවත් කරන්න</translation>
 </message>
@@ -2685,10 +2677,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>වෙනස්කම් බලාත්මක වීමට ඔබට යෙදුම නැවත ආරම්භ කිරීමට අවශ්‍ය විය හැකිය.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>නැවත ආරම්භ</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4011,14 +3999,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ඔබේම ක්ලවුඩ් සේවාදායකය සැකසීමට ඔබට අවශ්‍යය!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>සැකසුම් &amp;විවෘත කරන්න</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;අවලංගු කරන්න</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>සටහන් අනුවාදයන් පැටවීම සමඟ සිදු කරන ලදි</translation>
 </message>
@@ -4370,14 +4350,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4736,10 +4708,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>ඔබගේ වේදිකාවට මෙම ස්ක්‍රිප්ට් සහාය නොදක්වයි!
 ඔබට එය කෙසේ හෝ ස්ථාපනය කිරීමට අවශ්‍යද?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>අවලංගු</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7037,10 +7005,6 @@ Connection error message: </source>
 <translation>සියලුම මෙවලම් තීරු නැවත සැකසීමට ඔබට ඇත්තටම අවශ්‍යද? ක්‍රියාවලිය තුළ යෙදුම වසා දමනු ඇත, ඔබ එය නැවත ආරම්භ කරන විට පෙරනිමි මෙවලම් තීරු ප්‍රතිස්ථාපනය වේ.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>නැවත සකසා &amp;පිටවන්න</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>ලොග් ගොනුව හිස් කර ඇත</translation>
 </message>
@@ -7117,24 +7081,12 @@ Your notes will stay intact!</source>
 ඔබගේ සටහන් නොවෙනස්ව පවතිනු ඇත!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>ඉවත් කර &amp;පිටවන්න</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;අවලංගු</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>අතේ ගෙන යා හැකි ආකාරයෙන් QOwnNotes ආරම්භ කිරීම සඳහා ඔබේ මුදා හැරීමේ මාවතේ &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; ඔබ සොයා ගනු ඇත.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>ඔබට ඇත්ත වශයෙන්ම දේශීය දත්ත සමුදාය ඉවත් කිරීමට අවශ්‍යද? මෙය ඔබගේ වින්‍යාස කරන ලද සටහන් ෆෝල්ඩර සහ ඔබගේ හැඹිලි ටෝඩෝ අයිතම ද ඉවත් කරනු ඇත!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>දත්ත &amp;සමුදාය හිස් කරන්න</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8104,14 +8056,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>නැවත අරඹන්න</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>අවලංගු කරන්න</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

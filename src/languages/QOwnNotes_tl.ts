@@ -2578,14 +2578,6 @@ Restore current note?</source>
 <translation>Mayroong pinili sa iyong ownCloud notes folder sa gumawa nitong software work!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Retry</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Exit</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Tanggalin current note</translation>
 </message>
@@ -2680,10 +2672,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Maaring kailangan mo tong restart sa application mano mano para pagbago ng epikto.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Restart</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4005,14 +3993,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Kailangan mong mag setup sa iyong ownCloud serber!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Buksan &amp;mga setting</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Kanselahin</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Natapos na ang pag-loading ng tala na mga bersyon</translation>
 </message>
@@ -4364,14 +4344,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4729,10 +4701,6 @@ Are the folder and the file writable?</translation>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>Hindi suportado ang iyong platform sagitan ng script! gusto mo itong iinstall gayon paman?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Burahin</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7023,10 +6991,6 @@ Connection error message: </source>
 <translation>Gusto mo bang i-reset ang lahat ng mga toolbar? ang aplikasyon ay masasara sa processo, ang nakatakdang sa mga toolbar ay magbabalik kung magsisimulang muli.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>I-reset at lumabas</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Walang laman ang log</translation>
 </message>
@@ -7102,24 +7066,12 @@ Your notes will stay intact!</source>
 ang yong mga tala ay manatili ng buo!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Linawin at &amp;lumabas</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;tanggalin</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Hanapin mo ang &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt;sa iyong palayain sa landas para magsimula sa QOwnNotes portable mode.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Gusto mo bang linawin ang lokal na database? ito ay tanggalin sa iyong isinaayos na nota sa mga dokomento at iyong cache at mga bagay na todo!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Linawin &amp;database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8089,14 +8041,6 @@ Tagahiwalay</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

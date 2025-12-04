@@ -2585,14 +2585,6 @@ Restore current note?</source>
 <translation>איר מוזן סעלעקטירן דיין אָוועסקלאָוד הערות טעקע צו מאַכן דעם ווייכווארג אַרבעט!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;פרובירט</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;אַרויסגאַנג</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>אַראָפּנעמען קראַנט טאָן</translation>
 </message>
@@ -2693,10 +2685,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>איר קען דאַרפֿן צו ריסטאַרט די אַפּלאַקיישאַן צו לאָזן די ענדערונגען נעמען ווירקונג.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>הייב אן נאכאמאל</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4027,14 +4015,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>איר דאַרפֿן צו סעטאַפּ דיין אָווועקלאָוד סערווער!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>עפענען &amp;סעטטינגס</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;באָטל מאַכן</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>געטאן מיט ווערסיעס פון לאָודינג טאָן</translation>
 </message>
@@ -4387,14 +4367,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4753,10 +4725,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>דיין פּלאַטפאָרמע איז נישט געשטיצט דורך דעם שריפט!
 צי איר ווילט צו ינסטאַלירן עס סייַ ווי סייַ?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>באָטל מאַכן</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7054,10 +7022,6 @@ Connection error message: </source>
 <translation>צי איר טאַקע ווילן צו באַשטעטיק אַלע מכשירים? די אַפּלאַקיישאַן וועט זיין פארמאכט אין דעם פּראָצעס, די פעליקייַט מכשירים באַרס וועט זיין ריסטאָרד ווען איר אָנהייב עס ווידער.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>באַשטעטיק און אַרויסגאַנג</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>קלאָץ טעקע קלירד</translation>
 </message>
@@ -7134,24 +7098,12 @@ Your notes will stay intact!</source>
 דיין הערות וועלן בלייַבן בעשאָלעם!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>קלאָר און &amp;אַרויסגאַנג</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;באָטל מאַכן</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>איר וועט געפֿינען אַ &lt;קאָד&gt; QOwnNotesPortable.bat &lt;/code&gt; אין דיין מעלדונג דרך צו אָנהייבן QOwnNotes אין פּאָרטאַטיוו מאָדע.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>צי איר טאַקע ווילן צו ויסמעקן די היגע דאַטאַבייס? דאָס וועט אויך אַראָפּנעמען דיין קאַנפיגיערד נאָטיץ פאָלדערס און דיין קאַשט טאָדאָ ייטאַמז!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>קלאָר &amp;דייטאַבייס</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8121,14 +8073,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

@@ -2576,14 +2576,6 @@ Restore current note?</source>
 <translation>このソフトウェアが機能するためにはあなたの ownCloud ノートフォルダーを選択する必要があります。</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>再試行(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>終了(&amp;E)</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>現在のノートの削除</translation>
 </message>
@@ -2674,10 +2666,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>変更を反映させるにはアプリを再起動する必要があります。</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>再起動</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3987,14 +3975,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation>あなたの ownCloud サーバーを構成する必要があります！</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>設定を開く(&amp;S)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>中止(&amp;C)</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>ノートのバージョン履歴の読み込み完了</translation>
 </message>
@@ -4346,14 +4326,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4712,10 +4684,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>このスクリプトはあなたのプラットフォームに対応していません。
 構わずにインストールしますか？</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>中止</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7023,10 +6991,6 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 <translation>すべてのツールバーをリセットしますか？アプリは終了されます。次に起動したときに既定のツールバーが復元されます。</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>リセットして終了(&amp;E)</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>ログファイルの初期化</translation>
 </message>
@@ -7103,24 +7067,12 @@ Your notes will stay intact!</source>
 あなたのノートはそのまま残ります。</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>初期化して終了(&amp;E)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>中止(&amp;C)</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>QOwnNotesをポータブル モードで起動するための &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; がアプリの場所にあります。</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>本当にローカル データベースを初期化しますか？ これはあなたのノート フォルダーの構成とキャッシュされたTodo項目も同時に削除します。</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>データベースの初期化(&amp;D)</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8092,14 +8044,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>これで、アプリケーションを再起動して更新プロセスを完了することができます。</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>再起動</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>中止</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

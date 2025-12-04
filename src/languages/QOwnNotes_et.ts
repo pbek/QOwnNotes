@@ -2580,14 +2580,6 @@ Kas taastada praegune märkus?</translation>
 <translation>Selle tarkvara toimimiseks peate valima märkmete kausta ownCloud!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Uuesti proovima</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Välju</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Eemalda praegune märkus</translation>
 </message>
@@ -2686,10 +2678,6 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Võimalik, et muudatuste jõustumiseks peate rakenduse taaskäivitama.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Taaskäivita</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4019,14 +4007,6 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
 <translation>Peate seadistama ownCloudi serveri!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Avage &amp;seaded</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Tühista</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Lõpetage märkme versioonide laadimine</translation>
 </message>
@@ -4379,14 +4359,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4745,10 +4717,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>See skript ei toeta teie platvormi!
 Kas soovite selle ikkagi installida?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Tühista</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7056,10 +7024,6 @@ Samuti peab teil olema installitud ja lubatud rakendus QOwnNotesAPI!
 <translation>Kas soovite tõesti kõik tööriistaribad lähtestada? Rakendus suletakse protsessis, vaikimisi tööriistaribad taastatakse uuesti käivitamisel.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Lähtestamine ja &amp;väljumine</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Logifail on kustutatud</translation>
 </message>
@@ -7136,24 +7100,12 @@ Your notes will stay intact!</source>
 Teie märkmed jäävad puutumatuks!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Tühjendage ja &amp;väljuge</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Tühista</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>QOwnNotes käivitamiseks kaasaskantavas režiimis leiate oma vabastamisteelt &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Kas soovite tõesti kohaliku andmebaasi tühjendada? See eemaldab ka teie konfigureeritud märkmekaustad ja vahemällu salvestatud todo-üksused!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Kustuta &amp;andmebaas</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8127,14 +8079,6 @@ Seda ei saa olematuks teha!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

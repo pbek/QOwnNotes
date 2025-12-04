@@ -2581,14 +2581,6 @@ Berrezarri uneko oharra?</translation>
 <translation>Zure ownCloud oharren karpeta hautatu behar duzu software hau funtzionatzeko!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Saiatu berriro</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Irten</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Kendu uneko oharra</translation>
 </message>
@@ -2687,10 +2679,6 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Baliteke aplikazioa berrabiarazi behar izatea aldaketak eragina izateko.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Berriro hasi</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4013,14 +4001,6 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
 <translation>OwnCloud zerbitzaria konfiguratu behar duzu!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Ireki &amp;ezarpenak</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Utzi</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Kontuaren bertsioak kargatuta</translation>
 </message>
@@ -4373,14 +4353,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4739,10 +4711,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Script honek ez du zure plataforma onartzen!
 Hala ere instalatu nahi duzu?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Utzi</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7050,10 +7018,6 @@ Konexioko errore mezua: </translation>
 <translation>Benetan tresna-barra guztiak berrezarri nahi dituzu? Aplikazioa prozesuan itxita egongo da, tresna-barra lehenetsiak berriro leheneratuko dira.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Berrezarri &amp;irten</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Erregistro fitxategia garbitu da</translation>
 </message>
@@ -7130,24 +7094,12 @@ Your notes will stay intact!</source>
 Zure oharrak osorik egongo dira!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Garbitu eta &amp;irten</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Utzi</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Zure kodeketa-bidea aurkituko duzu QOwnNotesPortable.bat &lt;/code&gt; &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; moduan, QOwnNotes modu eramangarrian hasteko.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Benetan nahi duzu datu-basea ezabatzea? Honek zure konfiguratutako ohar-karpetak eta zure cacheko elementu guztiak kenduko ditu!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Garbitu &amp;datu-basea</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8121,14 +8073,6 @@ Hau ezin da desegin!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation type="unfinished">You now can restart the application to complete the update process.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation type="unfinished">Restart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

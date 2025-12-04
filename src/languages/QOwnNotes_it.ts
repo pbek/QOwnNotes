@@ -2578,14 +2578,6 @@ Restore current note?</source>
 <translation>Devi impostare una cartella di note di ownCloud per far funzionare questo software!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Riprova</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Esci</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Elimina la nota corrente</translation>
 </message>
@@ -2684,10 +2676,6 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Potrebbe essere necessario riavviare l'applicazione per rendere effettive le modifiche.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Riavvia</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4009,14 +3997,6 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>È necessario configurare il proprio server ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Apri le &amp;impostazioni</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annulla</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Caricamento delle versioni delle note completato</translation>
 </message>
@@ -4368,14 +4348,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4734,10 +4706,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>La piattaforma non è supportata da questo script!
 Si desidera procedere con l'installazione comunque?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annulla</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7034,10 +7002,6 @@ Messaggio di errore: </translation>
 <translation>Reimpostare tutte le barre degli strumenti? L'applicazione verrà chiusa durante questo processo: le barre degli strumenti predefinite verranno ripristinate all'avvio successivo.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Reimposta ed &amp;esci</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>File di registro svuotato</translation>
 </message>
@@ -7114,24 +7078,12 @@ Your notes will stay intact!</source>
 Le proprie note non verranno modificate!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Azzera ed &amp;esci</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Annulla</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Troverai un file chiamato &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; nel percorso di installazione di per avviare QOwnNotes in modalità portabile.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Vuoi davvero cancellare il database locale? Questo rimuoverà le cartelle configurate per le note e la cache degli elementi della lista dei compiti!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Cancella &amp;database</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8101,14 +8053,6 @@ Non sarà possibile annullare l'operazione!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Puoi riavviare l'applicazione per completare il processo di aggiornamento.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Riavvia</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annulla</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

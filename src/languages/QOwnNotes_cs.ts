@@ -2606,14 +2606,6 @@ Restore current note?</source>
 <translation>Musíte zvolit složku vlastních poznámek, aby tento software fungoval!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Opakovat</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Ukončit</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Odstranit současnou poznámku</translation>
 </message>
@@ -2723,10 +2715,6 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Budete muset restartovat aplikaci ručně, aby se změny projevily.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Restartovat</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4090,14 +4078,6 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <translation>Potřebujete nastavit svůj ownCloud server!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Otevřít &amp;nastavení</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Zrušit</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Hotovo s verzemi s poznámkou k načtení</translation>
 </message>
@@ -4465,14 +4445,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4830,10 +4802,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Vaše platforma není podporován tímto skriptem!
 Chcete přesto nainstalovat?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Zrušit</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7141,10 +7109,6 @@ Chybová zpráva připojení: </translation>
 <translation>Opravdu chcete obnovit všechny panely nástrojů? Aplikace bude během procesu uzavřena. Výchozí panely nástrojů budou obnoveny až ji spustíte znovu.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Obnovit a &amp;ukončit</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Soubor protokolu byl vymazán</translation>
 </message>
@@ -7221,24 +7185,12 @@ Your notes will stay intact!</source>
 Vaše poznámky zůstanou neporušené!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Vyčistit a &amp;ukončit</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Zrušit</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Naleznete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; v cestě uvolnění a spustíte QOwnNotes v přenosném režimu.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Opravdu chcete vymazat lokální databázi? Také odeberete nakonfigurované složky s poznámkami a položky v mezipaměti!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Jasná &amp;databáze</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8216,14 +8168,6 @@ To nelze vrátit zpět!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Nyní můžete restartovat aplikaci a dokončit proces aktualizace.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Restartovat</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Zrušit</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

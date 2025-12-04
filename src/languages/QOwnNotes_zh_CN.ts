@@ -1611,7 +1611,7 @@
 <message numerus="yes">
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
-<numerusform>&lt;strong&gt;％n &lt;/strong&gt;个笔记已删除</numerusform>
+<numerusform>&lt;strong&gt;%n &lt;/strong&gt;个笔记已删除</numerusform>
 </translation>
 </message>
 </context>
@@ -2564,14 +2564,6 @@ Restore current note?</source>
 <translation>你必须选择你的 ownCloud 笔记文件夹，以使本软件的工作正常！</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>重试(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>退出(&amp;E)</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>删除当前笔记</translation>
 </message>
@@ -2662,10 +2654,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>您可能需要重启程序以便更改生效。</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>重新启动</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -3968,14 +3956,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>您需要设置你的 ownCloud 服务器！</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>打开设置(&amp;S)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>取消(&amp;C)</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>完成加载笔记版本</translation>
 </message>
@@ -4073,7 +4053,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>笔记文件已在外部被修改</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4082,12 +4062,12 @@ The editor below shows YOUR version. The differences view shows changes between 
 
 Click 'OK' to save YOUR version and overwrite the external changes.
 Click 'Cancel' to discard your changes and keep the external version.</source>
-<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+<translation>笔记文件 '%1' 在您存在未保存更改时被外部修改。
 
-The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+下方编辑器显示的是您的版本。差异视图中红色标记为外部文件的修改，绿色标记为您的版本。
 
-Click 'OK' to save YOUR version and overwrite the external changes.
-Click 'Cancel' to discard your changes and keep the external version.</translation>
+点击'确定'将保存您的版本并覆盖外部修改。
+点击'取消'将丢弃您的更改并保留外部版本。</translation>
 </message>
 <message>
 <source>Could not store note file: %1 - Error message: %2</source>
@@ -4322,14 +4302,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation>Nextcloud Deck 支持未启用或设置无效。&lt;br/&gt;请在设置中检查您的 &lt;strong&gt;Nextcloud&lt;/strong&gt; 配置！</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation>打开设置(&amp;S)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>取消(&amp;C)</translation>
 </message>
 </context>
 <context>
@@ -4688,10 +4660,6 @@ Are the folder and the file writable?</source>
 Do you want to install it anyway?</source>
 <translation>您的平台不支持此脚本！
 无论如何也要安装它吗？</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>取消</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -6007,7 +5975,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+<translation>使用校验和检测未保存笔记的外部修改</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
@@ -6988,10 +6956,6 @@ Connection error message: </source>
 <translation>您真的想要重置全部工具栏吗？应用程序将会被关闭，默认工具栏将会在重启时恢复。</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>重置并退出(&amp;E)</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>日志文件已清理</translation>
 </message>
@@ -7068,24 +7032,12 @@ Your notes will stay intact!</source>
 你的笔记将不会保存！</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>清除并退出(&amp;E)</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>取消(&amp;C)</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>您会在程序目录中找到 &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; 以便启用 QOwnNotes 的便携模式。</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>是否要清除本地数据库吗？这也将删除你的配置笔记目录和缓存的待办事项！</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>清除数据库(&amp;D)</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -7622,7 +7574,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>不再显示对话框</translation>
 </message>
 <message>
 <source>Accept change?</source>
@@ -8053,14 +8005,6 @@ This cannot be undone!</source>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>现在可以重启应用以完成更新流程。</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>重新启动</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>取消</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

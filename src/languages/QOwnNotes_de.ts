@@ -2580,14 +2580,6 @@ Notiz wiederherstellen?</translation>
 <translation>Sie müssen Ihren ownCloud-Notizordner auswählen, damit dieses Programm funktioniert!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>Wiede&amp;rholen</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Schliessen</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Aktuelle Notiz löschen</translation>
 </message>
@@ -2686,10 +2678,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Die Anwendung muss möglicherweise neu gestartet werden, damit die Änderungen wirksam werden.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Neustart</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4011,14 +3999,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation>Ihr ownCloud-Server muss konfiguriert werden!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Öffne &amp;Einstellungen</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Abbrechen</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Laden der Notizversionen abgeschlossen</translation>
 </message>
@@ -4370,14 +4350,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4736,10 +4708,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Ihre Plattform wird von diesem Skript nicht unterstützt!
 Möchten Sie es trotzdem installieren?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Abbrechen</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7036,10 +7004,6 @@ Fehlermeldung: </translation>
 <translation>Möchten Sie wirklich alle Symbolleisten zurücksetzen? Die Anwendung wird beendet und die Standard-Symbolleisten werden wiederhergestellt.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Zurücksetzen und &amp;beenden</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Protokoll-Datei gelöscht</translation>
 </message>
@@ -7114,24 +7078,12 @@ Your notes will stay intact!</source>
 <translation>Wollen Sie wirklich alle Einstellungen und die Datenbank löschen und QOwnNotes beenden?</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Löschen und &amp;Beenden</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;Abbrechen</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Im Freigabepfad befindet sich eine &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt;-Datei, um QOwnNotes im portablen Modus zu starten.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Wollen Sie die lokale Datenbank wirklich bereinigen? Eingerichtete Notizen-Ordner und zwischengespeicherte Aufgabeneinträge werden dabei ebenfalls gelöscht!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Datenbank &amp;bereinigen</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8101,14 +8053,6 @@ Kann nicht rückgängig gemacht werden!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Sie können die Anwendung jetzt neu starten, um den Aktualisierungsvorgang abzuschließen.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Neustart</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Abbrechen</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

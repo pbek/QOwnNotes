@@ -2585,14 +2585,6 @@ Geçerli not geri yüklensin mi?</translation>
 <translation>Bu yazılımı çalıştırmak için ownCloud notlar klasörünü seçmelisin!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>&amp;Tekrar dene</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>&amp;Çıkış</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Geçerli notu sil</translation>
 </message>
@@ -2691,10 +2683,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekebilir.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Yeniden başlat</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4025,14 +4013,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ownCloud sunucunuzu kurmanız gerek!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>&amp;Ayarları aç</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;İptal</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Not sürümleri yüklemesiyle tamamla</translation>
 </message>
@@ -4388,14 +4368,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
-</message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4754,10 +4726,6 @@ Are the folder and the file writable?</translation>
 Do you want to install it anyway?</source>
 <translation>Platformunuz bu script tarafından desteklenmiyor!
 Yine de yüklemek istiyor musunuz?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>İptal</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7066,10 +7034,6 @@ Bağlantı hata mesajı: </translation>
 <translation>Tüm araç menülerini sıfırlamak istiyor musunuz? İşlem esnasında uygulama kaptılacak, varsayılan araç menüleri uygulama tekrar başladığında geri yüklenecektir.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Yeniden başlat ve &amp;çık</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Kayıt dosyası temizlendi</translation>
 </message>
@@ -7145,24 +7109,12 @@ Your notes will stay intact!</source>
 Notelarınız bozulmamış olarak kalacak!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Temizle ve &amp;çıkış</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>&amp;İptal</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Mevcut yayın yolunuzda QOwnNotes'ı taşınabilir modda çalıştırırsanız &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; ile karşılaşacaksınız.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Yerel veritabanınızı temizlemek istediğinizden emin misiniz? Bu aynı zamanda yapılandırılmış not dosyalarınızı ve önbelleğe alınmış yapılacak işler ögenizi de siler!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Temizle &amp;veritabanı</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8136,14 +8088,6 @@ Bu geri alınamaz!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>Güncelleme işlemini tamamlamak için uygulamayı yeniden başlatmalısınız.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Yeniden başlat</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>İptal</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>

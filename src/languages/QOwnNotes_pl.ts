@@ -2602,14 +2602,6 @@ Przywrócić notatkę?</translation>
 <translation>Musisz określić swój folder notatek ownCloud aby ten program działał!</translation>
 </message>
 <message>
-<source>&amp;Retry</source>
-<translation>Ponów</translation>
-</message>
-<message>
-<source>&amp;Exit</source>
-<translation>Wyjdź</translation>
-</message>
-<message>
 <source>Remove current note</source>
 <translation>Usuń wybraną notatkę</translation>
 </message>
@@ -2724,10 +2716,6 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Może być konieczne ponowne uruchomienie aplikacji aby zmiany zostały zastosowane.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Uruchom ponownie</translation>
 </message>
 <message>
 <source>PDF files</source>
@@ -4091,14 +4079,6 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 <translation>Musisz skonfigurować swój serwer ownCloud!</translation>
 </message>
 <message>
-<source>Open &amp;settings</source>
-<translation>Otwórz u&amp;stawienia</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>Anuluj</translation>
-</message>
-<message>
 <source>Done with loading note versions</source>
 <translation>Zakończono ładowanie wersji notatki</translation>
 </message>
@@ -4461,14 +4441,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
-<message>
-<source>Open &amp;settings</source>
-<translation type="unfinished">Open &amp;settings</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation type="unfinished">&amp;Cancel</translation>
-</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4825,10 +4797,6 @@ Are the folder and the file writable?</translation>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>Twoja platforma nie jest obsługiwany przez ten skrypt! Czy chcesz go, mimo wszystko, zainstalować?</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Anuluj</translation>
 </message>
 <message>
 <source>Update app</source>
@@ -7128,10 +7096,6 @@ Wiadomość błędu: </translation>
 <translation>Czy naprawdę chcesz zresetować wszystkie paski narzędzi? Aplikacja zostanie zamknięta, a domyślne paski narzędzi zostaną przywrócone gdy ponownie uruchomisz program.</translation>
 </message>
 <message>
-<source>Reset and &amp;exit</source>
-<translation>Zresetuj i &amp;wyjdź</translation>
-</message>
-<message>
 <source>Log file cleared</source>
 <translation>Dziennik zdarzeń został wyczyszczony</translation>
 </message>
@@ -7208,24 +7172,12 @@ Your notes will stay intact!</source>
 Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
-<source>Clear and &amp;exit</source>
-<translation>Wyczyść i wyjdź</translation>
-</message>
-<message>
-<source>&amp;Cancel</source>
-<translation>Anuluj</translation>
-</message>
-<message>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
 <translation>Aby włączyć QOwnNotes w trybie przenośnym uruchom skrypt &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; znajdujący się w folderze programu.</translation>
 </message>
 <message>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Czy naprawdę chcesz wymazać lokalną bazę danych? To usunie także konfigurację folderów notatek i zadania z pamięci podręcznej!</translation>
-</message>
-<message>
-<source>Clear &amp;database</source>
-<translation>Wymaż &amp;bazę danych</translation>
 </message>
 <message>
 <source>Select editor application</source>
@@ -8198,14 +8150,6 @@ Nie można tego cofnąć!</translation>
 <message>
 <source>You now can restart the application to complete the update process.</source>
 <translation>U kunt de toepassing nu opnieuw starten om het updateproces te voltooien.</translation>
-</message>
-<message>
-<source>Restart</source>
-<translation>Herstarten</translation>
-</message>
-<message>
-<source>Cancel</source>
-<translation>Annuleren</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>
