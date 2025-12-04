@@ -6,7 +6,7 @@
 }:
 
 let
-  unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+  unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 
   # We need the unstable Qt packages for the latest versions of the tooling (so there is no minor version mismatch)
   unstableQtPkgs = with unstablePkgs.kdePackages; [
