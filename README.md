@@ -7,15 +7,12 @@
 [Documentation](https://www.qownnotes.org/getting-started/concept.html) |
 [Privacy Policy](./PRIVACY.md) |
 [Screenshots](https://www.qownnotes.org/getting-started/overview.html) |
-[Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
-[Nextcloud App Page](https://apps.nextcloud.com/apps/qownnotes) |
-[ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
+[Nextcloud API App](https://apps.nextcloud.com/apps/qownnotesapi) |
+[ownCloud API App](https://marketplace.owncloud.com/apps/qownnotesapi) |
+[Matrix room](https://matrix.to/#/#qownnotes:matrix.org) |
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://web.libera.chat/#qownnotes) |
-[Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
 [Mastodon](https://social.qownnotes.org/@qownnotes) |
-[Twitter](https://twitter.com/QOwnNotes) |
-[Facebook](https://www.facebook.com/QOwnNotes) |
 [QOwnNotes Web Companion Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) |
 [QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [QOwnNotes Web App](https://app.qownnotes.org/) |
