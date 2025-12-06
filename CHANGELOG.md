@@ -3,6 +3,7 @@
 ## 25.12.2
 
 - Try to fix PDF export not generating color output on some computers
+  (for [#3399](https://github.com/pbek/QOwnNotes/issues/3399))
   - The printer color mode is now explicitly set to color at multiple strategic points during PDF export
   - This ensures color PDFs are generated regardless of saved printer settings or system defaults
   - The fix applies to all platforms (Linux, Windows, macOS)
