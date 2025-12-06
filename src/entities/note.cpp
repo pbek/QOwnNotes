@@ -2302,6 +2302,12 @@ bool Note::stripTrailingSpaces(int skipLine) {
 
     if (wasStripped) {
         _noteText = noteTextLines.join(detectNewlineCharacters());
+
+        // Clear the checksum before storing to skip the external modification check
+        // since we're making an internal modification (stripping trailing spaces).
+        // The checksum will be recalculated and stored after writing to disk.
+        _fileChecksum.clear();
+
         store();
     }
 

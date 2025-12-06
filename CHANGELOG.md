@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 25.12.3
+
+- Fixed an issue where the diff dialog was incorrectly triggered when both
+  `enableNoteChecksumChecks` and `Editor/removeTrailingSpaces` settings were
+  enabled (for [#3396](https://github.com/pbek/QOwnNotes/issues/3396))
+
 ## 25.12.2
 
 - Try to fix PDF export not generating color output on some computers
