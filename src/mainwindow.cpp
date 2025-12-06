@@ -5417,6 +5417,9 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
 #ifdef Q_OS_LINUX
     Utils::Misc::loadPrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
 
+    // Ensure color mode is always set to Color for PDF export
+    printer->setColorMode(QPrinter::Color);
+
     // under Linux we use the QPageSetupDialog to change layout
     // settings of the PDF export
     QPageSetupDialog pageSetupDialog(printer, this);
@@ -5425,10 +5428,16 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
         return false;
     }
 
+    // Ensure color mode is still set to Color before storing settings
+    printer->setColorMode(QPrinter::Color);
+
     Utils::Misc::storePrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
 #else
     // under OS X and Windows the QPageSetupDialog dialog doesn't work,
     // we will use a workaround to select page sizes and the orientation
+
+    // Ensure color mode is always set to Color for PDF export
+    printer->setColorMode(QPrinter::Color);
 
     SettingsService settings;
 
@@ -5506,6 +5515,8 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
         fileName.append(QLatin1String(".pdf"));
     }
 
+    // Ensure color mode is set to Color right before setting output format
+    printer->setColorMode(QPrinter::Color);
     printer->setOutputFormat(QPrinter::PdfFormat);
     printer->setOutputFileName(fileName);
     return true;
