@@ -2866,7 +2866,9 @@ void MainWindow::notesWereModified(const QString &str) {
             const bool isCurrentNoteNotEditedForAWhile =
                 this->currentNoteLastEdited.addSecs(60) < QDateTime::currentDateTime();
             // If the current note wasn't edited for a while, we want that it is possible
-            // to get updated even with small changes, so we are setting a threshold of 0
+            // to get updated even with small changes, so we are setting a threshold of 0.
+            // If it was recently edited, we use a threshold of 8 for the similarity check
+            // to avoid false positives, but we'll still show the dialog if changes are detected.
             const int threshold = isCurrentNoteNotEditedForAWhile ? 0 : 8;
 
             // Check if the old note text is the same or similar as the one on disk
@@ -2891,8 +2893,10 @@ void MainWindow::notesWereModified(const QString &str) {
             const QString noteTextEditText = this->ui->noteTextEdit->toPlainText();
 
             // skip dialog if text of note file on disk text from note text
-            // edit are equal or similar
-            if (Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, threshold)) {
+            // edit are equal or similar, but only if the note wasn't edited recently
+            // If it was recently edited, we want to show the dialog even for small changes
+            if (isCurrentNoteNotEditedForAWhile &&
+                Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, threshold)) {
                 qDebug() << __func__ << " - Note text and text on disk are too similar, ignoring";
                 return;
             }

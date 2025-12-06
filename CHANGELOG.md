@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 25.12.4
+
+- Fixed an issue where external changes to recently edited notes were silently
+  ignored instead of showing the diff dialog (for [#3366](https://github.com/pbek/QOwnNotes/issues/3366))
+  - When a note was edited within the last 60 seconds and then changed externally,
+    small changes (≤8 characters difference) would be ignored without notification
+  - The similarity check is now skipped for recently edited notes to ensure the
+    diff dialog is always shown, preventing potential data loss
+  - Notes that haven't been edited for a while continue to auto-reload silently
+    for small external changes as intended
+
 ## 25.12.3
 
 - Fixed an issue where the diff dialog was incorrectly triggered when both
