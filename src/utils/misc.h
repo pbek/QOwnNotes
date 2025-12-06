@@ -14,14 +14,15 @@
 
 #pragma once
 
+#include <QFile>
 #include <QHash>
+#include <QIODevice>
 #include <QMetaType>
 #include <QString>
 #include <QStringList>
 #include <QVector>
 
 struct TerminalCmd;
-class QFile;
 class QDataStream;
 class QPrinter;
 class QJSValue;
@@ -159,6 +160,7 @@ QByteArray friendlyUserAgentString();
 QLatin1String platform();
 void switchToDarkOrLightMode(bool darkMode);
 void switchToDarkMode();
+QFile::OpenMode getNoteFileOpenFlags(QFile::OpenMode baseFlags = QIODevice::ReadOnly);
 void switchToLightMode();
 void unescapeEvernoteImportText(QString &content);
 void transformEvernoteImportText(QString &content, bool withCleanup = false);

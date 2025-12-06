@@ -2829,3 +2829,22 @@ QString Utils::Misc::jsValueToJsonString(const QJSValue &value) {
     QJsonDocument doc = QJsonDocument::fromVariant(variant);
     return doc.toJson(QJsonDocument::Indented);
 }
+
+/**
+ * Get the correct file open flags for reading note files
+ * This ensures consistent newline handling across platforms, especially on Windows
+ *
+ * @param baseFlags - The base open mode flags (default: QIODevice::ReadOnly)
+ * @return The complete open mode flags with Text flag added if useUNIXNewline is disabled
+ */
+QFile::OpenMode Utils::Misc::getNoteFileOpenFlags(QFile::OpenMode baseFlags) {
+    const SettingsService settings;
+    const bool useUNIXNewline = settings.value(QStringLiteral("useUNIXNewline")).toBool();
+
+    QFile::OpenMode flags = baseFlags;
+    if (!useUNIXNewline) {
+        flags |= QIODevice::Text;
+    }
+
+    return flags;
+}
