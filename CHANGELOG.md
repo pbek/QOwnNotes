@@ -5,6 +5,8 @@
 - Fixed an issue where the diff dialog was incorrectly triggered when both
   `enableNoteChecksumChecks` and `Editor/removeTrailingSpaces` settings were
   enabled (for [#3396](https://github.com/pbek/QOwnNotes/issues/3396))
+- Fixed checksum verification on Windows when `useUNIXNewline` is disabled
+  (for [#3396](https://github.com/pbek/QOwnNotes/issues/3396))
 
 ## 25.12.2
 

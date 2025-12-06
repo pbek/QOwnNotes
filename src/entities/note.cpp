@@ -1496,9 +1496,14 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     // Check if the file was modified externally by comparing checksums
     if (enableNoteChecksumChecks && !ignoreAllExternalModifications && fileExists() &&
         !_fileChecksum.isEmpty()) {
-        // Read the current file content
+        // Read the current file content using the same flags as when writing
+        // to ensure newline handling is consistent (important on Windows)
         QFile checkFile(fullNoteFilePath());
-        if (checkFile.open(QIODevice::ReadOnly)) {
+        QFile::OpenMode checkFlags = QIODevice::ReadOnly;
+        if (!useUNIXNewline) {
+            checkFlags |= QIODevice::Text;
+        }
+        if (checkFile.open(checkFlags)) {
             QTextStream checkIn(&checkFile);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             checkIn.setCodec("UTF-8");
@@ -1943,7 +1948,15 @@ bool Note::updateNoteTextFromDisk() {
 
     QFile file(fullNoteFilePath());
 
-    if (!file.open(QIODevice::ReadOnly)) {
+    // Use the same flags as when writing to ensure consistent newline handling
+    const SettingsService settings;
+    const bool useUNIXNewline = settings.value(QStringLiteral("useUNIXNewline")).toBool();
+    QFile::OpenMode flags = QIODevice::ReadOnly;
+    if (!useUNIXNewline) {
+        flags |= QIODevice::Text;
+    }
+
+    if (!file.open(flags)) {
         qDebug() << __func__ << " - 'file': " << file.fileName();
         qDebug() << __func__ << " - " << file.errorString();
         return false;
@@ -1997,7 +2010,7 @@ bool Note::updateNoteTextFromDisk() {
     }
 
     // Calculate and store the checksum of the loaded text (if enabled)
-    const SettingsService settings;
+    // settings was already retrieved at the beginning of the function
     const bool enableNoteChecksumChecks =
         settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
     if (enableNoteChecksumChecks) {
@@ -2327,7 +2340,15 @@ QString Note::detectNewlineCharacters() {
 }
 
 void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHook) {
-    if (file.open(QIODevice::ReadOnly)) {
+    // Use the same flags as when writing to ensure consistent newline handling
+    const SettingsService settings;
+    const bool useUNIXNewline = settings.value(QStringLiteral("useUNIXNewline")).toBool();
+    QFile::OpenMode flags = QIODevice::ReadOnly;
+    if (!useUNIXNewline) {
+        flags |= QIODevice::Text;
+    }
+
+    if (file.open(flags)) {
         QFileInfo fileInfo;
         fileInfo.setFile(file);
 
@@ -2375,7 +2396,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
         this->_fileLastModified = fileInfo.lastModified();
 
         // Calculate the checksum before storing (if enabled)
-        const SettingsService settings;
+        // settings was already retrieved above
         const bool enableNoteChecksumChecks =
             settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
         if (enableNoteChecksumChecks) {
