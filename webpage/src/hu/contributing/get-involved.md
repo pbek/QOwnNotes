@@ -6,9 +6,7 @@ A QOwnNotes részvételének különféle módjai
 - Csatlakozzon a [**QOwnNotes Telegram** csoporthoz](https://t.me/QOwnNotes)!
 - Join the [**QOwnNotes Matrix** room](https://matrix.to/#/#qownnotes:matrix.org)
 - Csatlakozzon a Libera.Chat [**#qownnotes IRC** csatornájához](https://web.libera.chat/#qownnotes)
-- Csatlakozzon a [**qownnotes Gitte** szoba](https://gitter.im/qownnotes/qownnotes)
-- Mint a [QOwnNotes a **Facebookon**](https://www.facebook.com/QOwnNotes/)
-- Kövesse a [QOwnNotes alkalmazást a **Twitter**](https://twitter.com/QOwnNotes) oldalon
+- Follow [QOwnNotes on **Mastodon**](https://social.qownnotes.org/@qownnotes)
 - Feliratkozás a [QOwnNotes** blog RSS-hírcsatornájára**](https://feeds.feedburner.com/QOwnNotesBlog)
 - Iratkozzon fel a [QOwnNotes** RSS-hírcsatornára**](https://feeds.feedburner.com/QOwnNotesReleases)
 - Járuljon hozzá a [**fordításokhoz** a QOwnNotes](translation.md)-on

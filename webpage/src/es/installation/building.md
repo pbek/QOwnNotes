@@ -29,7 +29,7 @@ qmake
 make
 ```
 
-No dude en contribuir con el código fuente a este proyecto, realizar sugerencias o informar problemas en la [página de problemas de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
+No dude en contribuir con el código fuente a este proyecto, realizar sugerencias o informar problemas en la [página de incidencias de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 Visitar [QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes).
 

@@ -6,9 +6,7 @@ Les différentes façons de s'impliquer avec QOwnNotes
 - Rejoignez le [groupe **QOwnNotes Telegram**](https://t.me/QOwnNotes)
 - Rejoignez le [groupe **QOwnNotes Matrx**](https://matrix.to/#/#qownnotes:matrix.org)
 - Rejoignez le canal IRC [**#qownnotes**](https://web.libera.chat/#qownnotes) sur Libera.Chat
-- Rejoignez la [salle **qownnotes Gitter**](https://gitter.im/qownnotes/qownnotes)
-- Aimez [ QOwnNotes sur **Facebook** ](https://www.facebook.com/QOwnNotes/)
-- Suivez [QOwnNotes sur **Twitter**](https://twitter.com/QOwnNotes)
+- Follow [QOwnNotes on **Mastodon**](https://social.qownnotes.org/@qownnotes)
 - Abonnez-vous au [**flux RSS** du blog QOwnNotes](https://feeds.feedburner.com/QOwnNotesBlog)
 - Abonnez-vous au flux RSS des [ **releases** QOwnNotes](https://feeds.feedburner.com/QOwnNotesReleases)
 - Contribuez aux [**traductions** de QOwnNotes](translation.md)

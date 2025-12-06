@@ -28,7 +28,7 @@ Ejemplos de conductas inaceptables son:
 
 Líderes de comunidad son responsables de clarificar y aplicar nuestros estándares de comportamiento y tomarán acciones correctivas justas y apropiadas ante cualquier comportamiento que ellos consideren inapropiado, amenazante, ofensivo o nocivo.
 
-Los líderes de la comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, "commits", código, ediciones de la wiki, problemas y otras contribuciones que no estén alineadas con el código de conducta, y comunicaran las razones de su moderación cuando sea apropiado.
+Los líderes de la comunidad tienen el derecho y la responsabilidad de remover, editar o rechazar comentarios, commits, código, ediciones de la wiki, incidencias y otras contribuciones que no estén alineadas con el código de conducta, y comunicarán las razones de su moderación cuando sea apropiado.
 
 ## Alcance
 

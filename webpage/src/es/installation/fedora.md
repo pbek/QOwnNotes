@@ -74,6 +74,6 @@ Los cambios en las políticas criptográficas de Fedora pueden significar que la
 sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
 ```
 
-La explicación detallada del comando se encuentra disponible en GitHub en un [tema](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) relacionado a este mismo problema.
+La explicación detallada del comando se encuentra disponible en GitHub en un [tema](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) relacionado con esta misma incidencia.
 
 Una vez que la clave expirada haya sido eliminada, debe _importar_ nuevamente la clave **actual** de forma manual, tal y como se describe al inicio de estas instrucciones de instalación.

@@ -6,6 +6,7 @@
   - The printer color mode is now explicitly set to color at multiple strategic points during PDF export
   - This ensures color PDFs are generated regardless of saved printer settings or system defaults
   - The fix applies to all platforms (Linux, Windows, macOS)
+- Added more Spanish translation (thank you, alejandromoc)
 
 ## 25.12.1
 

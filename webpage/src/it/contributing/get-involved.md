@@ -6,9 +6,7 @@ I vari modi per partecipare a QOwnNotes
 - Unisciti al [gruppo **QOwnNotes Telegram**](https://t.me/QOwnNotes)
 - Entra nella [stanza **QOwnNotes Matrix**](https://matrix.to/#/#qownnotes:matrix.org)
 - Unisciti al [canale **IRC #qownnotes**](https://web.libera.chat/#qownnotes) su Libera.Chat
-- Entra nella [stanza **qownnotes Gitter**](https://gitter.im/qownnotes/qownnotes)
-- Metti mi piace a [QOwnNotes su **Facebook**](https://www.facebook.com/QOwnNotes/)
-- Segui [QOwnNotes su **Twitter**](https://twitter.com/QOwnNotes)
+- Follow [QOwnNotes on **Mastodon**](https://social.qownnotes.org/@qownnotes)
 - Iscriviti ai  [**Feed RSS del blog** di QOwnNotes ](https://feeds.feedburner.com/QOwnNotesBlog)
 - Iscriviti al feed RSS di [QOwnNotes **release**](https://feeds.feedburner.com/QOwnNotesReleases)
 - Aiuta a [**tradurre** QOwnNotes](translation.md)

@@ -6,9 +6,7 @@
 - انضم إلى [مجموعة **QOwnNotes على تيليجرام** ](https://t.me/QOwnNotes)
 - انضم إلى [**غرفة QOwnNotes على Matrix**](https://matrix.to/#/#qownnotes:matrix.org)
 - انضم إلى [قناة **<span dir="ltr">#qownnotes</span> على IRC**](https://web.libera.chat/#qownnotes) على Libera.Chat
-- انضم إلى [غرفة **qownnotes على Gitter**](https://gitter.im/qownnotes/qownnotes)
-- سجّل إعجابك [بصفحة QOwnNotes على **فيسبوك**](https://www.facebook.com/QOwnNotes/)
-- تابع [QOwnNotes على **تويتر**](https://twitter.com/QOwnNotes)
+- Follow [QOwnNotes on **Mastodon**](https://social.qownnotes.org/@qownnotes)
 - اشترك في [**موجز RSS لمدونة** QOwnNotes](https://feeds.feedburner.com/QOwnNotesBlog)
 - اشترك في [**موجز RSS لإصدارات** QOwnNotes](https://feeds.feedburner.com/QOwnNotesReleases)
 - ساهم في [**ترجمة** QOwnNotes](translation.md)

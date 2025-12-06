@@ -32,7 +32,7 @@ Puede ejecutar la aplicación en la interfaz de órdenes de terminal de manera d
 | Windows           | `QOwnNotes.exe`                                        |
 
 ::: tip
-Para copiar directamente el volcado de configuración en el portapapeles para luego publicarlo como un [informe de GitHub](https://github.com/pbek/QOwnNotes/issues), puede utilizar `xclip` o `xsel` en Linux, `pbcopy` en macOS y `clip` en Windows:
+Para copiar directamente el volcado de configuración en el portapapeles para luego publicarlo en una [incidencia de GitHub](https://github.com/pbek/QOwnNotes/issues), puede utilizar `xclip` o `xsel` en Linux, `pbcopy` en macOS y `clip` en Windows:
 
 ```bash
 # Copiar el volcado de configuración en el portapapeles con xclip en Linux

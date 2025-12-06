@@ -22,7 +22,7 @@ sudo apt-get install qownnotes
 
 [Descarga directa](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-Si encuentra algún problema, ¡por favor repórtelo en la página de [problemas de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/issues)!
+Si encuentra algún problema, ¡por favor repórtelo en la página de [incidencias de QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes/issues)!
 
 ## QOwnNotes Qt5 Legado
 

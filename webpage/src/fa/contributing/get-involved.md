@@ -6,9 +6,7 @@
 - به [ گروه ** تلگرام QOwnNotes ** ](https://t.me/QOwnNotes) بپیوندید
 - Join the [**QOwnNotes Matrix** room](https://matrix.to/#/#qownnotes:matrix.org)
 - به [ کانال ** #qownnotes IRC ** ](https://web.libera.chat/#qownnotes) در Libera.Chat بپیوندید
-- به [ اتاق ** گیتر QOwnNotes ** ](https://gitter.im/qownnotes/qownnotes) بپیوندید
-- [ QOwnNotes را در ** فیس بوک ** ](https://www.facebook.com/QOwnNotes/) لایک کنید
-- [ QOwnNotes را در ** توئیتر ** ](https://twitter.com/QOwnNotes) دنبال کنید
+- Follow [QOwnNotes on **Mastodon**](https://social.qownnotes.org/@qownnotes)
 - [ ** خبرخوان وبلاگ ** QOwnNotes ](https://feeds.feedburner.com/QOwnNotesBlog) را اشتراک گذاری کنید
 - [ ** پخش خبرخوان ** QOwnNotes ](https://feeds.feedburner.com/QOwnNotesReleases) را اشتراک گذاری کنید
 - در [ ** ترجمه های ** QOwnNotes ](translation.md) سهیم شوید

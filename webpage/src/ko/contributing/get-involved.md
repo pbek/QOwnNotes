@@ -6,9 +6,7 @@ QOwnNotes에 참여하는 다양한 방법
 - [**QOwnNotes Telegram** 그룹](https://t.me/QOwnNotes)에 가입
 - [**QOwnNotes Matrix** Room](https://matrix.to/#/#qownnotes:matrix.org)에 가입합니다
 - Libera.Chat에서 [**#qownnotes IRC** 채널](https://web.libera.chat/#qownnotes)에 가입
-- [**qownnotes Gitter** room](https://gitter.im/qownnotes/qownnotes)에 가입
-- [**Facebook**에서 QOwnNotes ](https://www.facebook.com/QOwnNotes/)좋아요
-- [**Twitter**에서 QOwnNotes](https://twitter.com/QOwnNotes) 필로우
+- **Mastodon**에서 [QOwnNotes](https://social.qownnotes.org/@qownnotes) 팔로우
 - [QOwnNotes **블로그 RSS 피드**](https://feeds.feedburner.com/QOwnNotesBlog) 구독
 - [QOwnNotes **릴리즈 RSS 피드**](https://feeds.feedburner.com/QOwnNotesReleases) 구독
 - [QOwnNotes에 **번역** ](translation.md)기여
