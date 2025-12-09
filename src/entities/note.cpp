@@ -212,6 +212,119 @@ QString Note::getNextcloudNotesLink() const {
     return link;
 }
 
+/**
+ * @brief Get a unique identifier for this note (subfolder path + filename)
+ * @return Unique identifier string
+ */
+QString Note::getFavoriteIdentifier() const {
+    // Combine subfolder path and filename to create a unique identifier
+    QString subFolderPath = relativeNoteSubFolderPath();
+    if (subFolderPath.isEmpty()) {
+        return _fileName;
+    }
+    return subFolderPath + QStringLiteral("/") + _fileName;
+}
+
+/**
+ * @brief Check if this note is marked as favorite
+ * @return true if the note is favorite, false otherwise
+ */
+bool Note::isFavorite() const {
+    const QStringList favoriteIdentifiers = getFavoriteNoteIdentifiers();
+    return favoriteIdentifiers.contains(getFavoriteIdentifier());
+}
+
+/**
+ * @brief Toggle the favorite status of this note
+ * @return true if the note is now favorite, false otherwise
+ */
+bool Note::toggleFavorite() {
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    QStringList favoriteIdentifiers = getFavoriteNoteIdentifiers();
+    QString identifier = getFavoriteIdentifier();
+
+    bool wasFavorite = favoriteIdentifiers.contains(identifier);
+
+    if (wasFavorite) {
+        // Remove from favorites
+        favoriteIdentifiers.removeAll(identifier);
+    } else {
+        // Add to favorites
+        favoriteIdentifiers.append(identifier);
+    }
+
+    // Store the updated list
+    noteFolder.setSettingsValue(QStringLiteral("favoriteNoteIdentifiers"), favoriteIdentifiers);
+
+    return !wasFavorite;
+}
+
+/**
+ * @brief Get the list of favorite note identifiers for the current note folder
+ * @return List of favorite note identifiers (subfolderPath/filename)
+ */
+QStringList Note::getFavoriteNoteIdentifiers() {
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    return noteFolder.settingsValue(QStringLiteral("favoriteNoteIdentifiers")).toStringList();
+}
+
+/**
+ * @brief Migrate a favorite note identifier when a note is moved
+ * @param oldIdentifier The old identifier (before the move)
+ */
+void Note::migrateFavoriteIdentifier(const QString &oldIdentifier) {
+    QStringList favoriteIdentifiers = getFavoriteNoteIdentifiers();
+
+    // Check if the old identifier was in the favorites list
+    if (favoriteIdentifiers.contains(oldIdentifier)) {
+        // Remove the old identifier
+        favoriteIdentifiers.removeAll(oldIdentifier);
+
+        // Add the new identifier
+        QString newIdentifier = getFavoriteIdentifier();
+        if (!favoriteIdentifiers.contains(newIdentifier)) {
+            favoriteIdentifiers.append(newIdentifier);
+        }
+
+        // Store the updated list
+        NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+        noteFolder.setSettingsValue(QStringLiteral("favoriteNoteIdentifiers"), favoriteIdentifiers);
+
+        qDebug() << __func__ << "Migrated favorite from" << oldIdentifier << "to" << newIdentifier;
+    }
+}
+
+/**
+ * @brief Clean up favorite notes list by removing entries for notes that no longer exist
+ */
+void Note::cleanupFavoriteNotes() {
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    QStringList favoriteIdentifiers = getFavoriteNoteIdentifiers();
+    QStringList validIdentifiers;
+
+    QString noteFolderPath = noteFolder.getLocalPath();
+
+    for (const QString &identifier : favoriteIdentifiers) {
+        // Build the full file path
+        QString filePath = noteFolderPath + QDir::separator() + identifier;
+
+        // Check if the file exists
+        QFile file(filePath);
+        if (file.exists()) {
+            validIdentifiers.append(identifier);
+        } else {
+            qDebug() << __func__ << "Removing non-existent favorite:" << identifier;
+        }
+    }
+
+    // Only update if something changed
+    if (validIdentifiers.count() != favoriteIdentifiers.count()) {
+        noteFolder.setSettingsValue(QStringLiteral("favoriteNoteIdentifiers"), validIdentifiers);
+        qDebug() << __func__ << "Cleaned up"
+                 << (favoriteIdentifiers.count() - validIdentifiers.count()) << "favorite entries";
+    }
+}
+
 void Note::setCryptoKey(const qint64 cryptoKey) { this->_cryptoKey = cryptoKey; }
 
 void Note::setNoteText(QString text) { this->_noteText = std::move(text); }
@@ -363,6 +476,17 @@ bool Note::remove(bool withFile) {
         return false;
     } else {
         if (withFile) {
+            // Remove from favorites if it was marked as favorite
+            QString identifier = getFavoriteIdentifier();
+            QStringList favoriteIdentifiers = getFavoriteNoteIdentifiers();
+            if (favoriteIdentifiers.contains(identifier)) {
+                favoriteIdentifiers.removeAll(identifier);
+                NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+                noteFolder.setSettingsValue(QStringLiteral("favoriteNoteIdentifiers"),
+                                            favoriteIdentifiers);
+                qDebug() << __func__ << "Removed favorite:" << identifier;
+            }
+
             this->removeNoteFile();
 
             // remove all links to tags
@@ -3875,6 +3999,13 @@ bool Note::handleNoteMoving(Note oldNote) {
     const QVector<int> noteIdList = oldNote.findBacklinkedNoteIds();
     const int noteCount = noteIdList.count();
     bool result = false;
+
+    // Migrate favorite status if the note was moved to a different subfolder or renamed
+    QString oldIdentifier = oldNote.getFavoriteIdentifier();
+    QString newIdentifier = getFavoriteIdentifier();
+    if (oldIdentifier != newIdentifier) {
+        migrateFavoriteIdentifier(oldIdentifier);
+    }
 
     // Handle incoming note links
     if (noteCount > 0) {

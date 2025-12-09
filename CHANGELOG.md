@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 25.12.5
+
+- Added ability to **mark notes as favorite** (for [#351](https://github.com/pbek/QOwnNotes/issues/351))
+  - Right-click on a note and select "Mark as favorite" or "Unmark as favorite"
+  - Favorite notes are displayed with a star icon in the note tree widget
+  - Favorite notes are automatically positioned at the top of the note list
+  - Favorite status is stored per note folder in local settings
+  - The feature uses subfolder path and filename to identify notes (persistent across restarts)
+  - Works with all sorting modes (alphabetical, by date)
+  - **Automatic migration**: When a note is moved, renamed, or its headline changes
+    (triggering auto-rename), favorite status is preserved
+  - **Automatic cleanup**: When a note is deleted, it's removed from the favorites list
+  - **Periodic cleanup**: Non-existent notes are automatically removed from favorites on note list refresh
+
 ## 25.12.4
 
 - Fixed an issue where external changes to recently edited notes were silently

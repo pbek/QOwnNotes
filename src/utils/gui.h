@@ -141,6 +141,7 @@ bool doLinuxDarkModeCheck();
 
 QIcon folderIcon();
 QIcon noteIcon();
+QIcon favoriteNoteIcon();
 QIcon tagIcon();
 
 /**

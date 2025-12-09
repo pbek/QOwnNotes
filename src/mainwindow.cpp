@@ -2190,6 +2190,9 @@ QIcon MainWindow::getSystemTrayIcon() {
 void MainWindow::loadNoteDirectoryList() {
     qDebug() << __func__;
 
+    // Clean up favorite notes list (remove entries for deleted notes)
+    Note::cleanupFavoriteNotes();
+
     const QSignalBlocker blocker(ui->noteTextEdit);
     Q_UNUSED(blocker)
 
@@ -2280,7 +2283,17 @@ bool MainWindow::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *pare
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
     noteItem->setData(0, Qt::UserRole + 1, NoteType);
-    noteItem->setIcon(0, Utils::Gui::noteIcon());
+
+    // Store favorite status for sorting (UserRole + 2)
+    const bool isFavorite = note.isFavorite();
+    noteItem->setData(0, Qt::UserRole + 2, isFavorite);
+
+    // Set the icon based on favorite status
+    if (isFavorite) {
+        noteItem->setIcon(0, Utils::Gui::favoriteNoteIcon());
+    } else {
+        noteItem->setIcon(0, Utils::Gui::noteIcon());
+    }
 
     const Tag tag = Tag::fetchOneOfNoteWithColor(note);
     if (tag.isFetched()) {
@@ -2297,8 +2310,26 @@ bool MainWindow::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *pare
     Q_UNUSED(blocker)
 
     if (parent == nullptr) {
-        // strange things happen if we insert with insertTopLevelItem
-        ui->noteTreeWidget->addTopLevelItem(noteItem);
+        // Insert notes with favorites at the top
+        // Find the insertion position based on favorite status
+        if (isFavorite) {
+            // For favorite notes, find the last position of favorites
+            int insertPos = 0;
+            const int count = ui->noteTreeWidget->topLevelItemCount();
+            for (int i = 0; i < count; ++i) {
+                QTreeWidgetItem *existingItem = ui->noteTreeWidget->topLevelItem(i);
+                if (existingItem->data(0, Qt::UserRole + 1) == NoteType &&
+                    existingItem->data(0, Qt::UserRole + 2).toBool()) {
+                    insertPos = i + 1;
+                } else {
+                    break;
+                }
+            }
+            ui->noteTreeWidget->insertTopLevelItem(insertPos, noteItem);
+        } else {
+            // Non-favorite notes go after all favorites
+            ui->noteTreeWidget->addTopLevelItem(noteItem);
+        }
     } else {
         parent->addChild(noteItem);
     }
@@ -2355,7 +2386,27 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
         Q_UNUSED(blocker)
 
         ui->noteTreeWidget->takeTopLevelItem(ui->noteTreeWidget->indexOfTopLevelItem(item));
-        ui->noteTreeWidget->insertTopLevelItem(0, item);
+
+        // Determine insertion position based on favorite status
+        const bool isFavorite = currentNote.isFavorite();
+        int insertPos = 0;
+
+        if (!isFavorite) {
+            // Non-favorite note: insert after all favorites
+            const int count = ui->noteTreeWidget->topLevelItemCount();
+            for (int i = 0; i < count; ++i) {
+                QTreeWidgetItem *existingItem = ui->noteTreeWidget->topLevelItem(i);
+                if (existingItem->data(0, Qt::UserRole + 1) == NoteType &&
+                    existingItem->data(0, Qt::UserRole + 2).toBool()) {
+                    insertPos = i + 1;
+                } else {
+                    break;
+                }
+            }
+        }
+        // For favorite notes, insertPos stays at 0 (first position)
+
+        ui->noteTreeWidget->insertTopLevelItem(insertPos, item);
 
         // set the item as current item if it is visible
         if (!item->isHidden()) {
@@ -9889,6 +9940,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
     QAction *showInFileManagerAction = nullptr;
     QAction *showNoteGitLogAction = nullptr;
     QAction *copyNotePathToClipboardAction = nullptr;
+    QAction *toggleFavoriteAction = nullptr;
 
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
@@ -9913,6 +9965,17 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
         showNoteGitLogAction = new QAction(this);
         if (Utils::Git::isCurrentNoteFolderUseGit() && Utils::Git::hasLogCommand()) {
             showNoteGitLogAction = noteMenu.addAction(tr("Show note git versions"));
+        }
+
+        // Add favorite toggle action for single note
+        noteMenu.addSeparator();
+        const Note note = getCurrentNote();
+        if (note.isFetched()) {
+            if (note.isFavorite()) {
+                toggleFavoriteAction = noteMenu.addAction(tr("Unmark as favorite"));
+            } else {
+                toggleFavoriteAction = noteMenu.addAction(tr("Mark as favorite"));
+            }
         }
     }
 
@@ -9981,6 +10044,11 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
         } else if (selectedItem == showNoteGitLogAction) {
             // show the git log of the current note
             on_actionShow_note_git_versions_triggered();
+        } else if (selectedItem == toggleFavoriteAction) {
+            // toggle favorite status of the current note
+            currentNote.toggleFavorite();
+            // Reload the note list to update the icon and sorting
+            loadNoteDirectoryList();
         } else if (selectedItem == renameAction) {
             QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
 

@@ -410,6 +410,18 @@ class Note {
 
     QString getNextcloudNotesLink() const;
 
+    bool isFavorite() const;
+
+    bool toggleFavorite();
+
+    static QStringList getFavoriteNoteIdentifiers();
+
+    QString getFavoriteIdentifier() const;
+
+    void migrateFavoriteIdentifier(const QString &oldIdentifier);
+
+    static void cleanupFavoriteNotes();
+
    protected:
     int _id;
     int _noteSubFolderId;
