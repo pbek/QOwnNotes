@@ -17,61 +17,83 @@
       nixpkgs-qt5153,
     }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-qt69 = nixpkgs-qt69.legacyPackages.${system};
-      pkgs-qt5153 = nixpkgs-qt5153.legacyPackages.${system};
+      # Define supported systems
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+
+      # Helper function to generate attributes for each system
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+
+      # Helper to get package sets for a given system
+      pkgsFor = system: nixpkgs.legacyPackages.${system};
+      pkgsQt69For = system: nixpkgs-qt69.legacyPackages.${system};
+      pkgsQt5153For = system: nixpkgs-qt5153.legacyPackages.${system};
     in
     {
-      packages.${system} = {
-        qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
-        qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
-        qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
-        qownnotes-qt5153 =
-          pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)
-            { };
-        default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
-      };
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = pkgsFor system;
+          pkgs-qt69 = pkgsQt69For system;
+          pkgs-qt5153 = pkgsQt5153For system;
+        in
+        {
+          qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
+          qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
+          qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+          qownnotes-qt5153 =
+            pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)
+              { };
+          default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
+        }
+      );
 
-      devShell.x86_64-linux =
-        with import nixpkgs { system = "x86_64-linux"; };
-        mkShell {
-          nativeBuildInputs =
-            with nixpkgs;
-            with qt6;
-            [
-              gnumake
-              crowdin-cli
-              cmakeWithGui
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          default = pkgs.mkShell {
+            nativeBuildInputs = with pkgs.qt6; [
+              pkgs.gnumake
+              pkgs.crowdin-cli
+              pkgs.cmakeWithGui
               qmake
               qttools
               wrapQtAppsHook
-              pkg-config
+              pkgs.pkg-config
 
               # for ./build-systems/github/build-github-src.sh
-              coreutils
-              gh
+              pkgs.coreutils
+              pkgs.gh
             ];
 
-          buildInputs =
-            with nixpkgs;
-            with qt6;
-            [
+            buildInputs = with pkgs.qt6; [
               qtbase
               qtwebsockets
               qtdeclarative
               qtsvg
-              botan3
-              libgit2
+              pkgs.botan3
+              pkgs.libgit2
             ];
 
-          shellHook = ''
-            echo "qmake:  $(qmake --version)"
-          '';
-        };
+            shellHook = ''
+              echo "qmake:  $(qmake --version)"
+            '';
+          };
+        }
+      );
+
+      # Legacy devShell attribute for backwards compatibility
+      devShell = forAllSystems (system: self.devShells.${system}.default);
 
       checks.x86_64-linux = {
-        qownnotes = pkgs.testers.runNixOSTest ./tests/vm/qownnotes.nix;
+        qownnotes = (pkgsFor "x86_64-linux").testers.runNixOSTest ./tests/vm/qownnotes.nix;
       };
     };
 }
