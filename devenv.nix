@@ -95,6 +95,8 @@ in
 
   enterShell = ''
     echo "🛠️ QOwnNotes Dev Shell"
+    echo "📦 Qt6 version: $(qmake6 -query QT_VERSION)"
+    echo "📦 Qt5 version: $(${pkgs.libsForQt5.qt5.qtbase.dev}/bin/qmake -query QT_VERSION)"
     update-qmake-symlinks
   '';
 
