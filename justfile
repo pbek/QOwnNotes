@@ -44,7 +44,7 @@ translations-update-files:
 # Build the application for nix
 [group('nix')]
 nix-build:
-    devenv shell app:build:qt6
+    nix build '.?submodules=1#qownnotes-qt6'
 
 # Build the application for nix for aaarch64 (throws errors while building Qt6)
 [group('nix')]
@@ -54,17 +54,17 @@ nix-build-aarch64:
 # Build the application with cmake and Qt5 for nix
 [group('nix')]
 nix-build-cmake-qt5:
-    devenv shell app:build:qt5-cmake
+    nix-build -E 'let pkgs = import <nixpkgs> {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { }'
 
 # Build the application with Qt5 for nix
 [group('nix')]
 nix-build-qt5:
-    devenv shell app:build:qt5-qmake
+    nix build '.?submodules=1#qownnotes-qt5'
 
 # Build the application with Qt 5.15.3 for nix
 [group('nix')]
 nix-build-qt5153:
-    devenv shell app:build:qt5153-qmake
+    nix build '.?submodules=1#qownnotes-qt5153'
 
 # Force a rebuild of the application with Qt5 for nix
 [group('nix')]
@@ -84,12 +84,12 @@ nix-build-qt69 args='':
 # Build the application with Qt6 for nix with a trace
 [group('nix')]
 nix-build-trace:
-    nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })' --show-trace
+    nix build '.?submodules=1#qownnotes-qt6' --show-trace
 
 # Force a rebuild of the application with Qt6 for nix
 [group('nix')]
 nix-build-force:
-    nix-build -E '((import <nixpkgs> {}).qt6Packages.callPackage (import ./default.nix) { })' --check
+    nix build '.?submodules=1#qownnotes-qt6' --rebuild
 
 # Run the built application for nix
 [group('nix')]

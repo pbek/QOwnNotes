@@ -87,36 +87,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-qt5153": {
-      "locked": {
-        "lastModified": 1655700315,
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "72bbea9db7d727ed044e60b5f5febc60a3c5c955",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "72bbea9db7d727ed044e60b5f5febc60a3c5c955",
-        "type": "github"
-      }
-    },
-    "nixpkgs-qt69": {
-      "locked": {
-        "lastModified": 1754725699,
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "85dbfc7aaf52ecb755f87e577ddbe6dbbdbc1054",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "85dbfc7aaf52ecb755f87e577ddbe6dbbdbc1054",
-        "type": "github"
-      }
-    },
     "nixpkgs-unstable": {
       "locked": {
         "lastModified": 1764667669,
@@ -137,8 +107,6 @@
         "devenv": "devenv",
         "git-hooks": "git-hooks",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-qt5153": "nixpkgs-qt5153",
-        "nixpkgs-qt69": "nixpkgs-qt69",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "pre-commit-hooks": [
           "git-hooks"
