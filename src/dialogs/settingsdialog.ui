@@ -7395,6 +7395,16 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </spacer>
                 </item>
+                <item row="1" column="0" colspan="3">
+                 <widget class="QCheckBox" name="aiAutocompleteCheckBox">
+                  <property name="toolTip">
+                   <string>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</string>
+                  </property>
+                  <property name="text">
+                   <string>Enable AI autocomplete in note editor</string>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>

@@ -86,6 +86,17 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
     void updateIgnoredClickUrlRegexps();
 
+   public slots:
+    /**
+     * Called when AI autocomplete is completed
+     */
+    void onAiAutocompleteCompleted(const QString &result);
+
+    /**
+     * Called when AI autocomplete request times out or errors
+     */
+    void onAiAutocompleteTimeout(const QString &errorString);
+
    protected:
     // we must not override _highlighter or Windows will create a
     // QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance
@@ -94,9 +105,14 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void insertFromMimeData(const QMimeData *source) override;
     void resizeEvent(QResizeEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
+    void keyPressEvent(QKeyEvent *e) override;
 
    private:
     bool _isSpellCheckingDisabled = false;
+    QString _aiAutocompleteSuggestion;
+    int _aiAutocompletePosition = -1;
+    QTimer *_aiAutocompleteTimer = nullptr;
+    bool _isInsertingAiSuggestion = false;
 
     /// @param in is true if zoom-in, false otherwise
     void onZoom(bool in);
@@ -108,4 +124,24 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void overrideFontSizeStyle(int fontSize);
 
     QMenu *spellCheckContextMenu(QPoint pos);
+
+    /**
+     * Requests AI autocomplete for the current text
+     */
+    void requestAiAutocomplete();
+
+    /**
+     * Shows the AI autocomplete suggestion
+     */
+    void showAiAutocompleteSuggestion(const QString &suggestion);
+
+    /**
+     * Hides/clears the AI autocomplete suggestion
+     */
+    void clearAiAutocompleteSuggestion();
+
+    /**
+     * Accepts the current AI autocomplete suggestion
+     */
+    void acceptAiAutocompleteSuggestion();
 };

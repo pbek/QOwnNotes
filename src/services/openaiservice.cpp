@@ -34,11 +34,17 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
     initializeBackends();
     initializeCompleter(parent);
 
-    QObject::connect(_completer, &OpenAiCompleter::completed, this,
-                     [this](const QString& result) { qDebug() << "'result': " << result; });
-    QObject::connect(
-        _completer, &OpenAiCompleter::errorOccurred, this,
-        [this](const QString& errorString) { qDebug() << "'errorString': " << errorString; });
+    QObject::connect(_completer, &OpenAiCompleter::completed, this, [this](const QString& result) {
+        qDebug() << "'result': " << result;
+        qDebug() << "OpenAiService - emitting autocompleteCompleted signal";
+        emit autocompleteCompleted(result);
+        qDebug() << "OpenAiService - autocompleteCompleted signal emitted";
+    });
+    QObject::connect(_completer, &OpenAiCompleter::errorOccurred, this,
+                     [this](const QString& errorString) {
+                         qDebug() << "'errorString': " << errorString;
+                         emit autocompleteErrorOccurred(errorString);
+                     });
 }
 
 void OpenAiService::initializeCompleter(QObject* parent) {
@@ -269,6 +275,31 @@ bool OpenAiService::setEnabled(bool enabled) {
 bool OpenAiService::getEnabled() {
     SettingsService settings;
     return settings.value(QStringLiteral("ai/enabled")).toBool();
+}
+
+bool OpenAiService::setAutocompleteEnabled(bool enabled) {
+    SettingsService settings;
+    settings.setValue(QStringLiteral("ai/autocompleteEnabled"), enabled);
+
+    return true;
+}
+
+bool OpenAiService::getAutocompleteEnabled() {
+    SettingsService settings;
+    return settings.value(QStringLiteral("ai/autocompleteEnabled"), false).toBool();
+}
+
+void OpenAiService::completeAsync(const QString& prompt) {
+    qDebug() << __func__ << " - called with prompt:" << prompt.left(50);
+
+    if (!getEnabled() || !getAutocompleteEnabled()) {
+        qDebug() << __func__ << " - not enabled, returning";
+        return;
+    }
+
+    qDebug() << __func__ << " - calling _completer->complete()";
+    _completer->complete(prompt);
+    qDebug() << __func__ << " - _completer->complete() called";
 }
 
 QString OpenAiService::complete(const QString& prompt) {

@@ -10,17 +10,20 @@
 #include <QFont>
 #include <QFontDatabase>
 #include <QJSEngine>
+#include <QKeyEvent>
 #include <QMenu>
 #include <QMimeData>
 #include <QRegularExpression>
 #include <QTextCursor>
 #include <QTextDocumentFragment>
+#include <QTimer>
 
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
 #include "mainwindow.h"
 #include "services/nextclouddeckservice.h"
+#include "services/openaiservice.h"
 #include "services/scriptingservice.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
@@ -36,6 +39,50 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         setStyles();
         updateSettings();
     }
+
+    // Initialize AI autocomplete timer (only for note editors, not log widget)
+    _aiAutocompleteTimer = new QTimer(this);
+    _aiAutocompleteTimer->setSingleShot(true);
+    _aiAutocompleteTimer->setInterval(500);    // Wait 500ms after typing stops
+    connect(_aiAutocompleteTimer, &QTimer::timeout, this,
+            &QOwnNotesMarkdownTextEdit::requestAiAutocomplete);
+
+    // Connect to OpenAI service signals for all widgets
+    qDebug() << __func__ << " - Connecting AI autocomplete signals for widget:" << objectName()
+             << "parent:" << (parent ? parent->objectName() : "null");
+    qDebug() << __func__ << " - OpenAiService instance:" << OpenAiService::instance();
+    qDebug() << __func__ << " - this instance:" << this;
+
+    // Use old-style SIGNAL/SLOT macros for better compatibility
+    bool conn1 = connect(OpenAiService::instance(), SIGNAL(autocompleteCompleted(QString)), this,
+                         SLOT(onAiAutocompleteCompleted(QString)), Qt::QueuedConnection);
+    bool conn2 = connect(OpenAiService::instance(), SIGNAL(autocompleteErrorOccurred(QString)),
+                         this, SLOT(onAiAutocompleteTimeout(QString)), Qt::QueuedConnection);
+
+    qDebug() << __func__ << " - AI autocomplete signals connected, conn1:" << conn1
+             << "conn2:" << conn2;
+
+    // Test: Call the slot directly to verify it exists
+    qDebug() << __func__ << " - Testing slot by calling it directly...";
+    onAiAutocompleteCompleted("TEST DIRECT CALL");
+    qDebug() << __func__ << " - Direct call completed";
+
+    // Connect to text changes to trigger autocomplete
+    connect(this, &QOwnNotesMarkdownTextEdit::textChanged, this, [this]() {
+        // Only trigger if autocomplete is enabled
+        if (OpenAiService::getAutocompleteEnabled() && OpenAiService::getEnabled()) {
+            // Skip for log widgets
+            if (objectName() == QStringLiteral("logTextEdit")) {
+                return;
+            }
+            // Don't clear or restart timer if we're currently inserting a suggestion
+            if (_isInsertingAiSuggestion) {
+                return;
+            }
+            clearAiAutocompleteSuggestion();
+            _aiAutocompleteTimer->start();
+        }
+    });
 
     SettingsService settings;
     MarkdownHighlighter::HighlightingOptions options;
@@ -1214,4 +1261,226 @@ void QOwnNotesMarkdownTextEdit::updateIgnoredClickUrlRegexps() {
             QRegularExpression::escape(nextcloudDeckService.getCardUrlPattern())));
         setIgnoredClickUrlRegexps(ignoredClickUrlRegexps);
     }
+}
+
+/**
+ * Requests AI autocomplete for the current text
+ */
+void QOwnNotesMarkdownTextEdit::requestAiAutocomplete() {
+    qDebug() << __func__ << " - called";
+
+    if (!OpenAiService::getAutocompleteEnabled() || !OpenAiService::getEnabled()) {
+        qDebug() << __func__ << " - autocomplete not enabled, returning";
+        return;
+    }
+
+    qDebug() << __func__ << " - autocomplete is enabled, proceeding";
+
+    // Don't autocomplete if there's a selection
+    QTextCursor cursor = textCursor();
+    if (cursor.hasSelection()) {
+        qDebug() << __func__ << " - cursor has selection, returning";
+        return;
+    }
+
+    // Get the current text context (e.g., last 200 characters)
+    cursor.movePosition(QTextCursor::Start, QTextCursor::KeepAnchor);
+    QString context = cursor.selectedText();
+
+    // Limit context to last 500 characters to avoid too large prompts
+    if (context.length() > 500) {
+        context = context.right(500);
+    }
+
+    qDebug() << __func__ << " - context:" << context;
+
+    // Don't request if context is too short
+    if (context.trimmed().length() < 10) {
+        qDebug() << __func__ << " - context too short, returning";
+        return;
+    }
+
+    // Store the current cursor position
+    _aiAutocompletePosition = textCursor().position();
+
+    qDebug() << __func__ << " - calling completeAsync, position:" << _aiAutocompletePosition;
+
+    // Request completion from OpenAI service
+    OpenAiService::instance()->completeAsync(context);
+}
+
+/**
+ * Shows the AI autocomplete suggestion
+ */
+void QOwnNotesMarkdownTextEdit::showAiAutocompleteSuggestion(const QString &suggestion) {
+    qDebug() << __func__ << " - 'suggestion': " << suggestion;
+
+    if (suggestion.isEmpty()) {
+        qDebug() << __func__ << " - suggestion is empty, returning";
+        return;
+    }
+
+    // Check if cursor hasn't moved too far from the autocomplete position
+    int currentPos = textCursor().position();
+    qDebug() << __func__ << " - 'currentPos': " << currentPos
+             << " '_aiAutocompletePosition': " << _aiAutocompletePosition;
+
+    if (currentPos < _aiAutocompletePosition || currentPos > _aiAutocompletePosition + 50) {
+        // Cursor has moved too much, don't show suggestion
+        qDebug() << __func__ << " - cursor moved too much, returning";
+        return;
+    }
+
+    _aiAutocompleteSuggestion = suggestion;
+    _isInsertingAiSuggestion = true;
+
+    qDebug() << __func__ << " - inserting suggestion";
+
+    // Insert the suggestion with a gray color format
+    QTextCursor cursor = textCursor();
+    cursor.beginEditBlock();
+
+    // Store the format
+    QTextCharFormat format;
+    format.setForeground(QColor(128, 128, 128));    // Gray color
+    format.setFontItalic(true);
+
+    cursor.insertText(_aiAutocompleteSuggestion, format);
+
+    // Select the suggestion so it can be easily replaced
+    cursor.setPosition(currentPos);
+    cursor.movePosition(QTextCursor::Right, QTextCursor::KeepAnchor,
+                        _aiAutocompleteSuggestion.length());
+
+    cursor.endEditBlock();
+    setTextCursor(cursor);
+
+    qDebug() << __func__ << " - suggestion inserted and selected";
+
+    _isInsertingAiSuggestion = false;
+}
+
+/**
+ * Clears the AI autocomplete suggestion
+ */
+void QOwnNotesMarkdownTextEdit::clearAiAutocompleteSuggestion() {
+    if (_aiAutocompleteSuggestion.isEmpty()) {
+        return;
+    }
+
+    _isInsertingAiSuggestion = true;
+
+    QTextCursor cursor = textCursor();
+
+    // If we have selected text that matches our suggestion, delete it
+    if (cursor.hasSelection()) {
+        QString selectedText = cursor.selectedText();
+        if (selectedText == _aiAutocompleteSuggestion) {
+            cursor.removeSelectedText();
+            setTextCursor(cursor);
+        }
+    }
+
+    _aiAutocompleteSuggestion.clear();
+    _aiAutocompletePosition = -1;
+    _isInsertingAiSuggestion = false;
+}
+
+/**
+ * Accepts the current AI autocomplete suggestion
+ */
+void QOwnNotesMarkdownTextEdit::acceptAiAutocompleteSuggestion() {
+    if (_aiAutocompleteSuggestion.isEmpty()) {
+        return;
+    }
+
+    _isInsertingAiSuggestion = true;
+
+    QTextCursor cursor = textCursor();
+
+    // If we have the suggestion selected, replace it with normal formatted text
+    if (cursor.hasSelection()) {
+        QString selectedText = cursor.selectedText();
+        if (selectedText == _aiAutocompleteSuggestion) {
+            // Remove the formatted suggestion
+            cursor.removeSelectedText();
+            // Insert as normal text
+            cursor.insertText(_aiAutocompleteSuggestion);
+            setTextCursor(cursor);
+        }
+    }
+
+    _aiAutocompleteSuggestion.clear();
+    _aiAutocompletePosition = -1;
+    _isInsertingAiSuggestion = false;
+}
+
+/**
+ * Called when AI autocomplete is completed
+ */
+void QOwnNotesMarkdownTextEdit::onAiAutocompleteCompleted(const QString &result) {
+    qDebug() << __func__ << " - 'result': " << result;
+
+    if (result.isEmpty()) {
+        return;
+    }
+
+    // Extract the first line or first sentence as suggestion
+    QString suggestion = result.trimmed();
+
+    // Take only the first line or up to 100 characters
+    int newlinePos = suggestion.indexOf('\n');
+    if (newlinePos > 0 && newlinePos < 100) {
+        suggestion = suggestion.left(newlinePos);
+    } else if (suggestion.length() > 100) {
+        suggestion = suggestion.left(100);
+        // Try to break at a word boundary
+        int lastSpace = suggestion.lastIndexOf(' ');
+        if (lastSpace > 50) {
+            suggestion = suggestion.left(lastSpace);
+        }
+    }
+
+    qDebug() << __func__ << " - 'suggestion': " << suggestion;
+    qDebug() << __func__ << " - 'cursor position': " << textCursor().position();
+    qDebug() << __func__ << " - '_aiAutocompletePosition': " << _aiAutocompletePosition;
+
+    showAiAutocompleteSuggestion(suggestion);
+}
+
+/**
+ * Called when AI autocomplete request times out or errors
+ */
+void QOwnNotesMarkdownTextEdit::onAiAutocompleteTimeout(const QString &errorString) {
+    qDebug() << __func__ << " - error:" << errorString;
+    // Just clear the state, don't show error to user
+    _aiAutocompleteSuggestion.clear();
+    _aiAutocompletePosition = -1;
+}
+
+/**
+ * Override keyPressEvent to handle Tab and Escape for autocomplete
+ */
+void QOwnNotesMarkdownTextEdit::keyPressEvent(QKeyEvent *e) {
+    // Handle Tab key to accept AI autocomplete suggestion
+    if (e->key() == Qt::Key_Tab && !_aiAutocompleteSuggestion.isEmpty()) {
+        acceptAiAutocompleteSuggestion();
+        e->accept();
+        return;
+    }
+
+    // Handle Escape key to dismiss AI autocomplete suggestion
+    if (e->key() == Qt::Key_Escape && !_aiAutocompleteSuggestion.isEmpty()) {
+        clearAiAutocompleteSuggestion();
+        e->accept();
+        return;
+    }
+
+    // Clear suggestion on any other key press
+    if (!_aiAutocompleteSuggestion.isEmpty()) {
+        clearAiAutocompleteSuggestion();
+    }
+
+    // Call parent implementation
+    QMarkdownTextEdit::keyPressEvent(e);
 }

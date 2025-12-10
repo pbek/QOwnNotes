@@ -784,6 +784,8 @@ void SettingsDialog::storeSettings() {
                       CryptoService::instance()->encryptToString(ui->openAiApiKeyLineEdit->text()));
     settings.setValue(QStringLiteral("ai/responseTimeout"),
                       ui->openAiResponseTimeoutSpinBox->value());
+    settings.setValue(QStringLiteral("ai/autocompleteEnabled"),
+                      ui->aiAutocompleteCheckBox->isChecked());
 }
 
 /**
@@ -1266,6 +1268,8 @@ void SettingsDialog::readSettings() {
 
     ui->openAiApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ai/openai/apiKey")).toString()));
+    ui->aiAutocompleteCheckBox->setChecked(
+        settings.value(QStringLiteral("ai/autocompleteEnabled"), false).toBool());
 
     ui->openAiResponseTimeoutSpinBox->setValue(OpenAiService::getResponseTimeout());
 }

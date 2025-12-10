@@ -62,11 +62,18 @@ class OpenAiService : public QObject {
     QString getModelId();
     static bool setEnabled(bool enabled);
     static bool getEnabled();
+    static bool setAutocompleteEnabled(bool enabled);
+    static bool getAutocompleteEnabled();
     QString complete(const QString& prompt);
+    void completeAsync(const QString& prompt);
     void setApiKeyForCurrentBackend();
     void setApiKeyForCurrentBackend(const QString& apiKey);
     QMap<QString, QString> getBackendNames();
     QString getApiBaseUrlForBackend(const QString& backendId);
+
+   signals:
+    void autocompleteCompleted(QString result);
+    void autocompleteErrorOccurred(QString errorString);
 
    private:
     QMap<QString, QStringList> _backendModels;
