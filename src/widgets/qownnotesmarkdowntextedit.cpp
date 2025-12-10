@@ -1313,6 +1313,11 @@ void QOwnNotesMarkdownTextEdit::requestAiAutocomplete() {
  * Shows the AI autocomplete suggestion
  */
 void QOwnNotesMarkdownTextEdit::showAiAutocompleteSuggestion(const QString &suggestion) {
+    SettingsService settings;
+    if (!settings.value(QStringLiteral("ai/autocompleteEnabled")).toBool()) {
+        return;
+    }
+
     qDebug() << __func__ << " - 'suggestion': " << suggestion;
 
     if (suggestion.isEmpty()) {
