@@ -7014,6 +7014,25 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </widget>
              </item>
              <item>
+              <widget class="QGroupBox" name="aiAutocompleteGroupBox">
+               <property name="title">
+                <string>AI autocomplete</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_ai_autocomplete">
+                <item>
+                 <widget class="QCheckBox" name="aiAutocompleteCheckBox">
+                  <property name="toolTip">
+                   <string>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</string>
+                  </property>
+                  <property name="text">
+                   <string>Enable AI autocomplete in note editor</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
               <spacer name="verticalSpacer_20">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -7394,16 +7413,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    </size>
                   </property>
                  </spacer>
-                </item>
-                <item row="1" column="0" colspan="3">
-                 <widget class="QCheckBox" name="aiAutocompleteCheckBox">
-                  <property name="toolTip">
-                   <string>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</string>
-                  </property>
-                  <property name="text">
-                   <string>Enable AI autocomplete in note editor</string>
-                  </property>
-                 </widget>
                 </item>
                </layout>
               </widget>
