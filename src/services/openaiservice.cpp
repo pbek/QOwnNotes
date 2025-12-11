@@ -44,23 +44,9 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
         // Forward declaration to avoid circular dependency
         class QOwnNotesMarkdownTextEdit;
 
-        // Get the active editor using QMetaObject since we can't include the header
-        QObject* activeEditorObj = nullptr;
-        QMetaObject::invokeMethod(
-            nullptr,
-            []() -> QObject* {
-                // Access the static method through the class name
-                // We need to get QOwnNotesMarkdownTextEdit::getActiveEditorForAutocomplete()
-                // but we can't call it directly due to circular includes
-                // So we'll use a different approach - store it in QApplication
-                return qApp->property("activeAutocompleteEditor").value<QObject*>();
-            },
-            Qt::DirectConnection, Q_RETURN_ARG(QObject*, activeEditorObj));
-
-        if (!activeEditorObj) {
-            // Try to get from application property
-            activeEditorObj = qApp->property("activeAutocompleteEditor").value<QObject*>();
-        }
+        // Get the active editor from the application property
+        // We can't use QMetaObject::invokeMethod with lambdas in Qt5
+        QObject* activeEditorObj = qApp->property("activeAutocompleteEditor").value<QObject*>();
 
         if (activeEditorObj) {
             qDebug() << "*** Calling onAiAutocompleteCompleted on active editor:"
