@@ -21,6 +21,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     Q_ENUMS(FontModificationMode)
 
     explicit QOwnNotesMarkdownTextEdit(QWidget *parent = nullptr);
+    ~QOwnNotesMarkdownTextEdit() override;
 
     void setStyles();
     void openUrl(const QString &urlString) override;
@@ -39,6 +40,21 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      * Toggles the case of the word under the Cursor or the selected text
      */
     void toggleCase();
+
+    /**
+     * Register this editor as the active one for AI autocomplete
+     */
+    void registerAsActiveEditor();
+
+    /**
+     * Unregister this editor from receiving AI autocomplete
+     */
+    void unregisterAsActiveEditor();
+
+    /**
+     * Get the currently active editor for AI autocomplete
+     */
+    static QOwnNotesMarkdownTextEdit *getActiveEditorForAutocomplete();
 
     /**
      * Inserts an empty code block
@@ -106,14 +122,9 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void resizeEvent(QResizeEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
     void keyPressEvent(QKeyEvent *e) override;
+    void focusInEvent(QFocusEvent *e) override;
 
    private:
-    bool _isSpellCheckingDisabled = false;
-    QString _aiAutocompleteSuggestion;
-    int _aiAutocompletePosition = -1;
-    QTimer *_aiAutocompleteTimer = nullptr;
-    bool _isInsertingAiSuggestion = false;
-
     /// @param in is true if zoom-in, false otherwise
     void onZoom(bool in);
 
@@ -144,4 +155,13 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      * Accepts the current AI autocomplete suggestion
      */
     void acceptAiAutocompleteSuggestion();
+
+    bool _isSpellCheckingDisabled = false;
+    QString _aiAutocompleteSuggestion;
+    int _aiAutocompletePosition = -1;
+    QTimer *_aiAutocompleteTimer = nullptr;
+    bool _isInsertingAiSuggestion = false;
+
+    // Static pointer to the currently active editor for AI autocomplete
+    static QOwnNotesMarkdownTextEdit *_activeAutocompleteEditor;
 };

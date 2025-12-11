@@ -26,6 +26,9 @@
 #include "scriptingservice.h"
 #include "services/settingsservice.h"
 
+// Forward declaration to avoid circular dependency
+class QOwnNotesMarkdownTextEdit;
+
 using namespace std;
 
 QT_USE_NAMESPACE
@@ -34,11 +37,59 @@ OpenAiService::OpenAiService(QObject* parent) : QObject(parent) {
     initializeBackends();
     initializeCompleter(parent);
 
+    // Set up the global autocomplete callback that routes to the active editor
+    // This is done once here instead of in each widget to avoid widgets overwriting each other
+    setAutocompleteCallback([](const QString& result) {
+        qDebug() << "*** GLOBAL AUTOCOMPLETE CALLBACK RECEIVED, result length:" << result.length();
+        // Forward declaration to avoid circular dependency
+        class QOwnNotesMarkdownTextEdit;
+
+        // Get the active editor using QMetaObject since we can't include the header
+        QObject* activeEditorObj = nullptr;
+        QMetaObject::invokeMethod(
+            nullptr,
+            []() -> QObject* {
+                // Access the static method through the class name
+                // We need to get QOwnNotesMarkdownTextEdit::getActiveEditorForAutocomplete()
+                // but we can't call it directly due to circular includes
+                // So we'll use a different approach - store it in QApplication
+                return qApp->property("activeAutocompleteEditor").value<QObject*>();
+            },
+            Qt::DirectConnection, Q_RETURN_ARG(QObject*, activeEditorObj));
+
+        if (!activeEditorObj) {
+            // Try to get from application property
+            activeEditorObj = qApp->property("activeAutocompleteEditor").value<QObject*>();
+        }
+
+        if (activeEditorObj) {
+            qDebug() << "*** Calling onAiAutocompleteCompleted on active editor:"
+                     << activeEditorObj;
+            QMetaObject::invokeMethod(activeEditorObj, "onAiAutocompleteCompleted",
+                                      Qt::DirectConnection, Q_ARG(QString, result));
+        } else {
+            qDebug() << "*** No active editor found in callback!";
+        }
+    });
+
     QObject::connect(_completer, &OpenAiCompleter::completed, this, [this](const QString& result) {
         qDebug() << "'result': " << result;
-        qDebug() << "OpenAiService - emitting autocompleteCompleted signal";
-        emit autocompleteCompleted(result);
-        qDebug() << "OpenAiService - autocompleteCompleted signal emitted";
+        qDebug() << "OpenAiService - processing autocomplete result";
+        qDebug() << "OpenAiService - this pointer:" << this;
+        qDebug() << "OpenAiService - Number of signal receivers:"
+                 << receivers(SIGNAL(autocompleteCompleted(QString)));
+        qDebug() << "OpenAiService - Has callback:" << (_autocompleteCallback != nullptr);
+
+        // Try callback first (direct call to active editor)
+        if (_autocompleteCallback) {
+            qDebug() << "OpenAiService - Calling autocomplete callback directly";
+            _autocompleteCallback(result);
+        } else {
+            qDebug() << "OpenAiService - No callback, emitting signal";
+            emit autocompleteCompleted(result);
+        }
+
+        qDebug() << "OpenAiService - autocomplete processing completed";
     });
     QObject::connect(_completer, &OpenAiCompleter::errorOccurred, this,
                      [this](const QString& errorString) {
@@ -86,9 +137,36 @@ void OpenAiService::deleteInstance() {
 
 void OpenAiService::initializeBackends() {
     _backendModels.clear();
-    _backendModels[QStringLiteral("openai")] =
-        QStringList{"gpt-4o",     "chatgpt-4o-latest", "gpt-4o-mini",   "o1-mini",
-                    "o1-preview", "gpt-4-turbo",       "gpt-3.5-turbo", "gpt-4"};
+    _backendModels[QStringLiteral("openai")] = QStringList{"gpt-5.1",
+                                                           "gpt-5",
+                                                           "gpt-5-mini",
+                                                           "gpt-5-nano",
+                                                           "gpt-5.1-chat-latest",
+                                                           "gpt-5-chat-latest",
+                                                           "gpt-5.1-codex-max",
+                                                           "gpt-5.1-codex",
+                                                           "gpt-5-codex",
+                                                           "gpt-5-pro",
+                                                           "gpt-4.1",
+                                                           "gpt-4.1-mini",
+                                                           "gpt-4.1-nano",
+                                                           "gpt-4o",
+                                                           "gpt-4o-2024-05-13",
+                                                           "gpt-4o-mini",
+                                                           "o1",
+                                                           "o1-pro",
+                                                           "o3-pro",
+                                                           "o3",
+                                                           "o3-deep-research",
+                                                           "o4-mini",
+                                                           "o4-mini-deep-research",
+                                                           "o3-mini",
+                                                           "o1-mini",
+                                                           "gpt-5.1-codex-mini",
+                                                           "codex-mini-latest",
+                                                           "gpt-5-search-api",
+                                                           "gpt-4o-mini-search-preview",
+                                                           "gpt-4o-search-preview"};
     _backendModels[QStringLiteral("groq")] =
         QStringList{"llama-3.1-8b-instant",
                     "deepseek-r1-distill-llama-70b",
@@ -99,9 +177,6 @@ void OpenAiService::initializeBackends() {
                     "groq/compound-mini",
                     "meta-llama/llama-4-maverick-17b-128e-instruct",
                     "meta-llama/llama-4-scout-17b-16e-instruct",
-                    "meta-llama/llama-guard-4-12b",
-                    "meta-llama/llama-prompt-guard-2-86m",
-                    "meta-llama/llama-prompt-guard-2-22m",
                     "moonshotai/kimi-k2-instruct",
                     "moonshotai/kimi-k2-instruct-0905",
                     "openai/gpt-oss-120b",
@@ -243,8 +318,10 @@ QString OpenAiService::getModelId() {
     // If not set yet try to read the settings
     if (this->_modelId.isEmpty()) {
         SettingsService settings;
-        this->_modelId =
-            settings.value(getCurrentModelSettingsKey(), _backendModels[getBackendId()]).toString();
+        // Get the first model as default if no model is set
+        const QStringList& models = getModelsForCurrentBackend();
+        QString defaultModel = models.isEmpty() ? QLatin1String("") : models.first();
+        this->_modelId = settings.value(getCurrentModelSettingsKey(), defaultModel).toString();
     }
 
     // If still not set get the first of the models
@@ -308,6 +385,13 @@ QString OpenAiService::complete(const QString& prompt) {
     }
 
     return _completer->completeSync(prompt);
+}
+
+void OpenAiService::setAutocompleteCallback(AutocompleteCallback callback) {
+    qDebug() << __func__
+             << " - Setting autocomplete callback, was:" << (_autocompleteCallback != nullptr)
+             << "now:" << (callback != nullptr);
+    _autocompleteCallback = callback;
 }
 
 OpenAiCompleter::OpenAiCompleter(QString apiKey, QString modelId, QString apiBaseUrl,

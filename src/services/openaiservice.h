@@ -18,6 +18,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QObject>
+#include <functional>
 
 #include "services/settingsservice.h"
 
@@ -71,9 +72,13 @@ class OpenAiService : public QObject {
     QMap<QString, QString> getBackendNames();
     QString getApiBaseUrlForBackend(const QString& backendId);
 
+    // Callback for autocomplete results (avoids circular dependency)
+    using AutocompleteCallback = std::function<void(const QString&)>;
+    void setAutocompleteCallback(AutocompleteCallback callback);
+
    signals:
-    void autocompleteCompleted(QString result);
-    void autocompleteErrorOccurred(QString errorString);
+    void autocompleteCompleted(const QString& result);
+    void autocompleteErrorOccurred(const QString& errorString);
 
    private:
     QMap<QString, QStringList> _backendModels;
@@ -89,5 +94,6 @@ class OpenAiService : public QObject {
     static QString getApiKeySettingsKeyForBackend(const QString& backendId);
     void initializeCompleter(QObject* parent);
     QString getApiBaseUrlForCurrentBackend();
+    AutocompleteCallback _autocompleteCallback;
     QString getApiKeyForCurrentBackend();
 };

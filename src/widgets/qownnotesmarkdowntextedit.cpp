@@ -28,6 +28,9 @@
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 
+// Initialize static member
+QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::_activeAutocompleteEditor = nullptr;
+
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
     // We need to set the internal variable to true, because we start with a highlighter
@@ -47,20 +50,32 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     connect(_aiAutocompleteTimer, &QTimer::timeout, this,
             &QOwnNotesMarkdownTextEdit::requestAiAutocomplete);
 
-    // Connect to OpenAI service signals for all widgets
-    qDebug() << __func__ << " - Connecting AI autocomplete signals for widget:" << objectName()
-             << "parent:" << (parent ? parent->objectName() : "null");
-    qDebug() << __func__ << " - OpenAiService instance:" << OpenAiService::instance();
-    qDebug() << __func__ << " - this instance:" << this;
+    // NOTE: Callback registration is now done globally in OpenAiService constructor
+    // We just need to register this editor as active if it's a note editor
+    if (!parent || parent->objectName() != QStringLiteral("LogWidget")) {
+        qDebug() << __func__ << " - Registering as active editor";
+        registerAsActiveEditor();
+    } else {
+        qDebug() << __func__ << " - Skipping registration for non-editor widget:" << objectName();
+    }
 
-    // Use old-style SIGNAL/SLOT macros for better compatibility
-    bool conn1 = connect(OpenAiService::instance(), SIGNAL(autocompleteCompleted(QString)), this,
-                         SLOT(onAiAutocompleteCompleted(QString)), Qt::QueuedConnection);
-    bool conn2 = connect(OpenAiService::instance(), SIGNAL(autocompleteErrorOccurred(QString)),
-                         this, SLOT(onAiAutocompleteTimeout(QString)), Qt::QueuedConnection);
+    // Use DirectConnection to ensure signal is delivered immediately before widget can be destroyed
+    // This prevents the "0 receivers" problem when widgets are recreated
+    bool conn1 = connect(
+        OpenAiService::instance(), &OpenAiService::autocompleteCompleted, this,
+        [this](const QString &result) {
+            qDebug() << "*** LAMBDA RECEIVED autocompleteCompleted signal for widget:" << this
+                     << objectName();
+            this->onAiAutocompleteCompleted(result);
+        },
+        Qt::DirectConnection);
+    bool conn2 = connect(OpenAiService::instance(), &OpenAiService::autocompleteErrorOccurred, this,
+                         &QOwnNotesMarkdownTextEdit::onAiAutocompleteTimeout, Qt::DirectConnection);
 
-    qDebug() << __func__ << " - AI autocomplete signals connected, conn1:" << conn1
+    qDebug() << __func__
+             << " - AI autocomplete signals connected (DirectConnection), conn1:" << conn1
              << "conn2:" << conn2;
+    qDebug() << __func__ << " - Connected to OpenAiService instance:" << OpenAiService::instance();
 
     // Test: Call the slot directly to verify it exists
     qDebug() << __func__ << " - Testing slot by calling it directly...";
@@ -1313,8 +1328,15 @@ void QOwnNotesMarkdownTextEdit::requestAiAutocomplete() {
  * Shows the AI autocomplete suggestion
  */
 void QOwnNotesMarkdownTextEdit::showAiAutocompleteSuggestion(const QString &suggestion) {
+    qDebug() << "=== showAiAutocompleteSuggestion CALLED ===" << this;
+    qDebug() << __func__ << " - Widget:" << objectName();
+
     SettingsService settings;
-    if (!settings.value(QStringLiteral("ai/autocompleteEnabled")).toBool()) {
+    bool enabled = settings.value(QStringLiteral("ai/autocompleteEnabled")).toBool();
+    qDebug() << __func__ << " - ai/autocompleteEnabled setting:" << enabled;
+
+    if (!enabled) {
+        qDebug() << __func__ << " - autocomplete not enabled in settings, returning";
         return;
     }
 
@@ -1339,13 +1361,16 @@ void QOwnNotesMarkdownTextEdit::showAiAutocompleteSuggestion(const QString &sugg
     _aiAutocompleteSuggestion = suggestion;
     _isInsertingAiSuggestion = true;
 
-    qDebug() << __func__ << " - inserting suggestion";
+    qDebug() << __func__ << " - inserting suggestion text...";
 
     // Insert the suggestion with a gray color format
     QTextCursor cursor = textCursor();
     cursor.beginEditBlock();
 
-    // Store the format
+    // Store the original format to restore it later
+    QTextCharFormat originalFormat = cursor.charFormat();
+
+    // Create the suggestion format
     QTextCharFormat format;
     format.setForeground(QColor(128, 128, 128));    // Gray color
     format.setFontItalic(true);
@@ -1357,10 +1382,14 @@ void QOwnNotesMarkdownTextEdit::showAiAutocompleteSuggestion(const QString &sugg
     cursor.movePosition(QTextCursor::Right, QTextCursor::KeepAnchor,
                         _aiAutocompleteSuggestion.length());
 
+    // Reset the character format to the original to prevent the italic format
+    // from affecting subsequent text
+    cursor.setCharFormat(originalFormat);
+
     cursor.endEditBlock();
     setTextCursor(cursor);
 
-    qDebug() << __func__ << " - suggestion inserted and selected";
+    qDebug() << __func__ << " - suggestion inserted and selected successfully!";
 
     _isInsertingAiSuggestion = false;
 }
@@ -1424,11 +1453,17 @@ void QOwnNotesMarkdownTextEdit::acceptAiAutocompleteSuggestion() {
  * Called when AI autocomplete is completed
  */
 void QOwnNotesMarkdownTextEdit::onAiAutocompleteCompleted(const QString &result) {
+    qDebug() << "=== onAiAutocompleteCompleted CALLED ===" << this;
+    qDebug() << __func__ << " - Widget:" << objectName()
+             << "Parent:" << (parent() ? parent()->objectName() : "null");
     qDebug() << __func__ << " - 'result': " << result;
 
     if (result.isEmpty()) {
+        qDebug() << __func__ << " - result is empty, returning";
         return;
     }
+
+    qDebug() << __func__ << " - Processing result, length:" << result.length();
 
     // Extract the first line or first sentence as suggestion
     QString suggestion = result.trimmed();
@@ -1450,7 +1485,9 @@ void QOwnNotesMarkdownTextEdit::onAiAutocompleteCompleted(const QString &result)
     qDebug() << __func__ << " - 'cursor position': " << textCursor().position();
     qDebug() << __func__ << " - '_aiAutocompletePosition': " << _aiAutocompletePosition;
 
+    qDebug() << __func__ << " - Calling showAiAutocompleteSuggestion...";
     showAiAutocompleteSuggestion(suggestion);
+    qDebug() << __func__ << " - showAiAutocompleteSuggestion returned";
 }
 
 /**
@@ -1488,4 +1525,54 @@ void QOwnNotesMarkdownTextEdit::keyPressEvent(QKeyEvent *e) {
 
     // Call parent implementation
     QMarkdownTextEdit::keyPressEvent(e);
+}
+
+/**
+ * Override focusInEvent to register this editor as active when it receives focus
+ */
+void QOwnNotesMarkdownTextEdit::focusInEvent(QFocusEvent *e) {
+    // Register as the active editor for autocomplete when receiving focus
+    // Skip for log widgets
+    if (objectName() != QStringLiteral("logTextEdit")) {
+        qDebug() << __func__ << " - Registering as active editor:" << this << objectName();
+        registerAsActiveEditor();
+    }
+
+    // Call parent implementation
+    QMarkdownTextEdit::focusInEvent(e);
+}
+
+/**
+ * Register this editor as the active one for AI autocomplete
+ */
+void QOwnNotesMarkdownTextEdit::registerAsActiveEditor() {
+    qDebug() << __func__ << " - Registering editor:" << this << objectName();
+    _activeAutocompleteEditor = this;
+    // Also store in QApplication property for access from OpenAiService callback
+    qApp->setProperty("activeAutocompleteEditor", QVariant::fromValue<QObject *>(this));
+}
+
+/**
+ * Unregister this editor from receiving AI autocomplete
+ */
+void QOwnNotesMarkdownTextEdit::unregisterAsActiveEditor() {
+    qDebug() << __func__ << " - Unregistering editor:" << this << objectName();
+    if (_activeAutocompleteEditor == this) {
+        _activeAutocompleteEditor = nullptr;
+        // Also clear QApplication property
+        qApp->setProperty("activeAutocompleteEditor", QVariant::fromValue<QObject *>(nullptr));
+    }
+}
+
+/**
+ * Get the currently active editor for AI autocomplete
+ */
+QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::getActiveEditorForAutocomplete() {
+    return _activeAutocompleteEditor;
+}
+
+QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {
+    qDebug() << "*** QOwnNotesMarkdownTextEdit DESTROYED ***" << this << objectName();
+    // Unregister if this was the active editor
+    unregisterAsActiveEditor();
 }
