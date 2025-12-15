@@ -159,12 +159,12 @@ jobs:
           ls -hal *.AppImage
 
       - name: "📤 Upload artifact: AppImage"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{env.APPIMAGE_NAME}}
           path: src/${{env.APPIMAGE_NAME}}
       - name: "📤 Upload artifact: AppImage sha256sum"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{env.APPIMAGE_NAME}}.sha256sum
           path: src/${{env.APPIMAGE_NAME}}.sha256sum
@@ -254,7 +254,7 @@ jobs:
       #        release: stable
 
       - name: "📤 Upload artifact: Snap"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: qownnotes_${{ env.VERSION }}_amd64.snap
           path: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
@@ -306,17 +306,17 @@ jobs:
         run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
       - name: "📤 Upload artifact: Windows"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: QOwnNotes.zip
           path: QOwnNotes.zip
       - name: "📤 Upload artifact: Windows sha256sum"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: QOwnNotes.zip.sha256
           path: QOwnNotes.zip.sha256
       - name: "📤 Upload artifact: Windows clickable sha256sum"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: QOwnNotes.zip.sha256sum
           path: QOwnNotes.zip.sha256sum
@@ -387,7 +387,7 @@ jobs:
           ../build-systems/github/macos/create-dmg-qt6.sh
 
       - name: "📤 Upload artifact: macOS"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: QOwnNotes.dmg
           path: src/QOwnNotes.dmg

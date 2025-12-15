@@ -244,7 +244,7 @@ jobs:
         name: Build QOwnNotes Windows Release
         run: '& ..\build-systems\github\windows\build-zip.ps1'
       - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: QOwnNotes-Windows
           path: QOwnNotes.zip
