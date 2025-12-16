@@ -1161,12 +1161,9 @@ QIcon Utils::Gui::noteIcon() {
 }
 
 QIcon Utils::Gui::favoriteNoteIcon() {
-    // Try different common star icon names
     static const QIcon s_favoriteNoteIcon = QIcon::fromTheme(
-        QStringLiteral("starred-symbolic"),
-        QIcon::fromTheme(QStringLiteral("emblem-favorite"),
-                         QIcon::fromTheme(QStringLiteral("star"),
-                                          noteIcon())));    // Fallback to regular note icon
+        QStringLiteral("favorite-favorited"),
+        QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/favorite-favorited.svg")));
     return s_favoriteNoteIcon;
 }
 

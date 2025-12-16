@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.12.6
+
+- The favorite icon was improved for more contrast and local icons were added for
+  light and dark mode (for [#351](https://github.com/pbek/QOwnNotes/issues/351))
+
 ## 25.12.5
 
 - Added ability to **mark notes as favorite** (for [#351](https://github.com/pbek/QOwnNotes/issues/351))

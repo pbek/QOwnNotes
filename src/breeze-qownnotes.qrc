@@ -104,6 +104,8 @@
     <file alias="16x16/transform-crop.svg">icons/breeze-qownnotes/16x16/transform-crop.svg</file>
     <file alias="16x16/view-hidden.svg">icons/breeze-qownnotes/16x16/view-hidden.svg</file>
     <file alias="16x16/view-visible.svg">icons/breeze-qownnotes/16x16/view-visible.svg</file>
+    <file alias="16x16/favorite.svg">icons/breeze-qownnotes/16x16/favorite.svg</file>
+    <file alias="16x16/favorite-favorited.svg">icons/breeze-qownnotes/16x16/favorite-favorited.svg</file>
   </qresource>
   <qresource prefix="/">
     <file>icons/breeze-qownnotes/16x16/tools-check-spelling.svg</file>
