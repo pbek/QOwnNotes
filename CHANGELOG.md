@@ -4,6 +4,9 @@
 
 - The favorite icon was improved for more contrast and local icons were added for
   light and dark mode (for [#351](https://github.com/pbek/QOwnNotes/issues/351))
+- Added a very early development version of an AI Autocompleter using your
+  favorite LLM you need to configure (for [#3407](https://github.com/pbek/QOwnNotes/issues/3407))
+  - It can be enabled in the _Experimental settings_
 
 ## 25.12.5
 
