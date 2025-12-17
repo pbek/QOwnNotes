@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuetify": "^2.6.10"
+    "vuetify": "^3.0.0"
   }
 }
