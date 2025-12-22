@@ -2,6 +2,10 @@
 
 ## 25.12.7
 
+- Added **Reload** and **Jump to note** buttons to the Note Dialog of the
+  `Open note in different window` context menu (for [#3413](https://github.com/pbek/QOwnNotes/issues/3413))
+  - The **Reload** button refreshes the note from the database to show any external changes
+  - The **Jump to note** button navigates to the note in the main window without closing the dialog
 - Now a status message will be shown if a note cannot be written to disk
   (for [#3412](https://github.com/pbek/QOwnNotes/issues/3412))
 

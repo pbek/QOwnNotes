@@ -1,13 +1,12 @@
 #ifndef NOTEDIALOG_H
 #define NOTEDIALOG_H
 
+#include "entities/note.h"
 #include "masterdialog.h"
 
 namespace Ui {
 class NoteDialog;
 }
-
-class Note;
 
 class NoteDialog : public MasterDialog {
     Q_OBJECT
@@ -22,8 +21,13 @@ class NoteDialog : public MasterDialog {
 
     void on_tabWidget_currentChanged(int index);
 
+    void onReloadButtonClicked();
+
+    void onJumpToNoteButtonClicked();
+
    private:
     Ui::NoteDialog *ui;
+    Note _note;
 };
 
 #endif    // NOTEDIALOG_H
