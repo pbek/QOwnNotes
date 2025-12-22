@@ -38,7 +38,7 @@ echo
 echo Updating qmarkdowntextedit...
 echo
 pushd src/libraries/qmarkdowntextedit || exit 1
-git checkout develop || exit 2
+git checkout main || exit 2
 git pull
 popd || exit 3
 
