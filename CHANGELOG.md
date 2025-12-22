@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 25.12.7
+
+- Now a status message will be shown if a note cannot be written to disk
+  (for [#3412](https://github.com/pbek/QOwnNotes/issues/3412))
+
 ## 25.12.6
 
 - The favorite icon was improved for more contrast and local icons were added for

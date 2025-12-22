@@ -1731,6 +1731,15 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
                            "Could not store note file: %1 - Error "
                            "message: %2")
                            .arg(file.fileName(), file.errorString());
+
+#ifndef INTEGRATION_TESTS
+        MainWindow::instance()->showStatusBarMessage(
+            QObject::tr("Could not store note file: %1 - Error "
+                        "message: %2")
+                .arg(relativeNoteFilePath(), file.errorString()),
+            QStringLiteral("❌️"), 20000);
+#endif
+
         return false;
     }
 
