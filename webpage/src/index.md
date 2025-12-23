@@ -3,9 +3,12 @@ title: QOwnNotes
 description: Open source markdown note-taking for Linux, macOS and Windows, that works together with Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
+heroText: QOwnNotes
 tagline: Free open source plain-text file markdown note-taking with Nextcloud / ownCloud integration
-actionText: Quick Start →
-actionLink: getting-started/overview
+actions:
+  - text: Quick Start →
+    link: /getting-started/overview
+    type: primary
 features:
   - title: Own your notes
     details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in". Use sync services like Nextcloud to sync notes across devices.

@@ -16,10 +16,20 @@
       ></v-text-field>
 
       <template v-slot:actions>
-        <v-btn variant="flat" @click="submit" title="Submit your answer"
-          >Submit</v-btn
+        <v-btn
+          color="white"
+          variant="flat"
+          @click="submit"
+          title="Submit your answer"
         >
-        <v-btn variant="text" title="Close poll" @click="snackbar = false">
+          Submit
+        </v-btn>
+        <v-btn
+          color="white"
+          variant="text"
+          title="Close poll"
+          @click="snackbar = false"
+        >
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </template>
