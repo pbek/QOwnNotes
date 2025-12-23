@@ -193,7 +193,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
 - **Line numbers**
-- **Differences** between current note and externally changed note are **showed** in a dialog
+- **Differences** between current note and externally changed note are **shown** in a dialog
 
 ## Languages
 
