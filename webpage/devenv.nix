@@ -11,4 +11,8 @@
   enterShell = ''
     echo "🛠️ QOwnNotes Webpage Dev Shell"
   '';
+
+  git-hooks.hooks = {
+    eslint.enable = false;
+  };
 }
