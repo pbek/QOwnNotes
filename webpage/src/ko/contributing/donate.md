@@ -26,7 +26,7 @@ QOWNNotes를 좋아하며 프로젝트에 **기부**하여 비용을 지불하�
 
 다음 버튼을 클릭하여 **Liberapay를 통해 돈을 기부**할 수 있습니다:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Liberapay를 이용한 기부" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Liberapay를 이용한 기부" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## 비트코인
 

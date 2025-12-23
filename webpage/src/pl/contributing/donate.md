@@ -26,7 +26,7 @@ Możesz **sponsorować na GitHub Sponsors** na [pbek GitHub Sponsors](https://gi
 
 Możesz **przekazać pieniądze za pośrednictwem Liberapay**, klikając ten przycisk:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Przekaż darowiznę za pomocą Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Przekaż darowiznę za pomocą Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## Bitcoin
 

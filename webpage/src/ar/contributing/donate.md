@@ -26,7 +26,7 @@ QOwnNotes لا ينتج أي عائد (أي أنه غير ربحي).
 
 يمكنك **التبرع بالمال عبر ليبراباي** بالضغط على هذا الزر:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="تبرع بإستخدام لببراياي" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="تبرع بإستخدام لببراياي" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## بيتكوين Bitcoin
 
