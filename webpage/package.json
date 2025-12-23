@@ -16,17 +16,24 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/bundler-vite": "next",
+    "@vuepress/plugin-markdown-chart": "^2.0.0-rc.109",
+    "@vuepress/plugin-markdown-container": "^2.0.0-rc.30",
+    "@vuepress/plugin-markdown-ext": "^2.0.0-rc.57",
+    "@vuepress/plugin-markdown-hint": "^2.0.0-rc.121",
+    "@vuepress/plugin-markdown-stylize": "^2.0.0-rc.57",
     "@vuepress/theme-default": "next",
     "glob": "^10.3.10",
     "lodash-es": "^4.17.21",
     "markdown-it": "^14.1.0",
     "markdown-it-meta": "^0.0.1",
+    "mermaid": "^11.12.2",
     "sass": "^1.83.0",
-    "vuepress": "next"
+    "vuepress": "next",
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.99"
   },
   "dependencies": {
-    "vuetify": "^3.7.4",
     "@mdi/font": "^7.4.47",
-    "date-fns": "^3.0.0"
+    "date-fns": "^3.0.0",
+    "vuetify": "^3.7.4"
   }
 }

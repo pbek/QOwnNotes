@@ -3,6 +3,8 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import customTheme from "./theme/index.js";
 import { createRequire } from "module";
 import * as utils from "./utils.js";
+import { markdownChartPlugin } from "@vuepress/plugin-markdown-chart";
+import { markdownExtPlugin } from "@vuepress/plugin-markdown-ext";
 
 const require = createRequire(import.meta.url);
 const { description } = require("../../package.json");
@@ -122,6 +124,19 @@ export default defineUserConfig({
       },
     },
   }),
+
+  // Plugins
+  plugins: [
+    // Mermaid diagrams support (via chart plugin)
+    markdownChartPlugin({
+      // Enable Mermaid
+      mermaid: true,
+    }),
+    // Task lists and other extensions
+    markdownExtPlugin({
+      tasklist: true,
+    }),
+  ],
 
   head: [
     ["meta", { name: "theme-color", content: "#3eaf7c" }],
@@ -778,10 +793,4 @@ export default defineUserConfig({
       },
     },
   }),
-
-  markdown: {
-    code: {
-      lineNumbers: true,
-    },
-  },
 });
