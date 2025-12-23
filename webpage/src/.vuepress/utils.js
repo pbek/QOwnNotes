@@ -41,13 +41,9 @@ export const getChildren = (parent_path, dir, reverseOrder = false) => {
 };
 
 export const getNavItemsForLanguage = (navItems, language) => {
-  let resultNavItems = [];
-
-  navItems.forEach((navItem) => {
-    resultNavItems.push(language + "/" + navItem);
-  });
-
-  return resultNavItems;
+  // VuePress 2 automatically adds locale prefix to relative paths in sidebar
+  // So we just return the items as-is without adding the language prefix
+  return navItems;
 };
 
 export const getNavItemForLanguage = (navItem, language) => {

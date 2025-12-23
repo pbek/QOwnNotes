@@ -272,7 +272,510 @@ export default defineUserConfig({
           },
         ],
       },
-      // Add other locales similarly...
+      "/it/": {
+        selectLanguageName: "Italiano",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "Iniziare",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "it"),
+          },
+          {
+            text: "Installazione",
+            link: utils.getNavItemForLanguage(installationNavItem, "it"),
+          },
+          { text: "Contatto", children: contactNavItems },
+          {
+            text: "Donare",
+            link: utils.getNavItemForLanguage(donateNavItem, "it"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "Iniziare",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "it",
+            ),
+          },
+          {
+            text: "Installazione",
+            children: utils.getNavItemsForLanguage(installationNavItems, "it"),
+          },
+          {
+            text: "Editor",
+            children: utils.getNavItemsForLanguage(editorNavItems, "it"),
+          },
+          {
+            text: "Scripting",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "it"),
+          },
+          {
+            text: "Contribuire",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "it"),
+          },
+          {
+            text: "FAQ",
+            children: utils.getNavItemsForLanguage(faqNavItems, "it"),
+          },
+          {
+            text: "Blog (in inglese)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Changelog (in inglese)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/fr/": {
+        selectLanguageName: "Français",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "Commencer",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "fr"),
+          },
+          {
+            text: "Installation",
+            link: utils.getNavItemForLanguage(installationNavItem, "fr"),
+          },
+          { text: "Contact", children: contactNavItems },
+          {
+            text: "Faire un don",
+            link: utils.getNavItemForLanguage(donateNavItem, "fr"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "Commencer",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "fr",
+            ),
+          },
+          {
+            text: "Installation",
+            children: utils.getNavItemsForLanguage(installationNavItems, "fr"),
+          },
+          {
+            text: "Éditeur",
+            children: utils.getNavItemsForLanguage(editorNavItems, "fr"),
+          },
+          {
+            text: "Scripting",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "fr"),
+          },
+          {
+            text: "Contribuer",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "fr"),
+          },
+          {
+            text: "FAQ",
+            children: utils.getNavItemsForLanguage(faqNavItems, "fr"),
+          },
+          {
+            text: "Blog (en anglais)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Changelog (en anglais)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/es/": {
+        selectLanguageName: "Español",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "Empezar",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "es"),
+          },
+          {
+            text: "Instalación",
+            link: utils.getNavItemForLanguage(installationNavItem, "es"),
+          },
+          { text: "Contacto", children: contactNavItems },
+          {
+            text: "Donar",
+            link: utils.getNavItemForLanguage(donateNavItem, "es"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "Empezar",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "es",
+            ),
+          },
+          {
+            text: "Instalación",
+            children: utils.getNavItemsForLanguage(installationNavItems, "es"),
+          },
+          {
+            text: "Editor",
+            children: utils.getNavItemsForLanguage(editorNavItems, "es"),
+          },
+          {
+            text: "Scripting",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "es"),
+          },
+          {
+            text: "Contribuir",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "es"),
+          },
+          {
+            text: "FAQ",
+            children: utils.getNavItemsForLanguage(faqNavItems, "es"),
+          },
+          {
+            text: "Blog (en inglés)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Changelog (en inglés)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/fa/": {
+        selectLanguageName: "فارسی",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "شروع",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "fa"),
+          },
+          {
+            text: "نصب",
+            link: utils.getNavItemForLanguage(installationNavItem, "fa"),
+          },
+          { text: "تماس", children: contactNavItems },
+          {
+            text: "حمایت مالی",
+            link: utils.getNavItemForLanguage(donateNavItem, "fa"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "شروع",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "fa",
+            ),
+          },
+          {
+            text: "نصب",
+            children: utils.getNavItemsForLanguage(installationNavItems, "fa"),
+          },
+          {
+            text: "ویرایشگر",
+            children: utils.getNavItemsForLanguage(editorNavItems, "fa"),
+          },
+          {
+            text: "اسکریپت نویسی",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "fa"),
+          },
+          {
+            text: "مشارکت",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "fa"),
+          },
+          {
+            text: "سوالات متداول",
+            children: utils.getNavItemsForLanguage(faqNavItems, "fa"),
+          },
+          {
+            text: "وبلاگ (به انگلیسی)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "تغییرات (به انگلیسی)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/nl/": {
+        selectLanguageName: "Nederlands",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "Aan de slag",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "nl"),
+          },
+          {
+            text: "Installatie",
+            link: utils.getNavItemForLanguage(installationNavItem, "nl"),
+          },
+          { text: "Contact", children: contactNavItems },
+          {
+            text: "Doneren",
+            link: utils.getNavItemForLanguage(donateNavItem, "nl"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "Aan de slag",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "nl",
+            ),
+          },
+          {
+            text: "Installatie",
+            children: utils.getNavItemsForLanguage(installationNavItems, "nl"),
+          },
+          {
+            text: "Editor",
+            children: utils.getNavItemsForLanguage(editorNavItems, "nl"),
+          },
+          {
+            text: "Scripting",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "nl"),
+          },
+          {
+            text: "Bijdragen",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "nl"),
+          },
+          {
+            text: "FAQ",
+            children: utils.getNavItemsForLanguage(faqNavItems, "nl"),
+          },
+          {
+            text: "Blog (in het Engels)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Changelog (in het Engels)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/hu/": {
+        selectLanguageName: "Magyar",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "Kezdő lépések",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "hu"),
+          },
+          {
+            text: "Telepítés",
+            link: utils.getNavItemForLanguage(installationNavItem, "hu"),
+          },
+          { text: "Kapcsolat", children: contactNavItems },
+          {
+            text: "Adományozás",
+            link: utils.getNavItemForLanguage(donateNavItem, "hu"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "Kezdő lépések",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "hu",
+            ),
+          },
+          {
+            text: "Telepítés",
+            children: utils.getNavItemsForLanguage(installationNavItems, "hu"),
+          },
+          {
+            text: "Szerkesztő",
+            children: utils.getNavItemsForLanguage(editorNavItems, "hu"),
+          },
+          {
+            text: "Szkriptelés",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "hu"),
+          },
+          {
+            text: "Közreműködés",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "hu"),
+          },
+          {
+            text: "GYIK",
+            children: utils.getNavItemsForLanguage(faqNavItems, "hu"),
+          },
+          {
+            text: "Blog (angolul)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Változásnapló (angolul)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/ar/": {
+        selectLanguageName: "العربية",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "البدء",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "ar"),
+          },
+          {
+            text: "التثبيت",
+            link: utils.getNavItemForLanguage(installationNavItem, "ar"),
+          },
+          { text: "اتصل", children: contactNavItems },
+          {
+            text: "تبرع",
+            link: utils.getNavItemForLanguage(donateNavItem, "ar"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "البدء",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "ar",
+            ),
+          },
+          {
+            text: "التثبيت",
+            children: utils.getNavItemsForLanguage(installationNavItems, "ar"),
+          },
+          {
+            text: "المحرر",
+            children: utils.getNavItemsForLanguage(editorNavItems, "ar"),
+          },
+          {
+            text: "البرمجة",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "ar"),
+          },
+          {
+            text: "المساهمة",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "ar"),
+          },
+          {
+            text: "الأسئلة الشائعة",
+            children: utils.getNavItemsForLanguage(faqNavItems, "ar"),
+          },
+          {
+            text: "المدونة (بالإنجليزية)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "سجل التغييرات (بالإنجليزية)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/pl/": {
+        selectLanguageName: "Polski",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "Rozpoczęcie",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "pl"),
+          },
+          {
+            text: "Instalacja",
+            link: utils.getNavItemForLanguage(installationNavItem, "pl"),
+          },
+          { text: "Kontakt", children: contactNavItems },
+          {
+            text: "Wesprzyj",
+            link: utils.getNavItemForLanguage(donateNavItem, "pl"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "Rozpoczęcie",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "pl",
+            ),
+          },
+          {
+            text: "Instalacja",
+            children: utils.getNavItemsForLanguage(installationNavItems, "pl"),
+          },
+          {
+            text: "Edytor",
+            children: utils.getNavItemsForLanguage(editorNavItems, "pl"),
+          },
+          {
+            text: "Skrypty",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "pl"),
+          },
+          {
+            text: "Współpraca",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "pl"),
+          },
+          {
+            text: "FAQ",
+            children: utils.getNavItemsForLanguage(faqNavItems, "pl"),
+          },
+          {
+            text: "Blog (po angielsku)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Dziennik zmian (po angielsku)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
+      "/ko/": {
+        selectLanguageName: "한국어",
+        selectLanguageText: "🌍",
+        navbar: [
+          {
+            text: "시작하기",
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, "ko"),
+          },
+          {
+            text: "설치",
+            link: utils.getNavItemForLanguage(installationNavItem, "ko"),
+          },
+          { text: "연락처", children: contactNavItems },
+          {
+            text: "후원",
+            link: utils.getNavItemForLanguage(donateNavItem, "ko"),
+          },
+        ],
+        sidebar: [
+          {
+            text: "시작하기",
+            children: utils.getNavItemsForLanguage(
+              gettingStartedNavItems,
+              "ko",
+            ),
+          },
+          {
+            text: "설치",
+            children: utils.getNavItemsForLanguage(installationNavItems, "ko"),
+          },
+          {
+            text: "편집기",
+            children: utils.getNavItemsForLanguage(editorNavItems, "ko"),
+          },
+          {
+            text: "스크립팅",
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "ko"),
+          },
+          {
+            text: "기여하기",
+            children: utils.getNavItemsForLanguage(contributingNavItems, "ko"),
+          },
+          {
+            text: "자주 묻는 질문",
+            children: utils.getNavItemsForLanguage(faqNavItems, "ko"),
+          },
+          {
+            text: "블로그 (영어)",
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "변경 로그 (영어)",
+            children: [changelogNavItem],
+          },
+        ],
+      },
     },
   }),
 
