@@ -4,6 +4,10 @@
 
 import ".shared/common.just"
 
+# Variables
+
+zellijSession := "qownnote-webpage"
+
 # By default, run the `--list` command
 default:
     @just --list
@@ -27,13 +31,17 @@ open-browser:
 
 # Open a terminal with the qownnote-webpage session
 [group('dev')]
-term:
-    zellij --layout term.kdl attach qownnote-webpage -c
+term-run:
+    zellij --layout term.kdl attach {{ zellijSession }} -c
 
 # Kill the qownnote-webpage session
 [group('dev')]
 term-kill:
-    zellij delete-session qownnote-webpage -f
+    -zellij delete-session {{ zellijSession }} -f
+
+# Kill and run a terminal with the qownnote-webpage session
+[group('dev')]
+term: term-kill term-run
 
 # Build for production
 [group('build')]
