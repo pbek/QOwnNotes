@@ -3,9 +3,7 @@
     <v-snackbar
       id="poll"
       v-model="snackbar"
-      fixed
-      bottom
-      right
+      location="bottom right"
       color="#389d70"
       :timeout="-1"
     >
@@ -17,16 +15,18 @@
         @keydown.enter="submit"
       ></v-text-field>
 
-      <v-btn light @click="submit" title="Submit your answer"> Submit </v-btn>
-      <v-btn text title="Close poll" @click="snackbar = false">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
+      <template v-slot:actions>
+        <v-btn variant="flat" @click="submit" title="Submit your answer"
+          >Submit</v-btn
+        >
+        <v-btn variant="text" title="Close poll" @click="snackbar = false">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </template>
     </v-snackbar>
     <v-snackbar
       v-model="success"
-      fixed
-      bottom
-      right
+      location="bottom right"
       color="#389d70"
       :timeout="1500"
     >
@@ -35,53 +35,62 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["action", "name"],
-  data() {
-    return {
-      snackbar: false,
-      success: false,
-      answer: "",
-      pollId: 1,
-      sentPolls: [],
-    };
-  },
-  mounted() {
-    this.sentPolls = JSON.parse(
+<script setup>
+import { ref, onMounted } from "vue";
+
+defineProps({
+  action: String,
+  name: String,
+});
+
+const snackbar = ref(false);
+const success = ref(false);
+const answer = ref("");
+const pollId = ref(1);
+const sentPolls = ref([]);
+
+onMounted(() => {
+  if (typeof window !== "undefined") {
+    sentPolls.value = JSON.parse(
       window.localStorage.getItem("qon-polls") || "[]",
     );
 
     // turn on poll snackbar if poll wasn't sent already
-    if (!this.sentPolls.includes(this.pollId)) {
-      this.snackbar = true;
+    if (!sentPolls.value.includes(pollId.value)) {
+      snackbar.value = true;
     }
-  },
-  methods: {
-    submit() {
-      if (this.answer === "") {
-        return;
-      }
+  }
+});
 
-      // store that poll was sent, so it will not be asked for next time
-      // (local storage will be synced across devices by the browser)
-      this.sentPolls.push(this.pollId);
-      window.localStorage.setItem("qon-polls", JSON.stringify(this.sentPolls));
+const submit = () => {
+  if (answer.value === "") {
+    return;
+  }
 
-      // check if the Matomo library is available
-      if (typeof _paq !== "undefined") {
-        _paq.push(["trackEvent", "Poll", "Found out about QON", this.answer]);
-      }
+  // store that poll was sent, so it will not be asked for next time
+  // (local storage will be synced across devices by the browser)
+  sentPolls.value.push(pollId.value);
+  if (typeof window !== "undefined") {
+    window.localStorage.setItem("qon-polls", JSON.stringify(sentPolls.value));
 
-      this.snackbar = false;
-      this.success = true;
-    },
-  },
+    // check if the Matomo library is available
+    if (typeof window._paq !== "undefined") {
+      window._paq.push([
+        "trackEvent",
+        "Poll",
+        "Found out about QON",
+        answer.value,
+      ]);
+    }
+  }
+
+  snackbar.value = false;
+  success.value = true;
 };
 </script>
 
 <style>
-#poll .v-snack__wrapper {
+#poll .v-snackbar__content {
   width: 352px;
   min-width: 100px;
 }

@@ -12,6 +12,8 @@ config.local.js
 basement_dist
 /scripts/vendor/
 .shared
+src/.vuepress/.cache
+src/.vuepress/.temp
 
 # Devenv
 .devenv*

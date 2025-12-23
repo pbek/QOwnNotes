@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Open source Markdown note taking for Linux, macOS and Windows, that works together with Nextcloud Notes",
   "main": "index.js",
+  "type": "module",
   "authors": {
     "name": "Patrizio Bekerle",
     "email": "patrizio@bekerle.com"
@@ -14,22 +15,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuejs-community/vue-filter-date-format": "^1.6.2",
-    "@vuejs-community/vue-filter-date-parse": "^1.2.0",
-    "@vuepress/plugin-back-to-top": "^1.6.0",
-    "@vuepress/plugin-medium-zoom": "^1.6.0",
-    "markdown-it": "^12.3.2",
+    "@vuepress/bundler-vite": "next",
+    "@vuepress/theme-default": "next",
+    "glob": "^10.3.10",
+    "lodash-es": "^4.17.21",
+    "markdown-it": "^14.1.0",
     "markdown-it-meta": "^0.0.1",
-    "vuepress": "^1.9.0",
-    "vuepress-plugin-canonical": "^1.0.0",
-    "vuepress-plugin-feed": "^0.1.8",
-    "vuepress-plugin-matomo": "^1.0.2",
-    "vuepress-plugin-mermaidjs": "^1.8.0",
-    "vuepress-plugin-seo": "^0.1.4",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "sass": "^1.83.0",
+    "vuepress": "next"
   },
   "dependencies": {
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuetify": "^2.6.10"
+    "vuetify": "^3.7.4",
+    "@mdi/font": "^7.4.47",
+    "date-fns": "^3.0.0"
   }
 }

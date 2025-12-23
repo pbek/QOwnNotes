@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  languages.javascript.package = pkgs.nodejs_20;
+  # languages.javascript.package = pkgs.nodejs_20;
 
   # https://devenv.sh/packages/
   packages = with pkgs; [

@@ -1,42 +1,53 @@
 <template>
   <div>
-    <v-card v-for="page in files" class="mx-auto" outlined>
-      <v-list-item three-line>
-        <v-list-item-content>
+    <v-card
+      v-for="page in files"
+      :key="page.path"
+      class="mx-auto"
+      variant="outlined"
+    >
+      <v-list-item>
+        <template v-slot:default>
           <div class="overline mb-4">
-            {{
-              page.frontmatter.date
-                | dateParse("YYYY-MM-DDTHH")
-                | dateFormat("YYYY-MM-DD")
-            }}
+            {{ formatDate(page.frontmatter.date) }}
           </div>
-          <v-list-item-title class="headline mb-1">
-            <a v-bind:href="page.path">{{ page.title }}</a>
+          <v-list-item-title class="text-h5 mb-1">
+            <a :href="page.path">{{ page.title }}</a>
           </v-list-item-title>
-          <v-list-item-subtitle>{{
-            page.frontmatter.description
-          }}</v-list-item-subtitle>
-        </v-list-item-content>
+          <v-list-item-subtitle>
+            {{ page.frontmatter.description }}
+          </v-list-item-subtitle>
+        </template>
       </v-list-item>
     </v-card>
   </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    files() {
-      // console.log("this.$site.pages.reverse()", this.$site.pages.reverse());
-      return this.$site.pages.reverse().filter((p) => {
-        return p.path.indexOf("/blog/") >= 0 && p.title !== "Overview";
-      });
-    },
-  },
+<script setup>
+import { computed } from "vue";
+import { usePageData, useSiteData } from "vuepress/client";
+import { format, parse } from "date-fns";
+
+const siteData = useSiteData();
+
+const files = computed(() => {
+  return [...siteData.value.pages]
+    .reverse()
+    .filter((p) => p.path.indexOf("/blog/") >= 0 && p.title !== "Overview");
+});
+
+const formatDate = (dateString) => {
+  try {
+    const date = parse(dateString, "yyyy-MM-dd'T'HH", new Date());
+    return format(date, "yyyy-MM-dd");
+  } catch (e) {
+    return dateString;
+  }
 };
 </script>
+
 <style scoped>
 .v-card {
-  /*padding: 0;*/
   margin: 10px 0;
 }
 </style>

@@ -1,5 +1,6 @@
 # Use `just <recipe>` to run a recipe
 # https://just.systems/man/en/
+# Updated for VuePress 2 + Vuetify 3
 
 import ".shared/common.just"
 
@@ -22,7 +23,7 @@ dev:
 # Open a browser to the local dev server
 [group('dev')]
 open-browser:
-    xdg-open http://0.0.0.0:8080/
+    xdg-open http://localhost:8080/
 
 # Open a terminal with the qownnote-webpage session
 [group('dev')]
@@ -33,3 +34,40 @@ term:
 [group('dev')]
 term-kill:
     zellij delete-session qownnote-webpage -f
+
+# Build for production
+[group('build')]
+build:
+    npm run build
+
+# Clean build artifacts
+[group('build')]
+clean:
+    rm -rf src/.vuepress/dist src/.vuepress/.cache src/.vuepress/.temp
+
+# Install dependencies
+[group('setup')]
+install:
+    npm install --legacy-peer-deps
+
+# Clean install
+[group('setup')]
+clean-install:
+    rm -rf node_modules package-lock.json
+    npm install --legacy-peer-deps
+
+# Test config loads
+[group('test')]
+test-config:
+    node test-config.mjs
+
+# Show VuePress info
+[group('info')]
+info:
+    npx vuepress info
+
+# Check for outdated packages
+[group('info')]
+outdated:
+    npm outdated
+
