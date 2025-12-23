@@ -110,6 +110,19 @@ export default defineUserConfig({
   title: "QOwnNotes",
   description: description,
 
+  // Disable SSR preloading to avoid CSS import issues
+  shouldPreload: false,
+  shouldPrefetch: false,
+
+  // Configure bundler - handle Vuetify for SSR
+  bundler: viteBundler({
+    viteOptions: {
+      ssr: {
+        noExternal: ["vuetify"],
+      },
+    },
+  }),
+
   head: [
     ["meta", { name: "theme-color", content: "#3eaf7c" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
@@ -172,8 +185,6 @@ export default defineUserConfig({
     "/pl/": { lang: "pl-PL", title: "QOwnNotes" },
     "/ko/": { lang: "ko-KR", title: "QOwnNotes" },
   },
-
-  bundler: viteBundler(),
 
   theme: customTheme({
     repo: "pbek/QOwnNotes",

@@ -2,7 +2,10 @@
 
 set -e
 
-# Copy missing assets
+#echo "🔧 Fixing HTML issues in markdown files..."
+#python3 ./scripts/fix-markdown-html.py
+
+echo ""
 echo "📦 Copying assets..."
 cp -R ../screenshots src/.vuepress/public 2>/dev/null || echo "⚠️  Screenshots not found, skipping"
 cp ../CHANGELOG.md src/changelog.md 2>/dev/null || echo "⚠️  CHANGELOG.md not found, skipping"

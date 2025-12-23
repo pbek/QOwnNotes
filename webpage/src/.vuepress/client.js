@@ -1,6 +1,23 @@
 import { defineClientConfig } from "vuepress/client";
 import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
+import {
+  VBtn,
+  VCard,
+  VCardText,
+  VCardTitle,
+  VChip,
+  VCol,
+  VContainer,
+  VIcon,
+  VList,
+  VListItem,
+  VListItemSubtitle,
+  VListItemTitle,
+  VListSubheader,
+  VRow,
+  VSnackbar,
+  VTextField,
+} from "vuetify/components";
 import * as directives from "vuetify/directives";
 import "vuetify/styles";
 import "@mdi/font/css/materialdesignicons.css";
@@ -13,9 +30,26 @@ import ProfileCard from "./components/ProfileCard.vue";
 
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
-    // Create Vuetify instance
+    // Create Vuetify instance with only the components we use
     const vuetify = createVuetify({
-      components,
+      components: {
+        VBtn,
+        VCard,
+        VCardText,
+        VCardTitle,
+        VChip,
+        VCol,
+        VContainer,
+        VIcon,
+        VList,
+        VListItem,
+        VListItemSubtitle,
+        VListItemTitle,
+        VListSubheader,
+        VRow,
+        VSnackbar,
+        VTextField,
+      },
       directives,
       theme: {
         defaultTheme: "light",

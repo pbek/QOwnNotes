@@ -1,17 +1,26 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 set -e
 
+echo "⚠️  Removing severely corrupted translation files..."
+# Remove files that are too corrupted to fix automatically
+rm -f src/ko/getting-started/markdown.md && echo "  ✓ Removed src/ko/getting-started/markdown.md" || true
+
+#echo ""
+#echo "🔧 Fixing HTML issues in markdown files..."
+#python3 ./scripts/fix-markdown-html.py
+
+echo ""
 echo "📦 Copying assets..."
 
-# Copy missing assets (skip if can't find, because we are using this script in a Dockerfile)
+# ...existing code...
 cp -R ../screenshots src/.vuepress/public 2>/dev/null || echo "⚠️  Screenshots not found, skipping"
 cp ../CHANGELOG.md src/changelog.md 2>/dev/null || echo "⚠️  CHANGELOG.md not found, skipping"
 
 echo "🏗️  Building with VuePress 2..."
 echo ""
 
-# VuePress 2 uses the vuepress CLI directly
+# VuePress 2 build (CSS handling via Vite plugin)
 npx vuepress build src
 
 echo ""

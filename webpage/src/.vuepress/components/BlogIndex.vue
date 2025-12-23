@@ -31,7 +31,11 @@ import { format, parse } from "date-fns";
 const siteData = useSiteData();
 
 const files = computed(() => {
-  return [...siteData.value.pages]
+  const pages = siteData.value.pages;
+  if (!pages || !Array.isArray(pages)) {
+    return [];
+  }
+  return [...pages]
     .reverse()
     .filter((p) => p.path.indexOf("/blog/") >= 0 && p.title !== "Overview");
 });
