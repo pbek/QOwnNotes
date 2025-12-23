@@ -18,7 +18,7 @@ yay -S qownnotes
 
 ## pacman
 
-أضف السطور التالية إلى ملف <code dir="ltr">/etc/pacman.conf</code> لديك بأمر التحرير <code dir="ltr">sudo nano /etc/pacman.conf</code>:
+أضف السطور التالية إلى ملف `/etc/pacman.conf`لديك بأمر التحرير `sudo nano /etc/pacman.conf`:
 
 ```ini
 [home_pbek_QOwnNotes_Arch_Extra]

@@ -349,7 +349,7 @@ Script {
 للمزيد من بعض الأمثلة يمكنك أن تلقي نظرة على [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل <code dir="ltr">--action customAction_&lt;المعرِّف&gt;</code>. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل `--action customAction_&lt;المعرِّف&gt;`. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
 ## Registering a label
@@ -1416,7 +1416,7 @@ script.clearCacheDir("my-script-id");
 
 ## قراءة مسار مجلد بُريمجك
 
-إذا احتجت إلى الحصول على مسار المجلد الذي يقع بُريمِجك فيه، لتحميل ملفات أخرى مثلا، عليك تسجيل الخاصية النصية `scriptDirPath` (بالكود <code dir="ltr">property string scriptDirPath;</code>). ستُضبط هذه الخاصية إلى مسار مجلد بُريمِجك.
+إذا احتجت إلى الحصول على مسار المجلد الذي يقع بُريمِجك فيه، لتحميل ملفات أخرى مثلا، عليك تسجيل الخاصية النصية `scriptDirPath` (بالكود `property string scriptDirPath;`). ستُضبط هذه الخاصية إلى مسار مجلد بُريمِجك.
 
 ### مثال
 

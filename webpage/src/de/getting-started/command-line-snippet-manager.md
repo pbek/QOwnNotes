@@ -91,7 +91,6 @@ Wenn Sie vor dem Inline-Codeblock ein `cmd:` hinzufügen, wird der Befehl auch i
      Echo mach das
     ```
 
-
     ## Mach etwas anderes mit einem "sh" Codeblock
 
     ```sh

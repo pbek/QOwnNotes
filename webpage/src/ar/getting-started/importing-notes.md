@@ -19,14 +19,13 @@ There is an Evernote import dialog you can reach in the `Note / Import` menu to 
 ## Google Keep
 
 > استخدم Google Takeout لتنزيل مهام Keep
-> 
+>
 > استخرج محتويات الملف المضغوط
-> 
+>
 > نزّل keep_to_markdown.py إلى جوار مجلد Keep الذي استخرجته
-> 
+>
 >     python keep_to_markdown.py Keep out/
->     
-> 
+>
 > أبدل الاسم Keep في الأمر باسم المجلد الذي فيه الملاحظات بصيغة JSON. ومجلد out سيُنشأ إذا لم يكن موجودا.
 
 من <https://gitlab.com/-/snippets/2002921>
@@ -64,6 +63,6 @@ sudo make install
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-إذا واجهت أخطاء بخصوص يونيكود بسبب ملفات ملاحظات معينة، عليك فقط أن تزيل هذه الملاحظات وتنفّذ أمر التحويل مجددا حتى يعطيك رسالة تقول <code dir="ltr">Saving...</code> . ستجد ملفًا اسمه `EXPORT.enex` والذي يمكنك عندئذٍ استيراده إلى QOwnNotes.
+إذا واجهت أخطاء بخصوص يونيكود بسبب ملفات ملاحظات معينة، عليك فقط أن تزيل هذه الملاحظات وتنفّذ أمر التحويل مجددا حتى يعطيك رسالة تقول `Saving...`. ستجد ملفًا اسمه `EXPORT.enex` والذي يمكنك عندئذٍ استيراده إلى QOwnNotes.
 
 عند الاستيراد إلى QOwnNotes، قد تود تعطيل جميع الخصائص المراد استيرادها، ربما باستثناء تاريخ الإنشاء والتحديث، لأن تومبوي لا يدعم تلك الخصائص.

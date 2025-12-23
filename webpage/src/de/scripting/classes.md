@@ -36,14 +36,14 @@ Sie können die Methoden von [Datum](https://developer.mozilla.org/en-US/docs/We
 ### Beispiel
 
 ```js
-script.log (note.fileCreated.toISOString ());
-script.log (note.fileLastModified.getFullYear ());
+script.log(note.fileCreated.toISOString());
+script.log(note.fileLastModified.getFullYear());
 
 // benennt eine Notiz in "new name.md" um
-note.renameNoteFile ("new name");
+note.renameNoteFile("new name");
 
 // prüfe ob es einen anderen Namen der Notendatei als die Überschrift haben darf
-script.log (note.allowDifferentFileName());
+script.log(note.allowDifferentFileName());
 ```
 
 ## NoteSubFolder
@@ -174,7 +174,8 @@ mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
 // Inserts html in the current note as markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline
+some text");
 
 // Set 'Edit' workspace as current workspace
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));

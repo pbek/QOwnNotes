@@ -67,7 +67,7 @@
   - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> doet hetzelfde
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> verwijdert de huidige regel
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> verwijdert het huidige woord
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <0>L</0> opent een dialoogvenster om een notitielink toe te voegen
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + L opent een dialoogvenster om een notitielink toe te voegen
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>L</kbd> opent een dialoogvenster om een notitielink toe te voegen
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> voegt de huidige datum en tijd in een gebruikersspecifiek formaat in
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> voegt een afbeelding in (de afbeelding wordt gekopieerd naar de map `media` in de huidige notitiemap)

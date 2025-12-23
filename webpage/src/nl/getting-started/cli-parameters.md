@@ -9,10 +9,10 @@ U kunt deze parameters op de opdrachtregelinterface (CLI) gebruiken om het gedra
 | `--portable`                 | Start de applicatie in draagbare modus                                                                                              |
 | `--clear-settings`           | Wist de instellingen en start de applicatie                                                                                         |
 | `--dump-settings`            | Print een dump van de instellingen en andere informatie over de applicatie en omgeving in GitHub Markdown en sluit de applicatie af |
-| `--session <name>`     | Voert de applicatie uit in een andere context voor instellingen en interne bestanden                                                |
+| `--session <name>`           | Voert de applicatie uit in een andere context voor instellingen en interne bestanden                                                |
 | `--allow-multiple-instances` | Maakt het mogelijk om meerdere exemplaren van QOwnNotes te starten, zelfs als dit niet is toegestaan in de instellingen             |
-| `--action <name>`      | Activeert een menuactie nadat de applicatie is gestart (zie hieronder)                                                              |
-| `--completion <shell>` | Genereer shell-voltooiingscode. Met ondersteuning voor `fish`, `bash`.                                                              |
+| `--action <name>`            | Activeert een menuactie nadat de applicatie is gestart (zie hieronder)                                                              |
+| `--completion <shell>`       | Genereer shell-voltooiingscode. Met ondersteuning voor `fish`, `bash`.                                                              |
 
 ::: tip
 Als u problemen ondervindt met uw installatie van QOwnNotes, wilt u misschien de toepassing starten met nieuwe instellingen zonder uw huidige instellingen te verliezen door de parameter `--session` te gebruiken.
@@ -33,7 +33,7 @@ U kunt de toepassing op de opdrachtregelinterface op verschillende besturingssys
 
 ::: tip
 Om de instellingendump rechtstreeks naar het klembord te kopiëren en dit te gebruiken bij de melding van een [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) kunt u `xclip</1 gebruiken>
-of <code>xsel` op Linux, `pbcopy` op macOS en `clip` op Windows:
+of `xsel`op Linux,`pbcopy`op macOS en`clip` op Windows:
 
 ```bash
 # Kopieer de instellingendump naar het klembord met xclip op Linux

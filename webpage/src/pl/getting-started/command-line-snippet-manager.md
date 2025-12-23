@@ -91,7 +91,6 @@ Jeśli dodasz `cmd:` przed blokiem kodu w wierszu, polecenie zostanie również 
      echo zrób to
     ```
 
-
     ## Zrób coś innego z blokiem kodu „sh”
 
     ```sh
