@@ -1,19 +1,27 @@
-version: "3"
 services:
+  # Development server with VuePress 2 + Vuetify 3
   dev:
-    image: node:20
+    image: node:22-alpine
     volumes:
       - .:/app
-    user: 1000:1000
+      - node_modules:/app/node_modules # Named volume for node_modules
     ports:
       - "8080:8080"
-    command: ["/bin/bash", "-c", "cd /app && npm install && npm run dev"]
-#  web:
-#    image: img-qownnotes-webpage
-#    build: .
-#    container_name: qownnotes-webpage
-#    restart: always
-#    ports:
-#      - "8081:80"
-#    extra_hosts:
-#      - "qownnotes-api: 127.0.0.1"
+    working_dir: /app
+    command: ["/bin/sh", "-c", "npm install --legacy-peer-deps && npm run dev"]
+    environment:
+      - NODE_ENV=development
+
+  # Production build and serve
+  web:
+    # image: qownnotes-webpage:latest
+    build: .
+    container_name: qownnotes-webpage
+    restart: always
+    ports:
+      - "8081:80"
+    extra_hosts:
+      - "qownnotes-api:127.0.0.1"
+
+volumes:
+  node_modules:

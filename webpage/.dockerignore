@@ -1,0 +1,41 @@
+# Node modules (will be installed in container)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Build output (will be generated in container)
+src/.vuepress/dist/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!README.md
+
+# Development files
+.devenv/
+.devenv.flake.nix
+devenv.lock
+devenv.nix
+devenv.yaml
+.envrc
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test-config.mjs
+.playwright-mcp/
+
+# Build artifacts from local builds
+build-*/
+
