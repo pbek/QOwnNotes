@@ -37,7 +37,7 @@ function deepMerge(target, source) {
 }
 
 const configs = {
-  dev: defaultConfig,
+  prod: defaultConfig,
   local: deepMerge(defaultConfig, localOverride),
 };
 
