@@ -64,6 +64,36 @@ export default defineClientConfig({
     app.component("BlogDate", BlogDate);
     app.component("BlogIndex", BlogIndex);
     app.component("ProfileCard", ProfileCard);
+
+    // Initialize Matomo Analytics (client-side only)
+    if (typeof window !== "undefined") {
+      // Matomo tracking code
+      window._paq = window._paq || [];
+      window._paq.push(["trackPageView"]);
+      window._paq.push(["enableLinkTracking"]);
+
+      (function () {
+        var u = "https://p.bekerle.com/";
+        window._paq.push(["setTrackerUrl", u + "matomo.php"]);
+        window._paq.push(["setSiteId", "7"]);
+
+        var d = document;
+        var g = d.createElement("script");
+        var s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+
+      // Track page changes on route navigation
+      router.afterEach((to) => {
+        if (window._paq) {
+          window._paq.push(["setCustomUrl", window.location.href]);
+          window._paq.push(["setDocumentTitle", document.title]);
+          window._paq.push(["trackPageView"]);
+        }
+      });
+    }
   },
   setup() {},
   rootComponents: [],
