@@ -5,6 +5,9 @@ import { createRequire } from "module";
 import * as utils from "./utils.js";
 import { markdownChartPlugin } from "@vuepress/plugin-markdown-chart";
 import { markdownExtPlugin } from "@vuepress/plugin-markdown-ext";
+import { seoPlugin } from "@vuepress/plugin-seo";
+import { sitemapPlugin } from "@vuepress/plugin-sitemap";
+import { feedPlugin } from "@vuepress/plugin-feed";
 
 const require = createRequire(import.meta.url);
 const { description } = require("../../package.json");
@@ -135,6 +138,50 @@ export default defineUserConfig({
     // Task lists and other extensions
     markdownExtPlugin({
       tasklist: true,
+    }),
+    // SEO plugin - https://ecosystem.vuejs.press/plugins/seo/seo/
+    seoPlugin({
+      hostname: "https://www.qownnotes.org",
+      canonical: "https://www.qownnotes.org",
+      author: {
+        name: "Patrizio Bekerle",
+        twitter: "PatrizioBekerle",
+      },
+      ogp: (ogp, page) => ({
+        ...ogp,
+        "og:image": page.frontmatter.image
+          ? page.frontmatter.image.startsWith("http")
+            ? page.frontmatter.image
+            : `https://www.qownnotes.org${page.frontmatter.image}`
+          : "https://www.qownnotes.org/screenshots/screenshot.png",
+      }),
+    }),
+    // Sitemap plugin - https://ecosystem.vuejs.press/plugins/seo/sitemap/
+    sitemapPlugin({
+      hostname: "https://www.qownnotes.org",
+      excludeUrls: ["/404.html"],
+    }),
+    // Feed plugin - https://ecosystem.vuejs.press/plugins/blog/feed/
+    feedPlugin({
+      hostname: "https://www.qownnotes.org",
+      rss: true,
+      atom: true,
+      json: true,
+      channel: {
+        title: "QOwnNotes Blog",
+        description:
+          "News about QOwnNotes, the open source markdown note taking application for Linux, macOS and Windows, that works together with Nextcloud Notes",
+      },
+      filter: ({ frontmatter, filePathRelative }) => {
+        // Only include blog posts in the feed
+        return filePathRelative && filePathRelative.startsWith("blog/");
+      },
+      sorter: (a, b) => {
+        // Sort by date, newest first
+        return (
+          new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+        );
+      },
     }),
   ],
 
