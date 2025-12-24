@@ -9,3 +9,4 @@ inputs:
 imports:
   - shared/common
   - shared/javascript
+  - shared/playwright

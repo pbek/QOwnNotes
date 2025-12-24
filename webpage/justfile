@@ -79,3 +79,12 @@ info:
 outdated:
     npm outdated
 
+# Open the playwright test UI
+[group('dev')]
+playwright-test-ui:
+    npm run playwright:test:ui
+
+# Run the playwright tests
+[group('dev')]
+playwright-test test='':
+    npm run playwright:test -- tests/{{ test }}

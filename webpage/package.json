@@ -11,10 +11,15 @@
   "repository": "/qownnotes-webpage",
   "scripts": {
     "dev": "./scripts/run-dev.sh",
-    "build": "./scripts/run-build.sh"
+    "build": "./scripts/run-build.sh",
+    "playwright:test": "TEST_ENV=prod playwright test",
+    "playwright:test:ui": "TEST_ENV=prod playwright test --ui",
+    "playwright:test:local": "TEST_ENV=local playwright test",
+    "playwright:test:local:ui": "TEST_ENV=local playwright test --ui"
   },
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "1.54.1",
     "@vuepress/bundler-vite": "next",
     "@vuepress/plugin-feed": "next",
     "@vuepress/plugin-markdown-chart": "^2.0.0-rc.109",
@@ -25,6 +30,7 @@
     "@vuepress/plugin-seo": "next",
     "@vuepress/plugin-sitemap": "next",
     "@vuepress/theme-default": "next",
+    "playwright-core": "1.54.1",
     "glob": "^10.3.10",
     "lodash-es": "^4.17.21",
     "markdown-it": "^14.1.0",
