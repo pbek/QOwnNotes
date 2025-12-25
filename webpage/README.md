@@ -28,5 +28,5 @@ If you run `npm run build` the webpage will be built in production mode in `webp
 
 ## Customization
 
-- Styles are mainly stored in [index.styl](https://github.com/pbek/QOwnNotes/blob/main/webpage/src/.vuepress/styles/index.styl)
+- Styles are mainly stored in [index.scss](https://github.com/pbek/QOwnNotes/blob/main/webpage/src/.vuepress/styles/index.scss)
 - Menus and configuration is stored are [config.js](https://github.com/pbek/QOwnNotes/blob/main/webpage/src/.vuepress/config.js)
