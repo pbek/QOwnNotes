@@ -4,6 +4,11 @@
  * ref: https://v2.vuepress.vuejs.org/reference/default-theme/styles.html
  */
 
+// Increase content width to 900px
+.vp-page [vp-content] {
+  max-width: 900px;
+}
+
 // .home .hero img {
 //   max-width: 450px !important;
 // }
