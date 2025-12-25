@@ -10,6 +10,9 @@ import BlogDate from './components/BlogDate.vue'
 import BlogIndex from './components/BlogIndex.vue'
 import ProfileCard from './components/ProfileCard.vue'
 
+// Import Matomo analytics (replaces vuepress-plugin-matomo)
+import { initMatomo } from './utils/matomo.js'
+
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
     // Create Vuetify instance
@@ -29,6 +32,9 @@ export default defineClientConfig({
     app.component('BlogDate', BlogDate)
     app.component('BlogIndex', BlogIndex)
     app.component('ProfileCard', ProfileCard)
+
+    // Initialize Matomo Analytics (replaces vuepress-plugin-matomo)
+    initMatomo(router)
   },
   setup() {},
   rootComponents: [],
