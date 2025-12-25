@@ -1,0 +1,45 @@
+name: Build and Deploy Webpage Next
+on:
+  push:
+    branches: ["feature/vuepress-next"]
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
+    # if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = ".github/workflows/build-deploy-webpage.yml" ]] ;
+    paths:
+      - "CHANGELOG.md"
+      - "screenshots/**"
+      - "webpage/**"
+      - ".github/workflows/build-deploy-webpage-next.yml"
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: webpage
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        # copy screenshots and changelog to webpage folder
+      - run: cp ../screenshots src/.vuepress/public -R; cp ../CHANGELOG.md src/changelog.md
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          #path: ./webpage
+          context: ./webpage
+          file: ./webpage/Dockerfile
+          tags: pbeke/qownnotes-webpage-next:latest
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
