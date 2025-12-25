@@ -201,6 +201,10 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
   - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 
 <style>
+.v-divider {
+  margin: 20px;
+}
+
 .sheet {
   position: absolute;
   bottom: 50px;
