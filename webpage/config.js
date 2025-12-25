@@ -14,6 +14,10 @@ let localOverride = {
   baseURL: "http://localhost:8080/",
 };
 
+let localDockerOverride = {
+  baseURL: "http://localhost:8081/",
+};
+
 function deepMerge(target, source) {
   const result = structuredClone(target);
 
@@ -39,6 +43,7 @@ function deepMerge(target, source) {
 const configs = {
   prod: defaultConfig,
   local: deepMerge(defaultConfig, localOverride),
+  "local-docker": deepMerge(defaultConfig, localDockerOverride),
 };
 
 /**

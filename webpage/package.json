@@ -15,7 +15,9 @@
     "playwright:test": "TEST_ENV=prod playwright test",
     "playwright:test:ui": "TEST_ENV=prod playwright test --ui",
     "playwright:test:local": "TEST_ENV=local playwright test",
-    "playwright:test:local:ui": "TEST_ENV=local playwright test --ui"
+    "playwright:test:local:ui": "TEST_ENV=local playwright test --ui",
+    "playwright:test:local-docker": "TEST_ENV=local-docker playwright test",
+    "playwright:test:local-docker:ui": "TEST_ENV=local-docker playwright test --ui"
   },
   "license": "MIT",
   "devDependencies": {
