@@ -175,6 +175,11 @@ onMounted(() => {
   display: block;
 }
 
+.v-carousel-item {
+  position: relative;
+  padding-bottom: 50px; /* Space for controls */
+}
+
 .sheet {
   background: rgba(0, 0, 0, 0.7);
   color: white;
@@ -184,5 +189,18 @@ onMounted(() => {
   bottom: 0;
   left: 0;
   right: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Ensure carousel controls don't overlap with text */
+:deep(.v-carousel__controls) {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 </style>
