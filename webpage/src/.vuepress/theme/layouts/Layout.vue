@@ -16,15 +16,12 @@
           </a>
         </div>
       </div>
-
-      <Poll />
     </template>
   </Layout>
 </template>
 
 <script setup>
 import Layout from "@vuepress/theme-default/layouts/Layout.vue";
-import Poll from "../../components/Poll.vue";
 </script>
 
 <style scoped>
