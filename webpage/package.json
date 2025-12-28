@@ -23,6 +23,7 @@
   "devDependencies": {
     "@playwright/test": "1.54.1",
     "@vuepress/bundler-vite": "next",
+    "@vuepress/plugin-docsearch": "next",
     "@vuepress/plugin-feed": "next",
     "@vuepress/plugin-markdown-chart": "^2.0.0-rc.109",
     "@vuepress/plugin-markdown-container": "^2.0.0-rc.30",

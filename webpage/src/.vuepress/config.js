@@ -3,6 +3,7 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import customTheme from "./theme/index.js";
 import { createRequire } from "module";
 import * as utils from "./utils.js";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { markdownChartPlugin } from "@vuepress/plugin-markdown-chart";
 import { markdownExtPlugin } from "@vuepress/plugin-markdown-ext";
 import { seoPlugin } from "@vuepress/plugin-seo";
@@ -130,6 +131,113 @@ export default defineUserConfig({
 
   // Plugins
   plugins: [
+    // DocSearch plugin - https://ecosystem.vuejs.press/plugins/search/docsearch.html
+    docsearchPlugin({
+      appId: "LP8PS829KJ",
+      apiKey: "52d0b99615b7586dcd5a360a5cfe3f07",
+      indexName: "qownnotes",
+      locales: {
+        "/": {
+          placeholder: "Search Documentation",
+          translations: {
+            button: {
+              buttonText: "Search",
+              buttonAriaLabel: "Search",
+            },
+          },
+        },
+        "/de/": {
+          placeholder: "Dokumentation durchsuchen",
+          translations: {
+            button: {
+              buttonText: "Suchen",
+              buttonAriaLabel: "Suchen",
+            },
+          },
+        },
+        "/it/": {
+          placeholder: "Cerca documentazione",
+          translations: {
+            button: {
+              buttonText: "Cerca",
+              buttonAriaLabel: "Cerca",
+            },
+          },
+        },
+        "/fr/": {
+          placeholder: "Rechercher dans la documentation",
+          translations: {
+            button: {
+              buttonText: "Rechercher",
+              buttonAriaLabel: "Rechercher",
+            },
+          },
+        },
+        "/es/": {
+          placeholder: "Buscar documentación",
+          translations: {
+            button: {
+              buttonText: "Buscar",
+              buttonAriaLabel: "Buscar",
+            },
+          },
+        },
+        "/fa/": {
+          placeholder: "جستجوی مستندات",
+          translations: {
+            button: {
+              buttonText: "جستجو",
+              buttonAriaLabel: "جستجو",
+            },
+          },
+        },
+        "/nl/": {
+          placeholder: "Zoek documentatie",
+          translations: {
+            button: {
+              buttonText: "Zoeken",
+              buttonAriaLabel: "Zoeken",
+            },
+          },
+        },
+        "/hu/": {
+          placeholder: "Dokumentáció keresése",
+          translations: {
+            button: {
+              buttonText: "Keresés",
+              buttonAriaLabel: "Keresés",
+            },
+          },
+        },
+        "/ar/": {
+          placeholder: "البحث في الوثائق",
+          translations: {
+            button: {
+              buttonText: "بحث",
+              buttonAriaLabel: "بحث",
+            },
+          },
+        },
+        "/pl/": {
+          placeholder: "Szukaj w dokumentacji",
+          translations: {
+            button: {
+              buttonText: "Szukaj",
+              buttonAriaLabel: "Szukaj",
+            },
+          },
+        },
+        "/ko/": {
+          placeholder: "문서 검색",
+          translations: {
+            button: {
+              buttonText: "검색",
+              buttonAriaLabel: "검색",
+            },
+          },
+        },
+      },
+    }),
     // Mermaid diagrams support (via chart plugin)
     markdownChartPlugin({
       // Enable Mermaid
