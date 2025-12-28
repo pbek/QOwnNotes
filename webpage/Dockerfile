@@ -12,7 +12,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies with legacy peer deps flag for VuePress 2
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 ## Copy scripts first (needed for patching)
 #COPY scripts ./scripts

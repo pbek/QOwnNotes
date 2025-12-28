@@ -56,13 +56,13 @@ clean:
 # Install dependencies
 [group('setup')]
 install:
-    npm install --legacy-peer-deps
+    npm install
 
 # Clean install
 [group('setup')]
 clean-install:
     rm -rf node_modules package-lock.json
-    npm install --legacy-peer-deps
+    npm install
 
 # Test config loads
 [group('test')]

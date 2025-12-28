@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     working_dir: /app
-    command: ["/bin/sh", "-c", "npm install --legacy-peer-deps && npm run dev"]
+    command: ["/bin/sh", "-c", "npm install && npm run dev"]
     environment:
       - NODE_ENV=development
 
