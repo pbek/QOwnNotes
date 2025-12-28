@@ -16,6 +16,7 @@ import Poll from './components/Poll.vue'
 import BlogDate from './components/BlogDate.vue'
 import BlogIndex from './components/BlogIndex.vue'
 import ProfileCard from './components/ProfileCard.vue'
+import ScreenshotCarousel from './components/ScreenshotCarousel.vue'
 
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
@@ -36,6 +37,7 @@ export default defineClientConfig({
     app.component('BlogDate', BlogDate)
     app.component('BlogIndex', BlogIndex)
     app.component('ProfileCard', ProfileCard)
+    app.component('ScreenshotCarousel', ScreenshotCarousel)
 
     // Initialize Matomo Analytics (replaces vuepress-plugin-matomo)
     // Only run in browser environment
