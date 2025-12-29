@@ -376,14 +376,34 @@ export default defineUserConfig({
           { text: "Donate", link: donateNavItem },
         ],
         sidebar: [
-          { text: "Getting started", children: gettingStartedNavItems },
-          { text: "Installation", children: installationNavItems },
-          { text: "Editor", children: editorNavItems },
-          { text: "Scripting", children: scriptingNavItems },
-          { text: "Contributing", children: contributingNavItems },
-          { text: "FAQ", children: faqNavItems },
-          { text: "Blog", children: utils.getChildren("src", "blog", true) },
-          { text: "Changelog", children: [changelogNavItem] },
+          {
+            text: "Getting started",
+            collapsible: true,
+            children: gettingStartedNavItems,
+          },
+          {
+            text: "Installation",
+            collapsible: true,
+            children: installationNavItems,
+          },
+          { text: "Editor", collapsible: true, children: editorNavItems },
+          { text: "Scripting", collapsible: true, children: scriptingNavItems },
+          {
+            text: "Contributing",
+            collapsible: true,
+            children: contributingNavItems,
+          },
+          { text: "FAQ", collapsible: true, children: faqNavItems },
+          {
+            text: "Blog",
+            collapsible: true,
+            children: utils.getChildren("src", "blog", true),
+          },
+          {
+            text: "Changelog",
+            collapsible: true,
+            children: [changelogNavItem],
+          },
         ],
       },
       "/de/": {
@@ -407,6 +427,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Loslegen",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "de",
@@ -414,30 +435,37 @@ export default defineUserConfig({
           },
           {
             text: "Installation",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "de"),
           },
           {
             text: "Editor",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "de"),
           },
           {
             text: "Skripten",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "de"),
           },
           {
             text: "Beitragen",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "de"),
           },
           {
             text: "FAQ",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "de"),
           },
           {
             text: "Blog (auf Englisch)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Änderungsprotokoll (auf Englisch)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -463,6 +491,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Iniziare",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "it",
@@ -470,30 +499,37 @@ export default defineUserConfig({
           },
           {
             text: "Installazione",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "it"),
           },
           {
             text: "Editor",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "it"),
           },
           {
             text: "Scripting",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "it"),
           },
           {
             text: "Contribuire",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "it"),
           },
           {
             text: "FAQ",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "it"),
           },
           {
             text: "Blog (in inglese)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (in inglese)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -519,6 +555,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Commencer",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "fr",
@@ -526,30 +563,37 @@ export default defineUserConfig({
           },
           {
             text: "Installation",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "fr"),
           },
           {
             text: "Éditeur",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "fr"),
           },
           {
             text: "Scripting",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "fr"),
           },
           {
             text: "Contribuer",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "fr"),
           },
           {
             text: "FAQ",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "fr"),
           },
           {
             text: "Blog (en anglais)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (en anglais)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -575,6 +619,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Empezar",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "es",
@@ -582,30 +627,37 @@ export default defineUserConfig({
           },
           {
             text: "Instalación",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "es"),
           },
           {
             text: "Editor",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "es"),
           },
           {
             text: "Scripting",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "es"),
           },
           {
             text: "Contribuir",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "es"),
           },
           {
             text: "FAQ",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "es"),
           },
           {
             text: "Blog (en inglés)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (en inglés)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -631,6 +683,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "شروع",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "fa",
@@ -638,30 +691,37 @@ export default defineUserConfig({
           },
           {
             text: "نصب",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "fa"),
           },
           {
             text: "ویرایشگر",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "fa"),
           },
           {
             text: "اسکریپت نویسی",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "fa"),
           },
           {
             text: "مشارکت",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "fa"),
           },
           {
             text: "سوالات متداول",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "fa"),
           },
           {
             text: "وبلاگ (به انگلیسی)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "تغییرات (به انگلیسی)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -687,6 +747,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Aan de slag",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "nl",
@@ -694,30 +755,37 @@ export default defineUserConfig({
           },
           {
             text: "Installatie",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "nl"),
           },
           {
             text: "Editor",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "nl"),
           },
           {
             text: "Scripting",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "nl"),
           },
           {
             text: "Bijdragen",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "nl"),
           },
           {
             text: "FAQ",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "nl"),
           },
           {
             text: "Blog (in het Engels)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (in het Engels)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -743,6 +811,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Kezdő lépések",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "hu",
@@ -750,30 +819,37 @@ export default defineUserConfig({
           },
           {
             text: "Telepítés",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "hu"),
           },
           {
             text: "Szerkesztő",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "hu"),
           },
           {
             text: "Szkriptelés",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "hu"),
           },
           {
             text: "Közreműködés",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "hu"),
           },
           {
             text: "GYIK",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "hu"),
           },
           {
             text: "Blog (angolul)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Változásnapló (angolul)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -799,6 +875,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "البدء",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "ar",
@@ -806,30 +883,37 @@ export default defineUserConfig({
           },
           {
             text: "التثبيت",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "ar"),
           },
           {
             text: "المحرر",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "ar"),
           },
           {
             text: "البرمجة",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "ar"),
           },
           {
             text: "المساهمة",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "ar"),
           },
           {
             text: "الأسئلة الشائعة",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "ar"),
           },
           {
             text: "المدونة (بالإنجليزية)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "سجل التغييرات (بالإنجليزية)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -855,6 +939,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "Rozpoczęcie",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "pl",
@@ -862,30 +947,37 @@ export default defineUserConfig({
           },
           {
             text: "Instalacja",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "pl"),
           },
           {
             text: "Edytor",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "pl"),
           },
           {
             text: "Skrypty",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "pl"),
           },
           {
             text: "Współpraca",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "pl"),
           },
           {
             text: "FAQ",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "pl"),
           },
           {
             text: "Blog (po angielsku)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Dziennik zmian (po angielsku)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
@@ -911,6 +1003,7 @@ export default defineUserConfig({
         sidebar: [
           {
             text: "시작하기",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(
               gettingStartedNavItems,
               "ko",
@@ -918,30 +1011,37 @@ export default defineUserConfig({
           },
           {
             text: "설치",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(installationNavItems, "ko"),
           },
           {
             text: "편집기",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(editorNavItems, "ko"),
           },
           {
             text: "스크립팅",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(scriptingNavItems, "ko"),
           },
           {
             text: "기여하기",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(contributingNavItems, "ko"),
           },
           {
             text: "자주 묻는 질문",
+            collapsible: true,
             children: utils.getNavItemsForLanguage(faqNavItems, "ko"),
           },
           {
             text: "블로그 (영어)",
+            collapsible: true,
             children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "변경 로그 (영어)",
+            collapsible: true,
             children: [changelogNavItem],
           },
         ],
