@@ -9,25 +9,25 @@ test("blog overview page", async ({ page, config }) => {
   ).toBeVisible();
 
   // Check that blog entries are displayed
-  // There should be multiple blog post cards
-  const blogCards = page.locator(".v-card");
-  await expect(blogCards).not.toHaveCount(0);
+  // There should be multiple blog post articles
+  const blogPosts = page.locator("article.blog-post");
+  await expect(blogPosts).not.toHaveCount(0);
 
   // Check that the first blog entry has a title link
-  const firstCard = blogCards.first();
-  const firstLink = firstCard.locator("a");
+  const firstPost = blogPosts.first();
+  const firstLink = firstPost.locator("a.blog-link");
   await expect(firstLink).toBeVisible();
   await expect(firstLink).toHaveAttribute("href", /\/blog\/.+\.html/);
 
   // Check that blog entries have dates
-  const dateElement = firstCard.locator(".overline");
+  const dateElement = firstPost.locator("time.blog-date");
   await expect(dateElement).toBeVisible();
   // Date should be in YYYY-MM-DD format
   await expect(dateElement).toHaveText(/\d{4}-\d{2}-\d{2}/);
 
   // Verify we have at least a few blog entries (should have 80 based on generation)
-  const cardCount = await blogCards.count();
-  expect(cardCount).toBeGreaterThan(5);
+  const postCount = await blogPosts.count();
+  expect(postCount).toBeGreaterThan(5);
 });
 
 test("blog entry - AI support", async ({ page, config }) => {
