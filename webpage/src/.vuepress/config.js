@@ -424,6 +424,7 @@ export default defineUserConfig({
       "/de/": {
         selectLanguageName: "Deutsch",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Loslegen",
@@ -488,6 +489,7 @@ export default defineUserConfig({
       "/it/": {
         selectLanguageName: "Italiano",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Iniziare",
@@ -552,6 +554,7 @@ export default defineUserConfig({
       "/fr/": {
         selectLanguageName: "Français",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Commencer",
@@ -616,6 +619,7 @@ export default defineUserConfig({
       "/es/": {
         selectLanguageName: "Español",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Empezar",
@@ -680,6 +684,7 @@ export default defineUserConfig({
       "/fa/": {
         selectLanguageName: "فارسی",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "شروع",
@@ -744,6 +749,7 @@ export default defineUserConfig({
       "/nl/": {
         selectLanguageName: "Nederlands",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Aan de slag",
@@ -808,6 +814,7 @@ export default defineUserConfig({
       "/hu/": {
         selectLanguageName: "Magyar",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Kezdő lépések",
@@ -872,6 +879,7 @@ export default defineUserConfig({
       "/ar/": {
         selectLanguageName: "العربية",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "البدء",
@@ -936,6 +944,7 @@ export default defineUserConfig({
       "/pl/": {
         selectLanguageName: "Polski",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "Rozpoczęcie",
@@ -1000,6 +1009,7 @@ export default defineUserConfig({
       "/ko/": {
         selectLanguageName: "한국어",
         selectLanguageText: "🌍",
+        editLink: false,
         navbar: [
           {
             text: "시작하기",
