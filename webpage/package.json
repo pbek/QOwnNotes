@@ -14,6 +14,8 @@
     "build": "./scripts/run-build.sh",
     "playwright:test": "TEST_ENV=prod playwright test",
     "playwright:test:ui": "TEST_ENV=prod playwright test --ui",
+    "playwright:test:next": "TEST_ENV=next playwright test",
+    "playwright:test:next:ui": "TEST_ENV=next playwright test --ui",
     "playwright:test:local": "TEST_ENV=local playwright test",
     "playwright:test:local:ui": "TEST_ENV=local playwright test --ui",
     "playwright:test:local-docker": "TEST_ENV=local-docker playwright test",

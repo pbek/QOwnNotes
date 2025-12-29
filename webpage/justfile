@@ -88,3 +88,18 @@ playwright-test-ui:
 [group('dev')]
 playwright-test test='':
     npm run playwright:test -- tests/{{ test }}
+
+# Run the local playwright tests
+[group('dev')]
+playwright-test-local test='':
+    npm run playwright:test:local -- tests/{{ test }}
+
+# Run the local docker playwright tests
+[group('dev')]
+playwright-test-next test='':
+    npm run playwright:test:local-docker -- tests/{{ test }}
+
+# Run the playwright tests on next.qownnotes.org
+[group('dev')]
+playwright-test-next test='':
+    npm run playwright:test:next -- tests/{{ test }}
