@@ -26,17 +26,17 @@ Vous pouvez nous **soutenir sur GitHub Sponsors** via [pbek GitHub Sponsors](htt
 
 Vous pouvez **faire un don via Liberapay** en cliquant sur ce bouton :
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Faire un don avec Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## Bitcoin
 
-Vous pouvez **faire un don Bitcoin BTC** à cette adresse Bitcoin BTC :
+You can **donate Bitcoin BTC** to this Bitcoin BTC address:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-Vous pouvez **faire un don Bitcoin Cash** à cette adresse Bitcoin Cash :
+You can **donate Bitcoin Cash** to this Bitcoin Cash address:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -44,13 +44,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-Vous pouvez **faire un don d'Ethereum ETH** à cette adresse Ethereum ETH :
+You can **donate Ethereum ETH** to this Ethereum ETH address:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-Vous pouvez **faire un don d'Ethereum ETC** à cette adresse Ethereum ETC :
+You can **donate Ethereum ETC** to this Ethereum ETC address:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

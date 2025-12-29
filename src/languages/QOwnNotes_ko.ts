@@ -2795,6 +2795,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>Nextcloud 노트에서 노트 열기</translation>
 </message>
 <message>
+<source>Unmark as favorite</source>
+<translation>즐겨찾기로 표시 해제</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation>즐겨찾기로 표시</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation>노트 분할</translation>
 </message>
@@ -3746,6 +3754,22 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Preview</source>
 <translation>미리보기</translation>
+</message>
+<message>
+<source>Reload</source>
+<translation>다시 불러오기</translation>
+</message>
+<message>
+<source>Reload the note text</source>
+<translation>노트 텍스트 다시 불러오기</translation>
+</message>
+<message>
+<source>Jump to note</source>
+<translation>노트로 이동</translation>
+</message>
+<message>
+<source>Jump to the note in the main window</source>
+<translation>기본 창의 노트로 이동</translation>
 </message>
 </context>
 <context>
@@ -5890,6 +5914,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Hide tab close button</source>
 <translation>탭 닫기 버튼 숨기기</translation>
+</message>
+<message>
+<source>AI autocomplete</source>
+<translation>AI 자동 완성</translation>
+</message>
+<message>
+<source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
+<translation>노트 편집기에서 AI 기반 텍스트 자동 완성 제안을 활성화합니다. 제안은 탭으로 수락하거나 이스케이프로 무시할 수 있습니다.</translation>
+</message>
+<message>
+<source>Enable AI autocomplete in note editor</source>
+<translation>노트 편집기에서 AI 자동 완성 사용</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

@@ -2800,6 +2800,14 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation type="unfinished">Open note in Nextcloud Notes</translation>
 </message>
 <message>
+<source>Unmark as favorite</source>
+<translation type="unfinished">Unmark as favorite</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation type="unfinished">Mark as favorite</translation>
+</message>
+<message>
 <source>Split note</source>
 <translation type="unfinished">Split note</translation>
 </message>
@@ -3757,6 +3765,22 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <source>Preview</source>
 <translation>プレビュー
 </translation>
+</message>
+<message>
+<source>Reload</source>
+<translation type="unfinished">Reload</translation>
+</message>
+<message>
+<source>Reload the note text</source>
+<translation type="unfinished">Reload the note text</translation>
+</message>
+<message>
+<source>Jump to note</source>
+<translation type="unfinished">Jump to note</translation>
+</message>
+<message>
+<source>Jump to the note in the main window</source>
+<translation type="unfinished">Jump to the note in the main window</translation>
 </message>
 </context>
 <context>
@@ -5909,6 +5933,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Hide tab close button</source>
 <translation type="unfinished">Hide tab close button</translation>
+</message>
+<message>
+<source>AI autocomplete</source>
+<translation type="unfinished">AI autocomplete</translation>
+</message>
+<message>
+<source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
+<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+</message>
+<message>
+<source>Enable AI autocomplete in note editor</source>
+<translation type="unfinished">Enable AI autocomplete in note editor</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

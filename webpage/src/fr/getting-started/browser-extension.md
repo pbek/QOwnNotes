@@ -6,12 +6,8 @@ image: /img/bookmarks.png
 
 Permet de capturer du contenu depuis une page affichée dans un navigateur et de gérer les favoris entre différents navigateurs et systèmes d'exploitation.
 
-::: tip
-Info
-
-- ::: tip Info
-QOwnNotes doit être en cours d'exécution pour que l'extension de navigateur Web Companion fonctionne.
-- Une connexion Internet n'est pas nécessaire. L'extension de navigateur fonctionne **hors-ligne**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Installation

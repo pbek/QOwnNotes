@@ -2,10 +2,11 @@
 description: Tworzenie notatek z otwartym kodem źródłowym dla systemów Linux, macOS i Windows, które współpracują z Nextcloud Notes
 home: prawda
 heroImage: /screenshots/screenshot.png
+heroText: QOwnNotes
 tagline: Bezpłatna notatka z otwartym kodem tekstowym w postaci zwykłego tekstu z integracją Nextcloud / ownCloud
 actions:
-  - text: Szybki start →
-    link: /pl/getting-started/overview
+  - text: Quick Start →
+    link: /getting-started/overview
     type: primary
 features:
   - title: Posiadaj swoje notatki

@@ -1,146 +1,11 @@
 # Overzicht
 
-<template>
-<v-carousel cycle show-arrows-on-hover>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="Schermafbeelding van QOwnNotes" />
-    <div class="sheet">
-      Bewerk uw notities met markdown-markering, gekleurde tags en submappen
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-minimal.png" alt="Minimaal zicht" />
-    <div class="sheet">
-      Minimale standaard gebruikersinterface die nog meer kan worden verwijderd
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-vertical.png" alt="Verticale weergave" />
-    <div class="sheet">
-      Bekijk uw notities in een verticale markdown-weergave door de panelen te verplaatsen
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Notitierelaties" />
-    <div class="sheet">
-      Paneel Notitierelaties
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-portable-mode.png" alt="Draagbare modus" />
-    <div class="sheet">
-      Draagbare modus voor USB-sticks
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-1col.png" alt="Een kolom" />
-    <div class="sheet">
-      Alle panelen kunnen worden geplaatst waar u maar wilt
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-darkmode.png" alt="screenshot darkmode" />
-    <div class="sheet">
-      Donkere modus
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="screenshot-distraction-free-mode" />
-    <div class="sheet">
-      Afleidingsvrije modus
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Let op versleuteling" />
-    <div class="sheet">
-      Optionele AES-notitie-encryptie (ook scriptbaar)
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Versleutelde notitie" />
-    <div class="sheet">
-      Versleutelde notities zijn nog steeds tekst
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-diff.png" alt="screenshot diff" />
-    <div class="sheet">
-      Laat het verschil zien tussen notities wanneer deze extern is gewijzigd
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-export-print.png" alt="screenshot-export-print" />
-    <div class="sheet">
-      Let op PDF-export en afdrukken
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-freedesktop-theme.png" alt="screenshot-freedesktop-theme" />
-    <div class="sheet">
-      Pictogrammen via Freedesktop-thema
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-other-workspace.png" alt="screenshot-other-workspace" />
-    <div class="sheet">
-      U kunt verschillende werkruimten hebben
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-qml.png" alt="screenshot-qml" />
-    <div class="sheet">
-      Scriptbaar
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-russian.png" alt="screenshot-russian" />
-    <div class="sheet">
-      Vertaald naar vele talen
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-all-notes.png" alt="screenshot-search-in-all-notes" />
-    <div class="sheet">
-      Doorzoek alle notities
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-current-note.png" alt="screenshot-search-in-current-note" />
-    <div class="sheet">
-      Zoek in de huidige notitie
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-settings-note-folders.png" alt="screenshot-settings-note-folders" />
-    <div class="sheet">
-      In staat om meerdere notitiemappen te gebruiken
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
-    <div class="sheet">
-      Beheer uw Todo-lijsten via CalDAV
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
-    <div class="sheet">
-      Beheer verwijderde notities op uw Nextcloud-server
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-versioning.png" alt="screenshot-versioning" />
-    <div class="sheet">
-      Beheer uw notitieversies op uw Nextcloud-server
-    </div>
-  </v-carousel-item>
-</v-carousel>
-</template>
+<ScreenshotCarousel />
 
 <v-divider />
 
 **Q** voor het [Qt framework](https://www.qt.io/) dat wordt gebruikt  
-**Own** omdat je je eigen notities   
+**Own** omdat je je eigen notities  
 bezit **Notes** voor de notities die u maakt
 
 <v-divider />
@@ -186,7 +51,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Ondersteuning voor **freedesktop-themapictogrammen**, u kunt QOwnNotes gebruiken met uw **native bureaubladpictogrammen** en met uw favoriete **donkere bureaubladthema**
 - **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
 - **Regelnummers**
-- **Verschillen** tussen huidige notitie en extern gewijzigde notitie worden **getoond** in een dialoogvenster
+- **Differences** between current note and externally changed note are **shown** in a dialog
 
 ## Talen
 
@@ -194,6 +59,10 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
   - [Uw hulp](../contributing/translation.md) wordt zeer op prijs gesteld om deze vertalingen te verbeteren of om QOwnNotes in meer talen te vertalen
 
 <style>
+.v-divider {
+  margin: 20px;
+}
+
 .sheet {
   position: absolute;
   bottom: 50px;

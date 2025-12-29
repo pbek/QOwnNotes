@@ -1,6 +1,6 @@
 # Zainstaluj na macOS™
 
-Pobierz najnowszy **obraz dysku macOS** z [QOwnNotes Releases na GitHub](https://github.com/pbek/QOwnNotes/releases), otwórz go i przeciągnij aplikację **QOwnNotes** do \*\*folderu aplikacji</0 >.
+Pobierz najnowszy **obraz dysku macOS** z [QOwnNotes Releases na GitHub](https://github.com/pbek/QOwnNotes/releases), otwórz go i przeciągnij aplikację **QOwnNotes** do \*\*folderu aplikacji</0 >.</p>
 
 The first time you have to right-click the application and click **Open** to open QOwnNotes.
 

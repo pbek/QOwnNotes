@@ -6,11 +6,8 @@ image: /img/bookmarks.png
 
 Umożliwia wycinanie ze strony przeglądarki i zarządzanie zakładkami przeglądarki w różnych przeglądarkach i systemach operacyjnych.
 
-::: tip
-Info
-
-- Aby rozszerzenie przeglądarki Web Companion działało, aplikacja QOwnNotes musi być uruchomiona.
-- Nie wymaga połączenia z Internetem. Rozszerzenia przeglądarki działają **w trybie offline**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Instalacja

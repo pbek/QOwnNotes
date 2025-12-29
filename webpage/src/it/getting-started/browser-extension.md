@@ -6,11 +6,8 @@ image: /img/bookmarks.png
 
 Consente di ritagliare da una pagina del browser e gestire i segnalibri del browser su diversi browser e sistemi operativi.
 
-::: tip
-Info
-
-- QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Companion funzioni.
-- Non è necessaria una connessione Internet. L'estensione del browser lavora **offline**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Installazione

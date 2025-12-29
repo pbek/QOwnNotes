@@ -7,7 +7,9 @@
 ::: 팁 서버의 **앱 페이지** `https://<your-cloud-domain>/settings/apps`에서 `qownnotes`를 검색하여 **Nextcloud** 또는 **ownCloud** 인스턴스에서 직접 QOwnNotesAPI를 활성화할 수 있습니다.
 
 - [Nextcloud 앱 페이지](https://apps.nextcloud.com/apps/qownnotesapi)
-- [ownCloud 앱 페이지](https://marketplace.owncloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
+:::
 
 노트 공유는 Nextcloud/ownCloud에서 제공하는 API를 통해 이루어집니다. 작업은 CalDAV를 통해 직접 액세스할 수 있습니다.
 

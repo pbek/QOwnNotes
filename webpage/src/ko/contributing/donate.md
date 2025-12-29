@@ -26,17 +26,17 @@ QOWNNotes를 좋아하며 프로젝트에 **기부**하여 비용을 지불하�
 
 다음 버튼을 클릭하여 **Liberapay를 통해 돈을 기부**할 수 있습니다:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Liberapay를 이용한 기부" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## 비트코인
 
-다음 비트코인 BTC 주소로 **비트코인 BTC를 기부**할 수 있습니다.
+You can **donate Bitcoin BTC** to this Bitcoin BTC address:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-다음 비트코인 캐시 주소로 **비트코인 캐시를 기부**할 수 있습니다:
+You can **donate Bitcoin Cash** to this Bitcoin Cash address:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -44,13 +44,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## 이더리움
 
-다음 이더리움 ETH 주소로 **이더리움 ETH를 기부**할 수 있습니다:
+You can **donate Ethereum ETH** to this Ethereum ETH address:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-다음 이더리움 ETC 주소로 **이더리움 ETC를 기부**할 수 있습니다:
+You can **donate Ethereum ETC** to this Ethereum ETC address:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

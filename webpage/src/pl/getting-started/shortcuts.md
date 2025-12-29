@@ -189,7 +189,7 @@
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>T</kbd> wstawia tabelę
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>C</kbd> wstawia blok kodu w bieżącej pozycji
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>B</kbd> wstawia cytat blokowy w bieżącej pozycji
-- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + B wstawia cytat blokowy w bieżącej pozycji
+- <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <0>B</0> wstawia cytat blokowy w bieżącej pozycji
 - <kbd>⌘ Cmd</kbd> + <kbd>I</kbd> formatuje zaznaczony tekst kursywą
 - <kbd>⌘ Cmd</kbd> + <kbd>U</kbd> formatuje podkreślenie zaznaczonego tekstu
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> przekreśla zaznaczony tekst

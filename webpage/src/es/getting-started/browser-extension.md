@@ -6,11 +6,8 @@ image: /img/bookmarks.png
 
 Permite recortar desde una página del navegador y administrar los marcadores del navegador en todos los navegadores y sistemas operativos.
 
-::: tip
-Información
-
-- QOwnNotes debe estar ejecutándose para que funcione la extensión del navegador Web Companion.
-- No se necesita una conexión a Internet. Las extensiones del navegador funcionan **sin conexión**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Instalación

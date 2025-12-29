@@ -2111,7 +2111,7 @@
 </message>
 <message>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation>Abra el canal #qownnotes IRC (Kiwi), debe permanecer en línea para obtener una respuesta</translation>
+<translation>Abra el canal #qownnotes de IRC (Kiwi). Debe permanecer en línea para obtener una respuesta</translation>
 </message>
 <message>
 <source>Cycle text case</source>
@@ -2428,7 +2428,7 @@
 </message>
 <message>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-<translation>Abrir el canal Gitter de qownnotes. Requiere de una cuenta de GitHub o Twitter para iniciar sesión, pero puede recibir mensajes sin conexión</translation>
+<translation>Abra el canal de Gitter de qownnotes. Requiere de una cuenta de GitHub o Twitter para iniciar sesión, pero puede recibir mensajes sin conexión</translation>
 </message>
 <message>
 <source>Open chat</source>
@@ -2811,6 +2811,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Open note in Nextcloud Notes</source>
 <translation>Abrir nota en Nextcloud Notes</translation>
+</message>
+<message>
+<source>Unmark as favorite</source>
+<translation>Desmarcar como favorita</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation>Marcar como favorita</translation>
 </message>
 <message>
 <source>Split note</source>
@@ -3778,6 +3786,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Preview</source>
 <translation>Vista previa</translation>
+</message>
+<message>
+<source>Reload</source>
+<translation>Recargar</translation>
+</message>
+<message>
+<source>Reload the note text</source>
+<translation>Recarga el texto de la nota</translation>
+</message>
+<message>
+<source>Jump to note</source>
+<translation>Ir a nota</translation>
+</message>
+<message>
+<source>Jump to the note in the main window</source>
+<translation>Ir a la nota en la ventana principal</translation>
 </message>
 </context>
 <context>
@@ -5929,6 +5953,18 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Hide tab close button</source>
 <translation>Ocultar botón de cerrar la pestaña</translation>
+</message>
+<message>
+<source>AI autocomplete</source>
+<translation>Completamiento automático con IA</translation>
+</message>
+<message>
+<source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
+<translation>Activa las sugerencias de completamiento automático de texto con IA en el editor de notas. Puede aceptar las sugerencias con Tabulador o descartarlas con Esc.</translation>
+</message>
+<message>
+<source>Enable AI autocomplete in note editor</source>
+<translation>Activar completamiento automático con IA en el editor de notas</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

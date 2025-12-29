@@ -2,10 +2,11 @@
 description: Nyílt forráskódú jegyzetjegyzet készítése Linux, macOS és Windows rendszerhez, amely a Nextcloud Notes alkalmazással együtt működik
 home: true
 heroImage: /screenshots/screenshot.png
+heroText: QOwnNotes
 tagline: Ingyenes, nyílt forráskódú, egyszerű szöveges fájl markdown jegyzetelés Nextcloud / ownCloud integrációval
 actions:
-  - text: Gyors indítás →
-    link: /hu/getting-started/overview
+  - text: Quick Start →
+    link: /getting-started/overview
     type: primary
 features:
   - title: A jegyzetek tulajdonosa

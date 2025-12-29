@@ -1,141 +1,6 @@
 # Panoramica
 
-<template>
-<v-carousel cycle show-arrows-on-hover>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="Schermata di QOwnNotes" />
-    <div class="sheet">
-      Modifica le tue note con evidenziazione markdown, etichette colorate e sottocartelle
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-minimal.png" alt="Vista minima" />
-    <div class="sheet">
-      Interfaccia utente predefinita minima che può essere ulteriormente semplificata
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-vertical.png" alt="Vista verticale" />
-    <div class="sheet">
-      Visualizza le tue note in una vista markdown verticale spostando i pannelli
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
-    <div class="sheet">
-      Note relations panel
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-portable-mode.png" alt="Modalità portatile" />
-    <div class="sheet">
-      Modalità portabile per chiavette USB
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-1col.png" alt="Una colonna" />
-    <div class="sheet">
-      Tutti i pannelli possono essere posizionati dove vuoi
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-darkmode.png" alt="Schermata in modalità scura" />
-    <div class="sheet">
-      Modalità scura
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="schermata-modalità-senza-distrazioni" />
-    <div class="sheet">
-      Modalità anti-distrazione
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Cifratura nota" />
-    <div class="sheet">
-      Crittografia delle note AES opzionale (anche con script)
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Nota crittografata" />
-    <div class="sheet">
-      Le note crittografate sono ancora testo
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-diff.png" alt="schermata diff" />
-    <div class="sheet">
-      Mostra la differenza tra le note quando subiscono modifiche esterne all'applicazione
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-export-print.png" alt="schermata-esporta-stampa" />
-    <div class="sheet">
-      Exportazione in PDF e stampa della nota
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-freedesktop-theme.png" alt="schermata-tema-freedesktop" />
-    <div class="sheet">
-      Icone tramite il tema Freedesktop
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-other-workspace.png" alt="schermata-altro-spazio" />
-    <div class="sheet">
-      Puoi avere diversi aree di lavoro
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-qml.png" alt="schermata-qml" />
-    <div class="sheet">
-      Gestisce gli script
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-russian.png" alt="schermata-russo" />
-    <div class="sheet">
-      Tradotto in molte lingue
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-all-notes.png" alt="schermata-cerca-in-tutte-le-note" />
-    <div class="sheet">
-      Cerca in tutte le note
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-current-note.png" alt="schermata-cerca-in-nota-corrente" />
-    <div class="sheet">
-      Cerca nella nota corrente
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-settings-note-folders.png" alt="schermata-impostazioni-cartelle-note" />
-    <div class="sheet">
-      In grado di utilizzare più cartelle di note
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-todo.png" alt="schermata-todo" />
-    <div class="sheet">
-      Gestisci le tue liste di cose da fare tramite CalDAV
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-trash.png" alt="schermata-cestino" />
-    <div class="sheet">
-      Gestisci le note cestinate sul tuo server Nextcloud
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-versioning.png" alt="schermata-versionamento" />
-    <div class="sheet">
-      Gestisci le versioni delle note sul tuo server Nextcloud
-    </div>
-  </v-carousel-item>
-</v-carousel>
-</template>
+<ScreenshotCarousel />
 
 <v-divider />
 
@@ -158,7 +23,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Puoi usare i tuoi **pre-esistenti documenti di testo o markdown** senza la necessità di importarli
 - QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
 - **Importa Evernote e Joplin**
-- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione **mobile** e Nextcloud Text
+- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile\*\* e Nextcloud Text</p></li>
 - Crea un **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** e collegalo alle tue note
 - Supporto per la **condivisione delle note** sul tuo server **ownCLoud** / **Nextcloud**
 - Gestisci la tua **lista delle cose da fare** di Nextcloud / OwnCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o usa un altro **server CalDAV** per sincronizzare i tuoi incarichi
@@ -175,7 +40,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - **Supporto allo scripting** e un [**repository di script**](https://github.com/qownnotes/scripts) online da cui puoi installare script nella tua applicazione
 - Implementazione di **[API per l'autocompilazione di OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** per usarla negli scripts
 - **Modalità Vim**
-- **[Applicazione web](web-app.md)** per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop
+- **[Applicazione web](web-app.md)** per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop</ul>
 
 ## Aspetto
 
@@ -186,7 +51,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Supporto per **icone del tema freedesktop**, puoi usare QOwnNotes con le tue **icone desktop native** e con il tuo **tema desktop scuro** preferito
 - **Modalità senza distrazioni**, **Modalità a schermo intero** e **Modalità macchina da scrivere**
 - **Numeri di riga**
-- **Le differenze** tra la nota corrente e la nota modificata esternamente sono **mostrate** in una finestra di dialogo
+- **Differences** between current note and externally changed note are **shown** in a dialog
 
 ## Lingue
 
@@ -194,6 +59,10 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
   - [Il tuo aiuto](../contributing/translation.md) è molto apprezzato per migliorare queste traduzioni o per tradurre QOwnNotes in più lingue
 
 <style>
+.v-divider {
+  margin: 20px;
+}
+
 .sheet {
   position: absolute;
   bottom: 50px;

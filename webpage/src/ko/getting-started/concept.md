@@ -1,13 +1,14 @@
 # 개념
 
-<style scoped>
+<style>
   /* Remove max-width for content so there is enough space for the Mermaid diagram */
-  /* We need "scoped" or this will leak to all other pages! */
-  /* We need "main" to be more specific than the default style */
-  main .theme-default-content:not(.custom) {
-    max-width: none;
+  /* This targets the VuePress content container on this page only using :has() */
+  body:has(.concept-page-marker) main.vp-page > div {
+    max-width: none !important;
   }
 </style>
+
+<div class="concept-page-marker" style="display: none;"></div>
 
 ```mermaid
 graph TB
@@ -53,7 +54,7 @@ graph TB
 - Nextcloud / ownCloud 서버와 대화하여 다른 사람과 **공개적으로 노트를 공유 **할 수 있습니다
 - 또한 [QOwnNotesApi Nextcloud 앱](#qownnotesapi-nextcloud-app)을 통해 Nextcloud / ownCloud 서버의 **노트 기록 및 휴지통에 액세스**할 수 있습니다
 - QOwnNotes 내에서 Nextcloud / ownCloud 서버의 작업관리 목록에 액세스할 수 있습니다
-- **QOwnNotes**QOwnNotes 는 노트와 미디어/첨부 파일을 동기화하지 않습니다!
+- **QOwnNotes**QOwnNotes 는 노트와 미디어/첨부 파일을 <0>동기화하지 않습니다</0>!
   - 파일 동기화는 복잡한 작업입니다. 이미 우수한 파일 동기화 솔루션이 있습니다 ([Nextcloud 데스크탑 동기화 클라이언트](#nextcloud-desktop-sync-client) 참조)
 
 ## 마크다운 노트 파일
@@ -69,7 +70,7 @@ QOwnNotes를 사용하여 **브라우저 북마크를 관리**하거나 **웹 �
 
 ::: 팁 브라우저 확장 기능은 **오프라인**에서 작동하며 인터넷에 연결할 필요가 없습니다. 자세한 내용은
 
-QOwnNotes 웹 지원 브라우저 확장<0/>을 참조하십시오. :::
+QOwnNotes 웹 지원 브라우저 확장<0/>을 참조하십시오. :::</p>
 
 ## QOwnNotes 명령줄 스니펫 관리자
 
@@ -105,7 +106,7 @@ QOwnNotes를 사용하여 **명령 스니펫**을 관리하고 명령줄에서 �
 
 ## Nextcloud 노트 서버 앱
 
-**웹</1/>에서 노트를 편집하려면 [**Nextcloud 노트\*\*](https://github.com/nextcloud/notes)를 사용합니다.
+**웹</1/>에서 노트를 편집하려면 [**Nextcloud 노트\*\*](https://github.com/nextcloud/notes)를 사용합니다.</p>
 
 ::: 경고의
 Nextcloud 노트는 현재 최대 한 수준의 하위 폴더만 지원합니다.

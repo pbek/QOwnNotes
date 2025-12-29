@@ -8,7 +8,8 @@
 Vous pouvez activer QOwnNotesAPI directement dans votre instance **Nextcloud** ou **ownCloud** en recherchant `qownnotes` sur la page **Apps** de votre serveur à l'adresse `https://<your-cloud-domain>/settings/apps`.
 
 - [Page des Apps de Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
-- [page des Apps d'ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 Le partage des notes se fait via l'API fournie par Nextcloud / ownCloud. L'accès aux tâches se fait directement via CalDAV.

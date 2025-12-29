@@ -6,11 +6,8 @@ image: /img/bookmarks.png
 
 Ermöglicht das Ausschneiden von einer Browserseite und das Verwalten von Browser-Lesezeichen über Browser und Betriebssysteme hinweg.
 
-::: tip
-Info
-
-- QOwnNotes muss ausgeführt werden, damit die Web Companion-Browsererweiterung funktioniert.
-- Es ist keine Internetverbindung erforderlich. Die Browsererweiterungen funktionieren **offline**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Installation

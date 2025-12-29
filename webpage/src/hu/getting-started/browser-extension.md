@@ -6,11 +6,8 @@ image: /img/bookmarks.png
 
 Lehetővé teszi a böngészőoldalak kivágását és a böngésző könyvjelzőinek kezelését a böngészők és az operációs rendszerek között.
 
-::: tip
-Információ
-
-- A Web Companion böngészőbővítmény működéséhez a QOwnNotes-nak futnia kell.
-- Nincs szükség internet kapcsolatra. A böngészőbővítmények **offline** működnek.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Telepítés

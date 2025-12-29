@@ -91,6 +91,7 @@ Des **blocs de code `bash` ou `shell`** précédés par un en-tête niveau 2 ou 
     echo fais cela
     ```
 
+
     ## Faire autre chose avec un bloc de code "sh"
 
     ```sh

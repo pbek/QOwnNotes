@@ -9,6 +9,7 @@ A QOwnNotesAPI-t közvetlenül engedélyezheti a **Nextcloud** vagy a **ownCloud
 
 - [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 A jegyzetmegosztás a Nextcloud / ownCloud által biztosított API-n keresztül történik. A feladatokhoz közvetlenül a CalDAV-on keresztül férhet hozzá.

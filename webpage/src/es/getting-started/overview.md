@@ -1,141 +1,6 @@
 # Descripción general
 
-<template>
-<v-carousel cycle show-arrows-on-hover>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="Captura de pantalla de QOwnNotes" />
-    <div class="sheet">
-      Edite sus notas con resaltado de Markdown, etiquetas de colores y subcarpetas
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-minimal.png" alt="Vista mínima" />
-    <div class="sheet">
-      Interfaz de usuario mínima predeterminada que se puede simplificar aún más
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-vertical.png" alt="Vista vertical" />
-    <div class="sheet">
-      Vea sus notas en una vista vertical de Markdown moviendo los paneles
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Relaciones de la nota" />
-    <div class="sheet">
-      Panel de relaciones de notas
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-portable-mode.png" alt="Modo portátil" />
-    <div class="sheet">
-      Modo portátil para memorias USB
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-1col.png" alt="Una columna" />
-    <div class="sheet">
-      Todos los paneles pueden ser colocados donde usted desee
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-darkmode.png" alt="captura de pantalla modo oscuro" />
-    <div class="sheet">
-      Modo oscuro
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="screenshot-distraction-free-mode" />
-    <div class="sheet">
-      Modo sin distracciones
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Cifrado de notas" />
-    <div class="sheet">
-      Cifrado de notas AES opcional (también programable)
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Nota cifrada" />
-    <div class="sheet">
-      Las notas cifradas siguen siendo texto
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-diff.png" alt="screenshot diff" />
-    <div class="sheet">
-      Muestre la diferencia entre notas cuando se cambió externamente
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-export-print.png" alt="screenshot-export-print" />
-    <div class="sheet">
-      Nota Exportación e impresión de PDF
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-freedesktop-theme.png" alt="screenshot-freedesktop-theme" />
-    <div class="sheet">
-      Iconos a través del tema Freedesktop
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-other-workspace.png" alt="screenshot-other-workspace" />
-    <div class="sheet">
-      Puedes tener diferentes espacios de trabajo
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-qml.png" alt="screenshot-qml" />
-    <div class="sheet">
-      Scriptable
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-russian.png" alt="screenshot-russian" />
-    <div class="sheet">
-      Traducido a muchos idiomas
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-all-notes.png" alt="screenshot-search-in-all-notes" />
-    <div class="sheet">
-      Buscar en todas las notas
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-current-note.png" alt="screenshot-search-in-current-note" />
-    <div class="sheet">
-      Buscar en la nota actual
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-settings-note-folders.png" alt="screenshot-settings-note-folders" />
-    <div class="sheet">
-      Capaz de usar múltiples carpetas de notas
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
-    <div class="sheet">
-      Administre sus listas de tareas pendientes a través de CalDAV
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
-    <div class="sheet">
-      Administre las notas enviadas a la papelera en su servidor de Nextcloud
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-versioning.png" alt="screenshot-versioning" />
-    <div class="sheet">
-      Administre las versiones de sus notas en su servidor de Nextcloud
-    </div>
-  </v-carousel-item>
-</v-carousel>
-</template>
+<ScreenshotCarousel />
 
 <v-divider />
 
@@ -186,7 +51,7 @@
 - Soporte para **iconos de tema de escritorio gratuito**, puede usar QOwnNotes con sus **iconos de escritorio nativos** y con su **tema de escritorio oscuro favorito**
 - **Modo sin distracciones**, **Modo de pantalla completa** y **Modo de máquina de escribir**
 - **Números de línea**
-- **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
+- **Differences** between current note and externally changed note are **shown** in a dialog
 
 ## Idioma
 
@@ -194,6 +59,10 @@
   - [Su ayuda](../contributing/translation.md) es muy apreciada para mejorar estas traducciones o para traducir QOwnNotes en más idiomas.
 
 <style>
+.v-divider {
+  margin: 20px;
+}
+
 .sheet {
   position: absolute;
   bottom: 50px;

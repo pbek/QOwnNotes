@@ -33,7 +33,7 @@ U kunt de toepassing op de opdrachtregelinterface op verschillende besturingssys
 
 ::: tip
 Om de instellingendump rechtstreeks naar het klembord te kopiëren en dit te gebruiken bij de melding van een [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) kunt u `xclip</1 gebruiken>
-of `xsel`op Linux,`pbcopy`op macOS en`clip` op Windows:
+of <code>xsel` op Linux, `pbcopy` op macOS en `clip` op Windows:
 
 ```bash
 # Kopieer de instellingendump naar het klembord met xclip op Linux

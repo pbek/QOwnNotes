@@ -15,7 +15,7 @@
 | `‪--completion <الصدفة>`      | يولّد أوامر الإكمال الملائمة للصَدفة. يقبل `fish` و&nbsp;`bash`.                              |
 
 ::: tip
-إذا كنت تواجه مشاكل مع QOwnNotes المثبت لديك، ربما تود أن تشغّل التطبيق بإعدادات جديدة بغير أن تفقد إعداداتك الحالية، باستخدام المُعامل `--session`.
+إذا كنت تواجه مشاكل مع QOwnNotes المثبت لديك، ربما تود أن تشغّل التطبيق بإعدادات جديدة بغير أن تفقد إعداداتك الحالية، باستخدام المُعامل <code dir="ltr">--session</code>.
 
 ```bash
 QOwnNotes --session test
@@ -52,7 +52,7 @@ QOwnNotes --dump-settings | clip
 
 ## تنفيذ إجراءات قائمة بعد التشغيل
 
-باستخدام المُعامِل `--action &lt;اسم&gt;`، يمكنك تنفيذ إجراءات قائمة بعد تشغيل التطبيق.
+باستخدام المُعامِل <code dir="ltr">--action &lt;اسم&gt;</code>، يمكنك تنفيذ إجراءات قائمة بعد تشغيل التطبيق.
 
 مثلا لإظهار حوار قائمة المهام بعد التشغيل، استخدم:
 
@@ -64,7 +64,7 @@ QOwnNotes --action actionShow_Todo_List
 يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
 :::
 
-لتنفيذ [إجراء برمجي](../scripting/methods-and-objects.md#registering-a-custom-action)، استخدم `customAction_`متبوعًا باسم الإجراء المخصص. اسم الإجراء المخصص هو المُعامل الأول في نداء `script.registerCustomAction` في البُريمج.
+لتنفيذ [إجراء برمجي](../scripting/methods-and-objects.md#registering-a-custom-action)، استخدم <code dir="ltr">customAction\_</code> متبوعًا باسم الإجراء المخصص. اسم الإجراء المخصص هو المُعامل الأول في نداء `script.registerCustomAction` في البُريمج.
 
 مثلا لتنفيذ الإجراء المخصص `myAction`، شغّل QOwnNotes هكذا:
 

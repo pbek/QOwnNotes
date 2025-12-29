@@ -1,146 +1,11 @@
 # Aperçu
 
-<template>
-<v-carousel cycle show-arrows-on-hover>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="Capture d'écran de QOwnNotes" />
-    <div class="sheet">
-      Modifiez vos notes avec la mise en évidence Markdown, les balises colorées et les sous-dossiers
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-minimal.png" alt="Vue minimale" />
-    <div class="sheet">
-      Interface utilisateur par défaut minimale qui peut être supprimée encore plus
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-vertical.png" alt="Vue verticale" />
-    <div class="sheet">
-      Affichez vos notes dans une vue Markdown verticale en déplaçant les panneaux
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
-    <div class="sheet">
-      Note relations panel
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-portable-mode.png" alt="Mode portable" />
-    <div class="sheet">
-      Mode portable pour clés USB
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-1col.png" alt="Une colonne" />
-    <div class="sheet">
-      Tous les panneaux peuvent être placés où vous le souhaitez
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-darkmode.png" alt="screenshot darkmode" />
-    <div class="sheet">
-      Mode sombre
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="screenshot-distraction-free-mode" />
-    <div class="sheet">
-      Mode sans distractions
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Chiffrement de note" />
-    <div class="sheet">
-      Chiffrement facultatif des notes AES (également scriptable)
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Note chiffrée" />
-    <div class="sheet">
-      Les notes chiffrées sont toujours du texte
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-diff.png" alt="screenshot diff" />
-    <div class="sheet">
-      Afficher la différence entre les notes lorsqu'elles ont été modifiées en externe
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-export-print.png" alt="screenshot-export-print" />
-    <div class="sheet">
-      Note PDF export and printing
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-freedesktop-theme.png" alt="screenshot-freedesktop-theme" />
-    <div class="sheet">
-      Icons via Freedesktop theme
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-other-workspace.png" alt="screenshot-other-workspace" />
-    <div class="sheet">
-      Vous pouvez avoir différents espaces de travail
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-qml.png" alt="screenshot-qml" />
-    <div class="sheet">
-      Scriptable
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-russian.png" alt="screenshot-russian" />
-    <div class="sheet">
-      Traduit dans de nombreuses langues
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-all-notes.png" alt="screenshot-search-in-all-notes" />
-    <div class="sheet">
-      Rechercher dans toutes les notes
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-current-note.png" alt="screenshot-search-in-current-note" />
-    <div class="sheet">
-      Rechercher dans la note actuelle
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-settings-note-folders.png" alt="screenshot-settings-note-folders" />
-    <div class="sheet">
-      Capable d'utiliser plusieurs dossiers de notes
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
-    <div class="sheet">
-      Gérez vos listes Todo via CalDAV
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
-    <div class="sheet">
-      Gérez les notes mises à la corbeille sur votre serveur Nextcloud
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-versioning.png" alt="screenshot-versioning" />
-    <div class="sheet">
-      Gérez vos versions de notes sur votre serveur Nextcloud
-    </div>
-  </v-carousel-item>
-</v-carousel>
-</template>
+<ScreenshotCarousel />
 
 <v-divider />
 
-**Q** pour le [framework Qt](https://www.qt.io/) utilisé   
-**Own** parce que vous possédez ("to own") vos propres notes   
+**Q** pour le [framework Qt](https://www.qt.io/) utilisé  
+**Own** parce que vous possédez ("to own") vos propres notes  
 **Notes** pour les notes que vous prenez
 
 <v-divider />
@@ -186,7 +51,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Prise en charge des **icônes du thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
 - **Mode sans distractions**, **mode plein écran** et **mode machine à écrire**
 - **Numéros de lignes**
-- **Les différences** entre la note actuelle et la note modifiée depuis l'extérieur sont **affichées** dans une boîte de dialogue
+- **Differences** between current note and externally changed note are **shown** in a dialog
 
 ## Langues
 
@@ -194,6 +59,10 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
   - [Votre aide](../contributing/translation.md) est très appréciée pour améliorer ces traductions ou pour traduire QOwnNotes dans plus de langues
 
 <style>
+.v-divider {
+  margin: 20px;
+}
+
 .sheet {
   position: absolute;
   bottom: 50px;

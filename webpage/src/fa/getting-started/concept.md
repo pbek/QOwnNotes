@@ -1,13 +1,14 @@
 # مفاهیم
 
-<style scoped>
+<style>
   /* Remove max-width for content so there is enough space for the Mermaid diagram */
-  /* We need "scoped" or this will leak to all other pages! */
-  /* We need "main" to be more specific than the default style */
-  main .theme-default-content:not(.custom) {
-    max-width: none;
+  /* This targets the VuePress content container on this page only using :has() */
+  body:has(.concept-page-marker) main.vp-page > div {
+    max-width: none !important;
   }
 </style>
+
+<div class="concept-page-marker" style="display: none;"></div>
 
 ```mermaid
 graph TB

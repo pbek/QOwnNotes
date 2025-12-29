@@ -15,7 +15,7 @@ The package is built with Qt6, uses the system botan3 library and libgit2 and pr
 ::: tip
 يمكن أيضا تثبيت مدير قصاصات QOwnNotes لسطر الأوامر ([qc](https://github.com/qownnotes/qc)) عبر [متجر Nix](https://search.nixos.org/packages?channel=unstable&show=qc).
 
-يمكنك تجربته بالأمر `nix-shell -p qc --run "qc exec"`.
+يمكنك تجربته بالأمر <code dir="ltr">nix-shell -p qc --run "qc exec"</code>.
 :::
 
 ::: tip

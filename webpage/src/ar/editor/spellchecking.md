@@ -12,7 +12,7 @@ QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you ca
 
 - في **ويندوز** عليك نسخ قواميس Hunspell للغتك إلى مجلد `dicts` في مجلد تطبيق QOwnNotes أو في `C:\Users\[username]\dicts`
   - يمكنك تنزيل القواميس من [قواميس ليبر أوفيس](https://github.com/LibreOffice/dictionaries)
-  - في **ماك أو إس** عليك نسخ قواميس Hunspell للغتك إلى `/Library/Spelling`أو `~/Library/Spelling`. إذا لم يكن هذا المجلد موجودا، عليك إنشاؤه.
+  - في **ماك أو إس** عليك نسخ قواميس Hunspell للغتك إلى <code dir="ltr">/Library/Spelling</code> أو <code dir="ltr">~/Library/Spelling</code>. إذا لم يكن هذا المجلد موجودا، عليك إنشاؤه.
 
 يمكن تنزيل القواميس من [قواميس QOwnNotes](https://github.com/qownnotes/dictionaries). استخدم الجدول الذي في نهاية هذا المستند لتجد لغتك والرمز المناظر لها.
 

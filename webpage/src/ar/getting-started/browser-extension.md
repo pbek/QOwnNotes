@@ -6,10 +6,8 @@ image: /img/bookmarks.png
 
 تتيح لك قص المحتوى من صفحات المتصفح وكذلك إدارة إشارات المتصفح المرجعية عبر المتصفحات وأنظمة التشغيل المختلفة.
 
-::: tip
-
-- يجب أن يكون QOwnNotes مفتوحا حتى تعمل إضافة المتصفح رفيقة الويب.
-- لا حاجة للاتصال بالإنترنت. إضافة المتصفح تعمل **بدون اتصال**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## التثبيت

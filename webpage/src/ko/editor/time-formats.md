@@ -35,22 +35,29 @@
 | `zzz`         | 선행 0이 있는 밀리초 (0 ~ 999)                                  |
 | `AP` 또는 `A` | AM/PM 표시를 사용합니다. A/AP는 `AM` 또는 `PM`로 대체됩니다.    |
 | `ap` 또는 `a` | am/pm 표시를 사용합니다. a/ap는 `am` 또는 `pm`로 대체됩니다.    |
-| `t`           | 표준 시간대 (예: `CEST`)                                        |
+| `t`           | 표준 시간대 (예: `CEST<0>)</td>                                 |
 
-## 형식 문자열 예제
+</tr>
+</tbody>
+</table>
 
-| 형식               | 결과             |
-| ------------------ | ---------------- |
-| `dd.MM.yyyy hh:mm` | 21.05.2001 14:13 |
-| `dd.MM.yyyy`       | 21.05.2001       |
-| `ddd MMMM d yy`    | 화 5월 21 01     |
-| `hh:mm:ss.zzz`     | 14:13:09.042     |
-| `h:m:s ap`         | 2:13:9 pm        |
+<h2 spaces-before="0">형식 문자열 예제</h2>
 
-::: tip 정보
-시간 형식에 대한 자세한 내용은 [Qt 문서](http://doc.qt.io/qt-5/qdatetime.html#toString) 를 참조하십시오.
-:::
+<table spaces-before="0">
+<thead>
+<tr>
+  <th>형식</th>
+  <th>결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>dd.MM.yyyy hh:mm` | 21.05.2001 14:13 |
+| `dd.MM.yyyy`    | 21.05.2001                                                                                                                                                                                                                                                                                                                      |
+| `ddd MMMM d yy` | 화 5월 21 01                                                                                                                                                                                                                                                                                                                      |
+| `hh:mm:ss.zzz`  | 14:13:09.042                                                                                                                                                                                                                                                                                                                    |
+| `h:m:s ap`      | 2:13:9 pm                                                                                                                                                                                                                                                                                                                       |
 
-::: tip
-현재 시간을 출력하기 위해 더 복잡한 작업을 수행해야 하는 경우 [사용자 지정 동작](../scripting/methods-and-objects.md#registering-a-custom-action)을 만드는 것을 고려하십시오.
-:::
+::: 팁 정보 시간 형식에 대한 자세한 내용은 [Qt 문서](http://doc.qt.io/qt-5/qdatetime.html#toString) 를 참조하십시오. :::
+
+::: 팁 현재 시간을 출력하기 위해 더 복잡한 작업을 수행해야 하는 경우 [사용자 지정 동작](../scripting/methods-and-objects.md#registering-a-custom-action)을 만드는 것을 고려하십시오. :::

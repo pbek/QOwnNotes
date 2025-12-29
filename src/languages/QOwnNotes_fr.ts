@@ -2807,11 +2807,19 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>Ouvrir la note dans Nextcloud Files</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Ouvrir la note dans Nextcloud Notes</translation>
+</message>
+<message>
+<source>Unmark as favorite</source>
+<translation>Retirer des favoris</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation>Marquer comme favori</translation>
 </message>
 <message>
 <source>Split note</source>
@@ -2852,7 +2860,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Close note tab</source>
-<translation>Fermet l’onglet de note</translation>
+<translation>Fermer l’onglet de note</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3334,7 +3342,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Notes directory was modified externally</source>
-<translation>Le dossier de notes a été modifié de l'extérieur</translation>
+<translation>Le dossier de notes a été modifié depuis l'extérieur</translation>
 </message>
 <message numerus="yes">
 <source>Stored %n note(s) to disk</source>
@@ -3624,7 +3632,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
+<translation>Recharger la liste de cartes depuis le serveur</translation>
 </message>
 <message>
 <source>Reload…</source>
@@ -3672,7 +3680,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
-<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+<translation>Enregistrer la carte courante et insérer un lien vers elle dans la note actuelle</translation>
 </message>
 <message>
 <source>Reload from server</source>
@@ -3779,6 +3787,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Preview</source>
 <translation>Aperçu</translation>
+</message>
+<message>
+<source>Reload</source>
+<translation>Recharger</translation>
+</message>
+<message>
+<source>Reload the note text</source>
+<translation>Recharger le texte de la note</translation>
+</message>
+<message>
+<source>Jump to note</source>
+<translation>Aller à la note</translation>
+</message>
+<message>
+<source>Jump to the note in the main window</source>
+<translation>Va à la note dans la fenêtre principale</translation>
 </message>
 </context>
 <context>
@@ -4095,7 +4119,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>Le fichier de note a été modifié depuis l’extérieur</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4104,12 +4128,12 @@ The editor below shows YOUR version. The differences view shows changes between 
 
 Click 'OK' to save YOUR version and overwrite the external changes.
 Click 'Cancel' to discard your changes and keep the external version.</source>
-<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+<translation>Le fichier de note « %1 » a été modifié depuis l’extérieur alors que vous avez des changements non sauvegardés.
 
-The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+L’éditeur ci-dessous montre VOTRE version. La boîte en-dessous de « différences » montre les changements entre le fichier externe (en rouge) et votre version (en vert)
 
-Click 'OK' to save YOUR version and overwrite the external changes.
-Click 'Cancel' to discard your changes and keep the external version.</translation>
+Cliquez sur « OK » pour sauvegarder VOTRE version et écraser les changements externes.
+Cliquez sur « Annuler » pour ignorer vos changements et garder la version externe.</translation>
 </message>
 <message>
 <source>Could not store note file: %1 - Error message: %2</source>
@@ -5932,6 +5956,18 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Masquer le bouton de fermeture d’onglet</translation>
 </message>
 <message>
+<source>AI autocomplete</source>
+<translation>Autocomplétion IA</translation>
+</message>
+<message>
+<source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
+<translation>Active les suggestions d’autocomplétion de texte par IA dans l’éditeur de note. Les suggestions peuvent être acceptées avec Tab ou ignorées avec Échap.</translation>
+</message>
+<message>
+<source>Enable AI autocomplete in note editor</source>
+<translation>Activer l’autocomplétion IA dans l’éditeur de note</translation>
+</message>
+<message>
 <source>Search script repository for AI integration scripts</source>
 <translation>Rechercher des scripts d’intégration d’IA dans le dépôt de scripts</translation>
 </message>
@@ -6023,7 +6059,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+<translation>Utiliser des sommes de contrôle pour détecter des modifications externes aux notes non sauvegardées</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
@@ -7624,7 +7660,7 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>Ne plus montrer ce message</translation>
 </message>
 <message>
 <source>Accept change?</source>
@@ -7711,7 +7747,7 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>Save the current todo item and insert a link to it into the current note</source>
-<translation>Enregistrer la tâche courante et insérer un lien dans la note actuelle</translation>
+<translation>Enregistrer la tâche courante et insérer un lien vers elle dans la note actuelle</translation>
 </message>
 <message>
 <source>Import the current todo item as new note</source>

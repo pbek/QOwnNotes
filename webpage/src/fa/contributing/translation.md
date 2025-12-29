@@ -18,7 +18,9 @@ You can sign up at [Crowdin](https://crowdin.com/project/qownnotes) and **transl
 
 **[QOwnNotes در کراودین](https://crowdin.com/project/qownnotes)**
 
-در صورت تمایل برای ترجمه QOwnNotes به یک زبان جدید، کافی است [به صاحب پروژه یک پیام در کراودین](https://crowdin.com/profile/pbek) یا به صورت یک مسئله گیت هاب ارسال کنید.
+در صورت تمایل برای ترجمه QOwnNotes به یک زبان جدید، کافی است [به صاحب پروژه یک پیام در کراودین](https://crowdin.com/profile/pbek) یا به صورت یک
+
+مسئله گیت هاب </0> ارسال کنید.</p>
 
 در صورت تمایل به افزودن ترجمه های جدید به **زبان های موجود** می توانید این کار را به راحتی انجام دهید.
 

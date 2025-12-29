@@ -1,141 +1,6 @@
 # نظرة عامة
 
-<template>
-<v-carousel cycle show-arrows-on-hover>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="QOwnNotes screenshot" />
-    <div class="sheet">
-      تحرير ملاحظاتك مع تلوين ماركداون ووسوم ملونة ومجلدات فرعية
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-minimal.png" alt="Minimal view" />
-    <div class="sheet">
-      واجهة مستخدم بسيطة والتي يمكن تبسيطها أكثر أيضا
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-vertical.png" alt="Vertical view" />
-    <div class="sheet">
-      أظهر ملاحظاتك رأسيًا بتحريك اللوحات
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-note-relations.png" alt="Note relations" />
-    <div class="sheet">
-      Note relations panel
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-portable-mode.png" alt="Portable mode" />
-    <div class="sheet">
-      الوضع المحمول لوحدات تخزين USB
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-1col.png" alt="One column" />
-    <div class="sheet">
-      إمكانية وضع جميع اللوحات في أي مكان تشاء
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-darkmode.png" alt="screenshot darkmode" />
-    <div class="sheet">
-      الوضع المظلم
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="screenshot-distraction-free-mode" />
-    <div class="sheet">
-      الوضع الخالي من المشوشات
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Note encryption" />
-    <div class="sheet">
-      تشفير AES اختياري للملاحظات (وقابل للبرمجة أيضا)
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Encrypted note" />
-    <div class="sheet">
-      الملاحظات المشفرة هي مجرد نص أيضا
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-diff.png" alt="screenshot diff" />
-    <div class="sheet">
-      إظهار الفروقات عندما تُعدّل الملاحظات خارج التطبيق
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-export-print.png" alt="screenshot-export-print" />
-    <div class="sheet">
-      طباعة الملاحظات وتصديرها بصيغة PDF
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-freedesktop-theme.png" alt="screenshot-freedesktop-theme" />
-    <div class="sheet">
-      أيقونات من مشروع فري دسكتوب
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-other-workspace.png" alt="screenshot-other-workspace" />
-    <div class="sheet">
-      يمكنك استخدام مساحات عمل مختلفة
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-qml.png" alt="screenshot-qml" />
-    <div class="sheet">
-      قابل للبرمجة
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-russian.png" alt="screenshot-russian" />
-    <div class="sheet">
-      متاح بلغات عديدة
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-all-notes.png" alt="screenshot-search-in-all-notes" />
-    <div class="sheet">
-      بحث في جميع الملاحظات
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-search-in-current-note.png" alt="screenshot-search-in-current-note" />
-    <div class="sheet">
-      بحث في الملاحظة الحالية
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-settings-note-folders.png" alt="screenshot-settings-note-folders" />
-    <div class="sheet">
-      إمكانية استخدام مجلدات متعددة للملاحظات
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
-    <div class="sheet">
-      إدارة قوائم مهامك من خلال CalDAV
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
-    <div class="sheet">
-      إدارة ملاحظاتك المهملة على خادم Nextcloud الخاص بك
-    </div>
-  </v-carousel-item>
-  <v-carousel-item>
-    <img src="/screenshots/screenshot-versioning.png" alt="screenshot-versioning" />
-    <div class="sheet">
-      إدارة نسخ ملاحظاتك على خادم Nextcloud الخاص بك
-    </div>
-  </v-carousel-item>
-</v-carousel>
-</template>
+<ScreenshotCarousel />
 
 <v-divider />
 
@@ -186,7 +51,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - دعم **أيقونات سمات فري دسكتوب**؛ يمكنك حتى استخدام QOwnNotes مع **أيقونات سطح مكتبك الأصيلة** و**سمة سطح مكتبك المظلمة** المفضلة
 - **الوضع الخالي من المشوشات**، **ووضع ملء الشاشة**، **ووضع الآلة الكاتبة**
 - **ترقيم السطور**
-- **الفروقات** بين الملاحظة الحالية والملاحظة المعدّلة خارج التطبيق **تظهر** في صندوق حوار
+- **Differences** between current note and externally changed note are **shown** in a dialog
 
 ## اللغات
 
@@ -194,6 +59,10 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
   - [مساعدتك](../contributing/translation.md) مرحب بها جدا لتحسين هذه الترجمات أو لترجمة QOwnNotes إلى لغات أخرى
 
 <style>
+.v-divider {
+  margin: 20px;
+}
+
 .sheet {
   position: absolute;
   bottom: 50px;

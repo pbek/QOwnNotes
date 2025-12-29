@@ -26,17 +26,17 @@ U kunt **bijdragen aan GitHub Sponsors** op [pbek GitHub Sponsors](https://githu
 
 U kunt **een bedrag doneren via Liberapay** door deze knop te klikken:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Doneer met Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## Bitcoin
 
-U kunt **Bitcoin BTC doneren** aan dit Bitcoin BTC-adres:
+You can **donate Bitcoin BTC** to this Bitcoin BTC address:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-U kunt **Bitcoin Cash doneren** aan dit Bitcoin Cash-adres:
+You can **donate Bitcoin Cash** to this Bitcoin Cash address:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -44,13 +44,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-U kunt **Ethereum ETH doneren** aan dit Ethereum ETH-adres:
+You can **donate Ethereum ETH** to this Ethereum ETH address:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-U kunt **Ethereum ETC doneren** aan dit Ethereum ETC-adres:
+You can **donate Ethereum ETC** to this Ethereum ETC address:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

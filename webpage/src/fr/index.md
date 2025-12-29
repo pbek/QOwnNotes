@@ -2,10 +2,11 @@
 description: Prise de notes open source pour Linux, macOS et Windows, qui fonctionne avec Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
+heroText: QOwnNotes
 tagline: Prise de notes en Markdown dans des fichier en texte brut, open source et gratuite, avec intégration Nextcloud / ownCloud
 actions:
-  - text: Démarrage rapide →
-    link: /fr/getting-started/overview
+  - text: Quick Start →
+    link: /getting-started/overview
     type: primary
 features:
   - title: Gardez le contrôle de vos notes

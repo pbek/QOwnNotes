@@ -1,4 +1,4 @@
-# Être impliqué
+# Contribuer
 
 Les différentes façons de s'impliquer avec QOwnNotes
 
@@ -6,7 +6,7 @@ Les différentes façons de s'impliquer avec QOwnNotes
 - Rejoignez le [groupe **QOwnNotes Telegram**](https://t.me/QOwnNotes)
 - Rejoignez le [groupe **QOwnNotes Matrx**](https://matrix.to/#/#qownnotes:matrix.org)
 - Rejoignez le canal IRC [**#qownnotes**](https://web.libera.chat/#qownnotes) sur Libera.Chat
-- Follow [QOwnNotes on **Mastodon**](https://social.qownnotes.org/@qownnotes)
+- Suivez [QOwnNotes sur **Mastodon**](https://social.qownnotes.org/@qownnotes)
 - Abonnez-vous au [**flux RSS** du blog QOwnNotes](https://feeds.feedburner.com/QOwnNotesBlog)
 - Abonnez-vous au flux RSS des [ **releases** QOwnNotes](https://feeds.feedburner.com/QOwnNotesReleases)
 - Contribuez aux [**traductions** de QOwnNotes](translation.md)
@@ -15,5 +15,5 @@ Les différentes façons de s'impliquer avec QOwnNotes
 - Partagez vos scripts sur la page [GitHub des **scripts QOwnNotes** ](https://github.com/qownnotes/scripts)
 
 ::: tip Important
-Lisez le [code de conduite](./code-of-conduct.md) avant de vous impliquer dans le projet !
+Lisez le [code de conduite](./code-of-conduct.md) avant de vous impliquer dans le projet  !
 :::

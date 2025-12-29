@@ -36,7 +36,7 @@ Le présent Code de Conduite s'applique au sein de tous les espaces communautair
 
 ## Mise en application
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). Toutes les plaintes seront examinées et feront l'objet d'une investigation rapide et juste.
+Les cas de maltraitance, harcèlement ou comportements inacceptables devraient être rapportés aux leaders de la communauté responsables de leur respect (voir le menu _Contact_ sur [www.qownnotes.org](https://www.qownnotes.org/)). Toutes les plaintes seront examinées et feront l'objet d'une investigation rapide et juste.
 
 Tous les leaders de la communauté sont tenus de faire en sorte que la vie privée et la sécurité de toute personne ayant rapporté un incident soit respectées.
 

@@ -6,11 +6,8 @@ image: /img/bookmarks.png
 
 Maakt het mogelijk om vanaf een browserpagina te knippen en browserbladwijzers te beheren in verschillende browsers en besturingssystemen.
 
-::: tip
-Info
-
-- QOwnNotes moet actief zijn om de Web Companion-browserextensie te laten werken.
-- Geen internetverbinding nodig. De browserextensies werken **offline**.
+::: tip Info
+**QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**.
 :::
 
 ## Installatie

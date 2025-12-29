@@ -263,7 +263,7 @@ functie noteTaggingHook (note, action, tagName, newTagName);
 ```
 
 - as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
-- zodra een script is geactiveerd dat de nieuwe functie noteTaggingHook implementeert, wordt het taggen van opmerkingen door die afgehandeld
+- zodra een script is geactiveerd dat de nieuwe functie <0>noteTaggingHook</0> implementeert, wordt het taggen van opmerkingen door die afgehandeld
   - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
     - you will not lose your tags tree, just the former assignment to notes
     - u kunt nog steeds tags naar andere tags verplaatsen
