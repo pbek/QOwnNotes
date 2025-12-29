@@ -1,5 +1,4 @@
 ---
-title: QOwnNotes
 description: یادداشت برداری مارک داون متن باز به کار رفته برای لینوکس، مکینتاش و ویندوز که باهم با یادداشت‌های نکست کلود کار می کنند
 home: true
 heroImage: /screenshots/screenshot.png

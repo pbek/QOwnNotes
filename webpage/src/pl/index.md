@@ -1,5 +1,4 @@
 ---
-title: QOwnNotes
 description: Tworzenie notatek z otwartym kodem źródłowym dla systemów Linux, macOS i Windows, które współpracują z Nextcloud Notes
 home: prawda
 heroImage: /screenshots/screenshot.png

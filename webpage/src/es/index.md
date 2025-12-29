@@ -1,5 +1,4 @@
 ---
-title: QOwnNotes
 description: Aplicación para notas con markdown de código abierto para Linux, macOS y Windows que funciona con Notas de Nextcloud
 home: true
 heroImage: /screenshots/screenshot.png

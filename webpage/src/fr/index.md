@@ -1,5 +1,4 @@
 ---
-title: QOwnNotes
 description: Prise de notes open source pour Linux, macOS et Windows, qui fonctionne avec Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png

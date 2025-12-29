@@ -1,5 +1,4 @@
 ---
-title: QOwnNotes
 description: Nextcloud 노트와 함께 작동하는 Linux, macOS 및 Windows용 오픈 소스 마크다운 메모
 home: true
 heroImage: /screenshots/screenshot.png

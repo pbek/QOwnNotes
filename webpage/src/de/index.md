@@ -1,5 +1,4 @@
 ---
-title: QOwnNotes
 description: Open Source Markdown-Notiz-App für Linux, macOS und Windows, die zusammen mit Nextcloud Notes funktioniert
 home: true
 heroImage: /screenshots/screenshot.png
