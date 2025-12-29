@@ -4,8 +4,10 @@ description: Applicativo per salvare note in formato markdown per Linux, MacOS e
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: Applicativo per salvare note in formato markdown gratuito e open source che si integra con Nextcloud / ownCloud
-actionText: Avvio veloce →
-actionLink: getting-started/overview
+actions:
+  - text: Avvio veloce →
+    link: /getting-started/overview
+    type: primary
 features:
   - title: Le note sono in tuo possesso
     details: Tutte le note sono salvate in formato markdown su file nel tuo computer, nessun "blocco da fornitore" Us servizi di sincronizzazione come Nextcloud per sicronizzare le note tra i dispositivi.

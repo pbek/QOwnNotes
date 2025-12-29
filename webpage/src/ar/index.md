@@ -3,18 +3,17 @@ title: QOwnNotes
 description: تطبيق تدوين ملاحظات بصيغة ماركداون، حر ومفتوح المصدر، لأنظمة لينكس وماك&nbsp;أو&nbsp;إس وويندوز، ويعمل مع Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
-tagline: تطبيق حر ومفتوح المصدر لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ويتكامل مع Nextcloud و ownCloud
-actionText: بداية سريعة ←
-actionLink: getting-started/overview
+tagline: تطبيق حر ومفتوح المصدر لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ويتكامل مع Nextcloud و ownCloud
+actions:
+  - text: بداية سريعة ←
+    link: /getting-started/overview
+    type: primary
 features:
-  - 
-    title: امتلك ملاحظاتك
+  - title: امتلك ملاحظاتك
     details: يتم تخزين جميع الملاحظات كملفات نصية مجردة بصيغة ماركداون على حاسوبك؛ لا يوجد «تقيد ببائع». استخدم خدمات المزامنة مثل Nextcloud لمزامنة ملاحظاتك عبر الأجهزة.
-  - 
-    title: خفيف الأثر
+  - title: خفيف الأثر
     details: تطبيق أصيل، مُحسَّن لتحقيق أفضل سرعة تشغيل وأقل استهلاك للمعالج والذاكرة.
-  - 
-    title: تخصيص
+  - title: تخصيص
     details: قابل للتخصيص والبرمجة لدرجة كبيرة؛ يمكنك ضبط كيف تحب العمل مع ملاحظاتك.
 footer: صنعه Patrizio Bekerle بكل حب ❤️
 ---

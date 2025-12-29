@@ -4,17 +4,16 @@ description: Open source markdown-notities voor Linux, macOS en Windows, die sam
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: Gratis markdown-notities maken voor open source-tekstbestanden met Nextcloud / ownCloud-integratie
-actionText: Gyors indítás →
-actionLink: getting-started/overview
+actions:
+  - text: Gyors indítás →
+    link: /getting-started/overview
+    type: primary
 features:
-  - 
-    title: Bezit uw notities
+  - title: Bezit uw notities
     details: Alle notities worden opgeslagen als markdown-bestanden in platte tekst op uw computer, geen 'vendor lock-in'. Gebruik synchronisatieservices zoals Nextcloud om notities op verschillende apparaten te synchroniseren.
-  - 
-    title: Kleine voetafdruk
+  - title: Kleine voetafdruk
     details: Native applicatie, geoptimaliseerd voor snelheid en weinig processor- en geheugenbronnen.
-  - 
-    title: Customization
+  - title: Customization
     details: Sterk aanpasbaar en scriptbaar, u bepaalt zelf hoe u met uw notities wilt werken.
 footer: Gemaakt door Patrizio Bekerle met ❤️
 ---

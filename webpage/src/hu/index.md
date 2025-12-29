@@ -4,17 +4,16 @@ description: Nyílt forráskódú jegyzetjegyzet készítése Linux, macOS és W
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: Ingyenes, nyílt forráskódú, egyszerű szöveges fájl markdown jegyzetelés Nextcloud / ownCloud integrációval
-actionText: Gyors indítás →
-actionLink: getting-started/overview
+actions:
+  - text: Gyors indítás →
+    link: /getting-started/overview
+    type: primary
 features:
-  - 
-    title: A jegyzetek tulajdonosa
+  - title: A jegyzetek tulajdonosa
     details: Az összes jegyzet egyszerű szöveges markdown-os fájlként kerül tárolásra a számítógépén, nincs "vendor lock-in" Használja a szinkronizálási szolgáltatásokat, például a Nextcloud -ot a jegyzetek szinkronizálásához az eszközök között.
-  - 
-    title: Kis lábnyom
+  - title: Kis lábnyom
     details: Natív alkalmazás, amely a sebességre optimalizált, és kevés processzor- és memória -erőforrást igényel.
-  - 
-    title: Testreszabás
+  - title: Testreszabás
     details: Erősen testreszabható és szkriptelhető, Ön irányíthatja, hogy miként dolgozzon a jegyzeteivel.
 footer: Patrizio Bekerle készítette ❤️-vel
 ---

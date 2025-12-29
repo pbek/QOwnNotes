@@ -4,8 +4,10 @@ description: یادداشت برداری مارک داون متن باز به ک
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: یادداشت برداری مارک داون پرونده با متن ساده و به صورت متن باز و رایگان که به انضمام نکست کلود یا اون کلود بکار می رود
-actionText: شروع سریع⬅
-actionLink: getting-started/overview
+actions:
+  - text: شروع سریع⬅
+    link: /getting-started/overview
+    type: primary
 features:
   - title: یادداشت های خود را داشته باشید
     details: تمام یادداشت ها به صورت پرونده های مارک داون با متن ساده در رایانه شما و نه به صورت "وابستگی به فروشنده" ذخیره سازی می شوند. به منظور همگام سازی یادداشت ها در میان ابزارهای مختلف از خدمات همگام سازی نظیر نکست کلود استفاده کنید.
