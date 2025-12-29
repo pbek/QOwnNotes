@@ -275,6 +275,9 @@ export default defineUserConfig({
       rss: true,
       atom: true,
       json: true,
+      rssOutputFilename: "rss.xml",
+      atomOutputFilename: "feed.atom",
+      jsonOutputFilename: "feed.json",
       channel: {
         title: "QOwnNotes Blog",
         description:
