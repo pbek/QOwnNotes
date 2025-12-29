@@ -248,6 +248,7 @@ export default defineUserConfig({
       tasklist: true,
     }),
     // SEO plugin - https://ecosystem.vuejs.press/plugins/seo/seo/
+    // Doc: https://github.com/vuepress/ecosystem/blob/main/docs/plugins/seo/seo/config.md
     seoPlugin({
       hostname: "https://www.qownnotes.org",
       canonical: "https://www.qownnotes.org",
@@ -255,14 +256,28 @@ export default defineUserConfig({
         name: "Patrizio Bekerle",
         twitter: "PatrizioBekerle",
       },
-      ogp: (ogp, page) => ({
-        ...ogp,
-        "og:image": page.frontmatter.image
-          ? page.frontmatter.image.startsWith("http")
-            ? page.frontmatter.image
-            : `https://www.qownnotes.org${page.frontmatter.image}`
-          : "https://www.qownnotes.org/screenshots/screenshot.png",
-      }),
+      ogp: (ogp, page) => {
+        // Helper function to get the image URL
+        const getImageUrl = () => {
+          return page.frontmatter.image
+            ? page.frontmatter.image.startsWith("http")
+              ? page.frontmatter.image
+              : `https://www.qownnotes.org${page.frontmatter.image}`
+            : "https://www.qownnotes.org/screenshots/screenshot.png";
+        };
+
+        const imageUrl = getImageUrl();
+
+        return {
+          ...ogp,
+          "og:image": imageUrl,
+          "twitter:card": "summary_large_image",
+          "twitter:title": page.title,
+          "twitter:description": page.frontmatter.description || "",
+          "twitter:image": imageUrl,
+          "twitter:creator": "@PatrizioBekerle",
+        };
+      },
     }),
     // Sitemap plugin - https://ecosystem.vuejs.press/plugins/seo/sitemap/
     sitemapPlugin({
@@ -270,6 +285,7 @@ export default defineUserConfig({
       excludeUrls: ["/404.html"],
     }),
     // Feed plugin - https://ecosystem.vuejs.press/plugins/blog/feed/
+    // Doc: https://github.com/vuepress/ecosystem/blob/main/docs/plugins/blog/feed/config.md
     feedPlugin({
       hostname: "https://www.qownnotes.org",
       rss: true,
@@ -302,10 +318,6 @@ export default defineUserConfig({
     [
       "meta",
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
-    ],
-    [
-      "meta",
-      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
     ],
     [
       "link",
