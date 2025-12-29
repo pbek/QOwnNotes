@@ -1,14 +1,14 @@
-name: Build and Deploy Webpage Next
+name: Build and Deploy Webpage Vuepress 1
 on:
   push:
-    branches: ["feature/vuepress-next"]
+    branches: [vuepress-prev]
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-paths
     # if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = ".github/workflows/build-deploy-webpage.yml" ]] ;
     paths:
       - "CHANGELOG.md"
       - "screenshots/**"
       - "webpage/**"
-      - ".github/workflows/build-deploy-webpage-next.yml"
+      - ".github/workflows/build-deploy-webpage-prev.yml"
   workflow_dispatch:
 
 defaults:
@@ -40,6 +40,6 @@ jobs:
           #path: ./webpage
           context: ./webpage
           file: ./webpage/Dockerfile
-          tags: pbeke/qownnotes-webpage-next:latest
+          tags: pbeke/qownnotes-webpage-prev:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

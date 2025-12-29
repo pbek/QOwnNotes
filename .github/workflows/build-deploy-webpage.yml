@@ -1,4 +1,4 @@
-name: Build and Deploy Webpage
+name: Build and Deploy Webpage Vuepress 2
 on:
   push:
     branches: [main]
