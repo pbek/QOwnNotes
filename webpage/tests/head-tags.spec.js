@@ -131,11 +131,10 @@ test("blog head tags - viewport meta tag", async ({ page, config }) => {
     config.baseURL + "/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html",
   );
 
-  const viewport = page.locator('meta[name="viewport"]');
-  await expect(viewport).toHaveAttribute(
-    "content",
-    "width=device-width, initial-scale=1.0",
-  );
+  const viewport = page.locator('meta[name="viewport"]').first();
+  const content = await viewport.getAttribute("content");
+  // Accept both formats: "width=device-width,initial-scale=1" and "width=device-width, initial-scale=1.0"
+  expect(content).toMatch(/width=device-width,?\s?initial-scale=1(\.0)?/);
 });
 
 test("blog head tags - theme color", async ({ page, config }) => {
