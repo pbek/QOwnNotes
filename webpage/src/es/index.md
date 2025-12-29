@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Aplicación libre y de código abierto para tomar notas de texto con markdown e integración con Nextcloud/Owncloud
 actions:
   - text: Inicio rápido →
-    link: /getting-started/overview
+    link: /es/getting-started/overview
     type: primary
 features:
   - title: Aduéñese de sus notas

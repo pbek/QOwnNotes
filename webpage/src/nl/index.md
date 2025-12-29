@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Gratis markdown-notities maken voor open source-tekstbestanden met Nextcloud / ownCloud-integratie
 actions:
   - text: Gyors indítás →
-    link: /getting-started/overview
+    link: /nl/getting-started/overview
     type: primary
 features:
   - title: Bezit uw notities

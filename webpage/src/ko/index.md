@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Nextcloud / ownCloud 통합을 통한 무료 오픈 소스 일반 텍스트 파일 마크다운 노트 생성
 actions:
   - text: 빠른 시작 →
-    link: /getting-started/overview
+    link: /ko/getting-started/overview
     type: primary
 features:
   - title: 노트 소유

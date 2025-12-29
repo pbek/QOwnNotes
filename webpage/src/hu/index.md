@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Ingyenes, nyílt forráskódú, egyszerű szöveges fájl markdown jegyzetelés Nextcloud / ownCloud integrációval
 actions:
   - text: Gyors indítás →
-    link: /getting-started/overview
+    link: /hu/getting-started/overview
     type: primary
 features:
   - title: A jegyzetek tulajdonosa

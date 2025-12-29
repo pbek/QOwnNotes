@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Applicativo per salvare note in formato markdown gratuito e open source che si integra con Nextcloud / ownCloud
 actions:
   - text: Avvio veloce →
-    link: /getting-started/overview
+    link: /it/getting-started/overview
     type: primary
 features:
   - title: Le note sono in tuo possesso

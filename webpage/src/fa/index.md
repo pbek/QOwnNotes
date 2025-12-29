@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: یادداشت برداری مارک داون پرونده با متن ساده و به صورت متن باز و رایگان که به انضمام نکست کلود یا اون کلود بکار می رود
 actions:
   - text: شروع سریع⬅
-    link: /getting-started/overview
+    link: /fa/getting-started/overview
     type: primary
 features:
   - title: یادداشت های خود را داشته باشید

@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: تطبيق حر ومفتوح المصدر لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ويتكامل مع Nextcloud و ownCloud
 actions:
   - text: بداية سريعة ←
-    link: /getting-started/overview
+    link: /ar/getting-started/overview
     type: primary
 features:
   - title: امتلك ملاحظاتك

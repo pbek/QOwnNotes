@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Prise de notes en Markdown dans des fichier en texte brut, open source et gratuite, avec intégration Nextcloud / ownCloud
 actions:
   - text: Démarrage rapide →
-    link: /getting-started/overview
+    link: /fr/getting-started/overview
     type: primary
 features:
   - title: Gardez le contrôle de vos notes

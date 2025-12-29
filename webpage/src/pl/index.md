@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Bezpłatna notatka z otwartym kodem tekstowym w postaci zwykłego tekstu z integracją Nextcloud / ownCloud
 actions:
   - text: Szybki start →
-    link: /getting-started/overview
+    link: /pl/getting-started/overview
     type: primary
 features:
   - title: Posiadaj swoje notatki

@@ -5,7 +5,7 @@ heroImage: /screenshots/screenshot.png
 tagline: Kostenlose Open-Source-Markdown-Notizen für Klartextdateien mit Nextcloud / ownCloud-Integration
 actions:
   - text: Schnellstart →
-    link: /getting-started/overview
+    link: /de/getting-started/overview
     type: primary
 features:
   - title: Besitze deine Notizen
