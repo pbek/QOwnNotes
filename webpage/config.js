@@ -10,16 +10,16 @@ let defaultConfig = {
   baseURL: "https://www.qownnotes.org",
 };
 
-let nextConfig = {
+let nextOverride = {
   baseURL: "https://next.qownnotes.org",
 };
 
 let localOverride = {
-  baseURL: "http://localhost:8080/",
+  baseURL: "http://localhost:8080",
 };
 
 let localDockerOverride = {
-  baseURL: "http://localhost:8081/",
+  baseURL: "http://localhost:8081",
 };
 
 function deepMerge(target, source) {
@@ -46,7 +46,7 @@ function deepMerge(target, source) {
 
 const configs = {
   prod: defaultConfig,
-  next: nextConfig,
+  next: deepMerge(defaultConfig, nextOverride),
   local: deepMerge(defaultConfig, localOverride),
   "local-docker": deepMerge(defaultConfig, localDockerOverride),
 };

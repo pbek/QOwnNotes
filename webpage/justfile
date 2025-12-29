@@ -96,7 +96,7 @@ playwright-test-local test='':
 
 # Run the local docker playwright tests
 [group('dev')]
-playwright-test-next test='':
+playwright-test-local-docker test='':
     npm run playwright:test:local-docker -- tests/{{ test }}
 
 # Run the playwright tests on next.qownnotes.org
