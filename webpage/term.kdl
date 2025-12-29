@@ -9,7 +9,7 @@ layout {
   pane split_direction="vertical" size="35%" {
     pane  {
       command "npm"
-      args "install" "--legacy-peer-deps"
+      args "install"
     }
     pane  {
       command "just"
