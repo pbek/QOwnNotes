@@ -434,7 +434,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (auf Englisch)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Änderungsprotokoll (auf Englisch)",
@@ -490,7 +490,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (in inglese)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (in inglese)",
@@ -546,7 +546,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (en anglais)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (en anglais)",
@@ -602,7 +602,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (en inglés)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (en inglés)",
@@ -658,7 +658,7 @@ export default defineUserConfig({
           },
           {
             text: "وبلاگ (به انگلیسی)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "تغییرات (به انگلیسی)",
@@ -714,7 +714,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (in het Engels)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Changelog (in het Engels)",
@@ -770,7 +770,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (angolul)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Változásnapló (angolul)",
@@ -826,7 +826,7 @@ export default defineUserConfig({
           },
           {
             text: "المدونة (بالإنجليزية)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "سجل التغييرات (بالإنجليزية)",
@@ -882,7 +882,7 @@ export default defineUserConfig({
           },
           {
             text: "Blog (po angielsku)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "Dziennik zmian (po angielsku)",
@@ -938,7 +938,7 @@ export default defineUserConfig({
           },
           {
             text: "블로그 (영어)",
-            children: utils.getChildren("src", "blog", true),
+            children: utils.getBlogChildrenWithTitles("src", "blog", true),
           },
           {
             text: "변경 로그 (영어)",
