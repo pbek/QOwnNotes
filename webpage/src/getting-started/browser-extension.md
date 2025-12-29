@@ -7,10 +7,9 @@ image: /img/bookmarks.png
 Allows for clipping from a browser page and managing browser bookmarks across browsers and operating systems.
 
 ::: tip Info
-
-- QOwnNotes must be running for the Web Companion browser extension to work.
-- No internet connection needed. The browser extensions works **offline**.
-  :::
+**QOwnNotes must be running** for the Web Companion browser extension to work.
+But no internet connection is needed, the browser extensions works **offline**.
+:::
 
 ## Installation
 
