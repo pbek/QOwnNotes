@@ -17,6 +17,11 @@ echo "📦 Copying assets..."
 cp -R ../screenshots src/.vuepress/public 2>/dev/null || echo "⚠️  Screenshots not found, skipping"
 cp ../CHANGELOG.md src/changelog.md 2>/dev/null || echo "⚠️  CHANGELOG.md not found, skipping"
 
+echo ""
+echo "📝 Generating blog index data..."
+node scripts/generate-blog-data.js
+
+echo ""
 echo "🏗️  Building with VuePress 2..."
 echo ""
 

@@ -14,6 +14,7 @@ basement_dist
 .shared
 src/.vuepress/.cache
 src/.vuepress/.temp
+src/.vuepress/blog-data.json
 test-results
 playwright-report/
 
