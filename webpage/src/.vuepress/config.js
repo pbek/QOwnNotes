@@ -308,9 +308,9 @@ export default defineUserConfig({
       },
       sorter: (a, b) => {
         // Sort by date, newest first
-        return (
-          new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-        );
+        const dateA = new Date(a.frontmatter?.date || a.data?.date || 0);
+        const dateB = new Date(b.frontmatter?.date || b.data?.date || 0);
+        return dateB.getTime() - dateA.getTime();
       },
     }),
   ],
