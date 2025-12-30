@@ -13,6 +13,8 @@ order: 20251230000000
 I'm excited to announce the **complete relaunch** of the QOwnNotes webpage,
 now powered by the latest generation of web technologies: **VuePress 2**, **Vue.js 3**, and **Vuetify 3**!
 
+This relaunch is the result of the work done in [#3414](https://github.com/pbek/QOwnNotes/issues/3414).
+
 ![media-WHtPUF](./media/media-WHtPUF.png)
 
 ## Why the Relaunch?
