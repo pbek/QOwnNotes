@@ -1,8 +1,7 @@
 ---
 title: Overview
 description: QOwnNotes blog
-feed:
-  enable: false
+feed: false
 ---
 
 # Blog

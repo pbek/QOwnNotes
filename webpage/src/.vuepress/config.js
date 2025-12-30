@@ -301,7 +301,10 @@ export default defineUserConfig({
       },
       filter: ({ frontmatter, filePathRelative }) => {
         // Only include blog posts in the feed
-        return filePathRelative && filePathRelative.startsWith("blog/");
+        return Boolean(
+          frontmatter.feed ??
+            (filePathRelative && filePathRelative.startsWith("blog/")),
+        );
       },
       sorter: (a, b) => {
         // Sort by date, newest first
