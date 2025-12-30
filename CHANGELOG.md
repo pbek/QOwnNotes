@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## Next
+
+- The QOwnNotes webpage has been completely relaunched with **VuePress 2**,
+  **Vue.js 3**, and **Vuetify 3** (for [#3414](https://github.com/pbek/QOwnNotes/issues/3414))
+  - Migrated from VuePress 1 (which reached end of life) to VuePress 2
+  - Updated to Vue.js 3 with Composition API for better performance and modern reactivity
+  - Integrated Vuetify 3 for Material Design 3 components and improved accessibility
+  - Implemented Vite-powered bundling for faster build times and development
+  - Enhanced SEO, sitemap generation, and performance optimizations
+  - Improved mobile responsiveness and accessibility across the entire site
+  - Added comprehensive end-to-end testing with Playwright
+  - Maintained all multilingual support and existing content
+
 ## 25.12.7
 
 - Added **Reload** and **Jump to note** buttons to the Note Dialog of the
