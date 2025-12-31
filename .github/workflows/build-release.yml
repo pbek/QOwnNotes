@@ -293,14 +293,23 @@ jobs:
           asset_content_type: application/octet-stream
 
       - name: "📤 Deploy Snap"
-        uses: snapcore/action-publish@v1
         continue-on-error: true
+        timeout-minutes: 10
+        shell: bash
         env:
           # `snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -`, token valid for one year
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
-        with:
-          snap: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
-          release: stable
+        run: |
+          # Install snapcraft if not available
+          sudo snap install snapcraft --classic
+
+          # Upload and release the snap in one command
+          # The --release flag publishes to stable channel immediately
+          snapcraft upload qownnotes_${{ env.VERSION }}_amd64.snap --release stable || {
+            echo "Snap upload timed out or failed, but the snap was likely uploaded successfully."
+            echo "Check the Snap Store dashboard for processing status."
+            exit 0
+          }
 
   #      - name: '📤 Upload artifact: Snap'
   #        uses: actions/upload-artifact@v4

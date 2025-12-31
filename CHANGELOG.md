@@ -23,6 +23,9 @@
   - Modernized codebase to use Vue 3 features and APIs
   - Updated service worker implementation with vite-plugin-pwa
   - Updated Docker build to use Node 22
+- Try to fixed snap deployment timeout issues in the release workflow by replacing the GitHub action
+  with direct `snapcraft upload` command and adding proper timeout handling
+  (for [#3416](https://github.com/pbek/QOwnNotes/issues/3416))
 
 ## 25.12.7
 
