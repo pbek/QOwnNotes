@@ -8541,7 +8541,30 @@ void MainWindow::reloadCurrentNoteTags() {
     } else {
         const QVector<Note> notes = selectedNotes();
         tagList = Tag::fetchAllOfNotes(notes);
-        const QString notesSelectedText = tr("%n notes selected", "", selectedNotesCount);
+
+        // Count notes and folders separately
+        const auto selectedItems = ui->noteTreeWidget->selectedItems();
+        int noteCount = 0;
+        int folderCount = 0;
+        for (const auto *item : selectedItems) {
+            const int itemType = item->data(0, Qt::UserRole + 1).toInt();
+            if (itemType == NoteType) {
+                noteCount++;
+            } else if (itemType == FolderType) {
+                folderCount++;
+            }
+        }
+
+        // Build selection text based on what's selected
+        QString notesSelectedText;
+        if (noteCount > 0 && folderCount > 0) {
+            notesSelectedText =
+                tr("%n note(s) and %1 folder(s) selected", "", noteCount).arg(folderCount);
+        } else if (folderCount > 0) {
+            notesSelectedText = tr("%n folder(s) selected", "", folderCount);
+        } else {
+            notesSelectedText = tr("%n notes selected", "", noteCount);
+        }
 
         ui->selectedTagsToolButton->setText(QString::number(selectedNotesCount));
         ui->selectedTagsToolButton->setToolTip(notesSelectedText);
@@ -9884,19 +9907,52 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(const QPoint pos) 
     }
 
     const QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
-    const int type = item->data(0, Qt::UserRole + 1).toInt();
+    const auto selectedItems = ui->noteTreeWidget->selectedItems();
 
-    if (type == FolderType) {
+    // Check if we have a mixed selection of notes and folders
+    bool hasNotes = false;
+    bool hasFolders = false;
+    for (const auto *selectedItem : selectedItems) {
+        const int itemType = selectedItem->data(0, Qt::UserRole + 1).toInt();
+        if (itemType == NoteType) {
+            hasNotes = true;
+        } else if (itemType == FolderType) {
+            hasFolders = true;
+        }
+        if (hasNotes && hasFolders) {
+            break;
+        }
+    }
+
+    // If we have a mixed selection or notes, show the notes context menu
+    // (which now supports both notes and folders)
+    if (hasNotes || (hasNotes && hasFolders)) {
+        openNotesContextMenu(globalPos, hasNotes, hasFolders);
+    } else if (hasFolders) {
+        // Only folders selected, show folder-specific context menu
         std::unique_ptr<QMenu> menu(NoteSubFolderTree::contextMenu(ui->noteTreeWidget));
         menu->exec(globalPos);
-    } else if (type == NoteType) {
-        openNotesContextMenu(globalPos);
     }
 }
 
-void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenuEntriesOnly) {
+void MainWindow::openNotesContextMenu(const QPoint globalPos, bool hasNotes, bool hasFolders) {
     QMenu noteMenu;
     QAction *renameAction = nullptr;
+
+    // Calculate counts for proper labels
+    const auto selectedItems = ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    int folderCount = 0;
+    for (const auto *item : selectedItems) {
+        const int itemType = item->data(0, Qt::UserRole + 1).toInt();
+        if (itemType == NoteType) {
+            noteCount++;
+        } else if (itemType == FolderType) {
+            folderCount++;
+        }
+    }
+
+    bool multiNoteMenuEntriesOnly = (noteCount + folderCount) > 1;
 
     if (!multiNoteMenuEntriesOnly) {
         auto *createNoteAction = noteMenu.addAction(tr("New note"));
@@ -9909,7 +9965,16 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
                "the note"));
     }
 
-    auto *removeAction = noteMenu.addAction(tr("&Remove notes"));
+    // Set dynamic remove action text based on selection
+    QString removeActionText;
+    if (hasNotes && hasFolders) {
+        removeActionText = tr("&Remove notes and folders");
+    } else if (hasFolders) {
+        removeActionText = tr("&Remove folders");
+    } else {
+        removeActionText = tr("&Remove notes");
+    }
+    auto *removeAction = noteMenu.addAction(removeActionText);
     noteMenu.addSeparator();
 
     const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
@@ -9974,7 +10039,6 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool multiNoteMenu
     }
 
     QStringList noteNameList;
-    const auto selectedItems = ui->noteTreeWidget->selectedItems();
     for (QTreeWidgetItem *item : selectedItems) {
         // the note names are not unique anymore but the note subfolder
         // path will be taken into account in

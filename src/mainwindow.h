@@ -1134,7 +1134,8 @@ class MainWindow : public QMainWindow {
 
     void initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit);
 
-    void openNotesContextMenu(const QPoint globalPos, bool multiNoteMenuEntriesOnly = false);
+    void openNotesContextMenu(const QPoint globalPos, bool hasNotes = true,
+                              bool hasFolders = false);
 
     void updateCurrentNoteTextHash();
 
