@@ -35,22 +35,22 @@
 ## 강조
 
 ```markdown
-Emphasis, aka italics, with _asterisks_.
+강조, 즉 기울임꼴은 _별표_와 함께 사용됩니다.
 
-**애스터리스크**로 굵게 강조합니다.
+강조 표시, 즉 굵게, **별표**를 사용합니다.
 ```
 
 [단축키](./shortcuts.md) <kbd>Ctrl + B</kbd>를 사용하여 텍스트를 굵게 표시하고 <kbd>Ctrl + I</kbd>을 사용하여 기울임꼴로 표시할 수 있습니다. :::
 
 ## 밑줄
 
-There also is an optional setting to enable underline rendering in the _Preview settings_.
+_미리보기 설정_에서 밑줄 렌더링을 활성화하는 옵션 설정도 있습니다.
 
 ```markdown
 _밑줄_
 ```
 
-::: 팁 [단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다. :::
+:::  팁 [단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다. :::
 
 ## 취소선
 
@@ -70,15 +70,15 @@ _밑줄_
 
 - 정렬되지 않은 하위 목록입니다.
 
-1. Actual numbers don't matter, just that it's a number
-1. Ordered sub-list (only works in the editor, not the preview)
+1. 실제 숫자는 중요하지 않습니다. 단지 숫자일 뿐입니다
+1. 정렬된 하위 목록 (미리보기가 아닌 편집기에서만 작동)
 1. 그리고 다른 아이템입니다.
 
-- Unordered list can use asterisks
+- 정렬되지 않은 목록은 별표를 사용할 수 있습니다
 
-* Or minuses
+* 또는 마이너스
 
-- Or pluses
+- 또는 플러스
 ```
 
 ::: 팁 목록 끝에 있는 <kbd>Enter<0>을 누르면 새 목록 항목이 생성됩니다. :::</p>
@@ -282,13 +282,13 @@ cd Notes
 ```마크다운
 콜론은 열을 정렬하는 데 사용할 수 있습니다.
 
-| Tables        |      Are      |  Cool |
+| Tables        | Are           | Cool  |
 | ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+| 열 3 은      | 오른쪽 정렬 | $1600 |
+| 열 2 는      | 가운데      |   $12 |
+| 얼룩말 줄무늬 | 깔끔하다      |    $1 |
 
-There must be at least 3 dashes separating each header cell.
+각 머리말 셀을 구분하는 대시가 3개 이상 있어야 합니다.
 
 인라인 마크다운을 사용할 수도 있습니다.
 
@@ -315,11 +315,11 @@ There must be at least 3 dashes separating each header cell.
 
 따옴표로 묶습니다.
 
-&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 모든 사람이 실제로 감싸기에 충분한 길이인지 확인하기 위해 계속 작성해 보겠습니다. Oh, you can _put_ **Markdown** into a blockquote.
+&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 모든 사람이 실제로 감싸기에 충분한 길이인지 확인하기 위해 계속 작성해 보겠습니다. 오, 블록 인용문에 **마크다운**을 넣을 수 있습니다.
 </code></pre>
 
 <p spaces-before="0">
-  ::: tip You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the <em x-id="4">Editor settings</em>
+  ::: 팁 QOwnNotes에게 블록 따옴표를 완전히 강조 표시하거나 <em x-id="4">편집기 설정</em>에서 블록 따옴표 문자만 강조 표시하도록 지시할 수 있습니다
 </p>
 
 <p spaces-before="0">
@@ -336,15 +336,15 @@ There must be at least 3 dashes separating each header cell.
 
 <pre><code class="markdown">3개 이상...
 
-Hyphens
+하이픈
 
 ---
 
-Asterisks
+별표
 
 ---
 
-Underscores
+밑줄
 
 ---
 </code></pre>
@@ -371,10 +371,10 @@ Underscores
 
 <pre><code class="markdown">여기부터 시작할 수 있는 줄이 있습니다.
 
-This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
+이 선은 위의 선과 두 개의 새로운 선으로 분리되어 있으므로 _분리된 문단_이 될 것입니다.
 
-This line is also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
+이 줄도 별도의 단락으로 시작하지만...
+이 줄은 두 개의 후행 공간과 하나의 새 줄로만 분리되어 있으므로 _같은 문단_에서 별도의 줄입니다.
 </code></pre>
 
 <p spaces-before="0">
@@ -391,9 +391,9 @@ This line is only separated by two trailing spaces and a single newline, so it's
   설명은 미리보기에 표시되지 않습니다.
 </p>
 
-<pre><code class="markdown">[comment]: # "This comment will not appear in the preview"
+<pre><code class="markdown">[comment]: # "이 주삭은 미리보기에 나타나지 않습니다"
 
-&lt;!-- HTML comments are also hidden --&gt;
+&lt;!-- HTML 주석도 숨겨져 있습니다 --&gt;
 </code></pre>
 
 <p spaces-before="0">

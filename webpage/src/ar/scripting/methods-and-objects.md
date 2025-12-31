@@ -349,7 +349,7 @@ Script {
 للمزيد من بعض الأمثلة يمكنك أن تلقي نظرة على [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل <code dir="ltr">--action customAction\_&lt;المعرِّف&gt;</code>. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+يمكنك تنفيذ إجراء مخصص بعد تشغيل التطبيق، باستخدام المُعامِل <code dir="ltr">--action customAction_&lt;المعرِّف&gt;</code>. للمزيد من المعلومات يمكنك أن تلقي نظرة على [تنفيذ إجراءات قائمة بعد التشغيل](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
 ## Registering a label

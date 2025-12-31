@@ -23,7 +23,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Puoi usare i tuoi **pre-esistenti documenti di testo o markdown** senza la necessità di importarli
 - QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
 - **Importa Evernote e Joplin**
-- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile\*\* e Nextcloud Text</p></li>
+- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione <0>mobile** e Nextcloud Text</p></li>
 - Crea un **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** e collegalo alle tue note
 - Supporto per la **condivisione delle note** sul tuo server **ownCLoud** / **Nextcloud**
 - Gestisci la tua **lista delle cose da fare** di Nextcloud / OwnCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o usa un altro **server CalDAV** per sincronizzare i tuoi incarichi

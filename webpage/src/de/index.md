@@ -5,15 +5,19 @@ heroImage: /screenshots/screenshot.png
 heroText: QOwnNotes
 tagline: Kostenlose Open-Source-Markdown-Notizen für Klartextdateien mit Nextcloud / ownCloud-Integration
 actions:
-  - text: Quick Start →
+  - 
+    text: Quick Start →
     link: /getting-started/overview
     type: primary
 features:
-  - title: Besitze deine Notizen
+  - 
+    title: Besitze deine Notizen
     details: Alle Notizen werden als Nur-Text-Markdown-Dateien auf Ihrem Computer gespeichert, ohne "Vendor Lock-In". Sie können Synchronisierungsdienste wie Nextcloud verwenden, um Notizen geräteübergreifend zu synchronisieren.
-  - title: Kleiner Fußabdruck
+  - 
+    title: Kleiner Fußabdruck
     details: Native Anwendung, die auf Geschwindigkeit optimiert ist und wenig Prozessor- und Speicherressourcen benötigt.
-  - title: Anpassung
+  - 
+    title: Anpassung
     details: Stark anpassbar und skriptfähig, Sie haben die Kontrolle darüber, wie Sie mit Ihren Notizen arbeiten möchten.
 footer: Erstellt von Patrizio Bekerle mit ❤️
 ---

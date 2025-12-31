@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## Next
+## 26.1.0
 
 - The **QOwnNotes webpage** has been completely **relaunched** with **VuePress 2**,
   **Vue.js 3**, and **Vuetify 3** (for [#3414](https://github.com/pbek/QOwnNotes/issues/3414))
@@ -26,6 +26,7 @@
 - Try to fixed snap deployment timeout issues in the release workflow by replacing the GitHub action
   with direct `snapcraft upload` command and adding proper timeout handling
   (for [#3416](https://github.com/pbek/QOwnNotes/issues/3416))
+- Added more Spanish, Korean, French translation (thank you, alejandromoc, venusgirl, jd-develop)
 
 ## 25.12.7
 

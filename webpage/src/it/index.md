@@ -5,15 +5,19 @@ heroImage: /screenshots/screenshot.png
 heroText: QOwnNotes
 tagline: Applicativo per salvare note in formato markdown gratuito e open source che si integra con Nextcloud / ownCloud
 actions:
-  - text: Quick Start →
+  - 
+    text: Quick Start →
     link: /getting-started/overview
     type: primary
 features:
-  - title: Le note sono in tuo possesso
+  - 
+    title: Le note sono in tuo possesso
     details: Tutte le note sono salvate in formato markdown su file nel tuo computer, nessun "blocco da fornitore" Us servizi di sincronizzazione come Nextcloud per sicronizzare le note tra i dispositivi.
-  - title: Piccole dimensioni
+  - 
+    title: Piccole dimensioni
     details: Applicazione nativa, ottimizzata per la velocità e il poco consumo di risorse del processore e della memoria.
-  - title: Personalizzazione
+  - 
+    title: Personalizzazione
     details: Altamente personalizzabile e scriptabile, hai il pieno controllo su come lavorare con le tue note.
 footer: Fatto con il ❤️ da Patrizio Bekerle
 ---

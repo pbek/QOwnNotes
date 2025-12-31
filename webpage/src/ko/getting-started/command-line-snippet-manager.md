@@ -36,7 +36,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Before you are using the snippet manager you need to enable the _Web socket server_ (2) in the _Browser extension / command snippets_ (1) settings in QOwnNotes.
+스니펫 관리자를 사용하기 전에 QOwnNotes의 _브라우저 확장 / 명령 스니펫 _ (1) 설정에서 _웹 소켓 서버_ (2)를 활성화해야 합니다.
 
 그런 다음 보안 토큰 (3)을 표시하고 복사해야 합니다 (4).
 
@@ -53,7 +53,7 @@ qc configure
 token = "yourtokenhere"
 ```
 
-::: 팁 QOownNotes 설정에서 노트에서 명령을 검색하는 데 사용할 노트 태그를 설정할 수도 있습니다. 기본적으로 태그 `명령`이 사용됩니다. :::
+::: 팁 QOwnNotes 설정에서 노트에서 명령어를 검색하는 데 사용할 노트 태그를 설정할 수도 있습니다. 기본적으로 태그 `명령`이 사용됩니다. :::
 
 ## 명령 스니펫의 구문
 
@@ -66,7 +66,7 @@ token = "yourtokenhere"
 
 * `echo I am also a command` I am a description #tag3 #tag4 #tag5
 
-- cmd: `echo I will be found in the current note` This command will be found in the current note regardless of note tags
+- cmd: `echo I will be found in the current note` 이 명령은 노트 태그에 관계없이 현재 노트에서 찾을 수 있습니다
 
 <!-- Example for asking for user input -->
 

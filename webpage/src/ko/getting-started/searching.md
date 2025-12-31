@@ -1,6 +1,6 @@
 # 노트 검색
 
-To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (or <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> on macOS) to jump to the _Note search panel_.
+노트를 검색하거나 노트 내부의 텍스트를 검색하려면 바로 가기 <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd> (또는 macOS에서 <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>F</kbd>)를 사용하여 _노트 검색 패널_로 이동할 수 있습니다.
 
 노트를 검색하는 방법은 여러 가지가 있습니다:
 

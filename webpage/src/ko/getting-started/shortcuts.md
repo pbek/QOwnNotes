@@ -105,7 +105,7 @@
 ### 노트 미리 보기 패널에서
 
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> 현재 노트에서 검색할 수 있습니다
-  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Up</kbd> 및  <kbd>Down</kbd>  키 또는 <kbd>F3</kbd> 및 <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> 키를 사용하여 이전 및 다음 경기로 이동합니다
   - <kbd>Esc</kbd> 검색 표시줄을 닫습니다
 
 ### 할 일 목록에서
@@ -162,7 +162,7 @@
 ### 노트 검색 표시줄에서
 
 - <kbd>Down</kbd> 또는 <kbd>Tab</kbd> 노트 목록에 집중을 설정합니다
-- <kbd>Return</kbd> creates a new note with the text from the search bar as headline
+- <kbd>Return</kbd>은 검색창의 텍스트를 헤드라인으로 하여 새 노트를 만듭니다
 
 ### 노트 목록에서
 
@@ -174,7 +174,7 @@
 
 - <kbd>⌘ Cmd</kbd> + 링크를 <kbd>클릭</kbd>하여 엽니다
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd>를 사용하여 현재 노트에서 검색할 수 있습니다
-  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Up</kbd> 및 <kbd>Down</kbd>  키 또는 <kbd>F3</kbd> 및 <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> 키를 사용하여 이전 및 다음 경기로 이동합니다
   - <kbd>Esc</kbd> 검색 표시줄을 닫습니다
 - <kbd>⌘ Cmd</kbd> + <kbd>R</kbd> 현재 노트를 검색하고 바꿀 수 있습니다
 - <kbd>⌘ Cmd</kbd> + <kbd>D</kbd> 현재 줄 또는 선택한 텍스트를 복제합니다
@@ -196,9 +196,9 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>U</kbd> 선택한 텍스트의 대소문자를 순환합니다
 - <kbd>Tab</kbd> 선택한 텍스트를 들여쓰기합니다 (여러 줄에서도 작동)
   - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> 선택한 텍스트의 들여쓰기를 해제합니다
-- <kbd>Tab</kbd> after an unordered list character indents the list item
-  - <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
-- <kbd>Return</kbd> in lists creates a new list item
+- 순서 없는 목록 문자 뒤에 <Tab>을 누르면 목록 항목이 들여쓰기됩니다
+  - 순서 없는 목록 문자 뒤에 <kbd>⇧ Shift</kbd> + <kbd>Tab</kbd>을 누르면 목록 항목의 들여쓰기가 해제됩니다.
+- 목록에서 <kbd>Return</kbd>을 누르면 새 리스트 항목이 생성됩니다
 - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Left</kbd> 노트 기록으로 돌아갑니다
   - <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>Right</kbd> 노트 기록에서 앞으로 이동합니다
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>1..9</kbd> 북마크 슬롯 1...9에 노트 북마크를 설정합니다
@@ -219,7 +219,7 @@
 ### 노트 미리 보기 패널에서
 
 - <kbd>⌘ Cmd</kbd> + <kbd>F</kbd> 현재 노트에서 검색할 수 있습니다
-  - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+  - <kbd>Up</kbd> 및 <kbd>Down</kbd> 키 또는 <kbd>F3</kbd> 및 <kbd>⇧ Shift</kbd> + <kbd>F3</kbd> 키를 사용하여 이전 및 다음 경기로 이동합니다
   - <kbd>Esc</kbd> 검색 표시줄을 닫습니다
 
 ### 할 일 목록에서

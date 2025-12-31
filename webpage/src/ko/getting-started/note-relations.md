@@ -8,8 +8,8 @@ image: /screenshots/screenshot-note-relations.png
 
 ![note-relations](/screenshots/screenshot-note-relations.png)
 
-- Relations between notes can be created by **linking to another note**, for example with the _Note link_ dialog
+- 노트 간의 관계는 **다른 노트**에 \*\*링크하여 만들 수 있습니다. 예를 들어 _노트 링크_ 대화 상자를 사용하여 만들 수 있습니다
 - 노트 링크의 구문은 예를 들어 '[내 노트](path/to/My%20note.md)\` 입니다
-- You can turn on the panel in the _Window / Panels_ menu
+- _창 / 패널_ 메뉴에서 패널을 켤 수 있습니다
 - 패널을 사용하면 마우스 휠로 확대할 수 있으며, 메모를 두 번 클릭하여 열 수 있습니다
 - 관계 수집은 백그라운드에서 이루어지기 때문에 관계가 수집되는 동안에도 계속 작업할 수 있습니다

@@ -8,7 +8,7 @@
 Puede habilitar QOwnNotesAPI directamente en su instancia de **Nextcloud** o **ownCloud** buscando `qownnotes` en la **página de aplicaciones** de su servidor en `https://<your-cloud-domain>/settings/apps`.
 
 - [Página de aplicaciones de Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
-- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+- [Página de aplicaciones de ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
 
 :::
 

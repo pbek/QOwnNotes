@@ -26,7 +26,7 @@ image: /img/bookmarks.png
 
 ![وب کلیپر](/img/web-clipper.png)
 
-به منظور استفاده کارآمد از **وب کلیپر** بر روی یک صفحه وب یا متن منتخب کلیک راست کنید. علاوه بر این، می توانید یک یادداشت جدید را با **نماگرفتی** از صفحه وب کنونی ایجاد نمایید.
+به منظور استفاده کارآمد از **وب کلیپر** بر روی یک صفحه وب یا متن منتخب کلیک راست کنید.  علاوه بر این، می توانید یک یادداشت جدید را با **نماگرفتی** از صفحه وب کنونی ایجاد نمایید.
 
 ::: warning
 Info If the web clipper doesn't work, please check if the QOwnNotes desktop application is running, and the Web Companion browser extension is configured with the security token.

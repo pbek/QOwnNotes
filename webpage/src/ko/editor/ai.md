@@ -12,7 +12,7 @@
 
 - **AI 도구 모음**과 **편집 기본 메뉴**에 서비스를 켤 수 있는 섹션이 있으며, AI 백엔드와 모델을 선택할 수 있습니다
 - 새로운 **AI 설정**에서 [OpenAI](https://openai.com/) 및 [Groq](https://groq.com/) API 키를 추가할 수 있습니다
-  - Look for more **AI backend integrations**, like _Ollama_ and _llama.cpp_ in the script repository
+  - 스크립트 저장소에서 _Ollama_ 및 _llama.cpp_와 같은 **AI 백엔드 통합**을 더 찾아보세요
 - 새로운 `script.aiComplete(prompt)` 스크립팅 명령을 자신의 상상력에 맞게 사용하세요
   - 자세한 내용은 다음을 참조하시기 바랍니다
     [Scripting documentation](../scripting/methods-and-objects.md#use-a-completion-prompt-on-the-currently-selected-ai-model)

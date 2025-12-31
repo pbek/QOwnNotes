@@ -6,7 +6,7 @@ image: /img/bookmarks.png
 
 브라우저 페이지에서 클리핑하고 브라우저 및 운영 체제에서 브라우저 북마크를 관리할 수 있습니다.
 
-::: tip Info **QOwnNotes must be running** for the Web Companion browser extension to work. But no internet connection is needed, the browser extensions works **offline**. :::
+::: 팁 정보 웹 동반 브라우저 확장 프로그램이 작동하려면 **QOwnNotes가 실행 중**이어야 합니다>. 하지만 인터넷 연결이 필요하지 않으며, 브라우저 확장 프로그램은 **오프라인**에서 작동합니다. :::
 
 ## 설치
 

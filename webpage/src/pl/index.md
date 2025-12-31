@@ -5,15 +5,19 @@ heroImage: /screenshots/screenshot.png
 heroText: QOwnNotes
 tagline: Bezpłatna notatka z otwartym kodem tekstowym w postaci zwykłego tekstu z integracją Nextcloud / ownCloud
 actions:
-  - text: Quick Start →
+  - 
+    text: Quick Start →
     link: /getting-started/overview
     type: primary
 features:
-  - title: Posiadaj swoje notatki
+  - 
+    title: Posiadaj swoje notatki
     details: Wszystkie notatki są przechowywane jako zwykłe pliki tekstowe przecen na komputerze, bez „blokowania dostawcy” Korzystaj z usług synchronizacji, takich jak Nextcloud, do synchronizowania notatek na różnych urządzeniach.
-  - title: Mały ślad
+  - 
+    title: Mały ślad
     details: Aplikacja natywna, zoptymalizowana pod kątem szybkości i zużywająca niewiele zasobów procesora i pamięci.
-  - title: Dostosowywanie
+  - 
+    title: Dostosowywanie
     details: Dzięki możliwości dostosowania i skryptowania, masz kontrolę nad tym, jak chcesz pracować z notatkami.
 footer: Wykonane przez Patrizio Bekerle z ❤️
 ---

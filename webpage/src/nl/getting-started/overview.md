@@ -5,7 +5,7 @@
 <v-divider />
 
 **Q** voor het [Qt framework](https://www.qt.io/) dat wordt gebruikt  
-**Own** omdat je je eigen notities  
+**Own** omdat je je eigen notities   
 bezit **Notes** voor de notities die u maakt
 
 <v-divider />

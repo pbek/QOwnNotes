@@ -4,8 +4,8 @@
 
 <v-divider />
 
-**Q** pour le [framework Qt](https://www.qt.io/) utilisé  
-**Own** parce que vous possédez ("to own") vos propres notes  
+**Q** pour le [framework Qt](https://www.qt.io/) utilisé   
+**Own** parce que vous possédez ("to own") vos propres notes   
 **Notes** pour les notes que vous prenez
 
 <v-divider />

@@ -51,7 +51,7 @@
 - Soporte para **iconos de tema de escritorio gratuito**, puede usar QOwnNotes con sus **iconos de escritorio nativos** y con su **tema de escritorio oscuro favorito**
 - **Modo sin distracciones**, **Modo de pantalla completa** y **Modo de máquina de escribir**
 - **Números de línea**
-- **Differences** between current note and externally changed note are **shown** in a dialog
+- **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
 
 ## Idioma
 

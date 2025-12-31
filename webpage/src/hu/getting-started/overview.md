@@ -5,7 +5,7 @@
 <v-divider />
 
 **Q** a [Qt framework](https://www.qt.io/), amelyet használ  
-**Own** mert birtokolja a jegyzeteit  
+**Own** mert birtokolja a jegyzeteit   
 **Notes** az Ön jegyzetei végett, melyeket elkészít
 
 <v-divider />

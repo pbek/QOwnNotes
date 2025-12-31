@@ -5,15 +5,19 @@ heroImage: /screenshots/screenshot.png
 heroText: QOwnNotes
 tagline: تطبيق حر ومفتوح المصدر لتدوين الملاحظات كملفات نصية مجردة بصيغة ماركداون ويتكامل مع Nextcloud و ownCloud
 actions:
-  - text: Quick Start →
+  - 
+    text: Quick Start →
     link: /getting-started/overview
     type: primary
 features:
-  - title: امتلك ملاحظاتك
+  - 
+    title: امتلك ملاحظاتك
     details: يتم تخزين جميع الملاحظات كملفات نصية مجردة بصيغة ماركداون على حاسوبك؛ لا يوجد «تقيد ببائع». استخدم خدمات المزامنة مثل Nextcloud لمزامنة ملاحظاتك عبر الأجهزة.
-  - title: خفيف الأثر
+  - 
+    title: خفيف الأثر
     details: تطبيق أصيل، مُحسَّن لتحقيق أفضل سرعة تشغيل وأقل استهلاك للمعالج والذاكرة.
-  - title: تخصيص
+  - 
+    title: تخصيص
     details: قابل للتخصيص والبرمجة لدرجة كبيرة؛ يمكنك ضبط كيف تحب العمل مع ملاحظاتك.
 footer: صنعه Patrizio Bekerle بكل حب ❤️
 ---
