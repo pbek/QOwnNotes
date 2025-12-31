@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.1.1
+
+- The "Missing trigrams for languages" warning was changed to a debug message to reduce
+  noise in the log output (for [#3417](https://github.com/pbek/QOwnNotes/issues/3417))
+  - This informational message now only appears when debug logging is enabled
+  - The warning was triggered when regional language variants (e.g., `it_CH`) were installed
+    but didn't have corresponding trigram models for automatic language detection
+  - Spell checking functionality remains completely unaffected
+
 ## 26.1.0
 
 - The **QOwnNotes webpage** has been completely **relaunched** with **VuePress 2**,

@@ -672,7 +672,7 @@ void GuessLanguagePrivate::loadModels() {
 #endif
     knownLanguages.subtract(availableLanguages);
     if (!knownLanguages.isEmpty()) {
-        qWarning() << "Missing trigrams for languages:" << knownLanguages;
+        qDebug() << "Missing trigrams for languages:" << knownLanguages;
     }
 }
 
