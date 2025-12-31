@@ -2,7 +2,7 @@
 
 ## Next
 
-- The QOwnNotes webpage has been completely relaunched with **VuePress 2**,
+- The **QOwnNotes webpage** has been completely **relaunched** with **VuePress 2**,
   **Vue.js 3**, and **Vuetify 3** (for [#3414](https://github.com/pbek/QOwnNotes/issues/3414))
   - Migrated from VuePress 1 (which reached end of life) to VuePress 2
   - Updated to Vue.js 3 with Composition API for better performance and modern reactivity
@@ -12,6 +12,17 @@
   - Improved mobile responsiveness and accessibility across the entire site
   - Added comprehensive end-to-end testing with Playwright
   - Maintained all multilingual support and existing content
+- The **QOwnNotes Web App** was migrated to Vue 3, Vuetify 3 and Vite (for [#57](https://github.com/qownnotes/web-app/issues/57))
+  - **Major upgrade**: Migrated from Vue 2 to Vue 3
+  - **Major upgrade**: Migrated from Vuetify 2 to Vuetify 3
+  - **Major upgrade**: Migrated from Vue CLI to Vite for faster builds and development
+  - **Security**: Fixed all security vulnerabilities by removing deprecated Vue CLI dependencies
+  - Updated all dependencies to latest versions
+  - Improved build performance with Vite (10-100x faster development server)
+  - Added Material Design Icons font package
+  - Modernized codebase to use Vue 3 features and APIs
+  - Updated service worker implementation with vite-plugin-pwa
+  - Updated Docker build to use Node 22
 
 ## 25.12.7
 
