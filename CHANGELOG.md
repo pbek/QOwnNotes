@@ -8,6 +8,7 @@
   - The warning was triggered when regional language variants (e.g., `it_CH`) were installed
     but didn't have corresponding trigram models for automatic language detection
   - Spell checking functionality remains completely unaffected
+- Try to apply more snap deployment issues fixes (for [#3416](https://github.com/pbek/QOwnNotes/issues/3416))
 
 ## 26.1.0
 
@@ -32,7 +33,7 @@
   - Modernized codebase to use Vue 3 features and APIs
   - Updated service worker implementation with vite-plugin-pwa
   - Updated Docker build to use Node 22
-- Try to fixed snap deployment timeout issues in the release workflow by replacing the GitHub action
+- Try to fix snap deployment timeout issues in the release workflow by replacing the GitHub action
   with direct `snapcraft upload` command and adding proper timeout handling
   (for [#3416](https://github.com/pbek/QOwnNotes/issues/3416))
 - Added more Spanish, Korean, French translation (thank you, alejandromoc, venusgirl, jd-develop)
