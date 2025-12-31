@@ -44,6 +44,22 @@ find src -name "*.md" -type f 2>/dev/null | grep -E 'src/[a-z]{2}(-[A-Z]{2})?/' 
     error_details="${error_details}numeric opening tag; "
   fi
 
+  # Pattern 6: Bare keyboard tags without kbd wrapper (e.g., <Tab>, <Return>, <Esc>, etc.)
+  # These should be <kbd>Tab</kbd> not just <Tab>
+  if grep -qE '<(Tab|Return|Esc|Enter|Space|Shift|Ctrl|Alt|Cmd|Up|Down|Left|Right|Page|Home|End)>' "$file" 2>/dev/null; then
+    has_error=true
+    error_details="${error_details}bare keyboard tag (missing kbd wrapper); "
+  fi
+
+  # Pattern 7: Unclosed kbd tags (opening without closing)
+  # Count opening and closing kbd tags - if they don't match, it's corrupted
+  opening_kbd=$(grep -o '<kbd>' "$file" 2>/dev/null | wc -l)
+  closing_kbd=$(grep -o '</kbd>' "$file" 2>/dev/null | wc -l)
+  if [ "$opening_kbd" -ne "$closing_kbd" ]; then
+    has_error=true
+    error_details="${error_details}mismatched kbd tags (open: $opening_kbd, close: $closing_kbd); "
+  fi
+
   if [ "$has_error" = true ]; then
     corrupted_files="$corrupted_files$file
 "
