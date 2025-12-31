@@ -1,7 +1,7 @@
 ---
 title: Auto-complete text in note editor
 description: Auto-complete text in the note editor with a simple shortcut.
-image: /assets/img/qownnotes-media-AYLMhn.png
+image: /assets/qownnotes-media-AYLMhn.png
 date: 2021-08-25
 order: 20210825000000
 ---

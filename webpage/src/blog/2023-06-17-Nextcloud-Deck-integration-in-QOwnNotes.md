@@ -1,7 +1,7 @@
 ---
 title: Nextcloud Deck integration in QOwnNotes
 description: You can now quickly create Nextcloud Deck cards and link to them in your notes.
-image: /assets/img/nextcloud-deck-dialog.png
+image: /assets/nextcloud-deck-dialog.png
 date: 2023-06-17
 order: 20230617000001
 ---

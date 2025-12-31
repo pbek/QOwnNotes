@@ -1,7 +1,7 @@
 ---
 title: Linking of note headings
 description: You can now add an url-encoded heading to a note link as url fragment to attempt to jump to that heading in the linked note when clicking the link.
-image: /assets/img/qownnotes-media-PshrOQ.png
+image: /assets/qownnotes-media-PshrOQ.png
 date: 2021-10-25
 order: 20211025000000
 ---

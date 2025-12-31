@@ -1,7 +1,7 @@
 ---
 title: Tor Hidden Service Webpage
 description: You can now also reach the QOwnNotes webpage from the Tor network.
-image: /assets/img/qownnotes-onion.webp
+image: /assets/qownnotes-onion.webp
 date: 2021-08-31
 order: 20210831000000
 ---

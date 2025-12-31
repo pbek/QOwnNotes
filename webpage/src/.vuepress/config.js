@@ -126,6 +126,25 @@ export default defineUserConfig({
       ssr: {
         noExternal: ["vuetify"],
       },
+      build: {
+        rollupOptions: {
+          output: {
+            // Disable hash suffix for asset filenames
+            assetFileNames: (assetInfo) => {
+              // Keep original filename without hash in assets directory
+              const name = assetInfo.name || "asset.bin";
+              const lastDotIndex = name.lastIndexOf(".");
+              if (lastDotIndex === -1 || lastDotIndex === 0) {
+                // No extension or hidden file
+                return `assets/${name}`;
+              }
+              const ext = name.substring(lastDotIndex);
+              const baseName = name.substring(0, lastDotIndex);
+              return `assets/${baseName}${ext}`;
+            },
+          },
+        },
+      },
     },
   }),
 

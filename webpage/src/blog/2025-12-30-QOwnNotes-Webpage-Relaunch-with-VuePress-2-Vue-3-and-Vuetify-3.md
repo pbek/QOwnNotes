@@ -1,7 +1,7 @@
 ---
 title: QOwnNotes Webpage Relaunch with VuePress 2, Vue.js 3, and Vuetify 3
 description: The QOwnNotes webpage has been completely modernized with VuePress 2, Vue.js 3, and Vuetify 3, bringing improved performance, better accessibility, and a more modern user experience.
-image: /assets/img/media-WHtPUF.png
+image: /assets/media-WHtPUF.png
 date: 2025-12-30
 order: 20251230000000
 ---

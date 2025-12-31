@@ -1,7 +1,7 @@
 ---
 title: Working with multiple notes
 description: How I work with multiple notes in QOwnNotes
-image: /assets/img/qownnotes-media-XVFduq.png
+image: /assets/qownnotes-media-XVFduq.png
 date: 2022-07-28
 order: 20220728000000
 ---

@@ -1,7 +1,7 @@
 ---
 title: Nextcloud note versions
 description: You can show the past versions of your notes from your Nextcloud / ownCloud server with a simple click of a button.
-image: /assets/img/qownnotes-media-AfAQYL.png
+image: /assets/qownnotes-media-AfAQYL.png
 date: 2021-11-15
 order: 20211115000000
 ---

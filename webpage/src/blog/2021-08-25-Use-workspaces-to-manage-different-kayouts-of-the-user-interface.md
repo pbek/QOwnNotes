@@ -1,7 +1,7 @@
 ---
 title: Use workspaces to manage different layouts of the user interface
 description: You can use workspaces to manage different user interfaces in QOwnNotes.
-image: /assets/img/qownnotes-media-hUmrsr.png
+image: /assets/qownnotes-media-hUmrsr.png
 date: 2021-08-25
 order: 20210825000001
 ---

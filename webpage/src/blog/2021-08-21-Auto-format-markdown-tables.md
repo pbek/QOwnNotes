@@ -1,7 +1,7 @@
 ---
 title: Auto-format Markdown tables
 description: You can auto-format Markdown tables with the simple shortcut.
-image: /assets/img/qownnotes-media-UWorfK.png
+image: /assets/qownnotes-media-UWorfK.png
 date: 2021-08-21
 order: 20210821000000
 ---

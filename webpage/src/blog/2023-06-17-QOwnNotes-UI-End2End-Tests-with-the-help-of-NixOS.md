@@ -1,7 +1,7 @@
 ---
 title: QOwnNotes UI End2End Tests with the help of NixOS
 description: There are now basic End2End tests for QOwnNotes with the help of the NixOS Test System.
-image: /assets/img/end2end-test.png
+image: /assets/end2end-test.png
 date: 2023-06-17
 order: 20230617000000
 ---

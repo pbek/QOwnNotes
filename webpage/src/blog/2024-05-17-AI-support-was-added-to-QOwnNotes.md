@@ -1,7 +1,7 @@
 ---
 title: AI support was added to QOwnNotes
 description: QOwnNotes now has AI support, currently for Groq and OpenAI!
-image: /assets/img/robot-taking-notes.jpg
+image: /assets/robot-taking-notes.jpg
 date: 2024-05-17
 order: 20240517000000
 ---

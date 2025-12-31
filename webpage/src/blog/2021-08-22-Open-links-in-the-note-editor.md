@@ -1,7 +1,7 @@
 ---
 title: Open links in the note editor
 description: You can open links in the note editor with a simple shortcut.
-image: /assets/img/qownnotes-media-twfNQS.png
+image: /assets/qownnotes-media-twfNQS.png
 date: 2021-08-22
 order: 20210822000000
 ---

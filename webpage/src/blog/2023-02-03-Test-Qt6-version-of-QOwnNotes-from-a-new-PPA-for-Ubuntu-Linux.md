@@ -1,7 +1,7 @@
 ---
 title: Please test Qt6 version of QOwnNotes from a new PPA for Ubuntu Linux
 description: If you want to help and test the Qt6 version of QOwnNotes on Ubuntu Linux there is a new PPA on Launchpad for that.
-image: /assets/img/qt6.png
+image: /assets/qt6.png
 date: 2023-02-03
 order: 20230203000000
 ---

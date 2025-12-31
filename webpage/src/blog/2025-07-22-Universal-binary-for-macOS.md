@@ -1,7 +1,7 @@
 ---
 title: Universal binary for macOS
 description: QOwnNotes for macOS as Qt6 universal binary
-image: /assets/img/macos-universal-binary.jpg
+image: /assets/macos-universal-binary.jpg
 date: 2025-07-22
 order: 20250722000000
 ---

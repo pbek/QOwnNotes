@@ -1,7 +1,7 @@
 ---
 title: Evernote import for huge files
 description: You should now be able to import huge ENEX files from Evernote into QOwnNotes!
-image: /assets/img/evernote.jpg
+image: /assets/evernote.jpg
 date: 2023-01-29
 order: 20230129000000
 ---

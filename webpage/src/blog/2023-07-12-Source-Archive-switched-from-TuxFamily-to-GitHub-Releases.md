@@ -1,7 +1,7 @@
 ---
 title: Source Archive switched from TuxFamily to GitHub Releases
 description: The source archive can now be found on GitHub Releases.
-image: /assets/img/qownnotes-media-YMojFK.png
+image: /assets/qownnotes-media-YMojFK.png
 date: 2023-07-12
 order: 20230712000000
 ---
