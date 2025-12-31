@@ -103,3 +103,8 @@ playwright-test-local-docker test='':
 [group('dev')]
 playwright-test-next test='':
     npm run playwright:test:next -- tests/{{ test }}
+
+# Remove the vuepress cache with elevated permissions (after it was created by docker)
+[group('dev')]
+remove-vuepress-cache:
+    sudo rm ./src/.vuepress/.cache -Rf
