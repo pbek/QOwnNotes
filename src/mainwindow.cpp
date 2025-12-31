@@ -4779,20 +4779,75 @@ void MainWindow::removeSelectedNotes() {
     if (selectedItemsCount == 0) {
         return;
     }
-    if (selectedItemsCount == 1 && selItems[0]->data(0, Qt::UserRole + 1) == FolderType) {
-        // If just one folder is selected, remove the folder
-        NoteSubFolderTree::removeSelectedNoteSubFolders(ui->noteTreeWidget);
+
+    // Separate notes and folders from selected items
+    QVector<QTreeWidgetItem *> noteItems;
+    QVector<QTreeWidgetItem *> folderItems;
+    QStringList noteSubFolderPathList;
+    QVector<NoteSubFolder> noteSubFolderList;
+
+    for (QTreeWidgetItem *item : selItems) {
+        const int itemType = item->data(0, Qt::UserRole + 1).toInt();
+        if (itemType == NoteType) {
+            noteItems.append(item);
+        } else if (itemType == FolderType) {
+            folderItems.append(item);
+            const int id = item->data(0, Qt::UserRole).toInt();
+            const NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
+            if (noteSubFolder.isFetched()) {
+                noteSubFolderList.append(noteSubFolder);
+                noteSubFolderPathList.append(noteSubFolder.fullPath());
+            }
+        }
+    }
+
+    const int noteCount = noteItems.count();
+    const int folderCount = noteSubFolderList.count();
+
+    if (noteCount == 0 && folderCount == 0) {
         return;
     }
 
-    if (Utils::Gui::question(
-            this, tr("Remove selected notes"),
-            Utils::Misc::replaceOwnCloudText(tr("Remove <strong>%n</strong> selected note(s)?\n\n"
-                                                "If the trash is enabled on your "
-                                                "ownCloud server you should be able to restore "
-                                                "them from there.",
-                                                "", selectedItemsCount)),
-            QStringLiteral("remove-notes")) == QMessageBox::Yes) {
+    // Build confirmation message based on what's selected
+    QString title;
+    QString message;
+    QString dialogName;
+
+    if (noteCount > 0 && folderCount > 0) {
+        // Both notes and folders selected
+        title = tr("Remove selected notes and folders");
+        message = Utils::Misc::replaceOwnCloudText(
+            tr("Remove <strong>%n</strong> selected note(s) and "
+               "<strong>%1</strong> folder(s)?"
+               "<ul><li>%2</li></ul>"
+               "All files and folders in these folders will be removed as well!\n\n"
+               "If the trash is enabled on your ownCloud server you should be able to restore "
+               "the notes from there.",
+               "", noteCount)
+                .arg(folderCount)
+                .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>"))));
+        dialogName = QStringLiteral("remove-notes-and-folders");
+    } else if (folderCount > 0) {
+        // Only folders selected
+        title = tr("Remove selected folders");
+        message = tr("Remove <strong>%n</strong> selected folder(s)?"
+                     "<ul><li>%1</li></ul>"
+                     "All files and folders in these folders will be removed as well!",
+                     "", folderCount)
+                      .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>")));
+        dialogName = QStringLiteral("remove-folders");
+    } else {
+        // Only notes selected
+        title = tr("Remove selected notes");
+        message = Utils::Misc::replaceOwnCloudText(
+            tr("Remove <strong>%n</strong> selected note(s)?\n\n"
+               "If the trash is enabled on your ownCloud server you should be able to restore "
+               "them from there.",
+               "", noteCount));
+        dialogName = QStringLiteral("remove-notes");
+    }
+
+    if (Utils::Gui::question(this, title, message, dialogName) == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker)
 
@@ -4816,11 +4871,8 @@ void MainWindow::removeSelectedNotes() {
             const QSignalBlocker blocker1(ui->noteTreeWidget);
             Q_UNUSED(blocker1)
 
-            for (QTreeWidgetItem *item : selItems) {
-                if (item->data(0, Qt::UserRole + 1) != NoteType) {
-                    continue;
-                }
-
+            // Remove notes
+            for (QTreeWidgetItem *item : noteItems) {
                 const int id = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(id);
 
@@ -4831,18 +4883,34 @@ void MainWindow::removeSelectedNotes() {
                 qDebug() << "Removed note " << note.getName();
             }
 
-            // clear the text edit so it stays clear after removing the
-            // last note
+            // Remove folders
+            for (const auto &noteSubFolder : Utils::asConst(noteSubFolderList)) {
+                // remove the directory recursively from the file system
+                if (noteSubFolder.removeFromFileSystem()) {
+                    showStatusBarMessage(
+                        tr("Removed note subfolder: %1").arg(noteSubFolder.fullPath()),
+                        QStringLiteral("📁"));
+                }
+            }
+
+            // clear the text edit so it stays clear after removing notes
+            // (either directly or via folder deletion)
             activeNoteTextEdit()->clear();
         }
 
-        // set a new current note
+        // set a new current note (needed whether notes or folders were deleted,
+        // as folders may contain the currently displayed note)
         resetCurrentNote(false);
 
         // we try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
         // something is happening after this method that reloads the note folder
         directoryWatcherWorkaround(false);
+
+        // Reload note folder if folders were deleted
+        if (folderCount > 0) {
+            reloadNoteFolderAction()->trigger();
+        }
     }
 
     loadNoteDirectoryList();

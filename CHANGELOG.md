@@ -2,6 +2,12 @@
 
 ## 26.1.1
 
+- **Notes and note folders can now be deleted together** in a single operation when enabling
+  the experimental note tree feature (for [#3374](https://github.com/pbek/QOwnNotes/issues/3374))
+  - When both notes and folders are selected, they will all be deleted after confirmation
+  - The confirmation dialog adapts to show what will be deleted (notes only, folders only, or both)
+  - The current note is now properly reset after deletion to prevent deleted notes from remaining visible
+  - This avoids having to delete notes and folders separately
 - The "Missing trigrams for languages" warning was changed to a debug message to reduce
   noise in the log output (for [#3417](https://github.com/pbek/QOwnNotes/issues/3417))
   - This informational message now only appears when debug logging is enabled
