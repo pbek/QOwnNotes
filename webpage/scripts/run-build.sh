@@ -21,7 +21,7 @@ replace_with_english() {
 
 # Run detection script and replace found files
 if [ -x "./scripts/find-corrupted-files.sh" ]; then
-  corrupted_files=$(./scripts/find-corrupted-files.sh | grep "^src/")
+  corrupted_files=$(./scripts/find-corrupted-files.sh | grep "^src/" || true)
   if [ -n "$corrupted_files" ]; then
     echo "$corrupted_files" | while read -r file; do
       if [ -f "$file" ]; then
