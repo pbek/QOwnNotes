@@ -47,7 +47,7 @@ test("blog head tags - Open Graph meta tags", async ({ page, config }) => {
   const ogImage = page.locator('meta[property="og:image"]');
   await expect(ogImage).toHaveAttribute(
     "content",
-    "https://www.qownnotes.org/assets/img/robot-taking-notes.jpg",
+    "https://www.qownnotes.org/assets/robot-taking-notes.jpg",
   );
 });
 
@@ -78,7 +78,7 @@ test("blog head tags - Twitter Card meta tags", async ({ page, config }) => {
   const twitterImage = page.locator('meta[name="twitter:image"]');
   await expect(twitterImage).toHaveAttribute(
     "content",
-    "https://www.qownnotes.org/assets/img/robot-taking-notes.jpg",
+    "https://www.qownnotes.org/assets/robot-taking-notes.jpg",
   );
 
   // Check Twitter creator
