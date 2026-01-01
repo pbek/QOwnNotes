@@ -5,7 +5,7 @@
 - The **Joplin Import Dialog** now supports importing image tags with attributes
   (for [#3419](https://github.com/pbek/QOwnNotes/issues/3419))
   - Image tags like `<img width="640" height="364" src=":/imageId"/>` are now properly recognized
-  - Previously only simple `<img src=":/imageId"/>` tags without attributes were supported
+  - Previously, only simple `<img src=":/imageId"/>` tags without attributes were supported
 - The **Joplin Import Dialog** now remembers the last selected directory
   - The directory path is automatically restored when reopening the dialog
   - The directory is only restored if it still exists on disk
