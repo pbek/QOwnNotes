@@ -4910,14 +4910,14 @@ void MainWindow::removeSelectedNotes() {
             activeNoteTextEdit()->clear();
         }
 
-        // set a new current note (needed whether notes or folders were deleted,
-        // as folders may contain the currently displayed note)
-        resetCurrentNote(false);
-
         // We try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
         // something is happening after this method that reloads the note folder
         directoryWatcherWorkaround(false);
+
+        // Set a new current note (needed whether notes or folders were deleted,
+        // as folders may contain the currently displayed note)
+        resetCurrentNote(false);
 
         // Reload note folder if folders were deleted
         if (folderCount > 0) {

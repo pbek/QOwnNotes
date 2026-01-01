@@ -20,6 +20,9 @@
 - The **Evernote Import Dialog** now remembers the last selected ENEX file
   - The file path is automatically restored when reopening the dialog
   - The file is only restored if it still exists on disk
+- Tried to fix an issue for some users where deleting notes with folders in a single
+  operation when enabling the experimental note tree feature resulted in the deleted
+  note still be shown in the note text edit (for [#3374](https://github.com/pbek/QOwnNotes/issues/3374))
 
 ## 26.1.1
 
