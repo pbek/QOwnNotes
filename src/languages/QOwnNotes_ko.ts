@@ -2169,6 +2169,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>메뉴에서 동작 찾기</translation>
 </message>
 <message>
+<source>Redo last action</source>
+<translation>마지막 동작 다시 실행</translation>
+</message>
+<message>
+<source>Redo the last action</source>
+<translation>마지막 동작을 다시 실행</translation>
+</message>
+<message>
 <source>Insert table</source>
 <translation>표 삽입</translation>
 </message>
@@ -2591,6 +2599,28 @@ Restore current note?</source>
 <translation>암호가 올바르지 않은 것 같습니다!</translation>
 </message>
 <message>
+<source>Remove selected notes and folders</source>
+<translation>선택한 노트와 폴더 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
+<translation>
+<numerusform>선택한 노트 &lt;strong&gt;%n&lt;/strong&gt;와 폴더 &lt;strong&gt;%1&lt;/strong&gt;를 삭제하시겠습니까?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;이 폴더 안의 모든 파일과 폴더도 함께 삭제됩니다!</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation>선택한 폴더 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation>
+<numerusform>선택한 폴더 &lt;strong&gt;%n&lt;/strong&gt;를 삭제하시겠습니까?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;이 폴더 안의 모든 파일과 폴더도 함께 삭제됩니다!</numerusform>
+</translation>
+</message>
+<message>
 <source>Remove selected notes</source>
 <translation>선택한 노트 제거</translation>
 </message>
@@ -2603,6 +2633,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 
 ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복원할 수 있습니다.</numerusform>
 </translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation>노트 하위 폴더가 제거되었습니다: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2747,6 +2781,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>슬롯 %1의 북마크 위치로 이동</translation>
 </message>
 <message>
+<source>Redo action: %1</source>
+<translation>다시 실행 작업: %1</translation>
+</message>
+<message>
 <source>Inserting image</source>
 <translation>이미지 삽입</translation>
 </message>
@@ -2785,6 +2823,26 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
 <translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) and %1 folder(s) selected</source>
+<translation>
+<numerusform>%n개의 메모 및 %1개의 폴더가 선택되었습니다</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n folder(s) selected</source>
+<translation>
+<numerusform>%n 폴더 선택</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Remove notes and folders</source>
+<translation>노트 및 폴더 제거(&amp;R)</translation>
+</message>
+<message>
+<source>&amp;Remove folders</source>
+<translation>폴더 제거(&amp;R)</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>

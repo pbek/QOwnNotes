@@ -34,6 +34,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>S</kbd> recharge le moteur de script
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>M</kbd> masque ou affiche la barre de menu principale
 - <kbd>Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>A</kbd> vous permet de rechercher des actions
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> enregistre manuellement les notes modifiées
 - <kbd>Alt</kbd> + <kbd>⇧ Maj</kbd> + <kbd>I</kbd> ouvre la boîte de dialogue du dépôt de scripts
 - <kbd>F4</kbd> passe au panneau d'édition des notes
@@ -148,6 +149,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>S</kbd> recharge le moteur de script
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>M</kbd> masque ou affiche la barre de menu principale
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Maj</kbd> + <kbd>A</kbd> permet de rechercher des actions
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> enregistre manuellement les notes modifiées
 - <kbd>^ Ctrl</kbd> + <kbd>⇧ Maj</kbd> + <kbd>I</kbd> ouvre la boîte de dialogue du dépôt de scripts
 - <kbd>F4</kbd> passe au panneau d'édition des notes

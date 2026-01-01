@@ -2175,6 +2175,14 @@
 <translation>Εύρεση ενέργειας από το μενού</translation>
 </message>
 <message>
+<source>Redo last action</source>
+<translation type="unfinished">Redo last action</translation>
+</message>
+<message>
+<source>Redo the last action</source>
+<translation type="unfinished">Redo the last action</translation>
+</message>
+<message>
 <source>Insert table</source>
 <translation>Εισαγωγή πίνακα</translation>
 </message>
@@ -2604,6 +2612,34 @@ Restore current note?</source>
 <translation>Φαίνεται ότι ο κωδικός σας δεν είναι έγκυρος!</translation>
 </message>
 <message>
+<source>Remove selected notes and folders</source>
+<translation type="unfinished">Remove selected notes and folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation type="unfinished">Remove selected folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+</translation>
+</message>
+<message>
 <source>Remove selected notes</source>
 <translation>Κατάργηση επιλεγμένων σημειώσεων</translation>
 </message>
@@ -2619,6 +2655,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 
 Εάν ο κάδος απορριμμάτων είναι ενεργοποιημένος στον διακομιστή ownCloud, θα πρέπει να μπορείτε να τα αποκαταστήσετε από εκεί.</numerusform>
 </translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation type="unfinished">Removed note subfolder: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2769,6 +2809,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Μετάβαση στη θέση σελιδοδείκτη στην υποδοχή %1</translation>
 </message>
 <message>
+<source>Redo action: %1</source>
+<translation type="unfinished">Redo action: %1</translation>
+</message>
+<message>
 <source>Inserting image</source>
 <translation>Εισαγωγή εικόνας</translation>
 </message>
@@ -2809,6 +2853,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
 <translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) and %1 folder(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
+<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n folder(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n folder(s) selected</numerusform>
+<numerusform>%n folder(s) selected</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Remove notes and folders</source>
+<translation type="unfinished">&amp;Remove notes and folders</translation>
+</message>
+<message>
+<source>&amp;Remove folders</source>
+<translation type="unfinished">&amp;Remove folders</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>

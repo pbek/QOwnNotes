@@ -34,6 +34,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> herlaadt de script-engine
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> verbergt of toont de hoofdmenubalk
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> laat je zoeken naar acties
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> slaat handmatig gewijzigde notities op
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel
@@ -148,6 +149,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> laadt de scriptengine opnieuw
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> verbergt of toont de hoofdmenubalk
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> laat je zoeken naar acties
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> slaat handmatig gewijzigde notities op
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel

@@ -34,6 +34,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> 스크립팅 엔진을 다시 로드합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> 기본 메뉴 표시줄을 숨기거나 표시합니다
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 작업을 검색할 수 있습니다
+- <kbd>Ctrl</kbd> + <kbd> Alt</kbd> + <kbd> ⇧ Shift</kbd> + <kbd>A</kbd>을 통해 마지막 작업을 다시 수행할 수 있습니다
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> 수정된 노트를 수동 저장합니다
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> 스크립트 저장소 대화 상자를 엽니다
 - <kbd>F4</kbd> 노트 편집 패널로 이동합니다
@@ -148,6 +149,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> 스크립팅 엔진을 다시 로드합니다
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> 기본 메뉴 표시줄를 숨기거나 표시합니다
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> 작업을 검색할 수 있습니다
+- <kbd>⌘ Cmd</kbd> + <kbd> ⌃ Ctrl</kbd> + <kbd> ⇧ Shift</kbd> + <kbd>A</kbd>을 통해 마지막 작업을 다시 수행할 수 있습니다
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> 수정된 노트를 수동으로 저장합니다
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> 스크립트 저장소 대화 상자를 엽니다
 - <kbd>F4</kbd> 노트 편집 패널로 이동합니다

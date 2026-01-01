@@ -34,6 +34,7 @@
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>S</kbd> lädt die Skript-Engine neu
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>M</kbd> verbirgt oder zeigt die Hauptmenüleiste
 - <kbd>Strg</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>A</kbd> lässt Sie nach Aktionen suchen
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>Strg</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
 - <kbd>Alt</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>I</kbd> öffnet den Skript-Repository-Dialog
 - <kbd>F4</kbd> springt zum Notizbearbeitungsfeld
@@ -148,6 +149,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>S</kbd> lädt die Skript-Engine neu
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste ein oder aus
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>A</kbd> lässt Sie nach Aktionen suchen
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>I</kbd> öffnet den Skript-Repository-Dialog
 - <kbd>F4</kbd> springt zum Notizbearbeitungsfeld

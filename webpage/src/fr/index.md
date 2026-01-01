@@ -7,7 +7,7 @@ tagline: Prise de notes en Markdown dans des fichier en texte brut, open source 
 actions:
   - 
     text: Quick Start →
-    link: /getting-started/overview
+    link: /fr/getting-started/overview
     type: primary
 features:
   - 

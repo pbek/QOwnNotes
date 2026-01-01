@@ -34,6 +34,7 @@
 - <kbd>S</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> موتور اسکریپت نویسی را مجدداً بارگذاری می کند
 - <kbd>M</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> نوار منوی اصلی را مخفی کرده یا نشان می دهد
 - <kbd>A</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Ctrl</kbd> امکان جستجوی فعالیت ها را به شما می دهد
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>S</kbd> + <kbd>Ctrl</kbd> یادداشت های اصلاح شده را به طور دستی ذخیره می کند
 - <kbd>I</kbd> + <kbd>⇧ Shift</kbd> + <kbd>Alt</kbd> کادر گفتگوی مخزن اسکریپت را باز می کند
 - <kbd>F4</kbd> به پنل ویرایش یادداشت پرش می کند
@@ -148,6 +149,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> manually saves modified notes
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> به پنل ویرایش یادداشت پرش می کند

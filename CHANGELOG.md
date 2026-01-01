@@ -23,6 +23,7 @@
 - Tried to fix an issue for some users where deleting notes with folders in a single
   operation when enabling the experimental note tree feature resulted in the deleted
   note still be shown in the note text edit (for [#3374](https://github.com/pbek/QOwnNotes/issues/3374))
+- Added more Korean translation (thank you, venusgirl)
 
 ## 26.1.1
 
