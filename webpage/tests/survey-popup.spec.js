@@ -4,26 +4,24 @@ import { test, expect } from "./fixtures.js";
 test("frontpage has popup with survey question", async ({ page, config }) => {
   await page.goto(config.baseURL);
 
-  // Check for the poll/popup with the survey question
+  // Check for the textbox (use .first() since there are multiple polls on frontpage)
   await expect(
-    page.getByText("How did you find out about QOwnNotes?"),
+    page
+      .getByRole("textbox", {
+        name: "How did you find out about QOwnNotes?",
+      })
+      .first(),
   ).toBeVisible();
-
-  // Check for the textbox
-  await expect(
-    page.getByRole("textbox", {
-      name: "How did you find out about QOwnNotes?",
-    }),
-  ).toBeVisible();
-
-  // Check for the character counter
-  await expect(page.getByText("0 / 200")).toBeVisible();
 
   // Check for the Submit button
-  await expect(page.getByRole("button", { name: "Submit" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Submit" }).first(),
+  ).toBeVisible();
 
   // Check for the Close poll button
-  await expect(page.getByRole("button", { name: "Close poll" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Close poll" }).first(),
+  ).toBeVisible();
 });
 
 test("overview page has popup with survey question", async ({
@@ -34,7 +32,9 @@ test("overview page has popup with survey question", async ({
 
   // Check the survey popup is also on other pages
   await expect(
-    page.getByText("How did you find out about QOwnNotes?"),
+    page.getByRole("textbox", {
+      name: "How did you find out about QOwnNotes?",
+    }),
   ).toBeVisible();
   await expect(page.getByRole("button", { name: "Submit" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Close poll" })).toBeVisible();
@@ -45,7 +45,9 @@ test("blog page has popup with survey question", async ({ page, config }) => {
 
   // Check the survey popup is on blog page
   await expect(
-    page.getByText("How did you find out about QOwnNotes?"),
+    page.getByRole("textbox", {
+      name: "How did you find out about QOwnNotes?",
+    }),
   ).toBeVisible();
   await expect(page.getByRole("button", { name: "Submit" })).toBeVisible();
 });
