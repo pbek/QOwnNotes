@@ -37,7 +37,7 @@ jobs:
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 20
+      max-parallel: 40
       matrix:
         os: [ubuntu-latest, macos-15, windows-2025]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
