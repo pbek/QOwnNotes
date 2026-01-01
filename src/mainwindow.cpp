@@ -244,6 +244,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // initialize the toolbars
     initToolbars();
 
+    // Initialize the Redo action as disabled (no action to redo yet)
+    ui->actionRedo_action->setEnabled(false);
+
     if (!settings.value(QStringLiteral("guiFirstRunInit")).toBool()) {
         // hide the custom action toolbar initially
         _customActionToolbar->hide();
@@ -1225,6 +1228,15 @@ void MainWindow::initToolbars() {
     _quitToolbar->addAction(ui->action_Quit);
     _quitToolbar->setObjectName(QStringLiteral("quitToolbar"));
     addToolBar(_quitToolbar);
+
+    // Connect all toolbars to track action triggers
+    connect(_formattingToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(_insertingToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(_encryptionToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(_aiToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(_windowToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(_customActionToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(_quitToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
 }
 
 /**
@@ -7340,6 +7352,16 @@ void MainWindow::trackAction(QAction *action) {
 
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("action/") +
                                                    action->objectName());
+
+    // Remember the last triggered action (excluding the Redo action itself and "Find action")
+    if (action != ui->actionRedo_action && action != ui->actionFind_action) {
+        _lastTriggeredAction = action;
+
+        // Update the Redo action text to show which action will be redone
+        QString actionText = action->text().remove(QChar('&'));    // Remove mnemonic
+        ui->actionRedo_action->setText(tr("Redo action: %1").arg(actionText));
+        ui->actionRedo_action->setEnabled(true);
+    }
 }
 
 void MainWindow::resizeTagTreeWidgetColumnToContents() const {
@@ -11375,6 +11397,22 @@ void MainWindow::on_actionFind_action_triggered() {
     //    delete commandBar;
     //
     //    qDebug() << __func__ << " - 'action': " << action;
+}
+
+/**
+ * Opens the find action dialog
+ */
+void MainWindow::on_actionRedo_action_triggered() {
+    qDebug() << __func__ << "actionRedo_action: " << ui->actionRedo_action->text();
+
+    // Retrigger the last triggered action if it exists
+    if (_lastTriggeredAction != nullptr) {
+        qDebug() << "Retriggering action:" << _lastTriggeredAction->objectName()
+                 << _lastTriggeredAction->text();
+        _lastTriggeredAction->trigger();
+    } else {
+        qDebug() << "No action to redo";
+    }
 }
 
 /**

@@ -34,6 +34,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> manually saves modified notes
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> jumps to the note edit panel
@@ -152,6 +153,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> reloads the scripting engine
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you search for actions
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> manually saves modified notes
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> jumps to the note edit panel

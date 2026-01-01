@@ -1074,6 +1074,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <addaction name="actionOpen_IRC_Channel"/>
     </widget>
     <addaction name="actionFind_action"/>
+    <addaction name="actionRedo_action"/>
     <addaction name="separator"/>
     <addaction name="actionCheck_for_updates"/>
     <addaction name="actionShow_changelog"/>
@@ -2398,6 +2399,24 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="actionRedo_action">
+   <property name="icon">
+    <iconset theme="view-refresh" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Redo last action</string>
+   </property>
+   <property name="toolTip">
+    <string>Redo the last action</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo the last action</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Alt+Shift+A</string>
    </property>
   </action>
   <action name="actionInsert_table">

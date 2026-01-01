@@ -568,6 +568,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionFind_action_triggered();
 
+    void on_actionRedo_action_triggered();
+
     void releaseDockWidgetSizes();
 
     void on_actionInsert_table_triggered();
@@ -881,6 +883,7 @@ class MainWindow : public QMainWindow {
     bool _isMaximizedBeforeFullScreen = false;
     bool _isMinimizedBeforeFullScreen = false;
     WaitingSpinnerWidget *_openAiActivitySpinner = nullptr;
+    QAction *_lastTriggeredAction = nullptr;
 
     void initializeOpenAiActivitySpinner();
 

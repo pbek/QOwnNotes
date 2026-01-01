@@ -2,6 +2,14 @@
 
 ## 26.1.2
 
+- Added **Redo last action** feature to quickly repeat the most recent action
+  (for [#3424](https://github.com/pbek/QOwnNotes/issues/3424))
+  - Every action triggered from menus or toolbars is now automatically remembered
+  - The "Redo action" menu item dynamically updates to show which action will be repeated
+    (e.g., "Redo action: Insert text link")
+  - Use the keyboard shortcut `Ctrl+Alt+Shift+A` or click the "Redo action" menu item to repeat the last action
+  - The action is disabled initially and enabled after the first action is triggered
+  - This allows for quick repetition of common actions without having to navigate back through menus
 - The **Joplin Import Dialog** now supports importing image tags with attributes
   (for [#3419](https://github.com/pbek/QOwnNotes/issues/3419))
   - Image tags like `<img width="640" height="364" src=":/imageId"/>` are now properly recognized
