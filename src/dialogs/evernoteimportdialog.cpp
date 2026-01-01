@@ -36,6 +36,15 @@ EvernoteImportDialog::EvernoteImportDialog(QWidget *parent)
     ui->attachmentImportCheckBox->setChecked(
         settings.value(QStringLiteral("EvernoteImport/AttachmentImportCheckBoxChecked"), true)
             .toBool());
+
+    // Load the last selected ENEX file
+    QString lastFile = settings.value(QStringLiteral("EvernoteImport/LastFile")).toString();
+    if (!lastFile.isEmpty()) {
+        QFileInfo fileInfo(lastFile);
+        if (fileInfo.exists() && fileInfo.isFile()) {
+            ui->fileLineEdit->setText(lastFile);
+        }
+    }
 }
 
 void EvernoteImportDialog::resetNoteCount() {
@@ -50,6 +59,12 @@ EvernoteImportDialog::~EvernoteImportDialog() {
                       ui->imageImportCheckBox->isChecked());
     settings.setValue(QStringLiteral("EvernoteImport/AttachmentImportCheckBoxChecked"),
                       ui->attachmentImportCheckBox->isChecked());
+
+    // Save the last selected ENEX file
+    QString currentFile = ui->fileLineEdit->text();
+    if (!currentFile.isEmpty()) {
+        settings.setValue(QStringLiteral("EvernoteImport/LastFile"), currentFile);
+    }
 
     storeMetaDataTreeWidgetItemsCheckedState();
 

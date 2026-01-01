@@ -5,6 +5,9 @@
 - The **Joplin Import Dialog** now remembers the last selected directory
   - The directory path is automatically restored when reopening the dialog
   - The directory is only restored if it still exists on disk
+- The **Evernote Import Dialog** now remembers the last selected ENEX file
+  - The file path is automatically restored when reopening the dialog
+  - The file is only restored if it still exists on disk
 
 ## 26.1.1
 
