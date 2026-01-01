@@ -411,7 +411,8 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
         importImage(note, dirPath, noteText, imageTag, imageId, imageName);
     }
 
-    i = QRegularExpression(R"(<img src=\":\/([\w\d]+)\"\/>)").globalMatch(noteText);
+    i = QRegularExpression(R"(<img\s+(?:[^>]*\s+)?src=\":\/([\w\d]+)\"[^>]*\/?>)")
+            .globalMatch(noteText);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
