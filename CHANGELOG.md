@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.1.2
+
+- The **Joplin Import Dialog** now remembers the last selected directory
+  - The directory path is automatically restored when reopening the dialog
+  - The directory is only restored if it still exists on disk
+
 ## 26.1.1
 
 - **Notes and note folders can now be deleted together** in a single operation when enabling

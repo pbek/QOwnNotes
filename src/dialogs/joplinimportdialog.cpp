@@ -46,6 +46,15 @@ JoplinImportDialog::JoplinImportDialog(QWidget* parent)
     ui->attachmentImportCheckBox->setChecked(
         settings.value(QStringLiteral("JoplinImport/AttachmentImportCheckBoxChecked"), true)
             .toBool());
+
+    // Load the last selected directory
+    QString lastDirectory = settings.value(QStringLiteral("JoplinImport/LastDirectory")).toString();
+    if (!lastDirectory.isEmpty()) {
+        QDir dir(lastDirectory);
+        if (dir.exists()) {
+            ui->directoryLineEdit->setText(lastDirectory);
+        }
+    }
 }
 
 JoplinImportDialog::~JoplinImportDialog() {
@@ -60,6 +69,12 @@ JoplinImportDialog::~JoplinImportDialog() {
                       ui->imageImportCheckBox->isChecked());
     settings.setValue(QStringLiteral("JoplinImport/AttachmentImportCheckBoxChecked"),
                       ui->attachmentImportCheckBox->isChecked());
+
+    // Save the last selected directory
+    QString currentDirectory = ui->directoryLineEdit->text();
+    if (!currentDirectory.isEmpty()) {
+        settings.setValue(QStringLiteral("JoplinImport/LastDirectory"), currentDirectory);
+    }
 
     delete ui;
 }
