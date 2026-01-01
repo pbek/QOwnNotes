@@ -4876,7 +4876,7 @@ void MainWindow::removeSelectedNotes() {
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
         Q_UNUSED(blocker4)
 
-        // we try to fix problems with note subfolders
+        // We try to fix problems with note subfolders
         directoryWatcherWorkaround(true);
 
         {
@@ -4888,7 +4888,7 @@ void MainWindow::removeSelectedNotes() {
                 const int id = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(id);
 
-                // search and remove note from the note tree widget
+                // Search and remove note from the note tree widget
                 removeNoteFromNoteTreeWidget(note);
 
                 note.remove(true);
@@ -4914,7 +4914,7 @@ void MainWindow::removeSelectedNotes() {
         // as folders may contain the currently displayed note)
         resetCurrentNote(false);
 
-        // we try to fix problems with note subfolders
+        // We try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
         // something is happening after this method that reloads the note folder
         directoryWatcherWorkaround(false);
