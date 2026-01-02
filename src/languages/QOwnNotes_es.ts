@@ -2176,11 +2176,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Rehacer última acción</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Rehace la última acción</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2607,30 +2607,30 @@ Restore current note?</source>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Eliminar notas y carpetas seleccionadas</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionadas y &lt;strong&gt;%1&lt;/strong&gt; carpeta(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;¡También se eliminarán todos los archivos y carpetas de estas carpetas!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Si la papelera está habilitada en su servidor de ownCloud, debería poder restaurar las notas desde allí.</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionadas y &lt;strong&gt;%1&lt;/strong&gt; carpeta(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;¡También se eliminarán todos los archivos y carpetas de estas carpetas!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Si la papelera está habilitada en su servidor de ownCloud, debería poder restaurar las notas desde allí.</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Eliminar carpetas seleccionadas</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; carpeta seleccionada?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;¡Todos los archivos y carpetas en esta carpeta también se eliminarán!</numerusform>
+<numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; carpetas seleccionadas?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;¡Todos los archivos y carpetas en estas carpetas también se eliminarán!</numerusform>
 </translation>
 </message>
 <message>
@@ -2652,7 +2652,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Eliminada subcarpeta de notas: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2804,7 +2804,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Rehacer acción: %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2850,25 +2850,25 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message numerus="yes">
 <source>%n note(s) and %1 folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
+<translation>
+<numerusform>%n nota(s) y %1 carpeta(s) seleccionadas</numerusform>
+<numerusform>%n nota(s) y %1 carpeta(s) seleccionadas</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>%n carpeta seleccionada</numerusform>
+<numerusform>%n carpetas seleccionadas</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>Elimina&amp;r notas y carpetas</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>Eliminar ca&amp;rpetas</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>

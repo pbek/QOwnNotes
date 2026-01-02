@@ -808,7 +808,7 @@
 </message>
 <message>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>ลบ:</translation>
 </message>
 <message>
 <source>Keyword characters:</source>

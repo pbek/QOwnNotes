@@ -34,7 +34,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> recarga el motor de secuencias de comandos
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> oculta o muestra la barra de menú principal
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite buscar acciones
-- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite rehacer la última acción
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> guarda manualmente las notas modificadas
 - <kbd>Alt</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> abre el cuadro de diálogo del repositorio de scripts
 - <kbd>F4</kbd> salta al panel de edición de la nota
@@ -149,7 +149,7 @@
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>S</kbd> recarga el motor de secuencias de órdenes
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>M</kbd> oculta o muestra la barra de menú principal
 - <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite buscar acciones
-- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> lets you redo the last action
+- <kbd>⌘ Cmd</kbd> + <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>A</kbd> le permite rehacer la última acción
 - <kbd>⌘ Cmd</kbd> + <kbd>S</kbd> guarda manualmente las notas modificadas
 - <kbd>⌃ Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>I</kbd> abre el cuadro de diálogo del repositorio de scripts
 - <kbd>F4</kbd> salta al panel de edición de notas

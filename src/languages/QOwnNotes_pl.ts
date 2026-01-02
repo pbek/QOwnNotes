@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>Otwórz notatkę i znajdź &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -629,11 +629,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>Nieprawidłowy XML!</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>Znaleziono nieprawidłowy XML w notatce &lt;b&gt;%1&lt;/b&gt;! W tym momencie import może zostać zatrzymany.</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -732,11 +732,11 @@
 </message>
 <message>
 <source>Pass control keys</source>
-<translation>Przekaż klawisze sterujące</translation>
+<translation>Przekaż klucze kontrolne</translation>
 </message>
 <message>
 <source>Pass keys in insert mode</source>
-<translation>Wprowadź klucze w trybie wstawiania</translation>
+<translation>Przekaż klucze w trybie wstawiania</translation>
 </message>
 <message>
 <source>Start of line</source>
@@ -752,7 +752,7 @@
 </message>
 <message>
 <source>Highlight search results</source>
-<translation>Wyróżnij wyniki wyszukiwania</translation>
+<translation>Podświetlaj wyniki wyszukiwania</translation>
 </message>
 <message>
 <source>Shift width:</source>
@@ -776,7 +776,7 @@
 </message>
 <message>
 <source>Use smartcase</source>
-<translation>Użyj etui na smartfona</translation>
+<translation>Użyj etui smartfona</translation>
 </message>
 <message>
 <source>Use ignorecase</source>
@@ -880,7 +880,7 @@
 </message>
 <message>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation>Wpisz Alt-Y, Alt-Y, aby wyjść z trybu FakeVim.</translation>
+<translation>Typ Alt-Y, Alt-Y, aby wyjść z trybu FakeVim.</translation>
 </message>
 <message>
 <source>Unknown option:</source>
@@ -1071,7 +1071,7 @@
 </message>
 <message>
 <source>Font:</source>
-<translation>Czcionk</translation>
+<translation>Czcionka:</translation>
 </message>
 <message>
 <source>Share schema</source>
@@ -1123,7 +1123,7 @@
 </message>
 <message>
 <source>Underlined text</source>
-<translation>podkreślony tekst</translation>
+<translation>Podkreślony tekst</translation>
 </message>
 <message>
 <source>Link</source>
@@ -1353,7 +1353,7 @@
 </message>
 <message>
 <source>Import folders</source>
-<translation>Importuj foldery</translation>
+<translation>Import folderów</translation>
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
@@ -1365,7 +1365,7 @@
 </message>
 <message>
 <source>Import images</source>
-<translation>Importowanie obrazów</translation>
+<translation>Import obrazów</translation>
 </message>
 <message>
 <source>%v of %m file(s) imported</source>
@@ -1377,7 +1377,7 @@
 </message>
 <message>
 <source>Import tags</source>
-<translation>Importuj tagi</translation>
+<translation>Import tagów</translation>
 </message>
 <message>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
@@ -1385,7 +1385,7 @@
 </message>
 <message>
 <source>Import metadata</source>
-<translation>Importuj metadane</translation>
+<translation>Import metadanych</translation>
 </message>
 <message>
 <source>RAW - Joplin Export Directory</source>
@@ -1393,11 +1393,11 @@
 </message>
 <message>
 <source>Import attachments</source>
-<translation>Importuj załączniki</translation>
+<translation>Import załączników</translation>
 </message>
 <message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation>Wybierz „RAW - katalog eksportu Joplin”, aby zaimportować</translation>
+<translation>Wybierz 'RAW - Joplin Export Directory' do zaimportowania</translation>
 </message>
 </context>
 <context>
@@ -1420,7 +1420,7 @@
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>Następnie aplikacja zostanie uruchomiona ponownie.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1487,7 +1487,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>Link do URL lub notatki</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1503,7 +1503,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>Wyczyść nazwę linku i ponownie pobierz tytuł strony internetowej</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1543,19 +1543,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>Wybierz plik, do którego chcesz utworzyć link (względne)</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>Wybierz plik, do którego ma prowadzić link (bezwzględne)</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>Wybierz katalog, do którego ma prowadzić link (względny)</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>Wybierz katalog, do którego chcesz utworzyć link (bezwzględne)</translation>
 </message>
 </context>
 <context>
@@ -1708,11 +1708,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>Nagłówki</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Linki zwrotne</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1945,15 +1945,15 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>&amp;Skonfiguruj foldery / podfoldery notatek</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>Skonfiguruj foldery / podfoldery notatek</translation>
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>&amp;Znajdź tekst w notatkach</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -1969,7 +1969,7 @@
 </message>
 <message>
 <source>Insert text &amp;link</source>
-<translation>Wstaw tekst &amp;link</translation>
+<translation>Wstaw tekst &amp;linku</translation>
 </message>
 <message>
 <source>Ctrl+L</source>
@@ -2158,11 +2158,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>Zamontuj ponownie panele pływające</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>Ponownie mocuje wszystkie pływające panele</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2246,7 +2246,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>Wyświetl zewnętrznie wersje git notatek</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2359,7 +2359,7 @@
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation>Wstaw link &amp;note</translation>
+<translation>Wstaw link &amp;notatki</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
@@ -2371,43 +2371,43 @@
 </message>
 <message>
 <source>Toggle always-on-top mode</source>
-<translation>Przełącz tryb zawsze na wierzchu</translation>
+<translation>Przełącznik tryb zawsze na wierzchu</translation>
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>&amp;Załaduj elementy listy rzeczy do zrobienia</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Wstaw link do karty Nextcloud Deck</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Kopiuj bezwzględną ścieżkę notatki</translation>
 </message>
 <message>
 <source>Move up in subfolder list</source>
-<translation type="unfinished">Move up in subfolder list</translation>
+<translation>Przenieś w górę w liście podfolderów</translation>
 </message>
 <message>
 <source>Move down in subfolder list</source>
-<translation type="unfinished">Move down in subfolder list</translation>
+<translation>Przesuń w dół w liście podfolderów</translation>
 </message>
 <message>
 <source>Move up in tag list</source>
-<translation type="unfinished">Move up in tag list</translation>
+<translation>Przenieś w górę w liście tagów</translation>
 </message>
 <message>
 <source>Move down in tag list</source>
-<translation type="unfinished">Move down in tag list</translation>
+<translation>Przesuń w dół w liście tagów</translation>
 </message>
 <message>
 <source>Enable AI support</source>
-<translation type="unfinished">Enable AI support</translation>
+<translation>Włącz obsługę AI</translation>
 </message>
 <message>
 <source>Manage Nextcloud Deck cards</source>
-<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+<translation>Zarządzanie kartami Nextcloud Deck</translation>
 </message>
 <message>
 <source>Ctrl+Alt+D</source>
@@ -2415,11 +2415,11 @@
 </message>
 <message>
 <source>Send clipboard</source>
-<translation type="unfinished">Send clipboard</translation>
+<translation>Wyślij schowek</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Wyślij schowek jako tekst</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2471,7 +2471,7 @@
 </message>
 <message>
 <source>&amp;Export note as Markdown file</source>
-<translation>Eksportuj notatkę jako plik markaDown</translation>
+<translation>&amp;Eksportuj notatkę jako plik Markdown</translation>
 </message>
 <message>
 <source>Move down in note list</source>
@@ -2527,7 +2527,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Znajdź tekst w notatkach we wszystkich tagach/podfolderach</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2789,7 +2789,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>Notatka</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -2805,24 +2805,24 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>File extension</source>
-<translation type="unfinished">File extension</translation>
+<translation>Rozszerzenie pliku</translation>
 </message>
 <message>
 <source>Extension of file attachment:</source>
-<translation type="unfinished">Extension of file attachment:</translation>
+<translation>Rozszerzenie załącznika pliku:</translation>
 </message>
 <message>
 <source>File base name</source>
-<translation type="unfinished">File base name</translation>
+<translation>Nazwa bazy pliku</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation type="unfinished">Base name of file attachment:</translation>
+<translation>Podstawowa nazwa załącznika pliku:</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
 <comment>Leave the base name empty for automatic name</comment>
-<translation type="unfinished">Leave empty for automatic name</translation>
+<translation>Pozostaw puste dla nazwy automatycznej</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2838,7 +2838,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Export attached files</source>
-<translation>Eksportuj załączone pliki.</translation>
+<translation>Eksportuj załączone pliki</translation>
 </message>
 <message>
 <source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
@@ -2896,11 +2896,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>Folder notatek nie istnieje!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>Folder notatki &lt;b&gt;%1&lt;/b&gt; ze ścieżką &lt;b&gt;%2&lt;/b&gt; już nie istnieje!</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) and %1 folder(s) selected</source>
@@ -2930,98 +2930,98 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>Otwórz notatkę w pliku Nextcloud</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Otwórz notatkę w Nextcloud Notes</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
+<translation>Odznacz jako ulubione</translation>
 </message>
 <message>
 <source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
+<translation>Oznacz jako ulubione</translation>
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>Podziel notatkę</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>Podzielić notatkę w bieżącej pozycji kursora? Tekst za kursorem zostanie przeniesiony do nowej notatki. Nowa notatka zostanie połączona ze starą notatką.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
+<translation>Ln %1, Kol %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
+<translation>Linia %1, Kolumna %2</translation>
 </message>
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
+<numerusform>%n wybrano</numerusform>
+<numerusform>%n wybrano</numerusform>
+<numerusform>%n wybrano</numerusform>
 <numerusform>%n selected</numerusform>
 </translation>
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+<translation>Obsługa Git nie jest włączona dla bieżącego folderu notatek, czy chcesz ją włączyć w ustawieniach?</translation>
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>Brak dostępnych wersji</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>Dla tej notatki nie są dostępne żadne wersje.</translation>
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>Zamknij kartę notatki</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+<translation>Ścieżka notatki '%1' została skopiowana do schowka</translation>
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>AI backendy</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>AI modele</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>Selektor zaplecza AI</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>AI selektor modeli</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
-<translation type="unfinished">Clipboard sent successfully</translation>
+<translation>Schowek wysłany pomyślnie</translation>
 </message>
 <message>
 <source>Failed to send clipboard</source>
-<translation type="unfinished">Failed to send clipboard</translation>
+<translation>Nie udało się wysłać schowka</translation>
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Tekst ze schowka został wysłany pomyślnie</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Nie udało się wysłać tekstu schowka</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3114,15 +3114,15 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatek (brak pliku Markdown lub tekstowego lub nie można go odczytać)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatek (brak pliku Markdown lub tekstowego lub nie można go odczytać)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatek (brak pliku Markdown lub tekstowego lub nie można go odczytać)</numerusform>
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 </translation>
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Wklej &amp;HTML jako Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3197,22 +3197,22 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
 <translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Najnowsze wersje notatek %n są aktualnie zbierane z lokalnego repozytorium git</numerusform>
+<numerusform>Najnowsze wersje notatek %n są aktualnie zbierane z lokalnego repozytorium git</numerusform>
+<numerusform>Najnowsze wersje notatek %n są aktualnie zbierane z lokalnego repozytorium git</numerusform>
 <numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>Zakończono zbieranie wersji notatek z git</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
 <translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Ostatniej %n wersji git notatki: %1</numerusform>
+<numerusform>Ostatniej %n wersji git notatki: %1</numerusform>
+<numerusform>Ostatniej %n wersji git notatki: %1</numerusform>
 <numerusform>Latest %n git versions of note: %1</numerusform>
 </translation>
 </message>
@@ -3538,11 +3538,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Action not found!</source>
-<translation>Działanie nie zostało odnalezione!</translation>
+<translation>Działania nie znaleziono!</translation>
 </message>
 <message>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation>Nie odnaleziono menu działania &lt;code&gt;%1&lt;/code&gt;! Sprawdź czy nie ma tu żadnej literówki.</translation>
+<translation>Nie odnaleziono menu działania &lt;code&gt;%1&lt;/code&gt;! Czy okres jest prawidłowy?</translation>
 </message>
 <message>
 <source>Subfolders</source>
@@ -3574,7 +3574,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Relacje notatek</translation>
 </message>
 <message>
 <source>Log</source>
@@ -3598,7 +3598,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>AI pasek narzędzi</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3662,7 +3662,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Oczekiwanie na odpowiedź z AI</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3759,51 +3759,51 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Archive card</source>
-<translation type="unfinished">Archive card</translation>
+<translation>Archiwum karty</translation>
 </message>
 <message>
 <source>Archive</source>
-<translation type="unfinished">Archive</translation>
+<translation>Archiwum</translation>
 </message>
 <message>
 <source>Delete card</source>
-<translation type="unfinished">Delete card</translation>
+<translation>Usuń kartę</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Usuń</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>To nie działa w przypadku elementów podrzędnych, ponieważ mogą być ukryte przez element nadrzędny!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Pokaż tylko elementy dostarczone dzisiaj</translation>
 </message>
 <message>
 <source>Summary</source>
-<translation type="unfinished">Summary</translation>
+<translation>Podsumowanie</translation>
 </message>
 <message>
 <source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
+<translation>Załaduj ponownie listę elementów karty z serwera</translation>
 </message>
 <message>
 <source>Reload…</source>
-<translation type="unfinished">Reload…</translation>
+<translation>Przeładuj...</translation>
 </message>
 <message>
 <source>Search or create card</source>
-<translation type="unfinished">Search or create card</translation>
+<translation>Wyszukaj lub utwórz kartę</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Utwórz kartę i wstaw link do bieżącej notatki</translation>
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Zapisz</translation>
 </message>
 <message>
 <source>+1h</source>
@@ -3811,7 +3811,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Tytuł</translation>
 </message>
 <message>
 <source>-1h</source>
@@ -3819,114 +3819,114 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Opis:</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Dwie daty</translation>
 </message>
 <message>
 <source>Manage Nextcloud Deck Cards</source>
-<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+<translation>Zarządzaj Kartami Nextcloud Deck</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation type="unfinished">Save and insert into note</translation>
+<translation>Zapisz i wstaw do notatki</translation>
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
-<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+<translation>Zapisz bieżący element karty i wstaw link do niego do bieżącej notatki</translation>
 </message>
 <message>
 <source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
+<translation>Przeładowanie z serwera</translation>
 </message>
 <message>
 <source>Reload cards from server</source>
-<translation type="unfinished">Reload cards from server</translation>
+<translation>Przeładowywanie kart z serwera</translation>
 </message>
 <message>
 <source>No due date</source>
-<translation type="unfinished">No due date</translation>
+<translation>Nie dwie daty</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+<translation>Czy chcesz usunąć bieżącą kartę Nextcloud Deck?</translation>
 </message>
 <message>
 <source>Do you want to archive the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+<translation>Czy chcesz zarchiwizować aktualną kartę Nextcloud Deck?</translation>
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>&amp;Otwórz kartę w przeglądarce</translation>
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>&amp;Dodaj link do karty do notatki</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>&amp;Wyszukaj link do karty w notatkach</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>updating</source>
-<translation type="unfinished">updating</translation>
+<translation>aktualizacja</translation>
 </message>
 <message>
 <source>creating</source>
-<translation type="unfinished">creating</translation>
+<translation>tworzenie</translation>
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Błąd podczas aktualizacji karty</translation>
 </message>
 <message>
 <source>Updating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
+<translation>Aktualizacja karty nie powiodła się, kod stanu %1 i komunikat: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Błąd podczas tworzenia karty</translation>
 </message>
 <message>
 <source>Creating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
+<translation>Tworzenie karty nie powiodło się z kodem statusu %1 i komunikatem: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
-<translation type="unfinished">Error while archiving card</translation>
+<translation>Błąd podczas archiwizacji karty</translation>
 </message>
 <message>
 <source>Archiving the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+<translation>Archiwizacja karty nie powiodła się, kod stanu %2 i komunikat: %3</translation>
 </message>
 <message>
 <source>Error while deleting card</source>
-<translation type="unfinished">Error while deleting card</translation>
+<translation>Błąd podczas usuwania karty</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
+<translation>Usuwanie karty nie powiodło się, kod stanu %2 i komunikat: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Błąd podczas ładowania tablic</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Ładowanie tablic nie powiodło się, kod stanu %1 i komunikat: %2</translation>
 </message>
 <message>
 <source>Error while loading cards</source>
-<translation type="unfinished">Error while loading cards</translation>
+<translation>Błąd podczas ładowania kart</translation>
 </message>
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+<translation>Ładowanie kart nie powiodło się, kod stanu %1 i komunikat: %2</translation>
 </message>
 </context>
 <context>
@@ -3945,19 +3945,19 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Reload</source>
-<translation type="unfinished">Reload</translation>
+<translation>Przeładowanie</translation>
 </message>
 <message>
 <source>Reload the note text</source>
-<translation type="unfinished">Reload the note text</translation>
+<translation>Przeładuj tekst notatki</translation>
 </message>
 <message>
 <source>Jump to note</source>
-<translation type="unfinished">Jump to note</translation>
+<translation>Przejdź do notatki</translation>
 </message>
 <message>
 <source>Jump to the note in the main window</source>
-<translation type="unfinished">Jump to the note in the main window</translation>
+<translation>Przejście do notatki w oknie głównym</translation>
 </message>
 </context>
 <context>
@@ -3999,23 +3999,23 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Względna ścieżka notatki, kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Bezwzględna ścieżka notatki, kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Skopiuj bezwzględną ścieżkę notatki</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Skopiuj bezwzględną ścieżkę podfolderu notatki</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Skopiuj bezwzględną ścieżkę folderu notatek</translation>
 </message>
 </context>
 <context>
@@ -4058,7 +4058,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Pokaż notatki w folderze '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -4089,29 +4089,28 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation type="unfinished">
 <numerusform>One
 Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony folder?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nim pliki i foldery zostaną również usunięte!</numerusform>
-<numerusform>One
-Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nich pliki i foldery zostaną również usunięte!</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nich pliki i foldery zostaną również usunięte!</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane folder(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nich zawarte!</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 </translation>
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation>Usuń podfolder: %1</translation>
+<translation>Usunięto podfolder notatek: %1</translation>
 </message>
 </context>
 <context>
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Limit czasu w oczekiwaniu na odpowiedź AI</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>System AI jest wyłączony. Włącz ją w menu głównym lub na pasku narzędzi AI.</translation>
 </message>
 </context>
 <context>
@@ -4142,7 +4141,7 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 </message>
 <message>
 <source>not detected</source>
-<translation>niewykryty</translation>
+<translation>nie wykryty</translation>
 </message>
 <message>
 <source>not found</source>
@@ -4154,7 +4153,7 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 </message>
 <message>
 <source>version %1 too low</source>
-<translation>wersja %1 jest za niska</translation>
+<translation>wersja %1 jest niska</translation>
 </message>
 <message>
 <source>not enabled</source>
@@ -4252,11 +4251,11 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Pokaż hasło</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Ukryj hasło</translation>
 </message>
 </context>
 <context>
@@ -4278,7 +4277,7 @@ Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>Plik notatki został zmodyfikowany zewnętrznie</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4287,12 +4286,12 @@ The editor below shows YOUR version. The differences view shows changes between 
 
 Click 'OK' to save YOUR version and overwrite the external changes.
 Click 'Cancel' to discard your changes and keep the external version.</source>
-<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+<translation>Plik notatki '%1' został zmodyfikowany zewnętrznie, podczas gdy zmiany nie zostały zapisane.
 
-The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+Poniższy edytor pokazuje TWOJĄ wersję. Widok różnic pokazuje zmiany między plikiem zewnętrznym (na czerwono) a wersją użytkownika (na zielono).
 
-Click 'OK' to save YOUR version and overwrite the external changes.
-Click 'Cancel' to discard your changes and keep the external version.</translation>
+Kliknij 'OK', aby zapisać SWOJĄ wersję i nadpisać zewnętrzne zmiany.
+Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</translation>
 </message>
 <message>
 <source>Could not store note file: %1 - Error message: %2</source>
@@ -4330,9 +4329,9 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zastąpić wszystkie linki wychodzące do &lt;strong&gt;%n&lt;/strong&gt; plików notatek?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zastąpić wszystkie linki wychodzące do &lt;strong&gt;%n&lt;/strong&gt; plików notatek?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zastąpić wszystkie linki wychodzące do &lt;strong&gt;%n&lt;/strong&gt; plików notatek?</numerusform>
 <numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 </translation>
 </message>
@@ -4387,11 +4386,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Twój system Windows wydaje się być w trybie ciemnym. Czy chcesz również włączyć tryb ciemny w QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Wygląda na to, że system Windows działa w trybie jasnym. Czy chcesz również wyłączyć tryb ciemny w QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -4399,7 +4398,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br./&gt;ostatnio zmodyfikowano: %2&lt;br /&gt;rozmiar pliku: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4447,7 +4446,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
-<translation type="unfinished">Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</translation>
+<translation>Folder notatek &lt;b&gt;%1&lt;/b&gt; nie został odnaleziony! Czy chcesz wybrać nowy?</translation>
 </message>
 <message>
 <source>Please select the folder where your notes will get stored to</source>
@@ -4489,7 +4488,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation>Notitie-submappen ingeschakeld voor de huidige notitiemap om mappen te kunnen importeren.</translation>
+<translation>Podfoldery notatek włączone dla bieżącego folderu notatek w celu importowania folderów.</translation>
 </message>
 <message>
 <source>Login flow failed</source>
@@ -4533,15 +4532,15 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Kliknij dwukrotnie, aby otworzyć notatkę</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Obsługa Nextcloud Deck wyłączona!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Obsługa Nextcloud Deck nie jest włączona lub ustawienia są nieprawidłowe.&lt;br /&gt;Proszę sprawdzić &lt;strong&gt;Nextcloud&lt;/strong&gt; konfigurację w ustawieniach!</translation>
 </message>
 </context>
 <context>
@@ -4556,7 +4555,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>An url was opened at the current cursor position</source>
-<translation>Adres URL z bieżącej pozycji kursora został otwarty</translation>
+<translation>URL z bieżącej pozycji kursora został otwarty</translation>
 </message>
 <message>
 <source>No equation was found in front of the cursor</source>
@@ -4568,7 +4567,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>&amp;Link selected text</source>
-<translation>Zalinkuj zaznaczony tekst</translation>
+<translation>&amp;Link zaznaczonego tekstu</translation>
 </message>
 <message>
 <source>Insert &amp;link</source>
@@ -4605,15 +4604,15 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Export selected text as PDF</source>
-<translation>Eksportuj zaznaczony tekst w formacie PDF</translation>
+<translation>Eksportuj zaznaczony tekst jako PDF</translation>
 </message>
 <message>
 <source>Export selected text as PDF (preview)</source>
-<translation>Eksportuj zaznaczony tekst w formacie PDF (podgląd)</translation>
+<translation>Eksportuj wybrany tekst jako PDF (podgląd)</translation>
 </message>
 <message>
 <source>Custom actions</source>
-<translation>Akcje niestandardowe</translation>
+<translation>Akcje własne</translation>
 </message>
 <message>
 <source>No suggestions for %1</source>
@@ -4783,14 +4782,14 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>Nie można nawiązać połączenia z bazą danych z plikiem '%1'.
+Czy folder i plik są zapisywalne?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Nie można nawiązać połączenia z bazą danych folderu notatek w celu scalenia '%1'.
+Czy folder i plik są zapisywalne?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4829,7 +4828,7 @@ Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Aby wyszukać skrypt, wprowadź tekst zapytania.</translation>
 </message>
 <message>
 <source>Minimum app version:</source>
@@ -5874,7 +5873,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Experimental</source>
-<translation type="unfinished">Experimental</translation>
+<translation>Eksperymentalne</translation>
 </message>
 <message>
 <source>This also allows note files to be renamed</source>
@@ -5890,7 +5889,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>Włącz obsługę aplikacji QOwnNotesAPI</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
@@ -5902,7 +5901,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Włącz obsługę Nextcloud Deck</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -5950,31 +5949,31 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>Ukryj ikony w menu, a także okno dialogowe "Znajdź akcję". Wymaga ponownego uruchomienia, aby zacząć działać</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
-<translation type="unfinished">Hide menu icons</translation>
+<translation>Ukryj ikony menu</translation>
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>Zastąpienie współczynnika skalowania interfejsu</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>Współczynnik skalowania interfejsu:</translation>
 </message>
 <message>
 <source>Status bar</source>
-<translation type="unfinished">Status bar</translation>
+<translation>Pasek stanu</translation>
 </message>
 <message>
 <source>Show note path</source>
-<translation type="unfinished">Show note path</translation>
+<translation>Pokaż ścieżkę notatki</translation>
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Pokaż tylko względną ścieżkę notatki</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -6002,12 +6001,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
-<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+<translation>Gdy jest nieaktywne, automatycznie przechodzi w tryb tylko do odczytu:</translation>
 </message>
 <message>
 <source> sec</source>
 <extracomment>short for seconds</extracomment>
-<translation type="unfinished"> sec</translation>
+<translation> sek</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" choices in message boxes</source>
@@ -6015,7 +6014,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Note file extensions</source>
-<translation>Uwaga rozszerzenia plików</translation>
+<translation>Rozszerzenie notatki plików</translation>
 </message>
 <message>
 <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
@@ -6091,7 +6090,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Note that disabling this will also disable the navigation panel!</source>
-<translation>Pamiętaj, że wyłączenie tego spowoduje również wyłączenie panelu nawigacyjnego!</translation>
+<translation>Pamiętaj, że wyłączenie tej opcji spowoduje również wyłączenie panelu nawigacyjnego!</translation>
 </message>
 <message>
 <source>Disable cursor blinking</source>
@@ -6103,76 +6102,76 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Git biblioteka</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>Wsparcie dla biblioteki git libgit2 zostało aktywowane.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>Nie zapomnij włączyć obsługi git dla folderów notatek.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+<translation>Notatki większe niż ta wartość nie będą wyświetlane na liście notatek</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
-<translation type="unfinished">Maximum note file size:</translation>
+<translation>Maksymalny rozmiar pliku notatki:</translation>
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>Ukryj przycisk zamykania karty</translation>
 </message>
 <message>
 <source>AI autocomplete</source>
-<translation type="unfinished">AI autocomplete</translation>
+<translation>AI autouzupełnianie</translation>
 </message>
 <message>
 <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
-<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+<translation>Włącz sugestie autouzupełniania tekstu oparte na AI w edytorze notatek. Sugestie można zaakceptować za pomocą klawisza Tab lub odrzucić za pomocą Escape.</translation>
 </message>
 <message>
 <source>Enable AI autocomplete in note editor</source>
-<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+<translation>Włącz AI autouzupełniania w edytorze notatek</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>Przeszukiwanie repozytorium skryptów w poszukiwaniu skryptów integracji AI</translation>
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>API klucz</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI API klucz:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Utwórz klucz Groq API</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>Utwórz klucz OpenAI API</translation>
 </message>
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Połączenie testowe</translation>
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>API ustawienia</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Limit czasu odpowiedzi:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>Czas oczekiwania aplikacji na odpowiedź z serwera przed upływem limitu czasu i zwróceniem komunikatu o błędzie.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6181,19 +6180,19 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>Backendy AI dodane poprzez silnik skryptowy</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>Aby skorzystać z zaplecza AI, możesz użyć polecenia skryptowego &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, lub poszukaj w repozytorium skryptów już napisanych skryptów.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Możesz użyć haka skryptowego &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt;, aby dodać więcej backendów kompatybilnych z OpenAI API.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>Alternatywnie, można również poszukać w repozytorium skryptów już utworzonych skryptów integracji AI.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
@@ -6201,7 +6200,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>API klucz</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6229,11 +6228,11 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+<translation>Użyj sum kontrolnych, aby wykryć zewnętrzne modyfikacje niezapisanych notatek</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Wybierz ścieżkę pliku binarnego git</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
@@ -6249,7 +6248,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Kliknięcie karty notatki usuwa zaznaczenie opcji 'Wszystkie notatki'</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -6257,7 +6256,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation>Elementos de selección automática en el panel de navegación al cambiar la posición del cursor</translation>
+<translation>Automatyczny wybór elementów w panelu nawigacyjnym podczas zmiany pozycji kursora</translation>
 </message>
 <message>
 <source>Hide 'Note count' with tags (increases performance)</source>
@@ -6273,11 +6272,11 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Tag name for commands notes</source>
-<translation>Nazwa znacznika dla poleceń notatki</translation>
+<translation>Nazwa tagu dla poleceń notatki</translation>
 </message>
 <message>
 <source>Commands tag:</source>
-<translation>Znacznik polecenia:</translation>
+<translation>Tag polecenia:</translation>
 </message>
 <message>
 <source>Commands note name:</source>
@@ -6293,7 +6292,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>QOwnNotes web application</source>
-<translation>Aplikacja internetowa QOwnNotes</translation>
+<translation>Aplikacja web QOwnNotes</translation>
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
@@ -6301,7 +6300,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Server URL:</source>
-<translation>Adres URL serwera:</translation>
+<translation>URL serwera:</translation>
 </message>
 <message>
 <source>Show QR code</source>
@@ -6337,7 +6336,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Reset the URL to default</source>
-<translation>Zresetuj adres URL do domyślnego</translation>
+<translation>Zresetuj URL do domyślnego</translation>
 </message>
 <message>
 <source>QOwnNotes web application support</source>
@@ -6981,7 +6980,7 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation>De database is opnieuw geïnitialiseerd. Start de applicatie nu opnieuw!</translation>
+<translation>Baza danych została ponownie zainicjowana. Uruchom ponownie aplikację teraz!</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -7057,7 +7056,7 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <source>Plain text file</source>
-<translation>Plik ze zwykłym tekstem</translation>
+<translation>Plik zwykłym tekstem</translation>
 </message>
 <message>
 <source>Remove note file extension</source>
@@ -7097,15 +7096,15 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>Wynik testu API dla %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>AI backendu: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>API baza URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>
@@ -7118,11 +7117,11 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>Test połączenia z %1 (%2)</translation>
 </message>
 <message>
 <source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
-<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+<translation>Jeśli to ustawienie było włączone, musisz teraz ręcznie ponownie uruchomić aplikację, aby poprzednia zmienna środowiskowa, która zastępuje współczynnik skali, nie znajdowała się ponownie w Twoim środowisku.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7480,11 +7479,11 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Pokaż tylko załączniki użyte w bieżącej notatce</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Pokaż tylko z bieżącej notatki</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7636,11 +7635,11 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>Wyświetlane są tylko obrazy używane w bieżącej notatce</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Pokaż tylko z bieżącej notatki</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7656,7 +7655,7 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>Last modified at %1</source>
-<translation>Ostatnio zmodyfikowane o %1</translation>
+<translation>Ostatnio zmodyfikowano %1</translation>
 </message>
 <message>
 <source>Path: %1</source>
@@ -7705,7 +7704,7 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>&amp;Rename image</source>
-<translation>&amp;Otwórz obraz na zewnątrz</translation>
+<translation>&amp;Zmiana nazwy obrazu</translation>
 </message>
 <message>
 <source>&amp;Delete images</source>
@@ -7826,19 +7825,19 @@ Twoje notatki pozostaną nietknięte!</translation>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Różnica w tekście</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>Różnice:</translation>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>Nie pokazuj ponownie okna dialogowego</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>Zaakceptować zmianę?</translation>
 </message>
 </context>
 <context>
@@ -7873,7 +7872,7 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation>Pokaż tylko przedmioty z terminem płatności dzisiaj</translation>
+<translation>Pokaż tylko elementy z terminem na dzisiaj</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
@@ -7901,15 +7900,15 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Tagi</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Dodaj nowy tag</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation>Termin płatności</translation>
+<translation>Dwie daty</translation>
 </message>
 <message>
 <source>select your todo list</source>
@@ -8184,7 +8183,7 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <source>&amp;Download latest</source>
-<translation>Download de laatste</translation>
+<translation>&amp;Pobierz najnowszą</translation>
 </message>
 <message>
 <source>&amp;Skip version</source>
@@ -8247,23 +8246,23 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <source>Permission error</source>
-<translation>Toestemmingsfout</translation>
+<translation>Błąd uprawnień</translation>
 </message>
 <message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation>Het tijdelijke bestand '%1' kon niet uitvoerbaar worden gemaakt! U moet '%2' zelf vervangen.</translation>
+<translation>Plik tymczasowy '%1' nie mógł zostać wykonany! Musisz samodzielnie zastąpić '%2'.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation>Uw oude uitvoerbare QOwnNotes '%1' kan niet worden verwijderd! U dient deze zelf te vervangen door '%2'.</translation>
+<translation>Nie można usunąć starego pliku wykonywalnego QOwnNotes '%1'! Musisz sam zastąpić go '%2'.</translation>
 </message>
 <message>
 <source>Restart application</source>
-<translation>App opnieuw starten</translation>
+<translation>Uruchom ponownie aplikację</translation>
 </message>
 <message>
 <source>You now can restart the application to complete the update process.</source>
-<translation>U kunt de toepassing nu opnieuw starten om het updateproces te voltooien.</translation>
+<translation>Możesz teraz ponownie uruchomić aplikację, aby zakończyć proces aktualizacji.</translation>
 </message>
 <message>
 <source>Updater script '%1' doesn't exist!</source>
@@ -8291,7 +8290,7 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>Twój plik wykonywalny QOwnNotes '%1' nie jest zapisywalny! Musi być zapisywalny przez bieżącego użytkownika, aby mógł być aktualizowany.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
@@ -8380,15 +8379,15 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <source>Text received from web app and copied to clipboard</source>
-<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+<translation>Tekst odebrany z aplikacji internetowej i skopiowany do schowka</translation>
 </message>
 <message>
 <source>HTML received from web app and copied to clipboard</source>
-<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+<translation>HTML odebrany z aplikacji internetowej i skopiowany do schowka</translation>
 </message>
 <message>
 <source>Image received from web app and copied to clipboard</source>
-<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+<translation>Obraz odebrany z aplikacji internetowej i skopiowany do schowka</translation>
 </message>
 </context>
 <context>
@@ -8417,18 +8416,18 @@ Nie można tego cofnąć!</translation>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Zakładka usunięta z %n notatki (-tek)</numerusform>
+<numerusform>Zakładka usunięta z %n notatki (-tek)</numerusform>
+<numerusform>Zakładka usunięta z %n notatki(-tek)</numerusform>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<numerusform>Zakładka edytowana w %n notatce</numerusform>
+<numerusform>Zakładka edytowana w %n notatce</numerusform>
+<numerusform>Zakładka edytowana w %n notatkach</numerusform>
 <numerusform>Bookmark edited in %n note(s)</numerusform>
 </translation>
 </message>
@@ -8512,7 +8511,7 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Tworzenie notatek w formacie zwykłego tekstu Markdown z integracją z ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -8555,7 +8554,7 @@ Nie można tego cofnąć!</translation>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Wyświetla pomoc dotyczącą opcji wiersza poleceń.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>
@@ -8587,7 +8586,7 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Generowanie kodu uzupełniania shell. Obsługuje `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

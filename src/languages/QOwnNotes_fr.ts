@@ -2176,11 +2176,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Répéter la dernière action</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Repète la dernière action</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2608,16 +2608,16 @@ Voulez vous restaurer la note courante ?</translation>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Supprimer les notes et dossiers sélectionnés</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
 <translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<numerusform>Supprimer la/les &lt;strong&gt;%n&lt;/strong&gt; note(s) et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
@@ -2625,13 +2625,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Supprimer les dossiers sélectionnés</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Supprimer le dossier sélectionné ?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
+<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; dossiers sélectionnés ?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
 </translation>
 </message>
 <message>
@@ -2653,7 +2653,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Sous-dossier de note %1 supprimé</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2805,7 +2805,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Répéter l’action : %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2852,24 +2852,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message numerus="yes">
 <source>%n note(s) and %1 folder(s) selected</source>
 <translation type="unfinished">
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
+<numerusform>%n note(s) et %1 dossier(s) sélectionné(s)</numerusform>
 <numerusform>%n note(s) and %1 folder(s) selected</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>%n dossier sélectionné</numerusform>
+<numerusform>%n dossiers sélectionnés</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>&amp;Supprimer des notes et des dossiers</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>&amp;Supprimer des dossiers</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
@@ -3998,8 +3998,8 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
-<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; le dossier sélectionné ? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
-<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; les dossiers sélectionnés ? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
+<numerusform>Supprimer le dossier sélectionné ?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
+<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; dossiers sélectionnés ?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !</numerusform>
 </translation>
 </message>
 <message>
@@ -7433,8 +7433,8 @@ Vos notes resteront intactes!</translation>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
-<numerusform>Supprimer un fichier sélectionné?</numerusform>
-<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; fichier(s) sélectionné(s)?</numerusform>
+<numerusform>Supprimer le fichier sélectionné ?</numerusform>
+<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; fichiers sélectionnés ?</numerusform>
 </translation>
 </message>
 <message>
@@ -7467,7 +7467,7 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation>Le fichier &lt;strong&gt;%1&lt;/strong&gt; existe déjà, vous devez le supprimer avant de choisir &lt;strong&gt;%2&lt;/strong&gt; comme nouveau nom de fichier!</translation>
+<translation>Le fichier &lt;strong&gt;%1&lt;/strong&gt; existe déjà, vous devez le supprimer avant de choisir &lt;strong&gt;%2&lt;/strong&gt; comme nouveau nom de fichier !</translation>
 </message>
 <message>
 <source>File renaming failed</source>
@@ -7563,8 +7563,8 @@ Vos notes resteront intactes!</translation>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
-<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; fichier sélectionné?</numerusform>
-<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; fichiers sélectionnés?</numerusform>
+<numerusform>Supprimer le fichier sélectionné ?</numerusform>
+<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; fichiers sélectionnés ?</numerusform>
 </translation>
 </message>
 <message>
@@ -7581,7 +7581,7 @@ Vos notes resteront intactes!</translation>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation>Le fichier &lt;strong&gt;%1&lt;/strong&gt; existe déjà, vous devez le supprimer avant de choisir &lt;strong&gt;%2&lt;/strong&gt; comme nouveau nom de fichier!</translation>
+<translation>Le fichier &lt;strong&gt;%1&lt;/strong&gt; existe déjà, vous devez le supprimer avant de choisir &lt;strong&gt;%2&lt;/strong&gt; comme nouveau nom de fichier !</translation>
 </message>
 <message>
 <source>File renaming failed</source>
