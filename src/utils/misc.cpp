@@ -646,6 +646,21 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
     // we can get those from Google Chrome via the clipboard
     text.remove(QChar(0));
 
+    // Protect existing Markdown code blocks from being processed
+    QRegularExpression existingCodeBlockRe(QStringLiteral("```[^`]*```"),
+                                           QRegularExpression::DotMatchesEverythingOption);
+    QStringList existingCodeBlocks;
+    QRegularExpressionMatchIterator codeBlockIt = existingCodeBlockRe.globalMatch(text);
+    int placeholderIndex = 0;
+
+    while (codeBlockIt.hasNext()) {
+        QRegularExpressionMatch match = codeBlockIt.next();
+        QString codeBlock = match.captured(0);
+        existingCodeBlocks.append(codeBlock);
+        QString placeholder = QStringLiteral("___CODE_BLOCK_PLACEHOLDER_%1___").arg(placeholderIndex++);
+        text.replace(codeBlock, placeholder);
+    }
+
     // remove some blocks
     text.remove(QRegularExpression(QStringLiteral("<head.*?>(.+?)<\\/head>"),
                                    QRegularExpression::CaseInsensitiveOption |
@@ -942,6 +957,12 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 
     // replace multiple line breaks
     text.replace(QRegularExpression(QStringLiteral("\n\n\n+")), QStringLiteral("\n\n"));
+
+    // Restore protected code blocks
+    for (int i = 0; i < existingCodeBlocks.size(); ++i) {
+        QString placeholder = QStringLiteral("___CODE_BLOCK_PLACEHOLDER_%1___").arg(i);
+        text.replace(placeholder, existingCodeBlocks[i]);
+    }
 
     // Trim leading/trailing whitespace
     text = text.trimmed();
