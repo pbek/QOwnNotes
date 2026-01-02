@@ -15,6 +15,8 @@ class TestUtilsMisc : public QObject {
     void testShorten();
     void testCycleTextCase();
     void testHtmlToMarkdown();
+    void testHtmlToMarkdownTables();
+    void testHtmlToMarkdownTableSpecialChars();
     void testParseTaskList();
     void testUnescapeHtml();
     void testHtmlSpecialChars();

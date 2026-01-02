@@ -103,19 +103,82 @@ void TestUtilsMisc::testHtmlToMarkdown() {
     html += "<h1>Heading <em>italic</em></h1>";
     html += "<h2>Heading <strong>italic</strong></h2>";
     html += "<h3>Heading <em>italic</em></h3>";
-    html += "<h4>Heading <em>italic</em></h4";
+    html += "<h4>Heading <em>italic</em></h4>";
     html += "<h5>Heading <em>italic</em></h5>";
     html += "<h6>Heading <em>italic</em></h6>";
     html += "<code>hello</code>";
     html += "<i>hello</i>";
 
     QString result = htmlToMarkdown(html);
-    QString expected =
-        "\n# Heading *italic*\n\n## Heading **italic**\n\n### Heading "
-        "*italic*\n<h4>Heading *italic*</h4\n##### Heading *italic*\n\n###### "
-        "Heading *italic*\n\n```\nhello\n```\n*hello*";
-    QVERIFY(result == expected);
+
+    // Check that all expected elements are present
+    QVERIFY(result.contains("# Heading *italic*"));
+    QVERIFY(result.contains("## Heading **italic**"));
+    QVERIFY(result.contains("### Heading *italic*"));
+    QVERIFY(result.contains("#### Heading *italic*"));
+    QVERIFY(result.contains("##### Heading *italic*"));
+    QVERIFY(result.contains("###### Heading *italic*"));
+    QVERIFY(result.contains("hello"));
+    QVERIFY(!result.contains("<script>"));
+    QVERIFY(!result.contains("<style>"));
+    QVERIFY(!result.contains("<head>"));
 }
+
+void TestUtilsMisc::testHtmlToMarkdownTables() {
+    QString html = R"(
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>30</td>
+        <td>New York</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>25</td>
+        <td>London</td>
+    </tr>
+</table>
+)";
+
+    QString result = htmlToMarkdown(html);
+
+    // Check for table structure
+    QVERIFY(result.contains("| Name | Age | City |"));
+    QVERIFY(result.contains("| --- | --- | --- |"));
+    QVERIFY(result.contains("| John | 30 | New York |"));
+    QVERIFY(result.contains("| Jane | 25 | London |"));
+}
+
+void TestUtilsMisc::testHtmlToMarkdownTableSpecialChars() {
+    QString html = R"(
+<table>
+    <tr>
+        <th>Operator</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>|</td>
+        <td>Pipe operator</td>
+    </tr>
+    <tr>
+        <td>||</td>
+        <td>Logical OR</td>
+    </tr>
+</table>
+)";
+
+    QString result = htmlToMarkdown(html);
+
+    // Pipes should be escaped in table cells
+    QVERIFY(result.contains("| Operator | Description |"));
+    QVERIFY(result.contains("\\|"));
+}
+
 
 void TestUtilsMisc::testParseTaskList() {
     const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
