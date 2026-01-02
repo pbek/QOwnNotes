@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.1.3
+
+- The **Joplin Import Dialog** now supports importing images with title attributes
+  (for [#3419](https://github.com/pbek/QOwnNotes/issues/3419))
+  - Image tags like `![](:/imageId "Some hover text")` are now properly recognized and imported
+  - The title attribute is used as the image filename when no alt text is provided
+
 ## 26.1.2
 
 - Added **Redo last action** feature to quickly repeat the most recent action

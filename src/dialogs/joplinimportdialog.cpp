@@ -400,26 +400,50 @@ void JoplinImportDialog::tagNote(const QString& id, const Note& note) {
  */
 void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
     QString noteText = note.getNoteText();
-    auto i = QRegularExpression(R"(!\[([^\]]*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
 
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString imageTag = match.captured(0);
-        QString imageName = match.captured(1);
-        QString imageId = match.captured(2);
+    // Handle format: [![](:/imageId "hover text")]
+    {
+        auto i = QRegularExpression(R"regex(!\[([^\]]*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex").globalMatch(noteText);
 
-        importImage(note, dirPath, noteText, imageTag, imageId, imageName);
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            QString imageTag = match.captured(0);
+            QString imageName = match.captured(1);
+            QString imageId = match.captured(2);
+            QString hoverText = match.captured(3);
+
+            // Use hover text as image name if no alt text is provided
+            QString finalImageName = imageName.isEmpty() ? hoverText : imageName;
+            importImage(note, dirPath, noteText, imageTag, imageId, finalImageName);
+        }
     }
 
-    i = QRegularExpression(R"(<img\s+(?:[^>]*\s+)?src=\":\/([\w\d]+)\"[^>]*\/?>)")
-            .globalMatch(noteText);
+    // Handle format: ![alt text](:/imageId)
+    {
+        auto i = QRegularExpression(R"(!\[([^\]]*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
 
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString imageTag = match.captured(0);
-        QString imageId = match.captured(1);
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            QString imageTag = match.captured(0);
+            QString imageName = match.captured(1);
+            QString imageId = match.captured(2);
 
-        importImage(note, dirPath, noteText, imageTag, imageId);
+            importImage(note, dirPath, noteText, imageTag, imageId, imageName);
+        }
+    }
+
+    // Handle format: <img src=":/imageId" ... />
+    {
+        auto i = QRegularExpression(R"(<img\s+(?:[^>]*\s+)?src=\":\/([\w\d]+)\"[^>]*\/?>)")
+                .globalMatch(noteText);
+
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            QString imageTag = match.captured(0);
+            QString imageId = match.captured(1);
+
+            importImage(note, dirPath, noteText, imageTag, imageId);
+        }
     }
 
     note.setNoteText(noteText);
