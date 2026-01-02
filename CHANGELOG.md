@@ -6,6 +6,8 @@
   (for [#3419](https://github.com/pbek/QOwnNotes/issues/3419))
   - Image tags like `![](:/imageId "Some hover text")` are now properly recognized and imported
   - The title attribute is used as the image filename when no alt text is provided
+- The **Image file exists** dialog when inserting new images was improved to also
+  support remembering the `No` button choice (for [#3419](https://github.com/pbek/QOwnNotes/issues/3419))
 
 ## 26.1.2
 

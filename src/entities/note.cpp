@@ -4246,7 +4246,10 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine, bool returnUr
                 nullptr, QObject::tr("Image file exists"),
                 QObject::tr("Image file already exists in the media folder, "
                             "do you want to use the existing one instead of creating a new file?"),
-                QStringLiteral("insert-media-use-existing-image")) == QMessageBox::Yes) {
+                QStringLiteral("insert-media-use-existing-image"),
+                QMessageBox::Yes | QMessageBox::No,
+                QMessageBox::No,
+                QMessageBox::StandardButtons()) == QMessageBox::Yes) {
             useExistingFile = true;
         }
     }
