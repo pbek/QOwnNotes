@@ -179,7 +179,6 @@ void TestUtilsMisc::testHtmlToMarkdownTableSpecialChars() {
     QVERIFY(result.contains("\\|"));
 }
 
-
 void TestUtilsMisc::testParseTaskList() {
     const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
     const QString &t1 = "<li> [ ] task 1</li>";

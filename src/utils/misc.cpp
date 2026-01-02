@@ -657,7 +657,8 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
         QRegularExpressionMatch match = codeBlockIt.next();
         QString codeBlock = match.captured(0);
         existingCodeBlocks.append(codeBlock);
-        QString placeholder = QStringLiteral("___CODE_BLOCK_PLACEHOLDER_%1___").arg(placeholderIndex++);
+        QString placeholder =
+            QStringLiteral("___CODE_BLOCK_PLACEHOLDER_%1___").arg(placeholderIndex++);
         text.replace(codeBlock, placeholder);
     }
 
@@ -676,9 +677,9 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 
     // Handle tables - must be done before other replacements
     // Convert HTML tables to Markdown tables
-    QRegularExpression tableRe(QStringLiteral("<table[^>]*?>(.*?)<\\/table>"),
-                               QRegularExpression::CaseInsensitiveOption |
-                                   QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpression tableRe(
+        QStringLiteral("<table[^>]*?>(.*?)<\\/table>"),
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::DotMatchesEverythingOption);
     QRegularExpressionMatchIterator tableIt = tableRe.globalMatch(text);
 
     while (tableIt.hasNext()) {
@@ -702,8 +703,8 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 
             // Extract cells (th or td)
             QRegularExpression cellRe(QStringLiteral("<(th|td)[^>]*?>(.*?)<\\/\\1>"),
-                                     QRegularExpression::CaseInsensitiveOption |
-                                         QRegularExpression::DotMatchesEverythingOption);
+                                      QRegularExpression::CaseInsensitiveOption |
+                                          QRegularExpression::DotMatchesEverythingOption);
             QRegularExpressionMatchIterator cellIt = cellRe.globalMatch(rowHtml);
 
             QStringList cells;
@@ -724,7 +725,8 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 
             if (!cells.isEmpty()) {
                 columnCount = qMax(columnCount, cells.count());
-                rows.append(QStringLiteral("| ") + cells.join(QStringLiteral(" | ")) + QStringLiteral(" |"));
+                rows.append(QStringLiteral("| ") + cells.join(QStringLiteral(" | ")) +
+                            QStringLiteral(" |"));
 
                 // Add separator row after first row (header)
                 if (isFirstRow) {
@@ -732,14 +734,16 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
                     for (int i = 0; i < cells.count(); ++i) {
                         separators.append(QStringLiteral("---"));
                     }
-                    rows.append(QStringLiteral("| ") + separators.join(QStringLiteral(" | ")) + QStringLiteral(" |"));
+                    rows.append(QStringLiteral("| ") + separators.join(QStringLiteral(" | ")) +
+                                QStringLiteral(" |"));
                     isFirstRow = false;
                 }
             }
         }
 
         if (!rows.isEmpty()) {
-            markdownTable = QStringLiteral("\n\n") + rows.join(QStringLiteral("\n")) + QStringLiteral("\n\n");
+            markdownTable =
+                QStringLiteral("\n\n") + rows.join(QStringLiteral("\n")) + QStringLiteral("\n\n");
             text.replace(tableMatch.captured(0), markdownTable);
         }
     }
@@ -779,23 +783,26 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
                  QStringLiteral("\n\n> \\1\n\n"));
 
     // Handle horizontal rule
-    text.replace(QRegularExpression(QStringLiteral("<hr.*?/?>"),
-                                    QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral("\n\n---\n\n"));
+    text.replace(
+        QRegularExpression(QStringLiteral("<hr.*?/?>"), QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("\n\n---\n\n"));
 
     // Handle images - must be done before links
-    text.replace(QRegularExpression(QStringLiteral("<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"[^>]*>"),
-                                    QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral("![\\2](\\1)"));
-    text.replace(QRegularExpression(QStringLiteral("<img[^>]+alt=\"([^\"]+)\"[^>]*src=\"([^\"]+)\"[^>]*>"),
-                                    QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral("![\\1](\\2)"));
+    text.replace(
+        QRegularExpression(QStringLiteral("<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"[^>]*>"),
+                           QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("![\\2](\\1)"));
+    text.replace(
+        QRegularExpression(QStringLiteral("<img[^>]+alt=\"([^\"]+)\"[^>]*src=\"([^\"]+)\"[^>]*>"),
+                           QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("![\\1](\\2)"));
     text.replace(QRegularExpression(QStringLiteral("<img[^>]+src=\"([^\"]+)\"[^>]*>"),
                                     QRegularExpression::CaseInsensitiveOption),
                  QStringLiteral("![](\\1)"));
 
     // Handle code blocks with language first
-    text.replace(QRegularExpression(QStringLiteral("<pre[^>]*><code[^>]+class=\"[^\"]*language-([^\"\\s]+)[^\"]*\"[^>]*>(.+?)<\\/code><\\/pre>"),
+    text.replace(QRegularExpression(QStringLiteral("<pre[^>]*><code[^>]+class=\"[^\"]*language-([^"
+                                                   "\"\\s]+)[^\"]*\"[^>]*>(.+?)<\\/code><\\/pre>"),
                                     QRegularExpression::CaseInsensitiveOption |
                                         QRegularExpression::DotMatchesEverythingOption),
                  QStringLiteral("\n\n```\\1\n\\2\n```\n\n"));
@@ -882,14 +889,18 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
                  QStringLiteral("[\\2](\\1)"));
 
     // Handle div and span (just extract content)
-    text.replace(QRegularExpression(QStringLiteral("<div.*?>"), QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral("\n"));
-    text.replace(QRegularExpression(QStringLiteral("<\\/div>"), QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral("\n"));
-    text.replace(QRegularExpression(QStringLiteral("<span.*?>"), QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral(""));
-    text.replace(QRegularExpression(QStringLiteral("<\\/span>"), QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral(""));
+    text.replace(
+        QRegularExpression(QStringLiteral("<div.*?>"), QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("\n"));
+    text.replace(
+        QRegularExpression(QStringLiteral("<\\/div>"), QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("\n"));
+    text.replace(
+        QRegularExpression(QStringLiteral("<span.*?>"), QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral(""));
+    text.replace(
+        QRegularExpression(QStringLiteral("<\\/span>"), QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral(""));
 
     // Handle paragraphs
     text.replace(QRegularExpression(QStringLiteral("<p.*?>(.+?)</p>"),
@@ -898,8 +909,8 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
                  QStringLiteral("\n\n\\1\n\n"));
 
     // Remove any remaining HTML tags
-    text.remove(QRegularExpression(QStringLiteral("<[^>]+>"),
-                                   QRegularExpression::CaseInsensitiveOption));
+    text.remove(
+        QRegularExpression(QStringLiteral("<[^>]+>"), QRegularExpression::CaseInsensitiveOption));
 
     // Decode HTML entities manually to preserve linebreaks
     // Common HTML entities
