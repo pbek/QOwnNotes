@@ -403,7 +403,8 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
 
     // Handle format: [![](:/imageId "hover text")]
     {
-        auto i = QRegularExpression(R"regex(!\[([^\]]*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex").globalMatch(noteText);
+        auto i = QRegularExpression(R"regex(!\[([^\]]*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex")
+                     .globalMatch(noteText);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
@@ -435,7 +436,7 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
     // Handle format: <img src=":/imageId" ... />
     {
         auto i = QRegularExpression(R"(<img\s+(?:[^>]*\s+)?src=\":\/([\w\d]+)\"[^>]*\/?>)")
-                .globalMatch(noteText);
+                     .globalMatch(noteText);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
