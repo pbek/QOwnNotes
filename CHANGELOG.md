@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 26.1.4
+
+- **Improved HTML to Markdown conversion** with better handling of various HTML elements
+  (for [web-companion#35](https://github.com/qownnotes/web-companion/issues/35))
+  - Added comprehensive table support with proper formatting of headers, rows, and cells
+  - Fixed text formatting (bold, italic, strikethrough) to properly preserve inline styles
+  - Fixed blockquotes and horizontal rules conversion
+  - Improved heading conversion to remove unwanted line breaks within headings
+  - Fixed link conversion to remove excessive line breaks in link text and nested elements
+  - Improved code block handling to remove trailing line breaks inside code blocks
+  - Added handling of nested formatting elements (e.g., bold/italic within links)
+  - Fixed list item conversion to properly handle nested elements
+  - Added comprehensive unit tests for all HTML to Markdown conversion scenarios
+  - Fixed Evernote import code block handling to preserve leading indentation and code fences
+    - Code blocks imported from Evernote now maintain their original formatting
+    - Fixed an issue where PHP and other code blocks would lose their indentation or code fence markers
+
 ## 26.1.3
 
 - The **Joplin Import Dialog** now supports importing images with title attributes
