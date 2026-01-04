@@ -16,6 +16,9 @@
   - Fixed Evernote import code block handling to preserve leading indentation and code fences
     - Code blocks imported from Evernote now maintain their original formatting
     - Fixed an issue where PHP and other code blocks would lose their indentation or code fence markers
+- **Improved encrypted text highlighting** in the note editor (for [#3427](https://github.com/pbek/QOwnNotes/issues/3427))
+  - Encrypted text blocks are now visually distinguished with smaller font size for better readability
+  - Encrypted text blocks now skip markdown highlighting, spell checking, and link detection to improve performance
 
 ## 26.1.3
 

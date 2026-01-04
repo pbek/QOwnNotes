@@ -3409,6 +3409,14 @@ QString Note::parseEncryptedNoteText(const QString &noteText) {
     return match.hasMatch() ? match.captured(1) : QLatin1String("");
 }
 
+bool Note::isEncryptedTextBegin(const QString &text) {
+    return text == NOTE_TEXT_ENCRYPTION_PRE_STRING;
+}
+
+bool Note::isEncryptedTextEnd(const QString &text) {
+    return text == NOTE_TEXT_ENCRYPTION_POST_STRING;
+}
+
 /**
  * Returns encrypted note text if it is encrypted
  */

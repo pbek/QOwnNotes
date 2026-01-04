@@ -64,6 +64,8 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
 
    private:
     Note *_currentNote = nullptr;
+    bool _hasEncrypted = false;
+    bool _highlightEncrypted = false;
 
     QString _defaultNoteFileExt;
     QRegularExpression _regexTagStyleLink;

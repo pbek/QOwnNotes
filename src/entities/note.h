@@ -405,6 +405,8 @@ class Note {
     [[nodiscard]] QString getDecryptedNoteText(const QString &encryptedNoteText) const;
 
     static QString parseEncryptedNoteText(const QString &noteText);
+    static bool isEncryptedTextBegin(const QString &text);
+    static bool isEncryptedTextEnd(const QString &text);
 
     QString getNextcloudFileLink() const;
 

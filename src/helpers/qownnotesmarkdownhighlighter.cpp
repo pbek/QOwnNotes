@@ -27,6 +27,8 @@
 #include "mainwindow.h"
 #include "qownspellchecker.h"
 
+constexpr qreal ENCRYPTED_TEXT_FONT_SCALE = 1.5;
+
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(QTextDocument *parent,
                                                            HighlightingOptions highlightingOptions)
     : MarkdownHighlighter(parent, highlightingOptions) {
@@ -41,6 +43,9 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
     if (note != nullptr) {
         _currentNote = note;
     }
+
+    _hasEncrypted = _currentNote ? _currentNote->hasEncryptedNoteText() : false;
+    _highlightEncrypted = false;  // Reset state when note changes
 }
 
 /**
@@ -57,22 +62,44 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
 
-    // do the Markdown highlighting before the spellcheck highlighting
-    // if we do it afterward, it overwrites the spellcheck highlighting
-    MarkdownHighlighter::highlightMarkdown(text);
-    if (text.contains(QLatin1String("note://")) ||
-        text.contains(QChar('.') + _defaultNoteFileExt)) {
-        highlightBrokenNotesLink(text);
+    // Only check for encryption markers if the note has encrypted content
+    if (_hasEncrypted) {
+        if (Note::isEncryptedTextBegin(text)) {
+            _highlightEncrypted = true;
+        }
     }
 
-    // skip spell checking empty blocks and blocks with just "spaces"
-    // the rest of the highlighting needs to be done e.g. for code blocks with
-    // empty lines
-    if (!text.isEmpty() && QOwnSpellChecker::instance()->isActive()) {
-        highlightSpellChecking(text);
+    if (_highlightEncrypted) {
+        auto format = _formats[MaskedSyntax];
+        // Reduce the font size for encrypted text
+        format.setFontPointSize(format.fontPointSize() / ENCRYPTED_TEXT_FONT_SCALE);
+        setFormat(0, text.length(), format);
+    } else {
+        // do the Markdown highlighting before the spellcheck highlighting
+        // if we do it afterward, it overwrites the spellcheck highlighting
+        highlightMarkdown(text);
     }
 
-    highlightScriptingRules(ScriptingService::instance()->getHighlightingRules(), text);
+    if (!_highlightEncrypted) {
+        if (text.contains(QLatin1String("note://")) ||
+            text.contains(QChar('.') + _defaultNoteFileExt)) {
+            highlightBrokenNotesLink(text);
+        }
+
+        // skip spell checking empty blocks and blocks with just "spaces"
+        // the rest of the highlighting needs to be done e.g. for code blocks with
+        // empty lines
+        if (!text.isEmpty() && QOwnSpellChecker::instance()->isActive()) {
+            highlightSpellChecking(text);
+        }
+
+        highlightScriptingRules(ScriptingService::instance()->getHighlightingRules(), text);
+    }
+
+    // Only check for encryption end marker if we're highlighting encrypted text
+    if (_hasEncrypted && _highlightEncrypted && Note::isEncryptedTextEnd(text)) {
+        _highlightEncrypted = false;
+    }
 
     _highlightingFinished = true;
 }
