@@ -45,7 +45,7 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
     }
 
     _hasEncrypted = _currentNote ? _currentNote->hasEncryptedNoteText() : false;
-    _highlightEncrypted = false;  // Reset state when note changes
+    _highlightEncrypted = false;    // Reset state when note changes
 }
 
 /**
