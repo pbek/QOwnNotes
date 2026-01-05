@@ -2194,7 +2194,7 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Ponów ostatnie działanie</translation>
 </message>
 <message>
 <source>Redo the last action</source>
@@ -2903,15 +2903,6 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation>Folder notatki &lt;b&gt;%1&lt;/b&gt; ze ścieżką &lt;b&gt;%2&lt;/b&gt; już nie istnieje!</translation>
 </message>
 <message numerus="yes">
-<source>%n note(s) and %1 folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-</translation>
-</message>
-<message numerus="yes">
 <source>%n folder(s) selected</source>
 <translation type="unfinished">
 <numerusform>%n folder(s) selected</numerusform>
@@ -2955,7 +2946,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <source>Ln %1, Col %2</source>
 <comment>Line / Column</comment>
-<translation>Ln %1, Kol %2</translation>
+<translation>L %1, Kol %2</translation>
 </message>
 <message>
 <source>Line %1, Column %2</source>
@@ -3131,6 +3122,19 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>Pokaż wszystkie notatki oznaczone tagiem '%1' (%2)</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
@@ -4471,7 +4475,7 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <message numerus="yes">
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
 <translation>
-<numerusform>Jedna uwaga używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatce?</numerusform>
+<numerusform>Jedna notatka używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatce?</numerusform>
 <numerusform>%n notatek używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatkach?</numerusform>
 <numerusform>%n notatek używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatkach?</numerusform>
 <numerusform>%n notatek używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatkach?</numerusform>
@@ -4480,7 +4484,7 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <message numerus="yes">
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation>
-<numerusform>Jedna uwaga używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatce?</numerusform>
+<numerusform>Jedna notatka używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatce?</numerusform>
 <numerusform>%n notatek używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatkach?</numerusform>
 <numerusform>%n notatek używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatkach?</numerusform>
 <numerusform>%n notatek używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatkach?</numerusform>
@@ -6320,7 +6324,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>Możesz użyć notatek ze specjalnym znacznikiem do przechowywania fragmentów poleceń, które można wykonać z menedżera fragmentu wiersza polecenia. Aby uzyskać więcej informacji na temat komend Swiastek Składnia Kliknij &lt;a Href="%1"&gt; Oto &lt;/a&gt;.</translation>
+<translation>Możesz użyć notatek ze specjalnym znacznikiem do przechowywania fragmentów poleceń, które można wykonać z menedżera fragmentu wiersza polecenia. Aby uzyskać więcej informacji na temat składni fragmentu polecenia, kliknij &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
 </message>
 <message>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
@@ -7700,7 +7704,7 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <source>&amp;Open image externally</source>
-<translation>&amp;Otwórz obraz na zewnątrz</translation>
+<translation>&amp;Otwórz obraz zewnątrzny</translation>
 </message>
 <message>
 <source>&amp;Rename image</source>

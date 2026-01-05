@@ -4,6 +4,7 @@
 
 - Fixed switching to different layout in the _Layout settings_ for Qt6 builds
   (for [#3425](https://github.com/pbek/QOwnNotes/issues/3425))
+- Added more Korean, Polish, French translation (thank you, venusgirl, stafre26, jd-develop)
 
 ## 26.1.4
 

@@ -2824,12 +2824,6 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
 </message>
 <message numerus="yes">
-<source>%n note(s) and %1 folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-</translation>
-</message>
-<message numerus="yes">
 <source>%n folder(s) selected</source>
 <translation type="unfinished">
 <numerusform>%n folder(s) selected</numerusform>
@@ -3038,6 +3032,16 @@ Mena ka whakahohea te paraihe i runga i to ake kaiwhakahaere server ka taea e ko
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>

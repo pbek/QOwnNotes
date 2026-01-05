@@ -2871,14 +2871,6 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Napomena: mapa &lt;b&gt;%1&lt;/b&gt; sa stazom &lt;b&gt;%2&lt;/b&gt; više ne postoji!</translation>
 </message>
 <message numerus="yes">
-<source>%n note(s) and %1 folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-</translation>
-</message>
-<message numerus="yes">
 <source>%n folder(s) selected</source>
 <translation type="unfinished">
 <numerusform>%n folder(s) selected</numerusform>
@@ -3094,6 +3086,18 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>Prikaži sve bilješke označene s '%1' (%2)</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>

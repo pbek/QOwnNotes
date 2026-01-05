@@ -2825,12 +2825,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
 </message>
 <message numerus="yes">
-<source>%n note(s) and %1 folder(s) selected</source>
-<translation>
-<numerusform>%n개의 메모 및 %1개의 폴더가 선택되었습니다</numerusform>
-</translation>
-</message>
-<message numerus="yes">
 <source>%n folder(s) selected</source>
 <translation>
 <numerusform>%n 폴더 선택</numerusform>
@@ -3040,6 +3034,16 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>'%1'(%2) 로 태그된 모든 노트 표시</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation>%1 및 %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation>
+<numerusform>%n개의 메모 선택됨</numerusform>
+</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>

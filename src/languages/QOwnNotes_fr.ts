@@ -2614,13 +2614,13 @@ Voulez vous restaurer la note courante ?</translation>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Supprimer la/les &lt;strong&gt;%n&lt;/strong&gt; note(s) et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
+<translation>
+<numerusform>Supprimer la note et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
 
 Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; notes et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
 </translation>
 </message>
 <message>
@@ -2850,13 +2850,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Le dossier de notes &lt;b&gt;%1&lt;/b&gt; dont le chemin est &lt;b&gt;%2&lt;/b&gt; n’existe plus !</translation>
 </message>
 <message numerus="yes">
-<source>%n note(s) and %1 folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) et %1 dossier(s) sélectionné(s)</numerusform>
-<numerusform>%n note(s) and %1 folder(s) selected</numerusform>
-</translation>
-</message>
-<message numerus="yes">
 <source>%n folder(s) selected</source>
 <translation>
 <numerusform>%n dossier sélectionné</numerusform>
@@ -3068,6 +3061,17 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>Afficher toutes les notes contenant le tag '%1' (%2)</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>

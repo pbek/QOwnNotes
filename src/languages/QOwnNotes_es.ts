@@ -2849,13 +2849,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>¡La carpeta de notas &lt;b&gt;%1&lt;/b&gt; con la ruta &lt;b&gt;%2&lt;/b&gt; ya no existe!</translation>
 </message>
 <message numerus="yes">
-<source>%n note(s) and %1 folder(s) selected</source>
-<translation>
-<numerusform>%n nota(s) y %1 carpeta(s) seleccionadas</numerusform>
-<numerusform>%n nota(s) y %1 carpeta(s) seleccionadas</numerusform>
-</translation>
-</message>
-<message numerus="yes">
 <source>%n folder(s) selected</source>
 <translation>
 <numerusform>%n carpeta seleccionada</numerusform>
@@ -3067,6 +3060,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Show all notes tagged with '%1' (%2)</source>
 <translation>Mostrar todas las notas etiquetadas con '%1' (%2)</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
