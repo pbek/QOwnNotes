@@ -55,6 +55,11 @@ div.line-numbers-mode {
   padding-right: 1rem;
 }
 
+/* Adjust docsearch position */
+div.docsearch-placeholder, #docsearch-container {
+  margin-left: 15px;
+}
+
 // add RTL styles
 // taken from: https://github.com/abbasifard/vuepress-rtl/blob/master/src/rtl.styl
 html[dir="rtl"] {
