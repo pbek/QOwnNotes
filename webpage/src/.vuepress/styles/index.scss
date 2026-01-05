@@ -2,6 +2,10 @@
  * Custom Styles here.
  *
  * ref: https://v2.vuepress.vuejs.org/reference/default-theme/styles.html
+ *
+ * Note: To change the mobile breakpoint for the hamburger menu,
+ * modify the $MQMobile SCSS variable in palette.scss
+ * Default breakpoint is 719px
  */
 
 // Increase content width to 900px

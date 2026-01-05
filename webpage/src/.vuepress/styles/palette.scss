@@ -4,6 +4,14 @@
  * ref: https://v2.vuepress.vuejs.org/reference/default-theme/styles.html
  */
 
+// Customize mobile breakpoint for hamburger menu
+// Override VuePress default theme SCSS variables BEFORE they are imported
+// Default values: $MQMobile: 719px, $MQNarrow: 959px, $MQMobileNarrow: 419px
+// Change these to your desired breakpoints:
+$MQMobile: 820px;        // Hamburger menu appears at this width and below
+// $MQNarrow: 959px;      // Uncomment to change narrow layout breakpoint
+// $MQMobileNarrow: 419px; // Uncomment to change mobile narrow breakpoint
+
 :root {
   --c-brand: #3eaf7c;
   --c-brand-light: #4abf8a;
