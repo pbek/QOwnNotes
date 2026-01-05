@@ -767,9 +767,8 @@ MainWindow::~MainWindow() {
         storeSettings();
     }
 
-    if (!isInDistractionFreeMode() && !forceQuit && !_closeEventWasFired) {
-        storeCurrentWorkspace();
-    }
+    // Checks will be done in the method
+    storeCurrentWorkspace();
 
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("app/end"),
                                                    QStringLiteral("app end"));
@@ -4322,9 +4321,8 @@ void MainWindow::closeEvent(QCloseEvent *event) {
         // because in the destructor the layout will be destroyed in dark mode
         // when the window was closed
         // https://github.com/pbek/QOwnNotes/issues/1015
-        if (!isInDistractionFreeMode()) {
-            storeCurrentWorkspace();
-        }
+        // Checks will be done in the method
+        storeCurrentWorkspace();
 
         QMainWindow::closeEvent(event);
     }
@@ -11115,6 +11113,12 @@ void MainWindow::setCurrentWorkspace(const QString &uuid) {
  * Stores the current workspace
  */
 void MainWindow::storeCurrentWorkspace() {
+    const bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
+    if (isInDistractionFreeMode() || forceQuit || _closeEventWasFired) {
+        return;
+    }
+
+    qDebug() << __func__;
     SettingsService settings;
     QString uuid = currentWorkspaceUuid();
 

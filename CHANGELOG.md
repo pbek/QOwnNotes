@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.1.5
+
+- Fixed switching to different layout in the _Layout settings_ for Qt6 builds
+  (for [#3425](https://github.com/pbek/QOwnNotes/issues/3425))
+
 ## 26.1.4
 
 - **Improved HTML to Markdown conversion** with better handling of various HTML elements
