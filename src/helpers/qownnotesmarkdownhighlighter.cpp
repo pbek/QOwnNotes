@@ -40,11 +40,10 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(QTextDocument *parent
 }
 
 void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
-    if (note != nullptr) {
-        _currentNote = note;
-    }
+    Q_ASSERT(note);
 
-    _hasEncrypted = _currentNote ? _currentNote->hasEncryptedNoteText() : false;
+    _currentNote = note;
+    _hasEncrypted = _currentNote->hasEncryptedNoteText();
     _highlightEncrypted = false;    // Reset state when note changes
 }
 
