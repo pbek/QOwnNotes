@@ -8580,8 +8580,9 @@ void MainWindow::reloadCurrentNoteTags() {
         // Build selection text based on what's selected
         QString notesSelectedText;
         if (noteCount > 0 && folderCount > 0) {
-            notesSelectedText =
-                tr("%n note(s) and %1 folder(s) selected", "", noteCount).arg(folderCount);
+            notesSelectedText = tr("%1 and %2")
+                                    .arg(tr("%n note(s) selected", "", noteCount))
+                                    .arg(tr("%n folder(s) selected", "", folderCount));
         } else if (folderCount > 0) {
             notesSelectedText = tr("%n folder(s) selected", "", folderCount);
         } else {
