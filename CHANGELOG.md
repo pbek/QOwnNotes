@@ -4,6 +4,7 @@
 
 - Added a debug message when a path can't be added to the note directory watcher
   (for [#3428](https://github.com/pbek/QOwnNotes/issues/3428))
+- Added more Spanish translation (thank you, alejandromoc)
 
 ## 26.1.5
 

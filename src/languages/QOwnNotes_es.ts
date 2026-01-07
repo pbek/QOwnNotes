@@ -3063,13 +3063,13 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 y %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>%n nota seleccionada</numerusform>
+<numerusform>%n notas seleccionadas</numerusform>
 </translation>
 </message>
 <message>
