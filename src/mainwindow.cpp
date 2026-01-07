@@ -3674,6 +3674,16 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
                          QStringLiteral("🗄️"));
 }
 
+bool MainWindow::noteDirectoryWatcherAddPath(const QString &path) {
+    const bool result = noteDirectoryWatcher.addPath(path);
+
+    if (!result) {
+        qDebug() << "Failed to add path to directory watcher: " << path;
+    }
+
+    return result;
+}
+
 void MainWindow::addDirectoryToDirectoryWatcher(const QString &path) {
     QDir dir(path);
     QFileInfoList entries =
@@ -3681,7 +3691,7 @@ void MainWindow::addDirectoryToDirectoryWatcher(const QString &path) {
 
     for (const QFileInfo &entryInfo : entries) {
         QString entryPath = entryInfo.filePath();
-        noteDirectoryWatcher.addPath(entryPath);
+        noteDirectoryWatcherAddPath(entryPath);
 
         if (entryInfo.isDir()) {
             addDirectoryToDirectoryWatcher(entryPath);    // Recursively add subdirectories
@@ -3704,7 +3714,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
     const QString notePath = Utils::Misc::removeIfEndsWith(this->notesPath, QDir::separator());
     if (QDir(notePath).exists()) {
         // watch the notes directory for changes
-        noteDirectoryWatcher.addPath(notePath);
+        noteDirectoryWatcherAddPath(notePath);
     }
 
     // Add the .git folder to the watcher if it exists
@@ -3722,7 +3732,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
 
             if (folderDir.exists()) {
                 // watch the note sub folder path for changes
-                noteDirectoryWatcher.addPath(path);
+                noteDirectoryWatcherAddPath(path);
             }
         }
     }
@@ -3743,7 +3753,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
 
         if (file.exists()) {
             // watch the note for changes
-            noteDirectoryWatcher.addPath(path);
+            noteDirectoryWatcherAddPath(path);
 
             ++count;
         }
@@ -6311,11 +6321,11 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
         //        note.refetch();
 
         // add the file to the note directory watcher
-        noteDirectoryWatcher.addPath(note.fullNoteFilePath());
+        noteDirectoryWatcherAddPath(note.fullNoteFilePath());
 
         // add the paths from the workaround
-        noteDirectoryWatcher.addPath(notesPath);
-        noteDirectoryWatcher.addPath(noteSubFolderPath);
+        noteDirectoryWatcherAddPath(notesPath);
+        noteDirectoryWatcherAddPath(noteSubFolderPath);
 
         // turn on the method again
         directoryWatcherWorkaround(false);

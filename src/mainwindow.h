@@ -1176,6 +1176,7 @@ class MainWindow : public QMainWindow {
     static void handleDockWidgetLocking(QDockWidget *dockWidget);
     void setupNoteRelationScene();
     void updateNoteGraphicsView();
+    bool noteDirectoryWatcherAddPath(const QString &path);
     void addDirectoryToDirectoryWatcher(const QString &path);
     bool nextCloudDeckCheck();
 };

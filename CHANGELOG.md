@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.1.6
+
+- Added a debug message when a path can't be added to the note directory watcher
+  (for [#3428](https://github.com/pbek/QOwnNotes/issues/3428))
+
 ## 26.1.5
 
 - Fixed switching to different layout in the _Layout settings_ for Qt6 builds
