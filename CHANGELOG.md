@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.1.7
+
+- The Microsoft Visual C++ 2015–2022 x64 redistributable (`vc_redist.x64.exe`)
+  will not not be bundled with the Windows release anymore to reduce the archive size
+  (for [#3431](https://github.com/pbek/QOwnNotes/issues/3431))
+  - It was never documented that it was distributed together with QOwnNotes
+
 ## 26.1.6
 
 - Added a debug message when a path can't be added to the note directory watcher
