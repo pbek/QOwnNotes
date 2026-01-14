@@ -38,6 +38,9 @@ echo Deleting temporary files
 del %source%
 del %unzipExecutable%
 echo ======================================
+echo Deleting language files in root dir
+del /Q %destination%\*.qm
+echo ======================================
 echo Starting QOwnNotes:
 echo %qownnotesCommand%
 rem start in background
