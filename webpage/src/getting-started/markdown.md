@@ -126,7 +126,6 @@ Two of the simpler uses for links are pointing to webpages or other notes. There
 [You can use numbers for reference-style link definitions][1]
 
 Plain URLs and URLs in angle brackets will automatically get turned into links in the preview.
-
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -145,8 +144,10 @@ You can link to other notes or attachments like this:
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> to
 **create links to webpages or other notes**.
+
 Using <kbd>Ctrl + Shift + X</kbd> will bring up a dialog that helps you to
 **insert attachments** into your note.
+
 You can press <kbd>Ctrl + Space</kbd> while the cursor in on a link in the
 note edit to follow the link.
 :::
@@ -178,6 +179,7 @@ Images can be embedded into QOwnNotes. They will be shown in the preview.
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> to insert an image into a note.
 The image can also be in the clipboard, the dialog will detect it and show a preview.
+
 You can also directly paste an image from the clipboard into your note with <kbd>Ctrl + Shift + V</kbd>.
 :::
 
@@ -361,7 +363,7 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marki
 There are three ways to get a horizontal rule:
 hyphens, asterisks or underscores.
 ```md
-Three or more of any:
+Three or more...
 
 Hyphens
 
@@ -376,7 +378,7 @@ Underscores
 ___
 ```
 
-Three or more of any:
+Three or more...
 
 Hyphens
 
@@ -405,14 +407,14 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-This line also begins a separate paragraph, but...
+This line also begins a separate paragraph, but...  
 This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-This line also begins a separate paragraph, but...
+This line also begins a separate paragraph, but...  
 This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 
 ::: tip
