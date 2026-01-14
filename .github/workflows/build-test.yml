@@ -19,6 +19,8 @@ on:
       - "src/**"
       - "snap/**"
       - "tests/**"
+      - "build-systems/github/**"
+      - ".github/workflows/build-test.yml"
   workflow_dispatch:
 #  schedule:
 #    - cron: "0 0 */3 * *"
