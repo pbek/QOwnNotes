@@ -6,10 +6,15 @@ This cheatsheet is intended as a quick reference and showcase of the markdown sy
 
 ```md
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 Alternatively, for H1 and H2, an underline-ish style:
@@ -22,10 +27,16 @@ Alt-H2
 ```
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
+
 ##### H5
+
 ###### H6
 
 Alternatively, for H1 and H2, an underline-ish style:
@@ -105,7 +116,7 @@ There are two ways to create links.
 
 [You can use numbers for reference-style link definitions][1]
 
-URLs and URLs in angle brackets will automatically get turned into links.
+URLs and URLs in angle brackets will automatically get turned into links in the preview.
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -117,7 +128,7 @@ http://www.example.com or <http://www.example.com>
 
 [You can use numbers for reference-style link definitions][1]
 
-URLs and URLs in angle brackets will automatically get turned into links.
+URLs and URLs in angle brackets will automatically get turned into links in the preview.
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -136,11 +147,11 @@ Blocks of code are either fenced by lines with three backticks, or are indented 
 
 ```md
     s = "Code with space indent"
-    print(s)
+    print s
 ```
 
     s = "Code with space indent"
-    print(s)
+    print s
 
 ### Backtick fence
 
