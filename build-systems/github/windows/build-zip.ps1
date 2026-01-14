@@ -8,7 +8,7 @@ qmake QOwnNotes.pro -r
 lrelease QOwnNotes.pro
 make
 # Create release directory and languages subdirectory
-New-Item -Path '..\release\languages' -ItemType 'Directory'
+New-Item -Path '..\release\languages' -ItemType 'Directory' -Force
 # copy the binary to our release path
 Copy-Item release\QOwnNotes.exe ..\release
 # copy Win64 OpenSSL v1.1.1g DLLs to the release path
