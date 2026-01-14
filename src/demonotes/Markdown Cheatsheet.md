@@ -39,10 +39,22 @@ Alt-H2
 ## Emphasis
 
 ```md
-Emphasis (italics) can be done with *asterisks* or _underscores_, and strong emphasis (bold) with **asterisks** or __underscores__.
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
 ```
 
-Emphasis (italics) can be done with *asterisks* or _underscores_, and strong emphasis (bold) with **asterisks** or __underscores__.
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
 
 ## Lists
 
