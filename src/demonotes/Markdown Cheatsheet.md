@@ -208,8 +208,7 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. 
-> You can also _put_ **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 ```
 
 > Blockquotes are very handy in email to emulate reply text.
@@ -217,8 +216,7 @@ Quote break.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps.  
-> You can also _put_ **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
 ## Horizontal Rule
 
