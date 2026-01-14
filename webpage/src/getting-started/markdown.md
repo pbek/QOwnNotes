@@ -1,4 +1,3 @@
-`````
 # Markdown Cheatsheet
 This Markdown cheatsheet is intended as a quick reference and showcase of the markdown syntax in QOwnNotes.
 ## Headings
@@ -26,7 +25,11 @@ By default QOwnNotes creates the **filename of a note** from the **heading 1** (
 :::
 ## Emphasis
 ```md
-Emphasis (italics) can be done with *asterisks* or _underscores_, and strong emphasis (bold) with **asterisks** or __underscores__.
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
 ```
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> for making text bold
