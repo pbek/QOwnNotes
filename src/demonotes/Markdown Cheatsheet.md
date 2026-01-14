@@ -196,9 +196,6 @@ raw Markdown line up prettily. You can also use inline Markdown.
 Colons can be used to align columns.
 
 | Tables        |      Are      |  Cool |
-Colons can be used to align columns.
-
-| Tables        |      Are      |  Cool |
 | ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      |   centered    |   $12 |
@@ -233,22 +230,34 @@ Quote break.
 ## Horizontal Rule
 
 ```md
-Three or more of any:
+Three or more...
 
 ---
 
+Hyphens
+
 ***
 
+Asterisks
+
 ___
+
+Underscores
 ```
 
-Three or more of any:
+Three or more...
 
 ---
 
+Hyphens
+
 ***
 
+Asterisks
+
 ___
+
+Underscores
 
 ## Line Breaks
 
