@@ -6,6 +6,11 @@
   will not not be bundled with the Windows release anymore to reduce the archive size
   (for [#3431](https://github.com/pbek/QOwnNotes/issues/3431))
   - It was never documented that it was distributed together with QOwnNotes
+- For the Windows release the language file structure was reorganized by moving
+  `.qm` files from the root release directory into a dedicated language subdirectory
+  (for [#2905](https://github.com/pbek/QOwnNotes/issues/2905), thank you, @alexanderino)
+  - The update script will also remove obsolete `.qm` files from the root release directory
+    during update installations
 
 ## 26.1.6
 
