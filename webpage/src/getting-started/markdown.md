@@ -1,4 +1,4 @@
-# Markdown
+# Markdown Cheatsheet
 
 This Markdown cheatsheet is intended as a quick reference and showcase of the markdown syntax in QOwnNotes.
 
@@ -27,9 +27,11 @@ The **Navigation panel** shows the structure of your headings.
 Alternatively, for H1 and H2, an underline-ish style:
 
 ```markdown
-# Alt-H1
+Alt-H1
+======
 
-## Alt-H2
+Alt-H2
+------
 ```
 
 ::: tip
@@ -39,9 +41,11 @@ By default QOwnNotes creates the **filename of a note** from the **heading 1** (
 ## Emphasis
 
 ```markdown
-Emphasis, aka italics, with _asterisks_.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
 ```
 
 ::: tip
@@ -82,14 +86,13 @@ There are many ways to create lists.
 - Unordered sub-list.
 
 1. Actual numbers don't matter, just that it's a number
-1. Ordered sub-list (only works in the editor, not the preview)
 1. And another item.
 
-- Unordered list can use asterisks
+* Unordered list can use asterisks
 
-* Or minuses
+- Or minuses
 
-- Or pluses
++ Or pluses
 ```
 
 ::: tip
@@ -323,11 +326,11 @@ Hyphens
 
 Asterisks
 
----
+***
 
 Underscores
 
----
+___
 ```
 
 ## Line breaks
@@ -345,7 +348,7 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-This line is also begins a separate paragraph, but...  
+This line also begins a separate paragraph, but...  
 This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 

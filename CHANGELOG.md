@@ -11,6 +11,8 @@
   (for [#2905](https://github.com/pbek/QOwnNotes/issues/2905), thank you, @alexanderino)
   - The update script will also remove obsolete `.qm` files from the root release directory
     during update installations
+- The Markdown cheatsheet demo note was updated to fix formatting issues
+  (for [#3434](https://github.com/pbek/QOwnNotes/issues/3434))
 
 ## 26.1.6
 
