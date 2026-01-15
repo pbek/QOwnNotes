@@ -95,19 +95,6 @@ There are many ways to create lists.
 + Or pluses
 ```
 
-1. First ordered list item
-e2. Another item
-   * Unordered sub-list.
-3. Actual numbers don't matter, just that it's a number
-   1. Ordered sub-list (only works in the editor, not the preview)
-4. And another item.
-   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces.
-   To have a line break without a paragraph, you will need to use two trailing spaces.
-   Note that this line is separate, but within the same paragraph.
-* Unordered lists can use asterisks
-- Or hyphens (minuses)
-+ Or pluses
-
 ::: tip
 If you press <kbd>Enter</kbd> at the end of a list a new list item will be created.
 :::
@@ -213,22 +200,16 @@ Add four spaces in front of your code to mark it as code block.
     print s
 ```
 
-    s = "Code with space indent"
-    print s
-
 ### Backtick fence
 
 You can also use three backticks to create a code block.
 
-    ```
-    Code goes here
-    Code goes here
-    ```
-
+````markdown
 ```
 Code goes here
 Code goes here
 ```
+````
 
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
@@ -239,15 +220,12 @@ multiple selected lines of text or in an empty line to create a code block.
 
 There also is some syntax highlighting with code blocks in QOwnNotes.
 
-    ```bash
-    # I am a comment
-    cd Notes
-    ```
-
+````markdown
 ```bash
 # I am a comment
 cd Notes
 ```
+````
 
 Currently, supported languages (and code block identifiers) are:
 
@@ -297,8 +275,8 @@ Colons can be used to align columns.
 | zebra stripes |   are neat    |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
+
+You can also use inline Markdown.
 
 | Markdown | Less | Pretty |
 | -------- | --------- | ---------- |
@@ -306,23 +284,6 @@ raw Markdown line up prettily. You can also use inline Markdown.
 | 1 | 2 | 3 |
 
 ```
-
-Colons can be used to align columns.
-
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-| Markdown | Less | Pretty |
-| -------- | --------- | ---------- |
-| _Still_ | `renders` | **nicely** |
-| 1 | 2 | 3 |
 
 ::: tip
 Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables.
@@ -341,12 +302,6 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 ```
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
 ::: tip
 You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the _Editor settings_
@@ -358,6 +313,7 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marki
 
 There are three ways to get a horizontal rule:
 hyphens, asterisks or underscores.
+
 ```markdown
 Three or more...
 
@@ -373,20 +329,6 @@ Underscores
 
 ___
 ```
-
-Three or more...
-
-Hyphens
-
----
-
-Asterisks
-
-***
-
-Underscores
-
-___
 
 ## Line breaks
 
@@ -406,12 +348,6 @@ This line is separated from the one above by two newlines, so it will be a _sepa
 This line also begins a separate paragraph, but...  
 This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
-
-This line also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 
 ::: tip
 Trailing spaces are highlighted by default in the editor.
@@ -439,9 +375,6 @@ You can create simple todo lists with checkbox lists.
 - [x] done
 - [ ] todo
 ```
-
-- [x] done
-- [ ] todo
 
 ::: tip
 You can check/un-check checkboxes in the preview.
