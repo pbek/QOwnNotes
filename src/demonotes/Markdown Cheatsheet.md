@@ -4,7 +4,7 @@ This cheatsheet is intended as a quick reference and showcase of the markdown sy
 
 ## Headers
 
-```md
+```markdown
 # H1
 
 ## H2
@@ -48,7 +48,7 @@ Alt-H2
 
 ## Emphasis
 
-```md
+```markdown
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
@@ -70,7 +70,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 (In this example, leading and trailing spaces are shown with dots: ⋅)
 
-```md
+```markdown
 1. First ordered list item
 2. Another item
    ⋅⋅* Unordered sub-list
@@ -108,7 +108,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 There are two ways to create links.
 
-```md
+```markdown
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -134,7 +134,7 @@ http://www.example.com or <http://www.example.com>
 
 ## Inline code and code blocks
 
-```md
+```markdown
 Inline `code` has `backticks around` it.
 ```
 
@@ -144,7 +144,7 @@ Blocks of code are either fenced by lines with three backticks, or are indented 
 
 ### 4-Spaces fence
 
-```md
+```markdown
     s = "Code with space indent"
     print s
 ```
@@ -154,12 +154,10 @@ Blocks of code are either fenced by lines with three backticks, or are indented 
 
 ### Backtick fence
 
-````md
-```
-Code goes here
-Code goes here
-```
-````
+    ```
+    Code goes here
+    Code goes here
+    ```
 
 ```
 Code goes here
@@ -168,12 +166,10 @@ Code goes here
 
 ### Backtick fence with code highlighting
 
-````md
-```bash
-# I am a comment
-cd Notes
-```
-````
+    ```bash
+    # I am a comment
+    cd Notes
+    ```
 
 ```bash
 # I am a comment
@@ -184,7 +180,7 @@ cd Notes
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-```md
+```markdown
 Colons can be used to align columns.
 
 | Tables        |      Are      |  Cool |
@@ -221,7 +217,7 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 
 ## Blockquotes
 
-```md
+```markdown
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
@@ -239,7 +235,7 @@ Quote break.
 
 ## Horizontal Rule
 
-```md
+```markdown
 Three or more...
 
 ---
@@ -271,7 +267,7 @@ Underscores
 
 ## Line Breaks
 
-```md
+```markdown
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
@@ -289,7 +285,7 @@ This line is only separated by two trailing spaces and a single newline, so it's
 
 ## Comments
 
-```md
+```markdown
 [comment]: # "This comment will not appear in the preview"
 ```
 
@@ -297,7 +293,7 @@ This line is only separated by two trailing spaces and a single newline, so it's
 
 ## Checkbox lists
 
-```md
+```markdown
 - [x] done
 - [ ] todo
 ```
