@@ -71,6 +71,14 @@ in
     hooks = {
       cmake-format.enable = true;
       taplo.enable = true;
+      prettier = {
+        excludes = [
+          # We want the syntax in the Markdown examples files to be unformatted,
+          # because we need to showcase the different syntaxes
+          ".*Markdown Cheatsheet\\.md$"
+          ".*markdown\\.md$"
+        ];
+      };
       clang-format = {
         enable = true;
         files = "\\.(cpp|h)$";
