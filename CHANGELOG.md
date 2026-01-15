@@ -13,6 +13,7 @@
     during update installations
 - The Markdown cheatsheet demo note was updated to fix formatting issues
   (for [#3434](https://github.com/pbek/QOwnNotes/issues/3434))
+- Added more French translation (thank you, jd-develop)
 
 ## 26.1.6
 

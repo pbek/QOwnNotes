@@ -1,4 +1,4 @@
-# Markdown
+# Markdown Cheatsheet
 
 Esta hoja de referencia de Markdown está pensada como una referencia rápida y una muestra de la sintaxis de Markdown en QOwnNotes.
 
@@ -27,9 +27,11 @@ El **panel de navegación** muestra la estructura de sus encabezados.
 Alternativamente, para H1 y H2, un estilo de subrayado:
 
 ```markdown
-# Encabezado 1 Alternativo
+Alt-H1
+======
 
-## Encabezado 2 Alternativo
+Alt-H2
+------
 ```
 
 ::: tip
@@ -39,9 +41,11 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **
 ## Énfasis
 
 ```markdown
-Utilice el énfasis, también conocido como cursiva, con *asteriscos*.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-Puede usar el énfasis fuerte, también conocido como negrita, con **asteriscos**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
 ```
 
 ::: tip
@@ -81,14 +85,13 @@ Hay muchas formas de crear listas.
 - Sublista desordenada.
 
 1. Los números reales no importan, solo que sean números
-1. Sublista ordenada (solo funciona en el editor, no en la vista previa)
-1. Y otro artículo.
+1. And another item.
 
-- La lista desordenada puede usar asteriscos
+* Unordered list can use asterisks
 
-* O menos
+- Or minuses
 
-- O más
++ Or pluses
 ```
 
 ::: tip
@@ -306,17 +309,17 @@ Hay tres formas de crear una regla horizontal: guiones, asteriscos o guiones baj
 ```markdown
 Tres o más...
 
-Guiones
+Hyphens
 
 ---
 
-Asteriscos
+Asterisks
 
----
+***
 
-Guiones bajos
+Underscores
 
----
+___
 ```
 
 ## Saltos de línea
@@ -334,8 +337,8 @@ Aquí hay una línea con la cual podemos comenzar.
 
 Esta línea está separada de la anterior por dos líneas nuevas, por lo que será un _párrafo separado_.
 
-Esta línea también inicia un párrafo separado pero...
-Esta línea solo está separada por dos espacios finales y una sola línea nueva, por lo que es una línea separada en el _mismo párrafo_.
+This line also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 
 ::: tip

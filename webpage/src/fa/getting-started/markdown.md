@@ -1,4 +1,4 @@
-# مارک داون
+# Markdown Cheatsheet
 
 برگه تقلب مارک داون به صورت یک مرجع سریع و ویترینی از چیدمان مارک داون در QOwnNotes در نظر گرفته شده است.
 
@@ -27,9 +27,11 @@
 از سوی دیگر، برای H1 و H2، یک سبک زیرخط دار:
 
 ```markdown
-# Alt-H1
+Alt-H1
+======
 
-## Alt-H2
+Alt-H2
+------
 ```
 
 ::: tip
@@ -39,9 +41,11 @@
 ## تکیه
 
 ```markdown
-Emphasis, aka italics, with _asterisks_.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-تکیه مؤکد (که به صورت پررنگ نیز شناخته می شود) با علامت **ستاره**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
 ```
 
 ::: tip
@@ -81,14 +85,13 @@ _خط زیرین_
 - Unordered sub-list.
 
 1. Actual numbers don't matter, just that it's a number
-1. Ordered sub-list (only works in the editor, not the preview)
-1. و موردی دیگر.
+1. And another item.
 
-- Unordered list can use asterisks
+* Unordered list can use asterisks
 
-* Or minuses
+- Or minuses
 
-- Or pluses
++ Or pluses
 ```
 
 ::: tip
@@ -312,11 +315,11 @@ Hyphens
 
 Asterisks
 
----
+***
 
 Underscores
 
----
+___
 ```
 
 ## شکست خط
@@ -334,7 +337,7 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-This line is also begins a separate paragraph, but...  
+This line also begins a separate paragraph, but...  
 This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 

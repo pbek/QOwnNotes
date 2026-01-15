@@ -1,4 +1,4 @@
-# Réduction
+# Markdown Cheatsheet
 
 Cette feuille de triche Markdown est conçue comme une référence rapide et une vitrine de la syntaxe de Markdown dans QOwnNotes.
 
@@ -27,9 +27,11 @@ Le **panneau de navigation** montre la structure de vos en-têtes.
 Alternativement, pour H1 et H2, un style souligné:
 
 ```markdown
-# Alt-H1
+Alt-H1
+======
 
-## Alt-H2
+Alt-H2
+------
 ```
 
 ::: tip
@@ -39,9 +41,11 @@ Par défaut, QOwnNotes crée le nom de fichier **d'une note** à partir de l'en-
 ## Accentuation
 
 ```markdown
-Emphasis, aka italics, with _asterisks_.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-Emphase forte, aka gras, avec **astérisques**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
 ```
 
 ::: tip
@@ -81,14 +85,13 @@ Il existe de nombreuses façons de créer des listes.
 - Unordered sub-list.
 
 1. Actual numbers don't matter, just that it's a number
-1. Ordered sub-list (only works in the editor, not the preview)
-1. Et un autre article.
+1. And another item.
 
-- Unordered list can use asterisks
+* Unordered list can use asterisks
 
-* Or minuses
+- Or minuses
 
-- Or pluses
++ Or pluses
 ```
 
 ::: tip
@@ -312,11 +315,11 @@ Hyphens
 
 Asterisks
 
----
+***
 
 Underscores
 
----
+___
 ```
 
 ## Sauts de ligne
@@ -334,7 +337,7 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-This line is also begins a separate paragraph, but...  
+This line also begins a separate paragraph, but...  
 This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
 ```
 

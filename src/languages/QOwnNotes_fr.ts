@@ -3064,13 +3064,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 et %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>%n note sélectionnée</numerusform>
+<numerusform>%n notes sélectionnées</numerusform>
 </translation>
 </message>
 <message>
