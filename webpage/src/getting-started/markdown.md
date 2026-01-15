@@ -6,7 +6,7 @@ This Markdown cheatsheet is intended as a quick reference and showcase of the ma
 
 Use headings to structure your texts.
 
-```md
+```markdown
 # H1
 
 ## H2
@@ -26,7 +26,7 @@ The **Navigation panel** shows the structure of your headings.
 
 Alternatively, for H1 and H2, an underline-ish style:
 
-```md
+```markdown
 Alt-H1
 ======
 
@@ -40,7 +40,7 @@ By default QOwnNotes creates the **filename of a note** from the **heading 1** (
 
 ## Emphasis
 
-```md
+```markdown
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
@@ -57,7 +57,7 @@ and <kbd>Ctrl + I</kbd> for making it italic.
 
 There also is an optional setting to enable underline rendering in the _Preview settings_.
 
-```md
+```markdown
 _underline_
 ```
 
@@ -67,7 +67,7 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> to underline a te
 
 ## Strike out
 
-```md
+```markdown
 ~~strike out~~
 ```
 
@@ -80,7 +80,7 @@ You can use the [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> to strike 
 There are many ways to create lists.
 (In this example, leading and trailing spaces are shown with dots: ⋅)
 
-```md
+```markdown
 1. First ordered list item
 2. Another item
    ⋅⋅* Unordered sub-list.
@@ -118,7 +118,7 @@ Two of the simpler uses for links are pointing to webpages or other notes. There
 
 ### External links
 
-```md
+```markdown
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -135,7 +135,7 @@ http://www.example.com or <http://www.example.com>
 
 You can link to other notes or attachments like this:
 
-```md
+```markdown
 [I link to the Journal.md note](Journal.md)
 
 <Journal.md> works similarly.
@@ -155,7 +155,7 @@ note edit to follow the link.
 ::: warning Info
 Internal links with a title are not supported:
 
-```md
+```markdown
 [I link to the Journal.md note](Journal.md "Title not supported")
 ```
 :::
@@ -164,7 +164,7 @@ Internal links with a title are not supported:
 
 The bookmarks used by the [QOwnNotes Web Companion browser extension](./browser-extension.md) are using links in lists.
 
-```md
+```markdown
 - [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
 ```
 
@@ -172,7 +172,7 @@ The bookmarks used by the [QOwnNotes Web Companion browser extension](./browser-
 
 Images can be embedded into QOwnNotes. They will be shown in the preview.
 
-```md
+```markdown
 ![alt text](media/my-image.jpg)
 ```
 
@@ -186,14 +186,14 @@ You can also directly paste an image from the clipboard into your note with <kbd
 ::: warning Info
 Image links with a title are not supported:
 
-```md
+```markdown
 ![alt text](media/my-image.jpg "Title not supported")
 ```
 :::
 
 ## Inline code and code blocks
 
-```md
+```markdown
 Inline `code` has `backticks around` it.
 ```
 
@@ -208,7 +208,7 @@ Blocks of code are either fenced by lines with three backticks, or are indented 
 
 Add four spaces in front of your code to mark it as code block.
 
-```md
+```markdown
     s = "Code with space indent"
     print s
 ```
@@ -220,12 +220,10 @@ Add four spaces in front of your code to mark it as code block.
 
 You can also use three backticks to create a code block.
 
-````md
-```
-Code goes here
-Code goes here
-```
-````
+    ```
+    Code goes here
+    Code goes here
+    ```
 
 ```
 Code goes here
@@ -241,12 +239,10 @@ multiple selected lines of text or in an empty line to create a code block.
 
 There also is some syntax highlighting with code blocks in QOwnNotes.
 
-````md
-```bash
-# I am a comment
-cd Notes
-```
-````
+    ```bash
+    # I am a comment
+    cd Notes
+    ```
 
 ```bash
 # I am a comment
@@ -291,7 +287,7 @@ Currently, supported languages (and code block identifiers) are:
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-```md
+```markdown
 Colons can be used to align columns.
 
 | Tables        |      Are      |  Cool |
@@ -337,7 +333,7 @@ Use <kbd>Ctrl + Space</kbd> inside a markdown table to automatically format it.
 
 ## Blockquotes
 
-```md
+```markdown
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
@@ -362,7 +358,7 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marki
 
 There are three ways to get a horizontal rule:
 hyphens, asterisks or underscores.
-```md
+```markdown
 Three or more...
 
 Hyphens
@@ -402,7 +398,7 @@ ___
 You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
 :::
 
-```md
+```markdown
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
@@ -425,7 +421,7 @@ Trailing spaces are highlighted by default in the editor.
 
 Comments are not shown in the preview.
 
-```md
+```markdown
 [comment]: # "This comment will not appear in the preview"
 
 <!-- HTML comments are also hidden -->
@@ -439,7 +435,7 @@ A leading html comment block in a note will also be ignored in the automatic not
 
 You can create simple todo lists with checkbox lists.
 
-```md
+```markdown
 - [x] done
 - [ ] todo
 ```
@@ -457,7 +453,7 @@ In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta inform
 It will **not be shown in the preview** and will
 **not disturb the automatic note filename generation**.
 
-```md
+```markdown
 ---
 title: Some name
 description: Some description
