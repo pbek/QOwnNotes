@@ -199,7 +199,7 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     env:
-      QT_VERSION: 6.9.1
+      QT_VERSION: 6.10.1
     continue-on-error: true
     name: "🐧 Snap Ubuntu 18.04"
     steps:
@@ -274,7 +274,7 @@ jobs:
     env:
       # Qt 6.5: windeployqt doesn't deploy DLLs!
       # Qt 6.10.0, 6.9.1, 6.8.3: Graphical issues with checkboxes in the settings dialog (fixed now)
-      QT_VERSION: 6.9.1
+      QT_VERSION: 6.10.1
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
@@ -354,7 +354,7 @@ jobs:
     runs-on: macos-15
     env:
       # Qt 6.5 doesn't support macOS 10 anymore!
-      QT_VERSION: 6.9.1
+      QT_VERSION: 6.10.1
     continue-on-error: true
     steps:
       - name: "🧰 Checkout"
