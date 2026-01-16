@@ -41,6 +41,7 @@ class NotePreviewWidget : public QTextBrowser {
 
     QStringList extractGifUrls(const QString &text) const;
     void animateGif(const QString &text);
+    void applyTableFormats();
 
     void contextMenuEvent(QContextMenuEvent *event) override;
 

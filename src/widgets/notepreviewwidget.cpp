@@ -24,6 +24,8 @@
 #include <QMovie>
 #include <QProxyStyle>
 #include <QRegularExpression>
+#include <QTextTable>
+#include <QTextTableFormat>
 
 #include "utils/misc.h"
 
@@ -168,6 +170,50 @@ void NotePreviewWidget::setHtml(const QString &text) {
     _html = Utils::Misc::parseTaskList(text, true);
 
     QTextBrowser::setHtml(_html);
+
+    // Optionally apply table formatting programmatically
+    // applyTableFormats();
+}
+
+/**
+ * @brief Programmatically applies QTextTableFormat to all tables in the document
+ * This is an alternative approach to CSS styling for tables
+ */
+void NotePreviewWidget::applyTableFormats() {
+    QTextDocument *doc = document();
+    if (!doc) return;
+
+    QTextCursor cursor(doc);
+
+    // Iterate through all blocks in the document to find tables
+    while (!cursor.atEnd()) {
+        QTextTable *table = cursor.currentTable();
+        if (table) {
+            QTextTableFormat format = table->format();
+
+            // Set border collapse to false (equivalent to CSS border-collapse: separate)
+            format.setBorderCollapse(false);
+
+            // Set border style
+            format.setBorder(1.0);
+            format.setBorderStyle(QTextFrameFormat::BorderStyle_Solid);
+
+            // Set cell spacing (equivalent to CSS border-spacing)
+            format.setCellSpacing(2.0);
+
+            // Set cell padding
+            format.setCellPadding(5.0);
+
+            // Apply the format
+            table->setFormat(format);
+
+            // Move cursor past the table
+            cursor.movePosition(QTextCursor::End, QTextCursor::MoveAnchor, 1);
+            cursor = table->lastCursorPosition();
+        }
+
+        cursor.movePosition(QTextCursor::NextBlock);
+    }
 }
 
 /**
