@@ -12,28 +12,28 @@ Dispone de un diálogo de importación de Joplin al que puede acceder mediante e
 
 ## Obsidian
 
-1. Install the community plugin ["Better Markdown Links"](https://github.com/mnaoumov/obsidian-better-markdown-links) to convert all _wikilink and Obsidian flavoured markdown links (OFM)_ and make Obsidian operate with _standard markdown links_.
+1. Instale el complemento de la comunidad ["Better Markdown Links"](https://github.com/mnaoumov/obsidian-better-markdown-links) para convertir todos los _enlaces de Markdown con formato wikilink y Obsidian (OFM)_ y hacer que Obsidian funcione con _enlaces de Markdown estándar_.
 
-2. Open the same files (same vault) in QOwnNotes. Install the QOwnNotes script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) and press the import button "ObsidianImport" in the script panel to convert all files.
+2. Abra los mismos archivos (mismo bóveda) en QOwnNotes. Instale el script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) de QOwnNotes y presione el botón de importación "ObsidianImport" en el panel de script para convertir todos los archivos.
 
 La exportación de QOwnNotes a Obsidian no es necesaria.
 
 ::: warning
-Warning _Caution(!)_: The plugin `"Better Markdown Links"` silently adapts links when Obsidian is opened or when folders, files or headings are renamed. Press the "ObsidianImport" button in QOwnNotes everytime you have changed files in Obsidian, otherwise some links might not be recognised by QOwnNotes anymore!
+Warning _¡Precaución!_: El complemento `"Better Markdown Links"` adapta silenciosamente los enlaces cuando se abre Obsidian o cuando se renombran carpetas, archivos o encabezados. Presione el botón "ObsidianImport" en QOwnNotes cada vez que haya cambiado archivos en Obsidian. De lo contrario, ¡es posible que QOwnNotes ya no reconozca algunos enlaces!
 :::
 
-## VS Codium / Github / Markor / Typora / Pandoc and others (Github flavoured markdown GFM)
+## VS Codium / Github / Markor / Typora / Pandoc y otros (Markdown con estilo o GFM)
 
-Githubflavoured markdown (GFM) uses hyphenstyle link headings (spaces converted to hyphens). A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
+Markdown con estilo GitHub (GFM) utiliza encabezados de enlaces con estilo de guiones (espacios convertidos en guiones). A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
 
-QOwnNotes and Obsidian (Obsidian flavoured markdown OFM) use _urlencoded (percentencoded) heading fragments_ (spaces converted to %20 and keeping capital letters), so the same link will look different `[notelink](%CE%B2_note.md#Heading%20with%20spaCes)`.
+QOwnNotes y Obsidian (Markdown con estilo de Obsidian u OFM) usan _fragmentos de encabezado codificados en URL (codificados por porcentaje)_ (espacios convertidos a %20 y manteniendo las letras mayúsculas), por lo que el mismo enlace se verá diferente `[notelink](%CE%B2_note.md#Encabezado%20con%20espacios)`.
 
-To convert between GFM and QOwnNotes/Obsidian (OFM), just open the files in QOwnNotes. Install the QOwnNotes script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) and press the import button "GFMImport" in the script panel to convert all files
+Para convertir entre GFM y QOwnNotes/Obsidian (OFM), simplemente abra los archivos en QOwnNotes. Instale el script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) de QOwnNotes y presione el botón de importación "GFMImport" en el panel de scripts para convertir todos los archivos.
 
 La exportación de QOwnNotes a GFM funciona para una sola página (útil para una conversión consecutiva con pandoc) o para todos los archivos.
 
 ::: warning
-Advertencia _Precaución_: ¡Posible pérdida de información en los enlaces de encabezado en casos especiales! Assume you have a note `β_note.md` with several identical headings like `## Advantages` within the _same (!) note_ . GFM allows to reference each heading with `[notelink](%CE%B2_note.md#advantages), [notelink](%CE%B2_note.md#advantages-1), [notelink](%CE%B2_note.md#advantages-2), ...`. _Neither QOwnNotes nor Obsidian allow for this!_ QOwnnotes and Obsidian both need unique heading names within the same document to be able to reference each of them! As this feature is not supported at all, after the conversion those links will all point to the first occuring heading with that particular name `[notelink](%CE%B2_note.md#advantages)` (this is especially relevant in long documents)! As a workaround just add text to the headings and update the links to the headings first (make them unique).
+Advertencia _Precaución_: ¡Posible pérdida de información en los enlaces de encabezado en casos especiales! Supongamos que tiene una nota `β_nota.md` con varios encabezados idénticos como `## Ventajas` dentro de la _(¡)misma(!) nota_. GFM permite referenciar cada encabezado con `[notelink](%CE%B2_nota.md#ventajas), [notelink](%CE%B2_nota.md#ventajas-1), [notelink](%CE%B2_nota.md#ventajas-2), ...`. _¡Ni QOwnNotes ni Obsidian permiten esto!_ ¡Tanto QOwnnotes como Obsidian necesitan nombres de encabezado únicos dentro del mismo documento para poder hacer referencia a cada uno de ellos! Como esta función no está soportada en lo absoluto, después de la conversión todos esos enlaces apuntarán al primer encabezado que aparezca con ese nombre particular `[notelink](%CE%B2_note.md#ventajas)` (¡esto es especialmente relevante en documentos largos!). Como solución alternativa, simplemente agregue texto a los encabezados y actualice primero los enlaces a los encabezados (hágalos únicos).
 :::
 
 ## Formatos variados

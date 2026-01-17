@@ -8,9 +8,9 @@ QOwnNotes se proporciona en los [repositorios de Fedora](https://packages.fedora
 Para la mayoría de los usuarios, basta con utilizar `dnf install qownnotes` en una ventana de terminal para instalar la versión. Si desea la **versión más actualizada**, por favor continúe leyendo.
 :::
 
-## On systems with Fedora 41 and higher
+## En sistemas con Fedora 41 y superior
 
-Starting with [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 is the default package manager and includes the config-manager plugin by default. Run the following commands as root to add the repository and install QOwnNotes:
+A partir de [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 es el administrador de paquetes predeterminado e incluye el complemento config-manager de forma predeterminada. Ejecute las órdenes siguientes con permisos administrativos para añadir el repositorio e instalar QOwnNotes:
 
 ```bash
 dnf config-manager add-repo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
@@ -18,7 +18,7 @@ dnf config-manager add-repo --from-repofile=https://download.opensuse.org/reposi
 dnf install qownnotes
 ```
 
-Change the portion `Fedora_42` in the above code with the version of Fedora you are using (i.e. `Fedora_41`, `Fedora_Rawhide` etc.).
+Cambie la parte `Fedora_42` en el código anterior con la versión de Fedora que esté utilizando (es decir, `Fedora_41`, `Fedora_Rawhide`, etc.).
 
 ## En sistemas con el complemento config-manager de dnf
 

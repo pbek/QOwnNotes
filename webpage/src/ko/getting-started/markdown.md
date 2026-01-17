@@ -1,4 +1,4 @@
-# Markdown Cheatsheet
+# 마크다운 치트 시트
 
 이 마크다운 속임수는 QOwnNotes의 마크다운 구문에 대한 빠른 참조 및 설명을 제공하기 위한 것입니다.
 
@@ -37,11 +37,11 @@ Alt-H2
 ## 강조
 
 ```markdown
-Emphasis, aka italics, with *asterisks* or _underscores_.
+강조, 즉 기울임꼴는 *별표* 또는 _밑줄_과 함께 사용됩니다.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+강하게 강조하려면 **별표** 또는 __밑줄__을 사용하세요.
 
-Combined emphasis with **asterisks and _underscores_**.
+**별표와 밑줄**을 함께 사용하여 강조합니다.
 ```
 
 [단축키](./shortcuts.md) <kbd>Ctrl + B</kbd>를 사용하여 텍스트를 굵게 표시하고 <kbd>Ctrl + I</kbd>을 사용하여 기울임꼴로 표시할 수 있습니다. :::
@@ -75,13 +75,13 @@ _밑줄_
 - 정렬되지 않은 하위 목록입니다.
 
 1. 실제 숫자는 중요하지 않습니다. 단지 숫자일 뿐입니다
-1. And another item.
+1. 그리고 또 다른 항목입니다.
 
-* Unordered list can use asterisks
+* 순서 없는 목록에는 별표를 사용할 수 있습니다.
 
-- Or minuses
+- 또는 빼기 기호
 
-+ Or pluses
++ 또는 더하기 기호
 ```
 
 ::: 팁 목록 끝에 있는 <kbd>Enter<0>을 누르면 새 목록 항목이 생성됩니다. :::</p>
@@ -339,15 +339,15 @@ cd Notes
 
 <pre><code class="markdown">3개 이상...
 
-Hyphens
+하이픈
 
 ---
 
-Asterisks
+별표
 
 ***
 
-Underscores
+밑줄
 
 ___
 </code></pre>
@@ -376,8 +376,8 @@ ___
 
 이 선은 위의 선과 두 개의 새로운 선으로 분리되어 있으므로 _분리된 문단_이 될 것입니다.
 
-This line also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
+이 줄도 별도의 단락으로 시작하지만... 
+이 선은 두 개의 후행 공간과 하나의 새로운 선으로만 분리되어 있으므로 _같은 문단_에서 별도의 선입니다.
 </code></pre>
 
 <p spaces-before="0">

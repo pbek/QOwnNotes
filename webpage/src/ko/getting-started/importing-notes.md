@@ -12,25 +12,25 @@ There is an Evernote import dialog you can reach in the `Note / Import` menu to 
 
 ## Obsidian
 
-1. Install the community plugin ["Better Markdown Links"](https://github.com/mnaoumov/obsidian-better-markdown-links) to convert all _wikilink and Obsidian flavoured markdown links (OFM)_ and make Obsidian operate with _standard markdown links_.
+1. 커뮤니티 플러그인 ["Better Markdown Links"](https://github.com/mnaoumov/obsidian-better-markdown-links)을 설치하여 모든 _위키링크 및 Obsidian flavoured 마크다운 링크 (OFM)_을 변환하고 Obsidian이 _표준 마크다운 링크_로 작동하도록 합니다.
 
-2. Open the same files (same vault) in QOwnNotes. Install the QOwnNotes script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) and press the import button "ObsidianImport" in the script panel to convert all files.
+2. QOwnNotes에서 동일한 파일 (동일한 볼트)을 엽니다. QOwnNotes 스크립트 [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others)를 설치하고 스크립트 패널에서 "ObsidianImport" 가져오기 버튼을 눌러 모든 파일을 변환하세요.
 
-Exporting from QOwnNotes to Obsidian is not needed.
+QOwnNotes에서 Obsidian으로 내보내기는 필요하지 않습니다.
 
-::: warning Warning _Caution(!)_: The plugin `"Better Markdown Links"` silently adapts links when Obsidian is opened or when folders, files or headings are renamed. Press the "ObsidianImport" button in QOwnNotes everytime you have changed files in Obsidian, otherwise some links might not be recognised by QOwnNotes anymore! :::
+::: 경고 경고 _주의(!)_: 플러그인 `"Better Markdown Links"`는 Obsidian을 열거나 폴더, 파일 또는 제목의 이름이 변경될 때 링크를 자동으로 조정합니다. Obsidian에서 파일을 변경할 때마다 QOwnNotes에서 "Obsidian 가져오기" 버튼을 누르세요. 그렇지 않으면 일부 링크가 QOwnNotes에서 인식되지 않을 수 있습니다! :::
 
-## VS Codium / Github / Markor / Typora / Pandoc and others (Github flavoured markdown GFM)
+## VS Codium / Github / Markor / Typora / Pandoc 및 기타 (Github flavoured markdown GFM)
 
-Githubflavoured markdown (GFM) uses hyphenstyle link headings (spaces converted to hyphens). A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
+Githubflavoured markdown (GFM)은 하이픈 스타일 링크 제목(공백을 하이픈으로 변환)을 사용합니다. A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
 
-QOwnNotes and Obsidian (Obsidian flavoured markdown OFM) use _urlencoded (percentencoded) heading fragments_ (spaces converted to %20 and keeping capital letters), so the same link will look different `[notelink](%CE%B2_note.md#Heading%20with%20spaCes)`.
+QOwnNotes와 Obsidian (Obsidian flavoured markdown OFM)은 _urlencoded (percentencoded) heading fragments_  (공백을 %20으로 변환하고 대문자를 유지)을 사용하므로 동일한 링크가 다르게 표시됩니다. `[notelink](%CE%B2_note.md#Heading%20with%20spaCes)`.
 
-To convert between GFM and QOwnNotes/Obsidian (OFM), just open the files in QOwnNotes. Install the QOwnNotes script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) and press the import button "GFMImport" in the script panel to convert all files
+GFM과 QOwnNotes/Obsidian (OFM) 파일 형식 간 변환은 QOwnNotes에서 해당 파일을 열기만 하면 됩니다. QOwnNotes 스크립트 [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others)를 설치하고 스크립트 패널에서 "GFMImport" 가져오기 버튼을 눌러 모든 파일을 변환하세요.
 
-Exporting from QOwnNotes to GFM works for a single page (useful for a consecutive conversion with pandoc) or for all files.
+QOwnNotes에서 GFM으로 내보내기는 단일 페이지 (pandoc을 사용한 연속 변환에 유용) 또는 모든 파일에 대해 작동합니다.
 
-::: warning Warning _Caution_: Possible loss of information in heading links in special cases! Assume you have a note `β_note.md` with several identical headings like `## Advantages` within the _same (!) note_ . GFM allows to reference each heading with `[notelink](%CE%B2_note.md#advantages), [notelink](%CE%B2_note.md#advantages-1), [notelink](%CE%B2_note.md#advantages-2), ...`. _Neither QOwnNotes nor Obsidian allow for this!_ QOwnnotes and Obsidian both need unique heading names within the same document to be able to reference each of them! As this feature is not supported at all, after the conversion those links will all point to the first occuring heading with that particular name `[notelink](%CE%B2_note.md#advantages)` (this is especially relevant in long documents)! As a workaround just add text to the headings and update the links to the headings first (make them unique). :::
+::: 경고 경고 _주의_: 특정 경우에 제목 링크의 정보가 손실될 수 있습니다! `β_note.md`라는 노트가 있고, 그 안에 `## 장점`과 같이 동일한 제목이 _같은 (!) 노트_ 안에 여러 개 있다고 가정해 봅시다. GFM은 `[notelink](%CE%B2_note.md#advantages), [notelink](%CE%B2_note.md#advantages-1), [notelink](%CE%B2_note.md#advantages-2), ...`와 같이 각 제목을 참조할 수 있도록 합니다. _QOwnNotes와 Obsidian 모두 이를 허용하지 않습니다!_ QOwnNotes와 Obsidian은 같은 문서 내에서 각 항목을 참조하려면 고유한 제목 이름이 필요합니다! 이 기능은 전혀 지원되지 않으므로 변환 후 해당 링크는 모두 특정 이름 `[notelink](%CE%B2_note.md#advantages)`을 가진 첫 번째 제목을 가리키게 됩니다 (특히 긴 문서에서 그렇습니다)! 임시 해결책으로 제목에 텍스트를 추가하고 먼저 제목 링크를 업데이트하세요 (링크가 고유하도록 설정). :::
 
 ## 다양한 형식
 

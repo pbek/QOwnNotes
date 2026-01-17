@@ -1,4 +1,4 @@
-# Markdown Cheatsheet
+# Apuntes de Markdown
 
 Esta hoja de referencia de Markdown está pensada como una referencia rápida y una muestra de la sintaxis de Markdown en QOwnNotes.
 
@@ -41,11 +41,11 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **
 ## Énfasis
 
 ```markdown
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Aplique un estilo de énfasis, también conocido como cursiva, usando *asteriscos*.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Aplique un estilo fuerte de énfasis, también conocido como negrita, usando **asteriscos** o _guiones bajos_.
 
-Combined emphasis with **asterisks and _underscores_**.
+Aplique un estilo de énfasis combinado con **asteriscos y _guiones bajos_**.
 ```
 
 ::: tip
@@ -85,13 +85,13 @@ Hay muchas formas de crear listas.
 - Sublista desordenada.
 
 1. Los números reales no importan, solo que sean números
-1. And another item.
+1. Otro elemento.
 
-* Unordered list can use asterisks
+* Las listas sin ordenar pueden usar asteriscos
 
-- Or minuses
+- O símbolos de más
 
-+ Or pluses
++ O símbolos de menos
 ```
 
 ::: tip
@@ -309,15 +309,15 @@ Hay tres formas de crear una regla horizontal: guiones, asteriscos o guiones baj
 ```markdown
 Tres o más...
 
-Hyphens
+Guiones
 
 ---
 
-Asterisks
+Asteriscos
 
 ***
 
-Underscores
+Guiones bajos
 
 ___
 ```
@@ -337,8 +337,8 @@ Aquí hay una línea con la cual podemos comenzar.
 
 Esta línea está separada de la anterior por dos líneas nuevas, por lo que será un _párrafo separado_.
 
-This line also begins a separate paragraph, but...  
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
+Esta línea también marca el inicio de un párrafo separado, pero...  
+Esta línea solo está separada por dos espacios finales y un salto de línea, por lo que es una línea aparte en el _mismo párrafo_.
 ```
 
 ::: tip

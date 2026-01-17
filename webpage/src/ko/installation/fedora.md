@@ -6,9 +6,9 @@
 
 대부분의 사용자는 터미널 창에서 `dnf install qownnotes`를 사용하여 업스트림 버전을 설치하면 됩니다. **최신 버전**을 원하신다면 계속 읽어주시기 바랍니다. :::
 
-## On systems with Fedora 41 and higher
+## Fedora 41 이상 시스템에서
 
-Starting with [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 is the default package manager and includes the config-manager plugin by default. Run the following commands as root to add the repository and install QOwnNotes:
+[Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5)부터 dnf5는 기본 패키지 관리자이며 기본적으로 구성 관리자 플러그인을 포함합니다. 다음 명령을 루트로 실행하여 저장소를 추가하고 QOwnNotes를 설치합니다:
 
 ```bash
 dnf config-manager add-repo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
@@ -16,7 +16,7 @@ dnf config-manager add-repo --from-repofile=https://download.opensuse.org/reposi
 dnf install qownnotes
 ```
 
-Change the portion `Fedora_42` in the above code with the version of Fedora you are using (i.e. `Fedora_41`, `Fedora_Rawhide` etc.).
+위 코드에서 사용 중인 Fedora 버전으로 `Fedora_42` 부분을 변경합니다 (예: `Fedora_41`, `Fedora_Rawhide`  등).
 
 ## Config-manager dnf 플러그인이 있는 시스템
 
