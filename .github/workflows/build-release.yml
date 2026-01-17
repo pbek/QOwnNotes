@@ -326,8 +326,7 @@ jobs:
     # https://github.com/pbek/QOwnNotes/issues/2558 error on windows-2022!
     runs-on: windows-2025
     env:
-      # Qt 6.5 windeployqt doesn't deploy DLLs!
-      QT_VERSION: 6.9.1
+      QT_VERSION: 6.10.1
     steps:
       - name: "🧰 Checkout"
         uses: actions/checkout@v6
@@ -410,7 +409,7 @@ jobs:
     runs-on: macos-15
     env:
       # Qt 6.5 doesn't support macOS 10 anymore!
-      QT_VERSION: 6.9.1
+      QT_VERSION: 6.10.1
     steps:
       - name: "🧰 Checkout"
         uses: actions/checkout@v6

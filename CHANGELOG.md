@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.1.8
+
+- The Windows and macOS release are now built with Qt 6.10.1 to show table borders
+  in the preview (for [#3442](https://github.com/pbek/QOwnNotes/issues/3442))
+
 ## 26.1.7
 
 - The Microsoft Visual C++ 2015–2022 x64 redistributable (`vc_redist.x64.exe`)
