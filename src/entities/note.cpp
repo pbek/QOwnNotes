@@ -3064,7 +3064,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "table {border-spacing: 0; border-style: solid; "
                      "border-width: 1px; "
                      "border-collapse: collapse; margin-top: 0.5em;}"
-                     "th, td {padding: 2px 5px;}"
+                     "th, td {padding: 2px 5px; border: 1px solid;}"
                      "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
                      "</style></head><body class=\"export\">%3</body></html>")
                      .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor);
@@ -3083,7 +3083,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "h2, h3 { margin: 10px 0 15px 0; }"
                      "table {border-spacing: 0; border-style: solid; border-width: "
                      "1px; border-collapse: collapse; margin-top: 0.5em;}"
-                     "th, td {padding: 2px 5px;}"
+                     "th, td {padding: 2px 5px; border: 1px solid;}"
                      "a { color: #FF9137; text-decoration: none; } %1 %3 %4"
                      "</style></head><body class=\"preview\">%2</body></html>")
                      .arg(codeStyleSheet, result, rtlStyle, schemaStyles);

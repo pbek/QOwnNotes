@@ -4,6 +4,8 @@
 
 - The Windows and macOS release are now built with Qt 6.10.1 to show table borders
   in the preview (for [#3442](https://github.com/pbek/QOwnNotes/issues/3442))
+- The HTML note export will now format tables with borders around cells
+  (for [#3401](https://github.com/pbek/QOwnNotes/issues/3401))
 
 ## 26.1.7
 
