@@ -24,7 +24,7 @@ _Caution(!)_: The plugin `"Better Markdown Links"` silently adapts links when Ob
 
 ## VS Codium / Github / Markor / Typora / Pandoc and others (Github flavoured markdown GFM)
 
-Githubflavoured markdown (GFM) uses hyphenstyle link headings (spaces converted to hyphens). A reference to a heading such as `## Heading with spaCes` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
+Githubflavoured markdown (GFM) uses hyphenstyle link headings (spaces converted to hyphens). A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
 
 QOwnNotes and Obsidian (Obsidian flavoured markdown OFM) use _urlencoded (percentencoded) heading fragments_ (spaces converted to %20 and keeping capital letters), so the same link will look different `[notelink](%CE%B2_note.md#Heading%20with%20spaCes)`.
 
