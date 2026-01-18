@@ -193,16 +193,23 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="2" column="0">
-       <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
-        <property name="toolTip">
-         <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
-        </property>
-        <property name="text">
-         <string>Show only items due today</string>
-        </property>
-       </widget>
-      </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="showArchivedCardsCheckBox">
+         <property name="text">
+          <string>Show archived cards</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
+         <property name="toolTip">
+          <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
+         </property>
+         <property name="text">
+          <string>Show only items due today</string>
+         </property>
+        </widget>
+       </item>
       <item row="1" column="0">
        <widget class="QTreeWidget" name="cardItemTreeWidget">
         <property name="contextMenuPolicy">
@@ -303,9 +310,10 @@
   <tabstop>add1DayButton</tabstop>
   <tabstop>sub10MinButton</tabstop>
   <tabstop>sub1HourButton</tabstop>
-  <tabstop>subd1DayButton</tabstop>
-  <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
-  <tabstop>reloadCardListButton</tabstop>
+   <tabstop>subd1DayButton</tabstop>
+   <tabstop>showArchivedCardsCheckBox</tabstop>
+   <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
+   <tabstop>reloadCardListButton</tabstop>
   <tabstop>archiveCardButton</tabstop>
   <tabstop>deleteCardButton</tabstop>
  </tabstops>

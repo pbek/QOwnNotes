@@ -83,6 +83,10 @@ void NextcloudDeckDialog::setupUi() {
     // Explicitly transfer ownership to the button (Qt 5.7 compatibility)
     ui->reloadCardListButton->setMenu(reloadMenu);
     // Menu ownership is now transferred to the button, no manual deletion needed
+
+    // Connect the archived cards checkbox signal
+    connect(ui->showArchivedCardsCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(on_showArchivedCardsCheckBox_toggled(bool)));
 }
 
 void NextcloudDeckDialog::on_saveButton_clicked() {
@@ -185,7 +189,7 @@ void NextcloudDeckDialog::refreshUi() { reloadCardList(); }
 
 void NextcloudDeckDialog::reloadCardList() {
     NextcloudDeckService nextcloudDeckService(this);
-    _cards = nextcloudDeckService.getCards();
+    _cards = nextcloudDeckService.getCards(ui->showArchivedCardsCheckBox->isChecked());
 
     qDebug() << __func__ << " - 'cards': " << _cards;
 
@@ -402,6 +406,11 @@ void NextcloudDeckDialog::searchLinkInNotes(QTreeWidgetItem *item) {
     const auto link = NextcloudDeckService(this).getCardLinkForId(cardId);
     Q_EMIT searchInNotes(link);
     close();
+}
+
+void NextcloudDeckDialog::on_showArchivedCardsCheckBox_toggled(bool checked) {
+    Q_UNUSED(checked)
+    reloadCardList();
 }
 
 void NextcloudDeckDialog::addCardLinkToCurrentNote(const QTreeWidgetItem *item) {

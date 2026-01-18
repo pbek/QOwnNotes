@@ -63,6 +63,8 @@ class NextcloudDeckDialog : public MasterDialog {
 
     void searchLinkInNotes(QTreeWidgetItem *item);
 
+    void on_showArchivedCardsCheckBox_toggled(bool checked);
+
    private:
     Ui::NextcloudDeckDialog *ui;
     void setupMainSplitter();

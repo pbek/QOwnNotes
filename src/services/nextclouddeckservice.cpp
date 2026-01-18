@@ -428,7 +428,7 @@ QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
     return boards;
 }
 
-QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards() {
+QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool includeArchived) {
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -502,6 +502,7 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards() {
                             card.description = object["description"].toString();
                             card.order = object["order"].toInt();
                             card.type = object["type"].toString();
+                            card.archived = object["archived"].toBool();
 
                             // Parse datetime fields from ISO 8601 strings
                             QString duedateString = object["duedate"].toString();
@@ -554,6 +555,122 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards() {
 
     reply->deleteLater();
     delete (manager);
+
+    // If includeArchived is true, fetch archived cards as well
+    if (includeArchived) {
+        auto* archivedManager = new QNetworkAccessManager();
+        QEventLoop archivedLoop;
+        QTimer archivedTimer;
+
+        archivedTimer.setSingleShot(true);
+
+        QObject::connect(&archivedTimer, SIGNAL(timeout()), &archivedLoop, SLOT(quit()));
+        QObject::connect(archivedManager, SIGNAL(finished(QNetworkReply*)), &archivedLoop,
+                         SLOT(quit()));
+
+        // 10 sec timeout for the request
+        archivedTimer.start(10000);
+
+        QUrl archivedUrl(serverUrl + "/index.php/apps/deck/stacks/" +
+                         QString::number(this->stackId) + "/archived");
+        qDebug() << __func__ << " - 'archivedUrl': " << archivedUrl;
+
+        QNetworkRequest archivedNetworkRequest = QNetworkRequest(archivedUrl);
+        archivedNetworkRequest.setHeader(QNetworkRequest::UserAgentHeader,
+                                         Utils::Misc::friendlyUserAgentString());
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+        archivedNetworkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+        archivedNetworkRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+
+        QByteArray archivedData;
+        QNetworkReply* archivedReply;
+
+        archivedNetworkRequest.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+        archivedNetworkRequest.setRawHeader("OCS-APIRequest", "true");
+        addAuthHeader(archivedNetworkRequest);
+
+        archivedReply = archivedManager->get(archivedNetworkRequest);
+
+        archivedLoop.exec();
+
+        // if we didn't get a timeout let us return the content
+        if (archivedTimer.isActive()) {
+            int archivedReturnStatusCode =
+                archivedReply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+            // only get the data if the status code was "success"
+            // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+            if (archivedReturnStatusCode >= 200 && archivedReturnStatusCode < 300) {
+                // get the data from the network reply
+                archivedData = archivedReply->readAll();
+                qDebug() << __func__ << " - 'archivedData': " << archivedData;
+
+                QJsonDocument archivedJsonDoc = QJsonDocument::fromJson(archivedData);
+
+                if (archivedJsonDoc.isArray()) {
+                    QJsonArray archivedCardsArray = archivedJsonDoc.array();
+
+                    for (auto cardValue : archivedCardsArray) {
+                        QJsonObject object = cardValue.toObject();
+
+                        NextcloudDeckService::Card card;
+                        card.id = object["id"].toInt();
+                        card.title = object["title"].toString();
+                        card.description = object["description"].toString();
+                        card.order = object["order"].toInt();
+                        card.type = object["type"].toString();
+                        card.archived = true;    // These are archived cards
+
+                        // Parse datetime fields from ISO 8601 strings
+                        QString duedateString = object["duedate"].toString();
+                        if (!duedateString.isEmpty() && duedateString != "null") {
+                            card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
+                        }
+
+                        qint64 createdAtTimestamp = object["createdAt"].toVariant().toLongLong();
+                        if (createdAtTimestamp > 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
+                            card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
+#else
+                            card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
+#endif
+                        }
+
+                        qint64 lastModifiedTimestamp =
+                            object["lastModified"].toVariant().toLongLong();
+                        if (lastModifiedTimestamp > 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
+                            card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
+#else
+                            card.lastModified =
+                                QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
+#endif
+                        }
+
+                        qDebug() << __func__ << " - found archived card: " << card;
+                        cards[card.id] = card;
+                    }
+                }
+
+            } else {
+                QString errorString = archivedReply->errorString();
+                Utils::Gui::warning(
+                    nullptr, tr("Error while loading archived cards"),
+                    tr("Loading the archived cards failed with status code %1 and message: %2")
+                        .arg(QString::number(archivedReturnStatusCode), errorString),
+                    "nextcloud-deck-get-archived-cards-failed");
+
+                qDebug() << __func__ << " - archived error: " << archivedReturnStatusCode;
+                qDebug() << __func__ << " - 'archivedErrorString': " << errorString;
+            }
+        }
+
+        archivedReply->deleteLater();
+        delete (archivedManager);
+    }
 
     return cards;
 }

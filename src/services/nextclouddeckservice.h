@@ -36,13 +36,15 @@ class NextcloudDeckService : public QObject {
         QString type;
         QDateTime createdAt;
         QDateTime lastModified;
+        bool archived;
 
         friend QDebug operator<<(QDebug dbg, const Card& card) {
             dbg.nospace() << "Card: <id>" << card.id << " <title>" << card.title << " <description>"
                           << card.description << " <duedate>" << card.duedate.toString(Qt::ISODate)
                           << " <order>" << card.order << " <type>" << card.type << " <createdAt>"
                           << card.createdAt.toString(Qt::ISODate) << " <lastModified>"
-                          << card.lastModified.toString(Qt::ISODate);
+                          << card.lastModified.toString(Qt::ISODate) << " <archived>"
+                          << card.archived;
             return dbg.space();
         }
     };
@@ -54,7 +56,7 @@ class NextcloudDeckService : public QObject {
     bool isEnabledAndValid();
     bool isEnabled();
     QList<Board> getBoards();
-    QHash<int, Card> getCards();
+    QHash<int, Card> getCards(bool includeArchived = false);
     bool archiveCard(int cardId);
     bool deleteCard(int cardId);
     int parseCardIdFromUrl(const QString& url) const;
