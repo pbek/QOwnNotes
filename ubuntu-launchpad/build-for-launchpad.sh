@@ -18,7 +18,7 @@ BRANCH=main
 # https://wiki.ubuntu.com/Releases
 # Ubuntu 25.10 Questing doesn't support QMake anymore!
 # See https://github.com/pbek/QOwnNotes/issues/3267
-UBUNTU_RELEASES=("bionic" "focal" "jammy" "noble" "plucky")
+UBUNTU_RELEASES=("bionic" "focal" "jammy" "noble")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"

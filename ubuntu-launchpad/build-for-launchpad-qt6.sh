@@ -19,7 +19,7 @@ BRANCH=main
 #BRANCH=release
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=("noble" "plucky" "questing" "resolute")
+UBUNTU_RELEASES=("noble" "questing" "resolute")
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
