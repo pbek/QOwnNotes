@@ -571,8 +571,8 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
         // 10 sec timeout for the request
         archivedTimer.start(10000);
 
-        QUrl archivedUrl(serverUrl + "/index.php/apps/deck/stacks/" +
-                         QString::number(this->stackId) + "/archived");
+        QUrl archivedUrl(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
+                         QString::number(this->boardId) + "/stacks/archived");
         qDebug() << __func__ << " - 'archivedUrl': " << archivedUrl;
 
         QNetworkRequest archivedNetworkRequest = QNetworkRequest(archivedUrl);
@@ -611,47 +611,53 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
                 QJsonDocument archivedJsonDoc = QJsonDocument::fromJson(archivedData);
 
                 if (archivedJsonDoc.isArray()) {
-                    QJsonArray archivedCardsArray = archivedJsonDoc.array();
+                    QJsonArray archivedStacksArray = archivedJsonDoc.array();
 
-                    for (auto cardValue : archivedCardsArray) {
-                        QJsonObject object = cardValue.toObject();
+                    for (auto stackValue : archivedStacksArray) {
+                        QJsonObject stackObject = stackValue.toObject();
+                        QJsonArray archivedCardsArray = stackObject["cards"].toArray();
 
-                        NextcloudDeckService::Card card;
-                        card.id = object["id"].toInt();
-                        card.title = object["title"].toString();
-                        card.description = object["description"].toString();
-                        card.order = object["order"].toInt();
-                        card.type = object["type"].toString();
-                        card.archived = true;    // These are archived cards
+                        for (auto cardValue : archivedCardsArray) {
+                            QJsonObject object = cardValue.toObject();
 
-                        // Parse datetime fields from ISO 8601 strings
-                        QString duedateString = object["duedate"].toString();
-                        if (!duedateString.isEmpty() && duedateString != "null") {
-                            card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
-                        }
+                            NextcloudDeckService::Card card;
+                            card.id = object["id"].toInt();
+                            card.title = object["title"].toString();
+                            card.description = object["description"].toString();
+                            card.order = object["order"].toInt();
+                            card.type = object["type"].toString();
+                            card.archived = true;    // These are archived cards
 
-                        qint64 createdAtTimestamp = object["createdAt"].toVariant().toLongLong();
-                        if (createdAtTimestamp > 0) {
+                            // Parse datetime fields from ISO 8601 strings
+                            QString duedateString = object["duedate"].toString();
+                            if (!duedateString.isEmpty() && duedateString != "null") {
+                                card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
+                            }
+
+                            qint64 createdAtTimestamp =
+                                object["createdAt"].toVariant().toLongLong();
+                            if (createdAtTimestamp > 0) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-                            card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
+                                card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
 #else
-                            card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
+                                card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
 #endif
-                        }
+                            }
 
-                        qint64 lastModifiedTimestamp =
-                            object["lastModified"].toVariant().toLongLong();
-                        if (lastModifiedTimestamp > 0) {
+                            qint64 lastModifiedTimestamp =
+                                object["lastModified"].toVariant().toLongLong();
+                            if (lastModifiedTimestamp > 0) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-                            card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
+                                card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
 #else
-                            card.lastModified =
-                                QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
+                                card.lastModified =
+                                    QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
 #endif
-                        }
+                            }
 
-                        qDebug() << __func__ << " - found archived card: " << card;
-                        cards[card.id] = card;
+                            qDebug() << __func__ << " - found archived card: " << card;
+                            cards[card.id] = card;
+                        }
                     }
                 }
 

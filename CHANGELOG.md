@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.1.9
+
+- Added support for showing archived cards in the Nextcloud Deck dialog
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+
 ## 26.1.8
 
 - The Windows and macOS release are now built with Qt 6.10.1 to show table borders

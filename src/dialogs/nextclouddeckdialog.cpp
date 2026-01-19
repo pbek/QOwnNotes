@@ -188,6 +188,7 @@ void NextcloudDeckDialog::setupMainSplitter() {
 void NextcloudDeckDialog::refreshUi() { reloadCardList(); }
 
 void NextcloudDeckDialog::reloadCardList() {
+    ui->newItemEdit->clear();
     NextcloudDeckService nextcloudDeckService(this);
     _cards = nextcloudDeckService.getCards(ui->showArchivedCardsCheckBox->isChecked());
 
