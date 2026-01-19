@@ -4,6 +4,8 @@
 
 - Added support for showing archived cards in the Nextcloud Deck dialog
   (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+- HTML table borders are now explicitly set to black in PDF export to try to
+  ensure visibility on Windows (for [#3443](https://github.com/pbek/QOwnNotes/issues/3443))
 
 ## 26.1.8
 
