@@ -569,18 +569,22 @@ void MainWindow::initNotePreviewAndTextEdits() {
     // pasting text over selected multi-byte characters (like emojis) due to UTF-16
     // surrogate pair handling issues. We connect to the document's contentsChange
     // signal to manually trigger the modificationChanged signal in these cases.
-    connect(
-        ui->noteTextEdit->document(), &QTextDocument::contentsChange, this,
-        [this](int position, int charsRemoved, int charsAdded) {
-            Q_UNUSED(position)
-            // Only trigger if there was both removal and addition (replacement)
-            // and the document is not already marked as modified
-            if (charsRemoved > 0 && charsAdded > 0 && !ui->noteTextEdit->document()->isModified()) {
-                // Defer the signal to allow Qt to finish internal state updates
-                QTimer::singleShot(0, this,
-                                   [this]() { ui->noteTextEdit->document()->setModified(true); });
-            }
-        });
+    connect(ui->noteTextEdit->document(), &QTextDocument::contentsChange, this,
+            [this](int position, int charsRemoved, int charsAdded) {
+                qDebug() << "contentsChange:" << "pos=" << position << "removed=" << charsRemoved
+                         << "added=" << charsAdded
+                         << "isModified=" << ui->noteTextEdit->document()->isModified();
+
+                // Only trigger if there was both removal and addition (replacement)
+                if (charsRemoved > 0 && charsAdded > 0) {
+                    qDebug() << "Detected replacement - setting modified";
+                    // Defer the signal to allow Qt to finish internal state updates
+                    QTimer::singleShot(0, this, [this]() {
+                        qDebug() << "Timer: calling setModified(true)";
+                        ui->noteTextEdit->document()->setModified(true);
+                    });
+                }
+            });
 #endif
 
     // TODO: Remove and handle this in widgets directly
