@@ -871,11 +871,10 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
         // On Windows, Qt doesn't always properly trigger the modificationChanged
         // signal after pasting, especially when replacing multi-byte characters
         // like emojis due to UTF-16 surrogate pair handling issues.
-        // We explicitly call noteTextEditTextWasUpdated to ensure the note is
-        // saved and the preview update flag is set.
-        if (auto mainWindow = MainWindow::instance()) {
-            mainWindow->noteTextEditTextWasUpdated();
-        }
+        // We manually set the document as modified and emit the signal.
+        document()->setModified(true);
+        // Emit the modificationChanged signal manually to ensure it triggers
+        Q_EMIT document()->modificationChanged(true);
 #endif
     } else if (auto mainWindow = MainWindow::instance()) {
         // to more complex pasting if there was no text (and a main window
