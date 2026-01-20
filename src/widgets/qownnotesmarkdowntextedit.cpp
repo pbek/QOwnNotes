@@ -876,10 +876,12 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
         QMarkdownTextEdit::insertFromMimeData(source);
 
 #ifdef Q_OS_WIN
-        // If there was a selection, explicitly mark the document as modified
-        // to ensure the modificationChanged signal fires and the preview updates
+        // If there was a selection, explicitly refresh the preview to ensure
+        // it updates even when Qt's change detection fails with multi-byte characters
         if (hadSelection) {
-            document()->setModified(true);
+            if (auto mainWindow = MainWindow::instance()) {
+                mainWindow->refreshNotePreview(true);
+            }
         }
 #endif
     } else if (auto mainWindow = MainWindow::instance()) {
