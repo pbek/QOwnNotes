@@ -191,14 +191,14 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 ## Important Notes for AI Assistants
 
 1. **Always use `just src-build` to build the project** - Don't try to run qmake/make directly unless specifically requested
-1. **Always use `just nix-build` to build the project when asked to use nix**
-1. **The project uses Qt/C++** - Be mindful of Qt's signal/slot mechanism, QObject lifecycle, and Qt-specific patterns
-1. **Submodules are used** - Libraries in `src/libraries/` are git submodules
-1. **Multiple Qt versions supported** - Code must work with both Qt5 and Qt6
-1. **Cross-platform** - Code must work on Linux, macOS, and Windows
-1. **Two build systems available** - Primary is qmake (`.pro` files), but CMake (`CMakeLists.txt`) is also supported
-1. **Development mode** - Use `CONFIG+=DEV_MODE` for qmake or `-DDEV_MODE=ON` for CMake in active development
-1. **When doing a version bump you need to update `src/version.h` and `src/build_number.h`** - `BUILD` just needs to be increase by one
+2. **Always use `just nix-build` to build the project when asked to use nix**
+3. **The project uses Qt/C++** - Be mindful of Qt's signal/slot mechanism, QObject lifecycle, and Qt-specific patterns
+4. **Submodules are used** - Libraries in `src/libraries/` are git submodules
+5. **Multiple Qt versions supported** - Code must work with both Qt5 and Qt6
+6. **Cross-platform** - Code must work on Linux, macOS, and Windows
+7. **Two build systems available** - Primary is qmake (`.pro` files), but CMake (`CMakeLists.txt`) is also supported
+8. **Development mode** - Use `CONFIG+=DEV_MODE` for qmake or `-DDEV_MODE=ON` for CMake in active development
+9. **When doing a version bump you need to update `src/version.h` and `src/build_number.h`** - `BUILD` just needs to be increase by one
 
 ## Minimum Requirements
 
