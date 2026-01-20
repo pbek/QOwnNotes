@@ -564,6 +564,25 @@ void MainWindow::initNotePreviewAndTextEdits() {
     connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
             &MainWindow::noteEditCursorPositionChanged);
 
+#ifdef Q_OS_WIN
+    // On Windows, the modificationChanged signal doesn't always fire properly when
+    // pasting text over selected multi-byte characters (like emojis) due to UTF-16
+    // surrogate pair handling issues. We connect to the document's contentsChange
+    // signal to manually trigger the modificationChanged signal in these cases.
+    connect(
+        ui->noteTextEdit->document(), &QTextDocument::contentsChange, this,
+        [this](int position, int charsRemoved, int charsAdded) {
+            Q_UNUSED(position)
+            // Only trigger if there was both removal and addition (replacement)
+            // and the document is not already marked as modified
+            if (charsRemoved > 0 && charsAdded > 0 && !ui->noteTextEdit->document()->isModified()) {
+                // Defer the signal to allow Qt to finish internal state updates
+                QTimer::singleShot(0, this,
+                                   [this]() { ui->noteTextEdit->document()->setModified(true); });
+            }
+        });
+#endif
+
     // TODO: Remove and handle this in widgets directly
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
