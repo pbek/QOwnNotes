@@ -865,7 +865,23 @@ bool QOwnNotesMarkdownTextEdit::canInsertFromMimeData(const QMimeData *source) c
 void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
     // if there is text in the clipboard do the normal pasting process
     if (source->hasText()) {
+#ifdef Q_OS_WIN
+        // On Windows, when pasting over selected text (especially multi-byte
+        // characters like emojis), Qt doesn't always properly trigger the
+        // modificationChanged signal due to UTF-16 surrogate pair handling issues.
+        // We check if there's a selection before pasting to work around this.
+        bool hadSelection = textCursor().hasSelection();
+#endif
+
         QMarkdownTextEdit::insertFromMimeData(source);
+
+#ifdef Q_OS_WIN
+        // If there was a selection, explicitly mark the document as modified
+        // to ensure the modificationChanged signal fires and the preview updates
+        if (hadSelection) {
+            document()->setModified(true);
+        }
+#endif
     } else if (auto mainWindow = MainWindow::instance()) {
         // to more complex pasting if there was no text (and a main window
         // was set)

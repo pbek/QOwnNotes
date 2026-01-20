@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.1.10
+
+- Fixed an issue on Windows where pasting text over selected emojis would not update
+  the note preview (for [#3446](https://github.com/pbek/QOwnNotes/issues/3446))
+  - When replacing multi-byte characters like emojis with pasted text, Qt's text
+    change detection could fail on Windows due to UTF-16 surrogate pair handling
+  - The preview now correctly updates after pasting over selected emojis on Windows
+
 ## 26.1.9
 
 - Added support for showing archived cards in the Nextcloud Deck dialog
