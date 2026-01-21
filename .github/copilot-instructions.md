@@ -198,7 +198,8 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 6. **Cross-platform** - Code must work on Linux, macOS, and Windows
 7. **Two build systems available** - Primary is qmake (`.pro` files), but CMake (`CMakeLists.txt`) is also supported
 8. **Development mode** - Use `CONFIG+=DEV_MODE` for qmake or `-DDEV_MODE=ON` for CMake in active development
-9. **When doing a version bump you need to update `src/version.h` and `src/build_number.h`** - `BUILD` just needs to be increase by one
+9. **Version bumping** - Update `src/version.h` and `src/build_number.h`, `BUILD` just needs to be increase by one
+10. **This project has translations** - They can be found in the `src/translations/` directory as `.ts` files
 
 ## Minimum Requirements
 
