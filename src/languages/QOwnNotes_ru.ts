@@ -1504,7 +1504,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>Очистить название ссылки и снова получить заголовок веб-страницы</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1544,19 +1544,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>Выбрать файл для ссылки (относительный путь)</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>Выбрать файл для ссылки (абсолютный путь)</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>Выбрать каталог для ссылки (относительный путь)</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>Выбрать каталог для ссылки (абсолютный путь)</translation>
 </message>
 </context>
 <context>
@@ -2163,7 +2163,7 @@
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>Прикрепляет все плавающие панели</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2195,11 +2195,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Повторить последнее действие</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Повторить последнее действие</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2247,7 +2247,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>Показать git-версии заметки во внешней программе</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2407,7 +2407,7 @@
 </message>
 <message>
 <source>Manage Nextcloud Deck cards</source>
-<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+<translation>Управление карточками Nextcloud Deck</translation>
 </message>
 <message>
 <source>Ctrl+Alt+D</source>
@@ -2415,11 +2415,11 @@
 </message>
 <message>
 <source>Send clipboard</source>
-<translation type="unfinished">Send clipboard</translation>
+<translation>Отправить содержимое буфера обмена</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Отправить содержимое буфера обмена как текст</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2631,38 +2631,38 @@ Restore current note?</source>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Удалить выбранные заметки и папки</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранную заметку и &lt;strong&gt;%1&lt;/strong&gt; папок?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Если на вашем сервере ownCloud включена корзина, вы сможете восстановить заметки оттуда.</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранные заметки и &lt;strong&gt;%1&lt;/strong&gt; папок?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Если на вашем сервере ownCloud включена корзина, вы сможете восстановить заметки оттуда.</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок и &lt;strong&gt;%1&lt;/strong&gt; папок?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Если на вашем сервере ownCloud включена корзина, вы сможете восстановить заметки оттуда.</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок и &lt;strong&gt;%1&lt;/strong&gt; папок?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Если на вашем сервере ownCloud включена корзина, вы сможете восстановить заметки оттуда.</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Удалить выбранные папки</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранную папку?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранные папки?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
 </translation>
 </message>
 <message>
@@ -2690,7 +2690,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Удалена подпапка заметок: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2789,7 +2789,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>Заметка</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -2805,24 +2805,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>File extension</source>
-<translation type="unfinished">File extension</translation>
+<translation>Расширение файла</translation>
 </message>
 <message>
 <source>Extension of file attachment:</source>
-<translation type="unfinished">Extension of file attachment:</translation>
+<translation>Расширение файла вложения:</translation>
 </message>
 <message>
 <source>File base name</source>
-<translation type="unfinished">File base name</translation>
+<translation>Базовое имя файла</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation type="unfinished">Base name of file attachment:</translation>
+<translation>Базовое имя файла вложения:</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
 <comment>Leave the base name empty for automatic name</comment>
-<translation type="unfinished">Leave empty for automatic name</translation>
+<translation>Оставьте пустым для автоматического имени</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2854,7 +2854,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Повторить действие: %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2904,44 +2904,44 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>%n папка выбрана</numerusform>
+<numerusform>%n папки выбраны</numerusform>
+<numerusform>%n папок выбрано</numerusform>
+<numerusform>%n папок выбрано</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>&amp;Удалить заметки и папки</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>&amp;Удалить папки</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>Открыть заметку в Nextcloud Files</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Открыть заметку в Nextcloud Notes</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
+<translation>Убрать из избранного</translation>
 </message>
 <message>
 <source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
+<translation>Добавить в избранное</translation>
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>Разделить заметку</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>Разделить заметку в текущей позиции курсора? Текст после курсора будет перемещен в новую заметку. Новая заметка будет связана со старой заметкой.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -2964,19 +2964,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+<translation>Поддержка Git не включена для текущей папки заметок, хотите включить ее в настройках?</translation>
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>Нет доступных версий</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>Для этой заметки нет доступных версий.</translation>
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>Закрыть вкладку заметки</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -3000,19 +3000,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Clipboard sent successfully</source>
-<translation type="unfinished">Clipboard sent successfully</translation>
+<translation>Буфер обмена успешно отправлен</translation>
 </message>
 <message>
 <source>Failed to send clipboard</source>
-<translation type="unfinished">Failed to send clipboard</translation>
+<translation>Не удалось отправить буфер обмена</translation>
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Текст буфера обмена успешно отправлен</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Не удалось отправить текст буфера обмена</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3123,15 +3123,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 и %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>%n заметка выбрана</numerusform>
+<numerusform>%n заметки выбраны</numerusform>
+<numerusform>%n заметок выбрано</numerusform>
+<numerusform>%n заметок выбрано</numerusform>
 </translation>
 </message>
 <message>
@@ -3198,24 +3198,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>Последняя %n версия заметки собирается из вашего локального git репозитория</numerusform>
+<numerusform>Последние %n версии заметок собираются из вашего локального git репозитория</numerusform>
+<numerusform>Последние %n версий заметок собираются из вашего локального git репозитория</numerusform>
+<numerusform>Последние %n версий заметок собираются из вашего локального git репозитория</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>Сбор версий заметок из git завершен</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>Последняя %n git версия заметки: %1</numerusform>
+<numerusform>Последние %n git версии заметки: %1</numerusform>
+<numerusform>Последние %n git версий заметки: %1</numerusform>
+<numerusform>Последние %n git версий заметки: %1</numerusform>
 </translation>
 </message>
 <message>
@@ -3576,7 +3576,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Связи заметки</translation>
 </message>
 <message>
 <source>Log</source>
@@ -3664,7 +3664,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Ожидание ответа от ИИ</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3761,43 +3761,43 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Archive card</source>
-<translation type="unfinished">Archive card</translation>
+<translation>Архивировать карточку</translation>
 </message>
 <message>
 <source>Archive</source>
-<translation type="unfinished">Archive</translation>
+<translation>Архивировать</translation>
 </message>
 <message>
 <source>Delete card</source>
-<translation type="unfinished">Delete card</translation>
+<translation>Удалить карточку</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Удалить</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Это не работает для подэлементов, потому что они могут быть скрыты родительским элементом!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Показать только элементы на сегодня</translation>
 </message>
 <message>
 <source>Summary</source>
-<translation type="unfinished">Summary</translation>
+<translation>Резюме</translation>
 </message>
 <message>
 <source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
+<translation>Перезагрузить список элементов карточек с сервера</translation>
 </message>
 <message>
 <source>Reload…</source>
-<translation type="unfinished">Reload…</translation>
+<translation>Перезагрузить…</translation>
 </message>
 <message>
 <source>Search or create card</source>
-<translation type="unfinished">Search or create card</translation>
+<translation>Найти или создать карточку</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3829,90 +3829,90 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Manage Nextcloud Deck Cards</source>
-<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+<translation>Управление карточками Nextcloud Deck</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation type="unfinished">Save and insert into note</translation>
+<translation>Сохранить и вставить в заметку</translation>
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
-<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+<translation>Сохранить текущий элемент карточки и вставить ссылку на него в текущую заметку</translation>
 </message>
 <message>
 <source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
+<translation>Перезагрузить с сервера</translation>
 </message>
 <message>
 <source>Reload cards from server</source>
-<translation type="unfinished">Reload cards from server</translation>
+<translation>Перезагрузить карточки с сервера</translation>
 </message>
 <message>
 <source>No due date</source>
-<translation type="unfinished">No due date</translation>
+<translation>Нет срока выполнения</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+<translation>Вы хотите удалить текущую карточку Nextcloud Deck?</translation>
 </message>
 <message>
 <source>Do you want to archive the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+<translation>Вы хотите архивировать текущую карточку Nextcloud Deck?</translation>
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>&amp;Открыть карточку в браузере</translation>
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>&amp;Добавить ссылку на карточку в заметку</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>&amp;Искать ссылку на карточку в заметках</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>updating</source>
-<translation type="unfinished">updating</translation>
+<translation>обновление</translation>
 </message>
 <message>
 <source>creating</source>
-<translation type="unfinished">creating</translation>
+<translation>создание</translation>
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Ошибка при обновлении карточки</translation>
 </message>
 <message>
 <source>Updating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
+<translation>Обновление карточки не удалось с кодом состояния %1 и сообщением: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Ошибка при создании карточки</translation>
 </message>
 <message>
 <source>Creating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
+<translation>Создание карточки не удалось с кодом состояния %1 и сообщением: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
-<translation type="unfinished">Error while archiving card</translation>
+<translation>Ошибка при архивировании карточки</translation>
 </message>
 <message>
 <source>Archiving the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+<translation>Архивирование карточки не удалось с кодом состояния %2 и сообщением: %3</translation>
 </message>
 <message>
 <source>Error while deleting card</source>
-<translation type="unfinished">Error while deleting card</translation>
+<translation>Ошибка при удалении карточки</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
+<translation>Удаление карточки не удалось с кодом состояния %2 и сообщением: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
@@ -3924,11 +3924,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Error while loading cards</source>
-<translation type="unfinished">Error while loading cards</translation>
+<translation>Ошибка при загрузке карточек</translation>
 </message>
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+<translation>Загрузка карточек не удалась с кодом состояния %1 и сообщением: %2</translation>
 </message>
 </context>
 <context>
@@ -3947,19 +3947,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Reload</source>
-<translation type="unfinished">Reload</translation>
+<translation>Перезагрузить</translation>
 </message>
 <message>
 <source>Reload the note text</source>
-<translation type="unfinished">Reload the note text</translation>
+<translation>Перезагрузить текст заметки</translation>
 </message>
 <message>
 <source>Jump to note</source>
-<translation type="unfinished">Jump to note</translation>
+<translation>Перейти к заметке</translation>
 </message>
 <message>
 <source>Jump to the note in the main window</source>
-<translation type="unfinished">Jump to the note in the main window</translation>
+<translation>Перейти к заметке в главном окне</translation>
 </message>
 </context>
 <context>
@@ -4060,7 +4060,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Показать заметки в папке '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -4278,7 +4278,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>Файл заметки был изменен извне</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4287,12 +4287,12 @@ The editor below shows YOUR version. The differences view shows changes between 
 
 Click 'OK' to save YOUR version and overwrite the external changes.
 Click 'Cancel' to discard your changes and keep the external version.</source>
-<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+<translation>Файл заметки '%1' был изменен извне, пока у вас были несохраненные изменения.
 
-The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+Редактор ниже показывает ВАШУ версию. Представление различий показывает изменения между внешним файлом (красным) и вашей версией (зеленым).
 
-Click 'OK' to save YOUR version and overwrite the external changes.
-Click 'Cancel' to discard your changes and keep the external version.</translation>
+Нажмите 'OK', чтобы сохранить ВАШУ версию и перезаписать внешние изменения.
+Нажмите 'Отмена', чтобы отменить ваши изменения и сохранить внешнюю версию.</translation>
 </message>
 <message>
 <source>Could not store note file: %1 - Error message: %2</source>
@@ -4329,11 +4329,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Обнаружено изменение пути заметки. Хотите заменить все исходящие ссылки на &lt;strong&gt;%n&lt;/strong&gt; файл заметки?</numerusform>
+<numerusform>Обнаружено изменение пути заметки. Хотите заменить все исходящие ссылки на &lt;strong&gt;%n&lt;/strong&gt; файла заметок?</numerusform>
+<numerusform>Обнаружено изменение пути заметки. Хотите заменить все исходящие ссылки на &lt;strong&gt;%n&lt;/strong&gt; файлов заметок?</numerusform>
+<numerusform>Обнаружено изменение пути заметки. Хотите заменить все исходящие ссылки на &lt;strong&gt;%n&lt;/strong&gt; файлов заметок?</numerusform>
 </translation>
 </message>
 <message>
@@ -4533,15 +4533,15 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Дважды щелкните, чтобы открыть заметку</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Поддержка Nextcloud Deck отключена!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Поддержка Nextcloud Deck не включена или настройки недействительны.&lt;br /&gt;Пожалуйста, проверьте вашу конфигурацию &lt;strong&gt;Nextcloud&lt;/strong&gt; в настройках!</translation>
 </message>
 </context>
 <context>
@@ -4783,14 +4783,14 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>Не удалось установить соединение с базой данных с файлом '%1'.
+Доступны ли папка и файл для записи?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Не удалось установить соединение с базой данных папки заметок для слияния '%1'.
+Доступны ли папка и файл для записи?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -5594,7 +5594,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>English (British)</source>
-<translation type="unfinished">English (British)</translation>
+<translation>Английский (британский)</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -5950,19 +5950,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>Скрыть значки в меню, а также в диалоге "Найти действие". Требуется перезапуск для вступления в силу</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
-<translation type="unfinished">Hide menu icons</translation>
+<translation>Скрыть значки меню</translation>
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>Переопределить коэффициент масштабирования интерфейса</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>Коэффициент масштабирования интерфейса:</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -6103,15 +6103,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Библиотека Git</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>Поддержка библиотеки git libgit2 активирована.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>Не забудьте включить поддержку git для ваших папок заметок.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -6123,19 +6123,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>Скрыть кнопку закрытия вкладки</translation>
 </message>
 <message>
 <source>AI autocomplete</source>
-<translation type="unfinished">AI autocomplete</translation>
+<translation>Автозаполнение ИИ</translation>
 </message>
 <message>
 <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
-<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+<translation>Включить предложения автозаполнения текста на основе ИИ в редакторе заметок. Предложения можно принять с помощью Tab или отклонить с помощью Escape.</translation>
 </message>
 <message>
 <source>Enable AI autocomplete in note editor</source>
-<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+<translation>Включить автозаполнение ИИ в редакторе заметок</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -6164,15 +6164,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>Настройки API</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Время ожидания ответа:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>Время, в течение которого приложение будет ждать ответа от сервера, прежде чем истечет время ожидания и вернется сообщение об ошибке.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6229,7 +6229,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+<translation>Использовать контрольные суммы для обнаружения внешних изменений в несохраненных заметках</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
@@ -7121,7 +7121,7 @@ Connection error message: </source>
 </message>
 <message>
 <source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
-<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+<translation>Если у вас была включена эта настройка, теперь вам нужно вручную перезапустить приложение, чтобы предыдущая переменная среды, которая переопределяет коэффициент масштабирования, больше не находилась в вашей среде.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7833,7 +7833,7 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>Не показывать диалог снова</translation>
 </message>
 <message>
 <source>Accept change?</source>
@@ -8291,7 +8291,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>Ваш исполняемый файл QOwnNotes '%1' не доступен для записи! Он должен быть доступен для записи текущим пользователем, чтобы его можно было обновить.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
@@ -8380,15 +8380,15 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Text received from web app and copied to clipboard</source>
-<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+<translation>Текст получен из веб-приложения и скопирован в буфер обмена</translation>
 </message>
 <message>
 <source>HTML received from web app and copied to clipboard</source>
-<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+<translation>HTML получен из веб-приложения и скопирован в буфер обмена</translation>
 </message>
 <message>
 <source>Image received from web app and copied to clipboard</source>
-<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+<translation>Изображение получено из веб-приложения и скопировано в буфер обмена</translation>
 </message>
 </context>
 <context>
@@ -8555,7 +8555,7 @@ This cannot be undone!</source>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Отображает справку по параметрам командной строки.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>

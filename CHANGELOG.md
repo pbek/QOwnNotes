@@ -4,6 +4,16 @@
 
 - Removed `icuuc.dll` from the Windows deployment and via update script as it can
   cause issues if the other ICU DLLs are not installed (for [#3445](https://github.com/pbek/QOwnNotes/issues/3445))
+- The translations for the most common languages used in QOwnNotes, that are
+  currently not very actively maintained, were updated by Claude 4.5 Sonnet
+  - Updated European Portuguese translation (337 strings)
+  - Updated Brazilian Portuguese translation (214 strings)
+  - Updated Italian translation (155 strings)
+  - Updated German translation (152 strings)
+  - Updated Russian translation (120 strings)
+  - Updated Chinese Traditional translation (48 strings)
+  - Updated Polish translation (42 strings)
+  - Updated Chinese Simplified translation (23 strings)
 
 ## 26.1.9
 

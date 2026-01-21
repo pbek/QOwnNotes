@@ -2164,11 +2164,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>重做上次操作</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>重做上次操作</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2593,26 +2593,26 @@ Restore current note?</source>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>删除所选笔记和文件夹</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选笔记和 &lt;strong&gt;%1&lt;/strong&gt; 个文件夹？&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;这些文件夹中的所有文件和文件夹也将被删除！
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+如果您的 ownCloud 服务器启用了回收站，您应该能够从那里恢复笔记。</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>删除所选文件夹</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选文件夹？&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;这些文件夹中的所有文件和文件夹也将被删除！</numerusform>
 </translation>
 </message>
 <message>
@@ -2631,7 +2631,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>已删除笔记子文件夹：%1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2777,7 +2777,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>重做操作：%1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2821,17 +2821,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>已选择 %n 个文件夹</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>删除笔记和文件夹(&amp;R)</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>删除文件夹(&amp;R)</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
@@ -2843,11 +2843,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
+<translation>取消收藏</translation>
 </message>
 <message>
 <source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
+<translation>标记为收藏</translation>
 </message>
 <message>
 <source>Split note</source>
@@ -3031,12 +3031,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 和 %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>已选择 %n 个笔记</numerusform>
 </translation>
 </message>
 <message>
@@ -3813,19 +3813,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Reload</source>
-<translation type="unfinished">Reload</translation>
+<translation>重新加载</translation>
 </message>
 <message>
 <source>Reload the note text</source>
-<translation type="unfinished">Reload the note text</translation>
+<translation>重新加载笔记文本</translation>
 </message>
 <message>
 <source>Jump to note</source>
-<translation type="unfinished">Jump to note</translation>
+<translation>跳转到笔记</translation>
 </message>
 <message>
 <source>Jump to the note in the main window</source>
-<translation type="unfinished">Jump to the note in the main window</translation>
+<translation>在主窗口中跳转到笔记</translation>
 </message>
 </context>
 <context>
@@ -5973,15 +5973,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI autocomplete</source>
-<translation type="unfinished">AI autocomplete</translation>
+<translation>AI 自动完成</translation>
 </message>
 <message>
 <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
-<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+<translation>在笔记编辑器中启用 AI 驱动的文本自动完成建议。可以使用 Tab 键接受建议，使用 Escape 键取消建议。</translation>
 </message>
 <message>
 <source>Enable AI autocomplete in note editor</source>
-<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+<translation>在笔记编辑器中启用 AI 自动完成</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>

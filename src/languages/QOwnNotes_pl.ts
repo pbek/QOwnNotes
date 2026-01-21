@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>Portugalski (Brazylijski)</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>Portugalski</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -1904,7 +1904,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>Model AI</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -2198,7 +2198,7 @@
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Ponów ostatnią czynność</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2631,38 +2631,38 @@ Przywrócić notatkę?</translation>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Usuń zaznaczone notatki i foldery</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybraną notatkę i &lt;strong&gt;%1&lt;/strong&gt; folder(y)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Wszystkie pliki i foldery w tych folderach zostaną również usunięte!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Jeśli kosz jest włączony na serwerze ownCloud, powinieneś móc przywrócić stamtąd notatki.</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane notatki i &lt;strong&gt;%1&lt;/strong&gt; folder(y)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Wszystkie pliki i foldery w tych folderach zostaną również usunięte!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Jeśli kosz jest włączony na serwerze ownCloud, powinieneś móc przywrócić stamtąd notatki.</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybranych notatek i &lt;strong&gt;%1&lt;/strong&gt; folder(ów)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Wszystkie pliki i foldery w tych folderach zostaną również usunięte!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Jeśli kosz jest włączony na serwerze ownCloud, powinieneś móc przywrócić stamtąd notatki.</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybranej notatki i &lt;strong&gt;%1&lt;/strong&gt; folder(a)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Wszystkie pliki i foldery w tych folderach zostaną również usunięte!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Jeśli kosz jest włączony na serwerze ownCloud, powinieneś móc przywrócić stamtąd notatki.</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Usuń zaznaczone foldery</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Usunąć  wybrany folder?Wszystkie pliki i foldery w tym folderze zostaną również usunięte!</numerusform>
+<numerusform>Usunąć  wybrane foldery?Wszystkie pliki i foldery w tych folderach zostaną również usunięte!</numerusform>
+<numerusform>Usunąć  wybranych folderów?Wszystkie pliki i foldery w tych folderach zostaną również usunięte!</numerusform>
+<numerusform>Usunąć  wybranego folderu?Wszystkie pliki i foldery w tym folderze zostaną również usunięte!</numerusform>
 </translation>
 </message>
 <message>
@@ -2690,7 +2690,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Usunięto podfolder notatek: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2854,7 +2854,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Ponów czynność: %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2904,20 +2904,20 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>%n folder wybrany</numerusform>
+<numerusform>%n foldery wybrane</numerusform>
+<numerusform>%n folderów wybranych</numerusform>
+<numerusform>%n folderu wybranego</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>&amp;Usuń notatki i foldery</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>&amp;Usuń foldery</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
@@ -2955,11 +2955,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message numerus="yes">
 <source>%n selected</source>
 <comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n wybrano</numerusform>
-<numerusform>%n wybrano</numerusform>
-<numerusform>%n wybrano</numerusform>
-<numerusform>%n selected</numerusform>
+<translation>
+<numerusform>%n wybrany znak</numerusform>
+<numerusform>%n wybrane znaki</numerusform>
+<numerusform>%n wybranych znaków</numerusform>
+<numerusform>%n wybranego znaku</numerusform>
 </translation>
 </message>
 <message>
@@ -3104,11 +3104,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Pominięto kopiowanie %n notatek (brak pliku Markdown lub tekstowego lub nie można go odczytać)</numerusform>
-<numerusform>Pominięto kopiowanie %n notatek (brak pliku Markdown lub tekstowego lub nie można go odczytać)</numerusform>
-<numerusform>Pominięto kopiowanie %n notatek (brak pliku Markdown lub tekstowego lub nie można go odczytać)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Pominięto kopiowanie %n notatki (brak pliku Markdown lub tekstowego albo plik nieczytelny)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatek (brak plików Markdown lub tekstowych albo pliki nieczytelne)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatek (brak plików Markdown lub tekstowych albo pliki nieczytelne)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatki (brak pliku Markdown lub tekstowego albo plik nieczytelny)</numerusform>
 </translation>
 </message>
 <message>
@@ -3125,15 +3125,15 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 i %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>%n notatka wybrana</numerusform>
+<numerusform>%n notatki wybrane</numerusform>
+<numerusform>%n notatek wybranych</numerusform>
+<numerusform>%n notatki wybranej</numerusform>
 </translation>
 </message>
 <message>
@@ -3200,11 +3200,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Najnowsze wersje notatek %n są aktualnie zbierane z lokalnego repozytorium git</numerusform>
-<numerusform>Najnowsze wersje notatek %n są aktualnie zbierane z lokalnego repozytorium git</numerusform>
-<numerusform>Najnowsze wersje notatek %n są aktualnie zbierane z lokalnego repozytorium git</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>Najnowsza %n wersja notatki jest obecnie pobierana z lokalnego repozytorium git</numerusform>
+<numerusform>Najnowsze %n wersje notatek są obecnie pobierane z lokalnego repozytorium git</numerusform>
+<numerusform>Najnowszych %n wersji notatek jest obecnie pobieranych z lokalnego repozytorium git</numerusform>
+<numerusform>Najnowszej %n wersji notatki jest obecnie pobieranej z lokalnego repozytorium git</numerusform>
 </translation>
 </message>
 <message>
@@ -3213,11 +3213,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Ostatniej %n wersji git notatki: %1</numerusform>
-<numerusform>Ostatniej %n wersji git notatki: %1</numerusform>
-<numerusform>Ostatniej %n wersji git notatki: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>Najnowsza %n wersja git notatki: %1</numerusform>
+<numerusform>Najnowsze %n wersje git notatki: %1</numerusform>
+<numerusform>Najnowszych %n wersji git notatki: %1</numerusform>
+<numerusform>Najnowszej %n wersji git notatki: %1</numerusform>
 </translation>
 </message>
 <message>
@@ -4090,12 +4090,11 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>One
-Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony folder?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nim pliki i foldery zostaną również usunięte!</numerusform>
-<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nich pliki i foldery zostaną również usunięte!</numerusform>
-<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane folder(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nich zawarte!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Usunąć  wybrany folder?Wszystkie pliki i foldery w tym folderze zostaną również usunięte!</numerusform>
+<numerusform>Usunąć  wybrane foldery?Wszystkie pliki i foldery w tych folderach zostaną również usunięte!</numerusform>
+<numerusform>Usunąć  wybranych folderów?Wszystkie pliki i foldery w tych folderach zostaną również usunięte!</numerusform>
+<numerusform>Usunąć  wybranego folderu?Wszystkie pliki i foldery w tym folderze zostaną również usunięte!</numerusform>
 </translation>
 </message>
 <message>
@@ -4332,11 +4331,11 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zastąpić wszystkie linki wychodzące do &lt;strong&gt;%n&lt;/strong&gt; plików notatek?</numerusform>
-<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zastąpić wszystkie linki wychodzące do &lt;strong&gt;%n&lt;/strong&gt; plików notatek?</numerusform>
-<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zastąpić wszystkie linki wychodzące do &lt;strong&gt;%n&lt;/strong&gt; plików notatek?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie linki wychodzące do  pliku notatki?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie linki wychodzące do  plików notatek?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie linki wychodzące do  plików notatek?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie linki wychodzące do  pliku notatki?</numerusform>
 </translation>
 </message>
 <message>
@@ -5537,7 +5536,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Stack:</source>
-<translation type="unfinished">Stack:</translation>
+<translation>Stos:</translation>
 </message>
 <message>
 <source>Todo settings</source>
@@ -5597,7 +5596,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>English (British)</source>
-<translation type="unfinished">English (British)</translation>
+<translation>Angielski (Brytyjski)</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -6200,7 +6199,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Klucz API Groq:</translation>
 </message>
 <message>
 <source>API key</source>
@@ -7092,11 +7091,11 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>ID tablicy: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>ID stosu: %1</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
@@ -7112,7 +7111,7 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>Model AI: %1</translation>
 </message>
 <message>
 <source>Test</source>
@@ -8419,20 +8418,20 @@ Nie można tego cofnąć!</translation>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Zakładka usunięta z %n notatki (-tek)</numerusform>
-<numerusform>Zakładka usunięta z %n notatki (-tek)</numerusform>
-<numerusform>Zakładka usunięta z %n notatki(-tek)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>Zakładka usunięta z %n notatki</numerusform>
+<numerusform>Zakładka usunięta z %n notatek</numerusform>
+<numerusform>Zakładka usunięta z %n notatek</numerusform>
+<numerusform>Zakładka usunięta z %n notatki</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Zakładka edytowana w %n notatce</numerusform>
+<translation>
 <numerusform>Zakładka edytowana w %n notatce</numerusform>
 <numerusform>Zakładka edytowana w %n notatkach</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<numerusform>Zakładka edytowana w %n notatkach</numerusform>
+<numerusform>Zakładka edytowana w %n notatce</numerusform>
 </translation>
 </message>
 <message>

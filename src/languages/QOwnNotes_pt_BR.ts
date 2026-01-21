@@ -1472,7 +1472,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>Link para uma URL ou nota</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1488,7 +1488,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>Limpar nome do link e buscar título da página novamente</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1528,19 +1528,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>Selecionar arquivo para vincular (relativo)</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>Selecionar arquivo para vincular (absoluto)</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>Selecionar diretório para vincular (relativo)</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>Selecionar diretório para vincular (absoluto)</translation>
 </message>
 </context>
 <context>
@@ -1930,7 +1930,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>&amp;Localizar texto nas notas</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2135,11 +2135,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>Reancor painéis flutuantes</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>Reancora todos os painéis flutuantes</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2171,11 +2171,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Refazer última ação</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Refaz a última ação</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2223,7 +2223,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>Mostrar versões git da nota externamente</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2383,7 +2383,7 @@
 </message>
 <message>
 <source>Manage Nextcloud Deck cards</source>
-<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+<translation>Gerenciar cartões do Nextcloud Deck</translation>
 </message>
 <message>
 <source>Ctrl+Alt+D</source>
@@ -2391,11 +2391,11 @@
 </message>
 <message>
 <source>Send clipboard</source>
-<translation type="unfinished">Send clipboard</translation>
+<translation>Enviar área de transferência</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Enviar área de transferência como texto</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2503,7 +2503,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Localizar texto nas notas em todas as tags / subpastas</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2603,30 +2603,30 @@ Deseja restaurá-la?</translation>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Remover notas e pastas selecionadas</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; nota(s) selecionada(s) e &lt;strong&gt;%1&lt;/strong&gt; pasta(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Todos os arquivos e pastas nessas pastas também serão removidos!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Se a lixeira estiver habilitada no seu servidor ownCloud, você poderá restaurar as notas de lá.</numerusform>
+<numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; nota(s) selecionada(s) e &lt;strong&gt;%1&lt;/strong&gt; pasta(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Todos os arquivos e pastas nessas pastas também serão removidos!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Se a lixeira estiver habilitada no seu servidor ownCloud, você poderá restaurar as notas de lá.</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Remover pastas selecionadas</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; pasta(s) selecionada(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Todos os arquivos e pastas nessas pastas também serão removidos!</numerusform>
+<numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; pasta(s) selecionada(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Todos os arquivos e pastas nessas pastas também serão removidos!</numerusform>
 </translation>
 </message>
 <message>
@@ -2646,7 +2646,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Subpasta de nota removida: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2733,7 +2733,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>Nota</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -2749,24 +2749,24 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>File extension</source>
-<translation type="unfinished">File extension</translation>
+<translation>Extensão do arquivo</translation>
 </message>
 <message>
 <source>Extension of file attachment:</source>
-<translation type="unfinished">Extension of file attachment:</translation>
+<translation>Extensão do arquivo anexado:</translation>
 </message>
 <message>
 <source>File base name</source>
-<translation type="unfinished">File base name</translation>
+<translation>Nome base do arquivo</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation type="unfinished">Base name of file attachment:</translation>
+<translation>Nome base do arquivo anexado:</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
 <comment>Leave the base name empty for automatic name</comment>
-<translation type="unfinished">Leave empty for automatic name</translation>
+<translation>Deixe vazio para nome automático</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2798,7 +2798,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Refazer ação: %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2836,50 +2836,50 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>Pasta de notas não existe!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>Pasta de notas &lt;b&gt;%1&lt;/b&gt; com caminho &lt;b&gt;%2&lt;/b&gt; não existe mais!</translation>
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>%n pasta selecionada</numerusform>
+<numerusform>%n pastas selecionadas</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>&amp;Remover notas e pastas</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>&amp;Remover pastas</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>Abrir nota no Nextcloud Files</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Abrir nota no Nextcloud Notes</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
+<translation>Desmarcar como favorito</translation>
 </message>
 <message>
 <source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
+<translation>Marcar como favorito</translation>
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>Dividir nota</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>Dividir nota na posição atual do cursor? O texto após o cursor será movido para uma nova nota. A nova nota será vinculada à nota antiga.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -2900,19 +2900,19 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+<translation>O suporte ao Git não está habilitado para a pasta de notas atual. Deseja habilitá-lo nas configurações?</translation>
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>Nenhuma versão disponível</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>Não há versões disponíveis para esta nota.</translation>
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>Fechar aba de nota</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -2920,35 +2920,35 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
+<translation>Backends de IA</translation>
 </message>
 <message>
 <source>AI models</source>
-<translation type="unfinished">AI models</translation>
+<translation>Modelos de IA</translation>
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>Seletor de backend de IA</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>Seletor de modelo de IA</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
-<translation type="unfinished">Clipboard sent successfully</translation>
+<translation>Área de transferência enviada com sucesso</translation>
 </message>
 <message>
 <source>Failed to send clipboard</source>
-<translation type="unfinished">Failed to send clipboard</translation>
+<translation>Falha ao enviar área de transferência</translation>
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Texto da área de transferência enviado com sucesso</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Falha ao enviar texto da área de transferência</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3045,7 +3045,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Paste &amp;HTML as Markdown</source>
-<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+<translation>Colar &amp;HTML como Markdown</translation>
 </message>
 <message>
 <source>Show all notes (%1)</source>
@@ -3057,13 +3057,13 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 e %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>%n nota selecionada</numerusform>
+<numerusform>%n notas selecionadas</numerusform>
 </translation>
 </message>
 <message>
@@ -3130,20 +3130,20 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>A última versão da nota está sendo coletada do seu repositório git local</numerusform>
+<numerusform>As últimas %n versões de nota estão sendo coletadas do seu repositório git local</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>Coleta de versões de nota do git concluída</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>Última versão git da nota: %1</numerusform>
+<numerusform>Últimas %n versões git da nota: %1</numerusform>
 </translation>
 </message>
 <message>
@@ -3156,7 +3156,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
-<translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+<translation>A edição de notas está desabilitada no momento. Deseja habilitá-la novamente?</translation>
 </message>
 <message>
 <source>Select text files to import</source>
@@ -3488,7 +3488,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Relações de nota</translation>
 </message>
 <message>
 <source>Log</source>
@@ -3512,7 +3512,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>AI toolbar</source>
-<translation type="unfinished">AI toolbar</translation>
+<translation>Barra de ferramentas de IA</translation>
 </message>
 <message>
 <source>window toolbar</source>
@@ -3576,7 +3576,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Aguardando resposta da IA</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3667,51 +3667,51 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Archive card</source>
-<translation type="unfinished">Archive card</translation>
+<translation>Arquivar cartão</translation>
 </message>
 <message>
 <source>Archive</source>
-<translation type="unfinished">Archive</translation>
+<translation>Arquivar</translation>
 </message>
 <message>
 <source>Delete card</source>
-<translation type="unfinished">Delete card</translation>
+<translation>Excluir cartão</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Excluir</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Isso não funciona para subitens, pois eles podem estar ocultos pelo item pai!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Mostrar apenas itens com vencimento hoje</translation>
 </message>
 <message>
 <source>Summary</source>
-<translation type="unfinished">Summary</translation>
+<translation>Resumo</translation>
 </message>
 <message>
 <source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
+<translation>Recarregar a lista de itens do cartão do servidor</translation>
 </message>
 <message>
 <source>Reload…</source>
-<translation type="unfinished">Reload…</translation>
+<translation>Recarregar…</translation>
 </message>
 <message>
 <source>Search or create card</source>
-<translation type="unfinished">Search or create card</translation>
+<translation>Pesquisar ou criar cartão</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
-<translation type="unfinished">Create card and insert link into current note</translation>
+<translation>Criar cartão e inserir link na nota atual</translation>
 </message>
 <message>
 <source>&amp;Save</source>
-<translation type="unfinished">&amp;Save</translation>
+<translation>&amp;Salvar</translation>
 </message>
 <message>
 <source>+1h</source>
@@ -3719,7 +3719,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Title</source>
-<translation type="unfinished">Title</translation>
+<translation>Título</translation>
 </message>
 <message>
 <source>-1h</source>
@@ -3727,114 +3727,114 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Description:</source>
-<translation type="unfinished">Description:</translation>
+<translation>Descrição:</translation>
 </message>
 <message>
 <source>Due date</source>
-<translation type="unfinished">Due date</translation>
+<translation>Data de vencimento</translation>
 </message>
 <message>
 <source>Manage Nextcloud Deck Cards</source>
-<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+<translation>Gerenciar cartões do Nextcloud Deck</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation type="unfinished">Save and insert into note</translation>
+<translation>Salvar e inserir na nota</translation>
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
-<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+<translation>Salvar o item do cartão atual e inserir um link para ele na nota atual</translation>
 </message>
 <message>
 <source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
+<translation>Recarregar do servidor</translation>
 </message>
 <message>
 <source>Reload cards from server</source>
-<translation type="unfinished">Reload cards from server</translation>
+<translation>Recarregar cartões do servidor</translation>
 </message>
 <message>
 <source>No due date</source>
-<translation type="unfinished">No due date</translation>
+<translation>Sem data de vencimento</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+<translation>Deseja excluir o cartão atual do Nextcloud Deck?</translation>
 </message>
 <message>
 <source>Do you want to archive the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+<translation>Deseja arquivar o cartão atual do Nextcloud Deck?</translation>
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>&amp;Abrir cartão no navegador</translation>
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>&amp;Adicionar link do cartão à nota</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>&amp;Pesquisar link do cartão nas notas</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>updating</source>
-<translation type="unfinished">updating</translation>
+<translation>atualizando</translation>
 </message>
 <message>
 <source>creating</source>
-<translation type="unfinished">creating</translation>
+<translation>criando</translation>
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Erro ao atualizar cartão</translation>
 </message>
 <message>
 <source>Updating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
+<translation>Falha ao atualizar cartão com código de status %1 e mensagem: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Erro ao criar cartão</translation>
 </message>
 <message>
 <source>Creating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
+<translation>Falha ao criar cartão com código de status %1 e mensagem: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
-<translation type="unfinished">Error while archiving card</translation>
+<translation>Erro ao arquivar cartão</translation>
 </message>
 <message>
 <source>Archiving the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+<translation>Falha ao arquivar o cartão com código de status %2 e mensagem: %3</translation>
 </message>
 <message>
 <source>Error while deleting card</source>
-<translation type="unfinished">Error while deleting card</translation>
+<translation>Erro ao excluir cartão</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
+<translation>Falha ao excluir o cartão com código de status %2 e mensagem: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
-<translation type="unfinished">Error while loading boards</translation>
+<translation>Erro ao carregar quadros</translation>
 </message>
 <message>
 <source>Loading the boards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the boards failed with status code %1 and message: %2</translation>
+<translation>Falha ao carregar os quadros com código de status %1 e mensagem: %2</translation>
 </message>
 <message>
 <source>Error while loading cards</source>
-<translation type="unfinished">Error while loading cards</translation>
+<translation>Erro ao carregar cartões</translation>
 </message>
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+<translation>Falha ao carregar os cartões com código de status %1 e mensagem: %2</translation>
 </message>
 </context>
 <context>
@@ -3853,19 +3853,19 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Reload</source>
-<translation type="unfinished">Reload</translation>
+<translation>Recarregar</translation>
 </message>
 <message>
 <source>Reload the note text</source>
-<translation type="unfinished">Reload the note text</translation>
+<translation>Recarregar o texto da nota</translation>
 </message>
 <message>
 <source>Jump to note</source>
-<translation type="unfinished">Jump to note</translation>
+<translation>Ir para a nota</translation>
 </message>
 <message>
 <source>Jump to the note in the main window</source>
-<translation type="unfinished">Jump to the note in the main window</translation>
+<translation>Ir para a nota na janela principal</translation>
 </message>
 </context>
 <context>
@@ -3907,23 +3907,23 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
-<translation type="unfinished">Relative path of note, right-click to open context menu</translation>
+<translation>Caminho relativo da nota, clique com botão direito para abrir menu de contexto</translation>
 </message>
 <message>
 <source>Absolute path of note, right-click to open context menu</source>
-<translation type="unfinished">Absolute path of note, right-click to open context menu</translation>
+<translation>Caminho absoluto da nota, clique com botão direito para abrir menu de contexto</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
-<translation type="unfinished">Copy absolute path of note</translation>
+<translation>Copiar caminho absoluto da nota</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
-<translation type="unfinished">Copy absolute path of note subfolder</translation>
+<translation>Copiar caminho absoluto da subpasta de notas</translation>
 </message>
 <message>
 <source>Copy absolute path of note folder</source>
-<translation type="unfinished">Copy absolute path of note folder</translation>
+<translation>Copiar caminho absoluto da pasta de notas</translation>
 </message>
 </context>
 <context>
@@ -3962,15 +3962,15 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Show notes from all note subfolders (%1)</source>
-<translation type="unfinished">Show notes from all note subfolders (%1)</translation>
+<translation>Mostrar notas de todas as subpastas de notas (%1)</translation>
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Mostrar notas na pasta '%1' (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
-<translation type="unfinished">Show notes in note root folder (%1)</translation>
+<translation>Mostrar notas na pasta raiz de notas (%1)</translation>
 </message>
 <message>
 <source>Note folder</source>
@@ -4008,14 +4008,14 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Tempo esgotado enquanto aguardava resposta da IA</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>O sistema de IA está desabilitado. Habilite-o no menu principal ou na barra de ferramentas de IA.</translation>
 </message>
 </context>
 <context>
@@ -4042,7 +4042,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>incorreto</translation>
 </message>
 <message>
 <source>not detected</source>
@@ -4058,7 +4058,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>versão %1 muito antiga</translation>
 </message>
 <message>
 <source>not enabled</source>
@@ -4156,22 +4156,22 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <name>PasswordLineEdit</name>
 <message>
 <source>Show password</source>
-<translation type="unfinished">Show password</translation>
+<translation>Mostrar senha</translation>
 </message>
 <message>
 <source>Hide password</source>
-<translation type="unfinished">Hide password</translation>
+<translation>Ocultar senha</translation>
 </message>
 </context>
 <context>
 <name>QHotkey</name>
 <message>
 <source>Failed to register %1. Error: %2</source>
-<translation type="unfinished">Failed to register %1. Error: %2</translation>
+<translation>Falha ao registrar %1. Erro: %2</translation>
 </message>
 <message>
 <source>Failed to unregister %1. Error: %2</source>
-<translation type="unfinished">Failed to unregister %1. Error: %2</translation>
+<translation>Falha ao desregistrar %1. Erro: %2</translation>
 </message>
 </context>
 <context>
@@ -4182,7 +4182,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>Arquivo de nota foi modificado externamente</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4191,12 +4191,12 @@ The editor below shows YOUR version. The differences view shows changes between 
 
 Click 'OK' to save YOUR version and overwrite the external changes.
 Click 'Cancel' to discard your changes and keep the external version.</source>
-<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+<translation>O arquivo de nota '%1' foi modificado externamente enquanto você tinha alterações não salvas.
 
-The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+O editor abaixo mostra SUA versão. A visualização de diferenças mostra alterações entre o arquivo externo (em vermelho) e sua versão (em verde).
 
-Click 'OK' to save YOUR version and overwrite the external changes.
-Click 'Cancel' to discard your changes and keep the external version.</translation>
+Clique em 'OK' para salvar SUA versão e substituir as alterações externas.
+Clique em 'Cancelar' para descartar suas alterações e manter a versão externa.</translation>
 </message>
 <message>
 <source>Could not store note file: %1 - Error message: %2</source>
@@ -4231,18 +4231,18 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Uma alteração no caminho da nota foi detectada. Deseja substituir todos os links de saída para o arquivo de nota &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+<numerusform>Uma alteração no caminho da nota foi detectada. Deseja substituir todos os links de saída para &lt;strong&gt;%n&lt;/strong&gt; arquivos de nota?</numerusform>
 </translation>
 </message>
 <message>
 <source>Image file exists</source>
-<translation type="unfinished">Image file exists</translation>
+<translation>Arquivo de imagem já existe</translation>
 </message>
 <message>
 <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
-<translation type="unfinished">Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</translation>
+<translation>Arquivo de imagem já existe na pasta de mídia. Deseja usar o arquivo existente em vez de criar um novo?</translation>
 </message>
 <message numerus="yes">
 <source>…and %n more note(s)</source>
@@ -4285,11 +4285,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Seu sistema Windows parece estar em modo escuro. Deseja também ativar o modo escuro no QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Seu sistema Windows parece estar em modo claro. Deseja também desativar o modo escuro no QOwnNotes?</translation>
 </message>
 <message>
 <source>Light mode detected</source>
@@ -4297,11 +4297,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;última modificação: %2&lt;br /&gt;tamanho do arquivo: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Seu sistema Linux parece estar usando o modo escuro. Deseja também ativar o modo escuro no QOwnNotes?</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
@@ -4427,15 +4427,15 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Clique duplo para abrir nota</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Suporte ao Nextcloud Deck desabilitado!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>O suporte ao Nextcloud Deck não está habilitado ou as configurações são inválidas.&lt;br /&gt;Verifique sua configuração do &lt;strong&gt;Nextcloud&lt;/strong&gt; nas configurações!</translation>
 </message>
 </context>
 <context>
@@ -4677,14 +4677,14 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>Não foi possível estabelecer uma conexão com o banco de dados no arquivo '%1'.
+A pasta e o arquivo têm permissão de escrita?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Não foi possível estabelecer uma conexão com o banco de dados da pasta de notas para mesclar '%1'.
+A pasta e o arquivo têm permissão de escrita?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -5487,7 +5487,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>English (British)</source>
-<translation type="unfinished">English (British)</translation>
+<translation>Inglês (Britânico)</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -5843,19 +5843,19 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>Ocultar ícones nos menus e também no diálogo "Localizar ação". Requer reinício para ter efeito</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
-<translation type="unfinished">Hide menu icons</translation>
+<translation>Ocultar ícones de menu</translation>
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>Substituir fator de escala da interface</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>Fator de escala da interface:</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -5996,15 +5996,15 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Biblioteca Git</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>O suporte para a biblioteca git libgit2 está ativado.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>Não esqueça de habilitar o suporte ao git para suas pastas de notas.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -6016,19 +6016,19 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>Ocultar botão de fechar aba</translation>
 </message>
 <message>
 <source>AI autocomplete</source>
-<translation type="unfinished">AI autocomplete</translation>
+<translation>Autocompletar com IA</translation>
 </message>
 <message>
 <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
-<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+<translation>Habilitar sugestões de autocompletar texto com IA no editor de notas. As sugestões podem ser aceitas com Tab ou descartadas com Escape.</translation>
 </message>
 <message>
 <source>Enable AI autocomplete in note editor</source>
-<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+<translation>Habilitar autocompletar com IA no editor de notas</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -6053,19 +6053,19 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Testar conexão</translation>
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>Configurações de API</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Tempo limite de resposta:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>Tempo que o aplicativo aguardará uma resposta do servidor antes de expirar e retornar uma mensagem de erro.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6074,27 +6074,27 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>Backends de IA adicionados via engine de script</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>Para usar os backends de IA, você pode usar o comando de script &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, ou procurar no repositório de scripts por scripts já escritos.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Você pode usar o hook de script &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; para adicionar mais backends compatíveis com a API OpenAI.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>Alternativamente, você também pode procurar no repositório de scripts por scripts de integração de IA já criados.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Chave API do Groq:</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>Chave de API</translation>
 </message>
 <message>
 <source>Show line numbers</source>
@@ -6118,19 +6118,19 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Ignored note files</source>
-<translation type="unfinished">Ignored note files</translation>
+<translation>Arquivos de nota ignorados</translation>
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+<translation>Usar checksums para detectar modificações externas em notas não salvas</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
-<translation type="unfinished">Select the path of the git binary</translation>
+<translation>Selecionar o caminho do binário do git</translation>
 </message>
 <message>
 <source>Regular expressions of note files to ignore, separated by ";"</source>
-<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+<translation>Expressões regulares de arquivos de nota para ignorar, separadas por ";"</translation>
 </message>
 <message>
 <source>Ignored subfolders</source>
@@ -6142,7 +6142,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Clicking a note tab unsets 'All notes' selection</source>
-<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+<translation>Clicar em uma aba de nota desmarca a seleção 'Todas as notas'</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -6150,7 +6150,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>Auto-select items in navigation panel when changing cursor position</source>
-<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+<translation>Selecionar automaticamente itens no painel de navegação ao alterar a posição do cursor</translation>
 </message>
 <message>
 <source>Hide 'Note count' with tags (increases performance)</source>
@@ -6186,11 +6186,11 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>Aplicação web QOwnNotes</translation>
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Uma conexão web socket com este servidor será aberta para atuar como ponte entre a aplicação web do QOwnNotes e a aplicação desktop do QOwnNotes.</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -6843,7 +6843,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 </message>
 <message>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>caminho de notas &lt;b&gt;%1&lt;/b&gt; encontrado no servidor</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -6873,7 +6873,7 @@ Mensagem de erro: </translation>
 </message>
 <message>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>O banco de dados foi reinicializado. Reinicie o aplicativo agora!</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -6981,40 +6981,40 @@ Mensagem de erro: </translation>
 </message>
 <message>
 <source>Board Id: %1</source>
-<translation type="unfinished">Board Id: %1</translation>
+<translation>ID do Quadro: %1</translation>
 </message>
 <message>
 <source>Stack Id: %1</source>
-<translation type="unfinished">Stack Id: %1</translation>
+<translation>ID da Pilha: %1</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>Resultado do teste de API para %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>Backend de IA: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>URL base da API</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>Modelo de IA: %1</translation>
 </message>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>Testar</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>Testar conexão com %1 (%2)</translation>
 </message>
 <message>
 <source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
-<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+<translation>Se você tinha esta configuração habilitada, agora precisa reiniciar o aplicativo manualmente para que a variável de ambiente anterior que sobrescreve o fator de escala não esteja em seu ambiente novamente.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7375,11 +7375,11 @@ sufixos "ise"</translation>
 </message>
 <message>
 <source>Only show attachments that are used in the current note</source>
-<translation type="unfinished">Only show attachments that are used in the current note</translation>
+<translation>Mostrar apenas anexos usados na nota atual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Mostrar apenas da nota atual</translation>
 </message>
 <message>
 <source>Add selected attachments to the current note</source>
@@ -7462,11 +7462,11 @@ sufixos "ise"</translation>
 </message>
 <message>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Arquivo já existe</translation>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>O arquivo &lt;strong&gt;%1&lt;/strong&gt; já existe. Você precisa removê-lo antes de escolher &lt;strong&gt;%2&lt;/strong&gt; como novo nome de arquivo!</translation>
 </message>
 <message>
 <source>File renaming failed</source>
@@ -7529,11 +7529,11 @@ sufixos "ise"</translation>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
-<translation type="unfinished">Only show images that are used in the current note</translation>
+<translation>Mostrar apenas imagens usadas na nota atual</translation>
 </message>
 <message>
 <source>Only show from current note</source>
-<translation type="unfinished">Only show from current note</translation>
+<translation>Mostrar apenas da nota atual</translation>
 </message>
 <message>
 <source>Used in notes:</source>
@@ -7576,11 +7576,11 @@ sufixos "ise"</translation>
 </message>
 <message>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Arquivo já existe</translation>
 </message>
 <message>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>O arquivo &lt;strong&gt;%1&lt;/strong&gt; já existe. Você precisa removê-lo antes de escolher &lt;strong&gt;%2&lt;/strong&gt; como novo nome de arquivo!</translation>
 </message>
 <message>
 <source>File renaming failed</source>
@@ -7717,19 +7717,19 @@ sufixos "ise"</translation>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Diferença de texto</translation>
 </message>
 <message>
 <source>Differences:</source>
-<translation type="unfinished">Differences:</translation>
+<translation>Diferenças:</translation>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>Não mostrar diálogo novamente</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>Aceitar alteração?</translation>
 </message>
 </context>
 <context>
@@ -7796,7 +7796,7 @@ sufixos "ise"</translation>
 </message>
 <message>
 <source>Add new tag</source>
-<translation type="unfinished">Add new tag</translation>
+<translation>Adicionar nova tag</translation>
 </message>
 <message>
 <source>Due date</source>
@@ -8139,7 +8139,7 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Erro de permissão</translation>
 </message>
 <message>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
@@ -8147,7 +8147,7 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Seu executável antigo do QOwnNotes '%1' não pôde ser removido! Você precisa substituí-lo manualmente por '%2'.</translation>
 </message>
 <message>
 <source>Restart application</source>
@@ -8183,7 +8183,7 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>Seu executável do QOwnNotes '%1' não tem permissão de escrita! Ele deve ter permissão de escrita pelo usuário atual para ser atualizado.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
@@ -8256,11 +8256,11 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotes está agora desconectado do websocket para %1</translation>
 </message>
 <message>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>Aviso da aplicação web</translation>
 </message>
 <message>
 <source>Image received</source>
@@ -8272,15 +8272,15 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>Text received from web app and copied to clipboard</source>
-<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+<translation>Texto recebido da aplicação web e copiado para a área de transferência</translation>
 </message>
 <message>
 <source>HTML received from web app and copied to clipboard</source>
-<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+<translation>HTML recebido da aplicação web e copiado para a área de transferência</translation>
 </message>
 <message>
 <source>Image received from web app and copied to clipboard</source>
-<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+<translation>Imagem recebida da aplicação web e copiada para a área de transferência</translation>
 </message>
 </context>
 <context>
@@ -8306,16 +8306,16 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<translation>
+<numerusform>Marcador excluído de %n nota</numerusform>
+<numerusform>Marcador excluído de %n notas</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Marcador editado em %n nota</numerusform>
+<numerusform>Marcador editado em %n notas</numerusform>
 </translation>
 </message>
 <message>
@@ -8398,7 +8398,7 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with ownCloud integration</translation>
+<translation>Aplicativo de anotações em Markdown com integração ao ownCloud</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -8441,7 +8441,7 @@ Isso não poderá ser desfeito!</translation>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Exibe ajuda sobre opções de linha de comando.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>
@@ -8473,7 +8473,7 @@ Isso não poderá ser desfeito!</translation>
 </message>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
-<translation type="unfinished">Generate shell completion code. Supports `fish`, `bash`.</translation>
+<translation>Gerar código de autocompletar do shell. Suporta `fish`, `bash`.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

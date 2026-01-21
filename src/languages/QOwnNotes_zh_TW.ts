@@ -85,7 +85,7 @@
 <name>BacklinkWidget</name>
 <message>
 <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
-<translation type="unfinished">Open note and find &lt;code&gt;%1&lt;/code&gt;</translation>
+<translation>開啟筆記並尋找 &lt;code&gt;%1&lt;/code&gt;</translation>
 </message>
 </context>
 <context>
@@ -428,11 +428,11 @@
 </message>
 <message>
 <source>Portuguese (Brazilian)</source>
-<translation type="unfinished">Portuguese (Brazilian)</translation>
+<translation>葡萄牙語（巴西）</translation>
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>葡萄牙語</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -593,7 +593,7 @@
 </message>
 <message>
 <source>Number of imported notes</source>
-<translation type="unfinished">Number of imported notes</translation>
+<translation>匯入的筆記數量</translation>
 </message>
 <message>
 <source>Select file</source>
@@ -629,11 +629,11 @@
 </message>
 <message>
 <source>Invalid XML!</source>
-<translation type="unfinished">Invalid XML!</translation>
+<translation>無效的 XML！</translation>
 </message>
 <message>
 <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
-<translation type="unfinished">Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</translation>
+<translation>在筆記 &lt;b&gt;%1&lt;/b&gt; 中發現無效的 XML！匯入可能會在此處停止。</translation>
 </message>
 <message>
 <source>Basic attributes</source>
@@ -824,15 +824,15 @@
 </message>
 <message>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>顯示相對於包含文字游標的行的行號。</translation>
 </message>
 <message>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>不會將 FakeVim 中的按鍵序列（如 Ctrl-S）解釋為 FakeVim 命令，而是將它們作為常規快捷鍵處理。這使得更容易存取核心功能，但代價是失去 FakeVim 的某些功能。</translation>
 </message>
 <message>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>在插入模式下不解釋某些按鍵，以便程式碼可以正確完成和擴展。</translation>
 </message>
 <message>
 <source>Vim tabstop option.</source>
@@ -876,11 +876,11 @@
 </message>
 <message>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>輸入 Meta-Shift-Y, Meta-Shift-Y 以退出 FakeVim 模式。</translation>
 </message>
 <message>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>輸入 Alt-Y, Alt-Y 以退出 FakeVim 模式。</translation>
 </message>
 <message>
 <source>Unknown option:</source>
@@ -1108,7 +1108,7 @@
 </message>
 <message>
 <source>Underlined text</source>
-<translation type="unfinished">Underlined text</translation>
+<translation>加底線的文字</translation>
 </message>
 <message>
 <source>Link</source>
@@ -1342,47 +1342,47 @@
 </message>
 <message>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>請選擇要從中匯入筆記的「RAW - Joplin Export Directory」：</translation>
 </message>
 <message>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>選擇目錄</translation>
 </message>
 <message>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>匯入圖片</translation>
 </message>
 <message>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>已匯入 %m 個檔案中的 %v 個</translation>
 </message>
 <message>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>匯入筆記</translation>
 </message>
 <message>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>匯入標籤</translation>
 </message>
 <message>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>如果您只有「JEX - Joplin Export File」，請將該檔案的內容解壓縮到目錄並選擇該目錄。</translation>
 </message>
 <message>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>匯入中繼資料</translation>
 </message>
 <message>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin 匯出目錄</translation>
 </message>
 <message>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>匯入附件</translation>
 </message>
 <message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>選擇要匯入的「RAW - Joplin Export Directory」</translation>
 </message>
 </context>
 <context>
@@ -1405,7 +1405,7 @@
 </message>
 <message>
 <source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
+<translation>應用程式將在之後重新啟動。</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1472,7 +1472,7 @@
 <name>LinkDialog</name>
 <message>
 <source>Link to a URL or note</source>
-<translation type="unfinished">Link to a URL or note</translation>
+<translation>連結到 URL 或筆記</translation>
 </message>
 <message>
 <source>Enter URL</source>
@@ -1488,7 +1488,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>清除連結名稱並再次取得網頁標題</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1496,7 +1496,7 @@
 </message>
 <message>
 <source>Search for a heading to link to</source>
-<translation type="unfinished">Search for a heading to link to</translation>
+<translation>搜尋要連結的標題</translation>
 </message>
 <message>
 <source>Enter the name of the link (optional)</source>
@@ -1528,19 +1528,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>選擇要連結的檔案（相對路徑）</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>選擇要連結的檔案（絕對路徑）</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>選擇要連結的目錄（相對路徑）</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>選擇要連結的目錄（絕對路徑）</translation>
 </message>
 </context>
 <context>
@@ -1681,11 +1681,11 @@
 </message>
 <message>
 <source>Headings</source>
-<translation type="unfinished">Headings</translation>
+<translation>標題</translation>
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>反向連結</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1877,7 +1877,7 @@
 </message>
 <message>
 <source>AI model</source>
-<translation type="unfinished">AI model</translation>
+<translation>AI 模型</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -1918,15 +1918,15 @@
 </message>
 <message>
 <source>&amp;Setup note folders / subfolders</source>
-<translation type="unfinished">&amp;Setup note folders / subfolders</translation>
+<translation>設定筆記資料夾/子資料夾(&amp;S)</translation>
 </message>
 <message>
 <source>Setup note folders / subfolders</source>
-<translation type="unfinished">Setup note folders / subfolders</translation>
+<translation>設定筆記資料夾/子資料夾</translation>
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>在筆記中搜尋文字(&amp;F)</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2131,11 +2131,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>重新附加浮動面板</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>重新附加所有浮動面板</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2167,11 +2167,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>重做上次操作</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>重做上次操作</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2219,7 +2219,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>在外部顯示筆記 git 版本</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2348,11 +2348,11 @@
 </message>
 <message>
 <source>&amp;Load Todo List items</source>
-<translation type="unfinished">&amp;Load Todo List items</translation>
+<translation>載入待辦事項清單項目(&amp;L)</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>插入 Nextcloud Deck 卡片連結</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>

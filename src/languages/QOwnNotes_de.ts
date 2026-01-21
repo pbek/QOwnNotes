@@ -432,7 +432,7 @@
 </message>
 <message>
 <source>Portuguese</source>
-<translation type="unfinished">Portuguese</translation>
+<translation>Portugiesisch</translation>
 </message>
 <message>
 <source>Romanian</source>
@@ -1493,7 +1493,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>Linknamen löschen und Titel der Webseite erneut abrufen</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1533,19 +1533,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>Datei zum Verlinken auswählen (relativ)</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>Datei zum Verlinken auswählen (absolut)</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>Verzeichnis zum Verlinken auswählen (relativ)</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>Verzeichnis zum Verlinken auswählen (absolut)</translation>
 </message>
 </context>
 <context>
@@ -1694,7 +1694,7 @@
 </message>
 <message>
 <source>Backlinks</source>
-<translation type="unfinished">Backlinks</translation>
+<translation>Rückverweise</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1935,7 +1935,7 @@
 </message>
 <message>
 <source>&amp;Find text in notes</source>
-<translation type="unfinished">&amp;Find text in notes</translation>
+<translation>&amp;Text in Notizen suchen</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -2141,11 +2141,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation type="unfinished">Reattach floating panels</translation>
+<translation>Schwebende Bedienfelder wieder anhängen</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation type="unfinished">Reattaches all floating panels</translation>
+<translation>Hängt alle schwebenden Bedienfelder wieder an</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2177,11 +2177,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Letzte Aktion wiederherstellen</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Stellt die letzte Aktion wieder her</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2229,7 +2229,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>Notiz-Git-Versionen extern anzeigen</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2389,19 +2389,19 @@
 </message>
 <message>
 <source>Manage Nextcloud Deck cards</source>
-<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+<translation>Nextcloud Deck-Karten verwalten</translation>
 </message>
 <message>
 <source>Ctrl+Alt+D</source>
-<translation type="unfinished">Ctrl+Alt+D</translation>
+<translation>Strg+Alt+D</translation>
 </message>
 <message>
 <source>Send clipboard</source>
-<translation type="unfinished">Send clipboard</translation>
+<translation>Zwischenablage senden</translation>
 </message>
 <message>
 <source>Send clipboard as text</source>
-<translation type="unfinished">Send clipboard as text</translation>
+<translation>Zwischenablage als Text senden</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -2509,7 +2509,7 @@
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation type="unfinished">Find text in notes in all tags / subfolders</translation>
+<translation>Text in Notizen in allen Schlagwörtern / Unterordnern suchen</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -2609,30 +2609,30 @@ Notiz wiederherstellen?</translation>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Ausgewählte Notizen und Ordner entfernen</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notiz(en) und &lt;strong&gt;%1&lt;/strong&gt; Ordner entfernen?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Alle Dateien und Ordner in diesen Ordnern werden ebenfalls entfernt!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Wenn der Papierkorb auf Ihrem ownCloud-Server aktiviert ist, sollten Sie die Notizen von dort wiederherstellen können.</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen und &lt;strong&gt;%1&lt;/strong&gt; Ordner entfernen?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Alle Dateien und Ordner in diesen Ordnern werden ebenfalls entfernt!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Wenn der Papierkorb auf Ihrem ownCloud-Server aktiviert ist, sollten Sie die Notizen von dort wiederherstellen können.</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Ausgewählte Ordner entfernen</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählten Ordner entfernen?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Alle Dateien und Ordner in diesen Ordnern werden ebenfalls entfernt!</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Ordner entfernen?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Alle Dateien und Ordner in diesen Ordnern werden ebenfalls entfernt!</numerusform>
 </translation>
 </message>
 <message>
@@ -2654,7 +2654,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Notizunterordner entfernt: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2741,7 +2741,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Note</source>
 <comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
+<translation>Notiz</translation>
 </message>
 <message>
 <source>Note folders</source>
@@ -2757,24 +2757,24 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>File extension</source>
-<translation type="unfinished">File extension</translation>
+<translation>Dateierweiterung</translation>
 </message>
 <message>
 <source>Extension of file attachment:</source>
-<translation type="unfinished">Extension of file attachment:</translation>
+<translation>Erweiterung des Dateianhangs:</translation>
 </message>
 <message>
 <source>File base name</source>
-<translation type="unfinished">File base name</translation>
+<translation>Dateigrundname</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation type="unfinished">Base name of file attachment:</translation>
+<translation>Grundname des Dateianhangs:</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
 <comment>Leave the base name empty for automatic name</comment>
-<translation type="unfinished">Leave empty for automatic name</translation>
+<translation>Leer lassen für automatischen Namen</translation>
 </message>
 <message>
 <source>Inserted text as text attachment file</source>
@@ -2806,7 +2806,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Aktion wiederholen: %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2844,50 +2844,50 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Note folder does not exist!</source>
-<translation type="unfinished">Note folder does not exist!</translation>
+<translation>Notizordner existiert nicht!</translation>
 </message>
 <message>
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
-<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+<translation>Notizordner &lt;b&gt;%1&lt;/b&gt; mit Pfad &lt;b&gt;%2&lt;/b&gt; existiert nicht mehr!</translation>
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>%n Ordner ausgewählt</numerusform>
+<numerusform>%n Ordner ausgewählt</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>&amp;Notizen und Ordner entfernen</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>&amp;Ordner entfernen</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>Notiz in Nextcloud-Dateien öffnen</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Notiz in Nextcloud-Notizen öffnen</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
+<translation>Als Favorit entfernen</translation>
 </message>
 <message>
 <source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
+<translation>Als Favorit markieren</translation>
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>Notiz aufteilen</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>Notiz an der aktuellen Cursorposition aufteilen? Der Text nach dem Cursor wird in eine neue Notiz verschoben. Die neue Notiz wird mit der alten Notiz verlinkt.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -2908,19 +2908,19 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+<translation>Git-Unterstützung ist für den aktuellen Notizordner nicht aktiviert. Möchten Sie sie in den Einstellungen aktivieren?</translation>
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>Keine Versionen verfügbar</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>Für diese Notiz sind keine Versionen verfügbar.</translation>
 </message>
 <message>
 <source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
+<translation>Notiz-Tab schließen</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -2936,27 +2936,27 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
+<translation>KI-Backend-Auswahl</translation>
 </message>
 <message>
 <source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
+<translation>KI-Modell-Auswahl</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
-<translation type="unfinished">Clipboard sent successfully</translation>
+<translation>Zwischenablage erfolgreich gesendet</translation>
 </message>
 <message>
 <source>Failed to send clipboard</source>
-<translation type="unfinished">Failed to send clipboard</translation>
+<translation>Fehler beim Senden der Zwischenablage</translation>
 </message>
 <message>
 <source>Clipboard text sent successfully</source>
-<translation type="unfinished">Clipboard text sent successfully</translation>
+<translation>Zwischenablage-Text erfolgreich gesendet</translation>
 </message>
 <message>
 <source>Failed to send clipboard text</source>
-<translation type="unfinished">Failed to send clipboard text</translation>
+<translation>Fehler beim Senden des Zwischenablage-Texts</translation>
 </message>
 <message>
 <source>Temporary file can't be opened</source>
@@ -3046,9 +3046,9 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
-<translation type="unfinished">
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<translation>
+<numerusform>Kopieren von %n Notiz übersprungen (keine Markdown- oder Textdatei oder nicht lesbar)</numerusform>
+<numerusform>Kopieren von %n Notizen übersprungen (keine Markdown- oder Textdateien oder nicht lesbar)</numerusform>
 </translation>
 </message>
 <message>
@@ -3065,13 +3065,13 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 und %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>%n Notiz ausgewählt</numerusform>
+<numerusform>%n Notizen ausgewählt</numerusform>
 </translation>
 </message>
 <message>
@@ -3138,20 +3138,20 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>Aktuell wird die neueste Notizversion aus Ihrem lokalen Git-Repository gesammelt</numerusform>
+<numerusform>Aktuell werden die neuesten %n Notizversionen aus Ihrem lokalen Git-Repository gesammelt</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>Erfassung der Notizversionen aus Git abgeschlossen</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>Neueste Git-Version der Notiz: %1</numerusform>
+<numerusform>Neueste %n Git-Versionen der Notiz: %1</numerusform>
 </translation>
 </message>
 <message>
@@ -3496,7 +3496,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Notizbeziehungen</translation>
 </message>
 <message>
 <source>Log</source>
@@ -3584,7 +3584,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
+<translation>Warte auf Antwort von KI</translation>
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
@@ -3675,15 +3675,15 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Archive card</source>
-<translation type="unfinished">Archive card</translation>
+<translation>Karte archivieren</translation>
 </message>
 <message>
 <source>Archive</source>
-<translation type="unfinished">Archive</translation>
+<translation>Archivieren</translation>
 </message>
 <message>
 <source>Delete card</source>
-<translation type="unfinished">Delete card</translation>
+<translation>Karte löschen</translation>
 </message>
 <message>
 <source>Delete</source>
@@ -3691,19 +3691,19 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Dies funktioniert nicht für Unterelemente, da sie möglicherweise vom übergeordneten Element verborgen werden!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
-<translation type="unfinished">Show only items due today</translation>
+<translation>Nur heute fällige Elemente anzeigen</translation>
 </message>
 <message>
 <source>Summary</source>
-<translation type="unfinished">Summary</translation>
+<translation>Zusammenfassung</translation>
 </message>
 <message>
 <source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
+<translation>Kartenliste vom Server neu laden</translation>
 </message>
 <message>
 <source>Reload…</source>
@@ -3711,7 +3711,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Search or create card</source>
-<translation type="unfinished">Search or create card</translation>
+<translation>Karte suchen oder erstellen</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3743,90 +3743,90 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Manage Nextcloud Deck Cards</source>
-<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+<translation>Nextcloud Deck-Karten verwalten</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation type="unfinished">Save and insert into note</translation>
+<translation>Speichern und in Notiz einfügen</translation>
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
-<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+<translation>Aktuelle Karte speichern und einen Link dazu in die aktuelle Notiz einfügen</translation>
 </message>
 <message>
 <source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
+<translation>Vom Server neu laden</translation>
 </message>
 <message>
 <source>Reload cards from server</source>
-<translation type="unfinished">Reload cards from server</translation>
+<translation>Karten vom Server neu laden</translation>
 </message>
 <message>
 <source>No due date</source>
-<translation type="unfinished">No due date</translation>
+<translation>Kein Fälligkeitsdatum</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+<translation>Möchten Sie die aktuelle Nextcloud Deck-Karte löschen?</translation>
 </message>
 <message>
 <source>Do you want to archive the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+<translation>Möchten Sie die aktuelle Nextcloud Deck-Karte archivieren?</translation>
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>&amp;Karte im Browser öffnen</translation>
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>&amp;Kartenlink zur Notiz hinzufügen</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>&amp;Nach Kartenlink in Notizen suchen</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>updating</source>
-<translation type="unfinished">updating</translation>
+<translation>Aktualisierung läuft</translation>
 </message>
 <message>
 <source>creating</source>
-<translation type="unfinished">creating</translation>
+<translation>Erstellung läuft</translation>
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Fehler beim Aktualisieren der Karte</translation>
 </message>
 <message>
 <source>Updating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
+<translation>Aktualisierung der Karte fehlgeschlagen mit Statuscode %1 und Nachricht: %2</translation>
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Fehler beim Erstellen der Karte</translation>
 </message>
 <message>
 <source>Creating card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
+<translation>Erstellung der Karte fehlgeschlagen mit Statuscode %1 und Nachricht: %2</translation>
 </message>
 <message>
 <source>Error while archiving card</source>
-<translation type="unfinished">Error while archiving card</translation>
+<translation>Fehler beim Archivieren der Karte</translation>
 </message>
 <message>
 <source>Archiving the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Archiving the card failed with status code %2 and message: %3</translation>
+<translation>Archivierung der Karte fehlgeschlagen mit Statuscode %2 und Nachricht: %3</translation>
 </message>
 <message>
 <source>Error while deleting card</source>
-<translation type="unfinished">Error while deleting card</translation>
+<translation>Fehler beim Löschen der Karte</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %2 and message: %3</source>
-<translation type="unfinished">Deleting the card failed with status code %2 and message: %3</translation>
+<translation>Löschen der Karte fehlgeschlagen mit Statuscode %2 und Nachricht: %3</translation>
 </message>
 <message>
 <source>Error while loading boards</source>
@@ -3838,11 +3838,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Error while loading cards</source>
-<translation type="unfinished">Error while loading cards</translation>
+<translation>Fehler beim Laden der Karten</translation>
 </message>
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
-<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+<translation>Laden der Karten fehlgeschlagen mit Statuscode %1 und Nachricht: %2</translation>
 </message>
 </context>
 <context>
@@ -3865,15 +3865,15 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Reload the note text</source>
-<translation type="unfinished">Reload the note text</translation>
+<translation>Notiztext neu laden</translation>
 </message>
 <message>
 <source>Jump to note</source>
-<translation type="unfinished">Jump to note</translation>
+<translation>Zu Notiz springen</translation>
 </message>
 <message>
 <source>Jump to the note in the main window</source>
-<translation type="unfinished">Jump to the note in the main window</translation>
+<translation>Zu der Notiz im Hauptfenster springen</translation>
 </message>
 </context>
 <context>
@@ -3974,7 +3974,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Show notes in folder '%1' (%2)</source>
-<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+<translation>Notizen im Ordner '%1' anzeigen (%2)</translation>
 </message>
 <message>
 <source>Show notes in note root folder (%1)</source>
@@ -4016,14 +4016,14 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Zeitüberschreitung beim Warten auf KI-Antwort</translation>
 </message>
 </context>
 <context>
 <name>OpenAiService</name>
 <message>
 <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-<translation type="unfinished">AI system is disabled. Please enable it in the main menu or the AI toolbar.</translation>
+<translation>KI-System ist deaktiviert. Bitte aktivieren Sie es im Hauptmenü oder in der KI-Symbolleiste.</translation>
 </message>
 </context>
 <context>
@@ -4190,7 +4190,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>Notizdatei wurde extern geändert</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4199,12 +4199,12 @@ The editor below shows YOUR version. The differences view shows changes between 
 
 Click 'OK' to save YOUR version and overwrite the external changes.
 Click 'Cancel' to discard your changes and keep the external version.</source>
-<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+<translation>Die Notizdatei '%1' wurde extern geändert, während Sie nicht gespeicherte Änderungen hatten.
 
-The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+Der untenstehende Editor zeigt IHRE Version. Die Differenzansicht zeigt Änderungen zwischen der externen Datei (in rot) und Ihrer Version (in grün).
 
-Click 'OK' to save YOUR version and overwrite the external changes.
-Click 'Cancel' to discard your changes and keep the external version.</translation>
+Klicken Sie auf 'OK', um IHRE Version zu speichern und die externen Änderungen zu überschreiben.
+Klicken Sie auf 'Abbrechen', um Ihre Änderungen zu verwerfen und die externe Version zu behalten.</translation>
 </message>
 <message>
 <source>Could not store note file: %1 - Error message: %2</source>
@@ -4239,9 +4239,9 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Eine Änderung des Notizpfades wurde erkannt. Möchten Sie alle ausgehenden Links zur &lt;strong&gt;%n&lt;/strong&gt; Notizdatei ersetzen?</numerusform>
+<numerusform>Eine Änderung des Notizpfades wurde erkannt. Möchten Sie alle ausgehenden Links zu &lt;strong&gt;%n&lt;/strong&gt; Notizdateien ersetzen?</numerusform>
 </translation>
 </message>
 <message>
@@ -4305,7 +4305,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;zuletzt geändert: %2&lt;br /&gt;Dateigröße: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4435,15 +4435,15 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation type="unfinished">Double-click to open note</translation>
+<translation>Doppelklick zum Öffnen der Notiz</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Nextcloud Deck-Unterstützung deaktiviert!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Nextcloud Deck-Unterstützung ist nicht aktiviert oder die Einstellungen sind ungültig.&lt;br /&gt;Bitte überprüfen Sie Ihre &lt;strong&gt;Nextcloud&lt;/strong&gt;-Konfiguration in den Einstellungen!</translation>
 </message>
 </context>
 <context>
@@ -4685,14 +4685,14 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writable?</translation>
+<translation>Datenbankverbindung mit Datei '%1' konnte nicht hergestellt werden.
+Sind Ordner und Datei beschreibbar?</translation>
 </message>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Datenbankverbindung mit Notizordner-Datenbank zum Zusammenführen von '%1' konnte nicht hergestellt werden.
+Sind Ordner und Datei beschreibbar?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -5494,7 +5494,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>English (British)</source>
-<translation type="unfinished">English (British)</translation>
+<translation>Englisch (Britisch)</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -5850,19 +5850,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>Symbole in Menüs sowie im Dialog "Aktion finden" ausblenden. Erfordert Neustart, um wirksam zu werden</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
-<translation type="unfinished">Hide menu icons</translation>
+<translation>Menüsymbole ausblenden</translation>
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>Skalierungsfaktor der Oberfläche überschreiben</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>Skalierungsfaktor der Oberfläche:</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -5874,7 +5874,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Only show relative note path</source>
-<translation type="unfinished">Only show relative note path</translation>
+<translation>Nur relativen Notizpfad anzeigen</translation>
 </message>
 <message>
 <source>Action name</source>
@@ -6003,15 +6003,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Git-Bibliothek</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>Unterstützung für die Git-Bibliothek libgit2 ist aktiviert.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>Vergessen Sie nicht, die Git-Unterstützung für Ihre Notizordner zu aktivieren.</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -6023,23 +6023,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Hide tab close button</source>
-<translation type="unfinished">Hide tab close button</translation>
+<translation>Tab-Schließen-Button ausblenden</translation>
 </message>
 <message>
 <source>AI autocomplete</source>
-<translation type="unfinished">AI autocomplete</translation>
+<translation>KI-Autovervollständigung</translation>
 </message>
 <message>
 <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
-<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+<translation>KI-gestützte Textvorschläge zur Autovervollständigung im Notizeditor aktivieren. Vorschläge können mit Tab akzeptiert oder mit Escape abgelehnt werden.</translation>
 </message>
 <message>
 <source>Enable AI autocomplete in note editor</source>
-<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+<translation>KI-Autovervollständigung im Notizeditor aktivieren</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>Skript-Repository nach KI-Integrationsskripten durchsuchen</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -6051,28 +6051,28 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Groq API-Schlüssel erstellen</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>OpenAI API-Schlüssel erstellen</translation>
 </message>
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>Verbindung testen</translation>
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>API-Einstellungen</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>Antwort-Zeitüberschreitung:</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>Zeit, die die Anwendung auf eine Antwort vom Server wartet, bevor eine Zeitüberschreitung erfolgt und eine Fehlermeldung zurückgegeben wird.</translation>
 </message>
 <message>
 <source>sec</source>
@@ -6081,23 +6081,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>KI-Backends, die über die Skript-Engine hinzugefügt wurden</translation>
 </message>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>Um die KI-Backends zu nutzen, können Sie entweder den Skript-Befehl &lt;a href="%1"&gt;aiComplete&lt;/a&gt; verwenden oder im Skript-Repository nach bereits geschriebenen Skripten suchen.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>Sie können den Skript-Hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; verwenden, um weitere OpenAI-API-kompatible Backends hinzuzufügen.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>Alternativ können Sie auch im Skript-Repository nach bereits erstellten KI-Integrationsskripten suchen.</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Groq API-Schlüssel:</translation>
 </message>
 <message>
 <source>API key</source>
@@ -6129,7 +6129,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+<translation>Prüfsummen verwenden, um externe Änderungen an nicht gespeicherten Notizen zu erkennen</translation>
 </message>
 <message>
 <source>Select the path of the git binary</source>
@@ -6996,7 +6996,7 @@ Fehlermeldung: </translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>API-Testergebnis für %1 (%2)</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
@@ -7004,11 +7004,11 @@ Fehlermeldung: </translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>API-Basis-URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>KI-Modell: %1</translation>
 </message>
 <message>
 <source>Test</source>
@@ -7021,7 +7021,7 @@ Fehlermeldung: </translation>
 </message>
 <message>
 <source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
-<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+<translation>Wenn Sie diese Einstellung aktiviert hatten, müssen Sie die Anwendung jetzt manuell neu starten, damit die vorherige Umgebungsvariable, die den Skalierungsfaktor überschreibt, nicht mehr in Ihrer Umgebung vorhanden ist.</translation>
 </message>
 <message>
 <source>Find a script in the script repository</source>
@@ -7720,7 +7720,7 @@ Your notes will stay intact!</source>
 <name>TextDiffDialog</name>
 <message>
 <source>Text difference</source>
-<translation type="unfinished">Text difference</translation>
+<translation>Textunterschied</translation>
 </message>
 <message>
 <source>Differences:</source>
@@ -7728,11 +7728,11 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>Diesen Dialog nicht mehr anzeigen</translation>
 </message>
 <message>
 <source>Accept change?</source>
-<translation type="unfinished">Accept change?</translation>
+<translation>Änderung akzeptieren?</translation>
 </message>
 </context>
 <context>
@@ -8186,7 +8186,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+<translation>Ihre QOwnNotes-Programmdatei '%1' ist nicht beschreibbar! Sie muss vom aktuellen Benutzer beschreibbar sein, um aktualisiert werden zu können.</translation>
 </message>
 <message>
 <source>Your old QOwnNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
@@ -8275,15 +8275,15 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Text received from web app and copied to clipboard</source>
-<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+<translation>Text von Web-App empfangen und in die Zwischenablage kopiert</translation>
 </message>
 <message>
 <source>HTML received from web app and copied to clipboard</source>
-<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+<translation>HTML von Web-App empfangen und in die Zwischenablage kopiert</translation>
 </message>
 <message>
 <source>Image received from web app and copied to clipboard</source>
-<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+<translation>Bild von Web-App empfangen und in die Zwischenablage kopiert</translation>
 </message>
 </context>
 <context>
@@ -8309,16 +8309,16 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
+<translation>
 <numerusform>Lesezeichen aus %n Notiz(en) gelöscht</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
+<numerusform>Lesezeichen aus %n Notizen gelöscht</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Lesezeichen in %n Notiz(en) bearbeitet</numerusform>
-<numerusform>Bookmark edited in %n note(s)</numerusform>
+<translation>
+<numerusform>Lesezeichen in %n Notiz bearbeitet</numerusform>
+<numerusform>Lesezeichen in %n Notizen bearbeitet</numerusform>
 </translation>
 </message>
 <message>
@@ -8444,7 +8444,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Zeigt Hilfe zu Befehlszeilenoptionen an.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>
