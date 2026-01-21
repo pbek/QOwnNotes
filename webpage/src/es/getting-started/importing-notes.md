@@ -24,7 +24,7 @@ Warning _¡Precaución!_: El complemento `"Better Markdown Links"` adapta silenc
 
 ## VS Codium / Github / Markor / Typora / Pandoc y otros (Markdown con estilo o GFM)
 
-Markdown con estilo GitHub (GFM) utiliza encabezados de enlaces con estilo de guiones (espacios convertidos en guiones). A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
+Markdown con estilo GitHub (GFM) utiliza encabezados de enlaces con estilo de guiones (espacios convertidos en guiones). Una referencia a un encabezado como `## Encabezado con espacios`, por ejemplo, se verá así `[notelink](β_nota.md#encabezado-con-espacios)`.
 
 QOwnNotes y Obsidian (Markdown con estilo de Obsidian u OFM) usan _fragmentos de encabezado codificados en URL (codificados por porcentaje)_ (espacios convertidos a %20 y manteniendo las letras mayúsculas), por lo que el mismo enlace se verá diferente `[notelink](%CE%B2_note.md#Encabezado%20con%20espacios)`.
 

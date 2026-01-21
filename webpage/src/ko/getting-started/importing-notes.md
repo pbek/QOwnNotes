@@ -22,7 +22,7 @@ QOwnNotes에서 Obsidian으로 내보내기는 필요하지 않습니다.
 
 ## VS Codium / Github / Markor / Typora / Pandoc 및 기타 (Github flavoured markdown GFM)
 
-Githubflavoured markdown (GFM)은 하이픈 스타일 링크 제목(공백을 하이픈으로 변환)을 사용합니다. A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
+Githubflavoured markdown (GFM)은 하이픈 스타일 링크 제목(공백을 하이픈으로 변환)을 사용합니다. 예를 들어 `## Heading with spaces`와 같은 제목에 대한 참조는 `[notelink](β_note.md#heading-with-spaces)`와 같이 표시됩니다.
 
 QOwnNotes와 Obsidian (Obsidian flavoured markdown OFM)은 _urlencoded (percentencoded) heading fragments_  (공백을 %20으로 변환하고 대문자를 유지)을 사용하므로 동일한 링크가 다르게 표시됩니다. `[notelink](%CE%B2_note.md#Heading%20with%20spaCes)`.
 
