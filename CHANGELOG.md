@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.1.10
+
+- Removed `icuuc.dll` from the Windows deployment and via update script as it can
+  cause issues if the other ICU DLLs are not installed (for [#3445](https://github.com/pbek/QOwnNotes/issues/3445))
+
 ## 26.1.9
 
 - Added support for showing archived cards in the Nextcloud Deck dialog

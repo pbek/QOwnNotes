@@ -36,6 +36,10 @@ Set-Location ..\release
 # Note: Library "qmltooling" and "declarative" are not existing anymore
 windeployqt --no-compiler-runtime -core -gui -widgets -sql -svg -network -xml -printsupport -qml -quick -quickwidgets -websockets -concurrent QOwnNotes.exe
 
+# Remove icuuc.dll as it causes issues if the other ICU DLLs are not installed
+# https://github.com/pbek/QOwnNotes/issues/3445#issuecomment-3777501835
+Remove-Item icuuc.dll
+
 # Create zip archive
 Get-ChildItem
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
