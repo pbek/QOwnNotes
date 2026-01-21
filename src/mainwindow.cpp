@@ -4666,8 +4666,9 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
                                                   getMaxImageWidth(), false, decrypt);
 
         // create a hash of the html (because
+        // use UTF-8 to avoid collapsing multi-byte characters (like emoji) on Windows codepages
         const QString hash =
-            QString(QCryptographicHash::hash(html.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+            QString(QCryptographicHash::hash(html.toUtf8(), QCryptographicHash::Sha1).toHex());
 
         // update the note preview if the text has changed
         // we use our hash because ui->noteTextView->toHtml() may return
