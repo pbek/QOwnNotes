@@ -23,7 +23,7 @@ bool UrlHandler::isUrlSchemeLocal(const QUrl &url) {
            (scheme == QLatin1String("file") && Note::fileUrlIsNoteInCurrentNoteFolder(url));
 }
 
-void UrlHandler::openUrl(QString urlString) {
+void UrlHandler::openUrl(QString urlString, bool openInNewTab) {
     /* examples:
      * - <note://MyNote> opens the note "MyNote"
      * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with
@@ -59,9 +59,9 @@ void UrlHandler::openUrl(QString urlString) {
     } else if (urlString.startsWith(QStringLiteral("file://attachments"))) {
         handleFileAttachmentUrl(urlString);
     } else if (scheme == QStringLiteral("noteid")) {
-        handleNoteIdUrl(urlString);
+        handleNoteIdUrl(urlString, openInNewTab);
     } else if (scheme == QStringLiteral("note") || isNoteFileUrl) {
-        handleNoteUrl(urlString, fragment);
+        handleNoteUrl(urlString, fragment, openInNewTab);
     } else if (scheme == QStringLiteral("task")) {
         MainWindow::instance()->openTodoDialog(url.host());
     } else if (scheme == QStringLiteral("deck")) {
@@ -94,23 +94,29 @@ void UrlHandler::handleNextcloudDeckUrl(const QString &urlString) {
     }
 }
 
-void UrlHandler::handleNoteIdUrl(const QString &urlString) {
-    static const QRegularExpression re(QStringLiteral(R"(^noteid:\/\/note-(\d+)$)"));
+void UrlHandler::handleNoteIdUrl(const QString &urlString, bool openInNewTab) {
+    static const QRegularExpression re(QStringLiteral(R"(^noteid:\/\/(\d+)$)"));
     QRegularExpressionMatch match = re.match(urlString);
 
     if (match.hasMatch()) {
         int noteId = match.captured(1).toInt();
         Note note = Note::fetch(noteId);
         if (note.isFetched()) {
-            // set current note
-            MainWindow::instance()->setCurrentNote(std::move(note));
+            auto mw = MainWindow::instance();
+            if (openInNewTab) {
+                mw->openNoteInTab(note);
+            } else {
+                // set current note
+                mw->setCurrentNote(std::move(note));
+            }
         }
     } else {
         qWarning() << "NoteIdUrlHandler malformed url: " << urlString;
     }
 }
 
-void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment) {
+void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment,
+                               bool openInNewTab) {
     Note note;
     const QUrl url(urlString);
     auto mw = MainWindow::instance();
@@ -127,8 +133,13 @@ void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment
 
     // does this note really exist?
     if (note.isFetched()) {
-        // set current note
-        mw->setCurrentNote(std::move(note));
+        if (openInNewTab) {
+            // open note in a new tab
+            mw->openNoteInTab(note);
+        } else {
+            // set current note
+            mw->setCurrentNote(std::move(note));
+        }
 
         // Jump to the Markdown heading in the note that is represented by the url fragment
         if (!fragment.isEmpty()) {

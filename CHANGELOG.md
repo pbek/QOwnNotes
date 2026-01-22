@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.1.11
+
+- Added support for opening note links in a new tab using `Ctrl + Shift + Click`
+  (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
+  - Use `Ctrl + Click` to open a note link in the current tab (existing behavior)
+  - Use `Ctrl + Shift + Click` to open a note link in a new tab
+  - This works for all note link formats: `note://`, `noteid://`, and file links
+
 ## 26.1.10
 
 - Removed `icuuc.dll` from the Windows deployment and via update script as it can

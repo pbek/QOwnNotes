@@ -6420,7 +6420,7 @@ void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     if (UrlHandler::isUrlSchemeLocal(url)) {
         openLocalUrl(url.toString());
     } else {
-        ui->noteTextEdit->openUrl(url.toString());
+        ui->noteTextEdit->openUrl(url.toString(), false);
     }
 }
 

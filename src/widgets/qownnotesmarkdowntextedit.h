@@ -24,7 +24,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     ~QOwnNotesMarkdownTextEdit() override;
 
     void setStyles();
-    void openUrl(const QString &urlString) override;
+    void openUrl(const QString &urlString, bool openInNewTab) override;
     //    void setViewportMargins(int left, int top, int right, int bottom);
     void setPaperMargins(int width = -1);
     int modifyFontSize(FontModificationMode mode);

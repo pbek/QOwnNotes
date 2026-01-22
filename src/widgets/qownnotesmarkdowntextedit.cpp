@@ -125,12 +125,13 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     connect(this, &QOwnNotesMarkdownTextEdit::zoomIn, this, [this]() { onZoom(/*in=*/true); });
     connect(this, &QOwnNotesMarkdownTextEdit::zoomOut, this, [this]() { onZoom(/*in=*/false); });
 
-    connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [](const QString &url) {
+    connect(this, &QOwnNotesMarkdownTextEdit::urlClicked, this, [this](const QString &url) {
         if (!MainWindow::instance()) {
             qWarning() << "No MainWindow! shouldn't happen!";
             return;
         }
-        UrlHandler().openUrl(url);
+        // Use the openUrl method which properly handles the openInNewTab flag
+        openUrl(url, _openLinkInNewTab);
     });
 
     connect(MainWindow::instance(), &MainWindow::settingsChanged, this,
@@ -388,8 +389,9 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
  * "/path/to/my/file/QOwnNotes.pdf" if the operating system
  * supports that handler
  */
-void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString) {
-    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - 'urlString': " << urlString;
+void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString, bool openInNewTab) {
+    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - 'urlString': " << urlString
+             << " - 'openInNewTab': " << openInNewTab;
 
     QString notesPath = NoteFolder::currentLocalPath();
     QString windowsSlash = QString();
@@ -405,7 +407,28 @@ void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString) {
     urlCopy.replace(QRegularExpression(QStringLiteral("^file:[\\/]{2}([^\\/].+)$")),
                     QStringLiteral("file://") + windowsSlash + notesPath + QStringLiteral("/\\1"));
 
-    QMarkdownTextEdit::openUrl(urlCopy);
+    // Check if this is a note URL that should be handled specially
+    QUrl url(urlCopy);
+    const QString scheme = url.scheme();
+
+    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - scheme:" << scheme
+             << " - isNoteInCurrentNoteFolder:" << Note::fileUrlIsNoteInCurrentNoteFolder(url);
+
+    // If it's a note URL, noteid URL, file URL in note folder, or has no scheme (relative link),
+    // use UrlHandler which knows how to handle notes properly
+    if (scheme == QStringLiteral("note") || scheme == QStringLiteral("noteid") ||
+        scheme == QStringLiteral("file") || scheme.isEmpty() ||
+        Note::fileUrlIsNoteInCurrentNoteFolder(url)) {
+        // Use UrlHandler for note URLs with the openInNewTab flag
+        qDebug() << "QOwnNotesMarkdownTextEdit " << __func__
+                 << " - Using UrlHandler with openInNewTab:" << openInNewTab;
+        UrlHandler().openUrl(urlCopy, openInNewTab);
+    } else {
+        // For other URLs (http, https, etc.), use the base class implementation
+        qDebug() << "QOwnNotesMarkdownTextEdit " << __func__
+                 << " - Using base class implementation";
+        QMarkdownTextEdit::openUrl(urlCopy, openInNewTab);
+    }
 }
 
 // void QOwnNotesMarkdownTextEdit::setViewportMargins(

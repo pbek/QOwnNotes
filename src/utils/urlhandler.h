@@ -19,11 +19,12 @@ class UrlHandler {
 
     static bool isUrlSchemeLocal(const QUrl& url);
 
-    void openUrl(QString urlString);
+    void openUrl(QString urlString, bool openInNewTab = false);
 
    private:
-    static void handleNoteIdUrl(const QString& urlString);
-    static void handleNoteUrl(const QString& urlString, const QString& fragment);
+    static void handleNoteIdUrl(const QString& urlString, bool openInNewTab = false);
+    static void handleNoteUrl(const QString& urlString, const QString& fragment,
+                              bool openInNewTab = false);
     void handleCheckboxUrl(const QString& urlString);
     static void handleNextcloudDeckUrl(const QString& urlString);
     static void handleFileUrl(QString urlString);
