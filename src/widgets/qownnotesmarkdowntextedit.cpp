@@ -411,22 +411,15 @@ void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString, bool openInNew
     QUrl url(urlCopy);
     const QString scheme = url.scheme();
 
-    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - scheme:" << scheme
-             << " - isNoteInCurrentNoteFolder:" << Note::fileUrlIsNoteInCurrentNoteFolder(url);
-
     // If it's a note URL, noteid URL, file URL in note folder, or has no scheme (relative link),
     // use UrlHandler which knows how to handle notes properly
     if (scheme == QStringLiteral("note") || scheme == QStringLiteral("noteid") ||
         scheme == QStringLiteral("file") || scheme.isEmpty() ||
         Note::fileUrlIsNoteInCurrentNoteFolder(url)) {
         // Use UrlHandler for note URLs with the openInNewTab flag
-        qDebug() << "QOwnNotesMarkdownTextEdit " << __func__
-                 << " - Using UrlHandler with openInNewTab:" << openInNewTab;
         UrlHandler().openUrl(urlCopy, openInNewTab);
     } else {
         // For other URLs (http, https, etc.), use the base class implementation
-        qDebug() << "QOwnNotesMarkdownTextEdit " << __func__
-                 << " - Using base class implementation";
         QMarkdownTextEdit::openUrl(urlCopy, openInNewTab);
     }
 }
