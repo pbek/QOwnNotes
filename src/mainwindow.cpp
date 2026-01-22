@@ -62,6 +62,7 @@
 #include <QDockWidget>
 #include <QFile>
 #include <QGraphicsView>
+#include <QGuiApplication>
 #include <QInputDialog>
 #include <QJSEngine>
 #include <QJSValueIterator>
@@ -6417,8 +6418,11 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
 void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
 
+    // Check if Ctrl key is pressed to open in new tab
+    bool openInNewTab = QGuiApplication::keyboardModifiers().testFlag(Qt::ControlModifier);
+
     if (UrlHandler::isUrlSchemeLocal(url)) {
-        openLocalUrl(url.toString());
+        UrlHandler().openUrl(url.toString(), openInNewTab);
     } else {
         ui->noteTextEdit->openUrl(url.toString(), false);
     }

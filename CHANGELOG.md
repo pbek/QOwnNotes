@@ -3,10 +3,14 @@
 ## 26.1.11
 
 - Added support for opening note links in a new tab using `Ctrl + Shift + Click`
-  (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
+  in the note editor (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
   - Use `Ctrl + Click` to open a note link in the current tab (existing behavior)
   - Use `Ctrl + Shift + Click` to open a note link in a new tab
   - This works for all note link formats: `note://`, `noteid://`, and file links
+- Added support for opening note links in a new tab from the preview pane using
+  `Ctrl + Click` (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
+  - Without `Ctrl`, clicking a link in the preview opens it in the current tab
+  - With `Ctrl`, clicking a link in the preview opens it in a new tab
 
 ## 26.1.10
 
