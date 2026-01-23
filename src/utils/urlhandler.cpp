@@ -23,7 +23,7 @@ bool UrlHandler::isUrlSchemeLocal(const QUrl &url) {
            (scheme == QLatin1String("file") && Note::fileUrlIsNoteInCurrentNoteFolder(url));
 }
 
-void UrlHandler::openUrl(QString urlString, bool openInNewTab) {
+void UrlHandler::openUrl(QString urlString, const bool openInNewTab) {
     /* examples:
      * - <note://MyNote> opens the note "MyNote"
      * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with
