@@ -6422,6 +6422,12 @@ void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     bool openInNewTab = QGuiApplication::keyboardModifiers().testFlag(Qt::ControlModifier);
 
     if (UrlHandler::isUrlSchemeLocal(url)) {
+        // Update _lastNoteId when opening in a new tab to ensure the current note
+        // is correctly placed in the old tab, not some previous note
+        if (openInNewTab && currentNote.exists()) {
+            _lastNoteId = currentNote.getId();
+        }
+
         UrlHandler().openUrl(url.toString(), openInNewTab);
     } else {
         ui->noteTextEdit->openUrl(url.toString(), false);
