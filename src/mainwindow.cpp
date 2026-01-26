@@ -7458,6 +7458,11 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
     //    qDebug() << __func__ << " - 'mimeData->hasImage()': " << mimeData->hasImage();
     //    qDebug() << __func__ << " - 'mimeData->hasUrls()': " << mimeData->hasUrls();
 
+    // prevent pasting if note editor is in read-only mode
+    if (ui->noteTextEdit->isReadOnly()) {
+        return;
+    }
+
     // check if a QML wants to set the inserted text
     if (mimeData->hasText() || mimeData->hasHtml()) {
         ScriptingService *scriptingService = ScriptingService::instance();

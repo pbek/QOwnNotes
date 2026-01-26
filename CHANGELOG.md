@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.1.12
+
+- Fixed an issue where images could be pasted into the note editor when in read-only mode
+  (for [#3448](https://github.com/pbek/QOwnNotes/issues/3448))
+  - Image pasting is now properly prevented when note editing is disabled
+
 ## 26.1.11
 
 - Added support for opening note links in a new tab using `Ctrl + Shift + Click`
