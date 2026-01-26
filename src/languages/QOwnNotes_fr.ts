@@ -7155,7 +7155,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>In portable mode</source>
-<translation>En mode portable</translation>
+<translation>En mode portable </translation>
 </message>
 <message>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>

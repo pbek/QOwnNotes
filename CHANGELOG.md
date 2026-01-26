@@ -5,6 +5,7 @@
 - Fixed an issue where images could be pasted into the note editor when in read-only mode
   (for [#3448](https://github.com/pbek/QOwnNotes/issues/3448))
   - Image pasting is now properly prevented when note editing is disabled
+- Added more French translation (thank you, jd-develop)
 
 ## 26.1.11
 
