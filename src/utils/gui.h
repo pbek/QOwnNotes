@@ -119,6 +119,11 @@ void copyCodeBlockText(const QTextBlock &initialBlock);
 
 bool toggleCheckBoxAtCursor(QPlainTextEdit *textEdit);
 bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
+bool isTableAtCursor(QPlainTextEdit *textEdit, int *cursorColumn = nullptr);
+bool insertTableColumnLeft(QPlainTextEdit *textEdit);
+bool insertTableColumnRight(QPlainTextEdit *textEdit);
+bool insertTableRowAbove(QPlainTextEdit *textEdit);
+bool insertTableRowBelow(QPlainTextEdit *textEdit);
 
 void updateInterfaceFontSize(int fontSize = -1);
 

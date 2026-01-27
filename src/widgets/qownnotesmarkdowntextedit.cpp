@@ -1020,6 +1020,31 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     menu->addSeparator();
 
+    // add table column insertion actions if cursor is in a table
+    if (Utils::Gui::isTableAtCursor(this)) {
+        QAction *addColumnLeftAction = menu->addAction(tr("Add table column left"));
+        addColumnLeftAction->setEnabled(isAllowNoteEditing);
+        connect(addColumnLeftAction, &QAction::triggered, this,
+                [this]() { Utils::Gui::insertTableColumnLeft(this); });
+
+        QAction *addColumnRightAction = menu->addAction(tr("Add table column right"));
+        addColumnRightAction->setEnabled(isAllowNoteEditing);
+        connect(addColumnRightAction, &QAction::triggered, this,
+                [this]() { Utils::Gui::insertTableColumnRight(this); });
+
+        QAction *addRowAboveAction = menu->addAction(tr("Add table row above"));
+        addRowAboveAction->setEnabled(isAllowNoteEditing);
+        connect(addRowAboveAction, &QAction::triggered, this,
+                [this]() { Utils::Gui::insertTableRowAbove(this); });
+
+        QAction *addRowBelowAction = menu->addAction(tr("Add table row below"));
+        addRowBelowAction->setEnabled(isAllowNoteEditing);
+        connect(addRowBelowAction, &QAction::triggered, this,
+                [this]() { Utils::Gui::insertTableRowBelow(this); });
+
+        menu->addSeparator();
+    }
+
     // add the print menu
     QMenu *printMenu = menu->addMenu(tr("Print"));
     QIcon printIcon =

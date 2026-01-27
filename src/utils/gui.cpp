@@ -1229,6 +1229,354 @@ bool Utils::Gui::enableDockWidgetQuestion(QDockWidget *dockWidget) {
 }
 
 /**
+ * Checks if the cursor is currently in a Markdown table
+ *
+ * @param textEdit
+ * @param cursorColumn optional pointer to store the column index (0-based, ignoring leading empty
+ * column)
+ * @return true if cursor is in a table
+ */
+bool Utils::Gui::isTableAtCursor(QPlainTextEdit *textEdit, int *cursorColumn) {
+    QTextCursor cursor = textEdit->textCursor();
+    QTextBlock block = cursor.block();
+    const QString &tableText = block.text().trimmed();
+
+    // Check if text is part of a table
+    if (!tableText.startsWith(QLatin1String("|"))) {
+        return false;
+    }
+
+    // If cursorColumn is provided, calculate which column the cursor is in
+    if (cursorColumn != nullptr) {
+        const QString blockText = block.text();
+        const int posInBlock = cursor.positionInBlock();
+
+        // Find the leading whitespace offset
+        int leadingSpaces = 0;
+        while (leadingSpaces < blockText.length() && blockText[leadingSpaces].isSpace()) {
+            leadingSpaces++;
+        }
+
+        // Adjust position to account for leading spaces
+        const int adjustedPos = posInBlock - leadingSpaces;
+
+        // Count pipes before cursor position
+        int col = 0;
+        for (int i = 0; i < adjustedPos && i < tableText.length(); i++) {
+            if (tableText[i] == '|') {
+                col++;
+            }
+        }
+
+        // Markdown tables have an empty first column (before first pipe)
+        // so we subtract 1 to get the actual column index
+        *cursorColumn = std::max(0, col - 1);
+    }
+
+    return true;
+}
+
+/**
+ * Inserts a column to the left of the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a column was inserted
+ */
+bool Utils::Gui::insertTableColumnLeft(QPlainTextEdit *textEdit) {
+    int cursorColumn = 0;
+    if (!isTableAtCursor(textEdit, &cursorColumn)) {
+        return false;
+    }
+
+    QTextCursor initialCursor = textEdit->textCursor();
+    QTextCursor cursor = initialCursor;
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    QTextBlock initialBlock = cursor.block();
+    QTextBlock block = initialBlock;
+
+    // Collect all table rows
+    QList<QTextBlock> tableBlocks;
+    tableBlocks << block;
+    int startPosition = block.position();
+    int endPosition = cursor.position();
+
+    // Check previous blocks
+    block = initialBlock;
+    while (true) {
+        block = block.previous();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.prepend(block);
+        startPosition = block.position();
+    }
+
+    // Check next blocks
+    block = initialBlock;
+    while (true) {
+        block = block.next();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.append(block);
+        QString nextBlockText = block.text().trimmed();
+        endPosition = block.position() + block.text().size();
+    }
+
+    // Build new table with added column
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    QString newTableText;
+
+    for (int lineIdx = 0; lineIdx < tableBlocks.size(); lineIdx++) {
+        const QString &lineText = tableBlocks.at(lineIdx).text().trimmed();
+        QStringList parts = lineText.split(QStringLiteral("|"));
+
+        // Insert empty column at cursorColumn + 1 (accounting for empty first element)
+        const int insertIdx = cursorColumn + 1;
+
+        if (lineIdx == 1 && insertIdx < parts.size()) {
+            // This is the header separator line
+            const QString &nextColText = parts.at(insertIdx).trimmed();
+            if (headlineSeparatorRegExp.match(nextColText).hasMatch()) {
+                // Insert separator matching the next column's alignment
+                parts.insert(insertIdx, QStringLiteral(" --- "));
+            } else {
+                parts.insert(insertIdx, QStringLiteral("     "));
+            }
+        } else {
+            parts.insert(insertIdx, QStringLiteral("     "));
+        }
+
+        newTableText += parts.join(QStringLiteral("|"));
+        if (lineIdx < tableBlocks.size() - 1) {
+            newTableText += QStringLiteral("\n");
+        }
+    }
+
+    // Replace the table
+    cursor.setPosition(startPosition);
+    cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+    cursor.insertText(newTableText);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Inserts a column to the right of the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a column was inserted
+ */
+bool Utils::Gui::insertTableColumnRight(QPlainTextEdit *textEdit) {
+    int cursorColumn = 0;
+    if (!isTableAtCursor(textEdit, &cursorColumn)) {
+        return false;
+    }
+
+    QTextCursor initialCursor = textEdit->textCursor();
+    QTextCursor cursor = initialCursor;
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    QTextBlock initialBlock = cursor.block();
+    QTextBlock block = initialBlock;
+
+    // Collect all table rows
+    QList<QTextBlock> tableBlocks;
+    tableBlocks << block;
+    int startPosition = block.position();
+    int endPosition = cursor.position();
+
+    // Check previous blocks
+    block = initialBlock;
+    while (true) {
+        block = block.previous();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.prepend(block);
+        startPosition = block.position();
+    }
+
+    // Check next blocks
+    block = initialBlock;
+    while (true) {
+        block = block.next();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.append(block);
+        QString nextBlockText = block.text().trimmed();
+        endPosition = block.position() + block.text().size();
+    }
+
+    // Build new table with added column
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    QString newTableText;
+
+    for (int lineIdx = 0; lineIdx < tableBlocks.size(); lineIdx++) {
+        const QString &lineText = tableBlocks.at(lineIdx).text().trimmed();
+        QStringList parts = lineText.split(QStringLiteral("|"));
+
+        // Insert empty column at cursorColumn + 2 (accounting for empty first element, +1 for
+        // right)
+        const int insertIdx = cursorColumn + 2;
+
+        if (lineIdx == 1 && insertIdx <= parts.size()) {
+            // This is the header separator line
+            const QString &prevColText = parts.at(cursorColumn + 1).trimmed();
+            if (headlineSeparatorRegExp.match(prevColText).hasMatch()) {
+                // Insert separator matching the current column's alignment
+                parts.insert(insertIdx, QStringLiteral(" --- "));
+            } else {
+                parts.insert(insertIdx, QStringLiteral("     "));
+            }
+        } else {
+            parts.insert(insertIdx, QStringLiteral("     "));
+        }
+
+        newTableText += parts.join(QStringLiteral("|"));
+        if (lineIdx < tableBlocks.size() - 1) {
+            newTableText += QStringLiteral("\n");
+        }
+    }
+
+    // Replace the table
+    cursor.setPosition(startPosition);
+    cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+    cursor.insertText(newTableText);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Inserts a row above the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a row was inserted
+ */
+bool Utils::Gui::insertTableRowAbove(QPlainTextEdit *textEdit) {
+    if (!isTableAtCursor(textEdit)) {
+        return false;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
+    QTextBlock currentBlock = cursor.block();
+    const QString currentLineText = currentBlock.text().trimmed();
+
+    // Count the number of columns in the current row
+    QStringList parts = currentLineText.split(QStringLiteral("|"));
+    int columnCount = parts.size();
+
+    // Check if we're at the header separator row (line 1, 0-indexed)
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    bool isAtSeparatorRow = false;
+
+    // Check if this is a separator row
+    for (int i = 1; i < parts.size() - 1; i++) {
+        if (headlineSeparatorRegExp.match(parts.at(i).trimmed()).hasMatch()) {
+            isAtSeparatorRow = true;
+            break;
+        }
+    }
+
+    // Don't allow inserting above the separator row (would break table structure)
+    if (isAtSeparatorRow) {
+        // Check if previous row exists and is the header
+        QTextBlock prevBlock = currentBlock.previous();
+        if (prevBlock.isValid() && prevBlock.text().trimmed().startsWith(QLatin1String("|"))) {
+            // Insert before the header instead
+            cursor.setPosition(prevBlock.position());
+            cursor.movePosition(QTextCursor::StartOfBlock);
+        } else {
+            // Can't insert above separator if there's no header
+            return false;
+        }
+    } else {
+        // Position cursor at the start of current line
+        cursor.movePosition(QTextCursor::StartOfBlock);
+    }
+
+    // Build empty row with same number of columns
+    QString newRow;
+    for (int i = 0; i < columnCount - 1; i++) {
+        newRow += QStringLiteral("|");
+        if (i > 0) {
+            newRow += QStringLiteral("     ");
+        }
+    }
+    newRow += QStringLiteral("\n");
+
+    // Insert the new row
+    cursor.insertText(newRow);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Inserts a row below the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a row was inserted
+ */
+bool Utils::Gui::insertTableRowBelow(QPlainTextEdit *textEdit) {
+    if (!isTableAtCursor(textEdit)) {
+        return false;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
+    QTextBlock currentBlock = cursor.block();
+    const QString currentLineText = currentBlock.text().trimmed();
+
+    // Count the number of columns in the current row
+    QStringList parts = currentLineText.split(QStringLiteral("|"));
+    int columnCount = parts.size();
+
+    // Check if we're at the header separator row
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    bool isAtSeparatorRow = false;
+
+    // Check if this is a separator row
+    for (int i = 1; i < parts.size() - 1; i++) {
+        if (headlineSeparatorRegExp.match(parts.at(i).trimmed()).hasMatch()) {
+            isAtSeparatorRow = true;
+            break;
+        }
+    }
+
+    // Position cursor at the end of current line
+    cursor.movePosition(QTextCursor::EndOfBlock);
+
+    // Build empty row with same number of columns
+    QString newRow = QStringLiteral("\n");
+    for (int i = 0; i < columnCount - 1; i++) {
+        newRow += QStringLiteral("|");
+        if (i > 0) {
+            newRow += QStringLiteral("     ");
+        }
+    }
+
+    // Insert the new row
+    cursor.insertText(newRow);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
  * Fixes the icons of the dark mode
  * @param widget
  */

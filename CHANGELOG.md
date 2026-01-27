@@ -11,6 +11,13 @@
 - Fixed the image dialog to properly clear the preview when the file path is cleared
 - Fixed the attachment dialog to properly hide info and download button when the file
   path is cleared
+- Added context menu entries to insert table columns and rows when the cursor is in a
+  Markdown table (for [#3450](https://github.com/pbek/QOwnNotes/issues/3450))
+  - **Add table column left** - Inserts a new column to the left of the cursor position
+  - **Add table column right** - Inserts a new column to the right of the cursor position
+  - **Add table row above** - Inserts a new row above the cursor position
+  - **Add table row below** - Inserts a new row below the cursor position
+  - The table is automatically formatted after insertion
 
 ## 26.1.12
 
