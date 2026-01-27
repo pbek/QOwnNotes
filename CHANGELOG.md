@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 26.1.13
+
+- Fixed an issue where the last image was still shown after deleting all images in the
+  stored images dialog (for [#3449](https://github.com/pbek/QOwnNotes/issues/3449))
+  - The image preview is now properly cleared when all images are deleted
+  - The image preview is also cleared when switching to a view mode with no images
+- Fixed the same issue in the stored attachments dialog where file info remained visible
+  after deleting all attachments or switching to an empty view
+- Fixed the image dialog to properly clear the preview when the file path is cleared
+- Fixed the attachment dialog to properly hide info and download button when the file
+  path is cleared
+
 ## 26.1.12
 
 - Fixed an issue where images could be pasted into the note editor when in read-only mode

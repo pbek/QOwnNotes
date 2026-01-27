@@ -165,7 +165,17 @@ void ImageDialog::on_widthScaleHorizontalSlider_valueChanged(int value) {
 }
 
 void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
-    auto pathOrUrl = arg1;
+    auto pathOrUrl = arg1.trimmed();
+
+    // Clear preview if path is empty
+    if (pathOrUrl.isEmpty()) {
+        ui->previewFrame->setVisible(false);
+        ui->verticalSpacer->changeSize(0, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        _pixmap = QPixmap();
+        _basePixmap = QPixmap();
+        return;
+    }
+
     auto url = QUrl(pathOrUrl);
 
     if (!url.isValid()) {

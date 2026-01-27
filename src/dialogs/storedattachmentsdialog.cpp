@@ -116,6 +116,9 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
     if (attachmentFiles.count() > 0) {
         auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
+    } else {
+        // Clear the file details when the list is empty
+        loadCurrentFileDetails();
     }
 }
 

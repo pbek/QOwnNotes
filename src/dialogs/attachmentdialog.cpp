@@ -53,7 +53,16 @@ void AttachmentDialog::on_openButton_clicked() {
 }
 
 void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
-    auto url = QUrl(arg1);
+    auto pathOrUrl = arg1.trimmed();
+
+    // Clear info when path is empty
+    if (pathOrUrl.isEmpty()) {
+        ui->infoFrame->hide();
+        ui->downloadButton->hide();
+        return;
+    }
+
+    auto url = QUrl(pathOrUrl);
     ui->infoFrame->hide();
 
     if (!url.isValid()) {
@@ -68,10 +77,10 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
         ui->fileEdit->setText(url.toLocalFile());
     } else if (url.scheme().isEmpty()) {
         ui->infoFrame->show();
-        QFileInfo fileInfo(arg1);
+        QFileInfo fileInfo(pathOrUrl);
 
         QMimeDatabase db;
-        QMimeType type = db.mimeTypeForFile(arg1);
+        QMimeType type = db.mimeTypeForFile(pathOrUrl);
 
         ui->infoLabel->setText(Utils::Misc::toHumanReadableByteSize(fileInfo.size()) + " - " +
                                type.comment());

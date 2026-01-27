@@ -111,6 +111,9 @@ void StoredImagesDialog::refreshMediaFiles() {
     if (mediaFiles.count() > 0) {
         auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
+    } else {
+        // Clear the image preview when the list is empty
+        loadCurrentFileDetails();
     }
 }
 
@@ -131,6 +134,9 @@ void StoredImagesDialog::loadCurrentFileDetails() {
     QTreeWidgetItem *current = ui->fileTreeWidget->currentItem();
 
     if (current == nullptr) {
+        // Clear the graphics view when no item is selected or list is empty
+        auto *emptyScene = new QGraphicsScene(this);
+        ui->graphicsView->setScene(emptyScene);
         ui->notesFrame->hide();
 
         return;
