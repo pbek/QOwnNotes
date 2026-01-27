@@ -1542,18 +1542,6 @@ bool Utils::Gui::insertTableRowBelow(QPlainTextEdit *textEdit) {
     QStringList parts = currentLineText.split(QStringLiteral("|"));
     int columnCount = parts.size();
 
-    // Check if we're at the header separator row
-    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
-    bool isAtSeparatorRow = false;
-
-    // Check if this is a separator row
-    for (int i = 1; i < parts.size() - 1; i++) {
-        if (headlineSeparatorRegExp.match(parts.at(i).trimmed()).hasMatch()) {
-            isAtSeparatorRow = true;
-            break;
-        }
-    }
-
     // Position cursor at the end of current line
     cursor.movePosition(QTextCursor::EndOfBlock);
 
