@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.1.14
+
+- Fixed a regression where `Ctrl + Click` on links in the note editor caused them
+  to be opened twice (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
+  - Links are now opened only once when clicked with `Ctrl`
+
 ## 26.1.13
 
 - Fixed an issue where the last image was still shown after deleting all images in the

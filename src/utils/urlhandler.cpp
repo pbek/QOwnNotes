@@ -117,6 +117,8 @@ void UrlHandler::handleNoteIdUrl(const QString &urlString, bool openInNewTab) {
 
 void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment,
                                bool openInNewTab) {
+    qDebug() << __func__ << " - urlString:" << urlString << " - openInNewTab:" << openInNewTab;
+
     Note note;
     const QUrl url(urlString);
     auto mw = MainWindow::instance();
@@ -133,8 +135,11 @@ void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment
 
     // does this note really exist?
     if (note.isFetched()) {
+        qDebug() << __func__ << " - note fetched, isFetched:" << note.isFetched()
+                 << " - openInNewTab:" << openInNewTab;
         if (openInNewTab) {
             // open note in a new tab
+            qDebug() << __func__ << " - calling openNoteInTab";
             mw->openNoteInTab(note);
         } else {
             // set current note
