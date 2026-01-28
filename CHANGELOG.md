@@ -5,6 +5,12 @@
 - Fixed a regression where `Ctrl + Click` on links in the note editor caused them
   to be opened twice (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
   - Links are now opened only once when clicked with `Ctrl`
+- Added bookmark markers (1-9) next to line numbers in the note editor
+  (for [#3453](https://github.com/pbek/QOwnNotes/issues/3453))
+  - When you store a note bookmark (Ctrl+1 through Ctrl+9), the bookmark slot number
+    is now displayed in red next to the line number in the editor
+  - Bookmark markers are only shown for the current note
+  - The "Show line numbers" setting needs to be enabled in the editor settings
 
 ## 26.1.13
 

@@ -376,6 +376,8 @@ class MainWindow : public QMainWindow {
 
     void storeNoteBookmark(int slot = 0);
 
+    void updateNoteBookmarkDisplay();
+
     void on_actionInsert_code_block_triggered();
 
     void on_actionNext_note_triggered();

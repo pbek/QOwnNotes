@@ -5539,13 +5539,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   </property>
                  </spacer>
                 </item>
-                <item row="9" column="0" colspan="4">
-                 <widget class="QCheckBox" name="showLineNumbersInEditorCheckBox">
-                  <property name="text">
-                   <string>Show line numbers</string>
-                  </property>
-                 </widget>
-                </item>
+                 <item row="9" column="0" colspan="4">
+                  <widget class="QCheckBox" name="showLineNumbersInEditorCheckBox">
+                   <property name="text">
+                    <string>Show line numbers and bookmark markers (1-9)</string>
+                   </property>
+                  </widget>
+                 </item>
                 <item row="1" column="0" colspan="4">
                  <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
                   <property name="toolTip">

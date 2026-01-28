@@ -4045,6 +4045,9 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     ui->actionToggle_distraction_free_mode->setEnabled(true);
 
     updateNoteGraphicsView();
+
+    // Update bookmark display for the current note
+    updateNoteBookmarkDisplay();
 }
 
 void MainWindow::updateNoteGraphicsView() {
@@ -7294,6 +7297,34 @@ void MainWindow::storeNoteBookmark(int slot) {
 
     showStatusBarMessage(tr("Bookmarked note position at slot %1").arg(QString::number(slot)),
                          QStringLiteral("🔖"), 3000);
+
+    // Update the bookmark display in the line number area
+    updateNoteBookmarkDisplay();
+}
+
+/**
+ * Updates the bookmark markers display in the line number area
+ */
+void MainWindow::updateNoteBookmarkDisplay() {
+    // Build a hash map of bookmark slot -> line number for the current note
+    QHash<int, int> bookmarkLines;
+
+    for (auto it = noteBookmarks.constBegin(); it != noteBookmarks.constEnd(); ++it) {
+        const NoteHistoryItem &item = it.value();
+
+        // Only show bookmarks for the current note
+        if (item.getNoteName() == currentNote.getName() &&
+            item.getNoteSubFolderPathData() == currentNote.noteSubFolderPathData()) {
+            // Convert cursor position to line number
+            QTextCursor cursor(ui->noteTextEdit->document());
+            cursor.setPosition(item.getCursorPosition());
+            int lineNumber = cursor.blockNumber() + 1;    // Line numbers are 1-based
+
+            bookmarkLines[it.key()] = lineNumber;
+        }
+    }
+
+    ui->noteTextEdit->setBookmarkLines(bookmarkLines);
 }
 
 void MainWindow::loadNoteBookmarks() {
