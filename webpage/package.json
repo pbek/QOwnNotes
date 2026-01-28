@@ -37,7 +37,7 @@
     "@vuepress/theme-default": "next",
     "playwright-core": "1.54.1",
     "glob": "^10.3.10",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.17.23",
     "markdown-it": "^14.1.0",
     "markdown-it-meta": "^0.0.1",
     "mermaid": "^11.12.2",
