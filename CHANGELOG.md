@@ -11,6 +11,10 @@
     is now displayed in red next to the line number in the editor
   - Bookmark markers are only shown for the current note
   - The "Show line numbers" setting needs to be enabled in the editor settings
+- Fixed table border colors in dark mode preview to be white instead of black
+  (for [#3442](https://github.com/pbek/QOwnNotes/issues/3442))
+  - Table borders are now properly visible in dark mode
+  - Border colors automatically adapt based on the dark mode setting
 
 ## 26.1.13
 
