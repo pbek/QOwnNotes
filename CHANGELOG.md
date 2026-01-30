@@ -5,6 +5,13 @@
 - Fixed a regression where pressing `Ctrl + Space` to format a markdown table would show
   "An url was opened at the current cursor position" but no table formatting would happen
   (for [#3454](https://github.com/pbek/QOwnNotes/issues/3454))
+  - Table formatting with `Ctrl + Space` now works correctly again
+  - The issue was caused by the fix for double-opening links in 26.1.14
+- Fixed an issue where `Ctrl + Shift + Click` on note links would not open notes in a new tab
+  (for [#3447](https://github.com/pbek/QOwnNotes/issues/3447))
+  - When clicking a note link with `Ctrl + Shift`, the note now opens in a new tab as expected
+  - Previously, if the note was already open in a tab, it would just switch to that existing tab
+    instead of creating a new one
 
 ## 26.1.14
 

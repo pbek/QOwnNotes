@@ -104,7 +104,7 @@ void UrlHandler::handleNoteIdUrl(const QString &urlString, bool openInNewTab) {
         if (note.isFetched()) {
             auto mw = MainWindow::instance();
             if (openInNewTab) {
-                mw->openNoteInTab(note);
+                mw->openNoteInTab(note, true);
             } else {
                 // set current note
                 mw->setCurrentNote(std::move(note));
@@ -140,7 +140,7 @@ void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment
         if (openInNewTab) {
             // open note in a new tab
             qDebug() << __func__ << " - calling openNoteInTab";
-            mw->openNoteInTab(note);
+            mw->openNoteInTab(note, true);
         } else {
             // set current note
             mw->setCurrentNote(std::move(note));

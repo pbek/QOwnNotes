@@ -9907,12 +9907,12 @@ void MainWindow::openSelectedNotesInTab() {
     }
 }
 
-void MainWindow::openNoteInTab(const Note &note) {
-    // simulate a newly opened tab by updating the current tab with the last note
+void MainWindow::openNoteInTab(const Note &note, bool forceNewTab) {
+    // Simulate a newly opened tab by updating the current tab with the last note
     if (_lastNoteId > 0) {
         auto previousNote = Note::fetch(_lastNoteId);
 
-        // open the previous note in a new tab only if it is not already open in a tab
+        // Open the previous note in a new tab only if it is not already open in a tab
         if (previousNote.isFetched() && getNoteTabIndex(_lastNoteId) == -1) {
             updateCurrentTabData(previousNote);
         }
@@ -9920,7 +9920,10 @@ void MainWindow::openNoteInTab(const Note &note) {
 
     const QString &noteName = note.getName();
     const int noteId = note.getId();
-    int tabIndex = getNoteTabIndex(noteId);
+
+    // If forceNewTab is true, always create a new tab (set tabIndex to -1)
+    // Otherwise, check if the note is already open in a tab
+    int tabIndex = forceNewTab ? -1 : getNoteTabIndex(noteId);
 
     if (tabIndex == -1) {
         auto *widgetPage = new QWidget();

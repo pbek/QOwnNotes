@@ -264,7 +264,7 @@ class MainWindow : public QMainWindow {
 
     void openSelectedNotesInTab();
 
-    void openNoteInTab(const Note &note);
+    void openNoteInTab(const Note &note, bool forceNewTab = false);
 
     void openCurrentNoteInTab();
 
