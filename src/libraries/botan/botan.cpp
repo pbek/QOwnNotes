@@ -5,6 +5,10 @@
  * Botan is released under the Simplified BSD License (see license.txt)
  */
 
+// Disable false positive warnings from GCC about uninitialized memory
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+
 #include "botan.h"
 
 #include "botan_internal.h"
@@ -23876,3 +23880,6 @@ std::string runtime_version_check(uint32_t major, uint32_t minor, uint32_t patch
 }
 
 }    // namespace Botan
+
+// Re-enable warnings
+#pragma GCC diagnostic pop
