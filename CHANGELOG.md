@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.1.15
+
+- Fixed a regression where pressing `Ctrl + Space` to format a markdown table would show
+  "An url was opened at the current cursor position" but no table formatting would happen
+  (for [#3454](https://github.com/pbek/QOwnNotes/issues/3454))
+
 ## 26.1.14
 
 - Fixed a regression where `Ctrl + Click` on links in the note editor caused them
