@@ -22,9 +22,7 @@ test("German translation - content is in German", async ({ page, config }) => {
   await expect(
     page.getByText("Kostenlose Open-Source-Markdown-Notizen"),
   ).toBeVisible();
-  await expect(
-    page.getByRole("link", { name: "Schnellstart →" }),
-  ).toBeVisible();
+  await expect(page.getByRole("link", { name: "Quick Start →" })).toBeVisible();
 });
 
 test("German translation - feature sections", async ({ page, config }) => {
@@ -79,7 +77,7 @@ test("Persian (Farsi) translation - content is in Persian", async ({
     page.getByRole("link", { name: "شروع", exact: true }),
   ).toBeVisible();
   await expect(page.getByRole("link", { name: "نصب" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "کمک مالی" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "حمایت مالی" })).toBeVisible();
 
   // Check Persian heading and description
   await expect(
@@ -88,7 +86,7 @@ test("Persian (Farsi) translation - content is in Persian", async ({
   await expect(
     page.getByText("یادداشت برداری مارک داون پرونده با متن ساده"),
   ).toBeVisible();
-  await expect(page.getByRole("link", { name: "شروع سریع⬅" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Quick Start →" })).toBeVisible();
 });
 
 test("Persian (Farsi) translation - feature sections", async ({
@@ -141,7 +139,7 @@ test("Language selector button exists", async ({ page, config }) => {
   await page.goto(config.baseURL + "/");
 
   // Check for language selector button with globe icon
-  const languageButton = page.getByRole("button", { name: "Languages" });
+  const languageButton = page.getByRole("button", { name: "Select language" });
   await expect(languageButton).toBeVisible();
 });
 
