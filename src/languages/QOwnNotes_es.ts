@@ -3688,6 +3688,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Eliminar</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation>Mostrar tarjetas archivadas</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>Esto no funciona para los subelementos, ¡ya que pueden estar ocultos por el elemento principal!</translation>
 </message>
@@ -3841,6 +3845,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>La carga de las tarjetas falló con el código de estado %1 y el mensaje: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation>Error al cargar las tarjetas archivadas</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation>La carga de las tarjetas archivadas falló con el código de estado %1 y el mensaje: %2</translation>
 </message>
 </context>
 <context>
@@ -4487,6 +4499,22 @@ Haga clic en "Cancelar" para descartar tus cambios y conservar la versión exter
 <message>
 <source>Copy code block</source>
 <translation>Copiar bloque de código</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation>Añadir columna a la tabla a la izquierda</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation>Añadir columna a la tabla a la derecha</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation>Añadir fila a la tabla arriba</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation>Añadir fila a la tabla abajo</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5993,6 +6021,10 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <translation>¡Tenga en cuenta que deshabilitar esto también deshabilitará el panel de navegación!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation>Mostrar números de línea y marcadores de página (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Deshabilitar el parpadeo del cursor</translation>
 </message>
@@ -6101,10 +6133,6 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>API key</source>
 <translation>Clave de API</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>Mostrar números de línea</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

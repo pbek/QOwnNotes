@@ -3690,6 +3690,10 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation type="unfinished">Delete</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation type="unfinished">Show archived cards</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>Dies funktioniert nicht für Unterelemente, da sie möglicherweise vom übergeordneten Element verborgen werden!</translation>
 </message>
@@ -3843,6 +3847,14 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>Laden der Karten fehlgeschlagen mit Statuscode %1 und Nachricht: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation type="unfinished">Error while loading archived cards</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the archived cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4488,6 +4500,22 @@ Klicken Sie auf 'Abbrechen', um Ihre Änderungen zu verwerfen und die externe Ve
 <message>
 <source>Copy code block</source>
 <translation>Codeblock kopieren</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation type="unfinished">Add table column left</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation type="unfinished">Add table column right</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation type="unfinished">Add table row above</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation type="unfinished">Add table row below</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5994,6 +6022,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Beachten Sie, dass durch Deaktivieren dieser Option auch das Navigationsfeld deaktiviert wird!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Blinkenden Mauszeiger deaktivieren</translation>
 </message>
@@ -6102,10 +6134,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>API key</source>
 <translation>API-Schlüssel</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>Zeilennummern anzeigen</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

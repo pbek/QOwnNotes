@@ -87,11 +87,11 @@ Hay muchas formas de crear listas.
 1. Los números reales no importan, solo que sean números
 1. Otro elemento.
 
-* Las listas sin ordenar pueden usar asteriscos
+* Las listas sin ordenar pueden utilizar asteriscos
 
-- O símbolos de más
+- O signos de menos
 
-+ O símbolos de menos
++ O signos de más
 ```
 
 ::: tip

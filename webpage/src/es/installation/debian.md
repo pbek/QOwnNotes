@@ -2,7 +2,7 @@
 
 ## Debian Inestable
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar.
+Run the following shell commands to trust the repository. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -29,7 +29,7 @@ Este paquete está construido con Qt6.
 
 ## Debian 13.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar.
+Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -56,7 +56,7 @@ Este paquete está construido con Qt6.
 
 ## Debian 12.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar.
+Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -83,7 +83,7 @@ Este paquete está construido con Qt6.
 
 ## Debian 11.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar.
+Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -110,7 +110,7 @@ Si utiliza este repositorio para otras versiones de Debian Linux, por favor aseg
 
 ## Debian 10.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar.
+Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. You might need to repeat this step when the key expires.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
@@ -132,7 +132,7 @@ Si utiliza este repositorio para otras versiones de Debian Linux, por favor aseg
 
 ## Debian 9.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar.
+Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. You might need to repeat this step when the key expires.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -

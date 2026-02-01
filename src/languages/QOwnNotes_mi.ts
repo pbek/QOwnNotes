@@ -3648,6 +3648,10 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation type="unfinished">Delete</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation type="unfinished">Show archived cards</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
 </message>
@@ -3801,6 +3805,14 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation type="unfinished">Error while loading archived cards</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the archived cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4440,6 +4452,22 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Copy code block</source>
 <translation type="unfinished">Copy code block</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation type="unfinished">Add table column left</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation type="unfinished">Add table column right</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation type="unfinished">Add table row above</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation type="unfinished">Add table row below</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5949,6 +5977,10 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Monokia koma puhipuhi</translation>
 </message>
@@ -6057,10 +6089,6 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <message>
 <source>API key</source>
 <translation type="unfinished">API key</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

@@ -3688,6 +3688,10 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <translation>Elimina</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation type="unfinished">Show archived cards</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>Questo non funziona per i sotto-elementi, perché potrebbero essere nascosti dall'elemento padre!</translation>
 </message>
@@ -3841,6 +3845,14 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>Caricamento delle schede non riuscito con codice di stato %1 e messaggio: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation type="unfinished">Error while loading archived cards</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the archived cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4486,6 +4498,22 @@ Fai clic su 'Annulla' per scartare le tue modifiche e mantenere la versione este
 <message>
 <source>Copy code block</source>
 <translation>Copia blocco di codice</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation type="unfinished">Add table column left</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation type="unfinished">Add table column right</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation type="unfinished">Add table row above</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation type="unfinished">Add table row below</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5994,6 +6022,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Nota che disabilitare questo disabiliterà il pannello navigazione!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Disabilita il lampeggiamento del cursore</translation>
 </message>
@@ -6102,10 +6134,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>API key</source>
 <translation>Chiave API</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>Mostra numeri di riga</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

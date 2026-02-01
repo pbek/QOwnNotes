@@ -14,7 +14,7 @@ Dispone de un diálogo de importación de Joplin al que puede acceder mediante e
 
 1. Instale el complemento de la comunidad ["Better Markdown Links"](https://github.com/mnaoumov/obsidian-better-markdown-links) para convertir todos los _enlaces de Markdown con formato wikilink y Obsidian (OFM)_ y hacer que Obsidian funcione con _enlaces de Markdown estándar_.
 
-2. Abra los mismos archivos (mismo bóveda) en QOwnNotes. Instale el script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) de QOwnNotes y presione el botón de importación "ObsidianImport" en el panel de script para convertir todos los archivos.
+2. Abra los mismos archivos (misma bóveda) en QOwnNotes. Instale el script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) de QOwnNotes y presione el botón de importación "ObsidianImport" en el panel de script para convertir todos los archivos.
 
 La exportación de QOwnNotes a Obsidian no es necesaria.
 
@@ -24,7 +24,7 @@ Warning _¡Precaución!_: El complemento `"Better Markdown Links"` adapta silenc
 
 ## VS Codium / Github / Markor / Typora / Pandoc y otros (Markdown con estilo o GFM)
 
-Markdown con estilo GitHub (GFM) utiliza encabezados de enlaces con estilo de guiones (espacios convertidos en guiones). Una referencia a un encabezado como `## Encabezado con espacios`, por ejemplo, se verá así `[notelink](β_nota.md#encabezado-con-espacios)`.
+Markdown con estilo GitHub (GFM) utiliza encabezados de enlaces con estilo de guiones (espacios convertidos en guiones). Una referencia a un encabezado como `## Encabezado con espacios`, por ejemplo, se verá como `[notelink](β_nota.md#encabezado-con-espacios)`.
 
 QOwnNotes y Obsidian (Markdown con estilo de Obsidian u OFM) usan _fragmentos de encabezado codificados en URL (codificados por porcentaje)_ (espacios convertidos a %20 y manteniendo las letras mayúsculas), por lo que el mismo enlace se verá diferente `[notelink](%CE%B2_note.md#Encabezado%20con%20espacios)`.
 

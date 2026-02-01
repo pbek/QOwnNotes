@@ -3682,6 +3682,10 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <translation>Excluir</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation type="unfinished">Show archived cards</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>Isso não funciona para subitens, pois eles podem estar ocultos pelo item pai!</translation>
 </message>
@@ -3835,6 +3839,14 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>Falha ao carregar os cartões com código de status %1 e mensagem: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation type="unfinished">Error while loading archived cards</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the archived cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4480,6 +4492,22 @@ Clique em 'Cancelar' para descartar suas alterações e manter a versão externa
 <message>
 <source>Copy code block</source>
 <translation>Copiar bloco de código</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation type="unfinished">Add table column left</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation type="unfinished">Add table column right</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation type="unfinished">Add table row above</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation type="unfinished">Add table row below</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5987,6 +6015,10 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <translation>Perceba que desativar isto também desativará o painel de navegação!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Desabilitar o cursor piscando</translation>
 </message>
@@ -6095,10 +6127,6 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <source>API key</source>
 <translation>Chave de API</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>Exibir números de linha</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

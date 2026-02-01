@@ -2,7 +2,7 @@
 
 ## Debian Unstable
 
-نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
+Run the following shell commands to trust the repository. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -29,7 +29,7 @@ This package is built with Qt6.
 
 ## Debian 13.0
 
-نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
+نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -56,7 +56,7 @@ This package is built with Qt6.
 
 ## دبيان 12.0
 
-نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
+نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -83,7 +83,7 @@ This package is built with Qt6.
 
 ## دبيان 11.0
 
-نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع.
+نفّذ الأوامر التالية في الطرفية لاستيثاق المستودع. You might need to repeat this step when the key expires.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -110,7 +110,7 @@ sudo apt install qownnotes
 
 ## دبيان 10.0
 
-Run the following shell commands to trust the repository.
+Run the following shell commands to trust the repository. You might need to repeat this step when the key expires.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
@@ -132,7 +132,7 @@ sudo apt-get install qownnotes
 
 ## دبيان 9.0
 
-Run the following shell commands to trust the repository.
+Run the following shell commands to trust the repository. You might need to repeat this step when the key expires.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -

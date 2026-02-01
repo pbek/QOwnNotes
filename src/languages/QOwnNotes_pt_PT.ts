@@ -3700,6 +3700,10 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <translation>Eliminar</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation type="unfinished">Show archived cards</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>Isto não funciona para sub-itens, porque podem estar ocultos pelo item pai!</translation>
 </message>
@@ -3853,6 +3857,14 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>Carregamento dos cartões falhou com código de estado %1 e mensagem: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation type="unfinished">Error while loading archived cards</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the archived cards failed with status code %1 and message: %2</translation>
 </message>
 </context>
 <context>
@@ -4503,6 +4515,22 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Copy code block</source>
 <translation>Copiar bloco de código</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation type="unfinished">Add table column left</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation type="unfinished">Add table column right</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation type="unfinished">Add table row above</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation type="unfinished">Add table row below</translation>
 </message>
 <message>
 <source>Print</source>
@@ -6014,6 +6042,10 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
 <translation>Note que desativar isto também desativará o painel de navegação!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Desativar cursor piscando</translation>
 </message>
@@ -6122,10 +6154,6 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
 <message>
 <source>API key</source>
 <translation>Chave de API</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>Mostrar número das linhas</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

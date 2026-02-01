@@ -4,6 +4,7 @@
 
 - Empty note files are now allowed again and will only result in a warning in the log
   (for [#3456](https://github.com/pbek/QOwnNotes/issues/3456))
+- Added more Korean, French, Spanish translation (thank you, venusgirl, jd-develop, alejandromoc)
 
 ## 26.1.15
 

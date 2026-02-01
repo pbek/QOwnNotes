@@ -2,7 +2,7 @@
 
 ## Debian 불안정
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다. 키가 만료되면 이 단계를 반복해야 할 수도 있습니다.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -29,7 +29,7 @@ sudo apt install qownnotes
 
 ## Debian 13.0
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다. 키가 만료되면 이 단계를 반복해야 할 수도 있습니다.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -56,7 +56,7 @@ sudo apt install qownnotes
 
 ## Debian 12.0
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다. 키가 만료되면 이 단계를 반복해야 할 수도 있습니다.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -83,7 +83,7 @@ sudo apt install qownnotes
 
 ## Debian 11.0
 
-저장소를 신뢰하려면 다음 셸 명령을 실행합니다.
+저장소를 신뢰하려면 다음 셸 명령을 실행합니다. 키가 만료되면 이 단계를 반복해야 할 수도 있습니다.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -108,7 +108,7 @@ sudo apt install qownnotes
 
 ## Debian 10.0
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다. 키가 만료되면 이 단계를 반복해야 할 수도 있습니다.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
@@ -128,7 +128,7 @@ sudo apt-get install qownnotes
 
 ## Debian 9.0
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+다음 셸 명령을 실행하여 저장소를 신뢰합니다. 키가 만료되면 이 단계를 반복해야 할 수도 있습니다.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -

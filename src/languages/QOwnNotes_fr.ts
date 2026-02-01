@@ -3689,6 +3689,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Supprimer</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation>Montrer les cartes archivées</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>Cela ne fonctionne pas pour les sous-éléments car ils peuvent être masqués par l'élément parent !</translation>
 </message>
@@ -3842,6 +3846,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>Le chargement des cartes a échoué avec le code de statut %1 et le message : %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation>Erreur lors du chargement des cartes archivées</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation>Le chargement des cartes archivées a échoué avec le code de statut %1 et le message : %2</translation>
 </message>
 </context>
 <context>
@@ -4487,6 +4499,22 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 <message>
 <source>Copy code block</source>
 <translation>Copier bloc de code</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation>Ajouter une colonne de tableau à gauche</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation>Ajouter une colonne de tableau à droite</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation>Ajouter une colonne de tableau au-dessus</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation>Ajouter une colonne de tableau en-dessous</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5994,6 +6022,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Veuillez noter que désactiver ceci désactivera également le panneau de navigation !</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Désactiver le curseur clignotant</translation>
 </message>
@@ -6102,10 +6134,6 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>API key</source>
 <translation>Clé d’API</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>Afficher les numéros de ligne</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>

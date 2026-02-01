@@ -3648,6 +3648,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>삭제</translation>
 </message>
 <message>
+<source>Show archived cards</source>
+<translation>압축된 카드 표시</translation>
+</message>
+<message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
 <translation>하위 항목에는 작동하지 않습니다. 상위 항목에 의해 숨겨질 수 있기 때문입니다!</translation>
 </message>
@@ -3801,6 +3805,14 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
 <translation>상태 코드 %1과 메시지 %2로 카드를 불러오지 못했습니다</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation>압축된 카드를 로드하는 중 오류 발생</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation>상태 코드 %1 및 메시지와 함께 압축된 카드를 로드하지 못했습니다: %2</translation>
 </message>
 </context>
 <context>
@@ -4440,6 +4452,22 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <message>
 <source>Copy code block</source>
 <translation>코드 블록 복사</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation>테이블 열 왼쪽에 추가</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation>테이블 열 오른쪽에 추가</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation>테이블 행 위에 추가</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation>테이블 행 아래에 추가</translation>
 </message>
 <message>
 <source>Print</source>
@@ -5946,6 +5974,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>이 기능을 비활성화하면 탐색 패널도 비활성화됩니다!</translation>
 </message>
 <message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation>줄 번호 및 북마크 표시기 (1-9) 표시</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>커서 깜박임 사용 안 함</translation>
 </message>
@@ -6054,10 +6086,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>API key</source>
 <translation>API 키</translation>
-</message>
-<message>
-<source>Show line numbers</source>
-<translation>줄 번호 표시</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>
