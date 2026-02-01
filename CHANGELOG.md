@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.2.0
+
+- Empty note files are now allowed again and will only result in a warning in the log
+  (for [#3456](https://github.com/pbek/QOwnNotes/issues/3456))
+
 ## 26.1.15
 
 - Fixed a regression where pressing `Ctrl + Space` to format a markdown table would show

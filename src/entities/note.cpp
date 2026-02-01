@@ -2470,9 +2470,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
         // Check file size before reading - skip empty files as they might indicate corruption
         const qint64 fileSize = fileInfo.size();
         if (fileSize == 0) {
-            qWarning() << __func__ << " - Skipping empty file:" << file.fileName();
-            file.close();
-            return;
+            qWarning() << __func__ << " - Opened empty file:" << file.fileName();
         }
 
         QTextStream in(&file);
@@ -2485,7 +2483,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
         file.close();
 
         // Verify that we actually read some content
-        if (noteText.isEmpty()) {
+        if (fileSize > 0 && noteText.isEmpty()) {
             qWarning() << __func__ << " - Read empty text from file:" << file.fileName();
             return;
         }
