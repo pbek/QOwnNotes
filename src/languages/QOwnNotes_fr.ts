@@ -6023,7 +6023,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Show line numbers and bookmark markers (1-9)</source>
-<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+<translation>Afficher les numéros de ligne et de marque-page (1-9)</translation>
 </message>
 <message>
 <source>Disable cursor blinking</source>
