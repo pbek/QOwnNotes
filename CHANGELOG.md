@@ -4,7 +4,8 @@
 
 - Added ability to rename headings directly in the Navigation panel
   (for [#3459](https://github.com/pbek/QOwnNotes/issues/3459))
-  - You can now double-click or press `F2` on any heading in the "Headings" tab of the Navigation panel to rename it
+  - You can now double-click, press `F2`, or right-click and select "Rename heading"
+    on any heading in the "Headings" tab of the Navigation panel to rename it
   - The heading text in your note will update automatically while preserving the heading level
   - This provides a quick way to reorganize your note structure without manually editing the text
 

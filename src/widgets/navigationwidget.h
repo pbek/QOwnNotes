@@ -44,6 +44,8 @@ class NavigationWidget : public QTreeWidget {
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemClicked(QTreeWidgetItem *current, int column);
     void onItemChanged(QTreeWidgetItem *item, int column);
+    void showContextMenu(const QPoint &pos);
+    void renameHeadingTriggered();
 
    private:
     void buildNavTree(const QVector<Node> &nodes);

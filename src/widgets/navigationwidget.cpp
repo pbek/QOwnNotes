@@ -16,6 +16,7 @@
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
 #include <QDebug>
+#include <QMenu>
 #include <QRegularExpression>
 #include <QTextBlock>
 #include <QTextDocument>
@@ -29,6 +30,11 @@ NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
     QObject::connect(this, &NavigationWidget::itemClicked, this, &NavigationWidget::onItemClicked);
     // We want to handle itemChanged to allow renaming headings
     QObject::connect(this, &NavigationWidget::itemChanged, this, &NavigationWidget::onItemChanged);
+
+    // Enable context menu
+    setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(this, &QTreeWidget::customContextMenuRequested, this,
+            &NavigationWidget::showContextMenu);
 }
 
 /**
@@ -227,4 +233,32 @@ QTreeWidgetItem *NavigationWidget::findSuitableParentItem(int elementType) const
     return (lastHigherItem == nullptr && elementType > MarkdownHighlighter::H1)
                ? findSuitableParentItem(elementType)
                : lastHigherItem;
+}
+
+/**
+ * Shows the context menu for the navigation widget
+ */
+void NavigationWidget::showContextMenu(const QPoint &pos) {
+    QTreeWidgetItem *item = itemAt(pos);
+    if (item == nullptr) {
+        return;
+    }
+
+    QMenu menu(this);
+
+    // Add "Rename heading" action
+    QAction *renameAction = menu.addAction(tr("&Rename heading"));
+    connect(renameAction, &QAction::triggered, this, &NavigationWidget::renameHeadingTriggered);
+
+    menu.exec(mapToGlobal(pos));
+}
+
+/**
+ * Triggers the rename action for the currently selected heading
+ */
+void NavigationWidget::renameHeadingTriggered() {
+    QTreeWidgetItem *item = currentItem();
+    if (item != nullptr) {
+        editItem(item, 0);
+    }
 }
