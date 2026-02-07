@@ -9685,8 +9685,9 @@ void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
     Note currentNote = this->currentNote;
 
     // Generate the old and new heading fragments (URL encoded)
-    QString oldFragment = Note::generateTextForLink(oldHeading);
-    QString newFragment = Note::generateTextForLink(newHeading);
+    // Heading fragments in links are URL-encoded (spaces become %20, etc.)
+    QString oldFragment = QString(QUrl::toPercentEncoding(oldHeading));
+    QString newFragment = QString(QUrl::toPercentEncoding(newHeading));
 
     // Find all notes that have backlinks to the current note
     QVector<int> backlinkNoteIds = currentNote.findBacklinkedNoteIds();
