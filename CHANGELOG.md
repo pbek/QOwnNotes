@@ -7,7 +7,9 @@
   - You can now double-click, press `F2`, or right-click and select "Rename heading"
     on any heading in the "Headings" tab of the Navigation panel to rename it
   - The heading text in your note will update automatically while preserving the heading level
-  - This provides a quick way to reorganize your note structure without manually editing the text
+  - When you rename a heading, QOwnNotes will scan all notes that link to the current note and prompt you to update any links that reference the old heading
+  - This ensures that note links with heading fragments (e.g., `[Link](note.md#old-heading)`) remain valid after renaming
+  - This provides a quick way to reorganize your note structure without manually editing the text or breaking backlinks
 
 ## 26.2.0
 

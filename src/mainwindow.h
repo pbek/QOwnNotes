@@ -275,6 +275,8 @@ class MainWindow : public QMainWindow {
     void onNavigationWidgetHeadingRenamed(int position, const QString &oldText,
                                           const QString &newText);
 
+    void updateBacklinksAfterHeadingRename(const QString &oldHeading, const QString &newHeading);
+
    private slots:
 
     void on_noteTextEdit_textChanged();

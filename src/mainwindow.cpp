@@ -9639,8 +9639,6 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
  */
 void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &oldText,
                                                   const QString &newText) {
-    Q_UNUSED(oldText)
-
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextDocument *doc = textEdit->document();
 
@@ -9673,6 +9671,92 @@ void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &o
 
     // Reparse the navigation to reflect the change
     // This will be triggered automatically by the text change event
+
+    // Check for backlinks that reference this heading and ask user if they want to update them
+    updateBacklinksAfterHeadingRename(oldText, newText);
+}
+
+/**
+ * Updates backlinks after a heading has been renamed
+ * Scans all notes that link to the current note and updates heading references
+ */
+void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
+                                                   const QString &newHeading) {
+    Note currentNote = this->currentNote;
+
+    // Generate the old and new heading fragments (URL encoded)
+    QString oldFragment = Note::generateTextForLink(oldHeading);
+    QString newFragment = Note::generateTextForLink(newHeading);
+
+    // Find all notes that have backlinks to the current note
+    QVector<int> backlinkNoteIds = currentNote.findBacklinkedNoteIds();
+
+    if (backlinkNoteIds.isEmpty()) {
+        return;
+    }
+
+    // Collect notes that actually contain links with the old heading fragment
+    QVector<Note> notesWithHeadingLinks;
+
+    for (int noteId : backlinkNoteIds) {
+        Note backlinkNote = Note::fetch(noteId);
+        QString noteText = backlinkNote.getNoteText();
+
+        // Check if the note contains a link with the old heading fragment
+        // Links can be in the form:
+        // - [text](relative/path.md#old-heading)
+        // - <relative/path.md#old-heading>
+        // - [text](note://note-name#old-heading)
+        // - <note://note-name#old-heading>
+
+        if (noteText.contains(QStringLiteral("#") + oldFragment)) {
+            notesWithHeadingLinks.append(backlinkNote);
+        }
+    }
+
+    if (notesWithHeadingLinks.isEmpty()) {
+        return;
+    }
+
+    // Ask the user if they want to update the backlinks
+    QString message;
+    if (notesWithHeadingLinks.size() == 1) {
+        message = tr("The heading \"%1\" is referenced in 1 note. "
+                     "Do you want to update the link to use the new heading \"%2\"?")
+                      .arg(oldHeading, newHeading);
+    } else {
+        message = tr("The heading \"%1\" is referenced in %2 notes. "
+                     "Do you want to update all links to use the new heading \"%3\"?")
+                      .arg(oldHeading)
+                      .arg(notesWithHeadingLinks.size())
+                      .arg(newHeading);
+    }
+
+    if (Utils::Gui::question(this, tr("Update backlinks"), message,
+                             QStringLiteral("update-heading-backlinks")) == QMessageBox::Yes) {
+        // User clicked "Yes"
+        int updatedCount = 0;
+
+        for (Note &backlinkNote : notesWithHeadingLinks) {
+            QString noteText = backlinkNote.getNoteText();
+
+            // Replace all occurrences of the old heading fragment with the new one
+            QString oldFragmentPattern = QStringLiteral("#") + oldFragment;
+            QString newFragmentPattern = QStringLiteral("#") + newFragment;
+
+            if (noteText.contains(oldFragmentPattern)) {
+                noteText.replace(oldFragmentPattern, newFragmentPattern);
+                backlinkNote.storeNewText(std::move(noteText));
+                backlinkNote.storeNoteTextFileToDisk();
+                updatedCount++;
+            }
+        }
+
+        // Show a confirmation message
+        if (updatedCount > 0) {
+            showStatusBarMessage(tr("Updated heading links in %n note(s)", "", updatedCount), 5000);
+        }
+    }
 }
 
 /**
