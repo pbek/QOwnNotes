@@ -433,6 +433,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // act on position clicks in the navigation widget
     connect(ui->navigationWidget, &NavigationWidget::positionClicked, this,
             &MainWindow::onNavigationWidgetPositionClicked);
+    // act on heading renames in the navigation widget
+    connect(ui->navigationWidget, &NavigationWidget::headingRenamed, this,
+            &MainWindow::onNavigationWidgetHeadingRenamed);
     connect(ui->backlinkWidget, &BacklinkWidget::noteClicked, this,
             &MainWindow::onBacklinkWidgetNoteClicked);
 
@@ -9628,6 +9631,48 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     // set focus back to the navigation widget, so you can use the
     // keyboard to navigate
     ui->navigationWidget->setFocus();
+}
+
+/**
+ * Handles renaming of headings from the navigation widget
+ * Updates the heading text in the note
+ */
+void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &oldText,
+                                                  const QString &newText) {
+    Q_UNUSED(oldText)
+
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QTextDocument *doc = textEdit->document();
+
+    // Find the block at the given position
+    QTextBlock block = doc->findBlock(position);
+    if (!block.isValid()) {
+        return;
+    }
+
+    // Get the current text of the block
+    QString blockText = block.text();
+
+    // Extract the heading level (number of # symbols)
+    static const QRegularExpression headingRegex(QStringLiteral("^(#+)\\s+"));
+    QRegularExpressionMatch match = headingRegex.match(blockText);
+
+    if (!match.hasMatch()) {
+        return;
+    }
+
+    QString headingPrefix = match.captured(1);    // The "###" part
+    QString newBlockText = headingPrefix + " " + newText;
+
+    // Update the text in the document
+    // We need to be careful to only replace the text content, not the block delimiters
+    QTextCursor cursor(block);
+    cursor.movePosition(QTextCursor::StartOfBlock);
+    cursor.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
+    cursor.insertText(newBlockText);
+
+    // Reparse the navigation to reflect the change
+    // This will be triggered automatically by the text change event
 }
 
 /**

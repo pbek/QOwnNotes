@@ -22,11 +22,13 @@
 #include <QTreeWidgetItem>
 
 NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
-    // we want to handle currentItemChanged because it also works with the keyboard
+    // We want to handle currentItemChanged because it also works with the keyboard
     QObject::connect(this, &NavigationWidget::currentItemChanged, this,
                      &NavigationWidget::onCurrentItemChanged);
-    // we want to handle itemClicked because it allows to click on an item a 2nd time
+    // We want to handle itemClicked because it allows to click on an item a 2nd time
     QObject::connect(this, &NavigationWidget::itemClicked, this, &NavigationWidget::onItemClicked);
+    // We want to handle itemChanged to allow renaming headings
+    QObject::connect(this, &NavigationWidget::itemChanged, this, &NavigationWidget::onItemChanged);
 }
 
 /**
@@ -55,6 +57,35 @@ void NavigationWidget::onItemClicked(QTreeWidgetItem *current, int column) {
     }
 
     emit positionClicked(current->data(0, Qt::UserRole).toInt());
+}
+
+/**
+ * Handles renaming of heading items
+ * Emits the headingRenamed signal when a heading is renamed
+ */
+void NavigationWidget::onItemChanged(QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column)
+
+    if (item == nullptr) {
+        return;
+    }
+
+    // Get the position from the item
+    int position = item->data(0, Qt::UserRole).toInt();
+
+    // Find the corresponding node in our cache
+    for (const auto &node : _navigationTreeNodes) {
+        if (node.pos == position) {
+            QString oldText = node.text;
+            QString newText = item->text(0);
+
+            // Only emit if the text actually changed
+            if (oldText != newText && !newText.isEmpty()) {
+                emit headingRenamed(position, oldText, newText);
+            }
+            break;
+        }
+    }
 }
 
 /**
@@ -164,6 +195,8 @@ void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
         item->setText(0, stripMarkdown(node.text));
         item->setData(0, Qt::UserRole, pos);
         item->setToolTip(0, tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
+        // Make the item editable to allow renaming headings
+        item->setFlags(item->flags() | Qt::ItemIsEditable);
 
         // attempt to find a suitable parent item for the element type
         QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);

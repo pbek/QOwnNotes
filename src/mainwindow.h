@@ -272,6 +272,9 @@ class MainWindow : public QMainWindow {
 
     void onNavigationWidgetPositionClicked(int position);
 
+    void onNavigationWidgetHeadingRenamed(int position, const QString &oldText,
+                                          const QString &newText);
+
    private slots:
 
     void on_noteTextEdit_textChanged();

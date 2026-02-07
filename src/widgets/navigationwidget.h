@@ -43,6 +43,7 @@ class NavigationWidget : public QTreeWidget {
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemClicked(QTreeWidgetItem *current, int column);
+    void onItemChanged(QTreeWidgetItem *item, int column);
 
    private:
     void buildNavTree(const QVector<Node> &nodes);
@@ -50,6 +51,7 @@ class NavigationWidget : public QTreeWidget {
 
    signals:
     void positionClicked(int position);
+    void headingRenamed(int position, const QString &oldText, const QString &newText);
 
    private:
     const QTextDocument *_doc;
