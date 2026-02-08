@@ -9682,15 +9682,13 @@ void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &o
  */
 void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
                                                    const QString &newHeading) {
-    Note currentNote = this->currentNote;
-
     // Generate the old and new heading fragments (URL encoded)
     // Heading fragments in links are URL-encoded (spaces become %20, etc.)
     QString oldFragment = QString(QUrl::toPercentEncoding(oldHeading));
     QString newFragment = QString(QUrl::toPercentEncoding(newHeading));
 
     // Find all notes that have backlinks to the current note
-    QVector<int> backlinkNoteIds = currentNote.findBacklinkedNoteIds();
+    QVector<int> backlinkNoteIds = this->currentNote.findBacklinkedNoteIds();
 
     if (backlinkNoteIds.isEmpty()) {
         return;
@@ -9720,43 +9718,35 @@ void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
     }
 
     // Ask the user if they want to update the backlinks
-    QString message;
-    if (notesWithHeadingLinks.size() == 1) {
-        message = tr("The heading \"%1\" is referenced in 1 note. "
-                     "Do you want to update the link to use the new heading \"%2\"?")
-                      .arg(oldHeading, newHeading);
-    } else {
-        message = tr("The heading \"%1\" is referenced in %2 notes. "
-                     "Do you want to update all links to use the new heading \"%3\"?")
-                      .arg(oldHeading)
-                      .arg(notesWithHeadingLinks.size())
-                      .arg(newHeading);
+    if (Utils::Gui::question(this, tr("Update backlinks"),
+                             tr("The heading \"%1\" is referenced in %n note(s). "
+                                "Do you want to update the link to use the new heading \"%2\"?",
+                                "", notesWithHeadingLinks.size())
+                                 .arg(oldHeading, newHeading),
+                             QStringLiteral("update-heading-backlinks")) != QMessageBox::Yes) {
+        return;
     }
 
-    if (Utils::Gui::question(this, tr("Update backlinks"), message,
-                             QStringLiteral("update-heading-backlinks")) == QMessageBox::Yes) {
-        // User clicked "Yes"
-        int updatedCount = 0;
+    // User clicked "Yes"
+    int updatedCount = 0;
 
-        for (Note &backlinkNote : notesWithHeadingLinks) {
-            QString noteText = backlinkNote.getNoteText();
+    for (Note &backlinkNote : notesWithHeadingLinks) {
+        QString noteText = backlinkNote.getNoteText();
 
-            // Replace all occurrences of the old heading fragment with the new one
-            QString oldFragmentPattern = QStringLiteral("#") + oldFragment;
-            QString newFragmentPattern = QStringLiteral("#") + newFragment;
+        // Replace all occurrences of the old heading fragment with the new one
+        QString oldFragmentPattern = QStringLiteral("#") + oldFragment;
+        QString newFragmentPattern = QStringLiteral("#") + newFragment;
 
-            if (noteText.contains(oldFragmentPattern)) {
-                noteText.replace(oldFragmentPattern, newFragmentPattern);
-                backlinkNote.storeNewText(std::move(noteText));
-                backlinkNote.storeNoteTextFileToDisk();
-                updatedCount++;
-            }
+        if (noteText.contains(oldFragmentPattern)) {
+            noteText.replace(oldFragmentPattern, newFragmentPattern);
+            backlinkNote.storeNewText(std::move(noteText));
+            updatedCount++;
         }
+    }
 
-        // Show a confirmation message
-        if (updatedCount > 0) {
-            showStatusBarMessage(tr("Updated heading links in %n note(s)", "", updatedCount), 5000);
-        }
+    // Show a confirmation message
+    if (updatedCount > 0) {
+        showStatusBarMessage(tr("Updated heading links in %n note(s)", "", updatedCount), 5000);
     }
 }
 
