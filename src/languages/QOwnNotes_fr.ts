@@ -2857,6 +2857,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </translation>
 </message>
 <message>
+<source>Update backlinks</source>
+<translation type="unfinished">Update backlinks</translation>
+</message>
+<message numerus="yes">
+<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
+<translation type="unfinished">
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Updated heading links in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Updated heading links in %n note(s)</numerusform>
+<numerusform>Updated heading links in %n note(s)</numerusform>
+</translation>
+</message>
+<message>
 <source>&amp;Remove notes and folders</source>
 <translation>&amp;Supprimer des notes et des dossiers</translation>
 </message>
@@ -3652,6 +3670,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>headline %1</source>
 <translation>titre %1</translation>
+</message>
+<message>
+<source>&amp;Rename heading</source>
+<translation type="unfinished">&amp;Rename heading</translation>
 </message>
 </context>
 <context>
@@ -6023,7 +6045,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Show line numbers and bookmark markers (1-9)</source>
-<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+<translation>Afficher les numéros de ligne et de marque-page (1-9)</translation>
 </message>
 <message>
 <source>Disable cursor blinking</source>

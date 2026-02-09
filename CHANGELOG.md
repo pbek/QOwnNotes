@@ -10,6 +10,7 @@
   - When you rename a heading, QOwnNotes will scan all notes that link to the current note and prompt you to update any links that reference the old heading
   - This ensures that note links with heading fragments (e.g., `[Link](note.md#old-heading)`) remain valid after renaming
   - This provides a quick way to reorganize your note structure without manually editing the text or breaking backlinks
+- Added more French translation (thank you, baptistou)
 
 ## 26.2.0
 

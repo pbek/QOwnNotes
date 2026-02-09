@@ -2861,6 +2861,24 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 </translation>
 </message>
 <message>
+<source>Update backlinks</source>
+<translation type="unfinished">Update backlinks</translation>
+</message>
+<message numerus="yes">
+<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
+<translation type="unfinished">
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Updated heading links in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Updated heading links in %n note(s)</numerusform>
+<numerusform>Updated heading links in %n note(s)</numerusform>
+</translation>
+</message>
+<message>
 <source>&amp;Remove notes and folders</source>
 <translation type="unfinished">&amp;Remove notes and folders</translation>
 </message>
@@ -3667,6 +3685,10 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <message>
 <source>headline %1</source>
 <translation>musoro wenyaya %1</translation>
+</message>
+<message>
+<source>&amp;Rename heading</source>
+<translation type="unfinished">&amp;Rename heading</translation>
 </message>
 </context>
 <context>
