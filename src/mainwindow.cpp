@@ -9639,6 +9639,9 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
  */
 void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &oldText,
                                                   const QString &newText) {
+    // Allow note editing if it is currently disabled, otherwise the note won't be updated
+    this->allowNoteEditing();
+
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextDocument *doc = textEdit->document();
 
@@ -9662,18 +9665,17 @@ void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &o
     QString headingPrefix = match.captured(1);    // The "###" part
     QString newBlockText = headingPrefix + " " + newText;
 
+    // Check for backlinks that reference this heading and ask user if they want to update them
+    // We need to do this before we update the text in the document, otherwise the QMessageBox
+    // dialog that confirms this change will crash the app
+    updateBacklinksAfterHeadingRename(oldText, newText);
+
     // Update the text in the document
     // We need to be careful to only replace the text content, not the block delimiters
     QTextCursor cursor(block);
     cursor.movePosition(QTextCursor::StartOfBlock);
     cursor.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
     cursor.insertText(newBlockText);
-
-    // Reparse the navigation to reflect the change
-    // This will be triggered automatically by the text change event
-
-    // Check for backlinks that reference this heading and ask user if they want to update them
-    updateBacklinksAfterHeadingRename(oldText, newText);
 }
 
 /**
