@@ -2832,18 +2832,18 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>Update backlinks</source>
-<translation type="unfinished">Update backlinks</translation>
+<translation>백링크 업데이트</translation>
 </message>
 <message numerus="yes">
 <source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
-<translation type="unfinished">
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<translation>
+<numerusform>제목 "%1"은 %n 노트에서 참조됩니다. 새 제목 "%2"를 사용하도록 링크를 업데이트하시겠습니까?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Updated heading links in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
+<translation>
+<numerusform>%n 노트의 제목 링크가 업데이트되었습니다</numerusform>
 </translation>
 </message>
 <message>
@@ -3630,7 +3630,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 <message>
 <source>&amp;Rename heading</source>
-<translation type="unfinished">&amp;Rename heading</translation>
+<translation>이름 바꾸기(&amp;R)</translation>
 </message>
 </context>
 <context>

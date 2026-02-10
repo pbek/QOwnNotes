@@ -2868,9 +2868,9 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message numerus="yes">
 <source>Updated heading links in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
-<numerusform>Updated heading links in %n note(s)</numerusform>
+<translation>
+<numerusform>Enlaces de encabezado actualizados en %n nota</numerusform>
+<numerusform>Enlaces de encabezado actualizados en %n notas</numerusform>
 </translation>
 </message>
 <message>
@@ -3672,7 +3672,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Rename heading</source>
-<translation type="unfinished">&amp;Rename heading</translation>
+<translation>&amp;Renombrar encabezado</translation>
 </message>
 </context>
 <context>

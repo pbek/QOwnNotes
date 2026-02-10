@@ -11,6 +11,7 @@
   - Table of contents links within the same note (e.g., `[Section](#old-heading)`) are now also updated when renaming headings
     - This is useful for notes with TOC sections that link to headings within the note
     - Same-note links are properly detected and updated alongside backlinks from other notes
+- Added more Korean, Spanish translation (thank you, venusgirl, alejandromoc)
 
 ## 26.2.1
 
