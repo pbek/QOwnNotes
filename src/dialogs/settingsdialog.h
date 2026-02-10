@@ -366,6 +366,9 @@ class SettingsDialog : public MasterDialog {
     CloudConnection _selectedCloudConnection;
     int _loginFlowPollCount = 0;
     QHash<int, bool> _pageInitialized;
+    QString _installInfoTextLabel1Html;
+    QString _installInfoTextLabel2Html;
+    QString _installInfoTextLabel3Html;
 
     void storeSettings();
 

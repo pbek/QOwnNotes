@@ -3350,10 +3350,15 @@ bool SettingsDialog::initializePage(int index) {
         case SettingsPages::OwnCloudPage: {
             resetOKLabelData();
 
+            // Store original HTML texts for enable/disable state management
+            _installInfoTextLabel1Html = ui->installInfoTextLabel1->text();
+            _installInfoTextLabel2Html = ui->installInfoTextLabel2->text();
+            _installInfoTextLabel3Html = ui->installInfoTextLabel3->text();
+
             // add the QOwnNotesAPI minimum version number to the info text
-            auto html = ui->installInfoTextLabel1->text();
-            html.replace(QLatin1String("QOWNNOTESAPI_MIN_VERSION"), QOWNNOTESAPI_MIN_VERSION);
-            ui->installInfoTextLabel1->setText(html);
+            _installInfoTextLabel1Html.replace(QLatin1String("QOWNNOTESAPI_MIN_VERSION"),
+                                               QOWNNOTESAPI_MIN_VERSION);
+            ui->installInfoTextLabel1->setText(_installInfoTextLabel1Html);
 
             if (connectionTestCanBeStarted()) {
                 // start a connection test
@@ -3792,6 +3797,25 @@ void SettingsDialog::needRestart() { Utils::Misc::needRestart(); }
 void SettingsDialog::on_ownCloudSupportCheckBox_toggled() {
     bool checked = ui->ownCloudSupportCheckBox->isChecked();
     ui->ownCloudGroupBox->setEnabled(checked);
+
+    // Update labels with disabled color when unchecked
+    QString disabledColor = palette().color(QPalette::Disabled, QPalette::Text).name();
+
+    if (!_installInfoTextLabel1Html.isEmpty()) {
+        if (checked) {
+            ui->installInfoTextLabel1->setText(_installInfoTextLabel1Html);
+            ui->installInfoTextLabel2->setText(_installInfoTextLabel2Html);
+            ui->installInfoTextLabel3->setText(_installInfoTextLabel3Html);
+        } else {
+            // Wrap content in a span with disabled color
+            ui->installInfoTextLabel1->setText(QStringLiteral("<span style=\"color:%1;\">%2</span>")
+                                                   .arg(disabledColor, _installInfoTextLabel1Html));
+            ui->installInfoTextLabel2->setText(QStringLiteral("<span style=\"color:%1;\">%2</span>")
+                                                   .arg(disabledColor, _installInfoTextLabel2Html));
+            ui->installInfoTextLabel3->setText(QStringLiteral("<span style=\"color:%1;\">%2</span>")
+                                                   .arg(disabledColor, _installInfoTextLabel3Html));
+        }
+    }
 }
 
 /**
