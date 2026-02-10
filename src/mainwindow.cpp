@@ -9666,7 +9666,7 @@ void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &o
     QString newBlockText = headingPrefix + " " + newText;
 
     // Check for backlinks that reference this heading and ask user if they want to update them
-    // We need to do this before we update the text in the document, otherwise the QMessageBox
+    // We need to do this BEFORE we update the text in the document, otherwise the QMessageBox
     // dialog that confirms this change will crash the app
     updateBacklinksAfterHeadingRename(oldText, newText);
 
@@ -9681,6 +9681,7 @@ void MainWindow::onNavigationWidgetHeadingRenamed(int position, const QString &o
 /**
  * Updates backlinks after a heading has been renamed
  * Scans all notes that link to the current note and updates heading references
+ * Also checks the current note itself for TOC links (e.g., [text](#old-heading))
  */
 void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
                                                    const QString &newHeading) {
@@ -9689,15 +9690,22 @@ void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
     QString oldFragment = QString(QUrl::toPercentEncoding(oldHeading));
     QString newFragment = QString(QUrl::toPercentEncoding(newHeading));
 
-    // Find all notes that have backlinks to the current note
-    QVector<int> backlinkNoteIds = this->currentNote.findBacklinkedNoteIds();
-
-    if (backlinkNoteIds.isEmpty()) {
-        return;
-    }
+    // Get the relative file path of the current note for precise link matching
+    QString currentNoteRelativePath = this->currentNote.relativeNoteFilePath();
 
     // Collect notes that actually contain links with the old heading fragment
     QVector<Note> notesWithHeadingLinks;
+
+    // First, check the current note itself for links to its own headings (e.g., TOC)
+    // NOTE: We check the current text from the UI since this function is called BEFORE
+    // the heading is actually updated in the document (to avoid QMessageBox crashes)
+    QString currentNoteText = activeNoteTextEdit()->toPlainText();
+    if (currentNoteText.contains(QStringLiteral("#") + oldFragment)) {
+        notesWithHeadingLinks.append(this->currentNote);
+    }
+
+    // Find all notes that have backlinks to the current note
+    QVector<int> backlinkNoteIds = this->currentNote.findBacklinkedNoteIds();
 
     for (int noteId : backlinkNoteIds) {
         Note backlinkNote = Note::fetch(noteId);
@@ -9734,14 +9742,75 @@ void MainWindow::updateBacklinksAfterHeadingRename(const QString &oldHeading,
 
     for (Note &backlinkNote : notesWithHeadingLinks) {
         QString noteText = backlinkNote.getNoteText();
+        QString originalNoteText = noteText;
 
-        // Replace all occurrences of the old heading fragment with the new one
-        QString oldFragmentPattern = QStringLiteral("#") + oldFragment;
-        QString newFragmentPattern = QStringLiteral("#") + newFragment;
+        // Build patterns to match the full link including the note path
+        // We need to handle both URL-encoded and unencoded paths since links can be either
+        // For example: "My Note.md" or "My%20Note.md"
 
-        if (noteText.contains(oldFragmentPattern)) {
-            noteText.replace(oldFragmentPattern, newFragmentPattern);
-            backlinkNote.storeNewText(std::move(noteText));
+        // Get both encoded and unencoded versions of the path
+        QString currentNoteRelativePathEncoded =
+            QString(QUrl::toPercentEncoding(currentNoteRelativePath));
+
+        // Escape both versions for use in regex (dots, slashes, etc.)
+        QString escapedRelativePath = QRegularExpression::escape(currentNoteRelativePath);
+        QString escapedRelativePathEncoded =
+            QRegularExpression::escape(currentNoteRelativePathEncoded);
+        QString oldFragmentEscaped = QRegularExpression::escape(oldFragment);
+
+        // Pattern 1: Markdown links with unencoded path [text](path#old-heading)
+        QRegularExpression markdownLinkPattern(QStringLiteral(R"(\[([^\]]*)\]\(%1#%2\))")
+                                                   .arg(escapedRelativePath, oldFragmentEscaped));
+        QString markdownLinkReplacement =
+            QStringLiteral(R"([\1](%1#%2))").arg(currentNoteRelativePathEncoded, newFragment);
+        noteText.replace(markdownLinkPattern, markdownLinkReplacement);
+
+        // Pattern 2: Markdown links with encoded path [text](path%20with%20spaces#old-heading)
+        QRegularExpression markdownLinkPatternEncoded(
+            QStringLiteral(R"(\[([^\]]*)\]\(%1#%2\))")
+                .arg(escapedRelativePathEncoded, oldFragmentEscaped));
+        noteText.replace(markdownLinkPatternEncoded, markdownLinkReplacement);
+
+        // Pattern 3: Autolinks with unencoded path <path#old-heading>
+        QRegularExpression autolinkPattern(
+            QStringLiteral(R"(<(%1#%2)>)").arg(escapedRelativePath, oldFragmentEscaped));
+        QString autolinkReplacement =
+            QStringLiteral(R"(<%1#%2>)").arg(currentNoteRelativePathEncoded, newFragment);
+        noteText.replace(autolinkPattern, autolinkReplacement);
+
+        // Pattern 4: Autolinks with encoded path <path%20with%20spaces#old-heading>
+        QRegularExpression autolinkPatternEncoded(
+            QStringLiteral(R"(<(%1#%2)>)").arg(escapedRelativePathEncoded, oldFragmentEscaped));
+        noteText.replace(autolinkPatternEncoded, autolinkReplacement);
+
+        // Pattern 5: Bare markdown links without path (same note references)
+        // For links within the same note: [text](#old-heading)
+        if (backlinkNote.getId() == this->currentNote.getId()) {
+            QRegularExpression sameNoteLinkPattern(
+                QStringLiteral(R"(\[([^\]]*)\]\(#%1\))").arg(oldFragmentEscaped));
+            QString sameNoteLinkReplacement = QStringLiteral(R"([\1](#%1))").arg(newFragment);
+            noteText.replace(sameNoteLinkPattern, sameNoteLinkReplacement);
+
+            // Also handle autolinks within the same note: <#old-heading>
+            QRegularExpression sameNoteAutolinkPattern(
+                QStringLiteral(R"(<#%1>)").arg(oldFragmentEscaped));
+            QString sameNoteAutolinkReplacement = QStringLiteral(R"(<#%1>)").arg(newFragment);
+            noteText.replace(sameNoteAutolinkPattern, sameNoteAutolinkReplacement);
+        }
+
+        // Only update the note if changes were made
+        if (noteText != originalNoteText) {
+            // If this is the current note, update the text edit directly
+            // (since the heading rename hasn't been applied yet in the document)
+            if (backlinkNote.getId() == this->currentNote.getId()) {
+                // Update the text in the editor
+                activeNoteTextEdit()->setPlainText(noteText);
+                // Store the changes
+                this->currentNote.storeNewText(std::move(noteText));
+            } else {
+                // For other notes, just store the text to disk
+                backlinkNote.storeNewText(std::move(noteText));
+            }
             updatedCount++;
         }
     }

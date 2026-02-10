@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 26.2.2
+
+- Improved the refactoring of heading links when renaming headings in the Navigation panel
+  (for [#3459](https://github.com/pbek/QOwnNotes/issues/3459))
+  - Fixed an issue where heading backlink updates would incorrectly replace links to other notes with the same heading name
+    - The backlink update now correctly matches the full link path, only updating links that point to the current note
+    - Both URL-encoded and unencoded paths in links are now properly handled (e.g., `My%20Note.md` and `My Note.md`)
+    - This prevents accidentally breaking links to other notes when renaming headings
+  - Table of contents links within the same note (e.g., `[Section](#old-heading)`) are now also updated when renaming headings
+    - This is useful for notes with TOC sections that link to headings within the note
+    - Same-note links are properly detected and updated alongside backlinks from other notes
+
 ## 26.2.1
 
 - Added ability to rename headings directly in the Navigation panel
