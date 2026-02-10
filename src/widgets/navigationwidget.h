@@ -40,6 +40,9 @@ class NavigationWidget : public QTreeWidget {
 
     void selectItemForCursorPosition(int position);
 
+    int getNextHeadingPosition(int currentPosition) const;
+    int getPreviousHeadingPosition(int currentPosition) const;
+
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemClicked(QTreeWidgetItem *current, int column);

@@ -6741,6 +6741,40 @@ void MainWindow::on_action_Forward_in_note_history_triggered() {
     }
 }
 
+void MainWindow::on_action_Previous_heading_triggered() {
+    if (!ui->navigationWidget->isVisible()) {
+        return;
+    }
+
+    auto *textEdit = activeNoteTextEdit();
+    int currentPosition = textEdit->textCursor().position();
+    int headingPosition = ui->navigationWidget->getPreviousHeadingPosition(currentPosition);
+
+    if (headingPosition >= 0) {
+        QTextCursor cursor = textEdit->textCursor();
+        cursor.setPosition(headingPosition);
+        textEdit->setTextCursor(cursor);
+        textEdit->ensureCursorVisible();
+    }
+}
+
+void MainWindow::on_action_Next_heading_triggered() {
+    if (!ui->navigationWidget->isVisible()) {
+        return;
+    }
+
+    auto *textEdit = activeNoteTextEdit();
+    int currentPosition = textEdit->textCursor().position();
+    int headingPosition = ui->navigationWidget->getNextHeadingPosition(currentPosition);
+
+    if (headingPosition >= 0) {
+        QTextCursor cursor = textEdit->textCursor();
+        cursor.setPosition(headingPosition);
+        textEdit->setTextCursor(cursor);
+        textEdit->ensureCursorVisible();
+    }
+}
+
 void MainWindow::on_action_Shortcuts_triggered() {
     QDesktopServices::openUrl(
         QUrl(QStringLiteral("https://www.qownnotes.org/getting-started/shortcuts.html")));

@@ -262,3 +262,43 @@ void NavigationWidget::renameHeadingTriggered() {
         editItem(item, 0);
     }
 }
+
+/**
+ * Returns the position of the next heading after the current position
+ * Returns -1 if there is no next heading
+ */
+int NavigationWidget::getNextHeadingPosition(int currentPosition) const {
+    if (_navigationTreeNodes.isEmpty()) {
+        return -1;
+    }
+
+    // Find the first heading that is after the current position
+    for (const auto &node : _navigationTreeNodes) {
+        if (node.pos > currentPosition) {
+            return node.pos;
+        }
+    }
+
+    return -1;
+}
+
+/**
+ * Returns the position of the previous heading before the current position
+ * Returns -1 if there is no previous heading
+ */
+int NavigationWidget::getPreviousHeadingPosition(int currentPosition) const {
+    if (_navigationTreeNodes.isEmpty()) {
+        return -1;
+    }
+
+    // Find the last heading that is before the current position
+    int previousPos = -1;
+    for (const auto &node : _navigationTreeNodes) {
+        if (node.pos >= currentPosition) {
+            break;
+        }
+        previousPos = node.pos;
+    }
+
+    return previousPos;
+}

@@ -335,6 +335,10 @@ class MainWindow : public QMainWindow {
 
     void on_action_Forward_in_note_history_triggered();
 
+    void on_action_Previous_heading_triggered();
+
+    void on_action_Next_heading_triggered();
+
     void on_action_Shortcuts_triggered();
 
     void on_action_Knowledge_base_triggered();

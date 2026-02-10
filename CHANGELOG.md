@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.2.3
+
+- Added new menu actions in the Navigation menu to navigate between headings in the Navigation panel
+  (for [#3378](https://github.com/pbek/QOwnNotes/issues/3378))
+  - **Previous heading** (`Ctrl+Shift+Page Up`) - navigate to the previous heading
+  - **Next heading** (`Ctrl+Shift+Page Down`) - navigate to the next heading
+  - These shortcuts allow quick navigation through note headings without using the mouse
+
 ## 26.2.2
 
 - Improved the refactoring of heading links when renaming headings in the Navigation panel

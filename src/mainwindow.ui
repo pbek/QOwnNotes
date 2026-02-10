@@ -983,9 +983,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <iconset theme="go-down" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
      </property>
-     <addaction name="action_Back_in_note_history"/>
-     <addaction name="action_Forward_in_note_history"/>
-     <addaction name="actionPrevious_Note"/>
+      <addaction name="action_Back_in_note_history"/>
+      <addaction name="action_Forward_in_note_history"/>
+      <addaction name="separator"/>
+      <addaction name="action_Previous_heading"/>
+      <addaction name="action_Next_heading"/>
+      <addaction name="separator"/>
+      <addaction name="actionPrevious_Note"/>
      <addaction name="actionNext_note"/>
      <addaction name="actionPrevious_note_tab"/>
      <addaction name="actionNext_note_tab"/>
@@ -1604,11 +1608,35 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="text">
     <string>Forward in note history</string>
    </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Right</string>
-   </property>
-  </action>
-  <action name="action_Shortcuts">
+    <property name="shortcut">
+     <string notr="true">Alt+Right</string>
+    </property>
+   </action>
+   <action name="action_Previous_heading">
+    <property name="icon">
+     <iconset theme="go-up" resource="breeze-qownnotes.qrc">
+      <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
+    </property>
+    <property name="text">
+     <string>Previous &amp;heading</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+Page Up</string>
+    </property>
+   </action>
+   <action name="action_Next_heading">
+    <property name="icon">
+     <iconset theme="go-down" resource="breeze-qownnotes.qrc">
+      <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
+    </property>
+    <property name="text">
+     <string>Next heading</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+Page Down</string>
+    </property>
+   </action>
+   <action name="action_Shortcuts">
    <property name="icon">
     <iconset theme="applications-system" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/applications-system.svg</normaloff>:/icons/breeze-qownnotes/16x16/applications-system.svg</iconset>
