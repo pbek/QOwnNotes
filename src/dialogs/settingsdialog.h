@@ -369,6 +369,8 @@ class SettingsDialog : public MasterDialog {
     QString _installInfoTextLabel1Html;
     QString _installInfoTextLabel2Html;
     QString _installInfoTextLabel3Html;
+    QString _bookmarkTagLabelHtml;
+    QString _commandSnippetTagLabelHtml;
 
     void storeSettings();
 

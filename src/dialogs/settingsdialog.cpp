@@ -3249,14 +3249,21 @@ bool SettingsDialog::initializePage(int index) {
                 "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
                 "pkgkfnampapjbopomdpnkckbjdnpkbkp",
                 "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
+
             ui->commandLineSnippetManagerLabel->setText(
                 ui->commandLineSnippetManagerLabel->text().arg("https://github.com/qownnotes/qc"));
+
+            // Store original HTML texts for enable/disable state management
             ui->commandSnippetTagLabel->setText(ui->commandSnippetTagLabel->text().arg(
                 "https://www.qownnotes.org/getting-started/command-line-snippet-manager.html"));
+            _commandSnippetTagLabelHtml = ui->commandSnippetTagLabel->text();
+
             ui->commandSnippetsNoteNameLabel->hide();
             ui->commandSnippetsNoteNameLineEdit->hide();
+
             ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
                 "https://www.qownnotes.org/getting-started/browser-extension.html"));
+            _bookmarkTagLabelHtml = ui->bookmarkTagLabel->text();
         } break;
         case SettingsPages::PanelsPage: {
             // connect the panel sort radio buttons
@@ -4097,6 +4104,23 @@ void SettingsDialog::on_webSocketServerServicePortResetButton_clicked() {
 void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
     bool checked = ui->enableSocketServerCheckBox->isChecked();
     ui->browserExtensionFrame->setEnabled(checked);
+
+    // Update labels with disabled color when unchecked
+    QString disabledColor = palette().color(QPalette::Disabled, QPalette::Text).name();
+
+    if (!_bookmarkTagLabelHtml.isEmpty()) {
+        if (checked) {
+            ui->bookmarkTagLabel->setText(_bookmarkTagLabelHtml);
+            ui->commandSnippetTagLabel->setText(_commandSnippetTagLabelHtml);
+        } else {
+            // Wrap content in a span with disabled color
+            ui->bookmarkTagLabel->setText(QStringLiteral("<span style=\"color:%1;\">%2</span>")
+                                              .arg(disabledColor, _bookmarkTagLabelHtml));
+            ui->commandSnippetTagLabel->setText(
+                QStringLiteral("<span style=\"color:%1;\">%2</span>")
+                    .arg(disabledColor, _commandSnippetTagLabelHtml));
+        }
+    }
 }
 
 void SettingsDialog::on_internalIconThemeCheckBox_toggled(bool checked) {
