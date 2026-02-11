@@ -7,6 +7,11 @@
   - **Previous heading** (`Ctrl+Shift+Page Up`) - navigate to the previous heading
   - **Next heading** (`Ctrl+Shift+Page Down`) - navigate to the next heading
   - These shortcuts allow quick navigation through note headings without using the mouse
+- Improved visual appearance of disabled panels in the settings dialog
+  (for [#3314](https://github.com/pbek/QOwnNotes/issues/3314))
+  - Informational labels in the Nextcloud support panel now use muted colors when the panel is disabled
+  - Informational labels in the Browser extension / command snippets panel now use muted colors when the panel is disabled
+  - This makes it clearer which settings sections are active or inactive, especially in dark mode
 
 ## 26.2.2
 
