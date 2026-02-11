@@ -10,11 +10,14 @@ pkgbase = qownnotes
 	groups = qownnotes
 	license = GPL2
 	makedepends = qt6-tools
+	makedepends = cmake
 	depends = qt6-base
 	depends = qt6-svg
 	depends = qt6-declarative
 	depends = qt6-websockets
 	depends = aspell
+	depends = botan
+	depends = libgit2
 	source = https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-VERSION-STRING.tar.xz
 	sha256sums = ARCHIVE-SHA256
 
