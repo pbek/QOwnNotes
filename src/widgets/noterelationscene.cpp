@@ -214,6 +214,21 @@ void NoteRelationScene::stopDrawing() {
 
 void NoteRelationScene::setAllowDrawing(bool allow) { m_allowDrawing = allow; }
 
+/**
+ * Recursively creates linked note items around the root note item.
+ * The position of the linked note items is calculated in a circle around the
+ * root note item, with a radius that increases based on the number of linked
+ * notes and decreases based on the level of recursion.
+ * The function also creates connections between the root note item and the
+ * linked note items, and continues to create linked note items for each linked
+ * note until a certain recursion level is reached.
+ *
+ * @param noteList
+ * @param connectionName
+ * @param note
+ * @param rootNoteItem
+ * @param level
+ */
 void NoteRelationScene::createLinkedNoteItems(const QVector<Note> &noteList,
                                               const QString &connectionName, Note note,
                                               NoteItem *rootNoteItem, int level) {
@@ -221,6 +236,7 @@ void NoteRelationScene::createLinkedNoteItems(const QVector<Note> &noteList,
         return;
     }
 
+    // Get linked notes for the current note
     auto linkedNotes = note.findLinkedNotes(noteList, connectionName);
 
     // Get root note position (center)

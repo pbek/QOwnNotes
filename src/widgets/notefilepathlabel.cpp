@@ -99,6 +99,10 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
     const QString notePath = mainWindow->getCurrentNote().fullNoteFilePath();
     copyFullPathAction->setToolTip(notePath);
 
+    QAction *copyFileNameAction = contextMenu.addAction(tr("Copy note filename"));
+    const QString fileName = mainWindow->getCurrentNote().getFileName();
+    copyFileNameAction->setToolTip(fileName);
+
     QAction *copySubFolderPathAction = nullptr;
     QString subFolderPath;
     if (NoteFolder::isCurrentHasSubfolders()) {
@@ -115,6 +119,8 @@ void NoteFilePathLabel::contextMenuEvent(QContextMenuEvent *event) {
     QAction *selectedAction = contextMenu.exec(event->globalPos());
     if (selectedAction == copyFullPathAction) {
         clipboard->setText(notePath);
+    } else if (selectedAction == copyFileNameAction) {
+        clipboard->setText(fileName);
     } else if (selectedAction == copySubFolderPathAction) {
         clipboard->setText(subFolderPath);
     } else if (selectedAction == copyNoteFolderPathAction) {

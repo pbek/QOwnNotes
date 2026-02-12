@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.2.4
+
+- Added a "Copy note filename" menu action to copy the filename of the current note to the clipboard
+  (for [#3462](https://github.com/pbek/QOwnNotes/issues/3462))
+  - This action is available in the note list context menu and in the status bar path label context menu
+  - It copies just the filename (e.g., `MyNote.md`) instead of the full path
+
 ## 26.2.3
 
 - Added new menu actions in the Navigation menu to navigate between headings in the Navigation panel

@@ -729,6 +729,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionCopy_path_to_note_to_clipboard_triggered();
 
+    void on_actionCopy_note_filename_to_clipboard_triggered();
+
     void on_actionMove_up_in_subfolder_list_triggered();
 
     void on_actionMove_down_in_subfolder_list_triggered();

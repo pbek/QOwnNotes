@@ -10377,6 +10377,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool hasNotes, boo
     QAction *showInFileManagerAction = nullptr;
     QAction *showNoteGitLogAction = nullptr;
     QAction *copyNotePathToClipboardAction = nullptr;
+    QAction *copyNoteFileNameToClipboardAction = nullptr;
     QAction *toggleFavoriteAction = nullptr;
 
     if (!multiNoteMenuEntriesOnly) {
@@ -10398,6 +10399,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool hasNotes, boo
         };
         showInFileManagerAction = noteMenu.addAction(tr("Show note in file manager"));
         copyNotePathToClipboardAction = noteMenu.addAction(tr("Copy absolute path of note"));
+        copyNoteFileNameToClipboardAction = noteMenu.addAction(tr("Copy note filename"));
 
         showNoteGitLogAction = new QAction(this);
         if (Utils::Git::isCurrentNoteFolderUseGit() && Utils::Git::hasLogCommand()) {
@@ -10478,6 +10480,8 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos, bool hasNotes, boo
             on_actionShow_note_in_file_manager_triggered();
         } else if (selectedItem == copyNotePathToClipboardAction) {
             on_actionCopy_path_to_note_to_clipboard_triggered();
+        } else if (selectedItem == copyNoteFileNameToClipboardAction) {
+            on_actionCopy_note_filename_to_clipboard_triggered();
         } else if (selectedItem == showNoteGitLogAction) {
             // show the git log of the current note
             on_actionShow_note_git_versions_triggered();
@@ -13007,6 +13011,15 @@ void MainWindow::on_actionCopy_path_to_note_to_clipboard_triggered() {
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(path);
     showStatusBarMessage(tr("Note path '%1' was copied to the clipboard").arg(path),
+                         QStringLiteral("📋"), 3000);
+}
+
+void MainWindow::on_actionCopy_note_filename_to_clipboard_triggered() {
+    const QString fileName = currentNote.getFileName();
+
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(fileName);
+    showStatusBarMessage(tr("Note filename '%1' was copied to the clipboard").arg(fileName),
                          QStringLiteral("📋"), 3000);
 }
 
