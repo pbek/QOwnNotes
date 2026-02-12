@@ -20,6 +20,8 @@
 - Fixed an issue where enabling a panel in the Windows menu would not store the state
   immediately, causing the panel to be hidden again after an app restart
   (for [#3463](https://github.com/pbek/QOwnNotes/issues/3463))
+- The AUR build is now done with cmake, aspell, libgit and system botan for improved build time
+  and improved git and spellchecking support (for [#3461](https://github.com/pbek/QOwnNotes/issues/3461))
 
 ## 26.2.3
 
