@@ -3623,12 +3623,22 @@ bool Note::isSameFile(const Note &note) const {
 QVector<int> Note::findBacklinkedNoteIds() const {
     QVector<int> noteIdList;
 
-    // search for legacy links
+    // Search for legacy links
     const QString linkText = getNoteURL(_name);
     noteIdList << searchInNotes(QChar('<') + linkText + QChar('>'), true);
     noteIdList << searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"), true);
 
-    // search for legacy links ending with "@"
+    // Also search for links with hyphens instead of underscores
+    // This allows links like <note://Link-test2> to match notes like "Link test2"
+    QString linkTextWithHyphens = linkText;
+    linkTextWithHyphens.replace(QChar('_'), QChar('-'));
+    if (linkTextWithHyphens != linkText) {
+        noteIdList << searchInNotes(QChar('<') + linkTextWithHyphens + QChar('>'), true);
+        noteIdList << searchInNotes(
+            QStringLiteral("](") + linkTextWithHyphens + QStringLiteral(")"), true);
+    }
+
+    // Search for legacy links ending with "@"
     const QString altLinkText = Utils::Misc::appendIfDoesNotEndWith(linkText, QStringLiteral("@"));
     if (altLinkText != linkText) {
         noteIdList << searchInNotes(QChar('<') + altLinkText + QChar('>'), true);
@@ -3637,21 +3647,23 @@ QVector<int> Note::findBacklinkedNoteIds() const {
 
     const auto noteList = Note::fetchAll();
     noteIdList.reserve(noteList.size());
-    // search for links to the relative file path in all notes
+    // Search for links to the relative file path in all notes
     for (const Note &note : noteList) {
         const int noteId = note.getId();
 
-        // we also want to search in the current note, but we want to skip the
+        // We also want to search in the current note, but we want to skip the
         // search if we already have found it
         if (noteIdList.contains(noteId)) {
             continue;
         }
 
+        const QString relativePathToNote = note.getFilePathRelativeToNote(*this);
+
         // We now don't escape slashes in the relative file path, but previously we did,
         // so we need to search for both
         for (bool escapeSlashes : {true, false}) {
             const QString relativeFilePath =
-                Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this), escapeSlashes);
+                Note::urlEncodeNoteUrl(relativePathToNote, escapeSlashes);
             const QString noteText = note.getNoteText();
 
             // Search for links to the relative file path in note
@@ -3659,6 +3671,18 @@ QVector<int> Note::findBacklinkedNoteIds() const {
             if (noteText.contains(QStringLiteral("<") + relativeFilePath + QStringLiteral(">")) ||
                 noteText.contains(QStringLiteral("](") + relativeFilePath + QStringLiteral(")")) ||
                 noteText.contains(QStringLiteral("](") + relativeFilePath + QStringLiteral("#"))) {
+                noteIdList.append(note.getId());
+            }
+        }
+
+        // Also search for non-URL-encoded filename (for links like <My Note.md>)
+        if (relativePathToNote != Note::urlEncodeNoteUrl(relativePathToNote, false)) {
+            const QString noteText = note.getNoteText();
+            if (noteText.contains(QStringLiteral("<") + relativePathToNote + QStringLiteral(">")) ||
+                noteText.contains(QStringLiteral("](") + relativePathToNote +
+                                  QStringLiteral(")")) ||
+                noteText.contains(QStringLiteral("](") + relativePathToNote +
+                                  QStringLiteral("#"))) {
                 noteIdList.append(note.getId());
             }
         }
@@ -3673,7 +3697,31 @@ QVector<int> Note::findBacklinkedNoteIds() const {
 }
 
 LinkHit Note::findAndReturnLinkHit(const QString &text, const QString &pattern) {
-    return text.contains(pattern) ? LinkHit(pattern, {}) : LinkHit();
+    if (!text.contains(pattern)) {
+        return LinkHit();
+    }
+
+    // Generate a display text from the pattern for angle-bracket links
+    // For patterns like "<note://Link-test2>" or "<Link test2.md>", extract the link target
+    QString displayText = pattern;
+
+    // Remove angle brackets if present
+    if (displayText.startsWith(QChar('<')) && displayText.endsWith(QChar('>'))) {
+        displayText = displayText.mid(1, displayText.length() - 2);
+    }
+
+    // For note:// protocol links, remove the protocol prefix
+    if (displayText.startsWith(QStringLiteral("note://"))) {
+        displayText = displayText.mid(7);    // Remove "note://"
+        // Replace underscores and hyphens with spaces for better readability
+        displayText.replace(QChar('_'), QChar(' '));
+        displayText.replace(QChar('-'), QChar(' '));
+    }
+
+    // For file path links, keep the filename but make it more readable
+    // No additional processing needed for now
+
+    return LinkHit(pattern, displayText);
 }
 
 QSet<LinkHit> Note::findAndReturnLinkHits(const QString &text, const QRegularExpression &regex) {
@@ -3757,6 +3805,9 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
     for (const Note &note : noteList) {
         const QString &relativePathToNote = getFilePathRelativeToNote(note, connectionName);
 
+        // Get the legacy note URL for note:// protocol links
+        const QString noteUrl = getNoteURL(note.getName());
+
         // We now don't escape slashes in the relative file path, but previously we did,
         // so we need to search for both
         for (bool escapeSlashes : {true, false}) {
@@ -3777,6 +3828,53 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
                 note, noteText,
                 QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                    QRegularExpression::escape(relativeFilePath) +
+                                   QStringLiteral(R"(#.+\))")));
+        }
+
+        // Also search for non-URL-encoded filename (for links like <My Note.md>)
+        if (relativePathToNote != Note::urlEncodeNoteUrl(relativePathToNote, false)) {
+            addTextToLinkedNoteHashIfFound(
+                note, noteText, QStringLiteral("<") + relativePathToNote + QStringLiteral(">"));
+            addTextToLinkedNoteHashIfFound(
+                note, noteText,
+                QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                   QRegularExpression::escape(relativePathToNote) +
+                                   QStringLiteral(R"(\))")));
+            addTextToLinkedNoteHashIfFound(
+                note, noteText,
+                QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                   QRegularExpression::escape(relativePathToNote) +
+                                   QStringLiteral(R"(#.+\))")));
+        }
+
+        // Search for legacy note:// protocol links
+        addTextToLinkedNoteHashIfFound(note, noteText,
+                                       QStringLiteral("<") + noteUrl + QStringLiteral(">"));
+        addTextToLinkedNoteHashIfFound(
+            note, noteText,
+            QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                               QRegularExpression::escape(noteUrl) + QStringLiteral(R"(\))")));
+        addTextToLinkedNoteHashIfFound(
+            note, noteText,
+            QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                               QRegularExpression::escape(noteUrl) + QStringLiteral(R"(#.+\))")));
+
+        // Also check if the note name with underscores replaced by hyphens matches
+        // This allows links like <note://Link-test2> to match notes like "Link test2"
+        QString noteUrlWithHyphens = noteUrl;
+        noteUrlWithHyphens.replace(QChar('_'), QChar('-'));
+        if (noteUrlWithHyphens != noteUrl) {
+            addTextToLinkedNoteHashIfFound(
+                note, noteText, QStringLiteral("<") + noteUrlWithHyphens + QStringLiteral(">"));
+            addTextToLinkedNoteHashIfFound(
+                note, noteText,
+                QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                   QRegularExpression::escape(noteUrlWithHyphens) +
+                                   QStringLiteral(R"(\))")));
+            addTextToLinkedNoteHashIfFound(
+                note, noteText,
+                QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                   QRegularExpression::escape(noteUrlWithHyphens) +
                                    QStringLiteral(R"(#.+\))")));
         }
     }
@@ -3802,14 +3900,37 @@ QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes() {
             continue;
         }
 
-        // search legacy links
+        const QString relativePathToNote = note.getFilePathRelativeToNote(*this);
+
+        // Search legacy note:// protocol links
         addTextToBacklinkNoteHashIfFound(note, QStringLiteral("<") + noteUrl + QStringLiteral(">"));
         addTextToBacklinkNoteHashIfFound(
             note,
             QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                QRegularExpression::escape(noteUrl) + QStringLiteral(R"(\))")));
+        addTextToBacklinkNoteHashIfFound(
+            note,
+            QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                               QRegularExpression::escape(noteUrl) + QStringLiteral(R"(#.+\))")));
 
-        // search for legacy links ending with "@"
+        // Also check if the note name with underscores replaced by hyphens matches
+        // This allows links like <note://Link-test2> to match notes like "Link test2"
+        QString noteUrlWithHyphens = noteUrl;
+        noteUrlWithHyphens.replace(QChar('_'), QChar('-'));
+        if (noteUrlWithHyphens != noteUrl) {
+            addTextToBacklinkNoteHashIfFound(
+                note, QStringLiteral("<") + noteUrlWithHyphens + QStringLiteral(">"));
+            addTextToBacklinkNoteHashIfFound(
+                note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                         QRegularExpression::escape(noteUrlWithHyphens) +
+                                         QStringLiteral(R"(\))")));
+            addTextToBacklinkNoteHashIfFound(
+                note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                         QRegularExpression::escape(noteUrlWithHyphens) +
+                                         QStringLiteral(R"(#.+\))")));
+        }
+
+        // Search for legacy links ending with "@"
         const QString altLinkText =
             Utils::Misc::appendIfDoesNotEndWith(noteUrl, QStringLiteral("@"));
         if (altLinkText != noteUrl) {
@@ -3823,7 +3944,7 @@ QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes() {
         // so we need to search for both
         for (bool escapeSlashes : {true, false}) {
             const QString relativeFilePath =
-                Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this), escapeSlashes);
+                Note::urlEncodeNoteUrl(relativePathToNote, escapeSlashes);
 
             // Search for links to the relative file path in note
             // The "#" is for notes with a fragment (link to heading in note)
@@ -3837,6 +3958,20 @@ QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes() {
             addTextToBacklinkNoteHashIfFound(
                 note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                          QRegularExpression::escape(relativeFilePath) +
+                                         QStringLiteral(R"(#.+\))")));
+        }
+
+        // Also search for non-URL-encoded filename (for links like <My Note.md>)
+        if (relativePathToNote != Note::urlEncodeNoteUrl(relativePathToNote, false)) {
+            addTextToBacklinkNoteHashIfFound(
+                note, QStringLiteral("<") + relativePathToNote + QStringLiteral(">"));
+            addTextToBacklinkNoteHashIfFound(
+                note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                         QRegularExpression::escape(relativePathToNote) +
+                                         QStringLiteral(R"(\))")));
+            addTextToBacklinkNoteHashIfFound(
+                note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                         QRegularExpression::escape(relativePathToNote) +
                                          QStringLiteral(R"(#.+\))")));
         }
     }

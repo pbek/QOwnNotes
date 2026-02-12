@@ -6,6 +6,15 @@
   (for [#3462](https://github.com/pbek/QOwnNotes/issues/3462))
   - This action is available in the note list context menu and in the status bar path label context menu
   - It copies just the filename (e.g., `MyNote.md`) instead of the full path
+- Added support for additional note link formats in the note relation graph and backlinks panel
+  (for [#3266](https://github.com/pbek/QOwnNotes/issues/3266))
+  - Links using hyphens instead of underscores in `note://` protocol are now recognized
+    - Example: `<note://Link-test2>` now matches notes named "Link test2.md"
+    - Previously only `<note://Link_test2>` was supported
+  - Links with non-URL-encoded filenames with spaces are now recognized
+    - Example: `<Link test2.md>` now works in addition to `<Link%20test2.md>`
+  - Both markdown link syntax `[text](link)` and angle bracket syntax `<link>` are supported
+  - Backlinks for those new links will display readable names in the navigation panel
 - Also fix hiding of the _Command snippets_ in the settings dialog
   (for [#3314](https://github.com/pbek/QOwnNotes/issues/3314))
 - Fixed an issue where enabling a panel in the Windows menu would not store the state
