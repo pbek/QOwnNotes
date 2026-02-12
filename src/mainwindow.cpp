@@ -1497,6 +1497,9 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
     if (objectName == QStringLiteral("noteGraphicsViewDockWidget")) {
         updateNoteGraphicsView();
     }
+
+    // Store the workspace to persist the panel visibility change
+    storeCurrentWorkspace();
 }
 
 /**
@@ -1517,6 +1520,9 @@ void MainWindow::toggleToolbarVisibility(const QString &objectName) {
 
     const bool newVisibility = toolbar->isHidden();
     toolbar->setVisible(newVisibility);
+
+    // Store the workspace to persist the toolbar visibility change
+    storeCurrentWorkspace();
 }
 
 /**
