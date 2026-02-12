@@ -6,6 +6,8 @@
   (for [#3462](https://github.com/pbek/QOwnNotes/issues/3462))
   - This action is available in the note list context menu and in the status bar path label context menu
   - It copies just the filename (e.g., `MyNote.md`) instead of the full path
+- Also fix hiding of the _Command snippets_ in the settings dialog
+  (for [#3314](https://github.com/pbek/QOwnNotes/issues/3314))
 - Fixed an issue where enabling a panel in the Windows menu would not store the state
   immediately, causing the panel to be hidden again after an app restart
   (for [#3463](https://github.com/pbek/QOwnNotes/issues/3463))

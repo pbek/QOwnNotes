@@ -4111,11 +4111,18 @@ void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
     if (!_bookmarkTagLabelHtml.isEmpty()) {
         if (checked) {
             ui->bookmarkTagLabel->setText(_bookmarkTagLabelHtml);
-            ui->commandSnippetTagLabel->setText(_commandSnippetTagLabelHtml);
         } else {
             // Wrap content in a span with disabled color
             ui->bookmarkTagLabel->setText(QStringLiteral("<span style=\"color:%1;\">%2</span>")
                                               .arg(disabledColor, _bookmarkTagLabelHtml));
+        }
+    }
+
+    if (!_commandSnippetTagLabelHtml.isEmpty()) {
+        if (checked) {
+            ui->commandSnippetTagLabel->setText(_commandSnippetTagLabelHtml);
+        } else {
+            // Wrap content in a span with disabled color
             ui->commandSnippetTagLabel->setText(
                 QStringLiteral("<span style=\"color:%1;\">%2</span>")
                     .arg(disabledColor, _commandSnippetTagLabelHtml));

@@ -919,45 +919,45 @@
                <layout class="QGridLayout" name="gridLayout_4">
                 <item row="1" column="1">
                  <layout class="QVBoxLayout" name="verticalLayout">
-                   <item>
-                    <widget class="Label" name="installInfoTextLabel1">
-                     <property name="text">
-                      <string>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                     <property name="openExternalLinks">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="Label" name="installInfoTextLabel2">
-                     <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                     <property name="openExternalLinks">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="Label" name="installInfoTextLabel3">
-                     <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                     <property name="openExternalLinks">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
+                  <item>
+                   <widget class="Label" name="installInfoTextLabel1">
+                    <property name="text">
+                     <string>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="openExternalLinks">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Label" name="installInfoTextLabel2">
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="openExternalLinks">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Label" name="installInfoTextLabel3">
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="openExternalLinks">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
                   <item>
                    <widget class="QPushButton" name="ownCloudServerAppPageButton">
                     <property name="sizePolicy">
@@ -6520,6 +6520,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
                </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Policy::Expanding</enum>
+               </property>
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>0</width>
@@ -6546,33 +6549,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item row="2" column="0">
-                 <widget class="QGroupBox" name="groupBox_32">
+                <item row="3" column="0">
+                 <widget class="QGroupBox" name="groupBox_38">
                   <property name="title">
-                   <string>Bookmarks</string>
+                   <string>Command snippets</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_72">
+                  <layout class="QGridLayout" name="gridLayout_78">
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="bookmarksTagLineEdit">
+                    <widget class="QLineEdit" name="commandSnippetsTagLineEdit">
                      <property name="toolTip">
                       <string>Notes with this tag will be used for fetching bookmarks</string>
                      </property>
                      <property name="placeholderText">
-                      <string>Tag name for bookmarks notes</string>
+                      <string>Tag name for commands notes</string>
                      </property>
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_29">
+                    <widget class="QLabel" name="label_34">
                      <property name="text">
-                      <string>Bookmarks tag:</string>
+                      <string>Commands tag:</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="0" colspan="2">
-                    <widget class="Label" name="bookmarkTagLabel">
+                    <widget class="Label" name="commandSnippetTagLabel">
                      <property name="text">
-                      <string>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</string>
+                      <string>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</string>
                      </property>
                      <property name="wordWrap">
                       <bool>true</bool>
@@ -6583,19 +6586,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_30">
+                    <widget class="QLabel" name="commandSnippetsNoteNameLabel">
                      <property name="text">
-                      <string>Bookmarks note name:</string>
+                      <string>Commands note name:</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="bookmarksNoteNameLineEdit">
+                    <widget class="QLineEdit" name="commandSnippetsNoteNameLineEdit">
                      <property name="toolTip">
                       <string>This note will be used for adding new bookmarks from the browser extension</string>
                      </property>
                      <property name="placeholderText">
-                      <string>Note name for adding new bookmarks</string>
+                      <string>Note name for adding new commands</string>
                      </property>
                     </widget>
                    </item>
@@ -6659,6 +6662,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </layout>
                  </widget>
                 </item>
+                <item row="2" column="0">
+                 <widget class="QGroupBox" name="groupBox_32">
+                  <property name="title">
+                   <string>Bookmarks</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_72">
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_29">
+                     <property name="text">
+                      <string>Bookmarks tag:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="bookmarksTagLineEdit">
+                     <property name="toolTip">
+                      <string>Notes with this tag will be used for fetching bookmarks</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Tag name for bookmarks notes</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_30">
+                     <property name="text">
+                      <string>Bookmarks note name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="bookmarksNoteNameLineEdit">
+                     <property name="toolTip">
+                      <string>This note will be used for adding new bookmarks from the browser extension</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Note name for adding new bookmarks</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0" colspan="2">
+                    <widget class="Label" name="bookmarkTagLabel">
+                     <property name="text">
+                      <string>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</string>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                     <property name="openExternalLinks">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
@@ -6704,62 +6763,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                   <property name="textInteractionFlags">
                    <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByMouse</set>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QGroupBox" name="groupBox_38">
-               <property name="title">
-                <string>Command snippets</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_78">
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="commandSnippetsTagLineEdit">
-                  <property name="toolTip">
-                   <string>Notes with this tag will be used for fetching bookmarks</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Tag name for commands notes</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label_34">
-                  <property name="text">
-                   <string>Commands tag:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
-                 <widget class="Label" name="commandSnippetTagLabel">
-                  <property name="text">
-                   <string>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</string>
-                  </property>
-                  <property name="wordWrap">
-                   <bool>true</bool>
-                  </property>
-                  <property name="openExternalLinks">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="commandSnippetsNoteNameLabel">
-                  <property name="text">
-                   <string>Commands note name:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QLineEdit" name="commandSnippetsNoteNameLineEdit">
-                  <property name="toolTip">
-                   <string>This note will be used for adding new bookmarks from the browser extension</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Note name for adding new commands</string>
                   </property>
                  </widget>
                 </item>
