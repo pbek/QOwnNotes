@@ -14,6 +14,9 @@ QT       += quick
 }
 
 CONFIG += with_aspell
+
+# Try to enable podofo if available (checked in the podofo section below)
+# Users can disable with CONFIG-=with_podofo
 CONFIG += with_podofo
 
 # enable pch for DEV_MODE
@@ -413,10 +416,15 @@ include(libraries/qhotkey/qhotkey.pri)
 CONFIG(with_podofo) {
     unix {
         # Check if PoDoFo is available using pkg-config
-        CONFIG += link_pkgconfig
-        PKGCONFIG += libpodofo
-        DEFINES += PODOFO_ENABLED
-        message("PoDoFo enabled for PDF outline/bookmark support")
+        system(pkg-config --exists libpodofo) {
+            CONFIG += link_pkgconfig
+            PKGCONFIG += libpodofo
+            DEFINES += PODOFO_ENABLED
+            message("PoDoFo enabled for PDF outline/bookmark support")
+        } else {
+            message("PoDoFo not found. PDF outline/bookmark support will be disabled.")
+            message("Install libpodofo development package to enable this feature.")
+        }
     }
     win32 {
         # Windows: Assuming PoDoFo is installed and headers/libs are available
