@@ -14,6 +14,7 @@ QT       += quick
 }
 
 CONFIG += with_aspell
+CONFIG += with_podofo
 
 # enable pch for DEV_MODE
 # put any dev specific options here
@@ -163,6 +164,7 @@ SOURCES += main.cpp\
     helpers/qownnotesmarkdownhighlighter.cpp \
     helpers/fakevimproxy.cpp \
     helpers/flowlayout.cpp \
+    helpers/pdfoutlinehelper.cpp \
     services/databaseservice.cpp \
     threads/scriptthread.cpp \
     widgets/graphicsview.cpp \
@@ -280,6 +282,7 @@ HEADERS  += mainwindow.h \
     helpers/qownnotesmarkdownhighlighter.h \
     helpers/fakevimproxy.h \
     helpers/flowlayout.h \
+    helpers/pdfoutlinehelper.h \
     services/databaseservice.h \
     release.h \
     widgets/graphicsview.h \
@@ -405,6 +408,29 @@ include(libraries/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
 include(libraries/qhotkey/qhotkey.pri)
+
+# PoDoFo PDF library support for PDF bookmarks/outlines
+CONFIG(with_podofo) {
+    unix {
+        # Check if PoDoFo is available using pkg-config
+        CONFIG += link_pkgconfig
+        PKGCONFIG += libpodofo
+        DEFINES += PODOFO_ENABLED
+        message("PoDoFo enabled for PDF outline/bookmark support")
+    }
+    win32 {
+        # Windows: Assuming PoDoFo is installed and headers/libs are available
+        # Users may need to configure paths manually
+        exists("C:\\podofo\\include\\podofo\\podofo.h") {
+            INCLUDEPATH += C:\\podofo\\include
+            LIBS += -LC:\\podofo\\lib -lpodofo
+            DEFINES += PODOFO_ENABLED
+            message("Windows PoDoFo enabled for PDF outline/bookmark support")
+        } else {
+            warning("PoDoFo not found on Windows. PDF outline/bookmark support will be disabled.")
+        }
+    }
+}
 
 unix {
   isEmpty(PREFIX) {

@@ -1,0 +1,238 @@
+/*
+ * Copyright (c) 2014-2026 Patrizio Bekerle -- <patrizio@bekerle.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+ * for more details.
+ *
+ */
+
+#include "pdfoutlinehelper.h"
+
+#include <QDebug>
+#include <QPrinter>
+#include <QTextBlock>
+#include <QTextCursor>
+#include <QTextFormat>
+
+#ifdef PODOFO_ENABLED
+#include <podofo/podofo.h>
+using namespace PoDoFo;
+#endif
+
+/**
+ * @brief Extract headings from a QTextDocument
+ *
+ * This function scans through a QTextDocument and extracts all headings
+ * (h1-h6) based on the block format. Markdown headings are typically
+ * represented as QTextBlockFormat with specific heading levels.
+ */
+QVector<HeadingInfo> PdfOutlineHelper::extractHeadings(QTextDocument *doc) {
+    QVector<HeadingInfo> headings;
+
+    if (!doc) {
+        return headings;
+    }
+
+    // Iterate through all blocks in the document
+    QTextBlock block = doc->begin();
+    while (block.isValid()) {
+        QTextBlockFormat format = block.blockFormat();
+        int headingLevel = format.headingLevel();
+
+        // Check if this block is a heading (heading level 1-6)
+        if (headingLevel > 0 && headingLevel <= 6) {
+            QString text = block.text().trimmed();
+
+            // Skip empty headings
+            if (!text.isEmpty()) {
+                int position = block.position();
+                headings.append(HeadingInfo(text, headingLevel, position));
+
+                qDebug() << "Found heading:" << text << "Level:" << headingLevel
+                         << "Position:" << position;
+            }
+        }
+
+        block = block.next();
+    }
+
+    return headings;
+}
+
+/**
+ * @brief Add outline entries to a PDF file
+ *
+ * This function opens an existing PDF file and adds outline/bookmark entries
+ * based on the provided heading information. It uses the PoDoFo library for
+ * PDF manipulation.
+ */
+bool PdfOutlineHelper::addOutlineToPdf(const QString &pdfFilePath,
+                                       const QVector<HeadingInfo> &headings) {
+#ifdef PODOFO_ENABLED
+    if (headings.isEmpty()) {
+        qDebug() << "No headings to add to PDF outline";
+        return true;    // Not an error, just nothing to do
+    }
+
+    try {
+        // Open the existing PDF document
+        PdfMemDocument document;
+        document.Load(pdfFilePath.toStdString());
+
+        // Get the pages collection
+        auto &pages = document.GetPages();
+        unsigned pageCount = pages.GetCount();
+
+        // Get or create the document outline
+        PdfOutlines *outlines = document.GetOutlines();
+        if (!outlines) {
+            // Create outlines if they don't exist
+            outlines = &document.GetOrCreateOutlines();
+        }
+
+        // Track parent outline items for each heading level
+        // This allows us to create a proper tree structure
+        QVector<PdfOutlineItem *> levelParents(7, nullptr);    // Levels 0-6
+
+        // Add outline entries for each heading
+        for (const HeadingInfo &heading : headings) {
+            // Determine the parent outline item based on heading level
+            PdfOutlineItem *parent = nullptr;
+
+            // Find the appropriate parent (closest higher-level heading)
+            for (int i = heading.level - 1; i >= 0; --i) {
+                if (levelParents[i] != nullptr) {
+                    parent = levelParents[i];
+                    break;
+                }
+            }
+
+            // Get the destination page (pages are 0-indexed in PoDoFo)
+            unsigned pageIndex = heading.page > 0 ? static_cast<unsigned>(heading.page - 1) : 0;
+
+            // Ensure page index is valid
+            if (pageIndex >= pageCount) {
+                pageIndex = pageCount - 1;
+            }
+
+            // Get the page object
+            PdfPage &page = pages.GetPageAt(pageIndex);
+
+            // Create a destination to the page (top of page, fit width)
+            auto dest = document.CreateDestination();
+            dest->SetDestination(page, PdfDestinationFit::FitH, 0);
+
+            // Create the outline item
+            PdfOutlineItem *outlineItem;
+            if (parent) {
+                // Add as child of parent heading
+                outlineItem = &parent->CreateChild(PdfString(heading.text.toStdString()));
+            } else {
+                // Add at root level
+                outlineItem = &outlines->CreateRoot(PdfString(heading.text.toStdString()));
+            }
+
+            // Set destination to the page
+            outlineItem->SetDestination(*dest);
+
+            // Store this item as a potential parent for lower-level headings
+            if (heading.level < levelParents.size()) {
+                levelParents[heading.level] = outlineItem;
+
+                // Clear any lower-level parents
+                for (int i = heading.level + 1; i < levelParents.size(); ++i) {
+                    levelParents[i] = nullptr;
+                }
+            }
+
+            qDebug() << "Added outline entry:" << heading.text << "Level:" << heading.level
+                     << "Page:" << heading.page;
+        }
+
+        // Save the modified PDF
+        document.Save(pdfFilePath.toStdString());
+
+        qDebug() << "Successfully added" << headings.size()
+                 << "outline entries to PDF:" << pdfFilePath;
+        return true;
+
+    } catch (const PdfError &error) {
+        qWarning() << "PoDoFo error while adding PDF outline:"
+                   << QString::fromStdString(error.what());
+        return false;
+    } catch (const std::exception &e) {
+        qWarning() << "Error while adding PDF outline:" << e.what();
+        return false;
+    } catch (...) {
+        qWarning() << "Unknown error while adding PDF outline";
+        return false;
+    }
+#else
+    Q_UNUSED(pdfFilePath)
+    Q_UNUSED(headings)
+    qDebug() << "PoDoFo support not enabled. Cannot add PDF outline.";
+    return false;
+#endif
+}
+
+#ifdef PODOFO_ENABLED
+/**
+ * @brief Calculate page numbers for headings
+ *
+ * This function estimates which page each heading appears on by analyzing
+ * the document layout. This is a simplified approach that works reasonably
+ * well for most documents.
+ */
+void PdfOutlineHelper::calculatePageNumbers(QTextDocument *doc, QVector<HeadingInfo> &headings,
+                                            const QPrinter *printer) {
+    if (!doc || !printer || headings.isEmpty()) {
+        return;
+    }
+
+    // Clone the document to avoid modifying the original
+    QTextDocument cloneDoc;
+    cloneDoc.setHtml(doc->toHtml());
+    cloneDoc.setPageSize(printer->pageRect(QPrinter::Point).size());
+
+    // Calculate page breaks
+    qreal pageHeight = printer->pageRect(QPrinter::Point).height();
+    qreal currentHeight = 0.0;
+    int currentPage = 1;
+    int headingIndex = 0;
+
+    QTextBlock block = cloneDoc.begin();
+    while (block.isValid() && headingIndex < headings.size()) {
+        // Check if we've reached the next heading
+        if (block.position() >= headings[headingIndex].position) {
+            headings[headingIndex].page = currentPage;
+            headingIndex++;
+        }
+
+        // Add block height to current page height
+        QTextLayout *layout = block.layout();
+        if (layout) {
+            currentHeight += layout->boundingRect().height();
+
+            // Check if we need to start a new page
+            if (currentHeight >= pageHeight) {
+                currentPage++;
+                currentHeight = 0.0;
+            }
+        }
+
+        block = block.next();
+    }
+
+    // Assign remaining headings to the last page
+    while (headingIndex < headings.size()) {
+        headings[headingIndex].page = currentPage;
+        headingIndex++;
+    }
+}
+#endif

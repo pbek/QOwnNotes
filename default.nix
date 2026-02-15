@@ -10,6 +10,7 @@
   xvfb-run,
   installShellFiles,
   aspell,
+  podofo,
 }:
 
 let
@@ -46,6 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     botan3
     libgit2
     aspell
+    podofo
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ qt6Packages.qtwayland ];
 
@@ -54,6 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
     "-DBUILD_WITH_LIBGIT2=ON"
     "-DBUILD_WITH_ASPELL=ON"
+    "-DBUILD_WITH_PODOFO=ON"
   ];
 
   # Install shell completion on Linux (with xvfb-run)

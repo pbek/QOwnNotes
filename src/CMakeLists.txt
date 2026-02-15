@@ -11,6 +11,8 @@ option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
 
 option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
 option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
+option(BUILD_WITH_PODOFO "Build with PoDoFo support for PDF bookmarks/outlines"
+       OFF)
 # END options
 
 if(QON_QT6_BUILD)
@@ -60,6 +62,22 @@ if(BUILD_WITH_ASPELL)
   include_directories(${ASPELL_INCLUDE_DIR})
 endif()
 
+if(BUILD_WITH_PODOFO)
+  # Find PoDoFo using pkg-config
+  find_package(PkgConfig REQUIRED)
+  pkg_check_modules(PODOFO REQUIRED libpodofo)
+
+  if(NOT PODOFO_FOUND)
+    message(
+      FATAL_ERROR "PoDoFo was not found. Please install libpodofo-dev or the "
+                  "appropriate package for your system.")
+  endif()
+
+  include_directories(${PODOFO_INCLUDE_DIRS})
+  link_directories(${PODOFO_LIBRARY_DIRS})
+  message("PoDoFo enabled for PDF outline/bookmark support")
+endif()
+
 add_executable(QOwnNotes "")
 
 if(BUILD_WITH_LIBGIT2)
@@ -70,6 +88,11 @@ endif()
 if(BUILD_WITH_ASPELL)
   target_compile_definitions(QOwnNotes PUBLIC ASPELL_ENABLED)
   target_link_libraries(QOwnNotes PRIVATE ${ASPELL_LIBRARIES})
+endif()
+
+if(BUILD_WITH_PODOFO)
+  target_compile_definitions(QOwnNotes PUBLIC PODOFO_ENABLED)
+  target_link_libraries(QOwnNotes PRIVATE ${PODOFO_LIBRARIES})
 endif()
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
@@ -300,6 +323,8 @@ set(SOURCE_FILES
     helpers/codetohtmlconverter.h
     helpers/nomenuiconstyle.cpp
     helpers/nomenuiconstyle.h
+    helpers/pdfoutlinehelper.cpp
+    helpers/pdfoutlinehelper.h
     api/noteapi.cpp
     api/noteapi.h
     api/notesubfolderapi.cpp
