@@ -114,9 +114,38 @@ bool PdfOutlineHelper::addOutlineToPdf(const QString &pdfFilePath,
         PdfMemDocument document;
         document.Load(pdfFilePath.toStdString());
 
+        // Make a mutable copy of headings so we can update page numbers
+        QVector<HeadingInfo> mutableHeadings = headings;
+
         // Get the pages collection
         auto &pages = document.GetPages();
         unsigned pageCount = pages.GetCount();
+
+        qDebug() << "PDF has" << pageCount << "pages," << mutableHeadings.size() << "headings";
+
+        // Assign page numbers to headings based on their character position
+        // This is a heuristic that assumes fairly uniform text distribution
+        if (pageCount > 0 && !mutableHeadings.isEmpty()) {
+            // Get the last heading's position to estimate total document size
+            int maxPosition = 0;
+            for (const HeadingInfo &heading : mutableHeadings) {
+                if (heading.position > maxPosition) {
+                    maxPosition = heading.position;
+                }
+            }
+
+            // Estimate characters per page
+            double charsPerPage =
+                maxPosition > 0 ? static_cast<double>(maxPosition) / pageCount : 1000;
+
+            // Assign pages based on position
+            for (HeadingInfo &heading : mutableHeadings) {
+                int estimatedPage = static_cast<int>(heading.position / charsPerPage) + 1;
+                heading.page = qMin(qMax(estimatedPage, 1), static_cast<int>(pageCount));
+                qDebug() << "Heading" << heading.text << "at position" << heading.position
+                         << "-> page" << heading.page;
+            }
+        }
 
         // Get or create the document outline
         PdfOutlines *outlines = document.GetOutlines();
@@ -130,7 +159,7 @@ bool PdfOutlineHelper::addOutlineToPdf(const QString &pdfFilePath,
         QVector<PdfOutlineItem *> levelParents(7, nullptr);    // Levels 0-6
 
         // Add outline entries for each heading
-        for (const HeadingInfo &heading : headings) {
+        for (const HeadingInfo &heading : mutableHeadings) {
             // Determine the parent outline item based on heading level
             PdfOutlineItem *parent = nullptr;
 
@@ -223,10 +252,9 @@ bool PdfOutlineHelper::addOutlineToPdf(const QString &pdfFilePath,
             throw;                      // Re-throw to be caught by outer catch
         }
 
-        qDebug() << "Successfully added" << headings.size()
+        qDebug() << "Successfully added" << mutableHeadings.size()
                  << "outline entries to PDF:" << pdfFilePath;
         return true;
-
     } catch (const PdfError &error) {
         qWarning() << "PoDoFo error while adding PDF outline:"
                    << QString::fromStdString(error.what());
