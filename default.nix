@@ -10,7 +10,7 @@
   xvfb-run,
   installShellFiles,
   aspell,
-  podofo,
+  podofo ? null,
 }:
 
 let
@@ -47,15 +47,19 @@ stdenv.mkDerivation (finalAttrs: {
     botan3
     libgit2
     aspell
-    podofo
   ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [ qt6Packages.qtwayland ];
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    qt6Packages.qtwayland
+    podofo
+  ];
 
   cmakeFlags = [
     "-DQON_QT6_BUILD=ON"
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
     "-DBUILD_WITH_LIBGIT2=ON"
     "-DBUILD_WITH_ASPELL=ON"
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     "-DBUILD_WITH_PODOFO=ON"
   ];
 
