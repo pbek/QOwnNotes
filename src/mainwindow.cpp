@@ -5699,13 +5699,30 @@ void MainWindow::exportNoteAsPDF(QTextDocument *doc) {
         // Extract headings before printing
         QVector<HeadingInfo> headings = PdfOutlineHelper::extractHeadings(doc);
 
+        // Store the output file path before printing
+        QString pdfPath = printer->outputFileName();
+
         // Print the document to PDF
         doc->print(printer);
 
+        // IMPORTANT: Delete the printer to ensure the PDF file is fully written and closed
+        // before we try to open it with PoDoFo
+        delete printer;
+        printer = nullptr;
+
+        // Additional sync to ensure filesystem has written the data
+        QFile::exists(pdfPath);    // Force a filesystem check
+
+        qDebug() << "PDF written to:" << pdfPath;
+        QFile checkFile(pdfPath);
+        if (checkFile.exists()) {
+            qDebug() << "PDF file size:" << checkFile.size() << "bytes";
+        } else {
+            qWarning() << "PDF file does not exist after printing!";
+        }
+
         // Add outline/bookmarks to the PDF if headings were found
         if (!headings.isEmpty()) {
-            QString pdfPath = printer->outputFileName();
-
 #ifdef PODOFO_ENABLED
             // Calculate page numbers for headings
             // Note: This is a best-effort estimation. For precise page numbers,
@@ -5734,10 +5751,11 @@ void MainWindow::exportNoteAsPDF(QTextDocument *doc) {
 #endif
         }
 
-        Utils::Misc::openFolderSelect(printer->outputFileName());
+        Utils::Misc::openFolderSelect(pdfPath);
+    } else {
+        // Clean up printer if preparation failed
+        delete printer;
     }
-
-    delete printer;
 }
 
 /**

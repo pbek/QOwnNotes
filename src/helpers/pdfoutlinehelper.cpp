@@ -15,10 +15,12 @@
 #include "pdfoutlinehelper.h"
 
 #include <QDebug>
+#include <QFile>
 #include <QPrinter>
 #include <QTextBlock>
 #include <QTextCursor>
 #include <QTextFormat>
+#include <QThread>
 
 #ifdef PODOFO_ENABLED
 #include <podofo/podofo.h>
@@ -81,6 +83,33 @@ bool PdfOutlineHelper::addOutlineToPdf(const QString &pdfFilePath,
     }
 
     try {
+        // Ensure the file exists and is readable
+        QFile file(pdfFilePath);
+        if (!file.exists()) {
+            qWarning() << "PDF file does not exist:" << pdfFilePath;
+            return false;
+        }
+
+        // Check if file has content
+        if (file.size() == 0) {
+            qWarning() << "PDF file is empty:" << pdfFilePath;
+            return false;
+        }
+
+        // Wait a moment to ensure file is fully written and closed
+        // This is necessary because Qt might buffer writes
+        QThread::msleep(200);
+
+        // Try to open the file to ensure it's not locked
+        if (!file.open(QIODevice::ReadOnly)) {
+            qWarning() << "Cannot open PDF file for reading:" << pdfFilePath;
+            return false;
+        }
+        file.close();
+
+        qDebug() << "Opening PDF file for adding outlines:" << pdfFilePath << "Size:" << file.size()
+                 << "bytes";
+
         // Open the existing PDF document
         PdfMemDocument document;
         document.Load(pdfFilePath.toStdString());
@@ -155,8 +184,44 @@ bool PdfOutlineHelper::addOutlineToPdf(const QString &pdfFilePath,
                      << "Page:" << heading.page;
         }
 
-        // Save the modified PDF
-        document.Save(pdfFilePath.toStdString());
+        // Save the modified PDF (full rewrite, not incremental update)
+        // SaveUpdate() only writes the changes, which loses the original content
+        QString tempPath = pdfFilePath + ".tmp";
+        try {
+            document.Save(tempPath.toStdString());
+            qDebug() << "Saved modified PDF to temporary file:" << tempPath;
+
+            // Verify the temp file has content
+            QFile tempFile(tempPath);
+            if (!tempFile.exists() || tempFile.size() == 0) {
+                qWarning() << "Temporary PDF file is invalid or empty";
+                QFile::remove(tempPath);
+                return false;
+            }
+
+            qDebug() << "Temporary PDF size:" << tempFile.size() << "bytes";
+
+            // Replace the original file with the modified one
+            QFile::remove(pdfFilePath);
+            if (QFile::rename(tempPath, pdfFilePath)) {
+                qDebug() << "Successfully replaced original PDF with modified version";
+            } else {
+                qWarning() << "Failed to rename temporary file to original path";
+                // Try to copy instead
+                if (QFile::copy(tempPath, pdfFilePath)) {
+                    QFile::remove(tempPath);
+                    qDebug() << "Successfully copied modified PDF to original location";
+                } else {
+                    qWarning() << "Failed to copy temporary file. Modified PDF is at:" << tempPath;
+                    return false;
+                }
+            }
+        } catch (const PdfError &error) {
+            qWarning() << "PoDoFo error while saving modified PDF:"
+                       << QString::fromStdString(error.what());
+            QFile::remove(tempPath);    // Clean up temp file
+            throw;                      // Re-throw to be caught by outer catch
+        }
 
         qDebug() << "Successfully added" << headings.size()
                  << "outline entries to PDF:" << pdfFilePath;
