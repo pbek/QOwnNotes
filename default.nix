@@ -10,6 +10,7 @@
   xvfb-run,
   installShellFiles,
   aspell,
+  useQlitehtml ? false,
 }:
 
 let
@@ -54,6 +55,10 @@ stdenv.mkDerivation (finalAttrs: {
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
     "-DBUILD_WITH_LIBGIT2=ON"
     "-DBUILD_WITH_ASPELL=ON"
+  ]
+  ++ lib.optionals useQlitehtml [
+    "-DUSE_QLITEHTML=ON"
+    "-DQLITEHTML_LIBRARY_TYPE=STATIC"
   ];
 
   # Install shell completion on Linux (with xvfb-run)

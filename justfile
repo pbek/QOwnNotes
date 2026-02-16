@@ -46,6 +46,11 @@ translations-update-files:
 nix-build:
     nix build '.?submodules=1#qownnotes-qt6'
 
+# Build the application for nix with QLITEHTML support
+[group('nix')]
+nix-build-qlitehtml:
+    nix build '.?submodules=1#qownnotes-qt6-qlitehtml'
+
 # Build the application for nix for aaarch64 (throws errors while building Qt6)
 [group('nix')]
 nix-build-aarch64:
@@ -232,7 +237,17 @@ vm-test-interactive:
 nix-build-qt6:
     nix build '.?submodules=1#qownnotes-qt6'
 
+# Build the application with Qt6 for nix with submodules and QLITEHTML support
+[group('nix')]
+nix-build-qt6-qlitehtml:
+    nix build '.?submodules=1#qownnotes-qt6-qlitehtml'
+
 # Force a rebuild of the application with Qt6 (submodules, new FORCE_REBUILD tag)
 [group('nix')]
 nix-build-qt6-force:
     FORCE_REBUILD=$(date +%s) nix build '.?submodules=1#qownnotes-qt6' --impure --rebuild
+
+# Force a rebuild of the application with Qt6 and QLITEHTML (submodules, new FORCE_REBUILD tag)
+[group('nix')]
+nix-build-qt6-qlitehtml-force:
+    FORCE_REBUILD=$(date +%s) nix build '.?submodules=1#qownnotes-qt6-qlitehtml' --impure --rebuild

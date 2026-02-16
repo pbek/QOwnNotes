@@ -43,6 +43,7 @@
         in
         {
           qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
+          qownnotes-qt6-qlitehtml = pkgs.callPackage (import ./default.nix) { useQlitehtml = true; };
           qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
           qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
           qownnotes-qt5153 =
