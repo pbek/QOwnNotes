@@ -4,6 +4,11 @@
 
 - Moving the QToolBar widgets in the UI now triggers the storing of the current workspace
   (for [#3465](https://github.com/pbek/QOwnNotes/issues/3465))
+- Improved the QLiteHtml library integration and build process
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - The QLiteHtml debug information is now also shown in the debug settings
+  - Fixed various build issues in the QLiteHtml library for modern compilers
+  - The QLiteHtml library is now built as a static library when enabled
 
 ## 26.2.4
 
