@@ -960,8 +960,6 @@ std::shared_ptr<litehtml::element> DocumentContainerPrivate::create_element(
     const litehtml::string_map &attributes,
     const std::shared_ptr<litehtml::document> &doc)
 {
-    // TODO
-
     // We only handle checkbox here
     if (litehtml::t_strcasecmp("input", tag_name) != 0) {
         return {};
@@ -976,13 +974,18 @@ std::shared_ptr<litehtml::element> DocumentContainerPrivate::create_element(
 
     auto checkBox = std::make_shared<checkbox>(m_document);
     checkBox->set_checked(isChecked);
-    return checkBox;
+    checkBox->set_index(m_checkboxIndex);
 
-    qDebug(log) << "create_element" << QString::fromUtf8(tag_name);
+    // Set up the click callback to emit the checkbox index
+    if (m_checkboxCallback) {
+        checkBox->set_click_callback(m_checkboxCallback);
+    }
+
+    m_checkboxIndex++;
+    return checkBox;
 
     Q_UNUSED(attributes)
     Q_UNUSED(doc)
-    return {};
 }
 
 void DocumentContainerPrivate::get_media_features(litehtml::media_features &media) const
@@ -1015,6 +1018,7 @@ void DocumentContainer::setDocument(const QByteArray &data, DocumentContainerCon
 {
     d->m_pixmaps.clear();
     d->clearSelection();
+    d->m_checkboxIndex = 0; // Reset checkbox index for new document
     d->m_document = litehtml::document::createFromUTF8(data.constData(),
                                                        d.get(),
                                                        &context->d->context);
@@ -1358,6 +1362,11 @@ void DocumentContainer::setCursorCallback(const DocumentContainer::CursorCallbac
 void DocumentContainer::setLinkCallback(const DocumentContainer::LinkCallback &callback)
 {
     d->m_linkCallback = callback;
+}
+
+void DocumentContainer::setCheckboxCallback(const DocumentContainer::CheckboxCallback &callback)
+{
+    d->m_checkboxCallback = callback;
 }
 
 void DocumentContainer::setPaletteCallback(const DocumentContainer::PaletteCallback &callback)

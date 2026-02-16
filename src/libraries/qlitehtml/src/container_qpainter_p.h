@@ -164,9 +164,11 @@ public: // document_container API
     DocumentContainer::DataCallback m_dataCallback;
     DocumentContainer::CursorCallback m_cursorCallback;
     DocumentContainer::LinkCallback m_linkCallback;
+    DocumentContainer::CheckboxCallback m_checkboxCallback;
     DocumentContainer::PaletteCallback m_paletteCallback;
     DocumentContainer::ClipboardCallback m_clipboardCallback;
     bool m_blockLinks = false;
+    int m_checkboxIndex = 0;
 };
 
 class DocumentContainerContextPrivate
