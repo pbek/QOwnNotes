@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.2.5
+
+- Moving the QToolBar widgets in the UI now triggers the storing of the current workspace
+  (for [#3465](https://github.com/pbek/QOwnNotes/issues/3465))
+
 ## 26.2.4
 
 - Added a "Copy note filename" menu action to copy the filename of the current note to the clipboard

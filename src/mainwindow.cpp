@@ -414,6 +414,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     const auto toolbars = findChildren<QToolBar *>();
     for (QToolBar *toolbar : toolbars) {
         connect(toolbar, &QToolBar::visibilityChanged, this, &MainWindow::toolbarVisibilityChanged);
+
+        // Store the current workspace when a toolbar is moved (docked/undocked)
+        connect(toolbar, &QToolBar::topLevelChanged, this, [this]() { storeCurrentWorkspace(); });
     }
 
     // set the action group for the width selector of the distraction free mode
