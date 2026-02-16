@@ -1883,6 +1883,14 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output +=
         prepareDebugInformationLine(QStringLiteral("Libgit2"), useLibGit2, withGitHubLineBreaks);
 
+    QString useQLiteHtml = QStringLiteral("no");
+#ifdef USE_QLITEHTML
+    useQLiteHtml = QStringLiteral("yes");
+#endif
+
+    output += prepareDebugInformationLine(QStringLiteral("QLiteHtml"), useQLiteHtml,
+                                          withGitHubLineBreaks);
+
     output += prepareDebugInformationLine(QStringLiteral("Locale (system)"),
                                           QLocale::system().name(), withGitHubLineBreaks);
     output += prepareDebugInformationLine(
