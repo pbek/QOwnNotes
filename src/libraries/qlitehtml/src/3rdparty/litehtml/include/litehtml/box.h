@@ -1,6 +1,8 @@
 #ifndef LH_BOX_H
 #define LH_BOX_H
 
+#include "element.h"
+
 namespace litehtml {
 class html_tag;
 

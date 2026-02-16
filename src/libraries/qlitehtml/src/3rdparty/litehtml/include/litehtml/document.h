@@ -2,6 +2,7 @@
 #define LH_DOCUMENT_H
 
 #include "context.h"
+#include "element.h"
 #include "style.h"
 #include "types.h"
 

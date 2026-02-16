@@ -1,6 +1,8 @@
 #ifndef LH_ATTRIBUTES_H
 #define LH_ATTRIBUTES_H
 
+#include "types.h"
+
 namespace litehtml {
 struct attr_color {
   unsigned char rgbBlue;

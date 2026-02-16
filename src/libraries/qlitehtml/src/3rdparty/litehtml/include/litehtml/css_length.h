@@ -1,6 +1,7 @@
 #ifndef LH_CSS_LENGTH_H
 #define LH_CSS_LENGTH_H
 
+#include "os_types.h"
 #include "types.h"
 
 namespace litehtml {

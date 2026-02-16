@@ -7,6 +7,8 @@
 #include <memory>
 #include <vector>
 
+#include "os_types.h"
+
 namespace litehtml {
 class document;
 class element;

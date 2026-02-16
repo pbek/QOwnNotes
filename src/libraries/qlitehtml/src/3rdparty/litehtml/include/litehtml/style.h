@@ -4,6 +4,7 @@
 #include <string>
 
 #include "attributes.h"
+#include "os_types.h"
 
 namespace litehtml {
 class property_value {

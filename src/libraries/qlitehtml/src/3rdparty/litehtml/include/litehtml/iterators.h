@@ -1,10 +1,10 @@
 #ifndef LH_ITERATORS_H
 #define LH_ITERATORS_H
 
+#include "element.h"
 #include "types.h"
 
 namespace litehtml {
-class element;
 
 class iterator_selector {
  public:

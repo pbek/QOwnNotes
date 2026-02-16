@@ -1,6 +1,11 @@
 #ifndef LH_MEDIA_QUERY_H
 #define LH_MEDIA_QUERY_H
 
+#include <vector>
+
+#include "os_types.h"
+#include "types.h"
+
 namespace litehtml {
 struct media_query_expression {
   typedef std::vector<media_query_expression> vector;

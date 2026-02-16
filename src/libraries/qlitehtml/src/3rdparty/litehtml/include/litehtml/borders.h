@@ -3,6 +3,7 @@
 
 #include "css_length.h"
 #include "types.h"
+#include "web_color.h"
 
 namespace litehtml {
 struct css_border {

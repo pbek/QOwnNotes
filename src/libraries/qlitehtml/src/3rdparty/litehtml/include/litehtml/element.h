@@ -3,8 +3,10 @@
 
 #include <memory>
 
+#include "background.h"
 #include "css_offsets.h"
 #include "stylesheet.h"
+#include "web_color.h"
 
 namespace litehtml {
 class box;

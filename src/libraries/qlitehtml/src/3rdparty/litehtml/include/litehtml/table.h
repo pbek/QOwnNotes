@@ -1,6 +1,11 @@
 #ifndef LH_TABLE_H
 #define LH_TABLE_H
 
+#include <vector>
+
+#include "css_length.h"
+#include "element.h"
+
 namespace litehtml {
 struct table_row {
   typedef std::vector<table_row> vector;
