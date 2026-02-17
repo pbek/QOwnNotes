@@ -60,10 +60,3 @@ void checkbox::draw(litehtml::uint_ptr hdc, int x, int y, const litehtml::positi
     paint->setPen(savedPen);
     paint->setBrush(savedBrush);
 }
-
-void checkbox::on_click()
-{
-    if (m_clickCallback) {
-        m_clickCallback(m_index);
-    }
-}

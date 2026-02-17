@@ -9,8 +9,6 @@
   - The QLiteHtml debug information is now also shown in the debug settings
   - Fixed various build issues in the QLiteHtml library for modern compilers
   - The QLiteHtml library is now built as a static library when enabled
-  - Task list checkboxes are now clickable in the QLiteHtml preview
-    - Clicking a checkbox will toggle its state in the markdown text
 
 ## 26.2.4
 

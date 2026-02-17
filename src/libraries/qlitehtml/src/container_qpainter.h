@@ -117,9 +117,6 @@ public: // outside API
     using LinkCallback = std::function<void(QUrl)>;
     void setLinkCallback(const LinkCallback &callback);
 
-    using CheckboxCallback = std::function<void(int)>;
-    void setCheckboxCallback(const CheckboxCallback &callback);
-
     using PaletteCallback = std::function<QPalette()>;
     void setPaletteCallback(const PaletteCallback &callback);
 

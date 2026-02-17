@@ -398,13 +398,6 @@ QLiteHtmlWidget::QLiteHtmlWidget(QWidget *parent)
         QMetaObject::invokeMethod(
             this, [this, fullUrl] { emit linkClicked(fullUrl); }, Qt::QueuedConnection);
     });
-    d->documentContainer.setCheckboxCallback([this](int index) {
-        // Emit a checkbox:// URL similar to the regular preview
-        QUrl checkboxUrl(QStringLiteral("checkbox://_%1").arg(index));
-        // delay because document may not be changed directly during this callback
-        QMetaObject::invokeMethod(
-            this, [this, checkboxUrl] { emit linkClicked(checkboxUrl); }, Qt::QueuedConnection);
-    });
     d->documentContainer.setClipboardCallback([this](bool yes) { emit copyAvailable(yes); });
 
     // TODO adapt mastercss to palette (default text & background color)
