@@ -1018,7 +1018,7 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
         text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
     }
 
-    const auto stripTaskListParagraphs = [&reTaskListItem](QString &input) {
+    const auto stripTaskListParagraphs = [](QString &input) {
         int pos = 0;
         while (true) {
             QRegularExpressionMatch match = reTaskListItem.match(input, pos);
