@@ -54,11 +54,11 @@ void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl) 
     menu.addAction(act);
 
     if (!linkUrl.isEmpty() && linkUrl.isValid()) {
-        QAction *act = new QAction(tr("Copy link"), this);
-        act->setEnabled(selectedText().isEmpty());
-        connect(act, &QAction::triggered, this,
+        QAction *copyLinkAction = new QAction(tr("Copy link location"), this);
+        copyLinkAction->setEnabled(selectedText().isEmpty());
+        connect(copyLinkAction, &QAction::triggered, this,
                 [linkUrl] { qApp->clipboard()->setText(linkUrl.toString()); });
-        menu.addAction(act);
+        menu.addAction(copyLinkAction);
     }
 
     menu.addSeparator();
