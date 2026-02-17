@@ -1001,7 +1001,15 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
                                         QRegularExpression::CaseInsensitiveOption);
     static const QRegularExpression re3(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[-\])"),
                                         QRegularExpression::CaseInsensitiveOption);
+    static const QRegularExpression reInputChecked(
+        QStringLiteral(R"(<input[^>]*\btype\s*=\s*["']?checkbox["']?[^>]*\bchecked\b[^>]*>)"),
+        QRegularExpression::CaseInsensitiveOption);
+    static const QRegularExpression reInputUnchecked(
+        QStringLiteral(R"(<input[^>]*\btype\s*=\s*["']?checkbox["']?[^>]*>)"),
+        QRegularExpression::CaseInsensitiveOption);
     if (!clickable) {
+        text.replace(reInputChecked, QStringLiteral("&#9745;"));
+        text.replace(reInputUnchecked, QStringLiteral("&#9744;"));
         text.replace(re1, listTag % QStringLiteral("\\1&#9744;"));
         text.replace(re2, listTag % QStringLiteral("\\1&#9745;"));
         text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
@@ -1013,10 +1021,11 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
     // line numbers of checkboxes in the original Markdown text
     // should be provided by the Markdown parser
 
-    text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
-
     const QString checkboxStart =
         QStringLiteral(R"(<a class="task-list-item-checkbox" href="checkbox://_)");
+    text.replace(reInputChecked, checkboxStart % QStringLiteral("\">&#9745;</a>"));
+    text.replace(reInputUnchecked, checkboxStart % QStringLiteral("\">&#9744;</a>"));
+    text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
     text.replace(
         re1, listTag % QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9744;</a>"));
     text.replace(

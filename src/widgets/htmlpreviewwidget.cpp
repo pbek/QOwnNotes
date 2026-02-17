@@ -2,6 +2,8 @@
 
 #ifdef USE_QLITEHTML
 
+#include <utils/misc.h>
+
 #include <QAction>
 #include <QApplication>
 #include <QClipboard>
@@ -82,6 +84,10 @@ void HtmlPreviewWidget::wheelEvent(QWheelEvent *event) {
     } else {
         setZoomFactor(zoomFactor() - .1);
     }
+}
+
+void HtmlPreviewWidget::setHtml(const QString &text) {
+    QLiteHtmlWidget::setHtml(Utils::Misc::parseTaskList(text, true));
 }
 
 #endif

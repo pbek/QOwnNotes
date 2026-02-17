@@ -10,6 +10,7 @@ class HtmlPreviewWidget final : public QLiteHtmlWidget {
     Q_OBJECT
    public:
     HtmlPreviewWidget(QWidget *parent);
+    void setHtml(const QString &text);
 
    Q_SIGNALS:
     void anchorClicked(const QUrl &url);
