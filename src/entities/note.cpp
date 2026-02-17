@@ -3087,7 +3087,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "th, td {padding: 2px 5px; border: 1px solid %5;}"
                      "a { color: #FF9137; text-decoration: none; }"
                      "a.task-list-item-checkbox { color: inherit; text-decoration: none; cursor: "
-                     "pointer; }"
+                     "pointer; margin-right: 6px; }"
                      "a.task-list-item-checkbox:focus { outline: none; }"
                      "%1 %3 %4"
                      "</style></head><body class=\"preview\">%2</body></html>")
