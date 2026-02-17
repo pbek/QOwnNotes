@@ -1026,7 +1026,7 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
                 break;
             }
             QString content = match.captured(3);
-            content.replace(QRegularExpression(QStringLiteral(R"(<\s*/?\s*p\s*>)"),
+            content.replace(QRegularExpression(QStringLiteral(R"(<\s*/?\s*p[^>]*>)"),
                                                QRegularExpression::CaseInsensitiveOption),
                             QString());
             content = content.trimmed();

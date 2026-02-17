@@ -2830,8 +2830,7 @@ static std::vector<ImageSize> *getImageSizeCache() {
 QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxImageWidth,
                                  bool forExport, bool base64Images) {
     // MD4C flags
-    unsigned flags =
-        MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS | MD_FLAG_LATEXMATHSPANS | MD_FLAG_UNDERLINE;
+    unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS | MD_FLAG_LATEXMATHSPANS;
     // we parse the task lists ourselves
 
     // we render checkboxes when using qlitehtml

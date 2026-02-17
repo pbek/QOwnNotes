@@ -8,6 +8,7 @@
   - Task list items no longer wrap checkbox text in paragraph tags
   - Added "Export generated raw HTML" to the QLiteHtml preview context menu
   - Task list checkboxes in QLiteHtml now use the same clickable styling as the regular preview
+  - Restored Markdown underscore emphasis handling for `_italic_` and `__strong__`
 
 ## 26.2.5
 
