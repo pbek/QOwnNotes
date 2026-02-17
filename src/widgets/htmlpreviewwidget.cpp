@@ -2,15 +2,19 @@
 
 #ifdef USE_QLITEHTML
 
+#include <dialogs/filedialog.h>
 #include <utils/misc.h>
 
 #include <QAction>
 #include <QApplication>
 #include <QClipboard>
-#include <QDesktopServices>
+#include <QDialog>
 #include <QEventLoop>
+#include <QFile>
+#include <QFileInfo>
 #include <QMenu>
 #include <QNetworkReply>
+#include <QTextStream>
 #include <QWheelEvent>
 
 HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent) : QLiteHtmlWidget(parent) {
@@ -57,9 +61,15 @@ void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl) 
         menu.addAction(act);
     }
 
+    menu.addSeparator();
+    QAction *htmlFileExportAction = menu.addAction(tr("Export generated raw HTML"));
+
     menu.addAction(tr("Reset zoom"), this, [this] { setZoomFactor(1.0); });
 
-    menu.exec(mapToGlobal(pos));
+    QAction *selectedItem = menu.exec(mapToGlobal(pos));
+    if (selectedItem == htmlFileExportAction) {
+        exportAsHTMLFile();
+    }
 }
 
 bool HtmlPreviewWidget::eventFilter(QObject *src, QEvent *e) {
@@ -88,6 +98,46 @@ void HtmlPreviewWidget::wheelEvent(QWheelEvent *event) {
 
 void HtmlPreviewWidget::setHtml(const QString &text) {
     QLiteHtmlWidget::setHtml(Utils::Misc::parseTaskList(text, true));
+}
+
+void HtmlPreviewWidget::exportAsHTMLFile() {
+    FileDialog dialog(QStringLiteral("PreviewHTMLFileExport"));
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setNameFilter(tr("HTML files") + " (*.html)");
+    dialog.setWindowTitle(
+        tr("Export preview as raw HTML file",
+           "\"Raw\" means that actually the html that was fed to the preview will be stored (the "
+           "QTextBrowser modifies the html that it is showing)"));
+    dialog.selectFile(QStringLiteral("preview.html"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
+            if (QFileInfo(fileName).suffix().isEmpty()) {
+                fileName.append(".html");
+            }
+
+            QFile file(fileName);
+
+            qDebug() << "exporting raw preview html file: " << fileName;
+
+            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                qCritical() << file.errorString();
+                return;
+            }
+            QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+            out.setCodec("UTF-8");
+#endif
+            out << html();
+            file.flush();
+            file.close();
+            Utils::Misc::openFolderSelect(fileName);
+        }
+    }
 }
 
 #endif

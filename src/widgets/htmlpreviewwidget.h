@@ -23,6 +23,8 @@ class HtmlPreviewWidget final : public QLiteHtmlWidget {
     bool eventFilter(QObject *src, QEvent *e) override;
 
     QNetworkAccessManager m_nam;
+
+    void exportAsHTMLFile();
 };
 
 #endif
