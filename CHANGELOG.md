@@ -5,6 +5,7 @@
 - Improved QLiteHtml preview task list rendering and export
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Task list checkbox spacing now matches the regular preview
+  - Task list items no longer wrap checkbox text in paragraph tags
   - Added "Export generated raw HTML" to the QLiteHtml preview context menu
   - Task list checkboxes in QLiteHtml now use the same clickable styling as the regular preview
 

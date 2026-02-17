@@ -1007,12 +1007,38 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
     static const QRegularExpression reInputUnchecked(
         QStringLiteral(R"(<input[^>]*\btype\s*=\s*["']?checkbox["']?[^>]*>)"),
         QRegularExpression::CaseInsensitiveOption);
+    static const QRegularExpression reTaskListItem(
+        QStringLiteral(R"(<li([^>]*)\bclass="task-list-item"([^>]*)>(.*?)<\/li>)"),
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::DotMatchesEverythingOption);
     if (!clickable) {
         text.replace(reInputChecked, QStringLiteral("&#9745;"));
         text.replace(reInputUnchecked, QStringLiteral("&#9744;"));
         text.replace(re1, listTag % QStringLiteral("\\1&#9744;"));
         text.replace(re2, listTag % QStringLiteral("\\1&#9745;"));
         text.replace(re3, listTag % QStringLiteral("\\1&#10005;"));
+    }
+
+    const auto stripTaskListParagraphs = [&reTaskListItem](QString &input) {
+        int pos = 0;
+        while (true) {
+            QRegularExpressionMatch match = reTaskListItem.match(input, pos);
+            if (!match.hasMatch()) {
+                break;
+            }
+            QString content = match.captured(3);
+            content.replace(QRegularExpression(QStringLiteral(R"(<\s*/?\s*p\s*>)"),
+                                               QRegularExpression::CaseInsensitiveOption),
+                            QString());
+            content = content.trimmed();
+            const QString replacement = QStringLiteral("<li%1class=\"task-list-item\"%2>%3</li>")
+                                            .arg(match.captured(1), match.captured(2), content);
+            input.replace(match.capturedStart(), match.capturedLength(), replacement);
+            pos = match.capturedStart() + replacement.length();
+        }
+    };
+
+    if (!clickable) {
+        stripTaskListParagraphs(text);
         return text;
     }
 
@@ -1040,6 +1066,8 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
         pos += checkboxStart.length();
         text.insert(pos, QString::number(count++));
     }
+
+    stripTaskListParagraphs(text);
 
     return text;
 }
