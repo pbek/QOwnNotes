@@ -9,16 +9,21 @@
 #include <QAction>
 #include <QApplication>
 #include <QClipboard>
+#include <QDebug>
 #include <QDialog>
 #include <QEventLoop>
 #include <QFile>
 #include <QFileInfo>
+#include <QLayout>
 #include <QMenu>
 #include <QNetworkReply>
 #include <QTextStream>
 #include <QWheelEvent>
 
-HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent) : QLiteHtmlWidget(parent) {
+#include "libraries/qlitehtml/src/qlitehtmlsearchwidget.h"
+
+HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
+    : QLiteHtmlWidget(parent), _searchWidget(new QLiteHtmlSearchWidget(this)) {
     setStyleSheet(QStringLiteral("background-color: %1;")
                       .arg(Utils::Schema::schemaSettings
                                ->getBackgroundColor(MarkdownHighlighter::HighlighterState::NoState)
@@ -31,6 +36,11 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent) : QLiteHtmlWidget(parent) 
 
     connect(this, &QLiteHtmlWidget::contextMenuRequested, this,
             &HtmlPreviewWidget::onContextMenuRequested);
+
+    auto *layout = new QVBoxLayout(this);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->addStretch();
+    layout->addWidget(_searchWidget);
 }
 
 QByteArray HtmlPreviewWidget::resourceLoadCallBack(const QUrl &url) {
@@ -101,6 +111,23 @@ void HtmlPreviewWidget::wheelEvent(QWheelEvent *event) {
         setZoomFactor(zoomFactor() - .1);
     }
 }
+
+void HtmlPreviewWidget::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape && _searchWidget->isVisible()) {
+        _searchWidget->deactivate();
+        event->accept();
+    } else if ((event->key() == Qt::Key_F) && event->modifiers().testFlag(Qt::ControlModifier)) {
+        _searchWidget->activate();
+        event->accept();
+    } else if (event->key() == Qt::Key_F3) {
+        _searchWidget->doSearch(!event->modifiers().testFlag(Qt::ShiftModifier));
+        event->accept();
+    } else {
+        QLiteHtmlWidget::keyPressEvent(event);
+    }
+}
+
+QLiteHtmlSearchWidget *HtmlPreviewWidget::searchWidget() { return _searchWidget; }
 
 void HtmlPreviewWidget::setHtml(const QString &text) {
     QLiteHtmlWidget::setHtml(Utils::Misc::parseTaskList(text, true));

@@ -47,8 +47,15 @@ endif()
 
 if(TARGET litehtml)
   set(PUBLIC_HEADERS
-      element_checkbox.h element_checkbox.cpp container_qpainter.h
-      container_qpainter_p.h qlitehtml_global.h qlitehtmlwidget.h)
+      element_checkbox.h
+      element_checkbox.cpp
+      container_qpainter.h
+      container_qpainter_p.h
+      qlitehtml_global.h
+      qlitehtmlwidget.h
+      qlitehtmlsearchwidget.h)
+  set(QLITEHTML_SOURCES container_qpainter.cpp qlitehtmlwidget.cpp
+                        qlitehtmlsearchwidget.cpp qlitehtmlsearchwidget.ui)
   if(NOT QLITEHTML_LIBRARY_TYPE)
     set(QLITEHTML_LIBRARY_TYPE SHARED)
   endif()
@@ -57,7 +64,7 @@ if(TARGET litehtml)
   endif()
 
   add_library(qlitehtml ${QLITEHTML_LIBRARY_TYPE} ${PUBLIC_HEADERS}
-                        container_qpainter.cpp qlitehtmlwidget.cpp)
+                        ${QLITEHTML_SOURCES})
 
   target_include_directories(
     qlitehtml PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)

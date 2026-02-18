@@ -2,6 +2,10 @@
 
 ## 26.2.7
 
+- Added a search dialog to the QLiteHtml preview
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - The search dialog supports plain text, whole words, and regular expression search modes
+  - Keyboard shortcuts: Ctrl+F to open, F3 for next/previous, Escape to close
 - The QLiteHtml preview now uses the editor background color from the color schema
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
 - The font size in the QLiteHtml preview is now aligned with the note text edit font size

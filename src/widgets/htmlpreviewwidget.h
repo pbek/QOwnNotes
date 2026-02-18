@@ -6,11 +6,14 @@
 
 #include <QNetworkAccessManager>
 
+class QLiteHtmlSearchWidget;
+
 class HtmlPreviewWidget final : public QLiteHtmlWidget {
     Q_OBJECT
    public:
     HtmlPreviewWidget(QWidget *parent);
     void setHtml(const QString &text);
+    QLiteHtmlSearchWidget *searchWidget();
 
    Q_SIGNALS:
     void anchorClicked(const QUrl &url);
@@ -21,8 +24,10 @@ class HtmlPreviewWidget final : public QLiteHtmlWidget {
 
     void wheelEvent(QWheelEvent *) override;
     bool eventFilter(QObject *src, QEvent *e) override;
+    void keyPressEvent(QKeyEvent *event) override;
 
     QNetworkAccessManager m_nam;
+    QLiteHtmlSearchWidget *_searchWidget;
 
     void exportAsHTMLFile();
 };
