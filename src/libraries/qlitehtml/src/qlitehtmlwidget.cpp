@@ -472,7 +472,7 @@ bool QLiteHtmlWidget::findText(const QString &text,
         .findText(text, flags, incremental, wrapped, &success, &oldSelection, &newSelection);
     // scroll to search result position and/or redraw as necessary
     QRect newSelectionCombined;
-    for (const QRect &r : qAsConst(newSelection))
+    for (const QRect &r : std::as_const(newSelection))
         newSelectionCombined = newSelectionCombined.united(r);
     QScrollBar *vBar = verticalScrollBar();
     const int top = newSelectionCombined.top();
@@ -483,7 +483,7 @@ bool QLiteHtmlWidget::findText(const QString &text,
         vBar->setValue(bottom);
     } else {
         viewport()->update(fromVirtual(newSelectionCombined.translated(-scrollPosition())));
-        for (const QRect &r : qAsConst(oldSelection))
+        for (const QRect &r : std::as_const(oldSelection))
             viewport()->update(fromVirtual(r.translated(-scrollPosition())));
     }
     return success;
