@@ -4,6 +4,7 @@
 
 #include <dialogs/filedialog.h>
 #include <utils/misc.h>
+#include <utils/schema.h>
 
 #include <QAction>
 #include <QApplication>
@@ -18,6 +19,11 @@
 #include <QWheelEvent>
 
 HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent) : QLiteHtmlWidget(parent) {
+    setStyleSheet(QStringLiteral("background-color: %1;")
+                      .arg(Utils::Schema::schemaSettings
+                               ->getBackgroundColor(MarkdownHighlighter::HighlighterState::NoState)
+                               .name()));
+
     auto callback = [this](const QUrl &url) { return resourceLoadCallBack(url); };
     setResourceHandler(callback);
 

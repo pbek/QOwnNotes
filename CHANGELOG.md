@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.2.7
+
+- The QLiteHtml preview now uses the editor background color from the color schema
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+
 ## 26.2.6
 
 - Improved QLiteHtml preview task list rendering and export
