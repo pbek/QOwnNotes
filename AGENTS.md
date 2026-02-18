@@ -206,6 +206,7 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
      (e.g. `0` for the first release in December 2022, `1` for the second release in December 2022, etc.)
 10. **This project has translations** - They can be found in the `src/translations/` directory as `.ts` files
 11. **Comments** - Always write clear and concise comments for complex logic, especially when dealing with Qt-specific features, start comments with uppercase letters
+12. **Changelog** - Update the changelog with each release, following the format in `CHANGELOG.md`
 
 ## Minimum Requirements
 
