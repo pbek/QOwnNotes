@@ -197,16 +197,17 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 5. **Multiple Qt versions supported** - Code must work with both Qt5 and Qt6
 6. **Cross-platform** - Code must work on Linux, macOS, and Windows
 7. **Two build systems available** - Primary is qmake (`.pro` files), but CMake (`CMakeLists.txt`) is also supported
-8. **Development mode** - Use `CONFIG+=DEV_MODE` for qmake or `-DDEV_MODE=ON` for CMake in active development
-9. **Version bumping** - Update `src/version.h` and `src/build_number.h`, `BUILD` just needs to be increase by one
-   - Version format is `MAJOR.MINOR.PATCH` (e.g. `22.12.0`), build number is a separate integer that increments with each release
-   - The MAJOR part is always the last two digits of the year of the release (e.g. `22` for 2022),
-   - The MINOR part is the month of the release (e.g. `12` for December),
-   - The PATCH part is a counter that starts at `0` and increments with each release in the same month
-     (e.g. `0` for the first release in December 2022, `1` for the second release in December 2022, etc.)
-10. **This project has translations** - They can be found in the `src/translations/` directory as `.ts` files
-11. **Comments** - Always write clear and concise comments for complex logic, especially when dealing with Qt-specific features, start comments with uppercase letters
-12. **Changelog** - Update the changelog with each release, following the format in `CHANGELOG.md`
+8. **Build projects** - The primary build project files are `src/QOwnNotes.pro` and `src/CMakeLists.txt`
+9. **Development mode** - Use `CONFIG+=DEV_MODE` for qmake or `-DDEV_MODE=ON` for CMake in active development
+10. **Version bumping** - Update `src/version.h` and `src/build_number.h`, `BUILD` just needs to be increase by one
+    - Version format is `MAJOR.MINOR.PATCH` (e.g. `22.12.0`), build number is a separate integer that increments with each release
+    - The MAJOR part is always the last two digits of the year of the release (e.g. `22` for 2022),
+    - The MINOR part is the month of the release (e.g. `12` for December),
+    - The PATCH part is a counter that starts at `0` and increments with each release in the same month
+      (e.g. `0` for the first release in December 2022, `1` for the second release in December 2022, etc.)
+11. **This project has translations** - They can be found in the `src/translations/` directory as `.ts` files
+12. **Comments** - Always write clear and concise comments for complex logic, especially when dealing with Qt-specific features, start comments with uppercase letters
+13. **Changelog** - Update the changelog with each release, following the format in `CHANGELOG.md`
 
 ## Minimum Requirements
 
