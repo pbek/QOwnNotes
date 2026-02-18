@@ -583,7 +583,17 @@ int DocumentContainerPrivate::pt_to_px(int pt) const
 
 int DocumentContainerPrivate::get_default_font_size() const
 {
-    return m_defaultFont.pointSize();
+    int pointSize = m_defaultFont.pointSize();
+    if (pointSize <= 0) {
+        int pixelSize = m_defaultFont.pixelSize();
+        if (pixelSize > 0 && m_paintDevice) {
+            pointSize = qRound(m_paintDevice->logicalDpiY() * pixelSize / 72.0);
+        }
+    }
+    if (pointSize <= 0) {
+        pointSize = 16;
+    }
+    return pointSize;
 }
 
 const litehtml::tchar_t *DocumentContainerPrivate::get_default_font_name() const

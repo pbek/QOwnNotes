@@ -4,6 +4,10 @@
 
 - The QLiteHtml preview now uses the editor background color from the color schema
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+- The font size in the QLiteHtml preview is now aligned with the note text edit font size
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - Fixed an issue where fonts stored with pixel size would result in a smaller font size in the preview
+  - The preview now properly uses the configured font size
 
 ## 26.2.6
 
