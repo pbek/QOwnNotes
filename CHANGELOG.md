@@ -2,6 +2,8 @@
 
 ## 26.2.7
 
+- The note list tooltip now shows the note file created date
+  (for [#841](https://github.com/pbek/QOwnNotes/issues/841))
 - Added a search dialog to the QLiteHtml preview
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - The search dialog supports plain text, whole words, and regular expression search modes
