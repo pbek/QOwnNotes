@@ -33,6 +33,7 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QGuiApplication>
+#include <QMimeData>
 #include <QPaintEvent>
 #include <QPainter>
 #include <QScrollBar>
@@ -528,6 +529,11 @@ QString QLiteHtmlWidget::selectedText() const
     return d->documentContainer.selectedText();
 }
 
+QString QLiteHtmlWidget::selectedHtml() const
+{
+    return d->documentContainer.selectedHtml();
+}
+
 void QLiteHtmlWidget::paintEvent(QPaintEvent *event)
 {
     if (!d->documentContainer.hasDocument())
@@ -639,7 +645,15 @@ void QLiteHtmlWidget::keyPressEvent(QKeyEvent *event)
         // Copy selected text to clipboard when Ctrl+C is pressed
         const QString text = selectedText();
         if (!text.isEmpty()) {
-            QGuiApplication::clipboard()->setText(text);
+            auto *mimeData = new QMimeData();
+            mimeData->setText(text);
+            // Also copy HTML if available
+            const QString html = selectedHtml();
+
+            if (!html.isEmpty()) {
+                mimeData->setHtml(html);
+            }
+            QGuiApplication::clipboard()->setMimeData(mimeData);
         }
         event->accept();
     }

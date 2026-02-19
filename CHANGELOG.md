@@ -16,6 +16,7 @@
   - The preview now properly uses the configured font size
 - Added support for copying selected text with `Ctrl + C` in the QLiteHtml preview
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - Both plain text and HTML (rich text) formats are copied to the clipboard
 
 ## 26.2.6
 

@@ -16,6 +16,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QMenu>
+#include <QMimeData>
 #include <QNetworkReply>
 #include <QScrollBar>
 #include <QTextStream>
@@ -63,7 +64,15 @@ void HtmlPreviewWidgetInternal::onContextMenuRequested(QPoint pos, const QUrl &l
 
     QAction *act = new QAction(tr("Copy"), this);
     act->setDisabled(selectedText().isEmpty());
-    connect(act, &QAction::triggered, this, [this] { qApp->clipboard()->setText(selectedText()); });
+    connect(act, &QAction::triggered, this, [this] {
+        auto *mimeData = new QMimeData();
+        mimeData->setText(selectedText());
+        const QString html = selectedHtml();
+        if (!html.isEmpty()) {
+            mimeData->setHtml(html);
+        }
+        qApp->clipboard()->setMimeData(mimeData);
+    });
     menu.addAction(act);
 
     if (!linkUrl.isEmpty() && linkUrl.isValid()) {

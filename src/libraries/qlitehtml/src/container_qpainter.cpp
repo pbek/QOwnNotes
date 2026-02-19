@@ -1244,6 +1244,229 @@ QString DocumentContainer::selectedText() const
     return d->m_selection.text;
 }
 
+// Helper function to get computed style properties from a litehtml element
+static QString getElementStyles(const litehtml::element::ptr &element)
+{
+    if (!element)
+        return QString();
+
+    QStringList styles;
+
+    // Get font family
+    const char *fontFamily = element->get_style_property("font-family", true, nullptr);
+    if (fontFamily && strlen(fontFamily) > 0) {
+        styles << QStringLiteral("font-family: %1").arg(QString::fromUtf8(fontFamily));
+    }
+
+    // Get font size
+    int fontSize = element->get_font_size();
+    if (fontSize > 0) {
+        styles << QStringLiteral("font-size: %1px").arg(fontSize);
+    }
+
+    // Get font weight
+    const char *fontWeight = element->get_style_property("font-weight", true, nullptr);
+    if (fontWeight && strlen(fontWeight) > 0 && strcmp(fontWeight, "normal") != 0) {
+        styles << QStringLiteral("font-weight: %1").arg(QString::fromUtf8(fontWeight));
+    }
+
+    // Get font style
+    const char *fontStyle = element->get_style_property("font-style", true, nullptr);
+    if (fontStyle && strlen(fontStyle) > 0 && strcmp(fontStyle, "normal") != 0) {
+        styles << QStringLiteral("font-style: %1").arg(QString::fromUtf8(fontStyle));
+    }
+
+    // Get text decoration
+    const char *textDecoration = element->get_style_property("text-decoration", true, nullptr);
+    if (textDecoration && strlen(textDecoration) > 0 && strcmp(textDecoration, "none") != 0) {
+        styles << QStringLiteral("text-decoration: %1").arg(QString::fromUtf8(textDecoration));
+    }
+
+    // Get color
+    litehtml::web_color color = element->get_color("color", true, litehtml::web_color());
+    if (color.alpha > 0) {
+        styles << QStringLiteral("color: rgb(%1, %2, %3)")
+                      .arg(color.red)
+                      .arg(color.green)
+                      .arg(color.blue);
+    }
+
+    // Get background color
+    const char *bgColor = element->get_style_property("background-color", false, nullptr);
+    if (bgColor && strlen(bgColor) > 0 && strcmp(bgColor, "transparent") != 0) {
+        litehtml::web_color bg = litehtml::web_color::from_string(bgColor, nullptr);
+        if (bg.alpha > 0) {
+            styles << QStringLiteral("background-color: rgb(%1, %2, %3)")
+                          .arg(bg.red)
+                          .arg(bg.green)
+                          .arg(bg.blue);
+        }
+    }
+
+    // Get text alignment
+    const char *textAlign = element->get_style_property("text-align", true, nullptr);
+    if (textAlign && strlen(textAlign) > 0 && strcmp(textAlign, "left") != 0) {
+        styles << QStringLiteral("text-align: %1").arg(QString::fromUtf8(textAlign));
+    }
+
+    return styles.join(QStringLiteral("; "));
+}
+
+// Helper structure to track parent elements during traversal
+struct ElementContext
+{
+    litehtml::element::ptr element;
+    QString tagName;
+    QString styles;
+    bool opened = false;
+};
+
+// Helper function to serialize a single leaf element with its parent hierarchy
+static void serializeLeafWithParents(const litehtml::element::ptr &leafElement,
+                                     QVector<ElementContext> &parentStack,
+                                     QString &html)
+{
+    if (!leafElement)
+        return;
+
+    // Build the path from root to this leaf
+    litehtml::elements_vector leafPath = path(leafElement);
+
+    // Find common ancestor with current stack
+    int commonDepth = 0;
+    const int minSize = std::min(static_cast<int>(parentStack.size()),
+                                 static_cast<int>(leafPath.size()));
+    for (int i = 0; i < minSize; ++i) {
+        if (i >= parentStack.size() || parentStack[i].element != leafPath[i]) {
+            break;
+        }
+        commonDepth = i + 1;
+    }
+
+    // Close tags that are no longer in the path
+    for (int i = parentStack.size() - 1; i >= commonDepth; --i) {
+        if (parentStack[i].opened && !parentStack[i].tagName.isEmpty()) {
+            html += QStringLiteral("</") + parentStack[i].tagName + QStringLiteral(">");
+        }
+    }
+    parentStack.resize(commonDepth);
+
+    // Open new parent tags
+    for (size_t i = commonDepth; i < leafPath.size(); ++i) {
+        const litehtml::element::ptr &elem = leafPath[i];
+        const char *tagName = elem->get_tagName();
+
+        ElementContext ctx;
+        ctx.element = elem;
+
+        if (tagName && strlen(tagName) > 0) {
+            QString tag = QString::fromUtf8(tagName);
+            ctx.tagName = tag;
+
+            // Skip html, head, body wrappers
+            if (tag == QLatin1String("html") || tag == QLatin1String("head")
+                || tag == QLatin1String("body")) {
+                ctx.opened = false;
+                parentStack.append(ctx);
+                continue;
+            }
+
+            // Open tag
+            html += QStringLiteral("<") + tag;
+
+            // Get and add inline styles
+            QString inlineStyles = getElementStyles(elem);
+            if (!inlineStyles.isEmpty()) {
+                html += QStringLiteral(" style=\"%1\"").arg(inlineStyles);
+            }
+
+            // Add certain important attributes
+            if (tag == QLatin1String("a")) {
+                const char *href = elem->get_attr("href");
+                if (href && strlen(href) > 0) {
+                    html += QStringLiteral(" href=\"%1\"").arg(QString::fromUtf8(href));
+                }
+            } else if (tag == QLatin1String("img")) {
+                const char *src = elem->get_attr("src");
+                if (src && strlen(src) > 0) {
+                    html += QStringLiteral(" src=\"%1\"").arg(QString::fromUtf8(src));
+                }
+                const char *alt = elem->get_attr("alt");
+                if (alt && strlen(alt) > 0) {
+                    html += QStringLiteral(" alt=\"%1\"").arg(QString::fromUtf8(alt));
+                }
+            }
+
+            html += QStringLiteral(">");
+            ctx.opened = true;
+        }
+
+        parentStack.append(ctx);
+    }
+
+    // Add the text content of the leaf
+    litehtml::tstring elemText;
+    leafElement->get_text(elemText);
+    if (!elemText.empty()) {
+        QString text = QString::fromStdString(elemText);
+        // HTML escape the text
+        text.replace(QLatin1Char('&'), QLatin1String("&amp;"));
+        text.replace(QLatin1Char('<'), QLatin1String("&lt;"));
+        text.replace(QLatin1Char('>'), QLatin1String("&gt;"));
+        html += text;
+    }
+}
+
+QString DocumentContainer::selectedHtml() const
+{
+    const Selection &sel = d->m_selection;
+    if (!sel.startElem.element || !sel.endElem.element) {
+        return QString();
+    }
+
+    // Get ordered start and end elements (same logic as Selection::update)
+    Selection::Element start;
+    Selection::Element end;
+    std::tie(start, end) = getStartAndEnd(sel.startElem, sel.endElem);
+
+    QString bodyHtml;
+    QVector<ElementContext> parentStack;
+
+    // Process start element
+    serializeLeafWithParents(start.element, parentStack, bodyHtml);
+
+    // If start and end are different, traverse all elements between them
+    if (start.element != end.element) {
+        litehtml::element::ptr current = start.element;
+        do {
+            current = nextLeaf(current, end.element);
+            if (current && current != end.element) {
+                serializeLeafWithParents(current, parentStack, bodyHtml);
+            }
+        } while (current && current != end.element);
+
+        // Process end element
+        if (end.element) {
+            serializeLeafWithParents(end.element, parentStack, bodyHtml);
+        }
+    }
+
+    // Close all remaining open tags
+    for (int i = parentStack.size() - 1; i >= 0; --i) {
+        if (parentStack[i].opened && !parentStack[i].tagName.isEmpty()) {
+            bodyHtml += QStringLiteral("</") + parentStack[i].tagName + QStringLiteral(">");
+        }
+    }
+
+    // Wrap in proper HTML document structure
+    QString html;
+    html += QStringLiteral("<!DOCTYPE html><html><head><meta charset=\"UTF-8\"></head><body>");
+    html += bodyHtml;
+    html += QStringLiteral("</body></html>");
+
+    return html;
+}
+
 void DocumentContainer::findText(const QString &text,
                                  QTextDocument::FindFlags flags,
                                  bool incremental,

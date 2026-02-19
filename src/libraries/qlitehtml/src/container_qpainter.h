@@ -96,6 +96,7 @@ public: // outside API
 
     QString caption() const;
     QString selectedText() const;
+    QString selectedHtml() const;
 
     void findText(const QString &text,
                   QTextDocument::FindFlags flags,

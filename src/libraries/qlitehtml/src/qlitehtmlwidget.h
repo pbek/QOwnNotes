@@ -69,6 +69,7 @@ public:
 
     // declaring this Q_INVOKABLE to make it Squish-testable
     Q_INVOKABLE QString selectedText() const;
+    Q_INVOKABLE QString selectedHtml() const;
 
 signals:
     void linkClicked(const QUrl &url);
