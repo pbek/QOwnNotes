@@ -196,9 +196,61 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
                                            const QString &text,
                                            const QPoint &pos)
 {
-    // shortcut, which _might_ not really be correct
-    if (element->get_children_count() > 0)
-        return {element, -1, -1}; // everything selected
+    // If element has children, the text contains all descendant text concatenated
+    // For better precision, we should find the actual leaf child at this position
+    if (element->get_children_count() > 0) {
+        // Try to find a child leaf element that contains this position
+        const std::function<Selection::Element(litehtml::element::ptr, QPoint)> findLeaf =
+            [&findLeaf, pos](const litehtml::element::ptr &elem,
+                             const QPoint &offset) -> Selection::Element {
+            if (!elem)
+                return {};
+
+            const QRect elemPos = toQRect(elem->get_position()).translated(offset);
+
+            if (!elemPos.contains(pos))
+                return {};
+
+            // Try children first
+            for (int i = 0; i < int(elem->get_children_count()); ++i) {
+                const litehtml::element::ptr child = elem->get_child(i);
+                Selection::Element result = findLeaf(child, elemPos.topLeft());
+                if (result.element)
+                    return result;
+            }
+
+            // No children found, use this element if it has text
+            litehtml::tstring elemText;
+            elem->get_text(elemText);
+            if (!elemText.empty()) {
+                const QString textStr = QString::fromStdString(elemText);
+                const QFont &font = toQFont(elem->get_font());
+                const QFontMetrics fm(font);
+                const QPoint relativePos = pos - elemPos.topLeft();
+
+                int previous = 0;
+                for (int i = 0; i < textStr.size(); ++i) {
+                    const int width = fm.size(0, textStr.left(i + 1)).width();
+                    if ((width + previous) / 2 >= relativePos.x())
+                        return {elem, i, previous};
+                    previous = width;
+                }
+                return {elem, int(textStr.size()), previous};
+            }
+
+            return {};
+        };
+
+        const QRect elementRect = toQRect(element->get_placement());
+        Selection::Element result = findLeaf(element, elementRect.topLeft());
+        if (result.element)
+            return result;
+
+        // Fallback: return the element with index at the start
+        return {element, 0, 0};
+    }
+
+    // Element has no children - calculate precise character position
     const QFont &font = toQFont(element->get_font());
     const QFontMetrics fm(font);
     int previous = 0;
@@ -219,26 +271,30 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
     if (!document)
         return {};
 
-    // the following does not find the "smallest" element, it often consists of children
-    // with individual words as text...
+    // Find the element at this point
     const litehtml::element::ptr element = document->root()->get_element_by_point(pos.x(),
                                                                                   pos.y(),
                                                                                   viewportPos.x(),
                                                                                   viewportPos.y());
-    // ...so try to find a better match
+    // Recursively find the deepest child that contains the point and has text
     const std::function<Selection::Element(litehtml::element::ptr, QRect)> recursion =
         [&recursion, pos, mode](const litehtml::element::ptr &element,
                                 const QRect &placement) -> Selection::Element {
         if (!element)
             return {};
-        Selection::Element result;
+
+        // First, try to find a deeper child that contains the point
+        Selection::Element deepestResult;
         for (int i = 0; i < int(element->get_children_count()); ++i) {
             const litehtml::element::ptr child = element->get_child(i);
-            result = recursion(child,
-                               toQRect(child->get_position()).translated(placement.topLeft()));
-            if (result.element)
-                return result;
+            const QRect childPlacement = toQRect(child->get_position())
+                                             .translated(placement.topLeft());
+            deepestResult = recursion(child, childPlacement);
+            if (deepestResult.element)
+                return deepestResult;
         }
+
+        // No deeper child found, check if this element itself has text content
         if (placement.contains(pos)) {
             litehtml::tstring text;
             element->get_text(text);
@@ -250,6 +306,7 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
                            : Selection::Element({element, -1, -1});
             }
         }
+
         return {};
     };
     return recursion(element, element ? toQRect(element->get_placement()) : QRect());

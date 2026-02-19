@@ -17,6 +17,11 @@
 - Added support for copying selected text with `Ctrl + C` in the QLiteHtml preview
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Both plain text and HTML (rich text) formats are copied to the clipboard
+  - The copied HTML includes all formatting (colors, fonts, bold, italic, etc.) as inline styles
+- Improved text selection in the QLiteHtml preview (but it's still clunky)
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - Selection now only selects the specific text you click and drag over
+  - Fixed an issue where entire paragraphs or blocks would be selected instead of precise text
 
 ## 26.2.6
 
