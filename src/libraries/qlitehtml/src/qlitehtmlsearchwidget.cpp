@@ -150,13 +150,15 @@ bool QLiteHtmlSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop)
         _liteHtmlWidget->findText(text, options, false, &wrapped);
     }
 
-    QString colorCode = found ? QStringLiteral("#D5FAE2") : QStringLiteral("#FAE9EB");
+    // Add background and foreground colors according to whether we found the text or not
+    const QString bgColorCode = _darkMode ? (found ? QStringLiteral("#135a13")
+                                                   : QStringLiteral("#8d2b36"))
+                                : found   ? QStringLiteral("#D5FAE2")
+                                          : QStringLiteral("#FAE9EB");
+    const QString fgColorCode = _darkMode ? QStringLiteral("#cccccc") : QStringLiteral("#404040");
 
-    if (_darkMode) {
-        colorCode = found ? QStringLiteral("#135a13") : QStringLiteral("#8d2b36");
-    }
-
-    ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") + colorCode
+    ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") + bgColorCode
+                                      + QStringLiteral("; color: ") + fgColorCode
                                       + QStringLiteral("; }"));
 
     return found;
@@ -165,4 +167,14 @@ bool QLiteHtmlSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop)
 void QLiteHtmlSearchWidget::setDarkMode(bool enabled)
 {
     _darkMode = enabled;
+
+    // Apply dark mode styling to buttons to ensure good contrast
+    if (_darkMode) {
+        // Set button icon colors to light color for visibility in dark mode
+        QString buttonStyle = QStringLiteral("QPushButton { color: #cccccc; }");
+        ui->matchCaseSensitiveButton->setStyleSheet(buttonStyle);
+    } else {
+        // Reset to default styling in light mode
+        ui->matchCaseSensitiveButton->setStyleSheet(QString());
+    }
 }

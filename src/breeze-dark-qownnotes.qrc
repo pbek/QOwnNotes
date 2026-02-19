@@ -107,5 +107,6 @@
     <file alias="16x16/view-visible.svg">icons/breeze-dark-qownnotes/16x16/view-visible.svg</file>
     <file alias="16x16/favorite.svg">icons/breeze-dark-qownnotes/16x16/favorite.svg</file>
     <file alias="16x16/favorite-favorited.svg">icons/breeze-dark-qownnotes/16x16/favorite-favorited.svg</file>
+    <file alias="16x16/format-text-superscript.svg">icons/breeze-dark-qownnotes/16x16/format-text-superscript.svg</file>
   </qresource>
 </RCC>

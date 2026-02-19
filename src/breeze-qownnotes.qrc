@@ -106,6 +106,7 @@
     <file alias="16x16/view-visible.svg">icons/breeze-qownnotes/16x16/view-visible.svg</file>
     <file alias="16x16/favorite.svg">icons/breeze-qownnotes/16x16/favorite.svg</file>
     <file alias="16x16/favorite-favorited.svg">icons/breeze-qownnotes/16x16/favorite-favorited.svg</file>
+    <file alias="16x16/format-text-superscript.svg">icons/breeze-qownnotes/16x16/format-text-superscript.svg</file>
   </qresource>
   <qresource prefix="/">
     <file>icons/breeze-qownnotes/16x16/tools-check-spelling.svg</file>

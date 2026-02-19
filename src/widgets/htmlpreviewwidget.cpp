@@ -3,6 +3,7 @@
 #ifdef USE_QLITEHTML
 
 #include <dialogs/filedialog.h>
+#include <services/settingsservice.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
 
@@ -158,6 +159,11 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     layout->setSpacing(0);
     layout->addWidget(_htmlWidget);
     layout->addWidget(_searchWidget);
+
+    // Set dark mode for the search widget based on settings
+    SettingsService settings;
+    const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
+    _searchWidget->setDarkMode(darkMode);
 
     // Forward signals from internal widget
     connect(_htmlWidget, &HtmlPreviewWidgetInternal::anchorClicked, this,
