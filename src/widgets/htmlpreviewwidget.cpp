@@ -14,16 +14,17 @@
 #include <QEventLoop>
 #include <QFile>
 #include <QFileInfo>
-#include <QLayout>
 #include <QMenu>
 #include <QNetworkReply>
+#include <QScrollBar>
 #include <QTextStream>
+#include <QVBoxLayout>
 #include <QWheelEvent>
 
 #include "libraries/qlitehtml/src/qlitehtmlsearchwidget.h"
 
-HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
-    : QLiteHtmlWidget(parent), _searchWidget(new QLiteHtmlSearchWidget(this)) {
+// HtmlPreviewWidgetInternal implementation
+HtmlPreviewWidgetInternal::HtmlPreviewWidgetInternal(QWidget *parent) : QLiteHtmlWidget(parent) {
     setStyleSheet(QStringLiteral("background-color: %1;")
                       .arg(Utils::Schema::schemaSettings
                                ->getBackgroundColor(MarkdownHighlighter::HighlighterState::NoState)
@@ -32,18 +33,13 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     auto callback = [this](const QUrl &url) { return resourceLoadCallBack(url); };
     setResourceHandler(callback);
 
-    connect(this, &QLiteHtmlWidget::linkClicked, this, &HtmlPreviewWidget::anchorClicked);
+    connect(this, &QLiteHtmlWidget::linkClicked, this, &HtmlPreviewWidgetInternal::anchorClicked);
 
     connect(this, &QLiteHtmlWidget::contextMenuRequested, this,
-            &HtmlPreviewWidget::onContextMenuRequested);
-
-    auto *layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->addStretch();
-    layout->addWidget(_searchWidget);
+            &HtmlPreviewWidgetInternal::onContextMenuRequested);
 }
 
-QByteArray HtmlPreviewWidget::resourceLoadCallBack(const QUrl &url) {
+QByteArray HtmlPreviewWidgetInternal::resourceLoadCallBack(const QUrl &url) {
     if (!url.isValid()) return {};
     m_nam.get(QNetworkRequest(url));
 
@@ -61,7 +57,7 @@ QByteArray HtmlPreviewWidget::resourceLoadCallBack(const QUrl &url) {
     return data;
 }
 
-void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl) {
+void HtmlPreviewWidgetInternal::onContextMenuRequested(QPoint pos, const QUrl &linkUrl) {
     QMenu menu;
 
     QAction *act = new QAction(tr("Copy"), this);
@@ -88,7 +84,7 @@ void HtmlPreviewWidget::onContextMenuRequested(QPoint pos, const QUrl &linkUrl) 
     }
 }
 
-bool HtmlPreviewWidget::eventFilter(QObject *src, QEvent *e) {
+bool HtmlPreviewWidgetInternal::eventFilter(QObject *src, QEvent *e) {
     if (e->type() == QEvent::Wheel) {
         auto we = static_cast<QWheelEvent *>(e);
         if (we->modifiers() == Qt::ControlModifier) {
@@ -100,7 +96,7 @@ bool HtmlPreviewWidget::eventFilter(QObject *src, QEvent *e) {
     return QLiteHtmlWidget::eventFilter(src, e);
 }
 
-void HtmlPreviewWidget::wheelEvent(QWheelEvent *event) {
+void HtmlPreviewWidgetInternal::wheelEvent(QWheelEvent *event) {
     if (event->modifiers() != Qt::ControlModifier) return QLiteHtmlWidget::wheelEvent(event);
 
     event->accept();
@@ -112,28 +108,7 @@ void HtmlPreviewWidget::wheelEvent(QWheelEvent *event) {
     }
 }
 
-void HtmlPreviewWidget::keyPressEvent(QKeyEvent *event) {
-    if (event->key() == Qt::Key_Escape && _searchWidget->isVisible()) {
-        _searchWidget->deactivate();
-        event->accept();
-    } else if ((event->key() == Qt::Key_F) && event->modifiers().testFlag(Qt::ControlModifier)) {
-        _searchWidget->activate();
-        event->accept();
-    } else if (event->key() == Qt::Key_F3) {
-        _searchWidget->doSearch(!event->modifiers().testFlag(Qt::ShiftModifier));
-        event->accept();
-    } else {
-        QLiteHtmlWidget::keyPressEvent(event);
-    }
-}
-
-QLiteHtmlSearchWidget *HtmlPreviewWidget::searchWidget() { return _searchWidget; }
-
-void HtmlPreviewWidget::setHtml(const QString &text) {
-    QLiteHtmlWidget::setHtml(Utils::Misc::parseTaskList(text, true));
-}
-
-void HtmlPreviewWidget::exportAsHTMLFile() {
+void HtmlPreviewWidgetInternal::exportAsHTMLFile() {
     FileDialog dialog(QStringLiteral("PreviewHTMLFileExport"));
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
@@ -171,6 +146,68 @@ void HtmlPreviewWidget::exportAsHTMLFile() {
             Utils::Misc::openFolderSelect(fileName);
         }
     }
+}
+
+// HtmlPreviewWidget implementation
+HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
+    : QWidget(parent),
+      _htmlWidget(new HtmlPreviewWidgetInternal(this)),
+      _searchWidget(new QLiteHtmlSearchWidget(_htmlWidget)) {
+    auto *layout = new QVBoxLayout(this);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(0);
+    layout->addWidget(_htmlWidget);
+    layout->addWidget(_searchWidget);
+
+    // Forward signals from internal widget
+    connect(_htmlWidget, &HtmlPreviewWidgetInternal::anchorClicked, this,
+            &HtmlPreviewWidget::anchorClicked);
+}
+
+void HtmlPreviewWidget::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape && _searchWidget->isVisible()) {
+        _searchWidget->deactivate();
+        event->accept();
+    } else if ((event->key() == Qt::Key_F) && event->modifiers().testFlag(Qt::ControlModifier)) {
+        _searchWidget->activate();
+        event->accept();
+    } else if (event->key() == Qt::Key_F3) {
+        _searchWidget->doSearch(!event->modifiers().testFlag(Qt::ShiftModifier));
+        event->accept();
+    } else {
+        QWidget::keyPressEvent(event);
+    }
+}
+
+QLiteHtmlSearchWidget *HtmlPreviewWidget::searchWidget() { return _searchWidget; }
+
+void HtmlPreviewWidget::setHtml(const QString &text) {
+    _htmlWidget->setHtml(Utils::Misc::parseTaskList(text, true));
+}
+
+void HtmlPreviewWidget::setZoomFactor(qreal scale) { _htmlWidget->setZoomFactor(scale); }
+
+qreal HtmlPreviewWidget::zoomFactor() const { return _htmlWidget->zoomFactor(); }
+
+QString HtmlPreviewWidget::selectedText() const { return _htmlWidget->selectedText(); }
+
+void HtmlPreviewWidget::setDefaultFont(const QFont &font) { _htmlWidget->setDefaultFont(font); }
+
+QFont HtmlPreviewWidget::defaultFont() const { return _htmlWidget->defaultFont(); }
+
+bool HtmlPreviewWidget::findText(const QString &text, QTextDocument::FindFlags flags,
+                                 bool incremental, bool *wrapped) {
+    return _htmlWidget->findText(text, flags, incremental, wrapped);
+}
+
+QWidget *HtmlPreviewWidget::viewport() const { return _htmlWidget->viewport(); }
+
+QScrollBar *HtmlPreviewWidget::verticalScrollBar() const {
+    return _htmlWidget->verticalScrollBar();
+}
+
+QScrollBar *HtmlPreviewWidget::horizontalScrollBar() const {
+    return _htmlWidget->horizontalScrollBar();
 }
 
 #endif
