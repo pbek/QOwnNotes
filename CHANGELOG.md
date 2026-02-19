@@ -14,6 +14,8 @@
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Fixed an issue where fonts stored with pixel size would result in a smaller font size in the preview
   - The preview now properly uses the configured font size
+- Added support for copying selected text with `Ctrl + C` in the QLiteHtml preview
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
 
 ## 26.2.6
 

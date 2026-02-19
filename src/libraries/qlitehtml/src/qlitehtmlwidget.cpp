@@ -30,7 +30,9 @@
 
 #include "container_qpainter.h"
 
+#include <QClipboard>
 #include <QDebug>
+#include <QGuiApplication>
 #include <QPaintEvent>
 #include <QPainter>
 #include <QScrollBar>
@@ -633,6 +635,13 @@ void QLiteHtmlWidget::keyPressEvent(QKeyEvent *event)
             verticalScrollBar()->triggerAction(sliderAction);
             event->accept();
         }
+    } else if (event->modifiers() == Qt::ControlModifier && event->key() == Qt::Key_C) {
+        // Copy selected text to clipboard when Ctrl+C is pressed
+        const QString text = selectedText();
+        if (!text.isEmpty()) {
+            QGuiApplication::clipboard()->setText(text);
+        }
+        event->accept();
     }
 
     QAbstractScrollArea::keyPressEvent(event);
