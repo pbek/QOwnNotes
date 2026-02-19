@@ -29,7 +29,7 @@
    <item row="0" column="6">
     <widget class="QPushButton" name="replaceToggleButton">
      <property name="toolTip">
-      <string>replace text</string>
+      <string>Replace text</string>
      </property>
      <property name="text">
       <string/>
@@ -59,7 +59,7 @@
    <item row="0" column="0">
     <widget class="QPushButton" name="closeButton">
      <property name="toolTip">
-      <string>close search</string>
+      <string>Close search</string>
      </property>
      <property name="text">
       <string/>
@@ -76,14 +76,14 @@
    <item row="0" column="3">
     <widget class="QLineEdit" name="searchLineEdit">
      <property name="placeholderText">
-      <string>find in text</string>
+      <string>Find in text</string>
      </property>
     </widget>
    </item>
    <item row="0" column="4">
     <widget class="QPushButton" name="searchDownButton">
      <property name="toolTip">
-      <string>search forward</string>
+      <string>Search forward</string>
      </property>
      <property name="text">
       <string/>
@@ -100,7 +100,7 @@
    <item row="0" column="5">
     <widget class="QPushButton" name="searchUpButton">
      <property name="toolTip">
-      <string>search backward</string>
+      <string>Search backward</string>
      </property>
      <property name="text">
       <string/>
@@ -117,7 +117,7 @@
    <item row="1" column="3">
     <widget class="QLineEdit" name="replaceLineEdit">
      <property name="placeholderText">
-      <string>replace with</string>
+      <string>Replace with</string>
      </property>
     </widget>
    </item>
