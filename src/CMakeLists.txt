@@ -123,7 +123,7 @@ endif()
 add_subdirectory(libraries/fakevim EXCLUDE_FROM_ALL)
 add_subdirectory(libraries/diff_match_patch EXCLUDE_FROM_ALL)
 
-option(USE_QLITE_HTML "Build using QLiteHtml for preview" OFF)
+option(USE_QLITEHTML "Build using QLiteHtml for preview" OFF)
 if(USE_QLITEHTML)
   add_definitions(-DUSE_QLITEHTML=1)
   add_subdirectory(libraries/qlitehtml EXCLUDE_FROM_ALL)
