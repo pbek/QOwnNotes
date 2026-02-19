@@ -29,13 +29,13 @@
    <item row="0" column="0">
     <widget class="QPushButton" name="closeButton">
      <property name="toolTip">
-      <string>close search</string>
+      <string>Close search</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="window-close">
+      <iconset theme="window-close" resource="media.qrc">
        <normaloff>:/media/window-close.svg</normaloff>:/media/window-close.svg</iconset>
      </property>
      <property name="flat">
@@ -56,20 +56,20 @@
    <item row="0" column="2">
     <widget class="QLineEdit" name="searchLineEdit">
      <property name="placeholderText">
-      <string>find in text</string>
+      <string>Find in text</string>
      </property>
     </widget>
    </item>
    <item row="0" column="3">
     <widget class="QPushButton" name="searchDownButton">
      <property name="toolTip">
-      <string>search forward</string>
+      <string>Search forward</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="go-bottom">
+      <iconset theme="go-bottom" resource="media.qrc">
        <normaloff>:/media/go-bottom.svg</normaloff>:/media/go-bottom.svg</iconset>
      </property>
      <property name="flat">
@@ -80,13 +80,13 @@
    <item row="0" column="4">
     <widget class="QPushButton" name="searchUpButton">
      <property name="toolTip">
-      <string>search backward</string>
+      <string>Search backward</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="go-top">
+      <iconset theme="go-top" resource="media.qrc">
        <normaloff>:/media/go-top.svg</normaloff>:/media/go-top.svg</iconset>
      </property>
      <property name="flat">
@@ -122,7 +122,7 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="format-text-superscript">
+      <iconset theme="format-text-superscript" resource="media.qrc">
        <normaloff>:/media/format-text-superscript.svg</normaloff>:/media/format-text-superscript.svg</iconset>
      </property>
      <property name="checkable">
