@@ -1251,18 +1251,31 @@
 </message>
 </context>
 <context>
-<name>HtmlPreviewWidget</name>
+<name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
 <translation>Copiar</translation>
 </message>
 <message>
-<source>Copy link</source>
-<translation>Copiar link</translation>
+<source>Copy link location</source>
+<translation>Copiar dirección del enlace</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation type="unfinished">Export generated raw HTML</translation>
 </message>
 <message>
 <source>Reset zoom</source>
 <translation>Restablecer acercamiento</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation>Archivos HTML</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation type="unfinished">Export preview as raw HTML file</translation>
 </message>
 </context>
 <context>
@@ -1964,6 +1977,14 @@
 <message>
 <source>Forward in note history</source>
 <translation>Avanzar en el historial de nota</translation>
+</message>
+<message>
+<source>Previous &amp;heading</source>
+<translation type="unfinished">Previous &amp;heading</translation>
+</message>
+<message>
+<source>Next heading</source>
+<translation type="unfinished">Next heading</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2890,6 +2911,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Abrir nota en Nextcloud Notes</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Unmark as favorite</source>
 <translation>Desmarcar como favorita</translation>
 </message>
@@ -2941,6 +2966,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>La ruta de la nota '%1' fue copiada al portapapeles</translation>
+</message>
+<message>
+<source>Note filename '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -3958,6 +3987,10 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Copiar ruta absoluta de nota</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Copy absolute path of note subfolder</source>
 <translation>Copiar ruta absoluta de subcarpeta de nota</translation>
 </message>
@@ -4215,6 +4248,45 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 </context>
 <context>
+<name>QLiteHtmlSearchWidget</name>
+<message>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
+</message>
+<message>
+<source>Find:</source>
+<translation>Buscar:</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation>Buscar en el texto</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation>Texto sin formato</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation>Palabras completas</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation>Expresión regular</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation>Distinguir mayúsculas y minúsculas</translation>
+</message>
+</context>
+<context>
 <name>QObject</name>
 <message>
 <source>default</source>
@@ -4317,6 +4389,10 @@ Haga clic en "Cancelar" para descartar tus cambios y conservar la versión exter
 <translation>Haga doble clic para pegar la nota a la pestaña</translation>
 </message>
 <message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+</message>
+<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;ruta: %1</translation>
 </message>
@@ -4335,10 +4411,6 @@ Haga clic en "Cancelar" para descartar tus cambios y conservar la versión exter
 <message>
 <source>Light mode detected</source>
 <translation>Se detectó el modo claro</translation>
-</message>
-<message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;modificado por última vez: %2&lt;br /&gt;tamaño del archivo: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4657,31 +4729,31 @@ Haga clic en "Cancelar" para descartar tus cambios y conservar la versión exter
 <context>
 <name>QTextEditSearchWidget</name>
 <message>
-<source>replace text</source>
-<translation>Reemplazar texto</translation>
-</message>
-<message>
 <source>Find:</source>
 <translation>Encontrar:</translation>
 </message>
 <message>
-<source>close search</source>
-<translation>cerrar búsqueda</translation>
+<source>Replace text</source>
+<translation>Reemplazar texto</translation>
 </message>
 <message>
-<source>find in text</source>
-<translation>buscar en el texto</translation>
+<source>Close search</source>
+<translation>Cerrar búsqueda</translation>
 </message>
 <message>
-<source>search forward</source>
-<translation>buscar siguiente</translation>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
 </message>
 <message>
-<source>search backward</source>
-<translation>buscar previa</translation>
+<source>Search forward</source>
+<translation>Buscar hacia delante</translation>
 </message>
 <message>
-<source>replace with</source>
+<source>Search backward</source>
+<translation>Buscar hacia atrás</translation>
+</message>
+<message>
+<source>Replace with</source>
 <translation>Reemplazar con</translation>
 </message>
 <message>
@@ -5025,10 +5097,6 @@ Do you want to install it anyway?</source>
 <message>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>Pulse aquí para usar la carpeta seleccionada en su servidor como carpeta de notas</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;También necesita la dos aplis ownCloud &lt;span style="font-weight:600;"&gt; Versiones&lt;/span&gt; y &lt;span style="font-weight:600;"&gt;Papelera&lt;/span&gt; habilitado en su servidor ownCloud (debería ser la norma).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Error Message</source>
@@ -5416,14 +5484,6 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Enable ownCloud support</source>
 <translation>Habilitar el soporte de ownCloud</translation>
-</message>
-<message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Por favor, instale la última versión de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (al menos la versión QOWNNOTESAPI_MIN_VERSION) en su servidor ownCloud si desea que QOwnNotes pueda acceder a las versiones de notas y a las notas en la papelera.</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¡Todavía necesitará el &lt;a href="https://owncloud.org/"&gt;&lt;span style="font-weight:600"&gt;cliente de sincronización de ownCloud&lt;/span&gt;&lt;/a&gt; (u otro cliente de sincronización de escritorio) para sincronizar sus notas!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
@@ -5950,6 +6010,18 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <translation>Iniciar aplicación en modo de solo lectura</translation>
 </message>
 <message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Por favor, instale la última versión de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (al menos la versión QOWNNOTESAPI_MIN_VERSION) en su servidor de ownCloud si desea que QOwnNotes pueda acceder a las versiones de notas y a las notas en la papelera.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
 <source>When inactive, enter read-only mode automatically after:</source>
 <translation>Cuando está inactivo, entrar en modo de solo lectura automáticamente después de:</translation>
 </message>
@@ -6065,6 +6137,10 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
 <translation>No olvide activar el soporte de git para sus carpetas de notas.</translation>
+</message>
+<message>
+<source>Allow empty note files</source>
+<translation>Permitir archivos de notas vacíos</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

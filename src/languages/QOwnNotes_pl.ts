@@ -1261,18 +1261,31 @@
 </message>
 </context>
 <context>
-<name>HtmlPreviewWidget</name>
+<name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
-<translation>Kopiuj</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
-<source>Copy link</source>
-<translation>Kopiuj link</translation>
+<source>Copy link location</source>
+<translation type="unfinished">Copy link location</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation type="unfinished">Export generated raw HTML</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation>Resetuj powiększenie</translation>
+<translation type="unfinished">Reset zoom</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation type="unfinished">Export preview as raw HTML file</translation>
 </message>
 </context>
 <context>
@@ -1982,6 +1995,14 @@
 <message>
 <source>Forward in note history</source>
 <translation>Do przodu w historii notatki</translation>
+</message>
+<message>
+<source>Previous &amp;heading</source>
+<translation type="unfinished">Previous &amp;heading</translation>
+</message>
+<message>
+<source>Next heading</source>
+<translation type="unfinished">Next heading</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2950,6 +2971,10 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation>Otwórz notatkę w Nextcloud Notes</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Unmark as favorite</source>
 <translation>Odznacz jako ulubione</translation>
 </message>
@@ -3003,6 +3028,10 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>Ścieżka notatki '%1' została skopiowana do schowka</translation>
+</message>
+<message>
+<source>Note filename '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -4052,6 +4081,10 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation>Skopiuj bezwzględną ścieżkę notatki</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Copy absolute path of note subfolder</source>
 <translation>Skopiuj bezwzględną ścieżkę podfolderu notatki</translation>
 </message>
@@ -4311,6 +4344,45 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 </context>
 <context>
+<name>QLiteHtmlSearchWidget</name>
+<message>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
+</message>
+<message>
+<source>Find:</source>
+<translation type="unfinished">Find:</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation type="unfinished">Plain text</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation type="unfinished">Whole words</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation type="unfinished">Regular expression</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation type="unfinished">Match case sensitive</translation>
+</message>
+</context>
+<context>
 <name>QObject</name>
 <message>
 <source>default</source>
@@ -4418,6 +4490,10 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <translation>Kliknij dwukrotnie, aby przykleić notatkę do karty</translation>
 </message>
 <message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+</message>
+<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;ścieżka: %1</translation>
 </message>
@@ -4436,10 +4512,6 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <message>
 <source>Light mode detected</source>
 <translation>Wykryto tryb jasny</translation>
-</message>
-<message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br./&gt;ostatnio zmodyfikowano: %2&lt;br /&gt;rozmiar pliku: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4762,32 +4834,32 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <context>
 <name>QTextEditSearchWidget</name>
 <message>
-<source>replace text</source>
-<translation>Zastąp tekst</translation>
-</message>
-<message>
 <source>Find:</source>
 <translation>Znajdź:</translation>
 </message>
 <message>
-<source>close search</source>
-<translation>zamknij wyszukiwanie</translation>
+<source>Replace text</source>
+<translation type="unfinished">Replace text</translation>
 </message>
 <message>
-<source>find in text</source>
-<translation>znajdź w tekście</translation>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
 </message>
 <message>
-<source>search forward</source>
-<translation>szukaj w przód</translation>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
 </message>
 <message>
-<source>search backward</source>
-<translation>szukaj w tył</translation>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
 </message>
 <message>
-<source>replace with</source>
-<translation>zastąp na</translation>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Replace with</source>
+<translation type="unfinished">Replace with</translation>
 </message>
 <message>
 <source>Replace:</source>
@@ -5132,10 +5204,6 @@ Do you want to install it anyway?</source>
 <message>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>Kliknij tutaj aby wybrać folder z Twojego serwera jako folder notatek</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Musisz także mieć włączone podstawowe aplikacje ownCloud &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; i &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; (to jest ustawienie domyślne).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Error Message</source>
@@ -5523,14 +5591,6 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <source>Enable ownCloud support</source>
 <translation>Włącz wsparcie ownCloud</translation>
-</message>
-<message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Jeśli chcesz, aby QOwnNotes miał dostęp do poprzednich wersji notatek oraz notatek przeniesionych do kosza, zainstaluj najnowszą wersję &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (nie niższą niż QOWNNOTESAPI_MIN_VERSION) na swoim serwerze ownCloud.</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nadal będziesz potrzebować &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;klienta synchronizacji ownCloud&lt;/span&gt;&lt;/a&gt; (lub innego klasycznego klienta synchronizacji), aby synchronizować swoje notatki.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
@@ -6057,6 +6117,18 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <translation>Uruchom aplikację w trybie tylko do odczytu</translation>
 </message>
 <message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
 <source>When inactive, enter read-only mode automatically after:</source>
 <translation>Gdy jest nieaktywne, automatycznie przechodzi w tryb tylko do odczytu:</translation>
 </message>
@@ -6172,6 +6244,10 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
 <translation>Nie zapomnij włączyć obsługi git dla folderów notatek.</translation>
+</message>
+<message>
+<source>Allow empty note files</source>
+<translation type="unfinished">Allow empty note files</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

@@ -1251,18 +1251,31 @@
 </message>
 </context>
 <context>
-<name>HtmlPreviewWidget</name>
+<name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
-<translation>Copier</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
-<source>Copy link</source>
-<translation>Copier le lien</translation>
+<source>Copy link location</source>
+<translation type="unfinished">Copy link location</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation type="unfinished">Export generated raw HTML</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation>Réinitialiser le zoom</translation>
+<translation type="unfinished">Reset zoom</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation type="unfinished">Export preview as raw HTML file</translation>
 </message>
 </context>
 <context>
@@ -1493,7 +1506,7 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation>Supprime le titre du lien et re-télécharge le titre de la page web</translation>
+<translation>Supprime le titre du lien et retélécharge le titre de la page web</translation>
 </message>
 <message>
 <source>Note</source>
@@ -1501,7 +1514,7 @@
 </message>
 <message>
 <source>Search for a heading to link to</source>
-<translation>Rechercher un en-tête vers lequel créer un lien</translation>
+<translation>Rechercher un titre de section vers lequel créer un lien</translation>
 </message>
 <message>
 <source>Enter the name of the link (optional)</source>
@@ -1694,7 +1707,7 @@
 </message>
 <message>
 <source>Backlinks</source>
-<translation>Liens de référencement</translation>
+<translation>Liens vers cette note</translation>
 </message>
 <message>
 <source>Add a tag to the current note</source>
@@ -1966,6 +1979,14 @@
 <translation>Avancer dans l’historique</translation>
 </message>
 <message>
+<source>Previous &amp;heading</source>
+<translation>&amp;Titre de section précédent</translation>
+</message>
+<message>
+<source>Next heading</source>
+<translation>Titre de section suivant</translation>
+</message>
+<message>
 <source>Show shortcuts</source>
 <translation>Afficher les raccourcis</translation>
 </message>
@@ -2140,11 +2161,11 @@
 </message>
 <message>
 <source>Reattach floating panels</source>
-<translation>Ré-attacher les panneaux flottants</translation>
+<translation>Rattacher les panneaux flottants</translation>
 </message>
 <message>
 <source>Reattaches all floating panels</source>
-<translation>Ré-attache tous les panneaux flottants</translation>
+<translation>Rattache tous les panneaux flottants</translation>
 </message>
 <message>
 <source>Remove current workspace</source>
@@ -2858,20 +2879,20 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Update backlinks</source>
-<translation type="unfinished">Update backlinks</translation>
+<translation>Mettre à jour les liens vers cette note</translation>
 </message>
 <message numerus="yes">
 <source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
-<translation type="unfinished">
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<translation>
+<numerusform>Le titre de section « %1 » est référencé dans %n note. Voulez-vous mettre à jour les liens pour utiliser le nouveau titre « %2 » ?</numerusform>
+<numerusform>Le titre de section « %1 » est référencé dans %n notes. Voulez-vous mettre à jour les liens pour utiliser le nouveau titre « %2 » ?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Updated heading links in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
-<numerusform>Updated heading links in %n note(s)</numerusform>
+<translation>
+<numerusform>Titre de section mis à jour dans %n note</numerusform>
+<numerusform>Titre de section mis à jour dans %n notes</numerusform>
 </translation>
 </message>
 <message>
@@ -2889,6 +2910,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Open note in Nextcloud Notes</source>
 <translation>Ouvrir la note dans Nextcloud Notes</translation>
+</message>
+<message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
@@ -2942,6 +2967,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>Le chemin vers la note ‘%1’ a été copié dans le presse-papiers</translation>
+</message>
+<message>
+<source>Note filename '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -3673,7 +3702,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>&amp;Rename heading</source>
-<translation type="unfinished">&amp;Rename heading</translation>
+<translation>&amp;Renommer le titre de section</translation>
 </message>
 </context>
 <context>
@@ -3959,6 +3988,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Copier le chemin absolu vers la note</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Copy absolute path of note subfolder</source>
 <translation>Copier le chemin absolu vers le sous-dossier de la note</translation>
 </message>
@@ -4216,6 +4249,45 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 </context>
 <context>
+<name>QLiteHtmlSearchWidget</name>
+<message>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
+</message>
+<message>
+<source>Find:</source>
+<translation type="unfinished">Find:</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation type="unfinished">Plain text</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation type="unfinished">Whole words</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation type="unfinished">Regular expression</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation type="unfinished">Match case sensitive</translation>
+</message>
+</context>
+<context>
 <name>QObject</name>
 <message>
 <source>default</source>
@@ -4317,6 +4389,10 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 <translation>Double-clic pour épingler la note à l'onglet</translation>
 </message>
 <message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+</message>
+<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;chemin d’accès: %1</translation>
 </message>
@@ -4335,10 +4411,6 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 <message>
 <source>Light mode detected</source>
 <translation>Mode clair détecté</translation>
-</message>
-<message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;modifié pour la dernière fois : %2&lt;br /&gt;taille du fichier : %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4657,32 +4729,32 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 <context>
 <name>QTextEditSearchWidget</name>
 <message>
-<source>replace text</source>
-<translation>remplacer le texte</translation>
-</message>
-<message>
 <source>Find:</source>
 <translation>Trouver : </translation>
 </message>
 <message>
-<source>close search</source>
-<translation>Fermer la recherche</translation>
+<source>Replace text</source>
+<translation type="unfinished">Replace text</translation>
 </message>
 <message>
-<source>find in text</source>
-<translation>Trouver dans le texte</translation>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
 </message>
 <message>
-<source>search forward</source>
-<translation>rechercher en avant</translation>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
 </message>
 <message>
-<source>search backward</source>
-<translation>rechercher en arrière</translation>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
 </message>
 <message>
-<source>replace with</source>
-<translation>remplacer par</translation>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Replace with</source>
+<translation type="unfinished">Replace with</translation>
 </message>
 <message>
 <source>Replace:</source>
@@ -5026,10 +5098,6 @@ Voulez-vous quand même l'installer ?</translation>
 <message>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>Cliquez ici pour utiliser le dossier sélectionné sur votre serveur en tant que dossier de notes</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous devez aussi avoir les deux applications de base de ownCloud &lt;span style="font-weight:600;"&gt;Versions&lt;/span&gt; et &lt;span style="font-weight:600;"&gt;Fichiers supprimés&lt;/span&gt; activées sur votre serveur ownCloud (ce qui devrait être la valeur par défaut).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Error Message</source>
@@ -5417,14 +5485,6 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>Enable ownCloud support</source>
 <translation>Activer le support ownCloud</translation>
-</message>
-<message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Installez s'il vous plaît la dernière version de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (au moins la version QOWNNOTESAPI_MIN_VERSION) sur votre serveur ownCloud si vous voulez que QOwnNotes puisse accéder aux versions de notes et aux notes de la corbeille.</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous aurez tout de même besoin du &lt;a href="https://owncloud.org/"&gt;&lt;span style="font-weight: 600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (ou un autre client de synchronisation de bureau) pour synchroniser vos notes !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
@@ -5951,6 +6011,18 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Démarrer l'application en mode lecture seule</translation>
 </message>
 <message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
 <source>When inactive, enter read-only mode automatically after:</source>
 <translation>Quand inactif, entrer en mode lecture seule automatiquement après :</translation>
 </message>
@@ -6066,6 +6138,10 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
 <translation>N’oubliez pas d’activer le support de git pour vos dossiers de notes.</translation>
+</message>
+<message>
+<source>Allow empty note files</source>
+<translation type="unfinished">Allow empty note files</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

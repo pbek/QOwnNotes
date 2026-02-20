@@ -1249,18 +1249,31 @@ File: QOwnNotes_en.ts</translation>
 </message>
 </context>
 <context>
-<name>HtmlPreviewWidget</name>
+<name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
 <translation>복사</translation>
 </message>
 <message>
-<source>Copy link</source>
-<translation>복사 링크</translation>
+<source>Copy link location</source>
+<translation>링크 위치 복사</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation>생성된 원시 HTML 내보내기</translation>
 </message>
 <message>
 <source>Reset zoom</source>
 <translation>확대/축소 재설정</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation>HTML 파일</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation>미리보기를 원시 HTML 파일로 내보내기</translation>
 </message>
 </context>
 <context>
@@ -1958,6 +1971,14 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Forward in note history</source>
 <translation>노트 내역에서 앞으로</translation>
+</message>
+<message>
+<source>Previous &amp;heading</source>
+<translation>이전 제목(&amp;H)</translation>
+</message>
+<message>
+<source>Next heading</source>
+<translation>다음 제목</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2863,6 +2884,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>Nextcloud 노트에서 노트 열기</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation>노트 파일 이름 복사</translation>
+</message>
+<message>
 <source>Unmark as favorite</source>
 <translation>즐겨찾기로 표시 해제</translation>
 </message>
@@ -2913,6 +2938,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>노트 '%1' 경로가 클립보드에 복사되었습니다</translation>
+</message>
+<message>
+<source>Note filename '%1' was copied to the clipboard</source>
+<translation>노트 파일 이름 '%1'이 클립보드에 복사되었습니다</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -3916,6 +3945,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>절대 경로 복사</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation>노트 파일 이름 복사</translation>
+</message>
+<message>
 <source>Copy absolute path of note subfolder</source>
 <translation>노트 하위 폴더의 절대 경로 복사</translation>
 </message>
@@ -4172,6 +4205,45 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 </context>
 <context>
+<name>QLiteHtmlSearchWidget</name>
+<message>
+<source>Close search</source>
+<translation>검색 닫기</translation>
+</message>
+<message>
+<source>Find:</source>
+<translation>찾기:</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation>텍스트에서 찾기</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation>앞으로 검색</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation>뒤로 검색</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation>일반 텍스트</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation>전체 단어</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation>정규 표현식</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation>대소문자 일치</translation>
+</message>
+</context>
+<context>
 <name>QObject</name>
 <message>
 <source>default</source>
@@ -4270,6 +4342,10 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <translation>노트를 탭에 고정하려면 두 번 클릭</translation>
 </message>
 <message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;마지막 수정 날짜: %3&lt;br /&gt;만든 날짜: %2&lt;br /&gt;파일 크기: %4</translation>
+</message>
+<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;경로: %1</translation>
 </message>
@@ -4288,10 +4364,6 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <message>
 <source>Light mode detected</source>
 <translation>밝은 모드가 감지됨</translation>
-</message>
-<message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;마지막 수정: %2&lt;br /&gt;파일 크기: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4608,31 +4680,31 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <context>
 <name>QTextEditSearchWidget</name>
 <message>
-<source>replace text</source>
-<translation>텍스트 바꾸기</translation>
-</message>
-<message>
 <source>Find:</source>
 <translation>찾기:</translation>
 </message>
 <message>
-<source>close search</source>
+<source>Replace text</source>
+<translation>텍스트 바꾸기</translation>
+</message>
+<message>
+<source>Close search</source>
 <translation>검색 닫기</translation>
 </message>
 <message>
-<source>find in text</source>
+<source>Find in text</source>
 <translation>텍스트에서 찾기</translation>
 </message>
 <message>
-<source>search forward</source>
+<source>Search forward</source>
 <translation>앞으로 검색</translation>
 </message>
 <message>
-<source>search backward</source>
+<source>Search backward</source>
 <translation>뒤로 검색</translation>
 </message>
 <message>
-<source>replace with</source>
+<source>Replace with</source>
 <translation>바꾸기 대상</translation>
 </message>
 <message>
@@ -4976,10 +5048,6 @@ Do you want to install it anyway?</source>
 <message>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>서버에서 선택한 폴더를 노트 폴더로 사용하려면 여기를 클릭하십시오</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;또한 ownCloud 서버에서 두 개의 클라우드 핵심 앱 &lt;span style=" font-weight:600;"&gt;버전&lt;/span&gt; 및 &lt;span style=" font-weight:600;"&gt;삭제된 파일&lt;/span&gt;을 사용하도록 설정해야 합니다 (기본값이어야 합니다).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Error Message</source>
@@ -5367,14 +5435,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Enable ownCloud support</source>
 <translation>ownCloud 지원 사용</translation>
-</message>
-<message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>QOWNNotes가 노트 버전 및 쓰레기 노트에 액세스할 수 있도록 하려면 ownCloud 서버에 최신 버전의 &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (최소 버전 QOWNNOTESAPI_MIN_VERSION)를 설치하십시오.</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;노트를 동기화하려면 &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud 동기화 클라이언트&lt;/span&gt;&lt;/a&gt; (또는 다른 데스크톱 동기화 클라이언트)가 여전히 필요합니다!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
@@ -5901,6 +5961,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>읽기 전용 모드에서 응용 프로그램 시작</translation>
 </message>
 <message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>QOWNNotes가 노트 버전 및 쓰레기 노트에 액세스할 수 있도록 하려면 ownCloud 서버에 최신 버전의 &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (최소 버전 QOWNNOTESAPI_MIN_VERSION)를 설치하세요.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;또한 두 개의 자체 클라우드 코어 앱 &lt;b&gt;버전 &lt;/b&gt; 및 &lt;b&gt;삭제된 파일 &lt;/b&gt;를 자체 클라우드 서버에서 활성화해야 합니다 (기본값이어야 함).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;노트를 동기화하려면 &lt;a href="https://owncloud.org/ "&gt;&lt;b&gt;ownCloud 동기화 클라이언트&lt;/b&gt;&lt;/a&gt; (또는 다른 데스크톱 동기화 클라이언트)가 여전히 필요합니다!&lt;p&gt;&lt;/body&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
 <source>When inactive, enter read-only mode automatically after:</source>
 <translation>비활성화된 경우 다음 작업 후 자동으로 읽기 전용 모드로 들어갑니다:</translation>
 </message>
@@ -6016,6 +6088,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
 <translation>노트 폴더에 대해 git 지원을 활성화하는 것을 잊지 마세요.</translation>
+</message>
+<message>
+<source>Allow empty note files</source>
+<translation>빈 노트 파일 허용</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

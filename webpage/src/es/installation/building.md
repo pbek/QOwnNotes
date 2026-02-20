@@ -34,7 +34,7 @@ No dude en contribuir con el código fuente a este proyecto, realizar sugerencia
 Visitar [QOwnNotes en GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Si desea contribuir código fuente al proyecto, por favor haga sus pull requests en la rama `main`.
+Si desea contribuir código fuente al proyecto, por favor haga sus solicitudes de incorporación de cambios (pull requests) en la rama `main`.
 :::
 
 ## Archivo fuente

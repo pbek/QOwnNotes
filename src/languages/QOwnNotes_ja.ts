@@ -1246,18 +1246,31 @@
 </message>
 </context>
 <context>
-<name>HtmlPreviewWidget</name>
+<name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
-<translation>コピー</translation>
+<translation type="unfinished">Copy</translation>
 </message>
 <message>
-<source>Copy link</source>
-<translation>リンクをコピーする</translation>
+<source>Copy link location</source>
+<translation type="unfinished">Copy link location</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation type="unfinished">Export generated raw HTML</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation>ズームをリセット</translation>
+<translation type="unfinished">Reset zoom</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation type="unfinished">Export preview as raw HTML file</translation>
 </message>
 </context>
 <context>
@@ -1955,6 +1968,14 @@
 <message>
 <source>Forward in note history</source>
 <translation>直後に開いたノート</translation>
+</message>
+<message>
+<source>Previous &amp;heading</source>
+<translation type="unfinished">Previous &amp;heading</translation>
+</message>
+<message>
+<source>Next heading</source>
+<translation type="unfinished">Next heading</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2870,6 +2891,10 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation type="unfinished">Open note in Nextcloud Notes</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Unmark as favorite</source>
 <translation type="unfinished">Unmark as favorite</translation>
 </message>
@@ -2920,6 +2945,10 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
+</message>
+<message>
+<source>Note filename '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -3929,6 +3958,10 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation type="unfinished">Copy absolute path of note</translation>
 </message>
 <message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
 <source>Copy absolute path of note subfolder</source>
 <translation type="unfinished">Copy absolute path of note subfolder</translation>
 </message>
@@ -4185,6 +4218,45 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 </message>
 </context>
 <context>
+<name>QLiteHtmlSearchWidget</name>
+<message>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
+</message>
+<message>
+<source>Find:</source>
+<translation type="unfinished">Find:</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation type="unfinished">Plain text</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation type="unfinished">Whole words</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation type="unfinished">Regular expression</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation type="unfinished">Match case sensitive</translation>
+</message>
+</context>
+<context>
 <name>QObject</name>
 <message>
 <source>default</source>
@@ -4285,6 +4357,10 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </translation>
 </message>
 <message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+</message>
+<message>
 <source>&lt;br /&gt;path: %1</source>
 <translation>&lt;br /&gt;パス: %1</translation>
 </message>
@@ -4303,10 +4379,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Light mode detected</source>
 <translation>ライトモードが検出されました</translation>
-</message>
-<message>
-<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2&lt;br /&gt;file size: %3</translation>
 </message>
 <message>
 <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
@@ -4626,32 +4698,32 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <context>
 <name>QTextEditSearchWidget</name>
 <message>
-<source>replace text</source>
-<translation>テキストを置換</translation>
-</message>
-<message>
 <source>Find:</source>
 <translation>検索:</translation>
 </message>
 <message>
-<source>close search</source>
-<translation>検索を閉じる</translation>
+<source>Replace text</source>
+<translation type="unfinished">Replace text</translation>
 </message>
 <message>
-<source>find in text</source>
-<translation>検索文字列</translation>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
 </message>
 <message>
-<source>search forward</source>
-<translation>次を検索</translation>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
 </message>
 <message>
-<source>search backward</source>
-<translation>前を検索</translation>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
 </message>
 <message>
-<source>replace with</source>
-<translation>置換文字列</translation>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Replace with</source>
+<translation type="unfinished">Replace with</translation>
 </message>
 <message>
 <source>Replace:</source>
@@ -4994,10 +5066,6 @@ Do you want to install it anyway?</source>
 <message>
 <source>Click here to use the selected folder from your server as note folder</source>
 <translation>クリックで、あなたのサーバーでノート フォルダーに使用するフォルダーを選択します</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;さらに2つの ownCloud 基本アプリである &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; と &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; をあなたの ownCloud サーバーで有効にしてください。 (既定では有効です)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Error Message</source>
@@ -5385,14 +5453,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Enable ownCloud support</source>
 <translation>OwnCloud サポートを有効にする</translation>
-</message>
-<message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>QOwnNotes でノートの過去バージョンと削除したノートにアクセスしたい場合は、最新の &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (少なくともバージョン QOWNNOTESAPI_MIN_VERSION) をあなたの ownCloud サーバーにインストールしてください。</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;引き続き&lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight：600"&gt; ownCloud同期クライアント&lt;/ a span&gt; &lt;/a&gt;（または別のデスクトップ同期クライアント）でメモを同期します！&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
@@ -5922,6 +5982,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">Start application in read-only mode</translation>
 </message>
 <message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
 <source>When inactive, enter read-only mode automatically after:</source>
 <translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
 </message>
@@ -6037,6 +6109,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
 <translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+</message>
+<message>
+<source>Allow empty note files</source>
+<translation type="unfinished">Allow empty note files</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
