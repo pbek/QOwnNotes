@@ -271,6 +271,30 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
     if (!document)
         return {};
 
+    const std::function<Selection::Element(litehtml::element::ptr)> firstTextLeaf =
+        [&firstTextLeaf](const litehtml::element::ptr &element) -> Selection::Element {
+        if (!element)
+            return {};
+        if (element->get_children_count() == 0) {
+            litehtml::tstring text;
+            element->get_text(text);
+            if (!text.empty())
+                return {element, 0, 0};
+            return {};
+        }
+        for (int i = 0; i < int(element->get_children_count()); ++i) {
+            const litehtml::element::ptr child = element->get_child(i);
+            Selection::Element result = firstTextLeaf(child);
+            if (result.element)
+                return result;
+        }
+        litehtml::tstring text;
+        element->get_text(text);
+        if (!text.empty())
+            return {element, 0, 0};
+        return {};
+    };
+
     // Find the element at this point
     const litehtml::element::ptr element = document->root()->get_element_by_point(pos.x(),
                                                                                   pos.y(),
@@ -309,7 +333,12 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
 
         return {};
     };
-    return recursion(element, element ? toQRect(element->get_placement()) : QRect());
+    Selection::Element result = recursion(element,
+                                          element ? toQRect(element->get_placement()) : QRect());
+    if (result.element)
+        return result;
+
+    return firstTextLeaf(element);
 }
 
 // CSS: 400 == normal, 700 == bold.
@@ -1140,20 +1169,32 @@ int DocumentContainer::anchorY(const QString &anchorName) const
 
 QVector<QRect> DocumentContainer::mousePressEvent(const QPoint &documentPos,
                                                   const QPoint &viewportPos,
-                                                  Qt::MouseButton button)
+                                                  Qt::MouseButton button,
+                                                  Qt::KeyboardModifiers modifiers)
 {
     if (!d->m_document || button != Qt::LeftButton)
         return {};
     QVector<QRect> redrawRects;
     // selection
-    if (d->m_selection.isValid())
-        redrawRects.append(d->m_selection.boundingRect());
-    d->clearSelection();
-    d->m_selection.selectionStartDocumentPos = documentPos;
-    d->m_selection.startElem = deepest_child_at_point(d->m_document,
-                                                      documentPos,
-                                                      viewportPos,
-                                                      d->m_selection.mode);
+    if (modifiers.testFlag(Qt::ShiftModifier) && d->m_selection.isValid()) {
+        d->m_selection.selectionStartDocumentPos = documentPos;
+        d->m_selection.endElem = deepest_child_at_point(d->m_document,
+                                                        documentPos,
+                                                        viewportPos,
+                                                        d->m_selection.mode);
+        d->updateSelection();
+        if (d->m_selection.isValid())
+            redrawRects.append(d->m_selection.boundingRect());
+    } else {
+        if (d->m_selection.isValid())
+            redrawRects.append(d->m_selection.boundingRect());
+        d->clearSelection();
+        d->m_selection.selectionStartDocumentPos = documentPos;
+        d->m_selection.startElem = deepest_child_at_point(d->m_document,
+                                                          documentPos,
+                                                          viewportPos,
+                                                          d->m_selection.mode);
+    }
     // post to litehtml
     litehtml::position::vector redrawBoxes;
     if (d->m_document->on_lbutton_down(documentPos.x(),

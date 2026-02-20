@@ -573,7 +573,8 @@ void QLiteHtmlWidget::mousePressEvent(QMouseEvent *event)
     htmlPos(event->pos(), &viewportPos, &pos);
     const QVector<QRect> areas = d->documentContainer.mousePressEvent(pos,
                                                                       viewportPos,
-                                                                      event->button());
+                                                                      event->button(),
+                                                                      event->modifiers());
     for (const QRect &r : areas)
         viewport()->update(fromVirtual(r.translated(-scrollPosition())));
 }
