@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.2.8
+
+- Added a setting `Allow empty note files` in the Panels settings to allow or disallow empty note files
+  (for [#3456](https://github.com/pbek/QOwnNotes/issues/3456))
+
 ## 26.2.7
 
 - The note list tooltip now shows the note file created date

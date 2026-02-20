@@ -2467,10 +2467,20 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
         QFileInfo fileInfo;
         fileInfo.setFile(file);
 
+        const SettingsService settings;
+        const bool allowEmptyNotes =
+            settings.value(QStringLiteral("allowEmptyNotes"), true).toBool();
+
         // Check file size before reading - skip empty files as they might indicate corruption
         const qint64 fileSize = fileInfo.size();
         if (fileSize == 0) {
-            qWarning() << __func__ << " - Opened empty file:" << file.fileName();
+            if (allowEmptyNotes) {
+                qWarning() << __func__ << " - Opened empty file:" << file.fileName();
+            } else {
+                qWarning() << __func__ << " - Skipping empty file:" << file.fileName();
+                file.close();
+                return;
+            }
         }
 
         QTextStream in(&file);
@@ -2484,8 +2494,12 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
 
         // Verify that we actually read some content
         if (fileSize > 0 && noteText.isEmpty()) {
-            qWarning() << __func__ << " - Read empty text from file:" << file.fileName();
-            return;
+            if (allowEmptyNotes) {
+                qWarning() << __func__ << " - Read empty text from file:" << file.fileName();
+            } else {
+                qWarning() << __func__ << " - Read empty text from file:" << file.fileName();
+                return;
+            }
         }
 
         // create a nicer name by removing the extension
@@ -2509,7 +2523,6 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
         this->_fileLastModified = fileInfo.lastModified();
 
         // Calculate the checksum before storing (if enabled)
-        const SettingsService settings;
         const bool enableNoteChecksumChecks =
             settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
         if (enableNoteChecksumChecks) {

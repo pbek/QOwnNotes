@@ -5891,14 +5891,21 @@ git config --global user.name &quot;Your name&quot;</string>
                  </widget>
                 </item>
                 <item row="2" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
-                  <property name="text">
-                   <string>Show notes in the note list with preview</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1" colspan="2">
-                 <widget class="QFrame" name="maxNoteFileSizeFrame">
+                  <widget class="QCheckBox" name="noteListPreviewCheckBox">
+                   <property name="text">
+                    <string>Show notes in the note list with preview</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1" colspan="2">
+                  <widget class="QCheckBox" name="allowEmptyNotesCheckBox">
+                   <property name="text">
+                    <string>Allow empty note files</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1" colspan="2">
+                  <widget class="QFrame" name="maxNoteFileSizeFrame">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -5957,8 +5964,8 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="5" column="1">
-                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
+                <item row="6" column="1">
+                  <widget class="QGroupBox" name="notesPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
                   </property>
@@ -5980,8 +5987,8 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="5" column="2">
-                 <widget class="QGroupBox" name="notesPanelOrderGroupBox">
+                <item row="6" column="2">
+                  <widget class="QGroupBox" name="notesPanelOrderGroupBox">
                   <property name="enabled">
                    <bool>true</bool>
                   </property>
@@ -6009,8 +6016,8 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="4" column="1" colspan="2">
-                 <widget class="QGroupBox" name="groupBox_39">
+                <item row="5" column="1" colspan="2">
+                  <widget class="QGroupBox" name="groupBox_39">
                   <property name="toolTip">
                    <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
                   </property>
@@ -7657,6 +7664,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>notesPanelSortByLastChangeRadioButton</tabstop>
   <tabstop>taggingShowNotesRecursivelyCheckBox</tabstop>
   <tabstop>noteListPreviewCheckBox</tabstop>
+  <tabstop>allowEmptyNotesCheckBox</tabstop>
   <tabstop>navigationPanelHideSearchCheckBox</tabstop>
   <tabstop>localTrashClearTimeSpinBox</tabstop>
   <tabstop>localTrashClearCheckBox</tabstop>

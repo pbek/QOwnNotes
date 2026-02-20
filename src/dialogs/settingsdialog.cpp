@@ -850,6 +850,7 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue(QStringLiteral("taggingShowNotesRecursively"),
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
     settings.setValue(QStringLiteral("noteListPreview"), ui->noteListPreviewCheckBox->isChecked());
+    settings.setValue(QStringLiteral("allowEmptyNotes"), ui->allowEmptyNotesCheckBox->isChecked());
     settings.setValue(QStringLiteral("maxNoteFileSize"),
                       ui->maxNoteFileSizeSpinBox->value() * 1024);
 
@@ -1400,6 +1401,8 @@ void SettingsDialog::readPanelSettings() {
     ui->taggingShowNotesRecursivelyCheckBox->setChecked(
         settings.value(QStringLiteral("taggingShowNotesRecursively")).toBool());
     ui->noteListPreviewCheckBox->setChecked(Utils::Misc::isNoteListPreview());
+    ui->allowEmptyNotesCheckBox->setChecked(
+        settings.value(QStringLiteral("allowEmptyNotes"), true).toBool());
     ui->maxNoteFileSizeSpinBox->setValue(Utils::Misc::getMaximumNoteFileSize() / 1024);
 
     if (settings.value(QStringLiteral("tagsPanelSort")).toInt() == SORT_ALPHABETICAL) {
