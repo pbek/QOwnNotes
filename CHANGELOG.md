@@ -4,6 +4,8 @@
 
 - Added a setting `Allow empty note files` in the Panels settings to allow or disallow empty note files
   (for [#3456](https://github.com/pbek/QOwnNotes/issues/3456))
+- The QLiteHtml preview panel now uses system default scrollbars instead of custom styled scrollbars
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
 
 ## 26.2.7
 

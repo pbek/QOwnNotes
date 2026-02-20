@@ -27,10 +27,14 @@
 
 // HtmlPreviewWidgetInternal implementation
 HtmlPreviewWidgetInternal::HtmlPreviewWidgetInternal(QWidget *parent) : QLiteHtmlWidget(parent) {
-    setStyleSheet(QStringLiteral("background-color: %1;")
-                      .arg(Utils::Schema::schemaSettings
-                               ->getBackgroundColor(MarkdownHighlighter::HighlighterState::NoState)
-                               .name()));
+    viewport()->setStyleSheet(
+        QStringLiteral("background-color: %1;")
+            .arg(Utils::Schema::schemaSettings
+                     ->getBackgroundColor(MarkdownHighlighter::HighlighterState::NoState)
+                     .name()));
+
+    verticalScrollBar()->setStyle(nullptr);
+    horizontalScrollBar()->setStyle(nullptr);
 
     auto callback = [this](const QUrl &url) { return resourceLoadCallBack(url); };
     setResourceHandler(callback);
