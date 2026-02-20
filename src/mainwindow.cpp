@@ -591,11 +591,27 @@ void MainWindow::initNotePreviewAndTextEdits() {
 
 #ifdef USE_QLITEHTML
     _notePreviewWidget = new HtmlPreviewWidget(this);
-    if (!ui->noteViewFrame->layout()) ui->noteViewFrame->setLayout(new QVBoxLayout);
-    ui->noteViewFrame->layout()->addWidget(_notePreviewWidget);
+    auto *noteViewLayout = ui->noteViewFrame->layout();
+    if (!noteViewLayout) {
+        noteViewLayout = new QVBoxLayout(ui->noteViewFrame);
+        ui->noteViewFrame->setLayout(noteViewLayout);
+    }
+
+    noteViewLayout->setContentsMargins(0, 0, 0, 0);
+    noteViewLayout->setSpacing(0);
+
+    auto *noteViewGridLayout = qobject_cast<QGridLayout *>(noteViewLayout);
+    if (noteViewGridLayout != nullptr) {
+        noteViewGridLayout->addWidget(_notePreviewWidget, 1, 1);
+        noteViewGridLayout->setRowStretch(1, 1);
+        noteViewGridLayout->setColumnStretch(1, 1);
+    } else {
+        noteViewLayout->addWidget(_notePreviewWidget);
+    }
 
     // QTextBrowser previewer is hidden when we use qlitehtml
     ui->noteTextView->setVisible(false);
+    ui->noteTextViewSearchFrame->setVisible(false);
 
     // TODO: remove this, and handle stuff in the widget directly
     _notePreviewWidget->installEventFilter(this);

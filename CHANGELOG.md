@@ -6,6 +6,8 @@
   (for [#3456](https://github.com/pbek/QOwnNotes/issues/3456))
 - The QLiteHtml preview panel now uses system default scrollbars instead of custom styled scrollbars
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+- Fixed extra top/right padding in the QLiteHtml preview panel layout
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
 
 ## 26.2.7
 
