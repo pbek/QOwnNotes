@@ -2,11 +2,13 @@
 
 ## 26.2.9
 
-- Fixed selection flickering in the QLiteHtml preview when dragging to select text
+- Fixed a vertical stripe flickering artifact in the QLiteHtml preview when dragging to select text
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
-  - A vertical stripe artifact across the full preview height no longer appears during mouse-drag
-    selection; fixed by issuing a single full-viewport repaint instead of multiple partial
-    dirty-rect repaints that exposed the selection highlight before the document content was drawn
+  - Degenerate zero- or negative-width selection highlight rects are now suppressed; these were
+    generated when the cursor was at or near the start of a text element, causing a 1-pixel-wide
+    highlight to be painted over the full height of the preview during mouse-drag selection
+  - Mouse-move repaints now use a single full-viewport update instead of multiple partial dirty-rect
+    updates, preventing intermediate frame artifacts during rapid selection drags
 - Improved text selection contrast in the QLiteHtml preview, especially in dark mode
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Selected text now uses the palette highlight text color (`QPalette::HighlightedText`) instead of

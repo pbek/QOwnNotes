@@ -522,8 +522,13 @@ void Selection::update()
                 seg.pixelStart = 0;
                 seg.pixelEnd = element.x;
             }
-            selection.append(rect);
-            segmentMap[placementRect] = seg;
+            // Skip degenerate (zero or negative width) rects to avoid a 1-pixel
+            // vertical stripe artifact that appears during mouse-drag selection
+            // when the cursor is at or near the start of a text element.
+            if (rect.width() > 0) {
+                selection.append(rect);
+                segmentMap[placementRect] = seg;
+            }
         }
     };
 
