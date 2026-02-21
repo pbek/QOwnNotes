@@ -6,11 +6,25 @@
 #include <QProcess>
 #include <QString>
 #include <QStringList>
+#include <QVector>
 
 class MarkdownLspClient : public QObject {
     Q_OBJECT
 
    public:
+    struct DiagnosticRange {
+        int startLine = 0;
+        int startCharacter = 0;
+        int endLine = 0;
+        int endCharacter = 0;
+    };
+
+    struct Diagnostic {
+        DiagnosticRange range;
+        int severity = 0;
+        QString message;
+    };
+
     explicit MarkdownLspClient(QObject *parent = nullptr);
     ~MarkdownLspClient() override;
 
@@ -30,6 +44,7 @@ class MarkdownLspClient : public QObject {
 
    Q_SIGNALS:
     void completionReceived(int requestId, const QStringList &items);
+    void diagnosticsReceived(const QString &uri, const QVector<Diagnostic> &diagnostics);
     void errorMessage(const QString &message);
 
    private Q_SLOTS:

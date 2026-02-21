@@ -14,8 +14,11 @@
 #include <QMenu>
 #include <QMimeData>
 #include <QRegularExpression>
+#include <QTextBlock>
 #include <QTextCursor>
 #include <QTextDocumentFragment>
+#include <QTextEdit>
+#include <QTextFormat>
 #include <QTimer>
 
 #include "entities/notefolder.h"
@@ -29,6 +32,10 @@
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 #include "version.h"
+
+namespace {
+constexpr int kMarkdownLspDiagnosticProperty = QTextFormat::UserProperty + 1;
+}
 
 // Initialize static member
 QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::_activeAutocompleteEditor = nullptr;
@@ -1681,6 +1688,8 @@ void QOwnNotesMarkdownTextEdit::closeMarkdownLspDocument() {
 
     _markdownLspUri.clear();
     _markdownLspVersion = 0;
+    _markdownLspDiagnosticsSelections.clear();
+    applyMarkdownLspDiagnosticsSelections();
 }
 
 void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
@@ -1706,6 +1715,8 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
         _markdownLspClient = new MarkdownLspClient(this);
         connect(_markdownLspClient, &MarkdownLspClient::completionReceived, this,
                 &QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions);
+        connect(_markdownLspClient, &MarkdownLspClient::diagnosticsReceived, this,
+                &QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics);
         connect(_markdownLspClient, &MarkdownLspClient::errorMessage, this,
                 [this](const QString &message) {
                     if (!message.trimmed().isEmpty()) {
@@ -1784,4 +1795,63 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
     QTextCursor c = textCursor();
     c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
     c.insertText(text + QStringLiteral(" "));
+}
+
+void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
+    const QString &uri, const QVector<MarkdownLspClient::Diagnostic> &diagnostics) {
+    if (uri != _markdownLspUri) {
+        return;
+    }
+
+    _markdownLspDiagnosticsSelections.clear();
+    for (const MarkdownLspClient::Diagnostic &diagnostic : diagnostics) {
+        if (diagnostic.message.isEmpty()) {
+            continue;
+        }
+
+        const QTextBlock startBlock = document()->findBlockByNumber(diagnostic.range.startLine);
+        if (!startBlock.isValid()) {
+            continue;
+        }
+
+        const QTextBlock endBlock = document()->findBlockByNumber(diagnostic.range.endLine);
+        if (!endBlock.isValid()) {
+            continue;
+        }
+
+        const int startPosition = startBlock.position() + diagnostic.range.startCharacter;
+        const int endPosition = endBlock.position() + diagnostic.range.endCharacter;
+        if (endPosition <= startPosition) {
+            continue;
+        }
+
+        QTextCursor cursor(document());
+        cursor.setPosition(startPosition);
+        cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+
+        QTextEdit::ExtraSelection selection;
+        selection.cursor = cursor;
+        selection.format.setUnderlineStyle(QTextCharFormat::WaveUnderline);
+        selection.format.setUnderlineColor(QColor(214, 68, 68));
+        selection.format.setToolTip(diagnostic.message);
+        selection.format.setProperty(kMarkdownLspDiagnosticProperty, true);
+        _markdownLspDiagnosticsSelections.append(selection);
+    }
+
+    applyMarkdownLspDiagnosticsSelections();
+}
+
+void QOwnNotesMarkdownTextEdit::applyMarkdownLspDiagnosticsSelections() {
+    const QList<QTextEdit::ExtraSelection> selections = extraSelections();
+    QList<QTextEdit::ExtraSelection> filteredSelections;
+    filteredSelections.reserve(selections.size());
+    for (const QTextEdit::ExtraSelection &selection : selections) {
+        if (selection.format.property(kMarkdownLspDiagnosticProperty).toBool()) {
+            continue;
+        }
+        filteredSelections.append(selection);
+    }
+
+    filteredSelections += _markdownLspDiagnosticsSelections;
+    setExtraSelections(filteredSelections);
 }

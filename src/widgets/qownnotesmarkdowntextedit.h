@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QTextEdit>
+
 #include "helpers/qownnotesmarkdownhighlighter.h"
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 class MainWindow;
@@ -164,6 +166,9 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void scheduleMarkdownLspChange();
     void sendMarkdownLspChange();
     void showMarkdownLspCompletions(int requestId, const QStringList &items);
+    void showMarkdownLspDiagnostics(const QString &uri,
+                                    const QVector<MarkdownLspClient::Diagnostic> &diagnostics);
+    void applyMarkdownLspDiagnosticsSelections();
 
     bool _isSpellCheckingDisabled = false;
     QString _aiAutocompleteSuggestion;
@@ -178,6 +183,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     int _markdownLspVersion = 0;
     int _markdownLspCompletionRequestId = -1;
     bool _markdownLspEnabled = false;
+    QList<QTextEdit::ExtraSelection> _markdownLspDiagnosticsSelections;
 
     // Static pointer to the currently active editor for AI autocomplete
     static QOwnNotesMarkdownTextEdit *_activeAutocompleteEditor;
