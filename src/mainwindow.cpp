@@ -3212,6 +3212,9 @@ void MainWindow::storeUpdatedNotesToDisk() {
             // was modified outside of QOwnNotes
             updateCurrentNoteTextHash();
 
+            ui->noteTextEdit->setMarkdownLspDocumentPath(currentNote.fullNoteFilePath(),
+                                                         ui->noteTextEdit->toPlainText());
+
             if (oldNoteName != currentNote.getName()) {
                 // just to make sure the window title is set correctly
                 updateWindowTitle();
@@ -4033,6 +4036,13 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
         ui->noteTextEdit->show();
     }
 
+    if (updateNoteText && note.exists()) {
+        ui->noteTextEdit->setMarkdownLspDocumentPath(note.fullNoteFilePath(),
+                                                     ui->noteTextEdit->toPlainText());
+    } else if (updateNoteText) {
+        ui->noteTextEdit->closeMarkdownLspDocument();
+    }
+
     updateNoteEncryptionUI();
     // we also need to do this in on_noteTreeWidget_itemSelectionChanged
     // because of different timings
@@ -4682,7 +4692,12 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
     if (!updateNoteTextViewOnly) {
         qobject_cast<QOwnNotesMarkdownHighlighter *>(ui->noteTextEdit->highlighter())
             ->updateCurrentNote(note);
+        ui->noteTextEdit->closeMarkdownLspDocument();
         ui->noteTextEdit->setText(note->getNoteText());
+        if (note->exists()) {
+            ui->noteTextEdit->setMarkdownLspDocumentPath(note->fullNoteFilePath(),
+                                                         ui->noteTextEdit->toPlainText());
+        }
     }
 
     if (allowRestoreCursorPosition && Utils::Misc::isRestoreCursorPosition()) {
@@ -7223,6 +7238,8 @@ void MainWindow::on_actionDecrypt_note_triggered() {
         ui->noteTextEdit->show();
         ui->noteTextEdit->setFocus();
         updateNoteTextEditReadOnly();
+        ui->noteTextEdit->setMarkdownLspDocumentPath(currentNote.fullNoteFilePath(),
+                                                     ui->noteTextEdit->toPlainText());
     }
 }
 
@@ -7258,6 +7275,7 @@ void MainWindow::editEncryptedNote() {
         ui->encryptedNoteTextEdit->setFocus();
         _noteViewNeedsUpdate = true;
         updateNoteTextEditReadOnly();
+        ui->noteTextEdit->closeMarkdownLspDocument();
     }
 }
 

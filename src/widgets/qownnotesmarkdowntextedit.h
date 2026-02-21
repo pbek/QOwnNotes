@@ -4,6 +4,7 @@
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 class MainWindow;
 class QOwnSpellChecker;
+class MarkdownLspClient;
 
 #define QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING \
     "/* BEGIN FONT SIZE OVERRIDE STYLESHEET */"
@@ -102,6 +103,9 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
     void updateIgnoredClickUrlRegexps();
 
+    void setMarkdownLspDocumentPath(const QString &filePath, const QString &text);
+    void closeMarkdownLspDocument();
+
    public slots:
     /**
      * Called when AI autocomplete is completed
@@ -156,11 +160,24 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      */
     void acceptAiAutocompleteSuggestion();
 
+    void applyMarkdownLspSettings();
+    void scheduleMarkdownLspChange();
+    void sendMarkdownLspChange();
+    void showMarkdownLspCompletions(int requestId, const QStringList &items);
+
     bool _isSpellCheckingDisabled = false;
     QString _aiAutocompleteSuggestion;
     int _aiAutocompletePosition = -1;
     QTimer *_aiAutocompleteTimer = nullptr;
     bool _isInsertingAiSuggestion = false;
+
+    MarkdownLspClient *_markdownLspClient = nullptr;
+    QTimer *_markdownLspChangeTimer = nullptr;
+    QString _markdownLspUri;
+    QString _markdownLspPendingText;
+    int _markdownLspVersion = 0;
+    int _markdownLspCompletionRequestId = -1;
+    bool _markdownLspEnabled = false;
 
     // Static pointer to the currently active editor for AI autocomplete
     static QOwnNotesMarkdownTextEdit *_activeAutocompleteEditor;

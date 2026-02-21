@@ -353,6 +353,8 @@ set(SOURCE_FILES
     services/scriptingservice.h
     services/openaiservice.cpp
     services/openaiservice.h
+    services/markdownlspclient.cpp
+    services/markdownlspclient.h
     services/settingsservice.cpp
     services/settingsservice.h
     libraries/piwiktracker/piwiktracker.h
