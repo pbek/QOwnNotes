@@ -605,6 +605,13 @@ void SettingsDialog::storeSettings() {
                       ui->disableCursorBlinkingCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/useTabIndent"), ui->useTabIndentCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/indentSize"), ui->indentSizeSpinBox->value());
+    settings.setValue(QStringLiteral("Editor/markdownLspEnabled"),
+                      ui->markdownLspEnabledCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/markdownLspCommand"),
+                      ui->markdownLspCommandLineEdit->text().trimmed());
+    settings.setValue(QStringLiteral("Editor/markdownLspArguments"),
+                      ui->markdownLspArgumentsLineEdit->text().split(
+                          QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts));
 
     if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool() &&
         ui->appMetricsCheckBox->isChecked()) {
@@ -987,10 +994,20 @@ void SettingsDialog::readSettings() {
     ui->useTabIndentCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/useTabIndent")).toBool());
     ui->indentSizeSpinBox->setValue(Utils::Misc::indentSize());
+    ui->markdownLspEnabledCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/markdownLspEnabled"), false).toBool());
+    ui->markdownLspCommandLineEdit->setText(
+        settings.value(QStringLiteral("Editor/markdownLspCommand"), QStringLiteral("marksman"))
+            .toString());
+    ui->markdownLspArgumentsLineEdit->setText(
+        settings.value(QStringLiteral("Editor/markdownLspArguments"))
+            .toStringList()
+            .join(QLatin1Char(' ')));
     ui->markdownHighlightingCheckBox->setChecked(
         settings.value(QStringLiteral("markdownHighlightingEnabled"), true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(
         settings.value(QStringLiteral("fullyHighlightedBlockquotes")).toBool());
+    on_markdownLspEnabledCheckBox_toggled(ui->markdownLspEnabledCheckBox->isChecked());
     ui->noteEditCentralWidgetCheckBox->setChecked(
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool());
     ui->restoreNoteTabsCheckBox->setChecked(
@@ -3972,6 +3989,13 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
 
 void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
     ui->fullyHighlightedBlockquotesCheckBox->setEnabled(checked);
+}
+
+void SettingsDialog::on_markdownLspEnabledCheckBox_toggled(bool checked) {
+    ui->markdownLspCommandLineEdit->setEnabled(checked);
+    ui->markdownLspArgumentsLineEdit->setEnabled(checked);
+    ui->markdownLspCommandLabel->setEnabled(checked);
+    ui->markdownLspArgumentsLabel->setEnabled(checked);
 }
 
 void SettingsDialog::on_localTrashEnabledCheckBox_toggled(bool checked) {
