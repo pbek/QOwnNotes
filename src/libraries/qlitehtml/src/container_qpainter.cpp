@@ -484,9 +484,17 @@ void Selection::update()
         element.element->get_text(elemText);
         const QString textStr = QString::fromStdString(elemText);
         if (!textStr.isEmpty()) {
-            QRect rect = toQRect(element.element->get_placement()).adjusted(-1, -1, 1, 1);
+            // placementRect is the unadjusted document-coordinate rect used as
+            // a map key in segmentMap (must match what draw_text reconstructs).
+            const QRect placementRect = toQRect(element.element->get_placement());
+            QRect rect = placementRect.adjusted(-1, -1, 1, 1);
+            SegmentInfo seg;
             if (element.index < 0) { // fully selected
                 text += textStr;
+                seg.charStart = 0;
+                seg.charEnd = -1;
+                seg.pixelStart = 0;
+                seg.pixelEnd = -1;
             } else if (end.element) { // select from element "to end"
                 if (element.element == end.element) {
                     // end.index is guaranteed to be >= element.index by caller, same for x
@@ -494,15 +502,28 @@ void Selection::update()
                     const int left = rect.left();
                     rect.setLeft(left + element.x);
                     rect.setRight(left + end.x);
+                    seg.charStart = element.index;
+                    seg.charEnd = end.index;
+                    seg.pixelStart = element.x;
+                    seg.pixelEnd = end.x;
                 } else {
                     text += textStr.mid(element.index);
                     rect.setLeft(rect.left() + element.x);
+                    seg.charStart = element.index;
+                    seg.charEnd = -1;
+                    seg.pixelStart = element.x;
+                    seg.pixelEnd = -1;
                 }
             } else { // select from start of element
                 text += textStr.left(element.index);
                 rect.setRight(rect.left() + element.x);
+                seg.charStart = 0;
+                seg.charEnd = element.index;
+                seg.pixelStart = 0;
+                seg.pixelEnd = element.x;
             }
             selection.append(rect);
+            segmentMap[placementRect] = seg;
         }
     };
 
@@ -515,6 +536,7 @@ void Selection::update()
 
         selection.clear();
         text.clear();
+        segmentMap.clear();
 
         // Treats start element as a leaf even if it isn't, because it already contains all its
         // children
@@ -532,6 +554,7 @@ void Selection::update()
     } else {
         selection = {};
         text.clear();
+        segmentMap.clear();
     }
 #if QT_CONFIG(clipboard)
     QClipboard *cb = QGuiApplication::clipboard();
@@ -644,9 +667,58 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
                                          const litehtml::position &pos)
 {
     auto painter = toQPainter(hdc);
-    painter->setFont(toQFont(hFont));
-    painter->setPen(toQColor(color));
-    painter->drawText(toQRect(pos), 0, QString::fromUtf8(text));
+    const QFont font = toQFont(hFont);
+    painter->setFont(font);
+    const QColor normalColor = toQColor(color);
+
+    // Look up whether this text element has a selection segment.
+    // draw_text receives pos in viewport coordinates (document - scrollPosition);
+    // segmentMap is keyed by the unadjusted document-coordinate placement rect.
+    const QRect placementRect = toQRect(pos).translated(m_scrollPosition);
+    const auto segIt = m_selection.segmentMap.constFind(placementRect);
+
+    if (segIt == m_selection.segmentMap.constEnd() || !m_paletteCallback) {
+        // No selection on this element — draw normally.
+        painter->setPen(normalColor);
+        painter->drawText(toQRect(pos), 0, QString::fromUtf8(text));
+        return;
+    }
+
+    // This element has a selection. Split into up to three segments:
+    //   [0, charStart)        — pre-selection  (normal color)
+    //   [charStart, charEnd)  — selected        (highlighted color)
+    //   [charEnd, end)        — post-selection  (normal color)
+    const Selection::SegmentInfo &seg = segIt.value();
+    const QString str = QString::fromUtf8(text);
+    const QColor highlightColor = m_paletteCallback().color(QPalette::HighlightedText);
+    const QRect drawRect = toQRect(pos);
+    const QFontMetrics fm(font);
+
+    // Helper: draw a substring starting at a given pixel x-offset within drawRect.
+    const auto drawSegment = [&](const QString &sub, int xOffset, const QColor &col) {
+        if (sub.isEmpty())
+            return;
+        QRect r = drawRect;
+        r.setLeft(drawRect.left() + xOffset);
+        painter->setPen(col);
+        painter->drawText(r, 0, sub);
+    };
+
+    // Pre-selection segment
+    if (seg.charStart > 0) {
+        drawSegment(str.left(seg.charStart), 0, normalColor);
+    }
+
+    // Selected segment
+    const QString selectedStr = (seg.charEnd < 0)
+                                    ? str.mid(seg.charStart)
+                                    : str.mid(seg.charStart, seg.charEnd - seg.charStart);
+    drawSegment(selectedStr, seg.pixelStart, highlightColor);
+
+    // Post-selection segment
+    if (seg.charEnd >= 0 && seg.charEnd < str.size()) {
+        drawSegment(str.mid(seg.charEnd), seg.pixelEnd, normalColor);
+    }
 }
 
 int DocumentContainerPrivate::pt_to_px(int pt) const

@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.2.9
+
+- Improved text selection contrast in the QLiteHtml preview, especially in dark mode
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - Selected text now uses the palette highlight text color (`QPalette::HighlightedText`) instead of
+    the original CSS text color, ensuring readable contrast over the selection highlight background
+
 ## 26.2.8
 
 - Added a setting `Allow empty note files` in the Panels settings to allow or disallow empty note files
