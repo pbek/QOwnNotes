@@ -560,8 +560,13 @@ void QLiteHtmlWidget::mouseMoveEvent(QMouseEvent *event)
     QPoint pos;
     htmlPos(event->pos(), &viewportPos, &pos);
     const QVector<QRect> areas = d->documentContainer.mouseMoveEvent(pos, viewportPos);
-    for (const QRect &r : areas)
-        viewport()->update(fromVirtual(r.translated(-scrollPosition())));
+    if (!areas.isEmpty()) {
+        // Use a full viewport repaint instead of individual dirty-rect updates to avoid
+        // selection-highlight flickering (a vertical stripe artifact) that occurs when
+        // partial clip-region repaints expose the selection bounding rect before the
+        // document content is drawn on top of it.
+        viewport()->update();
+    }
 
     updateHightlightedLink();
 }
