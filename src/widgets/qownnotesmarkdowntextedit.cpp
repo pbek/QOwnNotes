@@ -617,6 +617,17 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         return;
     }
 
+    if (_markdownLspEnabled && _markdownLspClient && !_markdownLspUri.isEmpty()) {
+        const QTextCursor cursor = textCursor();
+        const int line = cursor.blockNumber();
+        const int character = cursor.positionInBlock();
+        _markdownLspCompletionRequestId =
+            _markdownLspClient->requestCompletion(_markdownLspUri, line, character);
+        if (_markdownLspCompletionRequestId >= 0) {
+            return;
+        }
+    }
+
     // try to open a link at the cursor position
     if (openLinkAtCursorPosition()) {
         MainWindow::instance()->showStatusBarMessage(
@@ -627,17 +638,6 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     // attempt a Markdown table auto-format
     if (Utils::Gui::autoFormatTableAtCursor(this)) {
         return;
-    }
-
-    if (_markdownLspEnabled && _markdownLspClient && !_markdownLspUri.isEmpty()) {
-        const QTextCursor cursor = textCursor();
-        const int line = cursor.blockNumber();
-        const int character = cursor.positionInBlock();
-        _markdownLspCompletionRequestId =
-            _markdownLspClient->requestCompletion(_markdownLspUri, line, character);
-        if (_markdownLspCompletionRequestId >= 0) {
-            return;
-        }
     }
 
     QMenu menu;
