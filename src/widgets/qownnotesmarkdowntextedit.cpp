@@ -22,11 +22,13 @@
 #include "helpers/qownspellchecker.h"
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
 #include "mainwindow.h"
+#include "services/markdownlspclient.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
 #include "services/scriptingservice.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
+#include "version.h"
 
 // Initialize static member
 QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::_activeAutocompleteEditor = nullptr;
@@ -49,6 +51,12 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     _aiAutocompleteTimer->setInterval(500);    // Wait 500ms after typing stops
     connect(_aiAutocompleteTimer, &QTimer::timeout, this,
             &QOwnNotesMarkdownTextEdit::requestAiAutocomplete);
+
+    _markdownLspChangeTimer = new QTimer(this);
+    _markdownLspChangeTimer->setSingleShot(true);
+    _markdownLspChangeTimer->setInterval(200);
+    connect(_markdownLspChangeTimer, &QTimer::timeout, this,
+            &QOwnNotesMarkdownTextEdit::sendMarkdownLspChange);
 
     // NOTE: Callback registration is now done globally in OpenAiService constructor
     // We just need to register this editor as active if it's a note editor
@@ -97,6 +105,10 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
             clearAiAutocompleteSuggestion();
             _aiAutocompleteTimer->start();
         }
+
+        if (_markdownLspEnabled) {
+            scheduleMarkdownLspChange();
+        }
     });
 
     SettingsService settings;
@@ -140,6 +152,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, &QOwnNotesMarkdownTextEdit::customContextMenuRequested, this,
             &QOwnNotesMarkdownTextEdit::onContextMenu);
+
+    applyMarkdownLspSettings();
 }
 
 /*
@@ -615,6 +629,17 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         return;
     }
 
+    if (_markdownLspEnabled && _markdownLspClient && !_markdownLspUri.isEmpty()) {
+        const QTextCursor cursor = textCursor();
+        const int line = cursor.blockNumber();
+        const int character = cursor.positionInBlock();
+        _markdownLspCompletionRequestId =
+            _markdownLspClient->requestCompletion(_markdownLspUri, line, character);
+        if (_markdownLspCompletionRequestId >= 0) {
+            return;
+        }
+    }
+
     QMenu menu;
 
     double resultValue;
@@ -952,6 +977,8 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     _centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     QMarkdownTextEdit::updateSettings();
+
+    applyMarkdownLspSettings();
 }
 
 void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
@@ -1614,6 +1641,147 @@ QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::getActiveEditorForAutocomp
 
 QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {
     qDebug() << "*** QOwnNotesMarkdownTextEdit DESTROYED ***" << this << objectName();
+    closeMarkdownLspDocument();
     // Unregister if this was the active editor
     unregisterAsActiveEditor();
+}
+
+void QOwnNotesMarkdownTextEdit::setMarkdownLspDocumentPath(const QString &filePath,
+                                                           const QString &text) {
+    if (!_markdownLspEnabled) {
+        return;
+    }
+
+    const QString uri = QUrl::fromLocalFile(filePath).toString();
+    if (uri.isEmpty()) {
+        return;
+    }
+
+    if (_markdownLspUri == uri) {
+        return;
+    }
+
+    if (_markdownLspClient && !_markdownLspUri.isEmpty()) {
+        _markdownLspClient->didClose(_markdownLspUri);
+    }
+
+    _markdownLspUri = uri;
+    _markdownLspVersion = 1;
+
+    if (_markdownLspClient) {
+        _markdownLspClient->didOpen(_markdownLspUri, QStringLiteral("markdown"), text,
+                                    _markdownLspVersion);
+    }
+}
+
+void QOwnNotesMarkdownTextEdit::closeMarkdownLspDocument() {
+    if (_markdownLspClient && !_markdownLspUri.isEmpty()) {
+        _markdownLspClient->didClose(_markdownLspUri);
+    }
+
+    _markdownLspUri.clear();
+    _markdownLspVersion = 0;
+}
+
+void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
+    SettingsService settings;
+    const bool enabled =
+        settings.value(QStringLiteral("Editor/markdownLspEnabled"), false).toBool();
+    const QString command =
+        settings.value(QStringLiteral("Editor/markdownLspCommand"), QStringLiteral("marksman"))
+            .toString();
+    const QStringList arguments =
+        settings.value(QStringLiteral("Editor/markdownLspArguments")).toStringList();
+
+    if (!enabled) {
+        _markdownLspEnabled = false;
+        if (_markdownLspClient) {
+            closeMarkdownLspDocument();
+            _markdownLspClient->shutdown();
+        }
+        return;
+    }
+
+    if (!_markdownLspClient) {
+        _markdownLspClient = new MarkdownLspClient(this);
+        connect(_markdownLspClient, &MarkdownLspClient::completionReceived, this,
+                &QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions);
+        connect(_markdownLspClient, &MarkdownLspClient::errorMessage, this,
+                [this](const QString &message) {
+                    if (!message.trimmed().isEmpty()) {
+                        qWarning() << "Markdown LSP:" << message.trimmed();
+                    }
+                });
+    }
+
+    _markdownLspClient->setServerCommand(command, arguments);
+    if (_markdownLspClient->start()) {
+        const QString rootPath = NoteFolder::currentLocalPath();
+        _markdownLspClient->initialize(rootPath, QStringLiteral("QOwnNotes"),
+                                       QStringLiteral(VERSION));
+    }
+
+    _markdownLspEnabled = true;
+
+    if (!_markdownLspUri.isEmpty()) {
+        _markdownLspVersion = 1;
+        _markdownLspClient->didOpen(_markdownLspUri, QStringLiteral("markdown"), toPlainText(),
+                                    _markdownLspVersion);
+    }
+}
+
+void QOwnNotesMarkdownTextEdit::scheduleMarkdownLspChange() {
+    if (!_markdownLspEnabled || !_markdownLspClient || _markdownLspUri.isEmpty()) {
+        return;
+    }
+
+    _markdownLspPendingText = toPlainText();
+    _markdownLspChangeTimer->start();
+}
+
+void QOwnNotesMarkdownTextEdit::sendMarkdownLspChange() {
+    if (!_markdownLspEnabled || !_markdownLspClient || _markdownLspUri.isEmpty()) {
+        return;
+    }
+
+    _markdownLspVersion++;
+    _markdownLspClient->didChange(_markdownLspUri, _markdownLspPendingText, _markdownLspVersion);
+}
+
+void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
+                                                           const QStringList &items) {
+    if (requestId != _markdownLspCompletionRequestId || _markdownLspCompletionRequestId == -1) {
+        return;
+    }
+
+    QMenu menu;
+    for (const QString &text : items) {
+        auto *action = menu.addAction(text);
+        action->setData(text);
+        action->setWhatsThis(QStringLiteral("autocomplete"));
+    }
+
+    _markdownLspCompletionRequestId = -1;
+
+    if (menu.actions().isEmpty()) {
+        return;
+    }
+
+    QPoint globalPos = mapToGlobal(cursorRect().bottomRight());
+    globalPos.setY(globalPos.y() + viewportMargins().top());
+    globalPos.setX(globalPos.x() + viewportMargins().left());
+
+    QAction *selectedItem = menu.exec(globalPos);
+    if (!selectedItem) {
+        return;
+    }
+
+    const QString text = selectedItem->data().toString();
+    if (text.isEmpty()) {
+        return;
+    }
+
+    QTextCursor c = textCursor();
+    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
+    c.insertText(text + QStringLiteral(" "));
 }
