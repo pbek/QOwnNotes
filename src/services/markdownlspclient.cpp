@@ -241,7 +241,19 @@ void MarkdownLspClient::onReadyReadStandardOutput() {
 void MarkdownLspClient::onReadyReadStandardError() {
     const QByteArray data = _process->readAllStandardError();
     if (!data.isEmpty()) {
-        emit errorMessage(QString::fromUtf8(data));
+        const QString text = QString::fromUtf8(data);
+        const QStringList lines = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+        static const QRegularExpression errorPattern(QStringLiteral("\\bERR\\b|\\bERROR\\b"),
+                                                     QRegularExpression::CaseInsensitiveOption);
+        for (const QString &line : lines) {
+            const QString trimmed = line.trimmed();
+            if (trimmed.isEmpty()) {
+                continue;
+            }
+            if (errorPattern.match(trimmed).hasMatch()) {
+                emit errorMessage(trimmed);
+            }
+        }
     }
 }
 

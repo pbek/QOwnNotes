@@ -2,6 +2,10 @@
 
 ## 26.2.9
 
+- Added experimental Markdown LSP support with settings for server command/arguments
+  (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
+  - The integration is experimental and currently provides completions via the autocomplete action
+  - LSP info logs are no longer shown as warnings; only error-like stderr output is surfaced
 - Fixed a vertical stripe flickering artifact in the QLiteHtml preview when dragging to select text
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Degenerate zero- or negative-width selection highlight rects are now suppressed; these were
