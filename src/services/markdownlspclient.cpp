@@ -340,7 +340,39 @@ void MarkdownLspClient::handleResponse(const QJsonObject &object) {
     emit completionReceived(id, items);
 }
 
-void MarkdownLspClient::handleNotification(const QJsonObject &object) { Q_UNUSED(object) }
+void MarkdownLspClient::handleNotification(const QJsonObject &object) {
+    const QString method = object.value(QStringLiteral("method")).toString();
+    if (method != QStringLiteral("textDocument/publishDiagnostics")) {
+        return;
+    }
+
+    const QJsonObject params = object.value(QStringLiteral("params")).toObject();
+    const QString uri = params.value(QStringLiteral("uri")).toString();
+    const QJsonArray diagnosticsArray = params.value(QStringLiteral("diagnostics")).toArray();
+    if (uri.isEmpty()) {
+        return;
+    }
+
+    QVector<MarkdownLspClient::Diagnostic> diagnostics;
+    diagnostics.reserve(diagnosticsArray.size());
+    for (const QJsonValue &diagnosticValue : diagnosticsArray) {
+        const QJsonObject diagnosticObject = diagnosticValue.toObject();
+        const QJsonObject rangeObject = diagnosticObject.value(QStringLiteral("range")).toObject();
+        const QJsonObject startObject = rangeObject.value(QStringLiteral("start")).toObject();
+        const QJsonObject endObject = rangeObject.value(QStringLiteral("end")).toObject();
+
+        MarkdownLspClient::Diagnostic diagnostic;
+        diagnostic.range.startLine = startObject.value(QStringLiteral("line")).toInt();
+        diagnostic.range.startCharacter = startObject.value(QStringLiteral("character")).toInt();
+        diagnostic.range.endLine = endObject.value(QStringLiteral("line")).toInt();
+        diagnostic.range.endCharacter = endObject.value(QStringLiteral("character")).toInt();
+        diagnostic.severity = diagnosticObject.value(QStringLiteral("severity")).toInt();
+        diagnostic.message = diagnosticObject.value(QStringLiteral("message")).toString();
+        diagnostics.push_back(diagnostic);
+    }
+
+    emit diagnosticsReceived(uri, diagnostics);
+}
 
 void MarkdownLspClient::sendInitializedNotification() {
     QJsonObject params;
