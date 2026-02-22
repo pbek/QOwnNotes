@@ -247,7 +247,11 @@ void MarkdownLspClient::onReadyReadStandardError() {
     const QByteArray data = _process->readAllStandardError();
     if (!data.isEmpty()) {
         const QString text = QString::fromUtf8(data);
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+        const QStringList lines = text.split(QLatin1Char('\n'), QString::SkipEmptyParts);
+#else
         const QStringList lines = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+#endif
         static const QRegularExpression errorPattern(QStringLiteral("\\bERR\\b|\\bERROR\\b"),
                                                      QRegularExpression::CaseInsensitiveOption);
         for (const QString &line : lines) {

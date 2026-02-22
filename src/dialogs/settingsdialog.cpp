@@ -611,7 +611,11 @@ void SettingsDialog::storeSettings() {
                       ui->markdownLspCommandLineEdit->text().trimmed());
     settings.setValue(QStringLiteral("Editor/markdownLspArguments"),
                       ui->markdownLspArgumentsLineEdit->text().split(
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
                           QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts));
+#else
+                          QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts));
+#endif
 
     if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool() &&
         ui->appMetricsCheckBox->isChecked()) {
