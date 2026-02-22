@@ -6,6 +6,11 @@
   (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
   - The integration is experimental and currently provides completions via the autocomplete action
   - LSP info logs are no longer shown as warnings; only error-like stderr output is surfaced
+  - Diagnostics published by the LSP server are now displayed as wave underlines in the editor;
+    severity is reflected by color: red for errors, orange for warnings, blue for information,
+    and green for hints
+  - Hovering over a diagnostic underline shows a tooltip with the diagnostic message
+  - Diagnostics are cleared automatically when switching to a different note
 - Fixed a vertical stripe flickering artifact in the QLiteHtml preview when dragging to select text
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Degenerate zero- or negative-width selection highlight rects are now suppressed; these were

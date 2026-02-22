@@ -129,6 +129,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool eventFilter(QObject *obj, QEvent *event) override;
     void keyPressEvent(QKeyEvent *e) override;
     void focusInEvent(QFocusEvent *e) override;
+    bool viewportEvent(QEvent *event) override;
 
    private:
     /// @param in is true if zoom-in, false otherwise

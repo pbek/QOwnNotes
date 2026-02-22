@@ -98,8 +98,13 @@ void MarkdownLspClient::initialize(const QString &rootPath, const QString &clien
     QJsonObject completion;
     completion.insert(QStringLiteral("completionItem"), completionItem);
 
+    // Declare support for receiving publishDiagnostics notifications
+    QJsonObject publishDiagnostics;
+    publishDiagnostics.insert(QStringLiteral("relatedInformation"), false);
+
     QJsonObject textDocument;
     textDocument.insert(QStringLiteral("completion"), completion);
+    textDocument.insert(QStringLiteral("publishDiagnostics"), publishDiagnostics);
 
     QJsonObject capabilities;
     capabilities.insert(QStringLiteral("textDocument"), textDocument);

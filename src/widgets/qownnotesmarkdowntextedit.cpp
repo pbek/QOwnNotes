@@ -7,8 +7,10 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QDebug>
+#include <QEvent>
 #include <QFont>
 #include <QFontDatabase>
+#include <QHelpEvent>
 #include <QJSEngine>
 #include <QKeyEvent>
 #include <QMenu>
@@ -20,6 +22,7 @@
 #include <QTextEdit>
 #include <QTextFormat>
 #include <QTimer>
+#include <QToolTip>
 
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
@@ -1825,6 +1828,27 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
             continue;
         }
 
+        // Choose underline color based on LSP severity:
+        // 1 = Error, 2 = Warning, 3 = Information, 4 = Hint
+        QColor underlineColor;
+        switch (diagnostic.severity) {
+            case 1:
+                underlineColor = QColor(214, 68, 68);    // Red for errors
+                break;
+            case 2:
+                underlineColor = QColor(210, 140, 30);    // Orange for warnings
+                break;
+            case 3:
+                underlineColor = QColor(80, 140, 210);    // Blue for information
+                break;
+            case 4:
+                underlineColor = QColor(100, 170, 100);    // Green for hints
+                break;
+            default:
+                underlineColor = QColor(214, 68, 68);    // Default to red
+                break;
+        }
+
         QTextCursor cursor(document());
         cursor.setPosition(startPosition);
         cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
@@ -1832,13 +1856,39 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
         QTextEdit::ExtraSelection selection;
         selection.cursor = cursor;
         selection.format.setUnderlineStyle(QTextCharFormat::WaveUnderline);
-        selection.format.setUnderlineColor(QColor(214, 68, 68));
+        selection.format.setUnderlineColor(underlineColor);
         selection.format.setToolTip(diagnostic.message);
         selection.format.setProperty(kMarkdownLspDiagnosticProperty, true);
         _markdownLspDiagnosticsSelections.append(selection);
     }
 
     applyMarkdownLspDiagnosticsSelections();
+}
+
+bool QOwnNotesMarkdownTextEdit::viewportEvent(QEvent *event) {
+    if (event->type() == QEvent::ToolTip && !_markdownLspDiagnosticsSelections.isEmpty()) {
+        auto *helpEvent = static_cast<QHelpEvent *>(event);
+        const QPoint pos = helpEvent->pos();
+        const int cursorPos = cursorForPosition(pos).position();
+
+        // Find the first diagnostic selection that covers the cursor position
+        for (const QTextEdit::ExtraSelection &selection :
+             std::as_const(_markdownLspDiagnosticsSelections)) {
+            const int selStart = selection.cursor.selectionStart();
+            const int selEnd = selection.cursor.selectionEnd();
+            if (cursorPos >= selStart && cursorPos <= selEnd) {
+                const QString tip = selection.format.toolTip();
+                if (!tip.isEmpty()) {
+                    QToolTip::showText(helpEvent->globalPos(), tip, this);
+                    event->accept();
+                    return true;
+                }
+            }
+        }
+
+        QToolTip::hideText();
+    }
+    return QMarkdownTextEdit::viewportEvent(event);
 }
 
 void QOwnNotesMarkdownTextEdit::applyMarkdownLspDiagnosticsSelections() {
