@@ -1878,7 +1878,7 @@ bool QOwnNotesMarkdownTextEdit::viewportEvent(QEvent *event) {
 
         // Find the first diagnostic selection that covers the cursor position
         for (const QTextEdit::ExtraSelection &selection :
-             std::as_const(_markdownLspDiagnosticsSelections)) {
+             qAsConst(_markdownLspDiagnosticsSelections)) {
             const int selStart = selection.cursor.selectionStart();
             const int selEnd = selection.cursor.selectionEnd();
             if (cursorPos >= selStart && cursorPos <= selEnd) {
