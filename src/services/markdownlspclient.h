@@ -46,6 +46,7 @@ class MarkdownLspClient : public QObject {
     void completionReceived(int requestId, const QStringList &items);
     void diagnosticsReceived(const QString &uri, const QVector<Diagnostic> &diagnostics);
     void errorMessage(const QString &message);
+    void serverInitialized();
 
    private Q_SLOTS:
     void onReadyReadStandardOutput();

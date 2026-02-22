@@ -1726,6 +1726,11 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
                         qWarning() << "Markdown LSP:" << message.trimmed();
                     }
                 });
+        connect(_markdownLspClient, &MarkdownLspClient::serverInitialized, this, []() {
+            if (auto *mw = MainWindow::instance()) {
+                mw->showStatusBarMessage(tr("Markdown LSP server connected"), 3000);
+            }
+        });
     }
 
     _markdownLspClient->setServerCommand(command, arguments);

@@ -307,6 +307,7 @@ void MarkdownLspClient::handleResponse(const QJsonObject &object) {
     if (id == _initializeRequestId) {
         _initialized = true;
         _initializeRequestId = -1;
+        emit serverInitialized();
         sendInitializedNotification();
         flushPendingDocument();
         return;
