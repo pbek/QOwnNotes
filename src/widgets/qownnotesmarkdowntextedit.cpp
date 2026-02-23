@@ -13,6 +13,7 @@
 #include <QHelpEvent>
 #include <QJSEngine>
 #include <QKeyEvent>
+#include <QLineEdit>
 #include <QMenu>
 #include <QMimeData>
 #include <QRegularExpression>
@@ -25,6 +26,7 @@
 #include <QTimer>
 #include <QToolTip>
 #include <QVariant>
+#include <QWidgetAction>
 #include <algorithm>
 
 #include "entities/notefolder.h"
@@ -1800,11 +1802,30 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
         return;
     }
 
+    if (items.isEmpty()) {
+        _markdownLspCompletionRequestId = -1;
+        return;
+    }
+
+    const QString initialFilter = currentWord();
+
     QMenu menu;
+    auto *filterEdit = new QLineEdit(&menu);
+    filterEdit->setPlaceholderText(tr("Filter completions"));
+    filterEdit->setClearButtonEnabled(true);
+    filterEdit->setText(initialFilter);
+
+    auto *filterAction = new QWidgetAction(&menu);
+    filterAction->setDefaultWidget(filterEdit);
+    menu.addAction(filterAction);
+    menu.addSeparator();
+
+    QList<QAction *> completionActions;
     for (const QString &text : items) {
         auto *action = menu.addAction(text);
         action->setData(text);
         action->setWhatsThis(QStringLiteral("autocomplete"));
+        completionActions.append(action);
     }
 
     _markdownLspCompletionRequestId = -1;
@@ -1813,9 +1834,41 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
         return;
     }
 
+    auto updateFilter = [filterEdit, completionActions]() {
+        const QString query = filterEdit->text().trimmed();
+        const bool hasQuery = !query.isEmpty();
+        for (QAction *action : completionActions) {
+            if (!action) {
+                continue;
+            }
+            const bool matches = !hasQuery || action->text().contains(query, Qt::CaseInsensitive);
+            action->setVisible(matches);
+        }
+    };
+
+    connect(filterEdit, &QLineEdit::textChanged, this, [updateFilter]() { updateFilter(); });
+    connect(filterEdit, &QLineEdit::returnPressed, this, [this, completionActions]() {
+        for (QAction *action : completionActions) {
+            if (action && action->isVisible()) {
+                action->trigger();
+                return;
+            }
+        }
+    });
+    updateFilter();
+
     QPoint globalPos = mapToGlobal(cursorRect().bottomRight());
     globalPos.setY(globalPos.y() + viewportMargins().top());
     globalPos.setX(globalPos.x() + viewportMargins().left());
+
+    QTimer::singleShot(0, filterEdit, [filterEdit]() {
+        filterEdit->setFocus(Qt::PopupFocusReason);
+        if (filterEdit->text().isEmpty()) {
+            filterEdit->selectAll();
+        } else {
+            filterEdit->setCursorPosition(filterEdit->text().size());
+        }
+    });
 
     QAction *selectedItem = menu.exec(globalPos);
     if (!selectedItem) {

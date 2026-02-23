@@ -6,6 +6,7 @@
   (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
   - The editor context menu now provides a Markdown LSP section with format document, format selection,
     and code actions
+  - The completions menu now includes a filter field that starts with the current word
 
 ## 26.2.10
 
