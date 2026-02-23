@@ -1,9 +1,11 @@
 #pragma once
 
 #include <QByteArray>
+#include <QHash>
 #include <QJsonObject>
 #include <QObject>
 #include <QProcess>
+#include <QSet>
 #include <QString>
 #include <QStringList>
 #include <QVector>
@@ -17,6 +19,20 @@ class MarkdownLspClient : public QObject {
         int startCharacter = 0;
         int endLine = 0;
         int endCharacter = 0;
+    };
+
+    struct TextEdit {
+        DiagnosticRange range;
+        QString newText;
+    };
+
+    struct CodeAction {
+        QString title;
+        QVector<TextEdit> edits;
+        QJsonObject command;
+
+        bool hasEdits() const { return !edits.isEmpty(); }
+        bool hasCommand() const { return !command.isEmpty(); }
     };
 
     struct Diagnostic {
@@ -41,9 +57,17 @@ class MarkdownLspClient : public QObject {
     void didClose(const QString &uri);
 
     int requestCompletion(const QString &uri, int line, int character);
+    int requestDocumentFormatting(const QString &uri, int tabSize, bool insertSpaces);
+    int requestRangeFormatting(const QString &uri, const DiagnosticRange &range, int tabSize,
+                               bool insertSpaces);
+    int requestCodeActions(const QString &uri, const DiagnosticRange &range,
+                           const QVector<Diagnostic> &diagnostics);
+    int executeCommand(const QJsonObject &command);
 
    Q_SIGNALS:
     void completionReceived(int requestId, const QStringList &items);
+    void formattingReceived(int requestId, const QVector<TextEdit> &edits);
+    void codeActionsReceived(int requestId, const QVector<CodeAction> &actions);
     void diagnosticsReceived(const QString &uri, const QVector<Diagnostic> &diagnostics);
     void errorMessage(const QString &message);
     void serverInitialized();
@@ -67,6 +91,9 @@ class MarkdownLspClient : public QObject {
     void handleNotification(const QJsonObject &object);
     void sendInitializedNotification();
     void flushPendingDocument();
+    QVector<TextEdit> parseTextEdits(const QJsonValue &value) const;
+    QVector<TextEdit> parseWorkspaceEdits(const QJsonObject &workspaceEdit,
+                                          const QString &uri) const;
 
     QProcess *_process = nullptr;
     QByteArray _readBuffer;
@@ -76,4 +103,8 @@ class MarkdownLspClient : public QObject {
     int _initializeRequestId = -1;
     bool _initialized = false;
     PendingDocument _pendingDocument;
+    QSet<int> _completionRequestIds;
+    QHash<int, QString> _codeActionUriByRequest;
+    QHash<int, QString> _formattingUriByRequest;
+    QHash<int, QString> _rangeFormattingUriByRequest;
 };

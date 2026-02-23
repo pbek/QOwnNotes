@@ -170,6 +170,13 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void showMarkdownLspDiagnostics(const QString &uri,
                                     const QVector<MarkdownLspClient::Diagnostic> &diagnostics);
     void applyMarkdownLspDiagnosticsSelections();
+    void applyMarkdownLspTextEdits(const QVector<MarkdownLspClient::TextEdit> &edits);
+    void applyMarkdownLspFormatting(int requestId,
+                                    const QVector<MarkdownLspClient::TextEdit> &edits);
+    void requestMarkdownLspFormatting(bool useSelection);
+    void requestMarkdownLspCodeActions(const QTextCursor &cursor);
+    void showMarkdownLspCodeActions(int requestId,
+                                    const QVector<MarkdownLspClient::CodeAction> &actions);
 
     bool _isSpellCheckingDisabled = false;
     QString _aiAutocompleteSuggestion;
@@ -183,6 +190,12 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     QString _markdownLspPendingText;
     int _markdownLspVersion = 0;
     int _markdownLspCompletionRequestId = -1;
+    int _markdownLspFormattingRequestId = -1;
+    int _markdownLspRangeFormattingRequestId = -1;
+    int _markdownLspCodeActionRequestId = -1;
+    bool _markdownLspApplyingEdits = false;
+    QVector<MarkdownLspClient::Diagnostic> _markdownLspDiagnostics;
+    QVector<MarkdownLspClient::CodeAction> _markdownLspLastCodeActions;
     bool _markdownLspEnabled = false;
     QList<QTextEdit::ExtraSelection> _markdownLspDiagnosticsSelections;
 

@@ -18,11 +18,14 @@
 #include <QRegularExpression>
 #include <QTextBlock>
 #include <QTextCursor>
+#include <QTextDocument>
 #include <QTextDocumentFragment>
 #include <QTextEdit>
 #include <QTextFormat>
 #include <QTimer>
 #include <QToolTip>
+#include <QVariant>
+#include <algorithm>
 
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
@@ -116,7 +119,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
             _aiAutocompleteTimer->start();
         }
 
-        if (_markdownLspEnabled) {
+        if (_markdownLspEnabled && !_markdownLspApplyingEdits) {
             scheduleMarkdownLspChange();
         }
     });
@@ -1057,6 +1060,26 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
     menu->addSeparator();
 
+    if (_markdownLspEnabled && _markdownLspClient && !_markdownLspUri.isEmpty()) {
+        QMenu *lspMenu = menu->addMenu(tr("Markdown LSP"));
+        QAction *formatDocumentAction = lspMenu->addAction(tr("Format document"));
+        formatDocumentAction->setEnabled(isAllowNoteEditing);
+        connect(formatDocumentAction, &QAction::triggered, this,
+                [this]() { requestMarkdownLspFormatting(false); });
+
+        QAction *formatSelectionAction = lspMenu->addAction(tr("Format selection"));
+        formatSelectionAction->setEnabled(isAllowNoteEditing && isTextSelected);
+        connect(formatSelectionAction, &QAction::triggered, this,
+                [this]() { requestMarkdownLspFormatting(true); });
+
+        QAction *codeActionsAction = lspMenu->addAction(tr("Code actions"));
+        codeActionsAction->setEnabled(isAllowNoteEditing && !_markdownLspDiagnostics.isEmpty());
+        connect(codeActionsAction, &QAction::triggered, this,
+                [this]() { requestMarkdownLspCodeActions(textCursor()); });
+
+        menu->addSeparator();
+    }
+
     // add table column insertion actions if cursor is in a table
     if (Utils::Gui::isTableAtCursor(this)) {
         QAction *addColumnLeftAction = menu->addAction(tr("Add table column left"));
@@ -1718,6 +1741,10 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
         _markdownLspClient = new MarkdownLspClient(this);
         connect(_markdownLspClient, &MarkdownLspClient::completionReceived, this,
                 &QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions);
+        connect(_markdownLspClient, &MarkdownLspClient::formattingReceived, this,
+                &QOwnNotesMarkdownTextEdit::applyMarkdownLspFormatting);
+        connect(_markdownLspClient, &MarkdownLspClient::codeActionsReceived, this,
+                &QOwnNotesMarkdownTextEdit::showMarkdownLspCodeActions);
         connect(_markdownLspClient, &MarkdownLspClient::diagnosticsReceived, this,
                 &QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics);
         connect(_markdownLspClient, &MarkdownLspClient::errorMessage, this,
@@ -1811,6 +1838,7 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
         return;
     }
 
+    _markdownLspDiagnostics = diagnostics;
     _markdownLspDiagnosticsSelections.clear();
     for (const MarkdownLspClient::Diagnostic &diagnostic : diagnostics) {
         if (diagnostic.message.isEmpty()) {
@@ -1868,6 +1896,205 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
     }
 
     applyMarkdownLspDiagnosticsSelections();
+}
+
+void QOwnNotesMarkdownTextEdit::applyMarkdownLspTextEdits(
+    const QVector<MarkdownLspClient::TextEdit> &edits) {
+    if (edits.isEmpty()) {
+        return;
+    }
+
+    _markdownLspApplyingEdits = true;
+
+    struct ResolvedEdit {
+        int start = 0;
+        int end = 0;
+        QString text;
+    };
+
+    QVector<ResolvedEdit> resolved;
+    resolved.reserve(edits.size());
+
+    for (const MarkdownLspClient::TextEdit &edit : edits) {
+        const QTextBlock startBlock = document()->findBlockByNumber(edit.range.startLine);
+        const QTextBlock endBlock = document()->findBlockByNumber(edit.range.endLine);
+        if (!startBlock.isValid() || !endBlock.isValid()) {
+            continue;
+        }
+
+        const int startPosition = startBlock.position() + edit.range.startCharacter;
+        const int endPosition = endBlock.position() + edit.range.endCharacter;
+        if (endPosition < startPosition) {
+            continue;
+        }
+
+        ResolvedEdit resolvedEdit;
+        resolvedEdit.start = startPosition;
+        resolvedEdit.end = endPosition;
+        resolvedEdit.text = edit.newText;
+        resolved.append(resolvedEdit);
+    }
+
+    std::sort(resolved.begin(), resolved.end(),
+              [](const ResolvedEdit &left, const ResolvedEdit &right) {
+                  if (left.start == right.start) {
+                      return left.end > right.end;
+                  }
+                  return left.start > right.start;
+              });
+
+    QTextCursor cursor(document());
+    cursor.beginEditBlock();
+    for (const ResolvedEdit &edit : resolved) {
+        cursor.setPosition(edit.start);
+        cursor.setPosition(edit.end, QTextCursor::KeepAnchor);
+        cursor.insertText(edit.text);
+    }
+    cursor.endEditBlock();
+
+    _markdownLspApplyingEdits = false;
+
+    if (_markdownLspEnabled && !_markdownLspApplyingEdits) {
+        scheduleMarkdownLspChange();
+    }
+}
+
+void QOwnNotesMarkdownTextEdit::applyMarkdownLspFormatting(
+    int requestId, const QVector<MarkdownLspClient::TextEdit> &edits) {
+    if (requestId != _markdownLspFormattingRequestId &&
+        requestId != _markdownLspRangeFormattingRequestId) {
+        return;
+    }
+
+    if (requestId == _markdownLspFormattingRequestId) {
+        _markdownLspFormattingRequestId = -1;
+    }
+    if (requestId == _markdownLspRangeFormattingRequestId) {
+        _markdownLspRangeFormattingRequestId = -1;
+    }
+
+    applyMarkdownLspTextEdits(edits);
+}
+
+void QOwnNotesMarkdownTextEdit::requestMarkdownLspFormatting(bool useSelection) {
+    if (!_markdownLspEnabled || !_markdownLspClient || _markdownLspUri.isEmpty()) {
+        return;
+    }
+
+    const int tabSize = 4;
+    const bool insertSpaces = true;
+
+    if (useSelection) {
+        QTextCursor cursor = textCursor();
+        if (!cursor.hasSelection()) {
+            return;
+        }
+
+        const int startPos = cursor.selectionStart();
+        const int endPos = cursor.selectionEnd();
+
+        QTextBlock startBlock = document()->findBlock(startPos);
+        QTextBlock endBlock = document()->findBlock(endPos);
+        if (!startBlock.isValid() || !endBlock.isValid()) {
+            return;
+        }
+
+        MarkdownLspClient::DiagnosticRange range;
+        range.startLine = startBlock.blockNumber();
+        range.startCharacter = startPos - startBlock.position();
+        range.endLine = endBlock.blockNumber();
+        range.endCharacter = endPos - endBlock.position();
+
+        _markdownLspRangeFormattingRequestId = _markdownLspClient->requestRangeFormatting(
+            _markdownLspUri, range, tabSize, insertSpaces);
+        return;
+    }
+
+    _markdownLspFormattingRequestId =
+        _markdownLspClient->requestDocumentFormatting(_markdownLspUri, tabSize, insertSpaces);
+}
+
+void QOwnNotesMarkdownTextEdit::requestMarkdownLspCodeActions(const QTextCursor &cursor) {
+    if (!_markdownLspEnabled || !_markdownLspClient || _markdownLspUri.isEmpty()) {
+        return;
+    }
+
+    if (_markdownLspDiagnostics.isEmpty()) {
+        return;
+    }
+
+    _markdownLspLastCodeActions.clear();
+
+    MarkdownLspClient::DiagnosticRange range;
+    if (cursor.hasSelection()) {
+        const int startPos = cursor.selectionStart();
+        const int endPos = cursor.selectionEnd();
+        const QTextBlock startBlock = document()->findBlock(startPos);
+        const QTextBlock endBlock = document()->findBlock(endPos);
+        if (!startBlock.isValid() || !endBlock.isValid()) {
+            return;
+        }
+        range.startLine = startBlock.blockNumber();
+        range.startCharacter = startPos - startBlock.position();
+        range.endLine = endBlock.blockNumber();
+        range.endCharacter = endPos - endBlock.position();
+    } else {
+        range.startLine = cursor.blockNumber();
+        range.startCharacter = cursor.positionInBlock();
+        range.endLine = range.startLine;
+        range.endCharacter = range.startCharacter;
+    }
+
+    _markdownLspCodeActionRequestId =
+        _markdownLspClient->requestCodeActions(_markdownLspUri, range, _markdownLspDiagnostics);
+}
+
+void QOwnNotesMarkdownTextEdit::showMarkdownLspCodeActions(
+    int requestId, const QVector<MarkdownLspClient::CodeAction> &actions) {
+    if (requestId != _markdownLspCodeActionRequestId || _markdownLspCodeActionRequestId == -1) {
+        return;
+    }
+
+    _markdownLspCodeActionRequestId = -1;
+
+    if (actions.isEmpty()) {
+        return;
+    }
+
+    _markdownLspLastCodeActions = actions;
+
+    QMenu menu;
+    for (int i = 0; i < actions.size(); ++i) {
+        const MarkdownLspClient::CodeAction &action = actions.at(i);
+        auto *menuAction = menu.addAction(action.title);
+        menuAction->setData(i);
+        menuAction->setWhatsThis(QStringLiteral("markdownLspCodeAction"));
+    }
+
+    if (menu.actions().isEmpty()) {
+        return;
+    }
+
+    QPoint globalPos = mapToGlobal(cursorRect().bottomRight());
+    globalPos.setY(globalPos.y() + viewportMargins().top());
+    globalPos.setX(globalPos.x() + viewportMargins().left());
+
+    QAction *selectedItem = menu.exec(globalPos);
+    if (!selectedItem) {
+        return;
+    }
+
+    const int index = selectedItem->data().toInt();
+    if (index < 0 || index >= _markdownLspLastCodeActions.size()) {
+        return;
+    }
+
+    const MarkdownLspClient::CodeAction &action = _markdownLspLastCodeActions.at(index);
+    if (action.hasEdits()) {
+        applyMarkdownLspTextEdits(action.edits);
+    } else if (action.hasCommand()) {
+        _markdownLspClient->executeCommand(action.command);
+    }
 }
 
 bool QOwnNotesMarkdownTextEdit::viewportEvent(QEvent *event) {

@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.2.11
+
+- Extended the Markdown LSP integration with formatting and code action support for rumdl
+  (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
+  - The editor context menu now provides a Markdown LSP section with format document, format selection,
+    and code actions
+
 ## 26.2.10
 
 - Fixed Nextcloud desktop client sync changes to non-current note files not being picked up by QOwnNotes

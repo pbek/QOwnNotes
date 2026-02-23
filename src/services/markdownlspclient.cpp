@@ -98,12 +98,24 @@ void MarkdownLspClient::initialize(const QString &rootPath, const QString &clien
     QJsonObject completion;
     completion.insert(QStringLiteral("completionItem"), completionItem);
 
+    QJsonObject formatting;
+    formatting.insert(QStringLiteral("dynamicRegistration"), false);
+
+    QJsonObject rangeFormatting;
+    rangeFormatting.insert(QStringLiteral("dynamicRegistration"), false);
+
+    QJsonObject codeAction;
+    codeAction.insert(QStringLiteral("dynamicRegistration"), false);
+
     // Declare support for receiving publishDiagnostics notifications
     QJsonObject publishDiagnostics;
     publishDiagnostics.insert(QStringLiteral("relatedInformation"), false);
 
     QJsonObject textDocument;
     textDocument.insert(QStringLiteral("completion"), completion);
+    textDocument.insert(QStringLiteral("formatting"), formatting);
+    textDocument.insert(QStringLiteral("rangeFormatting"), rangeFormatting);
+    textDocument.insert(QStringLiteral("codeAction"), codeAction);
     textDocument.insert(QStringLiteral("publishDiagnostics"), publishDiagnostics);
 
     QJsonObject capabilities;
@@ -217,9 +229,165 @@ int MarkdownLspClient::requestCompletion(const QString &uri, int line, int chara
 
     QJsonObject obj;
     const int requestId = _nextRequestId++;
+    _completionRequestIds.insert(requestId);
     obj.insert(QStringLiteral("jsonrpc"), QStringLiteral("2.0"));
     obj.insert(QStringLiteral("id"), requestId);
     obj.insert(QStringLiteral("method"), QStringLiteral("textDocument/completion"));
+    obj.insert(QStringLiteral("params"), params);
+    sendMessage(obj);
+    return requestId;
+}
+
+int MarkdownLspClient::requestDocumentFormatting(const QString &uri, int tabSize,
+                                                 bool insertSpaces) {
+    if (!_initialized) {
+        return -1;
+    }
+
+    QJsonObject doc;
+    doc.insert(QStringLiteral("uri"), uri);
+
+    QJsonObject options;
+    options.insert(QStringLiteral("tabSize"), tabSize);
+    options.insert(QStringLiteral("insertSpaces"), insertSpaces);
+
+    QJsonObject params;
+    params.insert(QStringLiteral("textDocument"), doc);
+    params.insert(QStringLiteral("options"), options);
+
+    QJsonObject obj;
+    const int requestId = _nextRequestId++;
+    _formattingUriByRequest.insert(requestId, uri);
+    obj.insert(QStringLiteral("jsonrpc"), QStringLiteral("2.0"));
+    obj.insert(QStringLiteral("id"), requestId);
+    obj.insert(QStringLiteral("method"), QStringLiteral("textDocument/formatting"));
+    obj.insert(QStringLiteral("params"), params);
+    sendMessage(obj);
+    return requestId;
+}
+
+int MarkdownLspClient::requestRangeFormatting(const QString &uri, const DiagnosticRange &range,
+                                              int tabSize, bool insertSpaces) {
+    if (!_initialized) {
+        return -1;
+    }
+
+    QJsonObject doc;
+    doc.insert(QStringLiteral("uri"), uri);
+
+    QJsonObject start;
+    start.insert(QStringLiteral("line"), range.startLine);
+    start.insert(QStringLiteral("character"), range.startCharacter);
+
+    QJsonObject end;
+    end.insert(QStringLiteral("line"), range.endLine);
+    end.insert(QStringLiteral("character"), range.endCharacter);
+
+    QJsonObject rangeObject;
+    rangeObject.insert(QStringLiteral("start"), start);
+    rangeObject.insert(QStringLiteral("end"), end);
+
+    QJsonObject options;
+    options.insert(QStringLiteral("tabSize"), tabSize);
+    options.insert(QStringLiteral("insertSpaces"), insertSpaces);
+
+    QJsonObject params;
+    params.insert(QStringLiteral("textDocument"), doc);
+    params.insert(QStringLiteral("range"), rangeObject);
+    params.insert(QStringLiteral("options"), options);
+
+    QJsonObject obj;
+    const int requestId = _nextRequestId++;
+    _rangeFormattingUriByRequest.insert(requestId, uri);
+    obj.insert(QStringLiteral("jsonrpc"), QStringLiteral("2.0"));
+    obj.insert(QStringLiteral("id"), requestId);
+    obj.insert(QStringLiteral("method"), QStringLiteral("textDocument/rangeFormatting"));
+    obj.insert(QStringLiteral("params"), params);
+    sendMessage(obj);
+    return requestId;
+}
+
+int MarkdownLspClient::requestCodeActions(const QString &uri, const DiagnosticRange &range,
+                                          const QVector<Diagnostic> &diagnostics) {
+    if (!_initialized) {
+        return -1;
+    }
+
+    QJsonObject doc;
+    doc.insert(QStringLiteral("uri"), uri);
+
+    QJsonObject start;
+    start.insert(QStringLiteral("line"), range.startLine);
+    start.insert(QStringLiteral("character"), range.startCharacter);
+
+    QJsonObject end;
+    end.insert(QStringLiteral("line"), range.endLine);
+    end.insert(QStringLiteral("character"), range.endCharacter);
+
+    QJsonObject rangeObject;
+    rangeObject.insert(QStringLiteral("start"), start);
+    rangeObject.insert(QStringLiteral("end"), end);
+
+    QJsonArray diagnosticsArray;
+    for (const Diagnostic &diagnostic : diagnostics) {
+        QJsonObject diagRangeStart;
+        diagRangeStart.insert(QStringLiteral("line"), diagnostic.range.startLine);
+        diagRangeStart.insert(QStringLiteral("character"), diagnostic.range.startCharacter);
+
+        QJsonObject diagRangeEnd;
+        diagRangeEnd.insert(QStringLiteral("line"), diagnostic.range.endLine);
+        diagRangeEnd.insert(QStringLiteral("character"), diagnostic.range.endCharacter);
+
+        QJsonObject diagRange;
+        diagRange.insert(QStringLiteral("start"), diagRangeStart);
+        diagRange.insert(QStringLiteral("end"), diagRangeEnd);
+
+        QJsonObject diagObject;
+        diagObject.insert(QStringLiteral("range"), diagRange);
+        if (diagnostic.severity > 0) {
+            diagObject.insert(QStringLiteral("severity"), diagnostic.severity);
+        }
+        if (!diagnostic.message.isEmpty()) {
+            diagObject.insert(QStringLiteral("message"), diagnostic.message);
+        }
+        diagnosticsArray.append(diagObject);
+    }
+
+    QJsonObject context;
+    context.insert(QStringLiteral("diagnostics"), diagnosticsArray);
+
+    QJsonObject params;
+    params.insert(QStringLiteral("textDocument"), doc);
+    params.insert(QStringLiteral("range"), rangeObject);
+    params.insert(QStringLiteral("context"), context);
+
+    QJsonObject obj;
+    const int requestId = _nextRequestId++;
+    _codeActionUriByRequest.insert(requestId, uri);
+    obj.insert(QStringLiteral("jsonrpc"), QStringLiteral("2.0"));
+    obj.insert(QStringLiteral("id"), requestId);
+    obj.insert(QStringLiteral("method"), QStringLiteral("textDocument/codeAction"));
+    obj.insert(QStringLiteral("params"), params);
+    sendMessage(obj);
+    return requestId;
+}
+
+int MarkdownLspClient::executeCommand(const QJsonObject &command) {
+    if (!_initialized || command.isEmpty()) {
+        return -1;
+    }
+
+    if (!command.contains(QStringLiteral("command"))) {
+        return -1;
+    }
+
+    QJsonObject params = command;
+
+    QJsonObject obj;
+    const int requestId = _nextRequestId++;
+    obj.insert(QStringLiteral("jsonrpc"), QStringLiteral("2.0"));
+    obj.insert(QStringLiteral("id"), requestId);
+    obj.insert(QStringLiteral("method"), QStringLiteral("workspace/executeCommand"));
     obj.insert(QStringLiteral("params"), params);
     sendMessage(obj);
     return requestId;
@@ -321,13 +489,26 @@ void MarkdownLspClient::handleResponse(const QJsonObject &object) {
         return;
     }
 
-    QStringList items;
     const QJsonValue result = object.value(QStringLiteral("result"));
-    if (result.isObject()) {
-        const QJsonObject resultObj = result.toObject();
-        const QJsonValue list = resultObj.value(QStringLiteral("items"));
-        if (list.isArray()) {
-            const QJsonArray array = list.toArray();
+
+    if (_completionRequestIds.contains(id)) {
+        _completionRequestIds.remove(id);
+        QStringList items;
+        if (result.isObject()) {
+            const QJsonObject resultObj = result.toObject();
+            const QJsonValue list = resultObj.value(QStringLiteral("items"));
+            if (list.isArray()) {
+                const QJsonArray array = list.toArray();
+                for (const QJsonValue &value : array) {
+                    const QJsonObject item = value.toObject();
+                    const QString label = item.value(QStringLiteral("label")).toString();
+                    if (!label.isEmpty()) {
+                        items.append(label);
+                    }
+                }
+            }
+        } else if (result.isArray()) {
+            const QJsonArray array = result.toArray();
             for (const QJsonValue &value : array) {
                 const QJsonObject item = value.toObject();
                 const QString label = item.value(QStringLiteral("label")).toString();
@@ -336,18 +517,81 @@ void MarkdownLspClient::handleResponse(const QJsonObject &object) {
                 }
             }
         }
-    } else if (result.isArray()) {
-        const QJsonArray array = result.toArray();
-        for (const QJsonValue &value : array) {
-            const QJsonObject item = value.toObject();
-            const QString label = item.value(QStringLiteral("label")).toString();
-            if (!label.isEmpty()) {
-                items.append(label);
-            }
-        }
+
+        emit completionReceived(id, items);
+        return;
     }
 
-    emit completionReceived(id, items);
+    if (_formattingUriByRequest.contains(id)) {
+        const QString uri = _formattingUriByRequest.take(id);
+        QVector<TextEdit> edits;
+        if (result.isArray()) {
+            edits = parseTextEdits(result);
+        } else if (result.isObject()) {
+            edits = parseWorkspaceEdits(result.toObject(), uri);
+        }
+        emit formattingReceived(id, edits);
+        return;
+    }
+
+    if (_rangeFormattingUriByRequest.contains(id)) {
+        const QString uri = _rangeFormattingUriByRequest.take(id);
+        QVector<TextEdit> edits;
+        if (result.isArray()) {
+            edits = parseTextEdits(result);
+        } else if (result.isObject()) {
+            edits = parseWorkspaceEdits(result.toObject(), uri);
+        }
+        emit formattingReceived(id, edits);
+        return;
+    }
+
+    if (_codeActionUriByRequest.contains(id)) {
+        const QString uri = _codeActionUriByRequest.take(id);
+        QVector<CodeAction> actions;
+        if (result.isArray()) {
+            const QJsonArray array = result.toArray();
+            actions.reserve(array.size());
+            for (const QJsonValue &value : array) {
+                const QJsonObject actionObject = value.toObject();
+                if (actionObject.isEmpty()) {
+                    continue;
+                }
+
+                QString title = actionObject.value(QStringLiteral("title")).toString();
+                if (title.isEmpty()) {
+                    title = actionObject.value(QStringLiteral("command")).toString();
+                }
+
+                CodeAction action;
+                action.title = title;
+
+                const QJsonValue editValue = actionObject.value(QStringLiteral("edit"));
+                if (editValue.isObject()) {
+                    action.edits = parseWorkspaceEdits(editValue.toObject(), uri);
+                }
+
+                const QJsonValue commandValue = actionObject.value(QStringLiteral("command"));
+                if (commandValue.isObject()) {
+                    action.command = commandValue.toObject();
+                } else if (actionObject.contains(QStringLiteral("command")) &&
+                           actionObject.contains(QStringLiteral("arguments"))) {
+                    action.command = actionObject;
+                }
+
+                if (action.title.isEmpty() && action.command.contains(QStringLiteral("title"))) {
+                    action.title = action.command.value(QStringLiteral("title")).toString();
+                }
+
+                if (!action.title.isEmpty()) {
+                    actions.append(action);
+                }
+            }
+        }
+
+        emit codeActionsReceived(id, actions);
+        return;
+    }
 }
 
 void MarkdownLspClient::handleNotification(const QJsonObject &object) {
@@ -401,4 +645,81 @@ void MarkdownLspClient::flushPendingDocument() {
     didOpen(_pendingDocument.uri, _pendingDocument.languageId, _pendingDocument.text,
             _pendingDocument.version);
     _pendingDocument.valid = false;
+}
+
+QVector<MarkdownLspClient::TextEdit> MarkdownLspClient::parseTextEdits(
+    const QJsonValue &value) const {
+    QVector<TextEdit> edits;
+    if (!value.isArray()) {
+        return edits;
+    }
+
+    const QJsonArray array = value.toArray();
+    edits.reserve(array.size());
+    for (const QJsonValue &itemValue : array) {
+        const QJsonObject item = itemValue.toObject();
+        if (item.isEmpty()) {
+            continue;
+        }
+
+        const QJsonObject rangeObject = item.value(QStringLiteral("range")).toObject();
+        const QJsonObject startObject = rangeObject.value(QStringLiteral("start")).toObject();
+        const QJsonObject endObject = rangeObject.value(QStringLiteral("end")).toObject();
+
+        TextEdit edit;
+        edit.range.startLine = startObject.value(QStringLiteral("line")).toInt();
+        edit.range.startCharacter = startObject.value(QStringLiteral("character")).toInt();
+        edit.range.endLine = endObject.value(QStringLiteral("line")).toInt();
+        edit.range.endCharacter = endObject.value(QStringLiteral("character")).toInt();
+        edit.newText = item.value(QStringLiteral("newText")).toString();
+        edits.append(edit);
+    }
+
+    return edits;
+}
+
+QVector<MarkdownLspClient::TextEdit> MarkdownLspClient::parseWorkspaceEdits(
+    const QJsonObject &workspaceEdit, const QString &uri) const {
+    QVector<TextEdit> edits;
+    if (workspaceEdit.isEmpty() || uri.isEmpty()) {
+        return edits;
+    }
+
+    const QJsonValue changesValue = workspaceEdit.value(QStringLiteral("changes"));
+    if (changesValue.isObject()) {
+        const QJsonObject changesObject = changesValue.toObject();
+        const QJsonValue uriEdits = changesObject.value(uri);
+        if (uriEdits.isArray()) {
+            edits = parseTextEdits(uriEdits);
+            if (!edits.isEmpty()) {
+                return edits;
+            }
+        }
+    }
+
+    const QJsonValue documentChangesValue = workspaceEdit.value(QStringLiteral("documentChanges"));
+    if (documentChangesValue.isArray()) {
+        const QJsonArray docChanges = documentChangesValue.toArray();
+        for (const QJsonValue &docChangeValue : docChanges) {
+            const QJsonObject docChange = docChangeValue.toObject();
+            if (docChange.isEmpty()) {
+                continue;
+            }
+
+            const QJsonObject textDocument =
+                docChange.value(QStringLiteral("textDocument")).toObject();
+            const QString changeUri = textDocument.value(QStringLiteral("uri")).toString();
+            if (changeUri != uri) {
+                continue;
+            }
+
+            const QJsonValue editValues = docChange.value(QStringLiteral("edits"));
+            if (editValues.isArray()) {
+                edits = parseTextEdits(editValues);
+                return edits;
+            }
+        }
+    }
+
+    return edits;
 }
