@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 26.2.10
+
+- Fixed Nextcloud desktop client sync changes to non-current note files not being picked up by QOwnNotes
+  (for [#3468](https://github.com/pbek/QOwnNotes/issues/3468))
+  - The Nextcloud client uses a temp-file + atomic rename strategy to update note files; the rename
+    typically completes before the `directoryChanged` signal handler runs, so the temp file is already
+    gone when QOwnNotes looks for it — the deferred re-index was therefore never triggered
+  - The notes directory watcher now always schedules a deferred re-index (1 second after the directory
+    change event) so the final on-disk state of all note files is captured regardless of whether a
+    temp file is visible at the time the event fires
+  - The note index rebuild also refreshes the note list when an existing note's content was updated
+    on disk, not only when notes were added or removed
+
 ## 26.2.9
 
 - Added experimental Markdown LSP support with settings for server command/arguments

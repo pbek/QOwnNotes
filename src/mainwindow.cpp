@@ -3122,6 +3122,20 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
         notesWereModified(currentNote.fullNoteFilePath());
     }
 
+    // Schedule a deferred re-index to handle sync clients (e.g. Nextcloud) that
+    // use a temp-file + atomic rename strategy to update note files. The rename
+    // may complete after the first directoryChanged event fires — and on Linux
+    // inotify does not always emit a second event for an in-place rename — so
+    // the initial buildNotesIndexAndLoadNoteDirectoryList() above may run before
+    // the updated content is in place. The deferred pass captures the final state.
+    // See: https://github.com/pbek/QOwnNotes/issues/3468
+    QTimer::singleShot(1000, this, [this]() {
+        if (!_isNotesDirectoryWasModifiedDisabled) {
+            qDebug() << __func__ << " - deferred re-index after external directory change";
+            buildNotesIndexAndLoadNoteDirectoryList();
+        }
+    });
+
     // also update the text of the text edit if current note has changed
     bool updateNoteText = !this->currentNote.exists();
     qDebug() << "updateNoteText: " << updateNoteText;
@@ -3460,12 +3474,14 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         }
 
         // update or create a note from the file
-        const Note note = Note::updateOrCreateFromFile(file, noteSubFolder, withNoteNameHook);
+        bool noteWasUpdated = false;
+        const Note note =
+            Note::updateOrCreateFromFile(file, noteSubFolder, withNoteNameHook, &noteWasUpdated);
 
         // add the note id to in the end check if notes need to be removed
         _buildNotesIndexAfterNoteIdList << note.getId();
 
-        if (!_buildNotesIndexBeforeNoteIdList.contains(note.getId())) {
+        if (!_buildNotesIndexBeforeNoteIdList.contains(note.getId()) || noteWasUpdated) {
             wasModified = true;
         }
 

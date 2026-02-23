@@ -2553,16 +2553,21 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
  * @return
  */
 Note Note::updateOrCreateFromFile(QFile &file, const NoteSubFolder &noteSubFolder,
-                                  bool withNoteNameHook) {
+                                  bool withNoteNameHook, bool *wasUpdated) {
     const QFileInfo fileInfo(file);
     Note note = fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 
-    // regardless if the file was found or not, if the size differs or the
+    // Regardless if the file was found or not, if the size differs or the
     // file was modified after the internal note was modified we want to load
     // the note content again
     if ((fileInfo.size() != note.getFileSize()) || (fileInfo.lastModified() > note.getModified())) {
-        // load file data and store note
+        // Load file data and store note
         note.createFromFile(file, noteSubFolder.getId(), withNoteNameHook);
+
+        // Notify the caller that the note was actually updated from disk
+        if (wasUpdated != nullptr) {
+            *wasUpdated = true;
+        }
 
         //        qDebug() << __func__ << " - 'file modified': " <<
         //        file.fileName();

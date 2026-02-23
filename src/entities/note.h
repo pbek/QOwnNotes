@@ -281,7 +281,7 @@ class Note {
     int getFileSize() const;
 
     static Note updateOrCreateFromFile(QFile &file, const NoteSubFolder &noteSubFolder,
-                                       bool withNoteNameHook = false);
+                                       bool withNoteNameHook = false, bool *wasUpdated = nullptr);
 
     static QVector<int> fetchAllIds(int limit = -1, int offset = -1);
 
