@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 26.2.13
+
+- Improved multi-note selection preview styling in the QLiteHtml preview widget for dark mode
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - Colors are now derived from the active editor schema instead of hardcoded light/dark fallback
+    values, so the preview correctly respects any user-configured theme
+  - Body background, foreground, and link colors all follow the schema's `NoState` and `Link` states
+  - The alternating row background and muted date text are computed by blending the schema
+    background toward the foreground, keeping contrast consistent across all themes
+
 ## 26.2.12
 
 - Fixed note filename changes from title updates incorrectly triggering the external modification

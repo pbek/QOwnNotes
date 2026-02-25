@@ -4853,31 +4853,45 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
  * @return
  */
 QString Note::generateMultipleNotesPreviewText(const QVector<Note> &notes) {
-    const SettingsService settings;
-    const bool darkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
-    const QString oddBackgroundColor =
-        darkModeColors ? QStringLiteral("#444444") : QStringLiteral("#f1f1f1");
-    const QString linkColor =
-        darkModeColors ? QStringLiteral("#eeeeee") : QStringLiteral("#222222");
+    // Derive colors from the active editor schema so the preview respects
+    // whatever theme (including dark themes) the user has configured
+    const QColor bgColor = Utils::Schema::schemaSettings->getBackgroundColor(
+        MarkdownHighlighter::HighlighterState::NoState);
+    const QColor fgColor = Utils::Schema::schemaSettings->getForegroundColor(
+        MarkdownHighlighter::HighlighterState::NoState);
+    const QColor linkFgColor = Utils::Schema::schemaSettings->getForegroundColor(
+        MarkdownHighlighter::HighlighterState::Link);
 
-    QString previewHtml = QStringLiteral(
-                              "<html><head><style>"
-                              "table, body {width: 100%;}"
-                              "table td {padding: 10px}"
-                              "table td.odd {background-color: ") +
-                          oddBackgroundColor +
-                          QStringLiteral(
-                              ";}"
-                              "p {margin: 0.5em 0 0 0;}"
-                              "small {font-size: 0.8em;}"
-                              "h2 {margin-bottom: 0.5em;}"
-                              "h2 a {text-decoration: none; color: ") +
-                          linkColor +
-                          QStringLiteral(
-                              "}"
-                              "</style></head>"
-                              "<body>"
-                              "   <table>");
+    // Compute a subtle alternating-row background by blending the base
+    // background 85 % toward the foreground color (light on light themes,
+    // dark on dark themes)
+    const QColor oddBgColor(
+        bgColor.red() + static_cast<int>((fgColor.red() - bgColor.red()) * 0.08),
+        bgColor.green() + static_cast<int>((fgColor.green() - bgColor.green()) * 0.08),
+        bgColor.blue() + static_cast<int>((fgColor.blue() - bgColor.blue()) * 0.08));
+
+    // Use a slightly more prominent shade for the small date text
+    const QColor mutedFgColor(
+        bgColor.red() + static_cast<int>((fgColor.red() - bgColor.red()) * 0.6),
+        bgColor.green() + static_cast<int>((fgColor.green() - bgColor.green()) * 0.6),
+        bgColor.blue() + static_cast<int>((fgColor.blue() - bgColor.blue()) * 0.6));
+
+    QString previewHtml =
+        QStringLiteral(
+            "<html><head><style>"
+            "body { background-color: %1; color: %2; width: 100%; margin: 0; padding: 0; }"
+            "table { width: 100%; border-collapse: collapse; }"
+            "table td { padding: 10px; }"
+            "table td.odd { background-color: %3; }"
+            "p { margin: 0.5em 0 0 0; }"
+            "small { font-size: 0.8em; color: %4; }"
+            "h2 { margin-bottom: 0.5em; }"
+            "h2 a { text-decoration: none; color: %5; }"
+            "</style></head>"
+            "<body>"
+            "   <table>")
+            .arg(bgColor.name(), fgColor.name(), oddBgColor.name(), mutedFgColor.name(),
+                 linkFgColor.name());
 
     const int notesCount = notes.count();
     const int displayedNotesCount = notesCount > 40 ? 40 : notesCount;
