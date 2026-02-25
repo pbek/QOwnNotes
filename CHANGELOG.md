@@ -14,6 +14,7 @@
   - The completions menu now includes a filter field that starts with the current word
 - Fixed Setext heading highlighting not clearing when the underline line loses its heading marker
   (for [#3469](https://github.com/pbek/QOwnNotes/issues/3469))
+- Added more French, Korean translation (thank you, jd-develop, venusgirl)
 
 ## 26.2.10
 

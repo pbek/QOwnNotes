@@ -3788,6 +3788,17 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 </context>
 <context>
+<name>MarkdownLspClient</name>
+<message>
+<source>Markdown LSP server command is empty</source>
+<translation type="unfinished">Markdown LSP server command is empty</translation>
+</message>
+<message>
+<source>Failed to start Markdown LSP server: %1</source>
+<translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+</message>
+</context>
+<context>
 <name>NavigationWidget</name>
 <message>
 <source>headline %1</source>
@@ -4700,6 +4711,22 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <translation>Kopiuj blok kodu</translation>
 </message>
 <message>
+<source>Markdown LSP</source>
+<translation type="unfinished">Markdown LSP</translation>
+</message>
+<message>
+<source>Format document</source>
+<translation type="unfinished">Format document</translation>
+</message>
+<message>
+<source>Format selection</source>
+<translation type="unfinished">Format selection</translation>
+</message>
+<message>
+<source>Code actions</source>
+<translation type="unfinished">Code actions</translation>
+</message>
+<message>
 <source>Add table column left</source>
 <translation type="unfinished">Add table column left</translation>
 </message>
@@ -4758,6 +4785,14 @@ Kliknij 'Anuluj', aby odrzucić zmiany i zachować wersję zewnętrzną.</transl
 <message>
 <source>Spelling</source>
 <translation>Pisownia</translation>
+</message>
+<message>
+<source>Markdown LSP server connected</source>
+<translation type="unfinished">Markdown LSP server connected</translation>
+</message>
+<message>
+<source>Filter completions</source>
+<translation type="unfinished">Filter completions</translation>
 </message>
 </context>
 <context>
@@ -6212,6 +6247,34 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>Użyj wewnętrznego stylu eksportu do eksportu PDF i drukowania podglądu</translation>
+</message>
+<message>
+<source>Markdown language server</source>
+<translation type="unfinished">Markdown language server</translation>
+</message>
+<message>
+<source>Enable Markdown language server (LSP)</source>
+<translation type="unfinished">Enable Markdown language server (LSP)</translation>
+</message>
+<message>
+<source>Command:</source>
+<translation type="unfinished">Command:</translation>
+</message>
+<message>
+<source>marksman</source>
+<translation type="unfinished">marksman</translation>
+</message>
+<message>
+<source>Arguments:</source>
+<translation type="unfinished">Arguments:</translation>
+</message>
+<message>
+<source>Optional arguments separated by spaces.</source>
+<translation type="unfinished">Optional arguments separated by spaces.</translation>
+</message>
+<message>
+<source>Optional arguments</source>
+<translation type="unfinished">Optional arguments</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>

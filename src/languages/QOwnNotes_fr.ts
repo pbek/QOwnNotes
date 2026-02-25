@@ -1254,28 +1254,28 @@
 <name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Copier</translation>
 </message>
 <message>
 <source>Copy link location</source>
-<translation type="unfinished">Copy link location</translation>
+<translation>Copier l'emplacement du lien</translation>
 </message>
 <message>
 <source>Export generated raw HTML</source>
-<translation type="unfinished">Export generated raw HTML</translation>
+<translation>Exporter le HTML brut généré</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Réinitialiser le zoom</translation>
 </message>
 <message>
 <source>HTML files</source>
-<translation type="unfinished">HTML files</translation>
+<translation>Fichiers HTML</translation>
 </message>
 <message>
 <source>Export preview as raw HTML file</source>
 <comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
-<translation type="unfinished">Export preview as raw HTML file</translation>
+<translation>Exporter la prévisualisation dans un fichier HTML brut</translation>
 </message>
 </context>
 <context>
@@ -2913,7 +2913,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Copy note filename</source>
-<translation type="unfinished">Copy note filename</translation>
+<translation>Copier le nom de fichier de la note</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
@@ -2970,7 +2970,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note filename '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
+<translation>Le nom de fichier de la note ‘%1’ a été copié dans le presse-papiers</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -3695,6 +3695,17 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 </context>
 <context>
+<name>MarkdownLspClient</name>
+<message>
+<source>Markdown LSP server command is empty</source>
+<translation>La commande du serveur LSP Markdown est vide</translation>
+</message>
+<message>
+<source>Failed to start Markdown LSP server: %1</source>
+<translation>Échec du démarrage du serveur LSP Markdown : %1</translation>
+</message>
+</context>
+<context>
 <name>NavigationWidget</name>
 <message>
 <source>headline %1</source>
@@ -3989,7 +4000,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Copy note filename</source>
-<translation type="unfinished">Copy note filename</translation>
+<translation>Copier le nom de fichier de la note</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
@@ -4252,39 +4263,39 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <name>QLiteHtmlSearchWidget</name>
 <message>
 <source>Close search</source>
-<translation type="unfinished">Close search</translation>
+<translation>Fermer la recherche</translation>
 </message>
 <message>
 <source>Find:</source>
-<translation type="unfinished">Find:</translation>
+<translation>Chercher :</translation>
 </message>
 <message>
 <source>Find in text</source>
-<translation type="unfinished">Find in text</translation>
+<translation>Chercher dans le texte</translation>
 </message>
 <message>
 <source>Search forward</source>
-<translation type="unfinished">Search forward</translation>
+<translation>Suivant</translation>
 </message>
 <message>
 <source>Search backward</source>
-<translation type="unfinished">Search backward</translation>
+<translation>Précédent</translation>
 </message>
 <message>
 <source>Plain text</source>
-<translation type="unfinished">Plain text</translation>
+<translation>Texte brut</translation>
 </message>
 <message>
 <source>Whole words</source>
-<translation type="unfinished">Whole words</translation>
+<translation>Mots entiers</translation>
 </message>
 <message>
 <source>Regular expression</source>
-<translation type="unfinished">Regular expression</translation>
+<translation>Expression régulière</translation>
 </message>
 <message>
 <source>Match case sensitive</source>
-<translation type="unfinished">Match case sensitive</translation>
+<translation>Respecter la casse</translation>
 </message>
 </context>
 <context>
@@ -4390,7 +4401,7 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;modifié pour la dernière fois : %3&lt;br /&gt;créé : %2&lt;br /&gt;taille du fichier : %4</translation>
 </message>
 <message>
 <source>&lt;br /&gt;path: %1</source>
@@ -4592,7 +4603,23 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 </message>
 <message>
 <source>Copy code block</source>
-<translation>Copier bloc de code</translation>
+<translation>Copier le bloc de code</translation>
+</message>
+<message>
+<source>Markdown LSP</source>
+<translation>LSP Markdown</translation>
+</message>
+<message>
+<source>Format document</source>
+<translation>Formater le document</translation>
+</message>
+<message>
+<source>Format selection</source>
+<translation>Formater la sélection</translation>
+</message>
+<message>
+<source>Code actions</source>
+<translation type="unfinished">Code actions</translation>
 </message>
 <message>
 <source>Add table column left</source>
@@ -4654,6 +4681,14 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 <source>Spelling</source>
 <translation>Orthographe</translation>
 </message>
+<message>
+<source>Markdown LSP server connected</source>
+<translation>Serveur LSP Markdown connecté</translation>
+</message>
+<message>
+<source>Filter completions</source>
+<translation type="unfinished">Filter completions</translation>
+</message>
 </context>
 <context>
 <name>QPlainTextEditSearchWidget</name>
@@ -4675,11 +4710,11 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 </message>
 <message>
 <source>Search forward</source>
-<translation>Rechercher en avant</translation>
+<translation>Suivant</translation>
 </message>
 <message>
 <source>Search backward</source>
-<translation>Rechercher en arrière</translation>
+<translation>Précédent</translation>
 </message>
 <message>
 <source>Replace with</source>
@@ -4734,27 +4769,27 @@ Cliquez sur « Annuler » pour ignorer vos changements et garder la version ex
 </message>
 <message>
 <source>Replace text</source>
-<translation type="unfinished">Replace text</translation>
+<translation>Remplacer le texte</translation>
 </message>
 <message>
 <source>Close search</source>
-<translation type="unfinished">Close search</translation>
+<translation>Fermer la recherche</translation>
 </message>
 <message>
 <source>Find in text</source>
-<translation type="unfinished">Find in text</translation>
+<translation>Chercher dans le texte</translation>
 </message>
 <message>
 <source>Search forward</source>
-<translation type="unfinished">Search forward</translation>
+<translation>Suivant</translation>
 </message>
 <message>
 <source>Search backward</source>
-<translation type="unfinished">Search backward</translation>
+<translation>Précédent</translation>
 </message>
 <message>
 <source>Replace with</source>
-<translation type="unfinished">Replace with</translation>
+<translation>Remplacer par</translation>
 </message>
 <message>
 <source>Replace:</source>
@@ -6012,15 +6047,15 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+<translation>Veuillez installer la dernière version de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (au moins la version QOWNNOTESAPI_MIN_VERSION) sur votre serveur ownCloud si vous souhaitez que QOwnNotes ait accès aux versions de notes et aux notes de la corbeille.</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous devez également activer les deux applications natives ownCloud &lt;b&gt;Versions&lt;/b&gt; et &lt;b&gt;Deleted files&lt;/b&gt; sur votre serveur ownCloud (elles devraient l’être par défaut)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous aurez toujours besoin du &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;client de synchronisation ownCloud&lt;/b&gt;&lt;/a&gt; (ou une autre application de bureau de synchronisation) pour synchroniser vos notes !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
@@ -6108,6 +6143,34 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Utiliser le style d'exportation interne pour l'exportation PDF et l'impression de l'aperçu</translation>
 </message>
 <message>
+<source>Markdown language server</source>
+<translation>Serveur de langage Markdown</translation>
+</message>
+<message>
+<source>Enable Markdown language server (LSP)</source>
+<translation>Activer le serveur de langage (LSP) Markdown</translation>
+</message>
+<message>
+<source>Command:</source>
+<translation>Commande :</translation>
+</message>
+<message>
+<source>marksman</source>
+<translation type="unfinished">marksman</translation>
+</message>
+<message>
+<source>Arguments:</source>
+<translation>Arguments :</translation>
+</message>
+<message>
+<source>Optional arguments separated by spaces.</source>
+<translation type="unfinished">Optional arguments separated by spaces.</translation>
+</message>
+<message>
+<source>Optional arguments</source>
+<translation>Arguments optionnels</translation>
+</message>
+<message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous voudrez peut-être jeter un œil à tous les &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formats d'horodatage&lt;/a&gt; disponibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
@@ -6141,7 +6204,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 </message>
 <message>
 <source>Allow empty note files</source>
-<translation type="unfinished">Allow empty note files</translation>
+<translation>Autoriser les fichiers de note vides</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>

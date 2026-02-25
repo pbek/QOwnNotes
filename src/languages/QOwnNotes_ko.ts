@@ -3652,6 +3652,17 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 </context>
 <context>
+<name>MarkdownLspClient</name>
+<message>
+<source>Markdown LSP server command is empty</source>
+<translation>마크다운 LSP 서버 명령이 비어 있습니다</translation>
+</message>
+<message>
+<source>Failed to start Markdown LSP server: %1</source>
+<translation>Markdown LSP 서버를 시작하지 못했습니다: %1</translation>
+</message>
+</context>
+<context>
 <name>NavigationWidget</name>
 <message>
 <source>headline %1</source>
@@ -4546,6 +4557,22 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <translation>코드 블록 복사</translation>
 </message>
 <message>
+<source>Markdown LSP</source>
+<translation>마크다운 LSP</translation>
+</message>
+<message>
+<source>Format document</source>
+<translation>형식 문서</translation>
+</message>
+<message>
+<source>Format selection</source>
+<translation>형식 선택</translation>
+</message>
+<message>
+<source>Code actions</source>
+<translation>코드 작업</translation>
+</message>
+<message>
 <source>Add table column left</source>
 <translation>테이블 열 왼쪽에 추가</translation>
 </message>
@@ -4604,6 +4631,14 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <message>
 <source>Spelling</source>
 <translation>맞춤법</translation>
+</message>
+<message>
+<source>Markdown LSP server connected</source>
+<translation>마크다운 LSP 서버 연결</translation>
+</message>
+<message>
+<source>Filter completions</source>
+<translation>필터 완료</translation>
 </message>
 </context>
 <context>
@@ -6056,6 +6091,34 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
 <translation>PDF 내보내기 및 미리보기 인쇄에 내부 내보내기 스타일 사용</translation>
+</message>
+<message>
+<source>Markdown language server</source>
+<translation>마크다운 언어 서버</translation>
+</message>
+<message>
+<source>Enable Markdown language server (LSP)</source>
+<translation>마크다운 언어 서버 (LSP) 사용</translation>
+</message>
+<message>
+<source>Command:</source>
+<translation>명령:</translation>
+</message>
+<message>
+<source>marksman</source>
+<translation>마크맨</translation>
+</message>
+<message>
+<source>Arguments:</source>
+<translation>인수:</translation>
+</message>
+<message>
+<source>Optional arguments separated by spaces.</source>
+<translation>선택적 인수는 공백으로 구분됩니다.</translation>
+</message>
+<message>
+<source>Optional arguments</source>
+<translation>선택적 인수</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
