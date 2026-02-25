@@ -74,7 +74,7 @@ parts:
       rm ../src/src/PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Snapcraft.io\"" > release.h
       # qmake INSTALLDIR=/usr
-      lrelease ../src/src/QOwnNotes.pro
+      /usr/lib/qt6/bin/lrelease ../src/src/QOwnNotes.pro
       # make -j $(nproc)
       # make install
       # cd ..
