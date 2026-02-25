@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.2.12
+
+- Fixed note filename changes from title updates incorrectly triggering the external modification
+  dialog when checksum checks are enabled (for [#3396](https://github.com/pbek/QOwnNotes/issues/3396))
+
 ## 26.2.11
 
 - Extended the Markdown LSP integration with formatting and code action support for rumdl

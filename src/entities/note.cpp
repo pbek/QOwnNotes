@@ -1595,6 +1595,10 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
             // because it gets set to the current date when note is renamed
             restoreCreatedDate();
         }
+
+        // Skip external modification checks for this save cycle because the
+        // filename change is an internal operation.
+        _fileChecksum.clear();
     }
 
     QFile file(fullNoteFilePath());
