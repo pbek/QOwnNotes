@@ -137,8 +137,12 @@ jobs:
           export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
           export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
 
-          # Set the extra Qt modules to include
-          export EXTRA_QT_MODULES="Qml;QmlWorkerScript;QmlModels"
+          # Set the extra Qt modules to include (Quick is needed by the Qt6 build's script engine)
+          export EXTRA_QT_MODULES="Qml;QmlWorkerScript;QmlModels;Quick"
+
+          # Set the QML import path so linuxdeploy-plugin-qt deploys QML import plugins
+          # (e.g. qml/QtQml/, qml/QtQuick/) required by QQmlEngine at runtime for user scripts
+          export QMLPATHS=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/qml
 
           cp ../icons/icon.png QOwnNotes.png
 
