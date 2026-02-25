@@ -4,6 +4,8 @@
 
 - Fixed note filename changes from title updates incorrectly triggering the external modification
   dialog when checksum checks are enabled (for [#3396](https://github.com/pbek/QOwnNotes/issues/3396))
+- Improved detection of current note updates when the Nextcloud desktop client replaces files via
+  temp file moves (for [#3468](https://github.com/pbek/QOwnNotes/issues/3468))
 - Added more French, Korean translation (thank you, jd-develop, venusgirl)
 
 ## 26.2.11

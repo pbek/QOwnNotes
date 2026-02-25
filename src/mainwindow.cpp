@@ -2942,11 +2942,10 @@ void MainWindow::notesWereModified(const QString &str) {
     if ((note.getFileName() == this->currentNote.getFileName()) &&
         (note.getNoteSubFolderId() == this->currentNote.getNoteSubFolderId())) {
         if (note.fileExists()) {
-            // If the modified date of the file is the same as the one
-            // from the current note it was a false alarm
+            // We can't rely only on the modified timestamp because some sync clients
+            // replace files via move operations and preserve timestamps.
             if (fi.lastModified() == this->currentNote.getFileLastModified()) {
-                qDebug() << __func__ << " - Modification date didn't change, ignoring";
-                return;
+                qDebug() << __func__ << " - Modification date didn't change, continuing";
             }
 
             const QString oldNoteText = note.getNoteText();
@@ -2962,12 +2961,6 @@ void MainWindow::notesWereModified(const QString &str) {
             // to avoid false positives, but we'll still show the dialog if changes are detected.
             const int threshold = isCurrentNoteNotEditedForAWhile ? 0 : 8;
 
-            // Check if the old note text is the same or similar as the one on disk
-            if (Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
-                qDebug() << __func__ << " - Old and new text are same or similar, ignoring";
-                return;
-            }
-
             const QString noteTextOnDiskHash = QString(
                 QCryptographicHash::hash(noteTextOnDisk.toLocal8Bit(), QCryptographicHash::Sha1)
                     .toHex());
@@ -2977,6 +2970,14 @@ void MainWindow::notesWereModified(const QString &str) {
             if (noteTextOnDiskHash == _currentNoteTextHash) {
                 qDebug() << __func__
                          << " - Note text and _currentNoteTextHash are the same, ignoring";
+                return;
+            }
+
+            // Check if the old note text is the same or similar as the one on disk
+            // only if the current note wasn't edited recently
+            if (isCurrentNoteNotEditedForAWhile &&
+                Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
+                qDebug() << __func__ << " - Old and new text are same or similar, ignoring";
                 return;
             }
 
