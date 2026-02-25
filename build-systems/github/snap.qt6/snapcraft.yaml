@@ -1,6 +1,5 @@
 name: qownnotes
 version: git
-version-script: cat src/version.h | sed "s/[^0-9,.]//g"
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
@@ -17,10 +16,11 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch $SNAP/usr/bin/QOwnNotes -style=Breeze --snap
+    command: desktop-launch $SNAP/usr/bin/QOwnNotes --snap
     environment:
       DISABLE_WAYLAND: 1
       QT_QPA_PLATFORMTHEME: gtk3
+      QT_STYLE_OVERRIDE: Breeze
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
