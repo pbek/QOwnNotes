@@ -2819,6 +2819,17 @@ static QStringList maskCodeBlocks(QString &str) {
             // Only replace the indented block part (group 2), not the
             // leading newline/start anchor (group 1)
             const QString original = match.captured(2);
+
+            // Skip if this block already contains a masked placeholder from
+            // Phase 1 (fenced code blocks). This happens when a fenced code
+            // block has tab/space-indented fences — the placeholder line
+            // itself starts with a tab, matching the indented-code regex.
+            // See: https://github.com/pbek/QOwnNotes/issues/2671
+            if (original.contains(QLatin1String("\x01"
+                                                "CODEBLOCK_"))) {
+                continue;
+            }
+
             const QString placeholder = QStringLiteral(
                                             "\x01"
                                             "CODEBLOCK_%1\x01")
@@ -2860,7 +2871,13 @@ static QStringList maskCodeBlocks(QString &str) {
  * with the original content.
  */
 static void unmaskCodeBlocks(QString &str, const QStringList &maskedBlocks) {
-    for (int i = 0; i < maskedBlocks.size(); ++i) {
+    // Unmask in reverse order because later phases (e.g. indented code block
+    // detection) may re-mask lines that already contain a placeholder from an
+    // earlier phase, creating nested placeholders. Replacing the outermost
+    // (highest index) placeholders first ensures the inner ones are visible
+    // in the string when their turn comes.
+    // See: https://github.com/pbek/QOwnNotes/issues/2671
+    for (int i = maskedBlocks.size() - 1; i >= 0; --i) {
         const QString placeholder = QStringLiteral(
                                         "\x01"
                                         "CODEBLOCK_%1\x01")
