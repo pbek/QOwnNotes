@@ -144,6 +144,16 @@ jobs:
           # (e.g. qml/QtQml/, qml/QtQuick/) required by QQmlEngine at runtime for user scripts
           export QMLPATHS=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/qml
 
+          # Force Qt to load plugins and QML imports from the AppImage bundle
+          mkdir -p ${{env.BUILD_DIR}}/usr/bin
+          cat > ${{env.BUILD_DIR}}/usr/bin/qt.conf <<'EOF'
+          [Paths]
+          Prefix=..
+          Plugins=../plugins
+          Qml2Imports=../qml
+          QmlImports=../qml
+          EOF
+
           cp ../icons/icon.png QOwnNotes.png
 
           # Copy additional resources
