@@ -85,6 +85,7 @@ parts:
       - libqt6svg6-dev
       - libqt6websockets6-dev
       - libqt6core5compat6-dev
+      - qt6-l10n-tools
     stage-packages:
       - libqt6svg6
       - libqt6svgwidgets6
