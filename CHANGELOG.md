@@ -2,6 +2,9 @@
 
 ## 26.2.13
 
+- Fixed angle-bracket content inside code blocks and inline code (e.g., `<stdio.h>`) being
+  incorrectly converted to file links in the note preview
+  (for [#3084](https://github.com/pbek/QOwnNotes/issues/3084))
 - Fixed Markdown highlighter incorrectly formatting a tab-indented list subitem as a heading when
   followed by a lone `-` on the next line (for [#3086](https://github.com/pbek/QOwnNotes/issues/3086))
   - `isParagraph()` now treats tab-indented lines starting with `- `, `+ `, or `* ` as list items,

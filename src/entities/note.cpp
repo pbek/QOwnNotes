@@ -2754,6 +2754,92 @@ static void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size, void *us
 }
 
 /**
+ * @brief Masks code blocks and inline code in the markdown text by replacing
+ * their content with placeholders. This prevents link transformations from
+ * modifying content inside code blocks (e.g., `<stdio.h>` being converted to a link).
+ * @return A list of the original code block contents for later restoration.
+ */
+static QStringList maskCodeBlocks(QString &str) {
+    QStringList maskedBlocks;
+
+    // Mask fenced code blocks (``` and ~~~)
+    for (const QString &fence : {QStringLiteral("```"), QStringLiteral("~~~")}) {
+        int pos = 0;
+        while (true) {
+            // Find opening fence
+            int start = str.indexOf(fence, pos);
+            if (start == -1) break;
+
+            // Find end of opening fence line
+            int endOfOpeningLine = str.indexOf(QChar('\n'), start);
+            if (endOfOpeningLine == -1) break;
+
+            // Check for inline code (closing fence on the same line as opening)
+            const QString lang = str.mid(start + 3, endOfOpeningLine - (start + 3));
+            if (lang.contains(fence)) {
+                pos = endOfOpeningLine + 1;
+                continue;
+            }
+
+            // Find closing fence
+            int end = str.indexOf(fence, endOfOpeningLine + 1);
+            if (end == -1) break;
+
+            // Replace everything from opening fence to end of closing fence with placeholder
+            int blockLen = end + fence.length() - start;
+            const QString original = str.mid(start, blockLen);
+            const QString placeholder = QStringLiteral(
+                                            "\x01"
+                                            "CODEBLOCK_%1\x01")
+                                            .arg(maskedBlocks.size());
+            maskedBlocks.append(original);
+            str.replace(start, blockLen, placeholder);
+            pos = start + placeholder.length();
+        }
+    }
+
+    // Mask inline code (single/double backticks, but not triple)
+    // Match `...` or ``...`` but not ```
+    static const QRegularExpression inlineCodeRE(
+        QStringLiteral("(?<!`)(`{1,2})(?!`)(.+?)(?<!`)\\1(?!`)"),
+        QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpressionMatchIterator it = inlineCodeRE.globalMatch(str);
+
+    // Collect matches in reverse order to replace from end to start
+    QList<QRegularExpressionMatch> matches;
+    while (it.hasNext()) {
+        matches.append(it.next());
+    }
+
+    for (int i = matches.size() - 1; i >= 0; --i) {
+        const QRegularExpressionMatch &match = matches[i];
+        const QString original = match.captured(0);
+        const QString placeholder = QStringLiteral(
+                                        "\x01"
+                                        "CODEBLOCK_%1\x01")
+                                        .arg(maskedBlocks.size());
+        maskedBlocks.append(original);
+        str.replace(match.capturedStart(), match.capturedLength(), placeholder);
+    }
+
+    return maskedBlocks;
+}
+
+/**
+ * @brief Restores previously masked code blocks by replacing placeholders
+ * with the original content.
+ */
+static void unmaskCodeBlocks(QString &str, const QStringList &maskedBlocks) {
+    for (int i = 0; i < maskedBlocks.size(); ++i) {
+        const QString placeholder = QStringLiteral(
+                                        "\x01"
+                                        "CODEBLOCK_%1\x01")
+                                        .arg(i);
+        str.replace(placeholder, maskedBlocks[i]);
+    }
+}
+
+/**
  * @brief Converts code blocks to highlighted code
  */
 static void highlightCode(QString &str, const QString &type, int cbCount) {
@@ -2881,6 +2967,11 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         str.remove(re);
     }
 
+    // Mask code blocks and inline code to prevent link transformations from
+    // modifying content inside them (e.g., <stdio.h> being converted to a link)
+    // See: https://github.com/pbek/QOwnNotes/issues/3084
+    const QStringList maskedBlocks = maskCodeBlocks(str);
+
     // parse for relative file urls and make them absolute
     // (for example to show images under the note path)
     static const QRegularExpression re(QStringLiteral(R"(([\(<])file:\/\/([^\/].+?)([\)>]))"));
@@ -2942,6 +3033,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         str.replace(match.captured(0), QStringLiteral("[") + fileText + QStringLiteral("](") + url +
                                            QStringLiteral(")"));
     }
+
+    // Restore masked code blocks after link transformations are done
+    unmaskCodeBlocks(str, maskedBlocks);
 
     // check if there is a script that wants to modify the Markdown
     const QString preScriptResult =
