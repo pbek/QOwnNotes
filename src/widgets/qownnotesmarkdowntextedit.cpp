@@ -440,12 +440,12 @@ void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString, bool openInNew
     QUrl url(urlCopy);
     const QString scheme = url.scheme();
 
-    // If it's a note URL, noteid URL, file URL in note folder, or has no scheme (relative link),
-    // use UrlHandler which knows how to handle notes properly
+    // If it's a note URL, noteid URL, file URL in note folder, has no scheme (relative link),
+    // or is a Nextcloud Deck card URL, use UrlHandler which knows how to handle these properly
     if (scheme == QStringLiteral("note") || scheme == QStringLiteral("noteid") ||
         scheme == QStringLiteral("file") || scheme.isEmpty() ||
-        Note::fileUrlIsNoteInCurrentNoteFolder(url)) {
-        // Use UrlHandler for note URLs with the openInNewTab flag
+        Note::fileUrlIsNoteInCurrentNoteFolder(url) || NextcloudDeckService::isCardUrl(urlCopy)) {
+        // Use UrlHandler for note and Deck URLs with the openInNewTab flag
         UrlHandler().openUrl(urlCopy, openInNewTab);
     } else {
         // For other URLs (http, https, etc.), use the base class implementation
@@ -1371,14 +1371,12 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
 }
 
 void QOwnNotesMarkdownTextEdit::updateIgnoredClickUrlRegexps() {
-    NextcloudDeckService nextcloudDeckService(this);
-
-    if (nextcloudDeckService.isEnabledAndValid()) {
-        QList<QRegularExpression> ignoredClickUrlRegexps;
-        ignoredClickUrlRegexps.append(QRegularExpression(
-            QRegularExpression::escape(nextcloudDeckService.getCardUrlPattern())));
-        setIgnoredClickUrlRegexps(ignoredClickUrlRegexps);
-    }
+    // Deck card URLs are now fully handled by openUrl() via UrlHandler, so we
+    // must not add them to the ignored-click list — doing so would cause
+    // openLinkAtCursorPosition() to return early and swallow the Ctrl+Click,
+    // preventing the Nextcloud Deck dialog from opening in the note editor.
+    // Clear any previously set regexps to avoid stale state.
+    setIgnoredClickUrlRegexps({});
 }
 
 /**

@@ -81,16 +81,17 @@ void UrlHandler::openUrl(QString urlString, const bool openInNewTab) {
 }
 
 void UrlHandler::handleNextcloudDeckUrl(const QString &urlString) {
-    NextcloudDeckService nextcloudDeckService(MainWindow::instance());
+    // Parse the card ID directly from the URL path to avoid requiring
+    // a pre-configured board ID that exactly matches the URL
+    auto cardId = NextcloudDeckService::parseCardIdFromUrlDirectly(urlString);
+    qDebug() << __func__ << "cardId: " << cardId;
 
-    if (nextcloudDeckService.isEnabled()) {
-        auto cardId = nextcloudDeckService.parseCardIdFromUrl(urlString);
-        qDebug() << __func__ << "cardId: " << cardId;
-
-        if (cardId > 0) {
-            // Open the Nextcloud Deck dialog with the cardId
-            MainWindow::instance()->openNextcloudDeckDialog(cardId);
-        }
+    if (cardId > 0) {
+        // Open the Nextcloud Deck dialog with the cardId.
+        // We do not require isEnabled() here because the user explicitly clicked
+        // a Deck link and we should honour that regardless of whether the Deck
+        // integration is fully configured for card creation.
+        MainWindow::instance()->openNextcloudDeckDialog(cardId);
     }
 }
 

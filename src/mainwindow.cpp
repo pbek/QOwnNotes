@@ -6484,7 +6484,10 @@ void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     // Check if Ctrl key is pressed to open in new tab
     bool openInNewTab = QGuiApplication::keyboardModifiers().testFlag(Qt::ControlModifier);
 
-    if (UrlHandler::isUrlSchemeLocal(url)) {
+    const bool isLocalScheme = UrlHandler::isUrlSchemeLocal(url);
+    const bool isDeckCardUrl = NextcloudDeckService::isCardUrl(url.toString());
+
+    if (isLocalScheme || isDeckCardUrl) {
         // Update _lastNoteId when opening in a new tab to ensure the current note
         // is correctly placed in the old tab, not some previous note
         if (openInNewTab && currentNote.exists()) {

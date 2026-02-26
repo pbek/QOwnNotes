@@ -241,6 +241,17 @@ QString NextcloudDeckService::getCardUrlPattern() const {
            QStringLiteral("/card/");
 }
 
+int NextcloudDeckService::parseCardIdFromUrlDirectly(const QString& url) {
+    static const QRegularExpression re(QStringLiteral(R"(\/card\/(\d+))"));
+    QRegularExpressionMatch match = re.match(url);
+
+    if (match.hasMatch()) {
+        return match.captured(1).toInt();
+    }
+
+    return -1;
+}
+
 int NextcloudDeckService::parseCardIdFromUrl(const QString& url) const {
     qDebug() << __func__ << "getCardUrlPattern(): " << getCardUrlPattern();
     if (!url.startsWith(getCardUrlPattern())) {

@@ -2,6 +2,19 @@
 
 ## 26.2.13
 
+- Fixed clicking a Nextcloud Deck link not opening the Nextcloud Deck dialog anymore
+  (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
+  - The note editor's `openUrl` method now routes Nextcloud Deck card URLs (`https://…/apps/deck/#/board/…/card/…`)
+    through `UrlHandler` instead of handing them off to `QDesktopServices`
+  - The note preview's anchor-click handler (`onNotePreviewAnchorClicked`) now also recognises Deck card URLs
+    and routes them through `UrlHandler` so the dialog opens correctly from the preview pane as well
+  - The card ID is now parsed directly from the URL path instead of requiring a pre-configured board ID
+    that exactly matches the clicked link, so the dialog opens regardless of which board the card belongs to
+  - Removed the `isEnabled()` gate from the link-click handler so the Nextcloud Deck dialog opens even when
+    the Deck integration is not fully configured for card creation
+  - Fixed Ctrl+clicking a Deck link in the note editor not opening the Nextcloud Deck dialog;
+    the ignored-click URL regexp for Deck card links was causing `openLinkAtCursorPosition()`
+    to swallow the click before it could reach `openUrl()`
 - Improved multi-note selection preview styling in the QLiteHtml preview widget for dark mode
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Colors are now derived from the active editor schema instead of hardcoded light/dark fallback
