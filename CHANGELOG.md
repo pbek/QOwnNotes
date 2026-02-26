@@ -35,6 +35,12 @@
   - Fixed Ctrl+clicking a Deck link in the note editor not opening the Nextcloud Deck dialog;
     the ignored-click URL regexp for Deck card links was causing `openLinkAtCursorPosition()`
     to swallow the click before it could reach `openUrl()`
+- Added strikeout support to the QLiteHtml preview widget so that `~~strikeout~~` text
+  is rendered with a line-through decoration in the note preview
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - QLiteHtml's built-in CSS has no rule for `<del>` or `<s>` elements, so the CSS
+    `del, s { text-decoration: line-through; }` is now injected into the HTML head before
+    passing it to the widget
 - Improved multi-note selection preview styling in the QLiteHtml preview widget for dark mode
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Colors are now derived from the active editor schema instead of hardcoded light/dark fallback

@@ -201,7 +201,21 @@ void HtmlPreviewWidget::keyPressEvent(QKeyEvent *event) {
 QLiteHtmlSearchWidget *HtmlPreviewWidget::searchWidget() { return _searchWidget; }
 
 void HtmlPreviewWidget::setHtml(const QString &text) {
-    _htmlWidget->setHtml(Utils::Misc::parseTaskList(text, true));
+    // Inject strikeout CSS so that <del> tags produced by the Markdown renderer
+    // are displayed with a line-through decoration in QLiteHtml (issue #3466).
+    // QLiteHtml's built-in master CSS has no rule for <del> or <s>, so without
+    // this the strikethrough formatting from ~~text~~ would be lost in the preview.
+    QString processed = text;
+    const QString strikeoutCss =
+        QStringLiteral("<style>del, s { text-decoration: line-through; }</style>");
+    const int headEnd = processed.indexOf(QStringLiteral("</head>"));
+    if (headEnd != -1) {
+        processed.insert(headEnd, strikeoutCss);
+    } else {
+        // Fallback: prepend the style block if there is no <head> section
+        processed.prepend(strikeoutCss);
+    }
+    _htmlWidget->setHtml(Utils::Misc::parseTaskList(processed, true));
 }
 
 void HtmlPreviewWidget::setZoomFactor(qreal scale) { _htmlWidget->setZoomFactor(scale); }
