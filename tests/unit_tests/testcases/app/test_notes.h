@@ -43,6 +43,7 @@ class TestNotes : public QObject {
 
     /* Nested fence tests (issue #2671) */
     void testBacktickBlockInsideTildeFenceNotDoubleHighlighted();
+    void testBacktickBlockInsideIndentedCodeNotHighlighted();
 };
 
 #endif    // TESTNOTES_H

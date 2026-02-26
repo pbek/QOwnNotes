@@ -5,6 +5,10 @@
 - Fixed indented fenced code blocks (with tabs or spaces before the opening fence) showing
   raw `CODEBLOCK` placeholders instead of the actual code in the note preview
   (for [#2671](https://github.com/pbek/QOwnNotes/issues/2671))
+- Fixed a backtick-fenced code block nested inside a 4-space/tab indented code block
+  causing highlight spans to be injected into verbatim content, making raw HTML like
+  `<span class="code-keyword">test1</span>=test2` appear in the preview
+  (for [#2671](https://github.com/pbek/QOwnNotes/issues/2671))
 - Fixed a backtick-fenced code block nested inside a tilde-fenced code block causing raw
   HTML span tags (e.g. `<span class="code-keyword">test1</span>=test2`) to appear as
   visible literal text in the note preview (for [#2671](https://github.com/pbek/QOwnNotes/issues/2671))

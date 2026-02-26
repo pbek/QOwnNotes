@@ -633,4 +633,30 @@ void TestNotes::testBacktickBlockInsideTildeFenceNotDoubleHighlighted() {
     QVERIFY(html.contains(QStringLiteral("test2")));
 }
 
+/**
+ * Test that a backtick-fenced code block nested inside a 4-space/tab indented
+ * code block does not result in raw HTML span tags being visible in the preview.
+ * See: https://github.com/pbek/QOwnNotes/issues/2671
+ */
+void TestNotes::testBacktickBlockInsideIndentedCodeNotHighlighted() {
+    // A tab-indented code block containing a backtick-fenced ini block
+    QString md = QStringLiteral("\t```ini\n\ttest1=test2\n\t```\n");
+
+    Note note;
+    note.setNoteText(md);
+    QString html = note.toMarkdownHtml("", 980, true);
+
+    // The entire block is a 4-space/tab indented code block, so MD4C renders
+    // it as a <pre><code> block. No highlighting should be injected — the
+    // backtick fences are literal content, not Markdown code fences.
+    // Before the fix, highlightCode would see the ```ini, run the INI
+    // highlighter, and inject <span class="code-keyword"> into the output.
+    QVERIFY2(!html.contains(QStringLiteral("<span class=\"code-keyword\">")),
+             "Indented code block content must not contain injected highlight spans");
+
+    // The raw content should be present
+    QVERIFY(html.contains(QStringLiteral("test1")));
+    QVERIFY(html.contains(QStringLiteral("test2")));
+}
+
 // QTEST_MAIN(TestNotes)

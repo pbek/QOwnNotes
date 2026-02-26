@@ -3004,6 +3004,51 @@ static void unmaskTildeFences(QString &str, const QStringList &masked) {
     }
 }
 
+/**
+ * @brief Temporarily mask all 4-space/tab indented code blocks in @p str with
+ * unique placeholders, storing the originals for later restoration.
+ * Used to prevent highlightCode from processing fenced code blocks (e.g.
+ * ```ini) that appear inside indented code blocks — which would inject
+ * highlight spans into content that MD4C will render as verbatim text.
+ * See: https://github.com/pbek/QOwnNotes/issues/2671
+ */
+static QStringList maskIndentedCodeBlocks(QString &str) {
+    QStringList masked;
+    // Match one or more consecutive lines that start with 4 spaces or a tab
+    static const QRegularExpression indentedRE(
+        QStringLiteral("(^|\\n)((?:(?:[ ]{4}|\\t)[^\\n]*(?:\\n|$))+)"),
+        QRegularExpression::MultilineOption);
+
+    // Collect all matches first (forward order)
+    QList<QRegularExpressionMatch> matches;
+    QRegularExpressionMatchIterator it = indentedRE.globalMatch(str);
+    while (it.hasNext()) {
+        matches.append(it.next());
+    }
+
+    // Replace in reverse order to keep earlier positions valid, but assign
+    // placeholder indices in forward order so masked[i] pairs with INDENTCB_i.
+    for (int i = matches.size() - 1; i >= 0; --i) {
+        const QRegularExpressionMatch &match = matches[i];
+        // Group 2 is the indented block; group 1 is the preceding newline/start
+        masked.prepend(match.captured(2));
+        const QString placeholder = QStringLiteral("\x01INDENTCB_%1\x01").arg(i);
+        str.replace(match.capturedStart(2), match.capturedLength(2), placeholder);
+    }
+
+    return masked;
+}
+
+/**
+ * @brief Restore indented code blocks previously masked by maskIndentedCodeBlocks().
+ */
+static void unmaskIndentedCodeBlocks(QString &str, const QStringList &masked) {
+    for (int i = 0; i < masked.size(); ++i) {
+        const QString placeholder = QStringLiteral("\x01INDENTCB_%1\x01").arg(i);
+        str.replace(placeholder, masked[i]);
+    }
+}
+
 static inline int nonOverlapCount(const QString &str, const QChar c = '`') {
     const auto len = str.length();
     int count = 0;
@@ -3154,20 +3199,24 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     cbTildeCount /= 2;
 
     // This will also add html in the code blocks, so we will do this at the very end.
-    // Before processing backtick fences, temporarily mask tilde fences so that a
-    // backtick fence nested inside a tilde fence is not highlighted (which would
-    // cause the outer tilde block to HTML-escape those spans when it runs).
-    // After restoring the tilde fences, the outer tilde highlighter is passed
-    // "```" as the otherFenceType so it skips tilde blocks that contain backtick
-    // fences — leaving their content for MD4C to display as literal text.
+    // Before processing backtick fences, temporarily mask:
+    //   1. Tilde-fenced blocks (~~~...~~~) — so a backtick fence nested inside a
+    //      tilde fence is not highlighted (the outer tilde block would HTML-escape
+    //      the injected spans).
+    //   2. 4-space/tab indented code blocks — so a backtick fence appearing as
+    //      literal content inside an indented block is not highlighted (MD4C
+    //      renders indented blocks verbatim, so injected spans would show as raw
+    //      HTML in the preview).
     // See: https://github.com/pbek/QOwnNotes/issues/2671
     const QStringList maskedTildeFences = maskTildeFences(str);
-    // Recount backtick blocks after masking tilde fences (tilde-masked placeholders
-    // contain no backtick triples, so the count is accurate)
+    const QStringList maskedIndentedBlocks = maskIndentedCodeBlocks(str);
+    // Recount backtick blocks after masking (masked placeholders contain no
+    // backtick triples, so the count is accurate)
     int cbCount = nonOverlapCount(str, '`');
     if (cbCount % 2 != 0) --cbCount;
     cbCount /= 2;
     highlightCode(str, QStringLiteral("```"), cbCount);
+    unmaskIndentedCodeBlocks(str, maskedIndentedBlocks);
     unmaskTildeFences(str, maskedTildeFences);
     highlightCode(str, QStringLiteral("~~~"), cbTildeCount, QStringLiteral("```"));
 
