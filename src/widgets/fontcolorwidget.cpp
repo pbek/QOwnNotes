@@ -238,7 +238,7 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Header, level 4"), MarkdownHighlighter::H4);
     addTextTreeWidgetItem(tr("Header, level 5"), MarkdownHighlighter::H5);
     addTextTreeWidgetItem(tr("Header, level 6"), MarkdownHighlighter::H6);
-    addTextTreeWidgetItem(tr("Horizontal rule"), MarkdownHighlighter::HorizontalRuler);
+    addTextTreeWidgetItem(tr("Horizontal rule"), MarkdownHighlighter::HorizontalRule);
     addTextTreeWidgetItem(tr("Block quote"), MarkdownHighlighter::BlockQuote);
     addTextTreeWidgetItem(tr("Table"), MarkdownHighlighter::Table);
     addTextTreeWidgetItem(tr("(HTML) Comment"), MarkdownHighlighter::Comment);

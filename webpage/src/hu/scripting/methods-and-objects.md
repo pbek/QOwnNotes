@@ -1829,7 +1829,7 @@ void ScriptingService::addHighlightingRule(const QString &minta,
 | H5                         | 16  |
 | H6                         | 17  |
 | BlockQuote                 | 18  |
-| HorizontalRuler            | 21  |
+| HorizontalRule            | 21  |
 | Táblázat                   | 22  |
 | InlineCodeBlock            | 23  |
 | MaskedSyntax               | 24  |

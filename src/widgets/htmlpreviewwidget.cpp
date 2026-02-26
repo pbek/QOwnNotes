@@ -219,7 +219,7 @@ void HtmlPreviewWidget::setHtml(const QString &text) {
     // active color scheme, making horizontal rules invisible or jarring in
     // dark-mode themes.
     const QColor hrColor = Utils::Schema::schemaSettings->getForegroundColor(
-        MarkdownHighlighter::HighlighterState::HorizontalRuler);
+        MarkdownHighlighter::HighlighterState::HorizontalRule);
     const QString hrCss =
         QStringLiteral("<style>hr { border-color: %1; }</style>").arg(hrColor.name());
 

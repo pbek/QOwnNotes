@@ -1830,7 +1830,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | H5                         | 16  |
 | H6                         | 17  |
 | Cita en bloque             | 18  |
-| HorizontalRuler            | 21  |
+| HorizontalRule            | 21  |
 | Tabla                      | 22  |
 | InlineCodeBlock            | 23  |
 | MaskedSyntax               | 24  |
