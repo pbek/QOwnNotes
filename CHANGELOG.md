@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 26.2.14
+
+- Fixed horizontal rules (`---`) in the QLiteHtml preview widget always rendering with a black
+  border in dark mode (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - QLiteHtml's built-in master CSS uses `border-style: inset` for `<hr>` with no color override,
+    producing hardcoded black/gray borders regardless of the active color scheme
+  - The `hr { border-color: <color>; }` rule is now injected into the HTML head alongside the
+    existing strikeout fix, using the schema's "Horizontal rule" foreground color
+    (`MarkdownHighlighter::HorizontalRuler`) so the rule matches the color configured in
+    the editor's font & color settings
+
 ## 26.2.13
 
 - Fixed indented fenced code blocks (with tabs or spaces before the opening fence) showing

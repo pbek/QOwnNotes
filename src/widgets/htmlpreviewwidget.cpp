@@ -211,12 +211,24 @@ void HtmlPreviewWidget::setHtml(const QString &text) {
     // stylesheet sets "a { text-decoration: none; }" which would otherwise win.
     const QString strikeoutCss =
         QStringLiteral("<style>del, s, del *, s * { text-decoration: line-through; }</style>");
+
+    // Inject hr CSS so that horizontal rules use the "Horizontal rule" schema
+    // color instead of the hardcoded black/gray from QLiteHtml's built-in
+    // master CSS (issue #3466). The master CSS renders <hr> with
+    // "border-style: inset" which produces black borders regardless of the
+    // active color scheme, making horizontal rules invisible or jarring in
+    // dark-mode themes.
+    const QColor hrColor = Utils::Schema::schemaSettings->getForegroundColor(
+        MarkdownHighlighter::HighlighterState::HorizontalRuler);
+    const QString hrCss =
+        QStringLiteral("<style>hr { border-color: %1; }</style>").arg(hrColor.name());
+
     const int headEnd = processed.indexOf(QStringLiteral("</head>"));
     if (headEnd != -1) {
-        processed.insert(headEnd, strikeoutCss);
+        processed.insert(headEnd, strikeoutCss + hrCss);
     } else {
-        // Fallback: prepend the style block if there is no <head> section
-        processed.prepend(strikeoutCss);
+        // Fallback: prepend the style blocks if there is no <head> section
+        processed.prepend(strikeoutCss + hrCss);
     }
     _htmlWidget->setHtml(Utils::Misc::parseTaskList(processed, true));
 }
