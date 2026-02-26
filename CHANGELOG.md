@@ -2,6 +2,8 @@
 
 ## 26.2.13
 
+- Added search filtering for scripts in the settings Scripting panel, matching name and details
+  (for [#3471](https://github.com/pbek/QOwnNotes/issues/3471))
 - Fixed clicking a Nextcloud Deck link not opening the Nextcloud Deck dialog anymore
   (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
   - The note editor's `openUrl` method now routes Nextcloud Deck card URLs (`https://…/apps/deck/#/board/…/card/…`)

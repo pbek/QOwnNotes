@@ -3558,7 +3558,7 @@
                   <property name="frameShape">
                    <enum>QFrame::Shape::NoFrame</enum>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_31">
+                   <layout class="QGridLayout" name="gridLayout_31">
                    <property name="leftMargin">
                     <number>0</number>
                    </property>
@@ -3574,8 +3574,8 @@
                    <property name="spacing">
                     <number>9</number>
                    </property>
-                   <item row="0" column="0">
-                    <widget class="ScriptListWidget" name="scriptListWidget">
+                    <item row="1" column="0">
+                     <widget class="ScriptListWidget" name="scriptListWidget">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                        <horstretch>2</horstretch>
@@ -3593,8 +3593,8 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="0">
-                    <widget class="QFrame" name="frame_5">
+                    <item row="2" column="0">
+                     <widget class="QFrame" name="frame_5">
                      <property name="frameShape">
                       <enum>QFrame::Shape::NoFrame</enum>
                      </property>
@@ -3649,12 +3649,33 @@
                         </property>
                        </spacer>
                       </item>
-                     </layout>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLineEdit" name="scriptSearchLineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Search scripts</string>
+                      </property>
+                      <property name="clearButtonEnabled">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
                 <item row="0" column="3">
                  <widget class="QFrame" name="scriptEditOuterFrame">
                   <property name="sizePolicy">

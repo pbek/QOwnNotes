@@ -160,6 +160,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_scriptNameLineEdit_editingFinished();
 
+    void on_scriptSearchLineEdit_textChanged(const QString &arg1);
+
     void on_scriptValidationButton_clicked();
 
     void on_scriptReloadEngineButton_clicked();
@@ -393,6 +395,8 @@ class SettingsDialog : public MasterDialog {
     void loadProxySettings();
 
     void setupNoteFolderPage();
+
+    static bool scriptMatchesSearchFilter(const Script &script, const QString &searchText);
 
     QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(QTreeWidgetItem *parent,
                                                             const QString &text);

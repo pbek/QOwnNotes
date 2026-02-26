@@ -2659,6 +2659,8 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visib
  * Does the scripting page setup
  */
 void SettingsDialog::setupScriptingPage() {
+    ui->scriptSearchLineEdit->clear();
+
     // reload the script list
     reloadScriptList();
 
@@ -2708,9 +2710,14 @@ void SettingsDialog::reloadScriptList() const {
     int scriptsCount = scripts.count();
     ui->scriptListWidget->clear();
 
+    const QString searchText = ui->scriptSearchLineEdit->text();
+
     // populate the script list
     if (scriptsCount > 0) {
         Q_FOREACH (Script script, scripts) {
+            if (!searchText.isEmpty() && !scriptMatchesSearchFilter(script, searchText)) {
+                continue;
+            }
             auto *item = new QListWidgetItem(script.getName());
             item->setData(Qt::UserRole, script.getId());
             item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
@@ -2719,17 +2726,64 @@ void SettingsDialog::reloadScriptList() const {
         }
 
         // set the current row
-        ui->scriptListWidget->setCurrentRow(0);
+        if (ui->scriptListWidget->count() > 0) {
+            ui->scriptListWidget->setCurrentRow(0);
+        }
     }
 
     // disable the edit frame if there is no item
-    ui->scriptEditFrame->setEnabled(scriptsCount > 0);
-    if (scriptsCount > 0) {
+    const bool hasVisibleScripts = ui->scriptListWidget->count() > 0;
+    ui->scriptEditFrame->setEnabled(hasVisibleScripts);
+    if (hasVisibleScripts) {
         ui->scriptEditFrame->setVisible(true);
     }
 
     // disable the remove button if there is no item
-    ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
+    ui->scriptRemoveButton->setEnabled(hasVisibleScripts);
+}
+
+bool SettingsDialog::scriptMatchesSearchFilter(const Script &script, const QString &searchText) {
+    const QString trimmedSearchText = searchText.trimmed();
+
+    if (trimmedSearchText.isEmpty()) {
+        return true;
+    }
+
+    const QString searchTextLower = trimmedSearchText.toLower();
+
+    if (script.getName().toLower().contains(searchTextLower)) {
+        return true;
+    }
+
+    if (!script.isScriptFromRepository()) {
+        return false;
+    }
+
+    const ScriptInfoJson infoJson = script.getScriptInfoJson();
+
+    const QString plainDescription = Utils::Misc::unescapeHtml(infoJson.description);
+    if (plainDescription.toLower().contains(searchTextLower)) {
+        return true;
+    }
+
+    if (infoJson.richAuthorText.toLower().contains(searchTextLower)) {
+        return true;
+    }
+
+    if (infoJson.version.toLower().contains(searchTextLower)) {
+        return true;
+    }
+
+    if (infoJson.identifier.toLower().contains(searchTextLower)) {
+        return true;
+    }
+
+    return infoJson.name.toLower().contains(searchTextLower);
+}
+
+void SettingsDialog::on_scriptSearchLineEdit_textChanged(const QString &arg1) {
+    Q_UNUSED(arg1)
+    reloadScriptList();
 }
 
 /**
