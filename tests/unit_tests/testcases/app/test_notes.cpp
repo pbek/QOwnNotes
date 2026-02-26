@@ -535,4 +535,78 @@ void TestNotes::testHTMLescape() {
     QVERIFY(result == expected);
 }
 
+/**
+ * Test that angle-bracket content like <stdio.h> inside various code block
+ * types is NOT converted to a file link in the preview HTML.
+ * See: https://github.com/pbek/QOwnNotes/issues/3084
+ */
+void TestNotes::testAngleBracketsInCodeBlocksNotConvertedToLinks() {
+    // Test backtick-fenced code block
+    {
+        QString md = QStringLiteral("# Test\n```c\n#include <stdio.h>\n```\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        // Should NOT contain a file link for stdio.h
+        QVERIFY(!html.contains(QStringLiteral("](file://")));
+        QVERIFY(!html.contains(QStringLiteral("[stdio.h]")));
+        // Should contain stdio.h as text (HTML-escaped angle brackets)
+        QVERIFY(html.contains(QStringLiteral("stdio.h")));
+    }
+
+    // Test tilde-fenced code block
+    {
+        QString md = QStringLiteral("# Test\n~~~c\n#include <stdio.h>\n~~~\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        QVERIFY(!html.contains(QStringLiteral("](file://")));
+        QVERIFY(!html.contains(QStringLiteral("[stdio.h]")));
+        QVERIFY(html.contains(QStringLiteral("stdio.h")));
+    }
+
+    // Test inline code
+    {
+        QString md = QStringLiteral("# Test\nUse `#include <stdio.h>` in C.\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        QVERIFY(!html.contains(QStringLiteral("](file://")));
+        QVERIFY(!html.contains(QStringLiteral("[stdio.h]")));
+        QVERIFY(html.contains(QStringLiteral("stdio.h")));
+    }
+
+    // Test 4-space indented code block
+    {
+        QString md = QStringLiteral("# Test\n\n    #include <stdio.h>\n\nSome text.\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        QVERIFY(!html.contains(QStringLiteral("](file://")));
+        QVERIFY(!html.contains(QStringLiteral("[stdio.h]")));
+        QVERIFY(html.contains(QStringLiteral("stdio.h")));
+    }
+
+    // Test tab-indented code block
+    {
+        QString md = QStringLiteral("# Test\n\n\t#include <stdlib.h>\n\nSome text.\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        QVERIFY(!html.contains(QStringLiteral("](file://")));
+        QVERIFY(!html.contains(QStringLiteral("[stdlib.h]")));
+        QVERIFY(html.contains(QStringLiteral("stdlib.h")));
+    }
+
+    // Test that angle brackets OUTSIDE code blocks still get converted
+    {
+        QString md = QStringLiteral("# Test\nSee <test.md> for details.\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        // Outside code blocks, <test.md> should become a link
+        QVERIFY(html.contains(QStringLiteral("test.md")));
+    }
+}
+
 // QTEST_MAIN(TestNotes)

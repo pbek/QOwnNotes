@@ -37,6 +37,9 @@ class TestNotes : public QObject {
     void testOctal();
     void testHex();
     void testHTMLescape();
+
+    /* Code block angle-bracket protection tests (issue #3084) */
+    void testAngleBracketsInCodeBlocksNotConvertedToLinks();
 };
 
 #endif    // TESTNOTES_H
