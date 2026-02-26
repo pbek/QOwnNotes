@@ -5,6 +5,7 @@
 - Fixed angle-bracket content inside code blocks (also 4-Spaces fence) and inline code
   (e.g., `<stdio.h>`) being incorrectly converted to file links in the note preview
   (for [#3084](https://github.com/pbek/QOwnNotes/issues/3084))
+  - This also fixes regex preview issues (for [#2952](https://github.com/pbek/QOwnNotes/issues/2952))
 - Fixed Markdown highlighter incorrectly formatting a tab-indented list subitem as a heading when
   followed by a lone `-` on the next line (for [#3086](https://github.com/pbek/QOwnNotes/issues/3086))
   - `isParagraph()` now treats tab-indented lines starting with `- `, `+ `, or `* ` as list items,
