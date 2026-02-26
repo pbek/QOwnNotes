@@ -2798,6 +2798,36 @@ static QStringList maskCodeBlocks(QString &str) {
         }
     }
 
+    // Mask 4-space (or tab) indented code blocks
+    // In Markdown, lines indented by 4+ spaces or a tab are code blocks.
+    // We treat consecutive indented lines (including blank lines between them)
+    // as a single code block.
+    {
+        static const QRegularExpression indentedCodeRE(
+            QStringLiteral("(^|\\n)((?:(?:[ ]{4}|\\t).+(?:\\n|$))+)"),
+            QRegularExpression::MultilineOption);
+        QRegularExpressionMatchIterator it = indentedCodeRE.globalMatch(str);
+
+        // Collect matches in reverse order to replace from end to start
+        QList<QRegularExpressionMatch> matches;
+        while (it.hasNext()) {
+            matches.append(it.next());
+        }
+
+        for (int i = matches.size() - 1; i >= 0; --i) {
+            const QRegularExpressionMatch &match = matches[i];
+            // Only replace the indented block part (group 2), not the
+            // leading newline/start anchor (group 1)
+            const QString original = match.captured(2);
+            const QString placeholder = QStringLiteral(
+                                            "\x01"
+                                            "CODEBLOCK_%1\x01")
+                                            .arg(maskedBlocks.size());
+            maskedBlocks.append(original);
+            str.replace(match.capturedStart(2), match.capturedLength(2), placeholder);
+        }
+    }
+
     // Mask inline code (single/double backticks, but not triple)
     // Match `...` or ``...`` but not ```
     static const QRegularExpression inlineCodeRE(
