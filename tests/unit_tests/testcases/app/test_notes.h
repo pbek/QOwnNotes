@@ -40,6 +40,9 @@ class TestNotes : public QObject {
 
     /* Code block angle-bracket protection tests (issue #3084) */
     void testAngleBracketsInCodeBlocksNotConvertedToLinks();
+
+    /* Nested fence tests (issue #2671) */
+    void testBacktickBlockInsideTildeFenceNotDoubleHighlighted();
 };
 
 #endif    // TESTNOTES_H

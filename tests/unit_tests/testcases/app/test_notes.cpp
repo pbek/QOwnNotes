@@ -609,4 +609,28 @@ void TestNotes::testAngleBracketsInCodeBlocksNotConvertedToLinks() {
     }
 }
 
+/**
+ * Test that a backtick-fenced code block nested inside a tilde-fenced code
+ * block does not result in raw HTML span tags being visible in the preview.
+ * See: https://github.com/pbek/QOwnNotes/issues/2671
+ */
+void TestNotes::testBacktickBlockInsideTildeFenceNotDoubleHighlighted() {
+    // A tilde fence containing a backtick-fenced ini block
+    QString md = QStringLiteral("~~~\n```ini\ntest1=test2\n```\n~~~\n");
+
+    Note note;
+    note.setNoteText(md);
+    QString html = note.toMarkdownHtml("", 980, true);
+    // Raw HTML span tags must NOT appear as visible text in the output.
+    // Before the fix, the backtick block was highlighted first (injecting spans),
+    // then the outer tilde block processor escaped those spans, causing
+    // "&lt;span class=\"code-keyword\"&gt;test1&lt;/span&gt;=test2" to show up literally.
+    QVERIFY(!html.contains(QStringLiteral("&lt;span")));
+    QVERIFY(!html.contains(QStringLiteral("&gt;test1&lt;")));
+
+    // The raw content should still be present (as plain text, not wrapped in spans)
+    QVERIFY(html.contains(QStringLiteral("test1")));
+    QVERIFY(html.contains(QStringLiteral("test2")));
+}
+
 // QTEST_MAIN(TestNotes)

@@ -5,6 +5,9 @@
 - Fixed indented fenced code blocks (with tabs or spaces before the opening fence) showing
   raw `CODEBLOCK` placeholders instead of the actual code in the note preview
   (for [#2671](https://github.com/pbek/QOwnNotes/issues/2671))
+- Fixed a backtick-fenced code block nested inside a tilde-fenced code block causing raw
+  HTML span tags (e.g. `<span class="code-keyword">test1</span>=test2`) to appear as
+  visible literal text in the note preview (for [#2671](https://github.com/pbek/QOwnNotes/issues/2671))
 - Fixed angle-bracket content inside code blocks (also 4-Spaces fence) and inline code
   (e.g., `<stdio.h>`) being incorrectly converted to file links in the note preview
   (for [#3084](https://github.com/pbek/QOwnNotes/issues/3084))

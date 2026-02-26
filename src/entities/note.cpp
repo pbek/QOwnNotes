@@ -2889,7 +2889,8 @@ static void unmaskCodeBlocks(QString &str, const QStringList &maskedBlocks) {
 /**
  * @brief Converts code blocks to highlighted code
  */
-static void highlightCode(QString &str, const QString &type, int cbCount) {
+static void highlightCode(QString &str, const QString &type, int cbCount,
+                          const QString &otherFenceType = QString()) {
     if (cbCount >= 1) {
         const int firstBlock = str.indexOf(type, 0);
         int currentCbPos = firstBlock;
@@ -2932,6 +2933,16 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             QStringView str_view = str;
             QStringView codeBlock = str_view.mid(currentCbPos, next - currentCbPos);
 #endif
+            // Skip highlighting if the block's content contains a fence of the
+            // other delimiter type (e.g. a tilde block whose content contains a
+            // backtick code block). The outer block should not escape the inner
+            // block's already-injected spans.
+            // See: https://github.com/pbek/QOwnNotes/issues/2671
+            if (!otherFenceType.isEmpty() && codeBlock.contains(otherFenceType)) {
+                next += 3;
+                currentCbPos = str.indexOf(type, next);
+                continue;
+            }
             QString highlightedCodeBlock;
             if (!(codeBlock.isEmpty() && lang.isEmpty())) {
                 const CodeToHtmlConverter c(lang);
@@ -2947,6 +2958,49 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             // find the start of the next code block
             currentCbPos = str.indexOf(type, next);
         }
+    }
+}
+
+/**
+ * @brief Temporarily mask all tilde-fenced code blocks (~~~...~~~) in @p str
+ * with unique placeholders, storing the originals in @p masked.
+ * Used to prevent backtick highlightCode from processing backtick fences that
+ * appear inside tilde fences. See: https://github.com/pbek/QOwnNotes/issues/2671
+ */
+static QStringList maskTildeFences(QString &str) {
+    QStringList masked;
+    const QString fence = QStringLiteral("~~~");
+    int pos = 0;
+    for (;;) {
+        int start = str.indexOf(fence, pos);
+        if (start == -1) break;
+        int endOfOpeningLine = str.indexOf(QChar('\n'), start);
+        if (endOfOpeningLine == -1) break;
+        // Skip inline (closing fence on the same line)
+        const QString lang = str.mid(start + 3, endOfOpeningLine - (start + 3));
+        if (lang.contains(fence)) {
+            pos = endOfOpeningLine + 1;
+            continue;
+        }
+        int end = str.indexOf(fence, endOfOpeningLine + 1);
+        if (end == -1) break;
+        int blockLen = end + fence.length() - start;
+        const QString original = str.mid(start, blockLen);
+        const QString placeholder = QStringLiteral("\x01TILDECB_%1\x01").arg(masked.size());
+        masked.append(original);
+        str.replace(start, blockLen, placeholder);
+        pos = start + placeholder.length();
+    }
+    return masked;
+}
+
+/**
+ * @brief Restore tilde-fenced code blocks previously masked by maskTildeFences().
+ */
+static void unmaskTildeFences(QString &str, const QStringList &masked) {
+    for (int i = 0; i < masked.size(); ++i) {
+        const QString placeholder = QStringLiteral("\x01TILDECB_%1\x01").arg(i);
+        str.replace(placeholder, masked[i]);
     }
 }
 
@@ -3093,19 +3147,29 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     }
 
     /*CODE HIGHLIGHTING*/
-    int cbCount = nonOverlapCount(str, '`');
-    if (cbCount % 2 != 0) --cbCount;
-
     int cbTildeCount = nonOverlapCount(str, '~');
     if (cbTildeCount % 2 != 0) --cbTildeCount;
 
     // divide by two to get actual number of code blocks
-    cbCount /= 2;
     cbTildeCount /= 2;
 
-    // this will also add html in the code blocks, so we will do this at the very end
+    // This will also add html in the code blocks, so we will do this at the very end.
+    // Before processing backtick fences, temporarily mask tilde fences so that a
+    // backtick fence nested inside a tilde fence is not highlighted (which would
+    // cause the outer tilde block to HTML-escape those spans when it runs).
+    // After restoring the tilde fences, the outer tilde highlighter is passed
+    // "```" as the otherFenceType so it skips tilde blocks that contain backtick
+    // fences — leaving their content for MD4C to display as literal text.
+    // See: https://github.com/pbek/QOwnNotes/issues/2671
+    const QStringList maskedTildeFences = maskTildeFences(str);
+    // Recount backtick blocks after masking tilde fences (tilde-masked placeholders
+    // contain no backtick triples, so the count is accurate)
+    int cbCount = nonOverlapCount(str, '`');
+    if (cbCount % 2 != 0) --cbCount;
+    cbCount /= 2;
     highlightCode(str, QStringLiteral("```"), cbCount);
-    highlightCode(str, QStringLiteral("~~~"), cbTildeCount);
+    unmaskTildeFences(str, maskedTildeFences);
+    highlightCode(str, QStringLiteral("~~~"), cbTildeCount, QStringLiteral("```"));
 
     const auto data = str.toUtf8();
     if (data.size() == 0) {
