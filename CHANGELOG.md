@@ -39,8 +39,11 @@
   is rendered with a line-through decoration in the note preview
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - QLiteHtml's built-in CSS has no rule for `<del>` or `<s>` elements, so the CSS
-    `del, s { text-decoration: line-through; }` is now injected into the HTML head before
-    passing it to the widget
+    `del, s, del *, s * { text-decoration: line-through; }` is now injected into the HTML
+    head before passing it to the widget
+  - Descendant elements such as links (`<a>`) inside `~~strikeout~~` are also struck out;
+    the `del *` selector is required because `text-decoration` is not an inherited CSS
+    property and the preview stylesheet's `a { text-decoration: none; }` would otherwise win
 - Improved multi-note selection preview styling in the QLiteHtml preview widget for dark mode
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - Colors are now derived from the active editor schema instead of hardcoded light/dark fallback
