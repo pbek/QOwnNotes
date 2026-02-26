@@ -2,6 +2,10 @@
 
 ## 26.2.13
 
+- Fixed Markdown highlighter incorrectly formatting a tab-indented list subitem as a heading when
+  followed by a lone `-` on the next line (for [#3086](https://github.com/pbek/QOwnNotes/issues/3086))
+  - `isParagraph()` now treats tab-indented lines starting with `- `, `+ `, or `* ` as list items,
+    so they are no longer considered paragraph text eligible for setext heading detection
 - Added search filtering for scripts in the settings Scripting panel, matching name and details
   (for [#3471](https://github.com/pbek/QOwnNotes/issues/3471))
 - Fixed clicking a Nextcloud Deck link not opening the Nextcloud Deck dialog anymore
