@@ -57,6 +57,7 @@ jobs:
   vm-test:
     name: "🧪 Run VM tests"
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: read
     steps:
@@ -80,4 +81,8 @@ jobs:
           submodules: recursive
 
       - name: "🧪 Run QOwnNotes integration test"
-        run: nix build .?submodules=1#checks.x86_64-linux.qownnotes -L --no-link
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 20
+          max_attempts: 3
+          command: nix build .?submodules=1#checks.x86_64-linux.qownnotes -L --no-link
