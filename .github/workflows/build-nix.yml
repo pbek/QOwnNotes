@@ -14,6 +14,7 @@ on:
       - "default.nix"
       - "build-systems/nix/**"
       - ".github/workflows/build-nix.yml"
+      - "tests/vm/qownnotes.nix"
   pull_request:
     paths:
       - "src/**"
@@ -23,6 +24,7 @@ on:
       - "default.nix"
       - "build-systems/nix/**"
       - ".github/workflows/build-nix.yml"
+      - "tests/vm/qownnotes.nix"
   workflow_dispatch:
 
 jobs:
