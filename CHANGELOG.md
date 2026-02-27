@@ -2,6 +2,9 @@
 
 ## 26.2.14
 
+- Added hanging indentation for wrapped Markdown list lines in the note text edit so that
+  continuation lines align with the list content rather than the list marker
+  (for [#1581](https://github.com/pbek/QOwnNotes/issues/1581))
 - Added `<meta name="viewport" content="width=device-width, initial-scale=1.0">` to the HTML
   export head for better responsiveness on mobile devices (for [#3475](https://github.com/pbek/QOwnNotes/issues/3475))
 - Fixed horizontal rules (`---`) in the QLiteHtml preview widget always rendering with a black
