@@ -60,7 +60,8 @@ in
           machine.send_key("ret")
 
           # OCR can't detect "App metric" anymore, so we will wait for another text
-          machine.wait_for_text("Open network settings")
+          # OCR can't detect "Open network settings" anymore, so we will wait for another text
+          machine.wait_for_text("network settings")
           machine.send_key("ret")
 
           # Doesn't work for non-root
