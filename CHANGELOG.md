@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 26.2.15
+
+- Fix Qt5 build error (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
+
 ## 26.2.14
 
 - Added hanging indentation for wrapped Markdown list lines in the note text edit so that
