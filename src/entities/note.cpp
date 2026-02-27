@@ -3329,7 +3329,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         }
 
         result = QString(
-                     "<html><head><meta charset=\"utf-8\"/><style>"
+                     "<html><head><meta charset=\"utf-8\"/>"
+                     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>"
+                     "<style>"
                      "h1 { margin: 5px 0 20px 0; }"
                      "h2, h3 { margin: 10px 0 15px 0; }"
                      "img { max-width: 100%; }"

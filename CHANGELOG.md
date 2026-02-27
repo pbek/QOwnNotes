@@ -2,6 +2,8 @@
 
 ## 26.2.14
 
+- Added `<meta name="viewport" content="width=device-width, initial-scale=1.0">` to the HTML
+  export head for better responsiveness on mobile devices (for [#3475](https://github.com/pbek/QOwnNotes/issues/3475))
 - Fixed horizontal rules (`---`) in the QLiteHtml preview widget always rendering with a black
   border in dark mode (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - QLiteHtml's built-in master CSS uses `border-style: inset` for `<hr>` with no color override,
