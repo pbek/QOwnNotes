@@ -20,6 +20,10 @@ _build/
 _build32/
 _build64/
 *.inc
+.cache/
+
+# Test results
+*-FAILED.png
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -145,6 +149,7 @@ csx/
 AppPackages/
 
 # Others
+.DS_Store
 .idea/
 .vs/
 .vscode/
@@ -181,3 +186,7 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# litehtml specific files
+test/visual-test.sh
+

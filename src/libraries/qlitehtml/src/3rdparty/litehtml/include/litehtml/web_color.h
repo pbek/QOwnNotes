@@ -1,57 +1,50 @@
 #ifndef LH_WEB_COLOR_H
 #define LH_WEB_COLOR_H
 
-#include "os_types.h"
+#include "css_tokenizer.h"
 #include "types.h"
 
-namespace litehtml {
-struct def_color {
-  const tchar_t* name;
-  const tchar_t* rgb;
-};
+namespace litehtml
+{
+	class document_container;
 
-extern def_color g_def_colors[];
+	struct web_color
+	{
+		byte red			  = 0;
+		byte green			  = 0;
+		byte blue			  = 0;
+		byte alpha			  = 255;
+		bool is_current_color = false;
 
-class document_container;
+		static const web_color transparent;
+		static const web_color black;
+		static const web_color white;
+		static const web_color current_color;
 
-struct web_color {
-  byte blue;
-  byte green;
-  byte red;
-  byte alpha;
+		web_color() {}
+		web_color(byte r, byte g, byte b, byte a = 255) :
+			red(r),
+			green(g),
+			blue(b),
+			alpha(a)
+		{
+		}
+		web_color(bool is_current_color) :
+			is_current_color(is_current_color)
+		{
+		}
 
-  web_color(byte r, byte g, byte b, byte a = 255) {
-    blue = b;
-    green = g;
-    red = r;
-    alpha = a;
-  }
+		bool operator==(web_color color) const
+		{
+			return red == color.red && green == color.green && blue == color.blue && alpha == color.alpha;
+		}
+		bool operator!=(web_color color) const { return !(*this == color); }
 
-  web_color() {
-    blue = 0;
-    green = 0;
-    red = 0;
-    alpha = 0xFF;
-  }
+		web_color darken(double fraction) const;
+		string	  to_string() const;
+	};
 
-  web_color(const web_color& val) {
-    blue = val.blue;
-    green = val.green;
-    red = val.red;
-    alpha = val.alpha;
-  }
+	bool parse_color(const css_token& token, web_color& color, document_container* container);
+} // namespace litehtml
 
-  web_color& operator=(const web_color& val) {
-    blue = val.blue;
-    green = val.green;
-    red = val.red;
-    alpha = val.alpha;
-    return *this;
-  }
-  static web_color from_string(const tchar_t* str, litehtml::document_container* callback);
-  static litehtml::tstring resolve_name(const tchar_t* name, litehtml::document_container* callback);
-  static bool is_color(const tchar_t* str);
-};
-}  // namespace litehtml
-
-#endif  // LH_WEB_COLOR_H
+#endif // LH_WEB_COLOR_H

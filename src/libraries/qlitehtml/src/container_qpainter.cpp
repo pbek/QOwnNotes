@@ -30,6 +30,8 @@
 #include "container_qpainter_p.h"
 #include "element_checkbox.h"
 
+#include <litehtml/render_item.h>
+
 #if QT_CONFIG(clipboard)
 #include <QClipboard>
 #endif
@@ -84,12 +86,28 @@ static QPainter *toQPainter(litehtml::uint_ptr hdc)
 
 static QRect toQRect(litehtml::position position)
 {
-    return {position.x, position.y, position.width, position.height};
+    return QRect(int(position.x), int(position.y), int(position.width), int(position.height));
 }
 
-static litehtml::elements_vector path(const litehtml::element::ptr &element)
+using ElementPath = std::vector<litehtml::element::ptr>;
+
+static int childCount(const litehtml::element::ptr &parent)
 {
-    litehtml::elements_vector result;
+    return int(parent ? parent->children().size() : 0);
+}
+
+static litehtml::element::ptr childAt(const litehtml::element::ptr &parent, int index)
+{
+    if (!parent || index < 0 || index >= childCount(parent))
+        return {};
+    auto it = parent->children().cbegin();
+    std::advance(it, index);
+    return *it;
+}
+
+static ElementPath path(const litehtml::element::ptr &element)
+{
+    ElementPath result;
     litehtml::element::ptr current = element;
     while (current) {
         result.push_back(current);
@@ -99,8 +117,8 @@ static litehtml::elements_vector path(const litehtml::element::ptr &element)
     return result;
 }
 
-static std::pair<litehtml::element::ptr, size_t> getCommonParent(const litehtml::elements_vector &a,
-                                                                 const litehtml::elements_vector &b)
+static std::pair<litehtml::element::ptr, size_t> getCommonParent(const ElementPath &a,
+                                                                 const ElementPath &b)
 {
     litehtml::element::ptr parent;
     const size_t minSize = std::min(a.size(), b.size());
@@ -120,8 +138,8 @@ static std::pair<Selection::Element, Selection::Element> getStartAndEnd(const Se
             return {a, b};
         return {b, a};
     }
-    const litehtml::elements_vector aPath = path(a.element);
-    const litehtml::elements_vector bPath = path(b.element);
+    const ElementPath aPath = path(a.element);
+    const ElementPath bPath = path(b.element);
     litehtml::element::ptr commonParent;
     size_t firstDifferentIndex;
     std::tie(commonParent, firstDifferentIndex) = getCommonParent(aPath, bPath);
@@ -136,8 +154,8 @@ static std::pair<Selection::Element, Selection::Element> getStartAndEnd(const Se
     // find out if a or b is first in the child sub-trees of commonParent
     const litehtml::element::ptr aBranch = aPath.at(firstDifferentIndex);
     const litehtml::element::ptr bBranch = bPath.at(firstDifferentIndex);
-    for (int i = 0; i < int(commonParent->get_children_count()); ++i) {
-        const litehtml::element::ptr child = commonParent->get_child(i);
+    for (int i = 0; i < childCount(commonParent); ++i) {
+        const litehtml::element::ptr child = childAt(commonParent, i);
         if (child == aBranch)
             return {a, b};
         if (child == bBranch)
@@ -149,8 +167,8 @@ static std::pair<Selection::Element, Selection::Element> getStartAndEnd(const Se
 
 static int findChild(const litehtml::element::ptr &child, const litehtml::element::ptr &parent)
 {
-    for (int i = 0; i < int(parent->get_children_count()); ++i)
-        if (parent->get_child(i) == child)
+    for (int i = 0; i < childCount(parent); ++i)
+        if (childAt(parent, i) == child)
             return i;
     return -1;
 }
@@ -163,8 +181,8 @@ static litehtml::element::ptr firstLeaf(const litehtml::element::ptr &element,
     if (element == stop)
         return element;
     litehtml::element::ptr current = element;
-    while (current != stop && current->get_children_count() > 0)
-        current = current->get_child(0);
+    while (current != stop && childCount(current) > 0)
+        current = childAt(current, 0);
     return current;
 }
 
@@ -177,7 +195,7 @@ static litehtml::element::ptr nextLeaf(const litehtml::element::ptr &element,
     if (element == stop)
         return element;
     litehtml::element::ptr current = element;
-    if (current->have_parent()) {
+    if (current->parent()) {
         // find next sibling
         const litehtml::element::ptr parent = current->parent();
         const int childIndex = findChild(current, parent);
@@ -185,9 +203,9 @@ static litehtml::element::ptr nextLeaf(const litehtml::element::ptr &element,
             qWarning() << "internal error: filed to find litehtml child element in parent";
             return stop;
         }
-        if (childIndex + 1 >= int(parent->get_children_count())) // no sibling, move up
+        if (childIndex + 1 >= childCount(parent)) // no sibling, move up
             return nextLeaf(parent, stop);
-        current = parent->get_child(childIndex + 1);
+        current = childAt(parent, childIndex + 1);
     }
     return firstLeaf(current, stop);
 }
@@ -198,7 +216,7 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
 {
     // If element has children, the text contains all descendant text concatenated
     // For better precision, we should find the actual leaf child at this position
-    if (element->get_children_count() > 0) {
+    if (childCount(element) > 0) {
         // Try to find a child leaf element that contains this position
         const std::function<Selection::Element(litehtml::element::ptr, QPoint)> findLeaf =
             [&findLeaf, pos](const litehtml::element::ptr &elem,
@@ -206,25 +224,25 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
             if (!elem)
                 return {};
 
-            const QRect elemPos = toQRect(elem->get_position()).translated(offset);
+            const QRect elemPos = toQRect(elem->get_placement()).translated(offset);
 
             if (!elemPos.contains(pos))
                 return {};
 
             // Try children first
-            for (int i = 0; i < int(elem->get_children_count()); ++i) {
-                const litehtml::element::ptr child = elem->get_child(i);
+            for (int i = 0; i < childCount(elem); ++i) {
+                const litehtml::element::ptr child = childAt(elem, i);
                 Selection::Element result = findLeaf(child, elemPos.topLeft());
                 if (result.element)
                     return result;
             }
 
             // No children found, use this element if it has text
-            litehtml::tstring elemText;
+            litehtml::string elemText;
             elem->get_text(elemText);
             if (!elemText.empty()) {
                 const QString textStr = QString::fromStdString(elemText);
-                const QFont &font = toQFont(elem->get_font());
+                const QFont &font = toQFont(elem->css().get_font());
                 const QFontMetrics fm(font);
                 const QPoint relativePos = pos - elemPos.topLeft();
 
@@ -251,7 +269,7 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
     }
 
     // Element has no children - calculate precise character position
-    const QFont &font = toQFont(element->get_font());
+    const QFont &font = toQFont(element->css().get_font());
     const QFontMetrics fm(font);
     int previous = 0;
     for (int i = 0; i < text.size(); ++i) {
@@ -275,20 +293,20 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
         [&firstTextLeaf](const litehtml::element::ptr &element) -> Selection::Element {
         if (!element)
             return {};
-        if (element->get_children_count() == 0) {
-            litehtml::tstring text;
+        if (childCount(element) == 0) {
+            litehtml::string text;
             element->get_text(text);
             if (!text.empty())
                 return {element, 0, 0};
             return {};
         }
-        for (int i = 0; i < int(element->get_children_count()); ++i) {
-            const litehtml::element::ptr child = element->get_child(i);
+        for (int i = 0; i < childCount(element); ++i) {
+            const litehtml::element::ptr child = childAt(element, i);
             Selection::Element result = firstTextLeaf(child);
             if (result.element)
                 return result;
         }
-        litehtml::tstring text;
+        litehtml::string text;
         element->get_text(text);
         if (!text.empty())
             return {element, 0, 0};
@@ -296,10 +314,17 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
     };
 
     // Find the element at this point
-    const litehtml::element::ptr element = document->root()->get_element_by_point(pos.x(),
-                                                                                  pos.y(),
-                                                                                  viewportPos.x(),
-                                                                                  viewportPos.y());
+    const litehtml::element::ptr element
+        = document->root_render()
+              ? document->root_render()
+                    ->get_element_by_point(pos.x(),
+                                           pos.y(),
+                                           viewportPos.x(),
+                                           viewportPos.y(),
+                                           [](const std::shared_ptr<litehtml::render_item> &) {
+                                               return true;
+                                           })
+              : litehtml::element::ptr{};
     // Recursively find the deepest child that contains the point and has text
     const std::function<Selection::Element(litehtml::element::ptr, QRect)> recursion =
         [&recursion, pos, mode](const litehtml::element::ptr &element,
@@ -309,10 +334,9 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
 
         // First, try to find a deeper child that contains the point
         Selection::Element deepestResult;
-        for (int i = 0; i < int(element->get_children_count()); ++i) {
-            const litehtml::element::ptr child = element->get_child(i);
-            const QRect childPlacement = toQRect(child->get_position())
-                                             .translated(placement.topLeft());
+        for (int i = 0; i < childCount(element); ++i) {
+            const litehtml::element::ptr child = childAt(element, i);
+            const QRect childPlacement = toQRect(child->get_placement());
             deepestResult = recursion(child, childPlacement);
             if (deepestResult.element)
                 return deepestResult;
@@ -320,7 +344,7 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
 
         // No deeper child found, check if this element itself has text content
         if (placement.contains(pos)) {
-            litehtml::tstring text;
+            litehtml::string text;
             element->get_text(text);
             if (!text.empty()) {
                 return mode == Selection::Mode::Free
@@ -360,9 +384,9 @@ static QFont::Weight cssWeightToQtWeight(int cssWeight)
 static QFont::Style toQFontStyle(litehtml::font_style style)
 {
     switch (style) {
-    case litehtml::fontStyleNormal:
+    case litehtml::font_style_normal:
         return QFont::StyleNormal;
-    case litehtml::fontStyleItalic:
+    case litehtml::font_style_italic:
         return QFont::StyleItalic;
     }
     // should not happen
@@ -480,7 +504,7 @@ void Selection::update()
 {
     const auto addElement = [this](const Selection::Element &element,
                                    const Selection::Element &end = {}) {
-        litehtml::tstring elemText;
+        litehtml::string elemText;
         element.element->get_text(elemText);
         const QString textStr = QString::fromStdString(elemText);
         if (!textStr.isEmpty()) {
@@ -594,13 +618,16 @@ DocumentContainer::DocumentContainer()
 
 DocumentContainer::~DocumentContainer() = default;
 
-litehtml::uint_ptr DocumentContainerPrivate::create_font(const litehtml::tchar_t *faceName,
-                                                         int size,
-                                                         int weight,
-                                                         litehtml::font_style italic,
-                                                         unsigned int decoration,
+litehtml::uint_ptr DocumentContainerPrivate::create_font(const litehtml::font_description &descr,
+                                                         const litehtml::document *doc,
                                                          litehtml::font_metrics *fm)
 {
+    Q_UNUSED(doc)
+    const char *faceName = descr.family.c_str();
+    const int size = int(descr.size);
+    const int weight = descr.weight;
+    const litehtml::font_style italic = descr.style;
+    const int decoration = descr.decoration_line;
     const QStringList splitNames = QString::fromUtf8(faceName).split(',', Qt::SkipEmptyParts);
     QStringList familyNames;
     std::transform(splitNames.cbegin(),
@@ -648,11 +675,11 @@ litehtml::uint_ptr DocumentContainerPrivate::create_font(const litehtml::tchar_t
     font->setPixelSize(size);
     font->setWeight(cssWeightToQtWeight(weight));
     font->setStyle(toQFontStyle(italic));
-    if (decoration == litehtml::font_decoration_underline)
+    if (decoration & litehtml::text_decoration_line_underline)
         font->setUnderline(true);
-    if (decoration == litehtml::font_decoration_overline)
+    if (decoration & litehtml::text_decoration_line_overline)
         font->setOverline(true);
-    if (decoration == litehtml::font_decoration_linethrough)
+    if (decoration & litehtml::text_decoration_line_line_through)
         font->setStrikeOut(true);
     if (fm) {
         const QFontMetrics metrics(*font);
@@ -671,14 +698,14 @@ void DocumentContainerPrivate::delete_font(litehtml::uint_ptr hFont)
     delete font;
 }
 
-int DocumentContainerPrivate::text_width(const litehtml::tchar_t *text, litehtml::uint_ptr hFont)
+litehtml::pixel_t DocumentContainerPrivate::text_width(const char *text, litehtml::uint_ptr hFont)
 {
     const QFontMetrics fm(toQFont(hFont));
     return fm.horizontalAdvance(QString::fromUtf8(text));
 }
 
 void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
-                                         const litehtml::tchar_t *text,
+                                         const char *text,
                                          litehtml::uint_ptr hFont,
                                          litehtml::web_color color,
                                          const litehtml::position &pos)
@@ -738,17 +765,17 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
     }
 }
 
-int DocumentContainerPrivate::pt_to_px(int pt) const
+litehtml::pixel_t DocumentContainerPrivate::pt_to_px(float pt) const
 {
 #if Q_OS_WIN
     HDC dc = GetDC(NULL);
-    int ret = MulDiv(pt, GetDeviceCaps(dc, LOGPIXELSY), 72);
+    int ret = MulDiv(int(pt), GetDeviceCaps(dc, LOGPIXELSY), 72);
     ReleaseDC(NULL, dc);
     return ret;
 #endif
 
     const qreal dpi = m_paintDevice->logicalDpiY();
-    return (int) (qreal(pt) * dpi / 72.0);
+    return qreal(pt) * dpi / 72.0;
 
 #if 0
 // magic factor of 11/12 to account for differences to webengine/webkit
@@ -756,7 +783,7 @@ int DocumentContainerPrivate::pt_to_px(int pt) const
 #endif
 }
 
-int DocumentContainerPrivate::get_default_font_size() const
+litehtml::pixel_t DocumentContainerPrivate::get_default_font_size() const
 {
     int pointSize = m_defaultFont.pointSize();
     if (pointSize <= 0) {
@@ -771,7 +798,7 @@ int DocumentContainerPrivate::get_default_font_size() const
     return pointSize;
 }
 
-const litehtml::tchar_t *DocumentContainerPrivate::get_default_font_name() const
+const char *DocumentContainerPrivate::get_default_font_name() const
 {
     return m_defaultFontFamilyName.constData();
 }
@@ -808,9 +835,7 @@ void DocumentContainerPrivate::draw_list_marker(litehtml::uint_ptr hdc,
     }
 }
 
-void DocumentContainerPrivate::load_image(const litehtml::tchar_t *src,
-                                          const litehtml::tchar_t *baseurl,
-                                          bool redraw_on_ready)
+void DocumentContainerPrivate::load_image(const char *src, const char *baseurl, bool redraw_on_ready)
 {
     const auto qtSrc = QString::fromUtf8(src);
     const auto qtBaseUrl = QString::fromUtf8(baseurl);
@@ -827,8 +852,8 @@ void DocumentContainerPrivate::load_image(const litehtml::tchar_t *src,
     m_pixmaps.insert(url, pixmap);
 }
 
-void DocumentContainerPrivate::get_image_size(const litehtml::tchar_t *src,
-                                              const litehtml::tchar_t *baseurl,
+void DocumentContainerPrivate::get_image_size(const char *src,
+                                              const char *baseurl,
                                               litehtml::size &sz)
 {
     const auto qtSrc = QString::fromUtf8(src);
@@ -876,8 +901,9 @@ void DocumentContainerPrivate::buildIndex()
         m_index.elementToIndex.insert({current, index});
         if (!inBody)
             inBody = tagName(current).toLower() == "body";
-        if (inBody && current->is_visible()) {
-            litehtml::tstring text;
+        if (inBody && current->css().get_display() != litehtml::display_none
+            && current->css().get_visibility() == litehtml::visibility_visible) {
+            litehtml::string text;
             current->get_text(text);
             if (!text.empty()) {
                 m_index.indexToElement.push_back({index, current});
@@ -915,88 +941,93 @@ void DocumentContainerPrivate::clearSelection()
         m_clipboardCallback(false);
 }
 
-void DocumentContainerPrivate::draw_background(litehtml::uint_ptr hdc,
-                                               const litehtml::background_paint &bg)
+void DocumentContainerPrivate::draw_image(litehtml::uint_ptr hdc,
+                                          const litehtml::background_layer &layer,
+                                          const std::string &url,
+                                          const std::string &base_url)
 {
-    auto painter = toQPainter(hdc);
-    if (bg.is_root) {
-        // TODO ?
+    const QPixmap pixmap = getPixmap(QString::fromStdString(url), QString::fromStdString(base_url));
+    if (pixmap.isNull())
         return;
-    }
+
+    auto painter = toQPainter(hdc);
     painter->save();
-    painter->setClipRect(toQRect(bg.clip_box));
-    const QRegion horizontalMiddle(
-        QRect(bg.border_box.x,
-              bg.border_box.y + bg.border_radius.top_left_y,
-              bg.border_box.width,
-              bg.border_box.height - bg.border_radius.top_left_y - bg.border_radius.bottom_left_y));
-    const QRegion horizontalTop(
-        QRect(bg.border_box.x + bg.border_radius.top_left_x,
-              bg.border_box.y,
-              bg.border_box.width - bg.border_radius.top_left_x - bg.border_radius.top_right_x,
-              bg.border_radius.top_left_y));
-    const QRegion horizontalBottom(QRect(bg.border_box.x + bg.border_radius.bottom_left_x,
-                                         bg.border_box.bottom() - bg.border_radius.bottom_left_y,
-                                         bg.border_box.width - bg.border_radius.bottom_left_x
-                                             - bg.border_radius.bottom_right_x,
-                                         bg.border_radius.bottom_left_y));
-    const QRegion topLeft(QRect(bg.border_box.left(),
-                                bg.border_box.top(),
-                                2 * bg.border_radius.top_left_x,
-                                2 * bg.border_radius.top_left_y),
-                          QRegion::Ellipse);
-    const QRegion topRight(QRect(bg.border_box.right() - 2 * bg.border_radius.top_right_x,
-                                 bg.border_box.top(),
-                                 2 * bg.border_radius.top_right_x,
-                                 2 * bg.border_radius.top_right_y),
-                           QRegion::Ellipse);
-    const QRegion bottomLeft(QRect(bg.border_box.left(),
-                                   bg.border_box.bottom() - 2 * bg.border_radius.bottom_left_y,
-                                   2 * bg.border_radius.bottom_left_x,
-                                   2 * bg.border_radius.bottom_left_y),
-                             QRegion::Ellipse);
-    const QRegion bottomRight(QRect(bg.border_box.right() - 2 * bg.border_radius.bottom_right_x,
-                                    bg.border_box.bottom() - 2 * bg.border_radius.bottom_right_y,
-                                    2 * bg.border_radius.bottom_right_x,
-                                    2 * bg.border_radius.bottom_right_y),
-                              QRegion::Ellipse);
-    const QRegion clipRegion = horizontalMiddle.united(horizontalTop)
-                                   .united(horizontalBottom)
-                                   .united(topLeft)
-                                   .united(topRight)
-                                   .united(bottomLeft)
-                                   .united(bottomRight);
-    painter->setClipRegion(clipRegion, Qt::IntersectClip);
-    painter->setPen(Qt::NoPen);
-    painter->setBrush(toQColor(bg.color));
-    painter->drawRect(bg.border_box.x, bg.border_box.y, bg.border_box.width, bg.border_box.height);
-    drawSelection(painter, toQRect(bg.border_box));
-    if (!bg.image.empty()) {
-        const QPixmap pixmap = getPixmap(QString::fromStdString(bg.image),
-                                         QString::fromStdString(bg.baseurl));
-        if (bg.repeat == litehtml::background_repeat_no_repeat) {
-            painter->drawPixmap(QRect(bg.position_x,
-                                      bg.position_y,
-                                      bg.image_size.width,
-                                      bg.image_size.height),
-                                pixmap);
-        } else if (bg.repeat == litehtml::background_repeat_repeat_x) {
-            if (bg.image_size.width > 0) {
-                int x = bg.border_box.left();
-                while (x <= bg.border_box.right()) {
-                    painter->drawPixmap(QRect(x,
-                                              bg.border_box.top(),
-                                              bg.image_size.width,
-                                              bg.image_size.height),
-                                        pixmap);
-                    x += bg.image_size.width;
-                }
+    painter->setClipRect(toQRect(layer.clip_box));
+
+    const QRect origin = toQRect(layer.origin_box);
+    if (layer.repeat == litehtml::background_repeat_no_repeat) {
+        painter->drawPixmap(origin, pixmap);
+    } else if (layer.repeat == litehtml::background_repeat_repeat_x) {
+        int x = origin.left();
+        while (x <= layer.clip_box.right()) {
+            painter->drawPixmap(QRect(x, origin.top(), origin.width(), origin.height()), pixmap);
+            x += origin.width();
+        }
+    } else if (layer.repeat == litehtml::background_repeat_repeat_y) {
+        int y = origin.top();
+        while (y <= layer.clip_box.bottom()) {
+            painter->drawPixmap(QRect(origin.left(), y, origin.width(), origin.height()), pixmap);
+            y += origin.height();
+        }
+    } else {
+        int y = origin.top();
+        while (y <= layer.clip_box.bottom()) {
+            int x = origin.left();
+            while (x <= layer.clip_box.right()) {
+                painter->drawPixmap(QRect(x, y, origin.width(), origin.height()), pixmap);
+                x += origin.width();
             }
-        } else {
-            qWarning(log) << "unsupported background repeat" << bg.repeat;
+            y += origin.height();
         }
     }
+
     painter->restore();
+}
+
+void DocumentContainerPrivate::draw_solid_fill(litehtml::uint_ptr hdc,
+                                               const litehtml::background_layer &layer,
+                                               const litehtml::web_color &color)
+{
+    if (color.alpha == 0)
+        return;
+
+    auto painter = toQPainter(hdc);
+    painter->save();
+    painter->setClipRect(toQRect(layer.clip_box));
+    painter->setPen(Qt::NoPen);
+    painter->setBrush(toQColor(color));
+    painter->drawRect(toQRect(layer.border_box));
+    painter->restore();
+}
+
+void DocumentContainerPrivate::draw_linear_gradient(
+    litehtml::uint_ptr hdc,
+    const litehtml::background_layer &layer,
+    const litehtml::background_layer::linear_gradient &gradient)
+{
+    Q_UNUSED(layer)
+    Q_UNUSED(gradient)
+    Q_UNUSED(hdc)
+}
+
+void DocumentContainerPrivate::draw_radial_gradient(
+    litehtml::uint_ptr hdc,
+    const litehtml::background_layer &layer,
+    const litehtml::background_layer::radial_gradient &gradient)
+{
+    Q_UNUSED(layer)
+    Q_UNUSED(gradient)
+    Q_UNUSED(hdc)
+}
+
+void DocumentContainerPrivate::draw_conic_gradient(
+    litehtml::uint_ptr hdc,
+    const litehtml::background_layer &layer,
+    const litehtml::background_layer::conic_gradient &gradient)
+{
+    Q_UNUSED(layer)
+    Q_UNUSED(gradient)
+    Q_UNUSED(hdc)
 }
 
 void DocumentContainerPrivate::draw_borders(litehtml::uint_ptr hdc,
@@ -1065,12 +1096,12 @@ void DocumentContainerPrivate::draw_borders(litehtml::uint_ptr hdc,
     }
 }
 
-void DocumentContainerPrivate::set_caption(const litehtml::tchar_t *caption)
+void DocumentContainerPrivate::set_caption(const char *caption)
 {
     m_caption = QString::fromUtf8(caption);
 }
 
-void DocumentContainerPrivate::set_base_url(const litehtml::tchar_t *base_url)
+void DocumentContainerPrivate::set_base_url(const char *base_url)
 {
     m_baseUrl = QString::fromUtf8(base_url);
 }
@@ -1084,20 +1115,19 @@ void DocumentContainerPrivate::link(const std::shared_ptr<litehtml::document> &d
     Q_UNUSED(el)
 }
 
-void DocumentContainerPrivate::on_anchor_click(const litehtml::tchar_t *url,
-                                               const litehtml::element::ptr &el)
+void DocumentContainerPrivate::on_anchor_click(const char *url, const litehtml::element::ptr &el)
 {
     Q_UNUSED(el)
     if (!m_blockLinks)
         m_linkCallback(resolveUrl(QString::fromUtf8(url), m_baseUrl));
 }
 
-void DocumentContainerPrivate::set_cursor(const litehtml::tchar_t *cursor)
+void DocumentContainerPrivate::set_cursor(const char *cursor)
 {
     m_cursorCallback(toQCursor(QString::fromUtf8(cursor)));
 }
 
-void DocumentContainerPrivate::transform_text(litehtml::tstring &text, litehtml::text_transform tt)
+void DocumentContainerPrivate::transform_text(litehtml::string &text, litehtml::text_transform tt)
 {
     // TODO
     qDebug(log) << "transform_text";
@@ -1105,9 +1135,9 @@ void DocumentContainerPrivate::transform_text(litehtml::tstring &text, litehtml:
     Q_UNUSED(tt)
 }
 
-void DocumentContainerPrivate::import_css(litehtml::tstring &text,
-                                          const litehtml::tstring &url,
-                                          litehtml::tstring &baseurl)
+void DocumentContainerPrivate::import_css(litehtml::string &text,
+                                          const litehtml::string &url,
+                                          litehtml::string &baseurl)
 {
     const QUrl actualUrl = resolveUrl(QString::fromStdString(url), QString::fromStdString(baseurl));
     const QString urlString = actualUrl.toString(QUrl::None);
@@ -1117,16 +1147,12 @@ void DocumentContainerPrivate::import_css(litehtml::tstring &text,
 }
 
 void DocumentContainerPrivate::set_clip(const litehtml::position &pos,
-                                        const litehtml::border_radiuses &bdr_radius,
-                                        bool valid_x,
-                                        bool valid_y)
+                                        const litehtml::border_radiuses &bdr_radius)
 {
     // TODO
     qDebug(log) << "set_clip";
     Q_UNUSED(pos)
     Q_UNUSED(bdr_radius)
-    Q_UNUSED(valid_x)
-    Q_UNUSED(valid_y)
 }
 
 void DocumentContainerPrivate::del_clip()
@@ -1135,20 +1161,23 @@ void DocumentContainerPrivate::del_clip()
     qDebug(log) << "del_clip";
 }
 
-void DocumentContainerPrivate::get_client_rect(litehtml::position &client) const
+void DocumentContainerPrivate::get_viewport(litehtml::position &client) const
 {
-    client = {m_clientRect.x(), m_clientRect.y(), m_clientRect.width(), m_clientRect.height()};
+    client = litehtml::position(m_clientRect.x(),
+                                m_clientRect.y(),
+                                m_clientRect.width(),
+                                m_clientRect.height());
 }
 
 std::shared_ptr<litehtml::element> DocumentContainerPrivate::create_element(
-    const litehtml::tchar_t *tag_name,
+    const char *tag_name,
     const litehtml::string_map &attributes,
     const std::shared_ptr<litehtml::document> &doc)
 {
     // TODO
 
     // We only handle checkbox here
-    if (litehtml::t_strcasecmp("input", tag_name) != 0) {
+    if (strcasecmp("input", tag_name) != 0) {
         return {};
     }
 
@@ -1177,13 +1206,20 @@ void DocumentContainerPrivate::get_media_features(litehtml::media_features &medi
     qDebug(log) << "get_media_features";
 }
 
-void DocumentContainerPrivate::get_language(litehtml::tstring &language,
-                                            litehtml::tstring &culture) const
+void DocumentContainerPrivate::get_language(litehtml::string &language,
+                                            litehtml::string &culture) const
 {
     // TODO
     qDebug(log) << "get_language";
     Q_UNUSED(language)
     Q_UNUSED(culture)
+}
+
+void DocumentContainerPrivate::on_mouse_event(const litehtml::element::ptr &el,
+                                              litehtml::mouse_event event)
+{
+    Q_UNUSED(el)
+    Q_UNUSED(event)
 }
 
 void DocumentContainer::setPaintDevice(QPaintDevice *paintDevice)
@@ -1200,9 +1236,10 @@ void DocumentContainer::setDocument(const QByteArray &data, DocumentContainerCon
 {
     d->m_pixmaps.clear();
     d->clearSelection();
-    d->m_document = litehtml::document::createFromUTF8(data.constData(),
-                                                       d.get(),
-                                                       &context->d->context);
+    const QByteArray masterCss = context->d->masterStyleSheet.toUtf8();
+    d->m_document = litehtml::document::createFromString(litehtml::estring(data.constData()),
+                                                         d.get(),
+                                                         masterCss.constData());
     d->buildIndex();
 }
 
@@ -1229,7 +1266,7 @@ void DocumentContainer::draw(QPainter *painter, const QRect &clip)
 {
     d->drawSelection(painter, clip);
     const QPoint pos = -d->m_scrollPosition;
-    const litehtml::position clipRect = {clip.x(), clip.y(), clip.width(), clip.height()};
+    const litehtml::position clipRect(clip.x(), clip.y(), clip.width(), clip.height());
     d->m_document->draw(reinterpret_cast<litehtml::uint_ptr>(painter), pos.x(), pos.y(), &clipRect);
 }
 
@@ -1408,11 +1445,17 @@ QUrl DocumentContainer::linkAt(const QPoint &documentPos, const QPoint &viewport
 {
     if (!d->m_document)
         return {};
-    const litehtml::element::ptr element = d->m_document->root()
-                                               ->get_element_by_point(documentPos.x(),
-                                                                      documentPos.y(),
-                                                                      viewportPos.x(),
-                                                                      viewportPos.y());
+    const litehtml::element::ptr element
+        = d->m_document->root_render()
+              ? d->m_document->root_render()
+                    ->get_element_by_point(documentPos.x(),
+                                           documentPos.y(),
+                                           viewportPos.x(),
+                                           viewportPos.y(),
+                                           [](const std::shared_ptr<litehtml::render_item> &) {
+                                               return true;
+                                           })
+              : litehtml::element::ptr{};
     if (!element)
         return {};
     const char *href = element->get_attr("href");
@@ -1434,69 +1477,8 @@ QString DocumentContainer::selectedText() const
 // Helper function to get computed style properties from a litehtml element
 static QString getElementStyles(const litehtml::element::ptr &element)
 {
-    if (!element)
-        return QString();
-
-    QStringList styles;
-
-    // Get font family
-    const char *fontFamily = element->get_style_property("font-family", true, nullptr);
-    if (fontFamily && strlen(fontFamily) > 0) {
-        styles << QStringLiteral("font-family: %1").arg(QString::fromUtf8(fontFamily));
-    }
-
-    // Get font size
-    int fontSize = element->get_font_size();
-    if (fontSize > 0) {
-        styles << QStringLiteral("font-size: %1px").arg(fontSize);
-    }
-
-    // Get font weight
-    const char *fontWeight = element->get_style_property("font-weight", true, nullptr);
-    if (fontWeight && strlen(fontWeight) > 0 && strcmp(fontWeight, "normal") != 0) {
-        styles << QStringLiteral("font-weight: %1").arg(QString::fromUtf8(fontWeight));
-    }
-
-    // Get font style
-    const char *fontStyle = element->get_style_property("font-style", true, nullptr);
-    if (fontStyle && strlen(fontStyle) > 0 && strcmp(fontStyle, "normal") != 0) {
-        styles << QStringLiteral("font-style: %1").arg(QString::fromUtf8(fontStyle));
-    }
-
-    // Get text decoration
-    const char *textDecoration = element->get_style_property("text-decoration", true, nullptr);
-    if (textDecoration && strlen(textDecoration) > 0 && strcmp(textDecoration, "none") != 0) {
-        styles << QStringLiteral("text-decoration: %1").arg(QString::fromUtf8(textDecoration));
-    }
-
-    // Get color
-    litehtml::web_color color = element->get_color("color", true, litehtml::web_color());
-    if (color.alpha > 0) {
-        styles << QStringLiteral("color: rgb(%1, %2, %3)")
-                      .arg(color.red)
-                      .arg(color.green)
-                      .arg(color.blue);
-    }
-
-    // Get background color
-    const char *bgColor = element->get_style_property("background-color", false, nullptr);
-    if (bgColor && strlen(bgColor) > 0 && strcmp(bgColor, "transparent") != 0) {
-        litehtml::web_color bg = litehtml::web_color::from_string(bgColor, nullptr);
-        if (bg.alpha > 0) {
-            styles << QStringLiteral("background-color: rgb(%1, %2, %3)")
-                          .arg(bg.red)
-                          .arg(bg.green)
-                          .arg(bg.blue);
-        }
-    }
-
-    // Get text alignment
-    const char *textAlign = element->get_style_property("text-align", true, nullptr);
-    if (textAlign && strlen(textAlign) > 0 && strcmp(textAlign, "left") != 0) {
-        styles << QStringLiteral("text-align: %1").arg(QString::fromUtf8(textAlign));
-    }
-
-    return styles.join(QStringLiteral("; "));
+    Q_UNUSED(element)
+    return {};
 }
 
 // Helper structure to track parent elements during traversal
@@ -1517,7 +1499,7 @@ static void serializeLeafWithParents(const litehtml::element::ptr &leafElement,
         return;
 
     // Build the path from root to this leaf
-    litehtml::elements_vector leafPath = path(leafElement);
+    ElementPath leafPath = path(leafElement);
 
     // Find common ancestor with current stack
     int commonDepth = 0;
@@ -1592,7 +1574,7 @@ static void serializeLeafWithParents(const litehtml::element::ptr &leafElement,
     }
 
     // Add the text content of the leaf
-    litehtml::tstring elemText;
+    litehtml::string elemText;
     leafElement->get_text(elemText);
     if (!elemText.empty()) {
         QString text = QString::fromStdString(elemText);
@@ -1701,10 +1683,10 @@ void DocumentContainer::findText(const QString &text,
     }
 
     const auto fillXPos = [](const Selection::Element &e) {
-        litehtml::tstring ttext;
+        litehtml::string ttext;
         e.element->get_text(ttext);
         const QString text = QString::fromStdString(ttext);
-        const QFont &font = toQFont(e.element->get_font());
+        const QFont &font = toQFont(e.element->css().get_font());
         const QFontMetrics fm(font);
         return Selection::Element{e.element, e.index, fm.size(0, text.left(e.index)).width()};
     };
@@ -1756,7 +1738,7 @@ void DocumentContainer::setDefaultFont(const QFont &font)
     // we need to trigger the reparse of this info.
     if (d->m_document && d->m_document->root()) {
         d->m_document->root()->refresh_styles();
-        d->m_document->root()->parse_styles();
+        d->m_document->root()->compute_styles();
     }
 }
 
@@ -1798,11 +1780,10 @@ static litehtml::element::ptr elementForY(int y, const litehtml::document::ptr &
     const std::function<litehtml::element::ptr(int, litehtml::element::ptr)> recursion =
         [&recursion](int y, const litehtml::element::ptr &element) {
             litehtml::element::ptr result;
-            const int subY = y - element->get_position().y;
+            const int subY = y - element->get_placement().y;
             if (subY <= 0)
                 return element;
-            for (int i = 0; i < int(element->get_children_count()); ++i) {
-                const litehtml::element::ptr child = element->get_child(i);
+            for (const litehtml::element::ptr &child : element->children()) {
                 result = recursion(subY, child);
                 if (result)
                     return result;
@@ -1898,5 +1879,5 @@ DocumentContainerContext::~DocumentContainerContext() = default;
 
 void DocumentContainerContext::setMasterStyleSheet(const QString &css)
 {
-    d->context.load_master_stylesheet(css.toUtf8().constData());
+    d->masterStyleSheet = css;
 }

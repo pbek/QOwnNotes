@@ -1,74 +1,127 @@
 #ifndef LH_MEDIA_QUERY_H
 #define LH_MEDIA_QUERY_H
 
-#include <vector>
-
-#include "os_types.h"
+#include "css_tokenizer.h"
+#include "string_id.h"
 #include "types.h"
 
-namespace litehtml {
-struct media_query_expression {
-  typedef std::vector<media_query_expression> vector;
-  media_feature feature;
-  int val;
-  int val2;
-  bool check_as_bool;
+namespace litehtml
+{
+	// https://drafts.csswg.org/mediaqueries/#evaluating
+	enum trilean
+	{
+		False,
+		True,
+		Unknown
+	};
+	static_assert(False == false && True == true); // for casting bool to trilean
 
-  media_query_expression() {
-    check_as_bool = false;
-    feature = media_feature_none;
-    val = 0;
-    val2 = 0;
-  }
+	inline trilean operator!(trilean x)
+	{
+		if(x == False)
+			return True;
+		if(x == True)
+			return False;
+		return Unknown;
+	}
 
-  bool check(const media_features& features) const;
-};
+	inline trilean operator&&(trilean a, trilean b)
+	{
+		if(a == False || b == False)
+			return False;
+		if(a == True && b == True)
+			return True;
+		return Unknown;
+	}
 
-class media_query {
- public:
-  typedef std::shared_ptr<media_query> ptr;
-  typedef std::vector<media_query::ptr> vector;
+	inline trilean operator||(trilean a, trilean b)
+	{
+		if(a == True || b == True)
+			return True;
+		if(a == False && b == False)
+			return False;
+		return Unknown;
+	}
 
- private:
-  media_query_expression::vector m_expressions;
-  bool m_not;
-  media_type m_media_type;
+	struct media_condition;
 
- public:
-  media_query();
-  media_query(const media_query& val);
+	// <media-query> = <media-condition> | [ not | only ]? <media-type> [ and <media-condition-without-or> ]?
+	struct media_query
+	{
+		bool					m_not		 = true;
+		media_type				m_media_type = media_type_all;
+		vector<media_condition> m_conditions;
 
-  static media_query::ptr create_from_string(const tstring& str, const std::shared_ptr<document>& doc);
-  bool check(const media_features& features) const;
-};
+		trilean check(const media_features& features) const;
+	};
 
-class media_query_list {
- public:
-  typedef std::shared_ptr<media_query_list> ptr;
-  typedef std::vector<media_query_list::ptr> vector;
+	struct media_in_parens;
 
- private:
-  media_query::vector m_queries;
-  bool m_is_used;
+	// <media-condition> = not <media-in-parens> | <media-in-parens> [ [and <media-in-parens>]* | [or
+	// <media-in-parens>]* ]
+	struct media_condition
+	{
+		string_id				op = _and_; // _not_ _and_ _or_
+		vector<media_in_parens> m_conditions;
 
- public:
-  media_query_list();
-  media_query_list(const media_query_list& val);
+		trilean check(const media_features& features) const;
+	};
 
-  static media_query_list::ptr create_from_string(const tstring& str, const std::shared_ptr<document>& doc);
-  bool is_used() const;
-  bool apply_media_features(const media_features& features);  // returns true if the m_is_used changed
-};
+	// <media-feature> = ( [ <mf-plain> | <mf-boolean> | <mf-range> ] )
+	// <mf-plain> = <mf-name> : <mf-value>
+	struct media_feature
+	{
+		string name;
+		float  value  = 0;
+		float  value2 = 0;
+		short  op	  = 0;
+		short  op2	  = 0;
 
-inline media_query_list::media_query_list(const media_query_list& val) {
-  m_is_used = val.m_is_used;
-  m_queries = val.m_queries;
-}
+		bool verify_and_convert_units(string_id syntax, css_token val[2] = 0, css_token val2[2] = 0,
+									  shared_ptr<document> doc = 0);
 
-inline media_query_list::media_query_list() { m_is_used = false; }
+		bool compare(int x) const { return compare((float) x); }
+		bool compare(float x) const;
+		bool check(const media_features& features) const;
+	};
 
-inline bool media_query_list::is_used() const { return m_is_used; }
+	// <media-in-parens> = ( <media-condition> ) | <media-feature> | <general-enclosed>
+	struct unknown
+	{
+	}; // <general-enclosed>
+	struct media_in_parens : variant<media_condition, media_feature, unknown>
+	{
+		using base::base; // inherit ctors
 
-}  // namespace litehtml
+		trilean check(const media_features& features) const;
+	};
 
-#endif  // LH_MEDIA_QUERY_H
+	struct media_query_list
+	{
+		vector<media_query> m_queries;
+		bool				empty() const { return m_queries.empty(); }
+		bool				check(const media_features& features) const;
+	};
+	media_query_list parse_media_query_list(const css_token_vector& tokens, shared_ptr<document> doc);
+	media_query_list parse_media_query_list(const string& str, shared_ptr<document> doc);
+
+	class media_query_list_list
+	{
+	  public:
+		using ptr	 = shared_ptr<media_query_list_list>;
+		using vector = std::vector<ptr>;
+
+	  private:
+		std::vector<media_query_list> m_media_query_lists;
+		bool						  m_is_used = false;
+
+	  public:
+		void add(const media_query_list& mq_list) { m_media_query_lists.push_back(mq_list); }
+		bool is_used() const { return m_is_used; }
+
+		bool apply_media_features(const media_features& features); // returns true if the m_is_used changed
+	};
+
+} // namespace litehtml
+
+#endif // LH_MEDIA_QUERY_H

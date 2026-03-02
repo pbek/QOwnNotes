@@ -30,22 +30,21 @@
 #ifndef LITEHTML_URL_PATH_H__
 #define LITEHTML_URL_PATH_H__
 
-#include <ostream>
+#include "types.h"
 
-#include "litehtml/os_types.h"
+namespace litehtml
+{
 
-namespace litehtml {
+	bool is_url_path_absolute(const string& path);
 
-bool is_url_path_absolute(const tstring& path);
+	string url_path_directory_name(const string& path);
 
-tstring url_path_directory_name(const tstring& path);
+	string url_path_base_name(const string& path);
 
-tstring url_path_base_name(const tstring& path);
+	string url_path_append(const string& base, const string& path);
 
-tstring url_path_append(const tstring& base, const tstring& path);
+	string url_path_resolve(const string& base, const string& path);
 
-tstring url_path_resolve(const tstring& base, const tstring& path);
+} // namespace litehtml
 
-}  // namespace litehtml
-
-#endif  // LITEHTML_URL_PATH_H__
+#endif // LITEHTML_URL_PATH_H__

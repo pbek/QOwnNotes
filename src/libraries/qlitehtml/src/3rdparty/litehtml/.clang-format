@@ -1,3 +1,60 @@
-# LLVM,Google,Chromium,Mozilla,WebKit,Microsoft
-BasedOnStyle: Google
-ColumnLimit: 1000
+# Options are listed here:
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+---
+Language: Cpp
+BasedOnStyle: Microsoft
+Standard: c++17
+TabWidth: 4
+UseTab: Always
+IndentWidth: 4
+PointerAlignment: Left
+SpaceAfterCStyleCast: true
+SpaceBeforeParens: false
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: false
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+NamespaceIndentation: All
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCompound: true
+  AlignFunctionPointers: true
+  PadOperators: true
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCompound: true
+  AlignFunctionPointers: true
+  PadOperators: true
+SortIncludes: false
+IndentCaseBlocks: true
+InsertNewlineAtEOF: true
+BreakConstructorInitializers: AfterColon
+PackConstructorInitializers: Never
+AllowShortLambdasOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: Inline
+AlignArrayOfStructures: Left
+AllowShortBlocksOnASingleLine: true

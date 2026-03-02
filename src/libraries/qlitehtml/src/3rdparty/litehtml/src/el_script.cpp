@@ -1,17 +1,28 @@
 #include "el_script.h"
-
 #include "document.h"
-#include "html.h"
 
-litehtml::el_script::el_script(const std::shared_ptr<litehtml::document>& doc) : litehtml::element(doc) {}
-
-void litehtml::el_script::parse_attributes() {
-  // TODO: pass script text to document container
+litehtml::el_script::el_script(const std::shared_ptr<document>& doc) :
+	element(doc)
+{
 }
 
-bool litehtml::el_script::appendChild(const ptr& el) {
-  el->get_text(m_text);
-  return true;
+void litehtml::el_script::parse_attributes()
+{
+	// TODO: pass script text to document container
 }
 
-const litehtml::tchar_t* litehtml::el_script::get_tagName() const { return _t("script"); }
+bool litehtml::el_script::appendChild(const ptr& el)
+{
+	el->get_text(m_text);
+	return true;
+}
+
+litehtml::string_id litehtml::el_script::tag() const
+{
+	return _script_;
+}
+
+const char* litehtml::el_script::get_tagName() const
+{
+	return "script";
+}

@@ -30,7 +30,7 @@ const GumboVector kGumboEmptyVector = {NULL, 0, 0};
 void gumbo_vector_init(struct GumboInternalParser* parser,
     size_t initial_capacity, GumboVector* vector) {
   vector->length = 0;
-  vector->capacity = (unsigned)initial_capacity;
+  vector->capacity = initial_capacity;
   if (initial_capacity > 0) {
     vector->data =
         gumbo_parser_allocate(parser, sizeof(void*) * initial_capacity);

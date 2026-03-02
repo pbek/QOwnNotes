@@ -1,76 +1,84 @@
 #ifndef LH_ITERATORS_H
 #define LH_ITERATORS_H
 
-#include "element.h"
 #include "types.h"
+#include <functional>
 
-namespace litehtml {
+namespace litehtml
+{
+	class render_item;
 
-class iterator_selector {
- public:
-  virtual bool select(const element::ptr& el) = 0;
+	class iterator_selector
+	{
+	  public:
+		virtual bool select(const std::shared_ptr<render_item>& el) = 0;
 
- protected:
-  ~iterator_selector() = default;
-};
+	  protected:
+		~iterator_selector() = default;
+	};
 
-class elements_iterator {
- private:
-  struct stack_item {
-    int idx;
-    element::ptr el;
-    stack_item() : idx(0) {}
-    stack_item(const stack_item& val) {
-      idx = val.idx;
-      el = val.el;
-    }
-    stack_item(stack_item&& val) {
-      idx = val.idx;
-      el = std::move(val.el);
-    }
-  };
+	enum iterator_item_type
+	{
+		iterator_item_type_child,
+		iterator_item_type_start_parent,
+		iterator_item_type_end_parent
+	};
 
-  std::vector<stack_item> m_stack;
-  element::ptr m_el;
-  int m_idx;
-  iterator_selector* m_go_inside;
-  iterator_selector* m_select;
+	class elements_iterator
+	{
+	  private:
+		iterator_selector* m_go_inside;
+		iterator_selector* m_select;
+		bool			   m_return_parent;
 
- public:
-  elements_iterator(const element::ptr& el, iterator_selector* go_inside, iterator_selector* select) {
-    m_el = el;
-    m_idx = -1;
-    m_go_inside = go_inside;
-    m_select = select;
-  }
+		/**
+		 * Checks if iterator should go inside the element
+		 *
+		 * @param el element to check
+		 * @return true to go inside
+		 */
+		bool go_inside(const std::shared_ptr<render_item>& el);
 
-  ~elements_iterator() = default;
+	  public:
+		elements_iterator(bool return_parents, iterator_selector* go_inside, iterator_selector* select);
+		~elements_iterator() = default;
 
-  element::ptr next(bool ret_parent = true);
+		void process(const std::shared_ptr<render_item>&										   container,
+					 const std::function<void(std::shared_ptr<render_item>&, iterator_item_type)>& func);
 
- private:
-  void next_idx();
-};
+	  private:
+		void next_idx();
+	};
 
-class go_inside_inline final : public iterator_selector {
- public:
-  bool select(const element::ptr& el) override;
-};
+	class go_inside_inline final : public iterator_selector
+	{
+	  public:
+		bool select(const std::shared_ptr<render_item>& el) override;
+	};
 
-class go_inside_table final : public iterator_selector {
- public:
-  bool select(const element::ptr& el) override;
-};
+	class inline_selector final : public iterator_selector
+	{
+	  public:
+		bool select(const std::shared_ptr<render_item>& el) override;
+	};
 
-class table_rows_selector final : public iterator_selector {
- public:
-  bool select(const element::ptr& el) override;
-};
+	class go_inside_table final : public iterator_selector
+	{
+	  public:
+		bool select(const std::shared_ptr<render_item>& el) override;
+	};
 
-class table_cells_selector final : public iterator_selector {
- public:
-  bool select(const element::ptr& el) override;
-};
-}  // namespace litehtml
+	class table_rows_selector final : public iterator_selector
+	{
+	  public:
+		bool select(const std::shared_ptr<render_item>& el) override;
+	};
 
-#endif  // LH_ITERATORS_H
+	class table_cells_selector final : public iterator_selector
+	{
+	  public:
+		bool select(const std::shared_ptr<render_item>& el) override;
+	};
+} // namespace litehtml
+
+#endif // LH_ITERATORS_H

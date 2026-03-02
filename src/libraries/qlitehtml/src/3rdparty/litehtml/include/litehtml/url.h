@@ -30,73 +30,77 @@
 #ifndef LITEHTML_URL_H__
 #define LITEHTML_URL_H__
 
-#include <ostream>
-
-#include "litehtml/os_types.h"
+#include "types.h"
 
 // https://datatracker.ietf.org/doc/html/rfc3986
 
-namespace litehtml {
+namespace litehtml
+{
 
-class url {
- public:
-  url() = default;
+	class url
+	{
+	  public:
+		url() = default;
 
-  explicit url(const tstring& str);
+		explicit url(const string& str);
 
-  url(const tstring& scheme, const tstring& authority, const tstring& path, const tstring& query, const tstring& fragment);
+		url(const string& scheme, const string& authority, const string& path, const string& query,
+			const string& fragment);
 
-  const tstring& string() const { return str_; }
+		const string& str() const { return str_; }
 
-  const tstring& scheme() const { return scheme_; }
+		const string& scheme() const { return scheme_; }
 
-  bool has_scheme() const { return !scheme_.empty(); }
+		bool has_scheme() const { return !scheme_.empty(); }
 
-  const tstring& authority() const { return authority_; }
+		const string& authority() const { return authority_; }
 
-  bool has_authority() const { return !authority_.empty(); }
+		bool has_authority() const { return !authority_.empty(); }
 
-  const tstring& path() const { return path_; }
+		const string& path() const { return path_; }
 
-  bool has_path() const { return !path_.empty(); }
+		bool has_path() const { return !path_.empty(); }
 
-  const tstring& query() const { return query_; }
+		const string& query() const { return query_; }
 
-  bool has_query() const { return !query_.empty(); }
+		bool has_query() const { return !query_.empty(); }
 
-  const tstring& fragment() const { return fragment_; }
+		const string& fragment() const { return fragment_; }
 
-  bool has_fragment() const { return !fragment_.empty(); }
+		bool has_fragment() const { return !fragment_.empty(); }
 
- protected:
-  tstring str_;
+		static string encode(const string& str);
+		static string decode(const string& str);
 
-  // Assume URLs are relative by default.  See RFC 3986 Section 4.3 for
-  // information on which URLs are considered relative and which URLs are
-  // considered absolute:
-  //
-  //   https://datatracker.ietf.org/doc/html/rfc3986#section-4.3
+	  protected:
+		string str_;
 
-  bool absolute_ = false;
+		// Assume URLs are relative by default.  See RFC 3986 Section 4.3 for
+		// information on which URLs are considered relative and which URLs are
+		// considered absolute:
+		//
+		//   https://datatracker.ietf.org/doc/html/rfc3986#section-4.3
 
-  tstring scheme_;
+		bool absolute_ = false;
 
-  tstring authority_;
+		string scheme_;
 
-  tstring path_;
+		string authority_;
 
-  tstring query_;
+		string path_;
 
-  tstring fragment_;
-};
+		string query_;
 
-// Returns a URL that is resolved from the reference URL that might be
-// relative to the base URL.  For example, given <https://www.twitter.com/> as
-// the base URL and </foo> as the relative URL, resolve() will return the URL
-// <https://www.twitter.com/foo>.
+		string fragment_;
+	};
 
-url resolve(const url& base, const url& reference);
+	// Returns a URL that is resolved from the reference URL that might be
+	// relative to the base URL.  For example, given <https://www.twitter.com/> as
+	// the base URL and </foo> as the relative URL, resolve() will return the URL
+	// <https://www.twitter.com/foo>.
 
-}  // namespace litehtml
+	url resolve(const url& base, const url& reference);
 
-#endif  // LITEHTML_URL_H__
+} // namespace litehtml
+
+#endif // LITEHTML_URL_H__

@@ -136,7 +136,7 @@ static bool consume_numeric_ref(
     return false;
   }
 
-  int codepoint = 0;
+  unsigned int codepoint = 0;
   bool status = true;
   do {
     codepoint = (codepoint * (is_hex ? 16 : 10)) + digit;
@@ -23009,7 +23009,7 @@ _again:
   if (cs >= 7623) {
     assert(output->first != kGumboNoChar);
     char last_char = *(te - 1);
-    ptrdiff_t len = te - start;
+    int len = te - start;
     if (last_char == ';') {
       bool matched = utf8iterator_maybe_consume_match(input, start, len, true);
       assert(matched);

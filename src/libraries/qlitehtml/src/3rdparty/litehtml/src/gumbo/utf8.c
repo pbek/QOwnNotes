@@ -137,7 +137,7 @@ static void read_char(Utf8Iterator* iter) {
   for (const char* c = iter->_start; c < iter->_end; ++c) {
     decode(&state, &code_point, (uint32_t)(unsigned char) (*c));
     if (state == UTF8_ACCEPT) {
-      iter->_width = (int)(c - iter->_start + 1);
+      iter->_width = c - iter->_start + 1;
       // This is the special handling for carriage returns that is mandated by
       // the HTML5 spec.  Since we're looking for particular 7-bit literal
       // characters, we operate in terms of chars and only need a check for iter
@@ -181,7 +181,7 @@ static void read_char(Utf8Iterator* iter) {
 }
 
 static void update_position(Utf8Iterator* iter) {
-  iter->_pos.offset += (int)iter->_width;
+  iter->_pos.offset += iter->_width;
   if (iter->_current == '\n') {
     ++iter->_pos.line;
     iter->_pos.column = 1;

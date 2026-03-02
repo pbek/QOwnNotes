@@ -1,198 +1,317 @@
 #include "html.h"
-
 #include "types.h"
-#include "utf8_strings.h"
 
-void litehtml::trim(tstring& s) {
-  tstring::size_type pos = s.find_first_not_of(_t(" \n\r\t"));
-  if (pos != tstring::npos) {
-    s.erase(s.begin(), s.begin() + pos);
-  }
-  pos = s.find_last_not_of(_t(" \n\r\t"));
-  if (pos != tstring::npos) {
-    s.erase(s.begin() + pos + 1, s.end());
-  }
-}
+namespace litehtml
+{
 
-void litehtml::lcase(tstring& s) {
-  for (tchar_t& i : s) {
-    i = t_tolower(i);
-  }
-}
+	string& trim(string& s, const string& chars_to_trim)
+	{
+		string::size_type pos = s.find_first_not_of(chars_to_trim);
+		if(pos != string::npos)
+		{
+			s.erase(s.begin(), s.begin() + pos);
+		} else
+		{
+			s = "";
+			return s;
+		}
+		pos = s.find_last_not_of(chars_to_trim);
+		if(pos != string::npos)
+		{
+			s.erase(s.begin() + pos + 1, s.end());
+		}
+		return s;
+	}
 
-litehtml::tstring::size_type litehtml::find_close_bracket(const tstring& s, tstring::size_type off, tchar_t open_b, tchar_t close_b) {
-  int cnt = 0;
-  for (tstring::size_type i = off; i < s.length(); i++) {
-    if (s[i] == open_b) {
-      cnt++;
-    } else if (s[i] == close_b) {
-      cnt--;
-      if (!cnt) {
-        return i;
-      }
-    }
-  }
-  return tstring::npos;
-}
+	string trim(const string& s, const string& chars_to_trim)
+	{
+		string str = s;
+		trim(str, chars_to_trim);
+		return str;
+	}
 
-int litehtml::value_index(const tstring& val, const tstring& strings, int defValue, tchar_t delim) {
-  if (val.empty() || strings.empty() || !delim) {
-    return defValue;
-  }
+	string& lcase(string& s)
+	{
+		for(char& i : s)
+		{
+			i = (char) t_tolower(i);
+		}
+		return s;
+	}
 
-  int idx = 0;
-  tstring::size_type delim_start = 0;
-  tstring::size_type delim_end = strings.find(delim, delim_start);
-  tstring::size_type item_len;
-  while (true) {
-    if (delim_end == tstring::npos) {
-      item_len = strings.length() - delim_start;
-    } else {
-      item_len = delim_end - delim_start;
-    }
-    if (item_len == val.length()) {
-      if (val == strings.substr(delim_start, item_len)) {
-        return idx;
-      }
-    }
-    idx++;
-    delim_start = delim_end;
-    if (delim_start == tstring::npos) break;
-    delim_start++;
-    if (delim_start == strings.length()) break;
-    delim_end = strings.find(delim, delim_start);
-  }
-  return defValue;
-}
+	string::size_type find_close_bracket(const string& s, string::size_type off, char open_b, char close_b)
+	{
+		int cnt = 0;
+		for(string::size_type i = off; i < s.length(); i++)
+		{
+			if(s[i] == open_b)
+			{
+				cnt++;
+			} else if(s[i] == close_b)
+			{
+				cnt--;
+				if(!cnt)
+				{
+					return i;
+				}
+			}
+		}
+		return string::npos;
+	}
 
-bool litehtml::value_in_list(const tstring& val, const tstring& strings, tchar_t delim) {
-  int idx = value_index(val, strings, -1, delim);
-  if (idx >= 0) {
-    return true;
-  }
-  return false;
-}
+	string index_value(int index, const string& strings, char delim)
+	{
+		std::vector<string> vals;
+		string				delims;
+		delims.push_back(delim);
+		split_string(strings, vals, delims);
+		if(index >= 0 && index < (int) vals.size())
+		{
+			return vals[index];
+		}
+		return std::to_string(index);
+	}
 
-void litehtml::split_string(const tstring& str, string_vector& tokens, const tstring& delims, const tstring& delims_preserve, const tstring& quote) {
-  if (str.empty() || (delims.empty() && delims_preserve.empty())) {
-    return;
-  }
+	int value_index(const string& val, const string& strings, int defValue, char delim)
+	{
+		if(val.empty() || strings.empty() || !delim)
+		{
+			return defValue;
+		}
 
-  tstring all_delims = delims + delims_preserve + quote;
+		int				  idx		  = 0;
+		string::size_type delim_start = 0;
+		string::size_type delim_end	  = strings.find(delim, delim_start);
+		string::size_type item_len;
+		while(true)
+		{
+			if(delim_end == string::npos)
+			{
+				item_len = strings.length() - delim_start;
+			} else
+			{
+				item_len = delim_end - delim_start;
+			}
+			if(item_len == val.length())
+			{
+				if(val == strings.substr(delim_start, item_len))
+				{
+					return idx;
+				}
+			}
+			idx++;
+			delim_start = delim_end;
+			if(delim_start == string::npos)
+				break;
+			delim_start++;
+			if(delim_start == strings.length())
+				break;
+			delim_end = strings.find(delim, delim_start);
+		}
+		return defValue;
+	}
 
-  tstring::size_type token_start = 0;
-  tstring::size_type token_end = str.find_first_of(all_delims, token_start);
-  tstring::size_type token_len;
-  tstring token;
-  while (true) {
-    while (token_end != tstring::npos && quote.find_first_of(str[token_end]) != tstring::npos) {
-      if (str[token_end] == _t('(')) {
-        token_end = find_close_bracket(str, token_end, _t('('), _t(')'));
-      } else if (str[token_end] == _t('[')) {
-        token_end = find_close_bracket(str, token_end, _t('['), _t(']'));
-      } else if (str[token_end] == _t('{')) {
-        token_end = find_close_bracket(str, token_end, _t('{'), _t('}'));
-      } else {
-        token_end = str.find_first_of(str[token_end], token_end + 1);
-      }
-      if (token_end != tstring::npos) {
-        token_end = str.find_first_of(all_delims, token_end + 1);
-      }
-    }
+	bool value_in_list(const string& val, const string& strings, char delim)
+	{
+		int idx = value_index(val, strings, -1, delim);
+		if(idx >= 0)
+		{
+			return true;
+		}
+		return false;
+	}
 
-    if (token_end == tstring::npos) {
-      token_len = tstring::npos;
-    } else {
-      token_len = token_end - token_start;
-    }
+	string_vector split_string(const string& str, const string& delims, const string& delims_preserve,
+							   const string& quote)
+	{
+		string_vector result;
+		split_string(str, result, delims, delims_preserve, quote);
+		return result;
+	}
 
-    token = str.substr(token_start, token_len);
-    if (!token.empty()) {
-      tokens.push_back(token);
-    }
-    if (token_end != tstring::npos && !delims_preserve.empty() && delims_preserve.find_first_of(str[token_end]) != tstring::npos) {
-      tokens.push_back(str.substr(token_end, 1));
-    }
+	void split_string(const string& str, string_vector& tokens, const string& delims, const string& delims_preserve,
+					  const string& quote)
+	{
+		if(str.empty() || (delims.empty() && delims_preserve.empty()))
+		{
+			return;
+		}
 
-    token_start = token_end;
-    if (token_start == tstring::npos) break;
-    token_start++;
-    if (token_start == str.length()) break;
-    token_end = str.find_first_of(all_delims, token_start);
-  }
-}
+		string all_delims			  = delims + delims_preserve + quote;
 
-void litehtml::join_string(tstring& str, const string_vector& tokens, const tstring& delims) {
-  tstringstream ss;
-  for (size_t i = 0; i < tokens.size(); ++i) {
-    if (i != 0) {
-      ss << delims;
-    }
-    ss << tokens[i];
-  }
+		string::size_type token_start = 0;
+		string::size_type token_end	  = str.find_first_of(all_delims, token_start);
+		string::size_type token_len;
+		string			  token;
+		while(true)
+		{
+			while(token_end != string::npos && quote.find_first_of(str[token_end]) != string::npos)
+			{
+				if(str[token_end] == '(')
+				{
+					token_end = find_close_bracket(str, token_end, '(', ')');
+				} else if(str[token_end] == '[')
+				{
+					token_end = find_close_bracket(str, token_end, '[', ']');
+				} else if(str[token_end] == '{')
+				{
+					token_end = find_close_bracket(str, token_end, '{', '}');
+				} else
+				{
+					token_end = str.find_first_of(str[token_end], token_end + 1);
+				}
+				if(token_end != string::npos)
+				{
+					token_end = str.find_first_of(all_delims, token_end + 1);
+				}
+			}
 
-  str = ss.str();
-}
+			if(token_end == string::npos)
+			{
+				token_len = string::npos;
+			} else
+			{
+				token_len = token_end - token_start;
+			}
 
-int litehtml::t_strcasecmp(const litehtml::tchar_t* s1, const litehtml::tchar_t* s2) {
-  int i, d, c;
+			token = str.substr(token_start, token_len);
+			if(!token.empty())
+			{
+				tokens.push_back(token);
+			}
+			if(token_end != string::npos && !delims_preserve.empty() &&
+			   delims_preserve.find_first_of(str[token_end]) != string::npos)
+			{
+				tokens.push_back(str.substr(token_end, 1));
+			}
 
-  for (i = 0;; i++) {
-    c = t_tolower((unsigned char)s1[i]);
-    d = c - t_tolower((unsigned char)s2[i]);
-    if (d < 0)
-      return -1;
-    else if (d > 0)
-      return 1;
-    else if (c == 0)
-      return 0;
-  }
-}
+			token_start = token_end;
+			if(token_start == string::npos)
+				break;
+			token_start++;
+			if(token_start == str.length())
+				break;
+			token_end = str.find_first_of(all_delims, token_start);
+		}
+	}
 
-int litehtml::t_strncasecmp(const litehtml::tchar_t* s1, const litehtml::tchar_t* s2, size_t n) {
-  int i, d, c;
+	void join_string(string& str, const string_vector& tokens, const string& delims)
+	{
+		str = "";
+		for(size_t i = 0; i < tokens.size(); i++)
+		{
+			if(i != 0)
+			{
+				str += delims;
+			}
+			str += tokens[i];
+		}
+	}
 
-  for (i = 0; i < n; i++) {
-    c = t_tolower((unsigned char)s1[i]);
-    d = c - t_tolower((unsigned char)s2[i]);
-    if (d < 0)
-      return -1;
-    else if (d > 0)
-      return 1;
-  }
+	int t_strcasecmp(const char* s1, const char* s2)
+	{
+		int i, d, c;
 
-  return 0;
-}
+		for(i = 0;; i++)
+		{
+			c = t_tolower((unsigned char) s1[i]);
+			d = c - t_tolower((unsigned char) s2[i]);
+			if(d < 0)
+				return -1;
+			else if(d > 0)
+				return 1;
+			else if(c == 0)
+				return 0;
+		}
+	}
 
-void litehtml::document_container::split_text(const char* text, const std::function<void(const tchar_t*)>& on_word, const std::function<void(const tchar_t*)>& on_space) {
-  std::wstring str;
-  std::wstring str_in = (const wchar_t*)(utf8_to_wchar(text));
-  ucode_t c;
-  for (size_t i = 0; i < str_in.length(); i++) {
-    c = (ucode_t)str_in[i];
-    if (c <= ' ' && (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f')) {
-      if (!str.empty()) {
-        on_word(litehtml_from_wchar(str.c_str()));
-        str.clear();
-      }
-      str += c;
-      on_space(litehtml_from_wchar(str.c_str()));
-      str.clear();
-    }
-    // CJK character range
-    else if (c >= 0x4E00 && c <= 0x9FCC) {
-      if (!str.empty()) {
-        on_word(litehtml_from_wchar(str.c_str()));
-        str.clear();
-      }
-      str += c;
-      on_word(litehtml_from_wchar(str.c_str()));
-      str.clear();
-    } else {
-      str += c;
-    }
-  }
-  if (!str.empty()) {
-    on_word(litehtml_from_wchar(str.c_str()));
-  }
-}
+	int t_strncasecmp(const char* s1, const char* s2, size_t n)
+	{
+		int i, d, c;
+
+		for(i = 0; i < (int) n; i++)
+		{
+			c = t_tolower((unsigned char) s1[i]);
+			d = c - t_tolower((unsigned char) s2[i]);
+			if(d < 0)
+				return -1;
+			else if(d > 0)
+				return 1;
+			else if(c == 0)
+				return 0;
+		}
+
+		return 0;
+	}
+
+	string get_escaped_string(const string& in_str)
+	{
+		string ret;
+		for(auto ch : in_str)
+		{
+			switch(ch)
+			{
+			case '\'':
+				ret += "\\'";
+				break;
+
+			case '\"':
+				ret += "\\\"";
+				break;
+
+			case '\?':
+				ret += "\\?";
+				break;
+
+			case '\\':
+				ret += "\\\\";
+				break;
+
+			case '\a':
+				ret += "\\a";
+				break;
+
+			case '\b':
+				ret += "\\b";
+				break;
+
+			case '\f':
+				ret += "\\f";
+				break;
+
+			case '\n':
+				ret += "\\n";
+				break;
+
+			case '\r':
+				ret += "\\r";
+				break;
+
+			case '\t':
+				ret += "\\t";
+				break;
+
+			case '\v':
+				ret += "\\v";
+				break;
+
+			default:
+				ret += ch;
+			}
+		}
+		return ret;
+	}
+
+	bool is_number(const string& string, const bool allow_dot)
+	{
+		for(auto ch : string)
+		{
+			if(!(t_isdigit(ch) || (allow_dot && ch == '.')))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+} // namespace litehtml

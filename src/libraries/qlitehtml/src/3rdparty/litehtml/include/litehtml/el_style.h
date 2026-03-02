@@ -1,19 +1,23 @@
 #ifndef LH_EL_STYLE_H
 #define LH_EL_STYLE_H
 
-#include "html_tag.h"
+#include "element.h"
 
-namespace litehtml {
-class el_style : public element {
-  elements_vector m_children;
+namespace litehtml
+{
+	class el_style : public element
+	{
+		elements_list m_children;
 
- public:
-  explicit el_style(const std::shared_ptr<litehtml::document>& doc);
+	  public:
+		explicit el_style(const std::shared_ptr<document>& doc);
 
-  void parse_attributes() override;
-  bool appendChild(const ptr& el) override;
-  const tchar_t* get_tagName() const override;
-};
-}  // namespace litehtml
+		void		parse_attributes() override;
+		bool		appendChild(const ptr& el) override;
+		void		compute_styles(bool recursive) override;
+		string_id	tag() const override;
+		const char* get_tagName() const override;
+	};
+} // namespace litehtml
 
-#endif  // LH_EL_STYLE_H
+#endif // LH_EL_STYLE_H

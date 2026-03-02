@@ -1,143 +1,145 @@
-#include "el_text.h"
-
-#include "document.h"
 #include "html.h"
+#include "el_text.h"
+#include "render_item.h"
+#include "document_container.h"
 
-litehtml::el_text::el_text(const tchar_t* text, const std::shared_ptr<litehtml::document>& doc) : element(doc) {
-  if (text) {
-    m_text = text;
-  }
-  m_text_transform = text_transform_none;
-  m_use_transformed = false;
-  m_draw_spaces = true;
+litehtml::el_text::el_text(const char* text, const document::ptr& doc) :
+	element(doc)
+{
+	if(text)
+	{
+		m_text = text;
+	}
+	m_use_transformed = false;
+	m_draw_spaces	  = true;
+	css_w().set_display(display_inline_text);
 }
 
-void litehtml::el_text::get_content_size(size& sz, int max_width) { sz = m_size; }
-
-void litehtml::el_text::get_text(tstring& text) { text += m_text; }
-
-const litehtml::tchar_t* litehtml::el_text::get_style_property(const tchar_t* name, bool inherited, const tchar_t* def /*= 0*/) {
-  if (inherited) {
-    element::ptr el_parent = parent();
-    if (el_parent) {
-      return el_parent->get_style_property(name, inherited, def);
-    }
-  }
-  return def;
+void litehtml::el_text::get_content_size(size& sz, pixel_t /*max_width*/)
+{
+	sz = m_size;
 }
 
-void litehtml::el_text::parse_styles(bool is_reparse) {
-  m_text_transform = (text_transform)value_index(get_style_property(_t("text-transform"), true, _t("none")), text_transform_strings, text_transform_none);
-  if (m_text_transform != text_transform_none) {
-    m_transformed_text = m_text;
-    m_use_transformed = true;
-    get_document()->container()->transform_text(m_transformed_text, m_text_transform);
-  }
-
-  if (is_white_space()) {
-    m_transformed_text = _t(" ");
-    m_use_transformed = true;
-  } else {
-    if (m_text == _t("\t")) {
-      m_transformed_text = _t("    ");
-      m_use_transformed = true;
-    }
-    if (m_text == _t("\n") || m_text == _t("\r")) {
-      m_transformed_text = _t("");
-      m_use_transformed = true;
-    }
-  }
-
-  font_metrics fm;
-  uint_ptr font = 0;
-  element::ptr el_parent = parent();
-  if (el_parent) {
-    font = el_parent->get_font(&fm);
-  }
-  if (is_break()) {
-    m_size.height = 0;
-    m_size.width = 0;
-  } else {
-    m_size.height = fm.height;
-    m_size.width = get_document()->container()->text_width(m_use_transformed ? m_transformed_text.c_str() : m_text.c_str(), font);
-  }
-  m_draw_spaces = fm.draw_spaces;
+void litehtml::el_text::get_text(string& text) const
+{
+	text += m_text;
 }
 
-int litehtml::el_text::get_base_line() {
-  element::ptr el_parent = parent();
-  if (el_parent) {
-    return el_parent->get_base_line();
-  }
-  return 0;
+void litehtml::el_text::compute_styles(bool /*recursive*/)
+{
+	element::ptr el_parent = parent();
+	if(el_parent)
+	{
+		css_w().line_height_w() = el_parent->css().line_height();
+		css_w().set_font(el_parent->css().get_font());
+		css_w().set_font_metrics(el_parent->css().get_font_metrics());
+		css_w().set_white_space(el_parent->css().get_white_space());
+		css_w().set_text_transform(el_parent->css().get_text_transform());
+	}
+	css_w().set_display(display_inline_text);
+	css_w().set_float(float_none);
+
+	if(m_css.get_text_transform() != text_transform_none)
+	{
+		m_transformed_text = m_text;
+		m_use_transformed  = true;
+		get_document()->container()->transform_text(m_transformed_text, m_css.get_text_transform());
+	} else
+	{
+		m_use_transformed = false;
+	}
+
+	element::ptr p = parent();
+	while(p && p->css().get_display() == display_inline)
+	{
+		if(p->css().get_position() == element_position_relative)
+		{
+			css_w().set_offsets(p->css().get_offsets());
+			css_w().set_position(element_position_relative);
+			break;
+		}
+		p = p->parent();
+	}
+	if(p)
+	{
+		css_w().set_position(element_position_static);
+	}
+
+	if(is_white_space())
+	{
+		m_transformed_text = " ";
+		m_use_transformed  = true;
+	} else
+	{
+		if(m_text == "\t")
+		{
+			m_transformed_text = "    ";
+			m_use_transformed  = true;
+		}
+		if(m_text == "\n" || m_text == "\r")
+		{
+			m_transformed_text = "";
+			m_use_transformed  = true;
+		}
+	}
+
+	font_metrics fm;
+	uint_ptr	 font = 0;
+	if(el_parent)
+	{
+		font = el_parent->css().get_font();
+		fm	 = el_parent->css().get_font_metrics();
+	}
+	if(is_break() || !font)
+	{
+		m_size.height = 0;
+		m_size.width  = 0;
+	} else
+	{
+		m_size.height = fm.height;
+		m_size.width  = get_document()->container()->text_width(
+			 m_use_transformed ? m_transformed_text.c_str() : m_text.c_str(), font);
+	}
+	m_draw_spaces = fm.draw_spaces;
 }
 
-void litehtml::el_text::draw(uint_ptr hdc, int x, int y, const position* clip) {
-  if (is_white_space() && !m_draw_spaces) {
-    return;
-  }
+void litehtml::el_text::draw(uint_ptr hdc, pixel_t x, pixel_t y, const position* clip,
+							 const std::shared_ptr<render_item>& ri)
+{
+	if(is_white_space() && !m_draw_spaces)
+	{
+		return;
+	}
 
-  position pos = m_pos;
-  pos.x += x;
-  pos.y += y;
+	position pos  = ri->pos();
+	pos.x		 += x;
+	pos.y		 += y;
+	pos.round();
 
-  if (pos.does_intersect(clip)) {
-    element::ptr el_parent = parent();
-    if (el_parent) {
-      document::ptr doc = get_document();
+	if(pos.does_intersect(clip))
+	{
+		element::ptr el_parent = parent();
+		if(el_parent)
+		{
+			document::ptr doc = get_document();
 
-      uint_ptr font = el_parent->get_font();
-      litehtml::web_color color = el_parent->get_color(_t("color"), true, doc->get_def_color());
-      doc->container()->draw_text(hdc, m_use_transformed ? m_transformed_text.c_str() : m_text.c_str(), font, color, pos);
-    }
-  }
+			uint_ptr font	  = el_parent->css().get_font();
+			if(font)
+			{
+				web_color color = el_parent->css().get_color();
+				doc->container()->draw_text(hdc, m_use_transformed ? m_transformed_text.c_str() : m_text.c_str(), font,
+											color, pos);
+			}
+		}
+	}
 }
 
-int litehtml::el_text::line_height() const {
-  element::ptr el_parent = parent();
-  if (el_parent) {
-    return el_parent->line_height();
-  }
-  return 0;
+litehtml::string litehtml::el_text::dump_get_name()
+{
+	return "text: \"" + get_escaped_string(m_text) + "\"";
 }
 
-litehtml::uint_ptr litehtml::el_text::get_font(font_metrics* fm /*= 0*/) {
-  element::ptr el_parent = parent();
-  if (el_parent) {
-    return el_parent->get_font(fm);
-  }
-  return 0;
-}
-
-litehtml::style_display litehtml::el_text::get_display() const { return display_inline_text; }
-
-litehtml::white_space litehtml::el_text::get_white_space() const {
-  element::ptr el_parent = parent();
-  if (el_parent) return el_parent->get_white_space();
-  return white_space_normal;
-}
-
-litehtml::element_position litehtml::el_text::get_element_position(css_offsets* offsets) const {
-  element::ptr p = parent();
-  while (p && p->get_display() == display_inline) {
-    if (p->get_element_position() == element_position_relative) {
-      if (offsets) {
-        *offsets = p->get_css_offsets();
-      }
-      return element_position_relative;
-    }
-    p = p->parent();
-  }
-  return element_position_static;
-}
-
-litehtml::css_offsets litehtml::el_text::get_css_offsets() const {
-  element::ptr p = parent();
-  while (p && p->get_display() == display_inline) {
-    if (p->get_element_position() == element_position_relative) {
-      return p->get_css_offsets();
-    }
-    p = p->parent();
-  }
-  return {};
+std::vector<std::tuple<litehtml::string, litehtml::string>> litehtml::el_text::dump_get_attrs()
+{
+	return {};
 }

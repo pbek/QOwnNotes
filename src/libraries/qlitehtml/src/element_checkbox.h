@@ -12,12 +12,16 @@ public:
 
     void parse_attributes() override;
 
-    void draw(litehtml::uint_ptr hdc, int x, int y, const litehtml::position *clip) override;
+    void draw(litehtml::uint_ptr hdc,
+              litehtml::pixel_t x,
+              litehtml::pixel_t y,
+              const litehtml::position *clip,
+              const std::shared_ptr<litehtml::render_item> &ri) override;
 
     void set_checked(bool checked) { m_checked = checked; }
 
 private:
-    void addProperty(const litehtml::tchar_t *name, const litehtml::tchar_t *defaultValue);
+    void addProperty(const char *name, const char *defaultValue);
 
     bool m_checked = false;
 };

@@ -1,175 +1,144 @@
-#include "stylesheet.h"
-
-#include <algorithm>
-
-#include "document.h"
 #include "html.h"
+#include "stylesheet.h"
+#include "css_parser.h"
+#include "document.h"
+#include "document_container.h"
 
-void litehtml::css::parse_stylesheet(const tchar_t* str, const tchar_t* baseurl, const std::shared_ptr<document>& doc, const media_query_list::ptr& media) {
-  tstring text = str;
+namespace litehtml
+{
 
-  // remove comments
-  tstring::size_type c_start = text.find(_t("/*"));
-  while (c_start != tstring::npos) {
-    tstring::size_type c_end = text.find(_t("*/"), c_start + 2);
-    text.erase(c_start, c_end - c_start + 2);
-    c_start = text.find(_t("/*"));
-  }
+	// https://www.w3.org/TR/css-syntax-3/#parse-a-css-stylesheet
+	template <class Input> // Input == string or css_token_vector
+	void css::parse_css_stylesheet(const Input& input, string baseurl, document::ptr doc,
+								   media_query_list_list::ptr media, bool top_level)
+	{
+		if(doc && media)
+			doc->add_media_list(media);
 
-  tstring::size_type pos = text.find_first_not_of(_t(" \n\r\t"));
-  while (pos != tstring::npos) {
-    while (pos != tstring::npos && text[pos] == _t('@')) {
-      tstring::size_type sPos = pos;
-      pos = text.find_first_of(_t("{;"), pos);
-      if (pos != tstring::npos && text[pos] == _t('{')) {
-        pos = find_close_bracket(text, pos, _t('{'), _t('}'));
-      }
-      if (pos != tstring::npos) {
-        parse_atrule(text.substr(sPos, pos - sPos + 1), baseurl, doc, media);
-      } else {
-        parse_atrule(text.substr(sPos), baseurl, doc, media);
-      }
+		// To parse a CSS stylesheet, first parse a stylesheet.
+		auto rules			= css_parser::parse_stylesheet(input, top_level);
+		bool import_allowed = top_level;
 
-      if (pos != tstring::npos) {
-        pos = text.find_first_not_of(_t(" \n\r\t"), pos + 1);
-      }
-    }
+		// Interpret all of the resulting top-level qualified rules as style rules, defined below.
+		// If any style rule is invalid, or any at-rule is not recognized or is invalid according
+		// to its grammar or context, it's a parse error. Discard that rule.
+		for(auto rule : rules)
+		{
+			if(rule->type == raw_rule::qualified)
+			{
+				if(parse_style_rule(rule, baseurl, doc, media))
+					import_allowed = false;
+				continue;
+			}
 
-    if (pos == tstring::npos) {
-      break;
-    }
+			// Otherwise: at-rule
+			switch(_id(lowcase(rule->name)))
+			{
+			case _charset_: // ignored  https://www.w3.org/TR/css-syntax-3/#charset-rule
+				break;
 
-    tstring::size_type style_start = text.find(_t('{'), pos);
-    tstring::size_type style_end = text.find(_t('}'), pos);
-    if (style_start != tstring::npos && style_end != tstring::npos) {
-      style::ptr st = std::make_shared<style>();
-      st->add(text.substr(style_start + 1, style_end - style_start - 1).c_str(), baseurl);
+			case _import_:
+				if(import_allowed)
+					parse_import_rule(rule, baseurl, doc, media);
+				else
+					css_parse_error("incorrect placement of @import rule");
+				break;
 
-      parse_selectors(text.substr(pos, style_start - pos), st, media);
+			// https://www.w3.org/TR/css-conditional-3/#at-media
+			// @media <media-query-list> { <stylesheet> }
+			case _media_:
+				{
+					if(rule->block.type != CURLY_BLOCK)
+						break;
+					auto new_media = media;
+					auto mq_list   = parse_media_query_list(rule->prelude, doc);
+					// An empty media query list evaluates to true.
+					// https://drafts.csswg.org/mediaqueries-5/#example-6f06ee45
+					if(!mq_list.empty())
+					{
+						new_media = make_shared<media_query_list_list>(media ? *media : media_query_list_list());
+						new_media->add(mq_list);
+					}
+					parse_css_stylesheet(rule->block.value, baseurl, doc, new_media, false);
+					import_allowed = false;
+					break;
+				}
 
-      if (media && doc) {
-        doc->add_media_list(media);
-      }
+			default:
+				css_parse_error("unrecognized rule @" + rule->name);
+			}
+		}
+	}
 
-      pos = style_end + 1;
-    } else {
-      pos = tstring::npos;
-    }
+	// https://drafts.csswg.org/css-cascade-5/#at-import
+	// `layer` and `supports` are not supported
+	// @import [ <url> | <string> ] <media-query-list>?
+	void css::parse_import_rule(raw_rule::ptr rule, string baseurl, document::ptr doc, media_query_list_list::ptr media)
+	{
+		auto tokens = rule->prelude;
+		int	 index	= 0;
+		skip_whitespace(tokens, index);
+		auto   tok = at(tokens, index);
+		string url;
+		auto   parse_string = [](const css_token& tok, string& str) {
+			  if(tok.type != STRING)
+				  return false;
+			  str = tok.str;
+			  return true;
+		};
+		bool ok = parse_url(tok, url) || parse_string(tok, url);
+		if(!ok)
+		{
+			css_parse_error("invalid @import rule");
+			return;
+		}
+		document_container* container = doc->container();
+		string				css_text;
+		string				css_baseurl = baseurl;
+		container->import_css(css_text, url, css_baseurl);
 
-    if (pos != tstring::npos) {
-      pos = text.find_first_not_of(_t(" \n\r\t"), pos);
-    }
-  }
-}
+		auto new_media = media;
+		tokens		   = slice(tokens, index + 1);
+		auto mq_list   = parse_media_query_list(tokens, doc);
+		if(!mq_list.empty())
+		{
+			new_media = make_shared<media_query_list_list>(media ? *media : media_query_list_list());
+			new_media->add(mq_list);
+		}
 
-void litehtml::css::parse_css_url(const tstring& str, tstring& url) {
-  url = _t("");
-  size_t pos1 = str.find(_t('('));
-  size_t pos2 = str.find(_t(')'));
-  if (pos1 != tstring::npos && pos2 != tstring::npos) {
-    url = str.substr(pos1 + 1, pos2 - pos1 - 1);
-    if (url.length()) {
-      if (url[0] == _t('\'') || url[0] == _t('"')) {
-        url.erase(0, 1);
-      }
-    }
-    if (url.length()) {
-      if (url[url.length() - 1] == _t('\'') || url[url.length() - 1] == _t('"')) {
-        url.erase(url.length() - 1, 1);
-      }
-    }
-  }
-}
+		parse_css_stylesheet(css_text, css_baseurl, doc, new_media, true);
+	}
 
-bool litehtml::css::parse_selectors(const tstring& txt, const litehtml::style::ptr& styles, const media_query_list::ptr& media) {
-  tstring selector = txt;
-  trim(selector);
-  string_vector tokens;
-  split_string(selector, tokens, _t(","));
+	// https://www.w3.org/TR/css-syntax-3/#style-rules
+	bool css::parse_style_rule(raw_rule::ptr rule, string baseurl, document::ptr doc, media_query_list_list::ptr media)
+	{
+		// The prelude of the qualified rule is parsed as a <selector-list>. If this returns failure, the entire style
+		// rule is invalid.
+		auto list = parse_selector_list(rule->prelude, strict_mode, doc->mode());
+		if(list.empty())
+		{
+			css_parse_error("invalid selector");
+			return false;
+		}
 
-  bool added_something = false;
+		style::ptr style = make_shared<litehtml::style>(); // style block
+		// The content of the qualified rule's block is parsed as a style block's contents.
+		style->add(rule->block.value, baseurl, doc->container());
 
-  for (auto& token : tokens) {
-    css_selector::ptr new_selector = std::make_shared<css_selector>(media);
-    new_selector->m_style = styles;
-    trim(token);
-    if (new_selector->parse(token)) {
-      new_selector->calc_specificity();
-      add_selector(new_selector);
-      added_something = true;
-    }
-  }
+		for(auto sel : list)
+		{
+			sel->m_style	   = style;
+			sel->m_media_query = media;
+			sel->calc_specificity();
+			add_selector(sel);
+		}
+		return true;
+	}
 
-  return added_something;
-}
+	void css::sort_selectors()
+	{
+		std::sort(m_selectors.begin(), m_selectors.end(),
+				  [](const css_selector::ptr& v1, const css_selector::ptr& v2) { return (*v1) < (*v2); });
+	}
 
-void litehtml::css::sort_selectors() {
-  std::sort(m_selectors.begin(), m_selectors.end(), [](const css_selector::ptr& v1, const css_selector::ptr& v2) { return (*v1) < (*v2); });
-}
-
-void litehtml::css::parse_atrule(const tstring& text, const tchar_t* baseurl, const std::shared_ptr<document>& doc, const media_query_list::ptr& media) {
-  if (text.substr(0, 7) == _t("@import")) {
-    int sPos = 7;
-    tstring iStr;
-    iStr = text.substr(sPos);
-    if (iStr[iStr.length() - 1] == _t(';')) {
-      iStr.erase(iStr.length() - 1);
-    }
-    trim(iStr);
-    string_vector tokens;
-    split_string(iStr, tokens, _t(" "), _t(""), _t("(\""));
-    if (!tokens.empty()) {
-      tstring url;
-      parse_css_url(tokens.front(), url);
-      if (url.empty()) {
-        url = tokens.front();
-      }
-      tokens.erase(tokens.begin());
-      if (doc) {
-        document_container* doc_cont = doc->container();
-        if (doc_cont) {
-          tstring css_text;
-          tstring css_baseurl;
-          if (baseurl) {
-            css_baseurl = baseurl;
-          }
-          doc_cont->import_css(css_text, url, css_baseurl);
-          if (!css_text.empty()) {
-            media_query_list::ptr new_media = media;
-            if (!tokens.empty()) {
-              tstring media_str;
-              for (auto iter = tokens.begin(); iter != tokens.end(); iter++) {
-                if (iter != tokens.begin()) {
-                  media_str += _t(" ");
-                }
-                media_str += (*iter);
-              }
-              new_media = media_query_list::create_from_string(media_str, doc);
-              if (!new_media) {
-                new_media = media;
-              }
-            }
-            parse_stylesheet(css_text.c_str(), css_baseurl.c_str(), doc, new_media);
-          }
-        }
-      }
-    }
-  } else if (text.substr(0, 6) == _t("@media")) {
-    tstring::size_type b1 = text.find_first_of(_t('{'));
-    tstring::size_type b2 = text.find_last_of(_t('}'));
-    if (b1 != tstring::npos) {
-      tstring media_type = text.substr(6, b1 - 6);
-      trim(media_type);
-      media_query_list::ptr new_media = media_query_list::create_from_string(media_type, doc);
-
-      tstring media_style;
-      if (b2 != tstring::npos) {
-        media_style = text.substr(b1 + 1, b2 - b1 - 1);
-      } else {
-        media_style = text.substr(b1 + 1);
-      }
-
-      parse_stylesheet(media_style.c_str(), baseurl, doc, new_media);
-    }
-  }
-}
+} // namespace litehtml

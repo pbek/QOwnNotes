@@ -18,14 +18,26 @@
 #define GUMBO_TOKEN_TYPE_H_
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-// An enum representing the type of token.
-typedef enum { GUMBO_TOKEN_DOCTYPE, GUMBO_TOKEN_START_TAG, GUMBO_TOKEN_END_TAG, GUMBO_TOKEN_COMMENT, GUMBO_TOKEN_WHITESPACE, GUMBO_TOKEN_CHARACTER, GUMBO_TOKEN_CDATA, GUMBO_TOKEN_NULL, GUMBO_TOKEN_EOF } GumboTokenType;
+	// An enum representing the type of token.
+	typedef enum
+	{
+		GUMBO_TOKEN_DOCTYPE,
+		GUMBO_TOKEN_START_TAG,
+		GUMBO_TOKEN_END_TAG,
+		GUMBO_TOKEN_COMMENT,
+		GUMBO_TOKEN_WHITESPACE,
+		GUMBO_TOKEN_CHARACTER,
+		GUMBO_TOKEN_CDATA,
+		GUMBO_TOKEN_NULL,
+		GUMBO_TOKEN_EOF
+	} GumboTokenType;
 
 #ifdef __cplusplus
-}  // extern C
+} // extern C
 #endif
 
-#endif  // GUMBO_TOKEN_TYPE_H_
+#endif // GUMBO_TOKEN_TYPE_H_

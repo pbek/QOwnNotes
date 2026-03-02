@@ -14,8 +14,8 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
         $$GB_SRC/parser.c \
         $$GB_SRC/string_buffer.c \
         $$GB_SRC/string_piece.c \
-        $$GB_SRC/gb_tag.c \
-        $$GB_SRC/gb_tokenizer.c \
+        $$GB_SRC/tag.c \
+        $$GB_SRC/tokenizer.c \
         $$GB_SRC/utf8.c \
         $$GB_SRC/util.c \
         $$GB_SRC/vector.c
@@ -50,12 +50,16 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
 
     # litehtml
     SOURCES += \
+        $$LH_SRC/src/codepoint.cpp \
+        $$LH_SRC/src/css_borders.cpp \
         $$LH_SRC/src/background.cpp \
-        $$LH_SRC/src/box.cpp \
-        $$LH_SRC/src/context.cpp \
         $$LH_SRC/src/css_length.cpp \
+        $$LH_SRC/src/css_parser.cpp \
+        $$LH_SRC/src/css_properties.cpp \
         $$LH_SRC/src/css_selector.cpp \
+        $$LH_SRC/src/css_tokenizer.cpp \
         $$LH_SRC/src/document.cpp \
+        $$LH_SRC/src/document_container.cpp \
         $$LH_SRC/src/el_anchor.cpp \
         $$LH_SRC/src/el_base.cpp \
         $$LH_SRC/src/el_before_after.cpp \
@@ -65,9 +69,13 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
         $$LH_SRC/src/el_comment.cpp \
         $$LH_SRC/src/el_div.cpp \
         $$LH_SRC/src/element.cpp \
+        $$LH_SRC/src/encodings.cpp \
         $$LH_SRC/src/el_font.cpp \
+        $$LH_SRC/src/flex_item.cpp \
+        $$LH_SRC/src/flex_line.cpp \
+        $$LH_SRC/src/formatting_context.cpp \
+        $$LH_SRC/src/gradient.cpp \
         $$LH_SRC/src/el_image.cpp \
-        $$LH_SRC/src/el_li.cpp \
         $$LH_SRC/src/el_link.cpp \
         $$LH_SRC/src/el_para.cpp \
         $$LH_SRC/src/el_script.cpp \
@@ -79,30 +87,45 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
         $$LH_SRC/src/el_title.cpp \
         $$LH_SRC/src/el_tr.cpp \
         $$LH_SRC/src/html.cpp \
+        $$LH_SRC/src/html_microsyntaxes.cpp \
         $$LH_SRC/src/html_tag.cpp \
         $$LH_SRC/src/iterators.cpp \
+        $$LH_SRC/src/line_box.cpp \
         $$LH_SRC/src/media_query.cpp \
         $$LH_SRC/src/num_cvt.cpp \
+        $$LH_SRC/src/render_block.cpp \
+        $$LH_SRC/src/render_block_context.cpp \
+        $$LH_SRC/src/render_flex.cpp \
+        $$LH_SRC/src/render_image.cpp \
+        $$LH_SRC/src/render_inline_context.cpp \
+        $$LH_SRC/src/render_item.cpp \
+        $$LH_SRC/src/render_table.cpp \
         $$LH_SRC/src/style.cpp \
+        $$LH_SRC/src/string_id.cpp \
         $$LH_SRC/src/stylesheet.cpp \
         $$LH_SRC/src/table.cpp \
+        $$LH_SRC/src/tstring_view.cpp \
+        $$LH_SRC/src/url.cpp \
+        $$LH_SRC/src/url_path.cpp \
         $$LH_SRC/src/utf8_strings.cpp \
         $$LH_SRC/src/web_color.cpp \
         $$LH_SRC/src/strtod.cpp
 
     HEADERS += \
         $$LH_SRC/include/litehtml.h \
-        $$LH_HDR/attributes.h \
         $$LH_HDR/background.h \
         $$LH_HDR/borders.h \
-        $$LH_HDR/box.h \
-        $$LH_HDR/context.h \
+        $$LH_HDR/codepoint.h \
         $$LH_HDR/css_length.h \
         $$LH_HDR/css_margins.h \
         $$LH_HDR/css_offsets.h \
+        $$LH_HDR/css_parser.h \
         $$LH_HDR/css_position.h \
+        $$LH_HDR/css_properties.h \
         $$LH_HDR/css_selector.h \
+        $$LH_HDR/css_tokenizer.h \
         $$LH_HDR/document.h \
+        $$LH_HDR/document_container.h \
         $$LH_HDR/el_anchor.h \
         $$LH_HDR/el_base.h \
         $$LH_HDR/el_before_after.h \
@@ -112,8 +135,8 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
         $$LH_HDR/el_comment.h \
         $$LH_HDR/el_div.h \
         $$LH_HDR/el_font.h \
+        $$LH_HDR/encodings.h \
         $$LH_HDR/el_image.h \
-        $$LH_HDR/el_li.h \
         $$LH_HDR/el_link.h \
         $$LH_HDR/el_para.h \
         $$LH_HDR/el_script.h \
@@ -125,16 +148,37 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
         $$LH_HDR/el_title.h \
         $$LH_HDR/el_tr.h \
         $$LH_HDR/element.h \
+        $$LH_HDR/flex_item.h \
+        $$LH_HDR/flex_line.h \
+        $$LH_HDR/font_description.h \
+        $$LH_HDR/formatting_context.h \
+        $$LH_HDR/gradient.h \
         $$LH_HDR/html.h \
+        $$LH_HDR/html_microsyntaxes.h \
         $$LH_HDR/html_tag.h \
         $$LH_HDR/iterators.h \
+        $$LH_HDR/line_box.h \
+        $$LH_HDR/master_css.h \
         $$LH_HDR/media_query.h \
         $$LH_HDR/num_cvt.h \
         $$LH_HDR/os_types.h \
+        $$LH_HDR/render_block.h \
+        $$LH_HDR/render_block_context.h \
+        $$LH_HDR/render_flex.h \
+        $$LH_HDR/render_image.h \
+        $$LH_HDR/render_inline.h \
+        $$LH_HDR/render_inline_context.h \
+        $$LH_HDR/render_item.h \
+        $$LH_HDR/render_table.h \
+        $$LH_HDR/scroll_view.h \
         $$LH_HDR/style.h \
         $$LH_HDR/stylesheet.h \
+        $$LH_HDR/string_id.h \
         $$LH_HDR/table.h \
+        $$LH_HDR/tstring_view.h \
         $$LH_HDR/types.h \
+        $$LH_HDR/url.h \
+        $$LH_HDR/url_path.h \
         $$LH_HDR/utf8_strings.h \
         $$LH_HDR/web_color.h
 

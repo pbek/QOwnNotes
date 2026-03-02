@@ -1,18 +1,26 @@
 #ifndef LH_EL_COMMENT_H
 #define LH_EL_COMMENT_H
 
-#include "html_tag.h"
+#include "element.h"
 
-namespace litehtml {
-class el_comment : public element {
-  tstring m_text;
+namespace litehtml
+{
+	class el_comment : public element
+	{
+		string m_text;
 
- public:
-  explicit el_comment(const std::shared_ptr<litehtml::document>& doc);
+	  public:
+		explicit el_comment(const std::shared_ptr<document>& doc);
 
-  void get_text(tstring& text) override;
-  void set_data(const tchar_t* data) override;
-};
-}  // namespace litehtml
+		bool						 is_comment() const override;
+		void						 get_text(string& text) const override;
+		void						 set_data(const char* data) override;
+		std::shared_ptr<render_item> create_render_item(const std::shared_ptr<render_item>& /*parent_ri*/) override
+		{
+			// Comments are not rendered
+			return nullptr;
+		}
+	};
+} // namespace litehtml
 
-#endif  // LH_EL_COMMENT_H
+#endif // LH_EL_COMMENT_H

@@ -1,237 +1,463 @@
-#include "web_color.h"
-
-#include <cstring>
-
 #include "html.h"
+#include "web_color.h"
+#include "css_parser.h"
+#include "os_types.h"
+#include "document_container.h"
 
-litehtml::def_color litehtml::g_def_colors[] = {{_t("transparent"), _t("rgba(0, 0, 0, 0)")},
-                                                {_t("AliceBlue"), _t("#F0F8FF")},
-                                                {_t("AntiqueWhite"), _t("#FAEBD7")},
-                                                {_t("Aqua"), _t("#00FFFF")},
-                                                {_t("Aquamarine"), _t("#7FFFD4")},
-                                                {_t("Azure"), _t("#F0FFFF")},
-                                                {_t("Beige"), _t("#F5F5DC")},
-                                                {_t("Bisque"), _t("#FFE4C4")},
-                                                {_t("Black"), _t("#000000")},
-                                                {_t("BlanchedAlmond"), _t("#FFEBCD")},
-                                                {_t("Blue"), _t("#0000FF")},
-                                                {_t("BlueViolet"), _t("#8A2BE2")},
-                                                {_t("Brown"), _t("#A52A2A")},
-                                                {_t("BurlyWood"), _t("#DEB887")},
-                                                {_t("CadetBlue"), _t("#5F9EA0")},
-                                                {_t("Chartreuse"), _t("#7FFF00")},
-                                                {_t("Chocolate"), _t("#D2691E")},
-                                                {_t("Coral"), _t("#FF7F50")},
-                                                {_t("CornflowerBlue"), _t("#6495ED")},
-                                                {_t("Cornsilk"), _t("#FFF8DC")},
-                                                {_t("Crimson"), _t("#DC143C")},
-                                                {_t("Cyan"), _t("#00FFFF")},
-                                                {_t("DarkBlue"), _t("#00008B")},
-                                                {_t("DarkCyan"), _t("#008B8B")},
-                                                {_t("DarkGoldenRod"), _t("#B8860B")},
-                                                {_t("DarkGray"), _t("#A9A9A9")},
-                                                {_t("DarkGrey"), _t("#A9A9A9")},
-                                                {_t("DarkGreen"), _t("#006400")},
-                                                {_t("DarkKhaki"), _t("#BDB76B")},
-                                                {_t("DarkMagenta"), _t("#8B008B")},
-                                                {_t("DarkOliveGreen"), _t("#556B2F")},
-                                                {_t("Darkorange"), _t("#FF8C00")},
-                                                {_t("DarkOrchid"), _t("#9932CC")},
-                                                {_t("DarkRed"), _t("#8B0000")},
-                                                {_t("DarkSalmon"), _t("#E9967A")},
-                                                {_t("DarkSeaGreen"), _t("#8FBC8F")},
-                                                {_t("DarkSlateBlue"), _t("#483D8B")},
-                                                {_t("DarkSlateGray"), _t("#2F4F4F")},
-                                                {_t("DarkSlateGrey"), _t("#2F4F4F")},
-                                                {_t("DarkTurquoise"), _t("#00CED1")},
-                                                {_t("DarkViolet"), _t("#9400D3")},
-                                                {_t("DeepPink"), _t("#FF1493")},
-                                                {_t("DeepSkyBlue"), _t("#00BFFF")},
-                                                {_t("DimGray"), _t("#696969")},
-                                                {_t("DimGrey"), _t("#696969")},
-                                                {_t("DodgerBlue"), _t("#1E90FF")},
-                                                {_t("FireBrick"), _t("#B22222")},
-                                                {_t("FloralWhite"), _t("#FFFAF0")},
-                                                {_t("ForestGreen"), _t("#228B22")},
-                                                {_t("Fuchsia"), _t("#FF00FF")},
-                                                {_t("Gainsboro"), _t("#DCDCDC")},
-                                                {_t("GhostWhite"), _t("#F8F8FF")},
-                                                {_t("Gold"), _t("#FFD700")},
-                                                {_t("GoldenRod"), _t("#DAA520")},
-                                                {_t("Gray"), _t("#808080")},
-                                                {_t("Grey"), _t("#808080")},
-                                                {_t("Green"), _t("#008000")},
-                                                {_t("GreenYellow"), _t("#ADFF2F")},
-                                                {_t("HoneyDew"), _t("#F0FFF0")},
-                                                {_t("HotPink"), _t("#FF69B4")},
-                                                {_t("Ivory"), _t("#FFFFF0")},
-                                                {_t("Khaki"), _t("#F0E68C")},
-                                                {_t("Lavender"), _t("#E6E6FA")},
-                                                {_t("LavenderBlush"), _t("#FFF0F5")},
-                                                {_t("LawnGreen"), _t("#7CFC00")},
-                                                {_t("LemonChiffon"), _t("#FFFACD")},
-                                                {_t("LightBlue"), _t("#ADD8E6")},
-                                                {_t("LightCoral"), _t("#F08080")},
-                                                {_t("LightCyan"), _t("#E0FFFF")},
-                                                {_t("LightGoldenRodYellow"), _t("#FAFAD2")},
-                                                {_t("LightGray"), _t("#D3D3D3")},
-                                                {_t("LightGrey"), _t("#D3D3D3")},
-                                                {_t("LightGreen"), _t("#90EE90")},
-                                                {_t("LightPink"), _t("#FFB6C1")},
-                                                {_t("LightSalmon"), _t("#FFA07A")},
-                                                {_t("LightSeaGreen"), _t("#20B2AA")},
-                                                {_t("LightSkyBlue"), _t("#87CEFA")},
-                                                {_t("LightSlateGray"), _t("#778899")},
-                                                {_t("LightSlateGrey"), _t("#778899")},
-                                                {_t("LightSteelBlue"), _t("#B0C4DE")},
-                                                {_t("LightYellow"), _t("#FFFFE0")},
-                                                {_t("Lime"), _t("#00FF00")},
-                                                {_t("LimeGreen"), _t("#32CD32")},
-                                                {_t("Linen"), _t("#FAF0E6")},
-                                                {_t("Magenta"), _t("#FF00FF")},
-                                                {_t("Maroon"), _t("#800000")},
-                                                {_t("MediumAquaMarine"), _t("#66CDAA")},
-                                                {_t("MediumBlue"), _t("#0000CD")},
-                                                {_t("MediumOrchid"), _t("#BA55D3")},
-                                                {_t("MediumPurple"), _t("#9370D8")},
-                                                {_t("MediumSeaGreen"), _t("#3CB371")},
-                                                {_t("MediumSlateBlue"), _t("#7B68EE")},
-                                                {_t("MediumSpringGreen"), _t("#00FA9A")},
-                                                {_t("MediumTurquoise"), _t("#48D1CC")},
-                                                {_t("MediumVioletRed"), _t("#C71585")},
-                                                {_t("MidnightBlue"), _t("#191970")},
-                                                {_t("MintCream"), _t("#F5FFFA")},
-                                                {_t("MistyRose"), _t("#FFE4E1")},
-                                                {_t("Moccasin"), _t("#FFE4B5")},
-                                                {_t("NavajoWhite"), _t("#FFDEAD")},
-                                                {_t("Navy"), _t("#000080")},
-                                                {_t("OldLace"), _t("#FDF5E6")},
-                                                {_t("Olive"), _t("#808000")},
-                                                {_t("OliveDrab"), _t("#6B8E23")},
-                                                {_t("Orange"), _t("#FFA500")},
-                                                {_t("OrangeRed"), _t("#FF4500")},
-                                                {_t("Orchid"), _t("#DA70D6")},
-                                                {_t("PaleGoldenRod"), _t("#EEE8AA")},
-                                                {_t("PaleGreen"), _t("#98FB98")},
-                                                {_t("PaleTurquoise"), _t("#AFEEEE")},
-                                                {_t("PaleVioletRed"), _t("#D87093")},
-                                                {_t("PapayaWhip"), _t("#FFEFD5")},
-                                                {_t("PeachPuff"), _t("#FFDAB9")},
-                                                {_t("Peru"), _t("#CD853F")},
-                                                {_t("Pink"), _t("#FFC0CB")},
-                                                {_t("Plum"), _t("#DDA0DD")},
-                                                {_t("PowderBlue"), _t("#B0E0E6")},
-                                                {_t("Purple"), _t("#800080")},
-                                                {_t("Red"), _t("#FF0000")},
-                                                {_t("RosyBrown"), _t("#BC8F8F")},
-                                                {_t("RoyalBlue"), _t("#4169E1")},
-                                                {_t("SaddleBrown"), _t("#8B4513")},
-                                                {_t("Salmon"), _t("#FA8072")},
-                                                {_t("SandyBrown"), _t("#F4A460")},
-                                                {_t("SeaGreen"), _t("#2E8B57")},
-                                                {_t("SeaShell"), _t("#FFF5EE")},
-                                                {_t("Sienna"), _t("#A0522D")},
-                                                {_t("Silver"), _t("#C0C0C0")},
-                                                {_t("SkyBlue"), _t("#87CEEB")},
-                                                {_t("SlateBlue"), _t("#6A5ACD")},
-                                                {_t("SlateGray"), _t("#708090")},
-                                                {_t("SlateGrey"), _t("#708090")},
-                                                {_t("Snow"), _t("#FFFAFA")},
-                                                {_t("SpringGreen"), _t("#00FF7F")},
-                                                {_t("SteelBlue"), _t("#4682B4")},
-                                                {_t("Tan"), _t("#D2B48C")},
-                                                {_t("Teal"), _t("#008080")},
-                                                {_t("Thistle"), _t("#D8BFD8")},
-                                                {_t("Tomato"), _t("#FF6347")},
-                                                {_t("Turquoise"), _t("#40E0D0")},
-                                                {_t("Violet"), _t("#EE82EE")},
-                                                {_t("Wheat"), _t("#F5DEB3")},
-                                                {_t("White"), _t("#FFFFFF")},
-                                                {_t("WhiteSmoke"), _t("#F5F5F5")},
-                                                {_t("Yellow"), _t("#FFFF00")},
-                                                {_t("YellowGreen"), _t("#9ACD32")},
-                                                {nullptr, nullptr}};
+namespace litehtml
+{
 
-litehtml::web_color litehtml::web_color::from_string(const tchar_t* str, litehtml::document_container* callback) {
-  if (!str || !str[0]) {
-    return web_color(0, 0, 0);
-  }
-  if (str[0] == _t('#')) {
-    tstring red;
-    tstring green;
-    tstring blue;
-    if (t_strlen(str + 1) == 3) {
-      red += str[1];
-      red += str[1];
-      green += str[2];
-      green += str[2];
-      blue += str[3];
-      blue += str[3];
-    } else if (t_strlen(str + 1) == 6) {
-      red += str[1];
-      red += str[2];
-      green += str[3];
-      green += str[4];
-      blue += str[5];
-      blue += str[6];
-    }
-    tchar_t* sss = nullptr;
-    web_color clr;
-    clr.red = (byte)t_strtol(red.c_str(), &sss, 16);
-    clr.green = (byte)t_strtol(green.c_str(), &sss, 16);
-    clr.blue = (byte)t_strtol(blue.c_str(), &sss, 16);
-    return clr;
-  } else if (!t_strncmp(str, _t("rgb"), 3)) {
-    tstring s = str;
+	const web_color web_color::transparent	 = web_color(0, 0, 0, 0);
+	const web_color web_color::black		 = web_color(0, 0, 0, 255);
+	const web_color web_color::white		 = web_color(255, 255, 255, 255);
+	const web_color web_color::current_color = web_color(true);
 
-    tstring::size_type pos = s.find_first_of(_t('('));
-    if (pos != tstring::npos) {
-      s.erase(s.begin(), s.begin() + pos + 1);
-    }
-    pos = s.find_last_of(_t(')'));
-    if (pos != tstring::npos) {
-      s.erase(s.begin() + pos, s.end());
-    }
+	gradient gradient::transparent;
 
-    std::vector<tstring> tokens;
-    split_string(s, tokens, _t(", \t"));
+	struct def_color
+	{
+		const char* name;
+		const char* rgb;
+	};
 
-    web_color clr;
+	def_color g_def_colors[] = {
+		{"transparent",			"rgba(0, 0, 0, 0)"},
+		{"AliceBlue",			  "#F0F8FF"		   },
+		{"AntiqueWhite",		 "#FAEBD7"		  },
+		{"Aqua",				 "#00FFFF"		  },
+		{"Aquamarine",		   "#7FFFD4"			},
+		{"Azure",				  "#F0FFFF"		   },
+		{"Beige",				  "#F5F5DC"		   },
+		{"Bisque",			   "#FFE4C4"			},
+		{"Black",				  "#000000"		   },
+		{"BlanchedAlmond",	   "#FFEBCD"			},
+		{"Blue",				 "#0000FF"		  },
+		{"BlueViolet",		   "#8A2BE2"			},
+		{"Brown",				  "#A52A2A"		   },
+		{"BurlyWood",			  "#DEB887"		   },
+		{"CadetBlue",			  "#5F9EA0"		   },
+		{"Chartreuse",		   "#7FFF00"			},
+		{"Chocolate",			  "#D2691E"		   },
+		{"Coral",				  "#FF7F50"		   },
+		{"CornflowerBlue",	   "#6495ED"			},
+		{"Cornsilk",			 "#FFF8DC"		  },
+		{"Crimson",				"#DC143C"		 },
+		{"Cyan",				 "#00FFFF"		  },
+		{"DarkBlue",			 "#00008B"		  },
+		{"DarkCyan",			 "#008B8B"		  },
+		{"DarkGoldenRod",		  "#B8860B"		   },
+		{"DarkGray",			 "#A9A9A9"		  },
+		{"DarkGrey",			 "#A9A9A9"		  },
+		{"DarkGreen",			  "#006400"		   },
+		{"DarkKhaki",			  "#BDB76B"		   },
+		{"DarkMagenta",			"#8B008B"		 },
+		{"DarkOliveGreen",	   "#556B2F"			},
+		{"Darkorange",		   "#FF8C00"			},
+		{"DarkOrchid",		   "#9932CC"			},
+		{"DarkRed",				"#8B0000"		 },
+		{"DarkSalmon",		   "#E9967A"			},
+		{"DarkSeaGreen",		 "#8FBC8F"		  },
+		{"DarkSlateBlue",		  "#483D8B"		   },
+		{"DarkSlateGray",		  "#2F4F4F"		   },
+		{"DarkSlateGrey",		  "#2F4F4F"		   },
+		{"DarkTurquoise",		  "#00CED1"		   },
+		{"DarkViolet",		   "#9400D3"			},
+		{"DeepPink",			 "#FF1493"		  },
+		{"DeepSkyBlue",			"#00BFFF"		 },
+		{"DimGray",				"#696969"		 },
+		{"DimGrey",				"#696969"		 },
+		{"DodgerBlue",		   "#1E90FF"			},
+		{"FireBrick",			  "#B22222"		   },
+		{"FloralWhite",			"#FFFAF0"		 },
+		{"ForestGreen",			"#228B22"		 },
+		{"Fuchsia",				"#FF00FF"		 },
+		{"Gainsboro",			  "#DCDCDC"		   },
+		{"GhostWhite",		   "#F8F8FF"			},
+		{"Gold",				 "#FFD700"		  },
+		{"GoldenRod",			  "#DAA520"		   },
+		{"Gray",				 "#808080"		  },
+		{"Grey",				 "#808080"		  },
+		{"Green",				  "#008000"		   },
+		{"GreenYellow",			"#ADFF2F"		 },
+		{"HoneyDew",			 "#F0FFF0"		  },
+		{"HotPink",				"#FF69B4"		 },
+		{"Ivory",				  "#FFFFF0"		   },
+		{"Khaki",				  "#F0E68C"		   },
+		{"Lavender",			 "#E6E6FA"		  },
+		{"LavenderBlush",		  "#FFF0F5"		   },
+		{"LawnGreen",			  "#7CFC00"		   },
+		{"LemonChiffon",		 "#FFFACD"		  },
+		{"LightBlue",			  "#ADD8E6"		   },
+		{"LightCoral",		   "#F08080"			},
+		{"LightCyan",			  "#E0FFFF"		   },
+		{"LightGoldenRodYellow", "#FAFAD2"		  },
+		{"LightGray",			  "#D3D3D3"		   },
+		{"LightGrey",			  "#D3D3D3"		   },
+		{"LightGreen",		   "#90EE90"			},
+		{"LightPink",			  "#FFB6C1"		   },
+		{"LightSalmon",			"#FFA07A"		 },
+		{"LightSeaGreen",		  "#20B2AA"		   },
+		{"LightSkyBlue",		 "#87CEFA"		  },
+		{"LightSlateGray",	   "#778899"			},
+		{"LightSlateGrey",	   "#778899"			},
+		{"LightSteelBlue",	   "#B0C4DE"			},
+		{"LightYellow",			"#FFFFE0"		 },
+		{"Lime",				 "#00FF00"		  },
+		{"LimeGreen",			  "#32CD32"		   },
+		{"Linen",				  "#FAF0E6"		   },
+		{"Magenta",				"#FF00FF"		 },
+		{"Maroon",			   "#800000"			},
+		{"MediumAquaMarine",	 "#66CDAA"		  },
+		{"MediumBlue",		   "#0000CD"			},
+		{"MediumOrchid",		 "#BA55D3"		  },
+		{"MediumPurple",		 "#9370D8"		  },
+		{"MediumSeaGreen",	   "#3CB371"			},
+		{"MediumSlateBlue",		"#7B68EE"		 },
+		{"MediumSpringGreen",	  "#00FA9A"		   },
+		{"MediumTurquoise",		"#48D1CC"		 },
+		{"MediumVioletRed",		"#C71585"		 },
+		{"MidnightBlue",		 "#191970"		  },
+		{"MintCream",			  "#F5FFFA"		   },
+		{"MistyRose",			  "#FFE4E1"		   },
+		{"Moccasin",			 "#FFE4B5"		  },
+		{"NavajoWhite",			"#FFDEAD"		 },
+		{"Navy",				 "#000080"		  },
+		{"OldLace",				"#FDF5E6"		 },
+		{"Olive",				  "#808000"		   },
+		{"OliveDrab",			  "#6B8E23"		   },
+		{"Orange",			   "#FFA500"			},
+		{"OrangeRed",			  "#FF4500"		   },
+		{"Orchid",			   "#DA70D6"			},
+		{"PaleGoldenRod",		  "#EEE8AA"		   },
+		{"PaleGreen",			  "#98FB98"		   },
+		{"PaleTurquoise",		  "#AFEEEE"		   },
+		{"PaleVioletRed",		  "#D87093"		   },
+		{"PapayaWhip",		   "#FFEFD5"			},
+		{"PeachPuff",			  "#FFDAB9"		   },
+		{"Peru",				 "#CD853F"		  },
+		{"Pink",				 "#FFC0CB"		  },
+		{"Plum",				 "#DDA0DD"		  },
+		{"PowderBlue",		   "#B0E0E6"			},
+		{"Purple",			   "#800080"			},
+		{"Red",				  "#FF0000"		 },
+		{"RosyBrown",			  "#BC8F8F"		   },
+		{"RoyalBlue",			  "#4169E1"		   },
+		{"SaddleBrown",			"#8B4513"		 },
+		{"Salmon",			   "#FA8072"			},
+		{"SandyBrown",		   "#F4A460"			},
+		{"SeaGreen",			 "#2E8B57"		  },
+		{"SeaShell",			 "#FFF5EE"		  },
+		{"Sienna",			   "#A0522D"			},
+		{"Silver",			   "#C0C0C0"			},
+		{"SkyBlue",				"#87CEEB"		 },
+		{"SlateBlue",			  "#6A5ACD"		   },
+		{"SlateGray",			  "#708090"		   },
+		{"SlateGrey",			  "#708090"		   },
+		{"Snow",				 "#FFFAFA"		  },
+		{"SpringGreen",			"#00FF7F"		 },
+		{"SteelBlue",			  "#4682B4"		   },
+		{"Tan",				  "#D2B48C"		 },
+		{"Teal",				 "#008080"		  },
+		{"Thistle",				"#D8BFD8"		 },
+		{"Tomato",			   "#FF6347"			},
+		{"Turquoise",			  "#40E0D0"		   },
+		{"Violet",			   "#EE82EE"			},
+		{"Wheat",				  "#F5DEB3"		   },
+		{"White",				  "#FFFFFF"		   },
+		{"WhiteSmoke",		   "#F5F5F5"			},
+		{"Yellow",			   "#FFFF00"			},
+		{"YellowGreen",			"#9ACD32"		 },
+	};
 
-    if (tokens.size() >= 1) clr.red = (byte)t_atoi(tokens[0].c_str());
-    if (tokens.size() >= 2) clr.green = (byte)t_atoi(tokens[1].c_str());
-    if (tokens.size() >= 3) clr.blue = (byte)t_atoi(tokens[2].c_str());
-    if (tokens.size() >= 4) clr.alpha = (byte)(t_strtod(tokens[3].c_str(), nullptr) * 255.0);
+	// <hex-color>  https://drafts.csswg.org/css-color-4/#typedef-hex-color
+	bool parse_hash_color(const css_token& tok, web_color& color)
+	{
+		if(tok.type != HASH)
+			return false;
 
-    return clr;
-  } else {
-    tstring rgb = resolve_name(str, callback);
-    if (!rgb.empty()) {
-      return from_string(rgb.c_str(), callback);
-    }
-  }
-  return web_color(0, 0, 0);
-}
+		string s   = tok.str;
+		int	   len = (int) s.size();
+		if(!is_one_of(len, 3, 4, 6, 8))
+			return false;
+		for(auto ch : s)
+			if(!is_hex_digit(ch))
+				return false;
 
-litehtml::tstring litehtml::web_color::resolve_name(const tchar_t* name, litehtml::document_container* callback) {
-  for (int i = 0; g_def_colors[i].name; i++) {
-    if (!t_strcasecmp(name, g_def_colors[i].name)) {
-      return litehtml::tstring(g_def_colors[i].rgb);
-    }
-  }
-  if (callback) {
-    litehtml::tstring clr = callback->resolve_color(name);
-    return clr;
-  }
-  return litehtml::tstring();
-}
+		string r, g, b, a = "ff";
+		if(len == 3 || len == 4)
+		{
+			r = {s[0], s[0]};
+			g = {s[1], s[1]};
+			b = {s[2], s[2]};
+			if(len == 4)
+				a = {s[3], s[3]};
+		} else // 6 or 8
+		{
+			r = {s[0], s[1]};
+			g = {s[2], s[3]};
+			b = {s[4], s[5]};
+			if(len == 8)
+				a = {s[6], s[7]};
+		}
+		auto read_two_hex_digits = [](auto str) { return byte(16 * digit_value(str[0]) + digit_value(str[1])); };
 
-bool litehtml::web_color::is_color(const tchar_t* str) {
-  if (!t_strncasecmp(str, _t("rgb"), 3) || str[0] == _t('#')) {
-    return true;
-  }
-  if (!t_isdigit(str[0]) && str[0] != _t('.')) {
-    return true;
-  }
-  return false;
-}
+		color =
+			web_color(read_two_hex_digits(r), read_two_hex_digits(g), read_two_hex_digits(b), read_two_hex_digits(a));
+		return true;
+	}
+
+	float clamp(float x, float min, float max)
+	{
+		if(x < min)
+			return min;
+		if(x > max)
+			return max;
+		return x;
+	}
+
+	// [ <number> | <percentage> | none ]{3}  [ / [<alpha-value> | none] ]?
+	bool parse_modern_syntax(const css_token_vector& tokens, bool is_hsl, css_length& x, css_length& y, css_length& z,
+							 css_length& a)
+	{
+		auto n = tokens.size();
+		if(!(n == 3 || n == 5))
+			return false;
+		if(is_hsl)
+		{
+			// [<hue> | none] [<number> | <percentage> | none]{2} [ / [<alpha-value> | none] ]?
+			// <hue> = <number> | <angle>
+			if(!x.from_token(tokens[0], f_number, "none"))
+			{
+				float hue;
+				if(!parse_angle(tokens[0], hue))
+					return false;
+				x.set_value(hue, css_units_none);
+			}
+		} else if(!x.from_token(tokens[0], f_number | f_percentage, "none"))
+			return false;
+		if(!y.from_token(tokens[1], f_number | f_percentage, "none"))
+			return false;
+		if(!z.from_token(tokens[2], f_number | f_percentage, "none"))
+			return false;
+		if(n == 5)
+		{
+			if(tokens[3].ch != '/')
+				return false;
+			// <alpha-value> = <number> | <percentage>
+			if(!a.from_token(tokens[4], f_number | f_percentage, "none"))
+				return false;
+		}
+		// convert nones to zeros
+		// https://drafts.csswg.org/css-color-4/#missing
+		// For all other purposes, a missing component behaves as a zero value...
+		for(auto t : {&x, &y, &z, &a})
+			if(t->is_predefined())
+				t->set_value(0, css_units_none);
+		return true;
+	}
+
+	// https://drafts.csswg.org/css-color-4/#rgb-functions
+	// Values outside these ranges are not invalid, but are clamped to the ranges defined here at parsed-value time.
+	byte calc_percent_and_clamp(const css_length& val, float max = 255)
+	{
+		float x = val.val();
+		if(val.units() == css_units_percentage)
+			x = (x / 100) * max;
+		x = clamp(x, 0, max);
+		return (byte) round(max == 1 ? x * 255 : x);
+	}
+
+	// https://drafts.csswg.org/css-color-4/#rgb-functions
+	bool parse_rgb_func(const css_token& tok, web_color& color)
+	{
+		if(tok.type != CV_FUNCTION || !is_one_of(lowcase(tok.name), "rgb", "rgba"))
+			return false;
+
+		auto list = parse_comma_separated_list(tok.value);
+		int	 n	  = (int) list.size();
+		if(!is_one_of(n, 1, 3, 4))
+			return false;
+
+		css_length r, g, b, a(1, css_units_none);
+		// legacy syntax: <percentage>#{3} , <alpha-value>? | <number>#{3} , <alpha-value>?
+		if(n != 1)
+		{
+			for(const auto& item : list)
+				if(item.size() != 1)
+					return false;
+			auto type = list[0][0].type;
+			if(!is_one_of(type, PERCENTAGE, NUMBER))
+				return false;
+			int options = type == PERCENTAGE ? f_percentage : f_number;
+			if(!r.from_token(list[0][0], options))
+				return false;
+			if(!g.from_token(list[1][0], options))
+				return false;
+			if(!b.from_token(list[2][0], options))
+				return false;
+			// <alpha-value> = <number> | <percentage>
+			if(n == 4 && !a.from_token(list[3][0], f_number | f_percentage))
+				return false;
+		}
+		// modern syntax:  [ <number> | <percentage> | none ]{3}  [ / [<alpha-value> | none] ]?
+		else if(!parse_modern_syntax(tok.value, false, r, g, b, a))
+			return false;
+
+		color = web_color(calc_percent_and_clamp(r), calc_percent_and_clamp(g), calc_percent_and_clamp(b),
+						  calc_percent_and_clamp(a, 1));
+		return true;
+	}
+
+	// https://drafts.csswg.org/css-color-4/#hsl-to-rgb
+	void hsl_to_rgb(float hue, float sat, float light, float& r, float& g, float& b)
+	{
+		hue = (float) fmod(hue, 360.f);
+
+		if(hue < 0)
+			hue += 360;
+
+		sat	   /= 100;
+		light  /= 100;
+
+		auto f	= [=](float n) {
+			 float k = (float) fmod(n + hue / 30, 12.f);
+			 float a = sat * min(light, 1 - light);
+			 return light - a * max(-1.f, min({k - 3, 9 - k, 1.f}));
+		};
+
+		r = f(0);
+		g = f(8);
+		b = f(4);
+	}
+
+	// https://drafts.csswg.org/css-color-4/#the-hsl-notation
+	bool parse_hsl_func(const css_token& tok, web_color& color)
+	{
+		if(tok.type != CV_FUNCTION || !is_one_of(lowcase(tok.name), "hsl", "hsla"))
+			return false;
+
+		auto list = parse_comma_separated_list(tok.value);
+		int	 n	  = (int) list.size();
+		if(!is_one_of(n, 1, 3, 4))
+			return false;
+
+		css_length h, s, l, a(1, css_units_none);
+		// legacy syntax: <hue>, <percentage>, <percentage>, <alpha-value>?
+		if(n != 1)
+		{
+			for(const auto& item : list)
+				if(item.size() != 1)
+					return false;
+			const auto& tok0 = list[0][0];
+			float		hue;
+			// <hue> = <number> | <angle>
+			// number is interpreted as a number of degrees  https://drafts.csswg.org/css-color-4/#typedef-hue
+			if(tok0.type == NUMBER)
+				hue = tok0.n.number;
+			else if(!parse_angle(tok0, hue))
+				return false;
+			h.set_value(hue, css_units_none);
+
+			if(!s.from_token(list[1][0], f_percentage))
+				return false;
+			if(!l.from_token(list[2][0], f_percentage))
+				return false;
+			if(n == 4 && !a.from_token(list[3][0], f_number | f_percentage))
+				return false;
+		}
+		// modern syntax:  [<hue> | none] [<percentage> | <number> | none]{2} [ / [<alpha-value> | none] ]?
+		else if(!parse_modern_syntax(tok.value, true, h, s, l, a))
+			return false;
+
+		float hue = h.val();
+		// no percent calculation needed for sat and lit because 0% ~ 0, 100% ~ 100
+		float sat = s.val();
+		float lit = l.val();
+		// For historical reasons, if the saturation is less than 0% it is clamped to 0% at parsed-value time, before
+		// being converted to an sRGB color.
+		if(sat < 0)
+			sat = 0;
+
+		// Note: Chrome and Firefox treat invalid hsl values differently.
+		//
+		// Note: at this point, sat is not clamped at 100, and lit is not clamped at all. The standard
+		// mentions only clamping sat at 0. As a result, returning rgb values may not be inside [0,1].
+		float r, g, b;
+		hsl_to_rgb(hue, sat, lit, r, g, b);
+
+		r	  = clamp(r, 0, 1);
+		g	  = clamp(g, 0, 1);
+		b	  = clamp(b, 0, 1);
+
+		color = web_color((byte) round(r * 255), (byte) round(g * 255), (byte) round(b * 255),
+						  calc_percent_and_clamp(a, 1));
+		return true;
+	}
+
+	// https://drafts.csswg.org/css-color-5/#typedef-color-function
+	bool parse_func_color(const css_token& tok, web_color& color)
+	{
+		return parse_rgb_func(tok, color) || parse_hsl_func(tok, color);
+	}
+
+	string resolve_name(const string& name, document_container* container)
+	{
+		for(auto clr : g_def_colors)
+		{
+			if(equal_i(name, clr.name))
+				return clr.rgb;
+		}
+
+		if(container)
+			return container->resolve_color(name);
+
+		return "";
+	}
+
+	bool parse_name_color(const css_token& tok, web_color& color, document_container* container)
+	{
+		if(tok.type != IDENT)
+			return false;
+		if(tok.ident() == "currentcolor")
+		{
+			color = web_color::current_color;
+			return true;
+		}
+		string str	  = resolve_name(tok.name, container);
+		auto   tokens = normalize(str, f_componentize | f_remove_whitespace);
+		if(tokens.size() != 1)
+			return false;
+		return parse_color(tokens[0], color, container);
+	}
+
+	// https://drafts.csswg.org/css-color-5/#typedef-color
+	bool parse_color(const css_token& tok, web_color& color, document_container* container)
+	{
+		return parse_hash_color(tok, color) || parse_func_color(tok, color) || parse_name_color(tok, color, container);
+	}
+
+	web_color web_color::darken(double fraction) const
+	{
+		int v_red	= (int) red;
+		int v_blue	= (int) blue;
+		int v_green = (int) green;
+		v_red		= (int) max(v_red - (v_red * fraction), 0.0);
+		v_blue		= (int) max(v_blue - (v_blue * fraction), 0.0);
+		v_green		= (int) max(v_green - (v_green * fraction), 0.0);
+		return {(byte) v_red, (byte) v_green, (byte) v_blue, alpha};
+	}
+
+	string web_color::to_string() const
+	{
+		char str[9];
+		if(alpha)
+		{
+			t_snprintf(str, 9, "%02X%02X%02X%02X", red, green, blue, alpha);
+		} else
+		{
+			t_snprintf(str, 9, "%02X%02X%02X", red, green, blue);
+		}
+		return str;
+	}
+
+} // namespace litehtml

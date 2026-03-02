@@ -1,775 +1,1146 @@
+#include "html.h"
 #include "document.h"
-
-#include <algorithm>
-#include <cmath>
-#include <cstdio>
-#include <functional>
-
-#include "el_anchor.h"
-#include "el_base.h"
-#include "el_body.h"
-#include "el_break.h"
-#include "el_cdata.h"
-#include "el_comment.h"
-#include "el_div.h"
-#include "el_font.h"
-#include "el_image.h"
-#include "el_li.h"
-#include "el_link.h"
+#include "stylesheet.h"
+#include "html_tag.h"
+#include "el_text.h"
 #include "el_para.h"
-#include "el_script.h"
 #include "el_space.h"
-#include "el_style.h"
+#include "el_body.h"
+#include "el_image.h"
 #include "el_table.h"
 #include "el_td.h"
-#include "el_text.h"
+#include "el_link.h"
 #include "el_title.h"
+#include "el_style.h"
+#include "el_script.h"
+#include "el_comment.h"
+#include "el_cdata.h"
+#include "el_base.h"
+#include "el_anchor.h"
+#include "el_break.h"
+#include "el_div.h"
+#include "el_font.h"
 #include "el_tr.h"
 #include "gumbo.h"
-#include "html.h"
-#include "html_tag.h"
-#include "stylesheet.h"
-#include "utf8_strings.h"
-
-litehtml::document::document(litehtml::document_container* objContainer, litehtml::context* ctx) {
-  m_container = objContainer;
-  m_context = ctx;
-}
-
-litehtml::document::~document() {
-  m_over_element = nullptr;
-  if (m_container) {
-    for (auto& m_font : m_fonts) {
-      m_container->delete_font(m_font.second.font);
-    }
-  }
-}
-
-litehtml::document::ptr litehtml::document::createFromString(const tchar_t* str, litehtml::document_container* objPainter, litehtml::context* ctx, litehtml::css* user_styles) { return createFromUTF8(litehtml_to_utf8(str), objPainter, ctx, user_styles); }
-
-litehtml::document::ptr litehtml::document::createFromUTF8(const char* str, litehtml::document_container* objPainter, litehtml::context* ctx, litehtml::css* user_styles) {
-  // parse document into GumboOutput
-  GumboOutput* output = gumbo_parse((const char*)str);
-
-  // Create litehtml::document
-  litehtml::document::ptr doc = std::make_shared<litehtml::document>(objPainter, ctx);
-
-  // Create litehtml::elements.
-  elements_vector root_elements;
-  doc->create_node(output->root, root_elements, true);
-  if (!root_elements.empty()) {
-    doc->m_root = root_elements.back();
-  }
-  // Destroy GumboOutput
-  gumbo_destroy_output(&kGumboDefaultOptions, output);
-
-  // Let's process created elements tree
-  if (doc->m_root) {
-    doc->container()->get_media_features(doc->m_media);
-
-    // apply master CSS
-    doc->m_root->apply_stylesheet(ctx->master_css());
-
-    // parse elements attributes
-    doc->m_root->parse_attributes();
-
-    // parse style sheets linked in document
-    media_query_list::ptr media;
-    for (const auto& css : doc->m_css) {
-      if (!css.media.empty()) {
-        media = media_query_list::create_from_string(css.media, doc);
-      } else {
-        media = nullptr;
-      }
-      doc->m_styles.parse_stylesheet(css.text.c_str(), css.baseurl.c_str(), doc, media);
-    }
-    // Sort css selectors using CSS rules.
-    doc->m_styles.sort_selectors();
-
-    // get current media features
-    if (!doc->m_media_lists.empty()) {
-      doc->update_media_lists(doc->m_media);
-    }
-
-    // Apply parsed styles.
-    doc->m_root->apply_stylesheet(doc->m_styles);
-
-    // Apply user styles if any
-    if (user_styles) {
-      doc->m_root->apply_stylesheet(*user_styles);
-    }
-
-    // Parse applied styles in the elements
-    doc->m_root->parse_styles();
-
-    // Now the m_tabular_elements is filled with tabular elements.
-    // We have to check the tabular elements for missing table elements
-    // and create the anonymous boxes in visual table layout
-    doc->fix_tables_layout();
-
-    // Fanaly initialize elements
-    doc->m_root->init();
-  }
-
-  return doc;
-}
-
-litehtml::uint_ptr litehtml::document::add_font(const tchar_t* name, int size, const tchar_t* weight, const tchar_t* style, const tchar_t* decoration, font_metrics* fm) {
-  uint_ptr ret = 0;
-
-  if (!name || !t_strcasecmp(name, _t("inherit"))) {
-    name = m_container->get_default_font_name();
-  }
-
-  if (!size) {
-    size = container()->get_default_font_size();
-  }
-
-  tchar_t strSize[20];
-  t_itoa(size, strSize, 20, 10);
-
-  tstring key = name;
-  key += _t(":");
-  key += strSize;
-  key += _t(":");
-  key += weight;
-  key += _t(":");
-  key += style;
-  key += _t(":");
-  key += decoration;
-
-  if (m_fonts.find(key) == m_fonts.end()) {
-    font_style fs = (font_style)value_index(style, font_style_strings, fontStyleNormal);
-    int fw = value_index(weight, font_weight_strings, -1);
-    if (fw >= 0) {
-      switch (fw) {
-        case litehtml::fontWeightBold:
-          fw = 700;
-          break;
-        case litehtml::fontWeightBolder:
-          fw = 600;
-          break;
-        case litehtml::fontWeightLighter:
-          fw = 300;
-          break;
-        default:
-          fw = 400;
-          break;
-      }
-    } else {
-      fw = t_atoi(weight);
-      if (fw < 100) {
-        fw = 400;
-      }
-    }
-
-    unsigned int decor = 0;
-
-    if (decoration) {
-      std::vector<tstring> tokens;
-      split_string(decoration, tokens, _t(" "));
-      for (auto& token : tokens) {
-        if (!t_strcasecmp(token.c_str(), _t("underline"))) {
-          decor |= font_decoration_underline;
-        } else if (!t_strcasecmp(token.c_str(), _t("line-through"))) {
-          decor |= font_decoration_linethrough;
-        } else if (!t_strcasecmp(token.c_str(), _t("overline"))) {
-          decor |= font_decoration_overline;
-        }
-      }
-    }
-
-    font_item fi = {0};
-
-    fi.font = m_container->create_font(name, size, fw, fs, decor, &fi.metrics);
-    m_fonts[key] = fi;
-    ret = fi.font;
-    if (fm) {
-      *fm = fi.metrics;
-    }
-  }
-  return ret;
-}
-
-litehtml::uint_ptr litehtml::document::get_font(const tchar_t* name, int size, const tchar_t* weight, const tchar_t* style, const tchar_t* decoration, font_metrics* fm) {
-  if (!name || !t_strcasecmp(name, _t("inherit"))) {
-    name = m_container->get_default_font_name();
-  }
-
-  if (!size) {
-    size = m_container->get_default_font_size();
-  }
-
-  tchar_t strSize[20];
-  t_itoa(size, strSize, 20, 10);
-
-  tstring key = name;
-  key += _t(":");
-  key += strSize;
-  key += _t(":");
-  key += weight;
-  key += _t(":");
-  key += style;
-  key += _t(":");
-  key += decoration;
-
-  auto el = m_fonts.find(key);
-
-  if (el != m_fonts.end()) {
-    if (fm) {
-      *fm = el->second.metrics;
-    }
-    return el->second.font;
-  }
-  return add_font(name, size, weight, style, decoration, fm);
-}
-
-int litehtml::document::render(int max_width, render_type rt) {
-  int ret = 0;
-  if (m_root) {
-    if (rt == render_fixed_only) {
-      m_fixed_boxes.clear();
-      m_root->render_positioned(rt);
-    } else {
-      ret = m_root->render(0, 0, max_width);
-      if (m_root->fetch_positioned()) {
-        m_fixed_boxes.clear();
-        m_root->render_positioned(rt);
-      }
-      m_size.width = 0;
-      m_size.height = 0;
-      m_root->calc_document_size(m_size);
-    }
-  }
-  return ret;
-}
-
-void litehtml::document::draw(uint_ptr hdc, int x, int y, const position* clip) {
-  if (m_root) {
-    m_root->draw(hdc, x, y, clip);
-    m_root->draw_stacking_context(hdc, x, y, clip, true);
-  }
-}
-
-int litehtml::document::cvt_units(const tchar_t* str, int fontSize, bool* is_percent /*= 0*/) const {
-  if (!str) return 0;
-
-  css_length val;
-  val.fromString(str);
-  if (is_percent && val.units() == css_units_percentage && !val.is_predefined()) {
-    *is_percent = true;
-  }
-  return cvt_units(val, fontSize);
-}
-
-int litehtml::document::cvt_units(css_length& val, int fontSize, int size) const {
-  if (val.is_predefined()) {
-    return 0;
-  }
-  int ret;
-  switch (val.units()) {
-    case css_units_percentage:
-      ret = val.calc_percent(size);
-      break;
-    case css_units_em:
-      ret = round_f(val.val() * (float)fontSize);
-      val.set_value((float)ret, css_units_px);
-      break;
-    case css_units_pt:
-      ret = m_container->pt_to_px((int)val.val());
-      val.set_value((float)ret, css_units_px);
-      break;
-    case css_units_in:
-      ret = m_container->pt_to_px((int)(val.val() * 72));
-      val.set_value((float)ret, css_units_px);
-      break;
-    case css_units_cm:
-      ret = m_container->pt_to_px((int)(val.val() * 0.3937 * 72));
-      val.set_value((float)ret, css_units_px);
-      break;
-    case css_units_mm:
-      ret = m_container->pt_to_px((int)(val.val() * 0.3937 * 72) / 10);
-      val.set_value((float)ret, css_units_px);
-      break;
-    case css_units_vw:
-      ret = (int)((double)m_media.width * (double)val.val() / 100.0);
-      break;
-    case css_units_vh:
-      ret = (int)((double)m_media.height * (double)val.val() / 100.0);
-      break;
-    case css_units_vmin:
-      ret = (int)((double)std::min(m_media.height, m_media.width) * (double)val.val() / 100.0);
-      break;
-    case css_units_vmax:
-      ret = (int)((double)std::max(m_media.height, m_media.width) * (double)val.val() / 100.0);
-      break;
-    case css_units_rem:
-      ret = (int)((double)m_root->get_font_size() * (double)val.val());
-      val.set_value((float)ret, css_units_px);
-      break;
-    default:
-      ret = (int)val.val();
-      break;
-  }
-  return ret;
-}
-
-int litehtml::document::width() const { return m_size.width; }
-
-int litehtml::document::height() const { return m_size.height; }
-
-void litehtml::document::add_stylesheet(const tchar_t* str, const tchar_t* baseurl, const tchar_t* media) {
-  if (str && str[0]) {
-    m_css.push_back(css_text(str, baseurl, media));
-  }
-}
-
-bool litehtml::document::on_mouse_over(int x, int y, int client_x, int client_y, position::vector& redraw_boxes) {
-  if (!m_root) {
-    return false;
-  }
-
-  element::ptr over_el = m_root->get_element_by_point(x, y, client_x, client_y);
-
-  bool state_was_changed = false;
-
-  if (over_el != m_over_element) {
-    if (m_over_element) {
-      if (m_over_element->on_mouse_leave()) {
-        state_was_changed = true;
-      }
-    }
-    m_over_element = over_el;
-  }
-
-  const tchar_t* cursor = nullptr;
-
-  if (m_over_element) {
-    if (m_over_element->on_mouse_over()) {
-      state_was_changed = true;
-    }
-    cursor = m_over_element->get_cursor();
-  }
-
-  m_container->set_cursor(cursor ? cursor : _t("auto"));
-
-  if (state_was_changed) {
-    return m_root->find_styles_changes(redraw_boxes, 0, 0);
-  }
-  return false;
-}
-
-bool litehtml::document::on_mouse_leave(position::vector& redraw_boxes) {
-  if (!m_root) {
-    return false;
-  }
-  if (m_over_element) {
-    if (m_over_element->on_mouse_leave()) {
-      return m_root->find_styles_changes(redraw_boxes, 0, 0);
-    }
-  }
-  return false;
-}
-
-bool litehtml::document::on_lbutton_down(int x, int y, int client_x, int client_y, position::vector& redraw_boxes) {
-  if (!m_root) {
-    return false;
-  }
-
-  element::ptr over_el = m_root->get_element_by_point(x, y, client_x, client_y);
-
-  bool state_was_changed = false;
-
-  if (over_el != m_over_element) {
-    if (m_over_element) {
-      if (m_over_element->on_mouse_leave()) {
-        state_was_changed = true;
-      }
-    }
-    m_over_element = over_el;
-    if (m_over_element) {
-      if (m_over_element->on_mouse_over()) {
-        state_was_changed = true;
-      }
-    }
-  }
-
-  const tchar_t* cursor = nullptr;
-
-  if (m_over_element) {
-    if (m_over_element->on_lbutton_down()) {
-      state_was_changed = true;
-    }
-    cursor = m_over_element->get_cursor();
-  }
-
-  m_container->set_cursor(cursor ? cursor : _t("auto"));
-
-  if (state_was_changed) {
-    return m_root->find_styles_changes(redraw_boxes, 0, 0);
-  }
-
-  return false;
-}
-
-bool litehtml::document::on_lbutton_up(int x, int y, int client_x, int client_y, position::vector& redraw_boxes) {
-  if (!m_root) {
-    return false;
-  }
-  if (m_over_element) {
-    if (m_over_element->on_lbutton_up()) {
-      return m_root->find_styles_changes(redraw_boxes, 0, 0);
-    }
-  }
-  return false;
-}
-
-litehtml::element::ptr litehtml::document::create_element(const tchar_t* tag_name, const string_map& attributes) {
-  element::ptr newTag;
-  document::ptr this_doc = shared_from_this();
-  if (m_container) {
-    newTag = m_container->create_element(tag_name, attributes, this_doc);
-  }
-  if (!newTag) {
-    if (!t_strcmp(tag_name, _t("br"))) {
-      newTag = std::make_shared<litehtml::el_break>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("p"))) {
-      newTag = std::make_shared<litehtml::el_para>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("img"))) {
-      newTag = std::make_shared<litehtml::el_image>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("table"))) {
-      newTag = std::make_shared<litehtml::el_table>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("td")) || !t_strcmp(tag_name, _t("th"))) {
-      newTag = std::make_shared<litehtml::el_td>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("link"))) {
-      newTag = std::make_shared<litehtml::el_link>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("title"))) {
-      newTag = std::make_shared<litehtml::el_title>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("a"))) {
-      newTag = std::make_shared<litehtml::el_anchor>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("tr"))) {
-      newTag = std::make_shared<litehtml::el_tr>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("style"))) {
-      newTag = std::make_shared<litehtml::el_style>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("base"))) {
-      newTag = std::make_shared<litehtml::el_base>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("body"))) {
-      newTag = std::make_shared<litehtml::el_body>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("div"))) {
-      newTag = std::make_shared<litehtml::el_div>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("script"))) {
-      newTag = std::make_shared<litehtml::el_script>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("font"))) {
-      newTag = std::make_shared<litehtml::el_font>(this_doc);
-    } else if (!t_strcmp(tag_name, _t("li"))) {
-      newTag = std::make_shared<litehtml::el_li>(this_doc);
-    } else {
-      newTag = std::make_shared<litehtml::html_tag>(this_doc);
-    }
-  }
-
-  if (newTag) {
-    newTag->set_tagName(tag_name);
-    for (const auto& attribute : attributes) {
-      newTag->set_attr(attribute.first.c_str(), attribute.second.c_str());
-    }
-  }
-
-  return newTag;
-}
-
-void litehtml::document::get_fixed_boxes(position::vector& fixed_boxes) { fixed_boxes = m_fixed_boxes; }
-
-void litehtml::document::add_fixed_box(const position& pos) { m_fixed_boxes.push_back(pos); }
-
-bool litehtml::document::media_changed() {
-  if (!m_media_lists.empty()) {
-    container()->get_media_features(m_media);
-    if (update_media_lists(m_media)) {
-      m_root->refresh_styles();
-      m_root->parse_styles();
-      return true;
-    }
-  }
-  return false;
-}
-
-bool litehtml::document::lang_changed() {
-  if (!m_media_lists.empty()) {
-    tstring culture;
-    container()->get_language(m_lang, culture);
-    if (!culture.empty()) {
-      m_culture = m_lang + _t('-') + culture;
-    } else {
-      m_culture.clear();
-    }
-    m_root->refresh_styles();
-    m_root->parse_styles();
-    return true;
-  }
-  return false;
-}
-
-bool litehtml::document::update_media_lists(const media_features& features) {
-  bool update_styles = false;
-  for (auto& m_media_list : m_media_lists) {
-    if (m_media_list->apply_media_features(features)) {
-      update_styles = true;
-    }
-  }
-  return update_styles;
-}
-
-void litehtml::document::add_media_list(const media_query_list::ptr& list) {
-  if (list) {
-    if (std::find(m_media_lists.begin(), m_media_lists.end(), list) == m_media_lists.end()) {
-      m_media_lists.push_back(list);
-    }
-  }
-}
-
-void litehtml::document::create_node(void* gnode, elements_vector& elements, bool parseTextNode) {
-  auto* node = (GumboNode*)gnode;
-  switch (node->type) {
-    case GUMBO_NODE_ELEMENT: {
-      string_map attrs;
-      GumboAttribute* attr;
-      for (unsigned int i = 0; i < node->v.element.attributes.length; i++) {
-        attr = (GumboAttribute*)node->v.element.attributes.data[i];
-        attrs[tstring(litehtml_from_utf8(attr->name))] = litehtml_from_utf8(attr->value);
-      }
-
-      element::ptr ret;
-      const char* tag = gumbo_normalized_tagname(node->v.element.tag);
-      if (tag[0]) {
-        ret = create_element(litehtml_from_utf8(tag), attrs);
-      } else {
-        if (node->v.element.original_tag.data && node->v.element.original_tag.length) {
-          std::string strA;
-          gumbo_tag_from_original_text(&node->v.element.original_tag);
-          strA.append(node->v.element.original_tag.data, node->v.element.original_tag.length);
-          ret = create_element(litehtml_from_utf8(strA.c_str()), attrs);
-        }
-      }
-      if (!strcmp(tag, "script")) {
-        parseTextNode = false;
-      }
-      if (ret) {
-        elements_vector child;
-        for (unsigned int i = 0; i < node->v.element.children.length; i++) {
-          child.clear();
-          create_node(static_cast<GumboNode*>(node->v.element.children.data[i]), child, parseTextNode);
-          std::for_each(child.begin(), child.end(), [&ret](element::ptr& el) { ret->appendChild(el); });
-        }
-        elements.push_back(ret);
-      }
-    } break;
-    case GUMBO_NODE_TEXT: {
-      std::wstring str;
-      std::wstring str_in = (const wchar_t*)(utf8_to_wchar(node->v.text.text));
-      if (!parseTextNode) {
-        elements.push_back(std::make_shared<el_text>(litehtml_from_wchar(str_in).c_str(), shared_from_this()));
-      } else {
-        m_container->split_text(node->v.text.text, [this, &elements](const tchar_t* text) { elements.push_back(std::make_shared<el_text>(text, shared_from_this())); }, [this, &elements](const tchar_t* text) { elements.push_back(std::make_shared<el_space>(text, shared_from_this())); });
-      }
-    } break;
-    case GUMBO_NODE_CDATA: {
-      element::ptr ret = std::make_shared<el_cdata>(shared_from_this());
-      ret->set_data(litehtml_from_utf8(node->v.text.text));
-      elements.push_back(ret);
-    } break;
-    case GUMBO_NODE_COMMENT: {
-      element::ptr ret = std::make_shared<el_comment>(shared_from_this());
-      ret->set_data(litehtml_from_utf8(node->v.text.text));
-      elements.push_back(ret);
-    } break;
-    case GUMBO_NODE_WHITESPACE: {
-      tstring str = litehtml_from_utf8(node->v.text.text);
-      for (size_t i = 0; i < str.length(); i++) {
-        elements.push_back(std::make_shared<el_space>(str.substr(i, 1).c_str(), shared_from_this()));
-      }
-    } break;
-    default:
-      break;
-  }
-}
-
-void litehtml::document::fix_tables_layout() {
-  size_t i = 0;
-  while (i < m_tabular_elements.size()) {
-    element::ptr el_ptr = m_tabular_elements[i];
-
-    switch (el_ptr->get_display()) {
-      case display_inline_table:
-      case display_table:
-        fix_table_children(el_ptr, display_table_row_group, _t("table-row-group"));
-        break;
-      case display_table_footer_group:
-      case display_table_row_group:
-      case display_table_header_group: {
-        element::ptr parent = el_ptr->parent();
-        if (parent) {
-          if (parent->get_display() != display_inline_table) fix_table_parent(el_ptr, display_table, _t("table"));
-        }
-        fix_table_children(el_ptr, display_table_row, _t("table-row"));
-      } break;
-      case display_table_row:
-        fix_table_parent(el_ptr, display_table_row_group, _t("table-row-group"));
-        fix_table_children(el_ptr, display_table_cell, _t("table-cell"));
-        break;
-      case display_table_cell:
-        fix_table_parent(el_ptr, display_table_row, _t("table-row"));
-        break;
-      // TODO: make table layout fix for table-caption, table-column etc. elements
-      case display_table_caption:
-      case display_table_column:
-      case display_table_column_group:
-      default:
-        break;
-    }
-    i++;
-  }
-}
-
-void litehtml::document::fix_table_children(element::ptr& el_ptr, style_display disp, const tchar_t* disp_str) {
-  elements_vector tmp;
-  auto first_iter = el_ptr->m_children.begin();
-  auto cur_iter = el_ptr->m_children.begin();
-
-  auto flush_elements = [&]() {
-    element::ptr annon_tag = std::make_shared<html_tag>(shared_from_this());
-    style st;
-    st.add_property(_t("display"), disp_str, nullptr, false);
-    annon_tag->add_style(st);
-    annon_tag->parent(el_ptr);
-    annon_tag->parse_styles();
-    std::for_each(tmp.begin(), tmp.end(), [&annon_tag](element::ptr& el) { annon_tag->appendChild(el); });
-    first_iter = el_ptr->m_children.insert(first_iter, annon_tag);
-    cur_iter = first_iter + 1;
-    while (cur_iter != el_ptr->m_children.end() && (*cur_iter)->parent() != el_ptr) {
-      cur_iter = el_ptr->m_children.erase(cur_iter);
-    }
-    first_iter = cur_iter;
-    tmp.clear();
-  };
-
-  while (cur_iter != el_ptr->m_children.end()) {
-    if ((*cur_iter)->get_display() != disp) {
-      if (!(*cur_iter)->is_white_space() || ((*cur_iter)->is_white_space() && !tmp.empty())) {
-        if (disp != display_table_row_group || (*cur_iter)->get_display() != display_table_caption) {
-          if (tmp.empty()) {
-            first_iter = cur_iter;
-          }
-          tmp.push_back((*cur_iter));
-        }
-      }
-      cur_iter++;
-    } else if (!tmp.empty()) {
-      flush_elements();
-    } else {
-      cur_iter++;
-    }
-  }
-  if (!tmp.empty()) {
-    flush_elements();
-  }
-}
-
-void litehtml::document::fix_table_parent(element::ptr& el_ptr, style_display disp, const tchar_t* disp_str) {
-  element::ptr parent = el_ptr->parent();
-
-  if (parent->get_display() != disp) {
-    auto this_element = std::find_if(parent->m_children.begin(), parent->m_children.end(), [&](element::ptr& el) {
-      if (el == el_ptr) {
-        return true;
-      }
-      return false;
-    });
-    if (this_element != parent->m_children.end()) {
-      style_display el_disp = el_ptr->get_display();
-      auto first = this_element;
-      auto last = this_element;
-      auto cur = this_element;
-
-      // find first element with same display
-      while (true) {
-        if (cur == parent->m_children.begin()) break;
-        cur--;
-        if ((*cur)->is_white_space() || (*cur)->get_display() == el_disp) {
-          first = cur;
-        } else {
-          break;
-        }
-      }
-
-      // find last element with same display
-      cur = this_element;
-      while (true) {
-        cur++;
-        if (cur == parent->m_children.end()) break;
-
-        if ((*cur)->is_white_space() || (*cur)->get_display() == el_disp) {
-          last = cur;
-        } else {
-          break;
-        }
-      }
-
-      // extract elements with the same display and wrap them with anonymous object
-      element::ptr annon_tag = std::make_shared<html_tag>(shared_from_this());
-      style st;
-      st.add_property(_t("display"), disp_str, nullptr, false);
-      annon_tag->add_style(st);
-      annon_tag->parent(parent);
-      annon_tag->parse_styles();
-      std::for_each(first, last + 1, [&annon_tag](element::ptr& el) { annon_tag->appendChild(el); });
-      first = parent->m_children.erase(first, last + 1);
-      parent->m_children.insert(first, annon_tag);
-    }
-  }
-}
-
-void litehtml::document::append_children_from_string(element& parent, const tchar_t* str) { append_children_from_utf8(parent, litehtml_to_utf8(str)); }
-
-void litehtml::document::append_children_from_utf8(element& parent, const char* str) {
-  // parent must belong to this document
-  if (parent.get_document().get() != this) {
-    return;
-  }
-
-  // parse document into GumboOutput
-  GumboOutput* output = gumbo_parse((const char*)str);
-
-  // Create litehtml::elements.
-  elements_vector child_elements;
-  create_node(output->root, child_elements, true);
-
-  // Destroy GumboOutput
-  gumbo_destroy_output(&kGumboDefaultOptions, output);
-
-  // Let's process created elements tree
-  for (const auto& child : child_elements) {
-    // Add the child element to parent
-    parent.appendChild(child);
-
-    // apply master CSS
-    child->apply_stylesheet(m_context->master_css());
-
-    // parse elements attributes
-    child->parse_attributes();
-
-    // Apply parsed styles.
-    child->apply_stylesheet(m_styles);
-
-    // Parse applied styles in the elements
-    child->parse_styles();
-
-    // Now the m_tabular_elements is filled with tabular elements.
-    // We have to check the tabular elements for missing table elements
-    // and create the anonymous boxes in visual table layout
-    fix_tables_layout();
-
-    // Fanaly initialize elements
-    child->init();
-  }
-}
+#include "render_item.h"
+#include "render_table.h"
+#include "render_block.h"
+#include "document_container.h"
+#include "types.h"
+
+namespace litehtml
+{
+
+	document::document(document_container* container)
+	{
+		m_container = container;
+	}
+
+	document::~document()
+	{
+		m_over_element = m_active_element = nullptr;
+		if(m_container)
+		{
+			for(auto& font : m_fonts)
+			{
+				m_container->delete_font(font.second.font);
+			}
+		}
+	}
+
+	document::ptr document::createFromString(const estring& str, document_container* container,
+											 const string& master_styles, const string& user_styles)
+	{
+		// Create litehtml::document
+		document::ptr doc	= make_shared<document>(container);
+
+		// Parse document into GumboOutput
+		GumboOutput* output = doc->parse_html(str);
+
+		// mode must be set before doc->create_node because it is used in html_tag::set_attr
+		switch(output->document->v.document.doc_type_quirks_mode)
+		{
+		case GUMBO_DOCTYPE_NO_QUIRKS:
+			doc->m_mode = no_quirks_mode;
+			break;
+		case GUMBO_DOCTYPE_QUIRKS:
+			doc->m_mode = quirks_mode;
+			break;
+		case GUMBO_DOCTYPE_LIMITED_QUIRKS:
+			doc->m_mode = limited_quirks_mode;
+			break;
+		}
+
+		// Create litehtml::elements.
+		elements_list root_elements;
+		doc->create_node(output->root, root_elements, true, true);
+		if(!root_elements.empty())
+		{
+			doc->m_root = root_elements.back();
+		}
+
+		// Destroy GumboOutput
+		gumbo_destroy_output(&kGumboDefaultOptions, output);
+
+		if(master_styles != "")
+		{
+			doc->m_master_css.parse_css_stylesheet(master_styles, "", doc);
+			doc->m_master_css.sort_selectors();
+		}
+		if(user_styles != "")
+		{
+			doc->m_user_css.parse_css_stylesheet(user_styles, "", doc);
+			doc->m_user_css.sort_selectors();
+		}
+
+		// Let's process created elements tree
+		if(doc->m_root)
+		{
+			doc->container()->get_media_features(doc->m_media);
+
+			doc->m_root->set_pseudo_class(_root_, true);
+
+			// apply master CSS
+			doc->m_root->apply_stylesheet(doc->m_master_css);
+
+			// parse elements attributes
+			doc->m_root->parse_attributes();
+
+			// parse style sheets linked in document
+			for(const auto& css : doc->m_css)
+			{
+				media_query_list_list::ptr media;
+				if(css.media != "")
+				{
+					auto mq_list = parse_media_query_list(css.media, doc);
+					media		 = make_shared<media_query_list_list>();
+					media->add(mq_list);
+				}
+				doc->m_styles.parse_css_stylesheet(css.text, css.baseurl, doc, media);
+			}
+			// Sort css selectors using CSS rules.
+			doc->m_styles.sort_selectors();
+
+			// Apply media features.
+			doc->update_media_lists(doc->m_media);
+
+			// Apply parsed styles.
+			doc->m_root->apply_stylesheet(doc->m_styles);
+
+			// Apply user styles if any
+			doc->m_root->apply_stylesheet(doc->m_user_css);
+
+			// Initialize element::m_css
+			doc->m_root->compute_styles();
+
+			// Create rendering tree
+			doc->m_root_render = doc->m_root->create_render_item(nullptr);
+
+			// Now the m_tabular_elements is filled with tabular elements.
+			// We have to check the tabular elements for missing table elements
+			// and create the anonymous boxes in visual table layout
+			doc->fix_tables_layout();
+
+			// Finally initialize elements
+			// init() returns pointer to the render_init element because it can change its type
+			if(doc->m_root_render)
+			{
+				doc->m_root_render = doc->m_root_render->init();
+			}
+		}
+
+		return doc;
+	}
+
+	// https://html.spec.whatwg.org/multipage/parsing.html#change-the-encoding
+	encoding adjust_meta_encoding(encoding meta_encoding, encoding current_encoding)
+	{
+		// 1.
+		if(current_encoding == encoding::utf_16le || current_encoding == encoding::utf_16be)
+			return current_encoding;
+
+		// 2.
+		if(meta_encoding == encoding::utf_16le || meta_encoding == encoding::utf_16be)
+			return encoding::utf_8;
+
+		// 3.
+		if(meta_encoding == encoding::x_user_defined)
+			return encoding::windows_1252;
+
+		// 4,5,6.
+		return meta_encoding;
+	}
+
+	// https://html.spec.whatwg.org/multipage/parsing.html#parsing-main-inhead:change-the-encoding
+	encoding get_meta_encoding(GumboNode* root)
+	{
+		// find <head>
+		GumboNode* head = nullptr;
+		for(size_t i = 0; i < root->v.element.children.length; i++)
+		{
+			GumboNode* node = (GumboNode*) root->v.element.children.data[i];
+			if(node->type == GUMBO_NODE_ELEMENT && node->v.element.tag == GUMBO_TAG_HEAD)
+			{
+				head = node;
+				break;
+			}
+		}
+		if(!head)
+			return encoding::null;
+
+		// go through <meta> tags in <head>
+		for(size_t i = 0; i < head->v.element.children.length; i++)
+		{
+			GumboNode* node = (GumboNode*) head->v.element.children.data[i];
+			if(node->type != GUMBO_NODE_ELEMENT || node->v.element.tag != GUMBO_TAG_META)
+				continue;
+
+			auto charset	= gumbo_get_attribute(&node->v.element.attributes, "charset");
+			auto http_equiv = gumbo_get_attribute(&node->v.element.attributes, "http-equiv");
+			auto content	= gumbo_get_attribute(&node->v.element.attributes, "content");
+			// 1. If the element has a charset attribute...
+			if(charset)
+			{
+				auto encoding = get_encoding(charset->value);
+				if(encoding != encoding::null)
+					return encoding;
+			}
+			// 2. Otherwise, if the element has an http-equiv attribute...
+			else if(http_equiv && t_strcasecmp(http_equiv->value, "content-type") == 0 && content)
+			{
+				auto encoding = extract_encoding_from_meta_element(content->value);
+				if(encoding != encoding::null)
+					return encoding;
+			}
+		}
+
+		return encoding::null;
+	}
+
+	// substitute for gumbo_parse that handles encodings
+	GumboOutput* document::parse_html(estring str)
+	{
+		// https://html.spec.whatwg.org/multipage/parsing.html#the-input-byte-stream
+		encoding_sniffing_algorithm(str);
+		// cannot store output in local variable because gumbo keeps pointers into it,
+		// which will be accessed later in gumbo_tag_from_original_text
+		if(str.encoding == encoding::utf_8)
+			m_text = str;
+		else
+			decode(str, str.encoding, m_text);
+
+		// Gumbo does not support callbacks on node creation, so we cannot change encoding while parsing.
+		// Instead, we parse entire file and then handle <meta> tags.
+
+		// Using gumbo_parse_with_options to pass string length (m_text may contain NUL chars).
+		GumboOutput* output = gumbo_parse_with_options(&kGumboDefaultOptions, m_text.data(), m_text.size());
+
+		if(str.confidence == confidence::certain)
+			return output;
+
+		// Otherwise: confidence is tentative.
+
+		// If valid HTML encoding is specified in <meta> tag...
+		encoding meta_encoding = get_meta_encoding(output->root);
+		if(meta_encoding != encoding::null)
+		{
+			// ...and it is different from currently used encoding...
+			encoding new_encoding = adjust_meta_encoding(meta_encoding, str.encoding);
+			if(new_encoding != str.encoding)
+			{
+				// ...reparse with the new encoding.
+				gumbo_destroy_output(&kGumboDefaultOptions, output);
+				m_text.clear();
+
+				if(new_encoding == encoding::utf_8)
+					m_text = str;
+				else
+					decode(str, new_encoding, m_text);
+				output = gumbo_parse_with_options(&kGumboDefaultOptions, m_text.data(), m_text.size());
+			}
+		}
+
+		return output;
+	}
+
+	void document::create_node(void* gnode, elements_list& elements, bool parseTextNode, bool process_root)
+	{
+		auto* node = (GumboNode*) gnode;
+		switch(node->type)
+		{
+		case GUMBO_NODE_ELEMENT:
+			{
+				if(process_root)
+				{
+					string_map		attrs;
+					GumboAttribute* attr;
+					for(unsigned int i = 0; i < node->v.element.attributes.length; i++)
+					{
+						attr			  = (GumboAttribute*) node->v.element.attributes.data[i];
+						attrs[attr->name] = attr->value;
+					}
+
+					element::ptr ret;
+					const char*	 tag = gumbo_normalized_tagname(node->v.element.tag);
+					if(tag[0])
+					{
+						ret = create_element(tag, attrs);
+					} else
+					{
+						if(node->v.element.original_tag.data && node->v.element.original_tag.length)
+						{
+							string str;
+							gumbo_tag_from_original_text(&node->v.element.original_tag);
+							str.append(node->v.element.original_tag.data, node->v.element.original_tag.length);
+							ret = create_element(str.c_str(), attrs);
+						}
+					}
+					if(!strcmp(tag, "script"))
+					{
+						parseTextNode = false;
+					}
+					if(ret)
+					{
+						elements_list child;
+						for(unsigned int i = 0; i < node->v.element.children.length; i++)
+						{
+							child.clear();
+							create_node(static_cast<GumboNode*>(node->v.element.children.data[i]), child, parseTextNode,
+										true);
+							std::for_each(child.begin(), child.end(),
+										  [&ret](element::ptr& el) { ret->appendChild(el); });
+						}
+						elements.push_back(ret);
+					}
+				} else
+				{
+					for(unsigned int i = 0; i < node->v.element.children.length; i++)
+					{
+						create_node(static_cast<GumboNode*>(node->v.element.children.data[i]), elements, parseTextNode,
+									true);
+					}
+				}
+			}
+			break;
+		case GUMBO_NODE_TEXT:
+			{
+				if(!parseTextNode)
+				{
+					elements.push_back(std::make_shared<el_text>(node->v.text.text, shared_from_this()));
+				} else
+				{
+					m_container->split_text(
+						node->v.text.text,
+						[this, &elements](const char* text) {
+							elements.push_back(std::make_shared<el_text>(text, shared_from_this()));
+						},
+						[this, &elements](const char* text) {
+							elements.push_back(std::make_shared<el_space>(text, shared_from_this()));
+						});
+				}
+			}
+			break;
+		case GUMBO_NODE_CDATA:
+			{
+				element::ptr ret = std::make_shared<el_cdata>(shared_from_this());
+				ret->set_data(node->v.text.text);
+				elements.push_back(ret);
+			}
+			break;
+		case GUMBO_NODE_COMMENT:
+			{
+				element::ptr ret = std::make_shared<el_comment>(shared_from_this());
+				ret->set_data(node->v.text.text);
+				elements.push_back(ret);
+			}
+			break;
+		case GUMBO_NODE_WHITESPACE:
+			{
+				string str = node->v.text.text;
+				for(size_t i = 0; i < str.length(); i++)
+				{
+					elements.push_back(std::make_shared<el_space>(str.substr(i, 1).c_str(), shared_from_this()));
+				}
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+	element::ptr document::create_element(const char* tag_name, const string_map& attributes)
+	{
+		element::ptr  newTag;
+		document::ptr this_doc = shared_from_this();
+		if(m_container)
+		{
+			newTag = m_container->create_element(tag_name, attributes, this_doc);
+		}
+		if(!newTag)
+		{
+			if(!strcmp(tag_name, "br"))
+			{
+				newTag = std::make_shared<el_break>(this_doc);
+			} else if(!strcmp(tag_name, "p"))
+			{
+				newTag = std::make_shared<el_para>(this_doc);
+			} else if(!strcmp(tag_name, "img"))
+			{
+				newTag = std::make_shared<el_image>(this_doc);
+			} else if(!strcmp(tag_name, "table"))
+			{
+				newTag = std::make_shared<el_table>(this_doc);
+			} else if(!strcmp(tag_name, "td") || !strcmp(tag_name, "th"))
+			{
+				newTag = std::make_shared<el_td>(this_doc);
+			} else if(!strcmp(tag_name, "link"))
+			{
+				newTag = std::make_shared<el_link>(this_doc);
+			} else if(!strcmp(tag_name, "title"))
+			{
+				newTag = std::make_shared<el_title>(this_doc);
+			} else if(!strcmp(tag_name, "a"))
+			{
+				newTag = std::make_shared<el_anchor>(this_doc);
+			} else if(!strcmp(tag_name, "tr"))
+			{
+				newTag = std::make_shared<el_tr>(this_doc);
+			} else if(!strcmp(tag_name, "style"))
+			{
+				newTag = std::make_shared<el_style>(this_doc);
+			} else if(!strcmp(tag_name, "base"))
+			{
+				newTag = std::make_shared<el_base>(this_doc);
+			} else if(!strcmp(tag_name, "body"))
+			{
+				newTag = std::make_shared<el_body>(this_doc);
+			} else if(!strcmp(tag_name, "div"))
+			{
+				newTag = std::make_shared<el_div>(this_doc);
+			} else if(!strcmp(tag_name, "script"))
+			{
+				newTag = std::make_shared<el_script>(this_doc);
+			} else if(!strcmp(tag_name, "font"))
+			{
+				newTag = std::make_shared<el_font>(this_doc);
+			} else
+			{
+				newTag = std::make_shared<html_tag>(this_doc);
+			}
+		}
+
+		if(newTag)
+		{
+			newTag->set_tagName(tag_name);
+			for(const auto& attribute : attributes)
+			{
+				newTag->set_attr(attribute.first.c_str(), attribute.second.c_str());
+			}
+		}
+
+		return newTag;
+	}
+
+	uint_ptr document::add_font(const font_description& descr, font_metrics* fm)
+	{
+		uint_ptr ret	= 0;
+
+		std::string key = descr.hash();
+
+		if(m_fonts.find(key) == m_fonts.end())
+		{
+			font_item fi = {0, {}};
+
+			fi.font		 = m_container->create_font(descr, this, &fi.metrics);
+			m_fonts[key] = fi;
+			ret			 = fi.font;
+			if(fm)
+			{
+				*fm = fi.metrics;
+			}
+		}
+		return ret;
+	}
+
+	uint_ptr document::get_font(const font_description& descr, font_metrics* fm)
+	{
+		if(descr.size == 0)
+		{
+			return 0;
+		}
+
+		auto key = descr.hash();
+
+		auto el	 = m_fonts.find(key);
+
+		if(el != m_fonts.end())
+		{
+			if(fm)
+			{
+				*fm = el->second.metrics;
+			}
+			return el->second.font;
+		}
+		return add_font(descr, fm);
+	}
+
+	pixel_t document::render(pixel_t max_width, render_type rt)
+	{
+		pixel_t ret = 0;
+		if(m_root && m_root_render)
+		{
+			position viewport;
+			m_container->get_viewport(viewport);
+			containing_block_context cb_context;
+			cb_context.width	   = max_width;
+			cb_context.width.type  = containing_block_context::cbc_value_type_absolute;
+			cb_context.height	   = viewport.height;
+			cb_context.height.type = containing_block_context::cbc_value_type_absolute;
+
+			if(rt == render_fixed_only)
+			{
+				m_fixed_boxes.clear();
+				m_root_render->render_positioned(rt);
+			} else
+			{
+				ret = m_root_render->render(0, 0, cb_context, nullptr);
+				if(m_root_render->fetch_positioned())
+				{
+					m_fixed_boxes.clear();
+					m_root_render->render_positioned(rt);
+				}
+				m_size.width  = 0;
+				m_size.height = 0;
+				m_root_render->calc_document_size(m_size);
+			}
+		}
+		return ret;
+	}
+
+	void document::draw(uint_ptr hdc, pixel_t x, pixel_t y, const position* clip)
+	{
+		if(m_root && m_root_render)
+		{
+			m_root->draw(hdc, x, y, clip, m_root_render);
+			m_root_render->draw_stacking_context(hdc, x, y, clip, true);
+		}
+	}
+
+	pixel_t document::to_pixels(const css_length& val, const font_metrics& metrics, pixel_t size) const
+	{
+		if(val.is_predefined())
+		{
+			return 0;
+		}
+		pixel_t ret;
+		switch(val.units())
+		{
+		case css_units_percentage:
+			ret = val.calc_percent(size);
+			break;
+		case css_units_em:
+			ret = val.val() * metrics.font_size;
+			break;
+
+		// https://drafts.csswg.org/css-values-4/#absolute-lengths
+		case css_units_pt:
+			ret = m_container->pt_to_px(val.val());
+			break;
+		case css_units_in:
+			ret = m_container->pt_to_px(val.val() * 72); // 1in = 72pt
+			break;
+		case css_units_pc:
+			ret = m_container->pt_to_px(val.val() * 12); // 1pc = (1/6)in = 12pt
+			break;
+		case css_units_cm:
+			ret = m_container->pt_to_px(val.val() * 72 / 2.54f); // 1cm = (1/2.54)in = (72/2.54)pt
+			break;
+		case css_units_mm:
+			ret = m_container->pt_to_px(val.val() * 72 / 2.54f / 10);
+			break;
+
+		case css_units_vw:
+			ret = (pixel_t) (m_media.width * val.val() / 100.0);
+			break;
+		case css_units_vh:
+			ret = (pixel_t) (m_media.height * val.val() / 100.0);
+			break;
+		case css_units_vmin:
+			ret = (pixel_t) (std::min(m_media.height, m_media.width) * val.val() / 100.0);
+			break;
+		case css_units_vmax:
+			ret = (pixel_t) (std::max(m_media.height, m_media.width) * val.val() / 100.0);
+			break;
+		case css_units_rem:
+			ret = (pixel_t) (m_root->css().get_font_size() * val.val());
+			break;
+		case css_units_ex:
+			ret = (pixel_t) (metrics.x_height * val.val());
+			break;
+		case css_units_ch:
+			ret = (pixel_t) (metrics.ch_width * val.val());
+			break;
+		default:
+			ret = (pixel_t) val.val();
+			break;
+		}
+		return ret;
+	}
+
+	void document::cvt_units(css_length& val, const font_metrics& metrics, pixel_t size) const
+	{
+		if(val.is_predefined())
+		{
+			return;
+		}
+		if(val.units() != css_units_percentage)
+		{
+			val.set_value((float) to_pixels(val, metrics, size), css_units_px);
+		}
+	}
+
+	pixel_t document::width() const
+	{
+		return m_size.width;
+	}
+
+	pixel_t document::height() const
+	{
+		return m_size.height;
+	}
+
+	void document::add_stylesheet(const char* str, const char* baseurl, const char* media)
+	{
+		if(str && str[0])
+		{
+			m_css.emplace_back(str, baseurl, media);
+		}
+	}
+
+	bool document::on_mouse_over(pixel_t x, pixel_t y, pixel_t client_x, pixel_t client_y,
+								 position::vector& redraw_boxes)
+	{
+		if(!m_root || !m_root_render)
+		{
+			return false;
+		}
+
+		element::ptr over_el   = m_root_render->get_element_by_point(x, y, client_x, client_y, nullptr);
+
+		bool state_was_changed = false;
+
+		if(over_el != m_over_element)
+		{
+			if(m_over_element)
+			{
+				if(m_over_element->on_mouse_leave())
+				{
+					m_container->on_mouse_event(m_over_element, mouse_event_leave);
+					state_was_changed = true;
+				}
+			}
+			m_over_element = over_el;
+		}
+
+		string cursor;
+
+		if(m_over_element)
+		{
+			if(m_over_element->on_mouse_over())
+			{
+				state_was_changed = true;
+			}
+			cursor = m_over_element->css().get_cursor();
+		}
+
+		m_container->set_cursor(cursor.c_str());
+
+		if(state_was_changed)
+		{
+			m_container->on_mouse_event(m_over_element, mouse_event_enter);
+			return m_root->find_styles_changes(redraw_boxes);
+		}
+		return false;
+	}
+
+	std::vector<scroll_values> document::on_scroll(pixel_t dx, pixel_t dy, pixel_t x, pixel_t y, pixel_t client_x,
+												   pixel_t client_y) const
+	{
+		if(dy == 0 && dx == 0)
+			return {};
+
+		element::ptr vscroll_el;
+		element::ptr hscroll_el;
+
+		if(dy != 0.f)
+		{
+			vscroll_el = m_root_render->get_element_by_point(
+				x, y, client_x, client_y,
+				[dy](const shared_ptr<render_item>& el) -> bool { return el->is_v_scrollable(dy); });
+		}
+
+		if(dx != 0.f)
+		{
+			hscroll_el = m_root_render->get_element_by_point(
+				x, y, client_x, client_y,
+				[dx](const shared_ptr<render_item>& el) -> bool { return el->is_h_scrollable(dx); });
+		}
+
+		if(!vscroll_el && !hscroll_el)
+			return {};
+
+		if(vscroll_el == hscroll_el)
+		{
+			scroll_values sv;
+			sv.dx		  = hscroll_el->h_scroll(dx);
+			sv.dy		  = vscroll_el->v_scroll(dy);
+			sv.scroll_box = hscroll_el->get_placement();
+			return {sv};
+		}
+
+		std::vector<scroll_values> ret;
+		ret.reserve(2);
+
+		if(vscroll_el)
+		{
+			scroll_values sv;
+			sv.dy		  = vscroll_el->v_scroll(dy);
+			sv.scroll_box = vscroll_el->get_placement();
+			ret.push_back(sv);
+		}
+
+		if(hscroll_el)
+		{
+			scroll_values sv;
+			sv.dx		  = hscroll_el->h_scroll(dx);
+			sv.scroll_box = hscroll_el->get_placement();
+			ret.push_back(sv);
+		}
+
+		return ret;
+	}
+
+	bool document::on_mouse_leave(position::vector& redraw_boxes)
+	{
+		if(!m_root || !m_root_render)
+		{
+			return false;
+		}
+		if(m_over_element)
+		{
+			auto el		   = m_over_element;
+			m_over_element = nullptr;
+			if(el->on_mouse_leave())
+			{
+				m_container->on_mouse_event(el, mouse_event_leave);
+				return m_root->find_styles_changes(redraw_boxes);
+			}
+		}
+		return false;
+	}
+
+	bool document::on_lbutton_down(pixel_t x, pixel_t y, pixel_t client_x, pixel_t client_y,
+								   position::vector& redraw_boxes)
+	{
+		if(!m_root || !m_root_render)
+		{
+			return false;
+		}
+
+		element::ptr over_el   = m_root_render->get_element_by_point(x, y, client_x, client_y, nullptr);
+		m_active_element	   = over_el;
+
+		bool state_was_changed = false;
+
+		if(over_el != m_over_element)
+		{
+			if(m_over_element)
+			{
+				if(m_over_element->on_mouse_leave())
+				{
+					m_container->on_mouse_event(m_over_element, mouse_event_leave);
+					state_was_changed = true;
+				}
+			}
+			m_over_element = over_el;
+			if(m_over_element)
+			{
+				if(m_over_element->on_mouse_over())
+				{
+					state_was_changed = true;
+				}
+			}
+		}
+
+		string cursor;
+
+		if(m_over_element)
+		{
+			if(m_over_element->on_lbutton_down())
+			{
+				state_was_changed = true;
+			}
+			cursor = m_over_element->css().get_cursor();
+		}
+
+		m_container->set_cursor(cursor.c_str());
+
+		if(state_was_changed)
+		{
+			m_container->on_mouse_event(m_over_element, mouse_event_enter);
+			return m_root->find_styles_changes(redraw_boxes);
+		}
+
+		return false;
+	}
+
+	bool document::on_lbutton_up(pixel_t /*x*/, pixel_t /*y*/, pixel_t /*client_x*/, pixel_t /*client_y*/,
+								 position::vector& redraw_boxes)
+	{
+		if(!m_root || !m_root_render)
+		{
+			return false;
+		}
+		if(m_over_element)
+		{
+			if(m_over_element->on_lbutton_up(m_active_element == m_over_element))
+			{
+				return m_root->find_styles_changes(redraw_boxes);
+			}
+		}
+		return false;
+	}
+
+	bool document::on_button_cancel(position::vector& redraw_boxes)
+	{
+		m_active_element = nullptr;
+		return on_mouse_leave(redraw_boxes);
+	}
+
+	void document::get_fixed_boxes(position::vector& fixed_boxes)
+	{
+		fixed_boxes = m_fixed_boxes;
+	}
+
+	void document::add_fixed_box(const position& pos)
+	{
+		m_fixed_boxes.push_back(pos);
+	}
+
+	bool document::media_changed()
+	{
+		container()->get_media_features(m_media);
+		if(update_media_lists(m_media))
+		{
+			m_root->refresh_styles();
+			m_root->compute_styles();
+			return true;
+		}
+		return false;
+	}
+
+	bool document::lang_changed()
+	{
+		if(!m_media_lists.empty())
+		{
+			string culture;
+			container()->get_language(m_lang, culture);
+			if(!culture.empty())
+			{
+				m_culture = m_lang + '-' + culture;
+			} else
+			{
+				m_culture.clear();
+			}
+			m_root->refresh_styles();
+			m_root->compute_styles();
+			return true;
+		}
+		return false;
+	}
+
+	// Apply media features (determine which selectors are active).
+	bool document::update_media_lists(const media_features& features)
+	{
+		bool update_styles = false;
+		for(auto& media_list : m_media_lists)
+		{
+			if(media_list->apply_media_features(features))
+			{
+				update_styles = true;
+			}
+		}
+		return update_styles;
+	}
+
+	void document::add_media_list(media_query_list_list::ptr list)
+	{
+		if(list && !contains(m_media_lists, list))
+			m_media_lists.push_back(list);
+	}
+
+	void document::fix_tables_layout()
+	{
+		for(const auto& el_ptr : m_tabular_elements)
+		{
+			switch(el_ptr->src_el()->css().get_display())
+			{
+			case display_inline_table:
+			case display_table:
+				fix_table_children(el_ptr, display_table_row_group, "table-row-group");
+				break;
+			case display_table_footer_group:
+			case display_table_row_group:
+			case display_table_header_group:
+				{
+					auto parent = el_ptr->parent();
+					if(parent)
+					{
+						if(parent->src_el()->css().get_display() != display_inline_table)
+							fix_table_parent(el_ptr, display_table, "table");
+					}
+					fix_table_children(el_ptr, display_table_row, "table-row");
+				}
+				break;
+			case display_table_row:
+				fix_table_parent(el_ptr, display_table_row_group, "table-row-group");
+				fix_table_children(el_ptr, display_table_cell, "table-cell");
+				break;
+			case display_table_cell:
+				fix_table_parent(el_ptr, display_table_row, "table-row");
+				break;
+			// TODO: make table layout fix for table-caption, table-column etc. elements
+			case display_table_caption:
+			case display_table_column:
+			case display_table_column_group:
+			default:
+				break;
+			}
+		}
+	}
+
+	void document::fix_table_children(const std::shared_ptr<render_item>& el_ptr, style_display disp,
+									  const char* disp_str)
+	{
+		std::list<std::shared_ptr<render_item>> tmp;
+		auto									first_iter = el_ptr->children().begin();
+		auto									cur_iter   = el_ptr->children().begin();
+
+		auto flush_elements								   = [&]() {
+			   element::ptr annon_tag = std::make_shared<html_tag>(el_ptr->src_el(), string("display:") + disp_str);
+			   std::shared_ptr<render_item> annon_ri;
+			   if(annon_tag->css().get_display() == display_table_cell)
+			   {
+				   annon_tag->set_tagName("table_cell");
+				   annon_ri = std::make_shared<render_item_block>(annon_tag);
+			   } else if(annon_tag->css().get_display() == display_table_row)
+			   {
+				   annon_ri = std::make_shared<render_item_table_row>(annon_tag);
+			   } else
+			   {
+				   annon_ri = std::make_shared<render_item_table_part>(annon_tag);
+			   }
+			   for(const auto& el : tmp)
+			   {
+				   annon_ri->add_child(el);
+			   }
+			   // add annon item as tabular for future processing
+			   add_tabular(annon_ri);
+			   annon_ri->parent(el_ptr);
+			   first_iter = el_ptr->children().insert(first_iter, annon_ri);
+			   cur_iter	  = std::next(first_iter);
+			   while(cur_iter != el_ptr->children().end() && (*cur_iter)->parent() != el_ptr)
+			   {
+				   cur_iter = el_ptr->children().erase(cur_iter);
+			   }
+			   first_iter = cur_iter;
+			   tmp.clear();
+		};
+
+		while(cur_iter != el_ptr->children().end())
+		{
+			if((*cur_iter)->src_el()->css().get_display() != disp)
+			{
+				if(!(*cur_iter)->src_el()->is_table_skip() || ((*cur_iter)->src_el()->is_table_skip() && !tmp.empty()))
+				{
+					if(disp != display_table_row_group ||
+					   (*cur_iter)->src_el()->css().get_display() != display_table_caption)
+					{
+						if(tmp.empty())
+						{
+							first_iter = cur_iter;
+						}
+						tmp.push_back((*cur_iter));
+					}
+				}
+				cur_iter++;
+			} else if(!tmp.empty())
+			{
+				flush_elements();
+			} else
+			{
+				cur_iter++;
+			}
+		}
+		if(!tmp.empty())
+		{
+			flush_elements();
+		}
+	}
+
+	void document::fix_table_parent(const std::shared_ptr<render_item>& el_ptr, style_display disp,
+									const char* disp_str)
+	{
+		auto parent = el_ptr->parent();
+
+		if(parent->src_el()->css().get_display() != disp)
+		{
+			auto this_element = std::find_if(parent->children().begin(), parent->children().end(),
+											 [&](const std::shared_ptr<render_item>& el) {
+												 if(el == el_ptr)
+												 {
+													 return true;
+												 }
+												 return false;
+											 });
+			if(this_element != parent->children().end())
+			{
+				style_display el_disp = el_ptr->src_el()->css().get_display();
+				auto		  first	  = this_element;
+				auto		  last	  = this_element;
+				auto		  cur	  = this_element;
+
+				// find first element with same display
+				while(true)
+				{
+					if(cur == parent->children().begin())
+						break;
+					cur--;
+					if((*cur)->src_el()->is_table_skip() || (*cur)->src_el()->css().get_display() == el_disp)
+					{
+						first = cur;
+					} else
+					{
+						break;
+					}
+				}
+
+				// find last element with same display
+				cur = this_element;
+				while(true)
+				{
+					cur++;
+					if(cur == parent->children().end())
+						break;
+
+					if((*cur)->src_el()->is_table_skip() || (*cur)->src_el()->css().get_display() == el_disp)
+					{
+						last = cur;
+					} else
+					{
+						break;
+					}
+				}
+
+				// extract elements with the same display and wrap them with anonymous object
+				element::ptr annon_tag = std::make_shared<html_tag>(parent->src_el(), string("display:") + disp_str);
+				std::shared_ptr<render_item> annon_ri;
+				if(annon_tag->css().get_display() == display_table ||
+				   annon_tag->css().get_display() == display_inline_table)
+				{
+					annon_ri = std::make_shared<render_item_table>(annon_tag);
+				} else if(annon_tag->css().get_display() == display_table_row)
+				{
+					annon_ri = std::make_shared<render_item_table_row>(annon_tag);
+				} else
+				{
+					annon_ri = std::make_shared<render_item_table_part>(annon_tag);
+				}
+				std::for_each(first, std::next(last, 1),
+							  [&annon_ri](std::shared_ptr<render_item>& el) { annon_ri->add_child(el); });
+				first = parent->children().erase(first, std::next(last));
+				parent->children().insert(first, annon_ri);
+				add_tabular(annon_ri);
+				annon_ri->parent(parent);
+			}
+		}
+	}
+
+	void document::append_children_from_string(element& parent, const char* str, bool replace_existing)
+	{
+		// parent must belong to this document
+		if(parent.get_document().get() != this)
+		{
+			return;
+		}
+
+		GumboOptions opts	  = kGumboDefaultOptions;
+		// This is require to prevent creating html, head, body tags around the fragment
+		// Although Gumbo always creates html tag anyway. We have to ignore it in create_node.
+		opts.fragment_context = GUMBO_TAG_BODY;
+		// parse document into GumboOutput
+		GumboOutput* output	  = gumbo_parse_with_options(&opts, str, strlen(str));
+
+		// Create litehtml::elements.
+		elements_list child_elements;
+		// Create elements excluding the root node
+		create_node(output->root, child_elements, true, false);
+
+		// Destroy GumboOutput
+		gumbo_destroy_output(&kGumboDefaultOptions, output);
+
+		auto parent_render = parent.get_render_item();
+
+		if(replace_existing)
+		{
+			parent.clearRecursive();
+			parent_render->children().clear();
+		}
+
+		// Let's process created elements tree
+		for(const auto& child : child_elements)
+		{
+			// Add the child element to parent
+			parent.appendChild(child);
+
+			// apply master CSS
+			child->apply_stylesheet(m_master_css);
+
+			// parse elements attributes
+			child->parse_attributes();
+
+			// Apply parsed styles.
+			child->apply_stylesheet(m_styles);
+
+			// Apply user styles if any
+			child->apply_stylesheet(m_user_css);
+
+			// Initialize m_css
+			child->compute_styles();
+
+			// Finally initialize elements
+			if(parent_render)
+			{
+				auto child_render = child->create_render_item(parent_render);
+				if(child_render)
+				{
+					child_render = child_render->init();
+					parent_render->add_child(child_render);
+				}
+			}
+		}
+		// Now the m_tabular_elements is filled with tabular elements.
+		// We have to check the tabular elements for missing table elements
+		// and create the anonymous boxes in visual table layout
+		fix_tables_layout();
+	}
+
+	void document::dump(dumper& cout)
+	{
+		if(m_root_render)
+		{
+			m_root_render->dump(cout);
+		}
+	}
+
+} // namespace litehtml

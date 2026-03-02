@@ -1,13 +1,25 @@
 #include "el_comment.h"
 
-#include "html.h"
+litehtml::el_comment::el_comment(const std::shared_ptr<document>& doc) :
+	element(doc)
+{
+	// m_skip = true;
+}
 
-litehtml::el_comment::el_comment(const std::shared_ptr<litehtml::document>& doc) : litehtml::element(doc) { m_skip = true; }
+bool litehtml::el_comment::is_comment() const
+{
+	return true;
+}
 
-void litehtml::el_comment::get_text(tstring& text) { text += m_text; }
+void litehtml::el_comment::get_text(string& text) const
+{
+	text += m_text;
+}
 
-void litehtml::el_comment::set_data(const tchar_t* data) {
-  if (data) {
-    m_text += data;
-  }
+void litehtml::el_comment::set_data(const char* data)
+{
+	if(data)
+	{
+		m_text += data;
+	}
 }
