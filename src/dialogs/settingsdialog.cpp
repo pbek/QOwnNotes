@@ -598,6 +598,8 @@ void SettingsDialog::storeSettings() {
                       ui->showLineNumbersInEditorCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),
                       ui->highlightCurrentLineCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/hangingIndent"),
+                      ui->hangingIndentCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/editorWidthInDFMOnly"),
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/vimMode"), ui->vimModeCheckBox->isChecked());
@@ -990,6 +992,8 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("Editor/showLineNumbers")).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool());
+    ui->hangingIndentCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/hangingIndent"), true).toBool());
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/editorWidthInDFMOnly"), true).toBool());
     ui->vimModeCheckBox->setChecked(settings.value(QStringLiteral("Editor/vimMode")).toBool());

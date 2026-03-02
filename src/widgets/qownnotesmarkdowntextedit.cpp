@@ -986,6 +986,9 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     const bool hlCurrLine =
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool();
     setHighlightCurrentLine(hlCurrLine);
+    const bool hangingIndentEnabled =
+        settings.value(QStringLiteral("Editor/hangingIndent"), true).toBool();
+    setHangingIndentEnabled(hangingIndentEnabled);
     const auto color = Utils::Schema::schemaSettings->getBackgroundColor(
         MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor);
     setCurrentLineHighlightColor(color);

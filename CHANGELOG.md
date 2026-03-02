@@ -2,6 +2,8 @@
 
 ## 26.3.1
 
+- Added a setting to toggle hanging indentation for wrapped Markdown list items
+  in the note text edit (for [#1581](https://github.com/pbek/QOwnNotes/issues/1581))
 - Fixed text selection start positions in wrapped Markdown list items with
   hanging indentation in the note text edit (for [#3477](https://github.com/pbek/QOwnNotes/issues/3477))
 - Fixed wrapped list item continuation lines with hanging indentation sometimes
