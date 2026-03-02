@@ -6,6 +6,8 @@
   hanging indentation in the note text edit (for [#3477](https://github.com/pbek/QOwnNotes/issues/3477))
 - Fixed wrapped list item continuation lines with hanging indentation sometimes
   clipping the last characters of a line (for [#3478](https://github.com/pbek/QOwnNotes/issues/3478))
+- Fixed QLiteHtml preview selection drawing occasionally leaving vertical highlight
+  stripes when dragging a selection (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
 
 ## 26.3.0
 

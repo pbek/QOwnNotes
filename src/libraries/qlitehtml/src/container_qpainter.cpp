@@ -487,9 +487,11 @@ void Selection::update()
             // placementRect is the unadjusted document-coordinate rect used as
             // a map key in segmentMap (must match what draw_text reconstructs).
             const QRect placementRect = toQRect(element.element->get_placement());
-            QRect rect = placementRect.adjusted(-1, -1, 1, 1);
+            QRect rect = placementRect;
             SegmentInfo seg;
+            int selectionLength = 0;
             if (element.index < 0) { // fully selected
+                selectionLength = textStr.size();
                 text += textStr;
                 seg.charStart = 0;
                 seg.charEnd = -1;
@@ -498,7 +500,10 @@ void Selection::update()
             } else if (end.element) { // select from element "to end"
                 if (element.element == end.element) {
                     // end.index is guaranteed to be >= element.index by caller, same for x
-                    text += textStr.mid(element.index, end.index - element.index);
+                    selectionLength = end.index - element.index;
+                    if (selectionLength <= 0)
+                        return;
+                    text += textStr.mid(element.index, selectionLength);
                     const int left = rect.left();
                     rect.setLeft(left + element.x);
                     rect.setRight(left + end.x);
@@ -507,6 +512,9 @@ void Selection::update()
                     seg.pixelStart = element.x;
                     seg.pixelEnd = end.x;
                 } else {
+                    selectionLength = textStr.size() - element.index;
+                    if (selectionLength <= 0)
+                        return;
                     text += textStr.mid(element.index);
                     rect.setLeft(rect.left() + element.x);
                     seg.charStart = element.index;
@@ -515,6 +523,9 @@ void Selection::update()
                     seg.pixelEnd = -1;
                 }
             } else { // select from start of element
+                selectionLength = element.index;
+                if (selectionLength <= 0)
+                    return;
                 text += textStr.left(element.index);
                 rect.setRight(rect.left() + element.x);
                 seg.charStart = 0;
@@ -526,6 +537,7 @@ void Selection::update()
             // vertical stripe artifact that appears during mouse-drag selection
             // when the cursor is at or near the start of a text element.
             if (rect.width() > 0) {
+                rect = rect.adjusted(-1, -1, 1, 1);
                 selection.append(rect);
                 segmentMap[placementRect] = seg;
             }
