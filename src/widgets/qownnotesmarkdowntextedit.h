@@ -34,6 +34,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void updateSettings();
     QMargins viewportMargins();
     void setText(const QString &text);
+    void setPlainText(const QString &text);
     static void setSpellCheckingEnabled(bool enabled);
     bool isSpellCheckingEnabled();
     void disableSpellChecking();

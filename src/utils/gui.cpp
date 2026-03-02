@@ -36,6 +36,8 @@
 #include <QStyleFactory>
 #include <QTextBlock>
 #include <QTextCursor>
+#include <QTextDocument>
+#include <QTextFormat>
 #include <QTreeWidgetItem>
 #include <QVBoxLayout>
 
@@ -751,6 +753,36 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     cursor.insertText(newTableText);
 
     return true;
+}
+
+void Utils::Gui::applyProportionalLineHeightToDocument(QPlainTextEdit *textEdit,
+                                                       int lineHeightPercent) {
+    if (textEdit == nullptr) {
+        return;
+    }
+
+    if (lineHeightPercent < 1) {
+        lineHeightPercent = 100;
+    }
+
+    QTextDocument *doc = textEdit->document();
+    if (doc == nullptr) {
+        return;
+    }
+
+    QTextCursor cursor(doc);
+    cursor.beginEditBlock();
+    cursor.select(QTextCursor::Document);
+
+    QTextBlockFormat format;
+    format.setLineHeight(lineHeightPercent, QTextBlockFormat::ProportionalHeight);
+    cursor.mergeBlockFormat(format);
+
+    cursor.endEditBlock();
+}
+
+void Utils::Gui::applyProportionalLineHeightToDocument(QPlainTextEdit *textEdit) {
+    applyProportionalLineHeightToDocument(textEdit, 250);
 }
 
 /**

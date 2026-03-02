@@ -890,6 +890,12 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     setSearchWidgetDebounceDelay(text.size() > 200000 ? 250 : 0);
 
     QMarkdownTextEdit::setText(text);
+    Utils::Gui::applyProportionalLineHeightToDocument(this);
+}
+
+void QOwnNotesMarkdownTextEdit::setPlainText(const QString &text) {
+    QMarkdownTextEdit::setPlainText(text);
+    Utils::Gui::applyProportionalLineHeightToDocument(this);
 }
 
 /**
@@ -995,6 +1001,8 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     _centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     QMarkdownTextEdit::updateSettings();
+
+    Utils::Gui::applyProportionalLineHeightToDocument(this);
 
     applyMarkdownLspSettings();
 }
