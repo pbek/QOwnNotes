@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.3.2
+
+- Try to fix hanging indentation in wrapped Markdown list items causing caret placement
+  and drawing issues on mouse clicks on Windows (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
+
 ## 26.3.1
 
 - Added a setting to toggle hanging indentation for wrapped Markdown list items
