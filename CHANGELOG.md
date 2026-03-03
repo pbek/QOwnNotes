@@ -2,6 +2,8 @@
 
 ## 26.3.2
 
+- Moved the setting for hanging indentation in wrapped Markdown list items to the
+  Tabs and Indents panel in the settings dialog (for [#1581](https://github.com/pbek/QOwnNotes/issues/1581))
 - Try to fix hanging indentation in wrapped Markdown list items causing caret placement
   and drawing issues on mouse clicks on Windows (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
 - Try to better fix the end of the last line of text being cut off on hanging-indented
