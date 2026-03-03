@@ -18,6 +18,8 @@
 #include <entities/note.h>
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
+#include <QTextBlockFormat>
+
 QT_BEGIN_NAMESPACE
 class QTextDocument;
 
@@ -38,6 +40,11 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
         HighlightingOptions highlightingOptions = HighlightingOption::None);
 
     void updateCurrentNote(Note *note);
+
+    /**
+     * Sets the editor line height percentage (100 = default, 150 = 50% more)
+     */
+    void setEditorLineHeight(int lineHeightPercent);
 
     struct ScriptingHighlightingRule {
         explicit ScriptingHighlightingRule(const HighlighterState state_) : state(state_) {}
@@ -66,6 +73,7 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     Note *_currentNote = nullptr;
     bool _hasEncrypted = false;
     bool _highlightEncrypted = false;
+    int _editorLineHeightPercent = 100;
 
     QString _defaultNoteFileExt;
     QRegularExpression _regexTagStyleLink;

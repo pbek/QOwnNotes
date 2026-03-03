@@ -5681,15 +5681,71 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0" colspan="4">
-                 <widget class="QCheckBox" name="editorWidthInDFMOnlyCheckBox">
-                  <property name="text">
-                   <string>Only use editor width setting in distraction free mode</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="2">
-                 <widget class="QToolButton" name="cursorWidthResetButton">
+                 <item row="4" column="0" colspan="4">
+                  <widget class="QCheckBox" name="editorWidthInDFMOnlyCheckBox">
+                   <property name="text">
+                    <string>Only use editor width setting in distraction free mode</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="0">
+                  <widget class="QLabel" name="editorLineHeightLabel">
+                   <property name="text">
+                    <string>Editor line height:</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="1">
+                  <widget class="QSpinBox" name="editorLineHeightSpinBox">
+                   <property name="toolTip">
+                    <string>Sets the line height in the note editor in percent (100% = default)</string>
+                   </property>
+                   <property name="suffix">
+                    <string notr="true">%</string>
+                   </property>
+                   <property name="minimum">
+                    <number>100</number>
+                   </property>
+                   <property name="maximum">
+                    <number>500</number>
+                   </property>
+                   <property name="value">
+                    <number>100</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="2">
+                  <widget class="QToolButton" name="editorLineHeightResetButton">
+                   <property name="toolTip">
+                    <string>Reset the editor line height</string>
+                   </property>
+                   <property name="text">
+                    <string notr="true">…</string>
+                   </property>
+                   <property name="icon">
+                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                     <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="3">
+                  <spacer name="horizontalSpacer_editorLineHeight">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="7" column="2">
+                  <widget class="QToolButton" name="cursorWidthResetButton">
                   <property name="toolTip">
                    <string>Reset the cursor width</string>
                   </property>

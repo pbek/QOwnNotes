@@ -2,6 +2,8 @@
 
 ## 26.3.2
 
+- Added a setting to increase the editor line height in the note text edit
+  in _Settings > Editor > Editor options_ (for [#2030](https://github.com/pbek/QOwnNotes/issues/2030))
 - Try to fix hanging indentation in wrapped Markdown list items causing caret placement
   and drawing issues on mouse clicks on Windows (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
 - Try to better fix the end of the last line of text being cut off on hanging-indented
