@@ -994,6 +994,15 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     setCurrentLineHighlightColor(color);
 
     _centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
+
+    // Apply editor line height setting
+    const int editorLineHeight =
+        settings.value(QStringLiteral("Editor/editorLineHeight"), 100).toInt();
+    auto *qonHighlighter = qobject_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
+    if (qonHighlighter) {
+        qonHighlighter->setEditorLineHeight(editorLineHeight);
+    }
+
     QMarkdownTextEdit::updateSettings();
 
     applyMarkdownLspSettings();

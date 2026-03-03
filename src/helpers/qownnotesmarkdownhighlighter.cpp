@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+#include <QTextCursor>
 
 #include "mainwindow.h"
 #include "qownspellchecker.h"
@@ -45,6 +46,15 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
     _currentNote = note;
     _hasEncrypted = _currentNote->hasEncryptedNoteText();
     _highlightEncrypted = false;    // Reset state when note changes
+}
+
+void QOwnNotesMarkdownHighlighter::setEditorLineHeight(int lineHeightPercent) {
+    if (_editorLineHeightPercent == lineHeightPercent) {
+        return;
+    }
+
+    _editorLineHeightPercent = lineHeightPercent;
+    rehighlight();
 }
 
 /**
@@ -98,6 +108,15 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     // Only check for encryption end marker if we're highlighting encrypted text
     if (_hasEncrypted && _highlightEncrypted && Note::isEncryptedTextEnd(text)) {
         _highlightEncrypted = false;
+    }
+
+    // Apply editor line height if set to something other than 100%
+    if (_editorLineHeightPercent > 100) {
+        QTextBlock block = currentBlock();
+        QTextCursor cursor(block);
+        QTextBlockFormat blockFormat = block.blockFormat();
+        blockFormat.setLineHeight(_editorLineHeightPercent, QTextBlockFormat::ProportionalHeight);
+        cursor.setBlockFormat(blockFormat);
     }
 
     _highlightingFinished = true;

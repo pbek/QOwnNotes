@@ -233,6 +233,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_cursorWidthResetButton_clicked();
 
+    void on_editorLineHeightResetButton_clicked();
+
     void on_showSystemTrayCheckBox_toggled(bool checked);
 
     void on_resetMessageBoxesButton_clicked();

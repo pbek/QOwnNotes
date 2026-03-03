@@ -600,6 +600,8 @@ void SettingsDialog::storeSettings() {
                       ui->highlightCurrentLineCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/hangingIndent"),
                       ui->hangingIndentCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/editorLineHeight"),
+                      ui->editorLineHeightSpinBox->value());
     settings.setValue(QStringLiteral("Editor/editorWidthInDFMOnly"),
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/vimMode"), ui->vimModeCheckBox->isChecked());
@@ -1259,6 +1261,10 @@ void SettingsDialog::readSettings() {
 
     // set the cursor width spinbox value
     ui->cursorWidthSpinBox->setValue(settings.value(QStringLiteral("cursorWidth"), 1).toInt());
+
+    // set the editor line height spinbox value
+    ui->editorLineHeightSpinBox->setValue(
+        settings.value(QStringLiteral("Editor/editorLineHeight"), 100).toInt());
 
     const QSignalBlocker blocker8(this->ui->showSystemTrayCheckBox);
     Q_UNUSED(blocker8)
@@ -4014,6 +4020,13 @@ void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(const QString 
  * Reset the cursor width spin box value
  */
 void SettingsDialog::on_cursorWidthResetButton_clicked() { ui->cursorWidthSpinBox->setValue(1); }
+
+/**
+ * Reset the editor line height spin box value
+ */
+void SettingsDialog::on_editorLineHeightResetButton_clicked() {
+    ui->editorLineHeightSpinBox->setValue(100);
+}
 
 /**
  * Also enable the single instance feature if the system tray icon is turned on
