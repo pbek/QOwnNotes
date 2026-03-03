@@ -4,6 +4,9 @@
 
 - Try to fix hanging indentation in wrapped Markdown list items causing caret placement
   and drawing issues on mouse clicks on Windows (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
+- Try to better fix the end of the last line of text being cut off on hanging-indented
+  wrapped list items when the text almost fits the available width
+  (for [#3478](https://github.com/pbek/QOwnNotes/issues/3478))
 
 ## 26.3.1
 
