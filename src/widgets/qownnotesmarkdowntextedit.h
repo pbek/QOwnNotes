@@ -126,6 +126,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool canInsertFromMimeData(const QMimeData *source) const override;
     void insertFromMimeData(const QMimeData *source) override;
     void resizeEvent(QResizeEvent *event) override;
+    void paintEvent(QPaintEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
     void keyPressEvent(QKeyEvent *e) override;
     void focusInEvent(QFocusEvent *e) override;
@@ -177,8 +178,12 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void requestMarkdownLspCodeActions(const QTextCursor &cursor);
     void showMarkdownLspCodeActions(int requestId,
                                     const QVector<MarkdownLspClient::CodeAction> &actions);
+    void paintMarkdownImagePreviews();
 
     bool _isSpellCheckingDisabled = false;
+    bool _showMarkdownImagePreviews = true;
+    int _markdownImagePreviewMaxWidth = 1024;
+    int _markdownImagePreviewMaxHeight = 1024;
     QString _aiAutocompleteSuggestion;
     int _aiAutocompletePosition = -1;
     QTimer *_aiAutocompleteTimer = nullptr;

@@ -5698,12 +5698,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
                </layout>
               </widget>
              </item>
-             <item row="2" column="0">
-              <widget class="QGroupBox" name="groupBox_36">
-               <property name="title">
-                <string>Tabs and Indents</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_74">
+              <item row="2" column="0">
+               <widget class="QGroupBox" name="groupBox_36">
+                <property name="title">
+                 <string>Tabs and Indents</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_74">
                 <item row="0" column="0">
                  <layout class="QGridLayout" name="gridLayout_73">
                   <item row="0" column="0" colspan="3">
@@ -5743,18 +5743,96 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      </property>
                     </spacer>
                    </item>
-                   <item row="2" column="0" colspan="3">
-                    <widget class="QCheckBox" name="hangingIndentCheckBox">
-                     <property name="text">
-                      <string>Enable hanging indentation for Markdown lists</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
+                    <item row="2" column="0" colspan="3">
+                     <widget class="QCheckBox" name="hangingIndentCheckBox">
+                      <property name="text">
+                       <string>Enable hanging indentation for Markdown lists</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QGroupBox" name="inlineImagePreviewGroupBox">
+                <property name="title">
+                 <string>Inline Image Previews</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_inlineImagePreview">
+                 <property name="topMargin">
+                  <number>18</number>
+                 </property>
+                 <item row="1" column="0" colspan="3">
+                  <widget class="QCheckBox" name="showMarkdownImagePreviewsCheckBox">
+                   <property name="text">
+                    <string>Show Markdown images in the editor</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="markdownImagePreviewMaxWidthLabel">
+                   <property name="text">
+                    <string>Maximum preview width:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QSpinBox" name="markdownImagePreviewMaxWidthSpinBox">
+                   <property name="minimum">
+                    <number>64</number>
+                   </property>
+                   <property name="maximum">
+                    <number>4096</number>
+                   </property>
+                   <property name="value">
+                    <number>1024</number>
+                   </property>
+                   <property name="suffix">
+                    <string> px</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <spacer name="horizontalSpacer_inlineImagePreview1">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="markdownImagePreviewMaxHeightLabel">
+                   <property name="text">
+                    <string>Maximum preview height:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QSpinBox" name="markdownImagePreviewMaxHeightSpinBox">
+                   <property name="minimum">
+                    <number>64</number>
+                   </property>
+                   <property name="maximum">
+                    <number>4096</number>
+                   </property>
+                   <property name="value">
+                    <number>1024</number>
+                   </property>
+                   <property name="suffix">
+                    <string> px</string>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
-             </item>
+              </item>
             </layout>
            </widget>
            <widget class="QWidget" name="gitPage">

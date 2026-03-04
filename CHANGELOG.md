@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.3.3
+
+- Added inline Markdown image previews in the note text edit with a new setting
+  `Show Markdown images inline in editor` (enabled by default), supporting local
+  files, remote http(s) image URLs, base64 `data:image/...` images, and Nextcloud
+  `/core/preview` image URLs (for [#1254](https://github.com/pbek/QOwnNotes/issues/1254))
+
 ## 26.3.2
 
 - Moved the setting for hanging indentation in wrapped Markdown list items to the

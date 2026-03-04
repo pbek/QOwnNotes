@@ -7,24 +7,33 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QDebug>
+#include <QDir>
 #include <QEvent>
+#include <QFileInfo>
 #include <QFont>
 #include <QFontDatabase>
+#include <QHash>
 #include <QHelpEvent>
+#include <QImageReader>
 #include <QJSEngine>
 #include <QKeyEvent>
 #include <QLineEdit>
 #include <QMenu>
 #include <QMimeData>
+#include <QPainter>
+#include <QPixmap>
 #include <QRegularExpression>
+#include <QSet>
 #include <QTextBlock>
 #include <QTextCursor>
 #include <QTextDocument>
 #include <QTextDocumentFragment>
 #include <QTextEdit>
 #include <QTextFormat>
+#include <QTextLayout>
 #include <QTimer>
 #include <QToolTip>
+#include <QUrl>
 #include <QVariant>
 #include <QWidgetAction>
 #include <algorithm>
@@ -36,6 +45,7 @@
 #include "services/markdownlspclient.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
+#include "services/owncloudservice.h"
 #include "services/scriptingservice.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
@@ -911,6 +921,303 @@ void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {
     QMarkdownTextEdit::resizeEvent(event);
 }
 
+void QOwnNotesMarkdownTextEdit::paintEvent(QPaintEvent *event) {
+    QMarkdownTextEdit::paintEvent(event);
+
+    if (_showMarkdownImagePreviews) {
+        paintMarkdownImagePreviews();
+    }
+}
+
+void QOwnNotesMarkdownTextEdit::paintMarkdownImagePreviews() {
+    if (objectName() == QStringLiteral("logTextEdit")) {
+        return;
+    }
+
+    auto *mainWindow = MainWindow::instance();
+    QString noteDirectoryPath = NoteFolder::currentLocalPath();
+    if (mainWindow) {
+        const QString currentNotePath = mainWindow->getCurrentNote().fullNoteFilePath();
+        if (!currentNotePath.isEmpty()) {
+            noteDirectoryPath = QFileInfo(currentNotePath).absolutePath();
+        }
+    }
+
+    static const QRegularExpression imageRegex(QStringLiteral(R"(!\[[^\]]*\]\(([^\n\)]*)\))"));
+    static const QRegularExpression srcRegex(QStringLiteral("src=\"([^\"]+)\""));
+    static QHash<QString, QPixmap> imageCache;
+    static QSet<QString> failedImageCache;
+
+    QPainter painter(viewport());
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
+
+    auto resolveImageSource = [noteDirectoryPath](QString source) -> QString {
+        source = source.trimmed();
+        if (source.isEmpty()) {
+            return QString();
+        }
+
+        // Handle <path with spaces.png>
+        if (source.startsWith(QLatin1Char('<')) && source.endsWith(QLatin1Char('>')) &&
+            source.size() > 2) {
+            source = source.mid(1, source.size() - 2).trimmed();
+        }
+
+        if (source.startsWith(QLatin1String("data:image/"), Qt::CaseInsensitive)) {
+            return source;
+        }
+
+        // Strip optional markdown image title part: path "title"
+        // We only strip when the source is not angle-bracket wrapped.
+        if (!source.startsWith(QLatin1Char('<'))) {
+            int splitPos = -1;
+            bool inSingleQuote = false;
+            bool inDoubleQuote = false;
+            for (int i = 0; i < source.size(); ++i) {
+                const QChar ch = source.at(i);
+                if (ch == QLatin1Char('"') && !inSingleQuote) {
+                    inDoubleQuote = !inDoubleQuote;
+                    continue;
+                }
+                if (ch == QLatin1Char('\'') && !inDoubleQuote) {
+                    inSingleQuote = !inSingleQuote;
+                    continue;
+                }
+                if (!inSingleQuote && !inDoubleQuote && ch.isSpace()) {
+                    splitPos = i;
+                    break;
+                }
+            }
+
+            if (splitPos > 0) {
+                source = source.left(splitPos).trimmed();
+            }
+        }
+
+        if (source.isEmpty()) {
+            return QString();
+        }
+
+        const QUrl sourceUrl(source);
+        if (sourceUrl.isLocalFile()) {
+            return QLatin1String("file://") + sourceUrl.toLocalFile();
+        }
+
+        if (!sourceUrl.scheme().isEmpty()) {
+            return source;
+        }
+
+        if (source.startsWith(QLatin1String("/core/preview"))) {
+            // Let OwnCloudService resolve and fetch this with auth later.
+            return source;
+        }
+
+        if (QFileInfo(source).isAbsolute()) {
+            return QLatin1String("file://") + source;
+        }
+
+        return QLatin1String("file://") + QDir(noteDirectoryPath).absoluteFilePath(source);
+    };
+
+    auto loadPixmap = [](const QString &resolvedSource) -> QPixmap {
+        if (resolvedSource.isEmpty()) {
+            return QPixmap();
+        }
+
+        if (imageCache.contains(resolvedSource)) {
+            return imageCache.value(resolvedSource);
+        }
+
+        if (failedImageCache.contains(resolvedSource)) {
+            return QPixmap();
+        }
+
+        QImage image;
+
+        if (resolvedSource.startsWith(QLatin1String("file://"))) {
+            const QString localPath = resolvedSource.mid(7);
+            QFileInfo info(localPath);
+            if (!info.exists() || !info.isFile()) {
+                failedImageCache.insert(resolvedSource);
+                return QPixmap();
+            }
+
+            QImageReader reader(localPath);
+            reader.setAutoTransform(true);
+            image = reader.read();
+        } else if (resolvedSource.startsWith(QLatin1String("data:image/"), Qt::CaseInsensitive)) {
+            const int markerPos = resolvedSource.indexOf(QStringLiteral(";base64,"));
+            if (markerPos < 0) {
+                failedImageCache.insert(resolvedSource);
+                return QPixmap();
+            }
+
+            const QString base64 = resolvedSource.mid(markerPos + 8);
+            image = QImage::fromData(QByteArray::fromBase64(base64.toLatin1()));
+        } else if (resolvedSource.startsWith(QLatin1String("/core/preview"))) {
+            if (!OwnCloudService::isOwnCloudSupportEnabled()) {
+                failedImageCache.insert(resolvedSource);
+                return QPixmap();
+            }
+
+            int width = 0;
+            const QString imgTag =
+                QStringLiteral("<img src=\"") + resolvedSource + QStringLiteral("\" alt=\"img\"/>");
+            const QString inlineTag =
+                OwnCloudService::instance()->nextcloudPreviewImageTagToInlineImageTag(imgTag,
+                                                                                      width);
+            const QRegularExpressionMatch srcMatch = srcRegex.match(inlineTag);
+            if (!srcMatch.hasMatch()) {
+                failedImageCache.insert(resolvedSource);
+                return QPixmap();
+            }
+
+            const QString dataUrl = srcMatch.captured(1);
+            const int markerPos = dataUrl.indexOf(QStringLiteral(";base64,"));
+            if (markerPos < 0) {
+                failedImageCache.insert(resolvedSource);
+                return QPixmap();
+            }
+
+            const QString base64 = dataUrl.mid(markerPos + 8);
+            image = QImage::fromData(QByteArray::fromBase64(base64.toLatin1()));
+        } else {
+            const QByteArray data = Utils::Misc::downloadUrl(QUrl(resolvedSource));
+            image = QImage::fromData(data);
+        }
+
+        if (image.isNull()) {
+            failedImageCache.insert(resolvedSource);
+            return QPixmap();
+        }
+
+        const QPixmap pixmap = QPixmap::fromImage(image);
+        if (pixmap.isNull()) {
+            failedImageCache.insert(resolvedSource);
+            return QPixmap();
+        }
+
+        imageCache.insert(resolvedSource, pixmap);
+        return pixmap;
+    };
+
+    QTextBlock block = firstVisibleBlock();
+    const qreal contentX = contentOffset().x();
+    const QRect viewportRect = viewport()->rect();
+    const int inlinePreviewSize = qBound(18, fontMetrics().height() + 6, 28);
+    const int leftMargin = 8;
+    const int spacing = 8;
+    const int blockPreviewTopSpacing = 4;
+
+    int top = qRound(blockBoundingGeometry(block).translated(contentOffset()).top());
+    int bottom = top + qRound(blockBoundingRect(block).height());
+
+    while (block.isValid()) {
+        if (!block.isVisible()) {
+            block = block.next();
+            continue;
+        }
+
+        if (bottom < 0) {
+            block = block.next();
+            top = bottom;
+            bottom = top + qRound(blockBoundingRect(block).height());
+            continue;
+        }
+
+        if (top > viewportRect.bottom()) {
+            break;
+        }
+
+        const QString text = block.text();
+        QRegularExpressionMatchIterator iterator = imageRegex.globalMatch(text);
+
+        int index = 0;
+        while (iterator.hasNext()) {
+            const QRegularExpressionMatch match = iterator.next();
+            const QString resolvedSource = resolveImageSource(match.captured(1));
+            const QPixmap pixmap = loadPixmap(resolvedSource);
+            if (pixmap.isNull()) {
+                continue;
+            }
+
+            const QString markdownTag = match.captured(0);
+            const bool singleLineTag = (text.trimmed() == markdownTag.trimmed());
+
+            QTextLayout *layout = block.layout();
+            if (!layout) {
+                continue;
+            }
+
+            const QTextLine line = layout->lineForTextPosition(match.capturedStart(0));
+            if (!line.isValid()) {
+                continue;
+            }
+
+            QRectF lineRect = line.rect();
+            lineRect.translate(contentX, top);
+
+            if (singleLineTag) {
+                QSize targetSize = pixmap.size();
+                targetSize.scale(_markdownImagePreviewMaxWidth, _markdownImagePreviewMaxHeight,
+                                 Qt::KeepAspectRatio);
+                if (targetSize.isEmpty()) {
+                    targetSize = pixmap.size();
+                }
+
+                const int x = qMax(viewportRect.left() + leftMargin, qRound(lineRect.left()));
+                const int y = qRound(lineRect.bottom()) + blockPreviewTopSpacing;
+                const QRect targetRect(x, y, targetSize.width(), targetSize.height());
+
+                if (!viewportRect.intersects(targetRect)) {
+                    continue;
+                }
+
+                painter.setPen(QPen(QColor(120, 120, 120, 180)));
+                painter.setBrush(QColor(255, 255, 255, 40));
+                painter.drawRoundedRect(targetRect.adjusted(-1, -1, 1, 1), 3, 3);
+
+                const QPixmap scaledPixmap =
+                    pixmap.scaled(targetSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+                QRect pixmapRect(QPoint(0, 0), scaledPixmap.size());
+                pixmapRect.moveTopLeft(targetRect.topLeft());
+                painter.drawPixmap(pixmapRect.topLeft(), scaledPixmap);
+            } else {
+                const int x =
+                    viewportRect.left() + leftMargin + (index * (inlinePreviewSize + spacing));
+                const int y =
+                    qRound(lineRect.top() + (lineRect.height() - inlinePreviewSize) / 2.0);
+                const QRect targetRect(x, y, inlinePreviewSize, inlinePreviewSize);
+
+                if (!viewportRect.intersects(targetRect)) {
+                    continue;
+                }
+
+                painter.setPen(QPen(QColor(120, 120, 120, 160)));
+                painter.setBrush(QColor(255, 255, 255, 140));
+                painter.drawRoundedRect(targetRect.adjusted(-1, -1, 1, 1), 3, 3);
+
+                const QPixmap scaledPixmap =
+                    pixmap.scaled(inlinePreviewSize, inlinePreviewSize, Qt::KeepAspectRatio,
+                                  Qt::SmoothTransformation);
+                QRect pixmapRect(QPoint(0, 0), scaledPixmap.size());
+                pixmapRect.moveCenter(targetRect.center());
+                painter.drawPixmap(pixmapRect.topLeft(), scaledPixmap);
+            }
+
+            index++;
+            if (index >= 3) {
+                break;
+            }
+        }
+
+        block = block.next();
+        top = bottom;
+        bottom = top + qRound(blockBoundingRect(block).height());
+    }
+}
+
 bool QOwnNotesMarkdownTextEdit::canInsertFromMimeData(const QMimeData *source) const {
     return (!source->hasUrls());
 }
@@ -989,6 +1296,15 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     const bool hangingIndentEnabled =
         settings.value(QStringLiteral("Editor/hangingIndent"), true).toBool();
     setHangingIndentEnabled(hangingIndentEnabled);
+    _showMarkdownImagePreviews =
+        settings.value(QStringLiteral("Editor/showMarkdownImagePreviews"), true).toBool();
+    _markdownImagePreviewMaxWidth =
+        settings.value(QStringLiteral("Editor/markdownImagePreviewMaxWidth"), 1024).toInt();
+    _markdownImagePreviewMaxHeight =
+        settings.value(QStringLiteral("Editor/markdownImagePreviewMaxHeight"), 1024).toInt();
+    _markdownImagePreviewMaxWidth = qBound(64, _markdownImagePreviewMaxWidth, 4096);
+    _markdownImagePreviewMaxHeight = qBound(64, _markdownImagePreviewMaxHeight, 4096);
+    viewport()->update();
     const auto color = Utils::Schema::schemaSettings->getBackgroundColor(
         MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor);
     setCurrentLineHighlightColor(color);
