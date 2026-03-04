@@ -9,6 +9,9 @@
   - Inline Markdown image previews are currently only shown when no visible text
     follows the image tag on the same editor line, to avoid caret positioning
     mismatches after the image tag
+- Fixed caret blinking and visibility when the cursor is on hanging-indented
+  wrapped lines in Markdown list items in the note text edit
+  (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
 
 ## 26.3.2
 
