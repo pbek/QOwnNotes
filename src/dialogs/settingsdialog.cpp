@@ -178,14 +178,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->webAppServerUrlLineEdit, SIGNAL(textChanged(QString)), this, SLOT(needRestart()));
     connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this, SLOT(needRestart()));
 
-    connect(ui->showMarkdownImagePreviewsCheckBox, &QCheckBox::toggled,
-            ui->markdownImagePreviewMaxWidthLabel, &QWidget::setEnabled);
-    connect(ui->showMarkdownImagePreviewsCheckBox, &QCheckBox::toggled,
-            ui->markdownImagePreviewMaxWidthSpinBox, &QWidget::setEnabled);
-    connect(ui->showMarkdownImagePreviewsCheckBox, &QCheckBox::toggled,
-            ui->markdownImagePreviewMaxHeightLabel, &QWidget::setEnabled);
-    connect(ui->showMarkdownImagePreviewsCheckBox, &QCheckBox::toggled,
-            ui->markdownImagePreviewMaxHeightSpinBox, &QWidget::setEnabled);
     //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
     //            this, SLOT(needRestart()));
 
@@ -611,10 +603,6 @@ void SettingsDialog::storeSettings() {
                       ui->hangingIndentCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showMarkdownImagePreviews"),
                       ui->showMarkdownImagePreviewsCheckBox->isChecked());
-    settings.setValue(QStringLiteral("Editor/markdownImagePreviewMaxWidth"),
-                      ui->markdownImagePreviewMaxWidthSpinBox->value());
-    settings.setValue(QStringLiteral("Editor/markdownImagePreviewMaxHeight"),
-                      ui->markdownImagePreviewMaxHeightSpinBox->value());
     settings.setValue(QStringLiteral("Editor/editorWidthInDFMOnly"),
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/vimMode"), ui->vimModeCheckBox->isChecked());
@@ -1011,15 +999,6 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("Editor/hangingIndent"), true).toBool());
     ui->showMarkdownImagePreviewsCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/showMarkdownImagePreviews"), true).toBool());
-    ui->markdownImagePreviewMaxWidthSpinBox->setValue(
-        settings.value(QStringLiteral("Editor/markdownImagePreviewMaxWidth"), 1024).toInt());
-    ui->markdownImagePreviewMaxHeightSpinBox->setValue(
-        settings.value(QStringLiteral("Editor/markdownImagePreviewMaxHeight"), 1024).toInt());
-    const bool inlineImagePreviewEnabled = ui->showMarkdownImagePreviewsCheckBox->isChecked();
-    ui->markdownImagePreviewMaxWidthLabel->setEnabled(inlineImagePreviewEnabled);
-    ui->markdownImagePreviewMaxWidthSpinBox->setEnabled(inlineImagePreviewEnabled);
-    ui->markdownImagePreviewMaxHeightLabel->setEnabled(inlineImagePreviewEnabled);
-    ui->markdownImagePreviewMaxHeightSpinBox->setEnabled(inlineImagePreviewEnabled);
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/editorWidthInDFMOnly"), true).toBool());
     ui->vimModeCheckBox->setChecked(settings.value(QStringLiteral("Editor/vimMode")).toBool());

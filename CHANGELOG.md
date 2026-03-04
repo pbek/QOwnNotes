@@ -2,10 +2,13 @@
 
 ## 26.3.3
 
-- Added inline Markdown image previews in the note text edit with a new setting
-  `Show Markdown images inline in editor` (enabled by default), supporting local
-  files, remote http(s) image URLs, base64 `data:image/...` images, and Nextcloud
-  `/core/preview` image URLs (for [#1254](https://github.com/pbek/QOwnNotes/issues/1254))
+- Added small inline Markdown image previews in the note text edit with a new
+  setting (enabled by default), supporting local files, remote http(s) image URLs,
+  base64 `data:image/...` images, and Nextcloud `/core/preview` image URLs
+  (for [#1254](https://github.com/pbek/QOwnNotes/issues/1254))
+  - Inline Markdown image previews are currently only shown when no visible text
+    follows the image tag on the same editor line, to avoid caret positioning
+    mismatches after the image tag
 
 ## 26.3.2
 

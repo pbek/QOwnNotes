@@ -182,8 +182,6 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
     bool _isSpellCheckingDisabled = false;
     bool _showMarkdownImagePreviews = true;
-    int _markdownImagePreviewMaxWidth = 1024;
-    int _markdownImagePreviewMaxHeight = 1024;
     QString _aiAutocompleteSuggestion;
     int _aiAutocompletePosition = -1;
     QTimer *_aiAutocompleteTimer = nullptr;

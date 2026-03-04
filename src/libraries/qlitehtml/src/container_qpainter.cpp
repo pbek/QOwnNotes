@@ -815,8 +815,6 @@ void DocumentContainerPrivate::load_image(const litehtml::tchar_t *src,
     const auto qtSrc = QString::fromUtf8(src);
     const auto qtBaseUrl = QString::fromUtf8(baseurl);
     Q_UNUSED(redraw_on_ready)
-    qDebug() << "load_image:" << QStringLiteral("src = \"%1\";").arg(qtSrc).toUtf8().constData()
-             << QStringLiteral("base = \"%1\"").arg(qtBaseUrl).toUtf8().constData();
     const QUrl url = resolveUrl(qtSrc, qtBaseUrl);
     if (m_pixmaps.contains(url))
         return;
