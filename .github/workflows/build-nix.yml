@@ -47,14 +47,27 @@ jobs:
           # https://app.cachix.org/cache/qownnotes-devenv
           name: qownnotes-devenv
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-      - name: 🔧 Install devenv.sh
-        run: nix profile add nixpkgs#devenv
       - name: 🧰 Checkout code
         uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: 🚧 Build nix package
-        run: devenv shell just ${{ matrix.just-recipe }}
+        run: |
+          case "${{ matrix.just-recipe }}" in
+            nix-build)
+              nix build '.?submodules=1#qownnotes-qt6'
+              ;;
+            nix-build-cmake-qt5)
+              nix-build -E 'let pkgs = import <nixpkgs> {}; in pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix) { }'
+              ;;
+            nix-build-qt5)
+              nix build '.?submodules=1#qownnotes-qt5'
+              ;;
+            *)
+              echo "Unknown build recipe: ${{ matrix.just-recipe }}"
+              exit 1
+              ;;
+          esac
 
   vm-test:
     name: "🧪 Run VM tests"
