@@ -5,6 +5,10 @@
 - Added **moving note subfolders to another folder** via the note subfolder tree context menu,
   including optional migration of relative note links, media file links and attachment links
   for moved notes (for [#2581](https://github.com/pbek/QOwnNotes/issues/2581))
+- In the "Link to a URL or note" dialog, when note subfolders are enabled,
+  the Note tab now shows sortable "Note", "Folder", and "Modified" columns,
+  sorted by modification date descending by default, to make similarly named
+  notes easier to distinguish (for [#3482](https://github.com/pbek/QOwnNotes/issues/3482))
 
 ## 26.3.3
 

@@ -7,13 +7,16 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QFileDialog>
+#include <QHeaderView>
 #include <QKeyEvent>
+#include <QLocale>
 #include <QMenu>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QRegularExpression>
 #include <QTimer>
+#include <QTreeWidget>
 
 #include "entities/notefolder.h"
 #include "mainwindow.h"
@@ -24,6 +27,30 @@
 #if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
 #include <memory>
 #endif
+
+namespace {
+enum NoteListDataRoles {
+    NoteIdRole = Qt::UserRole,
+    NoteNameRole,
+    NoteModifiedRole,
+};
+
+class NoteListTreeWidgetItem : public QTreeWidgetItem {
+   public:
+    using QTreeWidgetItem::QTreeWidgetItem;
+
+    bool operator<(const QTreeWidgetItem &other) const override {
+        if (treeWidget() != nullptr && treeWidget()->sortColumn() == 2) {
+            const QDateTime thisModified = data(2, NoteModifiedRole).toDateTime();
+            const QDateTime otherModified = other.data(2, NoteModifiedRole).toDateTime();
+
+            return thisModified < otherModified;
+        }
+
+        return QTreeWidgetItem::operator<(other);
+    }
+};
+}    // namespace
 
 LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LinkDialog) {
@@ -46,18 +73,41 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
         this->setWindowTitle(dialogTitle);
     }
 
-    QStringList nameList = Note::fetchNoteNames();
     ui->searchLineEdit->installEventFilter(this);
     ui->headingSearchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
+    ui->notesListWidget->setRootIsDecorated(false);
+
+    const bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    ui->notesListWidget->setColumnHidden(1, !showSubfolders);
+    ui->notesListWidget->setColumnHidden(2, !showSubfolders);
+    ui->notesListWidget->setSortingEnabled(true);
+    ui->notesListWidget->sortByColumn(showSubfolders ? 2 : 0,
+                                      showSubfolders ? Qt::DescendingOrder : Qt::AscendingOrder);
+    ui->notesListWidget->header()->setSortIndicatorShown(true);
+    ui->notesListWidget->header()->setSectionResizeMode(0, QHeaderView::Stretch);
+    ui->notesListWidget->header()->setSectionResizeMode(1, QHeaderView::Interactive);
+    ui->notesListWidget->header()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+    ui->notesListWidget->header()->setStretchLastSection(false);
+    ui->notesListWidget->setColumnWidth(1, 180);
 
     Q_FOREACH (Note note, Note::fetchAll()) {
-        auto *item = new QListWidgetItem(note.getName());
-        item->setData(Qt::UserRole, note.getId());
-        ui->notesListWidget->addItem(item);
+        const QString noteName = note.getName();
+        const QString subFolderPath = note.relativeNoteSubFolderPath();
+        const QDateTime modified = note.getFileLastModified();
+        const QString modifiedDisplay = QLocale().toString(modified, QLocale::ShortFormat);
+        auto *item = new NoteListTreeWidgetItem(ui->notesListWidget);
+        item->setText(0, noteName);
+        item->setText(1, subFolderPath);
+        item->setText(2, modifiedDisplay);
+        item->setData(0, NoteIdRole, note.getId());
+        item->setData(0, NoteNameRole, noteName);
+        item->setData(2, NoteModifiedRole, modified);
     }
 
-    ui->notesListWidget->setCurrentRow(0);
+    if (ui->notesListWidget->topLevelItemCount() > 0) {
+        ui->notesListWidget->setCurrentItem(ui->notesListWidget->topLevelItem(0));
+    }
 
     if (page == LinkDialog::TextLinkPage) {
         QClipboard *clipboard = QApplication::clipboard();
@@ -84,9 +134,9 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
         QVector<QString> noteNameList = Note::searchAsNameList(arg1, true);
         this->firstVisibleNoteListRow = -1;
 
-        for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {
-            QListWidgetItem *item = this->ui->notesListWidget->item(i);
-            if (noteNameList.indexOf(item->text()) < 0) {
+        for (int i = 0; i < this->ui->notesListWidget->topLevelItemCount(); ++i) {
+            QTreeWidgetItem *item = this->ui->notesListWidget->topLevelItem(i);
+            if (noteNameList.indexOf(item->data(0, NoteNameRole).toString()) < 0) {
                 item->setHidden(true);
             } else {
                 if (this->firstVisibleNoteListRow < 0) {
@@ -98,24 +148,25 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     } else {    // show all items otherwise
         this->firstVisibleNoteListRow = 0;
 
-        for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {
-            QListWidgetItem *item = this->ui->notesListWidget->item(i);
+        for (int i = 0; i < this->ui->notesListWidget->topLevelItemCount(); ++i) {
+            QTreeWidgetItem *item = this->ui->notesListWidget->topLevelItem(i);
             item->setHidden(false);
         }
     }
 }
 
 QString LinkDialog::getSelectedNoteName() const {
-    return ui->notesListWidget->currentRow() > -1 ? ui->notesListWidget->currentItem()->text()
-                                                  : QString();
+    return ui->notesListWidget->currentItem() != nullptr
+               ? ui->notesListWidget->currentItem()->data(0, NoteNameRole).toString()
+               : QString();
 }
 
 Note LinkDialog::getSelectedNote() const {
-    if (ui->notesListWidget->currentRow() == -1) {
+    if (ui->notesListWidget->currentItem() == nullptr) {
         return {};
     }
 
-    const int noteId = ui->notesListWidget->currentItem()->data(Qt::UserRole).toInt();
+    const int noteId = ui->notesListWidget->currentItem()->data(0, NoteIdRole).toInt();
 
     return Note::fetch(noteId);
 }
@@ -160,7 +211,8 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
                 auto item = ui->notesListWidget->currentItem();
                 if ((item != nullptr) && ui->notesListWidget->currentItem()->isHidden() &&
                     (this->firstVisibleNoteListRow >= 0)) {
-                    ui->notesListWidget->setCurrentRow(this->firstVisibleNoteListRow);
+                    ui->notesListWidget->setCurrentItem(
+                        ui->notesListWidget->topLevelItem(this->firstVisibleNoteListRow));
                 }
 
                 // give the keyboard focus to the notes list widget
@@ -464,8 +516,8 @@ void LinkDialog::loadNoteHeadings() const {
     ui->headingListWidget->addItems(headingTexts);
 }
 
-void LinkDialog::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
-                                                       QListWidgetItem *previous) {
+void LinkDialog::on_notesListWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                       QTreeWidgetItem *previous) {
     Q_UNUSED(current)
     Q_UNUSED(previous)
 

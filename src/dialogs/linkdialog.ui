@@ -149,16 +149,34 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QListWidget" name="notesListWidget">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>3</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
+          <item>
+           <widget class="QTreeWidget" name="notesListWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string>Note</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Folder</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Modified</string>
+             </property>
+            </column>
+           </widget>
+          </item>
          <item>
           <widget class="QLineEdit" name="headingSearchLineEdit">
            <property name="styleSheet">

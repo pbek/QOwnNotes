@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QListWidgetItem>
 #include <QNetworkAccessManager>
+#include <QTreeWidgetItem>
 
 #include "masterdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
@@ -43,7 +43,7 @@ class LinkDialog : public MasterDialog {
 
     void on_headingSearchLineEdit_textChanged(const QString &arg1);
 
-    void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+    void on_notesListWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
     void on_headingListWidget_doubleClicked(const QModelIndex &index);
 
