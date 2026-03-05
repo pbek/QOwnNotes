@@ -6002,9 +6002,10 @@ void MainWindow::filterNotesBySearchLineEditText(bool searchInNote) {
             doSearchInNote(searchText);
         }
 
-        QVector<int> noteIdList = Note::searchInNotes(
-            searchText, _showNotesFromAllNoteSubFolders ||
-                            NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+        const bool searchAllFolders = NoteFolder::isCurrentNoteTreeEnabled() ||
+                                      _showNotesFromAllNoteSubFolders ||
+                                      NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
+        QVector<int> noteIdList = Note::searchInNotes(searchText, searchAllFolders);
 
         int columnWidth = ui->noteTreeWidget->columnWidth(0);
         ui->noteTreeWidget->setColumnCount(2);

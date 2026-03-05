@@ -15,14 +15,19 @@
   the Note tab now shows sortable "Note", "Folder", and "Modified" columns,
   sorted by modification date descending by default, to make similarly named
   notes easier to distinguish (for [#3482](https://github.com/pbek/QOwnNotes/issues/3482))
-- In note tree mode, searching in the note list now hides folders that don't
-  match and don't contain matching notes in their subtree, while keeping
-  parent folders visible for matching note names or note content, and
-  expanding visible folders so matching results are uncollapsed
-  (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
-- Fixed note tree mode not refreshing the note/folder tree after selecting a
-  folder cleared the search text, so hidden items are now shown again
-  (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
+- Added more improvements to the note list search and filtering in note tree mode
+  for [#790](https://github.com/pbek/QOwnNotes/issues/790))
+  - In note tree mode, searching in the note list now hides folders that don't
+    match and don't contain matching notes in their subtree, while keeping
+    parent folders visible for matching note names or note content, and
+    expanding visible folders so matching results are uncollapsed
+    (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
+  - In note tree mode, note and folder search now always searches across all
+    folders instead of only the currently selected folder
+    (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
+  - Fixed note tree mode not refreshing the note/folder tree after selecting a
+    folder cleared the search text, so hidden items are now shown again
+    (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
 
 ## 26.3.3
 
