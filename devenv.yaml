@@ -3,6 +3,11 @@ inputs:
   nixpkgs:
     url: github:cachix/devenv-nixpkgs/rolling
     # url: github:NixOS/nixpkgs/nixos-unstable
+  git-hooks:
+    url: github:cachix/git-hooks.nix
+    inputs:
+      nixpkgs:
+        follows: nixpkgs
   nixpkgs-unstable:
     url: github:NixOS/nixpkgs/nixos-unstable
   shared:
