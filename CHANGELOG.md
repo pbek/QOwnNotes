@@ -2,6 +2,10 @@
 
 ## 26.3.4
 
+- Fixed hanging-indented wrapped Markdown list items still occasionally clipping
+  the caret on click on Windows and Linux/X11, and fixed current-line highlight
+  alignment drifting after nested list items in the note text edit
+  (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
 - Fixed clicking percent-encoded relative attachment links in the note preview opening
   a non-decoded path (for [#3483](https://github.com/pbek/QOwnNotes/issues/3483))
 - Added **moving note subfolders to another folder** via the note subfolder tree context menu,
