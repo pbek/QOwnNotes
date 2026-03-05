@@ -2,6 +2,8 @@
 
 ## 26.3.4
 
+- Fixed clicking percent-encoded relative attachment links in the note preview opening
+  a non-decoded path (for [#3483](https://github.com/pbek/QOwnNotes/issues/3483))
 - Added **moving note subfolders to another folder** via the note subfolder tree context menu,
   including optional migration of relative note links, media file links and attachment links
   for moved notes (for [#2581](https://github.com/pbek/QOwnNotes/issues/2581))

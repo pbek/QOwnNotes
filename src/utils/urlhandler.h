@@ -18,6 +18,11 @@ class UrlHandler {
     UrlHandler();
 
     static bool isUrlSchemeLocal(const QUrl& url);
+    static QUrl localFileUrlForDesktopOpen(const QString& urlString) {
+        const QUrl url(urlString);
+        const QString localFilePath = url.toLocalFile();
+        return localFilePath.isEmpty() ? url : QUrl::fromLocalFile(localFilePath);
+    }
 
     void openUrl(QString urlString, bool openInNewTab = false);
 

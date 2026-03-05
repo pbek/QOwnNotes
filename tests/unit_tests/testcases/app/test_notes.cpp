@@ -5,6 +5,7 @@
 #include <QtTest>
 
 #include "services/settingsservice.h"
+#include "utils/urlhandler.h"
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QRandomGenerator>
@@ -657,6 +658,13 @@ void TestNotes::testBacktickBlockInsideIndentedCodeNotHighlighted() {
     // The raw content should be present
     QVERIFY(html.contains(QStringLiteral("test1")));
     QVERIFY(html.contains(QStringLiteral("test2")));
+}
+
+void TestNotes::testPercentEncodedFileUrlUsesDecodedLocalPath() {
+    const QString filePath = notesPath + QStringLiteral("/attachments/Test File.pdf");
+    const QString encodedFileUrl = QUrl::fromLocalFile(filePath).toString();
+    const QUrl fileUrl = UrlHandler::localFileUrlForDesktopOpen(encodedFileUrl);
+    QCOMPARE(fileUrl.toLocalFile(), filePath);
 }
 
 // QTEST_MAIN(TestNotes)

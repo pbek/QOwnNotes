@@ -4,6 +4,7 @@
 // #include "basetestcase.h"
 // #include "models/key-models/keyfactory.h"
 #include <QObject>
+#include <QUrl>
 
 #include "entities/note.h"
 
@@ -44,6 +45,9 @@ class TestNotes : public QObject {
     /* Nested fence tests (issue #2671) */
     void testBacktickBlockInsideTildeFenceNotDoubleHighlighted();
     void testBacktickBlockInsideIndentedCodeNotHighlighted();
+
+    /* File URL handling tests (issue #3483) */
+    void testPercentEncodedFileUrlUsesDecodedLocalPath();
 };
 
 #endif    // TESTNOTES_H

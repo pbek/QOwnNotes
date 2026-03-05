@@ -68,10 +68,11 @@ void UrlHandler::openUrl(QString urlString, const bool openInNewTab) {
         // We currently don't need that
     } else if (scheme == QStringLiteral("checkbox")) {
         handleCheckboxUrl(urlString);
-    } else if (scheme == QStringLiteral("file") && urlWasNotValid) {
-        auto res = QDesktopServices::openUrl(QUrl(urlString));
+    } else if (scheme == QStringLiteral("file")) {
+        const auto fileUrl = localFileUrlForDesktopOpen(urlString);
+        auto res = QDesktopServices::openUrl(fileUrl);
         if (!res) {
-            qWarning() << "Failed to open url" << url << urlString;
+            qWarning() << "Failed to open local file url" << fileUrl << urlString;
         }
     } else if ((scheme == QStringLiteral("http") || scheme == QStringLiteral("https")) &&
                NextcloudDeckService::isCardUrl(urlString)) {
