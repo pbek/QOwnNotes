@@ -10715,36 +10715,8 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item, int /*colu
 }
 
 void MainWindow::onCurrentSubFolderChanged() {
-    const QSignalBlocker blocker(ui->searchLineEdit);
-    Q_UNUSED(blocker)
-
-    const int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
-
-    ui->searchLineEdit->clear();
-
     if (NoteFolder::isCurrentNoteTreeEnabled()) {
-        // Reset hidden state in note tree mode after clearing the search text.
         filterNotesBySearchLineEditText(false);
-
-        QTreeWidgetItem *activeFolderItem = nullptr;
-        QTreeWidgetItemIterator it(ui->noteTreeWidget);
-        while (*it) {
-            QTreeWidgetItem *item = *it;
-            if (item->data(0, Qt::UserRole + 1).toInt() == FolderType &&
-                item->data(0, Qt::UserRole).toInt() == activeNoteSubFolderId) {
-                activeFolderItem = item;
-                break;
-            }
-            ++it;
-        }
-
-        if (activeFolderItem != nullptr) {
-            const QSignalBlocker noteTreeBlocker(ui->noteTreeWidget);
-            Q_UNUSED(noteTreeBlocker)
-            ui->noteTreeWidget->clearSelection();
-            activeFolderItem->setSelected(true);
-            ui->noteTreeWidget->setCurrentItem(activeFolderItem);
-        }
     } else {
         filterNotes();
     }

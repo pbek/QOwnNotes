@@ -22,9 +22,6 @@
 - Fixed note tree mode not refreshing the note/folder tree after selecting a
   folder cleared the search text, so hidden items are now shown again
   (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
-- Fixed folder selection in note tree mode after clearing search on folder click,
-  so the clicked folder stays selected in the note tree
-  (for [#2868](https://github.com/pbek/QOwnNotes/issues/2868))
 
 ## 26.3.3
 
