@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.4
+
+- Added **moving note subfolders to another folder** via the note subfolder tree context menu,
+  including optional migration of relative note links, media file links and attachment links
+  for moved notes (for [#2581](https://github.com/pbek/QOwnNotes/issues/2581))
+
 ## 26.3.3
 
 - Added small inline Markdown image previews in the note text edit with a new
