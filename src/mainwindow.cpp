@@ -6115,6 +6115,10 @@ void MainWindow::filterNotesBySearchLineEditText(bool searchInNote) {
                 const bool shouldShow =
                     hasVisibleChildren || folderMatchesSearch(folderItem->text(0));
                 folderItem->setHidden(!shouldShow);
+
+                if (shouldShow) {
+                    folderItem->setExpanded(true);
+                }
             }
         }
 
