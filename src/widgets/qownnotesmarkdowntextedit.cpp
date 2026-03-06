@@ -1296,7 +1296,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool();
     setHighlightCurrentLine(hlCurrLine);
     const bool hangingIndentEnabled =
-        settings.value(QStringLiteral("Editor/hangingIndent"), true).toBool();
+        settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool();
     setHangingIndentEnabled(hangingIndentEnabled);
     _showMarkdownImagePreviews =
         settings.value(QStringLiteral("Editor/showMarkdownImagePreviews"), true).toBool();

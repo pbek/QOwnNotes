@@ -2,6 +2,8 @@
 
 ## 26.3.5
 
+- Disabled hanging indentation for wrapped Markdown list items by default in the
+  note text edit (for [#1581](https://github.com/pbek/QOwnNotes/issues/1581))
 - Try to fix hanging-indented wrapped Markdown list items still occasionally showing
   no visible caret after clicking into continuation text in the note text edit
   (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))

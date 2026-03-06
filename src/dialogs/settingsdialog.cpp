@@ -996,7 +996,7 @@ void SettingsDialog::readSettings() {
     ui->highlightCurrentLineCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool());
     ui->hangingIndentCheckBox->setChecked(
-        settings.value(QStringLiteral("Editor/hangingIndent"), true).toBool());
+        settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool());
     ui->showMarkdownImagePreviewsCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/showMarkdownImagePreviews"), true).toBool());
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
