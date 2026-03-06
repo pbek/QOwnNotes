@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.5
+
+- Try to fix hanging-indented wrapped Markdown list items still occasionally showing
+  no visible caret after clicking into continuation text in the note text edit
+  (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
+
 ## 26.3.4
 
 - Fixed hanging-indented wrapped Markdown list items still occasionally clipping
