@@ -227,7 +227,6 @@ jobs:
             nmake
             copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
             copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
-            Get-ChildItem -Recurse -Force ..
             copy ..\bin\tests\tests.exe .
             windeployqt --debug tests.exe
             .\tests.exe -txt
