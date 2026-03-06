@@ -7,6 +7,12 @@
 - Try to fix hanging-indented wrapped Markdown list items still occasionally showing
   no visible caret after clicking into continuation text in the note text edit
   (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
+- Fixed caret blink artifacts in hanging-indented wrapped Markdown list items,
+  where the caret could appear partially clipped or show a stray tick while typing
+  (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
+- Fixed caret visibility and blinking on the last wrapped visual line of
+  hanging-indented Markdown list items, where the caret could disappear entirely
+  while typing (for [#3480](https://github.com/pbek/QOwnNotes/issues/3480))
 
 ## 26.3.4
 
