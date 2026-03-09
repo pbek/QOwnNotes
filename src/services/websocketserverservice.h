@@ -97,9 +97,12 @@ class WebSocketServerService : public QObject {
     static QPair<QString, QHash<QString, QString>> parseHttpRequestLineAndQuery(
         const QString &request);
 
-    static QString httpResponse(
-        int statusCode, const QByteArray &body, const QString &statusText = QStringLiteral("OK"),
-        const QString &contentType = QStringLiteral("application/json; charset=utf-8"));
+    static QString httpResponse(int statusCode, const QByteArray &body);
+
+    static QString httpResponse(int statusCode, const QByteArray &body, const QString &statusText);
+
+    static QString httpResponse(int statusCode, const QByteArray &body, const QString &statusText,
+                                const QString &contentType);
 
     void startSuggestionHttpServer();
 

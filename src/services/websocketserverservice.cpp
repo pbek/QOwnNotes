@@ -300,21 +300,32 @@ QPair<QString, QHash<QString, QString>> WebSocketServerService::parseHttpRequest
     return {method, queryParams};
 }
 
+QString WebSocketServerService::httpResponse(int statusCode, const QByteArray &body) {
+    return httpResponse(statusCode, body, QLatin1String("OK"));
+}
+
+QString WebSocketServerService::httpResponse(int statusCode, const QByteArray &body,
+                                             const QString &statusText) {
+    return httpResponse(statusCode, body, statusText,
+                        QLatin1String("application/json; charset=utf-8"));
+}
+
 QString WebSocketServerService::httpResponse(int statusCode, const QByteArray &body,
                                              const QString &statusText,
                                              const QString &contentType) {
-    return QStringLiteral(
-               "HTTP/1.1 %1 %2\r\n"
-               "Content-Type: %3\r\n"
-               "Content-Length: %4\r\n"
-               "Access-Control-Allow-Origin: *\r\n"
-               "Access-Control-Allow-Methods: GET, OPTIONS\r\n"
-               "Access-Control-Allow-Headers: Content-Type\r\n"
-               "Cache-Control: no-store\r\n"
-               "Connection: close\r\n"
-               "\r\n%5")
-        .arg(QString::number(statusCode), statusText, contentType, QString::number(body.size()),
-             QString::fromUtf8(body));
+    const QString responseTemplate = QString::fromLatin1(
+        "HTTP/1.1 %1 %2\r\n"
+        "Content-Type: %3\r\n"
+        "Content-Length: %4\r\n"
+        "Access-Control-Allow-Origin: *\r\n"
+        "Access-Control-Allow-Methods: GET, OPTIONS\r\n"
+        "Access-Control-Allow-Headers: Content-Type\r\n"
+        "Cache-Control: no-store\r\n"
+        "Connection: close\r\n"
+        "\r\n%5");
+
+    return responseTemplate.arg(QString::number(statusCode), statusText, contentType,
+                                QString::number(body.size()), QString::fromUtf8(body));
 }
 
 QVector<Bookmark> WebSocketServerService::getBookmarksForSuggestions() {

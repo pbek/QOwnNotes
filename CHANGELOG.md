@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.3.7
+
+- Fixed an xUbuntu 20.04 / GCC build failure caused by duplicate `qstring_literal`
+  symbols in `WebSocketServerService::httpResponse` by replacing
+  `QStringLiteral` default arguments with overloads
+  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+
 ## 26.3.6
 
 - Added a local [Homepage](https://github.com/gethomepage/homepage)-compatible
