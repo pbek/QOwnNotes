@@ -233,7 +233,9 @@ jobs:
             Remove-Item (Join-Path $testOutDir 'tests.pdb') -Force -ErrorAction SilentlyContinue
             Remove-Item (Join-Path $testOutDir 'tests.ilk') -Force -ErrorAction SilentlyContinue
 
-            nmake
+            # Merge stderr into stdout so linker errors are visible in CI logs
+            nmake 2>&1
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
             $qtBin = Split-Path (Get-Command qmake6).Source
             $qtRoot = Split-Path $qtBin
             $env:PATH = "$qtBin;$env:PATH"
