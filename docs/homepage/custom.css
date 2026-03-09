@@ -1,0 +1,14 @@
+/*
+  Visual marker for QOwnNotes suggestion rows.
+
+  The class is added by docs/homepage/custom.js when a suggestion text
+  contains the configured QON_LABEL prefix.
+*/
+
+button.qon-suggestion {
+  border-left: 3px solid #2f855a;
+}
+
+button.qon-suggestion span {
+  color: #2f855a;
+}
