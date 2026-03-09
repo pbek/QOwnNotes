@@ -185,7 +185,11 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
     }
 
     const QString queryLower = normalizedQuery.toLower();
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+    const QStringList queryTokens = queryLower.split(QLatin1Char(' '), QString::SkipEmptyParts);
+#else
     const QStringList queryTokens = queryLower.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#endif
 
     if (queryTokens.isEmpty()) {
         return {};
