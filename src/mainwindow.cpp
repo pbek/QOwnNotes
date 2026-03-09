@@ -2059,8 +2059,14 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
     QString folderName = noteFolder.getLocalPath();
     const QString oldPath = this->notesPath;
 
+    // Switch the active note folder first so all subsequent refresh steps
+    // (including combo/menu rebuilding) use the correct current folder.
+    noteFolder.setAsCurrent();
+
+    const bool notesPathChanged = (oldPath != folderName);
+
     // reload notes if notes folder was changed
-    if (oldPath != folderName) {
+    if (notesPathChanged) {
         const QSignalBlocker blocker2(this->ui->searchLineEdit);
         {
             Q_UNUSED(blocker2)
@@ -2072,8 +2078,6 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
 
         // commit the changes in the current note folder to git
         gitCommitCurrentNoteFolder();
-
-        noteFolder.setAsCurrent();
 
         // update the recent note folder list
         storeRecentNoteFolder(this->notesPath, folderName);
@@ -2092,34 +2096,40 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
         // we have to unset the current note otherwise it might show up after
         // switching to another note folder
         unsetCurrentNote();
+    } else {
+        // Keep selector and Note -> Note folders menu in sync when switching
+        // between folders that share the same path.
+        loadNoteFolderListMenu();
+    }
 
-        buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
+    buildNotesIndexAndLoadNoteDirectoryList(false, !notesPathChanged, false);
 
-        // update the current folder tooltip
-        updateCurrentFolderTooltip();
+    // update the current folder tooltip
+    updateCurrentFolderTooltip();
 
-        // restore the note tabs
-        Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget, ui->noteEditTabWidgetLayout);
+    // restore the note tabs
+    Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget, ui->noteEditTabWidgetLayout);
 
-        // restore the note history of the new note folder
-        noteHistory.restoreForCurrentNoteFolder();
+    // restore the note history of the new note folder
+    noteHistory.restoreForCurrentNoteFolder();
 
-        // check if there is a note name set and jump to it
-        QString noteName = _activeNoteFolderNotePositions[noteFolderId].getNoteName();
+    // check if there is a note name set and jump to it
+    QString noteName = _activeNoteFolderNotePositions[noteFolderId].getNoteName();
 
-        // if there was no NoteHistory found try the note history
-        if (noteName.isEmpty()) {
-            _activeNoteFolderNotePositions[noteFolderId] = noteHistory.getCurrentHistoryItem();
-            noteName = _activeNoteFolderNotePositions[noteFolderId].getNoteName();
-        }
+    // if there was no NoteHistory found try the note history
+    if (noteName.isEmpty()) {
+        _activeNoteFolderNotePositions[noteFolderId] = noteHistory.getCurrentHistoryItem();
+        noteName = _activeNoteFolderNotePositions[noteFolderId].getNoteName();
+    }
 
-        if (!noteName.isEmpty()) {
-            jumpToNoteName(noteName);
+    if (!noteName.isEmpty()) {
+        jumpToNoteName(noteName);
 
-            // restore the current position in the note
-            _activeNoteFolderNotePositions[noteFolderId].restoreTextEditPosition(ui->noteTextEdit);
-        }
+        // restore the current position in the note
+        _activeNoteFolderNotePositions[noteFolderId].restoreTextEditPosition(ui->noteTextEdit);
+    }
 
+    if (notesPathChanged) {
         // commit the changes in the selected note folder to git
         gitCommitCurrentNoteFolder();
     }

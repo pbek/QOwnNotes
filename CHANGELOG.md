@@ -14,6 +14,9 @@
 - Fixed the default note sorting in the "Link to a URL or note" dialog regressing
   to alphabetical order when note subfolders are disabled; it now again defaults
   to modification date descending (for [#3482](https://github.com/pbek/QOwnNotes/issues/3482))
+- Fixed switching note folders from the selector when multiple configured note
+  folders point to the same local directory, ensuring folder-specific UI state
+  like subfolder panel visibility updates correctly (for [#3489](https://github.com/pbek/QOwnNotes/issues/3489))
 
 ## 26.3.5
 
