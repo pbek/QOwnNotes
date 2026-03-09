@@ -708,6 +708,28 @@ void TestNotes::testBookmarkSuggestionsDeduplication() {
     QVERIFY(urlCount <= 1);
 }
 
+void TestNotes::testBookmarkSuggestionsMultiTokenAndOrderIndependent() {
+    QVector<Bookmark> bookmarks = {Bookmark(QStringLiteral("https://example.com/qownnotes-launch"),
+                                            QStringLiteral("QOwnNotes launch guide")),
+                                   Bookmark(QStringLiteral("https://example.com/launch-only"),
+                                            QStringLiteral("Launch helper")),
+                                   Bookmark(QStringLiteral("https://example.com/qownnotes-only"),
+                                            QStringLiteral("QOwnNotes docs"))};
+
+    const QStringList suggestionsForward =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("qow launch"), 10);
+    QVERIFY(suggestionsForward.contains(QStringLiteral("QOwnNotes launch guide")) ||
+            suggestionsForward.contains(QStringLiteral("https://example.com/qownnotes-launch")));
+
+    const QStringList suggestionsReverse =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("launch qow"), 10);
+    QVERIFY(suggestionsReverse.contains(QStringLiteral("QOwnNotes launch guide")) ||
+            suggestionsReverse.contains(QStringLiteral("https://example.com/qownnotes-launch")));
+
+    QVERIFY(!suggestionsForward.contains(QStringLiteral("Launch helper")));
+    QVERIFY(!suggestionsForward.contains(QStringLiteral("QOwnNotes docs")));
+}
+
 void TestNotes::testBookmarkSuggestionsEmptyQuery() {
     QVector<Bookmark> bookmarks = {
         Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage"))};

@@ -52,6 +52,7 @@ class TestNotes : public QObject {
     /* Homepage suggestion API helper tests */
     void testBookmarkSuggestionsPrefixSubstringAndExact();
     void testBookmarkSuggestionsDeduplication();
+    void testBookmarkSuggestionsMultiTokenAndOrderIndependent();
     void testBookmarkSuggestionsEmptyQuery();
     void testBookmarkSuggestionsLimitHandling();
     void testBookmarkSuggestionsResponseShape();

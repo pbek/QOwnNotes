@@ -172,7 +172,7 @@ QString Bookmark::parsedBookmarksWebServiceJsonText(const QString &text, bool wi
 
 QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, const QString &query,
                                         int limit) {
-    const QString normalizedQuery = query.trimmed();
+    const QString normalizedQuery = query.simplified();
 
     if (normalizedQuery.isEmpty()) {
         return {};
@@ -185,11 +185,17 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
     }
 
     const QString queryLower = normalizedQuery.toLower();
+    const QStringList queryTokens = queryLower.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+
+    if (queryTokens.isEmpty()) {
+        return {};
+    }
+
     QStringList prefixMatches;
     QStringList substringMatches;
     QStringList seen;
 
-    auto appendCandidate = [&prefixMatches, &queryLower, &seen, &substringMatches,
+    auto appendCandidate = [&prefixMatches, &queryLower, &queryTokens, &seen, &substringMatches,
                             limit](const QString &candidate) {
         if ((prefixMatches.count() + substringMatches.count()) >= limit) {
             return;
@@ -207,10 +213,27 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
         }
 
         const QString candidateLower = trimmed.toLower();
-        const bool isPrefix = candidateLower.startsWith(queryLower);
-        const bool isSubstring = isPrefix || candidateLower.contains(queryLower);
-        if (!isSubstring) {
+
+        bool containsAllTokens = true;
+        for (const QString &token : queryTokens) {
+            if (!candidateLower.contains(token)) {
+                containsAllTokens = false;
+                break;
+            }
+        }
+
+        if (!containsAllTokens) {
             return;
+        }
+
+        bool isPrefix = candidateLower.startsWith(queryLower);
+        if (!isPrefix) {
+            for (const QString &token : queryTokens) {
+                if (candidateLower.startsWith(token)) {
+                    isPrefix = true;
+                    break;
+                }
+            }
         }
 
         seen.append(dedupeKey);
