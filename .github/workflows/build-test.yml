@@ -216,20 +216,32 @@ jobs:
         name: Do Qt 6.3+ Windows tests
         uses: nick-fields/retry@v3
         with:
-          timeout_minutes: 10
+          timeout_minutes: 25
           max_attempts: 3
           retry_on: error
           shell: pwsh
           command: |
             $ErrorActionPreference = 'Stop'
-            cd src\..\tests
-            qmake6 DEFINES+=INTEGRATION_TESTS
+            Set-Location (Join-Path $env:GITHUB_WORKSPACE 'tests')
+            qmake6 CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS
+
+            # Work around occasional linker failures on retry when stale
+            # output files from a previous attempt are still locked.
+            Get-Process tests -ErrorAction SilentlyContinue | Stop-Process -Force
+            $testOutDir = Join-Path $env:GITHUB_WORKSPACE 'bin\tests'
+            Remove-Item (Join-Path $testOutDir 'tests.exe') -Force -ErrorAction SilentlyContinue
+            Remove-Item (Join-Path $testOutDir 'tests.pdb') -Force -ErrorAction SilentlyContinue
+            Remove-Item (Join-Path $testOutDir 'tests.ilk') -Force -ErrorAction SilentlyContinue
+
             nmake
-            copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
-            copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
-            copy ..\bin\tests\tests.exe .
-            windeployqt --debug tests.exe
-            .\tests.exe -txt
+            $qtBin = Split-Path (Get-Command qmake6).Source
+            $qtRoot = Split-Path $qtBin
+            $env:PATH = "$qtBin;$env:PATH"
+            $env:QT_PLUGIN_PATH = Join-Path $qtRoot 'plugins'
+            $env:QT_QPA_PLATFORM_PLUGIN_PATH = Join-Path $qtRoot 'plugins\platforms'
+            $env:QML2_IMPORT_PATH = Join-Path $qtRoot 'qml'
+            $env:QT_QPA_PLATFORM = 'minimal'
+            ..\bin\tests\tests.exe -platform minimal -txt
 
       #
       # Build QOwnNotes

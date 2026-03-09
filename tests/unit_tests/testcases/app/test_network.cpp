@@ -10,6 +10,12 @@ void TestNetwork::initTestCase() {}
 // Disabled on Linux because of https://github.com/pbek/QOwnNotes/issues/3212
 #ifndef Q_OS_LINUX
 void TestNetwork::testSSL() {
+#ifdef Q_OS_WIN
+    if (qEnvironmentVariableIsSet("GITHUB_ACTIONS")) {
+        QSKIP("Skipping SSL test on GitHub Actions Windows runners");
+    }
+#endif
+
     auto data = Utils::Misc::downloadUrl(QUrl("https://www.github.com"));
 
     QVERIFY(data.size() > 0);
