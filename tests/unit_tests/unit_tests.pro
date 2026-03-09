@@ -18,7 +18,7 @@ SRC_DIR = $$PROJECT_ROOT/src//
 
 SOURCES += \
 #    $$PROJECT_ROOT/3rdparty/qredisclient/tests/unit_tests/basetestcase.cpp \
-    $$PWD/main.cpp \
+    $$PWD/unit_tests_main.cpp \
 
 
 #RESOURCES += \
