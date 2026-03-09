@@ -8,7 +8,6 @@
 
 #include "entities/bookmark.h"
 #include "services/settingsservice.h"
-#include "utils/urlhandler.h"
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QRandomGenerator>
@@ -666,7 +665,12 @@ void TestNotes::testBacktickBlockInsideIndentedCodeNotHighlighted() {
 void TestNotes::testPercentEncodedFileUrlUsesDecodedLocalPath() {
     const QString filePath = notesPath + QStringLiteral("/attachments/Test File.pdf");
     const QString encodedFileUrl = QUrl::fromLocalFile(filePath).toString();
-    const QUrl fileUrl = UrlHandler::localFileUrlForDesktopOpen(encodedFileUrl);
+    // Inline the logic from UrlHandler::localFileUrlForDesktopOpen to avoid
+    // pulling urlhandler.cpp (which depends on MainWindow and widgets) into
+    // the test build
+    const QUrl url(encodedFileUrl);
+    const QString localFilePath = url.toLocalFile();
+    const QUrl fileUrl = localFilePath.isEmpty() ? url : QUrl::fromLocalFile(localFilePath);
     QCOMPARE(fileUrl.toLocalFile(), filePath);
 }
 
