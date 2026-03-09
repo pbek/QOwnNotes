@@ -6,7 +6,8 @@
 pushd src || exit 1
 
 echo "Update translation files..."
-lupdate -verbose QOwnNotes.pro
+# Set QMAKESPEC to avoid "Could not find qmake spec 'default'" warning (e.g. on NixOS)
+QMAKESPEC="${QMAKESPEC:-linux-g++}" lupdate -verbose QOwnNotes.pro
 
 #echo "Remove leading spaces in translation files..."
 #find ./languages/*.ts -type f ! -name QOwnNotes_en.ts -exec sed -i 's/^[[:space:]]*//' {} \;
