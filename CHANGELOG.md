@@ -11,6 +11,9 @@
     integration at [Homepage suggestion API](https://www.qownnotes.org/getting-started/homepage-suggestion-api.html),
     including links to reusable `custom.js` / `custom.css` assets for externally
     hosted Homepage instances
+- Fixed the default note sorting in the "Link to a URL or note" dialog regressing
+  to alphabetical order when note subfolders are disabled; it now again defaults
+  to modification date descending (for [#3482](https://github.com/pbek/QOwnNotes/issues/3482))
 
 ## 26.3.5
 
