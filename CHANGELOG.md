@@ -1,12 +1,16 @@
 # QOwnNotes Changelog
 
-## Next
+## 26.3.6
 
 - Added a local [Homepage](https://github.com/gethomepage/homepage)-compatible
   bookmark suggestion API endpoint (`GET /suggest`) based on existing bookmark
   parsing and Web Companion data sources, with prefix-first matching,
   deduplication, limit handling, and response format compatibility
   (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+  - Added a separate webpage documentation page for the Homepage suggestion API
+    integration at [Homepage suggestion API](https://www.qownnotes.org/getting-started/homepage-suggestion-api.html),
+    including links to reusable `custom.js` / `custom.css` assets for externally
+    hosted Homepage instances
 
 ## 26.3.5
 
