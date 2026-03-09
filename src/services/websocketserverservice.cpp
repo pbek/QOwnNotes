@@ -16,6 +16,9 @@
 
 #include <utils/misc.h>
 
+#include <QTcpServer>
+#include <QTcpSocket>
+#include <QUrlQuery>
 #include <QtWebSockets>
 
 #include "dialogs/websockettokendialog.h"
@@ -47,12 +50,15 @@ static QString getIdentifier(QWebSocket *peer) {
 WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent)
     : QObject(parent),
       m_pWebSocketServer(new QWebSocketServer(QStringLiteral("QOwnNotes Server"),
-                                              QWebSocketServer::NonSecureMode, this)) {
+                                              QWebSocketServer::NonSecureMode, this)),
+      m_pHttpServer(new QTcpServer(this)) {
 #ifndef INTEGRATION_TESTS
     _webSocketTokenDialog = nullptr;
 #endif
 
-    if (Utils::Misc::isSocketServerEnabled()) {
+    refreshServers();
+
+    if (port != 0 && Utils::Misc::isSocketServerEnabled()) {
         listen(port);
     }
 }
@@ -62,7 +68,10 @@ void WebSocketServerService::listen(quint16 port) {
         port = getSettingsPort();
     }
 
-    close();
+    if (m_pWebSocketServer->isListening()) {
+        m_pWebSocketServer->close();
+        m_port = 0;
+    }
 
     if (m_pWebSocketServer->listen(QHostAddress::LocalHost, port)) {
         Utils::Misc::printInfo(
@@ -80,6 +89,8 @@ void WebSocketServerService::close() {
         m_pWebSocketServer->close();
         m_port = 0;
     }
+
+    stopSuggestionHttpServer();
 }
 
 quint16 WebSocketServerService::getPort() const { return m_port; }
@@ -101,7 +112,271 @@ quint16 WebSocketServerService::getDefaultPort() {
 #endif
 }
 
-WebSocketServerService::~WebSocketServerService() { m_pWebSocketServer->close(); }
+bool WebSocketServerService::isBookmarkSuggestionApiEnabled() {
+    return SettingsService()
+        .value(QStringLiteral("webSocketServerService/bookmarkSuggestionApiEnabled"), false)
+        .toBool();
+}
+
+quint16 WebSocketServerService::getBookmarkSuggestionApiPort() {
+    SettingsService settings;
+    return static_cast<quint16>(
+        settings
+            .value(QStringLiteral("webSocketServerService/bookmarkSuggestionApiPort"),
+                   getBookmarkSuggestionApiDefaultPort())
+            .toULongLong());
+}
+
+quint16 WebSocketServerService::getBookmarkSuggestionApiDefaultPort() {
+#ifndef QT_NO_DEBUG
+    return 22225;
+#else
+    return 22224;
+#endif
+}
+
+void WebSocketServerService::refreshServers() {
+    if (Utils::Misc::isSocketServerEnabled()) {
+        if (m_port != getSettingsPort() || !m_pWebSocketServer->isListening()) {
+            listen();
+        }
+    } else if (m_pWebSocketServer->isListening()) {
+        m_pWebSocketServer->close();
+        m_port = 0;
+    }
+
+    if (isBookmarkSuggestionApiEnabled()) {
+        startSuggestionHttpServer();
+    } else {
+        stopSuggestionHttpServer();
+    }
+}
+
+WebSocketServerService::~WebSocketServerService() { close(); }
+
+void WebSocketServerService::startSuggestionHttpServer() {
+    if (m_pHttpServer == nullptr) {
+        return;
+    }
+
+    const quint16 port = getBookmarkSuggestionApiPort();
+    if (m_pHttpServer->isListening() && m_httpPort == port) {
+        return;
+    }
+
+    if (m_pHttpServer->isListening()) {
+        m_pHttpServer->close();
+        m_httpPort = 0;
+    }
+
+    disconnect(m_pHttpServer, &QTcpServer::newConnection, this,
+               &WebSocketServerService::handleHttpConnection);
+    connect(m_pHttpServer, &QTcpServer::newConnection, this,
+            &WebSocketServerService::handleHttpConnection);
+
+    if (!m_pHttpServer->listen(QHostAddress::LocalHost, port)) {
+        qWarning()
+            << tr("Could not start bookmark suggestion API on port %1!").arg(QString::number(port))
+            << tr("Please check if the port is already in use.");
+        return;
+    }
+
+    m_httpPort = port;
+    Utils::Misc::printInfo(
+        tr("Bookmark suggestion API listening on port %1").arg(QString::number(port)));
+}
+
+void WebSocketServerService::stopSuggestionHttpServer() {
+    if (m_pHttpServer != nullptr && m_pHttpServer->isListening()) {
+        m_pHttpServer->close();
+    }
+
+    m_httpPort = 0;
+}
+
+void WebSocketServerService::handleHttpConnection() {
+    if (m_pHttpServer == nullptr) {
+        return;
+    }
+
+    while (m_pHttpServer->hasPendingConnections()) {
+        QTcpSocket *socket = m_pHttpServer->nextPendingConnection();
+        if (socket == nullptr) {
+            continue;
+        }
+
+        connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
+        connect(socket, &QTcpSocket::readyRead, this, [this, socket]() {
+            const QByteArray request = socket->readAll();
+            if (!request.contains("\r\n\r\n")) {
+                return;
+            }
+
+            processHttpRequest(socket, QString::fromUtf8(request));
+        });
+    }
+}
+
+void WebSocketServerService::processHttpRequest(QTcpSocket *socket, const QString &requestText) {
+    if (socket == nullptr) {
+        return;
+    }
+
+    const auto parsedRequest = parseHttpRequestLineAndQuery(requestText);
+    const QString method = parsedRequest.first;
+    const QHash<QString, QString> queryParams = parsedRequest.second;
+
+    if (method.isEmpty()) {
+        qWarning() << tr("Bookmark suggestion API received malformed HTTP request line.");
+        const QByteArray body = QByteArray("{\"error\":\"Bad request\"}");
+        socket->write(httpResponse(400, body, QStringLiteral("Bad Request")).toUtf8());
+        socket->disconnectFromHost();
+        return;
+    }
+
+    QString targetPath;
+    const QString requestLine = requestText.section(QStringLiteral("\r\n"), 0, 0);
+    const QStringList requestLineParts = requestLine.split(QLatin1Char(' '));
+    if (requestLineParts.count() >= 2) {
+        const QUrl targetUrl(requestLineParts.at(1));
+        targetPath = targetUrl.path();
+    }
+
+    if (method != QLatin1String("GET")) {
+        const QByteArray body =
+            QByteArray("{\"error\":\"Method not allowed, only GET is supported\"}");
+        socket->write(httpResponse(405, body, QStringLiteral("Method Not Allowed")).toUtf8());
+        socket->disconnectFromHost();
+        return;
+    }
+
+    if (targetPath != QLatin1String("/suggest")) {
+        const QByteArray body = QByteArray("{\"error\":\"Not found\"}");
+        socket->write(httpResponse(404, body, QStringLiteral("Not Found")).toUtf8());
+        socket->disconnectFromHost();
+        return;
+    }
+
+    bool ok = false;
+    int limit = queryParams.value(QStringLiteral("limit")).toInt(&ok);
+    if (!ok) {
+        limit = 10;
+    }
+
+    if (limit < 1) {
+        limit = 1;
+    } else if (limit > 50) {
+        limit = 50;
+    }
+
+    const QString query = queryParams.value(QStringLiteral("q"));
+    Utils::Misc::printInfo(
+        tr("Bookmark suggestion API request from %1:%2")
+            .arg(socket->peerAddress().toString(), QString::number(socket->peerPort())));
+    const QByteArray body = homepageSuggestionResponse(query, limit).toUtf8();
+    socket->write(httpResponse(200, body).toUtf8());
+    socket->disconnectFromHost();
+}
+
+QPair<QString, QHash<QString, QString>> WebSocketServerService::parseHttpRequestLineAndQuery(
+    const QString &request) {
+    const QString requestLine = request.section(QStringLiteral("\r\n"), 0, 0).trimmed();
+    const QStringList lineParts = requestLine.split(QLatin1Char(' '));
+
+    if (lineParts.count() < 2) {
+        return {};
+    }
+
+    const QString method = lineParts.at(0).trimmed();
+    const QUrl url(lineParts.at(1).trimmed());
+    QHash<QString, QString> queryParams;
+    const QUrlQuery query(url);
+    const auto items = query.queryItems(QUrl::FullyDecoded);
+
+    for (const auto &item : items) {
+        queryParams.insert(item.first, item.second);
+    }
+
+    return {method, queryParams};
+}
+
+QString WebSocketServerService::httpResponse(int statusCode, const QByteArray &body,
+                                             const QString &statusText,
+                                             const QString &contentType) {
+    return QStringLiteral(
+               "HTTP/1.1 %1 %2\r\n"
+               "Content-Type: %3\r\n"
+               "Content-Length: %4\r\n"
+               "Access-Control-Allow-Origin: *\r\n"
+               "Access-Control-Allow-Methods: GET, OPTIONS\r\n"
+               "Access-Control-Allow-Headers: Content-Type\r\n"
+               "Cache-Control: no-store\r\n"
+               "Connection: close\r\n"
+               "\r\n%5")
+        .arg(QString::number(statusCode), statusText, contentType, QString::number(body.size()),
+             QString::fromUtf8(body));
+}
+
+QVector<Bookmark> WebSocketServerService::getBookmarksForSuggestions() {
+    if (m_bookmarkCacheTimestamp.isValid() &&
+        m_bookmarkCacheTimestamp.msecsTo(QDateTime::currentDateTimeUtc()) <= 2500) {
+        return m_cachedBookmarks;
+    }
+
+    QVector<Bookmark> bookmarks;
+
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == nullptr) {
+        qWarning() << tr(
+            "Bookmark suggestion API couldn't load suggestions because no main window "
+            "instance is available.");
+        return bookmarks;
+    }
+
+    Tag tag = Tag::fetchByName(getBookmarksTag());
+    const QVector<Note> noteList = tag.fetchAllLinkedNotes();
+
+    for (const Note &note : noteList) {
+        QVector<Bookmark> noteBookmarks = note.getParsedBookmarks();
+        Bookmark::mergeListInList(noteBookmarks, bookmarks);
+    }
+
+    QOwnNotesMarkdownTextEdit *activeEditor = mainWindow->activeNoteTextEdit();
+    if (activeEditor != nullptr) {
+        QVector<Bookmark> currentNoteBookmarks =
+            Bookmark::parseBookmarks(activeEditor->toPlainText(), true);
+        Bookmark::mergeListInList(currentNoteBookmarks, bookmarks);
+    }
+
+    m_cachedBookmarks = bookmarks;
+    m_bookmarkCacheTimestamp = QDateTime::currentDateTimeUtc();
+    m_suggestionCache.clear();
+    return m_cachedBookmarks;
+}
+
+QString WebSocketServerService::homepageSuggestionResponse(const QString &query, int limit) {
+    if (query.trimmed().isEmpty()) {
+        return Bookmark::homepageSuggestionResponseJson(query, QStringList())
+            .toJson(QJsonDocument::Compact);
+    }
+
+    const QString cacheKey = query + QStringLiteral("|") + QString::number(limit);
+    if (m_suggestionCache.contains(cacheKey)) {
+        return m_suggestionCache.value(cacheKey);
+    }
+
+    const QVector<Bookmark> bookmarks = getBookmarksForSuggestions();
+    const QStringList suggestions = Bookmark::suggestionStrings(bookmarks, query, limit);
+    const QString response =
+        Bookmark::homepageSuggestionResponseJson(query, suggestions).toJson(QJsonDocument::Compact);
+
+    m_suggestionCache.insert(cacheKey, response);
+    while (m_suggestionCache.size() > 200) {
+        m_suggestionCache.erase(m_suggestionCache.begin());
+    }
+
+    return response;
+}
 
 void WebSocketServerService::onNewConnection() {
     auto pSocket = m_pWebSocketServer->nextPendingConnection();

@@ -9,6 +9,7 @@
 #include <QJsonDocument>
 #include <QRegularExpression>
 #include <QRegularExpressionMatchIterator>
+#include <QStringList>
 #include <utility>
 
 #include "notefolder.h"
@@ -167,6 +168,94 @@ QString Bookmark::bookmarksWebServiceJsonText(const QVector<Bookmark> &bookmarks
  */
 QString Bookmark::parsedBookmarksWebServiceJsonText(const QString &text, bool withBasicUrls) {
     return bookmarksWebServiceJsonText(parseBookmarks(text, withBasicUrls));
+}
+
+QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, const QString &query,
+                                        int limit) {
+    const QString normalizedQuery = query.trimmed();
+
+    if (normalizedQuery.isEmpty()) {
+        return {};
+    }
+
+    if (limit < 1) {
+        limit = 1;
+    } else if (limit > 50) {
+        limit = 50;
+    }
+
+    const QString queryLower = normalizedQuery.toLower();
+    QStringList prefixMatches;
+    QStringList substringMatches;
+    QStringList seen;
+
+    auto appendCandidate = [&prefixMatches, &queryLower, &seen, &substringMatches,
+                            limit](const QString &candidate) {
+        if ((prefixMatches.count() + substringMatches.count()) >= limit) {
+            return;
+        }
+
+        const QString trimmed = candidate.trimmed();
+
+        if (trimmed.isEmpty()) {
+            return;
+        }
+
+        const QString dedupeKey = trimmed.toCaseFolded();
+        if (seen.contains(dedupeKey)) {
+            return;
+        }
+
+        const QString candidateLower = trimmed.toLower();
+        const bool isPrefix = candidateLower.startsWith(queryLower);
+        const bool isSubstring = isPrefix || candidateLower.contains(queryLower);
+        if (!isSubstring) {
+            return;
+        }
+
+        seen.append(dedupeKey);
+        if (isPrefix) {
+            prefixMatches.append(trimmed);
+        } else {
+            substringMatches.append(trimmed);
+        }
+
+        if ((prefixMatches.count() + substringMatches.count()) >= limit) {
+            return;
+        }
+    };
+
+    for (const Bookmark &bookmark : bookmarks) {
+        appendCandidate(bookmark.name);
+        appendCandidate(bookmark.url);
+
+        if ((prefixMatches.count() + substringMatches.count()) >= limit) {
+            break;
+        }
+    }
+
+    QStringList result = prefixMatches;
+    result.append(substringMatches);
+
+    if (result.count() > limit) {
+        result = result.mid(0, limit);
+    }
+
+    return result;
+}
+
+QJsonDocument Bookmark::homepageSuggestionResponseJson(const QString &query,
+                                                       const QStringList &suggestions) {
+    QJsonArray response;
+    response.push_back(query);
+
+    QJsonArray suggestionList;
+    for (const QString &suggestion : suggestions) {
+        suggestionList.push_back(suggestion);
+    }
+
+    response.push_back(suggestionList);
+    return QJsonDocument(response);
 }
 
 /**

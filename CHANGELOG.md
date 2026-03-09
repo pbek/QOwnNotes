@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## Next
+
+- Added a local [Homepage](https://github.com/gethomepage/homepage)-compatible
+  bookmark suggestion API endpoint (`GET /suggest`) based on existing bookmark
+  parsing and Web Companion data sources, with prefix-first matching,
+  deduplication, limit handling, and response format compatibility
+  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+
 ## 26.3.5
 
 - Disabled hanging indentation for wrapped Markdown list items by default in the

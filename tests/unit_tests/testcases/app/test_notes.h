@@ -48,6 +48,13 @@ class TestNotes : public QObject {
 
     /* File URL handling tests (issue #3483) */
     void testPercentEncodedFileUrlUsesDecodedLocalPath();
+
+    /* Homepage suggestion API helper tests */
+    void testBookmarkSuggestionsPrefixSubstringAndExact();
+    void testBookmarkSuggestionsDeduplication();
+    void testBookmarkSuggestionsEmptyQuery();
+    void testBookmarkSuggestionsLimitHandling();
+    void testBookmarkSuggestionsResponseShape();
 };
 
 #endif    // TESTNOTES_H

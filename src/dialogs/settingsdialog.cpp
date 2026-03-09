@@ -172,6 +172,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)), this,
             SLOT(needRestart()));
     connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
+    connect(ui->bookmarkSuggestionApiEnabledCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
     connect(ui->enableWebApplicationCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->enableNoteTreeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->aiAutocompleteCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
@@ -781,6 +783,10 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("webSocketServerService/port"),
                       ui->webSocketServerServicePortSpinBox->value());
+    settings.setValue(QStringLiteral("webSocketServerService/bookmarkSuggestionApiEnabled"),
+                      ui->bookmarkSuggestionApiEnabledCheckBox->isChecked());
+    settings.setValue(QStringLiteral("webSocketServerService/bookmarkSuggestionApiPort"),
+                      ui->bookmarkSuggestionApiPortSpinBox->value());
     settings.setValue(QStringLiteral("webSocketServerService/bookmarksTag"),
                       ui->bookmarksTagLineEdit->text());
     settings.setValue(QStringLiteral("webSocketServerService/bookmarksNoteName"),
@@ -1286,6 +1292,12 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("autoReadOnlyModeTimeout"), 30).toInt());
 
     ui->webSocketServerServicePortSpinBox->setValue(WebSocketServerService::getSettingsPort());
+    ui->bookmarkSuggestionApiEnabledCheckBox->setChecked(
+        WebSocketServerService::isBookmarkSuggestionApiEnabled());
+    ui->bookmarkSuggestionApiPortSpinBox->setValue(
+        WebSocketServerService::getBookmarkSuggestionApiPort());
+    on_bookmarkSuggestionApiEnabledCheckBox_toggled(
+        ui->bookmarkSuggestionApiEnabledCheckBox->isChecked());
     ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());
     ui->bookmarksNoteNameLineEdit->setText(WebSocketServerService::getBookmarksNoteName());
     ui->commandSnippetsTagLineEdit->setText(WebSocketServerService::getCommandSnippetsTag());
@@ -4222,6 +4234,19 @@ void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
                     .arg(disabledColor, _commandSnippetTagLabelHtml));
         }
     }
+
+    ui->bookmarkSuggestionApiGroupBox->setEnabled(checked);
+}
+
+void SettingsDialog::on_bookmarkSuggestionApiEnabledCheckBox_toggled(bool checked) {
+    ui->bookmarkSuggestionApiPortLabel->setEnabled(checked);
+    ui->bookmarkSuggestionApiPortSpinBox->setEnabled(checked);
+    ui->bookmarkSuggestionApiPortResetButton->setEnabled(checked);
+}
+
+void SettingsDialog::on_bookmarkSuggestionApiPortResetButton_clicked() {
+    ui->bookmarkSuggestionApiPortSpinBox->setValue(
+        WebSocketServerService::getBookmarkSuggestionApiDefaultPort());
 }
 
 void SettingsDialog::on_internalIconThemeCheckBox_toggled(bool checked) {

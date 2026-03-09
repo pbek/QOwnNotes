@@ -7,7 +7,10 @@
 #include <QtCore/QDebug>
 #include <QtCore/QJsonObject>
 #include <QtCore/QString>
+#include <QtCore/QStringList>
 #include <QtCore/QVariant>
+
+class QJsonDocument;
 
 class Bookmark {
    public:
@@ -20,6 +23,10 @@ class Bookmark {
     static QString bookmarksWebServiceJsonText(const QVector<Bookmark> &bookmarks);
     static QString parsedBookmarksWebServiceJsonText(const QString &text,
                                                      bool withBasicUrls = false);
+    static QStringList suggestionStrings(const QVector<Bookmark> &bookmarks, const QString &query,
+                                         int limit = 10);
+    static QJsonDocument homepageSuggestionResponseJson(const QString &query,
+                                                        const QStringList &suggestions);
     bool operator==(const Bookmark &bookmark) const;
     static void mergeInList(QVector<Bookmark> &bookmarks, Bookmark &bookmark);
     static void mergeListInList(const QVector<Bookmark> &sourceBookmarks,

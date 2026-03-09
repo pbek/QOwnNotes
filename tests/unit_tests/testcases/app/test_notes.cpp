@@ -1,9 +1,12 @@
 #include "test_notes.h"
 
 #include <QCoreApplication>
+#include <QJsonArray>
+#include <QJsonDocument>
 #include <QString>
 #include <QtTest>
 
+#include "entities/bookmark.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 
@@ -665,6 +668,80 @@ void TestNotes::testPercentEncodedFileUrlUsesDecodedLocalPath() {
     const QString encodedFileUrl = QUrl::fromLocalFile(filePath).toString();
     const QUrl fileUrl = UrlHandler::localFileUrlForDesktopOpen(encodedFileUrl);
     QCOMPARE(fileUrl.toLocalFile(), filePath);
+}
+
+void TestNotes::testBookmarkSuggestionsPrefixSubstringAndExact() {
+    QVector<Bookmark> bookmarks = {
+        Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage")),
+        Bookmark(QStringLiteral("https://example.com/about-home"), QStringLiteral("About")),
+        Bookmark(QStringLiteral("https://foo.bar"), QStringLiteral("Some Home Link"))};
+
+    const QStringList suggestions =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("home"), 10);
+    QVERIFY(!suggestions.isEmpty());
+    QCOMPARE(suggestions.at(0), QStringLiteral("Homepage"));
+    QVERIFY(suggestions.contains(QStringLiteral("Some Home Link")) ||
+            suggestions.contains(QStringLiteral("https://example.com/home")));
+}
+
+void TestNotes::testBookmarkSuggestionsDeduplication() {
+    QVector<Bookmark> bookmarks = {
+        Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage")),
+        Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage")),
+        Bookmark(QStringLiteral("https://EXAMPLE.com/home"), QStringLiteral("homepage"))};
+
+    const QStringList suggestions =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("home"), 10);
+    int homepageCount = 0;
+    int urlCount = 0;
+
+    for (const QString &value : suggestions) {
+        if (value.compare(QStringLiteral("Homepage"), Qt::CaseInsensitive) == 0) {
+            homepageCount++;
+        }
+        if (value.compare(QStringLiteral("https://example.com/home"), Qt::CaseInsensitive) == 0) {
+            urlCount++;
+        }
+    }
+
+    QVERIFY(homepageCount <= 1);
+    QVERIFY(urlCount <= 1);
+}
+
+void TestNotes::testBookmarkSuggestionsEmptyQuery() {
+    QVector<Bookmark> bookmarks = {
+        Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage"))};
+
+    QVERIFY(Bookmark::suggestionStrings(bookmarks, QStringLiteral("   "), 10).isEmpty());
+}
+
+void TestNotes::testBookmarkSuggestionsLimitHandling() {
+    QVector<Bookmark> bookmarks;
+    for (int i = 0; i < 40; ++i) {
+        bookmarks.append(Bookmark(QStringLiteral("https://example.com/home-%1").arg(i),
+                                  QStringLiteral("home-%1").arg(i)));
+    }
+
+    QCOMPARE(Bookmark::suggestionStrings(bookmarks, QStringLiteral("home"), 3).count(), 3);
+    QCOMPARE(Bookmark::suggestionStrings(bookmarks, QStringLiteral("home"), 100).count(), 50);
+}
+
+void TestNotes::testBookmarkSuggestionsResponseShape() {
+    const QString query = QStringLiteral("home");
+    const QStringList suggestions = {QStringLiteral("suggestion 1"),
+                                     QStringLiteral("suggestion 2")};
+    const QJsonDocument doc = Bookmark::homepageSuggestionResponseJson(query, suggestions);
+    QVERIFY(doc.isArray());
+
+    const QJsonArray root = doc.array();
+    QCOMPARE(root.count(), 2);
+    QCOMPARE(root.at(0).toString(), query);
+    QVERIFY(root.at(1).isArray());
+
+    const QJsonArray suggestionArray = root.at(1).toArray();
+    QCOMPARE(suggestionArray.count(), 2);
+    QCOMPARE(suggestionArray.at(0).toString(), QStringLiteral("suggestion 1"));
+    QCOMPARE(suggestionArray.at(1).toString(), QStringLiteral("suggestion 2"));
 }
 
 // QTEST_MAIN(TestNotes)

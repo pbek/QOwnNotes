@@ -263,6 +263,10 @@ class SettingsDialog : public MasterDialog {
 
     void on_enableSocketServerCheckBox_toggled();
 
+    void on_bookmarkSuggestionApiEnabledCheckBox_toggled(bool checked);
+
+    void on_bookmarkSuggestionApiPortResetButton_clicked();
+
     void on_internalIconThemeCheckBox_toggled(bool checked);
 
     void on_systemIconThemeCheckBox_toggled(bool checked);

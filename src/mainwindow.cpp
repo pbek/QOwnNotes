@@ -2824,12 +2824,8 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
 
     if (_webSocketServerService == nullptr) {
         QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
-    } else if (Utils::Misc::isSocketServerEnabled()) {
-        if (_webSocketServerService->getPort() != WebSocketServerService::getSettingsPort()) {
-            _webSocketServerService->listen();
-        }
     } else {
-        _webSocketServerService->close();
+        _webSocketServerService->refreshServers();
     }
 
     if (settings.value(QStringLiteral("Editor/disableCursorBlinking")).toBool()) {
