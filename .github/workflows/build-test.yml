@@ -229,7 +229,22 @@ jobs:
             copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
             copy ..\bin\tests\tests.exe .
             windeployqt --debug tests.exe
-            .\tests.exe -txt
+            $windeployqtExitCode = $LASTEXITCODE
+            if ($windeployqtExitCode -ne 0) {
+              Write-Warning "windeployqt exited with code $windeployqtExitCode, continuing to run tests.exe for actionable output"
+            }
+
+            .\tests.exe -txt 2>&1 | Tee-Object -FilePath tests-output.txt
+            $testsExitCode = $LASTEXITCODE
+            if ($testsExitCode -ne 0) {
+              Write-Host "tests.exe failed with code $testsExitCode"
+              if (Test-Path .\tests-output.txt) {
+                Write-Host "----- tests-output.txt -----"
+                Get-Content .\tests-output.txt
+                Write-Host "----------------------------"
+              }
+              exit $testsExitCode
+            }
 
       #
       # Build QOwnNotes
