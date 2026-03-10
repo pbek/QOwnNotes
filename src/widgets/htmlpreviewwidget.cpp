@@ -213,15 +213,14 @@ void HtmlPreviewWidget::setHtml(const QString &text) {
         QStringLiteral("<style>del, s, del *, s * { text-decoration: line-through; }</style>");
 
     // Inject hr CSS so that horizontal rules use the "Horizontal rule" schema
-    // color instead of the hardcoded black/gray from QLiteHtml's built-in
-    // master CSS (issue #3466). The master CSS renders <hr> with
-    // "border-style: inset" which produces black borders regardless of the
-    // active color scheme, making horizontal rules invisible or jarring in
-    // dark-mode themes.
+    // color and render as a single line in QLiteHtml (issue #3466). The
+    // built-in master CSS uses an inset border on all sides, which can appear
+    // as a two-line beveled separator instead.
     const QColor hrColor = Utils::Schema::schemaSettings->getForegroundColor(
         MarkdownHighlighter::HighlighterState::HorizontalRule);
     const QString hrCss =
-        QStringLiteral("<style>hr { border-color: %1; }</style>").arg(hrColor.name());
+        QStringLiteral("<style>hr { border: 0; border-top: 1px solid %1; height: 0; }</style>")
+            .arg(hrColor.name());
 
     const int headEnd = processed.indexOf(QStringLiteral("</head>"));
     if (headEnd != -1) {

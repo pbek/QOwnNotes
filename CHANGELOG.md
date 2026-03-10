@@ -5,6 +5,8 @@
 - Improved Homepage bookmark suggestion integration behavior and documentation,
   including externally hosted Homepage custom asset guidance
   (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+- Fixed QLiteHtml preview `<hr>` rendering to use a single separator line
+  instead of a two-line inset/beveled rule (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
 - Added more Korean, French, Spanish, Croatian translation (thank you, venusgirl,
   jd-develop, alejandromoc, milotype)
 
