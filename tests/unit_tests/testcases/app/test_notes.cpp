@@ -730,6 +730,31 @@ void TestNotes::testBookmarkSuggestionsMultiTokenAndOrderIndependent() {
     QVERIFY(!suggestionsForward.contains(QStringLiteral("QOwnNotes docs")));
 }
 
+void TestNotes::testBookmarkSuggestionsKeepNameUrlPairing() {
+    QVector<Bookmark> bookmarks = {
+        Bookmark(QStringLiteral("https://github.com/digital-blueprint/cabinet-app"),
+                 QStringLiteral("Cabinet Frontend UI Wireframe")),
+        Bookmark(QStringLiteral("https://github.com/digital-blueprint/relay-cabinet-bundle"),
+                 QStringLiteral("System Architecture Diagram for the Cabinet Bundle"))};
+
+    const QStringList suggestions =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("cabi"), 20);
+
+    const int cabinetNameIndex =
+        suggestions.indexOf(QStringLiteral("Cabinet Frontend UI Wireframe"));
+    const int cabinetUrlIndex =
+        suggestions.indexOf(QStringLiteral("https://github.com/digital-blueprint/cabinet-app"));
+    QVERIFY(cabinetNameIndex >= 0);
+    QVERIFY(cabinetUrlIndex > cabinetNameIndex);
+
+    const int bundleNameIndex =
+        suggestions.indexOf(QStringLiteral("System Architecture Diagram for the Cabinet Bundle"));
+    const int bundleUrlIndex = suggestions.indexOf(
+        QStringLiteral("https://github.com/digital-blueprint/relay-cabinet-bundle"));
+    QVERIFY(bundleNameIndex >= 0);
+    QVERIFY(bundleUrlIndex > bundleNameIndex);
+}
+
 void TestNotes::testBookmarkSuggestionsEmptyQuery() {
     QVector<Bookmark> bookmarks = {
         Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage"))};

@@ -53,6 +53,7 @@ class TestNotes : public QObject {
     void testBookmarkSuggestionsPrefixSubstringAndExact();
     void testBookmarkSuggestionsDeduplication();
     void testBookmarkSuggestionsMultiTokenAndOrderIndependent();
+    void testBookmarkSuggestionsKeepNameUrlPairing();
     void testBookmarkSuggestionsEmptyQuery();
     void testBookmarkSuggestionsLimitHandling();
     void testBookmarkSuggestionsResponseShape();

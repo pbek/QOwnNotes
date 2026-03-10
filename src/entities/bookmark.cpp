@@ -195,12 +195,45 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
         return {};
     }
 
+    struct BookmarkMatch {
+        const Bookmark *bookmark;
+        bool nameMatches;
+        bool urlMatches;
+    };
+
+    QVector<BookmarkMatch> prefixBookmarkMatches;
+    QVector<BookmarkMatch> substringBookmarkMatches;
+
     QStringList prefixMatches;
     QStringList substringMatches;
     QStringList seen;
 
-    auto appendCandidate = [&prefixMatches, &queryLower, &queryTokens, &seen, &substringMatches,
-                            limit](const QString &candidate) {
+    auto containsAllTokens = [&queryTokens](const QString &candidateLower) {
+        for (const QString &token : queryTokens) {
+            if (!candidateLower.contains(token)) {
+                return false;
+            }
+        }
+
+        return true;
+    };
+
+    auto isPrefixMatch = [&queryLower, &queryTokens](const QString &candidateLower) {
+        if (candidateLower.startsWith(queryLower)) {
+            return true;
+        }
+
+        for (const QString &token : queryTokens) {
+            if (candidateLower.startsWith(token)) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+
+    auto appendSuggestionString = [&prefixMatches, &seen, &substringMatches, limit](
+                                      const QString &candidate, QStringList &target) {
         if ((prefixMatches.count() + substringMatches.count()) >= limit) {
             return;
         }
@@ -216,48 +249,65 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
             return;
         }
 
-        const QString candidateLower = trimmed.toLower();
-
-        bool containsAllTokens = true;
-        for (const QString &token : queryTokens) {
-            if (!candidateLower.contains(token)) {
-                containsAllTokens = false;
-                break;
-            }
-        }
-
-        if (!containsAllTokens) {
-            return;
-        }
-
-        bool isPrefix = candidateLower.startsWith(queryLower);
-        if (!isPrefix) {
-            for (const QString &token : queryTokens) {
-                if (candidateLower.startsWith(token)) {
-                    isPrefix = true;
-                    break;
-                }
-            }
-        }
-
         seen.append(dedupeKey);
-        if (isPrefix) {
-            prefixMatches.append(trimmed);
-        } else {
-            substringMatches.append(trimmed);
-        }
-
-        if ((prefixMatches.count() + substringMatches.count()) >= limit) {
-            return;
-        }
+        target.append(trimmed);
     };
 
     for (const Bookmark &bookmark : bookmarks) {
-        appendCandidate(bookmark.name);
-        appendCandidate(bookmark.url);
+        const QString nameLower = bookmark.name.trimmed().toLower();
+        const QString urlLower = bookmark.url.trimmed().toLower();
 
+        const bool nameMatches = !nameLower.isEmpty() && containsAllTokens(nameLower);
+        const bool urlMatches = !urlLower.isEmpty() && containsAllTokens(urlLower);
+
+        if (!nameMatches && !urlMatches) {
+            continue;
+        }
+
+        const bool isPrefix =
+            (nameMatches && isPrefixMatch(nameLower)) || (urlMatches && isPrefixMatch(urlLower));
+
+        BookmarkMatch match{&bookmark, nameMatches, urlMatches};
+        if (isPrefix) {
+            prefixBookmarkMatches.append(match);
+        } else {
+            substringBookmarkMatches.append(match);
+        }
+    }
+
+    auto appendBookmarkSuggestions = [&appendSuggestionString, &prefixMatches, &substringMatches,
+                                      limit](const BookmarkMatch &match, QStringList &target) {
+        if ((prefixMatches.count() + substringMatches.count()) >= limit) {
+            return;
+        }
+
+        const QString name = match.bookmark->name.trimmed();
+        const QString url = match.bookmark->url.trimmed();
+
+        if (match.nameMatches && !name.isEmpty()) {
+            appendSuggestionString(name, target);
+        } else if (match.urlMatches && !name.isEmpty()) {
+            appendSuggestionString(name, target);
+        }
+
+        if (match.urlMatches && !url.isEmpty()) {
+            appendSuggestionString(url, target);
+        }
+    };
+
+    for (const BookmarkMatch &match : prefixBookmarkMatches) {
+        appendBookmarkSuggestions(match, prefixMatches);
         if ((prefixMatches.count() + substringMatches.count()) >= limit) {
             break;
+        }
+    }
+
+    if ((prefixMatches.count() + substringMatches.count()) < limit) {
+        for (const BookmarkMatch &match : substringBookmarkMatches) {
+            appendBookmarkSuggestions(match, substringMatches);
+            if ((prefixMatches.count() + substringMatches.count()) >= limit) {
+                break;
+            }
         }
     }
 

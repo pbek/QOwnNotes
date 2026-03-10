@@ -23,6 +23,7 @@
   const QON_URL = "http://127.0.0.1:22224/suggest?q=";
   const QON_LIMIT = 20;
   const QON_LABEL = "[QON] ";
+  const BLOCK_QON_TEXT_SEARCH = "__QON_BLOCK_TEXT_SEARCH__";
   const DEBUG = false;
 
   const log = (...a) => {
@@ -87,7 +88,8 @@
       }
 
       if (!isHttpUrl(current)) {
-        out.push(`${QON_LABEL}${current}`);
+        // Skip unmapped plain-text suggestions, because they would be searched
+        // as text instead of opening a bookmark URL.
         continue;
       }
 
@@ -190,6 +192,11 @@
       const mapped = suggestionToUrl.get(norm(decoded));
       if (mapped && /^https?:\/\//i.test(mapped)) return mapped;
 
+      if (decoded.startsWith(QON_LABEL)) {
+        // Never pass QOwnNotes label text to a search engine.
+        return BLOCK_QON_TEXT_SEARCH;
+      }
+
       if (!/^https?:\/\//i.test(decoded)) return null;
 
       const target = new URL(decoded);
@@ -213,6 +220,7 @@
   window.open = function (url, target, features) {
     const raw = typeof url === "string" ? url : String(url ?? "");
     const direct = decodeIfSearchEngineRedirect(raw);
+    if (direct === BLOCK_QON_TEXT_SEARCH) return null;
     if (direct) return origOpen(direct, target, features);
     return origOpen(url, target, features);
   };

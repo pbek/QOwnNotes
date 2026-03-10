@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.8
+
+- Improved Homepage bookmark suggestion integration behavior and documentation,
+  including externally hosted Homepage custom asset guidance
+  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+
 ## 26.3.7
 
 - Fixed an xUbuntu 20.04 / GCC build failure caused by duplicate `qstring_literal`
