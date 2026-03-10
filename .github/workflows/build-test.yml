@@ -237,8 +237,9 @@ jobs:
             $testsOutputPath = Join-Path $env:GITHUB_WORKSPACE 'tests\tests-output.txt'
             New-Item -Path $testsOutputPath -ItemType File -Force | Out-Null
             $env:QT_QPA_PLATFORM = 'minimal'
-            cmd /c ".\tests.exe -platform minimal -txt > \"$testsOutputPath\" 2>&1"
+            $testsOutput = & .\tests.exe -platform minimal -txt 2>&1
             $testsExitCode = $LASTEXITCODE
+            $testsOutput | Set-Content -Path $testsOutputPath
             if ($testsExitCode -ne 0) {
               Write-Host "tests.exe failed with code $testsExitCode"
               if (Test-Path $testsOutputPath) {
