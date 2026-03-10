@@ -68,3 +68,7 @@ Możesz też zaimportować zakładki ze swojej przeglądarki do QOwnNotes za pom
 ```
 
 You are able to search for name, url tags or description in the browser extension. In the current note all other links inside of text are parsed, but without tags or description.
+
+## Homepage suggestion API
+
+For [Homepage](https://github.com/gethomepage/homepage) integration with QOwnNotes bookmark suggestions, see [Homepage suggestion API](./homepage-suggestion-api.md).

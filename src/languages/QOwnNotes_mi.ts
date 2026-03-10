@@ -1508,6 +1508,14 @@
 <translation>Matau</translation>
 </message>
 <message>
+<source>Folder</source>
+<translation type="unfinished">Folder</translation>
+</message>
+<message>
+<source>Modified</source>
+<translation type="unfinished">Modified</translation>
+</message>
+<message>
 <source>Search for a heading to link to</source>
 <translation type="unfinished">Search for a heading to link to</translation>
 </message>
@@ -4031,8 +4039,20 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <translation type="unfinished">Remove selected folders</translation>
 </message>
 <message>
+<source>Move selected folders to...</source>
+<translation type="unfinished">Move selected folders to...</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation type="unfinished">Move to note folder</translation>
+</message>
+<message>
 <source>Show folder in file manager</source>
 <translation type="unfinished">Show folder in file manager</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation type="unfinished">Move to this subfolder</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
@@ -4043,6 +4063,34 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
 <message>
 <source>Removed note subfolder: %1</source>
 <translation type="unfinished">Removed note subfolder: %1</translation>
+</message>
+<message>
+<source>note folder</source>
+<translation type="unfinished">note folder</translation>
+</message>
+<message>
+<source>Move selected folders</source>
+<translation type="unfinished">Move selected folders</translation>
+</message>
+<message numerus="yes">
+<source>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Migrate relative links</source>
+<translation type="unfinished">Migrate relative links</translation>
+</message>
+<message>
+<source>Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</source>
+<translation type="unfinished">Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</translation>
+</message>
+<message numerus="yes">
+<source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -6135,6 +6183,14 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
 </message>
 <message>
+<source>Show small Markdown preview images in the editor, if there is no text after the image</source>
+<translation type="unfinished">Show small Markdown preview images in the editor, if there is no text after the image</translation>
+</message>
+<message>
+<source>Enable hanging indentation for Markdown lists</source>
+<translation type="unfinished">Enable hanging indentation for Markdown lists</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Monokia koma puhipuhi</translation>
 </message>
@@ -6327,6 +6383,22 @@ Me whakamatautau noa ki a koe mehemea ka uru koe ki nga tautohetohe ka whakanoho
 <message>
 <source>Note name for adding new commands</source>
 <translation type="unfinished">Note name for adding new commands</translation>
+</message>
+<message>
+<source>Bookmark suggestion API</source>
+<translation type="unfinished">Bookmark suggestion API</translation>
+</message>
+<message>
+<source>Enable Homepage-compatible bookmark suggestions API</source>
+<translation type="unfinished">Enable Homepage-compatible bookmark suggestions API</translation>
+</message>
+<message>
+<source>Suggestion API port:</source>
+<translation type="unfinished">Suggestion API port:</translation>
+</message>
+<message>
+<source>Reset the suggestion API port</source>
+<translation type="unfinished">Reset the suggestion API port</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -8444,6 +8516,30 @@ Ka taea e koe te whakahoki tonu i te tuhipoka me ona waahanga a muri ake nei. &l
 <message>
 <source>Could not start QOwnNotes server on port %1!</source>
 <translation>Ko te kaiwhakarato QOwnNotes e whakarongo ana i te tauranga %1!</translation>
+</message>
+<message>
+<source>Could not start bookmark suggestion API on port %1!</source>
+<translation type="unfinished">Could not start bookmark suggestion API on port %1!</translation>
+</message>
+<message>
+<source>Please check if the port is already in use.</source>
+<translation type="unfinished">Please check if the port is already in use.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API listening on port %1</source>
+<translation type="unfinished">Bookmark suggestion API listening on port %1</translation>
+</message>
+<message>
+<source>Bookmark suggestion API received malformed HTTP request line.</source>
+<translation type="unfinished">Bookmark suggestion API received malformed HTTP request line.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API request from %1:%2</source>
+<translation type="unfinished">Bookmark suggestion API request from %1:%2</translation>
+</message>
+<message>
+<source>Bookmark suggestion API couldn't load suggestions because no main window instance is available.</source>
+<translation type="unfinished">Bookmark suggestion API couldn't load suggestions because no main window instance is available.</translation>
 </message>
 <message>
 <source>%1 connected to QOwnNotes server!</source>

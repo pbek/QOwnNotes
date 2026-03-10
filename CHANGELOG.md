@@ -5,6 +5,8 @@
 - Improved Homepage bookmark suggestion integration behavior and documentation,
   including externally hosted Homepage custom asset guidance
   (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+- Added more Korean, French, Spanish, Croatian translation (thank you, venusgirl,
+  jd-develop, alejandromoc, milotype)
 
 ## 26.3.7
 

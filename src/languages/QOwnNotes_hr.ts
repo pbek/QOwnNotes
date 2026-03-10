@@ -1259,28 +1259,28 @@
 <name>HtmlPreviewWidgetInternal</name>
 <message>
 <source>Copy</source>
-<translation type="unfinished">Copy</translation>
+<translation>Kopiraj</translation>
 </message>
 <message>
 <source>Copy link location</source>
-<translation type="unfinished">Copy link location</translation>
+<translation>Kopiraj lokaciju poveznice</translation>
 </message>
 <message>
 <source>Export generated raw HTML</source>
-<translation type="unfinished">Export generated raw HTML</translation>
+<translation>Izvezi generirani HTML</translation>
 </message>
 <message>
 <source>Reset zoom</source>
-<translation type="unfinished">Reset zoom</translation>
+<translation>Resetiraj zumiranje</translation>
 </message>
 <message>
 <source>HTML files</source>
-<translation type="unfinished">HTML files</translation>
+<translation>HTML datoteke</translation>
 </message>
 <message>
 <source>Export preview as raw HTML file</source>
 <comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
-<translation type="unfinished">Export preview as raw HTML file</translation>
+<translation>Izvezi pregled kao HTML datoteku</translation>
 </message>
 </context>
 <context>
@@ -1511,11 +1511,19 @@
 </message>
 <message>
 <source>Clear link name and fetch title of webpage again</source>
-<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+<translation>Izbriši ime poveznice i ponovo dohvati naslov web stranice</translation>
 </message>
 <message>
 <source>Note</source>
 <translation>Bilješka</translation>
+</message>
+<message>
+<source>Folder</source>
+<translation>Mapa</translation>
+</message>
+<message>
+<source>Modified</source>
+<translation>Promijenjeno</translation>
 </message>
 <message>
 <source>Search for a heading to link to</source>
@@ -1551,19 +1559,19 @@
 </message>
 <message>
 <source>Select file to link to (relative)</source>
-<translation type="unfinished">Select file to link to (relative)</translation>
+<translation>Odaberi datoteku na koju poveznica ukazuje (relativno)</translation>
 </message>
 <message>
 <source>Select file to link to (absolute)</source>
-<translation type="unfinished">Select file to link to (absolute)</translation>
+<translation>Odaberi datoteku na koju poveznica ukazuje (apsolutno)</translation>
 </message>
 <message>
 <source>Select directory to link to (relative)</source>
-<translation type="unfinished">Select directory to link to (relative)</translation>
+<translation>Odaberi direktorij na koju poveznica ukazuje (relativno)</translation>
 </message>
 <message>
 <source>Select directory to link to (absolute)</source>
-<translation type="unfinished">Select directory to link to (absolute)</translation>
+<translation>Odaberi direktorij na koju poveznica ukazuje (apsolutno)</translation>
 </message>
 </context>
 <context>
@@ -1989,11 +1997,11 @@
 </message>
 <message>
 <source>Previous &amp;heading</source>
-<translation type="unfinished">Previous &amp;heading</translation>
+<translation>Prethodni &amp;naslov</translation>
 </message>
 <message>
 <source>Next heading</source>
-<translation type="unfinished">Next heading</translation>
+<translation>Sljedeći naslov</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2206,11 +2214,11 @@
 </message>
 <message>
 <source>Redo last action</source>
-<translation type="unfinished">Redo last action</translation>
+<translation>Ponovi zadnju radnju</translation>
 </message>
 <message>
 <source>Redo the last action</source>
-<translation type="unfinished">Redo the last action</translation>
+<translation>Ponovi zadnju radnju</translation>
 </message>
 <message>
 <source>Insert table</source>
@@ -2258,7 +2266,7 @@
 </message>
 <message>
 <source>Show note git versions externally</source>
-<translation type="unfinished">Show note git versions externally</translation>
+<translation>Prikaži git verzije bilješki eksterno</translation>
 </message>
 <message>
 <source>Find scripts in script repository</source>
@@ -2390,7 +2398,7 @@
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation type="unfinished">Insert Nextcloud Deck card link</translation>
+<translation>Umetni poveznicu za Nextcloud Deck karticu</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
@@ -2418,11 +2426,11 @@
 </message>
 <message>
 <source>Manage Nextcloud Deck cards</source>
-<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+<translation>Upravljaj Nextcloud Deck karticama</translation>
 </message>
 <message>
 <source>Ctrl+Alt+D</source>
-<translation type="unfinished">Ctrl+Alt+D</translation>
+<translation>Ctrl+Alt+D</translation>
 </message>
 <message>
 <source>Send clipboard</source>
@@ -2639,34 +2647,34 @@ Restore current note?</source>
 </message>
 <message>
 <source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
+<translation>Ukloni odabrane bilješke i mape</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku i &lt;strong&gt;%1&lt;/strong&gt; mapu?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Sve datoteke i mape u tim mapama će se također ukloniti!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Ako je koš za smeće aktiviran na tvom ownCloud serveru, bilješke bi se odande trebale moći obnoviti.</numerusform>
+<numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabrane bilješke i &lt;strong&gt;%1&lt;/strong&gt; mape?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Sve datoteke i mape u tim mapama će se također ukloniti!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Ako je koš za smeće aktiviran na tvom ownCloud serveru, bilješke bi se odande trebale moći obnoviti.</numerusform>
+<numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabranih bilješki i &lt;strong&gt;%1&lt;/strong&gt; mapa?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Sve datoteke i mape u tim mapama će se također ukloniti!
 
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+Ako je koš za smeće aktiviran na tvom ownCloud serveru, bilješke bi se odande trebale moći obnoviti.</numerusform>
 </translation>
 </message>
 <message>
 <source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
+<translation>Ukloni odabrane mape</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<translation>
+<numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabranu mapu?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Sve datoteke i mape u toj mapi će se također ukloniti!</numerusform>
+<numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabrane mape?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Sve datoteke i mape u tim mapama će se također ukloniti!</numerusform>
+<numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabranih mapa?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Sve datoteke i mape u tim mapama će se također ukloniti!</numerusform>
 </translation>
 </message>
 <message>
@@ -2687,7 +2695,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
+<translation>Ukloni podmapu bilješki: %1</translation>
 </message>
 <message>
 <source>Remove selected tags</source>
@@ -2845,7 +2853,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Redo action: %1</source>
-<translation type="unfinished">Redo action: %1</translation>
+<translation>Ponovi radnju: %1</translation>
 </message>
 <message>
 <source>Inserting image</source>
@@ -2893,10 +2901,10 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message numerus="yes">
 <source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
+<translation>
+<numerusform>Odabrana je %n mapa</numerusform>
+<numerusform>Odabrana su %n mape</numerusform>
+<numerusform>Odabrano je %n mapa</numerusform>
 </translation>
 </message>
 <message>
@@ -2905,55 +2913,55 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message numerus="yes">
 <source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
-<translation type="unfinished">
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<translation>
+<numerusform>Naslov „%1” se referencira u %n bilješci. Želiš li aktualizirati poveznicu za korištenje novog naslova „%2”?</numerusform>
+<numerusform>Naslov „%1” se referencira u %n bilješke. Želiš li aktualizirati poveznicu za korištenje novog naslova „%2”?</numerusform>
+<numerusform>Naslov „%1” se referencira u %n bilješki. Želiš li aktualizirati poveznicu za korištenje novog naslova „%2”?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Updated heading links in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
-<numerusform>Updated heading links in %n note(s)</numerusform>
-<numerusform>Updated heading links in %n note(s)</numerusform>
+<translation>
+<numerusform>Poveznice naslova su aktualizirane u %n bilješci</numerusform>
+<numerusform>Poveznice naslova su aktualizirane u %n bilješke</numerusform>
+<numerusform>Poveznice naslova su aktualizirane u %n bilješki</numerusform>
 </translation>
 </message>
 <message>
 <source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
+<translation>&amp;Ukloni bilješke i mape</translation>
 </message>
 <message>
 <source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
+<translation>&amp;Ukloni mape</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
+<translation>Otvori bilješku u Nextcloud Files</translation>
 </message>
 <message>
 <source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
+<translation>Otvori bilješku u Nextcloud Notes</translation>
 </message>
 <message>
 <source>Copy note filename</source>
-<translation type="unfinished">Copy note filename</translation>
+<translation>Kopiraj ime datoteke bilješke</translation>
 </message>
 <message>
 <source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
+<translation>Ukloni iz favorita</translation>
 </message>
 <message>
 <source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
+<translation>Označi kao favorit</translation>
 </message>
 <message>
 <source>Split note</source>
-<translation type="unfinished">Split note</translation>
+<translation>Rastavi bilješku</translation>
 </message>
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+<translation>Rastaviti bilješku na trenutačnoj poziciji kursora? Tekst nakon kursora će se premjestiti u novu bilješku. Nova bilješka će se povezati sa starom bilješkom.</translation>
 </message>
 <message>
 <source>Ln %1, Col %2</source>
@@ -2975,15 +2983,15 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
-<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+<translation>Git podrška nije uključena za trenutačnu mapu bilješki. Želiš li je uključiti u postavkama?</translation>
 </message>
 <message>
 <source>No versions available</source>
-<translation type="unfinished">No versions available</translation>
+<translation>Nijedna verzija nije dostupna</translation>
 </message>
 <message>
 <source>No versions are available for this note.</source>
-<translation type="unfinished">No versions are available for this note.</translation>
+<translation>Nijedna verzija nije dostupna za ovu bilješku.</translation>
 </message>
 <message>
 <source>Close note tab</source>
@@ -2995,7 +3003,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Note filename '%1' was copied to the clipboard</source>
-<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
+<translation>Ime datoteke bilješke „%1” je kopirana u međuspremnik</translation>
 </message>
 <message>
 <source>AI backends</source>
@@ -3138,14 +3146,14 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
+<translation>%1 i %2</translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
+<translation>
+<numerusform>Odabrana je %n bilješka</numerusform>
+<numerusform>Odabrane su %n bilješke</numerusform>
+<numerusform>Odabrano je %n bilješki</numerusform>
 </translation>
 </message>
 <message>
@@ -3212,22 +3220,22 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
-<translation type="unfinished">
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<translation>
+<numerusform>Najnovije verzije od %n bilješke se trenutačno prikupljaju iz tvog lokalnog git repozitorija</numerusform>
+<numerusform>Najnovije verzije od %n bilješke se trenutačno prikupljaju iz tvog lokalnog git repozitorija</numerusform>
+<numerusform>Najnovije verzije od %n bilješki se trenutačno prikupljaju iz tvog lokalnog git repozitorija</numerusform>
 </translation>
 </message>
 <message>
 <source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
+<translation>Prikupljanje verzija bilješki s gita je završeno</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
-<translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
-<numerusform>Latest %n git versions of note: %1</numerusform>
+<translation>
+<numerusform>Najnovija %n git verzija bilješke: %1</numerusform>
+<numerusform>Najnovije %n git verzije bilješke: %1</numerusform>
+<numerusform>Najnovije %n git verzije bilješke: %1</numerusform>
 </translation>
 </message>
 <message>
@@ -3580,7 +3588,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Note relations</source>
-<translation type="unfinished">Note relations</translation>
+<translation>Odnosi bilješke</translation>
 </message>
 <message>
 <source>Log</source>
@@ -3740,11 +3748,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <name>MarkdownLspClient</name>
 <message>
 <source>Markdown LSP server command is empty</source>
-<translation type="unfinished">Markdown LSP server command is empty</translation>
+<translation>Naredba Markdown LSP servera je prazna</translation>
 </message>
 <message>
 <source>Failed to start Markdown LSP server: %1</source>
-<translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+<translation>Neuspjelo pokretanje Markdown LSP servera: %1</translation>
 </message>
 </context>
 <context>
@@ -3755,7 +3763,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>&amp;Rename heading</source>
-<translation type="unfinished">&amp;Rename heading</translation>
+<translation>&amp;Preimenuj naslov</translation>
 </message>
 </context>
 <context>
@@ -3778,27 +3786,27 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Archive card</source>
-<translation type="unfinished">Archive card</translation>
+<translation>Arhiviraj karticu</translation>
 </message>
 <message>
 <source>Archive</source>
-<translation type="unfinished">Archive</translation>
+<translation>Arhiviraj</translation>
 </message>
 <message>
 <source>Delete card</source>
-<translation type="unfinished">Delete card</translation>
+<translation>Izbriši karticu</translation>
 </message>
 <message>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Izbriši</translation>
 </message>
 <message>
 <source>Show archived cards</source>
-<translation type="unfinished">Show archived cards</translation>
+<translation>Prikaži arhivirane kartice</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
-<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+<translation>Ovo ne funkcionira za podstavke jer su one možda skrivene od nadređene stavke!</translation>
 </message>
 <message>
 <source>Show only items due today</source>
@@ -3806,7 +3814,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Summary</source>
-<translation type="unfinished">Summary</translation>
+<translation>Sažetak</translation>
 </message>
 <message>
 <source>Reload the card item list from server</source>
@@ -3814,11 +3822,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Reload…</source>
-<translation type="unfinished">Reload…</translation>
+<translation>Učitaj ponovo …</translation>
 </message>
 <message>
 <source>Search or create card</source>
-<translation type="unfinished">Search or create card</translation>
+<translation>Traži ili stvori karticu</translation>
 </message>
 <message>
 <source>Create card and insert link into current note</source>
@@ -3850,11 +3858,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Manage Nextcloud Deck Cards</source>
-<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+<translation>Upravljaj Nextcloud Deck karticama</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
-<translation type="unfinished">Save and insert into note</translation>
+<translation>Spremi i umetni u bilješku</translation>
 </message>
 <message>
 <source>Save the current card item and insert a link to it into the current note</source>
@@ -3862,11 +3870,11 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
+<translation>Ponovo učitaj sa servera</translation>
 </message>
 <message>
 <source>Reload cards from server</source>
-<translation type="unfinished">Reload cards from server</translation>
+<translation>Ponovo učitaj kartice sa servera</translation>
 </message>
 <message>
 <source>No due date</source>
@@ -3874,38 +3882,38 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+<translation>Želiš li izbrisati trenutačnu Nextcloud Deck karticu?</translation>
 </message>
 <message>
 <source>Do you want to archive the current Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+<translation>Želiš li arhivirati trenutačnu Nextcloud Deck karticu?</translation>
 </message>
 <message>
 <source>&amp;Open card in browser</source>
-<translation type="unfinished">&amp;Open card in browser</translation>
+<translation>&amp;Otvori karticu u pregledniku</translation>
 </message>
 <message>
 <source>&amp;Add card link to note</source>
-<translation type="unfinished">&amp;Add card link to note</translation>
+<translation>&amp;Dodaj poveznicu kartice u bilješku</translation>
 </message>
 <message>
 <source>&amp;Search for card link in notes</source>
-<translation type="unfinished">&amp;Search for card link in notes</translation>
+<translation>&amp;Traži poveznicu za karticu u bilješkama</translation>
 </message>
 </context>
 <context>
 <name>NextcloudDeckService</name>
 <message>
 <source>updating</source>
-<translation type="unfinished">updating</translation>
+<translation>aktualiziranje</translation>
 </message>
 <message>
 <source>creating</source>
-<translation type="unfinished">creating</translation>
+<translation>stvaranje</translation>
 </message>
 <message>
 <source>Error while updating card</source>
-<translation type="unfinished">Error while updating card</translation>
+<translation>Greška tijekom aktualiziranja kartice</translation>
 </message>
 <message>
 <source>Updating card failed with status code %1 and message: %2</source>
@@ -3913,7 +3921,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Error while creating card</source>
-<translation type="unfinished">Error while creating card</translation>
+<translation>Greška tijekom stvaranja kartice</translation>
 </message>
 <message>
 <source>Creating card failed with status code %1 and message: %2</source>
@@ -3921,7 +3929,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Error while archiving card</source>
-<translation type="unfinished">Error while archiving card</translation>
+<translation>Greška tijekom arhiviranja kartice</translation>
 </message>
 <message>
 <source>Archiving the card failed with status code %2 and message: %3</source>
@@ -3929,7 +3937,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Error while deleting card</source>
-<translation type="unfinished">Error while deleting card</translation>
+<translation>Greška tijekom brisanja kartice</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %2 and message: %3</source>
@@ -3945,7 +3953,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Error while loading cards</source>
-<translation type="unfinished">Error while loading cards</translation>
+<translation>Greška tijekom učitavanja kartice</translation>
 </message>
 <message>
 <source>Loading the cards failed with status code %1 and message: %2</source>
@@ -3953,7 +3961,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Error while loading archived cards</source>
-<translation type="unfinished">Error while loading archived cards</translation>
+<translation>Greška tijekom učitavanja arhiviranih kartica</translation>
 </message>
 <message>
 <source>Loading the archived cards failed with status code %1 and message: %2</source>
@@ -3976,19 +3984,19 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Reload</source>
-<translation type="unfinished">Reload</translation>
+<translation>Učitaj ponovo</translation>
 </message>
 <message>
 <source>Reload the note text</source>
-<translation type="unfinished">Reload the note text</translation>
+<translation>Ponovo učitaj tekst bilješke</translation>
 </message>
 <message>
 <source>Jump to note</source>
-<translation type="unfinished">Jump to note</translation>
+<translation>Skoči na bilješku</translation>
 </message>
 <message>
 <source>Jump to the note in the main window</source>
-<translation type="unfinished">Jump to the note in the main window</translation>
+<translation>Skoči na bilješku u glavnom prozoru</translation>
 </message>
 </context>
 <context>
@@ -4042,7 +4050,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Copy note filename</source>
-<translation type="unfinished">Copy note filename</translation>
+<translation>Kopiraj ime datoteke bilješke</translation>
 </message>
 <message>
 <source>Copy absolute path of note subfolder</source>
@@ -4116,8 +4124,20 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <translation>Izbriši odabrane mape</translation>
 </message>
 <message>
+<source>Move selected folders to...</source>
+<translation>Premjesti odabrane mape u …</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation>Premjesti u mapu bilješke</translation>
+</message>
+<message>
 <source>Show folder in file manager</source>
 <translation>Prikaži mapu u upravljaču datoteka</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation>Premjesti u ovu podmapu</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
@@ -4131,12 +4151,44 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <source>Removed note subfolder: %1</source>
 <translation>Izbriši podmapu bilješki: %1</translation>
 </message>
+<message>
+<source>note folder</source>
+<translation>mapa bilješki</translation>
+</message>
+<message>
+<source>Move selected folders</source>
+<translation>Premjesti odabrane mape</translation>
+</message>
+<message numerus="yes">
+<source>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation>
+<numerusform>Premjestiti &lt;strong&gt;%n&lt;/strong&gt; odabranu mapu u &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
+<numerusform>Premjestiti &lt;strong&gt;%n&lt;/strong&gt; odabrane mape u &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
+<numerusform>Premjestiti &lt;strong&gt;%n&lt;/strong&gt; odabranih mapa u &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Migrate relative links</source>
+<translation>Migriraj relativne veze</translation>
+</message>
+<message>
+<source>Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</source>
+<translation>Želiš li migrirati relativne poveznice bilješki, poveznice medijskih datoteka i poveznice privitaka za premještene bilješke?&lt;br /&gt;&lt;br /&gt;Ako odabereš &lt;strong&gt;Ne&lt;/strong&gt;, te relativne poveznice neće ispravno raditi nakon premještanja mapa.</translation>
+</message>
+<message numerus="yes">
+<source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation>
+<numerusform>Premještena je &lt;strong&gt;%n&lt;/strong&gt; podmapa bilješki u &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Premještene su &lt;strong&gt;%n&lt;/strong&gt; podmape bilješki u &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Premješteno je &lt;strong&gt;%n&lt;/strong&gt; podmapa bilješki u &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
 </context>
 <context>
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
-<translation type="unfinished">Timeout, while waiting for the AI response</translation>
+<translation>Prekoračeno vrijeme tijekom čekanja na odgovor od umjetne inteligencije</translation>
 </message>
 </context>
 <context>
@@ -4306,39 +4358,39 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <name>QLiteHtmlSearchWidget</name>
 <message>
 <source>Close search</source>
-<translation type="unfinished">Close search</translation>
+<translation>Zatvori pretragu</translation>
 </message>
 <message>
 <source>Find:</source>
-<translation type="unfinished">Find:</translation>
+<translation>Pronađi:</translation>
 </message>
 <message>
 <source>Find in text</source>
-<translation type="unfinished">Find in text</translation>
+<translation>Pronađi u tekstu</translation>
 </message>
 <message>
 <source>Search forward</source>
-<translation type="unfinished">Search forward</translation>
+<translation>Traži prema naprijed</translation>
 </message>
 <message>
 <source>Search backward</source>
-<translation type="unfinished">Search backward</translation>
+<translation>Traži unatrag</translation>
 </message>
 <message>
 <source>Plain text</source>
-<translation type="unfinished">Plain text</translation>
+<translation>Neformatirani tekst</translation>
 </message>
 <message>
 <source>Whole words</source>
-<translation type="unfinished">Whole words</translation>
+<translation>Cijele riječi</translation>
 </message>
 <message>
 <source>Regular expression</source>
-<translation type="unfinished">Regular expression</translation>
+<translation>Regularni izraz</translation>
 </message>
 <message>
 <source>Match case sensitive</source>
-<translation type="unfinished">Match case sensitive</translation>
+<translation>Razlikuj velika i mala slova</translation>
 </message>
 </context>
 <context>
@@ -4349,7 +4401,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 </message>
 <message>
 <source>Note file was modified externally</source>
-<translation type="unfinished">Note file was modified externally</translation>
+<translation>Bilješka je eksterno promijenjena</translation>
 </message>
 <message>
 <source>The note file '%1' was modified externally while you had unsaved changes.
@@ -4399,10 +4451,10 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-<translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<translation>
+<numerusform>Otkrivena je promjena putanje bilješke. Želiš li zamijeniti sve odlazne poveznice u &lt;strong&gt;%n&lt;/strong&gt; datoteku bilješki?</numerusform>
+<numerusform>Otkrivena je promjena putanje bilješke. Želiš li zamijeniti sve odlazne poveznice u &lt;strong&gt;%n&lt;/strong&gt; datoteke bilješki?</numerusform>
+<numerusform>Otkrivena je promjena putanje bilješke. Želiš li zamijeniti sve odlazne poveznice u &lt;strong&gt;%n&lt;/strong&gt; datoteka bilješki?</numerusform>
 </translation>
 </message>
 <message>
@@ -4447,7 +4499,7 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;zadnja promjena: %3&lt;br /&gt;stvoreno: %2&lt;br /&gt;veličina datoteke: %4</translation>
 </message>
 <message>
 <source>&lt;br /&gt;path: %1</source>
@@ -4604,11 +4656,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
-<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+<translation>Podrška za Nextcloud Deck je isključena!</translation>
 </message>
 <message>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
-<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+<translation>Podrška za Nextcloud Deck nije uključena ili postavke ne valjaju.&lt;br /&gt;Provjeri &lt;strong&gt;Nextcloud&lt;/strong&gt; konfiguraciju u postavkama!</translation>
 </message>
 </context>
 <context>
@@ -4656,35 +4708,35 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Markdown LSP</source>
-<translation type="unfinished">Markdown LSP</translation>
+<translation>Markdown LSP</translation>
 </message>
 <message>
 <source>Format document</source>
-<translation type="unfinished">Format document</translation>
+<translation>Formatiraj dokument</translation>
 </message>
 <message>
 <source>Format selection</source>
-<translation type="unfinished">Format selection</translation>
+<translation>Formatiraj odabir</translation>
 </message>
 <message>
 <source>Code actions</source>
-<translation type="unfinished">Code actions</translation>
+<translation>Radnje s kodom</translation>
 </message>
 <message>
 <source>Add table column left</source>
-<translation type="unfinished">Add table column left</translation>
+<translation>Dodaj stupac tablice lijevo</translation>
 </message>
 <message>
 <source>Add table column right</source>
-<translation type="unfinished">Add table column right</translation>
+<translation>Dodaj stupac tablice desno</translation>
 </message>
 <message>
 <source>Add table row above</source>
-<translation type="unfinished">Add table row above</translation>
+<translation>Dodaj redak tablice iznad</translation>
 </message>
 <message>
 <source>Add table row below</source>
-<translation type="unfinished">Add table row below</translation>
+<translation>Dodaj redak tablice ispod</translation>
 </message>
 <message>
 <source>Print</source>
@@ -4732,11 +4784,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Markdown LSP server connected</source>
-<translation type="unfinished">Markdown LSP server connected</translation>
+<translation>Markdown LSP server je povezan</translation>
 </message>
 <message>
 <source>Filter completions</source>
-<translation type="unfinished">Filter completions</translation>
+<translation>Filtriraj dovršavanja</translation>
 </message>
 </context>
 <context>
@@ -4818,27 +4870,27 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 </message>
 <message>
 <source>Replace text</source>
-<translation type="unfinished">Replace text</translation>
+<translation>Zamjeni tekst</translation>
 </message>
 <message>
 <source>Close search</source>
-<translation type="unfinished">Close search</translation>
+<translation>Zatvori pretragu</translation>
 </message>
 <message>
 <source>Find in text</source>
-<translation type="unfinished">Find in text</translation>
+<translation>Pronađi u tekstu</translation>
 </message>
 <message>
 <source>Search forward</source>
-<translation type="unfinished">Search forward</translation>
+<translation>Traži prema naprijed</translation>
 </message>
 <message>
 <source>Search backward</source>
-<translation type="unfinished">Search backward</translation>
+<translation>Traži unatrag</translation>
 </message>
 <message>
 <source>Replace with</source>
-<translation type="unfinished">Replace with</translation>
+<translation>Zamijeni s</translation>
 </message>
 <message>
 <source>Replace:</source>
@@ -4896,8 +4948,8 @@ Are the folder and the file writable?</translation>
 <message>
 <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writable?</source>
-<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
-Are the folder and the file writable?</translation>
+<translation>Nije moguće uspostaviti vezu s bazom podataka s bazom podataka mapa bilješki zaapajanje „%1”.
+Postoje li dozvoe za čitanje i pisanje u mapu i datoteku?</translation>
 </message>
 <message>
 <source>Cannot open note folder database</source>
@@ -4936,7 +4988,7 @@ Are the folder and the file writable?</translation>
 </message>
 <message>
 <source>To search for a script please enter your query text.</source>
-<translation type="unfinished">To search for a script please enter your query text.</translation>
+<translation>Za pretraživanje skripta upiši tekst upita.</translation>
 </message>
 <message>
 <source>Minimum app version:</source>
@@ -6047,7 +6099,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
-<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+<translation>Sakrij ikone u izbornicima, kao i u dijalogu „Pronađi radnju”. Zahtijeva ponovno pokretanje kako bi se primijenilo</translation>
 </message>
 <message>
 <source>Hide menu icons</source>
@@ -6055,11 +6107,11 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Override interface scaling factor</source>
-<translation type="unfinished">Override interface scaling factor</translation>
+<translation>Nadjačaj faktor skaliranja sučelja</translation>
 </message>
 <message>
 <source>Interface scaling factor:</source>
-<translation type="unfinished">Interface scaling factor:</translation>
+<translation>Faktor skaliranja sučelja:</translation>
 </message>
 <message>
 <source>Status bar</source>
@@ -6099,19 +6151,19 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+<translation>Instaliraj najnoviju &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; verziju (barem QOWNNOTESAPI_MIN_VERSION verziju) na svoj ownCloud server ako želiš da QOwnNotes može pristupiti verzijama bilješki i bilješkama u smeću.</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Također moraš uključiti dvije osnovne ownCloud aplikacije, &lt;b&gt;Verzije&lt;/b&gt; i &lt;b&gt;Izbrisane datoteke&lt;/b&gt; na svom ownCloud serveru (to bi trebala biti zadana postavka).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;I dalje ćeš trebati &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud klijent za sinkronizaciju&lt;/b&gt;&lt;/a&gt; (ili neki drugi desktop klijent za sinkronizaciju) za sinkronizaciju bilješki!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Search scripts</source>
-<translation type="unfinished">Search scripts</translation>
+<translation>Pretraži skripta</translation>
 </message>
 <message>
 <source>When inactive, enter read-only mode automatically after:</source>
@@ -6200,27 +6252,27 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Markdown language server</source>
-<translation type="unfinished">Markdown language server</translation>
+<translation>Server za Markdown jezik</translation>
 </message>
 <message>
 <source>Enable Markdown language server (LSP)</source>
-<translation type="unfinished">Enable Markdown language server (LSP)</translation>
+<translation>Uključi server za Markdown jezik (LSP)</translation>
 </message>
 <message>
 <source>Command:</source>
-<translation type="unfinished">Command:</translation>
+<translation>Naredba:</translation>
 </message>
 <message>
 <source>Arguments:</source>
-<translation type="unfinished">Arguments:</translation>
+<translation>Argumenti:</translation>
 </message>
 <message>
 <source>Optional arguments separated by spaces.</source>
-<translation type="unfinished">Optional arguments separated by spaces.</translation>
+<translation>Opcionalni argumenti odvojeni razmacima.</translation>
 </message>
 <message>
 <source>Optional arguments</source>
-<translation type="unfinished">Optional arguments</translation>
+<translation>Opcionalni argumenti</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -6235,6 +6287,14 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
 </message>
 <message>
+<source>Show small Markdown preview images in the editor, if there is no text after the image</source>
+<translation>Prikaži male slike pregleda Markdowna u uređivaču ako nema teksta nakon slike</translation>
+</message>
+<message>
+<source>Enable hanging indentation for Markdown lists</source>
+<translation>Uključi uvlačenje redaka za Markdown popise</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Onemogući treptanje kursora</translation>
 </message>
@@ -6244,19 +6304,19 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Git library</source>
-<translation type="unfinished">Git library</translation>
+<translation>Git biblioteka</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+<translation>Podrška za git biblioteku libgit2 je aktivirana.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
-<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+<translation>Nemoj zaboraviti uključiti git podršku za tvoje mape bilješki.</translation>
 </message>
 <message>
 <source>Allow empty note files</source>
-<translation type="unfinished">Allow empty note files</translation>
+<translation>Dopusti prazne datoteke bilješki</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -6272,7 +6332,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>AI autocomplete</source>
-<translation type="unfinished">AI autocomplete</translation>
+<translation>UI automatsko dovršavanje</translation>
 </message>
 <message>
 <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
@@ -6280,7 +6340,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 </message>
 <message>
 <source>Enable AI autocomplete in note editor</source>
-<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+<translation>Uključi UI automatsko dovršavanje u uređivaču bilješki</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
@@ -6430,6 +6490,22 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <source>Note name for adding new commands</source>
 <translation>Zabilježite naziv za dodavanje novih naredbi</translation>
+</message>
+<message>
+<source>Bookmark suggestion API</source>
+<translation type="unfinished">Bookmark suggestion API</translation>
+</message>
+<message>
+<source>Enable Homepage-compatible bookmark suggestions API</source>
+<translation type="unfinished">Enable Homepage-compatible bookmark suggestions API</translation>
+</message>
+<message>
+<source>Suggestion API port:</source>
+<translation type="unfinished">Suggestion API port:</translation>
+</message>
+<message>
+<source>Reset the suggestion API port</source>
+<translation type="unfinished">Reset the suggestion API port</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -7980,7 +8056,7 @@ Vaše bilješke će ostati netaknute!</translation>
 </message>
 <message>
 <source>Don't show dialog again</source>
-<translation type="unfinished">Don't show dialog again</translation>
+<translation>Dijalog više nemoj prikazivati</translation>
 </message>
 <message>
 <source>Accept change?</source>
@@ -8552,6 +8628,30 @@ This cannot be undone!</source>
 <translation>Nemoguće pokrenuti poslužitelj QOwnNotes na portu %1!</translation>
 </message>
 <message>
+<source>Could not start bookmark suggestion API on port %1!</source>
+<translation type="unfinished">Could not start bookmark suggestion API on port %1!</translation>
+</message>
+<message>
+<source>Please check if the port is already in use.</source>
+<translation type="unfinished">Please check if the port is already in use.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API listening on port %1</source>
+<translation type="unfinished">Bookmark suggestion API listening on port %1</translation>
+</message>
+<message>
+<source>Bookmark suggestion API received malformed HTTP request line.</source>
+<translation type="unfinished">Bookmark suggestion API received malformed HTTP request line.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API request from %1:%2</source>
+<translation type="unfinished">Bookmark suggestion API request from %1:%2</translation>
+</message>
+<message>
+<source>Bookmark suggestion API couldn't load suggestions because no main window instance is available.</source>
+<translation type="unfinished">Bookmark suggestion API couldn't load suggestions because no main window instance is available.</translation>
+</message>
+<message>
 <source>%1 connected to QOwnNotes server!</source>
 <translation>%1 povezan s poslužiteljem QOwnNotes!</translation>
 </message>
@@ -8565,10 +8665,10 @@ This cannot be undone!</source>
 </message>
 <message numerus="yes">
 <source>Bookmark deleted from %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Oznaka izbrisana iz %n bilješke</numerusform>
-<numerusform>Oznaka izbrisana iz %n bilješki</numerusform>
+<translation>
+<numerusform>Oznaka je izbrisana iz %n bilješke</numerusform>
+<numerusform>Oznaka je izbrisana iz %n bilješke</numerusform>
+<numerusform>Oznaka je izbrisana iz %n bilješki</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -8702,7 +8802,7 @@ This cannot be undone!</source>
 <name>main</name>
 <message>
 <source>Displays help on commandline options.</source>
-<translation type="unfinished">Displays help on commandline options.</translation>
+<translation>Prikazuje pomoć za opcije u naredbenom retku.</translation>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>

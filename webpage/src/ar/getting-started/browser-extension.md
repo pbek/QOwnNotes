@@ -68,3 +68,7 @@ If you are using Firefox, you also need to make sure that you have turned on the
 ```
 
 يمكنك البحث في إضافة المتصفح بالاسم أو وسوم الرابط أو الوصف. تُحلَّل كل الروابط الأخرى في الملاحظة الحالية، لكن بغير وسوم أو وصف.
+
+## Homepage suggestion API
+
+For [Homepage](https://github.com/gethomepage/homepage) integration with QOwnNotes bookmark suggestions, see [Homepage suggestion API](./homepage-suggestion-api.md).

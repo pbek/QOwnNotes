@@ -1513,6 +1513,14 @@
 <translation>Note</translation>
 </message>
 <message>
+<source>Folder</source>
+<translation>Dossier</translation>
+</message>
+<message>
+<source>Modified</source>
+<translation type="unfinished">Modified</translation>
+</message>
+<message>
 <source>Search for a heading to link to</source>
 <translation>Rechercher un titre de section vers lequel créer un lien</translation>
 </message>
@@ -4074,8 +4082,20 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Supprimer les dossiers sélectionnés</translation>
 </message>
 <message>
+<source>Move selected folders to...</source>
+<translation>Déplacer les dossiers sélectionnés vers…</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation>Déplacer vers le dossier de notes</translation>
+</message>
+<message>
 <source>Show folder in file manager</source>
 <translation>Afficher le dossier dans le gestionnaire de fichiers</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation>Déplacer vers ce sous-dossier</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
@@ -4087,6 +4107,36 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Removed note subfolder: %1</source>
 <translation>Sous-dossier de note %1 supprimé</translation>
+</message>
+<message>
+<source>note folder</source>
+<translation>dossier de notes</translation>
+</message>
+<message>
+<source>Move selected folders</source>
+<translation>Déplacer les dossiers sélectionnés</translation>
+</message>
+<message numerus="yes">
+<source>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation>
+<numerusform>Déplacer le dossier sélectionné vers &lt;strong&gt;%1&lt;/strong&gt; ?</numerusform>
+<numerusform>Déplacer les &lt;strong&gt;%n&lt;/strong&gt; dossiers sélectionnés vers &lt;strong&gt;%1&lt;/strong&gt; ?</numerusform>
+</translation>
+</message>
+<message>
+<source>Migrate relative links</source>
+<translation>Migrer les liens relatifs</translation>
+</message>
+<message>
+<source>Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</source>
+<translation>Souhaitez-vous migrer les liens relatifs de notes, de médias et de pièces jointes des notes déplacées ?&lt;br /&gt;&lt;br /&gt;Si vous choisissez &lt;strong&gt;Non&lt;/strong&gt;, ces liens relatifs pourraient cesser de fonctionner après avoir déplacé les dossiers.</translation>
+</message>
+<message numerus="yes">
+<source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; sous-dossier de notes déplacé vers &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; sous-dossiers de notes déplacés vers &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -6183,6 +6233,14 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <translation>Afficher les numéros de ligne et de marque-page (1-9)</translation>
 </message>
 <message>
+<source>Show small Markdown preview images in the editor, if there is no text after the image</source>
+<translation>Affiche des petits aperçus Markdown d’images dans l’éditeur, s’il n’y a pas de texte après l’image</translation>
+</message>
+<message>
+<source>Enable hanging indentation for Markdown lists</source>
+<translation>Activer l’alinéa saillant pour les listes Markdown</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>Désactiver le curseur clignotant</translation>
 </message>
@@ -6375,6 +6433,22 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <source>Note name for adding new commands</source>
 <translation>Nom de la note pour l'ajout de nouvelles commandes</translation>
+</message>
+<message>
+<source>Bookmark suggestion API</source>
+<translation type="unfinished">Bookmark suggestion API</translation>
+</message>
+<message>
+<source>Enable Homepage-compatible bookmark suggestions API</source>
+<translation type="unfinished">Enable Homepage-compatible bookmark suggestions API</translation>
+</message>
+<message>
+<source>Suggestion API port:</source>
+<translation type="unfinished">Suggestion API port:</translation>
+</message>
+<message>
+<source>Reset the suggestion API port</source>
+<translation type="unfinished">Reset the suggestion API port</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -8490,6 +8564,30 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Could not start QOwnNotes server on port %1!</source>
 <translation>Impossible de démarrer le serveur QOwnNotes sur le port %1 !</translation>
+</message>
+<message>
+<source>Could not start bookmark suggestion API on port %1!</source>
+<translation type="unfinished">Could not start bookmark suggestion API on port %1!</translation>
+</message>
+<message>
+<source>Please check if the port is already in use.</source>
+<translation type="unfinished">Please check if the port is already in use.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API listening on port %1</source>
+<translation type="unfinished">Bookmark suggestion API listening on port %1</translation>
+</message>
+<message>
+<source>Bookmark suggestion API received malformed HTTP request line.</source>
+<translation type="unfinished">Bookmark suggestion API received malformed HTTP request line.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API request from %1:%2</source>
+<translation type="unfinished">Bookmark suggestion API request from %1:%2</translation>
+</message>
+<message>
+<source>Bookmark suggestion API couldn't load suggestions because no main window instance is available.</source>
+<translation type="unfinished">Bookmark suggestion API couldn't load suggestions because no main window instance is available.</translation>
 </message>
 <message>
 <source>%1 connected to QOwnNotes server!</source>

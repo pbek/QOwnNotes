@@ -5,7 +5,7 @@
 <name>AboutDialog</name>
 <message>
 <source>About QOwnNotes</source>
-<translation>QOwnNotes 정보</translation>
+<translation>QOwnNotes 정보 및 번역: 비너스걸</translation>
 </message>
 </context>
 <context>
@@ -1511,6 +1511,14 @@ File: QOwnNotes_en.ts</translation>
 <translation>노트</translation>
 </message>
 <message>
+<source>Folder</source>
+<translation>폴더</translation>
+</message>
+<message>
+<source>Modified</source>
+<translation>수정 날짜</translation>
+</message>
+<message>
 <source>Search for a heading to link to</source>
 <translation>연결할 제목 검색</translation>
 </message>
@@ -2375,7 +2383,7 @@ File: QOwnNotes_en.ts</translation>
 </message>
 <message>
 <source>Insert Nextcloud Deck card link</source>
-<translation>Nextcloud 데크 카드 링크 삽입</translation>
+<translation>Nextcloud 덱 카드 링크 삽입</translation>
 </message>
 <message>
 <source>Copy absolute path of note</source>
@@ -2523,7 +2531,7 @@ File: QOwnNotes_en.ts</translation>
 </message>
 <message>
 <source>Find text in notes in all tags / subfolders</source>
-<translation>모든 태그 / 하위 폴더의 메모에서 텍스트 찾기</translation>
+<translation>모든 태그 / 하위 폴더의 노트에서 텍스트 찾기</translation>
 </message>
 <message>
 <source>Import notes from Evernote</source>
@@ -3087,7 +3095,7 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message numerus="yes">
 <source>%n note(s) selected</source>
 <translation>
-<numerusform>%n개의 메모 선택됨</numerusform>
+<numerusform>%n개의 노트 선택됨</numerusform>
 </translation>
 </message>
 <message>
@@ -4031,8 +4039,20 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>선택한 폴더 제거</translation>
 </message>
 <message>
+<source>Move selected folders to...</source>
+<translation>선택한 폴더를 다음 위치로 이동...</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation>노트 폴더로 이동</translation>
+</message>
+<message>
 <source>Show folder in file manager</source>
 <translation>파일 관리자에 폴더 표시</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation>이 하위 폴더로 이동</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
@@ -4043,6 +4063,34 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Removed note subfolder: %1</source>
 <translation>노트 하위 폴더 제거됨: %1</translation>
+</message>
+<message>
+<source>note folder</source>
+<translation>노트 폴더</translation>
+</message>
+<message>
+<source>Move selected folders</source>
+<translation>선택한 폴더 이동</translation>
+</message>
+<message numerus="yes">
+<source>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation>
+<numerusform>선택한 폴더 &lt;strong&gt;%n&lt;/strong&gt; 를 &lt;strong&gt;%1&lt;/strong&gt;로 이동하시겠습니까?</numerusform>
+</translation>
+</message>
+<message>
+<source>Migrate relative links</source>
+<translation>상대 링크 마이그레이션</translation>
+</message>
+<message>
+<source>Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</source>
+<translation>이동된 노트의 상대 노트 링크, 미디어 파일 링크 및 첨부 파일 링크를 마이그레이션하시겠습니까?&lt;br /&gt;&lt;br /&gt;&lt;br &gt; &lt;strong&gt;아니요No&lt;/strong&gt;을 선택하면 폴더 이동 후 해당 상대 링크가 끊어질 수 있습니다.</translation>
+</message>
+<message numerus="yes">
+<source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; 노트 하위 폴더를 &lt;strong&gt;%1&lt;/strong&gt;로 이동했습니다</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -4502,7 +4550,7 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 </message>
 <message>
 <source>Double-click to open note</source>
-<translation>노트를 열려면 두 번 클릭합니다</translation>
+<translation>노트를 열려면 두 번 클릭</translation>
 </message>
 <message>
 <source>Nextcloud Deck support disabled!</source>
@@ -5412,7 +5460,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Portable mode</source>
-<translation>휴대용 모드</translation>
+<translation>포타블 모드</translation>
 </message>
 <message>
 <source>Git versioning</source>
@@ -5589,7 +5637,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>English (British)</source>
-<translation>영어 (영국식)</translation>
+<translation>영어 (영국)</translation>
 </message>
 <message>
 <source>Estonian</source>
@@ -5897,7 +5945,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation>Nextcloud 데크 지원 사용</translation>
+<translation>Nextcloud 덱 지원 사용</translation>
 </message>
 <message>
 <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
@@ -6133,6 +6181,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>줄 번호 및 북마크 표시기 (1-9) 표시</translation>
 </message>
 <message>
+<source>Show small Markdown preview images in the editor, if there is no text after the image</source>
+<translation>이미지 뒤에 텍스트가 없는 경우 편집기에 작은 마크다운 미리보기 이미지 표시</translation>
+</message>
+<message>
+<source>Enable hanging indentation for Markdown lists</source>
+<translation>마크다운 목록에 행잉 들여쓰기 활성화</translation>
+</message>
+<message>
 <source>Disable cursor blinking</source>
 <translation>커서 깜박임 사용 안 함</translation>
 </message>
@@ -6158,7 +6214,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
-<translation>이보다 큰 메모는 메모 목록에 표시되지 않습니다</translation>
+<translation>이보다 큰 노트는 노트 목록에 표시되지 않습니다</translation>
 </message>
 <message>
 <source>Maximum note file size:</source>
@@ -6325,6 +6381,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Note name for adding new commands</source>
 <translation>새 명령을 추가하기 위한 노트 이름</translation>
+</message>
+<message>
+<source>Bookmark suggestion API</source>
+<translation>북마크 제안 API</translation>
+</message>
+<message>
+<source>Enable Homepage-compatible bookmark suggestions API</source>
+<translation>홈페이지 호환 북마크 추천 API 사용</translation>
+</message>
+<message>
+<source>Suggestion API port:</source>
+<translation>제안 API 포트:</translation>
+</message>
+<message>
+<source>Reset the suggestion API port</source>
+<translation>제안 API 포트 재설정</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -7290,11 +7362,11 @@ Connection error message: </source>
 </message>
 <message>
 <source>Portable mode is currently:</source>
-<translation>휴대용 모드는 현재 다음과 같습니다:</translation>
+<translation>현재 포터블 모드는:</translation>
 </message>
 <message>
 <source>In portable mode</source>
-<translation>휴대용 모드에서</translation>
+<translation>포터블 모드에서</translation>
 </message>
 <message>
 <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
@@ -8436,6 +8508,30 @@ This cannot be undone!</source>
 <translation>%1 포트에서 QOWN Notes 서버를 시작할 수 없습니다!</translation>
 </message>
 <message>
+<source>Could not start bookmark suggestion API on port %1!</source>
+<translation>포트 %1에서 북마크 추천 API를 시작할 수 없습니다!</translation>
+</message>
+<message>
+<source>Please check if the port is already in use.</source>
+<translation>포트가 이미 사용 중인지 확인해 주세요.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API listening on port %1</source>
+<translation>포트 %1에서 북마크 제안 API 듣기</translation>
+</message>
+<message>
+<source>Bookmark suggestion API received malformed HTTP request line.</source>
+<translation>북마크 제안 API가 잘못된 형식의 HTTP 요청 라인을 받았습니다.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API request from %1:%2</source>
+<translation>북마크 제안 API 요청: %1: %2</translation>
+</message>
+<message>
+<source>Bookmark suggestion API couldn't load suggestions because no main window instance is available.</source>
+<translation>기본 창 인스턴스가 없기 때문에 북마크 제안 API가 제안을 로드할 수 없습니다.</translation>
+</message>
+<message>
 <source>%1 connected to QOwnNotes server!</source>
 <translation>%1이(가) QOwnotes 서버에 연결되었습니다!</translation>
 </message>
@@ -8537,7 +8633,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation>ownCloud 통합을 통한 일반 텍스트 파일 마크다운 메모</translation>
+<translation>ownCloud 통합되는 일반 텍스트 파일 마크다운 노트 작성</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -8573,7 +8669,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-<translation>노트 폴더는 QOwnNotes가 휴대용 모드로 있는 디렉터리에 상대적으로 저장됩니다! 따라서 동일한 드라이브를 사용해야 합니다.</translation>
+<translation>노트 폴더는 QOwnNotes가 포터블 모드로 있는 디렉터리를 기준으로 저장된다는 점을 명심하세요! 따라서 동일한 드라이브에 보관해야 합니다.</translation>
 </message>
 </context>
 <context>
@@ -8584,7 +8680,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Runs the application in portable mode.</source>
-<translation>응용 프로그램을 휴대용 모드로 실행합니다.</translation>
+<translation>응용 프로그램을 포터블 모드로 실행합니다.</translation>
 </message>
 <message>
 <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>

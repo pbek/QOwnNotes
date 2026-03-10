@@ -67,3 +67,7 @@ U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-brows
 ```
 
 Je kunt zoeken op naam, url-tags of beschrijving in de browserextensie. In de huidige notitie worden alle andere koppelingen in de tekst doorzocht, maar zonder tags of beschrijving.
+
+## Homepage suggestion API
+
+For [Homepage](https://github.com/gethomepage/homepage) integration with QOwnNotes bookmark suggestions, see [Homepage suggestion API](./homepage-suggestion-api.md).
