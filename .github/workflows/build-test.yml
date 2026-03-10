@@ -234,14 +234,16 @@ jobs:
               Write-Warning "windeployqt exited with code $windeployqtExitCode, continuing to run tests.exe for actionable output"
             }
 
+            $testsOutputPath = Join-Path $env:GITHUB_WORKSPACE 'tests\tests-output.txt'
+            New-Item -Path $testsOutputPath -ItemType File -Force | Out-Null
             $env:QT_QPA_PLATFORM = 'minimal'
-            .\tests.exe -platform minimal -txt 2>&1 | Tee-Object -FilePath tests-output.txt
+            cmd /c ".\tests.exe -platform minimal -txt > \"$testsOutputPath\" 2>&1"
             $testsExitCode = $LASTEXITCODE
             if ($testsExitCode -ne 0) {
               Write-Host "tests.exe failed with code $testsExitCode"
-              if (Test-Path .\tests-output.txt) {
+              if (Test-Path $testsOutputPath) {
                 Write-Host "----- tests-output.txt -----"
-                Get-Content .\tests-output.txt
+                Get-Content $testsOutputPath
                 Write-Host "----------------------------"
               }
               exit $testsExitCode
@@ -252,8 +254,8 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: windows-tests-output-${{ matrix.qt-version }}
-          path: tests/tests-output.txt
-          if-no-files-found: ignore
+          path: ${{ github.workspace }}/tests/tests-output.txt
+          if-no-files-found: warn
 
       #
       # Build QOwnNotes
