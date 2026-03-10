@@ -234,7 +234,8 @@ jobs:
               Write-Warning "windeployqt exited with code $windeployqtExitCode, continuing to run tests.exe for actionable output"
             }
 
-            .\tests.exe -txt 2>&1 | Tee-Object -FilePath tests-output.txt
+            $env:QT_QPA_PLATFORM = 'minimal'
+            .\tests.exe -platform minimal -txt 2>&1 | Tee-Object -FilePath tests-output.txt
             $testsExitCode = $LASTEXITCODE
             if ($testsExitCode -ne 0) {
               Write-Host "tests.exe failed with code $testsExitCode"
@@ -245,6 +246,14 @@ jobs:
               }
               exit $testsExitCode
             }
+
+      - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && failure()
+        name: Upload Windows test output
+        uses: actions/upload-artifact@v7
+        with:
+          name: windows-tests-output-${{ matrix.qt-version }}
+          path: tests/tests-output.txt
+          if-no-files-found: ignore
 
       #
       # Build QOwnNotes
