@@ -112,16 +112,19 @@ fixCrowdinTranslationProblems() {
   sed -i -e 's/::: tipp/::: tip/g' "$1"
   sed -i -e 's/::: suggerimento/::: tip/g' "$1"
   sed -i -e 's/::: Trinkgeld/::: tip/g' "$1"
+  sed -i -E -e 's/^:::[[:space:]]*팁[[:space:]]*(.*)$/::: tip\n\1/g' "$1"
   sed -i -e 's/::: Warnung/::: warning/g' "$1"
+  sed -i -E -e 's/^:::[[:space:]]*경고[[:space:]]*(.*)$/::: warning\n\1/g' "$1"
   sed -i -e 's/::: warning /::: warning\n/g' "$1"
   sed -i -e 's/::: tip /::: tip\n/g' "$1"
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/::: tip\nInfo /::: tip Info\n/g' "$1"
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/::: tip\nImportant /::: tip Important\n/g' "$1"
   sed -i -e 's/ :::$/\n:::/g' "$1"
+  perl -i -pe 's|<a href="([^"]+)"([^>]*)>([^<]+)</a>|[$3]($1)|g' "$1"
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/~~~\n~~~/```\n~~~/g' "$1"
 }
 
 echo "Fix Crowdin translation bugs..."
 export -f fixCrowdinTranslationProblems
 # Add all active languages here!
-find webpage/src -type f -regextype posix-egrep -regex ".+src\/(de|nl|fa|hu|es|fr|it|ar|pl)\/.+\.md" -exec bash -c 'fixCrowdinTranslationProblems "$0"' {} \;
+find webpage/src -type f -regextype posix-egrep -regex ".+src\/(de|nl|fa|hu|es|fr|it|ar|pl|ko)\/.+\.md" -exec bash -c 'fixCrowdinTranslationProblems "$0"' {} \;
