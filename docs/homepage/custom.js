@@ -217,6 +217,150 @@
     }
   }
 
+  function getSuggestionRows() {
+    return document.querySelectorAll("li > button");
+  }
+
+  function getSuggestionLists() {
+    const rows = getSuggestionRows();
+    const lists = new Set();
+
+    for (const row of rows) {
+      const list = row.closest("ul");
+      if (list) lists.add(list);
+    }
+
+    return [...lists];
+  }
+
+  function ensureSuggestionListScrollable() {
+    const lists = getSuggestionLists();
+
+    for (const list of lists) {
+      list.style.maxHeight = "min(60vh, 28rem)";
+      list.style.overflowY = "auto";
+      list.style.overflowX = "hidden";
+      list.style.overscrollBehavior = "contain";
+      list.style.WebkitOverflowScrolling = "touch";
+
+      let parent = list.parentElement;
+      let depth = 0;
+      while (parent && depth < 3) {
+        if (parent.scrollHeight > parent.clientHeight) {
+          parent.style.maxHeight = "min(60vh, 28rem)";
+          parent.style.overflowY = "auto";
+          parent.style.overflowX = "hidden";
+          parent.style.overscrollBehavior = "contain";
+          parent.style.WebkitOverflowScrolling = "touch";
+        }
+        parent = parent.parentElement;
+        depth += 1;
+      }
+    }
+  }
+
+  function getScrollableContainer(list) {
+    if (!list) return null;
+    if (list.scrollHeight > list.clientHeight) return list;
+
+    let parent = list.parentElement;
+    let depth = 0;
+    while (parent && depth < 5) {
+      if (parent.scrollHeight > parent.clientHeight) return parent;
+      parent = parent.parentElement;
+      depth += 1;
+    }
+
+    return list;
+  }
+
+  function keepActiveSuggestionVisible() {
+    const lists = getSuggestionLists();
+
+    for (const list of lists) {
+      const scroller = getScrollableContainer(list);
+      if (!scroller) continue;
+
+      const active = list.querySelector(
+        [
+          'button[aria-selected="true"]',
+          'li[aria-selected="true"] > button',
+          'button[aria-current="true"]',
+          'button[data-headlessui-state~="active"]',
+          'li[data-headlessui-state~="active"] > button',
+          'button[tabindex="0"]',
+        ].join(", "),
+      );
+      if (!active) continue;
+
+      const activeRect = active.getBoundingClientRect();
+      const scrollerRect = scroller.getBoundingClientRect();
+
+      if (activeRect.top < scrollerRect.top) {
+        scroller.scrollTop -= scrollerRect.top - activeRect.top;
+      } else if (activeRect.bottom > scrollerRect.bottom) {
+        scroller.scrollTop += activeRect.bottom - scrollerRect.bottom;
+      }
+    }
+  }
+
+  function getPrimarySuggestionList() {
+    const lists = getSuggestionLists();
+    let best = null;
+    let bestCount = 0;
+
+    for (const list of lists) {
+      const count = list.querySelectorAll("li > button").length;
+      if (count > bestCount) {
+        best = list;
+        bestCount = count;
+      }
+    }
+
+    return best;
+  }
+
+  function scrollSuggestionListByKeyboard(event) {
+    const list = getPrimarySuggestionList();
+    if (!list) return;
+    const scroller = getScrollableContainer(list);
+    if (!scroller) return;
+
+    const firstItem = list.querySelector("li > button");
+    const itemHeight = firstItem
+      ? firstItem.getBoundingClientRect().height
+      : 36;
+
+    if (event.key === "ArrowDown") {
+      scroller.scrollTop += itemHeight;
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      scroller.scrollTop -= itemHeight;
+      return;
+    }
+
+    if (event.key === "PageDown") {
+      scroller.scrollTop += scroller.clientHeight * 0.9;
+      return;
+    }
+
+    if (event.key === "PageUp") {
+      scroller.scrollTop -= scroller.clientHeight * 0.9;
+      return;
+    }
+
+    if (event.key === "Home") {
+      scroller.scrollTop = 0;
+      return;
+    }
+
+    if (event.key === "End") {
+      scroller.scrollTop = scroller.scrollHeight;
+    }
+  }
+
   window.open = function (url, target, features) {
     const raw = typeof url === "string" ? url : String(url ?? "");
     const direct = decodeIfSearchEngineRedirect(raw);
@@ -288,10 +432,38 @@
     }
   };
 
-  const observer = new MutationObserver(markQonSuggestionRows);
+  const observer = new MutationObserver(() => {
+    markQonSuggestionRows();
+    ensureSuggestionListScrollable();
+    keepActiveSuggestionVisible();
+  });
   observer.observe(document.documentElement, {
     childList: true,
     subtree: true,
   });
   markQonSuggestionRows();
+  ensureSuggestionListScrollable();
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      const key = event.key;
+      if (
+        key === "ArrowDown" ||
+        key === "ArrowUp" ||
+        key === "PageDown" ||
+        key === "PageUp" ||
+        key === "Home" ||
+        key === "End"
+      ) {
+        requestAnimationFrame(() => {
+          keepActiveSuggestionVisible();
+          scrollSuggestionListByKeyboard(event);
+        });
+      }
+    },
+    true,
+  );
+
+  keepActiveSuggestionVisible();
 })();
