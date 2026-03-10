@@ -235,11 +235,25 @@ jobs:
             }
 
             $testsOutputPath = Join-Path $env:GITHUB_WORKSPACE 'tests\tests-output.txt'
+            $testsStdoutPath = Join-Path $env:GITHUB_WORKSPACE 'tests\tests-stdout.txt'
+            $testsStderrPath = Join-Path $env:GITHUB_WORKSPACE 'tests\tests-stderr.txt'
             New-Item -Path $testsOutputPath -ItemType File -Force | Out-Null
+            New-Item -Path $testsStdoutPath -ItemType File -Force | Out-Null
+            New-Item -Path $testsStderrPath -ItemType File -Force | Out-Null
             $env:QT_QPA_PLATFORM = 'minimal'
-            $testsOutput = & .\tests.exe -platform minimal -txt 2>&1
-            $testsExitCode = $LASTEXITCODE
-            $testsOutput | Set-Content -Path $testsOutputPath
+            $env:QT_DEBUG_PLUGINS = '1'
+            $testProcess = Start-Process -FilePath .\tests.exe -ArgumentList @('-platform', 'minimal', '-txt') -NoNewWindow -Wait -PassThru -RedirectStandardOutput $testsStdoutPath -RedirectStandardError $testsStderrPath
+            $testsExitCode = $testProcess.ExitCode
+
+            "===== STDOUT =====" | Set-Content -Path $testsOutputPath
+            if (Test-Path $testsStdoutPath) {
+              Get-Content $testsStdoutPath | Add-Content -Path $testsOutputPath
+            }
+            "" | Add-Content -Path $testsOutputPath
+            "===== STDERR =====" | Add-Content -Path $testsOutputPath
+            if (Test-Path $testsStderrPath) {
+              Get-Content $testsStderrPath | Add-Content -Path $testsOutputPath
+            }
             if ($testsExitCode -ne 0) {
               Write-Host "tests.exe failed with code $testsExitCode"
               if (Test-Path $testsOutputPath) {
@@ -255,7 +269,10 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: windows-tests-output-${{ matrix.qt-version }}
-          path: ${{ github.workspace }}/tests/tests-output.txt
+          path: |
+            ${{ github.workspace }}/tests/tests-output.txt
+            ${{ github.workspace }}/tests/tests-stdout.txt
+            ${{ github.workspace }}/tests/tests-stderr.txt
           if-no-files-found: warn
 
       #
