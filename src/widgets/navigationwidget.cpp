@@ -218,6 +218,12 @@ void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
         }
 
         _lastHeadingItemList[elementType] = item;
+
+        // Clear cached deeper heading levels so parent lookup stays in document
+        // order when heading levels jump (e.g. H2 followed by H4).
+        for (int level = elementType + 1; level <= MarkdownHighlighter::H6; ++level) {
+            _lastHeadingItemList.remove(level);
+        }
     }
     expandAll();
     selectItemForCursorPosition(_cursorPosition);
