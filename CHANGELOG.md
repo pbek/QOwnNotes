@@ -4,7 +4,7 @@
 
 - Fixed heading order in the Navigation panel's "Headings" tab to keep the
   same sequence as in the note text when heading levels are skipped
-  (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+  (for [#2994](https://github.com/pbek/QOwnNotes/issues/2994))
 - Added support for global keyboard shortcuts under Wayland (e.g. KDE Plasma)
   using the XDG Desktop Portal GlobalShortcuts interface, since the previous
   X11-based shortcut mechanism does not work on Wayland
