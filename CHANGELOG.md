@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.3.10
+
+- Improved portal handle token generation compatibility for older Qt5
+  distributions (e.g. Debian 9.0, SLE 15) by using `QUuid` on Qt5 and
+  keeping `QRandomGenerator` on Qt6 builds
+  (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+
 ## 26.3.9
 
 - Fixed heading order in the Navigation panel's "Headings" tab to keep the

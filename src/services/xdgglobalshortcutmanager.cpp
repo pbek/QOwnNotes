@@ -21,7 +21,11 @@
 #include <QDBusReply>
 #include <QDebug>
 #include <QGuiApplication>
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <QRandomGenerator>
+#else
+#include <QUuid>
+#endif
 
 XdgGlobalShortcutManager::XdgGlobalShortcutManager(QObject *parent) : QObject(parent) {
     // Register D-Bus metatypes for the a(sa{sv}) shortcut list argument
@@ -399,7 +403,13 @@ QString XdgGlobalShortcutManager::qtKeyToXkbName(int key) {
 }
 
 QString XdgGlobalShortcutManager::generateToken() {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     return QStringLiteral("qownnotes_%1").arg(QRandomGenerator::global()->generate());
+#else
+    QString token = QUuid::createUuid().toString(QUuid::WithoutBraces);
+    token.remove(QLatin1Char('-'));
+    return QStringLiteral("qownnotes_%1").arg(token);
+#endif
 }
 
 QString XdgGlobalShortcutManager::computeRequestPath(const QString &handleToken) const {
