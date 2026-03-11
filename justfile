@@ -17,6 +17,7 @@ sourceBuildTestDir := "build-tests-QOwnNotes"
 
 alias fix-linting := clang-format
 alias linter-fix := clang-format
+alias fix-cmake-format := cmake-format-fix
 alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
@@ -143,6 +144,11 @@ src-build-run: src-build src-run
 [group('linter')]
 clang-format:
     ./scripts/clang-format-project.sh
+
+# Fix formatting of the source CMake file
+[group('linter')]
+cmake-format-fix:
+    cmake-format -i src/CMakeLists.txt
 
 # Check links in the markdown files
 [group('linter')]
