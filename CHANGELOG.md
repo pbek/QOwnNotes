@@ -5,6 +5,10 @@
 - Fixed heading order in the Navigation panel's "Headings" tab to keep the
   same sequence as in the note text when heading levels are skipped
   (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+- Added support for global keyboard shortcuts under Wayland (e.g. KDE Plasma)
+  using the XDG Desktop Portal GlobalShortcuts interface, since the previous
+  X11-based shortcut mechanism does not work on Wayland
+  (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
 - Fixed Homepage bookmark auto-suggestions to also match tokens from full Markdown
   bookmark entries (tags and trailing text after the link), so terms like
   `Gehaltsstufe` are now searchable and still return the bookmark title

@@ -40,6 +40,9 @@
 #include <libraries/qtwaitingspinner/waitingspinnerwidget.h>
 #include <services/cryptoservice.h>
 #include <services/scriptingservice.h>
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+#include <services/xdgglobalshortcutmanager.h>
+#endif
 #include <utils/git.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
@@ -683,7 +686,7 @@ void MainWindow::triggerStartupMenuAction() {
  * Initializes the global shortcuts
  */
 void MainWindow::initGlobalKeyboardShortcuts() {
-    // deleting old global shortcut assignments
+    // Deleting old global shortcut assignments
     foreach (QHotkey *hotKey, _globalShortcuts) {
         delete hotKey;
     }
@@ -692,7 +695,51 @@ void MainWindow::initGlobalKeyboardShortcuts() {
     SettingsService settings;
     settings.beginGroup(QStringLiteral("GlobalShortcuts"));
 
-    foreach (const QString &key, settings.allKeys()) {
+    const auto allKeys = settings.allKeys();
+
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+    const bool isWayland = QGuiApplication::platformName() == QStringLiteral("wayland");
+
+    if (isWayland) {
+        initWaylandGlobalShortcuts(settings, allKeys);
+        return;
+    }
+#endif
+
+    if (allKeys.isEmpty()) {
+        return;
+    }
+
+    initX11GlobalShortcuts(settings, allKeys);
+}
+
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+/**
+ * Initializes global shortcuts via XDG Desktop Portal on Wayland
+ */
+void MainWindow::initWaylandGlobalShortcuts(SettingsService &settings, const QStringList &allKeys) {
+    // Clean up existing Wayland shortcut manager
+    if (_xdgShortcutManager) {
+        _xdgShortcutManager->closeSession();
+        _xdgShortcutManager->deleteLater();
+        _xdgShortcutManager = nullptr;
+    }
+
+    if (allKeys.isEmpty()) {
+        return;
+    }
+
+    if (!XdgGlobalShortcutManager::isAvailable()) {
+        qWarning() << "XDG GlobalShortcuts portal is not available. "
+                      "Global shortcuts will not work on this Wayland session.";
+        return;
+    }
+
+    _xdgShortcutManager = new XdgGlobalShortcutManager(this);
+
+    QMap<QString, XdgGlobalShortcutManager::ShortcutInfo> shortcuts;
+
+    for (const QString &key : allKeys) {
         if (!key.contains(QStringLiteral("MainWindow"))) {
             continue;
         }
@@ -702,7 +749,70 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         QAction *action = findAction(actionName);
 
         if (action == nullptr) {
-            qDebug() << "Failed to find action with name: " << actionName;
+            qDebug() << "Failed to find action with name:" << actionName;
+            continue;
+        }
+
+        QString shortcutStr = settings.value(key).toString();
+        if (shortcutStr.isEmpty()) {
+            continue;
+        }
+
+        XdgGlobalShortcutManager::ShortcutInfo info;
+        info.keySequence = QKeySequence(shortcutStr);
+        info.description = action->text().remove(QLatin1Char('&'));
+
+        shortcuts.insert(actionName, info);
+    }
+
+    if (shortcuts.isEmpty()) {
+        _xdgShortcutManager->deleteLater();
+        _xdgShortcutManager = nullptr;
+        return;
+    }
+
+    _xdgShortcutManager->setShortcuts(shortcuts);
+
+    // Connect the activation signal to trigger the corresponding action
+    connect(_xdgShortcutManager, &XdgGlobalShortcutManager::shortcutActivated, this,
+            [this](const QString &shortcutId) {
+                QAction *action = findAction(shortcutId);
+                if (action == nullptr) {
+                    qDebug() << "XDG GlobalShortcuts: failed to find action:" << shortcutId;
+                    return;
+                }
+
+                qDebug() << "XDG global shortcut action triggered:" << action->objectName();
+
+                // Don't call showWindow() for the "Show/Hide application" action
+                // because it will call it itself
+                if (action->objectName() != QStringLiteral("actionShow_Hide_application")) {
+                    showWindow();
+                }
+
+                action->trigger();
+            });
+
+    // Start the session creation and shortcut binding flow
+    _xdgShortcutManager->createSession();
+}
+#endif
+
+/**
+ * Initializes global shortcuts via QHotkey (X11/Windows/macOS)
+ */
+void MainWindow::initX11GlobalShortcuts(SettingsService &settings, const QStringList &allKeys) {
+    for (const QString &key : allKeys) {
+        if (!key.contains(QStringLiteral("MainWindow"))) {
+            continue;
+        }
+
+        QString actionName = key;
+        actionName.remove(QStringLiteral("MainWindow-"));
+        QAction *action = findAction(actionName);
+
+        if (action == nullptr) {
+            qDebug() << "Failed to find action with name:" << actionName;
             continue;
         }
 
@@ -711,12 +821,12 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         auto hotKey = new QHotkey(QKeySequence(shortcut), true, this);
         _globalShortcuts.append(hotKey);
         connect(hotKey, &QHotkey::activated, this, [this, action]() {
-            qDebug() << "Global shortcut action triggered: " << action->objectName();
+            qDebug() << "Global shortcut action triggered:" << action->objectName();
 
             // Don't call showWindow() for the "Show/Hide application" action
             // because it will call it itself
-            if (action->objectName() != "actionShow_Hide_application") {
-                // bring application window to the front
+            if (action->objectName() != QStringLiteral("actionShow_Hide_application")) {
+                // Bring application window to the front
                 showWindow();
             }
 

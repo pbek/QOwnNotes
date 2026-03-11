@@ -408,6 +408,13 @@ include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
 include(libraries/qhotkey/qhotkey.pri)
 
+# XDG Desktop Portal global shortcuts support for Wayland on Linux
+unix:!mac {
+    QT += dbus
+    SOURCES += services/xdgglobalshortcutmanager.cpp
+    HEADERS += services/xdgglobalshortcutmanager.h
+}
+
 unix {
   isEmpty(PREFIX) {
     PREFIX = /usr

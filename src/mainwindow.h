@@ -23,6 +23,10 @@
 #include <QMainWindow>
 #include <QSystemTrayIcon>
 
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+class XdgGlobalShortcutManager;
+#endif
+
 #include "entities/notehistory.h"
 
 #define SORT_ALPHABETICAL 0
@@ -81,6 +85,7 @@ struct TagHeader;
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
 class SettingsDialog;
+class SettingsService;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -891,6 +896,9 @@ class MainWindow : public QMainWindow {
 #endif
 
     QList<QHotkey *> _globalShortcuts;
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+    XdgGlobalShortcutManager *_xdgShortcutManager = nullptr;
+#endif
     int _lastNoteId = 0;
     bool _scriptUpdateFound = false;
     bool _isMaximizedBeforeFullScreen = false;
@@ -1172,6 +1180,10 @@ class MainWindow : public QMainWindow {
     void noteTextEditTextWasUpdated();
     void removeNoteFromNoteTreeWidget(Note &note) const;
     void initGlobalKeyboardShortcuts();
+    void initX11GlobalShortcuts(SettingsService &settings, const QStringList &allKeys);
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+    void initWaylandGlobalShortcuts(SettingsService &settings, const QStringList &allKeys);
+#endif
     void resizeTagTreeWidgetColumnToContents() const;
     void updateCurrentTabData(const Note &note) const;
     bool jumpToTab(const Note &note) const;
