@@ -755,6 +755,27 @@ void TestNotes::testBookmarkSuggestionsKeepNameUrlPairing() {
     QVERIFY(bundleUrlIndex > bundleNameIndex);
 }
 
+void TestNotes::testBookmarkSuggestionsIncludeMarkdownMetadata() {
+    const QString bookmarkText = QStringLiteral(
+        "* [TU Zeiterfassung Stundenaufzeichnung / Urlaub / Krankenstanderfassung / "
+        "Homeoffice / Gehalt / Lohnzettel](https://sap.tugraz.at/) #tu time "
+        "(IIIB, Gehaltsstufe: 01) Bestellservice");
+    const QVector<Bookmark> bookmarks = Bookmark::parseBookmarks(bookmarkText, true);
+    QVERIFY(!bookmarks.isEmpty());
+
+    const QStringList urlaubSuggestions =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("Urlaub"), 10);
+    QVERIFY(urlaubSuggestions.contains(
+        QStringLiteral("TU Zeiterfassung Stundenaufzeichnung / Urlaub / Krankenstanderfassung / "
+                       "Homeoffice / Gehalt / Lohnzettel")));
+
+    const QStringList gehaltsstufeSuggestions =
+        Bookmark::suggestionStrings(bookmarks, QStringLiteral("Gehaltsstufe"), 10);
+    QVERIFY(gehaltsstufeSuggestions.contains(
+        QStringLiteral("TU Zeiterfassung Stundenaufzeichnung / Urlaub / Krankenstanderfassung / "
+                       "Homeoffice / Gehalt / Lohnzettel")));
+}
+
 void TestNotes::testBookmarkSuggestionsEmptyQuery() {
     QVector<Bookmark> bookmarks = {
         Bookmark(QStringLiteral("https://example.com/home"), QStringLiteral("Homepage"))};

@@ -199,6 +199,7 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
         const Bookmark *bookmark;
         bool nameMatches;
         bool urlMatches;
+        bool metadataMatches;
     };
 
     QVector<BookmarkMatch> prefixBookmarkMatches;
@@ -256,18 +257,25 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
     for (const Bookmark &bookmark : bookmarks) {
         const QString nameLower = bookmark.name.trimmed().toLower();
         const QString urlLower = bookmark.url.trimmed().toLower();
+        const QString metadataLower = QStringList{bookmark.tags.join(QLatin1Char(' ')),
+                                                  bookmark.description, bookmark.markdown}
+                                          .join(QLatin1Char(' '))
+                                          .simplified()
+                                          .toLower();
 
         const bool nameMatches = !nameLower.isEmpty() && containsAllTokens(nameLower);
         const bool urlMatches = !urlLower.isEmpty() && containsAllTokens(urlLower);
+        const bool metadataMatches = !metadataLower.isEmpty() && containsAllTokens(metadataLower);
 
-        if (!nameMatches && !urlMatches) {
+        if (!nameMatches && !urlMatches && !metadataMatches) {
             continue;
         }
 
-        const bool isPrefix =
-            (nameMatches && isPrefixMatch(nameLower)) || (urlMatches && isPrefixMatch(urlLower));
+        const bool isPrefix = (nameMatches && isPrefixMatch(nameLower)) ||
+                              (urlMatches && isPrefixMatch(urlLower)) ||
+                              (metadataMatches && isPrefixMatch(metadataLower));
 
-        BookmarkMatch match{&bookmark, nameMatches, urlMatches};
+        BookmarkMatch match{&bookmark, nameMatches, urlMatches, metadataMatches};
         if (isPrefix) {
             prefixBookmarkMatches.append(match);
         } else {
@@ -284,13 +292,11 @@ QStringList Bookmark::suggestionStrings(const QVector<Bookmark> &bookmarks, cons
         const QString name = match.bookmark->name.trimmed();
         const QString url = match.bookmark->url.trimmed();
 
-        if (match.nameMatches && !name.isEmpty()) {
-            appendSuggestionString(name, target);
-        } else if (match.urlMatches && !name.isEmpty()) {
+        if ((match.nameMatches || match.urlMatches || match.metadataMatches) && !name.isEmpty()) {
             appendSuggestionString(name, target);
         }
 
-        if (match.urlMatches && !url.isEmpty()) {
+        if ((match.urlMatches || match.metadataMatches) && !url.isEmpty()) {
             appendSuggestionString(url, target);
         }
     };
@@ -367,7 +373,7 @@ void Bookmark::merge(Bookmark &bookmark) {
     tags.removeDuplicates();
     tags.sort();
 
-    if (name.isEmpty()) {
+    if (name.isEmpty() || (!bookmark.name.isEmpty() && bookmark.name.length() > name.length())) {
         name = bookmark.name;
     }
 

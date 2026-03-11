@@ -54,6 +54,7 @@ class TestNotes : public QObject {
     void testBookmarkSuggestionsDeduplication();
     void testBookmarkSuggestionsMultiTokenAndOrderIndependent();
     void testBookmarkSuggestionsKeepNameUrlPairing();
+    void testBookmarkSuggestionsIncludeMarkdownMetadata();
     void testBookmarkSuggestionsEmptyQuery();
     void testBookmarkSuggestionsLimitHandling();
     void testBookmarkSuggestionsResponseShape();
