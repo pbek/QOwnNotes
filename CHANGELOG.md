@@ -9,13 +9,10 @@
   using the XDG Desktop Portal GlobalShortcuts interface, since the previous
   X11-based shortcut mechanism does not work on Wayland
   (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
-- Fixed Homepage bookmark auto-suggestions to also match tokens from full Markdown
-  bookmark entries (tags and trailing text after the link), so terms like
-  `Gehaltsstufe` are now searchable and still return the bookmark title
-  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+- Fixed Homepage bookmark auto-suggestions to also match tokens from full Markdown bookmark
+  entries (tags and trailing text after the link) (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
 - Fixed merged bookmark entries keeping a shorter link label when a longer label
-  exists for the same URL, so queries like `Urlaub` can match the full title
-  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+  exists for the same URL (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
 
 ## 26.3.8
 
