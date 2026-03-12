@@ -29,4 +29,4 @@ jobs:
       - name: 🔧 Install devenv.sh
         run: nix profile add nixpkgs#devenv
       - name: 🔨 Build the devenv shell and run any pre-commit hooks
-        run: devenv test
+        run: devenv shell "just format"
