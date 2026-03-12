@@ -81,8 +81,10 @@ class XdgGlobalShortcutManager : public QObject {
     /**
      * Emitted when a global shortcut is activated by the user.
      * @param shortcutId The action object name of the triggered shortcut
+     * @param activationToken The XDG activation token from the portal,
+     *        used to authorize window activation on Wayland compositors
      */
-    void shortcutActivated(const QString &shortcutId);
+    void shortcutActivated(const QString &shortcutId, const QString &activationToken);
 
    private slots:
     void onCreateSessionResponse(uint response, QVariantMap results);

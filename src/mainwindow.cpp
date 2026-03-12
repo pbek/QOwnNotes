@@ -97,6 +97,7 @@
 #include <QTreeWidgetItem>
 #include <QUuid>
 #include <QWidgetAction>
+#include <QWindow>
 #include <QtConcurrent>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <memory>
@@ -773,9 +774,10 @@ void MainWindow::initWaylandGlobalShortcuts(SettingsService &settings, const QSt
 
     _xdgShortcutManager->setShortcuts(shortcuts);
 
-    // Connect the activation signal to trigger the corresponding action
+    // Connect the activation signal to trigger the corresponding action.
+    // The activationToken from the portal authorizes window activation on Wayland.
     connect(_xdgShortcutManager, &XdgGlobalShortcutManager::shortcutActivated, this,
-            [this](const QString &shortcutId) {
+            [this](const QString &shortcutId, const QString &activationToken) {
                 QAction *action = findAction(shortcutId);
                 if (action == nullptr) {
                     qDebug() << "XDG GlobalShortcuts: failed to find action:" << shortcutId;
@@ -784,6 +786,10 @@ void MainWindow::initWaylandGlobalShortcuts(SettingsService &settings, const QSt
 
                 qDebug() << "XDG global shortcut action triggered:" << action->objectName();
 
+                // Set the activation token so that showWindow() can use it to
+                // request window activation from the Wayland compositor
+                _waylandActivationToken = activationToken;
+
                 // Don't call showWindow() for the "Show/Hide application" action
                 // because it will call it itself
                 if (action->objectName() != QStringLiteral("actionShow_Hide_application")) {
@@ -791,6 +797,8 @@ void MainWindow::initWaylandGlobalShortcuts(SettingsService &settings, const QSt
                 }
 
                 action->trigger();
+
+                _waylandActivationToken.clear();
             });
 
     // Start the session creation and shortcut binding flow
@@ -6745,6 +6753,26 @@ void MainWindow::systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason)
 void MainWindow::showWindow() {
     // show the window in case we are using the system tray
     show();
+
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+    // On Wayland, use the XDG activation token (if available) to request
+    // window activation from the compositor.  Without a valid token the
+    // compositor will refuse to raise/focus the window because Wayland
+    // does not allow applications to steal focus on their own.
+    if (!_waylandActivationToken.isEmpty() && windowHandle() != nullptr) {
+        qputenv("XDG_ACTIVATION_TOKEN", _waylandActivationToken.toUtf8());
+        windowHandle()->requestActivate();
+        qunsetenv("XDG_ACTIVATION_TOKEN");
+
+        // Still un-minimize if needed
+        if (windowState() & Qt::WindowMinimized) {
+            setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
+        }
+
+        startNavigationParser();
+        return;
+    }
+#endif
 
     // bring application window to the front
     activateWindow();    // for Windows

@@ -221,14 +221,19 @@ void XdgGlobalShortcutManager::onShortcutActivated(QDBusObjectPath sessionHandle
                                                    QString shortcutId, qulonglong timestamp,
                                                    QVariantMap options) {
     Q_UNUSED(timestamp)
-    Q_UNUSED(options)
 
     if (sessionHandle.path() != _sessionHandle) {
         return;
     }
 
-    qDebug() << "XDG GlobalShortcuts: shortcut activated:" << shortcutId;
-    emit shortcutActivated(shortcutId);
+    // Extract the activation token from the portal options — this token
+    // authorizes the application to activate (raise/focus) its window on
+    // Wayland compositors that implement xdg_activation_v1
+    const QString activationToken = options.value(QStringLiteral("activation_token")).toString();
+
+    qDebug() << "XDG GlobalShortcuts: shortcut activated:" << shortcutId << "activation_token:"
+             << (activationToken.isEmpty() ? QStringLiteral("(none)") : activationToken);
+    emit shortcutActivated(shortcutId, activationToken);
 }
 
 QString XdgGlobalShortcutManager::keySequenceToXdgTrigger(const QKeySequence &seq) {

@@ -898,6 +898,9 @@ class MainWindow : public QMainWindow {
     QList<QHotkey *> _globalShortcuts;
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
     XdgGlobalShortcutManager *_xdgShortcutManager = nullptr;
+    // Activation token from the XDG GlobalShortcuts portal, used to authorize
+    // window activation on Wayland compositors via xdg_activation_v1
+    QString _waylandActivationToken;
 #endif
     int _lastNoteId = 0;
     bool _scriptUpdateFound = false;
