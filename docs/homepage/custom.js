@@ -24,6 +24,8 @@
   const QON_LIMIT = 20;
   const QON_LABEL = "[QON] ";
   const BLOCK_QON_TEXT_SEARCH = "__QON_BLOCK_TEXT_SEARCH__";
+  const ACTIVE_SCROLL_MARGIN_PX = 4;
+  const KEYBOARD_NAV_DIALOG_CLASS = "qon-keyboard-nav";
   const DEBUG = false;
 
   const log = (...a) => {
@@ -34,6 +36,8 @@
   const origOpen = window.open.bind(window);
   const origResponseJson = Response.prototype.json;
   const suggestionToUrl = new Map();
+  let applyingSuggestionUi = false;
+  let keyboardNavActive = false;
 
   const norm = (s) => (typeof s === "string" ? s.trim().toLowerCase() : "");
 
@@ -209,156 +213,165 @@
 
   function markQonSuggestionRows() {
     const rows = document.querySelectorAll("li > button");
+
+    // Extract candidate text strings from a button to match against the map.
+    // When HeadlessUI activates an item it may replace the DOM node entirely,
+    // so we collect multiple candidate strings and try each one.
+    const candidateTexts = (row) => {
+      const candidates = new Set();
+      candidates.add(norm(row.textContent || ""));
+      for (const node of row.childNodes) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          candidates.add(norm(node.textContent || ""));
+        }
+      }
+      for (const span of row.querySelectorAll("span")) {
+        candidates.add(norm(span.textContent || ""));
+      }
+      const stripped = norm(
+        (row.textContent || "")
+          .replace(/[^\x20-\x7E]/g, " ")
+          .replace(/\s+/g, " "),
+      );
+      candidates.add(stripped);
+      return [...candidates].filter((s) => s.length > 0);
+    };
+
+    const urlFromCandidates = (texts) => {
+      for (const text of texts) {
+        if (!text.includes(norm(QON_LABEL))) continue;
+        const direct = suggestionToUrl.get(text);
+        if (direct) return direct;
+        let bestMatchKey = "";
+        let bestMatchUrl = null;
+        for (const [key, url] of suggestionToUrl.entries()) {
+          if (!key.startsWith(norm(QON_LABEL))) continue;
+          if (!text.includes(key)) continue;
+          if (key.length > bestMatchKey.length) {
+            bestMatchKey = key;
+            bestMatchUrl = url;
+          }
+        }
+        if (bestMatchUrl) return bestMatchUrl;
+      }
+      return null;
+    };
+
+    // Attach/update the URL hint on the <li> element, which React does not
+    // replace when toggling the active state on the child <button>.
+    const setLiUrlHint = (li, url) => {
+      if (!url) {
+        // Only mutate if something needs changing — prevents observer loop.
+        if (
+          !li.classList.contains("qon-li-has-url") &&
+          !li.querySelector(".qon-url-hint")
+        )
+          return;
+        for (const old of li.querySelectorAll(".qon-url-hint")) old.remove();
+        li.classList.remove("qon-li-has-url");
+        return;
+      }
+
+      // Check if already correct — if so, do nothing (prevents observer loop).
+      const existing = li.querySelector(".qon-url-hint");
+      if (
+        existing &&
+        existing.textContent === url &&
+        li.classList.contains("qon-li-has-url")
+      )
+        return;
+
+      // Remove stale hints and set fresh one.
+      for (const old of li.querySelectorAll(".qon-url-hint")) old.remove();
+      li.classList.add("qon-li-has-url");
+      const hint = document.createElement("div");
+      hint.className = "qon-url-hint";
+      hint.textContent = url;
+      hint.setAttribute("aria-hidden", "true");
+      li.appendChild(hint);
+    };
+
     for (const row of rows) {
-      const text = row.textContent || "";
-      if (text.includes(QON_LABEL)) {
+      const li = row.closest("li");
+      if (!li) continue;
+
+      const texts = candidateTexts(row);
+      const isQon = texts.some((t) => t.includes(norm(QON_LABEL)));
+
+      if (isQon) {
         row.classList.add("qon-suggestion");
+        const url = urlFromCandidates(texts);
+        // If we resolved a URL, store it on the <li> so it survives button
+        // node replacement by React.
+        if (url) {
+          setLiUrlHint(li, url);
+        } else {
+          // URL not resolved yet (map not populated). Keep any existing hint.
+        }
+      } else {
+        row.classList.remove("qon-suggestion");
+        // Only remove the hint if this <li> never had a QON button.
+        if (!li.classList.contains("qon-li-has-url")) {
+          setLiUrlHint(li, null);
+        }
       }
     }
   }
 
-  function getSuggestionRows() {
-    return document.querySelectorAll("li > button");
-  }
-
-  function getSuggestionLists() {
-    const rows = getSuggestionRows();
-    const lists = new Set();
-
-    for (const row of rows) {
-      const list = row.closest("ul");
-      if (list) lists.add(list);
-    }
-
-    return [...lists];
-  }
-
   function ensureSuggestionListScrollable() {
-    const lists = getSuggestionLists();
-
+    const lists = document.querySelectorAll('div[role="dialog"] dialog ul');
     for (const list of lists) {
-      list.style.maxHeight = "min(60vh, 28rem)";
+      list.style.maxHeight = "60vh";
       list.style.overflowY = "auto";
       list.style.overflowX = "hidden";
       list.style.overscrollBehavior = "contain";
       list.style.WebkitOverflowScrolling = "touch";
-
-      let parent = list.parentElement;
-      let depth = 0;
-      while (parent && depth < 3) {
-        if (parent.scrollHeight > parent.clientHeight) {
-          parent.style.maxHeight = "min(60vh, 28rem)";
-          parent.style.overflowY = "auto";
-          parent.style.overflowX = "hidden";
-          parent.style.overscrollBehavior = "contain";
-          parent.style.WebkitOverflowScrolling = "touch";
-        }
-        parent = parent.parentElement;
-        depth += 1;
-      }
     }
   }
 
-  function getScrollableContainer(list) {
-    if (!list) return null;
-    if (list.scrollHeight > list.clientHeight) return list;
-
-    let parent = list.parentElement;
-    let depth = 0;
-    while (parent && depth < 5) {
-      if (parent.scrollHeight > parent.clientHeight) return parent;
-      parent = parent.parentElement;
-      depth += 1;
-    }
-
-    return list;
+  function getActiveSuggestionButtons() {
+    return document.querySelectorAll(
+      [
+        'div[role="dialog"] dialog ul li > button.bg-theme-300\\/50',
+        'li[aria-selected="true"] > button',
+        'button[aria-selected="true"]',
+        'button[aria-current="true"]',
+        'button[data-headlessui-state~="active"]',
+        'li[data-headlessui-state~="active"] > button',
+      ].join(", "),
+    );
   }
 
   function keepActiveSuggestionVisible() {
-    const lists = getSuggestionLists();
-
-    for (const list of lists) {
-      const scroller = getScrollableContainer(list);
-      if (!scroller) continue;
-
-      const active = list.querySelector(
-        [
-          'button[aria-selected="true"]',
-          'li[aria-selected="true"] > button',
-          'button[aria-current="true"]',
-          'button[data-headlessui-state~="active"]',
-          'li[data-headlessui-state~="active"] > button',
-          'button[tabindex="0"]',
-        ].join(", "),
-      );
-      if (!active) continue;
+    const activeButtons = getActiveSuggestionButtons();
+    for (const active of activeButtons) {
+      const list = active.closest("ul");
+      if (!list) continue;
+      if (list.scrollHeight <= list.clientHeight) continue;
 
       const activeRect = active.getBoundingClientRect();
-      const scrollerRect = scroller.getBoundingClientRect();
+      const listRect = list.getBoundingClientRect();
+      const topBoundary = listRect.top + ACTIVE_SCROLL_MARGIN_PX;
+      const bottomBoundary = listRect.bottom - ACTIVE_SCROLL_MARGIN_PX;
 
-      if (activeRect.top < scrollerRect.top) {
-        scroller.scrollTop -= scrollerRect.top - activeRect.top;
-      } else if (activeRect.bottom > scrollerRect.bottom) {
-        scroller.scrollTop += activeRect.bottom - scrollerRect.bottom;
+      if (activeRect.top < topBoundary) {
+        list.scrollTop -= topBoundary - activeRect.top;
+      } else if (activeRect.bottom > bottomBoundary) {
+        list.scrollTop += activeRect.bottom - bottomBoundary;
       }
     }
   }
 
-  function getPrimarySuggestionList() {
-    const lists = getSuggestionLists();
-    let best = null;
-    let bestCount = 0;
-
-    for (const list of lists) {
-      const count = list.querySelectorAll("li > button").length;
-      if (count > bestCount) {
-        best = list;
-        bestCount = count;
-      }
-    }
-
-    return best;
+  function setKeyboardNavActive(active) {
+    keyboardNavActive = active;
+    document.documentElement.classList.toggle(
+      KEYBOARD_NAV_DIALOG_CLASS,
+      active,
+    );
   }
 
-  function scrollSuggestionListByKeyboard(event) {
-    const list = getPrimarySuggestionList();
-    if (!list) return;
-    const scroller = getScrollableContainer(list);
-    if (!scroller) return;
-
-    const firstItem = list.querySelector("li > button");
-    const itemHeight = firstItem
-      ? firstItem.getBoundingClientRect().height
-      : 36;
-
-    if (event.key === "ArrowDown") {
-      scroller.scrollTop += itemHeight;
-      return;
-    }
-
-    if (event.key === "ArrowUp") {
-      scroller.scrollTop -= itemHeight;
-      return;
-    }
-
-    if (event.key === "PageDown") {
-      scroller.scrollTop += scroller.clientHeight * 0.9;
-      return;
-    }
-
-    if (event.key === "PageUp") {
-      scroller.scrollTop -= scroller.clientHeight * 0.9;
-      return;
-    }
-
-    if (event.key === "Home") {
-      scroller.scrollTop = 0;
-      return;
-    }
-
-    if (event.key === "End") {
-      scroller.scrollTop = scroller.scrollHeight;
-    }
+  function isDialogSuggestionButton(el) {
+    return !!el?.closest?.('div[role="dialog"] dialog ul li > button');
   }
 
   window.open = function (url, target, features) {
@@ -433,9 +446,15 @@
   };
 
   const observer = new MutationObserver(() => {
-    markQonSuggestionRows();
-    ensureSuggestionListScrollable();
-    keepActiveSuggestionVisible();
+    if (applyingSuggestionUi) return;
+    applyingSuggestionUi = true;
+    try {
+      markQonSuggestionRows();
+      ensureSuggestionListScrollable();
+      keepActiveSuggestionVisible();
+    } finally {
+      applyingSuggestionUi = false;
+    }
   });
   observer.observe(document.documentElement, {
     childList: true,
@@ -456,11 +475,42 @@
         key === "Home" ||
         key === "End"
       ) {
+        if (
+          isDialogSuggestionButton(document.activeElement) ||
+          document.querySelector('div[role="dialog"] dialog ul')
+        ) {
+          setKeyboardNavActive(true);
+        }
         requestAnimationFrame(() => {
           keepActiveSuggestionVisible();
-          scrollSuggestionListByKeyboard(event);
         });
       }
+    },
+    true,
+  );
+
+  document.addEventListener(
+    "mouseover",
+    (event) => {
+      if (!keyboardNavActive) return;
+      if (!isDialogSuggestionButton(event.target)) return;
+      event.stopPropagation();
+    },
+    true,
+  );
+
+  document.addEventListener(
+    "pointerdown",
+    () => {
+      if (keyboardNavActive) setKeyboardNavActive(false);
+    },
+    true,
+  );
+
+  document.addEventListener(
+    "pointermove",
+    () => {
+      if (keyboardNavActive) setKeyboardNavActive(false);
     },
     true,
   );
