@@ -3,8 +3,8 @@
 ## 26.3.11
 
 - Fixed a build failure with older Qt5 versions in XDG global shortcut portal token
-  generation by only using `QUuid::WithoutBraces` on Qt >= 5.11 and falling back to brace removal on older Qt5
-  (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+  generation by only using `QUuid::WithoutBraces` on Qt >= 5.11 and falling back to
+  brace removal on older Qt5 (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
 
 ## 26.3.10
 
@@ -17,15 +17,13 @@
     for the formatting syntax characters, so they are still present in the editor,
     just smaller. Especially for links with a lot of text between the brackets,
     gaps will be visible in the formatting syntax!
-- Added a security token setting for the Homepage-compatible bookmark
-  suggestion API (with encrypted storage, settings dump masking, and
-  token-validated `GET /suggest` requests), and updated Homepage
-  integration docs (`custom.js`) to append the token query parameter
-  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
-- Improved portal handle token generation compatibility for older Qt5
-  distributions (e.g. Debian 9.0, SLE 15) by using `QUuid` on Qt5 and
-  keeping `QRandomGenerator` on Qt6 builds
-  (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+- Added a security token setting for the Homepage-compatible bookmark suggestion API
+  (with encrypted storage, settings dump masking, and token-validated `GET /suggest`
+  requests), and updated Homepage integration docs (`custom.js`) to append the token
+  query parameter (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
+- Improved portal handle token generation compatibility for older Qt5 distributions
+  (e.g. Debian 9.0, SLE 15) by using `QUuid` on Qt5 and keeping `QRandomGenerator`
+  on Qt6 builds (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
 
 ## 26.3.9
 
