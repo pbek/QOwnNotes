@@ -102,6 +102,10 @@ nix-build-force:
 nix-run:
     ./result/bin/QOwnNotes --session test
 
+# Build and run the application for nix
+[group('nix')]
+nix-build-run: nix-build nix-run
+
 # Open the breeze icons folder
 [group('nix')]
 open-breeze-icons:
