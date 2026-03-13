@@ -406,7 +406,13 @@ QString XdgGlobalShortcutManager::generateToken() {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     return QStringLiteral("qownnotes_%1").arg(QRandomGenerator::global()->generate());
 #else
+#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     QString token = QUuid::createUuid().toString(QUuid::WithoutBraces);
+#else
+    QString token = QUuid::createUuid().toString();
+    token.remove(QLatin1Char('{'));
+    token.remove(QLatin1Char('}'));
+#endif
     token.remove(QLatin1Char('-'));
     return QStringLiteral("qownnotes_%1").arg(token);
 #endif

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.11
+
+- Fixed a build failure with older Qt5 versions in XDG global shortcut portal token
+  generation by only using `QUuid::WithoutBraces` on Qt >= 5.11 and falling back to brace removal on older Qt5
+  (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+
 ## 26.3.10
 
 - Added an option to hide Markdown formatting syntax (like `**`, `*`, `#`,
