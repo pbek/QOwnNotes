@@ -603,6 +603,8 @@ void SettingsDialog::storeSettings() {
                       ui->showLineNumbersInEditorCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),
                       ui->highlightCurrentLineCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/hideFormattingSyntax"),
+                      ui->hideFormattingSyntaxCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/hangingIndent"),
                       ui->hangingIndentCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showMarkdownImagePreviews"),
@@ -1010,6 +1012,8 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("Editor/showLineNumbers")).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool());
+    ui->hideFormattingSyntaxCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/hideFormattingSyntax"), false).toBool());
     ui->hangingIndentCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool());
     ui->showMarkdownImagePreviewsCheckBox->setChecked(

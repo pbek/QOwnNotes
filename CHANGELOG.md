@@ -2,6 +2,15 @@
 
 ## 26.3.10
 
+- Added an option to hide Markdown formatting syntax (like `**`, `*`, `#`,
+  backticks, link brackets) on lines that are not being edited, for a
+  cleaner Typora-like editing experience (Editor settings, off by default)
+  (for [#1662](https://github.com/pbek/QOwnNotes/issues/1662))
+  - Disclaimer: Due to limitations of the QPlainTextEdit API, this is a best-effort
+    implementation sets the font letter spacing to 0 and the font size to 0.01
+    for the formatting syntax characters, so they are still present in the editor,
+    just smaller. Especially for links with a lot of text between the brackets,
+    gaps will be visible in the formatting syntax!
 - Added a security token setting for the Homepage-compatible bookmark
   suggestion API (with encrypted storage, settings dump masking, and
   token-validated `GET /suggest` requests), and updated Homepage

@@ -1295,6 +1295,15 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     const bool hlCurrLine =
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool();
     setHighlightCurrentLine(hlCurrLine);
+
+    // Hide formatting syntax on non-cursor blocks (Typora-like)
+    const bool hideFormattingSyntax =
+        settings.value(QStringLiteral("Editor/hideFormattingSyntax"), false).toBool();
+    if (_highlighter) {
+        _highlighter->setHideFormattingSyntax(hideFormattingSyntax);
+        _highlighter->setCurrentCursorBlockNumber(textCursor().blockNumber());
+    }
+
     const bool hangingIndentEnabled =
         settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool();
     setHangingIndentEnabled(hangingIndentEnabled);
