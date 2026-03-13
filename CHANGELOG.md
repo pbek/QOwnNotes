@@ -2,6 +2,11 @@
 
 ## 26.3.10
 
+- Added a security token setting for the Homepage-compatible bookmark
+  suggestion API (with encrypted storage, settings dump masking, and
+  token-validated `GET /suggest` requests), and updated Homepage
+  integration docs (`custom.js`) to append the token query parameter
+  (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
 - Improved portal handle token generation compatibility for older Qt5
   distributions (e.g. Debian 9.0, SLE 15) by using `QUuid` on Qt5 and
   keeping `QRandomGenerator` on Qt6 builds

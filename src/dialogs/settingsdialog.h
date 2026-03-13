@@ -267,6 +267,12 @@ class SettingsDialog : public MasterDialog {
 
     void on_bookmarkSuggestionApiPortResetButton_clicked();
 
+    void on_bookmarkSuggestionApiShowTokenButton_clicked();
+
+    void on_bookmarkSuggestionApiCopyTokenButton_clicked();
+
+    void on_bookmarkSuggestionApiGenerateTokenButton_clicked();
+
     void on_internalIconThemeCheckBox_toggled(bool checked);
 
     void on_systemIconThemeCheckBox_toggled(bool checked);

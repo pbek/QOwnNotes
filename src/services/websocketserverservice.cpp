@@ -27,6 +27,7 @@
 #include "entities/notefolder.h"
 #include "entities/tag.h"
 #include "metricsservice.h"
+#include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #ifndef INTEGRATION_TESTS
@@ -133,6 +134,37 @@ quint16 WebSocketServerService::getBookmarkSuggestionApiDefaultPort() {
 #else
     return 22224;
 #endif
+}
+
+QString WebSocketServerService::getBookmarkSuggestionApiToken() {
+    SettingsService settings;
+    const QString tokenSettingKey =
+        QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken");
+    const QString storedValue = settings.value(tokenSettingKey).toString();
+
+    QString token = CryptoService::instance()->decryptToString(storedValue);
+
+    // Allow plaintext fallback for old / manually set values.
+    if (token.isEmpty() && !storedValue.isEmpty()) {
+        token = storedValue;
+        settings.setValue(tokenSettingKey, CryptoService::instance()->encryptToString(token));
+    }
+
+    return token;
+}
+
+QString WebSocketServerService::getOrGenerateBookmarkSuggestionApiToken() {
+    SettingsService settings;
+    const QString tokenSettingKey =
+        QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken");
+    QString token = getBookmarkSuggestionApiToken();
+
+    if (token.isEmpty()) {
+        token = Utils::Misc::generateRandomString(32);
+        settings.setValue(tokenSettingKey, CryptoService::instance()->encryptToString(token));
+    }
+
+    return token;
 }
 
 void WebSocketServerService::refreshServers() {
@@ -253,6 +285,15 @@ void WebSocketServerService::processHttpRequest(QTcpSocket *socket, const QStrin
     if (targetPath != QLatin1String("/suggest")) {
         const QByteArray body = QByteArray("{\"error\":\"Not found\"}");
         socket->write(httpResponse(404, body, QStringLiteral("Not Found")).toUtf8());
+        socket->disconnectFromHost();
+        return;
+    }
+
+    const QString requestToken = queryParams.value(QStringLiteral("token")).trimmed();
+    const QString expectedToken = getOrGenerateBookmarkSuggestionApiToken();
+    if (requestToken != expectedToken) {
+        const QByteArray body = QByteArray("{\"error\":\"Unauthorized\"}");
+        socket->write(httpResponse(401, body, QStringLiteral("Unauthorized")).toUtf8());
         socket->disconnectFromHost();
         return;
     }

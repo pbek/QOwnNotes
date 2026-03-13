@@ -51,6 +51,10 @@ class WebSocketServerService : public QObject {
 
     static quint16 getBookmarkSuggestionApiDefaultPort();
 
+    static QString getBookmarkSuggestionApiToken();
+
+    static QString getOrGenerateBookmarkSuggestionApiToken();
+
     void refreshServers();
 
     void listen(quint16 port = 0);

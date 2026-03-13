@@ -2153,6 +2153,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                  "ai/groq/apiKey",
                                  "ai/openai/apiKey",
                                  "webSocketServerService/token",
+                                 "webSocketServerService/bookmarkSuggestionApiToken",
                                  "webAppClientService/token"};
 
     // under OS X we have to ignore some keys

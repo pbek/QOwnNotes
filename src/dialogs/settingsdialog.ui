@@ -6824,13 +6824,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <property name="title">
                    <string>Bookmark suggestion API</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_96">
-                   <item row="0" column="0" colspan="3">
-                    <widget class="QCheckBox" name="bookmarkSuggestionApiEnabledCheckBox">
-                     <property name="text">
-                      <string>Enable Homepage-compatible bookmark suggestions API</string>
-                     </property>
-                    </widget>
+                   <layout class="QGridLayout" name="gridLayout_96">
+                    <item row="0" column="0" colspan="6">
+                     <widget class="QCheckBox" name="bookmarkSuggestionApiEnabledCheckBox">
+                      <property name="text">
+                       <string>Enable Homepage-compatible bookmark suggestions API</string>
+                      </property>
+                     </widget>
                    </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="bookmarkSuggestionApiPortLabel">
@@ -6852,10 +6852,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="2">
-                    <widget class="QToolButton" name="bookmarkSuggestionApiPortResetButton">
-                     <property name="toolTip">
-                      <string>Reset the suggestion API port</string>
+                    <item row="1" column="2">
+                     <widget class="QToolButton" name="bookmarkSuggestionApiPortResetButton">
+                      <property name="toolTip">
+                       <string>Reset the suggestion API port</string>
                      </property>
                      <property name="text">
                       <string notr="true">…</string>
@@ -6863,12 +6863,77 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      <property name="icon">
                       <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
                        <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="bookmarkSuggestionApiTokenLabel">
+                      <property name="text">
+                       <string>Security token:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1" colspan="2">
+                     <widget class="QLineEdit" name="bookmarkSuggestionApiTokenLineEdit">
+                      <property name="toolTip">
+                       <string>If this is empty when saved, a new security token will be generated automatically.</string>
+                      </property>
+                      <property name="maxLength">
+                       <number>32</number>
+                      </property>
+                      <property name="readOnly">
+                       <bool>false</bool>
+                      </property>
+                      <property name="echoMode">
+                       <enum>QLineEdit::EchoMode::Password</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="3">
+                     <widget class="QToolButton" name="bookmarkSuggestionApiShowTokenButton">
+                      <property name="toolTip">
+                       <string>Show security token</string>
+                      </property>
+                      <property name="text">
+                       <string notr="true">…</string>
+                      </property>
+                      <property name="icon">
+                       <iconset theme="document-decrypt" resource="../breeze-qownnotes.qrc">
+                        <normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="4">
+                     <widget class="QToolButton" name="bookmarkSuggestionApiCopyTokenButton">
+                      <property name="toolTip">
+                       <string>Copy security token to clipboard</string>
+                      </property>
+                      <property name="text">
+                       <string notr="true">…</string>
+                      </property>
+                      <property name="icon">
+                       <iconset theme="edit-copy" resource="../breeze-qownnotes.qrc">
+                        <normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="5">
+                     <widget class="QToolButton" name="bookmarkSuggestionApiGenerateTokenButton">
+                      <property name="toolTip">
+                       <string>Generate new security token</string>
+                      </property>
+                      <property name="text">
+                       <string notr="true">…</string>
+                      </property>
+                      <property name="icon">
+                       <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+                        <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
                </layout>
               </widget>
              </item>
@@ -7818,6 +7883,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>bookmarkSuggestionApiEnabledCheckBox</tabstop>
   <tabstop>bookmarkSuggestionApiPortSpinBox</tabstop>
   <tabstop>bookmarkSuggestionApiPortResetButton</tabstop>
+  <tabstop>bookmarkSuggestionApiTokenLineEdit</tabstop>
+  <tabstop>bookmarkSuggestionApiShowTokenButton</tabstop>
+  <tabstop>bookmarkSuggestionApiCopyTokenButton</tabstop>
+  <tabstop>bookmarkSuggestionApiGenerateTokenButton</tabstop>
   <tabstop>webSocketServerServicePortSpinBox</tabstop>
   <tabstop>webSocketServerServicePortResetButton</tabstop>
   <tabstop>webSocketTokenButton</tabstop>

@@ -12,6 +12,7 @@
 
   Tune behavior with:
   - QON_URL: QOwnNotes suggestion endpoint
+  - QON_TOKEN: security token configured in QOwnNotes settings
   - QON_LIMIT: number of QOwnNotes suggestions to request
   - QON_LABEL: marker shown in UI for QOwnNotes items
   - DEBUG: set true to print debug logs
@@ -21,6 +22,7 @@
   "use strict";
 
   const QON_URL = "http://127.0.0.1:22224/suggest?q=";
+  const QON_TOKEN = "";
   const QON_LIMIT = 20;
   const QON_LABEL = "[QON] ";
   const BLOCK_QON_TEXT_SEARCH = "__QON_BLOCK_TEXT_SEARCH__";
@@ -107,8 +109,11 @@
 
   async function fetchQown(query) {
     try {
+      const tokenPart = QON_TOKEN
+        ? `&token=${encodeURIComponent(QON_TOKEN)}`
+        : "";
       const r = await origFetch(
-        `${QON_URL}${encodeURIComponent(query)}&limit=${QON_LIMIT}`,
+        `${QON_URL}${encodeURIComponent(query)}&limit=${QON_LIMIT}${tokenPart}`,
       );
       const txt = await r.text();
       const j = JSON.parse(txt);

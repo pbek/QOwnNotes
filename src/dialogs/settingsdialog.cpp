@@ -174,6 +174,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->bookmarkSuggestionApiEnabledCheckBox, SIGNAL(toggled(bool)), this,
             SLOT(needRestart()));
+    connect(ui->bookmarkSuggestionApiTokenLineEdit, SIGNAL(textChanged(QString)), this,
+            SLOT(needRestart()));
     connect(ui->enableWebApplicationCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->enableNoteTreeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->aiAutocompleteCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
@@ -787,6 +789,13 @@ void SettingsDialog::storeSettings() {
                       ui->bookmarkSuggestionApiEnabledCheckBox->isChecked());
     settings.setValue(QStringLiteral("webSocketServerService/bookmarkSuggestionApiPort"),
                       ui->bookmarkSuggestionApiPortSpinBox->value());
+    QString bookmarkSuggestionApiToken = ui->bookmarkSuggestionApiTokenLineEdit->text().trimmed();
+    if (bookmarkSuggestionApiToken.isEmpty()) {
+        bookmarkSuggestionApiToken = Utils::Misc::generateRandomString(32);
+        ui->bookmarkSuggestionApiTokenLineEdit->setText(bookmarkSuggestionApiToken);
+    }
+    settings.setValue(QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken"),
+                      CryptoService::instance()->encryptToString(bookmarkSuggestionApiToken));
     settings.setValue(QStringLiteral("webSocketServerService/bookmarksTag"),
                       ui->bookmarksTagLineEdit->text());
     settings.setValue(QStringLiteral("webSocketServerService/bookmarksNoteName"),
@@ -1296,6 +1305,8 @@ void SettingsDialog::readSettings() {
         WebSocketServerService::isBookmarkSuggestionApiEnabled());
     ui->bookmarkSuggestionApiPortSpinBox->setValue(
         WebSocketServerService::getBookmarkSuggestionApiPort());
+    ui->bookmarkSuggestionApiTokenLineEdit->setText(
+        WebSocketServerService::getOrGenerateBookmarkSuggestionApiToken());
     on_bookmarkSuggestionApiEnabledCheckBox_toggled(
         ui->bookmarkSuggestionApiEnabledCheckBox->isChecked());
     ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());
@@ -4242,11 +4253,32 @@ void SettingsDialog::on_bookmarkSuggestionApiEnabledCheckBox_toggled(bool checke
     ui->bookmarkSuggestionApiPortLabel->setEnabled(checked);
     ui->bookmarkSuggestionApiPortSpinBox->setEnabled(checked);
     ui->bookmarkSuggestionApiPortResetButton->setEnabled(checked);
+    ui->bookmarkSuggestionApiTokenLabel->setEnabled(checked);
+    ui->bookmarkSuggestionApiTokenLineEdit->setEnabled(checked);
+    ui->bookmarkSuggestionApiShowTokenButton->setEnabled(checked);
+    ui->bookmarkSuggestionApiCopyTokenButton->setEnabled(checked);
+    ui->bookmarkSuggestionApiGenerateTokenButton->setEnabled(checked);
 }
 
 void SettingsDialog::on_bookmarkSuggestionApiPortResetButton_clicked() {
     ui->bookmarkSuggestionApiPortSpinBox->setValue(
         WebSocketServerService::getBookmarkSuggestionApiDefaultPort());
+}
+
+void SettingsDialog::on_bookmarkSuggestionApiShowTokenButton_clicked() {
+    ui->bookmarkSuggestionApiTokenLineEdit->setEchoMode(
+        ui->bookmarkSuggestionApiTokenLineEdit->echoMode() == QLineEdit::EchoMode::Password
+            ? QLineEdit::EchoMode::Normal
+            : QLineEdit::EchoMode::Password);
+}
+
+void SettingsDialog::on_bookmarkSuggestionApiCopyTokenButton_clicked() {
+    QApplication::clipboard()->setText(ui->bookmarkSuggestionApiTokenLineEdit->text());
+}
+
+void SettingsDialog::on_bookmarkSuggestionApiGenerateTokenButton_clicked() {
+    ui->bookmarkSuggestionApiTokenLineEdit->setText(Utils::Misc::generateRandomString(32));
+    ui->bookmarkSuggestionApiTokenLineEdit->setEchoMode(QLineEdit::EchoMode::Normal);
 }
 
 void SettingsDialog::on_internalIconThemeCheckBox_toggled(bool checked) {
