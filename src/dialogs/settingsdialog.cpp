@@ -107,6 +107,32 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
 
+    // Change the search icon between dark and light mode
+    const QString searchIconFileName =
+        SettingsService().value(QStringLiteral("darkModeColors")).toBool()
+            ? QStringLiteral("search-notes-dark.svg")
+            : QStringLiteral("search-notes.svg");
+    static const QRegularExpression searchIconRegex(
+        QStringLiteral("background-image: url\\(:.+\\);"));
+    const QString searchIconStyle =
+        QStringLiteral("background-image: url(:/images/%1);").arg(searchIconFileName);
+
+    QString styleSheet = ui->searchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->searchLineEdit->setStyleSheet(styleSheet);
+
+    styleSheet = ui->languageSearchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->languageSearchLineEdit->setStyleSheet(styleSheet);
+
+    styleSheet = ui->shortcutSearchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->shortcutSearchLineEdit->setStyleSheet(styleSheet);
+
+    styleSheet = ui->scriptSearchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->scriptSearchLineEdit->setStyleSheet(styleSheet);
+
 #ifdef Q_OS_WIN32
     QString downloadText =
         tr("You can download your git client here: <a "

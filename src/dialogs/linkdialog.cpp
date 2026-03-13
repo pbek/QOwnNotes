@@ -78,6 +78,26 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     ui->notesListWidget->installEventFilter(this);
     ui->notesListWidget->setRootIsDecorated(false);
 
+    // Change the search icon between dark and light mode
+    const QString searchIconFileName =
+        SettingsService().value(QStringLiteral("darkModeColors")).toBool()
+            ? QStringLiteral("search-notes-dark.svg")
+            : QStringLiteral("search-notes.svg");
+    static const QRegularExpression searchIconRegex(
+        QStringLiteral("background-image: url\\(:.+\\);"));
+
+    QString searchLineEditStyleSheet = ui->searchLineEdit->styleSheet();
+    searchLineEditStyleSheet.replace(
+        searchIconRegex,
+        QStringLiteral("background-image: url(:/images/%1);").arg(searchIconFileName));
+    ui->searchLineEdit->setStyleSheet(searchLineEditStyleSheet);
+
+    QString headingSearchLineEditStyleSheet = ui->headingSearchLineEdit->styleSheet();
+    headingSearchLineEditStyleSheet.replace(
+        searchIconRegex,
+        QStringLiteral("background-image: url(:/images/%1);").arg(searchIconFileName));
+    ui->headingSearchLineEdit->setStyleSheet(headingSearchLineEditStyleSheet);
+
     const bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
     ui->notesListWidget->setColumnHidden(1, !showSubfolders);
     ui->notesListWidget->setColumnHidden(2, !showSubfolders);

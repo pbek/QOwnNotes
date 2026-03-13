@@ -5,6 +5,9 @@
 - Fixed a build failure with older Qt5 versions in XDG global shortcut portal token
   generation by only using `QUuid::WithoutBraces` on Qt >= 5.11 and falling back to
   brace removal on older Qt5 (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
+- Fixed low-contrast search icons in the "Link to a URL or note" and Settings dialogs
+  by switching the search field icon between light and dark variants based on the
+  active dark mode color setting (for [#3494](https://github.com/pbek/QOwnNotes/issues/3494))
 
 ## 26.3.10
 
