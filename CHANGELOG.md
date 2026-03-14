@@ -11,6 +11,9 @@
 - Fixed low-contrast search icons in the "Link to a URL or note" and Settings dialogs
   by switching the search field icon between light and dark variants based on the
   active dark mode color setting (for [#3494](https://github.com/pbek/QOwnNotes/issues/3494))
+- Fixed low-contrast OK button check-mark icons in dark mode by adding explicit
+  `dialog-ok` / `dialog-ok-apply` icons for the internal light and dark Breeze
+  icon themes (for [#3495](https://github.com/pbek/QOwnNotes/issues/3495))
 
 ## 26.3.10
 

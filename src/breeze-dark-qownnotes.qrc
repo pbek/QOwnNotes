@@ -21,6 +21,8 @@
     <file alias="16x16/tools-report-bug.svg">icons/breeze-dark-qownnotes/16x16/tools-report-bug.svg</file>
     <file alias="16x16/edit-download.svg">icons/breeze-dark-qownnotes/16x16/edit-download.svg</file>
     <file alias="16x16/dialog-cancel.svg">icons/breeze-dark-qownnotes/16x16/dialog-cancel.svg</file>
+    <file alias="16x16/dialog-ok.svg">icons/breeze-dark-qownnotes/16x16/dialog-ok.svg</file>
+    <file alias="16x16/dialog-ok-apply.svg">icons/breeze-dark-qownnotes/16x16/dialog-ok.svg</file>
     <file alias="16x16/document-open-recent.svg">icons/breeze-dark-qownnotes/16x16/document-open-recent.svg</file>
     <file alias="16x16/media-skip-forward.svg">icons/breeze-dark-qownnotes/16x16/media-skip-forward.svg</file>
     <file alias="16x16/text-html.svg">icons/breeze-dark-qownnotes/16x16/text-html.svg</file>
