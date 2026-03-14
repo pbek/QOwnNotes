@@ -8,6 +8,9 @@
 - Fixed low-contrast search icons in the "Link to a URL or note" and Settings dialogs
   by switching the search field icon between light and dark variants based on the
   active dark mode color setting (for [#3494](https://github.com/pbek/QOwnNotes/issues/3494))
+- Improved hidden Markdown formatting syntax rendering so long link targets no longer
+  keep their full visual width on non-edited lines, while link text stays highlighted
+  with link colors (for [#1662](https://github.com/pbek/QOwnNotes/issues/1662))
 
 ## 26.3.10
 

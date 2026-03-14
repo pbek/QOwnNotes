@@ -1299,6 +1299,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     // Hide formatting syntax on non-cursor blocks (Typora-like)
     const bool hideFormattingSyntax =
         settings.value(QStringLiteral("Editor/hideFormattingSyntax"), false).toBool();
+    setSourceTransformConcealEnabled(hideFormattingSyntax);
     if (_highlighter) {
         _highlighter->setHideFormattingSyntax(hideFormattingSyntax);
         _highlighter->setCurrentCursorBlockNumber(textCursor().blockNumber());
