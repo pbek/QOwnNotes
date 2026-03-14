@@ -2,6 +2,9 @@
 
 ## 26.3.11
 
+- Changed Markdown formatting syntax hiding so named links keep their URL part
+  visible (`[name](https://example.com)` now only hides Markdown delimiters)
+  (for [#1662](https://github.com/pbek/QOwnNotes/issues/1662))
 - Fixed a build failure with older Qt5 versions in XDG global shortcut portal token
   generation by only using `QUuid::WithoutBraces` on Qt >= 5.11 and falling back to
   brace removal on older Qt5 (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
