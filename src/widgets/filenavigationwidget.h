@@ -29,6 +29,7 @@ class FileNavigationWidget : public QTreeWidget {
 
     void parse(const QTextDocument *document, int textCursorPosition);
     void selectItemForCursorPosition(int position);
+    bool hasFileLinks() const;
 
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);

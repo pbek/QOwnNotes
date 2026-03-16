@@ -27,6 +27,7 @@ class BacklinkWidget : public QTreeWidget {
     explicit BacklinkWidget(QWidget *parent = 0);
 
     void findBacklinks(Note note);
+    bool hasBacklinks() const;
 
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);

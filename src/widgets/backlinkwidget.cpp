@@ -91,3 +91,5 @@ void BacklinkWidget::findBacklinks(Note note) {
 
     expandAll();
 }
+
+bool BacklinkWidget::hasBacklinks() const { return topLevelItemCount() > 0; }

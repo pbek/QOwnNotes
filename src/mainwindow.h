@@ -267,6 +267,13 @@ class MainWindow : public QMainWindow {
 
     void disallowNoteEditing();
 
+    void updateFileNavigationTab();
+
+    void updateBacklinkNavigationTab();
+
+    void setOptionalNavigationTabVisible(QWidget *tab, const QString &title, int preferredIndex,
+                                         bool visible);
+
     void openSelectedNotesInTab();
 
     void openNoteInTab(const Note &note, bool forceNewTab = false);

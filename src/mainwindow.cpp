@@ -4021,6 +4021,48 @@ void MainWindow::selectNavigationItemAtPosition(int position) {
     }
 }
 
+void MainWindow::setOptionalNavigationTabVisible(QWidget *tab, const QString &title,
+                                                 int preferredIndex, bool visible) {
+    const int existingIndex = ui->navigationTabWidget->indexOf(tab);
+
+    if (visible) {
+        if (existingIndex >= 0) {
+            return;
+        }
+
+        ui->navigationTabWidget->insertTab(preferredIndex, tab, title);
+        return;
+    }
+
+    if (existingIndex < 0) {
+        return;
+    }
+
+    const bool wasCurrentTab = ui->navigationTabWidget->currentWidget() == tab;
+    ui->navigationTabWidget->removeTab(existingIndex);
+
+    if (wasCurrentTab && (ui->navigationTabWidget->count() > 0)) {
+        ui->navigationTabWidget->setCurrentIndex(0);
+    }
+}
+
+void MainWindow::updateFileNavigationTab() {
+    if (ui->noteTextEdit == nullptr) {
+        return;
+    }
+
+    ui->fileNavigationWidget->parse(activeNoteTextEdit()->document(),
+                                    activeNoteTextEdit()->textCursor().position());
+    setOptionalNavigationTabVisible(ui->fileNavigationTab, tr("Files"), 1,
+                                    ui->fileNavigationWidget->hasFileLinks());
+}
+
+void MainWindow::updateBacklinkNavigationTab() {
+    ui->backlinkWidget->findBacklinks(currentNote);
+    setOptionalNavigationTabVisible(ui->backlinkTab, tr("Backlinks"), 2,
+                                    ui->backlinkWidget->hasBacklinks());
+}
+
 QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
@@ -4875,14 +4917,18 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
  * Starts the parsing for the navigation widget
  */
 void MainWindow::startNavigationParser() {
-    if (ui->navigationWidget->isVisible()) {
-        ui->navigationWidget->parse(activeNoteTextEdit()->document(),
-                                    activeNoteTextEdit()->textCursor().position());
-    } else if (ui->fileNavigationWidget->isVisible()) {
-        ui->fileNavigationWidget->parse(activeNoteTextEdit()->document(),
-                                        activeNoteTextEdit()->textCursor().position());
-    } else if (ui->backlinkWidget->isVisible()) {
-        ui->backlinkWidget->findBacklinks(currentNote);
+    ui->navigationWidget->parse(activeNoteTextEdit()->document(),
+                                activeNoteTextEdit()->textCursor().position());
+
+    updateFileNavigationTab();
+    updateBacklinkNavigationTab();
+
+    if (ui->navigationTabWidget->count() == 0) {
+        return;
+    }
+
+    if (ui->navigationTabWidget->currentIndex() < 0) {
+        ui->navigationTabWidget->setCurrentIndex(0);
     }
 }
 
@@ -12736,10 +12782,14 @@ void MainWindow::centerAndResize() {
 void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(ui->navigationWidget, arg1,
                                           Utils::Gui::TreeWidgetSearchFlag::IntCheck);
-    Utils::Gui::searchForTextInTreeWidget(ui->fileNavigationWidget, arg1,
-                                          Utils::Gui::TreeWidgetSearchFlag::IntCheck);
-    Utils::Gui::searchForTextInTreeWidget(ui->backlinkWidget, arg1,
-                                          Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+    if (ui->navigationTabWidget->indexOf(ui->fileNavigationTab) >= 0) {
+        Utils::Gui::searchForTextInTreeWidget(ui->fileNavigationWidget, arg1,
+                                              Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+    }
+    if (ui->navigationTabWidget->indexOf(ui->backlinkTab) >= 0) {
+        Utils::Gui::searchForTextInTreeWidget(ui->backlinkWidget, arg1,
+                                              Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+    }
 }
 
 const Note &MainWindow::getCurrentNote() { return currentNote; }

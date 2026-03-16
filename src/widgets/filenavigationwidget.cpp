@@ -156,6 +156,8 @@ void FileNavigationWidget::selectItemForCursorPosition(int position) {
     setCurrentItem(itemToSelect);
 }
 
+bool FileNavigationWidget::hasFileLinks() const { return !_fileLinkNodes.isEmpty(); }
+
 void FileNavigationWidget::emitPositionForItem(const QTreeWidgetItem *item) {
     if (item == nullptr) {
         return;
