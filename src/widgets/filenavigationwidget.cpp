@@ -25,6 +25,7 @@
 #include <QTreeWidgetItemIterator>
 #include <QUrl>
 #include <algorithm>
+#include <limits>
 
 namespace {
 constexpr int PositionRole = Qt::UserRole;
@@ -81,8 +82,13 @@ QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseDocument(
         while (it.hasNext()) {
             const auto match = it.next();
             const QString fileName = QUrl::fromPercentEncoding(match.captured(1).toUtf8());
+            const qsizetype matchPosition = match.capturedStart(0);
 
-            nodes.append({fileName, match.capturedStart(0), pattern.type,
+            if ((matchPosition < 0) || (matchPosition > std::numeric_limits<int>::max())) {
+                continue;
+            }
+
+            nodes.append({fileName, static_cast<int>(matchPosition), pattern.type,
                           pattern.basePath + QDir::separator() + fileName});
         }
     }
