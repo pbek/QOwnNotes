@@ -5,6 +5,8 @@
 - Added a search panel to the update dialog changelog so release note changes can
   be searched directly with the standard find workflow (for
   [#3498](https://github.com/pbek/QOwnNotes/issues/3498))
+- Prepare build process for system botan 3.11.0
+  (for [#3501](https://github.com/pbek/QOwnNotes/issues/3501), thank you @thillux)
 
 ## 26.3.11
 
