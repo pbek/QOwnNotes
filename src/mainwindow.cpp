@@ -98,6 +98,7 @@
 #include <QUuid>
 #include <QWidgetAction>
 #include <QtConcurrent>
+#include <QtSql/QSqlDatabase>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <memory>
 #include <utility>
@@ -4047,20 +4048,77 @@ void MainWindow::setOptionalNavigationTabVisible(QWidget *tab, const QString &ti
 }
 
 void MainWindow::updateFileNavigationTab() {
-    if (ui->noteTextEdit == nullptr) {
+    auto *noteTextEdit = activeNoteTextEdit();
+    if (noteTextEdit == nullptr) {
         return;
     }
 
-    ui->fileNavigationWidget->parse(activeNoteTextEdit()->document(),
-                                    activeNoteTextEdit()->textCursor().position());
-    setOptionalNavigationTabVisible(ui->fileNavigationTab, tr("Files"), 1,
-                                    ui->fileNavigationWidget->hasFileLinks());
+    const QString noteText = noteTextEdit->document()->toPlainText();
+    const int cursorPosition = noteTextEdit->textCursor().position();
+    const QString mediaPath = NoteFolder::currentMediaPath();
+    const QString attachmentsPath = NoteFolder::currentAttachmentsPath();
+    const quint64 requestId = ++_fileNavigationUpdateRequestId;
+    QPointer<MainWindow> window(this);
+
+    QtConcurrent::run([window, noteText, cursorPosition, mediaPath, attachmentsPath, requestId]() {
+        const auto nodes = FileNavigationWidget::parseText(noteText, mediaPath, attachmentsPath);
+
+        if (window.isNull()) {
+            return;
+        }
+
+        QMetaObject::invokeMethod(
+            window,
+            [window, requestId, cursorPosition, nodes]() {
+                if (window.isNull() || (requestId != window->_fileNavigationUpdateRequestId)) {
+                    return;
+                }
+
+                window->ui->fileNavigationWidget->setFileLinkNodes(nodes, cursorPosition);
+                window->setOptionalNavigationTabVisible(
+                    window->ui->fileNavigationTab, MainWindow::tr("Files"), 1,
+                    window->ui->fileNavigationWidget->hasFileLinks());
+            },
+            Qt::QueuedConnection);
+    });
 }
 
 void MainWindow::updateBacklinkNavigationTab() {
-    ui->backlinkWidget->findBacklinks(currentNote);
-    setOptionalNavigationTabVisible(ui->backlinkTab, tr("Backlinks"), 2,
-                                    ui->backlinkWidget->hasBacklinks());
+    const Note note = currentNote;
+    const quint64 requestId = ++_backlinkNavigationUpdateRequestId;
+    QPointer<MainWindow> window(this);
+
+    QtConcurrent::run([window, note = Note(note), requestId]() mutable {
+        const QString connectionName = DatabaseService::generateConnectionName();
+        QHash<Note, QSet<LinkHit>> backlinks;
+
+        {
+            QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
+            db.open();
+            backlinks = note.findReverseLinkNotes(connectionName);
+            db.close();
+        }
+
+        QSqlDatabase::removeDatabase(connectionName);
+
+        if (window.isNull()) {
+            return;
+        }
+
+        QMetaObject::invokeMethod(
+            window,
+            [window, requestId, backlinks]() {
+                if (window.isNull() || (requestId != window->_backlinkNavigationUpdateRequestId)) {
+                    return;
+                }
+
+                window->ui->backlinkWidget->setBacklinks(backlinks);
+                window->setOptionalNavigationTabVisible(window->ui->backlinkTab,
+                                                        MainWindow::tr("Backlinks"), 2,
+                                                        window->ui->backlinkWidget->hasBacklinks());
+            },
+            Qt::QueuedConnection);
+    });
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {

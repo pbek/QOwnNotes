@@ -72,7 +72,7 @@ class Note {
 
     static bool addNote(const QString &name, const QString &fileName, const QString &text);
 
-    static Note fetch(int id);
+    static Note fetch(int id, const QString &connectionName = QStringLiteral("memory"));
 
     static Note fetchByName(const QRegularExpression &regExp, int noteSubFolderId = -1);
 
@@ -87,7 +87,8 @@ class Note {
 
     static int fetchNoteIdByName(const QString &name, int noteSubFolderId = -1);
 
-    static QVector<Note> fetchAll(int limit = -1);
+    static QVector<Note> fetchAll(int limit = -1,
+                                  const QString &connectionName = QStringLiteral("memory"));
 
     static QVector<int> fetchAllNotTaggedIds();
 
@@ -223,7 +224,8 @@ class Note {
     bool modifyNoteTextFileNameFromQMLHook();
 
     static QVector<int> searchInNotes(QString query, bool ignoreNoteSubFolder = false,
-                                      int noteSubFolderId = -1);
+                                      int noteSubFolderId = -1,
+                                      const QString &connectionName = QStringLiteral("memory"));
 
     int countSearchTextInNote(const QString &search) const;
 
@@ -285,7 +287,8 @@ class Note {
 
     static QVector<int> fetchAllIds(int limit = -1, int offset = -1);
 
-    QVector<int> findBacklinkedNoteIds() const;
+    QVector<int> findBacklinkedNoteIds(
+        const QString &connectionName = QStringLiteral("memory")) const;
 
     bool handleNoteMoving(Note oldNote);
 
@@ -400,7 +403,8 @@ class Note {
         QVector<Note> noteList = QVector<Note>(),
         const QString &connectionName = QStringLiteral("memory"));
 
-    QHash<Note, QSet<LinkHit>> findReverseLinkNotes();
+    QHash<Note, QSet<LinkHit>> findReverseLinkNotes(
+        const QString &connectionName = QStringLiteral("memory"));
 
     [[nodiscard]] QString getDecryptedNoteText(const QString &encryptedNoteText) const;
 

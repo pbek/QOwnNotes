@@ -344,8 +344,8 @@ bool Note::addNote(const QString &name, const QString &fileName, const QString &
     return query.exec();
 }
 
-Note Note::fetch(int id) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+Note Note::fetch(int id, const QString &connectionName) {
+    const QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT * FROM note WHERE id = :id"));
@@ -897,8 +897,8 @@ Note Note::fillFromQuery(const QSqlQuery &query) {
     return *this;
 }
 
-QVector<Note> Note::fetchAll(int limit) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+QVector<Note> Note::fetchAll(int limit, const QString &connectionName) {
+    const QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
 
     QVector<Note> noteList;
@@ -1163,8 +1163,9 @@ QString Note::removeNameSearchPrefix(QString searchTerm) {
  * You can search for longer texts by using quotes, `"this word1" word2`
  * will find all notes that are containing `this word1` and `word2`
  */
-QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int noteSubFolderId) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int noteSubFolderId,
+                                 const QString &connectionName) {
+    const QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
     auto noteIdList = QVector<int>();
     QStringList sqlList;
@@ -3901,32 +3902,37 @@ bool Note::isSameFile(const Note &note) const {
  * @param fileName
  * @return list of note ids
  */
-QVector<int> Note::findBacklinkedNoteIds() const {
+QVector<int> Note::findBacklinkedNoteIds(const QString &connectionName) const {
     QVector<int> noteIdList;
 
     // Search for legacy links
     const QString linkText = getNoteURL(_name);
-    noteIdList << searchInNotes(QChar('<') + linkText + QChar('>'), true);
-    noteIdList << searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"), true);
+    noteIdList << searchInNotes(QChar('<') + linkText + QChar('>'), true, -1, connectionName);
+    noteIdList << searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"), true, -1,
+                                connectionName);
 
     // Also search for links with hyphens instead of underscores
     // This allows links like <note://Link-test2> to match notes like "Link test2"
     QString linkTextWithHyphens = linkText;
     linkTextWithHyphens.replace(QChar('_'), QChar('-'));
     if (linkTextWithHyphens != linkText) {
-        noteIdList << searchInNotes(QChar('<') + linkTextWithHyphens + QChar('>'), true);
+        noteIdList << searchInNotes(QChar('<') + linkTextWithHyphens + QChar('>'), true, -1,
+                                    connectionName);
         noteIdList << searchInNotes(
-            QStringLiteral("](") + linkTextWithHyphens + QStringLiteral(")"), true);
+            QStringLiteral("](") + linkTextWithHyphens + QStringLiteral(")"), true, -1,
+            connectionName);
     }
 
     // Search for legacy links ending with "@"
     const QString altLinkText = Utils::Misc::appendIfDoesNotEndWith(linkText, QStringLiteral("@"));
     if (altLinkText != linkText) {
-        noteIdList << searchInNotes(QChar('<') + altLinkText + QChar('>'), true);
-        noteIdList << searchInNotes(QStringLiteral("](") + altLinkText + QChar(')'), true);
+        noteIdList << searchInNotes(QChar('<') + altLinkText + QChar('>'), true, -1,
+                                    connectionName);
+        noteIdList << searchInNotes(QStringLiteral("](") + altLinkText + QChar(')'), true, -1,
+                                    connectionName);
     }
 
-    const auto noteList = Note::fetchAll();
+    const auto noteList = Note::fetchAll(-1, connectionName);
     noteIdList.reserve(noteList.size());
     // Search for links to the relative file path in all notes
     for (const Note &note : noteList) {
@@ -3938,7 +3944,7 @@ QVector<int> Note::findBacklinkedNoteIds() const {
             continue;
         }
 
-        const QString relativePathToNote = note.getFilePathRelativeToNote(*this);
+        const QString relativePathToNote = note.getFilePathRelativeToNote(*this, connectionName);
 
         // We now don't escape slashes in the relative file path, but previously we did,
         // so we need to search for both
@@ -4163,8 +4169,8 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
     return _linkedNoteHash;
 }
 
-QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes() {
-    const QVector<int> noteIdList = this->findBacklinkedNoteIds();
+QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes(const QString &connectionName) {
+    const QVector<int> noteIdList = this->findBacklinkedNoteIds(connectionName);
     const int noteCount = noteIdList.count();
 
     if (noteCount == 0) {
@@ -4175,13 +4181,13 @@ QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes() {
     const QString noteUrl = getNoteURL(this->getName());
 
     for (const int noteId : noteIdList) {
-        Note note = Note::fetch(noteId);
+        Note note = Note::fetch(noteId, connectionName);
 
         if (!note.isFetched()) {
             continue;
         }
 
-        const QString relativePathToNote = note.getFilePathRelativeToNote(*this);
+        const QString relativePathToNote = note.getFilePathRelativeToNote(*this, connectionName);
 
         // Search legacy note:// protocol links
         addTextToBacklinkNoteHashIfFound(note, QStringLiteral("<") + noteUrl + QStringLiteral(">"));

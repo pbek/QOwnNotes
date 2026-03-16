@@ -48,20 +48,24 @@ void FileNavigationWidget::parse(const QTextDocument *document, int textCursorPo
     const QSignalBlocker blocker(this);
     Q_UNUSED(blocker)
 
-    _doc = document;
-    _cursorPosition = textCursorPosition;
-    buildTree(parseDocument(_doc));
+    const QString text = document == nullptr ? QString() : document->toPlainText();
+    setFileLinkNodes(
+        parseText(text, NoteFolder::currentMediaPath(), NoteFolder::currentAttachmentsPath()),
+        textCursorPosition);
 }
 
-QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseDocument(
-    const QTextDocument *document) {
+void FileNavigationWidget::setFileLinkNodes(const QVector<FileLinkNode> &nodes,
+                                            int textCursorPosition) {
+    const QSignalBlocker blocker(this);
+    Q_UNUSED(blocker)
+
+    _cursorPosition = textCursorPosition;
+    buildTree(nodes);
+}
+
+QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseText(
+    const QString &text, const QString &mediaPath, const QString &attachmentsPath) {
     QVector<FileLinkNode> nodes;
-
-    if (document == nullptr) {
-        return nodes;
-    }
-
-    const QString text = document->toPlainText();
 
     struct FilePattern {
         QRegularExpression regex;
@@ -71,9 +75,9 @@ QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseDocument(
 
     const QVector<FilePattern> patterns = {
         {QRegularExpression(QStringLiteral(R"(!\[.*?\]\(.*media/(.+?)\))")),
-         FileItemType::MediaFile, NoteFolder::currentMediaPath()},
+         FileItemType::MediaFile, mediaPath},
         {QRegularExpression(QStringLiteral(R"(\[.*?\]\(.*attachments/(.+?)\))")),
-         FileItemType::AttachmentFile, NoteFolder::currentAttachmentsPath()},
+         FileItemType::AttachmentFile, attachmentsPath},
     };
 
     for (const auto &pattern : patterns) {
@@ -82,9 +86,9 @@ QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseDocument(
         while (it.hasNext()) {
             const auto match = it.next();
             const QString fileName = QUrl::fromPercentEncoding(match.captured(1).toUtf8());
-            const qsizetype matchPosition = match.capturedStart(0);
+            const int matchPosition = match.capturedStart(0);
 
-            if ((matchPosition < 0) || (matchPosition > std::numeric_limits<int>::max())) {
+            if (matchPosition < 0) {
                 continue;
             }
 

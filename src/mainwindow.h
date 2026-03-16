@@ -913,6 +913,8 @@ class MainWindow : public QMainWindow {
     bool _isMinimizedBeforeFullScreen = false;
     WaitingSpinnerWidget *_openAiActivitySpinner = nullptr;
     QAction *_lastTriggeredAction = nullptr;
+    quint64 _fileNavigationUpdateRequestId = 0;
+    quint64 _backlinkNavigationUpdateRequestId = 0;
 
     void initializeOpenAiActivitySpinner();
 

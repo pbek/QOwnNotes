@@ -9,6 +9,9 @@
 - Changed the Navigation panel to only show the optional "Files" and
   "Backlinks" tabs when the current note actually has file links or backlinks
   to display (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
+- Changed Navigation panel tab visibility checks for the optional "Files" and
+  "Backlinks" tabs to run in the background so the UI stays responsive
+  (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
 - Added a search panel to the update dialog changelog so release note changes can
   be searched directly with the standard find workflow (for
   [#3498](https://github.com/pbek/QOwnNotes/issues/3498))

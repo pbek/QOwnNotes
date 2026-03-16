@@ -13,7 +13,6 @@
 
 #pragma once
 
-#include <QFutureWatcher>
 #include <QTreeWidget>
 
 #include "entities/note.h"
@@ -27,6 +26,7 @@ class BacklinkWidget : public QTreeWidget {
     explicit BacklinkWidget(QWidget *parent = 0);
 
     void findBacklinks(Note note);
+    void setBacklinks(const QHash<Note, QSet<LinkHit>> &reverseLinkNotes);
     bool hasBacklinks() const;
 
    private slots:

@@ -58,9 +58,10 @@ void BacklinkWidget::onItemClicked(QTreeWidgetItem *current, int column) {
 /**
  * Find the backlinks of the document
  */
-void BacklinkWidget::findBacklinks(Note note) {
+void BacklinkWidget::findBacklinks(Note note) { setBacklinks(note.findReverseLinkNotes()); }
+
+void BacklinkWidget::setBacklinks(const QHash<Note, QSet<LinkHit>> &reverseLinkNotes) {
     clear();
-    auto reverseLinkNotes = note.findReverseLinkNotes();
 
     // Iterate over reverseLinkNotes
     for (auto it = reverseLinkNotes.begin(); it != reverseLinkNotes.end(); ++it) {
