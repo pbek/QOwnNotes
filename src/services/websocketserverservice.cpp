@@ -650,7 +650,7 @@ QJsonArray WebSocketServerService::createBookmarks(const QJsonObject &jsonObject
     QString noteText = bookmarksNote.getNoteText().trimmed();
     QJsonArray bookmarkList = jsonObject.value(QStringLiteral("data")).toArray();
 
-    Q_FOREACH (QJsonValue bookmarkObject, bookmarkList) {
+    for (const auto &bookmarkObject : bookmarkList) {
         const QJsonObject data = bookmarkObject.toObject();
         const QString name = data.value(QStringLiteral("name"))
                                  .toString()

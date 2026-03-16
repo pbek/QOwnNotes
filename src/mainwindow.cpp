@@ -4060,7 +4060,8 @@ void MainWindow::updateFileNavigationTab() {
     const quint64 requestId = ++_fileNavigationUpdateRequestId;
     QPointer<MainWindow> window(this);
 
-    QtConcurrent::run([window, noteText, cursorPosition, mediaPath, attachmentsPath, requestId]() {
+    QThreadPool::globalInstance()->start([window, noteText, cursorPosition, mediaPath,
+                                          attachmentsPath, requestId]() {
         const auto nodes = FileNavigationWidget::parseText(noteText, mediaPath, attachmentsPath);
 
         if (window.isNull()) {
@@ -4088,7 +4089,7 @@ void MainWindow::updateBacklinkNavigationTab() {
     const quint64 requestId = ++_backlinkNavigationUpdateRequestId;
     QPointer<MainWindow> window(this);
 
-    QtConcurrent::run([window, note = Note(note), requestId]() mutable {
+    QThreadPool::globalInstance()->start([window, note = Note(note), requestId]() mutable {
         const QString connectionName = DatabaseService::generateConnectionName();
         QHash<Note, QSet<LinkHit>> backlinks;
 
