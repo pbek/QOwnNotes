@@ -4068,19 +4068,22 @@ void MainWindow::updateFileNavigationTab() {
             return;
         }
 
-        QMetaObject::invokeMethod(
-            window,
-            [window, requestId, cursorPosition, nodes]() {
-                if (window.isNull() || (requestId != window->_fileNavigationUpdateRequestId)) {
-                    return;
-                }
+        auto updateFileNavigation = [window, requestId, cursorPosition, nodes]() {
+            if (window.isNull() || (requestId != window->_fileNavigationUpdateRequestId)) {
+                return;
+            }
 
-                window->ui->fileNavigationWidget->setFileLinkNodes(nodes, cursorPosition);
-                window->setOptionalNavigationTabVisible(
-                    window->ui->fileNavigationTab, MainWindow::tr("Files"), 1,
-                    window->ui->fileNavigationWidget->hasFileLinks());
-            },
-            Qt::QueuedConnection);
+            window->ui->fileNavigationWidget->setFileLinkNodes(nodes, cursorPosition);
+            window->setOptionalNavigationTabVisible(
+                window->ui->fileNavigationTab, MainWindow::tr("Files"), 1,
+                window->ui->fileNavigationWidget->hasFileLinks());
+        };
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+        QMetaObject::invokeMethod(window, updateFileNavigation, Qt::QueuedConnection);
+#else
+        QTimer::singleShot(0, window, updateFileNavigation);
+#endif
     });
     Q_UNUSED(future)
 }
@@ -4108,19 +4111,22 @@ void MainWindow::updateBacklinkNavigationTab() {
             return;
         }
 
-        QMetaObject::invokeMethod(
-            window,
-            [window, requestId, backlinks]() {
-                if (window.isNull() || (requestId != window->_backlinkNavigationUpdateRequestId)) {
-                    return;
-                }
+        auto updateBacklinks = [window, requestId, backlinks]() {
+            if (window.isNull() || (requestId != window->_backlinkNavigationUpdateRequestId)) {
+                return;
+            }
 
-                window->ui->backlinkWidget->setBacklinks(backlinks);
-                window->setOptionalNavigationTabVisible(window->ui->backlinkTab,
-                                                        MainWindow::tr("Backlinks"), 2,
-                                                        window->ui->backlinkWidget->hasBacklinks());
-            },
-            Qt::QueuedConnection);
+            window->ui->backlinkWidget->setBacklinks(backlinks);
+            window->setOptionalNavigationTabVisible(window->ui->backlinkTab,
+                                                    MainWindow::tr("Backlinks"), 2,
+                                                    window->ui->backlinkWidget->hasBacklinks());
+        };
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+        QMetaObject::invokeMethod(window, updateBacklinks, Qt::QueuedConnection);
+#else
+        QTimer::singleShot(0, window, updateBacklinks);
+#endif
     });
     Q_UNUSED(future)
 }
