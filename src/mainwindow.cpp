@@ -4060,8 +4060,8 @@ void MainWindow::updateFileNavigationTab() {
     const quint64 requestId = ++_fileNavigationUpdateRequestId;
     QPointer<MainWindow> window(this);
 
-    QThreadPool::globalInstance()->start([window, noteText, cursorPosition, mediaPath,
-                                          attachmentsPath, requestId]() {
+    QFuture<void> future = QtConcurrent::run([window, noteText, cursorPosition, mediaPath,
+                                              attachmentsPath, requestId]() {
         const auto nodes = FileNavigationWidget::parseText(noteText, mediaPath, attachmentsPath);
 
         if (window.isNull()) {
@@ -4082,21 +4082,23 @@ void MainWindow::updateFileNavigationTab() {
             },
             Qt::QueuedConnection);
     });
+    Q_UNUSED(future)
 }
 
 void MainWindow::updateBacklinkNavigationTab() {
     const Note note = currentNote;
+    Note noteCopy(note);
     const quint64 requestId = ++_backlinkNavigationUpdateRequestId;
     QPointer<MainWindow> window(this);
 
-    QThreadPool::globalInstance()->start([window, note = Note(note), requestId]() mutable {
+    QFuture<void> future = QtConcurrent::run([window, noteCopy, requestId]() mutable {
         const QString connectionName = DatabaseService::generateConnectionName();
         QHash<Note, QSet<LinkHit>> backlinks;
 
         {
             QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
             db.open();
-            backlinks = note.findReverseLinkNotes(connectionName);
+            backlinks = noteCopy.findReverseLinkNotes(connectionName);
             db.close();
         }
 
@@ -4120,6 +4122,7 @@ void MainWindow::updateBacklinkNavigationTab() {
             },
             Qt::QueuedConnection);
     });
+    Q_UNUSED(future)
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {
