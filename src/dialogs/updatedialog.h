@@ -8,8 +8,10 @@ class UpdateDialog;
 }
 
 class QAbstractButton;
+class QPushButton;
 class QNetworkReply;
 class QNetworkAccessManager;
+class QTextEditSearchWidget;
 
 class UpdateDialog : public MasterDialog {
     Q_OBJECT
@@ -37,6 +39,7 @@ class UpdateDialog : public MasterDialog {
     QString releaseVersionString;
     QNetworkAccessManager *_networkManager;
     QPushButton *_updateButton;
+    QTextEditSearchWidget *_changeLogSearchWidget;
 
     enum ButtonRole {
         Unset,    // nothing was selected
@@ -48,6 +51,7 @@ class UpdateDialog : public MasterDialog {
     };
 
     void closeEvent(QCloseEvent *event) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
     bool initializeUpdateProcess(const QString &filePath);
 

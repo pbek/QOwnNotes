@@ -40,8 +40,8 @@
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QTextBrowser" name="changeLogEdit">
+      <item>
+       <widget class="QTextBrowser" name="changeLogEdit">
        <property name="readOnly">
         <bool>true</bool>
        </property>
@@ -61,10 +61,17 @@ p, li { white-space: pre-wrap; }
        <property name="openLinks">
         <bool>true</bool>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="searchFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Do you want to download the new version?</string>
        </property>

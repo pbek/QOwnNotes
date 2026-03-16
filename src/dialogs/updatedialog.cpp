@@ -4,10 +4,13 @@
 #include <services/metricsservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+#include <widgets/qtexteditsearchwidget.h>
 
 #include <QDebug>
 #include <QDesktopServices>
 #include <QDir>
+#include <QKeyEvent>
+#include <QLayout>
 #include <QMessageBox>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -21,7 +24,11 @@
 
 UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QString &releaseUrl,
                            const QString &releaseVersionString)
-    : MasterDialog(parent), ui(new Ui::UpdateDialog) {
+    : MasterDialog(parent),
+      ui(new Ui::UpdateDialog),
+      _networkManager(nullptr),
+      _updateButton(nullptr),
+      _changeLogSearchWidget(nullptr) {
     ui->setupUi(this);
     afterSetupUI();
     ui->downloadProgressBar->hide();
@@ -37,6 +44,20 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
     ui->changeLogEdit->document()->setDefaultStyleSheet(Utils::Misc::genericCSS());
     //    ui->label_4->setText("<style>" + Utils::Misc::genericCSS() +
     //                                 "</style>" + ui->label_4->text());
+
+    _changeLogSearchWidget = new QTextEditSearchWidget(ui->changeLogEdit);
+    _changeLogSearchWidget->setReplaceEnabled(false);
+    _changeLogSearchWidget->setDarkMode(
+        SettingsService().value(QStringLiteral("darkMode")).toBool());
+
+    auto *searchLayout = new QVBoxLayout(ui->searchFrame);
+    searchLayout->setSpacing(0);
+    searchLayout->setContentsMargins(0, 0, 0, 0);
+    searchLayout->addWidget(_changeLogSearchWidget);
+    ui->searchFrame->setLayout(searchLayout);
+
+    ui->changeLogEdit->installEventFilter(this);
+    ui->changeLogEdit->viewport()->installEventFilter(this);
 
     ui->changeLogEdit->setHtml(changesHtml);
     ui->versionLabel->setText("Version " + releaseVersionString);
@@ -119,6 +140,30 @@ void UpdateDialog::closeEvent(QCloseEvent *event) {
 void UpdateDialog::show() {
     setIsUpdateDialogOpen(true);
     MasterDialog::show();
+}
+
+bool UpdateDialog::eventFilter(QObject *obj, QEvent *event) {
+    if (((obj == ui->changeLogEdit) || (obj == ui->changeLogEdit->viewport())) &&
+        (event->type() == QEvent::KeyPress)) {
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
+
+        if ((keyEvent->key() == Qt::Key_Escape) && _changeLogSearchWidget->isVisible()) {
+            _changeLogSearchWidget->deactivate();
+            return true;
+        }
+
+        if ((keyEvent->key() == Qt::Key_F) && keyEvent->modifiers().testFlag(Qt::ControlModifier)) {
+            _changeLogSearchWidget->activate();
+            return true;
+        }
+
+        if (keyEvent->key() == Qt::Key_F3) {
+            _changeLogSearchWidget->doSearch(!keyEvent->modifiers().testFlag(Qt::ShiftModifier));
+            return true;
+        }
+    }
+
+    return MasterDialog::eventFilter(obj, event);
 }
 
 void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {

@@ -21,9 +21,8 @@
 #include "ui_qtexteditsearchwidget.h"
 
 QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent)
-    : QWidget(parent), ui(new Ui::QTextEditSearchWidget) {
+    : QWidget(parent), ui(new Ui::QTextEditSearchWidget), _textEdit(parent), _darkMode(false) {
     ui->setupUi(this);
-    _textEdit = parent;
     hide();
 
     QObject::connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(deactivate()));
@@ -231,15 +230,17 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
         found = _textEdit->find(text, options);
     }
 
-    QRect rect = _textEdit->cursorRect();
-    QMargins margins = _textEdit->layout()->contentsMargins();
-    int searchWidgetHotArea = _textEdit->height() - this->height();
-    int marginBottom = (rect.y() > searchWidgetHotArea) ? (this->height() + 10) : 0;
+    if (_textEdit->layout() != nullptr) {
+        QRect rect = _textEdit->cursorRect();
+        QMargins margins = _textEdit->layout()->contentsMargins();
+        int searchWidgetHotArea = _textEdit->height() - this->height();
+        int marginBottom = (rect.y() > searchWidgetHotArea) ? (this->height() + 10) : 0;
 
-    // move the search box a bit up if we would block the search result
-    if (margins.bottom() != marginBottom) {
-        margins.setBottom(marginBottom);
-        _textEdit->layout()->setContentsMargins(margins);
+        // move the search box a bit up if we would block the search result
+        if (margins.bottom() != marginBottom) {
+            margins.setBottom(marginBottom);
+            _textEdit->layout()->setContentsMargins(margins);
+        }
     }
 
     // add a background color according if we found the text or not
