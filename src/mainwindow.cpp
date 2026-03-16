@@ -132,6 +132,7 @@
 #include "ui_mainwindow.h"
 #include "utils/urlhandler.h"
 #include "version.h"
+#include "widgets/filenavigationwidget.h"
 #include "widgets/htmlpreviewwidget.h"
 #include "widgets/noterelationscene.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
@@ -442,6 +443,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // act on heading renames in the navigation widget
     connect(ui->navigationWidget, &NavigationWidget::headingRenamed, this,
             &MainWindow::onNavigationWidgetHeadingRenamed);
+    connect(ui->fileNavigationWidget, &FileNavigationWidget::positionClicked, this,
+            &MainWindow::onFileNavigationWidgetPositionClicked);
     connect(ui->backlinkWidget, &BacklinkWidget::noteClicked, this,
             &MainWindow::onBacklinkWidgetNoteClicked);
 
@@ -4013,6 +4016,8 @@ bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
 void MainWindow::selectNavigationItemAtPosition(int position) {
     if (ui->navigationWidget->isVisible()) {
         ui->navigationWidget->selectItemForCursorPosition(position);
+    } else if (ui->fileNavigationWidget->isVisible()) {
+        ui->fileNavigationWidget->selectItemForCursorPosition(position);
     }
 }
 
@@ -4873,6 +4878,9 @@ void MainWindow::startNavigationParser() {
     if (ui->navigationWidget->isVisible()) {
         ui->navigationWidget->parse(activeNoteTextEdit()->document(),
                                     activeNoteTextEdit()->textCursor().position());
+    } else if (ui->fileNavigationWidget->isVisible()) {
+        ui->fileNavigationWidget->parse(activeNoteTextEdit()->document(),
+                                        activeNoteTextEdit()->textCursor().position());
     } else if (ui->backlinkWidget->isVisible()) {
         ui->backlinkWidget->findBacklinks(currentNote);
     }
@@ -9899,6 +9907,26 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     ui->navigationWidget->setFocus();
 }
 
+void MainWindow::onFileNavigationWidgetPositionClicked(int position) {
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+
+    textEdit->setFocus();
+
+    QTextCursor c = textEdit->textCursor();
+
+    if (c.position() < position) {
+        c.movePosition(QTextCursor::End);
+        textEdit->setTextCursor(c);
+    }
+
+    c.setPosition(position);
+    textEdit->setTextCursor(c);
+
+    noteTextSliderValueChanged(textEdit->verticalScrollBar()->value(), true);
+
+    ui->fileNavigationWidget->setFocus();
+}
+
 /**
  * Handles renaming of headings from the navigation widget
  * Updates the heading text in the note
@@ -12008,7 +12036,7 @@ void MainWindow::noteEditCursorPositionChanged() {
     const bool autoSelect =
         SettingsService().value(QStringLiteral("navigationPanelAutoSelect"), true).toBool();
     if (autoSelect) {
-        selectNavigationItemAtPosition(textEdit->textCursor().block().position());
+        selectNavigationItemAtPosition(textEdit->textCursor().position());
     }
 }
 
@@ -12708,6 +12736,8 @@ void MainWindow::centerAndResize() {
 void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(ui->navigationWidget, arg1,
                                           Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+    Utils::Gui::searchForTextInTreeWidget(ui->fileNavigationWidget, arg1,
+                                          Utils::Gui::TreeWidgetSearchFlag::IntCheck);
     Utils::Gui::searchForTextInTreeWidget(ui->backlinkWidget, arg1,
                                           Utils::Gui::TreeWidgetSearchFlag::IntCheck);
 }
@@ -13123,6 +13153,8 @@ void MainWindow::on_actionJump_to_navigation_panel_triggered() {
         ui->navigationLineEdit->setFocus();
     } else if (ui->navigationWidget->isVisible()) {
         ui->navigationWidget->setFocus();
+    } else if (ui->fileNavigationWidget->isVisible()) {
+        ui->fileNavigationWidget->setFocus();
     } else if (ui->backlinkWidget->isVisible()) {
         ui->backlinkWidget->setFocus();
     }

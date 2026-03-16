@@ -2,6 +2,10 @@
 
 ## 26.3.12
 
+- Added a new "Files" tab to the Navigation panel that lists linked media files
+  and attachments under separate root items, jumps to the selected link in the
+  current note, and offers a context menu action to open the file externally
+  (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
 - Added a search panel to the update dialog changelog so release note changes can
   be searched directly with the standard find workflow (for
   [#3498](https://github.com/pbek/QOwnNotes/issues/3498))

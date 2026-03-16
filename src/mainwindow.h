@@ -276,6 +276,7 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE void focusNoteTextEdit();
 
     void onNavigationWidgetPositionClicked(int position);
+    void onFileNavigationWidgetPositionClicked(int position);
 
     void onNavigationWidgetHeadingRenamed(int position, const QString &oldText,
                                           const QString &newText);
