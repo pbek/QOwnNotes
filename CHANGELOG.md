@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 26.3.12
+## 26.3.13
 
 - Added a new "Files" tab to the Navigation panel that lists linked media files
   and attachments under separate root items, jumps to the selected link in the
@@ -12,6 +12,9 @@
 - Changed Navigation panel tab visibility checks for the optional "Files" and
   "Backlinks" tabs to run in the background so the UI stays responsive
   (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
+
+## 26.3.12
+
 - Added a search panel to the update dialog changelog so release note changes can
   be searched directly with the standard find workflow (for
   [#3498](https://github.com/pbek/QOwnNotes/issues/3498))
