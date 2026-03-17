@@ -1393,6 +1393,8 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->actionUnlock_panels);
 
     _windowToolbar->addSeparator();
+    _windowToolbar->addAction(ui->actionFold_all_headings);
+    _windowToolbar->addAction(ui->actionUnfold_all_headings);
     _windowToolbar->addAction(ui->actionToggle_distraction_free_mode);
     _windowToolbar->addAction(ui->action_Increase_note_text_size);
     _windowToolbar->addAction(ui->action_Decrease_note_text_size);
@@ -2933,6 +2935,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
         settings.value(QStringLiteral("Editor/showLineNumbers")).toBool();
     ui->noteTextEdit->setLineNumberEnabled(showLineNumbersInEditor);
     ui->encryptedNoteTextEdit->setLineNumberEnabled(showLineNumbersInEditor);
+    const bool headingFoldingEnabled =
+        settings.value(QStringLiteral("Editor/headingFolding"), false).toBool();
+    ui->actionFold_all_headings->setVisible(headingFoldingEnabled);
+    ui->actionUnfold_all_headings->setVisible(headingFoldingEnabled);
 
     if (showLineNumbersInEditor) {
         bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
@@ -7124,6 +7130,12 @@ void MainWindow::on_action_Next_heading_triggered() {
         textEdit->setTextCursor(cursor);
         textEdit->ensureCursorVisible();
     }
+}
+
+void MainWindow::on_actionFold_all_headings_triggered() { activeNoteTextEdit()->foldAllHeadings(); }
+
+void MainWindow::on_actionUnfold_all_headings_triggered() {
+    activeNoteTextEdit()->unfoldAllHeadings();
 }
 
 void MainWindow::on_action_Shortcuts_triggered() {

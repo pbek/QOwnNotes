@@ -352,6 +352,10 @@ class MainWindow : public QMainWindow {
 
     void on_action_Next_heading_triggered();
 
+    void on_actionFold_all_headings_triggered();
+
+    void on_actionUnfold_all_headings_triggered();
+
     void on_action_Shortcuts_triggered();
 
     void on_action_Knowledge_base_triggered();

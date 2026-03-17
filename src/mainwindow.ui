@@ -1022,6 +1022,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <addaction name="separator"/>
       <addaction name="action_Previous_heading"/>
       <addaction name="action_Next_heading"/>
+      <addaction name="actionFold_all_headings"/>
+      <addaction name="actionUnfold_all_headings"/>
       <addaction name="separator"/>
       <addaction name="actionPrevious_Note"/>
      <addaction name="actionNext_note"/>
@@ -1668,6 +1670,30 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </property>
     <property name="shortcut">
      <string notr="true">Ctrl+Shift+Page Down</string>
+    </property>
+   </action>
+   <action name="actionFold_all_headings">
+    <property name="icon">
+     <iconset theme="view-hidden" resource="breeze-qownnotes.qrc">
+      <normaloff>:/icons/breeze-qownnotes/16x16/view-hidden.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-hidden.svg</iconset>
+    </property>
+    <property name="text">
+     <string>Fold all headings</string>
+    </property>
+    <property name="toolTip">
+     <string>Fold all headings in the current note</string>
+    </property>
+   </action>
+   <action name="actionUnfold_all_headings">
+    <property name="icon">
+     <iconset theme="view-visible" resource="breeze-qownnotes.qrc">
+      <normaloff>:/icons/breeze-qownnotes/16x16/view-visible.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-visible.svg</iconset>
+    </property>
+    <property name="text">
+     <string>Unfold all headings</string>
+    </property>
+    <property name="toolTip">
+     <string>Unfold all headings in the current note</string>
     </property>
    </action>
    <action name="action_Shortcuts">

@@ -53,7 +53,8 @@
 
 namespace {
 constexpr int kMarkdownLspDiagnosticProperty = QTextFormat::UserProperty + 1;
-}
+constexpr int kFoldIndicatorPadding = 4;
+}    // namespace
 
 // Initialize static member
 QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::_activeAutocompleteEditor = nullptr;
@@ -65,6 +66,9 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     _highlighter = nullptr;
     if (!parent || parent->objectName() != QStringLiteral("LogWidget")) {
         _highlighter = new QOwnNotesMarkdownHighlighter(document());
+
+        connect(_highlighter, &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
+                &QOwnNotesMarkdownTextEdit::refreshFoldingSidebar);
 
         setStyles();
         updateSettings();
@@ -179,6 +183,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
             &QOwnNotesMarkdownTextEdit::onContextMenu);
 
     applyMarkdownLspSettings();
+    refreshFoldingSidebar();
 }
 
 /*
@@ -187,8 +192,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
  * See: https://github.com/pbek/QOwnNotes/issues/2679
  */
 QSize QOwnNotesMarkdownTextEdit::minimumSizeHint() const {
-    int lineWidthLeftMargin =
-        _lineNumArea->isLineNumAreaEnabled() ? _lineNumArea->lineNumAreaWidth() : 0;
+    int lineWidthLeftMargin = _lineNumArea->lineNumAreaWidth();
 
     // Let the min size be the defaultMinSize + lineNumAreaWidth + paper margin
     auto sizeHint = QMarkdownTextEdit::minimumSizeHint();
@@ -534,8 +538,7 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
 
         setViewportMargins(margin, 20, margin, 0);
     } else {
-        int lineWidthLeftMargin =
-            lineNumberArea()->isLineNumAreaEnabled() ? lineNumberArea()->lineNumAreaWidth() : 0;
+        int lineWidthLeftMargin = lineNumberArea()->lineNumAreaWidth();
 
         setLineNumberLeftMarginOffset(10);
         setViewportMargins(10 + lineWidthLeftMargin, 10, 10, 0);
@@ -930,6 +933,276 @@ void QOwnNotesMarkdownTextEdit::paintEvent(QPaintEvent *event) {
     }
 }
 
+int QOwnNotesMarkdownTextEdit::sidebarAdditionalWidth() const {
+    if (objectName() == QStringLiteral("logTextEdit") || !_headingFoldingEnabled ||
+        !_hasFoldableHeadings) {
+        return 0;
+    }
+
+    return fontMetrics().height() + (kFoldIndicatorPadding * 2);
+}
+
+bool QOwnNotesMarkdownTextEdit::isHeadingBlock(const QTextBlock &block, int *level) {
+    if (!block.isValid()) {
+        return false;
+    }
+
+    const int state = block.userState();
+    if (state < MarkdownHighlighter::H1 || state > MarkdownHighlighter::H6) {
+        return false;
+    }
+
+    if (level != nullptr) {
+        *level = state - MarkdownHighlighter::H1 + 1;
+    }
+
+    return true;
+}
+
+bool QOwnNotesMarkdownTextEdit::foldRegionForHeaderBlock(const QTextBlock &headerBlock,
+                                                         FoldRegion &region) const {
+    int level = 0;
+    if (!isHeadingBlock(headerBlock, &level)) {
+        return false;
+    }
+
+    QTextBlock block = headerBlock.next();
+    QTextBlock lastContentBlock;
+
+    while (block.isValid()) {
+        int nextLevel = 0;
+        if (isHeadingBlock(block, &nextLevel) && nextLevel <= level) {
+            break;
+        }
+
+        lastContentBlock = block;
+        block = block.next();
+    }
+
+    if (!lastContentBlock.isValid()) {
+        return false;
+    }
+
+    region.headerBlock = headerBlock;
+    region.firstContentBlock = headerBlock.next();
+    region.lastContentBlock = lastContentBlock;
+    return true;
+}
+
+bool QOwnNotesMarkdownTextEdit::isHeadingFolded(const QTextBlock &headerBlock) const {
+    FoldRegion region;
+    return foldRegionForHeaderBlock(headerBlock, region) && !region.firstContentBlock.isVisible();
+}
+
+bool QOwnNotesMarkdownTextEdit::setFoldRegionFolded(const FoldRegion &region, bool folded) {
+    if (!region.firstContentBlock.isValid() || !region.lastContentBlock.isValid()) {
+        return false;
+    }
+
+    const bool currentlyFolded = !region.firstContentBlock.isVisible();
+    if (currentlyFolded == folded) {
+        return false;
+    }
+
+    QTextCursor cursor = textCursor();
+    const int firstPosition = region.firstContentBlock.position();
+    const int lastPosition = region.lastContentBlock.position() + region.lastContentBlock.length();
+
+    if (folded && cursor.position() >= firstPosition && cursor.position() < lastPosition) {
+        cursor.setPosition(region.headerBlock.position());
+        setTextCursor(cursor);
+    }
+
+    QTextBlock block = region.firstContentBlock;
+    while (block.isValid()) {
+        block.setVisible(!folded);
+        if (folded) {
+            block.setLineCount(0);
+        } else {
+            QTextLayout *layout = block.layout();
+            block.setLineCount(layout ? qMax(1, layout->lineCount()) : 1);
+        }
+
+        if (block == region.lastContentBlock) {
+            break;
+        }
+
+        block = block.next();
+    }
+
+    document()->markContentsDirty(firstPosition, lastPosition - firstPosition);
+    viewport()->update();
+    lineNumberArea()->update();
+    ensureCursorVisible();
+    return true;
+}
+
+bool QOwnNotesMarkdownTextEdit::setHeadingFolded(const QTextBlock &headerBlock, bool folded) {
+    FoldRegion region;
+    return foldRegionForHeaderBlock(headerBlock, region) && setFoldRegionFolded(region, folded);
+}
+
+bool QOwnNotesMarkdownTextEdit::hasFoldableHeadings() const {
+    QTextBlock block = document()->firstBlock();
+    while (block.isValid()) {
+        FoldRegion region;
+        if (foldRegionForHeaderBlock(block, region)) {
+            return true;
+        }
+
+        block = block.next();
+    }
+
+    return false;
+}
+
+void QOwnNotesMarkdownTextEdit::refreshFoldingSidebar() {
+    if (!_headingFoldingEnabled) {
+        _hasFoldableHeadings = false;
+        updateLineNumberAreaWidth(0);
+        lineNumberArea()->update();
+        return;
+    }
+
+    const bool hadFoldableHeadings = _hasFoldableHeadings;
+    _hasFoldableHeadings = hasFoldableHeadings();
+
+    if (hadFoldableHeadings != _hasFoldableHeadings) {
+        updateLineNumberAreaWidth(0);
+    }
+
+    lineNumberArea()->update();
+}
+
+void QOwnNotesMarkdownTextEdit::paintSidebar(QPainter *painter, const QRect &eventRect) {
+    const int additionalWidth = sidebarAdditionalWidth();
+    if (additionalWidth <= 0) {
+        return;
+    }
+
+    QTextBlock block = firstVisibleBlock();
+    int top = qRound(blockBoundingGeometry(block).translated(contentOffset()).top());
+    top += viewportMargins().top();
+    int bottom = top;
+
+    const QColor iconColor = palette().color(QPalette::Active, QPalette::Text);
+    const QColor borderColor = iconColor.lighter(130);
+
+    painter->save();
+    painter->setRenderHint(QPainter::Antialiasing, true);
+
+    while (block.isValid() && top <= eventRect.bottom()) {
+        top = bottom;
+        bottom = top + qRound(blockBoundingRect(block).height());
+
+        if (block.isVisible() && bottom >= eventRect.top()) {
+            FoldRegion region;
+            if (foldRegionForHeaderBlock(block, region)) {
+                const int indicatorSize = qMax(7, fontMetrics().height() - 8);
+                const int x = kFoldIndicatorPadding;
+                const int y =
+                    top + qMax(0, (qRound(blockBoundingRect(block).height()) - indicatorSize) / 2);
+                const QRect indicatorRect(x, y, indicatorSize, indicatorSize);
+                const bool folded = isHeadingFolded(block);
+
+                painter->setPen(borderColor);
+                painter->setBrush(Qt::NoBrush);
+                painter->drawRect(indicatorRect.adjusted(0, 0, -1, -1));
+
+                painter->setPen(QPen(iconColor, 1.5));
+                painter->drawLine(indicatorRect.left() + 2, indicatorRect.center().y(),
+                                  indicatorRect.right() - 2, indicatorRect.center().y());
+
+                if (folded) {
+                    painter->drawLine(indicatorRect.center().x(), indicatorRect.top() + 2,
+                                      indicatorRect.center().x(), indicatorRect.bottom() - 2);
+                }
+            }
+        }
+
+        block = block.next();
+    }
+
+    painter->restore();
+}
+
+bool QOwnNotesMarkdownTextEdit::headerBlockAtSidebarPosition(const QPoint &pos,
+                                                             QTextBlock &headerBlock) const {
+    if (pos.x() > sidebarAdditionalWidth()) {
+        return false;
+    }
+
+    QTextBlock block = firstVisibleBlock();
+    int top = qRound(blockBoundingGeometry(block).translated(contentOffset()).top());
+    top += QPlainTextEdit::viewportMargins().top();
+    int bottom = top;
+
+    while (block.isValid()) {
+        top = bottom;
+        bottom = top + qRound(blockBoundingRect(block).height());
+
+        if (block.isVisible() && pos.y() >= top && pos.y() <= bottom) {
+            FoldRegion region;
+            if (foldRegionForHeaderBlock(block, region)) {
+                headerBlock = block;
+                return true;
+            }
+
+            return false;
+        }
+
+        if (top > pos.y()) {
+            return false;
+        }
+
+        block = block.next();
+    }
+
+    return false;
+}
+
+bool QOwnNotesMarkdownTextEdit::sidebarMousePressEvent(QMouseEvent *event) {
+    if (event == nullptr || event->button() != Qt::LeftButton || sidebarAdditionalWidth() <= 0) {
+        return false;
+    }
+
+    QTextBlock headerBlock;
+    if (!headerBlockAtSidebarPosition(event->pos(), headerBlock)) {
+        return false;
+    }
+
+    const bool handled = setHeadingFolded(headerBlock, !isHeadingFolded(headerBlock));
+    if (handled) {
+        event->accept();
+    }
+
+    return handled;
+}
+
+void QOwnNotesMarkdownTextEdit::foldAllHeadings() {
+    if (!_headingFoldingEnabled) {
+        return;
+    }
+
+    QTextBlock block = document()->firstBlock();
+    while (block.isValid()) {
+        setHeadingFolded(block, true);
+        block = block.next();
+    }
+
+    refreshFoldingSidebar();
+}
+
+void QOwnNotesMarkdownTextEdit::unfoldAllHeadings() {
+    QTextBlock block = document()->firstBlock();
+    while (block.isValid()) {
+        setHeadingFolded(block, false);
+        block = block.next();
+    }
+
+    refreshFoldingSidebar();
+}
+
 /**
  * Resolves a raw Markdown image source string to a canonical URL string
  * suitable for loading (file://, data:image/, http(s)://, or Nextcloud
@@ -1307,9 +1580,15 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     const bool hangingIndentEnabled =
         settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool();
     setHangingIndentEnabled(hangingIndentEnabled);
+    _headingFoldingEnabled =
+        settings.value(QStringLiteral("Editor/headingFolding"), false).toBool();
+    if (!_headingFoldingEnabled) {
+        unfoldAllHeadings();
+    }
     _showMarkdownImagePreviews =
         settings.value(QStringLiteral("Editor/showMarkdownImagePreviews"), true).toBool();
     viewport()->update();
+    refreshFoldingSidebar();
     const auto color = Utils::Schema::schemaSettings->getBackgroundColor(
         MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor);
     setCurrentLineHighlightColor(color);

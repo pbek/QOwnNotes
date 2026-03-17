@@ -2,6 +2,9 @@
 
 ## 26.3.13
 
+- Added Markdown heading folding in the note editor with clickable gutter
+  toggles, fold/unfold-all actions, and a new Editor setting to enable or
+  disable the feature (for [#2126](https://github.com/pbek/QOwnNotes/issues/2126))
 - Added a new "Files" tab to the Navigation panel that lists linked media files
   and attachments under separate root items, jumps to the selected link in the
   current note, and offers a context menu action to open the file externally

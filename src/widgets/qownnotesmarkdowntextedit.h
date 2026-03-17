@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QTextBlock>
 #include <QTextEdit>
 
 #include "helpers/qownnotesmarkdownhighlighter.h"
@@ -38,6 +39,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool isSpellCheckingEnabled();
     void disableSpellChecking();
     bool usesMonospacedFont();
+    void foldAllHeadings();
+    void unfoldAllHeadings();
 
     /**
      * Toggles the case of the word under the Cursor or the selected text
@@ -131,8 +134,17 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void keyPressEvent(QKeyEvent *e) override;
     void focusInEvent(QFocusEvent *e) override;
     bool viewportEvent(QEvent *event) override;
+    int sidebarAdditionalWidth() const override;
+    void paintSidebar(QPainter *painter, const QRect &eventRect) override;
+    bool sidebarMousePressEvent(QMouseEvent *event) override;
 
    private:
+    struct FoldRegion {
+        QTextBlock headerBlock;
+        QTextBlock firstContentBlock;
+        QTextBlock lastContentBlock;
+    };
+
     /// @param in is true if zoom-in, false otherwise
     void onZoom(bool in);
 
@@ -179,9 +191,19 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void showMarkdownLspCodeActions(int requestId,
                                     const QVector<MarkdownLspClient::CodeAction> &actions);
     void paintMarkdownImagePreviews();
+    void refreshFoldingSidebar();
+    static bool isHeadingBlock(const QTextBlock &block, int *level = nullptr);
+    bool foldRegionForHeaderBlock(const QTextBlock &headerBlock, FoldRegion &region) const;
+    bool setHeadingFolded(const QTextBlock &headerBlock, bool folded);
+    bool setFoldRegionFolded(const FoldRegion &region, bool folded);
+    bool isHeadingFolded(const QTextBlock &headerBlock) const;
+    bool hasFoldableHeadings() const;
+    bool headerBlockAtSidebarPosition(const QPoint &pos, QTextBlock &headerBlock) const;
 
     bool _isSpellCheckingDisabled = false;
     bool _showMarkdownImagePreviews = true;
+    bool _headingFoldingEnabled = true;
+    bool _hasFoldableHeadings = false;
     QString _aiAutocompleteSuggestion;
     int _aiAutocompletePosition = -1;
     QTimer *_aiAutocompleteTimer = nullptr;
