@@ -628,7 +628,8 @@ void FileNavigationWidget::refreshFromCurrentNote() {
         return;
     }
 
-    if (auto *textEdit = mainWindow->activeNoteTextEdit(); textEdit != nullptr) {
+    auto *textEdit = mainWindow->activeNoteTextEdit();
+    if (textEdit != nullptr) {
         _fileLinkNodes.clear();
         parse(textEdit->document(), textEdit->textCursor().position());
     }
