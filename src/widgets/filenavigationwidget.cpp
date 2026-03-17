@@ -20,9 +20,11 @@
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QKeyEvent>
 #include <QMenu>
 #include <QMessageBox>
 #include <QRegularExpression>
+#include <QSet>
 #include <QSignalBlocker>
 #include <QTextCursor>
 #include <QTextDocument>
@@ -57,6 +59,12 @@ QString encodedFileName(const QString &fileName) {
     return QString(QUrl::toPercentEncoding(fileName));
 }
 
+struct SelectedLinkedFile {
+    QString filePath;
+    QString fileName;
+    FileNavigationWidget::FileItemType type;
+};
+
 QRegularExpression linkedFileNameRegex(const QString &folderName, const QString &fileName) {
     return QRegularExpression(
         QStringLiteral(R"(((?:!\[.*?\]|\[.*?\])\((?:.*?%1\/.*?))%2((?:#[^)]+)?\)))")
@@ -88,6 +96,20 @@ bool replaceLinkedFileNameInText(QString &text, const QString &folderName,
     return text != originalText;
 }
 
+bool removeLinkedFileLinksFromText(QString &text, const QString &folderName,
+                                   const QString &fileName) {
+    const QString encodedPath = encodedFileName(fileName);
+    const QString originalText = text;
+
+    text.replace(linkedFileNameRegex(folderName, fileName), QString());
+
+    if (encodedPath != fileName) {
+        text.replace(linkedFileNameRegex(folderName, encodedPath), QString());
+    }
+
+    return text != originalText;
+}
+
 QVector<int> findAffectedNoteIds(const QString &fileName, FileNavigationWidget::FileItemType type) {
     QVector<int> affectedNoteIds;
     const QString folderName = linkedFolderName(type);
@@ -109,6 +131,100 @@ QVector<int> findAffectedNoteIds(const QString &fileName, FileNavigationWidget::
     }
 
     return affectedNoteIds;
+}
+
+QVector<SelectedLinkedFile> selectedLinkedFiles(const QList<QTreeWidgetItem *> &items) {
+    QVector<SelectedLinkedFile> linkedFiles;
+    QSet<QString> seenFilePaths;
+
+    for (const auto *item : items) {
+        if (item == nullptr) {
+            continue;
+        }
+
+        const QString filePath = item->data(0, FilePathRole).toString();
+        const QString fileName = item->data(0, FileNameRole).toString();
+
+        if (filePath.isEmpty() || fileName.isEmpty() || seenFilePaths.contains(filePath)) {
+            continue;
+        }
+
+        seenFilePaths.insert(filePath);
+        linkedFiles.append(
+            {filePath, fileName,
+             static_cast<FileNavigationWidget::FileItemType>(item->data(0, FileTypeRole).toInt())});
+    }
+
+    return linkedFiles;
+}
+
+QVector<int> findAffectedNoteIds(const QVector<SelectedLinkedFile> &linkedFiles) {
+    QVector<int> affectedNoteIds;
+    QSet<int> seenNoteIds;
+
+    for (const auto &linkedFile : linkedFiles) {
+        for (const int noteId : findAffectedNoteIds(linkedFile.fileName, linkedFile.type)) {
+            if (seenNoteIds.contains(noteId)) {
+                continue;
+            }
+
+            seenNoteIds.insert(noteId);
+            affectedNoteIds.append(noteId);
+        }
+    }
+
+    return affectedNoteIds;
+}
+
+bool removeLinkedFileLinksFromNotes(const QVector<int> &affectedNoteIds,
+                                    const QVector<SelectedLinkedFile> &linkedFiles) {
+    if (affectedNoteIds.isEmpty() || linkedFiles.isEmpty()) {
+        return false;
+    }
+
+    MainWindow *mainWindow = MainWindow::instance();
+    const int currentNoteId = mainWindow == nullptr ? -1 : mainWindow->getCurrentNote().getId();
+    QOwnNotesMarkdownTextEdit *textEdit =
+        mainWindow == nullptr ? nullptr : mainWindow->activeNoteTextEdit();
+    QString updatedCurrentNoteText;
+    bool currentNoteUpdated = false;
+    bool anyNoteUpdated = false;
+
+    for (const int noteId : affectedNoteIds) {
+        Note note = Note::fetch(noteId);
+
+        if (!note.isFetched()) {
+            continue;
+        }
+
+        QString text = ((noteId == currentNoteId) && (textEdit != nullptr))
+                           ? textEdit->toPlainText()
+                           : note.getNoteText();
+        bool noteChanged = false;
+
+        for (const auto &linkedFile : linkedFiles) {
+            noteChanged = removeLinkedFileLinksFromText(text, linkedFolderName(linkedFile.type),
+                                                        linkedFile.fileName) ||
+                          noteChanged;
+        }
+
+        if (!noteChanged || !note.storeNewText(text)) {
+            continue;
+        }
+
+        anyNoteUpdated = true;
+
+        if (noteId == currentNoteId) {
+            updatedCurrentNoteText = text;
+            currentNoteUpdated = true;
+        }
+    }
+
+    if (currentNoteUpdated && (mainWindow != nullptr)) {
+        mainWindow->setCurrentNoteText(updatedCurrentNoteText);
+    }
+
+    return anyNoteUpdated;
 }
 }    // namespace
 
@@ -319,6 +435,97 @@ void FileNavigationWidget::onItemChanged(QTreeWidgetItem *item, int column) {
     }
 }
 
+void FileNavigationWidget::keyPressEvent(QKeyEvent *event) {
+    if ((event != nullptr) && (state() != QAbstractItemView::EditingState) &&
+        ((event->key() == Qt::Key_Delete) || (event->key() == Qt::Key_Backspace))) {
+        auto *item = currentItem();
+
+        if ((item != nullptr) && !item->data(0, FilePathRole).toString().isEmpty()) {
+            deleteSelectedLinkedFiles();
+            event->accept();
+            return;
+        }
+    }
+
+    QTreeWidget::keyPressEvent(event);
+}
+
+bool FileNavigationWidget::deleteSelectedLinkedFiles() {
+    QVector<SelectedLinkedFile> linkedFiles = selectedLinkedFiles(selectedItems());
+
+    if (linkedFiles.isEmpty()) {
+        auto *item = currentItem();
+
+        if ((item == nullptr) || item->data(0, FilePathRole).toString().isEmpty()) {
+            return false;
+        }
+
+        QList<QTreeWidgetItem *> items;
+        items.append(item);
+        linkedFiles = selectedLinkedFiles(items);
+    }
+
+    if (linkedFiles.isEmpty()) {
+        return false;
+    }
+
+    const int selectedFileCount = linkedFiles.count();
+    const QVector<int> affectedNoteIds = findAffectedNoteIds(linkedFiles);
+    const int affectedNoteCount = affectedNoteIds.count();
+
+    if (Utils::Gui::question(
+            this, tr("Delete linked files"),
+            tr("Delete <strong>%n</strong> selected linked file(s)? You can also remove "
+               "their links from <strong>%1</strong> note file(s) afterwards.",
+               "", selectedFileCount)
+                .arg(affectedNoteCount),
+            QStringLiteral("delete-linked-files")) != QMessageBox::Yes) {
+        return true;
+    }
+
+    QVector<SelectedLinkedFile> deletedLinkedFiles;
+    QVector<QString> failedFilePaths;
+
+    for (const auto &linkedFile : linkedFiles) {
+        QFile file(linkedFile.filePath);
+
+        if (!file.exists() || !file.remove()) {
+            failedFilePaths.append(linkedFile.filePath);
+            continue;
+        }
+
+        deletedLinkedFiles.append(linkedFile);
+    }
+
+    if (!failedFilePaths.isEmpty()) {
+        const QString message = failedFilePaths.count() == 1
+                                    ? tr("Deleting the file <strong>%1</strong> failed!")
+                                          .arg(failedFilePaths.first().toHtmlEscaped())
+                                    : tr("Deleting <strong>%n</strong> linked file(s) failed!", "",
+                                         failedFilePaths.count());
+        QMessageBox::warning(this, tr("File deleting failed"), message);
+    }
+
+    if (!deletedLinkedFiles.isEmpty()) {
+        const QVector<int> affectedDeletedNoteIds = findAffectedNoteIds(deletedLinkedFiles);
+        const int affectedDeletedNoteCount = affectedDeletedNoteIds.count();
+
+        if ((affectedDeletedNoteCount > 0) &&
+            (Utils::Gui::questionNoSkipOverride(
+                 this, tr("Remove linked file references"),
+                 tr("The deleted file(s) are used in <strong>%n</strong> note file(s). "
+                    "Would you like to remove those media and attachment links "
+                    "everywhere? This will update <strong>%n</strong> note file(s).",
+                    "", affectedDeletedNoteCount),
+                 QStringLiteral("note-remove-linked-file-references")) == QMessageBox::Yes)) {
+            removeLinkedFileLinksFromNotes(affectedDeletedNoteIds, deletedLinkedFiles);
+        }
+    }
+
+    refreshFromCurrentNote();
+    return true;
+}
+
 bool FileNavigationWidget::renameLinkedFile(QTreeWidgetItem *item, const QString &oldFileName,
                                             const QString &newFileName, FileItemType type) {
     const QString oldFilePath = item->data(0, FilePathRole).toString();
@@ -410,15 +617,21 @@ bool FileNavigationWidget::renameLinkedFile(QTreeWidgetItem *item, const QString
         }
     }
 
-    MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow != nullptr) {
-        if (auto *textEdit = mainWindow->activeNoteTextEdit(); textEdit != nullptr) {
-            _fileLinkNodes.clear();
-            parse(textEdit->document(), textEdit->textCursor().position());
-        }
-    }
+    refreshFromCurrentNote();
 
     return true;
+}
+
+void FileNavigationWidget::refreshFromCurrentNote() {
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == nullptr) {
+        return;
+    }
+
+    if (auto *textEdit = mainWindow->activeNoteTextEdit(); textEdit != nullptr) {
+        _fileLinkNodes.clear();
+        parse(textEdit->document(), textEdit->textCursor().position());
+    }
 }
 
 void FileNavigationWidget::showContextMenu(const QPoint &pos) {
@@ -431,8 +644,14 @@ void FileNavigationWidget::showContextMenu(const QPoint &pos) {
 
     QMenu menu(this);
     auto *openAction = menu.addAction(tr("&Open file externally"));
+    auto *deleteAction = menu.addAction(tr("&Delete file"));
 
     QAction *selectedAction = menu.exec(mapToGlobal(pos));
+    if (selectedAction == deleteAction) {
+        deleteSelectedLinkedFiles();
+        return;
+    }
+
     if (selectedAction != openAction) {
         return;
     }

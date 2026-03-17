@@ -10,6 +10,10 @@
   panel's "Files" tab via `F2`, with a follow-up refactoring prompt that tells
   you how many note files will be updated before renaming linked filenames
   everywhere (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
+- Added deleting linked media files and attachments from the Navigation panel's
+  "Files" tab via `Del` and a context menu action, with confirmations that show
+  how many note files can be updated and an optional follow-up dialog to remove
+  those file links everywhere (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
 - Changed the Navigation panel to only show the optional "Files" and
   "Backlinks" tabs when the current note actually has file links or backlinks
   to display (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))

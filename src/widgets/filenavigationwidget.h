@@ -18,6 +18,7 @@
 #include <QTreeWidget>
 #include <QVector>
 
+class QKeyEvent;
 class QTextDocument;
 class QTreeWidgetItem;
 
@@ -58,10 +59,13 @@ class FileNavigationWidget : public QTreeWidget {
     void positionClicked(int position);
 
    private:
+    void keyPressEvent(QKeyEvent *event) override;
     void buildTree(const QVector<FileLinkNode> &nodes);
     void emitPositionForItem(const QTreeWidgetItem *item);
+    bool deleteSelectedLinkedFiles();
     bool renameLinkedFile(QTreeWidgetItem *item, const QString &oldFileName,
                           const QString &newFileName, FileItemType type);
+    void refreshFromCurrentNote();
 
     QVector<FileLinkNode> _fileLinkNodes;
     int _cursorPosition = 0;
