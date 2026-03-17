@@ -51,6 +51,7 @@ class FileNavigationWidget : public QTreeWidget {
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void onItemClicked(QTreeWidgetItem *current, int column);
+    void onItemChanged(QTreeWidgetItem *item, int column);
     void showContextMenu(const QPoint &pos);
 
    signals:
@@ -59,6 +60,8 @@ class FileNavigationWidget : public QTreeWidget {
    private:
     void buildTree(const QVector<FileLinkNode> &nodes);
     void emitPositionForItem(const QTreeWidgetItem *item);
+    bool renameLinkedFile(QTreeWidgetItem *item, const QString &oldFileName,
+                          const QString &newFileName, FileItemType type);
 
     QVector<FileLinkNode> _fileLinkNodes;
     int _cursorPosition = 0;

@@ -6,6 +6,10 @@
   and attachments under separate root items, jumps to the selected link in the
   current note, and offers a context menu action to open the file externally
   (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
+- Added inline renaming for linked media files and attachments in the Navigation
+  panel's "Files" tab via `F2`, with a follow-up refactoring prompt that tells
+  you how many note files will be updated before renaming linked filenames
+  everywhere (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
 - Changed the Navigation panel to only show the optional "Files" and
   "Backlinks" tabs when the current note actually has file links or backlinks
   to display (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
