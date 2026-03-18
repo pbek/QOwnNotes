@@ -219,13 +219,55 @@ jobs:
         run: |
           export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
           export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+          QT_DIR=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64
+
+          # Set the extra Qt modules to include (Quick is needed by the Qt6 build's script engine)
+          export EXTRA_QT_MODULES="Qml;QmlWorkerScript;QmlModels;Quick"
+
+          # Tell linuxdeploy-plugin-qt where to find QML files so it scans and
+          # bundles the QML import modules (QtQml, QtQuick, etc.) that the
+          # QQmlEngine needs at runtime for user scripts.
+          # We point it at our example scripts which all do "import QtQml 2.0".
+          export QML_SOURCES_PATHS="../docs/scripting/examples"
+          export QML_MODULES_PATHS="${QT_DIR}/qml"
+
           cp ../icons/icon.png QOwnNotes.png
+
           ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
-          mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
+
+          mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${QT_DIR}/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
           mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
-          cp -rL ${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/lib/libQt6QmlWorkerScript.so.6 ${{env.BUILD_DIR}}/usr/lib
+
+          # Ensure QML import directories are present in the AppImage.
+          # linuxdeploy-plugin-qt should deploy them via QML_SOURCES_PATHS,
+          # but we copy them explicitly as a safety net so "import QtQml 2.0"
+          # always resolves from within the bundle instead of the host system.
+          QML_DEST=${{env.BUILD_DIR}}/usr/qml
+          for mod in QtQml QtQuick QtQml/WorkerScript; do
+            if [ -d "${QT_DIR}/qml/${mod}" ] && [ ! -d "${QML_DEST}/${mod}" ]; then
+              mkdir -p "${QML_DEST}/${mod}"
+              cp -a "${QT_DIR}/qml/${mod}/." "${QML_DEST}/${mod}/"
+            fi
+          done
+
+          # Write qt.conf AFTER linuxdeploy to ensure it is not overwritten.
+          # This forces Qt to load plugins and QML imports from the AppImage bundle
+          # instead of from the host system (e.g. Nix store paths).
+          cat > ${{env.BUILD_DIR}}/usr/bin/qt.conf <<'QTCONF'
+          [Paths]
+          Prefix = ..
+          Plugins = plugins
+          Qml2Imports = qml
+          QmlImports = qml
+          QTCONF
+
+          # Strip leading whitespace that YAML indentation adds to the heredoc
+          sed -i 's/^[[:space:]]*//' ${{env.BUILD_DIR}}/usr/bin/qt.conf
+
+          mkdir -p ${{env.BUILD_DIR}}/usr/lib
           cp -L /usr/lib/x86_64-linux-gnu/libssl.so.3 ${{env.BUILD_DIR}}/usr/lib/
           cp -L /usr/lib/x86_64-linux-gnu/libcrypto.so.3 ${{env.BUILD_DIR}}/usr/lib/
+
           find ${{env.BUILD_DIR}}
           ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
           rm linuxdeploy-x86_64.AppImage
