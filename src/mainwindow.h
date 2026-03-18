@@ -855,7 +855,7 @@ class MainWindow : public QMainWindow {
     QDockWidget *_noteFolderDockWidget;
     QDockWidget *_noteListDockWidget;
     QDockWidget *_noteNavigationDockWidget;
-    QDockWidget *_noteEditDockWidget;
+    QDockWidget *_noteEditDockWidget = nullptr;
     QDockWidget *_noteTagDockWidget;
     QDockWidget *_notePreviewDockWidget;
     QDockWidget *_logDockWidget;
@@ -868,7 +868,7 @@ class MainWindow : public QMainWindow {
     QWidget *_noteFolderDockTitleBarWidget;
     QWidget *_noteListDockTitleBarWidget;
     QWidget *_noteNavigationDockTitleBarWidget;
-    QWidget *_noteEditDockTitleBarWidget;
+    QWidget *_noteEditDockTitleBarWidget = nullptr;
     QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
     QWidget *_logDockTitleBarWidget;
@@ -1092,6 +1092,12 @@ class MainWindow : public QMainWindow {
     static void updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height);
 
     void initDockWidgets();
+
+    void createNoteEditDockWidget();
+
+    void setNoteEditCentralWidgetEnabled(bool enabled);
+
+    void updateNoteEditFrameShape() const;
 
     void updateWorkspaceLists(bool rebuild = true);
 

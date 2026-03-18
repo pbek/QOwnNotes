@@ -189,7 +189,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->startHiddenCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->fullyHighlightedBlockquotesCheckBox, SIGNAL(toggled(bool)), this,
             SLOT(needRestart()));
-    connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->noteFolderButtonsCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->maxNoteFileSizeSpinBox, SIGNAL(valueChanged(int)), this, SLOT(needRestart()));
@@ -210,6 +209,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
     //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
     //            this, SLOT(needRestart()));
+    connect(ui->layoutWidget, &LayoutWidget::settingsStored, this,
+            &SettingsDialog::onLayoutSettingsStored);
 
     if (fromWelcomeDialog) {
         // hide the whole left side frame with the settings menu tree
@@ -2058,6 +2059,15 @@ void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button) {
     if (button == ui->buttonBox->button(QDialogButtonBox::Ok)) {
         storeSettings();
     }
+}
+
+void SettingsDialog::onLayoutSettingsStored(const QString &workspaceIdentifier) {
+    auto *mainWindow = MainWindow::instance();
+    if ((mainWindow == nullptr) || workspaceIdentifier.isEmpty()) {
+        return;
+    }
+
+    mainWindow->setCurrentWorkspace(workspaceIdentifier);
 }
 
 void SettingsDialog::on_ownCloudServerAppPageButton_clicked() {

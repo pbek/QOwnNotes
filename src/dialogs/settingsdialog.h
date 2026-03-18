@@ -241,6 +241,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_markdownLspEnabledCheckBox_toggled(bool checked);
 
+    void onLayoutSettingsStored(const QString &workspaceIdentifier);
+
     void on_localTrashEnabledCheckBox_toggled(bool checked);
 
     void on_localTrashClearCheckBox_toggled(bool checked);

@@ -78,11 +78,11 @@ void LayoutWidget::updateCurrentLayout() {
 }
 
 void LayoutWidget::storeSettings() {
+    QString workspaceIdentifier;
+
     if (_manualSettingsStoring) {
         QString title = tr("Use new layout");
-        QString text = tr("Do you want to use the selected layout?") + "\n\n" +
-                       tr("The application will be restarted afterward.") +
-                       Utils::Misc::appendSingleAppInstanceTextIfNeeded();
+        QString text = tr("Do you want to use the selected layout?");
 
         if (Utils::Gui::question(this, title, text, "layoutwidget-use-layout",
                                  QMessageBox::Yes | QMessageBox::No,
@@ -95,7 +95,7 @@ void LayoutWidget::storeSettings() {
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     SettingsService settings;
     QStringList workspaces = settings.value(QStringLiteral("workspaces")).toStringList();
-    QString workspaceIdentifier =
+    workspaceIdentifier =
         _manualSettingsStoring ? Utils::Misc::generateRandomString(12) : "initial";
 
     if (!workspaces.contains(workspaceIdentifier)) {
@@ -106,6 +106,8 @@ void LayoutWidget::storeSettings() {
     settings.setValue(QStringLiteral("initialLayoutIdentifier"), layoutIdentifier);
     settings.setValue(QStringLiteral("currentWorkspace"), workspaceIdentifier);
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
+                      _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
+    settings.setValue("workspace-" + workspaceIdentifier + "/noteEditIsCentralWidget",
                       _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
     settings.setValue("workspace-" + workspaceIdentifier + "/windowState",
                       _layoutSettings->value(layoutSettingsPrefix + "windowState"));
@@ -119,14 +121,7 @@ void LayoutWidget::storeSettings() {
     // window
     settings.setValue(QStringLiteral("initialWorkspace"), true);
 
-    emit settingsStored();
-
-    if (_manualSettingsStoring) {
-        // make sure no settings get written after quitting
-        qApp->setProperty("clearAppDataAndExit", true);
-
-        Utils::Misc::restartApplication();
-    }
+    emit settingsStored(workspaceIdentifier);
 }
 
 void LayoutWidget::setManualSettingsStoring(bool enabled) {

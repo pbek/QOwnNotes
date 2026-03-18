@@ -1014,14 +1014,7 @@ void MainWindow::initDockWidgets() {
     ui->navigationTabWidget->setCurrentIndex(0);
 
     if (!_noteEditIsCentralWidget) {
-        _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
-        _noteEditDockWidget->setObjectName(QStringLiteral("noteEditDockWidget"));
-        _noteEditDockWidget->setWidget(ui->noteEditTabWidget);
-        _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
-        sizePolicy = _noteEditDockWidget->sizePolicy();
-        sizePolicy.setHorizontalStretch(5);
-        _noteEditDockWidget->setSizePolicy(sizePolicy);
-        addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
+        createNoteEditDockWidget();
     }
 
     _noteTagDockWidget = new QDockWidget(tr("Note tags"), this);
@@ -1094,14 +1087,7 @@ void MainWindow::initDockWidgets() {
 
     setDockNestingEnabled(true);
     setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditTabWidget : nullptr);
-
-    // macOS and Windows will look better without this
-#ifdef Q_OS_LINUX
-    if (_noteEditIsCentralWidget) {
-        ui->noteTextEdit->setFrameShape(QFrame::StyledPanel);
-        ui->encryptedNoteTextEdit->setFrameShape(QFrame::StyledPanel);
-    }
-#endif
+    updateNoteEditFrameShape();
 
     // restore the current workspace
     restoreCurrentWorkspace();
@@ -1114,6 +1100,78 @@ void MainWindow::initDockWidgets() {
 
     // initialize the panel menu
     initPanelMenu();
+}
+
+void MainWindow::createNoteEditDockWidget() {
+    if (_noteEditDockWidget != nullptr) {
+        return;
+    }
+
+    auto *noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
+    noteEditDockWidget->setObjectName(QStringLiteral("noteEditDockWidget"));
+    noteEditDockWidget->setWidget(ui->noteEditTabWidget);
+
+    QSizePolicy sizePolicy = noteEditDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(5);
+    noteEditDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::RightDockWidgetArea, noteEditDockWidget, Qt::Horizontal);
+
+    _noteEditDockWidget = noteEditDockWidget;
+    _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
+}
+
+void MainWindow::setNoteEditCentralWidgetEnabled(bool enabled) {
+    if (_noteEditIsCentralWidget == enabled) {
+        return;
+    }
+
+    QWidget *focusWidget = qApp->focusWidget();
+    const bool panelsUnlocked = ui->actionUnlock_panels->isChecked();
+    _noteEditIsCentralWidget = enabled;
+
+    if (_noteEditIsCentralWidget) {
+        if (_noteEditDockWidget != nullptr) {
+            _noteEditDockWidget->hide();
+            ui->noteEditTabWidget->hide();
+            ui->noteEditTabWidget->setParent(this);
+            removeDockWidget(_noteEditDockWidget);
+            delete _noteEditDockWidget;
+            _noteEditDockWidget = nullptr;
+            _noteEditDockTitleBarWidget = nullptr;
+        }
+
+        setCentralWidget(ui->noteEditTabWidget);
+    } else {
+        if (centralWidget() == ui->noteEditTabWidget) {
+            takeCentralWidget();
+        }
+
+        createNoteEditDockWidget();
+    }
+
+    if ((_noteTagDockWidget != nullptr) && !_noteTagDockWidget->isFloating()) {
+        removeDockWidget(_noteTagDockWidget);
+        addDockWidget(_noteEditIsCentralWidget ? Qt::LeftDockWidgetArea : Qt::RightDockWidgetArea,
+                      _noteTagDockWidget, Qt::Vertical);
+    }
+
+    updateNoteEditFrameShape();
+    setDockNestingEnabled(true);
+    initPanelMenu();
+    on_actionUnlock_panels_toggled(panelsUnlocked);
+    updatePanelMenu();
+
+    if (focusWidget != nullptr) {
+        focusWidget->setFocus();
+    }
+}
+
+void MainWindow::updateNoteEditFrameShape() const {
+#ifdef Q_OS_LINUX
+    const auto shape = _noteEditIsCentralWidget ? QFrame::StyledPanel : QFrame::NoFrame;
+    ui->noteTextEdit->setFrameShape(shape);
+    ui->encryptedNoteTextEdit->setFrameShape(shape);
+#endif
 }
 
 void MainWindow::setupNoteRelationScene() {
@@ -1483,6 +1541,9 @@ void MainWindow::initPanelMenu() {
     // update the panel menu if the visibility of a panel was changed
     const auto dockWidgets = findChildren<QDockWidget *>();
     for (QDockWidget *dockWidget : dockWidgets) {
+        QObject::disconnect(dockWidget, SIGNAL(visibilityChanged(bool)), this,
+                            SLOT(updatePanelMenu()));
+
         // seems to crash the application on exit
         //        connect(dockWidget, &QDockWidget::visibilityChanged, this,
         //        [this](){
@@ -2828,6 +2889,13 @@ void MainWindow::restoreToolbars() {
  */
 void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     SettingsService settings;
+    const bool noteEditIsCentralWidget =
+        settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
+
+    if (_noteEditIsCentralWidget != noteEditIsCentralWidget) {
+        setNoteEditCentralWidgetEnabled(noteEditIsCentralWidget);
+        storeCurrentWorkspace();
+    }
 
     this->notifyAllExternalModifications =
         settings.value(QStringLiteral("notifyAllExternalModifications")).toBool();
@@ -6227,7 +6295,8 @@ bool MainWindow::isMarkdownViewEnabled() {
  * Checks if the note edit pane is enabled
  */
 bool MainWindow::isNoteEditPaneEnabled() {
-    return _noteEditIsCentralWidget ? true : _noteEditDockWidget->isVisible();
+    return _noteEditIsCentralWidget ||
+           ((_noteEditDockWidget != nullptr) && _noteEditDockWidget->isVisible());
 }
 
 /**
@@ -11796,6 +11865,9 @@ void MainWindow::storeCurrentWorkspace() {
     settings.setValue(QStringLiteral("workspace-") + uuid + QStringLiteral("/windowState"),
                       saveState());
     settings.setValue(
+        QStringLiteral("workspace-") + uuid + QStringLiteral("/noteEditIsCentralWidget"),
+        _noteEditIsCentralWidget);
+    settings.setValue(
         QStringLiteral("workspace-") + uuid + QStringLiteral("/noteSubFolderDockWidgetVisible"),
         _noteSubFolderDockWidgetVisible);
 }
@@ -11838,6 +11910,18 @@ void MainWindow::restoreCurrentWorkspace() {
 
         // update the menu and combo box
         updateWorkspaceLists();
+    }
+
+    const QString noteEditIsCentralWidgetKey =
+        QStringLiteral("workspace-") + uuid + QStringLiteral("/noteEditIsCentralWidget");
+    const bool noteEditIsCentralWidget =
+        settings.contains(noteEditIsCentralWidgetKey)
+            ? settings.value(noteEditIsCentralWidgetKey).toBool()
+            : settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
+    settings.setValue(QStringLiteral("noteEditIsCentralWidget"), noteEditIsCentralWidget);
+
+    if (_noteEditIsCentralWidget != noteEditIsCentralWidget) {
+        setNoteEditCentralWidgetEnabled(noteEditIsCentralWidget);
     }
 
     restoreState(
@@ -12601,7 +12685,7 @@ void MainWindow::on_actionShow_local_trash_triggered() {
 }
 
 void MainWindow::on_actionJump_to_note_text_edit_triggered() {
-    if (!_noteEditIsCentralWidget) {
+    if (!_noteEditIsCentralWidget && _noteEditDockWidget != nullptr) {
         _noteEditDockWidget->show();
     }
 

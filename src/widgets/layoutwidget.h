@@ -12,7 +12,7 @@ class QSettings;
 class LayoutWidget : public QWidget {
     Q_OBJECT
    Q_SIGNALS:
-    void settingsStored();
+    void settingsStored(const QString& workspaceIdentifier);
 
    public:
     explicit LayoutWidget(QWidget* parent = 0);

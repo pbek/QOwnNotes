@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.3.14
+
+- Allow switching `noteEditIsCentralWidget` and applying predefined layouts so
+  the main window and workspace layout are rebuilt immediately without
+  restarting the application, including workspace-specific editor placement
+  or layout selection (for [#3504](https://github.com/pbek/QOwnNotes/issues/3504))
+
 ## 26.3.13
 
 - Added Markdown heading folding in the note editor with clickable gutter
