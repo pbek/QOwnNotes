@@ -6,6 +6,9 @@
   the main window and workspace layout are rebuilt immediately without
   restarting the application, including workspace-specific editor placement
   or layout selection (for [#3504](https://github.com/pbek/QOwnNotes/issues/3504))
+- Fixed the AppImage deployment in the GitHub release workflows so the bundled
+  OpenSSL libraries work again and the script repository loads correctly
+  (for [#3502](https://github.com/pbek/QOwnNotes/issues/3502))
 
 ## 26.3.13
 
