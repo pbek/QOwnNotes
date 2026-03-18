@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## Next
+
+- Enable QLiteHtml preview support by default for qmake and CMake builds
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+
 ## 26.3.15
 
 - Fixed the Qt6 AppImage release build to bundle and prefer the packaged QML

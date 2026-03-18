@@ -14,6 +14,7 @@ QT       += quick
 }
 
 CONFIG += with_aspell
+CONFIG += USE_QLITEHTML
 
 # enable pch for DEV_MODE
 # put any dev specific options here
