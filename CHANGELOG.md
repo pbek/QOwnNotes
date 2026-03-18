@@ -9,6 +9,8 @@
 - Fixed the AppImage deployment in the GitHub release workflows so the bundled
   OpenSSL libraries work again and the script repository loads correctly
   (for [#3502](https://github.com/pbek/QOwnNotes/issues/3502))
+  - The SSL issues with the Qt6 AppImage should also be fixed
+    (for [#3174](https://github.com/pbek/QOwnNotes/issues/3174))
 
 ## 26.3.13
 
