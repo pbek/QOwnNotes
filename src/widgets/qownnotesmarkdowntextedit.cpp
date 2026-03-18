@@ -54,6 +54,7 @@
 namespace {
 constexpr int kMarkdownLspDiagnosticProperty = QTextFormat::UserProperty + 1;
 constexpr int kFoldIndicatorPadding = 4;
+QHash<QString, QSet<QString>> s_foldedHeadingStateByNoteReference;
 }    // namespace
 
 // Initialize static member
@@ -69,6 +70,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
 
         connect(_highlighter, &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
                 &QOwnNotesMarkdownTextEdit::refreshFoldingSidebar);
+        connect(_highlighter, &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
+                &QOwnNotesMarkdownTextEdit::scheduleRestoreCurrentFoldedHeadingState);
 
         setStyles();
         updateSettings();
@@ -901,8 +904,25 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     // set a search delay of 250ms for text with more than 200k characters
     setSearchWidgetDebounceDelay(text.size() > 200000 ? 250 : 0);
+    _foldingStateRestorePending = !_currentNoteReference.isEmpty();
+    _foldingStateRestoreAttempts = 0;
 
     QMarkdownTextEdit::setText(text);
+}
+
+void QOwnNotesMarkdownTextEdit::setCurrentNoteReference(const QString &noteReference) {
+    const QString effectiveNoteReference = _headingFoldingEnabled ? noteReference : QString();
+
+    if (_currentNoteReference == effectiveNoteReference) {
+        _foldingStateRestorePending = !effectiveNoteReference.isEmpty();
+        _foldingStateRestoreAttempts = 0;
+        return;
+    }
+
+    storeCurrentFoldedHeadingState();
+    _currentNoteReference = effectiveNoteReference;
+    _foldingStateRestorePending = !_currentNoteReference.isEmpty();
+    _foldingStateRestoreAttempts = 0;
 }
 
 /**
@@ -994,6 +1014,18 @@ bool QOwnNotesMarkdownTextEdit::isHeadingFolded(const QTextBlock &headerBlock) c
     return foldRegionForHeaderBlock(headerBlock, region) && !region.firstContentBlock.isVisible();
 }
 
+QString QOwnNotesMarkdownTextEdit::headingStateKey(const QTextBlock &headerBlock,
+                                                   QHash<QString, int> &headingOccurrences) {
+    int level = 0;
+    if (!isHeadingBlock(headerBlock, &level)) {
+        return QString();
+    }
+
+    const QString headingText = headerBlock.text();
+    const int occurrence = ++headingOccurrences[headingText];
+    return QStringLiteral("%1:%2:%3").arg(level).arg(occurrence).arg(headingText);
+}
+
 bool QOwnNotesMarkdownTextEdit::setFoldRegionFolded(const FoldRegion &region, bool folded) {
     if (!region.firstContentBlock.isValid() || !region.lastContentBlock.isValid()) {
         return false;
@@ -1034,6 +1066,7 @@ bool QOwnNotesMarkdownTextEdit::setFoldRegionFolded(const FoldRegion &region, bo
     viewport()->update();
     lineNumberArea()->update();
     ensureCursorVisible();
+    storeCurrentFoldedHeadingState();
     return true;
 }
 
@@ -1159,6 +1192,82 @@ bool QOwnNotesMarkdownTextEdit::headerBlockAtSidebarPosition(const QPoint &pos,
     }
 
     return false;
+}
+
+void QOwnNotesMarkdownTextEdit::storeCurrentFoldedHeadingState() {
+    if (!_headingFoldingEnabled || _currentNoteReference.isEmpty() ||
+        _isApplyingStoredFoldingState) {
+        return;
+    }
+
+    QSet<QString> foldedHeadingState;
+    QHash<QString, int> headingOccurrences;
+    QTextBlock block = document()->firstBlock();
+
+    while (block.isValid()) {
+        if (isHeadingFolded(block)) {
+            const QString headingKey = headingStateKey(block, headingOccurrences);
+            if (!headingKey.isEmpty()) {
+                foldedHeadingState.insert(headingKey);
+            }
+        } else if (isHeadingBlock(block)) {
+            headingStateKey(block, headingOccurrences);
+        }
+
+        block = block.next();
+    }
+
+    if (foldedHeadingState.isEmpty()) {
+        s_foldedHeadingStateByNoteReference.remove(_currentNoteReference);
+    } else {
+        s_foldedHeadingStateByNoteReference[_currentNoteReference] = foldedHeadingState;
+    }
+}
+
+void QOwnNotesMarkdownTextEdit::scheduleRestoreCurrentFoldedHeadingState() {
+    if (!_foldingStateRestorePending || _currentNoteReference.isEmpty()) {
+        return;
+    }
+
+    QTimer::singleShot(0, this, &QOwnNotesMarkdownTextEdit::restoreCurrentFoldedHeadingState);
+}
+
+void QOwnNotesMarkdownTextEdit::restoreCurrentFoldedHeadingState() {
+    if (!_foldingStateRestorePending || _currentNoteReference.isEmpty() ||
+        !_headingFoldingEnabled) {
+        return;
+    }
+
+    const QSet<QString> foldedHeadingState =
+        s_foldedHeadingStateByNoteReference.value(_currentNoteReference);
+    _foldingStateRestorePending = false;
+
+    if (foldedHeadingState.isEmpty()) {
+        return;
+    }
+
+    if (!_hasFoldableHeadings && _foldingStateRestoreAttempts < 5) {
+        ++_foldingStateRestoreAttempts;
+        QTimer::singleShot(0, this, &QOwnNotesMarkdownTextEdit::restoreCurrentFoldedHeadingState);
+        return;
+    }
+
+    _isApplyingStoredFoldingState = true;
+    _foldingStateRestoreAttempts = 0;
+    QHash<QString, int> headingOccurrences;
+    QTextBlock block = document()->firstBlock();
+
+    while (block.isValid()) {
+        const QString headingKey = headingStateKey(block, headingOccurrences);
+        if (!headingKey.isEmpty() && foldedHeadingState.contains(headingKey)) {
+            setHeadingFolded(block, true);
+        }
+
+        block = block.next();
+    }
+
+    _isApplyingStoredFoldingState = false;
+    refreshFoldingSidebar();
 }
 
 bool QOwnNotesMarkdownTextEdit::sidebarMousePressEvent(QMouseEvent *event) {
@@ -1583,6 +1692,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     _headingFoldingEnabled =
         settings.value(QStringLiteral("Editor/headingFolding"), false).toBool();
     if (!_headingFoldingEnabled) {
+        setCurrentNoteReference(QString());
         unfoldAllHeadings();
     }
     _showMarkdownImagePreviews =

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QHash>
 #include <QTextBlock>
 #include <QTextEdit>
 
@@ -35,6 +36,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void updateSettings();
     QMargins viewportMargins();
     void setText(const QString &text);
+    void setCurrentNoteReference(const QString &noteReference);
     static void setSpellCheckingEnabled(bool enabled);
     bool isSpellCheckingEnabled();
     void disableSpellChecking();
@@ -197,13 +199,22 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool setHeadingFolded(const QTextBlock &headerBlock, bool folded);
     bool setFoldRegionFolded(const FoldRegion &region, bool folded);
     bool isHeadingFolded(const QTextBlock &headerBlock) const;
+    static QString headingStateKey(const QTextBlock &headerBlock,
+                                   QHash<QString, int> &headingOccurrences);
     bool hasFoldableHeadings() const;
     bool headerBlockAtSidebarPosition(const QPoint &pos, QTextBlock &headerBlock) const;
+    void storeCurrentFoldedHeadingState();
+    void scheduleRestoreCurrentFoldedHeadingState();
+    void restoreCurrentFoldedHeadingState();
 
     bool _isSpellCheckingDisabled = false;
     bool _showMarkdownImagePreviews = true;
     bool _headingFoldingEnabled = true;
     bool _hasFoldableHeadings = false;
+    QString _currentNoteReference;
+    bool _foldingStateRestorePending = false;
+    bool _isApplyingStoredFoldingState = false;
+    int _foldingStateRestoreAttempts = 0;
     QString _aiAutocompleteSuggestion;
     int _aiAutocompletePosition = -1;
     QTimer *_aiAutocompleteTimer = nullptr;

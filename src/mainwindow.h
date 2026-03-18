@@ -786,6 +786,7 @@ class MainWindow : public QMainWindow {
     QAction *splitNoteAtPosAction();
     QAction *findNoteAction();
     QList<QAction *> customTextEditActions();
+    QString noteFoldingReference(const Note &note) const;
 
    public:
     /** export / print **/

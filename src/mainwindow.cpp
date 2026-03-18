@@ -555,6 +555,7 @@ void MainWindow::initNotePreviewAndTextEdits() {
     const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
+    ui->noteTextEdit->setCurrentNoteReference(QString());
 
     // setup vim mode
     if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
@@ -4316,6 +4317,8 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
 
     this->_lastNoteId = this->currentNote.getId();
     this->currentNote = note;
+    const QString currentNoteReference = noteFoldingReference(this->currentNote);
+    ui->noteTextEdit->setCurrentNoteReference(currentNoteReference);
 
     // for places we can't get the current note id, like the Markdown
     // highlighter
@@ -5012,9 +5015,11 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
     auto historyItem = noteHistory.getLastItemOfNote(currentNote);
 
     if (!updateNoteTextViewOnly) {
+        const QString noteReference = noteFoldingReference(*note);
         qobject_cast<QOwnNotesMarkdownHighlighter *>(ui->noteTextEdit->highlighter())
             ->updateCurrentNote(note);
         ui->noteTextEdit->closeMarkdownLspDocument();
+        ui->noteTextEdit->setCurrentNoteReference(noteReference);
         ui->noteTextEdit->setText(note->getNoteText());
         if (note->exists()) {
             ui->noteTextEdit->setMarkdownLspDocumentPath(note->fullNoteFilePath(),
@@ -5447,6 +5452,8 @@ QVector<Note> MainWindow::selectedNotes() {
  * Un-sets the current note
  */
 void MainWindow::unsetCurrentNote() {
+    ui->noteTextEdit->setCurrentNoteReference(QString());
+
     // reset the current note
     currentNote = Note();
 
@@ -5476,6 +5483,16 @@ void MainWindow::unsetCurrentNote() {
 
     // set the note text edits to readonly
     setNoteTextEditReadOnly(true);
+}
+
+QString MainWindow::noteFoldingReference(const Note &note) const {
+    if (!note.exists()) {
+        return QString();
+    }
+
+    return QStringLiteral("%1:%2")
+        .arg(NoteFolder::currentNoteFolderId())
+        .arg(note.relativeNoteFilePath(QStringLiteral("/")));
 }
 
 /**

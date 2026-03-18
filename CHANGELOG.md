@@ -2,6 +2,9 @@
 
 ## 26.3.14
 
+- Remember folded Markdown headings for each open note in memory and restore
+  that state when reopening notes, including notes stored in subfolders (for
+  [#3505](https://github.com/pbek/QOwnNotes/issues/3505))
 - Allow switching `noteEditIsCentralWidget` and applying predefined layouts so
   the main window and workspace layout are rebuilt immediately without
   restarting the application, including workspace-specific editor placement
