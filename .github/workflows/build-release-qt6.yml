@@ -210,7 +210,7 @@ jobs:
           make -j${{env.CORES}}
       - name: "⚙️ Install linuxdeploy"
         run: |
-          export LINUXDEPLOY_VERSION=1-alpha-20250213-1
+          export LINUXDEPLOY_VERSION=1-alpha-20240109-1
           wget https://github.com/linuxdeploy/linuxdeploy/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-x86_64.AppImage
           wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-plugin-qt-x86_64.AppImage
           chmod +x linuxdeploy-x86_64.AppImage

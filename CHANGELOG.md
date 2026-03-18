@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.15
+
+- Fixed the Qt6 AppImage release build to bundle and prefer the packaged QML
+  import modules again so the scripting engine works instead of loading
+  incompatible host Qt plugins (for [#3074](https://github.com/pbek/QOwnNotes/issues/3074))
+
 ## 26.3.14
 
 - Remember folded Markdown headings for each open note in memory and restore
