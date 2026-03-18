@@ -12,6 +12,7 @@
 #include <QClipboard>
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDir>
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QMimeData>
@@ -51,6 +52,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
+    addBundledImportPaths(_engine);
     _engine->rootContext()->setContextProperty(QStringLiteral("script"), this);
 #ifndef INTEGRATION_TESTS
     if (!MainWindow::instance()) {
@@ -268,6 +270,28 @@ void ScriptingService::reloadScriptComponents() {
 }
 
 /**
+ * Adds QML import paths for bundled QML modules.
+ *
+ * When running from an AppImage (or similar self-contained bundle), this
+ * ensures the QML engine resolves imports from the bundled qml/ directory
+ * first, so that system-installed Qt QML plugins (which may be a different
+ * Qt version) are never loaded.
+ */
+void ScriptingService::addBundledImportPaths(QQmlEngine *engine) {
+    const QString appDir = QCoreApplication::applicationDirPath();
+    const QStringList bundledQmlPaths = {
+        appDir + QStringLiteral("/../qml"),        // AppImage: usr/qml
+        appDir + QStringLiteral("/../lib/qml"),    // Alternative layout
+    };
+    for (const QString &path : bundledQmlPaths) {
+        QDir qmlDir(path);
+        if (qmlDir.exists()) {
+            engine->addImportPath(qmlDir.canonicalPath());
+        }
+    }
+}
+
+/**
  * Checks if the script can be used in a component
  */
 bool ScriptingService::validateScript(const Script &script, QString &errorMessage) {
@@ -282,6 +306,7 @@ bool ScriptingService::validateScript(const Script &script, QString &errorMessag
     const QUrl fileUrl = QUrl::fromLocalFile(path);
 
     auto *engine = new QQmlEngine();
+    addBundledImportPaths(engine);
     auto *component = new QQmlComponent(engine);
     component->loadUrl(fileUrl);
 

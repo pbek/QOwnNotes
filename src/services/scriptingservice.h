@@ -218,6 +218,7 @@ class ScriptingService : public QObject {
     void reloadScriptComponents();
     void clearCustomStyleSheets();
     QList<QVariant> registerSettingsVariables(QObject *object, const Script &script);
+    static void addBundledImportPaths(QQmlEngine *engine);
 
    signals:
     void noteStored(QVariant note);
