@@ -471,7 +471,8 @@ CONFIG(DEV_MODE) {
         # Suppress specific warnings-as-errors for 3rdparty litehtml/gumbo code
         # These must come AFTER -Werror to take effect
         CONFIG(USE_QLITEHTML) {
-            QMAKE_CXXFLAGS += -Wno-error=unused-parameter -Wno-error=missing-field-initializers
+            QMAKE_CXXFLAGS += -Wno-error=unused-parameter -Wno-error=missing-field-initializers \
+                -Wno-error=sign-compare -Wno-error=unused-but-set-variable
         }
     }
 }
