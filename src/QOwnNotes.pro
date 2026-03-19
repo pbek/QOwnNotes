@@ -14,7 +14,11 @@ QT       += quick
 }
 
 CONFIG += with_aspell
-CONFIG += USE_QLITEHTML
+
+# QLiteHtml requires Qt 6+
+greaterThan(QT_MAJOR_VERSION, 5) {
+    CONFIG += USE_QLITEHTML
+}
 
 # enable pch for DEV_MODE
 # put any dev specific options here
