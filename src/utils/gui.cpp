@@ -40,7 +40,9 @@
 #include <QVBoxLayout>
 
 #include "helpers/nomenuiconstyle.h"
+#ifndef INTEGRATION_TESTS
 #include "mainwindow.h"
+#endif
 #include "services/settingsservice.h"
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
@@ -1591,6 +1593,7 @@ void Utils::Gui::fixDarkModeIcons(QWidget *widget) {
 }
 
 void Utils::Gui::applyDarkModeSettings() {
+#ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow == nullptr) {
@@ -1598,6 +1601,7 @@ void Utils::Gui::applyDarkModeSettings() {
     }
 
     mainWindow->applyDarkModeSettings();
+#endif
 }
 
 QAction *Utils::Gui::findActionByData(QMenu *menu, const QVariant &data) {
