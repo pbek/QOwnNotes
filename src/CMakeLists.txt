@@ -124,8 +124,18 @@ add_subdirectory(libraries/fakevim EXCLUDE_FROM_ALL)
 add_subdirectory(libraries/diff_match_patch EXCLUDE_FROM_ALL)
 
 option(USE_QLITEHTML "Build using QLiteHtml for preview" ON)
+# QLiteHtml requires Qt 6+
+if(USE_QLITEHTML AND QT_VERSION_MAJOR LESS 6)
+  message(WARNING "QLiteHtml requires Qt 6+, disabling USE_QLITEHTML")
+  set(USE_QLITEHTML OFF)
+endif()
 if(USE_QLITEHTML)
   add_definitions(-DUSE_QLITEHTML=1)
+  # Build qlitehtml as a static library by default to avoid shared library
+  # issues
+  if(NOT QLITEHTML_LIBRARY_TYPE)
+    set(QLITEHTML_LIBRARY_TYPE STATIC)
+  endif()
   add_subdirectory(libraries/qlitehtml EXCLUDE_FROM_ALL)
 endif()
 

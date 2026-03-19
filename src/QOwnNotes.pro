@@ -14,7 +14,11 @@ QT       += quick
 }
 
 CONFIG += with_aspell
-CONFIG += USE_QLITEHTML
+
+# QLiteHtml requires Qt 6+
+greaterThan(QT_MAJOR_VERSION, 5) {
+    CONFIG += USE_QLITEHTML
+}
 
 # enable pch for DEV_MODE
 # put any dev specific options here
@@ -463,6 +467,13 @@ CONFIG(DEV_MODE) {
     unix:!mac {
         message("Werror enabled")
         QMAKE_CXXFLAGS += "-Wno-error=deprecated-declarations -Werror -pedantic"
+
+        # Suppress specific warnings-as-errors for 3rdparty litehtml/gumbo code
+        # These must come AFTER -Werror to take effect
+        CONFIG(USE_QLITEHTML) {
+            QMAKE_CXXFLAGS += -Wno-error=unused-parameter -Wno-error=missing-field-initializers \
+                -Wno-error=sign-compare -Wno-error=unused-but-set-variable
+        }
     }
 }
 

@@ -1,12 +1,11 @@
 # QOwnNotes Changelog
 
-## Next
-
-- Enable QLiteHtml preview support by default for qmake and CMake builds
-  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
-
 ## 26.3.15
 
+- **Enable QLiteHtml preview support by default** for qmake and CMake builds
+  (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
+  - A huge amount of work went into this and it will solve various rendering issues
+    in the note preview, like list item spacing and horizontal rule and table rendering
 - Fixed the Qt6 AppImage release build to bundle and prefer the packaged QML
   import modules again so the scripting engine works instead of loading
   incompatible host Qt plugins (for [#3074](https://github.com/pbek/QOwnNotes/issues/3074))
