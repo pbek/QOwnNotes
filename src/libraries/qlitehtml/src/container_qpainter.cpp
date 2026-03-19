@@ -52,6 +52,7 @@
 #include <set>
 
 #ifdef Q_OS_WIN
+#define NOMINMAX
 #include <Windows.h>
 #endif
 
