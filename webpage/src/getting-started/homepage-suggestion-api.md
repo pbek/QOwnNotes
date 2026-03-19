@@ -15,6 +15,11 @@ The service binds to `127.0.0.1` only.
 
 - `GET /suggest?q=home`
 - Optional: `limit` (default `10`, max `50`)
+- Optional: `token` (if you configured a security token in QOwnNotes)
+
+If you use the custom Homepage assets from `docs/homepage/custom.js`, set `QON_TOKEN` to the same
+security token you configured in QOwnNotes. The script will then append `&token=...` when requesting
+suggestions.
 
 Example response:
 
@@ -31,6 +36,9 @@ search:
   suggestionUrl: http://127.0.0.1:22224/suggest?q=
   showSearchSuggestions: true
 ```
+
+If you protect the endpoint with a security token and use `custom.js`, keep `suggestionUrl` unchanged
+and set `QON_TOKEN` inside `custom.js` instead.
 
 ## Which Homepage file to edit
 
@@ -53,6 +61,9 @@ Use these files when your Homepage deployment supports loading `custom.js` and `
 If your Homepage runs on an external host (different machine / container than QOwnNotes),
 you need these files on that hosted Homepage instance so it can query your local QOwnNotes
 suggestion API and merge/display those suggestions in Homepage search.
+
+When you use that setup with a QOwnNotes security token, make sure the same token is configured in
+`QON_TOKEN` inside `custom.js`.
 
 If you need network access beyond localhost, place a reverse proxy in front of the endpoint and restrict access
 (for example by firewall rules or allowlist), since bookmark data may contain sensitive URLs.
