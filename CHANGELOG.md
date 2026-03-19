@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.3.16
+
+- **Allow switching between dark and light mode and changing the editor color**
+  **schema** (including individual color and font settings) in the Settings dialog
+  **without restarting the application** — changes are applied live to the editor
+  and note preview immediately (for [#3506](https://github.com/pbek/QOwnNotes/issues/3506))
+
 ## 26.3.15
 
 - **Enable QLiteHtml preview support by default** for qmake and CMake builds

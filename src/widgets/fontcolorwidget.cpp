@@ -60,18 +60,7 @@ FontColorWidget::FontColorWidget(QWidget* parent) : QFrame(parent), ui(new Ui::F
     // initialize the font selectors
     //    initFontSelectors();
 
-    // declare that we need to restart the application if certain settings
-    // are changed
-    connect(ui->colorSchemeComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(needRestart()));
-    connect(ui->fontCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->foregroundColorCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->backgroundColorCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->boldCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->italicCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->underlineCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->foregroundColorButton, SIGNAL(clicked()), this, SLOT(needRestart()));
-    connect(ui->backgroundColorButton, SIGNAL(clicked()), this, SLOT(needRestart()));
-    connect(ui->fontComboBox, SIGNAL(currentFontChanged(QFont)), this, SLOT(needRestart()));
+    // Schema changes are applied live via the schemaChanged() signal
 }
 
 /**
@@ -170,6 +159,9 @@ void FontColorWidget::on_foregroundColorButton_clicked() {
 
     // update the current or all text items, depending on the index
     updateTextItems(index);
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 /**
@@ -191,6 +183,9 @@ void FontColorWidget::on_backgroundColorButton_clicked() {
 
     // update the current or all text items, depending on the index
     updateTextItems(index);
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 /**
@@ -411,11 +406,13 @@ void FontColorWidget::setSchemaValue(const QString& key, const QVariant& value, 
 }
 
 /**
- * Selects the current scheme
+ * Applies the schema at the given combo box index: updates internal state,
+ * persists the key to settings, and refreshes the widget preview.
+ * Does NOT emit schemaChanged() — callers decide whether to emit it.
  *
  * @param index
  */
-void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
+void FontColorWidget::applySchemaByIndex(int index) {
     _currentSchemaKey = ui->colorSchemeComboBox->itemData(index).toString();
     _currentSchemaIsDefault = _defaultSchemaKeys.contains(_currentSchemaKey);
 
@@ -427,8 +424,20 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
 
     updateSchemeEditFrame();
 
-    // update all text items
+    // Update all text items in the widget preview
     updateAllTextItems();
+}
+
+/**
+ * Selects the current scheme
+ *
+ * @param index
+ */
+void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
+    applySchemaByIndex(index);
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 /**
@@ -444,7 +453,15 @@ void FontColorWidget::updateAllTextItems() {
 
 bool FontColorWidget::selectFirstLightSchema() {
     if (ui->colorSchemeComboBox->count() >= 1) {
+        // Block signals to prevent the slot from being triggered via the
+        // signal; we call applySchemaByIndex() directly below instead
+        const QSignalBlocker blocker(ui->colorSchemeComboBox);
+        Q_UNUSED(blocker)
         ui->colorSchemeComboBox->setCurrentIndex(0);
+
+        // Apply the schema (write to settings, refresh preview) without
+        // emitting schemaChanged() — the caller handles the live apply
+        applySchemaByIndex(0);
         return true;
     }
 
@@ -453,7 +470,15 @@ bool FontColorWidget::selectFirstLightSchema() {
 
 bool FontColorWidget::selectFirstDarkSchema() {
     if (ui->colorSchemeComboBox->count() >= 2) {
+        // Block signals to prevent the slot from being triggered via the
+        // signal; we call applySchemaByIndex() directly below instead
+        const QSignalBlocker blocker(ui->colorSchemeComboBox);
+        Q_UNUSED(blocker)
         ui->colorSchemeComboBox->setCurrentIndex(1);
+
+        // Apply the schema (write to settings, refresh preview) without
+        // emitting schemaChanged() — the caller handles the live apply
+        applySchemaByIndex(1);
         return true;
     }
 
@@ -587,6 +612,9 @@ void FontColorWidget::on_foregroundColorCheckBox_toggled(bool checked) {
 
     // update the scheme edit frame
     updateSchemeEditFrame();
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 void FontColorWidget::updateForegroundColorCheckBox(bool checked, bool store) {
@@ -617,6 +645,9 @@ void FontColorWidget::on_backgroundColorCheckBox_toggled(bool checked) {
 
     // update the scheme edit frame
     updateSchemeEditFrame();
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
@@ -671,14 +702,25 @@ void FontColorWidget::storeCheckBoxState(const QString& name, bool checked) {
     updateTextItem();
 }
 
-void FontColorWidget::on_boldCheckBox_toggled(bool checked) { storeCheckBoxState("Bold", checked); }
+void FontColorWidget::on_boldCheckBox_toggled(bool checked) {
+    storeCheckBoxState("Bold", checked);
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
+}
 
 void FontColorWidget::on_italicCheckBox_toggled(bool checked) {
     storeCheckBoxState("Italic", checked);
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 void FontColorWidget::on_underlineCheckBox_toggled(bool checked) {
     storeCheckBoxState("Underline", checked);
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 /**
@@ -807,6 +849,9 @@ void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
 
     // update the styling of the current text tree widget item
     updateTextItem();
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 /**
@@ -829,6 +874,9 @@ void FontColorWidget::on_fontCheckBox_toggled(bool checked) {
 
     // update the scheme edit frame
     updateSchemeEditFrame();
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }
 
 void FontColorWidget::updateFontCheckBox(bool checked, bool store) {
@@ -851,4 +899,7 @@ void FontColorWidget::on_fontComboBox_currentFontChanged(const QFont& f) {
 
     // update the styling of the current text tree widget item
     updateTextItem();
+
+    // Notify listeners that the schema has changed so they can apply it live
+    Q_EMIT schemaChanged();
 }

@@ -40,6 +40,9 @@
 #include <QVBoxLayout>
 
 #include "helpers/nomenuiconstyle.h"
+#ifndef INTEGRATION_TESTS
+#include "mainwindow.h"
+#endif
 #include "services/settingsservice.h"
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
@@ -1040,6 +1043,7 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
                             "Do you also want to turn on dark mode in QOwnNotes?"),
                 QStringLiteral("windows-dark-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToDarkMode();
+            Utils::Gui::applyDarkModeSettings();
 
             return true;
         }
@@ -1053,6 +1057,7 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
                             "Do you also want to turn off dark mode in QOwnNotes?"),
                 QStringLiteral("windows-light-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToLightMode();
+            Utils::Gui::applyDarkModeSettings();
 
             return true;
         }
@@ -1126,6 +1131,7 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
                             "Do you also want to turn on dark mode in QOwnNotes?"),
                 QStringLiteral("linux-dark-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToDarkMode();
+            Utils::Gui::applyDarkModeSettings();
 
             return true;
         }
@@ -1139,6 +1145,7 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
                             "Do you also want to turn off dark mode in QOwnNotes?"),
                 QStringLiteral("linux-light-mode")) == QMessageBox::Yes) {
             Utils::Misc::switchToLightMode();
+            Utils::Gui::applyDarkModeSettings();
 
             return true;
         }
@@ -1571,17 +1578,30 @@ bool Utils::Gui::insertTableRowBelow(QPlainTextEdit *textEdit) {
  */
 void Utils::Gui::fixDarkModeIcons(QWidget *widget) {
     const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
-
-    if (!darkMode) {
-        return;
-    }
+    const QIcon clearButtonIcon =
+        darkMode ? QIcon(QStringLiteral(":/images/cleartext-dark.svg"))
+                 : QIcon::fromTheme(
+                       QStringLiteral("edit-clear"),
+                       QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/edit-clear.svg")));
 
     foreach (QLineEdit *lineEdit, widget->findChildren<QLineEdit *>()) {
         auto action = lineEdit->findChild<QAction *>("_q_qlineeditclearaction");
         if (action) {
-            action->setIcon(QIcon(QStringLiteral(":/images/cleartext-dark.svg")));
+            action->setIcon(clearButtonIcon);
         }
     }
+}
+
+void Utils::Gui::applyDarkModeSettings() {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow == nullptr) {
+        return;
+    }
+
+    mainWindow->applyDarkModeSettings();
+#endif
 }
 
 QAction *Utils::Gui::findActionByData(QMenu *menu, const QVariant &data) {

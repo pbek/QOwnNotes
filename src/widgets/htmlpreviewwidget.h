@@ -48,6 +48,9 @@ class HtmlPreviewWidget final : public QWidget {
     bool findText(const QString &text, QTextDocument::FindFlags flags, bool incremental,
                   bool *wrapped = nullptr);
 
+    // Update background color and dark mode after a theme change
+    void updateBackground();
+
     // Expose QAbstractScrollArea methods
     QWidget *viewport() const;
     QScrollBar *verticalScrollBar() const;

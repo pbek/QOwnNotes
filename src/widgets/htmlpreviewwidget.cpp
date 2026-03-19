@@ -257,4 +257,21 @@ QScrollBar *HtmlPreviewWidget::horizontalScrollBar() const {
     return _htmlWidget->horizontalScrollBar();
 }
 
+/**
+ * Updates the viewport background color and search widget dark mode to match
+ * the current schema/dark mode settings. Call this after a dark/light mode
+ * switch before regenerating the note preview.
+ */
+void HtmlPreviewWidget::updateBackground() {
+    _htmlWidget->viewport()->setStyleSheet(
+        QStringLiteral("background-color: %1;")
+            .arg(Utils::Schema::schemaSettings
+                     ->getBackgroundColor(MarkdownHighlighter::HighlighterState::NoState)
+                     .name()));
+
+    SettingsService settings;
+    const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
+    _searchWidget->setDarkMode(darkMode);
+}
+
 #endif

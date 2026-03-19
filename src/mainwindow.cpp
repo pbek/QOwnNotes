@@ -1856,6 +1856,13 @@ void MainWindow::initStyling() {
     ui->noteTagFrame->setStyleSheet("QFrame {border: none; padding-right: 5px;}");
 #endif
 
+    // Disconnect first to avoid duplicate connections when initStyling() is
+    // called multiple times (e.g. during live dark mode preview in settings)
+    disconnect(ui->noteTextEdit->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
+               SLOT(noteTextSliderValueChanged(int)));
+    disconnect(ui->encryptedNoteTextEdit->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
+               SLOT(noteTextSliderValueChanged(int)));
+
     // move the note view scrollbar when the note edit scrollbar was moved
     connect(ui->noteTextEdit->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
             SLOT(noteTextSliderValueChanged(int)));
@@ -1864,18 +1871,66 @@ void MainWindow::initStyling() {
 
     // move the note edit scrollbar when the note view scrollbar was moved
 #ifdef USE_QLITEHTML
+    disconnect(_notePreviewWidget->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
+               SLOT(noteViewSliderValueChanged(int)));
     connect(_notePreviewWidget->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
             SLOT(noteViewSliderValueChanged(int)));
 #else
+    disconnect(ui->noteTextView->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
+               SLOT(noteViewSliderValueChanged(int)));
     connect(ui->noteTextView->verticalScrollBar(), SIGNAL(valueChanged(int)), this,
             SLOT(noteViewSliderValueChanged(int)));
 #endif
 
     // hide the combo box if it looses focus if it should not be viewed
+    disconnect(ui->noteFolderComboBox, &ComboBox::focusOut, this,
+               &MainWindow::hideNoteFolderComboBoxIfNeeded);
     connect(ui->noteFolderComboBox, &ComboBox::focusOut, this,
             &MainWindow::hideNoteFolderComboBoxIfNeeded);
 
     Utils::Gui::fixDarkModeIcons(this);
+}
+
+void MainWindow::applyDarkModeSettings() {
+    SettingsService settings;
+    const bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
+
+    if (!systemIconTheme) {
+        const bool internalIconTheme = settings.value(QStringLiteral("internalIconTheme")).toBool();
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
+        if (!internalIconTheme && QIcon::themeName().isEmpty()) {
+            QIcon::setThemeName(QIcon::fallbackThemeName());
+        }
+#endif
+
+        const bool darkModeIconTheme = Utils::Misc::isDarkModeIconTheme();
+        const bool useInternalIconTheme =
+            internalIconTheme || QIcon::themeName().isEmpty() ||
+            (QIcon::themeName() == QLatin1String("breeze-qownnotes")) ||
+            (QIcon::themeName() == QLatin1String("breeze-dark-qownnotes"));
+
+        if (darkModeIconTheme || useInternalIconTheme) {
+            QIcon::setThemeName(darkModeIconTheme ? QStringLiteral("breeze-dark-qownnotes")
+                                                  : QStringLiteral("breeze-qownnotes"));
+        }
+    }
+
+    initStyling();
+    setWindowIcon(getSystemTrayIcon());
+
+    if (trayIcon != nullptr) {
+        trayIcon->setIcon(getSystemTrayIcon());
+    }
+
+    readSettingsFromSettingsDialog();
+    Q_EMIT settingsChanged();
+#ifdef USE_QLITEHTML
+    // Update the QLiteHtml viewport background color and search widget dark
+    // mode to match the new theme before regenerating the note preview
+    _notePreviewWidget->updateBackground();
+#endif
+    forceRegenerateNotePreview();
 }
 
 /**

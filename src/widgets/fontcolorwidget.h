@@ -31,6 +31,9 @@ class FontColorWidget : public QFrame {
 
     void updateAllTextItems();
 
+   Q_SIGNALS:
+    void schemaChanged();
+
    public slots:
     bool selectFirstLightSchema();
 
@@ -108,4 +111,6 @@ class FontColorWidget : public QFrame {
     void selectLastSchema();
 
     void initFontSelectors();
+
+    void applySchemaByIndex(int index);
 };

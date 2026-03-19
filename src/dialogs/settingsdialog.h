@@ -174,6 +174,12 @@ class SettingsDialog : public MasterDialog {
 
     void on_darkModeCheckBox_toggled();
 
+    void on_darkModeColorsCheckBox_toggled(bool checked);
+
+    void on_darkModeTrayIconCheckBox_toggled(bool checked);
+
+    void on_darkModeIconThemeCheckBox_toggled(bool checked);
+
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
 
     void on_gitHubLineBreaksCheckBox_toggled(bool checked);
@@ -387,6 +393,11 @@ class SettingsDialog : public MasterDialog {
     QString _installInfoTextLabel3Html;
     QString _bookmarkTagLabelHtml;
     QString _commandSnippetTagLabelHtml;
+    bool _initialDarkMode = false;
+    bool _initialDarkModeColors = false;
+    bool _initialDarkModeTrayIcon = false;
+    bool _initialDarkModeIconTheme = false;
+    QString _initialSchemaKey;
 
     void storeSettings();
 
@@ -478,6 +489,14 @@ class SettingsDialog : public MasterDialog {
     void loadNextcloudDeckStackTreeWidget();
 
     void buildAiScriptingTreeWidget();
+
+    void updateSearchLineEditIcons();
+
+    bool hasDarkModeSettingChanges() const;
+
+    void applyDarkModeSettings();
+
+    void applyEditorSchemaSettings();
 
     void runAiApiTest(QString backend, QString model, QString apiKey = QString());
 
