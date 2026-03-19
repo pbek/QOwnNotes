@@ -63,6 +63,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->setupUi(this);
     afterSetupUI();
 
+    SettingsService settings;
+    _initialDarkMode = settings.value(QStringLiteral("darkMode")).toBool();
+    _initialDarkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
+    _initialDarkModeTrayIcon = settings.value(QStringLiteral("darkModeTrayIcon")).toBool();
+    _initialDarkModeIconTheme = Utils::Misc::isDarkModeIconTheme();
+
     bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 
     MainWindow *mainWindow = MainWindow::instance();
@@ -107,31 +113,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
 
-    // Change the search icon between dark and light mode
-    const QString searchIconFileName =
-        SettingsService().value(QStringLiteral("darkModeColors")).toBool()
-            ? QStringLiteral("search-notes-dark.svg")
-            : QStringLiteral("search-notes.svg");
-    static const QRegularExpression searchIconRegex(
-        QStringLiteral("background-image: url\\(:.+\\);"));
-    const QString searchIconStyle =
-        QStringLiteral("background-image: url(:/images/%1);").arg(searchIconFileName);
-
-    QString styleSheet = ui->searchLineEdit->styleSheet();
-    styleSheet.replace(searchIconRegex, searchIconStyle);
-    ui->searchLineEdit->setStyleSheet(styleSheet);
-
-    styleSheet = ui->languageSearchLineEdit->styleSheet();
-    styleSheet.replace(searchIconRegex, searchIconStyle);
-    ui->languageSearchLineEdit->setStyleSheet(styleSheet);
-
-    styleSheet = ui->shortcutSearchLineEdit->styleSheet();
-    styleSheet.replace(searchIconRegex, searchIconStyle);
-    ui->shortcutSearchLineEdit->setStyleSheet(styleSheet);
-
-    styleSheet = ui->scriptSearchLineEdit->styleSheet();
-    styleSheet.replace(searchIconRegex, searchIconStyle);
-    ui->scriptSearchLineEdit->setStyleSheet(styleSheet);
+    updateSearchLineEditIcons();
 
 #ifdef Q_OS_WIN32
     QString downloadText =
@@ -179,11 +161,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->languageListWidget, SIGNAL(itemSelectionChanged()), this, SLOT(needRestart()));
     connect(ui->internalIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->darkModeIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->hideIconsInMenusCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->showSystemTrayCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->startHiddenCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
@@ -2057,7 +2035,12 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData> &it
 
 void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button) {
     if (button == ui->buttonBox->button(QDialogButtonBox::Ok)) {
+        const bool darkModeSettingChanged = hasDarkModeSettingChanges();
         storeSettings();
+
+        if (darkModeSettingChanged) {
+            applyDarkModeSettings();
+        }
     }
 }
 
@@ -3248,7 +3231,25 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(QListWidg
     }
 }
 
-void SettingsDialog::on_darkModeCheckBox_toggled() { handleDarkModeCheckBoxToggled(true, true); }
+void SettingsDialog::on_darkModeCheckBox_toggled() {
+    handleDarkModeCheckBoxToggled(true, true);
+    applyDarkModeSettings();
+}
+
+void SettingsDialog::on_darkModeColorsCheckBox_toggled(bool checked) {
+    Q_UNUSED(checked)
+    applyDarkModeSettings();
+}
+
+void SettingsDialog::on_darkModeTrayIconCheckBox_toggled(bool checked) {
+    Q_UNUSED(checked)
+    applyDarkModeSettings();
+}
+
+void SettingsDialog::on_darkModeIconThemeCheckBox_toggled(bool checked) {
+    Q_UNUSED(checked)
+    applyDarkModeSettings();
+}
 
 /**
  * Toggles the dark mode colors check box with the dark mode checkbox
@@ -3271,6 +3272,58 @@ void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes, bool u
             ui->editorFontColorWidget->selectFirstLightSchema();
         }
     }
+}
+
+void SettingsDialog::updateSearchLineEditIcons() {
+    const QString searchIconFileName =
+        SettingsService().value(QStringLiteral("darkModeColors")).toBool()
+            ? QStringLiteral("search-notes-dark.svg")
+            : QStringLiteral("search-notes.svg");
+    static const QRegularExpression searchIconRegex(
+        QStringLiteral("background-image: url\\(:.+\\);"));
+    const QString searchIconStyle =
+        QStringLiteral("background-image: url(:/images/%1);").arg(searchIconFileName);
+
+    QString styleSheet = ui->searchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->searchLineEdit->setStyleSheet(styleSheet);
+
+    styleSheet = ui->languageSearchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->languageSearchLineEdit->setStyleSheet(styleSheet);
+
+    styleSheet = ui->shortcutSearchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->shortcutSearchLineEdit->setStyleSheet(styleSheet);
+
+    styleSheet = ui->scriptSearchLineEdit->styleSheet();
+    styleSheet.replace(searchIconRegex, searchIconStyle);
+    ui->scriptSearchLineEdit->setStyleSheet(styleSheet);
+}
+
+bool SettingsDialog::hasDarkModeSettingChanges() const {
+    const SettingsService settings;
+    return settings.value(QStringLiteral("darkModeColors")).toBool() !=
+               ui->darkModeColorsCheckBox->isChecked() ||
+           settings.value(QStringLiteral("darkMode")).toBool() !=
+               ui->darkModeCheckBox->isChecked() ||
+           settings.value(QStringLiteral("darkModeTrayIcon")).toBool() !=
+               ui->darkModeTrayIconCheckBox->isChecked() ||
+           Utils::Misc::isDarkModeIconTheme() != ui->darkModeIconThemeCheckBox->isChecked();
+}
+
+void SettingsDialog::applyDarkModeSettings() {
+    SettingsService settings;
+    settings.setValue(QStringLiteral("darkMode"), ui->darkModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("darkModeColors"), ui->darkModeColorsCheckBox->isChecked());
+    settings.setValue(QStringLiteral("darkModeTrayIcon"),
+                      ui->darkModeTrayIconCheckBox->isChecked());
+    settings.setValue(QStringLiteral("darkModeIconTheme"),
+                      ui->darkModeIconThemeCheckBox->isChecked());
+
+    updateSearchLineEditIcons();
+    Utils::Gui::fixDarkModeIcons(this);
+    Utils::Gui::applyDarkModeSettings();
 }
 
 void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
@@ -3647,6 +3700,15 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
     // clearAppDataAndExit call
     if (qApp->property("clearAppDataAndExit").toBool()) {
         return;
+    }
+
+    if (result() != QDialog::Accepted) {
+        SettingsService settings;
+        settings.setValue(QStringLiteral("darkMode"), _initialDarkMode);
+        settings.setValue(QStringLiteral("darkModeColors"), _initialDarkModeColors);
+        settings.setValue(QStringLiteral("darkModeTrayIcon"), _initialDarkModeTrayIcon);
+        settings.setValue(QStringLiteral("darkModeIconTheme"), _initialDarkModeIconTheme);
+        Utils::Gui::applyDarkModeSettings();
     }
 
     // store the splitter settings

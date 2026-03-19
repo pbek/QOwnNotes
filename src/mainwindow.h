@@ -143,6 +143,8 @@ class MainWindow : public QMainWindow {
 
     void openSettingsDialog(int page = 0, bool openScriptRepository = false);
 
+    void applyDarkModeSettings();
+
     void restoreTrashedNoteOnServer(const QString &fileName, int timestamp);
 
     void showUpdateAvailableButton(const QString &version);

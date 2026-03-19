@@ -160,6 +160,7 @@ void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag);
 void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, int tag);
 bool enableDockWidgetQuestion(QDockWidget *dockWidget);
 void fixDarkModeIcons(QWidget *widget);
+void applyDarkModeSettings();
 QAction *findActionByData(QMenu *menu, const QVariant &data);
 void applyInterfaceStyle(QString interfaceStyle = QString());
 }    // namespace Gui

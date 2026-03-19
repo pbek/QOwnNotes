@@ -1878,6 +1878,43 @@ void MainWindow::initStyling() {
     Utils::Gui::fixDarkModeIcons(this);
 }
 
+void MainWindow::applyDarkModeSettings() {
+    SettingsService settings;
+    const bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
+
+    if (!systemIconTheme) {
+        const bool internalIconTheme = settings.value(QStringLiteral("internalIconTheme")).toBool();
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
+        if (!internalIconTheme && QIcon::themeName().isEmpty()) {
+            QIcon::setThemeName(QIcon::fallbackThemeName());
+        }
+#endif
+
+        const bool darkModeIconTheme = Utils::Misc::isDarkModeIconTheme();
+        const bool useInternalIconTheme =
+            internalIconTheme || QIcon::themeName().isEmpty() ||
+            (QIcon::themeName() == QLatin1String("breeze-qownnotes")) ||
+            (QIcon::themeName() == QLatin1String("breeze-dark-qownnotes"));
+
+        if (darkModeIconTheme || useInternalIconTheme) {
+            QIcon::setThemeName(darkModeIconTheme ? QStringLiteral("breeze-dark-qownnotes")
+                                                  : QStringLiteral("breeze-qownnotes"));
+        }
+    }
+
+    initStyling();
+    setWindowIcon(getSystemTrayIcon());
+
+    if (trayIcon != nullptr) {
+        trayIcon->setIcon(getSystemTrayIcon());
+    }
+
+    readSettingsFromSettingsDialog();
+    Q_EMIT settingsChanged();
+    forceRegenerateNotePreview();
+}
+
 /**
  * Moves the note view scrollbar when the note edit scrollbar was moved
  */
