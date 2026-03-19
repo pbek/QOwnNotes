@@ -51,7 +51,8 @@
 #include <algorithm>
 #include <set>
 
-#if Q_OS_WIN
+#ifdef Q_OS_WIN
+#define NOMINMAX
 #include <Windows.h>
 #endif
 
@@ -740,7 +741,7 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
 
 int DocumentContainerPrivate::pt_to_px(int pt) const
 {
-#if Q_OS_WIN
+#ifdef Q_OS_WIN
     HDC dc = GetDC(NULL);
     int ret = MulDiv(pt, GetDeviceCaps(dc, LOGPIXELSY), 72);
     ReleaseDC(NULL, dc);
