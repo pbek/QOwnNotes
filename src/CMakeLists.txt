@@ -472,6 +472,20 @@ set(SOURCE_FILES
     managers/aitoolbarmanager.h
     managers/workspacemanager.cpp
     managers/workspacemanager.h
+    managers/tagmanager.cpp
+    managers/tagmanager.h
+    managers/noteoperationsmanager.cpp
+    managers/noteoperationsmanager.h
+    managers/noteindexmanager.cpp
+    managers/noteindexmanager.h
+    managers/searchfiltermanager.cpp
+    managers/searchfiltermanager.h
+    managers/mediainsertionmanager.cpp
+    managers/mediainsertionmanager.h
+    managers/navigationmanager.cpp
+    managers/navigationmanager.h
+    managers/notetreemanager.cpp
+    managers/notetreemanager.h
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp

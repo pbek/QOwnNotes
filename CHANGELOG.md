@@ -9,6 +9,9 @@
 - Fixed the active heading selection in the Navigation panel flickering to the
   next heading while typing or pressing `Enter` at the end of a section in the
   note text edit (for [#3508](https://github.com/pbek/QOwnNotes/issues/3508))
+- Refactored `mainwindow.cpp` by extracting cohesive groups of methods into
+  dedicated manager classes in `src/managers/` to improve maintainability and
+  reduce the file size (for [#3509](https://github.com/pbek/QOwnNotes/issues/3509))
 
 ## 26.3.15
 

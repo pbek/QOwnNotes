@@ -243,6 +243,13 @@ SOURCES += main.cpp\
     managers/notetabmanager.cpp \
     managers/aitoolbarmanager.cpp \
     managers/workspacemanager.cpp \
+    managers/tagmanager.cpp \
+    managers/noteoperationsmanager.cpp \
+    managers/noteindexmanager.cpp \
+    managers/searchfiltermanager.cpp \
+    managers/mediainsertionmanager.cpp \
+    managers/navigationmanager.cpp \
+    managers/notetreemanager.cpp \
     utils/urlhandler.cpp
 
 HEADERS  += mainwindow.h \
@@ -372,6 +379,13 @@ HEADERS  += mainwindow.h \
     managers/notetabmanager.h \
     managers/aitoolbarmanager.h \
     managers/workspacemanager.h \
+    managers/tagmanager.h \
+    managers/noteoperationsmanager.h \
+    managers/noteindexmanager.h \
+    managers/searchfiltermanager.h \
+    managers/mediainsertionmanager.h \
+    managers/navigationmanager.h \
+    managers/notetreemanager.h \
     utils/urlhandler.h \
 
 FORMS    += mainwindow.ui \

@@ -91,6 +91,13 @@ class DistractionFreeManager;
 class NoteTabManager;
 class AiToolbarManager;
 class WorkspaceManager;
+class TagManager;
+class NoteOperationsManager;
+class NoteIndexManager;
+class SearchFilterManager;
+class MediaInsertionManager;
+class NavigationManager;
+class NoteTreeManager;
 
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
@@ -110,6 +117,13 @@ class MainWindow : public QMainWindow {
     friend class NoteTabManager;
     friend class AiToolbarManager;
     friend class WorkspaceManager;
+    friend class TagManager;
+    friend class NoteOperationsManager;
+    friend class NoteIndexManager;
+    friend class SearchFilterManager;
+    friend class MediaInsertionManager;
+    friend class NavigationManager;
+    friend class NoteTreeManager;
 
    Q_SIGNALS:
     void currentNoteChanged(Note &note);
@@ -803,6 +817,13 @@ class MainWindow : public QMainWindow {
     NoteTabManager *noteTabManager() const { return _noteTabManager; }
     AiToolbarManager *aiToolbarManager() const { return _aiToolbarManager; }
     WorkspaceManager *workspaceManager() const { return _workspaceManager; }
+    TagManager *tagManager() const { return _tagManager; }
+    NoteOperationsManager *noteOperationsManager() const { return _noteOperationsManager; }
+    NoteIndexManager *noteIndexManager() const { return _noteIndexManager; }
+    SearchFilterManager *searchFilterManager() const { return _searchFilterManager; }
+    MediaInsertionManager *mediaInsertionManager() const { return _mediaInsertionManager; }
+    NavigationManager *navigationManager() const { return _navigationManager; }
+    NoteTreeManager *noteTreeManager() const { return _noteTreeManager; }
 
     /** State accessors needed by managers **/
     bool closeEventWasFired() const { return _closeEventWasFired; }
@@ -821,7 +842,7 @@ class MainWindow : public QMainWindow {
     void storeSettings();
     void storeCurrentWorkspace();
     void handleNoteSubFolderVisibility() const;
-    void updatePanelMenu();
+    Q_SLOT void updatePanelMenu();
     void updateWindowToolbar();
     void setNoteEditCentralWidgetEnabled(bool enabled);
     void centerAndResize();
@@ -974,6 +995,13 @@ class MainWindow : public QMainWindow {
     NoteTabManager *_noteTabManager = nullptr;
     AiToolbarManager *_aiToolbarManager = nullptr;
     WorkspaceManager *_workspaceManager = nullptr;
+    TagManager *_tagManager = nullptr;
+    NoteOperationsManager *_noteOperationsManager = nullptr;
+    NoteIndexManager *_noteIndexManager = nullptr;
+    SearchFilterManager *_searchFilterManager = nullptr;
+    MediaInsertionManager *_mediaInsertionManager = nullptr;
+    NavigationManager *_navigationManager = nullptr;
+    NoteTreeManager *_noteTreeManager = nullptr;
 
     void initTreeWidgets();
 
