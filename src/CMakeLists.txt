@@ -85,7 +85,8 @@ set_target_properties(
              CXX_STANDARD_REQUIRED ON
              AUTOMOC ON
              AUTOUIC ON
-             AUTORCC ON)
+             AUTORCC ON
+             AUTOUIC_SEARCH_PATHS "${CMAKE_CURRENT_SOURCE_DIR}")
 
 if(UNIX AND DEV_MODE)
   if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -455,6 +456,22 @@ set(SOURCE_FILES
     widgets/notesubfoldertree.h
     widgets/noterelationscene.cpp
     widgets/noterelationscene.h
+    managers/spellcheckmanager.cpp
+    managers/spellcheckmanager.h
+    managers/systemtraymanager.cpp
+    managers/systemtraymanager.h
+    managers/exportprintmanager.cpp
+    managers/exportprintmanager.h
+    managers/noteencryptionmanager.cpp
+    managers/noteencryptionmanager.h
+    managers/distractionfreemanager.cpp
+    managers/distractionfreemanager.h
+    managers/notetabmanager.cpp
+    managers/notetabmanager.h
+    managers/aitoolbarmanager.cpp
+    managers/aitoolbarmanager.h
+    managers/workspacemanager.cpp
+    managers/workspacemanager.h
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp

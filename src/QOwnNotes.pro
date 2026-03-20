@@ -235,6 +235,14 @@ SOURCES += main.cpp\
     libraries/qr-code-generator/QrCode.cpp \
     widgets/notesubfoldertree.cpp \
     widgets/noterelationscene.cpp \
+    managers/spellcheckmanager.cpp \
+    managers/systemtraymanager.cpp \
+    managers/exportprintmanager.cpp \
+    managers/noteencryptionmanager.cpp \
+    managers/distractionfreemanager.cpp \
+    managers/notetabmanager.cpp \
+    managers/aitoolbarmanager.cpp \
+    managers/workspacemanager.cpp \
     utils/urlhandler.cpp
 
 HEADERS  += mainwindow.h \
@@ -356,6 +364,14 @@ HEADERS  += mainwindow.h \
     libraries/qtwaitingspinner/waitingspinnerwidget.h \
     widgets/notesubfoldertree.h \
     widgets/noterelationscene.h \
+    managers/spellcheckmanager.h \
+    managers/systemtraymanager.h \
+    managers/exportprintmanager.h \
+    managers/noteencryptionmanager.h \
+    managers/distractionfreemanager.h \
+    managers/notetabmanager.h \
+    managers/aitoolbarmanager.h \
+    managers/workspacemanager.h \
     utils/urlhandler.h \
 
 FORMS    += mainwindow.ui \

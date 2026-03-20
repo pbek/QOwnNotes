@@ -82,6 +82,16 @@ class NoteFilePathLabel;
 class NoteRelationScene;
 struct TagHeader;
 
+// Manager forward declarations
+class SpellCheckManager;
+class SystemTrayManager;
+class ExportPrintManager;
+class NoteEncryptionManager;
+class DistractionFreeManager;
+class NoteTabManager;
+class AiToolbarManager;
+class WorkspaceManager;
+
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
 class SettingsDialog;
@@ -92,6 +102,14 @@ class MainWindow : public QMainWindow {
     Q_PROPERTY(Note currentNote WRITE setCurrentNote MEMBER currentNote NOTIFY currentNoteChanged)
 
     friend struct FileWatchDisabler;
+    friend class SpellCheckManager;
+    friend class SystemTrayManager;
+    friend class ExportPrintManager;
+    friend class NoteEncryptionManager;
+    friend class DistractionFreeManager;
+    friend class NoteTabManager;
+    friend class AiToolbarManager;
+    friend class WorkspaceManager;
 
    Q_SIGNALS:
     void currentNoteChanged(Note &note);
@@ -590,8 +608,6 @@ class MainWindow : public QMainWindow {
 
     void togglePanelVisibility(const QString &objectName);
 
-    void updatePanelMenu();
-
     void toggleToolbarVisibility(const QString &objectName);
 
     void updateToolbarMenu();
@@ -777,6 +793,46 @@ class MainWindow : public QMainWindow {
     bool showNotesFromAllNoteSubFolders() const;
     bool doNoteEditingCheck();
 
+    /** Manager accessors **/
+   public:
+    SpellCheckManager *spellCheckManager() const { return _spellCheckManager; }
+    SystemTrayManager *systemTrayManager() const { return _systemTrayManager; }
+    ExportPrintManager *exportPrintManager() const { return _exportPrintManager; }
+    NoteEncryptionManager *noteEncryptionManager() const { return _noteEncryptionManager; }
+    DistractionFreeManager *distractionFreeManager() const { return _distractionFreeManager; }
+    NoteTabManager *noteTabManager() const { return _noteTabManager; }
+    AiToolbarManager *aiToolbarManager() const { return _aiToolbarManager; }
+    WorkspaceManager *workspaceManager() const { return _workspaceManager; }
+
+    /** State accessors needed by managers **/
+    bool closeEventWasFired() const { return _closeEventWasFired; }
+    bool noteEditIsCentralWidget() const { return _noteEditIsCentralWidget; }
+    bool noteSubFolderDockWidgetVisible() const { return _noteSubFolderDockWidgetVisible; }
+    void setNoteSubFolderDockWidgetVisible(bool visible) {
+        _noteSubFolderDockWidgetVisible = visible;
+    }
+    void setNoteViewNeedsUpdate(bool needsUpdate) { _noteViewNeedsUpdate = needsUpdate; }
+    QDockWidget *noteEditDockWidget() const { return _noteEditDockWidget; }
+    QDockWidget *notePreviewDockWidget() const { return _notePreviewDockWidget; }
+
+    // Methods needed by managers (made public)
+    void updateNoteTextEditReadOnly();
+    void handleNoteTextChanged();
+    void storeSettings();
+    void storeCurrentWorkspace();
+    void handleNoteSubFolderVisibility() const;
+    void updatePanelMenu();
+    void updateWindowToolbar();
+    void setNoteEditCentralWidgetEnabled(bool enabled);
+    void centerAndResize();
+    void filterNotes(bool searchForText = true);
+    void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly = false,
+                             bool ignorePreviewVisibility = false,
+                             bool allowRestoreCursorPosition = false);
+    void setDockWidgetVisible(const QString &objectName, bool visible);
+    void restoreDockWidgetTitleBars();
+    void updateJumpToActionsAvailability();
+
     /** Actions **/
    public:
     QAction *newNoteAction();
@@ -829,18 +885,14 @@ class MainWindow : public QMainWindow {
     NoteFilePathLabel *_noteFilePathLabel;
     QLabel *_noteEditLineNumberLabel;
     QPushButton *_readOnlyButton;
-    QPushButton *_leaveDistractionFreeModeButton;
-    QPushButton *_leaveFullScreenModeButton;
     QToolBar *_formattingToolbar;
     QToolBar *_customActionToolbar;
     QToolBar *_insertingToolbar;
     QToolBar *_encryptionToolbar;
-    QToolBar *_aiToolbar;
     QToolBar *_windowToolbar;
     QToolBar *_quitToolbar;
     bool _noteViewIsRegenerated;
     QHash<int, NoteHistoryItem> _activeNoteFolderNotePositions;
-    QHash<QString, QString> _workspaceNameUuidMap;
     bool _searchLineEditFromCompleter;
     bool _isNotesDirectoryWasModifiedDisabled;
     bool _isNotesWereModifiedDisabled;
@@ -878,9 +930,6 @@ class MainWindow : public QMainWindow {
     QWidget *_scriptingDockTitleBarWidget;
     QWidget *_noteGraphicsViewDockTitleBarWidget;
     NoteRelationScene *_noteRelationScene;
-    QComboBox *_workspaceComboBox;
-    QComboBox *_aiBackendComboBox;
-    QComboBox *_aiModelComboBox;
     QFrame *_noteFolderDockWidgetFrame;
     bool _useNoteFolderButtons;
     bool _noteFolderDockWidgetWasVisible;
@@ -901,9 +950,6 @@ class MainWindow : public QMainWindow {
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
     WebAppClientService *_webAppClientService;
-    QActionGroup *_languageGroup;
-    QActionGroup *_spellBackendGroup;
-    QActionGroup *_aiModelGroup;
     bool _brokenTagNoteLinksRemoved = false;
 
 #ifdef USE_QLITEHTML
@@ -914,16 +960,20 @@ class MainWindow : public QMainWindow {
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
     XdgGlobalShortcutManager *_xdgShortcutManager = nullptr;
 #endif
-    int _lastNoteId = 0;
     bool _scriptUpdateFound = false;
-    bool _isMaximizedBeforeFullScreen = false;
-    bool _isMinimizedBeforeFullScreen = false;
-    WaitingSpinnerWidget *_openAiActivitySpinner = nullptr;
     QAction *_lastTriggeredAction = nullptr;
     quint64 _fileNavigationUpdateRequestId = 0;
     quint64 _backlinkNavigationUpdateRequestId = 0;
 
-    void initializeOpenAiActivitySpinner();
+    // Manager instances
+    SpellCheckManager *_spellCheckManager = nullptr;
+    SystemTrayManager *_systemTrayManager = nullptr;
+    ExportPrintManager *_exportPrintManager = nullptr;
+    NoteEncryptionManager *_noteEncryptionManager = nullptr;
+    DistractionFreeManager *_distractionFreeManager = nullptr;
+    NoteTabManager *_noteTabManager = nullptr;
+    AiToolbarManager *_aiToolbarManager = nullptr;
+    WorkspaceManager *_workspaceManager = nullptr;
 
     void initTreeWidgets();
 
@@ -949,15 +999,9 @@ class MainWindow : public QMainWindow {
 
     int openNoteDiffDialog(Note changedNote);
 
-    void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly = false,
-                             bool ignorePreviewVisibility = false,
-                             bool allowRestoreCursorPosition = false);
-
     void loadNoteFolderListMenu();
 
     void storeRecentNoteFolder(const QString &addFolderName, const QString &removeFolderName);
-
-    void storeSettings();
 
     void removeSelectedNotes();
 
@@ -1018,8 +1062,6 @@ class MainWindow : public QMainWindow {
     void highlightCurrentNoteTagsInTagTree();
 
     void filterNotesBySearchLineEditText(bool searchInNote = true);
-
-    void filterNotes(bool searchForText = true);
 
     bool isTagsEnabled();
 
@@ -1098,25 +1140,9 @@ class MainWindow : public QMainWindow {
 
     void createNoteEditDockWidget();
 
-    void setNoteEditCentralWidgetEnabled(bool enabled);
-
     void updateNoteEditFrameShape() const;
 
-    void updateWorkspaceLists(bool rebuild = true);
-
-    bool createNewWorkspace(QString name);
-
-    static QString currentWorkspaceUuid();
-
-    void storeCurrentWorkspace();
-
-    void initWorkspaceComboBox();
-
-    void updateWindowToolbar();
-
     void restoreToolbars();
-
-    void handleNoteSubFolderVisibility() const;
 
     void initPanelMenu();
 
@@ -1138,43 +1164,6 @@ class MainWindow : public QMainWindow {
 
     void updateNoteSortOrderSelectorVisibility(bool visible);
 
-    void storeTagTreeWidgetExpandState() const;
-
-    static void startAppVersionTest();
-
-    void selectAllNotesInNoteSubFolderTreeWidget() const;
-
-    bool insertAttachment(QFile *file, const QString &title = QString(),
-                          const QString &fileName = QString());
-
-    bool insertTextAsAttachment(const QString &text);
-
-    void updatePanelsSortOrder();
-
-    void updateNotesPanelSortOrder();
-
-    void selectAllNotesInTagTreeWidget() const;
-
-    void handleScriptingNoteTagging(Note note, const Tag &tag, bool doRemove = false,
-                                    bool triggerPostMethods = true);
-
-    void handleScriptingNotesTagUpdating();
-
-    void handleScriptingNotesTagRenaming(const Tag &tag, const QString &newTagName);
-
-    void handleScriptingNotesTagRemoving(const Tag &tag, bool forBulkOperation = false);
-
-    void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
-                                    bool alsoHandleNotesWereModified = false);
-
-    static void setMenuEnabled(QMenu *menu, bool enabled);
-
-    bool undoFormatting(const QString &formatter);
-
-    void applyFormatter(const QString &formatter);
-
-    void updateNoteTextEditReadOnly();
-
     int getSelectedNotesCount() const;
 
     void updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem *noteItem = nullptr);
@@ -1186,17 +1175,9 @@ class MainWindow : public QMainWindow {
 
     void updateCurrentNoteTextHash();
 
-    void centerAndResize();
-
     void removeConflictedNotesDatabaseCopies();
 
     void insertNoteText(const QString &text);
-
-    void handleNoteTextChanged();
-
-    void loadDictionaryNames();
-
-    void loadSpellingBackends();
 
     QTextDocument *getDocumentForPreviewExport();
 
@@ -1212,19 +1193,46 @@ class MainWindow : public QMainWindow {
     bool jumpToTab(const Note &note) const;
     void closeOrphanedTabs() const;
     void automaticScriptUpdateCheck();
-    void updateJumpToActionsAvailability();
     int getNoteTabIndex(int noteId) const;
     bool startAutoReadOnlyModeIfEnabled();
     void updateActionUiEnabled();
-    void buildAiToolbarAndActions();
-    void generateAiBackendComboBox();
-    void generateAiModelComboBox();
-    void generateAiModelMainMenu();
-    void aiModelMainMenuSetCurrentItem();
-    static void handleDockWidgetLocking(QDockWidget *dockWidget);
     void setupNoteRelationScene();
     void updateNoteGraphicsView();
     bool noteDirectoryWatcherAddPath(const QString &path);
     void addDirectoryToDirectoryWatcher(const QString &path);
     bool nextCloudDeckCheck();
+
+    // Methods that remain in mainwindow.cpp (delegated or full implementations)
+    void startAppVersionTest();
+    void initWorkspaceComboBox();
+    void updateWorkspaceLists(bool rebuild = true);
+    void initializeOpenAiActivitySpinner();
+    void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
+                                    bool alsoHandleNotesWereModified = false);
+    bool insertTextAsAttachment(const QString &text);
+    bool insertAttachment(QFile *file, const QString &title = QString(),
+                          const QString &fileName = QString());
+    bool undoFormatting(const QString &formatter);
+    void applyFormatter(const QString &formatter);
+    void handleScriptingNoteTagging(Note note, const Tag &tag, bool doRemove,
+                                    bool triggerPostMethods = true);
+    void handleScriptingNotesTagUpdating();
+    void handleScriptingNotesTagRenaming(const Tag &tag, const QString &newTagName);
+    void handleScriptingNotesTagRemoving(const Tag &tag, bool forBulkOperation = false);
+    void selectAllNotesInNoteSubFolderTreeWidget() const;
+    void selectAllNotesInTagTreeWidget() const;
+    void handleDockWidgetLocking(QDockWidget *dockWidget);
+    bool createNewWorkspace(QString name);
+    QString currentWorkspaceUuid();
+    void generateAiBackendComboBox();
+    void generateAiModelMainMenu();
+    void aiModelMainMenuSetCurrentItem();
+    void generateAiModelComboBox();
+    void storeTagTreeWidgetExpandState() const;
+    void updatePanelsSortOrder();
+    void updateNotesPanelSortOrder();
+    void setMenuEnabled(QMenu *menu, bool enabled);
+    void loadDictionaryNames();
+    void loadSpellingBackends();
+    void buildAiToolbarAndActions();
 };

@@ -138,6 +138,16 @@
 #include "widgets/noterelationscene.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
+// Manager includes
+#include "managers/aitoolbarmanager.h"
+#include "managers/distractionfreemanager.h"
+#include "managers/exportprintmanager.h"
+#include "managers/noteencryptionmanager.h"
+#include "managers/notetabmanager.h"
+#include "managers/spellcheckmanager.h"
+#include "managers/systemtraymanager.h"
+#include "managers/workspacemanager.h"
+
 static MainWindow *s_self = nullptr;
 
 struct FileWatchDisabler {
@@ -168,6 +178,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // use our custom log handler
     qInstallMessageHandler(LogWidget::logMessageOutput);
 
+    // Instantiate manager classes
+    _spellCheckManager = new SpellCheckManager(this, ui, this);
+    _exportPrintManager = new ExportPrintManager(this, ui, this);
+    _noteEncryptionManager = new NoteEncryptionManager(this, ui, this);
+    _distractionFreeManager = new DistractionFreeManager(this, ui, this);
+    _noteTabManager = new NoteTabManager(this, ui, this);
+    _workspaceManager = new WorkspaceManager(this, ui, this);
+
     SettingsService settings;
 
     // Disable note editing if the user has set the start in read-only mode
@@ -182,8 +200,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     ui->noteEditTabWidget->setTabsClosable(
         !settings.value(QStringLiteral("hideTabCloseButton")).toBool());
     ui->noteEditTabWidget->tabBar()->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested, this,
-            &MainWindow::showNoteEditTabWidgetContextMenu);
+    connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested, _noteTabManager,
+            &NoteTabManager::showNoteEditTabWidgetContextMenu);
 
     // Set the two shortcuts for the "increase note text size" action
     const QList<QKeySequence> shortcuts = {QKeySequence(Qt::CTRL | Qt::Key_Plus),
@@ -197,7 +215,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowIcon(getSystemTrayIcon());
 
     // initialize the workspace combo box
-    initWorkspaceComboBox();
+    _workspaceManager->initWorkspaceComboBox();
 
 #ifdef Q_OS_MAC
     // set another shortcut for delete line under macOS
@@ -221,7 +239,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _lastNoteSelectionWasMultiple = false;
     _webSocketServerService = nullptr;
     _closeEventWasFired = false;
-    _leaveFullScreenModeButton = nullptr;
     _useNoteFolderButtons = settings.value("useNoteFolderButtons").toBool();
 
     this->setWindowTitle(QStringLiteral("QOwnNotes - version ") + QStringLiteral(VERSION) +
@@ -298,7 +315,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     // Reload the OpenAI controls after the scripting engine is initialized,
     // so that scripts can add custom backends
-    reloadOpenAiControls();
+    _aiToolbarManager->reloadOpenAiControls();
 
     // we need to init global shortcuts after the scriptengine is initialized
     // in case there are global shortcuts for custom actions
@@ -312,9 +329,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     // update the workspace menu and combobox entries again after
     // restoreToolbars() to fill the workspace combo box again
-    updateWorkspaceLists();
+    _workspaceManager->updateWorkspaceLists();
 
-    createSystemTrayIcon();
+    // Instantiate the system tray manager
+    _systemTrayManager = new SystemTrayManager(this, ui, showSystemTray, this);
+    _systemTrayManager->createSystemTrayIcon();
 
     buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
 
@@ -386,7 +405,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         // if it is in distraction mode we restore it immediately
         // otherwise it can result in mixed state
         if (isInDistractionFreeMode()) {
-            restoreCurrentWorkspace();
+            _workspaceManager->restoreCurrentWorkspace();
         } else {
             QTimer::singleShot(500, this, SLOT(restoreCurrentWorkspace()));
         }
@@ -404,7 +423,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setupNoteBookmarkShortcuts();
 
     // restore the distraction free mode
-    restoreDistractionFreeMode();
+    _distractionFreeManager->restoreDistractionFreeMode();
 
     // add action tracking
     connect(ui->menuBar, &QMenuBar::triggered, this, &MainWindow::trackAction);
@@ -433,8 +452,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthCustom);
     dfmEditorWidthActionGroup->setExclusive(true);
 
-    connect(dfmEditorWidthActionGroup, &QActionGroup::triggered, this,
-            &MainWindow::dfmEditorWidthActionTriggered);
+    connect(dfmEditorWidthActionGroup, &QActionGroup::triggered, _distractionFreeManager,
+            &DistractionFreeManager::dfmEditorWidthActionTriggered);
 
     setAcceptDrops(true);
 
@@ -929,14 +948,7 @@ MainWindow::~MainWindow() {
 /**
  * Initializes the workspace combo box
  */
-void MainWindow::initWorkspaceComboBox() {
-    _workspaceComboBox = new QComboBox(this);
-    connect(_workspaceComboBox,
-            static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this,
-            &MainWindow::onWorkspaceComboBoxCurrentIndexChanged);
-    _workspaceComboBox->setToolTip(tr("Workspaces"));
-    _workspaceComboBox->setObjectName(QStringLiteral("workspaceComboBox"));
-}
+void MainWindow::initWorkspaceComboBox() { _workspaceManager->initWorkspaceComboBox(); }
 
 /**
  * Initializes the dock widgets
@@ -1403,11 +1415,12 @@ void MainWindow::initToolbars() {
     _encryptionToolbar->setObjectName(QStringLiteral("encryptionToolbar"));
     addToolBar(_encryptionToolbar);
 
-    _aiModelGroup = new QActionGroup(ui->menuAI_model);
+    auto *aiToolbar = new QToolBar(tr("AI toolbar"), this);
+    aiToolbar->setObjectName(QStringLiteral("aiToolbar"));
+    addToolBar(aiToolbar);
 
-    _aiToolbar = new QToolBar(tr("AI toolbar"), this);
-    _aiToolbar->setObjectName(QStringLiteral("aiToolbar"));
-    addToolBar(_aiToolbar);
+    // Instantiate the AI toolbar manager with the toolbar
+    _aiToolbarManager = new AiToolbarManager(this, ui, aiToolbar, this);
 
     _windowToolbar = new QToolBar(tr("window toolbar"), this);
     updateWindowToolbar();
@@ -1428,7 +1441,7 @@ void MainWindow::initToolbars() {
     connect(_formattingToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
     connect(_insertingToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
     connect(_encryptionToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
-    connect(_aiToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
+    connect(aiToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
     connect(_windowToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
     connect(_customActionToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
     connect(_quitToolbar, &QToolBar::actionTriggered, this, &MainWindow::trackAction);
@@ -1441,7 +1454,7 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->clear();
 
     auto *widgetAction = new QWidgetAction(this);
-    widgetAction->setDefaultWidget(_workspaceComboBox);
+    widgetAction->setDefaultWidget(_workspaceManager->workspaceComboBox());
     widgetAction->setObjectName(QStringLiteral("actionWorkspaceComboBox"));
     widgetAction->setText(tr("Workspace selector"));
     _windowToolbar->addAction(widgetAction);
@@ -1464,75 +1477,7 @@ void MainWindow::updateWindowToolbar() {
  * Updates the workspace menu and combobox entries
  */
 void MainWindow::updateWorkspaceLists(bool rebuild) {
-    SettingsService settings;
-    const QStringList workspaces = getWorkspaceUuidList();
-    const QString currentUuid = currentWorkspaceUuid();
-
-    if (rebuild) {
-        // we need to create a new combo box so the width gets updated in the
-        // window toolbar
-        initWorkspaceComboBox();
-
-        ui->menuWorkspaces->clear();
-
-        _workspaceNameUuidMap.clear();
-    }
-
-    const QSignalBlocker blocker(_workspaceComboBox);
-    Q_UNUSED(blocker)
-
-    int currentIndex = 0;
-
-    for (int i = 0; i < workspaces.count(); i++) {
-        const QString &uuid = workspaces.at(i);
-
-        if (uuid == currentUuid) {
-            currentIndex = i;
-        }
-
-        // check if we want to skip the rebuilding part
-        if (!rebuild) {
-            continue;
-        }
-
-        const QString name =
-            settings.value(QStringLiteral("workspace-") + uuid + QStringLiteral("/name"))
-                .toString();
-        const QString objectName = QStringLiteral("restoreWorkspace-") + uuid;
-
-        _workspaceNameUuidMap.insert(name, uuid);
-
-        _workspaceComboBox->addItem(name, uuid);
-
-        auto *action = new QAction(name, ui->menuWorkspaces);
-        connect(action, &QAction::triggered, this, [this, uuid]() { setCurrentWorkspace(uuid); });
-
-        // set an object name for creating shortcuts
-        action->setObjectName(objectName);
-
-        // try to load a key sequence from the settings
-        QKeySequence shortcut = QKeySequence(
-            settings.value(QStringLiteral("Shortcuts/MainWindow-") + objectName).toString());
-        action->setShortcut(shortcut);
-
-        //        if (uuid == currentUuid) {
-        //            QFont font = action->font();
-        //            font.setBold(true);
-        //            action->setFont(font);
-        //        }
-
-        ui->menuWorkspaces->addAction(action);
-    }
-
-    _workspaceComboBox->setCurrentIndex(currentIndex);
-
-    if (rebuild) {
-        // we need to adapt the width of the workspaces combo box
-        updateWindowToolbar();
-    }
-
-    // enable the remove button if there are at least two workspaces
-    ui->actionRemove_current_workspace->setEnabled(workspaces.count() > 1);
+    _workspaceManager->updateWorkspaceLists(rebuild);
 }
 
 /**
@@ -1726,50 +1671,21 @@ void MainWindow::toggleToolbarVisibility(const QString &objectName) {
  * Restores the distraction free mode
  */
 void MainWindow::restoreDistractionFreeMode() {
-    if (isInDistractionFreeMode()) {
-        setDistractionFreeMode(true);
-    }
+    _distractionFreeManager->restoreDistractionFreeMode();
 }
 
 /**
  * Checks if we are in distraction free mode
  */
 bool MainWindow::isInDistractionFreeMode() {
-    SettingsService settings;
-    return settings.value(QStringLiteral("DistractionFreeMode/isEnabled")).toBool();
+    return DistractionFreeManager::isInDistractionFreeMode();
 }
 
 /**
  * Toggles the distraction free mode
  */
 void MainWindow::toggleDistractionFreeMode() {
-    // Leave the one-column mode if active
-    if (ui->actionUse_one_column_mode->isChecked()) {
-        ui->actionUse_one_column_mode->toggle();
-    }
-
-    SettingsService settings;
-    bool isInDistractionFreeMode = MainWindow::isInDistractionFreeMode();
-
-    qDebug() << __func__ << " - 'isInDistractionFreeMode': " << isInDistractionFreeMode;
-
-    // Store the window settings before we go into distraction-free mode
-    if (!isInDistractionFreeMode) {
-        storeSettings();
-    }
-
-    isInDistractionFreeMode = !isInDistractionFreeMode;
-
-    // Remember that we were using the distraction-free mode
-    settings.setValue(QStringLiteral("DistractionFreeMode/isEnabled"), isInDistractionFreeMode);
-
-    setDistractionFreeMode(isInDistractionFreeMode);
-
-    // Enter or leave fullscreen mode if we are in or left distraction-free mode
-    if ((isInDistractionFreeMode && !isFullScreen()) ||
-        (!isInDistractionFreeMode && isFullScreen())) {
-        on_actionToggle_fullscreen_triggered();
-    }
+    _distractionFreeManager->toggleDistractionFreeMode();
 }
 
 /**
@@ -1994,123 +1910,14 @@ void MainWindow::noteViewSliderValueChanged(int value, bool force) {
  * Enables or disables the distraction free mode
  */
 void MainWindow::setDistractionFreeMode(const bool enabled) {
-    SettingsService settings;
-
-    if (enabled) {
-        //
-        // enter the distraction free mode
-        //
-
-        // turn off line numbers because they would look broken in dfm
-        ui->noteTextEdit->setLineNumberEnabled(false);
-        ui->encryptedNoteTextEdit->setLineNumberEnabled(false);
-
-        // store the current workspace in case we changed something
-        storeCurrentWorkspace();
-
-        const bool menuBarWasVisible =
-            settings.value(QStringLiteral("showMenuBar"), !ui->menuBar->isHidden()).toBool();
-
-        // set the menu bar visible so we get the correct height
-        if (!menuBarWasVisible) {
-            ui->menuBar->setVisible(true);
-        }
-
-        // remember states, geometry and sizes
-        settings.setValue(QStringLiteral("DistractionFreeMode/windowState"), saveState());
-        settings.setValue(QStringLiteral("DistractionFreeMode/menuBarGeometry"),
-                          ui->menuBar->saveGeometry());
-        settings.setValue(QStringLiteral("DistractionFreeMode/menuBarHeight"),
-                          ui->menuBar->height());
-        settings.setValue(QStringLiteral("DistractionFreeMode/menuBarVisible"), menuBarWasVisible);
-
-        // we must not hide the menu bar or else the shortcuts
-        // will not work any more
-        ui->menuBar->setFixedHeight(0);
-
-        // hide the toolbars
-        const QList<QToolBar *> toolbars = findChildren<QToolBar *>();
-        for (QToolBar *toolbar : toolbars) {
-            toolbar->hide();
-        }
-
-        if (!_noteEditIsCentralWidget) {
-            // show the note edit dock widget
-            _noteEditDockWidget->show();
-        }
-
-        // hide all dock widgets but the note edit dock widget
-        const QList<QDockWidget *> dockWidgets = findChildren<QDockWidget *>();
-        for (QDockWidget *dockWidget : dockWidgets) {
-            if (dockWidget->objectName() == QStringLiteral("noteEditDockWidget")) {
-                continue;
-            }
-            dockWidget->hide();
-        }
-
-        // hide the status bar
-        //        ui->statusBar->hide();
-
-        _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
-        _leaveDistractionFreeModeButton->setFlat(true);
-        _leaveDistractionFreeModeButton->setToolTip(tr("Leave distraction free mode"));
-        _leaveDistractionFreeModeButton->setStyleSheet(
-            QStringLiteral("QPushButton {padding: 0 5px}"));
-
-        _leaveDistractionFreeModeButton->setIcon(QIcon::fromTheme(
-            QStringLiteral("zoom-original"),
-            QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/zoom-original.svg"))));
-
-        connect(_leaveDistractionFreeModeButton, &QPushButton::clicked, this,
-                &MainWindow::toggleDistractionFreeMode);
-
-        statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
-
-        ui->noteEditTabWidget->tabBar()->hide();
-    } else {
-        //
-        // leave the distraction free mode
-        //
-
-        statusBar()->removeWidget(_leaveDistractionFreeModeButton);
-        disconnect(_leaveDistractionFreeModeButton, nullptr, nullptr, nullptr);
-
-        // restore states and sizes
-        restoreState(
-            settings.value(QStringLiteral("DistractionFreeMode/windowState")).toByteArray());
-        ui->menuBar->setVisible(
-            settings.value(QStringLiteral("DistractionFreeMode/menuBarVisible")).toBool());
-        ui->menuBar->restoreGeometry(
-            settings.value(QStringLiteral("DistractionFreeMode/menuBarGeometry")).toByteArray());
-        ui->menuBar->setFixedHeight(
-            settings.value(QStringLiteral("DistractionFreeMode/menuBarHeight")).toInt());
-
-        if (ui->noteEditTabWidget->count() > 1) {
-            ui->noteEditTabWidget->tabBar()->show();
-        }
-
-        bool showLineNumbersInEditor =
-            settings.value(QStringLiteral("Editor/showLineNumbers")).toBool();
-
-        // turn line numbers on again if they were enabled
-        if (showLineNumbersInEditor) {
-            ui->noteTextEdit->setLineNumberEnabled(true);
-            ui->encryptedNoteTextEdit->setLineNumberEnabled(true);
-        }
-    }
-
-    ui->noteTextEdit->setPaperMargins();
-    ui->encryptedNoteTextEdit->setPaperMargins();
-    activeNoteTextEdit()->setFocus();
+    _distractionFreeManager->setDistractionFreeMode(enabled);
 }
 
 /**
  * Sets the distraction free mode if it is currently other than we want it to be
  */
 void MainWindow::changeDistractionFreeMode(const bool enabled) {
-    if (isInDistractionFreeMode() != enabled) {
-        setDistractionFreeMode(enabled);
-    }
+    _distractionFreeManager->changeDistractionFreeMode(enabled);
 }
 
 /**
@@ -2369,7 +2176,7 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
 
     generateSystemTrayContextMenu();
     updateWindowTitle();
-    _lastNoteId = 0;
+    _noteTabManager->_lastNoteId = 0;
 
     // Update the ignored click url regexps for the note text edits
     ui->encryptedNoteTextEdit->updateIgnoredClickUrlRegexps();
@@ -2442,29 +2249,14 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     return result;
 }
 
-void MainWindow::createSystemTrayIcon() {
-    trayIcon = new QSystemTrayIcon(this);
-
-    connect(trayIcon, &QSystemTrayIcon::activated, this, &MainWindow::systemTrayIconClicked);
-
-    if (showSystemTray) {
-        trayIcon->setIcon(getSystemTrayIcon());
-        trayIcon->show();
-    }
-}
+void MainWindow::createSystemTrayIcon() { _systemTrayManager->createSystemTrayIcon(); }
 
 /**
  * Returns a proper system tray icon
  *
  * @return
  */
-QIcon MainWindow::getSystemTrayIcon() {
-    const SettingsService settings;
-    const bool darkModeIcon = settings.value(QStringLiteral("darkModeTrayIcon"), false).toBool();
-    const QString file = darkModeIcon ? QStringLiteral(":/images/icon-dark.png")
-                                      : QStringLiteral(":/images/icon.png");
-    return QIcon(file);
-}
+QIcon MainWindow::getSystemTrayIcon() { return SystemTrayManager::getSystemTrayIcon(); }
 
 /**
  * Creates the items in the note tree widget from the note and note sub
@@ -2844,7 +2636,6 @@ void MainWindow::readSettings() {
 
     // load backends
 #ifdef ASPELL_ENABLED
-    _spellBackendGroup = new QActionGroup(ui->menuSpelling_backend);
     loadSpellingBackends();
 #else
     ui->menuSpelling_backend->menuAction()->setVisible(false);
@@ -2855,7 +2646,6 @@ void MainWindow::readSettings() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QTimer::singleShot(10, this, [this] {
 #endif
-        _languageGroup = new QActionGroup(ui->menuLanguages);
         loadDictionaryNames();
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     });
@@ -3000,7 +2790,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
         _customActionToolbar->setIconSize(size);
         _insertingToolbar->setIconSize(size);
         _encryptionToolbar->setIconSize(size);
-        _aiToolbar->setIconSize(size);
+        _aiToolbarManager->aiToolbar()->setIconSize(size);
         _windowToolbar->setIconSize(size);
         _quitToolbar->setIconSize(size);
     }
@@ -3533,7 +3323,7 @@ void MainWindow::setupStatusBarWidgets() {
     ui->statusBar->addWidget(_noteFilePathLabel);
 
     initializeOpenAiActivitySpinner();
-    ui->statusBar->addPermanentWidget(_openAiActivitySpinner);
+    ui->statusBar->addPermanentWidget(_aiToolbarManager->openAiActivitySpinner());
 
     /*
      * setup of readonly button
@@ -3577,16 +3367,7 @@ void MainWindow::setupStatusBarWidgets() {
 }
 
 void MainWindow::initializeOpenAiActivitySpinner() {
-    _openAiActivitySpinner = new WaitingSpinnerWidget(0, false, false);
-    _openAiActivitySpinner->setNumberOfLines(12);
-    _openAiActivitySpinner->setLineLength(5);
-    _openAiActivitySpinner->setLineWidth(2);
-    _openAiActivitySpinner->setInnerRadius(3);
-    _openAiActivitySpinner->setRevolutionsPerSecond(1);
-    _openAiActivitySpinner->setToolTip(tr("Waiting for answer from AI"));
-
-    const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
-    _openAiActivitySpinner->setColor(darkMode ? Qt::white : Qt::black);
+    _aiToolbarManager->initializeOpenAiActivitySpinner();
 }
 
 void MainWindow::showUpdateAvailableButton(const QString &version) {
@@ -4370,7 +4151,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
         this->noteHistory.updateCursorPositionOfNote(this->currentNote, ui->noteTextEdit);
     }
 
-    this->_lastNoteId = this->currentNote.getId();
+    _noteTabManager->_lastNoteId = this->currentNote.getId();
     this->currentNote = note;
     const QString currentNoteReference = noteFoldingReference(this->currentNote);
     ui->noteTextEdit->setCurrentNoteReference(currentNoteReference);
@@ -4475,40 +4256,12 @@ void MainWindow::updateNoteGraphicsView() {
 }
 
 void MainWindow::updateCurrentTabData(const Note &note) const {
-    Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget, ui->noteEditTabWidget->currentIndex(),
-                                       note);
+    _noteTabManager->updateCurrentTabData(note);
 }
 
-void MainWindow::closeOrphanedTabs() const {
-    const int maxIndex = ui->noteEditTabWidget->count() - 1;
+void MainWindow::closeOrphanedTabs() const { _noteTabManager->closeOrphanedTabs(); }
 
-    for (int i = maxIndex; i >= 0; i--) {
-        const int noteId = Utils::Gui::getTabWidgetNoteId(ui->noteEditTabWidget, i);
-
-        if (!Note::noteIdExists(noteId)) {
-            removeNoteTab(i);
-        }
-    }
-}
-
-bool MainWindow::jumpToTab(const Note &note) const {
-    const int noteId = note.getId();
-    const int tabIndexOfNote = getNoteTabIndex(noteId);
-
-    if (tabIndexOfNote == -1) {
-        return false;
-    }
-
-    ui->noteEditTabWidget->setCurrentIndex(tabIndexOfNote);
-    QWidget *widget = ui->noteEditTabWidget->currentWidget();
-
-    if (widget->layout() == nullptr) {
-        widget->setLayout(ui->noteEditTabWidgetLayout);
-        closeOrphanedTabs();
-    }
-
-    return true;
-}
+bool MainWindow::jumpToTab(const Note &note) const { return _noteTabManager->jumpToTab(note); }
 
 /**
  * Creates a hash of the text of the current note to be able to tell if it was
@@ -5000,40 +4753,7 @@ void MainWindow::searchForSearchLineTextInNoteTextEdit() {
  * Asks for the password if the note is encrypted and can't be decrypted
  */
 void MainWindow::askForEncryptedNotePasswordIfNeeded(const QString &additionalText) {
-    currentNote.refetch();
-
-    // check if the note is encrypted and can't be decrypted
-    if (currentNote.hasEncryptedNoteText() && !currentNote.canDecryptNoteText()) {
-        QString labelText =
-            tr("Please enter the <strong>password</strong> "
-               "of this encrypted note.");
-
-        if (!additionalText.isEmpty()) {
-            labelText += QStringLiteral(" ") + additionalText;
-        }
-
-        auto *dialog = new PasswordDialog(this, labelText);
-        const int dialogResult = dialog->exec();
-
-        // if user pressed ok take the password
-        if (dialogResult == QDialog::Accepted) {
-            const QString password = dialog->password();
-            if (!password.isEmpty()) {
-                // set the password so it can be decrypted
-                // for the Markdown view
-                currentNote.setCryptoPassword(password);
-                currentNote.store();
-            }
-
-            // warn if password is incorrect
-            if (!currentNote.canDecryptNoteText()) {
-                QMessageBox::warning(this, tr("Note can't be decrypted!"),
-                                     tr("It seems that your password is not valid!"));
-            }
-        }
-
-        delete (dialog);
-    }
+    _noteEncryptionManager->askForEncryptedNotePasswordIfNeeded(additionalText);
 }
 
 /**
@@ -5976,18 +5696,7 @@ void MainWindow::setCurrentNoteFromHistoryItem(const NoteHistoryItem &item) {
  * @param textEdit
  */
 bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
-    Utils::Misc::loadPrinterSettings(printer, QStringLiteral("Printer/NotePrinting"));
-
-    QPrintDialog dialog(printer, this);
-    dialog.setWindowTitle(tr("Print note"));
-    const int ret = dialog.exec();
-
-    if (ret != QDialog::Accepted) {
-        return false;
-    }
-
-    Utils::Misc::storePrinterSettings(printer, QStringLiteral("Printer/NotePrinting"));
-    return true;
+    return _exportPrintManager->preparePrintNotePrinter(printer);
 }
 
 /**
@@ -5995,10 +5704,7 @@ bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
  * @param textEdit
  */
 void MainWindow::printTextDocument(QTextDocument *textDocument) {
-    QPrinter printer;
-    if (preparePrintNotePrinter(&printer)) {
-        textDocument->print(&printer);
-    }
+    _exportPrintManager->printTextDocument(textDocument);
 }
 
 /**
@@ -6007,112 +5713,7 @@ void MainWindow::printTextDocument(QTextDocument *textDocument) {
  * @param printer
  */
 bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
-#ifdef Q_OS_LINUX
-    Utils::Misc::loadPrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
-
-    // Ensure color mode is always set to Color for PDF export
-    printer->setColorMode(QPrinter::Color);
-
-    // under Linux we use the QPageSetupDialog to change layout
-    // settings of the PDF export
-    QPageSetupDialog pageSetupDialog(printer, this);
-
-    if (pageSetupDialog.exec() != QDialog::Accepted) {
-        return false;
-    }
-
-    // Ensure color mode is still set to Color before storing settings
-    printer->setColorMode(QPrinter::Color);
-
-    Utils::Misc::storePrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
-#else
-    // under OS X and Windows the QPageSetupDialog dialog doesn't work,
-    // we will use a workaround to select page sizes and the orientation
-
-    // Ensure color mode is always set to Color for PDF export
-    printer->setColorMode(QPrinter::Color);
-
-    SettingsService settings;
-
-    // select the page size
-    QStringList pageSizeStrings;
-    pageSizeStrings << QStringLiteral("A0") << QStringLiteral("A1") << QStringLiteral("A2")
-                    << QStringLiteral("A3") << QStringLiteral("A4") << QStringLiteral("A5")
-                    << QStringLiteral("A6") << QStringLiteral("A7") << QStringLiteral("A8")
-                    << QStringLiteral("A9") << tr("Letter");
-    QList<QPageSize::PageSizeId> pageSizes;
-    pageSizes << QPageSize::A0 << QPageSize::A1 << QPageSize::A2 << QPageSize::A3 << QPageSize::A4
-              << QPageSize::A5 << QPageSize::A6 << QPageSize::A7 << QPageSize::A8 << QPageSize::A9
-              << QPageSize::Letter;
-
-    bool ok;
-    QString pageSizeString = QInputDialog::getItem(
-        this, tr("Page size"), tr("Page size:"), pageSizeStrings,
-        settings.value(QStringLiteral("Printer/NotePDFExportPageSize"), 4).toInt(), false, &ok);
-
-    if (!ok || pageSizeString.isEmpty()) {
-        return false;
-    }
-
-    int pageSizeIndex = pageSizeStrings.indexOf(pageSizeString);
-    if (pageSizeIndex == -1) {
-        return false;
-    }
-
-    QPageSize pageSize(pageSizes.at(pageSizeIndex));
-    settings.setValue(QStringLiteral("Printer/NotePDFExportPageSize"), pageSizeIndex);
-    printer->setPageSize(pageSize);
-
-    // select the orientation
-    QStringList orientationStrings;
-    orientationStrings << tr("Portrait") << tr("Landscape");
-    QList<QPageLayout::Orientation> orientations;
-    orientations << QPageLayout::Portrait << QPageLayout::Landscape;
-
-    QString orientationString = QInputDialog::getItem(
-        this, tr("Orientation"), tr("Orientation:"), orientationStrings,
-        settings.value(QStringLiteral("Printer/NotePDFExportOrientation"), 0).toInt(), false, &ok);
-
-    if (!ok || orientationString.isEmpty()) {
-        return false;
-    }
-
-    int orientationIndex = orientationStrings.indexOf(orientationString);
-    if (orientationIndex == -1) {
-        return false;
-    }
-
-    printer->setPageOrientation(orientations.at(orientationIndex));
-    settings.setValue(QStringLiteral("Printer/NotePDFExportOrientation"), orientationIndex);
-#endif
-
-    FileDialog dialog(QStringLiteral("NotePDFExport"));
-    dialog.setFileMode(QFileDialog::AnyFile);
-    dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setNameFilter(tr("PDF files") + QStringLiteral(" (*.pdf)"));
-    dialog.setWindowTitle(tr("Export current note as PDF"));
-    dialog.selectFile(currentNote.getName() + QStringLiteral(".pdf"));
-    int ret = dialog.exec();
-
-    if (ret != QDialog::Accepted) {
-        return false;
-    }
-
-    QString fileName = dialog.selectedFile();
-
-    if (fileName.isEmpty()) {
-        return false;
-    }
-
-    if (QFileInfo(fileName).suffix().isEmpty()) {
-        fileName.append(QLatin1String(".pdf"));
-    }
-
-    // Ensure color mode is set to Color right before setting output format
-    printer->setColorMode(QPrinter::Color);
-    printer->setOutputFormat(QPrinter::PdfFormat);
-    printer->setOutputFileName(fileName);
-    return true;
+    return _exportPrintManager->prepareExportNoteAsPDFPrinter(printer);
 }
 
 /**
@@ -6120,24 +5721,14 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
  * @param textEdit
  */
 void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
-    exportNoteAsPDF(textEdit->document());
+    _exportPrintManager->exportNoteAsPDF(textEdit);
 }
 
 /**
  * @brief Exports the document as PDF
  * @param doc
  */
-void MainWindow::exportNoteAsPDF(QTextDocument *doc) {
-    auto *printer = new QPrinter(QPrinter::HighResolution);
-    printer->setColorMode(QPrinter::Color);
-
-    if (prepareExportNoteAsPDFPrinter(printer)) {
-        doc->print(printer);
-        Utils::Misc::openFolderSelect(printer->outputFileName());
-    }
-
-    delete printer;
-}
+void MainWindow::exportNoteAsPDF(QTextDocument *doc) { _exportPrintManager->exportNoteAsPDF(doc); }
 
 /**
  * Shows the app metrics notification if not already shown
@@ -6931,7 +6522,7 @@ void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
         // Update _lastNoteId when opening in a new tab to ensure the current note
         // is correctly placed in the old tab, not some previous note
         if (openInNewTab && currentNote.exists()) {
-            _lastNoteId = currentNote.getId();
+            _noteTabManager->_lastNoteId = currentNote.getId();
         }
 
         UrlHandler().openUrl(url.toString(), openInNewTab);
@@ -6995,186 +6586,19 @@ void MainWindow::on_actionBy_date_triggered(bool checked) {
 }
 
 void MainWindow::systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason) {
-    // don't show or hide the app on OS X with a simple click because also the
-    // context menu will be triggered
-#ifndef Q_OS_MAC
-    if (reason == QSystemTrayIcon::Trigger) {
-        if (isVisible() && !isMinimized()) {
-            this->hide();
-        } else {
-            showWindow();
-        }
-    }
-#else
-    Q_UNUSED(reason);
-#endif
+    _systemTrayManager->systemTrayIconClicked(reason);
 }
 
 /**
  * Shows the window (also brings it to the front and un-minimizes it)
  */
-void MainWindow::showWindow() {
-    // show the window in case we are using the system tray
-    show();
-
-    // bring application window to the front
-    activateWindow();    // for Windows
-    setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
-    raise();    // for MacOS
-
-    // Really show the window, by bringing it to focus
-    setFocus();
-
-    // parse the current note for the navigation panel in case it wasn't parsed
-    // while the mainwindow was hidden (https://github.com/pbek/QOwnNotes/issues/2110)
-    startNavigationParser();
-}
+void MainWindow::showWindow() { _systemTrayManager->showWindow(); }
 
 /**
  * Generates the system tray context menu
  */
 void MainWindow::generateSystemTrayContextMenu() {
-    // trying to destroy the old context menu as fix for Ubuntu 14.04
-    // just clearing an existing menu resulted in empty sub-menus
-    //    QMenu *menu = trayIcon->contextMenu();
-    //    delete(menu);
-
-    // QMenu(this) is not allowed here or it will not be recognized as child of
-    // the tray icon later (see: https://github.com/pbek/QOwnNotes/issues/1239)
-    auto *menu = new QMenu();
-    menu->setTitle(QStringLiteral("QOwnNotes"));
-
-    // add menu entry to open the app
-    QString openActionText = tr("Open QOwnNotes");
-#ifdef QT_DEBUG
-    openActionText += QStringLiteral(" (Debug)");
-#endif
-    QAction *openAction = menu->addAction(openActionText);
-    openAction->setIcon(getSystemTrayIcon());
-
-    connect(openAction, &QAction::triggered, this, &MainWindow::showWindow);
-
-    menu->addSeparator();
-    menu->addAction(ui->actionSend_clipboard);
-    menu->addAction(ui->actionSend_clipboard_as_text);
-    menu->addSeparator();
-
-    const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
-    const int noteFoldersCount = noteFolders.count();
-
-    if (noteFoldersCount > 1) {
-        // didn't resulted in a visible text
-        //        QWidgetAction* action = new QWidgetAction(menu);
-        //        QLabel* label = new
-        //        QLabel(NoteFolder::currentNoteFolder().getName(), menu);
-        //        action->setDefaultWidget(label);
-        //        menu->addAction(action);
-
-        QMenu *noteFolderMenu = menu->addMenu(tr("Note folders"));
-
-        // populate the note folder menu
-        for (const auto &noteFolder : noteFolders) {
-            // don't show not existing folders or if path is empty
-            if (!noteFolder.localPathExists()) {
-                continue;
-            }
-
-            // add a menu entry
-            QAction *action = noteFolderMenu->addAction(noteFolder.getName());
-            action->setToolTip(noteFolder.getLocalPath());
-            action->setStatusTip(noteFolder.getLocalPath());
-
-            if (noteFolder.isCurrent()) {
-                QFont font = action->font();
-                // setting it bold didn't do anything for me
-                font.setBold(true);
-                action->setFont(font);
-
-                action->setIcon(Utils::Gui::folderIcon());
-            }
-
-            const int folderId = noteFolder.getId();
-            connect(action, &QAction::triggered, this,
-                    [this, folderId]() { changeNoteFolder(folderId); });
-        }
-
-        menu->addSeparator();
-    }
-
-    // add menu entry to create a new note
-    QAction *createNoteAction = menu->addAction(tr("New note"));
-    createNoteAction->setIcon(
-        QIcon::fromTheme(QStringLiteral("document-new"),
-                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/document-new.svg"))));
-
-    connect(createNoteAction, &QAction::triggered, this, &MainWindow::on_action_New_note_triggered);
-
-    int maxNotes = Note::countAll();
-
-    if (maxNotes > 0) {
-        if (maxNotes > 9) {
-            maxNotes = 9;
-        }
-
-        // add a menu for recent notes
-        QMenu *noteMenu = menu->addMenu(tr("Recent notes"));
-
-        const auto noteList = Note::fetchAll(maxNotes);
-
-        for (const Note &note : noteList) {
-            QAction *action = noteMenu->addAction(note.getName());
-            action->setIcon(Utils::Gui::noteIcon());
-            int noteId = note.getId();
-            connect(action, &QAction::triggered, this,
-                    [this, noteId]() { setCurrentNoteFromNoteId(noteId); });
-        }
-    }
-
-    menu->addSeparator();
-
-    // add menu entry to show the tasks
-    QAction *taskAction = menu->addAction(tr("Show todo lists"));
-    taskAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("view-calendar-tasks"),
-        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/view-calendar-tasks.svg"))));
-
-    connect(taskAction, &QAction::triggered, this, [this]() { openTodoDialog(); });
-
-    QList<CalendarItem> taskList = CalendarItem::fetchAllForSystemTray(10);
-    if (taskList.count() > 0) {
-        // add a menu for recent tasks
-        QMenu *taskMenu = menu->addMenu(tr("Recent tasks"));
-
-        // add menu entries to jump to tasks
-        QListIterator<CalendarItem> itr(taskList);
-        while (itr.hasNext()) {
-            CalendarItem task = itr.next();
-
-            QAction *action = taskMenu->addAction(task.getSummary());
-            action->setIcon(QIcon::fromTheme(
-                QStringLiteral("view-task"),
-                QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/view-task.svg"))));
-
-            connect(action, &QAction::triggered, this,
-                    [this, task]() { openTodoDialog(task.getUid()); });
-        }
-    }
-
-    menu->addSeparator();
-
-    // add menu entry to quit the app
-    QAction *quitAction = menu->addAction(tr("Quit"));
-    quitAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("application-exit"),
-        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/application-exit.svg"))));
-    connect(quitAction, &QAction::triggered, this, &MainWindow::on_action_Quit_triggered);
-
-    trayIcon->setContextMenu(menu);
-#ifdef QT_DEBUG
-    trayIcon->setToolTip(QStringLiteral("QOwnNotes (Debug)"));
-#else
-    trayIcon->setToolTip(QStringLiteral("QOwnNotes"));
-#endif
+    _systemTrayManager->generateSystemTrayContextMenu();
 }
 
 void MainWindow::on_action_Settings_triggered() {
@@ -7319,49 +6743,32 @@ void MainWindow::on_actionShow_Todo_List_triggered() { openTodoDialog(); }
  * @brief Exports the current note as PDF (Markdown)
  */
 void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
-    auto doc = getDocumentForPreviewExport();
-    exportNoteAsPDF(doc);
-    doc->deleteLater();
+    _exportPrintManager->on_action_Export_note_as_PDF_markdown_triggered();
 }
 
 /**
  * @brief Exports the current note as PDF (text)
  */
 void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    exportNoteAsPDF(textEdit);
+    _exportPrintManager->on_action_Export_note_as_PDF_text_triggered();
 }
 
 QTextDocument *MainWindow::getDocumentForPreviewExport() {
-    bool decrypt = ui->noteTextEdit->isHidden();
-    QString html =
-        currentNote.toMarkdownHtml(NoteFolder::currentLocalPath(), getMaxImageWidth(),
-                                   Utils::Misc::useInternalExportStylingForPreview(), decrypt);
-    html = Utils::Misc::parseTaskList(html, false);
-
-    // Windows 10 has troubles with the QTextDocument from the QTextBrowser
-    // see: https://github.com/pbek/QOwnNotes/issues/2015
-    //    auto doc = ui->noteTextView->document()->clone();
-    auto doc = new QTextDocument(this);
-    doc->setHtml(html);
-
-    return doc;
+    return _exportPrintManager->getDocumentForPreviewExport();
 }
 
 /**
  * @brief Prints the current note (Markdown)
  */
 void MainWindow::on_action_Print_note_markdown_triggered() {
-    auto doc = getDocumentForPreviewExport();
-    printTextDocument(doc);
-    doc->deleteLater();
+    _exportPrintManager->on_action_Print_note_markdown_triggered();
 }
 
 /**
  * @brief Prints the current note (text)
  */
 void MainWindow::on_action_Print_note_text_triggered() {
-    printTextDocument(activeNoteTextEdit()->document());
+    _exportPrintManager->on_action_Print_note_text_triggered();
 }
 
 /**
@@ -7598,164 +7005,37 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
  * Asks the user for a password and encrypts the note text with it
  */
 void MainWindow::on_action_Encrypt_note_triggered() {
-    currentNote.refetch();
-
-    // return if the note text is already encrypted
-    if (currentNote.hasEncryptedNoteText()) {
-        return;
-    }
-
-    // the password dialog can be disabled by scripts
-    const bool dialogDisabled = qApp->property("encryptionPasswordDisabled").toBool();
-
-    if (!dialogDisabled) {
-        const QString labelText =
-            tr("Please enter your <strong>password</strong> to encrypt the note."
-               "<br />Keep in mind that you have to <strong>remember</strong> "
-               "your password to read the content of the note<br /> and that you "
-               "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
-        auto *dialog = new PasswordDialog(this, labelText, true);
-        const int dialogResult = dialog->exec();
-
-        // if the user didn't press ok return
-        if (dialogResult != QDialog::Accepted) {
-            return;
-        }
-
-        // take the password
-        const QString password = dialog->password();
-
-        // if password was empty return
-        if (password.isEmpty()) {
-            return;
-        }
-
-        // set the password
-        currentNote.setCryptoPassword(password);
-        currentNote.store();
-
-        delete (dialog);
-    }
-
-    // encrypt the note
-    const QString noteText = currentNote.encryptNoteText();
-    ui->noteTextEdit->setPlainText(noteText);
-    updateNoteTextEditReadOnly();
+    _noteEncryptionManager->on_action_Encrypt_note_triggered();
 }
 
 /**
  * Enables or disables the encrypt note buttons
  */
-void MainWindow::updateNoteEncryptionUI() {
-    currentNote.refetch();
-    const bool hasEncryptedNoteText = currentNote.hasEncryptedNoteText();
-
-    ui->action_Encrypt_note->setEnabled(!hasEncryptedNoteText);
-    ui->actionEdit_encrypted_note->setEnabled(hasEncryptedNoteText);
-    ui->actionDecrypt_note->setEnabled(hasEncryptedNoteText);
-
-    // disable spell checker for encrypted text
-    const bool checkSpellingEnabled =
-        SettingsService().value(QStringLiteral("checkSpelling"), true).toBool();
-    const bool spellCheckerShouldBeActive = !hasEncryptedNoteText && checkSpellingEnabled;
-
-    // check if the spellchecking state is not as it should be
-    if (spellCheckerShouldBeActive != ui->noteTextEdit->isSpellCheckingEnabled()) {
-        ui->noteTextEdit->setSpellCheckingEnabled(spellCheckerShouldBeActive);
-        ui->noteTextEdit->highlighter()->rehighlight();
-
-        // for some reason the encryptedNoteTextEdit is also affected and needs
-        // to be set again
-        if (hasEncryptedNoteText) {
-            ui->encryptedNoteTextEdit->setSpellCheckingEnabled(checkSpellingEnabled);
-        }
-    }
-}
+void MainWindow::updateNoteEncryptionUI() { _noteEncryptionManager->updateNoteEncryptionUI(); }
 
 /**
  * Attempt to decrypt note text
  */
 void MainWindow::on_actionDecrypt_note_triggered() {
-    currentNote.refetch();
-    if (!currentNote.hasEncryptedNoteText()) {
-        return;
-    }
-
-    QMessageBox msgBox(QMessageBox::Warning, tr("Decrypt note and store it as plain text"),
-                       tr("Your note will be decrypted and stored as plain text again. "
-                          "Keep in mind that the unencrypted note will possibly be "
-                          "synced to your server and sensitive text may be exposed!"
-                          "<br />Do you want to decrypt your note?"),
-                       QMessageBox::NoButton, this);
-    msgBox.addButton(tr("&Decrypt"), QMessageBox::AcceptRole);
-    QPushButton *cancelButton = msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
-    msgBox.setDefaultButton(cancelButton);
-    msgBox.exec();
-
-    if (msgBox.clickedButton() == cancelButton) {
-        return;
-    }
-
-    askForEncryptedNotePasswordIfNeeded();
-
-    if (currentNote.canDecryptNoteText()) {
-        ui->encryptedNoteTextEdit->hide();
-        ui->noteTextEdit->setText(currentNote.fetchDecryptedNoteText());
-        ui->noteTextEdit->show();
-        ui->noteTextEdit->setFocus();
-        updateNoteTextEditReadOnly();
-        ui->noteTextEdit->setMarkdownLspDocumentPath(currentNote.fullNoteFilePath(),
-                                                     ui->noteTextEdit->toPlainText());
-    }
+    _noteEncryptionManager->on_actionDecrypt_note_triggered();
 }
 
 /**
  * Lets the user edit an encrypted note text in a 2nd text edit
  */
-void MainWindow::on_actionEdit_encrypted_note_triggered() { editEncryptedNote(); }
-
-void MainWindow::editEncryptedNoteAsync() {
-    QTimer::singleShot(0, this, &MainWindow::editEncryptedNote);
+void MainWindow::on_actionEdit_encrypted_note_triggered() {
+    _noteEncryptionManager->on_actionEdit_encrypted_note_triggered();
 }
 
-void MainWindow::editEncryptedNote() {
-    currentNote.refetch();
-    if (!currentNote.hasEncryptedNoteText()) {
-        return;
-    }
+void MainWindow::editEncryptedNoteAsync() { _noteEncryptionManager->editEncryptedNoteAsync(); }
 
-    askForEncryptedNotePasswordIfNeeded(tr("<br />You will be able to edit your encrypted note."));
-
-    if (currentNote.canDecryptNoteText()) {
-        const QSignalBlocker blocker(ui->encryptedNoteTextEdit);
-        Q_UNUSED(blocker)
-
-        ui->noteTextEdit->hide();
-        const auto text = currentNote.fetchDecryptedNoteText();
-        currentNote.setDecryptedText(text);
-        // for some reason this still triggers a "textChanged", so we will do a
-        // "currentNote.setDecryptedText" and check if the text really changed
-        // in "currentNote.storeNewDecryptedText"
-        ui->encryptedNoteTextEdit->setText(text);
-        ui->encryptedNoteTextEdit->show();
-        ui->encryptedNoteTextEdit->setFocus();
-        _noteViewNeedsUpdate = true;
-        updateNoteTextEditReadOnly();
-        ui->noteTextEdit->closeMarkdownLspDocument();
-    }
-}
+void MainWindow::editEncryptedNote() { _noteEncryptionManager->editEncryptedNote(); }
 
 /**
  * Puts the encrypted text back to the note text edit
  */
 void MainWindow::on_encryptedNoteTextEdit_textChanged() {
-    // this also triggers when formatting is applied / syntax highlighting
-    // changes!
-    //    if
-    //    (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText()))
-    //    {
-    //        handleNoteTextChanged();
-    //    }
+    _noteEncryptionManager->on_encryptedNoteTextEdit_textChanged();
 }
 
 /**
@@ -7788,33 +7068,7 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered() {
  * Exports the current note as Markdown file
  */
 void MainWindow::on_action_Export_note_as_markdown_triggered() {
-    FileDialog dialog(QStringLiteral("NoteMarkdownExport"));
-    dialog.setFileMode(QFileDialog::AnyFile);
-    dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setNameFilter(tr("Markdown files") + " (*.md)");
-    dialog.setWindowTitle(tr("Export current note as Markdown file"));
-    dialog.selectFile(currentNote.getName() + QStringLiteral(".md"));
-    const int ret = dialog.exec();
-
-    if (ret == QDialog::Accepted) {
-        QString fileName = dialog.selectedFile();
-
-        if (!fileName.isEmpty()) {
-            if (QFileInfo(fileName).suffix().isEmpty()) {
-                fileName.append(QStringLiteral(".md"));
-            }
-
-            bool withAttachedFiles =
-                (currentNote.hasMediaFiles() || currentNote.hasAttachments()) &&
-                Utils::Gui::question(
-                    this, tr("Export attached files"),
-                    tr("Do you also want to export media files and attachments of "
-                       "the note? Files may be overwritten in the destination folder!"),
-                    QStringLiteral("note-export-attachments")) == QMessageBox::Yes;
-
-            currentNote.exportToPath(fileName, withAttachedFiles);
-        }
-    }
+    _noteEncryptionManager->on_action_Export_note_as_markdown_triggered();
 }
 
 void MainWindow::showEvent(QShowEvent *event) {
@@ -7935,7 +7189,9 @@ void MainWindow::gotoPreviousNote() {
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
-void MainWindow::on_actionToggle_distraction_free_mode_triggered() { toggleDistractionFreeMode(); }
+void MainWindow::on_actionToggle_distraction_free_mode_triggered() {
+    _distractionFreeManager->on_actionToggle_distraction_free_mode_triggered();
+}
 
 /**
  * Tracks an action
@@ -8003,12 +7259,7 @@ bool MainWindow::isToolbarVisible() {
 }
 
 void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
-    SettingsService settings;
-    settings.setValue(QStringLiteral("DistractionFreeMode/editorWidthMode"),
-                      action->whatsThis().toInt());
-
-    ui->noteTextEdit->setPaperMargins();
-    ui->encryptedNoteTextEdit->setPaperMargins();
+    _distractionFreeManager->dfmEditorWidthActionTriggered(action);
 }
 
 /**
@@ -8253,7 +7504,7 @@ void MainWindow::resetBrokenTagNotesLinkFlag() {
 }
 
 QString MainWindow::getWorkspaceUuid(const QString &workspaceName) {
-    return _workspaceNameUuidMap.value(workspaceName, "");
+    return _workspaceManager->getWorkspaceUuid(workspaceName);
 }
 
 /**
@@ -10046,6 +9297,37 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
 }
 
 /**
+ * Sets the visibility of a dock widget by its object name
+ */
+void MainWindow::setDockWidgetVisible(const QString &objectName, bool visible) {
+    auto *dockWidget = findChild<QDockWidget *>(objectName);
+    if (dockWidget != nullptr) {
+        dockWidget->setVisible(visible);
+    }
+}
+
+/**
+ * Restores the original title bar widgets on all dock widgets
+ */
+void MainWindow::restoreDockWidgetTitleBars() {
+    _taggingDockWidget->setTitleBarWidget(_taggingDockTitleBarWidget);
+    _noteSubFolderDockWidget->setTitleBarWidget(_noteSubFolderDockTitleBarWidget);
+    _noteSearchDockWidget->setTitleBarWidget(_noteSearchDockTitleBarWidget);
+    _noteFolderDockWidget->setTitleBarWidget(_noteFolderDockTitleBarWidget);
+    _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
+    _noteNavigationDockWidget->setTitleBarWidget(_noteNavigationDockTitleBarWidget);
+    _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
+    _notePreviewDockWidget->setTitleBarWidget(_notePreviewDockTitleBarWidget);
+    _noteGraphicsViewDockWidget->setTitleBarWidget(_noteGraphicsViewDockTitleBarWidget);
+    _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
+    _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
+
+    if (_noteEditDockWidget != nullptr && _noteEditDockTitleBarWidget != nullptr) {
+        _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
+    }
+}
+
+/**
  * Enables the note externally removed check
  */
 void MainWindow::enableNoteExternallyRemovedCheck() { _noteExternallyRemovedCheckEnabled = true; }
@@ -10439,14 +9721,7 @@ void MainWindow::on_actionReload_scripting_engine_triggered() {
     forceRegenerateNotePreview();
 }
 
-void MainWindow::reloadOpenAiControls() {
-    OpenAiService::deleteInstance();
-    generateAiBackendComboBox();
-    generateAiModelComboBox();
-    generateAiModelMainMenu();
-
-    aiModelMainMenuSetCurrentItem();
-}
+void MainWindow::reloadOpenAiControls() { _aiToolbarManager->reloadOpenAiControls(); }
 
 /**
  * Things to do before the scripting engine will be reloaded
@@ -10475,41 +9750,7 @@ void MainWindow::on_actionShow_log_triggered() { _logDockWidget->show(); }
  * Exports the note preview as HTML
  */
 void MainWindow::on_actionExport_preview_HTML_triggered() {
-    FileDialog dialog(QStringLiteral("NoteHTMLExport"));
-    dialog.setFileMode(QFileDialog::AnyFile);
-    dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setNameFilter(tr("HTML files") + " (*.html)");
-    dialog.setWindowTitle(tr("Export current note as HTML file"));
-    dialog.selectFile(currentNote.getName() + QStringLiteral(".html"));
-    const int ret = dialog.exec();
-
-    if (ret == QDialog::Accepted) {
-        QString fileName = dialog.selectedFile();
-
-        if (!fileName.isEmpty()) {
-            if (QFileInfo(fileName).suffix().isEmpty()) {
-                fileName.append(QStringLiteral(".html"));
-            }
-
-            QFile file(fileName);
-
-            qDebug() << "exporting html file: " << fileName;
-
-            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-                qCritical() << file.errorString();
-                return;
-            }
-            QTextStream out(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-            out.setCodec("UTF-8");
-#endif
-            out << currentNote.toMarkdownHtml(NoteFolder::currentLocalPath(), getMaxImageWidth(),
-                                              true, true, true);
-            file.flush();
-            file.close();
-            Utils::Misc::openFolderSelect(fileName);
-        }
-    }
+    _exportPrintManager->on_actionExport_preview_HTML_triggered();
 }
 
 /**
@@ -10640,95 +9881,16 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(QTreeWidgetItem *current,
     }
 }
 
-void MainWindow::openSelectedNotesInTab() {
-    const auto selectedItems = ui->noteTreeWidget->selectedItems();
-    for (QTreeWidgetItem *item : selectedItems) {
-        if (item->data(0, Qt::UserRole + 1) != NoteType) {
-            continue;
-        }
-
-        const int noteId = item->data(0, Qt::UserRole).toInt();
-        Note note = Note::fetch(noteId);
-
-        if (!note.isFetched()) {
-            continue;
-        }
-
-        //        setCurrentNote(note);
-        //        openCurrentNoteInTab();
-
-        openNoteInTab(note);
-    }
-}
+void MainWindow::openSelectedNotesInTab() { _noteTabManager->openSelectedNotesInTab(); }
 
 void MainWindow::openNoteInTab(const Note &note, bool forceNewTab) {
-    // Simulate a newly opened tab by updating the current tab with the last note
-    if (_lastNoteId > 0) {
-        auto previousNote = Note::fetch(_lastNoteId);
-
-        // Open the previous note in a new tab only if it is not already open in a tab
-        if (previousNote.isFetched() && getNoteTabIndex(_lastNoteId) == -1) {
-            updateCurrentTabData(previousNote);
-        }
-    }
-
-    const QString &noteName = note.getName();
-    const int noteId = note.getId();
-
-    // If forceNewTab is true, always create a new tab (set tabIndex to -1)
-    // Otherwise, check if the note is already open in a tab
-    int tabIndex = forceNewTab ? -1 : getNoteTabIndex(noteId);
-
-    if (tabIndex == -1) {
-        auto *widgetPage = new QWidget();
-        widgetPage->setLayout(ui->noteEditTabWidgetLayout);
-        tabIndex = ui->noteEditTabWidget->addTab(widgetPage, noteName);
-    }
-
-    Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget, tabIndex, note);
-
-    ui->noteEditTabWidget->setCurrentIndex(tabIndex);
-
-    // remove the tab initially created by the ui file
-    if (ui->noteEditTabWidget->widget(0)->property("note-id").isNull()) {
-        ui->noteEditTabWidget->removeTab(0);
-    }
+    _noteTabManager->openNoteInTab(note, forceNewTab);
 }
 
-void MainWindow::openCurrentNoteInTab() {
-    // simulate a newly opened tab by updating the current tab with the last note
-    if (_lastNoteId > 0) {
-        auto previousNote = Note::fetch(_lastNoteId);
-
-        // open the previous note in a new tab only if it is not already open in a tab
-        if (previousNote.isFetched() && getNoteTabIndex(_lastNoteId) == -1) {
-            updateCurrentTabData(previousNote);
-        }
-    }
-
-    const QString &noteName = currentNote.getName();
-    const int noteId = currentNote.getId();
-    int tabIndex = getNoteTabIndex(noteId);
-
-    if (tabIndex == -1) {
-        auto *widgetPage = new QWidget();
-        widgetPage->setLayout(ui->noteEditTabWidgetLayout);
-        tabIndex = ui->noteEditTabWidget->addTab(widgetPage, noteName);
-    }
-
-    Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget, tabIndex, currentNote);
-
-    ui->noteEditTabWidget->setCurrentIndex(tabIndex);
-
-    // remove the tab initially created by the ui file
-    if (ui->noteEditTabWidget->widget(0)->property("note-id").isNull()) {
-        ui->noteEditTabWidget->removeTab(0);
-    }
-}
+void MainWindow::openCurrentNoteInTab() { _noteTabManager->openCurrentNoteInTab(); }
 
 int MainWindow::getNoteTabIndex(int noteId) const {
-    return Utils::Gui::getTabWidgetIndexByProperty(ui->noteEditTabWidget, QStringLiteral("note-id"),
-                                                   noteId);
+    return _noteTabManager->getNoteTabIndex(noteId);
 }
 
 void MainWindow::on_noteTreeWidget_customContextMenuRequested(const QPoint pos) {
@@ -11651,76 +10813,18 @@ QString MainWindow::selectedNoteTextEditText() {
  * @param arg1
  */
 void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
-    const QSignalBlocker blocker(ui->actionUnlock_panels);
-    {
-        Q_UNUSED(blocker)
-        ui->actionUnlock_panels->setChecked(arg1);
-    }
-
-    const QList<QDockWidget *> dockWidgets = findChildren<QDockWidget *>();
-
-    if (!arg1) {
-        // remove the title bar widgets of all dock widgets
-        for (QDockWidget *dockWidget : dockWidgets) {
-            // we don't want to lock floating dock widgets
-            if (dockWidget->isFloating()) {
-                continue;
-            }
-
-            handleDockWidgetLocking(dockWidget);
-        }
-    } else {
-        // add the old title bar widgets to all dock widgets
-        _noteSubFolderDockWidget->setTitleBarWidget(_noteSubFolderDockTitleBarWidget);
-        _taggingDockWidget->setTitleBarWidget(_taggingDockTitleBarWidget);
-        _noteSearchDockWidget->setTitleBarWidget(_noteSearchDockTitleBarWidget);
-        _noteFolderDockWidget->setTitleBarWidget(_noteFolderDockTitleBarWidget);
-        _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
-        _noteNavigationDockWidget->setTitleBarWidget(_noteNavigationDockTitleBarWidget);
-
-        if (!_noteEditIsCentralWidget) {
-            _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
-        }
-
-        _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
-        _notePreviewDockWidget->setTitleBarWidget(_notePreviewDockTitleBarWidget);
-        _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
-        _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
-        _noteGraphicsViewDockWidget->setTitleBarWidget(_noteGraphicsViewDockTitleBarWidget);
-
-        for (QDockWidget *dockWidget : dockWidgets) {
-            // reset the top margin of the enclosed widget
-            dockWidget->widget()->setContentsMargins(0, 0, 0, 0);
-        }
-    }
+    _workspaceManager->on_actionUnlock_panels_toggled(arg1);
 }
 
 void MainWindow::handleDockWidgetLocking(QDockWidget *dockWidget) {
-    // Remove the title bar widget
-    dockWidget->setTitleBarWidget(new QWidget());
-
-#ifndef Q_OS_MAC
-    // Set 3px top margin for the enclosed widget
-    dockWidget->widget()->setContentsMargins(0, 3, 0, 0);
-#endif
+    _workspaceManager->handleDockWidgetLocking(dockWidget);
 }
 
 /**
  * Creates a new workspace with asking for its name
  */
 void MainWindow::on_actionStore_as_new_workspace_triggered() {
-    const QString name =
-        QInputDialog::getText(this, tr("Create new workspace"), tr("Workspace name:")).trimmed();
-
-    if (name.isEmpty()) {
-        return;
-    }
-
-    // store the current workspace
-    storeCurrentWorkspace();
-
-    // create the new workspace
-    createNewWorkspace(name);
+    _workspaceManager->on_actionStore_as_new_workspace_triggered();
 }
 
 /**
@@ -11730,31 +10834,7 @@ void MainWindow::on_actionStore_as_new_workspace_triggered() {
  * @return
  */
 bool MainWindow::createNewWorkspace(QString name) {
-    name = name.trimmed();
-
-    if (name.isEmpty()) {
-        return false;
-    }
-
-    SettingsService settings;
-    const QString currentUuid = currentWorkspaceUuid();
-    settings.setValue(QStringLiteral("previousWorkspace"), currentUuid);
-
-    const QString uuid = Utils::Misc::createUuidString();
-    QStringList workspaces = getWorkspaceUuidList();
-    workspaces.append(uuid);
-
-    settings.setValue(QStringLiteral("workspaces"), workspaces);
-    settings.setValue(QStringLiteral("currentWorkspace"), uuid);
-    settings.setValue(QStringLiteral("workspace-") + uuid + QStringLiteral("/name"), name);
-
-    // store the new current workspace
-    storeCurrentWorkspace();
-
-    // update the menu and combo box
-    updateWorkspaceLists();
-
-    return true;
+    return _workspaceManager->createNewWorkspace(name);
 }
 
 /**
@@ -11762,280 +10842,68 @@ bool MainWindow::createNewWorkspace(QString name) {
  *
  * @return
  */
-QString MainWindow::currentWorkspaceUuid() {
-    SettingsService settings;
-    return settings.value(QStringLiteral("currentWorkspace")).toString();
-}
+QString MainWindow::currentWorkspaceUuid() { return _workspaceManager->currentWorkspaceUuid(); }
 
 /**
  * Sets the new current workspace when the workspace combo box index has changed
  */
 void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
-    Q_UNUSED(index)
-
-    const QString uuid = _workspaceComboBox->currentData().toString();
-
-    // set the new workspace
-    setCurrentWorkspace(uuid);
+    _workspaceManager->onWorkspaceComboBoxCurrentIndexChanged(index);
 }
 
 /**
  * Sets the AI backend when the AI backend combo box index has changed
  */
 void MainWindow::onAiBackendComboBoxCurrentIndexChanged(int index) {
-    Q_UNUSED(index)
-
-    const QString backendId = _aiBackendComboBox->currentData().toString();
-
-    if (OpenAiService::instance()->setBackendId(backendId)) {
-        generateAiModelComboBox();
-        aiModelMainMenuSetCurrentItem();
-    }
+    _aiToolbarManager->onAiBackendComboBoxCurrentIndexChanged(index);
 }
 
 /**
  * Puts items into the AI backend combo box
  */
-void MainWindow::generateAiBackendComboBox() {
-    _aiBackendComboBox->blockSignals(true);
-    _aiBackendComboBox->clear();
-    auto backendNames = OpenAiService::instance()->getBackendNames();
-
-    for (const auto &key : backendNames.keys()) {
-        const QString &name = backendNames.value(key);
-        _aiBackendComboBox->addItem(name, key);
-    }
-
-    Utils::Gui::setComboBoxIndexByUserData(_aiBackendComboBox,
-                                           OpenAiService::instance()->getBackendId());
-    _aiBackendComboBox->blockSignals(false);
-}
+void MainWindow::generateAiBackendComboBox() { _aiToolbarManager->generateAiBackendComboBox(); }
 
 /**
  * Puts items into the AI model main menu
  */
-void MainWindow::generateAiModelMainMenu() {
-    QMap<QString, QString> backendNames = OpenAiService::instance()->getBackendNames();
-    ui->menuAI_model->clear();
-
-    for (const auto &backendId : backendNames.keys()) {
-        const QString &backendName = backendNames.value(backendId);
-
-        // Create a submenu for the backend models
-        auto *modelSubMenu = new QMenu(backendName, ui->menuAI_model);
-
-        // Retrieve models for the current backend
-        QStringList models = OpenAiService::instance()->getModelsForBackend(backendId);
-
-        // Add each model as an action to the submenu
-        for (const QString &modelId : models) {
-            auto *modelAction = new QAction(modelId, modelSubMenu);
-            modelAction->setData(QStringList() << backendId << modelId);
-            modelSubMenu->addAction(modelAction);
-            modelAction->setActionGroup(_aiModelGroup);
-            modelAction->setCheckable(true);
-        }
-
-        // Add the submenu to the main menu
-        ui->menuAI_model->addMenu(modelSubMenu);
-    }
-}
+void MainWindow::generateAiModelMainMenu() { _aiToolbarManager->generateAiModelMainMenu(); }
 
 void MainWindow::aiModelMainMenuSetCurrentItem() {
-    auto currentBackendId = OpenAiService::instance()->getBackendId();
-    auto currentModelId = OpenAiService::instance()->getModelId();
-    auto action = Utils::Gui::findActionByData(ui->menuAI_model,
-                                               QStringList() << currentBackendId << currentModelId);
-
-    if (action) {
-        _aiModelGroup->blockSignals(true);
-        action->setChecked(true);
-        _aiModelGroup->blockSignals(false);
-    }
+    _aiToolbarManager->aiModelMainMenuSetCurrentItem();
 }
 
 /**
  * Sets the AI model when the AI model combo box index has changed
  */
 void MainWindow::onAiModelComboBoxCurrentIndexChanged(int index) {
-    Q_UNUSED(index)
-
-    const QString modelId = _aiModelComboBox->currentData().toString();
-
-    if (OpenAiService::instance()->setModelId(modelId)) {
-        generateAiModelComboBox();
-        aiModelMainMenuSetCurrentItem();
-    }
+    _aiToolbarManager->onAiModelComboBoxCurrentIndexChanged(index);
 }
 
 void MainWindow::onAiModelGroupChanged(QAction *action) {
-    const auto data = action->data().toStringList();
-    const auto &backendId = data[0];
-    const auto &modelId = data[1];
-
-    if (OpenAiService::instance()->setBackendId(backendId)) {
-        generateAiBackendComboBox();
-    }
-
-    if (OpenAiService::instance()->setModelId(modelId)) {
-        generateAiModelComboBox();
-    }
+    _aiToolbarManager->onAiModelGroupChanged(action);
 }
 
 /**
  * Puts items into the AI model combo box
  */
-void MainWindow::generateAiModelComboBox() {
-    _aiModelComboBox->blockSignals(true);
-    _aiModelComboBox->clear();
-    const auto models = OpenAiService::instance()->getModelsForCurrentBackend();
-
-    foreach (QString model, models) {
-        _aiModelComboBox->addItem(model, model);
-    }
-
-    Utils::Gui::setComboBoxIndexByUserData(_aiModelComboBox,
-                                           OpenAiService::instance()->getModelId());
-    _aiModelComboBox->blockSignals(false);
-}
+void MainWindow::generateAiModelComboBox() { _aiToolbarManager->generateAiModelComboBox(); }
 
 /**
  * Sets a new current workspace
  */
 void MainWindow::setCurrentWorkspace(const QString &uuid) {
-    // store the current workspace
-    storeCurrentWorkspace();
-
-    SettingsService settings;
-    QString currentUuid = currentWorkspaceUuid();
-    settings.setValue(QStringLiteral("previousWorkspace"), currentUuid);
-    settings.setValue(QStringLiteral("currentWorkspace"), uuid);
-
-    // restore the new workspace
-    QTimer::singleShot(0, this, SLOT(restoreCurrentWorkspace()));
-
-    // update the menu and combo box (but don't rebuild it)
-    updateWorkspaceLists(false);
-
-    // update the preview in case it was disabled previously
-    setNoteTextFromNote(&currentNote, true);
-
-    ScriptingService::instance()->callWorkspaceSwitchedHook(currentUuid, uuid);
+    _workspaceManager->setCurrentWorkspace(uuid);
 }
 
 /**
  * Stores the current workspace
  */
-void MainWindow::storeCurrentWorkspace() {
-    const bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
-    if (isInDistractionFreeMode() || forceQuit || _closeEventWasFired) {
-        return;
-    }
-
-    qDebug() << __func__;
-    SettingsService settings;
-    QString uuid = currentWorkspaceUuid();
-
-    settings.setValue(QStringLiteral("workspace-") + uuid + QStringLiteral("/windowState"),
-                      saveState());
-    settings.setValue(
-        QStringLiteral("workspace-") + uuid + QStringLiteral("/noteEditIsCentralWidget"),
-        _noteEditIsCentralWidget);
-    settings.setValue(
-        QStringLiteral("workspace-") + uuid + QStringLiteral("/noteSubFolderDockWidgetVisible"),
-        _noteSubFolderDockWidgetVisible);
-}
+void MainWindow::storeCurrentWorkspace() { _workspaceManager->storeCurrentWorkspace(); }
 
 /**
  * Restores the current workspace
  */
-void MainWindow::restoreCurrentWorkspace() {
-    SettingsService settings;
-    QStringList workspaces = getWorkspaceUuidList();
-    QWidget *focusWidget = qApp->focusWidget();
-
-    // create a default workspace if there is none yet
-    if (workspaces.count() == 0) {
-        createNewWorkspace(tr("full", "full workspace"));
-
-        _taggingDockWidget->setVisible(false);
-        _noteFolderDockWidget->setVisible(false);
-        _noteNavigationDockWidget->setVisible(false);
-        _noteTagDockWidget->setVisible(false);
-        _notePreviewDockWidget->setVisible(false);
-        _noteGraphicsViewDockWidget->setVisible(false);
-        createNewWorkspace(tr("minimal", "minimal workspace"));
-
-        // TODO: maybe still create those workspaces initially?
-    }
-
-    QString uuid = currentWorkspaceUuid();
-
-    // set the first workspace as current workspace if there is none set
-    if (uuid.isEmpty()) {
-        workspaces = getWorkspaceUuidList();
-
-        if (workspaces.count() == 0) {
-            return;
-        }
-
-        uuid = workspaces.at(0);
-        settings.setValue(QStringLiteral("currentWorkspace"), uuid);
-
-        // update the menu and combo box
-        updateWorkspaceLists();
-    }
-
-    const QString noteEditIsCentralWidgetKey =
-        QStringLiteral("workspace-") + uuid + QStringLiteral("/noteEditIsCentralWidget");
-    const bool noteEditIsCentralWidget =
-        settings.contains(noteEditIsCentralWidgetKey)
-            ? settings.value(noteEditIsCentralWidgetKey).toBool()
-            : settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
-    settings.setValue(QStringLiteral("noteEditIsCentralWidget"), noteEditIsCentralWidget);
-
-    if (_noteEditIsCentralWidget != noteEditIsCentralWidget) {
-        setNoteEditCentralWidgetEnabled(noteEditIsCentralWidget);
-    }
-
-    restoreState(
-        settings.value(QStringLiteral("workspace-") + uuid + QStringLiteral("/windowState"))
-            .toByteArray());
-
-    // handle the visibility of the note subfolder panel
-    handleNoteSubFolderVisibility();
-
-    // update the panel lists
-    updatePanelMenu();
-
-    // check if the user wanted the note subfolder dock widget visible
-    _noteSubFolderDockWidgetVisible =
-        settings
-            .value(QStringLiteral("workspace-") + uuid +
-                       QStringLiteral("/noteSubFolderDockWidgetVisible"),
-                   true)
-            .toBool();
-
-    // set the visibility of the note subfolder dock widget
-    handleNoteSubFolderVisibility();
-
-    // if app was newly installed we want to center and resize the window
-    if (settings.value(QStringLiteral("initialWorkspace")).toBool()) {
-        MetricsService::instance()->sendEventIfEnabled(
-            QStringLiteral("app/initial-layout"), QStringLiteral("app"),
-            QStringLiteral("initial-layout"),
-            settings.value(QStringLiteral("initialLayoutIdentifier")).toString());
-
-        settings.remove(QStringLiteral("initialWorkspace"));
-        centerAndResize();
-    }
-
-    if (focusWidget != nullptr) {
-        // set the focus to the widget that had the focus before
-        // the workspace was restored
-        focusWidget->setFocus();
-    }
-}
+void MainWindow::restoreCurrentWorkspace() { _workspaceManager->restoreCurrentWorkspace(); }
 
 /**
  * Handles the visibility of the note subfolder panel
@@ -12051,115 +10919,31 @@ void MainWindow::handleNoteSubFolderVisibility() const {
  * Returns the list of workspace uuids
  * @return
  */
-QStringList MainWindow::getWorkspaceUuidList() {
-    SettingsService settings;
-    return settings.value(QStringLiteral("workspaces")).toStringList();
-}
+QStringList MainWindow::getWorkspaceUuidList() { return _workspaceManager->getWorkspaceUuidList(); }
 
 /**
  * Removes the current workspace
  */
 void MainWindow::on_actionRemove_current_workspace_triggered() {
-    QStringList workspaces = getWorkspaceUuidList();
-
-    // there have to be at least one workspace
-    if (workspaces.count() < 2) {
-        return;
-    }
-
-    QString uuid = currentWorkspaceUuid();
-
-    // if no workspace is set we can't remove it
-    if (uuid.isEmpty()) {
-        return;
-    }
-
-    // ask for permission
-    if (Utils::Gui::question(this, tr("Remove current workspace"),
-                             tr("Remove the current workspace?"),
-                             QStringLiteral("remove-workspace")) != QMessageBox::Yes) {
-        return;
-    }
-
-    // reset current workspace
-    workspaces.removeAll(uuid);
-    const QString newUuid = workspaces.at(0);
-
-    // set the new workspace
-    setCurrentWorkspace(newUuid);
-
-    SettingsService settings;
-    settings.setValue(QStringLiteral("workspaces"), workspaces);
-
-    // remove all settings in the group
-    settings.beginGroup(QStringLiteral("workspace-") + uuid);
-    settings.remove(QLatin1String(""));
-    settings.endGroup();
-
-    // update the menu and combo box
-    updateWorkspaceLists();
+    _workspaceManager->on_actionRemove_current_workspace_triggered();
 }
 
 void MainWindow::on_actionRename_current_workspace_triggered() {
-    const QString uuid = currentWorkspaceUuid();
-
-    // if no workspace is set we can't rename it
-    if (uuid.isEmpty()) {
-        return;
-    }
-
-    SettingsService settings;
-    QString name =
-        settings.value(QStringLiteral("workspace-") + uuid + QStringLiteral("/name")).toString();
-
-    // ask for the new name
-    name = QInputDialog::getText(this, tr("Rename workspace"), tr("Workspace name:"),
-                                 QLineEdit::Normal, name)
-               .trimmed();
-
-    if (name.isEmpty()) {
-        return;
-    }
-
-    // rename the workspace
-    settings.setValue(QStringLiteral("workspace-") + uuid + QStringLiteral("/name"), name);
-
-    // update the menu and combo box
-    updateWorkspaceLists();
+    _workspaceManager->on_actionRename_current_workspace_triggered();
 }
 
 /**
  * Switch to the previous workspace
  */
 void MainWindow::on_actionSwitch_to_previous_workspace_triggered() {
-    SettingsService settings;
-    QString uuid = settings.value(QStringLiteral("previousWorkspace")).toString();
-
-    if (!uuid.isEmpty()) {
-        setCurrentWorkspace(uuid);
-    }
+    _workspaceManager->on_actionSwitch_to_previous_workspace_triggered();
 }
 
 /**
  * Shows all dock widgets
  */
 void MainWindow::on_actionShow_all_panels_triggered() {
-    const QList<QDockWidget *> dockWidgets = findChildren<QDockWidget *>();
-
-    for (QDockWidget *dockWidget : dockWidgets) {
-        dockWidget->setVisible(true);
-    }
-
-    _noteSubFolderDockWidgetVisible = true;
-
-    // handle the visibility of the note subfolder panel
-    handleNoteSubFolderVisibility();
-
-    // update the preview in case it was disabled previously
-    setNoteTextFromNote(&currentNote, true);
-
-    // filter notes according to selections
-    filterNotes();
+    _workspaceManager->on_actionShow_all_panels_triggered();
 }
 
 static void loadAllActions(QMenu *menu, QVector<QPair<QString, QAction *>> &outActions) {
@@ -13054,51 +11838,10 @@ void MainWindow::on_actionElementMatrix_triggered() {
 }
 
 void MainWindow::on_actionToggle_fullscreen_triggered() {
-    // #1302: we need to init the button in any case if the app was already in
-    //        fullscreen mode or "disconnect" will crash the app
-    if (_leaveFullScreenModeButton == nullptr) {
-        _leaveFullScreenModeButton = new QPushButton(tr("leave"));
-    }
-
-    if (isFullScreen()) {
-        showNormal();
-
-        // we need a showNormal() first to exist full-screen mode
-        if (_isMaximizedBeforeFullScreen) {
-            showMaximized();
-        } else if (_isMinimizedBeforeFullScreen) {
-            showMinimized();
-        }
-
-        statusBar()->removeWidget(_leaveFullScreenModeButton);
-        disconnect(_leaveFullScreenModeButton, nullptr, nullptr, nullptr);
-        delete _leaveFullScreenModeButton;
-        _leaveFullScreenModeButton = nullptr;
-    } else {
-        _isMaximizedBeforeFullScreen = isMaximized();
-        _isMinimizedBeforeFullScreen = isMinimized();
-        showFullScreen();
-
-        _leaveFullScreenModeButton->setFlat(true);
-        _leaveFullScreenModeButton->setToolTip(tr("Leave full-screen mode"));
-        _leaveFullScreenModeButton->setStyleSheet(QStringLiteral("QPushButton {padding: 0 5px}"));
-
-        _leaveFullScreenModeButton->setIcon(QIcon::fromTheme(
-            QStringLiteral("zoom-original"),
-            QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/zoom-original.svg"))));
-
-        connect(_leaveFullScreenModeButton, &QPushButton::clicked, this,
-                &MainWindow::on_actionToggle_fullscreen_triggered);
-
-        statusBar()->addPermanentWidget(_leaveFullScreenModeButton);
-    }
+    _distractionFreeManager->on_actionToggle_fullscreen_triggered();
 }
 
-void MainWindow::disableFullScreenMode() {
-    if (isFullScreen()) {
-        on_actionToggle_fullscreen_triggered();
-    }
-}
+void MainWindow::disableFullScreenMode() { _distractionFreeManager->disableFullScreenMode(); }
 
 void MainWindow::on_actionTypewriter_mode_toggled(bool arg1) {
     SettingsService settings;
@@ -13113,121 +11856,23 @@ void MainWindow::on_actionTypewriter_mode_toggled(bool arg1) {
 }
 
 void MainWindow::on_actionCheck_spelling_toggled(bool checked) {
-    SettingsService settings;
-    settings.setValue(QStringLiteral("checkSpelling"), checked);
-    ui->noteTextEdit->updateSettings();
-    ui->encryptedNoteTextEdit->updateSettings();
-
-    // if spell checking was turned on still turn it off for the current note
-    // if encrypted text is shown
-    if (checked) {
-        updateNoteEncryptionUI();
-    }
+    _spellCheckManager->on_actionCheck_spelling_toggled(checked);
 }
 
-void MainWindow::loadDictionaryNames() {
-    SettingsService settings;
-
-    QStringList languages = Sonnet::Speller::availableLanguages();
-    QStringList langNames = Sonnet::Speller::availableLanguageNames();
-
-    // if there are no dictionaries installed, disable the spellchecker
-    if (languages.isEmpty()) {
-        settings.setValue(QStringLiteral("checkSpelling"), false);
-        ui->actionCheck_spelling->setEnabled(false);
-        ui->menuLanguages->setTitle(QStringLiteral("No dictionaries found"));
-        ui->menuLanguages->setEnabled(false);
-        ui->noteTextEdit->updateSettings();
-        return;
-    }
-
-    _languageGroup->setExclusive(true);
-    connect(_languageGroup, &QActionGroup::triggered, this, &MainWindow::onLanguageChanged);
-
-    // first add autoDetect
-    QAction *autoDetect = ui->menuLanguages->addAction(tr("Automatically detect"));
-    autoDetect->setCheckable(true);
-    autoDetect->setData(QStringLiteral("auto"));
-    autoDetect->setActionGroup(_languageGroup);
-    QString prevLang =
-        settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
-    // if only one dictionary found, disable auto detect
-    if (languages.length() > 1) {
-        if (prevLang == QStringLiteral("auto")) {
-            autoDetect->setChecked(true);
-            autoDetect->trigger();
-        }
-    } else {
-        autoDetect->setChecked(false);
-        autoDetect->setEnabled(false);
-    }
-
-    // not really possible but just in case
-    if (langNames.length() != languages.length()) {
-        qWarning() << "Error: langNames.length != languages.length()";
-        return;
-    }
-
-    QStringList::const_iterator it = langNames.constBegin();
-    QStringList::const_iterator itt = languages.constBegin();
-    for (; it != langNames.constEnd(); ++it, ++itt) {
-        QAction *action = ui->menuLanguages->addAction(*it);
-        action->setCheckable(true);
-        action->setActionGroup(_languageGroup);
-        action->setData(*itt);
-
-        if (*itt == prevLang || languages.length() == 1) {
-            action->setChecked(true);
-            action->trigger();
-        }
-    }
-}
+void MainWindow::loadDictionaryNames() { _spellCheckManager->loadDictionaryNames(); }
 
 void MainWindow::onLanguageChanged(QAction *action) {
-    QString lang = action->data().toString();
-    SettingsService settings;
-    settings.setValue(QStringLiteral("spellCheckLanguage"), lang);
-    ui->noteTextEdit->updateSettings();
+    _spellCheckManager->onLanguageChanged(action);
 }
 
-void MainWindow::loadSpellingBackends() {
-    SettingsService settings;
-    QString prevBackend =
-        settings.value(QStringLiteral("spellCheckBackend"), QStringLiteral("Hunspell")).toString();
-
-    _spellBackendGroup->setExclusive(true);
-    connect(_spellBackendGroup, &QActionGroup::triggered, this, &MainWindow::onSpellBackendChanged);
-
-    QAction *hs = ui->menuSpelling_backend->addAction(QStringLiteral("Hunspell"));
-    hs->setCheckable(true);
-    hs->setData("Hunspell");
-    hs->setActionGroup(_spellBackendGroup);
-    QAction *as = ui->menuSpelling_backend->addAction(QStringLiteral("Aspell"));
-    as->setCheckable(true);
-    as->setActionGroup(_spellBackendGroup);
-    as->setData("Aspell");
-
-    if (prevBackend == hs->data()) {
-        hs->setChecked(true);
-    } else {
-        as->setChecked(true);
-    }
-}
+void MainWindow::loadSpellingBackends() { _spellCheckManager->loadSpellingBackends(); }
 
 void MainWindow::onSpellBackendChanged(QAction *action) {
-    QString backend = action->data().toString();
-    SettingsService settings;
-    settings.setValue(QStringLiteral("spellCheckBackend"), backend);
-    showRestartNotificationIfNeeded(true);
+    _spellCheckManager->onSpellBackendChanged(action);
 }
 
 void MainWindow::on_actionManage_dictionaries_triggered() {
-    auto *dialog = new DictionaryManagerDialog(this);
-    dialog->exec();
-    delete (dialog);
-
-    // shows a restart application notification
-    showRestartNotificationIfNeeded();
+    _spellCheckManager->on_actionManage_dictionaries_triggered();
 }
 
 void MainWindow::on_noteTextEdit_modificationChanged(bool arg1) {
@@ -13240,147 +11885,60 @@ void MainWindow::on_noteTextEdit_modificationChanged(bool arg1) {
 }
 
 void MainWindow::on_encryptedNoteTextEdit_modificationChanged(bool arg1) {
-    if (!arg1) {
-        return;
-    }
-
-    ui->encryptedNoteTextEdit->document()->setModified(false);
-
-    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
-        handleNoteTextChanged();
-    }
+    _noteEncryptionManager->on_encryptedNoteTextEdit_modificationChanged(arg1);
 }
 
 void MainWindow::on_actionEditorWidthCustom_triggered() {
-    SettingsService settings;
-    bool ok;
-    int characters = QInputDialog::getInt(
-        this, tr("Custom editor width"), tr("Characters:"),
-        settings.value(QStringLiteral("DistractionFreeMode/editorWidthCustom"), 80).toInt(), 20,
-        10000, 1, &ok);
-
-    if (ok) {
-        settings.setValue(QStringLiteral("DistractionFreeMode/editorWidthCustom"), characters);
-    }
+    _distractionFreeManager->on_actionEditorWidthCustom_triggered();
 }
 
 void MainWindow::on_actionShow_Hide_application_triggered() {
-    // isVisible() or isHidden() didn't work properly
-    if (isActiveWindow()) {
-        hide();
-    } else {
-        showWindow();
-    }
+    _systemTrayManager->on_actionShow_Hide_application_triggered();
 }
 
 void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
-    QWidget *widget = ui->noteEditTabWidget->currentWidget();
-
-    if (widget == nullptr) {
-        return;
-    }
-
-    const int noteId = widget->property("note-id").toInt();
-
-    // close the tab if note doesn't exist anymore
-    if (!Note::noteIdExists(noteId)) {
-        removeNoteTab(index);
-        return;
-    }
-
-    // Allow the subfolder of the note to be selected in the subfolder list
-    // See: https://github.com/pbek/QOwnNotes/issues/2861
-    if (SettingsService()
-            .value(QStringLiteral("noteSubfoldersPanelTabsUnsetAllNotesSelection"))
-            .toBool()) {
-        setShowNotesFromAllNoteSubFolders(false);
-    }
-
-    setCurrentNoteFromNoteId(noteId);
-    widget->setLayout(ui->noteEditTabWidgetLayout);
-
-    closeOrphanedTabs();
+    _noteTabManager->on_noteEditTabWidget_currentChanged(index);
 }
 
-void MainWindow::on_noteEditTabWidget_tabCloseRequested(int index) { removeNoteTab(index); }
+void MainWindow::on_noteEditTabWidget_tabCloseRequested(int index) {
+    _noteTabManager->on_noteEditTabWidget_tabCloseRequested(index);
+}
 
 void MainWindow::on_actionPrevious_note_tab_triggered() {
-    int index = ui->noteEditTabWidget->currentIndex() - 1;
-
-    if (index < 0) {
-        index = ui->noteEditTabWidget->count() - 1;
-    }
-
-    ui->noteEditTabWidget->setCurrentIndex(index);
-    focusNoteTextEdit();
+    _noteTabManager->on_actionPrevious_note_tab_triggered();
 }
 
 void MainWindow::on_actionNext_note_tab_triggered() {
-    int index = ui->noteEditTabWidget->currentIndex() + 1;
-
-    if (index >= ui->noteEditTabWidget->count()) {
-        index = 0;
-    }
-
-    ui->noteEditTabWidget->setCurrentIndex(index);
-    focusNoteTextEdit();
+    _noteTabManager->on_actionNext_note_tab_triggered();
 }
 
 void MainWindow::on_actionClose_current_note_tab_triggered() {
-    removeNoteTab(ui->noteEditTabWidget->currentIndex());
+    _noteTabManager->on_actionClose_current_note_tab_triggered();
 }
 
 void MainWindow::on_actionNew_note_in_new_tab_triggered() {
-    on_action_New_note_triggered();
-    openCurrentNoteInTab();
+    _noteTabManager->on_actionNew_note_in_new_tab_triggered();
 }
 
 /**
  * Close a note tab on a specific index.
  * @param index The index of the tab to close.
  */
-bool MainWindow::removeNoteTab(int index) const {
-    const int maxIndex = ui->noteEditTabWidget->count() - 1;
-
-    if (maxIndex <= 0 || index > maxIndex) {
-        return false;
-    }
-
-    ui->noteEditTabWidget->removeTab(index);
-    return true;
-}
+bool MainWindow::removeNoteTab(int index) const { return _noteTabManager->removeNoteTab(index); }
 
 /**
  * Returns a list of note ids that are opened in tabs
  */
 QList<int> MainWindow::getNoteTabNoteIdList() const {
-    QList<int> resultList;
-
-    for (int i = 0; i < ui->noteEditTabWidget->count(); i++) {
-        auto widget = ui->noteEditTabWidget->widget(i);
-        const int noteId = widget->property("note-id").toInt();
-        resultList.append(noteId);
-    }
-
-    return resultList;
+    return _noteTabManager->getNoteTabNoteIdList();
 }
 
 void MainWindow::on_noteEditTabWidget_tabBarDoubleClicked(int index) {
-    // If the empty area of the tab widget is clicked, open a new note in a new tab
-    if (index == -1) {
-        createNewNote();
-        openCurrentNoteInTab();
-        return;
-    }
-
-    // Make the note tab "sticky"
-    Utils::Gui::setTabWidgetTabSticky(
-        ui->noteEditTabWidget, index,
-        !Utils::Gui::isTabWidgetTabSticky(ui->noteEditTabWidget, index));
+    _noteTabManager->on_noteEditTabWidget_tabBarDoubleClicked(index);
 }
 
 void MainWindow::on_actionToggle_note_stickiness_of_current_tab_triggered() {
-    on_noteEditTabWidget_tabBarDoubleClicked(ui->noteEditTabWidget->currentIndex());
+    _noteTabManager->on_actionToggle_note_stickiness_of_current_tab_triggered();
 }
 
 /**
@@ -13388,52 +11946,14 @@ void MainWindow::on_actionToggle_note_stickiness_of_current_tab_triggered() {
  * activated if that is needed to show the note in the note list
  */
 void MainWindow::on_noteEditTabWidget_tabBarClicked(int index) {
-    if (ui->noteEditTabWidget->currentIndex() != index) {
-        return;
-    }
-
-    if (!_showNotesFromAllNoteSubFolders && !currentNote.isInCurrentNoteSubFolder()) {
-        jumpToNoteSubFolder(currentNote.getNoteSubFolderId());
-    }
+    _noteTabManager->on_noteEditTabWidget_tabBarClicked(index);
 }
 
 /**
  * Note tab context menu
  */
 void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
-    if (point.isNull()) {
-        return;
-    }
-
-    int tabIndex = ui->noteEditTabWidget->tabBar()->tabAt(point);
-    auto *menu = new QMenu();
-
-    // Toggle note stickiness
-    auto *stickAction = menu->addAction(tr("Toggle note stickiness"));
-    connect(stickAction, &QAction::triggered, this,
-            [this, tabIndex]() { on_noteEditTabWidget_tabBarDoubleClicked(tabIndex); });
-
-    // Close other note tabs
-    auto *closeOtherAction = menu->addAction(tr("Close other note tabs"));
-    connect(closeOtherAction, &QAction::triggered, this, [this, tabIndex]() {
-        const int maxIndex = ui->noteEditTabWidget->count() - 1;
-        const int keepNoteId = Utils::Gui::getTabWidgetNoteId(ui->noteEditTabWidget, tabIndex);
-
-        for (int i = maxIndex; i >= 0; i--) {
-            const int noteId = Utils::Gui::getTabWidgetNoteId(ui->noteEditTabWidget, i);
-
-            if (noteId != keepNoteId) {
-                removeNoteTab(i);
-            }
-        }
-    });
-
-    // Close note tab
-    auto *closeAction = menu->addAction(tr("Close note tab"));
-    connect(closeAction, &QAction::triggered, this,
-            [this, tabIndex]() { removeNoteTab(tabIndex); });
-
-    menu->exec(ui->noteEditTabWidget->tabBar()->mapToGlobal(point));
+    _noteTabManager->showNoteEditTabWidgetContextMenu(point);
 }
 
 void MainWindow::on_actionJump_to_navigation_panel_triggered() {
@@ -13592,52 +12112,10 @@ void MainWindow::on_actionMove_down_in_tag_list_triggered() {
     QApplication::postEvent(ui->tagTreeWidget, event);
 }
 
-void MainWindow::buildAiToolbarAndActions() {
-    _aiToolbar->clear();
-    _aiToolbar->addAction(ui->actionEnable_AI);
-    ui->actionEnable_AI->blockSignals(true);
-    ui->actionEnable_AI->setChecked(OpenAiService::getEnabled());
-    ui->actionEnable_AI->blockSignals(false);
-
-    _aiBackendComboBox = new QComboBox(this);
-    connect(_aiBackendComboBox,
-            static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this,
-            &MainWindow::onAiBackendComboBoxCurrentIndexChanged);
-    _aiBackendComboBox->setToolTip(tr("AI backends"));
-    _aiBackendComboBox->setObjectName(QStringLiteral("aiBackendComboBox"));
-    _aiBackendComboBox->setInsertPolicy(QComboBox::InsertPolicy::InsertAfterCurrent);
-    generateAiBackendComboBox();
-
-    _aiModelComboBox = new QComboBox(this);
-    connect(_aiModelComboBox,
-            static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this,
-            &MainWindow::onAiModelComboBoxCurrentIndexChanged);
-    _aiModelComboBox->setToolTip(tr("AI models"));
-    _aiModelComboBox->setObjectName(QStringLiteral("aiModelComboBox"));
-    _aiModelComboBox->setInsertPolicy(QComboBox::InsertPolicy::InsertAfterCurrent);
-    generateAiModelComboBox();
-
-    auto *aiBackendWidgetAction = new QWidgetAction(this);
-    aiBackendWidgetAction->setDefaultWidget(_aiBackendComboBox);
-    aiBackendWidgetAction->setObjectName(QStringLiteral("actionAiBackendComboBox"));
-    aiBackendWidgetAction->setText(tr("AI backend selector"));
-    _aiToolbar->addAction(aiBackendWidgetAction);
-
-    auto *aiModelWidgetAction = new QWidgetAction(this);
-    aiModelWidgetAction->setDefaultWidget(_aiModelComboBox);
-    aiModelWidgetAction->setObjectName(QStringLiteral("actionAiModelComboBox"));
-    aiModelWidgetAction->setText(tr("AI model selector"));
-    _aiToolbar->addAction(aiModelWidgetAction);
-
-    _aiModelGroup->setExclusive(true);
-    connect(_aiModelGroup, &QActionGroup::triggered, this, &MainWindow::onAiModelGroupChanged);
-    generateAiModelMainMenu();
-    aiModelMainMenuSetCurrentItem();
-}
+void MainWindow::buildAiToolbarAndActions() { _aiToolbarManager->buildAiToolbarAndActions(); }
 
 void MainWindow::on_actionEnable_AI_toggled(bool arg1) {
-    OpenAiService::setEnabled(arg1);
-    qDebug() << __func__ << " - 'checked': " << arg1;
+    _aiToolbarManager->on_actionEnable_AI_toggled(arg1);
 }
 
 void MainWindow::on_navigationTabWidget_currentChanged(int index) {
@@ -13647,35 +12125,14 @@ void MainWindow::on_navigationTabWidget_currentChanged(int index) {
 }
 
 void MainWindow::enableOpenAiActivitySpinner(bool enable) {
-    if (_openAiActivitySpinner == nullptr) {
-        return;
-    }
-
-    if (enable) {
-        _openAiActivitySpinner->start();
-    } else {
-        _openAiActivitySpinner->stop();
-    }
+    _aiToolbarManager->enableOpenAiActivitySpinner(enable);
 }
 
 /**
  * Reattaches all floating panels in case they can't be reattached manually anymore
  */
 void MainWindow::on_actionReattach_panels_triggered() {
-    const QList<QDockWidget *> dockWidgets = findChildren<QDockWidget *>();
-
-    for (QDockWidget *dockWidget : dockWidgets) {
-        if (!dockWidget->isFloating()) {
-            continue;
-        }
-
-        dockWidget->setFloating(false);
-
-        // Remove the title bar if panels are locked
-        if (!ui->actionUnlock_panels->isChecked()) {
-            handleDockWidgetLocking(dockWidget);
-        }
-    }
+    _workspaceManager->on_actionReattach_panels_triggered();
 }
 
 void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() {
