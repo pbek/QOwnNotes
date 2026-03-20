@@ -17,6 +17,8 @@
 #include <QTreeWidget>
 
 class QTextDocument;
+class QTextCursor;
+class QTextBlock;
 class QTreeWidgetItem;
 
 struct Node {
@@ -37,6 +39,7 @@ class NavigationWidget : public QTreeWidget {
 
     void parse(const QTextDocument *document, int textCursorPosition);
     static QVector<Node> parseDocument(const QTextDocument *const document);
+    static int headingPositionForCursor(const QTextCursor &cursor);
 
     void selectItemForCursorPosition(int position);
 
@@ -53,6 +56,9 @@ class NavigationWidget : public QTreeWidget {
    private:
     void buildNavTree(const QVector<Node> &nodes);
     void doParse();
+    static bool isSetextUnderlineBlock(const QString &text);
+    static bool isAtxHeadingBlock(const QString &text);
+    static bool isNavigationHeadingBlock(const QTextBlock &block);
 
    signals:
     void positionClicked(int position);

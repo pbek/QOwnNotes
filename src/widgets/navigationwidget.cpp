@@ -19,8 +19,70 @@
 #include <QMenu>
 #include <QRegularExpression>
 #include <QTextBlock>
+#include <QTextCursor>
 #include <QTextDocument>
 #include <QTreeWidgetItem>
+
+bool NavigationWidget::isSetextUnderlineBlock(const QString &text) {
+    int offset = 0;
+    while (offset < text.length() && text.at(offset) == QLatin1Char(' ') && offset < 4) {
+        ++offset;
+    }
+
+    if (offset >= text.length() || offset == 4) {
+        return false;
+    }
+
+    const QChar marker = text.at(offset);
+    if (marker != QLatin1Char('=') && marker != QLatin1Char('-')) {
+        return false;
+    }
+
+    for (int i = offset; i < text.length(); ++i) {
+        if (text.at(i) != marker) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+bool NavigationWidget::isAtxHeadingBlock(const QString &text) {
+    int offset = 0;
+    while (offset < text.length() && text.at(offset) == QLatin1Char(' ') && offset < 4) {
+        ++offset;
+    }
+
+    if (offset >= text.length() || offset == 4 || text.at(offset) != QLatin1Char('#')) {
+        return false;
+    }
+
+    int headingLevel = 0;
+    int i = offset;
+    while (i < text.length() && text.at(i) == QLatin1Char('#') && headingLevel < 6) {
+        ++i;
+        ++headingLevel;
+    }
+
+    return headingLevel > 0 && i < text.length() && text.at(i) == QLatin1Char(' ');
+}
+
+bool NavigationWidget::isNavigationHeadingBlock(const QTextBlock &block) {
+    if (!block.isValid()) {
+        return false;
+    }
+
+    const QString text = block.text();
+    if (isAtxHeadingBlock(text)) {
+        return true;
+    }
+
+    if (text.trimmed().isEmpty()) {
+        return false;
+    }
+
+    return isSetextUnderlineBlock(block.next().text());
+}
 
 NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
     // We want to handle currentItemChanged because it also works with the keyboard
@@ -136,6 +198,20 @@ QVector<Node> NavigationWidget::parseDocument(const QTextDocument *const documen
         nodes.append({std::move(text), block.position(), elementType});
     }
     return nodes;
+}
+
+int NavigationWidget::headingPositionForCursor(const QTextCursor &cursor) {
+    QTextBlock block = cursor.block();
+
+    while (block.isValid()) {
+        if (isNavigationHeadingBlock(block)) {
+            return block.position();
+        }
+
+        block = block.previous();
+    }
+
+    return cursor.block().position();
 }
 
 void NavigationWidget::selectItemForCursorPosition(int position) {

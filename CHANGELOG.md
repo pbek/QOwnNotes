@@ -6,6 +6,9 @@
   **schema** (including individual color and font settings) in the Settings dialog
   **without restarting the application** — changes are applied live to the editor
   and note preview immediately (for [#3506](https://github.com/pbek/QOwnNotes/issues/3506))
+- Fixed the active heading selection in the Navigation panel flickering to the
+  next heading while typing or pressing `Enter` at the end of a section in the
+  note text edit (for [#3508](https://github.com/pbek/QOwnNotes/issues/3508))
 
 ## 26.3.15
 

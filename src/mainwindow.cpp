@@ -90,7 +90,7 @@
 #include <QShortcut>
 #include <QSystemTrayIcon>
 #include <QTemporaryFile>
-#include <QTextBlock>
+#include <QTextCursor>
 #include <QTextDocumentFragment>
 #include <QTextLength>
 #include <QTimer>
@@ -5119,8 +5119,10 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
  * Starts the parsing for the navigation widget
  */
 void MainWindow::startNavigationParser() {
-    ui->navigationWidget->parse(activeNoteTextEdit()->document(),
-                                activeNoteTextEdit()->textCursor().position());
+    const QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    const int navigationSelectionPosition = NavigationWidget::headingPositionForCursor(cursor);
+
+    ui->navigationWidget->parse(activeNoteTextEdit()->document(), navigationSelectionPosition);
 
     updateFileNavigationTab();
     updateBacklinkNavigationTab();
@@ -12318,7 +12320,7 @@ void MainWindow::noteEditCursorPositionChanged() {
     const bool autoSelect =
         SettingsService().value(QStringLiteral("navigationPanelAutoSelect"), true).toBool();
     if (autoSelect) {
-        selectNavigationItemAtPosition(textEdit->textCursor().position());
+        selectNavigationItemAtPosition(NavigationWidget::headingPositionForCursor(cursor));
     }
 }
 
