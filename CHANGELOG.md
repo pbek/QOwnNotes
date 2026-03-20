@@ -13,8 +13,8 @@
   (for [#3466](https://github.com/pbek/QOwnNotes/issues/3466))
   - A huge amount of work went into this and it will solve various rendering issues
     in the note preview, like list item spacing and horizontal rule and table rendering
-- Fixed the Qt6 AppImage release build to bundle and prefer the packaged QML
-  import modules again so the scripting engine works instead of loading
+- Fixed the **Qt6 AppImage** release build to bundle and prefer the packaged QML
+  import modules again so the **scripting engine works** instead of loading
   incompatible host Qt plugins (for [#3074](https://github.com/pbek/QOwnNotes/issues/3074))
 
 ## 26.3.14
@@ -22,9 +22,9 @@
 - Remember folded Markdown headings for each open note in memory and restore
   that state when reopening notes, including notes stored in subfolders (for
   [#3505](https://github.com/pbek/QOwnNotes/issues/3505))
-- Allow switching `noteEditIsCentralWidget` and applying predefined layouts so
-  the main window and workspace layout are rebuilt immediately without
-  restarting the application, including workspace-specific editor placement
+- **Allow switching `noteEditIsCentralWidget`** and applying predefined layouts so
+  the main window and workspace layout are rebuilt immediately **without**
+  **restarting the application**, including workspace-specific editor placement
   or layout selection (for [#3504](https://github.com/pbek/QOwnNotes/issues/3504))
 - Fixed the AppImage deployment in the GitHub release workflows so the bundled
   OpenSSL libraries work again and the script repository loads correctly
@@ -34,10 +34,10 @@
 
 ## 26.3.13
 
-- Added Markdown heading folding in the note editor with clickable gutter
+- Added **Markdown heading folding in the note editor** with clickable gutter
   toggles, fold/unfold-all actions, and a new Editor setting to enable or
   disable the feature (for [#2126](https://github.com/pbek/QOwnNotes/issues/2126))
-- Added a new "Files" tab to the Navigation panel that lists linked media files
+- Added a new **"Files" tab to the Navigation panel** that lists linked media files
   and attachments under separate root items, jumps to the selected link in the
   current note, and offers a context menu action to open the file externally
   (for [#3499](https://github.com/pbek/QOwnNotes/issues/3499))
@@ -81,7 +81,7 @@
 
 ## 26.3.10
 
-- Added an option to hide Markdown formatting syntax (like `**`, `*`, `#`,
+- Added an option to **hide Markdown formatting syntax** (like `**`, `*`, `#`,
   backticks, link brackets) on lines that are not being edited, for a
   cleaner Typora-like editing experience (Editor settings, off by default)
   (for [#1662](https://github.com/pbek/QOwnNotes/issues/1662))
@@ -103,7 +103,7 @@
 - Fixed heading order in the Navigation panel's "Headings" tab to keep the
   same sequence as in the note text when heading levels are skipped
   (for [#2994](https://github.com/pbek/QOwnNotes/issues/2994))
-- Added support for global keyboard shortcuts under Wayland (e.g. KDE Plasma)
+- Added support for **global keyboard shortcuts under Wayland** (e.g. KDE Plasma)
   using the XDG Desktop Portal GlobalShortcuts interface, since the previous
   X11-based shortcut mechanism does not work on Wayland
   (for [#2462](https://github.com/pbek/QOwnNotes/issues/2462))
@@ -131,8 +131,8 @@
 
 ## 26.3.6
 
-- Added a local [Homepage](https://github.com/gethomepage/homepage)-compatible
-  bookmark suggestion API endpoint (`GET /suggest`) based on existing bookmark
+- Added a local **[Homepage](https://github.com/gethomepage/homepage)-compatible**
+  **bookmark suggestion API** endpoint (`GET /suggest`) based on existing bookmark
   parsing and Web Companion data sources, with prefix-first matching,
   deduplication, limit handling, and response format compatibility
   (for [#3484](https://github.com/pbek/QOwnNotes/issues/3484))
@@ -196,7 +196,7 @@
 
 ## 26.3.3
 
-- Added small inline Markdown image previews in the note text edit with a new
+- Added **small inline Markdown image previews** in the note text edit with a new
   setting (enabled by default), supporting local files, remote http(s) image URLs,
   base64 `data:image/...` images, and Nextcloud `/core/preview` image URLs
   (for [#1254](https://github.com/pbek/QOwnNotes/issues/1254))
@@ -241,7 +241,7 @@
 
 ## 26.2.14
 
-- Added hanging indentation for wrapped Markdown list lines in the note text edit so that
+- Added **hanging indentation** for wrapped Markdown list lines in the note text edit so that
   continuation lines align with the list content rather than the list marker
   (for [#1581](https://github.com/pbek/QOwnNotes/issues/1581))
 - Added `<meta name="viewport" content="width=device-width, initial-scale=1.0">` to the HTML
