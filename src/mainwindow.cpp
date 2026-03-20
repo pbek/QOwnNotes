@@ -1820,8 +1820,8 @@ void MainWindow::applyDarkModeSettings() {
     initStyling();
     setWindowIcon(getSystemTrayIcon());
 
-    if (trayIcon != nullptr) {
-        trayIcon->setIcon(getSystemTrayIcon());
+    if (_systemTrayManager != nullptr && _systemTrayManager->trayIcon() != nullptr) {
+        _systemTrayManager->trayIcon()->setIcon(getSystemTrayIcon());
     }
 
     readSettingsFromSettingsDialog();

@@ -4,6 +4,9 @@
 
 - Fixed build regressions from the `mainwindow.cpp` manager split so Qt 5.9 and lower
   build again on old build tooling (for [#3509](https://github.com/pbek/QOwnNotes/issues/3509))
+- Fixed a crash when closing the Settings dialog after canceling live dark mode or
+  editor color schema changes, by updating the system tray icon through the tray
+  manager instead of a stale pointer (for [#3509](https://github.com/pbek/QOwnNotes/issues/3509))
 
 ## 26.3.16
 

@@ -888,7 +888,7 @@ class MainWindow : public QMainWindow {
     NoteDiffDialog *noteDiffDialog;
     UpdateService *updateService;
     bool showSystemTray;
-    QSystemTrayIcon *trayIcon;
+    QSystemTrayIcon *trayIcon = nullptr;
     QDateTime currentNoteLastEdited;
     QDateTime _lastHeartbeat;
     bool notifyAllExternalModifications;
