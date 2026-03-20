@@ -34,6 +34,7 @@
 #include <QMessageBox>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
+#include <memory>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"

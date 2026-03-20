@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.3.17
+
+- Fixed build regressions from the `mainwindow.cpp` manager split so Qt 5.9 and lower
+  build again on old build tooling (for [#3509](https://github.com/pbek/QOwnNotes/issues/3509))
+
 ## 26.3.16
 
 - **Allow switching between dark and light mode and changing the editor color**
