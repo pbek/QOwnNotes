@@ -5,6 +5,8 @@
 - Added optional **LanguageTool grammar and style checking** alongside the existing Sonnet
   spell checker, with colored editor underlines, context-menu suggestions, server settings,
   and a quick toggle in the Spelling menu (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
+  - For more information on the LanguageTool integration, see the new documentation page at
+    [LanguageTool](https://www.qownnotes.org/editor/languagetool.html)
 - Fixed the AUR / CMake build to always use the bundled `litehtml` when building
   `qlitehtml`, avoiding API mismatches with incompatible system `litehtml`
   packages (for [#3510](https://github.com/pbek/QOwnNotes/issues/3510))
