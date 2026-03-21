@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.18
+
+- Fixed the AUR / CMake build to always use the bundled `litehtml` when building
+  `qlitehtml`, avoiding API mismatches with incompatible system `litehtml`
+  packages (for [#3510](https://github.com/pbek/QOwnNotes/issues/3510))
+
 ## 26.3.17
 
 - Fixed build regressions from the `mainwindow.cpp` manager split so Qt 5.9 and lower
