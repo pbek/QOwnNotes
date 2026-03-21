@@ -7660,7 +7660,7 @@ void MainWindow::on_actionCopy_path_to_note_to_clipboard_triggered() {
                          QStringLiteral("📋"), 3000);
 }
 
-void MainWindow::on_actionCopy_note_filename_to_clipboard_triggered() {
+void MainWindow::copyNoteFilenameToClipboardTriggered() {
     const QString fileName = currentNote.getFileName();
 
     QClipboard *clipboard = QApplication::clipboard();

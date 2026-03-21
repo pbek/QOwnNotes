@@ -577,7 +577,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
         } else if (selectedItem == copyNotePathToClipboardAction) {
             _mainWindow->on_actionCopy_path_to_note_to_clipboard_triggered();
         } else if (selectedItem == copyNoteFileNameToClipboardAction) {
-            _mainWindow->on_actionCopy_note_filename_to_clipboard_triggered();
+            _mainWindow->copyNoteFilenameToClipboardTriggered();
         } else if (selectedItem == showNoteGitLogAction) {
             // show the git log of the current note
             _mainWindow->on_actionShow_note_git_versions_triggered();
