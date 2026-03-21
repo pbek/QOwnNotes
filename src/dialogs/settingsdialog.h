@@ -366,6 +366,11 @@ class SettingsDialog : public MasterDialog {
 
     void on_interfaceScalingFactorSpinBox_valueChanged(int arg1);
 
+#ifdef LANGUAGETOOL_ENABLED
+    void on_languageToolTestConnectionButton_clicked();
+    void on_languageToolEnabledCheckBox_toggled(bool checked);
+#endif
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
@@ -499,6 +504,11 @@ class SettingsDialog : public MasterDialog {
     void applyEditorSchemaSettings();
 
     void runAiApiTest(QString backend, QString model, QString apiKey = QString());
+
+#ifdef LANGUAGETOOL_ENABLED
+    QStringList languageToolEnabledCategoriesFromUi() const;
+    void setLanguageToolOptionsEnabled(bool enabled);
+#endif
 
     bool initializePage(int index);
 };

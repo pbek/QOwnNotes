@@ -10,6 +10,10 @@
 class MainWindow;
 class QOwnSpellChecker;
 
+#ifdef LANGUAGETOOL_ENABLED
+class QAction;
+#endif
+
 #define QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING \
     "/* BEGIN FONT SIZE OVERRIDE STYLESHEET */"
 #define QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING \
@@ -157,6 +161,11 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void overrideFontSizeStyle(int fontSize);
 
     QMenu *spellCheckContextMenu(QPoint pos);
+#ifdef LANGUAGETOOL_ENABLED
+    void addLanguageToolMenuSection(QMenu *menu, const QTextCursor &cursorAtMouse,
+                                    const QTextCursor &selectedCursor, bool &hasEntries);
+    void applyLanguageToolReplacement(const QTextCursor &cursor, const QString &replacement);
+#endif
 
     /**
      * Requests AI autocomplete for the current text

@@ -122,6 +122,9 @@
 #include "libraries/sonnet/src/core/speller.h"
 #include "release.h"
 #include "services/databaseservice.h"
+#ifdef LANGUAGETOOL_ENABLED
+#include "services/languagetoolchecker.h"
+#endif
 #include "services/metricsservice.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
@@ -2379,6 +2382,13 @@ void MainWindow::readSettings() {
     // restore old spell check settings
     ui->actionCheck_spelling->setChecked(
         settings.value(QStringLiteral("checkSpelling"), true).toBool());
+
+#ifdef LANGUAGETOOL_ENABLED
+    ui->actionCheck_grammar_with_LanguageTool->setChecked(
+        settings.value(QStringLiteral("languageToolEnabled"), false).toBool());
+#else
+    ui->actionCheck_grammar_with_LanguageTool->setVisible(false);
+#endif
 
     // load backends
 #ifdef ASPELL_ENABLED
@@ -7459,6 +7469,23 @@ void MainWindow::onSpellBackendChanged(QAction *action) {
 void MainWindow::on_actionManage_dictionaries_triggered() {
     _spellCheckManager->on_actionManage_dictionaries_triggered();
 }
+
+#ifdef LANGUAGETOOL_ENABLED
+void MainWindow::on_actionCheck_grammar_with_LanguageTool_toggled(bool checked) {
+    SettingsService settings;
+    settings.setValue(QStringLiteral("languageToolEnabled"), checked);
+
+    if (ui->noteTextEdit) {
+        ui->noteTextEdit->updateSettings();
+    }
+
+    if (ui->encryptedNoteTextEdit) {
+        ui->encryptedNoteTextEdit->updateSettings();
+    }
+
+    Q_EMIT settingsChanged();
+}
+#endif
 
 void MainWindow::on_noteTextEdit_modificationChanged(bool arg1) {
     if (!arg1) {

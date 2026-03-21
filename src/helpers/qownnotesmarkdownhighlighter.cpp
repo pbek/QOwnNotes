@@ -19,13 +19,18 @@
 #include <services/scriptingservice.h>
 
 #include <QApplication>
+#include <QColor>
 #include <QDebug>
 #include <QObject>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
+#include "helpers/LanguageCache.h"
 #include "mainwindow.h"
 #include "qownspellchecker.h"
+#ifdef LANGUAGETOOL_ENABLED
+#include "services/languagetoolchecker.h"
+#endif
 
 constexpr qreal ENCRYPTED_TEXT_FONT_SCALE = 1.5;
 
@@ -91,6 +96,12 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
         if (!text.isEmpty() && QOwnSpellChecker::instance()->isActive()) {
             highlightSpellChecking(text);
         }
+
+#ifdef LANGUAGETOOL_ENABLED
+        if (!text.isEmpty()) {
+            highlightLanguageTool(text);
+        }
+#endif
 
         highlightScriptingRules(ScriptingService::instance()->getHighlightingRules(), text);
     }
@@ -232,6 +243,77 @@ void QOwnNotesMarkdownHighlighter::setMisspelled(const int start, const int coun
     format.setUnderlineColor(Qt::red);
     setFormat(start, count, format);
 }
+
+#ifdef LANGUAGETOOL_ENABLED
+void QOwnNotesMarkdownHighlighter::setLanguageToolUnderline(int start, int count,
+                                                            const QColor &color,
+                                                            const QString &toolTip) {
+    if (MarkdownHighlighter::isPosInACodeSpan(currentBlock().blockNumber(), start)) {
+        return;
+    }
+
+    QTextCharFormat format = QSyntaxHighlighter::format(start);
+    format.setFontUnderline(true);
+    format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
+    format.setUnderlineColor(color);
+    format.setToolTip(toolTip);
+    setFormat(start, count, format);
+}
+
+void QOwnNotesMarkdownHighlighter::highlightLanguageTool(const QString &text) {
+    auto *checker = LanguageToolChecker::instance();
+    if ((checker == nullptr) || !checker->isEnabled()) {
+        return;
+    }
+
+    auto *languageCache = dynamic_cast<LanguageCache *>(currentBlockUserData());
+    if (!languageCache) {
+        languageCache = new LanguageCache;
+        setCurrentBlockUserData(languageCache);
+    }
+
+    const auto matches = checker->matchesForBlock(currentBlock().blockNumber(), text);
+    QVector<LanguageToolMatch> blockMatches;
+    blockMatches.reserve(matches.size());
+
+    for (const auto &blockMatch : matches) {
+        if (checker->isRuleIgnored(blockMatch.match.ruleId)) {
+            continue;
+        }
+
+        if (blockMatch.match.length <= 0) {
+            continue;
+        }
+
+        const QString category = blockMatch.match.ruleCategory.toUpper();
+        if ((category == QStringLiteral("TYPOS")) && QOwnSpellChecker::instance()->isActive() &&
+            checker->hasTypoMatchCovering(currentBlock().blockNumber(), blockMatch.match.offset,
+                                          blockMatch.match.length, text)) {
+            // LanguageTool suggestions win over Sonnet, but we still avoid double-underlining
+        }
+
+        QColor color(Qt::blue);
+        if (category == QStringLiteral("TYPOS")) {
+            color = Qt::red;
+        } else if (category == QStringLiteral("GRAMMAR")) {
+            color = QColor(QStringLiteral("#2a6fdb"));
+        } else if ((category == QStringLiteral("STYLE")) ||
+                   (category == QStringLiteral("REDUNDANCY"))) {
+            color = QColor(QStringLiteral("#c99500"));
+        } else if (category == QStringLiteral("PUNCTUATION")) {
+            color = QColor(QStringLiteral("#1c8f47"));
+        } else if (category == QStringLiteral("TYPOGRAPHY")) {
+            color = QColor(QStringLiteral("#7a3db8"));
+        }
+
+        setLanguageToolUnderline(blockMatch.match.offset, blockMatch.match.length, color,
+                                 blockMatch.match.message);
+        blockMatches.append(blockMatch.match);
+    }
+
+    languageCache->setLanguageToolMatches(blockMatches);
+}
+#endif
 
 /**
  * Uses the QOwnSpellChecker to check words for correctness and underlines the

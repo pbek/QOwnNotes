@@ -26,6 +26,7 @@
 #include <QFontDialog>
 #include <QInputDialog>
 #include <QJsonDocument>
+#include <QJsonObject>
 #include <QKeySequence>
 #include <QKeySequenceEdit>
 #include <QMenu>
@@ -39,6 +40,7 @@
 #include <QTextBrowser>
 #include <QTimer>
 #include <QToolBar>
+#include <QUrlQuery>
 #include <utility>
 
 #include "build_number.h"
@@ -50,6 +52,9 @@
 #include "release.h"
 #include "scriptrepositorydialog.h"
 #include "services/databaseservice.h"
+#ifdef LANGUAGETOOL_ENABLED
+#include "services/languagetoolclient.h"
+#endif
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
 #include "services/owncloudservice.h"
@@ -114,6 +119,20 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
     ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
+
+#ifdef LANGUAGETOOL_ENABLED
+    ui->languageToolLanguageComboBox->addItem(tr("Auto-detect"), QStringLiteral("auto"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("English (US)"),
+                                              QStringLiteral("en-US"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("English (GB)"),
+                                              QStringLiteral("en-GB"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("German"), QStringLiteral("de-DE"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("French"), QStringLiteral("fr"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("Spanish"), QStringLiteral("es"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("Italian"), QStringLiteral("it"));
+    ui->languageToolLanguageComboBox->addItem(QStringLiteral("Dutch"), QStringLiteral("nl"));
+    setLanguageToolOptionsEnabled(false);
+#endif
 
     updateSearchLineEditIcons();
 
@@ -186,6 +205,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->aiAutocompleteCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->webAppServerUrlLineEdit, SIGNAL(textChanged(QString)), this, SLOT(needRestart()));
     connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this, SLOT(needRestart()));
+
+#ifdef LANGUAGETOOL_ENABLED
+    connect(ui->languageToolEnabledCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(on_languageToolEnabledCheckBox_toggled(bool)));
+#endif
 
     // Apply editor schema changes live while the settings dialog is open
     connect(ui->editorFontColorWidget, &FontColorWidget::schemaChanged, this,
@@ -641,6 +665,23 @@ void SettingsDialog::storeSettings() {
                           QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts));
 #endif
 
+#ifdef LANGUAGETOOL_ENABLED
+    settings.setValue(QStringLiteral("languageToolEnabled"),
+                      ui->languageToolEnabledCheckBox->isChecked());
+    settings.setValue(QStringLiteral("languageToolServerUrl"),
+                      ui->languageToolServerUrlLineEdit->text().trimmed());
+    settings.setValue(QStringLiteral("languageToolLanguage"),
+                      ui->languageToolLanguageComboBox->currentData().toString().isEmpty()
+                          ? ui->languageToolLanguageComboBox->currentText().trimmed()
+                          : ui->languageToolLanguageComboBox->currentData().toString());
+    settings.setValue(QStringLiteral("languageToolApiKey"),
+                      ui->languageToolApiKeyLineEdit->text().trimmed());
+    settings.setValue(QStringLiteral("languageToolCheckDelay"),
+                      ui->languageToolCheckDelaySpinBox->value());
+    settings.setValue(QStringLiteral("languageToolEnabledCategories"),
+                      languageToolEnabledCategoriesFromUi());
+#endif
+
     if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool() &&
         ui->appMetricsCheckBox->isChecked()) {
         MetricsService::instance()->sendVisit(QStringLiteral("settings/app-metrics-disabled"));
@@ -1050,6 +1091,50 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("Editor/markdownLspArguments"))
             .toStringList()
             .join(QLatin1Char(' ')));
+#ifdef LANGUAGETOOL_ENABLED
+    ui->languageToolEnabledCheckBox->setChecked(
+        settings.value(QStringLiteral("languageToolEnabled"), false).toBool());
+    ui->languageToolServerUrlLineEdit->setText(
+        settings
+            .value(QStringLiteral("languageToolServerUrl"), QStringLiteral("http://localhost:8081"))
+            .toString());
+    ui->languageToolApiKeyLineEdit->setText(
+        settings.value(QStringLiteral("languageToolApiKey")).toString());
+    ui->languageToolCheckDelaySpinBox->setValue(
+        settings.value(QStringLiteral("languageToolCheckDelay"), 1500).toInt());
+
+    const QString languageToolLanguage =
+        settings.value(QStringLiteral("languageToolLanguage"), QStringLiteral("auto")).toString();
+    int languageIndex = ui->languageToolLanguageComboBox->findData(languageToolLanguage);
+    if (languageIndex < 0) {
+        languageIndex = ui->languageToolLanguageComboBox->findText(languageToolLanguage);
+    }
+    if (languageIndex < 0) {
+        ui->languageToolLanguageComboBox->setEditText(languageToolLanguage);
+    } else {
+        ui->languageToolLanguageComboBox->setCurrentIndex(languageIndex);
+    }
+
+    const QStringList enabledCategories =
+        settings
+            .value(QStringLiteral("languageToolEnabledCategories"),
+                   QStringList() << QStringLiteral("TYPOS") << QStringLiteral("GRAMMAR")
+                                 << QStringLiteral("STYLE") << QStringLiteral("REDUNDANCY")
+                                 << QStringLiteral("PUNCTUATION") << QStringLiteral("TYPOGRAPHY"))
+            .toStringList();
+    ui->languageToolSpellingCheckBox->setChecked(
+        enabledCategories.contains(QStringLiteral("TYPOS")));
+    ui->languageToolGrammarCheckBox->setChecked(
+        enabledCategories.contains(QStringLiteral("GRAMMAR")));
+    ui->languageToolStyleCheckBox->setChecked(
+        enabledCategories.contains(QStringLiteral("STYLE")) ||
+        enabledCategories.contains(QStringLiteral("REDUNDANCY")));
+    ui->languageToolPunctuationCheckBox->setChecked(
+        enabledCategories.contains(QStringLiteral("PUNCTUATION")));
+    ui->languageToolTypographyCheckBox->setChecked(
+        enabledCategories.contains(QStringLiteral("TYPOGRAPHY")));
+    setLanguageToolOptionsEnabled(ui->languageToolEnabledCheckBox->isChecked());
+#endif
     ui->markdownHighlightingCheckBox->setChecked(
         settings.value(QStringLiteral("markdownHighlightingEnabled"), true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(
@@ -2061,6 +2146,67 @@ void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button) {
         }
     }
 }
+
+#ifdef LANGUAGETOOL_ENABLED
+QStringList SettingsDialog::languageToolEnabledCategoriesFromUi() const {
+    QStringList categories;
+    if (ui->languageToolSpellingCheckBox->isChecked()) {
+        categories.append(QStringLiteral("TYPOS"));
+    }
+    if (ui->languageToolGrammarCheckBox->isChecked()) {
+        categories.append(QStringLiteral("GRAMMAR"));
+    }
+    if (ui->languageToolStyleCheckBox->isChecked()) {
+        categories.append(QStringLiteral("STYLE"));
+        categories.append(QStringLiteral("REDUNDANCY"));
+    }
+    if (ui->languageToolPunctuationCheckBox->isChecked()) {
+        categories.append(QStringLiteral("PUNCTUATION"));
+    }
+    if (ui->languageToolTypographyCheckBox->isChecked()) {
+        categories.append(QStringLiteral("TYPOGRAPHY"));
+    }
+
+    return categories;
+}
+
+void SettingsDialog::setLanguageToolOptionsEnabled(bool enabled) {
+    ui->languageToolOptionsWidget->setEnabled(enabled);
+}
+
+void SettingsDialog::on_languageToolEnabledCheckBox_toggled(bool checked) {
+    setLanguageToolOptionsEnabled(checked);
+}
+
+void SettingsDialog::on_languageToolTestConnectionButton_clicked() {
+    auto *client = new LanguageToolClient(this);
+    LanguageToolClient::RequestOptions options;
+    options.requestId = 1;
+    options.serverUrl = ui->languageToolServerUrlLineEdit->text().trimmed();
+    options.language = ui->languageToolLanguageComboBox->currentData().toString().isEmpty()
+                           ? ui->languageToolLanguageComboBox->currentText().trimmed()
+                           : ui->languageToolLanguageComboBox->currentData().toString();
+    options.apiKey = ui->languageToolApiKeyLineEdit->text().trimmed();
+    options.timeoutMs = 5000;
+    options.text = QStringLiteral("This are a test sentence.");
+    options.enabledCategories = languageToolEnabledCategoriesFromUi();
+
+    connect(client, &LanguageToolClient::checkFinished, this,
+            [this, client](int, const QVector<LanguageToolMatch> &) {
+                QMessageBox::information(this, tr("LanguageTool"),
+                                         tr("LanguageTool connection successful."));
+                client->deleteLater();
+            });
+    connect(client, &LanguageToolClient::checkError, this,
+            [this, client](int, const QString &errorMessage) {
+                QMessageBox::warning(this, tr("LanguageTool"),
+                                     tr("LanguageTool connection failed: %1").arg(errorMessage));
+                client->deleteLater();
+            });
+
+    client->checkText(options);
+}
+#endif
 
 void SettingsDialog::onLayoutSettingsStored(const QString &workspaceIdentifier) {
     auto *mainWindow = MainWindow::instance();

@@ -736,6 +736,10 @@ class MainWindow : public QMainWindow {
 
     void on_actionManage_dictionaries_triggered();
 
+#ifdef LANGUAGETOOL_ENABLED
+    void on_actionCheck_grammar_with_LanguageTool_toggled(bool checked);
+#endif
+
     void on_noteTextEdit_modificationChanged(bool arg1);
 
     void on_encryptedNoteTextEdit_modificationChanged(bool arg1);

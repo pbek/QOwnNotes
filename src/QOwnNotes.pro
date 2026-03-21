@@ -14,6 +14,7 @@ QT       += quick
 }
 
 CONFIG += with_aspell
+DEFINES += LANGUAGETOOL_ENABLED
 
 # QLiteHtml requires Qt 6+
 greaterThan(QT_MAJOR_VERSION, 5) {
@@ -168,6 +169,8 @@ SOURCES += main.cpp\
     helpers/qownnotesmarkdownhighlighter.cpp \
     helpers/fakevimproxy.cpp \
     helpers/flowlayout.cpp \
+    services/languagetoolclient.cpp \
+    services/languagetoolchecker.cpp \
     services/databaseservice.cpp \
     threads/scriptthread.cpp \
     widgets/graphicsview.cpp \
@@ -296,6 +299,9 @@ HEADERS  += mainwindow.h \
     services/scriptingservice.h \
     services/websocketserverservice.h \
     services/webappclientservice.h \
+    services/languagetoolclient.h \
+    services/languagetoolchecker.h \
+    services/languagetooltypes.h \
     helpers/htmlentities.h \
     helpers/clientproxy.h \
     helpers/toolbarcontainer.h \

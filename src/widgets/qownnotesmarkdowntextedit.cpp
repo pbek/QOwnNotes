@@ -7,6 +7,7 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QDebug>
+#include <QDesktopServices>
 #include <QDir>
 #include <QEvent>
 #include <QFileInfo>
@@ -42,6 +43,9 @@
 #include "helpers/qownspellchecker.h"
 #include "libraries/qmarkdowntextedit/linenumberarea.h"
 #include "mainwindow.h"
+#ifdef LANGUAGETOOL_ENABLED
+#include "services/languagetoolchecker.h"
+#endif
 #include "services/markdownlspclient.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
@@ -180,6 +184,27 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
 
     connect(MainWindow::instance(), &MainWindow::settingsChanged, this,
             &QOwnNotesMarkdownTextEdit::updateSettings);
+
+#ifdef LANGUAGETOOL_ENABLED
+    connect(LanguageToolChecker::instance(), &LanguageToolChecker::blockMatchesUpdated, this,
+            [this](const QVector<int> &blockNumbers) {
+                if (!document() || !highlighter()) {
+                    return;
+                }
+
+                if (blockNumbers.isEmpty()) {
+                    highlighter()->rehighlight();
+                    return;
+                }
+
+                for (const int blockNumber : blockNumbers) {
+                    const QTextBlock block = document()->findBlockByNumber(blockNumber);
+                    if (block.isValid()) {
+                        highlighter()->rehighlightBlock(block);
+                    }
+                }
+            });
+#endif
 
     setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, &QOwnNotesMarkdownTextEdit::customContextMenuRequested, this,
@@ -1657,6 +1682,19 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         }
     }
 
+#ifdef LANGUAGETOOL_ENABLED
+    auto *languageToolChecker = LanguageToolChecker::instance();
+    if (languageToolChecker) {
+        if ((objectName() == QStringLiteral("noteTextEdit")) ||
+            (objectName() == QStringLiteral("encryptedNoteTextEdit")) || objectName().isEmpty()) {
+            languageToolChecker->setTextEdit(this);
+            languageToolChecker->scheduleCheck(true);
+        } else {
+            languageToolChecker->clearForTextEdit(this);
+        }
+    }
+#endif
+
     // highlighting is always disabled for logTextEdit
     if (objectName() != QStringLiteral("logTextEdit")) {
         // enable or disable Markdown highlighting
@@ -1920,9 +1958,6 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
 
 QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
     auto spellchecker = QOwnSpellChecker::instance();
-    if (!spellchecker || !spellchecker->isActive() || _isSpellCheckingDisabled) {
-        return nullptr;
-    }
 
     // obtain the cursor at current mouse position
     QTextCursor cursorAtMouse = cursorForPosition(pos);
@@ -1931,6 +1966,23 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
     QTextCursor cursor = textCursor();
     if (MarkdownHighlighter::isCodeBlock(cursor.block().userState())) {
         return nullptr;
+    }
+
+    auto *menu = new QMenu(this);
+    bool hasEntries = false;
+
+#ifdef LANGUAGETOOL_ENABLED
+    addLanguageToolMenuSection(menu, cursorAtMouse, cursor, hasEntries);
+#endif
+
+    if (!spellchecker || !spellchecker->isActive() || _isSpellCheckingDisabled) {
+        if (!hasEntries) {
+            delete menu;
+            return nullptr;
+        }
+
+        menu->setTitle(tr("Spelling"));
+        return menu;
     }
 
     // Check if the user clicked a selected word
@@ -1971,7 +2023,13 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
                                   spellchecker->isWordMisspelled(selectedWord);
 
     if (!wordIsMisspelled) {
-        return nullptr;
+        if (!hasEntries) {
+            delete menu;
+            return nullptr;
+        }
+
+        menu->setTitle(tr("Spelling"));
+        return menu;
     }
 
     if (!selectedWordClicked) {
@@ -1980,8 +2038,10 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
         cursor = textCursor();
     }
 
-    // Create the suggestion menu
-    auto *menu = new QMenu(this);
+    if (hasEntries) {
+        menu->addSeparator();
+    }
+
     // Add the suggestions to the menu
     const QStringList reps = spellchecker->suggestionsForWord(selectedWord, cursor, 8);
     if (reps.isEmpty()) {
@@ -2016,6 +2076,83 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
 
     return menu;
 }
+
+#ifdef LANGUAGETOOL_ENABLED
+void QOwnNotesMarkdownTextEdit::addLanguageToolMenuSection(QMenu *menu,
+                                                           const QTextCursor &cursorAtMouse,
+                                                           const QTextCursor &selectedCursor,
+                                                           bool &hasEntries) {
+    auto *checker = LanguageToolChecker::instance();
+    if ((checker == nullptr) || !checker->isEnabled()) {
+        return;
+    }
+
+    QTextCursor matchCursor(cursorAtMouse);
+    matchCursor.clearSelection();
+    const auto blockMatch = checker->matchAtPosition(matchCursor, matchCursor.positionInBlock());
+    if ((blockMatch.blockNumber < 0) || checker->isRuleIgnored(blockMatch.match.ruleId)) {
+        return;
+    }
+
+    QTextCursor replacementCursor(selectedCursor);
+    const int blockPosition = matchCursor.block().position();
+    replacementCursor.setPosition(blockPosition + blockMatch.match.offset);
+    replacementCursor.setPosition(blockPosition + blockMatch.match.offset + blockMatch.match.length,
+                                  QTextCursor::KeepAnchor);
+
+    const QString category = blockMatch.match.ruleCategory.isEmpty()
+                                 ? tr("LanguageTool")
+                                 : blockMatch.match.ruleCategory;
+    QString headerText = category;
+    if (!blockMatch.match.shortMessage.isEmpty()) {
+        headerText += QStringLiteral(": ") + blockMatch.match.shortMessage;
+    } else if (!blockMatch.match.message.isEmpty()) {
+        headerText += QStringLiteral(": ") + blockMatch.match.message;
+    }
+
+    QAction *headerAction = menu->addAction(headerText);
+    headerAction->setEnabled(false);
+
+    if (blockMatch.match.replacements.isEmpty()) {
+        QAction *noSuggestionsAction = menu->addAction(tr("No suggestions"));
+        noSuggestionsAction->setEnabled(false);
+    } else {
+        const QStringList replacements = blockMatch.match.replacements.mid(0, 8);
+        for (const QString &replacement : replacements) {
+            menu->addAction(replacement, this, [this, replacementCursor, replacement]() mutable {
+                applyLanguageToolReplacement(replacementCursor, replacement);
+            });
+        }
+    }
+
+    if (!blockMatch.match.ruleUrl.isEmpty()) {
+        const auto url = blockMatch.match.ruleUrl;
+        menu->addAction(tr("More info..."), this,
+                        [url]() { QDesktopServices::openUrl(QUrl(url)); });
+    }
+
+    const auto ruleId = blockMatch.match.ruleId;
+    menu->addAction(tr("Ignore this rule"), this, [this, checker, ruleId]() {
+        checker->ignoreRule(ruleId);
+        if (highlighter()) {
+            highlighter()->rehighlight();
+        }
+    });
+
+    hasEntries = true;
+}
+
+void QOwnNotesMarkdownTextEdit::applyLanguageToolReplacement(const QTextCursor &cursor,
+                                                             const QString &replacement) {
+    QTextCursor mutableCursor(cursor);
+    if (mutableCursor.isNull()) {
+        return;
+    }
+
+    mutableCursor.insertText(replacement);
+    setTextCursor(mutableCursor);
+}
+#endif
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
@@ -2350,6 +2487,9 @@ void QOwnNotesMarkdownTextEdit::focusInEvent(QFocusEvent *e) {
     if (objectName() != QStringLiteral("logTextEdit")) {
         qDebug() << __func__ << " - Registering as active editor:" << this << objectName();
         registerAsActiveEditor();
+#ifdef LANGUAGETOOL_ENABLED
+        LanguageToolChecker::instance()->setTextEdit(this);
+#endif
     }
 
     // Call parent implementation
@@ -2388,6 +2528,9 @@ QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::getActiveEditorForAutocomp
 QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {
     qDebug() << "*** QOwnNotesMarkdownTextEdit DESTROYED ***" << this << objectName();
     closeMarkdownLspDocument();
+#ifdef LANGUAGETOOL_ENABLED
+    LanguageToolChecker::instance()->clearForTextEdit(this);
+#endif
     // Unregister if this was the active editor
     unregisterAsActiveEditor();
 }

@@ -59,6 +59,11 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     // Set the format of a word as misspelled i.e., red wavy underline
     void setMisspelled(const int start, const int count);
     void highlightSpellChecking(const QString &text);
+#ifdef LANGUAGETOOL_ENABLED
+    void highlightLanguageTool(const QString &text);
+    void setLanguageToolUnderline(int start, int count, const QColor &color,
+                                  const QString &toolTip);
+#endif
 
     void updateCachedRegexes(const QString &newExt);
 

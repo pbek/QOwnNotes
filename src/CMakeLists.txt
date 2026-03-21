@@ -8,6 +8,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
 option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
+option(LANGUAGETOOL_ENABLED "Build with LanguageTool support" ON)
 
 option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
 option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
@@ -70,6 +71,10 @@ endif()
 if(BUILD_WITH_ASPELL)
   target_compile_definitions(QOwnNotes PUBLIC ASPELL_ENABLED)
   target_link_libraries(QOwnNotes PRIVATE ${ASPELL_LIBRARIES})
+endif()
+
+if(LANGUAGETOOL_ENABLED)
+  target_compile_definitions(QOwnNotes PUBLIC LANGUAGETOOL_ENABLED)
 endif()
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
@@ -364,6 +369,11 @@ set(SOURCE_FILES
     services/scriptingservice.h
     services/openaiservice.cpp
     services/openaiservice.h
+    services/languagetoolclient.cpp
+    services/languagetoolclient.h
+    services/languagetoolchecker.cpp
+    services/languagetoolchecker.h
+    services/languagetooltypes.h
     services/markdownlspclient.cpp
     services/markdownlspclient.h
     services/settingsservice.cpp
