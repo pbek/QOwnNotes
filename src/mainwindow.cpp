@@ -308,6 +308,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _autoReadOnlyModeTimer->setSingleShot(true);
     connect(_autoReadOnlyModeTimer, &QTimer::timeout, this, &MainWindow::autoReadOnlyModeTimerSlot);
 
+    _noteViewUpdateTimer = new QTimer(this);
+    _noteViewUpdateTimer->setSingleShot(true);
+    connect(_noteViewUpdateTimer, &QTimer::timeout, this, &MainWindow::noteViewUpdateTimerSlot);
+
     // setup the update available button
     setupStatusBarWidgets();
 
@@ -362,10 +366,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
 
     // look if we need update the note view every two seconds
-    _noteViewUpdateTimer = new QTimer(this);
-    _noteViewUpdateTimer->setSingleShot(true);
-    connect(_noteViewUpdateTimer, &QTimer::timeout, this, &MainWindow::noteViewUpdateTimerSlot);
-
     _noteViewUpdateTimer->start(2000);
 
     // commit changes from the current note folder to git every 30 sec

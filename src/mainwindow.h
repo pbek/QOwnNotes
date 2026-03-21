@@ -897,7 +897,7 @@ class MainWindow : public QMainWindow {
     int noteSaveIntervalTime;
     QTimer *noteSaveTimer;
     QTimer *_frequentPeriodicTimer;
-    QTimer *_noteViewUpdateTimer;
+    QTimer *_noteViewUpdateTimer = nullptr;
     QTimer *_autoReadOnlyModeTimer;
     QTimer *_gitCommitTimer;
     QTimer *_todoListTimer;
