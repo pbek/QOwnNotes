@@ -81,6 +81,7 @@ const installationNavItems = [
 
 const editorNavItems = [
   "editor/spellchecking",
+  "editor/languagetool",
   "editor/ai",
   "editor/time-formats",
 ];

@@ -31,6 +31,7 @@ graph TB
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
+    qon-.->lt("LanguageTool service")
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
 
@@ -47,6 +48,7 @@ graph TB
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
     click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -119,6 +121,22 @@ You can manage your **command snippets** with QOwnNotes and execute them on the 
 
 ::: tip
 Please visit [QOwnNotes command-line snippet manager](command-line-snippet-manager.md) for more information.
+:::
+
+## LanguageTool service
+
+QOwnNotes can use a local or remote [LanguageTool](https://languagetool.org/) server for
+**grammar and style checking** in the editor.
+
+- It is **optional** and works alongside the existing spell checker support
+- Enable it in `Settings -> Editor`, then configure your **server URL**, **language**,
+  optional **API key**, and the categories you want to check
+- You can also toggle it quickly from the **Spelling** menu with
+  `Check grammar with LanguageTool`
+- Suggestions and actions are available from the editor context menu for detected issues
+
+::: tip
+Please visit [LanguageTool](../editor/languagetool.md) for more information.
 :::
 
 ## Nextcloud desktop sync client
