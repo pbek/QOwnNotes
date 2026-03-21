@@ -79,7 +79,8 @@ in
           machine.send_key("ctrl-n")
           machine.sleep(1)
           machine.send_chars("This is a NixOS test!\n")
-          machine.wait_until_succeeds("find /home/alice/Notes -type f | grep -qi 'Note 2'")
+          machine.send_key("ctrl-s")
+          machine.wait_until_succeeds("grep -Rqi 'This is a NixOS test!' /home/alice/Notes")
 
           # OCR doesn't seem to be able any more to handle the main window
           #machine.wait_for_text("This is a NixOS test!")
