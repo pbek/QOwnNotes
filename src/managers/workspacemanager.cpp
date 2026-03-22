@@ -143,8 +143,11 @@ void WorkspaceManager::setCurrentWorkspace(const QString &uuid) {
     // restore the new workspace
     QTimer::singleShot(0, _mainWindow, SLOT(restoreCurrentWorkspace()));
 
-    // update the menu and combo box (but don't rebuild it)
-    updateWorkspaceLists(false);
+    // Check if the workspace is new (not yet in the combo box) and needs a full rebuild
+    bool needsRebuild = _workspaceComboBox->findData(uuid) == -1;
+
+    // update the menu and combo box
+    updateWorkspaceLists(needsRebuild);
 
     // update the preview in case it was disabled previously
     _mainWindow->setNoteTextFromNote(&_mainWindow->currentNote, true);

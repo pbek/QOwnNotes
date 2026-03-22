@@ -2214,6 +2214,7 @@ void SettingsDialog::onLayoutSettingsStored(const QString &workspaceIdentifier) 
         return;
     }
 
+    // Switch to the new workspace (stores the current workspace first, then restores the new one)
     mainWindow->setCurrentWorkspace(workspaceIdentifier);
 }
 

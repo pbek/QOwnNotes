@@ -104,7 +104,6 @@ void LayoutWidget::storeSettings() {
     }
 
     settings.setValue(QStringLiteral("initialLayoutIdentifier"), layoutIdentifier);
-    settings.setValue(QStringLiteral("currentWorkspace"), workspaceIdentifier);
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
     settings.setValue("workspace-" + workspaceIdentifier + "/noteEditIsCentralWidget",
