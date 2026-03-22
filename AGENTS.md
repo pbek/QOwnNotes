@@ -185,6 +185,7 @@ just link-check
 - **Build translations**: `just translations-build`
 - **Upload to Crowdin**: `just translations-upload`
 - **Update translation files**: `just translations-update-files`
+- **Generate changelog line**: `just translations-changelog` (outputs a line like `- Added more ... translation (thank you, ...)`)
 
 Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 

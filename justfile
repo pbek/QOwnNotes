@@ -29,8 +29,13 @@ translations-build:
 
 # Download the translations from Crowdin
 [group('translations')]
-translations-download:
+translations-download: translations-changelog
     ./scripts/download_translations.sh
+
+# Generate a changelog line for recent Crowdin translation contributions
+[group('translations')]
+translations-changelog args='':
+    python3 ./scripts/crowdin_translation_changelog.py {{ args }}
 
 # Upload the translations to Crowdin
 [group('translations')]

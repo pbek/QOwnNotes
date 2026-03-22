@@ -27,6 +27,7 @@ ui_*.h
 /src/QOwnNotes
 secrets/*
 .shared
+__pycache__
 
 # Devenv
 .devenv*
