@@ -110,4 +110,24 @@ const submit = () => {
   /* Force LTR so the first part of the question is readable */
   direction: ltr;
 }
+
+/* Full-width popup on narrow screens (e.g. mobile portrait) */
+@media (max-width: 480px) {
+  #poll .v-snackbar__wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border-radius: 0;
+  }
+
+  #poll .v-snackbar__content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 </style>
