@@ -3,8 +3,9 @@
 ## 26.3.18
 
 - Fixed the **Use Layout** button in settings to correctly create a new workspace with
-  the proper layout settings without destroying the current workspace
-  (for [#3511](https://github.com/pbek/QOwnNotes/issues/3511))
+  the proper layout settings without destroying the current workspace, and fixed the
+  previous workspace losing its note editor panel when switching to a layout with a
+  different `noteEditIsCentralWidget` setting (for [#3511](https://github.com/pbek/QOwnNotes/issues/3511))
 - Added optional **LanguageTool grammar and style checking** alongside the existing Sonnet
   spell checker, with colored editor underlines, context-menu suggestions, server settings,
   and a quick toggle in the Spelling menu (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))

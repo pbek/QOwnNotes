@@ -104,8 +104,15 @@ void LayoutWidget::storeSettings() {
     }
 
     settings.setValue(QStringLiteral("initialLayoutIdentifier"), layoutIdentifier);
-    settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
-                      _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
+
+    // Only set the global noteEditIsCentralWidget during initial setup (welcome dialog).
+    // When switching layouts manually, restoreCurrentWorkspace() will set it
+    // for the correct workspace.
+    if (!_manualSettingsStoring) {
+        settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
+                          _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
+    }
+
     settings.setValue("workspace-" + workspaceIdentifier + "/noteEditIsCentralWidget",
                       _layoutSettings->value(layoutSettingsPrefix + "noteEditIsCentralWidget"));
     settings.setValue("workspace-" + workspaceIdentifier + "/windowState",

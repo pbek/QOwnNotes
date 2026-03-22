@@ -1156,6 +1156,7 @@ void MainWindow::setNoteEditCentralWidgetEnabled(bool enabled) {
         }
 
         setCentralWidget(ui->noteEditTabWidget);
+        ui->noteEditTabWidget->show();
     } else {
         if (centralWidget() == ui->noteEditTabWidget) {
             takeCentralWidget();
