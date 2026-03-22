@@ -64,6 +64,9 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
                      SLOT(slotReplyFinished(QNetworkReply *)));
 
+    // Show the wiki-link checkbox only when wiki-link support is enabled
+    ui->wikiLinkCheckBox->setVisible(Note::isWikiLinkSupportEnabled());
+
     // disallow ] characters, because they will break Markdown links
     ui->nameLineEdit->setValidator(
         new QRegularExpressionValidator(QRegularExpression(R"([^\]]*)")));
@@ -214,6 +217,10 @@ QString LinkDialog::getLinkName() const { return ui->nameLineEdit->text().trimme
 void LinkDialog::setLinkName(const QString &text) { ui->nameLineEdit->setText(text); }
 
 QString LinkDialog::getLinkDescription() const { return ui->descriptionLineEdit->text().trimmed(); }
+
+bool LinkDialog::isWikiLink() const {
+    return Note::isWikiLinkSupportEnabled() && ui->wikiLinkCheckBox->isChecked();
+}
 
 //
 // Event filters on the NoteSearchDialog

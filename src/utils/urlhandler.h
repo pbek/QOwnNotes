@@ -27,6 +27,7 @@ class UrlHandler {
     void openUrl(QString urlString, bool openInNewTab = false);
 
    private:
+    static void handleWikiLinkUrl(const QString& urlString, bool openInNewTab = false);
     static void handleNoteIdUrl(const QString& urlString, bool openInNewTab = false);
     static void handleNoteUrl(const QString& urlString, const QString& fragment,
                               bool openInNewTab = false);

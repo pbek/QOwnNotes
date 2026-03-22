@@ -642,6 +642,8 @@ void SettingsDialog::storeSettings() {
                       ui->headingFoldingCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/hideFormattingSyntax"),
                       ui->hideFormattingSyntaxCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/wikiLinkSupport"),
+                      ui->enableWikiLinkSupportCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/hangingIndent"),
                       ui->hangingIndentCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showMarkdownImagePreviews"),
@@ -1070,6 +1072,8 @@ void SettingsDialog::readSettings() {
         settings.value(QStringLiteral("Editor/headingFolding"), false).toBool());
     ui->hideFormattingSyntaxCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/hideFormattingSyntax"), false).toBool());
+    ui->enableWikiLinkSupportCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/wikiLinkSupport"), false).toBool());
     ui->hangingIndentCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool());
     ui->showMarkdownImagePreviewsCheckBox->setChecked(

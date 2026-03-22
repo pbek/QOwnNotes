@@ -18,6 +18,8 @@
 #include <entities/note.h>
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
+#include <QHash>
+
 QT_BEGIN_NAMESPACE
 class QTextDocument;
 
@@ -55,6 +57,8 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
 
    private:
     void highlightBrokenNotesLink(const QString &text);
+    void highlightWikiLinks(const QString &text);
+    void clearWikiLinkCache();
 
     // Set the format of a word as misspelled i.e., red wavy underline
     void setMisspelled(const int start, const int count);
@@ -75,6 +79,7 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     QString _defaultNoteFileExt;
     QRegularExpression _regexTagStyleLink;
     QRegularExpression _regexBracketLink;
+    QHash<QString, bool> _wikiLinkCache;
     void highlightScriptingRules(const QVector<ScriptingHighlightingRule> &rules,
                                  const QString &text);
 };

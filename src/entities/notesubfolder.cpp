@@ -172,6 +172,7 @@ bool NoteSubFolder::rename(const QString& newName) {
         // (needs to be done before the folder rename because folder renaming
         // will cause a reload which would trigger the removal of the tag links)
         Tag::renameNoteSubFolderPathsOfLinks(oldRelativePath, newRelativePath);
+        Note::updateQualifiedWikiLinksForSubfolderRename(oldRelativePath, newRelativePath);
 
         // rename the note subfolder
         const bool ret = QDir().rename(oldPath, newPath);

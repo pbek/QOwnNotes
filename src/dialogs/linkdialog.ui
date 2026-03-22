@@ -199,17 +199,30 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QListWidget" name="headingListWidget">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>1</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-        </layout>
+          <item>
+           <widget class="QListWidget" name="headingListWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="wikiLinkCheckBox">
+            <property name="toolTip">
+             <string>Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</string>
+            </property>
+            <property name="text">
+             <string>Create wiki-style link ([[...]])</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
        </widget>
       </widget>
      </item>

@@ -72,6 +72,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      * Inserts an empty code block
      */
     void insertCodeBlock();
+    void insertWikiLink();
 
     /**
      * Handles auto completion
@@ -107,6 +108,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      * @return
      */
     bool autoComplete(QStringList &resultList) const;
+    bool wikiLinkAutoComplete(QStringList &resultList, QString &filterText,
+                              int &replaceLength) const;
 
     QString currentBlock() const;
 

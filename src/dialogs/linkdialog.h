@@ -30,6 +30,7 @@ class LinkDialog : public MasterDialog {
     QString getLinkDescription() const;
     static QString getTitleFromHtml(const QString &html);
     QString getSelectedHeading() const;
+    bool isWikiLink() const;
 
    private slots:
     void on_buttonBox_accepted();

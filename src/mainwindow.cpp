@@ -3929,6 +3929,12 @@ void MainWindow::handleTextNoteLinking(int page) {
                               ? QStringLiteral("[") + chosenLinkName + QStringLiteral("](") + url +
                                     QStringLiteral(")")
                               : QStringLiteral("<") + url + QStringLiteral(">");
+            } else if (dialog->isWikiLink()) {
+                // Insert as wiki-style link [[Note Name]]
+                const Note selectedNote = dialog->getSelectedNote();
+                const QString wikiName =
+                    selectedNote.isFetched() ? selectedNote.getName() : noteName;
+                newText = QStringLiteral("[[") + wikiName + QStringLiteral("]]");
             } else {
                 const QString noteUrl =
                     currentNote.getNoteUrlForLinkingTo(dialog->getSelectedNote());
@@ -4439,7 +4445,8 @@ void MainWindow::on_actionInsert_text_link_triggered() {
 }
 
 void MainWindow::on_actionInsert_note_link_triggered() {
-    // handle the linking of a note
+    // handle the linking of a note; the dialog shows a wiki-style checkbox when
+    // wiki-link support is enabled, so no need to bypass the dialog
     handleTextNoteLinking(LinkDialog::NoteLinkPage);
 }
 
@@ -7611,6 +7618,8 @@ QAction *MainWindow::reloadNoteFolderAction() { return ui->action_Reload_note_fo
 QAction *MainWindow::newNoteAction() { return ui->action_New_note; }
 
 QAction *MainWindow::insertTextLinkAction() { return ui->actionInsert_text_link; }
+
+QAction *MainWindow::insertNoteLinkAction() { return ui->actionInsert_note_link; }
 
 QAction *MainWindow::searchTextOnWebAction() { return ui->actionSearch_text_on_the_web; }
 

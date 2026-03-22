@@ -1,12 +1,20 @@
 #include "test_notes.h"
 
 #include <QCoreApplication>
+#include <QDateTime>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QSet>
 #include <QString>
+#include <QTextStream>
+#include <QUuid>
 #include <QtTest>
 
 #include "entities/bookmark.h"
+#include "entities/notesubfolder.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 
@@ -20,6 +28,51 @@
 // TestNotes::TestNotes()
 //{
 //}
+
+QString TestNotes::uniqueTestName(const QString &baseName) const {
+    return baseName + QStringLiteral("-") + QUuid::createUuid().toString(QUuid::WithoutBraces);
+}
+
+NoteSubFolder TestNotes::createTestNoteSubFolder(const QString &name, int parentId) const {
+    NoteSubFolder subFolder;
+    subFolder.setName(name);
+    subFolder.setParentId(parentId);
+    if (!subFolder.store()) {
+        qFatal("Failed to store note subfolder in test setup");
+    }
+
+    QDir dir(notesPath);
+    if (!dir.mkpath(subFolder.relativePath())) {
+        qFatal("Failed to create note subfolder on disk");
+    }
+
+    return subFolder;
+}
+
+Note TestNotes::createTestNote(const QString &name, int noteSubFolderId,
+                               const QString &text) const {
+    const QString filePath = Note::getFullFilePathForFile(
+        noteSubFolderId > 0 ? NoteSubFolder::fetch(noteSubFolderId).relativePath() +
+                                  QStringLiteral("/") + name + QStringLiteral(".md")
+                            : name + QStringLiteral(".md"));
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qFatal("Failed to create test note file");
+    }
+    QTextStream stream(&file);
+    stream << (text.isEmpty() ? QStringLiteral("# ") + name + QStringLiteral("\n") : text);
+    file.close();
+
+    QFile createdFile(filePath);
+    Note note;
+    note.createFromFile(createdFile, noteSubFolderId);
+    if (!note.isFetched()) {
+        qFatal("Failed to create test note from file");
+    }
+
+    return note;
+}
 
 void TestNotes::initTestCase() {
     DatabaseService::createConnection();
@@ -43,6 +96,8 @@ void TestNotes::initTestCase() {
     // store notes path for notes
     SettingsService settings;
     settings.setValue(QStringLiteral("notesPath"), notesPath);
+    wikiLinkSupportSetting = settings.value(QStringLiteral("Editor/wikiLinkSupport"));
+    settings.setValue(QStringLiteral("Editor/wikiLinkSupport"), false);
 
     // create a note file
     noteName = QStringLiteral("MyTestNote");
@@ -67,19 +122,18 @@ void TestNotes::initTestCase() {
 }
 
 void TestNotes::cleanupTestCase() {
+    SettingsService settings;
+    if (wikiLinkSupportSetting.isValid()) {
+        settings.setValue(QStringLiteral("Editor/wikiLinkSupport"), wikiLinkSupportSetting);
+    } else {
+        settings.remove(QStringLiteral("Editor/wikiLinkSupport"));
+    }
+
     QDir dir(notesPath);
 
     // remove temporary notes directory
     if (notesPath.startsWith(QDir::tempPath()) && dir.exists(notesPath)) {
-        Q_FOREACH (QFileInfo info,
-                   dir.entryInfoList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files,
-                                     QDir::DirsFirst)) {
-            if (info.isFile()) {
-                QFile::remove(info.absoluteFilePath());
-            }
-        }
-
-        dir.rmdir(notesPath);
+        dir.removeRecursively();
     }
 }
 
@@ -668,6 +722,96 @@ void TestNotes::testPercentEncodedFileUrlUsesDecodedLocalPath() {
     const QString encodedFileUrl = QUrl::fromLocalFile(filePath).toString();
     const QUrl fileUrl = UrlHandler::localFileUrlForDesktopOpen(encodedFileUrl);
     QCOMPARE(fileUrl.toLocalFile(), filePath);
+}
+
+void TestNotes::testWikiLinkSupportDisabledLeavesPlainText() {
+    SettingsService().setValue(QStringLiteral("Editor/wikiLinkSupport"), false);
+
+    Note note;
+    note.setNoteText(QStringLiteral("[[Disabled Link]]"));
+    const QString html = note.toMarkdownHtml(QString(), 980, true);
+
+    QVERIFY(!html.contains(QStringLiteral("wikilink:")));
+    QVERIFY(!html.contains(QStringLiteral("class=\"wikilink\"")));
+    QVERIFY(html.contains(QStringLiteral("[[Disabled Link]]")));
+}
+
+void TestNotes::testResolveWikiLinkPrefersCurrentSubfolderAndFindsNestedNotes() {
+    SettingsService().setValue(QStringLiteral("Editor/wikiLinkSupport"), true);
+
+    const QString sharedName = uniqueTestName(QStringLiteral("wiki-shared"));
+    const QString nestedName = uniqueTestName(QStringLiteral("wiki-nested"));
+
+    const NoteSubFolder currentFolder =
+        createTestNoteSubFolder(uniqueTestName(QStringLiteral("current")));
+    const NoteSubFolder nestedFolder =
+        createTestNoteSubFolder(uniqueTestName(QStringLiteral("nested")), currentFolder.getId());
+
+    const Note rootNote = createTestNote(sharedName);
+    const Note currentNote = createTestNote(sharedName, currentFolder.getId());
+    const Note nestedNote = createTestNote(nestedName, nestedFolder.getId());
+
+    const Note resolvedShared = Note::resolveWikiLink(sharedName, currentFolder.getId());
+    QVERIFY(resolvedShared.isFetched());
+    QCOMPARE(resolvedShared.getId(), currentNote.getId());
+
+    const Note resolvedNested = Note::resolveWikiLink(nestedName, currentFolder.getId());
+    QVERIFY(resolvedNested.isFetched());
+    QCOMPARE(resolvedNested.getId(), nestedNote.getId());
+
+    const Note resolvedQualified = Note::resolveWikiLink(
+        nestedFolder.getName() + QStringLiteral("/") + nestedName, currentFolder.getId());
+    QVERIFY(resolvedQualified.isFetched());
+    QCOMPARE(resolvedQualified.getId(), nestedNote.getId());
+
+    QVERIFY(rootNote.isFetched());
+}
+
+void TestNotes::testWikiLinkHtmlRenderingMarksResolvedAndBrokenLinks() {
+    SettingsService().setValue(QStringLiteral("Editor/wikiLinkSupport"), true);
+
+    const QString resolvedName = uniqueTestName(QStringLiteral("wiki-html-resolved"));
+    createTestNote(resolvedName);
+
+    Note note;
+    note.setNoteText(QStringLiteral("[[%1]] and [[Missing %2]]")
+                         .arg(resolvedName, uniqueTestName(QStringLiteral("wiki-html-broken"))));
+
+    const QString html = note.toMarkdownHtml(QString(), 980, true);
+
+    QVERIFY(html.contains(QStringLiteral("<a class=\"wikilink\"")));
+    QVERIFY(html.contains(QStringLiteral("href=\"wikilink:")));
+    QVERIFY(html.contains(resolvedName));
+    QVERIFY(html.contains(QStringLiteral("class=\"wikilink\"")));
+    QVERIFY(html.contains(QStringLiteral("class=\"wikilink broken\"")));
+}
+
+void TestNotes::testQualifiedWikiLinksAreUpdatedOnSubfolderRename() {
+    SettingsService().setValue(QStringLiteral("Editor/wikiLinkSupport"), true);
+
+    const NoteSubFolder parentFolder =
+        createTestNoteSubFolder(uniqueTestName(QStringLiteral("issue-3512-parent")));
+    NoteSubFolder childFolder = createTestNoteSubFolder(
+        uniqueTestName(QStringLiteral("issue-3512-child")), parentFolder.getId());
+    const QString oldChildName = childFolder.getName();
+
+    const QString targetName = uniqueTestName(QStringLiteral("issue-3512-target"));
+    createTestNote(targetName, childFolder.getId());
+
+    const QString sourceName = uniqueTestName(QStringLiteral("issue-3512-source"));
+    const QString originalText =
+        QStringLiteral("See [[%1/%2/%3]]").arg(parentFolder.getName(), oldChildName, targetName);
+    const Note sourceNote = createTestNote(sourceName, 0, originalText);
+
+    const QString newChildName = uniqueTestName(QStringLiteral("issue-3512-renamed"));
+    QVERIFY(childFolder.rename(newChildName));
+
+    const Note updatedSource = Note::fetch(sourceNote.getId());
+    QVERIFY(updatedSource.isFetched());
+    QVERIFY(updatedSource.getNoteText().contains(
+        QStringLiteral("[[%1/%2/%3]]").arg(parentFolder.getName(), newChildName, targetName)));
+    QVERIFY(!updatedSource.getNoteText().contains(
+        QStringLiteral("[[%1/%2/%3]]").arg(parentFolder.getName(), oldChildName, targetName)));
 }
 
 void TestNotes::testBookmarkSuggestionsPrefixSubstringAndExact() {

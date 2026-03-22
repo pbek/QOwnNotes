@@ -861,6 +861,7 @@ class MainWindow : public QMainWindow {
     QAction *newNoteAction();
     QAction *reloadNoteFolderAction();
     QAction *insertTextLinkAction();
+    QAction *insertNoteLinkAction();
     QAction *searchTextOnWebAction();
     QAction *pasteImageAction();
     QAction *autocompleteAction();

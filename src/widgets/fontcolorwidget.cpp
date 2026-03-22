@@ -212,6 +212,8 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Underlined text"), MarkdownHighlighter::StUnderline);
     addTextTreeWidgetItem(tr("Strong text"), MarkdownHighlighter::Bold);
     addTextTreeWidgetItem(tr("Link"), MarkdownHighlighter::Link);
+    addTextTreeWidgetItem(tr("Wiki link"), MarkdownHighlighter::WikiLink);
+    addTextTreeWidgetItem(tr("Wiki link (broken)"), MarkdownHighlighter::WikiLinkBroken);
     addTextTreeWidgetItem(tr("Image"), MarkdownHighlighter::Image);
     addTextTreeWidgetItem(tr("Code (block)"), MarkdownHighlighter::CodeBlock);
     addTextTreeWidgetItem(tr("Code (inline)"), MarkdownHighlighter::InlineCodeBlock);

@@ -41,6 +41,7 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(QTextDocument *parent
     connect(MainWindow::instance(), &MainWindow::settingsChanged, this, [this]() {
         _defaultNoteFileExt = Note::defaultNoteFileExtension();
         updateCachedRegexes(_defaultNoteFileExt);
+        clearWikiLinkCache();
     });
 }
 
@@ -88,6 +89,10 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
         if (text.contains(QLatin1String("note://")) ||
             text.contains(QChar('.') + _defaultNoteFileExt)) {
             highlightBrokenNotesLink(text);
+        }
+
+        if (Note::isWikiLinkSupportEnabled() && text.contains(QStringLiteral("[["))) {
+            highlightWikiLinks(text);
         }
 
         // skip spell checking empty blocks and blocks with just "spaces"
@@ -161,6 +166,8 @@ void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString &newExt) {
                                            newExt + R"()(#[^\)]+)?\)\B)");
 }
 
+void QOwnNotesMarkdownHighlighter::clearWikiLinkCache() { _wikiLinkCache.clear(); }
+
 /**
  * Highlight broken note links
  *
@@ -230,6 +237,44 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text)
     auto state = HighlighterState(HighlighterState::BrokenLink);
 
     setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
+}
+
+void QOwnNotesMarkdownHighlighter::highlightWikiLinks(const QString &text) {
+    if (_currentNote == nullptr) {
+        return;
+    }
+
+    static const QRegularExpression regex(QStringLiteral(R"(\[\[([^\[\]]+?)\]\])"));
+    const QTextCharFormat maskedFormat = currentMaskedFormat();
+    auto iterator = regex.globalMatch(text);
+
+    while (iterator.hasNext()) {
+        const QRegularExpressionMatch match = iterator.next();
+        const QString innerText = match.captured(1).trimmed();
+        if (innerText.isEmpty()) {
+            continue;
+        }
+
+        bool exists = _wikiLinkCache.value(innerText, false);
+        if (!_wikiLinkCache.contains(innerText)) {
+            exists =
+                Note::resolveWikiLink(innerText, _currentNote->getNoteSubFolderId()).isFetched();
+            _wikiLinkCache.insert(innerText, exists);
+        }
+
+        QTextCharFormat openFormat = maskedFormat;
+        QTextCharFormat closeFormat = maskedFormat;
+        QTextCharFormat bodyFormat =
+            _formats[exists ? HighlighterState::WikiLink : HighlighterState::WikiLinkBroken];
+        if (bodyFormat.fontPointSize() > 0) {
+            openFormat.setFontPointSize(bodyFormat.fontPointSize());
+            closeFormat.setFontPointSize(bodyFormat.fontPointSize());
+        }
+
+        setFormat(match.capturedStart(0), 2, openFormat);
+        setFormat(match.capturedStart(1), match.capturedLength(1), bodyFormat);
+        setFormat(match.capturedStart(0) + match.capturedLength(0) - 2, 2, closeFormat);
+    }
 }
 
 void QOwnNotesMarkdownHighlighter::setMisspelled(const int start, const int count) {

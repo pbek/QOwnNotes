@@ -1,5 +1,30 @@
 # QOwnNotes Changelog
 
+## 26.3.20
+
+- Added optional **wiki-style link support** — enable it in the _Editor_ settings
+  with the new **Enable wiki-style link support `[[note name]]`** checkbox
+  (for [#3512](https://github.com/pbek/QOwnNotes/issues/3512))
+  - Write `[[Note Name]]` to link to a note by name; subfolder-qualified links
+    like `[[subfolder/Note Name]]` and heading anchors like `[[Note#Heading]]`
+    are also supported, as well as display-text aliases like `[[Note|My Label]]`
+  - Resolved links are highlighted in the editor with a dotted underline using
+    the link color; broken (unresolved) links use a dashed underline with the
+    broken-link color
+  - Clicking a wiki link in the **note preview** navigates to the target note;
+    if the note does not exist you are asked whether to create it
+  - **Ctrl+Click** on a wiki link in the **note editor** navigates to the target
+    note (or offers to create it); **Ctrl+Shift+Click** opens it in a new tab
+  - The **Insert link** dialog (`Ctrl+L`) gains a **Create wiki-style link
+    `[[...]]`** checkbox (visible only when wiki-link support is enabled) to
+    insert the selected note as a `[[Note Name]]` link instead of a Markdown link
+  - Typing `[[` in the editor triggers **auto-complete** with a filtered list of
+    all note names (including subfolder-qualified paths); a suggestion can also be
+    triggered via the normal auto-complete shortcut inside an open `[[`
+  - Wiki links are included in **backlink** detection and shown in the backlinks
+    panel; when a subfolder is renamed all qualified `[[subfolder/...]]` links
+    across all notes are updated automatically
+
 ## 26.3.19
 
 - Attempted to fix emoji characters (e.g. 🚫) rendering as incorrect glyphs (such
@@ -24,6 +49,9 @@
 
 ## 26.3.18
 
+- Added optional wiki-style note links like `[[Note]]`, including preview and editor opening,
+  highlighting, autocomplete, backlink/refactoring support, and subfolder-qualified links
+  (for [#3512](https://github.com/pbek/QOwnNotes/issues/3512))
 - Fixed the **Use Layout** button in settings to correctly create a new workspace with
   the proper layout settings without destroying the current workspace, and fixed the
   previous workspace losing its note editor panel when switching to a layout with a

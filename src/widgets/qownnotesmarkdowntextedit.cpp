@@ -59,6 +59,45 @@ namespace {
 constexpr int kMarkdownLspDiagnosticProperty = QTextFormat::UserProperty + 1;
 constexpr int kFoldIndicatorPadding = 4;
 QHash<QString, QSet<QString>> s_foldedHeadingStateByNoteReference;
+
+struct WikiLinkCompletionContext {
+    QString filterText;
+    int startPosition = -1;
+    int cursorPosition = -1;
+};
+
+static bool currentWikiLinkCompletionContext(const QPlainTextEdit *edit,
+                                             WikiLinkCompletionContext &context) {
+    if (!edit) {
+        return false;
+    }
+
+    QTextCursor cursor = edit->textCursor();
+    if (cursor.hasSelection()) {
+        return false;
+    }
+
+    const QTextBlock block = cursor.block();
+    const QString blockText = block.text();
+    const int positionInBlock = cursor.positionInBlock();
+    const QString leftText = blockText.left(positionInBlock);
+    const int openPos = leftText.lastIndexOf(QStringLiteral("[["));
+    if (openPos < 0) {
+        return false;
+    }
+
+    const QString candidate = leftText.mid(openPos + 2);
+    if (candidate.contains(QChar('|')) || candidate.contains(QStringLiteral("]]")) ||
+        candidate.contains(QChar('[')) || candidate.contains(QChar(']')) ||
+        candidate.contains(QChar('\n'))) {
+        return false;
+    }
+
+    context.filterText = candidate.trimmed();
+    context.startPosition = block.position() + openPos + 2;
+    context.cursorPosition = cursor.position();
+    return true;
+}
 }    // namespace
 
 // Initialize static member
@@ -168,7 +207,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     }
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
-    setIgnoredClickUrlSchemata(QStringList({"note", "task", "deck"}));
+    setIgnoredClickUrlSchemata(QStringList({"note", "task", "deck", "wikilink"}));
 
     connect(this, &QOwnNotesMarkdownTextEdit::zoomIn, this, [this]() { onZoom(/*in=*/true); });
     connect(this, &QOwnNotesMarkdownTextEdit::zoomOut, this, [this]() { onZoom(/*in=*/false); });
@@ -257,6 +296,15 @@ void QOwnNotesMarkdownTextEdit::onZoom(bool in) {
 void QOwnNotesMarkdownTextEdit::setFormatStyle(MarkdownHighlighter::HighlighterState index) {
     QTextCharFormat format;
     Utils::Schema::schemaSettings->setFormatStyle(index, format);
+
+    if (index == MarkdownHighlighter::HighlighterState::WikiLink) {
+        format.setFontUnderline(true);
+        format.setUnderlineStyle(QTextCharFormat::DotLine);
+    } else if (index == MarkdownHighlighter::HighlighterState::WikiLinkBroken) {
+        format.setFontUnderline(true);
+        format.setUnderlineStyle(QTextCharFormat::DashUnderline);
+    }
+
     if (_highlighter) {
         _highlighter->setTextFormat(index, format);
     }
@@ -332,6 +380,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::Image);
     setFormatStyle(MarkdownHighlighter::HighlighterState::InlineCodeBlock);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::WikiLink);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::WikiLinkBroken);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
     setFormatStyle(MarkdownHighlighter::HighlighterState::BrokenLink);
     setFormatStyle(MarkdownHighlighter::HighlighterState::TrailingSpace);
@@ -485,8 +535,9 @@ void QOwnNotesMarkdownTextEdit::openUrl(const QString &urlString, bool openInNew
     // If it's a note URL, noteid URL, file URL in note folder, has no scheme (relative link),
     // or is a Nextcloud Deck card URL, use UrlHandler which knows how to handle these properly
     if (scheme == QStringLiteral("note") || scheme == QStringLiteral("noteid") ||
-        scheme == QStringLiteral("file") || scheme.isEmpty() ||
-        Note::fileUrlIsNoteInCurrentNoteFolder(url) || NextcloudDeckService::isCardUrl(urlCopy)) {
+        scheme == QStringLiteral("wikilink") || scheme == QStringLiteral("file") ||
+        scheme.isEmpty() || Note::fileUrlIsNoteInCurrentNoteFolder(url) ||
+        NextcloudDeckService::isCardUrl(urlCopy)) {
         // Use UrlHandler for note and Deck URLs with the openInNewTab flag
         UrlHandler().openUrl(urlCopy, openInNewTab);
     } else {
@@ -667,6 +718,25 @@ void QOwnNotesMarkdownTextEdit::insertCodeBlock() {
     }
 }
 
+void QOwnNotesMarkdownTextEdit::insertWikiLink() {
+    QTextCursor cursor = textCursor();
+    const QString selectedText = cursor.selectedText();
+
+    if (!selectedText.isEmpty()) {
+        cursor.insertText(QStringLiteral("[[") + selectedText + QStringLiteral("]]"));
+        setTextCursor(cursor);
+        return;
+    }
+
+    cursor.insertText(QStringLiteral("[[]]"));
+    cursor.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
+    setTextCursor(cursor);
+
+    if (Note::isWikiLinkSupportEnabled()) {
+        QTimer::singleShot(0, this, &QOwnNotesMarkdownTextEdit::onAutoCompleteRequested);
+    }
+}
+
 void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     // attempt to toggle a checkbox at the cursor position
     if (Utils::Gui::toggleCheckBoxAtCursor(this)) {
@@ -698,6 +768,21 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
 
     QMenu menu;
 
+    QString wikiFilterText;
+    int wikiReplaceLength = 0;
+    QStringList wikiResultList;
+    const bool wikiContextActive =
+        Note::isWikiLinkSupportEnabled() &&
+        wikiLinkAutoComplete(wikiResultList, wikiFilterText, wikiReplaceLength);
+
+    if (wikiContextActive) {
+        for (const QString &text : Utils::asConst(wikiResultList)) {
+            auto *action = menu.addAction(text);
+            action->setData(text);
+            action->setWhatsThis(QStringLiteral("wikilink-autocomplete"));
+        }
+    }
+
     double resultValue;
     if (solveEquation(resultValue)) {
         const QString text = QString::number(resultValue);
@@ -707,7 +792,7 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     }
 
     QStringList resultList;
-    if (autoComplete(resultList)) {
+    if (!wikiContextActive && autoComplete(resultList)) {
         for (const QString &text : Utils::asConst(resultList)) {
             auto *action = menu.addAction(text);
             action->setData(text);
@@ -744,7 +829,25 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
                 return;
             }
 
-            if (type == QStringLiteral("autocomplete")) {
+            if (type == QStringLiteral("wikilink-autocomplete")) {
+                WikiLinkCompletionContext context;
+                if (!currentWikiLinkCompletionContext(this, context)) {
+                    return;
+                }
+
+                QTextCursor c = textCursor();
+                c.setPosition(context.startPosition, QTextCursor::MoveAnchor);
+                c.setPosition(context.cursorPosition, QTextCursor::KeepAnchor);
+                c.insertText(text);
+
+                const QString rightText = toPlainText().mid(c.position(), 2);
+                if (rightText != QStringLiteral("]]")) {
+                    c.insertText(QStringLiteral("]]"));
+                    c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
+                }
+
+                setTextCursor(c);
+            } else if (type == QStringLiteral("autocomplete")) {
                 // overwrite the currently written word
                 QTextCursor c = textCursor();
                 c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
@@ -834,6 +937,41 @@ bool QOwnNotesMarkdownTextEdit::autoComplete(QStringList &resultList) const {
     qDebug() << __func__ << " - 'resultList': " << resultList;
 
     return true;
+}
+
+bool QOwnNotesMarkdownTextEdit::wikiLinkAutoComplete(QStringList &resultList, QString &filterText,
+                                                     int &replaceLength) const {
+    WikiLinkCompletionContext context;
+    if (!currentWikiLinkCompletionContext(this, context)) {
+        return false;
+    }
+
+    filterText = context.filterText;
+    replaceLength = context.cursorPosition - context.startPosition;
+
+    QSet<QString> results;
+    const QVector<Note> notes = Note::fetchAll();
+    for (const Note &note : notes) {
+        results.insert(note.getName());
+
+        const QString subfolderPath = note.relativeNoteSubFolderPath();
+        if (!subfolderPath.isEmpty()) {
+            results.insert(subfolderPath + QStringLiteral("/") + note.getName());
+        }
+    }
+
+    resultList = results.values();
+    std::sort(resultList.begin(), resultList.end(),
+              [](const QString &a, const QString &b) { return a.toLower() < b.toLower(); });
+
+    if (!filterText.isEmpty()) {
+        resultList = resultList.filter(QRegularExpression(
+            QRegularExpression::escape(filterText), QRegularExpression::CaseInsensitiveOption));
+    }
+
+    resultList.removeDuplicates();
+    resultList.removeAll(filterText);
+    return !resultList.isEmpty();
 }
 
 /**
@@ -2485,6 +2623,18 @@ void QOwnNotesMarkdownTextEdit::keyPressEvent(QKeyEvent *e) {
 
     // Call parent implementation
     QMarkdownTextEdit::keyPressEvent(e);
+
+    if (!e->isAccepted() || !Note::isWikiLinkSupportEnabled()) {
+        return;
+    }
+
+    if (e->text() == QStringLiteral("[") &&
+        (e->modifiers() == Qt::NoModifier || e->modifiers() == Qt::ShiftModifier)) {
+        WikiLinkCompletionContext context;
+        if (currentWikiLinkCompletionContext(this, context)) {
+            QTimer::singleShot(0, this, &QOwnNotesMarkdownTextEdit::onAutoCompleteRequested);
+        }
+    }
 }
 
 /**

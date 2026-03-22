@@ -5732,10 +5732,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <property name="text">
                     <string>Hide markdown formatting syntax on inactive lines</string>
                    </property>
-                  </widget>
-                 </item>
-               </layout>
-              </widget>
+                   </widget>
+                  </item>
+                  <item row="13" column="0" colspan="4">
+                   <widget class="QCheckBox" name="enableWikiLinkSupportCheckBox">
+                    <property name="text">
+                     <string>Enable wiki-style link support [[note name]]</string>
+                    </property>
+                   </widget>
+                  </item>
+                </layout>
+               </widget>
              </item>
               <item row="2" column="0">
                <widget class="QGroupBox" name="groupBox_36">

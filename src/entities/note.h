@@ -82,6 +82,10 @@ class Note {
 
     static Note fetchByName(const QString &name, int noteSubFolderId = -1);
 
+    static bool isWikiLinkSupportEnabled();
+
+    static Note resolveWikiLink(const QString &target, int currentNoteSubFolderId = -1);
+
     static Note fetchByName(const QString &name, const QString &noteSubFolderPathData,
                             const QString &pathDataSeparator = QStringLiteral("\n"));
 
@@ -290,6 +294,9 @@ class Note {
     QVector<int> findBacklinkedNoteIds(
         const QString &connectionName = QStringLiteral("memory")) const;
 
+    static QVector<int> findNotesWithWikiLinkTo(
+        const QString &noteName, const QString &connectionName = QStringLiteral("memory"));
+
     bool handleNoteMoving(Note oldNote);
 
     static QString createNoteHeader(const QString &name);
@@ -384,6 +391,9 @@ class Note {
     static QString urlEncodeNoteUrl(const QString &url, bool escapeSlashes = false);
 
     static QString urlDecodeNoteUrl(QString url);
+
+    static bool updateQualifiedWikiLinksForSubfolderRename(const QString &oldRelativePath,
+                                                           const QString &newRelativePath);
 
     QStringList getNoteTextLines() const;
 

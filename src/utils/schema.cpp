@@ -198,6 +198,14 @@ QColor Utils::Schema::Settings::getForegroundColor(int index) const {
     }
 
     // if the color was not valid, try to fetch the color for "Text"
+    if (!color.isValid() && (index == MarkdownHighlighter::WikiLink)) {
+        color = getForegroundColor(MarkdownHighlighter::Link);
+    }
+
+    if (!color.isValid() && (index == MarkdownHighlighter::WikiLinkBroken)) {
+        color = getForegroundColor(MarkdownHighlighter::BrokenLink);
+    }
+
     if (!color.isValid() && (index >= 0)) {
         color = getForegroundColor(TextPresetIndex);
     }
@@ -235,6 +243,14 @@ QColor Utils::Schema::Settings::getBackgroundColor(int index) const {
     }
 
     // if the color was not valid, try to fetch the color for "Text"
+    if (!color.isValid() && (index == MarkdownHighlighter::WikiLink)) {
+        color = getBackgroundColor(MarkdownHighlighter::Link);
+    }
+
+    if (!color.isValid() && (index == MarkdownHighlighter::WikiLinkBroken)) {
+        color = getBackgroundColor(MarkdownHighlighter::BrokenLink);
+    }
+
     if (!color.isValid() && (index >= 0)) {
         color = getBackgroundColor(TextPresetIndex);
     }

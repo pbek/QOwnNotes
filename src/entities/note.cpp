@@ -14,6 +14,7 @@
 #include <QElapsedTimer>
 #include <QMessageBox>
 #include <QMimeDatabase>
+#include <QQueue>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
@@ -52,6 +53,232 @@ Note::Note()
       _shareId{0},
       _sharePermissions{0},
       _hasDirtyData{false} {}
+
+namespace {
+struct WikiLinkParts {
+    QString rawTarget;
+    QString resolvedTarget;
+    QString displayText;
+    QString heading;
+    QString subfolderPath;
+    QString noteName;
+};
+
+struct ParsedWikiLink {
+    QString fullMatch;
+    int start = -1;
+    int length = 0;
+    WikiLinkParts parts;
+};
+
+static const QRegularExpression &wikiLinkRegex() {
+    static const QRegularExpression regex(QStringLiteral(R"(\[\[([^\[\]]+?)\]\])"));
+    return regex;
+}
+
+static QString escapeLikePattern(QString text) {
+    text.replace(QChar('\\'), QStringLiteral("\\\\"));
+    text.replace(QChar('%'), QStringLiteral("\\%"));
+    text.replace(QChar('_'), QStringLiteral("\\_"));
+    return text;
+}
+
+static QString stripNoteExtension(const QString &fileName) {
+    return QFileInfo(fileName).completeBaseName();
+}
+
+static WikiLinkParts parseWikiLinkTarget(QString target, int currentNoteSubFolderId) {
+    WikiLinkParts parts;
+    parts.rawTarget = target.trimmed();
+    parts.resolvedTarget = parts.rawTarget;
+
+    const int pipePos = parts.resolvedTarget.indexOf(QChar('|'));
+    if (pipePos >= 0) {
+        parts.displayText = parts.resolvedTarget.mid(pipePos + 1).trimmed();
+        parts.resolvedTarget = parts.resolvedTarget.left(pipePos).trimmed();
+    }
+
+    const int hashPos = parts.resolvedTarget.indexOf(QChar('#'));
+    if (hashPos >= 0) {
+        parts.heading = parts.resolvedTarget.mid(hashPos + 1).trimmed();
+        parts.resolvedTarget = parts.resolvedTarget.left(hashPos).trimmed();
+    }
+
+    QString resolvedPath =
+        Utils::Misc::removeIfStartsWith(parts.resolvedTarget, QStringLiteral("/"));
+    const int slashPos = resolvedPath.lastIndexOf(QChar('/'));
+    if (slashPos >= 0) {
+        parts.subfolderPath = resolvedPath.left(slashPos).trimmed();
+        parts.noteName = resolvedPath.mid(slashPos + 1).trimmed();
+
+        if (!parts.subfolderPath.isEmpty() && currentNoteSubFolderId > 0) {
+            const NoteSubFolder currentSubFolder = NoteSubFolder::fetch(currentNoteSubFolderId);
+            if (currentSubFolder.isFetched()) {
+                const QString currentPath = currentSubFolder.relativePath();
+                if (!currentPath.isEmpty()) {
+                    parts.subfolderPath = currentPath + QStringLiteral("/") + parts.subfolderPath;
+                }
+            }
+        }
+    } else {
+        parts.noteName = resolvedPath.trimmed();
+    }
+
+    return parts;
+}
+
+static QVector<int> fetchNoteSubFolderIdsBreadthFirst(int rootNoteSubFolderId) {
+    QVector<int> ids;
+    QQueue<int> queue;
+    queue.enqueue(rootNoteSubFolderId);
+
+    while (!queue.isEmpty()) {
+        const int id = queue.dequeue();
+        ids.append(id);
+
+        const QVector<NoteSubFolder> children =
+            NoteSubFolder::fetchAllByParentId(id, QStringLiteral("file_last_modified DESC"));
+        for (const NoteSubFolder &child : children) {
+            queue.enqueue(child.getId());
+        }
+    }
+
+    return ids;
+}
+
+static bool noteMatchesWikiName(const Note &note, const QString &name) {
+    return note.getName().compare(name, Qt::CaseInsensitive) == 0 ||
+           stripNoteExtension(note.getFileName()).compare(name, Qt::CaseInsensitive) == 0;
+}
+
+static Note selectBestWikiLinkMatch(const QVector<Note> &notes, const QString &name) {
+    Note bestNote;
+
+    for (const Note &note : notes) {
+        if (!noteMatchesWikiName(note, name)) {
+            continue;
+        }
+
+        if (!bestNote.isFetched() || note.getFileLastModified() > bestNote.getFileLastModified()) {
+            bestNote = note;
+        }
+    }
+
+    return bestNote;
+}
+
+static QVector<ParsedWikiLink> parseWikiLinksFromText(const QString &text,
+                                                      int currentNoteSubFolderId) {
+    QVector<ParsedWikiLink> links;
+    auto iterator = wikiLinkRegex().globalMatch(text);
+
+    while (iterator.hasNext()) {
+        const QRegularExpressionMatch match = iterator.next();
+        ParsedWikiLink parsed;
+        parsed.fullMatch = match.captured(0);
+        parsed.start = match.capturedStart(0);
+        parsed.length = match.capturedLength(0);
+        parsed.parts = parseWikiLinkTarget(match.captured(1), currentNoteSubFolderId);
+        if (!parsed.parts.noteName.isEmpty()) {
+            links.append(parsed);
+        }
+    }
+
+    return links;
+}
+
+static QString buildWikiLinkTarget(const Note &note, const ParsedWikiLink &parsed,
+                                   int sourceNoteSubFolderId, bool preferQualifiedPath) {
+    QString target;
+    if (preferQualifiedPath || !parsed.parts.subfolderPath.isEmpty()) {
+        QString noteSubFolderPath = note.relativeNoteSubFolderPath();
+        if (sourceNoteSubFolderId > 0) {
+            const NoteSubFolder sourceSubFolder = NoteSubFolder::fetch(sourceNoteSubFolderId);
+            if (sourceSubFolder.isFetched()) {
+                const QString sourcePath = sourceSubFolder.relativePath();
+                if (!sourcePath.isEmpty() &&
+                    noteSubFolderPath.startsWith(sourcePath + QChar('/'))) {
+                    noteSubFolderPath.remove(0, sourcePath.length() + 1);
+                } else if (noteSubFolderPath == sourcePath) {
+                    noteSubFolderPath.clear();
+                }
+            }
+        }
+
+        target = noteSubFolderPath.isEmpty()
+                     ? note.getName()
+                     : noteSubFolderPath + QStringLiteral("/") + note.getName();
+    } else {
+        target = note.getName();
+    }
+
+    if (!parsed.parts.heading.isEmpty()) {
+        target += QStringLiteral("#") + parsed.parts.heading;
+    }
+
+    if (!parsed.parts.displayText.isEmpty()) {
+        target += QStringLiteral("|") + parsed.parts.displayText;
+    }
+
+    return target;
+}
+
+static QString replaceWikiLinksForTarget(QString text, const Note &oldNote, const Note &newNote,
+                                         int sourceNoteSubFolderId) {
+    const QVector<ParsedWikiLink> links = parseWikiLinksFromText(text, sourceNoteSubFolderId);
+
+    for (int i = links.count() - 1; i >= 0; --i) {
+        const ParsedWikiLink &parsed = links.at(i);
+        const Note resolvedNote =
+            Note::resolveWikiLink(parsed.parts.rawTarget, sourceNoteSubFolderId);
+        if (!resolvedNote.isFetched() || !resolvedNote.isSameFile(oldNote)) {
+            continue;
+        }
+
+        const bool preferQualifiedPath =
+            !parsed.parts.subfolderPath.isEmpty() ||
+            oldNote.getNoteSubFolderId() != newNote.getNoteSubFolderId();
+        const QString replacement =
+            QStringLiteral("[[") +
+            buildWikiLinkTarget(newNote, parsed, sourceNoteSubFolderId, preferQualifiedPath) +
+            QStringLiteral("]]");
+        text.replace(parsed.start, parsed.length, replacement);
+    }
+
+    return text;
+}
+
+static QString postProcessWikiLinksHtml(QString html, int currentNoteSubFolderId) {
+    static const QRegularExpression regex(
+        QStringLiteral(R"wiki(<x-wikilink data-target="([^"]*?)">(.*?)</x-wikilink>)wiki"),
+        QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpressionMatchIterator iterator = regex.globalMatch(html);
+    QVector<QRegularExpressionMatch> matches;
+    while (iterator.hasNext()) {
+        matches.append(iterator.next());
+    }
+
+    for (int i = matches.count() - 1; i >= 0; --i) {
+        const QRegularExpressionMatch &match = matches.at(i);
+        const QString target = QUrl::fromPercentEncoding(match.captured(1).toUtf8());
+        const QString linkText = Utils::Misc::unescapeHtml(match.captured(2), true);
+        const Note note = Note::resolveWikiLink(target, currentNoteSubFolderId);
+        // Percent-encode the target so that it forms a valid href URL (spaces and
+        // special characters would break QUrl parsing in the click handler otherwise)
+        const QString encodedTarget =
+            QString::fromUtf8(QUrl::toPercentEncoding(target, QByteArrayLiteral("/-#")));
+        const QString replacement =
+            note.isFetched()
+                ? QStringLiteral("<a class=\"wikilink\" href=\"wikilink:%1\">%2</a>")
+                      .arg(encodedTarget, linkText)
+                : QStringLiteral("<a class=\"wikilink broken\" href=\"wikilink:%1\">%2</a>")
+                      .arg(encodedTarget, linkText);
+        html.replace(match.capturedStart(0), match.capturedLength(0), replacement);
+    }
+
+    return html;
+}
+}    // namespace
 
 int Note::getId() const { return this->_id; }
 
@@ -821,6 +1048,57 @@ Note Note::fetchByName(const QString &name, const QString &noteSubFolderPathData
         NoteSubFolder::fetchByPathData(noteSubFolderPathData, pathDataSeparator).getId();
 
     return fetchByName(name, noteSubFolderId);
+}
+
+bool Note::isWikiLinkSupportEnabled() {
+    return SettingsService().value(QStringLiteral("Editor/wikiLinkSupport"), false).toBool();
+}
+
+Note Note::resolveWikiLink(const QString &target, int currentNoteSubFolderId) {
+    if (!isWikiLinkSupportEnabled()) {
+        return Note();
+    }
+
+    if (currentNoteSubFolderId == -1) {
+        currentNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    }
+
+    const WikiLinkParts parts = parseWikiLinkTarget(target, currentNoteSubFolderId);
+    if (parts.noteName.isEmpty()) {
+        return Note();
+    }
+
+    if (!parts.subfolderPath.isEmpty()) {
+        const NoteSubFolder subFolder =
+            NoteSubFolder::fetchByPathData(parts.subfolderPath, QStringLiteral("/"));
+        if (!subFolder.isFetched()) {
+            return Note();
+        }
+
+        return selectBestWikiLinkMatch(Note::fetchAllByNoteSubFolderId(subFolder.getId()),
+                                       parts.noteName);
+    }
+
+    if (currentNoteSubFolderId >= 0) {
+        const Note note = selectBestWikiLinkMatch(
+            Note::fetchAllByNoteSubFolderId(currentNoteSubFolderId), parts.noteName);
+        if (note.isFetched()) {
+            return note;
+        }
+    }
+
+    if (currentNoteSubFolderId > 0) {
+        const QVector<int> subFolderIds = fetchNoteSubFolderIdsBreadthFirst(currentNoteSubFolderId);
+        for (const int subFolderId : subFolderIds) {
+            const Note note = selectBestWikiLinkMatch(Note::fetchAllByNoteSubFolderId(subFolderId),
+                                                      parts.noteName);
+            if (note.isFetched()) {
+                return note;
+            }
+        }
+    }
+
+    return selectBestWikiLinkMatch(Note::fetchAll(), parts.noteName);
 }
 
 int Note::fetchNoteIdByName(const QString &name, int noteSubFolderId) {
@@ -3097,6 +3375,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     if (!settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool()) {
         flags &= ~MD_FLAG_UNDERLINE;
     }
+    if (!isWikiLinkSupportEnabled()) {
+        flags &= ~MD_FLAG_WIKILINKS;
+    }
 
     QString windowsSlash = QLatin1String("");
 
@@ -3238,6 +3519,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         return QString();
     }
 
+    if (isWikiLinkSupportEnabled()) {
+        result = postProcessWikiLinksHtml(result, _noteSubFolderId);
+    }
+
     // transform remote preview image tags
     Utils::Misc::transformRemotePreviewImages(result, maxImageWidth, externalImageHash());
 
@@ -3288,6 +3573,17 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         darkModeColors ? QStringLiteral("#444444") : QStringLiteral("#f1f1f1");
     const QString tableBorderColor =
         darkModeColors ? QStringLiteral("#ffffff") : QStringLiteral("#000000");
+    const QString wikiLinkStyle =
+        QStringLiteral(
+            "a.wikilink { color: %1; text-decoration: underline; "
+            "text-decoration-style: dotted; }"
+            "a.wikilink.broken { color: %2; text-decoration-style: dashed; }")
+            .arg(Utils::Schema::schemaSettings
+                     ->getForegroundColor(MarkdownHighlighter::HighlighterState::Link)
+                     .name(),
+                 Utils::Schema::schemaSettings
+                     ->getForegroundColor(MarkdownHighlighter::HighlighterState::BrokenLink)
+                     .name());
 
     // do some more code formatting
     // the "pre" styles are for the full-width code block background color
@@ -3343,10 +3639,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "border-width: 1px; "
                      "border-collapse: collapse; margin-top: 0.5em;}"
                      "th, td {padding: 2px 5px; border: 1px solid %6;}"
-                     "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
+                     "a { color: #FF9137; text-decoration: none; } %1 %2 %4 %7"
                      "</style></head><body class=\"export\">%3</body></html>")
                      .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor,
-                          tableBorderColor);
+                          tableBorderColor, wikiLinkStyle);
 
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
@@ -3367,9 +3663,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "a.task-list-item-checkbox { color: #FF9137; text-decoration: none; cursor: "
                      "pointer; margin-right: 6px; }"
                      "a.task-list-item-checkbox:focus { outline: none; }"
-                     "%1 %3 %4"
+                     "%1 %3 %4 %6"
                      "</style></head><body class=\"preview\">%2</body></html>")
-                     .arg(codeStyleSheet, result, rtlStyle, schemaStyles, tableBorderColor);
+                     .arg(codeStyleSheet, result, rtlStyle, schemaStyles, tableBorderColor,
+                          wikiLinkStyle);
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     }
@@ -3932,6 +4229,14 @@ QVector<int> Note::findBacklinkedNoteIds(const QString &connectionName) const {
                                     connectionName);
     }
 
+    if (isWikiLinkSupportEnabled()) {
+        noteIdList << findNotesWithWikiLinkTo(_name, connectionName);
+        const QString baseFileName = stripNoteExtension(_fileName);
+        if (baseFileName.compare(_name, Qt::CaseInsensitive) != 0) {
+            noteIdList << findNotesWithWikiLinkTo(baseFileName, connectionName);
+        }
+    }
+
     const auto noteList = Note::fetchAll(-1, connectionName);
     noteIdList.reserve(noteList.size());
     // Search for links to the relative file path in all notes
@@ -3980,6 +4285,42 @@ QVector<int> Note::findBacklinkedNoteIds(const QString &connectionName) const {
     // QSet<int>(noteIdList.constBegin(), noteIdList.constEnd());
     std::sort(noteIdList.begin(), noteIdList.end());
     noteIdList.erase(std::unique(noteIdList.begin(), noteIdList.end()), noteIdList.end());
+    return noteIdList;
+}
+
+QVector<int> Note::findNotesWithWikiLinkTo(const QString &noteName, const QString &connectionName) {
+    const QSqlDatabase db = QSqlDatabase::database(connectionName);
+    QSqlQuery query(db);
+    QVector<int> noteIdList;
+
+    query.prepare(QStringLiteral(
+        "SELECT id, note_text FROM note WHERE note_text LIKE :exact ESCAPE '\\' "
+        "OR note_text LIKE :alias ESCAPE '\\' OR note_text LIKE :qualified ESCAPE '\\'"));
+    const QString escaped = escapeLikePattern(noteName);
+    query.bindValue(QStringLiteral(":exact"),
+                    QStringLiteral("%[[") + escaped + QStringLiteral("]]%"));
+    query.bindValue(QStringLiteral(":alias"),
+                    QStringLiteral("%[[") + escaped + QStringLiteral("|%"));
+    query.bindValue(QStringLiteral(":qualified"),
+                    QStringLiteral("%[[%/") + escaped + QStringLiteral("]]%"));
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+        return noteIdList;
+    }
+
+    while (query.next()) {
+        const int noteId = query.value(QStringLiteral("id")).toInt();
+        const QString noteText = query.value(QStringLiteral("note_text")).toString();
+        const QVector<ParsedWikiLink> links = parseWikiLinksFromText(noteText, -1);
+        for (const ParsedWikiLink &parsed : links) {
+            if (parsed.parts.noteName.compare(noteName, Qt::CaseInsensitive) == 0) {
+                noteIdList.append(noteId);
+                break;
+            }
+        }
+    }
+
     return noteIdList;
 }
 
@@ -4164,6 +4505,19 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
                                    QRegularExpression::escape(noteUrlWithHyphens) +
                                    QStringLiteral(R"(#.+\))")));
         }
+
+        if (isWikiLinkSupportEnabled()) {
+            const QVector<ParsedWikiLink> wikiLinks =
+                parseWikiLinksFromText(noteText, _noteSubFolderId);
+            for (const ParsedWikiLink &parsed : wikiLinks) {
+                const Note resolvedNote =
+                    Note::resolveWikiLink(parsed.parts.rawTarget, _noteSubFolderId);
+                if (resolvedNote.isFetched() && resolvedNote.isSameFile(note)) {
+                    _linkedNoteHash[note].insert(
+                        LinkHit(parsed.fullMatch, parsed.parts.resolvedTarget));
+                }
+            }
+        }
     }
 
     return _linkedNoteHash;
@@ -4260,6 +4614,19 @@ QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes(const QString &connectionN
                 note, QRegularExpression(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
                                          QRegularExpression::escape(relativePathToNote) +
                                          QStringLiteral(R"(#.+\))")));
+        }
+
+        if (isWikiLinkSupportEnabled()) {
+            const QVector<ParsedWikiLink> wikiLinks =
+                parseWikiLinksFromText(note.getNoteText(), note.getNoteSubFolderId());
+            for (const ParsedWikiLink &parsed : wikiLinks) {
+                const Note resolvedNote =
+                    Note::resolveWikiLink(parsed.parts.rawTarget, note.getNoteSubFolderId());
+                if (resolvedNote.isFetched() && resolvedNote.isSameFile(*this)) {
+                    _backlinkNoteHash[note].insert(
+                        LinkHit(parsed.fullMatch, parsed.parts.resolvedTarget));
+                }
+            }
         }
     }
 
@@ -4533,6 +4900,10 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
             text.replace(QStringLiteral("](") + oldNoteRelativeFilePath + QStringLiteral("#"),
                          QStringLiteral("](") + relativeFilePath + QStringLiteral("#"));
 
+            if (isWikiLinkSupportEnabled()) {
+                text = replaceWikiLinksForTarget(text, oldNote, *this, note.getNoteSubFolderId());
+            }
+
             // if the current note was changed we need to make sure the
             // _noteText is updated
             if (note.getId() == _id) {
@@ -4569,6 +4940,11 @@ bool Note::handleLinkedNotesAfterMoving(const QHash<Note, QSet<LinkHit>> &linked
         for (const LinkHit &linkHit : linkHits) {
             const QString oldMarkdown = linkHit.markdown;
             const QString linkText = linkHit.text;
+
+            if (oldMarkdown.startsWith(QStringLiteral("[["))) {
+                continue;
+            }
+
             const QString relativeFilePath =
                 urlEncodeNoteUrl(getFilePathRelativeToNote(linkedNote));
             const QString newMarkdown = linkText.isEmpty()
@@ -4593,6 +4969,56 @@ bool Note::handleLinkedNotesAfterMoving(const QHash<Note, QSet<LinkHit>> &linked
     }
 
     return changed;
+}
+
+bool Note::updateQualifiedWikiLinksForSubfolderRename(const QString &oldRelativePath,
+                                                      const QString &newRelativePath) {
+    if (!isWikiLinkSupportEnabled()) {
+        return false;
+    }
+
+    bool changedAny = false;
+    const QVector<Note> notes = fetchAll();
+    const QString oldPrefix = Utils::Misc::removeIfEndsWith(oldRelativePath, QStringLiteral("/"));
+    const QString newPrefix = Utils::Misc::removeIfEndsWith(newRelativePath, QStringLiteral("/"));
+
+    for (const Note &fetchedNote : notes) {
+        QString text = fetchedNote.getNoteText();
+        const QVector<ParsedWikiLink> wikiLinks =
+            parseWikiLinksFromText(text, fetchedNote.getNoteSubFolderId());
+
+        for (int i = wikiLinks.count() - 1; i >= 0; --i) {
+            const ParsedWikiLink &parsed = wikiLinks.at(i);
+            if (parsed.parts.subfolderPath.isEmpty()) {
+                continue;
+            }
+
+            if (parsed.parts.subfolderPath == oldPrefix ||
+                parsed.parts.subfolderPath.startsWith(oldPrefix + QChar('/'))) {
+                QString updatedPath = parsed.parts.subfolderPath;
+                updatedPath.replace(0, oldPrefix.length(), newPrefix);
+                QString replacementTarget =
+                    updatedPath + QStringLiteral("/") + parsed.parts.noteName;
+                if (!parsed.parts.heading.isEmpty()) {
+                    replacementTarget += QStringLiteral("#") + parsed.parts.heading;
+                }
+                if (!parsed.parts.displayText.isEmpty()) {
+                    replacementTarget += QStringLiteral("|") + parsed.parts.displayText;
+                }
+                const QString replacement =
+                    QStringLiteral("[[") + replacementTarget + QStringLiteral("]]");
+                text.replace(parsed.start, parsed.length, replacement);
+            }
+        }
+
+        if (text != fetchedNote.getNoteText()) {
+            Note note = fetchedNote;
+            note.storeNewText(std::move(text));
+            changedAny = true;
+        }
+    }
+
+    return changedAny;
 }
 
 QSet<Note> Note::findBacklinks() const {

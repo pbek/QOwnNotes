@@ -19,7 +19,7 @@ bool UrlHandler::isUrlSchemeLocal(const QUrl &url) {
     const QString scheme = url.scheme();
     return scheme == QLatin1String("note") || scheme == QLatin1String("noteid") ||
            scheme == QLatin1String("task") || scheme == QLatin1String("checkbox") ||
-           scheme == QStringLiteral("deck") ||
+           scheme == QStringLiteral("deck") || scheme == QStringLiteral("wikilink") ||
            (scheme == QLatin1String("file") && Note::fileUrlIsNoteInCurrentNoteFolder(url));
 }
 
@@ -36,6 +36,14 @@ void UrlHandler::openUrl(QString urlString, const bool openInNewTab) {
      * handler
      */
     if (urlString.isEmpty()) {
+        return;
+    }
+
+    // Handle wikilink: scheme early - it uses "wikilink:target" (no double slash)
+    // so isValidUrl() would wrongly classify it as invalid and try to treat it
+    // as a relative filename, producing a bogus file:// URL.
+    if (urlString.startsWith(QStringLiteral("wikilink:"))) {
+        handleWikiLinkUrl(urlString, openInNewTab);
         return;
     }
 
@@ -60,6 +68,8 @@ void UrlHandler::openUrl(QString urlString, const bool openInNewTab) {
         handleFileAttachmentUrl(urlString);
     } else if (scheme == QStringLiteral("noteid")) {
         handleNoteIdUrl(urlString, openInNewTab);
+    } else if (scheme == QStringLiteral("wikilink")) {
+        handleWikiLinkUrl(urlString, openInNewTab);
     } else if (scheme == QStringLiteral("note") || isNoteFileUrl) {
         handleNoteUrl(urlString, fragment, openInNewTab);
     } else if (scheme == QStringLiteral("task")) {
@@ -79,6 +89,125 @@ void UrlHandler::openUrl(QString urlString, const bool openInNewTab) {
         qDebug() << __func__ << "Nextcloud Deck URL found, urlString: " << urlString;
         handleNextcloudDeckUrl(urlString);
     }
+}
+
+namespace {
+struct UrlWikiLinkParts {
+    QString heading;
+    QString subfolderPath;
+    QString noteName;
+};
+
+static UrlWikiLinkParts parseUrlWikiLinkParts(QString target) {
+    UrlWikiLinkParts parts;
+    const int hashPos = target.indexOf(QChar('#'));
+    if (hashPos >= 0) {
+        parts.heading = target.mid(hashPos + 1).trimmed();
+        target = target.left(hashPos).trimmed();
+    }
+
+    target = Utils::Misc::removeIfStartsWith(target, QStringLiteral("/"));
+    const int slashPos = target.lastIndexOf(QChar('/'));
+    if (slashPos >= 0) {
+        parts.subfolderPath = target.left(slashPos).trimmed();
+        parts.noteName = target.mid(slashPos + 1).trimmed();
+    } else {
+        parts.noteName = target.trimmed();
+    }
+
+    return parts;
+}
+}    // namespace
+
+void UrlHandler::handleWikiLinkUrl(const QString &urlString, bool openInNewTab) {
+    if (!Note::isWikiLinkSupportEnabled()) {
+        return;
+    }
+
+    // Extract the target by stripping the scheme prefix and percent-decoding.
+    // Using QUrl::host() is avoided because Qt normalises the host to lowercase,
+    // which would corrupt note names that have uppercase letters.
+    // Use "wikilink:" (no double-slash) so Qt treats the rest as a URL path
+    // rather than an authority/host. The authority form "wikilink://name"
+    // causes Qt to parse the note name as a hostname, applying hostname
+    // validation (no spaces) and lowercasing, which corrupts note names.
+    static const QString scheme = QStringLiteral("wikilink:");
+    const QString rawTarget =
+        urlString.startsWith(scheme) ? urlString.mid(scheme.length()) : urlString;
+    const QString target = QUrl::fromPercentEncoding(rawTarget.toUtf8());
+
+    auto mw = MainWindow::instance();
+    const Note currentNote = mw->getCurrentNote();
+    const Note resolvedNote = Note::resolveWikiLink(target, currentNote.getNoteSubFolderId());
+
+    if (resolvedNote.isFetched()) {
+        if (openInNewTab) {
+            mw->openNoteInTab(resolvedNote, true);
+        } else {
+            mw->setCurrentNote(resolvedNote);
+        }
+
+        const UrlWikiLinkParts parts = parseUrlWikiLinkParts(target);
+        if (!parts.heading.isEmpty()) {
+            auto nodes = NavigationWidget::parseDocument(mw->activeNoteTextEdit()->document());
+            for (const auto &node : nodes) {
+                if (node.text.contains(parts.heading)) {
+                    mw->onNavigationWidgetPositionClicked(node.pos);
+                    break;
+                }
+            }
+        }
+        return;
+    }
+
+    const UrlWikiLinkParts parts = parseUrlWikiLinkParts(target);
+    if (parts.noteName.isEmpty()) {
+        return;
+    }
+
+    QString prompt = QObject::tr("Note '%1' does not exist. Create it?").arg(parts.noteName);
+    if (!parts.subfolderPath.isEmpty()) {
+        prompt = QObject::tr("Note '%1' does not exist in '%2'. Create it?")
+                     .arg(parts.noteName, parts.subfolderPath);
+    }
+
+    if (Utils::Gui::questionNoSkipOverride(nullptr, QObject::tr("Note was not found"), prompt,
+                                           QStringLiteral("open-wikilink-create-note")) !=
+        QMessageBox::Yes) {
+        return;
+    }
+
+    NoteSubFolder targetSubFolder = currentNote.getNoteSubFolder();
+    if (!parts.subfolderPath.isEmpty()) {
+        targetSubFolder = NoteSubFolder::fetchByPathData(parts.subfolderPath, QStringLiteral("/"));
+
+        if (!targetSubFolder.isFetched()) {
+            NoteSubFolder parentSubFolder;
+            for (const QString &folderName :
+                 parts.subfolderPath.split(QChar('/'), Qt::SkipEmptyParts)) {
+                NoteSubFolder next =
+                    NoteSubFolder::fetchByNameAndParentId(folderName, parentSubFolder.getId());
+                if (!next.isFetched()) {
+                    next.setName(folderName);
+                    next.setParentId(parentSubFolder.getId());
+                    next.store();
+                }
+                parentSubFolder = next;
+            }
+            targetSubFolder = parentSubFolder;
+        }
+
+        if (targetSubFolder.isFetched()) {
+            mw->noteSubFolderTree()->reset();
+            mw->jumpToNoteSubFolder(targetSubFolder.getId());
+        }
+    }
+
+    if (targetSubFolder.isFetched()) {
+        targetSubFolder.setAsActive();
+    }
+
+    mw->createNewNote(parts.noteName, false);
 }
 
 void UrlHandler::handleNextcloudDeckUrl(const QString &urlString) {

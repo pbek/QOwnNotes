@@ -9,6 +9,7 @@
 #include "testcases/app/test_notes.h"
 #include "testcases/app/test_settingsservice.h"
 #include "testcases/app/test_utilsmisc.h"
+#include "utils/schema.h"
 #include "version.h"
 
 // tests
@@ -20,12 +21,17 @@ int main(int argc, char *argv[]) {
     QCoreApplication::setApplicationName("QOwnNotesTests");
     QCoreApplication::setApplicationVersion(QString(VERSION) + " " + QString(RELEASE));
 
+    Utils::Schema::schemaSettings = new Utils::Schema::Settings();
+
     int allTestsResult = 0 + QTest::qExec(new TestNotes(), argc, argv) +
                          QTest::qExec(new TestHTMLEntities(), argc, argv) +
                          QTest::qExec(new TestMetricsService(), argc, argv) +
                          QTest::qExec(new TestSettingsService(), argc, argv) +
                          QTest::qExec(new TestNetwork(), argc, argv) +
                          QTest::qExec(new TestUtilsMisc(), argc, argv);
+
+    delete Utils::Schema::schemaSettings;
+    Utils::Schema::schemaSettings = nullptr;
 
     if (allTestsResult == 0)
         qDebug() << "[Tests PASS]";
