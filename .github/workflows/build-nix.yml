@@ -42,7 +42,7 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: 🔒 Cache dependencies
-        uses: cachix/cachix-action@v16
+        uses: cachix/cachix-action@v17
         with:
           # https://app.cachix.org/cache/qownnotes-devenv
           name: qownnotes-devenv
@@ -85,7 +85,7 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
       - name: 🔒 Cache dependencies
-        uses: cachix/cachix-action@v16
+        uses: cachix/cachix-action@v17
         with:
           # https://app.cachix.org/cache/qownnotes-devenv
           name: qownnotes-devenv
