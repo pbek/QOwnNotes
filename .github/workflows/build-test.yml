@@ -169,7 +169,7 @@ jobs:
 
       - if: contains( matrix.os, 'ubuntu-latest')
         name: Do Linux tests
-        uses: nick-fields/retry@v3
+        uses: nick-fields/retry@v4
         with:
           timeout_minutes: 10
           max_attempts: 3
@@ -181,7 +181,7 @@ jobs:
       # See https://github.com/pbek/QOwnNotes/issues/3018
       - if: contains( matrix.os, 'macos')
         name: Do macOS tests
-        uses: nick-fields/retry@v3
+        uses: nick-fields/retry@v4
         with:
           timeout_minutes: 10
           max_attempts: 3
@@ -214,7 +214,7 @@ jobs:
       #          .\tests.exe -txt
       #      - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
       #        name: Do Qt 6.3+ Windows tests
-      #        uses: nick-fields/retry@v3
+      #        uses: nick-fields/retry@v4
       #        with:
       #          timeout_minutes: 10
       #          max_attempts: 3
