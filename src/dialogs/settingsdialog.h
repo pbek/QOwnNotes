@@ -61,7 +61,8 @@ class SettingsDialog : public MasterDialog {
         WebCompanionPage,
         WebApplicationPage,
         ExperimentalPage,
-        AiPage
+        AiPage,
+        LanguageToolPage
     };
 
     explicit SettingsDialog(int page = 0, QWidget *parent = 0);

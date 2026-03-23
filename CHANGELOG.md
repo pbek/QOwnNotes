@@ -2,6 +2,9 @@
 
 ## 26.3.19
 
+- Moved the **LanguageTool** settings out of the _Editor_ settings into a dedicated
+  **LanguageTool** settings page (with a spell-check icon) in the settings sidebar
+  (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
 - Fixed new note creation via `Ctrl + N` not including the current date in the note
   title (for [#3516](https://github.com/pbek/QOwnNotes/issues/3516))
 - Fixed spell checker and LanguageTool text replacements to first turn off read-only
