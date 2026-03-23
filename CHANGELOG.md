@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.3.19
+
+- Fixed spell checker and LanguageTool text replacements to first turn off read-only
+  mode so the note will be stored when a suggestion is applied
+  (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
+
 ## 26.3.18
 
 - Fixed the **Use Layout** button in settings to correctly create a new workspace with

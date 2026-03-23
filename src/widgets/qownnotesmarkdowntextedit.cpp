@@ -2051,6 +2051,10 @@ QMenu *QOwnNotesMarkdownTextEdit::spellCheckContextMenu(QPoint pos) {
         for (const QString &rep : reps) {
             menu->addAction(rep, this, [rep, this, cursor]() mutable {
                 if (!cursor.isNull()) {
+                    // Turn off read-only mode first so the note will be stored
+                    if (auto *mw = MainWindow::instance()) {
+                        mw->allowNoteEditing();
+                    }
                     cursor.insertText(rep);
                     setTextCursor(cursor);
                 }
@@ -2147,6 +2151,11 @@ void QOwnNotesMarkdownTextEdit::applyLanguageToolReplacement(const QTextCursor &
     QTextCursor mutableCursor(cursor);
     if (mutableCursor.isNull()) {
         return;
+    }
+
+    // Turn off read-only mode first so the note will be stored
+    if (auto *mw = MainWindow::instance()) {
+        mw->allowNoteEditing();
     }
 
     mutableCursor.insertText(replacement);
