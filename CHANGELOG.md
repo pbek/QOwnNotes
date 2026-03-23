@@ -4,15 +4,13 @@
 
 - Attempted to fix emoji characters (e.g. 🚫) rendering as incorrect glyphs (such
   as the Bitcoin B symbol) in the QLiteHtml preview on Windows by appending the
-  platform-specific colour-emoji font ("Segoe UI Emoji" on Windows, "Apple Color
+  platform-specific color-emoji font ("Segoe UI Emoji" on Windows, "Apple Color
   Emoji" on macOS, "Noto Color Emoji" on Linux) as a fallback in every font
   family list passed to Qt's font engine, ensuring proper emoji glyph selection
   (for [#3517](https://github.com/pbek/QOwnNotes/issues/3517))
 - Moved the **LanguageTool** settings out of the _Editor_ settings into a dedicated
   **LanguageTool** settings page (with a spell-check icon) in the settings sidebar
   (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
-- Fixed new note creation via `Ctrl + N` not including the current date in the note
-  title (for [#3516](https://github.com/pbek/QOwnNotes/issues/3516))
 - Fixed spell checker and LanguageTool text replacements to first turn off read-only
   mode so the note will be stored when a suggestion is applied
   (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
@@ -20,6 +18,8 @@
   overlay now preserves each character's individual syntax-highlight color (e.g.
   heading, bold, link colors) instead of overwriting them with the color of the
   first character in the match span (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
+- Fixed new note creation via `Ctrl + N` not including the current date in the note
+  title (for [#3516](https://github.com/pbek/QOwnNotes/issues/3516))
 
 ## 26.3.18
 
