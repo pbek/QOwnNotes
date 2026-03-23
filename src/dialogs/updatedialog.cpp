@@ -28,7 +28,8 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
       ui(new Ui::UpdateDialog),
       _networkManager(nullptr),
       _updateButton(nullptr),
-      _changeLogSearchWidget(nullptr) {
+      _changeLogSearchWidget(nullptr),
+      _changeLogEditViewport(nullptr) {
     ui->setupUi(this);
     afterSetupUI();
     ui->downloadProgressBar->hide();
@@ -57,7 +58,10 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
     ui->searchFrame->setLayout(searchLayout);
 
     ui->changeLogEdit->installEventFilter(this);
-    ui->changeLogEdit->viewport()->installEventFilter(this);
+    // Cache the viewport pointer here, where construction is complete and safe,
+    // so eventFilter() never needs to call viewport() itself (issue #3518)
+    _changeLogEditViewport = ui->changeLogEdit->viewport();
+    _changeLogEditViewport->installEventFilter(this);
 
     ui->changeLogEdit->setHtml(changesHtml);
     ui->versionLabel->setText("Version " + releaseVersionString);
@@ -143,7 +147,11 @@ void UpdateDialog::show() {
 }
 
 bool UpdateDialog::eventFilter(QObject *obj, QEvent *event) {
-    if (((obj == ui->changeLogEdit) || (obj == ui->changeLogEdit->viewport())) &&
+    // Use the cached viewport pointer instead of calling viewport() here;
+    // calling viewport() inside eventFilter() can crash when an event fires
+    // during setupUi before QAbstractScrollArea has fully initialized its
+    // internal viewport widget (issue #3518)
+    if (((obj == ui->changeLogEdit) || (obj == _changeLogEditViewport)) &&
         (event->type() == QEvent::KeyPress)) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 

@@ -2,6 +2,10 @@
 
 ## 26.3.20
 
+- Fixed a crash in the **update dialog** caused by `QAbstractScrollArea::viewport()`
+  being called on a not-yet-initialized scroll area during `setupUi` construction;
+  the event filter now guards against a null viewport before dereferencing it
+  (for [#3518](https://github.com/pbek/QOwnNotes/issues/3518))
 - Added optional **wiki-style link support** — enable it in the _Editor_ settings
   with the new **Enable wiki-style link support `[[note name]]`** checkbox
   (for [#3512](https://github.com/pbek/QOwnNotes/issues/3512))

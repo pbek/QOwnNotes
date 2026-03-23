@@ -40,6 +40,10 @@ class UpdateDialog : public MasterDialog {
     QNetworkAccessManager *_networkManager;
     QPushButton *_updateButton;
     QTextEditSearchWidget *_changeLogSearchWidget;
+    // Cached viewport pointer set after the event filter is installed; avoids
+    // calling viewport() inside eventFilter() where the scroll area may not yet
+    // be fully constructed (issue #3518)
+    QWidget *_changeLogEditViewport;
 
     enum ButtonRole {
         Unset,    // nothing was selected
