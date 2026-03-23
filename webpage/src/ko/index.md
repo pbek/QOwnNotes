@@ -23,8 +23,8 @@ footer: Patrizio Bekerle이 ❤️으로 제작했으며, 비너스걸이 한국
 ---
 
 <div class="rss-block">
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">RSS 블로그</a></v-chip>
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">RSS 릴리스</a></v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [RSS 블로그](https://feeds.feedburner.com/QOwnNotesBlog)</v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [RSS 릴리스](https://feeds.feedburner.com/QOwnNotesReleases)</v-chip>
 </div>
 
 <Poll />

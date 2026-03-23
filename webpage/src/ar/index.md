@@ -23,8 +23,8 @@ footer: صنعه Patrizio Bekerle بكل حب ❤️
 ---
 
 <div class="rss-block">
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">موجز RSS للمدونة</a></v-chip>
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">موجز RSS للإصدارات</a></v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [موجز RSS للمدونة](https://feeds.feedburner.com/QOwnNotesBlog)</v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [موجز RSS للإصدارات](https://feeds.feedburner.com/QOwnNotesReleases)</v-chip>
 </div>
 
 <Poll />

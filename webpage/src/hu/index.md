@@ -23,8 +23,8 @@ footer: Patrizio Bekerle készítette ❤️-vel
 ---
 
 <div class="rss-block">
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">Blog RSS</a></v-chip>
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">Kiadások RSS</a></v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [Blog RSS](https://feeds.feedburner.com/QOwnNotesBlog)</v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [Kiadások RSS](https://feeds.feedburner.com/QOwnNotesReleases)</v-chip>
 </div>
 
 <Poll />

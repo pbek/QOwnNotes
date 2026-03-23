@@ -133,7 +133,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <p spaces-before="0">
-  ::: 팁 <a href="./shortcuts.md">단축키</a> <kbd>Ctrl + L</kbd>을 사용하여 웹 페이지 또는 <strong x-id="1">기타 노트에 대한 링크를 만들 수 있습니다</strong>.
+  ::: 팁 [단축키](./shortcuts.md) <kbd>Ctrl + L</kbd>을 사용하여 웹 페이지 또는 <strong x-id="1">기타 노트에 대한 링크를 만들 수 있습니다</strong>.
 </p>
 
 <p spaces-before="0">
@@ -162,7 +162,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </h3>
 
 <p spaces-before="0">
-  <a href="./browser-extension.md">QOwnNotes Web Companion 브라우저 확장</a>에서 사용되는 북마크는 목록의 연결을 사용합니다.
+  [QOwnNotes Web Companion 브라우저 확장](./browser-extension.md)에서 사용되는 북마크는 목록의 연결을 사용합니다.
 </p>
 
 <pre><code class="markdown">- [웹페이지 이름](https://www.example.com) #tag1 #tag2 일부 설명 및 태그
@@ -180,7 +180,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <p spaces-before="0">
-  ::: 팁 <a href="./shortcuts.md">단축키</a> <kbd>Ctrl + Shift + I</kbd> 를 사용하여 노트에 이미지를 삽입할 수 있습니다. 이미지가 클립보드에 있을 수도 있으며 대화상자가 이미지를 감지하고 미리보기를 표시합니다.
+  ::: 팁 [단축키](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> 를 사용하여 노트에 이미지를 삽입할 수 있습니다. 이미지가 클립보드에 있을 수도 있으며 대화상자가 이미지를 감지하고 미리보기를 표시합니다.
 </p>
 
 <p spaces-before="0">
@@ -208,7 +208,7 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <p spaces-before="0">
-  ::: 팁 선택한 인라인 텍스트 또는 텍스트 바로 안쪽에서 <a href="./shortcuts.md">단축키</a> <kbd>Ctrl + Shift + C</kbd>를 사용하여 인라인 코드 블록을 만들 수 있습니다.
+  ::: 팁 선택한 인라인 텍스트 또는 텍스트 바로 안쪽에서 [단축키](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd>를 사용하여 인라인 코드 블록을 만들 수 있습니다.
 :::
 </p>
 
@@ -343,7 +343,7 @@ cd Notes
 </p>
 
 <p spaces-before="0">
-  <a href="./shortcuts.md">단축키</a> <kbd> Ctrl + Shift + B</kbd>을 사용하여 텍스트를 블록 따옴표로 표시할 수 있습니다.
+  [단축키](./shortcuts.md) <kbd> Ctrl + Shift + B</kbd>을 사용하여 텍스트를 블록 따옴표로 표시할 수 있습니다.
 :::
 </p>
 

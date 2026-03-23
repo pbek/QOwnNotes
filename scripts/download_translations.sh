@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure -i bash -p crowdin-cli xmlstarlet
+#! nix-shell --pure -i bash -p crowdin-cli xmlstarlet perl
 # shellcheck shell=bash
 #
 # Use this script in $ProjectFileDir$ to download the translations from Crowdin
@@ -121,6 +121,8 @@ fixCrowdinTranslationProblems() {
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/::: tip\nImportant /::: tip Important\n/g' "$1"
   sed -i -e 's/ :::$/\n:::/g' "$1"
   perl -i -pe 's|<a href="([^"]+)"([^>]*)>([^<]+)</a>|[$3]($1)|g' "$1"
+  # Fix malformed anchor tags where the closing > of the opening tag is missing (e.g. <a href="url"text</a>)
+  perl -i -pe 's|<a href="([^"]+)"([^>\s<][^<]*)</a>|[$2]($1)|g' "$1"
   sed -i -e ':a' -e 'N' -e '$!ba' -e 's/~~~\n~~~/```\n~~~/g' "$1"
 }
 

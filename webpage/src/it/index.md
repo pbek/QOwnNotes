@@ -23,7 +23,7 @@ footer: Fatto con il ❤️ da Patrizio Bekerle
 ---
 
 <div class="rss-block">
-    <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesBlog">Blog RSS</a></v-chip>
+    <v-chip outlined><v-icon left>mdi-rss</v-icon> [Blog RSS](https://feeds.feedburner.com/QOwnNotesBlog)</v-chip>
     <v-chip outlined><v-icon left>mdi-rss</v-icon> <a href="https://feeds.feedburner.com/QOwnNotesReleases">
 RSS degli aggiornamenti</a></v-chip>
 </div>
