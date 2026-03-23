@@ -183,8 +183,12 @@ void UrlHandler::handleWikiLinkUrl(const QString &urlString, bool openInNewTab) 
 
         if (!targetSubFolder.isFetched()) {
             NoteSubFolder parentSubFolder;
-            for (const QString &folderName :
-                 parts.subfolderPath.split(QChar('/'), Qt::SkipEmptyParts)) {
+            for (const QString &folderName : parts.subfolderPath.split(QChar('/'),
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+                                                                       QString::SkipEmptyParts)) {
+#else
+                                                                       Qt::SkipEmptyParts)) {
+#endif
                 NoteSubFolder next =
                     NoteSubFolder::fetchByNameAndParentId(folderName, parentSubFolder.getId());
                 if (!next.isFetched()) {
