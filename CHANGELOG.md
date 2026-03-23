@@ -7,6 +7,10 @@
 - Fixed spell checker and LanguageTool text replacements to first turn off read-only
   mode so the note will be stored when a suggestion is applied
   (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
+- Fixed wrong foreground color of text underlined by LanguageTool: the underline
+  overlay now preserves each character's individual syntax-highlight color (e.g.
+  heading, bold, link colors) instead of overwriting them with the color of the
+  first character in the match span (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
 
 ## 26.3.18
 

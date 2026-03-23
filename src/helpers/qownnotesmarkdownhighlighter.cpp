@@ -252,12 +252,19 @@ void QOwnNotesMarkdownHighlighter::setLanguageToolUnderline(int start, int count
         return;
     }
 
-    QTextCharFormat format = QSyntaxHighlighter::format(start);
-    format.setFontUnderline(true);
-    format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
-    format.setUnderlineColor(color);
-    format.setToolTip(toolTip);
-    setFormat(start, count, format);
+    // Apply underline properties per-character to preserve each character's
+    // individual foreground color set by earlier highlight passes (e.g. headings,
+    // bold/italic, links). Reading only the first character's format and broadcasting
+    // it over the whole span would overwrite the foreground of every subsequent
+    // character, causing wrong text colors under LanguageTool underlines (issue #3496).
+    for (int i = start; i < start + count; ++i) {
+        QTextCharFormat format = QSyntaxHighlighter::format(i);
+        format.setFontUnderline(true);
+        format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
+        format.setUnderlineColor(color);
+        format.setToolTip(toolTip);
+        setFormat(i, 1, format);
+    }
 }
 
 void QOwnNotesMarkdownHighlighter::highlightLanguageTool(const QString &text) {
