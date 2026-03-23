@@ -35,7 +35,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - La **cartella delle note** può essere **scelta liberamente** (è possibile scegliere più cartelle delle note)
 - **La ricerca di parole parziali** nelle note è possibile e i risultati di essa sono evidenziati nelle note
 - [**Estensione browser**](browser-extension.md) per **inserire note da testo selezionato**, **fare catture di schermata** o **gestire i tuoi segnalibri**
-- [**Controllo ortografico**](../editor/spellchecking.md) supportato
+- [**Spellchecking**](../editor/spellchecking.md) and optional [**LanguageTool**](../editor/languagetool.md) support
 - **Modalità portatile** per portare QOwnNotes con te su una chiavetta USB
 - **Supporto allo scripting** e un [**repository di script**](https://github.com/qownnotes/scripts) online da cui puoi installare script nella tua applicazione
 - Implementazione di **[API per l'autocompilazione di OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** per usarla negli scripts

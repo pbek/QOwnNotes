@@ -16,6 +16,29 @@
 </message>
 </context>
 <context>
+<name>AiToolbarManager</name>
+<message>
+<source>Waiting for answer from AI</source>
+<translation>AI의 답변을 기다리는 중</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation>AI 백엔드</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation>AI 모델</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation>AI 백엔드 선택기</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation>AI 모델 선택기</translation>
+</message>
+</context>
+<context>
 <name>AttachmentDialog</name>
 <message>
 <source>Insert attachment</source>
@@ -578,6 +601,29 @@
 </message>
 </context>
 <context>
+<name>DistractionFreeManager</name>
+<message>
+<source>leave</source>
+<translation>종료</translation>
+</message>
+<message>
+<source>Leave distraction free mode</source>
+<translation>방해 방지 모드 종료</translation>
+</message>
+<message>
+<source>Leave full-screen mode</source>
+<translation>전체 화면 모드 종료</translation>
+</message>
+<message>
+<source>Custom editor width</source>
+<translation>사용자 지정 편집기 너비</translation>
+</message>
+<message>
+<source>Characters:</source>
+<translation>문자:</translation>
+</message>
+</context>
+<context>
 <name>EvernoteImportDialog</name>
 <message>
 <source>Evernote Import</source>
@@ -717,6 +763,57 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Value</source>
 <translation>값</translation>
+</message>
+</context>
+<context>
+<name>ExportPrintManager</name>
+<message>
+<source>Print note</source>
+<translation>노트 인쇄</translation>
+</message>
+<message>
+<source>Letter</source>
+<translation>편지지</translation>
+</message>
+<message>
+<source>Page size</source>
+<translation>페이지 크기</translation>
+</message>
+<message>
+<source>Page size:</source>
+<translation>페이지 크기:</translation>
+</message>
+<message>
+<source>Portrait</source>
+<translation>세로</translation>
+</message>
+<message>
+<source>Landscape</source>
+<translation>가로</translation>
+</message>
+<message>
+<source>Orientation</source>
+<translation>방향</translation>
+</message>
+<message>
+<source>Orientation:</source>
+<translation>방향:</translation>
+</message>
+<message>
+<source>PDF files</source>
+<translation>PDF 파일</translation>
+</message>
+<message>
+<source>Export current note as PDF</source>
+<translation>현재 노트를 PDF로 내보내기</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation>HTML 파일</translation>
+</message>
+<message>
+<source>Export current note as HTML file</source>
+<translation>현재 노트를 HTML 파일로 내보내기</translation>
 </message>
 </context>
 <context>
@@ -1001,6 +1098,101 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Information</source>
 <translation>Information</translation>
+</message>
+</context>
+<context>
+<name>FileNavigationWidget</name>
+<message>
+<source>Media files</source>
+<translation>미디어 파일</translation>
+</message>
+<message>
+<source>Attachments</source>
+<translation>첨부 파일</translation>
+</message>
+<message>
+<source>Invalid file name</source>
+<translation>잘못된 파일 이름</translation>
+</message>
+<message>
+<source>The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</source>
+<translation>파일 이름 &lt;strong&gt;%1&lt;/strong&gt;이 잘못되었습니다.</translation>
+</message>
+<message>
+<source>Delete linked files</source>
+<translation>연결된 파일 삭제</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</source>
+<translation>
+<numerusform>선택한 링크 파일을 삭제하시겠습니까? 이후에 링크를 &lt;strong&gt;%1&lt;/strong&gt; 노트 파일에서 삭제할 수도 있습니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation>파일 &lt;strong&gt;%1&lt;/strong&gt;을 삭제하지 못했습니다!</translation>
+</message>
+<message numerus="yes">
+<source>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; 연결된 파일을 삭제하지 못했습니다!</numerusform>
+</translation>
+</message>
+<message>
+<source>File deleting failed</source>
+<translation>파일 삭제 실패</translation>
+</message>
+<message>
+<source>Remove linked file references</source>
+<translation>연결된 파일 참조 제거</translation>
+</message>
+<message numerus="yes">
+<source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation>
+<numerusform>삭제된 파일은 &lt;strong&gt;%n&lt;/strong&gt; 노트 파일에 사용됩니다. 이러한 미디어 및 첨부 파일 링크를 제거하시겠습니까? 이렇게 하면 &lt;strong&gt;%n&lt;/strong&gt; 노트 파일이 업데이트됩니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>File doesn't exist</source>
+<translation>파일이 존재하지 않습니다</translation>
+</message>
+<message>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation>파일 &lt;strong&gt;%1&lt;/strong&gt;이 존재하지 않으므로 이름을 변경할 수 없습니다!</translation>
+</message>
+<message>
+<source>File exists</source>
+<translation>파일 존재</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+<translation>파일 &lt;strong&gt;%1&lt;/strong&gt;이 이미 존재합니다. 새 파일 이름으로 &lt;strong&gt;%2&lt;/strong&gt;을 선택하기 전에 파일을 제거해야 합니다!</translation>
+</message>
+<message>
+<source>File renaming failed</source>
+<translation>파일 이름 변경 실패</translation>
+</message>
+<message>
+<source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation>파일 이름을 &lt;strong&gt;%1&lt;/strong&gt;으로 변경하지 못했습니다!</translation>
+</message>
+<message>
+<source>File name changed</source>
+<translation>파일 이름 변경</translation>
+</message>
+<message numerus="yes">
+<source>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation>
+<numerusform>%1 &lt;strong&gt;%2&lt;/strong&gt;은 &lt;strong&gt;%n&lt;/strong&gt; 노트 파일에 사용됩니다. 해당 파일 이름을 어디서나 리팩터링하시겠습니까? 이렇게 하면 &lt;strong&gt;%n&lt;/strong&gt; 노트 파일이 업데이트됩니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Open file externally</source>
+<translation>외부 파일 열기(&amp;O)</translation>
+</message>
+<message>
+<source>&amp;Delete file</source>
+<translation>파일 삭제(&amp;D)</translation>
 </message>
 </context>
 <context>
@@ -1402,6 +1594,20 @@ File: QOwnNotes_en.ts</translation>
 </message>
 </context>
 <context>
+<name>LanguageToolChecker</name>
+<message>
+<source>LanguageTool is unavailable: %1</source>
+<translation>언어 도구를 사용할 수 없습니다: %1</translation>
+</message>
+</context>
+<context>
+<name>LanguageToolClient</name>
+<message>
+<source>Invalid LanguageTool server URL</source>
+<translation>잘못된 언어 도구 서버 URL</translation>
+</message>
+</context>
+<context>
 <name>LayoutWidget</name>
 <message>
 <source>Use layout</source>
@@ -1418,10 +1624,6 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Do you want to use the selected layout?</source>
 <translation>선택한 레이아웃을 사용하시겠습니까?</translation>
-</message>
-<message>
-<source>The application will be restarted afterward.</source>
-<translation>응용 프로그램은 나중에 다시 시작됩니다.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1708,6 +1910,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>제목</translation>
 </message>
 <message>
+<source>Files</source>
+<translation>파일</translation>
+</message>
+<message>
 <source>Backlinks</source>
 <translation>백링크</translation>
 </message>
@@ -1834,10 +2040,6 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Search or create note</source>
 <translation>노트 검색 또는 만들기</translation>
-</message>
-<message>
-<source>Add a tag to the selected notes</source>
-<translation>선택한 노트에 태그 추가</translation>
 </message>
 <message>
 <source>New tag</source>
@@ -1987,6 +2189,22 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Next heading</source>
 <translation>다음 제목</translation>
+</message>
+<message>
+<source>Fold all headings</source>
+<translation>모든 제목 접기</translation>
+</message>
+<message>
+<source>Fold all headings in the current note</source>
+<translation>현재 노트의 모든 제목 접기</translation>
+</message>
+<message>
+<source>Unfold all headings</source>
+<translation>모든 제목 펼치기</translation>
+</message>
+<message>
+<source>Unfold all headings in the current note</source>
+<translation>현재 노트의 모든 제목 펼치기</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2322,6 +2540,10 @@ File: QOwnNotes_en.ts</translation>
 <translation>사전 관리</translation>
 </message>
 <message>
+<source>Check grammar with LanguageTool</source>
+<translation>언어 도구로 문법 확인</translation>
+</message>
+<message>
 <source>Custom</source>
 <translation>사용자 지정</translation>
 </message>
@@ -2538,16 +2760,6 @@ File: QOwnNotes_en.ts</translation>
 <translation>Evernote에서 노트 가져오기</translation>
 </message>
 <message>
-<source>Note was removed externally!</source>
-<translation>노트가 외부에서 제거되었습니다!</translation>
-</message>
-<message>
-<source>Current note was removed outside of this application!
-Restore current note?</source>
-<translation>현재 노트가 이 응용 프로그램 외부에서 제거되었습니다!
-현재 노트를 복원하시겠습니까?</translation>
-</message>
-<message>
 <source>&amp;Cancel</source>
 <translation>취소(&amp;C)</translation>
 </message>
@@ -2562,40 +2774,6 @@ Restore current note?</source>
 <translation>새 버전 %1 사용 가능</translation>
 </message>
 <message>
-<source>Abort</source>
-<translation>중단</translation>
-</message>
-<message>
-<source>Loading notes…</source>
-<translation>노트 불러오는 중…</translation>
-</message>
-<message>
-<source>Removed duplicate conflicted database: %1</source>
-<translation>충돌하는 중복 데이터베이스 제거: %1</translation>
-</message>
-<message>
-<source>Could not remove duplicate conflicted database: %1</source>
-<translation>충돌하는 중복 데이터베이스를 제거할 수 없습니다: %1</translation>
-</message>
-<message>
-<source>Removed merged conflicted database: %1</source>
-<translation>충돌하는 병합 데이터베이스 제거: %1</translation>
-</message>
-<message>
-<source>Could not remove merged conflicted database: %1</source>
-<translation>충돌하는 병합 데이터베이스를 제거할 수 없습니다: %1</translation>
-</message>
-<message>
-<source>Delete conflicted database copies</source>
-<translation>충돌하는 데이터베이스 복사본 삭제</translation>
-</message>
-<message numerus="yes">
-<source>Removed %n conflicted database copies</source>
-<translation>
-<numerusform>충돌하는 데이터베이스 복사본 %n개 제거</numerusform>
-</translation>
-</message>
-<message>
 <source>Please select the folder where your notes will get stored</source>
 <translation>노트를 저장할 폴더를 선택하십시오</translation>
 </message>
@@ -2607,52 +2785,6 @@ Restore current note?</source>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>이 소프트웨어가 작동하려면 사용자 ownCloud 노트 폴더를 선택해야 합니다!</translation>
 </message>
-<message>
-<source>Remove current note</source>
-<translation>현재 노트 제거</translation>
-</message>
-<message>
-<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>현재 노트 제거: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
-</message>
-<message>
-<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-<translation>이 암호화된 노트의 &lt;strong&gt;암호&lt;/strong&gt;를 입력하십시오.</translation>
-</message>
-<message>
-<source>Note can't be decrypted!</source>
-<translation>노트의 암호를 해독할 수 없습니다!</translation>
-</message>
-<message>
-<source>It seems that your password is not valid!</source>
-<translation>암호가 올바르지 않은 것 같습니다!</translation>
-</message>
-<message>
-<source>Remove selected notes and folders</source>
-<translation>선택한 노트와 폴더 제거</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation>
-<numerusform>선택한 노트 &lt;strong&gt;%n&lt;/strong&gt;와 폴더 &lt;strong&gt;%1&lt;/strong&gt;를 삭제하시겠습니까?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;이 폴더 안의 모든 파일과 폴더도 함께 삭제됩니다!</numerusform>
-</translation>
-</message>
-<message>
-<source>Remove selected folders</source>
-<translation>선택한 폴더 제거</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation>
-<numerusform>선택한 폴더 &lt;strong&gt;%n&lt;/strong&gt;를 삭제하시겠습니까?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;이 폴더 안의 모든 파일과 폴더도 함께 삭제됩니다!</numerusform>
-</translation>
-</message>
-<message>
-<source>Remove selected notes</source>
-<translation>선택한 노트 제거</translation>
-</message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
@@ -2663,33 +2795,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복원할 수 있습니다.</numerusform>
 </translation>
 </message>
-<message>
-<source>Removed note subfolder: %1</source>
-<translation>노트 하위 폴더가 제거되었습니다: %1</translation>
-</message>
-<message>
-<source>Remove selected tags</source>
-<translation>선택된 태그 제거</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-<translation>
-<numerusform>&lt;strong&gt;%n&lt;/strong&gt;개의 선택한 태그를 제거하시겠습니까? 이 프로세스에서는 노트가 제거되지 않습니다.</numerusform>
-</translation>
-</message>
-<message>
-<source>Move selected notes</source>
-<translation>선택한 노트 이동</translation>
-</message>
 <message numerus="yes">
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt;로 이동하시겠습니까?</numerusform>
 </translation>
-</message>
-<message>
-<source>Copy selected notes</source>
-<translation>선택한 노트 복사</translation>
 </message>
 <message numerus="yes">
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
@@ -2697,24 +2807,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <numerusform>&lt;strong&gt;%2&lt;/strong&gt;개의 선택한 노트를 %2에 복사하시겠습니까?</numerusform>
 </translation>
 </message>
-<message>
-<source>Done</source>
-<translation>완료</translation>
-</message>
 <message numerus="yes">
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>&lt;strong&gt;%2&lt;/strong&gt;개의 노트가 %2에 복사되었습니다.</numerusform>
-</translation>
-</message>
-<message>
-<source>Tag selected notes</source>
-<translation>선택한 노트에 태그</translation>
-</message>
-<message numerus="yes">
-<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>&lt;strong&gt;%2&lt;/strong&gt;개의 선택한 노트를 %2로 태그하시겠습니까?</numerusform>
 </translation>
 </message>
 <message>
@@ -2726,31 +2822,12 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>변경 내용을 적용하려면 응용 프로그램을 다시 시작해야 할 수도 있습니다.</translation>
 </message>
 <message>
-<source>PDF files</source>
-<translation>PDF 파일</translation>
-</message>
-<message>
 <source>Todo lists disabled!</source>
 <translation>할 일 목록을 사용할 수 없습니다!</translation>
 </message>
 <message>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>할 일 목록을 사용 불가능으로 설정했습니다.&lt;br /&gt; 설정에서 &lt;strong&gt;할 일&lt;/strong&gt; 구성을 확인하십시오!</translation>
-</message>
-<message numerus="yes">
-<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>
-<numerusform>&lt;strong&gt;%1&lt;/strong&gt;의 항 중 &lt;strong&gt;%n&lt;/strong&gt;개가 발견되었습니다</numerusform>
-</translation>
-</message>
-<message>
-<source>Note</source>
-<comment>name for new note</comment>
-<translation>노트</translation>
-</message>
-<message>
-<source>Note folders</source>
-<translation>노트 폴더</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your ownCloud server</source>
@@ -2784,22 +2861,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Inserted text as text attachment file</source>
 <translation>텍스트 첨부 파일로 삽입된 텍스트</translation>
-</message>
-<message>
-<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>노트의 암호가 해독되고 일반 텍스트로 다시 저장됩니다. 암호화되지 않은 노트가 서버에 동기화될 수 있으며 중요한 텍스트가 노출될 수 있습니다!&lt;br /&gt;노트의 암호를 해독하시겠습니까?</translation>
-</message>
-<message>
-<source>Markdown files</source>
-<translation>마크다운 파일</translation>
-</message>
-<message>
-<source>Export attached files</source>
-<translation>첨부 파일 내보내기</translation>
-</message>
-<message>
-<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation>노트의 미디어 파일 및 첨부 파일도 내보내시겠습니까? 대상 폴더에서 파일을 덮어쓸 수 있습니다!</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -2853,80 +2914,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
 <translation>경로가 &lt;b&gt;%2&lt;/b&gt;인 노트 폴더 &lt;b&gt;%1&lt;/b&gt;가 더 이상 존재하지 않습니다!</translation>
 </message>
-<message numerus="yes">
-<source>%n folder(s) selected</source>
-<translation>
-<numerusform>%n 폴더 선택</numerusform>
-</translation>
-</message>
-<message>
-<source>Update backlinks</source>
-<translation>백링크 업데이트</translation>
-</message>
-<message numerus="yes">
-<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
-<translation>
-<numerusform>제목 "%1"은 %n 노트에서 참조됩니다. 새 제목 "%2"를 사용하도록 링크를 업데이트하시겠습니까?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Updated heading links in %n note(s)</source>
-<translation>
-<numerusform>%n 노트의 제목 링크가 업데이트되었습니다</numerusform>
-</translation>
-</message>
-<message>
-<source>&amp;Remove notes and folders</source>
-<translation>노트 및 폴더 제거(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Remove folders</source>
-<translation>폴더 제거(&amp;R)</translation>
-</message>
-<message>
-<source>Open note in Nextcloud Files</source>
-<translation>Nextcloud 파일에서 노트 열기</translation>
-</message>
-<message>
-<source>Open note in Nextcloud Notes</source>
-<translation>Nextcloud 노트에서 노트 열기</translation>
-</message>
-<message>
-<source>Copy note filename</source>
-<translation>노트 파일 이름 복사</translation>
-</message>
-<message>
-<source>Unmark as favorite</source>
-<translation>즐겨찾기로 표시 해제</translation>
-</message>
-<message>
-<source>Mark as favorite</source>
-<translation>즐겨찾기로 표시</translation>
-</message>
-<message>
-<source>Split note</source>
-<translation>노트 분할</translation>
-</message>
-<message>
-<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation>현재 커서 위치에서 노트를 분할하시겠습니까? 커서 뒤의 텍스트가 새 노트로 이동합니다. 새 노트는 이전 노트와 연결됩니다.</translation>
-</message>
-<message>
-<source>Ln %1, Col %2</source>
-<comment>Line / Column</comment>
-<translation>줄 %1, 열 %2</translation>
-</message>
-<message>
-<source>Line %1, Column %2</source>
-<translation>줄 %1, 열 %2</translation>
-</message>
-<message numerus="yes">
-<source>%n selected</source>
-<comment>Characters selected</comment>
-<translation>
-<numerusform>%n개 선택됨</numerusform>
-</translation>
-</message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
 <translation>현재 노트 폴더에 대해 Git 지원이 활성화되어 있지 않습니다. 설정에서 활성화하시겠습니까?</translation>
@@ -2940,32 +2927,12 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>이 노트에는 사용할 수 있는 버전이 없습니다.</translation>
 </message>
 <message>
-<source>Close note tab</source>
-<translation>노트 탭 닫기</translation>
-</message>
-<message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation>노트 '%1' 경로가 클립보드에 복사되었습니다</translation>
 </message>
 <message>
 <source>Note filename '%1' was copied to the clipboard</source>
 <translation>노트 파일 이름 '%1'이 클립보드에 복사되었습니다</translation>
-</message>
-<message>
-<source>AI backends</source>
-<translation>AI 백엔드</translation>
-</message>
-<message>
-<source>AI models</source>
-<translation>AI 모델</translation>
-</message>
-<message>
-<source>AI backend selector</source>
-<translation>AI 백엔드 선택기</translation>
-</message>
-<message>
-<source>AI model selector</source>
-<translation>AI 모델 선택기</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
@@ -2997,49 +2964,8 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>글꼴 크기를 %1pt로 재설정</translation>
 </message>
 <message>
-<source>Remove tag '%1' from the current note</source>
-<translation>현재 노트에서 '%1' 태그 제거</translation>
-</message>
-<message>
-<source>Remove tag '%1' from the selected notes</source>
-<translation>선택한 노트에서 '%1' 태그 제거</translation>
-</message>
-<message>
-<source>Rename tag</source>
-<translation>태그 이름 바꾸기</translation>
-</message>
-<message>
-<source>Assign color</source>
-<translation>색상 지정</translation>
-</message>
-<message>
-<source>Disable color</source>
-<translation>색상 사용 안 함</translation>
-</message>
-<message>
-<source>&amp;Move tags to…</source>
-<translation>태그를 이동(&amp;M)...</translation>
-</message>
-<message>
-<source>Move to the root</source>
-<comment>to move a tag to the current tag in the tag context menu</comment>
-<translation>루트로 이동</translation>
-</message>
-<message>
 <source>The scripting engine was reloaded</source>
 <translation>스크립팅 엔진이 다시 로드되었습니다</translation>
-</message>
-<message>
-<source>HTML files</source>
-<translation>HTML 파일</translation>
-</message>
-<message>
-<source>Jump to the note's subfolder</source>
-<translation>노트의 하위 폴더로 이동</translation>
-</message>
-<message>
-<source>Open selected notes in tabs</source>
-<translation>탭에서 선택한 노트 열기</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -3057,19 +2983,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>No script updates were found</source>
 <translation>스크립트 업데이트를 찾을 수 없습니다</translation>
 </message>
-<message>
-<source>Toggle note stickiness</source>
-<translation>노트 고정 전환
-</translation>
-</message>
-<message>
-<source>Close other note tabs</source>
-<translation>다른 노트 탭 닫기</translation>
-</message>
-<message>
-<source>Rename note</source>
-<translation>노트 이름 바꾸기</translation>
-</message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation>
@@ -3079,86 +2992,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Paste &amp;HTML as Markdown</source>
 <translation>HTML을 마크다운으로 붙여넣기(&amp;H)</translation>
-</message>
-<message>
-<source>Show all notes (%1)</source>
-<translation>모든 노트 표시 (%1)</translation>
-</message>
-<message>
-<source>Show all notes tagged with '%1' (%2)</source>
-<translation>'%1'(%2) 로 태그된 모든 노트 표시</translation>
-</message>
-<message>
-<source>%1 and %2</source>
-<translation>%1 및 %2</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) selected</source>
-<translation>
-<numerusform>%n개의 노트 선택됨</numerusform>
-</translation>
-</message>
-<message>
-<source>Allows you to rename the filename of the note</source>
-<translation>노트의 파일 이름을 변경할 수 있습니다</translation>
-</message>
-<message>
-<source>&amp;Move notes to…</source>
-<translation>노트를 다음으로 이동(&amp;M)...</translation>
-</message>
-<message>
-<source>&amp;Copy notes to…</source>
-<translation>노트를 다음으로 복사(&amp;C)...</translation>
-</message>
-<message>
-<source>Move notes to subfolder…</source>
-<translation>노트를 하위 폴더로 이동...</translation>
-</message>
-<message>
-<source>Copy notes to subfolder…</source>
-<translation>노트를 하위 폴더에 복사...</translation>
-</message>
-<message>
-<source>&amp;Tag selected notes with…</source>
-<translation>선택한 노트에 태그 지정(&amp;T)...</translation>
-</message>
-<message>
-<source>&amp;Remove tag from selected notes…</source>
-<translation>선택한 노트에서 태그 제거(&amp;R)...</translation>
-</message>
-<message>
-<source>Name:</source>
-<translation>이름:</translation>
-</message>
-<message>
-<source>Note renaming not enabled!</source>
-<translation>노트 이름 변경이 활성화되지 않았습니다!</translation>
-</message>
-<message>
-<source>Create new workspace</source>
-<translation>새 작업 공간 만들기</translation>
-</message>
-<message>
-<source>Workspace name:</source>
-<translation>작업 공간 이름:</translation>
-</message>
-<message>
-<source>full</source>
-<comment>full workspace</comment>
-<translation>전체</translation>
-</message>
-<message>
-<source>minimal</source>
-<comment>minimal workspace</comment>
-<translation>최소</translation>
-</message>
-<message>
-<source>Remove the current workspace?</source>
-<translation>현재 작업 공간을 제거하시겠습니까?</translation>
-</message>
-<message>
-<source>Rename workspace</source>
-<translation>작업 공간 이름 바꾸기</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
@@ -3201,46 +3034,12 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트 표제 '%1'이(가) 클립보드에 복사되었습니다</translation>
 </message>
 <message>
-<source>Leave full-screen mode</source>
-<translation>전체 화면 모드 종료</translation>
-</message>
-<message>
-<source>Custom editor width</source>
-<translation>사용자 정의 편집기 너비</translation>
-</message>
-<message>
-<source>Characters:</source>
-<translation>문자:</translation>
-</message>
-<message numerus="yes">
-<source>%n notes selected</source>
-<translation>
-<numerusform>%n 노트 선택됨</numerusform>
-</translation>
-</message>
-<message>
 <source>Allow all note editing</source>
 <translation>모든 노트 편집 허용</translation>
 </message>
 <message>
 <source>&amp;Tag</source>
 <translation>태그(&amp;T)</translation>
-</message>
-<message>
-<source>Remove tag from selected notes</source>
-<translation>선택한 노트에서 태그 제거</translation>
-</message>
-<message numerus="yes">
-<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-<translation>
-<numerusform>&lt;strong&gt;%1&lt;/strong&gt;개의 선택한 노트에서 %1 태그를 제거하시겠습니까?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-<translation>
-<numerusform>&lt;strong&gt;%1&lt;/strong&gt;개의 노트에서 %1 태그가 제거되었습니다</numerusform>
-</translation>
 </message>
 <message>
 <source>Current notes folder: </source>
@@ -3251,120 +3050,16 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>노트 폴더를 설정합니다. 현재 노트 폴더: </translation>
 </message>
 <message>
-<source>Print note</source>
-<translation>노트 인쇄</translation>
-</message>
-<message>
-<source>Letter</source>
-<translation>편지</translation>
-</message>
-<message>
-<source>Portrait</source>
-<translation>세로</translation>
-</message>
-<message>
-<source>Landscape</source>
-<translation>가로</translation>
-</message>
-<message>
-<source>Orientation</source>
-<translation>방향</translation>
-</message>
-<message>
-<source>Orientation:</source>
-<translation>방향:</translation>
-</message>
-<message>
-<source>Export current note as PDF</source>
-<translation>현재 노트를 PDF로 내보내기</translation>
-</message>
-<message>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>할 일 목록을 선택하지 않았습니다.&lt;br /&gt; 설정에서 &lt;strong&gt;할 일&lt;/strong&gt; 구성을 확인하십시오!</translation>
-</message>
-<message>
-<source>Open QOwnNotes</source>
-<translation>QOwnNotes 열기</translation>
-</message>
-<message>
-<source>New note</source>
-<translation>새 노트</translation>
-</message>
-<message>
-<source>Recent notes</source>
-<translation>최근 노트</translation>
-</message>
-<message>
-<source>Show todo lists</source>
-<translation>할 일 목록 표시</translation>
-</message>
-<message>
-<source>Recent tasks</source>
-<translation>최근 작업</translation>
-</message>
-<message>
-<source>Quit</source>
-<translation>종료</translation>
 </message>
 <message>
 <source>Note folder</source>
 <translation>노트 폴더</translation>
 </message>
 <message>
-<source>Copy to note folder</source>
-<translation>노트 폴더에 복사</translation>
-</message>
-<message>
-<source>Move to note folder</source>
-<translation>노트 폴더로 이동</translation>
-</message>
-<message>
-<source>Copy to this subfolder</source>
-<translation>이 하위 폴더로 복사</translation>
-</message>
-<message>
-<source>Move to this subfolder</source>
-<translation>이 하위 폴더로 이동</translation>
-</message>
-<message numerus="yes">
-<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt; 하위 폴더로 이동하시겠습니까?</numerusform>
-</translation>
-</message>
-<message>
 <source>Cancel</source>
 <translation>취소</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were moved to note subfolder "%2"</source>
-<translation>
-<numerusform>%n개의 노트가 "%2" 노트 하위 폴더로 이동되었습니다</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt; 하위 폴더에 복사하시겠습니까?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were copied to note subfolder "%2"</source>
-<translation>
-<numerusform>%n개의 노트가 "%2" 노트 하위 폴더에 복사되었습니다</numerusform>
-</translation>
-</message>
-<message>
-<source>Open note in external editor</source>
-<translation>외부 편집기에서 노트 열기</translation>
-</message>
-<message>
-<source>Show note in file manager</source>
-<translation>파일 관리자에 노트 표시</translation>
-</message>
-<message>
-<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>노트의 이름을 변경하려면 노트 파일 이름을 표제와 다르게 허용하는 옵션을 활성화해야 합니다.</translation>
 </message>
 <message>
 <source>Create a new folder</source>
@@ -3375,28 +3070,8 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>폴더 이름:</translation>
 </message>
 <message>
-<source>show all untagged notes (%1)</source>
-<translation>태그가 지정되지 않은 모든 노트 표시 (%1)</translation>
-</message>
-<message>
-<source>Untagged notes</source>
-<translation>태그가 지정되지 않은 노트</translation>
-</message>
-<message>
-<source>Export current note as HTML file</source>
-<translation>현재 노트를 HTML 파일로 내보내기</translation>
-</message>
-<message>
-<source>Page size</source>
-<translation>페이지 크기</translation>
-</message>
-<message>
 <source>quit toolbar</source>
 <translation>도구 모음 종료</translation>
-</message>
-<message>
-<source>Page size:</source>
-<translation>페이지 크기:</translation>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
@@ -3407,66 +3082,8 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>확인(&amp;O)</translation>
 </message>
 <message>
-<source>&amp;Remove notes</source>
-<translation>노트 제거(&amp;R)</translation>
-</message>
-<message>
 <source>Your tasks are being loaded from your server</source>
 <translation>서버에서 작업을 불러오는 중입니다</translation>
-</message>
-<message>
-<source>Current note was modified externally</source>
-<translation>현재 노트가 외부에서 수정되었습니다</translation>
-</message>
-<message>
-<source>Stored current note to disk</source>
-<translation>디스크에 저장된 현재 노트</translation>
-</message>
-<message>
-<source>Note was modified externally: %1</source>
-<translation>노트가 외부에서 수정되었습니다: %1</translation>
-</message>
-<message>
-<source>Notes directory was modified externally</source>
-<translation>노트 디렉터리가 외부에서 수정되었습니다</translation>
-</message>
-<message numerus="yes">
-<source>Stored %n note(s) to disk</source>
-<translation>
-<numerusform>%n개의 노트가 디스크에 저장되었습니다</numerusform>
-</translation>
-</message>
-<message>
-<source>All notes</source>
-<translation>모든 노트</translation>
-</message>
-<message>
-<source>&amp;Add tag</source>
-<translation>태그 추가(&amp;A)</translation>
-</message>
-<message>
-<source>Tag could not be created!</source>
-<translation>태그를 만들 수 없습니다!</translation>
-</message>
-<message>
-<source>Move to this tag</source>
-<translation>이 태그로 이동</translation>
-</message>
-<message>
-<source>Tag this</source>
-<translation>이 태그</translation>
-</message>
-<message>
-<source>Cannot move tag '%1' to this tag</source>
-<translation>'%1' 태그를 이 태그로 이동할 수 없습니다</translation>
-</message>
-<message>
-<source>Moved tag '%1' to new tag</source>
-<translation>태그 '%1'을(를) 새 태그로 이동했습니다</translation>
-</message>
-<message>
-<source>&amp;Remove tags</source>
-<translation>태그 제거(&amp;R)</translation>
 </message>
 <message>
 <source>No selected todo lists!</source>
@@ -3557,28 +3174,12 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>Show %1</translation>
 </message>
 <message>
-<source>Leave distraction free mode</source>
-<translation>산만하지 않은 모드 나가기</translation>
-</message>
-<message>
 <source>Switch to note folder</source>
 <translation>노트 폴더로 전환</translation>
 </message>
 <message>
 <source>Toolbar could not be loaded without name</source>
 <translation>이름 없이 도구 모음을 불러올 수 없습니다</translation>
-</message>
-<message>
-<source>Overwriting external changes of: %1</source>
-<translation>외부 변경 내용 덮어쓰기: %1</translation>
-</message>
-<message>
-<source>Loading external changes from: %1</source>
-<translation>외부 변경 내용 불러오는 중: %1</translation>
-</message>
-<message>
-<source>Current note could not be stored to disk</source>
-<translation>현재 노트를 디스크에 저장할 수 없습니다</translation>
 </message>
 <message>
 <source>Read-only</source>
@@ -3597,32 +3198,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>변경된 내용을 확인하고 최신 버전으로 업데이트하려면 여기를 클릭하십시오</translation>
 </message>
 <message>
-<source>Waiting for answer from AI</source>
-<translation>AI의 답변을 기다리는 중</translation>
-</message>
-<message numerus="yes">
-<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-<translation>
-<numerusform>ownCloud 동기화 프로세스를 차단할 수있는 &lt;strong&gt;%n&lt;/strong&gt;개의 충돌하는 데이터베이스 사본의 자동 삭제를 진행하시겠습니까?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were tagged with "%2"</source>
-<translation>
-<numerusform>%n개의 노트에 "%2" 태그가 지정되었습니다</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>
-<numerusform>&lt;strong&gt;%1&lt;/strong&gt;의 &lt;strong&gt;%n&lt;/strong&gt;개 발생을 찾았습니다</numerusform>
-</translation>
-</message>
-<message>
-<source>Note headline</source>
-<translation>노트 표제</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>텍스트 파일 첨부로 붙여넣기(&amp;T)</translation>
 </message>
@@ -3634,30 +3209,6 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <source>Open &amp;settings</source>
 <translation>설정 열기(&amp;S)</translation>
 </message>
-<message>
-<source>leave</source>
-<translation>나가기</translation>
-</message>
-<message>
-<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-<translation>노트를 암호화하려면 &lt;strong&gt;암호&lt;/strong&gt;를 입력하십시오.&lt;br /&gt;노트의 내용을 읽으려면 암호를 &lt;strong&gt;기억&lt;/strong&gt;해야 하며&lt;br /&lt;strong&gt;QOwnNotes&lt;/strong&gt;&gt;&lt;strong&gt;에서만&lt;/strong&gt; 암호를 읽을 수 있습니다!</translation>
-</message>
-<message>
-<source>Decrypt note and store it as plain text</source>
-<translation>노트의 암호를 해독하여 일반 텍스트로 저장</translation>
-</message>
-<message>
-<source>&amp;Decrypt</source>
-<translation>암호 해독(&amp;D)</translation>
-</message>
-<message>
-<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-<translation>&lt;br /&gt;암호화된 노트를 편집할 수 있습니다.</translation>
-</message>
-<message>
-<source>Export current note as Markdown file</source>
-<translation>현재 노트를 마크다운 파일로 내보내기</translation>
-</message>
 </context>
 <context>
 <name>MarkdownLspClient</name>
@@ -3668,6 +3219,127 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Failed to start Markdown LSP server: %1</source>
 <translation>Markdown LSP 서버를 시작하지 못했습니다: %1</translation>
+</message>
+</context>
+<context>
+<name>MediaInsertionManager</name>
+<message>
+<source>File extension</source>
+<translation>파일 확장자</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation>파일 첨부 파일 확장자:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation>파일 기본 이름</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation>파일 첨부 파일의 기본 이름:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation>자동 이름을 위해 비워두기</translation>
+</message>
+<message>
+<source>Temporary file can't be opened</source>
+<translation>임시 파일을 열 수 없습니다</translation>
+</message>
+<message>
+<source>Inserted text as text attachment file</source>
+<translation>텍스트 첨부 파일로 삽입된 텍스트</translation>
+</message>
+<message>
+<source>Inserting image</source>
+<translation>이미지 삽입</translation>
+</message>
+<message>
+<source>Done inserting image</source>
+<translation>이미지 삽입 완료</translation>
+</message>
+<message>
+<source>Inserting attachment</source>
+<translation>첨부 파일 삽입</translation>
+</message>
+<message>
+<source>Done inserting attachment</source>
+<translation>첨부 파일 삽입 완료</translation>
+</message>
+<message numerus="yes">
+<source>Copied %n note(s) to %1</source>
+<translation>
+<numerusform>%n개의 노트를 %1로 복사했습니다</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Failed to copy %n note(s) (most likely already existing)</source>
+<translation>
+<numerusform>%n개의 노트를 복사하지 못했습니다 (이미 존재할 가능성이 높음)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation>
+<numerusform>%n 노트 복사를 건너뛰었습니다 (마크다운 또는 텍스트 파일이 없거나 읽을 수 없음)</numerusform>
+</translation>
+</message>
+<message>
+<source>Saving temporary image</source>
+<translation>임시 이미지 저장 중</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation>HTML을 마크다운으로 붙여넣기(&amp;H)</translation>
+</message>
+<message>
+<source>Paste as &amp;text file attachment</source>
+<translation>텍스트 파일 첨부로 붙여넣기(&amp;T)</translation>
+</message>
+<message>
+<source>Downloading %1</source>
+<translation>%1 다운로드 중</translation>
+</message>
+<message>
+<source>Downloading images finished</source>
+<translation>이미지 다운로드 완료</translation>
+</message>
+</context>
+<context>
+<name>NavigationManager</name>
+<message>
+<source>Update backlinks</source>
+<translation>백링크 업데이트</translation>
+</message>
+<message numerus="yes">
+<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
+<translation>
+<numerusform/>
+</translation>
+</message>
+<message numerus="yes">
+<source>Updated heading links in %n note(s)</source>
+<translation>
+<numerusform>%n 노트의 제목 링크가 업데이트되었습니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation>줄 %1, 열 %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation>줄 %1, 열 %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation>
+<numerusform>%n개 선택됨</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -3950,6 +3622,61 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 </message>
 </context>
 <context>
+<name>NoteEncryptionManager</name>
+<message>
+<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
+<translation>이 암호화된 노트의 &lt;strong&gt;비밀번호&lt;/strong&gt;를 입력하세요.</translation>
+</message>
+<message>
+<source>Note can't be decrypted!</source>
+<translation>노트를 해독할 수 없습니다!</translation>
+</message>
+<message>
+<source>It seems that your password is not valid!</source>
+<translation>비밀번호가 유효하지 않은 것 같습니다!</translation>
+</message>
+<message>
+<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
+<translation>노트를 암호화하려면 &lt;strong&gt;비밀번호&lt;/strong&gt;를 입력하세요.&lt;br /&gt;노트 내용을 읽으려면 &lt;strong&gt;비밀번호&lt;/strong&gt;를 &lt;strong&gt;기억&lt;/strong&gt; 해야 하며, &lt;strong&gt;QOwnNotes&lt;/strong&gt;&lt;strong&gt;에서만&lt;/strong&gt; 확인할 수 있다는 점을 유의하세요!</translation>
+</message>
+<message>
+<source>Decrypt note and store it as plain text</source>
+<translation>노트를 해독하여 일반 텍스트로 저장</translation>
+</message>
+<message>
+<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+<translation>노트가 해독되어 다시 일반 텍스트로 저장됩니다. 암호화되지 않은 노트는 서버에 동기화될 수 있으며 민감한 텍스트가 노출될 수 있다는 점을 명심하세요!&lt;br /&gt;노트를 해독하시겠습니까?</translation>
+</message>
+<message>
+<source>&amp;Decrypt</source>
+<translation>암호 해독(&amp;D)</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>취소(&amp;C)</translation>
+</message>
+<message>
+<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
+<translation>&lt;br /&gt;암호화된 노트를 편집할 수 있습니다.</translation>
+</message>
+<message>
+<source>Markdown files</source>
+<translation>마크다운 파일</translation>
+</message>
+<message>
+<source>Export current note as Markdown file</source>
+<translation>현재 노트를 마크다운 파일로 내보내기</translation>
+</message>
+<message>
+<source>Export attached files</source>
+<translation>첨부 파일 내보내기</translation>
+</message>
+<message>
+<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
+<translation>미디어 파일과 노트의 첨부 파일도 내보내시겠습니까? 파일은 대상 폴더에 덮어쓸 수 있습니다!</translation>
+</message>
+</context>
+<context>
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
@@ -3974,6 +3701,241 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Copy absolute path of note folder</source>
 <translation>노트 폴더의 절대 경로 복사</translation>
+</message>
+</context>
+<context>
+<name>NoteIndexManager</name>
+<message>
+<source>Loading notes…</source>
+<translation>노트 불러오는 중…</translation>
+</message>
+<message>
+<source>Abort</source>
+<translation>중단</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation>노트 폴더</translation>
+</message>
+<message>
+<source>Removed duplicate conflicted database: %1</source>
+<translation>중복 충돌된 데이터베이스가 제거되었습니다: %1</translation>
+</message>
+<message>
+<source>Could not remove duplicate conflicted database: %1</source>
+<translation>중복 충돌된 데이터베이스를 제거할 수 없습니다: %1</translation>
+</message>
+<message>
+<source>Removed merged conflicted database: %1</source>
+<translation>병합 충돌 데이터베이스가 제거되었습니다: %1</translation>
+</message>
+<message>
+<source>Could not remove merged conflicted database: %1</source>
+<translation>병합된 충돌 데이터베이스를 제거할 수 없습니다: %1</translation>
+</message>
+<message>
+<source>Delete conflicted database copies</source>
+<translation>충돌된 데이터베이스 복사본 삭제</translation>
+</message>
+<message numerus="yes">
+<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
+<translation>
+<numerusform>ownCloud 동기화 프로세스를 차단할 수 있는 &lt;strong&gt;%n&lt;/strong&gt; 충돌된 데이터베이스 복사본의 자동 삭제를 진행하시겠습니까?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Removed %n conflicted database copies</source>
+<translation>
+<numerusform>충돌한 데이터베이스 복사본 %n개를 제거했습니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Current note was modified externally</source>
+<translation>현재 노트가 외부에서 수정되었습니다</translation>
+</message>
+<message>
+<source>Overwriting external changes of: %1</source>
+<translation>외부 변경 사항 덮어쓰기: %1</translation>
+</message>
+<message>
+<source>Loading external changes from: %1</source>
+<translation>외부 변경 사항 불러오는 중: %1</translation>
+</message>
+<message>
+<source>Note was removed externally!</source>
+<translation>노트가 외부에서 제거되었습니다!</translation>
+</message>
+<message>
+<source>Current note was removed outside of this application!
+Restore current note?</source>
+<translation>현재 노트가 이 응용 프로그램 외부에서 제거되었습니다!
+현재 노트를 복원하시겠습니까?</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation>디스크에 저장된 현재 노트</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation>현재 노트를 디스크에 저장할 수 없습니다</translation>
+</message>
+<message>
+<source>Note was modified externally: %1</source>
+<translation>노트가 외부에서 수정되었습니다: %1</translation>
+</message>
+<message>
+<source>Notes directory was modified externally</source>
+<translation>노트 디렉터리가 외부에서 수정되었습니다</translation>
+</message>
+<message numerus="yes">
+<source>Stored %n note(s) to disk</source>
+<translation>
+<numerusform>%n개의 노트가 디스크에 저장되었습니다</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NoteOperationsManager</name>
+<message>
+<source>Remove current note</source>
+<translation>현재 노트 제거</translation>
+</message>
+<message>
+<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation>현재 노트 제거: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>Remove selected notes and folders</source>
+<translation>선택한 노트와 폴더 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
+<translation>
+<numerusform>선택한 노트 &lt;strong&gt;%n&lt;/strong&gt; 및 &lt;strong&gt;%1&lt;/strong&gt; 폴더를 제거하시겠습니까? &lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;이 폴더의 모든 파일과 폴더도 제거됩니다!
+
+ownCloud 서버에서 휴지통이 활성화되어 있다면, 그곳에서 노트를 복원할 수 있을 것입니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation>선택한 폴더 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation>
+<numerusform>선택한 폴더 &lt;strong&gt;%n&lt;/strong&gt;를 삭제하시겠습니까?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;이 폴더 안의 모든 파일과 폴더도 함께 삭제됩니다!</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected notes</source>
+<translation>선택한 노트 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+<translation>
+<numerusform>선택한 노트를 &lt;strong&gt;%n&lt;/strong&gt; 제거하시겠습니까?
+
+ownCloud 서버에서 휴지통이 활성화되어 있다면, 그곳에서 그것들을 복원할 수 있을 것입니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation>노트 하위 폴더가 제거되었습니다: %1</translation>
+</message>
+<message>
+<source>Move selected notes</source>
+<translation>선택된 노트 이동</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt;로 이동하시겠습니까?</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy selected notes</source>
+<translation>선택된 노트 복사</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>&lt;strong&gt;%2&lt;/strong&gt;개의 선택한 노트를 %2에 복사하시겠습니까?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation>완료</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+<translation>
+<numerusform>&lt;strong&gt;%2&lt;/strong&gt;개의 노트가 %2에 복사되었습니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation>노트</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt; 하위 폴더로 이동하시겠습니까?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were moved to note subfolder "%2"</source>
+<translation>
+<numerusform>%n개의 노트가 "%2" 노트 하위 폴더로 이동되었습니다</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>%n개의 선택한 노트를 &lt;strong&gt;%2&lt;/strong&gt; 하위 폴더에 복사하시겠습니까?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to note subfolder "%2"</source>
+<translation>
+<numerusform>%n개의 노트가 "%2" 노트 하위 폴더에 복사되었습니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy to note folder</source>
+<translation>노트 폴더에 복사</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation>노트 폴더로 이동</translation>
+</message>
+<message>
+<source>Copy to this subfolder</source>
+<translation>이 하위 폴더로 복사</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation>이 하위 폴더로 이동</translation>
+</message>
+<message>
+<source>Split note</source>
+<translation>노트 분할</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation>현재 커서 위치에서 노트를 분할하시겠습니까? 커서 뒤의 텍스트가 새 노트로 이동합니다. 새 노트는 이전 노트와 연결됩니다.</translation>
+</message>
+<message>
+<source>New note</source>
+<translation>새 노트</translation>
+</message>
+<message>
+<source>Note headline</source>
+<translation>노트 표제</translation>
 </message>
 </context>
 <context>
@@ -4091,6 +4053,144 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; 노트 하위 폴더를 &lt;strong&gt;%1&lt;/strong&gt;로 이동했습니다</numerusform>
 </translation>
+</message>
+</context>
+<context>
+<name>NoteTabManager</name>
+<message>
+<source>Toggle note stickiness</source>
+<translation>노트 고정 전환</translation>
+</message>
+<message>
+<source>Close other note tabs</source>
+<translation>다른 노트 탭 닫기</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation>노트 탭 닫기</translation>
+</message>
+</context>
+<context>
+<name>NoteTreeManager</name>
+<message>
+<source>New note</source>
+<translation>새 노트</translation>
+</message>
+<message>
+<source>Rename note</source>
+<translation>노트 이름 바꾸기</translation>
+</message>
+<message>
+<source>Allows you to rename the filename of the note</source>
+<translation>노트의 파일 이름 변경 허용</translation>
+</message>
+<message>
+<source>&amp;Remove notes and folders</source>
+<translation>노트 및 폴더 제거(&amp;R)</translation>
+</message>
+<message>
+<source>&amp;Remove folders</source>
+<translation>폴더 제거(&amp;R)</translation>
+</message>
+<message>
+<source>&amp;Remove notes</source>
+<translation>노트 제거(&amp;R)</translation>
+</message>
+<message>
+<source>&amp;Move notes to…</source>
+<translation>노트를 다음으로 이동(&amp;M)…</translation>
+</message>
+<message>
+<source>&amp;Copy notes to…</source>
+<translation>노트를 다음으로 복사(&amp;C)...</translation>
+</message>
+<message>
+<source>Jump to the note's subfolder</source>
+<translation>노트의 하위 폴더로 이동</translation>
+</message>
+<message>
+<source>Move notes to subfolder…</source>
+<translation>노트를 하위 폴더로 이동...</translation>
+</message>
+<message>
+<source>Copy notes to subfolder…</source>
+<translation>노트를 하위 폴더에 복사...</translation>
+</message>
+<message>
+<source>&amp;Tag selected notes with…</source>
+<translation>선택한 노트에 태그 지정(&amp;T)...</translation>
+</message>
+<message>
+<source>&amp;Remove tag from selected notes…</source>
+<translation>선택한 노트에서 태그 제거(&amp;R)...</translation>
+</message>
+<message>
+<source>Open selected notes in tabs</source>
+<translation>탭에서 선택한 노트 열기</translation>
+</message>
+<message>
+<source>Open note in external editor</source>
+<translation>외부 편집기에서 노트 열기</translation>
+</message>
+<message>
+<source>Open note in different window</source>
+<translation>다른 창에서 노트 열기</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Files</source>
+<translation>Nextcloud 파일에서 노트 열기</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Notes</source>
+<translation>Nextcloud 노트에서 노트 열기</translation>
+</message>
+<message>
+<source>Show note in file manager</source>
+<translation>파일 관리자에 노트 표시</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation>노트의 절대 경로 복사</translation>
+</message>
+<message>
+<source>Copy note filename</source>
+<translation>노트 파일 이름 복사</translation>
+</message>
+<message>
+<source>Show note git versions</source>
+<translation>노트 Git 버전 표시</translation>
+</message>
+<message>
+<source>Unmark as favorite</source>
+<translation>즐겨찾기로 표시 해제</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation>즐겨찾기로 표시</translation>
+</message>
+<message>
+<source>Select &amp;all notes</source>
+<translation>모든 노트 선택(&amp;A)</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation>이름:</translation>
+</message>
+<message>
+<source>Note renaming not enabled!</source>
+<translation>노트 이름 변경이 활성화되지 않았습니다!</translation>
+</message>
+<message>
+<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
+<translation>노트의 이름을 변경하려면 노트 파일 이름을 표제와 다르게 허용하는 옵션을 활성화해야 합니다.</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation>설정 열기(&amp;S)</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>취소(&amp;C)</translation>
 </message>
 </context>
 <context>
@@ -4560,6 +4660,14 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation>Nextcloud 덱 지원이 활성화되지 않았거나 설정이 잘못되었습니다.&lt;br /&gt;설정에서 &lt;strong&gt;Nextcloud&lt;/strong&gt; 구성을 확인해 주세요!</translation>
 </message>
+<message>
+<source>media file</source>
+<translation>미디어 파일</translation>
+</message>
+<message>
+<source>attachment</source>
+<translation>첨부 파일</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4679,6 +4787,22 @@ Click 'Cancel' to discard your changes and keep the external version.</source>
 <message>
 <source>Spelling</source>
 <translation>맞춤법</translation>
+</message>
+<message>
+<source>LanguageTool</source>
+<translation>언어 도구</translation>
+</message>
+<message>
+<source>No suggestions</source>
+<translation>제안 없음</translation>
+</message>
+<message>
+<source>More info...</source>
+<translation>더 많은 정보...</translation>
+</message>
+<message>
+<source>Ignore this rule</source>
+<translation>이 규칙 무시</translation>
 </message>
 <message>
 <source>Markdown LSP server connected</source>
@@ -5003,6 +5127,29 @@ Do you want to install it anyway?</source>
 <message>
 <source>file doesn't exist</source>
 <translation>파일이 존재하지 않습니다</translation>
+</message>
+</context>
+<context>
+<name>SearchFilterManager</name>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt;개의 &lt;strong&gt;%1&lt;/strong&gt;이 발견되었습니다.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation>
+<numerusform>&lt;strong&gt;%1&lt;/strong&gt;이라는 용어가 &lt;strong&gt;%n&lt;/strong&gt;번 나타났습니다.</numerusform>
+</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation>디스크에 저장된 현재 노트</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation>현재 노트를 디스크에 저장할 수 없습니다</translation>
 </message>
 </context>
 <context>
@@ -6169,6 +6316,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>선택적 인수</translation>
 </message>
 <message>
+<source>LanguageTool</source>
+<translation>언어 도구</translation>
+</message>
+<message>
+<source>Enable grammar and style checking with LanguageTool</source>
+<translation>언어 도구를 사용하여 문법 및 스타일 검사 사용함</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation>연결 테스트</translation>
+</message>
+<message>
+<source>Language:</source>
+<translation>언어:</translation>
+</message>
+<message>
+<source>API key:</source>
+<translation>API 키:</translation>
+</message>
+<message>
+<source>Optional premium or cloud API key</source>
+<translation>프리미엄 또는 클라우드 API 키 옵션</translation>
+</message>
+<message>
+<source>Check delay:</source>
+<translation>지연 확인:</translation>
+</message>
+<message>
+<source> ms</source>
+<translation> ms</translation>
+</message>
+<message>
+<source>Categories:</source>
+<translation>범주:</translation>
+</message>
+<message>
+<source>Spelling</source>
+<translation>맞춤법</translation>
+</message>
+<message>
+<source>Grammar</source>
+<translation>문법</translation>
+</message>
+<message>
+<source>Style</source>
+<translation>스타일</translation>
+</message>
+<message>
+<source>Punctuation</source>
+<translation>구두법</translation>
+</message>
+<message>
+<source>Typography</source>
+<translation>활자 서체 배열</translation>
+</message>
+<message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;사용 가능한 모든 &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;시간 형식&lt;/a&gt;을 살펴보는 것이 좋습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
@@ -6183,6 +6386,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
 <translation>이미지 뒤에 텍스트가 없는 경우 편집기에 작은 마크다운 미리보기 이미지 표시</translation>
+</message>
+<message>
+<source>Shows fold buttons for Markdown headings and allows collapsing their contents</source>
+<translation>마크다운 제목의 접기 버튼을 표시하고 내용을 접을 수 있습니다</translation>
+</message>
+<message>
+<source>Enable heading folding in the editor</source>
+<translation>편집기에서 제목 접기 사용</translation>
+</message>
+<message>
+<source>Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</source>
+<translation>편집되지 않는 줄에 마크다운 형식 구문 (예: **, *, #)을 숨기기</translation>
+</message>
+<message>
+<source>Hide markdown formatting syntax on inactive lines</source>
+<translation>비활성 줄에서 마크다운 형식 구문 숨기기</translation>
 </message>
 <message>
 <source>Enable hanging indentation for Markdown lists</source>
@@ -6397,6 +6616,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Reset the suggestion API port</source>
 <translation>제안 API 포트 재설정</translation>
+</message>
+<message>
+<source>If this is empty when saved, a new security token will be generated automatically.</source>
+<translation>저장할 때 이것이 비어 있으면 새 보안 토큰이 자동으로 생성됩니다.</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -7090,6 +7313,14 @@ Connection error message: </source>
 연결 오류 메시지: </translation>
 </message>
 <message>
+<source>LanguageTool connection successful.</source>
+<translation>언어 도구 연결에 성공했습니다.</translation>
+</message>
+<message>
+<source>LanguageTool connection failed: %1</source>
+<translation>언어 도구 연결 실패: %1</translation>
+</message>
+<message>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation>데이터베이스가 다시 초기화되었습니다. 지금 응용 프로그램을 다시 시작하십시오!</translation>
 </message>
@@ -7249,6 +7480,10 @@ Connection error message: </source>
 <message>
 <source>Undefined shortcut</source>
 <translation>정의되지 않은 단축키</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation>자동 감지</translation>
 </message>
 <message>
 <source>Assign a new shortcut</source>
@@ -7560,6 +7795,13 @@ Your notes will stay intact!</source>
 </message>
 </context>
 <context>
+<name>SpellCheckManager</name>
+<message>
+<source>Automatically detect</source>
+<translation>자동으로 감지</translation>
+</message>
+</context>
+<context>
 <name>StoredAttachmentsDialog</name>
 <message>
 <source>Delete selected attachments</source>
@@ -7826,6 +8068,37 @@ Your notes will stay intact!</source>
 </message>
 </context>
 <context>
+<name>SystemTrayManager</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation>QOwnNotes 열기</translation>
+</message>
+<message>
+<source>Note folders</source>
+<translation>노트 폴더</translation>
+</message>
+<message>
+<source>New note</source>
+<translation>새 노트</translation>
+</message>
+<message>
+<source>Recent notes</source>
+<translation>최근 노트</translation>
+</message>
+<message>
+<source>Show todo lists</source>
+<translation>할 일 목록 표시</translation>
+</message>
+<message>
+<source>Recent tasks</source>
+<translation>최근 작업</translation>
+</message>
+<message>
+<source>Quit</source>
+<translation>종료</translation>
+</message>
+</context>
+<context>
 <name>TableDialog</name>
 <message>
 <source>Insert table</source>
@@ -7925,6 +8198,162 @@ Your notes will stay intact!</source>
 <message>
 <source>New tag</source>
 <translation>새 태그</translation>
+</message>
+</context>
+<context>
+<name>TagManager</name>
+<message>
+<source>Show all notes (%1)</source>
+<translation>모든 노트 표시 (%1)</translation>
+</message>
+<message>
+<source>All notes</source>
+<translation>모든 노트</translation>
+</message>
+<message>
+<source>show all untagged notes (%1)</source>
+<translation>태그가 없는 모든 노트 표시 (%1)</translation>
+</message>
+<message>
+<source>Untagged notes</source>
+<translation>태그가 없는 노트</translation>
+</message>
+<message>
+<source>Show all notes tagged with '%1' (%2)</source>
+<translation>'%1' (%2) 태그가 있는 모든 노트 표시</translation>
+</message>
+<message>
+<source>Add a tag to the current note</source>
+<translation>현재 노트에 태그 추가</translation>
+</message>
+<message>
+<source>Add a tag to the selected notes</source>
+<translation>선택된 노트에 태그 추가</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation>%1 및 %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation>
+<numerusform>%n개의 노트 선택됨</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n folder(s) selected</source>
+<translation>
+<numerusform>%n개의 폴더 선택됨</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n notes selected</source>
+<translation>
+<numerusform>%n개 노트 선택됨</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the current note</source>
+<translation>현재 노트에서 '%1' 태그 제거</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>선택한 노트에서 '%1' 태그 제거</translation>
+</message>
+<message>
+<source>&amp;Add tag</source>
+<translation>태그 추가(&amp;A)</translation>
+</message>
+<message>
+<source>Rename tag</source>
+<translation>태그 이름 바꾸기</translation>
+</message>
+<message>
+<source>Assign color</source>
+<translation>색상 할당</translation>
+</message>
+<message>
+<source>Disable color</source>
+<translation>색상 사용 안 함</translation>
+</message>
+<message>
+<source>&amp;Remove tags</source>
+<translation>태그 제거(&amp;R)</translation>
+</message>
+<message>
+<source>&amp;Move tags to…</source>
+<translation>노트를 다음으로 이동(&amp;M)...</translation>
+</message>
+<message>
+<source>Tag could not be created!</source>
+<translation>태그를 만들 수 없습니다!</translation>
+</message>
+<message>
+<source>Move to the root</source>
+<comment>to move a tag to the current tag in the tag context menu</comment>
+<translation>루트로 이동</translation>
+</message>
+<message>
+<source>Move to this tag</source>
+<translation>이 태그로 이동</translation>
+</message>
+<message>
+<source>Tag this</source>
+<translation>이 태그</translation>
+</message>
+<message>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>'%1' 태그를 이 태그로 이동할 수 없습니다</translation>
+</message>
+<message>
+<source>Moved tag '%1' to new tag</source>
+<translation>태그 '%1'을(를) 새 태그로 이동했습니다</translation>
+</message>
+<message>
+<source>Tag selected notes</source>
+<translation>선택된 노트 태그</translation>
+</message>
+<message numerus="yes">
+<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>선택한 노트에 &lt;strong&gt;%2&lt;/strong&gt;을 태그하여 %n개의 태그를 지정하시겠습니까?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were tagged with "%2"</source>
+<translation>
+<numerusform>%n 개의 메모에 "%2"로 태그되었습니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag from selected notes</source>
+<translation>선택한 노트에서 태그 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
+<translation>
+<numerusform>선택한 노트 %n에서 &lt;strong&gt;%1&lt;/strong&gt; 태그를 삭제하시겠습니까?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation>완료</translation>
+</message>
+<message numerus="yes">
+<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
+<translation>
+<numerusform>태그 &lt;strong&gt;%1&lt;/strong&gt;이 %n 노트에서 제거되었습니다</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected tags</source>
+<translation>선택된 태그 제거</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
+<translation>
+<numerusform>선택한 태그 &lt;strong&gt;%n&lt;/strong&gt;를 제거하시겠습니까? 이 과정에서 노트는 제거되지 않습니다.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8633,7 +9062,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation>ownCloud 통합되는 일반 텍스트 파일 마크다운 노트 작성</translation>
+<translation>ownCloud 연동을 통한 일반 텍스트 파일 마크다운 노트 작성</translation>
 </message>
 <message>
 <source>Show subfolders</source>
@@ -8670,6 +9099,43 @@ This cannot be undone!</source>
 <message>
 <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
 <translation>노트 폴더는 QOwnNotes가 포터블 모드로 있는 디렉터리를 기준으로 저장된다는 점을 명심하세요! 따라서 동일한 드라이브에 보관해야 합니다.</translation>
+</message>
+</context>
+<context>
+<name>WorkspaceManager</name>
+<message>
+<source>Workspaces</source>
+<translation>작업 공간</translation>
+</message>
+<message>
+<source>full</source>
+<comment>full workspace</comment>
+<translation>전체</translation>
+</message>
+<message>
+<source>minimal</source>
+<comment>minimal workspace</comment>
+<translation>최소</translation>
+</message>
+<message>
+<source>Create new workspace</source>
+<translation>새 작업 공간 만들기</translation>
+</message>
+<message>
+<source>Workspace name:</source>
+<translation>작업 공간 이름:</translation>
+</message>
+<message>
+<source>Remove current workspace</source>
+<translation>현재 작업 공간 제거</translation>
+</message>
+<message>
+<source>Remove the current workspace?</source>
+<translation>현재 작업 공간을 제거하시겠습니까?</translation>
+</message>
+<message>
+<source>Rename workspace</source>
+<translation>작업 공간 이름 바꾸기</translation>
 </message>
 </context>
 <context>

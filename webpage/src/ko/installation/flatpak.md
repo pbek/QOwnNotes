@@ -11,4 +11,6 @@ flatpak install flathub org.qownnotes.QOwnNotes
 
 그런 다음 `flatpak run org.qownnotes.QOwnNotes` 명령으로 QOwnNotes를 실행할 수 있어야 합니다.
 
-::: 팁 정보 [QOwnNotes Flatpak Issues](https://github.com/flathub/org.qownnotes.QOwnNotes/issues)에서 Flatpak 패키지 관련 이슈를 열어주세요. :::
+::: tip
+정보 [QOwnNotes Flatpak Issues](https://github.com/flathub/org.qownnotes.QOwnNotes/issues)에서 Flatpak 패키지 관련 이슈를 열어주세요.
+:::

@@ -21,7 +21,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: 팁
+::: tip
+
 이 패키지는 Qt6으로 제작되었습니다.
 :::
 
@@ -48,7 +49,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: 팁
+::: tip
+
 이 패키지는 Qt6으로 제작되었습니다.
 :::
 
@@ -75,7 +77,8 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: 팁
+::: tip
+
 이 패키지는 Qt6으로 제작되었습니다.
 :::
 
@@ -102,7 +105,9 @@ sudo apt update
 sudo apt install qownnotes
 ```
 
-::: 팁 다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.11** 이상의 **Qt**가 설치되어 있어야 합니다. :::
+::: tip
+다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.11** 이상의 **Qt**가 설치되어 있어야 합니다.
+:::
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_11)
 
@@ -122,7 +127,9 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: 팁 다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.8** 이상의 **Qt**가 설치되어 있어야 합니다. :::
+::: tip
+다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.8** 이상의 **Qt**가 설치되어 있어야 합니다.
+:::
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
 
@@ -142,6 +149,8 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-::: 팁 다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.5** 이상의 **Qt**가 설치되어 있어야 합니다. :::
+::: tip
+다른 데비안 리눅스 버전의 경우 이 저장소를 사용하는 경우에는 적어도 **버전 5.5** 이상의 **Qt**가 설치되어 있어야 합니다.
+:::
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

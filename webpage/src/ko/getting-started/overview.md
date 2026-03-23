@@ -12,7 +12,9 @@
 
 [QOwnNotes](https://www.qownnotes.org/)는 **GNU/리눅스**, **macOS** 및 **Windows**용 응용 프로그램을 사용하는 **오픈 소스** (GPL) **일반 텍스트 파일 마크다운 노트**로, (선택적으로) [Nextcloud](https://nextcloud.com/) 및 [ownCloud](https://owncloud.org/)의 [Notes 응용 프로그램](https://github.com/nextcloud/notes)과 함께 작동합니다.
 
-::: tip Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community. :::
+::: tip
+[Telegram 그룹](https://t.me/QOwnNotes)에 가입하여 QOwnNotes 커뮤니티와 토론하고, 배우고, 소통하세요.
+:::
 
 [QOwnNotes의 개념 이해](concept.md)
 
@@ -33,7 +35,7 @@
 - **노트 폴더**는 **자유롭게 선택**할 수 있습니다 (여러 개의 노트 폴더를 사용할 수 있음)
 - 노트에서 **단어의 일부를 검색**할 수 있으며 검색 결과가 노트에서 강조 표시됩니다
 - **선택한 텍스트에서 노트 추가**, **스크린샷 만들기** 또는 **북마크를 관리**하는 [**브라우저 확장**](browser-extension.md)
-- [**맞춤법 검사**](../editor/spellchecking.md) 지원
+- [**맟춤법**](../editor/spellchecking.md) 및 선택 사항[**언어 도구**](../editor/languagetool.md) 지원
 - USB 스틱에 QOwnNotes를 휴대하기 위한 **휴대용 모드**
 - **스크립트 지원** 및 응용 프로그램 내부에 스크립트를 설치할 수 있는 온라인 [**스크립트 저장소**](https://github.com/qownnotes/scripts)
 - 스크립트에 사용할 **[OpenAI 완료 API 구현](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)**
@@ -49,7 +51,7 @@
 - **무료 데스크톱 테마 아이콘 **을 지원하므로  **기본 바탕 화면 아이콘 ** 및 즐겨찾는 **어두운 바탕 화면 테마**와 함께 QOnNotes를 사용할 수 있습니다
 - **무장애 모드**, **전체 화면 모드** 및 **타이프라이터 모드**
 - **줄 번호**
-- 현재 노트와 외부에서 변경된 노트 간의 **차이점**이 대화 상자에 **표시**됩니다
+- 현재 노트와 외부에서 변경된 노트 간의 **차이**는 대화 상자에 **표시**됩니다
 
 ## 언어
 

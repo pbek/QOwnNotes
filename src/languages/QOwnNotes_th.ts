@@ -16,6 +16,29 @@
 </message>
 </context>
 <context>
+<name>AiToolbarManager</name>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation type="unfinished">AI backends</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation type="unfinished">AI models</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation type="unfinished">AI backend selector</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation type="unfinished">AI model selector</translation>
+</message>
+</context>
+<context>
 <name>AttachmentDialog</name>
 <message>
 <source>Insert attachment</source>
@@ -578,6 +601,29 @@
 </message>
 </context>
 <context>
+<name>DistractionFreeManager</name>
+<message>
+<source>leave</source>
+<translation type="unfinished">leave</translation>
+</message>
+<message>
+<source>Leave distraction free mode</source>
+<translation type="unfinished">Leave distraction free mode</translation>
+</message>
+<message>
+<source>Leave full-screen mode</source>
+<translation type="unfinished">Leave full-screen mode</translation>
+</message>
+<message>
+<source>Custom editor width</source>
+<translation type="unfinished">Custom editor width</translation>
+</message>
+<message>
+<source>Characters:</source>
+<translation type="unfinished">Characters:</translation>
+</message>
+</context>
+<context>
 <name>EvernoteImportDialog</name>
 <message>
 <source>Evernote Import</source>
@@ -714,6 +760,57 @@
 <message>
 <source>Value</source>
 <translation>ความคุ้มค่า</translation>
+</message>
+</context>
+<context>
+<name>ExportPrintManager</name>
+<message>
+<source>Print note</source>
+<translation type="unfinished">Print note</translation>
+</message>
+<message>
+<source>Letter</source>
+<translation type="unfinished">Letter</translation>
+</message>
+<message>
+<source>Page size</source>
+<translation type="unfinished">Page size</translation>
+</message>
+<message>
+<source>Page size:</source>
+<translation type="unfinished">Page size:</translation>
+</message>
+<message>
+<source>Portrait</source>
+<translation type="unfinished">Portrait</translation>
+</message>
+<message>
+<source>Landscape</source>
+<translation type="unfinished">Landscape</translation>
+</message>
+<message>
+<source>Orientation</source>
+<translation type="unfinished">Orientation</translation>
+</message>
+<message>
+<source>Orientation:</source>
+<translation type="unfinished">Orientation:</translation>
+</message>
+<message>
+<source>PDF files</source>
+<translation type="unfinished">PDF files</translation>
+</message>
+<message>
+<source>Export current note as PDF</source>
+<translation type="unfinished">Export current note as PDF</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export current note as HTML file</source>
+<translation type="unfinished">Export current note as HTML file</translation>
 </message>
 </context>
 <context>
@@ -998,6 +1095,101 @@
 <message>
 <source>Information</source>
 <translation>ข้อมูล</translation>
+</message>
+</context>
+<context>
+<name>FileNavigationWidget</name>
+<message>
+<source>Media files</source>
+<translation type="unfinished">Media files</translation>
+</message>
+<message>
+<source>Attachments</source>
+<translation type="unfinished">Attachments</translation>
+</message>
+<message>
+<source>Invalid file name</source>
+<translation type="unfinished">Invalid file name</translation>
+</message>
+<message>
+<source>The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</source>
+<translation type="unfinished">The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</translation>
+</message>
+<message>
+<source>Delete linked files</source>
+<translation type="unfinished">Delete linked files</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</source>
+<translation type="unfinished">
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
+</translation>
+</message>
+<message>
+<source>Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation type="unfinished">Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+</message>
+<message numerus="yes">
+<source>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</source>
+<translation type="unfinished">
+<numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
+</translation>
+</message>
+<message>
+<source>File deleting failed</source>
+<translation type="unfinished">File deleting failed</translation>
+</message>
+<message>
+<source>Remove linked file references</source>
+<translation type="unfinished">Remove linked file references</translation>
+</message>
+<message numerus="yes">
+<source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation type="unfinished">
+<numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+</translation>
+</message>
+<message>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
+</message>
+<message>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+</message>
+<message>
+<source>File exists</source>
+<translation type="unfinished">File exists</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+</message>
+<message>
+<source>File renaming failed</source>
+<translation type="unfinished">File renaming failed</translation>
+</message>
+<message>
+<source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+</message>
+<message>
+<source>File name changed</source>
+<translation type="unfinished">File name changed</translation>
+</message>
+<message numerus="yes">
+<source>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation type="unfinished">
+<numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Open file externally</source>
+<translation type="unfinished">&amp;Open file externally</translation>
+</message>
+<message>
+<source>&amp;Delete file</source>
+<translation type="unfinished">&amp;Delete file</translation>
 </message>
 </context>
 <context>
@@ -1399,6 +1591,20 @@
 </message>
 </context>
 <context>
+<name>LanguageToolChecker</name>
+<message>
+<source>LanguageTool is unavailable: %1</source>
+<translation type="unfinished">LanguageTool is unavailable: %1</translation>
+</message>
+</context>
+<context>
+<name>LanguageToolClient</name>
+<message>
+<source>Invalid LanguageTool server URL</source>
+<translation type="unfinished">Invalid LanguageTool server URL</translation>
+</message>
+</context>
+<context>
 <name>LayoutWidget</name>
 <message>
 <source>Use layout</source>
@@ -1415,10 +1621,6 @@
 <message>
 <source>Do you want to use the selected layout?</source>
 <translation>คุณต้องการใช้เค้าโครงที่เลือกหรือไม่?</translation>
-</message>
-<message>
-<source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1705,6 +1907,10 @@
 <translation type="unfinished">Headings</translation>
 </message>
 <message>
+<source>Files</source>
+<translation type="unfinished">Files</translation>
+</message>
+<message>
 <source>Backlinks</source>
 <translation type="unfinished">Backlinks</translation>
 </message>
@@ -1831,10 +2037,6 @@
 <message>
 <source>Search or create note</source>
 <translation>ค้นหาหรือสร้างบันทึกย่อ</translation>
-</message>
-<message>
-<source>Add a tag to the selected notes</source>
-<translation>เพิ่มแท็กในบันทึกย่อที่เลือก</translation>
 </message>
 <message>
 <source>New tag</source>
@@ -1984,6 +2186,22 @@
 <message>
 <source>Next heading</source>
 <translation type="unfinished">Next heading</translation>
+</message>
+<message>
+<source>Fold all headings</source>
+<translation type="unfinished">Fold all headings</translation>
+</message>
+<message>
+<source>Fold all headings in the current note</source>
+<translation type="unfinished">Fold all headings in the current note</translation>
+</message>
+<message>
+<source>Unfold all headings</source>
+<translation type="unfinished">Unfold all headings</translation>
+</message>
+<message>
+<source>Unfold all headings in the current note</source>
+<translation type="unfinished">Unfold all headings in the current note</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2319,6 +2537,10 @@
 <translation>จัดการพจนานุกรม</translation>
 </message>
 <message>
+<source>Check grammar with LanguageTool</source>
+<translation type="unfinished">Check grammar with LanguageTool</translation>
+</message>
+<message>
 <source>Custom</source>
 <translation>กำหนดเอง</translation>
 </message>
@@ -2536,16 +2758,6 @@
 <translation>นำเข้าบันทึกย่อจาก Evernote</translation>
 </message>
 <message>
-<source>Note was removed externally!</source>
-<translation>หมายเหตุถูกลบภายนอก!</translation>
-</message>
-<message>
-<source>Current note was removed outside of this application!
-Restore current note?</source>
-<translation>บันทึกปัจจุบันถูกลบออกนอกแอปพลิเคชันนี้!
-คืนค่าบันทึกย่อปัจจุบันหรือไม่</translation>
-</message>
-<message>
 <source>&amp;Cancel</source>
 <translation>&amp;ยกเลิก</translation>
 </message>
@@ -2560,40 +2772,6 @@ Restore current note?</source>
 <translation>มีรุ่นใหม่ %1</translation>
 </message>
 <message>
-<source>Abort</source>
-<translation>การแท้ง</translation>
-</message>
-<message>
-<source>Loading notes…</source>
-<translation>กำลังโหลดโน้ต ...</translation>
-</message>
-<message>
-<source>Removed duplicate conflicted database: %1</source>
-<translation>ลบฐานข้อมูลที่ขัดแย้งกันซ้ำ: %1</translation>
-</message>
-<message>
-<source>Could not remove duplicate conflicted database: %1</source>
-<translation>ไม่สามารถลบฐานข้อมูลที่ขัดแย้งกันซ้ำ: %1</translation>
-</message>
-<message>
-<source>Removed merged conflicted database: %1</source>
-<translation>ลบฐานข้อมูลที่ขัดแย้งที่ผสานแล้ว: %1</translation>
-</message>
-<message>
-<source>Could not remove merged conflicted database: %1</source>
-<translation>ไม่สามารถลบฐานข้อมูลที่ขัดแย้งที่ผสาน: %1</translation>
-</message>
-<message>
-<source>Delete conflicted database copies</source>
-<translation>ลบสำเนาฐานข้อมูลที่ขัดแย้งกัน</translation>
-</message>
-<message numerus="yes">
-<source>Removed %n conflicted database copies</source>
-<translation>
-<numerusform>ลบ %n สำเนาฐานข้อมูลที่ขัดแย้ง</numerusform>
-</translation>
-</message>
-<message>
 <source>Please select the folder where your notes will get stored</source>
 <translation>โปรดเลือกโฟลเดอร์ที่จะเก็บบันทึกย่อของคุณ</translation>
 </message>
@@ -2605,54 +2783,6 @@ Restore current note?</source>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>คุณต้องเลือกโฟลเดอร์บันทึกย่อบนคลาวด์ของคุณเองเพื่อให้ซอฟต์แวร์นี้ใช้งานได้!</translation>
 </message>
-<message>
-<source>Remove current note</source>
-<translation>ลบบันทึกย่อปัจจุบัน</translation>
-</message>
-<message>
-<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>ลบโน้ตปัจจุบัน: &lt;strong&gt;%1 &lt;/strong&gt; หรือไม่</translation>
-</message>
-<message>
-<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-<translation>โปรดป้อน &lt;strong&gt; รหัสผ่าน &lt;/strong&gt; ของบันทึกย่อที่เข้ารหัสนี้</translation>
-</message>
-<message>
-<source>Note can't be decrypted!</source>
-<translation>ไม่สามารถถอดรหัสโน้ตได้!</translation>
-</message>
-<message>
-<source>It seems that your password is not valid!</source>
-<translation>ดูเหมือนว่ารหัสผ่านของคุณไม่ถูกต้อง!</translation>
-</message>
-<message>
-<source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-</translation>
-</message>
-<message>
-<source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-</translation>
-</message>
-<message>
-<source>Remove selected notes</source>
-<translation>ลบบันทึกย่อที่เลือก</translation>
-</message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
@@ -2663,33 +2793,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 หากเปิดใช้งานถังขยะบนเซิร์ฟเวอร์คลาวด์ของคุณเองคุณควรจะสามารถกู้คืนได้จากที่นั่น</numerusform>
 </translation>
 </message>
-<message>
-<source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
-</message>
-<message>
-<source>Remove selected tags</source>
-<translation>ลบแท็กที่เลือก</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-<translation>
-<numerusform>ลบ &lt;strong&gt;%n &lt;/strong&gt; แท็กที่เลือกหรือไม่ จะไม่มีการลบโน้ตในกระบวนการนี้</numerusform>
-</translation>
-</message>
-<message>
-<source>Move selected notes</source>
-<translation>ย้ายบันทึกย่อที่เลือก</translation>
-</message>
 <message numerus="yes">
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>ย้าย% โน้ตที่เลือกไปยัง &lt;strong&gt;%2 &lt;/strong&gt; หรือไม่</numerusform>
 </translation>
-</message>
-<message>
-<source>Copy selected notes</source>
-<translation>คัดลอกบันทึกย่อที่เลือก</translation>
 </message>
 <message numerus="yes">
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
@@ -2697,24 +2805,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>คัดลอก% n บันทึกย่อที่เลือกไปยัง &lt;strong&gt;%2 &lt;/strong&gt; หรือไม่</numerusform>
 </translation>
 </message>
-<message>
-<source>Done</source>
-<translation>เสร็จสิ้น</translation>
-</message>
 <message numerus="yes">
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n บันทึกถูกคัดลอกไปยัง &lt;strong&gt;%2 &lt;/strong&gt;</numerusform>
-</translation>
-</message>
-<message>
-<source>Tag selected notes</source>
-<translation>แท็กบันทึกย่อที่เลือก</translation>
-</message>
-<message numerus="yes">
-<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>แท็กบันทึกที่เลือกไว้ %n รายการด้วย &lt;strong&gt;%2 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
@@ -2726,31 +2820,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>คุณอาจต้องรีสตาร์ทแอปพลิเคชันเพื่อให้การเปลี่ยนแปลงมีผล</translation>
 </message>
 <message>
-<source>PDF files</source>
-<translation>ไฟล์ PDF</translation>
-</message>
-<message>
 <source>Todo lists disabled!</source>
 <translation>รายการสิ่งที่ต้องทำถูกปิดใช้งาน!</translation>
 </message>
 <message>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>คุณได้ปิดใช้งานรายการสิ่งที่ต้องทำ &lt;br /&gt; โปรดตรวจสอบการกำหนดค่า &lt;strong&gt; สิ่งที่ต้องทำ &lt;/strong&gt; ในการตั้งค่า!</translation>
-</message>
-<message numerus="yes">
-<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>
-<numerusform>พบ &lt;strong&gt;%n &lt;/strong&gt; เกิดขึ้นกับคำใด ๆ ของ &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
-</translation>
-</message>
-<message>
-<source>Note</source>
-<comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
-</message>
-<message>
-<source>Note folders</source>
-<translation>หมายเหตุโฟลเดอร์</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your ownCloud server</source>
@@ -2784,22 +2859,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
-</message>
-<message>
-<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>บันทึกย่อของคุณจะถูกถอดรหัสและเก็บไว้เป็นข้อความธรรมดาอีกครั้ง โปรดทราบว่าอาจมีการเข้ารหัสบันทึกย่อที่ไม่ได้เข้ารหัสกับเซิร์ฟเวอร์ของคุณและข้อความที่ละเอียดอ่อนอาจถูกเปิดเผย &lt;br /&gt; คุณต้องการถอดรหัสบันทึกย่อของคุณหรือไม่</translation>
-</message>
-<message>
-<source>Markdown files</source>
-<translation>ไฟล์ Markdown</translation>
-</message>
-<message>
-<source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
-</message>
-<message>
-<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -2853,80 +2912,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
 <translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
 </message>
-<message numerus="yes">
-<source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-</translation>
-</message>
-<message>
-<source>Update backlinks</source>
-<translation type="unfinished">Update backlinks</translation>
-</message>
-<message numerus="yes">
-<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
-<translation type="unfinished">
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Updated heading links in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
-</translation>
-</message>
-<message>
-<source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
-</message>
-<message>
-<source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
-</message>
-<message>
-<source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
-</message>
-<message>
-<source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
-</message>
-<message>
-<source>Copy note filename</source>
-<translation type="unfinished">Copy note filename</translation>
-</message>
-<message>
-<source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
-</message>
-<message>
-<source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
-</message>
-<message>
-<source>Split note</source>
-<translation type="unfinished">Split note</translation>
-</message>
-<message>
-<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
-</message>
-<message>
-<source>Ln %1, Col %2</source>
-<comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
-</message>
-<message>
-<source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
-</message>
-<message numerus="yes">
-<source>%n selected</source>
-<comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-</translation>
-</message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
 <translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
@@ -2940,32 +2925,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">No versions are available for this note.</translation>
 </message>
 <message>
-<source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
-</message>
-<message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <source>Note filename '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
-</message>
-<message>
-<source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
-</message>
-<message>
-<source>AI models</source>
-<translation type="unfinished">AI models</translation>
-</message>
-<message>
-<source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
-</message>
-<message>
-<source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
@@ -2997,49 +2962,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>รีเซ็ตขนาดตัวอักษรเป็น %1 pt</translation>
 </message>
 <message>
-<source>Remove tag '%1' from the current note</source>
-<translation>ลบแท็ก '%1' ออกจากบันทึกปัจจุบัน</translation>
-</message>
-<message>
-<source>Remove tag '%1' from the selected notes</source>
-<translation>ลบแท็ก '%1' ออกจากบันทึกย่อที่เลือก</translation>
-</message>
-<message>
-<source>Rename tag</source>
-<translation>เปลี่ยนชื่อวัน</translation>
-</message>
-<message>
-<source>Assign color</source>
-<translation>กำหนดสี</translation>
-</message>
-<message>
-<source>Disable color</source>
-<translation>ปิดการใช้งานสี</translation>
-</message>
-<message>
-<source>&amp;Move tags to…</source>
-<translation>&amp;ย้ายแท็กไปที่ ...</translation>
-</message>
-<message>
-<source>Move to the root</source>
-<comment>to move a tag to the current tag in the tag context menu</comment>
-<translation>ย้ายไปที่ราก</translation>
-</message>
-<message>
 <source>The scripting engine was reloaded</source>
 <translation>เครื่องมือการเขียนสคริปต์ถูกโหลดใหม่</translation>
-</message>
-<message>
-<source>HTML files</source>
-<translation>ไฟล์ HTML</translation>
-</message>
-<message>
-<source>Jump to the note's subfolder</source>
-<translation>ข้ามไปที่โฟลเดอร์ย่อยของบันทึกย่อ</translation>
-</message>
-<message>
-<source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -3057,18 +2981,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>No script updates were found</source>
 <translation>ไม่พบการอัปเดตสคริปต์</translation>
 </message>
-<message>
-<source>Toggle note stickiness</source>
-<translation>สลับหมายเหตุความหนืด</translation>
-</message>
-<message>
-<source>Close other note tabs</source>
-<translation>ปิดแท็บบันทึกอื่น ๆ</translation>
-</message>
-<message>
-<source>Rename note</source>
-<translation>เปลี่ยนชื่อบันทึกย่อ</translation>
-</message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation type="unfinished">
@@ -3078,86 +2990,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Paste &amp;HTML as Markdown</source>
 <translation type="unfinished">Paste &amp;HTML as Markdown</translation>
-</message>
-<message>
-<source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
-</message>
-<message>
-<source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
-</message>
-<message>
-<source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-</translation>
-</message>
-<message>
-<source>Allows you to rename the filename of the note</source>
-<translation>ช่วยให้คุณเปลี่ยนชื่อไฟล์ของบันทึกย่อ</translation>
-</message>
-<message>
-<source>&amp;Move notes to…</source>
-<translation>&amp;ย้ายโน้ตไปที่ ...</translation>
-</message>
-<message>
-<source>&amp;Copy notes to…</source>
-<translation>&amp;คัดลอกบันทึกไปที่ ...</translation>
-</message>
-<message>
-<source>Move notes to subfolder…</source>
-<translation>ย้ายโน้ตไปที่โฟลเดอร์ย่อย ...</translation>
-</message>
-<message>
-<source>Copy notes to subfolder…</source>
-<translation>คัดลอกบันทึกย่อไปยังโฟลเดอร์ย่อย ...</translation>
-</message>
-<message>
-<source>&amp;Tag selected notes with…</source>
-<translation>&amp;แท็กบันทึกย่อที่เลือกด้วย ...</translation>
-</message>
-<message>
-<source>&amp;Remove tag from selected notes…</source>
-<translation>&amp;ลบแท็กออกจากบันทึกย่อที่เลือก ...</translation>
-</message>
-<message>
-<source>Name:</source>
-<translation>นามสกุล:</translation>
-</message>
-<message>
-<source>Note renaming not enabled!</source>
-<translation>ไม่ได้เปิดใช้งานการเปลี่ยนชื่อหมายเหตุ!</translation>
-</message>
-<message>
-<source>Create new workspace</source>
-<translation>สร้างพื้นที่ทำงานใหม่</translation>
-</message>
-<message>
-<source>Workspace name:</source>
-<translation>ชื่อพื้นที่ทำงาน:</translation>
-</message>
-<message>
-<source>full</source>
-<comment>full workspace</comment>
-<translation>เต็ม</translation>
-</message>
-<message>
-<source>minimal</source>
-<comment>minimal workspace</comment>
-<translation>ต่ำสุด</translation>
-</message>
-<message>
-<source>Remove the current workspace?</source>
-<translation>ลบพื้นที่ทำงานปัจจุบันหรือไม่</translation>
-</message>
-<message>
-<source>Rename workspace</source>
-<translation>เปลี่ยนชื่อเวิร์กสเปซ</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
@@ -3200,46 +3032,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>คัดลอกหัวเรื่อง '%1' ไปยังคลิปบอร์ดแล้ว</translation>
 </message>
 <message>
-<source>Leave full-screen mode</source>
-<translation>ออกจากโหมดเต็มหน้าจอ</translation>
-</message>
-<message>
-<source>Custom editor width</source>
-<translation>ความกว้างของตัวแก้ไขที่กำหนดเอง</translation>
-</message>
-<message>
-<source>Characters:</source>
-<translation>ตัวอักษร:</translation>
-</message>
-<message numerus="yes">
-<source>%n notes selected</source>
-<translation>
-<numerusform>เลือก %n บันทึก</numerusform>
-</translation>
-</message>
-<message>
 <source>Allow all note editing</source>
 <translation>อนุญาตการแก้ไขโน้ตทั้งหมด</translation>
 </message>
 <message>
 <source>&amp;Tag</source>
 <translation type="unfinished">&amp;Tag</translation>
-</message>
-<message>
-<source>Remove tag from selected notes</source>
-<translation>ลบแท็กออกจากบันทึกย่อที่เลือก</translation>
-</message>
-<message numerus="yes">
-<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-<translation>
-<numerusform>ลบแท็ก &lt;strong&gt;%1 &lt;/strong&gt; จากโน้ตที่เลือก %n หรือไม่</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-<translation>
-<numerusform>แท็ก &lt;strong&gt;%1 &lt;/strong&gt; ถูกนำออกจากบันทึกย่อ %n รายการ</numerusform>
-</translation>
 </message>
 <message>
 <source>Current notes folder: </source>
@@ -3250,120 +3048,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ตั้งค่าโฟลเดอร์บันทึกย่อ โฟลเดอร์บันทึกย่อปัจจุบัน:</translation>
 </message>
 <message>
-<source>Print note</source>
-<translation>พิมพ์บันทึก</translation>
-</message>
-<message>
-<source>Letter</source>
-<translation>จดหมาย</translation>
-</message>
-<message>
-<source>Portrait</source>
-<translation>ภาพเหมือน</translation>
-</message>
-<message>
-<source>Landscape</source>
-<translation>ภูมิประเทศ</translation>
-</message>
-<message>
-<source>Orientation</source>
-<translation>ปฐมนิเทศ</translation>
-</message>
-<message>
-<source>Orientation:</source>
-<translation>ปฐมนิเทศ:</translation>
-</message>
-<message>
-<source>Export current note as PDF</source>
-<translation>ส่งออกบันทึกย่อปัจจุบันเป็น PDF</translation>
-</message>
-<message>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>คุณยังไม่ได้เลือกรายการสิ่งที่ต้องทำ &lt;br /&gt; โปรดตรวจสอบการกำหนดค่า &lt;strong&gt; สิ่งที่ต้องทำ &lt;/strong&gt; ในการตั้งค่า!</translation>
-</message>
-<message>
-<source>Open QOwnNotes</source>
-<translation>เปิด QOwnNotes</translation>
-</message>
-<message>
-<source>New note</source>
-<translation>โน้ตใหม่</translation>
-</message>
-<message>
-<source>Recent notes</source>
-<translation>บันทึกล่าสุด</translation>
-</message>
-<message>
-<source>Show todo lists</source>
-<translation>แสดงรายการสิ่งที่ต้องทำ</translation>
-</message>
-<message>
-<source>Recent tasks</source>
-<translation>งานล่าสุด</translation>
-</message>
-<message>
-<source>Quit</source>
-<translation>เลิก</translation>
 </message>
 <message>
 <source>Note folder</source>
 <translation>โฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
-<source>Copy to note folder</source>
-<translation>คัดลอกไปยังโฟลเดอร์บันทึกย่อ</translation>
-</message>
-<message>
-<source>Move to note folder</source>
-<translation>ย้ายไปยังโฟลเดอร์บันทึกย่อ</translation>
-</message>
-<message>
-<source>Copy to this subfolder</source>
-<translation>คัดลอกไปยังโฟลเดอร์ย่อยนี้</translation>
-</message>
-<message>
-<source>Move to this subfolder</source>
-<translation>ย้ายไปที่โฟลเดอร์ย่อยนี้</translation>
-</message>
-<message numerus="yes">
-<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>ย้าย %n โน้ตที่เลือกเพื่อบันทึกโฟลเดอร์ย่อย &lt;strong&gt;%2 &lt;/strong&gt;</numerusform>
-</translation>
-</message>
-<message>
 <source>Cancel</source>
 <translation>ยกเลิก</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were moved to note subfolder "%2"</source>
-<translation>
-<numerusform>%n บันทึกถูกย้ายไปยังโฟลเดอร์ย่อย "%2"</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>คัดลอก %n บันทึกที่เลือกเพื่อบันทึกโฟลเดอร์ย่อย &lt;strong&gt;%2 &lt;/strong&gt; หรือไม่</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were copied to note subfolder "%2"</source>
-<translation>
-<numerusform>%n บันทึกถูกคัดลอกไปยังโฟลเดอร์ย่อย "%2"</numerusform>
-</translation>
-</message>
-<message>
-<source>Open note in external editor</source>
-<translation>เปิดบันทึกย่อในเอดิเตอร์ภายนอก</translation>
-</message>
-<message>
-<source>Show note in file manager</source>
-<translation>แสดงบันทึกย่อในตัวจัดการไฟล์</translation>
-</message>
-<message>
-<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>หากคุณต้องการเปลี่ยนชื่อบันทึกย่อของคุณคุณต้องเปิดใช้งานตัวเลือกเพื่อให้ชื่อไฟล์โน้ตแตกต่างจากบรรทัดแรก</translation>
 </message>
 <message>
 <source>Create a new folder</source>
@@ -3374,28 +3068,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>ชื่อโฟลเดอร์:</translation>
 </message>
 <message>
-<source>show all untagged notes (%1)</source>
-<translation>แสดงโน้ตที่ไม่ติดแท็กทั้งหมด (%1)</translation>
-</message>
-<message>
-<source>Untagged notes</source>
-<translation>โน้ตที่ไม่ติดแท็ก</translation>
-</message>
-<message>
-<source>Export current note as HTML file</source>
-<translation>ส่งออกบันทึกย่อปัจจุบันเป็นไฟล์ HTML</translation>
-</message>
-<message>
-<source>Page size</source>
-<translation>ขนาดหน้ากระดาษ</translation>
-</message>
-<message>
 <source>quit toolbar</source>
 <translation>ออกจากแถบเครื่องมือ</translation>
-</message>
-<message>
-<source>Page size:</source>
-<translation>ขนาดหน้า:</translation>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
@@ -3406,66 +3080,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">&amp;Ok</translation>
 </message>
 <message>
-<source>&amp;Remove notes</source>
-<translation>&amp;ลบโน้ต</translation>
-</message>
-<message>
 <source>Your tasks are being loaded from your server</source>
 <translation>งานของคุณกำลังโหลดจากเซิร์ฟเวอร์ของคุณ</translation>
-</message>
-<message>
-<source>Current note was modified externally</source>
-<translation>บันทึกย่อปัจจุบันถูกแก้ไขจากภายนอก</translation>
-</message>
-<message>
-<source>Stored current note to disk</source>
-<translation>บันทึกปัจจุบันไปยังดิสก์</translation>
-</message>
-<message>
-<source>Note was modified externally: %1</source>
-<translation>หมายเหตุถูกแก้ไขภายนอก: %1</translation>
-</message>
-<message>
-<source>Notes directory was modified externally</source>
-<translation>ไดเร็กทอรี Notes ถูกแก้ไขภายนอก</translation>
-</message>
-<message numerus="yes">
-<source>Stored %n note(s) to disk</source>
-<translation>
-<numerusform>บันทึก %n บันทึกลงดิสก์แล้ว</numerusform>
-</translation>
-</message>
-<message>
-<source>All notes</source>
-<translation>บันทึกทั้งหมด</translation>
-</message>
-<message>
-<source>&amp;Add tag</source>
-<translation>&amp;เพิ่มแท็ก</translation>
-</message>
-<message>
-<source>Tag could not be created!</source>
-<translation>ไม่สามารถสร้างแท็กได้!</translation>
-</message>
-<message>
-<source>Move to this tag</source>
-<translation>ย้ายไปที่แท็กนี้</translation>
-</message>
-<message>
-<source>Tag this</source>
-<translation>วันนี้</translation>
-</message>
-<message>
-<source>Cannot move tag '%1' to this tag</source>
-<translation>ไม่สามารถย้ายแท็ก '%1' ไปยังแท็กนี้</translation>
-</message>
-<message>
-<source>Moved tag '%1' to new tag</source>
-<translation>ย้ายแท็ก '%1' ไปยังแท็กใหม่แล้ว</translation>
-</message>
-<message>
-<source>&amp;Remove tags</source>
-<translation>&amp;ลบแท็ก</translation>
 </message>
 <message>
 <source>No selected todo lists!</source>
@@ -3556,28 +3172,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>แสดง %1</translation>
 </message>
 <message>
-<source>Leave distraction free mode</source>
-<translation>ออกจากโหมดปราศจากความฟุ้งซ่าน</translation>
-</message>
-<message>
 <source>Switch to note folder</source>
 <translation>สลับเป็นโฟลเดอร์บันทึกย่อ</translation>
 </message>
 <message>
 <source>Toolbar could not be loaded without name</source>
 <translation>ไม่สามารถโหลด Toolbar โดยไม่มีชื่อ</translation>
-</message>
-<message>
-<source>Overwriting external changes of: %1</source>
-<translation>เขียนทับการเปลี่ยนแปลงภายนอกของ: %1</translation>
-</message>
-<message>
-<source>Loading external changes from: %1</source>
-<translation>กำลังโหลดการเปลี่ยนแปลงภายนอกจาก: %1</translation>
-</message>
-<message>
-<source>Current note could not be stored to disk</source>
-<translation>บันทึกปัจจุบันไม่สามารถจัดเก็บลงดิสก์ได้</translation>
 </message>
 <message>
 <source>Read-only</source>
@@ -3596,32 +3196,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>คลิกที่นี่เพื่อดูว่ามีอะไรเปลี่ยนแปลงและสามารถอัปเดตเป็นเวอร์ชันล่าสุดได้</translation>
 </message>
 <message>
-<source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
-</message>
-<message numerus="yes">
-<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-<translation>
-<numerusform>ดำเนินการต่อด้วยการลบสำเนาฐานข้อมูลที่ขัดแย้งกัน &lt;strong&gt;%n &lt;/strong&gt; ที่อาจบล็อกกระบวนการซิงค์ของคุณเองหรือไม่</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were tagged with "%2"</source>
-<translation>
-<numerusform>%n บันทึกถูกติดแท็กด้วย "%2"</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>
-<numerusform>พบ &lt;strong&gt;%n &lt;/strong&gt; ที่เกิดขึ้นจาก &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
-</translation>
-</message>
-<message>
-<source>Note headline</source>
-<translation>หมายเหตุพาดหัว</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3633,30 +3207,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Open &amp;settings</source>
 <translation>เปิด &amp;การตั้งค่า</translation>
 </message>
-<message>
-<source>leave</source>
-<translation>ออกจาก</translation>
-</message>
-<message>
-<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-<translation>โปรดป้อน &lt;strong&gt; รหัสผ่าน &lt;/strong&gt; เพื่อเข้ารหัสโน้ต &lt;br /&gt; โปรดจำไว้ว่าคุณต้อง &lt;strong&gt; จดจำ &lt;/strong&gt; รหัสผ่านของคุณเพื่ออ่านเนื้อหาของโน้ต &lt;br /&gt; และ คุณสามารถ &lt;strong&gt; เท่านั้น &lt;/strong&gt; ทำ &lt;strong&gt; ใน QOwnNotes &lt;/strong&gt;!</translation>
-</message>
-<message>
-<source>Decrypt note and store it as plain text</source>
-<translation>ถอดรหัสโน้ตและเก็บเป็นข้อความธรรมดา</translation>
-</message>
-<message>
-<source>&amp;Decrypt</source>
-<translation>&amp;ถอดรหัส</translation>
-</message>
-<message>
-<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-<translation>&lt;br /&gt; คุณจะสามารถแก้ไขบันทึกย่อที่เข้ารหัสของคุณ</translation>
-</message>
-<message>
-<source>Export current note as Markdown file</source>
-<translation>ส่งออกบันทึกย่อปัจจุบันเป็นไฟล์ Markdown</translation>
-</message>
 </context>
 <context>
 <name>MarkdownLspClient</name>
@@ -3667,6 +3217,127 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Failed to start Markdown LSP server: %1</source>
 <translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+</message>
+</context>
+<context>
+<name>MediaInsertionManager</name>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
+</message>
+<message>
+<source>Temporary file can't be opened</source>
+<translation type="unfinished">Temporary file can't be opened</translation>
+</message>
+<message>
+<source>Inserted text as text attachment file</source>
+<translation type="unfinished">Inserted text as text attachment file</translation>
+</message>
+<message>
+<source>Inserting image</source>
+<translation type="unfinished">Inserting image</translation>
+</message>
+<message>
+<source>Done inserting image</source>
+<translation type="unfinished">Done inserting image</translation>
+</message>
+<message>
+<source>Inserting attachment</source>
+<translation type="unfinished">Inserting attachment</translation>
+</message>
+<message>
+<source>Done inserting attachment</source>
+<translation type="unfinished">Done inserting attachment</translation>
+</message>
+<message numerus="yes">
+<source>Copied %n note(s) to %1</source>
+<translation type="unfinished">
+<numerusform>Copied %n note(s) to %1</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Failed to copy %n note(s) (most likely already existing)</source>
+<translation type="unfinished">
+<numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Saving temporary image</source>
+<translation type="unfinished">Saving temporary image</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+</message>
+<message>
+<source>Paste as &amp;text file attachment</source>
+<translation type="unfinished">Paste as &amp;text file attachment</translation>
+</message>
+<message>
+<source>Downloading %1</source>
+<translation type="unfinished">Downloading %1</translation>
+</message>
+<message>
+<source>Downloading images finished</source>
+<translation type="unfinished">Downloading images finished</translation>
+</message>
+</context>
+<context>
+<name>NavigationManager</name>
+<message>
+<source>Update backlinks</source>
+<translation type="unfinished">Update backlinks</translation>
+</message>
+<message numerus="yes">
+<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
+<translation type="unfinished">
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Updated heading links in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Updated heading links in %n note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -3949,6 +3620,61 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 </context>
 <context>
+<name>NoteEncryptionManager</name>
+<message>
+<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
+<translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+</message>
+<message>
+<source>Note can't be decrypted!</source>
+<translation type="unfinished">Note can't be decrypted!</translation>
+</message>
+<message>
+<source>It seems that your password is not valid!</source>
+<translation type="unfinished">It seems that your password is not valid!</translation>
+</message>
+<message>
+<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
+<translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+</message>
+<message>
+<source>Decrypt note and store it as plain text</source>
+<translation type="unfinished">Decrypt note and store it as plain text</translation>
+</message>
+<message>
+<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+<translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+</message>
+<message>
+<source>&amp;Decrypt</source>
+<translation type="unfinished">&amp;Decrypt</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
+</message>
+<message>
+<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
+<translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+</message>
+<message>
+<source>Markdown files</source>
+<translation type="unfinished">Markdown files</translation>
+</message>
+<message>
+<source>Export current note as Markdown file</source>
+<translation type="unfinished">Export current note as Markdown file</translation>
+</message>
+<message>
+<source>Export attached files</source>
+<translation type="unfinished">Export attached files</translation>
+</message>
+<message>
+<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
+<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+</message>
+</context>
+<context>
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
@@ -3973,6 +3699,241 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Copy absolute path of note folder</source>
 <translation type="unfinished">Copy absolute path of note folder</translation>
+</message>
+</context>
+<context>
+<name>NoteIndexManager</name>
+<message>
+<source>Loading notes…</source>
+<translation type="unfinished">Loading notes…</translation>
+</message>
+<message>
+<source>Abort</source>
+<translation type="unfinished">Abort</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation type="unfinished">Note folder</translation>
+</message>
+<message>
+<source>Removed duplicate conflicted database: %1</source>
+<translation type="unfinished">Removed duplicate conflicted database: %1</translation>
+</message>
+<message>
+<source>Could not remove duplicate conflicted database: %1</source>
+<translation type="unfinished">Could not remove duplicate conflicted database: %1</translation>
+</message>
+<message>
+<source>Removed merged conflicted database: %1</source>
+<translation type="unfinished">Removed merged conflicted database: %1</translation>
+</message>
+<message>
+<source>Could not remove merged conflicted database: %1</source>
+<translation type="unfinished">Could not remove merged conflicted database: %1</translation>
+</message>
+<message>
+<source>Delete conflicted database copies</source>
+<translation type="unfinished">Delete conflicted database copies</translation>
+</message>
+<message numerus="yes">
+<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
+<translation type="unfinished">
+<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Removed %n conflicted database copies</source>
+<translation type="unfinished">
+<numerusform>Removed %n conflicted database copies</numerusform>
+</translation>
+</message>
+<message>
+<source>Current note was modified externally</source>
+<translation type="unfinished">Current note was modified externally</translation>
+</message>
+<message>
+<source>Overwriting external changes of: %1</source>
+<translation type="unfinished">Overwriting external changes of: %1</translation>
+</message>
+<message>
+<source>Loading external changes from: %1</source>
+<translation type="unfinished">Loading external changes from: %1</translation>
+</message>
+<message>
+<source>Note was removed externally!</source>
+<translation type="unfinished">Note was removed externally!</translation>
+</message>
+<message>
+<source>Current note was removed outside of this application!
+Restore current note?</source>
+<translation type="unfinished">Current note was removed outside of this application!
+Restore current note?</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation type="unfinished">Stored current note to disk</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation type="unfinished">Current note could not be stored to disk</translation>
+</message>
+<message>
+<source>Note was modified externally: %1</source>
+<translation type="unfinished">Note was modified externally: %1</translation>
+</message>
+<message>
+<source>Notes directory was modified externally</source>
+<translation type="unfinished">Notes directory was modified externally</translation>
+</message>
+<message numerus="yes">
+<source>Stored %n note(s) to disk</source>
+<translation type="unfinished">
+<numerusform>Stored %n note(s) to disk</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NoteOperationsManager</name>
+<message>
+<source>Remove current note</source>
+<translation type="unfinished">Remove current note</translation>
+</message>
+<message>
+<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>Remove selected notes and folders</source>
+<translation type="unfinished">Remove selected notes and folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation type="unfinished">Remove selected folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected notes</source>
+<translation type="unfinished">Remove selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+</translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation type="unfinished">Removed note subfolder: %1</translation>
+</message>
+<message>
+<source>Move selected notes</source>
+<translation type="unfinished">Move selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy selected notes</source>
+<translation type="unfinished">Copy selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation type="unfinished">Done</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+</translation>
+</message>
+<message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation type="unfinished">Note</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were moved to note subfolder "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to note subfolder "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy to note folder</source>
+<translation type="unfinished">Copy to note folder</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation type="unfinished">Move to note folder</translation>
+</message>
+<message>
+<source>Copy to this subfolder</source>
+<translation type="unfinished">Copy to this subfolder</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation type="unfinished">Move to this subfolder</translation>
+</message>
+<message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+</message>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Note headline</source>
+<translation type="unfinished">Note headline</translation>
 </message>
 </context>
 <context>
@@ -4090,6 +4051,144 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">
 <numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
+</message>
+</context>
+<context>
+<name>NoteTabManager</name>
+<message>
+<source>Toggle note stickiness</source>
+<translation type="unfinished">Toggle note stickiness</translation>
+</message>
+<message>
+<source>Close other note tabs</source>
+<translation type="unfinished">Close other note tabs</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+</context>
+<context>
+<name>NoteTreeManager</name>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Rename note</source>
+<translation type="unfinished">Rename note</translation>
+</message>
+<message>
+<source>Allows you to rename the filename of the note</source>
+<translation type="unfinished">Allows you to rename the filename of the note</translation>
+</message>
+<message>
+<source>&amp;Remove notes and folders</source>
+<translation type="unfinished">&amp;Remove notes and folders</translation>
+</message>
+<message>
+<source>&amp;Remove folders</source>
+<translation type="unfinished">&amp;Remove folders</translation>
+</message>
+<message>
+<source>&amp;Remove notes</source>
+<translation type="unfinished">&amp;Remove notes</translation>
+</message>
+<message>
+<source>&amp;Move notes to…</source>
+<translation type="unfinished">&amp;Move notes to…</translation>
+</message>
+<message>
+<source>&amp;Copy notes to…</source>
+<translation type="unfinished">&amp;Copy notes to…</translation>
+</message>
+<message>
+<source>Jump to the note's subfolder</source>
+<translation type="unfinished">Jump to the note's subfolder</translation>
+</message>
+<message>
+<source>Move notes to subfolder…</source>
+<translation type="unfinished">Move notes to subfolder…</translation>
+</message>
+<message>
+<source>Copy notes to subfolder…</source>
+<translation type="unfinished">Copy notes to subfolder…</translation>
+</message>
+<message>
+<source>&amp;Tag selected notes with…</source>
+<translation type="unfinished">&amp;Tag selected notes with…</translation>
+</message>
+<message>
+<source>&amp;Remove tag from selected notes…</source>
+<translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+</message>
+<message>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
+<source>Open note in external editor</source>
+<translation type="unfinished">Open note in external editor</translation>
+</message>
+<message>
+<source>Open note in different window</source>
+<translation type="unfinished">Open note in different window</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
+<source>Show note in file manager</source>
+<translation type="unfinished">Show note in file manager</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
+</message>
+<message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
+<source>Show note git versions</source>
+<translation type="unfinished">Show note git versions</translation>
+</message>
+<message>
+<source>Unmark as favorite</source>
+<translation type="unfinished">Unmark as favorite</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation type="unfinished">Mark as favorite</translation>
+</message>
+<message>
+<source>Select &amp;all notes</source>
+<translation type="unfinished">Select &amp;all notes</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation type="unfinished">Name:</translation>
+</message>
+<message>
+<source>Note renaming not enabled!</source>
+<translation type="unfinished">Note renaming not enabled!</translation>
+</message>
+<message>
+<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
+<translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation type="unfinished">Open &amp;settings</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4559,6 +4658,14 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
+<message>
+<source>media file</source>
+<translation type="unfinished">media file</translation>
+</message>
+<message>
+<source>attachment</source>
+<translation type="unfinished">attachment</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4678,6 +4785,22 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Spelling</source>
 <translation type="unfinished">Spelling</translation>
+</message>
+<message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>No suggestions</source>
+<translation type="unfinished">No suggestions</translation>
+</message>
+<message>
+<source>More info...</source>
+<translation type="unfinished">More info...</translation>
+</message>
+<message>
+<source>Ignore this rule</source>
+<translation type="unfinished">Ignore this rule</translation>
 </message>
 <message>
 <source>Markdown LSP server connected</source>
@@ -5002,6 +5125,29 @@ Do you want to install it anyway?</source>
 <message>
 <source>file doesn't exist</source>
 <translation>ไม่มีไฟล์</translation>
+</message>
+</context>
+<context>
+<name>SearchFilterManager</name>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation type="unfinished">Stored current note to disk</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation type="unfinished">Current note could not be stored to disk</translation>
 </message>
 </context>
 <context>
@@ -6168,6 +6314,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation type="unfinished">Optional arguments</translation>
 </message>
 <message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>Enable grammar and style checking with LanguageTool</source>
+<translation type="unfinished">Enable grammar and style checking with LanguageTool</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation type="unfinished">Test Connection</translation>
+</message>
+<message>
+<source>Language:</source>
+<translation type="unfinished">Language:</translation>
+</message>
+<message>
+<source>API key:</source>
+<translation type="unfinished">API key:</translation>
+</message>
+<message>
+<source>Optional premium or cloud API key</source>
+<translation type="unfinished">Optional premium or cloud API key</translation>
+</message>
+<message>
+<source>Check delay:</source>
+<translation type="unfinished">Check delay:</translation>
+</message>
+<message>
+<source> ms</source>
+<translation type="unfinished"> ms</translation>
+</message>
+<message>
+<source>Categories:</source>
+<translation type="unfinished">Categories:</translation>
+</message>
+<message>
+<source>Spelling</source>
+<translation type="unfinished">Spelling</translation>
+</message>
+<message>
+<source>Grammar</source>
+<translation type="unfinished">Grammar</translation>
+</message>
+<message>
+<source>Style</source>
+<translation type="unfinished">Style</translation>
+</message>
+<message>
+<source>Punctuation</source>
+<translation type="unfinished">Punctuation</translation>
+</message>
+<message>
+<source>Typography</source>
+<translation type="unfinished">Typography</translation>
+</message>
+<message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; คุณอาจต้องการดู &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; ทั้งหมด รูปแบบเวลา &lt;/a&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
@@ -6182,6 +6384,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
 <translation type="unfinished">Show small Markdown preview images in the editor, if there is no text after the image</translation>
+</message>
+<message>
+<source>Shows fold buttons for Markdown headings and allows collapsing their contents</source>
+<translation type="unfinished">Shows fold buttons for Markdown headings and allows collapsing their contents</translation>
+</message>
+<message>
+<source>Enable heading folding in the editor</source>
+<translation type="unfinished">Enable heading folding in the editor</translation>
+</message>
+<message>
+<source>Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</source>
+<translation type="unfinished">Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</translation>
+</message>
+<message>
+<source>Hide markdown formatting syntax on inactive lines</source>
+<translation type="unfinished">Hide markdown formatting syntax on inactive lines</translation>
 </message>
 <message>
 <source>Enable hanging indentation for Markdown lists</source>
@@ -6396,6 +6614,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Reset the suggestion API port</source>
 <translation type="unfinished">Reset the suggestion API port</translation>
+</message>
+<message>
+<source>If this is empty when saved, a new security token will be generated automatically.</source>
+<translation type="unfinished">If this is empty when saved, a new security token will be generated automatically.</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -7089,6 +7311,14 @@ Connection error message: </source>
 ข้อความแสดงข้อผิดพลาดการเชื่อมต่อ:</translation>
 </message>
 <message>
+<source>LanguageTool connection successful.</source>
+<translation type="unfinished">LanguageTool connection successful.</translation>
+</message>
+<message>
+<source>LanguageTool connection failed: %1</source>
+<translation type="unfinished">LanguageTool connection failed: %1</translation>
+</message>
+<message>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
@@ -7248,6 +7478,10 @@ Connection error message: </source>
 <message>
 <source>Undefined shortcut</source>
 <translation>ทางลัดที่ไม่ได้กำหนด</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation type="unfinished">Auto-detect</translation>
 </message>
 <message>
 <source>Assign a new shortcut</source>
@@ -7559,6 +7793,13 @@ Your notes will stay intact!</source>
 </message>
 </context>
 <context>
+<name>SpellCheckManager</name>
+<message>
+<source>Automatically detect</source>
+<translation type="unfinished">Automatically detect</translation>
+</message>
+</context>
+<context>
 <name>StoredAttachmentsDialog</name>
 <message>
 <source>Delete selected attachments</source>
@@ -7825,6 +8066,37 @@ Your notes will stay intact!</source>
 </message>
 </context>
 <context>
+<name>SystemTrayManager</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation type="unfinished">Open QOwnNotes</translation>
+</message>
+<message>
+<source>Note folders</source>
+<translation type="unfinished">Note folders</translation>
+</message>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Recent notes</source>
+<translation type="unfinished">Recent notes</translation>
+</message>
+<message>
+<source>Show todo lists</source>
+<translation type="unfinished">Show todo lists</translation>
+</message>
+<message>
+<source>Recent tasks</source>
+<translation type="unfinished">Recent tasks</translation>
+</message>
+<message>
+<source>Quit</source>
+<translation type="unfinished">Quit</translation>
+</message>
+</context>
+<context>
 <name>TableDialog</name>
 <message>
 <source>Insert table</source>
@@ -7924,6 +8196,162 @@ Your notes will stay intact!</source>
 <message>
 <source>New tag</source>
 <translation>แท็กใหม่</translation>
+</message>
+</context>
+<context>
+<name>TagManager</name>
+<message>
+<source>Show all notes (%1)</source>
+<translation type="unfinished">Show all notes (%1)</translation>
+</message>
+<message>
+<source>All notes</source>
+<translation type="unfinished">All notes</translation>
+</message>
+<message>
+<source>show all untagged notes (%1)</source>
+<translation type="unfinished">show all untagged notes (%1)</translation>
+</message>
+<message>
+<source>Untagged notes</source>
+<translation type="unfinished">Untagged notes</translation>
+</message>
+<message>
+<source>Show all notes tagged with '%1' (%2)</source>
+<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+</message>
+<message>
+<source>Add a tag to the current note</source>
+<translation type="unfinished">Add a tag to the current note</translation>
+</message>
+<message>
+<source>Add a tag to the selected notes</source>
+<translation type="unfinished">Add a tag to the selected notes</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n folder(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n folder(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n notes selected</source>
+<translation type="unfinished">
+<numerusform>%n notes selected</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the current note</source>
+<translation type="unfinished">Remove tag '%1' from the current note</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the selected notes</source>
+<translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+</message>
+<message>
+<source>&amp;Add tag</source>
+<translation type="unfinished">&amp;Add tag</translation>
+</message>
+<message>
+<source>Rename tag</source>
+<translation type="unfinished">Rename tag</translation>
+</message>
+<message>
+<source>Assign color</source>
+<translation type="unfinished">Assign color</translation>
+</message>
+<message>
+<source>Disable color</source>
+<translation type="unfinished">Disable color</translation>
+</message>
+<message>
+<source>&amp;Remove tags</source>
+<translation type="unfinished">&amp;Remove tags</translation>
+</message>
+<message>
+<source>&amp;Move tags to…</source>
+<translation type="unfinished">&amp;Move tags to…</translation>
+</message>
+<message>
+<source>Tag could not be created!</source>
+<translation type="unfinished">Tag could not be created!</translation>
+</message>
+<message>
+<source>Move to the root</source>
+<comment>to move a tag to the current tag in the tag context menu</comment>
+<translation type="unfinished">Move to the root</translation>
+</message>
+<message>
+<source>Move to this tag</source>
+<translation type="unfinished">Move to this tag</translation>
+</message>
+<message>
+<source>Tag this</source>
+<translation type="unfinished">Tag this</translation>
+</message>
+<message>
+<source>Cannot move tag '%1' to this tag</source>
+<translation type="unfinished">Cannot move tag '%1' to this tag</translation>
+</message>
+<message>
+<source>Moved tag '%1' to new tag</source>
+<translation type="unfinished">Moved tag '%1' to new tag</translation>
+</message>
+<message>
+<source>Tag selected notes</source>
+<translation type="unfinished">Tag selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were tagged with "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were tagged with "%2"</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag from selected notes</source>
+<translation type="unfinished">Remove tag from selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
+<translation type="unfinished">
+<numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation type="unfinished">Done</translation>
+</message>
+<message numerus="yes">
+<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected tags</source>
+<translation type="unfinished">Remove selected tags</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8669,6 +9097,43 @@ This cannot be undone!</source>
 <message>
 <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
 <translation>โปรดทราบว่าโฟลเดอร์บันทึกย่อจะถูกจัดเก็บสัมพันธ์กับไดเรกทอรีที่ QOwnNotes อยู่ในโหมดพกพา! ดังนั้นคุณต้องอยู่ในไดรฟ์เดียวกัน</translation>
+</message>
+</context>
+<context>
+<name>WorkspaceManager</name>
+<message>
+<source>Workspaces</source>
+<translation type="unfinished">Workspaces</translation>
+</message>
+<message>
+<source>full</source>
+<comment>full workspace</comment>
+<translation type="unfinished">full</translation>
+</message>
+<message>
+<source>minimal</source>
+<comment>minimal workspace</comment>
+<translation type="unfinished">minimal</translation>
+</message>
+<message>
+<source>Create new workspace</source>
+<translation type="unfinished">Create new workspace</translation>
+</message>
+<message>
+<source>Workspace name:</source>
+<translation type="unfinished">Workspace name:</translation>
+</message>
+<message>
+<source>Remove current workspace</source>
+<translation type="unfinished">Remove current workspace</translation>
+</message>
+<message>
+<source>Remove the current workspace?</source>
+<translation type="unfinished">Remove the current workspace?</translation>
+</message>
+<message>
+<source>Rename workspace</source>
+<translation type="unfinished">Rename workspace</translation>
 </message>
 </context>
 <context>

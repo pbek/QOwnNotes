@@ -35,7 +35,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - **مجلد الملاحظات** يمكن **اختياره بحرية** (يمكن اختيار مجلدات متعددة للملاحظات)
 - إمكانية **البحث بأجزاء الكلمات** في الملاحظات، وتظليل نتائج البحث فيها
 - [**إضافة للمتصفح**](browser-extension.md) حتى يمكنك **إضافة ملاحظات من النص المحدد** أو **أخذ لقطات شاشة** أو **إدارة إشاراتك المرجعية**
-- دعم [**التدقيق الإملائي**](../editor/spellchecking.md)
+- [**Spellchecking**](../editor/spellchecking.md) and optional [**LanguageTool**](../editor/languagetool.md) support
 - **الوضع المحمول** لحمل QOwnNotes على وحدة تخزين USB والتنقل به
 - **قابلية البرمجة** وكذلك [**مستودع بُريمِجات**](https://github.com/qownnotes/scripts) على الإنترنت، حيث يمكنك تثبيت البُريمِجات من داخل التطبيق
 - دعم **[API الإكمال بالذكاء المصطنع من OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** لاستعماله في البرمجة

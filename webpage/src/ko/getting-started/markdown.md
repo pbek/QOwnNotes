@@ -20,7 +20,9 @@
 ###### H6
 ```
 
-::: 팁 **네비게이션 패널**은 제목의 구조를 보여줍니다. :::
+::: tip
+**네비게이션 패널**은 제목의 구조를 보여줍니다.
+:::
 
 또는 H1과 H2의 경우 밑줄이 있는 스타일:
 
@@ -32,7 +34,9 @@ Alt-H2
 ------
 ```
 
-::: 팁 기본적으로 QOwnNotes는 **머리글 1** (h1)에서 **노트의 파일 이름**을 작성합니다. :::
+::: tip
+기본적으로 QOwnNotes는 **머리글 1** (h1)에서 **노트의 파일 이름**을 작성합니다.
+:::
 
 ## 강조
 
@@ -44,7 +48,8 @@ Alt-H2
 **별표와 밑줄**을 함께 사용하여 강조합니다.
 ```
 
-[단축키](./shortcuts.md) <kbd>Ctrl + B</kbd>를 사용하여 텍스트를 굵게 표시하고 <kbd>Ctrl + I</kbd>을 사용하여 기울임꼴로 표시할 수 있습니다. :::
+[단축키](./shortcuts.md) <kbd>Ctrl + B</kbd>를 사용하여 텍스트를 굵게 표시하고 <kbd>Ctrl + I</kbd>을 사용하여 기울임꼴로 표시할 수 있습니다.
+:::
 
 ## 밑줄
 
@@ -54,7 +59,9 @@ _미리보기 설정_에서 밑줄 렌더링을 활성화하는 옵션 설정도
 _밑줄_
 ```
 
-:::  팁 [단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다. :::
+::: tip
+[단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다.
+:::
 
 ## 취소선
 
@@ -62,7 +69,9 @@ _밑줄_
 ~~취소선~~
 ```
 
-::: 팁 [단축키](./shortcuts.md) <kbd>Alt + Shift + S</kbd>을 사용하여 텍스트를 삭제할 수 있습니다. :::
+::: tip
+[단축키](./shortcuts.md) <kbd>Alt + Shift + S</kbd>을 사용하여 텍스트를 삭제할 수 있습니다.
+:::
 
 ## 목록
 
@@ -84,7 +93,8 @@ _밑줄_
 + 또는 더하기 기호
 ```
 
-::: 팁 목록 끝에 있는 <kbd>Enter<0>을 누르면 새 목록 항목이 생성됩니다. :::</p>
+::: tip
+목록 끝에 있는 <kbd>Enter<0>을 누르면 새 목록 항목이 생성됩니다. :::</p>
 
 <h2 spaces-before="0">
   링크
@@ -131,7 +141,8 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  노트의 링크에서 커서를 편집하여 링크를 따라가는 동안 <kbd>Ctrl + Space</kbd>를 누를 수 있습니다. :::
+  노트의 링크에서 커서를 편집하여 링크를 따라가는 동안 <kbd>Ctrl + Space</kbd>를 누를 수 있습니다.
+:::
 </p>
 
 <p spaces-before="0">
@@ -142,7 +153,8 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <p spaces-before="0">
-  :::
+ 
+:::
 </p>
 
 <h3 spaces-before="0">
@@ -172,7 +184,8 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </p>
 
 <p spaces-before="0">
-  <kbd>Ctrl + Shift + V</kbd>을 사용하여 클립보드의 이미지를 노트에 직접 붙여넣을 수도 있습니다. :::
+  <kbd>Ctrl + Shift + V</kbd>을 사용하여 클립보드의 이미지를 노트에 직접 붙여넣을 수도 있습니다.
+:::
 </p>
 
 <p spaces-before="0">
@@ -183,7 +196,8 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <p spaces-before="0">
-  :::
+ 
+:::
 </p>
 
 <h2 spaces-before="0">
@@ -194,7 +208,8 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <p spaces-before="0">
-  ::: 팁 선택한 인라인 텍스트 또는 텍스트 바로 안쪽에서 <a href="./shortcuts.md">단축키</a> <kbd>Ctrl + Shift + C</kbd>를 사용하여 인라인 코드 블록을 만들 수 있습니다. :::
+  ::: 팁 선택한 인라인 텍스트 또는 텍스트 바로 안쪽에서 <a href="./shortcuts.md">단축키</a> <kbd>Ctrl + Shift + C</kbd>를 사용하여 인라인 코드 블록을 만들 수 있습니다.
+:::
 </p>
 
 <p spaces-before="0">
@@ -230,7 +245,8 @@ http://www.example.com 또는 &lt;http://www.example.com&gt;
 </code></pre>
 
 <pre><code>
-::: 팁
+::: tip
+
  [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd>를 선택한
  여러 텍스트 행 또는 빈 행에서 사용하여 코드 블록을 만들 수 있습니다.
 :::
@@ -285,11 +301,11 @@ cd Notes
 ```마크다운
 콜론은 열을 정렬하는 데 사용할 수 있습니다.
 
-| Tables        | Are           | Cool  |
+| 테이블        | 이           | 멎져요  |
 | ------------- | :-----------: | ----: |
 | 열 3 은      | 오른쪽 정렬 | $1600 |
 | 열 2 는      | 가운데      |   $12 |
-| 얼룩말 줄무늬 | 깔끔하다      |    $1 |
+| 얼룩말 줄무늬는 | 깔끔해요      |    $1 |
 
 각 머리말 셀을 구분하는 대시가 3개 이상 있어야 합니다.
 
@@ -306,7 +322,8 @@ cd Notes
 </p>
 
 <p spaces-before="0">
-  마크다운 테이블 내부의 <kbd>Ctrl + Space</kbd>를 사용하여 자동으로 형식을 지정합니다. :::
+  마크다운 테이블 내부의 <kbd>Ctrl + Space</kbd>를 사용하여 자동으로 형식을 지정합니다.
+:::
 </p>
 
 <h2 spaces-before="0">
@@ -326,7 +343,8 @@ cd Notes
 </p>
 
 <p spaces-before="0">
-  <a href="./shortcuts.md">단축키</a> <kbd> Ctrl + Shift + B</kbd>을 사용하여 텍스트를 블록 따옴표로 표시할 수 있습니다. :::
+  <a href="./shortcuts.md">단축키</a> <kbd> Ctrl + Shift + B</kbd>을 사용하여 텍스트를 블록 따옴표로 표시할 수 있습니다.
+:::
 </p>
 
 <h2 spaces-before="0">
@@ -369,7 +387,8 @@ ___
 </ul>
 
 <p spaces-before="0">
-  ::: 팁 <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>으로 공백 2개와 줄 바꿈을 입력할 수 있습니다. :::
+  ::: 팁 <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>으로 공백 2개와 줄 바꿈을 입력할 수 있습니다.
+:::
 </p>
 
 <pre><code class="markdown">여기부터 시작할 수 있는 줄이 있습니다.

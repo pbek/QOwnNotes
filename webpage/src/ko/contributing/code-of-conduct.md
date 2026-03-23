@@ -1,6 +1,6 @@
 # 행동 강령
 
-## 서약
+## 우리의 서약
 
 회원, 기여자 및 리더로서 우리 커뮤니티에 참여하는 것은 연령, 신체 크기, 가시적 또는 보이지 않는 장애, 민족성, 성 특성, 성 정체성과 표현, 경험 수준, 교육, 사회 경제적 지위, 국적, 개인적 외모, 인종에 관계없이 모두를 위한 괴롭힘 없는 경험으로 만들 것을 맹세합니다., 카스트, 피부색, 종교 또는 성적 정체성과 지향성입니다.
 
@@ -36,7 +36,7 @@
 
 ## 시행
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement (see _Contact_ menu on [www.qownnotes.org](https://www.qownnotes.org/)). 모든 불만 사항은 신속하고 공정하게 검토되고 조사될 것입니다.
+학대, 괴롭힘 또는 기타 용납할 수 없는 행동의 사례는 집행을 담당하는 커뮤니티 리더에게 보고될 수 있습니다([www.qownnotes.org ](https://www.qownnotes.org/)의 _연락처_ 메뉴 참조). 모든 불만 사항은 신속하고 공정하게 검토되고 조사될 것입니다.
 
 모든 커뮤니티 리더들은 어떤 사건에 대해서도 기자의 사생활과 보안을 존중할 의무가 있습니다.
 

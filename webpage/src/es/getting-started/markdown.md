@@ -89,9 +89,9 @@ Hay muchas formas de crear listas.
 
 * Las listas sin ordenar pueden utilizar asteriscos
 
-- O signos de menos
+- O signos menos
 
-+ O signos de más
++ O signos más
 ```
 
 ::: tip

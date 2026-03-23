@@ -12,7 +12,8 @@
 
 [최신 릴리스 페이지](https://github.com/qownnotes/qc/releases/latest)을 방문하여 필요한 버전을 다운로드하십시오.
 
-::: 팁 [jq](https://stedolan.github.io/jq)를 설치한 경우 이 스니펫을 사용하여 최신 Linux AMD64 AppImage를 `/usr/local/bin/qc`에 다운로드하여 설치할 수도 있습니다:
+::: tip
+[jq](https://stedolan.github.io/jq)를 설치한 경우 이 스니펫을 사용하여 최신 Linux AMD64 AppImage를 `/usr/local/bin/qc`에 다운로드하여 설치할 수도 있습니다:
 
 ```bash
 curl https://api.github.com/repos/qownnotes/qc/releases/latest | \
@@ -30,7 +31,9 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 명령줄에서 명령을 검색하려면 [fzf](https://github.com/junegunn/fzf) (이전 버전) 또는[peco](https://github.com/peco/peco) (기본적으로 설치되는 경우가 더 많음)를 설치해야 합니다.
 
-::: 팁 기본적으로 `fzf`는 검색에 사용되지만 `qc configure`로 설정하여 `peco`를 사용할 수 있습니다. :::
+::: tip
+기본적으로 `fzf`는 검색에 사용되지만 `qc configure`로 설정하여 `peco`를 사용할 수 있습니다.
+:::
 
 ## 설정
 
@@ -53,7 +56,9 @@ qc configure
 token = "yourtokenhere"
 ```
 
-::: 팁 QOwnNotes 설정에서 노트에서 명령어를 검색하는 데 사용할 노트 태그를 설정할 수도 있습니다. 기본적으로 태그 `명령`이 사용됩니다. :::
+::: tip
+QOwnNotes 설정에서 노트에서 명령어를 검색하는 데 사용할 노트 태그를 설정할 수도 있습니다. 기본적으로 태그 `명령`이 사용됩니다.
+:::
 
 ## 명령 스니펫의 구문
 

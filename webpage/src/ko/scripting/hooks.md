@@ -262,25 +262,27 @@ function encryptionHook(text, password, decrypt);
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
-- as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
+- 새로운 기능을 구현하는 스크립트가 활성화되면 `노트 태깅훅`노트 태깅이 해당 기능에 의해 처리됩니다
 - 다음 기능은 QOwnNotes 사용자 인터페이스를 통해 작동해야 합니다
-  - initially importing tags like `@tag` from your notes and overwriting your current tag assignment
-    - you will not lose your tags tree, just the former assignment to notes
+  - 처음에 노트에서 `@tag` 와 같은 태그를 가져오고 현재 태그 할당을 덮어씁니다
+    - 태그 트리를 잃지 않고 노트에 이전 할당만 하면 됩니다
     - 여전히 태그를 다른 태그로 이동할 수 있습니다
-    - if more than one tag has the same name in your tag tree the first hit will be assigned
+    - 태그 트리에 동일한 이름을 가진 태그가 여러 개 있는 경우 첫 번째 히트가 할당됩니다
   - 노트에 태그를 추가하면 노트 텍스트에 태그가 추가됩니다
   - 노트에서 태그를 제거하면 노트 텍스트에서 태그가 제거됩니다
-  - removing of tags in the tag list will remove those tags from your notes
+  - 태그 목록에서 태그를 제거하면 노트에서 해당 태그가 제거됩니다
   - 태그 목록에서 태그 이름을 변경하면 노트에 있는 태그 이름이 변경됩니다
-  - bulk tagging of notes in the note list will add those tags to your notes
+  - 노트 목록에서 대량 태그를 지정하면 해당 태그가 노트에 추가됩니다
   - 노트 목록에서 태그를 대량으로 제거하면 해당 태그가 노트에서 제거됩니다
   - 태그가 이동하면 응용 프로그램은 모든 노트에서 선택한 모든 태그와 그 하위에 대해 일련의 `추가` 및 `제거` 작업을 트리거합니다
 
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/note-tagging.qml) 예제를 보고 자체 태그 메커니즘을 구현할 수 있습니다.
 
-::: 경고 노트 폴더나 태그 트리가 새로고침될 때마다 모든 노트에 대해 실행되므로 `목록` 작업이 정말 빠르다는 것을 확인하세요!
+::: warning
+노트 폴더나 태그 트리가 새로고침될 때마다 모든 노트에 대해 실행되므로 `목록` 작업이 정말 빠르다는 것을 확인하세요!
 
-[mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp)에서 `reloadTagTree`을 찾을 때마다 그렇습니다. :::
+[mainwindow.cpp](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.cpp)에서 `reloadTagTree`을 찾을 때마다 그렇습니다.
+:::
 
 ## noteTaggingByObjectHook
 
@@ -435,6 +437,8 @@ function openAiBackendsHook() {
 }
 ```
 
-::: 팁 [스크립트 설정 변수 등록하기](./methods-and-objects.md#registering-script-settings-variables)를 사용할 수 있습니다 OpenAI 백엔드 설정을 스크립트 설정에 저장합니다. :::
+::: tip
+[스크립트 설정 변수 등록하기](./methods-and-objects.md#registering-script-settings-variables)를 사용할 수 있습니다 OpenAI 백엔드 설정을 스크립트 설정에 저장합니다.
+:::
 
 예제를 살펴보실 수 있습니다 [ custom-openai-backends.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-openai-backends.qml).

@@ -35,7 +35,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
 - **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
+- [**Spellchecking**](../editor/spellchecking.md) and optional [**LanguageTool**](../editor/languagetool.md) support
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
 - Implementation of the **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** to be used in scripts

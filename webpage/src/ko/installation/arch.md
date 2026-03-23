@@ -12,7 +12,9 @@
 yay -S qownnotes
 ```
 
-::: 팁 빌드 시간을 단축하고 싶다면 [CCACHE 및 AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/)을 읽는 것이 좋습니다. :::
+::: tip
+빌드 시간을 단축하고 싶다면 [CCACHE 및 AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/)을 읽는 것이 좋습니다.
+:::
 
 ## pacman
 
@@ -31,7 +33,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/
 sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB
 ```
 
-If the command `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` fails with a message like: `ERROR: FFC43FC94539B8B0 could not be locally signed.`, you could first find out the actual _keyid_ of the downloaded key, i.e. with the command (and output):
+명령 `sudo pacman-key --lsign-key F2205FB121DF142B3145865A3BA514562A835DB`이 실패하고 다음과 같은 메시지가 표시되는 경우: `ERROR: FFC43FC94539B8B0을 로컬로 서명할 수 없습니다.`, 먼저 다운로드된 키의 실제 _keyid_을 명령 (및 출력)로 확인할 수 있습니다:
 
 ```bash
 gpg /path/to/downloaded/home_pbek_QOwnNotes_Arch_Extra.key
@@ -49,6 +51,7 @@ sudo pacman -Syy qownnotes
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra)
 
-::: 팁
+::: tip
+
 물론 Manjaro와 같은 다른 Arch Linux 기반 배포판에서도 이 저장소를 사용할 수 있습니다.
 :::

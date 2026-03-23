@@ -20,11 +20,14 @@ zypper install opi
 opi qownnotes
 ```
 
-::: 경고 이 도구는 전체 OBS 서비스를 쿼리하므로 `qownnotes-lang`이 아닌 `qownnotes`를 선택해야 합니다.
+::: warning
+이 도구는 전체 OBS 서비스를 쿼리하므로 `qownnotes-lang`이 아닌 `qownnotes`를 선택해야 합니다.
 
-또한 선택한 repo가 타사 홈이 아닌 공식 `home:pbek:QOwnNotes`인지 확인합니다. :::
+또한 선택한 repo가 타사 홈이 아닌 공식 `home:pbek:QOwnNotes`인지 확인합니다.
+:::
 
-::: 팁
+::: tip
+
 업데이트를 가져오려면 설치 후 리포지토리를 유지하는 옵션을 선택해야 합니다.
 :::
 

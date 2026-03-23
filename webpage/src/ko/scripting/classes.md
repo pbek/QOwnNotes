@@ -71,24 +71,24 @@ var noteSubFolderQmlObj = Qt.createQmlObject(
   "noteSubFolder",
 );
 
-// print all subfolder names
+// 모든 하위 폴더 이름 인쇄
 noteSubFolderQmlObj
   .fetchNoteSubFoldersByParentId(parentId)
   .forEach(function (nsf) {
     script.log(nsf.name);
   });
 
-// get the active note subfolder
+// 활성 노트 하위 폴더 가져오기
 var noteSubFolder = noteSubFolderQmlObj.activeNoteSubFolder();
 
-// print the full and relative path of the active note subfolder
+// 활성 노트 하위 폴더의 전체 및 상대 경로 인쇄
 script.log(noteSubFolder.fullPath());
 script.log(noteSubFolder.relativePath());
 
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// 노트 하위 폴더의 노트를 반복
 for (var idx in noteSubFolder.notes) {
   var note = noteSubFolder.notes[idx];
 }
@@ -113,12 +113,12 @@ for (var idx in noteSubFolder.notes) {
 ```js
 // "QownNotes 가져오기"를 사용하는 것을 잊지 마십시오. 스크립트 상단에 1.0"을 입력합니다!
 
-// Fetch tag "home"
+// “home” 태그 가져오기
 var tag = script.getTagByNameBreadcrumbList(["home"]);
-// Fetch all notes tagged with the tag
+// 해당 태그가 지정된 모든 메모 가져오기
 var notes = tag.notes;
 
-// Iterate through notes of the tag
+// 해당 태그가 지정된 노트를 순차적으로 확인
 for (var idx in notes) {
   var note = notes[idx];
   script.log(note.name);
@@ -165,28 +165,28 @@ TagApi가 [ note-tagging-by-object.qml ](https://github.com/pbek/QOwnNotes/blob/
 ### 예제
 
 ```js
-// Force a reload of the note list
+// 노트 목록 강제 새로고침
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// 현재 하위 폴더에 새 노트 하위 폴더 "My fancy folder"를 만듭니다
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// 현재 노트에 HTML을 마크다운으로 삽입합니다
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
+// 'Edit' 작업 공간을 현재 작업 공간으로 설정합니다
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
-// Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// 태그 트리의 태그 "test"로 이동합니다
+// https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml 에 한 가지 예가 있습니다
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Get all notes that are opened in tabs
+// 탭에 열려 있는 모든 노트 가져오기
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // do something with the note
+  // 노트로 무언가를 수행합니다
 });
 ```

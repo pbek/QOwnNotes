@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-디버깅을 위해서는 QtCreator를 사용하는 것이 가장 쉽습니다. [Qt Creator](https://www.qt.io/download-qt-installer-oss)을 다운로드할 때 Qt6로 QOwnNotes를 구축하려면 패키지 `qtwebsockets`도 필요합니다. If you build under Windows, you want to stick to _MinGw 64-bit_. 리눅스의 경우 저장소에 QtCreator용 패키지가 있을 가능성이 높습니다.
+디버깅을 위해서는 QtCreator를 사용하는 것이 가장 쉽습니다. [Qt Creator](https://www.qt.io/download-qt-installer-oss)을 다운로드할 때 Qt6로 QOwnNotes를 구축하려면 패키지 `qtwebsockets`도 필요합니다. Windows에서 빌드하는 경우 _MinGw 64비트_을 고수해야 합니다. 리눅스의 경우 저장소에 QtCreator용 패키지가 있을 가능성이 높습니다.
 
 그런 다음 프로젝트 파일 `src/QOwnNotes.pro`를 열고 **빌드** / **빌드 프로젝트 QOwnNotes**를 클릭합니다.
 
@@ -33,7 +33,9 @@ make
 
 [GitHub의 QOnNotes](https://github.com/pbek/QOwnNotes)를 방문합니다.
 
-::: tip If you want to contribute source code to the project please make your pull requests to the `main` branch. :::
+::: tip
+프로젝트에 소스 코드를 기여하고 싶으시면 `메인` 지점에 풀 요청을 해주시기 바랍니다.
+:::
 
 ## 원본 보관소
 

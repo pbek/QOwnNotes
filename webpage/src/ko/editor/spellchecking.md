@@ -2,7 +2,9 @@
 
 맞춤법 오류를 수정하세요!
 
-::: 팁 정보 QOwnNotes에는 사전을 다운로드하거나 삭제하는 데 사용할 수 있는 **사전 관리자** (_편집_ 메뉴)가 내장되어 있습니다( 언어가 누락된 경우 사전 추가를 요청하는 방법은 아래를 참조하세요). 사전을 수동으로 다운로드하려면 아래 지침을 따르십시오. :::
+::: tip
+정보 QOwnNotes에는 사전을 다운로드하거나 삭제하는 데 사용할 수 있는 **사전 관리자** (_편집_ 메뉴)가 내장되어 있습니다( 언어가 누락된 경우 사전 추가를 요청하는 방법은 아래를 참조하세요). 사전을 수동으로 다운로드하려면 아래 지침을 따르십시오.
+:::
 
 - **Linux**에서 distro의 pkg 관리자를 사용하여 해당 언어의 Hunspell 사전을 설치할 수 있습니다
   - 언어 파일을 추가해야 하는 경우 `~/.local/share/hunspell` 또는 `/usr/share/hunspell`에서 추가할 수 있습니다.
@@ -16,7 +18,8 @@
 
 해당 언어의 사전이 ** 사전 관리자** 또는 위에 언급된 링크에 없는 경우 인터넷에서 찾거나 문제를 만드십시오. 사전이 발견되면 QOwnNotes의 다음 릴리스에 반드시 포함시킬 것입니다.
 
-::: 팁 정보 이 표에서 해당 언어를 찾을 수 없으면 유감스럽게도 LibreOffice 파일에 해당 언어의 사전이 없습니다. 사전을 만들려면 [Documentfoundation.org Dictionaries Development](https://wiki.documentfoundation.org/Development/Dictionaries)으로 이동하십시오
+::: tip
+정보 이 표에서 해당 언어를 찾을 수 없으면 유감스럽게도 LibreOffice 파일에 해당 언어의 사전이 없습니다. 사전을 만들려면 [Documentfoundation.org Dictionaries Development](https://wiki.documentfoundation.org/Development/Dictionaries)으로 이동하십시오
 
 | Sr | 언어 코드    | 언어                 |
 | -- | -------- | ------------------ |
@@ -73,4 +76,5 @@
 | 52 | vi       | 베트남어               |
 | 53 | zu_ZA    | 줄루 (맞춤법 사용 불가)     |
 
-::: 팁 크레딧 [Hunspell](https://hunspell.github.io/)이 포함된 [Sonnet](https://github.com/KDE/sonnet)은 맞춤법 검사에 사용됩니다:::
+::: tip
+크레딧 [Hunspell](https://hunspell.github.io/)이 포함된 [Sonnet](https://github.com/KDE/sonnet)은 맞춤법 검사에 사용됩니다:::

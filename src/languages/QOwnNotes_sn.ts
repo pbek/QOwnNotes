@@ -16,6 +16,29 @@
 </message>
 </context>
 <context>
+<name>AiToolbarManager</name>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation type="unfinished">AI backends</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation type="unfinished">AI models</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation type="unfinished">AI backend selector</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation type="unfinished">AI model selector</translation>
+</message>
+</context>
+<context>
 <name>AttachmentDialog</name>
 <message>
 <source>Insert attachment</source>
@@ -578,6 +601,29 @@
 </message>
 </context>
 <context>
+<name>DistractionFreeManager</name>
+<message>
+<source>leave</source>
+<translation type="unfinished">leave</translation>
+</message>
+<message>
+<source>Leave distraction free mode</source>
+<translation type="unfinished">Leave distraction free mode</translation>
+</message>
+<message>
+<source>Leave full-screen mode</source>
+<translation type="unfinished">Leave full-screen mode</translation>
+</message>
+<message>
+<source>Custom editor width</source>
+<translation type="unfinished">Custom editor width</translation>
+</message>
+<message>
+<source>Characters:</source>
+<translation type="unfinished">Characters:</translation>
+</message>
+</context>
+<context>
 <name>EvernoteImportDialog</name>
 <message>
 <source>Evernote Import</source>
@@ -714,6 +760,57 @@
 <message>
 <source>Value</source>
 <translation>Kukosha</translation>
+</message>
+</context>
+<context>
+<name>ExportPrintManager</name>
+<message>
+<source>Print note</source>
+<translation type="unfinished">Print note</translation>
+</message>
+<message>
+<source>Letter</source>
+<translation type="unfinished">Letter</translation>
+</message>
+<message>
+<source>Page size</source>
+<translation type="unfinished">Page size</translation>
+</message>
+<message>
+<source>Page size:</source>
+<translation type="unfinished">Page size:</translation>
+</message>
+<message>
+<source>Portrait</source>
+<translation type="unfinished">Portrait</translation>
+</message>
+<message>
+<source>Landscape</source>
+<translation type="unfinished">Landscape</translation>
+</message>
+<message>
+<source>Orientation</source>
+<translation type="unfinished">Orientation</translation>
+</message>
+<message>
+<source>Orientation:</source>
+<translation type="unfinished">Orientation:</translation>
+</message>
+<message>
+<source>PDF files</source>
+<translation type="unfinished">PDF files</translation>
+</message>
+<message>
+<source>Export current note as PDF</source>
+<translation type="unfinished">Export current note as PDF</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export current note as HTML file</source>
+<translation type="unfinished">Export current note as HTML file</translation>
 </message>
 </context>
 <context>
@@ -1003,6 +1100,105 @@
 <message>
 <source>Information</source>
 <translation>Ruzivo</translation>
+</message>
+</context>
+<context>
+<name>FileNavigationWidget</name>
+<message>
+<source>Media files</source>
+<translation type="unfinished">Media files</translation>
+</message>
+<message>
+<source>Attachments</source>
+<translation type="unfinished">Attachments</translation>
+</message>
+<message>
+<source>Invalid file name</source>
+<translation type="unfinished">Invalid file name</translation>
+</message>
+<message>
+<source>The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</source>
+<translation type="unfinished">The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</translation>
+</message>
+<message>
+<source>Delete linked files</source>
+<translation type="unfinished">Delete linked files</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</source>
+<translation type="unfinished">
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
+</translation>
+</message>
+<message>
+<source>Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation type="unfinished">Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+</message>
+<message numerus="yes">
+<source>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</source>
+<translation type="unfinished">
+<numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
+<numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
+</translation>
+</message>
+<message>
+<source>File deleting failed</source>
+<translation type="unfinished">File deleting failed</translation>
+</message>
+<message>
+<source>Remove linked file references</source>
+<translation type="unfinished">Remove linked file references</translation>
+</message>
+<message numerus="yes">
+<source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation type="unfinished">
+<numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+<numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+</translation>
+</message>
+<message>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
+</message>
+<message>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+</message>
+<message>
+<source>File exists</source>
+<translation type="unfinished">File exists</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+</message>
+<message>
+<source>File renaming failed</source>
+<translation type="unfinished">File renaming failed</translation>
+</message>
+<message>
+<source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+</message>
+<message>
+<source>File name changed</source>
+<translation type="unfinished">File name changed</translation>
+</message>
+<message numerus="yes">
+<source>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation type="unfinished">
+<numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+<numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Open file externally</source>
+<translation type="unfinished">&amp;Open file externally</translation>
+</message>
+<message>
+<source>&amp;Delete file</source>
+<translation type="unfinished">&amp;Delete file</translation>
 </message>
 </context>
 <context>
@@ -1404,6 +1600,20 @@
 </message>
 </context>
 <context>
+<name>LanguageToolChecker</name>
+<message>
+<source>LanguageTool is unavailable: %1</source>
+<translation type="unfinished">LanguageTool is unavailable: %1</translation>
+</message>
+</context>
+<context>
+<name>LanguageToolClient</name>
+<message>
+<source>Invalid LanguageTool server URL</source>
+<translation type="unfinished">Invalid LanguageTool server URL</translation>
+</message>
+</context>
+<context>
 <name>LayoutWidget</name>
 <message>
 <source>Use layout</source>
@@ -1420,10 +1630,6 @@
 <message>
 <source>Do you want to use the selected layout?</source>
 <translation>Iwe unoda kushandisa dhizaini yakasarudzwa?</translation>
-</message>
-<message>
-<source>The application will be restarted afterward.</source>
-<translation type="unfinished">The application will be restarted afterward.</translation>
 </message>
 <message>
 <source>Minimal</source>
@@ -1717,6 +1923,10 @@
 <translation type="unfinished">Headings</translation>
 </message>
 <message>
+<source>Files</source>
+<translation type="unfinished">Files</translation>
+</message>
+<message>
 <source>Backlinks</source>
 <translation type="unfinished">Backlinks</translation>
 </message>
@@ -1843,10 +2053,6 @@
 <message>
 <source>Search or create note</source>
 <translation>Tsvaga kana gadzira noti</translation>
-</message>
-<message>
-<source>Add a tag to the selected notes</source>
-<translation>Wedzera tag kune mavara akasarudzwa</translation>
 </message>
 <message>
 <source>New tag</source>
@@ -1996,6 +2202,22 @@
 <message>
 <source>Next heading</source>
 <translation type="unfinished">Next heading</translation>
+</message>
+<message>
+<source>Fold all headings</source>
+<translation type="unfinished">Fold all headings</translation>
+</message>
+<message>
+<source>Fold all headings in the current note</source>
+<translation type="unfinished">Fold all headings in the current note</translation>
+</message>
+<message>
+<source>Unfold all headings</source>
+<translation type="unfinished">Unfold all headings</translation>
+</message>
+<message>
+<source>Unfold all headings in the current note</source>
+<translation type="unfinished">Unfold all headings in the current note</translation>
 </message>
 <message>
 <source>Show shortcuts</source>
@@ -2331,6 +2553,10 @@
 <translation>Tonga madimikira</translation>
 </message>
 <message>
+<source>Check grammar with LanguageTool</source>
+<translation type="unfinished">Check grammar with LanguageTool</translation>
+</message>
+<message>
 <source>Custom</source>
 <translation type="unfinished">Custom</translation>
 </message>
@@ -2547,16 +2773,6 @@
 <translation>Ngenisa zvinyorwa kubva kuEvernote</translation>
 </message>
 <message>
-<source>Note was removed externally!</source>
-<translation>Cherechedzo yakabviswa kunze kwenyika!</translation>
-</message>
-<message>
-<source>Current note was removed outside of this application!
-Restore current note?</source>
-<translation>Chiziviso chazvino chakabviswa kunze kwekushandisa uku!
-Dzosera runyorwa rwezvino?</translation>
-</message>
-<message>
 <source>&amp;Cancel</source>
 <translation>&amp;Kanzura</translation>
 </message>
@@ -2572,41 +2788,6 @@ Dzosera runyorwa rwezvino?</translation>
 <translation>shanduro nyowani %1 iripo</translation>
 </message>
 <message>
-<source>Abort</source>
-<translation>Bvisa</translation>
-</message>
-<message>
-<source>Loading notes…</source>
-<translation>Kuisa manotsi…</translation>
-</message>
-<message>
-<source>Removed duplicate conflicted database: %1</source>
-<translation>Akabvisa zvakapetwa zvinopesana dhatabhesi: %1</translation>
-</message>
-<message>
-<source>Could not remove duplicate conflicted database: %1</source>
-<translation>Haugone kubvisa dheta mbiri dzinopesana: %1</translation>
-</message>
-<message>
-<source>Removed merged conflicted database: %1</source>
-<translation>Yakabviswa yakasanganiswa database yakasarudzika: %1</translation>
-</message>
-<message>
-<source>Could not remove merged conflicted database: %1</source>
-<translation>Hatina kukwanisa kubvisa database yakasanganiswa: %1</translation>
-</message>
-<message>
-<source>Delete conflicted database copies</source>
-<translation>Delete makopi database anopokana</translation>
-</message>
-<message numerus="yes">
-<source>Removed %n conflicted database copies</source>
-<translation>
-<numerusform>Yakabviswa %n inopesana yedhisheni kopi</numerusform>
-<numerusform>Yakabviswa %n inopesana database makopi</numerusform>
-</translation>
-</message>
-<message>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Ndokumbira sarudza fotera panowanikwa zvinyorwa zvako</translation>
 </message>
@@ -2617,58 +2798,6 @@ Dzosera runyorwa rwezvino?</translation>
 <message>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Iwe unofanirwa kusarudza yako ownCloud zvinyorwa folda kuti uite iyi software iite!</translation>
-</message>
-<message>
-<source>Remove current note</source>
-<translation>Bvisa chinyorwa chazvino</translation>
-</message>
-<message>
-<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation>Bvisa chinyorwa chazvino: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
-</message>
-<message>
-<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-<translation>Ndokumbira utore iyo &lt;strong&gt; password &lt;/strong&gt; yeiyi nyorwa yakanyorwa.</translation>
-</message>
-<message>
-<source>Note can't be decrypted!</source>
-<translation>Cherechedzo haigone kudhindwa!</translation>
-</message>
-<message>
-<source>It seems that your password is not valid!</source>
-<translation>Zvinoita sekuti password yako haisi kushanda!</translation>
-</message>
-<message>
-<source>Remove selected notes and folders</source>
-<translation type="unfinished">Remove selected notes and folders</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
-</translation>
-</message>
-<message>
-<source>Remove selected folders</source>
-<translation type="unfinished">Remove selected folders</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-</translation>
-</message>
-<message>
-<source>Remove selected notes</source>
-<translation>Bvisa zvinyorwa zvakasarudzwa</translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
@@ -2683,35 +2812,12 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kubva ipapo.</numerusform>
 </translation>
 </message>
-<message>
-<source>Removed note subfolder: %1</source>
-<translation type="unfinished">Removed note subfolder: %1</translation>
-</message>
-<message>
-<source>Remove selected tags</source>
-<translation>Bvisa mabhegi akasarudzwa</translation>
-</message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-<translation>
-<numerusform>Bvisa &lt;strong&gt;%n&lt;/strong&gt; tiki yakasarudzwa? Hapana zvinyorwa zvichabviswa mukuita uku.</numerusform>
-<numerusform>Bvisa mabhagi &lt;strong&gt;%n&lt;/strong&gt; akasarudzwa? Hapana zvinyorwa zvichabviswa mukuita uku.</numerusform>
-</translation>
-</message>
-<message>
-<source>Move selected notes</source>
-<translation>Fambisa manotsi akasarudzwa</translation>
-</message>
 <message numerus="yes">
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Fambisa %n yakasarudzwa noti ku &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Fambisa %n akasarudzwa manotsi kuenda ku &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
-</message>
-<message>
-<source>Copy selected notes</source>
-<translation>Kopa zvinyorwa zvakasarudzwa</translation>
 </message>
 <message numerus="yes">
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
@@ -2720,26 +2826,11 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <numerusform>Copy %n nhaurwa dzakasarudzika ku &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
-<message>
-<source>Done</source>
-<translation>Zvaitwa</translation>
-</message>
 <message numerus="yes">
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n noti yakateedzerwa ku &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n zvinyorwa zvakateedzerwa ku &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-</translation>
-</message>
-<message>
-<source>Tag selected notes</source>
-<translation>Maki yakasarudzwa manotsi</translation>
-</message>
-<message numerus="yes">
-<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>Tag %n yakasarudzwa noti na &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
-<numerusform>Tag %n zvinyorwa zvakasarudzwa ne &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -2751,32 +2842,12 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <translation>Ungangoda kutangidza application kurega matanho acho achishanda.</translation>
 </message>
 <message>
-<source>PDF files</source>
-<translation>Faera rePDF</translation>
-</message>
-<message>
 <source>Todo lists disabled!</source>
 <translation>Rondedzero yeTodo yakaremara!</translation>
 </message>
 <message>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Iwe Akaremara todo mazita. &lt;br /&gt; Tapota bvunza wako &lt;strong&gt; Todo &lt;/strong&gt; configuration mu pazviruva!</translation>
-</message>
-<message numerus="yes">
-<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>
-<numerusform>Yakawanikwa &lt;strong&gt;%n &lt;/strong&gt; kuwanikwa chero enguva ye &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-<numerusform>Yakawanikwa &lt;strong&gt;%n &lt;/strong&gt; zvinoitika chero nguva zve &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-</translation>
-</message>
-<message>
-<source>Note</source>
-<comment>name for new note</comment>
-<translation type="unfinished">Note</translation>
-</message>
-<message>
-<source>Note folders</source>
-<translation>Cherekedza mapepa</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your ownCloud server</source>
@@ -2810,22 +2881,6 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <message>
 <source>Inserted text as text attachment file</source>
 <translation type="unfinished">Inserted text as text attachment file</translation>
-</message>
-<message>
-<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>Tsamba yako ichave yakashongedzwa uye ichichengeterwa senge mavara akajeka zvakare. Ramba uchifunga kuti iyo isina kunyorwa tsamba ingangonyorerwe kune yako server uye yakaomarara zvinyorwa inogona kuburitswa!</translation>
-</message>
-<message>
-<source>Markdown files</source>
-<translation>Makona mafaera</translation>
-</message>
-<message>
-<source>Export attached files</source>
-<translation type="unfinished">Export attached files</translation>
-</message>
-<message>
-<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
-<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
 </message>
 <message>
 <source>Bookmarked note position at slot %1</source>
@@ -2882,84 +2937,6 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
 <translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
 </message>
-<message numerus="yes">
-<source>%n folder(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
-</translation>
-</message>
-<message>
-<source>Update backlinks</source>
-<translation type="unfinished">Update backlinks</translation>
-</message>
-<message numerus="yes">
-<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
-<translation type="unfinished">
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Updated heading links in %n note(s)</source>
-<translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
-<numerusform>Updated heading links in %n note(s)</numerusform>
-</translation>
-</message>
-<message>
-<source>&amp;Remove notes and folders</source>
-<translation type="unfinished">&amp;Remove notes and folders</translation>
-</message>
-<message>
-<source>&amp;Remove folders</source>
-<translation type="unfinished">&amp;Remove folders</translation>
-</message>
-<message>
-<source>Open note in Nextcloud Files</source>
-<translation type="unfinished">Open note in Nextcloud Files</translation>
-</message>
-<message>
-<source>Open note in Nextcloud Notes</source>
-<translation type="unfinished">Open note in Nextcloud Notes</translation>
-</message>
-<message>
-<source>Copy note filename</source>
-<translation type="unfinished">Copy note filename</translation>
-</message>
-<message>
-<source>Unmark as favorite</source>
-<translation type="unfinished">Unmark as favorite</translation>
-</message>
-<message>
-<source>Mark as favorite</source>
-<translation type="unfinished">Mark as favorite</translation>
-</message>
-<message>
-<source>Split note</source>
-<translation type="unfinished">Split note</translation>
-</message>
-<message>
-<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
-<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
-</message>
-<message>
-<source>Ln %1, Col %2</source>
-<comment>Line / Column</comment>
-<translation type="unfinished">Ln %1, Col %2</translation>
-</message>
-<message>
-<source>Line %1, Column %2</source>
-<translation type="unfinished">Line %1, Column %2</translation>
-</message>
-<message numerus="yes">
-<source>%n selected</source>
-<comment>Characters selected</comment>
-<translation type="unfinished">
-<numerusform>%n selected</numerusform>
-<numerusform>%n selected</numerusform>
-</translation>
-</message>
 <message>
 <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
 <translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
@@ -2973,32 +2950,12 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <translation type="unfinished">No versions are available for this note.</translation>
 </message>
 <message>
-<source>Close note tab</source>
-<translation type="unfinished">Close note tab</translation>
-</message>
-<message>
 <source>Note path '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note path '%1' was copied to the clipboard</translation>
 </message>
 <message>
 <source>Note filename '%1' was copied to the clipboard</source>
 <translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
-</message>
-<message>
-<source>AI backends</source>
-<translation type="unfinished">AI backends</translation>
-</message>
-<message>
-<source>AI models</source>
-<translation type="unfinished">AI models</translation>
-</message>
-<message>
-<source>AI backend selector</source>
-<translation type="unfinished">AI backend selector</translation>
-</message>
-<message>
-<source>AI model selector</source>
-<translation type="unfinished">AI model selector</translation>
 </message>
 <message>
 <source>Clipboard sent successfully</source>
@@ -3030,49 +2987,8 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <translation>Dzosera size yemafonti ku %1 pt</translation>
 </message>
 <message>
-<source>Remove tag '%1' from the current note</source>
-<translation>Bvisa tag '%1' pane chazvino ziviso</translation>
-</message>
-<message>
-<source>Remove tag '%1' from the selected notes</source>
-<translation>Bvisa tag '%1' kubva pane zvakasarudzwa zvinyorwa</translation>
-</message>
-<message>
-<source>Rename tag</source>
-<translation>Dzorerazve tag</translation>
-</message>
-<message>
-<source>Assign color</source>
-<translation>Ipa ruvara</translation>
-</message>
-<message>
-<source>Disable color</source>
-<translation>Dzivisa mavara</translation>
-</message>
-<message>
-<source>&amp;Move tags to…</source>
-<translation>&amp;Fambisa mamaki ku…</translation>
-</message>
-<message>
-<source>Move to the root</source>
-<comment>to move a tag to the current tag in the tag context menu</comment>
-<translation>Enda kumidzi</translation>
-</message>
-<message>
 <source>The scripting engine was reloaded</source>
 <translation>Injini yekunyora yakadzorerwa</translation>
-</message>
-<message>
-<source>HTML files</source>
-<translation>HTML mafaera</translation>
-</message>
-<message>
-<source>Jump to the note's subfolder</source>
-<translation>Svetukira kubhuku retsamba</translation>
-</message>
-<message>
-<source>Open selected notes in tabs</source>
-<translation type="unfinished">Open selected notes in tabs</translation>
 </message>
 <message>
 <source>A script update was found!</source>
@@ -3090,18 +3006,6 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <source>No script updates were found</source>
 <translation>Hapana zvinyorwa zve script zvakawanikwa</translation>
 </message>
-<message>
-<source>Toggle note stickiness</source>
-<translation>Shandura chinyorwa chinonamira</translation>
-</message>
-<message>
-<source>Close other note tabs</source>
-<translation>Vhara mamwe matabhu ekunyorera</translation>
-</message>
-<message>
-<source>Rename note</source>
-<translation>Ipa zita rekuti</translation>
-</message>
 <message numerus="yes">
 <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
 <translation type="unfinished">
@@ -3112,87 +3016,6 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <message>
 <source>Paste &amp;HTML as Markdown</source>
 <translation type="unfinished">Paste &amp;HTML as Markdown</translation>
-</message>
-<message>
-<source>Show all notes (%1)</source>
-<translation type="unfinished">Show all notes (%1)</translation>
-</message>
-<message>
-<source>Show all notes tagged with '%1' (%2)</source>
-<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
-</message>
-<message>
-<source>%1 and %2</source>
-<translation type="unfinished">%1 and %2</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) selected</source>
-<translation type="unfinished">
-<numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
-</translation>
-</message>
-<message>
-<source>Allows you to rename the filename of the note</source>
-<translation>Inokutendera kuti utore zita refaira retsitsi</translation>
-</message>
-<message>
-<source>&amp;Move notes to…</source>
-<translation>&amp;Fambisa zvinyorwa ku…</translation>
-</message>
-<message>
-<source>&amp;Copy notes to…</source>
-<translation>&amp;Copy zvinyorwa ku…</translation>
-</message>
-<message>
-<source>Move notes to subfolder…</source>
-<translation>Fambisa zvinyorwa kuti zvinyore pasi ...</translation>
-</message>
-<message>
-<source>Copy notes to subfolder…</source>
-<translation>Kopa zvinyorwa kune subfolder…</translation>
-</message>
-<message>
-<source>&amp;Tag selected notes with…</source>
-<translation>&amp;Maki yakasarudzwa manotsi ne…</translation>
-</message>
-<message>
-<source>&amp;Remove tag from selected notes…</source>
-<translation>&amp;Bvisa tag kubva pane yakasarudzwa manotsi…</translation>
-</message>
-<message>
-<source>Name:</source>
-<translation>Zita:</translation>
-</message>
-<message>
-<source>Note renaming not enabled!</source>
-<translation>Cherechedzo zita zvekare harigoneswe!</translation>
-</message>
-<message>
-<source>Create new workspace</source>
-<translation>Gadzira nzvimbo itsva yekushanda</translation>
-</message>
-<message>
-<source>Workspace name:</source>
-<translation>Workpace zita:</translation>
-</message>
-<message>
-<source>full</source>
-<comment>full workspace</comment>
-<translation>Yazara</translation>
-</message>
-<message>
-<source>minimal</source>
-<comment>minimal workspace</comment>
-<translation>Zvishoma</translation>
-</message>
-<message>
-<source>Remove the current workspace?</source>
-<translation>Bvisa ikozvino workspace?</translation>
-</message>
-<message>
-<source>Rename workspace</source>
-<translation>Dzorerazve nzvimbo yekushanda</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n note versions are currently gathered from your local git repository</source>
@@ -3237,51 +3060,12 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <translation>Cherekedza musoro wenyaya '%1' yakateedzerwa kubhodhi</translation>
 </message>
 <message>
-<source>Leave full-screen mode</source>
-<translation>Regedza izere-skrini</translation>
-</message>
-<message>
-<source>Custom editor width</source>
-<translation>Tsika yemupendero wedhirama</translation>
-</message>
-<message>
-<source>Characters:</source>
-<translation>Hunhu:</translation>
-</message>
-<message numerus="yes">
-<source>%n notes selected</source>
-<translation type="unfinished">
-<numerusform>%n notes selected</numerusform>
-<numerusform>%n notes selected</numerusform>
-</translation>
-</message>
-<message>
 <source>Allow all note editing</source>
 <translation>Bvumidza zvese kunyorwa zvinyorwa</translation>
 </message>
 <message>
 <source>&amp;Tag</source>
 <translation type="unfinished">&amp;Tag</translation>
-</message>
-<message>
-<source>Remove tag from selected notes</source>
-<translation>Bvisa tag kubva pane yakasarudzwa manotsi</translation>
-</message>
-<message numerus="yes">
-<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-<translation>
-<numerusform>Bvisa teki &lt;strong&gt;%1&lt;/strong&gt; kubva ku %n yakasarudzwa noti?
-</numerusform>
-<numerusform>Bvisa teki &lt;strong&gt;%1&lt;/strong&gt; kubva pa %n manotsi akasarudzwa?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-<translation>
-<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; yakabviswa pane %n noti
-</numerusform>
-<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; yakabviswa kubva pamapeji %n</numerusform>
-</translation>
 </message>
 <message>
 <source>Current notes folder: </source>
@@ -3292,128 +3076,17 @@ Kana marara akagoneswa pane yako wega ownCloud server unofanirwa kuvadzosera kub
 <translation>Gadza zvinyorwa. Yazvino zvinyorwa dhairekitori:</translation>
 </message>
 <message>
-<source>Print note</source>
-<translation>Dhindaina notsi</translation>
-</message>
-<message>
-<source>Letter</source>
-<translation>Tsamba</translation>
-</message>
-<message>
-<source>Portrait</source>
-<translation>Mufananidzo</translation>
-</message>
-<message>
-<source>Landscape</source>
-<translation>Nyika</translation>
-</message>
-<message>
-<source>Orientation</source>
-<translation>Kudzidziswa</translation>
-</message>
-<message>
-<source>Orientation:</source>
-<translation>Kuita:</translation>
-</message>
-<message>
-<source>Export current note as PDF</source>
-<translation>Export ikozvino runyorwa sePDP</translation>
-</message>
-<message>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Hauna kusarudza chero rondedzero ye todo. &lt;br /&gt;
 Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumasethingi!</translation>
-</message>
-<message>
-<source>Open QOwnNotes</source>
-<translation>Vhura QOwnNotes</translation>
-</message>
-<message>
-<source>New note</source>
-<translation>Chinyowani chitsva</translation>
-</message>
-<message>
-<source>Recent notes</source>
-<translation>Recent zvinyorwa</translation>
-</message>
-<message>
-<source>Show todo lists</source>
-<translation>Ratidza todo rondedzero</translation>
-</message>
-<message>
-<source>Recent tasks</source>
-<translation>Mabasa achangoburwa</translation>
-</message>
-<message>
-<source>Quit</source>
-<translation>Rega</translation>
 </message>
 <message>
 <source>Note folder</source>
 <translation>Cherechedzo dura</translation>
 </message>
 <message>
-<source>Copy to note folder</source>
-<translation>Kopa kutarisa kunyora</translation>
-</message>
-<message>
-<source>Move to note folder</source>
-<translation>Fambisa kunongedza folda</translation>
-</message>
-<message>
-<source>Copy to this subfolder</source>
-<translation>Kopa kune ino subfolder</translation>
-</message>
-<message>
-<source>Move to this subfolder</source>
-<translation>Enda kune ino pasi</translation>
-</message>
-<message numerus="yes">
-<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>Fambisa %n yakasarudzwa tsamba kuti utarise subfolder &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
-<numerusform>Fambisa %n akasarudzwa manotsi kuti utarise subfolder &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
-</translation>
-</message>
-<message>
 <source>Cancel</source>
 <translation>Kanzura</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were moved to note subfolder "%2"</source>
-<translation>
-<numerusform>%n nota yakamiswa kuti inyore pasi "%2"
-</numerusform>
-<numerusform>%n zvinyorwa zvakaendeswa kuti zvicherechedze subfolder "%2"</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation>
-<numerusform>Copy %n noti yakasarudzwa kunyora subfolder &lt;strong&gt;%2&lt;/strong&gt;?
-</numerusform>
-<numerusform>Copy %n yakasarudzwa manotsi kuti utarise subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were copied to note subfolder "%2"</source>
-<translation>
-<numerusform>%n noti yakateedzerwa kunyorera subfolder "%2"
-</numerusform>
-<numerusform>%n zvinyorwa zvakapepetwa kuti zvinyorwe pasi "%2"</numerusform>
-</translation>
-</message>
-<message>
-<source>Open note in external editor</source>
-<translation>Vhura noti mumusoro ekunze</translation>
-</message>
-<message>
-<source>Show note in file manager</source>
-<translation>Ratidza chinyorwa mumafaira faira</translation>
-</message>
-<message>
-<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>Kana iwe uchida kushandura zita rako rezita iwe unofanirwa kugonesa sarudzo yekubvumira zita retaipi zita rakasiyana nemusoro.</translation>
 </message>
 <message>
 <source>Create a new folder</source>
@@ -3424,28 +3097,8 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <translation>Folder zita:</translation>
 </message>
 <message>
-<source>show all untagged notes (%1)</source>
-<translation>ratidza zvinyorwa zvese zvisina kudzidza (%1)</translation>
-</message>
-<message>
-<source>Untagged notes</source>
-<translation>Zvinyorwa zvisingaverengeki</translation>
-</message>
-<message>
-<source>Export current note as HTML file</source>
-<translation>Tumira kunze runyorwa se HTML faira</translation>
-</message>
-<message>
-<source>Page size</source>
-<translation>Saizi yemapeji</translation>
-</message>
-<message>
 <source>quit toolbar</source>
 <translation>siya zvishandiso</translation>
-</message>
-<message>
-<source>Page size:</source>
-<translation>Saizi yemapeji:</translation>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
@@ -3456,67 +3109,8 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <translation>&amp;Zvakanaka</translation>
 </message>
 <message>
-<source>&amp;Remove notes</source>
-<translation>&amp;Bvisa zvinyorwa</translation>
-</message>
-<message>
 <source>Your tasks are being loaded from your server</source>
 <translation>Mabasa ako ari kutakurwa kubva mudura rako</translation>
-</message>
-<message>
-<source>Current note was modified externally</source>
-<translation>Tsamba yazvino yakagadziriswa kunze</translation>
-</message>
-<message>
-<source>Stored current note to disk</source>
-<translation>Yakachengetwa yazvino nothi kudisiki</translation>
-</message>
-<message>
-<source>Note was modified externally: %1</source>
-<translation>Mucherechedzo wakashandurwa kunze: %1</translation>
-</message>
-<message>
-<source>Notes directory was modified externally</source>
-<translation>Dhairekitori renongedzo rakagadziriswa kunze</translation>
-</message>
-<message numerus="yes">
-<source>Stored %n note(s) to disk</source>
-<translation>
-<numerusform>Yakachengetedzwa %n noti kune diski</numerusform>
-<numerusform>Yakachengetedzwa %n zvinyorwa kudisiki</numerusform>
-</translation>
-</message>
-<message>
-<source>All notes</source>
-<translation>Zvese zvinyorwa</translation>
-</message>
-<message>
-<source>&amp;Add tag</source>
-<translation>&amp;Wedzera tag</translation>
-</message>
-<message>
-<source>Tag could not be created!</source>
-<translation>Tag haigone kugadzirwa!</translation>
-</message>
-<message>
-<source>Move to this tag</source>
-<translation>Fambisa kune ichi tag</translation>
-</message>
-<message>
-<source>Tag this</source>
-<translation>Taka izvi</translation>
-</message>
-<message>
-<source>Cannot move tag '%1' to this tag</source>
-<translation>Haikwanisi kufambisa tiketi '%1' kune ichi tag</translation>
-</message>
-<message>
-<source>Moved tag '%1' to new tag</source>
-<translation>Yakatamiswa tiketi '%1' kune tiki nyowani</translation>
-</message>
-<message>
-<source>&amp;Remove tags</source>
-<translation>&amp;Bvisa ma tag</translation>
 </message>
 <message>
 <source>No selected todo lists!</source>
@@ -3607,28 +3201,12 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <translation>Ratidza %1</translation>
 </message>
 <message>
-<source>Leave distraction free mode</source>
-<translation>Rega kukanganisa zvinhu zvemahara</translation>
-</message>
-<message>
 <source>Switch to note folder</source>
 <translation>Chinja kuti ucherechedze folda</translation>
 </message>
 <message>
 <source>Toolbar could not be loaded without name</source>
 <translation>Toolbar haina kutakura kana zita</translation>
-</message>
-<message>
-<source>Overwriting external changes of: %1</source>
-<translation>Kuwedzeredza kuchinja ekunze kwe: %1</translation>
-</message>
-<message>
-<source>Loading external changes from: %1</source>
-<translation>Kuisa shanduko dzekunze kubva: %1</translation>
-</message>
-<message>
-<source>Current note could not be stored to disk</source>
-<translation>Tsamba yazvino haina kukwanisa kuchengetedza diski</translation>
 </message>
 <message>
 <source>Read-only</source>
@@ -3647,38 +3225,6 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <translation>Dzvanya apa kuti uone izvo zvachinja uye kukwanisa kuvandudza kune yazvino vhezheni</translation>
 </message>
 <message>
-<source>Waiting for answer from AI</source>
-<translation type="unfinished">Waiting for answer from AI</translation>
-</message>
-<message numerus="yes">
-<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-<translation>
-<numerusform>Kuenderera mberi nekudzima otomatiki kwe &lt;strong&gt;%n &lt;/strong&gt; kukanganisika dhatabhesi rekopi iyo inogona kuvhara ownCloud sync maitiro?</numerusform>
-<numerusform>Kuenderera mberi nekudzima otomatiki kwe &lt;strong&gt;%n &lt;/strong&gt; makopi epadhesi akapokana ayo anogona kuvhara ownCloud sync process?</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n note(s) were tagged with "%2"</source>
-<translation>
-<numerusform>%n noti rakabakwa ne "%2"
-</numerusform>
-<numerusform>%n manotsi akaiswa na "%2"</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>
-<numerusform>Yakawanikwa -&lt;strong&gt;%n&lt;/strong&gt; kuitika kwe &lt;strong&gt;%1&lt;/strong&gt;
-
-</numerusform>
-<numerusform>Yakawanikwa -&lt;strong&gt;%n&lt;/strong&gt; zviitiko zve &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-</translation>
-</message>
-<message>
-<source>Note headline</source>
-<translation>Cherekedza musoro</translation>
-</message>
-<message>
 <source>Paste as &amp;text file attachment</source>
 <translation type="unfinished">Paste as &amp;text file attachment</translation>
 </message>
@@ -3690,32 +3236,6 @@ Ndokumbira utarise yako &lt;strong&gt; Todo &lt;/strong&gt; mamiriro ako mumaset
 <source>Open &amp;settings</source>
 <translation>Vhura &amp;masystem</translation>
 </message>
-<message>
-<source>leave</source>
-<translation>siya</translation>
-</message>
-<message>
-<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-<translation>Ndokumbira utore rako re &lt;strong&gt; password &lt;/strong&gt; kuti ubate iyo kunyora &lt;br /&gt;
-Ramba uchifunga kuti iwe unofanirwa ku ... yeuka &lt;/strong&gt; password yako kuti uverenge zvakanyorwa zvetsitsi &lt;br /&gt;
-uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt; muQOwnNotes &lt;/strong&gt;!</translation>
-</message>
-<message>
-<source>Decrypt note and store it as plain text</source>
-<translation>Decrypt noti uye uichengete seyakajeka mavara</translation>
-</message>
-<message>
-<source>&amp;Decrypt</source>
-<translation>&amp;Decrypt</translation>
-</message>
-<message>
-<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-<translation>&lt;br /&gt;Iwe unozogona kugadzirisa rako rakanyorwa.</translation>
-</message>
-<message>
-<source>Export current note as Markdown file</source>
-<translation>Export ikozvino runyorwa seMarkdown faira</translation>
-</message>
 </context>
 <context>
 <name>MarkdownLspClient</name>
@@ -3726,6 +3246,133 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <message>
 <source>Failed to start Markdown LSP server: %1</source>
 <translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+</message>
+</context>
+<context>
+<name>MediaInsertionManager</name>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
+</message>
+<message>
+<source>Temporary file can't be opened</source>
+<translation type="unfinished">Temporary file can't be opened</translation>
+</message>
+<message>
+<source>Inserted text as text attachment file</source>
+<translation type="unfinished">Inserted text as text attachment file</translation>
+</message>
+<message>
+<source>Inserting image</source>
+<translation type="unfinished">Inserting image</translation>
+</message>
+<message>
+<source>Done inserting image</source>
+<translation type="unfinished">Done inserting image</translation>
+</message>
+<message>
+<source>Inserting attachment</source>
+<translation type="unfinished">Inserting attachment</translation>
+</message>
+<message>
+<source>Done inserting attachment</source>
+<translation type="unfinished">Done inserting attachment</translation>
+</message>
+<message numerus="yes">
+<source>Copied %n note(s) to %1</source>
+<translation type="unfinished">
+<numerusform>Copied %n note(s) to %1</numerusform>
+<numerusform>Copied %n note(s) to %1</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Failed to copy %n note(s) (most likely already existing)</source>
+<translation type="unfinished">
+<numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+<numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message>
+<source>Saving temporary image</source>
+<translation type="unfinished">Saving temporary image</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+</message>
+<message>
+<source>Paste as &amp;text file attachment</source>
+<translation type="unfinished">Paste as &amp;text file attachment</translation>
+</message>
+<message>
+<source>Downloading %1</source>
+<translation type="unfinished">Downloading %1</translation>
+</message>
+<message>
+<source>Downloading images finished</source>
+<translation type="unfinished">Downloading images finished</translation>
+</message>
+</context>
+<context>
+<name>NavigationManager</name>
+<message>
+<source>Update backlinks</source>
+<translation type="unfinished">Update backlinks</translation>
+</message>
+<message numerus="yes">
+<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
+<translation type="unfinished">
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Updated heading links in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Updated heading links in %n note(s)</numerusform>
+<numerusform>Updated heading links in %n note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -4008,6 +3655,61 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 </message>
 </context>
 <context>
+<name>NoteEncryptionManager</name>
+<message>
+<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
+<translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+</message>
+<message>
+<source>Note can't be decrypted!</source>
+<translation type="unfinished">Note can't be decrypted!</translation>
+</message>
+<message>
+<source>It seems that your password is not valid!</source>
+<translation type="unfinished">It seems that your password is not valid!</translation>
+</message>
+<message>
+<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
+<translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+</message>
+<message>
+<source>Decrypt note and store it as plain text</source>
+<translation type="unfinished">Decrypt note and store it as plain text</translation>
+</message>
+<message>
+<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+<translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+</message>
+<message>
+<source>&amp;Decrypt</source>
+<translation type="unfinished">&amp;Decrypt</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
+</message>
+<message>
+<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
+<translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+</message>
+<message>
+<source>Markdown files</source>
+<translation type="unfinished">Markdown files</translation>
+</message>
+<message>
+<source>Export current note as Markdown file</source>
+<translation type="unfinished">Export current note as Markdown file</translation>
+</message>
+<message>
+<source>Export attached files</source>
+<translation type="unfinished">Export attached files</translation>
+</message>
+<message>
+<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
+<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+</message>
+</context>
+<context>
 <name>NoteFilePathLabel</name>
 <message>
 <source>Relative path of note, right-click to open context menu</source>
@@ -4032,6 +3734,258 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <message>
 <source>Copy absolute path of note folder</source>
 <translation type="unfinished">Copy absolute path of note folder</translation>
+</message>
+</context>
+<context>
+<name>NoteIndexManager</name>
+<message>
+<source>Loading notes…</source>
+<translation type="unfinished">Loading notes…</translation>
+</message>
+<message>
+<source>Abort</source>
+<translation type="unfinished">Abort</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation type="unfinished">Note folder</translation>
+</message>
+<message>
+<source>Removed duplicate conflicted database: %1</source>
+<translation type="unfinished">Removed duplicate conflicted database: %1</translation>
+</message>
+<message>
+<source>Could not remove duplicate conflicted database: %1</source>
+<translation type="unfinished">Could not remove duplicate conflicted database: %1</translation>
+</message>
+<message>
+<source>Removed merged conflicted database: %1</source>
+<translation type="unfinished">Removed merged conflicted database: %1</translation>
+</message>
+<message>
+<source>Could not remove merged conflicted database: %1</source>
+<translation type="unfinished">Could not remove merged conflicted database: %1</translation>
+</message>
+<message>
+<source>Delete conflicted database copies</source>
+<translation type="unfinished">Delete conflicted database copies</translation>
+</message>
+<message numerus="yes">
+<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
+<translation type="unfinished">
+<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Removed %n conflicted database copies</source>
+<translation type="unfinished">
+<numerusform>Removed %n conflicted database copies</numerusform>
+<numerusform>Removed %n conflicted database copies</numerusform>
+</translation>
+</message>
+<message>
+<source>Current note was modified externally</source>
+<translation type="unfinished">Current note was modified externally</translation>
+</message>
+<message>
+<source>Overwriting external changes of: %1</source>
+<translation type="unfinished">Overwriting external changes of: %1</translation>
+</message>
+<message>
+<source>Loading external changes from: %1</source>
+<translation type="unfinished">Loading external changes from: %1</translation>
+</message>
+<message>
+<source>Note was removed externally!</source>
+<translation type="unfinished">Note was removed externally!</translation>
+</message>
+<message>
+<source>Current note was removed outside of this application!
+Restore current note?</source>
+<translation type="unfinished">Current note was removed outside of this application!
+Restore current note?</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation type="unfinished">Stored current note to disk</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation type="unfinished">Current note could not be stored to disk</translation>
+</message>
+<message>
+<source>Note was modified externally: %1</source>
+<translation type="unfinished">Note was modified externally: %1</translation>
+</message>
+<message>
+<source>Notes directory was modified externally</source>
+<translation type="unfinished">Notes directory was modified externally</translation>
+</message>
+<message numerus="yes">
+<source>Stored %n note(s) to disk</source>
+<translation type="unfinished">
+<numerusform>Stored %n note(s) to disk</numerusform>
+<numerusform>Stored %n note(s) to disk</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NoteOperationsManager</name>
+<message>
+<source>Remove current note</source>
+<translation type="unfinished">Remove current note</translation>
+</message>
+<message>
+<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>Remove selected notes and folders</source>
+<translation type="unfinished">Remove selected notes and folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation type="unfinished">Remove selected folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected notes</source>
+<translation type="unfinished">Remove selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+</translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation type="unfinished">Removed note subfolder: %1</translation>
+</message>
+<message>
+<source>Move selected notes</source>
+<translation type="unfinished">Move selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy selected notes</source>
+<translation type="unfinished">Copy selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation type="unfinished">Done</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+<numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+</translation>
+</message>
+<message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation type="unfinished">Note</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were moved to note subfolder "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+<numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to note subfolder "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+<numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy to note folder</source>
+<translation type="unfinished">Copy to note folder</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation type="unfinished">Move to note folder</translation>
+</message>
+<message>
+<source>Copy to this subfolder</source>
+<translation type="unfinished">Copy to this subfolder</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation type="unfinished">Move to this subfolder</translation>
+</message>
+<message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+</message>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Note headline</source>
+<translation type="unfinished">Note headline</translation>
 </message>
 </context>
 <context>
@@ -4152,6 +4106,144 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
 <numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
+</message>
+</context>
+<context>
+<name>NoteTabManager</name>
+<message>
+<source>Toggle note stickiness</source>
+<translation type="unfinished">Toggle note stickiness</translation>
+</message>
+<message>
+<source>Close other note tabs</source>
+<translation type="unfinished">Close other note tabs</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+</context>
+<context>
+<name>NoteTreeManager</name>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Rename note</source>
+<translation type="unfinished">Rename note</translation>
+</message>
+<message>
+<source>Allows you to rename the filename of the note</source>
+<translation type="unfinished">Allows you to rename the filename of the note</translation>
+</message>
+<message>
+<source>&amp;Remove notes and folders</source>
+<translation type="unfinished">&amp;Remove notes and folders</translation>
+</message>
+<message>
+<source>&amp;Remove folders</source>
+<translation type="unfinished">&amp;Remove folders</translation>
+</message>
+<message>
+<source>&amp;Remove notes</source>
+<translation type="unfinished">&amp;Remove notes</translation>
+</message>
+<message>
+<source>&amp;Move notes to…</source>
+<translation type="unfinished">&amp;Move notes to…</translation>
+</message>
+<message>
+<source>&amp;Copy notes to…</source>
+<translation type="unfinished">&amp;Copy notes to…</translation>
+</message>
+<message>
+<source>Jump to the note's subfolder</source>
+<translation type="unfinished">Jump to the note's subfolder</translation>
+</message>
+<message>
+<source>Move notes to subfolder…</source>
+<translation type="unfinished">Move notes to subfolder…</translation>
+</message>
+<message>
+<source>Copy notes to subfolder…</source>
+<translation type="unfinished">Copy notes to subfolder…</translation>
+</message>
+<message>
+<source>&amp;Tag selected notes with…</source>
+<translation type="unfinished">&amp;Tag selected notes with…</translation>
+</message>
+<message>
+<source>&amp;Remove tag from selected notes…</source>
+<translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+</message>
+<message>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
+<source>Open note in external editor</source>
+<translation type="unfinished">Open note in external editor</translation>
+</message>
+<message>
+<source>Open note in different window</source>
+<translation type="unfinished">Open note in different window</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
+<source>Show note in file manager</source>
+<translation type="unfinished">Show note in file manager</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
+</message>
+<message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
+<source>Show note git versions</source>
+<translation type="unfinished">Show note git versions</translation>
+</message>
+<message>
+<source>Unmark as favorite</source>
+<translation type="unfinished">Unmark as favorite</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation type="unfinished">Mark as favorite</translation>
+</message>
+<message>
+<source>Select &amp;all notes</source>
+<translation type="unfinished">Select &amp;all notes</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation type="unfinished">Name:</translation>
+</message>
+<message>
+<source>Note renaming not enabled!</source>
+<translation type="unfinished">Note renaming not enabled!</translation>
+</message>
+<message>
+<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
+<translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation type="unfinished">Open &amp;settings</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
 </message>
 </context>
 <context>
@@ -4627,6 +4719,14 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
 <translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
 </message>
+<message>
+<source>media file</source>
+<translation type="unfinished">media file</translation>
+</message>
+<message>
+<source>attachment</source>
+<translation type="unfinished">attachment</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -4746,6 +4846,22 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message>
 <source>Spelling</source>
 <translation type="unfinished">Spelling</translation>
+</message>
+<message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>No suggestions</source>
+<translation type="unfinished">No suggestions</translation>
+</message>
+<message>
+<source>More info...</source>
+<translation type="unfinished">More info...</translation>
+</message>
+<message>
+<source>Ignore this rule</source>
+<translation type="unfinished">Ignore this rule</translation>
 </message>
 <message>
 <source>Markdown LSP server connected</source>
@@ -5070,6 +5186,31 @@ Iwe unoda kuimisa zvakadaro?</translation>
 <message>
 <source>file doesn't exist</source>
 <translation>faira haripo</translation>
+</message>
+</context>
+<context>
+<name>SearchFilterManager</name>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation type="unfinished">Stored current note to disk</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation type="unfinished">Current note could not be stored to disk</translation>
 </message>
 </context>
 <context>
@@ -6248,6 +6389,62 @@ Ingozviedze kana iwe ukawana sync yekuvhiringidza uye isa kukosha kwakanyanya ka
 <translation type="unfinished">Optional arguments</translation>
 </message>
 <message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>Enable grammar and style checking with LanguageTool</source>
+<translation type="unfinished">Enable grammar and style checking with LanguageTool</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation type="unfinished">Test Connection</translation>
+</message>
+<message>
+<source>Language:</source>
+<translation type="unfinished">Language:</translation>
+</message>
+<message>
+<source>API key:</source>
+<translation type="unfinished">API key:</translation>
+</message>
+<message>
+<source>Optional premium or cloud API key</source>
+<translation type="unfinished">Optional premium or cloud API key</translation>
+</message>
+<message>
+<source>Check delay:</source>
+<translation type="unfinished">Check delay:</translation>
+</message>
+<message>
+<source> ms</source>
+<translation type="unfinished"> ms</translation>
+</message>
+<message>
+<source>Categories:</source>
+<translation type="unfinished">Categories:</translation>
+</message>
+<message>
+<source>Spelling</source>
+<translation type="unfinished">Spelling</translation>
+</message>
+<message>
+<source>Grammar</source>
+<translation type="unfinished">Grammar</translation>
+</message>
+<message>
+<source>Style</source>
+<translation type="unfinished">Style</translation>
+</message>
+<message>
+<source>Punctuation</source>
+<translation type="unfinished">Punctuation</translation>
+</message>
+<message>
+<source>Typography</source>
+<translation type="unfinished">Typography</translation>
+</message>
+<message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
@@ -6262,6 +6459,22 @@ Ingozviedze kana iwe ukawana sync yekuvhiringidza uye isa kukosha kwakanyanya ka
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
 <translation type="unfinished">Show small Markdown preview images in the editor, if there is no text after the image</translation>
+</message>
+<message>
+<source>Shows fold buttons for Markdown headings and allows collapsing their contents</source>
+<translation type="unfinished">Shows fold buttons for Markdown headings and allows collapsing their contents</translation>
+</message>
+<message>
+<source>Enable heading folding in the editor</source>
+<translation type="unfinished">Enable heading folding in the editor</translation>
+</message>
+<message>
+<source>Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</source>
+<translation type="unfinished">Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</translation>
+</message>
+<message>
+<source>Hide markdown formatting syntax on inactive lines</source>
+<translation type="unfinished">Hide markdown formatting syntax on inactive lines</translation>
 </message>
 <message>
 <source>Enable hanging indentation for Markdown lists</source>
@@ -6476,6 +6689,10 @@ Ingozviedze kana iwe ukawana sync yekuvhiringidza uye isa kukosha kwakanyanya ka
 <message>
 <source>Reset the suggestion API port</source>
 <translation type="unfinished">Reset the suggestion API port</translation>
+</message>
+<message>
+<source>If this is empty when saved, a new security token will be generated automatically.</source>
+<translation type="unfinished">If this is empty when saved, a new security token will be generated automatically.</translation>
 </message>
 <message>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop from your mobile phone over the internet.</source>
@@ -7169,6 +7386,14 @@ Iwe zvakare unofanirwa kuve neQOwnNotesAPI app yakaiswa uye inogoneshwa!
 Yekubatanidza kukanganisa chikanganiso:</translation>
 </message>
 <message>
+<source>LanguageTool connection successful.</source>
+<translation type="unfinished">LanguageTool connection successful.</translation>
+</message>
+<message>
+<source>LanguageTool connection failed: %1</source>
+<translation type="unfinished">LanguageTool connection failed: %1</translation>
+</message>
+<message>
 <source>The Database was reinitialized. Please restart the application now!</source>
 <translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
 </message>
@@ -7332,6 +7557,10 @@ Chaizvoizvo unodzima kushandiswa kwekutevera?</translation>
 <message>
 <source>Undefined shortcut</source>
 <translation>Isina kutsanangurwa nzira pfupi</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation type="unfinished">Auto-detect</translation>
 </message>
 <message>
 <source>Assign a new shortcut</source>
@@ -7643,6 +7872,13 @@ Zvawakanyora zvichagara zvakatsiga!</translation>
 </message>
 </context>
 <context>
+<name>SpellCheckManager</name>
+<message>
+<source>Automatically detect</source>
+<translation type="unfinished">Automatically detect</translation>
+</message>
+</context>
+<context>
 <name>StoredAttachmentsDialog</name>
 <message>
 <source>Delete selected attachments</source>
@@ -7911,6 +8147,37 @@ Zvawakanyora zvichagara zvakatsiga!</translation>
 </message>
 </context>
 <context>
+<name>SystemTrayManager</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation type="unfinished">Open QOwnNotes</translation>
+</message>
+<message>
+<source>Note folders</source>
+<translation type="unfinished">Note folders</translation>
+</message>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Recent notes</source>
+<translation type="unfinished">Recent notes</translation>
+</message>
+<message>
+<source>Show todo lists</source>
+<translation type="unfinished">Show todo lists</translation>
+</message>
+<message>
+<source>Recent tasks</source>
+<translation type="unfinished">Recent tasks</translation>
+</message>
+<message>
+<source>Quit</source>
+<translation type="unfinished">Quit</translation>
+</message>
+</context>
+<context>
 <name>TableDialog</name>
 <message>
 <source>Insert table</source>
@@ -8010,6 +8277,170 @@ Zvawakanyora zvichagara zvakatsiga!</translation>
 <message>
 <source>New tag</source>
 <translation>Zuva idzva</translation>
+</message>
+</context>
+<context>
+<name>TagManager</name>
+<message>
+<source>Show all notes (%1)</source>
+<translation type="unfinished">Show all notes (%1)</translation>
+</message>
+<message>
+<source>All notes</source>
+<translation type="unfinished">All notes</translation>
+</message>
+<message>
+<source>show all untagged notes (%1)</source>
+<translation type="unfinished">show all untagged notes (%1)</translation>
+</message>
+<message>
+<source>Untagged notes</source>
+<translation type="unfinished">Untagged notes</translation>
+</message>
+<message>
+<source>Show all notes tagged with '%1' (%2)</source>
+<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+</message>
+<message>
+<source>Add a tag to the current note</source>
+<translation type="unfinished">Add a tag to the current note</translation>
+</message>
+<message>
+<source>Add a tag to the selected notes</source>
+<translation type="unfinished">Add a tag to the selected notes</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n folder(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n folder(s) selected</numerusform>
+<numerusform>%n folder(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n notes selected</source>
+<translation type="unfinished">
+<numerusform>%n notes selected</numerusform>
+<numerusform>%n notes selected</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the current note</source>
+<translation type="unfinished">Remove tag '%1' from the current note</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the selected notes</source>
+<translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+</message>
+<message>
+<source>&amp;Add tag</source>
+<translation type="unfinished">&amp;Add tag</translation>
+</message>
+<message>
+<source>Rename tag</source>
+<translation type="unfinished">Rename tag</translation>
+</message>
+<message>
+<source>Assign color</source>
+<translation type="unfinished">Assign color</translation>
+</message>
+<message>
+<source>Disable color</source>
+<translation type="unfinished">Disable color</translation>
+</message>
+<message>
+<source>&amp;Remove tags</source>
+<translation type="unfinished">&amp;Remove tags</translation>
+</message>
+<message>
+<source>&amp;Move tags to…</source>
+<translation type="unfinished">&amp;Move tags to…</translation>
+</message>
+<message>
+<source>Tag could not be created!</source>
+<translation type="unfinished">Tag could not be created!</translation>
+</message>
+<message>
+<source>Move to the root</source>
+<comment>to move a tag to the current tag in the tag context menu</comment>
+<translation type="unfinished">Move to the root</translation>
+</message>
+<message>
+<source>Move to this tag</source>
+<translation type="unfinished">Move to this tag</translation>
+</message>
+<message>
+<source>Tag this</source>
+<translation type="unfinished">Tag this</translation>
+</message>
+<message>
+<source>Cannot move tag '%1' to this tag</source>
+<translation type="unfinished">Cannot move tag '%1' to this tag</translation>
+</message>
+<message>
+<source>Moved tag '%1' to new tag</source>
+<translation type="unfinished">Moved tag '%1' to new tag</translation>
+</message>
+<message>
+<source>Tag selected notes</source>
+<translation type="unfinished">Tag selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were tagged with "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were tagged with "%2"</numerusform>
+<numerusform>%n note(s) were tagged with "%2"</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag from selected notes</source>
+<translation type="unfinished">Remove tag from selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
+<translation type="unfinished">
+<numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+<numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation type="unfinished">Done</translation>
+</message>
+<message numerus="yes">
+<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected tags</source>
+<translation type="unfinished">Remove selected tags</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8758,6 +9189,43 @@ Izvi hazvigone kuitika</translation>
 <message>
 <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
 <translation>Ramba uchiyeuka kuti iyo nyowani folda ichave yakachengetwa inoenderana nedhairekitori iyo QOwnNotes inogara mune inotakurika modhi! Saka iwe unofanirwa kugara pane imwechete drive.</translation>
+</message>
+</context>
+<context>
+<name>WorkspaceManager</name>
+<message>
+<source>Workspaces</source>
+<translation type="unfinished">Workspaces</translation>
+</message>
+<message>
+<source>full</source>
+<comment>full workspace</comment>
+<translation type="unfinished">full</translation>
+</message>
+<message>
+<source>minimal</source>
+<comment>minimal workspace</comment>
+<translation type="unfinished">minimal</translation>
+</message>
+<message>
+<source>Create new workspace</source>
+<translation type="unfinished">Create new workspace</translation>
+</message>
+<message>
+<source>Workspace name:</source>
+<translation type="unfinished">Workspace name:</translation>
+</message>
+<message>
+<source>Remove current workspace</source>
+<translation type="unfinished">Remove current workspace</translation>
+</message>
+<message>
+<source>Remove the current workspace?</source>
+<translation type="unfinished">Remove the current workspace?</translation>
+</message>
+<message>
+<source>Rename workspace</source>
+<translation type="unfinished">Rename workspace</translation>
 </message>
 </context>
 <context>

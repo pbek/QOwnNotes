@@ -35,7 +35,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - De **Notites-map** is **vrij te kiezen** (meerdere mappen met notities zijn ook mogelijk)
 - **Het zoeken naar delen van woorden** in notities is mogelijk en zoekresultaten worden gemarkeerd in de notities
 - [**Browser-extensie**](browser-extension.md) om **notities toe te voegen uit geselecteerde tekst**, **maak schermopnamen** of **beheer uw bladwijzers**
-- Ondersteuning voor [**Spellingcontrole**](../editor/spellchecking.md)
+- [**Spellchecking**](../editor/spellchecking.md) and optional [**LanguageTool**](../editor/languagetool.md) support
 - **Portable modus** om QOwnNotes mee te nemen op USB-sticks
 - Ondersteuning voor **Scripting** en een online [**scriptrepository**](https://github.com/qownnotes/scripts) waar u scripts in de applicatie kunt installeren
 - Implementatie van de **[OpenAI completion API](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** voor het gebruik in scripts

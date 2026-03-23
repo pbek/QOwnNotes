@@ -14,7 +14,8 @@
 | `--action <name>`      | 응용 프로그램이 시작된 후 메뉴 작업을 트리거합니다 (아래 참조)                                  |
 | `--completion <shell>` | 셸 완료 코드를 생성합니다. `fish`, `bash`를 지원합니다.                                |
 
-::: 팁 QOnNotes 설치 시 문제가 발생할 경우 `--session` 매개 변수를 사용하여 현재 설정을 잃지 않고 새로운 설정으로 응용프로그램을 시작할 수 있습니다.
+::: tip
+QOnNotes 설치 시 문제가 발생할 경우 `--session` 매개 변수를 사용하여 현재 설정을 잃지 않고 새로운 설정으로 응용프로그램을 시작할 수 있습니다.
 
 ```bash
 QOwnNotes --session test
@@ -30,7 +31,8 @@ QOwnNotes --session test
 | macOS   | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes` |
 | Windows | `QOwnNotes.exe`                                        |
 
-::: 팁 설정 덤프를 클립보드에 직접 복사하여 [GitHub 문제](https://github.com/pbek/QOwnNotes/issues)에 게시하려면 Linux의 경우 `xclip` 또는 `xsel`, macOS의 경우 `pbcopy`, Windows의 경우 `clip`을 사용할 수 있습니다:
+::: tip
+설정 덤프를 클립보드에 직접 복사하여 [GitHub 문제](https://github.com/pbek/QOwnNotes/issues)에 게시하려면 Linux의 경우 `xclip` 또는 `xsel`, macOS의 경우 `pbcopy`, Windows의 경우 `clip`을 사용할 수 있습니다:
 
 ```bash
 #Linux에서 xclip을 사용하여 설정 덤프를 클립보드에 복사
@@ -58,7 +60,9 @@ QOwnNotes --dump-settings | clip
 QOwnNotes --action actionShow_Todo_List
 ```
 
-::: 팁 메뉴 동작의 객체 이름은 [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)에서 얻을 수 있습니다. 영어 메뉴 제목만 검색해 보세요. 이러한 텍스트는 시간이 지남에 따라 변경될 수 있습니다. :::
+::: tip
+메뉴 동작의 객체 이름은 [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui)에서 얻을 수 있습니다. 영어 메뉴 제목만 검색해 보세요. 이러한 텍스트는 시간이 지남에 따라 변경될 수 있습니다.
+:::
 
 [스크립트 작업](../scripting/methods-and-objects.md#registering-a-custom-action)을 트리거하려면 `customaction_` 뒤에 사용자 지정 작업의 식별자가 표시됩니다. 사용자 지정 작업의 식별자는 스크립트에서 `script.registerCustomAction` 호출의 첫 번째 매개 변수입니다.
 
@@ -68,6 +72,7 @@ QOwnNotes --action actionShow_Todo_List
 QOwnNotes --action customAction_myAction
 ```
 
-::: 팁
+::: tip
+
 수행 매개변수로 QOwnNotes를 두 번 실행하고 하나의 응용프로그램 인스턴스만 허용한 경우, 메뉴 수행은 첫 번째 인스턴스에서 트리거됩니다.
 :::

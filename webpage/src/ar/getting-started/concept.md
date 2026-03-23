@@ -17,6 +17,7 @@ graph TB
         sync("Nextcloud Sync")-->md
         qon-comp("Browser extension")-->qon
         qc("Command-line snippet manager")-->qon
+        homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
@@ -30,6 +31,7 @@ graph TB
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
+    qon-.->lt("LanguageTool service")
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
 
@@ -38,6 +40,7 @@ graph TB
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
     click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
+    click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
@@ -45,6 +48,7 @@ graph TB
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
     click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -68,8 +72,39 @@ graph TB
 
 يمكنك استخدام QOwnNotes لإدارة **إشارات المتصفح المرجعية** أو كـ**مقص ويب**.
 
+The same bookmark parsing and indexing can also power a local suggestion API for [Homepage](https://github.com/gethomepage/homepage).
+
 ::: tip
 إضافة المتصفح تعمل **بدون اتصال بالإنترنت**. برجاء زيارة [إضافة المتصفح رفيقة ويب QOwnNotes](browser-extension.md) للمزيد من المعلومات.
+:::
+
+## Homepage dashboard
+
+QOwnNotes can expose a local HTTP endpoint for [Homepage](https://github.com/gethomepage/homepage) `suggestionUrl` support, backed by the same bookmark parsing and indexing used by the Web Companion data source.
+
+- Enable it in `Settings -> Browser extension / command snippets`
+- Turn on `Enable socket server`
+- In `Bookmark suggestion API`, enable `Enable Homepage-compatible bookmark suggestions API`
+- Set a port for the local endpoint
+- Optionally set a security token if you want Homepage requests to authenticate
+- The service binds to `127.0.0.1` only
+
+The endpoint is available as `GET /suggest?q=home` and supports an optional `limit` parameter (default `10`, maximum `50`) and an optional `token` parameter.
+
+If you use the custom Homepage assets from `docs/homepage/custom.js`, set `QON_TOKEN` to the same security token configured in QOwnNotes.
+
+Example Homepage configuration:
+
+```yaml
+search:
+  provider: custom
+  url: https://example.com/search?q=
+  suggestionUrl: http://127.0.0.1:22224/suggest?q=
+  showSearchSuggestions: true
+```
+
+::: tip
+Please visit [Homepage suggestion API](homepage-suggestion-api.md) for more information, including which Homepage settings file to edit and how to use the custom assets from `docs/homepage`.
 :::
 
 ## مدير قصاصات سطر أوامر QOwnNotes
@@ -78,6 +113,19 @@ graph TB
 
 ::: tip
 برجاء زيارة [مدير قصاصات سطر أوامر QOwnNotes](command-line-snippet-manager.md) لمزيد من المعلومات.
+:::
+
+## LanguageTool service
+
+QOwnNotes can use a local or remote [LanguageTool](https://languagetool.org/) server for **grammar and style checking** in the editor.
+
+- It is **optional** and works alongside the existing spell checker support
+- Enable it in `Settings -> Editor`, then configure your **server URL**, **language**, optional **API key**, and the categories you want to check
+- You can also toggle it quickly from the **Spelling** menu with `Check grammar with LanguageTool`
+- Suggestions and actions are available from the editor context menu for detected issues
+
+::: tip
+Please visit [LanguageTool](../editor/languagetool.md) for more information.
 :::
 
 ## عميل مزامنة Nextcloud الحاسوبي

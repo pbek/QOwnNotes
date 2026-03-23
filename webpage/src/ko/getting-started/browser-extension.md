@@ -7,8 +7,7 @@ image: /img/bookmarks.png
 브라우저 페이지에서 클리핑하고 브라우저 및 운영 체제에서 브라우저 북마크를 관리할 수 있습니다.
 
 ::: tip
-웹 동반 브라우저 확장 프로그램이 작동하려면 **QOwnNotes가 실행 중**이어야 합니다.
-하지만 인터넷 연결이 필요하지 않으며, 브라우저 확장 프로그램은 **오프라인**에서 작동합니다.
+정보 웹 동반 브라우저 확장 프로그램이 작동하려면 **QOwnNotes가 실행 중**이어야 합니다>. 하지만 인터넷 연결이 필요하지 않으며, 브라우저 확장 프로그램은 **오프라인**에서 작동합니다.
 :::
 
 ## 설치
@@ -30,19 +29,15 @@ image: /img/bookmarks.png
 웹 페이지 또는 선택한 텍스트를 마우스 오른쪽 버튼으로 클릭하여 **웹 클리퍼** 기능을 사용합니다. 여기서 현재 웹 페이지의 **스냅샷** 으로 새 노트를 만들 수도 있습니다.
 
 ::: warning
-웹 클리퍼가 작동하지 않는 경우 QOwnNotes 데스크톱 응용 프로그램이 실행되고 있는지, Web Companion 브라우저 확장 프로그램이 보안 토큰으로 구성되어 있는지 확인하십시오.
+정보 웹 클리퍼가 작동하지 않는 경우 QOwnNotes 데스크톱 응용 프로그램이 실행되고 있는지, Web Companion 브라우저 확장 프로그램이 보안 토큰으로 구성되어 있는지 확인하십시오.
 
 또한 브라우저 도구 모음에서 확장 아이콘을 처음 클릭할 때 동의 대화 상자를 수락해야 합니다.
 
-Firefox를 사용하는 경우 확장 설정의 _권한_에서
-`모든 웹사이트에 대한 데이터 접근 권한` 옵션을 활성화했는지 확인해야 합니다.
-그렇지 않으면 `TypeError: chrome.tabs.captureVisibleTab is not a function` 오류가 발생할 수 있습니다.
+Firefox를 사용하는 경우 옵션을 활성화했는지 확인해야 합니다 권한 `모든 웹사이트에 대한 데이터 접근 권한 `는 _권한 _ 확장 설정에서 이루어집니다, 그렇지 않으면 `TypeError: chrome.tabs.captureVisibleTab이 함수가 아닙니다 `라는 오류가 발생할 수 있습니다.
 :::
 
 ::: tip
-웹 클리퍼는 스크립팅도 가능합니다.
-웹 페이지에서 클리핑한 내용을 제어하려면
-[websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook)을 살펴보십시오.
+웹 클리퍼는 또한 스크립팅이 가능합니다! 웹 페이지에서 클리핑한 내용을 제어하려면 [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook)을 살펴 보십시오.
 :::
 
 ## 북마크
@@ -57,7 +52,8 @@ Firefox를 사용하는 경우 확장 설정의 _권한_에서
 
 새 북마크는 `북마크`라는 노트에 저장됩니다 (설정에서도 변경 가능).
 
-::: 팁
+::: tip
+
 웹 지원 브라우저 확장자를 사용하여 브라우저 북마크를 QOnNotes로 가져올 수도 있습니다!
 :::
 
@@ -76,5 +72,4 @@ Firefox를 사용하는 경우 확장 설정의 _권한_에서
 
 ## 홈페이지 제안 API
 
-QOwnNotes 북마크 제안과 [홈페이지](https://github.com/gethomepage/homepage) 통합에 대해서는
-[홈페이지 제안 API](./homepage-suggestion-api.md)를 참조하세요.
+QOwnNotes 북마크 제안과 [홈페이지](https://github.com/gethomepage/homepage) 통합에 대해서는 <a href="./homepage-suggestion-api.md"홈페이지 제안 API</a>를 참조하세요.

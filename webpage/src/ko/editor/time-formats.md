@@ -47,6 +47,10 @@
 | `hh:mm:ss.zzz`     | 14:13:09.042     |
 | `h:m:s ap`         | 2:13:9 pm        |
 
-::: 팁 정보 시간 형식에 대한 자세한 내용은 [Qt 문서](http://doc.qt.io/qt-5/qdatetime.html#toString) 를 참조하십시오. :::
+::: tip
+정보 시간 형식에 대한 자세한 내용은 [Qt 문서](http://doc.qt.io/qt-5/qdatetime.html#toString) 를 참조하십시오.
+:::
 
-::: 팁 현재 시간을 출력하기 위해 더 복잡한 작업을 수행해야 하는 경우 [사용자 지정 동작](../scripting/methods-and-objects.md#registering-a-custom-action)을 만드는 것을 고려하십시오. :::
+::: tip
+현재 시간을 출력하기 위해 더 복잡한 작업을 수행해야 하는 경우 [사용자 지정 동작](../scripting/methods-and-objects.md#registering-a-custom-action)을 만드는 것을 고려하십시오.
+:::

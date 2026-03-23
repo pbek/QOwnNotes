@@ -35,7 +35,7 @@
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar múltiples carpetas de notas)
 - Es posible **buscar partes de palabras** en las notas. Los resultados de la búsqueda se resaltan en las notas
 - [**Extensión del navegador**](browser-extension.md) para **agregar notas a partir del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
-- Compatibilidad con [**revisores ortográficos**](../editor/spellchecking.md)
+- [**Corrección ortográfica**](../editor/spellchecking.md) y soporte opcional para [**LanguageTool**](../editor/languagetool.md)
 - **Modo portátil** para llevar consigo QOwnNotes en memorias USB
 - **Soporte de secuencias de órdenes** y un [**repositorio de scripts**](https://github.com/qownnotes/scripts) en línea desde el que puede instalar scripts dentro de la aplicación
 - Implementación de la **[API de finalización de OpenAI](https://www.qownnotes.org/blog/2024-05-17-AI-support-was-added-to-QOwnNotes.html)** para su uso en scripts

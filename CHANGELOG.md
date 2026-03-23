@@ -20,6 +20,7 @@
   first character in the match span (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
 - Fixed new note creation via `Ctrl + N` not including the current date in the note
   title (for [#3516](https://github.com/pbek/QOwnNotes/issues/3516))
+- Added more Korean, Spanish, Croatian, French, Swedish translation (thank you, VenusGirl, AlejandroMoc, milotype, jd-develop, ojn)
 
 ## 26.3.18
 

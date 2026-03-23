@@ -14,4 +14,5 @@ QOwnNotes에 참여하는 다양한 방법
 - 훌륭한 편집기 구성표를 만들었다면 [**GitHub 이슈** 페이지](https://github.com/pbek/QOwnNotes/issues)에 게시하기
 - [**QOwnNotes 스크립트** GitHub 페이지](https://github.com/qownnotes/scripts)에서 스크립트 공유
 
-::: 중요 팁 참여하기 전에 [행동 강령](./code-of-conduct.md)을 읽으십시오! :::
+::: 중요 팁 참여하기 전에 [행동 강령](./code-of-conduct.md)을 읽으십시오!
+:::
