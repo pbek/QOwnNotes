@@ -30,7 +30,12 @@
 //}
 
 QString TestNotes::uniqueTestName(const QString &baseName) const {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     return baseName + QStringLiteral("-") + QUuid::createUuid().toString(QUuid::WithoutBraces);
+#else
+    // QUuid::WithoutBraces was introduced in Qt 5.11; strip the surrounding braces manually
+    return baseName + QStringLiteral("-") + QUuid::createUuid().toString().mid(1, 36);
+#endif
 }
 
 NoteSubFolder TestNotes::createTestNoteSubFolder(const QString &name, int parentId) const {
