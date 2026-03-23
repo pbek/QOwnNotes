@@ -830,6 +830,6 @@ void NoteOperationsManager::on_action_New_note_triggered() {
         }
     }
 
-    // create a new note
-    createNewNote(QString(), false);
+    // create a new note with date in the headline
+    createNewNote(QString(), true);
 }

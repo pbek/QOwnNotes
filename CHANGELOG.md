@@ -2,6 +2,8 @@
 
 ## 26.3.19
 
+- Fixed new note creation via `Ctrl + N` not including the current date in the note
+  title (for [#3516](https://github.com/pbek/QOwnNotes/issues/3516))
 - Fixed spell checker and LanguageTool text replacements to first turn off read-only
   mode so the note will be stored when a suggestion is applied
   (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
