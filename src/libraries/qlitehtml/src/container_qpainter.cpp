@@ -623,6 +623,23 @@ litehtml::uint_ptr DocumentContainerPrivate::create_font(const litehtml::tchar_t
                            return monospaceFont();
                        return name;
                    });
+    // Append platform-specific colour-emoji fonts as fallbacks so that emoji
+    // characters (e.g. U+1F6AB 🚫) are rendered by the correct emoji font
+    // rather than a symbol font that may map the same codepoint to an
+    // unrelated glyph (e.g. the Bitcoin B from "Segoe UI Symbol" on Windows).
+    // Qt's font engine selects the first family in the list that can render a
+    // given glyph, so placing the emoji fonts after the user's primary font
+    // preserves normal text rendering while adding emoji fallback support.
+#if defined(Q_OS_WIN)
+    if (!familyNames.contains(QStringLiteral("Segoe UI Emoji"), Qt::CaseInsensitive))
+        familyNames << QStringLiteral("Segoe UI Emoji");
+#elif defined(Q_OS_MAC)
+    if (!familyNames.contains(QStringLiteral("Apple Color Emoji"), Qt::CaseInsensitive))
+        familyNames << QStringLiteral("Apple Color Emoji");
+#else
+    if (!familyNames.contains(QStringLiteral("Noto Color Emoji"), Qt::CaseInsensitive))
+        familyNames << QStringLiteral("Noto Color Emoji");
+#endif
     auto font = new QFont();
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     font->setFamilies(familyNames);
