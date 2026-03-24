@@ -217,7 +217,7 @@ bool Utils::Git::initRepository(const QString &path) {
 
     if (error != 0) {
         const git_error *e = git_error_last();
-        qWarning() << "Failed to initialize repo:" << (e ? e->message : "unknown");
+        qWarning() << "Failed to initialize git repo:" << (e ? e->message : "unknown");
         return false;
     }
 
@@ -231,7 +231,7 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
 
     git_repository *repo = nullptr;
     if (git_repository_open(&repo, path.toUtf8().constData()) != 0) {
-        qWarning() << "Failed to open repository at" << path;
+        qWarning() << "Failed to open git repository at" << path;
         return false;
     }
 
@@ -239,7 +239,8 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
     git_oid tree_oid, commit_oid;
 
     if (git_repository_index(&index, repo) != 0) {
-        qWarning() << "Failed to get index";
+        const git_error *e = git_error_last();
+        qWarning() << "Failed to get git index:" << (e ? e->message : "unknown error");
         git_repository_free(repo);
         return false;
     }
@@ -301,7 +302,7 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
 
     if (error != 0) {
         const git_error *e = git_error_last();
-        qWarning() << "Failed to create commit:" << (e ? e->message : "unknown");
+        qWarning() << "Failed to create git commit:" << (e ? e->message : "unknown");
         return false;
     }
 
