@@ -2,6 +2,9 @@
 
 ## 26.3.20
 
+- Improved the `Failed to get index` git warning to include the actual libgit2
+  error message for easier diagnosis
+  (for [#3520](https://github.com/pbek/QOwnNotes/issues/3520))
 - Fixed a crash in the **update dialog** caused by `QAbstractScrollArea::viewport()`
   being called on a not-yet-initialized scroll area during `setupUi` construction;
   the event filter now guards against a null viewport before dereferencing it
