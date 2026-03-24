@@ -2,6 +2,11 @@
 
 ## 26.3.20
 
+- Fixed XML/HTML code blocks in the **QLiteHtml preview** having their tags
+  stripped and showing only text content; indented lines inside fenced code blocks
+  were incorrectly masked as indented code blocks, bypassing the syntax highlighter,
+  and the XML highlighter now also properly escapes closing angle brackets
+  (for [#3521](https://github.com/pbek/QOwnNotes/issues/3521))
 - Added a new **Read-only mode** panel to the _General_ settings with an **Enable
   read-only mode** master checkbox; all read-only related settings (**Start application
   in read-only mode** and **When inactive, enter read-only mode automatically after**)

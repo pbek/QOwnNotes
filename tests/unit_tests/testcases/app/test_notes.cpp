@@ -599,6 +599,93 @@ void TestNotes::testHTMLescape() {
 }
 
 /**
+ * Test that the XML highlighter properly escapes angle brackets so that
+ * XML tags in code blocks are not stripped by the QLiteHTML preview.
+ * See: https://github.com/pbek/QOwnNotes/issues/3521
+ */
+void TestNotes::testXmlHighlighterEscaping() {
+    CodeToHtmlConverter c("xml");
+
+    // Simple XML tag: both '<' and '>' must be escaped
+    {
+        QString input = QStringLiteral("<tag>content</tag>");
+        QString result = c.process(input);
+        QVERIFY2(result.contains(QStringLiteral("&lt;")), "Opening '<' must be escaped as &lt;");
+        QVERIFY2(result.contains(QStringLiteral("&gt;")), "Closing '>' must be escaped as &gt;");
+        QVERIFY2(!result.contains(QRegularExpression(QStringLiteral("(?<!&[a-z]+)>(?!</span>)"))),
+                 "No unescaped '>' outside of span tags");
+    }
+
+    // XML processing instruction: '?' must be preserved
+    {
+        QString input = QStringLiteral("<?xml version=\"1.0\"?>");
+        QString result = c.process(input);
+        QVERIFY2(result.contains(QStringLiteral("?")),
+                 "'?' in processing instruction must not be dropped");
+    }
+
+    // Nested XML: inner tags must have escaped angle brackets
+    {
+        QString input = QStringLiteral("<root><child>text</child></root>");
+        QString result = c.process(input);
+        // Count occurrences of &lt; - should be 4 (root open, child open,
+        // child close, root close)
+        QCOMPARE(result.count(QStringLiteral("&lt;")), 4);
+        // Count occurrences of &gt; - should be 4
+        QCOMPARE(result.count(QStringLiteral("&gt;")), 4);
+    }
+
+    // Multi-line XML matching the user's bug report (issue #3521):
+    // Tags like <iconReference> and <description> must be escaped
+    {
+        QString input = QStringLiteral(
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+            "<searchConnectorDescription "
+            "xmlns=\"http://schemas.microsoft.com/windows/2009/searchConnector\">\n"
+            "    <iconReference>\\\\user\\test</iconReference>\n"
+            "    <description>Some description here.</description>\n"
+            "</searchConnectorDescription>");
+        QString result = c.process(input);
+        qDebug() << "Multi-line XML highlighter output:" << result;
+        // Every '<' must be escaped as &lt; (7 tags total:
+        // <?xml, <searchConnector, <iconRef, </iconRef,
+        // <description, </description, </searchConnector)
+        QCOMPARE(result.count(QStringLiteral("&lt;")), 7);
+        // Every '>' must be escaped as &gt; (7 closing brackets)
+        QCOMPARE(result.count(QStringLiteral("&gt;")), 7);
+        // None of the XML tag names should appear as unescaped HTML tags
+        QVERIFY2(!result.contains(QStringLiteral("<iconReference>")),
+                 "Raw <iconReference> tag must not appear in output");
+        QVERIFY2(!result.contains(QStringLiteral("<description>")),
+                 "Raw <description> tag must not appear in output");
+    }
+
+    // Full pipeline test: XML code block through note → HTML
+    {
+        QString md = QStringLiteral(
+            "# Test\n```xml\n"
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+            "<searchConnectorDescription "
+            "xmlns=\"http://schemas.microsoft.com/windows/2009/searchConnector\">\n"
+            "    <iconReference>\\\\user\\test</iconReference>\n"
+            "    <description>Some description here.</description>\n"
+            "</searchConnectorDescription>\n"
+            "```\n");
+        Note note;
+        note.setNoteText(md);
+        QString html = note.toMarkdownHtml("", 980, true);
+        qDebug() << "Full pipeline XML HTML:" << html;
+        // The output must NOT contain raw <child> or </child> tags
+        QVERIFY2(!html.contains(QStringLiteral("<iconReference>")),
+                 "Raw <iconReference> tag must not appear in final HTML");
+        QVERIFY2(!html.contains(QStringLiteral("</iconReference>")),
+                 "Raw </iconReference> tag must not appear in final HTML");
+        QVERIFY2(!html.contains(QStringLiteral("<description>")),
+                 "Raw <description> tag must not appear in final HTML");
+    }
+}
+
+/**
  * Test that angle-bracket content like <stdio.h> inside various code block
  * types is NOT converted to a file link in the preview HTML.
  * See: https://github.com/pbek/QOwnNotes/issues/3084

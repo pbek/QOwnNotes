@@ -533,9 +533,11 @@ QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
     QString output = QLatin1String("");
 
     for (int i = 0; i < textLen; ++i) {
-        if (input.at(i) == QLatin1Char('<') && input.at(i + 1) != QLatin1Char('!')) {
+        if (input.at(i) == QLatin1Char('<') && (i + 1 < textLen) &&
+            input.at(i + 1) != QLatin1Char('!')) {
             const int found = input.indexOf(QLatin1Char('>'), i);
             if (found > 0) {
+                // Escape the opening '<'
                 output += escape(input.at(i));
                 ++i;
                 if (input.at(i) == QLatin1Char('/')) {
@@ -554,9 +556,20 @@ QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
                 QRegularExpressionMatchIterator matchIt = re.globalMatch(TO_QSTRING(tag));
 #endif
 
+                // Track position within the tag to preserve characters
+                // between regex matches (e.g. '?' in '<?xml ... ?>')
+                int lastMatchEnd = 0;
                 while (matchIt.hasNext()) {
                     QRegularExpressionMatch match = matchIt.next();
+                    int matchStart = match.capturedStart(0);
                     QString captured = match.captured(0);
+
+                    // Escape any characters between the previous match
+                    // and this one (e.g. '?' before 'xml' in '<?xml')
+                    for (int j = lastMatchEnd; j < matchStart; ++j) {
+                        output += escape(tag.at(j));
+                    }
+                    lastMatchEnd = matchStart + match.capturedLength(0);
 
                     if (!captured.contains(QLatin1Char('='))) {
                         output += setFormat(captured, Format::Builtin);
@@ -566,13 +579,16 @@ QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
                                   setFormat(captured.mid(eqPos + 1, captured.length() - eqPos - 1),
                                             Format::String);
                     }
-
-                    if (matchIt.hasNext()) {
-                        output += " ";
-                    }
                 }
 
-                output += (tag.endsWith(QLatin1Char('/')) ? " />" : ">");
+                // Escape any trailing characters after the last match
+                // (e.g. '?' before '>' in '<?xml ...?>')
+                for (int j = lastMatchEnd; j < tag.length(); ++j) {
+                    output += escape(tag.at(j));
+                }
+
+                // Escape the closing '>'
+                output += QStringLiteral("&gt;");
 
                 i = found;
             }

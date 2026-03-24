@@ -3298,11 +3298,47 @@ static QStringList maskIndentedCodeBlocks(QString &str) {
         QStringLiteral("(^|\\n)((?:(?:[ ]{4}|\\t)[^\\n]*(?:\\n|$))+)"),
         QRegularExpression::MultilineOption);
 
+    // Build a list of (start, end) ranges for backtick-fenced code blocks so
+    // we can skip indented lines that fall inside them.  Tilde fences are
+    // already masked at this point, so we only need to handle backticks.
+    QList<QPair<int, int>> fencedRanges;
+    {
+        const QString fence = QStringLiteral("```");
+        int pos = 0;
+        while (true) {
+            int start = str.indexOf(fence, pos);
+            if (start == -1) break;
+            // Find the end of the opening fence line
+            int eol = str.indexOf(QChar('\n'), start);
+            if (eol == -1) break;
+            // Find the closing fence
+            int end = str.indexOf(fence, eol + 1);
+            if (end == -1) break;
+            // Find end of closing fence line (or end of string)
+            int endLine = str.indexOf(QChar('\n'), end);
+            if (endLine == -1) endLine = str.length();
+            fencedRanges.append(qMakePair(start, endLine));
+            pos = endLine + 1;
+        }
+    }
+
     // Collect all matches first (forward order)
     QList<QRegularExpressionMatch> matches;
     QRegularExpressionMatchIterator it = indentedRE.globalMatch(str);
     while (it.hasNext()) {
-        matches.append(it.next());
+        QRegularExpressionMatch match = it.next();
+        // Skip this match if it falls inside a backtick-fenced code block
+        int matchStart = match.capturedStart(2);
+        bool insideFence = false;
+        for (const auto &range : fencedRanges) {
+            if (matchStart >= range.first && matchStart < range.second) {
+                insideFence = true;
+                break;
+            }
+        }
+        if (!insideFence) {
+            matches.append(match);
+        }
     }
 
     // Replace in reverse order to keep earlier positions valid, but assign
