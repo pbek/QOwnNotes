@@ -834,6 +834,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("automaticNoteFolderDatabaseClosing"),
                       ui->automaticNoteFolderDatabaseClosingCheckBox->isChecked());
     settings.setValue(QStringLiteral("legacyLinking"), ui->legacyLinkingCheckBox->isChecked());
+    settings.setValue(QStringLiteral("enableReadOnlyMode"),
+                      ui->enableReadOnlyModeCheckBox->isChecked());
     settings.setValue(QStringLiteral("startInReadOnlyMode"),
                       ui->startInReadOnlyModeCheckBox->isChecked());
     settings.setValue(QStringLiteral("autoReadOnlyMode"),
@@ -1413,6 +1415,12 @@ void SettingsDialog::readSettings() {
     ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
         Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
     ui->legacyLinkingCheckBox->setChecked(settings.value(QStringLiteral("legacyLinking")).toBool());
+
+    const bool enableReadOnlyMode =
+        settings.value(QStringLiteral("enableReadOnlyMode"), true).toBool();
+    ui->enableReadOnlyModeCheckBox->setChecked(enableReadOnlyMode);
+    ui->readOnlyModeSettingsFrame->setEnabled(enableReadOnlyMode);
+
     ui->startInReadOnlyModeCheckBox->setChecked(
         settings.value(QStringLiteral("startInReadOnlyMode")).toBool());
     ui->autoReadOnlyModeCheckBox->setChecked(
@@ -4051,6 +4059,10 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
  */
 void SettingsDialog::on_imageScaleDownCheckBox_toggled(bool checked) {
     ui->imageScalingFrame->setVisible(checked);
+}
+
+void SettingsDialog::on_enableReadOnlyModeCheckBox_toggled(bool checked) {
+    ui->readOnlyModeSettingsFrame->setEnabled(checked);
 }
 
 /**

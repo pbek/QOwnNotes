@@ -205,7 +205,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     SettingsService settings;
 
     // Disable note editing if the user has set the start in read-only mode
-    if (settings.value(QStringLiteral("startInReadOnlyMode")).toBool()) {
+    // and read-only mode feature is enabled
+    if (Utils::Misc::isReadOnlyModeEnabled() &&
+        settings.value(QStringLiteral("startInReadOnlyMode")).toBool()) {
         settings.setValue(QStringLiteral("allowNoteEditing"), false);
     }
 
@@ -2368,7 +2370,19 @@ void MainWindow::readSettings() {
         const QSignalBlocker blocker(ui->actionAllow_note_editing);
         Q_UNUSED(blocker)
 
+        const bool isReadOnlyModeEnabled = Utils::Misc::isReadOnlyModeEnabled();
+
+        // Hide the action and the status bar button if read-only mode is disabled
+        ui->actionAllow_note_editing->setVisible(isReadOnlyModeEnabled);
+        _readOnlyButton->setVisible(isReadOnlyModeEnabled);
+
         bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
+
+        // If read-only mode feature is disabled, force note editing to be allowed
+        if (!isReadOnlyModeEnabled) {
+            isAllowNoteEditing = true;
+        }
+
         ui->actionAllow_note_editing->setChecked(isAllowNoteEditing);
         // we want to trigger the method regardless if the button was toggled
         // or not
@@ -2420,7 +2434,9 @@ void MainWindow::readSettings() {
 bool MainWindow::startAutoReadOnlyModeIfEnabled() {
     SettingsService settings;
 
-    if (settings.value(QStringLiteral("autoReadOnlyMode")).toBool()) {
+    // Only start auto read-only mode if the read-only mode feature is enabled
+    if (Utils::Misc::isReadOnlyModeEnabled() &&
+        settings.value(QStringLiteral("autoReadOnlyMode")).toBool()) {
         _autoReadOnlyModeTimer->start(
             settings.value(QStringLiteral("autoReadOnlyModeTimeout")).toInt() * 1000);
 
@@ -2652,6 +2668,32 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     const bool isWebAppSupportEnabled = Utils::Misc::isWebAppSupportEnabled();
     ui->actionSend_clipboard->setEnabled(isWebAppSupportEnabled);
     ui->actionSend_clipboard_as_text->setEnabled(isWebAppSupportEnabled);
+
+    // Update the read-only mode action and status bar button visibility
+    // in case the "Enable read-only mode" setting was changed
+    {
+        const QSignalBlocker blocker(ui->actionAllow_note_editing);
+        Q_UNUSED(blocker)
+
+        const bool isReadOnlyModeEnabled = Utils::Misc::isReadOnlyModeEnabled();
+
+        // Hide the action and the status bar button if read-only mode is disabled
+        ui->actionAllow_note_editing->setVisible(isReadOnlyModeEnabled);
+        _readOnlyButton->setVisible(isReadOnlyModeEnabled);
+
+        bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
+
+        // If read-only mode feature is disabled, force note editing to be allowed
+        if (!isReadOnlyModeEnabled) {
+            isAllowNoteEditing = true;
+            on_actionAllow_note_editing_triggered(isAllowNoteEditing);
+        }
+    }
+
+    // Enable/disable auto read-only mode timer based on current settings
+    if (!startAutoReadOnlyModeIfEnabled()) {
+        _autoReadOnlyModeTimer->stop();
+    }
 }
 
 /**
@@ -7088,7 +7130,11 @@ void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
 
     updateNoteTextEditReadOnly();
     setMenuEnabled(ui->menuEncryption, checked);
-    _readOnlyButton->setHidden(checked);
+
+    // Only show/hide the read-only status bar button when read-only mode is enabled
+    if (Utils::Misc::isReadOnlyModeEnabled()) {
+        _readOnlyButton->setHidden(checked);
+    }
 
     ui->actionAllow_note_editing->setText(checked ? tr("Disallow all note editing")
                                                   : tr("Allow all note editing"));

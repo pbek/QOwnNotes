@@ -1591,6 +1591,15 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if the read-only mode feature is enabled
+ *
+ * @return
+ */
+bool Utils::Misc::isReadOnlyModeEnabled() {
+    return SettingsService().value(QStringLiteral("enableReadOnlyMode"), true).toBool();
+}
+
+/**
  * Returns if "hideIconsInMenus" is turned on
  *
  * @return

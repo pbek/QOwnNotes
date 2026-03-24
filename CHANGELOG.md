@@ -2,6 +2,13 @@
 
 ## 26.3.20
 
+- Added a new **Read-only mode** panel to the _General_ settings with an **Enable
+  read-only mode** master checkbox; all read-only related settings (**Start application
+  in read-only mode** and **When inactive, enter read-only mode automatically after**)
+  are now grouped inside this panel and are disabled when the master checkbox is
+  unchecked — the **Disallow note editing** toolbar/menu action is hidden and the
+  Escape key no longer enters read-only mode when the feature is disabled
+  (for [#3519](https://github.com/pbek/QOwnNotes/issues/3519))
 - Fixed intermittent `database table is locked: note` warnings (SQLite error 262)
   caused by background threads (backlink navigation, note relation scene) contending
   with main-thread writes on the shared-cache in-memory database; each connection
