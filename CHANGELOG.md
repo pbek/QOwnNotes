@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 26.3.21
+
+- Fixed emoji characters (e.g. 🚫) rendering as incorrect glyphs (such as the
+  Bitcoin ₿ symbol) in the **QLiteHtml preview** on Windows by splitting text
+  into emoji and non-emoji runs and rendering emoji runs with the platform
+  colour-emoji font ("Segoe UI Emoji" on Windows, "Apple Color Emoji" on macOS,
+  "Noto Color Emoji" on Linux) set as the _primary_ font family — the previous
+  approach of appending the emoji font as a fallback in `QFont::setFamilies()`
+  was insufficient because Windows' font-linking chain selects "Segoe UI Symbol"
+  (which contains wrong glyphs at emoji codepoints) before reaching the emoji font
+  (for [#3517](https://github.com/pbek/QOwnNotes/issues/3517))
+
 ## 26.3.20
 
 - Fixed XML/HTML code blocks in the **QLiteHtml preview** having their tags
