@@ -119,6 +119,7 @@ void NavigationManager::updateBacklinkNavigationTab() {
         {
             QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
             db.open();
+            DatabaseService::applySharedMemoryDatabasePragmas(db);
             backlinks = noteCopy.findReverseLinkNotes(connectionName);
             db.close();
         }

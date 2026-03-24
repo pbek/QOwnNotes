@@ -106,9 +106,23 @@ QSqlDatabase DatabaseService::createSharedMemoryDatabase(const QString& connecti
     QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connectionName);
     db.setDatabaseName(QStringLiteral("file:memory?mode=memory&cache=shared"));
     //    db.setDatabaseName(QStringLiteral(":memory:"));
-    db.setConnectOptions("QSQLITE_OPEN_URI");
+    // QSQLITE_BUSY_TIMEOUT sets the busy timeout via the Qt driver option; we also apply the
+    // PRAGMA after opening (see applySharedMemoryDatabasePragmas) because shared-cache mode
+    // uses table-level locks that may not respect the driver option alone
+    db.setConnectOptions("QSQLITE_OPEN_URI;QSQLITE_BUSY_TIMEOUT=5000");
 
     return db;
+}
+
+void DatabaseService::applySharedMemoryDatabasePragmas(const QSqlDatabase& db) {
+    QSqlQuery query(db);
+    // busy_timeout covers SQLITE_BUSY (file-level lock contention)
+    query.exec(QStringLiteral("PRAGMA busy_timeout = 5000"));
+    // read_uncommitted allows background read-only connections to proceed without
+    // acquiring a shared-cache table lock, eliminating SQLITE_LOCKED (error 262) errors
+    // that busy_timeout does not retry. Background workers only read, so dirty reads
+    // are safe here.
+    query.exec(QStringLiteral("PRAGMA read_uncommitted = 1"));
 }
 
 QSqlDatabase DatabaseService::getSharedMemoryDatabase(const QString& connectionName) {
@@ -127,6 +141,7 @@ bool DatabaseService::createMemoryConnection() {
         return false;
     }
 
+    applySharedMemoryDatabasePragmas(dbMemory);
     return true;
 }
 

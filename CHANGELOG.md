@@ -2,9 +2,14 @@
 
 ## 26.3.20
 
+- Fixed intermittent `database table is locked: note` warnings (SQLite error 262)
+  caused by background threads (backlink navigation, note relation scene) contending
+  with main-thread writes on the shared-cache in-memory database; each connection
+  now sets `PRAGMA busy_timeout = 5000` and `PRAGMA read_uncommitted = 1` so that
+  read-only workers skip table-level shared-cache locks instead of immediately
+  returning `SQLITE_LOCKED` (for [#3520](https://github.com/pbek/QOwnNotes/issues/3520))
 - Improved the `Failed to get index` git warning to include the actual libgit2
-  error message for easier diagnosis
-  (for [#3520](https://github.com/pbek/QOwnNotes/issues/3520))
+  error message for easier diagnosis (for [#3520](https://github.com/pbek/QOwnNotes/issues/3520))
 - Fixed a crash in the **update dialog** caused by `QAbstractScrollArea::viewport()`
   being called on a not-yet-initialized scroll area during `setupUi` construction;
   the event filter now guards against a null viewport before dereferencing it
