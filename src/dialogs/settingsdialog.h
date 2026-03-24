@@ -210,6 +210,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_imageScaleDownCheckBox_toggled(bool checked);
 
+    void on_enableReadOnlyModeCheckBox_toggled(bool checked);
+
     void on_searchLineEdit_textChanged(const QString &arg1);
 
     void on_fileLoggingCheckBox_toggled(bool checked);

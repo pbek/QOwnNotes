@@ -2349,8 +2349,9 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                     return true;
                 }
             } else {
-                // disable note editing if escape key was pressed
-                if (keyEvent->key() == Qt::Key_Escape) {
+                // Disable note editing if Escape key was pressed and
+                // read-only mode feature is enabled
+                if (keyEvent->key() == Qt::Key_Escape && Utils::Misc::isReadOnlyModeEnabled()) {
                     MainWindow::instance()->disallowNoteEditing();
 
                     return true;

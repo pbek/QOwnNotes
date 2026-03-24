@@ -4180,16 +4180,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="16" column="0" colspan="2">
-                   <widget class="QCheckBox" name="startInReadOnlyModeCheckBox">
-                    <property name="toolTip">
-                     <string notr="true">note://, file://media, file://attachments</string>
-                    </property>
-                    <property name="text">
-                     <string>Start application in read-only mode</string>
-                    </property>
-                   </widget>
-                  </item>
+
                   <item row="3" column="0" colspan="2">
                    <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
                     <property name="toolTip">
@@ -4294,63 +4285,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="17" column="0" colspan="2">
-                   <widget class="QFrame" name="autoReadOnlyModeFrame">
-                    <property name="frameShape">
-                     <enum>QFrame::Shape::NoFrame</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Shadow::Raised</enum>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_84">
-                     <property name="leftMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
-                     <item row="0" column="0">
-                      <widget class="QCheckBox" name="autoReadOnlyModeCheckBox">
-                       <property name="text">
-                        <string>When inactive, enter read-only mode automatically after:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="1">
-                      <widget class="QSpinBox" name="autoReadOnlyModeTimeoutSpinBox">
-                       <property name="suffix">
-                        <string extracomment="short for seconds"> sec</string>
-                       </property>
-                       <property name="minimum">
-                        <number>1</number>
-                       </property>
-                       <property name="maximum">
-                        <number>9999</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="2">
-                      <spacer name="horizontalSpacer_19">
-                       <property name="orientation">
-                        <enum>Qt::Orientation::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>0</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
+
                   <item row="1" column="0" colspan="2">
                    <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
                     <property name="toolTip">
@@ -4420,12 +4355,95 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </item>
                  </layout>
                 </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="appInstanceGroupBox">
-                 <property name="title">
-                  <string>App instance</string>
-                 </property>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="readOnlyModeGroupBox">
+                  <property name="title">
+                   <string>Read-only mode</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_readOnly">
+                   <item>
+                    <widget class="QCheckBox" name="enableReadOnlyModeCheckBox">
+                     <property name="toolTip">
+                      <string>Enable or disable the read-only mode feature</string>
+                     </property>
+                     <property name="text">
+                      <string>Enable read-only mode</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="readOnlyModeSettingsFrame">
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::NoFrame</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_readOnlySettings">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item row="0" column="0" colspan="2">
+                       <widget class="QCheckBox" name="startInReadOnlyModeCheckBox">
+                        <property name="text">
+                         <string>Start application in read-only mode</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QCheckBox" name="autoReadOnlyModeCheckBox">
+                        <property name="text">
+                         <string>When inactive, enter read-only mode automatically after:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QSpinBox" name="autoReadOnlyModeTimeoutSpinBox">
+                        <property name="suffix">
+                         <string extracomment="short for seconds"> sec</string>
+                        </property>
+                        <property name="minimum">
+                         <number>1</number>
+                        </property>
+                        <property name="maximum">
+                         <number>9999</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="2">
+                       <spacer name="horizontalSpacer_19">
+                        <property name="orientation">
+                         <enum>Qt::Orientation::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>0</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="appInstanceGroupBox">
+                  <property name="title">
+                   <string>App instance</string>
+                  </property>
                  <layout class="QGridLayout" name="gridLayout_28">
                   <item row="0" column="0">
                    <widget class="QCheckBox" name="allowOnlyOneAppInstanceCheckBox">
