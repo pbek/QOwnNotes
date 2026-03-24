@@ -148,9 +148,19 @@ void litehtml::el_before_after_base::add_function(const tstring& fnc, const tstr
 
 litehtml::tstring litehtml::el_before_after_base::convert_escape(const tchar_t* txt) {
   tchar_t* str_end;
-  wchar_t u_str[2];
-  u_str[0] = (wchar_t)t_strtol(txt, &str_end, 16);
-  u_str[1] = 0;
+  unsigned long code = t_strtol(txt, &str_end, 16);
+  // On platforms where wchar_t is 16 bits (Windows), codepoints above
+  // U+FFFF need a UTF-16 surrogate pair in the wchar_t buffer.
+  wchar_t u_str[3];
+  if (sizeof(wchar_t) == 2 && code > 0xFFFF && code <= 0x10FFFF) {
+    code -= 0x10000;
+    u_str[0] = (wchar_t)(0xD800 | (code >> 10));
+    u_str[1] = (wchar_t)(0xDC00 | (code & 0x3FF));
+    u_str[2] = 0;
+  } else {
+    u_str[0] = (wchar_t)code;
+    u_str[1] = 0;
+  }
   return litehtml::tstring(litehtml_from_wchar(u_str));
 }
 

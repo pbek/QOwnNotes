@@ -7,7 +7,16 @@ litehtml::utf8_to_wchar::utf8_to_wchar(const char* val) {
   while (true) {
     ucode_t wch = get_char();
     if (!wch) break;
-    m_str += wch;
+    // On platforms where wchar_t is 16 bits (Windows), codepoints above
+    // U+FFFF must be stored as a UTF-16 surrogate pair; otherwise the
+    // value is silently truncated (e.g. U+1F600 becomes U+F600).
+    if (sizeof(wchar_t) == 2 && wch > 0xFFFF && wch <= 0x10FFFF) {
+      wch -= 0x10000;
+      m_str += (wchar_t)(0xD800 | (wch >> 10));
+      m_str += (wchar_t)(0xDC00 | (wch & 0x3FF));
+    } else {
+      m_str += (wchar_t)wch;
+    }
   }
 }
 
@@ -51,24 +60,36 @@ litehtml::ucode_t litehtml::utf8_to_wchar::get_char() {
 
 litehtml::wchar_to_utf8::wchar_to_utf8(const std::wstring& val) {
   unsigned int code;
-  for (int i = 0; val[i]; i++) {
-    code = val[i];
+  for (size_t i = 0; i < val.size() && val[i]; i++) {
+    code = (unsigned int)(wchar_t)val[i];
+    // On platforms where wchar_t is 16 bits (Windows), combine UTF-16
+    // surrogate pairs back into the full Unicode codepoint before encoding
+    // to UTF-8 so that characters above U+FFFF round-trip correctly.
+    if (sizeof(wchar_t) == 2 && code >= 0xD800 && code <= 0xDBFF) {
+      if (i + 1 < val.size()) {
+        unsigned int low = (unsigned int)(wchar_t)val[i + 1];
+        if (low >= 0xDC00 && low <= 0xDFFF) {
+          code = 0x10000 + ((code - 0xD800) << 10) + (low - 0xDC00);
+          ++i;  // Consume the low surrogate
+        }
+      }
+    } else if (code >= 0xDC00 && code <= 0xDFFF) {
+      continue;  // Stray low surrogate, skip
+    }
     if (code <= 0x7F) {
       m_str += (char)code;
     } else if (code <= 0x7FF) {
-      m_str += (code >> 6) + 192;
-      m_str += (code & 63) + 128;
-    } else if (0xd800 <= code && code <= 0xdfff) {
-      // invalid block of utf8
+      m_str += (char)((code >> 6) + 192);
+      m_str += (char)((code & 63) + 128);
     } else if (code <= 0xFFFF) {
-      m_str += (code >> 12) + 224;
-      m_str += ((code >> 6) & 63) + 128;
-      m_str += (code & 63) + 128;
+      m_str += (char)((code >> 12) + 224);
+      m_str += (char)(((code >> 6) & 63) + 128);
+      m_str += (char)((code & 63) + 128);
     } else if (code <= 0x10FFFF) {
-      m_str += (code >> 18) + 240;
-      m_str += ((code >> 12) & 63) + 128;
-      m_str += ((code >> 6) & 63) + 128;
-      m_str += (code & 63) + 128;
+      m_str += (char)((code >> 18) + 240);
+      m_str += (char)(((code >> 12) & 63) + 128);
+      m_str += (char)(((code >> 6) & 63) + 128);
+      m_str += (char)((code & 63) + 128);
     }
   }
 }

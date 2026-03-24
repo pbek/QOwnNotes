@@ -3,14 +3,13 @@
 ## 26.3.21
 
 - Fixed emoji characters (e.g. 🚫) rendering as incorrect glyphs (such as the
-  Bitcoin ₿ symbol) in the **QLiteHtml preview** on Windows by splitting text
-  into emoji and non-emoji runs and rendering emoji runs with the platform
-  colour-emoji font ("Segoe UI Emoji" on Windows, "Apple Color Emoji" on macOS,
-  "Noto Color Emoji" on Linux) set as the _primary_ font family — the previous
-  approach of appending the emoji font as a fallback in `QFont::setFamilies()`
-  was insufficient because Windows' font-linking chain selects "Segoe UI Symbol"
-  (which contains wrong glyphs at emoji codepoints) before reaching the emoji font
-  (for [#3517](https://github.com/pbek/QOwnNotes/issues/3517))
+  Bitcoin ₿ symbol) in the **QLiteHtml preview** on Windows — the root cause was
+  that litehtml's internal `utf8_to_wchar` silently truncated codepoints above
+  U+FFFF to 16 bits when appending to `std::wstring` (since `wchar_t` is 16-bit
+  on Windows), so e.g. U+1F600 (😀, UTF-8 `F0 9F 98 80`) became U+F600
+  (UTF-8 `EF 98 80`); the conversion functions now correctly produce and consume
+  UTF-16 surrogate pairs, and the preview also uses per-segment emoji font
+  rendering as an additional safeguard (for [#3517](https://github.com/pbek/QOwnNotes/issues/3517))
 
 ## 26.3.20
 
