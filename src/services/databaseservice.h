@@ -30,6 +30,7 @@ class DatabaseService {
         const QString& connectionName = QStringLiteral("memory"));
     static QSqlDatabase getSharedMemoryDatabase(
         const QString& connectionName = QStringLiteral("memory"));
+    static void applySharedMemoryDatabasePragmas(const QSqlDatabase& db);
 
    private:
     static bool createMemoryConnection();

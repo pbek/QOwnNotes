@@ -182,6 +182,8 @@ void NoteRelationScene::drawForNote(const Note &note) {
 
         {
             QSqlDatabase db = DatabaseService::createSharedMemoryDatabase(connectionName);
+            db.open();
+            DatabaseService::applySharedMemoryDatabasePragmas(db);
 
             auto rootNoteItem = createNoteItem(QPointF(100, 100), note);
             m_noteItems[note.getId()] = rootNoteItem;
