@@ -250,19 +250,28 @@ void NoteOperationsManager::moveSelectedNotesToFolder(const QString &destination
     // store updated notes to disk
     _mainWindow->storeUpdatedNotesToDisk();
 
-    const int selectedItemsCount = _ui->noteTreeWidget->selectedItems().size();
+    // Count only note items (not folders) for the confirmation dialog
+    const auto selItems = _ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    for (const auto *item : selItems) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
+            noteCount++;
+        }
+    }
 
-    if (Utils::Gui::question(
-            _mainWindow, tr("Move selected notes"),
-            tr("Move %n selected note(s) to <strong>%2</strong>?", "", selectedItemsCount)
-                .arg(destinationFolder),
-            QStringLiteral("move-notes")) == QMessageBox::Yes) {
+    if (noteCount == 0) {
+        return;
+    }
+
+    if (Utils::Gui::question(_mainWindow, tr("Move selected notes"),
+                             tr("Move %n selected note(s) to <strong>%2</strong>?", "", noteCount)
+                                 .arg(destinationFolder),
+                             QStringLiteral("move-notes")) == QMessageBox::Yes) {
         const QSignalBlocker blocker(_mainWindow->noteDirectoryWatcher);
         Q_UNUSED(blocker)
 
-        const auto selectedItems = _ui->noteTreeWidget->selectedItems();
-        for (QTreeWidgetItem *item : selectedItems) {
-            if (item->data(0, Qt::UserRole + 1) != MainWindow::NoteType) {
+        for (QTreeWidgetItem *item : selItems) {
+            if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
                 continue;
             }
 
@@ -300,17 +309,26 @@ void NoteOperationsManager::moveSelectedNotesToFolder(const QString &destination
  */
 void NoteOperationsManager::copySelectedNotesToFolder(const QString &destinationFolder,
                                                       const QString &noteFolderPath) {
-    int selectedItemsCount = _ui->noteTreeWidget->selectedItems().size();
+    // Count only note items (not folders) for the confirmation dialog
+    const auto selItems = _ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    for (const auto *item : selItems) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
+            noteCount++;
+        }
+    }
 
-    if (Utils::Gui::question(
-            _mainWindow, tr("Copy selected notes"),
-            tr("Copy %n selected note(s) to <strong>%2</strong>?", "", selectedItemsCount)
-                .arg(destinationFolder),
-            QStringLiteral("copy-notes")) == QMessageBox::Yes) {
+    if (noteCount == 0) {
+        return;
+    }
+
+    if (Utils::Gui::question(_mainWindow, tr("Copy selected notes"),
+                             tr("Copy %n selected note(s) to <strong>%2</strong>?", "", noteCount)
+                                 .arg(destinationFolder),
+                             QStringLiteral("copy-notes")) == QMessageBox::Yes) {
         int copyCount = 0;
-        const auto selectedItems = _ui->noteTreeWidget->selectedItems();
-        for (QTreeWidgetItem *item : selectedItems) {
-            if (item->data(0, Qt::UserRole + 1) != MainWindow::NoteType) {
+        for (QTreeWidgetItem *item : selItems) {
+            if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
                 continue;
             }
 
@@ -459,10 +477,22 @@ void NoteOperationsManager::copySelectedNotesToNoteSubFolderId(int noteSubFolder
  * Moves selected notes to a note subfolder
  */
 void NoteOperationsManager::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder) {
-    const int selectedItemsCount = _ui->noteTreeWidget->selectedItems().size();
+    // Count only note items (not folders) for the confirmation dialog
+    const auto selItems = _ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    for (const auto *item : selItems) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
+            noteCount++;
+        }
+    }
+
+    if (noteCount == 0) {
+        return;
+    }
+
     const QString text = tr("Move %n selected note(s) to note subfolder "
                             "<strong>%2</strong>?",
-                            "", selectedItemsCount)
+                            "", noteCount)
                              .arg(noteSubFolder.getName());
 
     if (Utils::Gui::question(_mainWindow, tr("Move selected notes"), text,
@@ -478,10 +508,9 @@ void NoteOperationsManager::moveSelectedNotesToNoteSubFolder(const NoteSubFolder
         // disable the externally removed check, because it might trigger
         _mainWindow->_noteExternallyRemovedCheckEnabled = false;
 
-        const auto selectedItems = _ui->noteTreeWidget->selectedItems();
         bool forceReload = false;
-        for (QTreeWidgetItem *item : selectedItems) {
-            if (item->data(0, Qt::UserRole + 1) != MainWindow::NoteType) {
+        for (QTreeWidgetItem *item : selItems) {
+            if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
                 continue;
             }
 
@@ -575,10 +604,22 @@ void NoteOperationsManager::moveSelectedNotesToNoteSubFolder(const NoteSubFolder
  * Copies selected notes to a note subfolder
  */
 void NoteOperationsManager::copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder) {
-    const int selectedItemsCount = _ui->noteTreeWidget->selectedItems().size();
+    // Count only note items (not folders) for the confirmation dialog
+    const auto selItems = _ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    for (const auto *item : selItems) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
+            noteCount++;
+        }
+    }
+
+    if (noteCount == 0) {
+        return;
+    }
+
     const QString text = tr("Copy %n selected note(s) to note subfolder "
                             "<strong>%2</strong>?",
-                            "", selectedItemsCount)
+                            "", noteCount)
                              .arg(noteSubFolder.getName());
 
     if (Utils::Gui::question(_mainWindow, tr("Copy selected notes"), text,
@@ -587,9 +628,8 @@ void NoteOperationsManager::copySelectedNotesToNoteSubFolder(const NoteSubFolder
         Q_UNUSED(blocker)
 
         int noteSubFolderCount = 0;
-        const auto items = _ui->noteTreeWidget->selectedItems();
-        for (QTreeWidgetItem *item : items) {
-            if (item->data(0, Qt::UserRole + 1) != MainWindow::NoteType) {
+        for (QTreeWidgetItem *item : selItems) {
+            if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
                 continue;
             }
 

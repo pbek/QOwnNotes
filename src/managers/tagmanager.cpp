@@ -1337,13 +1337,23 @@ void TagManager::tagSelectedNotesToTagId(int tagId) {
  * Tags selected notes
  */
 void TagManager::tagSelectedNotes(const Tag &tag) {
-    const int selectedItemsCount = _ui->noteTreeWidget->selectedItems().size();
+    // Count only note items (not folders) for the confirmation dialog
+    const auto selItems = _ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    for (const auto *item : selItems) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
+            noteCount++;
+        }
+    }
 
-    if (Utils::Gui::question(
-            _mainWindow, tr("Tag selected notes"),
-            tr("Tag %n selected note(s) with <strong>%2</strong>?", "", selectedItemsCount)
-                .arg(tag.getName()),
-            QStringLiteral("tag-notes")) == QMessageBox::Yes) {
+    if (noteCount == 0) {
+        return;
+    }
+
+    if (Utils::Gui::question(_mainWindow, tr("Tag selected notes"),
+                             tr("Tag %n selected note(s) with <strong>%2</strong>?", "", noteCount)
+                                 .arg(tag.getName()),
+                             QStringLiteral("tag-notes")) == QMessageBox::Yes) {
         int tagCount = 0;
         const bool useScriptingEngine = ScriptingService::instance()->noteTaggingHookExists();
 
@@ -1409,11 +1419,22 @@ void TagManager::tagSelectedNotes(const Tag &tag) {
  * Removes a tag from the selected notes
  */
 void TagManager::removeTagFromSelectedNotes(const Tag &tag) {
-    const int selectedItemsCount = _ui->noteTreeWidget->selectedItems().size();
+    // Count only note items (not folders) for the confirmation dialog
+    const auto selItems = _ui->noteTreeWidget->selectedItems();
+    int noteCount = 0;
+    for (const auto *item : selItems) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
+            noteCount++;
+        }
+    }
+
+    if (noteCount == 0) {
+        return;
+    }
 
     if (Utils::Gui::question(
             _mainWindow, tr("Remove tag from selected notes"),
-            tr("Remove tag <strong>%1</strong> from %n selected note(s)?", "", selectedItemsCount)
+            tr("Remove tag <strong>%1</strong> from %n selected note(s)?", "", noteCount)
                 .arg(tag.getName()),
             QStringLiteral("remove-tag-from-notes")) == QMessageBox::Yes) {
         int tagCount = 0;

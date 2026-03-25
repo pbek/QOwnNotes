@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.3.22
+
+- Fixed **note tree context menu operations** when the **enableNoteTree** setting is
+  active so that confirmation dialogs and bulk operations now correctly distinguish
+  between notes and folders — move, copy, tag, and remove-tag actions only count
+  the selected **notes** (not folders) in their confirmation messages and skip folder
+  items during processing; the remove action already handled both types separately
+  (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
+
 ## 26.3.21
 
 - Fixed emoji characters (e.g. 🚫) rendering as incorrect glyphs (such as the

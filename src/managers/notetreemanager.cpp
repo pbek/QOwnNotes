@@ -325,9 +325,9 @@ void NoteTreeManager::on_noteTreeWidget_customContextMenuRequested(const QPoint 
         }
     }
 
-    // If we have a mixed selection or notes, show the notes context menu
-    // (which now supports both notes and folders)
-    if (hasNotes || (hasNotes && hasFolders)) {
+    // If we have notes in the selection (with or without folders),
+    // show the notes context menu (which now supports both notes and folders)
+    if (hasNotes) {
         openNotesContextMenu(globalPos, hasNotes, hasFolders);
     } else if (hasFolders) {
         // Only folders selected, show folder-specific context menu
@@ -441,6 +441,11 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
 
     QStringList noteNameList;
     for (QTreeWidgetItem *item : selectedItems) {
+        // Only process note items, not folders
+        if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
+            continue;
+        }
+
         // the note names are not unique anymore but the note subfolder
         // path will be taken into account in
         // Tag::fetchAllWithLinkToNoteNames
