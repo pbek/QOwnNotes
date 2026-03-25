@@ -41,7 +41,7 @@ export default defineClientConfig({
 
     // Initialize Matomo Analytics (replaces vuepress-plugin-matomo)
     // Only run in browser environment
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       // Configuration
       const matomoConfig = {
         siteId: 7,
@@ -70,7 +70,7 @@ export default defineClientConfig({
 
       // Track page changes on route navigation (SPA support)
       router.afterEach((to) => {
-        if (window._paq) {
+        if (window._paq && typeof document !== 'undefined') {
           window._paq.push(['setCustomUrl', window.location.href])
           window._paq.push(['setDocumentTitle', document.title])
           window._paq.push(['trackPageView'])
@@ -81,4 +81,3 @@ export default defineClientConfig({
   setup() {},
   rootComponents: [Poll],
 })
-
