@@ -48,6 +48,6 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "date-fns": "^3.0.0",
-    "vuetify": "^3.7.4"
+    "vuetify": "3.11.5"
   }
 }

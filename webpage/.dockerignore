@@ -1,7 +1,6 @@
 # Node modules (will be installed in container)
 node_modules/
 npm-debug.log
-package-lock.json
 
 # Build output (will be generated in container)
 src/.vuepress/dist/

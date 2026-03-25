@@ -1,7 +1,7 @@
 # Dockerfile to create image for static webpage
 # VuePress 2 + Vuetify 3
 
-FROM node:22-alpine as node
+FROM node:22-alpine AS node
 
 WORKDIR /app
 
@@ -11,8 +11,8 @@ WORKDIR /app
 # Copy package files first for better layer caching
 COPY package*.json ./
 
-# Install dependencies with legacy peer deps flag for VuePress 2
-RUN npm install
+# Install dependencies strictly from lockfile for reproducible builds
+RUN npm ci
 
 ## Copy scripts first (needed for patching)
 #COPY scripts ./scripts
