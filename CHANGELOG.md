@@ -12,6 +12,11 @@
 - Removed the emoji font appending workaround from the **QLiteHtml preview** that
   was no longer needed after the litehtml UTF-16 surrogate pair fix and caused the
   note preview to be rendered in the wrong font (for [#3522](https://github.com/pbek/QOwnNotes/issues/3522))
+- Search results in the **Settings dialog** are now highlighted directly on the
+  matched widgets — `QLabel` text gets the search term wrapped in a yellow
+  background highlight, while `QCheckBox`, `QRadioButton`, `QGroupBox` and
+  `QPushButton` widgets receive a yellow background color; highlights are cleared
+  when the search text is removed (for [#3523](https://github.com/pbek/QOwnNotes/issues/3523))
 
 ## 26.3.20
 

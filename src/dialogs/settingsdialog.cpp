@@ -4075,6 +4075,9 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     QList<QTreeWidgetItem *> allItems =
         ui->settingsTreeWidget->findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
+    // Clear highlights from the previous search
+    clearSearchHighlights();
+
     // search text if at least one character was entered
     if (arg1.size() >= 1) {
         QList<int> pageIndexList;
@@ -4093,35 +4096,35 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
         // search in all labels
         Q_FOREACH (QLabel *widget, findChildren<QLabel *>()) {
             if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                addToSearchIndexList(widget, pageIndexList);
+                addToSearchIndexList(widget, pageIndexList, arg1);
             }
         }
 
         // search in all push buttons
         Q_FOREACH (QPushButton *widget, findChildren<QPushButton *>()) {
             if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                addToSearchIndexList(widget, pageIndexList);
+                addToSearchIndexList(widget, pageIndexList, arg1);
             }
         }
 
         // search in all checkboxes
         Q_FOREACH (QCheckBox *widget, findChildren<QCheckBox *>()) {
             if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                addToSearchIndexList(widget, pageIndexList);
+                addToSearchIndexList(widget, pageIndexList, arg1);
             }
         }
 
         // search in all radio buttons
         Q_FOREACH (QRadioButton *widget, findChildren<QRadioButton *>()) {
             if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                addToSearchIndexList(widget, pageIndexList);
+                addToSearchIndexList(widget, pageIndexList, arg1);
             }
         }
 
         // search in all group boxes
         Q_FOREACH (QGroupBox *widget, findChildren<QGroupBox *>()) {
             if (widget->title().contains(arg1, Qt::CaseInsensitive)) {
-                addToSearchIndexList(widget, pageIndexList);
+                addToSearchIndexList(widget, pageIndexList, arg1);
             }
         }
 
@@ -4149,12 +4152,15 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
 }
 
 /**
- * Adds the page index of a widget to the pageIndexList if not already added
+ * Adds the page index of a widget to the pageIndexList if not already added,
+ * and highlights the matched text in the widget
  *
  * @param widget
  * @param pageIndexList
+ * @param searchText
  */
-void SettingsDialog::addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList) {
+void SettingsDialog::addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList,
+                                          const QString &searchText) {
     // get the page id of the widget
     int pageIndex = findSettingsPageIndexOfWidget(widget);
 
@@ -4162,6 +4168,119 @@ void SettingsDialog::addToSearchIndexList(QWidget *widget, QList<int> &pageIndex
     if (!pageIndexList.contains(pageIndex)) {
         pageIndexList << pageIndex;
     }
+
+    // highlight the matched widget if a search text is provided
+    if (!searchText.isEmpty()) {
+        highlightSearchMatchedWidget(widget, searchText);
+    }
+}
+
+/**
+ * Highlights the matched search text inside a widget by wrapping matched
+ * substrings in a yellow background span (for widgets supporting rich text)
+ * or by applying a stylesheet background color (for others)
+ *
+ * @param widget
+ * @param searchText
+ */
+void SettingsDialog::highlightSearchMatchedWidget(QWidget *widget, const QString &searchText) {
+    // Avoid double-highlighting the same widget
+    if (_searchMatchedWidgets.contains(widget)) {
+        return;
+    }
+
+    _searchMatchedWidgets.append(widget);
+
+    // Choose a highlight color that works for both light and dark mode:
+    // a soft warm amber for light mode, a muted dark-gold for dark mode
+    const bool isDark = palette().color(QPalette::Window).lightness() < 128;
+    const QString highlightColor =
+        isDark ? QStringLiteral("#7a6200")     // Muted dark-gold for dark mode
+               : QStringLiteral("#fdefb8");    // Soft light-amber for light mode
+
+    // Wraps all case-insensitive occurrences of searchText in a plain text string
+    // with a highlight span, escaping the plain text for HTML first
+    auto wrapPlainTextMatches = [&highlightColor](const QString &plainText,
+                                                  const QString &searchText) -> QString {
+        const QString escaped = plainText.toHtmlEscaped();
+        const QString escapedSearch = searchText.toHtmlEscaped();
+        QString result;
+        int pos = 0;
+        while (pos < escaped.length()) {
+            int idx = escaped.indexOf(escapedSearch, pos, Qt::CaseInsensitive);
+            if (idx == -1) {
+                result += escaped.mid(pos);
+                break;
+            }
+            result += escaped.mid(pos, idx - pos);
+            result += QLatin1String("<span style=\"background-color: ") + highlightColor +
+                      QLatin1String(";\">") + escaped.mid(idx, escapedSearch.length()) +
+                      QLatin1String("</span>");
+            pos = idx + escapedSearch.length();
+        }
+        return result;
+    };
+
+    const QString bgStyle =
+        QLatin1String(" background-color: ") + highlightColor + QLatin1String(";");
+
+    if (auto *label = qobject_cast<QLabel *>(widget)) {
+        const QString text = label->text();
+        // Only highlight labels that do not already contain rich text to avoid
+        // corrupting any embedded HTML
+        if (!Qt::mightBeRichText(text)) {
+            _searchMatchedWidgetOriginalTexts[widget] = text;
+            label->setText(wrapPlainTextMatches(text, searchText));
+        }
+    } else if (auto *checkBox = qobject_cast<QCheckBox *>(widget)) {
+        // QCheckBox does not render rich text; use a stylesheet background instead
+        _searchMatchedWidgetOriginalTexts[widget] = checkBox->styleSheet();
+        checkBox->setStyleSheet(checkBox->styleSheet() + QLatin1String(" QCheckBox {") + bgStyle +
+                                QLatin1String(" }"));
+    } else if (auto *radioButton = qobject_cast<QRadioButton *>(widget)) {
+        // QRadioButton does not render rich text; use a stylesheet background instead
+        _searchMatchedWidgetOriginalTexts[widget] = radioButton->styleSheet();
+        radioButton->setStyleSheet(radioButton->styleSheet() + QLatin1String(" QRadioButton {") +
+                                   bgStyle + QLatin1String(" }"));
+    } else if (auto *groupBox = qobject_cast<QGroupBox *>(widget)) {
+        // QGroupBox titles do not support rich text; use a stylesheet background instead
+        _searchMatchedWidgetOriginalTexts[widget] = groupBox->styleSheet();
+        groupBox->setStyleSheet(groupBox->styleSheet() + QLatin1String(" QGroupBox {") + bgStyle +
+                                QLatin1String(" }"));
+    } else if (auto *pushButton = qobject_cast<QPushButton *>(widget)) {
+        // QPushButton text does not support rich text; use a stylesheet background instead
+        _searchMatchedWidgetOriginalTexts[widget] = pushButton->styleSheet();
+        pushButton->setStyleSheet(pushButton->styleSheet() + QLatin1String(" QPushButton {") +
+                                  bgStyle + QLatin1String(" }"));
+    }
+}
+
+/**
+ * Clears all search highlighting applied to matched widgets and restores their
+ * original text or stylesheet
+ */
+void SettingsDialog::clearSearchHighlights() {
+    Q_FOREACH (QWidget *widget, _searchMatchedWidgets) {
+        if (!_searchMatchedWidgetOriginalTexts.contains(widget)) {
+            continue;
+        }
+        const QString &original = _searchMatchedWidgetOriginalTexts[widget];
+
+        if (auto *label = qobject_cast<QLabel *>(widget)) {
+            label->setText(original);
+        } else if (auto *checkBox = qobject_cast<QCheckBox *>(widget)) {
+            checkBox->setStyleSheet(original);
+        } else if (auto *radioButton = qobject_cast<QRadioButton *>(widget)) {
+            radioButton->setStyleSheet(original);
+        } else if (auto *groupBox = qobject_cast<QGroupBox *>(widget)) {
+            groupBox->setStyleSheet(original);
+        } else if (auto *pushButton = qobject_cast<QPushButton *>(widget)) {
+            pushButton->setStyleSheet(original);
+        }
+    }
+
+    _searchMatchedWidgets.clear();
+    _searchMatchedWidgetOriginalTexts.clear();
 }
 
 /**

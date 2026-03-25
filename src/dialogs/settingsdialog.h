@@ -406,6 +406,8 @@ class SettingsDialog : public MasterDialog {
     bool _initialDarkModeTrayIcon = false;
     bool _initialDarkModeIconTheme = false;
     QString _initialSchemaKey;
+    QList<QWidget *> _searchMatchedWidgets;
+    QHash<QWidget *, QString> _searchMatchedWidgetOriginalTexts;
 
     void storeSettings();
 
@@ -464,7 +466,12 @@ class SettingsDialog : public MasterDialog {
 
     int findSettingsPageIndexOfWidget(QWidget *widget);
 
-    void addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList);
+    void addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList,
+                              const QString &searchText = QString());
+
+    void highlightSearchMatchedWidget(QWidget *widget, const QString &searchText);
+
+    void clearSearchHighlights();
 
     void removeLogFile() const;
 
