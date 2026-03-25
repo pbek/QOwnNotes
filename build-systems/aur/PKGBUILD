@@ -25,7 +25,6 @@ build() {
     cmake -B build \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_DISABLE_FIND_PACKAGE_litehtml=ON \
         -DQON_QT6_BUILD=ON \
         -DBUILD_WITH_SYSTEM_BOTAN=ON \
         -DBUILD_WITH_LIBGIT2=ON \

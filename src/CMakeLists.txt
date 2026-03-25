@@ -142,6 +142,8 @@ if(USE_QLITEHTML)
   if(NOT QLITEHTML_LIBRARY_TYPE)
     set(QLITEHTML_LIBRARY_TYPE STATIC)
   endif()
+  # QOwnNotes relies on the bundled litehtml sources.
+  set(CMAKE_DISABLE_FIND_PACKAGE_litehtml ON)
   add_subdirectory(libraries/qlitehtml EXCLUDE_FROM_ALL)
 endif()
 
