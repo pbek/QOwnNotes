@@ -83,152 +83,6 @@ static QPainter *toQPainter(litehtml::uint_ptr hdc)
     return reinterpret_cast<Context *>(hdc);
 }
 
-// Returns true if the Unicode codepoint is likely an emoji that requires a
-// dedicated colour-emoji font.  This covers the main emoji blocks so that we
-// can split text into emoji / non-emoji runs and render each run with the
-// appropriate font.  The ranges follow Unicode 15.1 emoji data.
-static bool isEmojiCodepoint(uint cp)
-{
-    // Miscellaneous Symbols
-    if (cp >= 0x2600 && cp <= 0x26FF)
-        return true;
-    // Dingbats
-    if (cp >= 0x2700 && cp <= 0x27BF)
-        return true;
-    // CJK Symbols (some emoji, e.g. U+3030, U+303D)
-    if (cp == 0x3030 || cp == 0x303D)
-        return true;
-    // Enclosed CJK Letters and Months (U+3297, U+3299)
-    if (cp == 0x3297 || cp == 0x3299)
-        return true;
-    // Enclosed Alphanumeric Supplement (circled letters used as emoji)
-    if (cp >= 0x1F100 && cp <= 0x1F1FF)
-        return true;
-    // Miscellaneous Symbols and Pictographs
-    if (cp >= 0x1F300 && cp <= 0x1F5FF)
-        return true;
-    // Emoticons
-    if (cp >= 0x1F600 && cp <= 0x1F64F)
-        return true;
-    // Transport and Map Symbols (includes U+1F6AB PROHIBITED)
-    if (cp >= 0x1F680 && cp <= 0x1F6FF)
-        return true;
-    // Geometric Shapes Extended
-    if (cp >= 0x1F780 && cp <= 0x1F7FF)
-        return true;
-    // Supplemental Symbols and Pictographs
-    if (cp >= 0x1F900 && cp <= 0x1F9FF)
-        return true;
-    // Chess Symbols
-    if (cp >= 0x1FA00 && cp <= 0x1FA6F)
-        return true;
-    // Symbols and Pictographs Extended-A
-    if (cp >= 0x1FA70 && cp <= 0x1FAFF)
-        return true;
-    // Zero Width Joiner (used in emoji ZWJ sequences)
-    if (cp == 0x200D)
-        return true;
-    // Variation Selectors (VS15 text / VS16 emoji presentation)
-    if (cp >= 0xFE00 && cp <= 0xFE0F)
-        return true;
-    // Combining Enclosing Keycap
-    if (cp == 0x20E3)
-        return true;
-    // Tags block (used in flag sub-sequences)
-    if (cp >= 0xE0020 && cp <= 0xE007F)
-        return true;
-    // Skin tone modifiers
-    if (cp >= 0x1F3FB && cp <= 0x1F3FF)
-        return true;
-    return false;
-}
-
-// Name of the platform colour-emoji font.
-static QString emojiPrimaryFontFamily()
-{
-#if defined(Q_OS_WIN)
-    return QStringLiteral("Segoe UI Emoji");
-#elif defined(Q_OS_MAC)
-    return QStringLiteral("Apple Color Emoji");
-#else
-    return QStringLiteral("Noto Color Emoji");
-#endif
-}
-
-// Segment descriptor: a contiguous run of either emoji or non-emoji text.
-struct EmojiTextSegment
-{
-    QString text;
-    bool isEmoji;
-};
-
-// Split a QString into alternating emoji / non-emoji runs.
-static QVector<EmojiTextSegment> segmentTextByEmoji(const QString &str)
-{
-    QVector<EmojiTextSegment> segments;
-    if (str.isEmpty())
-        return segments;
-
-    int i = 0;
-    while (i < str.size()) {
-        uint cp = str.at(i).unicode();
-        int charLen = 1;
-        if (str.at(i).isHighSurrogate() && i + 1 < str.size() && str.at(i + 1).isLowSurrogate()) {
-            cp = QChar::surrogateToUcs4(str.at(i), str.at(i + 1));
-            charLen = 2;
-        }
-        const bool emoji = isEmojiCodepoint(cp);
-        if (segments.isEmpty() || segments.last().isEmoji != emoji)
-            segments.append(EmojiTextSegment{QString(), emoji});
-        segments.last().text.append(QStringView(str).mid(i, charLen));
-        i += charLen;
-    }
-    return segments;
-}
-
-// Build a QFont that uses the colour-emoji font as the *primary* family so
-// that the Windows font-linking chain does not select "Segoe UI Symbol"
-// (which contains wrong glyphs for many emoji codepoints).
-static QFont emojiFont(const QFont &baseFont)
-{
-    QFont f(baseFont);
-    const QString emojiFam = emojiPrimaryFontFamily();
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-    QStringList families;
-    families << emojiFam;
-    // Keep original families as fallbacks for variation selectors / ZWJ that
-    // the emoji font might not cover on its own.
-    const QStringList orig = f.families();
-    for (const QString &fam : orig) {
-        if (fam.compare(emojiFam, Qt::CaseInsensitive) != 0)
-            families << fam;
-    }
-    f.setFamilies(families);
-#else
-    f.setFamily(emojiFam);
-#endif
-    return f;
-}
-
-// Return true when the string contains at least one emoji codepoint,
-// meaning it needs per-segment rendering with an emoji font override.
-static bool containsEmoji(const QString &str)
-{
-    int i = 0;
-    while (i < str.size()) {
-        uint cp = str.at(i).unicode();
-        int charLen = 1;
-        if (str.at(i).isHighSurrogate() && i + 1 < str.size() && str.at(i + 1).isLowSurrogate()) {
-            cp = QChar::surrogateToUcs4(str.at(i), str.at(i + 1));
-            charLen = 2;
-        }
-        if (isEmojiCodepoint(cp))
-            return true;
-        i += charLen;
-    }
-    return false;
-}
-
 static QRect toQRect(litehtml::position position)
 {
     return {position.x, position.y, position.width, position.height};
@@ -769,23 +623,6 @@ litehtml::uint_ptr DocumentContainerPrivate::create_font(const litehtml::tchar_t
                            return monospaceFont();
                        return name;
                    });
-    // Append platform-specific colour-emoji fonts as fallbacks so that emoji
-    // characters (e.g. U+1F6AB 🚫) are rendered by the correct emoji font
-    // rather than a symbol font that may map the same codepoint to an
-    // unrelated glyph (e.g. the Bitcoin B from "Segoe UI Symbol" on Windows).
-    // Qt's font engine selects the first family in the list that can render a
-    // given glyph, so placing the emoji fonts after the user's primary font
-    // preserves normal text rendering while adding emoji fallback support.
-#if defined(Q_OS_WIN)
-    if (!familyNames.contains(QStringLiteral("Segoe UI Emoji"), Qt::CaseInsensitive))
-        familyNames << QStringLiteral("Segoe UI Emoji");
-#elif defined(Q_OS_MAC)
-    if (!familyNames.contains(QStringLiteral("Apple Color Emoji"), Qt::CaseInsensitive))
-        familyNames << QStringLiteral("Apple Color Emoji");
-#else
-    if (!familyNames.contains(QStringLiteral("Noto Color Emoji"), Qt::CaseInsensitive))
-        familyNames << QStringLiteral("Noto Color Emoji");
-#endif
     auto font = new QFont();
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     font->setFamilies(familyNames);
@@ -837,24 +674,8 @@ void DocumentContainerPrivate::delete_font(litehtml::uint_ptr hFont)
 
 int DocumentContainerPrivate::text_width(const litehtml::tchar_t *text, litehtml::uint_ptr hFont)
 {
-    const QFont font = toQFont(hFont);
-    const QString str = QString::fromUtf8(text);
-
-    // Fast path: when the string has no emoji, measure in one go.
-    if (!containsEmoji(str))
-        return QFontMetrics(font).horizontalAdvance(str);
-
-    // Measure each emoji / non-emoji run with the appropriate font so that
-    // glyph widths match what draw_text will actually render.
-    const QFontMetrics fmNormal(font);
-    const QFont emFont = emojiFont(font);
-    const QFontMetrics fmEmoji(emFont);
-    int totalWidth = 0;
-    const auto segments = segmentTextByEmoji(str);
-    for (const auto &seg : segments)
-        totalWidth += seg.isEmoji ? fmEmoji.horizontalAdvance(seg.text)
-                                  : fmNormal.horizontalAdvance(seg.text);
-    return totalWidth;
+    const QFontMetrics fm(toQFont(hFont));
+    return fm.horizontalAdvance(QString::fromUtf8(text));
 }
 
 void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
@@ -868,39 +689,6 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
     painter->setFont(font);
     const QColor normalColor = toQColor(color);
 
-    // Helper: draw a string at a given rect, splitting emoji runs into a
-    // separate font so that Windows does not fall back to "Segoe UI Symbol"
-    // (which maps emoji codepoints to unrelated glyphs such as the Bitcoin B).
-    const QFont emFont = emojiFont(font);
-    const auto drawStringWithEmojiFallback =
-        [&](const QString &str, const QRect &rect, const QColor &col) {
-            if (str.isEmpty())
-                return;
-            painter->setPen(col);
-            if (!containsEmoji(str)) {
-                painter->setFont(font);
-                painter->drawText(rect, 0, str);
-                return;
-            }
-            const auto segments = segmentTextByEmoji(str);
-            const QFontMetrics fmNormal(font);
-            const QFontMetrics fmEmoji(emFont);
-            int xOff = 0;
-            for (const auto &seg : segments) {
-                QRect r = rect;
-                r.setLeft(rect.left() + xOff);
-                if (seg.isEmoji) {
-                    painter->setFont(emFont);
-                    painter->drawText(r, 0, seg.text);
-                    xOff += fmEmoji.horizontalAdvance(seg.text);
-                } else {
-                    painter->setFont(font);
-                    painter->drawText(r, 0, seg.text);
-                    xOff += fmNormal.horizontalAdvance(seg.text);
-                }
-            }
-        };
-
     // Look up whether this text element has a selection segment.
     // draw_text receives pos in viewport coordinates (document - scrollPosition);
     // segmentMap is keyed by the unadjusted document-coordinate placement rect.
@@ -909,7 +697,8 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
 
     if (segIt == m_selection.segmentMap.constEnd() || !m_paletteCallback) {
         // No selection on this element — draw normally.
-        drawStringWithEmojiFallback(QString::fromUtf8(text), toQRect(pos), normalColor);
+        painter->setPen(normalColor);
+        painter->drawText(toQRect(pos), 0, QString::fromUtf8(text));
         return;
     }
 
@@ -929,7 +718,8 @@ void DocumentContainerPrivate::draw_text(litehtml::uint_ptr hdc,
             return;
         QRect r = drawRect;
         r.setLeft(drawRect.left() + xOffset);
-        drawStringWithEmojiFallback(sub, r, col);
+        painter->setPen(col);
+        painter->drawText(r, 0, sub);
     };
 
     // Pre-selection segment

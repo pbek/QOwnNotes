@@ -8,8 +8,10 @@
   U+FFFF to 16 bits when appending to `std::wstring` (since `wchar_t` is 16-bit
   on Windows), so e.g. U+1F600 (😀, UTF-8 `F0 9F 98 80`) became U+F600
   (UTF-8 `EF 98 80`); the conversion functions now correctly produce and consume
-  UTF-16 surrogate pairs, and the preview also uses per-segment emoji font
-  rendering as an additional safeguard (for [#3517](https://github.com/pbek/QOwnNotes/issues/3517))
+  UTF-16 surrogate pairs (for [#3517](https://github.com/pbek/QOwnNotes/issues/3517))
+- Removed the emoji font appending workaround from the **QLiteHtml preview** that
+  was no longer needed after the litehtml UTF-16 surrogate pair fix and caused the
+  note preview to be rendered in the wrong font (for [#3522](https://github.com/pbek/QOwnNotes/issues/3522))
 
 ## 26.3.20
 
