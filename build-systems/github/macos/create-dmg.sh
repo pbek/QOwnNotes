@@ -85,13 +85,31 @@ if ! ln -s /Applications ./$TEMPDIR/Applications; then
   exit 1
 fi
 
+# Prevent Spotlight from indexing the source folder, which can cause
+# "Resource busy" errors during hdiutil create
+mdutil -i off ./$TEMPDIR 2>/dev/null || true
+
 echo "Create new disk image"
 #Create the disk image
 rm -f ./$APP.dmg
-if ! hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg; then
-  echo "Failed to create disk image"
-  exit 1
-fi
+
+# Retry hdiutil create up to 5 times to work around intermittent
+# "Resource busy" errors on macOS CI runners (caused by Spotlight
+# indexing or filesystem flush delays after macdeployqt)
+MAX_RETRIES=5
+RETRY_COUNT=0
+while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+  if hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg; then
+    break
+  fi
+  RETRY_COUNT=$((RETRY_COUNT + 1))
+  if [ $RETRY_COUNT -ge $MAX_RETRIES ]; then
+    echo "Failed to create disk image after $MAX_RETRIES attempts"
+    exit 1
+  fi
+  echo "hdiutil create failed (attempt $RETRY_COUNT/$MAX_RETRIES), retrying in 5 seconds..."
+  sleep 5
+done
 
 # delete the temporary directory
 if ! rm -Rf ./$TEMPDIR/*; then
