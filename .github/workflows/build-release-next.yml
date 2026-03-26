@@ -124,12 +124,35 @@ jobs:
           chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
       - name: "📦 Create AppImage"
         run: |
-          export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
-          export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
+          QT_DIR=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64
+          export QMAKE=${QT_DIR}/bin/${{env.QMAKE}}
+          export PATH=${QT_DIR}/libexec:$PATH
           export EXTRA_QT_PLUGINS="svg;"
+          export EXTRA_PLATFORM_PLUGINS="libqwayland-egl.so;libqwayland-generic.so"
+
+          copy_qt_plugin_dir() {
+            local plugin_dir="$1"
+            if [ -d "${QT_DIR}/plugins/${plugin_dir}" ]; then
+              mkdir -p "${{env.BUILD_DIR}}/usr/plugins/${plugin_dir}"
+              cp -a "${QT_DIR}/plugins/${plugin_dir}/." "${{env.BUILD_DIR}}/usr/plugins/${plugin_dir}/"
+            fi
+          }
+
+          assert_wayland_platform_plugins() {
+            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland-egl.so"
+            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland-generic.so"
+          }
+
           cp ../icons/icon.png QOwnNotes.png
           ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
           mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
+          # linuxdeploy-plugin-qt only deploys xcb by default, so copy the Wayland
+          # platform and helper plugins explicitly for Wayland-only systems.
+          copy_qt_plugin_dir platforms
+          copy_qt_plugin_dir wayland-decoration-client
+          copy_qt_plugin_dir wayland-graphics-integration-client
+          copy_qt_plugin_dir wayland-shell-integration
+          assert_wayland_platform_plugins
           find ${{env.BUILD_DIR}}
           ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
           rm linuxdeploy-x86_64.AppImage

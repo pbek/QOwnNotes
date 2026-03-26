@@ -16,6 +16,10 @@
   text is selected, with actions to toggle tri-state checkboxes (`[ ]`, `[x]`, `[-]`),
   create ordered/alphabetical/unordered/checkbox lists, clear list formatting, and
   order checkbox lists (for [#3524](https://github.com/pbek/QOwnNotes/issues/3524))
+- Fixed the Qt5 and Qt6 **AppImage** builds to bundle the Wayland Qt platform plugins
+  and fail CI if `libqwayland-egl.so` or `libqwayland-generic.so` is missing, so the
+  application now starts on Wayland-only systems without requiring XWayland
+  (for [#3525](https://github.com/pbek/QOwnNotes/issues/3525))
 
 ## 26.3.21
 
