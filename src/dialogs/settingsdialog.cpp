@@ -3634,12 +3634,6 @@ bool SettingsDialog::initializePage(int index) {
             // do the network proxy tab setup
             setupProxyPage();
         } break;
-        case SettingsPages::ExperimentalPage: {
-            if (!ui->enableNoteTreeCheckBox->text().contains(QLatin1String("work in progress"))) {
-                ui->enableNoteTreeCheckBox->setText(ui->enableNoteTreeCheckBox->text() +
-                                                    " (work in progress)");
-            }
-        } break;
         case SettingsPages::WebApplicationPage: {
             ui->webAppLabel->setText(ui->webAppLabel->text().arg("https://app.qownnotes.org/"));
         } break;

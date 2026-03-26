@@ -2,6 +2,10 @@
 
 ## 26.3.22
 
+- Moved the **note tree** checkbox out of the _Experimental_ settings into the
+  _Panels_ settings, in the **Note list panel** section, so the setting is easier
+  to find where related note list options are configured
+  (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
 - Fixed **note tree context menu operations** when the **enableNoteTree** setting is
   active so that confirmation dialogs and bulk operations now correctly distinguish
   between notes and folders — move, copy, tag, and remove-tag actions only count

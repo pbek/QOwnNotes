@@ -6041,22 +6041,29 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1" colspan="2">
+                 <item row="2" column="1" colspan="2">
+                  <widget class="QCheckBox" name="enableNoteTreeCheckBox">
+                   <property name="text">
+                    <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1" colspan="2">
                   <widget class="QCheckBox" name="noteListPreviewCheckBox">
                    <property name="text">
                     <string>Show notes in the note list with preview</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="1" colspan="2">
-                  <widget class="QCheckBox" name="allowEmptyNotesCheckBox">
-                   <property name="text">
-                    <string>Allow empty note files</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="1" colspan="2">
-                  <widget class="QFrame" name="maxNoteFileSizeFrame">
+                  <item row="4" column="1" colspan="2">
+                   <widget class="QCheckBox" name="allowEmptyNotesCheckBox">
+                    <property name="text">
+                     <string>Allow empty note files</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1" colspan="2">
+                   <widget class="QFrame" name="maxNoteFileSizeFrame">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -7273,24 +7280,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </widget>
            <widget class="QWidget" name="experimentalPage">
             <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <widget class="QGroupBox" name="notesPanelGroupBox_3">
-               <property name="title">
-                <string>Note list panel</string>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_30">
-                <item>
-                 <widget class="QCheckBox" name="enableNoteTreeCheckBox">
-                  <property name="text">
-                   <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QGroupBox" name="aiAutocompleteGroupBox">
+              <item>
+               <widget class="QGroupBox" name="aiAutocompleteGroupBox">
                <property name="title">
                 <string>AI autocomplete</string>
                </property>
