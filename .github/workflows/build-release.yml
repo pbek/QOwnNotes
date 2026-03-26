@@ -74,137 +74,16 @@ jobs:
   #--------------------------------------------------------------------------------
 
   #
-  # AppImage build
+  # AppImage Qt6 build
   #
   build-appimage:
     needs: create_release
     runs-on: ubuntu-22.04
     env:
-      QT_VERSION: 5.15.2
-      BUILD_DIR: build
-    name: "🐧 AppImage Qt 5.15.2"
-    steps:
-      - name: "🧰 Checkout"
-        uses: actions/checkout@v6
-        with:
-          submodules: recursive
-
-      - name: "⚙️ Install Qt"
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: ${{env.QT_VERSION}}
-          modules: ${{env.QT_MODULES}}
-          cache: true
-
-      - name: "⚙️ Install dependencies"
-        run: |
-          sudo apt-get update
-          sudo apt install libfuse2 desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
-      - name: "🚧 Compile application"
-        run: |
-          echo "#define RELEASE \"AppImage\"" > release.h
-          ${{env.QMAKE}} ${{env.QMAKE_PROJECT}} CONFIG+=release PREFIX=/usr
-          lrelease QOwnNotes.pro
-          make -j${{env.CORES}}
-      - name: "⚙️ Install linuxdeploy"
-        run: |
-          export LINUXDEPLOY_VERSION=1-alpha-20240109-1
-          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-x86_64.AppImage
-          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-plugin-qt-x86_64.AppImage
-          chmod +x linuxdeploy-x86_64.AppImage
-          chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
-      - name: "🔐 Prepare OpenSSL 1.1 runtime"
-        run: |
-          echo "deb http://security.ubuntu.com/ubuntu focal-security main" | sudo tee /etc/apt/sources.list.d/focal-security.list
-          sudo apt-get update
-          apt download libssl1.1
-          mkdir -p openssl-1.1
-          dpkg-deb -x libssl1.1_*.deb openssl-1.1
-      - name: "📦 Create AppImage"
-        run: |
-          QT_DIR=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64
-          export QMAKE=${QT_DIR}/bin/${{env.QMAKE}}
-          export PATH=${QT_DIR}/libexec:$PATH
-          export EXTRA_QT_PLUGINS="svg;"
-          export EXTRA_PLATFORM_PLUGINS="libqwayland-egl.so;libqwayland-generic.so"
-
-          copy_qt_plugin_dir() {
-            local plugin_dir="$1"
-            if [ -d "${QT_DIR}/plugins/${plugin_dir}" ]; then
-              mkdir -p "${{env.BUILD_DIR}}/usr/plugins/${plugin_dir}"
-              cp -a "${QT_DIR}/plugins/${plugin_dir}/." "${{env.BUILD_DIR}}/usr/plugins/${plugin_dir}/"
-            fi
-          }
-
-          assert_wayland_platform_plugins() {
-            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland-egl.so"
-            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland-generic.so"
-          }
-
-          cp ../icons/icon.png QOwnNotes.png
-          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
-          mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
-          mkdir -p ${{env.BUILD_DIR}}/usr/lib
-          cp -L openssl-1.1/usr/lib/x86_64-linux-gnu/libssl.so.1.1 ${{env.BUILD_DIR}}/usr/lib/
-          cp -L openssl-1.1/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 ${{env.BUILD_DIR}}/usr/lib/
-          # linuxdeploy-plugin-qt only deploys xcb by default, so copy the Wayland
-          # platform and helper plugins explicitly for Wayland-only systems.
-          copy_qt_plugin_dir platforms
-          copy_qt_plugin_dir wayland-decoration-client
-          copy_qt_plugin_dir wayland-graphics-integration-client
-          copy_qt_plugin_dir wayland-shell-integration
-          assert_wayland_platform_plugins
-          find ${{env.BUILD_DIR}}
-          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
-          rm linuxdeploy-x86_64.AppImage
-          rm linuxdeploy-plugin-qt-x86_64.AppImage
-          ls -hal *.AppImage
-          find -iname "*.AppImage"
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage || true
-          sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
-          ls -hal *.AppImage
-          find -iname "*.AppImage"
-          pwd
-
-      #      - name: '📤 Upload artifact: AppImage'
-      #        uses: actions/upload-artifact@v4
-      #        with:
-      #          name: ${{env.EXECUTABLE}}-x86_64.AppImage
-      #          path: src/${{env.EXECUTABLE}}-x86_64.AppImage
-      #      - name: '📤 Upload artifact: AppImage sha256sum'
-      #        uses: actions/upload-artifact@v4
-      #        with:
-      #          name: ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
-      #          path: src/${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
-      - name: "📤 Release AppImage for Linux"
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./src/QOwnNotes-x86_64.AppImage
-          asset_name: QOwnNotes-x86_64.AppImage
-          asset_content_type: application/vnd.appimage
-      - name: "📤 Release AppImage sha256sum"
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./src/QOwnNotes-x86_64.AppImage.sha256sum
-          asset_name: QOwnNotes-x86_64.AppImage.sha256sum
-          asset_content_type: text/plain
-
-  #
-  # AppImage Qt6 build
-  #
-  build-appimage-qt6:
-    needs: create_release
-    runs-on: ubuntu-22.04
-    env:
+      # aqt Qt versions: https://ddalcino.github.io/aqt-list-server/
+      # Qt 6.10.0, 6.9.1, 6.8.3, 6.7.3, 6.6.3: ERROR: Could not find dependency: libmimerapi.so
       QT_VERSION: 6.5.3
       BUILD_DIR: build
-      APPIMAGE_NAME: "QOwnNotes-x86_64-Qt6-experimental.AppImage"
     name: "🐧 AppImage Qt 6.5.3"
     steps:
       - name: "🧰 Checkout"
@@ -217,13 +96,11 @@ jobs:
         with:
           version: ${{env.QT_VERSION}}
           modules: ${{env.QT6_MODULES}}
-          aqtversion: "==2.0.0"
           cache: true
 
       - name: "⚙️ Install dependencies"
         run: |
           sudo apt-get update
-          # sudo apt-get install libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev
           sudo apt install libfuse2 desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
       - name: "🚧 Compile application"
         run: |
@@ -270,10 +147,17 @@ jobs:
 
           cp ../icons/icon.png QOwnNotes.png
 
-          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} -e ${{env.UNIXNAME}} -i ${{env.UNIXNAME}}.png -d PBE.QOwnNotes.desktop --plugin qt
-
+          # Copy additional resources
           mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${QT_DIR}/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
           mkdir -p ${{env.BUILD_DIR}}/usr/languages && cp -r languages/*.qm ${{env.BUILD_DIR}}/usr/languages
+
+          ./linuxdeploy-x86_64.AppImage \
+            --appdir ${{env.BUILD_DIR}} \
+            -e ${{env.UNIXNAME}} \
+            -i ${{env.UNIXNAME}}.png \
+            -d PBE.QOwnNotes.desktop \
+            --plugin qt
+
           # linuxdeploy-plugin-qt only deploys xcb by default, so copy the Wayland
           # platform and helper plugins explicitly for Wayland-only systems.
           copy_qt_plugin_dir platforms
@@ -308,40 +192,40 @@ jobs:
           # Strip leading whitespace that YAML indentation adds to the heredoc
           sed -i 's/^[[:space:]]*//' ${{env.BUILD_DIR}}/usr/bin/qt.conf
 
+          # Bundle OpenSSL libraries explicitly so QtNetwork keeps working in the AppImage
+          # even when the target system exposes a different OpenSSL runtime.
           mkdir -p ${{env.BUILD_DIR}}/usr/lib
           cp -L /usr/lib/x86_64-linux-gnu/libssl.so.3 ${{env.BUILD_DIR}}/usr/lib/
           cp -L /usr/lib/x86_64-linux-gnu/libcrypto.so.3 ${{env.BUILD_DIR}}/usr/lib/
 
           find ${{env.BUILD_DIR}}
-          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
-          rm linuxdeploy-x86_64.AppImage
-          rm linuxdeploy-plugin-qt-x86_64.AppImage
-          ls -hal *.AppImage
-          find -iname "*.AppImage"
-          # It's ok if no file needs to be renamed
-          mv *.AppImage ${{env.APPIMAGE_NAME}} ||:
-          sha256sum ${{env.APPIMAGE_NAME}} > ${{env.APPIMAGE_NAME}}.sha256sum
-          ls -hal *.AppImage
-          find -iname "*.AppImage"
-          pwd
 
-      - name: "📤 Release AppImage Qt6 for Linux"
+          ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
+
+          # Cleanup
+          rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage
+          # Keep the same asset name as the old Qt5 AppImage so the update process can find it
+          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage ||:
+          sha256sum ${{env.EXECUTABLE}}-x86_64.AppImage > ${{env.EXECUTABLE}}-x86_64.AppImage.sha256sum
+          ls -hal *.AppImage
+
+      - name: "📤 Release AppImage for Linux"
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./src/${{env.APPIMAGE_NAME}}
-          asset_name: ${{env.APPIMAGE_NAME}}
+          asset_path: ./src/QOwnNotes-x86_64.AppImage
+          asset_name: QOwnNotes-x86_64.AppImage
           asset_content_type: application/vnd.appimage
-      - name: "📤 Release AppImage Qt6 sha256sum"
+      - name: "📤 Release AppImage sha256sum"
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./src/${{env.APPIMAGE_NAME}}.sha256sum
-          asset_name: ${{env.APPIMAGE_NAME}}.sha256sum
+          asset_path: ./src/QOwnNotes-x86_64.AppImage.sha256sum
+          asset_name: QOwnNotes-x86_64.AppImage.sha256sum
           asset_content_type: text/plain
 
   #
