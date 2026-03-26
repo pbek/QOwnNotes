@@ -1,6 +1,7 @@
 #include "qownnotesmarkdowntextedit.h"
 
 #include <utils/gui.h>
+#include <utils/listutils.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
 
@@ -1060,6 +1061,46 @@ void QOwnNotesMarkdownTextEdit::insertBlockQuote() {
     }
 }
 
+QTextCursor QOwnNotesMarkdownTextEdit::fullLineSelectionCursor() const {
+    QTextCursor cursor = textCursor();
+    if (!cursor.hasSelection()) {
+        return cursor;
+    }
+
+    const int selectionStart = cursor.selectionStart();
+    int selectionEnd = cursor.selectionEnd();
+
+    QTextCursor lineCursor(document());
+    lineCursor.setPosition(selectionStart);
+    lineCursor.movePosition(QTextCursor::StartOfBlock);
+
+    QTextCursor endCursor(document());
+    endCursor.setPosition(selectionEnd);
+    if (selectionEnd > selectionStart && endCursor.atBlockStart()) {
+        endCursor.movePosition(QTextCursor::PreviousCharacter);
+    }
+    endCursor.movePosition(QTextCursor::EndOfBlock);
+
+    lineCursor.setPosition(endCursor.position(), QTextCursor::KeepAnchor);
+    return lineCursor;
+}
+
+bool QOwnNotesMarkdownTextEdit::replaceFullLineSelection(const QString &text) {
+    QTextCursor cursor = fullLineSelectionCursor();
+    if (!cursor.hasSelection()) {
+        return false;
+    }
+
+    const int start = cursor.selectionStart();
+    cursor.beginEditBlock();
+    cursor.insertText(text);
+    cursor.setPosition(start);
+    cursor.setPosition(start + text.size(), QTextCursor::KeepAnchor);
+    cursor.endEditBlock();
+    setTextCursor(cursor);
+    return true;
+}
+
 QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
     return QMarkdownTextEdit::viewportMargins();
 }
@@ -1916,6 +1957,52 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     blockQuoteTextAction->setEnabled(isAllowNoteEditing);
 
     if (isTextSelected) {
+        QMenu *listOperationsMenu = menu->addMenu(tr("List operations"));
+        listOperationsMenu->setEnabled(isAllowNoteEditing);
+
+        QAction *toggleCheckboxesAction = listOperationsMenu->addAction(tr("Toggle checkbox(es)"));
+        connect(toggleCheckboxesAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::toggleCheckboxes(fullLineSelectionCursor().selectedText()));
+        });
+
+        QAction *orderedListAction = listOperationsMenu->addAction(tr("1. 2. 3. list"));
+        connect(orderedListAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::createOrderedList(fullLineSelectionCursor().selectedText()));
+        });
+
+        QAction *alphabeticalListAction = listOperationsMenu->addAction(tr("a. b. c. list"));
+        connect(alphabeticalListAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::createAlphabeticalList(fullLineSelectionCursor().selectedText()));
+        });
+
+        QAction *unorderedListAction = listOperationsMenu->addAction(tr("- list"));
+        connect(unorderedListAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::createUnorderedList(fullLineSelectionCursor().selectedText()));
+        });
+
+        QAction *checkboxListAction = listOperationsMenu->addAction(tr("Create checkbox list"));
+        connect(checkboxListAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::createCheckboxList(fullLineSelectionCursor().selectedText()));
+        });
+
+        QAction *clearListFormattingAction =
+            listOperationsMenu->addAction(tr("Clear list formatting"));
+        connect(clearListFormattingAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::clearListFormatting(fullLineSelectionCursor().selectedText()));
+        });
+
+        QAction *orderCheckboxesAction = listOperationsMenu->addAction(tr("Order checkboxes"));
+        connect(orderCheckboxesAction, &QAction::triggered, this, [this]() {
+            replaceFullLineSelection(
+                Utils::ListUtils::orderCheckboxes(fullLineSelectionCursor().selectedText()));
+        });
+
         menu->addAction(MainWindow::instance()->searchTextOnWebAction());
         menu->addAction(MainWindow::instance()->findNoteAction());
     }

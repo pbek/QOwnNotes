@@ -506,6 +506,8 @@ set(SOURCE_FILES
     utils/cli.h
     utils/gui.cpp
     utils/gui.h
+    utils/listutils.cpp
+    utils/listutils.h
     utils/schema.cpp
     utils/schema.h
     utils/urlhandler.h

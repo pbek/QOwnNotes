@@ -160,6 +160,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void setFormatStyle(MarkdownHighlighter::HighlighterState index);
 
     void onContextMenu(QPoint pos);
+    QTextCursor fullLineSelectionCursor() const;
+    bool replaceFullLineSelection(const QString &text);
 
     void overrideFontSizeStyle(int fontSize);
 

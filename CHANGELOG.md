@@ -12,6 +12,10 @@
   the selected **notes** (not folders) in their confirmation messages and skip folder
   items during processing; the remove action already handled both types separately
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
+- Added a new **List operations** submenu to the **note text edit** context menu when
+  text is selected, with actions to toggle tri-state checkboxes (`[ ]`, `[x]`, `[-]`),
+  create ordered/alphabetical/unordered/checkbox lists, clear list formatting, and
+  order checkbox lists (for [#3524](https://github.com/pbek/QOwnNotes/issues/3524))
 
 ## 26.3.21
 
