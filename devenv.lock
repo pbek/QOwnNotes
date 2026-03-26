@@ -140,11 +140,11 @@
     "shared": {
       "flake": false,
       "locked": {
-        "lastModified": 1772802373,
-        "narHash": "sha256-WKhnyCL1nqiVGCAXEZQ1l7VSfZF/yqD6GPgOVCg4DSk=",
+        "lastModified": 1774524729,
+        "narHash": "sha256-dOfRWwS5+9W8hQxGtewLsJEMPyCgTtc+TBqr8p3ZGd0=",
         "owner": "pbek",
         "repo": "nix-shared",
-        "rev": "c6ec020e386a80ce585ec3a89b08b9317f29458b",
+        "rev": "9ece1e597b4c552c04b461a17ab7099409c31e05",
         "type": "github"
       },
       "original": {
