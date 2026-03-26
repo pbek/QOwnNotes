@@ -3,11 +3,12 @@
 ## 26.3.23
 
 - Replaced the Qt5 **AppImage** build with the Qt6 AppImage build in the release
-  workflow so the primary AppImage now ships with Qt 6.5.3 instead of Qt 5.15.2,
+  workflow so the primary AppImage now ships with Qt 6.10.2 instead of Qt 5.15.2,
   bringing improved scripting support, QML/Quick integration and OpenSSL 3;
   the release asset name `QOwnNotes-x86_64.AppImage` is preserved so the
   in-app auto-update process continues to work seamlessly
   (for [#3074](https://github.com/pbek/QOwnNotes/issues/3074))
+  - The Qt6 AppImage, which was on Qt 6.5.3, was made ready to work with Qt 6.10.2
 
 ## 26.3.22
 

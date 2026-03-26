@@ -203,7 +203,9 @@ jobs:
     env:
       # aqt Qt versions: https://ddalcino.github.io/aqt-list-server/
       # Qt 6.10.0, 6.9.1, 6.8.3, 6.7.3, 6.6.3: ERROR: Could not find dependency: libmimerapi.so
-      QT_VERSION: 6.5.3
+      QT_VERSION: 6.10.2
+      # qtwaylandcompositor provides the Wayland platform plugins (libqwayland-egl.so, libqwayland-generic.so)
+      QT_MODULES: "qtwebsockets qtwaylandcompositor"
       BUILD_DIR: build
       APPIMAGE_NAME: "QOwnNotes-x86_64-Qt6.AppImage"
     name: "🐧 AppImage Ubuntu 22.04"
@@ -243,7 +245,9 @@ jobs:
           export QMAKE=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/bin/${{env.QMAKE}}
           export PATH=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64/libexec:$PATH
           QT_DIR=${{env.REPO_DIR}}/Qt/${{env.QT_VERSION}}/gcc_64
-          export EXTRA_PLATFORM_PLUGINS="libqwayland-egl.so;libqwayland-generic.so"
+          # Qt 6.10+ unified the Wayland platform plugins into a single libqwayland.so
+          # (older versions shipped libqwayland-egl.so and libqwayland-generic.so separately)
+          export EXTRA_PLATFORM_PLUGINS="libqwayland.so"
 
           copy_qt_plugin_dir() {
             local plugin_dir="$1"
@@ -254,8 +258,7 @@ jobs:
           }
 
           assert_wayland_platform_plugins() {
-            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland-egl.so"
-            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland-generic.so"
+            test -f "${{env.BUILD_DIR}}/usr/plugins/platforms/libqwayland.so"
           }
 
           # Set the extra Qt modules to include (Quick is needed by the Qt6 build's script engine)
@@ -269,6 +272,11 @@ jobs:
           export QML_MODULES_PATHS="${QT_DIR}/qml"
 
           cp ../icons/icon.png QOwnNotes.png
+
+          # Remove SQL driver plugins that require external client libraries
+          # (Oracle, MySQL, PostgreSQL, etc.) which are not available in the
+          # build environment. QOwnNotes only needs the SQLite driver.
+          find "${QT_DIR}/plugins/sqldrivers" -name '*.so' ! -name '*sqlite*' -delete || true
 
           # Copy additional resources
           mkdir -p ${{env.BUILD_DIR}}/usr/plugins/iconengines && cp -r ${QT_DIR}/plugins/iconengines/libqsvgicon.so ${{env.BUILD_DIR}}/usr/plugins/iconengines
