@@ -375,9 +375,9 @@ jobs:
     needs: create_release
     runs-on: ubuntu-latest
     env:
-      QT_VERSION: 6.10.1
+      QT_VERSION: 6.10.2
     continue-on-error: true
-    name: "🐧 Snap Ubuntu 18.04"
+    name: "🐧 Snap Ubuntu 24.04"
     steps:
       - name: "🧰 Checkout"
         uses: actions/checkout@v6
@@ -416,7 +416,7 @@ jobs:
       #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #      with:
       #        upload_url: ${{ needs.create_release.outputs.upload_url }}
-      #        asset_path: ./qownnotes_${{ env.VERSION }}_amd64.snap
+      #        asset_path: ./build-systems/github/snap.qt6/qownnotes_${{ env.VERSION }}_amd64.snap
       #        asset_name: QOwnNotes-amd64.snap
       #        asset_content_type: application/octet-stream
 
@@ -431,14 +431,14 @@ jobs:
       #        # `snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -`, token valid for one year
       #        SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN_GH }}
       #      with:
-      #        snap: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
+      #        snap: /home/runner/work/QOwnNotes/QOwnNotes/build-systems/github/snap.qt6/qownnotes_${{ env.VERSION }}_amd64.snap
       #        release: stable
 
       - name: "📤 Upload artifact: Snap"
         uses: actions/upload-artifact@v7
         with:
           name: qownnotes_${{ env.VERSION }}_amd64.snap
-          path: /home/runner/work/QOwnNotes/QOwnNotes/qownnotes_${{ env.VERSION }}_amd64.snap
+          path: /home/runner/work/QOwnNotes/QOwnNotes/build-systems/github/snap.qt6/qownnotes_${{ env.VERSION }}_amd64.snap
 
   #
   # Windows build
