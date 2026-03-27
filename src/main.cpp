@@ -397,6 +397,13 @@ int mainStartupMisc(const QStringList &arguments) {
  * Temporary log output until LogWidget::logMessageOutput takes over
  */
 void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg) {
+    // Suppress harmless portal registration warning on Qt 6.10+ in AppImage/non-Flatpak
+    // environments where no matching .desktop file is installed system-wide
+    if (type == QtWarningMsg &&
+        msg.contains(QStringLiteral("Failed to register with host portal"))) {
+        return;
+    }
+
     QByteArray localMsg = msg.toLocal8Bit();
     auto typeText = Utils::Misc::logMsgTypeText(type);
     auto message = QStringLiteral("%1 (%2:%3, %4)")
