@@ -2,6 +2,14 @@
 
 ## 26.3.23
 
+- Added a new **Color modes** settings page under Interface settings that allows
+  users to create custom color mode profiles with dark mode, icon theme, and
+  editor color schema settings; built-in Light and Dark modes are provided and
+  cannot be deleted, while users can create as many custom modes as needed
+  (for [#3526](https://github.com/pbek/QOwnNotes/issues/3526))
+  - The dark mode settings, icon theme settings (internal/system/dark mode icon
+    theme), and editor color schema selection were moved from the Interface and
+    Editor settings to the Color modes page
 - Replaced the Qt5 **AppImage** build with the Qt6 AppImage build in the release
   workflow so the primary AppImage now ships with Qt 6.10.2 instead of Qt 5.15.2,
   bringing improved scripting support, QML/Quick integration and OpenSSL 3;

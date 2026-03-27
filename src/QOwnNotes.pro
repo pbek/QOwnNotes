@@ -155,7 +155,8 @@ SOURCES += main.cpp\
     entities/trashitem.cpp \
     entities/notesubfolder.cpp \
     entities/notehistory.cpp \
-    entities/notefolder.cpp \
+     entities/notefolder.cpp \
+    entities/colormode.cpp \
     entities/tag.cpp \
     entities/script.cpp \
     entities/bookmark.cpp \
@@ -280,6 +281,7 @@ HEADERS  += mainwindow.h \
     entities/notesubfolder.h \
     entities/calendaritem.h \
     entities/notefolder.h \
+    entities/colormode.h \
     entities/tag.h \
     entities/script.h \
     entities/bookmark.h \

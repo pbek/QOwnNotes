@@ -2,6 +2,7 @@
 
 #include <QtNetwork/qnetworkproxy.h>
 #include <entities/cloudconnection.h>
+#include <entities/colormode.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/script.h>
@@ -14,6 +15,7 @@
 #include <services/websocketserverservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+#include <utils/schema.h>
 #include <widgets/scriptsettingwidget.h>
 
 #include <QAction>
@@ -75,6 +77,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     _initialDarkModeTrayIcon = settings.value(QStringLiteral("darkModeTrayIcon")).toBool();
     _initialDarkModeIconTheme = Utils::Misc::isDarkModeIconTheme();
     _initialSchemaKey = settings.value(QStringLiteral("Editor/CurrentSchemaKey")).toString();
+    _initialColorModeId = ColorMode::currentColorModeId();
+
+    // Ensure built-in color modes exist
+    ColorMode::ensureBuiltInModesExist();
 
     bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 
@@ -113,7 +119,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->loginFlowCancelButton->hide();
     ui->qrCodeWidget->hide();
     ui->connectionTestLabel->hide();
-    ui->darkModeInfoLabel->hide();
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(ui->noteSaveIntervalTimeLabel->toolTip());
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
@@ -180,8 +185,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     // declare that we need to restart the application if certain settings
     // are changed
     connect(ui->languageListWidget, SIGNAL(itemSelectionChanged()), this, SLOT(needRestart()));
-    connect(ui->internalIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
-    connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->hideIconsInMenusCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
     connect(ui->showSystemTrayCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
@@ -700,16 +703,6 @@ void SettingsDialog::storeSettings() {
     settings.setValue(QStringLiteral("appMetrics/disableAppHeartbeat"),
                       ui->appHeartbeatCheckBox->isChecked());
 
-    settings.setValue(QStringLiteral("darkModeColors"), ui->darkModeColorsCheckBox->isChecked());
-
-    settings.setValue(QStringLiteral("darkMode"), ui->darkModeCheckBox->isChecked());
-
-    settings.setValue(QStringLiteral("darkModeTrayIcon"),
-                      ui->darkModeTrayIconCheckBox->isChecked());
-
-    settings.setValue(QStringLiteral("darkModeIconTheme"),
-                      ui->darkModeIconThemeCheckBox->isChecked());
-
     settings.setValue(QStringLiteral("hideIconsInMenus"),
                       ui->hideIconsInMenusCheckBox->isChecked());
 
@@ -718,11 +711,6 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("showStatusBarRelativeNotePath"),
                       ui->showStatusBarRelativeNotePathCheckBox->isChecked());
-
-    settings.setValue(QStringLiteral("internalIconTheme"),
-                      ui->internalIconThemeCheckBox->isChecked());
-
-    settings.setValue(QStringLiteral("systemIconTheme"), ui->systemIconThemeCheckBox->isChecked());
 
     QStringList todoCalendarUrlList;
     QStringList todoCalendarDisplayNameList;
@@ -1199,40 +1187,7 @@ void SettingsDialog::readSettings() {
     ui->appHeartbeatCheckBox->setChecked(
         settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool());
 
-    {
-        const QSignalBlocker darkModeColorsCheckBoxBlocker(ui->darkModeColorsCheckBox);
-        Q_UNUSED(darkModeColorsCheckBoxBlocker)
-        ui->darkModeColorsCheckBox->setChecked(
-            settings.value(QStringLiteral("darkModeColors")).toBool());
-    }
-
-    const QSignalBlocker darkModeCheckBoxBlocker(ui->darkModeCheckBox);
-    Q_UNUSED(darkModeCheckBoxBlocker)
-    ui->darkModeCheckBox->setChecked(settings.value(QStringLiteral("darkMode")).toBool());
-
-    {
-        const QSignalBlocker darkModeTrayIconCheckBoxBlocker(ui->darkModeTrayIconCheckBox);
-        Q_UNUSED(darkModeTrayIconCheckBoxBlocker)
-        ui->darkModeTrayIconCheckBox->setChecked(
-            settings.value(QStringLiteral("darkModeTrayIcon")).toBool());
-    }
-
-    {
-        const QSignalBlocker darkModeIconThemeCheckBoxBlocker(ui->darkModeIconThemeCheckBox);
-        Q_UNUSED(darkModeIconThemeCheckBoxBlocker)
-        ui->darkModeIconThemeCheckBox->setChecked(Utils::Misc::isDarkModeIconTheme());
-    }
-
     ui->hideIconsInMenusCheckBox->setChecked(Utils::Misc::areMenuIconsHidden());
-
-    ui->internalIconThemeCheckBox->setChecked(
-        settings.value(QStringLiteral("internalIconTheme")).toBool());
-
-    ui->systemIconThemeCheckBox->setChecked(
-        settings.value(QStringLiteral("systemIconTheme")).toBool());
-
-    // toggle the dark mode colors check box with the dark mode checkbox
-    handleDarkModeCheckBoxToggled();
 
     ui->showStatusBarNotePathCheckBox->setChecked(
         settings.value(QStringLiteral("showStatusBarNotePath"), true).toBool());
@@ -3408,57 +3363,12 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(QListWidg
     }
 }
 
-void SettingsDialog::on_darkModeCheckBox_toggled() {
-    handleDarkModeCheckBoxToggled(true, true);
-    applyDarkModeSettings();
-}
-
-void SettingsDialog::on_darkModeColorsCheckBox_toggled(bool checked) {
-    Q_UNUSED(checked)
-    applyDarkModeSettings();
-}
-
-void SettingsDialog::on_darkModeTrayIconCheckBox_toggled(bool checked) {
-    Q_UNUSED(checked)
-    applyDarkModeSettings();
-}
-
-void SettingsDialog::on_darkModeIconThemeCheckBox_toggled(bool checked) {
-    Q_UNUSED(checked)
-    applyDarkModeSettings();
-}
-
 /**
- * Toggles the dark mode colors check box with the dark mode checkbox
+ * No-op: dark mode checkbox was moved to the Color modes page
  */
 void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes, bool updateSchema) {
-    bool checked = ui->darkModeCheckBox->isChecked();
-
-    ui->darkModeColorsCheckBox->setEnabled(!checked);
-    ui->darkModeInfoLabel->setVisible(checked);
-
-    if (updateCheckBoxes && checked) {
-        // Block signals to prevent cascading applyDarkModeSettings() calls;
-        // the caller (on_darkModeCheckBox_toggled) will call it once when done
-        {
-            const QSignalBlocker blocker(ui->darkModeColorsCheckBox);
-            Q_UNUSED(blocker)
-            ui->darkModeColorsCheckBox->setChecked(true);
-        }
-        {
-            const QSignalBlocker blocker(ui->darkModeIconThemeCheckBox);
-            Q_UNUSED(blocker)
-            ui->darkModeIconThemeCheckBox->setChecked(true);
-        }
-    }
-
-    if (updateSchema) {
-        if (checked) {
-            ui->editorFontColorWidget->selectFirstDarkSchema();
-        } else {
-            ui->editorFontColorWidget->selectFirstLightSchema();
-        }
-    }
+    Q_UNUSED(updateCheckBoxes)
+    Q_UNUSED(updateSchema)
 }
 
 void SettingsDialog::updateSearchLineEditIcons() {
@@ -3488,30 +3398,22 @@ void SettingsDialog::updateSearchLineEditIcons() {
     ui->scriptSearchLineEdit->setStyleSheet(styleSheet);
 }
 
+/**
+ * Checks if dark mode settings changed since the dialog was opened
+ */
 bool SettingsDialog::hasDarkModeSettingChanges() const {
     const SettingsService settings;
-    return settings.value(QStringLiteral("darkModeColors")).toBool() !=
-               ui->darkModeColorsCheckBox->isChecked() ||
-           settings.value(QStringLiteral("darkMode")).toBool() !=
-               ui->darkModeCheckBox->isChecked() ||
+    return settings.value(QStringLiteral("darkMode")).toBool() != _initialDarkMode ||
+           settings.value(QStringLiteral("darkModeColors")).toBool() != _initialDarkModeColors ||
            settings.value(QStringLiteral("darkModeTrayIcon")).toBool() !=
-               ui->darkModeTrayIconCheckBox->isChecked() ||
-           Utils::Misc::isDarkModeIconTheme() != ui->darkModeIconThemeCheckBox->isChecked();
+               _initialDarkModeTrayIcon ||
+           Utils::Misc::isDarkModeIconTheme() != _initialDarkModeIconTheme;
 }
 
-void SettingsDialog::applyDarkModeSettings() {
-    SettingsService settings;
-    settings.setValue(QStringLiteral("darkMode"), ui->darkModeCheckBox->isChecked());
-    settings.setValue(QStringLiteral("darkModeColors"), ui->darkModeColorsCheckBox->isChecked());
-    settings.setValue(QStringLiteral("darkModeTrayIcon"),
-                      ui->darkModeTrayIconCheckBox->isChecked());
-    settings.setValue(QStringLiteral("darkModeIconTheme"),
-                      ui->darkModeIconThemeCheckBox->isChecked());
-
-    updateSearchLineEditIcons();
-    Utils::Gui::fixDarkModeIcons(this);
-    Utils::Gui::applyDarkModeSettings();
-}
+/**
+ * Applies the current color mode's dark mode settings to the application
+ */
+void SettingsDialog::applyDarkModeSettings() { applyColorModeSettings(); }
 
 /**
  * Applies the current editor schema settings live to the running editor
@@ -3705,10 +3607,6 @@ bool SettingsDialog::initializePage(int index) {
             ui->systemTrayGroupBox->setTitle(tr("Menu bar"));
             ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
 #endif
-#ifndef Q_OS_LINUX
-            ui->systemIconThemeCheckBox->setHidden(true);
-            ui->systemIconThemeCheckBox->setChecked(false);
-#endif
         } break;
         case SettingsPages::GeneralPage: {
             _noteNotificationButtonGroup = new QButtonGroup(this);
@@ -3789,6 +3687,9 @@ bool SettingsDialog::initializePage(int index) {
                 ui->openAiScriptingLabel3->text().arg("https://www.qownnotes.org/scripting/"
                                                       "methods-and-objects.html#use-a-completion-"
                                                       "prompt-on-the-currently-selected-ai-model"));
+        } break;
+        case SettingsPages::ColorModesPage: {
+            setupColorModesPage();
         } break;
         default:
             break;
@@ -3896,6 +3797,12 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
         settings.setValue(QStringLiteral("darkModeTrayIcon"), _initialDarkModeTrayIcon);
         settings.setValue(QStringLiteral("darkModeIconTheme"), _initialDarkModeIconTheme);
         settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _initialSchemaKey);
+
+        // Restore the initial color mode
+        if (!_initialColorModeId.isEmpty()) {
+            settings.setValue(QStringLiteral("ColorModes/currentId"), _initialColorModeId);
+        }
+
         Utils::Gui::applyDarkModeSettings();
     }
 
@@ -4698,26 +4605,6 @@ void SettingsDialog::on_bookmarkSuggestionApiGenerateTokenButton_clicked() {
     ui->bookmarkSuggestionApiTokenLineEdit->setEchoMode(QLineEdit::EchoMode::Normal);
 }
 
-void SettingsDialog::on_internalIconThemeCheckBox_toggled(bool checked) {
-    if (checked) {
-        const QSignalBlocker blocker(ui->systemIconThemeCheckBox);
-        Q_UNUSED(blocker)
-        ui->systemIconThemeCheckBox->setChecked(false);
-    }
-
-    ui->systemIconThemeCheckBox->setDisabled(checked);
-}
-
-void SettingsDialog::on_systemIconThemeCheckBox_toggled(bool checked) {
-    if (checked) {
-        const QSignalBlocker blocker(ui->internalIconThemeCheckBox);
-        ui->internalIconThemeCheckBox->setChecked(false);
-    }
-
-    ui->internalIconThemeCheckBox->setDisabled(checked);
-    ui->darkModeIconThemeCheckBox->setDisabled(checked);
-}
-
 void SettingsDialog::on_webSocketTokenButton_clicked() {
     auto webSocketTokenDialog = new WebSocketTokenDialog();
     webSocketTokenDialog->exec();
@@ -5204,4 +5091,393 @@ void SettingsDialog::on_overrideInterfaceScalingFactorGroupBox_toggled(bool arg1
 void SettingsDialog::on_interfaceScalingFactorSpinBox_valueChanged(int arg1) {
     Q_UNUSED(arg1);
     needRestart();
+}
+
+/**
+ * Populates the editor color schema combo box for the color modes page
+ */
+void SettingsDialog::initColorModeEditorSchemaComboBox() {
+    ui->colorModeEditorColorSchemaComboBox->clear();
+
+    // Load default schemas
+    QStringList defaultSchemaKeys = Utils::Schema::schemaSettings->defaultSchemaKeys();
+    QMap<QString, QString> defaultSchemaNameKeys;
+
+    const QSettings &defaultSchemaSettings = Utils::Schema::schemaSettings->defaultSchemaSettings();
+
+    for (const QString &schemaKey : defaultSchemaKeys) {
+        QString name = defaultSchemaSettings.value(schemaKey + "/Name").toString();
+
+        // Enforce the light theme to be on top
+        if (schemaKey == QStringLiteral("EditorColorSchema-6033d61b-cb96-46d5-a3a8-20d5172017eb")) {
+            name = QStringLiteral("  ") + name;
+        }
+
+        // Enforce the dark theme to be 2nd
+        if (schemaKey == QStringLiteral("EditorColorSchema-cdbf28fc-1ddc-4d13-bb21-6a4043316a2f")) {
+            name = QStringLiteral(" ") + name;
+        }
+
+        defaultSchemaNameKeys.insert(name, schemaKey);
+    }
+
+    for (const QString &schemaKey : defaultSchemaNameKeys.values()) {
+        const QString name = defaultSchemaSettings.value(schemaKey + "/Name").toString();
+        ui->colorModeEditorColorSchemaComboBox->addItem(name.trimmed(), schemaKey);
+    }
+
+    // Load custom schemas
+    SettingsService settings;
+    QStringList schemes = settings.value(QStringLiteral("Editor/ColorSchemes")).toStringList();
+    for (const QString &schemaKey : schemes) {
+        settings.beginGroup(schemaKey);
+        QString name = settings.value(QStringLiteral("Name")).toString();
+        ui->colorModeEditorColorSchemaComboBox->addItem(name, schemaKey);
+        settings.endGroup();
+    }
+}
+
+/**
+ * Sets up the color modes settings page
+ */
+void SettingsDialog::setupColorModesPage() {
+    initColorModeEditorSchemaComboBox();
+
+    ui->colorModeEditFrame->setEnabled(false);
+
+    QList<ColorMode> colorModes = ColorMode::fetchAll();
+
+    // Populate the color mode list
+    for (const ColorMode &mode : colorModes) {
+        auto *item = new QListWidgetItem(mode.getName());
+        item->setData(Qt::UserRole, mode.getId());
+        ui->colorModeListWidget->addItem(item);
+
+        // Select the current color mode
+        if (mode.isCurrent()) {
+            ui->colorModeListWidget->setCurrentItem(item);
+        }
+    }
+
+    // If nothing was selected, select the first item
+    if (ui->colorModeListWidget->currentRow() == -1 && ui->colorModeListWidget->count() > 0) {
+        ui->colorModeListWidget->setCurrentRow(0);
+    }
+}
+
+/**
+ * Stores the settings of the currently selected color mode
+ */
+void SettingsDialog::storeCurrentColorModeSettings() {
+    if (_selectedColorMode.getId().isEmpty()) {
+        return;
+    }
+
+    _selectedColorMode.store();
+}
+
+/**
+ * Applies the current color mode settings to the global application settings
+ */
+void SettingsDialog::applyColorModeSettings() {
+    const ColorMode mode = ColorMode::currentColorMode();
+
+    SettingsService settings;
+    settings.setValue(QStringLiteral("darkMode"), mode.isDarkMode());
+    settings.setValue(QStringLiteral("darkModeColors"), mode.isDarkModeColors());
+    settings.setValue(QStringLiteral("darkModeTrayIcon"), mode.isDarkModeTrayIcon());
+    settings.setValue(QStringLiteral("darkModeIconTheme"), mode.isDarkModeIconTheme());
+    settings.setValue(QStringLiteral("internalIconTheme"), mode.isInternalIconTheme());
+    settings.setValue(QStringLiteral("systemIconTheme"), mode.isSystemIconTheme());
+
+    if (!mode.getEditorColorSchemaKey().isEmpty()) {
+        settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"),
+                          mode.getEditorColorSchemaKey());
+    }
+
+    updateSearchLineEditIcons();
+    Utils::Gui::fixDarkModeIcons(this);
+    Utils::Gui::applyDarkModeSettings();
+}
+
+/**
+ * Handles selection change in the color mode list
+ */
+void SettingsDialog::on_colorModeListWidget_currentItemChanged(QListWidgetItem *current,
+                                                               QListWidgetItem *previous) {
+    Q_UNUSED(previous)
+
+    if (current == nullptr) {
+        ui->colorModeEditFrame->setEnabled(false);
+        return;
+    }
+
+    ui->colorModeEditFrame->setEnabled(true);
+
+    const QString colorModeId = current->data(Qt::UserRole).toString();
+    _selectedColorMode = ColorMode::fetch(colorModeId);
+
+    // Block signals while populating the UI
+    const QSignalBlocker nameBlocker(ui->colorModeNameLineEdit);
+    Q_UNUSED(nameBlocker)
+    const QSignalBlocker activeBlocker(ui->colorModeActiveCheckBox);
+    Q_UNUSED(activeBlocker)
+    const QSignalBlocker darkModeBlocker(ui->colorModeDarkModeCheckBox);
+    Q_UNUSED(darkModeBlocker)
+    const QSignalBlocker darkModeColorsBlocker(ui->colorModeDarkModeColorsCheckBox);
+    Q_UNUSED(darkModeColorsBlocker)
+    const QSignalBlocker darkModeTrayIconBlocker(ui->colorModeDarkModeTrayIconCheckBox);
+    Q_UNUSED(darkModeTrayIconBlocker)
+    const QSignalBlocker darkModeIconThemeBlocker(ui->colorModeDarkModeIconThemeCheckBox);
+    Q_UNUSED(darkModeIconThemeBlocker)
+    const QSignalBlocker internalIconThemeBlocker(ui->colorModeInternalIconThemeCheckBox);
+    Q_UNUSED(internalIconThemeBlocker)
+    const QSignalBlocker systemIconThemeBlocker(ui->colorModeSystemIconThemeCheckBox);
+    Q_UNUSED(systemIconThemeBlocker)
+    const QSignalBlocker schemaBlocker(ui->colorModeEditorColorSchemaComboBox);
+    Q_UNUSED(schemaBlocker)
+
+    ui->colorModeNameLineEdit->setText(_selectedColorMode.getName());
+    ui->colorModeActiveCheckBox->setChecked(_selectedColorMode.isCurrent());
+
+    ui->colorModeDarkModeCheckBox->setChecked(_selectedColorMode.isDarkMode());
+    ui->colorModeDarkModeColorsCheckBox->setChecked(_selectedColorMode.isDarkModeColors());
+    ui->colorModeDarkModeTrayIconCheckBox->setChecked(_selectedColorMode.isDarkModeTrayIcon());
+    ui->colorModeDarkModeIconThemeCheckBox->setChecked(_selectedColorMode.isDarkModeIconTheme());
+
+    ui->colorModeInternalIconThemeCheckBox->setChecked(_selectedColorMode.isInternalIconTheme());
+    ui->colorModeSystemIconThemeCheckBox->setChecked(_selectedColorMode.isSystemIconTheme());
+
+    // Set the editor color schema combo box to the correct value
+    const QString schemaKey = _selectedColorMode.getEditorColorSchemaKey();
+    for (int i = 0; i < ui->colorModeEditorColorSchemaComboBox->count(); i++) {
+        if (ui->colorModeEditorColorSchemaComboBox->itemData(i).toString() == schemaKey) {
+            ui->colorModeEditorColorSchemaComboBox->setCurrentIndex(i);
+            break;
+        }
+    }
+
+    // Built-in modes cannot have their names edited
+    ui->colorModeNameLineEdit->setReadOnly(_selectedColorMode.isBuiltIn());
+
+    // Disable the remove button for built-in modes
+    ui->colorModeRemoveButton->setEnabled(!_selectedColorMode.isBuiltIn());
+
+#ifndef Q_OS_LINUX
+    ui->colorModeSystemIconThemeCheckBox->setHidden(true);
+    ui->colorModeSystemIconThemeCheckBox->setChecked(false);
+#endif
+}
+
+/**
+ * Adds a new custom color mode
+ */
+void SettingsDialog::on_colorModeAddButton_clicked() {
+    ColorMode newMode = ColorMode::createCustom(tr("New color mode"));
+    newMode.store();
+
+    auto *item = new QListWidgetItem(newMode.getName());
+    item->setData(Qt::UserRole, newMode.getId());
+    ui->colorModeListWidget->addItem(item);
+
+    // Select the new item
+    ui->colorModeListWidget->setCurrentRow(ui->colorModeListWidget->count() - 1);
+
+    // Focus and select the name
+    ui->colorModeNameLineEdit->setFocus();
+    ui->colorModeNameLineEdit->selectAll();
+}
+
+/**
+ * Removes the currently selected custom color mode
+ */
+void SettingsDialog::on_colorModeRemoveButton_clicked() {
+    if (_selectedColorMode.isBuiltIn()) {
+        return;
+    }
+
+    if (Utils::Gui::question(
+            this, tr("Remove color mode"),
+            tr("Remove the color mode <strong>%1</strong>?").arg(_selectedColorMode.getName()),
+            QStringLiteral("remove-color-mode")) == QMessageBox::Yes) {
+        const bool wasCurrent = _selectedColorMode.isCurrent();
+
+        _selectedColorMode.remove();
+
+        // Remove the list item
+        delete ui->colorModeListWidget->takeItem(ui->colorModeListWidget->currentRow());
+
+        // If the removed mode was current, switch to the light mode
+        if (wasCurrent) {
+            ColorMode lightMode = ColorMode::fetch(ColorMode::LightModeId);
+            lightMode.setAsCurrent();
+            applyColorModeSettings();
+        }
+    }
+}
+
+/**
+ * Handles name editing finished for a color mode
+ */
+void SettingsDialog::on_colorModeNameLineEdit_editingFinished() {
+    if (_selectedColorMode.isBuiltIn()) {
+        return;
+    }
+
+    QString text = ui->colorModeNameLineEdit->text().remove(QStringLiteral("\n")).trimmed();
+    text.truncate(50);
+
+    if (text.isEmpty()) {
+        text = tr("Color mode");
+    }
+
+    _selectedColorMode.setName(text);
+    _selectedColorMode.store();
+
+    ui->colorModeListWidget->currentItem()->setText(text);
+}
+
+/**
+ * Handles setting a color mode as the active one
+ */
+void SettingsDialog::on_colorModeActiveCheckBox_stateChanged(int arg1) {
+    Q_UNUSED(arg1)
+
+    if (!ui->colorModeActiveCheckBox->isChecked()) {
+        const QSignalBlocker blocker(ui->colorModeActiveCheckBox);
+        Q_UNUSED(blocker)
+        ui->colorModeActiveCheckBox->setChecked(true);
+    } else {
+        _selectedColorMode.setAsCurrent();
+
+        // Apply the color mode settings to the global settings
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles dark mode checkbox toggle in color mode settings
+ */
+void SettingsDialog::on_colorModeDarkModeCheckBox_toggled(bool checked) {
+    _selectedColorMode.setDarkMode(checked);
+
+    if (checked) {
+        // When enabling dark mode, also enable related settings
+        const QSignalBlocker colorsBlocker(ui->colorModeDarkModeColorsCheckBox);
+        Q_UNUSED(colorsBlocker)
+        ui->colorModeDarkModeColorsCheckBox->setChecked(true);
+        _selectedColorMode.setDarkModeColors(true);
+
+        const QSignalBlocker iconBlocker(ui->colorModeDarkModeIconThemeCheckBox);
+        Q_UNUSED(iconBlocker)
+        ui->colorModeDarkModeIconThemeCheckBox->setChecked(true);
+        _selectedColorMode.setDarkModeIconTheme(true);
+    }
+
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles dark mode colors checkbox toggle in color mode settings
+ */
+void SettingsDialog::on_colorModeDarkModeColorsCheckBox_toggled(bool checked) {
+    _selectedColorMode.setDarkModeColors(checked);
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles dark mode tray icon checkbox toggle in color mode settings
+ */
+void SettingsDialog::on_colorModeDarkModeTrayIconCheckBox_toggled(bool checked) {
+    _selectedColorMode.setDarkModeTrayIcon(checked);
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles dark mode icon theme checkbox toggle in color mode settings
+ */
+void SettingsDialog::on_colorModeDarkModeIconThemeCheckBox_toggled(bool checked) {
+    _selectedColorMode.setDarkModeIconTheme(checked);
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles internal icon theme checkbox toggle in color mode settings
+ */
+void SettingsDialog::on_colorModeInternalIconThemeCheckBox_toggled(bool checked) {
+    _selectedColorMode.setInternalIconTheme(checked);
+
+    if (checked) {
+        const QSignalBlocker blocker(ui->colorModeSystemIconThemeCheckBox);
+        Q_UNUSED(blocker)
+        ui->colorModeSystemIconThemeCheckBox->setChecked(false);
+        _selectedColorMode.setSystemIconTheme(false);
+        ui->colorModeSystemIconThemeCheckBox->setEnabled(false);
+    } else {
+        ui->colorModeSystemIconThemeCheckBox->setEnabled(true);
+    }
+
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles system icon theme checkbox toggle in color mode settings
+ */
+void SettingsDialog::on_colorModeSystemIconThemeCheckBox_toggled(bool checked) {
+    _selectedColorMode.setSystemIconTheme(checked);
+
+    if (checked) {
+        const QSignalBlocker blocker(ui->colorModeInternalIconThemeCheckBox);
+        Q_UNUSED(blocker)
+        ui->colorModeInternalIconThemeCheckBox->setChecked(false);
+        _selectedColorMode.setInternalIconTheme(false);
+        ui->colorModeInternalIconThemeCheckBox->setEnabled(false);
+        ui->colorModeDarkModeIconThemeCheckBox->setEnabled(false);
+    } else {
+        ui->colorModeInternalIconThemeCheckBox->setEnabled(true);
+        ui->colorModeDarkModeIconThemeCheckBox->setEnabled(true);
+    }
+
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Handles editor color schema selection change in color mode settings
+ */
+void SettingsDialog::on_colorModeEditorColorSchemaComboBox_currentIndexChanged(int index) {
+    if (index < 0) {
+        return;
+    }
+
+    const QString schemaKey = ui->colorModeEditorColorSchemaComboBox->itemData(index).toString();
+    _selectedColorMode.setEditorColorSchemaKey(schemaKey);
+    _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
 }

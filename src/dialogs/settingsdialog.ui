@@ -174,21 +174,33 @@
              <iconset theme="edit-guides" resource="../breeze-qownnotes.qrc">
               <normaloff>:/icons/breeze-qownnotes/16x16/edit-guides.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-guides.svg</iconset>
             </property>
-            <item>
-             <property name="text">
-              <string>Layout</string>
-             </property>
-             <property name="whatsThis">
-              <string notr="true">18</string>
-             </property>
-             <property name="icon">
-              <iconset theme="window-duplicate" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</iconset>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Editor</string>
+             <item>
+              <property name="text">
+               <string>Layout</string>
+              </property>
+              <property name="whatsThis">
+               <string notr="true">18</string>
+              </property>
+              <property name="icon">
+               <iconset theme="window-duplicate" resource="../breeze-qownnotes.qrc">
+                <normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Color modes</string>
+              </property>
+              <property name="whatsThis">
+               <string notr="true">24</string>
+              </property>
+              <property name="icon">
+               <iconset theme="gtk-select-font" resource="../breeze-dark-qownnotes.qrc">
+                <normaloff>:/icons/breeze-dark-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/gtk-select-font.svg</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Editor</string>
              </property>
              <property name="whatsThis">
               <string notr="true">14</string>
@@ -3106,56 +3118,7 @@
                   <property name="bottomMargin">
                    <number>0</number>
                   </property>
-                  <item>
-                   <widget class="QGroupBox" name="groupBox_14">
-                    <property name="title">
-                     <string>Dark mode</string>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_24">
-                     <item row="3" column="0">
-                      <widget class="QCheckBox" name="darkModeTrayIconCheckBox">
-                       <property name="toolTip">
-                        <string>You may need to restart the application to let these changes take effect</string>
-                       </property>
-                       <property name="text">
-                        <string>Enable dark mode application icon and tray icon</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="0">
-                      <widget class="QLabel" name="darkModeInfoLabel">
-                       <property name="text">
-                        <string>You might also want to choose another editor color schema in the editor settings in dark mode.</string>
-                       </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="0">
-                      <widget class="QCheckBox" name="darkModeCheckBox">
-                       <property name="toolTip">
-                        <string>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</string>
-                       </property>
-                       <property name="text">
-                        <string>Enable dark mode</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
-                      <widget class="QCheckBox" name="darkModeColorsCheckBox">
-                       <property name="toolTip">
-                        <string>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</string>
-                       </property>
-                       <property name="text">
-                        <string>Optimize preview colors for dark mode desktop themes</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
+                   <item>
                    <widget class="QGroupBox" name="systemTrayGroupBox">
                     <property name="title">
                      <string>System tray</string>
@@ -3196,55 +3159,25 @@
                     </layout>
                    </widget>
                   </item>
-                  <item>
-                   <widget class="QGroupBox" name="groupBox_19">
-                    <property name="title">
-                     <string>Icons</string>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_43">
-                     <item row="0" column="0">
-                      <widget class="QCheckBox" name="internalIconThemeCheckBox">
-                       <property name="toolTip">
-                        <string>You need to restart the application to let this setting take effect</string>
-                       </property>
-                       <property name="text">
-                        <string>Use internal icon theme instead of system icon theme</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="0">
-                      <widget class="QCheckBox" name="systemIconThemeCheckBox">
-                       <property name="toolTip">
-                        <string>You need to restart the application to let this setting take effect</string>
-                       </property>
-                       <property name="text">
-                        <string>Enforce system icon theme</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="0">
-                      <widget class="QCheckBox" name="darkModeIconThemeCheckBox">
-                       <property name="toolTip">
-                        <string>You may need to restart the application to let these changes take effect</string>
-                       </property>
-                       <property name="text">
-                        <string>Enable dark mode icon theme</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="0">
-                      <widget class="QCheckBox" name="hideIconsInMenusCheckBox">
-                       <property name="toolTip">
-                        <string>Hide icons in menus as well as the &quot;Find action&quot; dialog. Requires restart to take effect</string>
-                       </property>
-                       <property name="text">
-                        <string>Hide menu icons</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
+                   <item>
+                    <widget class="QGroupBox" name="groupBox_19">
+                     <property name="title">
+                      <string>Icons</string>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_43">
+                      <item row="0" column="0">
+                       <widget class="QCheckBox" name="hideIconsInMenusCheckBox">
+                        <property name="toolTip">
+                         <string>Hide icons in menus as well as the &quot;Find action&quot; dialog. Requires restart to take effect</string>
+                        </property>
+                        <property name="text">
+                         <string>Hide menu icons</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
                   <item>
                    <widget class="QGroupBox" name="groupBox_6">
                     <property name="minimumSize">
@@ -7876,18 +7809,300 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </property>
               </spacer>
              </item>
-            </layout>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="colorModesPage">
+             <layout class="QGridLayout" name="gridLayout_colorModes">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="colorModesGroupBox">
+                <property name="title">
+                 <string>Color modes</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_colorModesInner">
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="colorModeSelectFrame">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>2</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_colorModeSelect">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="spacing">
+                     <number>9</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QListWidget" name="colorModeListWidget">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>2</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QFrame" name="colorModeButtonFrame">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::NoFrame</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Plain</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_colorModeButtons">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="0">
+                        <spacer name="colorModeButtonSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QPushButton" name="colorModeAddButton">
+                         <property name="text">
+                          <string>&amp;Add color mode</string>
+                         </property>
+                         <property name="icon">
+                          <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+                           <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QPushButton" name="colorModeRemoveButton">
+                         <property name="text">
+                          <string>&amp;Remove color mode</string>
+                         </property>
+                         <property name="icon">
+                          <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+                           <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QFrame" name="colorModeEditFrame">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>3</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_colorModeEdit">
+                    <item row="0" column="0" colspan="2">
+                     <widget class="QLabel" name="colorModeNameLabel">
+                      <property name="text">
+                       <string>Name:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0" colspan="2">
+                     <widget class="QLineEdit" name="colorModeNameLineEdit">
+                      <property name="toolTip">
+                       <string>Name of the color mode</string>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Color mode name</string>
+                      </property>
+                      <property name="clearButtonEnabled">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0" colspan="2">
+                     <widget class="QCheckBox" name="colorModeActiveCheckBox">
+                      <property name="text">
+                       <string>Use as active color mode</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0" colspan="2">
+                     <widget class="QGroupBox" name="colorModeDarkModeGroupBox">
+                      <property name="title">
+                       <string>Dark mode</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_colorModeDarkMode">
+                       <item row="0" column="0">
+                        <widget class="QCheckBox" name="colorModeDarkModeCheckBox">
+                         <property name="toolTip">
+                          <string>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</string>
+                         </property>
+                         <property name="text">
+                          <string>Enable dark mode</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QCheckBox" name="colorModeDarkModeColorsCheckBox">
+                         <property name="toolTip">
+                          <string>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</string>
+                         </property>
+                         <property name="text">
+                          <string>Optimize preview colors for dark mode desktop themes</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QCheckBox" name="colorModeDarkModeTrayIconCheckBox">
+                         <property name="toolTip">
+                          <string>You may need to restart the application to let these changes take effect</string>
+                         </property>
+                         <property name="text">
+                          <string>Enable dark mode application icon and tray icon</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="4" column="0" colspan="2">
+                     <widget class="QGroupBox" name="colorModeIconsGroupBox">
+                      <property name="title">
+                       <string>Icons</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_colorModeIcons">
+                       <item row="0" column="0">
+                        <widget class="QCheckBox" name="colorModeInternalIconThemeCheckBox">
+                         <property name="toolTip">
+                          <string>You need to restart the application to let this setting take effect</string>
+                         </property>
+                         <property name="text">
+                          <string>Use internal icon theme instead of system icon theme</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QCheckBox" name="colorModeSystemIconThemeCheckBox">
+                         <property name="toolTip">
+                          <string>You need to restart the application to let this setting take effect</string>
+                         </property>
+                         <property name="text">
+                          <string>Enforce system icon theme</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QCheckBox" name="colorModeDarkModeIconThemeCheckBox">
+                         <property name="toolTip">
+                          <string>You may need to restart the application to let these changes take effect</string>
+                         </property>
+                         <property name="text">
+                          <string>Enable dark mode icon theme</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="5" column="0" colspan="2">
+                     <widget class="QGroupBox" name="colorModeEditorSchemaGroupBox">
+                      <property name="title">
+                       <string>Editor color schema</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_colorModeEditorSchema">
+                       <item row="0" column="0">
+                        <widget class="QComboBox" name="colorModeEditorColorSchemaComboBox">
+                         <property name="toolTip">
+                          <string>Select the editor color schema for this color mode</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="6" column="0">
+                     <spacer name="colorModeVerticalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeType">
+                       <enum>QSizePolicy::Policy::Expanding</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>5</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QDialogButtonBox" name="buttonBox">
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Orientation::Horizontal</enum>
      </property>
@@ -8001,15 +8216,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>ignoreNonTodoCalendarsCheckBox</tabstop>
   <tabstop>closeTodoListAfterSaveCheckBox</tabstop>
   <tabstop>languageListWidget</tabstop>
-  <tabstop>darkModeTrayIconCheckBox</tabstop>
-  <tabstop>darkModeCheckBox</tabstop>
-  <tabstop>darkModeColorsCheckBox</tabstop>
+
   <tabstop>showSystemTrayCheckBox</tabstop>
   <tabstop>startHiddenCheckBox</tabstop>
   <tabstop>interfaceStyleComboBox</tabstop>
-  <tabstop>internalIconThemeCheckBox</tabstop>
-  <tabstop>systemIconThemeCheckBox</tabstop>
-  <tabstop>darkModeIconThemeCheckBox</tabstop>
+
   <tabstop>toolbarIconSizeResetButton</tabstop>
   <tabstop>itemHeightResetButton</tabstop>
   <tabstop>toolbarIconSizeSpinBox</tabstop>

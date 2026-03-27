@@ -16,6 +16,7 @@
 
 #include <entities/calendaritem.h>
 #include <entities/cloudconnection.h>
+#include <entities/colormode.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
@@ -2678,14 +2679,24 @@ QString Utils::Misc::fileExtensionForMimeType(const QString &mimeType) {
 }
 
 void Utils::Misc::switchToDarkOrLightMode(bool darkMode) {
+    // Switch the active color mode to the matching built-in mode
+    ColorMode::ensureBuiltInModesExist();
+    const QString modeId = darkMode ? ColorMode::DarkModeId : ColorMode::LightModeId;
+    ColorMode mode = ColorMode::fetch(modeId);
+    mode.setAsCurrent();
+
+    // Apply the color mode settings to the global settings
     SettingsService settings;
-    settings.setValue("darkMode", darkMode);
-    settings.setValue("darkModeColors", darkMode);
-    settings.setValue("darkModeIconTheme", darkMode);
-    settings.setValue("darkModeTrayIcon", darkMode);
-    settings.setValue("Editor/CurrentSchemaKey",
-                      darkMode ? "EditorColorSchema-cdbf28fc-1ddc-4d13-bb21-6a4043316a2f"
-                               : "EditorColorSchema-6033d61b-cb96-46d5-a3a8-20d5172017eb");
+    settings.setValue("darkMode", mode.isDarkMode());
+    settings.setValue("darkModeColors", mode.isDarkModeColors());
+    settings.setValue("darkModeIconTheme", mode.isDarkModeIconTheme());
+    settings.setValue("darkModeTrayIcon", mode.isDarkModeTrayIcon());
+    settings.setValue("internalIconTheme", mode.isInternalIconTheme());
+    settings.setValue("systemIconTheme", mode.isSystemIconTheme());
+
+    if (!mode.getEditorColorSchemaKey().isEmpty()) {
+        settings.setValue("Editor/CurrentSchemaKey", mode.getEditorColorSchemaKey());
+    }
 }
 
 void Utils::Misc::switchToDarkMode() { switchToDarkOrLightMode(true); }

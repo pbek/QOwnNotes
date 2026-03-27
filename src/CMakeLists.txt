@@ -295,6 +295,8 @@ set(SOURCE_FILES
     entities/notehistory.h
     entities/notefolder.cpp
     entities/notefolder.h
+    entities/colormode.cpp
+    entities/colormode.h
     entities/cloudconnection.cpp
     entities/cloudconnection.h
     entities/tag.cpp

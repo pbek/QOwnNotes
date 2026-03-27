@@ -2,6 +2,7 @@
 #define SETTINGSDIALOG_H
 
 #include <entities/cloudconnection.h>
+#include <entities/colormode.h>
 #include <entities/notefolder.h>
 #include <entities/script.h>
 
@@ -62,7 +63,8 @@ class SettingsDialog : public MasterDialog {
         WebApplicationPage,
         ExperimentalPage,
         AiPage,
-        LanguageToolPage
+        LanguageToolPage,
+        ColorModesPage
     };
 
     explicit SettingsDialog(int page = 0, QWidget *parent = 0);
@@ -173,14 +175,6 @@ class SettingsDialog : public MasterDialog {
 
     void on_defaultNoteFileExtensionListWidget_itemChanged(QListWidgetItem *item);
 
-    void on_darkModeCheckBox_toggled();
-
-    void on_darkModeColorsCheckBox_toggled(bool checked);
-
-    void on_darkModeTrayIconCheckBox_toggled(bool checked);
-
-    void on_darkModeIconThemeCheckBox_toggled(bool checked);
-
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
 
     void on_gitHubLineBreaksCheckBox_toggled(bool checked);
@@ -284,10 +278,6 @@ class SettingsDialog : public MasterDialog {
 
     void on_bookmarkSuggestionApiGenerateTokenButton_clicked();
 
-    void on_internalIconThemeCheckBox_toggled(bool checked);
-
-    void on_systemIconThemeCheckBox_toggled(bool checked);
-
     void on_webSocketTokenButton_clicked();
 
     void on_cloudConnectionComboBox_currentIndexChanged(int index);
@@ -374,6 +364,31 @@ class SettingsDialog : public MasterDialog {
     void on_languageToolEnabledCheckBox_toggled(bool checked);
 #endif
 
+    void on_colorModeListWidget_currentItemChanged(QListWidgetItem *current,
+                                                   QListWidgetItem *previous);
+
+    void on_colorModeAddButton_clicked();
+
+    void on_colorModeRemoveButton_clicked();
+
+    void on_colorModeNameLineEdit_editingFinished();
+
+    void on_colorModeActiveCheckBox_stateChanged(int arg1);
+
+    void on_colorModeDarkModeCheckBox_toggled(bool checked);
+
+    void on_colorModeDarkModeColorsCheckBox_toggled(bool checked);
+
+    void on_colorModeDarkModeTrayIconCheckBox_toggled(bool checked);
+
+    void on_colorModeDarkModeIconThemeCheckBox_toggled(bool checked);
+
+    void on_colorModeInternalIconThemeCheckBox_toggled(bool checked);
+
+    void on_colorModeSystemIconThemeCheckBox_toggled(bool checked);
+
+    void on_colorModeEditorColorSchemaComboBox_currentIndexChanged(int index);
+
    private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
@@ -406,6 +421,8 @@ class SettingsDialog : public MasterDialog {
     bool _initialDarkModeTrayIcon = false;
     bool _initialDarkModeIconTheme = false;
     QString _initialSchemaKey;
+    ColorMode _selectedColorMode;
+    QString _initialColorModeId;
     QList<QWidget *> _searchMatchedWidgets;
     QHash<QWidget *, QString> _searchMatchedWidgetOriginalTexts;
 
@@ -498,6 +515,14 @@ class SettingsDialog : public MasterDialog {
     void initCloudConnectionComboBox(int selectedId = -1);
 
     void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false, bool updateSchema = false);
+
+    void setupColorModesPage();
+
+    void initColorModeEditorSchemaComboBox();
+
+    void storeCurrentColorModeSettings();
+
+    void applyColorModeSettings();
 
     void resetOKLabelData();
 
