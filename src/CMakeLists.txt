@@ -462,6 +462,9 @@ set(SOURCE_FILES
     widgets/layoutwidget.cpp
     widgets/layoutwidget.h
     widgets/layoutwidget.ui
+    widgets/colormodesettingswidget.cpp
+    widgets/colormodesettingswidget.h
+    widgets/colormodesettingswidget.ui
     widgets/todoitemtreewidget.cpp
     widgets/todoitemtreewidget.h
     widgets/htmlpreviewwidget.h

@@ -30,6 +30,7 @@ HEADERS  += \
     $$APP_SRC_DIR/widgets/logwidget.h \
     $$APP_SRC_DIR/entities/notefolder.h \
     $$APP_SRC_DIR/entities/cloudconnection.h \
+    $$APP_SRC_DIR/entities/colormode.h \
     $$APP_SRC_DIR/entities/notesubfolder.h \
     $$APP_SRC_DIR/entities/note.h \
     $$APP_SRC_DIR/entities/trashitem.h \
@@ -79,6 +80,7 @@ SOURCES += \
     $$APP_SRC_DIR/widgets/logwidget.cpp \
     $$APP_SRC_DIR/entities/notefolder.cpp \
     $$APP_SRC_DIR/entities/cloudconnection.cpp \
+    $$APP_SRC_DIR/entities/colormode.cpp \
     $$APP_SRC_DIR/entities/notesubfolder.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
     $$APP_SRC_DIR/entities/trashitem.cpp \

@@ -231,6 +231,7 @@ SOURCES += main.cpp\
     widgets/todoitemtreewidget.cpp \
     widgets/layoutwidget.cpp \
     widgets/htmlpreviewwidget.cpp \
+    widgets/colormodesettingswidget.cpp \
     dialogs/serverbookmarksimportdialog.cpp \
     dialogs/websockettokendialog.cpp \
     dialogs/imagedialog.cpp \
@@ -371,6 +372,7 @@ HEADERS  += mainwindow.h \
     widgets/todoitemtreewidget.h \
     widgets/layoutwidget.h \
     widgets/htmlpreviewwidget.h \
+    widgets/colormodesettingswidget.h \
     dialogs/serverbookmarksimportdialog.h \
     dialogs/websockettokendialog.h \
     dialogs/imagedialog.h \
@@ -432,6 +434,7 @@ FORMS    += mainwindow.ui \
     widgets/scriptsettingwidget.ui \
     widgets/notetreewidgetitem.ui \
     widgets/layoutwidget.ui \
+    widgets/colormodesettingswidget.ui \
     dialogs/serverbookmarksimportdialog.ui \
     dialogs/websockettokendialog.ui
 
