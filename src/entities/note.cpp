@@ -5057,6 +5057,134 @@ bool Note::updateQualifiedWikiLinksForSubfolderRename(const QString &oldRelative
     return changedAny;
 }
 
+/**
+ * Updates relative Markdown links (both `](path)` and `<path>` forms) across
+ * all notes when a subfolder is renamed.  For every note we look for link
+ * targets that begin with the old subfolder path (possibly preceded by one or
+ * more `../` segments) and rewrite them to use the new path.  Both plain and
+ * URL-encoded variants of the path are handled.
+ *
+ * A confirmation dialog is shown when affected notes are found, giving the
+ * user the option to skip the update.
+ *
+ * @param oldRelativePath  Relative path of the subfolder before renaming
+ *                         (e.g. "parent/old_name")
+ * @param newRelativePath  Relative path of the subfolder after renaming
+ *                         (e.g. "parent/new_name")
+ * @return true if at least one note was changed
+ */
+bool Note::updateRelativeMarkdownLinksForSubfolderRename(const QString &oldRelativePath,
+                                                         const QString &newRelativePath) {
+    const QString oldPrefix = Utils::Misc::removeIfEndsWith(oldRelativePath, QStringLiteral("/"));
+    const QString newPrefix = Utils::Misc::removeIfEndsWith(newRelativePath, QStringLiteral("/"));
+
+    if (oldPrefix.isEmpty() || oldPrefix == newPrefix) {
+        return false;
+    }
+
+    // The old and new subfolder name as a path segment with trailing slash,
+    // in both plain and URL-encoded forms.
+    const QString oldSegment = oldPrefix + QChar('/');
+    const QString newSegment = newPrefix + QChar('/');
+    const QString oldSegmentEncoded = urlEncodeNoteUrl(oldSegment);
+    const QString newSegmentEncoded = urlEncodeNoteUrl(newSegment);
+
+    // URL-encoded forms of the bare prefix (for exact-target edge cases)
+    const QString oldPrefixEncoded = urlEncodeNoteUrl(oldPrefix);
+    const QString newPrefixEncoded = urlEncodeNoteUrl(newPrefix);
+
+    // Helper lambda: apply all substitutions inside Markdown link targets of
+    // a single note text.  Returns the modified text (unchanged if no match).
+    //
+    // Relative links from notes in sub-folders contain "../" traversal
+    // segments before the folder name, e.g. "../../Demo/note.md", so we must
+    // replace the segment wherever it appears after a "/" inside a link — not
+    // only when it appears right after "](":
+    //
+    //   ](Demo/note.md)         – link from root-level note
+    //   ](../Demo/note.md)      – link from one level deep
+    //   ](../../Demo/note.md)   – link from two levels deep
+    //
+    // We therefore replace both "](oldSegment" and "/oldSegment" inside link
+    // URLs.  The "/" replacement is safe because it is anchored to a path
+    // separator: a folder called "Demo" cannot be confused with one called
+    // "DemoExtra" because the match requires the trailing "/".
+    const auto rewriteText = [&](const QString &in) -> QString {
+        QString text = in;
+
+        // Replace oldSeg with newSeg both at the start of a link target
+        // ("](oldSeg") and as an interior path segment ("/oldSeg").
+        const auto replaceInLinks = [&](const QString &oldSeg, const QString &newSeg) {
+            // At the very start of an inline link target or autolink
+            text.replace(QStringLiteral("](") + oldSeg, QStringLiteral("](") + newSeg);
+            text.replace(QStringLiteral("<") + oldSeg, QStringLiteral("<") + newSeg);
+            // Anywhere as an interior path segment (handles ../../Demo/ etc.)
+            text.replace(QStringLiteral("/") + oldSeg, QStringLiteral("/") + newSeg);
+        };
+
+        replaceInLinks(oldSegment, newSegment);
+        replaceInLinks(oldSegmentEncoded, newSegmentEncoded);
+
+        // Edge-case: link target ends at the folder path itself (no filename)
+        const auto replaceExact = [&](const QString &oldSeg, const QString &newSeg) {
+            text.replace(QStringLiteral("](") + oldSeg, QStringLiteral("](") + newSeg);
+            text.replace(QStringLiteral("<") + oldSeg, QStringLiteral("<") + newSeg);
+            text.replace(QStringLiteral("/") + oldSeg, QStringLiteral("/") + newSeg);
+        };
+
+        replaceExact(oldPrefix + QStringLiteral(")"), newPrefix + QStringLiteral(")"));
+        replaceExact(oldPrefix + QStringLiteral(">"), newPrefix + QStringLiteral(">"));
+        replaceExact(oldPrefix + QStringLiteral("#"), newPrefix + QStringLiteral("#"));
+        replaceExact(oldPrefixEncoded + QStringLiteral(")"),
+                     newPrefixEncoded + QStringLiteral(")"));
+        replaceExact(oldPrefixEncoded + QStringLiteral(">"),
+                     newPrefixEncoded + QStringLiteral(">"));
+        replaceExact(oldPrefixEncoded + QStringLiteral("#"),
+                     newPrefixEncoded + QStringLiteral("#"));
+
+        return text;
+    };
+
+    // First pass: collect all notes that would be changed so we can inform
+    // the user before touching anything.
+    const QVector<Note> notes = fetchAll();
+    QVector<std::pair<Note, QString>> pendingUpdates;
+    pendingUpdates.reserve(notes.size());
+
+    for (const Note &fetchedNote : notes) {
+        const QString original = fetchedNote.getNoteText();
+        const QString updated = rewriteText(original);
+        if (updated != original) {
+            pendingUpdates.emplace_back(fetchedNote, updated);
+        }
+    }
+
+    if (pendingUpdates.isEmpty()) {
+        return false;
+    }
+
+    // Ask the user before modifying note files
+    if (Utils::Gui::questionNoSkipOverride(
+            nullptr, QObject::tr("Subfolder path changed"),
+            QObject::tr("The subfolder was renamed from <strong>%1</strong> to "
+                        "<strong>%2</strong>. Would you like to update all relative "
+                        "Markdown links that point into this subfolder in "
+                        "<strong>%n</strong> note file(s)?",
+                        "", static_cast<int>(pendingUpdates.size()))
+                .arg(oldPrefix, newPrefix),
+            QStringLiteral("subfolder-rename-replace-links")) != QMessageBox::Yes) {
+        return false;
+    }
+
+    // Second pass: apply the pre-computed updates
+    for (auto &[fetchedNote, updatedText] : pendingUpdates) {
+        Note note = fetchedNote;
+        note.storeNewText(std::move(updatedText));
+    }
+
+    return true;
+}
+
 QSet<Note> Note::findBacklinks() const {
     const QVector<int> noteIdList = this->findBacklinkedNoteIds();
     const int noteCount = noteIdList.count();

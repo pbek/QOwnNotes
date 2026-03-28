@@ -2,6 +2,11 @@
 
 ## 26.3.23
 
+- When a **note subfolder is renamed**, a confirmation dialog is now shown
+  offering to update all relative Markdown links
+  (`[text](../old_folder/note.md)` and `<../old_folder/note.md>`) across
+  affected notes to reflect the new folder name; both plain and URL-encoded
+  path variants are handled (for [#3213](https://github.com/pbek/QOwnNotes/issues/3213))
 - Added a new **Color modes** settings page under Interface settings that allows
   users to create custom color mode profiles with dark mode, icon theme, and
   editor color schema settings; built-in Light and Dark modes are provided and

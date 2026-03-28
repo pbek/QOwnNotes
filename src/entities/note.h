@@ -395,6 +395,9 @@ class Note {
     static bool updateQualifiedWikiLinksForSubfolderRename(const QString &oldRelativePath,
                                                            const QString &newRelativePath);
 
+    static bool updateRelativeMarkdownLinksForSubfolderRename(const QString &oldRelativePath,
+                                                              const QString &newRelativePath);
+
     QStringList getNoteTextLines() const;
 
     bool stripTrailingSpaces(int skipLine = -1);
