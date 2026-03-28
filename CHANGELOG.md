@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 26.3.24
+
+- Updated **Copy note to** and **Move note to** (cross-note-folder operations)
+  so that media images and attachment files are now also copied to the destination
+  note folder's `media/` and `attachments/` directories respectively, and the
+  links inside the moved/copied note are rewritten to point to the correct
+  locations at the root of the destination note folder; previously the `.md`
+  file was moved but linked files were left behind and URLs were not updated
+  (for [#2948](https://github.com/pbek/QOwnNotes/issues/2948))
+
 ## 26.3.23
 
 - A **warning dialog** is now shown when deleting a note (or multiple notes)

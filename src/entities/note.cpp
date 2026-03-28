@@ -755,12 +755,6 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             return false;
         }
 
-        // check if there are media files in the note
-        const QStringList mediaFileList = getMediaFileList();
-        if (mediaFileList.empty()) {
-            return true;
-        }
-
         if (noteFolderPath.isEmpty()) {
             noteFolderPath = destinationPath;
         }
@@ -769,24 +763,80 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             return true;
         }
 
-        const QDir mediaDir(noteFolderPath + QDir::separator() + QStringLiteral("media"));
+        // Copy media files to the media folder inside destinationPath
+        const QStringList mediaFileList = getMediaFileList();
+        if (!mediaFileList.empty()) {
+            const QDir mediaDir(noteFolderPath + QDir::separator() + QStringLiteral("media"));
 
-        // created the media folder if it doesn't exist
-        if (!mediaDir.exists()) {
-            if (!mediaDir.mkpath(mediaDir.path())) {
-                return true;
+            // Create the media folder if it doesn't exist
+            if (!mediaDir.exists()) {
+                mediaDir.mkpath(mediaDir.path());
+            }
+
+            for (const QString &fileName : mediaFileList) {
+                QFile mediaFile(NoteFolder::currentMediaPath() + QDir::separator() + fileName);
+
+                if (mediaFile.exists()) {
+                    mediaFile.copy(mediaDir.path() + QDir::separator() + fileName);
+                }
             }
         }
 
-        // copy all images to the media folder inside
-        // destinationPath
-        for (const QString &fileName : mediaFileList) {
-            QFile mediaFile(NoteFolder::currentMediaPath() + QDir::separator() + fileName);
+        // Copy attachment files to the attachments folder inside destinationPath
+        const QStringList attachmentFileList = getAttachmentsFileList();
+        if (!attachmentFileList.empty()) {
+            const QDir attachmentsDir(noteFolderPath + QDir::separator() +
+                                      QStringLiteral("attachments"));
 
-            if (mediaFile.exists()) {
-                mediaFile.copy(mediaDir.path() + QDir::separator() + fileName);
+            // Create the attachments folder if it doesn't exist
+            if (!attachmentsDir.exists()) {
+                attachmentsDir.mkpath(attachmentsDir.path());
+            }
+
+            for (const QString &fileName : attachmentFileList) {
+                QFile attachmentFile(NoteFolder::currentAttachmentsPath() + QDir::separator() +
+                                     fileName);
+
+                if (attachmentFile.exists()) {
+                    attachmentFile.copy(attachmentsDir.path() + QDir::separator() + fileName);
+                }
             }
         }
+
+        // Rewrite media and attachment links in the destination note file so they
+        // point to the correct location at the root of the destination note folder
+        // (depth=0, so no "../" prefixes are needed)
+        if (!mediaFileList.empty() || !attachmentFileList.empty()) {
+            QFile destFile(destinationFileName);
+
+            if (destFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                QString noteContent = destFile.readAll();
+                destFile.close();
+
+                const QString originalContent = noteContent;
+
+                // Normalize image links: replace any (../)*media/ with media/
+                static const QRegularExpression mediaRe(
+                    QStringLiteral(R"((!\[.*?\])\((?:\.\.\/)*media/(.+?)\))"));
+                noteContent.replace(mediaRe, QStringLiteral(R"(\1(media/\2))"));
+
+                // Normalize attachment links: replace any (../)*attachments/ with attachments/
+                static const QRegularExpression attachRe(
+                    QStringLiteral(R"((\[.*?\])\((?:\.\.\/)*attachments/(.+?)\))"));
+                noteContent.replace(attachRe, QStringLiteral(R"(\1(attachments/\2))"));
+
+                if (noteContent != originalContent) {
+                    if (destFile.open(QIODevice::WriteOnly | QIODevice::Text |
+                                      QIODevice::Truncate)) {
+                        QTextStream out(&destFile);
+                        out << noteContent;
+                        destFile.close();
+                    }
+                }
+            }
+        }
+
+        return true;
     }
 
     return false;
