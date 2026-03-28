@@ -5148,14 +5148,14 @@ bool Note::updateRelativeMarkdownLinksForSubfolderRename(const QString &oldRelat
     // First pass: collect all notes that would be changed so we can inform
     // the user before touching anything.
     const QVector<Note> notes = fetchAll();
-    QVector<std::pair<Note, QString>> pendingUpdates;
+    QVector<QPair<Note, QString>> pendingUpdates;
     pendingUpdates.reserve(notes.size());
 
     for (const Note &fetchedNote : notes) {
         const QString original = fetchedNote.getNoteText();
         const QString updated = rewriteText(original);
         if (updated != original) {
-            pendingUpdates.emplace_back(fetchedNote, updated);
+            pendingUpdates.append(qMakePair(fetchedNote, updated));
         }
     }
 
@@ -5177,9 +5177,9 @@ bool Note::updateRelativeMarkdownLinksForSubfolderRename(const QString &oldRelat
     }
 
     // Second pass: apply the pre-computed updates
-    for (auto &[fetchedNote, updatedText] : pendingUpdates) {
-        Note note = fetchedNote;
-        note.storeNewText(std::move(updatedText));
+    for (auto &pair : pendingUpdates) {
+        Note note = pair.first;
+        note.storeNewText(std::move(pair.second));
     }
 
     return true;
