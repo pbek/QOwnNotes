@@ -2,6 +2,11 @@
 
 ## 26.3.23
 
+- A **warning dialog** is now shown when deleting a note (or multiple notes)
+  that are referenced by links in other notes, informing the user that the
+  deletion will leave those links broken and offering the option to cancel;
+  the check is performed for both single-note removal and bulk removal
+  (for [#3202](https://github.com/pbek/QOwnNotes/issues/3202))
 - When a **note subfolder is renamed**, a confirmation dialog is now shown
   offering to update all relative Markdown links
   (`[text](../old_folder/note.md)` and `<../old_folder/note.md>`) across

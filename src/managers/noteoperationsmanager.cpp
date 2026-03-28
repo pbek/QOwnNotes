@@ -45,6 +45,21 @@ void NoteOperationsManager::removeCurrentNote() {
     // store updated notes to disk
     _mainWindow->storeUpdatedNotesToDisk();
 
+    // Warn if other notes contain links pointing to this note
+    const QVector<int> backlinkIds = _mainWindow->currentNote.findBacklinkedNoteIds();
+    if (!backlinkIds.isEmpty()) {
+        if (Utils::Gui::question(_mainWindow, tr("Note has backlinks"),
+                                 tr("The note <strong>%1</strong> is linked from %n other note(s). "
+                                    "Deleting it will leave those links broken. "
+                                    "Do you still want to remove it?",
+                                    "", backlinkIds.size())
+                                     .arg(_mainWindow->currentNote.getName()),
+                                 QStringLiteral("remove-note-with-backlinks")) !=
+            QMessageBox::Yes) {
+            return;
+        }
+    }
+
     if (Utils::Gui::question(
             _mainWindow, tr("Remove current note"),
             tr("Remove current note: <strong>%1</strong>?").arg(_mainWindow->currentNote.getName()),
@@ -132,6 +147,36 @@ void NoteOperationsManager::removeSelectedNotes() {
 
     if (noteCount == 0 && folderCount == 0) {
         return;
+    }
+
+    // Warn if any of the selected notes have backlinks pointing to them
+    if (noteCount > 0) {
+        int notesWithBacklinks = 0;
+        int totalBacklinks = 0;
+
+        for (QTreeWidgetItem *item : noteItems) {
+            const int id = item->data(0, Qt::UserRole).toInt();
+            const Note note = Note::fetch(id);
+            const QVector<int> backlinkIds = note.findBacklinkedNoteIds();
+            if (!backlinkIds.isEmpty()) {
+                notesWithBacklinks++;
+                totalBacklinks += backlinkIds.size();
+            }
+        }
+
+        if (notesWithBacklinks > 0) {
+            if (Utils::Gui::question(_mainWindow, tr("Notes have backlinks"),
+                                     tr("%n of the selected note(s) are linked from other notes "
+                                        "(%1 link(s) in total). "
+                                        "Deleting them will leave those links broken. "
+                                        "Do you still want to remove them?",
+                                        "", notesWithBacklinks)
+                                         .arg(totalBacklinks),
+                                     QStringLiteral("remove-notes-with-backlinks")) !=
+                QMessageBox::Yes) {
+                return;
+            }
+        }
     }
 
     // Build confirmation message based on what's selected
