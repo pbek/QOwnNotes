@@ -66,7 +66,7 @@ On Android you could also use any sync-tool like _Synchronize Ultimate_ or _Fold
 to sync your note files and use software like _neutriNotes_ or
 [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 
-On iOS [Notebooks](https://www.notebooksapp.com)
+On iOS [Notebooks](https://www.notebooksapp.com/ios)
 may also work well (syncing notes via WebDAV).
 
 ## Screenshot
