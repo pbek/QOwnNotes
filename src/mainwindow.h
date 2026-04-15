@@ -360,6 +360,8 @@ class MainWindow : public QMainWindow {
 
     void on_action_New_note_triggered();
 
+    void on_action_Rename_note_triggered();
+
     void onNotePreviewAnchorClicked(const QUrl &arg1);
 
     void on_actionCheck_for_updates_triggered();

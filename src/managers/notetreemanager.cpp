@@ -591,38 +591,45 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
             // Reload the note list to update the icon and sorting
             _mainWindow->loadNoteDirectoryList();
         } else if (selectedItem == renameAction) {
-            QTreeWidgetItem *item = _ui->noteTreeWidget->currentItem();
+            renameCurrentNote();
+        }
+    }
+}
 
-            if (Note::allowDifferentFileName()) {
-                if (Utils::Misc::isNoteListPreview()) {
-                    bool ok{};
-                    const QString name = QInputDialog::getText(
-                        _mainWindow, tr("Rename note"), tr("Name:"), QLineEdit::Normal,
-                        _mainWindow->currentNote.getName(), &ok);
+void NoteTreeManager::renameCurrentNote() {
+    QTreeWidgetItem *item = _ui->noteTreeWidget->currentItem();
+    if (item == nullptr || item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
+        return;
+    }
 
-                    if (ok && !name.isEmpty()) {
-                        item->setText(0, name);
-                        on_noteTreeWidget_itemChanged(item, 0);
-                    }
-                } else {
-                    _ui->noteTreeWidget->editItem(item);
-                }
-            } else {
-                QMessageBox msgBox(QMessageBox::Warning, tr("Note renaming not enabled!"),
-                                   tr("If you want to rename your note you have to enable "
-                                      "the option to allow the note filename to be "
-                                      "different from the headline."),
-                                   QMessageBox::NoButton, _mainWindow);
-                QPushButton *settingsButton =
-                    msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
-                msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
-                msgBox.setDefaultButton(settingsButton);
-                msgBox.exec();
+    if (Note::allowDifferentFileName()) {
+        if (Utils::Misc::isNoteListPreview()) {
+            bool ok{};
+            const QString name =
+                QInputDialog::getText(_mainWindow, tr("Rename note"), tr("Name:"),
+                                      QLineEdit::Normal, _mainWindow->currentNote.getName(), &ok);
 
-                if (msgBox.clickedButton() == settingsButton) {
-                    _mainWindow->openSettingsDialog(SettingsDialog::NoteFolderPage);
-                }
+            if (ok && !name.isEmpty()) {
+                item->setText(0, name);
+                on_noteTreeWidget_itemChanged(item, 0);
             }
+        } else {
+            _ui->noteTreeWidget->editItem(item);
+        }
+    } else {
+        QMessageBox msgBox(QMessageBox::Warning, tr("Note renaming not enabled!"),
+                           tr("If you want to rename your note you have to enable "
+                              "the option to allow the note filename to be "
+                              "different from the headline."),
+                           QMessageBox::NoButton, _mainWindow);
+        QPushButton *settingsButton =
+            msgBox.addButton(tr("Open &settings"), QMessageBox::AcceptRole);
+        msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+        msgBox.setDefaultButton(settingsButton);
+        msgBox.exec();
+
+        if (msgBox.clickedButton() == settingsButton) {
+            _mainWindow->openSettingsDialog(SettingsDialog::NoteFolderPage);
         }
     }
 }

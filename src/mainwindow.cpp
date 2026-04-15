@@ -2400,6 +2400,8 @@ void MainWindow::readSettings() {
         on_actionAllow_note_editing_triggered(isAllowNoteEditing);
     }
 
+    ui->action_Rename_note->setVisible(Note::allowDifferentFileName());
+
     // we want to trigger the event afterward so the settings of the note edits
     // are updated
     const bool centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
@@ -2618,6 +2620,8 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
     ui->actionShow_note_git_versions_external->setVisible(false);
 #endif
+
+    ui->action_Rename_note->setVisible(Note::allowDifferentFileName());
 
     // show or hide 'Find or create ...' search in Note Subfolders & Tags Panels
     ui->noteSubFolderLineEdit->setHidden(
@@ -4417,6 +4421,8 @@ void MainWindow::on_actionAbout_QOwnNotes_triggered() {
 void MainWindow::on_action_New_note_triggered() {
     _noteOperationsManager->on_action_New_note_triggered();
 }
+
+void MainWindow::on_action_Rename_note_triggered() { _noteTreeManager->renameCurrentNote(); }
 
 /**
  * Creates a new note

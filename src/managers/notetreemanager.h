@@ -41,6 +41,7 @@ class NoteTreeManager : public QObject {
     int getSelectedNotesCount() const;
     QVector<Note> selectedNotes();
     void openNotesContextMenu(const QPoint globalPos, bool hasNotes, bool hasFolders = false);
+    void renameCurrentNote();
 
    public slots:
     void on_noteTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
