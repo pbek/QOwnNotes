@@ -2400,8 +2400,6 @@ void MainWindow::readSettings() {
         on_actionAllow_note_editing_triggered(isAllowNoteEditing);
     }
 
-    ui->action_Rename_note->setVisible(Note::allowDifferentFileName());
-
     // we want to trigger the event afterward so the settings of the note edits
     // are updated
     const bool centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
