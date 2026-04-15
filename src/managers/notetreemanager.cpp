@@ -598,12 +598,21 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
 
 void NoteTreeManager::renameCurrentNote() {
     QTreeWidgetItem *item = _ui->noteTreeWidget->currentItem();
+
+    // Fallback to the current note if no tree item is selected.
+    if (item == nullptr && _mainWindow->currentNote.isFetched()) {
+        item = findNoteInNoteTreeWidget(_mainWindow->currentNote);
+    }
+
     if (item == nullptr || item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
         return;
     }
 
     if (Note::allowDifferentFileName()) {
-        if (Utils::Misc::isNoteListPreview()) {
+        const bool useInputDialog =
+            Utils::Misc::isNoteListPreview() || !_ui->notesListFrame->isVisible();
+
+        if (useInputDialog) {
             bool ok{};
             const QString name =
                 QInputDialog::getText(_mainWindow, tr("Rename note"), tr("Name:"),
