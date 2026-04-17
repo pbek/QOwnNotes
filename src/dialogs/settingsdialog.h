@@ -7,6 +7,7 @@
 #include "masterdialog.h"
 #include "widgets/settings/mcpserversettingswidget.h"
 #include "widgets/settings/notefoldersettingswidget.h"
+#include "widgets/settings/owncloudsettingswidget.h"
 #include "widgets/settings/panelssettingswidget.h"
 #include "widgets/settings/scriptingsettingswidget.h"
 
@@ -93,11 +94,7 @@ class SettingsDialog : public MasterDialog {
 
    private slots:
 
-    void on_connectButton_clicked();
-
     void on_buttonBox_clicked(QAbstractButton *button);
-
-    void on_ownCloudServerAppPageButton_clicked();
 
     void on_reinitializeDatabaseButton_clicked();
 
@@ -118,8 +115,6 @@ class SettingsDialog : public MasterDialog {
 
     void on_settingsStackedWidget_currentChanged(int index);
 
-    void on_toolbarIconSizeResetButton_clicked();
-
     void on_itemHeightResetButton_clicked();
 
     void on_applyToolbarButton_clicked();
@@ -137,8 +132,6 @@ class SettingsDialog : public MasterDialog {
     void noteNotificationNoneCheckBoxCheck();
 
     void needRestart();
-
-    void on_ownCloudSupportCheckBox_toggled();
 
     void on_interfaceStyleComboBox_currentTextChanged(const QString &arg1);
 
@@ -158,29 +151,13 @@ class SettingsDialog : public MasterDialog {
 
     void on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1);
 
-    void on_cloudConnectionComboBox_currentIndexChanged(int index);
-
-    void on_cloudConnectionAddButton_clicked();
-
-    void on_cloudConnectionRemoveButton_clicked();
-
-    void storeSelectedCloudConnection();
-
-    void on_ownCloudServerAppPasswordPageButton_clicked();
+    void onCloudConnectionsUpdated(const QList<CloudConnection> &connections, int selectedId);
 
     void on_languageSearchLineEdit_textChanged(const QString &arg1);
 
     void on_databaseIntegrityCheckButton_clicked();
 
-    void on_loginFlowButton_clicked();
-
-    void on_loginFlowCancelButton_clicked();
-
     void on_defaultNoteFileExtensionListWidget_itemSelectionChanged();
-
-    void on_appNextcloudDeckCheckBox_toggled(bool checked);
-
-    void onSettingsConnectionTestFinished();
 
     void on_showStatusBarNotePathCheckBox_toggled(bool checked);
 
@@ -190,37 +167,20 @@ class SettingsDialog : public MasterDialog {
 
    private:
     Ui::SettingsDialog *ui;
-    bool appIsValid;
-    QString appVersion;
-    QString serverVersion;
-    QString notesPathExistsText;
-    QString connectionErrorMessage;
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
     QButtonGroup *_noteNotificationButtonGroup;
     QCheckBox *_noteNotificationNoneCheckBox;
-    CloudConnection _selectedCloudConnection;
-    int _loginFlowPollCount = 0;
     QHash<int, bool> _pageInitialized;
-    QString _installInfoTextLabel1Html;
-    QString _installInfoTextLabel2Html;
-    QString _installInfoTextLabel3Html;
     bool _initialDarkMode = false;
     bool _initialDarkModeColors = false;
     bool _initialDarkModeTrayIcon = false;
     bool _initialDarkModeIconTheme = false;
     QString _initialSchemaKey;
-    bool _connectionTestInProgress = false;
     QList<QWidget *> _searchMatchedWidgets;
     QHash<QWidget *, QString> _searchMatchedWidgetOriginalTexts;
 
     void storeSettings();
-
-    void startConnectionTest();
-
-    void setConnectionTestInProgress(bool inProgress);
-
-    void cancelConnectionTest();
 
     static void selectListWidgetValue(QListWidget *listWidget, const QString &value);
 
@@ -253,15 +213,11 @@ class SettingsDialog : public MasterDialog {
 
     void replaceOwnCloudText() const;
 
-    bool connectionTestCanBeStarted() const;
-
     void loadInterfaceStyleComboBox() const;
 
     void initSearchEngineComboBox() const;
 
     QKeySequenceWidget *findKeySequenceWidget(const QString &objectName);
-
-    void storeOwncloudDebugData() const;
 
     void initCloudConnectionComboBox(int selectedId = -1);
 
