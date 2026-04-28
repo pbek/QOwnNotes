@@ -166,6 +166,52 @@ void MarkdownLspClient::didOpen(const QString &uri, const QString &languageId, c
     sendMessage(obj);
 }
 
+MarkdownLspClient::TextDocumentSyncKind MarkdownLspClient::serverSyncKind() const {
+    return _serverSyncKind;
+}
+
+void MarkdownLspClient::didChangeIncremental(const QString &uri,
+                                             const QVector<IncrementalChange> &changes,
+                                             int version) {
+    if (!_initialized || changes.isEmpty()) {
+        return;
+    }
+
+    QJsonObject doc;
+    doc.insert(QStringLiteral("uri"), uri);
+    doc.insert(QStringLiteral("version"), version);
+
+    QJsonArray changesArray;
+    for (const IncrementalChange &change : changes) {
+        QJsonObject start;
+        start.insert(QStringLiteral("line"), change.startLine);
+        start.insert(QStringLiteral("character"), change.startCharacter);
+
+        QJsonObject end;
+        end.insert(QStringLiteral("line"), change.endLine);
+        end.insert(QStringLiteral("character"), change.endCharacter);
+
+        QJsonObject range;
+        range.insert(QStringLiteral("start"), start);
+        range.insert(QStringLiteral("end"), end);
+
+        QJsonObject changeObj;
+        changeObj.insert(QStringLiteral("range"), range);
+        changeObj.insert(QStringLiteral("text"), change.text);
+        changesArray.append(changeObj);
+    }
+
+    QJsonObject params;
+    params.insert(QStringLiteral("textDocument"), doc);
+    params.insert(QStringLiteral("contentChanges"), changesArray);
+
+    QJsonObject obj;
+    obj.insert(QStringLiteral("jsonrpc"), QStringLiteral("2.0"));
+    obj.insert(QStringLiteral("method"), QStringLiteral("textDocument/didChange"));
+    obj.insert(QStringLiteral("params"), params);
+    sendMessage(obj);
+}
+
 void MarkdownLspClient::didChange(const QString &uri, const QString &text, int version) {
     if (!_initialized) {
         _pendingDocument.uri = uri;
@@ -498,6 +544,34 @@ void MarkdownLspClient::handleResponse(const QJsonObject &object) {
     if (id == _initializeRequestId) {
         _initialized = true;
         _initializeRequestId = -1;
+
+        // Extract textDocumentSync capability from the server response.
+        // The sync kind can appear as a bare integer or inside an options object.
+        _serverSyncKind = SyncFull;
+        const QJsonObject result = object.value(QStringLiteral("result")).toObject();
+        const QJsonObject capabilities = result.value(QStringLiteral("capabilities")).toObject();
+        const QJsonValue syncValue = capabilities.value(QStringLiteral("textDocumentSync"));
+        if (syncValue.isDouble()) {
+            const int kind = syncValue.toInt(1);
+            if (kind == 2) {
+                _serverSyncKind = SyncIncremental;
+            } else if (kind == 0) {
+                _serverSyncKind = SyncNone;
+            }
+        } else if (syncValue.isObject()) {
+            const QJsonObject syncObj = syncValue.toObject();
+            const int kind = syncObj.value(QStringLiteral("change")).toInt(1);
+            if (kind == 2) {
+                _serverSyncKind = SyncIncremental;
+            } else if (kind == 0) {
+                _serverSyncKind = SyncNone;
+            }
+        }
+
+        if (_verboseLogging) {
+            qDebug() << "Markdown LSP server sync kind:" << static_cast<int>(_serverSyncKind);
+        }
+
         emit serverInitialized();
         sendInitializedNotification();
         flushPendingDocument();

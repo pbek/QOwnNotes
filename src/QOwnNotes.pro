@@ -187,6 +187,7 @@ SOURCES += main.cpp\
     services/webappclientservice.cpp \
      services/openaiservice.cpp \
     services/markdownlspclient.cpp \
+    services/markdownlspdocumenttracker.cpp \
     services/mcpservice.cpp \
     services/settingsservice.cpp \
     dialogs/masterdialog.cpp \
@@ -351,6 +352,7 @@ HEADERS  += mainwindow.h \
     services/cryptoservice.h \
      services/openaiservice.h \
     services/markdownlspclient.h \
+    services/markdownlspdocumenttracker.h \
     services/mcpservice.h \
     services/settingsservice.h \
     dialogs/masterdialog.h \

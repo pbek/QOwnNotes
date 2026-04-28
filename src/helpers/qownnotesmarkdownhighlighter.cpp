@@ -712,16 +712,49 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdownLsp(const QString &text) {
 /**
  * Applies a wave underline to a character range in the current block, merging
  * with the existing per-character format to preserve syntax highlighting colors.
+ *
+ * Batches runs of characters that share the same base format into single
+ * setFormat() calls so the text layout sees O(runs) format ranges instead
+ * of O(characters), which matters for long diagnostic ranges.
  */
 void QOwnNotesMarkdownHighlighter::setMarkdownLspUnderline(int start, int count,
                                                            const QColor &color,
                                                            const QString &toolTip) {
-    for (int i = start; i < start + count; ++i) {
-        QTextCharFormat format = QSyntaxHighlighter::format(i);
-        format.setFontUnderline(true);
-        format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
-        format.setUnderlineColor(color);
-        format.setToolTip(toolTip);
-        setFormat(i, 1, format);
+    if (count <= 0) {
+        return;
     }
+
+    const int end = start + count;
+    int runStart = start;
+
+    // Read the base format at the first character and build the merged format
+    QTextCharFormat baseFormat = QSyntaxHighlighter::format(runStart);
+    QTextCharFormat merged = baseFormat;
+    merged.setFontUnderline(true);
+    merged.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
+    merged.setUnderlineColor(color);
+    merged.setToolTip(toolTip);
+
+    for (int i = start + 1; i < end; ++i) {
+        const QTextCharFormat fmt = QSyntaxHighlighter::format(i);
+        if (fmt == baseFormat) {
+            // Same base format — extend the current run
+            continue;
+        }
+
+        // Flush the current run
+        setFormat(runStart, i - runStart, merged);
+
+        // Start a new run with the new base format
+        runStart = i;
+        baseFormat = fmt;
+        merged = baseFormat;
+        merged.setFontUnderline(true);
+        merged.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
+        merged.setUnderlineColor(color);
+        merged.setToolTip(toolTip);
+    }
+
+    // Flush the last run
+    setFormat(runStart, end - runStart, merged);
 }

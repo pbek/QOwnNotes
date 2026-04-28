@@ -7,6 +7,7 @@
 #include "helpers/qownnotesmarkdownhighlighter.h"
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "services/markdownlspclient.h"
+class MarkdownLspDocumentTracker;
 class MainWindow;
 class QDragEnterEvent;
 class QDragMoveEvent;
@@ -248,6 +249,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     bool _isInsertingAiSuggestion = false;
 
     MarkdownLspClient *_markdownLspClient = nullptr;
+    MarkdownLspDocumentTracker *_markdownLspTracker = nullptr;
     QTimer *_markdownLspChangeTimer = nullptr;
     QString _markdownLspUri;
     QString _markdownLspCommand;

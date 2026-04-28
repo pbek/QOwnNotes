@@ -10,10 +10,15 @@
 #include <QStringList>
 #include <QVector>
 
+class MarkdownLspDocumentTracker;
+
 class MarkdownLspClient : public QObject {
     Q_OBJECT
 
    public:
+    /// LSP TextDocumentSyncKind advertised by the server.
+    enum TextDocumentSyncKind { SyncNone = 0, SyncFull = 1, SyncIncremental = 2 };
+
     struct DiagnosticRange {
         int startLine = 0;
         int startCharacter = 0;
@@ -41,6 +46,15 @@ class MarkdownLspClient : public QObject {
         QString message;
     };
 
+    /// Incremental content change used by MarkdownLspDocumentTracker.
+    struct IncrementalChange {
+        int startLine = 0;
+        int startCharacter = 0;
+        int endLine = 0;
+        int endCharacter = 0;
+        QString text;
+    };
+
     explicit MarkdownLspClient(QObject *parent = nullptr);
     ~MarkdownLspClient() override;
 
@@ -50,11 +64,16 @@ class MarkdownLspClient : public QObject {
     void shutdown();
     bool isRunning() const;
 
+    /// Returns the sync kind advertised by the server after initialization.
+    TextDocumentSyncKind serverSyncKind() const;
+
     void initialize(const QString &rootPath, const QString &clientName,
                     const QString &clientVersion);
 
     void didOpen(const QString &uri, const QString &languageId, const QString &text, int version);
     void didChange(const QString &uri, const QString &text, int version);
+    void didChangeIncremental(const QString &uri, const QVector<IncrementalChange> &changes,
+                              int version);
     void didClose(const QString &uri);
 
     int requestCompletion(const QString &uri, int line, int character);
@@ -104,6 +123,7 @@ class MarkdownLspClient : public QObject {
     int _nextRequestId = 1;
     int _initializeRequestId = -1;
     bool _initialized = false;
+    TextDocumentSyncKind _serverSyncKind = SyncFull;
     PendingDocument _pendingDocument;
     QSet<int> _completionRequestIds;
     QHash<int, QString> _codeActionUriByRequest;

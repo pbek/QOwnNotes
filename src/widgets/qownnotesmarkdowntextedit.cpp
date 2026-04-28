@@ -61,6 +61,7 @@
 #include "services/harperchecker.h"
 #endif
 #include "services/markdownlspclient.h"
+#include "services/markdownlspdocumenttracker.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
 #include "services/owncloudservice.h"
@@ -430,6 +431,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         connect(_highlighter, &QOwnNotesMarkdownHighlighter::highlightingFinished, this,
                 &QOwnNotesMarkdownTextEdit::scheduleRestoreCurrentFoldedHeadingState);
 
+        _markdownLspTracker = new MarkdownLspDocumentTracker(this);
+
         setStyles();
         updateSettings();
     }
@@ -493,10 +496,6 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
             }
             clearAiAutocompleteSuggestion();
             _aiAutocompleteTimer->start();
-        }
-
-        if (_markdownLspEnabled && !_markdownLspApplyingEdits) {
-            scheduleMarkdownLspChange();
         }
     });
 
@@ -3466,7 +3465,7 @@ QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {
 
 void QOwnNotesMarkdownTextEdit::setMarkdownLspDocumentPath(const QString &filePath,
                                                            const QString &text) {
-    if (!_markdownLspEnabled) {
+    if (!_markdownLspEnabled || !_markdownLspTracker) {
         return;
     }
 
@@ -3479,22 +3478,22 @@ void QOwnNotesMarkdownTextEdit::setMarkdownLspDocumentPath(const QString &filePa
         return;
     }
 
-    if (_markdownLspClient && !_markdownLspUri.isEmpty()) {
-        _markdownLspClient->didClose(_markdownLspUri);
+    // Close previous document via the tracker
+    if (_markdownLspTracker->isOpen()) {
+        _markdownLspTracker->close();
     }
 
     _markdownLspUri = uri;
     _markdownLspVersion = 1;
 
     if (_markdownLspClient) {
-        _markdownLspClient->didOpen(_markdownLspUri, QStringLiteral("markdown"), text,
-                                    _markdownLspVersion);
+        _markdownLspTracker->open(_markdownLspUri, text);
     }
 }
 
 void QOwnNotesMarkdownTextEdit::closeMarkdownLspDocument() {
-    if (_markdownLspClient && !_markdownLspUri.isEmpty()) {
-        _markdownLspClient->didClose(_markdownLspUri);
+    if (_markdownLspTracker && _markdownLspTracker->isOpen()) {
+        _markdownLspTracker->close();
     }
 
     _markdownLspUri.clear();
@@ -3545,11 +3544,27 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
                         qWarning() << "Markdown LSP:" << message.trimmed();
                     }
                 });
-        connect(_markdownLspClient, &MarkdownLspClient::serverInitialized, this, []() {
+        connect(_markdownLspClient, &MarkdownLspClient::serverInitialized, this, [this]() {
             if (auto *mw = MainWindow::instance()) {
                 mw->showStatusBarMessage(tr("Markdown LSP server connected"), 3000);
             }
+
+            // Configure the tracker's sync kind based on the server's capability
+            if (_markdownLspTracker && _markdownLspClient) {
+                const auto kind = _markdownLspClient->serverSyncKind();
+                if (kind == MarkdownLspClient::SyncIncremental) {
+                    _markdownLspTracker->setSyncKind(MarkdownLspDocumentTracker::SyncIncremental);
+                } else {
+                    _markdownLspTracker->setSyncKind(MarkdownLspDocumentTracker::SyncFull);
+                }
+            }
         });
+
+        // Wire the tracker to the client and document
+        if (_markdownLspTracker) {
+            _markdownLspTracker->setClient(_markdownLspClient);
+            _markdownLspTracker->setDocument(document());
+        }
     }
 
     QString reopenUri;
@@ -3582,15 +3597,13 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {
     if (!reopenUri.isEmpty()) {
         _markdownLspUri = reopenUri;
         _markdownLspVersion = 1;
-        _markdownLspClient->didOpen(_markdownLspUri, QStringLiteral("markdown"), reopenText,
-                                    _markdownLspVersion);
+        _markdownLspTracker->open(_markdownLspUri, reopenText);
         return;
     }
 
     if (needsStart && !_markdownLspUri.isEmpty()) {
         _markdownLspVersion = 1;
-        _markdownLspClient->didOpen(_markdownLspUri, QStringLiteral("markdown"), toPlainText(),
-                                    _markdownLspVersion);
+        _markdownLspTracker->open(_markdownLspUri, toPlainText());
     }
 }
 
@@ -3755,6 +3768,11 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspTextEdits(
 
     _markdownLspApplyingEdits = true;
 
+    // Suppress the tracker so it doesn't record the programmatic edits
+    if (_markdownLspTracker) {
+        _markdownLspTracker->setSuppressed(true);
+    }
+
     struct ResolvedEdit {
         int start = 0;
         int end = 0;
@@ -3811,12 +3829,14 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspTextEdits(
 
     _markdownLspApplyingEdits = false;
 
-    if (_markdownLspEnabled && !_markdownLspApplyingEdits) {
+    if (_markdownLspTracker) {
+        _markdownLspTracker->setSuppressed(false);
+    }
+
+    if (_markdownLspEnabled && _markdownLspTracker) {
         // Quick-fixes invalidate the current diagnostics immediately, so refresh
         // the LSP state right away instead of waiting for the debounce timer.
-        _markdownLspPendingText = toPlainText();
-        _markdownLspChangeTimer->stop();
-        sendMarkdownLspChange();
+        _markdownLspTracker->flushFullSync();
     }
 }
 

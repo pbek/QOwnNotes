@@ -393,6 +393,8 @@ set(SOURCE_FILES
     services/harpertypes.h
     services/markdownlspclient.cpp
     services/markdownlspclient.h
+    services/markdownlspdocumenttracker.cpp
+    services/markdownlspdocumenttracker.h
     services/settingsservice.cpp
     services/settingsservice.h
     libraries/piwiktracker/piwiktracker.h

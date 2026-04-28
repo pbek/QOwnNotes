@@ -1,5 +1,25 @@
 # QOwnNotes Changelog
 
+## 26.4.25
+
+- Major performance improvement for the Markdown LSP integration on large notes
+  (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
+  - Added a new `MarkdownLspDocumentTracker` class that uses Qt's
+    `QTextDocument::contentsChange` signal to track edits incrementally instead
+    of calling `toPlainText()` on every keystroke; the per-keystroke cost drops
+    from O(n) (full-document copy) to O(log n + delta)
+  - The client now reads the server's `textDocumentSync` capability from the
+    initialize response and sends **incremental** `didChange` payloads
+    (`TextDocumentSyncKind=2`) when the server supports it (e.g. `marksman`),
+    falling back to full-text sync for servers like `rumdl`
+  - Optimized the LSP diagnostic wave-underline painter in the highlighter to
+    batch contiguous characters with the same base format into single
+    `setFormat()` calls, reducing format-range fragmentation from O(characters)
+    to O(format-runs)
+  - When the Markdown LSP feature is disabled, **zero additional work** is
+    performed on the text-change hot path — no `toPlainText()`, no timer
+    restarts, no signal connections fire
+
 ## 26.4.24
 
 - Fixed a URI percent-encoding mismatch that prevented Markdown LSP diagnostics
