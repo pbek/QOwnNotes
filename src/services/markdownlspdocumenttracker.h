@@ -2,7 +2,6 @@
 
 #include <QObject>
 #include <QString>
-#include <QTextBlock>
 #include <QTimer>
 #include <QVector>
 
@@ -59,13 +58,9 @@ class MarkdownLspDocumentTracker : public QObject {
    private:
     using IncrementalChange = MarkdownLspClient::IncrementalChange;
 
-    /// Convert absolute position to (line, character) using the current document.
-    void positionToLineCharacter(int position, int &line, int &character) const;
-
     /// Maintain a line-lengths snapshot so we can resolve old end positions.
     void rebuildLineLengths();
     void positionToLineCharacterFromSnapshot(int position, int &line, int &character) const;
-    void applyDeltaToLineLengths(int position, int charsRemoved, int charsAdded);
 
     MarkdownLspClient *_client = nullptr;
     QTextDocument *_document = nullptr;

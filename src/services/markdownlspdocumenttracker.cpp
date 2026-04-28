@@ -152,7 +152,7 @@ void MarkdownLspDocumentTracker::onContentsChange(int position, int charsRemoved
     }
 
     // Update the line-lengths snapshot to reflect the new document state
-    applyDeltaToLineLengths(position, charsRemoved, charsAdded);
+    rebuildLineLengths();
 
     _debounceTimer.start();
 }
@@ -185,19 +185,6 @@ void MarkdownLspDocumentTracker::onDebounceTimeout() {
 
 // ─── position conversion helpers ──────────────────────────────────────
 
-void MarkdownLspDocumentTracker::positionToLineCharacter(int position, int &line,
-                                                         int &character) const {
-    if (!_document) {
-        line = 0;
-        character = 0;
-        return;
-    }
-
-    const QTextBlock block = _document->findBlock(position);
-    line = block.blockNumber();
-    character = position - block.position();
-}
-
 void MarkdownLspDocumentTracker::positionToLineCharacterFromSnapshot(int position, int &line,
                                                                      int &character) const {
     int offset = 0;
@@ -228,12 +215,4 @@ void MarkdownLspDocumentTracker::rebuildLineLengths() {
         _lineLengths.append(block.length());
         block = block.next();
     }
-}
-
-void MarkdownLspDocumentTracker::applyDeltaToLineLengths(int position, int charsRemoved,
-                                                         int charsAdded) {
-    // After each edit, rebuild from the document. This is O(blocks) but
-    // only happens once per edit, not once per character, and iterating
-    // QTextBlock is very cheap (no string copies).
-    rebuildLineLengths();
 }
