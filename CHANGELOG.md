@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## Next
+
+- A PPA for Ubuntu 26.10 (Stonking Stingray) was added
+  - See [Install on Ubuntu](https://www.qownnotes.org/installation/ubuntu.html)
+    for more information on how to install the PPA
+
 ## 26.4.25
 
 - Updated **Toggle checkbox(es)** in the **note text edit** context menu so it now
