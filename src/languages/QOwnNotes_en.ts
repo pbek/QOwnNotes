@@ -1324,56 +1324,26 @@
     </message>
     <message>
         <location filename="../widgets/settings/editorsettingswidget.ui" line="265"/>
-        <source>Markdown language server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="271"/>
-        <source>Enable Markdown language server (LSP)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="278"/>
-        <source>Command:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="298"/>
-        <source>Arguments:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="308"/>
-        <source>Optional arguments separated by spaces.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="311"/>
-        <source>Optional arguments</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="324"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="327"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="268"/>
         <source>Insert current time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="333"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="274"/>
         <source>Time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="340"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="281"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="350"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6464,13 +6434,176 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>MarkdownLspClient</name>
     <message>
-        <location filename="../services/markdownlspclient.cpp" line="33"/>
+        <location filename="../services/markdownlspclient.cpp" line="49"/>
         <source>Markdown LSP server command is empty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/markdownlspclient.cpp" line="47"/>
+        <location filename="../services/markdownlspclient.cpp" line="63"/>
         <source>Failed to start Markdown LSP server: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MarkdownLspSettingsWidget</name>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="17"/>
+        <source>Markdown language server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="23"/>
+        <source>Enable Markdown language server (LSP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="30"/>
+        <source>Command:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="50"/>
+        <source>Auto-detect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="57"/>
+        <source>Arguments:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="67"/>
+        <source>Optional arguments separated by spaces.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="70"/>
+        <source>Optional arguments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="80"/>
+        <source>Log all LSP server output (stderr) to the debug log. Useful for troubleshooting LSP server issues.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="83"/>
+        <source>Show all LSP server log output in debug log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="90"/>
+        <source>Ignored:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="103"/>
+        <source>Reset ignored rules</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="126"/>
+        <source>Status:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="136"/>
+        <source>Not tested yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.ui" line="146"/>
+        <source>Test Connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="117"/>
+        <source>No Markdown LSP server configured.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="123"/>
+        <source>Command: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="125"/>
+        <source> | Arguments: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="128"/>
+        <source> | Currently disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="146"/>
+        <source>Configured %1 at %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="148"/>
+        <source> with arguments: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="152"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="159"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="170"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="175"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="179"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="189"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="239"/>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="248"/>
+        <source>Markdown LSP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="157"/>
+        <source>Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="171"/>
+        <source>There are no ignored rules to reset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="176"/>
+        <source>Reset %n ignored Markdown LSP rule(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="180"/>
+        <source>All ignored Markdown LSP rules have been reset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="187"/>
+        <source>Please enter a Markdown LSP server command first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="213"/>
+        <source>Timed out waiting for the Markdown LSP server to initialize.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="219"/>
+        <source>Failed to start Markdown LSP server: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="237"/>
+        <source>Markdown LSP connection successful: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/markdownlspsettingswidget.cpp" line="244"/>
+        <source>Markdown LSP connection failed.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9070,100 +9203,100 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="619"/>
+        <location filename="../utils/gui.cpp" line="625"/>
         <source>Don&apos;t ask again!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="620"/>
+        <location filename="../utils/gui.cpp" line="626"/>
         <source>Don&apos;t show again!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1273"/>
+        <location filename="../utils/gui.cpp" line="1279"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1280"/>
+        <location filename="../utils/gui.cpp" line="1286"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="99"/>
-        <location filename="../utils/gui.cpp" line="1312"/>
-        <location filename="../utils/gui.cpp" line="1390"/>
+        <location filename="../utils/gui.cpp" line="105"/>
+        <location filename="../utils/gui.cpp" line="1318"/>
+        <location filename="../utils/gui.cpp" line="1396"/>
         <source>Dark mode detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1313"/>
+        <location filename="../utils/gui.cpp" line="1319"/>
         <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1322"/>
+        <location filename="../utils/gui.cpp" line="1328"/>
         <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="104"/>
-        <location filename="../utils/gui.cpp" line="1321"/>
-        <location filename="../utils/gui.cpp" line="1399"/>
+        <location filename="../utils/gui.cpp" line="110"/>
+        <location filename="../utils/gui.cpp" line="1327"/>
+        <location filename="../utils/gui.cpp" line="1405"/>
         <source>Light mode detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="78"/>
+        <location filename="../utils/gui.cpp" line="84"/>
         <source>Your system switched to dark mode. Do you also want to turn on dark mode in QOwnNotes?
 
 Updating the interface takes a short while.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="83"/>
+        <location filename="../utils/gui.cpp" line="89"/>
         <source>Your system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="88"/>
+        <location filename="../utils/gui.cpp" line="94"/>
         <source>Your system switched to light mode. Do you also want to turn off dark mode in QOwnNotes?
 
 Updating the interface takes a short while.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="93"/>
+        <location filename="../utils/gui.cpp" line="99"/>
         <source>Your system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1233"/>
+        <location filename="../utils/gui.cpp" line="1239"/>
         <source>Double-click to unpin note from tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1234"/>
+        <location filename="../utils/gui.cpp" line="1240"/>
         <source>Double-click to pin note to tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1391"/>
+        <location filename="../utils/gui.cpp" line="1397"/>
         <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1400"/>
+        <location filename="../utils/gui.cpp" line="1406"/>
         <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1503"/>
+        <location filename="../utils/gui.cpp" line="1509"/>
         <source>Panel disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1504"/>
+        <location filename="../utils/gui.cpp" line="1510"/>
         <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9372,208 +9505,213 @@ Updating the interface takes a short while.</source>
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="613"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
         <source>Increased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="616"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="620"/>
         <source>Decreased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1172"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1176"/>
         <source>An url was opened at the current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1411"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1415"/>
         <source>No equation was found in front of the cursor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1432"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1436"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2460"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2469"/>
         <source>&amp;Link selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2460"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2469"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2467"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2476"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2470"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2479"/>
         <source>Insert block &amp;quote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2477"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2486"/>
         <source>List operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2488"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2497"/>
         <source>Markdown operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2503"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2512"/>
         <source>Copy code block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2530"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2539"/>
         <source>Markdown LSP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2531"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2540"/>
         <source>Format document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2536"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2545"/>
         <source>Format selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2541"/>
-        <source>Code actions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2551"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2555"/>
         <source>Add table column left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2556"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2560"/>
         <source>Add table column right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2565"/>
         <source>Add table row above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2566"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2570"/>
         <source>Add table row below</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2575"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2579"/>
         <source>Print</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2582"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2586"/>
         <source>Print selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2594"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2598"/>
         <source>Print selected text (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2610"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2614"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2620"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2624"/>
         <source>Export selected text as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2632"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2636"/>
         <source>Export selected text as PDF (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2652"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2656"/>
         <source>Select</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2666"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2670"/>
         <source>Custom actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2767"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2771"/>
         <source>No suggestions for %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2786"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2790"/>
         <source>Ignore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2788"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2792"/>
         <source>Add to Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2703"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2750"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2798"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2707"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2754"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2802"/>
         <source>Spelling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2827"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2881"/>
+        <source>Ignore this rule globally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2882"/>
+        <source>Ignore rule %1 globally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2916"/>
         <source>LanguageTool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2840"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2936"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2929"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3025"/>
         <source>No suggestions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2853"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2942"/>
         <source>More info...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2858"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2948"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2947"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3037"/>
         <source>Ignore this rule</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2868"/>
         <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2957"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3046"/>
         <source>Ignore word &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2924"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3013"/>
         <source>Harper</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3470"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3567"/>
         <source>Markdown LSP server connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3524"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3661"/>
         <source>Filter completions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10217,27 +10355,32 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="288"/>
-        <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="396"/>
-        <source>Trash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="599"/>
-        <source>Main window shortcuts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="361"/>
-        <source>General</source>
+        <location filename="../dialogs/settingsdialog.ui" line="250"/>
+        <source>Markdown LSP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="300"/>
+        <source>Shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="408"/>
+        <source>Trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="611"/>
+        <source>Main window shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="373"/>
+        <source>General</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="312"/>
         <source>Scripting</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10257,27 +10400,27 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="251"/>
+        <location filename="../dialogs/settingsdialog.ui" line="263"/>
         <source>Panels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="275"/>
+        <location filename="../dialogs/settingsdialog.ui" line="287"/>
         <source>Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="372"/>
+        <location filename="../dialogs/settingsdialog.ui" line="384"/>
         <source>Portable mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="384"/>
+        <location filename="../dialogs/settingsdialog.ui" line="396"/>
         <source>Git versioning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="432"/>
+        <location filename="../dialogs/settingsdialog.ui" line="444"/>
         <source>Debug options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10292,57 +10435,57 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="360"/>
         <source>MCP server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="918"/>
+        <location filename="../dialogs/settingsdialog.ui" line="930"/>
         <source>Layout preset selector</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="924"/>
+        <location filename="../dialogs/settingsdialog.ui" line="936"/>
         <source>You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="937"/>
+        <location filename="../dialogs/settingsdialog.ui" line="949"/>
         <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="312"/>
+        <location filename="../dialogs/settingsdialog.ui" line="324"/>
         <source>Browser extension / command snippets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="324"/>
+        <location filename="../dialogs/settingsdialog.ui" line="336"/>
         <source>Web application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="336"/>
+        <location filename="../dialogs/settingsdialog.ui" line="348"/>
         <source>AI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="421"/>
         <source>Experimental</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="631"/>
+        <location filename="../dialogs/settingsdialog.ui" line="643"/>
         <source>Action name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="636"/>
+        <location filename="../dialogs/settingsdialog.ui" line="648"/>
         <source>Local shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="641"/>
+        <location filename="../dialogs/settingsdialog.ui" line="653"/>
         <source>Global shortcut</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10352,130 +10495,130 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1021"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1033"/>
         <source>AI autocomplete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1027"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1039"/>
         <source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1030"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1042"/>
         <source>Enable AI autocomplete in note editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="263"/>
+        <location filename="../dialogs/settingsdialog.ui" line="275"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="794"/>
+        <location filename="../dialogs/settingsdialog.ui" line="806"/>
         <source>Apply toolbar configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="808"/>
+        <location filename="../dialogs/settingsdialog.ui" line="820"/>
         <source>Reset toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="629"/>
         <source>Search for shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="421"/>
+        <location filename="../dialogs/settingsdialog.ui" line="433"/>
         <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="630"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="635"/>
         <source>Shortcut already assigned</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="514"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="554"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="547"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="587"/>
         <source>Undefined shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="517"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="557"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="550"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="590"/>
         <source>Assign a new shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="517"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="558"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="550"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="591"/>
         <source>Reset to default shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="533"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="566"/>
         <source>Clear shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="631"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="636"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1265"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1323"/>
         <source>Reset toolbars and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1266"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1324"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="259"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="261"/>
         <source>enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="259"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="261"/>
         <source>disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="262"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="264"/>
         <source>Portable mode is currently:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="264"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="266"/>
         <source>In portable mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="265"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="267"/>
         <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="268"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="270"/>
         <source>the settings will be stored in an ini file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="269"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="271"/>
         <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="279"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="281"/>
         <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="285"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="287"/>
         <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
         <translation type="unfinished"></translation>
     </message>
