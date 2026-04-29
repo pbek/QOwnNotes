@@ -18,6 +18,7 @@ class TestUtilsMisc : public QObject {
     void testHtmlToMarkdownTables();
     void testHtmlToMarkdownTableSpecialChars();
     void testParseTaskList();
+    void testToggleCheckboxesDoesNotCreateCheckboxListItems();
     void testUnescapeHtml();
     void testHtmlSpecialChars();
     void testToHumanReadableByteSize();

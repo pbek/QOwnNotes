@@ -2,6 +2,7 @@
 
 #include <QTest>
 
+#include "utils/listutils.h"
 #include "utils/misc.h"
 
 using namespace Utils::Misc;
@@ -204,6 +205,13 @@ void TestUtilsMisc::testParseTaskList() {
     const QString &r4 = parseTaskList(t4, false);
     expec = listTag + " &#9744; task 4</li>";
     QVERIFY(r4 == expec);
+}
+
+void TestUtilsMisc::testToggleCheckboxesDoesNotCreateCheckboxListItems() {
+    const QString input = QStringLiteral("- item\nplain line\n1. ordered item\n* [x] done");
+    const QString expected = QStringLiteral("- item\nplain line\n1. ordered item\n* [-] done");
+
+    QCOMPARE(Utils::ListUtils::toggleCheckboxes(input), expected);
 }
 
 void TestUtilsMisc::testUnescapeHtml() {

@@ -185,11 +185,6 @@ QString Utils::ListUtils::toggleCheckboxes(const QString &text) {
                     break;
             }
             line = data.indentation + checkboxPrefix(data.marker, nextState) + data.content;
-        } else if (data.isList) {
-            line = data.indentation + checkboxPrefix(data.marker, QLatin1Char(' ')) + data.content;
-        } else {
-            line = data.indentation + checkboxPrefix(QStringLiteral("-"), QLatin1Char(' ')) +
-                   data.content;
         }
     }
 

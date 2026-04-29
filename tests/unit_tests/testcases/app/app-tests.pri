@@ -21,6 +21,7 @@ HEADERS  += \
     $$APP_SRC_DIR/api/scriptapi.h \
     $$APP_SRC_DIR/services/scriptingservice.h \
     $$APP_SRC_DIR/utils/misc.h \
+    $$APP_SRC_DIR/utils/listutils.h \
     $$APP_SRC_DIR/utils/gui.h \
     $$APP_SRC_DIR/utils/schema.h \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
@@ -77,6 +78,7 @@ SOURCES += \
     $$APP_SRC_DIR/api/scriptapi.cpp \
     $$APP_SRC_DIR/services/scriptingservice.cpp \
     $$APP_SRC_DIR/utils/misc.cpp \
+    $$APP_SRC_DIR/utils/listutils.cpp \
     $$APP_SRC_DIR/utils/gui.cpp \
     $$APP_SRC_DIR/utils/schema.cpp \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \

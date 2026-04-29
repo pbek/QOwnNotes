@@ -2,6 +2,9 @@
 
 ## 26.4.25
 
+- Updated **Toggle checkbox(es)** in the **note text edit** context menu so it now
+  only toggles existing checkbox list items and no longer turns plain selected lines
+  or regular list items into checkbox list items (for [#3524](https://github.com/pbek/QOwnNotes/issues/3524))
 - Major performance improvement for the Markdown LSP integration on large notes
   (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
   - Added a new `MarkdownLspDocumentTracker` class that uses Qt's
