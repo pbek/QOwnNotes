@@ -83,6 +83,7 @@ const editorNavItems = [
   "editor/spellchecking",
   "editor/languagetool",
   "editor/harper",
+  "editor/markdownlsp",
   "editor/ai",
   "editor/time-formats",
 ];
