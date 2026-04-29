@@ -84,18 +84,54 @@
         </property>
         </widget>
       </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="markdownLspStatusTextLabel">
-        <property name="text">
-         <string>Status:</string>
+       <item row="4" column="0">
+        <widget class="QLabel" name="markdownLspIgnoredLabel">
+         <property name="text">
+          <string>Ignored:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QWidget" name="markdownLspIgnoredWidget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_markdownLspIgnored">
+          <item>
+           <widget class="QPushButton" name="markdownLspResetIgnoredRulesButton">
+            <property name="text">
+             <string>Reset ignored rules</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_markdownLspIgnored">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="markdownLspStatusTextLabel">
+         <property name="text">
+          <string>Status:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
-       <widget class="QLabel" name="markdownLspStatusLabel">
+       <item row="5" column="1">
+        <widget class="QLabel" name="markdownLspStatusLabel">
         <property name="text">
          <string>Not tested yet.</string>
         </property>
@@ -104,8 +140,8 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="2">
-       <widget class="QPushButton" name="markdownLspTestConnectionButton">
+       <item row="5" column="2">
+        <widget class="QPushButton" name="markdownLspTestConnectionButton">
         <property name="text">
          <string>Test Connection</string>
         </property>

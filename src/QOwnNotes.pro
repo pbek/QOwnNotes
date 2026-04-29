@@ -176,6 +176,7 @@ SOURCES += main.cpp\
     services/harperclient.cpp \
     services/harperchecker.cpp \
     services/databaseservice.cpp \
+    services/markdownlspignoredrules.cpp \
     threads/scriptthread.cpp \
     widgets/graphicsview.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
@@ -351,6 +352,7 @@ HEADERS  += mainwindow.h \
     services/metricsservice.h \
     services/cryptoservice.h \
      services/openaiservice.h \
+    services/markdownlspignoredrules.h \
     services/markdownlspclient.h \
     services/markdownlspdocumenttracker.h \
     services/mcpservice.h \

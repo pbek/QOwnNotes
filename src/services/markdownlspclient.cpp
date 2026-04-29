@@ -8,6 +8,20 @@
 #include <QRegularExpression>
 #include <QUrl>
 
+namespace {
+QString diagnosticCodeToString(const QJsonValue &value) {
+    if (value.isString()) {
+        return value.toString();
+    }
+
+    if (value.isDouble()) {
+        return QString::number(value.toInt());
+    }
+
+    return QString();
+}
+}    // namespace
+
 MarkdownLspClient::MarkdownLspClient(QObject *parent)
     : QObject(parent), _process(new QProcess(this)) {
     connect(_process, &QProcess::readyReadStandardOutput, this,
@@ -398,6 +412,12 @@ int MarkdownLspClient::requestCodeActions(const QString &uri, const DiagnosticRa
         if (!diagnostic.message.isEmpty()) {
             diagObject.insert(QStringLiteral("message"), diagnostic.message);
         }
+        if (!diagnostic.source.isEmpty()) {
+            diagObject.insert(QStringLiteral("source"), diagnostic.source);
+        }
+        if (!diagnostic.code.isEmpty()) {
+            diagObject.insert(QStringLiteral("code"), diagnostic.code);
+        }
         diagnosticsArray.append(diagObject);
     }
 
@@ -715,6 +735,9 @@ void MarkdownLspClient::handleNotification(const QJsonObject &object) {
         diagnostic.range.endCharacter = endObject.value(QStringLiteral("character")).toInt();
         diagnostic.severity = diagnosticObject.value(QStringLiteral("severity")).toInt();
         diagnostic.message = diagnosticObject.value(QStringLiteral("message")).toString();
+        diagnostic.source = diagnosticObject.value(QStringLiteral("source")).toString().trimmed();
+        diagnostic.code =
+            diagnosticCodeToString(diagnosticObject.value(QStringLiteral("code"))).trimmed();
         diagnostics.push_back(diagnostic);
     }
 

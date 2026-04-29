@@ -44,6 +44,24 @@ class MarkdownLspClient : public QObject {
         DiagnosticRange range;
         int severity = 0;
         QString message;
+        QString source;
+        QString code;
+
+        QString ruleId() const {
+            if (code.isEmpty()) {
+                return QString();
+            }
+
+            return source.isEmpty() ? code : source + QStringLiteral(":") + code;
+        }
+
+        QString displayRuleName() const {
+            if (code.isEmpty()) {
+                return QString();
+            }
+
+            return source.isEmpty() ? code : source + QStringLiteral(":") + code;
+        }
     };
 
     /// Incremental content change used by MarkdownLspDocumentTracker.

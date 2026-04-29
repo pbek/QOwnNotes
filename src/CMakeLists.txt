@@ -391,6 +391,8 @@ set(SOURCE_FILES
     services/harperchecker.cpp
     services/harperchecker.h
     services/harpertypes.h
+    services/markdownlspignoredrules.cpp
+    services/markdownlspignoredrules.h
     services/markdownlspclient.cpp
     services/markdownlspclient.h
     services/markdownlspdocumenttracker.cpp

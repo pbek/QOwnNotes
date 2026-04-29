@@ -23,6 +23,7 @@
 
 #include "entities/notefolder.h"
 #include "services/markdownlspclient.h"
+#include "services/markdownlspignoredrules.h"
 #include "services/settingsservice.h"
 #include "ui_markdownlspsettingswidget.h"
 #include "version.h"
@@ -156,6 +157,28 @@ void MarkdownLspSettingsWidget::on_markdownLspAutoDetectButton_clicked() {
         tr("Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.");
     updateStatusLabel(message);
     QMessageBox::warning(this, tr("Markdown LSP"), message);
+}
+
+void MarkdownLspSettingsWidget::on_markdownLspResetIgnoredRulesButton_clicked() {
+    auto *ignoredRules = MarkdownLspIgnoredRules::instance();
+    if (ignoredRules == nullptr) {
+        return;
+    }
+
+    const int count = ignoredRules->ignoredRules().size();
+    if (count == 0) {
+        QMessageBox::information(this, tr("Markdown LSP"),
+                                 tr("There are no ignored rules to reset."));
+        return;
+    }
+
+    if (QMessageBox::question(this, tr("Markdown LSP"),
+                              tr("Reset %n ignored Markdown LSP rule(s)?", "", count),
+                              QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
+        ignoredRules->clearIgnoredRules();
+        QMessageBox::information(this, tr("Markdown LSP"),
+                                 tr("All ignored Markdown LSP rules have been reset."));
+    }
 }
 
 void MarkdownLspSettingsWidget::on_markdownLspTestConnectionButton_clicked() {

@@ -19,6 +19,10 @@
   - When the Markdown LSP feature is disabled, **zero additional work** is
     performed on the text-change hot path — no `toPlainText()`, no timer
     restarts, no signal connections fire
+- Added a global **Ignore rule** action to the inline Markdown LSP diagnostic
+  context menu and a **Reset ignored rules** button on the **Markdown LSP**
+  settings page, so Markdown LSP rules can be suppressed across all notes and
+  later restored from one place (for [#3467](https://github.com/pbek/QOwnNotes/issues/3467))
 
 ## 26.4.24
 

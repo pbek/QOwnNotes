@@ -62,6 +62,7 @@
 #endif
 #include "services/markdownlspclient.h"
 #include "services/markdownlspdocumenttracker.h"
+#include "services/markdownlspignoredrules.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
 #include "services/owncloudservice.h"
@@ -536,6 +537,9 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
 
     connect(MainWindow::instance(), &MainWindow::settingsChanged, this,
             &QOwnNotesMarkdownTextEdit::updateSettings);
+
+    connect(MarkdownLspIgnoredRules::instance(), &MarkdownLspIgnoredRules::ignoredRulesChanged,
+            this, &QOwnNotesMarkdownTextEdit::refreshMarkdownLspDiagnostics);
 
 #ifdef LANGUAGETOOL_ENABLED
     connect(LanguageToolChecker::instance(), &LanguageToolChecker::blockMatchesUpdated, this,
@@ -2830,6 +2834,7 @@ QMenu *QOwnNotesMarkdownTextEdit::markdownLspContextMenu(const QTextCursor &curs
     }
 
     auto *lspMenu = new QMenu(match->message, this);
+    auto *ignoredRules = MarkdownLspIgnoredRules::instance();
 
     // Request code actions for this diagnostic and wait briefly for the response
     // using a local event loop (same pattern as QDialog::exec)
@@ -2867,6 +2872,18 @@ QMenu *QOwnNotesMarkdownTextEdit::markdownLspContextMenu(const QTextCursor &curs
                 });
             }
         }
+    }
+
+    const QString ruleId = match->ruleId();
+    if (!ruleId.isEmpty() && ignoredRules && !ignoredRules->isRuleIgnored(ruleId)) {
+        const QString displayRuleName = match->displayRuleName();
+        const QString actionText = displayRuleName.isEmpty()
+                                       ? tr("Ignore this rule globally")
+                                       : tr("Ignore rule %1 globally").arg(displayRuleName);
+        lspMenu->addAction(actionText, this, [this, ignoredRules, ruleId]() {
+            ignoredRules->ignoreRule(ruleId);
+            refreshMarkdownLspDiagnostics();
+        });
     }
 
     return lspMenu;
@@ -3498,6 +3515,7 @@ void QOwnNotesMarkdownTextEdit::closeMarkdownLspDocument() {
 
     _markdownLspUri.clear();
     _markdownLspVersion = 0;
+    _markdownLspAllDiagnostics.clear();
     _markdownLspDiagnostics.clear();
 
     if (auto *h = dynamic_cast<QOwnNotesMarkdownHighlighter *>(highlighter())) {
@@ -3724,6 +3742,32 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
         return;
     }
 
+    _markdownLspAllDiagnostics = diagnostics;
+    applyMarkdownLspDiagnostics(filteredMarkdownLspDiagnostics(diagnostics));
+}
+
+QVector<MarkdownLspClient::Diagnostic> QOwnNotesMarkdownTextEdit::filteredMarkdownLspDiagnostics(
+    const QVector<MarkdownLspClient::Diagnostic> &diagnostics) const {
+    auto *ignoredRules = MarkdownLspIgnoredRules::instance();
+    if (!ignoredRules) {
+        return diagnostics;
+    }
+
+    QVector<MarkdownLspClient::Diagnostic> filteredDiagnostics;
+    filteredDiagnostics.reserve(diagnostics.size());
+    for (const MarkdownLspClient::Diagnostic &diagnostic : diagnostics) {
+        if (ignoredRules->isRuleIgnored(diagnostic.ruleId())) {
+            continue;
+        }
+
+        filteredDiagnostics.append(diagnostic);
+    }
+
+    return filteredDiagnostics;
+}
+
+void QOwnNotesMarkdownTextEdit::applyMarkdownLspDiagnostics(
+    const QVector<MarkdownLspClient::Diagnostic> &diagnostics) {
     auto *h = dynamic_cast<QOwnNotesMarkdownHighlighter *>(highlighter());
     if (!h || !document()) {
         _markdownLspDiagnostics = diagnostics;
@@ -3758,6 +3802,10 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
             h->rehighlightBlock(block);
         }
     }
+}
+
+void QOwnNotesMarkdownTextEdit::refreshMarkdownLspDiagnostics() {
+    applyMarkdownLspDiagnostics(filteredMarkdownLspDiagnostics(_markdownLspAllDiagnostics));
 }
 
 void QOwnNotesMarkdownTextEdit::applyMarkdownLspTextEdits(

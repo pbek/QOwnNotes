@@ -36,6 +36,7 @@ class MarkdownLspSettingsWidget : public QWidget {
    private slots:
     void on_markdownLspEnabledCheckBox_toggled(bool checked);
     void on_markdownLspAutoDetectButton_clicked();
+    void on_markdownLspResetIgnoredRulesButton_clicked();
     void on_markdownLspTestConnectionButton_clicked();
 
    private:

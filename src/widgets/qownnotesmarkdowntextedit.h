@@ -12,6 +12,7 @@ class MainWindow;
 class QDragEnterEvent;
 class QDragMoveEvent;
 class QDropEvent;
+class MarkdownLspIgnoredRules;
 class QOwnSpellChecker;
 
 #ifdef LANGUAGETOOL_ENABLED
@@ -216,6 +217,10 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void showMarkdownLspCompletions(int requestId, const QStringList &items);
     void showMarkdownLspDiagnostics(const QString &uri,
                                     const QVector<MarkdownLspClient::Diagnostic> &diagnostics);
+    QVector<MarkdownLspClient::Diagnostic> filteredMarkdownLspDiagnostics(
+        const QVector<MarkdownLspClient::Diagnostic> &diagnostics) const;
+    void applyMarkdownLspDiagnostics(const QVector<MarkdownLspClient::Diagnostic> &diagnostics);
+    void refreshMarkdownLspDiagnostics();
     void applyMarkdownLspTextEdits(const QVector<MarkdownLspClient::TextEdit> &edits);
     void applyMarkdownLspFormatting(int requestId,
                                     const QVector<MarkdownLspClient::TextEdit> &edits);
@@ -261,6 +266,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     int _markdownLspRangeFormattingRequestId = -1;
     int _markdownLspCodeActionRequestId = -1;
     bool _markdownLspApplyingEdits = false;
+    QVector<MarkdownLspClient::Diagnostic> _markdownLspAllDiagnostics;
     QVector<MarkdownLspClient::Diagnostic> _markdownLspDiagnostics;
     bool _markdownLspEnabled = false;
 
