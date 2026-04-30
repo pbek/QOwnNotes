@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.5.1
+
+- Fixed IME candidate window overlapping text when typing with a Japanese (or
+  other CJK) IME on Windows by overriding `inputMethodQuery()` in
+  `QOwnNotesMarkdownTextEdit` to offset the reported cursor rectangle by the
+  current viewport margins (for [#3590](https://github.com/pbek/QOwnNotes/issues/3590))
+
 ## 26.5.0
 
 - Added **Note Bookmarks** sub-menus to the _Note / Navigation_ menu

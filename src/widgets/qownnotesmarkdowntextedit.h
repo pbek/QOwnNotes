@@ -162,6 +162,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     int sidebarAdditionalWidth() const override;
     void paintSidebar(QPainter *painter, const QRect &eventRect) override;
     bool sidebarMousePressEvent(QMouseEvent *event) override;
+    QVariant inputMethodQuery(Qt::InputMethodQuery property) const override;
 
    private:
     struct FoldRegion {

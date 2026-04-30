@@ -3439,6 +3439,30 @@ void QOwnNotesMarkdownTextEdit::focusInEvent(QFocusEvent *e) {
 }
 
 /**
+ * Override inputMethodQuery to fix IME candidate window position on Windows.
+ * When viewport margins are set (e.g. for paper margins), the cursor rectangle
+ * returned to the IME must be offset by the top/left margin so that the
+ * candidate window appears adjacent to the cursor rather than overlapping it.
+ */
+QVariant QOwnNotesMarkdownTextEdit::inputMethodQuery(Qt::InputMethodQuery property) const {
+    QVariant result = QPlainTextEdit::inputMethodQuery(property);
+
+    const bool isCursorQuery =
+        (property == Qt::ImCursorRectangle || property == Qt::ImAnchorRectangle);
+    if (isCursorQuery) {
+        // viewportMargins() is non-const in this class, so cast away const to call it
+        const QMargins vm = const_cast<QOwnNotesMarkdownTextEdit *>(this)->viewportMargins();
+        if (vm.top() != 0 || vm.left() != 0) {
+            if (result.userType() == QMetaType::QRectF) {
+                result = result.toRectF().translated(qreal(vm.left()), qreal(vm.top()));
+            }
+        }
+    }
+
+    return result;
+}
+
+/**
  * Register this editor as the active one for AI autocomplete
  */
 void QOwnNotesMarkdownTextEdit::registerAsActiveEditor() {
