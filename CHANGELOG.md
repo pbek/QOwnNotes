@@ -2,6 +2,17 @@
 
 ## 26.5.0
 
+- Fixed a bug where searching for a multi-word text like "Heading 1" in the
+  **Note search panel** would not correctly use all terms in the in-note regexp
+  search, because the search mode was set after the search text causing
+  `performSearch()` to fire with the old mode; the search mode is now set
+  before the search text in `doSearch()` (for [#3588](https://github.com/pbek/QOwnNotes/issues/3588))
+- Fixed a bug where the in-note search widget's text was overwritten by the
+  currently selected match word when the search was activated programmatically
+  from the note search panel, causing only one term (e.g. "Heading" instead of
+  "(Heading|1)") to be searched; the preset-from-selection logic in `activate()`
+  now only applies when the user manually opens the search widget
+  (for [#3588](https://github.com/pbek/QOwnNotes/issues/3588))
 - Added the ability to delete one or multiple cards in the **Nextcloud Deck dialog**
   using the `Del` key or via a new **Delete X card(s)** context menu item;
   a confirmation dialog is shown in all cases (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
