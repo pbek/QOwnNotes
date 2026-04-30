@@ -1,7 +1,10 @@
 # QOwnNotes Changelog
 
-## Next
+## 26.5.0
 
+- Added the ability to delete one or multiple cards in the **Nextcloud Deck dialog**
+  using the `Del` key or via a new **Delete X card(s)** context menu item;
+  a confirmation dialog is shown in all cases (for [#3357](https://github.com/pbek/QOwnNotes/issues/3357))
 - A PPA for Ubuntu 26.10 (Stonking Stingray) was added
   - See [Install on Ubuntu](https://www.qownnotes.org/installation/ubuntu.html)
     for more information on how to install the PPA

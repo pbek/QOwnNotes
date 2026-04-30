@@ -1,7 +1,9 @@
 #include "nextclouddeckdialog.h"
 
 #include <QDesktopServices>
+#include <QKeyEvent>
 #include <QMenu>
+#include <QMessageBox>
 #include <QShortcut>
 #include <QSignalBlocker>
 #include <QTimeZone>
@@ -45,6 +47,7 @@ void NextcloudDeckDialog::setupUi() {
 
     ui->newItemEdit->installEventFilter(this);
     ui->cardItemTreeWidget->installEventFilter(this);
+    ui->cardItemTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     ui->newItemEdit->setFocus();
 
     // Adding shortcuts not working when defined in the ui file
@@ -147,6 +150,67 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
     if (cardIdToUpdate == -1) {
         close();
     }
+}
+
+/**
+ * Deletes all currently selected cards after asking for confirmation
+ */
+void NextcloudDeckDialog::deleteSelectedCards() {
+    const auto selectedItems = ui->cardItemTreeWidget->selectedItems();
+
+    if (selectedItems.isEmpty()) {
+        return;
+    }
+
+    const int count = selectedItems.count();
+    const QString confirmMessage =
+        count == 1 ? tr("Do you want to delete the selected Nextcloud Deck card?")
+                   : tr("Do you want to delete %n Nextcloud Deck card(s)?", "", count);
+
+    if (Utils::Gui::question(this, tr("Delete card(s)"), confirmMessage,
+                             QStringLiteral("nextcloud-deck-delete-selected")) !=
+        QMessageBox::Yes) {
+        return;
+    }
+
+    NextcloudDeckService nextcloudDeckService(this);
+    bool anyDeleted = false;
+
+    for (const QTreeWidgetItem *item : selectedItems) {
+        const int cardId = item->data(0, Qt::UserRole).toInt();
+
+        if (cardId < 1) {
+            continue;
+        }
+
+        configureDeckServiceForCard(nextcloudDeckService, cardId);
+
+        if (nextcloudDeckService.deleteCard(cardId)) {
+            anyDeleted = true;
+        }
+    }
+
+    if (anyDeleted) {
+        reloadCardList();
+    }
+}
+
+/**
+ * Event filter to handle key presses on the card list tree widget
+ */
+bool NextcloudDeckDialog::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::KeyPress) {
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
+
+        if (obj == ui->cardItemTreeWidget) {
+            if (keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Backspace) {
+                deleteSelectedCards();
+                return true;
+            }
+        }
+    }
+
+    return MasterDialog::eventFilter(obj, event);
 }
 
 void NextcloudDeckDialog::on_add1HourButton_clicked() {
@@ -600,6 +664,18 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
     searchInNotesAction->setIcon(QIcon::fromTheme(
         QStringLiteral("edit-find"), QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
 
+    // Add delete action for selected cards
+    const int selectedCount = ui->cardItemTreeWidget->selectedItems().count();
+    QAction *deleteCardsAction = nullptr;
+
+    if (selectedCount > 0) {
+        menu.addSeparator();
+        const QString deleteLabel = tr("&Delete %n card(s)", "", selectedCount);
+        deleteCardsAction = menu.addAction(deleteLabel);
+        deleteCardsAction->setIcon(QIcon::fromTheme(
+            QStringLiteral("edit-delete"), QIcon(":icons/breeze-qownnotes/16x16/edit-delete.svg")));
+    }
+
     QAction *selectedItem = menu.exec(globalPos);
 
     if (selectedItem == nullptr) {
@@ -614,6 +690,8 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
         addCardLinkToCurrentNote(item);
     } else if (selectedItem == searchInNotesAction) {
         searchLinkInNotes(item);
+    } else if (deleteCardsAction != nullptr && selectedItem == deleteCardsAction) {
+        deleteSelectedCards();
     }
 }
 

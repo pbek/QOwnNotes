@@ -87,12 +87,14 @@ class NextcloudDeckDialog : public MasterDialog {
     void configureDeckService(NextcloudDeckService &nextcloudDeckService) const;
     void configureDeckServiceForCard(NextcloudDeckService &nextcloudDeckService, int cardId) const;
     void updateDeckControlsEnabledState();
+    void deleteSelectedCards();
     QHash<int, NextcloudDeckService::Card> _cards;
     NextcloudDeckService::Card _currentCard;
 
     void openUrlInBrowserForItem(const QTreeWidgetItem *item);
     void addCardLinkToCurrentNote(const QTreeWidgetItem *item);
     void selectCardInList(int cardId);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 };
 
 #endif    // NEXTCLOUDDECKDIALOG_H
