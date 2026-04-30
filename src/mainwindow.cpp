@@ -23,6 +23,7 @@
 #include <dialogs/joplinimportdialog.h>
 #include <dialogs/localtrashdialog.h>
 #include <dialogs/nextclouddeckdialog.h>
+#include <dialogs/notebookmarkdialog.h>
 #include <dialogs/notedialog.h>
 #include <dialogs/scriptrepositorydialog.h>
 #include <dialogs/sharedialog.h>
@@ -1950,21 +1951,37 @@ void MainWindow::showStatusBarMessage(const QString &message, int timeout) {
 /**
  * Sets the shortcuts for the note bookmarks up
  */
+/**
+ * Sets up the note bookmark actions in the menu
+ * This supersedes the old raw QShortcut approach so that shortcuts are
+ * configurable via the shortcut settings dialog
+ */
 void MainWindow::setupNoteBookmarkShortcuts() {
-    for (int number = 1; number <= 9; number++) {
-        // setup the store shortcut
-        auto *storeShortcut = new QShortcut(
-            QKeySequence(QStringLiteral("Ctrl+Shift+") + QString::number(number)), this);
+    // Map slot number to the corresponding store/goto actions defined in mainwindow.ui
+    const QList<QAction *> storeActions = {
+        ui->actionStore_note_bookmark_1, ui->actionStore_note_bookmark_2,
+        ui->actionStore_note_bookmark_3, ui->actionStore_note_bookmark_4,
+        ui->actionStore_note_bookmark_5, ui->actionStore_note_bookmark_6,
+        ui->actionStore_note_bookmark_7, ui->actionStore_note_bookmark_8,
+        ui->actionStore_note_bookmark_9,
+    };
 
-        connect(storeShortcut, &QShortcut::activated, this,
-                [this, number]() { storeNoteBookmark(number); });
+    const QList<QAction *> gotoActions = {
+        ui->actionGoto_note_bookmark_1, ui->actionGoto_note_bookmark_2,
+        ui->actionGoto_note_bookmark_3, ui->actionGoto_note_bookmark_4,
+        ui->actionGoto_note_bookmark_5, ui->actionGoto_note_bookmark_6,
+        ui->actionGoto_note_bookmark_7, ui->actionGoto_note_bookmark_8,
+        ui->actionGoto_note_bookmark_9,
+    };
 
-        // setup the goto shortcut
-        auto *gotoShortcut =
-            new QShortcut(QKeySequence(QStringLiteral("Ctrl+") + QString::number(number)), this);
+    for (int i = 0; i < 9; i++) {
+        const int slot = i + 1;
 
-        connect(gotoShortcut, &QShortcut::activated, this,
-                [this, number]() { gotoNoteBookmark(number); });
+        connect(storeActions[i], &QAction::triggered, this,
+                [this, slot]() { storeNoteBookmark(slot); });
+
+        connect(gotoActions[i], &QAction::triggered, this,
+                [this, slot]() { gotoNoteBookmark(slot); });
     }
 }
 
@@ -5167,6 +5184,35 @@ void MainWindow::gotoNoteBookmark(int slot) {
             tr("Jumped to bookmark position at slot %1").arg(QString::number(slot)),
             QStringLiteral("🔖"), 3000);
     }
+}
+
+/**
+ * Removes the note bookmark at the given slot
+ */
+void MainWindow::deleteNoteBookmark(int slot) {
+    noteBookmarks.remove(slot);
+    SettingsService().remove(QStringLiteral("NoteBookmark%1").arg(slot));
+    updateNoteBookmarkDisplay();
+}
+
+/**
+ * Opens the non-modal note bookmark management dialog
+ */
+void MainWindow::on_actionOpen_note_bookmark_dialog_triggered() {
+    auto *dialog = new NoteBookmarkDialog(this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setBookmarks(noteBookmarks);
+
+    connect(dialog, &NoteBookmarkDialog::jumpToBookmarkRequested, this,
+            &MainWindow::gotoNoteBookmark);
+
+    connect(dialog, &NoteBookmarkDialog::deleteBookmarkRequested, this, [this, dialog](int slot) {
+        deleteNoteBookmark(slot);
+        // Refresh the dialog table after deletion
+        dialog->setBookmarks(noteBookmarks);
+    });
+
+    dialog->show();
 }
 
 /**

@@ -1009,33 +1009,74 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <addaction name="actionImport_notes_from_text_files"/>
      <addaction name="actionImport_bookmarks_from_server"/>
     </widget>
-    <widget class="QMenu" name="menuNavigation">
-     <property name="title">
-      <string>Navigation</string>
-     </property>
-     <property name="icon">
-      <iconset theme="go-down" resource="breeze-qownnotes.qrc">
-       <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
-     </property>
-      <addaction name="action_Back_in_note_history"/>
-      <addaction name="action_Forward_in_note_history"/>
+     <widget class="QMenu" name="menuNavigation">
+      <property name="title">
+       <string>Navigation</string>
+      </property>
+      <property name="icon">
+       <iconset theme="go-down" resource="breeze-qownnotes.qrc">
+        <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
+      </property>
+       <addaction name="action_Back_in_note_history"/>
+       <addaction name="action_Forward_in_note_history"/>
+       <addaction name="separator"/>
+       <addaction name="action_Previous_heading"/>
+       <addaction name="action_Next_heading"/>
+       <addaction name="actionFold_all_headings"/>
+       <addaction name="actionUnfold_all_headings"/>
+       <addaction name="separator"/>
+       <addaction name="actionPrevious_Note"/>
+      <addaction name="actionNext_note"/>
+      <addaction name="actionPrevious_note_tab"/>
+      <addaction name="actionNext_note_tab"/>
+      <addaction name="actionMove_up_in_subfolder_list"/>
+      <addaction name="actionMove_down_in_subfolder_list"/>
+      <addaction name="actionMove_up_in_tag_list"/>
+      <addaction name="actionMove_down_in_tag_list"/>
+      <addaction name="actionClose_current_note_tab"/>
+      <addaction name="actionToggle_note_stickiness_of_current_tab"/>
       <addaction name="separator"/>
-      <addaction name="action_Previous_heading"/>
-      <addaction name="action_Next_heading"/>
-      <addaction name="actionFold_all_headings"/>
-      <addaction name="actionUnfold_all_headings"/>
+      <addaction name="menuStore_note_bookmark"/>
+      <addaction name="menuGoto_note_bookmark"/>
       <addaction name="separator"/>
-      <addaction name="actionPrevious_Note"/>
-     <addaction name="actionNext_note"/>
-     <addaction name="actionPrevious_note_tab"/>
-     <addaction name="actionNext_note_tab"/>
-     <addaction name="actionMove_up_in_subfolder_list"/>
-     <addaction name="actionMove_down_in_subfolder_list"/>
-     <addaction name="actionMove_up_in_tag_list"/>
-     <addaction name="actionMove_down_in_tag_list"/>
-     <addaction name="actionClose_current_note_tab"/>
-     <addaction name="actionToggle_note_stickiness_of_current_tab"/>
-    </widget>
+      <addaction name="actionOpen_note_bookmark_dialog"/>
+      <widget class="QMenu" name="menuStore_note_bookmark">
+       <property name="title">
+        <string>Store note bookmark</string>
+       </property>
+       <property name="icon">
+        <iconset theme="bookmark-new" resource="breeze-qownnotes.qrc">
+         <normaloff>:/icons/breeze-qownnotes/16x16/bookmark-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/bookmark-new.svg</iconset>
+       </property>
+       <addaction name="actionStore_note_bookmark_1"/>
+       <addaction name="actionStore_note_bookmark_2"/>
+       <addaction name="actionStore_note_bookmark_3"/>
+       <addaction name="actionStore_note_bookmark_4"/>
+       <addaction name="actionStore_note_bookmark_5"/>
+       <addaction name="actionStore_note_bookmark_6"/>
+       <addaction name="actionStore_note_bookmark_7"/>
+       <addaction name="actionStore_note_bookmark_8"/>
+       <addaction name="actionStore_note_bookmark_9"/>
+      </widget>
+      <widget class="QMenu" name="menuGoto_note_bookmark">
+       <property name="title">
+        <string>Go to note bookmark</string>
+       </property>
+       <property name="icon">
+        <iconset theme="bookmarks" resource="breeze-qownnotes.qrc">
+         <normaloff>:/icons/breeze-qownnotes/16x16/bookmarks.svg</normaloff>:/icons/breeze-qownnotes/16x16/bookmarks.svg</iconset>
+       </property>
+       <addaction name="actionGoto_note_bookmark_1"/>
+       <addaction name="actionGoto_note_bookmark_2"/>
+       <addaction name="actionGoto_note_bookmark_3"/>
+       <addaction name="actionGoto_note_bookmark_4"/>
+       <addaction name="actionGoto_note_bookmark_5"/>
+       <addaction name="actionGoto_note_bookmark_6"/>
+       <addaction name="actionGoto_note_bookmark_7"/>
+       <addaction name="actionGoto_note_bookmark_8"/>
+       <addaction name="actionGoto_note_bookmark_9"/>
+      </widget>
+     </widget>
     <widget class="QMenu" name="menuPrint">
      <property name="title">
       <string>Print</string>
@@ -2938,12 +2979,161 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <string notr="true">Ctrl+Shift+N</string>
    </property>
   </action>
-  <action name="actionToggle_note_stickiness_of_current_tab">
-   <property name="text">
-    <string>Toggle note pinning of current tab</string>
-   </property>
-  </action>
-  <action name="actionFormat_text_underline">
+   <action name="actionToggle_note_stickiness_of_current_tab">
+    <property name="text">
+     <string>Toggle note pinning of current tab</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_1">
+    <property name="text">
+     <string>Store bookmark at slot 1</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+1</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_2">
+    <property name="text">
+     <string>Store bookmark at slot 2</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+2</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_3">
+    <property name="text">
+     <string>Store bookmark at slot 3</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+3</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_4">
+    <property name="text">
+     <string>Store bookmark at slot 4</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+4</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_5">
+    <property name="text">
+     <string>Store bookmark at slot 5</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+5</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_6">
+    <property name="text">
+     <string>Store bookmark at slot 6</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+6</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_7">
+    <property name="text">
+     <string>Store bookmark at slot 7</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+7</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_8">
+    <property name="text">
+     <string>Store bookmark at slot 8</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+8</string>
+    </property>
+   </action>
+   <action name="actionStore_note_bookmark_9">
+    <property name="text">
+     <string>Store bookmark at slot 9</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+Shift+9</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_1">
+    <property name="text">
+     <string>Go to bookmark at slot 1</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+1</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_2">
+    <property name="text">
+     <string>Go to bookmark at slot 2</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+2</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_3">
+    <property name="text">
+     <string>Go to bookmark at slot 3</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+3</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_4">
+    <property name="text">
+     <string>Go to bookmark at slot 4</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+4</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_5">
+    <property name="text">
+     <string>Go to bookmark at slot 5</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+5</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_6">
+    <property name="text">
+     <string>Go to bookmark at slot 6</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+6</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_7">
+    <property name="text">
+     <string>Go to bookmark at slot 7</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+7</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_8">
+    <property name="text">
+     <string>Go to bookmark at slot 8</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+8</string>
+    </property>
+   </action>
+   <action name="actionGoto_note_bookmark_9">
+    <property name="text">
+     <string>Go to bookmark at slot 9</string>
+    </property>
+    <property name="shortcut">
+     <string notr="true">Ctrl+9</string>
+    </property>
+   </action>
+   <action name="actionOpen_note_bookmark_dialog">
+    <property name="text">
+     <string>Note bookmarks</string>
+    </property>
+   </action>
+   <action name="actionFormat_text_underline">
    <property name="icon">
     <iconset theme="format-text-underline" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/format-text-underline.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-underline.svg</iconset>

@@ -273,6 +273,9 @@ set(SOURCE_FILES
     dialogs/notedialog.cpp
     dialogs/notedialog.h
     dialogs/notedialog.ui
+    dialogs/notebookmarkdialog.cpp
+    dialogs/notebookmarkdialog.h
+    dialogs/notebookmarkdialog.ui
     dialogs/websockettokendialog.cpp
     dialogs/websockettokendialog.h
     dialogs/websockettokendialog.ui

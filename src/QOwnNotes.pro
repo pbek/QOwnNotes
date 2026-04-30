@@ -220,6 +220,7 @@ SOURCES += main.cpp\
     dialogs/tabledialog.cpp \
     libraries/qtcsv/src/sources/reader.cpp \
     dialogs/notedialog.cpp \
+    dialogs/notebookmarkdialog.cpp \
     dialogs/filedialog.cpp \
     dialogs/scriptrepositorydialog.cpp \
     dialogs/dictionarymanagerdialog.cpp \
@@ -390,6 +391,7 @@ HEADERS  += mainwindow.h \
     libraries/qtcsv/src/sources/filechecker.h \
     libraries/qtcsv/src/sources/symbols.h \
     dialogs/notedialog.h \
+    dialogs/notebookmarkdialog.h \
     dialogs/filedialog.h \
     dialogs/scriptrepositorydialog.h \
     dialogs/dictionarymanagerdialog.h \
@@ -486,6 +488,7 @@ FORMS    += mainwindow.ui \
     dialogs/actiondialog.ui \
     dialogs/tabledialog.ui \
     dialogs/notedialog.ui \
+   dialogs/notebookmarkdialog.ui \
     dialogs/scriptrepositorydialog.ui \
     dialogs/dictionarymanagerdialog.ui \
     widgets/qtexteditsearchwidget.ui \

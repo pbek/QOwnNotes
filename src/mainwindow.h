@@ -459,7 +459,11 @@ class MainWindow : public QMainWindow {
 
     void storeNoteBookmark(int slot = 0);
 
+    void deleteNoteBookmark(int slot);
+
     void updateNoteBookmarkDisplay();
+
+    void on_actionOpen_note_bookmark_dialog_triggered();
 
     void on_actionInsert_code_block_triggered();
 

@@ -2,6 +2,16 @@
 
 ## 26.5.0
 
+- Added **Note Bookmarks** sub-menus to the _Note / Navigation_ menu
+  (for [#3589](https://github.com/pbek/QOwnNotes/issues/3589))
+  - New **Store note bookmark** sub-menu with slots 1–9 (`Ctrl+Shift+1`–`Ctrl+Shift+9`)
+  - New **Go to note bookmark** sub-menu with slots 1–9 (`Ctrl+1`–`Ctrl+9`)
+  - All bookmark shortcuts are now proper `QAction`s in the menu and can be
+    customised in the _Shortcut settings_, superseding the old hardcoded
+    `QShortcut`-based approach
+- Added a new **Note bookmarks** entry in the _Note / Navigation_ menu that opens
+  a non-modal **Note Bookmarks** dialog listing all currently stored bookmarks with
+  the ability to jump to a bookmark or delete it (for [#3589](https://github.com/pbek/QOwnNotes/issues/3589))
 - Fixed a bug where searching for a multi-word text like "Heading 1" in the
   **Note search panel** would not correctly use all terms in the in-note regexp
   search, because the search mode was set after the search text causing
