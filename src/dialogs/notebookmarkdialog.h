@@ -22,6 +22,7 @@ class NoteBookmarkDialog : public MasterDialog {
    signals:
     void jumpToBookmarkRequested(int slot);
     void deleteBookmarkRequested(int slot);
+    void reloadRequested();
 
    protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
@@ -29,6 +30,7 @@ class NoteBookmarkDialog : public MasterDialog {
    private slots:
     void onJumpButtonClicked();
     void onDeleteButtonClicked();
+    void onReloadButtonClicked();
     void onBookmarkTableDoubleClicked(int row, int column);
 
    private:

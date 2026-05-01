@@ -38,8 +38,16 @@ NoteBookmarkDialog::NoteBookmarkDialog(QWidget *parent)
                          QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/edit-delete.svg"))));
     deleteButton->setToolTip(tr("Delete the selected bookmark"));
 
+    QPushButton *reloadButton =
+        ui->buttonBox->addButton(tr("Reload"), QDialogButtonBox::ActionRole);
+    reloadButton->setIcon(
+        QIcon::fromTheme(QStringLiteral("view-refresh"),
+                         QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/view-refresh.svg"))));
+    reloadButton->setToolTip(tr("Reload the bookmark list"));
+
     connect(jumpButton, &QPushButton::clicked, this, &NoteBookmarkDialog::onJumpButtonClicked);
     connect(deleteButton, &QPushButton::clicked, this, &NoteBookmarkDialog::onDeleteButtonClicked);
+    connect(reloadButton, &QPushButton::clicked, this, &NoteBookmarkDialog::onReloadButtonClicked);
     connect(ui->bookmarkTableWidget, &QTableWidget::cellDoubleClicked, this,
             &NoteBookmarkDialog::onBookmarkTableDoubleClicked);
 
@@ -135,6 +143,8 @@ void NoteBookmarkDialog::onDeleteButtonClicked() {
 void NoteBookmarkDialog::onBookmarkTableDoubleClicked(int /*row*/, int /*column*/) {
     onJumpButtonClicked();
 }
+
+void NoteBookmarkDialog::onReloadButtonClicked() { emit reloadRequested(); }
 
 /**
  * Intercepts key events on the bookmark table to allow deletion with the Del key

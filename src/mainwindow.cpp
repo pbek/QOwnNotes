@@ -1983,6 +1983,11 @@ void MainWindow::setupNoteBookmarkShortcuts() {
         connect(gotoActions[i], &QAction::triggered, this,
                 [this, slot]() { gotoNoteBookmark(slot); });
     }
+
+    // Gray out the "Store note bookmark" sub-menu when the note editor does not have focus,
+    // since storing a bookmark only works when the note text edit is focused
+    connect(ui->menuNavigation, &QMenu::aboutToShow, this,
+            [this]() { ui->menuStore_note_bookmark->setEnabled(ui->noteTextEdit->hasFocus()); });
 }
 
 /*
@@ -5209,6 +5214,12 @@ void MainWindow::on_actionOpen_note_bookmark_dialog_triggered() {
     connect(dialog, &NoteBookmarkDialog::deleteBookmarkRequested, this, [this, dialog](int slot) {
         deleteNoteBookmark(slot);
         // Refresh the dialog table after deletion
+        dialog->setBookmarks(noteBookmarks);
+    });
+
+    connect(dialog, &NoteBookmarkDialog::reloadRequested, this, [this, dialog]() {
+        // Reload bookmarks from settings and refresh the dialog table
+        loadNoteBookmarks();
         dialog->setBookmarks(noteBookmarks);
     });
 

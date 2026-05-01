@@ -2,6 +2,12 @@
 
 ## 26.5.1
 
+- Added a **Reload** button to the **Note Bookmarks** dialog to re-check bookmarks
+  from disk without having to close and reopen the dialog
+  (for [#3589](https://github.com/pbek/QOwnNotes/issues/3589))
+- The **Store note bookmark** sub-menu in _Note / Navigation_ is now grayed out
+  when the note editing panel does not have focus, making it clear that storing
+  a bookmark requires the editor to be active (for [#3589](https://github.com/pbek/QOwnNotes/issues/3589))
 - Fixed several security issues (for [#3591](https://github.com/pbek/QOwnNotes/issues/3591))
   - Fixed a **plaintext password leak** where a `qDebug()` call in
     `restoreTrashedNoteOnServer()` logged a `QUrl` containing the embedded
