@@ -197,7 +197,7 @@ void McpService::sendHttpResponse(QTcpSocket *socket, int statusCode, const QByt
                                "HTTP/1.1 %1 %2\r\n"
                                "Content-Type: %3\r\n"
                                "Content-Length: %4\r\n"
-                               "Access-Control-Allow-Origin: *\r\n"
+                               "Access-Control-Allow-Origin: http://localhost\r\n"
                                "Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n"
                                "Access-Control-Allow-Headers: Content-Type, Authorization\r\n"
                                "Cache-Control: no-store\r\n"
@@ -214,7 +214,7 @@ void McpService::sendHttpResponse(QTcpSocket *socket, int statusCode, const QByt
 void McpService::sendCorsHeaders(QTcpSocket *socket) {
     const QByteArray response =
         "HTTP/1.1 204 No Content\r\n"
-        "Access-Control-Allow-Origin: *\r\n"
+        "Access-Control-Allow-Origin: http://localhost\r\n"
         "Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n"
         "Access-Control-Allow-Headers: Content-Type, Authorization\r\n"
         "Access-Control-Max-Age: 86400\r\n"
@@ -243,7 +243,7 @@ void McpService::openSseStream(QTcpSocket *socket) {
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: text/event-stream\r\n"
         "Cache-Control: no-cache\r\n"
-        "Access-Control-Allow-Origin: *\r\n"
+        "Access-Control-Allow-Origin: http://localhost\r\n"
         "Connection: keep-alive\r\n"
         "\r\n";
 

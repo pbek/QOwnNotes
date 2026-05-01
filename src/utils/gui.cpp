@@ -36,6 +36,7 @@
 #include <QPushButton>
 #include <QSet>
 #include <QSignalBlocker>
+#include <QStandardPaths>
 #include <QStyleFactory>
 #include <QTextBlock>
 #include <QTextCursor>
@@ -1365,16 +1366,24 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
     //                    QStringLiteral("string:'org.freedesktop.appearance'
     //                    string:'color-scheme'");
 
+    // Use dbus-send directly instead of /bin/sh -c to avoid shell interpretation
+    const QString dbusExecutable = QStandardPaths::findExecutable(QStringLiteral("dbus-send"));
+    if (dbusExecutable.isEmpty()) {
+        qWarning() << __func__ << " - 'dbus-send' not found, doLinuxDarkModeCheck returned false";
+        return false;
+    }
+
     auto parameters = QStringList()
-                      << "-c"
-                      << "dbus-send --session --print-reply=literal --reply-timeout=1000 "
-                         "--dest=org.freedesktop.portal.Desktop /org/freedesktop/portal/desktop "
-                         "org.freedesktop.portal.Settings.Read string:'org.freedesktop.appearance' "
-                         "string:'color-scheme'";
+                      << QStringLiteral("--session") << QStringLiteral("--print-reply=literal")
+                      << QStringLiteral("--reply-timeout=1000")
+                      << QStringLiteral("--dest=org.freedesktop.portal.Desktop")
+                      << QStringLiteral("/org/freedesktop/portal/desktop")
+                      << QStringLiteral("org.freedesktop.portal.Settings.Read")
+                      << QStringLiteral("string:org.freedesktop.appearance")
+                      << QStringLiteral("string:color-scheme");
 
     QProcess process;
-    //    process.start(QStringLiteral("dbus-send"), parameters);
-    process.start(QStringLiteral("/bin/sh"), parameters);
+    process.start(dbusExecutable, parameters);
 
     if (!process.waitForStarted()) {
         qWarning() << __func__ << " - 'doLinuxDarkModeCheck' returned false";

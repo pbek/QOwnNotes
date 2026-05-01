@@ -888,20 +888,28 @@ static QString fromLocalEncoding(const QByteArray &data) {
 }
 
 static QString getProcessOutput(const QString &command, const QString &input) {
-    // ensure the executable exists in some standard path and isn't random
-    const auto fullCmdPath = QStandardPaths::findExecutable(command);
+    QProcess proc;
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+    QStringList arguments = QProcess::splitCommand(command);
+    if (arguments.isEmpty()) {
+        return {};
+    }
+    const QString executable = arguments.takeFirst();
+#else
+    // On Qt < 5.15, manually split on whitespace to avoid shell interpretation
+    QStringList arguments = command.split(QLatin1Char(' '), QString::SkipEmptyParts);
+    if (arguments.isEmpty()) {
+        return {};
+    }
+    const QString executable = arguments.takeFirst();
+#endif
+    // Ensure the executable exists in some standard path and isn't random
+    const auto fullCmdPath = QStandardPaths::findExecutable(executable);
     if (fullCmdPath.isEmpty()) {
         return {};
     }
 
-    QProcess proc;
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
-    QStringList arguments = QProcess::splitCommand(command);
-    QString executable = arguments.takeFirst();
-    proc.start(executable, arguments);
-#else
-    proc.start(command);
-#endif
+    proc.start(fullCmdPath, arguments);
     proc.waitForStarted();
     proc.write(toLocalEncoding(input));
     proc.closeWriteChannel();

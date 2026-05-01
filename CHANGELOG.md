@@ -2,6 +2,25 @@
 
 ## 26.5.1
 
+- Fixed several security issues (for [#3591](https://github.com/pbek/QOwnNotes/issues/3591))
+  - Fixed a **plaintext password leak** where a `qDebug()` call in
+    `restoreTrashedNoteOnServer()` logged a `QUrl` containing the embedded
+    server password
+  - Changed the default value of the **Ignore SSL errors** network setting from
+    `true` to `false` to prevent man-in-the-middle attacks on fresh installs
+  - The **MCP server** CORS header was narrowed from the wildcard `*` to
+    `http://localhost` to reduce the DNS-rebinding / localhost attack surface
+  - The Linux dark-mode D-Bus check now invokes `dbus-send` directly instead of
+    via `/bin/sh -c`, eliminating unnecessary shell interpretation
+  - URLs typed without a scheme now default to `https://` instead of `http://`
+  - A table-name whitelist was added to `generateDatabaseTableSha1Signature()`
+    to guard against SQL injection via concatenated table names
+  - The FakeVim shell-filter (`!`) on Qt < 5.15 no longer passes the full
+    command string to `QProcess::start()` (which invoked the shell); the
+    executable is now split out and run directly in all Qt versions
+  - The macOS updater temporary script file now has owner-only permissions
+    (`0700`) set _before_ its content is written, hardening against
+    TOCTOU replacement by other local users
 - Fixed IME candidate window overlapping text when typing with a Japanese (or
   other CJK) IME on Windows by overriding `inputMethodQuery()` in
   `QOwnNotesMarkdownTextEdit` to offset the reported cursor rectangle by the

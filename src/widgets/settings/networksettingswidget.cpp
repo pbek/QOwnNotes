@@ -46,8 +46,9 @@ void NetworkSettingsWidget::readSettings() {
     ui->appHeartbeatCheckBox->setChecked(
         settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool());
 
+    // Default to false to prevent MITM attacks on fresh installs
     bool ignoreSSLErrors =
-        settings.value(QStringLiteral("networking/ignoreSSLErrors"), true).toBool();
+        settings.value(QStringLiteral("networking/ignoreSSLErrors"), false).toBool();
     ui->ignoreSSLErrorsCheckBox->setChecked(ignoreSSLErrors);
     ui->letsEncryptInfoLabel->setVisible(ignoreSSLErrors);
 

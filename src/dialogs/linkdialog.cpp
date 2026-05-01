@@ -220,7 +220,7 @@ QString LinkDialog::getURL() const {
 
     if (!url.isEmpty() && !url.contains(QStringLiteral("://")) &&
         !url.startsWith(QStringLiteral("./"))) {
-        url = QStringLiteral("http://") + url;
+        url = QStringLiteral("https://") + url;
     }
 
     return url;

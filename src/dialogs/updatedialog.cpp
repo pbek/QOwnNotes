@@ -433,11 +433,12 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
         return false;
     }
 
+    // Set restrictive permissions before writing content to prevent other users
+    // from reading or replacing the script between creation and execution
+    tempFile->setPermissions(QFile::ExeOwner | QFile::ReadOwner | QFile::WriteOwner);
+
     // write the script content
     tempFile->write(scriptContent.toLatin1());
-
-    // setting executable permissions to the updater script
-    tempFile->setPermissions(QFile::ExeUser | QFile::ReadUser | QFile::WriteUser);
 
     // file->fileName() only holds a value after file->open()
     QString updaterFilePath = tempFile->fileName();

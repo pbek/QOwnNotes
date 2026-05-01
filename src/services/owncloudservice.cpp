@@ -600,7 +600,8 @@ void OwnCloudService::startAppVersionTest() {
  */
 void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
     SettingsService settings;
-    if (settings.value(QStringLiteral("networking/ignoreSSLErrors"), true).toBool()) {
+    // Default to false to prevent MITM attacks on fresh installs
+    if (settings.value(QStringLiteral("networking/ignoreSSLErrors"), false).toBool()) {
         QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
                          SLOT(ignoreSslErrors()));
     }
@@ -988,7 +989,8 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString &fileName, int ti
     q.addQueryItem(QStringLiteral("timestamp"), QString::number(timestamp));
     url.setQuery(q);
 
-    qDebug() << url;
+    // Do not log the URL here — it contains the plaintext password
+    qDebug() << __func__ << "- restoring trashed note:" << fileName;
 
     QNetworkRequest r(url);
     addAuthHeader(&r);

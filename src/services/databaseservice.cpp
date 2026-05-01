@@ -1056,6 +1056,17 @@ bool DatabaseService::mergeNoteFolderDatabase(const QString& path) {
  */
 QByteArray DatabaseService::generateDatabaseTableSha1Signature(QSqlDatabase& db,
                                                                const QString& table) {
+    // Whitelist of valid table names to prevent SQL injection via table name concatenation
+    static const QStringList validTables = {
+        QStringLiteral("note"),         QStringLiteral("noteSubFolder"), QStringLiteral("tag"),
+        QStringLiteral("noteTagLink"),  QStringLiteral("noteFolder"),    QStringLiteral("bookmark"),
+        QStringLiteral("calendarItem"),
+    };
+    if (!validTables.contains(table)) {
+        qCritical() << __func__ << ": invalid table name rejected:" << table;
+        return QByteArray();
+    }
+
     QCryptographicHash hash(QCryptographicHash::Sha1);
     QSqlQuery query(db);
     query.prepare(QStringLiteral("SELECT * FROM ") + table);
