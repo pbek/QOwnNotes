@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 26.5.2
+
+- Added a new **Edit table** context menu item to the note text editor that opens a visual
+  table editor dialog when right-clicking inside a Markdown table
+  (for [#3593](https://github.com/pbek/QOwnNotes/issues/3593))
+  - The dialog shows the table data in an editable grid
+  - Clicking a column header selects that column and updates the alignment combobox
+    to reflect its current alignment, making it easy to see and change alignment
+  - Supports adding and removing rows (via dedicated **Row** buttons) and columns
+    (via dedicated **Column** buttons)
+  - Allows changing the alignment of the selected column(s) (default/left, left,
+    center, right) via the alignment combobox and **Apply alignment** button
+  - Automatically formats the table when changes are applied
+
 ## 26.5.1
 
 - Added a **Reload** button to the **Note Bookmarks** dialog to re-check bookmarks

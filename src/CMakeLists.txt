@@ -270,6 +270,9 @@ set(SOURCE_FILES
     dialogs/tabledialog.cpp
     dialogs/tabledialog.h
     dialogs/tabledialog.ui
+    dialogs/markdowntabledialog.cpp
+    dialogs/markdowntabledialog.h
+    dialogs/markdowntabledialog.ui
     dialogs/notedialog.cpp
     dialogs/notedialog.h
     dialogs/notedialog.ui

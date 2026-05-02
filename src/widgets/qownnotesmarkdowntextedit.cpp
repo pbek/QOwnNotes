@@ -60,6 +60,7 @@
 #ifdef HARPER_ENABLED
 #include "services/harperchecker.h"
 #endif
+#include "dialogs/markdowntabledialog.h"
 #include "services/markdownlspclient.h"
 #include "services/markdownlspdocumenttracker.h"
 #include "services/markdownlspignoredrules.h"
@@ -2571,6 +2572,14 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
         addRowBelowAction->setEnabled(isAllowNoteEditing);
         connect(addRowBelowAction, &QAction::triggered, this,
                 [this]() { Utils::Gui::insertTableRowBelow(this); });
+
+        QAction *editTableAction = menu->addAction(tr("Edit table"));
+        editTableAction->setEnabled(isAllowNoteEditing);
+        connect(editTableAction, &QAction::triggered, this, [this]() {
+            auto *dialog = new MarkdownTableDialog(this, this);
+            dialog->exec();
+            delete dialog;
+        });
 
         menu->addSeparator();
     }

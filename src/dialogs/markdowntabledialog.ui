@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MarkdownTableDialog</class>
+ <widget class="QDialog" name="MarkdownTableDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Edit Markdown table</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectItems</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="controlsLayout">
+     <item>
+      <widget class="QGroupBox" name="rowGroupBox">
+       <property name="title">
+        <string>Row</string>
+       </property>
+       <layout class="QHBoxLayout" name="rowLayout">
+        <item>
+         <widget class="QPushButton" name="addRowButton">
+          <property name="text">
+           <string>Add row</string>
+          </property>
+          <property name="icon">
+           <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="removeRowButton">
+          <property name="text">
+           <string>Remove row</string>
+          </property>
+          <property name="icon">
+           <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="columnGroupBox">
+       <property name="title">
+        <string>Column</string>
+       </property>
+       <layout class="QHBoxLayout" name="columnLayout">
+        <item>
+         <widget class="QPushButton" name="addColumnButton">
+          <property name="text">
+           <string>Add column</string>
+          </property>
+          <property name="icon">
+           <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="removeColumnButton">
+          <property name="text">
+           <string>Remove column</string>
+          </property>
+          <property name="icon">
+           <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="alignmentLabel">
+          <property name="text">
+           <string>Alignment:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="alignmentComboBox">
+          <property name="toolTip">
+           <string>Alignment of the selected column. Click a column header to select it.</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Default (left)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Left</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Center</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Right</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="applyAlignmentButton">
+          <property name="text">
+           <string>Apply alignment</string>
+          </property>
+          <property name="toolTip">
+           <string>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>MarkdownTableDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>550</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>580</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>MarkdownTableDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>550</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>580</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

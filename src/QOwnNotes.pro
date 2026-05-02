@@ -218,6 +218,7 @@ SOURCES += main.cpp\
     dialogs/storedattachmentsdialog.cpp \
     dialogs/actiondialog.cpp \
     dialogs/tabledialog.cpp \
+    dialogs/markdowntabledialog.cpp \
     libraries/qtcsv/src/sources/reader.cpp \
     dialogs/notedialog.cpp \
     dialogs/notebookmarkdialog.cpp \
@@ -385,6 +386,7 @@ HEADERS  += mainwindow.h \
     dialogs/storedattachmentsdialog.h \
     dialogs/actiondialog.h \
     dialogs/tabledialog.h \
+    dialogs/markdowntabledialog.h \
     libraries/qtcsv/src/include/qtcsv_global.h \
     libraries/qtcsv/src/include/abstractdata.h \
     libraries/qtcsv/src/include/reader.h \
@@ -487,6 +489,7 @@ FORMS    += mainwindow.ui \
     dialogs/storedattachmentsdialog.ui \
     dialogs/actiondialog.ui \
     dialogs/tabledialog.ui \
+    dialogs/markdowntabledialog.ui \
     dialogs/notedialog.ui \
    dialogs/notebookmarkdialog.ui \
     dialogs/scriptrepositorydialog.ui \
