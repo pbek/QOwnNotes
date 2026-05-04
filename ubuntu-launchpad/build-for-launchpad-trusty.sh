@@ -26,6 +26,7 @@ UBUNTU_RELEASES=("trusty")
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
 UPLOAD="true"
+DEBUILD_SOURCE_ARGS="-sa"
 DEBUILD_ARGS="-d"
 GPG_PUBLIC_KEY=F5161BD3
 export DEBFULLNAME="Patrizio Bekerle"
@@ -37,7 +38,7 @@ while test $# -gt 0; do
     UPLOAD="false"
     ;;
   --no-orig-tar-upload)
-    DEBUILD_ARGS="-sd"
+    DEBUILD_SOURCE_ARGS="-sd"
     ;;
   esac
   shift
@@ -107,15 +108,18 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   } >"$changelogPath"
 
   # launch debuild
-  debuild -S -sa -k$GPG_PUBLIC_KEY $DEBUILD_ARGS
+  debuild -S "$DEBUILD_SOURCE_ARGS" -k$GPG_PUBLIC_KEY $DEBUILD_ARGS
   (
     cd .. || exit
 
     # send to launchpad
     if [ "$UPLOAD" = "true" ]; then
-      dput ppa:pbek/qownnotes-trusty "qownnotes_${versionPart}_source.changes"
+      dput qownnotes-trusty "qownnotes_${versionPart}_source.changes"
     fi
   )
+
+  # Launchpad only needs the upstream tarball once per source version.
+  DEBUILD_SOURCE_ARGS="-sd"
 done
 
 # remove everything after we are done
