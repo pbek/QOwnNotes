@@ -58,5 +58,8 @@ class ScriptingSettingsWidget : public QWidget {
     void reloadCurrentScriptPage();
     void validateCurrentScript();
     void storeScriptListEnabledState();
+    void clearScriptInfoJsonUi() const;
+    void applyScriptInfoJsonToUi(const ScriptInfoJson &infoJson, bool showRepositoryLink) const;
+    static bool getLocalScriptInfoJson(const QString &scriptPath, ScriptInfoJson &infoJson);
     static bool scriptMatchesSearchFilter(const Script &script, const QString &searchText);
 };

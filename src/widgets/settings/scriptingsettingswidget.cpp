@@ -14,8 +14,12 @@
 
 #include "scriptingsettingswidget.h"
 
+#include <QFile>
+#include <QFileInfo>
+#include <QJsonDocument>
 #include <QMenu>
 #include <QPointer>
+#include <QSignalBlocker>
 
 #include "dialogs/filedialog.h"
 #include "dialogs/scriptrepositorydialog.h"
@@ -161,6 +165,76 @@ bool ScriptingSettingsWidget::scriptMatchesSearchFilter(const Script &script,
     }
 
     return infoJson.name.toLower().contains(searchTextLower);
+}
+
+/**
+ * Resets the script metadata fields in the UI
+ */
+void ScriptingSettingsWidget::clearScriptInfoJsonUi() const {
+    ui->scriptVersionLabel->clear();
+    ui->scriptDescriptionLabel->clear();
+    ui->scriptAuthorsLabel->clear();
+    ui->scriptRepositoryLinkLabel->clear();
+    ui->textLabel2->setVisible(false);
+    ui->scriptRepositoryLinkLabel->setVisible(false);
+}
+
+/**
+ * Populates the script metadata fields in the UI
+ */
+void ScriptingSettingsWidget::applyScriptInfoJsonToUi(const ScriptInfoJson &infoJson,
+                                                      bool showRepositoryLink) const {
+    ui->scriptVersionLabel->setText(infoJson.version);
+    ui->scriptDescriptionLabel->setText(infoJson.description);
+    ui->scriptAuthorsLabel->setText(infoJson.richAuthorText);
+
+    const bool hasRepositoryLink = showRepositoryLink && !infoJson.identifier.isEmpty();
+    ui->textLabel2->setVisible(hasRepositoryLink);
+    ui->scriptRepositoryLinkLabel->setVisible(hasRepositoryLink);
+
+    if (hasRepositoryLink) {
+        ui->scriptRepositoryLinkLabel->setText(
+            "<a href=\"https://github.com/qownnotes/scripts/tree/"
+            "master/" +
+            infoJson.identifier + "\">" + tr("Open repository") + "</a>");
+    } else {
+        ui->scriptRepositoryLinkLabel->clear();
+    }
+}
+
+/**
+ * Returns script metadata for a local script if info.json matches the file name
+ */
+bool ScriptingSettingsWidget::getLocalScriptInfoJson(const QString &scriptPath,
+                                                     ScriptInfoJson &infoJson) {
+    infoJson = ScriptInfoJson();
+
+    if (scriptPath.isEmpty()) {
+        return false;
+    }
+
+    const QFileInfo scriptFileInfo(scriptPath);
+    if (!scriptFileInfo.exists()) {
+        return false;
+    }
+
+    QFile infoFile(scriptFileInfo.dir().filePath(QStringLiteral("info.json")));
+    if (!infoFile.exists() || !infoFile.open(QIODevice::ReadOnly)) {
+        return false;
+    }
+
+    const QJsonDocument jsonDocument = QJsonDocument::fromJson(infoFile.readAll());
+    if (!jsonDocument.isObject()) {
+        return false;
+    }
+
+    const ScriptInfoJson localInfoJson(jsonDocument.object());
+    if (QFileInfo(localInfoJson.script).fileName() != scriptFileInfo.fileName()) {
+        return false;
+    }
+
+    infoJson = localInfoJson;
+    return true;
 }
 
 void ScriptingSettingsWidget::on_scriptSearchLineEdit_textChanged(const QString &arg1) {
@@ -317,6 +391,9 @@ void ScriptingSettingsWidget::on_scriptListWidget_currentItemChanged(QListWidget
 void ScriptingSettingsWidget::reloadCurrentScriptPage() {
     QListWidgetItem *item = ui->scriptListWidget->currentItem();
 
+    clearScriptInfoJsonUi();
+    ui->scriptRepositoryItemFrame->setVisible(false);
+
     if (item == nullptr) {
         return;
     }
@@ -331,9 +408,14 @@ void ScriptingSettingsWidget::reloadCurrentScriptPage() {
         ui->scriptEditFrame->setEnabled(true);
 
         bool isScriptFromRepository = _selectedScript.isScriptFromRepository();
+        ScriptInfoJson localInfoJson;
+        const bool hasLocalInfoJson =
+            !isScriptFromRepository &&
+            getLocalScriptInfoJson(_selectedScript.getScriptPath(), localInfoJson);
+
         ui->scriptNameLineEdit->setReadOnly(isScriptFromRepository);
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
-        ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
+        ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository || hasLocalInfoJson);
         ui->localScriptItemFrame->setHidden(isScriptFromRepository);
         ui->repositoryScriptItemFrame->setHidden(!isScriptFromRepository);
         ui->scriptNameLineEdit->setHidden(isScriptFromRepository);
@@ -342,16 +424,13 @@ void ScriptingSettingsWidget::reloadCurrentScriptPage() {
         // Add additional information if script was from the script repository
         if (isScriptFromRepository) {
             ScriptInfoJson infoJson = _selectedScript.getScriptInfoJson();
-
-            ui->scriptVersionLabel->setText(infoJson.version);
-            ui->scriptDescriptionLabel->setText(infoJson.description);
-            ui->scriptAuthorsLabel->setText(infoJson.richAuthorText);
-            ui->scriptRepositoryLinkLabel->setText(
-                "<a href=\"https://github.com/qownnotes/scripts/tree/"
-                "master/" +
-                infoJson.identifier + "\">" + tr("Open repository") + "</a>");
+            applyScriptInfoJsonToUi(infoJson, true);
         } else {
             ui->scriptNameLineEdit->setText(_selectedScript.getName());
+
+            if (hasLocalInfoJson) {
+                applyScriptInfoJsonToUi(localInfoJson, false);
+            }
         }
 
         // Get the registered script settings variables
@@ -384,6 +463,7 @@ void ScriptingSettingsWidget::reloadCurrentScriptPage() {
         validateCurrentScript();
     } else {
         ui->scriptEditFrame->setEnabled(false);
+        ui->scriptRepositoryItemFrame->setVisible(false);
         ui->scriptNameLineEdit->clear();
         ui->scriptPathLineEdit->clear();
     }

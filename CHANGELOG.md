@@ -2,6 +2,9 @@
 
 ## 26.5.2
 
+- Local scripts in the **Scripting** settings now read sibling `info.json`
+  metadata when the selected QML file matches the `script` entry, showing the
+  parsed version, authors, and description in the UI (for [#3595](https://github.com/pbek/QOwnNotes/issues/3595))
 - Added a new **Edit table** context menu item to the note text editor that opens a visual
   table editor dialog when right-clicking inside a Markdown table
   (for [#3593](https://github.com/pbek/QOwnNotes/issues/3593))
