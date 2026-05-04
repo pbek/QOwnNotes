@@ -2377,7 +2377,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
                                  "webSocketServerService/bookmarkSuggestionApiToken",
                                  "webAppClientService/token"};
 
-    // under OS X we have to ignore some keys
+    // under macOS we have to ignore some keys
 #ifdef Q_OS_MAC
     QStringList keyIgnoreList;
     keyIgnoreList << "AKDeviceUnlockState"
@@ -2392,7 +2392,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
         QString key = itr.next();
         QVariant value = settings.value(key);
 
-        // under OS X we have to ignore some keys
+        // under macOS we have to ignore some keys
 #ifdef Q_OS_MAC
         bool ignoreKey = false;
 

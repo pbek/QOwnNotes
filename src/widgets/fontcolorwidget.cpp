@@ -619,7 +619,7 @@ void FontColorWidget::selectLastSchema() {
     initSchemaSelector();
 
 #ifdef Q_OS_MAC
-    // under OS X we have to use a workaround to select the newly created schema
+    // under macOS we have to use a workaround to select the newly created schema
     QKeyEvent* event = new QKeyEvent(QEvent::KeyPress, Qt::Key_End, Qt::NoModifier);
     QApplication::postEvent(ui->colorSchemeComboBox, event);
 #else

@@ -106,11 +106,11 @@ QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent)
     ui->replaceLineEdit->installEventFilter(this);
 
 #ifdef Q_OS_MAC
-    // set the spacing to 8 for OS X
+    // set the spacing to 8 for macOS
     layout()->setSpacing(8);
     ui->buttonFrame->layout()->setSpacing(9);
 
-    // set the margin to 0 for the top buttons for OS X
+    // set the margin to 0 for the top buttons for macOS
     QString buttonStyle = "QPushButton {margin: 0}";
     ui->closeButton->setStyleSheet(buttonStyle);
     ui->searchDownButton->setStyleSheet(buttonStyle);

@@ -103,7 +103,7 @@ inline void loadReleaseTranslations(QTranslator *translatorsRelease, const QStri
 }
 
 /**
- * Function for loading the translations on OS X
+ * Function for loading the translations on macOS
  */
 inline void loadMacTranslations(QTranslator &translatorOSX, QTranslator &translatorOSX2,
                                 QTranslator &translatorOSX3, QTranslator &translatorOSX4,
@@ -539,7 +539,7 @@ int main(int argc, char *argv[]) {
         qputenv("QML_DISABLE_DISK_CACHE", "true");
     }
 
-    // don't log SSL warnings in releases on OS X
+    // don't log SSL warnings in releases on macOS
 #if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
     qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
 #endif

@@ -349,7 +349,7 @@ void TagManager::setupTags() {
     _ui->newNoteTagButton->setVisible(true);
 
 #ifdef Q_OS_MAC
-    // try to compensate for the different button top margins in OS X
+    // try to compensate for the different button top margins in macOS
     _ui->noteTagFrame->layout()->setContentsMargins(0, 0, 0, 0);
     _ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
 #else

@@ -61,7 +61,7 @@ QIcon SystemTrayManager::getSystemTrayIcon() {
 QSystemTrayIcon *SystemTrayManager::trayIcon() const { return _trayIcon; }
 
 void SystemTrayManager::systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason) {
-    // don't show or hide the app on OS X with a simple click because also the
+    // don't show or hide the app on macOS with a simple click because also the
     // context menu will be triggered
 #ifndef Q_OS_MAC
     if (reason == QSystemTrayIcon::Trigger) {

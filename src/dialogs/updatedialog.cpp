@@ -358,7 +358,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
  */
 bool UpdateDialog::initializeUpdateProcess(const QString &filePath) {
 #if defined(Q_OS_MAC)
-    // the OS X updater initializeMacOSUpdateProcess will be started
+    // the macOS updater initializeMacOSUpdateProcess will be started
     // from dialogButtonClicked
     Q_UNUSED(filePath);
 #elif defined(Q_OS_WIN)

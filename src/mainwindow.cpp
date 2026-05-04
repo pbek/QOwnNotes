@@ -1254,7 +1254,7 @@ void MainWindow::initTagButtonScrollArea() {
     _noteTagButtonScrollArea->setContentsMargins(0, 0, 0, 0);
 
 #ifdef Q_OS_MAC
-    // we need to set a minimum height under OS X or else the scroll area
+    // we need to set a minimum height under macOS or else the scroll area
     // will be far to high
     _noteTagButtonScrollArea->setMinimumHeight(36);
 #endif
@@ -1759,7 +1759,7 @@ void MainWindow::initStyling() {
     }
 
 #ifdef Q_OS_MAC
-    // no stylesheets needed for OS X, the margins doesn't work the same there
+    // no stylesheets needed for macOS, the margins doesn't work the same there
     ui->tagFrame->setStyleSheet(QString());
     ui->notesListFrame->setStyleSheet(QString());
     ui->noteListSubFrame->setStyleSheet(QString());
@@ -1768,7 +1768,7 @@ void MainWindow::initStyling() {
     ui->navigationTabWidget->setStyleSheet(QString());
     ui->noteViewFrame->setStyleSheet(QString());
 
-    // add some margins in OS X to match the styling of the note list
+    // add some margins in macOS to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
 
     // add a padding for the note tag frame so the `add tag` button doesn't
@@ -6578,7 +6578,7 @@ void MainWindow::initShortcuts() {
             // if the menu bar is not visible (like for the Unity
             // desktop) create a workaround with a QShortcut so the
             // shortcuts are still working
-            // we don't do that under OS X, it causes all shortcuts
+            // we don't do that under macOS, it causes all shortcuts
             // to not be viewed
             if (!menuBarIsVisible) {
                 shortcut = action->shortcut();

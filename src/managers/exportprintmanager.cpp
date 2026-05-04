@@ -88,7 +88,7 @@ bool ExportPrintManager::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
 
     Utils::Misc::storePrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
 #else
-    // under OS X and Windows the QPageSetupDialog dialog doesn't work,
+    // under macOS and Windows the QPageSetupDialog dialog doesn't work,
     // we will use a workaround to select page sizes and the orientation
 
     // Ensure color mode is always set to Color for PDF export

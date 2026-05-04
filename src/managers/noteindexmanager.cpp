@@ -216,7 +216,7 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         // QCoreApplication::flush() is obsolete since Qt 5.9
         //            QCoreApplication::flush();
 
-        // this still causes double entries on OS X and maybe Windows
+        // this still causes double entries on macOS and maybe Windows
 #ifdef Q_OS_LINUX
         QCoreApplication::sendPostedEvents();
 #endif
@@ -289,7 +289,7 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                 // QCoreApplication::flush() is obsolete since Qt 5.9
                 //                    QCoreApplication::flush();
 
-                // this still causes double entries on OS X and maybe
+                // this still causes double entries on macOS and maybe
                 // Windows
 #ifdef Q_OS_LINUX
                 QCoreApplication::sendPostedEvents();
