@@ -3090,6 +3090,10 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
             if ((keyEvent->key() == Qt::Key_Escape) && _searchWidget->isVisible()) {
                 _searchWidget->deactivate();
                 return true;
+            } else if ((keyEvent->key() == Qt::Key_R) &&
+                       keyEvent->modifiers().testFlag(Qt::ControlModifier) &&
+                       !Utils::Misc::isNoteEditingAllowed()) {
+                MainWindow::instance()->allowNoteEditing();
             } else if (!Utils::Misc::isNoteEditingAllowed()) {
                 const auto noModifierKeys = QList<int>()
                                             << Qt::Key_Return << Qt::Key_Enter << Qt::Key_Space

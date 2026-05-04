@@ -2,6 +2,8 @@
 
 ## 26.5.2
 
+- Pressing `Ctrl+R` in the **note text edit** now automatically turns off
+  read-only mode before opening the replace panel (for [#3596](https://github.com/pbek/QOwnNotes/issues/3596))
 - Fixed dark mode detection on **GNOME/Wayland** where Qt's `colorScheme()`
   incorrectly reported light mode even when the system was in dark mode, by
   preferring the D-Bus freedesktop portal query on Linux over Qt's built-in
