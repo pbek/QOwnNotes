@@ -13,10 +13,14 @@
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.07.6
 
+set -e
+
 BRANCH=main
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-launchpad-snap-$$"
+SNAP_REPO_PATH="$PROJECT_PATH/snap"
+SOURCE_REPO_PATH="$PROJECT_PATH/QOwnNotes"
 
 # use temporary checksum variable file
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
@@ -47,19 +51,19 @@ cd "$PROJECT_PATH" || exit 1
 echo "Project path: $PROJECT_PATH"
 
 # checkout Launchpad Snap repository
-git clone --depth=1 git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap snap
+git clone --depth=1 git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap "$SNAP_REPO_PATH"
 
 # checkout the source code
-git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b "$BRANCH"
-cd QOwnNotes || exit 1
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git "$SOURCE_REPO_PATH" -b "$BRANCH"
+cd "$SOURCE_REPO_PATH" || exit 1
 
 if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
   QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
 fi
 
-cd ../snap || exit 1
-cp ../QOwnNotes/build-systems/snap/snapcraft/* . -R
+cd "$SNAP_REPO_PATH" || exit 1
+cp -R "$SOURCE_REPO_PATH/build-systems/snap/snapcraft/." .
 
 # replace the version in the snapcraft.yaml file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" snapcraft.yaml
@@ -73,6 +77,6 @@ git commit -m "releasing version $QOWNNOTES_VERSION" -a
 git push
 
 # remove everything after we are done
-if [ -d $PROJECT_PATH ]; then
-  rm -rf $PROJECT_PATH
+if [ -d "$PROJECT_PATH" ]; then
+  rm -rf "$PROJECT_PATH"
 fi
