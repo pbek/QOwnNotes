@@ -289,7 +289,7 @@ jobs:
           printenv
 
       - name: "🚧 Compile application"
-        uses: snapcore/action-build@v1
+        uses: ./.github/actions/build-snap
         id: snapcraft
         with:
           path: build-systems/github/snap.qt6
@@ -300,7 +300,7 @@ jobs:
           SNAP_PATH="${{ steps.snapcraft.outputs.snap }}"
 
           if [ -z "${SNAP_PATH}" ]; then
-            echo "::error::snapcore/action-build did not return a snap artifact path"
+            echo "::error::build-snap action did not return a snap artifact path"
             exit 1
           fi
 
@@ -394,7 +394,7 @@ jobs:
           printenv
 
       - name: "🚧 Compile application"
-        uses: snapcore/action-build@v1
+        uses: ./.github/actions/build-snap
         id: snapcraft
 
       - name: "🔎 Verify snap artifact"
@@ -403,7 +403,7 @@ jobs:
           SNAP_PATH="${{ steps.snapcraft.outputs.snap }}"
 
           if [ -z "${SNAP_PATH}" ]; then
-            echo "::error::snapcore/action-build did not return a snap artifact path"
+            echo "::error::build-snap action did not return a snap artifact path"
             exit 1
           fi
 

@@ -1,0 +1,155 @@
+name: Build Snapcraft project
+description: Build a Snapcraft project with LXD and return the produced snap path
+
+inputs:
+  path:
+    description: Location of the Snapcraft project
+    default: .
+  build-info:
+    description: Include Snapcraft build information in the resulting snap
+    default: "true"
+  snapcraft-channel:
+    description: Snapcraft snap channel to install
+    default: stable
+  snapcraft-args:
+    description: Additional arguments to pass to snapcraft pack
+    default: ""
+  ua-token:
+    description: Ubuntu Pro token to attach in the build environment
+    default: ""
+  apt-mirror:
+    description: Ubuntu apt mirror to use inside the Snapcraft build environment
+    default: http://azure.archive.ubuntu.com/ubuntu
+
+outputs:
+  snap:
+    description: Path to the resulting snap
+    value: ${{ steps.output-snap.outputs.snap }}
+
+runs:
+  using: composite
+  steps:
+    - name: Install Snapcraft plus dependencies
+      shell: bash
+      env:
+        SNAPCRAFT_CHANNEL: ${{ inputs.snapcraft-channel }}
+      run: |
+        set -euo pipefail
+
+        if [ ! -x /usr/bin/snap ]; then
+          sudo apt-get update -q
+          sudo apt-get install -qy snapd
+        fi
+
+        # GitHub runners can have root permissions that make snap-confine fail.
+        if [ "$(stat -c '%u:%g' /)" != "0:0" ]; then
+          sudo chown root:root /
+        fi
+
+        if [ -x /usr/bin/lxd ]; then
+          sudo apt-get remove -qy lxd lxd-client
+        fi
+
+        sudo groupadd --force --system lxd
+        sudo usermod --append --groups lxd "$(id -un)"
+
+        if [ -x /snap/bin/lxd ]; then
+          sudo snap refresh lxd || true
+        else
+          sudo snap install lxd
+        fi
+
+        sudo lxd init --auto
+
+        # Docker packages on hosted runners can interfere with LXD networking.
+        sudo iptables -P FORWARD ACCEPT
+
+        if [ -x /snap/bin/snapcraft ]; then
+          sudo snap refresh --channel "${SNAPCRAFT_CHANNEL}" --classic snapcraft
+        else
+          sudo snap install --channel "${SNAPCRAFT_CHANNEL}" --classic snapcraft
+        fi
+
+    - name: Build Snap
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INCLUDE_BUILD_INFO: ${{ inputs.build-info }}
+        SNAPCRAFT_ARGS: ${{ inputs.snapcraft-args }}
+        UA_TOKEN: ${{ inputs.ua-token }}
+        APT_MIRROR: ${{ inputs.apt-mirror }}
+      run: |
+        set -euo pipefail
+
+        case "${INPUT_PATH}" in
+          /*) PROJECT_ROOT="${INPUT_PATH}" ;;
+          *) PROJECT_ROOT="${GITHUB_WORKSPACE}/${INPUT_PATH}" ;;
+        esac
+
+        if [ ! -d "${PROJECT_ROOT}" ]; then
+          echo "::error::Snapcraft project directory does not exist: ${PROJECT_ROOT}"
+          exit 1
+        fi
+
+        cd "${PROJECT_ROOT}"
+
+        IMAGE_INFO="{\"build_url\":\"https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}"
+        export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
+        export SNAPCRAFT_IMAGE_INFO="${IMAGE_INFO}"
+        export SNAPCRAFT_APT_MIRROR="${APT_MIRROR}"
+        export SNAPCRAFT_BUILD_ENVIRONMENT_PRIMARY_MIRROR="${APT_MIRROR}"
+
+        if [ "${INCLUDE_BUILD_INFO^^}" = "TRUE" ]; then
+          export SNAPCRAFT_BUILD_INFO=1
+        fi
+
+        cmd=(snapcraft)
+        if [ -n "${SNAPCRAFT_ARGS}" ]; then
+          read -r -a extra_args <<< "${SNAPCRAFT_ARGS}"
+          cmd+=("${extra_args[@]}")
+        fi
+        if [ -n "${UA_TOKEN}" ]; then
+          cmd+=(--ua-token "${UA_TOKEN}")
+        fi
+        cmd+=(pack)
+
+        for attempt in 1 2 3; do
+          if sudo -u "$(id -un)" -E "${cmd[@]}"; then
+            exit 0
+          fi
+
+          if [ "${attempt}" = 3 ]; then
+            echo "::error::snapcraft pack failed after ${attempt} attempts"
+            exit 1
+          fi
+
+          echo "snapcraft pack failed on attempt ${attempt}; retrying in 60 seconds"
+          sleep 60
+        done
+      working-directory: ${{ github.workspace }}
+
+    - name: Output Snap path
+      id: output-snap
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+      run: |
+        set -euo pipefail
+
+        case "${INPUT_PATH}" in
+          /*) PROJECT_ROOT="${INPUT_PATH}" ;;
+          *) PROJECT_ROOT="${GITHUB_WORKSPACE}/${INPUT_PATH}" ;;
+        esac
+
+        mapfile -t snaps < <(find "${PROJECT_ROOT}" -maxdepth 1 -type f -name '*.snap' -print | sort)
+
+        if [ "${#snaps[@]}" -eq 0 ]; then
+          echo "::error::No snap files produced by build in ${PROJECT_ROOT}"
+          exit 1
+        fi
+
+        if [ "${#snaps[@]}" -gt 1 ]; then
+          echo "::warning::Multiple snaps found in ${PROJECT_ROOT}; using ${snaps[0]}"
+        fi
+
+        echo "snap=${snaps[0]}" >> "${GITHUB_OUTPUT}"

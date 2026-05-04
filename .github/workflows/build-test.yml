@@ -13,6 +13,7 @@ on:
       - "snap/**"
       - "tests/**"
       - "build-systems/github/**"
+      - ".github/actions/build-snap/**"
       - ".github/workflows/build-test.yml"
   pull_request:
     paths:
@@ -20,6 +21,7 @@ on:
       - "snap/**"
       - "tests/**"
       - "build-systems/github/**"
+      - ".github/actions/build-snap/**"
       - ".github/workflows/build-test.yml"
   workflow_dispatch:
 #  schedule:
@@ -248,7 +250,7 @@ jobs:
           ../build-systems/github/macos/create-dmg.sh
       - if: contains( matrix.os, 'ubuntu-22') && ( matrix.qt-version == '5.15.2' )
         name: Build for Snapcraft
-        uses: snapcore/action-build@v1
+        uses: ./.github/actions/build-snap
       - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
         name: Build QOwnNotes for Windows with Qt 6
         run: |
