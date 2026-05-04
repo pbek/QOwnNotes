@@ -1421,7 +1421,26 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
 }
 
 bool Utils::Gui::doSystemDarkModeCheck(bool systemChangeDetected) {
+#ifdef Q_OS_WIN32
+    // On Windows, try the registry-based check first, then fall back to Qt's colorScheme
+    if (doWindowsDarkModeCheck()) {
+        return true;
+    }
+#endif
+
+#ifdef Q_OS_LINUX
+    // On Linux, prefer the D-Bus freedesktop portal check over Qt's colorScheme().
+    // Qt's QStyleHints::colorScheme() can incorrectly report Light on GNOME/Wayland
+    // even when the system is in dark mode (see issue #3594), whereas the portal
+    // query reads the setting GNOME and KDE both expose correctly.
+    if (doLinuxDarkModeCheck()) {
+        return true;
+    }
+#endif
+
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    // Fall back to Qt's built-in color scheme detection for platforms where the
+    // OS-specific checks above are not available or did not produce a result
     const Qt::ColorScheme colorScheme = QGuiApplication::styleHints()->colorScheme();
 
     if (colorScheme != Qt::ColorScheme::Unknown) {
@@ -1429,18 +1448,6 @@ bool Utils::Gui::doSystemDarkModeCheck(bool systemChangeDetected) {
     }
 #else
     Q_UNUSED(systemChangeDetected)
-#endif
-
-#ifdef Q_OS_WIN32
-    if (doWindowsDarkModeCheck()) {
-        return true;
-    }
-#endif
-
-#ifdef Q_OS_LINUX
-    if (doLinuxDarkModeCheck()) {
-        return true;
-    }
 #endif
 
     return false;

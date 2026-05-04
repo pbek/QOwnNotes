@@ -2,6 +2,10 @@
 
 ## 26.5.2
 
+- Fixed dark mode detection on **GNOME/Wayland** where Qt's `colorScheme()`
+  incorrectly reported light mode even when the system was in dark mode, by
+  preferring the D-Bus freedesktop portal query on Linux over Qt's built-in
+  detection (for [#3594](https://github.com/pbek/QOwnNotes/issues/3594))
 - Local scripts in the **Scripting** settings now read sibling `info.json`
   metadata when the selected QML file matches the `script` entry, showing the
   parsed version, authors, and description in the UI (for [#3595](https://github.com/pbek/QOwnNotes/issues/3595))
