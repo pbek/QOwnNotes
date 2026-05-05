@@ -2,6 +2,10 @@
 
 ## 26.5.3
 
+- New note encryption now writes a portable versioned encryption envelope with
+  per-note salt and nonce metadata, derives keys with Botan PBKDF2-HMAC-SHA1,
+  and encrypts with AES-256-CBC plus HMAC authentication while keeping legacy
+  encrypted notes decryptable (for [#3598](https://github.com/pbek/QOwnNotes/issues/3598))
 - Secrets such as cloud connection passwords, proxy passwords, API keys, and
   scripting secret settings are now stored in the operating system keychain via
   qtkeychain instead of being obfuscated with SimpleCrypt in the settings file;

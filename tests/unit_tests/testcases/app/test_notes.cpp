@@ -163,9 +163,13 @@ void TestNotes::testNoteEncryption() {
 
     QVERIFY(note.getId() == 2);
     QVERIFY(note.getName() == noteName);
-    QVERIFY(note.getNoteText() ==
-            QStringLiteral("MyTestNote\n============\n\n<!-- BEGIN ENCRYPTED TEXT "
-                           "--\nVTVdShbeNi63fYLB7B56pg==\n-- END ENCRYPTED TEXT -->"));
+    QVERIFY(note.getNoteText().startsWith(
+        QStringLiteral("MyTestNote\n============\n\n<!-- BEGIN ENCRYPTED TEXT --\n")));
+    QVERIFY(note.getNoteText().contains(QStringLiteral("qon-crypto: 2")));
+    QVERIFY(note.getNoteText().contains(QStringLiteral("kdf: PBKDF2-HMAC-SHA1")));
+    QVERIFY(note.getNoteText().contains(QStringLiteral("cipher: AES-256-CBC-PKCS7-HMAC-SHA1")));
+    QVERIFY(note.getNoteText().contains(QStringLiteral("mac: ")));
+    QVERIFY(note.getNoteText().endsWith(QStringLiteral("\n-- END ENCRYPTED TEXT -->")));
 }
 
 void TestNotes::testNoteDecryption() {

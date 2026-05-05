@@ -26,6 +26,14 @@ class BotanWrapper {
      */
     QString Decrypt(const QString &Data);
 
+    QString EncryptV2(const QString &Data, const QString &saltBase64, const QString &nonceBase64,
+                      size_t iterations, QString *macBase64);
+
+    QString DecryptV2(const QString &Data, const QString &saltBase64, const QString &nonceBase64,
+                      const QString &macBase64, size_t iterations);
+
+    static QString randomBytesBase64(int size);
+
     /*!
      * Sets the Password
      * @param Password The password

@@ -427,6 +427,7 @@ class Note {
         const QString &connectionName = QStringLiteral("memory"));
 
     [[nodiscard]] QString getDecryptedNoteText(const QString &encryptedNoteText) const;
+    [[nodiscard]] QString decryptEncryptedNoteText(const QString &encryptedNoteText) const;
 
     static QString parseEncryptedNoteText(const QString &noteText);
     static bool isEncryptedTextBegin(const QString &text);
