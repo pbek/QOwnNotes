@@ -181,7 +181,9 @@ void TodoSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("ownCloud/todoCalendarCalDAVUsername"),
                       ui->calDavUsernameEdit->text());
     settings.setValue(QStringLiteral("ownCloud/todoCalendarCalDAVPassword"),
-                      CryptoService::instance()->encryptToString(ui->calDavPasswordEdit->text()));
+                      CryptoService::instance()->encryptToString(
+                          ui->calDavPasswordEdit->text(),
+                          QStringLiteral("settings/ownCloud/todoCalendarCalDAVPassword")));
 }
 
 /**

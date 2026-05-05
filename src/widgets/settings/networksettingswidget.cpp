@@ -158,8 +158,10 @@ void NetworkSettingsWidget::storeProxySettings() {
         settings.setValue(QStringLiteral("networking/proxyNeedsAuth"),
                           ui->authRequiredcheckBox->isChecked());
         settings.setValue(QStringLiteral("networking/proxyUser"), ui->userLineEdit->text());
-        settings.setValue(QStringLiteral("networking/proxyPassword"),
-                          CryptoService::instance()->encryptToString(ui->passwordLineEdit->text()));
+        settings.setValue(
+            QStringLiteral("networking/proxyPassword"),
+            CryptoService::instance()->encryptToString(
+                ui->passwordLineEdit->text(), QStringLiteral("settings/networking/proxyPassword")));
         settings.setValue(QStringLiteral("networking/proxyHostName"), ui->hostLineEdit->text());
         settings.setValue(QStringLiteral("networking/proxyPort"), ui->portSpinBox->value());
     }

@@ -12,6 +12,12 @@ CONFIG += c++11
 PROJECT_ROOT = $$PWD/../..//
 SRC_DIR = $$PROJECT_ROOT/src//
 
+include($$SRC_DIR/libraries/qtkeychain/qtkeychain.pri)
+lessThan(QT_VERSION, 5.15.0) {
+    # qtkeychain references QDataStream::Qt_5_15, which is unavailable in legacy Qt 5 builds.
+    DEFINES += Qt_5_15=Qt_5_0
+}
+
 #HEADERS += \
 #    $$PROJECT_ROOT/3rdparty/qredisclient/tests/unit_tests/basetestcase.h \
 #    $$PROJECT_ROOT/3rdparty/qredisclient/tests/unit_tests/mocks/*.h \
@@ -30,6 +36,7 @@ SOURCES += \
 INCLUDEPATH += \
 #    $$SRC_DIR/modules/ \
     $$SRC_DIR/ \
+    $$SRC_DIR/libraries/qtkeychain \
     $$PWD/ \
 #    $$PROJECT_ROOT/3rdparty/qredisclient/tests/unit_tests/
 

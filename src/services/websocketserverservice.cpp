@@ -156,7 +156,9 @@ QString WebSocketServerService::getBookmarkSuggestionApiToken() {
     // Allow plaintext fallback for old / manually set values.
     if (token.isEmpty() && !storedValue.isEmpty()) {
         token = storedValue;
-        settings.setValue(tokenSettingKey, CryptoService::instance()->encryptToString(token));
+        settings.setValue(tokenSettingKey,
+                          CryptoService::instance()->encryptToString(
+                              token, QStringLiteral("settings/") + tokenSettingKey));
     }
 
     return token;
@@ -170,7 +172,9 @@ QString WebSocketServerService::getOrGenerateBookmarkSuggestionApiToken() {
 
     if (token.isEmpty()) {
         token = Utils::Misc::generateRandomString(32);
-        settings.setValue(tokenSettingKey, CryptoService::instance()->encryptToString(token));
+        settings.setValue(tokenSettingKey,
+                          CryptoService::instance()->encryptToString(
+                              token, QStringLiteral("settings/") + tokenSettingKey));
     }
 
     return token;

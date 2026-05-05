@@ -176,7 +176,10 @@ void ScriptSettingWidget::storeSettingsVariable(const QJsonValue &value) {
  */
 void ScriptSettingWidget::on_stringLineEdit_textChanged(const QString &arg1) {
     if (_variableMap["type"].toString() == "string-secret") {
-        storeSettingsVariable(CryptoService::instance()->encryptToString(arg1));
+        const QString key = QStringLiteral("database/script/%1/settings/!%2")
+                                .arg(_script.getId())
+                                .arg(_variableMap["identifier"].toString());
+        storeSettingsVariable(CryptoService::instance()->encryptToString(arg1, key));
     } else {
         storeSettingsVariable(arg1);
     }

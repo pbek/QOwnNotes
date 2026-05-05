@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.5.3
+
+- Secrets such as cloud connection passwords, proxy passwords, API keys, and
+  scripting secret settings are now stored in the operating system keychain via
+  qtkeychain instead of being obfuscated with SimpleCrypt in the settings file;
+  existing SimpleCrypt-backed secrets are migrated to the keychain automatically
+  when possible (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
+
 ## 26.5.2
 
 - Pressing `Ctrl+R` in the **note text edit** now automatically turns off

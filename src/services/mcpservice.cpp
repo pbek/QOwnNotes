@@ -110,7 +110,8 @@ QString McpService::getToken() {
     // Plaintext fallback for manually set values
     if (token.isEmpty() && !stored.isEmpty()) {
         token = stored;
-        settings.setValue(key, CryptoService::instance()->encryptToString(token));
+        settings.setValue(key, CryptoService::instance()->encryptToString(
+                                   token, QStringLiteral("settings/") + key));
     }
 
     return token;
@@ -123,7 +124,8 @@ QString McpService::getOrGenerateToken() {
         token = Utils::Misc::generateRandomString(32);
         SettingsService settings;
         settings.setValue(QStringLiteral("ai/mcpServerToken"),
-                          CryptoService::instance()->encryptToString(token));
+                          CryptoService::instance()->encryptToString(
+                              token, QStringLiteral("settings/ai/mcpServerToken")));
     }
 
     return token;

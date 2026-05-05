@@ -62,7 +62,8 @@ void McpServerSettingsWidget::storeSettings() {
         ui->mcpServerTokenLineEdit->setText(mcpServerToken);
     }
     settings.setValue(QStringLiteral("ai/mcpServerToken"),
-                      CryptoService::instance()->encryptToString(mcpServerToken));
+                      CryptoService::instance()->encryptToString(
+                          mcpServerToken, QStringLiteral("settings/ai/mcpServerToken")));
 }
 
 void McpServerSettingsWidget::on_mcpServerEnabledCheckBox_toggled(bool checked) {

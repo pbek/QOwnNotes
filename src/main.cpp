@@ -440,13 +440,14 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context, con
 
 inline void setAppProperties(QCoreApplication &app, const QString &release,
                              const QStringList &arguments, bool singleApp, bool snap, bool portable,
-                             const QString &action) {
+                             const QString &action, const QString &session) {
     app.setProperty("release", release);
     app.setProperty("portable", portable);
     if (singleApp) app.setProperty("singleApplication", true);
     app.setProperty("snap", snap);
     app.setProperty("arguments", arguments);
     app.setProperty("startupAction", action);
+    app.setProperty("session", session);
 }
 
 int main(int argc, char *argv[]) {
@@ -672,7 +673,7 @@ int main(int argc, char *argv[]) {
             return 0;
         }
 
-        setAppProperties(app, release, arguments, true, snap, portable, action);
+        setAppProperties(app, release, arguments, true, snap, portable, action, session);
 #ifndef QT_DEBUG
         loadReleaseTranslations(translatorsRelease, locale);
 #endif
@@ -733,7 +734,7 @@ int main(int argc, char *argv[]) {
         // use a normal QApplication if multiple instances of the app are
         // allowed
         QApplication app(argc, argv);
-        setAppProperties(app, release, arguments, false, snap, portable, action);
+        setAppProperties(app, release, arguments, false, snap, portable, action, session);
 
 #ifndef QT_DEBUG
         loadReleaseTranslations(translatorsRelease, locale);

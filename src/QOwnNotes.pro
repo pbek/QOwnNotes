@@ -37,6 +37,13 @@ CONFIG(USE_QLITEHTML) {
     include(libraries/qlitehtml/src/qlitehtml.pri)
 }
 
+include(libraries/qtkeychain/qtkeychain.pri)
+INCLUDEPATH += $$PWD/libraries/qtkeychain
+lessThan(QT_VERSION, 5.15.0) {
+    # qtkeychain references QDataStream::Qt_5_15, which is unavailable in legacy Qt 5 builds.
+    DEFINES += Qt_5_15=Qt_5_0
+}
+
 TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns
@@ -604,6 +611,9 @@ CONFIG(DEV_MODE) {
             QMAKE_CXXFLAGS += -Wno-error=unused-parameter -Wno-error=missing-field-initializers \
                 -Wno-error=sign-compare -Wno-error=unused-but-set-variable
         }
+
+        # Suppress warnings-as-errors from bundled qtkeychain sources
+        QMAKE_CXXFLAGS += -Wno-error=cast-function-type -Wno-error=switch
     }
 }
 

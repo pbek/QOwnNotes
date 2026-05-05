@@ -97,8 +97,11 @@ void WebCompanionSettingsWidget::storeSettings() {
         bookmarkSuggestionApiToken = Utils::Misc::generateRandomString(32);
         ui->bookmarkSuggestionApiTokenLineEdit->setText(bookmarkSuggestionApiToken);
     }
-    settings.setValue(QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken"),
-                      CryptoService::instance()->encryptToString(bookmarkSuggestionApiToken));
+    settings.setValue(
+        QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken"),
+        CryptoService::instance()->encryptToString(
+            bookmarkSuggestionApiToken,
+            QStringLiteral("settings/webSocketServerService/bookmarkSuggestionApiToken")));
     settings.setValue(QStringLiteral("webSocketServerService/bookmarksTag"),
                       ui->bookmarksTagLineEdit->text());
     settings.setValue(QStringLiteral("webSocketServerService/bookmarksNoteName"),

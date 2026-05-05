@@ -123,6 +123,40 @@ target_include_directories(QOwnNotes PRIVATE ${CMAKE_CURRENT_LIST_DIR}
 set(BUILD_SHARED_LIBS OFF)
 # QHotKey library Disable building tests inside QHotKey library
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+set(BUILD_WITH_QT6 ${QON_QT6_BUILD})
+set(BUILD_TRANSLATIONS
+    OFF
+    CACHE BOOL "" FORCE)
+set(BUILD_TEST_APPLICATION
+    OFF
+    CACHE BOOL "" FORCE)
+set(BUILD_QTQUICK_DEMO
+    OFF
+    CACHE BOOL "" FORCE)
+set(BUILD_TESTING
+    OFF
+    CACHE BOOL "" FORCE)
+
+find_package(PkgConfig QUIET)
+if(PKG_CONFIG_FOUND)
+  pkg_check_modules(LIBSECRET libsecret-1)
+endif()
+set(LIBSECRET_SUPPORT
+    ${LIBSECRET_FOUND}
+    CACHE BOOL "" FORCE)
+if(NOT QON_QT6_BUILD)
+  find_package(
+    Qt5
+    COMPONENTS Core
+    REQUIRED)
+endif()
+add_subdirectory(libraries/qtkeychain EXCLUDE_FROM_ALL)
+if(QT_VERSION_MAJOR EQUAL 5 AND Qt5Core_VERSION VERSION_LESS 5.15.0)
+  # qtkeychain references QDataStream::Qt_5_15, which is unavailable in legacy
+  # Qt 5 builds.
+  target_compile_definitions(qt5keychain PRIVATE Qt_5_15=Qt_5_0)
+endif()
+
 set(QHOTKEY_EXAMPLES OFF)
 add_subdirectory(libraries/qhotkey EXCLUDE_FROM_ALL)
 
@@ -799,7 +833,8 @@ target_link_libraries(
           QHotkey::QHotkey
           Botan::Botan
           fakevim
-          Google::DiffMatchPatch)
+          Google::DiffMatchPatch
+          qt${QT_VERSION_MAJOR}keychain)
 
 if(USE_QLITEHTML)
   target_link_libraries(QOwnNotes PRIVATE qlitehtml::qlitehtml)

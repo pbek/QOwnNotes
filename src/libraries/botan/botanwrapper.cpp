@@ -10,6 +10,7 @@
 #include <botan/exceptn.h>
 #include <botan/hash.h>
 #include <botan/kdf.h>
+#include <botan/mac.h>
 #include <botan/pbkdf.h>
 #include <botan/pwdhash.h>
 #include <botan/secmem.h>

@@ -62,11 +62,15 @@ void AiSettingsWidget::readSettings() {
 void AiSettingsWidget::storeSettings() {
     SettingsService settings;
 
-    settings.setValue(QStringLiteral("ai/groq/apiKey"),
-                      CryptoService::instance()->encryptToString(ui->groqApiKeyLineEdit->text()));
+    settings.setValue(
+        QStringLiteral("ai/groq/apiKey"),
+        CryptoService::instance()->encryptToString(ui->groqApiKeyLineEdit->text(),
+                                                   QStringLiteral("settings/ai/groq/apiKey")));
 
-    settings.setValue(QStringLiteral("ai/openai/apiKey"),
-                      CryptoService::instance()->encryptToString(ui->openAiApiKeyLineEdit->text()));
+    settings.setValue(
+        QStringLiteral("ai/openai/apiKey"),
+        CryptoService::instance()->encryptToString(ui->openAiApiKeyLineEdit->text(),
+                                                   QStringLiteral("settings/ai/openai/apiKey")));
     settings.setValue(QStringLiteral("ai/responseTimeout"),
                       ui->openAiResponseTimeoutSpinBox->value());
 }
