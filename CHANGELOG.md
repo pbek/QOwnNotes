@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.5.4
+
+- Fixed a startup crash when the Markdown LSP server initialized while qtkeychain
+  secret migration was running a nested event loop during main window setup;
+  Markdown LSP startup is now delayed until the status bar exists, fixing the
+  regression from the keychain changes (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
+
 ## 26.5.3
 
 - New note encryption now writes a portable versioned encryption envelope with

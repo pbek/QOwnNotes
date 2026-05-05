@@ -588,7 +588,6 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     connect(this, &QOwnNotesMarkdownTextEdit::customContextMenuRequested, this,
             &QOwnNotesMarkdownTextEdit::onContextMenu);
 
-    applyMarkdownLspSettings();
     refreshFoldingSidebar();
 }
 
@@ -2445,7 +2444,9 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     _centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     QMarkdownTextEdit::updateSettings();
 
-    applyMarkdownLspSettings();
+    if (_markdownLspInitialized) {
+        applyMarkdownLspSettings();
+    }
 }
 
 void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
@@ -3558,6 +3559,11 @@ void QOwnNotesMarkdownTextEdit::closeMarkdownLspDocument() {
     if (auto *h = dynamic_cast<QOwnNotesMarkdownHighlighter *>(highlighter())) {
         h->clearMarkdownLspDiagnostics();
     }
+}
+
+void QOwnNotesMarkdownTextEdit::initializeMarkdownLsp() {
+    _markdownLspInitialized = true;
+    applyMarkdownLspSettings();
 }
 
 void QOwnNotesMarkdownTextEdit::applyMarkdownLspSettings() {

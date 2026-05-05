@@ -185,6 +185,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     ui = new Ui::MainWindow;
 
     ui->setupUi(this);
+    ui->noteTextEdit->initializeMarkdownLsp();
+    ui->encryptedNoteTextEdit->initializeMarkdownLsp();
 
     _logWidget = new LogWidget(this);
     connect(this, &MainWindow::log, _logWidget, &LogWidget::log);

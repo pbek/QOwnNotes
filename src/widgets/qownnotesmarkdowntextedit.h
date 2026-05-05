@@ -131,6 +131,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
     void updateIgnoredClickUrlRegexps();
 
+    void initializeMarkdownLsp();
     void setMarkdownLspDocumentPath(const QString &filePath, const QString &text);
     void closeMarkdownLspDocument();
 
@@ -270,6 +271,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     QVector<MarkdownLspClient::Diagnostic> _markdownLspAllDiagnostics;
     QVector<MarkdownLspClient::Diagnostic> _markdownLspDiagnostics;
     bool _markdownLspEnabled = false;
+    bool _markdownLspInitialized = false;
 
     // Static pointer to the currently active editor for AI autocomplete
     static QOwnNotesMarkdownTextEdit *_activeAutocompleteEditor;
