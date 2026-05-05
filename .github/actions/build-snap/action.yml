@@ -91,6 +91,8 @@ runs:
           exit 1
         fi
 
+        PROJECT_ROOT="$(realpath "${PROJECT_ROOT}")"
+
         cd "${PROJECT_ROOT}"
 
         IMAGE_INFO="{\"build_url\":\"https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}"
@@ -140,6 +142,8 @@ runs:
           /*) PROJECT_ROOT="${INPUT_PATH}" ;;
           *) PROJECT_ROOT="${GITHUB_WORKSPACE}/${INPUT_PATH}" ;;
         esac
+
+        PROJECT_ROOT="$(realpath "${PROJECT_ROOT}")"
 
         mapfile -t snaps < <(find "${PROJECT_ROOT}" -maxdepth 1 -type f -name '*.snap' -print | sort)
 
