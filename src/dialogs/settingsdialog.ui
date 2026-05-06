@@ -129,7 +129,7 @@
            </item>
            <item>
             <property name="text">
-             <string notr="true">ownCloud</string>
+              <string notr="true">Nextcloud / ownCloud</string>
             </property>
             <property name="whatsThis">
              <string notr="true">1</string>
@@ -515,8 +515,8 @@
              </item>
             </layout>
            </widget>
-                      <widget class="QWidget" name="ownCloudPage">
-            <layout class="QGridLayout" name="ownCloudPageGridLayout">
+                      <widget class="QWidget" name="cloudPage">
+            <layout class="QGridLayout" name="cloudPageGridLayout">
              <property name="leftMargin">
               <number>0</number>
              </property>
@@ -530,7 +530,7 @@
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <widget class="OwnCloudSettingsWidget" name="ownCloudSettingsWidget" native="true"/>
+              <widget class="CloudSettingsWidget" name="cloudSettingsWidget" native="true"/>
              </item>
             </layout>
            </widget>
@@ -1360,9 +1360,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
              <container>1</container>
             </customwidget>
             <customwidget>
-             <class>OwnCloudSettingsWidget</class>
+             <class>CloudSettingsWidget</class>
              <extends>QWidget</extends>
-             <header location="global">widgets/settings/owncloudsettingswidget.h</header>
+             <header location="global">widgets/settings/cloudsettingswidget.h</header>
              <container>1</container>
             </customwidget>
            <customwidget>
@@ -1388,14 +1388,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <tabstop>noteFolderLocalPathLineEdit</tabstop>
   <tabstop>noteFolderRemotePathLineEdit</tabstop>
   <tabstop>noteFolderRemotePathButton</tabstop>
-  <tabstop>useOwnCloudPathButton</tabstop>
+  <tabstop>useCloudPathButton</tabstop>
   <tabstop>noteFolderRemotePathTreeWidget</tabstop>
   <tabstop>noteFolderNameLineEdit</tabstop>
   <tabstop>noteFolderActiveCheckBox</tabstop>
   <tabstop>noteFolderCloudConnectionComboBox</tabstop>
   <tabstop>noteFolderShowSubfoldersCheckBox</tabstop>
   <tabstop>noteFolderGitCommitCheckBox</tabstop>
-   <tabstop>ownCloudSettingsWidget</tabstop>
+   <tabstop>cloudSettingsWidget</tabstop>
   <tabstop>noProxyRadioButton</tabstop>
   <tabstop>systemProxyRadioButton</tabstop>
   <tabstop>manualProxyRadioButton</tabstop>
@@ -1409,7 +1409,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <tabstop>appMetricsCheckBox</tabstop>
   <tabstop>appHeartbeatCheckBox</tabstop>
   <tabstop>calDavCalendarRadioButton</tabstop>
-  <tabstop>defaultOwnCloudCalendarRadioButton</tabstop>
+  <tabstop>defaultCloudCalendarRadioButton</tabstop>
   <tabstop>calendarPlusRadioButton</tabstop>
   <tabstop>legacyOwnCloudCalendarRadioButton</tabstop>
   <tabstop>calDavServerUrlEdit</tabstop>

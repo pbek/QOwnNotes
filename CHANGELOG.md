@@ -2,6 +2,9 @@
 
 ## 26.5.5
 
+- Refactored internal ownCloud-specific class names, file names, and function
+  names for cloud integration to generic cloud naming, since the integration is
+  used with Nextcloud as well as ownCloud (for [#3600](https://github.com/pbek/QOwnNotes/issues/3600))
 - Improved cloud connection creation and deletion safeguards by asking for
   confirmation before deleting a cloud connection and by starting new cloud
   connections with empty settings instead of copying the previous connection

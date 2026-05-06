@@ -6,10 +6,10 @@
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
-// we set a user agent to prevent troubles with some ownCloud / Nextcloud
+// We set a user agent to prevent troubles with some Nextcloud / ownCloud
 // server hosting providers
 // see: https://github.com/pbek/QOwnNotes/issues/541
-#define OWNCLOUD_SERVICE_USER_AGENT \
+#define CLOUD_SERVICE_USER_AGENT \
     "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
 
 struct CalDAVCalendarData {
@@ -29,7 +29,7 @@ class QNetworkRequest;
 class QAuthenticator;
 class QString;
 
-class OwnCloudService : public QObject {
+class CloudService : public QObject {
     Q_OBJECT
 
    public:
@@ -37,11 +37,11 @@ class OwnCloudService : public QObject {
         LegacyOwnCloudCalendar = 0,
         CalendarPlus,
         CalDAVCalendar,
-        DefaultOwnCloudCalendar
+        DefaultCloudCalendar
     };
     Q_ENUMS(CalendarBackend)
 
-    explicit OwnCloudService(int cloudConnectionId = -1, QObject *parent = nullptr);
+    explicit CloudService(int cloudConnectionId = -1, QObject *parent = nullptr);
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
@@ -67,7 +67,7 @@ class OwnCloudService : public QObject {
 
     void abortSettingsConnectionTest();
 
-    static bool hasOwnCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
+    static bool hasCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
 
     void shareNote(const Note &note, ShareDialog *dialog);
 
@@ -79,11 +79,11 @@ class OwnCloudService : public QObject {
 
     void removeNoteShare(const Note &note, ShareDialog *dialog);
 
-    static OwnCloudService *instance(bool reset = false, int cloudConnectionId = -1);
+    static CloudService *instance(bool reset = false, int cloudConnectionId = -1);
 
-    static OwnCloudService *currentInstance();
+    static CloudService *currentInstance();
 
-    static bool isOwnCloudSupportEnabled();
+    static bool isCloudSupportEnabled();
 
     static bool isTodoCalendarSupportEnabled();
 
@@ -122,7 +122,7 @@ class OwnCloudService : public QObject {
     QString trashListPath;
     QString appInfoPath;
     QString capabilitiesPath;
-    QString ownCloudTestPath;
+    QString cloudTestPath;
     QString restoreTrashedNotePath;
     QString sharePath;
     QString bookmarkPath;
@@ -153,11 +153,11 @@ class OwnCloudService : public QObject {
 
     void loadDirectory(QString &data);
 
-    void showOwnCloudServerErrorMessage(const QString &message = QString(),
-                                        bool withSettingsButton = true);
+    void showCloudServerErrorMessage(const QString &message = QString(),
+                                     bool withSettingsButton = true);
 
-    void showOwnCloudMessage(QString headline = QString(), QString message = QString(),
-                             bool withSettingsButton = true);
+    void showCloudMessage(QString headline = QString(), QString message = QString(),
+                          bool withSettingsButton = true);
 
     void updateNoteShareStatusFromShare(QString &data);
 

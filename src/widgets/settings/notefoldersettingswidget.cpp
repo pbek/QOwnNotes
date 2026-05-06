@@ -23,7 +23,7 @@
 #include "dialogs/settingsdialog.h"
 #include "entities/notesubfolder.h"
 #include "mainwindow.h"
-#include "services/owncloudservice.h"
+#include "services/cloudservice.h"
 #include "services/settingsservice.h"
 #include "ui_notefoldersettingswidget.h"
 #include "utils/gui.h"
@@ -277,21 +277,20 @@ void NoteFolderSettingsWidget::on_noteFolderActiveCheckBox_stateChanged(int arg1
 }
 
 void NoteFolderSettingsWidget::on_noteFolderRemotePathButton_clicked() {
-    // Request the dialog to store settings so the OwnCloud connection is up-to-date
+    // Request the dialog to store settings so the Cloud connection is up-to-date
     Q_EMIT storeSettingsRequested();
 
     setNoteFolderRemotePathTreeWidgetFrameVisibility(true);
 
     _noteFolderRemotePathTreeStatusBar->showMessage(tr("Loading folders from server"));
 
-    OwnCloudService *ownCloud =
-        OwnCloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
-    ownCloud->settingsGetFileList(qobject_cast<SettingsDialog *>(window()), QLatin1String(""));
+    CloudService *cloud = CloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
+    cloud->settingsGetFileList(qobject_cast<SettingsDialog *>(window()), QLatin1String(""));
 }
 
 /**
  * Populates the note folder remote path tree with items.
- * Callback function from OwnCloudService::loadDirectory() via SettingsDialog.
+ * Callback function from CloudService::loadDirectory() via SettingsDialog.
  */
 void NoteFolderSettingsWidget::setNoteFolderRemotePathList(QStringList pathList) {
     if (pathList.count() <= 1) {
@@ -366,9 +365,8 @@ void NoteFolderSettingsWidget::on_noteFolderRemotePathTreeWidget_currentItemChan
     _noteFolderRemotePathTreeStatusBar->showMessage(
         tr("Loading folders in '%1' from server").arg(current->text(0)));
 
-    OwnCloudService *ownCloud =
-        OwnCloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
-    ownCloud->settingsGetFileList(qobject_cast<SettingsDialog *>(window()), folderName);
+    CloudService *cloud = CloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
+    cloud->settingsGetFileList(qobject_cast<SettingsDialog *>(window()), folderName);
 }
 
 void NoteFolderSettingsWidget::on_noteFolderCloudConnectionComboBox_currentIndexChanged(int index) {
@@ -383,7 +381,7 @@ void NoteFolderSettingsWidget::on_noteFolderCloudConnectionComboBox_currentIndex
     }
 }
 
-void NoteFolderSettingsWidget::on_useOwnCloudPathButton_clicked() {
+void NoteFolderSettingsWidget::on_useCloudPathButton_clicked() {
     QTreeWidgetItem *item = ui->noteFolderRemotePathTreeWidget->currentItem();
     if (item == nullptr) {
         return;
@@ -615,17 +613,4 @@ void NoteFolderSettingsWidget::on_allowDifferentNoteFileNameCheckBox_toggled(boo
 void NoteFolderSettingsWidget::on_noteFolderGitCommitCheckBox_toggled(bool checked) {
     _selectedNoteFolder.setUseGit(checked);
     _selectedNoteFolder.store();
-}
-
-void NoteFolderSettingsWidget::replaceOwnCloudText() {
-    ui->noteFolderRemotePathLabel->setText(
-        Utils::Misc::replaceOwnCloudText(ui->noteFolderRemotePathLabel->text()));
-    ui->noteFolderRemotePathListLabel->setText(
-        Utils::Misc::replaceOwnCloudText(ui->noteFolderRemotePathListLabel->text()));
-    ui->useOwnCloudPathButton->setText(
-        Utils::Misc::replaceOwnCloudText(ui->useOwnCloudPathButton->text()));
-    ui->noteFolderRemotePathButton->setToolTip(
-        Utils::Misc::replaceOwnCloudText(ui->noteFolderRemotePathButton->toolTip()));
-    ui->noteFolderRemotePathLineEdit->setToolTip(
-        Utils::Misc::replaceOwnCloudText(ui->noteFolderRemotePathLineEdit->toolTip()));
 }

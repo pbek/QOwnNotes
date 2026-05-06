@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>OwnCloudSettingsWidget</class>
- <widget class="QWidget" name="OwnCloudSettingsWidget">
+ <class>CloudSettingsWidget</class>
+ <widget class="QWidget" name="CloudSettingsWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,22 +12,22 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
-    <widget class="QGroupBox" name="ownCloudSupportGroupBox">
+    <widget class="QGroupBox" name="cloudSupportGroupBox">
      <property name="title">
-      <string>ownCloud support</string>
+      <string>cloud support</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_14">
       <item>
-       <widget class="QCheckBox" name="ownCloudSupportCheckBox">
+       <widget class="QCheckBox" name="cloudSupportCheckBox">
         <property name="text">
-         <string>Enable ownCloud support</string>
+         <string>Enable cloud support</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLabel" name="cloudInfoLabel">
         <property name="text">
-         <string>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</string>
+         <string>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
@@ -41,7 +41,7 @@
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QGroupBox" name="ownCloudGroupBox">
+    <widget class="QGroupBox" name="cloudGroupBox">
      <property name="font">
       <font>
        <bold>false</bold>
@@ -49,7 +49,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Your ownCloud server</string>
+      <string>Your Nextcloud / ownCloud server</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
@@ -63,7 +63,7 @@
         <item>
          <widget class="Label" name="installInfoTextLabel1">
           <property name="text">
-           <string>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
+           <string>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -76,7 +76,7 @@
         <item>
          <widget class="Label" name="installInfoTextLabel2">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -89,7 +89,7 @@
         <item>
          <widget class="Label" name="installInfoTextLabel3">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -100,7 +100,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="ownCloudServerAppPageButton">
+         <widget class="QPushButton" name="cloudServerAppPageButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -108,10 +108,10 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
-           <string>Open your ownCloud server &amp;Apps page</string>
+           <string>Open your NC / oC server &amp;Apps page</string>
           </property>
           <property name="icon">
            <iconset theme="text-html" resource="../../breeze-qownnotes.qrc">
@@ -120,7 +120,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="ownCloudServerAppPasswordPageButton">
+         <widget class="QPushButton" name="cloudServerAppPasswordPageButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -128,10 +128,10 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</string>
+           <string>Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</string>
           </property>
           <property name="text">
-           <string>Open your ownCloud server App Password page</string>
+           <string>Open your NC / oC server App Password page</string>
           </property>
           <property name="icon">
            <iconset theme="text-html" resource="../../breeze-qownnotes.qrc">
@@ -244,7 +244,7 @@
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QLabel" name="ownCloudServerUrlLabel_2">
+         <widget class="QLabel" name="cloudServerUrlLabel_2">
           <property name="text">
            <string>Connection name:</string>
           </property>
@@ -273,9 +273,9 @@
          </widget>
         </item>
         <item row="4" column="0">
-         <widget class="QLabel" name="ownCloudServerUrlLabel">
+         <widget class="QLabel" name="cloudServerUrlLabel">
           <property name="text">
-           <string>ownCloud server url:</string>
+           <string>NC / oC server url:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -297,7 +297,7 @@
            </size>
           </property>
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
            <string/>
@@ -360,10 +360,10 @@
            </size>
           </property>
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="placeholderText">
-           <string>Your ownCloud username</string>
+           <string>Your Nextcloud / ownCloud username</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
@@ -401,7 +401,7 @@
            <enum>QLineEdit::EchoMode::Password</enum>
           </property>
           <property name="placeholderText">
-           <string>Your ownCloud password</string>
+           <string>Your Nextcloud / ownCloud password</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
@@ -447,13 +447,13 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton { font-weight: bold; }</string>
           </property>
           <property name="text">
-           <string>&amp;Connect to ownCloud server</string>
+            <string>&amp;Connect to NC / oC server</string>
           </property>
           <property name="icon">
            <iconset theme="network-connect" resource="../../breeze-qownnotes.qrc">
@@ -523,7 +523,7 @@
         <item row="17" column="1">
          <widget class="QLabel" name="check2Label">
           <property name="text">
-           <string>ownCloud server detected</string>
+           <string>Nextcloud / ownCloud server detected</string>
           </property>
          </widget>
         </item>

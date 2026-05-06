@@ -1,7 +1,7 @@
 #include "calendaritem.h"
 
 #include <qregularexpression.h>
-#include <services/owncloudservice.h>
+#include <services/cloudservice.h>
 #include <utils/misc.h>
 
 #include <QApplication>
@@ -1142,7 +1142,7 @@ QString CalendarItem::getCurrentCalendarUrl() {
  * Shows alerts for calendar items with an alarm date in the current minute
  */
 void CalendarItem::alertTodoReminders() {
-    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+    if (!CloudService::isTodoCalendarSupportEnabled()) {
         return;
     }
 

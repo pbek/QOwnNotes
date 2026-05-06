@@ -61,12 +61,12 @@
 #include "services/harperchecker.h"
 #endif
 #include "dialogs/markdowntabledialog.h"
+#include "services/cloudservice.h"
 #include "services/markdownlspclient.h"
 #include "services/markdownlspdocumenttracker.h"
 #include "services/markdownlspignoredrules.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
-#include "services/owncloudservice.h"
 #include "services/scriptingservice.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
@@ -2050,7 +2050,7 @@ static QPixmap loadMarkdownImagePixmap(const QString &resolvedSource) {
         const QString base64 = resolvedSource.mid(markerPos + 8);
         image = QImage::fromData(QByteArray::fromBase64(base64.toLatin1()));
     } else if (resolvedSource.startsWith(QLatin1String("/core/preview"))) {
-        if (!OwnCloudService::isOwnCloudSupportEnabled()) {
+        if (!CloudService::isCloudSupportEnabled()) {
             failedImageCache.insert(resolvedSource);
             return QPixmap();
         }
@@ -2059,7 +2059,7 @@ static QPixmap loadMarkdownImagePixmap(const QString &resolvedSource) {
         const QString imgTag =
             QStringLiteral("<img src=\"") + resolvedSource + QStringLiteral("\" alt=\"img\"/>");
         const QString inlineTag =
-            OwnCloudService::instance()->nextcloudPreviewImageTagToInlineImageTag(imgTag, width);
+            CloudService::instance()->nextcloudPreviewImageTagToInlineImageTag(imgTag, width);
         const QRegularExpressionMatch srcMatch = srcRegex.match(inlineTag);
         if (!srcMatch.hasMatch()) {
             failedImageCache.insert(resolvedSource);

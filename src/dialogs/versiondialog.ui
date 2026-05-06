@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Note versions on your ownCloud server</string>
+    <string>Note versions on your Nextcloud / ownCloud server</string>
   </property>
   <property name="windowIcon">
    <iconset theme="appointment-new" resource="../breeze-qownnotes.qrc">

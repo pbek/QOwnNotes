@@ -169,7 +169,7 @@ SOURCES += main.cpp\
     entities/script.cpp \
     entities/bookmark.cpp \
     entities/commandsnippet.cpp \
-    services/owncloudservice.cpp \
+    services/cloudservice.cpp \
     services/nextclouddeckservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
@@ -257,7 +257,7 @@ SOURCES += main.cpp\
     widgets/settings/harpersettingswidget.cpp \
     widgets/settings/markdownlspsettingswidget.cpp \
      widgets/settings/networksettingswidget.cpp \
-     widgets/settings/owncloudsettingswidget.cpp \
+     widgets/settings/cloudsettingswidget.cpp \
      widgets/settings/todosettingswidget.cpp \
     widgets/settings/aisettingswidget.cpp \
     widgets/settings/webcompanionsettingswidget.cpp \
@@ -335,7 +335,7 @@ HEADERS  += mainwindow.h \
     dialogs/localtrashdialog.h \
     dialogs/updatedialog.h \
     dialogs/versiondialog.h \
-    services/owncloudservice.h \
+    services/cloudservice.h \
     services/nextclouddeckservice.h \
     services/updateservice.h \
     services/scriptingservice.h \
@@ -429,7 +429,7 @@ HEADERS  += mainwindow.h \
     widgets/settings/harpersettingswidget.h \
     widgets/settings/markdownlspsettingswidget.h \
      widgets/settings/networksettingswidget.h \
-     widgets/settings/owncloudsettingswidget.h \
+     widgets/settings/cloudsettingswidget.h \
      widgets/settings/todosettingswidget.h \
     widgets/settings/aisettingswidget.h \
     widgets/settings/webcompanionsettingswidget.h \
@@ -516,7 +516,7 @@ FORMS    += mainwindow.ui \
     widgets/settings/harpersettingswidget.ui \
     widgets/settings/markdownlspsettingswidget.ui \
      widgets/settings/networksettingswidget.ui \
-     widgets/settings/owncloudsettingswidget.ui \
+     widgets/settings/cloudsettingswidget.ui \
      widgets/settings/todosettingswidget.ui \
     widgets/settings/aisettingswidget.ui \
     widgets/settings/webcompanionsettingswidget.ui \

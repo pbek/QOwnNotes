@@ -11,8 +11,8 @@
 #include <QTimeZone>
 #include <QTimer>
 
+#include "cloudservice.h"
 #include "entities/cloudconnection.h"
-#include "owncloudservice.h"
 #include "utils/gui.h"
 #include "utils/misc.h"
 
@@ -34,8 +34,7 @@ bool NextcloudDeckService::isEnabledAndValid() {
 }
 
 bool NextcloudDeckService::isEnabled() {
-    return OwnCloudService::isOwnCloudSupportEnabled() &&
-           this->cloudConnection.getNextcloudDeckEnabled();
+    return CloudService::isCloudSupportEnabled() && this->cloudConnection.getNextcloudDeckEnabled();
 }
 
 int NextcloudDeckService::storeCard(const QString& title, const QString& description,

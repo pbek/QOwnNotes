@@ -49,7 +49,7 @@
       <item>
        <widget class="QLabel" name="gitCommitIntervalTimeLabel">
         <property name="toolTip">
-         <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+         <string>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</string>
         </property>
         <property name="text">

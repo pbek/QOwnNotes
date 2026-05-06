@@ -1,8 +1,7 @@
 #include "sharedialog.h"
 
-#include <services/owncloudservice.h>
+#include <services/cloudservice.h>
 #include <utils/gui.h>
-#include <utils/misc.h>
 
 #include <QDebug>
 
@@ -37,8 +36,6 @@ void ShareDialog::updateDialog() {
     ui->linkCheckBox->setChecked(note.isShared());
     ui->linkUrlLineEdit->setVisible(note.isShared());
     ui->linkUrlLineEdit->setText(note.getShareUrl());
-    ui->infoLabel1->setText(Utils::Misc::replaceOwnCloudText(ui->infoLabel1->text()));
-    ui->linkCheckBox->setText(Utils::Misc::replaceOwnCloudText(ui->linkCheckBox->text()));
     ui->editCheckBox->setVisible(note.isShared());
     ui->editCheckBox->setChecked(note.isShareEditAllowed());
 }
@@ -47,7 +44,7 @@ void ShareDialog::updateDialog() {
  * Shares or removes the share from the current note
  */
 void ShareDialog::on_linkCheckBox_toggled(bool checked) {
-    auto *ownCloud = OwnCloudService::instance();
+    auto *cloud = CloudService::instance();
 
     const QSignalBlocker blocker(ui->linkCheckBox);
     Q_UNUSED(blocker)
@@ -57,23 +54,21 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
 
     if (checked) {
         // share the note file
-        ownCloud->shareNote(note, this);
+        cloud->shareNote(note, this);
 
         Utils::Gui::information(
             this, QString(),
-            Utils::Misc::replaceOwnCloudText(tr("Keep in mind that you still have to sync your "
-                                                "notes with your server by using the ownCloud "
-                                                "desktop sync tool to be able to share notes with "
-                                                "others!")),
+            tr("Keep in mind that you still have to sync your notes with your server by using "
+               "the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!"),
             QStringLiteral("share-sync-information"));
     } else {
         // remove the share
-        ownCloud->removeNoteShare(note, this);
+        cloud->removeNoteShare(note, this);
     }
 }
 
 void ShareDialog::on_editCheckBox_toggled(bool checked) {
-    auto *ownCloud = OwnCloudService::instance();
+    auto *cloud = CloudService::instance();
     unsigned int permissions = note.getSharePermissions();
 
     // set 2. bit
@@ -90,5 +85,5 @@ void ShareDialog::on_editCheckBox_toggled(bool checked) {
 
     qDebug() << __func__ << " - 'permissions': " << permissions;
 
-    ownCloud->setPermissionsOnSharedNote(note, this);
+    cloud->setPermissionsOnSharedNote(note, this);
 }

@@ -11,7 +11,7 @@ class WelcomeDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    enum WelcomePages { NoteFolderPage, LayoutPresetPage, OwnCloudPage, MetricsPage };
+    enum WelcomePages { NoteFolderPage, LayoutPresetPage, CloudPage, MetricsPage };
 
     explicit WelcomeDialog(QWidget *parent = 0);
     ~WelcomeDialog();
@@ -27,7 +27,7 @@ class WelcomeDialog : public MasterDialog {
 
     void on_noteFolderButton_clicked();
 
-    void on_ownCloudSettingsButton_clicked();
+    void on_cloudSettingsButton_clicked();
 
     void on_networkSettingsButton_clicked();
 

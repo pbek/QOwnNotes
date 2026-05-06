@@ -195,16 +195,15 @@ void NoteOperationsManager::removeSelectedNotes() {
     if (noteCount > 0 && folderCount > 0) {
         // Both notes and folders selected
         title = tr("Remove selected notes and folders");
-        message = Utils::Misc::replaceOwnCloudText(
-            tr("Remove <strong>%n</strong> selected note(s) and "
-               "<strong>%1</strong> folder(s)?"
-               "<ul><li>%2</li></ul>"
-               "All files and folders in these folders will be removed as well!\n\n"
-               "If the trash is enabled on your ownCloud server you should be able to restore "
-               "the notes from there.",
-               "", noteCount)
-                .arg(folderCount)
-                .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>"))));
+        message = tr("Remove <strong>%n</strong> selected note(s) and "
+                     "<strong>%1</strong> folder(s)?"
+                     "<ul><li>%2</li></ul>"
+                     "All files and folders in these folders will be removed as well!\n\n"
+                     "If the trash is enabled on your Nextcloud / ownCloud server you should be "
+                     "able to restore the notes from there.",
+                     "", noteCount)
+                      .arg(folderCount)
+                      .arg(noteSubFolderPathList.join(QStringLiteral("</li><li>")));
         dialogName = QStringLiteral("remove-notes-and-folders");
     } else if (folderCount > 0) {
         // Only folders selected
@@ -218,11 +217,11 @@ void NoteOperationsManager::removeSelectedNotes() {
     } else {
         // Only notes selected
         title = tr("Remove selected notes");
-        message = Utils::Misc::replaceOwnCloudText(
+        message =
             tr("Remove <strong>%n</strong> selected note(s)?\n\n"
-               "If the trash is enabled on your ownCloud server you should be able to restore "
-               "them from there.",
-               "", noteCount));
+               "If the trash is enabled on your Nextcloud / ownCloud server you should be "
+               "able to restore them from there.",
+               "", noteCount);
         dialogName = QStringLiteral("remove-notes");
     }
 

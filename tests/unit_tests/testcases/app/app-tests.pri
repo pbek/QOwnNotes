@@ -28,7 +28,7 @@ HEADERS  += \
     $$APP_SRC_DIR/services/metricsservice.h \
     $$APP_SRC_DIR/services/cryptoservice.h \
     $$APP_SRC_DIR/services/settingsservice.h \
-    $$APP_SRC_DIR/services/owncloudservice.h \
+    $$APP_SRC_DIR/services/cloudservice.h \
     $$APP_SRC_DIR/dialogs/masterdialog.h \
     $$APP_SRC_DIR/widgets/navigationwidget.h \
     $$APP_SRC_DIR/widgets/logwidget.h \
@@ -85,7 +85,7 @@ SOURCES += \
     $$APP_SRC_DIR/services/metricsservice.cpp \
     $$APP_SRC_DIR/services/cryptoservice.cpp \
     $$APP_SRC_DIR/services/settingsservice.cpp \
-    $$APP_SRC_DIR/services/owncloudservice.cpp \
+    $$APP_SRC_DIR/services/cloudservice.cpp \
     $$APP_SRC_DIR/dialogs/masterdialog.cpp \
     $$APP_SRC_DIR/widgets/navigationwidget.cpp \
     $$APP_SRC_DIR/widgets/logwidget.cpp \

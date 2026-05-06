@@ -97,7 +97,6 @@ QList<QObject *> getParents(QObject *object);
 QString appDataPath();
 QString logFilePath();
 QString transformLineFeeds(QString text);
-QString replaceOwnCloudText(QString text, bool useShortText = false);
 void restartApplication();
 QString appendSingleAppInstanceTextIfNeeded(QString text = "");
 void needRestart();

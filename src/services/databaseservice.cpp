@@ -16,9 +16,9 @@
 #include <QStandardPaths>
 #include <QUuid>
 
+#include "cloudservice.h"
 #include "entities/calendaritem.h"
 #include "mainwindow.h"
-#include "owncloudservice.h"
 #include "services/settingsservice.h"
 #include "services/websocketserverservice.h"
 
@@ -732,9 +732,9 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 19) {
-        // set the ownCloud support enabled setting
-        bool ownCloudEnabled = OwnCloudService::hasOwnCloudSettings(false, true);
-        settings.setValue(QStringLiteral("ownCloud/supportEnabled"), ownCloudEnabled);
+        // set the cloud support enabled setting
+        bool cloudEnabled = CloudService::hasCloudSettings(false, true);
+        settings.setValue(QStringLiteral("ownCloud/supportEnabled"), cloudEnabled);
 
         version = 19;
     }

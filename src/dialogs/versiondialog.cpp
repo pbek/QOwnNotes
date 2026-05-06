@@ -16,7 +16,6 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::VersionDialog) {
     ui->setupUi(this);
     afterSetupUI();
-    setWindowTitle(Utils::Misc::replaceOwnCloudText(windowTitle()));
     ui->tabWidget->setCurrentIndex(0);
 
     // Init the note text edit search-frame

@@ -21,8 +21,8 @@
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/script.h>
+#include <services/cloudservice.h>
 #include <services/databaseservice.h>
-#include <services/owncloudservice.h>
 #include <services/updateservice.h>
 #include <threads/scriptthread.h>
 
@@ -1298,23 +1298,6 @@ QString Utils::Misc::transformLineFeeds(QString text) {
 }
 
 /**
- * Replaces the text "ownCloud" by "ownCloud / Nextcloud"
- *
- * @param text
- * @param useShortText
- * @return
- */
-QString Utils::Misc::replaceOwnCloudText(QString text, bool useShortText) {
-    if (text.contains(QStringLiteral("Nextcloud"))) {
-        return text;
-    }
-
-    QString replaceText =
-        useShortText ? QStringLiteral("NC / oC") : QStringLiteral("Nextcloud / ownCloud");
-    return text.replace(QStringLiteral("ownCloud"), replaceText, Qt::CaseInsensitive);
-}
-
-/**
  * Declares that we need a restart
  */
 void Utils::Misc::needRestart() { qApp->setProperty("needsRestart", true); }
@@ -2495,7 +2478,7 @@ bool Utils::Misc::regExpInListMatches(const QString &text, const QStringList &re
  */
 void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWidth,
                                                   ExternalImageHash *externalImageHash) {
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    CloudService *cloud = CloudService::instance();
 
     static const QRegularExpression re(
         QStringLiteral(
@@ -2515,8 +2498,7 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWid
             inlineImageTag = hashItem.imageTag;
             imageWidth = hashItem.imageWidth;
         } else {
-            inlineImageTag =
-                ownCloud->nextcloudPreviewImageTagToInlineImageTag(imageTag, imageWidth);
+            inlineImageTag = cloud->nextcloudPreviewImageTagToInlineImageTag(imageTag, imageWidth);
             hashItem.imageTag = inlineImageTag;
             hashItem.imageWidth = imageWidth;
             externalImageHash->insert(imageTag, hashItem);

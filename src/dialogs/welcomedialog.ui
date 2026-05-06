@@ -21,7 +21,7 @@
    <item row="1" column="0">
     <widget class="QLabel" name="subHeadlineLabel">
      <property name="text">
-      <string>Plain-text file Markdown note-taking with ownCloud integration</string>
+       <string>Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -293,7 +293,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="ownCloudPage">
+     <widget class="QWidget" name="cloudPage">
       <layout class="QGridLayout" name="gridLayout_4">
        <property name="leftMargin">
         <number>0</number>
@@ -310,13 +310,13 @@
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string notr="true">ownCloud</string>
+           <string notr="true">Nextcloud / ownCloud</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0">
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</string>
+              <string>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -337,16 +337,16 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QPushButton" name="ownCloudSettingsButton">
+           <widget class="QPushButton" name="cloudSettingsButton">
             <property name="text">
-             <string>Open ownCloud settings</string>
+             <string>Open cloud settings</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</string>
+              <string>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>

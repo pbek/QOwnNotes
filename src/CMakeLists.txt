@@ -407,8 +407,8 @@ set(SOURCE_FILES
     libraries/qtwaitingspinner/waitingspinnerwidget.cpp
     services/databaseservice.cpp
     services/databaseservice.h
-    services/owncloudservice.cpp
-    services/owncloudservice.h
+    services/cloudservice.cpp
+    services/cloudservice.h
     services/nextclouddeckservice.cpp
     services/nextclouddeckservice.h
     services/updateservice.cpp
@@ -552,9 +552,9 @@ set(SOURCE_FILES
     widgets/settings/networksettingswidget.cpp
     widgets/settings/networksettingswidget.h
     widgets/settings/networksettingswidget.ui
-    widgets/settings/owncloudsettingswidget.cpp
-    widgets/settings/owncloudsettingswidget.h
-    widgets/settings/owncloudsettingswidget.ui
+    widgets/settings/cloudsettingswidget.cpp
+    widgets/settings/cloudsettingswidget.h
+    widgets/settings/cloudsettingswidget.ui
     widgets/settings/todosettingswidget.cpp
     widgets/settings/todosettingswidget.h
     widgets/settings/todosettingswidget.ui

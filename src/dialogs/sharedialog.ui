@@ -37,14 +37,14 @@
    <item row="1" column="0">
     <widget class="QCheckBox" name="linkCheckBox">
      <property name="text">
-      <string>Share note on ownCloud</string>
+       <string>Share note on Nextcloud / ownCloud</string>
      </property>
     </widget>
    </item>
    <item row="0" column="0">
     <widget class="QLabel" name="infoLabel1">
      <property name="text">
-      <string>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</string>
+       <string>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

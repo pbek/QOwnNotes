@@ -49,7 +49,7 @@ void DebugSettingsWidget::initialize() {
  * Generates and displays the debug information
  */
 void DebugSettingsWidget::outputSettings() {
-    // Let the dialog store owncloud debug data first
+    // Let the dialog store cloud debug data first
     emit aboutToOutputSettings();
 
     QString output = Utils::Misc::generateDebugInformation(

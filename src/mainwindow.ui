@@ -1131,7 +1131,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="action_Reload_note_folder"/>
     <addaction name="actionSelect_note_folder"/>
     <addaction name="noteFoldersMenu"/>
-    <addaction name="actionSet_ownCloud_Folder"/>
+    <addaction name="actionSet_Cloud_Folder"/>
     <addaction name="separator"/>
     <addaction name="action_Settings"/>
     <addaction name="separator"/>
@@ -1521,7 +1521,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <enum>QAction::MenuRole::QuitRole</enum>
    </property>
   </action>
-  <action name="actionSet_ownCloud_Folder">
+  <action name="actionSet_Cloud_Folder">
    <property name="icon">
     <iconset theme="folder-sync" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</iconset>

@@ -19,7 +19,7 @@
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
-#include <services/owncloudservice.h>
+#include <services/cloudservice.h>
 #include <services/scriptingservice.h>
 #include <services/settingsservice.h>
 #include <utils/git.h>
@@ -493,7 +493,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     if (!multiNoteMenuEntriesOnly) {
         openInExternalEditorAction = noteMenu.addAction(tr("Open note in external editor"));
         openNoteWindowAction = noteMenu.addAction(tr("Open note in different window"));
-        if (OwnCloudService::isOwnCloudSupportEnabled()) {
+        if (CloudService::isCloudSupportEnabled()) {
             openNoteInNextcloudFilesAction = noteMenu.addAction(tr("Open note in Nextcloud Files"));
             openNoteInNextcloudNotesAction = noteMenu.addAction(tr("Open note in Nextcloud Notes"));
         };

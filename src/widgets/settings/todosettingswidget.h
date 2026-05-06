@@ -17,7 +17,7 @@
 #include <QWidget>
 
 #include "entities/cloudconnection.h"
-#include "services/owncloudservice.h"
+#include "services/cloudservice.h"
 
 struct CalDAVCalendarData;
 
@@ -35,7 +35,6 @@ class TodoSettingsWidget : public QWidget {
     void initialize();
     void readSettings();
     void storeSettings();
-    void replaceOwnCloudText();
     void refreshTodoCalendarList(const QList<CalDAVCalendarData> &items, const QString &serverUrl,
                                  bool forceReadCheckedState = false);
     void populateCloudConnectionComboBox(QList<CloudConnection> connections,
@@ -47,7 +46,7 @@ class TodoSettingsWidget : public QWidget {
 
    private slots:
     void on_reloadCalendarListButton_clicked();
-    void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
+    void on_defaultCloudCalendarRadioButton_toggled(bool checked);
     void on_legacyOwnCloudCalendarRadioButton_toggled(bool checked);
     void on_calDavCalendarRadioButton_toggled(bool checked);
     void on_calendarPlusRadioButton_toggled(bool checked);

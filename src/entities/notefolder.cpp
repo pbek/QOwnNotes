@@ -1,6 +1,6 @@
 #include "notefolder.h"
 
-#include <services/owncloudservice.h>
+#include <services/cloudservice.h>
 #include <utils/misc.h>
 
 #include <QDebug>
@@ -258,7 +258,7 @@ void NoteFolder::setAsCurrent() const {
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(localPath));
 
     // we need to reset the instance
-    OwnCloudService::instance(true);
+    CloudService::instance(true);
 }
 
 /**

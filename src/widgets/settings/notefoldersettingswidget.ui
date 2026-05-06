@@ -195,12 +195,12 @@
                 <number>0</number>
                </property>
                <item row="0" column="1">
-                <widget class="QPushButton" name="useOwnCloudPathButton">
+                <widget class="QPushButton" name="useCloudPathButton">
                  <property name="toolTip">
                   <string>Click here to use the selected folder from your server as note folder</string>
                  </property>
                  <property name="text">
-                  <string>&amp;Use as ownCloud path</string>
+                   <string>&amp;Use as Nextcloud / ownCloud path</string>
                  </property>
                  <property name="icon">
                   <iconset theme="document-open" resource="../../breeze-qownnotes.qrc">
@@ -239,7 +239,7 @@
             <item row="0" column="0">
              <widget class="QLabel" name="noteFolderRemotePathListLabel">
               <property name="text">
-               <string>Please select your note folder on your ownCloud server:</string>
+                <string>Please select your note folder on your Nextcloud / ownCloud server:</string>
               </property>
              </widget>
             </item>
@@ -259,7 +259,7 @@
          <item row="11" column="0" colspan="2">
           <widget class="QLabel" name="noteFolderRemotePathLabel">
            <property name="text">
-            <string>Path on your ownCloud server:</string>
+             <string>Path on your Nextcloud / ownCloud server:</string>
            </property>
           </widget>
          </item>
@@ -379,7 +379,7 @@
          <item row="5" column="0" colspan="2">
           <widget class="QCheckBox" name="noteFolderShowSubfoldersCheckBox">
            <property name="toolTip">
-            <string>Be aware that the ownCloud notes app doesn't support subfolders!</string>
+             <string>Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</string>
            </property>
            <property name="text">
             <string>Use note subfolders</string>
@@ -389,7 +389,7 @@
          <item row="12" column="1">
           <widget class="QPushButton" name="noteFolderRemotePathButton">
            <property name="toolTip">
-            <string>Click here to select your remote note path on your ownCloud server</string>
+             <string>Click here to select your remote note path on your Nextcloud / ownCloud server</string>
            </property>
            <property name="text">
             <string/>
@@ -450,7 +450,7 @@
          <item row="12" column="0">
           <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
            <property name="toolTip">
-            <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
+             <string>Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</string>
            </property>
            <property name="placeholderText">
             <string extracomment="&quot;Notes&quot; should not be translated">&quot;Notes&quot; path on your server</string>

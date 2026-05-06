@@ -17,14 +17,6 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
     afterSetupUI();
     ui->layoutPresetWidget->setManualSettingsStoring(false);
 
-    // replace ownCloud text
-    ui->subHeadlineLabel->setText(Utils::Misc::replaceOwnCloudText(ui->subHeadlineLabel->text()));
-    ui->groupBox_2->setTitle(Utils::Misc::replaceOwnCloudText(ui->groupBox_2->title()));
-    ui->label->setText(Utils::Misc::replaceOwnCloudText(ui->label->text()));
-    ui->label_4->setText(Utils::Misc::replaceOwnCloudText(ui->label_4->text()));
-    ui->ownCloudSettingsButton->setText(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudSettingsButton->text()));
-
     // if note layout has already been set, we can finish settings in the first
     // step
     SettingsService settings;
@@ -216,11 +208,11 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
     }
 }
 
-void WelcomeDialog::on_ownCloudSettingsButton_clicked() {
+void WelcomeDialog::on_cloudSettingsButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("welcome-dialog/owncloud-settings"));
 
-    auto *dialog = new SettingsDialog(SettingsDialog::OwnCloudPage, this);
+    auto *dialog = new SettingsDialog(SettingsDialog::CloudPage, this);
     dialog->exec();
 }
 

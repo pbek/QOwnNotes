@@ -1,7 +1,7 @@
 #include "entities/note.h"
 
 #include <botanwrapper.h>
-#include <services/owncloudservice.h>
+#include <services/cloudservice.h>
 #include <services/scriptingservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
@@ -490,18 +490,18 @@ void Note::setSharePermissions(unsigned int permissions) { this->_sharePermissio
  * @return the Nextcloud file link URL, empty if not available
  */
 QString Note::getNextcloudFileLink() const {
-    if (!OwnCloudService::isOwnCloudSupportEnabled()) {
+    if (!CloudService::isCloudSupportEnabled()) {
         return {};
     }
 
     // Get the OwnCloud service instance
-    OwnCloudService *ownCloudService = OwnCloudService::instance();
-    if (ownCloudService == nullptr) {
+    CloudService *cloudService = CloudService::instance();
+    if (cloudService == nullptr) {
         return {};
     }
 
     // Fetch the file ID from Nextcloud
-    QString fileId = ownCloudService->fetchNoteFileId(*this);
+    QString fileId = cloudService->fetchNoteFileId(*this);
     if (fileId.isEmpty()) {
         return {};
     }
@@ -538,18 +538,18 @@ QString Note::getNextcloudFileLink() const {
  * @return the Nextcloud Notes link URL, empty if not available
  */
 QString Note::getNextcloudNotesLink() const {
-    if (!OwnCloudService::isOwnCloudSupportEnabled()) {
+    if (!CloudService::isCloudSupportEnabled()) {
         return {};
     }
 
     // Get the OwnCloud service instance
-    OwnCloudService *ownCloudService = OwnCloudService::instance();
-    if (ownCloudService == nullptr) {
+    CloudService *cloudService = CloudService::instance();
+    if (cloudService == nullptr) {
         return {};
     }
 
     // Fetch the file ID from Nextcloud
-    QString fileId = ownCloudService->fetchNoteFileId(*this);
+    QString fileId = cloudService->fetchNoteFileId(*this);
     if (fileId.isEmpty()) {
         return {};
     }
@@ -2495,7 +2495,7 @@ bool Note::handleNoteTextFileName() {
         // update the first line of the note text
         // TODO(pbek): UI has to be updated too then!
         // update: we now try not to change the first line of the note,
-        //         this doesn't seem to trouble ownCloud / Nextcloud notes
+        //         this doesn't seem to trouble Nextcloud / ownCloud notes
         //         a lot, but it renames the notes to its own liking
         //        noteTextLines[0] = name;
         //        this->noteText = noteTextLines.join("\n");
@@ -3871,7 +3871,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     // transform remote preview image tags
     Utils::Misc::transformRemotePreviewImages(result, maxImageWidth, externalImageHash());
 
-    if (OwnCloudService::isOwnCloudSupportEnabled()) {
+    if (CloudService::isCloudSupportEnabled()) {
         // transform Nextcloud preview image tags
         Utils::Misc::transformNextcloudPreviewImages(result, maxImageWidth, externalImageHash());
     }

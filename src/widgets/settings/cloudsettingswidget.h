@@ -22,24 +22,22 @@
 class SettingsDialog;
 
 namespace Ui {
-class OwnCloudSettingsWidget;
+class CloudSettingsWidget;
 }
 
-class OwnCloudSettingsWidget : public QWidget {
+class CloudSettingsWidget : public QWidget {
     Q_OBJECT
 
    public:
     // OKLabelStatus is a global enum defined in enums/oklabelstatus.h
     using OKLabelStatus = ::OKLabelStatus;
 
-    explicit OwnCloudSettingsWidget(QWidget *parent = nullptr);
-    ~OwnCloudSettingsWidget();
+    explicit CloudSettingsWidget(QWidget *parent = nullptr);
+    ~CloudSettingsWidget();
 
     void initialize();
     void readSettings();
     void storeSettings();
-    void replaceOwnCloudText();
-
     void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion,
                              QString notesPathExistsText, QString connectionErrorMessage);
     void setOKLabelData(int number, const QString &text, OKLabelStatus status);
@@ -54,24 +52,24 @@ class OwnCloudSettingsWidget : public QWidget {
     void cloudConnectionsChanged(const QList<CloudConnection> &connections);
 
    public slots:
-    void storeOwncloudDebugData() const;
+    void storeCloudDebugData() const;
 
    private slots:
     void on_connectButton_clicked();
-    void on_ownCloudSupportCheckBox_toggled();
+    void on_cloudSupportCheckBox_toggled();
     void on_cloudConnectionComboBox_currentIndexChanged(int index);
     void on_cloudConnectionAddButton_clicked();
     void on_cloudConnectionRemoveButton_clicked();
     void storeSelectedCloudConnection();
-    void on_ownCloudServerAppPageButton_clicked();
-    void on_ownCloudServerAppPasswordPageButton_clicked();
+    void on_cloudServerAppPageButton_clicked();
+    void on_cloudServerAppPasswordPageButton_clicked();
     void on_loginFlowButton_clicked();
     void on_loginFlowCancelButton_clicked();
     void on_appNextcloudDeckCheckBox_toggled(bool checked);
     void onSettingsConnectionTestFinished();
 
    private:
-    Ui::OwnCloudSettingsWidget *ui;
+    Ui::CloudSettingsWidget *ui;
     SettingsDialog *_settingsDialog = nullptr;
     CloudConnection _selectedCloudConnection;
     int _loginFlowPollCount = 0;

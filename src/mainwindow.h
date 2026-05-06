@@ -346,7 +346,7 @@ class MainWindow : public QMainWindow {
 
     void notesWereModified(const QString &str);
 
-    void on_actionSet_ownCloud_Folder_triggered();
+    void on_actionSet_Cloud_Folder_triggered();
 
     void on_searchLineEdit_textChanged(const QString &arg1);
 
@@ -1068,7 +1068,7 @@ class MainWindow : public QMainWindow {
 
     bool buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false);
 
-    QString selectOwnCloudNotesFolder();
+    QString selectCloudNotesFolder();
 
     void removeCurrentNote();
 

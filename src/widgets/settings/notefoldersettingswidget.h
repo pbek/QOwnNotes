@@ -39,7 +39,6 @@ class NoteFolderSettingsWidget : public QWidget {
 
     void setNoteFolderRemotePathList(QStringList pathList);
     void populateCloudConnectionComboBox(const QList<CloudConnection> &connections, int selectedId);
-    void replaceOwnCloudText();
 
    signals:
     void storeSettingsRequested();
@@ -57,7 +56,7 @@ class NoteFolderSettingsWidget : public QWidget {
     void on_noteFolderRemotePathTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                               QTreeWidgetItem *previous);
     void on_noteFolderCloudConnectionComboBox_currentIndexChanged(int index);
-    void on_useOwnCloudPathButton_clicked();
+    void on_useCloudPathButton_clicked();
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
     void on_noteFolderAllSubfoldersCheckBox_toggled(bool checked);
     void on_allowDifferentNoteFileNameCheckBox_toggled(bool checked);

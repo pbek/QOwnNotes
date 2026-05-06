@@ -51,13 +51,14 @@
 #include "mainwindow.h"
 #include "release.h"
 #include "scriptrepositorydialog.h"
+#include "services/cloudservice.h"
 #include "services/openaiservice.h"
-#include "services/owncloudservice.h"
 #include "services/settingsservice.h"
 #include "ui_settingsdialog.h"
 #include "version.h"
 #include "widgets/fontcolorwidget.h"
 #include "widgets/settings/aisettingswidget.h"
+#include "widgets/settings/cloudsettingswidget.h"
 #include "widgets/settings/debugoptionsettingswidget.h"
 #include "widgets/settings/debugsettingswidget.h"
 #include "widgets/settings/editorfontcolorsettingswidget.h"
@@ -66,7 +67,6 @@
 #include "widgets/settings/languagetoolsettingswidget.h"
 #include "widgets/settings/markdownlspsettingswidget.h"
 #include "widgets/settings/networksettingswidget.h"
-#include "widgets/settings/owncloudsettingswidget.h"
 #include "widgets/settings/todosettingswidget.h"
 #include "widgets/settings/webapplicationsettingswidget.h"
 #include "widgets/settings/webcompanionsettingswidget.h"
@@ -145,9 +145,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     // expand all items in the settings tree widget
     ui->settingsTreeWidget->expandAll();
 
-    // replace the "ownCloud" text by "ownCloud / NextCloud"
-    replaceOwnCloudText();
-
     // Declare that we need to restart the application if certain settings are changed
     connect(ui->panelsSettingsWidget, &PanelsSettingsWidget::needRestart, this,
             &SettingsDialog::needRestart);
@@ -167,9 +164,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
     // Connect debug settings widget signals
     connect(ui->debugSettingsWidget, &DebugSettingsWidget::aboutToOutputSettings,
-            ui->ownCloudSettingsWidget, &OwnCloudSettingsWidget::storeOwncloudDebugData);
-    // Set back-pointer so OwnCloudSettingsWidget can pass SettingsDialog* to OwnCloudService
-    ui->ownCloudSettingsWidget->setSettingsDialog(this);
+            ui->cloudSettingsWidget, &CloudSettingsWidget::storeCloudDebugData);
+    // Set back-pointer so CloudSettingsWidget can pass SettingsDialog* to CloudService
+    ui->cloudSettingsWidget->setSettingsDialog(this);
     connect(ui->debugSettingsWidget, &DebugSettingsWidget::issueAssistantRequested, this, [this]() {
         MainWindow *mainWindow = MainWindow::instance();
         if (mainWindow == nullptr) {
@@ -184,8 +181,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->noteFolderSettingsWidget, &NoteFolderSettingsWidget::storeSettingsRequested, this,
             &SettingsDialog::storeSettings);
 
-    // Update cloud connection combo boxes when ownCloud settings change
-    connect(ui->ownCloudSettingsWidget, &OwnCloudSettingsWidget::cloudConnectionsChanged,
+    // Update cloud connection combo boxes when cloud settings change
+    connect(ui->cloudSettingsWidget, &CloudSettingsWidget::cloudConnectionsChanged,
             [this](const QList<CloudConnection> &connections) {
                 ui->noteFolderSettingsWidget->populateCloudConnectionComboBox(
                     connections, NoteFolder::currentNoteFolder().getCloudConnectionId());
@@ -198,8 +195,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             &SettingsDialog::storeSettings);
     connect(ui->todoSettingsWidget, &TodoSettingsWidget::reloadCalendarListRequested, this,
             [this]() {
-                OwnCloudService *ownCloud = OwnCloudService::instance(true);
-                ownCloud->settingsGetCalendarList(this);
+                CloudService *cloud = CloudService::instance(true);
+                cloud->settingsGetCalendarList(this);
             });
 
     connect(ui->aiSettingsWidget, &AiSettingsWidget::searchScriptRepositoryRequested, this,
@@ -218,23 +215,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
 void SettingsDialog::searchScriptInRepository() {
     ui->scriptingSettingsWidget->searchScriptInRepository();
-}
-
-/**
- * Replaces the "ownCloud" text by "ownCloud / NextCloud"
- */
-void SettingsDialog::replaceOwnCloudText() const {
-    // Delegate to the widget for ownCloud page labels
-    ui->ownCloudSettingsWidget->replaceOwnCloudText();
-
-    // Todo widget handles its own replaceOwnCloudText
-    ui->todoSettingsWidget->replaceOwnCloudText();
-
-    QTreeWidgetItem *item = ui->settingsTreeWidget->topLevelItem(OwnCloudPage);
-    item->setText(0, Utils::Misc::replaceOwnCloudText(item->text(0)));
-
-    // Note folder settings
-    ui->noteFolderSettingsWidget->replaceOwnCloudText();
 }
 
 /**
@@ -299,7 +279,7 @@ void SettingsDialog::initPortableModePage() {
 
 void SettingsDialog::storeSettings() {
     SettingsService settings;
-    ui->ownCloudSettingsWidget->storeSettings();
+    ui->cloudSettingsWidget->storeSettings();
 
     ui->todoSettingsWidget->storeSettings();
     ui->localTrashSettingsWidget->storeSettings();
@@ -362,8 +342,8 @@ void SettingsDialog::readSettings() {
     // Set current note folder list item via the widget
     ui->noteFolderSettingsWidget->readSettings();
 
-    // Read ownCloud settings via the widget
-    ui->ownCloudSettingsWidget->readSettings();
+    // Read cloud settings via the widget
+    ui->cloudSettingsWidget->readSettings();
 
     ui->todoSettingsWidget->readSettings();
 
@@ -848,26 +828,26 @@ QString SettingsDialog::getSelectedListWidgetValue(QListWidget *listWidget) {
 }
 
 /**
- * Forwards the connection test callback to the OwnCloudSettingsWidget
+ * Forwards the connection test callback to the CloudSettingsWidget
  */
 void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion,
                                          QString notesPathExistsText,
                                          QString connectionErrorMessage) {
-    ui->ownCloudSettingsWidget->connectTestCallback(
+    ui->cloudSettingsWidget->connectTestCallback(
         appIsValid, std::move(appVersion), std::move(serverVersion), std::move(notesPathExistsText),
         std::move(connectionErrorMessage));
 }
 
 /**
- * Forwards the OK label data to the OwnCloudSettingsWidget
+ * Forwards the OK label data to the CloudSettingsWidget
  */
 void SettingsDialog::setOKLabelData(int number, const QString &text, OKLabelStatus status) {
-    ui->ownCloudSettingsWidget->setOKLabelData(number, text, status);
+    ui->cloudSettingsWidget->setOKLabelData(number, text, status);
 }
 
 void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData> &items,
                                              bool forceReadCheckedState) {
-    ui->todoSettingsWidget->refreshTodoCalendarList(items, ui->ownCloudSettingsWidget->serverUrl(),
+    ui->todoSettingsWidget->refreshTodoCalendarList(items, ui->cloudSettingsWidget->serverUrl(),
                                                     forceReadCheckedState);
 }
 
@@ -900,7 +880,7 @@ void SettingsDialog::onLayoutStored(const QString &layoutUuid) {
 
 /**
  * Delegates the remote path list callback to the NoteFolderSettingsWidget.
- * Called by OwnCloudService::loadDirectory().
+ * Called by CloudService::loadDirectory().
  */
 void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
     ui->noteFolderSettingsWidget->setNoteFolderRemotePathList(pathList);
@@ -1120,8 +1100,8 @@ bool SettingsDialog::initializePage(int index) {
         case SettingsPages::ScriptingPage: {
             ui->scriptingSettingsWidget->initialize();
         } break;
-        case SettingsPages::OwnCloudPage: {
-            ui->ownCloudSettingsWidget->initialize();
+        case SettingsPages::CloudPage: {
+            ui->cloudSettingsWidget->initialize();
         } break;
         case SettingsPages::AiPage: {
             ui->aiSettingsWidget->initialize();
@@ -1159,17 +1139,17 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
 
     if (index == DebugPage) {
         ui->debugSettingsWidget->outputSettings();
-    } else if (index == OwnCloudPage) {
-        ui->ownCloudSettingsWidget->resetOKLabelData();
+    } else if (index == CloudPage) {
+        ui->cloudSettingsWidget->resetOKLabelData();
     } else if (index == AiPage) {
         ui->aiSettingsWidget->buildAiScriptingTreeWidget();
     }
 
-    // turn off the tasks page if no ownCloud settings are available
+    // turn off the tasks page if no cloud settings are available
     //    QTreeWidgetItem *todoItem =
     //    findSettingsTreeWidgetItemByPage(TodoPage); if (todoItem != nullptr)
     //    {
-    //        if (OwnCloudService::hasOwnCloudSettings()) {
+    //        if (CloudService::hasCloudSettings()) {
     //            todoItem->setDisabled(false);
     //            todoItem->setToolTip(0, "");
     //        } else {
@@ -1228,7 +1208,7 @@ void SettingsDialog::initMainSplitter() {
 void SettingsDialog::closeEvent(QCloseEvent *event) {
     Q_UNUSED(event)
 
-    ui->ownCloudSettingsWidget->cancelConnectionTest();
+    ui->cloudSettingsWidget->cancelConnectionTest();
 
     // make sure no settings get written after we got the
     // clearAppDataAndExit call

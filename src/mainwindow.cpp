@@ -128,11 +128,11 @@
 #ifdef LANGUAGETOOL_ENABLED
 #include "services/languagetoolchecker.h"
 #endif
+#include "services/cloudservice.h"
 #include "services/mcpservice.h"
 #include "services/metricsservice.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
-#include "services/owncloudservice.h"
 #include "services/settingsservice.h"
 #include "services/updateservice.h"
 #include "services/webappclientservice.h"
@@ -513,11 +513,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // initialize the editor soft wrapping
     initEditorSoftWrap();
 
-    // check if user has set ownCloud settings
+    // check if user has set cloud settings
     MetricsService::instance()->sendEventIfEnabled(
-        QStringLiteral("app/has-owncloud-settings"), QStringLiteral("app"),
-        QStringLiteral("has owncloud settings"),
-        OwnCloudService::hasOwnCloudSettings() ? QStringLiteral("yes") : QStringLiteral("no"));
+        QStringLiteral("app/has-cloud-settings"), QStringLiteral("app"),
+        QStringLiteral("has cloud settings"),
+        CloudService::hasCloudSettings() ? QStringLiteral("yes") : QStringLiteral("no"));
 
     // send an event for counting the editor color schemes
     const int schemaCount =
@@ -897,13 +897,13 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
  * Attempts to check the api app version
  */
 void MainWindow::startAppVersionTest() {
-    if (!OwnCloudService::hasOwnCloudSettings() &&
+    if (!CloudService::hasCloudSettings() &&
         CloudConnection::currentCloudConnection().getAppQOwnNotesAPIEnabled()) {
         return;
     }
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->startAppVersionTest();
+    CloudService *cloud = CloudService::instance();
+    cloud->startAppVersionTest();
 }
 
 /**
@@ -1341,7 +1341,7 @@ void MainWindow::initEditorSoftWrap() {
  * Reloads all tasks from the ownCloud server
  */
 void MainWindow::reloadTodoLists() {
-    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+    if (!CloudService::isTodoCalendarSupportEnabled()) {
         return;
     }
 
@@ -1351,12 +1351,12 @@ void MainWindow::reloadTodoLists() {
     QString serverUrl = CloudConnection::currentCloudConnection().getServerUrl();
 
     if (calendars.count() > 0 && !serverUrl.isEmpty()) {
-        OwnCloudService *ownCloud = OwnCloudService::instance();
+        CloudService *cloud = CloudService::instance();
 
         QListIterator<QString> itr(calendars);
         while (itr.hasNext()) {
             QString calendar = itr.next();
-            ownCloud->todoGetTodoList(calendar, nullptr);
+            cloud->todoGetTodoList(calendar, nullptr);
         }
 
         showStatusBarMessage(tr("Your tasks are being loaded from your server"),
@@ -2369,7 +2369,7 @@ void MainWindow::readSettings() {
 
     // let us select a folder if we haven't found one in the settings
     if (this->notesPath.isEmpty()) {
-        selectOwnCloudNotesFolder();
+        selectCloudNotesFolder();
     }
 
     // migration: remove notes path from recent note folders
@@ -2723,7 +2723,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     }
 
     // reset cloud service instance
-    OwnCloudService::instance(true);
+    CloudService::instance(true);
 
     if (!isAppLaunch) {
         // the notes need to be reloaded and subfolder panel needs to be populated
@@ -3064,7 +3064,7 @@ void MainWindow::updateBacklinkNavigationTab() {
     _navigationManager->updateBacklinkNavigationTab();
 }
 
-QString MainWindow::selectOwnCloudNotesFolder() {
+QString MainWindow::selectCloudNotesFolder() {
     QString path = this->notesPath;
 
     if (path.isEmpty()) {
@@ -3099,11 +3099,11 @@ QString MainWindow::selectOwnCloudNotesFolder() {
         if (this->notesPath.isEmpty()) {
             if (QMessageBox::question(
                     this, tr("No folder was selected"),
-                    Utils::Misc::replaceOwnCloudText(tr("You have to select your ownCloud notes "
-                                                        "folder to make this software work!")),
+                    tr("You have to select your Nextcloud / ownCloud notes folder to make this "
+                       "software work!"),
                     QMessageBox::Retry | QMessageBox::Close,
                     QMessageBox::Retry) == QMessageBox::Retry) {
-                selectOwnCloudNotesFolder();
+                selectCloudNotesFolder();
             } else {
                 // No other way to quit the application worked
                 // in the constructor
@@ -3796,8 +3796,8 @@ void MainWindow::createNewNote(QString name, QString text, CreateNewNoteOptions 
  * This is a public callback function for the trash dialog.
  */
 void MainWindow::restoreTrashedNoteOnServer(const QString &fileName, int timestamp) {
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->restoreTrashedNoteOnServer(fileName, timestamp);
+    CloudService *cloud = CloudService::instance();
+    cloud->restoreTrashedNoteOnServer(fileName, timestamp);
 }
 
 /**
@@ -3923,9 +3923,9 @@ void MainWindow::handleNoteTreeTagColoringForNote(const Note &note) {
  * @brief Updates the current folder tooltip
  */
 void MainWindow::updateCurrentFolderTooltip() {
-    ui->actionSet_ownCloud_Folder->setStatusTip(tr("Current notes folder: ") + this->notesPath);
-    ui->actionSet_ownCloud_Folder->setToolTip(tr("Set the notes folder. Current notes folder: ") +
-                                              this->notesPath);
+    ui->actionSet_Cloud_Folder->setStatusTip(tr("Current notes folder: ") + this->notesPath);
+    ui->actionSet_Cloud_Folder->setToolTip(tr("Set the notes folder. Current notes folder: ") +
+                                           this->notesPath);
 }
 
 /**
@@ -4223,7 +4223,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
  * Opens the task list dialog
  */
 void MainWindow::openTodoDialog(const QString &taskUid) {
-    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+    if (!CloudService::isTodoCalendarSupportEnabled()) {
         QMessageBox msgBox(QMessageBox::Warning, tr("Todo lists disabled!"),
                            tr("You have disabled the todo lists.<br />"
                               "Please check your <strong>Todo</strong> "
@@ -4361,7 +4361,7 @@ void MainWindow::quitApp() {
     QApplication::quit();
 }
 
-void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
+void MainWindow::on_actionSet_Cloud_Folder_triggered() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
@@ -4591,12 +4591,11 @@ void MainWindow::on_actionShow_versions_triggered() {
 
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
-        Utils::Misc::replaceOwnCloudText(tr("Note versions are currently loaded from your ownCloud "
-                                            "server")),
+        tr("Note versions are currently loaded from your Nextcloud / ownCloud server"),
         QStringLiteral("🛜"), 20000);
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->loadVersions(this->currentNote.relativeNoteFilePath(QStringLiteral("/")));
+    CloudService *cloud = CloudService::instance();
+    cloud->loadVersions(this->currentNote.relativeNoteFilePath(QStringLiteral("/")));
 }
 
 void MainWindow::enableShowVersionsButton() { ui->actionShow_versions->setDisabled(false); }
@@ -4604,12 +4603,11 @@ void MainWindow::enableShowVersionsButton() { ui->actionShow_versions->setDisabl
 void MainWindow::on_actionShow_trash_triggered() {
     ui->actionShow_trash->setDisabled(true);
     showStatusBarMessage(
-        Utils::Misc::replaceOwnCloudText(tr("Trashed notes are currently loaded from your ownCloud"
-                                            " server")),
+        tr("Trashed notes are currently loaded from your Nextcloud / ownCloud server"),
         QStringLiteral("🗑"), 20000);
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->loadTrash();
+    CloudService *cloud = CloudService::instance();
+    cloud->loadTrash();
 }
 
 void MainWindow::enableShowTrashButton() { ui->actionShow_trash->setDisabled(false); }
@@ -6483,7 +6481,7 @@ void MainWindow::on_actionShare_note_triggered() {
 
     ShareDialog *dialog = new ShareDialog(currentNote, this);
     dialog->exec();
-    OwnCloudService::instance()->unsetShareDialog();
+    CloudService::instance()->unsetShareDialog();
     delete (dialog);
 
     currentNote.refetch();
@@ -7727,8 +7725,8 @@ void MainWindow::on_actionJump_to_note_subfolder_panel_triggered() {
 void MainWindow::on_actionActivate_context_menu_triggered() { activateContextMenu(); }
 
 void MainWindow::on_actionImport_bookmarks_from_server_triggered() {
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->fetchBookmarks();
+    CloudService *cloud = CloudService::instance();
+    cloud->fetchBookmarks();
 }
 
 void MainWindow::on_actionElementMatrix_triggered() {
@@ -7979,7 +7977,7 @@ bool MainWindow::nextCloudDeckCheck() {
                     "Nextcloud Deck support is not enabled or the settings are invalid.<br />"
                     "Please check your <strong>Nextcloud</strong> configuration in the settings!"),
                 QMessageBox::Open | QMessageBox::Cancel, QMessageBox::Open) == QMessageBox::Open) {
-            openSettingsDialog(SettingsDialog::OwnCloudPage);
+            openSettingsDialog(SettingsDialog::CloudPage);
         }
 
         return false;

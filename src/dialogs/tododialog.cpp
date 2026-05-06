@@ -16,7 +16,7 @@
 #include <QSplitter>
 
 #include "entities/calendaritem.h"
-#include "services/owncloudservice.h"
+#include "services/cloudservice.h"
 #include "services/settingsservice.h"
 #include "ui_tododialog.h"
 
@@ -55,14 +55,14 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
 }
 
 void TodoDialog::updateCalendarItem(CalendarItem item) {
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    bool result = ownCloud->updateICSDataOfCalendarItem(&item);
+    CloudService *cloud = CloudService::instance();
+    bool result = cloud->updateICSDataOfCalendarItem(&item);
 
     qDebug() << __func__ << " - 'result': " << result;
 
     if (result) {
         // post the calendar item to the server (and reload note tree)
-        ownCloud->postCalendarItemToServer(item, this);
+        cloud->postCalendarItemToServer(item, this);
     }
 }
 
@@ -243,8 +243,8 @@ void TodoDialog::loadTodoListData() {
 void TodoDialog::reloadTodoList() {
     ui->todoItemLoadingProgressBar->setValue(0);
     ui->todoItemLoadingProgressBar->show();
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->todoGetTodoList(ui->todoListSelector->currentText(), this);
+    CloudService *cloud = CloudService::instance();
+    cloud->todoGetTodoList(ui->todoListSelector->currentText(), this);
 }
 
 /**
@@ -535,13 +535,13 @@ void TodoDialog::on_saveButton_clicked() {
 
     updateCurrentCalendarItemWithFormData();
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    CloudService *cloud = CloudService::instance();
 
     // update the local icsData from server
-    ownCloud->updateICSDataOfCalendarItem(&currentCalendarItem);
+    cloud->updateICSDataOfCalendarItem(&currentCalendarItem);
 
     // post the calendar item to the server
-    ownCloud->postCalendarItemToServer(currentCalendarItem, this);
+    cloud->postCalendarItemToServer(currentCalendarItem, this);
 
     qDebug() << currentCalendarItem;
 
@@ -589,10 +589,10 @@ void TodoDialog::createNewTodoItem(const QString &name, const QString &relatedUi
     // set the focus to the description edit after we loaded the tasks
     _setFocusToDescriptionEdit = true;
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    CloudService *cloud = CloudService::instance();
 
     // post the calendar item to the server
-    ownCloud->postCalendarItemToServer(calItem, this);
+    cloud->postCalendarItemToServer(calItem, this);
 
     //    if ( calItem.isFetched() )
     //    {
@@ -624,8 +624,8 @@ void TodoDialog::on_removeButton_clicked() {
 
         // remove the calendar item from the ownCloud server
         // (this will reload the task list as well)
-        OwnCloudService *ownCloud = OwnCloudService::instance();
-        ownCloud->removeCalendarItem(calItem, this);
+        CloudService *cloud = CloudService::instance();
+        cloud->removeCalendarItem(calItem, this);
 
         resetEditFrameControls();
     }
@@ -891,10 +891,10 @@ void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int co
         calItem.updateCompleted(item->checkState(0) == Qt::Checked);
         calItem.store();
 
-        OwnCloudService *ownCloud = OwnCloudService::instance();
+        CloudService *cloud = CloudService::instance();
 
         // post the calendar item to the server
-        ownCloud->postCalendarItemToServer(calItem, this);
+        cloud->postCalendarItemToServer(calItem, this);
     }
 }
 

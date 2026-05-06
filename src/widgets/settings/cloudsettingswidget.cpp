@@ -12,10 +12,10 @@
  *
  */
 
-#include "owncloudsettingswidget.h"
+#include "cloudsettingswidget.h"
 
 #include <entities/notefolder.h>
-#include <services/owncloudservice.h>
+#include <services/cloudservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
 
@@ -30,10 +30,10 @@
 #include "dialogs/settingsdialog.h"
 #include "release.h"
 #include "services/settingsservice.h"
-#include "ui_owncloudsettingswidget.h"
+#include "ui_cloudsettingswidget.h"
 
-OwnCloudSettingsWidget::OwnCloudSettingsWidget(QWidget *parent)
-    : QWidget(parent), ui(new Ui::OwnCloudSettingsWidget) {
+CloudSettingsWidget::CloudSettingsWidget(QWidget *parent)
+    : QWidget(parent), ui(new Ui::CloudSettingsWidget) {
     ui->setupUi(this);
 
     ui->loginFlowCancelButton->hide();
@@ -52,12 +52,12 @@ OwnCloudSettingsWidget::OwnCloudSettingsWidget(QWidget *parent)
             [this] { cancelConnectionTest(); });
 }
 
-OwnCloudSettingsWidget::~OwnCloudSettingsWidget() { delete ui; }
+CloudSettingsWidget::~CloudSettingsWidget() { delete ui; }
 
 /**
- * Lazy initialization called when the ownCloud page is first shown
+ * Lazy initialization called when the cloud page is first shown
  */
-void OwnCloudSettingsWidget::initialize() {
+void CloudSettingsWidget::initialize() {
     resetOKLabelData();
 
     // Store original HTML texts for enable/disable state management
@@ -87,73 +87,38 @@ void OwnCloudSettingsWidget::initialize() {
             SLOT(storeSelectedCloudConnection()));
 }
 
-void OwnCloudSettingsWidget::readSettings() {
-    ui->ownCloudSupportCheckBox->setChecked(OwnCloudService::isOwnCloudSupportEnabled());
-    on_ownCloudSupportCheckBox_toggled();
+void CloudSettingsWidget::readSettings() {
+    ui->cloudSupportCheckBox->setChecked(CloudService::isCloudSupportEnabled());
+    on_cloudSupportCheckBox_toggled();
 
     // Populate the cloud connection combo box
     initCloudConnectionComboBox();
 }
 
-void OwnCloudSettingsWidget::storeSettings() {
+void CloudSettingsWidget::storeSettings() {
     storeSelectedCloudConnection();
 
     SettingsService settings;
     settings.setValue(QStringLiteral("ownCloud/supportEnabled"),
-                      ui->ownCloudSupportCheckBox->isChecked());
-}
-
-/**
- * Replaces the "ownCloud" text by "ownCloud / NextCloud" on this page
- */
-void OwnCloudSettingsWidget::replaceOwnCloudText() {
-    ui->ownCloudSupportGroupBox->setTitle(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudSupportGroupBox->title()));
-    ui->ownCloudSupportCheckBox->setText(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudSupportCheckBox->text()));
-    ui->userNameEdit->setPlaceholderText(
-        Utils::Misc::replaceOwnCloudText(ui->userNameEdit->placeholderText()));
-    ui->passwordEdit->setPlaceholderText(
-        Utils::Misc::replaceOwnCloudText(ui->passwordEdit->placeholderText()));
-    ui->ownCloudGroupBox->setTitle(Utils::Misc::replaceOwnCloudText(ui->ownCloudGroupBox->title()));
-    ui->ownCloudServerUrlLabel->setText(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudServerUrlLabel->text(), true));
-    ui->check2Label->setText(Utils::Misc::replaceOwnCloudText(ui->check2Label->text()));
-    ui->ownCloudServerAppPageButton->setText(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudServerAppPageButton->text(), true));
-    ui->ownCloudServerAppPageButton->setToolTip(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudServerAppPageButton->toolTip()));
-    ui->ownCloudServerAppPasswordPageButton->setText(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudServerAppPasswordPageButton->text(), true));
-    ui->ownCloudServerAppPasswordPageButton->setToolTip(
-        Utils::Misc::replaceOwnCloudText(ui->ownCloudServerAppPasswordPageButton->toolTip()));
-    ui->connectButton->setText(Utils::Misc::replaceOwnCloudText(ui->connectButton->text(), true));
-    ui->connectButton->setToolTip(Utils::Misc::replaceOwnCloudText(ui->connectButton->toolTip()));
-    ui->installInfoTextLabel1->setText(
-        Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel1->text()));
-    ui->installInfoTextLabel2->setText(
-        Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel2->text()));
-    ui->installInfoTextLabel3->setText(
-        Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel3->text()));
-    ui->cloudInfoLabel->setText(Utils::Misc::replaceOwnCloudText(ui->cloudInfoLabel->text()));
+                      ui->cloudSupportCheckBox->isChecked());
 }
 
 /**
  * Returns the server URL from the server URL edit field
  */
-QString OwnCloudSettingsWidget::serverUrl() const { return ui->serverUrlEdit->text(); }
+QString CloudSettingsWidget::serverUrl() const { return ui->serverUrlEdit->text(); }
 
 /**
  * Returns true if we can start a connection test
  */
-bool OwnCloudSettingsWidget::connectionTestCanBeStarted() const {
-    return ui->ownCloudSupportCheckBox->isChecked() && !ui->serverUrlEdit->text().isEmpty();
+bool CloudSettingsWidget::connectionTestCanBeStarted() const {
+    return ui->cloudSupportCheckBox->isChecked() && !ui->serverUrlEdit->text().isEmpty();
 }
 
 /**
  * Resets all OK label data to unknown state
  */
-void OwnCloudSettingsWidget::resetOKLabelData() {
+void CloudSettingsWidget::resetOKLabelData() {
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, tr("unknown"), Unknown);
     }
@@ -162,29 +127,29 @@ void OwnCloudSettingsWidget::resetOKLabelData() {
 /**
  * @brief Starts a connection test
  */
-void OwnCloudSettingsWidget::startConnectionTest() {
+void CloudSettingsWidget::startConnectionTest() {
     ui->connectionTestLabel->hide();
-    OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedCloudConnection.getId());
-    connect(ownCloud, &OwnCloudService::settingsConnectionTestFinished, this,
-            &OwnCloudSettingsWidget::onSettingsConnectionTestFinished, Qt::UniqueConnection);
-    ownCloud->settingsConnectionTest(_settingsDialog);
+    CloudService *cloud = CloudService::instance(true, _selectedCloudConnection.getId());
+    connect(cloud, &CloudService::settingsConnectionTestFinished, this,
+            &CloudSettingsWidget::onSettingsConnectionTestFinished, Qt::UniqueConnection);
+    cloud->settingsConnectionTest(_settingsDialog);
     ui->check8Label->setText(
         tr("notes path <b>%1</b> found on server").arg(NoteFolder::currentRemotePath(false)));
 }
 
-void OwnCloudSettingsWidget::setConnectionTestInProgress(bool inProgress) {
+void CloudSettingsWidget::setConnectionTestInProgress(bool inProgress) {
     _connectionTestInProgress = inProgress;
     ui->connectButton->setEnabled(!inProgress);
 }
 
-void OwnCloudSettingsWidget::cancelConnectionTest() {
+void CloudSettingsWidget::cancelConnectionTest() {
     if (!_connectionTestInProgress) {
         return;
     }
 
-    OwnCloudService *ownCloud = OwnCloudService::currentInstance();
-    if (ownCloud != nullptr) {
-        ownCloud->abortSettingsConnectionTest();
+    CloudService *cloud = CloudService::currentInstance();
+    if (cloud != nullptr) {
+        cloud->abortSettingsConnectionTest();
     }
 
     setConnectionTestInProgress(false);
@@ -195,7 +160,7 @@ void OwnCloudSettingsWidget::cancelConnectionTest() {
 /**
  * @brief Handles the connect button click to start a connection test
  */
-void OwnCloudSettingsWidget::on_connectButton_clicked() {
+void CloudSettingsWidget::on_connectButton_clicked() {
     setConnectionTestInProgress(true);
     ui->connectButton->repaint();
     qApp->processEvents();
@@ -207,7 +172,7 @@ void OwnCloudSettingsWidget::on_connectButton_clicked() {
     startConnectionTest();
 }
 
-void OwnCloudSettingsWidget::storeSelectedCloudConnection() {
+void CloudSettingsWidget::storeSelectedCloudConnection() {
     QString url = ui->serverUrlEdit->text();
     bool updateComboBox = false;
 
@@ -235,11 +200,11 @@ void OwnCloudSettingsWidget::storeSelectedCloudConnection() {
     }
 }
 
-void OwnCloudSettingsWidget::on_ownCloudSupportCheckBox_toggled() {
+void CloudSettingsWidget::on_cloudSupportCheckBox_toggled() {
     cancelConnectionTest();
 
-    bool checked = ui->ownCloudSupportCheckBox->isChecked();
-    ui->ownCloudGroupBox->setEnabled(checked);
+    bool checked = ui->cloudSupportCheckBox->isChecked();
+    ui->cloudGroupBox->setEnabled(checked);
 
     // Update labels with disabled color when unchecked
     QString disabledColor = palette().color(QPalette::Disabled, QPalette::Text).name();
@@ -261,7 +226,7 @@ void OwnCloudSettingsWidget::on_ownCloudSupportCheckBox_toggled() {
     }
 }
 
-void OwnCloudSettingsWidget::initCloudConnectionComboBox(int selectedId) {
+void CloudSettingsWidget::initCloudConnectionComboBox(int selectedId) {
     const QSignalBlocker blocker(ui->cloudConnectionComboBox);
     Q_UNUSED(blocker)
     ui->cloudConnectionComboBox->clear();
@@ -290,7 +255,7 @@ void OwnCloudSettingsWidget::initCloudConnectionComboBox(int selectedId) {
     Q_EMIT cloudConnectionsChanged(connections);
 }
 
-void OwnCloudSettingsWidget::on_cloudConnectionComboBox_currentIndexChanged(int index) {
+void CloudSettingsWidget::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(index)
     cancelConnectionTest();
 
@@ -320,7 +285,7 @@ void OwnCloudSettingsWidget::on_cloudConnectionComboBox_currentIndexChanged(int 
         CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 }
 
-void OwnCloudSettingsWidget::on_cloudConnectionAddButton_clicked() {
+void CloudSettingsWidget::on_cloudConnectionAddButton_clicked() {
     cancelConnectionTest();
 
     // Create a new cloud connection
@@ -331,7 +296,7 @@ void OwnCloudSettingsWidget::on_cloudConnectionAddButton_clicked() {
     initCloudConnectionComboBox(cloudConnection.getId());
 }
 
-void OwnCloudSettingsWidget::on_cloudConnectionRemoveButton_clicked() {
+void CloudSettingsWidget::on_cloudConnectionRemoveButton_clicked() {
     cancelConnectionTest();
 
     if (CloudConnection::countAll() <= 1) {
@@ -361,20 +326,20 @@ void OwnCloudSettingsWidget::on_cloudConnectionRemoveButton_clicked() {
     initCloudConnectionComboBox();
 }
 
-void OwnCloudSettingsWidget::on_ownCloudServerAppPageButton_clicked() {
+void CloudSettingsWidget::on_cloudServerAppPageButton_clicked() {
     QDesktopServices::openUrl(QUrl(ui->serverUrlEdit->text() + "/index.php/settings/apps"));
 }
 
-void OwnCloudSettingsWidget::on_ownCloudServerAppPasswordPageButton_clicked() {
+void CloudSettingsWidget::on_cloudServerAppPasswordPageButton_clicked() {
     QDesktopServices::openUrl(
         QUrl(ui->serverUrlEdit->text() + "/index.php/settings/user/security"));
 }
 
-void OwnCloudSettingsWidget::on_loginFlowButton_clicked() {
+void CloudSettingsWidget::on_loginFlowButton_clicked() {
     QJsonObject pollData;
 
     // Initiate the Nextcloud Login flow v2
-    if (!OwnCloudService::initiateLoginFlowV2(ui->serverUrlEdit->text(), pollData)) {
+    if (!CloudService::initiateLoginFlowV2(ui->serverUrlEdit->text(), pollData)) {
         return;
     }
 
@@ -399,7 +364,7 @@ void OwnCloudSettingsWidget::on_loginFlowButton_clicked() {
             return;
         }
 
-        QPointer<OwnCloudSettingsWidget> alive(this);
+        QPointer<CloudSettingsWidget> alive(this);
 
         auto postData = QStringLiteral("token=%1").arg(token).toLocal8Bit();
         auto data = Utils::Misc::downloadUrl(pollUrl, true, postData);
@@ -422,7 +387,7 @@ void OwnCloudSettingsWidget::on_loginFlowButton_clicked() {
         ui->passwordEdit->setText(jsonObject.value(QStringLiteral("appPassword")).toString());
 
         // Try to fetch the account id
-        QString accountId = OwnCloudService::fetchNextcloudAccountId(
+        QString accountId = CloudService::fetchNextcloudAccountId(
             ui->serverUrlEdit->text(), ui->userNameEdit->text(), ui->passwordEdit->text());
 
         if (!alive) {
@@ -444,26 +409,24 @@ void OwnCloudSettingsWidget::on_loginFlowButton_clicked() {
     timer->start(5000);
 }
 
-void OwnCloudSettingsWidget::on_loginFlowCancelButton_clicked() {
+void CloudSettingsWidget::on_loginFlowCancelButton_clicked() {
     // Hide the login flow cancel button so the login flow timer will be stopped
     ui->loginFlowCancelButton->hide();
     ui->loginFlowButton->show();
 }
 
-void OwnCloudSettingsWidget::on_appNextcloudDeckCheckBox_toggled(bool checked) {
+void CloudSettingsWidget::on_appNextcloudDeckCheckBox_toggled(bool checked) {
     _selectedCloudConnection.setNextcloudDeckEnabled(checked);
 }
 
-void OwnCloudSettingsWidget::onSettingsConnectionTestFinished() {
-    setConnectionTestInProgress(false);
-}
+void CloudSettingsWidget::onSettingsConnectionTestFinished() { setConnectionTestInProgress(false); }
 
 /**
- * Called by OwnCloudService when a connection test result arrives
+ * Called by CloudService when a connection test result arrives
  */
-void OwnCloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVersion,
-                                                 QString serverVersion, QString notesPathExistsText,
-                                                 QString connectionErrorMessage) {
+void CloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVersion,
+                                              QString serverVersion, QString notesPathExistsText,
+                                              QString connectionErrorMessage) {
     if (!_connectionTestInProgress) {
         return;
     }
@@ -475,7 +438,7 @@ void OwnCloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVer
     _connectionErrorMessage = connectionErrorMessage;
 
     // Store some data for Utils::Misc::generateDebugInformation
-    storeOwncloudDebugData();
+    storeCloudDebugData();
 
     if (appIsValid) {
         ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: green;"));
@@ -490,10 +453,9 @@ void OwnCloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVer
 
         ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: red;"));
         ui->connectionTestLabel->setText(
-            Utils::Misc::replaceOwnCloudText(
-                tr("There was an error connecting to the ownCloud Server!\n"
-                   "You also need to have the QOwnNotesAPI app installed "
-                   "and enabled!\n\nConnection error message: ")) +
+            tr("There was an error connecting to the Nextcloud / ownCloud Server!\n"
+               "You also need to have the QOwnNotesAPI app installed "
+               "and enabled!\n\nConnection error message: ") +
             connectionErrorMessage);
     }
 
@@ -507,7 +469,7 @@ void OwnCloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVer
  * @param text
  * @param status
  */
-void OwnCloudSettingsWidget::setOKLabelData(int number, const QString &text, OKLabelStatus status) {
+void CloudSettingsWidget::setOKLabelData(int number, const QString &text, OKLabelStatus status) {
     QLabel *label;
 
     switch (number) {
@@ -561,7 +523,7 @@ void OwnCloudSettingsWidget::setOKLabelData(int number, const QString &text, OKL
 /**
  * Stores ownCloud connection test results for the debug information generator
  */
-void OwnCloudSettingsWidget::storeOwncloudDebugData() const {
+void CloudSettingsWidget::storeCloudDebugData() const {
     SettingsService settings;
     settings.setValue(QStringLiteral("ownCloudInfo/appIsValid"), _appIsValid);
     settings.setValue(QStringLiteral("ownCloudInfo/notesPathExistsText"), _notesPathExistsText);
@@ -571,6 +533,6 @@ void OwnCloudSettingsWidget::storeOwncloudDebugData() const {
 }
 
 /**
- * Sets the back-pointer to the SettingsDialog, required by OwnCloudService::settingsConnectionTest
+ * Sets the back-pointer to the SettingsDialog, required by CloudService::settingsConnectionTest
  */
-void OwnCloudSettingsWidget::setSettingsDialog(SettingsDialog *dialog) { _settingsDialog = dialog; }
+void CloudSettingsWidget::setSettingsDialog(SettingsDialog *dialog) { _settingsDialog = dialog; }

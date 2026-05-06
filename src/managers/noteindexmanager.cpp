@@ -21,9 +21,9 @@
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
 #include <entities/trashitem.h>
+#include <services/cloudservice.h>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
-#include <services/owncloudservice.h>
 #include <services/scriptingservice.h>
 #include <services/settingsservice.h>
 #include <services/updateservice.h>
@@ -357,8 +357,8 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         updateNoteDirectoryWatcher();
 
         // update the information about shared notes
-        OwnCloudService *ownCloud = OwnCloudService::instance();
-        ownCloud->fetchShares();
+        CloudService *cloud = CloudService::instance();
+        cloud->fetchShares();
     }
 
     if (noteSubFolderId == 0) {
@@ -613,11 +613,10 @@ void NoteIndexManager::removeConflictedNotesDatabaseCopies() {
 
     if (Utils::Gui::question(
             _mainWindow, tr("Delete conflicted database copies"),
-            Utils::Misc::replaceOwnCloudText(
-                tr("Proceed with automatic deletion of <strong>%n</strong>"
-                   " conflicted database copies that may block your ownCloud"
-                   " sync process?",
-                   "", count)) +
+            tr("Proceed with automatic deletion of <strong>%n</strong>"
+               " conflicted database copies that may block your Nextcloud / ownCloud"
+               " sync process?",
+               "", count) +
                 QStringLiteral("<br /><br />") + files.join(QStringLiteral("<br />")),
             QStringLiteral("delete-conflicted-database-files")) != QMessageBox::Yes) {
         return;

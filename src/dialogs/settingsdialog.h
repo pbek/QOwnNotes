@@ -5,11 +5,11 @@
 #include <enums/oklabelstatus.h>
 
 #include "masterdialog.h"
+#include "widgets/settings/cloudsettingswidget.h"
 #include "widgets/settings/generalsettingswidget.h"
 #include "widgets/settings/interfacesettingswidget.h"
 #include "widgets/settings/mcpserversettingswidget.h"
 #include "widgets/settings/notefoldersettingswidget.h"
-#include "widgets/settings/owncloudsettingswidget.h"
 #include "widgets/settings/panelssettingswidget.h"
 #include "widgets/settings/scriptingsettingswidget.h"
 
@@ -40,7 +40,7 @@ class SettingsDialog : public MasterDialog {
    public:
     // OKLabelStatus is a global enum defined in enums/oklabelstatus.h
     using OKLabelStatus = ::OKLabelStatus;
-    // Expose enum values for backward compatibility (owncloudservice.cpp uses SettingsDialog::OK
+    // Expose enum values for backward compatibility (cloudservice.cpp uses SettingsDialog::OK
     // etc.)
     static constexpr OKLabelStatus Unknown = ::Unknown;
     static constexpr OKLabelStatus Warning = ::Warning;
@@ -49,7 +49,7 @@ class SettingsDialog : public MasterDialog {
 
     enum SettingsPages {
         NoteFolderPage,
-        OwnCloudPage,
+        CloudPage,
         NetworkPage,
         TodoPage,
         InterfacePage,
@@ -173,8 +173,6 @@ class SettingsDialog : public MasterDialog {
     void highlightSearchMatchedWidget(QWidget *widget, const QString &searchText);
 
     void clearSearchHighlights();
-
-    void replaceOwnCloudText() const;
 
     QKeySequenceWidget *findKeySequenceWidget(const QString &objectName);
     QKeySequenceWidget *findGlobalKeySequenceWidget(const QString &objectName);
