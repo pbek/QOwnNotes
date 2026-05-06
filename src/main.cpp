@@ -1,3 +1,4 @@
+#include <services/cryptoservice.h>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
 #include <utils/cli.h>
@@ -479,6 +480,7 @@ int main(int argc, char *argv[]) {
     QString appNameAdd = QString();
     QString session = QString();
     QString action = QString();
+    QStringList clearSettingsKeychainReferences;
 
 #ifdef QT_DEBUG
     appNameAdd = QStringLiteral("Debug");
@@ -589,6 +591,14 @@ int main(int argc, char *argv[]) {
     // clear the settings if a --clear-settings parameter was provided
     if (clearSettings) {
         QSettings settings;
+        clearSettingsKeychainReferences = CryptoService::keychainReferencesFromSettings(settings);
+
+        if (!portable) {
+            clearSettingsKeychainReferences.append(
+                CryptoService::keychainReferencesFromDiskDatabase());
+            clearSettingsKeychainReferences.removeDuplicates();
+        }
+
         settings.clear();
 
         if (!portable) {
@@ -654,6 +664,11 @@ int main(int argc, char *argv[]) {
         SingleApplication app(
             argc, argv, true,
             SingleApplication::Mode::User | SingleApplication::Mode::SecondaryNotification);
+        setAppProperties(app, release, arguments, true, snap, portable, action, session);
+
+        if (!clearSettingsKeychainReferences.isEmpty()) {
+            CryptoService::instance()->deleteSecrets(clearSettingsKeychainReferences);
+        }
 
         // quit app if it was already started
         if (app.isSecondary()) {
@@ -673,7 +688,6 @@ int main(int argc, char *argv[]) {
             return 0;
         }
 
-        setAppProperties(app, release, arguments, true, snap, portable, action, session);
 #ifndef QT_DEBUG
         loadReleaseTranslations(translatorsRelease, locale);
 #endif
@@ -735,6 +749,10 @@ int main(int argc, char *argv[]) {
         // allowed
         QApplication app(argc, argv);
         setAppProperties(app, release, arguments, false, snap, portable, action, session);
+
+        if (!clearSettingsKeychainReferences.isEmpty()) {
+            CryptoService::instance()->deleteSecrets(clearSettingsKeychainReferences);
+        }
 
 #ifndef QT_DEBUG
         loadReleaseTranslations(translatorsRelease, locale);

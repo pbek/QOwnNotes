@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.5.5
+
+- Keychain secrets are now deleted together with their references when removing
+  scripts, cloud connections, settings groups, or all settings, preventing stale
+  qtkeychain entries from being left behind (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
+
 ## 26.5.4
 
 - Fixed a startup crash when the Markdown LSP server initialized while qtkeychain

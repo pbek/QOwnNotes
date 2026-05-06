@@ -15,6 +15,7 @@
 #include "script.h"
 
 #include <libraries/versionnumber/versionnumber.h>
+#include <services/cryptoservice.h>
 #include <services/metricsservice.h>
 #include <services/updateservice.h>
 #include <utils/misc.h>
@@ -217,10 +218,23 @@ bool Script::remove() const {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
     QString path;
+    QStringList keychainReferences;
     bool isFromRepository = isScriptFromRepository();
 
     if (isFromRepository) {
         path = scriptRepositoryPath();
+    }
+
+    QJsonObject settingsVariablesObject =
+        QJsonDocument::fromJson(settingsVariablesJson.toUtf8()).object();
+
+    for (auto it = settingsVariablesObject.constBegin(); it != settingsVariablesObject.constEnd();
+         ++it) {
+        const QString value = it.value().toString();
+
+        if (it.key().startsWith(QStringLiteral("!")) && CryptoService::isKeychainReference(value)) {
+            keychainReferences.append(value);
+        }
     }
 
     query.prepare(QStringLiteral("DELETE FROM script WHERE id = :id"));
@@ -230,6 +244,8 @@ bool Script::remove() const {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
+        CryptoService::instance()->deleteSecrets(keychainReferences);
+
         // if the script was from the script repository remove also the
         // local path
         if (isFromRepository && !path.isEmpty()) {

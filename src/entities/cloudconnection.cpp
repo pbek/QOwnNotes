@@ -170,6 +170,14 @@ int CloudConnection::countAll() {
 bool CloudConnection::remove() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
+    QString storedPassword;
+
+    query.prepare(QStringLiteral("SELECT password FROM cloudConnection WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), this->id);
+
+    if (query.exec() && query.first()) {
+        storedPassword = query.value(0).toString();
+    }
 
     query.prepare(QStringLiteral("DELETE FROM cloudConnection WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), this->id);
@@ -178,6 +186,7 @@ bool CloudConnection::remove() {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
+        CryptoService::instance()->deleteSecret(storedPassword);
         removeExtraSettings();
 
         return true;

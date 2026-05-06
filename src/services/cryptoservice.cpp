@@ -6,6 +6,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QEventLoop>
+#include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QSqlDatabase>
@@ -13,6 +14,7 @@
 #include <QSqlQuery>
 #include <QUuid>
 
+#include "services/databaseservice.h"
 #include "services/settingsservice.h"
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
@@ -44,6 +46,25 @@ bool executeKeychainJob(QKeychain::Job *job) {
     job->start();
     loop.exec();
     return job->error() == QKeychain::NoError;
+}
+
+void appendKeychainReference(QStringList *references, const QString &value) {
+    if (references == nullptr || !CryptoService::isKeychainReference(value) ||
+        references->contains(value)) {
+        return;
+    }
+
+    references->append(value);
+}
+
+void appendScriptKeychainReferences(QStringList *references, const QString &settingsVariablesJson) {
+    const QJsonObject jsonObject = QJsonDocument::fromJson(settingsVariablesJson.toUtf8()).object();
+
+    for (auto it = jsonObject.constBegin(); it != jsonObject.constEnd(); ++it) {
+        if (it.key().startsWith(QStringLiteral("!"))) {
+            appendKeychainReference(references, it.value().toString());
+        }
+    }
 }
 }    // namespace
 
@@ -134,8 +155,90 @@ QString CryptoService::decryptToString(const QString &text) {
     return legacyDecryptToString(text);
 }
 
-bool CryptoService::isKeychainReference(const QString &text) const {
+bool CryptoService::isKeychainReference(const QString &text) {
     return text.startsWith(KeychainMarkerPrefix);
+}
+
+bool CryptoService::deleteSecret(const QString &storedValueOrKey) const {
+    const QString key =
+        isKeychainReference(storedValueOrKey) ? keyFromMarker(storedValueOrKey) : storedValueOrKey;
+
+    if (key.isEmpty()) {
+        return false;
+    }
+
+    auto *job = new QKeychain::DeletePasswordJob(keychainServiceName());
+    job->setKey(key);
+
+    executeKeychainJob(job);
+    const bool ok = job->error() == QKeychain::NoError || job->error() == QKeychain::EntryNotFound;
+
+    if (!ok) {
+        qWarning() << "Could not delete secret from keychain:" << key << job->errorString();
+    }
+
+    delete job;
+    return ok;
+}
+
+void CryptoService::deleteSecrets(const QStringList &storedValuesOrKeys) const {
+    for (const QString &storedValueOrKey : storedValuesOrKeys) {
+        deleteSecret(storedValueOrKey);
+    }
+}
+
+QStringList CryptoService::keychainReferencesFromSettings(const QSettings &settings) {
+    QStringList references;
+
+    for (const QString &key : settings.allKeys()) {
+        appendKeychainReference(&references, settings.value(key).toString());
+    }
+
+    return references;
+}
+
+QStringList CryptoService::keychainReferencesFromDiskDatabase() {
+    QStringList references;
+    const QString path = DatabaseService::getDiskDatabasePath();
+
+    if (!QFile::exists(path)) {
+        return references;
+    }
+
+    const QString connectionName =
+        QStringLiteral("keychain-reference-collector-%1").arg(QUuid::createUuid().toString());
+    QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connectionName);
+    db.setDatabaseName(path);
+
+    if (!db.open()) {
+        db = QSqlDatabase();
+        QSqlDatabase::removeDatabase(connectionName);
+        return references;
+    }
+
+    {
+        QSqlQuery cloudConnectionQuery(db);
+        if (cloudConnectionQuery.exec(QStringLiteral("SELECT password FROM cloudConnection"))) {
+            while (cloudConnectionQuery.next()) {
+                appendKeychainReference(&references, cloudConnectionQuery.value(0).toString());
+            }
+        }
+    }
+
+    {
+        QSqlQuery scriptQuery(db);
+        if (scriptQuery.exec(QStringLiteral("SELECT settings_variables_json FROM script"))) {
+            while (scriptQuery.next()) {
+                appendScriptKeychainReferences(&references, scriptQuery.value(0).toString());
+            }
+        }
+    }
+
+    db.close();
+    db = QSqlDatabase();
+    QSqlDatabase::removeDatabase(connectionName);
+
+    return references;
 }
 
 QString CryptoService::legacyEncryptToString(const QString &text) {

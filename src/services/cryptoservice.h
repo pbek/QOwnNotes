@@ -6,6 +6,7 @@
 #include <libraries/simplecrypt/simplecrypt.h>
 
 #include <QObject>
+#include <QSettings>
 #include <QStringList>
 
 class CryptoService : public QObject {
@@ -18,7 +19,11 @@ class CryptoService : public QObject {
     QString encryptToString(const QString &text);
     QString encryptToString(const QString &text, const QString &key);
     QString decryptToString(const QString &text);
-    bool isKeychainReference(const QString &text) const;
+    static bool isKeychainReference(const QString &text);
+    bool deleteSecret(const QString &storedValueOrKey) const;
+    void deleteSecrets(const QStringList &storedValuesOrKeys) const;
+    static QStringList keychainReferencesFromSettings(const QSettings &settings);
+    static QStringList keychainReferencesFromDiskDatabase();
 
    private:
     SimpleCrypt *_simpleCrypt;
