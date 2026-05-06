@@ -2,6 +2,10 @@
 
 ## 26.5.5
 
+- Improved cloud connection creation and deletion safeguards by asking for
+  confirmation before deleting a cloud connection and by starting new cloud
+  connections with empty settings instead of copying the previous connection
+  (for [#3599](https://github.com/pbek/QOwnNotes/issues/3599))
 - Keychain secrets are now deleted together with their references when removing
   scripts, cloud connections, settings groups, or all settings, preventing stale
   qtkeychain entries from being left behind (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))

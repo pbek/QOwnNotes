@@ -16,6 +16,7 @@
 
 #include <entities/notefolder.h>
 #include <services/owncloudservice.h>
+#include <utils/gui.h>
 #include <utils/misc.h>
 
 #include <QDesktopServices>
@@ -325,9 +326,6 @@ void OwnCloudSettingsWidget::on_cloudConnectionAddButton_clicked() {
     // Create a new cloud connection
     CloudConnection cloudConnection;
     cloudConnection.setName(QObject::tr("New connection"));
-    cloudConnection.setServerUrl(_selectedCloudConnection.getServerUrl());
-    cloudConnection.setUsername(_selectedCloudConnection.getUsername());
-    cloudConnection.setPassword(_selectedCloudConnection.getPassword());
     cloudConnection.store();
 
     initCloudConnectionComboBox(cloudConnection.getId());
@@ -344,6 +342,18 @@ void OwnCloudSettingsWidget::on_cloudConnectionRemoveButton_clicked() {
     if (CloudConnection::fetchUsedCloudConnectionsIds().contains(
             _selectedCloudConnection.getId())) {
         ui->cloudConnectionRemoveButton->setDisabled(true);
+        return;
+    }
+
+    const QString connectionName = _selectedCloudConnection.getName();
+    const auto result = Utils::Gui::question(
+        this, tr("Remove cloud connection"),
+        tr("Do you really want to remove the cloud connection <strong>%1</strong>?")
+            .arg(connectionName.toHtmlEscaped()),
+        QStringLiteral("remove-cloud-connection"), QMessageBox::Yes | QMessageBox::No,
+        QMessageBox::No);
+
+    if (result != QMessageBox::Yes) {
         return;
     }
 
