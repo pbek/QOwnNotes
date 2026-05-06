@@ -110,33 +110,33 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/aisettingswidget.cpp" line="108"/>
+        <location filename="../widgets/settings/aisettingswidget.cpp" line="112"/>
         <source>API test result for %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/aisettingswidget.cpp" line="137"/>
+        <location filename="../widgets/settings/aisettingswidget.cpp" line="141"/>
         <source>AI backend: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/aisettingswidget.cpp" line="140"/>
+        <location filename="../widgets/settings/aisettingswidget.cpp" line="144"/>
         <source>API base URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/aisettingswidget.cpp" line="147"/>
+        <location filename="../widgets/settings/aisettingswidget.cpp" line="151"/>
         <source>AI model: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/aisettingswidget.cpp" line="153"/>
+        <location filename="../widgets/settings/aisettingswidget.cpp" line="157"/>
         <source>Test</source>
         <comment>verb</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/aisettingswidget.cpp" line="154"/>
+        <location filename="../widgets/settings/aisettingswidget.cpp" line="158"/>
         <source>Test connection to %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -252,6 +252,409 @@
     <message>
         <location filename="../widgets/backlinkwidget.cpp" line="86"/>
         <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CloudService</name>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="202"/>
+        <source>incorrect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="203"/>
+        <location filename="../services/cloudservice.cpp" line="447"/>
+        <source>not connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="216"/>
+        <source>Username / password error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="217"/>
+        <source>Your calendar username or password is incorrect!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="285"/>
+        <location filename="../services/cloudservice.cpp" line="286"/>
+        <location filename="../services/cloudservice.cpp" line="294"/>
+        <location filename="../services/cloudservice.cpp" line="295"/>
+        <location filename="../services/cloudservice.cpp" line="340"/>
+        <location filename="../services/cloudservice.cpp" line="409"/>
+        <location filename="../services/cloudservice.cpp" line="420"/>
+        <location filename="../services/cloudservice.cpp" line="426"/>
+        <location filename="../services/cloudservice.cpp" line="440"/>
+        <source>ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="288"/>
+        <source>not correct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="297"/>
+        <source>not detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="342"/>
+        <location filename="../services/cloudservice.cpp" line="442"/>
+        <source>not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="398"/>
+        <location filename="../services/cloudservice.cpp" line="399"/>
+        <source>unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="406"/>
+        <source>version %1 too low</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="422"/>
+        <location filename="../services/cloudservice.cpp" line="428"/>
+        <source>not enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="492"/>
+        <source>API app version too low</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="493"/>
+        <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1173"/>
+        <source>Nextcloud / ownCloud server connection error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1177"/>
+        <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1194"/>
+        <source>You need to setup your Nextcloud / ownCloud server!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1267"/>
+        <source>Done with loading note versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1306"/>
+        <source>No versions found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1307"/>
+        <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1329"/>
+        <source>Done with loading trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1370"/>
+        <source>No trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1371"/>
+        <source>No trashed notes were found on the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1393"/>
+        <location filename="../services/cloudservice.cpp" line="1427"/>
+        <source>Error while loading todo lists!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1394"/>
+        <source>Your CalDAV server didn&apos;t reply anything!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="1428"/>
+        <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="2228"/>
+        <source>No bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="2229"/>
+        <source>No bookmarks were found on the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CloudSettingsWidget</name>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="17"/>
+        <source>cloud support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="23"/>
+        <source>Enable cloud support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="30"/>
+        <source>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn&apos;t do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="52"/>
+        <source>Your Nextcloud / ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="66"/>
+        <source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="79"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="92"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="111"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="114"/>
+        <source>Open your NC / oC server &amp;Apps page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="131"/>
+        <source>Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="134"/>
+        <source>Open your NC / oC server App Password page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="178"/>
+        <source>Error Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="211"/>
+        <source>Select a connection to edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="218"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="221"/>
+        <source>Add connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="232"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="235"/>
+        <source>Remove connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="249"/>
+        <source>Connection name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="278"/>
+        <source>NC / oC server url:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="300"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="316"/>
+        <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="319"/>
+        <source>Login to Nextcloud to grant access</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="330"/>
+        <source>Cancel Nextcloud login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="341"/>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="363"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="366"/>
+        <source>Your Nextcloud / ownCloud username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="376"/>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="398"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="404"/>
+        <source>Your Nextcloud / ownCloud password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="420"/>
+        <source>If your password doesn&apos;t work, create an app password (button on the right)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="430"/>
+        <source>Enable QOwnNotesAPI app support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="437"/>
+        <source>Enable Nextcloud Deck support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="450"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="456"/>
+        <source>&amp;Connect to NC / oC server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="492"/>
+        <source>Connection status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="499"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="516"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="533"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="550"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="567"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="584"/>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="601"/>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="123"/>
+        <source>unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="509"/>
+        <source>connection to web server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="526"/>
+        <source>Nextcloud / ownCloud server detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="543"/>
+        <source>username and password correct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="560"/>
+        <source>connection to QOwnNotesAPI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="577"/>
+        <source>versions app enabled on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="594"/>
+        <source>trash app enabled on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="611"/>
+        <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.ui" line="614"/>
+        <source>notes path found on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="137"/>
+        <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="315"/>
+        <source>Remove cloud connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="316"/>
+        <source>Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="445"/>
+        <source>The connection was made successfully!
+Server version: %1
+QOwnNotesAPI version: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="456"/>
+        <source>There was an error connecting to the Nextcloud / ownCloud Server!
+You also need to have the QOwnNotesAPI app installed and enabled!
+
+Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2408,12 +2811,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="50"/>
-        <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../widgets/settings/generalsettingswidget.ui" line="54"/>
         <source>note save interval time [sec]</source>
         <translation type="unfinished"></translation>
@@ -2460,8 +2857,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="50"/>
+        <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../widgets/settings/generalsettingswidget.ui" line="175"/>
-        <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
+        <source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2798,7 +3201,7 @@ Your notes will stay intact!</source>
     </message>
     <message>
         <location filename="../widgets/settings/gitsettingswidget.ui" line="52"/>
-        <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+        <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4536,7 +4939,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../widgets/settings/localtrashsettingswidget.ui" line="66"/>
-        <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+        <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4647,7 +5050,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <location filename="../mainwindow.ui" line="436"/>
         <location filename="../mainwindow.ui" line="504"/>
         <location filename="../mainwindow.ui" line="1014"/>
-        <location filename="../mainwindow.cpp" line="1037"/>
+        <location filename="../mainwindow.cpp" line="1039"/>
         <source>Navigation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5935,8 +6338,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4232"/>
-        <location filename="../mainwindow.cpp" line="4259"/>
+        <location filename="../mainwindow.cpp" line="4234"/>
+        <location filename="../mainwindow.cpp" line="4261"/>
         <location filename="../mainwindow.cpp" line="7227"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
@@ -5949,23 +6352,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2937"/>
+        <location filename="../mainwindow.cpp" line="2939"/>
         <source>new version %1 available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3075"/>
+        <location filename="../mainwindow.cpp" line="3077"/>
         <source>Please select the folder where your notes will get stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3099"/>
+        <location filename="../mainwindow.cpp" line="3101"/>
         <source>No folder was selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3100"/>
-        <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
@@ -6003,33 +6401,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4047"/>
+        <location filename="../mainwindow.cpp" line="4049"/>
         <source>Restart application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4048"/>
+        <location filename="../mainwindow.cpp" line="4050"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4225"/>
+        <location filename="../mainwindow.cpp" line="4227"/>
         <source>Todo lists disabled!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4226"/>
+        <location filename="../mainwindow.cpp" line="4228"/>
         <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4592"/>
-        <source>Note versions are currently loaded from your ownCloud server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4605"/>
-        <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6227,17 +6615,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1467"/>
+        <location filename="../mainwindow.cpp" line="1469"/>
         <source>Layout selector</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4016"/>
+        <location filename="../mainwindow.cpp" line="4018"/>
         <source>AI toolbar disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4017"/>
+        <location filename="../mainwindow.cpp" line="4019"/>
         <source>An AI backend is configured, but the AI toolbar is currently disabled. Do you want to turn it on?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6317,23 +6705,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3924"/>
+        <location filename="../mainwindow.cpp" line="3926"/>
         <source>Current notes folder: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3925"/>
+        <location filename="../mainwindow.cpp" line="3927"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4253"/>
+        <location filename="../mainwindow.cpp" line="4255"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
-        <location filename="../mainwindow.cpp" line="1010"/>
+        <location filename="../mainwindow.cpp" line="1012"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6353,168 +6741,183 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1443"/>
+        <location filename="../mainwindow.cpp" line="1445"/>
         <source>quit toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4203"/>
+        <location filename="../mainwindow.cpp" line="4205"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4208"/>
+        <location filename="../mainwindow.cpp" line="4210"/>
         <source>&amp;Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1360"/>
+        <location filename="../mainwindow.cpp" line="1362"/>
         <source>Your tasks are being loaded from your server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4252"/>
+        <location filename="../mainwindow.cpp" line="4254"/>
         <source>No selected todo lists!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="716"/>
+        <location filename="../mainwindow.cpp" line="718"/>
         <source>Action not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="717"/>
+        <location filename="../mainwindow.cpp" line="719"/>
         <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="983"/>
+        <location filename="../mainwindow.cpp" line="985"/>
         <source>Subfolders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="992"/>
+        <location filename="../mainwindow.cpp" line="994"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1001"/>
+        <location filename="../mainwindow.cpp" line="1003"/>
         <source>Note search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1028"/>
+        <location filename="../mainwindow.cpp" line="1030"/>
         <source>Note list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1144"/>
+        <location filename="../mainwindow.cpp" line="1146"/>
         <source>Note edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1054"/>
+        <location filename="../mainwindow.cpp" line="1056"/>
         <source>Note tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1064"/>
+        <location filename="../mainwindow.cpp" line="1066"/>
         <source>Note preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1070"/>
+        <location filename="../mainwindow.cpp" line="1072"/>
         <source>Note relations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1080"/>
+        <location filename="../mainwindow.cpp" line="1082"/>
         <source>Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1089"/>
+        <location filename="../mainwindow.cpp" line="1091"/>
         <source>Scripting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1403"/>
+        <location filename="../mainwindow.cpp" line="1405"/>
         <source>formatting toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1412"/>
+        <location filename="../mainwindow.cpp" line="1414"/>
         <source>inserting toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1419"/>
+        <location filename="../mainwindow.cpp" line="1421"/>
         <source>encryption toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1426"/>
+        <location filename="../mainwindow.cpp" line="1428"/>
         <source>AI toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1433"/>
+        <location filename="../mainwindow.cpp" line="1435"/>
         <source>window toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1438"/>
+        <location filename="../mainwindow.cpp" line="1440"/>
         <source>custom action toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1546"/>
+        <location filename="../mainwindow.cpp" line="1548"/>
         <source>Show %1 panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1589"/>
+        <location filename="../mainwindow.cpp" line="1591"/>
         <source>Show %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2077"/>
+        <location filename="../mainwindow.cpp" line="2079"/>
         <source>Switch to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2136"/>
+        <location filename="../mainwindow.cpp" line="2138"/>
         <source>Could not switch note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2137"/>
+        <location filename="../mainwindow.cpp" line="2139"/>
         <source>Modified notes could not be written to disk. Please resolve the problem and try switching note folders again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2519"/>
+        <location filename="../mainwindow.cpp" line="2521"/>
         <source>Toolbar could not be loaded without name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2893"/>
+        <location filename="../mainwindow.cpp" line="2895"/>
         <source>Read-only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2895"/>
+        <location filename="../mainwindow.cpp" line="2897"/>
         <source>Note editing is disabled, click to enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2910"/>
+        <location filename="../mainwindow.cpp" line="2912"/>
         <source>Line numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2921"/>
+        <location filename="../mainwindow.cpp" line="2923"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3102"/>
+        <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4594"/>
+        <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4606"/>
+        <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6528,9 +6931,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4210"/>
-        <location filename="../mainwindow.cpp" line="4231"/>
-        <location filename="../mainwindow.cpp" line="4258"/>
+        <location filename="../mainwindow.cpp" line="4212"/>
+        <location filename="../mainwindow.cpp" line="4233"/>
+        <location filename="../mainwindow.cpp" line="4260"/>
         <location filename="../mainwindow.cpp" line="7226"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
@@ -7165,12 +7568,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/networksettingswidget.cpp" line="182"/>
+        <location filename="../widgets/settings/networksettingswidget.cpp" line="184"/>
         <source>Disable usage tracking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/networksettingswidget.cpp" line="183"/>
+        <location filename="../widgets/settings/networksettingswidget.cpp" line="185"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7385,72 +7788,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>NextcloudDeckService</name>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="147"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="146"/>
         <source>Error while updating card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="148"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="147"/>
         <source>Updating card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="152"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="151"/>
         <source>Error while creating card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="153"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="152"/>
         <source>Creating card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="211"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="210"/>
         <source>Error while archiving card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="323"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="322"/>
         <source>Error while deleting card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="212"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="211"/>
         <source>Archiving the card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="324"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="323"/>
         <source>Deleting the card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="443"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="442"/>
         <source>Error while loading boards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="444"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="443"/>
         <source>Loading the boards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="578"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="577"/>
         <source>Error while loading cards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="579"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="578"/>
         <source>Loading the cards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="704"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="703"/>
         <source>Error while loading archived cards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="705"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="704"/>
         <source>Loading the archived cards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7719,18 +8122,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="203"/>
-        <source>&amp;Use as ownCloud path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../widgets/settings/notefoldersettingswidget.ui" line="234"/>
         <source>path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="242"/>
-        <source>Please select your note folder on your ownCloud server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7739,8 +8132,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="203"/>
+        <source>&amp;Use as Nextcloud / ownCloud path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="242"/>
+        <source>Please select your note folder on your Nextcloud / ownCloud server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../widgets/settings/notefoldersettingswidget.ui" line="262"/>
-        <source>Path on your ownCloud server:</source>
+        <source>Path on your Nextcloud / ownCloud server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7785,17 +8188,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../widgets/settings/notefoldersettingswidget.ui" line="382"/>
-        <source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+        <source>Be aware that the Nextcloud / ownCloud notes app doesn&apos;t support subfolders!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="392"/>
+        <source>Click here to select your remote note path on your Nextcloud / ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="453"/>
+        <source>Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../widgets/settings/notefoldersettingswidget.ui" line="385"/>
         <source>Use note subfolders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="392"/>
-        <source>Click here to select your remote note path on your ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7821,11 +8229,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../widgets/settings/notefoldersettingswidget.ui" line="439"/>
         <source>Click here to select your local note path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.ui" line="453"/>
-        <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7870,12 +8273,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="299"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="298"/>
         <source>No more folders were found in the current folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="367"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="366"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7923,15 +8326,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteindexmanager.cpp" line="617"/>
-        <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
+        <location filename="../managers/noteindexmanager.cpp" line="616"/>
+        <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteindexmanager.cpp" line="635"/>
+        <location filename="../managers/noteindexmanager.cpp" line="634"/>
         <source>Removed %n conflicted database copies</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7939,53 +8342,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="717"/>
+        <location filename="../managers/noteindexmanager.cpp" line="716"/>
         <source>Current note was modified externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="740"/>
+        <location filename="../managers/noteindexmanager.cpp" line="739"/>
         <source>Overwriting external changes of: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="753"/>
+        <location filename="../managers/noteindexmanager.cpp" line="752"/>
         <source>Loading external changes from: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="774"/>
+        <location filename="../managers/noteindexmanager.cpp" line="773"/>
         <source>Note was removed externally!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="775"/>
+        <location filename="../managers/noteindexmanager.cpp" line="774"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="787"/>
+        <location filename="../managers/noteindexmanager.cpp" line="786"/>
         <source>Stored current note to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="788"/>
+        <location filename="../managers/noteindexmanager.cpp" line="787"/>
         <source>Current note could not be stored to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="810"/>
+        <location filename="../managers/noteindexmanager.cpp" line="809"/>
         <source>Note was modified externally: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteindexmanager.cpp" line="836"/>
+        <location filename="../managers/noteindexmanager.cpp" line="835"/>
         <source>Notes directory was modified externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteindexmanager.cpp" line="901"/>
+        <location filename="../managers/noteindexmanager.cpp" line="900"/>
         <source>Stored %n note(s) to disk</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8036,23 +8439,13 @@ Restore current note?</source>
         <source>Remove selected notes and folders</source>
         <translation type="unfinished"></translation>
     </message>
-    <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="199"/>
-        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="211"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="210"/>
         <source>Remove selected folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="212"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="211"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8060,16 +8453,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="220"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="219"/>
         <source>Remove selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="222"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>Remove &lt;strong&gt;one&lt;/strong&gt; selected note?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
@@ -8078,19 +8470,39 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
         </translation>
     </message>
+    <message numerus="yes">
+        <location filename="../managers/noteoperationsmanager.cpp" line="198"/>
+        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../managers/noteoperationsmanager.cpp" line="221"/>
+        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="280"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="279"/>
         <source>Removed note subfolder: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="332"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="564"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="331"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="563"/>
         <source>Move selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="333"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="332"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform>Move one selected note to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -8098,13 +8510,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="391"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="691"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="390"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="690"/>
         <source>Copy selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="392"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="391"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform>Copy one selected note to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -8112,12 +8524,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="418"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="417"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="419"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="418"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation type="unfinished">
             <numerusform>One note was copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -8125,13 +8537,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="440"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="439"/>
         <source>Note</source>
         <comment>name for new note</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="559"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="558"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8139,7 +8551,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="660"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="659"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8147,7 +8559,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="686"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="685"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8155,7 +8567,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="757"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="756"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8163,58 +8575,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="800"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="858"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="799"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="857"/>
         <source>Copy to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="800"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="858"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="799"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="857"/>
         <source>Move to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="801"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="859"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="800"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="858"/>
         <source>Copy to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="801"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="859"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="800"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="858"/>
         <source>Move to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="874"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="873"/>
         <source>Split note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="875"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="874"/>
         <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="931"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="930"/>
         <source>New note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="931"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="930"/>
         <source>Note headline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="1042"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1041"/>
         <source>The deleted note(s) had &lt;strong&gt;%1 image(s)&lt;/strong&gt; and &lt;strong&gt;%2 attachment(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="1049"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1048"/>
         <source>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</source>
@@ -8224,7 +8636,7 @@ Do you want to delete those files as well?</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="1055"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1054"/>
         <source>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</source>
@@ -8234,12 +8646,12 @@ Do you want to delete those files as well?</source>
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="1073"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1072"/>
         <source>Delete orphaned images and attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="1098"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1097"/>
         <source>Removed %n orphaned file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8579,399 +8991,6 @@ Do you want to delete those files as well?</source>
     <message>
         <location filename="../services/openaiservice.cpp" line="394"/>
         <source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>OwnCloudService</name>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="205"/>
-        <source>incorrect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="206"/>
-        <location filename="../services/owncloudservice.cpp" line="450"/>
-        <source>not connected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="219"/>
-        <source>Username / password error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="220"/>
-        <source>Your calendar username or password is incorrect!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="288"/>
-        <location filename="../services/owncloudservice.cpp" line="289"/>
-        <location filename="../services/owncloudservice.cpp" line="297"/>
-        <location filename="../services/owncloudservice.cpp" line="298"/>
-        <location filename="../services/owncloudservice.cpp" line="343"/>
-        <location filename="../services/owncloudservice.cpp" line="412"/>
-        <location filename="../services/owncloudservice.cpp" line="423"/>
-        <location filename="../services/owncloudservice.cpp" line="429"/>
-        <location filename="../services/owncloudservice.cpp" line="443"/>
-        <source>ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="291"/>
-        <source>not correct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="300"/>
-        <source>not detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="345"/>
-        <location filename="../services/owncloudservice.cpp" line="445"/>
-        <source>not found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="401"/>
-        <location filename="../services/owncloudservice.cpp" line="402"/>
-        <source>unknown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="409"/>
-        <source>version %1 too low</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="425"/>
-        <location filename="../services/owncloudservice.cpp" line="431"/>
-        <source>not enabled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="495"/>
-        <source>API app version too low</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="496"/>
-        <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1177"/>
-        <source>ownCloud server connection error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1181"/>
-        <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1200"/>
-        <source>You need to setup your ownCloud server!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1273"/>
-        <source>Done with loading note versions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1312"/>
-        <source>No versions found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1313"/>
-        <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1335"/>
-        <source>Done with loading trashed notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1376"/>
-        <source>No trashed notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1377"/>
-        <source>No trashed notes were found on the server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1399"/>
-        <location filename="../services/owncloudservice.cpp" line="1433"/>
-        <source>Error while loading todo lists!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1400"/>
-        <source>Your CalDAV server didn&apos;t reply anything!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="1434"/>
-        <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="2234"/>
-        <source>No bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/owncloudservice.cpp" line="2235"/>
-        <source>No bookmarks were found on the server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>OwnCloudSettingsWidget</name>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="17"/>
-        <source>ownCloud support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="23"/>
-        <source>Enable ownCloud support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="30"/>
-        <source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn&apos;t do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="52"/>
-        <source>Your ownCloud server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="66"/>
-        <source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="79"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="92"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="111"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="114"/>
-        <source>Open your ownCloud server &amp;Apps page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="131"/>
-        <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="134"/>
-        <source>Open your ownCloud server App Password page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="178"/>
-        <source>Error Message</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="211"/>
-        <source>Select a connection to edit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="218"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="221"/>
-        <source>Add connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="232"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="235"/>
-        <source>Remove connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="249"/>
-        <source>Connection name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="278"/>
-        <source>ownCloud server url:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="300"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="316"/>
-        <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="319"/>
-        <source>Login to Nextcloud to grant access</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="330"/>
-        <source>Cancel Nextcloud login</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="341"/>
-        <source>Username:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="363"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="366"/>
-        <source>Your ownCloud username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="376"/>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="398"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="404"/>
-        <source>Your ownCloud password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="420"/>
-        <source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="430"/>
-        <source>Enable QOwnNotesAPI app support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="437"/>
-        <source>Enable Nextcloud Deck support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="450"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="456"/>
-        <source>&amp;Connect to ownCloud server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="492"/>
-        <source>Connection status</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="499"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="516"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="533"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="550"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="567"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="584"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="601"/>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="157"/>
-        <source>unknown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="509"/>
-        <source>connection to web server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="526"/>
-        <source>ownCloud server detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="543"/>
-        <source>username and password correct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="560"/>
-        <source>connection to QOwnNotesAPI</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="577"/>
-        <source>versions app enabled on server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="594"/>
-        <source>trash app enabled on server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="611"/>
-        <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.ui" line="614"/>
-        <source>notes path found on server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="171"/>
-        <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="472"/>
-        <source>The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="484"/>
-        <source>There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
-
-Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9341,6 +9360,235 @@ Connection error message: </source>
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="186"/>
+        <source>Could not open keystore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="193"/>
+        <source>Could not remove private key from keystore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="640"/>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="649"/>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="671"/>
+        <source>Could not open wallet: %1; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="223"/>
+        <source>Password entry not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="227"/>
+        <source>Could not decrypt data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::Job</name>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain.cpp" line="83"/>
+        <source>Both service name and key are empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::JobPrivate</name>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="314"/>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="594"/>
+        <source>Access to keychain denied</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::PlainTextStore</name>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/plaintextstore.cpp" line="73"/>
+        <source>Could not store data in settings: access error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/plaintextstore.cpp" line="75"/>
+        <source>Could not store data in settings: format error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/plaintextstore.cpp" line="93"/>
+        <source>Could not delete data from settings: access error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/plaintextstore.cpp" line="95"/>
+        <source>Could not delete data from settings: format error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/plaintextstore.cpp" line="112"/>
+        <source>Entry not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="52"/>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="415"/>
+        <source>Entry not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="60"/>
+        <source>Could not open keystore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="69"/>
+        <source>Could not retrieve private key from keystore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="76"/>
+        <source>Could not create decryption cipher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="218"/>
+        <source>D-Bus is not running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="228"/>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="238"/>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="335"/>
+        <source>No keychain service available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="339"/>
+        <source>Could not open wallet: %1; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="385"/>
+        <source>Access to keychain denied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="405"/>
+        <source>Could not determine data type: %1; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="428"/>
+        <source>Unknown kwallet entry type &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="100"/>
+        <source>Password entry not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="104"/>
+        <source>Could not decrypt data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="126"/>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="248"/>
+        <source>Could not decrypt data: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="96"/>
+        <source>Could not open keystore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="136"/>
+        <source>Could not create private key generator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="143"/>
+        <source>Could not generate new private key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="152"/>
+        <source>Could not retrieve private key from keystore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="160"/>
+        <source>Could not create encryption cipher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_android.cpp" line="168"/>
+        <source>Could not encrypt data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="488"/>
+        <source>D-Bus is not running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="505"/>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="531"/>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="550"/>
+        <source>Could not open wallet: %1; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="159"/>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="259"/>
+        <source>Encryption failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="164"/>
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="206"/>
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="212"/>
+        <source>Writing credentials failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QLiteHtmlSearchWidget</name>
     <message>
         <location filename="../libraries/qlitehtml/src/qlitehtmlsearchwidget.ui" line="32"/>
@@ -9396,12 +9644,12 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2075"/>
+        <location filename="../entities/note.cpp" line="2166"/>
         <source>Note file was modified externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2076"/>
+        <location filename="../entities/note.cpp" line="2167"/>
         <source>The note file &apos;%1&apos; was modified externally while you had unsaved changes.
 
 The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
@@ -9411,39 +9659,39 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2128"/>
-        <location filename="../entities/note.cpp" line="2135"/>
+        <location filename="../entities/note.cpp" line="2219"/>
+        <location filename="../entities/note.cpp" line="2226"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2232"/>
+        <location filename="../entities/note.cpp" line="2323"/>
         <source>Renamed note-file was removed: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2235"/>
+        <location filename="../entities/note.cpp" line="2326"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2377"/>
+        <location filename="../entities/note.cpp" line="2468"/>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="4018"/>
+        <location filename="../entities/note.cpp" line="4109"/>
         <source>Could not read image file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="5147"/>
-        <location filename="../entities/note.cpp" line="5229"/>
+        <location filename="../entities/note.cpp" line="5238"/>
+        <location filename="../entities/note.cpp" line="5320"/>
         <source>Note file path changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="5148"/>
+        <location filename="../entities/note.cpp" line="5239"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9451,7 +9699,7 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="5230"/>
+        <location filename="../entities/note.cpp" line="5321"/>
         <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9459,12 +9707,12 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         </translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="5437"/>
+        <location filename="../entities/note.cpp" line="5528"/>
         <source>Subfolder path changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="5438"/>
+        <location filename="../entities/note.cpp" line="5529"/>
         <source>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9472,17 +9720,17 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         </translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="5536"/>
+        <location filename="../entities/note.cpp" line="5627"/>
         <source>Image file exists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="5537"/>
+        <location filename="../entities/note.cpp" line="5628"/>
         <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="6049"/>
+        <location filename="../entities/note.cpp" line="6140"/>
         <source>…and %n more note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9609,37 +9857,37 @@ Updating the interface takes a short while.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="327"/>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="293"/>
         <source>New connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="425"/>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="400"/>
         <source>Login flow succeeded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/owncloudsettingswidget.cpp" line="426"/>
+        <location filename="../widgets/settings/cloudsettingswidget.cpp" line="401"/>
         <source>Username and password were set successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/cloudconnection.cpp" line="365"/>
+        <location filename="../entities/cloudconnection.cpp" line="382"/>
         <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="334"/>
+        <location filename="../main.cpp" line="335"/>
         <source>Note folder not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="335"/>
+        <location filename="../main.cpp" line="336"/>
         <source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="342"/>
+        <location filename="../main.cpp" line="343"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9687,23 +9935,23 @@ Updating the interface takes a short while.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2350"/>
-        <location filename="../services/owncloudservice.cpp" line="2364"/>
+        <location filename="../services/cloudservice.cpp" line="2343"/>
+        <location filename="../services/cloudservice.cpp" line="2357"/>
         <source>Login flow failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2351"/>
+        <location filename="../services/cloudservice.cpp" line="2344"/>
         <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server&apos;s admin page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="2365"/>
+        <location filename="../services/cloudservice.cpp" line="2358"/>
         <source>Could not parse login url!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/misc.cpp" line="1365"/>
+        <location filename="../utils/misc.cpp" line="1348"/>
         <source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9799,222 +10047,277 @@ Updating the interface takes a short while.</source>
         <source>Failed to connect to Harper at %1:%2</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="273"/>
+        <source>Access to keychain denied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="275"/>
+        <source>No keyring daemon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="277"/>
+        <source>Already unlocked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="279"/>
+        <source>No such keyring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="281"/>
+        <source>Bad arguments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="283"/>
+        <source>I/O error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="285"/>
+        <source>Cancelled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="287"/>
+        <source>Keyring already exists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="289"/>
+        <source>No match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_unix.cpp" line="294"/>
+        <source>Unknown error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/libsecret.cpp" line="104"/>
+        <source>Entry not found</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
         <source>Increased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="621"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="620"/>
         <source>Decreased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1177"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1176"/>
         <source>An url was opened at the current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1416"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1415"/>
         <source>No equation was found in front of the cursor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1437"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1436"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2470"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2471"/>
         <source>&amp;Link selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2470"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2471"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2477"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2478"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2480"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2481"/>
         <source>Insert block &amp;quote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2487"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2488"/>
         <source>List operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2498"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2499"/>
         <source>Markdown operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2513"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2514"/>
         <source>Copy code block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2540"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2541"/>
         <source>Markdown LSP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2541"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2542"/>
         <source>Format document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2546"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2547"/>
         <source>Format selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2556"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2557"/>
         <source>Add table column left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2562"/>
         <source>Add table column right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2566"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2567"/>
         <source>Add table row above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2571"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2572"/>
         <source>Add table row below</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2576"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2577"/>
         <source>Edit table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2588"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2589"/>
         <source>Print</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2595"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2596"/>
         <source>Print selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2607"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2608"/>
         <source>Print selected text (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2623"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2624"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2633"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2634"/>
         <source>Export selected text as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2645"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2646"/>
         <source>Export selected text as PDF (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2665"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2666"/>
         <source>Select</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2679"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2680"/>
         <source>Custom actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2780"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2781"/>
         <source>No suggestions for %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2799"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2800"/>
         <source>Ignore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2801"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2802"/>
         <source>Add to Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2716"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2763"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2811"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2717"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2764"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2812"/>
         <source>Spelling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2890"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2891"/>
         <source>Ignore this rule globally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2891"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2892"/>
         <source>Ignore rule %1 globally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2925"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2926"/>
         <source>LanguageTool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2938"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3034"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2939"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3035"/>
         <source>No suggestions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2951"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2952"/>
         <source>More info...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2956"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3046"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2957"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3047"/>
         <source>Ignore this rule</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2966"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3055"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2967"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3056"/>
         <source>Ignore word &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3022"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3023"/>
         <source>Harper</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3604"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3610"/>
         <source>Markdown LSP server connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3698"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3704"/>
         <source>Filter completions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10390,12 +10693,12 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/scriptsettingwidget.cpp" line="221"/>
+        <location filename="../widgets/scriptsettingwidget.cpp" line="224"/>
         <source>Please select a directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/scriptsettingwidget.cpp" line="222"/>
+        <location filename="../widgets/scriptsettingwidget.cpp" line="225"/>
         <source>Please select a file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10838,90 +11141,90 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="635"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="615"/>
         <source>Shortcut already assigned</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="547"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="587"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="527"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="567"/>
         <source>Undefined shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="550"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="590"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="530"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="570"/>
         <source>Assign a new shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="550"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="591"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="530"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="571"/>
         <source>Reset to default shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="566"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="546"/>
         <source>Clear shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="636"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="616"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1323"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1303"/>
         <source>Reset toolbars and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1324"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1304"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="261"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="241"/>
         <source>enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="261"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="241"/>
         <source>disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="264"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="244"/>
         <source>Portable mode is currently:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="266"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="246"/>
         <source>In portable mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="267"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="247"/>
         <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="270"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="250"/>
         <source>the settings will be stored in an ini file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="271"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="251"/>
         <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="281"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="261"/>
         <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="287"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="267"/>
         <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10935,7 +11238,12 @@ Do you want to install it anyway?</source>
     </message>
     <message>
         <location filename="../dialogs/sharedialog.ui" line="40"/>
-        <source>Share note on ownCloud</source>
+        <source>Share note on Nextcloud / ownCloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.ui" line="47"/>
+        <source>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10949,13 +11257,8 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="47"/>
-        <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/sharedialog.cpp" line="64"/>
-        <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
+        <location filename="../dialogs/sharedialog.cpp" line="61"/>
+        <source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12021,11 +12324,6 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/todosettingswidget.ui" line="42"/>
-        <source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../widgets/settings/todosettingswidget.ui" line="64"/>
         <source>Which calendar backend do you want to use?</source>
         <translation type="unfinished"></translation>
@@ -12046,13 +12344,18 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../widgets/settings/todosettingswidget.ui" line="42"/>
+        <source>You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../widgets/settings/todosettingswidget.ui" line="97"/>
-        <source>For most current ownCloud and Nextcloud installations</source>
+        <source>For most current Nextcloud / ownCloud installations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../widgets/settings/todosettingswidget.ui" line="100"/>
-        <source>Default ownCloud calendar</source>
+        <source>Default Nextcloud / ownCloud calendar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -12151,12 +12454,12 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/todosettingswidget.cpp" line="347"/>
+        <location filename="../widgets/settings/todosettingswidget.cpp" line="340"/>
         <source>Calendar cache emptied</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/todosettingswidget.cpp" line="348"/>
+        <location filename="../widgets/settings/todosettingswidget.cpp" line="341"/>
         <source>Your calendar cache was emptied.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12309,57 +12612,57 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="30"/>
+        <location filename="../dialogs/trashdialog.cpp" line="29"/>
         <source>&amp;Restore selected note on server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="32"/>
-        <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/trashdialog.cpp" line="43"/>
+        <location filename="../dialogs/trashdialog.cpp" line="42"/>
         <source>&amp;Download selected note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="45"/>
-        <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
+        <location filename="../dialogs/trashdialog.cpp" line="31"/>
+        <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="56"/>
+        <location filename="../dialogs/trashdialog.cpp" line="44"/>
+        <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="55"/>
         <source>&amp;Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="57"/>
+        <location filename="../dialogs/trashdialog.cpp" line="56"/>
         <source>Delete selected note on server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="64"/>
+        <location filename="../dialogs/trashdialog.cpp" line="63"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="172"/>
+        <location filename="../dialogs/trashdialog.cpp" line="171"/>
         <source>Delete note on server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="173"/>
+        <location filename="../dialogs/trashdialog.cpp" line="172"/>
         <source>Delete selected trashed note on server?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="191"/>
+        <location filename="../dialogs/trashdialog.cpp" line="190"/>
         <source>Error while deleting note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="192"/>
+        <location filename="../dialogs/trashdialog.cpp" line="191"/>
         <source>Deleting trashed note failed with status code: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12628,7 +12931,7 @@ This cannot be undone!</source>
     <name>VersionDialog</name>
     <message>
         <location filename="../dialogs/versiondialog.ui" line="14"/>
-        <source>Note versions on your ownCloud server</source>
+        <source>Note versions on your Nextcloud / ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -12642,12 +12945,12 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="30"/>
+        <location filename="../dialogs/versiondialog.cpp" line="29"/>
         <source>&amp;Restore selected version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="37"/>
+        <location filename="../dialogs/versiondialog.cpp" line="36"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12932,42 +13235,42 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="220"/>
+        <location filename="../services/websocketserverservice.cpp" line="224"/>
         <source>Could not start bookmark suggestion API on port %1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="221"/>
+        <location filename="../services/websocketserverservice.cpp" line="225"/>
         <source>Please check if the port is already in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="227"/>
+        <location filename="../services/websocketserverservice.cpp" line="231"/>
         <source>Bookmark suggestion API listening on port %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="271"/>
+        <location filename="../services/websocketserverservice.cpp" line="275"/>
         <source>Bookmark suggestion API received malformed HTTP request line.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="324"/>
+        <location filename="../services/websocketserverservice.cpp" line="328"/>
         <source>Bookmark suggestion API request from %1:%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="391"/>
+        <location filename="../services/websocketserverservice.cpp" line="395"/>
         <source>Bookmark suggestion API couldn&apos;t load suggestions because no main window instance is available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="457"/>
+        <location filename="../services/websocketserverservice.cpp" line="461"/>
         <source>%1 connected to QOwnNotes server!</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="564"/>
+        <location filename="../services/websocketserverservice.cpp" line="568"/>
         <source>%n bookmark(s) created</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -12975,7 +13278,7 @@ This cannot be undone!</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="628"/>
+        <location filename="../services/websocketserverservice.cpp" line="632"/>
         <source>Bookmark deleted from %n note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -12983,7 +13286,7 @@ This cannot be undone!</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="641"/>
+        <location filename="../services/websocketserverservice.cpp" line="645"/>
         <source>Bookmark edited in %n note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -12991,7 +13294,7 @@ This cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="977"/>
+        <location filename="../services/websocketserverservice.cpp" line="981"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13028,6 +13331,11 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation type="unfinished"></translation>
@@ -13049,7 +13357,7 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="204"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="196"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13069,8 +13377,18 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="319"/>
+        <source>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="342"/>
-        <source>Open ownCloud settings</source>
+        <source>Open cloud settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.ui" line="349"/>
+        <source>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -13084,11 +13402,6 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>Plain-text file Markdown note-taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/welcomedialog.ui" line="246"/>
         <source>Show subfolders</source>
         <translation type="unfinished"></translation>
@@ -13099,42 +13412,32 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="319"/>
-        <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="349"/>
-        <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/welcomedialog.ui" line="391"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="114"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="106"/>
         <source>Cannot create note path! You have to create the note folder manually!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="121"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="113"/>
         <source>Cannot create note path!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="126"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="118"/>
         <source>This note path doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="194"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="186"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="205"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="197"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13142,62 +13445,62 @@ This cannot be undone!</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="130"/>
+        <location filename="../main.cpp" line="131"/>
         <source>Displays help on commandline options.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="134"/>
+        <location filename="../main.cpp" line="135"/>
         <source>Runs the application in portable mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="140"/>
+        <location filename="../main.cpp" line="141"/>
         <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="148"/>
+        <location filename="../main.cpp" line="149"/>
         <source>Prints out the version number.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="152"/>
+        <location filename="../main.cpp" line="153"/>
         <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="158"/>
+        <location filename="../main.cpp" line="159"/>
         <source>Clears the settings and runs the application.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="164"/>
+        <location filename="../main.cpp" line="165"/>
         <source>Runs the application in a different context for settings and internal files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="172"/>
+        <location filename="../main.cpp" line="173"/>
         <source>Triggers a menu action after the application was started.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="179"/>
+        <location filename="../main.cpp" line="180"/>
         <source>Generate shell completion code. Supports `fish`, `bash`.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="645"/>
+        <location filename="../main.cpp" line="656"/>
         <source>Single application mode is not supported on your system!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="659"/>
+        <location filename="../main.cpp" line="675"/>
         <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="715"/>
+        <location filename="../main.cpp" line="730"/>
         <source>A second instance of QOwnNotes was attempted to be started!</source>
         <translation type="unfinished"></translation>
     </message>
