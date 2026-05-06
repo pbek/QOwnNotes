@@ -53,6 +53,7 @@
 #include <QXmlStreamReader>
 #include <QtGui/QIcon>
 #include <algorithm>
+#include <random>
 #include <utility>
 
 #include "gui.h"
@@ -2638,11 +2639,16 @@ QString Utils::Misc::generateRandomString(int length) {
         QStringLiteral("ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789"));
 
     QString randomString;
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+    std::random_device randomDevice;
+    std::uniform_int_distribution<int> distribution(0, possibleCharacters.length() - 1);
+#endif
+
     for (int i = 0; i < length; ++i) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
-        const int index = qrand() % possibleCharacters.length();
+        const int index = distribution(randomDevice);
 #else
-        const quint32 index = QRandomGenerator::global()->generate() % possibleCharacters.length();
+        const int index = QRandomGenerator::system()->bounded(possibleCharacters.length());
 #endif
         QChar nextChar = possibleCharacters.at(index);
         randomString.append(nextChar);
