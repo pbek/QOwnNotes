@@ -27,10 +27,10 @@ If you find any issues, please report them on [QOwnNotes Issues on GitHub](https
 
 ## QOwnNotes Qt5 legacy
 
-For older versions of Ubuntu Linux, like 18.04 or newer, elementary OS, Linux Mint 18 or newer,
+For older supported versions of Ubuntu Linux, elementary OS, Linux Mint 18 or newer,
 you can use the Qt5 version of QOwnNotes.
 
-Install **QOwnNotes** on **Ubuntu Linux** (minimum 18.04) using the PPA repository.
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 20.04) using the PPA repository.
 
 Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
 
