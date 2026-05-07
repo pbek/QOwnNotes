@@ -144,8 +144,8 @@ void updateTabWidgetTabData(QTabWidget *tabWidget, int index, const Note &note);
 void reloadNoteTabs(QTabWidget *tabWidget);
 void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const Note &note,
                                      QDateTime *overrideFileLastModified = nullptr);
-bool doWindowsDarkModeCheck();
-bool doLinuxDarkModeCheck();
+bool doWindowsDarkModeCheck(bool systemChangeDetected = false);
+bool doLinuxDarkModeCheck(bool systemChangeDetected = false);
 bool doSystemDarkModeCheck(bool systemChangeDetected = false);
 
 QIcon folderIcon();
