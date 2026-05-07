@@ -2861,7 +2861,8 @@ QMenu *QOwnNotesMarkdownTextEdit::markdownLspContextMenu(const QTextCursor &curs
     const int cursorLine = cursorAtMouse.blockNumber();
     const int cursorCol = cursorAtMouse.positionInBlock();
     const MarkdownLspClient::Diagnostic *match = nullptr;
-    for (const auto &diag : qAsConst(_markdownLspDiagnostics)) {
+    const auto &constMarkdownLspDiagnostics = _markdownLspDiagnostics;
+    for (const auto &diag : constMarkdownLspDiagnostics) {
         if (cursorLine >= diag.range.startLine && cursorLine <= diag.range.endLine) {
             // For single-line diagnostics also check column range
             if (diag.range.startLine == diag.range.endLine) {
@@ -2910,7 +2911,8 @@ QMenu *QOwnNotesMarkdownTextEdit::markdownLspContextMenu(const QTextCursor &curs
 
         if (receivedId == _markdownLspCodeActionRequestId) {
             _markdownLspCodeActionRequestId = -1;
-            for (const auto &action : qAsConst(receivedActions)) {
+            const auto &constReceivedActions = receivedActions;
+            for (const auto &action : constReceivedActions) {
                 lspMenu->addAction(action.title, this, [this, action]() {
                     if (action.hasEdits()) {
                         applyMarkdownLspTextEdits(action.edits);
@@ -3912,7 +3914,8 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspDiagnostics(
         return;
     }
 
-    for (const int line : qAsConst(dirtyLines)) {
+    const QSet<int> &constDirtyLines = dirtyLines;
+    for (const int line : constDirtyLines) {
         const QTextBlock block = document()->findBlockByNumber(line);
         if (block.isValid()) {
             h->rehighlightBlock(block);

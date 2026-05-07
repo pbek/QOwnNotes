@@ -110,7 +110,8 @@ GuessLanguagePrivate::GuessLanguagePrivate() : MIN_LENGTH(5), m_maxItems(1), m_m
 #endif
     QSet<QString> dictionaryLanguages;
 #if QT_VERSION >= 0x050700
-    for (const QString &dictName : qAsConst(s_knownDictionaries)) {
+    const QSet<QString> &constKnownDictionaries = s_knownDictionaries;
+    for (const QString &dictName : constKnownDictionaries) {
 #else
     for (const QString &dictName : (s_knownDictionaries)) {
 #endif
@@ -534,7 +535,8 @@ GuessLanguagePrivate::GuessLanguagePrivate() : MIN_LENGTH(5), m_maxItems(1), m_m
         {    // Remove unknown languages
             QStringList pruned;
 #if QT_VERSION >= 0x050700
-            for (const QString &name : qAsConst(names)) {
+            const QStringList &constNames = names;
+            for (const QString &name : constNames) {
 #else
             for (const QString &name : (names)) {
 #endif
@@ -550,7 +552,8 @@ GuessLanguagePrivate::GuessLanguagePrivate() : MIN_LENGTH(5), m_maxItems(1), m_m
             continue;
         }
 #if QT_VERSION >= 0x050700
-        for (const QString &name : qAsConst(names)) {
+        const QStringList &constNames = names;
+        for (const QString &name : constNames) {
 #else
         for (const QString &name : (names)) {
 #endif

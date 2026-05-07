@@ -290,7 +290,11 @@ QString Loader::languageNameForCode(const QString &langCode) const {
 
     QLocale locale(isoCode);
     if (isoCode.length() > 3) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         localizedCountry = locale.nativeCountryName();
+#else
+        localizedCountry = locale.nativeTerritoryName();
+#endif
     }
     localizedLang = locale.nativeLanguageName();
 

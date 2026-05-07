@@ -32,6 +32,9 @@
 #include "singleapplication_p.h"
 
 #include <QtCore/QByteArray>
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include <QtCore/QByteArrayView>
+#endif
 #include <QtCore/QCryptographicHash>
 #include <QtCore/QDataStream>
 #include <QtCore/QDir>
@@ -44,6 +47,16 @@
 #include <cstdlib>
 
 #include "singleapplication.h"
+
+namespace {
+quint16 checksumForData(const char *data, std::size_t length) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    return qChecksum(data, static_cast<uint>(length));
+#else
+    return qChecksum(QByteArrayView(data, static_cast<qsizetype>(length)));
+#endif
+}
+}    // namespace
 
 #ifdef Q_OS_WIN
 #include <lmcons.h>
@@ -77,7 +90,7 @@ SingleApplicationPrivate::~SingleApplicationPrivate() {
 
 void SingleApplicationPrivate::genBlockServerName() {
     QCryptographicHash appData(QCryptographicHash::Sha256);
-    appData.addData("SingleApplication", 17);
+    appData.addData(QByteArrayLiteral("SingleApplication"));
     appData.addData(SingleApplication::app_t::applicationName().toUtf8());
     appData.addData(SingleApplication::app_t::organizationName().toUtf8());
     appData.addData(SingleApplication::app_t::organizationDomain().toUtf8());
@@ -209,7 +222,7 @@ void SingleApplicationPrivate::connectToPrimary(int msecs, ConnectionType connec
         writeStream << blockServerName.toLatin1();
         writeStream << static_cast<quint8>(connectionType);
         writeStream << instanceNumber;
-        quint16 checksum = qChecksum(initMsg.constData(), static_cast<quint32>(initMsg.length()));
+        quint16 checksum = checksumForData(initMsg.constData(), initMsg.length());
         writeStream << checksum;
 
         // The header indicates the message length that follows
@@ -229,7 +242,8 @@ void SingleApplicationPrivate::connectToPrimary(int msecs, ConnectionType connec
 }
 
 quint16 SingleApplicationPrivate::blockChecksum() {
-    return qChecksum(static_cast<const char *>(memory->data()), offsetof(InstancesInfo, checksum));
+    return checksumForData(static_cast<const char *>(memory->data()),
+                           offsetof(InstancesInfo, checksum));
 }
 
 qint64 SingleApplicationPrivate::primaryPid() {
@@ -344,7 +358,7 @@ void SingleApplicationPrivate::readInitMessageBody(QLocalSocket *sock) {
     readStream >> msgChecksum;
 
     const quint16 actualChecksum =
-        qChecksum(msgBytes.constData(), static_cast<quint32>(msgBytes.length() - sizeof(quint16)));
+        checksumForData(msgBytes.constData(), msgBytes.length() - sizeof(quint16));
 
     bool isValid = readStream.status() == QDataStream::Ok &&
                    QLatin1String(latin1Name) == blockServerName && msgChecksum == actualChecksum;

@@ -441,7 +441,8 @@ void MarkdownTableDialog::on_applyAlignmentButton_clicked() {
             break;
     }
 
-    for (int col : qAsConst(selectedCols)) {
+    const QSet<int> &constSelectedCols = selectedCols;
+    for (int col : constSelectedCols) {
         if (col < _colAlignments.size()) {
             _colAlignments[col] = align;
         }

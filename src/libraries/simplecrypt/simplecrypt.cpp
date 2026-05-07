@@ -96,7 +96,7 @@ QByteArray SimpleCrypt::encryptToByteArray(QByteArray plaintext) {
         flags |= CryptoFlagCompression;
     } else if (m_compressionMode == CompressionAuto) {
         QByteArray compressed = qCompress(ba, 9);
-        if (compressed.count() < ba.count()) {
+        if (compressed.size() < ba.size()) {
             ba = compressed;
             flags |= CryptoFlagCompression;
         }
@@ -130,7 +130,7 @@ QByteArray SimpleCrypt::encryptToByteArray(QByteArray plaintext) {
     int pos(0);
     char lastChar(0);
 
-    int cnt = ba.count();
+    int cnt = ba.size();
 
     while (pos < cnt) {
         ba[pos] = ba.at(pos) ^ m_keyParts.at(pos % 8) ^ lastChar;
@@ -191,7 +191,7 @@ QByteArray SimpleCrypt::decryptToByteArray(QByteArray cypher) {
 
     QByteArray ba = cypher;
 
-    if (cypher.count() < 3) return QByteArray();
+    if (cypher.size() < 3) return QByteArray();
 
     char version = ba.at(0);
 
@@ -205,7 +205,7 @@ QByteArray SimpleCrypt::decryptToByteArray(QByteArray cypher) {
 
     ba = ba.mid(2);
     int pos(0);
-    int cnt(ba.count());
+    int cnt(ba.size());
     char lastChar = 0;
 
     while (pos < cnt) {
