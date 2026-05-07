@@ -4164,8 +4164,9 @@ bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
  * @brief Prints the content of a text document
  * @param textEdit
  */
-void MainWindow::printTextDocument(QTextDocument *textDocument) {
-    _exportPrintManager->printTextDocument(textDocument);
+void MainWindow::printTextDocument(QTextDocument *textDocument,
+                                   bool useLightEditorSchemaForDarkSchema) {
+    _exportPrintManager->printTextDocument(textDocument, useLightEditorSchemaForDarkSchema);
 }
 
 /**
@@ -4189,7 +4190,9 @@ void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
  * @brief Exports the document as PDF
  * @param doc
  */
-void MainWindow::exportNoteAsPDF(QTextDocument *doc) { _exportPrintManager->exportNoteAsPDF(doc); }
+void MainWindow::exportNoteAsPDF(QTextDocument *doc, bool useLightEditorSchemaForDarkSchema) {
+    _exportPrintManager->exportNoteAsPDF(doc, useLightEditorSchemaForDarkSchema);
+}
 
 /**
  * Shows the app metrics notification if not already shown

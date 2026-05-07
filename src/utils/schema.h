@@ -46,17 +46,19 @@ class Settings {
 
     QVariant getSchemaValue(const QString& key, const QVariant& defaultValue = QVariant(),
                             QString schemaKey = QString()) const;
-    QFont getFont(int index) const;
-    QColor getForegroundColor(int index) const;
-    QColor getBackgroundColor(int index) const;
+    QFont getFont(int index, QString schemaKey = QString()) const;
+    QColor getForegroundColor(int index, QString schemaKey = QString()) const;
+    QColor getBackgroundColor(int index, QString schemaKey = QString()) const;
+    bool currentSchemaIsDark() const;
 
-    void setFormatStyle(MarkdownHighlighter::HighlighterState index, QTextCharFormat& format) const;
+    void setFormatStyle(MarkdownHighlighter::HighlighterState index, QTextCharFormat& format,
+                        QString schemaKey = QString()) const;
 
     QFont getEditorTextFont() const;
     QFont getEditorFixedFont() const;
     QFont getEditorFont(int index) const;
 
-    void adaptFontSize(int index, QFont& font) const;
+    void adaptFontSize(int index, QFont& font, QString schemaKey = QString()) const;
 
    private:
     const QSettings _defaultSchemaSettings;
@@ -79,5 +81,7 @@ QString encodeCssStyleForState(MarkdownHighlighter::HighlighterState index, cons
 QString encodeCssFont(const QFont& refFont);
 
 QString getSchemaStyles();
+
+QString lightEditorSchemaKey();
 }    // namespace Schema
 }    // namespace Utils

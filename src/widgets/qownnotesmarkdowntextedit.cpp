@@ -2601,7 +2601,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
         auto mainWindow = MainWindow::instance();
         auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
         textEdit->setPlainText(mainWindow->selectedNoteTextEditText());
-        mainWindow->printTextDocument(textEdit->document());
+        mainWindow->printTextDocument(textEdit->document(), true);
     });
 
     // add the print selected text (preview) action
@@ -2639,7 +2639,7 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
         auto mainWindow = MainWindow::instance();
         auto *textEdit = new QOwnNotesMarkdownTextEdit(this);
         textEdit->setPlainText(mainWindow->selectedNoteTextEditText());
-        mainWindow->exportNoteAsPDF(textEdit->document());
+        mainWindow->exportNoteAsPDF(textEdit->document(), true);
     });
 
     // add the export selected text (preview) action

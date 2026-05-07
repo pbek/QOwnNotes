@@ -164,15 +164,18 @@ QString Utils::Schema::textSettingsKey(const QString& key, int index) {
  * @param index
  * @return
  */
-QFont Utils::Schema::Settings::getFont(int index) const {
+QFont Utils::Schema::Settings::getFont(int index, QString schemaKey) const {
     // get the foreground color
-    bool enabled = getSchemaValue(textSettingsKey(QStringLiteral("FontEnabled"), index)).toBool();
+    bool enabled =
+        getSchemaValue(textSettingsKey(QStringLiteral("FontEnabled"), index), QVariant(), schemaKey)
+            .toBool();
     QFont font = getEditorFont(index);
 
     // if the font is enabled try to fetch it
     if (enabled) {
         QFont overrideFont =
-            getSchemaValue(textSettingsKey(QStringLiteral("Font"), index)).value<QFont>();
+            getSchemaValue(textSettingsKey(QStringLiteral("Font"), index), QVariant(), schemaKey)
+                .value<QFont>();
         font.setFamily(overrideFont.family());
     }
 
@@ -185,33 +188,35 @@ QFont Utils::Schema::Settings::getFont(int index) const {
  * @param index
  * @return
  */
-QColor Utils::Schema::Settings::getForegroundColor(int index) const {
+QColor Utils::Schema::Settings::getForegroundColor(int index, QString schemaKey) const {
     // get the foreground color
-    bool enabled =
-        getSchemaValue(textSettingsKey(QStringLiteral("ForegroundColorEnabled"), index)).toBool();
+    bool enabled = getSchemaValue(textSettingsKey(QStringLiteral("ForegroundColorEnabled"), index),
+                                  QVariant(), schemaKey)
+                       .toBool();
     QColor color;
 
     // if the foreground color is enabled try to fetch it
     if (enabled) {
-        color = getSchemaValue(textSettingsKey(QStringLiteral("ForegroundColor"), index))
+        color = getSchemaValue(textSettingsKey(QStringLiteral("ForegroundColor"), index),
+                               QVariant(), schemaKey)
                     .value<QColor>();
     }
 
     // if the color was not valid, try to fetch the color for "Text"
     if (!color.isValid() && (index == MarkdownHighlighter::WikiLink)) {
-        color = getForegroundColor(MarkdownHighlighter::Link);
+        color = getForegroundColor(MarkdownHighlighter::Link, schemaKey);
     }
 
     if (!color.isValid() && (index == MarkdownHighlighter::WikiLinkBroken)) {
-        color = getForegroundColor(MarkdownHighlighter::BrokenLink);
+        color = getForegroundColor(MarkdownHighlighter::BrokenLink, schemaKey);
     }
 
     if (!color.isValid() && (index == MarkdownHighlighter::LinkInternal)) {
-        color = getForegroundColor(MarkdownHighlighter::Link);
+        color = getForegroundColor(MarkdownHighlighter::Link, schemaKey);
     }
 
     if (!color.isValid() && (index >= 0)) {
-        color = getForegroundColor(TextPresetIndex);
+        color = getForegroundColor(TextPresetIndex, schemaKey);
     }
 
     // if the color still was not valid, try to fetch the color from a QTextEdit
@@ -234,33 +239,35 @@ QColor Utils::Schema::Settings::getForegroundColor(int index) const {
  * @param index
  * @return
  */
-QColor Utils::Schema::Settings::getBackgroundColor(int index) const {
+QColor Utils::Schema::Settings::getBackgroundColor(int index, QString schemaKey) const {
     // get the foreground color
-    bool enabled =
-        getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColorEnabled"), index)).toBool();
+    bool enabled = getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColorEnabled"), index),
+                                  QVariant(), schemaKey)
+                       .toBool();
     QColor color;
 
     // if the foreground color is enabled try to fetch it
     if (enabled) {
-        color = getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColor"), index))
+        color = getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColor"), index),
+                               QVariant(), schemaKey)
                     .value<QColor>();
     }
 
     // if the color was not valid, try to fetch the color for "Text"
     if (!color.isValid() && (index == MarkdownHighlighter::WikiLink)) {
-        color = getBackgroundColor(MarkdownHighlighter::Link);
+        color = getBackgroundColor(MarkdownHighlighter::Link, schemaKey);
     }
 
     if (!color.isValid() && (index == MarkdownHighlighter::WikiLinkBroken)) {
-        color = getBackgroundColor(MarkdownHighlighter::BrokenLink);
+        color = getBackgroundColor(MarkdownHighlighter::BrokenLink, schemaKey);
     }
 
     if (!color.isValid() && (index == MarkdownHighlighter::LinkInternal)) {
-        color = getBackgroundColor(MarkdownHighlighter::Link);
+        color = getBackgroundColor(MarkdownHighlighter::Link, schemaKey);
     }
 
     if (!color.isValid() && (index >= 0)) {
-        color = getBackgroundColor(TextPresetIndex);
+        color = getBackgroundColor(TextPresetIndex, schemaKey);
     }
 
     // if the color still was not valid, use black
@@ -271,6 +278,10 @@ QColor Utils::Schema::Settings::getBackgroundColor(int index) const {
     return color;
 }
 
+bool Utils::Schema::Settings::currentSchemaIsDark() const {
+    return getBackgroundColor(TextPresetIndex).lightness() < 128;
+}
+
 /**
  * Sets the foreground and background color for an format
  *
@@ -278,9 +289,9 @@ QColor Utils::Schema::Settings::getBackgroundColor(int index) const {
  * @param index
  */
 void Utils::Schema::Settings::setFormatStyle(MarkdownHighlighter::HighlighterState index,
-                                             QTextCharFormat& format) const {
+                                             QTextCharFormat& format, QString schemaKey) const {
     // get the correct font
-    QFont font = getFont(index);
+    QFont font = getFont(index, schemaKey);
 
     // this fixes issues rendering monospaced fonts bold when they
     // are set to bold by setFontWeight below
@@ -291,35 +302,43 @@ void Utils::Schema::Settings::setFormatStyle(MarkdownHighlighter::HighlighterSta
     format.setFont(font);
 
     // adapt the font size
-    adaptFontSize(index, font);
+    adaptFontSize(index, font, schemaKey);
 
     // override the font size
     format.setFontPointSize(font.pointSize());
 
     // set the foreground color
-    format.setForeground(QBrush(getForegroundColor(index)));
+    format.setForeground(QBrush(getForegroundColor(index, schemaKey)));
 
     bool backgroundColorEnabled =
-        getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColorEnabled"), index)).toBool();
+        getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColorEnabled"), index), QVariant(),
+                       schemaKey)
+            .toBool();
 
     // set the background (color) only if the background color is enabled,
     // otherwise we get troubles with the background overwriting the foreground
     // of neighboring text (e.g. for italic text)
-    format.setBackground(backgroundColorEnabled ? QBrush(getBackgroundColor(index)) : QBrush());
+    format.setBackground(backgroundColorEnabled ? QBrush(getBackgroundColor(index, schemaKey))
+                                                : QBrush());
 
     // set the bold state
     format.setFontWeight(
-        getSchemaValue(Utils::Schema::textSettingsKey(QStringLiteral("Bold"), index)).toBool()
+        getSchemaValue(Utils::Schema::textSettingsKey(QStringLiteral("Bold"), index), QVariant(),
+                       schemaKey)
+                .toBool()
             ? QFont::Bold
             : QFont::Normal);
 
     // set the italic state
     format.setFontItalic(
-        getSchemaValue(Utils::Schema::textSettingsKey(QStringLiteral("Italic"), index)).toBool());
+        getSchemaValue(Utils::Schema::textSettingsKey(QStringLiteral("Italic"), index), QVariant(),
+                       schemaKey)
+            .toBool());
 
     // set the underline state
     format.setFontUnderline(
-        getSchemaValue(Utils::Schema::textSettingsKey(QStringLiteral("Underline"), index))
+        getSchemaValue(Utils::Schema::textSettingsKey(QStringLiteral("Underline"), index),
+                       QVariant(), schemaKey)
             .toBool());
 }
 
@@ -329,9 +348,10 @@ void Utils::Schema::Settings::setFormatStyle(MarkdownHighlighter::HighlighterSta
  * @param index
  * @param font
  */
-void Utils::Schema::Settings::adaptFontSize(int index, QFont& font) const {
+void Utils::Schema::Settings::adaptFontSize(int index, QFont& font, QString schemaKey) const {
     int adaption =
-        getSchemaValue(textSettingsKey(QStringLiteral("FontSizeAdaption"), index), 100).toInt();
+        getSchemaValue(textSettingsKey(QStringLiteral("FontSizeAdaption"), index), 100, schemaKey)
+            .toInt();
     double fontSize = round(font.pointSize() * adaption / 100);
 
     if (fontSize > 0) {
@@ -614,4 +634,8 @@ QString Utils::Schema::encodeCssFont(const QFont& refFont) {
 
     const QString cssFontStr = fields.join(QStringLiteral("; "));
     return cssFontStr;
+}
+
+QString Utils::Schema::lightEditorSchemaKey() {
+    return QStringLiteral("EditorColorSchema-6033d61b-cb96-46d5-a3a8-20d5172017eb");
 }

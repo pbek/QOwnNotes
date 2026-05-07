@@ -17,8 +17,10 @@
 #include <dialogs/filedialog.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <helpers/qownnotesmarkdownhighlighter.h>
 #include <services/settingsservice.h>
 #include <utils/misc.h>
+#include <utils/schema.h>
 
 #include <QDebug>
 #include <QFile>
@@ -56,10 +58,18 @@ bool ExportPrintManager::preparePrintNotePrinter(QPrinter *printer) {
  * @brief Prints the content of a text document
  * @param textEdit
  */
-void ExportPrintManager::printTextDocument(QTextDocument *textDocument) {
+void ExportPrintManager::printTextDocument(QTextDocument *textDocument,
+                                           bool useLightEditorSchemaForDarkSchema) {
     QPrinter printer;
     if (preparePrintNotePrinter(&printer)) {
-        textDocument->print(&printer);
+        QTextDocument *printDocument = useLightEditorSchemaForDarkSchema
+                                           ? createLightEditorSchemaDocument(textDocument)
+                                           : textDocument;
+        printDocument->print(&printer);
+
+        if (printDocument != textDocument) {
+            delete printDocument;
+        }
     }
 }
 
@@ -182,19 +192,27 @@ bool ExportPrintManager::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
  * @param textEdit
  */
 void ExportPrintManager::exportNoteAsPDF(QPlainTextEdit *textEdit) {
-    exportNoteAsPDF(textEdit->document());
+    exportNoteAsPDF(textEdit->document(), true);
 }
 
 /**
  * @brief Exports the document as PDF
  * @param doc
  */
-void ExportPrintManager::exportNoteAsPDF(QTextDocument *doc) {
+void ExportPrintManager::exportNoteAsPDF(QTextDocument *doc,
+                                         bool useLightEditorSchemaForDarkSchema) {
     auto *printer = new QPrinter(QPrinter::HighResolution);
     printer->setColorMode(QPrinter::Color);
 
     if (prepareExportNoteAsPDFPrinter(printer)) {
-        doc->print(printer);
+        QTextDocument *printDocument =
+            useLightEditorSchemaForDarkSchema ? createLightEditorSchemaDocument(doc) : doc;
+        printDocument->print(printer);
+
+        if (printDocument != doc) {
+            delete printDocument;
+        }
+
         Utils::Misc::openFolderSelect(printer->outputFileName(),
                                       QStringLiteral("show-exported-pdf-in-file-manager"));
     }
@@ -245,7 +263,85 @@ void ExportPrintManager::on_action_Print_note_markdown_triggered() {
  * @brief Prints the current note (text)
  */
 void ExportPrintManager::on_action_Print_note_text_triggered() {
-    printTextDocument(_mainWindow->activeNoteTextEdit()->document());
+    printTextDocument(_mainWindow->activeNoteTextEdit()->document(), true);
+}
+
+QTextDocument *ExportPrintManager::createLightEditorSchemaDocument(
+    QTextDocument *sourceDocument) const {
+    if (!Utils::Schema::schemaSettings->currentSchemaIsDark()) {
+        return sourceDocument;
+    }
+
+    auto *document = new QTextDocument();
+    document->setDefaultFont(Utils::Schema::schemaSettings->getEditorTextFont());
+    document->setPlainText(sourceDocument->toPlainText());
+
+    auto *highlighter = new QOwnNotesMarkdownHighlighter(document);
+    setHighlighterSchemaStyles(highlighter, Utils::Schema::lightEditorSchemaKey());
+    highlighter->rehighlight();
+
+    return document;
+}
+
+void ExportPrintManager::setHighlighterSchemaStyles(QOwnNotesMarkdownHighlighter *highlighter,
+                                                    const QString &schemaKey) const {
+    const int states[] = {
+        MarkdownHighlighter::HighlighterState::H1,
+        MarkdownHighlighter::HighlighterState::H2,
+        MarkdownHighlighter::HighlighterState::H3,
+        MarkdownHighlighter::HighlighterState::H4,
+        MarkdownHighlighter::HighlighterState::H5,
+        MarkdownHighlighter::HighlighterState::H6,
+        MarkdownHighlighter::HighlighterState::HorizontalRule,
+        MarkdownHighlighter::HighlighterState::List,
+        MarkdownHighlighter::HighlighterState::CheckBoxChecked,
+        MarkdownHighlighter::HighlighterState::CheckBoxUnChecked,
+        MarkdownHighlighter::HighlighterState::Bold,
+        MarkdownHighlighter::HighlighterState::Italic,
+        MarkdownHighlighter::HighlighterState::StUnderline,
+        MarkdownHighlighter::HighlighterState::BlockQuote,
+        MarkdownHighlighter::HighlighterState::CodeBlock,
+        MarkdownHighlighter::HighlighterState::Comment,
+        MarkdownHighlighter::HighlighterState::MaskedSyntax,
+        MarkdownHighlighter::HighlighterState::Image,
+        MarkdownHighlighter::HighlighterState::InlineCodeBlock,
+        MarkdownHighlighter::HighlighterState::Link,
+        MarkdownHighlighter::HighlighterState::LinkInternal,
+        MarkdownHighlighter::HighlighterState::WikiLink,
+        MarkdownHighlighter::HighlighterState::WikiLinkBroken,
+        MarkdownHighlighter::HighlighterState::Table,
+        MarkdownHighlighter::HighlighterState::BrokenLink,
+        MarkdownHighlighter::HighlighterState::TrailingSpace,
+        MarkdownHighlighter::HighlighterState::CodeType,
+        MarkdownHighlighter::HighlighterState::CodeKeyWord,
+        MarkdownHighlighter::HighlighterState::CodeComment,
+        MarkdownHighlighter::HighlighterState::CodeString,
+        MarkdownHighlighter::HighlighterState::CodeNumLiteral,
+        MarkdownHighlighter::HighlighterState::CodeBuiltIn,
+        MarkdownHighlighter::HighlighterState::CodeOther,
+    };
+
+    for (const int state : states) {
+        setHighlighterFormatStyle(highlighter, state, schemaKey);
+    }
+}
+
+void ExportPrintManager::setHighlighterFormatStyle(QOwnNotesMarkdownHighlighter *highlighter,
+                                                   int highlighterState,
+                                                   const QString &schemaKey) const {
+    const auto state = static_cast<MarkdownHighlighter::HighlighterState>(highlighterState);
+    QTextCharFormat format;
+    Utils::Schema::schemaSettings->setFormatStyle(state, format, schemaKey);
+
+    if (state == MarkdownHighlighter::HighlighterState::WikiLink) {
+        format.setFontUnderline(true);
+        format.setUnderlineStyle(QTextCharFormat::DotLine);
+    } else if (state == MarkdownHighlighter::HighlighterState::WikiLinkBroken) {
+        format.setFontUnderline(true);
+        format.setUnderlineStyle(QTextCharFormat::DashUnderline);
+    }
+
+    highlighter->setTextFormat(state, format);
 }
 
 /**

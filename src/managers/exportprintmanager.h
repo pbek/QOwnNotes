@@ -20,6 +20,8 @@ class MainWindow;
 class QPrinter;
 class QTextDocument;
 class QPlainTextEdit;
+class QString;
+class QOwnNotesMarkdownHighlighter;
 
 namespace Ui {
 class MainWindow;
@@ -33,10 +35,11 @@ class ExportPrintManager : public QObject {
                                 QObject *parent = nullptr);
 
     bool preparePrintNotePrinter(QPrinter *printer);
-    void printTextDocument(QTextDocument *textDocument);
+    void printTextDocument(QTextDocument *textDocument,
+                           bool useLightEditorSchemaForDarkSchema = false);
     bool prepareExportNoteAsPDFPrinter(QPrinter *printer);
     void exportNoteAsPDF(QPlainTextEdit *textEdit);
-    void exportNoteAsPDF(QTextDocument *doc);
+    void exportNoteAsPDF(QTextDocument *doc, bool useLightEditorSchemaForDarkSchema = false);
     QTextDocument *getDocumentForPreviewExport();
 
    public slots:
@@ -47,6 +50,12 @@ class ExportPrintManager : public QObject {
     void on_actionExport_preview_HTML_triggered();
 
    private:
+    QTextDocument *createLightEditorSchemaDocument(QTextDocument *sourceDocument) const;
+    void setHighlighterSchemaStyles(QOwnNotesMarkdownHighlighter *highlighter,
+                                    const QString &schemaKey) const;
+    void setHighlighterFormatStyle(QOwnNotesMarkdownHighlighter *highlighter, int highlighterState,
+                                   const QString &schemaKey) const;
+
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
 };

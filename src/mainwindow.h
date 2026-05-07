@@ -919,8 +919,9 @@ class MainWindow : public QMainWindow {
 
    public:
     /** export / print **/
-    void printTextDocument(QTextDocument *textDocument);
-    void exportNoteAsPDF(QTextDocument *doc);
+    void printTextDocument(QTextDocument *textDocument,
+                           bool useLightEditorSchemaForDarkSchema = false);
+    void exportNoteAsPDF(QTextDocument *doc, bool useLightEditorSchemaForDarkSchema = false);
 
     int getMaxImageWidth() const;
 
