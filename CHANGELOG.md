@@ -2,6 +2,9 @@
 
 ## 26.5.6
 
+- Fixed duplicate light/dark mode prompts on application startup when the Linux
+  portal color scheme check and Qt color scheme fallback both detected the same
+  mismatch (for [#3578](https://github.com/pbek/QOwnNotes/issues/3578))
 - Fixed printing and exporting the **note text** to PDF while using a dark editor
   color schema by rendering the exported text with the built-in Light editor
   schema instead (for [#1524](https://github.com/pbek/QOwnNotes/issues/1524))

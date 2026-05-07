@@ -1313,25 +1313,29 @@ bool Utils::Gui::doWindowsDarkModeCheck() {
     bool windowsDarkMode = settings.value("AppsUseLightTheme") == 0;
     bool appDarkMode = SettingsService().value("darkMode").toBool();
 
-    // Check for Windows dark mode and application default mode
-    if (windowsDarkMode && !appDarkMode) {
-        return promptForColorSchemeChange(
-            QObject::tr("Dark mode detected"),
-            QObject::tr("Your Windows system seems to be in dark mode. "
-                        "Do you also want to turn on dark mode in QOwnNotes?"),
-            QStringLiteral("windows-dark-mode"), true);
+    if (windowsDarkMode) {
+        // Check for Windows dark mode and application default mode
+        if (!appDarkMode) {
+            promptForColorSchemeChange(
+                QObject::tr("Dark mode detected"),
+                QObject::tr("Your Windows system seems to be in dark mode. "
+                            "Do you also want to turn on dark mode in QOwnNotes?"),
+                QStringLiteral("windows-dark-mode"), true);
+        }
+
+        return true;
     }
 
     // Check for Windows light mode and application dark mode
-    if (!windowsDarkMode && appDarkMode) {
-        return promptForColorSchemeChange(
+    if (appDarkMode) {
+        promptForColorSchemeChange(
             QObject::tr("Light mode detected"),
             QObject::tr("Your Windows system seems to be in light mode. "
                         "Do you also want to turn off dark mode in QOwnNotes?"),
             QStringLiteral("windows-light-mode"), false);
     }
 
-    return false;
+    return true;
 }
 
 /**
@@ -1399,22 +1403,30 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
     const int systemColorSchema = QString(process.readAll()).trimmed().right(1).toInt();
     const bool appDarkMode = SettingsService().value("darkMode").toBool();
 
-    // Check for Linux dark mode and application default mode
-    if (systemColorSchema == 1 && !appDarkMode) {
-        return promptForColorSchemeChange(
-            QObject::tr("Dark mode detected"),
-            QObject::tr("Your Linux system seems to use the dark mode. "
-                        "Do you also want to turn on dark mode in QOwnNotes?"),
-            QStringLiteral("linux-dark-mode"), true);
+    if (systemColorSchema == 1) {
+        // Check for Linux dark mode and application default mode
+        if (!appDarkMode) {
+            promptForColorSchemeChange(
+                QObject::tr("Dark mode detected"),
+                QObject::tr("Your Linux system seems to use the dark mode. "
+                            "Do you also want to turn on dark mode in QOwnNotes?"),
+                QStringLiteral("linux-dark-mode"), true);
+        }
+
+        return true;
     }
 
-    // Check for Linux light mode and application dark mode
-    if (systemColorSchema == 2 && appDarkMode) {
-        return promptForColorSchemeChange(
-            QObject::tr("Light mode detected"),
-            QObject::tr("Your Linux system seems to use the light mode. "
-                        "Do you also want to turn off dark mode in QOwnNotes?"),
-            QStringLiteral("linux-light-mode"), false);
+    if (systemColorSchema == 2) {
+        // Check for Linux light mode and application dark mode
+        if (appDarkMode) {
+            promptForColorSchemeChange(
+                QObject::tr("Light mode detected"),
+                QObject::tr("Your Linux system seems to use the light mode. "
+                            "Do you also want to turn off dark mode in QOwnNotes?"),
+                QStringLiteral("linux-light-mode"), false);
+        }
+
+        return true;
     }
 
     return false;
@@ -1423,6 +1435,7 @@ bool Utils::Gui::doLinuxDarkModeCheck() {
 bool Utils::Gui::doSystemDarkModeCheck(bool systemChangeDetected) {
 #ifdef Q_OS_WIN32
     // On Windows, try the registry-based check first, then fall back to Qt's colorScheme
+    // if the registry setting is unavailable.
     if (doWindowsDarkModeCheck()) {
         return true;
     }
@@ -1432,7 +1445,8 @@ bool Utils::Gui::doSystemDarkModeCheck(bool systemChangeDetected) {
     // On Linux, prefer the D-Bus freedesktop portal check over Qt's colorScheme().
     // Qt's QStyleHints::colorScheme() can incorrectly report Light on GNOME/Wayland
     // even when the system is in dark mode (see issue #3594), whereas the portal
-    // query reads the setting GNOME and KDE both expose correctly.
+    // query reads the setting GNOME and KDE both expose correctly. Only fall back
+    // to Qt when the portal check is unavailable or returns no preference.
     if (doLinuxDarkModeCheck()) {
         return true;
     }
