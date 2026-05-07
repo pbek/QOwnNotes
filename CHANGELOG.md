@@ -2,6 +2,9 @@
 
 ## 26.5.6
 
+- Fixed dead-key accent composition in the note editor on Linux systems where Qt
+  delivered dead-key events without composed text, allowing Spanish accented
+  words such as `había` to be entered correctly (for [#3085](https://github.com/pbek/QOwnNotes/issues/3085))
 - Fixed duplicate light/dark mode prompts on application startup when the Linux
   portal color scheme check and Qt color scheme fallback both detected the same
   mismatch (for [#3578](https://github.com/pbek/QOwnNotes/issues/3578))

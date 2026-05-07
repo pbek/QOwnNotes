@@ -254,6 +254,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     int _aiAutocompletePosition = -1;
     QTimer *_aiAutocompleteTimer = nullptr;
     bool _isInsertingAiSuggestion = false;
+    QChar _pendingDeadKey;
 
     MarkdownLspClient *_markdownLspClient = nullptr;
     MarkdownLspDocumentTracker *_markdownLspTracker = nullptr;

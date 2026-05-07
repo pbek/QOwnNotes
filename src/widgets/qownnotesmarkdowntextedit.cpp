@@ -76,6 +76,44 @@ namespace {
 constexpr int kFoldIndicatorPadding = 4;
 QHash<QString, QSet<QString>> s_foldedHeadingStateByNoteReference;
 
+static QChar accentForDeadKey(int key) {
+    switch (key) {
+        case Qt::Key_Dead_Acute:
+            return QChar(0x0301);
+        case Qt::Key_Dead_Grave:
+            return QChar(0x0300);
+        case Qt::Key_Dead_Circumflex:
+            return QChar(0x0302);
+        case Qt::Key_Dead_Diaeresis:
+            return QChar(0x0308);
+        case Qt::Key_Dead_Tilde:
+            return QChar(0x0303);
+        default:
+            return QChar();
+    }
+}
+
+static QChar spacingAccentForCombiningMark(QChar accent) {
+    switch (accent.unicode()) {
+        case 0x0300:
+            return QLatin1Char('`');
+        case 0x0301:
+            return QChar(0x00B4);
+        case 0x0302:
+            return QLatin1Char('^');
+        case 0x0303:
+            return QLatin1Char('~');
+        case 0x0308:
+            return QChar(0x00A8);
+        default:
+            return QChar();
+    }
+}
+
+static QString composeDeadKey(QChar accent, QChar character) {
+    return QString(character).append(accent).normalized(QString::NormalizationForm_C);
+}
+
 struct SetextHeadingUnderline {
     int level = 0;
     int leadingSpaces = 0;
@@ -3387,6 +3425,41 @@ void QOwnNotesMarkdownTextEdit::onAiAutocompleteTimeout(const QString &errorStri
  * Override keyPressEvent to handle Tab and Escape for autocomplete
  */
 void QOwnNotesMarkdownTextEdit::keyPressEvent(QKeyEvent *e) {
+    if (!isReadOnly()) {
+        const QChar deadKeyAccent = accentForDeadKey(e->key());
+        if (!deadKeyAccent.isNull() && e->text().isEmpty()) {
+            _pendingDeadKey = deadKeyAccent;
+            e->accept();
+            return;
+        }
+
+        if (!_pendingDeadKey.isNull()) {
+            if (e->key() == Qt::Key_Escape) {
+                _pendingDeadKey = QChar();
+            } else if (!(e->modifiers() &
+                         (Qt::ControlModifier | Qt::AltModifier | Qt::MetaModifier)) &&
+                       e->text().size() == 1) {
+                const QChar accent = _pendingDeadKey;
+                _pendingDeadKey = QChar();
+
+                const QChar character = e->text().at(0);
+                const QString composed = composeDeadKey(accent, character);
+                QTextCursor cursor = textCursor();
+                cursor.insertText(composed.size() == 1
+                                      ? composed
+                                      : QString(spacingAccentForCombiningMark(accent)));
+                if (composed.size() != 1 && character != QLatin1Char(' ')) {
+                    cursor.insertText(e->text());
+                }
+                setTextCursor(cursor);
+                e->accept();
+                return;
+            }
+        }
+    } else {
+        _pendingDeadKey = QChar();
+    }
+
     // Handle Tab key to accept AI autocomplete suggestion
     if (e->key() == Qt::Key_Tab && !_aiAutocompleteSuggestion.isEmpty()) {
         acceptAiAutocompleteSuggestion();
