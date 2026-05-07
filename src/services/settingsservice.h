@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QHash>
+#include <QMutex>
 #include <QSettings>
 #include <QString>
 #include <QStringList>
@@ -58,5 +59,6 @@ class SettingsService : public QObject {
     QStringList m_arrayStack;
 
     static QHash<QString, QVariant> *cache();
+    static QMutex *cacheMutex();
     QString getFullKey(const QString &key) const;
 };

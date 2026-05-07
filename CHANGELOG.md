@@ -2,6 +2,9 @@
 
 ## 26.5.6
 
+- Fixed a possible crash when opening the settings dialog by synchronizing access
+  to the shared settings cache while background tasks may read or write settings
+  (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
 - Fixed dead-key accent composition in the note editor on Linux systems where Qt
   delivered dead-key events without composed text, allowing Spanish accented
   words such as `había` to be entered correctly (for [#3085](https://github.com/pbek/QOwnNotes/issues/3085))

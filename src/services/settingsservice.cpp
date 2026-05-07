@@ -18,6 +18,7 @@
 
 #include <QCoreApplication>
 #include <QDebug>
+#include <QMutexLocker>
 
 namespace {
 QStringList keychainReferencesForRemoval(const QSettings &settings, const QString &key) {
@@ -56,8 +57,14 @@ QHash<QString, QVariant> *SettingsService::cache() {
     return &cache;
 }
 
+QMutex *SettingsService::cacheMutex() {
+    static QMutex mutex;
+    return &mutex;
+}
+
 QVariant SettingsService::value(const QString &key, const QVariant &defaultValue) const {
     const QString fullKey = getFullKey(key);
+    QMutexLocker locker(cacheMutex());
 
     if (!cache()->contains(fullKey)) {
         // We are using "key" instead of "fullKey", because QSettings is already
@@ -70,7 +77,10 @@ QVariant SettingsService::value(const QString &key, const QVariant &defaultValue
 
 void SettingsService::setValue(const QString &key, const QVariant &value) {
     const QString fullKey = getFullKey(key);
-    cache()->insert(fullKey, value);
+    {
+        QMutexLocker locker(cacheMutex());
+        cache()->insert(fullKey, value);
+    }
 
     // We are using "key" instead of "fullKey", because QSettings is already
     // in the group if there was one
@@ -86,6 +96,7 @@ void SettingsService::remove(const QString &key) {
         keychainReferences = CryptoService::keychainReferencesFromSettings(m_settings);
 
         // Remove all keys in group in QHash cache
+        QMutexLocker locker(cacheMutex());
         for (auto it = cache()->begin(); it != cache()->end();) {
             if (it.key().startsWith(fullKey)) {
                 it = cache()->erase(it);
@@ -100,6 +111,7 @@ void SettingsService::remove(const QString &key) {
         keychainReferences = keychainReferencesForRemoval(m_settings, key);
 
         // Remove single key
+        QMutexLocker locker(cacheMutex());
         cache()->remove(fullKey);
 
         // We are using "key" instead of "fullKey", because QSettings is already
@@ -114,6 +126,7 @@ void SettingsService::remove(const QString &key) {
 
 bool SettingsService::contains(const QString &key) const {
     const QString fullKey = getFullKey(key);
+    QMutexLocker locker(cacheMutex());
 
     // For m_settings we are using "key" instead of "fullKey", because QSettings
     // is already in the group if there was one
@@ -138,7 +151,10 @@ void SettingsService::clear() {
     const QStringList keychainReferences =
         CryptoService::keychainReferencesFromSettings(m_settings);
 
-    cache()->clear();
+    {
+        QMutexLocker locker(cacheMutex());
+        cache()->clear();
+    }
     m_settings.clear();
     m_settings.sync();
     m_group.clear();
