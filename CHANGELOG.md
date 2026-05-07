@@ -2,6 +2,9 @@
 
 ## 26.5.6
 
+- Note folder **Subfolder visibility** selections now keep parent folders
+  selected with a partial check state when some or all subfolders are unchecked
+  individually, while checking a parent still selects its subfolders (for [#3602](https://github.com/pbek/QOwnNotes/issues/3602))
 - Fixed a possible crash when opening the settings dialog by synchronizing access
   to the shared settings cache while background tasks may read or write settings
   (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
