@@ -140,7 +140,7 @@ void ScriptingService::initComponent(const Script &script) {
     component->loadUrl(fileUrl);
 
     QObject *object = component->create();
-    if (component->isReady() && !component->isError()) {
+    if (component->isReady() && !component->isError() && object != nullptr) {
         scriptComponent.component = component;
         scriptComponent.object = object;
         scriptComponent.script = script;
@@ -172,8 +172,12 @@ void ScriptingService::initComponent(const Script &script) {
         }
     } else {
         qWarning() << "script errors: " << component->errors();
-        bool urlEmpty = component->errors().at(0).url().isEmpty();
+        const bool urlEmpty =
+            !component->errors().isEmpty() && component->errors().at(0).url().isEmpty();
         if (urlEmpty) script.remove();
+
+        delete (object);
+        delete (component);
     }
 }
 
@@ -344,6 +348,13 @@ bool ScriptingService::validateScript(const Script &script, QString &errorMessag
  * Initializes all components
  */
 void ScriptingService::initComponents() {
+    if (_isInitializingComponents) {
+        _reloadEngineRequested = true;
+        return;
+    }
+
+    _isInitializingComponents = true;
+
     clearCustomStyleSheets();
     _scriptComponents.clear();
     _settingsVariables.clear();
@@ -360,12 +371,26 @@ void ScriptingService::initComponents() {
     // Cache whether any script provides a highlightingHook to avoid
     // per-block QML invocations when no script uses it
     _highlightingHookExists = methodExists(QStringLiteral("highlightingHook(QVariant,QVariant)"));
+
+    _isInitializingComponents = false;
+
+    if (!_isReloadingEngine && _reloadEngineRequested) {
+        _reloadEngineRequested = false;
+        QTimer::singleShot(0, this, SLOT(reloadEngine()));
+    }
 }
 
 /**
  * Reloads the engine
  */
 void ScriptingService::reloadEngine() {
+    if (_isReloadingEngine || _isInitializingComponents) {
+        _reloadEngineRequested = true;
+        return;
+    }
+
+    _isReloadingEngine = true;
+
     reloadScriptComponents();
 
 #ifndef INTEGRATION_TESTS
@@ -375,6 +400,13 @@ void ScriptingService::reloadEngine() {
         mainWindow->reloadOpenAiControls();
     }
 #endif
+
+    _isReloadingEngine = false;
+
+    if (_reloadEngineRequested) {
+        _reloadEngineRequested = false;
+        QTimer::singleShot(0, this, SLOT(reloadEngine()));
+    }
 }
 
 /**
@@ -403,6 +435,10 @@ void ScriptingService::reloadScriptingEngine() {
  * Checks if a method exists for an object
  */
 bool ScriptingService::methodExistsForObject(QObject *object, const QString &method) const {
+    if (object == nullptr) {
+        return false;
+    }
+
     return object->metaObject()->indexOfMethod(method.toStdString().c_str()) > -1;
 }
 

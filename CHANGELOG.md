@@ -2,6 +2,10 @@
 
 ## 26.5.7
 
+- Fixed a possible crash when script initialization triggered synchronous URL
+  downloads while settings/calendar actions requested another scripting engine
+  reload; nested reloads are now coalesced until the current reload finishes
+  (for [#3605](https://github.com/pbek/QOwnNotes/issues/3605))
 - Fetched webpage titles in the link dialog now preserve literal `<` and `>`
   characters, so titles such as GitHub version bump pull requests are no longer
   altered when used as link names (for [#3604](https://github.com/pbek/QOwnNotes/issues/3604))
