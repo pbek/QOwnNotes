@@ -33,5 +33,5 @@ Si vous souhaitez proposer un script pour le **dépôt de scripts**, veuillez su
 Si vous avez besoin d'accéder à une certaine fonctionnalité dans QOwnNotes ou si vous avez des questions ou des idées, veuillez ouvrir un ticket sur la [page des issues QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-For logging, you can use the `script.log()` command to log to the _Log panel_, which you can turn on in the _Window / Panels_ menu.
+Pour la journalisation, vous pouvez utiliser la commande `script.log()` pour enregistrer dans le _Panneau Journal_, que vous pouvez activer dans le menu _Fenêtre / Panneaux_.
 :::

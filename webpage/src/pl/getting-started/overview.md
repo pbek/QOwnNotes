@@ -38,7 +38,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
 - **Searching parts of words** in notes is possible and search results are highlighted in the notes
 - [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), and optional [**Harper**](../editor/harper.md) support
+- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), optional [**Harper**](../editor/harper.md), and optional [**Markdown LSP**](../editor/markdownlsp.md) support (e.g. [Marksman](https://github.com/artempyanykh/marksman) for completions and diagnostics, or [Rumdl](https://github.com/rvben/rumdl) for linting)
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
 - Built-in **AI support** with script integration for providers like **OpenAI** and **Groq**

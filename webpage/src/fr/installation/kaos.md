@@ -2,7 +2,7 @@
 
 Il existe un package géré par la communauté `qownnotes` dans le dépôt [KaOS Community Packages](https://github.com/KaOS-Community-Packages/qownnotes).
 
-Vous pouvez l'installer en tapant:
+Vous pouvez l'installer en tapant :
 
 ```bash
 kcp -i qownnotes

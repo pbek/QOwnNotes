@@ -4,7 +4,7 @@
 
 Vous pouvez également compiler vous-même QOwnNotes à partir du code source.
 
-Checkout the code of the last release directly from the git repository:
+Récupérez le code de la dernière version directement depuis le dépôt git :
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b release
@@ -12,50 +12,50 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-For debugging, it's easiest to use QtCreator. When downloading [Qt Creator](https://www.qt.io/download-qt-installer-oss), you will also need the package `qtwebsockets` to build QOwnNotes with Qt6. If you build under Windows, you want to stick to _MinGw 64-bit_. On Linux, you most likely have a package for QtCreator in your repository.
+Pour le débogage, il est plus simple d’utiliser QtCreator. Lors du téléchargement de [Qt Creator](https://www.qt.io/download-qt-installer-oss), vous aurez aussi besoin du paquet `qtwebsockets` pour compiler QOwnNotes avec Qt6. Si vous compilez sous Windows, vous devrez utiliser _MinGw 64-bits_. Sous Linux, vous devriez normalement avoir un paquet pour QtCreator dans votre dépôt.
 
-Afterward open the project file `src/QOwnNotes.pro` and click on **Build** / **Build Project QOwnNotes**.
+Ouvrez ensuite le fichier de projet `src/QOwnNotes.pro` et cliquez sur **Compiler** / **Compiler le projet QOwnNotes**.
 
-If you know what you are doing, you can also build QOwnNotes directly in your terminal:
+Si vous savez ce que vous faites, vous pouvez aussi compiler QOwnNotes directement dans votre terminal :
 
 ```bash
 cd src
 
-# build binary translation files if you want another language than English
+# compile les fichiers de traductions si vous souhaitez d’autres langues que l’anglais
 lrelease QOwnNotes.pro
 
-# prepare build process and build the application
+# prépare le processus de compilation puis compile l’application
 qmake
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
+N'hésitez pas à contribuer au code source de ce projet, à faire des suggestions ou à signaler des problèmes sur la [page des issues de QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
-Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+Voir [QOwnNotes sur GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-If you want to contribute source code to the project please make your pull requests to the `main` branch. But please make sure to read the [code contribution guidelines](../contributing/code-contributions.md) first.
+Si vous souhaitez contribuer au code source du projet, veuillez envoyer vos requêtes de fusion à la branche `main`. Assurez-vous d’abord de lire les [bonnes pratiques à la contribution au code](../contributing/code-contributions.md).
 :::
 
 ## Archive source
 
-You will find source archives of QOwnNotes on [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
+Vous trouverez les archives source de QOwnNotes sur [QOwnNotes source archive](https://github.com/pbek/QOwnNotes/releases).
 
-The source archives will be accessible like that:
+Les archives source seront accessibles via des liens tels que :
 
 `https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz`
 
-## Building with nix
+## Compiler avec nix
 
-If you have the [Nix package manager](https://nixos.org/download/) and [Devenv](https://devenv.sh/getting-started/) installed you can just git-clone the repository, like explained above and build with:
+Si vous avez le [gestionnaire de paquets Nix](https://nixos.org/download/) et [Devenv](https://devenv.sh/getting-started/) installés, vous pouvez simplement cloner le dépôt git comme expliqué plus haut puis compiler avec :
 
 ```bash
-# Open a shell with all the tools you need
+# Ouvre un shell avec tous les outils nécessaires
 devenv shell
 
-# Build the application
+# Compiler l’application
 just nix-build
 
-# Run the built application
+# Exécuter l’application compilée
 just nix-run
 ```

@@ -2,13 +2,13 @@
 
 ![qownnotesapi](/img/qownnotesapi.png)
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) peut gérer l'**accès** aux **notes mises à la corbeille** et aux **notes de versions** pour vous.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) peut gérer l'**accès** aux **notes mises à la corbeille** et aux **versions de notes** pour vous.
 
 ::: tip
 Vous pouvez activer QOwnNotesAPI directement dans votre instance **Nextcloud** ou **ownCloud** en recherchant `qownnotes` sur la page **Apps** de votre serveur à l'adresse `https://<your-cloud-domain>/settings/apps`.
 
 - [Page des Apps de Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
-- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+- [Page des Apps de ownCloud](https://marketplace.owncloud.com/apps/qownnotesapi)
 
 :::
 

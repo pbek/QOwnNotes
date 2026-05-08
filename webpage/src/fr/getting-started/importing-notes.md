@@ -2,74 +2,74 @@
 
 ## Evernote
 
-There is an Evernote import dialog you can reach in the `Note / Import` menu to import _Enex_ files.
+Vous pouvez accéder à une boîte de dialogue d'importation Evernote dans le menu `Note / Importer` pour importer des fichiers _Enex_.
 
-Images, attachments, tags, basic formatting and metadata will be imported as well.
+Les images, pièces-jointes, tags, le formattage basique et les métadonnées seront également importés.
 
 ## Joplin
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+Il existe une boîte de dialogue d'importation Joplin dans le menu `Note / Importer`.
 
 ## Obsidian
 
-1. Install the community plugin ["Better Markdown Links"](https://github.com/mnaoumov/obsidian-better-markdown-links) to convert all _wikilink and Obsidian flavoured markdown links (OFM)_ and make Obsidian operate with _standard markdown links_.
+1. Installez le plugin communautaire [« Better Markdown Links »](https://github.com/mnaoumov/obsidian-better-markdown-links) pour convertir tous les _wikilink et les liens Obsidian-flavoured Mardown (OFM)_ et faire en sorte qu’Obsidian fonctionne avec les _liens markdown standards_.
 
-2. Open the same files (same vault) in QOwnNotes. Install the QOwnNotes script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) and press the import button "ObsidianImport" in the script panel to convert all files.
+2. Ouvrez les mêmes fichiers (même coffre) dans QOwnNotes. Installez le script QOwnNotes [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) et appuyez sur le bouton d’import « ObsidianImport » dans le panneau de scripts pour convertir tous les fichiers.
 
-Exporting from QOwnNotes to Obsidian is not needed.
-
-::: warning
-Warning _Caution(!)_: The plugin `"Better Markdown Links"` silently adapts links when Obsidian is opened or when folders, files or headings are renamed. Press the "ObsidianImport" button in QOwnNotes everytime you have changed files in Obsidian, otherwise some links might not be recognised by QOwnNotes anymore!
-:::
-
-## VS Codium / Github / Markor / Typora / Pandoc and others (Github flavoured markdown GFM)
-
-Githubflavoured markdown (GFM) uses hyphenstyle link headings (spaces converted to hyphens). A reference to a heading such as `## Heading with spaces` for example will look like `[notelink](β_note.md#heading-with-spaces)`.
-
-QOwnNotes and Obsidian (Obsidian flavoured markdown OFM) use _urlencoded (percentencoded) heading fragments_ (spaces converted to %20 and keeping capital letters), so the same link will look different `[notelink](%CE%B2_note.md#Heading%20with%20spaCes)`.
-
-To convert between GFM and QOwnNotes/Obsidian (OFM), just open the files in QOwnNotes. Install the QOwnNotes script [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) and press the import button "GFMImport" in the script panel to convert all files
-
-Exporting from QOwnNotes to GFM works for a single page (useful for a consecutive conversion with pandoc) or for all files.
+L’export de QOwnNotes vers Obsidian n’est pas nécessaire.
 
 ::: warning
-Warning _Caution_: Possible loss of information in heading links in special cases! Assume you have a note `β_note.md` with several identical headings like `## Advantages` within the _same (!) note_ . GFM allows to reference each heading with `[notelink](%CE%B2_note.md#advantages), [notelink](%CE%B2_note.md#advantages-1), [notelink](%CE%B2_note.md#advantages-2), ...`. _Neither QOwnNotes nor Obsidian allow for this!_ QOwnnotes and Obsidian both need unique heading names within the same document to be able to reference each of them! As this feature is not supported at all, after the conversion those links will all point to the first occuring heading with that particular name `[notelink](%CE%B2_note.md#advantages)` (this is especially relevant in long documents)! As a workaround just add text to the headings and update the links to the headings first (make them unique).
+Avertissement _Attention (!)_ : le plugin `« Better Markdown Links »` adapte silencieusement les liens quand Obsidian est ouvert ou quand des dossiers, fichiers ou titres sont renommés. Appuyez sur le bouton « ObsidianImport » dans QOwnNotes à chaque fois que vous changez des fichiers dans Obsidian, sans quoi certains liens pourraient ne plus être reconnus par QOwnNotes !
 :::
 
-## Various Formats
+## VS Codium / GitHub / Markor / Typora / Pandoc et les autres (GitHub flavoured markdown, GFM)
 
-The command line tool [jimmy](https://github.com/marph91/jimmy) can convert various formats to Markdown (such as [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) and [more](https://marph91.github.io/jimmy/)). To preserve as much metadata as possible, it's recommended to apply [additional tweaks](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+Le GitHub Flavoured Markdown (GFM) utilise des liens de titres où les espaces sont converties en tirets. Une référence vers un titre tel que `## Titre avec espaces` ressemblera à `[lien vers une note](β_note.md#titre-avec-espaces)`.
 
-If there are any issues with the conversion, feel free to open a ticket at [GitHub](https://github.com/marph91/jimmy/issues).
+QOwnNotes et Obsidian (Obsidian flavoured markdown, OFM) utilisent _des références urlencoded (percentencoded)_ (les espaces sont converties en %20 et les lettres majuscules sont gardées), donc le même lien ressemblera à `[lien vers une note](%CE%B2_note.md#Titre%20avec%20espaCes)`.
+
+Pour convertir entre du GFM et QOwnNotes/Obsidian (OFM), ouvrez simplement les fichiers dans QOwnNotes. Installez le script QOwnNotes [link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others](https://github.com/qownnotes/scripts/tree/main/link-importer-and-converter-for-obsidian-github-pandoc-markor-and-others) et appuyez sur le bouton d’import « GFMImport » dans le panneau de scripts pour convertir tous les fichiers
+
+L’exportation de QOwnNotes vers GFM fonctionne pour une seule page (utile pour une conversion consécutive avec pandoc) ou pour tous les fichiers.
+
+::: warning
+Avertissement _Attention_ : une perte d’information est possible dans les liens vers des titres dans certains cas ! Imaginez que vous ayez une note `β_note.md` avec plusieurs titres identiques comme `## Avantages` dans la _même (!) note_. Le GFM autorise le référencement de chaque titre avec `[lien vers une note](%CE%B2_note.md#avantages), [lien vers une note](%CE%B2_note.md#avantages-1), [lien vers une note](%CE%B2_note.md#avantages-2), …`. _Ni QOwnNotes ni Obsidian ne l’autorisent !_ QOwnNotes et Obsidian ont chacun besoin de nom de titres uniques dans le même document pour avoir la possibilité de référencer chacun d’entre eux ! Comme cette fonctionnalité n’est pas du tout prise en charge, après conversion, ces liens pointeront tous vers la première occurrence d’un titre avec ce nom particulier : `[lien vers une note](%CE%B2_note.md#avantages)` (c’est particulièrement pertinent dans les longs documents) ! Pour contourner ce problème, ajoutez simplement du texte à chaque titre et mettez à jour les liens vers ces titres (rendez-les uniques).
+:::
+
+## Autres formats
+
+L’outil en ligne de commande [jimmy](https://github.com/marph91/jimmy) peut convertir divers formats en Markdown (comme [Google Keep](https://marph91.github.io/jimmy/formats/google_keep/), [Synology Note Station](https://marph91.github.io/jimmy/formats/synology_note_station/) et [plus](https://marph91.github.io/jimmy/)). Pour préserver le plus possible les métadonnées, il est recommandé d’appliquer [des ajustements additionnels](https://marph91.github.io/jimmy/import_instructions/#qownnotes).
+
+S’il y a un quelconque problème avec la conversion, n’hésitez pas à ouvrir un ticket sur [GitHub](https://github.com/marph91/jimmy/issues).
 
 ## Google Keep
 
-> Download Keep tasks using Google Takeout
+> Téléchargez Keep tasks avec Google Takeout
 > 
-> Extract archive
+> Extrayez l’archive
 > 
-> Download keep_to_markdown.py to directory next to extracted Keep folder
+> Téléchargez keep_to_markdown.py dans le dossier à côté de votre dossier Keep extrait
 > 
 >     python keep_to_markdown.py Keep out/
 >     
 > 
-> Replace Keep by the folder containing notes in JSON format. The out folder will be created if it doesn't exist.
+> Remplacez Keep par le dossier contenant les notes au format JSON. Le dossier out sera créé s’il n’existe pas.
 
-From <https://gitlab.com/-/snippets/2002921>
+De <https://gitlab.com/-/snippets/2002921>
 
 ## Tomboy
 
-You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
+Vous pouvez importer vos notes Tomboy avec un script nommé [Trombone](https://github.com/samba/trombone).
 
-You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
+Vous devez installer python2 pour faire fonctionner ce script. Il convertira vos notes Tomboy vers un fichier Evernote `.enex`, que vous pourrez ensuite importer dans QOwnNotes.
 
-For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later). This may be easier/safer in a chroot or Docker container, if you have that option (will be documented here later).
+Pour tous ceux qui souhaitent faire cela, assurez-vous d'abord que Python2 est installé. Vous souhaiterez peut-être également installer `python-is-python2` (vous pourrez le supprimer plus tard). Il est sûrement plus simple/sécurisé de le faire dans un chroot ou un conteneur Docker, si vous avez cette option (elle sera documentée ici plus tard).
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-Download the trombone file from GitHub, extract and jump into that folder:
+Téléchargez le fichier Trombone depuis GitHub, extrayez-le et allez dans ce dossier :
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -78,18 +78,18 @@ sudo make
 sudo make install
 ```
 
-Then cd into the folder where your tomboy notes are:
+Puis allez dans le dossier où se trouvent vos notes Tomboy :
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+Exécutez ensuite ceci :
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
+Si vous obtenez des erreurs Unicode concernant des notes spécifiques, supprimez simplement chaque note et exécutez à nouveau la conversion jusqu'à obtenir un message disant `Saving…`. Vous obtiendrez un fichier appelé `EXPORT.enex` qui pourra ensuite être importé dans QOwnNotes.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+Lors de l'importation dans QOwnNotes vous pouvez décocher tous les attributs à importer – sauf peut-être les dates de création/modification – car Tomboy ne possède pas ces fonctionnalités.

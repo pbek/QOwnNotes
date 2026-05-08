@@ -743,7 +743,7 @@ var text = script.aiComplete("Tell me how do you feel today?");
 
 다음 예시를 살펴볼 수 있습니다 [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
-## 플랫폼이 Linux, OS X 또는 Windows인지 확인
+## 플랫폼이 Linux, macOS 또는 Windows인지 확인하세요
 
 ### 메서드 호출 및 매개 변수
 

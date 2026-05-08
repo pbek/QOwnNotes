@@ -129,25 +129,3 @@ Als u deze opslagplaats voor andere Debian Linux-versies gebruikt, zorg er dan v
 :::
 
 [Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
-
-## Debian 9.0
-
-Run the following shell commands to trust the repository. You might need to repeat this step when the key expires.
-
-```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
-```
-
-Run the following shell commands to add the repository and install QOwnNotes from there.
-
-```bash
-sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
-sudo apt-get update
-sudo apt-get install qownnotes
-```
-
-::: tip
-Als u deze opslagplaats voor andere Debian Linux-versies gebruikt, zorg er dan voor dat u **Qt** op zijn minst **versie 5.5** hebt geïnstalleerd.
-:::
-
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

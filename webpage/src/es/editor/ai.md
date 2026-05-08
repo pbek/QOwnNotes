@@ -14,7 +14,7 @@ De esta manera puede hacer lo que quiera y experimentar con ella.
   el servicio activado y seleccionar el backend y el modelo de IA
 - Puede agregar una clave de la API de [OpenAI](https://openai.com/) y [Groq](https://groq.com/) en la nueva **configuración de IA**
   - Busque más **integraciones de backend de IA**, como _Ollama_ y _llama.cpp_ en el repositorio de scripts
-- Utilice la nueva orden de secuencias de órdenes "script.aiComplete(prompt)" de acuerdo con su propia imaginación
+- Utilice la nueva orden de secuencias de comandos "script.aiComplete(prompt)" de acuerdo con su propia imaginación
   - Para más información, por favor revise la
     [documentación de secuencias de órdenes](../scripting/methods-and-objects.md#use-a-completion-prompt-on-the-currently-selected-ai-model)
 - En el **repositorio de scripts**, como primer paso, hay un script de
@@ -28,10 +28,9 @@ De esta manera puede hacer lo que quiera y experimentar con ella.
 
 ## Servidor MCP
 
-QOwnNotes includes a built-in **MCP (Model Context Protocol) server** that allows external AI agents
-to access your notes over HTTP with Server-Sent Events (SSE) transport.
+QOwnNotes incluye un servidor **MCP (Protocolo de Contexto de Modelo)** integrado que permite a los agentes de IA externos acceder a sus notas a través de HTTP con transporte de Eventos Enviados por el Servidor (SSE).
 
-You can enable and configure the MCP server in the **AI / MCP server** settings page.
+Puede habilitar y configurar el servidor MCP en la página de configuración **Servidor de IA/MCP**.
 
 - **Active/desactive** el servidor MCP
 - **Configure el puerto** (por defecto: 22226)

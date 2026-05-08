@@ -3,10 +3,10 @@
 Vous pouvez télécharger la dernière AppImage à partir de la [page des versions de QOwnNotes](https://github.com/pbek/QOwnNotes/releases). Elle devrait être nommée `QOwnNotes-x86_64.AppImage` sur cette page.
 
 ::: tip
-If you have [jq](https://stedolan.github.io/jq/) installed, you can also download the latest AppImage directly:
+Si vous avez [jq](https://stedolan.github.io/jq/) installé, vous pouvez aussi télécharger la dernière AppImage directement :
 
 ```bash
-# demander la version Linux la plus récente depuis l'API QOwnNotes, faire l'analyse syntaxique du JSON pour obtenir son URL et la télécharger
+# récupérer la version Linux la plus récente depuis l'API QOwnNotes, analyser le JSON pour obtenir son URL et la télécharger
 curl -L https://api.qownnotes.org/latest_releases/linux | jq .url | xargs curl -Lo QOwnNotes-x86_64.AppImage
 ```
 
@@ -19,10 +19,10 @@ chmod a+x QOwnNotes-*.AppImage
 ```
 
 ::: tip
-AppImages need `libfuse2` to run! For example under Ubuntu you can install the library with `sudo apt install libfuse2`.
+Les AppImages ont besoin de `libfuse2` pour s’exécuter ! Par exemple, sous Ubuntu, vous pouvez installer la bibliothèque avec `sudo apt install libfuse2`.
 :::
 
-Afterward you should be able to execute the AppImage to run QOwnNotes.
+Vous devriez ensuite être en mesure d'exécuter l'AppImage pour lancer QOwnNotes.
 
 ::: warning
 Si vous souhaitez utiliser la **mise à jour automatique**, assurez-vous de placer votre AppImage à un endroit où votre compte utilisateur a un accès en écriture, par exemple quelque part dans votre répertoire personnel.
@@ -32,23 +32,23 @@ Si vous souhaitez utiliser la **mise à jour automatique**, assurez-vous de plac
 Si vous rencontrez des difficultés pour exécuter l'AppImage parce que votre version de glibc est trop ancienne vous pouvez essayer l'[AppImage d'OBS](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage), qui devrait avoir été constuite en utilisant glibc 2.16.
 :::
 
-## Portable mode
+## Mode portable
 
-You can run the AppImage in **portable mode** by passing the `--portable` argument:
+Vous pouvez lancer l’AppImage en **mode portable** en passant l’argument `--portable` :
 
 ```bash
 ./QOwnNotes-x86_64.AppImage --portable
 ```
 
-In portable mode all application data is stored in a `Data` folder next to the AppImage file instead of in your home directory. This includes:
+En mode portable, toutes les données de l’application sont sauvegardées dans un dossier `Data` à côté du fichier AppImage au lieu de votre répertoire home. Cela inclut :
 
-- Settings (`Data/QOwnNotes.ini`)
-- The notes database (`Data/QOwnNotes.sqlite`)
-- Your notes (`Data/Notes/`)
-- Scripts, spell-check dictionaries, and other application data
+- Les préférences (`Data/QOwnNotes.ini`)
+- La base de données des notes (`Data/QOwnNotes.sqlite`)
+- Vos notes (`Data/Notes/`)
+- Les scripts, les dictionnaires de vérification orthographique, et d’autres données de l’application
 
-This makes it easy to carry QOwnNotes together with all your notes on a USB drive or any other portable storage device.
+Ainsi, il est très facile de transporter QOwnNotes avec toutes vos notes sur une clé USB ou n’importe quel autre périphérique amovible de stockage.
 
 ::: tip
-Make sure the directory containing the AppImage file is writable, so that the `Data` folder can be created next to it.
+Assurez-vous que le dossier contenant le fichier AppImage est accessible en écriture, afin que le dossier `Data` puisse être créé à côté.
 :::

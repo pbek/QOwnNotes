@@ -25,7 +25,7 @@ SigLevel = Optional TrustAll
 Server = http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/$arch
 ```
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar:
+Ejecute los comandos de consola siguientes para marcar el repositorio como de fiar:
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/x86_64/home_pbek_QOwnNotes_Arch_Extra.key -O - | sudo pacman-key --add -

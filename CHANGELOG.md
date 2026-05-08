@@ -15,6 +15,8 @@
 - Fetched webpage titles in the link dialog now preserve literal `<` and `>`
   characters, so titles such as GitHub version bump pull requests are no longer
   altered when used as link names (for [#3604](https://github.com/pbek/QOwnNotes/issues/3604))
+- Added more French, Spanish, Croatian, Korean translation (thank you, jd-develop,
+  AlejandroMoc, milotype, VenusGirl)
 
 ## 26.5.6
 

@@ -1,16 +1,16 @@
 # Installer sur Fedora Linux
 
-Il existe des dépôts QOwnNotes pour **Fedora 28 et supérieur**.
+Il existe des dépôts QOwnNotes pour **Fedora 28 et ultérieur**.
 
 ::: tip
-QOwnNotes is provided upstream in the [Fedora repositories](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). But that version is generally a lot behind the latest release of QOwnNotes.
+QOwnNotes est disponible directement dans les [dépôts officiels Fedora](https://packages.fedoraproject.org/pkgs/qownnotes/qownnotes/). Mais cette version est généralement très en retard sur la dernière version de QOwnNotes.
 
-For most users you can just use `dnf install qownnotes` in a terminal window to install the upstream version. If you want the **most up-to-date version**, please continue reading.
+La plupart des utilisateurs peuvent simplement utiliser `dnf install qownnotes` dans une fenêtre de terminal pour installer la version officielle. Si en revanche vous souhaitez la **version la plus à jour**, continuez à lire.
 :::
 
-## On systems with Fedora 41 and higher
+## Systèmes avec Fedora 41 et ultérieur
 
-Starting with [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 is the default package manager and includes the config-manager plugin by default. Run the following commands as root to add the repository and install QOwnNotes:
+À partir de [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 est le gestionnaire de paquets par défaut et inclut toujours le greffon config-manager. Exécutez les commandes suivantes en tant que root pour ajouter le dépôt puis installer QOwnNotes :
 
 ```bash
 dnf config-manager add-repo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
@@ -18,11 +18,11 @@ dnf config-manager add-repo --from-repofile=https://download.opensuse.org/reposi
 dnf install qownnotes
 ```
 
-Change the portion `Fedora_42` in the above code with the version of Fedora you are using (i.e. `Fedora_41`, `Fedora_Rawhide` etc.).
+Changez la portion `Fedora_42` dans le code ci-dessus avec la version de Fedora que vous utilisez (c’est-à-dire `Fedora_41`, `Fedora_Rawhide`, etc.).
 
 ## Systèmes avec greffon config-manager dnf
 
-Run the following shell commands as root to add the repository.
+Exécutez les commandes shell suivantes en tant que root pour ajouter le dépôt.
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -32,30 +32,30 @@ dnf install qownnotes
 ```
 
 ::: tip
-You may need to accept the repo key before you can download from it.
+Vous devrez peut-être accepter la clé du dépôt avant de pouvoir y télécharger du contenu.
 
-If you have any problems, import the key manually with:
+Si vous rencontrez des problèmes, importez la clé manuellement avec :
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/repodata/repomd.xml.key
 ```
 
-Please note that the portion `Fedora_42` in the above code should reflect the version of Fedora you are using (i.e. `Fedora_39`, `Fedora_38` etc.)
+Veuillez noter que la portion `Fedora_42` dans le code ci-dessus doit refléter la version de Fedora que vous utilisez (c’est-à-dire `Fedora_39`, `Fedora_38`, etc.)
 :::
 
 ## Méthode d'installation obsolète
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Utilisez cette méthode si votre version de Fedora ne prend pas en charge pas le greffon dnf `config-manager`.
 
-Run the following shell command as root to trust the repository.
+Exécutez la commande shell suivante en tant que root pour approuver le dépôt.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/repodata/repomd.xml.key
 ```
 
-Again: note that the portion `Fedora_42` in the above code should reflect the version of Fedora you are using (i.e. `Fedora_39`, `Fedora_38` etc.)
+Encore une fois : veuillez noter que la portion `Fedora_42` dans le code ci-dessus doit refléter la version de Fedora que vous utilisez (c’est-à-dire `Fedora_39`, `Fedora_38`, etc.)
 
-Then run the following shell commands as root to add the repository and install QOwnNotes from there.
+Exécutez ensuite les commandes shell suivantes en tant que root pour ajouter le dépôt puis installer QOwnNotes.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -72,20 +72,20 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42) (this example link is for Fedora 42)
+[Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42) (ce lien d’exemple est pour Fedora 42)
 
-## QOwnNotes version-updating notes for Fedora
+## Notes sur le version-updating de QOwnNotes pour Fedora
 
-### Problems with GPG keys?
+### Des problèmes avec les clés GPG ?
 
-Changes in Fedora's cryptographic policies can mean "old" (expired) repository keys are not _automatically_ extended. This can lead to problems _updating_ QOwnNotes.
+Des changements de la politique de cryptographie de Fedora font que les « vielles » clés de dépôt (c’est-à-dire les clés expirées) ne sont pas _automatiquement_ étendues. Cela peut poser des problèmes pour _mettre à jour_ QOwnNotes.
 
-**Detail:** If you have a problem with invalid keys (i.e. GPG errors) such as `certificate is not alive` and/or `key is not alive` due to key expiry, this terminal command should delete the expired key:
+**Détails :** si vous avez des problèmes de clés invalides (c’est-à-dire des erreurs GPG) telles que `certificate is not alive` et/ou `key is not alive` à cause d’expiration de clés, cette commande de terminal devrait supprimer la clé expirée :
 
 ```bash
 sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | grep pbek | cut -f1)
 ```
 
-Detailed explanation of the command is available on GitHub in a [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) related to this exact issue.
+L’explication détaillée de la commande est disponible sur GitHub sur un [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) lié à ce problème-ci.
 
-Once the expired key has been deleted, you must then newly _import_ the **current** key manually as described in the beginning of these installation instructions.
+Une fois que la clé expirée a été supprimée, vous devez _importer_ la clé **courante** manuellement comme indiqué au début de ces instructions d’installation.

@@ -84,8 +84,8 @@ Las extensiones del navegador funcionan **fuera de línea**. No se requiere de u
 
 QOwnNotes puede exponer un endpoint HTTP local para la compatibilidad con [Homepage](https://github.com/gethomepage/homepage) y `suggestionUrl`, respaldado por el mismo análisis e indexación de marcadores que utiliza la fuente de datos de Web Companion.
 
-- Habilítelo en `Configuración -&gt; Extensión del navegador/fragmentos de órdenes0></li>
-- Habilite Habilitar servidor de sockets`
+- Habilítelo en `Configuración -> Extensión del navegador/fragmentos de comandos`
+- Habilite `Habilitar servidor de sockets`
 - En `API de sugerencias de marcadores`, habilite `Activar API de sugerencias de marcadores compatible con Homepage`
 - Establece un puerto para el endpoint local
 - Opcionalmente, configure un token de seguridad si desea que las solicitudes a Homepage requieran autenticación
@@ -109,12 +109,12 @@ search:
 Visite la [API de sugerencias de Homepage](homepage-suggestion-api.md) para obtener más información, incluyendo qué archivo de configuración de la página de inicio editar y cómo usar los recursos personalizados de `docs/homepage`.
 :::
 
-## Gestor de fragmentos de órdenes de terminal de QOwnNotes
+## Gestor de fragmentos de comandos de terminal de QOwnNotes
 
-Puede administrar sus **fragmentos de órdenes** con QOwnNotes y ejecutarlos en las órdenes de terminal.
+Puede administrar sus **fragmentos de comandos** con QOwnNotes y ejecutarlos en las órdenes de terminal.
 
 ::: tip
-Por favor visite el [gestor de fragmentos de órdenes de terminal de QOwnNotes](command-line-snippet-manager.md) para mayor información.
+Por favor visite el [gestor de fragmentos de comandos de terminal de QOwnNotes](command-line-snippet-manager.md) para mayor información.
 :::
 
 ## Servicio de LanguageTool
@@ -130,7 +130,7 @@ QOwnNotes puede usar un servidor de [LanguageTool](https://languagetool.org/) lo
 Por favor visite [LanguageTool](../editor/languagetool.md) para más información.
 :::
 
-## Harper service
+## Servicio de Harper
 
 QOwnNotes can use a local [Harper](https://writewithharper.com/) service for **offline grammar and style checking** in the editor.
 

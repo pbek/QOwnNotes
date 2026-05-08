@@ -10,10 +10,10 @@ El paquete está construido con Qt6, utiliza la biblioteca del sistema botan3 y 
 
 Véase [QOwnNotes en Nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) para mayor información.
 
-Posteriormente, debería ser capaz de abrir QOwnNotes con la orden `qownnotes` o `QOwnNotes`.
+Posteriormente, debería ser capaz de abrir QOwnNotes con el comando `qownnotes` o `QOwnNotes`.
 
 ::: tip
-El gestor de fragmentos de órdenes de terminal de QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
+El gestor de fragmentos de comandos de terminal de QOwnNotes [qc](https://github.com/qownnotes/qc) también puede instalarse a través de [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
 
 Puede usar `nix-shell -p qc --run "qc exec"` para probarlo.
 :::

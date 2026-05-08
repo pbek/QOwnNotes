@@ -35,7 +35,7 @@ Ouvrez les `Préférences` et allez dans `Éditeur -> Harper`.
   - `Canadien`
   - `Indien`
 - Ajustez le `Délai de vérification` pour contrôler combien de temps QOwnNotes attend entre le dernier caractère tapé et l’envoi de la requête
-- Select which linters should be enabled
+- Sélectionnez les règles que vous souhaitez activer
   - `Orthographe`
   - `Capitalisation des phrases`
   - `Répétitions de mots`

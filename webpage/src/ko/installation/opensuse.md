@@ -114,15 +114,3 @@ zypper install qownnotes
 ```
 
 [직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
-
-## SLE 15
-
-루트로 다음 셸 명령을 실행하여 저장소를 추가하고 해당 위치에서 QOwnNotes를 설치합니다.
-
-```bash
-zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15/home:pbek:QOwnNotes.repo
-zypper refresh
-zypper install qownnotes
-```
-
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_15)

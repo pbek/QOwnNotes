@@ -68,10 +68,10 @@ QByteArray startSynchronousProcess(QString executablePath, QStringList parameter
 
 ```js
 var result = script.startSynchronousProcess(
-  "/path/to/my/program",
-  ["my parameter"],
-  "data",
-  "/path/to/execute/in",
+  "/chemin/vers/mon/programme",
+  ["mon paramètre"],
+  "données",
+  "/chemin/où/s’exécuter",
 );
 ```
 
@@ -217,7 +217,7 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [scribble.qml](https:/
 
 ```cpp
  * Wrapper QML pour insérer un fichier joint dans le dossier `attachments` et
-  * retourner l'URL de la pièce jointe ou le texte en Markdown de la pièce jointe
+* retourner l'URL de la pièce jointe ou le texte en Markdown de la pièce jointe
 * relativement à la note actuelle
 *
 * @param {QString} attachmentFilePath
@@ -290,11 +290,11 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```
 
 ::: tip
-You can also assign local and global shortcuts to your custom actions in the _Shortcuts settings_.
+Vous pouvez également attribuer des raccourcis locaux ou globaux à vos actions personnalisées dans les _Préférences des raccourcis_.
 :::
 
 ::: warning
-Soyez attentif au fait que les [icones du thème freedesktop](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) ne sont généralement disponibles que sous Linux. À cause de cela, si vous souhaitez vraiment utiliser un icone sous macOS ou Windows vous devrez le fournir avec votre script. Pour obtenir le chemin vers votre script afin de définir un chemin correct vers votre icone, utilisez [scriptDirPath property](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
+Soyez attentif au fait que les [icônes du thème freedesktop](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) ne sont généralement disponibles que sous Linux. À cause de cela, si vous souhaitez vraiment utiliser un icône sous macOS ou Windows vous devrez la fournir avec votre script. Pour obtenir le chemin vers votre script afin de définir un chemin correct vers votre icône, utilisez la [propriété scriptDirPath](methods-and-objects.md#reading-the-path-to-the-directory-of-your-script).
 :::
 
 ### Exemple
@@ -305,40 +305,40 @@ import QOwnNotesTypes 1.0
 
 Script {
     /**
-     * Initializes the custom actions
+     * Initialise les actions personnalisées
      */
     function init() {
-        // add a custom action without a button
-        script.registerCustomAction("mycustomaction1", "Menu text");
+        // ajoute une action personnalisée sans bouton
+        script.registerCustomAction("monaction1", "Texte de menu");
 
-        // add a custom action with a button
-        script.registerCustomAction("mycustomaction2", "Menu text", "Button text");
+        // ajoute une action personnalisée avec un bouton
+        script.registerCustomAction("monaction2", "Texte de menu", "Texte de bouton");
 
-        // add a custom action with a button and freedesktop theme icon
-        script.registerCustomAction("mycustomaction3", "Menu text", "Button text", "task-new");
+        // ajoute une action personnalisée avec un bouton et une icône de thème freedesktop
+        script.registerCustomAction("monaction3", "Texte de menu", "Texte de bouton", "task-new");
 
-        // add a custom action with a button and an icon from a file
-        script.registerCustomAction("mycustomaction4", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+        // ajoute une action personnalisée avec un bouton et une icône stockée dans un fichier
+        script.registerCustomAction("monaction4", "Texte de menu", "Texte de bouton", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     }
 
     /**
-     * This function is invoked when a custom action is triggered
-     * in the menu or via button
+     * Cette fonction est invoquée lorsqu’une action personnalisée
+     * est déclenchée dans le menu ou via un bouton
      *
-     * @param identifier string the identifier defined in registerCustomAction
+     * @param identifier string l’identifiant défini dans registerCustomAction
      */
     function customActionInvoked(identifier) {
         switch (identifier) {
-            case "mycustomaction1":
+            case "monaction1":
                 script.log("Action 1");
             break;
-            case "mycustomaction2":
+            case "monaction2":
                 script.log("Action 2");
             break;
-            case "mycustomaction3":
+            case "monaction3":
                 script.log("Action 3");
             break;
-            case "mycustomaction4":
+            case "monaction4":
                 script.log("Action 4");
             break;
         }
@@ -346,10 +346,10 @@ Script {
 }
 ```
 
-Pour d'autres exemples allez voir [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
+Pour d'autres exemples, voir [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-Vous pouvez également déclencher une action personnalisée après le démarrage de l'application avec le paramètre `--action customAction_<identifier>`. Pour plus d'information, veuillez consulter [Déclencher des actions de menu après le démarrage](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+Vous pouvez également déclencher une action personnalisée après le démarrage de l'application avec le paramètre `--action customAction_<identifier>`. Pour plus d'informations, veuillez consulter [Déclencher des actions de menu après le démarrage](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
 ## Enregistrer une étiquette
@@ -360,8 +360,8 @@ Vous pouvez également déclencher une action personnalisée après le démarrag
 /**
  * Enregistre une étiquette sur laquelle écrire
  *
- * @param identifier the identifier of the label
- * @param text the text shown in the label (optional)
+ * @param identifier l’identifiant de l’étiquette
+ * @param text le texte affiché dans l’étiquette (optionnel)
  */
 void ScriptingService::registerLabel(QString identifier, QString text);
 ```
@@ -371,18 +371,18 @@ void ScriptingService::registerLabel(QString identifier, QString text);
 ```js
 script.registerLabel(
   "html-label",
-  "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.",
+  "Du texte HTML <strong>en gras</strong><br />avec trois lignes<br />et un <a href='https://www.qownnotes.org'>lien vers un site web</a>.",
 );
 
 script.registerLabel(
   "long-label",
-  "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap",
+  "un long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte, un autre long texte qui se fera couper par des retour-lignes",
 );
 
 script.registerLabel("counter-label");
 ```
 
-The labels will be visible in the _Scripting panel_, which you need to enable in the _Window / Panels_ menu.
+Les étiquettes seront visibles dans le panneau _Écriture de scripts_, activable depuis le menu _Fenêtre / Panneaux_.
 
 Vous pouvez utiliser à la fois du texte brut ou du HTML dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
 
@@ -413,7 +413,7 @@ Vous pouvez utiliser à la fois du texte brut ou du HTML dans les étiquettes. L
 Vous aurez peut-être envie de jeter un œil à l'exemple de script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/scripting-label-demo.qml).
 
 ::: tip
-The scripting label also supports **external links**, as well as **internal links** to notes, tasks, deck cards and more. You might get a grasp of what's supported by taking a look at [URL handling](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
+Les étiquettes de scriptage supportent aussi les **liens externes** ansi que les **liens internes** vers les notes, tâches, decks et plus. Vous pouvez vous faire une idée de ce qui est supporté en jetant un œil à la [prise en charge des URL](https://github.com/pbek/QOwnNotes/blob/964acf69b6382f8ee8252c640c5048f8f4644622/src/utils/urlhandler.cpp#L16-L75).
 :::
 
 ## Créer une nouvelle note
@@ -438,11 +438,11 @@ script.createNote("Le titre de ma note\n===\n\nMon texte");
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterward, like this:
+Si vous avez désactivé le fait que le titre de votre note détermine le nom de fichier de la note, vous devrez par la suite renommer vous-même votre fichier de note comme ceci :
 
 ```js
 var note = script.currentNote();
-note.renameNoteFile("your-filename");
+note.renameNoteFile("votre-nom-de-fichier");
 ```
 
 :::
@@ -453,7 +453,7 @@ note.renameNoteFile("your-filename");
 
 ```cpp
 /**
- * Retourne le contenu du presse-papier sous forme de texte ou de HTML
+ * Renvoie le contenu du presse-papier sous forme de texte ou de HTML
  *
  * @param asHtml retourne le contenu du presse-papier sous forme de HTML au lieu de texte
  */
@@ -486,7 +486,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ```js
 // écrire texte dans le corps de la note
-script.noteTextEditWrite("Mon texte à moi");
+script.noteTextEditWrite("Mon texte personnalisé");
 ```
 
 Vous voudrez peut-être jeter un œil à l'action personnalisée `transformTextRot13` dans l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml).
@@ -585,7 +585,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 ### Exemple
 
 ```js
-// expands the current selection by one character
+// étend la sélection courante d’un caractère
 script.noteTextEditSetSelection(
   script.noteTextEditSelectionStart() - 1,
   script.noteTextEditSelectionEnd() + 1,
@@ -679,7 +679,7 @@ script.log(script.noteTextEditCursorPosition());
  *
  * @param withPreviousCharacters pour récupérer plus de caractères au début
  *                               pour récupérer des caractères tels que "@" qui ne sont pas
- *                              des caractères de mots
+ *                               des caractères de mots
  * @return
  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
@@ -694,13 +694,13 @@ var text = script.noteTextEditCurrentWord();
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
 
-## Read the current block from the note text edit
+## Lire le bloc actuel dans le texte de la note
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Reads the current block in the note text edit
+ * Lit le bloc actuel dans le texte de la note
  *
  * @return
  */
@@ -710,26 +710,26 @@ QString ScriptingService::noteTextEditCurrentBlock();
 ### Exemple
 
 ```js
-// Read the current block in the note text edit
+// Lit le bloc actuel dans le texte de la note
 var text = script.noteTextEditCurrentBlock();
 ```
 
-You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+Vous voudrez peut-être jeter un coup d’œil à l’exemple [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
-## Use a completion prompt on the currently selected AI model
+## Utiliser un prompt de complétion sur le modèle d’IA sélectionné
 
-The AI completion prompt is a feature that allows you to use a completion prompt on the currently selected AI model, like ChatGPT, Claude or systems like Ollama.
+Le prompt de complétion d’IA est une fonctionnalité permettant d’utiliser un prompt de complétion sur le modèle d’IA sélectionné, comme ChatGPT, Claude ou des systèmes comme Ollama.
 
-The AI system needs to be enabled in the AI toolbar or main menu for this to work.
+Le système d’IA nécessite d’être activé dans la barre d’outils d’IA ou le menu principal pour que cette méthode fonctionne.
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * QML wrapper to use the AI Completer
+ * Wrapper QML pour utiliser le compléteur AI
  *
  * @param prompt
- * @return {QString} the result of the completer
+ * @return {QString} le résultat du compléteur
  */
 QString ScriptingService::aiComplete(const QString& prompt);
 ```
@@ -737,13 +737,13 @@ QString ScriptingService::aiComplete(const QString& prompt);
 ### Exemple
 
 ```js
-// Ask the currently selected AI model to complete the prompt
-var text = script.aiComplete("Tell me how do you feel today?");
+// Demander au modèle d’IA sélectionné de compléter le prompt
+var text = script.aiComplete("Dis-moi, comment te sens-tu aujourd’hui ?");
 ```
 
-You may want to take a look at the example [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
+Vous voudrez peut-être jeter un coup d’œil à l’exemple [ai-autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/ai-autocompletion.qml).
 
-## Déterminer si la plate-forme est Linux, OS X ou Windows
+## Déterminer si la plate-forme est Linux, macOS ou Windows
 
 ### Appel de méthode et paramètres
 
@@ -757,17 +757,17 @@ bool ScriptingService::platformIsWindows();
 
 ```js
 if (script.platformIsLinux()) {
-  // Will be executed only if under Linux
+  // ne sera exécuté que sous Linux
 }
 ```
 
-## Étiquetter la note actuelle
+## Taguer la note actuelle
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Étiquette la note courante avec une étiquette nommée tagName
+ * Tague la note courante avec un tag nommé tagName
  *
  * @param tagName
  */
@@ -777,24 +777,24 @@ void ScriptingService::tagCurrentNote(QString tagName);
 ### Exemple
 
 ```js
-// ajouter une étiquette "favorite" à la note courante
-script.tagCurrentNote("favorite");
+// ajouter un tag "favori" à la note courante
+script.tagCurrentNote("favori");
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'action personnalisée `favoriteNote` dans l'exemple [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/favorite-note.qml).
 
-## Créer ou récupérer une étiquette par son nom liste de fil d'Ariane
+## Créer ou récupérer un tag par son nom de liste de fil d'Ariane
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Créé ou récupère une étiquette par son nom liste de fil d'Ariane
- * Element nameList[0] serait le plus élevé dans l'arborescence (with parentId: 0)
+ * Créé ou récupère un tag par son nom de liste de fil d'Ariane
+ * Element nameList[0] serait le plus élevé dans l'arborescence (avec parentId: 0)
  *
  * @param nameList
- * @param createMissing {bool} si true (default) toutes les étiquettes manquantes seront créées
- * @return TagApi object de l'étiquette la plus profonde du nom liste de fil d'Ariane
+ * @param createMissing {bool} si true (défaut), tous les tags manquants seront créés
+ * @return TagApi l’objet du tag le plus profond du nom de liste de fil d'Ariane
  */
 TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
@@ -803,22 +803,22 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 ### Exemple
 
 ```js
-// crée toutes les étiquettes jusqu'au 3ème niveau et renvoie l'objet étiquette pour la
-// balise "level3", qui ressemblerait à ceci dans l'arborescence des balises:
+// crée tous les tags jusqu'au 3ème niveau et renvoie l'objet tag pour le
+// tag « level3 », qui ressemblerait à ceci dans l'arborescence des tags :
 // level1 > level2 > level3
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
 
-## Rechercher des étiquettes par nom
+## Rechercher des tags par nom
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Récupère toutes les étiquettes par le biais d'une recherche de sous-chaîne sur le champ « nom ».
+ * Récupère tous les tags par le biais d'une recherche de sous-chaîne sur le champ « nom ».
  *
  * @param name {QString} nom à rechercher
- * @return {QStringList} liste des noms des étiquettes
+ * @return {QStringList} liste des noms des tags
  */
 QStringList ScriptingService::searchTagsByName(QString name);
 ```
@@ -826,7 +826,7 @@ QStringList ScriptingService::searchTagsByName(QString name);
 ### Exemple
 
 ```js
-// recherche toutes les étiquettes contenant le mot "jeu"
+// recherche tous les tags contenant le mot « jeu »
 var tags = script.searchTagsByName("jeu");
 ```
 
@@ -838,7 +838,7 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [autocompletion.qml](h
 
 ```cpp
 /**
- * Retourne une liste des identifiants de toutes les notes contenant un certain texte dans leur corps.
+ * Renvoie une liste des identifiants de toutes les notes contenant un certain texte dans leur corps.
  *
  * Malheureusement il n'y a pas de moyen facile pour utiliser un QList<NoteApi*> en QML, c'est pourquoi on
  * ne peut transférer que les identifiants de notes
@@ -856,7 +856,7 @@ var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // do something with the note
+  // faire quelque chose de la note
 });
 ```
 
@@ -894,21 +894,21 @@ Le widget de base pour presque tout est [QWidget](https://doc.qt.io/qt-5/qwidget
 Le [style.qss](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle/style.qss) de [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/main/src/libraries/qdarkstyle) peut également constituer une bonne référence des styles que vous pouvez changer.
 :::
 
-Jetez un œil à [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) en tant que référence des styles disponibles.
+Jetez un œil à [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) pour une référence des styles disponibles.
 
 Si vous souhaitez injecter des styles dans l'aperçu HTML pour modifier la façon dont les notes sont prévisualisées, veuillez consulter [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 ::: tip
-Si vous souhaitez voir l'aspect des dialogues et quels sont leurs noms, téléchargez[Qt Creator](https://www.qt.io/product/development-tools) et ouvrez les fichiers `*.ui` qu'il contient.
+Si vous souhaitez voir l'aspect des dialogues et quels sont leurs noms, téléchargez [Qt Creator](https://www.qt.io/product/development-tools) et ouvrez les fichiers `*.ui` qu'il contient.
 :::
 
-## Recharger le moteur de script
+## Recharger le moteur de scripts
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Recharge le moteur de script
+ * Recharge le moteur de scripts
  */
 void ScriptingService :: reloadScriptingEngine ();
 ```
@@ -916,8 +916,8 @@ void ScriptingService :: reloadScriptingEngine ();
 ### Exemple
 
 ```js
-// recharger le moteur de script
-script.reloadScriptingEngine ();
+// recharger le moteur de scripts
+script.reloadScriptingEngine();
 ```
 
 ## Récupérer une note par son nom de fichier
@@ -929,7 +929,7 @@ script.reloadScriptingEngine ();
  * Récupère une note par son nom de fichier
  *
  * @param fileName string le nom de fichier de la note (obligatoire)
- * @param noteSubFolderId ID entier du sous-dossier de notes
+ * @param noteSubFolderId integer ID entier du sous-dossier de notes
  * @return NoteApi *
  */
 NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
@@ -940,7 +940,7 @@ NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
 
 ```js
 // récupère la note par nom de fichier
-script.fetchNoteByFileName ("ma note.md");
+script.fetchNoteByFileName("ma note.md");
 ```
 
 ## Récupérer une note par son identifiant
@@ -952,7 +952,7 @@ script.fetchNoteByFileName ("ma note.md");
  * Récupère une note par son identifiant
  *
  * @param id int l'identifiant de la note
- * @return NoteApi *
+ * @return NoteApi*
  */
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
@@ -961,7 +961,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 
 ```js
 // récupère la note par identifiant
-script.fetchNoteById (243);
+script.fetchNoteById(243);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
@@ -975,9 +975,9 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-h
  * Vérifie si un fichier de note existe par son nom de fichier
  *
  * @param fileName string le nom de fichier de la note (obligatoire)
- * @param ignoreNoteId identifiant entier d'une note à ignorer lors de la vérification
- * @param noteSubFolderId ID entier du sous-dossier de notes
- * @return booléen
+ * @param ignoreNoteId integer identifiant entier d'une note à ignorer lors de la vérification
+ * @param noteSubFolderId integer ID entier du sous-dossier de notes
+ * @return bool
  */
 booléen ScriptingService :: noteExistsByFileName (QString fileName,
                                              int ignoreNoteId,
@@ -987,8 +987,8 @@ booléen ScriptingService :: noteExistsByFileName (QString fileName,
 ### Exemple
 
 ```js
-// vérifie si la note existe, mais ignore l'id de "note"
-script.noteExistsByFileName ("ma note.md", note.id);
+// vérifie si la note existe, mais ignore l'id de « note »
+script.noteExistsByFileName("ma note.md", note.id);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/use-tag-names-in-filename.qml).
@@ -1011,7 +1011,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 
 ```js
 // copie du texte dans le presse-papiers
-script.setClipboardText ("texte à copier");
+script.setClipboardText("texte à copier");
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/selected-markdown-to-bbcode.qml).
@@ -1061,10 +1061,10 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
 ### Exemple
 
 ```js
-// saute vers le sous-dossier de notes "un sous-dossier"
+// saute vers le sous-dossier de notes « un sous-dossier »
 script.jumpToNoteSubFolder("un sous-dossier");
 
-// saute vers le sous-dossier de notes "sub" à l'intérieur de "un sous-dossier"
+// saute vers le sous-dossier de notes « sub » à l'intérieur de « un sous-dossier »
 script.jumpToNoteSubFolder("un sous-dossier/sub");
 ```
 
@@ -1117,11 +1117,11 @@ int ScriptingService :: questionMessageBox (
 ### Exemple
 
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// affiche une boîte de message de question avec un boton « appliquer » et un bouton « aide »
+// voir : https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-  "The text I want to show",
-  "Some optional title",
+  "Le texte à afficher",
+  "Un titre optionnel",
   0x01000000 | 0x02000000,
   0x02000000,
 );
@@ -1149,12 +1149,12 @@ QString ScriptingService :: getOpenFileName (légende QString, répertoire QStri
                                              Filtre QString);
 ```
 
-### Example
+### Exemple
 
 ```js
-// show an open file dialog
+// affiche une boîte de dialogue d’ouverture du fichier
 var fileName = script.getOpenFileName(
-  "Please select an image",
+  "Veuillez sélectionner une image",
   "/home/user/images",
   "Images (*.png *.xpm *.jpg)",
 );
@@ -1180,9 +1180,9 @@ QString ScriptingService::getSaveFileName (légende QString, répertoire QString
 ### Exemple
 
 ```js
-// show a save file dialog
+// affiche une boîte de dialogue d’enregistrement de fichier
 var fileName = script.getSaveFileName(
-  "Please select HTML file to save",
+  "Sélectionnez un fichier HTML dans lequel sauvegarder",
   "output.html",
   "HTML (*.html)",
 );
@@ -1199,7 +1199,7 @@ L’utilisateur peut ensuite définir ces propriétés dans les préférences du
 ### Exemple
 
 ```js
-// you have to define your registered variables so you can access them later
+// vous devez définir vos variables afin d’y accéder plus tard
 property string myString;
 property string myStringSecret;
 property bool myBoolean;
@@ -1209,73 +1209,72 @@ property string myFile;
 property string myDirectory;
 property string mySelection;
 
-// register your settings variables so the user can set them in the script settings
+// enregistrez vos variables de préférences afin que l’utilisateur puisse les modifiers dans les préférences de scripts
 //
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
+// malheureusement, il n’y a pas de QVariantHash dans Qt, il est uniquement possible d’utiliser
+// QVariantMap (qui n’a pas d’ordre arbitraire) or QVariantList (qui au moins peut être arbitrairement ordonné)
 property variant settingsVariables: [
     {
         "identifier": "myString",
-        "name": "I am a line edit",
-        "description": "Please enter a valid string:",
+        "name": "Je suis un champ d’édition de ligne",
+        "description": "Merci d’entrer une chaîne valide :",
         "type": "string",
-        "default": "My default value",
+        "default": "Ma valeur par défaut",
     },
     {
         "identifier": "myStringSecret",
-        "name": "I am a password field",
-        "description": "Please enter a valid string:",
+        "name": "Je suis un champ de mot de passe",
+        "description": "Merci d’entrer une chaîne valide :",
         "type": "string-secret",
     },
     {
         "identifier": "myBoolean",
-        "name": "I am a checkbox",
-        "description": "Some description",
-        "text": "Check this checkbox",
+        "name": "Je suis une case à cocher",
+        "description": "Une description",
+        "text": "Cochez cette case",
         "type": "boolean",
         "default": true,
     },
     {
         "identifier": "myText",
-        "name": "I am textbox",
-        "description": "Please enter your text:",
+        "name": "Je suis une boîte de texte",
+        "description": "Veulliez entrer votre texte :",
         "type": "text",
-        "default": "This can be a really long text\nwith multiple lines.",
+        "default": "Ça peut être un texte très long\nsur plusieurs lignes.",
     },
     {
         "identifier": "myInt",
-        "name": "I am a number selector",
-        "description": "Please enter a number:",
+        "name": "Je suis un sélecteur de nombres",
+        "description": "Veuillez entrer un nombre :",
         "type": "integer",
         "default": 42,
     },
     {
         "identifier": "myFile",
-        "name": "I am a file selector",
-        "description": "Please select the file:",
+        "name": "Je suis un sélecteur de fichier",
+        "description": "Veuillez sélectionner le fichier :",
         "type": "file",
         "default": "pandoc",
     },
     {
         "identifier": "myDirectory",
-        "name": "I am a directory selector",
-        "description": "Please select the directory:",
+        "name": "Je suis un sélecteur de dossier",
+        "description": "Veuillez sélectionner le dossier :",
         "type": "directory",
         "default": "/home",
     },
     {
         "identifier": "mySelection",
-        "name": "I am an item selector",
-        "description": "Please select an item:",
+        "name": "Je suis un sélecteur d’élément",
+        "description": "Veuillez sélectionner un élément :",
         "type": "selection",
         "default": "option2",
-        "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
+        "items": {"option1": "Texte de l’option 1", "option2": "Texte de l’option 2", "option3": "Texte de l’option 3"},
     }
 ];
 ```
 
-In addition, you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+De plus, vous pouvez outrepasser les `settingsVariables` avec une fonction spéciale `registerSettingsVariables ()` comme ceci :
 
 ### Exemple
 
@@ -1288,7 +1287,7 @@ In addition, you can override the `settingsVariables` with a special function `r
  */
 function registerSettingsVariables() {
   if (script.platformIsWindows()) {
-    // override the myFile default value
+    // outrepasse la valeur par défaut de myFile
     settingsVariables[3].default = "pandoc.exe";
   }
 }
@@ -1302,9 +1301,9 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [variables.qml](https:
 
 ```cpp
 /**
- * Stores a persistent variable
- * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ * Stocke une variable persistante
+ * Ces variables sont accessibles globalement dans tous les scripts
+ * Utilisez un préfixe utile dans votre clé tel que « PersistentVariablesTest/myVar »
  *
  * @param key {QString}
  * @param value {QVariant}
@@ -1313,8 +1312,8 @@ void ScriptingService::setPersistentVariable(const QString &key,
                                              const QVariant &value);
 
 /**
- * Loads a persistent variable
- * These variables are accessible globally over all scripts
+ * Charge une variable persistante
+ * Ces variables sont accessibles globalement dans tous les scripts
  *
  * @param key {QString}
  * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
@@ -1327,14 +1326,14 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 ### Exemple
 
 ```js
-// store persistent variable
+// stocker une variable persistante
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// load and log persistent variable
+// charge et affiche dans le journal la variable persistante
 script.log(
   script.getPersistentVariable(
     "PersistentVariablesTest/myVar",
-    "nothing here yet",
+    "rien encore ici",
   ),
 );
 ```
@@ -1343,16 +1342,16 @@ Veuillez vous assurer d'utiliser un préfixe explicite dans votre clé, tel que 
 
 Vous voudrez peut-être également jeter un coup d'œil à l'exemple [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/persistent-variables.qml).
 
-## Chargement des variables de préférences d'application
+## Chargement des variables des préférences de l’application
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Loads an application settings variable
+ * Charge une variable des préférences de l’application
  *
  * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @param defaultValue {QVariant} valeur de retour si la préférence n’existe pas (optionnelle)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
@@ -1362,13 +1361,13 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 ### Exemple
 
 ```js
-// charger et enregistrer une variable de préférences d'application
+// charger et enregistrer une variable des préférences de l’application
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
 Gardez à l'esprit que les préférences peuvent être vides, vous devez vous en occuper vous-même. `defaultValue` n'est utilisé que si le paramètre n'existe nulle part.
 
-## Créer un répertoire cache
+## Créer un répertoire de cache
 
 Vous pouvez mettre en cache des fichiers à l'emplacement de cache par défaut de votre système.
 
@@ -1410,8 +1409,8 @@ bool ScriptingService :: clearCacheDir (const QString & subDir) const;
 ### Exemple
 
 ```js
-// clear cache directory of my-script-id
-script.clearCacheDir("my-script-id");
+// vider le répertoire cache de mon-id-de-script
+script.clearCacheDir("mon-id-de-script");
 ```
 
 ## Lire le chemin d'accès au répertoire de votre script
@@ -1455,7 +1454,7 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 ### Exemple
 
 ```js
-// retournera "c:\winnt\system32" sous Windows
+// renverra « c:\winnt\system32 » sous Windows
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
@@ -1478,7 +1477,7 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 ### Exemple
 
 ```js
-// retournera "c:/winnt/system32" sous Windows
+// renverra « c:/winnt/system32 » sous Windows
 script.log(script.toNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
@@ -1498,7 +1497,7 @@ QString ScriptingService::dirSeparator();
 ### Exemple
 
 ```js
-// renverra "\" sous Windows
+// renverra « \ » sous Windows
 script.log(script.dirSeparator());
 ```
 
@@ -1597,28 +1596,28 @@ QString ScriptingService :: inputDialogGetItem (
          int courant, booléen modifiable);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Une chaîne vide sera renvoyée si `Annuler` a été cliqué ou si la touche `Échap` a été pressée.
 
 ### Exemple
 
 ```js
-var result = script.inputDialogGetItem("combo box", "Please select an item", [
-  "Item 1",
-  "Item 2",
-  "Item 3",
+var result = script.inputDialogGetItem("combo box", "Veuillez sélectionner un élément", [
+  "Élément 1",
+  "Élément 2",
+  "Élément 3",
 ]);
 script.log(result);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/input-dialogs.qml).
 
-## Ouverture d'une boîte de dialogue de saisie avec une modification de ligne
+## Ouverture d'une boîte de dialogue de saisie de texte sur une ligne
 
 ### Appel de méthode et paramètres
 
 ```cpp
 / **
-  * Ouvre une boîte de dialogue de saisie avec une modification de ligne
+  * Ouvre une boîte de dialogue de saisie de texte sur une ligne
   *
   * @param title {QString} titre de la boîte de dialogue
   * @param label {QString} texte de l'étiquette de la boîte de dialogue
@@ -1629,68 +1628,68 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Une chaîne vide sera renvoyée si `Annuler` a été cliqué ou si la touche `Échap` a été pressée.
 
 ### Exemple
 
 ```js
 var result = script.inputDialogGetText(
-  "line edit",
-  "Please enter a name",
-  "current text",
+  "édition de ligne",
+  "Veuillez entrer un nom",
+  "texte actuel",
 );
 script.log(result);
 ```
 
-## Opening an input dialog with a multi-line text edit
+## Ouverture d'une boîte de dialogue de saisie de texte sur plusieurs lignes
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Opens an input dialog with a multi-line text edit
+ * Ouvre une boîte de dialogue de saisie de texte sur plusieurs lignes
  *
- * @param title {QString} title of the dialog
- * @param label {QString} label text of the dialog
- * @param text {QString} text in the dialog (optional)
+ * @param title {QString} titre de la boîte de dialogue
+ * @param label {QString} texte d’étiquette du dialogue
+ * @param text {QString} texte dans le dialogue (optionnel)
  * @return
  */
 QString ScriptingService::inputDialogGetMultiLineText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Une chaîne vide sera renvoyée si `Annuler` a été cliqué ou si la touche `Échap` a été pressée.
 
 ### Exemple
 
 ```js
 var result = script.inputDialogGetMultiLineText(
-  "multi-line edit",
-  "Please enter a text",
-  "current text",
+  "édition multi-ligne",
+  "Veuillez entrer un texte",
+  "texte courant",
 );
 script.log(result);
 ```
 
-## Opening a dialog to show the differences between two texts
+## Ouverture d’une boîte de dialogue montrant les différences entre deux textes
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
-* Opens a dialog to show the differences between two texts and lets the user edit the result
+* Ouvre une boîte de dialogue montrant la différence entre deux textes et laisse l’utilisateur modifier le résultat
 *
-* @param title {QString} title of the dialog
-* @param label {QString} label text of the dialog
-* @param text1 {QString} first text
-* @param text2 {QString} second text
+* @param title {QString} titre de la boîte de dialogue
+* @param label {QString} étiquette du dialogue
+* @param text1 {QString} premier texte
+* @param text2 {QString} second texte
 * @return
   */
   QString ScriptingService::textDiffDialog(const QString &title, const QString &label,
                                            const QString &text1, const QString &text2);
 ```
 
-`text2` is the text you will be able to edit in the dialog. An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+`text2` est le texte qu’il sera possible de modifier dans la boîte de dialogue. Une chaîne vide sera renvoyée si `Annuler` a été cliqué ou si la touche `Échap` a été pressée.
 
 ### Exemple
 
@@ -1700,8 +1699,8 @@ const aiPrompt = "Translate the text to English";
 const aiResult = script.aiComplete(aiPrompt + ":\n\n" + text);
 
 var result = script.textDiffDialog(
-  "AI Text Tool",
-  "Resulting text",
+  "Outil de texte d’IA",
+  "Texte résultant",
   text,
   aiResult,
 );
@@ -1710,7 +1709,7 @@ script.log(result);
 
 ## Vérifier si un fichier existe
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -1721,7 +1720,7 @@ script.log(result);
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
-### Example
+### Exemple
 
 ```js
 var result = script.fileExists(filePath);
@@ -1730,7 +1729,7 @@ script.log(result);
 
 ## Lire du texte à partir d'un fichier
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -1738,12 +1737,12 @@ script.log(result);
  *
  * @param filePath {QString} chemin d'accès du fichier à charger
  * @param codec {QString} encodage du fichier (par défaut : UTF-8)
- * @return les données contenues dans le fichier ou 'null' si le fichier n'existe pas
+ * @return les données contenues dans le fichier ou null si le fichier n'existe pas
  */
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Example
+### Exemple
 
 ```js
 if (script.fileExists(filePath)) {
@@ -1754,7 +1753,7 @@ if (script.fileExists(filePath)) {
 
 ## Écrire du texte dans un fichier
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -1768,7 +1767,7 @@ if (script.fileExists(filePath)) {
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### Exemple
 
 ```js
 var result = script.writeToFile(filePath, html);
@@ -1791,17 +1790,17 @@ Gardez à l'esprit que vous devez avoir la bibliothèque QML `websocket` de Qt i
 
 Il est possible d'injecter des règles de mise en évidence directement dans l'éditeur en définissant et assignant des expressions régulières à un état de mise en évidence.
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Adds a highlighting rule to the syntax highlighter of the editor
+ * Ajoute une règle de mise en évidence au coloriseur syntaxique de l’éditeur
  *
- * @param pattern {QString} the regular expression pattern to highlight
- * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
- * @param state {int} the state of the syntax highlighter to use
- * @param capturingGroup {int} the capturing group for the pattern to use for highlighting (default: 0)
- * @param maskedGroup {int} the capturing group for the pattern to use for masking (default: 0)
+ * @param pattern {QString} l’expression régulière représentant le motif à mettre en évidence
+ * @param shouldContain {QString} une chaîne qui doit être contenue dans le texte mis en évidence pour que le motif soit analysé
+ * @param state {int} l’état du coloriseur syntaxique à utiliser
+ * @param capturingGroup {int} le groupe de capture du motif à utiliser pour la mise en évidence (défaut : 0)
+ * @param maskedGroup {int} le groupe de capture du motif à utiliser pour le masquage (défaut : 0)
  */
 void ScriptingService::addHighlightingRule(const QString &pattern,
                                             const QString &shouldContain,
@@ -1815,14 +1814,14 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | Nom                        | Numéro |
 | -------------------------- | ------ |
 | NoState                    | -1     |
-| Lien                       | 0      |
+| Link                       | 0      |
 | Image                      | 3      |
 | CodeBlock                  | 4      |
 | CodeBlockComment           | 5      |
 | Italic                     | 7      |
 | Gras                       | 8      |
 | List                       | 9      |
-| Commentaire                | 11     |
+| Comment                    | 11     |
 | H1                         | 12     |
 | H2                         | 13     |
 | H3                         | 14     |
@@ -1842,42 +1841,42 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | CheckBoxChecked            | 30     |
 | StUnderline                | 31     |
 
-### Example
+### Exemple
 
 ```js
-// Highlight a text line like "BLOCK: some text" as blockquote (state 18)
+// Met en évidence une ligne de texte telle que « BLOCK: du texte » comme bloc de citation (état 18 : blockquote)
 script.addHighlightingRule("^BLOCK: (.+)", "BLOCK:", 18);
 
-// Mask out (state 24) all characters after 32 characters in a line
-// capturingGroup 1 means the expression from the first bracketed part of the pattern will be highlighted
-// maskedGroup -1 means that no masking should be done
+// Masque (état 24) tous les caractères après 32 caractères dans une ligne
+// capturingGroup 1 signifie que l’expression à partir de la première partie entre crochets sera mise en évidence
+// maskedGroup -1 signifie qu’aucun masquage ne doit être fait
 script.addHighlightingRule("^.{32}(.+)", "", 24, 1, -1);
 ```
 
 Vous pouvez également jeter un œil aux exemples dans [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml).
 
-## Adding a highlighting rule with custom colors and styles
+## Ajouter une règle de mise en évidence avec des couleurs et styles personnalisés
 
-You can also add highlighting rules with custom foreground/background colors and font styles, instead of being limited to the predefined highlighting states. This allows you to define your own color schemes for custom syntax patterns.
+Vous pouvez également ajouter des règles de mise en évidence avec des couleurs de premier/arrière plan et des styles de polices personnalisés, au lieu d’être limité par les états de mise en évidence prédéfinis. Cela vous permet de définir vos propres schémas de couleur pour des motifs syntaxiques personnalisés.
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Adds a highlighting rule with custom format styling to the syntax highlighter
+ * Ajoute une règle de mise en évidence personnalisée au coloriseur syntaxique
  *
- * @param pattern {QString} the regular expression pattern to highlight
- * @param shouldContain {QString} a string that must be contained in the highlighted text for the pattern to be parsed
- * @param state {int} the state of the syntax highlighter to use (use -1 / NoState for custom format only)
- * @param capturingGroup {int} the capturing group for the pattern to use for highlighting
- * @param maskedGroup {int} the capturing group for the pattern to use for masking
- * @param formatStyle {QVariantMap} a map with custom format properties:
- *   - foregroundColor {QString} foreground color name or hex value (e.g. "#ff0000" or "red")
- *   - backgroundColor {QString} background color name or hex value
- *   - bold {bool} whether to use bold font weight
- *   - italic {bool} whether to use italic font style
- *   - underline {bool} whether to underline the text
- *   - fontSize {int} the font point size
+ * @param pattern {QString} l’expression régulière du motif à mettre en évidence
+ * @param shouldContain {QString} une chaîne devant être contenue dans le texte mis en évidence pour que le motif soit analysé
+ * @param state {int} l’état de mise en évidence à utiliser (utilisez -1 / NoState pour les formats personnalisés uniquement)
+ * @param capturingGroup {int} le groupe de capture du motif à utiliser pour la mise en évidence
+ * @param maskedGroup {int} le groupe de capture du motif à utiliser pour le masquage
+ * @param formatStyle {QVariantMap} une association (map) avec des propriétés de formatage personnalisées :
+ *   - foregroundColor {QString} nom ou valeur hexadécimale de couleur de premier-plan (par ex. "#ff0000" ou "red")
+ *   - backgroundColor {QString} nom ou valeur hexadécimale de couleur d’arrière-plan
+ *   - bold {bool} utiliser le gras ou non
+ *   - italic {bool} utiliser l’italique ou non
+ *   - underline {bool} souligner ou non
+ *   - fontSize {int} la taille le la police (pt.)
  */
 void ScriptingService::addHighlightingRule(const QString &pattern,
                                             const QString &shouldContain,
@@ -1888,27 +1887,27 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 ```
 
 ::: tip
-You can combine a predefined `state` with custom format properties. The custom properties will override the state's defaults. Use state `-1` (`NoState`) if you only want to use custom formatting.
+Vous pouvez combiner un `state` prédéfini avec des propriétés de formatage personnalisées. Les propriétés personnalisées écraseront les valeurs par défaut de l’état. Utilisez l’état `-1` (`NoState`) si vous ne voulez utiliser que du formattage personnalisé.
 :::
 
-### Example
+### Exemple
 
 ```js
 function init() {
-  // Highlight "IMPORTANT" with bold red text on a yellow background
+  // Met en évidence « IMPORTANT » en gras avec un texte en rouge sur un fond jaune
   script.addHighlightingRule("IMPORTANT", "IMPORTANT", -1, 0, 0, {
     foregroundColor: "#ff0000",
     backgroundColor: "#ffff00",
     bold: true,
   });
 
-  // Highlight "@username" mentions with underlined blue text
+  // Met en évidence les mentions « @nomdutilisateur » avec un texte bleu souligné
   script.addHighlightingRule("@\\w+", "@", -1, 0, 0, {
     foregroundColor: "#3366cc",
     underline: true,
   });
 
-  // Highlight "NOTE:" with italic green text
+  // Met en évidence « NOTE: » avec un texte vert en italique
   script.addHighlightingRule("NOTE:", "NOTE:", -1, 0, 0, {
     foregroundColor: "#00aa00",
     italic: true,
@@ -1916,4 +1915,4 @@ function init() {
 }
 ```
 
-You can also take a look at the examples in [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml) and [custom-highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-highlighting.qml).
+Vous pouvez également jeter un œil aux examples dans [highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/highlighting.qml) et [custom-highlighting.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-highlighting.qml).

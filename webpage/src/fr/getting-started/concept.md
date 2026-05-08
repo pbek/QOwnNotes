@@ -12,60 +12,60 @@
 
 ```mermaid
 graph TB
-    subgraph Your computer
-        qon((QOwnNotes))-->md{{"Markdown files"}}
+    subgraph Votre ordinateur
+        qon((QOwnNotes))-->md{{"Fichiers Markdown"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("Browser extension")-->qon
-        qc("Command-line snippet manager")-->qon
-        homepage("Homepage dashboard")-->qon
+        qon-comp("Extension de navigateur")-->qon
+        qc("Gestionnaire de snippets en ligne de commande")-->qon
+        homepage("Tableau de bord Homepage")-->qon
     end
-    subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+    subgraph Votre serveur Nextcloud
+        qon-api("QOwnNotesApi")-->ncs[("Serveur Nextcloud")]
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
-    nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
-    qon-web-app("QOwnNotes web application")-->qon
+    nc-notes-mob("Application mobile Nextcloud Notes")-->nc-notes-app
+    qon-web-app("Application Web QOwnNotes")-->qon
     qon-->qon-api
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
-    qon-.->lt("LanguageTool service")
-    qon-.->harper("Harper service")
+    qon-.->lt("Service LanguageTool")
+    qon-.->harper("Service Harper")
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
-    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
-    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
-    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
-    click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
-    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
-    click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
-    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
-    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
-    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
-    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
-    click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
-    click harper "/editor/harper.html" "Optional Harper service for offline grammar and style checking"
+    click qon "/getting-started/concept.html#qownnotes" "Application de bureau QOwnNotes pour gérer vos notes sur votre ordinateur"
+    click md "/getting-started/concept.html#markdown-note-files" "Markdown, médias et picès jointes dans votre dossier de notes"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "Extension de navigateur QOwnNotes pour gérer vos signets dans des fichiers Markdown et qui sert aussi de clipper web"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "Gestionnaire de snippets en ligne de commande QOwnNotes"
+    click homepage "/getting-started/concept.html#homepage-dashboard" "Tableau de bord Homepage utilisant les suggestions de signets QOwnNotes"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Client de bureau de synchronisation Nextcloud pour synchroniser vos notes avec votre serveur"
+    click ncs "/getting-started/concept.html#nextcloud-server" "Serveur Nextcloud pour stocker vos notes et vos fichiers"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "Application Nextcloud QOwnNotesAPI pour accéder votre corbeille du serveur et vos versions de notes"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Application serveur Nextcloud Notes pour gérer vos notes via une interface web"
+    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Application mobile Nextcloud Notes pour gérer vos notes sur votre téléphone portable"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Application serveur Nextcloud Deck pour gérer vos rappels et listes de tâches via une interface web"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "Application Web QOwnNotes pour envoyer des photos depuis votre téléphone portable"
+    click lt "/editor/languagetool.html" "Serveur optionnel LanguageTool pour des vérifications de grammaire et de style"
+    click harper "/editor/harper.html" "Service optionnel Harper pour des vérifications hors-ligne de grammaire et de style"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
 ## QOwnNotes
 
-- QOwnNotes **stocke les note** dans votre dossier de notes **sous forme de fichiers Markdown**
+- QOwnNotes **stocke les notes** dans votre dossier de notes **sous forme de fichiers Markdown**
 - Il peut parler à votre serveur Nextcloud / ownCloud **pour partager publiquement des notes** avec d'autres personnes
 - Vous pouvez également **accéder à l'historique de vos notes et à la corbeille** sur votre serveur Nextcloud / ownCloud via l'application [QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
-- Les listes Todo sur votre serveur Nextcloud / ownCloud sont accessibles depuis QOwnNotes
-- **QOwnNotes ne synchronise pas vos notes** et vos fichiers multimédias / pièces jointes!
+- Les listes de tâches sur votre serveur Nextcloud / ownCloud sont accessibles depuis QOwnNotes
+- **QOwnNotes ne synchronise pas vos notes** et vos fichiers multimédias / pièces jointes !
   - La synchronisation de fichiers est une entreprise complexe, il existe déjà d'excellentes solutions de synchronisation de fichiers (voir [Client de synchronisation de bureau Nextcloud](#nextcloud-desktop-sync-client))
 
 ## Fichiers de notes en Markdown
 
-- Vous **possédez** toutes vos notes et fichiers multimédias / pièces jointes!
+- Vous **possédez** toutes vos notes et fichiers multimédias / pièces jointes !
 - Vos notes sont stockées sous forme de **fichiers Markdown en texte brut** sur votre ordinateur de bureau
 - Vous pouvez utiliser n'importe quel éditeur de texte que vous aimez à côté de QOwnNotes pour afficher ou modifier vos fichiers de notes
 - **Synchronisez vos notes** avec d'autres appareils (bureau et mobile) avec votre client de synchronisation [Nextcloud](https://nextcloud.com/) ou [ownCloud](https://owncloud.org/) sur votre serveur
@@ -74,28 +74,28 @@ graph TB
 
 Vous pouvez gérer vos **signets de navigateur** avec QOwnNotes ou l'utiliser comme **web clipper**.
 
-The same bookmark parsing and indexing can also power a local suggestion API for [Homepage](https://github.com/gethomepage/homepage).
+Le même système d’analyse et d’indexage des signets peut également être utilisé dans une API locale de suggestion pour [Homepage](https://github.com/gethomepage/homepage).
 
 ::: tip
-Les extensions de navigateur fonctionnent **hors ligne**, aucune connexion Internet n'est nécessaire. Veuillez visiter [l'extension de navigateur QOwnNotes Web Companion](browser-extension.md) pour plus d'informations.
+Les extensions de navigateur fonctionnent **hors ligne**, aucune connexion Internet n'est nécessaire. Voir [extension de navigateur QOwnNotes Web Companion](browser-extension.md) pour plus d'informations.
 :::
 
-## Homepage dashboard
+## Tableau de bord Homepage
 
-QOwnNotes can expose a local HTTP endpoint for [Homepage](https://github.com/gethomepage/homepage) `suggestionUrl` support, backed by the same bookmark parsing and indexing used by the Web Companion data source.
+QOwnNotes peut ouvrir un point d’accès local HTTP pour le support du `suggestionUrl` de [Homepage](https://github.com/gethomepage/homepage), utilisant le même système d’analyse et d’indexage des signets utilisé par le Web Companion.
 
-- Enable it in `Settings -> Browser extension / command snippets`
-- Turn on `Enable socket server`
-- In `Bookmark suggestion API`, enable `Enable Homepage-compatible bookmark suggestions API`
-- Set a port for the local endpoint
-- Optionally set a security token if you want Homepage requests to authenticate
-- The service binds to `127.0.0.1` only
+- Activez-le dans les `Préférences -> Extension de navigateur / snippets de commandes`
+- Cochez `Activer le serveur de socket`
+- Dans `API de suggestion de signets`, cochez `Activer l’API de suggestion de signets compatible avec Homepage`
+- Choisissez un port pour le point d’accès local
+- Configurez optionnellement un jeton de sécurité si vous souhaitez que les requêtes Homepage soient authentifiées
+- Le service est lié uniquement à `127.0.0.1`
 
-The endpoint is available as `GET /suggest?q=home` and supports an optional `limit` parameter (default `10`, maximum `50`) and an optional `token` parameter.
+Le point d’accès est disponible avec `GET /suggest?q=home` et supporte un paramètre optionnel `limit` (par défaut : `10`, maximum : `50`) et un paramètre optionnel `token`.
 
-If you use the custom Homepage assets from `docs/homepage/custom.js`, set `QON_TOKEN` to the same security token configured in QOwnNotes.
+Si vous utilisez les ressources personnalisées de Homepage de `docs/homepage/custom.js`, `QON_TOKEN` doit être le même jeton de sécurité que celui que vous avez configuré dans QOwnNotes.
 
-Example Homepage configuration:
+Exemple de configuration Homepage :
 
 ```yaml
 search:
@@ -106,41 +106,41 @@ search:
 ```
 
 ::: tip
-Please visit [Homepage suggestion API](homepage-suggestion-api.md) for more information, including which Homepage settings file to edit and how to use the custom assets from `docs/homepage`.
+Visitez [API de suggestion Homepage](homepage-suggestion-api.md) pour plus d’informations, dont les fichiers de configuration à modifier et comment utiliser les ressources de `docs/homepage`.
 :::
 
-## Gestionnaire d'extraits de commandes en ligne de commande de QOwnNotes
+## Gestionnaire de snippets en ligne de commande de QOwnNotes
 
-Vous pouvez gérer les **extraits de commandes** avec QOwnNotes et les exécuter depuis la ligne de commande.
+Vous pouvez gérer vos **snippets** avec QOwnNotes et les exécuter depuis la ligne de commande.
 
 ::: tip
-Veuillez visiter [Gestionnaire d’extraits de commandes en ligne de commande QOwnNotes](command-line-snippet-manager.md) pour plus d'informations.
+Visitez [Gestionnaire de snippets en ligne de commande QOwnNotes](command-line-snippet-manager.md) pour plus d'informations.
 :::
 
-## LanguageTool service
+## Service LanguageTool
 
-QOwnNotes can use a local or remote [LanguageTool](https://languagetool.org/) server for **grammar and style checking** in the editor.
+QOwnNotes peut utiliser un service [LanguageTool](https://languagetool.org/) local ou distant pour une **vérification de la grammaire et du style** dans l’éditeur de notes.
 
-- It is **optional** and works alongside the existing spell checker support
-- Enable it in `Settings -> Editor`, then configure your **server URL**, **language**, optional **API key**, and the categories you want to check
-- You can also toggle it quickly from the **Spelling** menu with `Check grammar with LanguageTool`
-- Suggestions and actions are available from the editor context menu for detected issues
+- Il est **optionnel** et fonctionne avec le système de vérification orthographique existant
+- Activez-le dans les `Préférences -> Éditeur`, puis configurez l’**URL du serveur**, la **langue**, une **clé d’API** optionnelle, et les catégories que vous souhaitez vérifier
+- Vous pouvez aussi l’activer ou les désactiver rapidement avec l’option dans le menu **Orthographe** avec l’option `Vérifier la grammaire avec LanguageTool`
+- Des suggestions et actions sont disponibles dans le menu contextuel de l’éditeur pour les problèmes détectés
 
 ::: tip
-Please visit [LanguageTool](../editor/languagetool.md) for more information.
+Voir [LanguageTool](../editor/languagetool.md) pour plus d’informations.
 :::
 
-## Harper service
+## Service Harper
 
-QOwnNotes can use a local [Harper](https://writewithharper.com/) service for **offline grammar and style checking** in the editor.
+QOwnNotes peut utiliser un service local [Harper](https://writewithharper.com/) pour une **vérification de la grammaire et du style** dans l’éditeur de notes.
 
-- It is **optional** and works alongside the existing spell checker support
-- Enable it in `Settings -> Editor -> Harper`, then configure the **transport**, `harper-ls` command or TCP target, **dialect**, and the linters you want to use
-- You can also toggle it quickly from the **Edit** menu with `Check grammar with Harper`
-- Suggestions and ignore actions are available from the editor context menu for detected issues
+- Il est **optionnel** et fonctionne avec le système de vérification orthographique existant
+- Activez-le dans les `Préférences -> Éditeur -> Harper`, puis configurez la **couche de transport**, la commande `harper-ls` ou la cible TCP, le **dialecte** et les règles que vous souhaitez utiliser
+- Vous pouvez aussi l’activer ou les désactiver rapidement avec l’option dans le menu **Édition** avec l’option `Vérifier la grammaire avec Harper`
+- Des suggestions et actions pour ignorer sont disponibles dans le menu contextuel de l’éditeur pour les problèmes détectés
 
 ::: tip
-Please visit [Harper](../editor/harper.md) for more information.
+Visitez [Harper](../editor/harper.md) pour plus d’informations.
 :::
 
 ## Client de synchronisation Nextcloud pour ordinateur de bureau
@@ -167,15 +167,15 @@ Il existe une [liste de fournisseurs Nextcloud gérée par la communauté](https
 Bien sûr, d'autres solutions comme **Dropbox**, **Syncthing**, **Seafile** ou BitTorrent Sync peuvent également être utilisées pour héberger vos notes ou d'autres fichiers.
 :::
 
-## App QOwnNotesAPI pour Nextcloud
+## Application QOwnNotesAPI pour Nextcloud
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) vous permet d'accéder à vos **notes mises à la corbeille** et **versions de notes** côté serveur.
 
 ::: tip
-Veuillez visiter [App QOwnNotesAPI Nextcloud](qownnotesapi.md) pour plus d'informations.
+Visitez [App QOwnNotesAPI Nextcloud](qownnotesapi.md) pour plus d'informations.
 :::
 
-## App serveur Nextcloud Notes
+## Application serveur Nextcloud Notes
 
 Utilisez [**Nextcloud Notes**](https://github.com/nextcloud/notes) pour modifier vos notes sur le **Web**.
 
@@ -183,46 +183,46 @@ Utilisez [**Nextcloud Notes**](https://github.com/nextcloud/notes) pour modifier
 Gardez à l'esprit que Nextcloud Notes ne prend actuellement en charge qu'un seul niveau de sous-dossiers.
 :::
 
-## Nextcloud Deck server app
+## Application serveur Nextcloud Deck
 
-You can use QOwnNotes to quickly create **cards** in [**Nextcloud Deck**](https://github.com/nextcloud/deck).
+Vous pouvez utiliser QOwnNotes pour rapidement créer des **cartes** dans [**Nextcloud Deck**](https://github.com/nextcloud/deck).
 
-## Nextcloud Notes mobile app
+## Application mobile Nextcloud Notes
 
-To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
+Vous pouvez utiliser différentes applications pour accéder à vos notes Nextcloud / ownCloud depuis votre **appareil mobile**.
 
 ### Android
 
-- [Notes Nextcloud pour Android ](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes)(tiers)
+- [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (tiers)
 
 ::: tip
-You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
+Vous pouvez également utiliser n'importe quel outil de synchronisation comme _Synchronize Ultimate_ ou _FolderSync_ pour synchroniser vos fichiers de notes et utiliser un logiciel comme _neutriNotes_ ou [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) pour éditer vos notes.
 :::
 
 ### iOS
 
-- [CloudNotes pour iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (tierce partie)
+- [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (tiers)
 
 ::: tip
-You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+Vous pouvez aussi utiliser [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) et synchroniser vos notes via WebDAV, il y a un bon tutoriel sur [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org
 
-This is an online service provided by QOwnNotes to check if there is a new release of the application available.
+Il s'agit d'un service en ligne fourni par QOwnNotes pour vérifier si une nouvelle version de l'application est disponible.
 
-It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
+Il communique avec GitHub et s'enquiert de la dernière version, récupère l'URL de téléchargement appropriée et compile – en HTML – le journal des modifications (changelog) par rapport à la version de QOwnNotes que vous utilisez actuellement. Il les affiche ensuite dans la boîte de dialogue de mise à jour.
 
-In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
+Il fournit également le [Flux RSS « Release »](http://api.qownnotes.org/rss/app-releases) et une implémentation de l'ancienne API de vérification des mises à jour pour les anciennes versions de QOwnNotes.
 
 ::: tip
-You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
+Vous pouvez voir le code source de [api.qownnotes.org](https://api.qownnotes.org) sur [GitHub](https://github.com/qownnotes/api).
 :::
 
-## QOwnNotes Web App
+## Application Web QOwnNotes
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Vous pouvez insérer des photos depuis votre téléphone mobile vers la note courante dans QOwnNotes sur l'application de bureau via l'**application Web** disponible sur [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Please visit [QOwnNotes Web App](web-app.md) for more information.
+Visitez [Application Web QOwnNotes](web-app.md) pour plus d’informations.
 :::

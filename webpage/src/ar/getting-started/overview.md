@@ -38,7 +38,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - **مجلد الملاحظات** يمكن **اختياره بحرية** (يمكن اختيار مجلدات متعددة للملاحظات)
 - إمكانية **البحث بأجزاء الكلمات** في الملاحظات، وتظليل نتائج البحث فيها
 - [**إضافة للمتصفح**](browser-extension.md) حتى يمكنك **إضافة ملاحظات من النص المحدد** أو **أخذ لقطات شاشة** أو **إدارة إشاراتك المرجعية**
-- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), and optional [**Harper**](../editor/harper.md) support
+- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), optional [**Harper**](../editor/harper.md), and optional [**Markdown LSP**](../editor/markdownlsp.md) support (e.g. [Marksman](https://github.com/artempyanykh/marksman) for completions and diagnostics, or [Rumdl](https://github.com/rvben/rumdl) for linting)
 - **الوضع المحمول** لحمل QOwnNotes على وحدة تخزين USB والتنقل به
 - **قابلية البرمجة** وكذلك [**مستودع بُريمِجات**](https://github.com/qownnotes/scripts) على الإنترنت، حيث يمكنك تثبيت البُريمِجات من داخل التطبيق
 - Built-in **AI support** with script integration for providers like **OpenAI** and **Groq**

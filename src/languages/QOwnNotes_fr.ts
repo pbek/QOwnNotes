@@ -210,6 +210,318 @@
 </message>
 </context>
 <context>
+<name>CloudService</name>
+<message>
+<source>incorrect</source>
+<translation>incorrect</translation>
+</message>
+<message>
+<source>not connected</source>
+<translation>non connecté</translation>
+</message>
+<message>
+<source>Username / password error</source>
+<translation>Erreur de nom d'utilisateur / mot de passe</translation>
+</message>
+<message>
+<source>Your calendar username or password is incorrect!</source>
+<translation>Le nom d'utilisateur ou le mot de passe pour votre calendrier est incorrect !</translation>
+</message>
+<message>
+<source>ok</source>
+<translation>ok</translation>
+</message>
+<message>
+<source>not correct</source>
+<translation>incorrect</translation>
+</message>
+<message>
+<source>not detected</source>
+<translation>non détecté</translation>
+</message>
+<message>
+<source>not found</source>
+<translation>non trouvé</translation>
+</message>
+<message>
+<source>unknown</source>
+<translation>inconnu</translation>
+</message>
+<message>
+<source>version %1 too low</source>
+<translation>version %1 trop vieille</translation>
+</message>
+<message>
+<source>not enabled</source>
+<translation>non activé</translation>
+</message>
+<message>
+<source>API app version too low</source>
+<translation>La version de l'API de l'application est obsolète</translation>
+</message>
+<message>
+<source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
+<translation>Veuillez considérer la mise à jour de l'application QOwnNotesAPI sur votre serveur, la version %1 est trop ancienne et peut causer des problèmes dans QOwnNotes.</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud server connection error</source>
+<translation>Erreur de connexion avec le serveur ownCloud / Nextcloud</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</source>
+<translation>Erreur du serveur Nextcloud / ownCloud : &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Veuillez vérifier votre configuration Nextcloud / ownCloud.</translation>
+</message>
+<message>
+<source>You need to setup your Nextcloud / ownCloud server!</source>
+<translation>Vous devez configurer votre serveur Nextcloud / ownCloud !</translation>
+</message>
+<message>
+<source>Done with loading note versions</source>
+<translation>Chargement des versions des notes terminé</translation>
+</message>
+<message>
+<source>No versions found</source>
+<translation>Aucune version trouvée</translation>
+</message>
+<message>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
+<translation>Il n'y a pas de version pour cette note ou la note n'a pas été trouvée sur le serveur.</translation>
+</message>
+<message>
+<source>Done with loading trashed notes</source>
+<translation>Chargement des notes mises à la corbeille terminé</translation>
+</message>
+<message>
+<source>No trashed notes</source>
+<translation>Pas de notes mises à la corbeille</translation>
+</message>
+<message>
+<source>No trashed notes were found on the server.</source>
+<translation>Aucune note mise à la corbeille n’a été trouvée sur le serveur.</translation>
+</message>
+<message>
+<source>Error while loading todo lists!</source>
+<translation>Erreur lors du chargement des listes de tâches !</translation>
+</message>
+<message>
+<source>Your CalDAV server didn't reply anything!</source>
+<translation>Aucune réponse de votre serveur CalDAV !</translation>
+</message>
+<message>
+<source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation>Message d’erreur du serveur CalDAV : &lt;strong&gt;%1&lt;/strong&gt;</translation>
+</message>
+<message>
+<source>No bookmarks</source>
+<translation>Pas de signet</translation>
+</message>
+<message>
+<source>No bookmarks were found on the server.</source>
+<translation>Aucun signet sur le serveur.</translation>
+</message>
+</context>
+<context>
+<name>CloudSettingsWidget</name>
+<message>
+<source>cloud support</source>
+<translation>support du cloud</translation>
+</message>
+<message>
+<source>Enable cloud support</source>
+<translation>Activer le support du cloud</translation>
+</message>
+<message>
+<source>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</source>
+<translation>Vous pouvez accéder à votre serveur Nextcloud / ownCloud depuis l'application pour – par exemple – gérer les notes mises à la corbeille et les versions de notes, ou bien pour partager des notes. Cette intégration ne prend pas en charge la synchronisation de fichiers ; vous devrez installer le client de synchronisation Nextcloud / ownCloud pour cela.</translation>
+</message>
+<message>
+<source>Your Nextcloud / ownCloud server</source>
+<translation>Votre serveur Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Veuillez installer la dernière version de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (au moins la version QOWNNOTESAPI_MIN_VERSION) sur votre serveur Nextcloud / ownCloud si vous souhaitez que QOwnNotes ait accès aux versions de notes et aux notes de la corbeille.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous devez également activer les deux applications natives Nextcloud / ownCloud &lt;b&gt;Versions&lt;/b&gt; et &lt;b&gt;Deleted files&lt;/b&gt; sur votre serveur Nextcloud / ownCloud (elles devraient l’être par défaut)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous aurez toujours besoin du &lt;b&gt;client de synchronisation Nextcloud / ownCloud&lt;/b&gt; (ou une autre application de synchronisation) pour synchroniser vos notes !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouvre la page &lt;span style=" font-weight:600;"&gt;Configuration de l’application&lt;/span&gt; de votre serveur Nextcloud / ownCloud dans votre navigateur web pour installer ou mettre à jour QOwnNotesAPI et permettre d’activer les applications natives &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; et &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Open your NC / oC server &amp;Apps page</source>
+<translation>Ouvrir la page d’&amp;applications de votre serveur NC / oC</translation>
+</message>
+<message>
+<source>Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
+<translation>Ouvre la page Mot de passe de l’application de votre serveur Nextcloud / ownCloud dans votre navigateur Web pour créer un nouveau mot de passe d’application pour l’application</translation>
+</message>
+<message>
+<source>Open your NC / oC server App Password page</source>
+<translation>Ouvrir la page de mots de passe d’applications de votre serveur NC / oC</translation>
+</message>
+<message>
+<source>Error Message</source>
+<translation>Message d’erreur</translation>
+</message>
+<message>
+<source>Select a connection to edit</source>
+<translation>Sélectionnez une connexion à modifier</translation>
+</message>
+<message>
+<source>Add connection</source>
+<translation>Ajouter une connexion</translation>
+</message>
+<message>
+<source>Remove connection</source>
+<translation>Supprimer la connexion</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation>Nom de la connexion :</translation>
+</message>
+<message>
+<source>NC / oC server url:</source>
+<translation>URL du serveur NC / oC :</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merci d’entrer l'URL de votre serveur Nextcloud / ownCloud, par exemple &lt;span style=" font-style:italic;"&gt;https://cloud.votre_serveur.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
+<translation>La méthode de connexion v2 ne fonctionne qu’avec Nextcloud, pas avec ownCloud. Si vous rencontrez des problèmes, vous devez créer un mot de passe d’application manuellement.</translation>
+</message>
+<message>
+<source>Login to Nextcloud to grant access</source>
+<translation>Connectez-vous à Nextcloud pour accorder l’accès</translation>
+</message>
+<message>
+<source>Cancel Nextcloud login</source>
+<translation>Annuler la connexion Nextcloud</translation>
+</message>
+<message>
+<source>Username:</source>
+<translation>Nom d’utilisateur :</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merci d’entrer votre nom d'utilisateur sur votre serveur Nextcloud / ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Your Nextcloud / ownCloud username</source>
+<translation>Votre nom d’utilisateur Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Password:</source>
+<translation>Mot de passe :</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merci d’entrer le mot de passe associé à votre nom d’utilisateur.&lt;br/&gt;Le mot de passe sera stocké chiffré avec les autres préférences, mais n’est pas très bien sécurisé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Your Nextcloud / ownCloud password</source>
+<translation>Votre mot de passe Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation>Si votre mot de passe ne fonctionne pas, créez un mot de passe d’application (bouton à droite)</translation>
+</message>
+<message>
+<source>Enable QOwnNotesAPI app support</source>
+<translation>Activer le support de l’application QOwnNotesAPI</translation>
+</message>
+<message>
+<source>Enable Nextcloud Deck support</source>
+<translation>Activer le support de Nextcloud Deck</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliquez ici pour tester la connexion à votre serveur Nextcloud / ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&amp;Connect to NC / oC server</source>
+<translation>Se &amp;connecter au serveur NC / oC</translation>
+</message>
+<message>
+<source>Connection status</source>
+<translation>État de la connexion</translation>
+</message>
+<message>
+<source>unknown</source>
+<translation>inconnu</translation>
+</message>
+<message>
+<source>connection to web server</source>
+<translation>connexion au serveur web</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud server detected</source>
+<translation>serveur Nextcloud / ownCloud détecté</translation>
+</message>
+<message>
+<source>username and password correct</source>
+<translation>nom d’utilisateur et mot de passe corrects</translation>
+</message>
+<message>
+<source>connection to QOwnNotesAPI</source>
+<translation>connexion à QOwnNotesAPI</translation>
+</message>
+<message>
+<source>versions app enabled on server</source>
+<translation>application versions activée sur le serveur</translation>
+</message>
+<message>
+<source>trash app enabled on server</source>
+<translation>application corbeille activée sur le serveur</translation>
+</message>
+<message>
+<source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
+<translation>Ce chemin se trouve dans les préférences &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
+</message>
+<message>
+<source>notes path found on server</source>
+<translation>dossier de notes trouvé sur le serveur</translation>
+</message>
+<message>
+<source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
+<translation>dossier de notes &lt;b&gt;%1&lt;/b&gt; trouvé sur le serveur</translation>
+</message>
+<message>
+<source>Remove cloud connection</source>
+<translation>Supprimer la connexion cloud</translation>
+</message>
+<message>
+<source>Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation>Souhaitez-vous supprimer la connexion cloud &lt;strong&gt;%1&lt;/strong&gt; ?</translation>
+</message>
+<message>
+<source>The connection was made successfully!
+Server version: %1
+QOwnNotesAPI version: %2</source>
+<translation>La connexion a été réalisée avec succès !
+Version du serveur : %1
+Version de QOwnNotesAPI : %2</translation>
+</message>
+<message>
+<source>There was an error connecting to the Nextcloud / ownCloud Server!
+You also need to have the QOwnNotesAPI app installed and enabled!
+
+Connection error message: </source>
+<translation>Une erreur s'est produite lors de la connexion au serveur Nextcloud / ownCloud !
+Vous devez aussi vérifier que QOwnNotesAPI est bien installé et activé !
+
+Le message d'erreur de connexion est : </translation>
+</message>
+</context>
+<context>
 <name>ColorModeSettingsWidget</name>
 <message>
 <source>Color modes</source>
@@ -1060,30 +1372,6 @@
 <translation>Activer l’alinéa saillant pour les listes Markdown</translation>
 </message>
 <message>
-<source>Markdown language server</source>
-<translation>Serveur de langage Markdown</translation>
-</message>
-<message>
-<source>Enable Markdown language server (LSP)</source>
-<translation>Activer le serveur de langage (LSP) Markdown</translation>
-</message>
-<message>
-<source>Command:</source>
-<translation>Commande :</translation>
-</message>
-<message>
-<source>Arguments:</source>
-<translation>Arguments :</translation>
-</message>
-<message>
-<source>Optional arguments separated by spaces.</source>
-<translation>Arguments optionnels séparés par des espaces.</translation>
-</message>
-<message>
-<source>Optional arguments</source>
-<translation>Arguments optionnels</translation>
-</message>
-<message>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
 <translation>Vous pouvez définir ici votre propre format d’horodatage à insérer dans une note.</translation>
 </message>
@@ -1638,8 +1926,8 @@
 <message numerus="yes">
 <source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
 <translation>
-<numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichier de note. Souhaitez-vous supprimer toutes les occurrences de ces médias et liens de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichier de note sera mis à jour.</numerusform>
-<numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes. Souhaitez-vous supprimer toutes les occurrences de ces médias et liens de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes seront mis à jour.</numerusform>
+<numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichier de note. Souhaitez-vous supprimer toutes les occurrences de ces liens demédias et de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichier de note sera mis à jour.</numerusform>
+<numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes. Souhaitez-vous supprimer toutes les occurrences de ces liens de médias et de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes seront mis à jour.</numerusform>
 </translation>
 </message>
 <message>
@@ -1806,11 +2094,11 @@
 </message>
 <message>
 <source>Wiki link</source>
-<translation>Lien de style wiki</translation>
+<translation>Lien style-wiki</translation>
 </message>
 <message>
 <source>Wiki link (broken)</source>
-<translation>Lien de style wiki (brisé)</translation>
+<translation>Lien style-wiki (brisé)</translation>
 </message>
 <message>
 <source>Image</source>
@@ -1958,12 +2246,6 @@
 <translation>Accepter toutes les modifications externes de la note actuelle</translation>
 </message>
 <message>
-<source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation>Vous risquez d’avoir des problèmes de synchronisation avec des anciennes versions de ownCloud si mettez moins de 10 s.
-Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits de synchronisation.</translation>
-</message>
-<message>
 <source>note save interval time [sec]</source>
 <translation>intervalle de temps entre les sauvegardes des notes [secondes]</translation>
 </message>
@@ -2000,8 +2282,14 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Hauteur maximale :</translation>
 </message>
 <message>
-<source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-<translation>Vous pouvez par exemple utiliser ce paramètre sous Windows si vous avez des problèmes avec les retours-ligne dans les applications de notes ownCloud / Nextcloud</translation>
+<source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</source>
+<translation>Vous risquez d’avoir des problèmes de synchronisation avec des anciennes versions de Nextcloud / ownCloud si vous mettez bien moins que 10 s.
+Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits de synchronisation.</translation>
+</message>
+<message>
+<source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
+<translation>Vous pouvez par exemple utiliser ce paramètre sous Windows si vous avez des problèmes avec les retours-ligne dans les applications de notes Nextcloud / ownCloud</translation>
 </message>
 <message>
 <source>Use UNIX newline instead of native newline characters</source>
@@ -2265,9 +2553,9 @@ Vos notes resteront intactes !</translation>
 <translation>sec</translation>
 </message>
 <message>
-<source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+<source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation>Vous risquez d’avoir des problèmes de synchronisation avec des anciennes versions de ownCloud si mettez moins de 10 s.
+<translation>Vous risquez d’avoir des problèmes de synchronisation avec des anciennes versions de Nextcloud / ownCloud si vous mettez bien moins que 10 s.
 Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits de synchronisation.</translation>
 </message>
 <message>
@@ -2428,7 +2716,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Linters:</source>
-<translation type="unfinished">Linters:</translation>
+<translation>Règles :</translation>
 </message>
 <message>
 <source>Spell Check</source>
@@ -3648,9 +3936,9 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Préférences de la corbeille locale</translation>
 </message>
 <message>
-<source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+<source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation>Vous risquez d’avoir des problèmes de synchronisation avec des anciennes versions de ownCloud si mettez moins de 10 s.
+<translation>Vous risquez d’avoir des problèmes de synchronisation avec des anciennes versions de Nextcloud / ownCloud si vous mettez bien moins que 10 s.
 Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits de synchronisation.</translation>
 </message>
 <message>
@@ -3901,6 +4189,14 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Importer</translation>
 </message>
 <message>
+<source>Store note bookmark</source>
+<translation>Enregistrer un signet de note</translation>
+</message>
+<message>
+<source>Go to note bookmark</source>
+<translation>Aller à un signet de note</translation>
+</message>
+<message>
 <source>Print</source>
 <translation>Imprimer</translation>
 </message>
@@ -3958,7 +4254,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Note text edit</source>
-<translation type="unfinished">Note text edit</translation>
+<translation>Édition du texte de la note</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -4107,7 +4403,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Insérer une image (l’image sera alors copiée dans le dossier « media » qui se trouve dans le dossier courant de notes)</translation>
+<translation>Insérer une image (l’image sera alors copiée dans le dossier « media » qui se trouve dans le dossier de notes courant)</translation>
 </message>
 <message>
 <source>Show &amp;changelog</source>
@@ -4451,6 +4747,82 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Épingler/désépingler la note à l’onglet courant</translation>
 </message>
 <message>
+<source>Store bookmark at slot 1</source>
+<translation>Enregistrer un signet dans l’emplacement 1</translation>
+</message>
+<message>
+<source>Store bookmark at slot 2</source>
+<translation>Enregistrer un signet dans l’emplacement 2</translation>
+</message>
+<message>
+<source>Store bookmark at slot 3</source>
+<translation>Enregistrer un signet dans l’emplacement 3</translation>
+</message>
+<message>
+<source>Store bookmark at slot 4</source>
+<translation>Enregistrer un signet dans l’emplacement 4</translation>
+</message>
+<message>
+<source>Store bookmark at slot 5</source>
+<translation>Enregistrer un signet dans l’emplacement 5</translation>
+</message>
+<message>
+<source>Store bookmark at slot 6</source>
+<translation>Enregistrer un signet dans l’emplacement 6</translation>
+</message>
+<message>
+<source>Store bookmark at slot 7</source>
+<translation>Enregistrer un signet dans l’emplacement 7</translation>
+</message>
+<message>
+<source>Store bookmark at slot 8</source>
+<translation>Enregistrer un signet dans l’emplacement 8</translation>
+</message>
+<message>
+<source>Store bookmark at slot 9</source>
+<translation>Enregistrer un signet dans l’emplacement 9</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 1</source>
+<translation>Aller au signet dans l’emplacement 1</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 2</source>
+<translation>Aller au signet dans l’emplacement 2</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 3</source>
+<translation>Aller au signet dans l’emplacement 3</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 4</source>
+<translation>Aller au signet dans l’emplacement 4</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 5</source>
+<translation>Aller au signet dans l’emplacement 5</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 6</source>
+<translation>Aller au signet dans l’emplacement 6</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 7</source>
+<translation>Aller au signet dans l’emplacement 7</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 8</source>
+<translation>Aller au signet dans l’emplacement 8</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 9</source>
+<translation>Aller au signet dans l’emplacement 9</translation>
+</message>
+<message>
+<source>Note bookmarks</source>
+<translation>Signets de notes</translation>
+</message>
+<message>
 <source>Format text underline</source>
 <translation>Formater le texte en souligné</translation>
 </message>
@@ -4693,10 +5065,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <source>No folder was selected</source>
 <translation>Aucun répertoire sélectionné</translation>
 </message>
-<message>
-<source>You have to select your ownCloud notes folder to make this software work!</source>
-<translation>Vous devez sélectionner le dossier des notes ownCloud pour que le logiciel fonctionne !</translation>
-</message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
@@ -4746,14 +5114,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Vous avez désactivé les listes de tâches.&lt;br /&gt;Veuillez vérifier votre configuration &lt;strong&gt;Tâches&lt;/strong&gt; dans les préférences !</translation>
-</message>
-<message>
-<source>Note versions are currently loaded from your ownCloud server</source>
-<translation>Les versions des notes sont en cours de récupération depuis votre serveur ownCloud</translation>
-</message>
-<message>
-<source>Trashed notes are currently loaded from your ownCloud server</source>
-<translation>Les notes dans la corbeille sont en cours de récupération depuis votre serveur ownCloud</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -5033,7 +5393,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Action not found!</source>
-<translation>Action introuvable!</translation>
+<translation>Action non trouvée !</translation>
 </message>
 <message>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
@@ -5144,6 +5504,18 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Cliquer ici pour voir ce qui a changé et pour pouvoir mettre à jour vers la dernière version</translation>
 </message>
 <message>
+<source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
+<translation>Vous devez sélectionner le dossier de notes Nextcloud / ownCloud pour que le logiciel fonctionne !</translation>
+</message>
+<message>
+<source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
+<translation>Les versions des notes sont en cours de récupération depuis votre serveur Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
+<translation>Les notes dans la corbeille sont en cours de récupération depuis votre serveur Nextcloud / ownCloud</translation>
+</message>
+<message>
 <source>Paste as &amp;text file attachment</source>
 <translation>Coller en tant que fichier joint &amp;text</translation>
 </message>
@@ -5165,6 +5537,219 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Failed to start Markdown LSP server: %1</source>
 <translation>Échec du démarrage du serveur LSP Markdown : %1</translation>
+</message>
+</context>
+<context>
+<name>MarkdownLspSettingsWidget</name>
+<message>
+<source>Markdown language server</source>
+<translation>Serveur de langage Markdown</translation>
+</message>
+<message>
+<source>Enable Markdown language server (LSP)</source>
+<translation>Activer le serveur de langage (LSP) Markdown</translation>
+</message>
+<message>
+<source>Command:</source>
+<translation>Commande :</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation>Détecter automatiquement</translation>
+</message>
+<message>
+<source>Arguments:</source>
+<translation>Arguments :</translation>
+</message>
+<message>
+<source>Optional arguments separated by spaces.</source>
+<translation>Arguments optionnels séparés par des espaces.</translation>
+</message>
+<message>
+<source>Optional arguments</source>
+<translation>Arguments optionnels</translation>
+</message>
+<message>
+<source>Log all LSP server output (stderr) to the debug log. Useful for troubleshooting LSP server issues.</source>
+<translation>Enregistre toute la sortie du serveur LSP (stderr) dans le journal de débogage. Utile pour régler des problèmes liés au serveur LSP.</translation>
+</message>
+<message>
+<source>Show all LSP server log output in debug log</source>
+<translation>Afficher tous les logs du serveur LSP dans le journal de débogage</translation>
+</message>
+<message>
+<source>Ignored:</source>
+<translation>Règles ignorées :</translation>
+</message>
+<message>
+<source>Reset ignored rules</source>
+<translation>Réinitialiser les règles ignorées</translation>
+</message>
+<message>
+<source>Status:</source>
+<translation>Statut :</translation>
+</message>
+<message>
+<source>Not tested yet.</source>
+<translation>Pas encore essayé.</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation>Tester la connexion</translation>
+</message>
+<message>
+<source>No Markdown LSP server configured.</source>
+<translation>Pas de serveur LSP Markdown configuré.</translation>
+</message>
+<message>
+<source>Command: %1</source>
+<translation>Commande : %1</translation>
+</message>
+<message>
+<source> | Arguments: %1</source>
+<translation> | Arguments : %1</translation>
+</message>
+<message>
+<source> | Currently disabled</source>
+<translation> | Actuellement désactivé</translation>
+</message>
+<message>
+<source>Configured %1 at %2</source>
+<translation>%1 configuré à l’emplacement %2</translation>
+</message>
+<message>
+<source> with arguments: %1</source>
+<translation> avec les arguments : %1</translation>
+</message>
+<message>
+<source>Markdown LSP</source>
+<translation>LSP Markdown</translation>
+</message>
+<message>
+<source>Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.</source>
+<translation>Impossible de trouver un serveur LSP Markdown pris en charge dans le PATH. Recherché : marksman, rumdl.</translation>
+</message>
+<message>
+<source>There are no ignored rules to reset.</source>
+<translation>Aucune règle ignorée à réinitialiser.</translation>
+</message>
+<message numerus="yes">
+<source>Reset %n ignored Markdown LSP rule(s)?</source>
+<translation>
+<numerusform>Réinitialiser %n règle de LSP Markdown ignorée ?</numerusform>
+<numerusform>Réinitialiser %n règles de LSP Markdown ignorées ?</numerusform>
+</translation>
+</message>
+<message>
+<source>All ignored Markdown LSP rules have been reset.</source>
+<translation>Toutes les règles de LSP Markdown ignorées ont été réinitialisées.</translation>
+</message>
+<message>
+<source>Please enter a Markdown LSP server command first.</source>
+<translation>Veuillez d’abord entrer une commande de serveur de LSP Markdown.</translation>
+</message>
+<message>
+<source>Timed out waiting for the Markdown LSP server to initialize.</source>
+<translation>Temps d’attente d’initialisation du serveur LSP Markdown dépassé.</translation>
+</message>
+<message>
+<source>Failed to start Markdown LSP server: %1</source>
+<translation>Échec du démarrage du serveur LSP Markdown : %1</translation>
+</message>
+<message>
+<source>Markdown LSP connection successful: %1</source>
+<translation>Connexion au LSP Markdown réussie : %1</translation>
+</message>
+<message>
+<source>Markdown LSP connection failed.</source>
+<translation>Échec de connexion au LSP Markdown.</translation>
+</message>
+</context>
+<context>
+<name>MarkdownTableDialog</name>
+<message>
+<source>Edit Markdown table</source>
+<translation>Modifier un tableau Markdown</translation>
+</message>
+<message>
+<source>Row</source>
+<translation>Ligne</translation>
+</message>
+<message>
+<source>Add row</source>
+<translation>Ajouter une ligne</translation>
+</message>
+<message>
+<source>Remove row</source>
+<translation>Supprimer la ligne</translation>
+</message>
+<message>
+<source>Column</source>
+<translation>Colonne</translation>
+</message>
+<message>
+<source>Add column</source>
+<translation>Ajouter une colonne</translation>
+</message>
+<message>
+<source>Remove column</source>
+<translation>Supprimer la colonne</translation>
+</message>
+<message>
+<source>Alignment:</source>
+<translation>Alignement :</translation>
+</message>
+<message>
+<source>Alignment of the selected column. Click a column header to select it.</source>
+<translation>Alignement de la colonne sélectionnée. Cliquez sur l’en-tête d’une colonne pour la sélectionner.</translation>
+</message>
+<message>
+<source>Default (left)</source>
+<translation>Par défaut (gauche)</translation>
+</message>
+<message>
+<source>Left</source>
+<translation>Gauche</translation>
+</message>
+<message>
+<source>Center</source>
+<translation>Centre</translation>
+</message>
+<message>
+<source>Right</source>
+<translation>Droit</translation>
+</message>
+<message>
+<source>Apply alignment</source>
+<translation>Appliquer l’alignement</translation>
+</message>
+<message>
+<source>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</source>
+<translation>Applique l’alignement sélectionné sur la/les colonne(s) sélectionnée(s). Cliquez d’abord sur l’en-tête d’une colonne pour la sélectionner.</translation>
+</message>
+<message>
+<source>Cannot remove header</source>
+<translation>Impossible de supprimer l’en-tête</translation>
+</message>
+<message>
+<source>The header row cannot be removed.</source>
+<translation>La ligne d’en-tête ne peut pas être supprimée.</translation>
+</message>
+<message>
+<source>Cannot remove row</source>
+<translation>Impossible de supprimer la ligne</translation>
+</message>
+<message>
+<source>The table must have at least one data row.</source>
+<translation>Le tableau doit avoir au moins une ligne de données.</translation>
+</message>
+<message>
+<source>Cannot remove column</source>
+<translation>Impossible de supprimer la colonne</translation>
+</message>
+<message>
+<source>The table must have at least one column.</source>
+<translation>Le tableau doit avoir au moins une colonne.</translation>
 </message>
 </context>
 <context>
@@ -5572,6 +6157,21 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Recharger les tableaux, piles et cartes depuis le serveur</translation>
 </message>
 <message>
+<source>Do you want to delete the selected Nextcloud Deck card?</source>
+<translation>Voulez-vous supprimer la carte Nextcloud Deck sélectionnée ?</translation>
+</message>
+<message numerus="yes">
+<source>Do you want to delete %n Nextcloud Deck card(s)?</source>
+<translation>
+<numerusform>Voulez-vous supprimer %n carte Nextcloud Deck ?</numerusform>
+<numerusform>Voulez-vous supprimer %n cartes Nextcloud Deck ?</numerusform>
+</translation>
+</message>
+<message>
+<source>Delete card(s)</source>
+<translation>Supprimer la/les carte(s)</translation>
+</message>
+<message>
 <source>%1 / %2</source>
 <translation>%1 / %2</translation>
 </message>
@@ -5598,6 +6198,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>&amp;Search for card link in notes</source>
 <translation>&amp;Chercher le lien de cette carte dans les notes</translation>
+</message>
+<message numerus="yes">
+<source>&amp;Delete %n card(s)</source>
+<translation>
+<numerusform/>
+<numerusform/>
+</translation>
 </message>
 </context>
 <context>
@@ -5657,6 +6264,53 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Loading the archived cards failed with status code %1 and message: %2</source>
 <translation>Le chargement des cartes archivées a échoué avec le code de statut %1 et le message : %2</translation>
+</message>
+</context>
+<context>
+<name>NoteBookmarkDialog</name>
+<message>
+<source>Note Bookmarks</source>
+<translation>Signets de notes</translation>
+</message>
+<message>
+<source>Slot</source>
+<translation>Emplacement</translation>
+</message>
+<message>
+<source>Note</source>
+<translation>Note</translation>
+</message>
+<message>
+<source>Position</source>
+<translation>Position</translation>
+</message>
+<message>
+<source>Jump to bookmark</source>
+<translation>Aller au signet de note</translation>
+</message>
+<message>
+<source>Jump to the selected bookmark in the main window</source>
+<translation>Va au signet sélectionné dans la fenêtre principale</translation>
+</message>
+<message>
+<source>Delete bookmark</source>
+<translation>Supprimer le signet</translation>
+</message>
+<message>
+<source>Delete the selected bookmark</source>
+<translation>Supprime le signet sélectionné</translation>
+</message>
+<message>
+<source>Reload</source>
+<translation>Recharger</translation>
+</message>
+<message>
+<source>Reload the bookmark list</source>
+<translation>Recharger la liste de signets</translation>
+</message>
+<message>
+<source>Are you sure you want to delete the bookmark at slot %1?</source>
+<translation>Souhaitez-vous supprimer le signet à l’emplacement %1 ?</translation>
 </message>
 </context>
 <context>
@@ -5826,24 +6480,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Cliquez ici pour utiliser le dossier sélectionné sur votre serveur en tant que dossier de notes</translation>
 </message>
 <message>
-<source>&amp;Use as ownCloud path</source>
-<translation>&amp;Utiliser comme chemin ownCloud</translation>
-</message>
-<message>
 <source>path</source>
 <translation>chemin d’accès</translation>
-</message>
-<message>
-<source>Please select your note folder on your ownCloud server:</source>
-<translation>Veuillez sélectionner votre dossier de notes sur votre serveur ownCloud :</translation>
 </message>
 <message>
 <source>Cloud connection:</source>
 <translation>Connexion au cloud :</translation>
 </message>
 <message>
-<source>Path on your ownCloud server:</source>
-<translation>Chemin d’accès sur votre serveur ownCloud :</translation>
+<source>&amp;Use as Nextcloud / ownCloud path</source>
+<translation>&amp;Utiliser comme chemin Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Please select your note folder on your Nextcloud / ownCloud server:</source>
+<translation>Veuillez sélectionner votre dossier de notes sur votre serveur Nextcloud / ownCloud :</translation>
+</message>
+<message>
+<source>Path on your Nextcloud / ownCloud server:</source>
+<translation>Chemin d’accès sur votre serveur Nextcloud / ownCloud :</translation>
 </message>
 <message>
 <source>Note folder path:</source>
@@ -5878,16 +6532,20 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Utiliser comme dossier de notes actif</translation>
 </message>
 <message>
-<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-<translation>Attention, l'application de notes de ownCloud ne supporte pas les sous-dossiers !</translation>
+<source>Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</source>
+<translation>Attention, l'application de notes de Nextcloud / ownCloud ne supporte pas les sous-dossiers !</translation>
+</message>
+<message>
+<source>Click here to select your remote note path on your Nextcloud / ownCloud server</source>
+<translation>Cliquez ici pour sélectionner le chemin d’accès à distance de vos notes sur votre serveur Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</source>
+<translation>Définissez le chemin d’accès Nextcloud / ownCloud avec lequel le chemin du dossier de notes sera synchronisé sur votre serveur Nextcloud / ownCloud.</translation>
 </message>
 <message>
 <source>Use note subfolders</source>
 <translation>Utiliser les sous-dossiers</translation>
-</message>
-<message>
-<source>Click here to select your remote note path on your ownCloud server</source>
-<translation>Cliquez ici pour sélectionner le chemin d’accès à distance de vos notes sur votre serveur ownCloud</translation>
 </message>
 <message>
 <source>Path where your notes are stored locally</source>
@@ -5908,10 +6566,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Click here to select your local note path</source>
 <translation>Cliquez ici pour sélectionner le chemin d’accès local à vos notes</translation>
-</message>
-<message>
-<source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-<translation>Définissez le chemin d’accès ownCloud avec lequel le chemin du dossier de notes sera synchronisé sur votre serveur ownCloud.</translation>
 </message>
 <message>
 <source>"Notes" path on your server</source>
@@ -5990,10 +6644,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Supprimer les copies de la base de données en conflit</translation>
 </message>
 <message numerus="yes">
-<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
+<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</source>
 <translation>
-<numerusform>Supprimer automatiquement &lt;strong&gt;%n&lt;/strong&gt; copie de la base de données en conflit qui peut bloquer votre processus de synchronisation ownCloud ?</numerusform>
-<numerusform>Supprimer automatiquement &lt;strong&gt;%n&lt;/strong&gt; copies de la base de données en conflit qui peut bloquer votre processus de synchronisation ownCloud ?</numerusform>
+<numerusform>Supprimer automatiquement &lt;strong&gt;%n&lt;/strong&gt; copie de la base de données en conflit qui peut bloquer votre processus de synchronisation Nextcloud / ownCloud ?</numerusform>
+<numerusform>Supprimer automatiquement &lt;strong&gt;%n&lt;/strong&gt; copies de la base de données en conflit qui peut bloquer votre processus de synchronisation Nextcloud / ownCloud ?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -6085,19 +6739,6 @@ Voulez-vous restaurer la note courante ?</translation>
 <source>Remove selected notes and folders</source>
 <translation>Supprimer les notes et les dossiers sélectionnés</translation>
 </message>
-<message numerus="yes">
-<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your ownCloud server you should be able to restore the notes from there.</source>
-<translation>
-<numerusform>Supprimer la note et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
-
-Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
-<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; notes et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
-
-Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
-</translation>
-</message>
 <message>
 <source>Remove selected folders</source>
 <translation>Supprimer les dossiers sélectionnés</translation>
@@ -6124,6 +6765,32 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir la
 <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; notes sélectionnées ?
 
 Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir les restaurer.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</source>
+<translation>
+<numerusform>Supprimer la note et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
+
+Si la corbeille est activée sur votre serveur Nextcloud / ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
+<numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; notes et le(s) &lt;strong&gt;%1&lt;/strong&gt; dossier(s) sélectionné(s) ?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Tous les fichiers et dossiers présents dans ces dossiers seront également supprimés !
+
+Si la corbeille est activée sur votre serveur Nextcloud / ownCloud, vous devriez pouvoir restaurer les notes.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</source>
+<translation>
+<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; note sélectionnée ?
+
+Si la corbeille est activée sur votre serveur Nextcloud / ownCloud, vous devriez pouvoir la restaurer.</numerusform>
+<numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; notes sélectionnées ?
+
+Si la corbeille est activée sur votre serveur Nextcloud / ownCloud, vous devriez pouvoir les restaurer.</numerusform>
 </translation>
 </message>
 <message>
@@ -6547,310 +7214,6 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 </message>
 </context>
 <context>
-<name>OwnCloudService</name>
-<message>
-<source>incorrect</source>
-<translation>Incorrect</translation>
-</message>
-<message>
-<source>not connected</source>
-<translation>pas connecté</translation>
-</message>
-<message>
-<source>Username / password error</source>
-<translation>Erreur de nom d'utilisateur / mot de passe</translation>
-</message>
-<message>
-<source>Your calendar username or password is incorrect!</source>
-<translation>Le nom d'utilisateur ou le mot de passe pour votre calendrier est incorrect!</translation>
-</message>
-<message>
-<source>ok</source>
-<translation>d'accord</translation>
-</message>
-<message>
-<source>not correct</source>
-<translation>Pas correcte</translation>
-</message>
-<message>
-<source>not detected</source>
-<translation>non-détecté</translation>
-</message>
-<message>
-<source>not found</source>
-<translation>pas trouvé</translation>
-</message>
-<message>
-<source>unknown</source>
-<translation>inconnu</translation>
-</message>
-<message>
-<source>version %1 too low</source>
-<translation>version %1 trop basse</translation>
-</message>
-<message>
-<source>not enabled</source>
-<translation>pas activé</translation>
-</message>
-<message>
-<source>API app version too low</source>
-<translation>La version de l'API de l'application est obsolète</translation>
-</message>
-<message>
-<source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>Veuillez considérer la mise à jour de l'application QOwnNotesAPI sur votre serveur, la version %1 est trop ancienne et peut causer des problèmes dans QOwnNotes.</translation>
-</message>
-<message>
-<source>ownCloud server connection error</source>
-<translation>Erreur de connexion avec le serveur ownCloud</translation>
-</message>
-<message>
-<source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-<translation>erreur du serveur ownCloud : &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; Veuillez vérifier votre configuration ownCloud.</translation>
-</message>
-<message>
-<source>You need to setup your ownCloud server!</source>
-<translation>Vous devez configurer votre serveur ownCloud !</translation>
-</message>
-<message>
-<source>Done with loading note versions</source>
-<translation>Téléchargement des versions des notes terminé</translation>
-</message>
-<message>
-<source>No versions found</source>
-<translation>Pas de versions trouvées</translation>
-</message>
-<message>
-<source>There are no versions for this note or the note wasn't found on the server.</source>
-<translation>Il n'y a pas de versions pour cette note ou la note n'a pas été trouvée sur le serveur.</translation>
-</message>
-<message>
-<source>Done with loading trashed notes</source>
-<translation>Téléchargement des notes de la corbeille terminé</translation>
-</message>
-<message>
-<source>No trashed notes</source>
-<translation>Pas de notes supprimées</translation>
-</message>
-<message>
-<source>No trashed notes were found on the server.</source>
-<translation>Pas de notes supprimées sur le serveur.</translation>
-</message>
-<message>
-<source>Error while loading todo lists!</source>
-<translation>Erreur lors du chargement des listes de tâches !</translation>
-</message>
-<message>
-<source>Your CalDAV server didn't reply anything!</source>
-<translation>Aucune réponse du serveur CalDAV!</translation>
-</message>
-<message>
-<source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>Message d’erreur du serveur CalDAV : &lt;strong&gt;%1&lt;/strong&gt;</translation>
-</message>
-<message>
-<source>No bookmarks</source>
-<translation>Pas de marque-page</translation>
-</message>
-<message>
-<source>No bookmarks were found on the server.</source>
-<translation>Aucun marque-page sur le serveur.</translation>
-</message>
-</context>
-<context>
-<name>OwnCloudSettingsWidget</name>
-<message>
-<source>ownCloud support</source>
-<translation>Support ownCloud</translation>
-</message>
-<message>
-<source>Enable ownCloud support</source>
-<translation>Activer le support ownCloud</translation>
-</message>
-<message>
-<source>You can access your ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the ownCloud sync client for syncing the files.</source>
-<translation>Vous pouvez accéder à votre serveur ownCloud depuis l'application pour – par exemple – gérer les notes mises à la corbeille, les versions ou le partage de notes. Cette intégration ne prend pas en charge la synchronisation de fichiers ; vous devrez installer « ownCloud sync client » pour cela.</translation>
-</message>
-<message>
-<source>Your ownCloud server</source>
-<translation>Votre serveur ownCloud</translation>
-</message>
-<message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Veuillez installer la dernière version de &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (au moins la version QOWNNOTESAPI_MIN_VERSION) sur votre serveur ownCloud si vous souhaitez que QOwnNotes ait accès aux versions de notes et aux notes de la corbeille.</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous devez également activer les deux applications natives ownCloud &lt;b&gt;Versions&lt;/b&gt; et &lt;b&gt;Deleted files&lt;/b&gt; sur votre serveur ownCloud (elles devraient l’être par défaut)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;ownCloud sync client&lt;/b&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous aurez toujours besoin du &lt;a href="https://owncloud.org/"&gt;&lt;b&gt;client de synchronisation ownCloud&lt;/b&gt;&lt;/a&gt; (ou une autre application de bureau de synchronisation) pour synchroniser vos notes !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouvre la page &lt;span style=" font-weight:600;"&gt;Configuration de l’application&lt;/span&gt; de votre serveur ownCloud dans votre navigateur web pour installer ou mettre à jour QOwnNotesAPI et permettre d’activer les applications natives &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; et &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>Open your ownCloud server &amp;Apps page</source>
-<translation>Ouvrir la page d’&amp;applications de votre serveur ownCloud</translation>
-</message>
-<message>
-<source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-<translation>Ouvre la page Mot de passe de l’application de votre serveur ownCloud dans votre navigateur Web pour créer un nouveau mot de passe d’application pour l’application</translation>
-</message>
-<message>
-<source>Open your ownCloud server App Password page</source>
-<translation>Ouvrir la page de mot passe d’applications de votre serveur ownCloud</translation>
-</message>
-<message>
-<source>Error Message</source>
-<translation>Message d’erreur</translation>
-</message>
-<message>
-<source>Select a connection to edit</source>
-<translation>Sélectionnez une connexion à modifier</translation>
-</message>
-<message>
-<source>Add connection</source>
-<translation>Ajouter une connexion</translation>
-</message>
-<message>
-<source>Remove connection</source>
-<translation>Supprimer la connexion</translation>
-</message>
-<message>
-<source>Connection name:</source>
-<translation>Nom de la connexion :</translation>
-</message>
-<message>
-<source>ownCloud server url:</source>
-<translation>URL du serveur ownCloud :</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merci d’entrer l'URL de votre serveur ownCloud, par exemple &lt;span style=" font-style:italic;"&gt;https://cloud.votre_serveur.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation>La méthode de connexion v2 ne fonctionne qu’avec Nextcloud, pas avec ownCloud. Si vous rencontrez des problèmes, vous devez créer un mot de passe d’application manuellement.</translation>
-</message>
-<message>
-<source>Login to Nextcloud to grant access</source>
-<translation>Connectez-vous à Nextcloud pour donner accès</translation>
-</message>
-<message>
-<source>Cancel Nextcloud login</source>
-<translation>Annuler la connexion Nextcloud</translation>
-</message>
-<message>
-<source>Username:</source>
-<translation>Nom d’utilisateur :</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merci d’entrer votre nom d'utilisateur sur votre serveur ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>Your ownCloud username</source>
-<translation>Votre nom d’utilisateur ownCloud</translation>
-</message>
-<message>
-<source>Password:</source>
-<translation>Mot de passe :</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merci d’entrer le mot de passe associé à votre nom d'utilisateur.&lt;br/&gt;Le mot de passe sera stocké chiffré avec les autres préférences, mais n’est pas très bien sécurisé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>Your ownCloud password</source>
-<translation>Votre mot de passe ownCloud</translation>
-</message>
-<message>
-<source>If your password doesn't work, create an app password (button on the right)</source>
-<translation>Si votre mot de passe ne fonctionne pas, créez un mot de passe d’application (bouton à droite)</translation>
-</message>
-<message>
-<source>Enable QOwnNotesAPI app support</source>
-<translation>Activer le support de l’application QOwnNotesAPI</translation>
-</message>
-<message>
-<source>Enable Nextcloud Deck support</source>
-<translation>Activer le support de Nextcloud Deck</translation>
-</message>
-<message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliquez ici pour tester la connexion à votre serveur ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-</message>
-<message>
-<source>&amp;Connect to ownCloud server</source>
-<translation>Se &amp;connecter au serveur ownCloud</translation>
-</message>
-<message>
-<source>Connection status</source>
-<translation>État de la connexion</translation>
-</message>
-<message>
-<source>unknown</source>
-<translation>inconnu</translation>
-</message>
-<message>
-<source>connection to web server</source>
-<translation>connexion au serveur web</translation>
-</message>
-<message>
-<source>ownCloud server detected</source>
-<translation>serveur ownCloud détecté</translation>
-</message>
-<message>
-<source>username and password correct</source>
-<translation>nom d’utilisateur et mot de passe corrects</translation>
-</message>
-<message>
-<source>connection to QOwnNotesAPI</source>
-<translation>connexion à QOwnNotesAPI</translation>
-</message>
-<message>
-<source>versions app enabled on server</source>
-<translation>application versions activée sur le serveur</translation>
-</message>
-<message>
-<source>trash app enabled on server</source>
-<translation>application corbeille activée sur le serveur</translation>
-</message>
-<message>
-<source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation>Ce chemin se trouve dans les préférences &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
-</message>
-<message>
-<source>notes path found on server</source>
-<translation>dossier de notes trouvé sur le serveur</translation>
-</message>
-<message>
-<source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation>dossier de notes &lt;b&gt;%1&lt;/b&gt; trouvé sur le serveur</translation>
-</message>
-<message>
-<source>The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</source>
-<translation>La connexion a été réalisée avec succès !
-Version du serveur : %1
-Version de QOwnNotesAPI : %2</translation>
-</message>
-<message>
-<source>There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
-
-Connection error message: </source>
-<translation>Une erreur s'est produite lors de la connexion au serveur ownCloud !
-Vous devez aussi vérifier que QOwnNotesAPI est bien installé et activé !
-
-Le message d'erreur de connexion est : </translation>
-</message>
-</context>
-<context>
 <name>PanelsSettingsWidget</name>
 <message>
 <source>Note search panel</source>
@@ -7131,6 +7494,188 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Failed to unregister %1. Error: %2</source>
 <translation>Échec de la désinscription de %1. Erreur : %2</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::DeletePasswordJobPrivate</name>
+<message>
+<source>Could not open keystore</source>
+<translation>Impossible d’ouvrir le trousseau de clés</translation>
+</message>
+<message>
+<source>Could not remove private key from keystore</source>
+<translation>Impossible de supprimer la clé privée du trousseau</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation>Erreur inconnue</translation>
+</message>
+<message>
+<source>Could not open wallet: %1; %2</source>
+<translation>Impossible d’ouvrir le portefeuille : %1 ; %2</translation>
+</message>
+<message>
+<source>Password entry not found</source>
+<translation>Entrée de mot de passe non trouvée</translation>
+</message>
+<message>
+<source>Could not decrypt data</source>
+<translation>Impossible de déchiffrer les données</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::Job</name>
+<message>
+<source>Both service name and key are empty</source>
+<translation>Le nom du service et la clé sont vides</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::JobPrivate</name>
+<message>
+<source>Unknown error</source>
+<translation>Erreur inconnue</translation>
+</message>
+<message>
+<source>Access to keychain denied</source>
+<translation>Accès au porte-clés refusé</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::PlainTextStore</name>
+<message>
+<source>Could not store data in settings: access error</source>
+<translation>Impossible de stocker les données dans les préférences : erreur d’accès</translation>
+</message>
+<message>
+<source>Could not store data in settings: format error</source>
+<translation>Impossible de stocker les données dans les préférences : erreur de format</translation>
+</message>
+<message>
+<source>Could not delete data from settings: access error</source>
+<translation>Impossible de supprimer les données des préférences : erreur d’accès</translation>
+</message>
+<message>
+<source>Could not delete data from settings: format error</source>
+<translation>Impossible de supprimer les données des préférences : erreur de format</translation>
+</message>
+<message>
+<source>Entry not found</source>
+<translation>Entrée non trouvée</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::ReadPasswordJobPrivate</name>
+<message>
+<source>Entry not found</source>
+<translation>Entrée non trouvée</translation>
+</message>
+<message>
+<source>Could not open keystore</source>
+<translation>Impossible d’ouvrir le trousseau de clés</translation>
+</message>
+<message>
+<source>Could not retrieve private key from keystore</source>
+<translation>Impossible de récupérer la clé privée du trousseau</translation>
+</message>
+<message>
+<source>Could not create decryption cipher</source>
+<translation>Impossible de créer le chiffre de déchiffrement</translation>
+</message>
+<message>
+<source>D-Bus is not running</source>
+<translation>D-Bus n’est pas en fonctionnement</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation>Erreur inconnue</translation>
+</message>
+<message>
+<source>No keychain service available</source>
+<translation>Aucun service de porte-clés disponible</translation>
+</message>
+<message>
+<source>Could not open wallet: %1; %2</source>
+<translation>Impossible d’ouvrir le portefeuille : %1 ; %2</translation>
+</message>
+<message>
+<source>Access to keychain denied</source>
+<translation>Accès au porte-clés refusé</translation>
+</message>
+<message>
+<source>Could not determine data type: %1; %2</source>
+<translation>Impossible de déterminer le type de données : %1 ; %2</translation>
+</message>
+<message>
+<source>Unknown kwallet entry type '%1'</source>
+<translation>Entrée kwallet inconnue : « %1 »</translation>
+</message>
+<message>
+<source>Password entry not found</source>
+<translation>Entrée de mot de passe non trouvée</translation>
+</message>
+<message>
+<source>Could not decrypt data</source>
+<translation>Impossible de déchiffrer les données</translation>
+</message>
+<message>
+<source>Could not decrypt data: %1</source>
+<translation>Impossible de déchiffrer les données : %1</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::WritePasswordJobPrivate</name>
+<message>
+<source>Could not open keystore</source>
+<translation>Impossible d’ouvrir le trousseau de clés</translation>
+</message>
+<message>
+<source>Could not create private key generator</source>
+<translation>Impossible de créer le générateur de clés privées</translation>
+</message>
+<message>
+<source>Could not generate new private key</source>
+<translation>Impossible de génerer une nouvelle clé privée</translation>
+</message>
+<message>
+<source>Could not retrieve private key from keystore</source>
+<translation>Impossible de récupérer la clé privée du trousseau</translation>
+</message>
+<message>
+<source>Could not create encryption cipher</source>
+<translation>Impossible de créer le chiffre de chiffrement</translation>
+</message>
+<message>
+<source>Could not encrypt data</source>
+<translation>Impossible de chiffrer les données</translation>
+</message>
+<message>
+<source>D-Bus is not running</source>
+<translation>D-Bus n’est pas en fonctionnement</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation>Erreur inconnue</translation>
+</message>
+<message>
+<source>Could not open wallet: %1; %2</source>
+<translation>Impossible d’ouvrir le portefeuille : %1 ; %2</translation>
+</message>
+<message>
+<source>Encryption failed: %1</source>
+<translation>Erreur de chiffrement : %1</translation>
+</message>
+<message>
+<source>Credential size exceeds maximum size of %1: %2</source>
+<translation>La taille de l’identifiant excède la taille maximum de %1 : %2</translation>
+</message>
+<message>
+<source>Credential key exceeds maximum size of %1</source>
+<translation>La clé de l’identifiant excède la taille maximum de %1</translation>
+</message>
+<message>
+<source>Writing credentials failed: %1</source>
+<translation>Échec de l’écriture des identifiants : %1</translation>
 </message>
 </context>
 <context>
@@ -7506,6 +8051,50 @@ La mise à jour de l’interface dure un petit instant.</translation>
 <source>Failed to connect to Harper at %1:%2</source>
 <translation>Échec de la connexion à Harper depuis %1:%2</translation>
 </message>
+<message>
+<source>Access to keychain denied</source>
+<translation>Accès au porte-clés refusé</translation>
+</message>
+<message>
+<source>No keyring daemon</source>
+<translation>Pas de démon de porte-clés</translation>
+</message>
+<message>
+<source>Already unlocked</source>
+<translation>Déjà dévérouillé</translation>
+</message>
+<message>
+<source>No such keyring</source>
+<translation>Pas de tel porte-clé</translation>
+</message>
+<message>
+<source>Bad arguments</source>
+<translation>Mauvais arguments</translation>
+</message>
+<message>
+<source>I/O error</source>
+<translation>Erreur d’entrée/sortie</translation>
+</message>
+<message>
+<source>Cancelled</source>
+<translation>Annulé</translation>
+</message>
+<message>
+<source>Keyring already exists</source>
+<translation>Le porte-clés existe déjà</translation>
+</message>
+<message>
+<source>No match</source>
+<translation>Pas de correspondance</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation>Erreur inconnue</translation>
+</message>
+<message>
+<source>Entry not found</source>
+<translation>Entrée non trouvée</translation>
+</message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
@@ -7571,10 +8160,6 @@ La mise à jour de l’interface dure un petit instant.</translation>
 <translation>Formater la sélection</translation>
 </message>
 <message>
-<source>Code actions</source>
-<translation>Actions sur le code</translation>
-</message>
-<message>
 <source>Add table column left</source>
 <translation>Ajouter une colonne de tableau à gauche</translation>
 </message>
@@ -7589,6 +8174,10 @@ La mise à jour de l’interface dure un petit instant.</translation>
 <message>
 <source>Add table row below</source>
 <translation>Ajouter une colonne de tableau en dessous</translation>
+</message>
+<message>
+<source>Edit table</source>
+<translation>Modifier le tableau</translation>
 </message>
 <message>
 <source>Print</source>
@@ -7637,6 +8226,14 @@ La mise à jour de l’interface dure un petit instant.</translation>
 <message>
 <source>Spelling</source>
 <translation>Orthographe</translation>
+</message>
+<message>
+<source>Ignore this rule globally</source>
+<translation>Ignorer cette règle globalement</translation>
+</message>
+<message>
+<source>Ignore rule %1 globally</source>
+<translation>Ignorer la règle %1 globalement</translation>
 </message>
 <message>
 <source>LanguageTool</source>
@@ -8149,7 +8746,7 @@ Voulez-vous quand même l'installer ?</translation>
 <name>ServerBookmarksImportDialog</name>
 <message>
 <source>Import bookmarks</source>
-<translation>Importer les marque-pages</translation>
+<translation>Importer les signets</translation>
 </message>
 <message>
 <source>%v of %m bookmark(s) imported</source>
@@ -8158,8 +8755,8 @@ Voulez-vous quand même l'installer ?</translation>
 <message numerus="yes">
 <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
 <translation>
-<numerusform>&lt;strong&gt; %n signet &lt;/strong&gt; trouvé sur le serveur</numerusform>
-<numerusform>&lt;strong&gt; %n signets &lt;/strong&gt; trouvés sur le serveur</numerusform>
+<numerusform>&lt;strong&gt;%n signet&lt;/strong&gt; trouvé sur le serveur</numerusform>
+<numerusform>&lt;strong&gt;%n signets&lt;/strong&gt; trouvés sur le serveur</numerusform>
 </translation>
 </message>
 </context>
@@ -8188,6 +8785,10 @@ Voulez-vous quand même l'installer ?</translation>
 <message>
 <source>Harper</source>
 <translation>Harper</translation>
+</message>
+<message>
+<source>Markdown LSP</source>
+<translation>LSP Markdown</translation>
 </message>
 <message>
 <source>Shortcuts</source>
@@ -8405,8 +9006,12 @@ Voulez-vous quand même l'installer ?</translation>
 <translation>Partager la note</translation>
 </message>
 <message>
-<source>Share note on ownCloud</source>
-<translation>Partager la note sur owncloud</translation>
+<source>Share note on Nextcloud / ownCloud</source>
+<translation>Partager la note sur Nextcloud / owncloud</translation>
+</message>
+<message>
+<source>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</source>
+<translation>Partager publiquement le fichier de la note actuelle via votre serveur Nextcloud / ownCloud. Vous pouvez envoyer le lien généré à d'autres personnes pour qu'elles puissent voir ou télécharger le fichier.</translation>
 </message>
 <message>
 <source>Allow note editing</source>
@@ -8417,12 +9022,8 @@ Voulez-vous quand même l'installer ?</translation>
 <translation>L’url publique de votre note</translation>
 </message>
 <message>
-<source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation>Partager publiquement le fichier de la note actuelle via votre serveur Owncloud/Nextcloud. Vous pouvez envoyer le lien généré à d'autres personnes pour qu'elles puissent voir ou télécharger le fichier.</translation>
-</message>
-<message>
-<source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation>Gardez à l'esprit que pour pouvoir partager vos notes avec d'autres, vous devez synchroniser vous-même vos notes avec votre serveur en utilisant l'application de bureau Owncloud/Nextcloud !</translation>
+<source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
+<translation>Gardez à l'esprit que pour pouvoir partager vos notes avec d'autres, vous devez synchroniser vous-même vos notes avec votre serveur en utilisant l'application de bureau Nextcloud / ownCloud !</translation>
 </message>
 </context>
 <context>
@@ -9291,10 +9892,6 @@ Cela ne peut être annuler !</translation>
 <translation>Activer la prise en charge de l’agenda des tâches</translation>
 </message>
 <message>
-<source>You can access your ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation>Vous pouvez accéder à votre serveur ownCloud ou à un serveur générique CalDAV pour gérer vos listes de tâches à faire.</translation>
-</message>
-<message>
 <source>Which calendar backend do you want to use?</source>
 <translation>Quelle application de calendrier voulez-vous utiliser ?</translation>
 </message>
@@ -9311,12 +9908,16 @@ Cela ne peut être annuler !</translation>
 <translation>Ancienne version du calendrier ownCloud</translation>
 </message>
 <message>
-<source>For most current ownCloud and Nextcloud installations</source>
-<translation>Pour la plupart des installations courantes de ownCloud et Nextcloud</translation>
+<source>You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</source>
+<translation>Vous pouvez accéder à votre serveur Nextcloud / ownCloud ou à un serveur générique CalDAV pour gérer vos listes de tâches à faire.</translation>
 </message>
 <message>
-<source>Default ownCloud calendar</source>
-<translation>Calendrier ownCloud par défaut</translation>
+<source>For most current Nextcloud / ownCloud installations</source>
+<translation>Pour la plupart des installations courantes de Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Default Nextcloud / ownCloud calendar</source>
+<translation>Calendrier Nextcloud / ownCloud par défaut</translation>
 </message>
 <message>
 <source>CalDAV server settings</source>
@@ -9525,16 +10126,16 @@ Cela ne peut être annuler !</translation>
 <translation>&amp;Restaurer la note sélectionnée depuis le serveur</translation>
 </message>
 <message>
-<source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-<translation>&lt;h3&gt;Lent mais récupère aussi  les versions de la note&lt;/h3&gt;&lt;p&gt;La note sera récupérée du serveur avec toutes ses anciennes versions.&lt;/p&gt;&lt;p&gt;Vous devez attendre jusqu'à ce la synchronisation ownCloud soit terminée pour retrouver la note dans QOwnNotes.&lt;/p&gt;</translation>
-</message>
-<message>
 <source>&amp;Download selected note</source>
 <translation>&amp;Télécharger la note sélectionnée</translation>
 </message>
 <message>
-<source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-<translation>&lt;h3&gt;Rapide mais sans les versions de la note&lt;/h3&gt;&lt;p&gt;La note sera récupérée depuis le texte de la prévisualisation.&lt;/p&gt;&lt;p&gt;Les versions de la note sur votre serveur ne seront pas restaurées et resteront dans la corbeille.&lt;/p&gt;&lt;p&gt;vous pouvez toujours restaurer la note et ses différentes versions plus tard.&lt;/p&gt;</translation>
+<source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
+<translation>&lt;h3&gt;Plus lent, mais récupère aussi les versions de notes&lt;/h3&gt;&lt;p&gt;La note sera récupérée depuis votre serveur Nextcloud / ownCloud avec toutes ses anciennes versions.&lt;/p&gt;&lt;p&gt;Vous devez attendre que la synchronisation Nextcloud / ownCloud soit terminée pour retrouver la note dans QOwnNotes.&lt;/p&gt;</translation>
+</message>
+<message>
+<source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
+<translation>&lt;h3&gt;Plus rapide, mais sans les versions de notes&lt;/h3&gt;&lt;p&gt;La note sera créée avec le texte depuis la prévisualisation.&lt;/p&gt;&lt;p&gt;Les versions de la note sur votre serveur Nextcloud / ownCloud ne seront pas restaurées et resteront dans la corbeille.&lt;/p&gt;&lt;p&gt;Vous pouvez toujours restaurer la note et ses différentes versions plus tard.&lt;/p&gt;</translation>
 </message>
 <message>
 <source>&amp;Delete</source>
@@ -9773,8 +10374,8 @@ Cela ne peut être annuler !</translation>
 <context>
 <name>VersionDialog</name>
 <message>
-<source>Note versions on your ownCloud server</source>
-<translation>Versions de la note sur votre serveur ownCloud</translation>
+<source>Note versions on your Nextcloud / ownCloud server</source>
+<translation>Versions de la note sur votre serveur Nextcloud / ownCloud</translation>
 </message>
 <message>
 <source>Diff</source>
@@ -10096,6 +10697,10 @@ Cela ne peut être annuler !</translation>
 <translation>Bienvenue dans QOwnNotes</translation>
 </message>
 <message>
+<source>Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</source>
+<translation>Prise de notes de fichiers Markdown en texte brut avec intégration Nextcloud / ownCloud</translation>
+</message>
+<message>
 <source>&amp;Back</source>
 <translation>&amp;Retour</translation>
 </message>
@@ -10128,8 +10733,16 @@ Cela ne peut être annuler !</translation>
 <translation>Sélectionner le dossier de notes</translation>
 </message>
 <message>
-<source>Open ownCloud settings</source>
-<translation>Ouvrir les préférences ownCloud</translation>
+<source>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
+<translation>Si vous souhaitez être en mesure d’accéder aux versions de vos notes ou à vos notes à la corbeille sur votre serveur Nextcloud / ownCloud, vous pouvez configurer QOwnNotes maintenant. Vous pourrez aussi le faire plus tard.</translation>
+</message>
+<message>
+<source>Open cloud settings</source>
+<translation>Ouvrir les préférences de cloud</translation>
+</message>
+<message>
+<source>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</source>
+<translation>Dans tous les cas, vous avez besoin du client de synchronisation de Nextcloud / ownCloud (ou de tout autre client de synchronisation) pour synchroniser vos notes avec votre serveur Nextcloud / ownCloud.</translation>
 </message>
 <message>
 <source>Open network settings</source>
@@ -10140,24 +10753,12 @@ Cela ne peut être annuler !</translation>
 <translation>Veuillez sélectionner où vous souhaitez stocker vos notes :</translation>
 </message>
 <message>
-<source>Plain-text file Markdown note-taking with ownCloud integration</source>
-<translation>Prise de notes de fichiers Markdown en texte brut avec intégration ownCloud</translation>
-</message>
-<message>
 <source>Show subfolders</source>
 <translation>Afficher les sous-dossiers</translation>
 </message>
 <message>
 <source>Layout preset</source>
 <translation>Préréglage de disposition</translation>
-</message>
-<message>
-<source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>Si vous souhaitez être en mesure d'accéder aux versions de vos notes ou à vos notes à la corbeille sur votre serveur Owncloud, vous pouvez configurer QOwnNotes maintenant. Vous pourrez aussi le faire plus tard.</translation>
-</message>
-<message>
-<source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-<translation>Dans tous les cas, vous avez besoin du client de synchronisation de Owncloud (ou de tout autre client de synchronisation) pour synchroniser vos notes avec votre serveur Owncloud.</translation>
 </message>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>

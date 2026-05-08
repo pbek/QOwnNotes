@@ -2,7 +2,7 @@
 
 Il existe un snap `qownnotes` dans le [Snap store](https://snapcraft.io/qownnotes).
 
-Vous pouvez l'installer en tapant :
+Vous pouvez l'installer en tapant :
 
 ```bash
 snap install qownnotes

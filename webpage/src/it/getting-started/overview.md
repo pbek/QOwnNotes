@@ -38,7 +38,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - La **cartella delle note** può essere **scelta liberamente** (è possibile scegliere più cartelle delle note)
 - **La ricerca di parole parziali** nelle note è possibile e i risultati di essa sono evidenziati nelle note
 - [**Estensione browser**](browser-extension.md) per **inserire note da testo selezionato**, **fare catture di schermata** o **gestire i tuoi segnalibri**
-- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), and optional [**Harper**](../editor/harper.md) support
+- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), optional [**Harper**](../editor/harper.md), and optional [**Markdown LSP**](../editor/markdownlsp.md) support (e.g. [Marksman](https://github.com/artempyanykh/marksman) for completions and diagnostics, or [Rumdl](https://github.com/rvben/rumdl) for linting)
 - **Modalità portatile** per portare QOwnNotes con te su una chiavetta USB
 - **Supporto allo scripting** e un [**repository di script**](https://github.com/qownnotes/scripts) online da cui puoi installare script nella tua applicazione
 - Built-in **AI support** with script integration for providers like **OpenAI** and **Groq**

@@ -5,7 +5,7 @@ backed by the same bookmark parsing/indexing used by the Web Companion data sour
 
 ## Habilitar en QOwnNotes
 
-1. Abra `Configuración -> Extensión del navegador/fragmentos de órdenes`.
+1. Abra `Configuración -> Extensión del navegador/fragmentos de comandos`.
 2. Enable `Enable socket server`.
 3. In `Bookmark suggestion API`, enable `Enable Homepage-compatible bookmark suggestions API` and set a port.
 

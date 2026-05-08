@@ -1,24 +1,24 @@
-# Install via Nix
+# Installer via Nix
 
-You can install QOwnNotes with the [Nix package manager](https://nixos.org/download/) on [NixOS](https://nixos.org/), other **Linux** distributions, **macOS** and **Windows**. The package name is [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
+Vous pouvez installer QOwnNotes avec le [gestionnaire de paquets Nix](https://nixos.org/download/) sur [NixOS](https://nixos.org/), les autres distributions **Linux**, **macOS** et **Windows**. Le nom du paquet est [qownnotes](https://search.nixos.org/packages?channel=unstable&show=qownnotes).
 
 ::: tip
-Best use the NixOS Unstable channel to get the latest version of QOwnNotes!
+Mieux vaut utiliser le canal NixOS Unstable pour avoir la dernière version de QOwnNotes !
 :::
 
-The package is built with Qt6, uses the system botan3 library and libgit2 and provides shell integration for fish and bash.
+Le paquet est compilé avec Qt6, utilise les bibliothèques botan3 et libgit2 et fournit l’intégration shell pour fish et bash.
 
-See [QOwnNotes on nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) for more information.
+Voir [QOwnNotes sur nix](https://search.nixos.org/packages?channel=unstable&show=qownnotes) pour plus d’informations.
 
-Afterward you should be able to run QOwnNotes with the command `qownnotes` or `QOwnNotes`.
+Vous devriez ensuite pouvoir exécuter QOwnNotes avec la commande `qownnotes` ou `QOwnNotes`.
 
 ::: tip
-The QOwnNotes command-line snippet manager [qc](https://github.com/qownnotes/qc) can also be installed via the [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
+Le gestionnaire de snippets en ligne de commande de QOwnNotes [qc](https://github.com/qownnotes/qc) peut aussi être installé via le [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).
 
-You can use `nix-shell -p qc --run "qc exec"` to try it out.
+Vous pouvez utiliser `nix-shell -p qc --run "qc exec"` pour l’essayer.
 :::
 
 ::: tip
 Info
-On **macOS** the package works natively on **x86 and Apple Silicon**!
+Sur **macOS**, le paquet fonctionne sur **x86 et Apple Silicon** !
 :::

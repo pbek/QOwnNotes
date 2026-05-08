@@ -28,36 +28,36 @@
 - Soporte para **compartir notas** en su servidor de **ownCloud** / **Nextcloud**
 - Administre sus **listas de elementos pendientes** de Nextcloud / ownCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o use otro servidor de **CalDAV** con el cual sincronizar sus tareas
 - Las versiones **antiguas** de sus notas pueden ser **restauradas** desde su servidor de **Nextcloud / ownCloud**
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-  - There are also **local trash** and **system trash** modes
+- **Las notas en la papelera** pueden **restauradas** desde su servidor de **Nextcloud/ownCloud**
+  - También existen modos de **papelera local** y **papelera del sistema**
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
-  - Includes moving and reorganizing subfolders with link updates and selective subfolder visibility
-- Optional **wiki-style note links** like `[[Note]]` with autocomplete, heading anchors, aliases, backlinks, and refactoring support
+  - Incluye la posibilidad de mover y reorganizar subcarpetas con actualizaciones de enlaces y visibilidad selectiva de las mismas
+- Enlaces **opcionales al estilo de wiki** para notas, como `[[Note]]`. Completado automático, anclajes de encabezado, alias, enlaces entrantes y soporte para refactorización
 - **Cifrado** opcional de notas, AES-256 está integrado, o puede utilizar métodos de cifrado personalizados como **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar múltiples carpetas de notas)
 - Es posible **buscar partes de palabras** en las notas. Los resultados de la búsqueda se resaltan en las notas
 - [**Extensión del navegador**](browser-extension.md) para **agregar notas a partir del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
-- [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), and optional [**Harper**](../editor/harper.md) support
+- Compatibilidad con [**corrector ortográfico**](../editor/spellchecking.md), [**LanguageTool**](../editor/languagetool.md) opcional, [**Harper**](../editor/harper.md) opcional, y [**Markdown LSP**](../editor/markdownlsp.md) opcional (por ejemplo, [Marksman](https://github.com/artempyanykh/marksman) para completado y diagnósticos, o [Rumdl](https://github.com/rvben/rumdl) para linting)
 - **Modo portátil** para llevar consigo QOwnNotes en memorias USB
 - **Soporte de secuencias de órdenes** y un [**repositorio de scripts**](https://github.com/qownnotes/scripts) en línea desde el que puede instalar scripts dentro de la aplicación
-- Built-in **AI support** with script integration for providers like **OpenAI** and **Groq**
-  - Includes a built-in **MCP server** so external AI agents can search and fetch notes securely
+- Soporte de **IA** integrado con integración de scripts para proveedores como **OpenAI** y **Groq**
+  - Incluye un servidor **MCP** integrado para que los agentes de IA externos puedan buscar y recuperar notas de forma segura
 - **Modo Vim**
 - **[Aplicación web](web-app.md)** para **insertar fotos desde su teléfono móvil** en la nota actual en QOwnNotes en su escritorio
 
 ## Apariencia
 
 - **Resaltado de Markdown** de notas y un **modo de vista previa de Markdown**
-  - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+  - Incluye **vistas previas de imágenes en línea**, **plegado de encabezados de Markdown** y ocultación opcional de la sintaxis de formato Markdown
+- **Compatibilidad con tema de modo oscuro** con cambio en vivo y modos de color personalizados</strong>
 - **Soporte de temas** para el **resaltador de sintáxis de Markdown**
 - Todos los paneles **pueden colocarse donde desee**, incluso pueden **flotar** o **apilar** (totalmente acoplables)
 - Soporte para **iconos de tema de escritorio gratuito**, puede usar QOwnNotes con sus **iconos de escritorio nativos** y con su **tema de escritorio oscuro favorito**
 - **Modo sin distracciones**, **Modo de pantalla completa** y **Modo de máquina de escribir**
 - **Números de línea**
-- **Block selection** and other power-user editor workflows
-- Support for **global keyboard shortcuts on Wayland**
+- **Selección de bloque** y otros flujos de trabajo de editor para usuarios avanzados
+- Compatibilidad con **atajos de teclado globales en Wayland**
 - **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
 
 ## Idioma

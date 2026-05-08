@@ -26,9 +26,9 @@ Si encuentra algún problema, ¡por favor repórtelo en la página de [incidenci
 
 ## QOwnNotes Qt5 Legado
 
-Para versiones anteriores de Ubuntu Linux, como 18.04 o más reciente, elementary OS, o Linux Mint 18 o más reciente, puede usar la versión QOwnNotes con Qt5.
+Para versiones anteriores compatibles de Ubuntu Linux, elementary OS, o Linux Mint 18 o más reciente, puede usar la versión de QOwnNotes con Qt5.
 
-Instale **QOwnNotes** en **Ubuntu Linux** (mínimo 18.04) usando el repositorio PPA.
+Instale **QOwnNotes** en **Ubuntu Linux** (mínimo 20.04) usando el repositorio PPA.
 
 Tenga en cuenta que también hay paquetes para ARM en el repositorio, en caso de que desee utilizar QOwnNotes en una **Raspberry Pi**.
 
@@ -54,13 +54,13 @@ También puede usar QOwnNotes en versiones de Ubuntu que ya no se actualizan má
 
 A continuación se muestran llamadas de ejemplo para el repositorio de xUbuntu 24.04.
 
-Ejecute la orden de consola siguiente para marcar el repositorio como de fiar.
+Ejecute el comando de consola siguiente para marcar el repositorio como de fiar.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04/Release.key -O - | sudo apt-key add -
 ```
 
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
+Ejecute los comandos de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 sudo su -

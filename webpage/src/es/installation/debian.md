@@ -2,7 +2,7 @@
 
 ## Debian Inestable
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
+Ejecute los comandos de consola siguientes para marcar el repositorio como de fiar: Puede que necesite repetir este paso cuando la clave expire.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -11,7 +11,7 @@ curl --silent --show-error --location http://download.opensuse.org/repositories/
 sudo chmod u=rw,go=r "${SIGNED_BY}"
 ```
 
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
+Ejecute los comandos de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -38,7 +38,7 @@ curl --silent --show-error --location http://download.opensuse.org/repositories/
 sudo chmod u=rw,go=r "${SIGNED_BY}"
 ```
 
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
+Ejecute los comandos de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -56,7 +56,7 @@ Este paquete está construido con Qt6.
 
 ## Debian 12.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
+Ejecute los comandos de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -65,7 +65,7 @@ curl --silent --show-error --location http://download.opensuse.org/repositories/
 sudo chmod u=rw,go=r "${SIGNED_BY}"
 ```
 
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
+Ejecute los comandos de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -83,7 +83,7 @@ Este paquete está construido con Qt6.
 
 ## Debian 11.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
+Ejecute los comandos de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -92,7 +92,7 @@ curl --silent --show-error --location http://download.opensuse.org/repositories/
 sudo chmod u=rw,go=r "${SIGNED_BY}"
 ```
 
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
+Ejecute los comandos de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
@@ -110,13 +110,13 @@ Si utiliza este repositorio para otras versiones de Debian Linux, por favor aseg
 
 ## Debian 10.0
 
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
+Ejecute los comandos de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
 ```
 
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
+Ejecute los comandos de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/ /' >> /etc/apt/sources.list.d/qownnotes.list"
@@ -129,25 +129,3 @@ Si utiliza este repositorio para otras versiones de Debian Linux, por favor aseg
 :::
 
 [Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10)
-
-## Debian 9.0
-
-Ejecute las órdenes de consola siguientes para marcar el repositorio como de fiar. Puede que necesite repetir este paso cuando la clave expire.
-
-```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
-```
-
-Ejecute las órdenes de consola siguientes para añadir el repositorio e instalar QOwnNotes desde allí.
-
-```bash
-sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
-sudo apt-get update
-sudo apt-get install qownnotes
-```
-
-::: tip
-Si utiliza este repositorio para otras versiones de Debian Linux, por favor asegúrese de tener **Qt** instalado al menos en la **versión 5.5**.
-:::
-
-[Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0)

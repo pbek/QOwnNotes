@@ -1,6 +1,6 @@
-# Parámetros de la interfaz de las órdenes de terminal
+# Parámetros de la interfaz de comandos de terminal
 
-Puede utilizar estos parámetros en la interfaz de las órdenes de terminal (CLI) para controlar el comportamiento de la aplicación:
+Puede utilizar estos parámetros en la interfaz de las comandos de terminal (CLI) para controlar el comportamiento de la aplicación:
 
 | Parámetro                    | Descripción                                                                                                                              |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,9 +23,9 @@ QOwnNotes --session test
 
 :::
 
-Puede ejecutar la aplicación en la interfaz de órdenes de terminal de manera diferente en diferentes sistemas operativos:
+Puede ejecutar la aplicación en la interfaz de comandos de terminal de manera diferente en diferentes sistemas operativos:
 
-| Sistema Operativo | Orden                                                  |
+| Sistema Operativo | Comando                                                |
 | ----------------- | ------------------------------------------------------ |
 | Linux             | `QOwnNotes` (o `qownnotes` si se instaló como snap)    |
 | macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes` |
