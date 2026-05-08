@@ -333,8 +333,6 @@ QString LinkDialog::getTitleFromHtml(const QString &html) {
     // replace some other characters we don't want
     title.replace(QStringLiteral("["), QStringLiteral("("))
         .replace(QStringLiteral("]"), QStringLiteral(")"))
-        .replace(QStringLiteral("<"), QStringLiteral("("))
-        .replace(QStringLiteral(">"), QStringLiteral(")"))
         .replace(QStringLiteral("&#8211;"), QStringLiteral("-"))
         .replace(QStringLiteral("&#124;"), QStringLiteral("-"))
         .replace(QStringLiteral("&#038;"), QStringLiteral("&"))
