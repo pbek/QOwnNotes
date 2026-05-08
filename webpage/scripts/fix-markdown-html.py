@@ -44,6 +44,39 @@ def fix_markdown_content(content):
     content = re.sub(r'<p>\s*$', '', content, flags=re.MULTILINE)
     content = re.sub(r'^</p>\s*$', '', content, flags=re.MULTILINE)
 
+    # Crowdin sometimes appends raw HTML closing tags after translated markdown
+    # emphasis, for example `**text**</strong>`. Vue treats those as invalid
+    # template syntax, so remove only unmatched inline closing tags.
+    def remove_orphaned_inline_closing_tags(text):
+        for tag in ('strong', 'em', 'b', 'i', 'span'):
+            open_pattern = re.compile(rf'<{tag}(?:\s+[^>]*)?>', re.IGNORECASE)
+            close_pattern = re.compile(rf'</{tag}>', re.IGNORECASE)
+            result = []
+            cursor = 0
+            open_count = 0
+
+            for match in re.finditer(rf'<{tag}(?:\s+[^>]*)?>|</{tag}>', text, re.IGNORECASE):
+                result.append(text[cursor:match.start()])
+                token = match.group(0)
+
+                if open_pattern.fullmatch(token):
+                    open_count += 1
+                    result.append(token)
+                elif close_pattern.fullmatch(token):
+                    if open_count > 0:
+                        open_count -= 1
+                        result.append(token)
+                    # Otherwise skip the orphaned closing tag.
+
+                cursor = match.end()
+
+            result.append(text[cursor:])
+            text = ''.join(result)
+
+        return text
+
+    content = remove_orphaned_inline_closing_tags(content)
+
     # Fix 2: Remove numbered HTML tags like </0>, <0>, etc.
     content = re.sub(r'</?[0-9]+>', '', content)
 
@@ -218,4 +251,3 @@ if __name__ == '__main__':
         sys.exit(1)
 
     sys.exit(process_markdown_files(src_dir))
-
