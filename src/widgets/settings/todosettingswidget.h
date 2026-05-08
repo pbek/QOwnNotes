@@ -19,6 +19,8 @@
 #include "entities/cloudconnection.h"
 #include "services/cloudservice.h"
 
+class QTimer;
+
 struct CalDAVCalendarData;
 
 namespace Ui {
@@ -57,5 +59,7 @@ class TodoSettingsWidget : public QWidget {
 
    private:
     Ui::TodoSettingsWidget *ui;
+    QTimer *_calendarReloadTimer;
     void reloadCalendarList();
+    void scheduleCalendarListReload();
 };

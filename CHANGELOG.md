@@ -2,6 +2,10 @@
 
 ## 26.5.7
 
+- Fixed the **Todo settings** cloud connection selector initialization and made
+  calendar backend changes debounce calendar-list reloads while ignoring stale
+  replies, preventing slow repeated backend switches and related crashes
+  (for [#3605](https://github.com/pbek/QOwnNotes/issues/3605))
 - Fixed a possible crash when script initialization triggered synchronous URL
   downloads while settings/calendar actions requested another scripting engine
   reload; nested reloads are now coalesced until the current reload finishes

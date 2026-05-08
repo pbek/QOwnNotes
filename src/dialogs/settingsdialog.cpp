@@ -124,6 +124,27 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
     ui->gitSettingsWidget->initialize();
 
+    // Update cloud connection combo boxes when cloud settings change
+    connect(ui->cloudSettingsWidget, &CloudSettingsWidget::cloudConnectionsChanged,
+            [this](const QList<CloudConnection> &connections) {
+                ui->noteFolderSettingsWidget->populateCloudConnectionComboBox(
+                    connections, NoteFolder::currentNoteFolder().getCloudConnectionId());
+                ui->todoSettingsWidget->populateCloudConnectionComboBox(
+                    connections, CloudConnection::currentTodoCalendarCloudConnection().getId());
+            });
+
+    // Connect todo settings widget signals before readSettings(), because todo
+    // settings may request an initial calendar list reload when no list is cached.
+    connect(ui->todoSettingsWidget, &TodoSettingsWidget::storeSettingsRequested, this, [this]() {
+        ui->cloudSettingsWidget->storeSettings();
+        ui->todoSettingsWidget->storeSettings();
+    });
+    connect(ui->todoSettingsWidget, &TodoSettingsWidget::reloadCalendarListRequested, this,
+            [this]() {
+                CloudService *cloud = CloudService::instance(true);
+                cloud->settingsGetCalendarList(this);
+            });
+
     readSettings();
 
     // initializes the main splitter
@@ -180,24 +201,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     // Connect note folder settings widget signals
     connect(ui->noteFolderSettingsWidget, &NoteFolderSettingsWidget::storeSettingsRequested, this,
             &SettingsDialog::storeSettings);
-
-    // Update cloud connection combo boxes when cloud settings change
-    connect(ui->cloudSettingsWidget, &CloudSettingsWidget::cloudConnectionsChanged,
-            [this](const QList<CloudConnection> &connections) {
-                ui->noteFolderSettingsWidget->populateCloudConnectionComboBox(
-                    connections, NoteFolder::currentNoteFolder().getCloudConnectionId());
-                ui->todoSettingsWidget->populateCloudConnectionComboBox(
-                    connections, CloudConnection::currentTodoCalendarCloudConnection().getId());
-            });
-
-    // Connect todo settings widget signals
-    connect(ui->todoSettingsWidget, &TodoSettingsWidget::storeSettingsRequested, this,
-            &SettingsDialog::storeSettings);
-    connect(ui->todoSettingsWidget, &TodoSettingsWidget::reloadCalendarListRequested, this,
-            [this]() {
-                CloudService *cloud = CloudService::instance(true);
-                cloud->settingsGetCalendarList(this);
-            });
 
     connect(ui->aiSettingsWidget, &AiSettingsWidget::searchScriptRepositoryRequested, this,
             [this]() { ui->scriptingSettingsWidget->searchScriptInRepository(); });

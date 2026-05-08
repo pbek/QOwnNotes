@@ -16,6 +16,7 @@
 
 #include <QDesktopServices>
 #include <QRegularExpression>
+#include <QTimer>
 #include <QUrl>
 
 #include "entities/calendaritem.h"
@@ -27,8 +28,15 @@
 #include "utils/misc.h"
 
 TodoSettingsWidget::TodoSettingsWidget(QWidget *parent)
-    : QWidget(parent), ui(new Ui::TodoSettingsWidget) {
+    : QWidget(parent), ui(new Ui::TodoSettingsWidget), _calendarReloadTimer(new QTimer(this)) {
     ui->setupUi(this);
+
+    _calendarReloadTimer->setSingleShot(true);
+    _calendarReloadTimer->setInterval(300);
+    connect(_calendarReloadTimer, &QTimer::timeout, this, [this]() {
+        emit storeSettingsRequested();
+        reloadCalendarList();
+    });
 
     // Hide CalDAV settings by default
     ui->calDavCalendarGroupBox->hide();
@@ -286,6 +294,8 @@ void TodoSettingsWidget::populateCloudConnectionComboBox(QList<CloudConnection> 
 }
 
 void TodoSettingsWidget::on_reloadCalendarListButton_clicked() {
+    _calendarReloadTimer->stop();
+
     // We need to store the calendar backend via the dialog
     emit storeSettingsRequested();
 
@@ -304,21 +314,29 @@ void TodoSettingsWidget::reloadCalendarList() {
     emit reloadCalendarListRequested();
 }
 
+void TodoSettingsWidget::scheduleCalendarListReload() {
+    if (!CloudService::isTodoCalendarSupportEnabled()) {
+        return;
+    }
+
+    _calendarReloadTimer->start();
+}
+
 void TodoSettingsWidget::on_defaultCloudCalendarRadioButton_toggled(bool checked) {
     if (checked) {
-        on_reloadCalendarListButton_clicked();
+        scheduleCalendarListReload();
     }
 }
 
 void TodoSettingsWidget::on_legacyOwnCloudCalendarRadioButton_toggled(bool checked) {
     if (checked) {
-        on_reloadCalendarListButton_clicked();
+        scheduleCalendarListReload();
     }
 }
 
 void TodoSettingsWidget::on_calDavCalendarRadioButton_toggled(bool checked) {
     if (checked) {
-        on_reloadCalendarListButton_clicked();
+        scheduleCalendarListReload();
     }
 
     ui->calDavCalendarGroupBox->setVisible(checked);
@@ -327,7 +345,7 @@ void TodoSettingsWidget::on_calDavCalendarRadioButton_toggled(bool checked) {
 
 void TodoSettingsWidget::on_calendarPlusRadioButton_toggled(bool checked) {
     if (checked) {
-        on_reloadCalendarListButton_clicked();
+        scheduleCalendarListReload();
     }
 }
 
@@ -352,7 +370,7 @@ void TodoSettingsWidget::on_calendarCloudConnectionComboBox_currentIndexChanged(
     SettingsService settings;
     settings.setValue(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
                       ui->calendarCloudConnectionComboBox->currentData().toInt());
-    on_reloadCalendarListButton_clicked();
+    scheduleCalendarListReload();
 }
 
 void TodoSettingsWidget::on_todoCalendarSupportCheckBox_toggled() {

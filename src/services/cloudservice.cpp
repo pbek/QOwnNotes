@@ -12,6 +12,7 @@
 #include <QDomDocument>
 #include <QDomNodeList>
 #include <QEventLoop>
+#include <QIODevice>
 #include <QJSEngine>
 #include <QJSValueIterator>
 #include <QJsonDocument>
@@ -618,6 +619,8 @@ void CloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     }
 
     settingsDialog = dialog;
+    const int requestId = ++_settingsCalendarListRequestId;
+    const QPointer<SettingsDialog> requestDialog(dialog);
 
     QUrl url(todoCalendarServerUrl);
     QNetworkRequest r(url);
@@ -639,8 +642,9 @@ void CloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/xml"));
     r.setRawHeader(QByteArray("Depth"), QByteArray("1"));
-    auto *buffer = new QBuffer(dataToSend);
     auto *calNetworkManager = new QNetworkAccessManager(this);
+    auto *buffer = new QBuffer(dataToSend, calNetworkManager);
+    buffer->open(QIODevice::ReadOnly);
 
     QObject::connect(calNetworkManager,
                      SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
@@ -656,8 +660,8 @@ void CloudService::settingsGetCalendarList(SettingsDialog *dialog) {
             QList<CalDAVCalendarData> calendarDataList = parseCalendarData(data);
 
 #ifndef INTEGRATION_TESTS
-            if (settingsDialog != nullptr) {
-                settingsDialog->refreshTodoCalendarList(calendarDataList);
+            if ((requestId == _settingsCalendarListRequestId) && !requestDialog.isNull()) {
+                requestDialog->refreshTodoCalendarList(calendarDataList);
             }
 #endif
         } else {
@@ -668,6 +672,9 @@ void CloudService::settingsGetCalendarList(SettingsDialog *dialog) {
         }
 
         reply->deleteLater();
+        buffer->close();
+        buffer->deleteLater();
+        delete dataToSend;
         calNetworkManager->deleteLater();
     });
 

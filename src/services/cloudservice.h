@@ -118,6 +118,7 @@ class CloudService : public QObject {
     ShareDialog *shareDialog;
     static const QString rootPath;
     static const QString format;
+    int _settingsCalendarListRequestId = 0;
     QString versionListPath;
     QString trashListPath;
     QString appInfoPath;
