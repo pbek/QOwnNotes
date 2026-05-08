@@ -2,6 +2,8 @@
 
 ## 26.5.7
 
+- Note text edit **List operations** now work on the current line when no text is
+  selected, so they can be used directly from the cursor position (for [#3603](https://github.com/pbek/QOwnNotes/issues/3603))
 - Fixed the **Todo settings** cloud connection selector initialization and made
   calendar backend changes debounce calendar-list reloads while ignoring stale
   replies, preventing slow repeated backend switches and related crashes

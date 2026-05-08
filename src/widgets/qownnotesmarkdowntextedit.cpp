@@ -1510,6 +1510,8 @@ void QOwnNotesMarkdownTextEdit::insertBlockQuote() {
 QTextCursor QOwnNotesMarkdownTextEdit::fullLineSelectionCursor() const {
     QTextCursor cursor = textCursor();
     if (!cursor.hasSelection()) {
+        cursor.movePosition(QTextCursor::StartOfBlock);
+        cursor.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
         return cursor;
     }
 
