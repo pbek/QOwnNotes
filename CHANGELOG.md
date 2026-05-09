@@ -18,7 +18,8 @@
 ## 26.5.7
 
 - Note text edit **List operations** now work on the current line when no text is
-  selected, so they can be used directly from the cursor position (for [#3603](https://github.com/pbek/QOwnNotes/issues/3603))
+  selected, so they can be used directly from the cursor position
+  (for [#3603](https://github.com/pbek/QOwnNotes/issues/3603))
 - Fixed the **Todo settings** cloud connection selector initialization and made
   calendar backend changes debounce calendar-list reloads while ignoring stale
   replies, preventing slow repeated backend switches and related crashes
@@ -37,7 +38,8 @@
 
 - Note folder **Subfolder visibility** selections now keep parent folders
   selected with a partial check state when some or all subfolders are unchecked
-  individually, while checking a parent still selects its subfolders (for [#3602](https://github.com/pbek/QOwnNotes/issues/3602))
+  individually, while checking a parent still selects its subfolders
+  (for [#3602](https://github.com/pbek/QOwnNotes/issues/3602))
 - Fixed a possible crash when opening the settings dialog by synchronizing access
   to the shared settings cache while background tasks may read or write settings
   (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
