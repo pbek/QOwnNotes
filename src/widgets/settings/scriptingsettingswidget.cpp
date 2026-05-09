@@ -66,7 +66,8 @@ void ScriptingSettingsWidget::initialize() {
     searchScriptAction->setIcon(QIcon::fromTheme(
         QStringLiteral("edit-find"), QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
     searchScriptAction->setToolTip(tr("Find a script in the script repository"));
-    connect(searchScriptAction, SIGNAL(triggered()), this, SLOT(searchScriptInRepository()));
+    connect(searchScriptAction, &QAction::triggered, this,
+            [this]() { searchScriptInRepository(); });
 
     QAction *updateScriptAction = addScriptMenu->addAction(tr("Check for script updates"));
     updateScriptAction->setIcon(QIcon::fromTheme(

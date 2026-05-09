@@ -2,6 +2,11 @@
 
 ## 26.5.8
 
+- Fixed the **script repository dialog** not opening when triggered from the
+  script settings page via the _Add script_ button drop-down menu; the action
+  was connected using old-style `SIGNAL/SLOT` macros to a method not declared
+  as a slot, causing the connection to silently fail
+  (for [#3607](https://github.com/pbek/QOwnNotes/issues/3607))
 - Improved **settings dialog** open and close performance
   (for [#3606](https://github.com/pbek/QOwnNotes/issues/3606))
   - The shortcut settings tree is now built lazily — it is only constructed when
