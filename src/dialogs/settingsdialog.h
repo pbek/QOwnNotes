@@ -129,6 +129,9 @@ class SettingsDialog : public MasterDialog {
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
     QHash<int, bool> _pageInitialized;
+    // Maps action objectName -> shortcut widget for fast lookup in storeShortcutSettings()
+    QHash<QString, QKeySequenceWidget *> _shortcutWidgetMap;
+    QHash<QString, QKeySequenceWidget *> _globalShortcutWidgetMap;
     bool _initialDarkMode = false;
     bool _initialDarkModeColors = false;
     bool _initialDarkModeTrayIcon = false;

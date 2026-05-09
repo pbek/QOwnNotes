@@ -1,5 +1,20 @@
 # QOwnNotes Changelog
 
+## 26.5.8
+
+- Improved **settings dialog** open and close performance
+  (for [#3606](https://github.com/pbek/QOwnNotes/issues/3606))
+  - The shortcut settings tree is now built lazily — it is only constructed when
+    the user actually navigates to the _Shortcuts_ page, instead of on every
+    dialog open. This is the largest single win and makes the dialog open nearly
+    instantly in the common case where shortcuts are not being edited.
+  - `storeShortcutSettings()` now uses pre-built `QHash` lookup maps populated
+    during `loadShortcutSettings()`, replacing the previous O(n²) recursive tree
+    traversal with O(1) per-action widget lookups.
+  - The QML scripting engine is no longer restarted unconditionally on every OK
+    press; it is now only reloaded when the enabled state of at least one script
+    actually changed.
+
 ## 26.5.7
 
 - Note text edit **List operations** now work on the current line when no text is

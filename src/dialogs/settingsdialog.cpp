@@ -363,9 +363,6 @@ void SettingsDialog::readSettings() {
     ui->networkSettingsWidget->readSettings();
     ui->editorFontColorSettingsWidget->readSettings();
 
-    // Load the shortcut settings
-    loadShortcutSettings();
-
     // Load git settings
     ui->gitSettingsWidget->readSettings();
 
@@ -413,6 +410,10 @@ void SettingsDialog::loadShortcutSettings() {
     ui->shortcutTreeWidget->clear();
     ui->shortcutTreeWidget->setColumnCount(3);
 
+    // Clear the cached widget maps so storeShortcutSettings() can rebuild them
+    _shortcutWidgetMap.clear();
+    _globalShortcutWidgetMap.clear();
+
     // shortcuts on toolbars and note folders don't work yet
     const QStringList disabledMenuNames = QStringList() << QStringLiteral("menuToolbars")
                                                         << QStringLiteral("noteFoldersMenu");
@@ -427,8 +428,18 @@ void SettingsDialog::loadShortcutSettings() {
     const QList<QMenu *> menus =
         mainWindow->menuBar()->findChildren<QMenu *>(QString(), Qt::FindDirectChildrenOnly);
 
+    // Show a progress bar so the user gets visual feedback while shortcuts load
+    ui->shortcutLoadingProgressBar->setMaximum(menus.size());
+    ui->shortcutLoadingProgressBar->setValue(0);
+    ui->shortcutLoadingProgressBar->setVisible(true);
+
+    int menuIndex = 0;
+
     // loop through all top-level menus and build the tree recursively
     for (const QMenu *menu : menus) {
+        ui->shortcutLoadingProgressBar->setValue(++menuIndex);
+        qApp->processEvents(QEventLoop::ExcludeUserInputEvents);
+
         if (disabledMenuNames.contains(menu->objectName())) {
             continue;
         }
@@ -437,6 +448,8 @@ void SettingsDialog::loadShortcutSettings() {
                                  shortcutButtonInactiveColor, disableShortcutButtonIcon,
                                  clearButtonIcon, disabledMenuNames);
     }
+
+    ui->shortcutLoadingProgressBar->setVisible(false);
 
     Utils::Gui::initTreeWidgetHeaderOrderPersistence(
         ui->shortcutTreeWidget, QStringLiteral("SettingsDialog/shortcutTreeWidgetHeaderOrder"));
@@ -563,6 +576,9 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
         frame->setLayout(frameLayout);
         ui->shortcutTreeWidget->setItemWidget(actionItem, 1, frame);
 
+        // Store the local shortcut widget in the map for O(1) lookup during store
+        _shortcutWidgetMap[actionObjectName] = keyWidget;
+
         // create the key widget for the global shortcut
         auto *globalShortcutKeyWidget = new QKeySequenceWidget();
         globalShortcutKeyWidget->setFixedWidth(240);
@@ -577,6 +593,9 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
                 .toString());
 
         ui->shortcutTreeWidget->setItemWidget(actionItem, 2, globalShortcutKeyWidget);
+
+        // Store the global shortcut widget in the map for O(1) lookup during store
+        _globalShortcutWidgetMap[actionObjectName] = globalShortcutKeyWidget;
     }
 }
 
@@ -724,57 +743,53 @@ QKeySequenceWidget *SettingsDialog::findGlobalKeySequenceWidget(const QString &o
  * Stores the local and global keyboard shortcut settings
  */
 void SettingsDialog::storeShortcutSettings() {
-    SettingsService settings;
-    MainWindow *mainWindow = MainWindow::instance();
-
-    if (mainWindow == nullptr) {
+    // If the shortcut page was never visited, the tree was never built —
+    // nothing to store
+    if (_shortcutWidgetMap.isEmpty() && _globalShortcutWidgetMap.isEmpty()) {
         return;
     }
 
-    // Store shortcuts by iterating through the actual menu actions (the same
-    // way initShortcuts reads them) and looking up the corresponding widgets
-    // in the tree. This avoids any issues with tree widget item traversal.
-    const QList<QMenu *> menus = mainWindow->menuList();
+    SettingsService settings;
 
-    for (QMenu *menu : menus) {
-        for (QAction *action : menu->actions()) {
-            const QString actionObjectName = action->objectName();
+    // Use the pre-built hash maps populated during loadShortcutSettings() for
+    // O(1) per-action lookup instead of O(n) recursive tree traversal
+    for (auto it = _shortcutWidgetMap.constBegin(); it != _shortcutWidgetMap.constEnd(); ++it) {
+        const QString &actionObjectName = it.key();
+        QKeySequenceWidget *keyWidget = it.value();
 
-            if (actionObjectName.isEmpty()) {
-                continue;
-            }
+        if (keyWidget == nullptr) {
+            continue;
+        }
 
-            // Find the key sequence widget for this action in the tree
-            auto *keyWidget = findKeySequenceWidget(actionObjectName);
+        QKeySequence keySequence = keyWidget->keySequence();
+        QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
+        const QString settingsKey = QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
 
-            if (keyWidget != nullptr) {
-                QKeySequence keySequence = keyWidget->keySequence();
-                QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
-                const QString settingsKey =
-                    QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
+        // Remove or store the setting for the shortcut if it differs from default
+        if (keySequence == defaultKeySequence) {
+            settings.remove(settingsKey);
+        } else {
+            settings.setValue(settingsKey, keySequence.toString());
+        }
+    }
 
-                // remove or store the setting for the shortcut if it's not default
-                if (keySequence == defaultKeySequence) {
-                    settings.remove(settingsKey);
-                } else {
-                    settings.setValue(settingsKey, keySequence.toString());
-                }
-            }
+    for (auto it = _globalShortcutWidgetMap.constBegin(); it != _globalShortcutWidgetMap.constEnd();
+         ++it) {
+        const QString &actionObjectName = it.key();
+        QKeySequenceWidget *globalWidget = it.value();
 
-            // Find the global shortcut widget for this action in the tree
-            auto *globalWidget = findGlobalKeySequenceWidget(actionObjectName);
+        if (globalWidget == nullptr) {
+            continue;
+        }
 
-            if (globalWidget != nullptr) {
-                QKeySequence keySequence = globalWidget->keySequence();
-                const QString settingsKey =
-                    QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName;
+        QKeySequence keySequence = globalWidget->keySequence();
+        const QString settingsKey =
+            QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName;
 
-                if (keySequence.isEmpty()) {
-                    settings.remove(settingsKey);
-                } else {
-                    settings.setValue(settingsKey, keySequence.toString());
-                }
-            }
+        if (keySequence.isEmpty()) {
+            settings.remove(settingsKey);
+        } else {
+            settings.setValue(settingsKey, keySequence.toString());
         }
     }
 }
@@ -1102,6 +1117,11 @@ bool SettingsDialog::initializePage(int index) {
         } break;
         case SettingsPages::ScriptingPage: {
             ui->scriptingSettingsWidget->initialize();
+        } break;
+        case SettingsPages::ShortcutPage: {
+            // Lazy-load the shortcut settings tree only when the user navigates
+            // to the Shortcut page for the first time, not at every dialog open
+            loadShortcutSettings();
         } break;
         case SettingsPages::CloudPage: {
             ui->cloudSettingsWidget->initialize();
