@@ -1184,6 +1184,15 @@ void QOwnNotesMarkdownTextEdit::insertWikiLink() {
 }
 
 void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
+    if (isReadOnly() || !Utils::Misc::isNoteEditingAllowed()) {
+        if (openLinkAtCursorPosition()) {
+            MainWindow::instance()->showStatusBarMessage(
+                tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
+        }
+
+        return;
+    }
+
     // attempt to toggle a checkbox at the cursor position
     if (Utils::Gui::toggleCheckBoxAtCursor(this)) {
         return;
@@ -1196,6 +1205,14 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         Note::isWikiLinkSupportEnabled() &&
         wikiLinkAutoComplete(wikiResultList, wikiFilterText, wikiReplaceLength);
 
+    // Don't treat typing inside a wiki-link target as an activation request.
+    // This prevents completing the leading "[[" from opening or creating the note.
+    if (!wikiContextActive && openLinkAtCursorPosition()) {
+        MainWindow::instance()->showStatusBarMessage(
+            tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
+        return;
+    }
+
     if (_markdownLspEnabled && _markdownLspClient && !_markdownLspUri.isEmpty()) {
         const QTextCursor cursor = textCursor();
         const int line = cursor.blockNumber();
@@ -1205,14 +1222,6 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         if (_markdownLspCompletionRequestId >= 0) {
             return;
         }
-    }
-
-    // Don't treat typing inside a wiki-link target as an activation request.
-    // This prevents completing the leading "[[" from opening or creating the note.
-    if (!wikiContextActive && openLinkAtCursorPosition()) {
-        MainWindow::instance()->showStatusBarMessage(
-            tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
-        return;
     }
 
     // attempt a Markdown table auto-format
@@ -3145,7 +3154,18 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                                             << Qt::Key_BraceLeft << Qt::Key_BracketLeft
                                             << Qt::Key_Plus << Qt::Key_Comma << Qt::Key_Period;
 
-                const auto controlModifierKeys = QList<int>() << Qt::Key_V << Qt::Key_Space;
+                if ((keyEvent->key() == Qt::Key_Space) &&
+                    keyEvent->modifiers().testFlag(Qt::ControlModifier)) {
+                    if (openLinkAtCursorPosition()) {
+                        MainWindow::instance()->showStatusBarMessage(
+                            tr("An url was opened at the current cursor position"),
+                            QStringLiteral("📃"), 5000);
+                    }
+
+                    return true;
+                }
+
+                const auto controlModifierKeys = QList<int>() << Qt::Key_V;
 
                 // show notification if user tries to edit a note while
                 // note editing is turned off

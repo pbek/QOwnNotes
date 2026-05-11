@@ -3311,7 +3311,7 @@ void MainWindow::updateActionUiEnabled() {
     setMenuEnabled(ui->menuFormat, allowEditing);
     ui->actionPaste_image->setEnabled(allowEditing);
     ui->actionReplace_in_current_note->setEnabled(allowEditing);
-    ui->actionAutocomplete->setEnabled(allowEditing);
+    ui->actionAutocomplete->setEnabled(isNoteEditPaneEnabled());
     ui->actionSplit_note_at_cursor_position->setEnabled(allowEditing);
 
     // The note text edit context menu submenu is only enabled when the note

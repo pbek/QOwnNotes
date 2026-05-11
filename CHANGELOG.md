@@ -2,6 +2,10 @@
 
 ## 26.5.9
 
+- Fixed `Ctrl+Space` no longer opening URLs at the current cursor position in
+  the note editor when Markdown completions were available, and kept URL opening
+  available in read-only note mode because it does not edit the note
+  (for [#3609](https://github.com/pbek/QOwnNotes/issues/3609))
 - Fixed saving modified notes by synchronizing the visible note editor text before
   autosave or `Ctrl+S` writes dirty notes to disk, preventing saves from being
   skipped if the editor modification state gets out of sync
