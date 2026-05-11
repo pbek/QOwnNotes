@@ -413,8 +413,8 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QTreeWidget" name="scriptTreeWidget">
+         <item row="1" column="0">
+          <widget class="QTreeWidget" name="scriptTreeWidget">
           <property name="rootIsDecorated">
            <bool>false</bool>
           </property>
@@ -426,11 +426,38 @@
             <string>Name</string>
            </property>
           </column>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="updateAllButton">
+           <property name="toolTip">
+            <string>Updates all scripts that have updates</string>
+           </property>
+           <property name="text">
+            <string>Update all</string>
+           </property>
+           <property name="icon">
+            <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="automaticScriptUpdatesCheckBox">
+           <property name="toolTip">
+            <string>Automatically install available updates for scripts installed from the script repository during the startup update check</string>
+           </property>
+           <property name="text">
+            <string>Automatically update scripts</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
     </layout>
    </item>
   </layout>

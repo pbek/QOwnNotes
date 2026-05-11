@@ -7479,6 +7479,16 @@ void MainWindow::automaticScriptUpdateCheck() {
         showStatusBarMessage(tr("A script update was found!"), QStringLiteral("🔧"), 4000);
         delete (dialog);
 
+        SettingsService settings;
+        if (settings.value(QStringLiteral("automaticScriptUpdates")).toBool()) {
+            const int updateCount = ScriptRepositoryDialog::updateAllScriptUpdates(this);
+            if (updateCount > 0) {
+                showStatusBarMessage(tr("%n script update(s) were installed", "", updateCount),
+                                     QStringLiteral("🔧"), 4000);
+            }
+            return;
+        }
+
         if (Utils::Gui::question(this, tr("Script updates"),
                                  tr("Updates to your scripts were found in the script "
                                     "repository! Do you want to update them?"),

@@ -354,16 +354,16 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
           <string>Update dialog</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_14">
-          <item row="0" column="0">
-           <widget class="QCheckBox" name="disableAutomaticUpdateDialogCheckBox">
-            <property name="text">
-             <string>Don't show the update dialog automatically</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="disableAutomaticUpdateDialogCheckBox">
+             <property name="text">
+              <string>Don't show the update dialog automatically</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
        <item>
         <widget class="QGroupBox" name="groupBox_25">
          <property name="minimumSize">

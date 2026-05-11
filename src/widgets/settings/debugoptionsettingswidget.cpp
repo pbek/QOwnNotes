@@ -41,6 +41,8 @@ void DebugOptionSettingsWidget::readSettings() {
 
     ui->oldVersionNumberCheckBox->setChecked(
         settings.value(QStringLiteral("Debug/fakeOldVersionNumber")).toBool());
+    ui->oldScriptVersionsCheckBox->setChecked(
+        settings.value(QStringLiteral("Debug/fakeOldScriptVersions")).toBool());
     ui->fileLoggingCheckBox->setChecked(
         settings.value(QStringLiteral("Debug/fileLogging")).toBool());
     on_fileLoggingCheckBox_toggled(ui->fileLoggingCheckBox->isChecked());
@@ -51,6 +53,8 @@ void DebugOptionSettingsWidget::storeSettings() {
 
     settings.setValue(QStringLiteral("Debug/fakeOldVersionNumber"),
                       ui->oldVersionNumberCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Debug/fakeOldScriptVersions"),
+                      ui->oldScriptVersionsCheckBox->isChecked());
     settings.setValue(QStringLiteral("Debug/fileLogging"), ui->fileLoggingCheckBox->isChecked());
 }
 

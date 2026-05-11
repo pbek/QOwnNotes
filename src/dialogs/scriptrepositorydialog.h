@@ -24,7 +24,9 @@ class ScriptRepositoryDialog : public MasterDialog {
 
     void searchForUpdates();
     void searchForUpdatesForScripts(const QList<Script> &scripts);
+    int updateAllScripts(bool showMessage = true);
     static void checkForScriptUpdates(QWidget *parent = nullptr);
+    static int updateAllScriptUpdates(QWidget *parent = nullptr);
 
    signals:
     void updateFound();
@@ -37,6 +39,10 @@ class ScriptRepositoryDialog : public MasterDialog {
     void on_installButton_clicked();
 
     void on_searchScriptEdit_textChanged(const QString &arg1);
+
+    void on_updateAllButton_clicked();
+
+    void on_automaticScriptUpdatesCheckBox_toggled(bool checked);
 
    private:
     Ui::ScriptRepositoryDialog *ui;
@@ -68,4 +74,7 @@ class ScriptRepositoryDialog : public MasterDialog {
     bool loadScriptRepositoryMetaData();
     void parseScriptRepositoryMetaData(const QByteArray &arr);
     void addScriptTreeWidgetItem(const ScriptInfoJson &scriptInfoJson);
+    bool hasScriptUpdate(const Script &script) const;
+    QList<Script> scriptsWithUpdates(const QList<Script> &scripts) const;
+    bool installScript(const ScriptInfoJson &infoJson, bool showMessages, bool refreshAfterInstall);
 };

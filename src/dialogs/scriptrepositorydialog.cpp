@@ -40,6 +40,11 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpd
 
     ui->searchScriptEdit->setFocus();
     ui->scriptTreeWidget->sortByColumn(0, Qt::AscendingOrder);
+    ui->updateAllButton->hide();
+    SettingsService settings;
+    ui->automaticScriptUpdatesCheckBox->setChecked(
+        settings.value(QStringLiteral("automaticScriptUpdates")).toBool());
+    ui->automaticScriptUpdatesCheckBox->setVisible(checkForUpdates);
     enableOverview(true);
 
     if (!checkForUpdates) {
@@ -151,43 +156,63 @@ void ScriptRepositoryDialog::searchForUpdatesForScripts(const QList<Script> &scr
     ui->searchScriptEdit->hide();
     setWindowTitle(tr("Script updates"));
     ui->overviewLabel->setText(tr("All scripts are up-to-date."));
+    ui->updateAllButton->hide();
 
     ui->selectFrame->hide();
     ui->scriptTreeWidget->clear();
     enableOverview(true);
     loadScriptRepositoryMetaData();
+    const QList<Script> scriptsToUpdate = scriptsWithUpdates(scripts);
     bool scriptUpdateFound = false;
 
-    Q_FOREACH (Script script, scripts) {
-        if (!script.isScriptFromRepository()) {
-            continue;
-        }
-
-        // May not show up in the log dialog when run in another thread
-        qDebug() << "Checking for script update: " << script.remoteScriptUrl();
-
-        auto infoJson = _scriptMetaDataCache.value(script.getIdentifier());
-        VersionNumber remoteVersion = VersionNumber(infoJson.version);
-
-        ScriptInfoJson scriptInfoJson = script.getScriptInfoJson();
-        VersionNumber localVersion = VersionNumber(scriptInfoJson.version);
-
-        if (localVersion >= remoteVersion) {
-            continue;
-        }
-
+    Q_FOREACH (const Script &script, scriptsToUpdate) {
         if (!scriptUpdateFound) {
             emit updateFound();
         }
 
         scriptUpdateFound = true;
-        addScriptTreeWidgetItem(scriptInfoJson);
+        addScriptTreeWidgetItem(script.getScriptInfoJson());
         ui->selectFrame->show();
+        ui->updateAllButton->show();
     }
 
-    if (!scriptUpdateFound) {
+    if (scriptsToUpdate.isEmpty()) {
         emit noUpdateFound();
     }
+}
+
+bool ScriptRepositoryDialog::hasScriptUpdate(const Script &script) const {
+    if (!script.isScriptFromRepository()) {
+        return false;
+    }
+
+    qDebug() << "Checking for script update: " << script.remoteScriptUrl();
+
+    const auto infoJson = _scriptMetaDataCache.value(script.getIdentifier());
+    if (infoJson.isEmpty()) {
+        return false;
+    }
+
+    SettingsService settings;
+    const VersionNumber remoteVersion = VersionNumber(infoJson.version);
+    const VersionNumber localVersion =
+        settings.value(QStringLiteral("Debug/fakeOldScriptVersions")).toBool()
+            ? VersionNumber(QStringLiteral("0.0.0"))
+            : VersionNumber(script.getScriptInfoJson().version);
+
+    return localVersion < remoteVersion;
+}
+
+QList<Script> ScriptRepositoryDialog::scriptsWithUpdates(const QList<Script> &scripts) const {
+    QList<Script> result;
+
+    Q_FOREACH (const Script &script, scripts) {
+        if (hasScriptUpdate(script)) {
+            result << script;
+        }
+    }
+
+    return result;
 }
 
 /**
@@ -375,8 +400,15 @@ QString ScriptRepositoryDialog::getCurrentInfoJsonString() {
 void ScriptRepositoryDialog::on_installButton_clicked() {
     auto infoJson = getCurrentScriptInfoJson();
 
+    if (installScript(infoJson, true, true) && _checkForUpdates) {
+        searchForUpdates();
+    }
+}
+
+bool ScriptRepositoryDialog::installScript(const ScriptInfoJson &infoJson, bool showMessages,
+                                           bool refreshAfterInstall) {
     if (infoJson.isEmpty()) {
-        return;
+        return false;
     }
 
     QString identifier = infoJson.identifier;
@@ -384,23 +416,30 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
     QString scriptName = infoJson.script;
 
     // check if platform is supported
-    if (!infoJson.platformSupported &&
-        QMessageBox::question(this, tr("Platform not supported!"),
-                              tr("Your platform is not supported by this script!\n"
-                                 "Do you want to install it anyway?"),
-                              QMessageBox::Yes | QMessageBox::No,
-                              QMessageBox::No) == QMessageBox::No) {
-        return;
+    if (!infoJson.platformSupported) {
+        if (!showMessages ||
+            QMessageBox::question(this, tr("Platform not supported!"),
+                                  tr("Your platform is not supported by this script!\n"
+                                     "Do you want to install it anyway?"),
+                                  QMessageBox::Yes | QMessageBox::No,
+                                  QMessageBox::No) == QMessageBox::No) {
+            return false;
+        }
     }
 
     // check if app version is supported
     if (!infoJson.appVersionSupported) {
+        if (!showMessages) {
+            return false;
+        }
+
         QMessageBox::information(this, tr("Update app"),
                                  tr("Please don't forget to update your installation of "
                                     "QOwnNotes to make this script work!"));
     }
 
     ui->installButton->setEnabled(false);
+    ui->updateAllButton->setEnabled(false);
 
     // create or update the script in the database
     Script script = Script::fetchByIdentifier(identifier);
@@ -416,7 +455,9 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
     QString scriptRepositoryPath = script.scriptRepositoryPath(true);
 
     if (scriptRepositoryPath.isEmpty()) {
-        return;
+        ui->installButton->setEnabled(true);
+        ui->updateAllButton->setEnabled(true);
+        return false;
     }
 
     QString scriptPath = scriptRepositoryPath + "/" + scriptName;
@@ -455,24 +496,64 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
     }
 
     ui->installButton->setEnabled(true);
+    ui->updateAllButton->setEnabled(true);
 
     if (filesWereDownloaded) {
         script.store();
         MetricsService::instance()->sendVisitIfEnabled("script-repository/install/" + identifier);
-        reloadCurrentScriptInfo();
+        if (refreshAfterInstall) {
+            reloadCurrentScriptInfo();
+        }
         _lastInstalledScript = script;
 
-        Utils::Gui::information(this, tr("Install successful"),
-                                tr("The script was successfully installed!"),
-                                QStringLiteral("script-install-successful"));
-
-        if (_checkForUpdates) {
-            searchForUpdates();
+        if (showMessages) {
+            Utils::Gui::information(this, tr("Install successful"),
+                                    tr("The script was successfully installed!"),
+                                    QStringLiteral("script-install-successful"));
         }
+
+        return true;
     } else {
-        QMessageBox::warning(this, tr("Download failed"),
-                             tr("The script could not be downloaded!"));
+        if (showMessages) {
+            QMessageBox::warning(this, tr("Download failed"),
+                                 tr("The script could not be downloaded!"));
+        }
+
+        return false;
     }
+}
+
+int ScriptRepositoryDialog::updateAllScripts(bool showMessage) {
+    int updateCount = 0;
+    const QList<Script> scriptsToUpdate = scriptsWithUpdates(Script::fetchAll());
+
+    Q_FOREACH (const Script &script, scriptsToUpdate) {
+        const auto infoJson = _scriptMetaDataCache.value(script.getIdentifier());
+        if (installScript(infoJson, false, false)) {
+            updateCount++;
+        }
+    }
+
+    if (updateCount > 0) {
+        ScriptingService::instance()->reloadEngine();
+    }
+
+    if (showMessage) {
+        Utils::Gui::information(this, tr("Script updates"),
+                                tr("%n script update(s) were installed.", "", updateCount),
+                                QStringLiteral("script-update-all-successful"));
+    }
+
+    searchForUpdates();
+
+    return updateCount;
+}
+
+void ScriptRepositoryDialog::on_updateAllButton_clicked() { updateAllScripts(); }
+
+void ScriptRepositoryDialog::on_automaticScriptUpdatesCheckBox_toggled(bool checked) {
+    SettingsService settings;
+    settings.setValue(QStringLiteral("automaticScriptUpdates"), checked);
 }
 
 void ScriptRepositoryDialog::on_searchScriptEdit_textChanged(const QString &arg1) {
@@ -493,4 +574,13 @@ void ScriptRepositoryDialog::checkForScriptUpdates(QWidget *parent) {
 
     // Reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+}
+
+int ScriptRepositoryDialog::updateAllScriptUpdates(QWidget *parent) {
+    auto *dialog = new ScriptRepositoryDialog(parent, true);
+    dialog->loadScriptRepositoryMetaData();
+    const int updateCount = dialog->updateAllScripts(false);
+    delete (dialog);
+
+    return updateCount;
 }

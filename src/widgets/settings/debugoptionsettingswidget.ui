@@ -42,15 +42,25 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="4">
-    <widget class="QCheckBox" name="oldVersionNumberCheckBox">
-     <property name="text">
-      <string>Fake old version number to trigger update</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0" colspan="4">
-    <widget class="QFrame" name="logFileFrame">
+    <item row="0" column="0" colspan="4">
+     <widget class="QCheckBox" name="oldVersionNumberCheckBox">
+      <property name="text">
+       <string>Fake old version number to trigger update</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="4">
+     <widget class="QCheckBox" name="oldScriptVersionsCheckBox">
+      <property name="toolTip">
+       <string>Fake old versions for installed repository scripts to trigger the script update dialog</string>
+      </property>
+      <property name="text">
+       <string>Fake old script versions to trigger script updates</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="4">
+     <widget class="QFrame" name="logFileFrame">
      <property name="frameShape">
       <enum>QFrame::Shape::NoFrame</enum>
      </property>
@@ -103,8 +113,8 @@
      </layout>
     </widget>
    </item>
-   <item row="3" column="0" colspan="4">
-    <spacer name="verticalSpacer_11">
+    <item row="4" column="0" colspan="4">
+     <spacer name="verticalSpacer_11">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>

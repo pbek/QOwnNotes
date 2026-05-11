@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 26.5.9
+
+- You can now update all script repository scripts automatically
+  (for [#3608](https://github.com/pbek/QOwnNotes/issues/3608))
+  - Added an **Update all** button to the **Script updates** dialog to install all
+    available updates for scripts from the script repository at once
+  - Added a new setting in the **Script updates** dialog to automatically install
+    available updates for scripts from the script repository during the startup
+    update check
+  - Added a **Debug options** checkbox to fake old installed script versions, making
+    it easier to test the script update dialog
+
 ## 26.5.8
 
 - Fixed the **script repository dialog** not opening when triggered from the
