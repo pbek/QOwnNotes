@@ -2,6 +2,10 @@
 
 ## 26.5.9
 
+- Fixed saving modified notes by synchronizing the visible note editor text before
+  autosave or `Ctrl+S` writes dirty notes to disk, preventing saves from being
+  skipped if the editor modification state gets out of sync
+  (for [#3513](https://github.com/pbek/QOwnNotes/issues/3513))
 - You can now update all script repository scripts automatically
   (for [#3608](https://github.com/pbek/QOwnNotes/issues/3608))
   - Added an **Update all** button to the **Script updates** dialog to install all

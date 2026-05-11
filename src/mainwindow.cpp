@@ -2868,7 +2868,10 @@ void MainWindow::autoReadOnlyModeTimerSlot() {
     startAutoReadOnlyModeIfEnabled();
 }
 
-void MainWindow::storeUpdatedNotesToDisk() { _noteIndexManager->storeUpdatedNotesToDisk(); }
+void MainWindow::storeUpdatedNotesToDisk() {
+    noteTextEditTextWasUpdated();
+    _noteIndexManager->storeUpdatedNotesToDisk();
+}
 
 /**
  * Shows alerts for calendar items with an alarm date in the current minute
@@ -4313,6 +4316,21 @@ void MainWindow::on_noteTextEdit_textChanged() {
 }
 
 void MainWindow::noteTextEditTextWasUpdated() {
+    if (!ui->encryptedNoteTextEdit->isHidden()) {
+        if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
+            currentNote.refetch();
+            currentNoteLastEdited = QDateTime::currentDateTime();
+            _noteViewNeedsUpdate = true;
+
+            ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+
+            updateNoteEncryptionUI();
+            handleNoteTextChanged();
+        }
+
+        return;
+    }
+
     Note note = this->currentNote;
     note.updateNoteTextFromDisk();
 
