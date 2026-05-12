@@ -467,6 +467,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionInsert_code_block_triggered();
 
+    void on_actionInsert_checkbox_list_item_triggered();
+
     void on_actionNext_note_triggered();
 
     void on_actionPrevious_Note_triggered();

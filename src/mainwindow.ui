@@ -1189,6 +1189,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <addaction name="actionInsert_current_time"/>
      <addaction name="actionInsert_code_block"/>
      <addaction name="actionInsert_block_quote"/>
+     <addaction name="actionInsert_checkbox_list_item"/>
      <addaction name="actionInsert_headline_from_note_filename"/>
      <addaction name="actionInsert_Nextcloud_Deck_card"/>
     </widget>
@@ -2636,6 +2637,18 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="actionInsert_checkbox_list_item">
+   <property name="icon">
+    <iconset theme="task-new" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/task-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/task-new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert checkbox list item</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+L</string>
    </property>
   </action>
   <action name="actionSearch_text_on_the_web">

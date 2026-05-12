@@ -92,6 +92,7 @@
 #include <QShortcut>
 #include <QSystemTrayIcon>
 #include <QTemporaryFile>
+#include <QTextBlock>
 #include <QTextCursor>
 #include <QTextDocumentFragment>
 #include <QTextLength>
@@ -5251,6 +5252,64 @@ void MainWindow::on_actionOpen_note_bookmark_dialog_triggered() {
  * Inserts a code block at the current cursor position
  */
 void MainWindow::on_actionInsert_code_block_triggered() { activeNoteTextEdit()->insertCodeBlock(); }
+
+/**
+ * Inserts a checkbox list item marker at the beginning of the current text block
+ */
+void MainWindow::on_actionInsert_checkbox_list_item_triggered() {
+    auto *textEdit = activeNoteTextEdit();
+    QTextCursor cursor = textEdit->textCursor();
+    const int cursorPosition = cursor.position();
+    const QTextBlock block = cursor.block();
+    const QString blockText = block.text();
+
+    int indentLength = 0;
+    while (indentLength < blockText.length() && (blockText.at(indentLength) == QLatin1Char(' ') ||
+                                                 blockText.at(indentLength) == QLatin1Char('\t'))) {
+        ++indentLength;
+    }
+
+    const int markerPosition = block.position() + indentLength;
+    const QString textAfterIndent = blockText.mid(indentLength);
+    const auto checkboxMarkerLength = [](const QString &text) {
+        if (text.startsWith(QStringLiteral("- [ ] ")) ||
+            text.startsWith(QStringLiteral("- [x] ")) ||
+            text.startsWith(QStringLiteral("- [X] "))) {
+            return 6;
+        }
+
+        if (text == QStringLiteral("- [ ]") || text == QStringLiteral("- [x]") ||
+            text == QStringLiteral("- [X]")) {
+            return 5;
+        }
+
+        return 0;
+    };
+
+    const int replaceLength = checkboxMarkerLength(textAfterIndent);
+    const QString replacementText =
+        replaceLength > 0 ? QStringLiteral("- ") : QStringLiteral("- [ ] ");
+    const int markerLength = replaceLength > 0
+                                 ? replaceLength
+                                 : (textAfterIndent.startsWith(QStringLiteral("- ")) ? 2 : 0);
+
+    cursor.setPosition(markerPosition);
+    if (markerLength > 0) {
+        cursor.setPosition(markerPosition + markerLength, QTextCursor::KeepAnchor);
+    }
+
+    cursor.insertText(replacementText);
+
+    int newCursorPosition = cursorPosition;
+    if (cursorPosition >= markerPosition + markerLength) {
+        newCursorPosition += replacementText.length() - markerLength;
+    } else if (cursorPosition > markerPosition) {
+        newCursorPosition = markerPosition + replacementText.length();
+    }
+
+    cursor.setPosition(newCursorPosition);
+    textEdit->setTextCursor(cursor);
+}
 
 void MainWindow::on_actionNext_note_triggered() { gotoNextNote(); }
 

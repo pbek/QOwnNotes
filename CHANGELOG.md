@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.5.10
+
+- Added an **Insert checkbox list item** action to the **Edit / Insert** menu,
+  inserting `- [ ] ` at the beginning of the current text block after any
+  existing indentation, converting existing `- ` list items to checkbox list
+  items, toggling checkbox list items back to normal list items when triggered
+  again, and preserving the cursor position, with `Alt+L` as the default shortcut
+  (for [#3610](https://github.com/pbek/QOwnNotes/issues/3610))
+
 ## 26.5.9
 
 - Fixed `Ctrl+Space` no longer opening URLs at the current cursor position in
