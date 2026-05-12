@@ -4081,7 +4081,15 @@ void MainWindow::handleTextNoteLinking(int page) {
 
     QString selectedText = textEdit->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
-        dialog->setLinkName(selectedText);
+        const QString trimmedSelectedText = selectedText.trimmed();
+        const QUrl selectedUrl(trimmedSelectedText);
+
+        if (selectedUrl.isValid() && selectedUrl.scheme().startsWith(QStringLiteral("http"))) {
+            dialog->setLinkName(QString());
+            dialog->setURL(trimmedSelectedText);
+        } else {
+            dialog->setLinkName(selectedText);
+        }
     }
 
     dialog->exec();

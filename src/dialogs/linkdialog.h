@@ -25,6 +25,7 @@ class LinkDialog : public MasterDialog {
     QString getSelectedNoteName() const;
     Note getSelectedNote() const;
     QString getURL() const;
+    void setURL(const QString &text);
     QString getLinkName() const;
     void setLinkName(const QString &text);
     QString getLinkDescription() const;

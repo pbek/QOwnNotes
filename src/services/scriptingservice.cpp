@@ -511,6 +511,33 @@ QString ScriptingService::callInsertAttachmentHook(QFile *file, QString markdown
 }
 
 /**
+ * Calls the fetchUrlTitleHook function for all script components
+ * This function is called before the link dialog fetches the title from a URL
+ */
+QString ScriptingService::callFetchUrlTitleHook(const QString &url) const {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        if (methodExistsForObject(scriptComponent.object,
+                                  QStringLiteral("fetchUrlTitleHook(QVariant)"))) {
+            QVariant title;
+            QMetaObject::invokeMethod(scriptComponent.object, "fetchUrlTitleHook",
+                                      Q_RETURN_ARG(QVariant, title), Q_ARG(QVariant, url));
+            QString result = title.toString();
+
+            if (!result.isEmpty()) {
+                return result;
+            }
+        }
+    }
+
+    return {};
+}
+
+/**
  * Calls the layoutSwitchedHook function for all script components
  * This function is called when layouts are switched
  *

@@ -42,6 +42,7 @@ class ScriptingService : public QObject {
     void initComponents();
     QString callInsertMediaHook(QFile *file, QString markdownText);
     QString callInsertAttachmentHook(QFile *file, QString markdownText);
+    QString callFetchUrlTitleHook(const QString &url) const;
     void callLayoutSwitchedHook(const QString &oldUuid, const QString &newUuid);
     QT_DEPRECATED_X("Use callLayoutSwitchedHook() instead")
     void callWorkspaceSwitchedHook(const QString &oldUuid, const QString &newUuid);

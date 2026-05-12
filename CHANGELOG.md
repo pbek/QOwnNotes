@@ -2,6 +2,11 @@
 
 ## 26.5.10
 
+- Added a `fetchUrlTitleHook(url)` scripting hook for the link dialog, allowing
+  scripts to provide a webpage title before QOwnNotes tries to fetch it itself;
+  the new hook is documented on the **Scripting hooks** documentation page with
+  a `kanboard-cli` example script with configurable Kanban URL prefixes
+  (for [#3611](https://github.com/pbek/QOwnNotes/issues/3611))
 - Added an **Insert checkbox list item** action to the **Edit / Insert** menu,
   inserting `- [ ] ` at the beginning of the current text block after any
   existing indentation, converting existing `- ` list items to checkbox list
