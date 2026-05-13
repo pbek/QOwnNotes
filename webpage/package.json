@@ -40,7 +40,7 @@
     "lodash-es": "^4.18.1",
     "markdown-it": "^14.1.0",
     "markdown-it-meta": "^0.0.1",
-    "mermaid": "^11.12.2",
+    "mermaid": "^11.15.0",
     "sass": "^1.83.0",
     "vuepress": "next",
     "vuepress-plugin-md-enhance": "^2.0.0-rc.99"
