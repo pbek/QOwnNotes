@@ -1529,31 +1529,44 @@ Tag Tag::activeTag() { return Tag::fetch(activeTagId()); }
  * Sets the non-darkMode colors as darkMode colors for all tags
  */
 void Tag::migrateDarkColors() {
-    SettingsService settings;
-    const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
 
-    // disable dark mode to get the light color
-    settings.setValue(QStringLiteral("darkMode"), false);
+    // This migration runs before the tag table has the `updated` column, so don't use
+    // Tag::fetchAll() / Tag::store() here. Those helpers already expect the final schema.
+    query.prepare(QStringLiteral("SELECT id, color FROM tag"));
 
-    // fetch all tags with non-dark mode colors
-    const QVector<Tag> tags = fetchAll();
-
-    // enable dark mode to later set the dark color
-    settings.setValue(QStringLiteral("darkMode"), true);
-
-    for (Tag tag : tags) {
-        // get the non-dark mode color (because the fetch was made while
-        // "darkMode" was off)
-        const QColor color = tag.getColor();
-
-        // set the non-dark mode color as dark mode color (because now
-        // "darkMode" is enabled)
-        tag.setColor(color);
-        tag.store();
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+        DatabaseService::closeDatabaseConnection(db, query);
+        return;
     }
 
-    // set the dark mode to the old value
-    settings.setValue(QStringLiteral("darkMode"), darkMode);
+    QVector<QPair<int, QString>> tagColors;
+    while (query.next()) {
+        const QString colorName = query.value(QStringLiteral("color")).toString();
+        const QColor color = colorName.isEmpty() ? QColor() : QColor(colorName);
+        tagColors.append({query.value(QStringLiteral("id")).toInt(),
+                          color.isValid() ? color.name() : QLatin1String("")});
+    }
+
+    query.finish();
+    query.clear();
+
+    QSqlQuery updateQuery(db);
+    updateQuery.prepare(QStringLiteral("UPDATE tag SET dark_color = :color WHERE id = :id"));
+
+    for (const auto &tagColor : Utils::asConst(tagColors)) {
+        updateQuery.bindValue(QStringLiteral(":id"), tagColor.first);
+        updateQuery.bindValue(QStringLiteral(":color"), tagColor.second);
+
+        if (!updateQuery.exec()) {
+            qWarning() << __func__ << ": " << updateQuery.lastError();
+            break;
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, updateQuery);
 }
 
 bool Tag::mergeFromDatabase(QSqlDatabase &db) {

@@ -2,6 +2,10 @@
 
 ## 26.5.11
 
+- Fixed a startup SQL warning when creating a new note folder by migrating tag
+  dark colors without using the final tag schema before all database migration
+  steps have run
+  (for [#3612](https://github.com/pbek/QOwnNotes/issues/3612))
 - Fixed creating tags after importing old settings and selecting a new note
   folder by repairing incomplete note-folder database schemas and by no longer
   marking note-folder database migrations as complete when a schema step fails;
