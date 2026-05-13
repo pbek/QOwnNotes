@@ -239,9 +239,13 @@ bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
 
 QList<CloudConnection> CloudConnection::fetchAll() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
-    QSqlQuery query(db);
-
     QList<CloudConnection> cloudConnectionList;
+
+    if (!db.tables().contains(QStringLiteral("cloudConnection"), Qt::CaseInsensitive)) {
+        return cloudConnectionList;
+    }
+
+    QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC"));
     if (!query.exec()) {

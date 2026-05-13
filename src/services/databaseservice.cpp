@@ -620,6 +620,16 @@ bool DatabaseService::setupNoteFolderTables() {
 }
 
 QSqlDatabase DatabaseService::getNoteFolderDatabase() {
+    const QString connectionName = QStringLiteral("note_folder");
+
+    if (!QSqlDatabase::contains(connectionName)) {
+        if (NoteFolder::currentLocalPath().isEmpty()) {
+            return {};
+        }
+
+        createNoteFolderConnection();
+    }
+
 #ifdef Q_OS_WIN32
     if (Utils::Misc::doAutomaticNoteFolderDatabaseClosing()) {
         // open database if it was closed in closeDatabaseConnection
@@ -627,7 +637,7 @@ QSqlDatabase DatabaseService::getNoteFolderDatabase() {
     }
 #endif
 
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("note_folder"));
+    QSqlDatabase db = QSqlDatabase::database(connectionName);
     //    db.transaction();
     return db;
 }

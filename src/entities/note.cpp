@@ -1383,9 +1383,13 @@ Note Note::fillFromQuery(const QSqlQuery &query) {
 
 QVector<Note> Note::fetchAll(int limit, const QString &connectionName) {
     const QSqlDatabase db = QSqlDatabase::database(connectionName);
-    QSqlQuery query(db);
-
     QVector<Note> noteList;
+
+    if (!db.tables().contains(QStringLiteral("note"), Qt::CaseInsensitive)) {
+        return noteList;
+    }
+
+    QSqlQuery query(db);
 
     const QString sql = limit >= 0
                             ? QStringLiteral(

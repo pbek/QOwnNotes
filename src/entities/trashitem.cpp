@@ -264,9 +264,13 @@ bool TrashItem::fillFromQuery(const QSqlQuery &query) {
  */
 QList<TrashItem> TrashItem::fetchAll(int limit) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
-    QSqlQuery query(db);
-
     QList<TrashItem> trashItemList;
+
+    if (!db.isValid() || !db.tables().contains(QStringLiteral("trashItem"), Qt::CaseInsensitive)) {
+        return trashItemList;
+    }
+
+    QSqlQuery query(db);
     QString sql = QStringLiteral("SELECT * FROM trashItem ORDER BY created DESC");
 
     if (limit >= 0) {

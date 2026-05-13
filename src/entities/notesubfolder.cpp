@@ -215,9 +215,13 @@ NoteSubFolder NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
 
 QVector<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
-    QSqlQuery query(db);
-
     QVector<NoteSubFolder> noteSubFolderList;
+
+    if (!db.tables().contains(QStringLiteral("noteSubFolder"), Qt::CaseInsensitive)) {
+        return noteSubFolderList;
+    }
+
+    QSqlQuery query(db);
     QString sql = QStringLiteral(
         "SELECT * FROM noteSubFolder "
         "ORDER BY file_last_modified DESC");

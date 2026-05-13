@@ -318,9 +318,13 @@ Tag Tag::fillFromQuery(const QSqlQuery &query) {
 
 QVector<Tag> Tag::fetchAll() {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
-    QSqlQuery query(db);
-
     QVector<Tag> tagList;
+
+    if (!db.isValid() || !db.tables().contains(QStringLiteral("tag"), Qt::CaseInsensitive)) {
+        return tagList;
+    }
+
+    QSqlQuery query(db);
 
     // query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
     /*

@@ -4,7 +4,9 @@
 
 - Fixed creating tags after importing old settings and selecting a new note
   folder by repairing incomplete note-folder database schemas and by no longer
-  marking note-folder database migrations as complete when a schema step fails
+  marking note-folder database migrations as complete when a schema step fails;
+  first-run fetch queries now also return cleanly while database tables are still
+  being initialized instead of logging misleading `No query` warnings
   (for [#3612](https://github.com/pbek/QOwnNotes/issues/3612))
 
 ## 26.5.10

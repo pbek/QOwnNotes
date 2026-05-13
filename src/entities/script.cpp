@@ -284,9 +284,13 @@ bool Script::fillFromQuery(const QSqlQuery &query) {
 
 QList<Script> Script::fetchAll(bool enabledOnly) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
-    QSqlQuery query(db);
-
     QList<Script> scriptList;
+
+    if (!db.tables().contains(QStringLiteral("script"), Qt::CaseInsensitive)) {
+        return scriptList;
+    }
+
+    QSqlQuery query(db);
     query.prepare(QStringLiteral("SELECT * FROM script %1 ORDER BY priority ASC, id ASC")
                       .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : QLatin1String("")));
 

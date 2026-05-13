@@ -172,9 +172,13 @@ bool NoteFolder::fillFromQuery(const QSqlQuery &query) {
 
 QList<NoteFolder> NoteFolder::fetchAll() {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
-    QSqlQuery query(db);
-
     QList<NoteFolder> noteFolderList;
+
+    if (!db.tables().contains(QStringLiteral("noteFolder"), Qt::CaseInsensitive)) {
+        return noteFolderList;
+    }
+
+    QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT * FROM noteFolder ORDER BY priority ASC, id ASC"));
     if (!query.exec()) {

@@ -290,9 +290,13 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar(const QString &calendar) {
 
 QList<CalendarItem> CalendarItem::fetchAll() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
-    QSqlQuery query(db);
-
     QList<CalendarItem> calendarItemList;
+
+    if (!db.tables().contains(QStringLiteral("calendarItem"), Qt::CaseInsensitive)) {
+        return calendarItemList;
+    }
+
+    QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT * FROM calendarItem"));
     if (!query.exec()) {
