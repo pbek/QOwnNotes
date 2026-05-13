@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#! nix-shell --pure -i python3 -p python3
 #
 # This script can be used to add a new translation to QOwnNotes
 #
