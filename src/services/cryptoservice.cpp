@@ -199,6 +199,11 @@ QStringList CryptoService::keychainReferencesFromSettings(const QSettings &setti
 
 QStringList CryptoService::keychainReferencesFromDiskDatabase() {
     QStringList references;
+
+    if (QCoreApplication::instance() == nullptr) {
+        return references;
+    }
+
     const QString path = DatabaseService::getDiskDatabasePath();
 
     if (!QFile::exists(path)) {

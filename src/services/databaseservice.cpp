@@ -215,8 +215,11 @@ bool DatabaseService::removeDiskDatabase() {
     if (file.exists()) {
         // the database file will not get deleted under Windows if the
         // database isn't closed
-        QSqlDatabase dbDisk = QSqlDatabase::database(QStringLiteral("disk"));
-        dbDisk.close();
+        if (QCoreApplication::instance() != nullptr &&
+            QSqlDatabase::contains(QStringLiteral("disk"))) {
+            QSqlDatabase dbDisk = QSqlDatabase::database(QStringLiteral("disk"));
+            dbDisk.close();
+        }
 
         // remove the file
         bool result = file.remove();

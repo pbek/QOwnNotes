@@ -592,21 +592,20 @@ int main(int argc, char *argv[]) {
     if (clearSettings) {
         QSettings settings;
         clearSettingsKeychainReferences = CryptoService::keychainReferencesFromSettings(settings);
-
-        if (!portable) {
-            clearSettingsKeychainReferences.append(
-                CryptoService::keychainReferencesFromDiskDatabase());
-            clearSettingsKeychainReferences.removeDuplicates();
-        }
-
         settings.clear();
-
-        if (!portable) {
-            DatabaseService::removeDiskDatabase();
-        }
 
         qWarning("Your settings are now cleared!");
     }
+
+    auto clearDiskSettings = [&clearSettingsKeychainReferences, clearSettings, portable]() {
+        if (!clearSettings || portable) {
+            return;
+        }
+
+        clearSettingsKeychainReferences.append(CryptoService::keychainReferencesFromDiskDatabase());
+        clearSettingsKeychainReferences.removeDuplicates();
+        DatabaseService::removeDiskDatabase();
+    };
 
     QSettings settings;
 
@@ -665,6 +664,7 @@ int main(int argc, char *argv[]) {
             argc, argv, true,
             SingleApplication::Mode::User | SingleApplication::Mode::SecondaryNotification);
         setAppProperties(app, release, arguments, true, snap, portable, action, session);
+        clearDiskSettings();
 
         if (!clearSettingsKeychainReferences.isEmpty()) {
             CryptoService::instance()->deleteSecrets(clearSettingsKeychainReferences);
@@ -749,6 +749,7 @@ int main(int argc, char *argv[]) {
         // allowed
         QApplication app(argc, argv);
         setAppProperties(app, release, arguments, false, snap, portable, action, session);
+        clearDiskSettings();
 
         if (!clearSettingsKeychainReferences.isEmpty()) {
             CryptoService::instance()->deleteSecrets(clearSettingsKeychainReferences);

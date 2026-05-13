@@ -8,6 +8,10 @@
   first-run fetch queries now also return cleanly while database tables are still
   being initialized instead of logging misleading `No query` warnings
   (for [#3612](https://github.com/pbek/QOwnNotes/issues/3612))
+- Fixed a crash when starting QOwnNotes with `--clear-settings` by delaying disk
+  database cleanup until after the application object exists, avoiding early Qt
+  SQL access before `QCoreApplication` is initialized
+  (for [#3612](https://github.com/pbek/QOwnNotes/issues/3612))
 
 ## 26.5.10
 
