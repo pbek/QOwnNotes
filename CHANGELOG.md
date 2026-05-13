@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.5.11
+
+- Fixed creating tags after importing old settings and selecting a new note
+  folder by repairing incomplete note-folder database schemas and by no longer
+  marking note-folder database migrations as complete when a schema step fails
+  (for [#3612](https://github.com/pbek/QOwnNotes/issues/3612))
+
 ## 26.5.10
 
 - Added a `fetchUrlTitleHook(url)` scripting hook for the link dialog, allowing

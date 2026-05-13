@@ -13,6 +13,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QSqlRecord>
 #include <QStandardPaths>
 #include <QUuid>
 
@@ -73,6 +74,114 @@ void migrateWorkspaceSettingsToLayouts(SettingsService& settings) {
                       QStringLiteral("MessageBoxOverride/remove-layout"));
     migrateSettingKey(settings, QStringLiteral("MessageBoxOverride/layoutwidget-use-layout"),
                       QStringLiteral("MessageBoxOverride/layoutpresetwidget-use-layout-preset"));
+}
+
+bool execChecked(QSqlQuery& query, const QString& sql) {
+    if (query.exec(sql)) {
+        return true;
+    }
+
+    qWarning() << __func__ << ":" << query.lastError() << sql;
+    return false;
+}
+
+bool tableExists(const QSqlDatabase& db, const QString& tableName) {
+    return db.tables().contains(tableName, Qt::CaseInsensitive);
+}
+
+bool columnExists(const QSqlDatabase& db, const QString& tableName, const QString& columnName) {
+    const QSqlRecord record = db.record(tableName);
+    return record.indexOf(columnName) >= 0;
+}
+
+bool ensureColumn(QSqlQuery& query, const QSqlDatabase& db, const QString& tableName,
+                  const QString& columnName, const QString& columnDefinition) {
+    if (columnExists(db, tableName, columnName)) {
+        return true;
+    }
+
+    return execChecked(query,
+                       QStringLiteral("ALTER TABLE %1 ADD %2").arg(tableName, columnDefinition));
+}
+
+bool repairNoteFolderSchema(QSqlDatabase& db, QSqlQuery& query, bool recreateIndexes) {
+    if (!tableExists(db, QStringLiteral("tag"))) {
+        if (!execChecked(query, QStringLiteral("CREATE TABLE tag ("
+                                               "id INTEGER PRIMARY KEY,"
+                                               "name VARCHAR(255) COLLATE NOCASE,"
+                                               "priority INTEGER DEFAULT 0,"
+                                               "created DATETIME DEFAULT current_timestamp,"
+                                               "parent_id INTEGER DEFAULT 0,"
+                                               "color VARCHAR(20),"
+                                               "dark_color VARCHAR(20),"
+                                               "updated DATETIME DEFAULT current_timestamp)"))) {
+            return false;
+        }
+    } else if (!ensureColumn(query, db, QStringLiteral("tag"), QStringLiteral("parent_id"),
+                             QStringLiteral("parent_id INTEGER DEFAULT 0")) ||
+               !ensureColumn(query, db, QStringLiteral("tag"), QStringLiteral("color"),
+                             QStringLiteral("color VARCHAR(20)")) ||
+               !ensureColumn(query, db, QStringLiteral("tag"), QStringLiteral("dark_color"),
+                             QStringLiteral("dark_color VARCHAR(20)")) ||
+               !ensureColumn(query, db, QStringLiteral("tag"), QStringLiteral("updated"),
+                             QStringLiteral("updated DATETIME"))) {
+        return false;
+    }
+
+    if (recreateIndexes &&
+        (!execChecked(query, QStringLiteral("DROP INDEX IF EXISTS idxTagParent")) ||
+         !execChecked(query, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag")))) {
+        return false;
+    }
+
+    if (!execChecked(query, QStringLiteral("CREATE INDEX IF NOT EXISTS idxTagParent "
+                                           "ON tag( parent_id )")) ||
+        !execChecked(query, QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                                           "tag (name, parent_id)"))) {
+        return false;
+    }
+
+    if (!tableExists(db, QStringLiteral("noteTagLink"))) {
+        if (!execChecked(query, QStringLiteral("CREATE TABLE noteTagLink ("
+                                               "id INTEGER PRIMARY KEY,"
+                                               "tag_id INTEGER,"
+                                               "note_file_name VARCHAR(255) DEFAULT '',"
+                                               "note_sub_folder_path TEXT DEFAULT '',"
+                                               "created DATETIME DEFAULT current_timestamp,"
+                                               "stale_date DATETIME DEFAULT NULL)"))) {
+            return false;
+        }
+    } else if (!ensureColumn(query, db, QStringLiteral("noteTagLink"),
+                             QStringLiteral("note_sub_folder_path"),
+                             QStringLiteral("note_sub_folder_path TEXT DEFAULT ''")) ||
+               !ensureColumn(query, db, QStringLiteral("noteTagLink"), QStringLiteral("stale_date"),
+                             QStringLiteral("stale_date DATETIME DEFAULT NULL"))) {
+        return false;
+    }
+
+    if (recreateIndexes &&
+        !execChecked(query, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTagNoteLink"))) {
+        return false;
+    }
+
+    if (!execChecked(query, QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink "
+                                           "ON noteTagLink (tag_id, note_file_name, "
+                                           "note_sub_folder_path)"))) {
+        return false;
+    }
+
+    if (!tableExists(db, QStringLiteral("trashItem"))) {
+        if (!execChecked(query, QStringLiteral("CREATE TABLE trashItem ("
+                                               "id INTEGER PRIMARY KEY,"
+                                               "file_name VARCHAR(255),"
+                                               "file_size INTEGER,"
+                                               "note_sub_folder_path_data TEXT,"
+                                               "created DATETIME DEFAULT current_timestamp)"))) {
+            return false;
+        }
+    }
+
+    return true;
 }
 }    // namespace
 
@@ -246,97 +355,122 @@ bool DatabaseService::createNoteFolderConnection() {
 bool DatabaseService::setupNoteFolderTables() {
     QSqlDatabase dbDisk = getNoteFolderDatabase();
     QSqlQuery queryDisk(dbDisk);
+    auto fail = [&dbDisk, &queryDisk]() {
+        DatabaseService::closeDatabaseConnection(dbDisk, queryDisk);
+        return false;
+    };
 
-    queryDisk.exec(
-        QStringLiteral("CREATE TABLE IF NOT EXISTS appData ("
-                       "name VARCHAR(255) PRIMARY KEY, "
-                       "value VARCHAR(255))"));
+    if (!execChecked(queryDisk, QStringLiteral("CREATE TABLE IF NOT EXISTS appData ("
+                                               "name VARCHAR(255) PRIMARY KEY, "
+                                               "value VARCHAR(255))"))) {
+        return fail();
+    }
     int version =
         getAppData(QStringLiteral("database_version"), QStringLiteral("note_folder")).toInt();
     int oldVersion = version;
     qDebug() << __func__ << " - 'database version': " << version;
 
     if (version < 1) {
-        queryDisk.exec(
-            QStringLiteral("CREATE TABLE IF NOT EXISTS tag ("
-                           "id INTEGER PRIMARY KEY,"
-                           "name VARCHAR(255),"
-                           "priority INTEGER DEFAULT 0,"
-                           "created DATETIME DEFAULT current_timestamp)"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("CREATE TABLE IF NOT EXISTS tag ("
+                                        "id INTEGER PRIMARY KEY,"
+                                        "name VARCHAR(255),"
+                                        "priority INTEGER DEFAULT 0,"
+                                        "created DATETIME DEFAULT current_timestamp)"))) {
+            return fail();
+        }
 
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
-                           "tag (name)"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                                        "tag (name)"))) {
+            return fail();
+        }
 
-        queryDisk.exec(
-            QStringLiteral("CREATE TABLE IF NOT EXISTS noteTagLink ("
-                           "id INTEGER PRIMARY KEY,"
-                           "tag_id INTEGER,"
-                           "note_file_name VARCHAR(255),"
-                           "created DATETIME DEFAULT current_timestamp)"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("CREATE TABLE IF NOT EXISTS noteTagLink ("
+                                        "id INTEGER PRIMARY KEY,"
+                                        "tag_id INTEGER,"
+                                        "note_file_name VARCHAR(255),"
+                                        "created DATETIME DEFAULT current_timestamp)"))) {
+            return fail();
+        }
 
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink"
-                           " ON noteTagLink (tag_id, note_file_name)"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink"
+                                        " ON noteTagLink (tag_id, note_file_name)"))) {
+            return fail();
+        }
 
         version = 1;
     }
 
     if (version < 2) {
-        queryDisk.exec(QStringLiteral("ALTER TABLE tag ADD parent_id INTEGER DEFAULT 0"));
-        queryDisk.exec(
-            QStringLiteral("CREATE INDEX IF NOT EXISTS idxTagParent "
-                           "ON tag( parent_id )"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("ALTER TABLE tag ADD parent_id INTEGER DEFAULT 0")) ||
+            !execChecked(queryDisk, QStringLiteral("CREATE INDEX IF NOT EXISTS idxTagParent "
+                                                   "ON tag( parent_id )"))) {
+            return fail();
+        }
         version = 2;
     }
 
     if (version < 3) {
-        queryDisk.exec(QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag"));
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
-                           "tag (name, parent_id)"));
+        if (!execChecked(queryDisk, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                                        "tag (name, parent_id)"))) {
+            return fail();
+        }
         version = 3;
     }
 
     if (version < 4) {
-        queryDisk.exec(QStringLiteral("ALTER TABLE noteTagLink ADD note_sub_folder_path TEXT"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("ALTER TABLE noteTagLink ADD note_sub_folder_path TEXT"))) {
+            return fail();
+        }
         version = 4;
     }
 
     if (version < 5) {
-        queryDisk.exec(QStringLiteral("DROP INDEX IF EXISTS idxUniqueTagNoteLink"));
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink "
-                           "ON noteTagLink (tag_id, note_file_name, "
-                           "note_sub_folder_path)"));
+        if (!execChecked(queryDisk, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTagNoteLink")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink "
+                                        "ON noteTagLink (tag_id, note_file_name, "
+                                        "note_sub_folder_path)"))) {
+            return fail();
+        }
         version = 5;
     }
 
     if (version < 6) {
         // we need to add a `DEFAULT ''` to column note_sub_folder_path
-        queryDisk.exec(QStringLiteral("ALTER TABLE noteTagLink RENAME TO _noteTagLink"));
-        queryDisk.exec(
-            QStringLiteral("CREATE TABLE IF NOT EXISTS noteTagLink ("
-                           "id INTEGER PRIMARY KEY,"
-                           "tag_id INTEGER,"
-                           "note_file_name VARCHAR(255) DEFAULT '',"
-                           "note_sub_folder_path TEXT DEFAULT '',"
-                           "created DATETIME DEFAULT current_timestamp)"));
-        queryDisk.exec(
-            QStringLiteral("INSERT INTO noteTagLink (tag_id, note_file_name, "
-                           "note_sub_folder_path, created) "
-                           "SELECT tag_id, note_file_name, "
-                           "note_sub_folder_path, created "
-                           "FROM _noteTagLink ORDER BY id"));
-        queryDisk.exec(QStringLiteral("DROP INDEX IF EXISTS idxUniqueTagNoteLink"));
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink "
-                           "ON noteTagLink (tag_id, note_file_name, "
-                           "note_sub_folder_path)"));
-        queryDisk.exec(QStringLiteral("DROP TABLE _noteTagLink"));
-        queryDisk.exec(
-            QStringLiteral("UPDATE noteTagLink SET note_sub_folder_path = '' "
-                           "WHERE note_sub_folder_path IS NULL"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("ALTER TABLE noteTagLink RENAME TO _noteTagLink")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE TABLE IF NOT EXISTS noteTagLink ("
+                                        "id INTEGER PRIMARY KEY,"
+                                        "tag_id INTEGER,"
+                                        "note_file_name VARCHAR(255) DEFAULT '',"
+                                        "note_sub_folder_path TEXT DEFAULT '',"
+                                        "created DATETIME DEFAULT current_timestamp)")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("INSERT INTO noteTagLink (tag_id, note_file_name, "
+                                        "note_sub_folder_path, created) "
+                                        "SELECT tag_id, note_file_name, "
+                                        "note_sub_folder_path, created "
+                                        "FROM _noteTagLink ORDER BY id")) ||
+            !execChecked(queryDisk, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTagNoteLink")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink "
+                                        "ON noteTagLink (tag_id, note_file_name, "
+                                        "note_sub_folder_path)")) ||
+            !execChecked(queryDisk, QStringLiteral("DROP TABLE _noteTagLink")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("UPDATE noteTagLink SET note_sub_folder_path = '' "
+                                        "WHERE note_sub_folder_path IS NULL"))) {
+            return fail();
+        }
         version = 6;
     }
 
@@ -348,12 +482,16 @@ bool DatabaseService::setupNoteFolderTables() {
     }
 
     if (version < 8) {
-        queryDisk.exec(QStringLiteral("ALTER TABLE tag ADD color VARCHAR(20)"));
+        if (!execChecked(queryDisk, QStringLiteral("ALTER TABLE tag ADD color VARCHAR(20)"))) {
+            return fail();
+        }
         version = 8;
     }
 
     if (version < 9) {
-        queryDisk.exec(QStringLiteral("ALTER TABLE tag ADD dark_color VARCHAR(20)"));
+        if (!execChecked(queryDisk, QStringLiteral("ALTER TABLE tag ADD dark_color VARCHAR(20)"))) {
+            return fail();
+        }
         version = 9;
     }
 
@@ -365,10 +503,12 @@ bool DatabaseService::setupNoteFolderTables() {
 
     if (version < 11) {
         // create a case insensitive index
-        queryDisk.exec(QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag"));
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
-                           "tag (name COLLATE NOCASE, parent_id)"));
+        if (!execChecked(queryDisk, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                                        "tag (name COLLATE NOCASE, parent_id)"))) {
+            return fail();
+        }
         version = 11;
     }
 
@@ -378,50 +518,56 @@ bool DatabaseService::setupNoteFolderTables() {
         // is not supported by sqlite -- you can't add a column with
         // a non-constant default value. And if collate ... is used
         // on a column, it's also defaulted to indices on that column.
-        queryDisk.exec(QStringLiteral("ALTER TABLE tag RENAME TO _tag"));
-        queryDisk.exec(
-            QStringLiteral("CREATE TABLE IF NOT EXISTS tag ("
-                           "id INTEGER PRIMARY KEY,"
-                           "name VARCHAR(255) COLLATE NOCASE,"
-                           "priority INTEGER DEFAULT 0,"
-                           "created DATETIME DEFAULT current_timestamp,"
-                           "parent_id INTEGER DEFAULT 0,"
-                           "color VARCHAR(20),"
-                           "dark_color VARCHAR(20),"
-                           "updated DATETIME DEFAULT current_timestamp)"));
+        if (!execChecked(queryDisk, QStringLiteral("ALTER TABLE tag RENAME TO _tag")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE TABLE IF NOT EXISTS tag ("
+                                        "id INTEGER PRIMARY KEY,"
+                                        "name VARCHAR(255) COLLATE NOCASE,"
+                                        "priority INTEGER DEFAULT 0,"
+                                        "created DATETIME DEFAULT current_timestamp,"
+                                        "parent_id INTEGER DEFAULT 0,"
+                                        "color VARCHAR(20),"
+                                        "dark_color VARCHAR(20),"
+                                        "updated DATETIME DEFAULT current_timestamp)"))) {
+            return fail();
+        }
 
         // recreate the indices
-        queryDisk.exec(QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag"));
-        queryDisk.exec(
-            QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
-                           "tag (name, parent_id)"));
-        queryDisk.exec(QStringLiteral("DROP INDEX IF EXISTS idxTagParent"));
-        queryDisk.exec(
-            QStringLiteral("CREATE INDEX IF NOT EXISTS idxTagParent "
-                           "ON tag( parent_id )"));
+        if (!execChecked(queryDisk, QStringLiteral("DROP INDEX IF EXISTS idxUniqueTag")) ||
+            !execChecked(queryDisk,
+                         QStringLiteral("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                                        "tag (name, parent_id)")) ||
+            !execChecked(queryDisk, QStringLiteral("DROP INDEX IF EXISTS idxTagParent")) ||
+            !execChecked(queryDisk, QStringLiteral("CREATE INDEX IF NOT EXISTS idxTagParent "
+                                                   "ON tag( parent_id )"))) {
+            return fail();
+        }
 
         // convert old values to new table
-        queryDisk.exec(
-            QStringLiteral("INSERT INTO tag ( "
-                           "id, name, priority, created, parent_id, "
-                           "color, dark_color, updated "
-                           ") SELECT "
-                           "id, name, priority, created, parent_id, "
-                           "color, dark_color, created "
-                           "FROM _tag ORDER BY id"));
+        if (!execChecked(queryDisk, QStringLiteral("INSERT INTO tag ( "
+                                                   "id, name, priority, created, parent_id, "
+                                                   "color, dark_color, updated "
+                                                   ") SELECT "
+                                                   "id, name, priority, created, parent_id, "
+                                                   "color, dark_color, created "
+                                                   "FROM _tag ORDER BY id")) ||
+            !execChecked(queryDisk, QStringLiteral("DROP TABLE _tag"))) {
+            return fail();
+        }
 
-        queryDisk.exec(QStringLiteral("DROP TABLE _tag"));
         version = 12;
     }
 
     if (version < 13) {
-        queryDisk.exec(
-            QStringLiteral("CREATE TABLE IF NOT EXISTS trashItem ("
-                           "id INTEGER PRIMARY KEY,"
-                           "file_name VARCHAR(255),"
-                           "file_size INTEGER,"
-                           "note_sub_folder_path_data TEXT,"
-                           "created DATETIME DEFAULT current_timestamp)"));
+        if (!execChecked(queryDisk,
+                         QStringLiteral("CREATE TABLE IF NOT EXISTS trashItem ("
+                                        "id INTEGER PRIMARY KEY,"
+                                        "file_name VARCHAR(255),"
+                                        "file_size INTEGER,"
+                                        "note_sub_folder_path_data TEXT,"
+                                        "created DATETIME DEFAULT current_timestamp)"))) {
+            return fail();
+        }
 
         version = 13;
     }
@@ -429,23 +575,43 @@ bool DatabaseService::setupNoteFolderTables() {
     if (version < 14) {
         // removing broken tag assignments from
         // https://github.com/pbek/QOwnNotes/issues/1510
-        queryDisk.exec(
-            QStringLiteral("DELETE FROM noteTagLink WHERE note_sub_folder_path IS NULL"));
+        if (!execChecked(
+                queryDisk,
+                QStringLiteral("DELETE FROM noteTagLink WHERE note_sub_folder_path IS NULL"))) {
+            return fail();
+        }
 
         version = 14;
     }
 
     if (version < 15) {
         // https://github.com/pbek/QOwnNotes/issues/2292
-        queryDisk.exec(
-            QStringLiteral("ALTER TABLE noteTagLink ADD stale_date DATETIME DEFAULT NULL"));
+        if (!execChecked(
+                queryDisk,
+                QStringLiteral("ALTER TABLE noteTagLink ADD stale_date DATETIME DEFAULT NULL"))) {
+            return fail();
+        }
 
         version = 15;
     }
 
+    const bool repairExistingNoteFolderSchema = version < 16;
+    if (!repairNoteFolderSchema(dbDisk, queryDisk, repairExistingNoteFolderSchema)) {
+        return fail();
+    }
+
+    if (version < 16) {
+        // Repair note folder databases that were marked as migrated but missed
+        // parts of the schema, for example after importing old settings and
+        // selecting a new note folder (see #3612).
+        version = 16;
+    }
+
     if (version != oldVersion) {
-        setAppData(QStringLiteral("database_version"), QString::number(version),
-                   QStringLiteral("note_folder"));
+        if (!setAppData(QStringLiteral("database_version"), QString::number(version),
+                        QStringLiteral("note_folder"))) {
+            return fail();
+        }
     }
 
     closeDatabaseConnection(dbDisk, queryDisk);
