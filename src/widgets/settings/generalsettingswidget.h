@@ -47,6 +47,7 @@ class GeneralSettingsWidget : public QWidget {
     void on_databaseIntegrityCheckButton_clicked();
     void on_clearAppDataAndExitButton_clicked();
     void on_setExternalEditorPathToolButton_clicked();
+    void on_setExternalDiffToolPathToolButton_clicked();
     void on_addCustomNoteFileExtensionButton_clicked();
     void on_removeCustomNoteFileExtensionButton_clicked();
     void on_defaultNoteFileExtensionListWidget_itemChanged(QListWidgetItem *item);
@@ -66,4 +67,6 @@ class GeneralSettingsWidget : public QWidget {
 
     QListWidgetItem *addCustomNoteFileExtension(const QString &fileExtension);
     void initSearchEngineComboBox();
+    QString selectExecutablePath(const QString &path, const QString &dialogName,
+                                 const QString &windowTitle);
 };

@@ -2,6 +2,10 @@
 
 ## 26.5.12
 
+- Added a native **Diff selected notes** note-list context menu action using a
+  new **External tools** option in **General settings** for the external diff
+  tool path, so the external diff tool can be configured and used directly in
+  the application (for [#3615](https://github.com/pbek/QOwnNotes/issues/3615))
 - Fixed internal note links such as `[the note](the-note.md)` and `<the-note.md>`
   being highlighted as note links inside inline code spans and code blocks
   (for [#3614](https://github.com/pbek/QOwnNotes/issues/3614))

@@ -88,6 +88,8 @@ void GeneralSettingsWidget::readSettings() {
     // Prepend the portable data path if we are in portable mode
     ui->externalEditorPathLineEdit->setText(Utils::Misc::prependPortableDataPathIfNeeded(
         settings.value(QStringLiteral("externalEditorPath")).toString(), true));
+    ui->externalDiffToolPathLineEdit->setText(Utils::Misc::prependPortableDataPathIfNeeded(
+        settings.value(QStringLiteral("externalDiffToolPath")).toString(), true));
 
     ui->disableAutomaticUpdateDialogCheckBox->setChecked(
         settings.value(QStringLiteral("disableAutomaticUpdateDialog")).toBool());
@@ -207,6 +209,9 @@ void GeneralSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("externalEditorPath"),
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                           ui->externalEditorPathLineEdit->text()));
+    settings.setValue(QStringLiteral("externalDiffToolPath"),
+                      Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                          ui->externalDiffToolPathLineEdit->text()));
 
     settings.setValue(QStringLiteral("allowOnlyOneAppInstance"),
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
@@ -322,10 +327,33 @@ void GeneralSettingsWidget::on_clearAppDataAndExitButton_clicked() {
  * Sets a path to an external editor
  */
 void GeneralSettingsWidget::on_setExternalEditorPathToolButton_clicked() {
-    QString path = ui->externalEditorPathLineEdit->text();
+    const QString filePath =
+        selectExecutablePath(ui->externalEditorPathLineEdit->text(),
+                             QStringLiteral("ExternalEditor"), tr("Select editor application"));
+
+    if (!filePath.isEmpty()) {
+        ui->externalEditorPathLineEdit->setText(filePath);
+    }
+}
+
+/**
+ * Sets a path to an external diff tool
+ */
+void GeneralSettingsWidget::on_setExternalDiffToolPathToolButton_clicked() {
+    const QString filePath = selectExecutablePath(ui->externalDiffToolPathLineEdit->text(),
+                                                  QStringLiteral("ExternalDiffTool"),
+                                                  tr("Select diff tool application"));
+
+    if (!filePath.isEmpty()) {
+        ui->externalDiffToolPathLineEdit->setText(filePath);
+    }
+}
+
+QString GeneralSettingsWidget::selectExecutablePath(const QString &path, const QString &dialogName,
+                                                    const QString &windowTitle) {
     QString dirPath = path;
 
-    // Get the path of the directory if an editor path was set
+    // Get the path of the directory if an application path was set
     if (!path.isEmpty()) {
         dirPath = QFileInfo(path).dir().path();
     }
@@ -339,7 +367,7 @@ void GeneralSettingsWidget::on_setExternalEditorPathToolButton_clicked() {
     mimeTypeFilters << QStringLiteral("application/x-executable")
                     << QStringLiteral("application/octet-stream");
 
-    FileDialog dialog(QStringLiteral("ExternalEditor"));
+    FileDialog dialog(dialogName);
 
     if (!dirPath.isEmpty()) {
         dialog.setDirectory(dirPath);
@@ -352,18 +380,19 @@ void GeneralSettingsWidget::on_setExternalEditorPathToolButton_clicked() {
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setMimeTypeFilters(mimeTypeFilters);
-    dialog.setWindowTitle(tr("Select editor application"));
+    dialog.setWindowTitle(windowTitle);
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
         const QStringList fileNames = dialog.selectedFiles();
         if (fileNames.empty()) {
-            return;
+            return QString();
         }
 
-        const QString &filePath(fileNames.at(0));
-        ui->externalEditorPathLineEdit->setText(filePath);
+        return fileNames.at(0);
     }
+
+    return QString();
 }
 
 /**

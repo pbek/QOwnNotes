@@ -53,4 +53,6 @@ class NoteTreeManager : public QObject {
    private:
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
+
+    void diffSelectedNotesWithExternalTool();
 };

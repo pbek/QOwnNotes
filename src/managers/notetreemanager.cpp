@@ -29,6 +29,7 @@
 #include <widgets/notetreewidgetitem.h>
 
 #include <QDesktopServices>
+#include <QDir>
 #include <QInputDialog>
 #include <QMenu>
 #include <QMessageBox>
@@ -41,6 +42,38 @@
 
 NoteTreeManager::NoteTreeManager(MainWindow *mainWindow, Ui::MainWindow *ui, QObject *parent)
     : QObject(parent), _mainWindow(mainWindow), _ui(ui) {}
+
+void NoteTreeManager::diffSelectedNotesWithExternalTool() {
+    QStringList selectedNotePaths;
+    const QVector<Note> notes = selectedNotes();
+
+    for (const Note &note : notes) {
+        selectedNotePaths << QDir::toNativeSeparators(note.fullNoteFilePath());
+    }
+
+    if (selectedNotePaths.count() < 2) {
+        Utils::Gui::warning(_mainWindow, tr("External diff tool"),
+                            tr("Please select at least two notes to diff."),
+                            QStringLiteral("external-diff-tool-not-enough-notes"));
+        return;
+    }
+
+    SettingsService settings;
+    QString externalDiffToolPath = Utils::Misc::prependPortableDataPathIfNeeded(
+        settings.value(QStringLiteral("externalDiffToolPath"), QStringLiteral("kdiff3")).toString(),
+        true);
+
+    if (externalDiffToolPath.isEmpty()) {
+        externalDiffToolPath = QStringLiteral("kdiff3");
+    }
+
+    if (!Utils::Misc::startDetachedProcess(externalDiffToolPath, selectedNotePaths)) {
+        Utils::Gui::warning(_mainWindow, tr("External diff tool"),
+                            tr("The external diff tool <strong>%1</strong> could not be started.")
+                                .arg(externalDiffToolPath.toHtmlEscaped()),
+                            QStringLiteral("external-diff-tool-not-started"));
+    }
+}
 
 /**
  * Adds a note to the note tree widget
@@ -479,6 +512,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     QAction *copyNotePathToClipboardAction = nullptr;
     QAction *copyNoteFileNameToClipboardAction = nullptr;
     QAction *toggleFavoriteAction = nullptr;
+    QAction *diffSelectedNotesAction = nullptr;
 
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
@@ -488,6 +522,10 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
         auto *openNoteInTabAction = noteMenu.addAction(tr("Open selected notes in tabs"));
         QObject::connect(openNoteInTabAction, &QAction::triggered, _mainWindow,
                          &MainWindow::openSelectedNotesInTab);
+    }
+
+    if (noteCount > 1) {
+        diffSelectedNotesAction = noteMenu.addAction(tr("Diff selected notes"));
     }
 
     if (!multiNoteMenuEntriesOnly) {
@@ -564,6 +602,8 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
         } else if (selectedItem == openInExternalEditorAction) {
             // open the current note in an external editor
             _mainWindow->on_action_Open_note_in_external_editor_triggered();
+        } else if (selectedItem == diffSelectedNotesAction) {
+            diffSelectedNotesWithExternalTool();
         } else if (selectedItem == openNoteWindowAction) {
             // open the current note in a dialog
             _mainWindow->on_actionView_note_in_new_window_triggered();

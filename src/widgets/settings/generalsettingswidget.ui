@@ -511,32 +511,63 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_11">
+        <widget class="QGroupBox" name="externalToolsGroupBox">
          <property name="title">
-          <string>External editor</string>
+          <string>External tools</string>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
+         <layout class="QGridLayout" name="externalToolsGridLayout">
+          <item row="0" column="0">
            <widget class="QLabel" name="label_10">
             <property name="text">
              <string>Path to external editor:</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item row="0" column="1">
            <widget class="QLineEdit" name="externalEditorPathLineEdit">
             <property name="placeholderText">
-             <string>path to external editor, leave empty for default</string>
+             <string>Path to external editor, leave empty for default</string>
             </property>
             <property name="clearButtonEnabled">
              <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item>
+          <item row="0" column="2">
            <widget class="QToolButton" name="setExternalEditorPathToolButton">
             <property name="toolTip">
              <string>set external editor</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset theme="document-open" resource="../../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="externalDiffToolPathLabel">
+            <property name="text">
+             <string>Path to external diff tool:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="externalDiffToolPathLineEdit">
+            <property name="placeholderText">
+             <string>Path to external diff tool, leave empty for default</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QToolButton" name="setExternalDiffToolPathToolButton">
+            <property name="toolTip">
+             <string>set external diff tool</string>
             </property>
             <property name="text">
              <string/>
