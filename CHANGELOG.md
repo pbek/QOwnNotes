@@ -5,6 +5,10 @@
 - Fixed internal note links such as `[the note](the-note.md)` and `<the-note.md>`
   being highlighted as note links inside inline code spans and code blocks
   (for [#3614](https://github.com/pbek/QOwnNotes/issues/3614))
+- When a note is renamed and backlinks are updated, Markdown link titles that
+  still match the old note title are now renamed too, for example
+  `[the note](the-note.md)` becomes `[the new note](the-new-note.md)`, while
+  other link titles are preserved (for [#705](https://github.com/pbek/QOwnNotes/issues/705))
 
 ## 26.5.11
 

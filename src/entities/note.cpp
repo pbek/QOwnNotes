@@ -5237,6 +5237,39 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
     const int noteCount = noteIdList.count();
     const QString oldUrl = getNoteURL(oldNote.getName());
     const QString newUrl = getNoteURL(_name);
+    QString oldLinkTitle = oldNote.getName();
+    QString newLinkTitle = _name;
+    oldLinkTitle.remove(QStringLiteral("]"));
+    newLinkTitle.remove(QStringLiteral("]"));
+
+    const auto replaceMarkdownLinksToTarget = [&oldLinkTitle, &newLinkTitle](
+                                                  QString &text, const QString &oldTarget,
+                                                  const QString &newTarget) {
+        const QRegularExpression markdownLinkRegex(QStringLiteral(R"(\[([^\[\]]+?)\]\()") +
+                                                   QRegularExpression::escape(oldTarget) +
+                                                   QStringLiteral(R"((#[^\)]*)?\))"));
+        QRegularExpressionMatchIterator iterator = markdownLinkRegex.globalMatch(text);
+        QVector<QPair<int, QString>> replacements;
+
+        while (iterator.hasNext()) {
+            const QRegularExpressionMatch match = iterator.next();
+            QString linkTitle = match.captured(1);
+
+            if (linkTitle == oldLinkTitle) {
+                linkTitle = newLinkTitle;
+            }
+
+            replacements.append(
+                {match.capturedStart(0), QStringLiteral("[") + linkTitle + QStringLiteral("](") +
+                                             newTarget + match.captured(2) + QStringLiteral(")")});
+        }
+
+        for (int i = replacements.count() - 1; i >= 0; --i) {
+            const int start = replacements.at(i).first;
+            const int length = markdownLinkRegex.match(text, start).capturedLength(0);
+            text.replace(start, length, replacements.at(i).second);
+        }
+    };
 
     if (Utils::Gui::questionNoSkipOverride(
             nullptr, QObject::tr("Note file path changed"),
@@ -5262,6 +5295,7 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
             // replace legacy links with note://
             text.replace(QStringLiteral("<") + oldUrl + QStringLiteral(">"),
                          QStringLiteral("<") + newUrl + QStringLiteral(">"));
+            replaceMarkdownLinksToTarget(text, oldUrl, newUrl);
             text.replace(QStringLiteral("](") + oldUrl + QStringLiteral(")"),
                          QStringLiteral("](") + newUrl + QStringLiteral(")"));
 
@@ -5271,6 +5305,7 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
             if (!oldUrl.contains(QLatin1String("@"))) {
                 text.replace(QStringLiteral("<") + oldUrl + QStringLiteral("@>"),
                              QStringLiteral("<") + newUrl + QStringLiteral(">"));
+                replaceMarkdownLinksToTarget(text, oldUrl + QStringLiteral("@"), newUrl);
                 text.replace(QStringLiteral("](") + oldUrl + QStringLiteral("@)"),
                              QStringLiteral("](") + newUrl + QStringLiteral(")"));
             }
@@ -5284,6 +5319,7 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
             //
             text.replace(QStringLiteral("<") + oldNoteRelativeFilePath + QStringLiteral(">"),
                          QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+            replaceMarkdownLinksToTarget(text, oldNoteRelativeFilePath, relativeFilePath);
             text.replace(QStringLiteral("](") + oldNoteRelativeFilePath + QStringLiteral(")"),
                          QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
             text.replace(QStringLiteral("](") + oldNoteRelativeFilePath + QStringLiteral("#"),
@@ -5295,6 +5331,7 @@ bool Note::handleBacklinkedNotesAfterMoving(const Note &oldNote, const QVector<i
             oldNoteRelativeFilePath = urlEncodeNoteUrl(oldNoteRelativeFilePath);
             text.replace(QStringLiteral("<") + oldNoteRelativeFilePath + QStringLiteral(">"),
                          QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+            replaceMarkdownLinksToTarget(text, oldNoteRelativeFilePath, relativeFilePath);
             text.replace(QStringLiteral("](") + oldNoteRelativeFilePath + QStringLiteral(")"),
                          QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
             text.replace(QStringLiteral("](") + oldNoteRelativeFilePath + QStringLiteral("#"),

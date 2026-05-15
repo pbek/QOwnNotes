@@ -7,6 +7,7 @@
 #include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QMessageBox>
 #include <QSet>
 #include <QString>
 #include <QTextStream>
@@ -976,6 +977,45 @@ void TestNotes::testWikiLinkBacklinksShowInBacklinkPanel() {
     QVERIFY2(foundHeading, "findReverseLinkNotes should include heading wiki link source");
     QVERIFY2(foundHeadingAlias,
              "findReverseLinkNotes should include heading+alias wiki link source");
+}
+
+void TestNotes::testMarkdownLinkTitleUpdatedOnNoteRename() {
+    SettingsService settings;
+    settings.setValue(QStringLiteral("MessageBoxOverride/note-replace-links"),
+                      static_cast<int>(QMessageBox::Yes));
+
+    const QString oldTargetName = uniqueTestName(QStringLiteral("issue-705 old title"));
+    Note targetNote = createTestNote(oldTargetName);
+
+    const QString sourceName = uniqueTestName(QStringLiteral("issue-705-source"));
+    Note sourceNote = createTestNote(sourceName);
+    const QString oldTarget = sourceNote.getFilePathRelativeToNote(targetNote);
+    const QString sourceText = QStringLiteral(
+                                   "[%1](%2)\n[%1 - Details](%2#Details)\n"
+                                   "[custom label](%2)\n<%2>\n")
+                                   .arg(oldTargetName, oldTarget);
+    QVERIFY(sourceNote.storeNewText(sourceText));
+
+    const QString newTargetName = uniqueTestName(QStringLiteral("issue-705 new title"));
+    targetNote.setNoteText(QStringLiteral("# ") + newTargetName + QStringLiteral("\n"));
+
+    bool currentNoteTextChanged = false;
+    QVERIFY(targetNote.storeNoteTextFileToDisk(currentNoteTextChanged));
+
+    const Note renamedTargetNote = Note::fetch(targetNote.getId());
+    const Note updatedSourceNote = Note::fetch(sourceNote.getId());
+    QVERIFY(renamedTargetNote.isFetched());
+    QVERIFY(updatedSourceNote.isFetched());
+
+    const QString newTarget =
+        Note::urlEncodeNoteUrl(updatedSourceNote.getFilePathRelativeToNote(renamedTargetNote));
+    const QString updatedText = updatedSourceNote.getNoteText();
+
+    QVERIFY(updatedText.contains(QStringLiteral("[%1](%2)").arg(newTargetName, newTarget)));
+    QVERIFY(updatedText.contains(
+        QStringLiteral("[%1 - Details](%2#Details)").arg(oldTargetName, newTarget)));
+    QVERIFY(updatedText.contains(QStringLiteral("[custom label](%1)").arg(newTarget)));
+    QVERIFY(updatedText.contains(QStringLiteral("<%1>").arg(newTarget)));
 }
 
 void TestNotes::testBookmarkSuggestionsPrefixSubstringAndExact() {

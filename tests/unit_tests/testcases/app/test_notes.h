@@ -67,6 +67,9 @@ class TestNotes : public QObject {
     /* Wiki-link backlink tests (issue #3535) */
     void testWikiLinkBacklinksShowInBacklinkPanel();
 
+    /* Markdown link refactoring tests (issue #705) */
+    void testMarkdownLinkTitleUpdatedOnNoteRename();
+
     /* Homepage suggestion API helper tests */
     void testBookmarkSuggestionsPrefixSubstringAndExact();
     void testBookmarkSuggestionsDeduplication();
