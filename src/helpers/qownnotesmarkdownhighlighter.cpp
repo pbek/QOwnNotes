@@ -287,11 +287,27 @@ void QOwnNotesMarkdownHighlighter::clearWikiLinkCache() { _wikiLinkCache.clear()
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text) {
+    const int blockState = currentBlockState();
+    if (MarkdownHighlighter::isCodeBlock(blockState) ||
+        MarkdownHighlighter::isCodeBlockEnd(blockState) ||
+        blockState == HighlighterState::CodeBlockIndented) {
+        return;
+    }
+
+    const auto isMatchInCodeSpan = [this](const QRegularExpressionMatch &match) {
+        return MarkdownHighlighter::isPosInACodeSpan(currentBlock().blockNumber(),
+                                                     match.capturedStart(0));
+    };
+
     static const QRegularExpression regex(QStringLiteral(R"(note:\/\/[^\s\)>]+)"));
     QRegularExpressionMatch match = regex.match(text);
     bool noteExists = false;
 
     if (match.hasMatch()) {    // check legacy note:// links
+        if (isMatchInCodeSpan(match)) {
+            return;
+        }
+
         const QString noteLink = match.captured(0);
 
         // try to fetch a note from the url string
@@ -308,6 +324,10 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text)
         match = _regexTagStyleLink.match(text);
 
         if (match.hasMatch()) {
+            if (isMatchInCodeSpan(match)) {
+                return;
+            }
+
             const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
 
             // skip urls
@@ -322,6 +342,10 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text)
             match = _regexBracketLink.match(text);
 
             if (match.hasMatch()) {
+                if (isMatchInCodeSpan(match)) {
+                    return;
+                }
+
                 const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
 
                 // skip urls

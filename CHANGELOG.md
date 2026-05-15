@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.5.12
+
+- Fixed internal note links such as `[the note](the-note.md)` and `<the-note.md>`
+  being highlighted as note links inside inline code spans and code blocks
+  (for [#3614](https://github.com/pbek/QOwnNotes/issues/3614))
+
 ## 26.5.11
 
 - Fixed a startup SQL warning when creating a new note folder by migrating tag
