@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.5.13
+
+- Fixed encrypted note files being modified on every autosave or close even
+  when the note text was not changed; re-encryption is now skipped when the
+  decrypted content is identical to the last saved version, preventing
+  unnecessary file modifications that affected git-tracked note folders
+  (for [#3616](https://github.com/pbek/QOwnNotes/issues/3616))
+
 ## 26.5.12
 
 - Added a native **Diff selected notes** note-list context menu action using a

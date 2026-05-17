@@ -1369,6 +1369,9 @@ Note Note::fillFromQuery(const QSqlQuery &query) {
     _noteSubFolderId = query.value(QStringLiteral("note_sub_folder_id")).toInt();
     _noteText = query.value(QStringLiteral("note_text")).toString();
     _decryptedNoteText = query.value(QStringLiteral("decrypted_note_text")).toString();
+    // Initialize the saved snapshot so that a note loaded with an already-
+    // decrypted text is not needlessly re-encrypted on the first save
+    _savedDecryptedNoteText = _decryptedNoteText;
     _cryptoKey = query.value(QStringLiteral("crypto_key")).toLongLong();
     _fileSize = query.value(QStringLiteral("file_size")).toLongLong();
     _cryptoPassword = query.value(QStringLiteral("crypto_password")).toString();
@@ -2219,6 +2222,26 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     qDebug() << "storing note file: " << this->_fileName;
 
+    // If the note is open for editing (decrypted text is set), check whether
+    // the plaintext actually changed before opening (and thus truncating) the
+    // file. Re-encrypting with fresh random salt/nonce every save produces a
+    // different ciphertext even for identical plaintext, causing unnecessary
+    // file modifications that break git-tracked note folders (see issue #3616).
+    // _decryptedNoteText is intentionally NOT cleared so every subsequent
+    // autosave also hits this guard.
+    if (!_decryptedNoteText.isEmpty()) {
+        if (_decryptedNoteText == _savedDecryptedNoteText && !_noteText.isEmpty()) {
+            // Plaintext unchanged - skip re-encryption and disk write entirely
+            return true;
+        }
+
+        _noteText = _decryptedNoteText;
+        encryptNoteText();
+        // Capture snapshot after encryption (before any potential clearing)
+        _savedDecryptedNoteText = _decryptedNoteText;
+        // Keep _decryptedNoteText set so future saves are also checked above
+    }
+
     if (!file.open(flags)) {
         qCritical() << QObject::tr(
                            "Could not store note file: %1 - Error "
@@ -2253,13 +2276,6 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         // handle the replacing of all note urls if a note was renamed
         // (we couldn't make currentNoteTextChanged a pointer or the app would crash)
         currentNoteTextChanged = handleNoteMoving(oldNote);
-    }
-
-    // if we find a decrypted text to encrypt, then we attempt to encrypt it
-    if (!_decryptedNoteText.isEmpty()) {
-        _noteText = _decryptedNoteText;
-        encryptNoteText();
-        _decryptedNoteText = QLatin1String("");
     }
 
     // transform all types of newline to \n

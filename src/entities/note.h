@@ -458,6 +458,7 @@ class Note {
     QString _noteTextHtmlConversionHash;
     QString _noteText;
     QString _decryptedNoteText;
+    QString _savedDecryptedNoteText;
     QString _cryptoPassword;
     QString _shareUrl;
     QString _fileChecksum;
