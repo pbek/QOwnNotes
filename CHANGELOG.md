@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.5.13
+
+- Fixed unchanged encrypted notes being marked dirty and rewritten on every
+  `Ctrl+S` while editing encrypted notes, which changed their file modification
+  date and repeatedly showed `Stored 1 note(s) to disk`; encrypted note files
+  are now also protected from being truncated to 0 bytes before save validation
+  runs (for [#3616](https://github.com/pbek/QOwnNotes/issues/3616))
+
 ## 26.5.12
 
 - Added a native **Diff selected notes** note-list context menu action using a

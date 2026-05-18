@@ -1893,7 +1893,15 @@ bool Note::storeNewText(QString text) {
 void Note::setDecryptedText(QString text) { this->_decryptedNoteText = std::move(text); }
 
 bool Note::storeNewDecryptedText(QString text) {
-    if (text == this->_decryptedNoteText || !Utils::Misc::isNoteEditingAllowed()) {
+    if (!Utils::Misc::isNoteEditingAllowed()) {
+        return false;
+    }
+
+    const QString currentDecryptedText = _decryptedNoteText.isEmpty() && hasEncryptedNoteText()
+                                             ? fetchDecryptedNoteText()
+                                             : _decryptedNoteText;
+
+    if (text == currentDecryptedText) {
         return false;
     }
 
@@ -2090,7 +2098,6 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         _fileChecksum.clear();
     }
 
-    QFile file(fullNoteFilePath());
     QFile::OpenMode flags = QIODevice::WriteOnly;
     const SettingsService settings;
     const bool useUNIXNewline = settings.value(QStringLiteral("useUNIXNewline")).toBool();
@@ -2217,25 +2224,6 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         }
     }
 
-    qDebug() << "storing note file: " << this->_fileName;
-
-    if (!file.open(flags)) {
-        qCritical() << QObject::tr(
-                           "Could not store note file: %1 - Error "
-                           "message: %2")
-                           .arg(file.fileName(), file.errorString());
-
-#ifndef INTEGRATION_TESTS
-        MainWindow::instance()->showStatusBarMessage(
-            QObject::tr("Could not store note file: %1 - Error "
-                        "message: %2")
-                .arg(relativeNoteFilePath(), file.errorString()),
-            QStringLiteral("❌️"), 20000);
-#endif
-
-        return false;
-    }
-
     const bool fileExists = this->fileExists();
 
     // assign the tags to the new name if the name has changed
@@ -2268,10 +2256,30 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     // Prevent writing empty notes to disk if the note previously had content
     // This protects against accidentally overwriting notes with empty content
-    if (text.isEmpty() && _fileSize > 100 && fileExists) {
+    if (text.isEmpty() && ((_fileSize > 100 && fileExists) || oldNote.hasEncryptedNoteText())) {
         qWarning() << __func__ << " - Refusing to write empty note to disk when note previously had"
-                   << _fileSize << "bytes - file:" << file.fileName();
-        file.close();
+                   << _fileSize << "bytes - file:" << fullNoteFilePath();
+        return false;
+    }
+
+    QFile file(fullNoteFilePath());
+
+    qDebug() << "storing note file: " << this->_fileName;
+
+    if (!file.open(flags)) {
+        qCritical() << QObject::tr(
+                           "Could not store note file: %1 - Error "
+                           "message: %2")
+                           .arg(file.fileName(), file.errorString());
+
+#ifndef INTEGRATION_TESTS
+        MainWindow::instance()->showStatusBarMessage(
+            QObject::tr("Could not store note file: %1 - Error "
+                        "message: %2")
+                .arg(relativeNoteFilePath(), file.errorString()),
+            QStringLiteral("❌️"), 20000);
+#endif
+
         return false;
     }
 
@@ -2300,7 +2308,9 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     }
 
     this->_hasDirtyData = false;
-    this->_fileLastModified = QDateTime::currentDateTime();
+    const QDateTime fileLastModified = QFileInfo(fullNoteFilePath()).lastModified();
+    this->_fileLastModified =
+        fileLastModified.isValid() ? fileLastModified : QDateTime::currentDateTime();
 
     if (!fileExists || !this->_fileCreated.isValid()) {
         this->_fileCreated = this->_fileLastModified;
