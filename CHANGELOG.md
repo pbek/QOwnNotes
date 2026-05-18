@@ -2,6 +2,10 @@
 
 ## 26.5.13
 
+- Improved autosaving encrypted notes by running the expensive Botan encryption
+  step in a worker thread, keeping typing responsive while encrypted notes are
+  saved and avoiding overwriting newer edits made during encryption
+  (for [#3617](https://github.com/pbek/QOwnNotes/issues/3617))
 - Fixed unchanged encrypted notes being marked dirty and rewritten on every
   `Ctrl+S` while editing encrypted notes, which changed their file modification
   date and repeatedly showed `Stored 1 note(s) to disk`; encrypted note files

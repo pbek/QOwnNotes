@@ -12,6 +12,8 @@
 #include <QDebug>
 #include <QDir>
 #include <QElapsedTimer>
+#include <QEventLoop>
+#include <QFutureWatcher>
 #include <QMessageBox>
 #include <QMimeDatabase>
 #include <QQueue>
@@ -21,7 +23,9 @@
 #include <QSqlError>
 #include <QSqlRecord>
 #include <QTemporaryFile>
+#include <QThread>
 #include <QUrl>
+#include <QtConcurrent/QtConcurrentRun>
 #include <utility>
 
 #include "api/noteapi.h"
@@ -407,6 +411,37 @@ static QString buildNoteEncryptionEnvelope(const QString &cipherText, const QStr
         .arg(QString::number(NoteEncryptionVersion), NoteEncryptionKdf,
              QString::number(NoteEncryptionKdfIterations), salt, NoteEncryptionCipher, nonce, mac,
              cipherText);
+}
+
+static QString encryptNoteTextWithBotan(const QString &text, const QString &password) {
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(password);
+    const QString salt = BotanWrapper::randomBytesBase64(NoteEncryptionSaltBytes);
+    const QString nonce = BotanWrapper::randomBytesBase64(NoteEncryptionNonceBytes);
+    QString mac;
+    const QString encryptedText =
+        botanWrapper.EncryptV2(text, salt, nonce, NoteEncryptionKdfIterations, &mac);
+
+    return encryptedText.isEmpty() ? encryptedText
+                                   : buildNoteEncryptionEnvelope(encryptedText, salt, nonce, mac);
+}
+
+static QString encryptNoteTextWithBotanInBackground(const QString &text, const QString &password) {
+    if (qApp == nullptr || QThread::currentThread() != qApp->thread()) {
+        return encryptNoteTextWithBotan(text, password);
+    }
+
+    QFutureWatcher<QString> watcher;
+    QEventLoop loop;
+    QObject::connect(&watcher, &QFutureWatcher<QString>::finished, &loop, &QEventLoop::quit);
+    watcher.setFuture(
+        QtConcurrent::run([text, password]() { return encryptNoteTextWithBotan(text, password); }));
+
+    if (!watcher.isFinished()) {
+        loop.exec();
+    }
+
+    return watcher.result();
 }
 }    // namespace
 
@@ -2245,8 +2280,22 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     // if we find a decrypted text to encrypt, then we attempt to encrypt it
     if (!_decryptedNoteText.isEmpty()) {
+        const QString decryptedNoteText = _decryptedNoteText;
         _noteText = _decryptedNoteText;
-        encryptNoteText();
+
+        encryptNoteText(false);
+
+        if (_id > 0) {
+            const Note latestNote = Note::fetch(_id);
+
+            if (latestNote.isFetched() && latestNote._decryptedNoteText != decryptedNoteText) {
+                qDebug()
+                    << __func__
+                    << " - encrypted note changed while encryption was running, deferring save";
+                return false;
+            }
+        }
+
         _decryptedNoteText = QLatin1String("");
     }
 
@@ -4266,7 +4315,7 @@ void Note::resetChecksumStats() {
 /**
  * Encrypts the note text with the note's crypto key
  */
-QString Note::encryptNoteText() {
+QString Note::encryptNoteText(bool persist) {
     if (_noteText.isEmpty()) {
         return _noteText;
     }
@@ -4314,16 +4363,7 @@ QString Note::encryptNoteText() {
     if (encryptedText.isEmpty()) {
         // fallback to Botan
         // encrypt the text
-        BotanWrapper botanWrapper;
-        botanWrapper.setPassword(_cryptoPassword);
-        const QString salt = BotanWrapper::randomBytesBase64(NoteEncryptionSaltBytes);
-        const QString nonce = BotanWrapper::randomBytesBase64(NoteEncryptionNonceBytes);
-        QString mac;
-        encryptedText =
-            botanWrapper.EncryptV2(text, salt, nonce, NoteEncryptionKdfIterations, &mac);
-        if (!encryptedText.isEmpty()) {
-            encryptedText = buildNoteEncryptionEnvelope(encryptedText, salt, nonce, mac);
-        }
+        encryptedText = encryptNoteTextWithBotanInBackground(text, _cryptoPassword);
 
         //    SimpleCrypt *crypto = new
         //    SimpleCrypt(static_cast<quint64>(cryptoKey)); QString
@@ -4334,8 +4374,10 @@ QString Note::encryptNoteText() {
     _noteText +=
         encryptedText + QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_POST_STRING);
 
-    // store note
-    store();
+    if (persist) {
+        // store note
+        store();
+    }
 
     return _noteText;
 }

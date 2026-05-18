@@ -189,7 +189,7 @@ class Note {
 
     static void resetChecksumStats();
 
-    QString encryptNoteText();
+    QString encryptNoteText(bool persist = true);
 
     QString fetchDecryptedNoteText() const;
 
