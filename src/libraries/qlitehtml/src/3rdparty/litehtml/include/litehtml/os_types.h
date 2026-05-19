@@ -8,7 +8,7 @@ namespace litehtml {
 #if defined(WIN32) || defined(_WIN32) || defined(WINCE)
 
 // noexcept appeared since Visual Studio 2013
-#if _MSC_VER < 1900
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #define noexcept
 #endif
 
