@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.5.14
+
+- Allow `Ctrl+Space` in read-only mode to ask whether note editing should be
+  enabled again when there is no URL to open at the current cursor position
+
 ## 26.5.13
 
 - Improved autosaving encrypted notes by running the expensive Botan encryption

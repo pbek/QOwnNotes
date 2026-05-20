@@ -1188,6 +1188,8 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         if (openLinkAtCursorPosition()) {
             MainWindow::instance()->showStatusBarMessage(
                 tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
+        } else if (!Utils::Misc::isNoteEditingAllowed() && MainWindow::instance()) {
+            MainWindow::instance()->doNoteEditingCheck();
         }
 
         return;
@@ -3156,12 +3158,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
 
                 if ((keyEvent->key() == Qt::Key_Space) &&
                     keyEvent->modifiers().testFlag(Qt::ControlModifier)) {
-                    if (openLinkAtCursorPosition()) {
-                        MainWindow::instance()->showStatusBarMessage(
-                            tr("An url was opened at the current cursor position"),
-                            QStringLiteral("📃"), 5000);
-                    }
-
+                    onAutoCompleteRequested();
                     return true;
                 }
 
