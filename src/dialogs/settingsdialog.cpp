@@ -71,6 +71,26 @@
 #include "widgets/settings/webapplicationsettingswidget.h"
 #include "widgets/settings/webcompanionsettingswidget.h"
 
+namespace {
+QKeySequence shortcutFromSettings(const QString &shortcut) {
+    if (shortcut.isEmpty()) {
+        return QKeySequence();
+    }
+
+    QKeySequence sequence(shortcut, QKeySequence::PortableText);
+
+    if (sequence.isEmpty()) {
+        sequence = QKeySequence(shortcut, QKeySequence::NativeText);
+    }
+
+    return sequence;
+}
+
+QString shortcutToSettings(const QKeySequence &shortcut) {
+    return shortcut.toString(QKeySequence::PortableText);
+}
+}    // namespace
+
 SettingsDialog::SettingsDialog(int page, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
@@ -337,6 +357,8 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue(QStringLiteral("ai/autocompleteEnabled"),
                       ui->aiAutocompleteCheckBox->isChecked());
+
+    settings.sync();
 }
 
 void SettingsDialog::readSettings() {
@@ -409,10 +431,6 @@ void SettingsDialog::loadShortcutSettings() {
     ui->shortcutSearchLineEdit->clear();
     ui->shortcutTreeWidget->clear();
     ui->shortcutTreeWidget->setColumnCount(3);
-
-    // Clear the cached widget maps so storeShortcutSettings() can rebuild them
-    _shortcutWidgetMap.clear();
-    _globalShortcutWidgetMap.clear();
 
     // shortcuts on toolbars and note folders don't work yet
     const QStringList disabledMenuNames = QStringList() << QStringLiteral("menuToolbars")
@@ -552,11 +570,45 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
 
         // try to load the key sequence from the settings, because
         // action->shortcut() is empty if menubar was disabled!
-        keyWidget->setKeySequence(settingFound ? settings.value(shortcutSettingKey).toString()
-                                               : action->data().toString());
+        keyWidget->setKeySequence(
+            settingFound ? shortcutFromSettings(settings.value(shortcutSettingKey).toString())
+                         : QKeySequence(action->data().toString()));
 
         connect(keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
-                [this, actionObjectName]() { keySequenceEvent(actionObjectName); });
+                [this, actionObjectName, keyWidget](const QKeySequence &keySequence) {
+                    const QString settingsKey =
+                        QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
+
+                    if (keySequence == keyWidget->defaultKeySequence()) {
+                        _pendingLocalShortcutValues.remove(settingsKey);
+                        _pendingLocalShortcutRemovals.insert(settingsKey);
+                    } else {
+                        _pendingLocalShortcutRemovals.remove(settingsKey);
+                        _pendingLocalShortcutValues.insert(settingsKey,
+                                                           shortcutToSettings(keySequence));
+                    }
+
+                    qDebug() << "pending local shortcut" << actionObjectName
+                             << shortcutToSettings(keySequence);
+                    keySequenceEvent(actionObjectName);
+                });
+        connect(keyWidget, &QKeySequenceWidget::keySequenceChanged, this,
+                [this, actionObjectName, keyWidget](const QKeySequence &keySequence) {
+                    const QString settingsKey =
+                        QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
+
+                    if (keySequence == keyWidget->defaultKeySequence()) {
+                        _pendingLocalShortcutValues.remove(settingsKey);
+                        _pendingLocalShortcutRemovals.insert(settingsKey);
+                    } else {
+                        _pendingLocalShortcutRemovals.remove(settingsKey);
+                        _pendingLocalShortcutValues.insert(settingsKey,
+                                                           shortcutToSettings(keySequence));
+                    }
+
+                    qDebug() << "pending local shortcut" << actionObjectName
+                             << shortcutToSettings(keySequence);
+                });
 
         auto *disableShortcutButton = new QPushButton();
         disableShortcutButton->setToolTip(tr("Clear shortcut"));
@@ -576,9 +628,6 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
         frame->setLayout(frameLayout);
         ui->shortcutTreeWidget->setItemWidget(actionItem, 1, frame);
 
-        // Store the local shortcut widget in the map for O(1) lookup during store
-        _shortcutWidgetMap[actionObjectName] = keyWidget;
-
         // create the key widget for the global shortcut
         auto *globalShortcutKeyWidget = new QKeySequenceWidget();
         globalShortcutKeyWidget->setFixedWidth(240);
@@ -588,14 +637,45 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
         globalShortcutKeyWidget->setShortcutButtonInactiveColor(shortcutButtonInactiveColor);
         globalShortcutKeyWidget->setToolTip(tr("Assign a new shortcut"),
                                             tr("Reset to default shortcut"));
-        globalShortcutKeyWidget->setKeySequence(
+        globalShortcutKeyWidget->setKeySequence(shortcutFromSettings(
             settings.value(QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName)
-                .toString());
+                .toString()));
+        connect(globalShortcutKeyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
+                [this, actionObjectName](const QKeySequence &keySequence) {
+                    const QString settingsKey =
+                        QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName;
+
+                    if (keySequence.isEmpty()) {
+                        _pendingGlobalShortcutValues.remove(settingsKey);
+                        _pendingGlobalShortcutRemovals.insert(settingsKey);
+                    } else {
+                        _pendingGlobalShortcutRemovals.remove(settingsKey);
+                        _pendingGlobalShortcutValues.insert(settingsKey,
+                                                            shortcutToSettings(keySequence));
+                    }
+
+                    qDebug() << "pending global shortcut" << actionObjectName
+                             << shortcutToSettings(keySequence);
+                });
+        connect(globalShortcutKeyWidget, &QKeySequenceWidget::keySequenceChanged, this,
+                [this, actionObjectName](const QKeySequence &keySequence) {
+                    const QString settingsKey =
+                        QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName;
+
+                    if (keySequence.isEmpty()) {
+                        _pendingGlobalShortcutValues.remove(settingsKey);
+                        _pendingGlobalShortcutRemovals.insert(settingsKey);
+                    } else {
+                        _pendingGlobalShortcutRemovals.remove(settingsKey);
+                        _pendingGlobalShortcutValues.insert(settingsKey,
+                                                            shortcutToSettings(keySequence));
+                    }
+
+                    qDebug() << "pending global shortcut" << actionObjectName
+                             << shortcutToSettings(keySequence);
+                });
 
         ui->shortcutTreeWidget->setItemWidget(actionItem, 2, globalShortcutKeyWidget);
-
-        // Store the global shortcut widget in the map for O(1) lookup during store
-        _globalShortcutWidgetMap[actionObjectName] = globalShortcutKeyWidget;
     }
 }
 
@@ -743,55 +823,90 @@ QKeySequenceWidget *SettingsDialog::findGlobalKeySequenceWidget(const QString &o
  * Stores the local and global keyboard shortcut settings
  */
 void SettingsDialog::storeShortcutSettings() {
-    // If the shortcut page was never visited, the tree was never built —
-    // nothing to store
-    if (_shortcutWidgetMap.isEmpty() && _globalShortcutWidgetMap.isEmpty()) {
+    // If the shortcut page was never visited, the tree was never built.
+    if (ui->shortcutTreeWidget->topLevelItemCount() == 0) {
         return;
     }
 
     SettingsService settings;
+    int localShortcutCount = 0;
+    int globalShortcutCount = 0;
 
-    // Use the pre-built hash maps populated during loadShortcutSettings() for
-    // O(1) per-action lookup instead of O(n) recursive tree traversal
-    for (auto it = _shortcutWidgetMap.constBegin(); it != _shortcutWidgetMap.constEnd(); ++it) {
-        const QString &actionObjectName = it.key();
-        QKeySequenceWidget *keyWidget = it.value();
+    std::function<void(QTreeWidgetItem *)> storeItem = [&](QTreeWidgetItem *item) {
+        const QString actionObjectName = item->data(1, Qt::UserRole).toString();
 
-        if (keyWidget == nullptr) {
-            continue;
+        if (!actionObjectName.isEmpty()) {
+            auto *frameWidget = ui->shortcutTreeWidget->itemWidget(item, 1);
+
+            if (frameWidget != nullptr) {
+                const auto keySequenceWidgets = frameWidget->findChildren<QKeySequenceWidget *>();
+
+                if (!keySequenceWidgets.isEmpty()) {
+                    QKeySequenceWidget *keyWidget = keySequenceWidgets.at(0);
+                    const QKeySequence keySequence = keyWidget->keySequence();
+                    const QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
+                    const QString settingsKey =
+                        QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
+
+                    // Store strings, because initShortcuts() restores shortcuts from strings.
+                    if (keySequence == defaultKeySequence) {
+                        settings.remove(settingsKey);
+                    } else {
+                        settings.setValue(settingsKey, shortcutToSettings(keySequence));
+                    }
+
+                    localShortcutCount++;
+                }
+            }
+
+            auto *globalWidget =
+                dynamic_cast<QKeySequenceWidget *>(ui->shortcutTreeWidget->itemWidget(item, 2));
+
+            if (globalWidget != nullptr) {
+                const QKeySequence keySequence = globalWidget->keySequence();
+                const QString settingsKey =
+                    QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName;
+
+                if (keySequence.isEmpty()) {
+                    settings.remove(settingsKey);
+                } else {
+                    settings.setValue(settingsKey, shortcutToSettings(keySequence));
+                }
+
+                globalShortcutCount++;
+            }
         }
 
-        QKeySequence keySequence = keyWidget->keySequence();
-        QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
-        const QString settingsKey = QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
-
-        // Remove or store the setting for the shortcut if it differs from default
-        if (keySequence == defaultKeySequence) {
-            settings.remove(settingsKey);
-        } else {
-            settings.setValue(settingsKey, keySequence.toString());
+        for (int i = 0; i < item->childCount(); i++) {
+            storeItem(item->child(i));
         }
+    };
+
+    for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
+        storeItem(ui->shortcutTreeWidget->topLevelItem(i));
     }
 
-    for (auto it = _globalShortcutWidgetMap.constBegin(); it != _globalShortcutWidgetMap.constEnd();
-         ++it) {
-        const QString &actionObjectName = it.key();
-        QKeySequenceWidget *globalWidget = it.value();
-
-        if (globalWidget == nullptr) {
-            continue;
-        }
-
-        QKeySequence keySequence = globalWidget->keySequence();
-        const QString settingsKey =
-            QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName;
-
-        if (keySequence.isEmpty()) {
-            settings.remove(settingsKey);
-        } else {
-            settings.setValue(settingsKey, keySequence.toString());
-        }
+    for (const QString &settingsKey : Utils::asConst(_pendingLocalShortcutRemovals)) {
+        settings.remove(settingsKey);
     }
+
+    for (auto it = _pendingLocalShortcutValues.constBegin();
+         it != _pendingLocalShortcutValues.constEnd(); ++it) {
+        settings.setValue(it.key(), it.value());
+    }
+
+    for (const QString &settingsKey : Utils::asConst(_pendingGlobalShortcutRemovals)) {
+        settings.remove(settingsKey);
+    }
+
+    for (auto it = _pendingGlobalShortcutValues.constBegin();
+         it != _pendingGlobalShortcutValues.constEnd(); ++it) {
+        settings.setValue(it.key(), it.value());
+    }
+
+    settings.sync();
+    qDebug() << __func__ << " - stored shortcut widgets:"
+             << "local" << localShortcutCount << "global" << globalShortcutCount;
 }
 
 /**
@@ -875,15 +990,15 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData> &it
  *
  * * * * * * * * * * * * * * * */
 
-void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button) {
-    if (button == ui->buttonBox->button(QDialogButtonBox::Ok)) {
-        const bool darkModeSettingChanged = hasDarkModeSettingChanges();
-        storeSettings();
+void SettingsDialog::accept() {
+    const bool darkModeSettingChanged = hasDarkModeSettingChanges();
+    storeSettings();
 
-        if (darkModeSettingChanged) {
-            applyDarkModeSettings();
-        }
+    if (darkModeSettingChanged) {
+        applyDarkModeSettings();
     }
+
+    MasterDialog::accept();
 }
 
 void SettingsDialog::onLayoutStored(const QString &layoutUuid) {

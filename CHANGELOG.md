@@ -2,6 +2,13 @@
 
 ## 26.5.14
 
+- Fixed changed shortcuts not being saved from the **Shortcuts** settings page
+  after the recent lazy-loading performance change; shortcut storage now reads
+  the built shortcut tree directly again instead of relying on cached widget maps,
+  settings are now stored from dialog acceptance so the OK button cannot bypass
+  shortcut persistence, and edited shortcut values are captured directly from
+  the shortcut widgets and stored in portable format
+  (for [#3619](https://github.com/pbek/QOwnNotes/issues/3619))
 - Allow `Ctrl+Space` in read-only mode to ask whether note editing should be
   enabled again when there is no URL to open at the current cursor position
 

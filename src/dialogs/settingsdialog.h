@@ -4,6 +4,8 @@
 #include <entities/notefolder.h>
 #include <enums/oklabelstatus.h>
 
+#include <QSet>
+
 #include "masterdialog.h"
 #include "widgets/settings/cloudsettingswidget.h"
 #include "widgets/settings/generalsettingswidget.h"
@@ -17,7 +19,6 @@ namespace Ui {
 class SettingsDialog;
 }
 
-class QAbstractButton;
 class QListWidgetItem;
 class QListWidget;
 class QKeySequenceWidget;
@@ -96,14 +97,14 @@ class SettingsDialog : public MasterDialog {
 
     void readSettings();
 
+    void accept() override;
+
     void searchScriptInRepository();
 
    protected:
     void closeEvent(QCloseEvent *event) override;
 
    private slots:
-
-    void on_buttonBox_clicked(QAbstractButton *button);
 
     void on_shortcutSearchLineEdit_textChanged(const QString &arg1);
 
@@ -129,9 +130,10 @@ class SettingsDialog : public MasterDialog {
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
     QHash<int, bool> _pageInitialized;
-    // Maps action objectName -> shortcut widget for fast lookup in storeShortcutSettings()
-    QHash<QString, QKeySequenceWidget *> _shortcutWidgetMap;
-    QHash<QString, QKeySequenceWidget *> _globalShortcutWidgetMap;
+    QHash<QString, QString> _pendingLocalShortcutValues;
+    QHash<QString, QString> _pendingGlobalShortcutValues;
+    QSet<QString> _pendingLocalShortcutRemovals;
+    QSet<QString> _pendingGlobalShortcutRemovals;
     bool _initialDarkMode = false;
     bool _initialDarkModeColors = false;
     bool _initialDarkModeTrayIcon = false;

@@ -72,6 +72,7 @@
 #include <QJSEngine>
 #include <QJSValueIterator>
 #include <QKeyEvent>
+#include <QKeySequence>
 #include <QListWidgetItem>
 #include <QMessageBox>
 #include <QMimeData>
@@ -162,6 +163,22 @@
 #include "managers/spellcheckmanager.h"
 #include "managers/systemtraymanager.h"
 #include "managers/tagmanager.h"
+
+namespace {
+QKeySequence shortcutFromSettings(const QString &shortcut) {
+    if (shortcut.isEmpty()) {
+        return QKeySequence();
+    }
+
+    QKeySequence sequence(shortcut, QKeySequence::PortableText);
+
+    if (sequence.isEmpty()) {
+        sequence = QKeySequence(shortcut, QKeySequence::NativeText);
+    }
+
+    return sequence;
+}
+}    // namespace
 
 static MainWindow *s_self = nullptr;
 
@@ -6640,7 +6657,8 @@ void MainWindow::initShortcuts() {
             const bool settingFound = settings.contains(key);
 
             // try to load a key sequence from the settings
-            auto shortcut = QKeySequence(settingFound ? settings.value(key).toString() : "");
+            auto shortcut = settingFound ? shortcutFromSettings(settings.value(key).toString())
+                                         : QKeySequence();
 
             // do we can this method the first time?
             if (!_isDefaultShortcutInitialized) {
@@ -6735,7 +6753,7 @@ void MainWindow::addCustomAction(const QString &identifier, const QString &menuT
 
     // restore the shortcut of the custom action
     SettingsService settings;
-    QKeySequence shortcut = QKeySequence(
+    QKeySequence shortcut = shortcutFromSettings(
         settings.value(QStringLiteral("Shortcuts/MainWindow-customAction_") + identifier)
             .toString());
     if (!shortcut.isEmpty()) {
