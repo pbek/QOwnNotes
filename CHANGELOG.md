@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 26.5.15
+
+- Added per-script hook execution time profiling for performance diagnostics
+  (for [#3620](https://github.com/pbek/QOwnNotes/issues/3620))
+  - When debug logging is enabled all hook invocation times are logged
+    unconditionally via `qDebug()`
+  - When debug logging is not active, only hook invocations that exceed a
+    configurable threshold are logged as warnings
+  - The threshold (default 500 ms) can be configured in the new
+    **Script hook execution time warning threshold** spinbox in the
+    **Debug options** settings page
+  - External-process scripting functions (`startDetachedProcess`,
+    `startSynchronousProcess`) are intentionally excluded from profiling
+    because their runtime is dominated by the child process, not the
+    scripting engine
+  - Log messages have the form: `[script profiler] <script-name> :: <hookName> took <N> ms`
+
 ## 26.5.14
 
 - Fixed changed shortcuts not being saved from the **Shortcuts** settings page

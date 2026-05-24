@@ -46,6 +46,8 @@ void DebugOptionSettingsWidget::readSettings() {
     ui->fileLoggingCheckBox->setChecked(
         settings.value(QStringLiteral("Debug/fileLogging")).toBool());
     on_fileLoggingCheckBox_toggled(ui->fileLoggingCheckBox->isChecked());
+    ui->scriptProfilingThresholdSpinBox->setValue(
+        settings.value(QStringLiteral("Debug/scriptProfilingThreshold"), 500).toInt());
 }
 
 void DebugOptionSettingsWidget::storeSettings() {
@@ -56,6 +58,8 @@ void DebugOptionSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("Debug/fakeOldScriptVersions"),
                       ui->oldScriptVersionsCheckBox->isChecked());
     settings.setValue(QStringLiteral("Debug/fileLogging"), ui->fileLoggingCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Debug/scriptProfilingThreshold"),
+                      ui->scriptProfilingThresholdSpinBox->value());
 }
 
 void DebugOptionSettingsWidget::removeLogFile() {

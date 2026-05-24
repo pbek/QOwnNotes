@@ -13,8 +13,10 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
+#include <QElapsedTimer>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QLoggingCategory>
 #include <QMimeData>
 
 #ifdef __GNUC__
@@ -61,6 +63,32 @@ void callDeprecatedWorkspaceSwitchedHook(const ScriptComponent &scriptComponent,
                               Q_ARG(QVariant, newUuid));
 }
 }    // namespace
+
+/**
+ * Logs the execution time of a script hook invocation.
+ * When debug logging is enabled all times are logged unconditionally.
+ * Otherwise only times exceeding the configured threshold are logged as warnings.
+ *
+ * @param scriptName the name of the script
+ * @param hookName the name of the hook that was invoked
+ * @param elapsedMs the elapsed time in milliseconds
+ */
+static void logScriptHookTiming(const QString &scriptName, const QString &hookName,
+                                qint64 elapsedMs) {
+    SettingsService settings;
+    const bool debugLogging = settings.value(QStringLiteral("Debug/fileLogging")).toBool() ||
+                              QLoggingCategory::defaultCategory()->isDebugEnabled();
+    const int threshold =
+        settings.value(QStringLiteral("Debug/scriptProfilingThreshold"), 500).toInt();
+
+    if (debugLogging) {
+        qDebug() << "[script profiler]" << scriptName << "::" << hookName << "took" << elapsedMs
+                 << "ms";
+    } else if (elapsedMs >= threshold) {
+        qWarning() << "[script profiler]" << scriptName << "::" << hookName << "took" << elapsedMs
+                   << "ms";
+    }
+}
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
@@ -467,9 +495,13 @@ QString ScriptingService::callInsertMediaHook(QFile *file, QString markdownText)
         if (methodExistsForObject(scriptComponent.object,
                                   QStringLiteral("insertMediaHook(QVariant,QVariant)"))) {
             QVariant newMarkdownText;
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 scriptComponent.object, "insertMediaHook", Q_RETURN_ARG(QVariant, newMarkdownText),
                 Q_ARG(QVariant, file->fileName()), Q_ARG(QVariant, markdownText));
+            logScriptHookTiming(scriptComponent.script.getName(), QStringLiteral("insertMediaHook"),
+                                timer.elapsed());
             QString result = newMarkdownText.toString();
 
             if (!result.isEmpty()) {
@@ -495,10 +527,14 @@ QString ScriptingService::callInsertAttachmentHook(QFile *file, QString markdown
         if (methodExistsForObject(scriptComponent.object,
                                   QStringLiteral("insertAttachmentHook(QVariant,QVariant)"))) {
             QVariant newMarkdownText;
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(scriptComponent.object, "insertAttachmentHook",
                                       Q_RETURN_ARG(QVariant, newMarkdownText),
                                       Q_ARG(QVariant, file->fileName()),
                                       Q_ARG(QVariant, markdownText));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("insertAttachmentHook"), timer.elapsed());
             QString result = newMarkdownText.toString();
 
             if (!result.isEmpty()) {
@@ -524,8 +560,12 @@ QString ScriptingService::callFetchUrlTitleHook(const QString &url) const {
         if (methodExistsForObject(scriptComponent.object,
                                   QStringLiteral("fetchUrlTitleHook(QVariant)"))) {
             QVariant title;
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(scriptComponent.object, "fetchUrlTitleHook",
                                       Q_RETURN_ARG(QVariant, title), Q_ARG(QVariant, url));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("fetchUrlTitleHook"), timer.elapsed());
             QString result = title.toString();
 
             if (!result.isEmpty()) {
@@ -554,8 +594,12 @@ void ScriptingService::callLayoutSwitchedHook(const QString &oldUuid, const QStr
 
         if (methodExistsForObject(object,
                                   QStringLiteral("layoutSwitchedHook(QVariant,QVariant)"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(object, "layoutSwitchedHook", Q_ARG(QVariant, oldUuid),
                                       Q_ARG(QVariant, newUuid));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("layoutSwitchedHook"), timer.elapsed());
             continue;
         }
 
@@ -596,10 +640,14 @@ QVariant ScriptingService::callNoteTaggingHook(const Note &note, const QString &
         if (methodExistsForObject(
                 scriptComponent.object,
                 QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 scriptComponent.object, "noteTaggingHook", Q_RETURN_ARG(QVariant, result),
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))),
                 Q_ARG(QVariant, action), Q_ARG(QVariant, tagName), Q_ARG(QVariant, newTagName));
+            logScriptHookTiming(scriptComponent.script.getName(), QStringLiteral("noteTaggingHook"),
+                                timer.elapsed());
 
             if (!result.isNull()) {
                 return result;
@@ -635,12 +683,16 @@ QVariant ScriptingService::callNoteTaggingByObjectHook(const Note &note, const Q
         if (methodExistsForObject(
                 scriptComponent.object,
                 QStringLiteral("noteTaggingByObjectHook(QVariant,QVariant,QVariant,QVariant)"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 scriptComponent.object, "noteTaggingByObjectHook", Q_RETURN_ARG(QVariant, result),
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))),
                 Q_ARG(QVariant, action),
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(tagApi))),
                 Q_ARG(QVariant, newTagName));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("noteTaggingByObjectHook"), timer.elapsed());
 
             if (!result.isNull()) {
                 return result;
@@ -660,8 +712,12 @@ void ScriptingService::callWindowStateChangeHook(const QString &windowStateStr) 
         QObject *object = scriptComponent.object;
 
         if (methodExistsForObject(object, QStringLiteral("windowStateChangedHook(QVariant)"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(object, "windowStateChangedHook",
                                       Q_ARG(QVariant, QVariant::fromValue(windowStateStr)));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("windowStateChangedHook"), timer.elapsed());
         }
     }
 }
@@ -719,8 +775,12 @@ QStringList ScriptingService::callAutocompletionHook() const {
         QVariant result;
 
         if (methodExistsForObject(scriptComponent.object, QStringLiteral("autocompletionHook()"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(scriptComponent.object, "autocompletionHook",
                                       Q_RETURN_ARG(QVariant, result));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("autocompletionHook"), timer.elapsed());
 
             if (!result.isNull()) {
                 results.append(result.toStringList());
@@ -748,8 +808,12 @@ QList<QVariantMap> ScriptingService::callOpenAiBackendsHook() const {
         QVariant result;
 
         if (methodExistsForObject(scriptComponent.object, QStringLiteral("openAiBackendsHook()"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(scriptComponent.object, "openAiBackendsHook",
                                       Q_RETURN_ARG(QVariant, result));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("openAiBackendsHook"), timer.elapsed());
             // Convert the returned value to QVariantList
             QVariantList resultList = result.toList();
 
@@ -793,8 +857,12 @@ QString ScriptingService::callInsertingFromMimeDataHook(const QMimeData *mimeDat
         i.next();
         ScriptComponent scriptComponent = i.value();
 
+        QElapsedTimer timer;
+        timer.start();
         QString text = callInsertingFromMimeDataHookForObject(scriptComponent.object, mimeData);
         if (!text.isEmpty()) {
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("insertingFromMimeDataHook"), timer.elapsed());
             return text;
         }
     }
@@ -833,8 +901,12 @@ QString ScriptingService::callHandleNoteTextFileNameHook(Note *note) {
         i.next();
         ScriptComponent scriptComponent = i.value();
 
+        QElapsedTimer timer;
+        timer.start();
         QString text = callHandleNoteTextFileNameHookForObject(scriptComponent.object, note);
         if (!text.isEmpty()) {
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("handleNoteTextFileNameHook"), timer.elapsed());
             return text;
         }
     }
@@ -873,9 +945,13 @@ void ScriptingService::callHandleNoteOpenedHook(Note *note) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
 
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 object, "noteOpenedHook",
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))));
+            logScriptHookTiming(scriptComponent.script.getName(), QStringLiteral("noteOpenedHook"),
+                                timer.elapsed());
         }
     }
 }
@@ -896,9 +972,13 @@ QString ScriptingService::callHandleNoteNameHook(Note *note) {
             noteApi->fetch(note->getId());
 
             QVariant text;
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 object, "handleNoteNameHook", Q_RETURN_ARG(QVariant, text),
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("handleNoteNameHook"), timer.elapsed());
             return text.toString();
         }
     }
@@ -916,8 +996,12 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(const QString &headline)
         i.next();
         ScriptComponent scriptComponent = i.value();
 
+        QElapsedTimer timer;
+        timer.start();
         QString text = callHandleNewNoteHeadlineHookForObject(scriptComponent.object, headline);
         if (!text.isEmpty()) {
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("handleNewNoteHeadlineHook"), timer.elapsed());
             return text;
         }
     }
@@ -938,10 +1022,14 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(ScriptComponent *s
         noteApi->fetch(note->getId());
 
         QVariant text;
+        QElapsedTimer timer;
+        timer.start();
         QMetaObject::invokeMethod(
             scriptComponent->object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
             Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))),
             Q_ARG(QVariant, html), Q_ARG(QVariant, forExport));
+        logScriptHookTiming(scriptComponent->script.getName(),
+                            QStringLiteral("noteToMarkdownHtmlHook"), timer.elapsed());
         return text.toString();
     } else if (methodExistsForObject(scriptComponent->object,
                                      QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant)"))) {
@@ -953,10 +1041,14 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(ScriptComponent *s
                       "in " +
                           scriptComponent->script.getName();
         QVariant text;
+        QElapsedTimer timer;
+        timer.start();
         QMetaObject::invokeMethod(
             scriptComponent->object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
             Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))),
             Q_ARG(QVariant, html));
+        logScriptHookTiming(scriptComponent->script.getName(),
+                            QStringLiteral("noteToMarkdownHtmlHook"), timer.elapsed());
         return text.toString();
     }
 
@@ -1010,11 +1102,15 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(Note *note, const QStrin
             noteApi->fetch(note->getId());
 
             QVariant resultText;
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 scriptComponent.object, "preNoteToMarkdownHtmlHook",
                 Q_RETURN_ARG(QVariant, resultText),
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))),
                 Q_ARG(QVariant, resultMarkdown), Q_ARG(QVariant, forExport));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("preNoteToMarkdownHtmlHook"), timer.elapsed());
             QString text = resultText.toString();
 
             if (!text.isEmpty()) {
@@ -1032,11 +1128,15 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(Note *note, const QStrin
             noteApi->fetch(note->getId());
 
             QVariant resultText;
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 scriptComponent.object, "preNoteToMarkdownHtmlHook",
                 Q_RETURN_ARG(QVariant, resultText),
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))),
                 Q_ARG(QVariant, resultMarkdown));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("preNoteToMarkdownHtmlHook"), timer.elapsed());
             QString text = resultText.toString();
 
             if (!text.isEmpty()) {
@@ -1090,9 +1190,13 @@ QString ScriptingService::callEncryptionHook(const QString &text, const QString 
         i.next();
         ScriptComponent scriptComponent = i.value();
 
+        QElapsedTimer timer;
+        timer.start();
         QString result =
             callEncryptionHookForObject(scriptComponent.object, text, password, decrypt);
         if (!result.isEmpty()) {
+            logScriptHookTiming(scriptComponent.script.getName(), QStringLiteral("encryptionHook"),
+                                timer.elapsed());
             return result;
         }
     }
@@ -1119,9 +1223,13 @@ bool ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
             noteApi->fetch(note->getId());
             hookFound = true;
 
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(
                 object, "noteDoubleClickedHook",
                 Q_ARG(QVariant, QVariant::fromValue(static_cast<QObject *>(noteApi))));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("noteDoubleClickedHook"), timer.elapsed());
         }
     }
 
@@ -1159,10 +1267,14 @@ bool ScriptingService::callHandleWebsocketRawDataHook(const QString &requestType
                                        "QVariant)"))) {
             QVariant result;
 
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(object, "websocketRawDataHook",
                                       Q_RETURN_ARG(QVariant, result), Q_ARG(QVariant, requestType),
                                       Q_ARG(QVariant, pageUrl), Q_ARG(QVariant, pageTitle),
                                       Q_ARG(QVariant, rawData), Q_ARG(QVariant, screenshotDataUrl));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("websocketRawDataHook"), timer.elapsed());
 
             // if data was handled by hook return true
             if (result.toBool()) {
@@ -1259,7 +1371,11 @@ void ScriptingService::onCustomActionInvoked(const QString &identifier) {
         i.next();
         ScriptComponent scriptComponent = i.value();
 
+        QElapsedTimer timer;
+        timer.start();
         callCustomActionInvokedForObject(scriptComponent.object, identifier);
+        logScriptHookTiming(scriptComponent.script.getName(), QStringLiteral("customActionInvoked"),
+                            timer.elapsed());
     }
 }
 
@@ -2730,9 +2846,13 @@ QVariantList ScriptingService::callHighlightingHook(const QString &text,
 
         if (methodExistsForObject(scriptComponent.object,
                                   QStringLiteral("highlightingHook(QVariant,QVariant)"))) {
+            QElapsedTimer timer;
+            timer.start();
             QMetaObject::invokeMethod(scriptComponent.object, "highlightingHook",
                                       Q_RETURN_ARG(QVariant, result), Q_ARG(QVariant, text),
                                       Q_ARG(QVariant, previousBlockState));
+            logScriptHookTiming(scriptComponent.script.getName(),
+                                QStringLiteral("highlightingHook"), timer.elapsed());
 
             if (!result.isNull()) {
                 results.append(result.toList());
