@@ -164,8 +164,10 @@ void TestNotes::testNoteEncryption() {
 
     QVERIFY(note.getId() == 2);
     QVERIFY(note.getName() == noteName);
-    QVERIFY(note.getNoteText().startsWith(
-        QStringLiteral("MyTestNote\n============\n\n<!-- BEGIN ENCRYPTED TEXT --\n")));
+    QVERIFY(note.getNoteText().startsWith(QStringLiteral(
+        "MyTestNote\n============\n\n<!-- This note is encrypted. Do not edit the text between the "
+        "BEGIN ENCRYPTED TEXT and END ENCRYPTED TEXT markers manually, or the note will not be "
+        "decryptable anymore. -->\n\n<!-- BEGIN ENCRYPTED TEXT --\n")));
     QVERIFY(note.getNoteText().contains(QStringLiteral("qon-crypto: 2")));
     QVERIFY(note.getNoteText().contains(QStringLiteral("kdf: PBKDF2-HMAC-SHA1")));
     QVERIFY(note.getNoteText().contains(QStringLiteral("cipher: AES-256-CBC-PKCS7-HMAC-SHA1")));
