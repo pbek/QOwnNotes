@@ -38,6 +38,9 @@ inline uint qHash(const LinkHit &hit, uint seed = 0) {
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
+#define NOTE_TEXT_ENCRYPTION_WARNING_COMMENT                                              \
+    "<!-- This note is encrypted. Do not edit the text between the BEGIN ENCRYPTED TEXT " \
+    "and END ENCRYPTED TEXT markers manually, or the note will not be decryptable anymore. -->"
 #define BOTAN_SALT "Gj3%36/SmPoe12$snNAs-A-_.),?faQ1@!f32"
 
 class Note {

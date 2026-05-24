@@ -2,6 +2,11 @@
 
 ## 26.5.15
 
+- Added a warning comment before the encrypted text markers in encrypted notes
+  to inform users that the content between the `BEGIN ENCRYPTED TEXT` and
+  `END ENCRYPTED TEXT` markers must not be edited manually; the warning comment
+  is stripped when decrypting so it is never shown to the user or re-encrypted
+  (for [#3621](https://github.com/pbek/QOwnNotes/issues/3621))
 - Added per-script hook execution time profiling for performance diagnostics
   (for [#3620](https://github.com/pbek/QOwnNotes/issues/3620))
   - When debug logging is enabled all hook invocation times are logged

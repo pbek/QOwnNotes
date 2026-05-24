@@ -4331,7 +4331,9 @@ QString Note::encryptNoteText(bool persist) {
         _noteText += noteTextLines.at(1) + QStringLiteral("\n");
     }
 
-    _noteText += QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
+    // Add a warning comment before the encrypted block so users know not to edit it manually
+    _noteText += QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_WARNING_COMMENT) +
+                 QStringLiteral("\n\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
                  QStringLiteral("\n");
 
     // remove the first two lines for encryption
@@ -4498,6 +4500,14 @@ QString Note::getDecryptedNoteText(
 
     // Replace the encrypted text with the decrypted text
     noteText.replace(re, decryptedNoteText);
+
+    // Strip the warning comment so it is not shown to the user and does not
+    // end up in the decrypted note text that would be re-encrypted on save;
+    // replace with a single newline to preserve the blank line after the heading
+    noteText.replace(QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_WARNING_COMMENT) +
+                         QStringLiteral("\n\n"),
+                     QStringLiteral("\n"));
+
     return noteText;
 }
 
