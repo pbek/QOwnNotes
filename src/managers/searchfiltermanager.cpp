@@ -77,7 +77,7 @@ void SearchFilterManager::filterNotesBySearchLineEditText(bool searchInNote) {
     QTreeWidgetItemIterator it(_ui->noteTreeWidget);
     _ui->noteTreeWidget->setColumnCount(1);
 
-    // search notes when at least 2 characters were entered
+    // Search notes when at least 2 characters were entered
     if (searchText.size() >= 2) {
         if (searchInNote) {
             // open search dialog
@@ -402,6 +402,7 @@ void SearchFilterManager::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections2;
     QList<QTextEdit::ExtraSelection> extraSelections3;
 
+    // Highlight occurrences when at least 2 characters were entered
     if (str.size() >= 2) {
         // do an in-note search
         doSearchInNote(str);

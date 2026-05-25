@@ -26,6 +26,7 @@
 #include <QThread>
 #include <QUrl>
 #include <QtConcurrent/QtConcurrentRun>
+#include <algorithm>
 #include <utility>
 
 #include "api/noteapi.h"
@@ -1806,10 +1807,17 @@ QStringList Note::buildQueryStringList(QString searchString, bool escapeForRegul
         queryStrings.append(escapeForRegularExpression ? QRegularExpression::escape(text) : text);
     }
 
-    // remove empty items, so the search will not run amok
+    // Remove empty items, so the search will not run amok
     queryStrings.removeAll(QLatin1String(""));
 
-    // remove duplicate query items
+    // Remove terms shorter than 2 characters — each individual search term
+    // (including OR-search terms) must have at least 2 characters
+    // (for #3624, https://github.com/pbek/QOwnNotes/issues/3624)
+    queryStrings.erase(std::remove_if(queryStrings.begin(), queryStrings.end(),
+                                      [](const QString &s) { return s.size() < 2; }),
+                       queryStrings.end());
+
+    // Remove duplicate query items
     queryStrings.removeDuplicates();
 
     return queryStrings;

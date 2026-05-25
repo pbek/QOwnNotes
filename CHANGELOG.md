@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.5.16
+
+- Fixed a limitation where note text search required at least 2 characters to
+  start searching; this also affected OR searches, where each individual term
+  had to be at least 2 characters long to trigger the search
+  (for [#3624](https://github.com/pbek/QOwnNotes/issues/3624))
+
 ## 26.5.15
 
 - Added a warning comment before the encrypted text markers in encrypted notes
