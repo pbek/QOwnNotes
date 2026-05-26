@@ -90,7 +90,9 @@ static void logScriptHookTiming(const QString &scriptName, const QString &hookNa
     }
 }
 
-ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
+ScriptingService::ScriptingService(QObject *parent)
+    : QObject(parent), _currentNoteApi(new NoteApi()), _currentNote(nullptr) {
+    _currentNoteApi->setParent(this);
     _engine = new QQmlEngine(this);
     addBundledImportPaths(_engine);
     _engine->rootContext()->setContextProperty(QStringLiteral("script"), this);
@@ -1357,7 +1359,6 @@ QString ScriptingService::currentNoteFolderPath() {
  */
 void ScriptingService::onCurrentNoteChanged(Note *note) {
     _currentNote = note;
-    _currentNoteApi = new NoteApi();
     _currentNoteApi->fetch(note->getId());
 }
 

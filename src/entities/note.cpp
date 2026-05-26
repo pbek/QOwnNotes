@@ -2956,9 +2956,11 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged, boo
             //                Note::handleNoteRenaming(oldName, newName);
         }
 
-        // emit the signal for the QML that the note was stored
-        emit scriptingService->noteStored(
-            QVariant::fromValue(static_cast<QObject *>(NoteApi::fromNote(note))));
+        // Emit the signal for QML scripts with a temporary API object.
+        // The object can hold large note text, so don't keep it after the hook ran.
+        NoteApi *noteApi = NoteApi::fromNote(note);
+        emit scriptingService->noteStored(QVariant::fromValue(static_cast<QObject *>(noteApi)));
+        noteApi->deleteLater();
 
         // reassign currentNote if filename of currentNote has changed
         if (note.isSameFile(currentNote)) {

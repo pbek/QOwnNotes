@@ -3241,7 +3241,11 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
         this->setNoteTextFromNote(&note, false, false, true);
 
         // hide the encrypted note text edit by default and show the regular one
+        const QSignalBlocker encryptedBlocker(ui->encryptedNoteTextEdit);
+        Q_UNUSED(encryptedBlocker)
         ui->encryptedNoteTextEdit->hide();
+        ui->encryptedNoteTextEdit->clear();
+        ui->encryptedNoteTextEdit->document()->clearUndoRedoStacks();
         ui->noteTextEdit->show();
     }
 
