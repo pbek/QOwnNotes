@@ -1184,12 +1184,25 @@ void QOwnNotesMarkdownTextEdit::insertWikiLink() {
 }
 
 void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
-    if (isReadOnly() || !Utils::Misc::isNoteEditingAllowed()) {
+    if (!Utils::Misc::isNoteEditingAllowed()) {
         if (openLinkAtCursorPosition()) {
             MainWindow::instance()->showStatusBarMessage(
                 tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
-        } else if (!Utils::Misc::isNoteEditingAllowed() && MainWindow::instance()) {
+
+            return;
+        }
+
+        if (MainWindow::instance()) {
             MainWindow::instance()->doNoteEditingCheck();
+        }
+
+        if (!Utils::Misc::isNoteEditingAllowed()) {
+            return;
+        }
+    } else if (isReadOnly()) {
+        if (openLinkAtCursorPosition()) {
+            MainWindow::instance()->showStatusBarMessage(
+                tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);
         }
 
         return;
@@ -1215,7 +1228,11 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         return;
     }
 
-    if (_markdownLspEnabled && _markdownLspClient && !_markdownLspUri.isEmpty()) {
+    double resultValue;
+    const bool equationSolved = solveEquation(resultValue);
+
+    if (!equationSolved && _markdownLspEnabled && _markdownLspClient &&
+        !_markdownLspUri.isEmpty()) {
         const QTextCursor cursor = textCursor();
         const int line = cursor.blockNumber();
         const int character = cursor.positionInBlock();
@@ -1241,8 +1258,7 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         }
     }
 
-    double resultValue;
-    if (solveEquation(resultValue)) {
+    if (equationSolved) {
         const QString text = QString::number(resultValue);
         auto *action = menu.addAction(QStringLiteral("= ") + text);
         action->setData(text);

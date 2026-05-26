@@ -2,6 +2,12 @@
 
 ## 26.5.16
 
+- Fixed solving equations like `1+1=` with `Ctrl+Space` in the note text edit
+  when the Markdown LSP completion provider was enabled or when note editing was
+  disabled; the normal equation-solving autocomplete flow now takes precedence
+  (for [#3625](https://github.com/pbek/QOwnNotes/issues/3625))
+  - Fixed toggling checkbox list items with `Ctrl+Space` when note editing was
+    disabled
 - Fixed a limitation where note text search required at least 2 characters to
   start searching; this also affected OR searches, where each individual term
   had to be at least 2 characters long to trigger the search
