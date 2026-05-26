@@ -216,7 +216,9 @@ class Note {
 
     void setDecryptedNoteText(QString text);
 
-    bool storeNewDecryptedText(QString text);
+    bool storeNewDecryptedText(QString text, bool persistDecryptedText = true);
+
+    bool storeDirtyStateOnly();
 
     void setDecryptedText(QString text);
 

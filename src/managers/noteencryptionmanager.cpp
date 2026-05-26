@@ -249,14 +249,11 @@ void NoteEncryptionManager::on_encryptedNoteTextEdit_modificationChanged(bool ar
 
     _ui->encryptedNoteTextEdit->document()->setModified(false);
 
-    if (_mainWindow->currentNote.storeNewDecryptedText(_ui->encryptedNoteTextEdit->toPlainText())) {
-        _mainWindow->currentNote.refetch();
+    if (_mainWindow->currentNote.storeNewDecryptedText(_ui->encryptedNoteTextEdit->toPlainText(),
+                                                       false)) {
         _mainWindow->currentNoteLastEdited = QDateTime::currentDateTime();
         _mainWindow->setNoteViewNeedsUpdate(true);
 
-        ScriptingService::instance()->onCurrentNoteChanged(&_mainWindow->currentNote);
-
-        _mainWindow->updateNoteEncryptionUI();
         _mainWindow->handleNoteTextChanged();
     }
 }

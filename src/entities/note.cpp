@@ -1935,7 +1935,7 @@ bool Note::storeNewText(QString text) {
 
 void Note::setDecryptedText(QString text) { this->_decryptedNoteText = std::move(text); }
 
-bool Note::storeNewDecryptedText(QString text) {
+bool Note::storeNewDecryptedText(QString text, bool persistDecryptedText) {
     if (!Utils::Misc::isNoteEditingAllowed()) {
         return false;
     }
@@ -1948,10 +1948,40 @@ bool Note::storeNewDecryptedText(QString text) {
         return false;
     }
 
+    const bool wasDirty = _hasDirtyData;
     this->_decryptedNoteText = std::move(text);
     this->_hasDirtyData = true;
 
-    return this->store();
+    if (persistDecryptedText) {
+        return this->store();
+    }
+
+    return wasDirty || this->storeDirtyStateOnly();
+}
+
+bool Note::storeDirtyStateOnly() {
+    if (_id <= 0) {
+        return store();
+    }
+
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlQuery query(db);
+    query.prepare(
+        QStringLiteral("UPDATE note SET has_dirty_data = :has_dirty_data, "
+                       "modified = :modified WHERE id = :id"));
+
+    const QDateTime modified = QDateTime::currentDateTime();
+    query.bindValue(QStringLiteral(":has_dirty_data"), _hasDirtyData ? 1 : 0);
+    query.bindValue(QStringLiteral(":modified"), modified);
+    query.bindValue(QStringLiteral(":id"), _id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    }
+
+    _modified = modified;
+    return true;
 }
 
 /**
@@ -2296,7 +2326,8 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         if (_id > 0) {
             const Note latestNote = Note::fetch(_id);
 
-            if (latestNote.isFetched() && latestNote._decryptedNoteText != decryptedNoteText) {
+            if (latestNote.isFetched() && !latestNote._decryptedNoteText.isEmpty() &&
+                latestNote._decryptedNoteText != decryptedNoteText) {
                 qDebug()
                     << __func__
                     << " - encrypted note changed while encryption was running, deferring save";
@@ -2913,6 +2944,10 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged, boo
     int count = 0;
     for (int r = 0; query.next(); r++) {
         Note note = noteFromQuery(query);
+        if (currentNote.getHasDirtyData() && (note.getId() == currentNote.getId())) {
+            note = currentNote;
+        }
+
         const QString &oldName = note.getName();
         bool wasCancelledDueToExternalModification = false;
         const bool noteWasStored = note.storeNoteTextFileToDisk(
@@ -2964,6 +2999,7 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged, boo
 
         // reassign currentNote if filename of currentNote has changed
         if (note.isSameFile(currentNote)) {
+            currentNote = note;
             *currentNoteChanged = true;
         }
 

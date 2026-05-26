@@ -3192,6 +3192,10 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     const int noteId = note.getId();
     if (currentNote.exists() && (currentNote.getId() != noteId)) {
         this->noteHistory.updateCursorPositionOfNote(this->currentNote, ui->noteTextEdit);
+
+        if (currentNote.getHasDirtyData()) {
+            storeUpdatedNotesToDisk();
+        }
     }
 
     _noteTabManager->_lastNoteId = this->currentNote.getId();
@@ -4347,14 +4351,10 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
 void MainWindow::noteTextEditTextWasUpdated() {
     if (!ui->encryptedNoteTextEdit->isHidden()) {
-        if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
-            currentNote.refetch();
+        if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText(), false)) {
             currentNoteLastEdited = QDateTime::currentDateTime();
             _noteViewNeedsUpdate = true;
 
-            ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
-
-            updateNoteEncryptionUI();
             handleNoteTextChanged();
         }
 

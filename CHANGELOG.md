@@ -6,8 +6,9 @@
   large encrypted notes, by reusing the scripting current-note API object instead
   of allocating a new one on every note change, releasing temporary note objects
   from note-store script hooks, and clearing the decrypted encrypted-note editor
-  plus undo history when switching back to the regular editor
-  (for [#3627](https://github.com/pbek/QOwnNotes/issues/3627))
+  plus undo history when switching back to the regular editor; encrypted-note
+  typing now also avoids writing and refetching the full decrypted note text from
+  the in-memory database on every keystroke (for [#3627](https://github.com/pbek/QOwnNotes/issues/3627))
 - Fixed solving equations like `1+1=` with `Ctrl+Space` in the note text edit
   when the Markdown LSP completion provider was enabled or when note editing was
   disabled; the normal equation-solving autocomplete flow now takes precedence
