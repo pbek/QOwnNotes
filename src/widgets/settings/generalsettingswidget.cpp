@@ -28,6 +28,7 @@
 #include <QTimer>
 
 #include "dialogs/filedialog.h"
+#include "mainwindow.h"
 #include "services/databaseservice.h"
 #include "services/settingsservice.h"
 #include "services/updateservice.h"
@@ -169,6 +170,10 @@ void GeneralSettingsWidget::readSettings() {
  */
 void GeneralSettingsWidget::storeSettings() {
     SettingsService settings;
+    const bool oldIgnoreAllExternalNoteFolderChanges =
+        settings.value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool();
+    const bool ignoreAllExternalNoteFolderChanges =
+        ui->ignoreAllExternalNoteFolderChangesCheckBox->isChecked();
 
     settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"),
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
@@ -179,12 +184,17 @@ void GeneralSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("acceptAllExternalModifications"),
                       ui->acceptAllExternalModificationsCheckBox->isChecked());
     settings.setValue(QStringLiteral("ignoreAllExternalNoteFolderChanges"),
-                      ui->ignoreAllExternalNoteFolderChangesCheckBox->isChecked());
+                      ignoreAllExternalNoteFolderChanges);
     settings.setValue(QStringLiteral("enableNoteChecksumChecks"),
                       ui->enableNoteChecksumChecks->isChecked());
     settings.setValue(QStringLiteral("newNoteAskHeadline"),
                       ui->newNoteAskHeadlineCheckBox->isChecked());
     settings.setValue(QStringLiteral("useUNIXNewline"), ui->useUNIXNewlineCheckBox->isChecked());
+
+    if (oldIgnoreAllExternalNoteFolderChanges != ignoreAllExternalNoteFolderChanges) {
+        MainWindow::instance()->updateNoteDirectoryWatcher();
+    }
+
     settings.setValue(QStringLiteral("restoreCursorPosition"),
                       ui->restoreCursorPositionCheckBox->isChecked());
     settings.setValue(QStringLiteral("restoreLastNoteAtStartup"),

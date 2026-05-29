@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.5.17
+
+- Fixed the **Ignore all external note folder changes** setting still allowing
+  note folder watcher paths and delayed external-change re-indexes to trigger
+  repeated note folder reloads while notes were stored, especially on Windows
+  network drives (for [#3587](https://github.com/pbek/QOwnNotes/issues/3587))
+
 ## 26.5.16
 
 - Fixed a memory leak when switching between notes, especially noticeable with

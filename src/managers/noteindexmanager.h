@@ -49,6 +49,8 @@ class NoteIndexManager : public QObject {
     void notesDirectoryWasModified(const QString &str);
 
    private:
+    bool shouldIgnoreExternalNoteFolderChanges() const;
+
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
 };

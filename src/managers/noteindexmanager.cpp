@@ -497,6 +497,10 @@ void NoteIndexManager::updateNoteDirectoryWatcher() {
     // clear all paths from the directory watcher
     clearNoteDirectoryWatcher();
 
+    if (shouldIgnoreExternalNoteFolderChanges()) {
+        return;
+    }
+
     const bool hasSubfolders = NoteFolder::isCurrentHasSubfolders();
     //    if (showSubfolders) {
     //        return;
@@ -642,7 +646,7 @@ void NoteIndexManager::notesWereModified(const QString &str) {
     }
 
     // if we should ignore all changes return here
-    if (SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
+    if (shouldIgnoreExternalNoteFolderChanges()) {
         return;
     }
 
@@ -822,7 +826,7 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
     }
 
     // if we should ignore all changes return here
-    if (SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool()) {
+    if (shouldIgnoreExternalNoteFolderChanges()) {
         return;
     }
 
@@ -856,7 +860,8 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
     // the updated content is in place. The deferred pass captures the final state.
     // See: https://github.com/pbek/QOwnNotes/issues/3468
     QTimer::singleShot(1000, _mainWindow, [this]() {
-        if (!_mainWindow->_isNotesDirectoryWasModifiedDisabled) {
+        if (!_mainWindow->_isNotesDirectoryWasModifiedDisabled &&
+            !shouldIgnoreExternalNoteFolderChanges()) {
             qDebug() << __func__ << " - deferred re-index after external directory change";
             buildNotesIndexAndLoadNoteDirectoryList();
         }
@@ -994,6 +999,10 @@ void NoteIndexManager::directoryWatcherWorkaround(bool isNotesDirectoryWasModifi
 }
 
 bool NoteIndexManager::noteDirectoryWatcherAddPath(const QString &path) {
+    if (shouldIgnoreExternalNoteFolderChanges()) {
+        return true;
+    }
+
     const bool result = _mainWindow->noteDirectoryWatcher.addPath(path);
 
     if (!result) {
@@ -1001,6 +1010,10 @@ bool NoteIndexManager::noteDirectoryWatcherAddPath(const QString &path) {
     }
 
     return result;
+}
+
+bool NoteIndexManager::shouldIgnoreExternalNoteFolderChanges() const {
+    return SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool();
 }
 
 void NoteIndexManager::addDirectoryToDirectoryWatcher(const QString &path) {
