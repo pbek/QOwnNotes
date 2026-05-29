@@ -7,6 +7,7 @@
 #include <utils/schema.h>
 
 #include <QApplication>
+#include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QSettings>
@@ -15,9 +16,11 @@
 #include <QtCore/QTimer>
 #include <QtGui/QStyleHints>
 #include <QtGui>
+#include <cstdio>
 #include <iostream>
 
 #include "dialogs/welcomedialog.h"
+#include "entities/note.h"
 #include "entities/notefolder.h"
 #include "helpers/nomenuiconstyle.h"
 #include "libraries/singleapplication/singleapplication.h"
@@ -103,6 +106,53 @@ inline void loadReleaseTranslations(QTranslator *translatorsRelease, const QStri
     loadTranslation(translatorsRelease[1], "/usr/share/QOwnNotes/translations/QOwnNotes_" + locale);
 }
 
+static int printDecryptedNoteFile(const QString &fileName, QString password) {
+    if (fileName.isEmpty()) {
+        std::cerr << "Missing note file path for --decrypt-note." << std::endl;
+        return 1;
+    }
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        std::cerr << "Could not open note file: " << fileName.toLocal8Bit().constData()
+                  << std::endl;
+        return 1;
+    }
+
+    Note note;
+    note.setNoteText(QString::fromUtf8(file.readAll()));
+
+    if (!note.hasEncryptedNoteText()) {
+        std::cerr << "Note file is not encrypted: " << fileName.toLocal8Bit().constData()
+                  << std::endl;
+        return 1;
+    }
+
+    if (password.isEmpty()) {
+        std::cerr << "Password: ";
+        std::string passwordInput;
+        std::getline(std::cin, passwordInput);
+        password = QString::fromLocal8Bit(passwordInput.c_str());
+    }
+
+    if (password.isEmpty()) {
+        std::cerr << "No password provided." << std::endl;
+        return 1;
+    }
+
+    note.setCryptoPassword(password);
+    if (!note.canDecryptNoteText()) {
+        std::cerr << "Note file could not be decrypted. The password may be wrong." << std::endl;
+        return 1;
+    }
+
+    const QByteArray decryptedNoteText = note.fetchDecryptedNoteText().toUtf8();
+    fwrite(decryptedNoteText.constData(), 1, static_cast<size_t>(decryptedNoteText.size()), stdout);
+    fflush(stdout);
+
+    return 0;
+}
+
 /**
  * Function for loading the translations on macOS
  */
@@ -182,9 +232,21 @@ int mainStartupMisc(const QStringList &arguments) {
         "shell");
     parser.addOption(completionOption);
 
+    const QCommandLineOption decryptNoteOption(
+        QStringLiteral("decrypt-note"),
+        QCoreApplication::translate("main", "Prints the decrypted text of an encrypted note file."),
+        "file");
+    parser.addOption(decryptNoteOption);
+
+    const QCommandLineOption decryptNotePasswordOption(
+        QStringLiteral("decrypt-note-password"),
+        QCoreApplication::translate("main", "Password for --decrypt-note."), "password");
+    parser.addOption(decryptNotePasswordOption);
+
     allOptions << helpOption << portableOption << dumpSettingsOption << versionOption
                << allowMultipleInstancesOption << clearSettingsOption << sessionOption
-               << actionOption << completionOption;
+               << actionOption << completionOption << decryptNoteOption
+               << decryptNotePasswordOption;
 
     // just parse the arguments, we want no error handling
     parser.parse(arguments);
@@ -210,6 +272,11 @@ int mainStartupMisc(const QStringList &arguments) {
         }
 
         return 0;    // Exit after generating the completion script
+    }
+
+    if (parser.isSet(decryptNoteOption)) {
+        return printDecryptedNoteFile(parser.value(decryptNoteOption),
+                                      parser.value(decryptNotePasswordOption));
     }
 
     Utils::Gui::applyInterfaceStyle();
@@ -500,7 +567,9 @@ int main(int argc, char *argv[]) {
             clearSettings = true;
         } else if (arg == QStringLiteral("--help") || arg == QStringLiteral("--dump-settings") ||
                    arg == QStringLiteral("--completion") || arg == QStringLiteral("-h") ||
-                   arg == QStringLiteral("--allow-multiple-instances")) {
+                   arg == QStringLiteral("--allow-multiple-instances") ||
+                   arg == QStringLiteral("--decrypt-note") ||
+                   arg.startsWith(QStringLiteral("--decrypt-note="))) {
             allowOnlyOneAppInstance = false;
         } else if (arg == QStringLiteral("--after-update")) {
             qWarning() << __func__ << " - 'arg': " << arg;

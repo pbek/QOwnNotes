@@ -4404,8 +4404,10 @@ QString Note::encryptNoteText(bool persist) {
     }
 
     // check if we have an external encryption method
-    QString encryptedText =
-        ScriptingService::instance()->callEncryptionHook(text, _cryptoPassword, false);
+    QString encryptedText;
+    if (ScriptingService *scriptingService = ScriptingService::instanceOrNull()) {
+        encryptedText = scriptingService->callEncryptionHook(text, _cryptoPassword, false);
+    }
 
     // check if a hook changed the text
     if (encryptedText.isEmpty()) {
@@ -4558,8 +4560,11 @@ QString Note::getDecryptedNoteText(
 }
 
 QString Note::decryptEncryptedNoteText(const QString &encryptedNoteText) const {
-    QString decryptedNoteText =
-        ScriptingService::instance()->callEncryptionHook(encryptedNoteText, _cryptoPassword, true);
+    QString decryptedNoteText;
+    if (ScriptingService *scriptingService = ScriptingService::instanceOrNull()) {
+        decryptedNoteText =
+            scriptingService->callEncryptionHook(encryptedNoteText, _cryptoPassword, true);
+    }
 
     if (!decryptedNoteText.isEmpty()) {
         return decryptedNoteText;

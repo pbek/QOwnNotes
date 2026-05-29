@@ -2,6 +2,10 @@
 
 ## 26.5.17
 
+- Added a command line option `--decrypt-note <file>` to print the decrypted text
+  of an encrypted note file to stdout, with `--decrypt-note-password <password>`
+  for providing the password directly instead of being prompted
+  (for [#3629](https://github.com/pbek/QOwnNotes/issues/3629))
 - Fixed the **Ignore all external note folder changes** setting still allowing
   note folder watcher paths and delayed external-change re-indexes to trigger
   repeated note folder reloads while notes were stored, especially on Windows
