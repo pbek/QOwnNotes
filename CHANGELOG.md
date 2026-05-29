@@ -10,6 +10,13 @@
   note folder watcher paths and delayed external-change re-indexes to trigger
   repeated note folder reloads while notes were stored, especially on Windows
   network drives (for [#3587](https://github.com/pbek/QOwnNotes/issues/3587))
+- Fixed resetting shortcuts in the **Shortcuts** settings page back to their
+  defaults, such as restoring **Move up in note list** to `Alt+Up`, not being
+  persisted when an explicit empty shortcut setting existed; fixed custom
+  actions without a default shortcut being stored as explicit empty shortcut
+  settings after saving the **Shortcuts** settings page; existing empty
+  custom-action shortcut settings are now removed when the actions are loaded
+  (for [#3619](https://github.com/pbek/QOwnNotes/issues/3619))
 - Added more French, Spanish, Korean translation (thank you, jd-develop,
   AlejandroMoc, VenusGirl)
 

@@ -574,40 +574,33 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
             settingFound ? shortcutFromSettings(settings.value(shortcutSettingKey).toString())
                          : QKeySequence(action->data().toString()));
 
-        connect(keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
-                [this, actionObjectName, keyWidget](const QKeySequence &keySequence) {
-                    const QString settingsKey =
-                        QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
+        auto updatePendingLocalShortcut = [this, actionObjectName,
+                                           keyWidget](const QKeySequence &keySequence) {
+            const QString settingsKey = QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
 
-                    if (keySequence == keyWidget->defaultKeySequence()) {
-                        _pendingLocalShortcutValues.remove(settingsKey);
-                        _pendingLocalShortcutRemovals.insert(settingsKey);
-                    } else {
-                        _pendingLocalShortcutRemovals.remove(settingsKey);
-                        _pendingLocalShortcutValues.insert(settingsKey,
-                                                           shortcutToSettings(keySequence));
-                    }
+            if (keySequence == keyWidget->defaultKeySequence()) {
+                _pendingLocalShortcutValues.remove(settingsKey);
+                _pendingLocalShortcutRemovals.insert(settingsKey);
+            } else {
+                _pendingLocalShortcutRemovals.remove(settingsKey);
+                _pendingLocalShortcutValues.insert(settingsKey, shortcutToSettings(keySequence));
+            }
 
-                    qDebug() << "pending local shortcut" << actionObjectName
-                             << shortcutToSettings(keySequence);
-                    keySequenceEvent(actionObjectName);
-                });
+            qDebug() << "pending local shortcut" << actionObjectName
+                     << shortcutToSettings(keySequence);
+        };
+
+        connect(
+            keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
+            [this, actionObjectName, updatePendingLocalShortcut](const QKeySequence &keySequence) {
+                updatePendingLocalShortcut(keySequence);
+                keySequenceEvent(actionObjectName);
+            });
         connect(keyWidget, &QKeySequenceWidget::keySequenceChanged, this,
-                [this, actionObjectName, keyWidget](const QKeySequence &keySequence) {
-                    const QString settingsKey =
-                        QStringLiteral("Shortcuts/MainWindow-") + actionObjectName;
-
-                    if (keySequence == keyWidget->defaultKeySequence()) {
-                        _pendingLocalShortcutValues.remove(settingsKey);
-                        _pendingLocalShortcutRemovals.insert(settingsKey);
-                    } else {
-                        _pendingLocalShortcutRemovals.remove(settingsKey);
-                        _pendingLocalShortcutValues.insert(settingsKey,
-                                                           shortcutToSettings(keySequence));
-                    }
-
-                    qDebug() << "pending local shortcut" << actionObjectName
-                             << shortcutToSettings(keySequence);
+                updatePendingLocalShortcut);
+        connect(keyWidget, &QKeySequenceWidget::keySequenceCleared, this,
+                [updatePendingLocalShortcut, keyWidget]() {
+                    updatePendingLocalShortcut(keyWidget->keySequence());
                 });
 
         auto *disableShortcutButton = new QPushButton();

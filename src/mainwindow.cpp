@@ -6753,13 +6753,21 @@ void MainWindow::addCustomAction(const QString &identifier, const QString &menuT
     //    ui->menuCustom_actions->show();
     QAction *action = ui->menuCustom_actions->addAction(menuText);
     action->setObjectName(QStringLiteral("customAction_") + identifier);
-    action->setData(identifier);
+    action->setData(QString());
 
     // restore the shortcut of the custom action
     SettingsService settings;
-    QKeySequence shortcut = shortcutFromSettings(
-        settings.value(QStringLiteral("Shortcuts/MainWindow-customAction_") + identifier)
-            .toString());
+    const QString shortcutSettingsKey =
+        QStringLiteral("Shortcuts/MainWindow-customAction_") + identifier;
+
+    // Custom actions don't have a built-in default shortcut. Remove empty
+    // values that older versions could store when the shortcut page was saved.
+    if (settings.contains(shortcutSettingsKey) &&
+        settings.value(shortcutSettingsKey).toString().isEmpty()) {
+        settings.remove(shortcutSettingsKey);
+    }
+
+    QKeySequence shortcut = shortcutFromSettings(settings.value(shortcutSettingsKey).toString());
     if (!shortcut.isEmpty()) {
         action->setShortcut(shortcut);
     }
