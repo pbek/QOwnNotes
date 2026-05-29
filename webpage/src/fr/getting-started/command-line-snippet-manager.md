@@ -39,7 +39,7 @@ sudo mv /tmp/qc /usr/local/bin/qc && \
 
 ![socket-server-token](/img/socket-server-token.png)
 
-Avant d'utiliser le gestionnaire de snippets de commandes, vous devez activer le _serveur Web socket _ (2) dans la section _Extension de navigateur / Snippets de commandes_ (1) dans les préférences de QOwnNotes.
+Avant d'utiliser le gestionnaire de snippets de commandes, vous devez activer le _serveur de socket Web_ (2) dans la section _Extension de navigateur / Snippets de commandes_ (1) dans les préférences de QOwnNotes.
 
 Vous devez ensuite afficher le jeton de sécurité (3) et le copier (4).
 

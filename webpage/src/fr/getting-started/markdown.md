@@ -54,7 +54,7 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + B</kbd> pour met
 
 ## Souligné
 
-Il existe également un paramètre facultatif pour activer le rendu souligné dans les _Préférences d'aperçu_.
+Il existe également un paramètre facultatif pour activer le rendu souligné dans les _Préférences d’aperçu_.
 
 ```markdown
 _souligner_
@@ -100,7 +100,7 @@ Si vous appuyez sur <kbd>Entrée</kbd> à la fin d'une liste, un nouvel élémen
 
 ## Liens
 
-Deux des utilisations les plus simples des liens sont pointer vers une page web ou pointer vers d’autres notes. Il y a plusieurs façons de faire chacun de ces liens.
+Deux des utilisations les plus simples des liens sont pointer vers une page web et pointer vers d’autres notes. Il y a plusieurs façons de faire chacun de ces liens.
 
 ### Liens externes
 
@@ -149,7 +149,7 @@ Info Les liens internes avec un titre ne sont pas supportés :
 Les signets utilisés par [l'extension de navigateur QOwnNotes Web Companion](./browser-extension.md) utilisent des liens dans des listes.
 
 ```markdown
-- [Nom de la page Web] (https://www.example.com) #tag1 #tag2 une description et des balises
+- [Nom de la page Web] (https://www.example.com) #tag1 #tag2 une description et des tags
 ```
 
 ## Images
@@ -172,7 +172,7 @@ Vous pouvez optionnellement spécifier la `largeur` et/ou la `hauteur` d’une i
 ![description](media/mon-image.jpg){ width=300 height=200 }
 ```
 
-Les attributs des dimensions sont affichés grisés dans l’éditeur et sont appliquées dans l’aperçu, où elles prennent la priorité sur le dimensionnement automatique des images.
+Les attributs de dimensions sont affichés grisés dans l’éditeur et sont appliqués dans l’aperçu, où ils prennent la priorité sur le dimensionnement automatique des images.
 
 ::: tip
 Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + I</kbd> pour insérer une image dans une note. L'image peut également être dans le presse-papiers, la boîte de dialogue la détectera et affichera un aperçu.
@@ -228,8 +228,8 @@ Vous pouvez utiliser le [raccourci](./shortcuts.md) <kbd>Ctrl + Maj + C</kbd> su
 
 Il est possible d’ajouter de la coloration syntaxique dans les blocs de code avec QOwnNotes.
 
-~~~ markdown
-``` bash
+````markdown
+```bash
 # Je suis un commentaire
 cd Notes
 ````
@@ -350,7 +350,7 @@ Voici une ligne pour commencer.
 
 Cette ligne est séparée de celle du dessus par deux retours-ligne, ce sera donc un _paragraphe séparé_.
 
-Cette ligne commence également un paragraphe séparé, mais...
+Cette ligne commence également un paragraphe séparé, mais...  
 Cette ligne n'est séparée que par deux espaces de fin et un seul retour-ligne, c'est donc une ligne distincte dans le _même paragraphe_.
 ```
 

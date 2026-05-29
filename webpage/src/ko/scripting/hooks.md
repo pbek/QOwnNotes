@@ -85,6 +85,24 @@ function insertAttachmentHook(fileName, markdownText);
 
 [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) 예제를 살펴보는 것이 좋습니다.
 
+## fetchUrlTitleHook
+
+이 함수는 QOwnNotes가 URL에서 웹페이지 제목을 가져오려고 하기 전에 링크 대화 상자에서 호출됩니다.
+
+이 함수가 여러 스크립트에 정의되어 있으면 비어 있지 않은 문자열을 반환하는 첫 번째 스크립트가 승리합니다.
+
+### 메서드 호출 및 매개 변수
+
+```js
+/**
+ * @param URL 문자열 제목을 가져와야 하는 URL
+ * @URL의 제목을 반환하거나 QOwnNotes가 가져올 수 있도록 빈 문자열을 반환합니다
+ */
+function fetchUrlTitleHook(url);
+```
+
+예시 [fetch-url-title-with-kanboard-cli.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/fetch-url-title-with-kanboard-cli.qml)을 살펴보는 것이 좋습니다.
+
 ## insertingFromMimeDataHook
 
 ### 메서드 호출 및 매개 변수
@@ -390,7 +408,7 @@ function windowStateChangedHook(windowState);
 
 레이아웃이 전환될 때 이 후크를 호출합니다.
 
-### 메서드 호출 및 매개 변수
+### 메소드 호출 및 매개변수
 
 ```js
 /**
@@ -410,7 +428,7 @@ function layoutSwitchedHook(oldUuid, newUuid);
 
 사용자 지정 OpenAI 백엔드에 대한 구성을 제공하는 데 사용할 수 있습니다 ChatGPT API 호환 LLM, 예를 들어 OpenAI, Claude 또는 Ollama와 같은 시스템입니다.
 
-### 메소드 호출 및 매개변수
+### 메서드 호출 및 매개 변수
 
 ```js
 /**
@@ -451,7 +469,7 @@ function openAiBackendsHook() {
 이 후크는 매우 자주 호출되므로 (모든 키 입력 시 보이는 텍스트 블록마다) 구현 속도를 빠르게 유지하세요. 정적 정규식 기반 강조 표시만 필요한 경우 [`addHighlightingRule`](methods-and-objects.md#adding-a-highlighting-rule-for-the-editor) 또는 [`addHighlightingRule` 사용자 지정 색상 포함](methods-and-objects.md#adding-a-highlighting-rule-with-custom-colors-and-styles)을 사용하는 것이 좋습니다.
 :::
 
-### 메서드 호출 및 매개 변수
+### 메서드 호출 및 매개변수
 
 ```js
 /**

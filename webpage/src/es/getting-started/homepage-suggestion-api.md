@@ -1,13 +1,12 @@
 # API de sugerencias para Homepage
 
-QOwnNotes can expose a local HTTP endpoint for [Homepage](https://github.com/gethomepage/homepage) `suggestionUrl` support,
-backed by the same bookmark parsing/indexing used by the Web Companion data source.
+QOwnNotes puede exponer un endpoint HTTP local para la compatibilidad con `suggestionUrl` de [Homepage](https://github.com/gethomepage/homepage), respaldado por el mismo análisis/indexación de marcadores que utiliza la fuente de datos de Web Companion.
 
 ## Habilitar en QOwnNotes
 
 1. Abra `Configuración -> Extensión del navegador/fragmentos de comandos`.
-2. Enable `Enable socket server`.
-3. In `Bookmark suggestion API`, enable `Enable Homepage-compatible bookmark suggestions API` and set a port.
+2. Active `Habilitar servidor de sockets`.
+3. En `API de sugerencias de marcadores`, habilite `Activar API de sugerencias de marcadores compatible con Homepage`.
 
 El servicio solo se conecta a `127.0.0.1`.
 
@@ -15,11 +14,9 @@ El servicio solo se conecta a `127.0.0.1`.
 
 - `GET /suggest?q=home`
 - Opcional: `limit` (valor predeterminado `10`, valor máximo `50`)
-- Optional: `token` (if you configured a security token in QOwnNotes)
+- Opcional: `token` (si configuró un token de seguridad en QOwnNotes)
 
-If you use the custom Homepage assets from `docs/homepage/custom.js`, set `QON_TOKEN` to the same
-security token you configured in QOwnNotes. The script will then append `&token=...` when requesting
-suggestions.
+Si utiliza los recursos personalizados de Homepage de `docs/homepage/custom.js`, establezca `QON_TOKEN` con el mismo token de seguridad que configuró en QOwnNotes. El script añadirá entonces `&token=...` al solicitar sugerencias.
 
 Respuesta de ejemplo:
 
@@ -37,14 +34,13 @@ search:
   showSearchSuggestions: true
 ```
 
-If you protect the endpoint with a security token and use `custom.js`, keep `suggestionUrl` unchanged
-and set `QON_TOKEN` inside `custom.js` instead.
+Si protege el endpoint con un token de seguridad y utiliza `custom.js`, mantenga `suggestionUrl` sin cambios y configure `QON_TOKEN` dentro de `custom.js`.
 
 ## Qué archivo de Homepage editar
 
 En una instalación estándar de Homepage, añada el bloque «search» en uno de estos archivos:
 
-- `settings.yaml` (global Homepage settings)
+- `settings.yaml` (configuración global de Homepage)
 - `settings.yml` (igual que lo anterior, dependiendo de su configuración)
 - El archivo montado en su contenedor como `/app/config/settings.yaml`
 
@@ -52,17 +48,16 @@ Si la configuración de su Homepage se divide en varios archivos, edite el archi
 
 ## Recursos para Homepage personalizado
 
-This repository also contains a ready-to-use Homepage customization example in:
+Este repositorio también contiene un ejemplo de personalización de Homepage listo para usarse en:
 
-- [docs/homepage on GitHub](https://github.com/pbek/QOwnNotes/tree/main/docs/homepage)
+- [docs/homepage en GitHub](https://github.com/pbek/QOwnNotes/tree/main/docs/homepage)
 
 Utilice estos archivos cuando la implementación de su Homepage admita la carga de `custom.js` y `custom.css`.
 
 Si su Homepage se ejecuta en un servidor externo (máquina/contenedor diferente al de QOwnNotes),
 necesita estos archivos en esa instancia de Homepage alojada para que pueda consultar la API de sugerencias de QOwnNotes local y combinar/mostrar esas sugerencias en la búsqueda de Homepage.
 
-When you use that setup with a QOwnNotes security token, make sure the same token is configured in
-`QON_TOKEN` inside `custom.js`.
+Cuando utilice esa configuración con un token de seguridad de QOwnNotes, asegúrese de que el mismo token esté configurado en
+`QON_TOKEN` dentro de `custom.js`.
 
-If you need network access beyond localhost, place a reverse proxy in front of the endpoint and restrict access
-(for example by firewall rules or allowlist), since bookmark data may contain sensitive URLs.
+Si necesita acceso a la red más allá de localhost, coloque un proxy inverso delante del endpoint y restrinja el acceso (por ejemplo, mediante reglas de firewall o una lista de permitidos), ya que los datos de los marcadores pueden contener URL confidenciales.

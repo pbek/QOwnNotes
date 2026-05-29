@@ -6,7 +6,7 @@ Merci de contribuer au code de QOwnNotes.
 
 ### Ouvrez d’abord un ticket
 
-Merci d’ouvrir un ticket avant d’ouvrir une requête de fusion.
+Merci d’ouvrir un ticket (issue) avant d’ouvrir une requête de fusion (pull request).
 
 Cela permet de discuter du problème, de la solution proposée, de sa portée et de ses possibles effets de bord avant que le code soit relu.
 

@@ -123,7 +123,7 @@ QOwnNotes peut utiliser un service [LanguageTool](https://languagetool.org/) loc
 
 - Il est **optionnel** et fonctionne avec le système de vérification orthographique existant
 - Activez-le dans les `Préférences -> Éditeur`, puis configurez l’**URL du serveur**, la **langue**, une **clé d’API** optionnelle, et les catégories que vous souhaitez vérifier
-- Vous pouvez aussi l’activer ou les désactiver rapidement avec l’option dans le menu **Orthographe** avec l’option `Vérifier la grammaire avec LanguageTool`
+- Vous pouvez aussi l’activer ou les désactiver rapidement dans le menu **Orthographe** avec l’option `Vérifier la grammaire avec LanguageTool`
 - Des suggestions et actions sont disponibles dans le menu contextuel de l’éditeur pour les problèmes détectés
 
 ::: tip
@@ -136,11 +136,11 @@ QOwnNotes peut utiliser un service local [Harper](https://writewithharper.com/) 
 
 - Il est **optionnel** et fonctionne avec le système de vérification orthographique existant
 - Activez-le dans les `Préférences -> Éditeur -> Harper`, puis configurez la **couche de transport**, la commande `harper-ls` ou la cible TCP, le **dialecte** et les règles que vous souhaitez utiliser
-- Vous pouvez aussi l’activer ou les désactiver rapidement avec l’option dans le menu **Édition** avec l’option `Vérifier la grammaire avec Harper`
-- Des suggestions et actions pour ignorer sont disponibles dans le menu contextuel de l’éditeur pour les problèmes détectés
+- Vous pouvez aussi l’activer ou les désactiver rapidement dans le menu **Édition** avec l’option `Vérifier la grammaire avec Harper`
+- Des suggestions de correction des problèmes détectés et des actions pour les ignorer sont disponibles dans le menu contextuel de l’éditeur
 
 ::: tip
-Visitez [Harper](../editor/harper.md) pour plus d’informations.
+Voir [Harper](../editor/harper.md) pour plus d’informations.
 :::
 
 ## Client de synchronisation Nextcloud pour ordinateur de bureau

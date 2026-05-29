@@ -96,6 +96,24 @@ function insertAttachmentHook(fileName, markdownText);
 
 ربما تحب أن تلقي نظرة على المثال [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
+## fetchUrlTitleHook
+
+This function is called in the link dialog before QOwnNotes tries to fetch a webpage title from a URL.
+
+If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+
+### نداء الدالة ومُعامِلاتها
+
+```js
+/**
+ * @param url string the URL whose title should be fetched
+ * @return string the title for the URL, or an empty string to let QOwnNotes fetch it
+ */
+function fetchUrlTitleHook(url);
+```
+
+You may want to take a look at the example [fetch-url-title-with-kanboard-cli.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/fetch-url-title-with-kanboard-cli.qml).
+
 ## insertingFromMimeDataHook (خطاف إلصاق هتمل أو وسائط)
 
 ### نداء الدالة ومُعامِلاتها
@@ -436,7 +454,7 @@ You may want to take a look at the example [layouts.qml](https://github.com/pbek
 
 You can use it to provide config for custom OpenAI backends, like your own OpenAI API compatible LLMs, for example ChatGPT, Claude or systems like Ollama.
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 
 ```js
 /**

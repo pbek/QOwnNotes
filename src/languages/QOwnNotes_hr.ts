@@ -639,6 +639,14 @@ Connection error message: </translation>
 <translation type="unfinished">Fake old version number to trigger update</translation>
 </message>
 <message>
+<source>Fake old versions for installed repository scripts to trigger the script update dialog</source>
+<translation type="unfinished">Fake old versions for installed repository scripts to trigger the script update dialog</translation>
+</message>
+<message>
+<source>Fake old script versions to trigger script updates</source>
+<translation type="unfinished">Fake old script versions to trigger script updates</translation>
+</message>
+<message>
 <source>Log file path:</source>
 <translation type="unfinished">Log file path:</translation>
 </message>
@@ -4616,6 +4624,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Umetni &amp;citat blok</translation>
 </message>
 <message>
+<source>Insert checkbox list item</source>
+<translation type="unfinished">Insert checkbox list item</translation>
+</message>
+<message>
 <source>Search selected text on the web</source>
 <translation>Pretraži odabrani tekst na internetu</translation>
 </message>
@@ -5235,6 +5247,14 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <source>No versions are available for this note.</source>
 <translation>Nijedna verzija nije dostupna za ovu bilješku.</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed</source>
+<translation type="unfinished">
+<numerusform>%n script update(s) were installed</numerusform>
+<numerusform>%n script update(s) were installed</numerusform>
+<numerusform>%n script update(s) were installed</numerusform>
+</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -8532,6 +8552,22 @@ Postoje li dozvoe za čitanje i pisanje u mapu i datoteku?</translation>
 <translation>Instaliraj</translation>
 </message>
 <message>
+<source>Updates all scripts that have updates</source>
+<translation type="unfinished">Updates all scripts that have updates</translation>
+</message>
+<message>
+<source>Update all</source>
+<translation type="unfinished">Update all</translation>
+</message>
+<message>
+<source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
+<translation type="unfinished">Automatically install available updates for scripts installed from the script repository during the startup update check</translation>
+</message>
+<message>
+<source>Automatically update scripts</source>
+<translation type="unfinished">Automatically update scripts</translation>
+</message>
+<message>
 <source>Version:</source>
 <translation>Verzija:</translation>
 </message>
@@ -8636,6 +8672,14 @@ Do you want to install it anyway?</source>
 <message>
 <source>The script could not be downloaded!</source>
 <translation>Nije moguće preuzeti skriptu!</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed.</source>
+<translation type="unfinished">
+<numerusform>%n script update(s) were installed.</numerusform>
+<numerusform>%n script update(s) were installed.</numerusform>
+<numerusform>%n script update(s) were installed.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8876,6 +8920,10 @@ Do you want to install it anyway?</source>
 <message>
 <source>Trash</source>
 <translation>Smeće</translation>
+</message>
+<message>
+<source>Loading shortcuts: %v / %m</source>
+<translation type="unfinished">Loading shortcuts: %v / %m</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>

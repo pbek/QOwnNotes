@@ -8,7 +8,7 @@ Il vient en complément du support actuel de [vérification orthographique](spel
 ## Fonctionnalités
 
 - Soulignage coloré des erreurs de grammaire, de style, de ponctuation et de typographie détectées
-- Suggestion de remplacements dans un menu contextuel
+- Suggestions de remplacements dans un menu contextuel
 - Lien `Plus d’informations…` pour chaque règle, permettant d’accéder à de la documentation supplémentaire
 - Option `Ignorer cette règle` pour les règles que vous ne souhaitez plus voir
 - Un simple bouton d’activation/désactivation `Vérifier la grammaire avec LanguageTool` dans le menu **Édition**

@@ -32,7 +32,7 @@ Le lancement de l'application via la ligne de commande se fait différemment sel
 | Windows                | `QOwnNotes.exe`                                                  |
 
 ::: tip
-Pour copier directement les préférences dans le presse-papiers pour le poster dans un [ticket GitHub](https://github.com/pbek/QOwnNotes/issues), vous pouvez utiliser `xclip` ou `xsel` sous Linux, `pbcopy` sous macOS et `clip` sous Windows :
+Pour copier directement les préférences dans le presse-papiers pour les poster dans un [ticket GitHub](https://github.com/pbek/QOwnNotes/issues), vous pouvez utiliser `xclip` ou `xsel` sous Linux, `pbcopy` sous macOS et `clip` sous Windows :
 
 ```bash
 # Copier toutes les préférences dans le presse-papiers avec xclip sous Linux
@@ -61,7 +61,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-Vous pouvez obtenir les noms d'objet des actions de menu avec [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Recherchez simplement le titre du menu en anglais. Notez que ces chaînes de caractères peuvent changer avec le temps.
+Vous pouvez obtenir les noms d'objet des actions de menu de [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). Recherchez simplement le titre du menu en anglais. Notez que ces chaînes de caractères peuvent changer avec le temps.
 :::
 
 Pour déclencher des [actions de scripting](../scripting/methods-and-objects.md#registering-a-custom-action) utilisez `customAction_` suivi de l'identifiant de l'action personnalisée. L'identifiant de l'action personnalisée est le premier paramètre de l'appel `script.registerCustomAction` dans le script.

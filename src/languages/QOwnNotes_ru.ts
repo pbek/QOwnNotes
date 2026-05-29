@@ -639,8 +639,24 @@ Connection error message: </translation>
 <translation>Подделать старый номер версии для запуска обновления</translation>
 </message>
 <message>
+<source>Fake old versions for installed repository scripts to trigger the script update dialog</source>
+<translation type="unfinished">Fake old versions for installed repository scripts to trigger the script update dialog</translation>
+</message>
+<message>
+<source>Fake old script versions to trigger script updates</source>
+<translation type="unfinished">Fake old script versions to trigger script updates</translation>
+</message>
+<message>
 <source>Log file path:</source>
 <translation>Путь к файлу журнала:</translation>
+</message>
+<message>
+<source>Script hook execution time warning threshold (ms):</source>
+<translation type="unfinished">Script hook execution time warning threshold (ms):</translation>
+</message>
+<message>
+<source>Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</source>
+<translation type="unfinished">Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</translation>
 </message>
 <message>
 <source>Log file cleared</source>
@@ -2431,20 +2447,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Удалить выбранное расширение файла заметки</translation>
 </message>
 <message>
-<source>External editor</source>
-<translation>Внешний редактор</translation>
+<source>External tools</source>
+<translation type="unfinished">External tools</translation>
+</message>
+<message>
+<source>Path to external editor, leave empty for default</source>
+<translation type="unfinished">Path to external editor, leave empty for default</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
 <translation>Путь к внешнему редактору:</translation>
 </message>
 <message>
-<source>path to external editor, leave empty for default</source>
-<translation>путь к внешнему редактору, оставьте пустым для использования по умолчанию</translation>
-</message>
-<message>
 <source>set external editor</source>
 <translation>задать внешний редактор</translation>
+</message>
+<message>
+<source>Path to external diff tool:</source>
+<translation type="unfinished">Path to external diff tool:</translation>
+</message>
+<message>
+<source>Path to external diff tool, leave empty for default</source>
+<translation type="unfinished">Path to external diff tool, leave empty for default</translation>
+</message>
+<message>
+<source>set external diff tool</source>
+<translation type="unfinished">set external diff tool</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
@@ -2517,6 +2545,10 @@ Your notes will stay intact!</source>
 <message>
 <source>Select editor application</source>
 <translation>Выбрать приложение редактора</translation>
+</message>
+<message>
+<source>Select diff tool application</source>
+<translation type="unfinished">Select diff tool application</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -4633,6 +4665,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Вставить блок &amp;цитату</translation>
 </message>
 <message>
+<source>Insert checkbox list item</source>
+<translation type="unfinished">Insert checkbox list item</translation>
+</message>
+<message>
 <source>Search selected text on the web</source>
 <translation>Искать выделенный текст в интернете</translation>
 </message>
@@ -5266,6 +5302,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>No versions are available for this note.</source>
 <translation>Для этой заметки нет доступных версий.</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed</source>
+<translation type="unfinished">
+<numerusform>%n script update(s) were installed</numerusform>
+<numerusform>%n script update(s) were installed</numerusform>
+<numerusform>%n script update(s) were installed</numerusform>
+<numerusform>%n script update(s) were installed</numerusform>
+</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -7223,6 +7268,18 @@ Do you want to delete those files as well?</numerusform>
 <context>
 <name>NoteTreeManager</name>
 <message>
+<source>External diff tool</source>
+<translation type="unfinished">External diff tool</translation>
+</message>
+<message>
+<source>Please select at least two notes to diff.</source>
+<translation type="unfinished">Please select at least two notes to diff.</translation>
+</message>
+<message>
+<source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
+<translation type="unfinished">The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</translation>
+</message>
+<message>
 <source>New note</source>
 <translation>Новая заметка</translation>
 </message>
@@ -7277,6 +7334,10 @@ Do you want to delete those files as well?</numerusform>
 <message>
 <source>Open selected notes in tabs</source>
 <translation>Открыть выбранные заметки во вкладках</translation>
+</message>
+<message>
+<source>Diff selected notes</source>
+<translation type="unfinished">Diff selected notes</translation>
 </message>
 <message>
 <source>Open note in external editor</source>
@@ -8612,6 +8673,22 @@ Are the folder and the file writable?</source>
 <translation>Установить</translation>
 </message>
 <message>
+<source>Updates all scripts that have updates</source>
+<translation type="unfinished">Updates all scripts that have updates</translation>
+</message>
+<message>
+<source>Update all</source>
+<translation type="unfinished">Update all</translation>
+</message>
+<message>
+<source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
+<translation type="unfinished">Automatically install available updates for scripts installed from the script repository during the startup update check</translation>
+</message>
+<message>
+<source>Automatically update scripts</source>
+<translation type="unfinished">Automatically update scripts</translation>
+</message>
+<message>
 <source>Version:</source>
 <translation>Версия:</translation>
 </message>
@@ -8715,6 +8792,15 @@ Do you want to install it anyway?</source>
 <message>
 <source>The script could not be downloaded!</source>
 <translation>Не удается загрузить сценарий!</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed.</source>
+<translation type="unfinished">
+<numerusform>%n script update(s) were installed.</numerusform>
+<numerusform>%n script update(s) were installed.</numerusform>
+<numerusform>%n script update(s) were installed.</numerusform>
+<numerusform>%n script update(s) were installed.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8958,6 +9044,10 @@ Do you want to install it anyway?</source>
 <message>
 <source>Trash</source>
 <translation type="unfinished">Trash</translation>
+</message>
+<message>
+<source>Loading shortcuts: %v / %m</source>
+<translation type="unfinished">Loading shortcuts: %v / %m</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>
@@ -11005,6 +11095,14 @@ This cannot be undone!</source>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
 <translation>Генерирует код завершения оболочки. Поддерживает `fish`, `bash`.</translation>
+</message>
+<message>
+<source>Prints the decrypted text of an encrypted note file.</source>
+<translation type="unfinished">Prints the decrypted text of an encrypted note file.</translation>
+</message>
+<message>
+<source>Password for --decrypt-note.</source>
+<translation type="unfinished">Password for --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

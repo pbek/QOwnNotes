@@ -39,7 +39,7 @@
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation>Back-ends d’IA ajoutés depuis le moteur de script</translation>
+<translation>Back-ends d’IA ajoutés depuis le moteur de scripts</translation>
 </message>
 <message>
 <source>API keys</source>
@@ -637,6 +637,14 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Fake old version number to trigger update</source>
 <translation>Simuler un ancien numéro de version afin de provoquer la mise à jour</translation>
+</message>
+<message>
+<source>Fake old versions for installed repository scripts to trigger the script update dialog</source>
+<translation>Simuler d’anciennes versions des scripts installés depuis le dépôt afin de provoquer l’ouverture de la boîte de dialogue de mise à jour des scripts</translation>
+</message>
+<message>
+<source>Fake old script versions to trigger script updates</source>
+<translation>Simuler d’anciennes versions des scripts afin de provoquer leur mise à jour</translation>
 </message>
 <message>
 <source>Log file path:</source>
@@ -2764,7 +2772,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Not tested yet.</source>
-<translation>Pas encore essayé.</translation>
+<translation>Pas encore testé.</translation>
 </message>
 <message>
 <source>Spelled Numbers</source>
@@ -2792,7 +2800,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Stdio (recommended)</source>
-<translation>Stdio (recommendé)</translation>
+<translation>Stdio (recommandé)</translation>
 </message>
 <message>
 <source>TCP</source>
@@ -2893,7 +2901,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Copy image file path</source>
-<translation>Copier de chemin du fichier d’image</translation>
+<translation>Copier le chemin du fichier d’image</translation>
 </message>
 <message>
 <source>Copy image to clipboard</source>
@@ -4599,6 +4607,10 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Insérer une &amp;citation</translation>
 </message>
 <message>
+<source>Insert checkbox list item</source>
+<translation>Insérer un élément de liste de cases à cocher</translation>
+</message>
+<message>
 <source>Search selected text on the web</source>
 <translation>Rechercher le texte sélectionné sur le web</translation>
 </message>
@@ -4832,7 +4844,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Insert &amp;note link</source>
-<translation>Insérer un lien de &amp;note</translation>
+<translation>Insérer un lien vers une &amp;note</translation>
 </message>
 <message>
 <source>Ctrl+Shift+L</source>
@@ -5212,6 +5224,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>No versions are available for this note.</source>
 <translation>Aucune version n’est disponible pour cette note.</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed</source>
+<translation>
+<numerusform>%n mise à jour de script a été installée</numerusform>
+<numerusform>%n mises à jour de scripts ont été installées</numerusform>
+</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -6945,7 +6964,7 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <name>NotePreviewWidget</name>
 <message>
 <source>Copy image file path</source>
-<translation>Copier de chemin du fichier d’image</translation>
+<translation>Copier le chemin du fichier d’image</translation>
 </message>
 <message>
 <source>Copy image to clipboard</source>
@@ -7229,7 +7248,7 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 </message>
 <message>
 <source>Open newly created notes in a new tab</source>
-<translation>Ouvrir les notes nouvellement crées dans de nouveaux onglets</translation>
+<translation>Ouvrir les notes nouvellement créées dans de nouveaux onglets</translation>
 </message>
 <message>
 <source>Note folder panel</source>
@@ -8456,6 +8475,22 @@ Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 <translation>Installer</translation>
 </message>
 <message>
+<source>Updates all scripts that have updates</source>
+<translation>Mettre à jour tous les scripts pouvant être mis à jour</translation>
+</message>
+<message>
+<source>Update all</source>
+<translation>Tout mettre à jour</translation>
+</message>
+<message>
+<source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
+<translation>Installer automatiquement les mises à jour disponibles des scripts installés depuis le dépôt lors de la vérification des mises à jour au démarrage</translation>
+</message>
+<message>
+<source>Automatically update scripts</source>
+<translation>Mettre à jour les scripts automatiquement</translation>
+</message>
+<message>
 <source>Version:</source>
 <translation>Version :</translation>
 </message>
@@ -8560,6 +8595,13 @@ Voulez-vous quand même l'installer ?</translation>
 <message>
 <source>The script could not be downloaded!</source>
 <translation>Le script n'a pas pu être téléchargé !</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed.</source>
+<translation>
+<numerusform>%n mise à jour de script a été installée.</numerusform>
+<numerusform>%n mises à jour de scripts ont été installées.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8797,6 +8839,10 @@ Voulez-vous quand même l'installer ?</translation>
 <message>
 <source>Trash</source>
 <translation>Corbeille</translation>
+</message>
+<message>
+<source>Loading shortcuts: %v / %m</source>
+<translation>Chargement des raccourcis : %v / %m</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>

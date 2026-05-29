@@ -61,7 +61,7 @@ il faudra placer ces fichiers sur votre instance hôte de Homepage pour permettr
 et de fusionner/afficher ces suggestions dans la recherche Homepage.
 
 Lorsque vous utilisez cette configuration avec un jeton de sécurité QOwnNotes, assurez-vous que le même jeton est configuré dans
-`QON_TOKEN` dans `custom.js`.
+`QON_TOKEN` à l’intérieur de `custom.js`.
 
 Si vous avez besoin d’un accès au-delà de localhost, placez un proxy inversé devant votre point d’accès et restreignez l’accès
-(par exemple par des règles pare-feu ou une liste blanche), étant donné que les données des signets peuvent contenir des URL sensibles.
+(par exemple par des règles de pare-feu ou une liste blanche), étant donné que les données des signets peuvent contenir des URL sensibles.

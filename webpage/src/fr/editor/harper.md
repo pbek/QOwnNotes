@@ -25,7 +25,7 @@ Ouvrez les `Préférences` et allez dans `Éditeur -> Harper`.
   - `TCP` se connecte à un serveur `harper-ls` déjà en place
 - Pour `Stdio`, configurez `Commande / chemin vers le binaire`
   - La commande par défaut est `harper-ls`
-  - `Détecter automatique` cherche la commande dans votre `PATH`
+  - `Détecter automatiquement` cherche la commande dans votre `PATH`
 - Pour `TCP`, configurez l’`Adresse du serveur` et le `Port`
   - Les valeurs par défaut sont `127.0.0.1` et `4000`
 - Choisissez le `Dialecte`
@@ -57,7 +57,7 @@ soit atteindre le serveur configuré (dans le mode `TCP`).
 - QOwnNotes ne vérifie que les blocs d’éditeur visibles au lieu du document entier
 - Les lignes vides, les titres de sections et les blocs de code sont sautés
 - Les requêtes sont délayées afin que Harper ne soit pas interrogé à chaque touche frappée
-- Les résultats sont affichés en-ligne dans l’éditeur Markdown
+- Les résultats sont affichés dans les lignes dans l’éditeur Markdown
 - Harper et LanguageTool peuvent être activés en même temps
 
 ## Notes

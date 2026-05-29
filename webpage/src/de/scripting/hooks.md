@@ -85,6 +85,24 @@ function insertAttachmentHook(fileName, markdownText);
 
 Schauen Sie sich dazu ein Beispiel auf [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml) an.
 
+## fetchUrlTitleHook
+
+This function is called in the link dialog before QOwnNotes tries to fetch a webpage title from a URL.
+
+If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+
+### Methodenaufruf und Parameter
+
+```js
+/**
+ * @param url string the URL whose title should be fetched
+ * @return string the title for the URL, or an empty string to let QOwnNotes fetch it
+ */
+function fetchUrlTitleHook(url);
+```
+
+You may want to take a look at the example [fetch-url-title-with-kanboard-cli.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/fetch-url-title-with-kanboard-cli.qml).
+
 ## insertingFromMimeDataHook
 
 ### Methodenaufruf und Parameter
@@ -390,7 +408,7 @@ Schauen Sie sich dazu das Beispiel auf [window-state-changed.qml](https://github
 
 This hook is called when layouts are switched.
 
-### Methodenaufruf und Parameter
+### Method call and parameters
 
 ```js
 /**

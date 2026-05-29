@@ -85,6 +85,24 @@ function insertAttachmentHook(fileName, markdownText);
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
+## fetchUrlTitleHook
+
+Cette fonction est appelée dans la boîte de dialogue de lien avant que QOwnNotes essaie de récupérer une page web à partir d’une URL.
+
+Si cette fonction est définie dans plusieurs scripts, le premier script qui renvoie une chaîne non vide l'emporte.
+
+### Appel de méthode et paramètres
+
+```js
+/**
+ * @param url string l’URL dont le titre doit être récupéré
+ * @return string le titre correspondant à l’URL, ou une chaîne vide pour laisser QOwnNotes le récupérer
+ */
+function fetchUrlTitleHook(url);
+```
+
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [fetch-url-title-with-kanboard-cli.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/fetch-url-title-with-kanboard-cli.qml).
+
 ## insertingFromMimeDataHook
 
 ### Appel de méthode et paramètres

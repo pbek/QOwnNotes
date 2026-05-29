@@ -85,6 +85,24 @@ functie insertAttachmentHook (bestandsnaam, markdownText);
 
 Misschien wilt u het voorbeeld bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/example.qml).
 
+## fetchUrlTitleHook
+
+This function is called in the link dialog before QOwnNotes tries to fetch a webpage title from a URL.
+
+If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+
+### Methodeaanroep en parameters
+
+```js
+/**
+ * @param url string the URL whose title should be fetched
+ * @return string the title for the URL, or an empty string to let QOwnNotes fetch it
+ */
+function fetchUrlTitleHook(url);
+```
+
+You may want to take a look at the example [fetch-url-title-with-kanboard-cli.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/fetch-url-title-with-kanboard-cli.qml).
+
 ## insertingFromMimeDataHook
 
 ### Methodeaanroep en parameters
@@ -390,7 +408,7 @@ Misschien wilt u het voorbeeld bekijken [ window-state-changed.qml ](https://git
 
 This hook is called when layouts are switched.
 
-### Methodeaanroep en parameters
+### Methode-aanroep en parameters
 
 ```js
 /**
@@ -410,7 +428,7 @@ Deze hook wordt aangeroepen bij het laden van de OpenAI-serviceconfiguratie. Dit
 
 Je kunt het gebruiken om configuratie te bieden voor aangepaste OpenAI-backends, zoals die van eigen OpenAI API-compatibele LLM's, zoals ChatGPT, Claude of systemen zoals Ollama.
 
-### Methode-aanroep en parameters
+### Method call and parameters
 
 ```js
 /**

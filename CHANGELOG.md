@@ -10,6 +10,8 @@
   note folder watcher paths and delayed external-change re-indexes to trigger
   repeated note folder reloads while notes were stored, especially on Windows
   network drives (for [#3587](https://github.com/pbek/QOwnNotes/issues/3587))
+- Added more French, Spanish, Korean translation (thank you, jd-develop,
+  AlejandroMoc, VenusGirl)
 
 ## 26.5.16
 

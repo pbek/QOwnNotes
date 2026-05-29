@@ -636,8 +636,24 @@ Connection error message: </translation>
 <translation>Simular número de versão antigo para acionar atualização</translation>
 </message>
 <message>
+<source>Fake old versions for installed repository scripts to trigger the script update dialog</source>
+<translation type="unfinished">Fake old versions for installed repository scripts to trigger the script update dialog</translation>
+</message>
+<message>
+<source>Fake old script versions to trigger script updates</source>
+<translation type="unfinished">Fake old script versions to trigger script updates</translation>
+</message>
+<message>
 <source>Log file path:</source>
 <translation>Caminho do arquivo de log:</translation>
+</message>
+<message>
+<source>Script hook execution time warning threshold (ms):</source>
+<translation type="unfinished">Script hook execution time warning threshold (ms):</translation>
+</message>
+<message>
+<source>Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</source>
+<translation type="unfinished">Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</translation>
 </message>
 <message>
 <source>Log file cleared</source>
@@ -2408,20 +2424,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Remover extensão de arquivo de nota selecionada</translation>
 </message>
 <message>
-<source>External editor</source>
-<translation>Editor externo</translation>
+<source>External tools</source>
+<translation type="unfinished">External tools</translation>
+</message>
+<message>
+<source>Path to external editor, leave empty for default</source>
+<translation type="unfinished">Path to external editor, leave empty for default</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
 <translation>Caminho para o editor externo:</translation>
 </message>
 <message>
-<source>path to external editor, leave empty for default</source>
-<translation>caminho para o editor externo, deixe em branco para o padrão</translation>
-</message>
-<message>
 <source>set external editor</source>
 <translation>definir editor externo</translation>
+</message>
+<message>
+<source>Path to external diff tool:</source>
+<translation type="unfinished">Path to external diff tool:</translation>
+</message>
+<message>
+<source>Path to external diff tool, leave empty for default</source>
+<translation type="unfinished">Path to external diff tool, leave empty for default</translation>
+</message>
+<message>
+<source>set external diff tool</source>
+<translation type="unfinished">set external diff tool</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
@@ -2494,6 +2522,10 @@ Suas notas permanecerão intactas!</translation>
 <message>
 <source>Select editor application</source>
 <translation>Selecionar aplicativo de editor</translation>
+</message>
+<message>
+<source>Select diff tool application</source>
+<translation type="unfinished">Select diff tool application</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -4594,6 +4626,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Inserir bloco de &amp;citação</translation>
 </message>
 <message>
+<source>Insert checkbox list item</source>
+<translation type="unfinished">Insert checkbox list item</translation>
+</message>
+<message>
 <source>Search selected text on the web</source>
 <translation>Pesquisar o texto selecionado na web</translation>
 </message>
@@ -5205,6 +5241,13 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>No versions are available for this note.</source>
 <translation>Não há versões disponíveis para esta nota.</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed</source>
+<translation type="unfinished">
+<numerusform>%n script update(s) were installed</numerusform>
+<numerusform>%n script update(s) were installed</numerusform>
+</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -7072,6 +7115,18 @@ Deseja excluir esses arquivos também?</numerusform>
 <context>
 <name>NoteTreeManager</name>
 <message>
+<source>External diff tool</source>
+<translation type="unfinished">External diff tool</translation>
+</message>
+<message>
+<source>Please select at least two notes to diff.</source>
+<translation type="unfinished">Please select at least two notes to diff.</translation>
+</message>
+<message>
+<source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
+<translation type="unfinished">The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</translation>
+</message>
+<message>
 <source>New note</source>
 <translation>Nova nota</translation>
 </message>
@@ -7126,6 +7181,10 @@ Deseja excluir esses arquivos também?</numerusform>
 <message>
 <source>Open selected notes in tabs</source>
 <translation>Abrir notas selecionadas em abas</translation>
+</message>
+<message>
+<source>Diff selected notes</source>
+<translation type="unfinished">Diff selected notes</translation>
 </message>
 <message>
 <source>Open note in external editor</source>
@@ -8449,6 +8508,22 @@ A pasta e o arquivo têm permissão de escrita?</translation>
 <translation>Instalar</translation>
 </message>
 <message>
+<source>Updates all scripts that have updates</source>
+<translation type="unfinished">Updates all scripts that have updates</translation>
+</message>
+<message>
+<source>Update all</source>
+<translation type="unfinished">Update all</translation>
+</message>
+<message>
+<source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
+<translation type="unfinished">Automatically install available updates for scripts installed from the script repository during the startup update check</translation>
+</message>
+<message>
+<source>Automatically update scripts</source>
+<translation type="unfinished">Automatically update scripts</translation>
+</message>
+<message>
 <source>Version:</source>
 <translation>Versão:</translation>
 </message>
@@ -8553,6 +8628,13 @@ Você deseja instalá-lo de qualquer maneira?</translation>
 <message>
 <source>The script could not be downloaded!</source>
 <translation>Não é possível baixar o script!</translation>
+</message>
+<message numerus="yes">
+<source>%n script update(s) were installed.</source>
+<translation type="unfinished">
+<numerusform>%n script update(s) were installed.</numerusform>
+<numerusform>%n script update(s) were installed.</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -8790,6 +8872,10 @@ Você deseja instalá-lo de qualquer maneira?</translation>
 <message>
 <source>Trash</source>
 <translation type="unfinished">Trash</translation>
+</message>
+<message>
+<source>Loading shortcuts: %v / %m</source>
+<translation type="unfinished">Loading shortcuts: %v / %m</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>
@@ -10813,6 +10899,14 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
 <translation>Gerar código de autocompletar do shell. Suporta `fish`, `bash`.</translation>
+</message>
+<message>
+<source>Prints the decrypted text of an encrypted note file.</source>
+<translation type="unfinished">Prints the decrypted text of an encrypted note file.</translation>
+</message>
+<message>
+<source>Password for --decrypt-note.</source>
+<translation type="unfinished">Password for --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
