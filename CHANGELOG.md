@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 26.6.0
+
+- Fixed CLI password prompt for `--decrypt-note` to mask input with asterisks
+  instead of echoing characters, while still providing typing feedback
+  (for [#3629](https://github.com/pbek/QOwnNotes/issues/3629))
+- Fixed CLI arguments like `--decrypt-note`, `--help`, `--dump-settings` and
+  `--completion` now work without a graphical environment (no `DISPLAY` needed)
+  by using `QCoreApplication` instead of `QApplication` for headless CLI modes
+  (for [#3629](https://github.com/pbek/QOwnNotes/issues/3629))
+
 ## 26.5.17
 
 - Added a command line option `--decrypt-note <file>` to print the decrypted text

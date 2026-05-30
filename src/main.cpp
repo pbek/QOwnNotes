@@ -28,6 +28,14 @@
 #include "release.h"
 #include "version.h"
 
+#ifdef Q_OS_WIN
+#include <conio.h>
+#include <windows.h>
+#else
+#include <termios.h>
+#include <unistd.h>
+#endif
+
 // define the base class for SingleApplication
 #define QAPPLICATION_CLASS QApplication
 
@@ -129,9 +137,57 @@ static int printDecryptedNoteFile(const QString &fileName, QString password) {
     }
 
     if (password.isEmpty()) {
-        std::cerr << "Password: ";
+        std::cerr << "Password: " << std::flush;
         std::string passwordInput;
-        std::getline(std::cin, passwordInput);
+#ifdef Q_OS_WIN
+        // On Windows read character-by-character using _getch() so we can print
+        // an asterisk for each key press without echoing the actual character
+        while (true) {
+            int ch = _getch();
+            if (ch == '\r' || ch == '\n') {
+                std::cerr << std::endl;
+                break;
+            } else if (ch == '\b') {
+                // Handle backspace
+                if (!passwordInput.empty()) {
+                    passwordInput.pop_back();
+                    std::cerr << "\b \b" << std::flush;
+                }
+            } else {
+                passwordInput.push_back(static_cast<char>(ch));
+                std::cerr << '*' << std::flush;
+            }
+        }
+#else
+        // On POSIX disable echo, read character-by-character to print asterisks
+        termios oldt{};
+        tcgetattr(STDIN_FILENO, &oldt);
+        termios newt = oldt;
+        newt.c_lflag &= ~(tcflag_t)(ECHO | ICANON);
+        newt.c_cc[VMIN] = 1;
+        newt.c_cc[VTIME] = 0;
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+
+        while (true) {
+            char ch = '\0';
+            if (read(STDIN_FILENO, &ch, 1) != 1) break;
+            if (ch == '\n' || ch == '\r') {
+                std::cerr << std::endl;
+                break;
+            } else if (ch == 127 || ch == '\b') {
+                // Handle backspace / delete
+                if (!passwordInput.empty()) {
+                    passwordInput.pop_back();
+                    std::cerr << "\b \b" << std::flush;
+                }
+            } else {
+                passwordInput.push_back(ch);
+                std::cerr << '*' << std::flush;
+            }
+        }
+
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+#endif
         password = QString::fromLocal8Bit(passwordInput.c_str());
     }
 
@@ -543,6 +599,7 @@ int main(int argc, char *argv[]) {
     bool clearSettings = false;
     bool snap = false;
     bool allowOnlyOneAppInstance = true;
+    bool cliMode = false;
     QStringList arguments;
     QString appNameAdd = QString();
     QString session = QString();
@@ -565,12 +622,14 @@ int main(int argc, char *argv[]) {
             portable = true;
         } else if (arg == QStringLiteral("--clear-settings")) {
             clearSettings = true;
+        } else if (arg == QStringLiteral("--allow-multiple-instances")) {
+            allowOnlyOneAppInstance = false;
         } else if (arg == QStringLiteral("--help") || arg == QStringLiteral("--dump-settings") ||
                    arg == QStringLiteral("--completion") || arg == QStringLiteral("-h") ||
-                   arg == QStringLiteral("--allow-multiple-instances") ||
                    arg == QStringLiteral("--decrypt-note") ||
                    arg.startsWith(QStringLiteral("--decrypt-note="))) {
             allowOnlyOneAppInstance = false;
+            cliMode = true;
         } else if (arg == QStringLiteral("--after-update")) {
             qWarning() << __func__ << " - 'arg': " << arg;
 #if not defined(Q_OS_WIN)
@@ -814,10 +873,11 @@ int main(int argc, char *argv[]) {
 
         return app.exec();
     } else {
-        // use a normal QApplication if multiple instances of the app are
-        // allowed
-        QApplication app(argc, argv);
-        setAppProperties(app, release, arguments, false, snap, portable, action, session);
+        // Use QCoreApplication for CLI-only modes (no graphical environment needed),
+        // otherwise use QApplication for the full GUI
+        QScopedPointer<QCoreApplication> app(cliMode ? new QCoreApplication(argc, argv)
+                                                     : new QApplication(argc, argv));
+        setAppProperties(*app, release, arguments, false, snap, portable, action, session);
         clearDiskSettings();
 
         if (!clearSettingsKeychainReferences.isEmpty()) {
@@ -844,9 +904,9 @@ int main(int argc, char *argv[]) {
         w.show();
 
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-        setupSystemDarkModeChangeCheck(&app);
+        setupSystemDarkModeChangeCheck(app.get());
 #endif
 
-        return app.exec();
+        return app->exec();
     }
 }
