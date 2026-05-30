@@ -197,6 +197,15 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             ui->generalSettingsWidget, &GeneralSettingsWidget::setAllowOnlyOneAppInstance);
     connect(ui->webApplicationSettingsWidget, &WebApplicationSettingsWidget::needRestart, this,
             &SettingsDialog::needRestart);
+
+    // Connect the connected devices signal from the web app client service to the settings widget
+    auto *webAppService = WebAppClientService::instance();
+    if (webAppService != nullptr) {
+        connect(webAppService, &WebAppClientService::connectedDevicesUpdated,
+                ui->webApplicationSettingsWidget,
+                &WebApplicationSettingsWidget::updateConnectedDevices);
+    }
+
     connect(ui->aiAutocompleteCheckBox, SIGNAL(toggled(bool)), this, SLOT(needRestart()));
 
     // Connect the needRestart signal from the editor font color settings widget

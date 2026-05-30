@@ -16,6 +16,9 @@
 
 #include <QApplication>
 #include <QClipboard>
+#include <QDir>
+#include <QMessageBox>
+#include <QSysInfo>
 
 #include "services/settingsservice.h"
 #include "services/webappclientservice.h"
@@ -33,6 +36,8 @@ WebApplicationSettingsWidget::WebApplicationSettingsWidget(QWidget *parent)
     connect(ui->enableWebApplicationCheckBox, SIGNAL(toggled(bool)), this, SIGNAL(needRestart()));
     connect(ui->webAppServerUrlLineEdit, SIGNAL(textChanged(QString)), this, SIGNAL(needRestart()));
     connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this, SIGNAL(needRestart()));
+    connect(ui->webAppConnectionNameLineEdit, SIGNAL(textChanged(QString)), this,
+            SIGNAL(needRestart()));
 }
 
 WebApplicationSettingsWidget::~WebApplicationSettingsWidget() { delete ui; }
@@ -48,6 +53,7 @@ void WebApplicationSettingsWidget::readSettings() {
 
     ui->webAppServerUrlLineEdit->setText(WebAppClientService::getServerUrl());
     ui->webAppTokenLineEdit->setText(WebAppClientService::getOrGenerateToken());
+    ui->webAppConnectionNameLineEdit->setText(WebAppClientService::getOrGenerateConnectionName());
 }
 
 void WebApplicationSettingsWidget::storeSettings() {
@@ -57,6 +63,8 @@ void WebApplicationSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("webAppClientService/serverUrl"),
                       ui->webAppServerUrlLineEdit->text());
     settings.setValue(QStringLiteral("webAppClientService/token"), ui->webAppTokenLineEdit->text());
+    settings.setValue(QStringLiteral("webAppClientService/connectionName"),
+                      ui->webAppConnectionNameLineEdit->text());
 }
 
 void WebApplicationSettingsWidget::on_webAppServerUrlResetButton_clicked() {
@@ -91,4 +99,36 @@ void WebApplicationSettingsWidget::on_webAppTokenLineEdit_textChanged(const QStr
 void WebApplicationSettingsWidget::on_showQRCodeButton_clicked() {
     ui->showQRCodeButton->hide();
     ui->qrCodeWidget->show();
+}
+
+void WebApplicationSettingsWidget::on_webAppConnectionNameResetButton_clicked() {
+    ui->webAppConnectionNameLineEdit->setText(WebAppClientService::generateDefaultConnectionName());
+}
+
+void WebApplicationSettingsWidget::on_webAppTestConnectionButton_clicked() {
+    auto *service = WebAppClientService::instance();
+    const bool connected = service != nullptr && service->checkIsConnected();
+    if (connected) {
+        QMessageBox::information(this, tr("Connection test"),
+                                 tr("Successfully connected to the web application server."));
+    } else {
+        QMessageBox::warning(this, tr("Connection test"),
+                             tr("Not connected to the web application server. "
+                                "Please check the server URL and your network connection."));
+    }
+}
+
+void WebApplicationSettingsWidget::on_refreshConnectedDevicesButton_clicked() {
+    // Request the list of connected devices from the service
+    auto *service = WebAppClientService::instance();
+    if (service != nullptr) {
+        service->sendRequestConnectedDevices();
+    }
+}
+
+void WebApplicationSettingsWidget::updateConnectedDevices(const QStringList &deviceNames) {
+    ui->connectedDevicesListWidget->clear();
+    for (const QString &name : deviceNames) {
+        ui->connectedDevicesListWidget->addItem(name);
+    }
 }

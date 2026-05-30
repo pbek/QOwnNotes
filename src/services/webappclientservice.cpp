@@ -24,8 +24,11 @@
 #include <QApplication>
 #include <QBuffer>
 #include <QClipboard>
+#include <QDir>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QSslError>
+#include <QSysInfo>
 #include <QWebSocket>
 #include <QtWebSockets>
 #include <memory>
@@ -37,7 +40,13 @@ using namespace std;
 
 QT_USE_NAMESPACE
 
+WebAppClientService *WebAppClientService::_instance = nullptr;
+
+WebAppClientService *WebAppClientService::instance() { return _instance; }
+
 WebAppClientService::WebAppClientService(QObject *parent) : QObject(parent) {
+    _instance = this;
+
     if (!Utils::Misc::isWebAppSupportEnabled()) {
         return;
     }
@@ -153,6 +162,45 @@ void WebAppClientService::sendInsertIntoClipboard(const QString &mimeType,
     _webSocket->sendTextMessage(jsonDoc.toJson(QJsonDocument::Compact));
 }
 
+/**
+ * Sends a register message with the connection name to the server
+ */
+void WebAppClientService::sendRegister() const {
+    if (!_webSocket->isValid()) {
+        return;
+    }
+
+    QJsonObject jsonObject;
+    jsonObject["command"] = "register";
+    jsonObject["connectionName"] = getOrGenerateConnectionName();
+    jsonObject["sessionId"] = _sessionId;
+
+    QJsonDocument jsonDoc(jsonObject);
+    _webSocket->sendTextMessage(jsonDoc.toJson(QJsonDocument::Compact));
+}
+
+/**
+ * Sends a request to the server to get the list of connected devices
+ */
+void WebAppClientService::sendRequestConnectedDevices() const {
+    if (!_webSocket->isValid()) {
+        return;
+    }
+
+    QJsonObject jsonObject;
+    jsonObject["command"] = "getConnectedDevices";
+
+    QJsonDocument jsonDoc(jsonObject);
+    _webSocket->sendTextMessage(jsonDoc.toJson(QJsonDocument::Compact));
+}
+
+/**
+ * Returns true if the WebSocket is currently connected
+ */
+bool WebAppClientService::checkIsConnected() const {
+    return _webSocket != nullptr && _webSocket->state() == QAbstractSocket::ConnectedState;
+}
+
 QString WebAppClientService::getServerUrl() {
     return SettingsService()
         .value(QStringLiteral("webAppClientService/serverUrl"), getDefaultServerUrl())
@@ -171,6 +219,31 @@ QString WebAppClientService::getOrGenerateToken() {
     return token;
 }
 
+/**
+ * Generates the default connection name using the current user/session and hostname
+ */
+QString WebAppClientService::generateDefaultConnectionName() {
+    // Use the home directory name as a proxy for the session/user name
+    const QString sessionName = QDir::home().dirName();
+    const QString hostName = QSysInfo::machineHostName();
+    return QStringLiteral("qownnotes-") + sessionName + QStringLiteral("-") + hostName;
+}
+
+/**
+ * Gets the stored connection name or generates and stores the default one
+ */
+QString WebAppClientService::getOrGenerateConnectionName() {
+    QString name =
+        SettingsService().value(QStringLiteral("webAppClientService/connectionName")).toString();
+
+    if (name.isEmpty()) {
+        name = generateDefaultConnectionName();
+        SettingsService().setValue(QStringLiteral("webAppClientService/connectionName"), name);
+    }
+
+    return name;
+}
+
 void WebAppClientService::generateSessionId() {
     _sessionId = Utils::Misc::generateRandomString(20);
 }
@@ -187,6 +260,9 @@ WebAppClientService::~WebAppClientService() {
     _timerHeartbeat.stop();
     _timerReconnect.stop();
     _webSocket->close();
+    if (_instance == this) {
+        _instance = nullptr;
+    }
 }
 
 void WebAppClientService::onConnected() {
@@ -197,6 +273,9 @@ void WebAppClientService::onConnected() {
 
     Utils::Misc::printInfo(
         tr("QOwnNotes is now connected via websocket to %1").arg(getServerUrl()));
+
+    // Send registration with connection name to the server
+    sendRegister();
 }
 
 void WebAppClientService::onDisconnected() {
@@ -222,12 +301,18 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
     }
 
     if (command == "showWarning") {
+        // Ignore the multiple-devices warning; it is no longer shown to the user
+        // since connected devices are now shown in the settings dialog instead
         const QString msg = jsonObject.value(QStringLiteral("msg")).toString();
-        qWarning() << "Web app warning: " << msg;
-
-#ifndef INTEGRATION_TESTS
-        Utils::Gui::warning(nullptr, tr("Web app warning"), msg, "wepappclientservice-warning");
-#endif
+        qDebug() << "Web app server message (suppressed warning): " << msg;
+    } else if (command == "connectedDevices") {
+        // Receive the list of connected devices from the server
+        const QJsonArray devicesArray = jsonObject.value(QStringLiteral("devices")).toArray();
+        QStringList deviceNames;
+        for (const QJsonValue &val : devicesArray) {
+            deviceNames << val.toString();
+        }
+        emit connectedDevicesUpdated(deviceNames);
     } else if (command == "insertFile") {
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
