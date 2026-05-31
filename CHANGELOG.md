@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.6.1
+
+- Fixed a crash on Windows 11 when opening the Settings dialog caused by a null
+  pointer dereference on the WebSocket object inside `sendRegister()` and
+  `sendRequestConnectedDevices()` — these methods were called during settings
+  initialisation even when the web application feature was disabled and the
+  socket was never created
+  (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
+
 ## 26.6.0
 
 - Added **Connection name** setting to the web application settings, defaulting to

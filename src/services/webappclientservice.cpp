@@ -166,7 +166,7 @@ void WebAppClientService::sendInsertIntoClipboard(const QString &mimeType,
  * Sends a register message with the connection name to the server
  */
 void WebAppClientService::sendRegister() const {
-    if (!_webSocket->isValid()) {
+    if (_webSocket == nullptr || !_webSocket->isValid()) {
         return;
     }
 
@@ -183,7 +183,7 @@ void WebAppClientService::sendRegister() const {
  * Sends a request to the server to get the list of connected devices
  */
 void WebAppClientService::sendRequestConnectedDevices() const {
-    if (!_webSocket->isValid()) {
+    if (_webSocket == nullptr || !_webSocket->isValid()) {
         return;
     }
 
