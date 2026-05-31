@@ -226,7 +226,7 @@ void ColorMode::ensureBuiltInModesExist() {
     if (!ids.contains(LightModeId)) {
         ColorMode light;
         light._id = LightModeId;
-        light._name = QObject::tr("Light");
+        light._name = QObject::tr("System");
         light._darkMode = false;
         light._darkModeColors = false;
         light._darkModeTrayIcon = false;

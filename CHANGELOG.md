@@ -2,6 +2,9 @@
 
 ## 26.6.1
 
+- Renamed the built-in **Light** color mode to **System**, because ther is no
+  real "Light mode"; existing settings storing the name `Light` are automatically
+  migrated to `System` on startup (for [#3526](https://github.com/pbek/QOwnNotes/issues/3526))
 - Fixed a crash on Windows 11 when opening the Settings dialog caused by a null
   pointer dereference on the WebSocket object inside `sendRegister()` and
   `sendRequestConnectedDevices()` — these methods were called during settings

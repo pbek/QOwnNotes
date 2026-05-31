@@ -1155,6 +1155,15 @@ bool DatabaseService::setupTables() {
         version = 43;
     }
 
+    if (version < 44) {
+        // Rename the built-in Light color mode name to "System" in settings
+        const QString lightNameKey = QStringLiteral("ColorModes/ColorMode-light/name");
+        if (settings.value(lightNameKey).toString() == QStringLiteral("Light")) {
+            settings.setValue(lightNameKey, QStringLiteral("System"));
+        }
+        version = 44;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"), QString::number(version));
     }
