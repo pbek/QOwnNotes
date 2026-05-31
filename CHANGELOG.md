@@ -9,15 +9,14 @@
   against the light-amber highlight background; an explicit foreground color is
   now always set alongside the background color in the highlight stylesheet
   (for [#3631](https://github.com/pbek/QOwnNotes/issues/3631))
-- Renamed the built-in **Light** color mode to **System**, because ther is no
+- Renamed the built-in **Light** color mode to **System**, because there is no
   real "Light mode"; existing settings storing the name `Light` are automatically
   migrated to `System` on startup (for [#3526](https://github.com/pbek/QOwnNotes/issues/3526))
 - Fixed a crash on Windows 11 when opening the Settings dialog caused by a null
   pointer dereference on the WebSocket object inside `sendRegister()` and
   `sendRequestConnectedDevices()` — these methods were called during settings
   initialisation even when the web application feature was disabled and the
-  socket was never created
-  (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
+  socket was never created (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
 
 ## 26.6.0
 
