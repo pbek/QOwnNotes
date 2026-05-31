@@ -1588,11 +1588,20 @@ void SettingsDialog::highlightSearchMatchedWidget(QWidget *widget, const QString
     const QString highlightColor =
         isDark ? QStringLiteral("#7a6200")     // Muted dark-gold for dark mode
                : QStringLiteral("#fdefb8");    // Soft light-amber for light mode
+    // Explicit foreground color to ensure contrast regardless of OS dark mode.
+    // On Windows, when the OS uses dark mode but the application does not, the
+    // native style may render widget text in a light color.  Without an explicit
+    // foreground override the light text would be invisible against the light
+    // amber highlight background.
+    const QString highlightTextColor =
+        isDark ? QStringLiteral("#ffffff")     // White text on dark-gold background
+               : QStringLiteral("#000000");    // Black text on light-amber background
 
     // Wraps all case-insensitive occurrences of searchText in a plain text string
     // with a highlight span, escaping the plain text for HTML first
-    auto wrapPlainTextMatches = [&highlightColor](const QString &plainText,
-                                                  const QString &searchText) -> QString {
+    auto wrapPlainTextMatches = [&highlightColor, &highlightTextColor](
+                                    const QString &plainText,
+                                    const QString &searchText) -> QString {
         const QString escaped = plainText.toHtmlEscaped();
         const QString escapedSearch = searchText.toHtmlEscaped();
         QString result;
@@ -1605,15 +1614,20 @@ void SettingsDialog::highlightSearchMatchedWidget(QWidget *widget, const QString
             }
             result += escaped.mid(pos, idx - pos);
             result += QLatin1String("<span style=\"background-color: ") + highlightColor +
-                      QLatin1String(";\">") + escaped.mid(idx, escapedSearch.length()) +
-                      QLatin1String("</span>");
+                      QLatin1String("; color: ") + highlightTextColor + QLatin1String(";\">") +
+                      escaped.mid(idx, escapedSearch.length()) + QLatin1String("</span>");
             pos = idx + escapedSearch.length();
         }
         return result;
     };
 
-    const QString bgStyle =
-        QLatin1String(" background-color: ") + highlightColor + QLatin1String(";");
+    // Include an explicit foreground color so that the highlighted text stays
+    // readable even when Windows OS dark mode is active while the application
+    // itself uses a light palette (or vice-versa).  Without the color override
+    // the native Windows style may paint text in a contrasting (light) color
+    // that becomes invisible against the light-amber highlight background.
+    const QString bgStyle = QLatin1String(" background-color: ") + highlightColor +
+                            QLatin1String("; color: ") + highlightTextColor + QLatin1String(";");
 
     if (auto *label = qobject_cast<QLabel *>(widget)) {
         const QString text = label->text();

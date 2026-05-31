@@ -2,6 +2,13 @@
 
 ## 26.6.1
 
+- Fixed settings search highlight not being visible for checkboxes, radio
+  buttons, group boxes, and push buttons when Windows OS dark mode is active
+  but QOwnNotes uses a light palette; the highlighted widget text was rendered
+  in a light foreground color by the native Windows style, making it invisible
+  against the light-amber highlight background; an explicit foreground color is
+  now always set alongside the background color in the highlight stylesheet
+  (for [#3631](https://github.com/pbek/QOwnNotes/issues/3631))
 - Renamed the built-in **Light** color mode to **System**, because ther is no
   real "Light mode"; existing settings storing the name `Light` are automatically
   migrated to `System` on startup (for [#3526](https://github.com/pbek/QOwnNotes/issues/3526))
