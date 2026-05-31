@@ -40,6 +40,7 @@ class WebAppClientService : public QObject {
     static QString generateDefaultConnectionName();
     bool checkIsConnected() const;
     void sendRequestConnectedDevices() const;
+    void sendRegister() const;
     void open();
     void close();
     bool sendClipboard() const;
@@ -78,5 +79,4 @@ class WebAppClientService : public QObject {
     void generateSessionId();
     void sendInsertIntoClipboard(const QString &mimeType, const QString &content) const;
     bool keepClipboard();
-    void sendRegister() const;
 };

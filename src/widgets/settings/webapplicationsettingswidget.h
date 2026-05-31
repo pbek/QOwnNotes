@@ -46,6 +46,7 @@ class WebApplicationSettingsWidget : public QWidget {
     void on_webAppConnectionNameResetButton_clicked();
     void on_webAppTestConnectionButton_clicked();
     void on_refreshConnectedDevicesButton_clicked();
+    void on_webAppConnectionNameLineEdit_textChanged(const QString &arg1);
 
    private:
     Ui::WebApplicationSettingsWidget *ui;

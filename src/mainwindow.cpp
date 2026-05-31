@@ -901,6 +901,17 @@ void MainWindow::initWebSocketServerService() {
 
 void MainWindow::initWebAppClientService() { _webAppClientService = new WebAppClientService(); }
 
+/**
+ * Reinitializes the web app client service by deleting and recreating it,
+ * which causes it to re-read all settings (server URL, token, connection name)
+ * and reconnect — so no application restart is needed when web app settings change
+ */
+void MainWindow::reinitWebAppClientService() {
+    delete _webAppClientService;
+    _webAppClientService = nullptr;
+    initWebAppClientService();
+}
+
 void MainWindow::initMcpService() {
     _mcpService = new McpService(this);
     _mcpService->start();
@@ -2576,6 +2587,10 @@ void MainWindow::restoreToolbars() {
 
     // initialize web app websocket connection
     QTimer::singleShot(250, this, SLOT(initWebAppClientService()));
+
+    // Reinitialize the web app client service when settings change so that
+    // token, server URL, or enable/disable changes take effect without a restart
+    connect(this, &MainWindow::settingsChanged, this, &MainWindow::reinitWebAppClientService);
 
     // Initialize MCP server
     QTimer::singleShot(300, this, SLOT(initMcpService()));

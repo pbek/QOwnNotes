@@ -220,13 +220,21 @@ QString WebAppClientService::getOrGenerateToken() {
 }
 
 /**
- * Generates the default connection name using the current user/session and hostname
+ * Generates the default connection name using the QOwnNotes session name,
+ * the current user/home dir name, and the hostname
  */
 QString WebAppClientService::generateDefaultConnectionName() {
-    // Use the home directory name as a proxy for the session/user name
-    const QString sessionName = QDir::home().dirName();
+    const QString session = qApp->property("session").toString();
+    const QString userName = QDir::home().dirName();
     const QString hostName = QSysInfo::machineHostName();
-    return QStringLiteral("qownnotes-") + sessionName + QStringLiteral("-") + hostName;
+
+    // Build: qownnotes[-session]-username-hostname
+    QString name = QStringLiteral("qownnotes");
+    if (!session.isEmpty()) {
+        name += QStringLiteral("-") + session;
+    }
+    name += QStringLiteral("-") + userName + QStringLiteral("-") + hostName;
+    return name;
 }
 
 /**

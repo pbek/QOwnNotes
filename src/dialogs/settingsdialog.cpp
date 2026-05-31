@@ -195,8 +195,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             &SettingsDialog::needRestart);
     connect(ui->interfaceSettingsWidget, &InterfaceSettingsWidget::systemTrayToggled,
             ui->generalSettingsWidget, &GeneralSettingsWidget::setAllowOnlyOneAppInstance);
-    connect(ui->webApplicationSettingsWidget, &WebApplicationSettingsWidget::needRestart, this,
-            &SettingsDialog::needRestart);
 
     // Connect the connected devices signal from the web app client service to the settings widget
     auto *webAppService = WebAppClientService::instance();

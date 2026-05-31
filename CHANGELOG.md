@@ -13,9 +13,12 @@
   all devices currently connected to the same token; a **Refresh** button requests
   an updated list from the server
   (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
-- Removed the intrusive warning dialog that appeared when more than two connections
-  used the same token — the connected devices list now surfaces this information
-  without interrupting the user
+- Removed the intrusive warning dialog that appeared when more than two
+  connections used the same token — the connected devices list now surfaces
+  this information without interrupting the user
+  (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
+- Changes to the web application settings (server URL, security token, enable
+  toggle) now take effect immediately without restarting the application
   (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
 - Fixed CLI password prompt for `--decrypt-note` to mask input with asterisks
   instead of echoing characters, while still providing typing feedback

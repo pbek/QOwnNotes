@@ -32,12 +32,9 @@ WebApplicationSettingsWidget::WebApplicationSettingsWidget(QWidget *parent)
     // Hide QR code widget by default
     ui->qrCodeWidget->hide();
 
-    // Connect signals that require restart
-    connect(ui->enableWebApplicationCheckBox, SIGNAL(toggled(bool)), this, SIGNAL(needRestart()));
-    connect(ui->webAppServerUrlLineEdit, SIGNAL(textChanged(QString)), this, SIGNAL(needRestart()));
-    connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this, SIGNAL(needRestart()));
-    connect(ui->webAppConnectionNameLineEdit, SIGNAL(textChanged(QString)), this,
-            SIGNAL(needRestart()));
+    // Web app settings (server URL, token, connection name, enable toggle) are all
+    // applied live via MainWindow::reinitWebAppClientService() when settingsChanged fires —
+    // no application restart is needed
 }
 
 WebApplicationSettingsWidget::~WebApplicationSettingsWidget() { delete ui; }
@@ -103,6 +100,17 @@ void WebApplicationSettingsWidget::on_showQRCodeButton_clicked() {
 
 void WebApplicationSettingsWidget::on_webAppConnectionNameResetButton_clicked() {
     ui->webAppConnectionNameLineEdit->setText(WebAppClientService::generateDefaultConnectionName());
+}
+
+void WebApplicationSettingsWidget::on_webAppConnectionNameLineEdit_textChanged(
+    const QString &arg1) {
+    // Store the new connection name immediately and re-send the register message
+    // so other connected devices see the updated name without a restart
+    SettingsService().setValue(QStringLiteral("webAppClientService/connectionName"), arg1);
+    auto *service = WebAppClientService::instance();
+    if (service != nullptr) {
+        service->sendRegister();
+    }
 }
 
 void WebApplicationSettingsWidget::on_webAppTestConnectionButton_clicked() {

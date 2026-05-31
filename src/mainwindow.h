@@ -735,6 +735,8 @@ class MainWindow : public QMainWindow {
 
     void initWebAppClientService();
 
+    void reinitWebAppClientService();
+
     void initMcpService();
 
     void updateLocalTrashActionVisibility();
