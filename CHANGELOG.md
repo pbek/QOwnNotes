@@ -2,6 +2,9 @@
 
 ## 26.6.2
 
+- Fixed a possible crash when changing **Icons** checkboxes in the **Color modes**
+  settings by avoiding unnecessary web application client restarts for unrelated
+  settings changes (for [#3630](https://github.com/pbek/QOwnNotes/issues/3630))
 - Fixed a crash when saving the settings dialog after enabling **Enable logging
   to file** while the web application client service was disabled, and now show
   the real **Log file path** directly below the checkbox from the start

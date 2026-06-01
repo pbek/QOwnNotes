@@ -178,6 +178,14 @@ QKeySequence shortcutFromSettings(const QString &shortcut) {
 
     return sequence;
 }
+
+QString webAppClientServiceSettingsKey() {
+    return QStringList{
+        Utils::Misc::isWebAppSupportEnabled() ? QStringLiteral("1") : QStringLiteral("0"),
+        WebAppClientService::getServerUrl(), WebAppClientService::getOrGenerateToken(),
+        WebAppClientService::getOrGenerateConnectionName()}
+        .join(QChar::LineFeed);
+}
 }    // namespace
 
 static MainWindow *s_self = nullptr;
@@ -899,7 +907,10 @@ void MainWindow::initWebSocketServerService() {
     _webSocketServerService = new WebSocketServerService();
 }
 
-void MainWindow::initWebAppClientService() { _webAppClientService = new WebAppClientService(); }
+void MainWindow::initWebAppClientService() {
+    _webAppClientServiceSettingsKey = webAppClientServiceSettingsKey();
+    _webAppClientService = new WebAppClientService();
+}
 
 /**
  * Reinitializes the web app client service by deleting and recreating it,
@@ -907,6 +918,13 @@ void MainWindow::initWebAppClientService() { _webAppClientService = new WebAppCl
  * and reconnect — so no application restart is needed when web app settings change
  */
 void MainWindow::reinitWebAppClientService() {
+    const QString settingsKey = webAppClientServiceSettingsKey();
+    if (settingsKey == _webAppClientServiceSettingsKey) {
+        return;
+    }
+
+    _webAppClientServiceSettingsKey = settingsKey;
+
     delete _webAppClientService;
     _webAppClientService = nullptr;
     initWebAppClientService();

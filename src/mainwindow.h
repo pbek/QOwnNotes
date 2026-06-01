@@ -1026,6 +1026,7 @@ class MainWindow : public QMainWindow {
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
     WebAppClientService *_webAppClientService;
+    QString _webAppClientServiceSettingsKey;
     McpService *_mcpService;
     bool _brokenTagNoteLinksRemoved = false;
 
