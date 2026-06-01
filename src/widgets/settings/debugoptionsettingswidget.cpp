@@ -27,6 +27,7 @@
 DebugOptionSettingsWidget::DebugOptionSettingsWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::DebugOptionSettingsWidget) {
     ui->setupUi(this);
+    ui->logFileLabel->setText(QDir::toNativeSeparators(Utils::Misc::logFilePath()));
 }
 
 DebugOptionSettingsWidget::~DebugOptionSettingsWidget() { delete ui; }

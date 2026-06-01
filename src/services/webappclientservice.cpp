@@ -267,7 +267,14 @@ QString WebAppClientService::getDefaultServerUrl() {
 WebAppClientService::~WebAppClientService() {
     _timerHeartbeat.stop();
     _timerReconnect.stop();
-    _webSocket->close();
+
+    if (_webSocket != nullptr) {
+        _webSocket->disconnect(this);
+        _webSocket->close();
+        delete _webSocket;
+        _webSocket = nullptr;
+    }
+
     if (_instance == this) {
         _instance = nullptr;
     }

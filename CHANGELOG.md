@@ -2,6 +2,10 @@
 
 ## 26.6.2
 
+- Fixed a crash when saving the settings dialog after enabling **Enable logging
+  to file** while the web application client service was disabled, and now show
+  the real **Log file path** directly below the checkbox from the start
+  (for [#3634](https://github.com/pbek/QOwnNotes/issues/3634))
 - Improved bash shell completion by completing proper short and long command line
   options, shell names for `--completion`, and filenames for `--decrypt-note`
   (for [#3633](https://github.com/pbek/QOwnNotes/issues/3633))
