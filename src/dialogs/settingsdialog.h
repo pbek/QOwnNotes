@@ -152,13 +152,11 @@ class SettingsDialog : public MasterDialog {
 
     void loadShortcutSettings();
 
-    void buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem *parentItem,
-                                  SettingsService &settings,
-                                  const QColor &shortcutButtonActiveColor,
-                                  const QColor &shortcutButtonInactiveColor,
-                                  const QIcon &disableShortcutButtonIcon,
-                                  const QIcon &clearButtonIcon,
-                                  const QStringList &disabledMenuNames);
+    void buildShortcutTreeForMenu(
+        const QMenu *menu, QTreeWidgetItem *parentItem, SettingsService &settings,
+        const QColor &shortcutButtonActiveColor, const QColor &shortcutButtonInactiveColor,
+        const QIcon &disableShortcutButtonIcon, const QIcon &clearButtonIcon,
+        const QStringList &disabledMenuNames, QSet<QString> &processedActionObjectNames);
 
     void storeShortcutSettings();
 

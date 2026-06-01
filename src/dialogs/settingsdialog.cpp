@@ -459,6 +459,7 @@ void SettingsDialog::loadShortcutSettings() {
     ui->shortcutLoadingProgressBar->setVisible(true);
 
     int menuIndex = 0;
+    QSet<QString> processedActionObjectNames;
 
     // loop through all top-level menus and build the tree recursively
     for (const QMenu *menu : menus) {
@@ -471,7 +472,7 @@ void SettingsDialog::loadShortcutSettings() {
 
         buildShortcutTreeForMenu(menu, nullptr, settings, shortcutButtonActiveColor,
                                  shortcutButtonInactiveColor, disableShortcutButtonIcon,
-                                 clearButtonIcon, disabledMenuNames);
+                                 clearButtonIcon, disabledMenuNames, processedActionObjectNames);
     }
 
     ui->shortcutLoadingProgressBar->setVisible(false);
@@ -493,30 +494,11 @@ void SettingsDialog::loadShortcutSettings() {
  * @param clearButtonIcon             Icon for the clear button
  * @param disabledMenuNames           List of menu object names to skip
  */
-void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem *parentItem,
-                                              SettingsService &settings,
-                                              const QColor &shortcutButtonActiveColor,
-                                              const QColor &shortcutButtonInactiveColor,
-                                              const QIcon &disableShortcutButtonIcon,
-                                              const QIcon &clearButtonIcon,
-                                              const QStringList &disabledMenuNames) {
-    // Count eligible actions first to decide whether to add this menu at all
-    int actionCount = 0;
-
-    foreach (QAction *action, menu->actions()) {
-        if (action->menu() != nullptr) {
-            if (!disabledMenuNames.contains(action->menu()->objectName())) {
-                actionCount++;
-            }
-        } else if (!action->objectName().isEmpty()) {
-            actionCount++;
-        }
-    }
-
-    if (actionCount == 0) {
-        return;
-    }
-
+void SettingsDialog::buildShortcutTreeForMenu(
+    const QMenu *menu, QTreeWidgetItem *parentItem, SettingsService &settings,
+    const QColor &shortcutButtonActiveColor, const QColor &shortcutButtonInactiveColor,
+    const QIcon &disableShortcutButtonIcon, const QIcon &clearButtonIcon,
+    const QStringList &disabledMenuNames, QSet<QString> &processedActionObjectNames) {
     // Add the menu item to the tree before populating children so that
     // setItemWidget() works correctly (items must be in the tree first)
     auto *menuItem = new QTreeWidgetItem();
@@ -543,7 +525,8 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
 
             buildShortcutTreeForMenu(subMenu, menuItem, settings, shortcutButtonActiveColor,
                                      shortcutButtonInactiveColor, disableShortcutButtonIcon,
-                                     clearButtonIcon, disabledMenuNames);
+                                     clearButtonIcon, disabledMenuNames,
+                                     processedActionObjectNames);
             continue;
         }
 
@@ -553,6 +536,11 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
         if (actionObjectName.isEmpty()) {
             continue;
         }
+
+        if (processedActionObjectNames.contains(actionObjectName)) {
+            continue;
+        }
+        processedActionObjectNames.insert(actionObjectName);
 
         // create the tree widget item
         auto *actionItem = new QTreeWidgetItem();
@@ -676,6 +664,16 @@ void SettingsDialog::buildShortcutTreeForMenu(const QMenu *menu, QTreeWidgetItem
                 });
 
         ui->shortcutTreeWidget->setItemWidget(actionItem, 2, globalShortcutKeyWidget);
+    }
+
+    if (menuItem->childCount() == 0) {
+        if (parentItem == nullptr) {
+            const int index = ui->shortcutTreeWidget->indexOfTopLevelItem(menuItem);
+            delete ui->shortcutTreeWidget->takeTopLevelItem(index);
+        } else {
+            parentItem->removeChild(menuItem);
+            delete menuItem;
+        }
     }
 }
 

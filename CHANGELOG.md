@@ -5,8 +5,9 @@
 - Fixed custom shortcuts for actions that appear in multiple menus, such as
   **Find text in notes**, being treated as their default shortcut in the
   **Shortcuts** settings page; shortcut initialization now processes each
-  action only once so restored custom shortcuts no longer overwrite the stored
-  default shortcut used for visual marking and reset handling
+  action only once and the **Shortcuts** settings page only shows one row per
+  action, so restored custom shortcuts no longer overwrite the stored default
+  shortcut used for visual marking and reset handling
   (for [#3619](https://github.com/pbek/QOwnNotes/issues/3619))
 - Fixed a possible crash when changing **Icons** checkboxes in the **Color modes**
   settings by avoiding unnecessary web application client restarts for unrelated
