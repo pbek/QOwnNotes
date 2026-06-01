@@ -90,6 +90,7 @@
 #include <QRegularExpressionMatchIterator>
 #include <QScreen>
 #include <QScrollBar>
+#include <QSet>
 #include <QShortcut>
 #include <QSystemTrayIcon>
 #include <QTemporaryFile>
@@ -6658,6 +6659,7 @@ void MainWindow::on_actionStrike_out_text_triggered() { applyFormatter(QStringLi
  */
 void MainWindow::initShortcuts() {
     const QList<QMenu *> menus = menuList();
+    QSet<QAction *> processedActions;
     SettingsService settings;
 
     // we also have to clear the shortcuts directly, just removing the
@@ -6683,6 +6685,13 @@ void MainWindow::initShortcuts() {
             if (action->objectName().isEmpty()) {
                 continue;
             }
+
+            // Some actions appear in multiple menus. Process them once, so a
+            // restored custom shortcut is not captured as the default shortcut.
+            if (processedActions.contains(action)) {
+                continue;
+            }
+            processedActions.insert(action);
 
             QString oldShortcut = action->shortcut().toString();
 
