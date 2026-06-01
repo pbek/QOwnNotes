@@ -1864,7 +1864,9 @@ void MainWindow::applyDarkModeSettings() {
     SettingsService settings;
     const bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
 
-    if (!systemIconTheme) {
+    if (systemIconTheme) {
+        QIcon::setThemeName(qApp->property("systemIconThemeName").toString());
+    } else {
         const bool internalIconTheme = settings.value(QStringLiteral("internalIconTheme")).toBool();
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))

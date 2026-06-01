@@ -338,6 +338,8 @@ int mainStartupMisc(const QStringList &arguments) {
     Utils::Gui::applyInterfaceStyle();
     Utils::Gui::doSystemDarkModeCheck();
 
+    qApp->setProperty("systemIconThemeName", QIcon::themeName());
+
     QSettings settings;
     bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
 

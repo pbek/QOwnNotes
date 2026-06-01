@@ -220,9 +220,6 @@
            <layout class="QGridLayout" name="gridLayout_colorModeIcons">
             <item row="0" column="0">
              <widget class="QCheckBox" name="colorModeInternalIconThemeCheckBox">
-              <property name="toolTip">
-               <string>You need to restart the application to let this setting take effect</string>
-              </property>
               <property name="text">
                <string>Use internal icon theme instead of system icon theme</string>
               </property>
@@ -230,9 +227,6 @@
             </item>
             <item row="1" column="0">
              <widget class="QCheckBox" name="colorModeSystemIconThemeCheckBox">
-              <property name="toolTip">
-               <string>You need to restart the application to let this setting take effect</string>
-              </property>
               <property name="text">
                <string>Enforce system icon theme</string>
               </property>
@@ -240,9 +234,6 @@
             </item>
             <item row="2" column="0">
              <widget class="QCheckBox" name="colorModeDarkModeIconThemeCheckBox">
-              <property name="toolTip">
-               <string>You may need to restart the application to let these changes take effect</string>
-              </property>
               <property name="text">
                <string>Enable dark mode icon theme</string>
               </property>
