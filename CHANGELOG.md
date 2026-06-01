@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.6.2
+
+- Improved bash shell completion by completing proper short and long command line
+  options, shell names for `--completion`, and filenames for `--decrypt-note`
+  (for [#3633](https://github.com/pbek/QOwnNotes/issues/3633))
+
 ## 26.6.1
 
 - Fixed settings search highlight not being visible for checkboxes, radio

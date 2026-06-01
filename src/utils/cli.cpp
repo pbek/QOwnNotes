@@ -15,6 +15,7 @@
 #include "cli.h"
 
 #include <QCoreApplication>
+#include <QStringList>
 #include <iostream>
 
 // Generates Fish shell completion script
@@ -69,14 +70,52 @@ void Utils::Cli::generateBashCompletionScript(const QList<QCommandLineOption>& o
     std::cout << "_" << appName.toStdString() << "() {" << std::endl;
     std::cout << "  COMPREPLY=()" << std::endl;
     std::cout << "  local current=\"${COMP_WORDS[COMP_CWORD]}\"" << std::endl;
+    std::cout << "  local prev=\"${COMP_WORDS[COMP_CWORD-1]}\"" << std::endl;
+    std::cout << "  if declare -F _init_completion >/dev/null; then" << std::endl;
+    std::cout << "    _init_completion || return" << std::endl;
+    std::cout << "  fi" << std::endl;
     std::cout << "  local commands=\"";
     for (const QCommandLineOption& option : options) {
         for (const QString& name : option.names()) {
-            std::cout << "--" << name.toStdString() << " ";
+            const bool shortOption = name.length() == 1;
+            std::cout << (shortOption ? "-" : "--") << name.toStdString() << " ";
         }
     }
     std::cout << "\"" << std::endl;
-    std::cout << "  COMPREPLY=( $(compgen -W \"${commands}\" -- ${current}) )" << std::endl;
+
+    std::cout << "  case \"$prev\" in" << std::endl;
+    for (const QCommandLineOption& option : options) {
+        if (option.valueName().isEmpty()) {
+            continue;
+        }
+
+        QStringList optionNames;
+        for (const QString& name : option.names()) {
+            const bool shortOption = name.length() == 1;
+            optionNames << (shortOption ? QStringLiteral("-") : QStringLiteral("--")) + name;
+        }
+
+        std::cout << "    " << optionNames.join(QStringLiteral("|")).toStdString() << ")"
+                  << std::endl;
+
+        if (option.names().contains(QStringLiteral("completion"))) {
+            std::cout << "      COMPREPLY=( $(compgen -W \"bash fish\" -- \"$current\") )"
+                      << std::endl;
+        } else if (option.valueName() == QStringLiteral("file")) {
+            std::cout << "      compopt -o filenames 2>/dev/null" << std::endl;
+            std::cout << "      if declare -F _filedir >/dev/null; then" << std::endl;
+            std::cout << "        _filedir" << std::endl;
+            std::cout << "      else" << std::endl;
+            std::cout << "        COMPREPLY=( $(compgen -f -- \"$current\") )" << std::endl;
+            std::cout << "      fi" << std::endl;
+        }
+
+        std::cout << "      return 0" << std::endl;
+        std::cout << "      ;;" << std::endl;
+    }
+    std::cout << "  esac" << std::endl;
+
+    std::cout << "  COMPREPLY=( $(compgen -W \"${commands}\" -- \"$current\") )" << std::endl;
     std::cout << "  return 0" << std::endl;
     std::cout << "}" << std::endl;
     std::cout << "complete -F _" << appName.toStdString() << " " << appName.toStdString()
