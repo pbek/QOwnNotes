@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.6.3
+
+- Added a compact web application connection status indicator to the main window
+  status bar when web application support is enabled; right-clicking it now shows
+  a context menu with a **Connected systems** submenu
+  (for [#3632](https://github.com/pbek/QOwnNotes/issues/3632))
+
 ## 26.6.2
 
 - Fixed custom shortcuts for actions that appear in multiple menus, such as

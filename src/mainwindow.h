@@ -50,6 +50,7 @@ class QPlainTextEdit;
 class QTextEdit;
 class QTextDocument;
 class QLabel;
+class QMenu;
 class QPushButton;
 class QFile;
 class QToolBar;
@@ -958,6 +959,7 @@ class MainWindow : public QMainWindow {
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
+    QPushButton *_webAppStatusButton;
     NoteFilePathLabel *_noteFilePathLabel;
     QLabel *_noteEditLineNumberLabel;
     QPushButton *_readOnlyButton;
@@ -1027,6 +1029,7 @@ class MainWindow : public QMainWindow {
     WebSocketServerService *_webSocketServerService;
     WebAppClientService *_webAppClientService;
     QString _webAppClientServiceSettingsKey;
+    QStringList _webAppConnectedDevices;
     McpService *_mcpService;
     bool _brokenTagNoteLinksRemoved = false;
 
@@ -1122,6 +1125,12 @@ class MainWindow : public QMainWindow {
     void setupNoteBookmarkShortcuts();
 
     void setupStatusBarWidgets();
+
+    void setupWebAppStatusButton();
+    void connectWebAppClientServiceSignals();
+    void updateWebAppStatusButton();
+    void updateWebAppConnectedDevices(const QStringList &deviceNames);
+    void showWebAppStatusContextMenu(const QPoint &point);
 
     void gotoNextNote();
 

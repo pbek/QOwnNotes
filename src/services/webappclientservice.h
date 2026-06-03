@@ -47,6 +47,7 @@ class WebAppClientService : public QObject {
     bool sendClipboardAsText() const;
 
    signals:
+    void connectionStateChanged(bool connected);
     void connectedDevicesUpdated(const QStringList &deviceNames);
 
    private slots:

@@ -291,6 +291,9 @@ void WebAppClientService::onConnected() {
 
     // Send registration with connection name to the server
     sendRegister();
+    sendRequestConnectedDevices();
+
+    emit connectionStateChanged(true);
 }
 
 void WebAppClientService::onDisconnected() {
@@ -300,6 +303,9 @@ void WebAppClientService::onDisconnected() {
 
     Utils::Misc::printInfo(
         tr("QOwnNotes is now disconnected from websocket to %1").arg(getServerUrl()));
+
+    emit connectionStateChanged(false);
+    emit connectedDevicesUpdated(QStringList());
 }
 
 void WebAppClientService::onTextMessageReceived(const QString &message) {

@@ -74,6 +74,7 @@
 #include <QKeyEvent>
 #include <QKeySequence>
 #include <QListWidgetItem>
+#include <QMenu>
 #include <QMessageBox>
 #include <QMimeData>
 #include <QPageSetupDialog>
@@ -287,8 +288,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
     _readOnlyButton = new QPushButton(this);
+    _webAppStatusButton = new QPushButton(this);
     _lastNoteSelectionWasMultiple = false;
     _webSocketServerService = nullptr;
+    _webAppClientService = nullptr;
     _mcpService = nullptr;
     _closeEventWasFired = false;
     _useNoteFolderButtons = settings.value("useNoteFolderButtons").toBool();
@@ -911,6 +914,8 @@ void MainWindow::initWebSocketServerService() {
 void MainWindow::initWebAppClientService() {
     _webAppClientServiceSettingsKey = webAppClientServiceSettingsKey();
     _webAppClientService = new WebAppClientService();
+    connectWebAppClientServiceSignals();
+    updateWebAppStatusButton();
 }
 
 /**
@@ -928,6 +933,7 @@ void MainWindow::reinitWebAppClientService() {
 
     delete _webAppClientService;
     _webAppClientService = nullptr;
+    _webAppConnectedDevices.clear();
     initWebAppClientService();
 }
 
@@ -2971,6 +2977,9 @@ void MainWindow::setupStatusBarWidgets() {
 
     ui->statusBar->addPermanentWidget(_noteEditLineNumberLabel);
 
+    setupWebAppStatusButton();
+    ui->statusBar->addPermanentWidget(_webAppStatusButton);
+
     /*
      * setup of update available button
      */
@@ -2986,6 +2995,77 @@ void MainWindow::setupStatusBarWidgets() {
             &MainWindow::on_actionCheck_for_updates_triggered);
 
     ui->statusBar->addPermanentWidget(_updateAvailableButton);
+}
+
+void MainWindow::setupWebAppStatusButton() {
+    _webAppStatusButton->setFlat(true);
+    _webAppStatusButton->setText(tr("Web"));
+    _webAppStatusButton->setStyleSheet(QStringLiteral("QPushButton {padding: 0 5px}"));
+    _webAppStatusButton->setContextMenuPolicy(Qt::CustomContextMenu);
+
+    connect(_webAppStatusButton, &QWidget::customContextMenuRequested, this,
+            &MainWindow::showWebAppStatusContextMenu);
+
+    updateWebAppStatusButton();
+}
+
+void MainWindow::connectWebAppClientServiceSignals() {
+    if (_webAppClientService == nullptr) {
+        return;
+    }
+
+    connect(_webAppClientService, &WebAppClientService::connectionStateChanged, this,
+            [this](bool) { updateWebAppStatusButton(); });
+    connect(_webAppClientService, &WebAppClientService::connectedDevicesUpdated, this,
+            &MainWindow::updateWebAppConnectedDevices);
+}
+
+void MainWindow::updateWebAppStatusButton() {
+    if (_webAppStatusButton == nullptr) {
+        return;
+    }
+
+    const bool enabled = Utils::Misc::isWebAppSupportEnabled();
+    const bool connected =
+        _webAppClientService != nullptr && _webAppClientService->checkIsConnected();
+    _webAppStatusButton->setVisible(enabled);
+    _webAppStatusButton->setToolTip(connected ? tr("Web app is connected")
+                                              : tr("Web app is not connected"));
+    _webAppStatusButton->setStyleSheet(
+        connected ? QStringLiteral("QPushButton {padding: 0 5px; color: #2e7d32}")
+                  : QStringLiteral("QPushButton {padding: 0 5px; color: #b71c1c}"));
+}
+
+void MainWindow::updateWebAppConnectedDevices(const QStringList &deviceNames) {
+    _webAppConnectedDevices = deviceNames;
+    updateWebAppStatusButton();
+}
+
+void MainWindow::showWebAppStatusContextMenu(const QPoint &point) {
+    if (_webAppStatusButton == nullptr || !Utils::Misc::isWebAppSupportEnabled()) {
+        return;
+    }
+
+    const bool connected =
+        _webAppClientService != nullptr && _webAppClientService->checkIsConnected();
+    if (connected) {
+        _webAppClientService->sendRequestConnectedDevices();
+    }
+
+    QMenu menu(this);
+    menu.addAction(connected ? tr("Web app connected") : tr("Web app disconnected"))
+        ->setEnabled(false);
+
+    QMenu *connectedSystemsMenu = menu.addMenu(tr("Connected systems"));
+    if (_webAppConnectedDevices.isEmpty()) {
+        connectedSystemsMenu->addAction(tr("No connected systems"))->setEnabled(false);
+    } else {
+        for (const QString &deviceName : qAsConst(_webAppConnectedDevices)) {
+            connectedSystemsMenu->addAction(deviceName)->setEnabled(false);
+        }
+    }
+
+    menu.exec(_webAppStatusButton->mapToGlobal(point));
 }
 
 void MainWindow::initializeOpenAiActivitySpinner() {
