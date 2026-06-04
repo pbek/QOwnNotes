@@ -78,6 +78,7 @@
 #include <QMessageBox>
 #include <QMimeData>
 #include <QPageSetupDialog>
+#include <QPlainTextEdit>
 #include <QPointer>
 #include <QPrintDialog>
 #include <QPrinter>
@@ -655,10 +656,13 @@ void MainWindow::initNotePreviewAndTextEdits() {
     // track cursor position changes for the line number label
     connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
             &MainWindow::noteEditCursorPositionChanged);
+    connect(ui->noteTextEdit, &QPlainTextEdit::textChanged, this, &MainWindow::noteEditTextChanged);
 
     // track cursor position changes for the line number label
     connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
             &MainWindow::noteEditCursorPositionChanged);
+    connect(ui->encryptedNoteTextEdit, &QPlainTextEdit::textChanged, this,
+            &MainWindow::noteEditTextChanged);
 
     // TODO: Remove and handle this in widgets directly
     ui->noteTextEdit->installEventFilter(this);
@@ -2977,6 +2981,13 @@ void MainWindow::setupStatusBarWidgets() {
 
     ui->statusBar->addPermanentWidget(_noteEditLineNumberLabel);
 
+    _noteEditStatisticsLabel = new QLabel(this);
+    _noteEditStatisticsLabel->setContentsMargins(5, 0, 5, 0);
+    _noteEditStatisticsLabel->setVisible(
+        SettingsService().value(QStringLiteral("Editor/showNoteTextStats"), false).toBool());
+
+    ui->statusBar->addPermanentWidget(_noteEditStatisticsLabel);
+
     setupWebAppStatusButton();
     ui->statusBar->addPermanentWidget(_webAppStatusButton);
 
@@ -3404,6 +3415,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
         this->noteHistory.add(note, ui->noteTextEdit);
     }
 
+    _navigationManager->updateNoteTextStatistics();
     noteEditCursorPositionChanged();
 
     // create a hash of the text of the current note to be able if it was
@@ -4114,6 +4126,8 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
     // read all relevant settings, that can be set in the settings dialog,
     // even if the dialog was canceled
     readSettingsFromSettingsDialog();
+    _navigationManager->updateNoteTextStatistics();
+    noteEditCursorPositionChanged();
     checkAiToolbarConfiguration();
 
     // update the panels sort and order
@@ -7334,6 +7348,8 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
 void MainWindow::noteEditCursorPositionChanged() {
     _navigationManager->noteEditCursorPositionChanged();
 }
+
+void MainWindow::noteEditTextChanged() { _navigationManager->noteEditTextChanged(); }
 
 /**
  * Deletes the current line in the active note text edit

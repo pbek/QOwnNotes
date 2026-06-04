@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.6.4
+
+- Added an optional editor setting to show character, word and line counts in the
+  status bar (for [#536](https://github.com/pbek/QOwnNotes/issues/536))
+
 ## 26.6.3
 
 - Added a compact web application connection status indicator to the main window

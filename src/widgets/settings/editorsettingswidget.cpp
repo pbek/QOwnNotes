@@ -57,6 +57,8 @@ void EditorSettingsWidget::readSettings() {
         settings.value(QStringLiteral("Editor/removeTrailingSpaces")).toBool());
     ui->showLineNumbersInEditorCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/showLineNumbers")).toBool());
+    ui->showNoteTextStatsCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/showNoteTextStats"), false).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool());
     ui->headingFoldingCheckBox->setChecked(
@@ -103,6 +105,8 @@ void EditorSettingsWidget::storeSettings() {
                       ui->removeTrailingSpacesCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showLineNumbers"),
                       ui->showLineNumbersInEditorCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/showNoteTextStats"),
+                      ui->showNoteTextStatsCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),
                       ui->highlightCurrentLineCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/headingFolding"),

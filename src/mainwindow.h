@@ -671,6 +671,7 @@ class MainWindow : public QMainWindow {
     void on_actionSearch_text_on_the_web_triggered();
 
     void noteEditCursorPositionChanged();
+    void noteEditTextChanged();
 
     void on_actionDelete_line_triggered();
 
@@ -962,6 +963,7 @@ class MainWindow : public QMainWindow {
     QPushButton *_webAppStatusButton;
     NoteFilePathLabel *_noteFilePathLabel;
     QLabel *_noteEditLineNumberLabel;
+    QLabel *_noteEditStatisticsLabel;
     QPushButton *_readOnlyButton;
     QToolBar *_formattingToolbar;
     QToolBar *_customActionToolbar;
