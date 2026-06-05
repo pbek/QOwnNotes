@@ -2768,12 +2768,18 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
     return canonicalFilePath;
 }
 
-QString Note::getFilePathRelativeToNote(const Note &note, const QString &connectionName) const {
-    const QDir dir(fullNoteFilePath(connectionName));
+QString Note::getFilePathRelativeToNote(const Note &note, const QString &connectionName,
+                                        bool resolveFileSystemPaths) const {
+    const QDir dir(resolveFileSystemPaths
+                       ? fullNoteFilePath(connectionName)
+                       : relativeNoteFilePath(QStringLiteral("/"), connectionName));
 
     // for some reason there is a leading "../" too much
     static const QRegularExpression re(QStringLiteral(R"(^\.\.\/)"));
-    QString path = dir.relativeFilePath(note.fullNoteFilePath(connectionName)).remove(re);
+    const QString notePath = resolveFileSystemPaths
+                                 ? note.fullNoteFilePath(connectionName)
+                                 : note.relativeNoteFilePath(QStringLiteral("/"), connectionName);
+    QString path = dir.relativeFilePath(notePath).remove(re);
 
     // if "note" is the current note we want to use the real filename
     if (path == QChar('.')) {
@@ -4737,7 +4743,8 @@ QVector<int> Note::findBacklinkedNoteIds(const QString &connectionName) const {
             continue;
         }
 
-        const QString relativePathToNote = note.getFilePathRelativeToNote(*this, connectionName);
+        const QString relativePathToNote =
+            note.getFilePathRelativeToNote(*this, connectionName, false);
 
         // We now don't escape slashes in the relative file path, but previously we did,
         // so we need to search for both
@@ -5054,7 +5061,8 @@ QHash<Note, QSet<LinkHit>> Note::findReverseLinkNotes(const QString &connectionN
             continue;
         }
 
-        const QString relativePathToNote = note.getFilePathRelativeToNote(*this, connectionName);
+        const QString relativePathToNote =
+            note.getFilePathRelativeToNote(*this, connectionName, false);
 
         // Search legacy note:// protocol links
         addTextToBacklinkNoteHashIfFound(note, QStringLiteral("<") + noteUrl + QStringLiteral(">"));

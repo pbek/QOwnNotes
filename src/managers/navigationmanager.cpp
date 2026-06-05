@@ -30,6 +30,8 @@
 #include <QRegularExpression>
 #include <QScrollBar>
 #include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QStringList>
 #include <QTabWidget>
 #include <QTextCursor>
 #include <QUrl>
@@ -108,6 +110,14 @@ void NavigationManager::updateFileNavigationTab() {
 
 void NavigationManager::updateBacklinkNavigationTab() {
     const Note note = _mainWindow->currentNote;
+    const QString cacheKey = backlinkNavigationCacheKey();
+    const bool backlinkTabVisible = _ui->navigationTabWidget->indexOf(_ui->backlinkTab) >= 0;
+    if (!backlinkTabVisible && !_lastBacklinkNavigationCacheKey.isEmpty() &&
+        (_lastBacklinkNavigationCacheKey == cacheKey)) {
+        return;
+    }
+
+    _lastBacklinkNavigationCacheKey = cacheKey;
     Note noteCopy(note);
     const quint64 requestId = ++_mainWindow->_backlinkNavigationUpdateRequestId;
     QPointer<MainWindow> window(_mainWindow);
@@ -149,6 +159,29 @@ void NavigationManager::updateBacklinkNavigationTab() {
 #endif
     });
     Q_UNUSED(future)
+}
+
+QString NavigationManager::backlinkNavigationCacheKey() const {
+    const Note note = _mainWindow->currentNote;
+    QStringList keyParts{QString::number(note.getId()), QString::number(note.getNoteSubFolderId()),
+                         note.getFileName(), note.getName()};
+
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"), false);
+    if (!db.isValid() || !db.isOpen()) {
+        return keyParts.join(QLatin1Char('|'));
+    }
+
+    QSqlQuery query(db);
+    query.prepare(QStringLiteral(
+        "SELECT COUNT(*), MAX(modified), MAX(file_last_modified) FROM note WHERE id != :id"));
+    query.bindValue(QStringLiteral(":id"), note.getId());
+
+    if (query.exec() && query.first()) {
+        keyParts << query.value(0).toString() << query.value(1).toString()
+                 << query.value(2).toString();
+    }
+
+    return keyParts.join(QLatin1Char('|'));
 }
 
 void NavigationManager::selectNavigationItemAtPosition(int position) {

@@ -51,10 +51,12 @@ class NavigationManager : public QObject {
     void on_actionJump_to_navigation_panel_triggered();
 
    private:
+    QString backlinkNavigationCacheKey() const;
     void updateNoteTextStatistics(QOwnNotesMarkdownTextEdit *textEdit);
 
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
+    QString _lastBacklinkNavigationCacheKey;
     QOwnNotesMarkdownTextEdit *_lastStatisticsTextEdit = nullptr;
     int _lastStatisticsNoteId = 0;
     int _lastStatisticsRevision = -1;

@@ -134,8 +134,9 @@ class Note {
 
     static QString getFullFilePathForFile(const QString &fileName);
 
-    QString getFilePathRelativeToNote(
-        const Note &note, const QString &connectionName = QStringLiteral("memory")) const;
+    QString getFilePathRelativeToNote(const Note &note,
+                                      const QString &connectionName = QStringLiteral("memory"),
+                                      bool resolveFileSystemPaths = true) const;
 
     static int storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged = nullptr,
                                      bool *noteWasRenamed = nullptr,
