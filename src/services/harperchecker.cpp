@@ -68,15 +68,15 @@ void HarperChecker::setTextEdit(QPlainTextEdit *textEdit) {
     scheduleCheck(true);
 }
 
-void HarperChecker::clearForTextEdit(QPlainTextEdit *textEdit) {
+void HarperChecker::clearForTextEdit(QPlainTextEdit *textEdit, bool updateBlocks) {
     if (_textEdit == textEdit) {
-        clearCurrentState();
+        clearCurrentState(updateBlocks);
         _textEdit.clear();
         _document.clear();
     }
 }
 
-void HarperChecker::clearCurrentState() {
+void HarperChecker::clearCurrentState(bool updateBlocks) {
     _debounceTimer->stop();
     _client->cancelAllRequests();
     _pendingRequests.clear();
@@ -88,7 +88,9 @@ void HarperChecker::clearCurrentState() {
     if (oldAvailable != _available) {
         Q_EMIT availabilityChanged(_available);
     }
-    Q_EMIT blockMatchesUpdated(QVector<int>());
+    if (updateBlocks) {
+        Q_EMIT blockMatchesUpdated(QVector<int>());
+    }
 }
 
 void HarperChecker::invalidateBlock(int blockNumber) { _cache.remove(blockNumber); }

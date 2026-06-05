@@ -70,22 +70,24 @@ void LanguageToolChecker::setTextEdit(QPlainTextEdit *textEdit) {
     scheduleCheck(true);
 }
 
-void LanguageToolChecker::clearForTextEdit(QPlainTextEdit *textEdit) {
+void LanguageToolChecker::clearForTextEdit(QPlainTextEdit *textEdit, bool updateBlocks) {
     if (_textEdit == textEdit) {
-        clearCurrentState();
+        clearCurrentState(updateBlocks);
         _textEdit.clear();
         _document.clear();
     }
 }
 
-void LanguageToolChecker::clearCurrentState() {
+void LanguageToolChecker::clearCurrentState(bool updateBlocks) {
     _debounceTimer->stop();
     _client->cancelAllRequests();
     _pendingRequests.clear();
     _pendingRequestId = 0;
     _cache.clear();
     _warningShown = false;
-    Q_EMIT blockMatchesUpdated(QVector<int>());
+    if (updateBlocks) {
+        Q_EMIT blockMatchesUpdated(QVector<int>());
+    }
 }
 
 void LanguageToolChecker::invalidateBlock(int blockNumber) { _cache.remove(blockNumber); }

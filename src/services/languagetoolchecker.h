@@ -30,8 +30,8 @@ class LanguageToolChecker : public QObject {
     static LanguageToolChecker *instance();
 
     void setTextEdit(QPlainTextEdit *textEdit);
-    void clearForTextEdit(QPlainTextEdit *textEdit);
-    void clearCurrentState();
+    void clearForTextEdit(QPlainTextEdit *textEdit, bool updateBlocks = true);
+    void clearCurrentState(bool updateBlocks = true);
     void invalidateBlock(int blockNumber);
     void scheduleCheck(bool immediate = false);
     void recheckNow();

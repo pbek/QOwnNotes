@@ -8,6 +8,9 @@
   scans while typing when the backlink inputs did not change, and by computing
   backlink-relative note paths without touching every note file on disk
   (for [#3587](https://github.com/pbek/QOwnNotes/issues/3587))
+- Fixed a crash when closing QOwnNotes while **LanguageTool** was active by
+  clearing checker state without triggering editor rehighlighting during text
+  edit destruction (for [#3496](https://github.com/pbek/QOwnNotes/issues/3496))
 
 ## 26.6.3
 

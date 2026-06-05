@@ -3619,10 +3619,10 @@ QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {
     qDebug() << "*** QOwnNotesMarkdownTextEdit DESTROYED ***" << this << objectName();
     closeMarkdownLspDocument();
 #ifdef LANGUAGETOOL_ENABLED
-    LanguageToolChecker::instance()->clearForTextEdit(this);
+    LanguageToolChecker::instance()->clearForTextEdit(this, false);
 #endif
 #ifdef HARPER_ENABLED
-    HarperChecker::instance()->clearForTextEdit(this);
+    HarperChecker::instance()->clearForTextEdit(this, false);
 #endif
     // Unregister if this was the active editor
     unregisterAsActiveEditor();
