@@ -1,12 +1,12 @@
 # LSP Markdown
 
-QOwnNotes supporte l’intégration avec un serveur implémentant un **Protocole de Serveur de Langage (LSP) Markdown** afin d’avoir des fonctionnalités d’édition supplémentaires telles que les diagnostics (« linting »), les complétions, les actions de code et le formattage de document directement dans l’éditeur de notes.
+QOwnNotes supporte l’intégration avec un serveur implémentant un **Protocole de Serveur de Langage (LSP) Markdown** afin d’avoir des fonctionnalités d’édition supplémentaires telles que les diagnostics (« linting »), les complétions, les actions de code et le formatage de document directement dans l’éditeur de notes.
 
 ## Fonctionnalités
 
 - Soulignage coloré pour les problèmes et non-respects des règles Markdown détectés
 - Menu contextuel **actions sur le code** pour les diagnostics (par exemple des corrections rapides suggérées par le serveur)
-- Actions **Ignorer la règle** dans le menu contextuel pour supprimer certaines règles de diagnostic de façon permanente
+- Action **Ignorer la règle** dans le menu contextuel pour supprimer certaines règles de diagnostic de façon permanente
 - Pop-up **complétions** pour les liens de notes et d’autres suggestions fournies par le serveur (par exemple des complétions de lien-wiki avec [Marksman](https://github.com/artempyanykh/marksman))
 - Actions **Formater le document** et **Formater la sélection** via le menu contextuel
 - Synchronisation incrémentale du document pour une communication efficace avec le serveur

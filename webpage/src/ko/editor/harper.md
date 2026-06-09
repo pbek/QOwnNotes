@@ -1,73 +1,71 @@
 # Harper
 
-QOwnNotes can use [Harper](https://writewithharper.com/) for optional
-**offline grammar and style checking** in the note editor.
+QOwnNotes는 노트 편집기에서 **offline 문법 및 스타일 확인** 옵션으로 [Harper](https://writewithharper.com/) 을 사용할 수 있습니다.
 
-It complements the existing [spellchecking](spellchecking.md) support instead of replacing it.
+기존 [spellchecking](spellchecking.md) 지원을 대체하는 대신 보완합니다.
 
 ![harper-demo](/img/editor/harper.webp)
 
-## Features
+## 기능
 
-- Colored underlines for detected grammar, style, punctuation, and wording issues
-- Context-menu suggestions for replacements
-- `Ignore this rule` and `Ignore word` actions in the context menu
-- A quick toggle in the **Edit** menu with `Check grammar with Harper`
-- Local checking with the `harper-ls` language server over `Stdio` or `TCP`
+- 감지된 문법, 스타일, 구두점 및 문구 문제에 대한 색상별 밑줄
+- 교체를 위한 컨텍스트 메뉴 제안
+- 컨텍스트 메뉴에서 `이 규칙 무시` 및 `단어 무시` 작업
+- **편집** 메뉴에서 'Harper와 문법 확인하기'로 빠르게 전환하기
+- `Stdio` 또는 `TCP`를 통해 `harper-ls` 언어 서버와 로컬 확인
 
-## Setup
+## 설정
 
-Open `Settings` and select `Editor -> Harper`.
+`설정`을 열고 `편집기 -> Harper`를 선택합니다.
 
-- Turn on `Enable offline grammar and style checking with Harper`
-- Choose the `Transport`
-  - `Stdio (recommended)` starts a local `harper-ls` process directly
-  - `TCP` connects to an already running `harper-ls` server
-- For `Stdio`, set the `Command / binary path`
-  - The default command is `harper-ls`
-  - `Auto-detect` searches for it in your `PATH`
-- For `TCP`, set the `Server address` and `Port`
-  - The defaults are `127.0.0.1` and `4000`
-- Choose the `Dialect`
-  - `American`
-  - `British`
-  - `Australian`
-  - `Canadian`
-  - `Indian`
-- Adjust the `Check delay` to control how long QOwnNotes waits after typing before sending a request
-- Select which linters should be enabled
-  - `Spell Check`
-  - `Sentence Capitalization`
-  - `Repeated Words`
-  - `Long Sentences`
-  - `An vs A`
-  - `Unclosed Quotes`
-  - `Correct Number Suffix`
-  - `Spaces`
+- `Harper와 함께 오프라인 문법 및 스타일 검사 사용함`을 켭니다
+- `전송` 선택
+  - `Stdio (추천)`는 로컬 `harper-ls` 프로세스를 직접 시작합니다
+  - `TCP`는 이미 실행 중인 `harper-ls` 서버에 연결됩니다
+- `Stdio`의 경우 `명령 / 이진 경로`를 설정합니다
+  - 기본 명령어는 `harper-ls`입니다
+  - `PATH`에서 `자동 감지` 검색
+- `TCP`의 경우 `서버 주소`와 `포트`를 설정합니다
+  - 기본값은 `127.0.0.1`과 `4000`입니다
+- `대화문` 선택
+  - `미국`
+  - `영국`
+  - `호주`
+  - `캐나다`
+  - `인도`
+- 요청을 보내기 전에 QOwnNotes가 입력한 후 대기하는 시간을 제어하기 위해 `확인 지연`을 조정합니다
+- 활성화해야 할 린터 선택
+  - `맞춤법 검사`
+  - `문장 대문자`
+  - `반복되는 단어`
+  - `긴 문장`
+  - `An과 A의 차이점`
+  - `닫히지 않은 따옴표`
+  - `올바른 숫자 접미사`
+  - `공백`
   - `인용 간격`
   - `프랑스어 공백 없음`
-  - 잘못된 아포스트로피
-  - `Spelled Numbers`
+  - `잘못된 아포스트로피`
+  - `숫자 표기법`
 
-Use `Test Connection` to verify that QOwnNotes can either start `harper-ls` in `Stdio` mode or
-reach the configured server in `TCP` mode.
+'테스트 연결'을 사용하여 QOwnNotes가 `Stdio` 모드에서 `harper-ls`를 시작하거나 `TCP` 모드에서 구성된 서버에 도달할 수 있는지 확인합니다.
 
-## How It Works
+## 작동 방식
 
-- QOwnNotes checks visible editor blocks instead of the whole document at once
-- Empty lines, headings, and code blocks are skipped
-- Requests are debounced so Harper is not queried on every keystroke
-- Results are shown inline in the Markdown editor
-- Harper and LanguageTool can be enabled at the same time
+- QOwnNotes는 전체 문서 대신 보이는 편집기 블록을 한 번에 확인합니다
+- 빈 줄, 제목 및 코드 블록을 건너뛰었습니다
+- 요청이 삭제되므로 Harper가 모든 키 입력에서 쿼리되지 않습니다
+- 결과는 마크다운 편집기에 들여쓰기로 표시됩니다
+- Harper와 언어 도구을 동시에 활성화할 수 있습니다
 
-## Notes
+## 참고
 
-- Harper support is optional and depends on the feature being enabled in your build
-- `Stdio` mode is the simplest setup for local offline checking
-- If Harper cannot be reached, QOwnNotes shows a warning and stops checking until it is available again
+- Harper 지원은 선택 사항이며 빌드에서 활성화되는 기능에 따라 달라집니다
+- `Stdio` 모드는 로컬 오프라인 검사를 위한 가장 간단한 설정입니다
+- Harper에게 연락할 수 없는 경우, QOwnNotes는 경고를 표시하고 다시 사용할 수 있을 때까지 확인을 중지합니다
 
-## Related
+## 관련
 
-- [Spellchecking](spellchecking.md)
-- [LanguageTool](languagetool.md)
-- [Concept](../getting-started/concept.md)
+- [맞춤법](spellchecking.md)
+- [언어 도구](languagetool.md)
+- [개념](../getting-started/concept.md)

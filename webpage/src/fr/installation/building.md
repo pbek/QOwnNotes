@@ -21,10 +21,10 @@ Si vous savez ce que vous faites, vous pouvez aussi compiler QOwnNotes directeme
 ```bash
 cd src
 
-# compile les fichiers de traductions si vous souhaitez d’autres langues que l’anglais
+# compiler les fichiers de traductions si vous souhaitez d’autres langues que l’anglais
 lrelease QOwnNotes.pro
 
-# prépare le processus de compilation puis compile l’application
+# préparer le processus de compilation puis compiler l’application
 qmake
 make
 ```
@@ -50,7 +50,7 @@ Les archives source seront accessibles via des liens tels que :
 Si vous avez le [gestionnaire de paquets Nix](https://nixos.org/download/) et [Devenv](https://devenv.sh/getting-started/) installés, vous pouvez simplement cloner le dépôt git comme expliqué plus haut puis compiler avec :
 
 ```bash
-# Ouvre un shell avec tous les outils nécessaires
+# Ouvrir un shell avec tous les outils nécessaires
 devenv shell
 
 # Compiler l’application

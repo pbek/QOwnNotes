@@ -2,17 +2,19 @@
 
 Ezeket a paramétereket használhatja a parancssori felületen (CLI) az alkalmazás viselkedésének szabályozására:
 
-| Paraméter                    | Leírás                                                                                                                                   |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `--help`                     | Megjeleníti a súgó képernyőt                                                                                                             |
-| `--version`                  | Kinyomtatja az alkalmazás verziószámát                                                                                                   |
-| `--portable`                 | Hordozható üzemmódban fut az alkalmazás                                                                                                  |
-| `--clear-settings`           | Törli a beállításokat és futtatja az alkalmazást                                                                                         |
-| `--dump-settings`            | Kiírja a GitHub Markdown beállításainak és az alkalmazással és a környezettel kapcsolatos egyéb információkat, és kilép az alkalmazásból |
-| `--session <name>`     | Az alkalmazást a beállításoknál és a belső fájloknál egy különböző környezetben futtat                                                   |
-| `--allow-multiple-instances` | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
-| `--action <name>`      | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                                 |
+| Paraméter                                  | Leírás                                                                                                                                   |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `--help`                                   | Megjeleníti a súgó képernyőt                                                                                                             |
+| `--version`                                | Kinyomtatja az alkalmazás verziószámát                                                                                                   |
+| `--portable`                               | Hordozható üzemmódban fut az alkalmazás                                                                                                  |
+| `--clear-settings`                         | Törli a beállításokat és futtatja az alkalmazást                                                                                         |
+| `--dump-settings`                          | Kiírja a GitHub Markdown beállításainak és az alkalmazással és a környezettel kapcsolatos egyéb információkat, és kilép az alkalmazásból |
+| `--session <name>`                   | Az alkalmazást a beállításoknál és a belső fájloknál egy különböző környezetben futtat                                                   |
+| `--allow-multiple-instances`               | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
+| `--action <name>`                    | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
+| `--completion <shell>`               | Generate shell completion code. Supports `fish`, `bash`.                                                                                 |
+| `--decrypt-note <file>`              | Prints the decrypted text of an encrypted note file to the command line and exits                                                        |
+| `--decrypt-note-password <password>` | Provides the password for `--decrypt-note` instead of prompting for it                                                                   |
 
 ::: tip
 Ha problémái adódnak a QOwnNotes telepítésével, akkor érdemes új beállításokkal indítani az alkalmazást anélkül, hogy elveszítené az aktuális beállításokat a `--session` paraméter használatával.
@@ -48,6 +50,25 @@ QOwnNotes --dump-settings | pbcopy
 QOwnNotes --dump-settings | clip
 ```
 
+:::
+
+## Print decrypted encrypted note text
+
+With the parameter `--decrypt-note <file>` you can print the decrypted text of an encrypted note file to the command line. If no password is provided, QOwnNotes will ask for it on the command line.
+
+```bash
+QOwnNotes --decrypt-note secret.md
+```
+
+You can also provide the password directly with `--decrypt-note-password`:
+
+```bash
+QOwnNotes --decrypt-note secret.md --decrypt-note-password "my password"
+```
+
+::: warning
+Providing passwords as command line parameters can expose them in your shell
+history or process list. Prefer the password prompt if this is a concern.
 :::
 
 ## Indítsa el a menüműveleteket az indítás után

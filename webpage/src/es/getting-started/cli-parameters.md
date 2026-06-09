@@ -13,7 +13,7 @@ Puede utilizar estos parámetros en la interfaz de las comandos de terminal (CLI
 | `--allow-multiple-instances`               | Permite iniciar varias instancias de QOwnNotes, incluso si no está permitido en la configuración                                         |
 | `--action <name>`                    | Activa una acción de menú después de que se inicie la aplicación (vea abajo)                                                             |
 | `--completion <shell>`               | Genera un código de finalización de consola. Soporta `fish` y `bash`.                                                                    |
-| `--decrypt-note <file>`              | Prints the decrypted text of an encrypted note file to the command line and exits                                                        |
+| `--decrypt-note <file>`              | Imprime el texto descifrado de un archivo de notas cifrado en la línea de comandos y sale                                                |
 | `--decrypt-note-password <password>` | Provides the password for `--decrypt-note` instead of prompting for it                                                                   |
 
 ::: tip

@@ -581,10 +581,6 @@ Connection error message: </translation>
 <translation type="unfinished">Icons</translation>
 </message>
 <message>
-<source>You need to restart the application to let this setting take effect</source>
-<translation type="unfinished">You need to restart the application to let this setting take effect</translation>
-</message>
-<message>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
 </message>
@@ -1330,8 +1326,16 @@ Connection error message: </translation>
 <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
 </message>
 <message>
+<source>Ensure an empty last line in the note text</source>
+<translation type="unfinished">Ensure an empty last line in the note text</translation>
+</message>
+<message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
+<source>Show character, word and line count in the status bar</source>
+<translation type="unfinished">Show character, word and line count in the status bar</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -5582,6 +5586,34 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <translation>Click aici pentru a vedea ce s-a schimbat şi să fie în măsură să actualizeze la cea mai recentă versiune</translation>
 </message>
 <message>
+<source>Web</source>
+<translation type="unfinished">Web</translation>
+</message>
+<message>
+<source>Web app is connected</source>
+<translation type="unfinished">Web app is connected</translation>
+</message>
+<message>
+<source>Web app is not connected</source>
+<translation type="unfinished">Web app is not connected</translation>
+</message>
+<message>
+<source>Web app connected</source>
+<translation type="unfinished">Web app connected</translation>
+</message>
+<message>
+<source>Web app disconnected</source>
+<translation type="unfinished">Web app disconnected</translation>
+</message>
+<message>
+<source>Connected systems</source>
+<translation type="unfinished">Connected systems</translation>
+</message>
+<message>
+<source>No connected systems</source>
+<translation type="unfinished">No connected systems</translation>
+</message>
+<message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
 </message>
@@ -6016,6 +6048,15 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <numerusform>%n selected</numerusform>
 <numerusform>%n selected</numerusform>
 </translation>
+</message>
+<message>
+<source>Ch %1, W %2, L %3</source>
+<comment>Characters / Words / Lines</comment>
+<translation type="unfinished">Ch %1, W %2, L %3</translation>
+</message>
+<message>
+<source>Characters %1, Words %2, Lines %3</source>
+<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
 </message>
 </context>
 <context>
@@ -8178,8 +8219,8 @@ Updating the interface takes a short while.</translation>
 <translation type="unfinished">attachment</translation>
 </message>
 <message>
-<source>Light</source>
-<translation type="unfinished">Light</translation>
+<source>System</source>
+<translation type="unfinished">System</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -10591,10 +10632,6 @@ Acest lucru nu poate fi anulat!</translation>
 <translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
 </message>
 <message>
-<source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
-</message>
-<message>
 <source>Image received</source>
 <translation type="unfinished">Image received</translation>
 </message>
@@ -10634,8 +10671,28 @@ Acest lucru nu poate fi anulat!</translation>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
+<source>Test the connection to the server</source>
+<translation type="unfinished">Test the connection to the server</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation type="unfinished">Connection name:</translation>
+</message>
+<message>
+<source>The name used to identify this QOwnNotes instance to other connected devices</source>
+<translation type="unfinished">The name used to identify this QOwnNotes instance to other connected devices</translation>
+</message>
+<message>
+<source>Reset to default connection name</source>
+<translation type="unfinished">Reset to default connection name</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -10648,6 +10705,14 @@ Acest lucru nu poate fi anulat!</translation>
 <message>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
+</message>
+<message>
+<source>Connected devices</source>
+<translation type="unfinished">Connected devices</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation type="unfinished">Refresh</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -10668,6 +10733,18 @@ Acest lucru nu poate fi anulat!</translation>
 <message>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
+</message>
+<message>
+<source>Connection test</source>
+<translation type="unfinished">Connection test</translation>
+</message>
+<message>
+<source>Successfully connected to the web application server.</source>
+<translation type="unfinished">Successfully connected to the web application server.</translation>
+</message>
+<message>
+<source>Not connected to the web application server. Please check the server URL and your network connection.</source>
+<translation type="unfinished">Not connected to the web application server. Please check the server URL and your network connection.</translation>
 </message>
 </context>
 <context>

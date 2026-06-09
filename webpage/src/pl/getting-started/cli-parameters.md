@@ -2,17 +2,19 @@
 
 Możesz użyć tych parametrów w interfejsie wiersza poleceń (CLI), aby kontrolować zachowanie aplikacji:
 
-| Parametr                     | Opis                                                                                                                          |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `--help`                     | Wyświetla ekran pomocy                                                                                                        |
-| `--version`                  | Wyświetla numer wersji aplikacji                                                                                              |
-| `--portable`                 | Uruchamia aplikację w trybie przenośnym                                                                                       |
-| `--clear-settings`           | Czyści ustawienia i uruchamia aplikację                                                                                       |
-| `--dump-settings`            | Wyświetla zrzut ustawień i innych informacji o programie i środowisku w formacie GitHub Markdown, a następnie zamyka program. |
-| `--session <name>`     | Uruchamia aplikację w innym kontekście – dotyczy ustawień i plików wewnętrznych.                                              |
-| `--allow-multiple-instances` | Pozwala na uruchomienie kilku instancji QOwnNotes, nawet jeśli jest to niedozwolone w ustawieniach.                           |
-| `--action <name>`      | Uruchamia akcję menu po uruchomieniu aplikacji (patrz poniżej)                                                                |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                                      |
+| Parametr                                   | Opis                                                                                                                          |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `--help`                                   | Wyświetla ekran pomocy                                                                                                        |
+| `--version`                                | Wyświetla numer wersji aplikacji                                                                                              |
+| `--portable`                               | Uruchamia aplikację w trybie przenośnym                                                                                       |
+| `--clear-settings`                         | Czyści ustawienia i uruchamia aplikację                                                                                       |
+| `--dump-settings`                          | Wyświetla zrzut ustawień i innych informacji o programie i środowisku w formacie GitHub Markdown, a następnie zamyka program. |
+| `--session <name>`                   | Uruchamia aplikację w innym kontekście – dotyczy ustawień i plików wewnętrznych.                                              |
+| `--allow-multiple-instances`               | Pozwala na uruchomienie kilku instancji QOwnNotes, nawet jeśli jest to niedozwolone w ustawieniach.                           |
+| `--action <name>`                    | Uruchamia akcję menu po uruchomieniu aplikacji (patrz poniżej)                                                                |
+| `--completion <shell>`               | Generate shell completion code. Supports `fish`, `bash`.                                                                      |
+| `--decrypt-note <file>`              | Prints the decrypted text of an encrypted note file to the command line and exits                                             |
+| `--decrypt-note-password <password>` | Provides the password for `--decrypt-note` instead of prompting for it                                                        |
 
 ::: tip
 Jeśli napotkasz problemy z instalacją QOwnNotes, możesz uruchomić aplikację ze świeżymi ustawieniami bez utraty bieżących ustawień, używając parametru `--session`.
@@ -48,6 +50,25 @@ QOwnNotes --dump-settings | pbcopy
 QOwnNotes --dump-settings | clip
 ```
 
+:::
+
+## Print decrypted encrypted note text
+
+With the parameter `--decrypt-note <file>` you can print the decrypted text of an encrypted note file to the command line. If no password is provided, QOwnNotes will ask for it on the command line.
+
+```bash
+QOwnNotes --decrypt-note secret.md
+```
+
+You can also provide the password directly with `--decrypt-note-password`:
+
+```bash
+QOwnNotes --decrypt-note secret.md --decrypt-note-password "my password"
+```
+
+::: warning
+Providing passwords as command line parameters can expose them in your shell
+history or process list. Prefer the password prompt if this is a concern.
 :::
 
 ## Wyzwalaj akcje menu po uruchomieniu

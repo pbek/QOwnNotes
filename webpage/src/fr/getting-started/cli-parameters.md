@@ -2,17 +2,19 @@
 
 Les paramètres suivants peuvent être utilisés dans l'interface en ligne de commande (CLI) pour contrôler le comportement de l'application :
 
-| Paramètre                    | Description                                                                                                                                                    |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--help`                     | Affiche l'écran d'aide                                                                                                                                         |
-| `--version`                  | Affiche le numéro de version de l'application                                                                                                                  |
-| `--portable`                 | Exécute l'application en mode portable                                                                                                                         |
-| `--clear-settings`           | Efface les préférences et exécute l'application                                                                                                                |
-| `--dump-settings`            | Affiche l'ensemble des préférences ainsi que d'autres informations à propos de l'application et de l'environnement en Markdown GitHub puis ferme l'application |
-| `--session <name>`     | Exécute l’application dans un contexte différent pour les préférences et fichiers internes                                                                     |
-| `--allow-multiple-instances` | Autorise le démarrage de plusieurs instances de QOwnNotes même si l'option est désactivée dans les préférences                                                 |
-| `--action <name>`      | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                                             |
-| `--completion <shell>` | Génère la complétion automatique dans la console. Supporte `fish`, `bash`.                                                                                     |
+| Paramètre                                  | Description                                                                                                                                                    |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--help`                                   | Affiche l'écran d'aide                                                                                                                                         |
+| `--version`                                | Affiche le numéro de version de l'application                                                                                                                  |
+| `--portable`                               | Exécute l'application en mode portable                                                                                                                         |
+| `--clear-settings`                         | Efface les préférences et exécute l'application                                                                                                                |
+| `--dump-settings`                          | Affiche l'ensemble des préférences ainsi que d'autres informations à propos de l'application et de l'environnement en Markdown GitHub puis ferme l'application |
+| `--session <name>`                   | Exécute l’application dans un contexte différent pour les préférences et fichiers internes                                                                     |
+| `--allow-multiple-instances`               | Autorise le démarrage de plusieurs instances de QOwnNotes même si l'option est désactivée dans les préférences                                                 |
+| `--action <name>`                    | Déclenche une action de menu après le démarrage de l'application (voir ci-dessous)                                                                             |
+| `--completion <shell>`               | Génère la complétion automatique dans la console. Supporte `fish`, `bash`.                                                                                     |
+| `--decrypt-note <file>`              | Affiche le texte déchiffré d’un fichier de note chiffré dans la ligne de commande puis quitte l’application                                                    |
+| `--decrypt-note-password <password>` | Permet de donner le mot de passe pour `--decrypt-note` au lieu qu’il soit demandé                                                                              |
 
 ::: tip
 Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous pouvez démarrer l'application avec de nouvelles préférences sans perdre vos préférences actuelles en utilisant le paramètre `--session`.
@@ -48,6 +50,25 @@ QOwnNotes --dump-settings | pbcopy
 QOwnNotes --dump-settings | clip
 ```
 
+:::
+
+## Afficher le texte déchiffré d’une note chiffrée
+
+Avec le paramètre `--decrypt-note<file>`, il est possible d’afficher le texte déchiffré d’un fichier de note chiffré dans la ligne de commande. Si aucun mot de passe n’est fourni, QOwnNotes le demandera dans la ligne de commande.
+
+```bash
+QOwnNotes --decrypt-note secret.md
+```
+
+Il est également possible de donner directement le mot de passe avec `--decrypt-note-password` :
+
+```bash
+QOwnNotes --decrypt-note secret.md --decrypt-note-password "mon mot de passe"
+```
+
+::: warning
+Donner des mots de passe dans des paramètres de ligne de commande peut les exposer dans
+votre historique de shell ou dans votre liste de processus. Veuillez utiliser l’invite de mot de passe si c’est un problème.
 :::
 
 ## Déclencher des actions de menu après le démarrage

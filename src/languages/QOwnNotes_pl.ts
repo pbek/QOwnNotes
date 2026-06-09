@@ -584,10 +584,6 @@ Connection error message: </translation>
 <translation>Ikony</translation>
 </message>
 <message>
-<source>You need to restart the application to let this setting take effect</source>
-<translation>Aby to ustawienie zadziałało, należy ponownie uruchomić aplikację</translation>
-</message>
-<message>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>Używaj wewnętrznego motywu ikon zamiast systemowego</translation>
 </message>
@@ -1336,8 +1332,16 @@ Connection error message: </translation>
 <translation>Automatycznie usuwaj spacje na końcu wierszy w tekście notatki</translation>
 </message>
 <message>
+<source>Ensure an empty last line in the note text</source>
+<translation type="unfinished">Ensure an empty last line in the note text</translation>
+</message>
+<message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation>Pokazuj numery wierszy i znaczniki zakładek (1-9)</translation>
+</message>
+<message>
+<source>Show character, word and line count in the status bar</source>
+<translation type="unfinished">Show character, word and line count in the status bar</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -5611,6 +5615,34 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <translation>Kliknij tutaj, aby zobaczyć, co się zmieniło i aby móc zaktualizować do najnowszej wersji</translation>
 </message>
 <message>
+<source>Web</source>
+<translation type="unfinished">Web</translation>
+</message>
+<message>
+<source>Web app is connected</source>
+<translation type="unfinished">Web app is connected</translation>
+</message>
+<message>
+<source>Web app is not connected</source>
+<translation type="unfinished">Web app is not connected</translation>
+</message>
+<message>
+<source>Web app connected</source>
+<translation type="unfinished">Web app connected</translation>
+</message>
+<message>
+<source>Web app disconnected</source>
+<translation type="unfinished">Web app disconnected</translation>
+</message>
+<message>
+<source>Connected systems</source>
+<translation type="unfinished">Connected systems</translation>
+</message>
+<message>
+<source>No connected systems</source>
+<translation type="unfinished">No connected systems</translation>
+</message>
+<message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
 </message>
@@ -6053,6 +6085,15 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>%n zaznaczonych</numerusform>
 <numerusform>%n zaznaczonych</numerusform>
 </translation>
+</message>
+<message>
+<source>Ch %1, W %2, L %3</source>
+<comment>Characters / Words / Lines</comment>
+<translation type="unfinished">Ch %1, W %2, L %3</translation>
+</message>
+<message>
+<source>Characters %1, Words %2, Lines %3</source>
+<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
 </message>
 </context>
 <context>
@@ -8235,8 +8276,8 @@ Updating the interface takes a short while.</translation>
 <translation>załącznik</translation>
 </message>
 <message>
-<source>Light</source>
-<translation>Jasny</translation>
+<source>System</source>
+<translation type="unfinished">System</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -10657,10 +10698,6 @@ Nie można tego cofnąć!</translation>
 <translation>QOwnNotes jest teraz odłączony od sieci Web do %1</translation>
 </message>
 <message>
-<source>Web app warning</source>
-<translation>Ostrzeżenie aplikacji internetowej</translation>
-</message>
-<message>
 <source>Image received</source>
 <translation>Obraz otrzymany</translation>
 </message>
@@ -10700,8 +10737,28 @@ Nie można tego cofnąć!</translation>
 <translation>Aplikacja internetowa QOwnNotes</translation>
 </message>
 <message>
+<source>Test the connection to the server</source>
+<translation type="unfinished">Test the connection to the server</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation>Zostanie otwarte połączenie WebSocket z tym serwerem, które będzie działać jako most między aplikacją internetową QOwnNotes a aplikacją desktopową QOwnNotes.</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation type="unfinished">Connection name:</translation>
+</message>
+<message>
+<source>The name used to identify this QOwnNotes instance to other connected devices</source>
+<translation type="unfinished">The name used to identify this QOwnNotes instance to other connected devices</translation>
+</message>
+<message>
+<source>Reset to default connection name</source>
+<translation type="unfinished">Reset to default connection name</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -10714,6 +10771,14 @@ Nie można tego cofnąć!</translation>
 <message>
 <source>Generate new security token</source>
 <translation>Generuj nowy token bezpieczeństwa</translation>
+</message>
+<message>
+<source>Connected devices</source>
+<translation type="unfinished">Connected devices</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation type="unfinished">Refresh</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -10734,6 +10799,18 @@ Nie można tego cofnąć!</translation>
 <message>
 <source>Show QR code</source>
 <translation>Pokaż kod QR</translation>
+</message>
+<message>
+<source>Connection test</source>
+<translation type="unfinished">Connection test</translation>
+</message>
+<message>
+<source>Successfully connected to the web application server.</source>
+<translation type="unfinished">Successfully connected to the web application server.</translation>
+</message>
+<message>
+<source>Not connected to the web application server. Please check the server URL and your network connection.</source>
+<translation type="unfinished">Not connected to the web application server. Please check the server URL and your network connection.</translation>
 </message>
 </context>
 <context>

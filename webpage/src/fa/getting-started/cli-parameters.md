@@ -2,17 +2,19 @@
 
 به منظور کنترل رفتار اپلیکیشن، می توانید این متغیرها را در رابط کاربری خط فرمان (CLI) استفاده کنید.
 
-| پارامتر                      | شرح                                                                                                                 |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `--راهنمایی`                 | صفحه راهنمایی را نشان می دهد                                                                                        |
-| `--نسخه`                     | شماره نسخه نرم‌افزار را نمایش می‌دهد                                                                                |
-| `--قابل حمل`                 | برنامه را در حالت قابل حمل اجرا می کند                                                                              |
-| `--پاک کردن-تنظیمات `        | تنظیمات را پاک کرده و برنامه را اجرا می کند                                                                         |
-| `--نسخه برداری-از-تنظیمات`   | روگرفتی از تنظیمات و سایر اطلاعات مربوط به برنامه و محیط را در مارک داون گیت هاب چاپ می کند و از برنامه خارج می شود |
-| `--دوره <name>`        | برنامه را در یک زمینه متفاوت برای تنظیمات و پرونده های داخلی اجرا می کند                                            |
-| `--پذیرفتن-نمونه های-متعدد`  | به شروع نمونه های متعددی از QOwnNotes اجازه می دهد، حتی اگر در تنظیمات مجاز نباشند.                                 |
-| `--عملیات <name>`      | پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه اندازی می کند (قسمت زیر را ملاحظه کنید).                     |
-| `--completion <shell>` | Generate shell completion code. Supports `fish`, `bash`.                                                            |
+| پارامتر                                    | شرح                                                                                                                 |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| `--راهنمایی`                               | صفحه راهنمایی را نشان می دهد                                                                                        |
+| `--نسخه`                                   | شماره نسخه نرم‌افزار را نمایش می‌دهد                                                                                |
+| `--قابل حمل`                               | برنامه را در حالت قابل حمل اجرا می کند                                                                              |
+| `--پاک کردن-تنظیمات `                      | تنظیمات را پاک کرده و برنامه را اجرا می کند                                                                         |
+| `--نسخه برداری-از-تنظیمات`                 | روگرفتی از تنظیمات و سایر اطلاعات مربوط به برنامه و محیط را در مارک داون گیت هاب چاپ می کند و از برنامه خارج می شود |
+| `--دوره <name>`                      | برنامه را در یک زمینه متفاوت برای تنظیمات و پرونده های داخلی اجرا می کند                                            |
+| `--پذیرفتن-نمونه های-متعدد`                | به شروع نمونه های متعددی از QOwnNotes اجازه می دهد، حتی اگر در تنظیمات مجاز نباشند.                                 |
+| `--عملیات <name>`                    | پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه اندازی می کند (قسمت زیر را ملاحظه کنید).                     |
+| `--completion <shell>`               | Generate shell completion code. Supports `fish`, `bash`.                                                            |
+| `--decrypt-note <file>`              | Prints the decrypted text of an encrypted note file to the command line and exits                                   |
+| `--decrypt-note-password <password>` | Provides the password for `--decrypt-note` instead of prompting for it                                              |
 
 ::: tip
 اگر با نصب QOwnNotes به مشکل برخورد کردید، شاید بخواهید با استفاده از پارامتر `--دوره` برنامه را با تنظیمات جدید و بدون از دست دادن تنظیمات فعلی خود آغاز کنید.
@@ -48,6 +50,25 @@ QOwnNotes --dump-settings | pbcopy
 QOwnNotes --dump-settings | clip
 ```
 
+:::
+
+## Print decrypted encrypted note text
+
+With the parameter `--decrypt-note <file>` you can print the decrypted text of an encrypted note file to the command line. If no password is provided, QOwnNotes will ask for it on the command line.
+
+```bash
+QOwnNotes --decrypt-note secret.md
+```
+
+You can also provide the password directly with `--decrypt-note-password`:
+
+```bash
+QOwnNotes --decrypt-note secret.md --decrypt-note-password "my password"
+```
+
+::: warning
+Providing passwords as command line parameters can expose them in your shell
+history or process list. Prefer the password prompt if this is a concern.
 :::
 
 ## پس از شروع به کار، منو اکشن ها را راه اندازی کنید

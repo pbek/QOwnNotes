@@ -28,7 +28,7 @@ lrelease QOwnNotes.pro
 [GitHub의 QOnNotes](https://github.com/pbek/QOwnNotes)를 방문합니다.
 
 ::: tip
-프로젝트에 소스 코드를 기여하고 싶으시면 `메인` 지점에 풀 요청을 해주시기 바랍니다. But please make sure to read the [code contribution guidelines](../contributing/code-contributions.md) first.
+프로젝트에 소스 코드를 기여하고 싶으시면 `메인` 지점에 풀 요청을 해주시기 바랍니다. 하지만 먼저 [코드 기여 지침](../contributing/code-contributions.md)을 반드시 읽어주시기 바랍니다.
 :::
 
 ## 원본 보관소

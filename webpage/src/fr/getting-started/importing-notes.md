@@ -4,7 +4,7 @@
 
 Vous pouvez accéder à une boîte de dialogue d'importation Evernote dans le menu `Note / Importer` pour importer des fichiers _Enex_.
 
-Les images, pièces-jointes, tags, le formattage basique et les métadonnées seront également importés.
+Les images, les pièces-jointes, les tags, le formatage basique et les métadonnées seront également importés.
 
 ## Joplin
 

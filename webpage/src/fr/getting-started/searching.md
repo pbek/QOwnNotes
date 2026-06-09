@@ -11,5 +11,5 @@ Il existe différentes manières de rechercher des notes :
 ![Recherche](/img/searching.png)
 
 ::: tip
-La rcherche commenc après avoir tapé au moins un caractère.
+La recherche commence après avoir tapé au moins un caractère.
 :::

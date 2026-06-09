@@ -324,11 +324,11 @@
 <name>CloudSettingsWidget</name>
 <message>
 <source>cloud support</source>
-<translation>support du cloud</translation>
+<translation>prise en charge du cloud</translation>
 </message>
 <message>
 <source>Enable cloud support</source>
-<translation>Activer le support du cloud</translation>
+<translation>Activer la prise en charge du cloud</translation>
 </message>
 <message>
 <source>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</source>
@@ -584,10 +584,6 @@ Le message d'erreur de connexion est : </translation>
 <translation>Icônes</translation>
 </message>
 <message>
-<source>You need to restart the application to let this setting take effect</source>
-<translation>Vous devez redémarrer l'application pour que ces changements soient appliqués</translation>
-</message>
-<message>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>Utiliser le thème d'icônes interne plutôt que celui du système</translation>
 </message>
@@ -649,6 +645,14 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Log file path:</source>
 <translation>Chemin du fichier journal :</translation>
+</message>
+<message>
+<source>Script hook execution time warning threshold (ms):</source>
+<translation>Limite de temps d’exécution d’un hook de script avant avertissement (ms) :</translation>
+</message>
+<message>
+<source>Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</source>
+<translation>Ajoute un avertissement dans le journal lorsqu’un hook de script prend plus de temps que ce nombre de millisecondes. Lorsque la journalisation de débogage est activée, les temps d’exécution de tous les hooks sont journalisés inconditionnellement.</translation>
 </message>
 <message>
 <source>Log file cleared</source>
@@ -1328,8 +1332,16 @@ Le message d'erreur de connexion est : </translation>
 <translation>Supprimer automatiquement les espaces en fin de ligne dans le texte de la note</translation>
 </message>
 <message>
+<source>Ensure an empty last line in the note text</source>
+<translation type="unfinished">Ensure an empty last line in the note text</translation>
+</message>
+<message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation>Afficher les numéros de ligne et de signets (1-9)</translation>
+</message>
+<message>
+<source>Show character, word and line count in the status bar</source>
+<translation type="unfinished">Show character, word and line count in the status bar</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -1934,7 +1946,7 @@ Le message d'erreur de connexion est : </translation>
 <message numerus="yes">
 <source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
 <translation>
-<numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichier de note. Souhaitez-vous supprimer toutes les occurrences de ces liens demédias et de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichier de note sera mis à jour.</numerusform>
+<numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichier de note. Souhaitez-vous supprimer toutes les occurrences de ces liens de médias et de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichier de note sera mis à jour.</numerusform>
 <numerusform>Le ou les fichiers détectés sont utilisés dans &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes. Souhaitez-vous supprimer toutes les occurrences de ces liens de médias et de pièces jointes ? Ce faisant, &lt;strong&gt;%n&lt;/strong&gt; fichiers de notes seront mis à jour.</numerusform>
 </translation>
 </message>
@@ -2421,20 +2433,32 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Supprimer l’extension de fichier de note sélectionnée</translation>
 </message>
 <message>
-<source>External editor</source>
-<translation>Éditeur externe</translation>
+<source>External tools</source>
+<translation>Outils externes</translation>
+</message>
+<message>
+<source>Path to external editor, leave empty for default</source>
+<translation>Chemin vers l’éditeur externe, laisser vide pour utiliser celui par défaut</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
 <translation>Chemin vers l'éditeur externe :</translation>
 </message>
 <message>
-<source>path to external editor, leave empty for default</source>
-<translation>chemin vers l’éditeur externe, laisser vide pour utiliser celui par défaut</translation>
-</message>
-<message>
 <source>set external editor</source>
 <translation>choisir l'éditeur externe</translation>
+</message>
+<message>
+<source>Path to external diff tool:</source>
+<translation>Chemin vers l’outil de diff externe :</translation>
+</message>
+<message>
+<source>Path to external diff tool, leave empty for default</source>
+<translation>Chemin vers l’outil de diff externe, laisser vide pour utiliser celui par défaut</translation>
+</message>
+<message>
+<source>set external diff tool</source>
+<translation>choisir l'outil de diff externe</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
@@ -2507,6 +2531,10 @@ Vos notes resteront intactes !</translation>
 <message>
 <source>Select editor application</source>
 <translation>Sélectionner l'éditeur de texte</translation>
+</message>
+<message>
+<source>Select diff tool application</source>
+<translation>Sélectionner l’application de diff</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -4928,7 +4956,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Clear list formatting</source>
-<translation>Effacer le formattage de liste</translation>
+<translation>Effacer le formatage de liste</translation>
 </message>
 <message>
 <source>Order checkboxes</source>
@@ -5137,11 +5165,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>File base name</source>
-<translation>Nom de base du fichier</translation>
+<translation>Nom du fichier sans l’extension</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
-<translation>Nom de base du fichier joint :</translation>
+<translation>Nom du fichier joint sans l’extension :</translation>
 </message>
 <message>
 <source>Leave empty for automatic name</source>
@@ -5523,6 +5551,34 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Cliquer ici pour voir ce qui a changé et pour pouvoir mettre à jour vers la dernière version</translation>
 </message>
 <message>
+<source>Web</source>
+<translation type="unfinished">Web</translation>
+</message>
+<message>
+<source>Web app is connected</source>
+<translation type="unfinished">Web app is connected</translation>
+</message>
+<message>
+<source>Web app is not connected</source>
+<translation type="unfinished">Web app is not connected</translation>
+</message>
+<message>
+<source>Web app connected</source>
+<translation type="unfinished">Web app connected</translation>
+</message>
+<message>
+<source>Web app disconnected</source>
+<translation type="unfinished">Web app disconnected</translation>
+</message>
+<message>
+<source>Connected systems</source>
+<translation type="unfinished">Connected systems</translation>
+</message>
+<message>
+<source>No connected systems</source>
+<translation type="unfinished">No connected systems</translation>
+</message>
+<message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation>Vous devez sélectionner le dossier de notes Nextcloud / ownCloud pour que le logiciel fonctionne !</translation>
 </message>
@@ -5610,7 +5666,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Not tested yet.</source>
-<translation>Pas encore essayé.</translation>
+<translation>Pas encore testé.</translation>
 </message>
 <message>
 <source>Test Connection</source>
@@ -5949,6 +6005,15 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <numerusform>%n sélectionné</numerusform>
 <numerusform>%n sélectionnés</numerusform>
 </translation>
+</message>
+<message>
+<source>Ch %1, W %2, L %3</source>
+<comment>Characters / Words / Lines</comment>
+<translation type="unfinished">Ch %1, W %2, L %3</translation>
+</message>
+<message>
+<source>Characters %1, Words %2, Lines %3</source>
+<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
 </message>
 </context>
 <context>
@@ -7098,6 +7163,18 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <context>
 <name>NoteTreeManager</name>
 <message>
+<source>External diff tool</source>
+<translation>Outil de diff externe</translation>
+</message>
+<message>
+<source>Please select at least two notes to diff.</source>
+<translation>Veuillez sélectionner au moins deux notes pour afficher leurs différences.</translation>
+</message>
+<message>
+<source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
+<translation>L’outil de diff externe &lt;strong&gt;%1&lt;/strong&gt; n’a pas pu être démarré.</translation>
+</message>
+<message>
 <source>New note</source>
 <translation>Nouvelle note</translation>
 </message>
@@ -7152,6 +7229,10 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <message>
 <source>Open selected notes in tabs</source>
 <translation>Ouvrir les notes sélectionnées dans des onglets</translation>
+</message>
+<message>
+<source>Diff selected notes</source>
+<translation>Visualiser les différences entre les notes sélectionnées</translation>
 </message>
 <message>
 <source>Open note in external editor</source>
@@ -7654,7 +7735,7 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 </message>
 <message>
 <source>Could not generate new private key</source>
-<translation>Impossible de génerer une nouvelle clé privée</translation>
+<translation>Impossible de générer une nouvelle clé privée</translation>
 </message>
 <message>
 <source>Could not retrieve private key from keystore</source>
@@ -8051,8 +8132,8 @@ La mise à jour de l’interface dure un petit instant.</translation>
 <translation>pièce jointe</translation>
 </message>
 <message>
-<source>Light</source>
-<translation>Clair</translation>
+<source>System</source>
+<translation>Système</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -9262,7 +9343,7 @@ Voulez-vous quand même l'installer ?</translation>
 </message>
 <message>
 <source>Refresh</source>
-<translation>Rafraîchir</translation>
+<translation>Recharger</translation>
 </message>
 <message>
 <source>File size:</source>
@@ -9384,7 +9465,7 @@ Voulez-vous quand même l'installer ?</translation>
 </message>
 <message>
 <source>Refresh</source>
-<translation>Rafraîchir</translation>
+<translation>Recharger</translation>
 </message>
 <message>
 <source>Only show images that are used in the current note</source>
@@ -10451,10 +10532,6 @@ Cela ne peut être annuler !</translation>
 <translation>QOwnNotes est maintenant déconnecté de websocket vers %1</translation>
 </message>
 <message>
-<source>Web app warning</source>
-<translation>Avertissement d'application Web</translation>
-</message>
-<message>
 <source>Image received</source>
 <translation>Image reçue</translation>
 </message>
@@ -10494,8 +10571,28 @@ Cela ne peut être annuler !</translation>
 <translation>Application Web QOwnNotes</translation>
 </message>
 <message>
+<source>Test the connection to the server</source>
+<translation>Tester la connexion au serveur</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation>Tester la connexion</translation>
+</message>
+<message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation>Une connexion Websocket à ce serveur sera ouverte pour servir de pont entre l’application Web QOwnNotes et l’application de bureau QOwnNotes.</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation>Nom de la connexion :</translation>
+</message>
+<message>
+<source>The name used to identify this QOwnNotes instance to other connected devices</source>
+<translation>Le nom utilisé pour identifier cette instance de QOwnNotes auprès des autres appareils connectés</translation>
+</message>
+<message>
+<source>Reset to default connection name</source>
+<translation>Réinitialiser au nom de connexion par défaut</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -10508,6 +10605,14 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Generate new security token</source>
 <translation>Générer un nouveau jeton de sécurité</translation>
+</message>
+<message>
+<source>Connected devices</source>
+<translation>Appareils connectés</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation>Recharger</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -10528,6 +10633,18 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Show QR code</source>
 <translation>Afficher le code QR</translation>
+</message>
+<message>
+<source>Connection test</source>
+<translation>Test de la connexion</translation>
+</message>
+<message>
+<source>Successfully connected to the web application server.</source>
+<translation>Connexion au serveur de l’application web réussie.</translation>
+</message>
+<message>
+<source>Not connected to the web application server. Please check the server URL and your network connection.</source>
+<translation>Non connecté au serveur de l’application web. Veuillez vérifier l’URL du serveur et votre connexion au réseau.</translation>
 </message>
 </context>
 <context>
@@ -10868,6 +10985,14 @@ Cela ne peut être annuler !</translation>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
 <translation>Génère le code pour l’autocomplétion dans le shell. Supporte `fish`, `bash`.</translation>
+</message>
+<message>
+<source>Prints the decrypted text of an encrypted note file.</source>
+<translation>Affiche le texte déchiffré d’un fichier de note chiffré.</translation>
+</message>
+<message>
+<source>Password for --decrypt-note.</source>
+<translation>Mot de passe de --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

@@ -1887,7 +1887,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 ```
 
 ::: tip
-Vous pouvez combiner un `state` prédéfini avec des propriétés de formatage personnalisées. Les propriétés personnalisées écraseront les valeurs par défaut de l’état. Utilisez l’état `-1` (`NoState`) si vous ne voulez utiliser que du formattage personnalisé.
+Vous pouvez combiner un `state` prédéfini avec des propriétés de formatage personnalisées. Les propriétés personnalisées écraseront les valeurs par défaut de l’état. Utilisez l’état `-1` (`NoState`) si vous ne voulez utiliser que du formatage personnalisé.
 :::
 
 ### Exemple

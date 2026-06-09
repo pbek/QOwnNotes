@@ -440,7 +440,7 @@
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Activar soporte de Nextcloud Deck</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -488,7 +488,7 @@
 </message>
 <message>
 <source>notes path found on server</source>
-<translation type="unfinished">notes path found on server</translation>
+<translation>encontrar rutas de notas en el servidor</translation>
 </message>
 <message>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
@@ -496,7 +496,7 @@
 </message>
 <message>
 <source>Remove cloud connection</source>
-<translation type="unfinished">Remove cloud connection</translation>
+<translation>Eliminar conexión en la nube</translation>
 </message>
 <message>
 <source>Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</source>
@@ -582,10 +582,6 @@ Connection error message: </translation>
 <message>
 <source>Icons</source>
 <translation>Iconos</translation>
-</message>
-<message>
-<source>You need to restart the application to let this setting take effect</source>
-<translation>Debe reiniciar la aplicación para aplicar este cambio</translation>
 </message>
 <message>
 <source>Use internal icon theme instead of system icon theme</source>
@@ -1336,8 +1332,16 @@ Connection error message: </translation>
 <translation>Eliminar automáticamente los espacios al final del texto de la nota</translation>
 </message>
 <message>
+<source>Ensure an empty last line in the note text</source>
+<translation type="unfinished">Ensure an empty last line in the note text</translation>
+</message>
+<message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation>Mostrar números de línea y marcadores de favoritos (1-9)</translation>
+</message>
+<message>
+<source>Show character, word and line count in the status bar</source>
+<translation type="unfinished">Show character, word and line count in the status bar</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -2430,7 +2434,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>External tools</source>
-<translation type="unfinished">External tools</translation>
+<translation>Herramientas externas</translation>
 </message>
 <message>
 <source>Path to external editor, leave empty for default</source>
@@ -2836,19 +2840,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>British</source>
-<translation type="unfinished">British</translation>
+<translation>Británico</translation>
 </message>
 <message>
 <source>Australian</source>
-<translation type="unfinished">Australian</translation>
+<translation>Australiano</translation>
 </message>
 <message>
 <source>Canadian</source>
-<translation type="unfinished">Canadian</translation>
+<translation>Canadiense</translation>
 </message>
 <message>
 <source>Indian</source>
-<translation type="unfinished">Indian</translation>
+<translation>Indio</translation>
 </message>
 <message>
 <source>Harper support is not available in this build.</source>
@@ -5547,6 +5551,34 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Haga clic aquí para ver lo que ha cambiado y para poder actualizar a la última versión</translation>
 </message>
 <message>
+<source>Web</source>
+<translation type="unfinished">Web</translation>
+</message>
+<message>
+<source>Web app is connected</source>
+<translation type="unfinished">Web app is connected</translation>
+</message>
+<message>
+<source>Web app is not connected</source>
+<translation type="unfinished">Web app is not connected</translation>
+</message>
+<message>
+<source>Web app connected</source>
+<translation type="unfinished">Web app connected</translation>
+</message>
+<message>
+<source>Web app disconnected</source>
+<translation type="unfinished">Web app disconnected</translation>
+</message>
+<message>
+<source>Connected systems</source>
+<translation type="unfinished">Connected systems</translation>
+</message>
+<message>
+<source>No connected systems</source>
+<translation type="unfinished">No connected systems</translation>
+</message>
+<message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
 </message>
@@ -5622,11 +5654,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Ignored:</source>
-<translation type="unfinished">Ignored:</translation>
+<translation>Ignoradas:</translation>
 </message>
 <message>
 <source>Reset ignored rules</source>
-<translation type="unfinished">Reset ignored rules</translation>
+<translation>Restablecer reglas ignoradas</translation>
 </message>
 <message>
 <source>Status:</source>
@@ -5654,7 +5686,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source> | Currently disabled</source>
-<translation type="unfinished"> | Currently disabled</translation>
+<translation> | Actualmente deshabilitado</translation>
 </message>
 <message>
 <source>Configured %1 at %2</source>
@@ -5973,6 +6005,15 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <numerusform>%n seleccionado</numerusform>
 <numerusform>%n seleccionados</numerusform>
 </translation>
+</message>
+<message>
+<source>Ch %1, W %2, L %3</source>
+<comment>Characters / Words / Lines</comment>
+<translation type="unfinished">Ch %1, W %2, L %3</translation>
+</message>
+<message>
+<source>Characters %1, Words %2, Lines %3</source>
+<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
 </message>
 </context>
 <context>
@@ -7575,7 +7616,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Password entry not found</source>
-<translation type="unfinished">Password entry not found</translation>
+<translation>No se encontró la contraseña</translation>
 </message>
 <message>
 <source>Could not decrypt data</source>
@@ -7710,7 +7751,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>D-Bus is not running</source>
-<translation type="unfinished">D-Bus is not running</translation>
+<translation>D-Bus no se está ejecutando</translation>
 </message>
 <message>
 <source>Unknown error</source>
@@ -7718,7 +7759,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Could not open wallet: %1; %2</source>
-<translation type="unfinished">Could not open wallet: %1; %2</translation>
+<translation>No se pudo abrir la cartera: %1; %2</translation>
 </message>
 <message>
 <source>Encryption failed: %1</source>
@@ -7726,15 +7767,15 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Credential size exceeds maximum size of %1: %2</source>
-<translation type="unfinished">Credential size exceeds maximum size of %1: %2</translation>
+<translation>El tamaño de las credenciales excede el tamaño máximo de %1: %2</translation>
 </message>
 <message>
 <source>Credential key exceeds maximum size of %1</source>
-<translation type="unfinished">Credential key exceeds maximum size of %1</translation>
+<translation>La clave de credenciales excede el tamaño máximo de %1</translation>
 </message>
 <message>
 <source>Writing credentials failed: %1</source>
-<translation type="unfinished">Writing credentials failed: %1</translation>
+<translation>Error al escribir las credenciales: %1</translation>
 </message>
 </context>
 <context>
@@ -7908,25 +7949,25 @@ Haga clic en "Cancelar" para descartar tus cambios y conservar la versión exter
 <source>Your system switched to dark mode. Do you also want to turn on dark mode in QOwnNotes?
 
 Updating the interface takes a short while.</source>
-<translation type="unfinished">Your system switched to dark mode. Do you also want to turn on dark mode in QOwnNotes?
+<translation>Su sistema cambió al modo oscuro. ¿También desea activar el modo oscuro en QOwnNotes?
 
-Updating the interface takes a short while.</translation>
+La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>Your system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Su sistema parece ejecutarse en modo oscuro. ¿También desea activar el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Your system switched to light mode. Do you also want to turn off dark mode in QOwnNotes?
 
 Updating the interface takes a short while.</source>
-<translation type="unfinished">Your system switched to light mode. Do you also want to turn off dark mode in QOwnNotes?
+<translation>Su sistema cambió al modo claro. ¿También desea desactivar el modo oscuro en QOwnNotes?
 
-Updating the interface takes a short while.</translation>
+La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>Your system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Su sistema parece ejecutarse en modo claro. ¿También desea desactivar el modo oscuro en QOwnNotes?</translation>
 </message>
 <message>
 <source>Double-click to unpin note from tab</source>
@@ -8091,8 +8132,8 @@ Updating the interface takes a short while.</translation>
 <translation>archivo adjunto</translation>
 </message>
 <message>
-<source>Light</source>
-<translation>Claro</translation>
+<source>System</source>
+<translation>Sistema</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -8108,7 +8149,7 @@ Updating the interface takes a short while.</translation>
 </message>
 <message>
 <source>Failed to connect to Harper at %1:%2</source>
-<translation type="unfinished">Failed to connect to Harper at %1:%2</translation>
+<translation>Error al conectarse con Harper en: %1:%2</translation>
 </message>
 <message>
 <source>Access to keychain denied</source>
@@ -8877,11 +8918,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Trash</source>
-<translation type="unfinished">Trash</translation>
+<translation>Papelera</translation>
 </message>
 <message>
 <source>Loading shortcuts: %v / %m</source>
-<translation type="unfinished">Loading shortcuts: %v / %m</translation>
+<translation>Cargando atajos: %v / %m</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>
@@ -9092,11 +9133,11 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Share note on Nextcloud / ownCloud</source>
-<translation type="unfinished">Share note on Nextcloud / ownCloud</translation>
+<translation>Compartir nota en Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation type="unfinished">Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
+<translation>Comparte públicamente el archivo de notas actual en su servidor de Nextcloud/ownCloud. Puede enviar el enlace generado a otros para que puedan ver o descargar el archivo.</translation>
 </message>
 <message>
 <source>Allow note editing</source>
@@ -9108,7 +9149,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</translation>
+<translation>¡Tenga en cuenta que aún debe sincronizar sus notas con su servidor mediante la herramienta de sincronización de escritorio de Nextcloud/ownCloud para poder compartir notas con otros!</translation>
 </message>
 </context>
 <context>
@@ -10455,7 +10496,7 @@ This cannot be undone!</source>
 <name>VersionDialog</name>
 <message>
 <source>Note versions on your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Note versions on your Nextcloud / ownCloud server</translation>
+<translation>Versiones de notas en su servidor de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Diff</source>
@@ -10483,10 +10524,6 @@ This cannot be undone!</source>
 <message>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
 <translation>QOwnNotes ahora está desconectado del zócalo web a %1</translation>
-</message>
-<message>
-<source>Web app warning</source>
-<translation>Advertencia de la aplicación web</translation>
 </message>
 <message>
 <source>Image received</source>
@@ -10528,8 +10565,28 @@ This cannot be undone!</source>
 <translation>Aplicación web de QOwnNotes</translation>
 </message>
 <message>
+<source>Test the connection to the server</source>
+<translation>Probar la conexión al servidor</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation>Probar conexión</translation>
+</message>
+<message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation>Se abrirá una conexión de socket web a este servidor para actuar como puente entre la aplicación web de QOwnNotes y la aplicación de escritorio de QOwnNotes.</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation>Nombre de la conexión:</translation>
+</message>
+<message>
+<source>The name used to identify this QOwnNotes instance to other connected devices</source>
+<translation>El nombre utilizado para identificar esta instancia de QOwnNotes a otros dispositivos conectados</translation>
+</message>
+<message>
+<source>Reset to default connection name</source>
+<translation>Restablecer al nombre de conexión predeterminado</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -10542,6 +10599,14 @@ This cannot be undone!</source>
 <message>
 <source>Generate new security token</source>
 <translation>Generar nuevo token de seguridad</translation>
+</message>
+<message>
+<source>Connected devices</source>
+<translation>Dispositivos conectados</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation>Actualizar</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -10562,6 +10627,18 @@ This cannot be undone!</source>
 <message>
 <source>Show QR code</source>
 <translation>Mostrar código QR</translation>
+</message>
+<message>
+<source>Connection test</source>
+<translation>Prueba de conexión</translation>
+</message>
+<message>
+<source>Successfully connected to the web application server.</source>
+<translation>Conexión exitosa con el servidor de aplicaciones web.</translation>
+</message>
+<message>
+<source>Not connected to the web application server. Please check the server URL and your network connection.</source>
+<translation>No hay conexión con el servidor de la aplicación web. Por favor, compruebe la URL del servidor y su conexión de red.</translation>
 </message>
 </context>
 <context>
@@ -10778,7 +10855,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</translation>
+<translation>Bloc de notas en archivos de texto plano con formato de Markdown e integración con Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>&amp;Back</source>
@@ -10814,15 +10891,15 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+<translation>Si desea poder acceder a las versiones de sus notas y a notas eliminadas en su servidor de ownCloud, ahora puede configurar Nextcloud/QOwnNotes para ello. También puede hacerlo más tarde.</translation>
 </message>
 <message>
 <source>Open cloud settings</source>
-<translation type="unfinished">Open cloud settings</translation>
+<translation>Abrir ajustes de la nube</translation>
 </message>
 <message>
 <source>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</source>
-<translation type="unfinished">In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</translation>
+<translation>En todo caso, necesita el cliente de sincronización de Nextcloud/ownCloud (u otro cliente de sincronización) para sincronizar sus notas con el servidor de Nextcloud/ownCloud.</translation>
 </message>
 <message>
 <source>Open network settings</source>
@@ -10905,11 +10982,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Prints the decrypted text of an encrypted note file.</source>
-<translation type="unfinished">Prints the decrypted text of an encrypted note file.</translation>
+<translation>Imprime el texto descifrado de un archivo de notas cifrado.</translation>
 </message>
 <message>
 <source>Password for --decrypt-note.</source>
-<translation type="unfinished">Password for --decrypt-note.</translation>
+<translation>Contraseña para --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

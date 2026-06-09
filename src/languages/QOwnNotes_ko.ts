@@ -19,98 +19,98 @@
 <name>AiSettingsWidget</name>
 <message>
 <source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
-<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+<translation>AI 백엔드를 활용하려면 스크립팅 명령 &lt;a href="%1"&gt;aiComplete&lt;/a&gt;를 사용하거나 스크립트 저장소에서 이미 작성된 스크립트를 찾아볼 수 있습니다.</translation>
 </message>
 <message>
 <source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
-<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+<translation>스크립트 훅 &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt;를 사용하여 더 많은 OpenAI API 호환 백엔드를 추가할 수 있습니다.</translation>
 </message>
 <message>
 <source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
-<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+<translation>또는 이미 생성된 AI 통합 스크립트를 스크립트 저장소에서 찾아볼 수도 있습니다.</translation>
 </message>
 <message>
 <source>Search script repository for AI integration scripts</source>
-<translation type="unfinished">Search script repository for AI integration scripts</translation>
+<translation>AI 통합 스크립트를 위한 검색 스크립트 저장소</translation>
 </message>
 <message>
 <source>Search script repository</source>
-<translation type="unfinished">Search script repository</translation>
+<translation>검색 스크립트 저장소</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>스크립팅 엔진을 통해 추가된 AI 백엔드</translation>
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>API 키</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI API 키:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Groq API 키 생성</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>OpenAI API 키 생성</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>API 키</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Groq API 키:</translation>
 </message>
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>연결 테스트</translation>
 </message>
 <message>
 <source>API settings</source>
-<translation type="unfinished">API settings</translation>
+<translation>API 설정</translation>
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>응용 프로그램이 서버의 응답을 기다렸다가 시간을 초과하고 오류 메시지를 반환하는 시간입니다.</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>응답 시간 초과:</translation>
 </message>
 <message>
 <source>sec</source>
 <comment>seconds</comment>
-<translation type="unfinished">sec</translation>
+<translation>초</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
-<translation type="unfinished">API test result for %1 (%2)</translation>
+<translation>%1 (%2)에 대한 API 테스트 결과</translation>
 </message>
 <message>
 <source>AI backend: %1</source>
-<translation type="unfinished">AI backend: %1</translation>
+<translation>AI 백엔드: %1</translation>
 </message>
 <message>
 <source>API base URL</source>
-<translation type="unfinished">API base URL</translation>
+<translation>API 기반 URL</translation>
 </message>
 <message>
 <source>AI model: %1</source>
-<translation type="unfinished">AI model: %1</translation>
+<translation>AI 모델: %1</translation>
 </message>
 <message>
 <source>Test</source>
 <comment>verb</comment>
-<translation type="unfinished">Test</translation>
+<translation>테스트</translation>
 </message>
 <message>
 <source>Test connection to %1 (%2)</source>
-<translation type="unfinished">Test connection to %1 (%2)</translation>
+<translation>%1 (%2)에 대한 연결 테스트</translation>
 </message>
 </context>
 <context>
@@ -213,19 +213,19 @@
 <name>CloudService</name>
 <message>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>잘못됨</translation>
 </message>
 <message>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>연결되어 있지 않음</translation>
 </message>
 <message>
 <source>Username / password error</source>
-<translation type="unfinished">Username / password error</translation>
+<translation>사용자 이름 / 비밀번호 오류</translation>
 </message>
 <message>
 <source>Your calendar username or password is incorrect!</source>
-<translation type="unfinished">Your calendar username or password is incorrect!</translation>
+<translation>캘린더 사용자 이름이나 비밀번호가 잘못되었습니다!</translation>
 </message>
 <message>
 <source>ok</source>
@@ -233,15 +233,15 @@
 </message>
 <message>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>정확하지 않음</translation>
 </message>
 <message>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>감지되지 않음</translation>
 </message>
 <message>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>찾을 수 없음</translation>
 </message>
 <message>
 <source>unknown</source>
@@ -249,15 +249,15 @@
 </message>
 <message>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>버전 %1이(가) 너무 낮음</translation>
 </message>
 <message>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>활성화되지 않음</translation>
 </message>
 <message>
 <source>API app version too low</source>
-<translation type="unfinished">API app version too low</translation>
+<translation>API 앱 버전이 너무 낮습니다</translation>
 </message>
 <message>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
@@ -324,11 +324,11 @@
 <name>CloudSettingsWidget</name>
 <message>
 <source>cloud support</source>
-<translation type="unfinished">cloud support</translation>
+<translation>클라우드 지원</translation>
 </message>
 <message>
 <source>Enable cloud support</source>
-<translation type="unfinished">Enable cloud support</translation>
+<translation>클라우드 지원 사용함</translation>
 </message>
 <message>
 <source>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</source>
@@ -356,7 +356,7 @@
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
-<translation type="unfinished">Open your NC / oC server &amp;Apps page</translation>
+<translation>NC / oC 서버 앱 페이지 열기(&amp;A)</translation>
 </message>
 <message>
 <source>Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
@@ -364,7 +364,7 @@
 </message>
 <message>
 <source>Open your NC / oC server App Password page</source>
-<translation type="unfinished">Open your NC / oC server App Password page</translation>
+<translation>NC / oC 서버 앱 비밀번호 페이지 열기</translation>
 </message>
 <message>
 <source>Error Message</source>
@@ -396,15 +396,15 @@
 </message>
 <message>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>로그인 흐름 v2는 ownCloud가 아닌 Nextcloud,에서만 작동합니다. 문제가 있는 경우 앱 비밀번호를 직접 만들어야 합니다.</translation>
 </message>
 <message>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Nextcloud에 로그인하여 액세스 권한 부여</translation>
 </message>
 <message>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Nextcloud 로그인 취소</translation>
 </message>
 <message>
 <source>Username:</source>
@@ -420,7 +420,7 @@
 </message>
 <message>
 <source>Password:</source>
-<translation type="unfinished">Password:</translation>
+<translation>비밀번호:</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -428,15 +428,15 @@
 </message>
 <message>
 <source>Your Nextcloud / ownCloud password</source>
-<translation type="unfinished">Your Nextcloud / ownCloud password</translation>
+<translation>Nextcloud / ownCloud 비밀번호</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>비밀번호가 작동하지 않으면 앱 비밀번호를 만드세요 (오른쪽 버튼)</translation>
 </message>
 <message>
 <source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<translation>QOwnNotesAPI 앱 지원 사용</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -584,10 +584,6 @@ Connection error message: </translation>
 <translation>아이콘</translation>
 </message>
 <message>
-<source>You need to restart the application to let this setting take effect</source>
-<translation>이 설정을 적용하려면 응용 프로그램을 다시 시작해야 합니다</translation>
-</message>
-<message>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>시스템 아이콘 테마 대신 내부 아이콘 테마 사용</translation>
 </message>
@@ -652,11 +648,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Script hook execution time warning threshold (ms):</source>
-<translation type="unfinished">Script hook execution time warning threshold (ms):</translation>
+<translation>스크립트 훅 실행 시간 경고 임계값 (ms):</translation>
 </message>
 <message>
 <source>Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</source>
-<translation type="unfinished">Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</translation>
+<translation>스크립트 후크가 이 밀리초보다 오래 걸릴 때 경고를 기록합니다. 디버그 로깅을 활성화하면 모든 후크 시간이 무조건 기록됩니다.</translation>
 </message>
 <message>
 <source>Log file cleared</source>
@@ -1336,8 +1332,16 @@ Connection error message: </translation>
 <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
 </message>
 <message>
+<source>Ensure an empty last line in the note text</source>
+<translation type="unfinished">Ensure an empty last line in the note text</translation>
+</message>
+<message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
+<source>Show character, word and line count in the status bar</source>
+<translation type="unfinished">Show character, word and line count in the status bar</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -2424,11 +2428,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>External tools</source>
-<translation type="unfinished">External tools</translation>
+<translation>외부 도구</translation>
 </message>
 <message>
 <source>Path to external editor, leave empty for default</source>
-<translation type="unfinished">Path to external editor, leave empty for default</translation>
+<translation>외부 편집기로 가는 경로, 기본값은 비워 둡니다</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
@@ -2440,15 +2444,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Path to external diff tool:</source>
-<translation type="unfinished">Path to external diff tool:</translation>
+<translation>외부 Diff 도구로의 경로:</translation>
 </message>
 <message>
 <source>Path to external diff tool, leave empty for default</source>
-<translation type="unfinished">Path to external diff tool, leave empty for default</translation>
+<translation>외부 diff 도구로의 경로, 기본값은 비워 둡니다</translation>
 </message>
 <message>
 <source>set external diff tool</source>
-<translation type="unfinished">set external diff tool</translation>
+<translation>외부 diff 도구 설정</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
@@ -2524,7 +2528,7 @@ Your notes will stay intact!</translation>
 </message>
 <message>
 <source>Select diff tool application</source>
-<translation type="unfinished">Select diff tool application</translation>
+<translation>차이 도구 응용 프로그램 선택</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -5519,6 +5523,34 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>변경된 내용을 확인하고 최신 버전으로 업데이트하려면 여기를 클릭하십시오</translation>
 </message>
 <message>
+<source>Web</source>
+<translation type="unfinished">Web</translation>
+</message>
+<message>
+<source>Web app is connected</source>
+<translation type="unfinished">Web app is connected</translation>
+</message>
+<message>
+<source>Web app is not connected</source>
+<translation type="unfinished">Web app is not connected</translation>
+</message>
+<message>
+<source>Web app connected</source>
+<translation type="unfinished">Web app connected</translation>
+</message>
+<message>
+<source>Web app disconnected</source>
+<translation type="unfinished">Web app disconnected</translation>
+</message>
+<message>
+<source>Connected systems</source>
+<translation type="unfinished">Connected systems</translation>
+</message>
+<message>
+<source>No connected systems</source>
+<translation type="unfinished">No connected systems</translation>
+</message>
+<message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
 </message>
@@ -5937,6 +5969,15 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation>
 <numerusform>%n개 선택됨</numerusform>
 </translation>
+</message>
+<message>
+<source>Ch %1, W %2, L %3</source>
+<comment>Characters / Words / Lines</comment>
+<translation type="unfinished">Ch %1, W %2, L %3</translation>
+</message>
+<message>
+<source>Characters %1, Words %2, Lines %3</source>
+<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
 </message>
 </context>
 <context>
@@ -7053,7 +7094,7 @@ Do you want to delete those files as well?</source>
 <name>NoteTreeManager</name>
 <message>
 <source>External diff tool</source>
-<translation type="unfinished">External diff tool</translation>
+<translation>외부 차이 도구</translation>
 </message>
 <message>
 <source>Please select at least two notes to diff.</source>
@@ -7061,7 +7102,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
-<translation type="unfinished">The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</translation>
+<translation>외부 차이 도구 &lt;strong&gt;%1&lt;/strong&gt;을 시작할 수 없습니다.</translation>
 </message>
 <message>
 <source>New note</source>
@@ -7121,7 +7162,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Diff selected notes</source>
-<translation type="unfinished">Diff selected notes</translation>
+<translation>선택한 노트의 차이</translation>
 </message>
 <message>
 <source>Open note in external editor</source>
@@ -8015,8 +8056,8 @@ Updating the interface takes a short while.</translation>
 <translation>첨부 파일</translation>
 </message>
 <message>
-<source>Light</source>
-<translation>밝은</translation>
+<source>System</source>
+<translation>시스템</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -10397,10 +10438,6 @@ This cannot be undone!</source>
 <translation>QOwnNotes가 웹 소켓에서 %1로 연결이 끊어졌습니다</translation>
 </message>
 <message>
-<source>Web app warning</source>
-<translation>웹 앱 경고</translation>
-</message>
-<message>
 <source>Image received</source>
 <translation>이미지 수신</translation>
 </message>
@@ -10440,8 +10477,28 @@ This cannot be undone!</source>
 <translation type="unfinished">QOwnNotes web application</translation>
 </message>
 <message>
+<source>Test the connection to the server</source>
+<translation>서버 연결 테스트</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation>연결 테스트</translation>
+</message>
+<message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation>연결 이름:</translation>
+</message>
+<message>
+<source>The name used to identify this QOwnNotes instance to other connected devices</source>
+<translation>이 QOwnNotes 인스턴스를 다른 연결된 장치로 식별하는 데 사용되는 이름</translation>
+</message>
+<message>
+<source>Reset to default connection name</source>
+<translation>기본 연결 이름으로 재설정</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -10454,6 +10511,14 @@ This cannot be undone!</source>
 <message>
 <source>Generate new security token</source>
 <translation type="unfinished">Generate new security token</translation>
+</message>
+<message>
+<source>Connected devices</source>
+<translation>연결된 장치</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation>새로 고침</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -10474,6 +10539,18 @@ This cannot be undone!</source>
 <message>
 <source>Show QR code</source>
 <translation type="unfinished">Show QR code</translation>
+</message>
+<message>
+<source>Connection test</source>
+<translation>연결 테스트</translation>
+</message>
+<message>
+<source>Successfully connected to the web application server.</source>
+<translation>웹 응용 프로그램 서버에 성공적으로 연결되었습니다.</translation>
+</message>
+<message>
+<source>Not connected to the web application server. Please check the server URL and your network connection.</source>
+<translation>웹 응용 프로그램 서버에 연결되지 않았습니다. 서버 URL과 네트워크 연결을 확인해 주세요.</translation>
 </message>
 </context>
 <context>
@@ -10814,11 +10891,11 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>Prints the decrypted text of an encrypted note file.</source>
-<translation type="unfinished">Prints the decrypted text of an encrypted note file.</translation>
+<translation>암호화된 노트 파일의 복호화된 텍스트를 인쇄합니다.</translation>
 </message>
 <message>
 <source>Password for --decrypt-note.</source>
-<translation type="unfinished">Password for --decrypt-note.</translation>
+<translation>--decrypt-note의 비밀번호입니다.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

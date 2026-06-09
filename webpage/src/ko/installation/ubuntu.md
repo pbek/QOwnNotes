@@ -26,9 +26,9 @@ sudo apt-get install qownnotes
 
 ## QOwnNotes Qt5 레거시
 
-For older supported versions of Ubuntu Linux, elementary OS, Linux Mint 18 or newer, you can use the Qt5 version of QOwnNotes.
+이전에 지원된 Ubuntu Linux, 기본 OS, Linux Mint 18 이상 버전의 경우 QOwnNotes의 Qt5 버전을 사용할 수 있습니다.
 
-Install **QOwnNotes** on **Ubuntu Linux** (minimum 20.04) using the PPA repository.
+PPA 저장소를 사용하여 **Ubuntu Linux에 **QOwnNotes**을 설치합니다 (최소 20.04).</p>
 
 저장소에는 **Raspberry Pi**에서 QOwnNotes를 사용하려는 경우를 대비한 ARM 패키지도 있습니다.
 

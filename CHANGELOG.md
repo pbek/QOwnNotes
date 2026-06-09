@@ -6,6 +6,8 @@
   tagged as `console` or `shell-session` (for [#3094](https://github.com/pbek/QOwnNotes/issues/3094))
 - Added an optional editor setting to ensure that the note text ends with an
   empty last line when a note is stored (for [#3255](https://github.com/pbek/QOwnNotes/issues/3255))
+- Added more French, Korean, Spanish translation (thank you, jd-develop, VenusGirl,
+  AlejandroMoc, AnSpanishTranslator)
 
 ## 26.6.4
 

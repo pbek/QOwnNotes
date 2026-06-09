@@ -581,10 +581,6 @@ Connection error message: </translation>
 <translation>图标</translation>
 </message>
 <message>
-<source>You need to restart the application to let this setting take effect</source>
-<translation>您需要重启应用程序使此设置生效</translation>
-</message>
-<message>
 <source>Use internal icon theme instead of system icon theme</source>
 <translation>使用内置图标主题代替系统图标主题</translation>
 </message>
@@ -646,6 +642,14 @@ Connection error message: </translation>
 <message>
 <source>Log file path:</source>
 <translation>日志文件路径：</translation>
+</message>
+<message>
+<source>Script hook execution time warning threshold (ms):</source>
+<translation type="unfinished">Script hook execution time warning threshold (ms):</translation>
+</message>
+<message>
+<source>Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</source>
+<translation type="unfinished">Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</translation>
 </message>
 <message>
 <source>Log file cleared</source>
@@ -1325,8 +1329,16 @@ Connection error message: </translation>
 <translation>自动删除笔记文本中的尾随空格</translation>
 </message>
 <message>
+<source>Ensure an empty last line in the note text</source>
+<translation type="unfinished">Ensure an empty last line in the note text</translation>
+</message>
+<message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation>显示行号和书签标记（1-9）</translation>
+</message>
+<message>
+<source>Show character, word and line count in the status bar</source>
+<translation type="unfinished">Show character, word and line count in the status bar</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -2409,20 +2421,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>移除选定的笔记文件扩展名</translation>
 </message>
 <message>
-<source>External editor</source>
-<translation>外部编辑器</translation>
+<source>External tools</source>
+<translation type="unfinished">External tools</translation>
+</message>
+<message>
+<source>Path to external editor, leave empty for default</source>
+<translation type="unfinished">Path to external editor, leave empty for default</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
 <translation>外部编辑器路径：</translation>
 </message>
 <message>
-<source>path to external editor, leave empty for default</source>
-<translation>外部编辑器路径，留空使用默认值</translation>
-</message>
-<message>
 <source>set external editor</source>
 <translation>设置外部编辑器</translation>
+</message>
+<message>
+<source>Path to external diff tool:</source>
+<translation type="unfinished">Path to external diff tool:</translation>
+</message>
+<message>
+<source>Path to external diff tool, leave empty for default</source>
+<translation type="unfinished">Path to external diff tool, leave empty for default</translation>
+</message>
+<message>
+<source>set external diff tool</source>
+<translation type="unfinished">set external diff tool</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
@@ -2495,6 +2519,10 @@ Your notes will stay intact!</source>
 <message>
 <source>Select editor application</source>
 <translation>选择编辑器应用程序</translation>
+</message>
+<message>
+<source>Select diff tool application</source>
+<translation type="unfinished">Select diff tool application</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -5489,6 +5517,34 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>单击此处查看更改内容并下载最新版本</translation>
 </message>
 <message>
+<source>Web</source>
+<translation type="unfinished">Web</translation>
+</message>
+<message>
+<source>Web app is connected</source>
+<translation type="unfinished">Web app is connected</translation>
+</message>
+<message>
+<source>Web app is not connected</source>
+<translation type="unfinished">Web app is not connected</translation>
+</message>
+<message>
+<source>Web app connected</source>
+<translation type="unfinished">Web app connected</translation>
+</message>
+<message>
+<source>Web app disconnected</source>
+<translation type="unfinished">Web app disconnected</translation>
+</message>
+<message>
+<source>Connected systems</source>
+<translation type="unfinished">Connected systems</translation>
+</message>
+<message>
+<source>No connected systems</source>
+<translation type="unfinished">No connected systems</translation>
+</message>
+<message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
 </message>
@@ -5907,6 +5963,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>已选择 %n 个字符</numerusform>
 </translation>
+</message>
+<message>
+<source>Ch %1, W %2, L %3</source>
+<comment>Characters / Words / Lines</comment>
+<translation type="unfinished">Ch %1, W %2, L %3</translation>
+</message>
+<message>
+<source>Characters %1, Words %2, Lines %3</source>
+<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
 </message>
 </context>
 <context>
@@ -7022,6 +7087,18 @@ Do you want to delete those files as well?</source>
 <context>
 <name>NoteTreeManager</name>
 <message>
+<source>External diff tool</source>
+<translation type="unfinished">External diff tool</translation>
+</message>
+<message>
+<source>Please select at least two notes to diff.</source>
+<translation type="unfinished">Please select at least two notes to diff.</translation>
+</message>
+<message>
+<source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
+<translation type="unfinished">The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</translation>
+</message>
+<message>
 <source>New note</source>
 <translation>新建笔记</translation>
 </message>
@@ -7076,6 +7153,10 @@ Do you want to delete those files as well?</source>
 <message>
 <source>Open selected notes in tabs</source>
 <translation>在标签页中打开选中的笔记</translation>
+</message>
+<message>
+<source>Diff selected notes</source>
+<translation type="unfinished">Diff selected notes</translation>
 </message>
 <message>
 <source>Open note in external editor</source>
@@ -7969,8 +8050,8 @@ Updating the interface takes a short while.</translation>
 <translation>附件</translation>
 </message>
 <message>
-<source>Light</source>
-<translation>浅色</translation>
+<source>System</source>
+<translation type="unfinished">System</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -10351,10 +10432,6 @@ This cannot be undone!</source>
 <translation>QOwnNotes 现已与到 %1 的 websocket 断开连接</translation>
 </message>
 <message>
-<source>Web app warning</source>
-<translation>Web 应用警告</translation>
-</message>
-<message>
 <source>Image received</source>
 <translation>图片已收到</translation>
 </message>
@@ -10394,8 +10471,28 @@ This cannot be undone!</source>
 <translation>QOwnNotes Web应用</translation>
 </message>
 <message>
+<source>Test the connection to the server</source>
+<translation type="unfinished">Test the connection to the server</translation>
+</message>
+<message>
+<source>Test connection</source>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
 <translation>将打开到此服务器的Web套接字连接，作为QOwnNotes Web应用和QOwnNotes桌面应用之间的桥梁。</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation type="unfinished">Connection name:</translation>
+</message>
+<message>
+<source>The name used to identify this QOwnNotes instance to other connected devices</source>
+<translation type="unfinished">The name used to identify this QOwnNotes instance to other connected devices</translation>
+</message>
+<message>
+<source>Reset to default connection name</source>
+<translation type="unfinished">Reset to default connection name</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -10408,6 +10505,14 @@ This cannot be undone!</source>
 <message>
 <source>Generate new security token</source>
 <translation>生成新安全令牌</translation>
+</message>
+<message>
+<source>Connected devices</source>
+<translation type="unfinished">Connected devices</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation type="unfinished">Refresh</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -10428,6 +10533,18 @@ This cannot be undone!</source>
 <message>
 <source>Show QR code</source>
 <translation>显示二维码</translation>
+</message>
+<message>
+<source>Connection test</source>
+<translation type="unfinished">Connection test</translation>
+</message>
+<message>
+<source>Successfully connected to the web application server.</source>
+<translation type="unfinished">Successfully connected to the web application server.</translation>
+</message>
+<message>
+<source>Not connected to the web application server. Please check the server URL and your network connection.</source>
+<translation type="unfinished">Not connected to the web application server. Please check the server URL and your network connection.</translation>
 </message>
 </context>
 <context>
@@ -10765,6 +10882,14 @@ This cannot be undone!</source>
 <message>
 <source>Generate shell completion code. Supports `fish`, `bash`.</source>
 <translation>生成Shell补全代码。支持`fish`、`bash`。</translation>
+</message>
+<message>
+<source>Prints the decrypted text of an encrypted note file.</source>
+<translation type="unfinished">Prints the decrypted text of an encrypted note file.</translation>
+</message>
+<message>
+<source>Password for --decrypt-note.</source>
+<translation type="unfinished">Password for --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>
