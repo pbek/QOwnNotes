@@ -275,6 +275,23 @@ void TestNotes::testCodeToHtmlConversionHashComment() {
     QVERIFY(outputHashStyleComment == expectedOutputHashStyleComment);
 }
 
+void TestNotes::testCodeToHtmlConversionConsole() {
+    const QString consoleCode = QStringLiteral("foo@bar:~$ whoami\nfoo\n# id\nuid=0\n");
+
+    const CodeToHtmlConverter c(QStringLiteral("console"));
+    const QString outputConsole = c.process(consoleCode);
+
+    const QString expectedOutputConsole = QStringLiteral(
+        "<span class=\"code-console-prompt\">foo@bar:&#126;$ </span>"
+        "<span class=\"code-builtin\">whoami</span>\n"
+        "foo\n"
+        "<span class=\"code-console-prompt\"># </span>"
+        "<span class=\"code-builtin\">id</span>\n"
+        "uid=0\n");
+
+    QVERIFY(outputConsole == expectedOutputConsole);
+}
+
 void TestNotes::testCodeToHtmlConversionSingleLineComment() {
     QString comment = QStringLiteral("//hello my qownnotes blah blah single line\n");
     QString commentpy = QStringLiteral("#hello my qownnotes blah blah single line\n");

@@ -20,6 +20,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
     _langStringToEnum = QHash<QString, CodeToHtmlConverter::Lang>{
         {QStringLiteral("bash"), CodeToHtmlConverter::CodeBash},
         {QStringLiteral("c"), CodeToHtmlConverter::CodeC},
+        {QStringLiteral("console"), CodeToHtmlConverter::CodeConsole},
         {QStringLiteral("cpp"), CodeToHtmlConverter::CodeCpp},
         {QStringLiteral("cxx"), CodeToHtmlConverter::CodeCpp},
         {QStringLiteral("c++"), CodeToHtmlConverter::CodeCpp},
@@ -42,6 +43,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("qml"), CodeToHtmlConverter::CodeQML},
         {QStringLiteral("rust"), CodeToHtmlConverter::CodeRust},
         {QStringLiteral("sh"), CodeToHtmlConverter::CodeBash},
+        {QStringLiteral("shell-session"), CodeToHtmlConverter::CodeConsole},
         {QStringLiteral("sql"), CodeToHtmlConverter::CodeSQL},
         {QStringLiteral("ts"), CodeToHtmlConverter::CodeTypeScript},
         {QStringLiteral("typescript"), CodeToHtmlConverter::CodeTypeScript},
@@ -95,6 +97,8 @@ QString CodeToHtmlConverter::process(StringView input) const {
             loadShellData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('#');
             break;
+        case CodeConsole:
+            return consoleHighlighter(input);
         case CodePHP:
             loadPHPData(types, keywords, builtin, literals, others);
             break;
@@ -617,6 +621,47 @@ QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
     return output;
 }
 
+QString CodeToHtmlConverter::consoleHighlighter(StringView input) const {
+    QString output;
+    const QString source = input.toString();
+    output.reserve(source.size() + 100);
+
+    const CodeToHtmlConverter shellConverter(QStringLiteral("bash"));
+    static const QRegularExpression promptRe(QStringLiteral(
+        R"(^((?:[A-Za-z]:[^\n>]*>|(?:\[[^\]\n]+\]\s*)?(?:(?:[\w.-]+@[\w.-]+(?::[^\n$#>]*)?)\s*)?[$#>])\s*)(.*)$)"));
+
+    int pos = 0;
+    while (pos < source.length()) {
+        const int newline = source.indexOf(QChar('\n'), pos);
+        const bool hasNewline = newline != -1;
+        const QString line = source.mid(pos, hasNewline ? newline - pos : source.length() - pos);
+        const QRegularExpressionMatch match = promptRe.match(line);
+
+        if (match.hasMatch()) {
+            output += setFormat(match.captured(1), Format::ConsolePrompt);
+            const QString command = match.captured(2);
+            static const QRegularExpression commandRe(QStringLiteral(R"(^(\s*)(\S+)(.*)$)"));
+            const QRegularExpressionMatch commandMatch = commandRe.match(command);
+            if (commandMatch.hasMatch()) {
+                output += escapeString(commandMatch.captured(1));
+                output += setFormat(commandMatch.captured(2), Format::Builtin);
+                output += shellConverter.process(commandMatch.captured(3));
+            } else {
+                output += shellConverter.process(command);
+            }
+        } else {
+            output += escapeString(line);
+        }
+
+        if (!hasNewline) break;
+        output += QLatin1Char('\n');
+        pos = newline + 1;
+    }
+
+    output.squeeze();
+    return output;
+}
+
 /**
  * @brief CSS highlighter
  * @return
@@ -849,6 +894,9 @@ QString CodeToHtmlConverter::setFormat(StringView str, CodeToHtmlConverter::Form
         case Other:
             return QStringLiteral("<span class=\"code-other\">") % escapeString(str) %
                    QStringLiteral("</span>");
+        case ConsolePrompt:
+            return QStringLiteral("<span class=\"code-console-prompt code-type\">") %
+                   escapeString(str) % QStringLiteral("</span>");
         case Comment:
             return QStringLiteral("<span class=\"code-comment\">") % escapeString(str) %
                    QStringLiteral("</span>");

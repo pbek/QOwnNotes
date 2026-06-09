@@ -4089,6 +4089,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
     codeStyleSheet += QStringLiteral(" .code-builtin { color: #A6E22E;}");
     codeStyleSheet += QStringLiteral(" .code-keyword { color: #F92672;}");
     codeStyleSheet += QStringLiteral(" .code-other { color: #F92672;}");
+    codeStyleSheet += QStringLiteral(" .code-console-prompt { font-weight: bold;}");
 
     // correct the strikeout tag
     result.replace(QRegularExpression(QStringLiteral("<del>([^<]+)<\\/del>")),
