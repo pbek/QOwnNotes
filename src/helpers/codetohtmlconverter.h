@@ -65,6 +65,7 @@ class CodeToHtmlConverter {
 
     Q_REQUIRED_RESULT static QString escape(QChar c);
     Q_REQUIRED_RESULT static QString escapeString(StringView s);
+    Q_REQUIRED_RESULT static QString escapeString(const QString &s);
     Q_REQUIRED_RESULT static QString setFormat(StringView str, Format format);
     Q_REQUIRED_RESULT static QString setFormat(const QString &str, Format format);
     static void initCodeLangs() Q_DECL_NOTHROW;

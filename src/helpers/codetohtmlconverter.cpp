@@ -58,7 +58,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
 }
 
 QString CodeToHtmlConverter::process(const QString &input) const {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 2)
     qDebug() << "Going to highlight input:" << StringView(input).mid(0, 12)
              << ", with lang:" << _currentLang;
     return process(StringView(input));
@@ -874,6 +874,14 @@ QString CodeToHtmlConverter::escapeString(StringView s) {
     return ret;
 }
 
+QString CodeToHtmlConverter::escapeString(const QString &s) {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 2)
+    return escapeString(StringView(s));
+#else
+    return escapeString(StringView(&s));
+#endif
+}
+
 QString CodeToHtmlConverter::setFormat(StringView str, CodeToHtmlConverter::Format format) {
     switch (format) {
         case Type:
@@ -906,7 +914,7 @@ QString CodeToHtmlConverter::setFormat(StringView str, CodeToHtmlConverter::Form
 }
 
 QString CodeToHtmlConverter::setFormat(const QString &str, CodeToHtmlConverter::Format format) {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 2)
     return setFormat(StringView(str), format);
 #else
     return setFormat(StringView(&str), format);
