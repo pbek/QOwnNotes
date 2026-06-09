@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.6.5
+
+- Added an optional editor setting to ensure that the note text ends with an
+  empty last line when a note is stored (for [#3255](https://github.com/pbek/QOwnNotes/issues/3255))
+
 ## 26.6.4
 
 - Added an optional editor setting to show character, word and line counts in the

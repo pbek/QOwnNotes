@@ -3066,6 +3066,28 @@ bool Note::stripTrailingSpaces(int skipLine) {
     return wasStripped;
 }
 
+/**
+ * Ensures that the note text ends with an empty last line
+ *
+ * @return
+ */
+bool Note::ensureEmptyLastLine() {
+    if (_noteText.isEmpty() || _noteText.endsWith(QChar('\n')) || _noteText.endsWith(QChar('\r'))) {
+        return false;
+    }
+
+    _noteText.append(detectNewlineCharacters());
+
+    // Clear the checksum before storing to skip the external modification check
+    // since we're making an internal modification (adding a final newline).
+    // The checksum will be recalculated and stored after writing to disk.
+    _fileChecksum.clear();
+
+    store();
+
+    return true;
+}
+
 QString Note::detectNewlineCharacters() {
     if (_noteText.contains(QStringLiteral("\r\n"))) {
         return QStringLiteral("\r\n");

@@ -55,6 +55,8 @@ void EditorSettingsWidget::readSettings() {
         settings.value(QStringLiteral("Editor/autoBracketRemoval"), true).toBool());
     ui->removeTrailingSpacesCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/removeTrailingSpaces")).toBool());
+    ui->ensureEmptyLastLineCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/ensureEmptyLastLine"), false).toBool());
     ui->showLineNumbersInEditorCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/showLineNumbers")).toBool());
     ui->showNoteTextStatsCheckBox->setChecked(
@@ -103,6 +105,8 @@ void EditorSettingsWidget::storeSettings() {
                       ui->autoBracketRemovalCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/removeTrailingSpaces"),
                       ui->removeTrailingSpacesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/ensureEmptyLastLine"),
+                      ui->ensureEmptyLastLineCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showLineNumbers"),
                       ui->showLineNumbersInEditorCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showNoteTextStats"),

@@ -922,6 +922,14 @@ void NoteIndexManager::storeUpdatedNotesToDisk() {
                 }
             }
 
+            if (SettingsService().value(QStringLiteral("Editor/ensureEmptyLastLine")).toBool()) {
+                const bool wasChanged = _mainWindow->currentNote.ensureEmptyLastLine();
+
+                if (wasChanged) {
+                    qDebug() << __func__ << " - 'ensureEmptyLastLine'";
+                }
+            }
+
             if (currentNoteTextChanged) {
                 // reload the current note if we had to change it during a note rename
                 _mainWindow->reloadCurrentNoteByNoteId(true);

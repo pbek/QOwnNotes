@@ -415,6 +415,8 @@ class Note {
 
     bool stripTrailingSpaces(int skipLine = -1);
 
+    bool ensureEmptyLastLine();
+
     QString detectNewlineCharacters();
 
     static bool isNameSearch(const QString &searchTerm);
