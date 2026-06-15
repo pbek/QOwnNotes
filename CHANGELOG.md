@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.6.6
+
+- There was a new release of the **QOwnNotes Web Companion browser extension**
+  [2026.6.0](https://github.com/qownnotes/web-companion/releases/tag/v2026.6.0)
+  - The extension build tooling was updated to Quasar App Vite 3 / Rolldown
+  - Vue and Vue Router were updated for the new Quasar toolchain
+  - The extension popup was fixed for the updated Vue/Quasar build output
+  - The dependencies were updated
+
 ## 26.6.5
 
 - Added editor and Markdown preview syntax highlighting for fenced code blocks
