@@ -5,6 +5,8 @@
 
 #include "masterdialog.h"
 
+class QShowEvent;
+
 namespace Ui {
 class WebSocketTokenDialog;
 }
@@ -16,6 +18,11 @@ class WebSocketTokenDialog : public MasterDialog {
     explicit WebSocketTokenDialog(QWidget *parent = 0);
     ~WebSocketTokenDialog();
 
+    void reject() override;
+
+   protected:
+    void showEvent(QShowEvent *event) override;
+
    private slots:
     void on_copyButton_clicked();
 
@@ -25,8 +32,10 @@ class WebSocketTokenDialog : public MasterDialog {
 
    private:
     Ui::WebSocketTokenDialog *ui;
+    QString _initialToken;
 
     QString generateToken() const;
+    void loadTokenFromSettings();
 };
 
 #endif    // WEBSOCKETTOKENDIALOG_H

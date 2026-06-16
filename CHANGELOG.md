@@ -2,6 +2,10 @@
 
 ## 26.6.6
 
+- Fixed the **Security token** dialog for the QOwnNotes Web Companion browser
+  extension to keep generated or edited tokens only when pressing **OK**, so
+  closing the dialog with **Cancel** no longer changes the token for the
+  current application session (for [#3638](https://github.com/pbek/QOwnNotes/issues/3638))
 - There was a new release of the **QOwnNotes Web Companion browser extension**
   [2026.6.0](https://github.com/qownnotes/web-companion/releases/tag/v2026.6.0)
   - The extension build tooling was updated to Quasar App Vite 3 / Rolldown
