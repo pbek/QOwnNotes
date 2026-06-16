@@ -232,6 +232,7 @@ Il est possible d’ajouter de la coloration syntaxique dans les blocs de code a
 ```bash
 # Je suis un commentaire
 cd Notes
+```
 ````
 ````
 

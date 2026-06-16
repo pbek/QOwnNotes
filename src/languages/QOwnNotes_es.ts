@@ -5572,11 +5572,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Connected systems</source>
-<translation type="unfinished">Connected systems</translation>
+<translation>Sistemas conectados</translation>
 </message>
 <message>
 <source>No connected systems</source>
-<translation type="unfinished">No connected systems</translation>
+<translation>No hay sistemas conectados</translation>
 </message>
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>

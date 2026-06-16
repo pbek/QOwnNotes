@@ -12,6 +12,7 @@
   - Vue and Vue Router were updated for the new Quasar toolchain
   - The extension popup was fixed for the updated Vue/Quasar build output
   - The dependencies were updated
+- Added more Korean, French, Spanish translation (thank you, VenusGirl, jd-develop, AlejandroMoc)
 
 ## 26.6.5
 

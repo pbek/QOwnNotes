@@ -1333,7 +1333,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Ensure an empty last line in the note text</source>
-<translation type="unfinished">Ensure an empty last line in the note text</translation>
+<translation>Garantir une ligne vide à la fin du texte de la note</translation>
 </message>
 <message>
 <source>Show line numbers and bookmark markers (1-9)</source>
@@ -1341,7 +1341,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Show character, word and line count in the status bar</source>
-<translation type="unfinished">Show character, word and line count in the status bar</translation>
+<translation>Montrer les compteurs de caractères, de mots et de lignes dans la barre de statut</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -5552,31 +5552,31 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Web</source>
-<translation type="unfinished">Web</translation>
+<translation>Web</translation>
 </message>
 <message>
 <source>Web app is connected</source>
-<translation type="unfinished">Web app is connected</translation>
+<translation>L’application Web est connectée</translation>
 </message>
 <message>
 <source>Web app is not connected</source>
-<translation type="unfinished">Web app is not connected</translation>
+<translation>L’application Web n’est pas connectée</translation>
 </message>
 <message>
 <source>Web app connected</source>
-<translation type="unfinished">Web app connected</translation>
+<translation>L’application Web s’est connectée</translation>
 </message>
 <message>
 <source>Web app disconnected</source>
-<translation type="unfinished">Web app disconnected</translation>
+<translation>L’application Web s’est déconnectée</translation>
 </message>
 <message>
 <source>Connected systems</source>
-<translation type="unfinished">Connected systems</translation>
+<translation>Système connectés</translation>
 </message>
 <message>
 <source>No connected systems</source>
-<translation type="unfinished">No connected systems</translation>
+<translation>Pas de système connecté</translation>
 </message>
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
@@ -6009,11 +6009,11 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Ch %1, W %2, L %3</source>
 <comment>Characters / Words / Lines</comment>
-<translation type="unfinished">Ch %1, W %2, L %3</translation>
+<translation>%1 C., %2 M., %3 L.</translation>
 </message>
 <message>
 <source>Characters %1, Words %2, Lines %3</source>
-<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
+<translation>%1 caractères, %2 mots, %3 lignes</translation>
 </message>
 </context>
 <context>
