@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.6.7
+
+- Added the **Send clipboard as text** action to the tray menu when web
+  application support is enabled, and to the task manager / launcher context
+  menu (for [#3371](https://github.com/pbek/QOwnNotes/issues/3371))
+
 ## 26.6.6
 
 - Fixed the **Security token** dialog for the QOwnNotes Web Companion browser

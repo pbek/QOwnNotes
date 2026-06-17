@@ -19,6 +19,7 @@
 #include <entities/notefolder.h>
 #include <services/settingsservice.h>
 #include <utils/gui.h>
+#include <utils/misc.h>
 
 #include <QMenu>
 
@@ -121,10 +122,12 @@ void SystemTrayManager::generateSystemTrayContextMenu() {
 
     connect(openAction, &QAction::triggered, this, &SystemTrayManager::showWindow);
 
-    menu->addSeparator();
-    menu->addAction(_ui->actionSend_clipboard);
-    menu->addAction(_ui->actionSend_clipboard_as_text);
-    menu->addSeparator();
+    if (Utils::Misc::isWebAppSupportEnabled()) {
+        menu->addSeparator();
+        menu->addAction(_ui->actionSend_clipboard);
+        menu->addAction(_ui->actionSend_clipboard_as_text);
+        menu->addSeparator();
+    }
 
     const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
     const int noteFoldersCount = noteFolders.count();

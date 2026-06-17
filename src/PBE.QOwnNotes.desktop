@@ -12,7 +12,7 @@ Terminal=false
 StartupNotify=true
 Categories=Utility;TextEditor;
 StartupWMClass=QOwnNotes
-Actions=NewNote;ShowTodoList;
+Actions=NewNote;ShowTodoList;SendClipboardAsText;
 
 [Desktop Action NewNote]
 Name=New note
@@ -27,3 +27,8 @@ Name[de]=ToDo-Liste anzeigen
 Name[ru]=Показать список задач
 Icon=view-calendar-tasks
 Exec=QOwnNotes --action actionShow_Todo_List
+
+[Desktop Action SendClipboardAsText]
+Name=Send clipboard as text
+Icon=document-share
+Exec=QOwnNotes --action actionSend_clipboard_as_text
