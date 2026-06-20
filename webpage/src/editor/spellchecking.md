@@ -2,7 +2,7 @@
 
 Get your spelling errors corrected!
 
-First go to **Edit -> Check Spelling** and select the language of your note, then you can toggle the Spell checker by going to **Edit -> Check Spelling**
+You can toggle the Spell checker by going to **Edit -> Check Spelling**. If you need to manually select the language of your note you can do so by going to **Edit -> Language**.
 
 ::: tip Info
 QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu)
