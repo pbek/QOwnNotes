@@ -2,6 +2,8 @@
 
 Get your spelling errors corrected!
 
+First go to **Edit -> Check Spelling** and select the language of your note, then you can toggle the Spell checker by going to **Edit -> Check Spelling**
+
 ::: tip Info
 QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu)
 which you can use to download dictionaries or delete them (if you are
