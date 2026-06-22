@@ -41,7 +41,7 @@ jobs:
     name: "🐧 AppImage Qt 6.10.2"
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -161,7 +161,7 @@ jobs:
     name: "🐧 Snap Qt 6.10.2"
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -240,7 +240,7 @@ jobs:
     name: "🐧 Snap Qt 5.15.2"
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -316,7 +316,7 @@ jobs:
       QT_VERSION: 6.10.1
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -362,7 +362,7 @@ jobs:
       QT_VERSION: 6.10.1
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -407,7 +407,7 @@ jobs:
       QT_VERSION: 5.15.2
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -464,7 +464,7 @@ jobs:
       group: continuous-release-publish
       cancel-in-progress: false
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set Env
         run: |
