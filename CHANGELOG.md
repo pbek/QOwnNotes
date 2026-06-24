@@ -2,6 +2,9 @@
 
 ## 26.6.8
 
+- Added **Expand all** and **Collapse all** context menu actions to heading
+  items in the **Headings** panel, remembering the in-memory expansion state per
+  note until the application is closed (for [#2784](https://github.com/pbek/QOwnNotes/issues/2784))
 - Added **Adwaita Light** and **Adwaita Dark** editor color schemes
   (for [#3299](https://github.com/pbek/QOwnNotes/issues/3299))
 - Added optional editor settings **Show whitespace markers** and

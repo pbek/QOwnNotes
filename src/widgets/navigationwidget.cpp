@@ -516,9 +516,24 @@ void NavigationWidget::showContextMenu(const QPoint &pos) {
         return;
     }
 
+    setCurrentItem(item);
+
     QMenu menu(this);
 
-    // Add "Rename heading" action
+    QAction *expandAllAction = menu.addAction(tr("Expand all"));
+    connect(expandAllAction, &QAction::triggered, this, [this, item]() {
+        setExpandedRecursively(item, true);
+        saveExpandState();
+    });
+
+    QAction *collapseAllAction = menu.addAction(tr("Collapse all"));
+    connect(collapseAllAction, &QAction::triggered, this, [this, item]() {
+        setExpandedRecursively(item, false);
+        saveExpandState();
+    });
+
+    menu.addSeparator();
+
     QAction *renameAction = menu.addAction(tr("&Rename heading"));
     connect(renameAction, &QAction::triggered, this, &NavigationWidget::renameHeadingTriggered);
 
