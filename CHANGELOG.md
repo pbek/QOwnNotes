@@ -4,6 +4,8 @@
 
 - Added **Adwaita Light** and **Adwaita Dark** editor color schemes
   (for [#3299](https://github.com/pbek/QOwnNotes/issues/3299))
+- Added optional editor settings **Show whitespace markers** and
+  **Show line ending markers** (for [#3253](https://github.com/pbek/QOwnNotes/issues/3253))
 
 ## 26.6.7
 

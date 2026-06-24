@@ -163,20 +163,40 @@
        </widget>
       </item>
       <item row="11" column="0" colspan="4">
+       <widget class="QCheckBox" name="showWhitespaceMarkersCheckBox">
+        <property name="toolTip">
+         <string>Show visible markers for spaces and tabs in the note editor</string>
+        </property>
+        <property name="text">
+         <string>Show whitespace markers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0" colspan="4">
+       <widget class="QCheckBox" name="showLineEndingMarkersCheckBox">
+        <property name="toolTip">
+         <string>Show visible markers for line endings in the note editor</string>
+        </property>
+        <property name="text">
+         <string>Show line ending markers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0" colspan="4">
        <widget class="QCheckBox" name="showNoteTextStatsCheckBox">
         <property name="text">
          <string>Show character, word and line count in the status bar</string>
         </property>
        </widget>
       </item>
-      <item row="12" column="0" colspan="4">
+      <item row="14" column="0" colspan="4">
        <widget class="QCheckBox" name="showMarkdownImagePreviewsCheckBox">
         <property name="text">
          <string>Show small Markdown preview images in the editor, if there is no text after the image</string>
         </property>
        </widget>
       </item>
-      <item row="13" column="0" colspan="4">
+      <item row="15" column="0" colspan="4">
        <widget class="QCheckBox" name="headingFoldingCheckBox">
         <property name="toolTip">
          <string>Shows fold buttons for Markdown headings and allows collapsing their contents</string>
@@ -186,7 +206,7 @@
         </property>
        </widget>
       </item>
-      <item row="14" column="0" colspan="4">
+      <item row="16" column="0" colspan="4">
        <widget class="QCheckBox" name="hideFormattingSyntaxCheckBox">
         <property name="toolTip">
          <string>Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</string>
@@ -196,14 +216,14 @@
         </property>
        </widget>
       </item>
-      <item row="15" column="0" colspan="4">
+      <item row="17" column="0" colspan="4">
        <widget class="QCheckBox" name="enableWikiLinkSupportCheckBox">
         <property name="text">
          <string>Enable wiki-style link support [[note name]]</string>
         </property>
        </widget>
       </item>
-      <item row="16" column="0" colspan="4">
+      <item row="18" column="0" colspan="4">
        <widget class="QCheckBox" name="wikiLinkFileNameAutoSelectCheckBox">
         <property name="toolTip">
          <string>Show the note filename selection when [[ is typed</string>

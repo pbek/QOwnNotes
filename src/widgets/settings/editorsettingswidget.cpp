@@ -59,6 +59,10 @@ void EditorSettingsWidget::readSettings() {
         settings.value(QStringLiteral("Editor/ensureEmptyLastLine"), false).toBool());
     ui->showLineNumbersInEditorCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/showLineNumbers")).toBool());
+    ui->showWhitespaceMarkersCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/showWhitespaceMarkers"), false).toBool());
+    ui->showLineEndingMarkersCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/showLineEndingMarkers"), false).toBool());
     ui->showNoteTextStatsCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/showNoteTextStats"), false).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
@@ -109,6 +113,10 @@ void EditorSettingsWidget::storeSettings() {
                       ui->ensureEmptyLastLineCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showLineNumbers"),
                       ui->showLineNumbersInEditorCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/showWhitespaceMarkers"),
+                      ui->showWhitespaceMarkersCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/showLineEndingMarkers"),
+                      ui->showLineEndingMarkersCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showNoteTextStats"),
                       ui->showNoteTextStatsCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),

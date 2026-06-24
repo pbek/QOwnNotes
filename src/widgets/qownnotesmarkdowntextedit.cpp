@@ -40,6 +40,7 @@
 #include <QTextEdit>
 #include <QTextFormat>
 #include <QTextLayout>
+#include <QTextOption>
 #include <QTimer>
 #include <QToolTip>
 #include <QUrl>
@@ -2482,6 +2483,28 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     const bool hlCurrLine =
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool();
     setHighlightCurrentLine(hlCurrLine);
+
+    QTextOption textOption = document()->defaultTextOption();
+    QTextOption::Flags textOptionFlags = textOption.flags();
+    const bool showWhitespaceMarkers =
+        settings.value(QStringLiteral("Editor/showWhitespaceMarkers"), false).toBool();
+    if (showWhitespaceMarkers) {
+        textOptionFlags |= QTextOption::ShowTabsAndSpaces;
+    } else {
+        textOptionFlags &= ~QTextOption::ShowTabsAndSpaces;
+    }
+
+    const bool showLineEndingMarkers =
+        settings.value(QStringLiteral("Editor/showLineEndingMarkers"), false).toBool();
+    if (showLineEndingMarkers) {
+        textOptionFlags |= QTextOption::ShowLineAndParagraphSeparators |
+                           QTextOption::AddSpaceForLineAndParagraphSeparators;
+    } else {
+        textOptionFlags &= ~(QTextOption::ShowLineAndParagraphSeparators |
+                             QTextOption::AddSpaceForLineAndParagraphSeparators);
+    }
+    textOption.setFlags(textOptionFlags);
+    document()->setDefaultTextOption(textOption);
 
     // Hide formatting syntax on non-cursor blocks (Typora-like)
     const bool hideFormattingSyntax =
