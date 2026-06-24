@@ -1686,91 +1686,111 @@ Connection error message: </source>
     </message>
     <message>
         <location filename="../widgets/settings/editorsettingswidget.ui" line="168"/>
+        <source>Show visible markers for spaces and tabs in the note editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="171"/>
+        <source>Show whitespace markers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="178"/>
+        <source>Show visible markers for line endings in the note editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="181"/>
+        <source>Show line ending markers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="188"/>
         <source>Show character, word and line count in the status bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="175"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="195"/>
         <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="182"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="202"/>
         <source>Shows fold buttons for Markdown headings and allows collapsing their contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="185"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="205"/>
         <source>Enable heading folding in the editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="192"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="212"/>
         <source>Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="195"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="215"/>
         <source>Hide markdown formatting syntax on inactive lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="202"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="222"/>
         <source>Enable wiki-style link support [[note name]]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="209"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="229"/>
         <source>Show the note filename selection when [[ is typed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="212"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="232"/>
         <source>Show note filename selection when [[ is typed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="222"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="242"/>
         <source>Tabs and Indents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="230"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="250"/>
         <source>Use tab character instead of spaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="237"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="257"/>
         <source>Indent:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="267"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="287"/>
         <source>Enable hanging indentation for Markdown lists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="279"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="299"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="282"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="302"/>
         <source>Insert current time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="288"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="308"/>
         <source>Time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="295"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="315"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="305"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="325"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7553,7 +7573,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="522"/>
+        <location filename="../widgets/navigationwidget.cpp" line="523"/>
+        <source>Expand all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/navigationwidget.cpp" line="529"/>
+        <source>Collapse all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/navigationwidget.cpp" line="537"/>
         <source>&amp;Rename heading</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10230,220 +10260,220 @@ Updating the interface takes a short while.</source>
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="655"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="656"/>
         <source>Increased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="658"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="659"/>
         <source>Decreased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1190"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1205"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1227"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1191"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1206"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1228"/>
         <source>An url was opened at the current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1480"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1481"/>
         <source>No equation was found in front of the cursor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1501"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1502"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2538"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2561"/>
         <source>&amp;Link selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2538"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2561"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2545"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2568"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2548"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2571"/>
         <source>Insert block &amp;quote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2555"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2578"/>
         <source>List operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2566"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2589"/>
         <source>Markdown operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2581"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2604"/>
         <source>Copy code block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2608"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2631"/>
         <source>Markdown LSP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2609"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2632"/>
         <source>Format document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2614"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2637"/>
         <source>Format selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2624"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2647"/>
         <source>Add table column left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2629"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2652"/>
         <source>Add table column right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2634"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2657"/>
         <source>Add table row above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2639"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2662"/>
         <source>Add table row below</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2644"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2667"/>
         <source>Edit table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2656"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2679"/>
         <source>Print</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2663"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2686"/>
         <source>Print selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2675"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2698"/>
         <source>Print selected text (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2691"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2714"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2701"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2724"/>
         <source>Export selected text as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2713"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2736"/>
         <source>Export selected text as PDF (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2733"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2756"/>
         <source>Select</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2747"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2770"/>
         <source>Custom actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2848"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2871"/>
         <source>No suggestions for %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2867"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2890"/>
         <source>Ignore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2869"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2892"/>
         <source>Add to Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2784"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2831"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2879"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2807"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2854"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2902"/>
         <source>Spelling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2960"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2983"/>
         <source>Ignore this rule globally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2961"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2984"/>
         <source>Ignore rule %1 globally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2995"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3018"/>
         <source>LanguageTool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3008"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3104"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3031"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3127"/>
         <source>No suggestions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3021"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3044"/>
         <source>More info...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3026"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3116"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3049"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3139"/>
         <source>Ignore this rule</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3036"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3125"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3059"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3148"/>
         <source>Ignore word &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3092"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3115"/>
         <source>Harper</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3720"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3743"/>
         <source>Markdown LSP server connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3814"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3837"/>
         <source>Filter completions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11912,37 +11942,37 @@ Do you want to install it anyway?</source>
 <context>
     <name>SystemTrayManager</name>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="115"/>
+        <location filename="../managers/systemtraymanager.cpp" line="116"/>
         <source>Open QOwnNotes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="140"/>
+        <location filename="../managers/systemtraymanager.cpp" line="143"/>
         <source>Note folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="172"/>
+        <location filename="../managers/systemtraymanager.cpp" line="175"/>
         <source>New note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="188"/>
+        <location filename="../managers/systemtraymanager.cpp" line="191"/>
         <source>Recent notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="204"/>
+        <location filename="../managers/systemtraymanager.cpp" line="207"/>
         <source>Show todo lists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="215"/>
+        <location filename="../managers/systemtraymanager.cpp" line="218"/>
         <source>Recent tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/systemtraymanager.cpp" line="235"/>
+        <location filename="../managers/systemtraymanager.cpp" line="238"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
