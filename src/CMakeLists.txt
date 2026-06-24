@@ -133,6 +133,15 @@ set(BUILD_TEST_APPLICATION
 set(BUILD_QTQUICK_DEMO
     OFF
     CACHE BOOL "" FORCE)
+if(QON_QT6_BUILD)
+  set(BUILD_WITH_QT5
+      OFF
+      CACHE BOOL "" FORCE)
+else()
+  set(BUILD_WITH_QT5
+      ON
+      CACHE BOOL "" FORCE)
+endif()
 set(BUILD_TESTING
     OFF
     CACHE BOOL "" FORCE)
