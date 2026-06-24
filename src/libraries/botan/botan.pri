@@ -47,14 +47,14 @@ win32 {
         QMAKE_CXXFLAGS += -wd4251 -wd4290 -wd4250
         DEFINES += BOTAN_BUILD_COMPILER_IS_MSVC BOTAN_TARGET_OS_HAS_GMTIME_S _SCL_SECURE_NO_WARNINGS
     } else {
-        QMAKE_CFLAGS += -fpermissive -finline-functions -Wno-long-long
+        QMAKE_CFLAGS += -finline-functions -Wno-long-long
         QMAKE_CXXFLAGS += -fpermissive -finline-functions -Wno-long-long
     }
     LIBS += -ladvapi32 -luser32
 }
 
 unix:*-g++* {
-    QMAKE_CFLAGS += -fPIC -fpermissive -finline-functions -Wno-long-long
+    QMAKE_CFLAGS += -fPIC -finline-functions -Wno-long-long
     QMAKE_CXXFLAGS += -fPIC -fpermissive -finline-functions -Wno-long-long
     QMAKE_CXXFLAGS -= -Werror
 }

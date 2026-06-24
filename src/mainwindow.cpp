@@ -3071,7 +3071,8 @@ void MainWindow::showWebAppStatusContextMenu(const QPoint &point) {
     if (_webAppConnectedDevices.isEmpty()) {
         connectedSystemsMenu->addAction(tr("No connected systems"))->setEnabled(false);
     } else {
-        for (const QString &deviceName : qAsConst(_webAppConnectedDevices)) {
+        const QStringList &connectedDevices = _webAppConnectedDevices;
+        for (const QString &deviceName : connectedDevices) {
             connectedSystemsMenu->addAction(deviceName)->setEnabled(false);
         }
     }

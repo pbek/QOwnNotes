@@ -21,4 +21,4 @@
 	url = https://github.com/qownnotes/QHotkey.git
 [submodule "src/libraries/qtkeychain"]
 	path = src/libraries/qtkeychain
-	url = https://github.com/frankosterfeld/qtkeychain.git
+	url = https://github.com/qownnotes/qtkeychain.git

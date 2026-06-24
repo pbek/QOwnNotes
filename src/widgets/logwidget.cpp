@@ -20,6 +20,7 @@
 #endif
 
 static QPointer<LogWidget> s_logWidget = nullptr;
+#ifndef INTEGRATION_TESTS
 static bool s_appIsShuttingDown = false;
 
 static bool shouldSkipWidgetLogging() {
@@ -27,6 +28,7 @@ static bool shouldSkipWidgetLogging() {
     return s_appIsShuttingDown || QCoreApplication::closingDown() ||
            (qApp && qApp->property("appIsShuttingDown").toBool());
 }
+#endif
 
 LogWidget::LogWidget(QWidget *parent)
     : QFrame(parent)

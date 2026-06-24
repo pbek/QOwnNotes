@@ -2135,6 +2135,10 @@ bool Note::storeNoteTextFileToDisk() {
  */
 bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
                                    bool *wasCancelledDueToExternalModification) {
+#ifdef INTEGRATION_TESTS
+    Q_UNUSED(wasCancelledDueToExternalModification)
+#endif
+
     const Note oldNote = *this;
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();

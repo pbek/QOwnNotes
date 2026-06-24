@@ -346,7 +346,9 @@ void CloudService::slotReplyFinished(QNetworkReply *reply) {
     }
 #endif
 
+#ifndef INTEGRATION_TESTS
 finalize:
+#endif
     if (reply->property("settingsConnectionTest").toBool()) {
         bool hasPendingSettingsConnectionTestReplies = false;
         const auto replies = findChildren<QNetworkReply *>();
@@ -619,8 +621,10 @@ void CloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     }
 
     settingsDialog = dialog;
-    const int requestId = ++_settingsCalendarListRequestId;
+#ifndef INTEGRATION_TESTS
     const QPointer<SettingsDialog> requestDialog(dialog);
+    const int requestId = ++_settingsCalendarListRequestId;
+#endif
 
     QUrl url(todoCalendarServerUrl);
     QNetworkRequest r(url);

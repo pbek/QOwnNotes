@@ -144,12 +144,12 @@ exists($$PWD/3rdparty/litehtml/CMakeLists.txt) {
     QMAKE_CFLAGS_DEBUG += -O2
     QMAKE_CXXFLAGS_DEBUG += -O2
 
-    # Suppress warnings-as-errors for 3rdparty litehtml/gumbo code
-    # These flags allow specific warning types through -Werror so that
-    # 3rdparty code doesn't break the build when DEV_MODE enables -Werror
+    # Suppress known warnings from the bundled litehtml/gumbo sources.
     !win32-msvc {
-        QMAKE_CFLAGS += -Wno-error=unused-parameter -Wno-error=missing-field-initializers
-        QMAKE_CXXFLAGS += -Wno-error=unused-parameter -Wno-error=missing-field-initializers
+        QMAKE_CFLAGS += -Wno-unused-parameter -Wno-missing-field-initializers \
+            -Wno-sign-compare -Wno-type-limits -Wno-old-style-declaration
+        QMAKE_CXXFLAGS += -Wno-unused-parameter -Wno-missing-field-initializers \
+            -Wno-sign-compare -Wno-unused-but-set-variable -Wno-type-limits
     }
 } else {
     INCLUDEPATH *= $$LITEHTML_INSTALL_DIR/include $$LITEHTML_INSTALL_DIR/include/litehtml
