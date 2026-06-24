@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.6.8
+
+- Added **Adwaita Light** and **Adwaita Dark** editor color schemes
+  (for [#3299](https://github.com/pbek/QOwnNotes/issues/3299))
+
 ## 26.6.7
 
 - Added the **Send clipboard as text** action to the tray menu when web
