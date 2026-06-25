@@ -20,6 +20,7 @@
 #include <QMessageBox>
 #include <QSysInfo>
 
+#include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 #include "services/webappclientservice.h"
 #include "ui_webapplicationsettingswidget.h"
@@ -59,7 +60,10 @@ void WebApplicationSettingsWidget::storeSettings() {
                       ui->enableWebApplicationCheckBox->isChecked());
     settings.setValue(QStringLiteral("webAppClientService/serverUrl"),
                       ui->webAppServerUrlLineEdit->text());
-    settings.setValue(QStringLiteral("webAppClientService/token"), ui->webAppTokenLineEdit->text());
+    settings.setValue(
+        QStringLiteral("webAppClientService/token"),
+        CryptoService::instance()->encryptToString(
+            ui->webAppTokenLineEdit->text(), QStringLiteral("settings/webAppClientService/token")));
     settings.setValue(QStringLiteral("webAppClientService/connectionName"),
                       ui->webAppConnectionNameLineEdit->text());
 }

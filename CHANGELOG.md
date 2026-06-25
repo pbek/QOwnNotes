@@ -5,6 +5,10 @@
 - Fixed the missing internal `bookmarks.svg` icon resource used by the note
   bookmark menu, so QOwnNotes no longer logs a startup warning for that icon
   (for [#3649](https://github.com/pbek/QOwnNotes/issues/3649))
+- Improved secret storage fallback handling by keeping legacy SimpleCrypt
+  encryption compatible with pre-qtkeychain secrets and migrating old plaintext
+  secret settings to encrypted storage even when the desktop keychain is
+  unavailable (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
 
 ## 26.6.8
 

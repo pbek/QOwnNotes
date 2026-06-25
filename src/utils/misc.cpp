@@ -2357,6 +2357,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
                                  "networking/proxyPassword",
                                  "ai/groq/apiKey",
                                  "ai/openai/apiKey",
+                                 "languageToolApiKey",
                                  "webSocketServerService/token",
                                  "webSocketServerService/bookmarkSuggestionApiToken",
                                  "webAppClientService/token"};

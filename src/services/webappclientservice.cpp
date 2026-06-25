@@ -34,6 +34,7 @@
 #include <memory>
 
 #include "metricsservice.h"
+#include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 
 using namespace std;
@@ -208,12 +209,21 @@ QString WebAppClientService::getServerUrl() {
 }
 
 QString WebAppClientService::getOrGenerateToken() {
-    QString token = SettingsService().value(QStringLiteral("webAppClientService/token")).toString();
+    SettingsService settings;
+    const QString key = QStringLiteral("webAppClientService/token");
+    const QString stored = settings.value(key).toString();
+    QString token = CryptoService::instance()->decryptToStringWithPlaintextFallback(stored);
+
+    if (!token.isEmpty() && token == stored && !CryptoService::isKeychainReference(stored)) {
+        settings.setValue(key, CryptoService::instance()->encryptToString(
+                                   token, QStringLiteral("settings/") + key));
+    }
 
     // if not token was set
     if (token.isEmpty()) {
         token = Utils::Misc::generateRandomString(32);
-        SettingsService().setValue(QStringLiteral("webAppClientService/token"), token);
+        settings.setValue(key, CryptoService::instance()->encryptToString(
+                                   token, QStringLiteral("settings/") + key));
     }
 
     return token;

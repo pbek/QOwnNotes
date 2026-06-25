@@ -476,7 +476,18 @@ void WebSocketServerService::processMessage(const QString &message) {
     MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
     const QString token = jsonObject.value(QStringLiteral("token")).toString();
     SettingsService settings;
-    QString storedToken = settings.value(QStringLiteral("webSocketServerService/token")).toString();
+    const QString storedTokenValue =
+        settings.value(QStringLiteral("webSocketServerService/token")).toString();
+    QString storedToken =
+        CryptoService::instance()->decryptToStringWithPlaintextFallback(storedTokenValue);
+
+    if (!storedToken.isEmpty() && storedToken == storedTokenValue &&
+        !CryptoService::isKeychainReference(storedTokenValue)) {
+        settings.setValue(
+            QStringLiteral("webSocketServerService/token"),
+            CryptoService::instance()->encryptToString(
+                storedToken, QStringLiteral("settings/webSocketServerService/token")));
+    }
 
     // request the token if not set
     if (token.isEmpty() || storedToken.isEmpty() || token != storedToken) {

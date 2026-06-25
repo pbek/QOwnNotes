@@ -16,6 +16,7 @@
 
 #include <QMessageBox>
 
+#include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 #include "ui_languagetoolsettingswidget.h"
 
@@ -61,7 +62,8 @@ void LanguageToolSettingsWidget::readSettings() {
             .value(QStringLiteral("languageToolServerUrl"), QStringLiteral("http://localhost:8081"))
             .toString());
     ui->languageToolApiKeyLineEdit->setText(
-        settings.value(QStringLiteral("languageToolApiKey")).toString());
+        CryptoService::instance()->decryptToStringWithPlaintextFallback(
+            settings.value(QStringLiteral("languageToolApiKey")).toString()));
     ui->languageToolCheckDelaySpinBox->setValue(
         settings.value(QStringLiteral("languageToolCheckDelay"), 1500).toInt());
 
@@ -111,8 +113,10 @@ void LanguageToolSettingsWidget::storeSettings() {
                       ui->languageToolLanguageComboBox->currentData().toString().isEmpty()
                           ? ui->languageToolLanguageComboBox->currentText().trimmed()
                           : ui->languageToolLanguageComboBox->currentData().toString());
-    settings.setValue(QStringLiteral("languageToolApiKey"),
-                      ui->languageToolApiKeyLineEdit->text().trimmed());
+    settings.setValue(
+        QStringLiteral("languageToolApiKey"),
+        CryptoService::instance()->encryptToString(ui->languageToolApiKeyLineEdit->text().trimmed(),
+                                                   QStringLiteral("settings/languageToolApiKey")));
     settings.setValue(QStringLiteral("languageToolCheckDelay"),
                       ui->languageToolCheckDelaySpinBox->value());
     settings.setValue(QStringLiteral("languageToolEnabledCategories"),

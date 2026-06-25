@@ -5,6 +5,7 @@
 #include <QShowEvent>
 #include <QtGui/QClipboard>
 
+#include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 #include "ui_websockettokendialog.h"
 
@@ -20,7 +21,8 @@ WebSocketTokenDialog::~WebSocketTokenDialog() { delete ui; }
 
 void WebSocketTokenDialog::loadTokenFromSettings() {
     SettingsService settings;
-    _initialToken = settings.value(QStringLiteral("webSocketServerService/token")).toString();
+    _initialToken = CryptoService::instance()->decryptToStringWithPlaintextFallback(
+        settings.value(QStringLiteral("webSocketServerService/token")).toString());
 
     if (_initialToken.isEmpty()) {
         ui->tokenLineEdit->setText(generateToken());
@@ -44,12 +46,17 @@ void WebSocketTokenDialog::on_generateButton_clicked() {
 
 void WebSocketTokenDialog::on_buttonBox_accepted() {
     SettingsService settings;
-    settings.setValue(QStringLiteral("webSocketServerService/token"), ui->tokenLineEdit->text());
+    settings.setValue(
+        QStringLiteral("webSocketServerService/token"),
+        CryptoService::instance()->encryptToString(
+            ui->tokenLineEdit->text(), QStringLiteral("settings/webSocketServerService/token")));
 }
 
 void WebSocketTokenDialog::reject() {
     SettingsService settings;
-    settings.setValue(QStringLiteral("webSocketServerService/token"), _initialToken);
+    settings.setValue(QStringLiteral("webSocketServerService/token"),
+                      CryptoService::instance()->encryptToString(
+                          _initialToken, QStringLiteral("settings/webSocketServerService/token")));
     ui->tokenLineEdit->setText(_initialToken.isEmpty() ? generateToken() : _initialToken);
 
     MasterDialog::reject();

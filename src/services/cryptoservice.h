@@ -19,6 +19,7 @@ class CryptoService : public QObject {
     QString encryptToString(const QString &text);
     QString encryptToString(const QString &text, const QString &key);
     QString decryptToString(const QString &text);
+    QString decryptToStringWithPlaintextFallback(const QString &text);
     static bool isKeychainReference(const QString &text);
     bool deleteSecret(const QString &storedValueOrKey) const;
     void deleteSecrets(const QStringList &storedValuesOrKeys) const;

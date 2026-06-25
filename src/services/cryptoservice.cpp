@@ -155,6 +155,16 @@ QString CryptoService::decryptToString(const QString &text) {
     return legacyDecryptToString(text);
 }
 
+QString CryptoService::decryptToStringWithPlaintextFallback(const QString &text) {
+    const QString plainText = decryptToString(text);
+
+    if (plainText.isEmpty() && !text.isEmpty() && !isKeychainReference(text)) {
+        return text;
+    }
+
+    return plainText;
+}
+
 bool CryptoService::isKeychainReference(const QString &text) {
     return text.startsWith(KeychainMarkerPrefix);
 }
@@ -247,10 +257,12 @@ QStringList CryptoService::keychainReferencesFromDiskDatabase() {
 }
 
 QString CryptoService::legacyEncryptToString(const QString &text) {
+    // Keep this compatible with the pre-qtkeychain SimpleCrypt storage format.
     return _simpleCrypt->encryptToString(text);
 }
 
 QString CryptoService::legacyDecryptToString(const QString &text) {
+    // Keep this compatible with the pre-qtkeychain SimpleCrypt storage format.
     return _simpleCrypt->decryptToString(text);
 }
 
@@ -321,7 +333,16 @@ bool CryptoService::migrateSecret(QString *storedValue, const QString &key,
         plainText = *storedValue;
     }
 
-    if (plainText.isEmpty() || !writeSecret(key, plainText)) {
+    if (plainText.isEmpty()) {
+        return false;
+    }
+
+    if (!writeSecret(key, plainText)) {
+        if (allowPlaintextFallback && *storedValue == plainText) {
+            *storedValue = legacyEncryptToString(plainText);
+            return true;
+        }
+
         return false;
     }
 
@@ -350,7 +371,10 @@ void CryptoService::migrateSettingsSecrets() {
     };
     const QStringList plaintextFallbackSettingsKeys = {
         QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken"),
+        QStringLiteral("webSocketServerService/token"),
+        QStringLiteral("webAppClientService/token"),
         QStringLiteral("ai/mcpServerToken"),
+        QStringLiteral("languageToolApiKey"),
     };
 
     SettingsService settings;

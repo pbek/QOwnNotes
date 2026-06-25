@@ -11,6 +11,7 @@
 #include "helpers/qownspellchecker.h"
 #include "libraries/qmarkdowntextedit/markdownhighlighter.h"
 #include "mainwindow.h"
+#include "services/cryptoservice.h"
 #include "services/languagetoolclient.h"
 #include "services/settingsservice.h"
 
@@ -335,7 +336,10 @@ void LanguageToolChecker::readSettings() {
             .trimmed();
     _language =
         settings.value(QStringLiteral("languageToolLanguage"), QStringLiteral("auto")).toString();
-    _apiKey = settings.value(QStringLiteral("languageToolApiKey")).toString().trimmed();
+    _apiKey = CryptoService::instance()
+                  ->decryptToStringWithPlaintextFallback(
+                      settings.value(QStringLiteral("languageToolApiKey")).toString())
+                  .trimmed();
     _checkDelayMs = settings.value(QStringLiteral("languageToolCheckDelay"), 1500).toInt();
     _timeoutMs = settings.value(QStringLiteral("languageToolTimeout"), 5000).toInt();
     _enabledCategories =
