@@ -2,6 +2,9 @@
 
 ## 26.6.9
 
+- Cleaned up remaining Qt 6 build warning noise in the application and test
+  builds, including generated KWallet proxy and fortify warning output
+  (for [#3648](https://github.com/pbek/QOwnNotes/issues/3648))
 - Fixed the missing internal `bookmarks.svg` icon resource used by the note
   bookmark menu, so QOwnNotes no longer logs a startup warning for that icon
   (for [#3649](https://github.com/pbek/QOwnNotes/issues/3649))
