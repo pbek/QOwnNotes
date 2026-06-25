@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.6.9
+
+- Fixed the missing internal `bookmarks.svg` icon resource used by the note
+  bookmark menu, so QOwnNotes no longer logs a startup warning for that icon
+  (for [#3649](https://github.com/pbek/QOwnNotes/issues/3649))
+
 ## 26.6.8
 
 - Added **Expand all** and **Collapse all** context menu actions to heading
