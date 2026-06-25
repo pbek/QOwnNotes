@@ -96,3 +96,21 @@ related to this exact issue.
 
 Once the expired key has been deleted, you must then newly _import_ the **current** key
 manually as described in the beginning of these installation instructions.
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+
+For GNOME and other Secret Service based desktops:
+
+```bash
+sudo dnf install gnome-keyring libsecret seahorse
+```
+
+For KDE Plasma:
+
+```bash
+sudo dnf install kwalletmanager kf6-kwallet
+```
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::
