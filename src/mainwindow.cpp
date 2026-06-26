@@ -5419,6 +5419,23 @@ void MainWindow::on_actionInsert_code_block_triggered() { activeNoteTextEdit()->
 void MainWindow::on_actionInsert_checkbox_list_item_triggered() {
     auto *textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
+
+    if (cursor.hasSelection()) {
+        QTextCursor selectionStartCursor(cursor.document());
+        selectionStartCursor.setPosition(cursor.selectionStart());
+
+        QTextCursor selectionEndCursor(cursor.document());
+        selectionEndCursor.setPosition(cursor.selectionEnd());
+        if (cursor.selectionEnd() > cursor.selectionStart() && selectionEndCursor.atBlockStart()) {
+            selectionEndCursor.movePosition(QTextCursor::PreviousCharacter);
+        }
+
+        if (selectionStartCursor.blockNumber() != selectionEndCursor.blockNumber()) {
+            on_actionCreate_checkbox_list_triggered();
+            return;
+        }
+    }
+
     const int cursorPosition = cursor.position();
     const QTextBlock block = cursor.block();
     const QString blockText = block.text();

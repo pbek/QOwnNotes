@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.6.10
+
+- The **Insert checkbox list item** action now automatically uses the existing
+  **Create checkbox list** behavior when multiple lines are selected, so selected
+  lines are converted consistently with the dedicated list action
+  (for [#3610](https://github.com/pbek/QOwnNotes/issues/3610))
+
 ## 26.6.9
 
 - Cleaned up remaining Qt 6 build warning noise in the application and test
