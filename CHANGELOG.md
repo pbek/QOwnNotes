@@ -10,6 +10,8 @@
   scripts stop immediately when checkout fails
 - Fixed the Qt 6 OBS release script by removing stale Qt 5 packaging file
   references and copying the existing `qownnotes-l10n` install file
+- Suppressed harmless Python `SyntaxWarning` output from Ubuntu 24.04's packaged
+  `osc` command in the release container
 
 ## 26.6.10
 

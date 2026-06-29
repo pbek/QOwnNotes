@@ -40,6 +40,10 @@ RUN curl -L https://github.com/zellij-org/zellij/releases/download/v0.42.2/zelli
 # Try to fix https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1074680
 RUN sed -i 's/^import imp$/import importlib/' /usr/lib/python3/dist-packages/osc/commandline.py
 
+# Ubuntu 24.04's osc package emits Python 3.12 SyntaxWarnings for invalid escape
+# sequences in regex strings. They are harmless, but make release logs noisy.
+ENV PYTHONWARNINGS=ignore::SyntaxWarning
+
 # QOwnNotes repo is supposed to be mounted to /QOwnNotes
 USER ubuntu
 WORKDIR /home/ubuntu
