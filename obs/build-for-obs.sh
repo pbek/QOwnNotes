@@ -12,6 +12,8 @@
 # A file ~/.oscrc will be generated upon first start of osc
 #
 
+set -e
+
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=19.6.1.4
 

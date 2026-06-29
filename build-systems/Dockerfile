@@ -33,7 +33,7 @@ RUN curl -L https://github.com/zellij-org/zellij/releases/download/v0.42.2/zelli
     && mv zellij /usr/local/bin
 
 # Try to fix https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1074680
-RUN sed -i 's/import imp/import importlib/' /usr/lib/python3/dist-packages/osc/commandline.py
+RUN sed -i 's/^import imp$/import importlib/' /usr/lib/python3/dist-packages/osc/commandline.py
 
 # QOwnNotes repo is supposed to be mounted to /QOwnNotes
 USER ubuntu
