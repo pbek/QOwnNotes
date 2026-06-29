@@ -8,6 +8,8 @@
 - Fixed the OBS release container `osc` workaround so it no longer corrupts
   existing Python `import importlib` statements, and made the OBS release
   scripts stop immediately when checkout fails
+- Fixed the Qt 6 OBS release script by removing stale Qt 5 packaging file
+  references and copying the existing `qownnotes-l10n` install file
 
 ## 26.6.10
 

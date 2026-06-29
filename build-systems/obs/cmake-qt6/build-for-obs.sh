@@ -56,14 +56,8 @@ fi
 # set the release string
 echo '#define RELEASE "OBS"' >src/release.h
 
-# replace the version in the spec file
-sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" $buildSystemPath/qownnotes.spec
-
-# replace the version in the PKGBUILD file
-sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" $buildSystemPath/PKGBUILD
-
 # replace the version in the dsc file
-sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" $buildSystemPath/qownnotes.dsc
+sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" "$buildSystemPath/qownnotes.dsc"
 
 changelogText="Released version $QOWNNOTES_VERSION"
 
@@ -80,7 +74,7 @@ cp webpage/src/getting-started/shortcuts.md src
 # rename the src directory
 mv src "$qownnotesSrcDir"
 
-changelogPath=$buildSystemPath/qownnotes.bin
+changelogPath="$buildSystemPath/qownnotes.bin"
 
 # create the changelog file
 {
@@ -93,7 +87,7 @@ changelogPath=$buildSystemPath/qownnotes.bin
 cat "$changelogPath"
 
 # create the Debian changelog file
-debChangelogPath=$buildSystemPath/debian.changelog
+debChangelogPath="$buildSystemPath/debian.changelog"
 versionPart="$QOWNNOTES_VERSION-1debian"
 {
   echo "qownnotes ($versionPart) debian; urgency=low"
@@ -126,38 +120,22 @@ cd ../..
 
 # copying new files to repository
 mv "$archiveFile" "$obsRepoPath"
-cp $buildSystemPath/qownnotes.bin "$obsRepoPath"
-#cp $buildSystemPath/qownnotes.spec "$obsRepoPath"
+cp "$buildSystemPath/qownnotes.bin" "$obsRepoPath"
 #cp $buildSystemPath/appimage.yml "$obsRepoPath"
 #cp $buildSystemPath/_service "$obsRepoPath"
 #cp $buildSystemPath/qownnotes.appdata.xml "$obsRepoPath"
 cp "$debChangelogPath" "$obsRepoPath"
-cp $buildSystemPath/PKGBUILD "$obsRepoPath"
-cp $buildSystemPath/debian.control "$obsRepoPath"
-cp $buildSystemPath/debian.copyright "$obsRepoPath"
-cp $buildSystemPath/debian.compat "$obsRepoPath"
-cp $buildSystemPath/debian.rules "$obsRepoPath"
-cp $buildSystemPath/debian.qownnotes.install "$obsRepoPath"
-cp $buildSystemPath/qownnotes.dsc "$obsRepoPath"
-cp $buildSystemPath/debian.qownnotes-i18n.install "$obsRepoPath"
+cp "$buildSystemPath/debian.control" "$obsRepoPath"
+cp "$buildSystemPath/debian.copyright" "$obsRepoPath"
+cp "$buildSystemPath/debian.rules" "$obsRepoPath"
+cp "$buildSystemPath/debian.qownnotes.install" "$obsRepoPath"
+cp "$buildSystemPath/qownnotes.dsc" "$obsRepoPath"
+cp "$buildSystemPath/debian.qownnotes-l10n.install" "$obsRepoPath"
 
 cd "$obsRepoPath" || exit 1
 
 # add all new files
 osc add "$archiveFile"
-#osc add qownnotes.bin
-#osc add qownnotes.spec
-#osc add PKGBUILD
-#osc add debian.changelog
-#osc add debian.control
-#osc add debian.rules
-#osc add debian.copyright
-#osc add debian.compat
-#osc add debian.qownnotes.install
-#osc add qownnotes.dsc
-#osc add appimage.yml
-#osc add _service
-#osc add qownnotes.appdata.xml
 
 echo "Committing changes..."
 
