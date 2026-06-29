@@ -9,6 +9,9 @@
 # Also a ~/.dput.cf has to be in place
 #
 
+# Exit immediately if any command fails
+set -e
+
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=23.3.0.1
 
@@ -39,6 +42,21 @@ while test $# -gt 0; do
   esac
   shift
 done
+
+if [ ! -f /usr/share/cdbs/1/class/makefile.mk ]; then
+  if [ "$(id -u)" -eq 0 ]; then
+    apt-get update
+    apt-get -y install cdbs
+  elif command -v sudo >/dev/null; then
+    sudo apt-get update
+    sudo apt-get -y install cdbs
+  fi
+
+  if [ ! -f /usr/share/cdbs/1/class/makefile.mk ]; then
+    echo "Missing CDBS qmake/makefile support. Install a cdbs package that still ships /usr/share/cdbs/1/class/makefile.mk, or use the Ubuntu 24.04 release container." >&2
+    exit 1
+  fi
+fi
 
 echo "Started the debian source packaging process, using latest '$BRANCH' git tree"
 
