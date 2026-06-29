@@ -8,7 +8,7 @@ RUN (type -p wget >/dev/null || (apt update && apt-get install wget -y)) \
     && mkdir -p -m 755 /etc/apt/keyrings \
     && wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
     && chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
 RUN apt-get update
 
@@ -20,7 +20,7 @@ RUN apt-get -y install bash \
          qt5-qmake qtbase5-dev libqt5svg5-dev qtdeclarative5-dev \
          libqt5websockets5-dev libqt5x11extras5-dev \
          libsecret-1-dev \
-         qt6-base-dev qt6-declarative-dev libqt6svg6-dev libqt6websockets6-dev \
+         qt6-base-dev qt6-declarative-dev libqt6svg6-dev qt6-websockets-dev \
          libqt6svg6 libqt6svgwidgets6 libqt6websockets6 libqt6core5compat6 \
          libqt6core5compat6-dev gh curl python3-m2crypto \
          cmake pkg-config qt6-l10n-tools qt6-tools-dev qt6-tools-dev-tools
