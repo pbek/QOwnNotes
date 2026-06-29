@@ -596,6 +596,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     connect(qApp, &QApplication::commitDataRequest, this, &MainWindow::on_action_Quit_triggered);
 #else
     // Avoid re-entering the Cocoa quit flow on macOS during session shutdown, see #3546.
+    // Still mark shutdown so closeEvent doesn't minimize to the menu bar item and block logout.
+    connect(qApp, &QApplication::commitDataRequest, this,
+            [] { qApp->setProperty("appIsShuttingDown", true); });
 #endif
 
     // Register the LogWidget::LogType type so showStatusBarMessage there doesn't throw a warning,
@@ -3619,7 +3622,8 @@ void MainWindow::storeSettings() {
 
 void MainWindow::closeEvent(QCloseEvent *event) {
     const bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
-    const bool isJustHide = showSystemTray;
+    const bool isAppShuttingDown = qApp->property("appIsShuttingDown").toBool();
+    const bool isJustHide = showSystemTray && !isAppShuttingDown;
 
 #ifdef Q_OS_MAC
     // #1113, unfortunately the closeEvent is also fired when the application
