@@ -13,6 +13,7 @@ Package-List:
 Build-Depends:
  cmake (>= 3.16),
  debhelper-compat (= 13),
+ libsecret-1-dev,
  libxkbcommon-dev,
  pkg-config,
  qt6-base-dev,

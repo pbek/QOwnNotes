@@ -11,6 +11,7 @@
   makeWrapper,
   wrapQtAppsHook,
   botan2,
+  libsecret,
   pkg-config,
   xvfb-run,
   installShellFiles,
@@ -47,7 +48,10 @@ stdenv.mkDerivation {
     qtwebsockets
     botan2
   ]
-  ++ lib.optionals stdenv.isLinux [ qtwayland ];
+  ++ lib.optionals stdenv.isLinux [
+    libsecret
+    qtwayland
+  ];
 
   qmakeFlags = [ "USE_SYSTEM_BOTAN=1" ];
 

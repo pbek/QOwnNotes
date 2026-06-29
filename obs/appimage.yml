@@ -7,6 +7,7 @@ build:
     - sqlite3-devel
     - aspell-devel
     - pkgconfig(sqlite3)
+    - pkgconfig(libsecret-1)
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5Sql)
     - pkgconfig(Qt5Gui)

@@ -81,6 +81,7 @@
               qtsvg
               pkgs.botan3
               pkgs.libgit2
+              pkgs.libsecret
             ];
 
             shellHook = ''

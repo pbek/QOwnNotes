@@ -84,6 +84,7 @@ parts:
       - libqt6svg6-dev
       - libqt6websockets6-dev
       - libqt6core5compat6-dev
+      - libsecret-1-dev
       - qt6-l10n-tools
       - qt6-tools-dev-tools
     stage-packages:
@@ -106,6 +107,7 @@ parts:
       - libqt6qmlworkerscript6
       - libqt6quick6
       - libqt6opengl6t64
+      - libsecret-1-0
       - libproxy1v5
       - qt6-wayland
       - git-core

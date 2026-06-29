@@ -7,6 +7,7 @@ RUN apt-get -y update && DEBIAN_FRONTEND=noninteractive apt-get -y install \
     python3-pip \
     build-essential \
     libdbus-1-3 \
+    libsecret-1-dev \
     libpulse-mainloop-glib0
 
 RUN pip3 install aqtinstall

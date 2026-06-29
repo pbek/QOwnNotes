@@ -13,6 +13,7 @@
   wrapQtAppsHook,
   botan3,
   libgit2,
+  libsecret,
   pkg-config,
   xvfb-run,
   installShellFiles,
@@ -53,7 +54,10 @@ stdenv.mkDerivation {
     libgit2
     aspell
   ]
-  ++ lib.optionals stdenv.isLinux [ qtwayland ];
+  ++ lib.optionals stdenv.isLinux [
+    libsecret
+    qtwayland
+  ];
 
   cmakeFlags = [
     #    "-DQON_QT6_BUILD=ON"

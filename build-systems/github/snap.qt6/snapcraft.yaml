@@ -80,6 +80,7 @@ parts:
       - libqt6svg6-dev
       - libqt6websockets6-dev
       - libqt6core5compat6-dev
+      - libsecret-1-dev
       - qt6-l10n-tools
       - qt6-tools-dev-tools
     stage-packages:
@@ -105,6 +106,8 @@ parts:
       - libqt6quick6
       # -- Qt6 OpenGL (required by libqt6quick6) --
       - libqt6opengl6t64
+      # -- Secret Service keychain backend --
+      - libsecret-1-0
       # -- Proxy support (libqt6network6t64 links to libproxy) --
       # libproxy1v5 ships libpxbackend-1.0.so in a private sub-directory;
       # the layout section above makes that path visible to the linker.

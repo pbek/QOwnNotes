@@ -20,6 +20,7 @@ DEPEND="
 >=dev-qt/qtwebsockets-6.9:6
 >=dev-qt/qtdeclarative-6.9:6
 >=dev-qt/qtsvg-6.9:6
+app-crypt/libsecret
 "
 RDEPEND="${DEPEND}"
 

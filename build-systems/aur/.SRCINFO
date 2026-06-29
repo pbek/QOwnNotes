@@ -18,6 +18,7 @@ pkgbase = qownnotes
 	depends = aspell
 	depends = botan
 	depends = libgit2
+	depends = libsecret
 	source = https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-VERSION-STRING.tar.xz
 	sha256sums = ARCHIVE-SHA256
 

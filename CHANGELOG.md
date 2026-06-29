@@ -2,6 +2,9 @@
 
 ## 26.6.10
 
+- Added libsecret to the Linux build dependencies so qtkeychain can use the
+  Secret Service backend instead of falling back to KWallet on non-KDE desktops
+  (for [#3650](https://github.com/pbek/QOwnNotes/issues/3650))
 - The **Insert checkbox list item** action now automatically uses the existing
   **Create checkbox list** behavior when multiple lines are selected, so selected
   lines are converted consistently with the dedicated list action

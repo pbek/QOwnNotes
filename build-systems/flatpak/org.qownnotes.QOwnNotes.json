@@ -11,7 +11,8 @@
     "--socket=x11",
     "--share=ipc",
     "--share=network",
-    "--device=dri"
+    "--device=dri",
+    "--talk-name=org.freedesktop.secrets"
   ],
   "modules": [
     {
