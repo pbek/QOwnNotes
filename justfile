@@ -22,6 +22,11 @@ alias trace-process := process-trace
 alias test := src-test
 alias download-translations := translations-download
 
+# Build the Docker compose images for build systems
+[group('build-systems')]
+build-systems-docker-build:
+    cd build-systems && docker compose build
+
 # Build the translations
 [group('translations')]
 translations-build:
