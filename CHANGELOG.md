@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.6.11
+
+- Fixed the Qt 5 Ubuntu Launchpad release container by pinning it to Ubuntu
+  24.04, because newer Ubuntu CDBS packages no longer ship the qmake/makefile
+  classes required by the Qt 5 source package build
+- Fixed the OBS release container `osc` workaround so it no longer corrupts
+  existing Python `import importlib` statements, and made the OBS release
+  scripts stop immediately when checkout fails
+
 ## 26.6.10
 
 - Added libsecret to the Linux build dependencies so qtkeychain can use the
