@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 26.6.12
+## 26.7.0
 
 - Fixed quitting QOwnNotes on **macOS** when the menu bar item is enabled, so the
   application no longer minimizes back to the menu bar during quit or session
