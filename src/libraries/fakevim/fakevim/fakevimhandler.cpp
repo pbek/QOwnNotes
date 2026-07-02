@@ -1674,6 +1674,7 @@ class FakeVimHandler::Private : public QObject {
 
     EventResult handleEvent(QKeyEvent *ev);
     bool wantsOverride(QKeyEvent *ev);
+    bool handleShortcutOverride(QKeyEvent *ev);
     bool parseExCommand(QString *line, ExCommand *cmd);
     bool parseLineRange(QString *line, ExCommand *cmd);
     int parseLineAddress(QString *cmd);
@@ -2040,6 +2041,7 @@ class FakeVimHandler::Private : public QObject {
     bool m_wasReadOnly;    // saves read-only state of document
 
     bool m_inFakeVim;    // true if currently processing a key press or a command
+    bool m_ignoreNextEscapeKeyPress;
 
     FakeVimHandler *q;
     int m_register;
@@ -2349,6 +2351,7 @@ void FakeVimHandler::Private::init() {
     m_cursor = QTextCursor(document());
     m_cursorNeedsUpdate = true;
     m_inFakeVim = false;
+    m_ignoreNextEscapeKeyPress = false;
     m_findStartPosition = -1;
     m_visualBlockInsert = NoneBlockInsertMode;
     m_positionPastEnd = false;
@@ -2508,6 +2511,21 @@ bool FakeVimHandler::Private::wantsOverride(QKeyEvent *ev) {
     }
 
     // Let other shortcuts trigger.
+    return false;
+}
+
+bool FakeVimHandler::Private::handleShortcutOverride(QKeyEvent *ev) {
+    if (ev->key() != Key_Escape || !wantsOverride(ev)) return false;
+
+    // Handle the Vim mode transition during ShortcutOverride because Plasma
+    // 6.7's alternate-character overlay can consume Escape before the regular
+    // key press reaches the editor.
+    EventResult res = handleEvent(ev);
+    if (res == EventHandled || res == EventCancelled) {
+        m_ignoreNextEscapeKeyPress = true;
+        return true;
+    }
+
     return false;
 }
 
@@ -8636,6 +8654,11 @@ bool FakeVimHandler::eventFilter(QObject *ob, QEvent *ev) {
         (ob == d->editor() ||
          (Private::g.mode == ExMode || Private::g.subsubmode == SearchSubSubMode))) {
         auto kev = static_cast<QKeyEvent *>(ev);
+        if (kev->key() == Qt::Key_Escape && d->m_ignoreNextEscapeKeyPress) {
+            d->m_ignoreNextEscapeKeyPress = false;
+            return true;
+        }
+        d->m_ignoreNextEscapeKeyPress = false;
         KEY_DEBUG("KEYPRESS" << kev->key() << kev->text() << QChar(kev->key()));
         EventResult res = d->handleEvent(kev);
         // if (Private::g.mode == InsertMode)
@@ -8651,6 +8674,11 @@ bool FakeVimHandler::eventFilter(QObject *ob, QEvent *ev) {
         (ob == d->editor() ||
          (Private::g.mode == ExMode || Private::g.subsubmode == SearchSubSubMode))) {
         auto kev = static_cast<QKeyEvent *>(ev);
+        if (d->handleShortcutOverride(kev)) {
+            KEY_DEBUG("HANDLED SHORTCUT OVERRIDE" << kev->key());
+            ev->accept();
+            return true;
+        }
         if (d->wantsOverride(kev)) {
             KEY_DEBUG("OVERRIDING SHORTCUT" << kev->key());
             ev->accept();    // accepting means "don't run the shortcuts"

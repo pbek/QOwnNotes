@@ -2,6 +2,9 @@
 
 ## 26.7.0
 
+- Fixed leaving **Vim mode** insert mode with the Escape key on KDE Plasma 6.7
+  when the alternate-character keyboard overlay is enabled
+  (for [#3647](https://github.com/pbek/QOwnNotes/issues/3647))
 - Fixed quitting QOwnNotes on **macOS** when the menu bar item is enabled, so the
   application no longer minimizes back to the menu bar during quit or session
   shutdown and blocks shutting down the Mac (for [#3651](https://github.com/pbek/QOwnNotes/issues/3651))
