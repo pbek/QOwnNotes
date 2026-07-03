@@ -12,6 +12,8 @@ There are different ways to search for notes:
   file name or note text
 - `n:book` or `name:book` will search for notes with `book` just in the note
   name or file name
+- `n:"note book"` or `name:"note book"` will search for notes with exactly
+  `note book` just in the note name or file name
 
 ![Searching](/img/searching.png)
 
