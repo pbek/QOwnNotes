@@ -1,10 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.7.1
+
+- The note text search now supports searching for note titles with spaces by using
+  quoted name filters like `n:"note title"` (for [#1890](https://github.com/pbek/QOwnNotes/issues/1890))
+
 ## 26.7.0
 
-- The note text search now supports searching for note titles with spaces by
-  using quoted name filters like `n:"note title"`
-  (for [#1890](https://github.com/pbek/QOwnNotes/issues/1890))
 - Fixed leaving **Vim mode** insert mode with the Escape key on KDE Plasma 6.7
   when the alternate-character keyboard overlay is enabled
   (for [#3647](https://github.com/pbek/QOwnNotes/issues/3647))
