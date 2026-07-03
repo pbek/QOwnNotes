@@ -204,22 +204,59 @@ void TestNotes::testNoteToMarkdownHtml() {
     QVERIFY(html.contains(expectedBody));
 }
 
-void TestNotes::testQuotedNameSearchWithSpaces() {
+void TestNotes::testSearchQueryStringListModes() {
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("note book")),
+             QStringList() << QStringLiteral("note") << QStringLiteral("book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("\"note book\"")),
+             QStringList() << QStringLiteral("note book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:book")), QStringList()
+                                                                       << QStringLiteral("n:book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("name:book")),
+             QStringList() << QStringLiteral("name:book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:\"note book\"")),
+             QStringList() << QStringLiteral("n:note book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("name:\"note book\"")),
+             QStringList() << QStringLiteral("name:note book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:\"note book\""), true, true),
+             QStringList() << QStringLiteral("note\\ book"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("name:\"note book\""), true, true),
+             QStringList() << QStringLiteral("note\\ book"));
+}
+
+void TestNotes::testSearchInNotesModes() {
     const QString title = uniqueTestName(QStringLiteral("Project Alpha"));
     const Note titleMatch = createTestNote(title, 0, QStringLiteral("# Different heading\n"));
     const Note textOnlyMatch = createTestNote(
         uniqueTestName(QStringLiteral("Different Project")), 0,
         QStringLiteral("# Different Project\nThis note mentions %1 in the text.\n").arg(title));
 
-    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:\"Project Alpha\"")),
-             QStringList() << QStringLiteral("n:Project Alpha"));
-    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:\"Project Alpha\""), true, true),
-             QStringList() << QStringLiteral("Project\\ Alpha"));
+    const QVector<int> plainNoteIds = Note::searchInNotes(title, true);
+    QVERIFY(plainNoteIds.contains(titleMatch.getId()));
+    QVERIFY(plainNoteIds.contains(textOnlyMatch.getId()));
 
-    const QVector<int> noteIds =
+    const QVector<int> quotedNoteIds =
+        Note::searchInNotes(QStringLiteral("\"") + title + QStringLiteral("\""), true);
+    QVERIFY(quotedNoteIds.contains(titleMatch.getId()));
+    QVERIFY(quotedNoteIds.contains(textOnlyMatch.getId()));
+
+    const QVector<int> unquotedNameNoteIds = Note::searchInNotes(QStringLiteral("n:Alpha"), true);
+    QVERIFY(unquotedNameNoteIds.contains(titleMatch.getId()));
+    QVERIFY(!unquotedNameNoteIds.contains(textOnlyMatch.getId()));
+
+    const QVector<int> unquotedLongNameNoteIds =
+        Note::searchInNotes(QStringLiteral("name:Alpha"), true);
+    QVERIFY(unquotedLongNameNoteIds.contains(titleMatch.getId()));
+    QVERIFY(!unquotedLongNameNoteIds.contains(textOnlyMatch.getId()));
+
+    const QVector<int> quotedShortNameNoteIds =
         Note::searchInNotes(QStringLiteral("n:\"") + title + QStringLiteral("\""), true);
-    QVERIFY(noteIds.contains(titleMatch.getId()));
-    QVERIFY(!noteIds.contains(textOnlyMatch.getId()));
+    QVERIFY(quotedShortNameNoteIds.contains(titleMatch.getId()));
+    QVERIFY(!quotedShortNameNoteIds.contains(textOnlyMatch.getId()));
+
+    const QVector<int> quotedLongNameNoteIds =
+        Note::searchInNotes(QStringLiteral("name:\"") + title + QStringLiteral("\""), true);
+    QVERIFY(quotedLongNameNoteIds.contains(titleMatch.getId()));
+    QVERIFY(!quotedLongNameNoteIds.contains(textOnlyMatch.getId()));
 }
 
 void TestNotes::testMarkdownTildeCodeFenceToHtml() {
