@@ -32,6 +32,7 @@ class TestNotes : public QObject {
     void testNoteDecryption();
     void testNoteDecryptionFail();
     void testNoteToMarkdownHtml();
+    void testQuotedNameSearchWithSpaces();
 
     /* Preview Syntax Highlighter Tests */
     void testMarkdownTildeCodeFenceToHtml();

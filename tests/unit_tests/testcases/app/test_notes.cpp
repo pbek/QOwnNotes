@@ -204,6 +204,24 @@ void TestNotes::testNoteToMarkdownHtml() {
     QVERIFY(html.contains(expectedBody));
 }
 
+void TestNotes::testQuotedNameSearchWithSpaces() {
+    const QString title = uniqueTestName(QStringLiteral("Project Alpha"));
+    const Note titleMatch = createTestNote(title, 0, QStringLiteral("# Different heading\n"));
+    const Note textOnlyMatch = createTestNote(
+        uniqueTestName(QStringLiteral("Different Project")), 0,
+        QStringLiteral("# Different Project\nThis note mentions %1 in the text.\n").arg(title));
+
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:\"Project Alpha\"")),
+             QStringList() << QStringLiteral("n:Project Alpha"));
+    QCOMPARE(Note::buildQueryStringList(QStringLiteral("n:\"Project Alpha\""), true, true),
+             QStringList() << QStringLiteral("Project\\ Alpha"));
+
+    const QVector<int> noteIds =
+        Note::searchInNotes(QStringLiteral("n:\"") + title + QStringLiteral("\""), true);
+    QVERIFY(noteIds.contains(titleMatch.getId()));
+    QVERIFY(!noteIds.contains(textOnlyMatch.getId()));
+}
+
 void TestNotes::testMarkdownTildeCodeFenceToHtml() {
     QString code = QStringLiteral("# Tilde Code Fence\n");
     code += QStringLiteral("~~~cpp\n");

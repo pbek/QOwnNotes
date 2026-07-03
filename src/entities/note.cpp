@@ -1772,12 +1772,16 @@ QStringList Note::buildQueryStringList(QString searchString, bool escapeForRegul
                                        bool removeSearchPrefix) {
     auto queryStrings = QStringList();
 
-    // check for strings in ""
-    static const QRegularExpression re(QStringLiteral("\"([^\"]+)\""));
+    // Check for strings in "" and keep a possible name search prefix
+    static const QRegularExpression re(QStringLiteral("((?:name:|n:)?)\"([^\"]+)\""));
     QRegularExpressionMatchIterator i = re.globalMatch(searchString);
     while (i.hasNext()) {
         const QRegularExpressionMatch match = i.next();
-        QString text = match.captured(1);
+        QString text = match.captured(1) + match.captured(2);
+
+        if (removeSearchPrefix && isNameSearch(text)) {
+            text = removeNameSearchPrefix(text);
+        }
 
         if (escapeForRegularExpression) {
             text = QRegularExpression::escape(text);
