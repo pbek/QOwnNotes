@@ -23,6 +23,7 @@
 #include <QSqlError>
 #include <QSqlRecord>
 #include <QTemporaryFile>
+#include <QTextBoundaryFinder>
 #include <QThread>
 #include <QUrl>
 #include <QtConcurrent/QtConcurrentRun>
@@ -449,6 +450,234 @@ static QString encryptNoteTextWithBotanInBackground(const QString &text, const Q
 int Note::getId() const { return this->_id; }
 
 QString Note::getName() const { return this->_name; }
+
+/**
+ * Extracts a leading emoji from the given text.
+ * Returns the emoji string if found at the start, or an empty string if none.
+ * An emoji is identified by checking if the first Unicode code point falls
+ * within common emoji ranges or is a regional indicator / modifier.
+ */
+QString Note::extractLeadingEmoji(const QString &text) {
+    if (text.isEmpty()) {
+        return QString();
+    }
+
+    // Use QTextBoundaryFinder to get the first grapheme cluster
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+    QString::const_iterator it = text.cbegin();
+    const QString::const_iterator end = text.cend();
+
+    // Read the first Unicode code point (may be a surrogate pair)
+    uint codePoint = 0;
+    if (it != end) {
+        QChar first = *it;
+        if (first.isHighSurrogate() && (it + 1) != end) {
+            codePoint = QChar::surrogateToUcs4(first, *(it + 1));
+        } else {
+            codePoint = first.unicode();
+        }
+    }
+
+    // Check common emoji ranges
+    bool isEmoji = false;
+
+    // Miscellaneous symbols & pictographs, transport & map, emoticons, etc.
+    if ((codePoint >= 0x1F300 && codePoint <= 0x1FAFF)) {
+        isEmoji = true;
+    }
+    // Dingbats
+    else if (codePoint >= 0x2702 && codePoint <= 0x27B0) {
+        isEmoji = true;
+    }
+    // Enclosed alphanumerics supplement
+    else if (codePoint >= 0x1F100 && codePoint <= 0x1F1FF) {
+        isEmoji = true;
+    }
+    // Miscellaneous symbols (e.g. ♠ ♣)
+    else if (codePoint >= 0x2600 && codePoint <= 0x26FF) {
+        isEmoji = true;
+    }
+    // Regional indicators (flags)
+    else if (codePoint >= 0x1F1E0 && codePoint <= 0x1F1FF) {
+        isEmoji = true;
+    }
+
+    if (!isEmoji) {
+        return QString();
+    }
+
+    // Collect the full grapheme cluster (emoji + variation selectors + ZWJ sequences)
+    // Use QTextBoundaryFinder to find the boundary of the first grapheme cluster
+    QTextBoundaryFinder boundaryFinder(QTextBoundaryFinder::Grapheme, text);
+    boundaryFinder.setPosition(0);
+    const int nextBoundary = boundaryFinder.toNextBoundary();
+    if (nextBoundary <= 0) {
+        // Fallback: return the first character(s)
+        if (!text.isEmpty() && text[0].isHighSurrogate() && text.size() > 1) {
+            return text.left(2);
+        }
+        return text.left(1);
+    }
+
+    // Collect the grapheme up to the boundary
+    QString grapheme = text.left(nextBoundary);
+
+    // Also consume any immediately following variation selectors (U+FE0F etc.)
+    // and ZWJ sequences to get the full visible emoji
+    int pos = nextBoundary;
+    while (pos < text.size()) {
+        const QChar ch = text[pos];
+        uint cp = ch.unicode();
+        // Variation selector 16 (text/emoji presentation)
+        if (cp == 0xFE0F || cp == 0xFE0E) {
+            grapheme += ch;
+            ++pos;
+            continue;
+        }
+        // Zero-width joiner
+        if (cp == 0x200D && pos + 1 < text.size()) {
+            grapheme += ch;
+            ++pos;
+            // Consume the next grapheme cluster too (ZWJ sequence)
+            QTextBoundaryFinder bf(QTextBoundaryFinder::Grapheme, text.mid(pos));
+            bf.setPosition(0);
+            const int nb = bf.toNextBoundary();
+            if (nb > 0) {
+                grapheme += text.mid(pos, nb);
+                pos += nb;
+            }
+            continue;
+        }
+        // Emoji modifiers (skin tone)
+        if (cp >= 0x1F3FB && cp <= 0x1F3FF) {
+            grapheme += ch;
+            ++pos;
+            if (pos < text.size() && text[pos].isLowSurrogate()) {
+                grapheme += text[pos];
+                ++pos;
+            }
+            continue;
+        }
+        break;
+    }
+
+    return grapheme;
+#else
+    // Qt < 5.6 fallback: basic surrogate pair check only
+    const QChar first = text[0];
+    if (first.isHighSurrogate() && text.size() > 1) {
+        uint codePoint = QChar::surrogateToUcs4(first, text[1]);
+        if (codePoint >= 0x1F300 && codePoint <= 0x1FAFF) {
+            return text.left(2);
+        }
+    }
+    return QString();
+#endif
+}
+
+/**
+ * Returns the first-line headline of the note text, with frontmatter,
+ * HTML comments, and a leading "#+ " Markdown prefix stripped.
+ * This mirrors the logic in handleNoteTextFileName() and is the canonical
+ * source of the "display title" regardless of what ended up in _name/_fileName.
+ *
+ * Optimised to avoid copying and splitting the full note text: only the
+ * minimum prefix needed to find the first line is examined.
+ */
+static QString noteHeadline(const QString &noteText) {
+    // Find the position in noteText where the actual headline starts,
+    // skipping over any YAML frontmatter or HTML comment block.
+    int startPos = 0;
+
+    if (noteText.startsWith(QLatin1String("---"))) {
+        // Skip YAML frontmatter: find the closing "---" on its own line
+        static const QRegularExpression reFrontmatter(
+            QStringLiteral(
+                R"(^---((\r\n)|(\n\r)|\r|\n).+?((\r\n)|(\n\r)|\r|\n)---((\r\n)|(\n\r)|\r|\n))"),
+            QRegularExpression::DotMatchesEverythingOption);
+        const QRegularExpressionMatch m = reFrontmatter.match(noteText);
+        if (m.hasMatch()) {
+            startPos = m.capturedEnd();
+        }
+    } else if (noteText.startsWith(QLatin1String("<!--"))) {
+        // Skip leading HTML comment block
+        static const QRegularExpression reComment(
+            QStringLiteral(R"(^<!--.+?-->((\r\n)|(\n\r)|\r|\n))"),
+            QRegularExpression::DotMatchesEverythingOption);
+        const QRegularExpressionMatch m = reComment.match(noteText);
+        if (m.hasMatch()) {
+            startPos = m.capturedEnd();
+        }
+    }
+
+    // Skip any leading whitespace/blank lines after the frontmatter
+    while (startPos < noteText.size() && noteText[startPos].isSpace()) {
+        // Stop at the first non-whitespace character, but advance past CR/LF
+        if (noteText[startPos] != QLatin1Char('\r') && noteText[startPos] != QLatin1Char('\n')) {
+            break;
+        }
+        ++startPos;
+    }
+
+    // Find the end of the first line
+    int endPos = startPos;
+    const int len = noteText.size();
+    while (endPos < len) {
+        const QChar c = noteText[endPos];
+        if (c == QLatin1Char('\n') || c == QLatin1Char('\r')) {
+            break;
+        }
+        ++endPos;
+    }
+
+    // Extract just the first line — no full-text copy or split
+    QString headline = noteText.mid(startPos, endPos - startPos).trimmed();
+
+    // Strip leading "# " / "## " etc. Markdown heading marker
+    static const QRegularExpression reHeading(QStringLiteral("^#+\\s"));
+    headline.remove(reHeading);
+
+    return headline;
+}
+
+/**
+ * Returns the leading emoji from the note's first-line headline, or an empty
+ * string if there is none. Using the note text (not _name) means the emoji is
+ * found even when it was already stripped from the filename.
+ * For encrypted notes that are currently being edited, the live decrypted text
+ * is used so the icon updates immediately as the user types.
+ */
+QString Note::getLeadingEmoji() const {
+    // Prefer the live decrypted text when editing an encrypted note; otherwise
+    // fall back to _noteText (which contains the unencrypted title line even
+    // for encrypted notes stored on disk).
+    const QString &text = _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
+    return extractLeadingEmoji(noteHeadline(text));
+}
+
+/**
+ * Returns the display name for the note with any leading emoji (and following
+ * whitespace) stripped. The emoji is sourced from the note text headline so
+ * that it is available even when the filename setting removed it from _name.
+ * For encrypted notes being edited, the live decrypted text is used.
+ */
+QString Note::getNameWithoutLeadingEmoji() const {
+    const QString &text = _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
+    const QString headline = noteHeadline(text);
+    const QString emoji = extractLeadingEmoji(headline);
+    if (emoji.isEmpty()) {
+        return _name;
+    }
+
+    // Strip the emoji from the headline and return that as the display name
+    QString result = headline.mid(emoji.length());
+    while (!result.isEmpty() && result[0].isSpace()) {
+        result = result.mid(1);
+    }
+
+    // Fall back to _name if stripping left us with nothing
+    return result.isEmpty() ? _name : result;
+}
 
 QDateTime Note::getFileLastModified() const { return this->_fileLastModified; }
 
@@ -2570,6 +2799,16 @@ bool Note::handleNoteTextFileName() {
     // remove a leading "# " for Markdown headlines
     static const QRegularExpression headlinesRE(QStringLiteral("^#\\s"));
     name.remove(headlinesRE);
+
+    // If the user enabled "don't use leading emojis in note filename", strip
+    // the leading emoji (and any following space) from the name before it is
+    // used to derive the filename
+    if (Utils::Misc::isStripLeadingEmojiFromNoteFilename()) {
+        const QString emoji = extractLeadingEmoji(name);
+        if (!emoji.isEmpty()) {
+            name = name.mid(emoji.length()).trimmed();
+        }
+    }
 
     // cleanup additional characters
     name = cleanupFileName(name);

@@ -51,6 +51,12 @@ class Note {
 
     QString getName() const;
 
+    QString getLeadingEmoji() const;
+
+    QString getNameWithoutLeadingEmoji() const;
+
+    static QString extractLeadingEmoji(const QString &text);
+
     QString getFileName() const;
 
     QString getNoteText() const;

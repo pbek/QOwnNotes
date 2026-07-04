@@ -54,6 +54,7 @@ void PanelsSettingsWidget::initialize() {
     connect(ui->enableNoteTreeCheckBox, SIGNAL(toggled(bool)), this, SIGNAL(needRestart()));
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)), this,
             SIGNAL(needRestart()));
+    connect(ui->detectLeadingEmojiCheckBox, SIGNAL(toggled(bool)), this, SIGNAL(needRestart()));
 }
 
 /**
@@ -131,6 +132,8 @@ void PanelsSettingsWidget::readSettings() {
     ui->noteListPreviewCheckBox->setChecked(Utils::Misc::isNoteListPreview());
     ui->allowEmptyNotesCheckBox->setChecked(
         settings.value(QStringLiteral("allowEmptyNotes"), true).toBool());
+    ui->detectLeadingEmojiCheckBox->setChecked(
+        settings.value(QStringLiteral("detectLeadingEmojiInNoteTitle"), true).toBool());
     ui->maxNoteFileSizeSpinBox->setValue(Utils::Misc::getMaximumNoteFileSize() / 1024);
 
     if (settings.value(QStringLiteral("tagsPanelSort")).toInt() == SORT_ALPHABETICAL) {
@@ -238,6 +241,8 @@ void PanelsSettingsWidget::storeSettings() {
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
     settings.setValue(QStringLiteral("noteListPreview"), ui->noteListPreviewCheckBox->isChecked());
     settings.setValue(QStringLiteral("allowEmptyNotes"), ui->allowEmptyNotesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("detectLeadingEmojiInNoteTitle"),
+                      ui->detectLeadingEmojiCheckBox->isChecked());
     settings.setValue(QStringLiteral("maxNoteFileSize"),
                       ui->maxNoteFileSizeSpinBox->value() * 1024);
 

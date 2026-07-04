@@ -126,6 +126,8 @@ void printInfo(const QString &text);
 bool doAutomaticNoteFolderDatabaseClosing();
 bool isNoteListPreview();
 bool isEnableNoteTree();
+bool isDetectLeadingEmojiInNoteTitle();
+bool isStripLeadingEmojiFromNoteFilename();
 QString indentCharacters();
 int indentSize();
 QString toHumanReadableByteSize(qint64 size);

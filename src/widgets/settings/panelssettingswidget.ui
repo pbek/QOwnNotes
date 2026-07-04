@@ -94,6 +94,16 @@
        </widget>
       </item>
       <item row="5" column="1" colspan="2">
+       <widget class="QCheckBox" name="detectLeadingEmojiCheckBox">
+        <property name="toolTip">
+         <string>When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</string>
+        </property>
+        <property name="text">
+         <string>Show leading emoji from note title as icon in the note list</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="2">
        <widget class="QFrame" name="maxNoteFileSizeFrame">
         <property name="minimumSize">
          <size>
@@ -153,7 +163,7 @@
         </layout>
        </widget>
       </item>
-      <item row="5" column="1" colspan="2">
+      <item row="7" column="1" colspan="2">
        <widget class="QGroupBox" name="groupBox_39">
         <property name="toolTip">
          <string>Regular expressions of note files to ignore, separated by &quot;;&quot;</string>
@@ -175,7 +185,7 @@
         </layout>
        </widget>
       </item>
-      <item row="6" column="1">
+      <item row="8" column="1">
        <widget class="QGroupBox" name="notesPanelSortGroupBox">
         <property name="title">
          <string>Sort</string>
@@ -198,7 +208,7 @@
         </layout>
        </widget>
       </item>
-      <item row="6" column="2">
+      <item row="8" column="2">
        <widget class="QGroupBox" name="notesPanelOrderGroupBox">
         <property name="enabled">
          <bool>true</bool>

@@ -1875,6 +1875,26 @@ bool Utils::Misc::isEnableNoteTree() {
 }
 
 /**
+ * Returns if "detectLeadingEmojiInNoteTitle" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isDetectLeadingEmojiInNoteTitle() {
+    return SettingsService().value(QStringLiteral("detectLeadingEmojiInNoteTitle"), true).toBool();
+}
+
+/**
+ * Returns if "stripLeadingEmojiFromNoteFilename" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isStripLeadingEmojiFromNoteFilename() {
+    return SettingsService()
+        .value(QStringLiteral("stripLeadingEmojiFromNoteFilename"), true)
+        .toBool();
+}
+
+/**
  * Returns the characters to use to indent
  *
  * @return

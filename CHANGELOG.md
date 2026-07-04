@@ -2,6 +2,15 @@
 
 ## 26.7.1
 
+- Added a new checkbox **"Don't use leading emojis in note filename"** in the
+  **General settings** (enabled by default): when a note title starts with an
+  emoji, the emoji is stripped from the generated filename so filenames stay
+  compatible with other tools (for [#2190](https://github.com/pbek/QOwnNotes/issues/2190))
+- Added a new checkbox **"Show leading emoji from note title as icon in the note
+  list"** in the **Panels settings** (enabled by default): when a note title
+  starts with an emoji, the emoji is rendered as the icon for that note in the
+  note list and note tree, replacing the standard document icon
+  (for [#2190](https://github.com/pbek/QOwnNotes/issues/2190))
 - The note text search now supports searching for note titles with spaces by using
   quoted name filters like `n:"note title"` (for [#1890](https://github.com/pbek/QOwnNotes/issues/1890))
 

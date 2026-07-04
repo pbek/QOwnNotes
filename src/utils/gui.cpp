@@ -31,6 +31,8 @@
 #include <QLineEdit>
 #include <QListWidget>
 #include <QMessageBox>
+#include <QPainter>
+#include <QPixmap>
 #include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
@@ -1502,6 +1504,33 @@ QIcon Utils::Gui::tagIcon() {
     static const QIcon s_tagIcon = QIcon::fromTheme(
         QStringLiteral("tag"), QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/tag.svg")));
     return s_tagIcon;
+}
+
+/**
+ * Creates a QIcon by rendering an emoji string onto a transparent pixmap.
+ * This is used to show a leading emoji from a note title as the note tree
+ * widget icon instead of the standard text-x-generic icon.
+ *
+ * @param emoji  The emoji character(s) to render
+ * @param size   The pixel size of the resulting icon (width and height)
+ * @return       A QIcon containing the rendered emoji
+ */
+QIcon Utils::Gui::emojiIcon(const QString &emoji, int size) {
+    QPixmap pixmap(size, size);
+    pixmap.fill(Qt::transparent);
+
+    QPainter painter(&pixmap);
+    painter.setRenderHint(QPainter::TextAntialiasing);
+
+    // Use a font size slightly smaller than the pixmap so it fits well
+    QFont font = painter.font();
+    font.setPixelSize(qRound(size * 0.85));
+    painter.setFont(font);
+
+    painter.drawText(QRect(0, 0, size, size), Qt::AlignCenter, emoji);
+    painter.end();
+
+    return QIcon(pixmap);
 }
 
 void Utils::Gui::handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag) {

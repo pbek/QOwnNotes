@@ -2379,6 +2379,10 @@ void MainWindow::updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem *not
     _noteTreeManager->updateNoteTreeWidgetItem(note, noteItem);
 }
 
+void MainWindow::updateNoteTreeWidgetItemIcon(const Note &note) {
+    _noteTreeManager->updateNoteTreeWidgetItemIcon(note);
+}
+
 /**
  * @brief makes the current note the first item in the note list without
  * reloading the whole list
@@ -4527,6 +4531,9 @@ void MainWindow::handleNoteTextChanged() {
     } else if (Utils::Misc::isNoteListPreview()) {
         updateNoteTreeWidgetItem(currentNote);
     }
+
+    // Update the note list icon in case the leading emoji in the title changed
+    updateNoteTreeWidgetItemIcon(currentNote);
 
     const QSignalBlocker blocker(ui->noteTreeWidget);
     Q_UNUSED(blocker)

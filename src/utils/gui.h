@@ -152,6 +152,7 @@ QIcon folderIcon();
 QIcon noteIcon();
 QIcon favoriteNoteIcon();
 QIcon tagIcon();
+QIcon emojiIcon(const QString &emoji, int size = 16);
 
 /**
  * Reads the color from a tag and sets the background color of a tree widget

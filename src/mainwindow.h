@@ -1265,6 +1265,8 @@ class MainWindow : public QMainWindow {
 
     void updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem *noteItem = nullptr);
 
+    void updateNoteTreeWidgetItemIcon(const Note &note);
+
     void initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit);
 
     void openNotesContextMenu(const QPoint globalPos, bool hasNotes = true,

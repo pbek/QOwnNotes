@@ -14,6 +14,7 @@
 #include "mainwindow.h"
 #include "services/settingsservice.h"
 #include "utils/gui.h"
+#include "utils/misc.h"
 
 NoteSubFolderTree::NoteSubFolderTree(QWidget *parent) : QTreeWidget(parent) {
     QTimer::singleShot(1, this, [this]() {
@@ -43,23 +44,38 @@ static QTreeWidgetItem *noteItem(const Note &note) {
         return nullptr;
     }
 
-    auto *noteItem = new QTreeWidgetItem();
-    Utils::Gui::setTreeWidgetItemToolTipForNote(noteItem, note);
-    noteItem->setText(0, name);
-    noteItem->setData(0, Qt::UserRole, note.getId());
-    noteItem->setData(0, Qt::UserRole + 1, MainWindow::NoteType);
-    noteItem->setIcon(0, Utils::Gui::noteIcon());
+    auto *item = new QTreeWidgetItem();
+    Utils::Gui::setTreeWidgetItemToolTipForNote(item, note);
+
+    const bool detectLeadingEmoji = Utils::Misc::isDetectLeadingEmojiInNoteTitle();
+    if (detectLeadingEmoji) {
+        const QString emoji = note.getLeadingEmoji();
+        if (!emoji.isEmpty()) {
+            // Show the emoji as the item icon and strip it from the display text
+            item->setText(0, note.getNameWithoutLeadingEmoji());
+            item->setIcon(0, Utils::Gui::emojiIcon(emoji, 22));
+        } else {
+            item->setText(0, name);
+            item->setIcon(0, Utils::Gui::noteIcon());
+        }
+    } else {
+        item->setText(0, name);
+        item->setIcon(0, Utils::Gui::noteIcon());
+    }
+
+    item->setData(0, Qt::UserRole, note.getId());
+    item->setData(0, Qt::UserRole + 1, MainWindow::NoteType);
 
     const bool isEditable = Note::allowDifferentFileName();
     if (isEditable) {
-        noteItem->setFlags(noteItem->flags() | Qt::ItemIsEditable);
+        item->setFlags(item->flags() | Qt::ItemIsEditable);
     }
 
     const Tag tag = Tag::fetchOneOfNoteWithColor(note);
     if (!tag.isFetched()) {
-        Utils::Gui::handleTreeWidgetItemTagColor(noteItem, tag);
+        Utils::Gui::handleTreeWidgetItemTagColor(item, tag);
     }
-    return noteItem;
+    return item;
 }
 
 namespace {

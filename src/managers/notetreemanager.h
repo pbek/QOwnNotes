@@ -34,6 +34,7 @@ class NoteTreeManager : public QObject {
 
     bool addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent = nullptr);
     void updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem *noteItem = nullptr);
+    void updateNoteTreeWidgetItemIcon(const Note &note);
     void makeCurrentNoteFirstInNoteList();
     QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note);
     void removeNoteFromNoteTreeWidget(Note &note) const;

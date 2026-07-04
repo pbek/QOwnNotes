@@ -199,6 +199,16 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
+          <item row="16" column="0" colspan="2">
+           <widget class="QCheckBox" name="stripLeadingEmojiFromNoteFilenameCheckBox">
+            <property name="toolTip">
+             <string>When the note title starts with an emoji, the emoji will not be stored in the note filename</string>
+            </property>
+            <property name="text">
+             <string>Don't use leading emojis in note filename</string>
+            </property>
+           </widget>
+          </item>
           <item row="11" column="0" colspan="2">
            <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
             <property name="toolTip">
