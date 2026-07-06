@@ -1,6 +1,7 @@
 #include <services/cryptoservice.h>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
+#include <services/settingsservice.h>
 #include <utils/cli.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
@@ -340,7 +341,7 @@ int mainStartupMisc(const QStringList &arguments) {
 
     qApp->setProperty("systemIconThemeName", QIcon::themeName());
 
-    QSettings settings;
+    SettingsService settings;
     bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
 
     if (!systemIconTheme) {
@@ -539,6 +540,9 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context, con
         return;
     }
 
+    const bool appSettingsInitialized = !QCoreApplication::organizationName().isEmpty() &&
+                                        !QCoreApplication::applicationName().isEmpty();
+
     QByteArray localMsg = msg.toLocal8Bit();
     auto typeText = Utils::Misc::logMsgTypeText(type);
     auto message = QStringLiteral("%1 (%2:%3, %4)")
@@ -547,20 +551,27 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context, con
 
     switch (type) {
         case QtDebugMsg:
-            if (SettingsService().value(QStringLiteral("Debug/fileLogging")).toBool()) {
+            if (appSettingsInitialized &&
+                SettingsService().value(QStringLiteral("Debug/fileLogging")).toBool()) {
                 fprintf(stderr, "Debug: %s\n", localMsg.constData());
             }
-            Utils::Misc::logToFileIfAllowed(type, msg);
+            if (appSettingsInitialized) {
+                Utils::Misc::logToFileIfAllowed(type, msg);
+            }
             break;
         case QtInfoMsg:
             fprintf(stderr, "%s", messageWithType.toLocal8Bit().constData());
-            Utils::Misc::logToFileIfAllowed(type, message);
+            if (appSettingsInitialized) {
+                Utils::Misc::logToFileIfAllowed(type, message);
+            }
             break;
         case QtWarningMsg:
         case QtCriticalMsg:
         case QtFatalMsg:
             fprintf(stderr, "%s", messageWithType.toLocal8Bit().constData());
-            Utils::Misc::logToFileIfAllowed(type, message);
+            if (appSettingsInitialized) {
+                Utils::Misc::logToFileIfAllowed(type, message);
+            }
     }
 }
 
@@ -727,6 +738,8 @@ int main(int argc, char *argv[]) {
         qWarning("Your settings are now cleared!");
     }
 
+    SettingsService::loadOverrideSettings();
+
     auto clearDiskSettings = [&clearSettingsKeychainReferences, clearSettings, portable]() {
         if (!clearSettings || portable) {
             return;
@@ -737,7 +750,7 @@ int main(int argc, char *argv[]) {
         DatabaseService::removeDiskDatabase();
     };
 
-    QSettings settings;
+    SettingsService settings;
 
     // Override the interface scale factor if the setting is enabled
     if (settings.value(QStringLiteral("overrideInterfaceScalingFactor")).toBool()) {

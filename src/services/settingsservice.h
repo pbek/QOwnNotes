@@ -16,16 +16,21 @@
 
 #include <QHash>
 #include <QMutex>
+#include <QObject>
+#include <QSet>
 #include <QSettings>
 #include <QString>
 #include <QStringList>
 #include <QVariant>
 
-class SettingsService : public QObject {
-    Q_OBJECT
-
+class SettingsService {
    public:
     static SettingsService &instance();
+    static void loadOverrideSettings(bool forceReload = false);
+    static QString overrideSettingsFileName();
+    static bool overrideSettingsLoaded();
+    static QStringList overrideSettingsKeys();
+    static QStringList overrideSettingsOverwrittenKeys();
 
     QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const;
     void setValue(const QString &key, const QVariant &value);
@@ -49,7 +54,7 @@ class SettingsService : public QObject {
     SettingsService &operator=(const SettingsService &) = delete;
 
     explicit SettingsService(QObject *parent = nullptr);
-    ~SettingsService() override = default;
+    ~SettingsService() = default;
 
    private:
     QSettings m_settings;
@@ -60,5 +65,9 @@ class SettingsService : public QObject {
 
     static QHash<QString, QVariant> *cache();
     static QMutex *cacheMutex();
+    static QSet<QString> *overrideKeys();
+    static QSet<QString> *overrideOverwrittenKeys();
+    static QString *overrideFileName();
+    static bool *overrideLoaded();
     QString getFullKey(const QString &key) const;
 };

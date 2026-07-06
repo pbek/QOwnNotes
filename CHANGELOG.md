@@ -2,6 +2,12 @@
 
 ## 26.7.2
 
+- Added support for an optional settings override file, derived from the active
+  settings file name like `QOwnNotes.override.conf`, which is loaded once on
+  startup and keeps debug builds and named sessions separated; the debug
+  settings output now also shows the override path, how many settings were
+  loaded from it, and how many existing settings were overwritten
+  (for [#3654](https://github.com/pbek/QOwnNotes/issues/3654))
 - The security token for the **QOwnNotes Web Companion browser extension** is now
   generated on first application start if no token exists yet
   (for [web-companion#111](https://github.com/qownnotes/web-companion/issues/111))

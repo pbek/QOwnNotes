@@ -2085,6 +2085,19 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
         withGitHubLineBreaks);
     output += prepareDebugInformationLine(QStringLiteral("Settings path / key"),
                                           settings.fileName(), withGitHubLineBreaks);
+    output += prepareDebugInformationLine(QStringLiteral("Settings override path"),
+                                          SettingsService::overrideSettingsFileName(),
+                                          withGitHubLineBreaks);
+    const int overrideSettingsKeysCount = SettingsService::overrideSettingsKeys().count();
+    output += prepareDebugInformationLine(QStringLiteral("Settings loaded from override"),
+                                          QString::number(overrideSettingsKeysCount),
+                                          withGitHubLineBreaks);
+    if (overrideSettingsKeysCount > 0) {
+        output += prepareDebugInformationLine(
+            QStringLiteral("Existing settings overwritten by override"),
+            QString::number(SettingsService::overrideSettingsOverwrittenKeys().count()),
+            withGitHubLineBreaks);
+    }
     output += prepareDebugInformationLine(
         QStringLiteral("Application database path"),
         QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()), withGitHubLineBreaks);
@@ -3042,6 +3055,11 @@ QString Utils::Misc::testEvernoteImportText(const QString &data) {
  * @param msg
  */
 void Utils::Misc::logToFileIfAllowed(QtMsgType msgType, const QString &msg) {
+    if (QCoreApplication::organizationName().isEmpty() ||
+        QCoreApplication::applicationName().isEmpty()) {
+        return;
+    }
+
     if (!SettingsService().value(QStringLiteral("Debug/fileLogging")).toBool()) {
         return;
     }

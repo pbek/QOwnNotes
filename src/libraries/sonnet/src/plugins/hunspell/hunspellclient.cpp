@@ -20,11 +20,11 @@
  */
 #include "hunspellclient.h"
 
+#include <services/settingsservice.h>
 #include <utils/misc.h>
 
 #include <QDir>
 #include <QRegularExpression>
-#include <QSettings>
 #include <QStandardPaths>
 #include <QString>
 
@@ -38,7 +38,7 @@ HunspellClient::HunspellClient(QObject *parent) : Client(parent) {
     qCDebug(SONNET_HUNSPELL) << " HunspellClient::HunspellClient";
 #endif
     QStringList dirList;
-    QSettings settings;
+    SettingsService settings;
     bool disableExternalDictionaries =
         settings.value(QStringLiteral("disableExternalDictionaries")).toBool();
 

@@ -13,4 +13,5 @@ class TestSettingsService : public QObject {
     void testGroupRead();
     void testGroupSet();
     void testArraySetAndRead();
+    void testOverrideSettings();
 };

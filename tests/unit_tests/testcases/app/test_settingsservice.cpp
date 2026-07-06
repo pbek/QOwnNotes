@@ -1,6 +1,8 @@
 #include "test_settingsservice.h"
 
 #include <QDebug>
+#include <QFile>
+#include <QSettings>
 #include <QtTest>
 
 #include "services/settingsservice.h"
@@ -154,4 +156,47 @@ void TestSettingsService::testArraySetAndRead() {
     QVERIFY(QSettings().value(prefix + "/1/" + key).toString() == value1);
     QVERIFY(QSettings().value(prefix + "/2/" + key).toString() == value2);
     QVERIFY(QSettings().value(prefix + "/size").toInt() == 2);
+}
+
+void TestSettingsService::testOverrideSettings() {
+    const auto key = QStringLiteral("override-test-key");
+    const auto overrideOnlyKey = QStringLiteral("override-only-key");
+    const auto normalValue = QStringLiteral("normal-value");
+    const auto overrideValue = QStringLiteral("override-value");
+    const auto changedValue = QStringLiteral("changed-value");
+    const QString overrideFileName = SettingsService::overrideSettingsFileName();
+
+    QFile::remove(overrideFileName);
+    SettingsService::loadOverrideSettings(true);
+
+    SettingsService settings;
+    settings.clear();
+    settings.setValue(key, normalValue);
+    QVERIFY(settings.value(key).toString() == normalValue);
+
+    QSettings overrideSettings(overrideFileName, QSettings::IniFormat);
+    overrideSettings.setValue(key, overrideValue);
+    overrideSettings.setValue(overrideOnlyKey, overrideValue);
+    overrideSettings.sync();
+
+    SettingsService::loadOverrideSettings(true);
+    QVERIFY(settings.value(key).toString() == overrideValue);
+    QVERIFY(settings.value(overrideOnlyKey).toString() == overrideValue);
+    QVERIFY(settings.contains(overrideOnlyKey));
+    QVERIFY(settings.allKeys().contains(overrideOnlyKey));
+
+    settings.setValue(key, changedValue);
+    QVERIFY(settings.value(key).toString() == overrideValue);
+    QVERIFY(QSettings().value(key).toString() == changedValue);
+
+    settings.remove(key);
+    QVERIFY(settings.value(key).toString() == overrideValue);
+    QVERIFY(!QSettings().contains(key));
+
+    settings.clear();
+    QVERIFY(settings.value(key).toString() == overrideValue);
+
+    QFile::remove(overrideFileName);
+    SettingsService::loadOverrideSettings(true);
+    settings.clear();
 }

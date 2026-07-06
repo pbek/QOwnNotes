@@ -24,6 +24,8 @@
 #include "spellerplugin_p.h"
 
 // #include <QHash>
+#include <services/settingsservice.h>
+
 #include <QCoreApplication>
 #include <QLocale>
 #include <QMap>
@@ -33,7 +35,6 @@
 // #include <QDir>
 
 // #include <algorithm>
-#include <QSettings>
 
 #define SONNET_STATIC 1
 
@@ -372,7 +373,7 @@ void Loader::loadPlugins() {
 // #endif //define mac
 // #ifndef Q_OS_MACOS
 #ifdef ASPELL_ENABLED
-    QSettings settings;
+    SettingsService settings;
     QString plugin =
         settings.value(QLatin1String("spellCheckBackend"), QLatin1String("Hunspell")).toString();
     loadPlugin(plugin);
