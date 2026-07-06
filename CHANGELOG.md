@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.2
+
+- The security token for the **QOwnNotes Web Companion browser extension** is now
+  generated on first application start if no token exists yet
+  (for [web-companion#111](https://github.com/qownnotes/web-companion/issues/111))
+
 ## 26.7.1
 
 - Added a new checkbox **"Don't use leading emojis in note filename"** in the

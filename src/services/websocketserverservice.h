@@ -57,6 +57,8 @@ class WebSocketServerService : public QObject {
 
     static QString getOrGenerateBookmarkSuggestionApiToken();
 
+    static QString getOrGenerateToken();
+
     void refreshServers();
 
     void listen(quint16 port = 0);

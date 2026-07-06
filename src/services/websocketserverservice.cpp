@@ -66,6 +66,7 @@ WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent)
     _webSocketTokenDialog = nullptr;
 #endif
 
+    getOrGenerateToken();
     refreshServers();
 
     if (port != 0 && Utils::Misc::isSocketServerEnabled()) {
@@ -175,6 +176,26 @@ QString WebSocketServerService::getOrGenerateBookmarkSuggestionApiToken() {
         settings.setValue(tokenSettingKey,
                           CryptoService::instance()->encryptToString(
                               token, QStringLiteral("settings/") + tokenSettingKey));
+    }
+
+    return token;
+}
+
+QString WebSocketServerService::getOrGenerateToken() {
+    SettingsService settings;
+    const QString key = QStringLiteral("webSocketServerService/token");
+    const QString stored = settings.value(key).toString();
+    QString token = CryptoService::instance()->decryptToStringWithPlaintextFallback(stored);
+
+    if (!token.isEmpty() && token == stored && !CryptoService::isKeychainReference(stored)) {
+        settings.setValue(key, CryptoService::instance()->encryptToString(
+                                   token, QStringLiteral("settings/") + key));
+    }
+
+    if (token.isEmpty()) {
+        token = Utils::Misc::generateRandomString(8);
+        settings.setValue(key, CryptoService::instance()->encryptToString(
+                                   token, QStringLiteral("settings/") + key));
     }
 
     return token;
@@ -475,19 +496,7 @@ void WebSocketServerService::processMessage(const QString &message) {
     auto *pSender = qobject_cast<QWebSocket *>(sender());
     MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
     const QString token = jsonObject.value(QStringLiteral("token")).toString();
-    SettingsService settings;
-    const QString storedTokenValue =
-        settings.value(QStringLiteral("webSocketServerService/token")).toString();
-    QString storedToken =
-        CryptoService::instance()->decryptToStringWithPlaintextFallback(storedTokenValue);
-
-    if (!storedToken.isEmpty() && storedToken == storedTokenValue &&
-        !CryptoService::isKeychainReference(storedTokenValue)) {
-        settings.setValue(
-            QStringLiteral("webSocketServerService/token"),
-            CryptoService::instance()->encryptToString(
-                storedToken, QStringLiteral("settings/webSocketServerService/token")));
-    }
+    const QString storedToken = getOrGenerateToken();
 
     // request the token if not set
     if (token.isEmpty() || storedToken.isEmpty() || token != storedToken) {
