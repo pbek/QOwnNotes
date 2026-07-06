@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.3
+
+- Fixed the **Preview panel** font scaling on **Windows** with high display scale
+  settings, so the preview no longer grows larger than the note editor at e.g.
+  300% desktop scaling (for [#3653](https://github.com/pbek/QOwnNotes/issues/3653))
+
 ## 26.7.2
 
 - Added support for an optional settings override file, derived from the active

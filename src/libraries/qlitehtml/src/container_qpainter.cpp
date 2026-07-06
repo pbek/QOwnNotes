@@ -51,11 +51,6 @@
 #include <algorithm>
 #include <set>
 
-#ifdef Q_OS_WIN
-#define NOMINMAX
-#include <Windows.h>
-#endif
-
 const int kDragDistance = 5;
 
 using Font = QFont;
@@ -769,13 +764,8 @@ static litehtml::element::ptr firstMatchingAncestor(
 
 int DocumentContainerPrivate::pt_to_px(int pt) const
 {
-#ifdef Q_OS_WIN
-    HDC dc = GetDC(NULL);
-    int ret = MulDiv(pt, GetDeviceCaps(dc, LOGPIXELSY), 72);
-    ReleaseDC(NULL, dc);
-    return ret;
-#endif
-
+    // Use Qt's logical widget DPI consistently. On Windows GetDeviceCaps(LOGPIXELSY)
+    // includes the desktop scale factor and made the preview too large on HiDPI screens.
     const qreal dpi = m_paintDevice->logicalDpiY();
     return (int) (qreal(pt) * dpi / 72.0);
 
