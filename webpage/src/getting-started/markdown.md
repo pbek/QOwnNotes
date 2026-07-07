@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-This Markdown cheatsheet is intended as a quick reference and showcase of the markdown syntax in QOwnNotes.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Headings
 
-Use headings to structure your texts.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@ Use headings to structure your texts.
 The **Navigation panel** shows the structure of your headings.
 :::
 
-Alternatively, for H1 and H2, an underline-ish style:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -308,7 +308,7 @@ You can also use inline Markdown.
 Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables.
 You can even import CSV files in that dialog.
 
-Use <kbd>Ctrl + Space</kbd> inside a markdown table to automatically format it.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## Blockquotes
