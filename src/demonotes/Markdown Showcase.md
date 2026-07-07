@@ -1,4 +1,4 @@
-# Markdown Showcase
+# 📝 Markdown Showcase
 
 ## Another header
 

@@ -5,6 +5,8 @@
 - Fixed the **Preview panel** font scaling on **Windows** with high display scale
   settings, so the preview no longer grows larger than the note editor at e.g.
   300% desktop scaling (for [#3653](https://github.com/pbek/QOwnNotes/issues/3653))
+- Added emojis to the note title of the welcome notes to demonstrate emojis in
+  the note list (for [#2190](https://github.com/pbek/QOwnNotes/issues/2190))
 
 ## 26.7.2
 

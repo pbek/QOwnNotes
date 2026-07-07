@@ -1,4 +1,4 @@
-# Welcome to QOwnNotes
+# 🥳 Welcome to QOwnNotes
 
 Welcome to your installation of **QOwnNotes**!
 
