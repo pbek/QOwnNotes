@@ -2,6 +2,9 @@
 
 ## 26.7.3
 
+- New notes now use **ATX headings** by default for generated titles, and the
+  **General settings** now include an option to use **Setext headings** instead
+  (for [#3655](https://github.com/pbek/QOwnNotes/issues/3655))
 - Fixed the **Preview panel** font scaling on **Windows** with high display scale
   settings, so the preview no longer grows larger than the note editor at e.g.
   300% desktop scaling (for [#3653](https://github.com/pbek/QOwnNotes/issues/3653))

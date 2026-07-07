@@ -75,6 +75,16 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
+          <item row="9" column="0" colspan="2">
+           <widget class="QCheckBox" name="newNoteUseSetextHeadingsCheckBox">
+            <property name="toolTip">
+             <string>Use Setext style headings for generated new note titles instead of ATX style headings</string>
+            </property>
+            <property name="text">
+             <string>Use Setext headings for new notes</string>
+            </property>
+           </widget>
+          </item>
           <item row="3" column="0" colspan="2">
            <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
             <property name="toolTip">
@@ -85,7 +95,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="14" column="0" colspan="2">
+          <item row="15" column="0" colspan="2">
            <widget class="QFrame" name="imageScalingFrame">
             <property name="frameShape">
              <enum>QFrame::Shape::NoFrame</enum>
@@ -169,7 +179,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="9" column="0" colspan="2">
+          <item row="10" column="0" colspan="2">
            <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
             <property name="toolTip">
               <string>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</string>
@@ -189,7 +199,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="15" column="0" colspan="2">
+          <item row="16" column="0" colspan="2">
            <widget class="QCheckBox" name="legacyLinkingCheckBox">
             <property name="toolTip">
              <string notr="true">note://, file://media, file://attachments</string>
@@ -199,7 +209,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="16" column="0" colspan="2">
+          <item row="17" column="0" colspan="2">
            <widget class="QCheckBox" name="stripLeadingEmojiFromNoteFilenameCheckBox">
             <property name="toolTip">
              <string>When the note title starts with an emoji, the emoji will not be stored in the note filename</string>
@@ -209,7 +219,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="11" column="0" colspan="2">
+          <item row="12" column="0" colspan="2">
            <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
             <property name="toolTip">
              <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
@@ -219,7 +229,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="12" column="0" colspan="2">
+          <item row="13" column="0" colspan="2">
            <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
             <property name="toolTip">
              <string>Automatically close the note folder database to prevent problems with sync tools</string>
@@ -229,14 +239,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
            </widget>
           </item>
-          <item row="13" column="0" colspan="2">
+          <item row="14" column="0" colspan="2">
            <widget class="QCheckBox" name="imageScaleDownCheckBox">
             <property name="text">
              <string>Scale images down when inserted into notes</string>
             </property>
            </widget>
           </item>
-          <item row="10" column="0" colspan="2">
+          <item row="11" column="0" colspan="2">
            <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
             <property name="toolTip">
              <string>Disable this if you want to launch the application without opening a note</string>

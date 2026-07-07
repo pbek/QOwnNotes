@@ -6007,9 +6007,16 @@ QSet<Note> Note::findBacklinks() const {
  * @return
  */
 QString Note::createNoteHeader(const QString &name) {
-    QString header = name.trimmed() + QStringLiteral("\n");
-    const auto len = std::min<int>(name.length(), 40);
-    header.reserve(len);
+    SettingsService settings;
+    const QString trimmedName = name.trimmed();
+
+    if (!settings.value(QStringLiteral("newNoteUseSetextHeadings")).toBool()) {
+        return QStringLiteral("# ") + trimmedName + QStringLiteral("\n\n");
+    }
+
+    QString header = trimmedName + QStringLiteral("\n");
+    const auto len = std::min<int>(trimmedName.length(), 40);
+    header.reserve(header.length() + len + 2);
     header.append(QString(QChar('=')).repeated(len));
     header.append(QStringLiteral("\n\n"));
     return header;

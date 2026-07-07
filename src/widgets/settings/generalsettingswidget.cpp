@@ -106,6 +106,8 @@ void GeneralSettingsWidget::readSettings() {
         settings.value(QStringLiteral("enableNoteChecksumChecks"), false).toBool());
     ui->newNoteAskHeadlineCheckBox->setChecked(
         settings.value(QStringLiteral("newNoteAskHeadline")).toBool());
+    ui->newNoteUseSetextHeadingsCheckBox->setChecked(
+        settings.value(QStringLiteral("newNoteUseSetextHeadings")).toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
         settings.value(QStringLiteral("useUNIXNewline")).toBool());
 
@@ -192,6 +194,8 @@ void GeneralSettingsWidget::storeSettings() {
                       ui->enableNoteChecksumChecks->isChecked());
     settings.setValue(QStringLiteral("newNoteAskHeadline"),
                       ui->newNoteAskHeadlineCheckBox->isChecked());
+    settings.setValue(QStringLiteral("newNoteUseSetextHeadings"),
+                      ui->newNoteUseSetextHeadingsCheckBox->isChecked());
     settings.setValue(QStringLiteral("useUNIXNewline"), ui->useUNIXNewlineCheckBox->isChecked());
 
     if (oldIgnoreAllExternalNoteFolderChanges != ignoreAllExternalNoteFolderChanges) {
