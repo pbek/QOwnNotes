@@ -2,6 +2,8 @@
 
 ## 26.7.4
 
+- Fixed the **status bar** note path staying on the old filename after a note was
+  renamed from its header/title until switching notes (for [#3658](https://github.com/pbek/QOwnNotes/issues/3658))
 - Added a button to the **Debug settings** to open the active settings file in an
   external editor on systems where the settings are stored in an editable file
   (for [#3656](https://github.com/pbek/QOwnNotes/issues/3656))

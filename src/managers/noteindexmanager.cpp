@@ -29,6 +29,7 @@
 #include <services/updateservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+#include <widgets/notefilepathlabel.h>
 #include <widgets/notesubfoldertree.h>
 #include <widgets/notetreewidgetitem.h>
 
@@ -944,6 +945,8 @@ void NoteIndexManager::storeUpdatedNotesToDisk() {
 
             _ui->noteTextEdit->setMarkdownLspDocumentPath(
                 _mainWindow->currentNote.fullNoteFilePath(), _ui->noteTextEdit->toPlainText());
+
+            _mainWindow->_noteFilePathLabel->updateText();
 
             if (oldNoteName != _mainWindow->currentNote.getName()) {
                 // just to make sure the window title is set correctly
