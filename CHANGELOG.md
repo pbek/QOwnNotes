@@ -6,12 +6,11 @@
   regular spaces when notes were edited and saved (for [#2839](https://github.com/pbek/QOwnNotes/issues/2839))
 - Fixed the **status bar** note path staying on the old filename after a note was
   renamed from its header/title until switching notes (for [#3658](https://github.com/pbek/QOwnNotes/issues/3658))
+- Fixed frontmatter entries followed by the closing `---` delimiter being shown
+  as **Setext headings** in the **Navigation panel** (for [#3657](https://github.com/pbek/QOwnNotes/issues/3657))
 - Added a button to the **Debug settings** to open the active settings file in an
   external editor on systems where the settings are stored in an editable file
   (for [#3656](https://github.com/pbek/QOwnNotes/issues/3656))
-- Fixed frontmatter entries followed by the closing `---` delimiter being shown
-  as **Setext headings** in the **Navigation panel**
-  (for [#3657](https://github.com/pbek/QOwnNotes/issues/3657))
 
 ## 26.7.3
 
