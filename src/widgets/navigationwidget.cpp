@@ -42,6 +42,33 @@ bool isCodeBlockState(const int state) {
            state == MarkdownHighlighter::CodeBlockIndented;
 }
 
+bool isYamlFrontmatterDelimiter(const QString &text) { return text == QLatin1String("---"); }
+
+bool isLeadingYamlFrontmatterBlock(const QTextBlock &block) {
+    if (!block.isValid() || block.document() == nullptr) {
+        return false;
+    }
+
+    QTextBlock currentBlock = block.document()->firstBlock();
+    if (!isYamlFrontmatterDelimiter(currentBlock.text())) {
+        return false;
+    }
+
+    while (currentBlock.isValid()) {
+        if (currentBlock == block) {
+            return true;
+        }
+
+        if (currentBlock.blockNumber() > 0 && isYamlFrontmatterDelimiter(currentBlock.text())) {
+            return false;
+        }
+
+        currentBlock = currentBlock.next();
+    }
+
+    return false;
+}
+
 int atxHeadingLevel(const QString &text) {
     int offset = 0;
     while (offset < text.length() && text.at(offset) == QLatin1Char(' ') && offset < 4) {
@@ -156,6 +183,10 @@ HeadingMatch parseHeadingBlock(
     }
 
     if (isCodeBlockState(block.userState())) {
+        return {};
+    }
+
+    if (isLeadingYamlFrontmatterBlock(block)) {
         return {};
     }
 

@@ -77,3 +77,22 @@ void TestNavigationWidget::testParseDocumentIgnoresHeadingsInsideFencedCodeBlock
     QCOMPARE(nodes.at(1).text, QStringLiteral("Still visible"));
     QCOMPARE(nodes.at(1).elementType, int(MarkdownHighlighter::H2));
 }
+
+void TestNavigationWidget::testParseDocumentIgnoresFrontmatterSetextLookalike() {
+    QTextDocument document;
+    document.setPlainText(
+        QStringLiteral("---\n"
+                       "title: non breaking space test\n"
+                       "headingDivider: 1\n"
+                       "---\n"
+                       "\n"
+                       "# Test 1 classic NBSP2\n"
+                       "\n"
+                       "text\n"));
+
+    const auto nodes = NavigationWidget::parseDocument(&document);
+
+    QCOMPARE(nodes.count(), 1);
+    QCOMPARE(nodes.at(0).text, QStringLiteral("Test 1 classic NBSP2"));
+    QCOMPARE(nodes.at(0).elementType, int(MarkdownHighlighter::H1));
+}
