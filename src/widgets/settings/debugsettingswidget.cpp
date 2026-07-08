@@ -17,8 +17,11 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QDebug>
+#include <QDesktopServices>
 #include <QFile>
+#include <QStringList>
 #include <QTextStream>
+#include <QUrl>
 
 #include "dialogs/filedialog.h"
 #include "services/settingsservice.h"
@@ -29,6 +32,10 @@
 DebugSettingsWidget::DebugSettingsWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::DebugSettingsWidget) {
     ui->setupUi(this);
+
+#ifdef Q_OS_WIN
+    ui->openSettingsFileButton->setVisible(Utils::Misc::isInPortableMode());
+#endif
 }
 
 DebugSettingsWidget::~DebugSettingsWidget() { delete ui; }
@@ -112,3 +119,21 @@ void DebugSettingsWidget::on_copyDebugInfoButton_clicked() {
 }
 
 void DebugSettingsWidget::on_issueAssistantPushButton_clicked() { emit issueAssistantRequested(); }
+
+void DebugSettingsWidget::on_openSettingsFileButton_clicked() {
+    SettingsService settings;
+    settings.sync();
+
+    const QString settingsFilePath = settings.fileName();
+    const QString externalEditorPath =
+        settings.value(QStringLiteral("externalEditorPath")).toString();
+
+    qDebug() << __func__ << " - 'settingsFilePath': " << settingsFilePath;
+    qDebug() << __func__ << " - 'externalEditorPath': " << externalEditorPath;
+
+    if (externalEditorPath.isEmpty()) {
+        QDesktopServices::openUrl(QUrl::fromLocalFile(settingsFilePath));
+    } else {
+        Utils::Misc::openFilesWithApplication(externalEditorPath, QStringList({settingsFilePath}));
+    }
+}

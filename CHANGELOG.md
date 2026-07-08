@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.4
+
+- Added a button to the **Debug settings** to open the active settings file in an
+  external editor on systems where the settings are stored in an editable file
+  (for [#3656](https://github.com/pbek/QOwnNotes/issues/3656))
+
 ## 26.7.3
 
 - New notes now use **ATX headings** by default for generated titles, and the

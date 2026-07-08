@@ -137,7 +137,21 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="3" colspan="4">
+      <item row="7" column="3">
+       <widget class="QPushButton" name="openSettingsFileButton">
+        <property name="toolTip">
+         <string>Open settings file in external editor</string>
+        </property>
+        <property name="text">
+         <string>Open settings file</string>
+        </property>
+        <property name="icon">
+         <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4" colspan="3">
        <spacer name="horizontalSpacer_14">
         <property name="orientation">
          <enum>Qt::Orientation::Horizontal</enum>

@@ -40,6 +40,7 @@ class DebugSettingsWidget : public QWidget {
     void on_saveDebugInfoButton_clicked();
     void on_copyDebugInfoButton_clicked();
     void on_issueAssistantPushButton_clicked();
+    void on_openSettingsFileButton_clicked();
 
    private:
     Ui::DebugSettingsWidget *ui;
