@@ -22,3 +22,13 @@ void TestQMarkdownTextEdit::testUpFromStartOfSecondLineMovesToFirstLine() {
 
     QCOMPARE(editor.textCursor().position(), 0);
 }
+
+void TestQMarkdownTextEdit::testToPlainTextPreservesNoBreakSpaces() {
+    QMarkdownTextEdit editor;
+    const QString text = QStringLiteral("U+00A0") + QChar(0x00A0) + QStringLiteral("NBSP\n") +
+                         QStringLiteral("U+202F") + QChar(0x202F) + QStringLiteral("NNBSP");
+
+    editor.setPlainText(text);
+
+    QCOMPARE(editor.toPlainText(), text);
+}

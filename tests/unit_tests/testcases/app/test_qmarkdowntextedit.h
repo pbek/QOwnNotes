@@ -8,6 +8,7 @@ class TestQMarkdownTextEdit : public QObject {
 
    private Q_SLOTS:
     void testUpFromStartOfSecondLineMovesToFirstLine();
+    void testToPlainTextPreservesNoBreakSpaces();
 };
 
 #endif    // TESTQMARKDOWNTEXTEDIT_H
