@@ -1304,6 +1304,12 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
                 return;
             }
 
+            if (auto *mainWindow = MainWindow::instance()) {
+                if (!mainWindow->doNoteEditingCheck()) {
+                    return;
+                }
+            }
+
             if (type == QStringLiteral("wikilink-autocomplete")) {
                 WikiLinkCompletionContext context;
                 if (!currentWikiLinkCompletionContext(this, context)) {

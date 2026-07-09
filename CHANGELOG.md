@@ -2,9 +2,9 @@
 
 ## 26.7.5
 
-- Fixed inserting links from the **link dialog** while **read-only mode** is active,
-  so QOwnNotes now asks to allow note editing before adding the generated link
-  (for [#3659](https://github.com/pbek/QOwnNotes/issues/3659))
+- Fixed generated note insertions while **read-only mode** is active, so QOwnNotes
+  now asks to allow note editing before adding links, attachments, media, HTML as
+  Markdown, data-url images, or autocomplete text (for [#3659](https://github.com/pbek/QOwnNotes/issues/3659))
 
 ## 26.7.4
 

@@ -5076,6 +5076,10 @@ bool MainWindow::insertMedia(QFile *file, QString title) {
 }
 
 void MainWindow::insertNoteText(const QString &text) {
+    if (!doNoteEditingCheck()) {
+        return;
+    }
+
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
@@ -5185,6 +5189,10 @@ bool MainWindow::insertTextAsAttachment(const QString &text) {
  * Inserts a file attachment into the current note
  */
 bool MainWindow::insertAttachment(QFile *file, const QString &title, const QString &fileName) {
+    if (!doNoteEditingCheck()) {
+        return false;
+    }
+
     QString text = currentNote.getInsertAttachmentMarkdown(file, title, false, fileName);
 
     if (!text.isEmpty()) {
@@ -5794,6 +5802,10 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
  * Images are also downloaded
  */
 void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
+    if (!doNoteEditingCheck()) {
+        return;
+    }
+
     // convert html tags to Markdown
     html = Utils::Misc::htmlToMarkdown(std::move(html));
 
