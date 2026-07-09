@@ -4309,7 +4309,9 @@ void MainWindow::handleTextNoteLinking(int page) {
                 newText += QStringLiteral(" ") + linkDescription;
             }
 
-            textEdit->textCursor().insertText(newText);
+            if (doNoteEditingCheck()) {
+                textEdit->textCursor().insertText(newText);
+            }
         }
     }
 
