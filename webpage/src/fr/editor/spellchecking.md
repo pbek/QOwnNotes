@@ -2,6 +2,8 @@
 
 Faites corriger vos fautes d'orthographe !
 
+Il est possible d’activer/de désactiver la vérification orthographique dans **Édition -> Vérifier l’orthographe**. Si vous avez besoin de manuellement sélectionner la langue de votre note, vous pouvez le faire dans **Édition -> Langue**.
+
 ::: tip Info
 QOwnNotes a un **Gestionnaire de dictionnaires** intégré (dans le menu _Édition_) que vous pouvez utiliser pour télécharger des dictionnaires ou les supprimer (si votre langue est manquante, voir ci-dessous comment demander l'ajout d'un dictionnaire). Si vous souhaitez télécharger les dictionnaires manuellement, vous pouvez suivre les instructions ci-dessous.
 :::

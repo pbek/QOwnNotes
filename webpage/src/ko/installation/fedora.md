@@ -13,7 +13,7 @@ QOwnNotes는 [Fedora 저장소](https://packages.fedoraproject.org/pkgs/qownnote
 [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5)부터 dnf5는 기본 패키지 관리자이며 기본적으로 구성 관리자 플러그인을 포함합니다. 다음 명령을 루트로 실행하여 저장소를 추가하고 QOwnNotes를 설치합니다:
 
 ```bash
-dnf config-manager add-repo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
+dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
 
 dnf install qownnotes
 ```
@@ -89,3 +89,21 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 명령에 대한 자세한 설명은 GitHub에서 이 정확한 문제와 관련된 [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) 에서 확인할 수 있습니다.
 
 만료된 키를 삭제한 후에는, 이 설치 안내서의 초반부에 설명된 대로 **현재** 키를 수동으로 새로 _가져오기_ 합니다.
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+
+For GNOME and other Secret Service based desktops:
+
+```bash
+sudo dnf install gnome-keyring libsecret seahorse
+```
+
+For KDE Plasma:
+
+```bash
+sudo dnf install kwalletmanager kf6-kwallet
+```
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

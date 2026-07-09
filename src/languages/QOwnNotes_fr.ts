@@ -718,6 +718,14 @@ Le message d'erreur de connexion est : </translation>
 <translation>&amp;Enregistrer les informations de débogage</translation>
 </message>
 <message>
+<source>Open settings file in external editor</source>
+<translation type="unfinished">Open settings file in external editor</translation>
+</message>
+<message>
+<source>Open settings file</source>
+<translation type="unfinished">Open settings file</translation>
+</message>
+<message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Veuillez ne pas l'utiliser dans l’outil de suivi des problèmes, copiez le texte des informations de débogage directement dans le ticket.</translation>
 </message>
@@ -1338,6 +1346,22 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation>Afficher les numéros de ligne et de signets (1-9)</translation>
+</message>
+<message>
+<source>Show visible markers for spaces and tabs in the note editor</source>
+<translation>Afficher des marqueurs visibles pour les espaces et les tabulations dans l’éditeur de note</translation>
+</message>
+<message>
+<source>Show whitespace markers</source>
+<translation>Afficher des marqueurs de blanc/d’espaces</translation>
+</message>
+<message>
+<source>Show visible markers for line endings in the note editor</source>
+<translation>Afficher des marqueurs visibles pour les fins de lignes dans l’éditeur de notes</translation>
+</message>
+<message>
+<source>Show line ending markers</source>
+<translation>Afficher des marqueurs de fin de ligne</translation>
 </message>
 <message>
 <source>Show character, word and line count in the status bar</source>
@@ -2308,6 +2332,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits de synchronisation.</translation>
 </message>
 <message>
+<source>Use Setext style headings for generated new note titles instead of ATX style headings</source>
+<translation>Utiliser des titres de style Setext pour la génération de nouvelles notes au lieu des titres de style ATX</translation>
+</message>
+<message>
+<source>Use Setext headings for new notes</source>
+<translation>Utiliser des titres Setext pour les nouvelles notes</translation>
+</message>
+<message>
 <source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
 <translation>Vous pouvez par exemple utiliser ce paramètre sous Windows si vous avez des problèmes avec les retours-ligne dans les applications de notes Nextcloud / ownCloud</translation>
 </message>
@@ -2326,6 +2358,14 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation>Utiliser l’ancienne méthode pour créer des liens vers des notes, des images et des pièces jointes</translation>
+</message>
+<message>
+<source>When the note title starts with an emoji, the emoji will not be stored in the note filename</source>
+<translation>Si le titre d’une note commence par un émoji, l’émoji ne sera pas stocké dans le nom de fichier de la note</translation>
+</message>
+<message>
+<source>Don't use leading emojis in note filename</source>
+<translation>Ne pas utiliser d’émojis dans le nom de fichier des notes s’ils sont au début</translation>
 </message>
 <message>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
@@ -4636,7 +4676,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Insert checkbox list item</source>
-<translation>Insérer un élément de liste de cases à cocher</translation>
+<translation>Insérer une case à cocher</translation>
 </message>
 <message>
 <source>Search selected text on the web</source>
@@ -5885,7 +5925,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>File base name</source>
-<translation>Nom de base du fichier</translation>
+<translation>Nom du fichier sans l’extension</translation>
 </message>
 <message>
 <source>Base name of file attachment:</source>
@@ -6021,6 +6061,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>headline %1</source>
 <translation>titre %1</translation>
+</message>
+<message>
+<source>Expand all</source>
+<translation>Tout déplier</translation>
+</message>
+<message>
+<source>Collapse all</source>
+<translation>Tout replier</translation>
 </message>
 <message>
 <source>&amp;Rename heading</source>
@@ -7364,6 +7412,14 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <translation>Autoriser les fichiers de note vides</translation>
 </message>
 <message>
+<source>When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</source>
+<translation>Lorsque activé, un émoji en première position dans le titre d’une note sera utilisé comme icône dans la liste de notes au lieu de |’icône de document standard</translation>
+</message>
+<message>
+<source>Show leading emoji from note title as icon in the note list</source>
+<translation>Afficher les émojis du début d’un titre de note en tant qu’icône dans la liste de notes</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
 <translation>Les notes plus grandes ne seront pas affichées dans la liste de notes</translation>
 </message>
@@ -7619,8 +7675,8 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <translation>Entrée de mot de passe non trouvée</translation>
 </message>
 <message>
-<source>Could not decrypt data</source>
-<translation>Impossible de déchiffrer les données</translation>
+<source>Could not delete password</source>
+<translation>Impossible de supprimer le mot de passe</translation>
 </message>
 </context>
 <context>
@@ -7677,6 +7733,22 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <message>
 <source>Could not retrieve private key from keystore</source>
 <translation>Impossible de récupérer la clé privée du trousseau</translation>
+</message>
+<message>
+<source>Encrypted data is too short</source>
+<translation>Les données chiffrées sont trop courtes</translation>
+</message>
+<message>
+<source>Could not create RSA decryption cipher</source>
+<translation>Impossible de créer le chiffre de déchiffrement RSA</translation>
+</message>
+<message>
+<source>Could not decrypt AES key: %1</source>
+<translation>Impossible de déchiffrer la clé AES : %1</translation>
+</message>
+<message>
+<source>Could not create AES decryption cipher</source>
+<translation>Impossible de créer le chiffre de déchiffrement AES</translation>
 </message>
 <message>
 <source>Could not create decryption cipher</source>
@@ -7742,12 +7814,28 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 <translation>Impossible de récupérer la clé privée du trousseau</translation>
 </message>
 <message>
-<source>Could not create encryption cipher</source>
-<translation>Impossible de créer le chiffre de chiffrement</translation>
+<source>Could not generate AES key</source>
+<translation>Impossible de générer une clé AES</translation>
 </message>
 <message>
-<source>Could not encrypt data</source>
-<translation>Impossible de chiffrer les données</translation>
+<source>Could not generate IV</source>
+<translation>Impossible de générer IV</translation>
+</message>
+<message>
+<source>Could not create AES encryption cipher</source>
+<translation>Impossible de créer le chiffre de chiffrement AES</translation>
+</message>
+<message>
+<source>Could not encrypt data: %1</source>
+<translation>Impossible de chiffrer les données : %1</translation>
+</message>
+<message>
+<source>Could not create RSA encryption cipher</source>
+<translation>Impossible de créer le chiffre de chiffrement RSA</translation>
+</message>
+<message>
+<source>Could not encrypt AES key: %1</source>
+<translation>Impossible de chiffrer la clé AES : %1</translation>
 </message>
 <message>
 <source>D-Bus is not running</source>
@@ -10992,7 +11080,7 @@ Cela ne peut être annuler !</translation>
 </message>
 <message>
 <source>Password for --decrypt-note.</source>
-<translation>Mot de passe de --decrypt-note.</translation>
+<translation>Mot de passe pour --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

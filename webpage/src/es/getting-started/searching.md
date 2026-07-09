@@ -7,6 +7,7 @@ Hay diferentes formas de buscar notas:
 - `cuaderno de notas` buscará notas con la palabra `cuaderno` o `notas` en el nombre del archivo o en el texto de la nota
 - `"cuaderno de notas"` buscará notas con exactamente el texto `cuaderno de notas` en el nombre del archivo o el texto de la nota
 - `n:cuaderno` o `name:cuaderno` buscará notas con `cuaderno` solo en el nombre de la nota o el nombre del archivo
+- `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
 
 ![Buscando](/img/searching.png)
 

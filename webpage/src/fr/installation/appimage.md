@@ -52,3 +52,13 @@ Ainsi, il est très facile de transporter QOwnNotes avec toutes vos notes sur un
 ::: tip
 Assurez-vous que le dossier contenant le fichier AppImage est accessible en écriture, afin que le dossier `Data` puisse être créé à côté.
 :::
+
+::: tip
+Si QOwnNotes affiche `Could not write secret to keychain`, installez les paquets Secret Service manquants sur votre distribution Linux et redémarrez votre session de bureau.
+
+Pour GNOME et les autres environnements reposant sur Secret Service, installez `gnome-keyring`, `libsecret` et `seahorse`.
+
+Pour KDE Plasma, installez un support de KWallet tel que `kwalletmanager`.
+
+QOwnNotes repassera sur le chiffrement obsolète si le porte-clés de l’environnement n’est pas disponible.
+:::

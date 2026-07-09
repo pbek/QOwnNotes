@@ -1,10 +1,10 @@
 # 마크다운 치트 시트
 
-이 마크다운 속임수는 QOwnNotes의 마크다운 구문에 대한 빠른 참조 및 설명을 제공하기 위한 것입니다.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## 제목
 
-제목을 사용하여 텍스트를 구성합니다.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@
 **네비게이션 패널**은 제목의 구조를 보여줍니다.
 :::
 
-또는 H1과 H2의 경우 밑줄이 있는 스타일:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -341,7 +341,7 @@ cd Notes
 </p>
 
 <p spaces-before="0">
-  마크다운 테이블 내부의 <kbd>Ctrl + Space</kbd>를 사용하여 자동으로 형식을 지정합니다.
+  Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 </p>
 

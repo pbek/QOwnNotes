@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-Ta ściągawka Markdown ma służyć jako szybkie odniesienie i prezentacja składni Markdown w QOwnNotes.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Headings
 
-Użyj nagłówków, aby uporządkować swoje teksty.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@ Użyj nagłówków, aby uporządkować swoje teksty.
 **Panel nawigacyjny** przedstawia strukturę nagłówków.
 :::
 
-Alternatywnie, dla H1 i H2, styl podkreślony:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -296,7 +296,7 @@ You can also use inline Markdown.
 ::: tip
 Naciśnij klawisze <kbd>Alt + Shift + T</kbd>, aby aktywować okno dialogowe, które może pomóc w tworzeniu tabel. Możesz nawet importować pliki CSV w tym oknie dialogowym.
 
-Użyj <kbd>Ctrl + spacja</kbd> wewnątrz tabeli przecen, aby automatycznie ją sformatować.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## Cytaty blokowe

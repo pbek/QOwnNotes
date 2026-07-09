@@ -1,10 +1,10 @@
 # Antisèche Markdown
 
-Cette antisèche Markdown est conçue comme une référence rapide et un recueil d’exemples de la syntaxe de Markdown dans QOwnNotes.
+Cette antisèche Markdown est conçue comme une référence rapide et un recueil d’exemples de la syntaxe Markdown dans QOwnNotes.
 
 ## Titres de sections
 
-Utilisez des titres pour structurer vos textes.
+Utilisez des titres ATX pour structurer vos textes.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@ Utilisez des titres pour structurer vos textes.
 Le **panneau de navigation** montre la structure de vos titres de sections.
 :::
 
-Alternativement, pour H1 et H2, un style souligné :
+Alternativement, pour H1 et H2, vous pouvez aussi utiliser les titres Setex :
 
 ```markdown
 Variante H1
@@ -296,7 +296,7 @@ Vous pouvez également utiliser la syntaxe Markdown.
 ::: tip
 Appuyez sur <kbd>Alt + Maj + T</kbd> pour faire apparaître une boîte de dialogue qui vous aidera à créer des tableaux. Vous pouvez également importer des fichiers CSV depuis cette boîte de dialogue.
 
-Utilisez <kbd>Ctrl + Espace</kbd> dans un tableau en Markdown pour le formater automatiquement.
+Utilisez <kbd>Ctrl + Espace</kbd> dans un tableau Markdown pour le formater automatiquement.
 :::
 
 ## Blocs de citation

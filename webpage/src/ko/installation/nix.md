@@ -24,3 +24,13 @@ QOwnNotes 명령줄 스니펫 관리자 [qc](https://github.com/qownnotes/qc)는
 정보
 **macOS**에서 패키지는 **x86 및 Apple Silicon**에서 기본적으로 작동합니다!
 :::
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain` on Linux, install a Secret Service implementation and restart your desktop session.
+
+For GNOME and other Secret Service based desktops, add packages such as `gnome-keyring`, `libsecret` and `seahorse` to your environment.
+
+For KDE Plasma, add KWallet support such as `kdePackages.kwalletmanager` and `kdePackages.kwallet`.
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

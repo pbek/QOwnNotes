@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-المراد من هذه الورقة أن تكون مرجعا سريعا وأن تُظهر صياغة ماركداون في QOwnNotes.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Headings
 
-استخدم العنوان لتنظيم نصوصك.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@
 **لوحة التنقل** تُظهر هيكل عناوينك.
 :::
 
-كبديل، للعناوين من المستويين الأول والثاني، يمكن تسطيرهم هكذا:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -296,7 +296,7 @@ There must be at least 3 dashes separating each header cell.
 ::: tip
 اضغط <kbd>Alt + Shift + T</kbd> لإظهار حوار يساعدك في إنشاء الجداول. يمكنك حتى استيراد ملفات CSV في ذلك الحوار.
 
-استخدم <kbd>Ctrl + Space</kbd> داخل جدول ماركداون لتنسيقه آليًا.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## كتل الاقتباس

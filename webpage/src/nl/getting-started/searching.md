@@ -7,6 +7,7 @@ Er zijn verschillende manieren om naar notities te zoeken:
 - `notitieboek` zoekt naar notities met het woord `notitie` of `boek` in de bestandsnaam of notitietekst
 - `"notitieboek"` zoekt naar notities met exact de tekst `notitieboek` in de bestandsnaam of notitietekst
 - `n: boek` of `naam: boek` zoekt naar notities met `boek` alleen in de naam van de notitie of de bestandsnaam
+- `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
 
 ![Zoeken](/img/searching.png)
 

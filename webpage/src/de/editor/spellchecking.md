@@ -2,6 +2,8 @@
 
 Lassen Sie Ihre Rechtschreibfehler korrigieren!
 
+You can toggle the Spell checker by going to **Edit -> Check Spelling**. If you need to manually select the language of your note you can do so by going to **Edit -> Language**.
+
 ::: tip Info
 QOwnNotes hat einen  **Dictionary Manager** (im _Edit_ Menü) den Sie nutzen können, um Wörterbücher herunterzuladen oder zu entfernen (wenn das von Ihnen benötigte Wörterbuch fehlen sollte, finden Sie unten eine Anleitung wie Sie das Hinzufügen dieses Wörterbuchs beantragen können). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen.
 :::

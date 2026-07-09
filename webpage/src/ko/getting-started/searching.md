@@ -7,6 +7,7 @@
 - `노트북`은 파일 이름이나 노트 텍스트에 `노트` 또는 `북`이라는 단어가 있는 노트를 검색합니다
 - `"노트북"`은 파일 이름 또는 노트 텍스트에서 텍스트 노트와 정확히 일치하는 `노트북`을 검색합니다
 - `n:북` 또는 `이름:북`은 노트 이름 또는 파일 이름에 `북` 이 있는 노트를 검색합니다
+- `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
 
 ![검색](/img/searching.png)
 

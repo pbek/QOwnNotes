@@ -1,10 +1,10 @@
 # Apuntes de Markdown
 
-Esta hoja de referencia de Markdown está pensada como una referencia rápida y una muestra de la sintaxis de Markdown en QOwnNotes.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Encabezados
 
-Utilice los encabezados para estructurar sus textos.
+Use ATX headings to structure your texts.
 
 ```markdown
 # Encabezado 1
@@ -24,7 +24,7 @@ Utilice los encabezados para estructurar sus textos.
 El **panel de navegación** muestra la estructura de sus encabezados.
 :::
 
-Alternativamente, para H1 y H2, un estilo de subrayado:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -296,7 +296,7 @@ También puede utilizar Markdown en línea.
 ::: tip
 Presione <kbd>Alt + Shift + T</kbd> para activar un cuadro de diálogo que puede ayudarlo a crear tablas. Incluso puede importar archivos CSV en ese cuadro de diálogo.
 
-Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla de markdown para formatearla automáticamente.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## Citas en bloque

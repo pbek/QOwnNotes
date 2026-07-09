@@ -55,3 +55,21 @@ sudo pacman -Syy qownnotes
 
 물론 Manjaro와 같은 다른 Arch Linux 기반 배포판에서도 이 저장소를 사용할 수 있습니다.
 :::
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+
+For GNOME and other Secret Service based desktops:
+
+```bash
+sudo pacman -S gnome-keyring libsecret seahorse
+```
+
+For KDE Plasma:
+
+```bash
+sudo pacman -S kwalletmanager kwallet
+```
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

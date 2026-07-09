@@ -7,6 +7,7 @@ To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl<
 - ستبحث العبارة `كشكول ملاحظات` عن الملاحظات التي فيها كلمة `كشكول` أو كلمة `ملاحظات` في اسم الملف أو محتوى الملاحظة
 - ستبحث العبارة `"كشكول ملاحظات"` عن الملاحظات التي فيها النص `كشكول ملاحظات` في اسم الملف أو محتوى الملاحظة
 - ستبحث العبارة `n:كشكول` أو `name:كشكول` عن الملاحظات التي فيها كلمة `كشكول` فقط في اسم الملاحظة أو اسم الملف
+- `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
 
 ![البحث عن الملاحظات](/img/searching.png)
 

@@ -13,3 +13,13 @@ snap install qownnotes
 ::: tip
 [스냅](http://snapcraft.io)은 Ubuntu, Arch Linux, Debian, Fedora, openSUSE, Gentoo Linux, OpenWRT, 오픈 임베디드 및 yocto 프로젝트와 같은 많은 리눅스 배포판에서 작업하고 있습니다.
 :::
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages on the host system and restart your desktop session.
+
+For GNOME and other Secret Service based desktops, install `gnome-keyring`, `libsecret` and `seahorse`.
+
+For KDE Plasma, install KWallet support such as `kwalletmanager`.
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

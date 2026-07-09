@@ -22,3 +22,13 @@ The package is built with Qt6, uses the system botan3 library and libgit2 and pr
 Info
 On **macOS** the package works natively on **x86 and Apple Silicon**!
 :::
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain` on Linux, install a Secret Service implementation and restart your desktop session.
+
+For GNOME and other Secret Service based desktops, add packages such as `gnome-keyring`, `libsecret` and `seahorse` to your environment.
+
+For KDE Plasma, add KWallet support such as `kdePackages.kwalletmanager` and `kdePackages.kwallet`.
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

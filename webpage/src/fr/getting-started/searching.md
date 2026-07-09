@@ -6,7 +6,8 @@ Il existe différentes manières de rechercher des notes :
 
 - `note book` recherche les notes avec le mot `note` ou `book` dans le nom du fichier ou le texte de la note
 - `"note book"` recherchera des notes contenant exactement le texte `note book` dans le nom du fichier ou le texte de la note
-- `n:book` ou `name:book` recherchera les notes avec `book` juste dans le nom de la note ou le nom du fichier
+- `n:book` ou `name:book` recherchera les notes avec exactement `book` dans le nom de la note ou le nom du fichier
+- `n:"note book"` ou `name:"note book"` recherchera les notes avec exactement `note book` dans le nom de la note ou le nom du fichier
 
 ![Recherche](/img/searching.png)
 

@@ -22,3 +22,13 @@ Vous pouvez utiliser `nix-shell -p qc --run "qc exec"` pour l’essayer.
 Info
 Sur **macOS**, le paquet fonctionne sur **x86 et Apple Silicon** !
 :::
+
+::: tip
+Si QOwnNotes affiche `Could not write secret to keychain` sous Linux, installez une implémentation Secret Service et redémarrez votre session de bureau.
+
+Pour GNOME et les autres environnements reposant sur Secret Service, ajoutez des paquets comme `gnome-keyring`, `libsecret` et `seahorse` à votre environnement.
+
+Pour KDE Plasma, ajoutez un support de KWallet tel que `kdePackages.kwalletmanager` et `kdePackages.kwallet`.
+
+QOwnNotes repassera sur le chiffrement obsolète si le porte-clés de l’environnement n’est pas disponible.
+:::

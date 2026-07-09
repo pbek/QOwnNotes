@@ -70,3 +70,21 @@ apt-get install qownnotes
 ```
 
 [Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+
+For GNOME and other Secret Service based desktops:
+
+```bash
+sudo apt install gnome-keyring libsecret-1-0 seahorse
+```
+
+For KDE Plasma:
+
+```bash
+sudo apt install kwalletmanager
+```
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

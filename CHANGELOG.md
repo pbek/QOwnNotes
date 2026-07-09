@@ -5,6 +5,7 @@
 - Fixed generated note insertions while **read-only mode** is active, so QOwnNotes
   now asks to allow note editing before adding links, attachments, media, HTML as
   Markdown, data-url images, or autocomplete text (for [#3659](https://github.com/pbek/QOwnNotes/issues/3659))
+- Added more French, Korean translation (thank you, jd-develop, VenusGirl)
 
 ## 26.7.4
 

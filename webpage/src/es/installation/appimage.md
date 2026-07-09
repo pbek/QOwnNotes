@@ -51,3 +51,13 @@ Esto facilita llevar QOwnNotes junto con todas sus notas en una unidad USB o cua
 
 ::: Consejo Asegúrese de que el directorio que contiene el archivo AppImage tenga permisos de escritura, para que la carpeta `Data` pueda crearse junto a él.
 :::
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages on your Linux distribution and restart your desktop session.
+
+For GNOME and other Secret Service based desktops, install `gnome-keyring`, `libsecret` and `seahorse`.
+
+For KDE Plasma, install KWallet support such as `kwalletmanager`.
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

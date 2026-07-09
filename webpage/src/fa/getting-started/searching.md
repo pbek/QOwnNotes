@@ -7,6 +7,7 @@ To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl<
 - `note book` با کلمه `note` یا `book` در میان یادداشت ها و در نام پرونده یا متن یادداشت مورد جستجو قرار می گیرد
 - `"note book"` دقیقاً به شکل  `note book` در میان یادداشت ها و در نام پرونده یا متن یادداشت مورد جستجو قرار می گیرد
 - `n:book` یا `name:book` با کلمه `book` در میان یادداشت ها و درست در نام یادداشت یا نام پرونده جستجو می شود
+- `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
 
 ![جستجو](/img/searching.png)
 

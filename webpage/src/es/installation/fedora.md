@@ -13,7 +13,7 @@ Para la mayoría de los usuarios, basta con utilizar `dnf install qownnotes` en 
 A partir de [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 es el administrador de paquetes predeterminado e incluye el complemento config-manager de forma predeterminada. Ejecute los comandos siguientes con permisos administrativos para añadir el repositorio e instalar QOwnNotes:
 
 ```bash
-dnf config-manager add-repo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
+dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
 
 dnf install qownnotes
 ```
@@ -89,3 +89,21 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 La explicación detallada del comando se encuentra disponible en GitHub en un [tema](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) relacionado con esta misma incidencia.
 
 Una vez que la clave expirada haya sido eliminada, debe _importar_ nuevamente la clave **actual** de forma manual, tal y como se describe al inicio de estas instrucciones de instalación.
+
+::: tip
+If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+
+For GNOME and other Secret Service based desktops:
+
+```bash
+sudo dnf install gnome-keyring libsecret seahorse
+```
+
+For KDE Plasma:
+
+```bash
+sudo dnf install kwalletmanager kf6-kwallet
+```
+
+QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+:::

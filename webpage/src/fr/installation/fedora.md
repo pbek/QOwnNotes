@@ -13,7 +13,7 @@ La plupart des utilisateurs peuvent simplement utiliser `dnf install qownnotes` 
 À partir de [Fedora 41](https://fedoraproject.org/wiki/Changes/SwitchToDnf5), dnf5 est le gestionnaire de paquets par défaut et inclut toujours le greffon config-manager. Exécutez les commandes suivantes en tant que root pour ajouter le dépôt puis installer QOwnNotes :
 
 ```bash
-dnf config-manager add-repo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
+dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_42/home:pbek:QOwnNotes.repo
 
 dnf install qownnotes
 ```
@@ -89,3 +89,21 @@ sudo rpm -e $(rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubk
 L’explication détaillée de la commande est disponible sur GitHub sur un [topic](https://github.com/pbek/QOwnNotes/issues/3008#issuecomment-2197827084) lié à ce problème-ci.
 
 Une fois que la clé expirée a été supprimée, vous devez _importer_ la clé **courante** manuellement comme indiqué au début de ces instructions d’installation.
+
+::: tip
+Si QOwnNotes affiche `Could not write secret to keychain`, installez les paquets Secret Service manquants et redémarrez votre session de bureau.
+
+Pour GNOME et les autres environnements reposant sur Secret Service :
+
+```bash
+sudo dnf install gnome-keyring libsecret seahorse
+```
+
+Pour KDE Plasma :
+
+```bash
+sudo dnf install kwalletmanager kf6-kwallet
+```
+
+QOwnNotes repassera sur le chiffrement obsolète si le porte-clés de l’environnement n’est pas disponible.
+:::

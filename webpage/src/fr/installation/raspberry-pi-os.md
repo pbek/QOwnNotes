@@ -72,3 +72,21 @@ sudo apt-get install qownnotes
 ```
 
 [Téléchargement direct](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_9.0)
+
+::: tip
+Si QOwnNotes affiche `Could not write secret to keychain`, installez les paquets Secret Service manquants et redémarrez votre session de bureau.
+
+Pour GNOME et les autres environnements reposant sur Secret Service :
+
+```bash
+sudo apt install gnome-keyring libsecret-1-0 seahorse
+```
+
+Pour KDE Plasma :
+
+```bash
+sudo apt install kwalletmanager
+```
+
+QOwnNotes repassera sur le chiffrement obsolète si le porte-clés de l’environnement n’est pas disponible.
+:::

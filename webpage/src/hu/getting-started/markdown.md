@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-Ez a Markdown-cheatsheet gyors leírása és bemutatása a QOwnNotes markdown szintaxisában.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Headings
 
-Használja a fejléceket a szövegek strukturálásához.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@ Használja a fejléceket a szövegek strukturálásához.
 A **Navigációs panel** mutatja a címsorok felépítését.
 :::
 
-Alternatív megoldásként H1 és H2 esetében aláhúzás-stílus stílus:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -296,7 +296,7 @@ You can also use inline Markdown.
 ::: tip
 Nyomja meg az <kbd>Alt+Shift+T</kbd> billentyűkombinációt egy párbeszédpanel aktiválásához, amely segíthet a táblázatok létrehozásában. Akár CSV fájlokat is importálhat abban a párbeszédpanelen.
 
-Használja a <kbd>Ctrl + szóköz</kbd>t egy jelölési táblázatban az automatikus formázáshoz.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## Idézetek

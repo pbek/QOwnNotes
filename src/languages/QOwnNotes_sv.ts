@@ -717,6 +717,14 @@ Connection error message: </translation>
 <translation type="unfinished">&amp;Save debug information</translation>
 </message>
 <message>
+<source>Open settings file in external editor</source>
+<translation type="unfinished">Open settings file in external editor</translation>
+</message>
+<message>
+<source>Open settings file</source>
+<translation type="unfinished">Open settings file</translation>
+</message>
+<message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
 </message>
@@ -1337,6 +1345,22 @@ Connection error message: </translation>
 <message>
 <source>Show line numbers and bookmark markers (1-9)</source>
 <translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
+<source>Show visible markers for spaces and tabs in the note editor</source>
+<translation type="unfinished">Show visible markers for spaces and tabs in the note editor</translation>
+</message>
+<message>
+<source>Show whitespace markers</source>
+<translation type="unfinished">Show whitespace markers</translation>
+</message>
+<message>
+<source>Show visible markers for line endings in the note editor</source>
+<translation type="unfinished">Show visible markers for line endings in the note editor</translation>
+</message>
+<message>
+<source>Show line ending markers</source>
+<translation type="unfinished">Show line ending markers</translation>
 </message>
 <message>
 <source>Show character, word and line count in the status bar</source>
@@ -2307,6 +2331,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 Just test yourself if you get sync conflicts and set a higher value if so.</translation>
 </message>
 <message>
+<source>Use Setext style headings for generated new note titles instead of ATX style headings</source>
+<translation type="unfinished">Use Setext style headings for generated new note titles instead of ATX style headings</translation>
+</message>
+<message>
+<source>Use Setext headings for new notes</source>
+<translation type="unfinished">Use Setext headings for new notes</translation>
+</message>
+<message>
 <source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
 <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</translation>
 </message>
@@ -2325,6 +2357,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Use legacy way to link to notes, images and attachments</source>
 <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+</message>
+<message>
+<source>When the note title starts with an emoji, the emoji will not be stored in the note filename</source>
+<translation type="unfinished">When the note title starts with an emoji, the emoji will not be stored in the note filename</translation>
+</message>
+<message>
+<source>Don't use leading emojis in note filename</source>
+<translation type="unfinished">Don't use leading emojis in note filename</translation>
 </message>
 <message>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
@@ -6033,6 +6073,14 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <translation>rubrik %1</translation>
 </message>
 <message>
+<source>Expand all</source>
+<translation type="unfinished">Expand all</translation>
+</message>
+<message>
+<source>Collapse all</source>
+<translation type="unfinished">Collapse all</translation>
+</message>
+<message>
 <source>&amp;Rename heading</source>
 <translation type="unfinished">&amp;Rename heading</translation>
 </message>
@@ -7374,6 +7422,14 @@ Do you want to delete those files as well?</numerusform>
 <translation type="unfinished">Allow empty note files</translation>
 </message>
 <message>
+<source>When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</source>
+<translation type="unfinished">When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</translation>
+</message>
+<message>
+<source>Show leading emoji from note title as icon in the note list</source>
+<translation type="unfinished">Show leading emoji from note title as icon in the note list</translation>
+</message>
+<message>
 <source>Notes larger than this will not be shown in the note list</source>
 <translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
 </message>
@@ -7629,8 +7685,8 @@ Do you want to delete those files as well?</numerusform>
 <translation type="unfinished">Password entry not found</translation>
 </message>
 <message>
-<source>Could not decrypt data</source>
-<translation type="unfinished">Could not decrypt data</translation>
+<source>Could not delete password</source>
+<translation type="unfinished">Could not delete password</translation>
 </message>
 </context>
 <context>
@@ -7687,6 +7743,22 @@ Do you want to delete those files as well?</numerusform>
 <message>
 <source>Could not retrieve private key from keystore</source>
 <translation type="unfinished">Could not retrieve private key from keystore</translation>
+</message>
+<message>
+<source>Encrypted data is too short</source>
+<translation type="unfinished">Encrypted data is too short</translation>
+</message>
+<message>
+<source>Could not create RSA decryption cipher</source>
+<translation type="unfinished">Could not create RSA decryption cipher</translation>
+</message>
+<message>
+<source>Could not decrypt AES key: %1</source>
+<translation type="unfinished">Could not decrypt AES key: %1</translation>
+</message>
+<message>
+<source>Could not create AES decryption cipher</source>
+<translation type="unfinished">Could not create AES decryption cipher</translation>
 </message>
 <message>
 <source>Could not create decryption cipher</source>
@@ -7752,12 +7824,28 @@ Do you want to delete those files as well?</numerusform>
 <translation type="unfinished">Could not retrieve private key from keystore</translation>
 </message>
 <message>
-<source>Could not create encryption cipher</source>
-<translation type="unfinished">Could not create encryption cipher</translation>
+<source>Could not generate AES key</source>
+<translation type="unfinished">Could not generate AES key</translation>
 </message>
 <message>
-<source>Could not encrypt data</source>
-<translation type="unfinished">Could not encrypt data</translation>
+<source>Could not generate IV</source>
+<translation type="unfinished">Could not generate IV</translation>
+</message>
+<message>
+<source>Could not create AES encryption cipher</source>
+<translation type="unfinished">Could not create AES encryption cipher</translation>
+</message>
+<message>
+<source>Could not encrypt data: %1</source>
+<translation type="unfinished">Could not encrypt data: %1</translation>
+</message>
+<message>
+<source>Could not create RSA encryption cipher</source>
+<translation type="unfinished">Could not create RSA encryption cipher</translation>
+</message>
+<message>
+<source>Could not encrypt AES key: %1</source>
+<translation type="unfinished">Could not encrypt AES key: %1</translation>
 </message>
 <message>
 <source>D-Bus is not running</source>

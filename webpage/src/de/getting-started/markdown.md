@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-Dieses Markdown-Cheatsheet dient als Kurzreferenz und Beispiel für die Markdown-Syntax in QOwnNotes.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Überschriften
 
-Verwenden Sie Überschriften, um Ihre Texte zu strukturieren.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@ Verwenden Sie Überschriften, um Ihre Texte zu strukturieren.
 Das Bedienfeld **Navigation** zeigt die Struktur Ihrer Überschriften.
 :::
 
-Alternativ für H1 und H2 eine unterstrichene Schriftweise:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -294,7 +294,7 @@ Sie können auch inline-Markdown verwenden.
 ::: tip
 Drücken Sie <kbd>Alt + Umschalt + T</kbd>, um ein Dialogfeld zu aktivieren, mit dem Sie Tabellen erstellen können. In diesem Dialog können Sie sogar CSV-Dateien importieren!
 
-Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie automatisch zu formatieren.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## Zitat-Blöcke

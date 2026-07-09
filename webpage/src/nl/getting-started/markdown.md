@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-Deze Markdown-cheatsheet is bedoeld als een snelle referentie en showcase van de markdown-syntaxis in QOwnNotes.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Koppen
 
-Gebruik koppen om uw teksten te structureren.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@ Gebruik koppen om uw teksten te structureren.
 Het **Navigatiepaneel** toont de structuur van uw rubrieken.
 :::
 
-Als alternatief, voor H1 en H2, een onderstreepte stijl:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -295,7 +295,7 @@ U kunt ook inline Markdown gebruiken.
 ::: tip
 Druk op <kbd>Alt + Shift + T</kbd> om een dialoogvenster te activeren waarmee u tabellen kunt maken. U kunt zelfs CSV-bestanden in dat dialoogvenster importeren.
 
-Gebruik <kbd>Ctrl + Space</kbd> in een markdown-tabel om deze automatisch op te maken.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## Blokcitaten

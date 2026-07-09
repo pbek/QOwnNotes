@@ -1,10 +1,10 @@
 # Markdown Cheatsheet
 
-برگه تقلب مارک داون به صورت یک مرجع سریع و ویترینی از چیدمان مارک داون در QOwnNotes در نظر گرفته شده است.
+This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
 ## Headings
 
-برای سر و شکل دادن به متن خود از سرفصل ها استفاده کنید.
+Use ATX headings to structure your texts.
 
 ```markdown
 # H1
@@ -24,7 +24,7 @@
 **پنل جهت یابی** ساختار سرفصل های شما را نشان می دهد.
 :::
 
-از سوی دیگر، برای H1 و H2، یک سبک زیرخط دار:
+Alternatively, for H1 and H2, you can also use Setext headings:
 
 ```markdown
 Alt-H1
@@ -296,7 +296,7 @@ You can also use inline Markdown.
 ::: tip
 <kbd>Alt + Shift + T</kbd> را فشار دهید تا یک کادر گفتگو فعال شود که می تواند به شما در ایجاد جداول کمک کند. حتی می توانید پرونده های CSV را در آن کادر گفتگو وارد کنید.
 
-به منظور قالب بندی خودکار یک جدول مارک داون از <kbd>Ctrl + Space</kbd> در داخل آن استفاده کنید.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
 
 ## نقل قول های بلند

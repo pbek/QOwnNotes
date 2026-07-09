@@ -2,6 +2,8 @@
 
 اشتباهات املایی خود را تصحیح کنید!
 
+You can toggle the Spell checker by going to **Edit -> Check Spelling**. If you need to manually select the language of your note you can do so by going to **Edit -> Language**.
+
 ::: tip Info
 QOwnNotes has a builtin **Dictionary Manager** (in the _Edit_ menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). اگر می‌خواهید واژه نامه ها را به صورت دستی بارگیری کنید، می توانید دستورالعمل های زیر را دنبال کنید.
 :::

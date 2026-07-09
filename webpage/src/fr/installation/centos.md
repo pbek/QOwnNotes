@@ -1,3 +1,21 @@
 # Installer sur CentOS Linux
 
 Il y a des paquets créés par la communauté pour **RHEL 8/9, AlmaLinux 8/9, RockyLinux 8/9, CentOS 8/9 et Oracle 8/9** par _Jörg Woll_ sur [QOwnNotes packages for x86_64 for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/x86_64/w3bservice/Packages/repoview/qownnotes.html) (déprécié, fin de vie de CentOS 7), [QOwnNotes packages for ARM for el7](http://wilhelm949.spdns.org:10443/w3bservice/7/armhfp/w3bservice/Packages/repoview/qownnotes.html) (déprécié, fin de vie de CentOS 7), [QOwnNotespackages for x86_64 for el8](http://wilhelm949.spdns.org:10443/w3bservice/8/x86_64/w3bservice/Packages/repoview/qownnotes.html). [QOwnNotes packages for x86_64 for el9](http://wilhelm949.spdns.org:10443/w3bservice/9/x86_64/w3bservice/Packages/repoview/qownnotes.html).
+
+::: tip
+Si QOwnNotes affiche `Could not write secret to keychain`, installez les paquets Secret Service manquants et redémarrez votre session de bureau.
+
+Pour GNOME et les autres environnements reposant sur Secret Service :
+
+```bash
+sudo dnf install gnome-keyring libsecret seahorse
+```
+
+Pour KDE Plasma :
+
+```bash
+sudo dnf install kwalletmanager kf6-kwallet
+```
+
+QOwnNotes repassera sur le chiffrement obsolète si le porte-clés de l’environnement n’est pas disponible.
+:::

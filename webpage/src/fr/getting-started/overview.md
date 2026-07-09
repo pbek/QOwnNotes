@@ -29,7 +29,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - Gérez vos **listes de tâches** Nextcloud / ownCloud (**Nextcloud tasks** ou **Tasks Plus** / **Calendar Plus**) ou utilisez un autre **Serveur CalDAV** avec lequel synchroniser vos tâches
 - Les anciennes **versions** de vos notes peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
 - Les **notes mises à la corbeille** peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
-  - Les modes **corbeille locale** et **corbeille système** sont disponibles
+  - Les modes **corbeille locale** et **corbeille système** sont également disponibles
 - Les **modifications externes** des fichiers de notes sont **surveillées** (les notes ou la liste de notes sont rechargées)
 - Prise en charge du **balisage hiérarchique des notes** et des **sous-dossiers de notes**
   - Y compris le déplacement et la réorganisation des sous-dossiers avec mise à jour des liens ainsi que la visibilité ou non des sous-dossiers

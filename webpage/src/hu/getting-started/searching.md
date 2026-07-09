@@ -7,6 +7,7 @@ A jegyzetek keresésére többféle lehetőség van:
 - A `jegyzetfüzet` jegyzeteket keres a fájlnévben vagy a jegyzetszövegben a `jegyzet` vagy a `könyv` szóval.
 - A `"jegyzetfüzet"` olyan jegyzeteket keres, amelyek pontosan a `jegyzetfüzet` szöveget tartalmazzák a fájlnévben vagy a jegyzetszövegben
 - Az `n:könyv` vagy a `név:könyv` feljegyzéseket keres a `könyv` felirattal, csak a jegyzet vagy fájl nevében.
+- `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
 
 ![Keresés](/img/searching.png)
 
