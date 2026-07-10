@@ -232,7 +232,7 @@ generate-icons:
 # Generate the SNAP_TOKEN_GH token for the snap GitHub release action (see https://github.com/canonical/action-publish)
 [group('snap')]
 snap-generate-token:
-    nix-shell -p snapcraft --run "snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -"
+    gum confirm "Generate a Snap Store token for qownnotes?" && cd build-systems && docker compose run --rm releaser snapcraft export-login --snaps=qownnotes --acls package_access,package_push,package_update,package_release -
 
 # Run a GitHub workflow
 [group('linter')]

@@ -1,0 +1,11 @@
+# Constraints from Snapcraft 8.14.5's uv.lock for Python 3.12 on Ubuntu 24.04.
+craft-application==6.2.0
+craft-archives==2.2.0
+craft-cli==3.2.0
+craft-grammar==2.3.0
+craft-parts==2.28.1
+craft-platforms==0.10.0
+craft-providers==3.3.0
+craft-store==3.3.0
+protobuf==6.32.*
+pynacl<1.6.0

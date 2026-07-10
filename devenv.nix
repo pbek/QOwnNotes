@@ -61,6 +61,7 @@ in
       librsvg
       imagemagick
       libicns
+      gum
     ]
     ++ unstableQtPkgs;
 
