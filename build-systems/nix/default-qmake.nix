@@ -38,8 +38,8 @@ stdenv.mkDerivation {
     pkg-config
     installShellFiles
   ]
-  ++ lib.optionals stdenv.isLinux [ xvfb-run ]
-  ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ xvfb-run ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
 
   buildInputs = [
     qtbase
@@ -48,7 +48,7 @@ stdenv.mkDerivation {
     qtwebsockets
     botan2
   ]
-  ++ lib.optionals stdenv.isLinux [
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     libsecret
     qtwayland
   ];
@@ -57,7 +57,7 @@ stdenv.mkDerivation {
 
   # Install shell completion on Linux (there is no xvfb-run on macOS)
   postInstall =
-    lib.optionalString stdenv.isLinux ''
+    lib.optionalString stdenv.hostPlatform.isLinux ''
       installShellCompletion --cmd ${appname} \
         --bash <(xvfb-run $out/bin/${appname} --completion bash) \
         --fish <(xvfb-run $out/bin/${appname} --completion fish)
@@ -66,11 +66,11 @@ stdenv.mkDerivation {
         --fish <(xvfb-run $out/bin/${appname} --completion fish)
     ''
     # Create a lowercase symlink for Linux
-    + lib.optionalString stdenv.isLinux ''
+    + lib.optionalString stdenv.hostPlatform.isLinux ''
       ln -s $out/bin/${appname} $out/bin/${pname}
     '';
   #    # Rename application for macOS as lowercase binary
-  #    + lib.optionalString stdenv.isDarwin ''
+  #    + lib.optionalString stdenv.hostPlatform.isDarwin ''
   #      find $out
   #      # Prevent "same file" error
   #      mv $out/bin/${appname} $out/bin/${pname}.bin

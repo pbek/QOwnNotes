@@ -38,19 +38,19 @@ stdenv.mkDerivation {
     pkg-config
     installShellFiles
   ]
-  ++ lib.optionals stdenv.isLinux [ xvfb-run ]
-  ++ lib.optionals stdenv.isDarwin [ makeWrapper ];
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ xvfb-run ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
 
   buildInputs = [
     qtbase
     qtdeclarative
     qtsvg
     qtwebsockets
-    qtx11extras
   ]
-  ++ lib.optionals stdenv.isLinux [
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     libsecret
     qtwayland
+    qtx11extras
   ];
 
   # Internal Botan2 is required to build with QMake
@@ -65,11 +65,11 @@ stdenv.mkDerivation {
     #      --fish <(xvfb-run $out/bin/${appname} --completion fish)
   ''
   # Create a lowercase symlink for Linux
-  + lib.optionalString stdenv.isLinux ''
+  + lib.optionalString stdenv.hostPlatform.isLinux ''
     ln -s $out/bin/${appname} $out/bin/${pname}
   '';
   #    # Rename application for macOS as lowercase binary
-  #    + lib.optionalString stdenv.isDarwin ''
+  #    + lib.optionalString stdenv.hostPlatform.isDarwin ''
   #      find $out
   #      # Prevent "same file" error
   #      mv $out/bin/${appname} $out/bin/${pname}.bin
