@@ -352,8 +352,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
          </layout>
         </widget>
        </item>
-       <item>
-        <widget class="QGroupBox" name="appInstanceGroupBox">
+        <item>
+         <widget class="QGroupBox" name="appInstanceGroupBox">
          <property name="title">
           <string>App instance</string>
          </property>
@@ -366,10 +366,61 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </widget>
           </item>
          </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_10">
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="keychainGroupBox">
+          <property name="title">
+           <string>Keychain</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_keychain">
+           <item row="0" column="0">
+            <widget class="QLabel" name="keychainTimeoutLabel">
+             <property name="toolTip">
+              <string>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</string>
+             </property>
+             <property name="text">
+              <string>Keychain access timeout:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="keychainTimeoutSpinBox">
+             <property name="toolTip">
+              <string>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</string>
+             </property>
+             <property name="suffix">
+              <string extracomment="short for seconds"> sec</string>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>120</number>
+             </property>
+             <property name="value">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_keychain">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_10">
          <property name="title">
           <string>Update dialog</string>
          </property>

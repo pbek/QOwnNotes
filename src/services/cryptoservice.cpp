@@ -12,6 +12,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QTimer>
 #include <QUuid>
 
 #include "services/databaseservice.h"
@@ -23,6 +24,12 @@
 
 namespace {
 const auto KeychainMarkerPrefix = QStringLiteral("qtkeychain:");
+const int DefaultKeychainTimeout = 2;
+
+struct KeychainJobResult {
+    bool ok;
+    bool timedOut;
+};
 
 QString keychainServiceName() {
     QString serviceName = QStringLiteral("QOwnNotes");
@@ -39,13 +46,30 @@ QString keychainServiceName() {
     return serviceName;
 }
 
-bool executeKeychainJob(QKeychain::Job *job) {
+KeychainJobResult executeKeychainJob(QKeychain::Job *job) {
     QEventLoop loop;
+    QTimer timer;
+    bool timedOut = false;
+
+    timer.setSingleShot(true);
     job->setAutoDelete(false);
     QObject::connect(job, &QKeychain::Job::finished, &loop, &QEventLoop::quit);
+    QObject::connect(&timer, &QTimer::timeout, &loop, [&loop, &timedOut]() {
+        timedOut = true;
+        loop.quit();
+    });
     job->start();
+    timer.start(CryptoService::keychainTimeout() * 1000);
     loop.exec();
-    return job->error() == QKeychain::NoError;
+
+    if (timedOut) {
+        // Let the backend finish and clean up later; deleting active keychain jobs can leave
+        // backend callbacks with dangling private data.
+        job->setAutoDelete(true);
+        return {false, true};
+    }
+
+    return {job->error() == QKeychain::NoError, false};
 }
 
 void appendKeychainReference(QStringList *references, const QString &value) {
@@ -180,14 +204,19 @@ bool CryptoService::deleteSecret(const QString &storedValueOrKey) const {
     auto *job = new QKeychain::DeletePasswordJob(keychainServiceName());
     job->setKey(key);
 
-    executeKeychainJob(job);
-    const bool ok = job->error() == QKeychain::NoError || job->error() == QKeychain::EntryNotFound;
+    const KeychainJobResult result = executeKeychainJob(job);
+    const bool ok = !result.timedOut && (job->error() == QKeychain::NoError ||
+                                         job->error() == QKeychain::EntryNotFound);
 
-    if (!ok) {
+    if (result.timedOut) {
+        qWarning() << "Timed out deleting secret from keychain:" << key;
+    } else if (!ok) {
         qWarning() << "Could not delete secret from keychain:" << key << job->errorString();
     }
 
-    delete job;
+    if (!result.timedOut) {
+        delete job;
+    }
     return ok;
 }
 
@@ -256,6 +285,13 @@ QStringList CryptoService::keychainReferencesFromDiskDatabase() {
     return references;
 }
 
+int CryptoService::keychainTimeout() {
+    SettingsService settings;
+
+    return qBound(
+        1, settings.value(QStringLiteral("keychainTimeout"), DefaultKeychainTimeout).toInt(), 120);
+}
+
 QString CryptoService::legacyEncryptToString(const QString &text) {
     // Keep this compatible with the pre-qtkeychain SimpleCrypt storage format.
     return _simpleCrypt->encryptToString(text);
@@ -295,14 +331,18 @@ QString CryptoService::readSecret(const QString &key) const {
     auto *job = new QKeychain::ReadPasswordJob(keychainServiceName());
     job->setKey(key);
 
-    const bool ok = executeKeychainJob(job);
-    const QString text = ok ? job->textData() : QString();
+    const KeychainJobResult result = executeKeychainJob(job);
+    const QString text = result.ok ? job->textData() : QString();
 
-    if (!ok && job->error() != QKeychain::EntryNotFound) {
+    if (result.timedOut) {
+        qWarning() << "Timed out reading secret from keychain:" << key;
+    } else if (!result.ok && job->error() != QKeychain::EntryNotFound) {
         qWarning() << "Could not read secret from keychain:" << key << job->errorString();
     }
 
-    delete job;
+    if (!result.timedOut) {
+        delete job;
+    }
     return text;
 }
 
@@ -311,14 +351,18 @@ bool CryptoService::writeSecret(const QString &key, const QString &text) const {
     job->setKey(key);
     job->setTextData(text);
 
-    const bool ok = executeKeychainJob(job);
+    const KeychainJobResult result = executeKeychainJob(job);
 
-    if (!ok) {
+    if (result.timedOut) {
+        qWarning() << "Timed out writing secret to keychain:" << key;
+    } else if (!result.ok) {
         qWarning() << "Could not write secret to keychain:" << key << job->errorString();
     }
 
-    delete job;
-    return ok;
+    if (!result.timedOut) {
+        delete job;
+    }
+    return result.ok;
 }
 
 bool CryptoService::migrateSecret(QString *storedValue, const QString &key,

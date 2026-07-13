@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.6
+
+- Added a **General settings** option for the keychain access timeout, defaulting
+  to 2 seconds, so QOwnNotes falls back to SimpleCrypt legacy encryption faster
+  if the system keychain service is unavailable (for [#3661](https://github.com/pbek/QOwnNotes/issues/3661))
+
 ## 26.7.5
 
 - Fixed generated note insertions while **read-only mode** is active, so QOwnNotes

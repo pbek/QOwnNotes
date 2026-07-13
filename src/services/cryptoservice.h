@@ -23,6 +23,7 @@ class CryptoService : public QObject {
     static bool isKeychainReference(const QString &text);
     bool deleteSecret(const QString &storedValueOrKey) const;
     void deleteSecrets(const QStringList &storedValuesOrKeys) const;
+    static int keychainTimeout();
     static QStringList keychainReferencesFromSettings(const QSettings &settings);
     static QStringList keychainReferencesFromDiskDatabase();
 

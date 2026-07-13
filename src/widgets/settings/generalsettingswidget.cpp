@@ -29,6 +29,7 @@
 
 #include "dialogs/filedialog.h"
 #include "mainwindow.h"
+#include "services/cryptoservice.h"
 #include "services/databaseservice.h"
 #include "services/settingsservice.h"
 #include "services/updateservice.h"
@@ -125,6 +126,7 @@ void GeneralSettingsWidget::readSettings() {
         settings.value(QStringLiteral("noteSaveIntervalTime"), 10).toInt());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(
         settings.value(QStringLiteral("allowOnlyOneAppInstance")).toBool());
+    ui->keychainTimeoutSpinBox->setValue(CryptoService::keychainTimeout());
 
     // Load the custom note file extensions
     QListIterator<QString> itr(Note::noteFileExtensionList());
@@ -232,6 +234,7 @@ void GeneralSettingsWidget::storeSettings() {
 
     settings.setValue(QStringLiteral("allowOnlyOneAppInstance"),
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
+    settings.setValue(QStringLiteral("keychainTimeout"), ui->keychainTimeoutSpinBox->value());
 
     // Store image scaling settings
     settings.setValue(QStringLiteral("imageScaleDown"), ui->imageScaleDownCheckBox->isChecked());
