@@ -679,6 +679,15 @@ QString Note::getNameWithoutLeadingEmoji() const {
     return result.isEmpty() ? _name : result;
 }
 
+bool Note::isConflictedCopy() const {
+    static const QRegularExpression reConflictedCopy(
+        QStringLiteral("\\s\\(conflicted copy \\d{4}-\\d{2}-\\d{2} \\d{6}\\)(?:\\.[^./\\\\]+)?$"));
+
+    return _fileName.contains(reConflictedCopy);
+}
+
+QString Note::conflictedCopyEmoji() { return QStringLiteral("⚠️"); }
+
 QDateTime Note::getFileLastModified() const { return this->_fileLastModified; }
 
 QDateTime Note::getFileCreated() const { return this->_fileCreated; }

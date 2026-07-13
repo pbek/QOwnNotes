@@ -48,7 +48,10 @@ static QTreeWidgetItem *noteItem(const Note &note) {
     Utils::Gui::setTreeWidgetItemToolTipForNote(item, note);
 
     const bool detectLeadingEmoji = Utils::Misc::isDetectLeadingEmojiInNoteTitle();
-    if (detectLeadingEmoji) {
+    if (note.isConflictedCopy()) {
+        item->setText(0, name);
+        item->setIcon(0, Utils::Gui::emojiIcon(Note::conflictedCopyEmoji(), 22));
+    } else if (detectLeadingEmoji) {
         const QString emoji = note.getLeadingEmoji();
         if (!emoji.isEmpty()) {
             // Show the emoji as the item icon and strip it from the display text

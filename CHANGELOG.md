@@ -2,6 +2,9 @@
 
 ## 26.7.6
 
+- Nextcloud **sync conflicted-copy notes** like `TODO (conflicted copy 2026-07-10 070952).md`
+  are now marked with a warning emoji in the note list so they are easier to spot
+  (for [#3662](https://github.com/pbek/QOwnNotes/issues/3662))
 - Added a **General settings** option for the keychain access timeout, defaulting
   to 2 seconds, so QOwnNotes falls back to SimpleCrypt legacy encryption faster
   if the system keychain service is unavailable (for [#3661](https://github.com/pbek/QOwnNotes/issues/3661))

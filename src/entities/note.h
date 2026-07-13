@@ -57,6 +57,10 @@ class Note {
 
     static QString extractLeadingEmoji(const QString &text);
 
+    bool isConflictedCopy() const;
+
+    static QString conflictedCopyEmoji();
+
     QString getFileName() const;
 
     QString getNoteText() const;

@@ -9,7 +9,10 @@ NoteTreeWidgetItem::NoteTreeWidgetItem(const Note &note, QWidget *parent)
 }
 
 void NoteTreeWidgetItem::updateUserInterface(const Note &note) const {
-    ui->nameLabel->setText(note.getName());
+    const QString name = note.isConflictedCopy()
+                             ? Note::conflictedCopyEmoji() + QStringLiteral(" ") + note.getName()
+                             : note.getName();
+    ui->nameLabel->setText(name);
 
     QDateTime modified = note.getFileLastModified();
     ui->dateLabel->setText(modified.toString());

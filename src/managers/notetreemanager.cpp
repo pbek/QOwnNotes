@@ -88,6 +88,7 @@ bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem 
 
     const bool isNoteListPreview = Utils::Misc::isNoteListPreview();
     const bool detectLeadingEmoji = Utils::Misc::isDetectLeadingEmojiInNoteTitle();
+    const bool isConflictedCopy = note.isConflictedCopy();
 
     // add a note item to the tree
     auto *noteItem = new QTreeWidgetItem();
@@ -108,9 +109,11 @@ bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem 
     const bool isFavorite = note.isFavorite();
     noteItem->setData(0, Qt::UserRole + 2, isFavorite);
 
-    // Set the icon: prefer a leading emoji icon when the feature is enabled,
-    // otherwise fall back to the standard note/favorite icon
-    if (detectLeadingEmoji) {
+    // Set the icon: conflict marker takes priority, then leading emoji,
+    // favorite and finally the standard note icon.
+    if (isConflictedCopy) {
+        noteItem->setIcon(0, Utils::Gui::emojiIcon(Note::conflictedCopyEmoji(), 22));
+    } else if (detectLeadingEmoji) {
         const QString emoji = note.getLeadingEmoji();
         if (!emoji.isEmpty()) {
             noteItem->setIcon(0, Utils::Gui::emojiIcon(emoji, 22));
@@ -206,12 +209,14 @@ void NoteTreeManager::updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem
 
 /**
  * Updates the icon and display text of the note tree widget item for the given
- * note when the leading emoji detection setting is active. Called whenever the
- * note text changes so the icon reflects an emoji that was added or removed
- * from the note title without requiring a full note-list reload.
+ * note. Called whenever the note text changes so the icon reflects an emoji
+ * that was added or removed from the note title without requiring a full
+ * note-list reload.
  */
 void NoteTreeManager::updateNoteTreeWidgetItemIcon(const Note &note) {
-    if (!Utils::Misc::isDetectLeadingEmojiInNoteTitle()) {
+    const bool isConflictedCopy = note.isConflictedCopy();
+    const bool detectLeadingEmoji = Utils::Misc::isDetectLeadingEmojiInNoteTitle();
+    if (!isConflictedCopy && !detectLeadingEmoji) {
         return;
     }
 
@@ -226,8 +231,11 @@ void NoteTreeManager::updateNoteTreeWidgetItemIcon(const Note &note) {
     const QString emoji = note.getLeadingEmoji();
     const bool isFavorite = note.isFavorite();
 
-    // Update the icon: emoji takes priority, then favorite, then standard
-    if (!emoji.isEmpty()) {
+    // Update the icon: conflict marker takes priority, then emoji, favorite
+    // and finally the standard note icon.
+    if (isConflictedCopy) {
+        item->setIcon(0, Utils::Gui::emojiIcon(Note::conflictedCopyEmoji(), 22));
+    } else if (!emoji.isEmpty()) {
         item->setIcon(0, Utils::Gui::emojiIcon(emoji, 22));
     } else if (isFavorite) {
         item->setIcon(0, Utils::Gui::favoriteNoteIcon());
@@ -235,8 +243,8 @@ void NoteTreeManager::updateNoteTreeWidgetItemIcon(const Note &note) {
         item->setIcon(0, Utils::Gui::noteIcon());
     }
 
-    // Update the display text to reflect any change in the leading emoji
-    item->setText(0, note.getNameWithoutLeadingEmoji());
+    // Update the display text to reflect any change in the leading emoji.
+    item->setText(0, detectLeadingEmoji ? note.getNameWithoutLeadingEmoji() : note.getName());
 }
 
 /**
