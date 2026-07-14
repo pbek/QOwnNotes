@@ -761,22 +761,22 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="208"/>
+        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="226"/>
         <source>New color mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="232"/>
+        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="252"/>
         <source>Remove color mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="233"/>
+        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="253"/>
         <source>Remove the color mode &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="263"/>
+        <location filename="../widgets/settings/colormodesettingswidget.cpp" line="284"/>
         <source>Color mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3028,6 +3028,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../widgets/settings/generalsettingswidget.ui" line="326"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="393"/>
         <source> sec</source>
         <extracomment>short for seconds</extracomment>
         <translation type="unfinished"></translation>
@@ -3044,238 +3045,254 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../widgets/settings/generalsettingswidget.ui" line="374"/>
-        <source>Update dialog</source>
+        <source>Keychain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../widgets/settings/generalsettingswidget.ui" line="380"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="390"/>
+        <source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="383"/>
+        <source>Keychain access timeout:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="425"/>
+        <source>Update dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="431"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="396"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="447"/>
         <source>Search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="418"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="469"/>
         <source>Message boxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="424"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="475"/>
         <source>Forget all &quot;Don&apos;t ask again&quot; choices in message boxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="427"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="513"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="478"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="516"/>
         <source>Reset message boxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="457"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="508"/>
         <source>Note file extensions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="495"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="546"/>
         <source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="505"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="556"/>
         <source>Add a new note file extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="519"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="570"/>
         <source>Remove selected note file extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="536"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="587"/>
         <source>External tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="549"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="600"/>
         <source>Path to external editor, leave empty for default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="542"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="593"/>
         <source>Path to external editor:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="559"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="610"/>
         <source>set external editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="573"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="624"/>
         <source>Path to external diff tool:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="580"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="631"/>
         <source>Path to external diff tool, leave empty for default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="590"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="641"/>
         <source>set external diff tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="607"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="658"/>
         <source>Clear application data and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="613"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="664"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="623"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="326"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="674"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="329"/>
         <source>Clear app data and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="639"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="690"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="645"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="567"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="587"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="696"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="570"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="590"/>
         <source>Import settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="652"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="533"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="703"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="536"/>
         <source>Export settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="668"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="294"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="304"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="312"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="316"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="719"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="297"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="307"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="315"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="319"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="674"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="725"/>
         <source>Reinitialize Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="681"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="732"/>
         <source>Checks the disk database integrity and fixes problems</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="684"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="735"/>
         <source>Check integrity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.ui" line="691"/>
+        <location filename="../widgets/settings/generalsettingswidget.ui" line="742"/>
         <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="295"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="298"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="305"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="308"/>
         <source>The Database was reinitialized. Please restart the application now!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="313"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="316"/>
         <source>The integrity of the disk database is valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="317"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="320"/>
         <source>The integrity of the disk database is not valid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="327"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="330"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="351"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="354"/>
         <source>Select editor application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="364"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="367"/>
         <source>Select diff tool application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="423"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="426"/>
         <source>File extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="424"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="427"/>
         <source>Please enter a new note file extension:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="455"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="458"/>
         <source>Markdown file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="457"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="460"/>
         <source>Plain text file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="475"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="478"/>
         <source>Remove note file extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="476"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="479"/>
         <source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="514"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="517"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="532"/>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="586"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="535"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="589"/>
         <source>INI files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="568"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="571"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/generalsettingswidget.cpp" line="575"/>
+        <location filename="../widgets/settings/generalsettingswidget.cpp" line="578"/>
         <source>The application will be restarted after the import.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8411,37 +8428,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="144"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="151"/>
         <source>new folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="176"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="185"/>
         <source>Remove note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="177"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="186"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="251"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="262"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="285"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="338"/>
         <source>Loading folders from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="298"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="351"/>
         <source>No more folders were found in the current folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="366"/>
+        <location filename="../widgets/settings/notefoldersettingswidget.cpp" line="419"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8859,68 +8876,68 @@ Do you want to delete those files as well?</source>
 <context>
     <name>NoteSubFolderTree</name>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="404"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="407"/>
         <source>All notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="402"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="405"/>
         <source>Show notes from all note subfolders (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="365"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="368"/>
         <source>Show notes in folder &apos;%1&apos; (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="422"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="425"/>
         <source>Show notes in note root folder (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="430"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="433"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="507"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="510"/>
         <source>New subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="539"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="542"/>
         <source>Rename subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="546"/>
-        <location filename="../widgets/notesubfoldertree.cpp" line="644"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="549"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="647"/>
         <source>Remove selected folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="553"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="556"/>
         <source>Move selected folders to...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="555"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="558"/>
         <source>Move to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="564"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="567"/>
         <source>Show folder in file manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="599"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="602"/>
         <source>Move to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../widgets/notesubfoldertree.cpp" line="645"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="648"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8928,22 +8945,22 @@ Do you want to delete those files as well?</source>
         </translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="657"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="660"/>
         <source>Removed note subfolder: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="742"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="745"/>
         <source>note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="744"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="747"/>
         <source>Move selected folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../widgets/notesubfoldertree.cpp" line="745"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="748"/>
         <source>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8951,17 +8968,17 @@ Do you want to delete those files as well?</source>
         </translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="754"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="757"/>
         <source>Migrate relative links</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notesubfoldertree.cpp" line="755"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="758"/>
         <source>Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../widgets/notesubfoldertree.cpp" line="845"/>
+        <location filename="../widgets/notesubfoldertree.cpp" line="848"/>
         <source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9006,158 +9023,158 @@ Do you want to delete those files as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="445"/>
+        <location filename="../managers/notetreemanager.cpp" line="453"/>
         <source>New note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="449"/>
-        <location filename="../managers/notetreemanager.cpp" line="694"/>
+        <location filename="../managers/notetreemanager.cpp" line="457"/>
+        <location filename="../managers/notetreemanager.cpp" line="702"/>
         <source>Rename note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="451"/>
+        <location filename="../managers/notetreemanager.cpp" line="459"/>
         <source>Allows you to rename the filename of the note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="458"/>
+        <location filename="../managers/notetreemanager.cpp" line="466"/>
         <source>&amp;Remove notes and folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="460"/>
+        <location filename="../managers/notetreemanager.cpp" line="468"/>
         <source>&amp;Remove folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="462"/>
+        <location filename="../managers/notetreemanager.cpp" line="470"/>
         <source>&amp;Remove notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="474"/>
+        <location filename="../managers/notetreemanager.cpp" line="482"/>
         <source>&amp;Move notes to…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="475"/>
+        <location filename="../managers/notetreemanager.cpp" line="483"/>
         <source>&amp;Copy notes to…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="510"/>
+        <location filename="../managers/notetreemanager.cpp" line="518"/>
         <source>Jump to the note&apos;s subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="513"/>
+        <location filename="../managers/notetreemanager.cpp" line="521"/>
         <source>Move notes to subfolder…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="516"/>
+        <location filename="../managers/notetreemanager.cpp" line="524"/>
         <source>Copy notes to subfolder…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="524"/>
+        <location filename="../managers/notetreemanager.cpp" line="532"/>
         <source>&amp;Tag selected notes with…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="550"/>
+        <location filename="../managers/notetreemanager.cpp" line="558"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="576"/>
+        <location filename="../managers/notetreemanager.cpp" line="584"/>
         <source>Open selected notes in tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="582"/>
+        <location filename="../managers/notetreemanager.cpp" line="590"/>
         <source>Diff selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="586"/>
+        <location filename="../managers/notetreemanager.cpp" line="594"/>
         <source>Open note in external editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="587"/>
+        <location filename="../managers/notetreemanager.cpp" line="595"/>
         <source>Open note in different window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="589"/>
+        <location filename="../managers/notetreemanager.cpp" line="597"/>
         <source>Open note in Nextcloud Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="590"/>
+        <location filename="../managers/notetreemanager.cpp" line="598"/>
         <source>Open note in Nextcloud Notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="592"/>
+        <location filename="../managers/notetreemanager.cpp" line="600"/>
         <source>Show note in file manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="593"/>
+        <location filename="../managers/notetreemanager.cpp" line="601"/>
         <source>Copy absolute path of note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="594"/>
+        <location filename="../managers/notetreemanager.cpp" line="602"/>
         <source>Copy note filename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="598"/>
+        <location filename="../managers/notetreemanager.cpp" line="606"/>
         <source>Show note git versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="606"/>
+        <location filename="../managers/notetreemanager.cpp" line="614"/>
         <source>Unmark as favorite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="608"/>
+        <location filename="../managers/notetreemanager.cpp" line="616"/>
         <source>Mark as favorite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="625"/>
+        <location filename="../managers/notetreemanager.cpp" line="633"/>
         <source>Select &amp;all notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="694"/>
+        <location filename="../managers/notetreemanager.cpp" line="702"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="705"/>
+        <location filename="../managers/notetreemanager.cpp" line="713"/>
         <source>Note renaming not enabled!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="706"/>
+        <location filename="../managers/notetreemanager.cpp" line="714"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="711"/>
+        <location filename="../managers/notetreemanager.cpp" line="719"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="712"/>
+        <location filename="../managers/notetreemanager.cpp" line="720"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9881,12 +9898,12 @@ Do you want to delete those files as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2487"/>
+        <location filename="../entities/note.cpp" line="2496"/>
         <source>Note file was modified externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2488"/>
+        <location filename="../entities/note.cpp" line="2497"/>
         <source>The note file &apos;%1&apos; was modified externally while you had unsaved changes.
 
 The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
@@ -9896,39 +9913,39 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2595"/>
-        <location filename="../entities/note.cpp" line="2602"/>
+        <location filename="../entities/note.cpp" line="2604"/>
+        <location filename="../entities/note.cpp" line="2611"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2662"/>
+        <location filename="../entities/note.cpp" line="2671"/>
         <source>Renamed note-file was removed: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2665"/>
+        <location filename="../entities/note.cpp" line="2674"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2817"/>
+        <location filename="../entities/note.cpp" line="2826"/>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="4494"/>
+        <location filename="../entities/note.cpp" line="4503"/>
         <source>Could not read image file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="5666"/>
-        <location filename="../entities/note.cpp" line="5752"/>
+        <location filename="../entities/note.cpp" line="5675"/>
+        <location filename="../entities/note.cpp" line="5761"/>
         <source>Note file path changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="5667"/>
+        <location filename="../entities/note.cpp" line="5676"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9936,7 +9953,7 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="5753"/>
+        <location filename="../entities/note.cpp" line="5762"/>
         <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9944,12 +9961,12 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         </translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="5960"/>
+        <location filename="../entities/note.cpp" line="5969"/>
         <source>Subfolder path changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="5961"/>
+        <location filename="../entities/note.cpp" line="5970"/>
         <source>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9957,17 +9974,17 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         </translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="6066"/>
+        <location filename="../entities/note.cpp" line="6075"/>
         <source>Image file exists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="6067"/>
+        <location filename="../entities/note.cpp" line="6076"/>
         <source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="6579"/>
+        <location filename="../entities/note.cpp" line="6588"/>
         <source>…and %n more note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
