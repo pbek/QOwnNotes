@@ -2451,6 +2451,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Разрешить только один экземпляр приложения одновременно</translation>
 </message>
 <message>
+<source>Keychain</source>
+<translation type="unfinished">Keychain</translation>
+</message>
+<message>
+<source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
+<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+</message>
+<message>
+<source>Keychain access timeout:</source>
+<translation type="unfinished">Keychain access timeout:</translation>
+</message>
+<message>
 <source>Update dialog</source>
 <translation>Диалог обновления</translation>
 </message>

@@ -719,11 +719,11 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Open settings file in external editor</source>
-<translation type="unfinished">Open settings file in external editor</translation>
+<translation>Ouvrir le fichier de préférences dans l’éditeur externe</translation>
 </message>
 <message>
 <source>Open settings file</source>
-<translation type="unfinished">Open settings file</translation>
+<translation>Ouvrir le fichier de préférences</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -2431,6 +2431,18 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Only allow one app instance at the same time</source>
 <translation>Permettre uniquement une seule instance de l'application en même temps</translation>
+</message>
+<message>
+<source>Keychain</source>
+<translation type="unfinished">Keychain</translation>
+</message>
+<message>
+<source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
+<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+</message>
+<message>
+<source>Keychain access timeout:</source>
+<translation type="unfinished">Keychain access timeout:</translation>
 </message>
 <message>
 <source>Update dialog</source>
@@ -5612,7 +5624,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Connected systems</source>
-<translation>Système connectés</translation>
+<translation>Systèmes connectés</translation>
 </message>
 <message>
 <source>No connected systems</source>

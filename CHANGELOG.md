@@ -5,6 +5,7 @@
 - The active entry is now marked with a checkbox in the **Note folder** and
   **Color modes** settings lists, which can also be used to set the active item
   (for [#3663](https://github.com/pbek/QOwnNotes/issues/3663))
+- Added more Spanish, French, Korean translation (thank you, AlejandroMoc, jd-develop, VenusGirl)
 
 ## 26.7.6
 

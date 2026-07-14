@@ -388,7 +388,7 @@
 </message>
 <message>
 <source>NC / oC server url:</source>
-<translation type="unfinished">NC / oC server url:</translation>
+<translation>URL de servidor de NC/oC:</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -2393,11 +2393,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Open last accessed note at application startup</source>
-<translation>Abrir la última nota accedida al iniciar la aplicación</translation>
+<translation>Abrir última nota accedida al iniciar la aplicación</translation>
 </message>
 <message>
 <source>Use checksums to detect external modifications to unsaved notes</source>
-<translation>Usar sumas de verificación para detectar modificaciones externas en notas no guardadas</translation>
+<translation>Usar suma de verificación para detectar modificaciones externas en notas no guardadas</translation>
 </message>
 <message>
 <source>Read-only mode</source>
@@ -2431,6 +2431,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Only allow one app instance at the same time</source>
 <translation>Permitir solo una instancia de la aplicación al mismo tiempo</translation>
+</message>
+<message>
+<source>Keychain</source>
+<translation type="unfinished">Keychain</translation>
+</message>
+<message>
+<source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
+<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+</message>
+<message>
+<source>Keychain access timeout:</source>
+<translation type="unfinished">Keychain access timeout:</translation>
 </message>
 <message>
 <source>Update dialog</source>
@@ -5734,7 +5746,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source> with arguments: %1</source>
-<translation type="unfinished"> with arguments: %1</translation>
+<translation> con argumentos: %1</translation>
 </message>
 <message>
 <source>Markdown LSP</source>
@@ -6103,11 +6115,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>SSL Settings</source>
-<translation>Configuración SSL</translation>
+<translation>Configuración de SSL</translation>
 </message>
 <message>
 <source>Ignore SSL errors</source>
-<translation>Ignorar errores SSL</translation>
+<translation>Ignorar errores de SSL</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -6131,7 +6143,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Usage tracking is done on a private Piwik server.</source>
-<translation>El seguimiento de uso se realiza en un servidor Piwik privado.</translation>
+<translation>El seguimiento de uso se realiza en un servidor privado de Piwik.</translation>
 </message>
 <message>
 <source>App heartbeat</source>
@@ -6625,11 +6637,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Please select your note folder on your Nextcloud / ownCloud server:</source>
-<translation type="unfinished">Please select your note folder on your Nextcloud / ownCloud server:</translation>
+<translation>Por favor, seleccione su carpeta de notas en su servidor de Nexcloud/ownCloud:</translation>
 </message>
 <message>
 <source>Path on your Nextcloud / ownCloud server:</source>
-<translation type="unfinished">Path on your Nextcloud / ownCloud server:</translation>
+<translation>Ruta en su servidor de Nextcloud/ownCloud:</translation>
 </message>
 <message>
 <source>Note folder path:</source>
@@ -6665,15 +6677,15 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</source>
-<translation type="unfinished">Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</translation>
+<translation>¡Tenga en cuenta que la aplicación de notas de Nextcloud/ownCloud no admite subcarpetas!</translation>
 </message>
 <message>
 <source>Click here to select your remote note path on your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Click here to select your remote note path on your Nextcloud / ownCloud server</translation>
+<translation>Pulse aquí para seleccionar la ruta de notas remotas en su servidor de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</source>
-<translation type="unfinished">Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</translation>
+<translation>Establezca la ruta de Nextcloud/ownCloud donde la carpeta de notas se sincronizará en su servidor de Nextcloud/ownCloud.</translation>
 </message>
 <message>
 <source>Use note subfolders</source>
@@ -7413,11 +7425,11 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</source>
-<translation type="unfinished">When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</translation>
+<translation>Cuando esté activado, un emoji inicial en el título de la nota se usará como icono en la lista de notas en lugar del icono estándar del documento</translation>
 </message>
 <message>
 <source>Show leading emoji from note title as icon in the note list</source>
-<translation type="unfinished">Show leading emoji from note title as icon in the note list</translation>
+<translation>Mostrar el emoji de inicio desde el título de la nota como icono en la lista de notas</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -7701,11 +7713,11 @@ Do you want to delete those files as well?</source>
 <name>QKeychain::PlainTextStore</name>
 <message>
 <source>Could not store data in settings: access error</source>
-<translation type="unfinished">Could not store data in settings: access error</translation>
+<translation>No se pudieron almacenar los datos en la configuración: error de acceso</translation>
 </message>
 <message>
 <source>Could not store data in settings: format error</source>
-<translation type="unfinished">Could not store data in settings: format error</translation>
+<translation>No se pudieron almacenar los datos en la configuración: error de formato</translation>
 </message>
 <message>
 <source>Could not delete data from settings: access error</source>
@@ -10126,7 +10138,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>For most current Nextcloud / ownCloud installations</source>
-<translation type="unfinished">For most current Nextcloud / ownCloud installations</translation>
+<translation>Para las instalaciones mas actuales de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Default Nextcloud / ownCloud calendar</source>
