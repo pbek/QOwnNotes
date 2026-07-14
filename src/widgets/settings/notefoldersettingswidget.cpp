@@ -14,10 +14,14 @@
 
 #include "notefoldersettingswidget.h"
 
+#include <QApplication>
 #include <QDir>
 #include <QFileDialog>
+#include <QFont>
+#include <QIcon>
 #include <QMessageBox>
 #include <QStatusBar>
+#include <QStyle>
 
 #include "dialogs/filedialog.h"
 #include "dialogs/settingsdialog.h"
@@ -64,6 +68,8 @@ void NoteFolderSettingsWidget::initialize() {
     // Disable the remove button if there is only one item
     ui->noteFolderRemoveButton->setEnabled(noteFoldersCount > 1);
 
+    updateNoteFolderListActiveState();
+
     // Set local path placeholder text
     ui->noteFolderLocalPathLineEdit->setPlaceholderText(Utils::Misc::defaultNotesPath());
 
@@ -82,6 +88,8 @@ void NoteFolderSettingsWidget::readSettings() {
     if (noteFolderListItem != nullptr) {
         ui->noteFolderListWidget->setCurrentItem(noteFolderListItem);
     }
+
+    updateNoteFolderListActiveState();
 }
 
 /**
@@ -204,6 +212,7 @@ void NoteFolderSettingsWidget::on_noteFolderRemoveButton_clicked() {
             QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
             if (noteFolders.count() > 0) {
                 noteFolders[0].setAsCurrent();
+                updateNoteFolderListActiveState();
             }
         }
     }
@@ -226,6 +235,7 @@ void NoteFolderSettingsWidget::on_noteFolderNameLineEdit_editingFinished() {
     _selectedNoteFolder.store();
 
     ui->noteFolderListWidget->currentItem()->setText(text);
+    updateNoteFolderListActiveState();
 }
 
 /**
@@ -273,6 +283,21 @@ void NoteFolderSettingsWidget::on_noteFolderActiveCheckBox_stateChanged(int arg1
     } else {
         _selectedNoteFolder.setAsCurrent();
         MainWindow::instance()->resetBrokenTagNotesLinkFlag();
+        updateNoteFolderListActiveState();
+    }
+}
+
+void NoteFolderSettingsWidget::updateNoteFolderListActiveState() {
+    const int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+    const QIcon activeIcon = QApplication::style()->standardIcon(QStyle::SP_DialogApplyButton);
+
+    for (int i = 0; i < ui->noteFolderListWidget->count(); i++) {
+        QListWidgetItem *item = ui->noteFolderListWidget->item(i);
+        const bool isCurrent = item->data(Qt::UserRole).toInt() == currentNoteFolderId;
+        QFont font = item->font();
+        font.setBold(isCurrent);
+        item->setFont(font);
+        item->setIcon(isCurrent ? activeIcon : QIcon());
     }
 }
 

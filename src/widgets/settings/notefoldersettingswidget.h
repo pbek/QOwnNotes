@@ -76,6 +76,7 @@ class NoteFolderSettingsWidget : public QWidget {
                                                             const QString &text);
     QString generatePathFromCurrentNoteFolderRemotePathItem(QTreeWidgetItem *item);
     void updateSubfolderVisibility();
+    void updateNoteFolderListActiveState();
     void populateSubfolderTree();
     void populateSubfolderTreeFromDir(QTreeWidgetItem *parentItem, const QString &path,
                                       const QString &relativePath);

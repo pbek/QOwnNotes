@@ -69,4 +69,6 @@ class ColorModeSettingsWidget : public QWidget {
     void initEditorSchemaComboBox();
 
     void applyColorModeSettings();
+
+    void updateColorModeListActiveState();
 };

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.7
+
+- The active entry is now marked in the **Note folder** and **Color modes**
+  settings lists, so it remains visible even while another item is selected
+  (for [#3663](https://github.com/pbek/QOwnNotes/issues/3663))
+
 ## 26.7.6
 
 - Nextcloud **sync conflicted-copy notes** like `TODO (conflicted copy 2026-07-10 070952).md`

@@ -18,8 +18,12 @@
 #include <utils/gui.h>
 #include <utils/schema.h>
 
+#include <QApplication>
+#include <QFont>
+#include <QIcon>
 #include <QMessageBox>
 #include <QSettings>
+#include <QStyle>
 
 #include "ui_colormodesettingswidget.h"
 
@@ -106,6 +110,22 @@ void ColorModeSettingsWidget::initialize() {
     // If nothing was selected, select the first item
     if (ui->colorModeListWidget->currentRow() == -1 && ui->colorModeListWidget->count() > 0) {
         ui->colorModeListWidget->setCurrentRow(0);
+    }
+
+    updateColorModeListActiveState();
+}
+
+void ColorModeSettingsWidget::updateColorModeListActiveState() {
+    const QString currentColorModeId = ColorMode::currentColorModeId();
+    const QIcon activeIcon = QApplication::style()->standardIcon(QStyle::SP_DialogApplyButton);
+
+    for (int i = 0; i < ui->colorModeListWidget->count(); i++) {
+        QListWidgetItem *item = ui->colorModeListWidget->item(i);
+        const bool isCurrent = item->data(Qt::UserRole).toString() == currentColorModeId;
+        QFont font = item->font();
+        font.setBold(isCurrent);
+        item->setFont(font);
+        item->setIcon(isCurrent ? activeIcon : QIcon());
     }
 }
 
@@ -244,6 +264,7 @@ void ColorModeSettingsWidget::on_colorModeRemoveButton_clicked() {
             ColorMode lightMode = ColorMode::fetch(ColorMode::LightModeId);
             lightMode.setAsCurrent();
             applyColorModeSettings();
+            updateColorModeListActiveState();
         }
     }
 }
@@ -267,6 +288,7 @@ void ColorModeSettingsWidget::on_colorModeNameLineEdit_editingFinished() {
     _selectedColorMode.store();
 
     ui->colorModeListWidget->currentItem()->setText(text);
+    updateColorModeListActiveState();
 }
 
 /**
@@ -284,6 +306,7 @@ void ColorModeSettingsWidget::on_colorModeActiveCheckBox_stateChanged(int arg1) 
 
         // Apply the color mode settings to the global settings
         applyColorModeSettings();
+        updateColorModeListActiveState();
     }
 }
 
