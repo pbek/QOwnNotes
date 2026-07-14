@@ -61,6 +61,8 @@ class ColorModeSettingsWidget : public QWidget {
 
     void on_colorModeEditorColorSchemaComboBox_currentIndexChanged(int index);
 
+    void on_colorModeListWidget_itemChanged(QListWidgetItem *item);
+
    private:
     Ui::ColorModeSettingsWidget *ui;
     ColorMode _selectedColorMode;

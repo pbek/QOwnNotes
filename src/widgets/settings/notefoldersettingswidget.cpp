@@ -14,14 +14,11 @@
 
 #include "notefoldersettingswidget.h"
 
-#include <QApplication>
 #include <QDir>
 #include <QFileDialog>
-#include <QFont>
-#include <QIcon>
 #include <QMessageBox>
+#include <QSignalBlocker>
 #include <QStatusBar>
-#include <QStyle>
 
 #include "dialogs/filedialog.h"
 #include "dialogs/settingsdialog.h"
@@ -56,6 +53,8 @@ void NoteFolderSettingsWidget::initialize() {
         Q_FOREACH (NoteFolder noteFolder, noteFolders) {
             auto *item = new QListWidgetItem(noteFolder.getName());
             item->setData(Qt::UserRole, noteFolder.getId());
+            item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+            item->setCheckState(noteFolder.isCurrent() ? Qt::Checked : Qt::Unchecked);
             ui->noteFolderListWidget->addItem(item);
 
             // Set the current row
@@ -159,6 +158,8 @@ void NoteFolderSettingsWidget::on_noteFolderAddButton_clicked() {
     if (_selectedNoteFolder.isFetched()) {
         auto *item = new QListWidgetItem(_selectedNoteFolder.getName());
         item->setData(Qt::UserRole, _selectedNoteFolder.getId());
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+        item->setCheckState(Qt::Unchecked);
         ui->noteFolderListWidget->addItem(item);
 
         // Set the current row
@@ -289,16 +290,43 @@ void NoteFolderSettingsWidget::on_noteFolderActiveCheckBox_stateChanged(int arg1
 
 void NoteFolderSettingsWidget::updateNoteFolderListActiveState() {
     const int currentNoteFolderId = NoteFolder::currentNoteFolderId();
-    const QIcon activeIcon = QApplication::style()->standardIcon(QStyle::SP_DialogApplyButton);
+    const QSignalBlocker blocker(ui->noteFolderListWidget);
+    Q_UNUSED(blocker)
 
     for (int i = 0; i < ui->noteFolderListWidget->count(); i++) {
         QListWidgetItem *item = ui->noteFolderListWidget->item(i);
         const bool isCurrent = item->data(Qt::UserRole).toInt() == currentNoteFolderId;
-        QFont font = item->font();
-        font.setBold(isCurrent);
-        item->setFont(font);
-        item->setIcon(isCurrent ? activeIcon : QIcon());
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+        item->setCheckState(isCurrent ? Qt::Checked : Qt::Unchecked);
     }
+}
+
+void NoteFolderSettingsWidget::on_noteFolderListWidget_itemChanged(QListWidgetItem *item) {
+    if (item == nullptr) {
+        return;
+    }
+
+    const int noteFolderId = item->data(Qt::UserRole).toInt();
+    const bool isCurrent = noteFolderId == NoteFolder::currentNoteFolderId();
+
+    if (item->checkState() != Qt::Checked) {
+        if (isCurrent) {
+            updateNoteFolderListActiveState();
+        }
+
+        return;
+    }
+
+    if (!isCurrent) {
+        NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
+        noteFolder.setAsCurrent();
+        MainWindow::instance()->resetBrokenTagNotesLinkFlag();
+    }
+
+    updateNoteFolderListActiveState();
+    const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
+    Q_UNUSED(blocker)
+    ui->noteFolderActiveCheckBox->setChecked(_selectedNoteFolder.isCurrent());
 }
 
 void NoteFolderSettingsWidget::on_noteFolderRemotePathButton_clicked() {

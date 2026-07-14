@@ -18,12 +18,9 @@
 #include <utils/gui.h>
 #include <utils/schema.h>
 
-#include <QApplication>
-#include <QFont>
-#include <QIcon>
 #include <QMessageBox>
 #include <QSettings>
-#include <QStyle>
+#include <QSignalBlocker>
 
 #include "ui_colormodesettingswidget.h"
 
@@ -99,6 +96,8 @@ void ColorModeSettingsWidget::initialize() {
     for (const ColorMode &mode : colorModes) {
         auto *item = new QListWidgetItem(mode.getName());
         item->setData(Qt::UserRole, mode.getId());
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+        item->setCheckState(mode.isCurrent() ? Qt::Checked : Qt::Unchecked);
         ui->colorModeListWidget->addItem(item);
 
         // Select the current color mode
@@ -117,15 +116,14 @@ void ColorModeSettingsWidget::initialize() {
 
 void ColorModeSettingsWidget::updateColorModeListActiveState() {
     const QString currentColorModeId = ColorMode::currentColorModeId();
-    const QIcon activeIcon = QApplication::style()->standardIcon(QStyle::SP_DialogApplyButton);
+    const QSignalBlocker blocker(ui->colorModeListWidget);
+    Q_UNUSED(blocker)
 
     for (int i = 0; i < ui->colorModeListWidget->count(); i++) {
         QListWidgetItem *item = ui->colorModeListWidget->item(i);
         const bool isCurrent = item->data(Qt::UserRole).toString() == currentColorModeId;
-        QFont font = item->font();
-        font.setBold(isCurrent);
-        item->setFont(font);
-        item->setIcon(isCurrent ? activeIcon : QIcon());
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+        item->setCheckState(isCurrent ? Qt::Checked : Qt::Unchecked);
     }
 }
 
@@ -230,6 +228,8 @@ void ColorModeSettingsWidget::on_colorModeAddButton_clicked() {
 
     auto *item = new QListWidgetItem(newMode.getName());
     item->setData(Qt::UserRole, newMode.getId());
+    item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+    item->setCheckState(Qt::Unchecked);
     ui->colorModeListWidget->addItem(item);
 
     // Select the new item
@@ -334,6 +334,34 @@ void ColorModeSettingsWidget::on_colorModeDarkModeCheckBox_toggled(bool checked)
     if (_selectedColorMode.isCurrent()) {
         applyColorModeSettings();
     }
+}
+
+void ColorModeSettingsWidget::on_colorModeListWidget_itemChanged(QListWidgetItem *item) {
+    if (item == nullptr) {
+        return;
+    }
+
+    const QString colorModeId = item->data(Qt::UserRole).toString();
+    const bool isCurrent = colorModeId == ColorMode::currentColorModeId();
+
+    if (item->checkState() != Qt::Checked) {
+        if (isCurrent) {
+            updateColorModeListActiveState();
+        }
+
+        return;
+    }
+
+    if (!isCurrent) {
+        ColorMode mode = ColorMode::fetch(colorModeId);
+        mode.setAsCurrent();
+        applyColorModeSettings();
+    }
+
+    updateColorModeListActiveState();
+    const QSignalBlocker blocker(ui->colorModeActiveCheckBox);
+    Q_UNUSED(blocker)
+    ui->colorModeActiveCheckBox->setChecked(_selectedColorMode.isCurrent());
 }
 
 /**

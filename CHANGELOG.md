@@ -2,8 +2,8 @@
 
 ## 26.7.7
 
-- The active entry is now marked in the **Note folder** and **Color modes**
-  settings lists, so it remains visible even while another item is selected
+- The active entry is now marked with a checkbox in the **Note folder** and
+  **Color modes** settings lists, which can also be used to set the active item
   (for [#3663](https://github.com/pbek/QOwnNotes/issues/3663))
 
 ## 26.7.6
