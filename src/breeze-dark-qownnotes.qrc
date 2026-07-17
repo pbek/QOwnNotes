@@ -111,5 +111,6 @@
     <file alias="16x16/favorite-favorited.svg">icons/breeze-dark-qownnotes/16x16/favorite-favorited.svg</file>
     <file alias="16x16/format-text-superscript.svg">icons/breeze-dark-qownnotes/16x16/format-text-superscript.svg</file>
     <file alias="16x16/bookmarks.svg">icons/breeze-dark-qownnotes/16x16/bookmarks.svg</file>
+    <file alias="16x16/edit-select-all.svg">icons/breeze-dark-qownnotes/16x16/edit-select-all.svg</file>
   </qresource>
 </RCC>

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.8
+
+- Added a **Search in the selection only** toggle to the note text search, next
+  to **Match case sensitive**, so search and search & replace can be limited to
+  the selected text range (for [#3664](https://github.com/pbek/QOwnNotes/issues/3664))
+
 ## 26.7.7
 
 - The active entry is now marked with a checkbox in the **Note folder** and
