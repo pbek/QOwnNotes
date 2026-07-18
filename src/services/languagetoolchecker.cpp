@@ -94,7 +94,11 @@ void LanguageToolChecker::clearCurrentState(bool updateBlocks) {
 void LanguageToolChecker::invalidateBlock(int blockNumber) { _cache.remove(blockNumber); }
 
 void LanguageToolChecker::scheduleCheck(bool immediate) {
-    readSettings();
+    // Note: settings (including the API key) are only read once at startup and
+    // whenever `applySettings()` is called explicitly (e.g. after the settings
+    // dialog was accepted). Reading them here would decrypt the API key from
+    // the OS keychain (libsecret on Linux) on every keystroke, since this
+    // method is connected to the editor's textChanged signal.
     if (!_enabled || _textEdit == nullptr || _document == nullptr) {
         if (_pendingRequestId > 0) {
             _client->cancelRequest(_pendingRequestId);
@@ -119,7 +123,8 @@ void LanguageToolChecker::scheduleCheck(bool immediate) {
 }
 
 void LanguageToolChecker::recheckNow() {
-    readSettings();
+    // See the comment in `scheduleCheck()` about why settings are not
+    // re-read here.
     if (!_enabled || _textEdit == nullptr || _document == nullptr) {
         if (_pendingRequestId > 0) {
             _client->cancelRequest(_pendingRequestId);
@@ -336,10 +341,17 @@ void LanguageToolChecker::readSettings() {
             .trimmed();
     _language =
         settings.value(QStringLiteral("languageToolLanguage"), QStringLiteral("auto")).toString();
-    _apiKey = CryptoService::instance()
-                  ->decryptToStringWithPlaintextFallback(
-                      settings.value(QStringLiteral("languageToolApiKey")).toString())
-                  .trimmed();
+
+    // Only decrypt the API key from the keychain (libsecret on Linux) if
+    // LanguageTool is actually enabled, to avoid unnecessary keychain access
+    // for users who don't use this feature.
+    _apiKey.clear();
+    if (_enabled) {
+        _apiKey = CryptoService::instance()
+                      ->decryptToStringWithPlaintextFallback(
+                          settings.value(QStringLiteral("languageToolApiKey")).toString())
+                      .trimmed();
+    }
     _checkDelayMs = settings.value(QStringLiteral("languageToolCheckDelay"), 1500).toInt();
     _timeoutMs = settings.value(QStringLiteral("languageToolTimeout"), 5000).toInt();
     _enabledCategories =
@@ -387,6 +399,22 @@ void LanguageToolChecker::readSettings() {
     _ignoredWords.remove(QString());
 
     _debounceTimer->setInterval(_checkDelayMs);
+}
+
+/**
+ * @brief Reloads the LanguageTool settings (including decrypting the API key
+ * from the keychain, if needed) and triggers an immediate re-check of the
+ * currently attached editor.
+ *
+ * This must be called explicitly whenever the LanguageTool settings were
+ * changed (e.g. after the settings dialog was accepted), instead of being
+ * called from `scheduleCheck()`/`recheckNow()` on every keystroke, which
+ * would otherwise cause the API key to be read from the OS keychain
+ * (libsecret on Linux) on every keystroke.
+ */
+void LanguageToolChecker::applySettings() {
+    readSettings();
+    scheduleCheck(true);
 }
 
 bool LanguageToolChecker::shouldCheckBlock(const QTextBlock &block) const {

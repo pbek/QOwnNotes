@@ -2,6 +2,13 @@
 
 ## 26.7.8
 
+- Fixed excessive system keychain (libsecret on Linux) access while typing:
+  the **LanguageTool** checker no longer re-reads and decrypts its API key on
+  every keystroke and scroll event (only when its settings actually change),
+  and the Markdown note preview no longer re-decrypts the Nextcloud/ownCloud
+  password on every debounced preview refresh unless the note actually
+  contains an unresolved Nextcloud preview image
+  (for [#3665](https://github.com/pbek/QOwnNotes/issues/3665))
 - Added a **Search in the selection only** toggle to the note text search, next
   to **Match case sensitive**, so search and search & replace can be limited to
   the selected text range (for [#3664](https://github.com/pbek/QOwnNotes/issues/3664))

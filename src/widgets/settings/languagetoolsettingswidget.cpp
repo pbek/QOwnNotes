@@ -121,6 +121,10 @@ void LanguageToolSettingsWidget::storeSettings() {
                       ui->languageToolCheckDelaySpinBox->value());
     settings.setValue(QStringLiteral("languageToolEnabledCategories"),
                       languageToolEnabledCategoriesFromUi());
+
+    // Let the checker know that the settings (including the API key) have
+    // changed, so it can reload them once now instead of on every keystroke.
+    LanguageToolChecker::instance()->applySettings();
 #endif
 }
 

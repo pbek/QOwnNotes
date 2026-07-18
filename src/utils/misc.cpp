@@ -2514,7 +2514,16 @@ bool Utils::Misc::regExpInListMatches(const QString &text, const QStringList &re
  */
 void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWidth,
                                                   ExternalImageHash *externalImageHash) {
-    CloudService *cloud = CloudService::instance();
+    // Note: `CloudService::instance()` re-reads (and re-decrypts from the OS
+    // keychain / libsecret) the cloud connection password every time it is
+    // called on an already existing instance. This function used to fetch
+    // the instance unconditionally at the very beginning, even when the note
+    // preview didn't contain any Nextcloud preview image tag at all, causing
+    // a keychain read on every note preview update (triggered on almost every
+    // keystroke via the debounced note preview refresh). We now only fetch
+    // the instance lazily, the first time it is actually needed to resolve an
+    // image tag that isn't already cached.
+    CloudService *cloud = nullptr;
 
     static const QRegularExpression re(
         QStringLiteral(
@@ -2534,6 +2543,10 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html, int maxImageWid
             inlineImageTag = hashItem.imageTag;
             imageWidth = hashItem.imageWidth;
         } else {
+            if (cloud == nullptr) {
+                cloud = CloudService::instance();
+            }
+
             inlineImageTag = cloud->nextcloudPreviewImageTagToInlineImageTag(imageTag, imageWidth);
             hashItem.imageTag = inlineImageTag;
             hashItem.imageWidth = imageWidth;

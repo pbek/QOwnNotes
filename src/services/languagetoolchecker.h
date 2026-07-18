@@ -35,6 +35,7 @@ class LanguageToolChecker : public QObject {
     void invalidateBlock(int blockNumber);
     void scheduleCheck(bool immediate = false);
     void recheckNow();
+    void applySettings();
     bool isEnabled() const;
     bool hasWarnedAboutConnection() const;
     QVector<BlockMatch> matchesForBlock(int blockNumber, const QString &blockText) const;
