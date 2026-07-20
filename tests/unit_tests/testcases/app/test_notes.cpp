@@ -204,6 +204,28 @@ void TestNotes::testNoteToMarkdownHtml() {
     QVERIFY(html.contains(expectedBody));
 }
 
+void TestNotes::testMarkdownImageDimensionsToHtml() {
+    Note note;
+    note.setNoteText(
+        QStringLiteral("![alt text](media/my-image.jpg){ width=300 }\n\n"
+                       "![alt text](media/my-image.jpg){ height=200 }\n\n"
+                       "![alt text](media/my-image.jpg){ width=300 height=200 }"));
+
+    const QString html = note.toMarkdownHtml(QString(), 980, false);
+    const QString imageUrl = QStringLiteral("file://%1/media/my-image.jpg").arg(notesPath);
+
+    QVERIFY2(html.contains(
+                 QStringLiteral("<img src=\"%1\" width=\"300\" alt=\"alt text\"").arg(imageUrl)),
+             qPrintable(html));
+    QVERIFY2(html.contains(
+                 QStringLiteral("<img src=\"%1\" height=\"200\" alt=\"alt text\"").arg(imageUrl)),
+             qPrintable(html));
+    QVERIFY2(html.contains(
+                 QStringLiteral("<img src=\"%1\" width=\"300\" height=\"200\" alt=\"alt text\"")
+                     .arg(imageUrl)),
+             qPrintable(html));
+}
+
 void TestNotes::testSearchQueryStringListModes() {
     QCOMPARE(Note::buildQueryStringList(QStringLiteral("note book")),
              QStringList() << QStringLiteral("note") << QStringLiteral("book"));
