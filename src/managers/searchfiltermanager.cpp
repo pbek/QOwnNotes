@@ -92,22 +92,12 @@ void SearchFilterManager::filterNotesBySearchLineEditText(bool searchInNote) {
         int columnWidth = _ui->noteTreeWidget->columnWidth(0);
         _ui->noteTreeWidget->setColumnCount(2);
         int maxWidth = 0;
-        const QStringList searchTextTerms = Note::buildQueryStringList(searchText);
+        const QVector<NoteSearchTerm> searchTerms = Note::buildSearchTermList(searchText);
         const SettingsService settings;
         const bool showMatches = settings.value(QStringLiteral("showMatches"), true).toBool();
-        const auto folderMatchesSearch = [&searchText,
-                                          &searchTextTerms](const QString &folderName) {
-            if (folderName.contains(searchText, Qt::CaseInsensitive)) {
-                return true;
-            }
-
-            for (QString word : searchTextTerms) {
-                if (Note::isNameSearch(word)) {
-                    word = Note::removeNameSearchPrefix(word);
-                }
-
-                word.remove(QStringLiteral("\""));
-                if (!word.isEmpty() && folderName.contains(word, Qt::CaseInsensitive)) {
+        const auto folderMatchesSearch = [&searchTerms](const QString &folderName) {
+            for (const NoteSearchTerm &searchTerm : searchTerms) {
+                if (Note::textMatchesSearchTerm(folderName, searchTerm)) {
                     return true;
                 }
             }
@@ -136,27 +126,22 @@ void SearchFilterManager::filterNotesBySearchLineEditText(bool searchInNote) {
                 item->setForeground(1, QColor(Qt::gray));
                 int count = 0;
 
-                for (QString word : searchTextTerms) {
-                    if (Note::isNameSearch(word)) {
-                        word = Note::removeNameSearchPrefix(word);
-                    }
-
-                    count += note.countSearchTextInNote(word);
+                for (const NoteSearchTerm &searchTerm : searchTerms) {
+                    count += note.countSearchTextInNote(searchTerm);
                 }
 
                 const QString text = QString::number(count);
                 item->setText(1, text);
 
                 const QString &toolTipText =
-                    searchTextTerms.count() == 1
-                        ? tr("Found <strong>%n</strong> occurrence(s) of "
-                             "<strong>%1</strong>",
-                             "", count)
-                              .arg(searchText)
-                        : tr("Found <strong>%n</strong> occurrence(s) of any "
-                             "term of <strong>%1</strong>",
-                             "", count)
-                              .arg(searchText);
+                    searchTerms.count() == 1 ? tr("Found <strong>%n</strong> occurrence(s) of "
+                                                  "<strong>%1</strong>",
+                                                  "", count)
+                                                   .arg(searchText)
+                                             : tr("Found <strong>%n</strong> occurrence(s) of any "
+                                                  "term of <strong>%1</strong>",
+                                                  "", count)
+                                                   .arg(searchText);
                 item->setToolTip(1, toolTipText);
 
                 // calculate the size of the search count column
@@ -226,19 +211,27 @@ void SearchFilterManager::filterNotesBySearchLineEditText(bool searchInNote) {
  * @param searchText
  */
 void SearchFilterManager::doSearchInNote(QString searchText) {
-    const QStringList searchTextTerms = Note::buildQueryStringList(searchText, true, true);
+    const QVector<NoteSearchTerm> searchTerms = Note::buildSearchTermList(searchText);
+    if (searchTerms.isEmpty()) {
+        return;
+    }
 
-    if (searchTextTerms.count() > 1) {
+    if (searchTerms.count() > 1 || searchTerms.constFirst().wholeWord) {
+        QStringList patterns;
+        patterns.reserve(searchTerms.count());
+        for (const NoteSearchTerm &searchTerm : searchTerms) {
+            patterns.append(Note::searchTermRegularExpression(searchTerm));
+        }
         QString localSearchTerm =
-            QStringLiteral("(") + searchTextTerms.join(QStringLiteral("|")) + QStringLiteral(")");
+            QStringLiteral("(") + patterns.join(QStringLiteral("|")) + QStringLiteral(")");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
+        localSearchTerm.prepend(QStringLiteral("(*UCP)"));
+#endif
         _mainWindow->activeNoteTextEdit()->doSearch(
             localSearchTerm, QPlainTextEditSearchWidget::RegularExpressionMode);
     } else {
-        if (Note::isNameSearch(searchText)) {
-            searchText = Note::removeNameSearchPrefix(searchText);
-        }
-
-        _mainWindow->activeNoteTextEdit()->doSearch(searchText.remove(QStringLiteral("\"")));
+        searchText = searchTerms.constFirst().text;
+        _mainWindow->activeNoteTextEdit()->doSearch(searchText);
     }
 }
 
@@ -413,18 +406,22 @@ void SearchFilterManager::searchInNoteTextEdit(QString str) {
         _ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
         const QColor color = QColor(0, 180, 0, 100);
 
-        // build the string list of the search string
-        const QString queryStr = str.replace(QLatin1String("|"), QLatin1String("\\|"));
-        const QStringList queryStrings = Note::buildQueryStringList(queryStr, true);
+        const QVector<NoteSearchTerm> searchTerms = Note::buildSearchTermList(str);
 
-        if (queryStrings.count() > 0) {
+        if (!searchTerms.isEmpty()) {
+            QStringList patterns;
+            patterns.reserve(searchTerms.count());
+            for (const NoteSearchTerm &searchTerm : searchTerms) {
+                patterns.append(Note::searchTermRegularExpression(searchTerm));
+            }
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
             const QRegularExpression regExp(
-                QLatin1Char('(') + queryStrings.join(QLatin1String("|")) + QLatin1Char(')'),
-                QRegularExpression::CaseInsensitiveOption);
+                QLatin1Char('(') + patterns.join(QLatin1String("|")) + QLatin1Char(')'),
+                QRegularExpression::CaseInsensitiveOption |
+                    QRegularExpression::UseUnicodePropertiesOption);
 #else
             const QRegExp regExp(
-                QLatin1String("(") + queryStrings.join(QLatin1String("|")) + QLatin1String(")"),
+                QLatin1String("(") + patterns.join(QLatin1String("|")) + QLatin1String(")"),
                 Qt::CaseInsensitive);
 #endif
             while (_ui->noteTextEdit->find(regExp)) {
@@ -437,8 +434,16 @@ void SearchFilterManager::searchInNoteTextEdit(QString str) {
 
             // TODO:
 #ifdef USE_QLITEHTML
-            _mainWindow->_notePreviewWidget->findText(str, QTextDocument::FindFlag::FindWholeWords,
-                                                      true);
+            if (searchTerms.count() == 1) {
+                const NoteSearchTerm &searchTerm = searchTerms.constFirst();
+                const QTextDocument::FindFlags findFlags = searchTerm.wholeWord
+                                                               ? QTextDocument::FindWholeWords
+                                                               : QTextDocument::FindFlags();
+                _mainWindow->_notePreviewWidget->findText(searchTerm.text, findFlags, true);
+            } else {
+                _mainWindow->_notePreviewWidget->findText(
+                    str, QTextDocument::FindFlag::FindWholeWords, true);
+            }
 #else
             while (_ui->noteTextView->find(regExp)) {
                 QTextEdit::ExtraSelection extra = QTextEdit::ExtraSelection();

@@ -31,6 +31,14 @@ struct LinkHit {
     QString text;
 };
 
+struct NoteSearchTerm {
+    QString text;
+    QString namePrefix;
+    QString wordPrefix;
+    bool nameOnly = false;
+    bool wholeWord = false;
+};
+
 // Add hash function for LinkHit
 inline uint qHash(const LinkHit &hit, uint seed = 0) {
     return qHash(hit.markdown, seed) ^ qHash(hit.text, seed);
@@ -254,6 +262,11 @@ class Note {
                                       const QString &connectionName = QStringLiteral("memory"));
 
     int countSearchTextInNote(const QString &search) const;
+    int countSearchTextInNote(const NoteSearchTerm &searchTerm) const;
+
+    static QVector<NoteSearchTerm> buildSearchTermList(QString searchString);
+    static QString searchTermRegularExpression(const NoteSearchTerm &searchTerm);
+    static bool textMatchesSearchTerm(const QString &text, const NoteSearchTerm &searchTerm);
 
     static QStringList buildQueryStringList(QString searchString,
                                             bool escapeForRegularExpression = false,

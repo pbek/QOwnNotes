@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.7.9
+
+- Added the `word:` and `w:` note search operators for matching whole words
+  without changing the existing substring and quoted-phrase search behavior
+  (for [#1756](https://github.com/pbek/QOwnNotes/issues/1756))
+  - See the [searching documentation](https://www.qownnotes.org/getting-started/searching.html)
+    for more information about the new operators and how they interact with
+    existing search syntax
+
 ## 26.7.8
 
 - Fixed excessive system keychain (libsecret on Linux) access while typing:

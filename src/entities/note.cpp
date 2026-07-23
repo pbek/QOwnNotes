@@ -1924,6 +1924,8 @@ QString Note::removeNameSearchPrefix(QString searchTerm) {
  *
  * You can search for longer texts by using quotes, `"this word1" word2`
  * will find all notes that are containing `this word1` and `word2`
+ *
+ * The `word:` and `w:` operators match complete words instead of substrings.
  */
 QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int noteSubFolderId,
                                  const QString &connectionName) {
@@ -1938,18 +1940,28 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
     }
 
     // build the string list of the search string
-    const QStringList queryStrings = buildQueryStringList(std::move(search));
+    const QVector<NoteSearchTerm> searchTerms = buildSearchTermList(std::move(search));
+    if (searchTerms.isEmpty()) {
+        return noteIdList;
+    }
+    const bool hasWholeWordSearch =
+        std::any_of(searchTerms.cbegin(), searchTerms.cend(),
+                    [](const NoteSearchTerm &searchTerm) { return searchTerm.wholeWord; });
 
-    sqlList.reserve(queryStrings.count());
+    sqlList.reserve(searchTerms.count());
 
     // we want to search for the text in the note text and the filename
-    for (int i = 0; i < queryStrings.count(); i++) {
-        const QString &queryString = queryStrings[i];
+    for (const NoteSearchTerm &searchTerm : searchTerms) {
+        // SQLite LIKE only performs ASCII case folding, so whole-word terms are checked in Qt.
+        if (searchTerm.wholeWord) {
+            sqlList.append(QStringLiteral("1"));
+            continue;
+        }
 
         // if we just want to search in the name we use different columns
         // skip encrypted notes if search term is not found in (file) name of note
         sqlList.append(
-            isNameSearch(queryString)
+            searchTerm.nameOnly
                 ? QStringLiteral("(name LIKE ? OR file_name LIKE ?)")
                 : QStringLiteral(
                       "((note_text LIKE ? AND note_text NOT LIKE '%\n%1\n%') OR name LIKE ?)")
@@ -1957,42 +1969,75 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
     }
 
     QString sql;
+    const QString columns = hasWholeWordSearch ? QStringLiteral("id, name, file_name, note_text")
+                                               : QStringLiteral("id");
 
     // build the query
     if (ignoreNoteSubFolder) {
-        sql = QStringLiteral("SELECT id FROM note WHERE ") + sqlList.join(QStringLiteral(" AND "));
+        sql = QStringLiteral("SELECT %1 FROM note WHERE ").arg(columns) +
+              sqlList.join(QStringLiteral(" AND "));
         query.prepare(sql);
     } else {
         sql = QStringLiteral(
-                  "SELECT id FROM note WHERE note_sub_folder_id = "
-                  ":note_sub_folder_id AND ") +
+                  "SELECT %1 FROM note WHERE note_sub_folder_id = "
+                  ":note_sub_folder_id AND ")
+                  .arg(columns) +
               sqlList.join(QStringLiteral(" AND "));
         query.prepare(sql);
         query.bindValue(0, noteSubFolderId);
     }
 
     // add the values to the query
-    for (int i = 0; i < queryStrings.count(); i++) {
-        QString queryString = queryStrings[i];
-
-        // remove the search prefix if we searched for names only
-        if (isNameSearch(queryString)) {
-            queryString = removeNameSearchPrefix(queryString);
+    int bindPosition = ignoreNoteSubFolder ? 0 : 1;
+    for (const NoteSearchTerm &searchTerm : searchTerms) {
+        if (searchTerm.wholeWord) {
+            continue;
         }
 
-        int pos = i * 2;
-        pos = ignoreNoteSubFolder ? pos : pos + 1;
-
         // bind the values for the note text (or name) and the filename
-        query.bindValue(pos, QStringLiteral("%") + queryString + QStringLiteral("%"));
-        query.bindValue(pos + 1, QStringLiteral("%") + queryString + QStringLiteral("%"));
+        const QString queryString = QStringLiteral("%") + searchTerm.text + QStringLiteral("%");
+        query.bindValue(bindPosition++, queryString);
+        query.bindValue(bindPosition++, queryString);
     }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            noteIdList.append(query.value(QStringLiteral("id")).toInt());
+            if (!hasWholeWordSearch) {
+                noteIdList.append(query.value(QStringLiteral("id")).toInt());
+                continue;
+            }
+
+            const QString name = query.value(QStringLiteral("name")).toString();
+            const QString fileName = query.value(QStringLiteral("file_name")).toString();
+            const QString noteText = query.value(QStringLiteral("note_text")).toString();
+            const bool hasEncryptedText = noteText.contains(
+                QStringLiteral("\n%1\n").arg(QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING)));
+            bool matches = true;
+
+            // LIKE narrows the candidates; validate word boundaries in Qt because SQLite has no
+            // built-in whole-word matching.
+            for (const NoteSearchTerm &searchTerm : searchTerms) {
+                if (!searchTerm.wholeWord) {
+                    continue;
+                }
+
+                const bool termMatches =
+                    searchTerm.nameOnly
+                        ? textMatchesSearchTerm(name, searchTerm) ||
+                              textMatchesSearchTerm(fileName, searchTerm)
+                        : textMatchesSearchTerm(name, searchTerm) ||
+                              (!hasEncryptedText && textMatchesSearchTerm(noteText, searchTerm));
+                if (!termMatches) {
+                    matches = false;
+                    break;
+                }
+            }
+
+            if (matches) {
+                noteIdList.append(query.value(QStringLiteral("id")).toInt());
+            }
         }
     }
 
@@ -2003,64 +2048,118 @@ int Note::countSearchTextInNote(const QString &search) const {
     return _noteText.count(search, Qt::CaseInsensitive);
 }
 
+int Note::countSearchTextInNote(const NoteSearchTerm &searchTerm) const {
+    if (!searchTerm.wholeWord) {
+        return countSearchTextInNote(searchTerm.text);
+    }
+
+    const QRegularExpression expression(
+        searchTermRegularExpression(searchTerm),
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption);
+    int count = 0;
+    QRegularExpressionMatchIterator iterator = expression.globalMatch(_noteText);
+    while (iterator.hasNext()) {
+        iterator.next();
+        ++count;
+    }
+
+    return count;
+}
+
+QVector<NoteSearchTerm> Note::buildSearchTermList(QString searchString) {
+    QVector<NoteSearchTerm> searchTerms;
+    const auto appendSearchTerm = [&searchTerms](QString text) {
+        const QString originalText = text;
+        NoteSearchTerm searchTerm;
+        static const QRegularExpression prefixExpression(QStringLiteral("^(name:|word:|n:|w:)"));
+
+        QRegularExpressionMatch prefixMatch;
+        while ((prefixMatch = prefixExpression.match(text)).hasMatch()) {
+            const QString prefix = prefixMatch.captured(1);
+            if (prefix == QStringLiteral("name:") || prefix == QStringLiteral("n:")) {
+                searchTerm.nameOnly = true;
+                searchTerm.namePrefix = prefix;
+            } else {
+                searchTerm.wholeWord = true;
+                searchTerm.wordPrefix = prefix;
+            }
+            text.remove(0, prefix.size());
+        }
+
+        searchTerm.text = text;
+        if (searchTerm.text.isEmpty() || originalText.size() < 2) {
+            return;
+        }
+
+        const auto duplicate = std::find_if(
+            searchTerms.cbegin(), searchTerms.cend(), [&searchTerm](const NoteSearchTerm &term) {
+                return term.text == searchTerm.text && term.nameOnly == searchTerm.nameOnly &&
+                       term.wholeWord == searchTerm.wholeWord;
+            });
+        if (duplicate == searchTerms.cend()) {
+            searchTerms.append(searchTerm);
+        }
+    };
+
+    // Keep quoted text together, including any preceding search operators.
+    static const QRegularExpression quotedExpression(
+        QStringLiteral("((?:(?:name:|word:|n:|w:))*)\"([^\"]+)\""));
+    QRegularExpressionMatchIterator iterator = quotedExpression.globalMatch(searchString);
+    QStringList quotedStrings;
+    while (iterator.hasNext()) {
+        const QRegularExpressionMatch match = iterator.next();
+        appendSearchTerm(match.captured(1) + match.captured(2));
+        quotedStrings.append(match.captured(0));
+    }
+    for (const QString &quotedString : quotedStrings) {
+        searchString.remove(quotedString);
+    }
+
+    searchString.remove(QChar('"'));
+    const QStringList unquotedStrings = searchString.simplified().split(QChar(' '));
+    for (const QString &text : unquotedStrings) {
+        appendSearchTerm(text);
+    }
+
+    return searchTerms;
+}
+
+QString Note::searchTermRegularExpression(const NoteSearchTerm &searchTerm) {
+    const QString escapedText = QRegularExpression::escape(searchTerm.text);
+    if (!searchTerm.wholeWord) {
+        return escapedText;
+    }
+
+    return QStringLiteral("\\b%1\\b").arg(escapedText);
+}
+
+bool Note::textMatchesSearchTerm(const QString &text, const NoteSearchTerm &searchTerm) {
+    if (!searchTerm.wholeWord) {
+        return text.contains(searchTerm.text, Qt::CaseInsensitive);
+    }
+
+    const QRegularExpression expression(
+        searchTermRegularExpression(searchTerm),
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption);
+    return expression.match(text).hasMatch();
+}
+
 /**
  * Builds a string list of a search string
  */
 QStringList Note::buildQueryStringList(QString searchString, bool escapeForRegularExpression,
                                        bool removeSearchPrefix) {
-    auto queryStrings = QStringList();
-
-    // Check for strings in "" and keep a possible name search prefix
-    static const QRegularExpression re(QStringLiteral("((?:name:|n:)?)\"([^\"]+)\""));
-    QRegularExpressionMatchIterator i = re.globalMatch(searchString);
-    while (i.hasNext()) {
-        const QRegularExpressionMatch match = i.next();
-        QString text = match.captured(1) + match.captured(2);
-
-        if (removeSearchPrefix && isNameSearch(text)) {
-            text = removeNameSearchPrefix(text);
+    const QVector<NoteSearchTerm> searchTerms = buildSearchTermList(std::move(searchString));
+    QStringList queryStrings;
+    queryStrings.reserve(searchTerms.count());
+    for (const NoteSearchTerm &searchTerm : searchTerms) {
+        QString text = escapeForRegularExpression ? QRegularExpression::escape(searchTerm.text)
+                                                  : searchTerm.text;
+        if (!removeSearchPrefix) {
+            text.prepend(searchTerm.namePrefix + searchTerm.wordPrefix);
         }
-
-        if (escapeForRegularExpression) {
-            text = QRegularExpression::escape(text);
-        }
-
         queryStrings.append(text);
-        searchString.remove(match.captured(0));
     }
-
-    // remove a possible remaining "
-    searchString.remove(QChar('\"'));
-    // remove multiple spaces and spaces in front and at the end
-    searchString = searchString.simplified();
-
-    const QStringList searchStringList = searchString.split(QChar(' '));
-    queryStrings.reserve(searchStringList.size());
-    // add the remaining strings
-    for (QString text : searchStringList) {
-        if (removeSearchPrefix) {
-            if (isNameSearch(text)) {
-                text = removeNameSearchPrefix(text);
-            }
-        }
-
-        // escape the text so strings like `^ ` don't cause an
-        // infinite loop
-        queryStrings.append(escapeForRegularExpression ? QRegularExpression::escape(text) : text);
-    }
-
-    // Remove empty items, so the search will not run amok
-    queryStrings.removeAll(QLatin1String(""));
-
-    // Remove terms shorter than 2 characters — each individual search term
-    // (including OR-search terms) must have at least 2 characters
-    // (for #3624, https://github.com/pbek/QOwnNotes/issues/3624)
-    queryStrings.erase(std::remove_if(queryStrings.begin(), queryStrings.end(),
-                                      [](const QString &s) { return s.size() < 2; }),
-                       queryStrings.end());
-
-    // Remove duplicate query items
-    queryStrings.removeDuplicates();
 
     return queryStrings;
 }
