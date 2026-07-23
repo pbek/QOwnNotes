@@ -398,6 +398,20 @@ void TestNotes::testCodeToHtmlConversionPython() {
     QVERIFY(outputPython == expectedOutputPython);
 }
 
+void TestNotes::testCodeToHtmlConversionR() {
+    const QString rCode = QStringLiteral("if (is.numeric(value)) print(TRUE) # result\n");
+    const CodeToHtmlConverter converter(QStringLiteral("r"));
+
+    const QString expected = QStringLiteral(
+        "<span class=\"code-keyword\">if</span> &#40;<span "
+        "class=\"code-builtin\">is.numeric</span>&#40;value&#41;&#41; <span "
+        "class=\"code-builtin\">print</span>&#40;<span "
+        "class=\"code-literal\">TRUE</span>&#41; <span "
+        "class=\"code-comment\"># result</span>\n");
+
+    QCOMPARE(converter.process(rCode), expected);
+}
+
 void TestNotes::testCodeToHtmlConversionHashComment() {
     QString hashStyleComment = QStringLiteral("#hello my qownnotes blah blah\n");
     CodeToHtmlConverter c2(QStringLiteral("bash"));

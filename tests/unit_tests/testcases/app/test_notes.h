@@ -40,6 +40,7 @@ class TestNotes : public QObject {
     void testMarkdownTildeCodeFenceToHtml();
     void testMarkdownBacktickCodeFenceToHtml();
     void testCodeToHtmlConversionPython();
+    void testCodeToHtmlConversionR();
     void testCodeToHtmlConversionHashComment();
     void testCodeToHtmlConversionConsole();
     void testCodeToHtmlConversionSingleLineComment();

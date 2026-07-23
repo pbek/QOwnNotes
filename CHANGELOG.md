@@ -2,6 +2,8 @@
 
 ## 26.7.9
 
+- Added syntax highlighting for **GNU R** fenced code blocks in the note editor
+  and preview (for [#2845](https://github.com/pbek/QOwnNotes/issues/2845))
 - Added the `word:` and `w:` note search operators for matching whole words
   without changing the existing substring and quoted-phrase search behavior
   (for [#1756](https://github.com/pbek/QOwnNotes/issues/1756))

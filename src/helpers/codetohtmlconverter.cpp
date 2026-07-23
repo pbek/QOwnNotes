@@ -41,6 +41,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
         {QStringLiteral("py"), CodeToHtmlConverter::CodePython},
         {QStringLiteral("python"), CodeToHtmlConverter::CodePython},
         {QStringLiteral("qml"), CodeToHtmlConverter::CodeQML},
+        {QStringLiteral("r"), CodeToHtmlConverter::CodeR},
         {QStringLiteral("rust"), CodeToHtmlConverter::CodeRust},
         {QStringLiteral("sh"), CodeToHtmlConverter::CodeBash},
         {QStringLiteral("shell-session"), CodeToHtmlConverter::CodeConsole},
@@ -107,6 +108,10 @@ QString CodeToHtmlConverter::process(StringView input) const {
             break;
         case CodePython:
             loadPythonData(types, keywords, builtin, literals, others);
+            comment = QLatin1Char('#');
+            break;
+        case CodeR:
+            loadRData(types, keywords, builtin, literals, others);
             comment = QLatin1Char('#');
             break;
         case CodeRust:

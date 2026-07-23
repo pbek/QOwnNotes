@@ -53,7 +53,8 @@ class CodeToHtmlConverter {
         CodeForth,
         CodeSystemVerilog,
         CodeGDScript,
-        CodeConsole
+        CodeConsole,
+        CodeR
     };
 
    public:
