@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.7.10
+
+- Improved slow, flickering text selection in the QLiteHtml preview by avoiding
+  redundant selection processing and full preview repaints
+  (for [#3668](https://github.com/pbek/QOwnNotes/issues/3668))
+
 ## 26.7.9
 
 - Added syntax highlighting for **GNU R** fenced code blocks in the note editor

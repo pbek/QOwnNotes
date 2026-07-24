@@ -49,6 +49,7 @@
 #include <QUrl>
 
 #include <algorithm>
+#include <limits>
 #include <set>
 
 const int kDragDistance = 5;
@@ -192,13 +193,29 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
                                            const QString &text,
                                            const QPoint &pos)
 {
+    const auto elementAtX =
+        [](const litehtml::element::ptr &elem, const QString &text, int x) -> Selection::Element {
+        QTextLayout layout(text, toQFont(elem->get_font()));
+        layout.beginLayout();
+        QTextLine line = layout.createLine();
+        if (!line.isValid()) {
+            layout.endLayout();
+            return {elem, 0, 0};
+        }
+        line.setLineWidth(std::numeric_limits<qreal>::max());
+        layout.endLayout();
+
+        const int index = line.xToCursor(x, QTextLine::CursorBetweenCharacters);
+        return {elem, index, qRound(line.cursorToX(index))};
+    };
+
     // If element has children, the text contains all descendant text concatenated
     // For better precision, we should find the actual leaf child at this position
     if (element->get_children_count() > 0) {
         // Try to find a child leaf element that contains this position
         const std::function<Selection::Element(litehtml::element::ptr, QPoint)> findLeaf =
-            [&findLeaf, pos](const litehtml::element::ptr &elem,
-                             const QPoint &offset) -> Selection::Element {
+            [&findLeaf, &elementAtX, pos](const litehtml::element::ptr &elem,
+                                          const QPoint &offset) -> Selection::Element {
             if (!elem)
                 return {};
 
@@ -220,18 +237,8 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
             elem->get_text(elemText);
             if (!elemText.empty()) {
                 const QString textStr = QString::fromStdString(elemText);
-                const QFont &font = toQFont(elem->get_font());
-                const QFontMetrics fm(font);
                 const QPoint relativePos = pos - elemPos.topLeft();
-
-                int previous = 0;
-                for (int i = 0; i < textStr.size(); ++i) {
-                    const int width = fm.size(0, textStr.left(i + 1)).width();
-                    if ((width + previous) / 2 >= relativePos.x())
-                        return {elem, i, previous};
-                    previous = width;
-                }
-                return {elem, int(textStr.size()), previous};
+                return elementAtX(elem, textStr, relativePos.x());
             }
 
             return {};
@@ -247,16 +254,7 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
     }
 
     // Element has no children - calculate precise character position
-    const QFont &font = toQFont(element->get_font());
-    const QFontMetrics fm(font);
-    int previous = 0;
-    for (int i = 0; i < text.size(); ++i) {
-        const int width = fm.size(0, text.left(i + 1)).width();
-        if ((width + previous) / 2 >= pos.x())
-            return {element, i, previous};
-        previous = width;
-    }
-    return {element, int(text.size()), previous};
+    return elementAtX(element, text, pos.x());
 }
 
 static Selection::Element deepest_child_at_point(const litehtml::document::ptr &document,
@@ -1332,7 +1330,9 @@ QVector<QRect> DocumentContainer::mouseMoveEvent(const QPoint &documentPos,
                                                                   documentPos,
                                                                   viewportPos,
                                                                   d->m_selection.mode);
-        if (element.element) {
+        if (element.element
+            && (element.element != d->m_selection.endElem.element
+                || element.index != d->m_selection.endElem.index)) {
             redrawRects.append(
                 d->m_selection
                     .boundingRect() /*.adjusted(-1, -1, +1, +1)*/); // redraw old selection area
