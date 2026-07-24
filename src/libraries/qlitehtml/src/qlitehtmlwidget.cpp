@@ -39,6 +39,7 @@
 #include <QRegion>
 #include <QScrollBar>
 #include <QStyle>
+#include <QTimer>
 
 const int kScrollBarStep = 40;
 
@@ -380,6 +381,8 @@ public:
     DocumentContainer documentContainer;
     qreal zoomFactor = 1;
     QUrl lastHighlightedLink;
+    QTimer selectionScrollTimer;
+    QPoint selectionDragPosition;
 };
 
 QLiteHtmlWidget::QLiteHtmlWidget(QWidget *parent)
@@ -403,6 +406,8 @@ QLiteHtmlWidget::QLiteHtmlWidget(QWidget *parent)
             this, [this, fullUrl] { emit linkClicked(fullUrl); }, Qt::QueuedConnection);
     });
     d->documentContainer.setClipboardCallback([this](bool yes) { emit copyAvailable(yes); });
+    d->selectionScrollTimer.setInterval(30);
+    connect(&d->selectionScrollTimer, &QTimer::timeout, this, &QLiteHtmlWidget::scrollSelection);
 
     // TODO adapt mastercss to palette (default text & background color)
     d->context.setMasterStyleSheet(mastercss);
@@ -557,15 +562,15 @@ void QLiteHtmlWidget::resizeEvent(QResizeEvent *event)
 
 void QLiteHtmlWidget::mouseMoveEvent(QMouseEvent *event)
 {
-    QPoint viewportPos;
-    QPoint pos;
-    htmlPos(event->pos(), &viewportPos, &pos);
-    const QVector<QRect> areas = d->documentContainer.mouseMoveEvent(pos, viewportPos);
-    QRegion dirtyRegion;
-    for (const QRect &area : areas)
-        dirtyRegion += fromVirtual(area.translated(-scrollPosition()));
-    if (!dirtyRegion.isEmpty())
-        viewport()->update(dirtyRegion);
+    d->selectionDragPosition = event->pos();
+    const bool scrollSelection = event->buttons().testFlag(Qt::LeftButton)
+                                 && !viewport()->geometry().contains(event->pos());
+    if (scrollSelection && !d->selectionScrollTimer.isActive())
+        d->selectionScrollTimer.start();
+    else if (!scrollSelection)
+        d->selectionScrollTimer.stop();
+
+    updateSelection(event->pos());
 
     updateHightlightedLink();
 }
@@ -585,6 +590,7 @@ void QLiteHtmlWidget::mousePressEvent(QMouseEvent *event)
 
 void QLiteHtmlWidget::mouseReleaseEvent(QMouseEvent *event)
 {
+    d->selectionScrollTimer.stop();
     QPoint viewportPos;
     QPoint pos;
     htmlPos(event->pos(), &viewportPos, &pos);
@@ -682,6 +688,45 @@ void QLiteHtmlWidget::setHightlightedLink(const QUrl &url)
         return;
     d->lastHighlightedLink = url;
     emit linkHighlighted(d->lastHighlightedLink);
+}
+
+void QLiteHtmlWidget::updateSelection(const QPoint &position)
+{
+    QPoint viewportPos;
+    QPoint documentPos;
+    htmlPos(position, &viewportPos, &documentPos);
+    const QVector<QRect> areas = d->documentContainer.mouseMoveEvent(documentPos, viewportPos);
+    QRegion dirtyRegion;
+    for (const QRect &area : areas)
+        dirtyRegion += fromVirtual(area.translated(-scrollPosition()));
+    if (!dirtyRegion.isEmpty())
+        viewport()->update(dirtyRegion);
+}
+
+void QLiteHtmlWidget::scrollSelection()
+{
+    const QRect viewportRect = viewport()->geometry();
+    const QPoint position = d->selectionDragPosition;
+    const auto scrollBar = [](QScrollBar *bar, int distance) {
+        const int delta = qBound(-kScrollBarStep, distance, kScrollBarStep);
+        bar->setValue(bar->value() + delta);
+    };
+
+    const int horizontalDistance = position.x() < viewportRect.left()
+                                       ? position.x() - viewportRect.left()
+                                   : position.x() > viewportRect.right()
+                                       ? position.x() - viewportRect.right()
+                                       : 0;
+    const int verticalDistance = position.y() < viewportRect.top()
+                                     ? position.y() - viewportRect.top()
+                                 : position.y() > viewportRect.bottom()
+                                     ? position.y() - viewportRect.bottom()
+                                     : 0;
+    scrollBar(horizontalScrollBar(), horizontalDistance);
+    scrollBar(verticalScrollBar(), verticalDistance);
+
+    updateSelection({qBound(viewportRect.left(), position.x(), viewportRect.right()),
+                     qBound(viewportRect.top(), position.y(), viewportRect.bottom())});
 }
 
 void QLiteHtmlWidget::withFixedTextPosition(const std::function<void()> &action)

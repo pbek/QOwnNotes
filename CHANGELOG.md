@@ -2,8 +2,9 @@
 
 ## 26.7.10
 
-- Improved slow, flickering text selection in the QLiteHtml preview by avoiding
-  redundant selection processing and full preview repaints
+- Improved text selection in the QLiteHtml preview by avoiding redundant
+  selection processing and full preview repaints, preserving selections while
+  dragging across whitespace, and automatically scrolling beyond the viewport
   (for [#3668](https://github.com/pbek/QOwnNotes/issues/3668))
 
 ## 26.7.9
