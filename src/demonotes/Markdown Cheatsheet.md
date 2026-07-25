@@ -300,7 +300,10 @@ Currently, supported languages (and code block identifiers) are:
 - C#, `c#`
 - CMake, `cmake`
 - C#, `csharp`
+- Console, `console`
 - CSS, `css`
+- Forth, `forth`
+- GDScript, `gdscript`
 - Go, `go`
 - HTML, `html`
 - INI, `ini`
@@ -309,13 +312,19 @@ Currently, supported languages (and code block identifiers) are:
 - JavaScript, `js`
 - JSON, `json`
 - Makefile, `make`
+- Nix, `nix`
 - PHP, `php`
 - Python, `py`
 - Python, `python`
 - QML, `qml`
+- R, `r`
 - Rust, `rust`
 - Shell scripting, `sh`
+- Shell session, `shell-session`
 - SQL, `sql`
+- SystemVerilog, `systemverilog`
+- TaggerScript, `taggerscript`
+- TOML, `toml`
 - TypeScript, `ts`
 - TypeScript, `typescript`
 - V, `v`
