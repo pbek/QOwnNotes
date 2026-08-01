@@ -411,8 +411,9 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
     // content -- doesn't prematurely end the capture and make the whole
     // pattern fail to match.
     {
-        auto i = QRegularExpression(R"regex(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex")
-                     .globalMatch(noteText);
+        auto i =
+            QRegularExpression(R"regex(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex")
+                .globalMatch(noteText);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
@@ -429,7 +430,8 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
 
     // Handle format: ![alt text](:/imageId)
     {
-        auto i = QRegularExpression(R"(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
+        auto i =
+            QRegularExpression(R"(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
@@ -567,7 +569,8 @@ void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
     // every other link in the chain silently fails to match. The label also
     // uses `(?:\\.|[^\]])*` instead of `[^\]]*` so an escaped bracket in the
     // link text doesn't prematurely end the capture (see handleImages()).
-    auto i = QRegularExpression(R"((?<!!)(\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\)))").globalMatch(noteText);
+    auto i =
+        QRegularExpression(R"((?<!!)(\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\)))").globalMatch(noteText);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
