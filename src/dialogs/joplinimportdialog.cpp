@@ -5,7 +5,10 @@
 #include <entities/tag.h>
 
 #include <QDebug>
+#include <QDir>
+#include <QFile>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
@@ -402,8 +405,13 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
     QString noteText = note.getNoteText();
 
     // Handle format: [![](:/imageId "hover text")]
+    //
+    // The label uses `(?:\\.|[^\]])*` instead of `[^\]]*` so that an escaped
+    // bracket (`\]`) inside the alt text -- common in web-clipped or OCR'd
+    // content -- doesn't prematurely end the capture and make the whole
+    // pattern fail to match.
     {
-        auto i = QRegularExpression(R"regex(!\[([^\]]*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex")
+        auto i = QRegularExpression(R"regex(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex")
                      .globalMatch(noteText);
 
         while (i.hasNext()) {
@@ -421,7 +429,7 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
 
     // Handle format: ![alt text](:/imageId)
     {
-        auto i = QRegularExpression(R"(!\[([^\]]*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
+        auto i = QRegularExpression(R"(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
@@ -455,31 +463,24 @@ void JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString
                                      const QString& imageName) {
     QString imageData = _imageData[imageId];
 
+    // Joplin resources are classified as image vs. attachment purely by their
+    // "mime:" field, but an `<img src=":/id">` tag can still point at a
+    // resource that wasn't classified as an image (e.g. a saved web-clipper
+    // page snapshot with `mime: text/html`). Fall back to the attachment
+    // data so we can still find and import the underlying file.
+    if (imageData.isEmpty()) {
+        imageData = _attachmentData[imageId];
+    }
+
     qDebug() << __func__ << " - 'imageName': " << imageName;
     qDebug() << __func__ << " - 'imageId': " << imageId;
     // qDebug() << __func__ << " - 'imageData': " << imageData;
 
-    QString fileExtension;
-    auto fileExtensionMatch =
-        QRegularExpression("^file_extension: (.+)$", QRegularExpression::MultilineOption)
-            .match(imageData);
-
-    if (fileExtensionMatch.hasMatch()) {
-        fileExtension = fileExtensionMatch.captured(1);
-    } else {
-        // if the extension wasn't set we'll try to get it from the original file
-        auto imageDataLines =
-            imageData.split(QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
-        auto originalFileName = imageDataLines[0];
-        auto fileInfo = QFileInfo(originalFileName);
-        fileExtension = fileInfo.suffix();
-    }
-
-    auto* mediaFile = new QFile(dirPath + "/resources/" + imageId + "." + fileExtension);
+    auto* mediaFile = findResourceFile(dirPath, imageId, imageData);
 
     qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
 
-    if (!mediaFile->exists()) {
+    if (mediaFile == nullptr) {
         return;
     }
 
@@ -490,6 +491,64 @@ void JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString
 }
 
 /**
+ * Resolves the on-disk resource file for a Joplin resource id.
+ *
+ * Joplin's raw export doesn't always populate the "file_extension:" field (or a
+ * usable original filename to derive it from) in a resource's metadata note --
+ * this is common for resources created by older Joplin versions or imported
+ * from other apps. When that happens we can't build the "<id>.<ext>" path from
+ * metadata alone, so as a last resort we look directly in the resources/
+ * directory for a file starting with the resource id.
+ *
+ * @param dirPath the Joplin export directory
+ * @param id the resource id
+ * @param metaData the resource's metadata note text (may be empty if the id
+ *                 wasn't found in either the image or attachment data at all)
+ * @return a QFile pointing at the resource, or nullptr if it can't be found
+ */
+QFile* JoplinImportDialog::findResourceFile(const QString& dirPath, const QString& id,
+                                            const QString& metaData) {
+    QString fileExtension;
+    auto fileExtensionMatch =
+        QRegularExpression("^file_extension: (.+)$", QRegularExpression::MultilineOption)
+            .match(metaData);
+
+    if (fileExtensionMatch.hasMatch()) {
+        fileExtension = fileExtensionMatch.captured(1);
+    } else if (!metaData.isEmpty()) {
+        // if the extension wasn't set we'll try to get it from the original file
+        auto metaDataLines =
+            metaData.split(QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+        auto originalFileName = metaDataLines[0];
+        auto fileInfo = QFileInfo(originalFileName);
+        fileExtension = fileInfo.suffix();
+    }
+
+    if (!fileExtension.isEmpty()) {
+        auto* mediaFile = new QFile(dirPath + "/resources/" + id + "." + fileExtension);
+
+        if (mediaFile->exists()) {
+            return mediaFile;
+        }
+
+        delete mediaFile;
+    }
+
+    // Last resort: search the resources directory for a file that starts
+    // with the resource id, regardless of extension. Some resources (seen in
+    // the wild with an empty "mime:"/"file_extension:" combination) are
+    // exported with no extension at all, so the glob can't require a ".".
+    QDir resourceDir(dirPath + "/resources");
+    const QStringList matches = resourceDir.entryList(QStringList() << id + "*", QDir::Files);
+
+    if (!matches.isEmpty()) {
+        return new QFile(resourceDir.filePath(matches.first()));
+    }
+
+    return nullptr;
+}
+
+/**
  * Handle note attachments
  *
  * @param note
@@ -497,7 +556,18 @@ void JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString
  */
 void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
     QString noteText = note.getNoteText();
-    auto i = QRegularExpression(R"([^!](\[([^\]]*)\]\(:\/([\w\d]+)\)))").globalMatch(noteText);
+
+    // Use a zero-width negative lookbehind `(?<!!)` instead of a consuming
+    // `[^!]` character class. The consuming version eats whatever character
+    // precedes the link -- which is harmless for an isolated link, but when
+    // attachment links are packed back-to-back with no separator, e.g.
+    // `[a.pdf](:/id1)[b.pdf](:/id2)`, the closing `)` of the first link's
+    // match gets consumed as the "not an image" check for the first link,
+    // leaving no character left for the second link's check to consume, so
+    // every other link in the chain silently fails to match. The label also
+    // uses `(?:\\.|[^\]])*` instead of `[^\]]*` so an escaped bracket in the
+    // link text doesn't prematurely end the capture (see handleImages()).
+    auto i = QRegularExpression(R"((?<!!)(\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\)))").globalMatch(noteText);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
@@ -506,30 +576,22 @@ void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
         QString attachmentId = match.captured(3);
         QString attachmentData = _attachmentData[attachmentId];
 
+        // The attachment may actually be classified as an image (e.g. an
+        // image resource referenced via a plain `[label](:/id)` link instead
+        // of `![](:/id)`) -- fall back to the image data so we can still
+        // find and import the underlying file.
+        if (attachmentData.isEmpty()) {
+            attachmentData = _imageData[attachmentId];
+        }
+
         qDebug() << __func__ << " - 'attachmentName': " << attachmentName;
         qDebug() << __func__ << " - 'attachmentId': " << attachmentId;
 
-        QString fileExtension;
-        auto fileExtensionMatch =
-            QRegularExpression("^file_extension: (.+)$", QRegularExpression::MultilineOption)
-                .match(attachmentData);
-
-        if (fileExtensionMatch.hasMatch()) {
-            fileExtension = fileExtensionMatch.captured(1);
-        } else {
-            // if the extension wasn't set we'll try to get it from the original file
-            auto attachmentDataLines =
-                attachmentData.split(QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
-            auto originalFileName = attachmentDataLines[0];
-            auto fileInfo = QFileInfo(originalFileName);
-            fileExtension = fileInfo.suffix();
-        }
-
-        auto* mediaFile = new QFile(dirPath + "/resources/" + attachmentId + "." + fileExtension);
+        auto* mediaFile = findResourceFile(dirPath, attachmentId, attachmentData);
 
         qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
 
-        if (!mediaFile->exists()) {
+        if (mediaFile == nullptr) {
             continue;
         }
 
