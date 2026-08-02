@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.8.0
+
+- Fixed Joplin RAW import silently skipping some attachments
+  (for [#3672](https://github.com/pbek/QOwnNotes/pull/3672), thank you, @MySkeletonHurts)
+
 ## 26.7.10
 
 - Improved text selection in the QLiteHtml preview by avoiding redundant
