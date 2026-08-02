@@ -10,6 +10,7 @@ class JoplinImportDialog;
 
 class Note;
 class QTreeWidgetItem;
+class QFile;
 
 class JoplinImportDialog : public MasterDialog {
     Q_OBJECT
@@ -50,4 +51,6 @@ class JoplinImportDialog : public MasterDialog {
     NoteSubFolder importFolder(const QString& id, const QString& text);
     void importImage(Note& note, const QString& dirPath, QString& noteText, const QString& imageTag,
                      const QString& imageId, const QString& imageName = "");
+    static QFile* findResourceFile(const QString& dirPath, const QString& id,
+                                   const QString& metaData);
 };
