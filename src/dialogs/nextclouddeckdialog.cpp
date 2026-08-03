@@ -20,6 +20,11 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     Q_UNUSED(listMode)
     ui->setupUi(this);
     afterSetupUI();
+
+    // Ignore the return key, so pressing enter in the search field only prepares a new card
+    // instead of also triggering the default "Save" button, which would create the card at once
+    setIgnoreReturnKey(true);
+
     setupUi();
     _currentCard = NextcloudDeckService::Card();
     ui->saveButton->setEnabled(false);
@@ -584,14 +589,30 @@ void NextcloudDeckDialog::on_newItemEdit_textChanged(const QString &arg1) {
 }
 
 void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
+    // The description and due date were changed by the user if they differ from the currently
+    // selected card, in that case they must not be reset when creating a new card
+    const QString description = ui->descriptionTextEdit->toPlainText();
+    const bool dueDateEnabled = ui->dueDateTimeCheckBox->isChecked();
+    const QDateTime dueDateTime = ui->dueDateTimeEdit->dateTime();
+    const bool keepDescription = description != _currentCard.description;
+    const bool keepDueDate = dueDateEnabled != _currentCard.duedate.isValid() ||
+                             (dueDateEnabled && dueDateTime != _currentCard.duedate);
+
     resetEditFrameControls();
     ui->editFrame->setEnabled(true);
     ui->titleLineEdit->setText(ui->newItemEdit->text());
-    ui->descriptionTextEdit->setFocus();
     ui->newItemEdit->clear();
-    // Set the default due date to one hour from now
-    ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
-    ui->dueDateTimeCheckBox->setChecked(true);
+
+    if (keepDescription) {
+        ui->descriptionTextEdit->setPlainText(description);
+    }
+
+    ui->descriptionTextEdit->setFocus();
+
+    // Keep an already entered due date, otherwise default to one hour from now
+    ui->dueDateTimeEdit->setDateTime(keepDueDate ? dueDateTime
+                                                 : QDateTime::currentDateTime().addSecs(3600));
+    ui->dueDateTimeCheckBox->setChecked(keepDueDate ? dueDateEnabled : true);
 }
 
 void NextcloudDeckDialog::on_deleteCardButton_clicked() {

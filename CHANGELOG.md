@@ -4,6 +4,9 @@
 
 - Fixed Joplin RAW import silently skipping some attachments
   (for [#3672](https://github.com/pbek/QOwnNotes/pull/3672), thank you, @MySkeletonHurts)
+- The **Nextcloud Deck dialog** now preserves an already entered description and
+  due date when pressing Enter on an unmatched search to create a new card
+  (for [#3673](https://github.com/pbek/QOwnNotes/issues/3673))
 
 ## 26.7.10
 
