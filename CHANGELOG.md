@@ -7,6 +7,16 @@
 - The **Nextcloud Deck dialog** now preserves an already entered description and
   due date when pressing Enter on an unmatched search to create a new card
   (for [#3673](https://github.com/pbek/QOwnNotes/issues/3673))
+- [qc](https://github.com/qownnotes/qc) v0.6.3 was released
+  - `qc configure` no longer fails with `command not found` when the configured editor is not
+    installed on the system (for [#24](https://github.com/qownnotes/qc/issues/24))
+    - The editor is now resolved every time the config file is edited, falling back to the `VISUAL`
+      and `EDITOR` environment variables and then to a list of common editors
+    - A clear error message is shown when no editor could be found at all
+  - The config file path is now quoted when it is passed to the editor, so paths containing spaces
+    work as expected
+  - Update dependencies
+    - Go 1.25 is now required to build the project
 
 ## 26.7.10
 
