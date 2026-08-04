@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.8.1
+
+- Improved the **heading folding gutter** by reducing the space between folding
+  symbols and line numbers and ensuring the symbols remain visible with mixed
+  dark application and light editor themes on Windows
+  (for [#3680](https://github.com/pbek/QOwnNotes/issues/3680))
+
 ## 26.8.0
 
 - Fixed Joplin RAW import silently skipping some attachments

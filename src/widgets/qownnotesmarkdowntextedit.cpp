@@ -74,7 +74,7 @@
 #include "version.h"
 
 namespace {
-constexpr int kFoldIndicatorPadding = 4;
+constexpr int kFoldIndicatorPadding = 2;
 QHash<QString, QSet<QString>> s_foldedHeadingStateByNoteReference;
 
 static QChar accentForDeadKey(int key) {
@@ -1654,7 +1654,8 @@ int QOwnNotesMarkdownTextEdit::sidebarAdditionalWidth() const {
         return 0;
     }
 
-    return fontMetrics().height() + (kFoldIndicatorPadding * 2);
+    const int indicatorSize = qMax(7, fontMetrics().height() - 8);
+    return indicatorSize + (kFoldIndicatorPadding * 2);
 }
 
 bool QOwnNotesMarkdownTextEdit::isHeadingBlock(const QTextBlock &block, int *level) {
@@ -1813,8 +1814,13 @@ void QOwnNotesMarkdownTextEdit::paintSidebar(QPainter *painter, const QRect &eve
     top += viewportMargins().top();
     int bottom = top;
 
-    const QColor iconColor = palette().color(QPalette::Active, QPalette::Text);
-    const QColor borderColor = iconColor.lighter(130);
+    const QColor gutterColor = palette().color(QPalette::Active, QPalette::Window);
+    QColor iconColor = palette().color(QPalette::Active, QPalette::WindowText);
+    if (qAbs(iconColor.lightness() - gutterColor.lightness()) < 96) {
+        iconColor = gutterColor.lightness() < 128 ? QColor(Qt::white) : QColor(Qt::black);
+    }
+    QColor borderColor = iconColor;
+    borderColor.setAlpha(180);
 
     painter->save();
     painter->setRenderHint(QPainter::Antialiasing, true);
