@@ -2,6 +2,8 @@
 
 ## 26.8.1
 
+- Fixed an empty color mode ID warning when opening the **Color modes** settings
+  (for [#3526](https://github.com/pbek/QOwnNotes/issues/3526))
 - Improved the **heading folding gutter** by reducing the space between folding
   symbols and line numbers and ensuring the symbols remain visible with mixed
   dark application and light editor themes on Windows

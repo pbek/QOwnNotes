@@ -42,6 +42,9 @@ QString ColorModeSettingsWidget::initialColorModeId() const { return _initialCol
  * Populates the editor color schema combo box
  */
 void ColorModeSettingsWidget::initEditorSchemaComboBox() {
+    const QSignalBlocker blocker(ui->colorModeEditorColorSchemaComboBox);
+    Q_UNUSED(blocker)
+
     ui->colorModeEditorColorSchemaComboBox->clear();
 
     // Load default schemas
