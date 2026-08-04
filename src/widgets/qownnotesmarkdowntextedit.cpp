@@ -1186,6 +1186,16 @@ void QOwnNotesMarkdownTextEdit::insertWikiLink() {
 
 void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     if (!Utils::Misc::isNoteEditingAllowed()) {
+        // Checkbox handling must take priority over opening a link that follows the marker.
+        if (Utils::Gui::isCheckBoxAtCursor(this)) {
+            auto *mainWindow = MainWindow::instance();
+            if (mainWindow && mainWindow->doNoteEditingCheck()) {
+                Utils::Gui::toggleCheckBoxAtCursor(this);
+            }
+
+            return;
+        }
+
         if (openLinkAtCursorPosition()) {
             MainWindow::instance()->showStatusBarMessage(
                 tr("An url was opened at the current cursor position"), QStringLiteral("📃"), 5000);

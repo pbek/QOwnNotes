@@ -2,6 +2,9 @@
 
 ## 26.8.1
 
+- In read-only mode, pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> on a linked
+  Markdown checkbox now asks to enable editing and toggles the checkbox instead
+  of opening the link (for [#3682](https://github.com/pbek/QOwnNotes/issues/3682))
 - Fixed an empty color mode ID warning when opening the **Color modes** settings
   (for [#3526](https://github.com/pbek/QOwnNotes/issues/3526))
 - Improved the **heading folding gutter** by reducing the space between folding

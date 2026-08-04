@@ -774,6 +774,21 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock &initialBlock) {
 }
 
 /**
+ * Checks whether the cursor is on a Markdown checkbox
+ *
+ * @param textEdit
+ */
+bool Utils::Gui::isCheckBoxAtCursor(const QPlainTextEdit *textEdit) {
+    auto cursor = textEdit->textCursor();
+
+    cursor.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 5);
+    cursor.movePosition(QTextCursor::Right, QTextCursor::KeepAnchor, 10);
+
+    static const auto checkboxExpression = QRegularExpression(R"((?:[-+*]|[\d+]\.) \[(?: |x)\])");
+    return checkboxExpression.match(cursor.selectedText()).hasMatch();
+}
+
+/**
  * Attempts to toggle a checkbox at the cursor position
  *
  * @param textEdit

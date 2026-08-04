@@ -121,6 +121,7 @@ QFont fontDialogGetFont(bool *ok, const QFont &initial, QWidget *parent = nullpt
 void copyCodeBlockText(const QTextBlock &initialBlock);
 
 bool toggleCheckBoxAtCursor(QPlainTextEdit *textEdit);
+bool isCheckBoxAtCursor(const QPlainTextEdit *textEdit);
 bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
 bool isTableAtCursor(QPlainTextEdit *textEdit, int *cursorColumn = nullptr);
 bool insertTableColumnLeft(QPlainTextEdit *textEdit);

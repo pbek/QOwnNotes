@@ -6,6 +6,7 @@
 #include <QtTest>
 
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include "utils/gui.h"
 
 namespace {
 QTextCharFormat formatAt(const QTextBlock &block, int position) {
@@ -72,4 +73,22 @@ void TestQMarkdownTextEdit::testRCodeBlockHighlighting() {
     QVERIFY(literalFormat.foreground() != defaultFormat.foreground());
     QVERIFY(commentFormat.foreground() != defaultFormat.foreground());
     QCOMPARE(formatAt(codeBlock, commentPosition + 2).foreground(), commentFormat.foreground());
+}
+
+void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(
+        QStringLiteral("- [ ] [Update contact information](https://example.com/tasks/123)"));
+    editor.setReadOnly(true);
+
+    QTextCursor cursor = editor.textCursor();
+    cursor.setPosition(3);
+    editor.setTextCursor(cursor);
+
+    QVERIFY(Utils::Gui::isCheckBoxAtCursor(&editor));
+    QVERIFY(editor.toPlainText().startsWith(QStringLiteral("- [ ]")));
+
+    editor.setReadOnly(false);
+    QVERIFY(Utils::Gui::toggleCheckBoxAtCursor(&editor));
+    QVERIFY(editor.toPlainText().startsWith(QStringLiteral("- [x]")));
 }
