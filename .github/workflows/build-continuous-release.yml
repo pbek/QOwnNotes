@@ -448,7 +448,7 @@ jobs:
 
   publish-continuous:
     name: "📣 Publish continuous release"
-    if: always()
+    if: always() && github.ref == 'refs/heads/main'
     needs:
       - build-appimage
       - build-snap
