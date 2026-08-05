@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.8.2
+
+- Added OpenSSL 3 to the universal macOS Qt 6 package, enabling connections to
+  TLS 1.3-only servers while retaining TLS 1.2 and certificate verification
+  support (for [#3681](https://github.com/pbek/QOwnNotes/issues/3681))
+
 ## 26.8.1
 
 - In read-only mode, pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> on a linked

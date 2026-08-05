@@ -53,6 +53,10 @@ if ! "${QT_ROOT_DIR}/bin/macdeployqt" ./$APP.app -codesign=-; then
   exit 1
 fi
 
+# Qt's OpenSSL TLS plugin loads these libraries dynamically from the bundle.
+# SecureTransport remains packaged as a fallback, but it cannot use TLS 1.3.
+../build-systems/github/macos/bundle-openssl-qt6.sh ./$APP.app
+
 # This should be fixed by adding QT += quick
 #echo "Copy missing Qt framework QtConcurrent to the application bundle"
 #cp -R ${QT_ROOT_DIR}/lib/QtConcurrent.framework ./$APP.app/Contents/Frameworks
