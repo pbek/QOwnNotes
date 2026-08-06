@@ -11,6 +11,7 @@ class TestQMarkdownTextEdit : public QObject {
     void testToPlainTextPreservesNoBreakSpaces();
     void testRCodeBlockHighlighting();
     void testLinkedCheckBoxDetectionInReadOnlyEditor();
+    void testAutoFormatTableAtCursor();
 };
 
 #endif    // TESTQMARKDOWNTEXTEDIT_H

@@ -1242,6 +1242,11 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     double resultValue;
     const bool equationSolved = solveEquation(resultValue);
 
+    // Attempt a Markdown table auto-format
+    if (Utils::Gui::autoFormatTableAtCursor(this)) {
+        return;
+    }
+
     if (!equationSolved && _markdownLspEnabled && _markdownLspClient &&
         !_markdownLspUri.isEmpty()) {
         const QTextCursor cursor = textCursor();
@@ -1252,11 +1257,6 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         if (_markdownLspCompletionRequestId >= 0) {
             return;
         }
-    }
-
-    // attempt a Markdown table auto-format
-    if (Utils::Gui::autoFormatTableAtCursor(this)) {
-        return;
     }
 
     QMenu menu;

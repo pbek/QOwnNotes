@@ -92,3 +92,19 @@ void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
     QVERIFY(Utils::Gui::toggleCheckBoxAtCursor(&editor));
     QVERIFY(editor.toPlainText().startsWith(QStringLiteral("- [x]")));
 }
+
+void TestQMarkdownTextEdit::testAutoFormatTableAtCursor() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("| Name|Value|\n|-|-|\n|one|123|\n|longer|4|"));
+
+    QTextCursor cursor = editor.textCursor();
+    cursor.setPosition(editor.document()->findBlockByNumber(2).position());
+    editor.setTextCursor(cursor);
+
+    QVERIFY(Utils::Gui::autoFormatTableAtCursor(&editor));
+    QCOMPARE(editor.toPlainText(), QStringLiteral("| Name   | Value |\n"
+                                                  "| ------ | ----- |\n"
+                                                  "| one    | 123   |\n"
+                                                  "| longer | 4     |"));
+    QVERIFY(!Utils::Gui::autoFormatTableAtCursor(&editor));
+}
