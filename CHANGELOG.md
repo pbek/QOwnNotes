@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## Unreleased
+
+- There was a new release of the **QOwnNotes Web Companion browser extension**
+  [2026.8.0](https://github.com/qownnotes/web-companion/releases/tag/v2026.8.0)
+  - An error dialog now explains how to resolve a failed connection to the QOwnNotes socket server
+    (for [#120](https://github.com/qownnotes/web-companion/issues/120))
+  - The dependencies were updated
+
 ## 26.8.2
 
 - Fixed <kbd>Ctrl</kbd> + <kbd>Space</kbd> no longer auto-formatting Markdown
