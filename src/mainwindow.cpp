@@ -5960,7 +5960,9 @@ void MainWindow::applyFormatter(const QString &formatter) {
         textEdit->setTextCursor(c);
     } else {
         QRegularExpressionMatch match =
-            QRegularExpression(QStringLiteral(R"(^(\s*)(.+?)(\s*)$)")).match(selectedText);
+            QRegularExpression(QStringLiteral(R"(^(\s*)(.+?)(\s*)$)"),
+                               QRegularExpression::DotMatchesEverythingOption)
+                .match(selectedText);
         if (match.hasMatch()) {
             QString formattedText =
                 match.captured(1) + formatter + match.captured(2) + formatter + match.captured(3);

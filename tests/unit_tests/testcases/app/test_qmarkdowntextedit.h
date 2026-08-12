@@ -10,6 +10,7 @@ class TestQMarkdownTextEdit : public QObject {
     void testUpFromStartOfSecondLineMovesToFirstLine();
     void testToPlainTextPreservesNoBreakSpaces();
     void testRCodeBlockHighlighting();
+    void testMultilineInlineHighlighting();
     void testLinkedCheckBoxDetectionInReadOnlyEditor();
     void testAutoFormatTableAtCursor();
 };

@@ -75,6 +75,33 @@ void TestQMarkdownTextEdit::testRCodeBlockHighlighting() {
     QCOMPARE(formatAt(codeBlock, commentPosition + 2).foreground(), commentFormat.foreground());
 }
 
+void TestQMarkdownTextEdit::testMultilineInlineHighlighting() {
+    QMarkdownTextEdit editor;
+
+    editor.setPlainText(QStringLiteral("~~first line\nsecond line\nthird line~~"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(0), 2).fontStrikeOut());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(1), 0).fontStrikeOut());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(2), 0).fontStrikeOut());
+
+    editor.setPlainText(QStringLiteral("**first line\nsecond line**"));
+    editor.highlighter()->rehighlight();
+    QCOMPARE(formatAt(editor.document()->findBlockByNumber(0), 2).fontWeight(), int(QFont::Bold));
+    QCOMPARE(formatAt(editor.document()->findBlockByNumber(1), 0).fontWeight(), int(QFont::Bold));
+
+    editor.setPlainText(QStringLiteral("*first line\nsecond line\nthird line*"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(0), 1).fontItalic());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(2), 0).fontItalic());
+
+    editor.highlighter()->setHighlightingOptions(MarkdownHighlighter::Underline);
+    editor.setPlainText(QStringLiteral("__first line\nsecond line__"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(0), 2).fontUnderline());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(1), 0).fontUnderline());
+}
+
 void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
     QMarkdownTextEdit editor;
     editor.setPlainText(

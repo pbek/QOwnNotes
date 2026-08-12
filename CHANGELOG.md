@@ -2,6 +2,8 @@
 
 ## 26.8.3
 
+- Added support for highlighting and applying strikeout and other Markdown text
+  formatting across multiple lines (for [#3690](https://github.com/pbek/QOwnNotes/issues/3690))
 - Improved performance when switching away from notes with wiki-style links when the
   **Note relations** panel was visible (for [#3691](https://github.com/pbek/QOwnNotes/issues/3691))
 - There was a new release of the **QOwnNotes Web Companion browser extension**

@@ -222,7 +222,7 @@ void QOwnNotesMarkdownHighlighter::highlightScriptingHook(const QString &text) {
     }
 
     const QVariantList highlights =
-        scriptingService->callHighlightingHook(text, previousBlockState());
+        scriptingService->callHighlightingHook(text, baseBlockState(previousBlockState()));
 
     for (const QVariant &item : highlights) {
         const QVariantMap m = item.toMap();
