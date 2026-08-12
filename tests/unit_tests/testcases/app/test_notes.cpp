@@ -1078,6 +1078,25 @@ void TestNotes::testQualifiedWikiLinksAreUpdatedOnSubfolderRename() {
         QStringLiteral("[[%1/%2/%3]]").arg(parentFolder.getName(), oldChildName, targetName)));
 }
 
+void TestNotes::testWikiLinksShowInNoteRelations() {
+    SettingsService().setValue(QStringLiteral("Editor/wikiLinkSupport"), true);
+
+    const QString targetName = uniqueTestName(QStringLiteral("relations-target"));
+    const Note targetNote = createTestNote(targetName);
+    const QString excludedTargetName = uniqueTestName(QStringLiteral("relations-excluded"));
+    createTestNote(excludedTargetName);
+    Note sourceNote =
+        createTestNote(uniqueTestName(QStringLiteral("relations-source")), 0,
+                       QStringLiteral("See [[%1]] and [[%1#Heading|alias]] and [[%2]]")
+                           .arg(targetName, excludedTargetName));
+
+    const QHash<Note, QSet<LinkHit>> linkedNotes = sourceNote.findLinkedNotes({targetNote});
+
+    QCOMPARE(linkedNotes.size(), 1);
+    QVERIFY(linkedNotes.contains(targetNote));
+    QCOMPARE(linkedNotes.value(targetNote).size(), 2);
+}
+
 void TestNotes::testWikiLinkBacklinksShowInBacklinkPanel() {
     SettingsService().setValue(QStringLiteral("Editor/wikiLinkSupport"), true);
 

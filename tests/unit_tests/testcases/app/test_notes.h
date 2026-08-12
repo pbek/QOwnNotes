@@ -68,6 +68,7 @@ class TestNotes : public QObject {
     void testResolveWikiLinkPrefersCurrentSubfolderAndFindsNestedNotes();
     void testWikiLinkHtmlRenderingMarksResolvedAndBrokenLinks();
     void testQualifiedWikiLinksAreUpdatedOnSubfolderRename();
+    void testWikiLinksShowInNoteRelations();
 
     /* Wiki-link backlink tests (issue #3535) */
     void testWikiLinkBacklinksShowInBacklinkPanel();

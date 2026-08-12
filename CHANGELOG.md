@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
-## Unreleased
+## 26.8.3
 
+- Improved performance when switching away from notes with wiki-style links when the
+  **Note relations** panel was visible (for [#3691](https://github.com/pbek/QOwnNotes/issues/3691))
 - There was a new release of the **QOwnNotes Web Companion browser extension**
   [2026.8.0](https://github.com/qownnotes/web-companion/releases/tag/v2026.8.0)
   - An error dialog now explains how to resolve a failed connection to the QOwnNotes socket server

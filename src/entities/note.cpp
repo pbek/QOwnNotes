@@ -5326,6 +5326,20 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
         noteList = Note::fetchAll(-1, connectionName);
     }
 
+    QHash<int, QSet<LinkHit>> wikiLinkHitsByNoteId;
+    if (noteText.contains(QStringLiteral("[[")) && isWikiLinkSupportEnabled()) {
+        const QVector<ParsedWikiLink> wikiLinks =
+            parseWikiLinksFromText(noteText, _noteSubFolderId, connectionName);
+        for (const ParsedWikiLink &parsed : wikiLinks) {
+            const Note resolvedNote =
+                Note::resolveWikiLink(parsed.parts.rawTarget, _noteSubFolderId, connectionName);
+            if (resolvedNote.isFetched()) {
+                wikiLinkHitsByNoteId[resolvedNote.getId()].insert(
+                    LinkHit(parsed.fullMatch, parsed.parts.resolvedTarget));
+            }
+        }
+    }
+
     // Check all notes and look if the current note contains a link to those notes
     // We don't need to care about legacy links, because they don't know subfolders
     for (const Note &note : noteList) {
@@ -5403,17 +5417,13 @@ QHash<Note, QSet<LinkHit>> Note::findLinkedNotes(QVector<Note> noteList,
                                    QRegularExpression::escape(noteUrlWithHyphens) +
                                    QStringLiteral(R"(#.+\))")));
         }
+    }
 
-        if (isWikiLinkSupportEnabled()) {
-            const QVector<ParsedWikiLink> wikiLinks =
-                parseWikiLinksFromText(noteText, _noteSubFolderId, connectionName);
-            for (const ParsedWikiLink &parsed : wikiLinks) {
-                const Note resolvedNote =
-                    Note::resolveWikiLink(parsed.parts.rawTarget, _noteSubFolderId, connectionName);
-                if (resolvedNote.isFetched() && resolvedNote.isSameFile(note)) {
-                    _linkedNoteHash[note].insert(
-                        LinkHit(parsed.fullMatch, parsed.parts.resolvedTarget));
-                }
+    if (!wikiLinkHitsByNoteId.isEmpty()) {
+        for (const Note &note : noteList) {
+            const auto wikiLinkHits = wikiLinkHitsByNoteId.constFind(note.getId());
+            if (wikiLinkHits != wikiLinkHitsByNoteId.constEnd()) {
+                _linkedNoteHash[note].unite(wikiLinkHits.value());
             }
         }
     }
