@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## Unreleased
+
+- There was a new release of the **QOwnNotes Web Companion browser extension**
+  [2026.8.1](https://github.com/qownnotes/web-companion/releases/tag/v2026.8.1)
+  - Bookmark links can now be copied from the bookmark list
+    (for [#121](https://github.com/qownnotes/web-companion/issues/121))
+
 ## 26.8.3
 
 - The new [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui) project provides a
