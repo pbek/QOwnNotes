@@ -6,6 +6,14 @@
   [2026.8.1](https://github.com/qownnotes/web-companion/releases/tag/v2026.8.1)
   - Bookmark links can now be copied from the bookmark list
     (for [#121](https://github.com/qownnotes/web-companion/issues/121))
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v0.4.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v0.4.0)
+  - Added shell completion generation for Bash, Fish, and Zsh
+  - Added clickable relative, legacy `note://`, and wiki-style note links in the viewer
+  - Added back and forward note navigation with preserved viewer and editor positions
+  - Added keyboard and mouse text selection, clipboard actions, and a visible viewer cursor
+  - Added reverse pane focus cycling and navigation from the viewer back to the note list
+  - Added checkbox-list and Setext-style heading highlighting in the viewer and editor
 
 ## 26.8.3
 
