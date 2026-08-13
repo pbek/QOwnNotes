@@ -2,6 +2,12 @@
 
 ## 26.8.3
 
+- The new [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui) project provides a
+  keyboard-first terminal browser and editor for local, QOwnNotes-compatible Markdown note folders
+  - It can use note folders configured in QOwnNotes and follows its note sorting settings
+  - Notes can be created, edited, searched, syntax-highlighted, renamed from their content, and
+    safely deleted from the terminal, with automatic saving and external-change conflict detection
+  - It supports configurable themes, mouse controls, Nix, and a Home Manager module
 - Added support for highlighting and applying strikeout and other Markdown text
   formatting across multiple lines (for [#3690](https://github.com/pbek/QOwnNotes/issues/3690))
 - Improved performance when switching away from notes with wiki-style links when the
