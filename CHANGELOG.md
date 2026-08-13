@@ -12,6 +12,9 @@
   formatting across multiple lines (for [#3690](https://github.com/pbek/QOwnNotes/issues/3690))
 - Improved performance when switching away from notes with wiki-style links when the
   **Note relations** panel was visible (for [#3691](https://github.com/pbek/QOwnNotes/issues/3691))
+- Renamed the **Message boxes** section in the **General settings** to **Dialog preferences** and
+  clarified which remembered dialog choices can be reset
+  (for [#3692](https://github.com/pbek/QOwnNotes/issues/3692))
 - There was a new release of the **QOwnNotes Web Companion browser extension**
   [2026.8.0](https://github.com/qownnotes/web-companion/releases/tag/v2026.8.0)
   - An error dialog now explains how to resolve a failed connection to the QOwnNotes socket server

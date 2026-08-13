@@ -513,9 +513,9 @@ void GeneralSettingsWidget::on_defaultNoteFileExtensionListWidget_itemSelectionC
  * Resets the overrides for all message boxes
  */
 void GeneralSettingsWidget::on_resetMessageBoxesButton_clicked() {
-    if (QMessageBox::question(this, tr("Reset message boxes"),
-                              tr("Do you really want to reset the overrides of all message "
-                                 "boxes?")) == QMessageBox::Yes) {
+    if (QMessageBox::question(this, tr("Reset dialog preferences"),
+                              tr("Do you really want to forget all saved dialog choices and show "
+                                 "suppressed dialogs again?")) == QMessageBox::Yes) {
         SettingsService settings;
 
         // Remove all settings in the group

@@ -464,21 +464,31 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
-         </property>
-         <property name="title">
-          <string>Message boxes</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_21">
-          <item>
-           <widget class="QPushButton" name="resetMessageBoxesButton">
-            <property name="toolTip">
-             <string>Forget all &quot;Don't ask again&quot; choices in message boxes</string>
-            </property>
-            <property name="text">
-             <string>Reset message boxes</string>
-            </property>
-           </widget>
-          </item>
+          </property>
+          <property name="title">
+           <string>Dialog preferences</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QLabel" name="dialogPreferencesLabel">
+             <property name="text">
+              <string>QOwnNotes remembers answers selected with &quot;Don't ask again&quot; and warnings hidden with &quot;Don't show again&quot;. Reset these preferences to show those dialogs again.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="resetMessageBoxesButton">
+             <property name="toolTip">
+              <string>Forget all &quot;Don't ask again&quot; and &quot;Don't show again&quot; choices</string>
+             </property>
+             <property name="text">
+              <string>Reset dialog preferences</string>
+             </property>
+            </widget>
+           </item>
          </layout>
         </widget>
        </item>
