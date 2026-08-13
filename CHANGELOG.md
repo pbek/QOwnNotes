@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added configurable link hover highlighting to the note editor and preview, including
+  dedicated **Link hover** colors for the Light and Dark editor schemas
+  (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
 - There was a new release of the **QOwnNotes Web Companion browser extension**
   [2026.8.1](https://github.com/qownnotes/web-companion/releases/tag/v2026.8.1)
   - Bookmark links can now be copied from the bookmark list

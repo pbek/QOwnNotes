@@ -26,6 +26,7 @@
 #include <QLineEdit>
 #include <QMenu>
 #include <QMimeData>
+#include <QMouseEvent>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -75,6 +76,7 @@
 
 namespace {
 constexpr int kFoldIndicatorPadding = 2;
+constexpr int kHoveredLinkProperty = QTextFormat::UserProperty + 0x514f;
 QHash<QString, QSet<QString>> s_foldedHeadingStateByNoteReference;
 
 static QChar accentForDeadKey(int key) {
@@ -540,6 +542,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         }
     });
 
+    viewport()->setMouseTracking(true);
+
     SettingsService settings;
     MarkdownHighlighter::HighlightingOptions options;
 
@@ -628,6 +632,134 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
             &QOwnNotesMarkdownTextEdit::onContextMenu);
 
     refreshFoldingSidebar();
+}
+
+bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position,
+                                                    QTextCursor *linkCursor) {
+    QTextCursor cursor = cursorForPosition(position);
+    const QTextBlock block = cursor.block();
+    const QString text = block.text();
+    const int positionInBlock = cursor.position() - block.position();
+    const QMap<QString, QString> urls = parseMarkdownUrlsFromText(text);
+
+    for (auto it = urls.constBegin(); it != urls.constEnd(); ++it) {
+        const QString &parsedText = it.key();
+        QString hoverText = parsedText;
+        int hoverOffset = 0;
+
+        const int destinationSeparator = parsedText.lastIndexOf(QStringLiteral("]("));
+        const int destinationStart = destinationSeparator >= 0
+                                         ? parsedText.indexOf(it.value(), destinationSeparator + 2)
+                                         : -1;
+        if (destinationStart >= 0) {
+            hoverText = it.value();
+            hoverOffset = destinationStart;
+        } else if (parsedText.startsWith(QLatin1Char('<')) &&
+                   parsedText.endsWith(QLatin1Char('>'))) {
+            const int urlStart = parsedText.indexOf(it.value(), 1);
+            if (urlStart >= 0) {
+                hoverText = it.value();
+                hoverOffset = urlStart;
+            }
+        } else {
+            // The shared parser can include a preceding checkbox in reference
+            // links such as "[ ] [label][id]".
+            const int referenceSeparator = parsedText.lastIndexOf(QStringLiteral("]["));
+            if (referenceSeparator >= 0) {
+                const int labelStart = parsedText.lastIndexOf(QLatin1Char('['), referenceSeparator);
+                if (labelStart > 0) {
+                    hoverText = parsedText.mid(labelStart);
+                    hoverOffset = labelStart;
+                }
+            }
+        }
+
+        int parsedStart = text.indexOf(parsedText);
+        while (parsedStart >= 0) {
+            const int hoverStart = parsedStart + hoverOffset;
+            const int hoverEnd = hoverStart + hoverText.size();
+            if (positionInBlock >= hoverStart && positionInBlock < hoverEnd) {
+                if (linkCursor != nullptr) {
+                    linkCursor->setPosition(block.position() + hoverStart);
+                    linkCursor->setPosition(block.position() + hoverEnd, QTextCursor::KeepAnchor);
+                }
+                return true;
+            }
+            parsedStart = text.indexOf(parsedText, parsedStart + parsedText.size());
+        }
+    }
+
+    return false;
+}
+
+void QOwnNotesMarkdownTextEdit::clearHoveredLink() {
+    if (_hoveredLinkStart < 0) {
+        return;
+    }
+
+    QList<QTextEdit::ExtraSelection> selections = extraSelections();
+    for (auto it = selections.begin(); it != selections.end();) {
+        if (it->format.property(kHoveredLinkProperty).toBool()) {
+            it = selections.erase(it);
+        } else {
+            ++it;
+        }
+    }
+
+    _hoveredLinkStart = -1;
+    _hoveredLinkEnd = -1;
+    setExtraSelections(selections);
+}
+
+void QOwnNotesMarkdownTextEdit::mouseMoveEvent(QMouseEvent *event) {
+    QMarkdownTextEdit::mouseMoveEvent(event);
+    updateHoveredLink(event->pos(), event->modifiers().testFlag(Qt::ControlModifier));
+}
+
+void QOwnNotesMarkdownTextEdit::updateHoveredLink(const QPoint &position, bool enabled) {
+    QTextCursor linkCursor(document());
+    const bool isLink = enabled && hoveredMarkdownLink(position, &linkCursor);
+    viewport()->setCursor(isLink ? Qt::PointingHandCursor : Qt::IBeamCursor);
+
+    const int start = isLink ? linkCursor.selectionStart() : -1;
+    const int end = isLink ? linkCursor.selectionEnd() : -1;
+    if (start == _hoveredLinkStart && end == _hoveredLinkEnd) {
+        const auto selections = extraSelections();
+        for (const auto &selection : selections) {
+            if (selection.format.property(kHoveredLinkProperty).toBool()) {
+                return;
+            }
+        }
+    }
+
+    clearHoveredLink();
+    if (!isLink) {
+        return;
+    }
+
+    QTextEdit::ExtraSelection selection;
+    selection.cursor = linkCursor;
+    selection.format.setForeground(
+        Utils::Schema::schemaSettings->getForegroundColor(Utils::Schema::LinkHoverPresetIndex));
+    selection.format.setFontUnderline(true);
+    selection.format.setProperty(kHoveredLinkProperty, true);
+
+    QList<QTextEdit::ExtraSelection> selections = extraSelections();
+    selections.append(selection);
+    _hoveredLinkStart = start;
+    _hoveredLinkEnd = end;
+    setExtraSelections(selections);
+}
+
+void QOwnNotesMarkdownTextEdit::leaveEvent(QEvent *event) {
+    clearHoveredLink();
+    viewport()->setCursor(Qt::IBeamCursor);
+    QMarkdownTextEdit::leaveEvent(event);
+}
+
+void QOwnNotesMarkdownTextEdit::focusOutEvent(QFocusEvent *event) {
+    clearHoveredLink();
+    QMarkdownTextEdit::focusOutEvent(event);
 }
 
 /*
@@ -3196,6 +3328,17 @@ void QOwnNotesMarkdownTextEdit::applyHarperReplacement(const QTextCursor &cursor
 #endif
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::MouseButtonRelease && obj == viewport()) {
+        auto *mouseEvent = static_cast<QMouseEvent *>(event);
+        if (mouseEvent->button() == Qt::LeftButton &&
+            mouseEvent->modifiers().testFlag(Qt::ControlModifier) &&
+            !hoveredMarkdownLink(mouseEvent->pos(), nullptr)) {
+            // Do not let the base parser activate a link from an overly broad
+            // Markdown match, such as the checkbox preceding an inline link.
+            return QPlainTextEdit::eventFilter(obj, event);
+        }
+    }
+
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
@@ -3269,7 +3412,13 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
         }
     }
 
-    return QMarkdownTextEdit::eventFilter(obj, event);
+    const bool handled = QMarkdownTextEdit::eventFilter(obj, event);
+    if ((event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) &&
+        static_cast<QKeyEvent *>(event)->key() == Qt::Key_Control) {
+        updateHoveredLink(viewport()->mapFromGlobal(QCursor::pos()),
+                          event->type() == QEvent::KeyPress);
+    }
+    return handled;
 }
 
 void QOwnNotesMarkdownTextEdit::updateIgnoredClickUrlRegexps() {

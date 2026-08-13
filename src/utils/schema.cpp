@@ -215,6 +215,10 @@ QColor Utils::Schema::Settings::getForegroundColor(int index, QString schemaKey)
         color = getForegroundColor(MarkdownHighlighter::Link, schemaKey);
     }
 
+    if (!color.isValid() && (index == LinkHoverPresetIndex)) {
+        color = QColor(0x40, 0x9d, 0xff);
+    }
+
     if (!color.isValid() && (index >= 0)) {
         color = getForegroundColor(TextPresetIndex, schemaKey);
     }
@@ -264,6 +268,10 @@ QColor Utils::Schema::Settings::getBackgroundColor(int index, QString schemaKey)
 
     if (!color.isValid() && (index == MarkdownHighlighter::LinkInternal)) {
         color = getBackgroundColor(MarkdownHighlighter::Link, schemaKey);
+    }
+
+    if (!color.isValid() && (index == LinkHoverPresetIndex)) {
+        color = getBackgroundColor(TextPresetIndex, schemaKey);
     }
 
     if (!color.isValid() && (index >= 0)) {

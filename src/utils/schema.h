@@ -71,6 +71,7 @@ class Settings {
 
 extern Settings* schemaSettings;
 const int TextPresetIndex = -1;
+const int LinkHoverPresetIndex = -2;
 
 QString textSettingsKey(const QString& key, int index);
 

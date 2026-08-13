@@ -198,7 +198,7 @@ void FontColorWidget::on_backgroundColorButton_clicked() {
  * @param index
  */
 void FontColorWidget::updateTextItems(int index) {
-    if (index < 0) {
+    if (index == Utils::Schema::TextPresetIndex) {
         // update all text items
         updateAllTextItems();
     } else {
@@ -216,6 +216,7 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Underlined text"), MarkdownHighlighter::StUnderline);
     addTextTreeWidgetItem(tr("Strong text"), MarkdownHighlighter::Bold);
     addTextTreeWidgetItem(tr("Link"), MarkdownHighlighter::Link);
+    addTextTreeWidgetItem(tr("Link hover"), Utils::Schema::LinkHoverPresetIndex);
     addTextTreeWidgetItem(tr("Link (internal)"), MarkdownHighlighter::LinkInternal);
     addTextTreeWidgetItem(tr("Wiki link"), MarkdownHighlighter::WikiLink);
     addTextTreeWidgetItem(tr("Wiki link (broken)"), MarkdownHighlighter::WikiLinkBroken);
@@ -337,17 +338,20 @@ void FontColorWidget::updateSchemeEditFrame() {
 
     bool isCurrentLineBackgroundColorIndex =
         index == MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor;
+    const bool isLinkHoverIndex = index == Utils::Schema::LinkHoverPresetIndex;
 
-    ui->boldCheckBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
-    ui->italicCheckBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
-    ui->underlineCheckBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
-    ui->fontSizeAdaptionSpinBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
-    ui->fontCheckBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
-    ui->fontComboBox->setVisible(index >= 0 && !isCurrentLineBackgroundColorIndex);
+    const bool showTextFormatControls = index >= 0 && !isCurrentLineBackgroundColorIndex;
+    ui->boldCheckBox->setVisible(showTextFormatControls);
+    ui->italicCheckBox->setVisible(showTextFormatControls);
+    ui->underlineCheckBox->setVisible(showTextFormatControls);
+    ui->fontSizeAdaptionSpinBox->setVisible(showTextFormatControls);
+    ui->fontCheckBox->setVisible(showTextFormatControls);
+    ui->fontComboBox->setVisible(showTextFormatControls);
     ui->foregroundColorCheckBox->setVisible(!isCurrentLineBackgroundColorIndex);
     ui->foregroundColorButton->setVisible(!isCurrentLineBackgroundColorIndex);
-    ui->label->setVisible(!isCurrentLineBackgroundColorIndex);
-    ui->fontSizeAdaptionSpinBox->setVisible(!isCurrentLineBackgroundColorIndex);
+    ui->backgroundColorCheckBox->setVisible(!isLinkHoverIndex);
+    ui->backgroundColorButton->setVisible(!isLinkHoverIndex);
+    ui->label->setVisible(showTextFormatControls);
 
     if (index >= 0) {
         const QSignalBlocker blocker(ui->boldCheckBox);

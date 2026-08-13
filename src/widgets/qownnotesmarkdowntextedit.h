@@ -159,7 +159,10 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void paintEvent(QPaintEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
     void keyPressEvent(QKeyEvent *e) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void leaveEvent(QEvent *event) override;
     void focusInEvent(QFocusEvent *e) override;
+    void focusOutEvent(QFocusEvent *e) override;
     int sidebarAdditionalWidth() const override;
     void paintSidebar(QPainter *painter, const QRect &eventRect) override;
     bool sidebarMousePressEvent(QMouseEvent *event) override;
@@ -229,6 +232,9 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void requestMarkdownLspFormatting(bool useSelection);
     void paintMarkdownImagePreviews();
     void refreshFoldingSidebar();
+    bool hoveredMarkdownLink(const QPoint &position, QTextCursor *linkCursor);
+    void updateHoveredLink(const QPoint &position, bool enabled);
+    void clearHoveredLink();
     static bool isHeadingBlock(const QTextBlock &block, int *level = nullptr);
     bool foldRegionForHeaderBlock(const QTextBlock &headerBlock, FoldRegion &region) const;
     bool setHeadingFolded(const QTextBlock &headerBlock, bool folded);
@@ -273,6 +279,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     QVector<MarkdownLspClient::Diagnostic> _markdownLspDiagnostics;
     bool _markdownLspEnabled = false;
     bool _markdownLspInitialized = false;
+    int _hoveredLinkStart = -1;
+    int _hoveredLinkEnd = -1;
 
     // Static pointer to the currently active editor for AI autocomplete
     static QOwnNotesMarkdownTextEdit *_activeAutocompleteEditor;

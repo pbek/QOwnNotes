@@ -4501,14 +4501,19 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "table {border-spacing: 0; border-style: solid; border-width: "
                      "1px; border-collapse: collapse; margin-top: 0.5em;}"
                      "th, td {padding: 2px 5px; border: 1px solid %5;}"
-                     "a { color: #FF9137; text-decoration: none; }"
+                     "body { cursor: text; }"
+                     "a { color: #FF9137; text-decoration: none; cursor: pointer; }"
+                     "a:hover { color: %7; text-decoration: underline; }"
                      "a.task-list-item-checkbox { color: #FF9137; text-decoration: none; cursor: "
                      "pointer; margin-right: 6px; }"
                      "a.task-list-item-checkbox:focus { outline: none; }"
                      "%1 %3 %4 %6"
                      "</style></head><body class=\"preview\">%2</body></html>")
                      .arg(codeStyleSheet, result, rtlStyle, schemaStyles, tableBorderColor,
-                          wikiLinkStyle);
+                          wikiLinkStyle,
+                          Utils::Schema::schemaSettings
+                              ->getForegroundColor(Utils::Schema::LinkHoverPresetIndex)
+                              .name());
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     }
