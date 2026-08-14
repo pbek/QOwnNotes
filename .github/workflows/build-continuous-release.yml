@@ -67,8 +67,11 @@ jobs:
       - name: "⚙️ Install linuxdeploy"
         run: |
           export LINUXDEPLOY_VERSION=1-alpha-20240109-1
+          export APPIMAGE_RUNTIME_SHA256=1cc49bcf1e2ccd593c379adb17c9f85a36d619088296504de95b1d06215aebbf
           wget https://github.com/linuxdeploy/linuxdeploy/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-x86_64.AppImage
           wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-plugin-qt-x86_64.AppImage
+          wget https://github.com/AppImage/type2-runtime/releases/download/continuous/runtime-x86_64
+          echo "${APPIMAGE_RUNTIME_SHA256}  runtime-x86_64" | sha256sum --check --strict
           chmod +x linuxdeploy-x86_64.AppImage
           chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
 
@@ -138,10 +141,15 @@ jobs:
           cp -L /usr/lib/x86_64-linux-gnu/libcrypto.so.3 ${{ env.BUILD_DIR }}/usr/lib/
 
           find ${{ env.BUILD_DIR }}
-          ./linuxdeploy-x86_64.AppImage --appdir ${{ env.BUILD_DIR }} --output appimage
+          LDAI_RUNTIME_FILE="$PWD/runtime-x86_64" \
+            ./linuxdeploy-x86_64.AppImage --appdir ${{ env.BUILD_DIR }} --output appimage
 
-          rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage
+          rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage runtime-x86_64
           mv *.AppImage ${{ env.EXECUTABLE }}-x86_64.AppImage ||:
+          if strings ${{ env.EXECUTABLE }}-x86_64.AppImage | grep -F 'libfuse.so.2' > /dev/null; then
+            echo "The AppImage still contains the legacy dynamic FUSE runtime" >&2
+            exit 1
+          fi
           sha256sum ${{ env.EXECUTABLE }}-x86_64.AppImage > ${{ env.EXECUTABLE }}-x86_64.AppImage.sha256sum
           ls -hal *.AppImage
 

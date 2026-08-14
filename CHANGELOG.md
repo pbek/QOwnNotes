@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- The **AppImage** no longer requires `libfuse2` to be installed separately because
+  its FUSE userspace library is now included in the runtime
+  (for [#3694](https://github.com/pbek/QOwnNotes/issues/3694))
 - Added configurable link hover highlighting to the note editor and preview, including
   dedicated **Link hover** colors for the Light and Dark editor schemas
   (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
