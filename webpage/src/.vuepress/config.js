@@ -46,6 +46,7 @@ const gettingStartedNavItems = [
   "getting-started/browser-extension",
   "getting-started/homepage-suggestion-api",
   "getting-started/command-line-snippet-manager",
+  "getting-started/qownnotes-tui",
   "getting-started/web-app",
   "getting-started/qownnotesapi",
   "getting-started/note-relations",
