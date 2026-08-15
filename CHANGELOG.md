@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## Unreleased
+## 26.8.4
 
 - Fixed the **boundary arrow navigation** in the note editor being dead on macOS,
   where pressing the `Up` arrow on the first line should move the cursor to the
