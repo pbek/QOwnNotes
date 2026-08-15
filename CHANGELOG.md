@@ -13,6 +13,12 @@
   - Bookmark links can now be copied from the bookmark list
     (for [#121](https://github.com/qownnotes/web-companion/issues/121))
 - There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v0.5.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v0.5.0)
+  - Added Markdown highlighting for angle-bracketed URI autolinks
+  - Added clickable HTTP and HTTPS links in the viewer, including links that wrap
+    across lines
+  - Added restoration of the last opened note when the application starts
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
   [v0.4.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v0.4.0)
   - Added shell completion generation for Bash, Fish, and Zsh
   - Added clickable relative, legacy `note://`, and wiki-style note links in the viewer
