@@ -216,7 +216,7 @@ QColor Utils::Schema::Settings::getForegroundColor(int index, QString schemaKey)
     }
 
     if (!color.isValid() && (index == LinkHoverPresetIndex)) {
-        color = QColor(0x40, 0x9d, 0xff);
+        color = QColor(0xf0, 0x70, 0x00);
     }
 
     if (!color.isValid() && (index >= 0)) {
