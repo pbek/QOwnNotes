@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Fixed the **boundary arrow navigation** in the note editor being dead on macOS,
+  where pressing the `Up` arrow on the first line should move the cursor to the
+  start of the line and `Down` on the last line to the end of it, because Qt
+  delivers arrow keys with `Qt::KeypadModifier` set on macOS and the modifier
+  is now masked off before comparing
+  (for [#3572](https://github.com/pbek/QOwnNotes/issues/3572), thank you, @VXNCXNX)
 - The **AppImage** no longer requires `libfuse2` to be installed separately because
   its FUSE userspace library is now included in the runtime
   (for [#3694](https://github.com/pbek/QOwnNotes/issues/3694))
