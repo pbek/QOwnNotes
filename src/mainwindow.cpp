@@ -2796,6 +2796,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // reset cloud service instance
     CloudService::instance(true);
 
+    // update the cloud dependent actions (cloud versions, trash and sharing),
+    // the cloud connection of the current note folder may have changed
+    updateCloudActionsEnabled();
+
     if (!isAppLaunch) {
         // the notes need to be reloaded and subfolder panel needs to be populated
         // if subfolders were activated for a note folder in the settings
@@ -3406,6 +3410,9 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     // update the share button
     updateShareButton();
 
+    // update the cloud dependent actions (cloud versions, trash and sharing)
+    updateCloudActionsEnabled();
+
     // call a script hook that a new note was opened
     ScriptingService::instance()->callHandleNoteOpenedHook(&currentNote);
 
@@ -3522,6 +3529,18 @@ void MainWindow::updateShareButton() {
     const QSignalBlocker blocker(ui->actionShare_note);
     Q_UNUSED(blocker)
     ui->actionShare_note->setChecked(currentNote.isShared());
+}
+
+/**
+ * Enables or disables the cloud dependent actions (cloud versions, trash and
+ * sharing) depending on whether the current note folder uses a cloud
+ * connection
+ */
+void MainWindow::updateCloudActionsEnabled() {
+    const bool enabled = NoteFolder::isCurrentCloudConnectionSet();
+    ui->actionShow_versions->setEnabled(enabled);
+    ui->actionShow_trash->setEnabled(enabled);
+    ui->actionShare_note->setEnabled(enabled);
 }
 
 /**
@@ -4779,8 +4798,9 @@ void MainWindow::on_action_Settings_triggered() {
 }
 
 void MainWindow::on_actionShow_versions_triggered() {
-    // check if we have selected a note
-    if (!currentNote.exists()) {
+    // Check if we have selected a note and if a cloud connection is set for
+    // the current note folder
+    if (!currentNote.exists() || !NoteFolder::isCurrentCloudConnectionSet()) {
         return;
     }
 
@@ -4796,6 +4816,12 @@ void MainWindow::on_actionShow_versions_triggered() {
 void MainWindow::enableShowVersionsButton() { ui->actionShow_versions->setDisabled(false); }
 
 void MainWindow::on_actionShow_trash_triggered() {
+    // If no cloud connection is set for the current note folder there are no
+    // trashed notes on a cloud server
+    if (!NoteFolder::isCurrentCloudConnectionSet()) {
+        return;
+    }
+
     ui->actionShow_trash->setDisabled(true);
     showStatusBarMessage(
         tr("Trashed notes are currently loaded from your Nextcloud / ownCloud server"),
@@ -6762,6 +6788,12 @@ void MainWindow::on_actionShare_note_triggered() {
     const QSignalBlocker blocker(ui->actionShare_note);
     Q_UNUSED(blocker)
     ui->actionShare_note->setChecked(currentNote.isShared());
+
+    // If no cloud connection is set for the current note folder notes can't
+    // be shared
+    if (!NoteFolder::isCurrentCloudConnectionSet()) {
+        return;
+    }
 
     ShareDialog *dialog = new ShareDialog(currentNote, this);
     dialog->exec();

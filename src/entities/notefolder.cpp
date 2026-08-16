@@ -13,6 +13,7 @@
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonDocument>
 
+#include "cloudconnection.h"
 #include "notesubfolder.h"
 #include "services/settingsservice.h"
 
@@ -31,6 +32,21 @@ int NoteFolder::getId() const { return this->id; }
 QString NoteFolder::getLocalPath() const { return this->localPath; }
 
 int NoteFolder::getCloudConnectionId() const { return this->cloudConnectionId; }
+
+/**
+ * Returns true if the note folder uses a cloud connection
+ * (and not the special "None" cloud connection)
+ */
+bool NoteFolder::isCloudConnectionSet() const {
+    return cloudConnectionId != CloudConnection::NoneCloudConnectionId;
+}
+
+/**
+ * Returns true if the current note folder uses a cloud connection
+ */
+bool NoteFolder::isCurrentCloudConnectionSet() {
+    return currentNoteFolder().isCloudConnectionSet();
+}
 
 QString NoteFolder::getName() const { return this->name; }
 

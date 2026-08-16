@@ -4,6 +4,10 @@
 
 class CloudConnection {
    public:
+    // Special cloud connection id for note folders that don't use a cloud
+    // connection at all (no cloud versioning, trash and sharing)
+    static const int NoneCloudConnectionId = 0;
+
     explicit CloudConnection();
 
     int getId();

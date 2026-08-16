@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.8.5
+
+- Note folders can now be set to use **no cloud connection** by selecting
+  **"None"** in the _Cloud connection_ combo box in the **Note folder settings**
+  (for [#3699](https://github.com/pbek/QOwnNotes/issues/3699))
+  - Cloud versioning, cloud trash and note sharing are then disabled for that
+    note folder, as if no cloud connection was configured at all
+
 ## 26.8.4
 
 - Fixed the **boundary arrow navigation** in the note editor being dead on macOS,

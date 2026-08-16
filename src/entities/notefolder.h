@@ -20,6 +20,8 @@ class NoteFolder {
     bool isFetched() const;
     QString getName() const;
     int getCloudConnectionId() const;
+    bool isCloudConnectionSet() const;
+    static bool isCurrentCloudConnectionSet();
     QString getLocalPath() const;
     QString getRemotePath() const;
     int getPriority() const;

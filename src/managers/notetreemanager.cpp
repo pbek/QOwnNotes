@@ -593,7 +593,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     if (!multiNoteMenuEntriesOnly) {
         openInExternalEditorAction = noteMenu.addAction(tr("Open note in external editor"));
         openNoteWindowAction = noteMenu.addAction(tr("Open note in different window"));
-        if (CloudService::isCloudSupportEnabled()) {
+        if (CloudService::isCloudSupportEnabled() && NoteFolder::isCurrentCloudConnectionSet()) {
             openNoteInNextcloudFilesAction = noteMenu.addAction(tr("Open note in Nextcloud Files"));
             openNoteInNextcloudNotesAction = noteMenu.addAction(tr("Open note in Nextcloud Notes"));
         };

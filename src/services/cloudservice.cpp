@@ -34,6 +34,7 @@
 #include "dialogs/trashdialog.h"
 #include "dialogs/versiondialog.h"
 #include "entities/calendaritem.h"
+#include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
 #include "libraries/versionnumber/versionnumber.h"
 #include "mainwindow.h"
@@ -68,7 +69,11 @@ void CloudService::resetNetworkManagerCookieJar() {
  */
 bool CloudService::isCloudSupportEnabled() {
     SettingsService settings;
-    return settings.value(QStringLiteral("ownCloud/supportEnabled")).toBool();
+
+    // The cloud support is also disabled if the current note folder doesn't
+    // use a cloud connection (the special "None" cloud connection)
+    return settings.value(QStringLiteral("ownCloud/supportEnabled")).toBool() &&
+           NoteFolder::isCurrentCloudConnectionSet();
 }
 
 /**
@@ -1163,6 +1168,12 @@ void CloudService::addCalendarAuthHeader(QNetworkRequest *r) {
  * Checks if cloud settings are set
  */
 bool CloudService::hasCloudSettings(bool withEnabledCheck, bool ignoreTableWarning) {
+    // If the current note folder doesn't use a cloud connection we don't have
+    // cloud settings for it
+    if (!NoteFolder::isCurrentCloudConnectionSet()) {
+        return false;
+    }
+
     if (withEnabledCheck && !isCloudSupportEnabled()) {
         return false;
     }

@@ -254,7 +254,11 @@
           </widget>
          </item>
          <item row="10" column="0" colspan="2">
-          <widget class="QComboBox" name="noteFolderCloudConnectionComboBox"/>
+          <widget class="QComboBox" name="noteFolderCloudConnectionComboBox">
+           <property name="toolTip">
+            <string>Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</string>
+           </property>
+          </widget>
          </item>
          <item row="11" column="0" colspan="2">
           <widget class="QLabel" name="noteFolderRemotePathLabel">

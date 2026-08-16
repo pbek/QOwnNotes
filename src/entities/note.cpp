@@ -764,7 +764,7 @@ void Note::setSharePermissions(unsigned int permissions) { this->_sharePermissio
  * @return the Nextcloud file link URL, empty if not available
  */
 QString Note::getNextcloudFileLink() const {
-    if (!CloudService::isCloudSupportEnabled()) {
+    if (!CloudService::isCloudSupportEnabled() || !CloudService::hasCloudSettings()) {
         return {};
     }
 
@@ -812,7 +812,7 @@ QString Note::getNextcloudFileLink() const {
  * @return the Nextcloud Notes link URL, empty if not available
  */
 QString Note::getNextcloudNotesLink() const {
-    if (!CloudService::isCloudSupportEnabled()) {
+    if (!CloudService::isCloudSupportEnabled() || !CloudService::hasCloudSettings()) {
         return {};
     }
 

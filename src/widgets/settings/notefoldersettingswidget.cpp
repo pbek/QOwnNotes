@@ -22,6 +22,7 @@
 
 #include "dialogs/filedialog.h"
 #include "dialogs/settingsdialog.h"
+#include "entities/cloudconnection.h"
 #include "entities/notesubfolder.h"
 #include "mainwindow.h"
 #include "services/cloudservice.h"
@@ -106,6 +107,18 @@ void NoteFolderSettingsWidget::populateCloudConnectionComboBox(
     Q_UNUSED(blocker)
 
     ui->noteFolderCloudConnectionComboBox->clear();
+
+    // Add an entry for note folders that don't use a cloud connection at all,
+    // cloud versioning, trash and sharing will then be disabled for them
+    ui->noteFolderCloudConnectionComboBox->addItem(tr("None"),
+                                                   CloudConnection::NoneCloudConnectionId);
+
+    // If the selected cloud connection is not in the list (e.g. it was
+    // removed) fall back to the "None" cloud connection
+    if (ui->noteFolderCloudConnectionComboBox->findData(selectedId) == -1) {
+        selectedId = CloudConnection::NoneCloudConnectionId;
+    }
+
     Q_FOREACH (CloudConnection cloudConnection, connections) {
         ui->noteFolderCloudConnectionComboBox->addItem(cloudConnection.getName(),
                                                        cloudConnection.getId());
@@ -138,6 +151,8 @@ void NoteFolderSettingsWidget::on_noteFolderListWidget_currentItemChanged(
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
         Q_UNUSED(blocker)
         ui->noteFolderActiveCheckBox->setChecked(_selectedNoteFolder.isCurrent());
+
+        updateCloudConnectionEnabledState();
     }
 
     updateSubfolderVisibility();
@@ -330,6 +345,12 @@ void NoteFolderSettingsWidget::on_noteFolderListWidget_itemChanged(QListWidgetIt
 }
 
 void NoteFolderSettingsWidget::on_noteFolderRemotePathButton_clicked() {
+    // If the "None" cloud connection is selected there is no cloud connection
+    // to fetch remote folders from
+    if (!_selectedNoteFolder.isCloudConnectionSet()) {
+        return;
+    }
+
     // Request the dialog to store settings so the Cloud connection is up-to-date
     Q_EMIT storeSettingsRequested();
 
@@ -424,14 +445,35 @@ void NoteFolderSettingsWidget::on_noteFolderRemotePathTreeWidget_currentItemChan
 
 void NoteFolderSettingsWidget::on_noteFolderCloudConnectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(index)
-    _selectedNoteFolder.setCloudConnectionId(
-        ui->noteFolderCloudConnectionComboBox->currentData().toInt());
+    const int cloudConnectionId = ui->noteFolderCloudConnectionComboBox->currentData().toInt();
+    _selectedNoteFolder.setCloudConnectionId(cloudConnectionId);
     _selectedNoteFolder.store();
+
+    updateCloudConnectionEnabledState();
+
+    // If the "None" cloud connection is selected there is no cloud connection
+    // to fetch remote folders from
+    if (cloudConnectionId == CloudConnection::NoneCloudConnectionId) {
+        setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
+        return;
+    }
 
     // If there already were fetched remote folders, fetch them again
     if (ui->noteFolderRemotePathTreeWidgetFrame->isVisible()) {
         on_noteFolderRemotePathButton_clicked();
     }
+}
+
+/**
+ * Enables or disables the remote path settings depending on whether the
+ * selected cloud connection is the special "None" cloud connection
+ */
+void NoteFolderSettingsWidget::updateCloudConnectionEnabledState() {
+    const bool cloudConnectionSet = _selectedNoteFolder.isCloudConnectionSet();
+
+    ui->noteFolderRemotePathLabel->setEnabled(cloudConnectionSet);
+    ui->noteFolderRemotePathLineEdit->setEnabled(cloudConnectionSet);
+    ui->noteFolderRemotePathButton->setEnabled(cloudConnectionSet);
 }
 
 void NoteFolderSettingsWidget::on_useCloudPathButton_clicked() {
