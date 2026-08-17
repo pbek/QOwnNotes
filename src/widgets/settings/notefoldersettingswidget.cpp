@@ -113,15 +113,15 @@ void NoteFolderSettingsWidget::populateCloudConnectionComboBox(
     ui->noteFolderCloudConnectionComboBox->addItem(tr("None"),
                                                    CloudConnection::NoneCloudConnectionId);
 
+    Q_FOREACH (CloudConnection cloudConnection, connections) {
+        ui->noteFolderCloudConnectionComboBox->addItem(cloudConnection.getName(),
+                                                       cloudConnection.getId());
+    }
+
     // If the selected cloud connection is not in the list (e.g. it was
     // removed) fall back to the "None" cloud connection
     if (ui->noteFolderCloudConnectionComboBox->findData(selectedId) == -1) {
         selectedId = CloudConnection::NoneCloudConnectionId;
-    }
-
-    Q_FOREACH (CloudConnection cloudConnection, connections) {
-        ui->noteFolderCloudConnectionComboBox->addItem(cloudConnection.getName(),
-                                                       cloudConnection.getId());
     }
 
     Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderCloudConnectionComboBox, selectedId);

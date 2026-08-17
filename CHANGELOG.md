@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.8.6
+
+- Fixed the **Cloud connection** combo box in the **Note folder settings** initially
+  showing **"None"** instead of the selected cloud connection
+  (for [#3699](https://github.com/pbek/QOwnNotes/issues/3699))
+
 ## 26.8.5
 
 - Fixed the detected file suffix being ignored when saving inserted media or attachments
