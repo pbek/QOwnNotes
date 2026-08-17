@@ -2,6 +2,8 @@
 
 ## 26.8.5
 
+- Fixed the detected file suffix being ignored when saving inserted media or attachments
+  (for [#3701](https://github.com/pbek/QOwnNotes/issues/3701), thank you, @VXNCXNX)
 - Note folders can now be set to use **no cloud connection** by selecting
   **"None"** in the _Cloud connection_ combo box in the **Note folder settings**
   (for [#3699](https://github.com/pbek/QOwnNotes/issues/3699))
