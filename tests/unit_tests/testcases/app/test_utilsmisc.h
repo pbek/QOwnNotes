@@ -40,6 +40,7 @@ class TestUtilsMisc : public QObject {
     void testDetectFileFormatSql();
     void testDetectFileFormatJavaScript();
     void testDetectFileFormatEdgeCases();
+    void testFindAvailableFileNameOverrideSuffix();
 };
 
 #endif    // TESTUTILSMISC_H

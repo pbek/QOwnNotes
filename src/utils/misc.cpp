@@ -2739,7 +2739,9 @@ QString Utils::Misc::findAvailableFileName(const QString &filePath, const QStrin
     const QFileInfo fileInfo(filePath);
     QString baseName = fileInfo.baseName();
     baseName.truncate(200);
-    const QString newSuffix = fileInfo.suffix();
+    // The path can be a temporary file without a correct suffix, so the caller may pass the
+    // suffix it detected from the mime type
+    const QString newSuffix = overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix;
     QString newBaseName = baseName;
     QString newFileName = newBaseName;
 
