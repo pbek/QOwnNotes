@@ -1,5 +1,7 @@
 #include "test_utilsmisc.h"
 
+#include <QFile>
+#include <QTemporaryDir>
 #include <QTest>
 
 #include "utils/listutils.h"
@@ -636,4 +638,30 @@ void TestUtilsMisc::testDetectFileFormatEdgeCases() {
 xdebug.remote_enable=1
 xdebug.remote_autostart=1)";
     QCOMPARE(detectFileFormat(ambiguousText), QString("ini"));
+}
+
+void TestUtilsMisc::testFindAvailableFileNameOverrideSuffix() {
+    QTemporaryDir dir;
+    QVERIFY(dir.isValid());
+
+    // The override suffix must be used when the file path has no suffix at all,
+    // like a temporary file created from a QTemporaryFile template
+    QCOMPARE(findAvailableFileName(QStringLiteral("qownnotes-media-AbCdEf"), dir.path(),
+                                   QStringLiteral("png")),
+             QStringLiteral("qownnotes-media-AbCdEf.png"));
+
+    // The override suffix must also win over the suffix of the file path, because it is
+    // determined from the mime type of the file
+    QCOMPARE(
+        findAvailableFileName(QStringLiteral("screenshot.jpeg"), dir.path(), QStringLiteral("jpg")),
+        QStringLiteral("screenshot.jpg"));
+
+    // Without an override suffix the suffix of the file path is still used
+    QCOMPARE(findAvailableFileName(QStringLiteral("screenshot.jpeg"), dir.path()),
+             QStringLiteral("screenshot.jpeg"));
+
+    // A name that is already taken gets a counter appended, keeping the override suffix
+    QVERIFY(QFile(dir.filePath(QStringLiteral("image.png"))).open(QIODevice::WriteOnly));
+    QCOMPARE(findAvailableFileName(QStringLiteral("image"), dir.path(), QStringLiteral("png")),
+             QStringLiteral("image-1.png"));
 }
