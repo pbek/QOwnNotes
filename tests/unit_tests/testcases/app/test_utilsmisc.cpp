@@ -652,9 +652,9 @@ void TestUtilsMisc::testFindAvailableFileNameOverrideSuffix() {
 
     // The override suffix must also win over the suffix of the file path, because it is
     // determined from the mime type of the file
-    QCOMPARE(findAvailableFileName(QStringLiteral("screenshot.jpeg"), dir.path(),
-                                   QStringLiteral("jpg")),
-             QStringLiteral("screenshot.jpg"));
+    QCOMPARE(
+        findAvailableFileName(QStringLiteral("screenshot.jpeg"), dir.path(), QStringLiteral("jpg")),
+        QStringLiteral("screenshot.jpg"));
 
     // Without an override suffix the suffix of the file path is still used
     QCOMPARE(findAvailableFileName(QStringLiteral("screenshot.jpeg"), dir.path()),
