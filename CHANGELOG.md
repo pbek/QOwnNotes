@@ -7,6 +7,13 @@
   (for [#3699](https://github.com/pbek/QOwnNotes/issues/3699))
   - Cloud versioning, cloud trash and note sharing are then disabled for that
     note folder, as if no cloud connection was configured at all
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v0.6.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v0.6.0)
+  - Added a `--session` option for using a separate QOwnNotes settings and database context
+  - Added <kbd>Ctrl</kbd> + <kbd>Space</kbd> support for opening links and toggling checkboxes
+    at the cursor in the viewer and editor
+  - Viewer cursor positions and selections are now preserved when entering and leaving edit mode
+  - The project was relicensed under GPL-3.0-only
 
 ## 26.8.4
 
