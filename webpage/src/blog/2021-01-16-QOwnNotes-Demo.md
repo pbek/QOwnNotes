@@ -10,7 +10,6 @@ order: 20210116000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-You can now try out **QOwnNotes** in your web-browser without installing it!
-Visit the [QOwnNotes Demo](../getting-started/demo.md) page and follow the instructions.
+This post announced a browser-based **QOwnNotes** demo that is no longer available.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

@@ -39,7 +39,6 @@ const contactNavItems = [
 const gettingStartedNavItems = [
   "getting-started/overview",
   "getting-started/concept",
-  "getting-started/demo",
   "getting-started/markdown",
   "getting-started/importing-notes",
   "getting-started/cli-parameters",
