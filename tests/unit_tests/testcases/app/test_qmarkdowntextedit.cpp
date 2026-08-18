@@ -100,6 +100,19 @@ void TestQMarkdownTextEdit::testMultilineInlineHighlighting() {
     editor.highlighter()->rehighlight();
     QVERIFY(formatAt(editor.document()->findBlockByNumber(0), 2).fontUnderline());
     QVERIFY(formatAt(editor.document()->findBlockByNumber(1), 0).fontUnderline());
+
+    editor.setPlainText(QStringLiteral("#1 | ABC [*1]\n#2 | XYZ [*2]\n#3 | XXX [*3]"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(0), 11).fontItalic());
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(2), 0).fontItalic());
+
+    editor.setPlainText(QStringLiteral("!!_1) Text\ncontinued\n\n__Test__Broken\ncontinued"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(0), 3).fontItalic());
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(3), 8).fontWeight() != int(QFont::Bold));
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(4), 0).fontWeight() != int(QFont::Bold));
 }
 
 void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {

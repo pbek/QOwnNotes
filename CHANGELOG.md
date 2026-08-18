@@ -2,6 +2,9 @@
 
 ## 26.8.6
 
+- Fixed unmatched Markdown emphasis and strikeout markers incorrectly applying
+  formatting to following lines in the note editor
+  (for [#3702](https://github.com/pbek/QOwnNotes/issues/3702))
 - Fixed the **Cloud connection** combo box in the **Note folder settings** initially
   showing **"None"** instead of the selected cloud connection
   (for [#3699](https://github.com/pbek/QOwnNotes/issues/3699))
