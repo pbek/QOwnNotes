@@ -204,6 +204,18 @@ void TestNotes::testNoteToMarkdownHtml() {
     QVERIFY(html.contains(expectedBody));
 }
 
+void TestNotes::testMalformedUnderlineToMarkdownHtml() {
+    Note note;
+    note.setNoteText(QStringLiteral(
+        "__Test__Broken - because of a missing space after the closing \"__\" !!!\n\n"
+        "__foo_bar__"));
+
+    const QString html = note.toMarkdownHtml(QString(), 980, true);
+
+    QVERIFY2(html.contains(QStringLiteral("<p>__Test__Broken")), qPrintable(html));
+    QVERIFY2(html.contains(QStringLiteral("<u><u>foo_bar</u></u>")), qPrintable(html));
+}
+
 void TestNotes::testMarkdownImageDimensionsToHtml() {
     Note note;
     note.setNoteText(

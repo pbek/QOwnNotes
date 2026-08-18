@@ -2,8 +2,9 @@
 
 ## 26.8.6
 
-- Fixed unmatched Markdown emphasis and strikeout markers incorrectly applying
-  formatting to following lines in the note editor
+- Fixed unmatched or malformed Markdown emphasis, underline, and strikeout markers
+  incorrectly applying formatting to following text or lines in the note editor and preview
+  (valid formatting containing internal underscores, such as `__foo_bar__`, still works)
   (for [#3702](https://github.com/pbek/QOwnNotes/issues/3702))
 - Fixed the **Cloud connection** combo box in the **Note folder settings** initially
   showing **"None"** instead of the selected cloud connection

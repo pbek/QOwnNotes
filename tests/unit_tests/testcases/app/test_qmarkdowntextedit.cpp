@@ -107,12 +107,20 @@ void TestQMarkdownTextEdit::testMultilineInlineHighlighting() {
     QVERIFY(!formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
     QVERIFY(!formatAt(editor.document()->findBlockByNumber(2), 0).fontItalic());
 
-    editor.setPlainText(QStringLiteral("!!_1) Text\ncontinued\n\n__Test__Broken\ncontinued"));
+    editor.setPlainText(
+        QStringLiteral("!!_1) Text\ncontinued\n\n__Test__Broken - because of a missing space after "
+                       "the closing \"__\" !!!\ncontinued"));
     editor.highlighter()->rehighlight();
     QVERIFY(!formatAt(editor.document()->findBlockByNumber(0), 3).fontItalic());
     QVERIFY(!formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
-    QVERIFY(formatAt(editor.document()->findBlockByNumber(3), 8).fontWeight() != int(QFont::Bold));
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(3), 2).fontUnderline());
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(3), 8).fontUnderline());
     QVERIFY(formatAt(editor.document()->findBlockByNumber(4), 0).fontWeight() != int(QFont::Bold));
+
+    editor.setPlainText(QStringLiteral("__foo_bar__"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(formatAt(editor.document()->firstBlock(), 2).fontUnderline());
+    QVERIFY(formatAt(editor.document()->firstBlock(), 6).fontUnderline());
 }
 
 void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
