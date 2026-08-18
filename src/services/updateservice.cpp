@@ -47,7 +47,7 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
 
     // check if we want to fake the version number to trigger an update
     if (settings.value(QStringLiteral("Debug/fakeOldVersionNumber")).toBool()) {
-        version = QLatin1String("20.10.0");
+        version = QLatin1String("26.8.0");
         isDebug = true;
     }
 
