@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.8.7
+
+- The pointer cursor now appears over the entire inline Markdown link and
+  <kbd>Ctrl</kbd> + click opens it from both its label and URL, while the URL part
+  remains highlighted on hover
+  (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
+
 ## 26.8.6
 
 - Fixed unmatched or malformed Markdown emphasis, underline, and strikeout markers

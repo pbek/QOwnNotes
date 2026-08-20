@@ -232,7 +232,8 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void requestMarkdownLspFormatting(bool useSelection);
     void paintMarkdownImagePreviews();
     void refreshFoldingSidebar();
-    bool hoveredMarkdownLink(const QPoint &position, QTextCursor *linkCursor);
+    bool hoveredMarkdownLink(const QPoint &position, QTextCursor *linkCursor,
+                             bool includeLinkLabel = false);
     void updateHoveredLink(const QPoint &position, bool enabled);
     void clearHoveredLink();
     static bool isHeadingBlock(const QTextBlock &block, int *level = nullptr);

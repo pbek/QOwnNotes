@@ -634,8 +634,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     refreshFoldingSidebar();
 }
 
-bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position,
-                                                    QTextCursor *linkCursor) {
+bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position, QTextCursor *linkCursor,
+                                                    bool includeLinkLabel) {
     QTextCursor cursor = cursorForPosition(position);
     const QTextBlock block = cursor.block();
     const QString text = block.text();
@@ -646,6 +646,8 @@ bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position,
         const QString &parsedText = it.key();
         QString hoverText = parsedText;
         int hoverOffset = 0;
+        QString hitText = parsedText;
+        int hitOffset = 0;
 
         const int destinationSeparator = parsedText.lastIndexOf(QStringLiteral("]("));
         const int destinationStart = destinationSeparator >= 0
@@ -654,12 +656,28 @@ bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position,
         if (destinationStart >= 0) {
             hoverText = it.value();
             hoverOffset = destinationStart;
+            if (includeLinkLabel) {
+                // Exclude a preceding checkbox that the shared parser may include.
+                const int labelStart =
+                    parsedText.lastIndexOf(QLatin1Char('['), destinationSeparator);
+                if (labelStart > 0) {
+                    hitText = parsedText.mid(labelStart);
+                    hitOffset = labelStart;
+                }
+            } else {
+                hitText = hoverText;
+                hitOffset = hoverOffset;
+            }
         } else if (parsedText.startsWith(QLatin1Char('<')) &&
                    parsedText.endsWith(QLatin1Char('>'))) {
             const int urlStart = parsedText.indexOf(it.value(), 1);
             if (urlStart >= 0) {
                 hoverText = it.value();
                 hoverOffset = urlStart;
+                if (!includeLinkLabel) {
+                    hitText = hoverText;
+                    hitOffset = hoverOffset;
+                }
             }
         } else {
             // The shared parser can include a preceding checkbox in reference
@@ -670,6 +688,8 @@ bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position,
                 if (labelStart > 0) {
                     hoverText = parsedText.mid(labelStart);
                     hoverOffset = labelStart;
+                    hitText = hoverText;
+                    hitOffset = hoverOffset;
                 }
             }
         }
@@ -678,7 +698,9 @@ bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position,
         while (parsedStart >= 0) {
             const int hoverStart = parsedStart + hoverOffset;
             const int hoverEnd = hoverStart + hoverText.size();
-            if (positionInBlock >= hoverStart && positionInBlock < hoverEnd) {
+            const int hitStart = parsedStart + hitOffset;
+            const int hitEnd = hitStart + hitText.size();
+            if (positionInBlock >= hitStart && positionInBlock < hitEnd) {
                 if (linkCursor != nullptr) {
                     linkCursor->setPosition(block.position() + hoverStart);
                     linkCursor->setPosition(block.position() + hoverEnd, QTextCursor::KeepAnchor);
@@ -718,7 +740,7 @@ void QOwnNotesMarkdownTextEdit::mouseMoveEvent(QMouseEvent *event) {
 
 void QOwnNotesMarkdownTextEdit::updateHoveredLink(const QPoint &position, bool enabled) {
     QTextCursor linkCursor(document());
-    const bool isLink = enabled && hoveredMarkdownLink(position, &linkCursor);
+    const bool isLink = enabled && hoveredMarkdownLink(position, &linkCursor, true);
     viewport()->setCursor(isLink ? Qt::PointingHandCursor : Qt::IBeamCursor);
 
     const int start = isLink ? linkCursor.selectionStart() : -1;
@@ -3332,7 +3354,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
         auto *mouseEvent = static_cast<QMouseEvent *>(event);
         if (mouseEvent->button() == Qt::LeftButton &&
             mouseEvent->modifiers().testFlag(Qt::ControlModifier) &&
-            !hoveredMarkdownLink(mouseEvent->pos(), nullptr)) {
+            !hoveredMarkdownLink(mouseEvent->pos(), nullptr, true)) {
             // Do not let the base parser activate a link from an overly broad
             // Markdown match, such as the checkbox preceding an inline link.
             return QPlainTextEdit::eventFilter(obj, event);
