@@ -1,1 +1,1 @@
-#define VERSION "26.8.6"
+#define VERSION "26.8.7"
