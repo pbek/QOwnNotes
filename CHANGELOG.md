@@ -6,6 +6,12 @@
   <kbd>Ctrl</kbd> + click opens it from both its label and URL, while the URL part
   remains highlighted on hover
   (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
+- There was a new release of the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi),
+  [v26.8.0](https://github.com/pbek/qownnotesapi/releases/tag/v26.8.0)
+  - Added and tested support for Nextcloud 35
+    (for [#59](https://github.com/pbek/qownnotesapi/issues/59))
+  - Dropped support for unsupported Nextcloud versions older than 32
+  - Updated dependencies
 
 ## 26.8.6
 
