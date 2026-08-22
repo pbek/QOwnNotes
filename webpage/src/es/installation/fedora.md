@@ -91,19 +91,19 @@ La explicación detallada del comando se encuentra disponible en GitHub en un [t
 Una vez que la clave expirada haya sido eliminada, debe _importar_ nuevamente la clave **actual** de forma manual, tal y como se describe al inicio de estas instrucciones de instalación.
 
 ::: tip
-If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+Si QOwnNotes registra el mensaje `Could not write secret to keychain`, instale los paquetes de Secret Service que falten y reinicie su sesión de escritorio.
 
-For GNOME and other Secret Service based desktops:
+Para GNOME y otros ordenadores de escritorio basados en Servicio Secreto:
 
 ```bash
 sudo dnf install gnome-keyring libsecret seahorse
 ```
 
-For KDE Plasma:
+Para KDE Plasma:
 
 ```bash
 sudo dnf install kwalletmanager kf6-kwallet
 ```
 
-QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+QOwnNotes recurrirá al cifrado heredado si el llavero del escritorio no está disponible.
 :::

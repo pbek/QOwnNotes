@@ -18,11 +18,9 @@ Luego puede cambiar los permisos de ejecución en el archivo:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-::: tip
-¡AppImages necesita `libfuse2` para ejecutarse! Por ejemplo, en Ubuntu puede instalar la biblioteca con `sudo apt install libfuse2`.
-:::
-
 Posteriormente, debería ser capaz de ejecutar la AppImage para usar QOwnNotes.
+
+Current QOwnNotes AppImages include the required FUSE userspace library and do not require `libfuse2` to be installed separately. The system still needs kernel FUSE support. Older QOwnNotes AppImages may still require `libfuse2`.
 
 ::: warning
 Si desea utilizar el **actualizador automático**, asegúrese de colocar su AppImage en un lugar donde su cuenta de usuario tenga acceso de escritura, como en algún lugar de su directorio de inicio.
@@ -53,11 +51,11 @@ Esto facilita llevar QOwnNotes junto con todas sus notas en una unidad USB o cua
 :::
 
 ::: tip
-If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages on your Linux distribution and restart your desktop session.
+Si QOwnNotes registra el mensaje `Could not write secret to keychain`, instale los paquetes de Secret Service que falten en su distribución de Linux y reinicie su sesión de escritorio.
 
-For GNOME and other Secret Service based desktops, install `gnome-keyring`, `libsecret` and `seahorse`.
+Para escritorios basados en GNOME y otros sistemas de Servicio Secreto, instale `gnome-keyring`, `libsecret` y `seahorse`.
 
-For KDE Plasma, install KWallet support such as `kwalletmanager`.
+Para KDE Plasma, instale soporte para KWallet como `kwalletmanager`.
 
-QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+QOwnNotes recurrirá al cifrado heredado si el llavero del escritorio no está disponible.
 :::

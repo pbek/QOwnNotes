@@ -18,11 +18,9 @@ Ezután megváltoztathatja a fájl végrehajtási engedélyeit:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-::: tip
-AppImages need `libfuse2` to run! For example under Ubuntu you can install the library with `sudo apt install libfuse2`.
-:::
-
 Afterward you should be able to execute the AppImage to run QOwnNotes.
+
+Current QOwnNotes AppImages include the required FUSE userspace library and do not require `libfuse2` to be installed separately. The system still needs kernel FUSE support. Older QOwnNotes AppImages may still require `libfuse2`.
 
 ::: warning
 Ha az **automatikus frissítőt** szeretné használni, feltétlenül helyezze el az AppImage -ot olyan helyre, ahová felhasználói fiókja írási jogosultsággal rendelkezik, például valahol a saját könyvtárában.

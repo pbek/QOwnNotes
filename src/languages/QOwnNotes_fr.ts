@@ -2434,15 +2434,15 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Keychain</source>
-<translation type="unfinished">Keychain</translation>
+<translation>Porte-clés</translation>
 </message>
 <message>
 <source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
-<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+<translation>Temps maximal d’attente du porte-clés du système avant de repasser à l’ancienne méthode de chiffrement SimpleCrypt</translation>
 </message>
 <message>
 <source>Keychain access timeout:</source>
-<translation type="unfinished">Keychain access timeout:</translation>
+<translation>Temps maximal d’attente d’accès au porte-clés :</translation>
 </message>
 <message>
 <source>Update dialog</source>
@@ -2455,18 +2455,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Search engine</source>
 <translation>Moteur de recherche</translation>
-</message>
-<message>
-<source>Message boxes</source>
-<translation>Boîtes de dialogue</translation>
-</message>
-<message>
-<source>Forget all "Don't ask again" choices in message boxes</source>
-<translation>Oublier tous les choix « Ne pas demander à nouveau » dans les boîtes de dialogue</translation>
-</message>
-<message>
-<source>Reset message boxes</source>
-<translation>Réinitialiser les boîtes de dialogue</translation>
 </message>
 <message>
 <source>Note file extensions</source>
@@ -2495,6 +2483,22 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Path to external editor:</source>
 <translation>Chemin vers l'éditeur externe :</translation>
+</message>
+<message>
+<source>Dialog preferences</source>
+<translation>Préférences des boîtes de dialogue</translation>
+</message>
+<message>
+<source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
+<translation>QOwnNotes retient les réponses sélectionnées avec « Ne plus demander » et les avertissements cachés avec « Ne plus afficher ». Réinitialisez les préférences pour afficher ces boîtes de dialogue à nouveau.</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" and "Don't show again" choices</source>
+<translation>Oublier tous les choix « Ne plus demander » et « Ne plus afficher »</translation>
+</message>
+<message>
+<source>Reset dialog preferences</source>
+<translation>Réinitialiser les préférences de boîtes de dialogue</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2613,8 +2617,8 @@ Vos notes resteront intactes !</translation>
 <translation>Voulez-vous vraiment supprimer l'extension de fichier de note &lt;strong&gt;%1&lt;/strong&gt; ? Vous ne verrez plus les fichiers avec cette extension dans la liste de notes !</translation>
 </message>
 <message>
-<source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>Voulez-vous vraiment réinitialiser le statut d’affichage de toutes les boîtes de dialogue ?</translation>
+<source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
+<translation>Voulez-vous vraiment oublier tous les choix enregistrés dans les boîtes de dialogue et afficher à nouveau toutes les boîtes de dialogue supprimées ?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -7425,7 +7429,7 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 </message>
 <message>
 <source>When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</source>
-<translation>Lorsque activé, un émoji en première position dans le titre d’une note sera utilisé comme icône dans la liste de notes au lieu de |’icône de document standard</translation>
+<translation>Lorsqu’activé, un émoji en première position dans le titre d’une note sera utilisé comme icône dans la liste de notes au lieu de |’icône de document standard</translation>
 </message>
 <message>
 <source>Show leading emoji from note title as icon in the note list</source>
@@ -8501,6 +8505,10 @@ La mise à jour de l’interface dure un petit instant.</translation>
 <message>
 <source>Replace:</source>
 <translation>Remplacer :</translation>
+</message>
+<message>
+<source>Search in the selection only</source>
+<translation>Rechercher uniquement dans la sélection</translation>
 </message>
 <message>
 <source>Plain text</source>

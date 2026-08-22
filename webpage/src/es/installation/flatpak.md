@@ -16,11 +16,11 @@ Por favor abra incidencias con el paquete de Flatpak en la página de [incidenci
 :::
 
 ::: tip
-If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages on the host system and restart your desktop session.
+Si QOwnNotes registra el mensaje `Could not write secret to keychain`, instale los paquetes de Secret Service que falten en el sistema anfitrión y reinicie su sesión de escritorio.
 
-For GNOME and other Secret Service based desktops, install `gnome-keyring`, `libsecret` and `seahorse`.
+Para escritorios basados en GNOME y otros sistemas de Servicio Secreto, instale `gnome-keyring`, `libsecret` y `seahorse`.
 
-For KDE Plasma, install KWallet support such as `kwalletmanager`.
+Para KDE Plasma, instale soporte para KWallet como `kwalletmanager`.
 
-QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+QOwnNotes recurrirá al cifrado heredado si el llavero del escritorio no está disponible.
 :::

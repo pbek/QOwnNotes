@@ -2445,18 +2445,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>搜索引擎</translation>
 </message>
 <message>
-<source>Message boxes</source>
-<translation>消息框</translation>
-</message>
-<message>
-<source>Forget all "Don't ask again" choices in message boxes</source>
-<translation>忘记消息框中所有"不再询问"的选择</translation>
-</message>
-<message>
-<source>Reset message boxes</source>
-<translation>重置消息框</translation>
-</message>
-<message>
 <source>Note file extensions</source>
 <translation>笔记文件扩展名</translation>
 </message>
@@ -2483,6 +2471,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Path to external editor:</source>
 <translation>外部编辑器路径：</translation>
+</message>
+<message>
+<source>Dialog preferences</source>
+<translation type="unfinished">Dialog preferences</translation>
+</message>
+<message>
+<source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
+<translation type="unfinished">QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" and "Don't show again" choices</source>
+<translation type="unfinished">Forget all "Don't ask again" and "Don't show again" choices</translation>
+</message>
+<message>
+<source>Reset dialog preferences</source>
+<translation type="unfinished">Reset dialog preferences</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2601,8 +2605,8 @@ Your notes will stay intact!</source>
 <translation>您确定要移除笔记文件扩展名 &lt;strong&gt;%1&lt;/strong&gt; 吗？您将不再在笔记列表中看到具有此扩展名的文件！</translation>
 </message>
 <message>
-<source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>您确定要重置所有消息框的覆盖设置吗？</translation>
+<source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
+<translation type="unfinished">Do you really want to forget all saved dialog choices and show suppressed dialogs again?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -8419,6 +8423,10 @@ Updating the interface takes a short while.</translation>
 <message>
 <source>Replace:</source>
 <translation>替换：</translation>
+</message>
+<message>
+<source>Search in the selection only</source>
+<translation type="unfinished">Search in the selection only</translation>
 </message>
 <message>
 <source>Plain text</source>

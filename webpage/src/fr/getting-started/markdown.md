@@ -24,7 +24,7 @@ Utilisez des titres ATX pour structurer vos textes.
 Le **panneau de navigation** montre la structure de vos titres de sections.
 :::
 
-Alternativement, pour H1 et H2, vous pouvez aussi utiliser les titres Setex :
+Alternativement, pour H1 et H2, vous pouvez aussi utiliser les titres Setext :
 
 ```markdown
 Variante H1
@@ -232,13 +232,12 @@ Il est possible d’ajouter de la coloration syntaxique dans les blocs de code a
 ```bash
 # Je suis un commentaire
 cd Notes
-```
 ````
 ````
 
 Pour l’instant, les langages supportés (et les identifiants de blocs de codes) sont les suivants :
 
-- scripts BASh, `bash`
+- BASh scripting, `bash`
 - C, `c`
 - C++, `cpp`
 - C++, `cxx`
@@ -246,7 +245,10 @@ Pour l’instant, les langages supportés (et les identifiants de blocs de codes
 - C#, `c#`
 - CMake, `cmake`
 - C#, `csharp`
+- Console, `console`
 - CSS, `css`
+- Forth, `forth`
+- GDScript, `gdscript`
 - Go, `go`
 - HTML, `html`
 - INI, `ini`
@@ -255,13 +257,19 @@ Pour l’instant, les langages supportés (et les identifiants de blocs de codes
 - JavaScript, `js`
 - JSON, `json`
 - Makefile, `make`
+- Nix, `nix`
 - PHP, `php`
 - Python, `py`
 - Python, `python`
 - QML, `qml`
+- R, `r`
 - Rust, `rust`
-- scripts Shell, `sh`
+- Shell scripting, `sh`
+- Shell session, `shell-session`
 - SQL, `sql`
+- SystemVerilog, `systemverilog`
+- TaggerScript, `taggerscript`
+- TOML, `toml`
 - TypeScript, `ts`
 - TypeScript, `typescript`
 - V, `v`
@@ -272,7 +280,7 @@ Pour l’instant, les langages supportés (et les identifiants de blocs de codes
 
 ## Tableaux
 
-Les tableaux ne font pas partie de la spécification de base de Markdown, mais QOwnNotes les supporte.
+Les tableaux ne font pas partie de la spécification de base de Markdown, mais le mode de prévisualisation de QOwnNotes les prend en charge.
 
 ```markdown
 Les deux-points peuvent être utilisés pour aligner les colonnes.

@@ -2452,18 +2452,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Mecanismo de busca</translation>
 </message>
 <message>
-<source>Message boxes</source>
-<translation>Caixas de mensagem</translation>
-</message>
-<message>
-<source>Forget all "Don't ask again" choices in message boxes</source>
-<translation>Esquecer todas as escolhas "Não perguntar novamente" nas caixas de mensagem</translation>
-</message>
-<message>
-<source>Reset message boxes</source>
-<translation>Redefinir caixas de mensagem</translation>
-</message>
-<message>
 <source>Note file extensions</source>
 <translation>Extensões de arquivo de nota</translation>
 </message>
@@ -2490,6 +2478,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Path to external editor:</source>
 <translation>Caminho para o editor externo:</translation>
+</message>
+<message>
+<source>Dialog preferences</source>
+<translation type="unfinished">Dialog preferences</translation>
+</message>
+<message>
+<source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
+<translation type="unfinished">QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" and "Don't show again" choices</source>
+<translation type="unfinished">Forget all "Don't ask again" and "Don't show again" choices</translation>
+</message>
+<message>
+<source>Reset dialog preferences</source>
+<translation type="unfinished">Reset dialog preferences</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2608,8 +2612,8 @@ Suas notas permanecerão intactas!</translation>
 <translation>Você realmente deseja remover a extensão de arquivo de nota &lt;strong&gt;%1&lt;/strong&gt;? Você não verá mais arquivos com esta extensão na lista de notas!</translation>
 </message>
 <message>
-<source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>Você realmente deseja redefinir as substituições de todas as caixas de mensagem?</translation>
+<source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
+<translation type="unfinished">Do you really want to forget all saved dialog choices and show suppressed dialogs again?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -8494,6 +8498,10 @@ Updating the interface takes a short while.</translation>
 <message>
 <source>Replace:</source>
 <translation>Substituir:</translation>
+</message>
+<message>
+<source>Search in the selection only</source>
+<translation type="unfinished">Search in the selection only</translation>
 </message>
 <message>
 <source>Plain text</source>

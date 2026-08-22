@@ -17,6 +17,7 @@ graph TB
         sync("Nextcloud Sync")-->md
         qon-comp("Extension de navigateur")-->qon
         qc("Gestionnaire de snippets en ligne de commande")-->qon
+        tui("TUI QOwnNotes")-->md
         homepage("Tableau de bord Homepage")-->qon
     end
     subgraph Votre serveur Nextcloud
@@ -26,7 +27,7 @@ graph TB
     end
 
     nc-notes-mob("Application mobile Nextcloud Notes")-->nc-notes-app
-    qon-web-app("Application Web QOwnNotes")-->qon
+    qon-web-app("Application web QOwnNotes")-->qon
     qon-->qon-api
     qon-->ncs
     qon-->nc-deck-app
@@ -37,21 +38,22 @@ graph TB
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/getting-started/concept.html#qownnotes" "Application de bureau QOwnNotes pour gérer vos notes sur votre ordinateur"
-    click md "/getting-started/concept.html#markdown-note-files" "Markdown, médias et picès jointes dans votre dossier de notes"
-    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "Extension de navigateur QOwnNotes pour gérer vos signets dans des fichiers Markdown et qui sert aussi de clipper web"
-    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "Gestionnaire de snippets en ligne de commande QOwnNotes"
-    click homepage "/getting-started/concept.html#homepage-dashboard" "Tableau de bord Homepage utilisant les suggestions de signets QOwnNotes"
-    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Client de bureau de synchronisation Nextcloud pour synchroniser vos notes avec votre serveur"
-    click ncs "/getting-started/concept.html#nextcloud-server" "Serveur Nextcloud pour stocker vos notes et vos fichiers"
-    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "Application Nextcloud QOwnNotesAPI pour accéder votre corbeille du serveur et vos versions de notes"
-    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Application serveur Nextcloud Notes pour gérer vos notes via une interface web"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Application mobile Nextcloud Notes pour gérer vos notes sur votre téléphone portable"
-    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Application serveur Nextcloud Deck pour gérer vos rappels et listes de tâches via une interface web"
-    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "Application Web QOwnNotes pour envoyer des photos depuis votre téléphone portable"
-    click lt "/editor/languagetool.html" "Serveur optionnel LanguageTool pour des vérifications de grammaire et de style"
-    click harper "/editor/harper.html" "Service optionnel Harper pour des vérifications hors-ligne de grammaire et de style"
-    click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
+    click qon "/fr/getting-started/concept.html#qownnotes" "L’application de bureau QOwnNotes Desktop pour gérer vos notes sur votre ordinateur"
+    click md "/fr/getting-started/concept.html#fichiers-de-notes-en-markdown" "Markdown, média et pièces jointes dans votre dossier de notes"
+    click qon-comp "/fr/getting-started/concept.html#extension-de-navigateur-qownnotes" "Extension de navigateur QOwnNotes pour gérer les signets dans des fichiers Markdown et pour servir de web clipper"
+    click qc "/fr/getting-started/concept.html#gestionnaire-de-snippets-en-ligne-de-commande-de-qownnotes" "Gestionnaire de snippets en ligne de commande de QOwnNotes"
+    click tui "/fr/getting-started/concept.html#tui-qownnotes" "La TUI QOwnNotes, pour parcourir et modifier les notes de vos dossiers de notes dans le terminal"
+    click homepage "/fr/getting-started/concept.html#tableau-de-bord-homepage" "Tableau de bord Homepage utilisant les suggestions de signets de QOwnNotes"
+    click sync "/fr/getting-started/concept.html#client-de-synchronisation-nextcloud-pour-ordinateur-de-bureau" "Client de bureau de synchronisation Nextcloud pour synchroniser vos notes dans votre serveur"
+    click ncs "/fr/getting-started/concept.html#serveur-nextcloud" "Serveur Nextcloud pour stocker vos notes et vos autres fichiers"
+    click qon-api "/fr/getting-started/concept.html#application-qownnotesapi-pour-nextcloud" "Application Nextcloud QOwnNotesAPI pour accéder aux versions de notes et à la corbeille côté serveur"
+    click nc-notes-app "/fr/getting-started/concept.html#application-serveur-nextcloud-notes" "Application serveur Nextcloud Notes pour gérer vos notes sur le Web"
+    click nc-notes-mob "/fr/getting-started/concept.html#application-mobile-nextcloud-notes" "Application mobile Nextcloud Notes pour gérer vos notes sur votre téléphone portable"
+    click nc-deck-app "/fr/getting-started/concept.html#application-serveur-nextcloud-deck" "Application serveur Nextcloud Deck pour gérer vos rappels et vos listes de tâches sur le Web"
+    click qon-web-app "/fr/getting-started/concept.html#application-web-qownnotes" "Application Web QOwnNotes pour envoyer des photos depuis votre téléphone portable"
+    click lt "/fr/editor/languagetool.html" "Serveur LanguageTool optionnel pour vérifier la grammaire et le style"
+    click harper "/fr/editor/harper.html" "Service Harper hors-ligne et optionnel pour vérifier la grammaire et le style"
+    click qon-web-api "/fr/getting-started/concept.html#api-qownnotes-org"
 ```
 
 ## QOwnNotes
@@ -115,6 +117,14 @@ Vous pouvez gérer vos **snippets** avec QOwnNotes et les exécuter depuis la li
 
 ::: tip
 Visitez [Gestionnaire de snippets en ligne de commande QOwnNotes](command-line-snippet-manager.md) pour plus d'informations.
+:::
+
+## TUI QOwnNotes
+
+Vous pouvez **parcourir et modifier vos notes dans le terminal** avec la [TUI de QOwnNotes](https://github.com/qownnotes/qownnotes-tui) orientée-clavier. Elle fonctionne directement sur vos fichiers de note Markdown locaux et **utilise les dossiers de notes configurés dans QOwnNotes**, selon ses préférences en terme de tri de notes.
+
+::: tip
+Visitez [TUI QOwnNotes](qownnotes-tui.md) pour plus d’informations.
 :::
 
 ## Service LanguageTool

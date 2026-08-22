@@ -59,8 +59,7 @@ sudo apt-get install qownnotes
 Exécutez la commande shell suivante pour approuver le dépôt.
 
 ```bash
-wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_9.0/Release.key
--O - | sudo apt-key add -
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Raspbian_9.0/Release.key -O - | sudo apt-key add -
 ```
 
 Exécutez les commandes shell suivantes pour ajouter le dépôt et installer QOwnNotes à partir de là.

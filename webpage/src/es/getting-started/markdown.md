@@ -236,7 +236,7 @@ cd Notas
 ````
 ````
 
-Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
+Actualmente, los lenguajes admitidos (y los identificadores de bloque de código) son:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -246,7 +246,10 @@ Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 - C#, `c#`
 - CMake, `cmake`
 - C#, `csharp`
+- Console, `console`
 - CSS, `css`
+- Forth, `forth`
+- GDScript, `gdscript`
 - Go, `go`
 - HTML, `html`
 - INI, `ini`
@@ -255,13 +258,19 @@ Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 - JavaScript, `js`
 - JSON, `json`
 - Makefile, `make`
+- Nix, `nix`
 - PHP, `php`
 - Python, `py`
 - Python, `python`
 - QML, `qml`
+- R, `r`
 - Rust, `rust`
 - Shell scripting, `sh`
+- Shell session, `shell-session`
 - SQL, `sql`
+- SystemVerilog, `systemverilog`
+- TaggerScript, `taggerscript`
+- TOML, `toml`
 - TypeScript, `ts`
 - TypeScript, `typescript`
 - V, `v`
@@ -272,7 +281,7 @@ Actualmente, los idiomas admitidos (e identificadores de bloque de código) son:
 
 ## Tablas
 
-Las tablas no forman parte de la especificación principal de Markdown, pero la vista previa de QOwnNotes las admite.
+Las tablas no forman parte de la especificación básica de Markdown, pero la vista previa de QOwnNotes las admite.
 
 ~~~markdown
 Se pueden usar virguillas para alinear columnas.
@@ -296,7 +305,7 @@ También puede utilizar Markdown en línea.
 ::: tip
 Presione <kbd>Alt + Shift + T</kbd> para activar un cuadro de diálogo que puede ayudarlo a crear tablas. Incluso puede importar archivos CSV en ese cuadro de diálogo.
 
-Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
+Use <kbd>Ctrl + Espacio</kbd> dentro de una tabla Markdown para formatearla automáticamente.
 :::
 
 ## Citas en bloque

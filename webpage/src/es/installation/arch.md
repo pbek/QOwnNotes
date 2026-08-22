@@ -55,19 +55,19 @@ Por supuesto, también puede utilizar este repositorio con otras distribuciones 
 :::
 
 ::: tip
-If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+Si QOwnNotes registra el mensaje `Could not write secret to keychain`, instale los paquetes de Secret Service que falten y reinicie su sesión de escritorio.
 
-For GNOME and other Secret Service based desktops:
+Para GNOME y otros ordenadores de escritorio basados en Servicio Secreto:
 
 ```bash
 sudo pacman -S gnome-keyring libsecret seahorse
 ```
 
-For KDE Plasma:
+Para KDE Plasma:
 
 ```bash
 sudo pacman -S kwalletmanager kwallet
 ```
 
-QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+QOwnNotes recurrirá al cifrado heredado si el llavero del escritorio no está disponible.
 :::

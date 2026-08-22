@@ -4,13 +4,15 @@ To search for notes or for text inside notes you can use the shortcut <kbd>Ctrl<
 
 Es gibt verschiedene Möglichkeiten, nach Notizen zu suchen:
 
-- `Notiz Buch` sucht nach Notizen mit dem Wort `Notiz` oder `Buch` im Dateinamen oder im Notiztext
+- `note book` will search for notes containing both `note` and `book` in the file name or note text
 - `"Notiz buch"` sucht nach Notizen mit genau dem Text `Notiz buch` im Dateinamen oder Notiztext
 - `n:Buch` oder `name:Buch` sucht nach Notizen, wobei `Buch` nur im Name der Notiz oder im Dateinamen enthalten ist
 - `n:"note book"` or `name:"note book"` will search for notes with exactly `note book` just in the note name or file name
+- `w:note` or `word:note` will search for `note` as a whole word, excluding partial matches like `notebook`
+- Search operators can be combined, for example `n:w:note` searches for the whole word `note` only in the note name or file name
 
 ![Suchen](/img/searching.png)
 
 ::: tip
-Searching starts after typing at least one character.
+Searching starts after typing at least two characters.
 :::

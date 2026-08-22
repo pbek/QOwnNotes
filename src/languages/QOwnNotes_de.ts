@@ -2457,18 +2457,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Suchmaschine</translation>
 </message>
 <message>
-<source>Message boxes</source>
-<translation>Meldungsfenster</translation>
-</message>
-<message>
-<source>Forget all "Don't ask again" choices in message boxes</source>
-<translation>Alle "Nicht erneut fragen"-Auswahlen in Meldungsfenstern vergessen</translation>
-</message>
-<message>
-<source>Reset message boxes</source>
-<translation>Meldungsfenster zurücksetzen</translation>
-</message>
-<message>
 <source>Note file extensions</source>
 <translation>Notizdatei-Erweiterungen</translation>
 </message>
@@ -2495,6 +2483,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Path to external editor:</source>
 <translation>Pfad zum externen Editor:</translation>
+</message>
+<message>
+<source>Dialog preferences</source>
+<translation type="unfinished">Dialog preferences</translation>
+</message>
+<message>
+<source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
+<translation type="unfinished">QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" and "Don't show again" choices</source>
+<translation type="unfinished">Forget all "Don't ask again" and "Don't show again" choices</translation>
+</message>
+<message>
+<source>Reset dialog preferences</source>
+<translation type="unfinished">Reset dialog preferences</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2613,8 +2617,8 @@ Ihre Notizen bleiben erhalten!</translation>
 <translation>Möchten Sie die Notizdatei-Erweiterung &lt;strong&gt;%1&lt;/strong&gt; wirklich entfernen? Dateien mit dieser Erweiterung werden nicht mehr in der Notizenliste angezeigt!</translation>
 </message>
 <message>
-<source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>Möchten Sie wirklich die Überschreibungen aller Meldungsfenster zurücksetzen?</translation>
+<source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
+<translation type="unfinished">Do you really want to forget all saved dialog choices and show suppressed dialogs again?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -8502,6 +8506,10 @@ Updating the interface takes a short while.</translation>
 <message>
 <source>Replace:</source>
 <translation>Ersetzen:</translation>
+</message>
+<message>
+<source>Search in the selection only</source>
+<translation type="unfinished">Search in the selection only</translation>
 </message>
 <message>
 <source>Plain text</source>

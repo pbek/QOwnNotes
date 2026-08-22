@@ -115,19 +115,19 @@ zypper install qownnotes
 [Descarga directa](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed)
 
 ::: tip
-If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.
+Si QOwnNotes registra el mensaje `Could not write secret to keychain`, instale los paquetes de Secret Service que falten y reinicie su sesión de escritorio.
 
-For GNOME and other Secret Service based desktops:
+Para GNOME y otros ordenadores de escritorio basados en Servicio Secreto:
 
 ```bash
 sudo zypper install gnome-keyring libsecret-1-0 seahorse
 ```
 
-For KDE Plasma:
+Para KDE Plasma:
 
 ```bash
 sudo zypper install kwalletmanager
 ```
 
-QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+QOwnNotes recurrirá al cifrado heredado si el llavero del escritorio no está disponible.
 :::

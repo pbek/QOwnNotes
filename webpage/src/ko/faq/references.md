@@ -310,4 +310,4 @@ QOwnNotes에 대해 다른 사람들이 한 말입니다…
 
 - Alpine Linux: <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
 - nixos: <https://search.nixos.org/packages?query=qownnotes>
-  - <https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/office/qownnotes/default.nix>
+  - <https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/qo/qownnotes/package.nix>

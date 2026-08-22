@@ -47,11 +47,11 @@ Después de eso, puede instalar el paquete generado con `installpkg`.
 [Slackbuild de QOwnNotes en GitHub](https://github.com/pbek/qownnotes-slackbuilds/)
 
 ::: tip
-If QOwnNotes logs `Could not write secret to keychain`, install a Secret Service implementation and restart your desktop session.
+Si QOwnNotes registra el mensaje `Could not write secret to keychain`, instale una implementación de Secret Service y reinicie su sesión de escritorio.
 
-For GNOME and other Secret Service based desktops, install `gnome-keyring`, `libsecret` and `seahorse` from your Slackware repositories or SlackBuilds.
+Para escritorios basados en GNOME y otros sistemas de Servicio Secreto, instale `gnome-keyring`, `libsecret` y `seahorse` desde sus repositorios de Slackware o SlackBuilds.
 
-For KDE Plasma, install KWallet support such as `kwalletmanager`.
+Para KDE Plasma, instale soporte para KWallet como `kwalletmanager`.
 
-QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
+QOwnNotes recurrirá al cifrado heredado si el llavero del escritorio no está disponible.
 :::

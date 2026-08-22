@@ -281,7 +281,7 @@ cd Notes
 </pre>
 
 <pre>
-현재 지원되는 언어 (및 코드 블록 식별자)는 다음과 같습니다:
+현재 지원되는 언어(및 코드 블록 식별자)는 다음과 같습니다:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -291,7 +291,10 @@ cd Notes
 - C#, `c#`
 - CMake, `cmake`
 - C#, `csharp`
+- Console, `console`
 - CSS, `css`
+- Forth, `forth`
+- GDScript, `gdscript`
 - Go, `go`
 - HTML, `html`
 - INI, `ini`
@@ -300,13 +303,19 @@ cd Notes
 - JavaScript, `js`
 - JSON, `json`
 - Makefile, `make`
+- Nix, `nix`
 - PHP, `php`
 - Python, `py`
 - Python, `python`
 - QML, `qml`
+- R, `r`
 - Rust, `rust`
 - Shell scripting, `sh`
+- Shell session, `shell-session`
 - SQL, `sql`
+- SystemVerilog, `systemverilog`
+- TaggerScript, `taggerscript`
+- TOML, `toml`
 - TypeScript, `ts`
 - TypeScript, `typescript`
 - V, `v`
@@ -315,7 +324,9 @@ cd Notes
 - YAML, `yml`
 - YAML, `yaml`
 
-## 테이블
+## Tables
+
+테이블은 핵심 마크다운 사양의 일부는 아니지만, QOwnNotes 미리보기가 이를 지원합니다.
 
 ```마크다운
 콜론은 열을 정렬하는 데 사용할 수 있습니다.

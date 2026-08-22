@@ -18,11 +18,9 @@ Danach können Sie die Ausführungsberechtigungen für die Datei ändern:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-::: tip
-AppImages need `libfuse2` to run! For example under Ubuntu you can install the library with `sudo apt install libfuse2`.
-:::
-
 Nachher sollten Sie das AppImage ausführen können, um QOwnNotes zu starten.
+
+Current QOwnNotes AppImages include the required FUSE userspace library and do not require `libfuse2` to be installed separately. The system still needs kernel FUSE support. Older QOwnNotes AppImages may still require `libfuse2`.
 
 ::: warning
 Wenn Sie den **automatischen Updater** verwenden möchten, stellen Sie bitte sicher, dass Sie Ihr AppImage an einem Ort ablegen, auf den Ihr Benutzerkonto Schreibzugriff hat, z.B. irgendwo in Ihrem Home-Verzeichnis.

@@ -14,7 +14,7 @@ Puede utilizar estos parámetros en la interfaz de las comandos de terminal (CLI
 | `--action <name>`                    | Activa una acción de menú después de que se inicie la aplicación (vea abajo)                                                             |
 | `--completion <shell>`               | Genera un código de finalización de consola. Soporta `fish` y `bash`.                                                                    |
 | `--decrypt-note <file>`              | Imprime el texto descifrado de un archivo de notas cifrado en la línea de comandos y sale                                                |
-| `--decrypt-note-password <password>` | Provides the password for `--decrypt-note` instead of prompting for it                                                                   |
+| `--decrypt-note-password <password>` | Proporciona la contraseña para `--decrypt-note` en lugar de solicitarla                                                                  |
 
 ::: tip
 Si tiene problemas con la instalación de QOwnNotes, es posible que desee iniciar la aplicación con una configuración nueva sin perder la configuración actual mediante el parámetro `--session`.
@@ -52,23 +52,22 @@ QOwnNotes --dump-settings | clip
 
 :::
 
-## Print decrypted encrypted note text
+## Imprimir texto descifrado de nota cifrada
 
-With the parameter `--decrypt-note <file>` you can print the decrypted text of an encrypted note file to the command line. If no password is provided, QOwnNotes will ask for it on the command line.
+Con el parámetro `--decrypt-note<file>` puede imprimir el texto descifrado de una nota cifrada en la línea de comandos. Si no se proporciona una contraseña, QOwnNotes la pedirá en la línea de comandos.
 
 ```bash
 QOwnNotes --decrypt-note secret.md
 ```
 
-You can also provide the password directly with `--decrypt-note-password`:
+También puede proporcionar la contraseña directamente con `--decrypt-note-password`:
 
 ```bash
-QOwnNotes --decrypt-note secret.md --decrypt-note-password "my password"
+QOwnNotes --decrypt-note secret.md --decrypt-note-password "mi contraseña"
 ```
 
 ::: warning
-Providing passwords as command line parameters can expose them in your shell
-history or process list. Prefer the password prompt if this is a concern.
+Proporcionar contraseñas como parámetros de línea de comandos puede exponerlas en su historial de consola o lista de procesos. Prefiera la solicitud de contraseña si esto es un problema.
 :::
 
 ## Activar acciones del menú después del inicio

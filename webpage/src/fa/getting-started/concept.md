@@ -17,6 +17,7 @@ graph TB
         sync("Nextcloud Sync")-->md
         qon-comp("Browser extension")-->qon
         qc("Command-line snippet manager")-->qon
+        tui("QOwnNotes TUI")-->md
         homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
@@ -41,6 +42,7 @@ graph TB
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
     click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
+    click tui "/getting-started/concept.html#qownnotes-tui" "QOwnNotes TUI, a keyboard-first terminal browser and editor for your Markdown note folders"
     click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
@@ -115,6 +117,14 @@ Please visit [Homepage suggestion API](homepage-suggestion-api.md) for more info
 
 ::: tip
 لطفاً برای اطلاعات بیشتر [مدیر تکه کد خط فرمان QOwnNotes](command-line-snippet-manager.md) را ملاحظه کنید.
+:::
+
+## QOwnNotes TUI
+
+You can **browse and edit your notes in the terminal** with the keyboard-first [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui). It works directly on your local Markdown note files and **uses the note folders configured in QOwnNotes**, following its note sorting settings.
+
+::: tip
+Please visit [QOwnNotes TUI](qownnotes-tui.md) for more information.
 :::
 
 ## LanguageTool service

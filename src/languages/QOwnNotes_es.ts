@@ -2328,8 +2328,8 @@ Connection error message: </translation>
 <message>
 <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+<translation>Es posible que experimente problemas de sincronización con versiones anteriores de Nextcloud/ownCloud Sync al ir muy por debajo de los 10 segundos.
+Simplemente compruebe si se producen conflictos de sincronización y, en ese caso, establezca un valor más alto.</translation>
 </message>
 <message>
 <source>Use Setext style headings for generated new note titles instead of ATX style headings</source>
@@ -2341,7 +2341,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
-<translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</translation>
+<translation>Puede utilizar esto por ejemplo bajo Windows si tiene problemas con los saltos de línea en la aplicación de notas de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Use UNIX newline instead of native newline characters</source>
@@ -2361,11 +2361,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>When the note title starts with an emoji, the emoji will not be stored in the note filename</source>
-<translation type="unfinished">When the note title starts with an emoji, the emoji will not be stored in the note filename</translation>
+<translation>Cuando el título de la nota empieza con un emoji, el emoji no se almacenará en el nombre del archivo de la nota</translation>
 </message>
 <message>
 <source>Don't use leading emojis in note filename</source>
-<translation type="unfinished">Don't use leading emojis in note filename</translation>
+<translation>No usar emojis iniciales en el nombre del archivo de la nota</translation>
 </message>
 <message>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
@@ -2434,15 +2434,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Keychain</source>
-<translation type="unfinished">Keychain</translation>
+<translation>Llavero</translation>
 </message>
 <message>
 <source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
-<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+<translation>Tiempo máximo de espera para el llavero del sistema antes de recurrir al cifrado legado de SimpleCrypt</translation>
 </message>
 <message>
 <source>Keychain access timeout:</source>
-<translation type="unfinished">Keychain access timeout:</translation>
+<translation>Tiempo máximo de espera para acceder al llavero:</translation>
 </message>
 <message>
 <source>Update dialog</source>
@@ -2455,18 +2455,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Search engine</source>
 <translation>Motor de búsqueda</translation>
-</message>
-<message>
-<source>Message boxes</source>
-<translation>Cuadros de mensaje</translation>
-</message>
-<message>
-<source>Forget all "Don't ask again" choices in message boxes</source>
-<translation>Olvidar todas las elecciones "No preguntar de nuevo" en los cuadros de mensaje</translation>
-</message>
-<message>
-<source>Reset message boxes</source>
-<translation>Restablecer cuadros de mensaje</translation>
 </message>
 <message>
 <source>Note file extensions</source>
@@ -2495,6 +2483,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Path to external editor:</source>
 <translation>Ruta al editor externo:</translation>
+</message>
+<message>
+<source>Dialog preferences</source>
+<translation type="unfinished">Dialog preferences</translation>
+</message>
+<message>
+<source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
+<translation type="unfinished">QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" and "Don't show again" choices</source>
+<translation type="unfinished">Forget all "Don't ask again" and "Don't show again" choices</translation>
+</message>
+<message>
+<source>Reset dialog preferences</source>
+<translation type="unfinished">Reset dialog preferences</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2613,8 +2617,8 @@ Your notes will stay intact!</source>
 <translation>¿Realmente desea eliminar la extensión de archivo de nota &lt;strong&gt;%1&lt;/strong&gt;? ¡Ya no verá archivos con esta extensión en la lista de notas!</translation>
 </message>
 <message>
-<source>Do you really want to reset the overrides of all message boxes?</source>
-<translation>¿Realmente desea restablecer las sobrescrituras de todos los cuadros de mensaje?</translation>
+<source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
+<translation type="unfinished">Do you really want to forget all saved dialog choices and show suppressed dialogs again?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -2667,15 +2671,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Si usa esta configuración, obtendrá una nueva entrada de menú para mostrar las versiones git si hace clic derecho en una nota.</translation>
+<translation>Si usa esta configuración, obtendrá una nueva entrada de menú para mostrar las versiones de git si hace clic derecho en una nota.</translation>
 </message>
 <message>
 <source>Git client</source>
-<translation>Cliente Git</translation>
+<translation>Cliente de Git</translation>
 </message>
 <message>
 <source>Path to git client, leave empty for default</source>
-<translation>Ruta al cliente git, dejar vacío para el predeterminado</translation>
+<translation>Ruta al cliente de git, dejar vacío para utilizar por defecto</translation>
 </message>
 <message>
 <source>Path to git executable:</source>
@@ -2691,11 +2695,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Git library</source>
-<translation>Biblioteca Git</translation>
+<translation>Biblioteca de Git</translation>
 </message>
 <message>
 <source>Support for the git library libgit2 is activated.</source>
-<translation>El soporte para la biblioteca git libgit2 está activado.</translation>
+<translation>El soporte para la biblioteca de git libgit2 está activado.</translation>
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders.</source>
@@ -2703,7 +2707,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Puede descargar su cliente git aquí: &lt;a href="%url"&gt;Git para Windows&lt;/a&gt;</translation>
+<translation>Puede descargar su cliente de git aquí: &lt;a href="%url"&gt;Git para Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <source>Executable files</source>
@@ -2733,7 +2737,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Harper service stopped unexpectedly</source>
-<translation type="unfinished">Harper service stopped unexpectedly</translation>
+<translation>El servicio de Harper se detuvo inesperadamente</translation>
 </message>
 <message>
 <source>Harper transport is not configured</source>
@@ -2741,7 +2745,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Waiting before retrying the Harper TCP connection</source>
-<translation type="unfinished">Waiting before retrying the Harper TCP connection</translation>
+<translation>Esperando antes de volver a intentar la conexión TCP de Harper</translation>
 </message>
 <message>
 <source>Unsupported Harper request: %1</source>
@@ -2760,7 +2764,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Enable offline grammar and style checking with Harper</source>
-<translation type="unfinished">Enable offline grammar and style checking with Harper</translation>
+<translation>Activa la revisión gramatical y de estilo sin conexión con Harper</translation>
 </message>
 <message>
 <source>Transport:</source>
@@ -2808,7 +2812,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Spell Check</source>
-<translation type="unfinished">Spell Check</translation>
+<translation>Corrector ortográfico</translation>
 </message>
 <message>
 <source>Sentence Capitalization</source>
@@ -2828,11 +2832,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Unclosed Quotes</source>
-<translation type="unfinished">Unclosed Quotes</translation>
+<translation>Comillas sin cerrar</translation>
 </message>
 <message>
 <source>Correct Number Suffix</source>
-<translation type="unfinished">Correct Number Suffix</translation>
+<translation>Sufijo de número correcto</translation>
 </message>
 <message>
 <source>Spaces</source>
@@ -2840,11 +2844,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Quote Spacing</source>
-<translation type="unfinished">Quote Spacing</translation>
+<translation>Espaciado de citas</translation>
 </message>
 <message>
 <source>No French Spaces</source>
-<translation type="unfinished">No French Spaces</translation>
+<translation>Sin espacios franceses</translation>
 </message>
 <message>
 <source>Wrong Apostrophe</source>
@@ -2864,11 +2868,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Reset ignored rules</source>
-<translation type="unfinished">Reset ignored rules</translation>
+<translation>Restablecer reglas ignoradas</translation>
 </message>
 <message>
 <source>Reset ignored words</source>
-<translation type="unfinished">Reset ignored words</translation>
+<translation>Restablecer palabras ignoradas</translation>
 </message>
 <message>
 <source>Status:</source>
@@ -2936,30 +2940,30 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Harper connection successful.</source>
-<translation type="unfinished">Harper connection successful.</translation>
+<translation>Conexión a Harper exitosa.</translation>
 </message>
 <message>
 <source>Harper connection failed: %1</source>
-<translation type="unfinished">Harper connection failed: %1</translation>
+<translation>Error de conexión con Harper: %1</translation>
 </message>
 <message>
 <source>There are no ignored rules to reset.</source>
-<translation type="unfinished">There are no ignored rules to reset.</translation>
+<translation>No hay reglas ignoradas que restablecer.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored rule(s)?</source>
-<translation type="unfinished">
-<numerusform>Reset %n ignored rule(s)?</numerusform>
-<numerusform>Reset %n ignored rule(s)?</numerusform>
+<translation>
+<numerusform>¿Restablecer %n regla ignorada?</numerusform>
+<numerusform>¿Restablecer %n reglas ignoradas?</numerusform>
 </translation>
 </message>
 <message>
 <source>All ignored rules have been reset.</source>
-<translation type="unfinished">All ignored rules have been reset.</translation>
+<translation>Todas las reglas ignoradas han sido restablecidas.</translation>
 </message>
 <message>
 <source>There are no ignored words to reset.</source>
-<translation type="unfinished">There are no ignored words to reset.</translation>
+<translation>No hay palabras ignoradas que restablecer.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored word(s)?</source>
@@ -3639,7 +3643,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>There are no ignored rules to reset.</source>
-<translation>No hay reglas ignoradas para restablecer.</translation>
+<translation>No hay reglas ignoradas que restablecer.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored rule(s)?</source>
@@ -4026,8 +4030,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+<translation>Podría encontrarse con problemas de sincronización con versiones anteriores de Nextcloud/ownCloud cuando se va muy por debajo de 10 seg.
+Se debe probar y si hay conflictos de sincronización establecer un valor más alto.</translation>
 </message>
 <message>
 <source>Remove trashed notes after:</source>
@@ -4876,43 +4880,43 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Go to bookmark at slot 1</source>
-<translation type="unfinished">Go to bookmark at slot 1</translation>
+<translation>Ir al marcador en ranura 1</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 2</source>
-<translation type="unfinished">Go to bookmark at slot 2</translation>
+<translation>Ir al marcador en ranura 2</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 3</source>
-<translation type="unfinished">Go to bookmark at slot 3</translation>
+<translation>Ir al marcador en ranura 3</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 4</source>
-<translation type="unfinished">Go to bookmark at slot 4</translation>
+<translation>Ir al marcador en ranura 4</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 5</source>
-<translation type="unfinished">Go to bookmark at slot 5</translation>
+<translation>Ir al marcador en ranura 5</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 6</source>
-<translation type="unfinished">Go to bookmark at slot 6</translation>
+<translation>Ir al marcador en ranura 6</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 7</source>
-<translation type="unfinished">Go to bookmark at slot 7</translation>
+<translation>Ir al marcador en ranura 7</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 8</source>
-<translation type="unfinished">Go to bookmark at slot 8</translation>
+<translation>Ir al marcador en ranura 8</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 9</source>
-<translation type="unfinished">Go to bookmark at slot 9</translation>
+<translation>Ir al marcador en ranura 9</translation>
 </message>
 <message>
 <source>Note bookmarks</source>
-<translation type="unfinished">Note bookmarks</translation>
+<translation>Marcadores de notas</translation>
 </message>
 <message>
 <source>Format text underline</source>
@@ -4988,7 +4992,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Toggle checkbox(es)</source>
-<translation type="unfinished">Toggle checkbox(es)</translation>
+<translation>Alternar casillas de verificación</translation>
 </message>
 <message>
 <source>1. 2. 3. list</source>
@@ -5604,23 +5608,23 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Web</source>
-<translation type="unfinished">Web</translation>
+<translation>Web</translation>
 </message>
 <message>
 <source>Web app is connected</source>
-<translation type="unfinished">Web app is connected</translation>
+<translation>La aplicación web está conectada</translation>
 </message>
 <message>
 <source>Web app is not connected</source>
-<translation type="unfinished">Web app is not connected</translation>
+<translation>La aplicación web no está conectada</translation>
 </message>
 <message>
 <source>Web app connected</source>
-<translation type="unfinished">Web app connected</translation>
+<translation>Aplicación web conectada</translation>
 </message>
 <message>
 <source>Web app disconnected</source>
-<translation type="unfinished">Web app disconnected</translation>
+<translation>Aplicación web desconectada</translation>
 </message>
 <message>
 <source>Connected systems</source>
@@ -5632,15 +5636,15 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
-<translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
+<translation>¡Debe seleccionar su carpeta de notas de Nextcloud/ownCloud para hacer este programa funcione!</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Note versions are currently loaded from your Nextcloud / ownCloud server</translation>
+<translation>Las versiones de notas actualmente se cargan desde el servidor de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Trashed notes are currently loaded from your Nextcloud / ownCloud server</translation>
+<translation>Las notas eliminadas actualmente se cargan desde el servidor de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
@@ -5670,11 +5674,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <name>MarkdownLspSettingsWidget</name>
 <message>
 <source>Markdown language server</source>
-<translation type="unfinished">Markdown language server</translation>
+<translation>Servidor de lenguaje Markdown</translation>
 </message>
 <message>
 <source>Enable Markdown language server (LSP)</source>
-<translation type="unfinished">Enable Markdown language server (LSP)</translation>
+<translation>Activar servidor de lenguaje Markdown (LSP)</translation>
 </message>
 <message>
 <source>Command:</source>
@@ -5758,7 +5762,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>There are no ignored rules to reset.</source>
-<translation type="unfinished">There are no ignored rules to reset.</translation>
+<translation>No hay reglas ignoradas que restablecer.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored Markdown LSP rule(s)?</source>
@@ -5848,35 +5852,35 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Apply alignment</source>
-<translation type="unfinished">Apply alignment</translation>
+<translation>Aplicar alineación</translation>
 </message>
 <message>
 <source>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</source>
-<translation type="unfinished">Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</translation>
+<translation>Aplica el alineamiento seleccionado a la(s) columna(s) seleccionada(s) actualmente. Haga clic primero en el encabezado de una columna para seleccionarlo.</translation>
 </message>
 <message>
 <source>Cannot remove header</source>
-<translation type="unfinished">Cannot remove header</translation>
+<translation>No se puede eliminar el encabezado</translation>
 </message>
 <message>
 <source>The header row cannot be removed.</source>
-<translation type="unfinished">The header row cannot be removed.</translation>
+<translation>La fila del encabezado no puede eliminarse.</translation>
 </message>
 <message>
 <source>Cannot remove row</source>
-<translation type="unfinished">Cannot remove row</translation>
+<translation>No se puede eliminar la fila</translation>
 </message>
 <message>
 <source>The table must have at least one data row.</source>
-<translation type="unfinished">The table must have at least one data row.</translation>
+<translation>La tabla debe tener al menos una fila de datos.</translation>
 </message>
 <message>
 <source>Cannot remove column</source>
-<translation type="unfinished">Cannot remove column</translation>
+<translation>No se puede eliminar la columna</translation>
 </message>
 <message>
 <source>The table must have at least one column.</source>
-<translation type="unfinished">The table must have at least one column.</translation>
+<translation>La tabla debe tener al menos una columna.</translation>
 </message>
 </context>
 <context>
@@ -6306,9 +6310,9 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message numerus="yes">
 <source>Do you want to delete %n Nextcloud Deck card(s)?</source>
-<translation type="unfinished">
-<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
-<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
+<translation>
+<numerusform>¿Desea eliminar %n tarjeta de Nextcloud Deck?</numerusform>
+<numerusform>¿Desea eliminar %n tarjetas de Nextcloud Deck?</numerusform>
 </translation>
 </message>
 <message>
@@ -6345,7 +6349,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message numerus="yes">
 <source>&amp;Delete %n card(s)</source>
-<translation type="unfinished">
+<translation>
 <numerusform/>
 <numerusform/>
 </translation>
@@ -6414,7 +6418,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <name>NoteBookmarkDialog</name>
 <message>
 <source>Note Bookmarks</source>
-<translation type="unfinished">Note Bookmarks</translation>
+<translation>Marcadores de notas</translation>
 </message>
 <message>
 <source>Slot</source>
@@ -6430,7 +6434,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>Jump to bookmark</source>
-<translation type="unfinished">Jump to bookmark</translation>
+<translation>Ir al marcador</translation>
 </message>
 <message>
 <source>Jump to the selected bookmark in the main window</source>
@@ -6633,7 +6637,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 <message>
 <source>&amp;Use as Nextcloud / ownCloud path</source>
-<translation type="unfinished">&amp;Use as Nextcloud / ownCloud path</translation>
+<translation>&amp;Usar como ruta de Nextcloud/ownCloud</translation>
 </message>
 <message>
 <source>Please select your note folder on your Nextcloud / ownCloud server:</source>
@@ -7668,11 +7672,11 @@ Do you want to delete those files as well?</source>
 <name>QKeychain::DeletePasswordJobPrivate</name>
 <message>
 <source>Could not open keystore</source>
-<translation type="unfinished">Could not open keystore</translation>
+<translation>No se pudo abrir el almacén de claves</translation>
 </message>
 <message>
 <source>Could not remove private key from keystore</source>
-<translation type="unfinished">Could not remove private key from keystore</translation>
+<translation>No se pudo eliminar la clave privada del almacén</translation>
 </message>
 <message>
 <source>Unknown error</source>
@@ -7680,7 +7684,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Could not open wallet: %1; %2</source>
-<translation type="unfinished">Could not open wallet: %1; %2</translation>
+<translation>No se pudo abrir la cartera: %1; %2</translation>
 </message>
 <message>
 <source>Password entry not found</source>
@@ -7688,7 +7692,7 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Could not delete password</source>
-<translation type="unfinished">Could not delete password</translation>
+<translation>No se pudo eliminar la contraseña</translation>
 </message>
 </context>
 <context>
@@ -7721,11 +7725,11 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Could not delete data from settings: access error</source>
-<translation type="unfinished">Could not delete data from settings: access error</translation>
+<translation>No se pudieron eliminar los datos de la configuración: error de acceso</translation>
 </message>
 <message>
 <source>Could not delete data from settings: format error</source>
-<translation type="unfinished">Could not delete data from settings: format error</translation>
+<translation>No se pudieron eliminar los datos de la configuración: error de formato</translation>
 </message>
 <message>
 <source>Entry not found</source>
@@ -7740,15 +7744,15 @@ Do you want to delete those files as well?</source>
 </message>
 <message>
 <source>Could not open keystore</source>
-<translation type="unfinished">Could not open keystore</translation>
+<translation>No se pudo abrir el almacén de claves</translation>
 </message>
 <message>
 <source>Could not retrieve private key from keystore</source>
-<translation type="unfinished">Could not retrieve private key from keystore</translation>
+<translation>No se pudo recuperar la clave privada del almacén</translation>
 </message>
 <message>
 <source>Encrypted data is too short</source>
-<translation type="unfinished">Encrypted data is too short</translation>
+<translation>Los datos cifrados son demasiado cortos</translation>
 </message>
 <message>
 <source>Could not create RSA decryption cipher</source>
@@ -7811,43 +7815,43 @@ Do you want to delete those files as well?</source>
 <name>QKeychain::WritePasswordJobPrivate</name>
 <message>
 <source>Could not open keystore</source>
-<translation type="unfinished">Could not open keystore</translation>
+<translation>No se pudo abrir el almacén de claves</translation>
 </message>
 <message>
 <source>Could not create private key generator</source>
-<translation type="unfinished">Could not create private key generator</translation>
+<translation>No se pudo crear el generador de claves privadas</translation>
 </message>
 <message>
 <source>Could not generate new private key</source>
-<translation type="unfinished">Could not generate new private key</translation>
+<translation>No se pudo generar una nueva clave privada</translation>
 </message>
 <message>
 <source>Could not retrieve private key from keystore</source>
-<translation type="unfinished">Could not retrieve private key from keystore</translation>
+<translation>No se pudo recuperar la clave privada del almacén</translation>
 </message>
 <message>
 <source>Could not generate AES key</source>
-<translation type="unfinished">Could not generate AES key</translation>
+<translation>No se pudo generar la clave AES</translation>
 </message>
 <message>
 <source>Could not generate IV</source>
-<translation type="unfinished">Could not generate IV</translation>
+<translation>No se pudo generar el vector de inicialización</translation>
 </message>
 <message>
 <source>Could not create AES encryption cipher</source>
-<translation type="unfinished">Could not create AES encryption cipher</translation>
+<translation>No se pudo crear el cifrador AES</translation>
 </message>
 <message>
 <source>Could not encrypt data: %1</source>
-<translation type="unfinished">Could not encrypt data: %1</translation>
+<translation>No se pudieron cifrar los datos: %1</translation>
 </message>
 <message>
 <source>Could not create RSA encryption cipher</source>
-<translation type="unfinished">Could not create RSA encryption cipher</translation>
+<translation>No se pudo crear el cifrador RSA</translation>
 </message>
 <message>
 <source>Could not encrypt AES key: %1</source>
-<translation type="unfinished">Could not encrypt AES key: %1</translation>
+<translation>No se pudo cifrar la clave AES: %1</translation>
 </message>
 <message>
 <source>D-Bus is not running</source>
@@ -8273,7 +8277,7 @@ La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>I/O error</source>
-<translation type="unfinished">I/O error</translation>
+<translation>Error de entrada/salida</translation>
 </message>
 <message>
 <source>Cancelled</source>
@@ -8281,11 +8285,11 @@ La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>Keyring already exists</source>
-<translation type="unfinished">Keyring already exists</translation>
+<translation>El almacén de claves ya existe</translation>
 </message>
 <message>
 <source>No match</source>
-<translation type="unfinished">No match</translation>
+<translation>Sin coincidencias</translation>
 </message>
 <message>
 <source>Unknown error</source>
@@ -8293,7 +8297,7 @@ La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>Entry not found</source>
-<translation type="unfinished">Entry not found</translation>
+<translation>No se encontró la entrada</translation>
 </message>
 </context>
 <context>
@@ -8341,7 +8345,7 @@ La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>Markdown operations</source>
-<translation type="unfinished">Markdown operations</translation>
+<translation>Operaciones de Markdown</translation>
 </message>
 <message>
 <source>Copy code block</source>
@@ -8405,7 +8409,7 @@ La actualización de la interfaz tarda un momento.</translation>
 </message>
 <message>
 <source>Select</source>
-<translation type="unfinished">Select</translation>
+<translation>Seleccionar</translation>
 </message>
 <message>
 <source>Custom actions</source>
@@ -8501,6 +8505,10 @@ La actualización de la interfaz tarda un momento.</translation>
 <message>
 <source>Replace:</source>
 <translation>Reemplazar:</translation>
+</message>
+<message>
+<source>Search in the selection only</source>
+<translation type="unfinished">Search in the selection only</translation>
 </message>
 <message>
 <source>Plain text</source>
@@ -8657,19 +8665,19 @@ Are the folder and the file writable?</source>
 </message>
 <message>
 <source>Updates all scripts that have updates</source>
-<translation type="unfinished">Updates all scripts that have updates</translation>
+<translation>Actualiza todos los scripts que tienen actualizaciones</translation>
 </message>
 <message>
 <source>Update all</source>
-<translation type="unfinished">Update all</translation>
+<translation>Actualizar todo</translation>
 </message>
 <message>
 <source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
-<translation type="unfinished">Automatically install available updates for scripts installed from the script repository during the startup update check</translation>
+<translation>Instalar automáticamente las actualizaciones disponibles para los scripts instalados desde el repositorio de scripts durante la comprobación de la actualización de inicio</translation>
 </message>
 <message>
 <source>Automatically update scripts</source>
-<translation type="unfinished">Automatically update scripts</translation>
+<translation>Actualizar automáticamente los scripts</translation>
 </message>
 <message>
 <source>Version:</source>
@@ -8778,9 +8786,9 @@ Do you want to install it anyway?</source>
 </message>
 <message numerus="yes">
 <source>%n script update(s) were installed.</source>
-<translation type="unfinished">
-<numerusform>%n script update(s) were installed.</numerusform>
-<numerusform>%n script update(s) were installed.</numerusform>
+<translation>
+<numerusform>Se instalaron %n actualización de scripts.</numerusform>
+<numerusform>Se instalaron %n actualizaciones de scripts.</numerusform>
 </translation>
 </message>
 </context>
@@ -9713,7 +9721,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <source>Select table layout or enter text:</source>
-<translation>Elije el diseño de la tabla o ingresa el texto:</translation>
+<translation>Eliga el diseño de la tabla o ingrese el texto:</translation>
 </message>
 <message>
 <source>Separator column width:</source>
@@ -10134,7 +10142,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <source>You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Puede acceder a su servidor de Nextcloud/ownCloud o a un servidor de CalDAV genérico para gestionar sus listas de tareas.</translation>
 </message>
 <message>
 <source>For most current Nextcloud / ownCloud installations</source>

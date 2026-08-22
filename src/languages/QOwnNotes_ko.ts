@@ -2428,15 +2428,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Keychain</source>
-<translation type="unfinished">Keychain</translation>
+<translation>키체인</translation>
 </message>
 <message>
 <source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
-<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+<translation>SimpleCrypt 레거시 암호화로 돌아가기 전까지 시스템 키체인을 기다리는 최대 시간</translation>
 </message>
 <message>
 <source>Keychain access timeout:</source>
-<translation type="unfinished">Keychain access timeout:</translation>
+<translation>키체인 액세스 시간 초과:</translation>
 </message>
 <message>
 <source>Update dialog</source>
@@ -2449,18 +2449,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Search engine</source>
 <translation type="unfinished">Search engine</translation>
-</message>
-<message>
-<source>Message boxes</source>
-<translation type="unfinished">Message boxes</translation>
-</message>
-<message>
-<source>Forget all "Don't ask again" choices in message boxes</source>
-<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
-</message>
-<message>
-<source>Reset message boxes</source>
-<translation type="unfinished">Reset message boxes</translation>
 </message>
 <message>
 <source>Note file extensions</source>
@@ -2489,6 +2477,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Path to external editor:</source>
 <translation type="unfinished">Path to external editor:</translation>
+</message>
+<message>
+<source>Dialog preferences</source>
+<translation>대화상자 환경설정</translation>
+</message>
+<message>
+<source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
+<translation>QOwnNotes는 "다시 묻지 않기"로 선택된 답변과 "다시 표시하지 않기"로 숨겨진 경고를 기억합니다. 이 설정을 다시 초기화하여 해당 대화상자가 다시 표시되도록 하세요.</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" and "Don't show again" choices</source>
+<translation>"다시 묻지 않기"와 "다시 표시하지 않기" 옵션은 모두 잊기</translation>
+</message>
+<message>
+<source>Reset dialog preferences</source>
+<translation>대화상자 환경설정 초기화</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2607,8 +2611,8 @@ Your notes will stay intact!</translation>
 <translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
 </message>
 <message>
-<source>Do you really want to reset the overrides of all message boxes?</source>
-<translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+<source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
+<translation>저장된 모든 대화상자 선택을 정말로 모두 잊고 숨겨진 대화상자를 다시 표시하시겠습니까?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -8425,6 +8429,10 @@ Updating the interface takes a short while.</translation>
 <message>
 <source>Replace:</source>
 <translation>바꾸기:</translation>
+</message>
+<message>
+<source>Search in the selection only</source>
+<translation>선택 영역에서만 검색</translation>
 </message>
 <message>
 <source>Plain text</source>

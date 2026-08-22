@@ -18,10 +18,10 @@ document formatting directly in the note editor.
 
 Two Markdown LSP servers are known and supported out of the box:
 
-| Servidor                                             | Comando        | Notas                                                                 |
-| ---------------------------------------------------- | -------------- | --------------------------------------------------------------------- |
-| [Marksman](https://github.com/artempyanykh/marksman) | `marksman`     | Default; provides wiki-link completions and cross-note navigation     |
-| [Rumdl](https://github.com/rvben/rumdl)              | `rumdl server` | Markdown linting rules (similar to `markdownlint`) |
+| Servidor                                             | Comando        | Notas                                                                                                |
+| ---------------------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------- |
+| [Marksman](https://github.com/artempyanykh/marksman) | `marksman`     | Predeterminado; proporciona completado automático de enlaces de estilo wiki y navegación entre notas |
+| [Rumdl](https://github.com/rvben/rumdl)              | `rumdl server` | Markdown linting rules (similar to `markdownlint`)                                |
 
 Any LSP-compatible Markdown server that communicates over `stdio` should also work by
 configuring the command manually.
@@ -36,7 +36,7 @@ Open `Settings` and navigate to `Editor -> Markdown LSP`.
   - Use **Auto-detect** to automatically search your `PATH` for `marksman` or `rumdl`
     and fill in the command field
 - Optionally provide **Arguments** to pass to the server process
-  - For `rumdl` the required argument is `server`
+  - Para `rumdl` el argumento obligatorio es `server`
 - Enable **Show all LSP server log output in debug log** for verbose diagnostic output
 - Use **Test Connection** to verify that QOwnNotes can start the server and complete
   the LSP initialization handshake against your current note folder
@@ -45,8 +45,8 @@ Open `Settings` and navigate to `Editor -> Markdown LSP`.
 ## Cómo funciona
 
 - When you open a note, QOwnNotes sends a `textDocument/didOpen` notification to the server
-- While you type, changes are forwarded via `textDocument/didChange` using incremental sync
-  when the server supports it, or full-document sync otherwise
+- Mientras escribe, los cambios se reenvían mediante `textDocument/didChange` usando sincronización incremental
+  cuando el servidor lo soporta, o sincronización completa de documentos en caso contrario
 - Diagnostics pushed by the server via `textDocument/publishDiagnostics` are rendered as
   **colored underlines** in the Markdown editor
 - Right-clicking on an underlined region shows available **code actions** and the option
@@ -61,9 +61,9 @@ Open `Settings` and navigate to `Editor -> Markdown LSP`.
 Marksman provides wiki-link completions, cross-note navigation, and diagnostics for
 Markdown projects. It works especially well with QOwnNotes' wiki-style note links.
 
-- **Linux/macOS**: Download from [GitHub Releases](https://github.com/artempyanykh/marksman/releases)
-  or install via your package manager (e.g. `brew install marksman` on macOS,
-  `nix-env -iA nixpkgs.marksman` on NixOS)
+- **Linux/macOS**: Descargue desde los [lanzamientos de GitHub](https://github.com/artempyanykh/marksman/releases)
+  o instale a través de su gestor de paquetes (por ejemplo, `brew install marksman` en macOS,
+  `nix-env -iA nixpkgs.marksman` en NixOS)
 - **Windows**: Descargue el ".exe" desde la página de lanzamientos de GitHub y colóquelo en algún lugar de su ruta "PATH"
 
 Después de instalar, use **Detección automática** en la configuración para localizarlo automáticamente.
@@ -92,12 +92,12 @@ After installing, set the **Command** to `rumdl` and the **Arguments** to `serve
 
 ## Notas
 
-- The LSP client communicates with the server over `stdio` (standard input/output)
-- The server process is started with the current note folder as the workspace root
+- El cliente LSP se comunica con el servidor a través de `stdio` (entrada/salida estándar)
+- El proceso del servidor se inicia utilizando la carpeta de notas actual como raíz del espacio de trabajo
 - Ignored rules are stored persistently and can be cleared with **Reset ignored rules**
-- If the server cannot be started, QOwnNotes shows a warning in the status area
+- Si no se puede iniciar el servidor, QOwnNotes muestra una advertencia en el área de estado
 
-## Related
+## Relacionado
 
 - [Corrector ortográfico](spellchecking.md)
 - [LanguageTool](languagetool.md)

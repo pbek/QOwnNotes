@@ -17,6 +17,7 @@ graph TB
         sync("Nextcloud Sync")-->md
         qon-comp("Browser extension")-->qon
         qc("Command-line snippet manager")-->qon
+        tui("QOwnNotes TUI")-->md
         homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
@@ -37,20 +38,21 @@ graph TB
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/getting-started/concept.html#qownnotes"데스크톱 컴퓨터에서 노트를 관리하기 위한 QOwnNotes 데스크톱 응용 프로그램"
-    click md "/getting-started/concept.html#markdown-note-files" "노트 폴더에 있는 마크다운, 미디어 및 첨부 파일"
-    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "마크다운 파일과 웹 클리퍼에서 북마크를 관리하기 위한 QOwnNotes 브라우저 확장 프로그램"
-    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes 명령줄 스니펫 관리자"
-    click homepage "/getting-started/concept.html#homepage-dashboard" "QOwnNotes 북마크 추천을 사용한 홈페이지 대시보드"
-    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud 데스크톱 동기화 클라이언트를 통해 노트를 서버에 동기화하기"
-    click ncs "/getting-started/concept.html#nextcloud-server" "노트 및 기타 파일을 호스팅할 Nextcloud 서버"
-    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "서버 측 휴지통 및 메모 버전에 액세스할 수 있는 QOwnNotesAPI Nextcloud 앱"
-    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "웹에서 노트를 관리하는 Nextcloud 노트 서버 앱"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "휴대폰에서 노트를 관리할 수 있는 Nextcloud 노트 모바일 앱"
-    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "웹에서 알림 및 할 일 목록을 관리하는 Nextcloud 덱 서버 앱"
-    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "휴대폰에서 사진을 보낼 수 있는 QOwnNotes 웹 앱"
-    click lt "/editor/languagetool.html" "문법 및 스타일 검사를 위한 선택적 언어 도구 서버"
-    click harper "/editor/harper.html" "오프라인 문법 및 스타일 검사를 위한 선택적 하퍼 서비스"
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
+    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
+    click tui "/getting-started/concept.html#qownnotes-tui" "QOwnNotes TUI, a keyboard-first terminal browser and editor for your Markdown note folders"
+    click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
+    click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
+    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
+    click harper "/editor/harper.html" "Optional Harper service for offline grammar and style checking"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -115,6 +117,14 @@ QOwnNotes를 사용하여 **명령 스니펫**을 관리하고 명령줄에서 �
 
 ::: tip
 자세한 내용은 [QOwnNotes 명령줄 스니펫 관리자](command-line-snippet-manager.md)를 참조하십시오.
+:::
+
+## QOwnNotes TUI
+
+You can **browse and edit your notes in the terminal** with the keyboard-first [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui). It works directly on your local Markdown note files and **uses the note folders configured in QOwnNotes**, following its note sorting settings.
+
+::: tip
+Please visit [QOwnNotes TUI](qownnotes-tui.md) for more information.
 :::
 
 ## 언어 도구 서비스

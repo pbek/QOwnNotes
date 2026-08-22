@@ -12,6 +12,7 @@
     (for [#59](https://github.com/pbek/qownnotesapi/issues/59))
   - Dropped support for unsupported Nextcloud versions older than 32
   - Updated dependencies
+- Added more Spanish, French, Korean translation (thank you, AlejandroMoc, jd-develop, VenusGirl)
 
 ## 26.8.6
 
