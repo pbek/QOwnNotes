@@ -77,6 +77,8 @@ void EditorSettingsWidget::readSettings() {
     on_enableWikiLinkSupportCheckBox_toggled(ui->enableWikiLinkSupportCheckBox->isChecked());
     ui->wikiLinkFileNameAutoSelectCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/wikiLinkFileNameAutoSelect"), false).toBool());
+    ui->autocompleteSingleResultCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/autocompleteApplySingleResult"), false).toBool());
     ui->hangingIndentCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/hangingIndent"), false).toBool());
     ui->showMarkdownImagePreviewsCheckBox->setChecked(
@@ -129,6 +131,8 @@ void EditorSettingsWidget::storeSettings() {
                       ui->enableWikiLinkSupportCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/wikiLinkFileNameAutoSelect"),
                       ui->wikiLinkFileNameAutoSelectCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/autocompleteApplySingleResult"),
+                      ui->autocompleteSingleResultCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/hangingIndent"),
                       ui->hangingIndentCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/showMarkdownImagePreviews"),

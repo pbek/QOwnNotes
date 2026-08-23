@@ -1468,7 +1468,34 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
     globalPos.setX(globalPos.x() + viewportMargins().left());
 
     if (menu.actions().count() > 0) {
-        QAction *selectedItem = menu.exec(globalPos);
+        // If there is only one completion candidate and the setting is
+        // enabled, insert it directly without showing the popup menu.
+        // Separators are ignored while counting the candidates.
+        QAction *selectedItem = nullptr;
+        if (SettingsService()
+                .value(QStringLiteral("Editor/autocompleteApplySingleResult"), false)
+                .toBool()) {
+            QAction *singleAction = nullptr;
+            for (QAction *action : menu.actions()) {
+                if (action->isSeparator()) {
+                    continue;
+                }
+
+                if (singleAction != nullptr) {
+                    singleAction = nullptr;
+                    break;
+                }
+
+                singleAction = action;
+            }
+
+            selectedItem = singleAction;
+        }
+
+        if (selectedItem == nullptr) {
+            selectedItem = menu.exec(globalPos);
+        }
+
         if (selectedItem) {
             const QString text = selectedItem->data().toString();
             const QString type = selectedItem->whatsThis();
@@ -4059,6 +4086,12 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
         return;
     }
 
+    // If there is only one completion item and the setting is enabled,
+    // insert it directly without showing the popup menu
+    const bool applySingleResult =
+        SettingsService()
+            .value(QStringLiteral("Editor/autocompleteApplySingleResult"), false)
+            .toBool();
     auto updateFilter = [filterEdit, completionActions]() {
         const QString query = filterEdit->text().trimmed();
         const bool hasQuery = !query.isEmpty();
@@ -4095,7 +4128,9 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
         }
     });
 
-    QAction *selectedItem = menu.exec(globalPos);
+    QAction *selectedItem = (applySingleResult && completionActions.count() == 1)
+                                ? completionActions.first()
+                                : menu.exec(globalPos);
     if (!selectedItem) {
         return;
     }

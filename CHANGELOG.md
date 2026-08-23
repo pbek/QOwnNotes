@@ -2,6 +2,10 @@
 
 ## 26.8.8
 
+- Added a new editor setting to insert an autocompletion directly if there is
+  only one result, without showing the popup menu; it applies to word,
+  wiki-link, equation, script and Markdown LSP completions and is disabled
+  by default (for [#3703](https://github.com/pbek/QOwnNotes/issues/3703))
 - Fixed the <kbd>Ctrl</kbd> + <kbd>Space</kbd> autocompletion menu not showing word,
   wiki-link, equation or script completions when Markdown LSP support is enabled;
   the LSP server is now only queried if there are no built-in completions

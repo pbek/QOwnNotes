@@ -223,16 +223,26 @@
         </property>
        </widget>
       </item>
-      <item row="18" column="0" colspan="4">
-       <widget class="QCheckBox" name="wikiLinkFileNameAutoSelectCheckBox">
-        <property name="toolTip">
-         <string>Show the note filename selection when [[ is typed</string>
-        </property>
-        <property name="text">
-         <string>Show note filename selection when [[ is typed</string>
-        </property>
-       </widget>
-      </item>
+       <item row="18" column="0" colspan="4">
+        <widget class="QCheckBox" name="wikiLinkFileNameAutoSelectCheckBox">
+         <property name="toolTip">
+          <string>Show the note filename selection when [[ is typed</string>
+         </property>
+         <property name="text">
+          <string>Show note filename selection when [[ is typed</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0" colspan="4">
+        <widget class="QCheckBox" name="autocompleteSingleResultCheckBox">
+         <property name="toolTip">
+          <string>Applies to word, wiki-link, equation, script and Markdown LSP completions</string>
+         </property>
+         <property name="text">
+          <string>Insert autocompletion directly if there is only one result</string>
+         </property>
+        </widget>
+       </item>
      </layout>
     </widget>
    </item>
