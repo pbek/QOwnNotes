@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.8.8
+
+- Fixed the <kbd>Ctrl</kbd> + <kbd>Space</kbd> autocompletion menu not showing word,
+  wiki-link, equation or script completions when Markdown LSP support is enabled;
+  the LSP server is now only queried if there are no built-in completions
+  (for [#3705](https://github.com/pbek/QOwnNotes/issues/3705))
+
 ## 26.8.7
 
 - The pointer cursor now appears over the entire inline Markdown link and

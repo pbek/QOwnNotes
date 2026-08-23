@@ -1401,7 +1401,21 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         return;
     }
 
-    if (!equationSolved && _markdownLspEnabled && _markdownLspClient &&
+    // Gather the built-in completion candidates first, so they can take
+    // precedence over the asynchronous Markdown LSP completion
+    QStringList resultList;
+    const bool hasWordCompletions = !wikiContextActive && autoComplete(resultList);
+
+    // Load texts from scripts to show in the autocompletion list
+    const QStringList autocompletionList = ScriptingService::instance()->callAutocompletionHook();
+
+    const bool hasBuiltInCompletions =
+        wikiContextActive || equationSolved || hasWordCompletions || !autocompletionList.isEmpty();
+
+    // Only request completions from the Markdown LSP server if there are no
+    // built-in completions, otherwise the asynchronous LSP response would
+    // replace the built-in autocompletion menu
+    if (!hasBuiltInCompletions && _markdownLspEnabled && _markdownLspClient &&
         !_markdownLspUri.isEmpty()) {
         const QTextCursor cursor = textCursor();
         const int line = cursor.blockNumber();
@@ -1430,17 +1444,12 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
         action->setWhatsThis(QStringLiteral("equation"));
     }
 
-    QStringList resultList;
-    if (!wikiContextActive && autoComplete(resultList)) {
-        for (const QString &text : Utils::asConst(resultList)) {
-            auto *action = menu.addAction(text);
-            action->setData(text);
-            action->setWhatsThis(QStringLiteral("autocomplete"));
-        }
+    for (const QString &text : Utils::asConst(resultList)) {
+        auto *action = menu.addAction(text);
+        action->setData(text);
+        action->setWhatsThis(QStringLiteral("autocomplete"));
     }
 
-    // load texts from scripts to show in the autocompletion list
-    const QStringList autocompletionList = ScriptingService::instance()->callAutocompletionHook();
     if (!autocompletionList.isEmpty()) {
         auto *action = menu.addAction(QString());
         action->setSeparator(true);
