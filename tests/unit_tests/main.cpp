@@ -9,6 +9,7 @@
 #include "testcases/app/test_network.h"
 #include "testcases/app/test_notes.h"
 #include "testcases/app/test_qmarkdowntextedit.h"
+#include "testcases/app/test_script.h"
 #include "testcases/app/test_settingsservice.h"
 #include "testcases/app/test_utilsmisc.h"
 #include "utils/schema.h"
@@ -30,6 +31,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestMetricsService(), argc, argv) +
                          QTest::qExec(new TestNavigationWidget(), argc, argv) +
                          QTest::qExec(new TestSettingsService(), argc, argv) +
+                         QTest::qExec(new TestScript(), argc, argv) +
                          QTest::qExec(new TestNetwork(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
                          QTest::qExec(new TestUtilsMisc(), argc, argv);

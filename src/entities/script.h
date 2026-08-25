@@ -82,6 +82,14 @@ class Script {
     bool isScriptFromRepository() const;
     QUrl remoteScriptUrl() const;
     QUrl remoteFileUrl(const QString& fileName) const;
+    QUrl remoteChangelogUrl() const;
+    QUrl repositoryChangelogUrl() const;
+    static QString changelogForVersionRange(const QString& changelog,
+                                            const QString& installedVersion,
+                                            const QString& targetVersion);
+    static QString changelogHtmlForVersionRange(const QString& changelog,
+                                                const QString& installedVersion,
+                                                const QString& targetVersion);
     static bool scriptFromRepositoryExists(const QString& identifier);
     void setSettingsVariablesJson(QString json);
     QString getSettingsVariablesJson(bool hideSecrets) const;

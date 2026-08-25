@@ -11,6 +11,7 @@ HEADERS  += \
     $$PWD/test_notes.h \
     $$PWD/test_qmarkdowntextedit.h \
     $$PWD/test_settingsservice.h \
+    $$PWD/test_script.h \
     $$PWD/test_utilsmisc.h \
     $$APP_SRC_DIR/version.h \
     $$APP_SRC_DIR/release.h \
@@ -70,6 +71,7 @@ SOURCES += \
     $$PWD/test_notes.cpp \
     $$PWD/test_qmarkdowntextedit.cpp \
     $$PWD/test_settingsservice.cpp \
+    $$PWD/test_script.cpp \
     $$PWD/test_utilsmisc.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
     $$APP_SRC_DIR/api/noteapi.cpp \

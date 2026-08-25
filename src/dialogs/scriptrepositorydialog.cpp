@@ -45,6 +45,10 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpd
     ui->automaticScriptUpdatesCheckBox->setChecked(
         settings.value(QStringLiteral("automaticScriptUpdates")).toBool());
     ui->automaticScriptUpdatesCheckBox->setVisible(checkForUpdates);
+    ui->changesTextBrowser->document()->setDefaultStyleSheet(Utils::Misc::genericCSS());
+    ui->changelogHeadlineLabel->hide();
+    ui->changelogLinkLabel->hide();
+    ui->changesFrame->hide();
     enableOverview(true);
 
     if (!checkForUpdates) {
@@ -331,7 +335,7 @@ void ScriptRepositoryDialog::reloadCurrentScriptInfo() {
     ui->platformHeadlineLabel->setText(
         (infoJson.platformList.count() > 1 ? tr("Supported platforms") : tr("Supported platform")) +
         ":");
-    ui->repositoryLinkLabel->setText("<a href=\"https://github.com/qownnotes/scripts/tree/master/" +
+    ui->repositoryLinkLabel->setText("<a href=\"https://github.com/qownnotes/scripts/tree/main/" +
                                      infoJson.identifier + "\">" + tr("Open repository") + "</a>");
 
     Script script = Script::fetchByIdentifier(infoJson.identifier);
@@ -358,6 +362,68 @@ void ScriptRepositoryDialog::reloadCurrentScriptInfo() {
         ui->currentlyInstalledVersionLabel->hide();
         ui->currentlyInstalledVersionTextLabel->hide();
     }
+
+    updateScriptChangelog(infoJson, script);
+}
+
+QString ScriptRepositoryDialog::loadScriptChangelog(const ScriptInfoJson &infoJson) {
+    if (_scriptChangelogCache.contains(infoJson.identifier)) {
+        return _scriptChangelogCache.value(infoJson.identifier);
+    }
+
+    Script script;
+    script.setIdentifier(infoJson.identifier);
+    int statusCode = 0;
+    const QByteArray changelogData =
+        Utils::Misc::downloadUrlWithStatusCode(script.remoteChangelogUrl(), statusCode);
+    const QString changelog = statusCode == 200 ? QString::fromUtf8(changelogData) : QString();
+    _scriptChangelogCache.insert(infoJson.identifier, changelog);
+
+    return changelog;
+}
+
+void ScriptRepositoryDialog::updateScriptChangelog(const ScriptInfoJson &infoJson,
+                                                   const Script &script) {
+    ui->changelogHeadlineLabel->hide();
+    ui->changelogLinkLabel->hide();
+    ui->changesFrame->hide();
+
+    const QString changelog = loadScriptChangelog(infoJson);
+    if (changelog.isEmpty()) {
+        return;
+    }
+
+    if (!_checkForUpdates) {
+        Script repositoryScript;
+        repositoryScript.setIdentifier(infoJson.identifier);
+        const QString changelogUrl = repositoryScript.repositoryChangelogUrl().toString();
+        ui->changelogLinkLabel->setText(
+            QStringLiteral("<a href=\"%1\">%2</a>")
+                .arg(changelogUrl.toHtmlEscaped(), tr("Open changelog")));
+        ui->changelogHeadlineLabel->show();
+        ui->changelogLinkLabel->show();
+        return;
+    }
+
+    if (!script.isFetched()) {
+        return;
+    }
+
+    const QString installedVersion = script.getScriptInfoJson().version;
+    if (!(VersionNumber(installedVersion) < VersionNumber(infoJson.version))) {
+        return;
+    }
+
+    const QString changesHtml =
+        Script::changelogHtmlForVersionRange(changelog, installedVersion, infoJson.version);
+    if (changesHtml.isEmpty()) {
+        return;
+    }
+
+    ui->changesHeadlineLabel->setText(
+        tr("Changes from version %1 to %2:").arg(installedVersion, infoJson.version));
+    ui->changesTextBrowser->setHtml(changesHtml);
+    ui->changesFrame->show();
 }
 
 /**

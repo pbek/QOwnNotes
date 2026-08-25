@@ -196,7 +196,7 @@ void ScriptingSettingsWidget::applyScriptInfoJsonToUi(const ScriptInfoJson &info
     if (hasRepositoryLink) {
         ui->scriptRepositoryLinkLabel->setText(
             "<a href=\"https://github.com/qownnotes/scripts/tree/"
-            "master/" +
+            "main/" +
             infoJson.identifier + "\">" + tr("Open repository") + "</a>");
     } else {
         ui->scriptRepositoryLinkLabel->clear();

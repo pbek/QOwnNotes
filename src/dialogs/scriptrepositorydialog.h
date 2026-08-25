@@ -54,6 +54,7 @@ class ScriptRepositoryDialog : public MasterDialog {
     Script _lastInstalledScript;
     QHash<QString, ScriptInfoJson> _scriptMetaDataCache;
     QHash<QString, QString> _scriptMetaDataJsonTextCache;
+    QHash<QString, QString> _scriptChangelogCache;
     QDateTime _lastScriptMetaDataCacheUpdateTime;
 
     void searchScript();
@@ -69,6 +70,8 @@ class ScriptRepositoryDialog : public MasterDialog {
     QString getCurrentInfoJsonString();
 
     void reloadCurrentScriptInfo();
+    QString loadScriptChangelog(const ScriptInfoJson &infoJson);
+    void updateScriptChangelog(const ScriptInfoJson &infoJson, const Script &script);
 
     bool isScriptCacheExpired();
     bool loadScriptRepositoryMetaData();
