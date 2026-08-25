@@ -2401,6 +2401,10 @@ QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(const Note &note) {
     return _noteTreeManager->findNoteInNoteTreeWidget(note);
 }
 
+QTreeWidgetItem *MainWindow::findFolderInNoteTreeWidget(int folderId) {
+    return _noteTreeManager->findFolderInNoteTreeWidget(folderId);
+}
+
 void MainWindow::readSettings() {
     NoteFolder::migrateToNoteFolders();
 

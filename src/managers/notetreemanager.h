@@ -36,7 +36,8 @@ class NoteTreeManager : public QObject {
     void updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem *noteItem = nullptr);
     void updateNoteTreeWidgetItemIcon(const Note &note);
     void makeCurrentNoteFirstInNoteList();
-    QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note);
+    QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note) const;
+    QTreeWidgetItem *findFolderInNoteTreeWidget(int folderId) const;
     void removeNoteFromNoteTreeWidget(Note &note) const;
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
     int getSelectedNotesCount() const;

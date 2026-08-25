@@ -487,6 +487,11 @@ void NoteIndexManager::loadNoteDirectoryList() {
         // in the end we need to set the current item again if we can find it
         if (item != nullptr) {
             _ui->noteTreeWidget->setCurrentItem(item);
+        } else if (isCurrentNoteTreeEnabled) {
+            // Keep the active folder selected if the current note was removed.
+            auto *folderItem =
+                _mainWindow->findFolderInNoteTreeWidget(NoteSubFolder::activeNoteSubFolderId());
+            _ui->noteTreeWidget->setCurrentItem(folderItem);
         }
     }
 }

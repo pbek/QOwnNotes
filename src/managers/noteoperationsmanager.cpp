@@ -101,8 +101,14 @@ void NoteOperationsManager::removeCurrentNote() {
             _mainWindow->unsetCurrentNote();
         }
 
-        // set a new current note
-        _mainWindow->resetCurrentNote(false);
+        if (NoteFolder::isCurrentNoteTreeEnabled()) {
+            // A synthetic Down key would select the root note folder instead.
+            auto *folderItem =
+                _mainWindow->findFolderInNoteTreeWidget(NoteSubFolder::activeNoteSubFolderId());
+            _ui->noteTreeWidget->setCurrentItem(folderItem);
+        } else {
+            _mainWindow->resetCurrentNote(false);
+        }
 
         // we try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
@@ -291,9 +297,11 @@ void NoteOperationsManager::removeSelectedNotes() {
         // something is happening after this method that reloads the note folder
         _mainWindow->directoryWatcherWorkaround(false);
 
-        // Set a new current note (needed whether notes or folders were deleted,
-        // as folders may contain the currently displayed note)
-        _mainWindow->resetCurrentNote(false);
+        // Set a new current note in flat-list mode. The integrated note tree restores its active
+        // folder after loadNoteDirectoryList() rebuilt the tree.
+        if (!NoteFolder::isCurrentNoteTreeEnabled()) {
+            _mainWindow->resetCurrentNote(false);
+        }
 
         // Reload note folder if folders were deleted
         if (folderCount > 0) {

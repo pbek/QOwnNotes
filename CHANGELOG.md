@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.8.10
+
+- Fixed deleting a note in the note tree resetting the selected note subfolder to
+  the root folder (for [#3708](https://github.com/pbek/QOwnNotes/issues/3708))
+
 ## 26.8.9
 
 - The **Script repository** dialog now links to available script changelogs and shows

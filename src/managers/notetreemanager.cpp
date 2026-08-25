@@ -314,7 +314,7 @@ void NoteTreeManager::makeCurrentNoteFirstInNoteList() {
  * @param note
  * @return
  */
-QTreeWidgetItem *NoteTreeManager::findNoteInNoteTreeWidget(const Note &note) {
+QTreeWidgetItem *NoteTreeManager::findNoteInNoteTreeWidget(const Note &note) const {
     const int noteId = note.getId();
     const QList<QTreeWidgetItem *> items =
         _ui->noteTreeWidget->findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
@@ -329,11 +329,25 @@ QTreeWidgetItem *NoteTreeManager::findNoteInNoteTreeWidget(const Note &note) {
     return nullptr;
 }
 
+QTreeWidgetItem *NoteTreeManager::findFolderInNoteTreeWidget(int folderId) const {
+    const QList<QTreeWidgetItem *> items =
+        _ui->noteTreeWidget->findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
+
+    for (QTreeWidgetItem *item : items) {
+        if (item->data(0, Qt::UserRole + 1) == MainWindow::FolderType &&
+            item->data(0, Qt::UserRole).toInt() == folderId) {
+            return item;
+        }
+    }
+
+    return nullptr;
+}
+
 /**
  * Searches and removes note from the note tree widget
  */
 void NoteTreeManager::removeNoteFromNoteTreeWidget(Note &note) const {
-    auto *item = Utils::Gui::getTreeWidgetItemWithUserData(_ui->noteTreeWidget, note.getId());
+    auto *item = findNoteInNoteTreeWidget(note);
 
     if (item != nullptr) {
         delete (item);

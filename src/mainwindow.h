@@ -1206,6 +1206,8 @@ class MainWindow : public QMainWindow {
 
     QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note);
 
+    QTreeWidgetItem *findFolderInNoteTreeWidget(int folderId);
+
     void jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList = false);
 
     void updateShareButton();
