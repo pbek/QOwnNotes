@@ -4,10 +4,9 @@
 
 - The **Script repository** dialog now links to available script changelogs and shows
   the relevant changelog entries between the installed and target versions when updating
-  a script
-  (for [#3709](https://github.com/pbek/QOwnNotes/issues/3709))
-- Updated script repository links and downloads to use the repository's `main` branch
-  instead of the obsolete `master` branch
+  a script (for [#3709](https://github.com/pbek/QOwnNotes/issues/3709))
+  - Updated script repository links and downloads to use the repository's `main` branch
+    instead of the obsolete `master` branch
 
 ## 26.8.8
 
