@@ -75,6 +75,113 @@ void TestQMarkdownTextEdit::testRCodeBlockHighlighting() {
     QCOMPARE(formatAt(codeBlock, commentPosition + 2).foreground(), commentFormat.foreground());
 }
 
+void TestQMarkdownTextEdit::testCodeBlockLanguageAliases_data() {
+    QTest::addColumn<QString>("language");
+    QTest::addColumn<int>("state");
+
+    const auto addAliases = [](MarkdownHighlighter::HighlighterState state,
+                               const QStringList &aliases) {
+        for (const QString &alias : aliases) {
+            QTest::newRow(qPrintable(alias)) << alias << int(state);
+        }
+    };
+
+    addAliases(MarkdownHighlighter::CodeBash, {QStringLiteral("bash"), QStringLiteral("sh"),
+                                               QStringLiteral("shell"), QStringLiteral("zsh")});
+    addAliases(MarkdownHighlighter::CodeC, {QStringLiteral("c"), QStringLiteral("h")});
+    addAliases(MarkdownHighlighter::CodeCpp,
+               {QStringLiteral("c++"), QStringLiteral("cc"), QStringLiteral("cpp"),
+                QStringLiteral("cxx"), QStringLiteral("hpp"), QStringLiteral("hxx")});
+    addAliases(MarkdownHighlighter::CodeCSharp,
+               {QStringLiteral("c#"), QStringLiteral("cs"), QStringLiteral("csharp")});
+    addAliases(
+        MarkdownHighlighter::CodeConsole,
+        {QStringLiteral("console"), QStringLiteral("shell-session"), QStringLiteral("terminal")});
+    addAliases(MarkdownHighlighter::CodeGo, {QStringLiteral("go"), QStringLiteral("golang")});
+    addAliases(MarkdownHighlighter::CodeXML, {QStringLiteral("html"), QStringLiteral("svg"),
+                                              QStringLiteral("xhtml"), QStringLiteral("xml")});
+    addAliases(MarkdownHighlighter::CodeINI, {QStringLiteral("cfg"), QStringLiteral("ini")});
+    addAliases(MarkdownHighlighter::CodeJs, {QStringLiteral("javascript"), QStringLiteral("js"),
+                                             QStringLiteral("jsx"), QStringLiteral("node")});
+    addAliases(MarkdownHighlighter::CodeJSON, {QStringLiteral("json"), QStringLiteral("jsonc")});
+    addAliases(MarkdownHighlighter::CodeMake, {QStringLiteral("make"), QStringLiteral("makefile")});
+    addAliases(MarkdownHighlighter::CodePython,
+               {QStringLiteral("py"), QStringLiteral("python"), QStringLiteral("python3")});
+    addAliases(MarkdownHighlighter::CodeRust, {QStringLiteral("rs"), QStringLiteral("rust")});
+    addAliases(MarkdownHighlighter::CodeSystemVerilog,
+               {QStringLiteral("sv"), QStringLiteral("systemverilog")});
+    addAliases(MarkdownHighlighter::CodeTypeScript,
+               {QStringLiteral("ts"), QStringLiteral("tsx"), QStringLiteral("typescript")});
+}
+
+void TestQMarkdownTextEdit::testCodeBlockLanguageAliases() {
+    QFETCH(QString, language);
+    QFETCH(int, state);
+
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("```") + language + QStringLiteral("\nvalue\n```"));
+
+    QCOMPARE(editor.document()->firstBlock().userState(), state);
+    QCOMPARE(editor.document()->findBlockByNumber(1).userState(), state);
+}
+
+void TestQMarkdownTextEdit::testCodeBlockInfoStrings() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("```JavaScript title=app.js\nconst value = true;\n```"));
+    QCOMPARE(editor.document()->firstBlock().userState(), int(MarkdownHighlighter::CodeJs));
+
+    editor.setPlainText(QStringLiteral("```{.python #example}\nprint(True)\n```"));
+    QCOMPARE(editor.document()->firstBlock().userState(), int(MarkdownHighlighter::CodePython));
+}
+
+void TestQMarkdownTextEdit::testTildeSystemVerilogHighlighting() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("~~~sv\nmodule counter;\n~~~"));
+
+    const QTextBlock codeBlock = editor.document()->findBlockByNumber(1);
+    QCOMPARE(codeBlock.userState(), int(MarkdownHighlighter::CodeSystemVerilog) + 300);
+    QVERIFY(formatAt(codeBlock, 0).foreground() !=
+            formatAt(codeBlock, codeBlock.text().indexOf("counter")).foreground());
+}
+
+void TestQMarkdownTextEdit::testSqlCodeBlockHighlighting() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral(
+        "```sql\nSELECT total - discount AS value;\nSELECT '-- text'; -- comment\n```"));
+
+    const QTextBlock expressionBlock = editor.document()->findBlockByNumber(1);
+    const QTextCharFormat defaultFormat =
+        formatAt(expressionBlock, expressionBlock.text().indexOf("discount"));
+    QCOMPARE(formatAt(expressionBlock, expressionBlock.text().indexOf('-')).foreground(),
+             defaultFormat.foreground());
+
+    const QTextBlock stringBlock = editor.document()->findBlockByNumber(2);
+    const int stringDash = stringBlock.text().indexOf('-');
+    const int commentDash = stringBlock.text().lastIndexOf(QLatin1String("--"));
+    QVERIFY(formatAt(stringBlock, stringDash).foreground() !=
+            formatAt(stringBlock, commentDash).foreground());
+    QCOMPARE(formatAt(stringBlock, commentDash).foreground(),
+             formatAt(stringBlock, commentDash + 3).foreground());
+}
+
+void TestQMarkdownTextEdit::testForthCommentHighlighting() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("```forth\n1 2 + \\ comment\n( stack effect ) DUP\n```"));
+
+    const QTextBlock lineComment = editor.document()->findBlockByNumber(1);
+    const int slash = lineComment.text().indexOf(QLatin1Char('\\'));
+    QVERIFY(formatAt(lineComment, slash).foreground() != formatAt(lineComment, 0).foreground());
+    QCOMPARE(formatAt(lineComment, slash).foreground(),
+             formatAt(lineComment, lineComment.text().length() - 1).foreground());
+
+    const QTextBlock parenComment = editor.document()->findBlockByNumber(2);
+    const int closingParen = parenComment.text().indexOf(QLatin1Char(')'));
+    QCOMPARE(formatAt(parenComment, 0).foreground(),
+             formatAt(parenComment, closingParen).foreground());
+    QVERIFY(formatAt(parenComment, closingParen).foreground() !=
+            formatAt(parenComment, parenComment.text().indexOf("DUP")).foreground());
+}
+
 void TestQMarkdownTextEdit::testMultilineInlineHighlighting() {
     QMarkdownTextEdit editor;
 

@@ -2,6 +2,10 @@
 
 ## 26.8.10
 
+- Improved fenced code block syntax highlighting in the note editor and preview with
+  more common language aliases, support for richer fence info strings, and fixes for
+  JavaScript, SystemVerilog, SQL, Forth, C/C++ and CSS highlighting
+  (for [#3711](https://github.com/pbek/QOwnNotes/issues/3711))
 - Fixed deleting a note in the note tree resetting the selected note subfolder to
   the root folder (for [#3708](https://github.com/pbek/QOwnNotes/issues/3708))
 
