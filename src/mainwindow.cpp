@@ -114,7 +114,6 @@
 #include "dialogs/aboutdialog.h"
 #include "dialogs/commandbar.h"
 #include "dialogs/issueassistantdialog.h"
-#include "dialogs/layoutdialog.h"
 #include "dialogs/linkdialog.h"
 #include "dialogs/notediffdialog.h"
 #include "dialogs/passworddialog.h"
@@ -7278,15 +7277,10 @@ void MainWindow::on_actionSwitch_to_previous_layout_triggered() {
 }
 
 /**
- * Opens the layout management dialog to add, rename, delete and reorder layouts
+ * Opens the layout settings page
  */
 void MainWindow::on_actionManage_layouts_triggered() {
-    auto *dialog = new LayoutDialog(this);
-    dialog->exec();
-    delete dialog;
-
-    // Reload layout lists after the dialog was closed to reflect any changes
-    updateLayoutLists();
+    openSettingsDialog(SettingsDialog::LayoutsPage);
 }
 
 /**

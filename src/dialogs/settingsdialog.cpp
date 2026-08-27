@@ -232,9 +232,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->aiSettingsWidget, &AiSettingsWidget::searchScriptRepositoryRequested, this,
             [this]() { ui->scriptingSettingsWidget->searchScriptInRepository(); });
 
-    //    connect(ui->layoutPresetWidget, SIGNAL(layoutStored(QString)),
-    //            this, SLOT(needRestart()));
-    connect(ui->layoutPresetWidget, &LayoutPresetWidget::layoutStored, this,
+    connect(ui->layoutsSettingsWidget, &LayoutsSettingsWidget::layoutStored, this,
             &SettingsDialog::onLayoutStored);
 
     if (fromWelcomeDialog) {
@@ -834,6 +832,16 @@ void SettingsDialog::storeShortcutSettings() {
         const QString actionObjectName = item->data(1, Qt::UserRole).toString();
 
         if (!actionObjectName.isEmpty()) {
+            const QString layoutActionPrefix = QStringLiteral("restoreLayout-");
+            if (actionObjectName.startsWith(layoutActionPrefix) &&
+                !settings.value(QStringLiteral("layouts"))
+                     .toStringList()
+                     .contains(actionObjectName.mid(layoutActionPrefix.length()))) {
+                settings.remove(QStringLiteral("Shortcuts/MainWindow-") + actionObjectName);
+                settings.remove(QStringLiteral("GlobalShortcuts/MainWindow-") + actionObjectName);
+                return;
+            }
+
             auto *frameWidget = ui->shortcutTreeWidget->itemWidget(item, 1);
 
             if (frameWidget != nullptr) {
@@ -1007,6 +1015,7 @@ void SettingsDialog::onLayoutStored(const QString &layoutUuid) {
 
     // Switch to the new layout after creating it from the preset.
     mainWindow->setCurrentLayout(layoutUuid);
+    ui->layoutsSettingsWidget->refreshLayouts(layoutUuid);
 }
 
 /**
@@ -1142,19 +1151,14 @@ void SettingsDialog::on_settingsTreeWidget_currentItemChanged(QTreeWidgetItem *c
 
     ui->settingsStackedWidget->setCurrentIndex(currentIndex);
 
-    switch (currentIndex) {
-        case SettingsPages::LayoutPresetsPage:
-            ui->layoutPresetWidget->resizeLayoutPresetImage();
-            break;
-        case SettingsPages::ShortcutPage:
-            if (Utils::Gui::hasTreeWidgetHeaderLayout(ui->shortcutTreeWidget)) {
-                Utils::Gui::restoreTreeWidgetHeaderLayout(ui->shortcutTreeWidget);
-            } else {
-                ui->shortcutTreeWidget->resizeColumnToContents(0);
-                ui->shortcutTreeWidget->resizeColumnToContents(1);
-                ui->shortcutTreeWidget->resizeColumnToContents(2);
-            }
-            break;
+    if (currentIndex == SettingsPages::ShortcutPage) {
+        if (Utils::Gui::hasTreeWidgetHeaderLayout(ui->shortcutTreeWidget)) {
+            Utils::Gui::restoreTreeWidgetHeaderLayout(ui->shortcutTreeWidget);
+        } else {
+            ui->shortcutTreeWidget->resizeColumnToContents(0);
+            ui->shortcutTreeWidget->resizeColumnToContents(1);
+            ui->shortcutTreeWidget->resizeColumnToContents(2);
+        }
     }
 }
 

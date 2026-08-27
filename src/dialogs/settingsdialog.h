@@ -67,7 +67,7 @@ class SettingsDialog : public MasterDialog {
         GitPage,
         PanelsPage,
         LocalTrashPage,
-        LayoutPresetsPage,
+        LayoutsPage,
         WebCompanionPage,
         WebApplicationPage,
         ExperimentalPage,

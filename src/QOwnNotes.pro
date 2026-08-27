@@ -247,6 +247,7 @@ SOURCES += main.cpp\
     widgets/layoutpresetwidget.cpp \
     widgets/htmlpreviewwidget.cpp \
     widgets/settings/colormodesettingswidget.cpp \
+    widgets/settings/layoutssettingswidget.cpp \
     widgets/settings/gitsettingswidget.cpp \
     widgets/settings/localtrashsettingswidget.cpp \
     widgets/settings/debugoptionsettingswidget.cpp \
@@ -273,7 +274,6 @@ SOURCES += main.cpp\
     dialogs/websockettokendialog.cpp \
     dialogs/imagedialog.cpp \
     dialogs/commandbar.cpp \
-    dialogs/layoutdialog.cpp \
     models/commandmodel.cpp \
     libraries/fuzzy/kfuzzymatcher.cpp \
     libraries/qr-code-generator/QrCode.cpp \
@@ -419,6 +419,7 @@ HEADERS  += mainwindow.h \
     widgets/layoutpresetwidget.h \
     widgets/htmlpreviewwidget.h \
     widgets/settings/colormodesettingswidget.h \
+    widgets/settings/layoutssettingswidget.h \
     widgets/settings/gitsettingswidget.h \
     widgets/settings/localtrashsettingswidget.h \
     widgets/settings/debugoptionsettingswidget.h \
@@ -445,7 +446,6 @@ HEADERS  += mainwindow.h \
     dialogs/websockettokendialog.h \
     dialogs/imagedialog.h \
     dialogs/commandbar.h \
-    dialogs/layoutdialog.h \
     models/commandmodel.h \
     libraries/fuzzy/kfuzzymatcher.h \
     libraries/qr-code-generator/QrCode.hpp \
@@ -529,8 +529,7 @@ FORMS    += mainwindow.ui \
      widgets/settings/generalsettingswidget.ui \
      widgets/settings/scriptingsettingswidget.ui \
     dialogs/serverbookmarksimportdialog.ui \
-    dialogs/websockettokendialog.ui \
-    dialogs/layoutdialog.ui
+    dialogs/websockettokendialog.ui
 
 RESOURCES += \
     images.qrc \

@@ -2,6 +2,11 @@
 
 ## 26.8.10
 
+- Added a new **Layouts** panel to the interface settings where layouts can be
+  created, switched, removed, renamed, reordered, configured to use the central widget,
+  or created from layout presets in a dedicated dialog; the former layout
+  management dialog and separate preset settings page were merged into this page
+  (for [#3713](https://github.com/pbek/QOwnNotes/issues/3713))
 - Improved fenced code block syntax highlighting in the note editor and preview with
   more common language aliases, support for richer fence info strings, and fixes for
   JavaScript, SystemVerilog, SQL, Forth, C/C++ and CSS highlighting

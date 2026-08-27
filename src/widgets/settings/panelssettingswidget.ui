@@ -246,24 +246,14 @@
       <string>Note edit panel</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_67">
-      <item row="0" column="1" colspan="2">
-       <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
-        <property name="toolTip">
-         <string>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</string>
-        </property>
-        <property name="text">
-         <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1" colspan="2">
+       <item row="0" column="1" colspan="2">
        <widget class="QCheckBox" name="restoreNoteTabsCheckBox">
         <property name="text">
          <string>Restore open note tabs at application startup and when note folders are switched</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1" colspan="2">
+       <item row="1" column="1" colspan="2">
        <widget class="QCheckBox" name="hideTabCloseButtonCheckBox">
         <property name="text">
          <string>Hide tab close button</string>

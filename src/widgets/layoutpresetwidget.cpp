@@ -53,12 +53,6 @@ void LayoutPresetWidget::updateCurrentLayoutPreset() {
             .toString();
     QString layoutPresetDescription = getLayoutPresetDescription(layoutPresetIdentifier);
 
-    if (_manualSettingsStoring) {
-        layoutPresetDescription +=
-            "\n\n" + tr("Keep in mind that layouts that demand that there is no central "
-                        "widget will not work properly if the central widget is enabled.");
-    }
-
     ui->layoutPresetDescriptionLabel->setText(layoutPresetDescription);
 
     auto scene = new QGraphicsScene();

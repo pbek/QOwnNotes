@@ -300,6 +300,96 @@ bool LayoutManager::createNewLayout(QString name) {
     return true;
 }
 
+bool LayoutManager::removeLayout(const QString &uuid) {
+    SettingsService settings;
+    QStringList layouts = getLayoutUuidList();
+    if ((layouts.count() < 2) || !layouts.contains(uuid)) {
+        return false;
+    }
+
+    const QString currentUuid = currentLayoutUuid();
+    const int removedIndex = layouts.indexOf(uuid);
+    layouts.removeAll(uuid);
+    settings.setValue(QStringLiteral("layouts"), layouts);
+
+    settings.beginGroup(QStringLiteral("layout-") + uuid);
+    settings.remove(QLatin1String(""));
+    settings.endGroup();
+    settings.remove(QStringLiteral("Shortcuts/MainWindow-restoreLayout-") + uuid);
+    settings.remove(QStringLiteral("GlobalShortcuts/MainWindow-restoreLayout-") + uuid);
+
+    if (currentUuid == uuid) {
+        const QString replacementUuid = layouts.at(qMin(removedIndex, layouts.count() - 1));
+        settings.setValue(QStringLiteral("previousLayout"), QString());
+        settings.setValue(QStringLiteral("currentLayout"), replacementUuid);
+        QTimer::singleShot(0, _mainWindow, SLOT(restoreCurrentLayout()));
+        _mainWindow->setNoteTextFromNote(&_mainWindow->currentNote, true);
+        ScriptingService::instance()->callLayoutSwitchedHook(uuid, replacementUuid);
+    } else if (settings.value(QStringLiteral("previousLayout")).toString() == uuid) {
+        settings.setValue(QStringLiteral("previousLayout"), QString());
+    }
+
+    updateLayoutLists();
+    return true;
+}
+
+bool LayoutManager::renameLayout(const QString &uuid, const QString &name) {
+    const QString trimmedName = name.trimmed();
+    if (trimmedName.isEmpty() || !getLayoutUuidList().contains(uuid)) {
+        return false;
+    }
+
+    SettingsService settings;
+    const QString key = QStringLiteral("layout-") + uuid + QStringLiteral("/name");
+    if (settings.value(key).toString() == trimmedName) {
+        return false;
+    }
+
+    settings.setValue(key, trimmedName);
+    updateLayoutLists();
+    return true;
+}
+
+bool LayoutManager::setLayoutOrder(const QStringList &uuids) {
+    const QStringList storedUuids = getLayoutUuidList();
+    QStringList currentUuids = storedUuids;
+    QStringList sortedUuids = uuids;
+    currentUuids.sort();
+    sortedUuids.sort();
+    if ((currentUuids != sortedUuids) || (uuids.count() != storedUuids.count())) {
+        return false;
+    }
+
+    SettingsService settings;
+    settings.setValue(QStringLiteral("layouts"), uuids);
+    updateLayoutLists();
+    return true;
+}
+
+bool LayoutManager::layoutNoteEditIsCentralWidget(const QString &uuid) const {
+    SettingsService settings;
+    const QString key =
+        QStringLiteral("layout-") + uuid + QStringLiteral("/noteEditIsCentralWidget");
+    return settings.value(key, settings.value(QStringLiteral("noteEditIsCentralWidget"), true))
+        .toBool();
+}
+
+void LayoutManager::setLayoutNoteEditIsCentralWidget(const QString &uuid, bool enabled) {
+    if (!getLayoutUuidList().contains(uuid)) {
+        return;
+    }
+
+    SettingsService settings;
+    settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/noteEditIsCentralWidget"),
+                      enabled);
+
+    if (uuid == currentLayoutUuid()) {
+        settings.setValue(QStringLiteral("noteEditIsCentralWidget"), enabled);
+        _mainWindow->setNoteEditCentralWidgetEnabled(enabled);
+        storeCurrentLayout();
+    }
+}
+
 /**
  * Returns the uuid of the current layout
  *
@@ -362,23 +452,7 @@ void LayoutManager::on_actionRemove_current_layout_triggered() {
         return;
     }
 
-    // reset current layout
-    layouts.removeAll(uuid);
-    const QString newUuid = layouts.at(0);
-
-    // set the new layout
-    setCurrentLayout(newUuid);
-
-    SettingsService settings;
-    settings.setValue(QStringLiteral("layouts"), layouts);
-
-    // remove all settings in the group
-    settings.beginGroup(QStringLiteral("layout-") + uuid);
-    settings.remove(QLatin1String(""));
-    settings.endGroup();
-
-    // update the menu and combo box
-    updateLayoutLists();
+    removeLayout(uuid);
 }
 
 void LayoutManager::on_actionRename_current_layout_triggered() {
@@ -398,15 +472,7 @@ void LayoutManager::on_actionRename_current_layout_triggered() {
                                  QLineEdit::Normal, name)
                .trimmed();
 
-    if (name.isEmpty()) {
-        return;
-    }
-
-    // rename the layout
-    settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/name"), name);
-
-    // update the menu and combo box
-    updateLayoutLists();
+    renameLayout(uuid, name);
 }
 
 /**

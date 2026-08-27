@@ -325,9 +325,6 @@ set(SOURCE_FILES
     dialogs/websockettokendialog.cpp
     dialogs/websockettokendialog.h
     dialogs/websockettokendialog.ui
-    dialogs/layoutdialog.cpp
-    dialogs/layoutdialog.h
-    dialogs/layoutdialog.ui
     dialogs/imagedialog.cpp
     dialogs/imagedialog.h
     dialogs/imagedialog.ui
@@ -531,6 +528,8 @@ set(SOURCE_FILES
     widgets/settings/colormodesettingswidget.cpp
     widgets/settings/colormodesettingswidget.h
     widgets/settings/colormodesettingswidget.ui
+    widgets/settings/layoutssettingswidget.cpp
+    widgets/settings/layoutssettingswidget.h
     widgets/settings/gitsettingswidget.cpp
     widgets/settings/gitsettingswidget.h
     widgets/settings/gitsettingswidget.ui

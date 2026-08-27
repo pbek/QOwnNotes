@@ -165,8 +165,6 @@ void PanelsSettingsWidget::readSettings() {
     ui->enableNoteTreeCheckBox->setChecked(Utils::Misc::isEnableNoteTree());
 
     // Note folder panel options (previously in main readSettings)
-    ui->noteEditCentralWidgetCheckBox->setChecked(
-        settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool());
     ui->restoreNoteTabsCheckBox->setChecked(
         settings.value(QStringLiteral("restoreNoteTabs"), true).toBool());
     ui->hideTabCloseButtonCheckBox->setChecked(
@@ -264,8 +262,6 @@ void PanelsSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("enableNoteTree"), ui->enableNoteTreeCheckBox->isChecked());
 
     // Note folder panel options (previously in main storeSettings)
-    settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
-                      ui->noteEditCentralWidgetCheckBox->isChecked());
     settings.setValue(QStringLiteral("restoreNoteTabs"), ui->restoreNoteTabsCheckBox->isChecked());
     settings.setValue(QStringLiteral("hideTabCloseButton"),
                       ui->hideTabCloseButtonCheckBox->isChecked());
