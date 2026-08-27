@@ -10,7 +10,7 @@
 
 #include <QWidget>
 
-class QCheckBox;
+class QComboBox;
 class QListWidget;
 class QListWidgetItem;
 class QPushButton;
@@ -33,7 +33,7 @@ class LayoutsSettingsWidget : public QWidget {
     QPushButton *_renameButton;
     QPushButton *_moveUpButton;
     QPushButton *_moveDownButton;
-    QCheckBox *_centralWidgetCheckBox;
+    QComboBox *_centralWidgetComboBox;
     bool _loadingSelection = false;
 
     QString selectedLayoutUuid() const;

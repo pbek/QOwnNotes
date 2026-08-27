@@ -42,8 +42,8 @@ class LayoutManager : public QObject {
     bool removeLayout(const QString &uuid);
     bool renameLayout(const QString &uuid, const QString &name);
     bool setLayoutOrder(const QStringList &uuids);
-    bool layoutNoteEditIsCentralWidget(const QString &uuid) const;
-    void setLayoutNoteEditIsCentralWidget(const QString &uuid, bool enabled);
+    QString layoutCentralWidget(const QString &uuid) const;
+    void setLayoutCentralWidget(const QString &uuid, const QString &centralWidget);
     QString currentLayoutUuid();
     QStringList getLayoutUuidList();
     QString getLayoutUuid(const QString &layoutName);

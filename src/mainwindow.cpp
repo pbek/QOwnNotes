@@ -245,8 +245,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         settings.setValue(QStringLiteral("allowNoteEditing"), false);
     }
 
+    const QString configuredCentralWidget =
+        settings.value(QStringLiteral("centralWidget")).toString();
+    _notePreviewIsCentralWidget = configuredCentralWidget == QLatin1String("note-preview");
     _noteEditIsCentralWidget =
-        settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
+        configuredCentralWidget == QLatin1String("note-edit") ||
+        (configuredCentralWidget.isEmpty() &&
+         settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool());
 
     ui->noteEditTabWidget->setTabBarAutoHide(true);
     ui->noteEditTabWidget->setTabsClosable(
@@ -1123,11 +1128,9 @@ void MainWindow::initDockWidgets() {
     addDockWidget(_noteEditIsCentralWidget ? Qt::LeftDockWidgetArea : Qt::RightDockWidgetArea,
                   _noteTagDockWidget, Qt::Vertical);
 
-    _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
-    _notePreviewDockWidget->setObjectName(QStringLiteral("notePreviewDockWidget"));
-    _notePreviewDockWidget->setWidget(ui->noteViewFrame);
-    _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
-    addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget, Qt::Horizontal);
+    if (!_notePreviewIsCentralWidget) {
+        createNotePreviewDockWidget();
+    }
 
     _noteGraphicsViewDockWidget = new QDockWidget(tr("Note relations"), this);
     _noteGraphicsViewDockWidget->setObjectName(QStringLiteral("noteGraphicsViewDockWidget"));
@@ -1169,7 +1172,9 @@ void MainWindow::initDockWidgets() {
 
         // giving the preview pane a third of the screen, the rest goes to the
         // note edit pane
-        _notePreviewDockWidget->setMaximumWidth(width() / 3);
+        if (_notePreviewDockWidget != nullptr) {
+            _notePreviewDockWidget->setMaximumWidth(width() / 3);
+        }
 
         settings.setValue(QStringLiteral("dockWasInitializedOnce"), true);
 
@@ -1182,7 +1187,9 @@ void MainWindow::initDockWidgets() {
     //    ui->noteEditTabWidget->layout()->setContentsMargins(0, 0, 0, 0);
 
     setDockNestingEnabled(true);
-    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditTabWidget : nullptr);
+    setCentralWidget(_noteEditIsCentralWidget
+                         ? static_cast<QWidget *>(ui->noteEditTabWidget)
+                         : (_notePreviewIsCentralWidget ? ui->noteViewFrame : nullptr));
     updateNoteEditFrameShape();
 
     // restore the current layout
@@ -1216,14 +1223,58 @@ void MainWindow::createNoteEditDockWidget() {
     _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
 }
 
+void MainWindow::createNotePreviewDockWidget() {
+    if (_notePreviewDockWidget != nullptr) {
+        return;
+    }
+
+    auto *notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
+    notePreviewDockWidget->setObjectName(QStringLiteral("notePreviewDockWidget"));
+    notePreviewDockWidget->setWidget(ui->noteViewFrame);
+    addDockWidget(Qt::RightDockWidgetArea, notePreviewDockWidget, Qt::Horizontal);
+
+    _notePreviewDockWidget = notePreviewDockWidget;
+    _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
+}
+
 void MainWindow::setNoteEditCentralWidgetEnabled(bool enabled) {
-    if (_noteEditIsCentralWidget == enabled) {
+    setCentralWidgetIdentifier(enabled ? QStringLiteral("note-edit") : QStringLiteral("none"));
+}
+
+QString MainWindow::centralWidgetIdentifier() const {
+    if (_noteEditIsCentralWidget) {
+        return QStringLiteral("note-edit");
+    }
+
+    return _notePreviewIsCentralWidget ? QStringLiteral("note-preview") : QStringLiteral("none");
+}
+
+void MainWindow::setCentralWidgetIdentifier(const QString &identifier) {
+    const QString targetIdentifier =
+        (identifier == QLatin1String("note-edit") || identifier == QLatin1String("note-preview"))
+            ? identifier
+            : QStringLiteral("none");
+    if (centralWidgetIdentifier() == targetIdentifier) {
         return;
     }
 
     QWidget *focusWidget = qApp->focusWidget();
     const bool panelsUnlocked = ui->actionUnlock_panels->isChecked();
-    _noteEditIsCentralWidget = enabled;
+
+    if (_noteEditIsCentralWidget) {
+        if (centralWidget() == ui->noteEditTabWidget) {
+            takeCentralWidget();
+        }
+        createNoteEditDockWidget();
+    } else if (_notePreviewIsCentralWidget) {
+        if (centralWidget() == ui->noteViewFrame) {
+            takeCentralWidget();
+        }
+        createNotePreviewDockWidget();
+    }
+
+    _noteEditIsCentralWidget = targetIdentifier == QLatin1String("note-edit");
+    _notePreviewIsCentralWidget = targetIdentifier == QLatin1String("note-preview");
 
     if (_noteEditIsCentralWidget) {
         if (_noteEditDockWidget != nullptr) {
@@ -1238,12 +1289,19 @@ void MainWindow::setNoteEditCentralWidgetEnabled(bool enabled) {
 
         setCentralWidget(ui->noteEditTabWidget);
         ui->noteEditTabWidget->show();
-    } else {
-        if (centralWidget() == ui->noteEditTabWidget) {
-            takeCentralWidget();
+    } else if (_notePreviewIsCentralWidget) {
+        if (_notePreviewDockWidget != nullptr) {
+            _notePreviewDockWidget->hide();
+            ui->noteViewFrame->hide();
+            ui->noteViewFrame->setParent(this);
+            removeDockWidget(_notePreviewDockWidget);
+            delete _notePreviewDockWidget;
+            _notePreviewDockWidget = nullptr;
+            _notePreviewDockTitleBarWidget = nullptr;
         }
 
-        createNoteEditDockWidget();
+        setCentralWidget(ui->noteViewFrame);
+        ui->noteViewFrame->show();
     }
 
     if ((_noteTagDockWidget != nullptr) && !_noteTagDockWidget->isFloating()) {
@@ -1282,7 +1340,9 @@ void MainWindow::setupNoteRelationScene() {
  */
 void MainWindow::releaseDockWidgetSizes() {
     _noteListDockWidget->setMaximumWidth(10000);
-    _notePreviewDockWidget->setMaximumWidth(10000);
+    if (_notePreviewDockWidget != nullptr) {
+        _notePreviewDockWidget->setMaximumWidth(10000);
+    }
     _noteTagDockWidget->setMaximumHeight(10000);
 }
 
@@ -1634,7 +1694,8 @@ void MainWindow::updatePanelMenu() {
     updateJumpToActionsAvailability();
 
     // update the preview in case it was disabled previously
-    if (_notePreviewDockWidget->isVisible()) {
+    if (_notePreviewIsCentralWidget ||
+        ((_notePreviewDockWidget != nullptr) && _notePreviewDockWidget->isVisible())) {
         setNoteTextFromNote(&currentNote, true);
     }
 }
@@ -2642,11 +2703,15 @@ void MainWindow::restoreToolbars() {
  */
 void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     SettingsService settings;
-    const bool noteEditIsCentralWidget =
-        settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
+    QString centralWidget = settings.value(QStringLiteral("centralWidget")).toString();
+    if (centralWidget.isEmpty()) {
+        centralWidget = settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool()
+                            ? QStringLiteral("note-edit")
+                            : QStringLiteral("none");
+    }
 
-    if (_noteEditIsCentralWidget != noteEditIsCentralWidget) {
-        setNoteEditCentralWidgetEnabled(noteEditIsCentralWidget);
+    if (centralWidgetIdentifier() != centralWidget) {
+        setCentralWidgetIdentifier(centralWidget);
         storeCurrentLayout();
     }
 
@@ -3908,7 +3973,9 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
     }
 
     // update the preview text edit if the dock widget is visible
-    if (_notePreviewDockWidget->isVisible() || ignorePreviewVisibility) {
+    if (_notePreviewIsCentralWidget ||
+        ((_notePreviewDockWidget != nullptr) && _notePreviewDockWidget->isVisible()) ||
+        ignorePreviewVisibility) {
         const bool decrypt = ui->noteTextEdit->isHidden();
 
         const QString html = note->toMarkdownHtml(NoteFolder::currentLocalPath(),
@@ -6430,12 +6497,14 @@ void MainWindow::restoreDockWidgetTitleBars() {
     _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
     _noteNavigationDockWidget->setTitleBarWidget(_noteNavigationDockTitleBarWidget);
     _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
-    _notePreviewDockWidget->setTitleBarWidget(_notePreviewDockTitleBarWidget);
+    if (_notePreviewDockWidget != nullptr) {
+        _notePreviewDockWidget->setTitleBarWidget(_notePreviewDockTitleBarWidget);
+    }
     _noteGraphicsViewDockWidget->setTitleBarWidget(_noteGraphicsViewDockTitleBarWidget);
     _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
     _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
 
-    if (_noteEditDockWidget != nullptr && _noteEditDockTitleBarWidget != nullptr) {
+    if (_noteEditDockWidget != nullptr) {
         _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
     }
 }

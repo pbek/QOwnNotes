@@ -872,6 +872,8 @@ class MainWindow : public QMainWindow {
     /** State accessors needed by managers **/
     bool closeEventWasFired() const { return _closeEventWasFired; }
     bool noteEditIsCentralWidget() const { return _noteEditIsCentralWidget; }
+    bool notePreviewIsCentralWidget() const { return _notePreviewIsCentralWidget; }
+    QString centralWidgetIdentifier() const;
     bool noteSubFolderDockWidgetVisible() const { return _noteSubFolderDockWidgetVisible; }
     void setNoteSubFolderDockWidgetVisible(bool visible) {
         _noteSubFolderDockWidgetVisible = visible;
@@ -889,6 +891,7 @@ class MainWindow : public QMainWindow {
     Q_SLOT void updatePanelMenu();
     void updateWindowToolbar();
     void setNoteEditCentralWidgetEnabled(bool enabled);
+    void setCentralWidgetIdentifier(const QString &identifier);
     void centerAndResize();
     void filterNotes(bool searchForText = true);
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly = false,
@@ -992,7 +995,7 @@ class MainWindow : public QMainWindow {
     QDockWidget *_noteNavigationDockWidget;
     QDockWidget *_noteEditDockWidget = nullptr;
     QDockWidget *_noteTagDockWidget;
-    QDockWidget *_notePreviewDockWidget;
+    QDockWidget *_notePreviewDockWidget = nullptr;
     QDockWidget *_logDockWidget;
     QDockWidget *_scriptingDockWidget;
     QDockWidget *_noteGraphicsViewDockWidget;
@@ -1005,7 +1008,7 @@ class MainWindow : public QMainWindow {
     QWidget *_noteNavigationDockTitleBarWidget;
     QWidget *_noteEditDockTitleBarWidget = nullptr;
     QWidget *_noteTagDockTitleBarWidget;
-    QWidget *_notePreviewDockTitleBarWidget;
+    QWidget *_notePreviewDockTitleBarWidget = nullptr;
     QWidget *_logDockTitleBarWidget;
     QWidget *_scriptingDockTitleBarWidget;
     QWidget *_noteGraphicsViewDockTitleBarWidget;
@@ -1027,6 +1030,7 @@ class MainWindow : public QMainWindow {
     QString _notePreviewHash;
     int _gitCommitInterval;
     bool _noteEditIsCentralWidget;
+    bool _notePreviewIsCentralWidget = false;
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
     WebAppClientService *_webAppClientService;
@@ -1240,6 +1244,7 @@ class MainWindow : public QMainWindow {
     void initDockWidgets();
 
     void createNoteEditDockWidget();
+    void createNotePreviewDockWidget();
 
     void updateNoteEditFrameShape() const;
 

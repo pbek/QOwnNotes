@@ -168,6 +168,8 @@ void LayoutManager::storeCurrentLayout() {
 
     settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/windowState"),
                       _mainWindow->saveState());
+    settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/centralWidget"),
+                      _mainWindow->centralWidgetIdentifier());
     settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/noteEditIsCentralWidget"),
                       _mainWindow->noteEditIsCentralWidget());
     settings.setValue(
@@ -215,16 +217,13 @@ void LayoutManager::restoreCurrentLayout() {
         updateLayoutLists();
     }
 
-    const QString noteEditIsCentralWidgetKey =
-        QStringLiteral("layout-") + uuid + QStringLiteral("/noteEditIsCentralWidget");
-    const bool noteEditIsCentralWidget =
-        settings.contains(noteEditIsCentralWidgetKey)
-            ? settings.value(noteEditIsCentralWidgetKey).toBool()
-            : settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
-    settings.setValue(QStringLiteral("noteEditIsCentralWidget"), noteEditIsCentralWidget);
+    const QString centralWidget = layoutCentralWidget(uuid);
+    settings.setValue(QStringLiteral("centralWidget"), centralWidget);
+    settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
+                      centralWidget == QLatin1String("note-edit"));
 
-    if (_mainWindow->noteEditIsCentralWidget() != noteEditIsCentralWidget) {
-        _mainWindow->setNoteEditCentralWidgetEnabled(noteEditIsCentralWidget);
+    if (_mainWindow->centralWidgetIdentifier() != centralWidget) {
+        _mainWindow->setCentralWidgetIdentifier(centralWidget);
     }
 
     _mainWindow->restoreState(
@@ -366,26 +365,42 @@ bool LayoutManager::setLayoutOrder(const QStringList &uuids) {
     return true;
 }
 
-bool LayoutManager::layoutNoteEditIsCentralWidget(const QString &uuid) const {
+QString LayoutManager::layoutCentralWidget(const QString &uuid) const {
     SettingsService settings;
-    const QString key =
-        QStringLiteral("layout-") + uuid + QStringLiteral("/noteEditIsCentralWidget");
-    return settings.value(key, settings.value(QStringLiteral("noteEditIsCentralWidget"), true))
-        .toBool();
+    const QString prefix = QStringLiteral("layout-") + uuid + QLatin1Char('/');
+    const QString centralWidget =
+        settings.value(prefix + QStringLiteral("centralWidget")).toString();
+    if (centralWidget == QLatin1String("note-edit") ||
+        centralWidget == QLatin1String("note-preview") || centralWidget == QLatin1String("none")) {
+        return centralWidget;
+    }
+
+    const QString legacyKey = prefix + QStringLiteral("noteEditIsCentralWidget");
+    const bool noteEditIsCentralWidget =
+        settings.contains(legacyKey)
+            ? settings.value(legacyKey).toBool()
+            : settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool();
+    return noteEditIsCentralWidget ? QStringLiteral("note-edit") : QStringLiteral("none");
 }
 
-void LayoutManager::setLayoutNoteEditIsCentralWidget(const QString &uuid, bool enabled) {
-    if (!getLayoutUuidList().contains(uuid)) {
+void LayoutManager::setLayoutCentralWidget(const QString &uuid, const QString &centralWidget) {
+    if (!getLayoutUuidList().contains(uuid) || (centralWidget != QLatin1String("note-edit") &&
+                                                centralWidget != QLatin1String("note-preview") &&
+                                                centralWidget != QLatin1String("none"))) {
         return;
     }
 
     SettingsService settings;
-    settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/noteEditIsCentralWidget"),
-                      enabled);
+    const QString prefix = QStringLiteral("layout-") + uuid + QLatin1Char('/');
+    settings.setValue(prefix + QStringLiteral("centralWidget"), centralWidget);
+    settings.setValue(prefix + QStringLiteral("noteEditIsCentralWidget"),
+                      centralWidget == QLatin1String("note-edit"));
 
     if (uuid == currentLayoutUuid()) {
-        settings.setValue(QStringLiteral("noteEditIsCentralWidget"), enabled);
-        _mainWindow->setNoteEditCentralWidgetEnabled(enabled);
+        settings.setValue(QStringLiteral("centralWidget"), centralWidget);
+        settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
+                          centralWidget == QLatin1String("note-edit"));
+        _mainWindow->setCentralWidgetIdentifier(centralWidget);
         storeCurrentLayout();
     }
 }

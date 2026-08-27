@@ -2,6 +2,9 @@
 
 ## 26.8.10
 
+- Layouts can now use either the **note edit** or **note preview** panel as the
+  central widget, allowing preview-only layouts to resize correctly
+  (for [#3712](https://github.com/pbek/QOwnNotes/issues/3712))
 - Added a new **Layouts** panel to the interface settings where layouts can be
   created, switched, removed, renamed, reordered, configured to use the central widget,
   or created from layout presets in a dedicated dialog; the former layout

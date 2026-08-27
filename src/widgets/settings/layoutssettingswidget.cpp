@@ -8,7 +8,7 @@
 
 #include "layoutssettingswidget.h"
 
-#include <QCheckBox>
+#include <QComboBox>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QGroupBox>
@@ -82,15 +82,15 @@ LayoutsSettingsWidget::LayoutsSettingsWidget(QWidget *parent) : QWidget(parent) 
     managementLayout->addLayout(listLayout);
 
     auto *selectedLayoutGroup = new QGroupBox(tr("Selected layout"), managementGroup);
-    auto *selectedLayout = new QVBoxLayout(selectedLayoutGroup);
-    _centralWidgetCheckBox = new QCheckBox(
-        tr("Use the note edit panel as fixed central widget to be resized if the window or other "
-           "panels are resized"),
-        selectedLayoutGroup);
-    _centralWidgetCheckBox->setToolTip(
-        tr("If this is disabled you are able to create more complex panel layouts, but all panels "
-           "will be resized if the window is resized"));
-    selectedLayout->addWidget(_centralWidgetCheckBox);
+    auto *selectedLayout = new QHBoxLayout(selectedLayoutGroup);
+    selectedLayout->addWidget(new QLabel(tr("Central widget:"), selectedLayoutGroup));
+    _centralWidgetComboBox = new QComboBox(selectedLayoutGroup);
+    _centralWidgetComboBox->addItem(tr("Note edit"), QStringLiteral("note-edit"));
+    _centralWidgetComboBox->addItem(tr("Note preview"), QStringLiteral("note-preview"));
+    _centralWidgetComboBox->addItem(tr("No central widget"), QStringLiteral("none"));
+    _centralWidgetComboBox->setToolTip(
+        tr("The central widget automatically uses the space left by the surrounding panels"));
+    selectedLayout->addWidget(_centralWidgetComboBox, 1);
     managementLayout->addWidget(selectedLayoutGroup);
     mainLayout->addWidget(managementGroup);
 
@@ -108,17 +108,18 @@ LayoutsSettingsWidget::LayoutsSettingsWidget(QWidget *parent) : QWidget(parent) 
     connect(_renameButton, &QPushButton::clicked, this, [this]() { renameLayout(); });
     connect(_moveUpButton, &QPushButton::clicked, this, [this]() { moveLayout(-1); });
     connect(_moveDownButton, &QPushButton::clicked, this, [this]() { moveLayout(1); });
-    connect(_centralWidgetCheckBox, &QCheckBox::toggled, this, [this](bool enabled) {
-        if (_loadingSelection) {
-            return;
-        }
+    connect(_centralWidgetComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,
+            [this](int index) {
+                if (_loadingSelection || (index < 0)) {
+                    return;
+                }
 
-        MainWindow *mainWindow = MainWindow::instance();
-        if (mainWindow != nullptr) {
-            mainWindow->layoutManager()->setLayoutNoteEditIsCentralWidget(selectedLayoutUuid(),
-                                                                          enabled);
-        }
-    });
+                MainWindow *mainWindow = MainWindow::instance();
+                if (mainWindow != nullptr) {
+                    mainWindow->layoutManager()->setLayoutCentralWidget(
+                        selectedLayoutUuid(), _centralWidgetComboBox->itemData(index).toString());
+                }
+            });
     refreshLayouts();
 }
 
@@ -168,17 +169,17 @@ void LayoutsSettingsWidget::updateSelectedLayout() {
     _renameButton->setEnabled(hasSelection);
     _moveUpButton->setEnabled(hasSelection && (row > 0));
     _moveDownButton->setEnabled(hasSelection && (row < _layoutListWidget->count() - 1));
-    _centralWidgetCheckBox->setEnabled(hasSelection);
+    _centralWidgetComboBox->setEnabled(hasSelection);
 
     _loadingSelection = true;
     if (hasSelection) {
         MainWindow *mainWindow = MainWindow::instance();
-        _centralWidgetCheckBox->setChecked(
-            (mainWindow != nullptr)
-                ? mainWindow->layoutManager()->layoutNoteEditIsCentralWidget(uuid)
-                : true);
+        const QString centralWidget = (mainWindow != nullptr)
+                                          ? mainWindow->layoutManager()->layoutCentralWidget(uuid)
+                                          : QStringLiteral("note-edit");
+        _centralWidgetComboBox->setCurrentIndex(_centralWidgetComboBox->findData(centralWidget));
     } else {
-        _centralWidgetCheckBox->setChecked(false);
+        _centralWidgetComboBox->setCurrentIndex(-1);
     }
     _loadingSelection = false;
 }

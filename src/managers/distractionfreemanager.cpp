@@ -106,6 +106,12 @@ void DistractionFreeManager::setDistractionFreeMode(const bool enabled) {
         settings.setValue(QStringLiteral("DistractionFreeMode/menuBarHeight"),
                           _ui->menuBar->height());
         settings.setValue(QStringLiteral("DistractionFreeMode/menuBarVisible"), menuBarWasVisible);
+        settings.setValue(QStringLiteral("DistractionFreeMode/centralWidget"),
+                          _mainWindow->centralWidgetIdentifier());
+
+        if (_mainWindow->notePreviewIsCentralWidget()) {
+            _mainWindow->setCentralWidgetIdentifier(QStringLiteral("note-edit"));
+        }
 
         // we must not hide the menu bar or else the shortcuts
         // will not work any more
@@ -196,6 +202,12 @@ void DistractionFreeManager::setDistractionFreeMode(const bool enabled) {
             settings.value(QStringLiteral("DistractionFreeMode/statusBarWasVisible"), true)
                 .toBool();
         _mainWindow->statusBar()->setVisible(statusBarWasVisible);
+
+        const QString centralWidget =
+            settings.value(QStringLiteral("DistractionFreeMode/centralWidget")).toString();
+        if (!centralWidget.isEmpty() && (_mainWindow->centralWidgetIdentifier() != centralWidget)) {
+            _mainWindow->setCentralWidgetIdentifier(centralWidget);
+        }
 
         // restore states and sizes
         _mainWindow->restoreState(

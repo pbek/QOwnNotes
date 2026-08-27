@@ -99,20 +99,32 @@ void LayoutPresetWidget::storeLayoutPreset() {
     }
 
     settings.setValue(QStringLiteral("initialLayoutPresetIdentifier"), layoutPresetIdentifier);
+    QString centralWidget =
+        _layoutPresetSettings->value(layoutPresetSettingsPrefix + QStringLiteral("centralWidget"))
+            .toString();
+    if (centralWidget.isEmpty()) {
+        centralWidget =
+            _layoutPresetSettings
+                    ->value(layoutPresetSettingsPrefix + QStringLiteral("noteEditIsCentralWidget"))
+                    .toBool()
+                ? QStringLiteral("note-edit")
+                : QStringLiteral("none");
+    }
 
-    // Only set the global noteEditIsCentralWidget during initial setup (welcome dialog).
+    // Only set the global central widget during initial setup (welcome dialog).
     // When switching layouts manually, restoreCurrentLayout() will set it
     // for the correct layout.
     if (!_manualSettingsStoring) {
+        settings.setValue(QStringLiteral("centralWidget"), centralWidget);
         settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
-                          _layoutPresetSettings->value(layoutPresetSettingsPrefix +
-                                                       QStringLiteral("noteEditIsCentralWidget")));
+                          centralWidget == QLatin1String("note-edit"));
     }
 
+    settings.setValue(QStringLiteral("layout-") + layoutUuid + QStringLiteral("/centralWidget"),
+                      centralWidget);
     settings.setValue(
         QStringLiteral("layout-") + layoutUuid + QStringLiteral("/noteEditIsCentralWidget"),
-        _layoutPresetSettings->value(layoutPresetSettingsPrefix +
-                                     QStringLiteral("noteEditIsCentralWidget")));
+        centralWidget == QLatin1String("note-edit"));
     settings.setValue(
         QStringLiteral("layout-") + layoutUuid + QStringLiteral("/windowState"),
         _layoutPresetSettings->value(layoutPresetSettingsPrefix + QStringLiteral("windowState")));
@@ -166,6 +178,11 @@ QString LayoutPresetWidget::getLayoutPresetDescription(const QString &layoutPres
                  "resized automatically.",
                  "Layout preset description");
 
+    const QString &previewCentralWidgetAddText =
+        " " + tr("The note preview panel is the central widget that will be "
+                 "resized automatically.",
+                 "Layout preset description");
+
     if (layoutPresetIdentifier == QLatin1String("minimal")) {
         return tr("Just the note list on the left and the note edit panel "
                   "on the right are enabled by default.",
@@ -183,7 +200,7 @@ QString LayoutPresetWidget::getLayoutPresetDescription(const QString &layoutPres
                   "are enabled by default. You will need another layout to "
                   "actually edit notes!",
                   "Layout preset description") +
-               noCentralWidgetAddText;
+               previewCentralWidgetAddText;
     } else if (layoutPresetIdentifier == QLatin1String("full-vertical")) {
         return tr("Most of the panels, like the note list on the left, the "
                   "tagging panels, the note edit panel on the right and the "
