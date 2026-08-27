@@ -4244,6 +4244,63 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         str = std::move(preScriptResult);
     }
 
+    // MD4C has no footnote extension. Convert footnote labels to HTML anchors
+    // while leaving definition text at its original position in the note.
+    {
+        const QStringList maskedFootnoteCode = maskCodeBlocks(str);
+        static const QRegularExpression definitionRE(
+            QStringLiteral(R"(^([ \t]{0,3})\[\^([^\]\r\n]+)\]:[ \t]*(.*)$)"),
+            QRegularExpression::MultilineOption);
+        static const QRegularExpression referenceRE(QStringLiteral(R"(\[\^([^\]\r\n]+)\])"));
+        QSet<QString> definitions;
+        auto definitionIterator = definitionRE.globalMatch(str);
+        while (definitionIterator.hasNext()) {
+            definitions.insert(definitionIterator.next().captured(2));
+        }
+
+        QString converted;
+        int offset = 0;
+        QHash<QString, int> referenceCounts;
+        auto referenceIterator = referenceRE.globalMatch(str);
+        while (referenceIterator.hasNext()) {
+            const QRegularExpressionMatch match = referenceIterator.next();
+            const QString label = match.captured(1);
+            if (!definitions.contains(label) || (match.capturedEnd() < str.size() &&
+                                                 str.at(match.capturedEnd()) == QLatin1Char(':'))) {
+                continue;
+            }
+            converted += str.mid(offset, match.capturedStart() - offset);
+            const QString id = QString::fromUtf8(QUrl::toPercentEncoding(label));
+            const int count = ++referenceCounts[label];
+            const QString referenceId =
+                count == 1 ? QStringLiteral("qon-footnote-ref-%1").arg(id)
+                           : QStringLiteral("qon-footnote-ref-%1-%2").arg(id).arg(count);
+            converted += QStringLiteral("<a id=\"%1\" href=\"#qon-footnote-%2\">[^%3]</a>")
+                             .arg(referenceId, id, label.toHtmlEscaped());
+            offset = match.capturedEnd();
+        }
+        converted += str.mid(offset);
+        str = std::move(converted);
+
+        converted.clear();
+        offset = 0;
+        definitionIterator = definitionRE.globalMatch(str);
+        while (definitionIterator.hasNext()) {
+            const QRegularExpressionMatch match = definitionIterator.next();
+            converted += str.mid(offset, match.capturedStart() - offset);
+            const QString id = QString::fromUtf8(QUrl::toPercentEncoding(match.captured(2)));
+            converted +=
+                match.captured(1) +
+                QStringLiteral(
+                    "<a id=\"qon-footnote-%1\" href=\"#qon-footnote-ref-%1\">[^%2]</a>: %3")
+                    .arg(id, match.captured(2).toHtmlEscaped(), match.captured(3));
+            offset = match.capturedEnd();
+        }
+        converted += str.mid(offset);
+        str = std::move(converted);
+        unmaskCodeBlocks(str, maskedFootnoteCode);
+    }
+
     /*CODE HIGHLIGHTING*/
     int cbTildeCount = nonOverlapCount(str, '~');
     if (cbTildeCount % 2 != 0) --cbTildeCount;

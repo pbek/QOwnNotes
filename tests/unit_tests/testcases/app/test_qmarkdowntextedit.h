@@ -18,6 +18,7 @@ class TestQMarkdownTextEdit : public QObject {
     void testForthCommentHighlighting();
     void testMultilineInlineHighlighting();
     void testLinkedCheckBoxDetectionInReadOnlyEditor();
+    void testFootnoteNavigationAndHighlighting();
     void testAutoFormatTableAtCursor();
 };
 

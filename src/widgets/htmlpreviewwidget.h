@@ -48,6 +48,7 @@ class HtmlPreviewWidget final : public QWidget {
     QFont defaultFont() const;
     bool findText(const QString &text, QTextDocument::FindFlags flags, bool incremental,
                   bool *wrapped = nullptr);
+    void scrollToAnchor(const QString &name);
 
     // Update background color and dark mode after a theme change
     void updateBackground();

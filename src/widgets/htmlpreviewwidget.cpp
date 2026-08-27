@@ -283,6 +283,8 @@ qreal HtmlPreviewWidget::zoomFactor() const { return _htmlWidget->zoomFactor(); 
 
 QString HtmlPreviewWidget::selectedText() const { return _htmlWidget->selectedText(); }
 
+void HtmlPreviewWidget::scrollToAnchor(const QString &name) { _htmlWidget->scrollToAnchor(name); }
+
 void HtmlPreviewWidget::setDefaultFont(const QFont &font) { _htmlWidget->setDefaultFont(font); }
 
 QFont HtmlPreviewWidget::defaultFont() const { return _htmlWidget->defaultFont(); }

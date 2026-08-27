@@ -204,6 +204,23 @@ void TestNotes::testNoteToMarkdownHtml() {
     QVERIFY(html.contains(expectedBody));
 }
 
+void TestNotes::testFootnotesToMarkdownHtml() {
+    Note note;
+    note.setNoteText(QStringLiteral("Text[^source]\n\n[^source]: Explanation\n\n`Code[^source]`"));
+
+    const QString html = note.toMarkdownHtml(QString(), 980, true);
+
+    QVERIFY2(
+        html.contains(QStringLiteral(
+            "Text<a id=\"qon-footnote-ref-source\" href=\"#qon-footnote-source\">[^source]</a>")),
+        qPrintable(html));
+    QVERIFY2(html.contains(
+                 QStringLiteral("<a id=\"qon-footnote-source\" "
+                                "href=\"#qon-footnote-ref-source\">[^source]</a>: Explanation")),
+             qPrintable(html));
+    QVERIFY2(html.contains(QStringLiteral("<code>Code[^source]</code>")), qPrintable(html));
+}
+
 void TestNotes::testMalformedUnderlineToMarkdownHtml() {
     Note note;
     note.setNoteText(QStringLiteral(

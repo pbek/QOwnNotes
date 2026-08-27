@@ -4773,6 +4773,15 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
 void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
 
+    if (!url.fragment().isEmpty() && (url.path().isEmpty() || url.path() == QStringLiteral("/"))) {
+#ifdef USE_QLITEHTML
+        _notePreviewWidget->scrollToAnchor(url.fragment());
+#else
+        ui->noteTextView->scrollToAnchor(url.fragment());
+#endif
+        return;
+    }
+
     // Check if Ctrl key is pressed to open in new tab
     bool openInNewTab = QGuiApplication::keyboardModifiers().testFlag(Qt::ControlModifier);
 

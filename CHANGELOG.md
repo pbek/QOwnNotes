@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.8.11
+
+- Added support for numeric and named Markdown footnotes, with link styling and
+  navigation between references and definitions in the note editor and preview
+  (for [#3714](https://github.com/pbek/QOwnNotes/issues/3714))
+
 ## 26.8.10
 
 - Layouts can now use either the **note edit** or **note preview** panel as the

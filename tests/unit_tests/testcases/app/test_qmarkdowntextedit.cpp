@@ -248,6 +248,29 @@ void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
     QVERIFY(editor.toPlainText().startsWith(QStringLiteral("- [x]")));
 }
 
+void TestQMarkdownTextEdit::testFootnoteNavigationAndHighlighting() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("Text[^source]\n\n[^source]: Explanation"));
+    editor.highlighter()->rehighlight();
+
+    const QTextBlock referenceBlock = editor.document()->firstBlock();
+    QVERIFY(formatAt(referenceBlock, referenceBlock.text().indexOf(QStringLiteral("[^source]")))
+                .fontUnderline());
+
+    QTextCursor cursor = editor.textCursor();
+    cursor.setPosition(referenceBlock.position() +
+                       referenceBlock.text().indexOf(QStringLiteral("source")));
+    editor.setTextCursor(cursor);
+    QVERIFY(editor.openLinkAtCursorPosition());
+    QCOMPARE(editor.textCursor().blockNumber(), 2);
+
+    cursor = editor.textCursor();
+    cursor.setPosition(cursor.block().position() + 2);
+    editor.setTextCursor(cursor);
+    QVERIFY(editor.openLinkAtCursorPosition());
+    QCOMPARE(editor.textCursor().blockNumber(), 0);
+}
+
 void TestQMarkdownTextEdit::testAutoFormatTableAtCursor() {
     QMarkdownTextEdit editor;
     editor.setPlainText(QStringLiteral("| Name|Value|\n|-|-|\n|one|123|\n|longer|4|"));
