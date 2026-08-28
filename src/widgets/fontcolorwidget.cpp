@@ -253,6 +253,7 @@ void FontColorWidget::initTextTreeWidgetItems() {
                           MarkdownHighlighter::CurrentLineBackgroundColor);
     addTextTreeWidgetItem(tr("Broken link"), MarkdownHighlighter::BrokenLink);
     addTextTreeWidgetItem(tr("Trailing space"), MarkdownHighlighter::TrailingSpace);
+    addTextTreeWidgetItem(tr("Whitespace marker"), MarkdownHighlighter::Whitespace);
 
     // jump to the top of the list so that an item is selected
     auto* event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
@@ -339,8 +340,10 @@ void FontColorWidget::updateSchemeEditFrame() {
     bool isCurrentLineBackgroundColorIndex =
         index == MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor;
     const bool isLinkHoverIndex = index == Utils::Schema::LinkHoverPresetIndex;
+    const bool isWhitespaceIndex = index == MarkdownHighlighter::Whitespace;
 
-    const bool showTextFormatControls = index >= 0 && !isCurrentLineBackgroundColorIndex;
+    const bool showTextFormatControls =
+        index >= 0 && !isCurrentLineBackgroundColorIndex && !isWhitespaceIndex;
     ui->boldCheckBox->setVisible(showTextFormatControls);
     ui->italicCheckBox->setVisible(showTextFormatControls);
     ui->underlineCheckBox->setVisible(showTextFormatControls);
@@ -349,8 +352,8 @@ void FontColorWidget::updateSchemeEditFrame() {
     ui->fontComboBox->setVisible(showTextFormatControls);
     ui->foregroundColorCheckBox->setVisible(!isCurrentLineBackgroundColorIndex);
     ui->foregroundColorButton->setVisible(!isCurrentLineBackgroundColorIndex);
-    ui->backgroundColorCheckBox->setVisible(!isLinkHoverIndex);
-    ui->backgroundColorButton->setVisible(!isLinkHoverIndex);
+    ui->backgroundColorCheckBox->setVisible(!isLinkHoverIndex && !isWhitespaceIndex);
+    ui->backgroundColorButton->setVisible(!isLinkHoverIndex && !isWhitespaceIndex);
     ui->label->setVisible(showTextFormatControls);
 
     if (index >= 0) {

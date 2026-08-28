@@ -230,6 +230,41 @@ void TestQMarkdownTextEdit::testMultilineInlineHighlighting() {
     QVERIFY(formatAt(editor.document()->firstBlock(), 6).fontUnderline());
 }
 
+void TestQMarkdownTextEdit::testWhitespaceMarkerHighlighting() {
+    QCOMPARE(int(MarkdownHighlighter::LinkInternal), 34);
+    QCOMPARE(int(MarkdownHighlighter::Whitespace), 35);
+
+    QMarkdownTextEdit editor;
+    const QColor markerColor(QStringLiteral("#789abc"));
+    editor.setPlainText(QStringLiteral("# heading\ttext\u00a0\nplain  "));
+    editor.highlighter()->rehighlight();
+
+    const QTextBlock block = editor.document()->firstBlock();
+    const int firstSpace = block.text().indexOf(QLatin1Char(' '));
+    const int tab = block.text().indexOf(QLatin1Char('\t'));
+    const int noBreakSpace = block.text().indexOf(QChar(0x00a0));
+    const QTextBlock trailingBlock = block.next();
+    const int trailingSpace = trailingBlock.text().lastIndexOf(QStringLiteral("  "));
+    const QTextCharFormat headingSpaceFormat = formatAt(block, firstSpace);
+    const QTextCharFormat trailingSpaceFormat = formatAt(trailingBlock, trailingSpace);
+
+    editor.highlighter()->setWhitespaceMarkerHighlighting(true, markerColor);
+
+    QCOMPARE(formatAt(block, firstSpace).foreground().color(), markerColor);
+    QCOMPARE(formatAt(block, tab).foreground().color(), markerColor);
+    QCOMPARE(formatAt(trailingBlock, trailingSpace).foreground().color(), markerColor);
+    QCOMPARE(formatAt(trailingBlock, trailingSpace).background(), trailingSpaceFormat.background());
+    QCOMPARE(formatAt(block, firstSpace).fontWeight(), headingSpaceFormat.fontWeight());
+    QVERIFY(formatAt(block, noBreakSpace).foreground().color() != markerColor);
+
+    editor.setHighlightingEnabled(false);
+    QCOMPARE(formatAt(block, firstSpace).foreground().color(), markerColor);
+    QVERIFY(formatAt(block, firstSpace).fontWeight() != int(QFont::Bold));
+
+    editor.highlighter()->setWhitespaceMarkerHighlighting(false, markerColor);
+    QVERIFY(formatAt(block, firstSpace).foreground().color() != markerColor);
+}
+
 void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
     QMarkdownTextEdit editor;
     editor.setPlainText(

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.8.12
+
+- Whitespace markers in the note editor can now use a separate foreground color
+  configured in the editor color scheme (for [#3670](https://github.com/pbek/QOwnNotes/issues/3670))
+
 ## 26.8.11
 
 - Added support for numeric and named Markdown footnotes, with link styling and

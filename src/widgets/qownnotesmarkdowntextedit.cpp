@@ -917,6 +917,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
     setFormatStyle(MarkdownHighlighter::HighlighterState::BrokenLink);
     setFormatStyle(MarkdownHighlighter::HighlighterState::TrailingSpace);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Whitespace);
 
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeType);
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeKeyWord);
@@ -2700,6 +2701,11 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     QTextOption::Flags textOptionFlags = textOption.flags();
     const bool showWhitespaceMarkers =
         settings.value(QStringLiteral("Editor/showWhitespaceMarkers"), false).toBool();
+    if (_highlighter) {
+        _highlighter->setWhitespaceMarkerHighlighting(
+            showWhitespaceMarkers,
+            Utils::Schema::schemaSettings->getForegroundColor(MarkdownHighlighter::Whitespace));
+    }
     if (showWhitespaceMarkers) {
         textOptionFlags |= QTextOption::ShowTabsAndSpaces;
     } else {

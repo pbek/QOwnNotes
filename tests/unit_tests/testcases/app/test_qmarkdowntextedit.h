@@ -17,6 +17,7 @@ class TestQMarkdownTextEdit : public QObject {
     void testSqlCodeBlockHighlighting();
     void testForthCommentHighlighting();
     void testMultilineInlineHighlighting();
+    void testWhitespaceMarkerHighlighting();
     void testLinkedCheckBoxDetectionInReadOnlyEditor();
     void testFootnoteNavigationAndHighlighting();
     void testAutoFormatTableAtCursor();

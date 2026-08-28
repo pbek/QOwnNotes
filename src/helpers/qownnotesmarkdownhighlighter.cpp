@@ -64,6 +64,15 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
+    if (!_markdownHighlightingEnabled) {
+        _highlightEncrypted = false;
+        setCurrentBlockState(HighlighterState::NoState);
+        currentBlock().setUserState(HighlighterState::NoState);
+        highlightWhitespaceMarkers(text);
+        _highlightingFinished = true;
+        return;
+    }
+
     if (currentBlockState() == HeadlineEnd) {
         currentBlock().previous().setUserState(NoState);
         addDirtyBlock(currentBlock().previous());
@@ -135,6 +144,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
         _highlightEncrypted = false;
     }
 
+    highlightWhitespaceMarkers(text);
     _highlightingFinished = true;
 }
 

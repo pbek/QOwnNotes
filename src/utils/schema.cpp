@@ -219,6 +219,10 @@ QColor Utils::Schema::Settings::getForegroundColor(int index, QString schemaKey)
         color = QColor(0xf0, 0x70, 0x00);
     }
 
+    if (!color.isValid() && (index == MarkdownHighlighter::Whitespace)) {
+        color = getForegroundColor(MarkdownHighlighter::MaskedSyntax, schemaKey);
+    }
+
     if (!color.isValid() && (index >= 0)) {
         color = getForegroundColor(TextPresetIndex, schemaKey);
     }
