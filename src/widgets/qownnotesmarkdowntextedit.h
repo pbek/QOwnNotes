@@ -105,6 +105,13 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void insertBlockQuote();
 
     /**
+     * Inserts a footnote reference with a free number at the current cursor
+     * position and adds a footnote definition at the end of the note, where
+     * the cursor is moved to enter the footnote text
+     */
+    void insertFootnote();
+
+    /**
      * Returns the text from the current cursor to the start of the word in the
      * note text edit
      *

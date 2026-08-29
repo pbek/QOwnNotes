@@ -1742,6 +1742,44 @@ void QOwnNotesMarkdownTextEdit::insertBlockQuote() {
     }
 }
 
+void QOwnNotesMarkdownTextEdit::insertFootnote() {
+    const QString text = toPlainText();
+
+    // Collect all footnote numbers that are already used, both by footnote
+    // references like "[^1]" and footnote definitions like "[^1]:"
+    QSet<int> usedNumbers;
+    static const QRegularExpression re(QStringLiteral("\\[\\^(\\d+)\\]"));
+    QRegularExpressionMatchIterator it = re.globalMatch(text);
+    while (it.hasNext()) {
+        usedNumbers.insert(it.next().captured(1).toInt());
+    }
+
+    // Find the lowest free footnote number, starting at 1
+    int number = 1;
+    while (usedNumbers.contains(number)) {
+        ++number;
+    }
+
+    // Insert the footnote reference at the current cursor position
+    QTextCursor cursor = textCursor();
+    cursor.insertText(QStringLiteral("[^%1]").arg(number));
+
+    // Add the footnote definition at the end of the note
+    cursor.movePosition(QTextCursor::End);
+    const QString blockText = cursor.block().text();
+    if (!blockText.isEmpty()) {
+        // Add one new line after the current last block and one additional
+        // new line if the last block already is a footnote definition
+        cursor.insertText(blockText.contains(QRegularExpression(QStringLiteral("^\\[\\^.+?\\]:")))
+                              ? QStringLiteral("\n")
+                              : QStringLiteral("\n\n"));
+    }
+    cursor.insertText(QStringLiteral("[^%1]: ").arg(number));
+
+    // Move the cursor to the end of the note to enter the footnote text
+    setTextCursor(cursor);
+}
+
 QTextCursor QOwnNotesMarkdownTextEdit::fullLineSelectionCursor() const {
     QTextCursor cursor = textCursor();
     if (!cursor.hasSelection()) {
@@ -2791,6 +2829,10 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     connect(blockQuoteTextAction, &QAction::triggered, this,
             &QOwnNotesMarkdownTextEdit::insertBlockQuote);
     blockQuoteTextAction->setEnabled(isAllowNoteEditing);
+
+    QAction *footnoteAction = menu->addAction(tr("Insert &footnote"));
+    connect(footnoteAction, &QAction::triggered, this, &QOwnNotesMarkdownTextEdit::insertFootnote);
+    footnoteAction->setEnabled(isAllowNoteEditing);
 
     if (isTextSelected) {
         QMenu *listOperationsMenu = menu->addMenu(tr("List operations"));

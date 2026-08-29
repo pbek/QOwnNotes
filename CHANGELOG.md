@@ -4,6 +4,10 @@
 
 - Whitespace markers in the note editor can now use a separate foreground color
   configured in the editor color scheme (for [#3670](https://github.com/pbek/QOwnNotes/issues/3670))
+- Added an **Insert footnote** action to the _Edit_ menu and the note editor context
+  menu that inserts a footnote reference with the next free number at the current
+  cursor position, adds the footnote definition at the end of the note, and jumps
+  there to enter the footnote text (for [#3714](https://github.com/pbek/QOwnNotes/issues/3714))
 
 ## 26.8.11
 

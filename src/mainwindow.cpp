@@ -7469,6 +7469,8 @@ void MainWindow::on_actionInsert_block_quote_triggered() {
     activeNoteTextEdit()->insertBlockQuote();
 }
 
+void MainWindow::on_actionInsert_footnote_triggered() { activeNoteTextEdit()->insertFootnote(); }
+
 /**
  * Searches for the selected text on the web
  */
