@@ -2722,6 +2722,13 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
         setHighlightingEnabled(highlightingEnabled);
 
+        if (_highlighter) {
+            // enable or disable highlighting of inline formatting across multiple lines
+            _highlighter->setMultilineInlineHighlightingEnabled(
+                settings.value(QStringLiteral("Editor/multilineInlineHighlighting"), true)
+                    .toBool());
+        }
+
         if (highlightingEnabled) {
             // set the new highlighting styles
             setStyles();

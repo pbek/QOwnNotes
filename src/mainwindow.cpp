@@ -6064,9 +6064,16 @@ void MainWindow::applyFormatter(const QString &formatter) {
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, formatter.length());
         textEdit->setTextCursor(c);
     } else {
+        // Only allow formatting across multiple lines if the feature is enabled
+        QRegularExpression::PatternOptions patternOptions =
+            SettingsService()
+                    .value(QStringLiteral("Editor/multilineInlineHighlighting"), true)
+                    .toBool()
+                ? QRegularExpression::DotMatchesEverythingOption
+                : QRegularExpression::NoPatternOption;
+
         QRegularExpressionMatch match =
-            QRegularExpression(QStringLiteral(R"(^(\s*)(.+?)(\s*)$)"),
-                               QRegularExpression::DotMatchesEverythingOption)
+            QRegularExpression(QStringLiteral(R"(^(\s*)(.+?)(\s*)$)"), patternOptions)
                 .match(selectedText);
         if (match.hasMatch()) {
             QString formattedText =

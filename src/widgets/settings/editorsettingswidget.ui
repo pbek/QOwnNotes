@@ -13,12 +13,6 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox_17">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>90</height>
-      </size>
-     </property>
      <property name="title">
       <string>Markdown highlighting</string>
      </property>
@@ -37,6 +31,16 @@
        <widget class="QCheckBox" name="fullyHighlightedBlockquotesCheckBox">
         <property name="text">
          <string>Fully highlight blockquotes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QCheckBox" name="multilineInlineHighlightingCheckBox">
+        <property name="toolTip">
+         <string>Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</string>
+        </property>
+        <property name="text">
+         <string>Highlight and apply Markdown text formatting across multiple lines</string>
         </property>
        </widget>
       </item>

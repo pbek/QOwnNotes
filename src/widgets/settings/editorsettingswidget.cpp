@@ -49,6 +49,10 @@ void EditorSettingsWidget::readSettings() {
         settings.value(QStringLiteral("markdownHighlightingEnabled"), true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(
         settings.value(QStringLiteral("fullyHighlightedBlockquotes")).toBool());
+    ui->multilineInlineHighlightingCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/multilineInlineHighlighting"), true).toBool());
+    // Initialize the enabled state of the highlighting dependent checkboxes
+    on_markdownHighlightingCheckBox_toggled(ui->markdownHighlightingCheckBox->isChecked());
     ui->autoBracketClosingCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/autoBracketClosing"), true).toBool());
     ui->autoBracketRemovalCheckBox->setChecked(
@@ -105,6 +109,8 @@ void EditorSettingsWidget::storeSettings() {
                       ui->markdownHighlightingCheckBox->isChecked());
     settings.setValue(QStringLiteral("fullyHighlightedBlockquotes"),
                       ui->fullyHighlightedBlockquotesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/multilineInlineHighlighting"),
+                      ui->multilineInlineHighlightingCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/autoBracketClosing"),
                       ui->autoBracketClosingCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/autoBracketRemoval"),
@@ -156,10 +162,11 @@ void EditorSettingsWidget::on_cursorWidthResetButton_clicked() {
 }
 
 /**
- * Enables or disables the fully highlighted blockquotes checkbox
+ * Enables or disables the highlighting dependent checkboxes
  */
 void EditorSettingsWidget::on_markdownHighlightingCheckBox_toggled(bool checked) {
     ui->fullyHighlightedBlockquotesCheckBox->setEnabled(checked);
+    ui->multilineInlineHighlightingCheckBox->setEnabled(checked);
 }
 
 /**

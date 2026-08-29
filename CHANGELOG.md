@@ -2,6 +2,9 @@
 
 ## 26.8.12
 
+- Added a new editor setting to disable highlighting and applying of Markdown text
+  formatting across multiple lines; it is enabled by default
+  (for [#3690](https://github.com/pbek/QOwnNotes/issues/3690))
 - Whitespace markers in the note editor can now use a separate foreground color
   configured in the editor color scheme (for [#3670](https://github.com/pbek/QOwnNotes/issues/3670))
 - Added an **Insert footnote** action to the _Edit_ menu and the note editor context

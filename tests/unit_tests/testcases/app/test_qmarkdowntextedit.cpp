@@ -230,6 +230,30 @@ void TestQMarkdownTextEdit::testMultilineInlineHighlighting() {
     QVERIFY(formatAt(editor.document()->firstBlock(), 6).fontUnderline());
 }
 
+void TestQMarkdownTextEdit::testMultilineInlineHighlightingDisabled() {
+    QMarkdownTextEdit editor;
+    editor.highlighter()->setMultilineInlineHighlightingEnabled(false);
+
+    editor.setPlainText(QStringLiteral("~~first line\nsecond line\nthird line~~"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(1), 0).fontStrikeOut());
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(2), 0).fontStrikeOut());
+
+    editor.setPlainText(QStringLiteral("**first line\nsecond line**"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(1), 0).fontWeight() != int(QFont::Bold));
+
+    editor.setPlainText(QStringLiteral("*first line\nsecond line\nthird line*"));
+    editor.highlighter()->rehighlight();
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
+    QVERIFY(!formatAt(editor.document()->findBlockByNumber(2), 0).fontItalic());
+
+    // Turning it back on re-enables multi-line highlighting
+    editor.highlighter()->setMultilineInlineHighlightingEnabled(true);
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(1), 0).fontItalic());
+    QVERIFY(formatAt(editor.document()->findBlockByNumber(2), 0).fontItalic());
+}
+
 void TestQMarkdownTextEdit::testWhitespaceMarkerHighlighting() {
     QCOMPARE(int(MarkdownHighlighter::LinkInternal), 34);
     QCOMPARE(int(MarkdownHighlighter::Whitespace), 35);
