@@ -4,6 +4,7 @@
 #include <entities/notefolder.h>
 #include <entities/tag.h>
 
+#include <QDateTime>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -365,7 +366,60 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
         note.storeNoteTextFileToDisk();
     }
 
+    // Joplin's raw export carries the note's real creation/modification
+    // history in its metadata block, but everything above this point wrote
+    // the note file "now", so file_last_modified would otherwise reflect
+    // the moment the import ran instead of the note's actual history
+    // (breaking Note -> Sort by -> By date). Restore the real timestamps as
+    // the last step, after every storeNoteTextFileToDisk() call above.
+    applyJoplinTimestamps(text, note);
+
     return true;
+}
+
+/**
+ * Applies a Joplin note's original updated_time metadata to the file
+ * already written to disk for that note, so the app's file_last_modified
+ * sorting reflects the note's real history instead of the moment the
+ * import ran.
+ *
+ * @param text the raw Joplin note text, still containing its metadata block
+ * @param note the already-stored, already-written-to-disk imported note
+ */
+void JoplinImportDialog::applyJoplinTimestamps(const QString& text, Note& note) {
+// QFile::setFileTime() was added in Qt 5.10; this project's floor is Qt 5.5,
+// so skip the correction gracefully on older Qt5 instead of failing to build.
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+    auto match =
+        QRegularExpression("^updated_time: (.+)$", QRegularExpression::MultilineOption).match(text);
+
+    if (!match.hasMatch()) {
+        return;
+    }
+
+    // Joplin writes timestamps like "2019-11-15T16:16:34.302Z"
+    const QDateTime updatedTime =
+        QDateTime::fromString(match.captured(1).trimmed(), Qt::ISODateWithMs);
+
+    if (!updatedTime.isValid()) {
+        return;
+    }
+
+    // QFile::setFileTime silently fails unless the file is open
+    QFile noteFile(note.fullNoteFilePath());
+    if (noteFile.open(QIODevice::ReadWrite)) {
+        noteFile.setFileTime(updatedTime, QFileDevice::FileModificationTime);
+        noteFile.close();
+    }
+
+    // re-read the corrected mtime from disk into the note and persist it to
+    // the DB's file_last_modified column, which is what sort-by-date reads
+    note.updateNoteTextFromDisk();
+    note.store();
+#else
+    Q_UNUSED(text)
+    Q_UNUSED(note)
+#endif
 }
 
 int JoplinImportDialog::getImportCount() const { return _importCount; }

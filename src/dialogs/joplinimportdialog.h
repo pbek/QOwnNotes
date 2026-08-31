@@ -44,6 +44,7 @@ class JoplinImportDialog : public MasterDialog {
     QHash<QString, NoteSubFolder> _importedFolders;
 
     bool importNote(const QString& id, const QString& text, const QString& dirPath);
+    static void applyJoplinTimestamps(const QString& text, Note& note);
     void tagNote(const QString& id, const Note& note);
     void handleImages(Note& note, const QString& dirPath);
     void handleAttachments(Note& note, const QString& dirPath);
