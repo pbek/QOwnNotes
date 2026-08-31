@@ -11,6 +11,9 @@
   menu that inserts a footnote reference with the next free number at the current
   cursor position, adds the footnote definition at the end of the note, and jumps
   there to enter the footnote text (for [#3714](https://github.com/pbek/QOwnNotes/issues/3714))
+- The Joplin importer now preserves notes' original modification dates, allowing
+  imported notes to be sorted by their actual update time
+  (for [#3715](https://github.com/pbek/QOwnNotes/pull/3715), thank you, @MySkeletonHurts)
 
 ## 26.8.11
 
