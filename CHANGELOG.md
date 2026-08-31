@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 26.8.12
+## 26.9.0
 
 - Added a new editor setting to disable highlighting and applying of Markdown text
   formatting across multiple lines; it is enabled by default
