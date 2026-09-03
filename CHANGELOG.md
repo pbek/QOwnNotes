@@ -1,5 +1,7 @@
 # QOwnNotes Changelog
 
+## 26.9.1
+
 ## 26.9.0
 
 - Added a new editor setting to disable highlighting and applying of Markdown text
