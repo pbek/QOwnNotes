@@ -2,6 +2,11 @@
 
 ## 26.9.1
 
+- Added a `Username` field to the LanguageTool settings so LanguageTool Premium
+  accounts, which authenticate with a username and API key together, can be used
+  for grammar and style checking
+  (for [#3718](https://github.com/pbek/QOwnNotes/issues/3718))
+
 ## 26.9.0
 
 - Added a new editor setting to disable highlighting and applying of Markdown text
@@ -16,10 +21,6 @@
 - The Joplin importer now preserves notes' original modification dates, allowing
   imported notes to be sorted by their actual update time
   (for [#3715](https://github.com/pbek/QOwnNotes/pull/3715), thank you, @MySkeletonHurts)
-- Added a `Username` field to the LanguageTool settings so LanguageTool Premium
-  accounts, which authenticate with a username and API key together, can be used
-  for grammar and style checking
-  (for [#3718](https://github.com/pbek/QOwnNotes/issues/3718))
 
 ## 26.8.11
 
