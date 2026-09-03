@@ -4,6 +4,7 @@
 
 #include "release.h"
 #include "testcases/app/test_htmlentities.h"
+#include "testcases/app/test_languagetool.h"
 #include "testcases/app/test_metricsservice.h"
 #include "testcases/app/test_navigationwidget.h"
 #include "testcases/app/test_network.h"
@@ -34,7 +35,11 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestScript(), argc, argv) +
                          QTest::qExec(new TestNetwork(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
-                         QTest::qExec(new TestUtilsMisc(), argc, argv);
+                         QTest::qExec(new TestUtilsMisc(), argc, argv) +
+#ifdef LANGUAGETOOL_ENABLED
+                         QTest::qExec(new TestLanguageTool(), argc, argv) +
+#endif
+                         0;
 
     delete Utils::Schema::schemaSettings;
     Utils::Schema::schemaSettings = nullptr;

@@ -24,6 +24,7 @@ class LanguageToolClient : public QObject {
         QString text;
         QString language;
         QString serverUrl;
+        QString username;
         QString apiKey;
         QStringList enabledCategories;
         QStringList disabledCategories;

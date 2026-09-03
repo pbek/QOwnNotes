@@ -61,6 +61,8 @@ void LanguageToolSettingsWidget::readSettings() {
         settings
             .value(QStringLiteral("languageToolServerUrl"), QStringLiteral("http://localhost:8081"))
             .toString());
+    ui->languageToolUsernameLineEdit->setText(
+        settings.value(QStringLiteral("languageToolUsername")).toString());
     ui->languageToolApiKeyLineEdit->setText(
         CryptoService::instance()->decryptToStringWithPlaintextFallback(
             settings.value(QStringLiteral("languageToolApiKey")).toString()));
@@ -113,6 +115,8 @@ void LanguageToolSettingsWidget::storeSettings() {
                       ui->languageToolLanguageComboBox->currentData().toString().isEmpty()
                           ? ui->languageToolLanguageComboBox->currentText().trimmed()
                           : ui->languageToolLanguageComboBox->currentData().toString());
+    settings.setValue(QStringLiteral("languageToolUsername"),
+                      ui->languageToolUsernameLineEdit->text().trimmed());
     settings.setValue(
         QStringLiteral("languageToolApiKey"),
         CryptoService::instance()->encryptToString(ui->languageToolApiKeyLineEdit->text().trimmed(),
@@ -167,6 +171,7 @@ void LanguageToolSettingsWidget::on_languageToolTestConnectionButton_clicked() {
     options.language = ui->languageToolLanguageComboBox->currentData().toString().isEmpty()
                            ? ui->languageToolLanguageComboBox->currentText().trimmed()
                            : ui->languageToolLanguageComboBox->currentData().toString();
+    options.username = ui->languageToolUsernameLineEdit->text().trimmed();
     options.apiKey = ui->languageToolApiKeyLineEdit->text().trimmed();
     options.timeoutMs = 5000;
     options.text = QStringLiteral("This are a test sentence.");
