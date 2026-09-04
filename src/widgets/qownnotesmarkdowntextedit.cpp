@@ -2604,7 +2604,7 @@ void QOwnNotesMarkdownTextEdit::paintMarkdownImagePreviews() {
 }
 
 bool QOwnNotesMarkdownTextEdit::canInsertFromMimeData(const QMimeData *source) const {
-    return (!source->hasUrls());
+    return source->hasUrls() || QMarkdownTextEdit::canInsertFromMimeData(source);
 }
 
 void QOwnNotesMarkdownTextEdit::dragEnterEvent(QDragEnterEvent *event) {
@@ -2641,12 +2641,14 @@ void QOwnNotesMarkdownTextEdit::dropEvent(QDropEvent *event) {
  * Handles pasting from clipboard
  */
 void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
-    // if there is text in the clipboard do the normal pasting process
-    if (source->hasText()) {
+    // File clipboard data can also contain text, so URLs need to take precedence.
+    if (source->hasUrls()) {
+        if (auto mainWindow = MainWindow::instance()) {
+            mainWindow->handleInsertingFromMimeData(source);
+        }
+    } else if (source->hasText()) {
         QMarkdownTextEdit::insertFromMimeData(source);
     } else if (auto mainWindow = MainWindow::instance()) {
-        // to more complex pasting if there was no text (and a main window
-        // was set)
         mainWindow->handleInsertingFromMimeData(source);
     }
 }

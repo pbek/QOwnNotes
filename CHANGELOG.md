@@ -2,6 +2,9 @@
 
 ## 26.9.1
 
+- Pasting or dropping a Markdown file into the note edit panel now asks whether
+  to add it as a new note or insert it as an attachment
+  (for [#3721](https://github.com/pbek/QOwnNotes/issues/3721))
 - Added a `Username` field to the LanguageTool settings so LanguageTool Premium
   accounts, which authenticate with a username and API key together, can be used
   for grammar and style checking (for [#3718](https://github.com/pbek/QOwnNotes/issues/3718), thank you @gregoreficint)

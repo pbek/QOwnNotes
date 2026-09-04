@@ -5770,19 +5770,45 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             if (fileInfo.isReadable()) {
                 auto *file = new QFile(path);
 
-                // only allow Markdown and text files to be copied as note
+                // Only allow Markdown and text files to be copied as note
                 if (isValidNoteFile(file)) {
-                    const NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
-                    const QString noteSubFolderPath = noteSubFolder.fullPath();
+                    QMessageBox msgBox(QMessageBox::Question, tr("Insert note file"),
+                                       tr("How should the file <strong>%1</strong> be handled?")
+                                           .arg(fileInfo.fileName().toHtmlEscaped()),
+                                       QMessageBox::NoButton, this);
+                    QPushButton *newNoteButton =
+                        msgBox.addButton(tr("Add as &new note"), QMessageBox::AcceptRole);
+                    QPushButton *attachmentButton =
+                        msgBox.addButton(tr("Insert as &attachment"), QMessageBox::ActionRole);
+                    msgBox.addButton(tr("&Cancel"), QMessageBox::RejectRole);
+                    msgBox.setDefaultButton(newNoteButton);
+                    attachmentButton->setEnabled(!noteEditorReadOnly);
 
-                    // copy file to notes path
-                    const bool success =
-                        file->copy(noteSubFolderPath + QDir::separator() + fileInfo.fileName());
+                    if (noteEditorReadOnly) {
+                        msgBox.setInformativeText(
+                            tr("The current note is read-only and cannot accept attachments."));
+                    }
 
-                    if (success) {
-                        successCount++;
-                    } else {
-                        failureCount++;
+                    msgBox.exec();
+
+                    if (msgBox.clickedButton() == newNoteButton) {
+                        const NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
+                        const QString noteSubFolderPath = noteSubFolder.fullPath();
+
+                        // Copy file to notes path
+                        const bool success =
+                            file->copy(noteSubFolderPath + QDir::separator() + fileInfo.fileName());
+
+                        if (success) {
+                            successCount++;
+                        } else {
+                            failureCount++;
+                        }
+                    } else if (msgBox.clickedButton() == attachmentButton) {
+                        showStatusBarMessage(tr("Inserting attachment"), QStringLiteral("🖼️"), 0);
+                        insertAttachment(file);
+                        showStatusBarMessage(tr("Done inserting attachment"), QStringLiteral("📥️"),
+                                             3000);
                     }
                 } else if (noteEditorReadOnly) {
                     readOnlySkipCount++;
