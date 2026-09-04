@@ -192,6 +192,7 @@ void LanguageToolChecker::recheckNow() {
     options.text = combinedText;
     options.language = _language;
     options.serverUrl = _serverUrl;
+    options.username = _username;
     options.apiKey = _apiKey;
     options.enabledCategories = _enabledCategories;
     options.disabledCategories = _disabledCategories;
@@ -341,6 +342,7 @@ void LanguageToolChecker::readSettings() {
             .trimmed();
     _language =
         settings.value(QStringLiteral("languageToolLanguage"), QStringLiteral("auto")).toString();
+    _username = settings.value(QStringLiteral("languageToolUsername")).toString().trimmed();
 
     // Only decrypt the API key from the keychain (libsecret on Linux) if
     // LanguageTool is actually enabled, to avoid unnecessary keychain access

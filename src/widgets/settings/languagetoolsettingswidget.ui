@@ -72,6 +72,26 @@
           </widget>
          </item>
          <item row="2" column="0">
+          <widget class="QLabel" name="languageToolUsernameLabel">
+           <property name="text">
+            <string>Username:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="2">
+          <widget class="QLineEdit" name="languageToolUsernameLineEdit">
+           <property name="placeholderText">
+            <string>Optional premium account username (e.g. your email address)</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
           <widget class="QLabel" name="languageToolApiKeyLabel">
            <property name="text">
             <string>API key:</string>
@@ -81,7 +101,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1" colspan="2">
+         <item row="3" column="1" colspan="2">
           <widget class="QLineEdit" name="languageToolApiKeyLineEdit">
            <property name="placeholderText">
             <string>Optional premium or cloud API key</string>
@@ -91,7 +111,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
+         <item row="4" column="0">
           <widget class="QLabel" name="languageToolCheckDelayLabel">
            <property name="text">
             <string>Check delay:</string>
@@ -101,7 +121,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="1" colspan="2">
+         <item row="4" column="1" colspan="2">
           <widget class="QSpinBox" name="languageToolCheckDelaySpinBox">
            <property name="minimum">
             <number>500</number>
@@ -117,7 +137,7 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
+         <item row="5" column="0">
           <widget class="QLabel" name="languageToolCategoriesLabel">
            <property name="text">
             <string>Categories:</string>
@@ -127,7 +147,7 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="1" colspan="2">
+         <item row="5" column="1" colspan="2">
           <widget class="QWidget" name="languageToolCategoriesWidget" native="true">
            <layout class="QGridLayout" name="gridLayout_languageToolCategories">
             <item row="0" column="0">
@@ -168,7 +188,7 @@
            </layout>
           </widget>
          </item>
-         <item row="5" column="0">
+         <item row="6" column="0">
           <widget class="QLabel" name="languageToolIgnoredLabel">
            <property name="text">
             <string>Ignored:</string>
@@ -178,7 +198,7 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="1" colspan="2">
+         <item row="6" column="1" colspan="2">
           <widget class="QWidget" name="languageToolIgnoredWidget" native="true">
            <layout class="QHBoxLayout" name="horizontalLayout_languageToolIgnored">
             <item>

@@ -100,6 +100,7 @@ class LanguageToolChecker : public QObject {
     bool _warningShown = false;
     QString _serverUrl;
     QString _language;
+    QString _username;
     QString _apiKey;
     QStringList _enabledCategories;
     QStringList _disabledCategories;

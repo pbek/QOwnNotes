@@ -13,8 +13,12 @@ HEADERS  += \
     $$PWD/test_settingsservice.h \
     $$PWD/test_script.h \
     $$PWD/test_utilsmisc.h \
+    $$PWD/test_languagetool.h \
+    $$PWD/mocklanguagetoolserver.h \
     $$APP_SRC_DIR/version.h \
     $$APP_SRC_DIR/release.h \
+    $$APP_SRC_DIR/services/languagetoolclient.h \
+    $$APP_SRC_DIR/services/languagetooltypes.h \
     $$APP_SRC_DIR/services/databaseservice.h \
     $$APP_SRC_DIR/api/noteapi.h \
     $$APP_SRC_DIR/api/notesubfolderapi.h \
@@ -70,6 +74,9 @@ SOURCES += \
     $$PWD/test_navigationwidget.cpp \
     $$PWD/test_notes.cpp \
     $$PWD/test_qmarkdowntextedit.cpp \
+    $$PWD/test_languagetool.cpp \
+    $$PWD/mocklanguagetoolserver.cpp \
+    $$APP_SRC_DIR/services/languagetoolclient.cpp \
     $$PWD/test_settingsservice.cpp \
     $$PWD/test_script.cpp \
     $$PWD/test_utilsmisc.cpp \

@@ -37,6 +37,10 @@ int LanguageToolClient::checkText(const RequestOptions &options) {
     query.addQueryItem(QStringLiteral("language"),
                        options.language.isEmpty() ? QStringLiteral("auto") : options.language);
 
+    if (!options.username.trimmed().isEmpty()) {
+        query.addQueryItem(QStringLiteral("username"), options.username.trimmed());
+    }
+
     if (!options.apiKey.trimmed().isEmpty()) {
         query.addQueryItem(QStringLiteral("apiKey"), options.apiKey.trimmed());
     }
