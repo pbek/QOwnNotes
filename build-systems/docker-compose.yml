@@ -4,18 +4,17 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ..:/QOwnNotes
-      # doesn't work out of the box with CryFS, see https://stackoverflow.com/a/67108158/1581487
-      - ../secrets/.oscrc:/home/ubuntu/.oscrc
-      - ../secrets/.dput.cf:/home/ubuntu/.dput.cf:ro
-      - ../secrets/github_rsa:/home/ubuntu/.ssh/id_rsa:ro
-      - ../secrets/github_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
-      - ../secrets/aur_rsa:/home/ubuntu/.ssh/aur_rsa:ro
-      - ../secrets/aur_rsa.pub:/home/ubuntu/.ssh/aur_rsa.pub:ro
-      - ../secrets/known_hosts:/home/ubuntu/.ssh/known_hosts
-      - ../secrets/known_hosts.old:/home/ubuntu/.ssh/known_hosts.old
-      - ../secrets/private.pgp:/home/ubuntu/private.pgp
-      - ../secrets/gh/hosts.yml:/home/ubuntu/.config/gh/hosts.yml
-      - ../secrets/gh/config.yml:/home/ubuntu/.config/gh/config.yml
+      - ${QON_SECRETS_DIR:-../secrets}/.oscrc:/home/ubuntu/.oscrc
+      - ${QON_SECRETS_DIR:-../secrets}/.dput.cf:/home/ubuntu/.dput.cf:ro
+      - ${QON_SECRETS_DIR:-../secrets}/github_rsa:/home/ubuntu/.ssh/id_rsa:ro
+      - ${QON_SECRETS_DIR:-../secrets}/github_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
+      - ${QON_SECRETS_DIR:-../secrets}/aur_rsa:/home/ubuntu/.ssh/aur_rsa:ro
+      - ${QON_SECRETS_DIR:-../secrets}/aur_rsa.pub:/home/ubuntu/.ssh/aur_rsa.pub:ro
+      - ${QON_SECRETS_DIR:-../secrets}/known_hosts:/home/ubuntu/.ssh/known_hosts
+      - ${QON_SECRETS_DIR:-../secrets}/known_hosts.old:/home/ubuntu/.ssh/known_hosts.old
+      - ${QON_SECRETS_DIR:-../secrets}/private.pgp:/home/ubuntu/private.pgp
+      - ${QON_SECRETS_DIR:-../secrets}/gh/hosts.yml:/home/ubuntu/.config/gh/hosts.yml
+      - ${QON_SECRETS_DIR:-../secrets}/gh/config.yml:/home/ubuntu/.config/gh/config.yml
     #      - ../secrets/id_rsa:/home/ubuntu/.ssh/id_rsa:ro
     #      - ../secrets/id_rsa.pub:/home/ubuntu/.ssh/id_rsa.pub:ro
     # fakeroot became terribly slow

@@ -39,6 +39,7 @@ in
       crowdin-cli
       cmake
       prettier # for formatting QSS files
+      jq # for parsing Bitwarden CLI responses in the release script
 
       # Packages for "just src-build"
       botan3
@@ -63,7 +64,10 @@ in
       libicns
       gum
     ]
-    ++ unstableQtPkgs;
+    ++ unstableQtPkgs
+    ++ [
+      unstablePkgs.bitwarden-cli
+    ];
 
   # https://devenv.sh/git-hooks/
   git-hooks = {
@@ -106,7 +110,7 @@ in
   enterShell = ''
     echo "🛠️ QOwnNotes Dev Shell"
     echo "📦 Qt6 version: $(qmake6 -query QT_VERSION)"
-    echo "📦 Qt5 version: $(${pkgs.libsForQt5.qt5.qtbase.dev}/bin/qmake -query QT_VERSION)"
+    echo "📦 Qt5 version: $(${pkgs.qt5.qtbase.dev}/bin/qmake -query QT_VERSION)"
     update-qmake-symlinks
   '';
 
@@ -119,7 +123,7 @@ in
 
       mkdir -p "''${BIN_DIR}"
       ln -sf "${unstablePkgs.kdePackages.qtbase}/bin/qmake" "''${BIN_DIR}/qmake6"
-      ln -sf "${pkgs.libsForQt5.qt5.qtbase.dev}/bin/qmake" "''${BIN_DIR}/qmake5"
+      ln -sf "${pkgs.qt5.qtbase.dev}/bin/qmake" "''${BIN_DIR}/qmake5"
     '';
   };
 
