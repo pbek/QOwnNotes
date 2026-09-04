@@ -5,6 +5,10 @@
 - Added a `Username` field to the LanguageTool settings so LanguageTool Premium
   accounts, which authenticate with a username and API key together, can be used
   for grammar and style checking (for [#3718](https://github.com/pbek/QOwnNotes/issues/3718), thank you @gregoreficint)
+- Text inside code blocks, inline code, bold, italic and link text can now be
+  selected with the mouse in the note preview panel, instead of only being
+  selectable by dragging over the surrounding text
+  (for [#3720](https://github.com/pbek/QOwnNotes/issues/3720))
 
 ## 26.9.0
 

@@ -207,6 +207,17 @@ static Selection::Element selectionDetails(const litehtml::element::ptr &element
     return {element, index, qRound(line.cursorToX(index))};
 }
 
+// Returns whether an element maintains a placement rectangle of its own that can be used for hit
+// testing. Elements with "display: inline" (like <code>, <em>, <strong> or <a>) and table rows do
+// not: litehtml lays their children out directly in the closest block container and never assigns
+// them a position, so their get_placement() is an empty rectangle at the origin. Their geometry
+// only exists as the union of the inline boxes of their children.
+static bool hasOwnPlacement(const litehtml::element::ptr &element)
+{
+    const litehtml::style_display display = element->get_display();
+    return display != litehtml::display_inline && display != litehtml::display_table_row;
+}
+
 static Selection::Element deepest_child_at_point(const litehtml::document::ptr &document,
                                                  const QPoint &pos,
                                                  const QPoint &viewportPos,
@@ -227,8 +238,12 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
         if (!element)
             return {};
 
+        // Elements without an own placement have to be descended into unconditionally, because
+        // their empty placement rectangle would never contain the point. Their text children still
+        // carry correct placements, so the hit test just happens one level deeper.
+        const bool ownPlacement = hasOwnPlacement(element);
         const QRect placement = toQRect(element->get_placement());
-        if (!placement.adjusted(0, 0, 1, 1).contains(pos))
+        if (ownPlacement && !placement.adjusted(0, 0, 1, 1).contains(pos))
             return {};
 
         for (int i = 0; i < int(element->get_children_count()); ++i) {
@@ -238,6 +253,10 @@ static Selection::Element deepest_child_at_point(const litehtml::document::ptr &
         }
 
         if (element->get_children_count() > 0)
+            return {};
+
+        // A leaf without an own placement cannot be hit tested, so it is no valid endpoint
+        if (!ownPlacement)
             return {};
 
         litehtml::tstring text;
