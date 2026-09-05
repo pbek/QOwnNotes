@@ -42,6 +42,12 @@ class JoplinImportDialog : public MasterDialog {
     QHash<QString, QString> _imageData;
     QHash<QString, QString> _attachmentData;
     QHash<QString, NoteSubFolder> _importedFolders;
+    // Resource id -> attachments-folder filename already written for it this
+    // import run, so a resource referenced more than once (e.g. once as an
+    // inline attachment link and again elsewhere in the same or a later
+    // note) reuses the existing copy instead of writing another
+    // byte-identical "<id>-1.ext" duplicate.
+    QHash<QString, QString> _importedAttachmentFileNames;
 
     bool importNote(const QString& id, const QString& text, const QString& dirPath);
     static void applyJoplinTimestamps(const QString& text, Note& note);

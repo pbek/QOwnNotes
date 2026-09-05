@@ -2936,8 +2936,36 @@ bool Note::handleNoteTextFileName() {
             int nameCount = 0;
             const QString nameBase = name;
 
-            // check if note with this filename already exists
-            while (Note::fetchByFileName(fileName).isFetched()) {
+            // Check if a *different* note with this filename already exists
+            // in the subfolder this note is actually being stored in.
+            //
+            // Without the explicit subfolder id, fetchByFileName() falls
+            // back to whatever subfolder happens to be active in the UI,
+            // which is frequently not this note's own subfolder (e.g.
+            // during a Joplin/Evernote import into a specific target
+            // subfolder) -- that let two notes with an identical title
+            // inside the same target subfolder collide undetected, silently
+            // overwriting one another on disk.
+            //
+            // Excluding this note's own id matters because
+            // handleNoteTextFileName() is called again for every note from
+            // storeNoteTextFileToDisk() (up to a few times per note during
+            // import, as image/attachment handling re-save the note text).
+            // The note's *text* never has its title line rewritten with the
+            // chosen suffix (see the comment below), so "name" recomputed
+            // from the text keeps not matching the already-suffixed
+            // "_name" on every later call, re-entering this loop. Once this
+            // note has stored itself once under, say, "Title 1", it would
+            // otherwise find its own row at that candidate and treat it as
+            // a collision with itself, escalating to "Title 2", "Title 3",
+            // ... on every subsequent call instead of keeping its name.
+            while (true) {
+                const Note existingNote = Note::fetchByFileName(fileName, this->_noteSubFolderId);
+                if (!existingNote.isFetched() ||
+                    (this->_id > 0 && existingNote.getId() == this->_id)) {
+                    break;
+                }
+
                 // find new filename for the note
                 name = nameBase + QStringLiteral(" ") + QString::number(++nameCount);
                 fileName = generateNoteFileNameFromName(name);
@@ -3001,14 +3029,25 @@ void Note::generateFileNameFromName() { _fileName = generateNoteFileNameFromName
  * @return
  */
 bool Note::canWriteToNoteFile() {
-    QFile file(fullNoteFilePath());
-    const bool canWrite = file.open(QIODevice::WriteOnly);
-    const bool fileExists = file.exists();
+    const QString path = fullNoteFilePath();
+    // Capture existence *before* opening -- opening below can itself create
+    // the file, which would make a post-open check always see it as
+    // "already there".
+    const bool fileExistedBefore = QFile::exists(path);
+
+    QFile file(path);
+    // Deliberately QIODevice::ReadWrite, not WriteOnly: for QFile, WriteOnly
+    // implies Truncate unless combined with Append, so opening an *existing*
+    // file here to merely probe writability was silently discarding its
+    // content as a side effect. ReadWrite still creates a missing file (so
+    // the writability check is unchanged) without truncating one that's
+    // already there.
+    const bool canWrite = file.open(QIODevice::ReadWrite);
 
     if (file.isOpen()) {
         file.close();
 
-        if (!fileExists) {
+        if (!fileExistedBefore) {
             file.remove();
         }
     }
@@ -3654,8 +3693,17 @@ bool Note::renameNoteFile(QString newName) {
         return false;
     }
 
-    // check if name already exists
-    const Note existingNote = Note::fetchByName(newName);
+    // Check if a *different* note with this name already exists in the
+    // subfolder this note actually lives in. Same wrong-scope pattern as
+    // handleNoteTextFileName(): without the explicit subfolder id,
+    // fetchByName() falls back to whatever subfolder happens to be active
+    // in the UI, not this note's own -- a false negative here lets
+    // _fileName/_name/store() below run for a name that DOES already exist
+    // in this note's subfolder, and only the final file.rename() call
+    // (which safely refuses when the destination exists) stops the rename
+    // from actually happening -- but by then the DB row has already been
+    // updated to a file_name that doesn't match what's on disk.
+    const Note existingNote = Note::fetchByName(newName, this->_noteSubFolderId);
     if (existingNote.isFetched() && (existingNote.getId() != _id)) {
         return false;
     }

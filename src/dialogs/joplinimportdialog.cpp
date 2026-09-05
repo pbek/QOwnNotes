@@ -10,6 +10,7 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QMessageBox>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
@@ -116,6 +117,7 @@ void JoplinImportDialog::on_importButton_clicked() {
     _attachmentData.clear();
     _folderData.clear();
     _importedFolders.clear();
+    _importedAttachmentFileNames.clear();
 
     auto directoryName = ui->directoryLineEdit->text();
     QDir dir(directoryName);
@@ -123,6 +125,19 @@ void JoplinImportDialog::on_importButton_clicked() {
     if (directoryName.isEmpty() || !dir.exists()) {
         return;
     }
+
+    // A Joplin resource referenced by more than one image tag (e.g. the same
+    // picture used twice) would otherwise pop up a "use existing file?"
+    // dialog once per repeat, or -- unanswered -- fall back to writing a
+    // byte-identical "<id>-1.ext" duplicate (see
+    // Note::getInsertMediaMarkdown()). Force it to reuse the existing file
+    // for the duration of this import, then restore whatever the user had
+    // configured.
+    SettingsService importSettings;
+    const QString reuseImageOverrideKey =
+        QStringLiteral("MessageBoxOverride/insert-media-use-existing-image");
+    const QVariant previousReuseImageOverride = importSettings.value(reuseImageOverrideKey);
+    importSettings.setValue(reuseImageOverrideKey, QMessageBox::Yes);
 
     QStringList files = dir.entryList(QStringList() << "*.md", QDir::Files);
     _dirPath = dir.path();
@@ -216,6 +231,12 @@ void JoplinImportDialog::on_importButton_clicked() {
     }
 
     ui->importButton->setEnabled(true);
+
+    if (previousReuseImageOverride.isValid()) {
+        importSettings.setValue(reuseImageOverrideKey, previousReuseImageOverride);
+    } else {
+        importSettings.remove(reuseImageOverrideKey);
+    }
 }
 
 bool JoplinImportDialog::importFolders() {
@@ -644,15 +665,46 @@ void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
         qDebug() << __func__ << " - 'attachmentName': " << attachmentName;
         qDebug() << __func__ << " - 'attachmentId': " << attachmentId;
 
-        auto* mediaFile = findResourceFile(dirPath, attachmentId, attachmentData);
+        QString mediaMarkdown;
 
-        qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
+        // This resource was already copied into the attachments folder
+        // earlier in this import (the same resource referenced more than
+        // once, e.g. linked twice in one note, or shared across notes) --
+        // reuse that copy instead of writing another byte-identical
+        // "<id>-1.ext" duplicate.
+        const auto existingFileNameIt = _importedAttachmentFileNames.constFind(attachmentId);
+        if (existingFileNameIt != _importedAttachmentFileNames.constEnd()) {
+            const QString title = attachmentName.isEmpty() ? *existingFileNameIt : attachmentName;
+            mediaMarkdown = QStringLiteral("[") + title + QStringLiteral("](") +
+                            note.attachmentUrlStringForFileName(*existingFileNameIt) +
+                            QStringLiteral(")");
+        } else {
+            auto* mediaFile = findResourceFile(dirPath, attachmentId, attachmentData);
 
-        if (mediaFile == nullptr) {
-            continue;
+            qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
+
+            if (mediaFile == nullptr) {
+                continue;
+            }
+
+            // The destination filename getInsertAttachmentMarkdown() is
+            // about to use is derived from mediaFile's own (source) file
+            // name, which findResourceFile() always sets to "<id>.<ext>" --
+            // unique per resource id, so no other note/resource can already
+            // occupy it. Capturing it here (rather than parsing it back out
+            // of the returned Markdown) is exact and avoids re-deriving
+            // Note's URL-encoding/collision-suffix logic independently.
+            const QString destinationFileName = QFileInfo(mediaFile->fileName()).fileName();
+
+            mediaMarkdown = note.getInsertAttachmentMarkdown(mediaFile, attachmentName);
+
+            // getInsertAttachmentMarkdown() silently no-ops (empty return)
+            // for a zero-byte resource, in which case nothing was actually
+            // copied -- don't cache a filename that was never written.
+            if (!mediaMarkdown.isEmpty()) {
+                _importedAttachmentFileNames.insert(attachmentId, destinationFileName);
+            }
         }
-
-        QString mediaMarkdown = note.getInsertAttachmentMarkdown(mediaFile, attachmentName);
 
         qDebug() << __func__ << " - 'mediaMarkdown': " << mediaMarkdown;
         noteText.replace(attachmentTag, mediaMarkdown);

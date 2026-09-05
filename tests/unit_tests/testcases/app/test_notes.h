@@ -90,6 +90,13 @@ class TestNotes : public QObject {
 
     /* Command snippet parsing tests */
     void testCommandSnippetsKeepNearestHeadingForCodeBlocks();
+
+    /* Duplicate-title-collision fix (found via Joplin-import validation, not
+     * import-specific -- affects any note creation/rename) */
+    void testDuplicateTitleInNonActiveSubfolderGetsSuffixedNotOverwritten();
+    void testDuplicateTitleInActiveSubfolderStillGetsSuffixed();
+    void testRenameNoteFileToExistingNameInNonActiveSubfolder();
+    void testEditingExistingNoteTitleToMatchAnotherNoteDestroysItsContent();
 };
 
 #endif    // TESTNOTES_H
