@@ -1,11 +1,9 @@
 # Hogyan jeleníthetem meg az előnézeti panelt a jegyzetszerkesztő panel nélkül?
 
-Ezt úgy teheti meg, hogy kikapcsolja, hogy a **jegyzetszerkesztő panel** a **panel widget** a **Panelbeállítások** részben.
+Open **Settings > Interface > Layouts**, select the layout, and choose **Note preview** as its **central widget**.
 
-Then best create a new layout `Preview only` by clicking **Window / Layout / Add new layout** in the main menu. Képes lesz váltani a különböző panelelrendezések között.
+You can create a new layout first with **Add from current**, or use **Add from preset...** and select the **Preview only** preset.
 
-Afterward you can turn off the note edit panel in the **Window / Panels menu**.
+Afterward, turn off the note edit panel in the **Window > Panels** menu. The preview will automatically use the available central area.
 
 Ne feledje, hogy az összes panelen tetszés szerint mozoghat, ha a főmenü **Ablak / panelek feloldása** elemére kattint. Az összes panel átméretezhető az Ön igényeinek megfelelően.
-
-Alternatively you can switch to the **Preview only** layout in the **Layout preset settings**.

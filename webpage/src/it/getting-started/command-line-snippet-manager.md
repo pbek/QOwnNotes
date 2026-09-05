@@ -91,6 +91,7 @@ I blocchi di codice **`bash` o `shell`**, preceduti da un'intestazione 2 o super
      echo fai quest'altro
     ```
 
+
     ## Fai qualcos'altro con un blocco di codice "sh".
 
     ```sh

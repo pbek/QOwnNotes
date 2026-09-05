@@ -1400,6 +1400,14 @@ Connection error message: </translation>
 <translation type="unfinished">Show note filename selection when [[ is typed</translation>
 </message>
 <message>
+<source>Applies to word, wiki-link, equation, script and Markdown LSP completions</source>
+<translation type="unfinished">Applies to word, wiki-link, equation, script and Markdown LSP completions</translation>
+</message>
+<message>
+<source>Insert autocompletion directly if there is only one result</source>
+<translation type="unfinished">Insert autocompletion directly if there is only one result</translation>
+</message>
+<message>
 <source>Tabs and Indents</source>
 <translation type="unfinished">Tabs and Indents</translation>
 </message>
@@ -2125,6 +2133,10 @@ File: QOwnNotes_en.ts</translation>
 <message>
 <source>Link</source>
 <translation>링크</translation>
+</message>
+<message>
+<source>Link hover</source>
+<translation type="unfinished">Link hover</translation>
 </message>
 <message>
 <source>Link (internal)</source>
@@ -3663,61 +3675,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 </context>
 <context>
-<name>LayoutDialog</name>
-<message>
-<source>Manage layouts</source>
-<translation>레이아웃 관리</translation>
-</message>
-<message>
-<source>Add layout</source>
-<translation>레이아웃 추가</translation>
-</message>
-<message>
-<source>Add</source>
-<translation>추가</translation>
-</message>
-<message>
-<source>Remove layout</source>
-<translation>레이아웃 제거</translation>
-</message>
-<message>
-<source>Remove</source>
-<translation>제거</translation>
-</message>
-<message>
-<source>Rename layout</source>
-<translation>레이아웃 이름 바꾸기</translation>
-</message>
-<message>
-<source>Rename</source>
-<translation>이름 바꾸기</translation>
-</message>
-<message>
-<source>Move layout up</source>
-<translation>레이아웃을 위로 이동</translation>
-</message>
-<message>
-<source>Move up</source>
-<translation>위로 이동</translation>
-</message>
-<message>
-<source>Move layout down</source>
-<translation>레이아웃을 아래로 이동</translation>
-</message>
-<message>
-<source>Move down</source>
-<translation>아래로 이동</translation>
-</message>
-<message>
-<source>Layout name:</source>
-<translation>레이아웃 이름:</translation>
-</message>
-<message>
-<source>Remove the selected layout?</source>
-<translation>선택한 레이아웃을 제거하시겠습니까?</translation>
-</message>
-</context>
-<context>
 <name>LayoutManager</name>
 <message>
 <source>Layouts</source>
@@ -3759,10 +3716,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Use preset</source>
 <translation>사전 설정 사용</translation>
-</message>
-<message>
-<source>Keep in mind that layouts that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-<translation>중앙 위젯이 활성화되면 중앙 위젯이 필요하지 않은 레이아웃이 제대로 작동하지 않는다는 점을 명심하세요.</translation>
 </message>
 <message>
 <source>Use new layout preset</source>
@@ -3808,6 +3761,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>이 때문에 자동으로 크기가 조정되는 중앙 위젯이 없습니다.</translation>
 </message>
 <message>
+<source>The note preview panel is the central widget that will be resized automatically.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">The note preview panel is the central widget that will be resized automatically.</translation>
+</message>
+<message>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
 <comment>Layout preset description</comment>
 <translation>왼쪽의 노트 목록과 오른쪽의 노트 편집 패널만 기본적으로 활성화되어 있습니다.</translation>
@@ -3831,6 +3789,109 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout preset description</comment>
 <translation>노트 검색, 노트 목록 및 노트 편집 기능이 있는 작은 열 레이아웃입니다.</translation>
+</message>
+</context>
+<context>
+<name>LayoutsSettingsWidget</name>
+<message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
+<source>Create, rename, remove, and order layouts. Changes on this page are applied immediately.</source>
+<translation type="unfinished">Create, rename, remove, and order layouts. Changes on this page are applied immediately.</translation>
+</message>
+<message>
+<source>Add from current</source>
+<translation type="unfinished">Add from current</translation>
+</message>
+<message>
+<source>Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</source>
+<translation type="unfinished">Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</translation>
+</message>
+<message>
+<source>Add from preset...</source>
+<translation type="unfinished">Add from preset...</translation>
+</message>
+<message>
+<source>Opens the layout preset selector in a new dialog</source>
+<translation type="unfinished">Opens the layout preset selector in a new dialog</translation>
+</message>
+<message>
+<source>Switch to selected</source>
+<translation type="unfinished">Switch to selected</translation>
+</message>
+<message>
+<source>Switches to the selected layout</source>
+<translation type="unfinished">Switches to the selected layout</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation type="unfinished">Remove</translation>
+</message>
+<message>
+<source>Rename</source>
+<translation type="unfinished">Rename</translation>
+</message>
+<message>
+<source>Move up</source>
+<translation type="unfinished">Move up</translation>
+</message>
+<message>
+<source>Move down</source>
+<translation type="unfinished">Move down</translation>
+</message>
+<message>
+<source>Selected layout</source>
+<translation type="unfinished">Selected layout</translation>
+</message>
+<message>
+<source>Create layout from preset</source>
+<translation type="unfinished">Create layout from preset</translation>
+</message>
+<message>
+<source>Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</source>
+<translation type="unfinished">Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</translation>
+</message>
+<message>
+<source>Add layout</source>
+<translation type="unfinished">Add layout</translation>
+</message>
+<message>
+<source>Central widget:</source>
+<translation type="unfinished">Central widget:</translation>
+</message>
+<message>
+<source>Note edit</source>
+<translation type="unfinished">Note edit</translation>
+</message>
+<message>
+<source>Note preview</source>
+<translation type="unfinished">Note preview</translation>
+</message>
+<message>
+<source>No central widget</source>
+<translation type="unfinished">No central widget</translation>
+</message>
+<message>
+<source>The central widget automatically uses the space left by the surrounding panels</source>
+<translation type="unfinished">The central widget automatically uses the space left by the surrounding panels</translation>
+</message>
+<message>
+<source>Layout name:</source>
+<translation type="unfinished">Layout name:</translation>
+</message>
+<message>
+<source>Remove layout</source>
+<translation type="unfinished">Remove layout</translation>
+</message>
+<message>
+<source>Remove the selected layout?</source>
+<translation type="unfinished">Remove the selected layout?</translation>
+</message>
+<message>
+<source>Rename layout</source>
+<translation type="unfinished">Rename layout</translation>
 </message>
 </context>
 <context>
@@ -6606,6 +6667,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <translation type="unfinished">Please select your note folder on your Nextcloud / ownCloud server:</translation>
 </message>
 <message>
+<source>Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</source>
+<translation type="unfinished">Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</translation>
+</message>
+<message>
 <source>Path on your Nextcloud / ownCloud server:</source>
 <translation type="unfinished">Path on your Nextcloud / ownCloud server:</translation>
 </message>
@@ -6689,6 +6754,10 @@ ownCloud 서버에서 휴지통을 사용할 수 있는 경우 휴지통을 복�
 <message>
 <source>Allow note file name to be different from headline</source>
 <translation type="unfinished">Allow note file name to be different from headline</translation>
+</message>
+<message>
+<source>None</source>
+<translation type="unfinished">None</translation>
 </message>
 <message>
 <source>new folder</source>
@@ -7408,14 +7477,6 @@ Do you want to delete those files as well?</source>
 <message>
 <source>Note edit panel</source>
 <translation type="unfinished">Note edit panel</translation>
-</message>
-<message>
-<source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-<translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
-</message>
-<message>
-<source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -8580,6 +8641,10 @@ Are the folder and the file writable?</source>
 <translation>현재 설치된 버전:</translation>
 </message>
 <message>
+<source>Changelog:</source>
+<translation type="unfinished">Changelog:</translation>
+</message>
+<message>
 <source>Installs the script</source>
 <translation>스크립트 설치</translation>
 </message>
@@ -8674,6 +8739,14 @@ Are the folder and the file writable?</source>
 <message>
 <source>Reinstalls the script</source>
 <translation>스크립트를 다시 설치합니다</translation>
+</message>
+<message>
+<source>Open changelog</source>
+<translation type="unfinished">Open changelog</translation>
+</message>
+<message>
+<source>Changes from version %1 to %2:</source>
+<translation type="unfinished">Changes from version %1 to %2:</translation>
 </message>
 <message>
 <source>Platform not supported!</source>
@@ -8934,6 +9007,10 @@ Do you want to install it anyway?</source>
 <translation>인터페이스</translation>
 </message>
 <message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
 <source>Harper</source>
 <translation type="unfinished">Harper</translation>
 </message>
@@ -8998,28 +9075,12 @@ Do you want to install it anyway?</source>
 <translation>디버그 옵션</translation>
 </message>
 <message>
-<source>Layout presets</source>
-<translation>레이아웃 사전 설정</translation>
-</message>
-<message>
 <source>Color modes</source>
 <translation>색상 모드</translation>
 </message>
 <message>
 <source>MCP server</source>
 <translation>MCP 서버</translation>
-</message>
-<message>
-<source>Layout preset selector</source>
-<translation>레이아웃 사전 설정 선택기</translation>
-</message>
-<message>
-<source>You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-<translation>여기에서 사전 설정으로 새 레이아웃을 만들 수 있습니다. &lt;i&gt; 패널 잠금 해제&lt;/i&gt; 버튼을 사용하여 패널의 위치를 항상 수정할 수 있다는 점을 명심하세요.</translation>
-</message>
-<message>
-<source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</source>
-<translation>패널은 &lt;i&gt;창 / 패널&lt;/i&gt; 메인 메뉴에서 켜고 끌 수 있으며, 패널 구성에 따라 다른 &lt;i&gt;레이아웃&lt;/i&gt;를 설정할 수도 있습니다.</translation>
 </message>
 <message>
 <source>Browser extension / command snippets</source>

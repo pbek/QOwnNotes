@@ -91,6 +91,7 @@ A **`bash` vagy `shell` kódblokkok**, amelyeket leírásként 2-es vagy magasab
      echo tedd ezt
     ```
 
+
     ## Csinálj valami mást az "sh" kódblokk segítségével
 
     ```sh

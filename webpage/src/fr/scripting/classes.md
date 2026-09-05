@@ -167,29 +167,29 @@ class MainWindow {
 ### Exemple
 
 ```js
-// Force un rechargement de la liste des notes
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Créé un nouveau sous-dossier de notes « My fancy folder » dans le sous-dossier de notes courant
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Insère du HTML dans la note courante en tant que Markdown
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline
 some text");
 
-// Charge la dispositon « Edit » en tant que disposition courante
+// Set 'Edit' layout as current layout
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));
 
-// Va au tag « test » dans l’arbre des tags
-// Il y a un exemple dans https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Récupère toutes les notes ouvertes dans des onglets
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // faire quelque chose avec la note
+  // do something with the note
 });
 ```

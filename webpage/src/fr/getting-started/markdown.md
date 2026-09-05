@@ -144,6 +144,22 @@ Info Les liens internes avec un titre ne sont pas supportés :
 
 :::
 
+### Footnotes
+
+You can add numeric or named footnotes to link to another position in the same note:
+
+```markdown
+Here is some text with a footnote.[^1]
+
+[^1]: This is the footnote text.
+
+This is a statement with a named footnote.[^source]
+
+[^source]: The source or additional explanation.
+```
+
+Footnote references and definitions are shown as links. Hold <kbd>Ctrl</kbd> and click a footnote in the note editor to jump between its reference and definition. You can also click footnotes in the preview.
+
 ### Signets
 
 Les signets utilisés par [l'extension de navigateur QOwnNotes Web Companion](./browser-extension.md) utilisent des liens dans des listes.

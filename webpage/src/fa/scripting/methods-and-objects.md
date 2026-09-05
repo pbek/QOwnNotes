@@ -1841,6 +1841,10 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | کادر انتخاب بدون علامت | 29    |
 | کادر انتخاب با علامت   | 30    |
 | StUnderline            | 31    |
+| WikiLink               | 32    |
+| WikiLinkBroken         | 33    |
+| LinkInternal           | 34    |
+| Whitespace             | 35    |
 
 ### Example
 

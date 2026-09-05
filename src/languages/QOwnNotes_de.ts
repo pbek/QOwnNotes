@@ -1400,6 +1400,14 @@ Connection error message: </translation>
 <translation>Notizdateinamen-Auswahl anzeigen, wenn [[ eingegeben wird</translation>
 </message>
 <message>
+<source>Applies to word, wiki-link, equation, script and Markdown LSP completions</source>
+<translation type="unfinished">Applies to word, wiki-link, equation, script and Markdown LSP completions</translation>
+</message>
+<message>
+<source>Insert autocompletion directly if there is only one result</source>
+<translation type="unfinished">Insert autocompletion directly if there is only one result</translation>
+</message>
+<message>
 <source>Tabs and Indents</source>
 <translation>Tabs und Einrückungen</translation>
 </message>
@@ -2131,6 +2139,10 @@ Connection error message: </translation>
 <message>
 <source>Link</source>
 <translation>Verweis</translation>
+</message>
+<message>
+<source>Link hover</source>
+<translation type="unfinished">Link hover</translation>
 </message>
 <message>
 <source>Link (internal)</source>
@@ -3673,61 +3685,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 </context>
 <context>
-<name>LayoutDialog</name>
-<message>
-<source>Manage layouts</source>
-<translation>Layouts verwalten</translation>
-</message>
-<message>
-<source>Add layout</source>
-<translation>Layout hinzufügen</translation>
-</message>
-<message>
-<source>Add</source>
-<translation>Hinzufügen</translation>
-</message>
-<message>
-<source>Remove layout</source>
-<translation>Layout entfernen</translation>
-</message>
-<message>
-<source>Remove</source>
-<translation>Entfernen</translation>
-</message>
-<message>
-<source>Rename layout</source>
-<translation>Layout umbenennen</translation>
-</message>
-<message>
-<source>Rename</source>
-<translation>Umbenennen</translation>
-</message>
-<message>
-<source>Move layout up</source>
-<translation>Layout nach oben verschieben</translation>
-</message>
-<message>
-<source>Move up</source>
-<translation>Nach oben verschieben</translation>
-</message>
-<message>
-<source>Move layout down</source>
-<translation>Layout nach unten verschieben</translation>
-</message>
-<message>
-<source>Move down</source>
-<translation>Nach unten verschieben</translation>
-</message>
-<message>
-<source>Layout name:</source>
-<translation>Layout-Name:</translation>
-</message>
-<message>
-<source>Remove the selected layout?</source>
-<translation>Das ausgewählte Layout entfernen?</translation>
-</message>
-</context>
-<context>
 <name>LayoutManager</name>
 <message>
 <source>Layouts</source>
@@ -3769,10 +3726,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Use preset</source>
 <translation>Voreinstellung verwenden</translation>
-</message>
-<message>
-<source>Keep in mind that layouts that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-<translation>Beachten Sie, dass Layouts, die kein zentrales Widget voraussetzen, nicht ordnungsgemäß funktionieren, wenn das zentrale Widget aktiviert ist.</translation>
 </message>
 <message>
 <source>Use new layout preset</source>
@@ -3818,6 +3771,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Deshalb gibt es kein zentrales Widget, das automatisch in der Größe angepasst wird.</translation>
 </message>
 <message>
+<source>The note preview panel is the central widget that will be resized automatically.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">The note preview panel is the central widget that will be resized automatically.</translation>
+</message>
+<message>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
 <comment>Layout preset description</comment>
 <translation>Standardmäßig sind nur die Notizenliste links und das Notizenbearbeitungspanel rechts aktiviert.</translation>
@@ -3841,6 +3799,109 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout preset description</comment>
 <translation>Winziges Ein-Spalten-Layout mit Notizensuche, Notizenliste und Notizenbearbeitung übereinander.</translation>
+</message>
+</context>
+<context>
+<name>LayoutsSettingsWidget</name>
+<message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
+<source>Create, rename, remove, and order layouts. Changes on this page are applied immediately.</source>
+<translation type="unfinished">Create, rename, remove, and order layouts. Changes on this page are applied immediately.</translation>
+</message>
+<message>
+<source>Add from current</source>
+<translation type="unfinished">Add from current</translation>
+</message>
+<message>
+<source>Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</source>
+<translation type="unfinished">Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</translation>
+</message>
+<message>
+<source>Add from preset...</source>
+<translation type="unfinished">Add from preset...</translation>
+</message>
+<message>
+<source>Opens the layout preset selector in a new dialog</source>
+<translation type="unfinished">Opens the layout preset selector in a new dialog</translation>
+</message>
+<message>
+<source>Switch to selected</source>
+<translation type="unfinished">Switch to selected</translation>
+</message>
+<message>
+<source>Switches to the selected layout</source>
+<translation type="unfinished">Switches to the selected layout</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation type="unfinished">Remove</translation>
+</message>
+<message>
+<source>Rename</source>
+<translation type="unfinished">Rename</translation>
+</message>
+<message>
+<source>Move up</source>
+<translation type="unfinished">Move up</translation>
+</message>
+<message>
+<source>Move down</source>
+<translation type="unfinished">Move down</translation>
+</message>
+<message>
+<source>Selected layout</source>
+<translation type="unfinished">Selected layout</translation>
+</message>
+<message>
+<source>Create layout from preset</source>
+<translation type="unfinished">Create layout from preset</translation>
+</message>
+<message>
+<source>Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</source>
+<translation type="unfinished">Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</translation>
+</message>
+<message>
+<source>Add layout</source>
+<translation type="unfinished">Add layout</translation>
+</message>
+<message>
+<source>Central widget:</source>
+<translation type="unfinished">Central widget:</translation>
+</message>
+<message>
+<source>Note edit</source>
+<translation type="unfinished">Note edit</translation>
+</message>
+<message>
+<source>Note preview</source>
+<translation type="unfinished">Note preview</translation>
+</message>
+<message>
+<source>No central widget</source>
+<translation type="unfinished">No central widget</translation>
+</message>
+<message>
+<source>The central widget automatically uses the space left by the surrounding panels</source>
+<translation type="unfinished">The central widget automatically uses the space left by the surrounding panels</translation>
+</message>
+<message>
+<source>Layout name:</source>
+<translation type="unfinished">Layout name:</translation>
+</message>
+<message>
+<source>Remove layout</source>
+<translation type="unfinished">Remove layout</translation>
+</message>
+<message>
+<source>Remove the selected layout?</source>
+<translation type="unfinished">Remove the selected layout?</translation>
+</message>
+<message>
+<source>Rename layout</source>
+<translation type="unfinished">Rename layout</translation>
 </message>
 </context>
 <context>
@@ -6645,6 +6706,10 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <translation type="unfinished">Please select your note folder on your Nextcloud / ownCloud server:</translation>
 </message>
 <message>
+<source>Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</source>
+<translation type="unfinished">Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</translation>
+</message>
+<message>
 <source>Path on your Nextcloud / ownCloud server:</source>
 <translation type="unfinished">Path on your Nextcloud / ownCloud server:</translation>
 </message>
@@ -6728,6 +6793,10 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Allow note file name to be different from headline</source>
 <translation>Notizdateiname darf sich von der Überschrift unterscheiden</translation>
+</message>
+<message>
+<source>None</source>
+<translation type="unfinished">None</translation>
 </message>
 <message>
 <source>new folder</source>
@@ -7479,14 +7548,6 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 <message>
 <source>Note edit panel</source>
 <translation>Notizenbearbeitungspanel</translation>
-</message>
-<message>
-<source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-<translation>Wenn deaktiviert, können komplexere Panel-Layouts erstellt werden, aber alle Panels werden angepasst, wenn das Fenster in der Größe geändert wird</translation>
-</message>
-<message>
-<source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation>Das Notizenbearbeitungspanel als festes zentrales Widget verwenden, das angepasst wird, wenn das Fenster oder andere Panels in der Größe geändert werden</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -8657,6 +8718,10 @@ Sind Ordner und Datei beschreibbar?</translation>
 <translation>Aktuell installierte Version:</translation>
 </message>
 <message>
+<source>Changelog:</source>
+<translation type="unfinished">Changelog:</translation>
+</message>
+<message>
 <source>Installs the script</source>
 <translation>Installiert das Skript</translation>
 </message>
@@ -8751,6 +8816,14 @@ Sind Ordner und Datei beschreibbar?</translation>
 <message>
 <source>Reinstalls the script</source>
 <translation>Das Skript neu installieren</translation>
+</message>
+<message>
+<source>Open changelog</source>
+<translation type="unfinished">Open changelog</translation>
+</message>
+<message>
+<source>Changes from version %1 to %2:</source>
+<translation type="unfinished">Changes from version %1 to %2:</translation>
 </message>
 <message>
 <source>Platform not supported!</source>
@@ -9015,6 +9088,10 @@ Möchten Sie es trotzdem installieren?</translation>
 <translation>Oberfläche</translation>
 </message>
 <message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
 <source>Harper</source>
 <translation type="unfinished">Harper</translation>
 </message>
@@ -9079,28 +9156,12 @@ Möchten Sie es trotzdem installieren?</translation>
 <translation>Debug-Optionen</translation>
 </message>
 <message>
-<source>Layout presets</source>
-<translation>Layout-Voreinstellungen</translation>
-</message>
-<message>
 <source>Color modes</source>
 <translation>Farbmodi</translation>
 </message>
 <message>
 <source>MCP server</source>
 <translation>MCP-Server</translation>
-</message>
-<message>
-<source>Layout preset selector</source>
-<translation>Layout-Voreinstellungs-Auswahl</translation>
-</message>
-<message>
-<source>You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-<translation>Sie können hier ein neues Layout aus einer Voreinstellung erstellen. Die Position der Panels kann immer mit der Schaltfläche &lt;i&gt;Panels entsperren&lt;/i&gt; geändert werden.</translation>
-</message>
-<message>
-<source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</source>
-<translation>Panels können im Hauptmenü &lt;i&gt;Fenster / Panels&lt;/i&gt; ein- und ausgeschaltet werden; Sie können auch verschiedene &lt;i&gt;Layouts&lt;/i&gt; konfigurieren.</translation>
 </message>
 <message>
 <source>Browser extension / command snippets</source>

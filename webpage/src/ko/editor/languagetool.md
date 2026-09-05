@@ -23,7 +23,10 @@ QOwnNotes는 노트 편집기에서 **문법 및 스타일 확인** 옵션으로
 - '언어' 선택
   - '자동 감지' 사용 가능
   - 필요한 경우 사용자 지정 언어 코드를 입력할 수도 있습니다
-- 언어 도구 서비스에 'API 키'가 필요한 경우 선택적으로 'API 키'를 추가합니다
+- Add an optional `Username` and `API key` for [LanguageTool Premium](https://languagetool.org/premium)
+  or another LanguageTool service that requires authentication
+  - Set the `Server URL` to `https://api.languagetoolplus.com` to use the LanguageTool Premium service
+  - Both fields are sent together; leave them empty for a local or free server that needs no credentials
 - 요청을 보내기 전에 QOwnNotes가 입력한 후 대기하는 시간을 제어하기 위해 '확인 지연'을 조정합니다
 - 확인해야 할 범주 선택
   - `맞춤법`

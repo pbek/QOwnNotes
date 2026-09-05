@@ -26,7 +26,8 @@ graph TB
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
-    nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
+    qon-mob("QOwnNotes Android")-->nc-notes-app
+    qon-mob-->qon-api
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
@@ -48,7 +49,7 @@ graph TB
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
-    click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
     click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
@@ -187,7 +188,7 @@ QOwnNotes는 편집기에서 로컬 [하퍼](https://writewithharper.com/) 서�
 
 ## Nextcloud 노트 서버 앱
 
-**웹</1/>에서 노트를 편집하려면 [**Nextcloud 노트**](https://github.com/nextcloud/notes)를 사용합니다.
+**웹</1/>에서 노트를 편집하려면 [**Nextcloud 노트**](https://github.com/nextcloud/notes)를 사용합니다.</p>
 
 ::: warning
 의
@@ -198,17 +199,29 @@ Nextcloud 노트는 현재 최대 한 수준의 하위 폴더만 지원합니다
 
 QOwnNotes를 사용하여 [**Nextcloud Deck**](https://github.com/nextcloud/deck)에서 **카드**를 빠르게 만들 수 있습니다.
 
-## Nextcloud 노트 모바일 앱
+## QOwnNotes Android
 
-**모바일 장치**에서 Nextcloud / ownCloud 노트에 액세스하기 위해 다른 앱을 사용할 수 있습니다.
+[QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is the recommended app to access your Nextcloud / ownCloud notes from your **mobile device**.
 
-### Android
+It is an **offline-capable Markdown notes app** for Android that synchronizes with your Nextcloud server through the **Nextcloud Notes API** and the **QOwnNotesAPI** app.
 
-- [Android용 Nextcloud 노트](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (타사 제품)
+- It uses **Room** as the local source of truth, with edits cached immediately and synchronized when the server is reachable
+- It talks to **Nextcloud Notes** and **QOwnNotesAPI** on your server, giving you access to **note version history** and the **server-side trash bin**
+- Supports **Single Sign-On** import from the Nextcloud Files Android app
+- Renders **CommonMark and GitHub Flavored Markdown**, checkbox lists with three states (open, done, partial), wiki links, tables, fenced code, and remote images
+- Provides a **Markdown editor** with formatting actions, undo/redo, cursor preservation, and local draft persistence
+- Lets you **favorite notes** with offline toggling and favorites-first ordering
+- Create notes from **text shared by other Android apps**
+- Offers **light and dark themes** on Android 9+
 
 ::: tip
-또한 _ynchronize Ultimate_ 또는 _FolderSync_과 같은 동기화 도구를 사용하여 노트 파일을 동기화하고 _neutriNotes_ 또는 [**Markor**](https://f-droid.org/packages/net.gsantner.markor/)과 같은 소프트웨어를 사용하여 노트를 편집할 수도 있습니다.
+Please visit [QOwnNotes Android](qownnotes-android.md) for more information.
 :::
+
+### Other Android apps
+
+- [Android용 Nextcloud 노트](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (타사 제품)
+- You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes
 
 ### iOS
 

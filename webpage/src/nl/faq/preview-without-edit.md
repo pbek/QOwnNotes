@@ -1,11 +1,9 @@
 # Hoe kan ik gewoon het voorbeeldvenster weergeven zonder het notitiebewerkingspaneel?
 
-U kunt dat doen door uit te schakelen dat het **notitiebewerkingspaneel** de **centrale widget** is in de **Paneelinstellingen**.
+Open **Settings > Interface > Layouts**, select the layout, and choose **Note preview** as its **central widget**.
 
-Then best create a new layout `Preview only` by clicking **Window / Layout / Add new layout** in the main menu. U kunt tussen verschillende paneelindelingen schakelen.
+You can create a new layout first with **Add from current**, or use **Add from preset...** and select the **Preview only** preset.
 
-Daarna kunt u het notitiebewerkingspaneel uitschakelen in het menu **Venster / Panelen**.
+Afterward, turn off the note edit panel in the **Window > Panels** menu. The preview will automatically use the available central area.
 
 Houd er rekening mee dat u door alle panelen kunt navigeren zoals u wilt door op **Venster/panelen ontgrendelen** in het hoofdmenu te klikken. U kunt het formaat van alle panelen ook aanpassen aan uw behoeften.
-
-Alternatively you can switch to the **Preview only** layout in the **Layout preset settings**.

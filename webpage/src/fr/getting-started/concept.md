@@ -12,48 +12,49 @@
 
 ```mermaid
 graph TB
-    subgraph Votre ordinateur
-        qon((QOwnNotes))-->md{{"Fichiers Markdown"}}
+    subgraph Your computer
+        qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-        qon-comp("Extension de navigateur")-->qon
-        qc("Gestionnaire de snippets en ligne de commande")-->qon
-        tui("TUI QOwnNotes")-->md
-        homepage("Tableau de bord Homepage")-->qon
+        qon-comp("Browser extension")-->qon
+        qc("Command-line snippet manager")-->qon
+        tui("QOwnNotes TUI")-->md
+        homepage("Homepage dashboard")-->qon
     end
-    subgraph Votre serveur Nextcloud
-        qon-api("QOwnNotesApi")-->ncs[("Serveur Nextcloud")]
+    subgraph Your Nextcloud server
+        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
-    nc-notes-mob("Application mobile Nextcloud Notes")-->nc-notes-app
-    qon-web-app("Application web QOwnNotes")-->qon
+    qon-mob("QOwnNotes Android")-->nc-notes-app
+    qon-mob-->qon-api
+    qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
-    qon-.->lt("Service LanguageTool")
-    qon-.->harper("Service Harper")
+    qon-.->lt("LanguageTool service")
+    qon-.->harper("Harper service")
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
-    click qon "/fr/getting-started/concept.html#qownnotes" "L’application de bureau QOwnNotes Desktop pour gérer vos notes sur votre ordinateur"
-    click md "/fr/getting-started/concept.html#fichiers-de-notes-en-markdown" "Markdown, média et pièces jointes dans votre dossier de notes"
-    click qon-comp "/fr/getting-started/concept.html#extension-de-navigateur-qownnotes" "Extension de navigateur QOwnNotes pour gérer les signets dans des fichiers Markdown et pour servir de web clipper"
-    click qc "/fr/getting-started/concept.html#gestionnaire-de-snippets-en-ligne-de-commande-de-qownnotes" "Gestionnaire de snippets en ligne de commande de QOwnNotes"
-    click tui "/fr/getting-started/concept.html#tui-qownnotes" "La TUI QOwnNotes, pour parcourir et modifier les notes de vos dossiers de notes dans le terminal"
-    click homepage "/fr/getting-started/concept.html#tableau-de-bord-homepage" "Tableau de bord Homepage utilisant les suggestions de signets de QOwnNotes"
-    click sync "/fr/getting-started/concept.html#client-de-synchronisation-nextcloud-pour-ordinateur-de-bureau" "Client de bureau de synchronisation Nextcloud pour synchroniser vos notes dans votre serveur"
-    click ncs "/fr/getting-started/concept.html#serveur-nextcloud" "Serveur Nextcloud pour stocker vos notes et vos autres fichiers"
-    click qon-api "/fr/getting-started/concept.html#application-qownnotesapi-pour-nextcloud" "Application Nextcloud QOwnNotesAPI pour accéder aux versions de notes et à la corbeille côté serveur"
-    click nc-notes-app "/fr/getting-started/concept.html#application-serveur-nextcloud-notes" "Application serveur Nextcloud Notes pour gérer vos notes sur le Web"
-    click nc-notes-mob "/fr/getting-started/concept.html#application-mobile-nextcloud-notes" "Application mobile Nextcloud Notes pour gérer vos notes sur votre téléphone portable"
-    click nc-deck-app "/fr/getting-started/concept.html#application-serveur-nextcloud-deck" "Application serveur Nextcloud Deck pour gérer vos rappels et vos listes de tâches sur le Web"
-    click qon-web-app "/fr/getting-started/concept.html#application-web-qownnotes" "Application Web QOwnNotes pour envoyer des photos depuis votre téléphone portable"
-    click lt "/fr/editor/languagetool.html" "Serveur LanguageTool optionnel pour vérifier la grammaire et le style"
-    click harper "/fr/editor/harper.html" "Service Harper hors-ligne et optionnel pour vérifier la grammaire et le style"
-    click qon-web-api "/fr/getting-started/concept.html#api-qownnotes-org"
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
+    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
+    click tui "/getting-started/concept.html#qownnotes-tui" "QOwnNotes TUI, a keyboard-first terminal browser and editor for your Markdown note folders"
+    click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
+    click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
+    click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
+    click harper "/editor/harper.html" "Optional Harper service for offline grammar and style checking"
+    click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
 ## QOwnNotes
@@ -197,17 +198,29 @@ Gardez à l'esprit que Nextcloud Notes ne prend actuellement en charge qu'un seu
 
 Vous pouvez utiliser QOwnNotes pour rapidement créer des **cartes** dans [**Nextcloud Deck**](https://github.com/nextcloud/deck).
 
-## Application mobile Nextcloud Notes
+## QOwnNotes Android
 
-Vous pouvez utiliser différentes applications pour accéder à vos notes Nextcloud / ownCloud depuis votre **appareil mobile**.
+[QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is the recommended app to access your Nextcloud / ownCloud notes from your **mobile device**.
 
-### Android
+It is an **offline-capable Markdown notes app** for Android that synchronizes with your Nextcloud server through the **Nextcloud Notes API** and the **QOwnNotesAPI** app.
 
-- [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (tiers)
+- It uses **Room** as the local source of truth, with edits cached immediately and synchronized when the server is reachable
+- It talks to **Nextcloud Notes** and **QOwnNotesAPI** on your server, giving you access to **note version history** and the **server-side trash bin**
+- Supports **Single Sign-On** import from the Nextcloud Files Android app
+- Renders **CommonMark and GitHub Flavored Markdown**, checkbox lists with three states (open, done, partial), wiki links, tables, fenced code, and remote images
+- Provides a **Markdown editor** with formatting actions, undo/redo, cursor preservation, and local draft persistence
+- Lets you **favorite notes** with offline toggling and favorites-first ordering
+- Create notes from **text shared by other Android apps**
+- Offers **light and dark themes** on Android 9+
 
 ::: tip
-Vous pouvez également utiliser n'importe quel outil de synchronisation comme _Synchronize Ultimate_ ou _FolderSync_ pour synchroniser vos fichiers de notes et utiliser un logiciel comme _neutriNotes_ ou [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) pour éditer vos notes.
+Please visit [QOwnNotes Android](qownnotes-android.md) for more information.
 :::
+
+### Other Android apps
+
+- [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (tiers)
+- You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes
 
 ### iOS
 

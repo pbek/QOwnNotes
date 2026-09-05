@@ -1400,6 +1400,14 @@ Connection error message: </translation>
 <translation type="unfinished">Show note filename selection when [[ is typed</translation>
 </message>
 <message>
+<source>Applies to word, wiki-link, equation, script and Markdown LSP completions</source>
+<translation type="unfinished">Applies to word, wiki-link, equation, script and Markdown LSP completions</translation>
+</message>
+<message>
+<source>Insert autocompletion directly if there is only one result</source>
+<translation type="unfinished">Insert autocompletion directly if there is only one result</translation>
+</message>
+<message>
 <source>Tabs and Indents</source>
 <translation type="unfinished">Tabs and Indents</translation>
 </message>
@@ -1818,7 +1826,6 @@ Connection error message: </translation>
 <numerusform>קו %n הועבר.</numerusform>
 <numerusform>%n קווים עברו.</numerusform>
 <numerusform>%n קווים עברו.</numerusform>
-<numerusform>%n קווים עברו.</numerusform>
 </translation>
 </message>
 <message>
@@ -1850,8 +1857,6 @@ Connection error message: </translation>
 <translation>
 <numerusform>%n
 γραμμή φιλτραρισμένες.</numerusform>
-<numerusform>%n
-γραμμές φιλτραρισμένες.</numerusform>
 <numerusform>%n
 γραμμές φιλτραρισμένες.</numerusform>
 <numerusform>%n
@@ -1896,7 +1901,6 @@ Connection error message: </translation>
 <numerusform>%n קו הוטבע.</numerusform>
 <numerusform>%n שורות הוטבעו.</numerusform>
 <numerusform>%n שורות הוטבעו.</numerusform>
-<numerusform>%n שורות הוטבעו.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1905,14 +1909,12 @@ Connection error message: </translation>
 <numerusform>%n קו% 1ed%2 זמן.</numerusform>
 <numerusform>%n קווים 1ed% %2 זמן.</numerusform>
 <numerusform>%n קווים 1ed% %2 זמן.</numerusform>
-<numerusform>%n קווים 1ed% %2 זמן.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n lines yanked.</source>
 <translation>
 <numerusform>%n קו הושיט.</numerusform>
-<numerusform>%n שורות הושיטו.</numerusform>
 <numerusform>%n שורות הושיטו.</numerusform>
 <numerusform>%n שורות הושיטו.</numerusform>
 </translation>
@@ -1961,7 +1963,6 @@ Connection error message: </translation>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
 </translation>
 </message>
 <message>
@@ -1971,7 +1972,6 @@ Connection error message: </translation>
 <message numerus="yes">
 <source>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</source>
 <translation type="unfinished">
-<numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
 <numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
 <numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
 <numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
@@ -1988,7 +1988,6 @@ Connection error message: </translation>
 <message numerus="yes">
 <source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
 <translation type="unfinished">
-<numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
 <numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
 <numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
 <numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
@@ -2025,7 +2024,6 @@ Connection error message: </translation>
 <message numerus="yes">
 <source>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
 <translation type="unfinished">
-<numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
 <numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
 <numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
 <numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
@@ -2153,6 +2151,10 @@ Connection error message: </translation>
 <message>
 <source>Link</source>
 <translation>קישור</translation>
+</message>
+<message>
+<source>Link hover</source>
+<translation type="unfinished">Link hover</translation>
 </message>
 <message>
 <source>Link (internal)</source>
@@ -2978,7 +2980,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>Reset %n ignored rule(s)?</numerusform>
 <numerusform>Reset %n ignored rule(s)?</numerusform>
 <numerusform>Reset %n ignored rule(s)?</numerusform>
-<numerusform>Reset %n ignored rule(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -2992,7 +2993,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message numerus="yes">
 <source>Reset %n ignored word(s)?</source>
 <translation type="unfinished">
-<numerusform>Reset %n ignored word(s)?</numerusform>
 <numerusform>Reset %n ignored word(s)?</numerusform>
 <numerusform>Reset %n ignored word(s)?</numerusform>
 <numerusform>Reset %n ignored word(s)?</numerusform>
@@ -3677,7 +3677,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>Reset %n ignored rule(s)?</numerusform>
 <numerusform>Reset %n ignored rule(s)?</numerusform>
 <numerusform>Reset %n ignored rule(s)?</numerusform>
-<numerusform>Reset %n ignored rule(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -3694,67 +3693,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>Reset %n ignored word(s)?</numerusform>
 <numerusform>Reset %n ignored word(s)?</numerusform>
 <numerusform>Reset %n ignored word(s)?</numerusform>
-<numerusform>Reset %n ignored word(s)?</numerusform>
 </translation>
 </message>
 <message>
 <source>All ignored words have been reset.</source>
 <translation type="unfinished">All ignored words have been reset.</translation>
-</message>
-</context>
-<context>
-<name>LayoutDialog</name>
-<message>
-<source>Manage layouts</source>
-<translation type="unfinished">Manage layouts</translation>
-</message>
-<message>
-<source>Add layout</source>
-<translation type="unfinished">Add layout</translation>
-</message>
-<message>
-<source>Add</source>
-<translation type="unfinished">Add</translation>
-</message>
-<message>
-<source>Remove layout</source>
-<translation type="unfinished">Remove layout</translation>
-</message>
-<message>
-<source>Remove</source>
-<translation type="unfinished">Remove</translation>
-</message>
-<message>
-<source>Rename layout</source>
-<translation type="unfinished">Rename layout</translation>
-</message>
-<message>
-<source>Rename</source>
-<translation type="unfinished">Rename</translation>
-</message>
-<message>
-<source>Move layout up</source>
-<translation type="unfinished">Move layout up</translation>
-</message>
-<message>
-<source>Move up</source>
-<translation type="unfinished">Move up</translation>
-</message>
-<message>
-<source>Move layout down</source>
-<translation type="unfinished">Move layout down</translation>
-</message>
-<message>
-<source>Move down</source>
-<translation type="unfinished">Move down</translation>
-</message>
-<message>
-<source>Layout name:</source>
-<translation type="unfinished">Layout name:</translation>
-</message>
-<message>
-<source>Remove the selected layout?</source>
-<translation type="unfinished">Remove the selected layout?</translation>
 </message>
 </context>
 <context>
@@ -3801,10 +3744,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation type="unfinished">Use preset</translation>
 </message>
 <message>
-<source>Keep in mind that layouts that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-<translation type="unfinished">Keep in mind that layouts that demand that there is no central widget will not work properly if the central widget is enabled.</translation>
-</message>
-<message>
 <source>Use new layout preset</source>
 <translation type="unfinished">Use new layout preset</translation>
 </message>
@@ -3848,6 +3787,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
 </message>
 <message>
+<source>The note preview panel is the central widget that will be resized automatically.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">The note preview panel is the central widget that will be resized automatically.</translation>
+</message>
+<message>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
 <comment>Layout preset description</comment>
 <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
@@ -3871,6 +3815,109 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout preset description</comment>
 <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+</message>
+</context>
+<context>
+<name>LayoutsSettingsWidget</name>
+<message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
+<source>Create, rename, remove, and order layouts. Changes on this page are applied immediately.</source>
+<translation type="unfinished">Create, rename, remove, and order layouts. Changes on this page are applied immediately.</translation>
+</message>
+<message>
+<source>Add from current</source>
+<translation type="unfinished">Add from current</translation>
+</message>
+<message>
+<source>Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</source>
+<translation type="unfinished">Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</translation>
+</message>
+<message>
+<source>Add from preset...</source>
+<translation type="unfinished">Add from preset...</translation>
+</message>
+<message>
+<source>Opens the layout preset selector in a new dialog</source>
+<translation type="unfinished">Opens the layout preset selector in a new dialog</translation>
+</message>
+<message>
+<source>Switch to selected</source>
+<translation type="unfinished">Switch to selected</translation>
+</message>
+<message>
+<source>Switches to the selected layout</source>
+<translation type="unfinished">Switches to the selected layout</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation type="unfinished">Remove</translation>
+</message>
+<message>
+<source>Rename</source>
+<translation type="unfinished">Rename</translation>
+</message>
+<message>
+<source>Move up</source>
+<translation type="unfinished">Move up</translation>
+</message>
+<message>
+<source>Move down</source>
+<translation type="unfinished">Move down</translation>
+</message>
+<message>
+<source>Selected layout</source>
+<translation type="unfinished">Selected layout</translation>
+</message>
+<message>
+<source>Create layout from preset</source>
+<translation type="unfinished">Create layout from preset</translation>
+</message>
+<message>
+<source>Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</source>
+<translation type="unfinished">Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</translation>
+</message>
+<message>
+<source>Add layout</source>
+<translation type="unfinished">Add layout</translation>
+</message>
+<message>
+<source>Central widget:</source>
+<translation type="unfinished">Central widget:</translation>
+</message>
+<message>
+<source>Note edit</source>
+<translation type="unfinished">Note edit</translation>
+</message>
+<message>
+<source>Note preview</source>
+<translation type="unfinished">Note preview</translation>
+</message>
+<message>
+<source>No central widget</source>
+<translation type="unfinished">No central widget</translation>
+</message>
+<message>
+<source>The central widget automatically uses the space left by the surrounding panels</source>
+<translation type="unfinished">The central widget automatically uses the space left by the surrounding panels</translation>
+</message>
+<message>
+<source>Layout name:</source>
+<translation type="unfinished">Layout name:</translation>
+</message>
+<message>
+<source>Remove layout</source>
+<translation type="unfinished">Remove layout</translation>
+</message>
+<message>
+<source>Remove the selected layout?</source>
+<translation type="unfinished">Remove the selected layout?</translation>
+</message>
+<message>
+<source>Rename layout</source>
+<translation type="unfinished">Rename layout</translation>
 </message>
 </context>
 <context>
@@ -4016,7 +4063,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>לשחזר מספר &lt;strong&gt;%n&lt;/strong&gt; הערה שנבחרה?</numerusform>
 <numerusform>לשחזר &lt;strong&gt;%n&lt;/strong&gt; פתקים שנבחרו?</numerusform>
 <numerusform>לשחזר &lt;strong&gt;%n&lt;/strong&gt; פתקים שנבחרו?</numerusform>
-<numerusform>לשחזר &lt;strong&gt;%n&lt;/strong&gt; פתקים שנבחרו?</numerusform>
 </translation>
 </message>
 <message>
@@ -4029,14 +4075,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>תו &lt;strong&gt;%n&lt;/strong&gt; שוחזר</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; פתקים שוחזרו</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; פתקים שוחזרו</numerusform>
-<numerusform>&lt;strong&gt;%n&lt;/strong&gt; פתקים שוחזרו</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>האם להסיר את ההערה שנבחרה מס &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-<numerusform>להסיר &lt;strong&gt;%n&lt;/strong&gt; הערות שנבחרו?</numerusform>
 <numerusform>להסיר &lt;strong&gt;%n&lt;/strong&gt; הערות שנבחרו?</numerusform>
 <numerusform>להסיר &lt;strong&gt;%n&lt;/strong&gt; הערות שנבחרו?</numerusform>
 </translation>
@@ -4049,7 +4093,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; הפתק מספר הוסר</numerusform>
-<numerusform>&lt;strong&gt;%n&lt;/strong&gt; שטרות הוסרו</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; שטרות הוסרו</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; שטרות הוסרו</numerusform>
 </translation>
@@ -5190,7 +5233,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
-<numerusform>stored %n note(s) to disk</numerusform>
 </translation>
 </message>
 <message>
@@ -5219,16 +5261,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>האם להסיר את &lt;strong&gt;%n&lt;/ strong&gt; הערות שנבחרו?
 
 אם האשפה מופעלת ownCloud משלך, אתה אמור להיות מסוגל לשחזר אותם משם.</numerusform>
-<numerusform>האם להסיר את &lt;strong&gt;%n&lt;/ strong&gt; הערות שנבחרו?
-
-אם האשפה מופעלת ownCloud משלך, אתה אמור להיות מסוגל לשחזר אותם משם.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>להעביר את %n הערה שנבחרה ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
-<numerusform>להעביר %n הערות שנבחרו ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
 <numerusform>להעביר %n הערות שנבחרו ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
 <numerusform>להעביר %n הערות שנבחרו ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
 </translation>
@@ -5239,14 +5277,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>להעתיק את הערה% n שנבחר ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
 <numerusform>להעתיק %n הערות שנבחרו ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
 <numerusform>להעתיק %n הערות שנבחרו ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
-<numerusform>להעתיק %n הערות שנבחרו ל &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n הערה הועתקה ל &lt;strong&gt;%2&lt;/ strong&gt;.</numerusform>
-<numerusform>%n הערות הועתקו ל &lt;strong&gt;%2&lt;/ strong&gt;.</numerusform>
 <numerusform>%n הערות הועתקו ל &lt;strong&gt;%2&lt;/ strong&gt;.</numerusform>
 <numerusform>%n הערות הועתקו ל &lt;strong&gt;%2&lt;/ strong&gt;.</numerusform>
 </translation>
@@ -5326,7 +5362,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>הועתק%n הערה ל-%1</numerusform>
 <numerusform>%n הערות הועתקו ל-%1</numerusform>
 <numerusform>%n הערות הועתקו ל-%1</numerusform>
-<numerusform>%n הערות הועתקו ל-%1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -5335,13 +5370,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>העתקת %n הערה נכשלה (קרוב לוודאי שכבר קיימת)</numerusform>
 <numerusform>העתקת %n הערות נכשלה (ככל הנראה קיימת כבר)</numerusform>
 <numerusform>העתקת %n הערות נכשלה (ככל הנראה קיימת כבר)</numerusform>
-<numerusform>העתקת %n הערות נכשלה (ככל הנראה קיימת כבר)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Skipped inserting %n file(s) because the current note is read-only</source>
 <translation type="unfinished">
-<numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
 <numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
 <numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
 <numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
@@ -5374,7 +5407,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>%n script update(s) were installed</source>
 <translation type="unfinished">
-<numerusform>%n script update(s) were installed</numerusform>
 <numerusform>%n script update(s) were installed</numerusform>
 <numerusform>%n script update(s) were installed</numerusform>
 <numerusform>%n script update(s) were installed</numerusform>
@@ -5457,7 +5489,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 </translation>
 </message>
 <message>
@@ -5470,7 +5501,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
 <numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
 <numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
-<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
 </translation>
 </message>
 <message>
@@ -5480,7 +5510,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
 <translation type="unfinished">
-<numerusform>Latest %n git versions of note: %1</numerusform>
 <numerusform>Latest %n git versions of note: %1</numerusform>
 <numerusform>Latest %n git versions of note: %1</numerusform>
 <numerusform>Latest %n git versions of note: %1</numerusform>
@@ -5843,7 +5872,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
 <numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
 <numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
-<numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -6057,13 +6085,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Copied %n note(s) to %1</numerusform>
 <numerusform>Copied %n note(s) to %1</numerusform>
 <numerusform>Copied %n note(s) to %1</numerusform>
-<numerusform>Copied %n note(s) to %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation type="unfinished">
-<numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
 <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
 <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
 <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
@@ -6075,13 +6101,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 <numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
-<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Skipped inserting %n file(s) because the current note is read-only</source>
 <translation type="unfinished">
-<numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
 <numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
 <numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
 <numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
@@ -6120,13 +6144,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
 <numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
 <numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
-<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Updated heading links in %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Updated heading links in %n note(s)</numerusform>
 <numerusform>Updated heading links in %n note(s)</numerusform>
 <numerusform>Updated heading links in %n note(s)</numerusform>
 <numerusform>Updated heading links in %n note(s)</numerusform>
@@ -6145,7 +6167,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>%n selected</source>
 <comment>Characters selected</comment>
 <translation type="unfinished">
-<numerusform>%n selected</numerusform>
 <numerusform>%n selected</numerusform>
 <numerusform>%n selected</numerusform>
 <numerusform>%n selected</numerusform>
@@ -6403,7 +6424,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
 <numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
 <numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
-<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -6441,7 +6461,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <source>&amp;Delete %n card(s)</source>
 <translation type="unfinished">
-<numerusform/>
 <numerusform/>
 <numerusform/>
 <numerusform/>
@@ -6738,6 +6757,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Please select your note folder on your Nextcloud / ownCloud server:</translation>
 </message>
 <message>
+<source>Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</source>
+<translation type="unfinished">Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</translation>
+</message>
+<message>
 <source>Path on your Nextcloud / ownCloud server:</source>
 <translation type="unfinished">Path on your Nextcloud / ownCloud server:</translation>
 </message>
@@ -6823,6 +6846,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Allow note file name to be different from headline</translation>
 </message>
 <message>
+<source>None</source>
+<translation type="unfinished">None</translation>
+</message>
+<message>
 <source>new folder</source>
 <translation type="unfinished">new folder</translation>
 </message>
@@ -6891,13 +6918,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
 <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
 <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
-<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Removed %n conflicted database copies</source>
 <translation type="unfinished">
-<numerusform>Removed %n conflicted database copies</numerusform>
 <numerusform>Removed %n conflicted database copies</numerusform>
 <numerusform>Removed %n conflicted database copies</numerusform>
 <numerusform>Removed %n conflicted database copies</numerusform>
@@ -6947,7 +6972,6 @@ Restore current note?</translation>
 <numerusform>Stored %n note(s) to disk</numerusform>
 <numerusform>Stored %n note(s) to disk</numerusform>
 <numerusform>Stored %n note(s) to disk</numerusform>
-<numerusform>Stored %n note(s) to disk</numerusform>
 </translation>
 </message>
 </context>
@@ -6960,7 +6984,6 @@ Restore current note?</translation>
 <message numerus="yes">
 <source>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</source>
 <translation type="unfinished">
-<numerusform>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</numerusform>
 <numerusform>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</numerusform>
 <numerusform>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</numerusform>
 <numerusform>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</numerusform>
@@ -6984,7 +7007,6 @@ Restore current note?</translation>
 <numerusform>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</numerusform>
 <numerusform>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</numerusform>
 <numerusform>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</numerusform>
-<numerusform>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</numerusform>
 </translation>
 </message>
 <message>
@@ -7001,7 +7023,6 @@ Restore current note?</translation>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 </translation>
 </message>
 <message>
@@ -7013,9 +7034,6 @@ Restore current note?</translation>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
 <translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
@@ -7041,9 +7059,6 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
-
-If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -7051,9 +7066,6 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</source>
 <translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</numerusform>
@@ -7079,7 +7091,6 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -7092,7 +7103,6 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -7102,7 +7112,6 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <message numerus="yes">
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation type="unfinished">
-<numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -7119,13 +7128,11 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) were moved to note subfolder "%2"</source>
 <translation type="unfinished">
-<numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
 <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
 <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
 <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
@@ -7137,13 +7144,11 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) were copied to note subfolder "%2"</source>
 <translation type="unfinished">
-<numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
 <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
 <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
 <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
@@ -7203,9 +7208,6 @@ Do you want to delete those files as well?</numerusform>
 <numerusform>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</numerusform>
-<numerusform>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
-
-Do you want to delete those files as well?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -7213,9 +7215,6 @@ Do you want to delete those files as well?</numerusform>
 
 Do you want to delete those files as well?</source>
 <translation type="unfinished">
-<numerusform>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
-
-Do you want to delete those files as well?</numerusform>
 <numerusform>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</numerusform>
@@ -7234,7 +7233,6 @@ Do you want to delete those files as well?</numerusform>
 <message numerus="yes">
 <source>Removed %n orphaned file(s)</source>
 <translation type="unfinished">
-<numerusform>Removed %n orphaned file(s)</numerusform>
 <numerusform>Removed %n orphaned file(s)</numerusform>
 <numerusform>Removed %n orphaned file(s)</numerusform>
 <numerusform>Removed %n orphaned file(s)</numerusform>
@@ -7325,7 +7323,6 @@ Do you want to delete those files as well?</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
 </translation>
 </message>
 <message>
@@ -7346,7 +7343,6 @@ Do you want to delete those files as well?</numerusform>
 <numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
 <numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
 <numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
-<numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -7360,7 +7356,6 @@ Do you want to delete those files as well?</numerusform>
 <message numerus="yes">
 <source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation type="unfinished">
-<numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -7636,14 +7631,6 @@ Do you want to delete those files as well?</numerusform>
 <message>
 <source>Note edit panel</source>
 <translation type="unfinished">Note edit panel</translation>
-</message>
-<message>
-<source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-<translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
-</message>
-<message>
-<source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
 </message>
 <message>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
@@ -8152,19 +8139,11 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 &lt;/ strong&gt;
 &lt;strong&gt;%3&lt;/strong&gt;&lt;strong&gt;%4&lt;/strong&gt; ב 
 &lt;strong&gt;%n&lt;/strong&gt; קבצי הערה?</numerusform>
-<numerusform>זוהה שינוי של נתיב ההערות. האם ברצונך להחליף את כל המופעים של קישורים
-&lt;strong&gt;%1&lt;/strong&gt;
-&lt;strong&gt;%2&lt;/strong&gt;
-וקישורים עם שם קובץ 
-&lt;/ strong&gt;
-&lt;strong&gt;%3&lt;/strong&gt;&lt;strong&gt;%4&lt;/strong&gt; ב 
-&lt;strong&gt;%n&lt;/strong&gt; קבצי הערה?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation type="unfinished">
-<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 <numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 <numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 <numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -8177,7 +8156,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message numerus="yes">
 <source>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation type="unfinished">
-<numerusform>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 <numerusform>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 <numerusform>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
 <numerusform>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -8194,13 +8172,6 @@ Click 'Cancel' to discard your changes and keep the external version.</translati
 <message numerus="yes">
 <source>…and %n more note(s)</source>
 <translation>
-<numerusform>זוהה שינוי של נתיב ההערות. האם ברצונך להחליף את כל המופעים של קישורים
-&lt;strong&gt;%1&lt;/strong&gt;
-&lt;strong&gt;%2&lt;/strong&gt;
-וקישורים עם שם קובץ 
-&lt;/ strong&gt;
-&lt;strong&gt;%3&lt;/strong&gt;&lt;strong&gt;%4&lt;/strong&gt; ב 
-&lt;strong&gt;%n&lt;/strong&gt; קבצי הערה?</numerusform>
 <numerusform>זוהה שינוי של נתיב ההערות. האם ברצונך להחליף את כל המופעים של קישורים
 &lt;strong&gt;%1&lt;/strong&gt;
 &lt;strong&gt;%2&lt;/strong&gt;
@@ -8373,13 +8344,11 @@ Updating the interface takes a short while.</translation>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
@@ -8878,6 +8847,10 @@ Are the folder and the file writable?</translation>
 <translation>גרסה מותקנת כעת:</translation>
 </message>
 <message>
+<source>Changelog:</source>
+<translation type="unfinished">Changelog:</translation>
+</message>
+<message>
 <source>Installs the script</source>
 <translation>מתקין את הסקריפט</translation>
 </message>
@@ -8974,6 +8947,14 @@ Are the folder and the file writable?</translation>
 <translation>התקן מחדש את הסקריפט</translation>
 </message>
 <message>
+<source>Open changelog</source>
+<translation type="unfinished">Open changelog</translation>
+</message>
+<message>
+<source>Changes from version %1 to %2:</source>
+<translation type="unfinished">Changes from version %1 to %2:</translation>
+</message>
+<message>
 <source>Platform not supported!</source>
 <translation>הפלטפורמה אינה נתמכת!</translation>
 </message>
@@ -9010,7 +8991,6 @@ Do you want to install it anyway?</source>
 <message numerus="yes">
 <source>%n script update(s) were installed.</source>
 <translation type="unfinished">
-<numerusform>%n script update(s) were installed.</numerusform>
 <numerusform>%n script update(s) were installed.</numerusform>
 <numerusform>%n script update(s) were installed.</numerusform>
 <numerusform>%n script update(s) were installed.</numerusform>
@@ -9180,13 +9160,11 @@ Do you want to install it anyway?</source>
 <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation type="unfinished">
-<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -9222,10 +9200,6 @@ Do you want to install it anyway?</source>
 %n סימניות
 &lt;/ strong&gt;
 נמצא בשרת</numerusform>
-<numerusform>&lt;strong&gt;
-%n סימניות
-&lt;/ strong&gt;
-נמצא בשרת</numerusform>
 </translation>
 </message>
 </context>
@@ -9250,6 +9224,10 @@ Do you want to install it anyway?</source>
 <message>
 <source>Interface</source>
 <translation>ממשק</translation>
+</message>
+<message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
 </message>
 <message>
 <source>Harper</source>
@@ -9316,28 +9294,12 @@ Do you want to install it anyway?</source>
 <translation>אפשרויות ניקוי באגים</translation>
 </message>
 <message>
-<source>Layout presets</source>
-<translation type="unfinished">Layout presets</translation>
-</message>
-<message>
 <source>Color modes</source>
 <translation type="unfinished">Color modes</translation>
 </message>
 <message>
 <source>MCP server</source>
 <translation type="unfinished">MCP server</translation>
-</message>
-<message>
-<source>Layout preset selector</source>
-<translation type="unfinished">Layout preset selector</translation>
-</message>
-<message>
-<source>You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-<translation type="unfinished">You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
-</message>
-<message>
-<source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</source>
-<translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</translation>
 </message>
 <message>
 <source>Browser extension / command snippets</source>
@@ -9724,7 +9686,6 @@ Do you want to install it anyway?</source>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -9853,7 +9814,6 @@ Do you want to install it anyway?</source>
 <message numerus="yes">
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
@@ -10077,7 +10037,6 @@ Do you want to install it anyway?</source>
 <numerusform>%n note(s) selected</numerusform>
 <numerusform>%n note(s) selected</numerusform>
 <numerusform>%n note(s) selected</numerusform>
-<numerusform>%n note(s) selected</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -10086,13 +10045,11 @@ Do you want to install it anyway?</source>
 <numerusform>%n folder(s) selected</numerusform>
 <numerusform>%n folder(s) selected</numerusform>
 <numerusform>%n folder(s) selected</numerusform>
-<numerusform>%n folder(s) selected</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n notes selected</source>
 <translation type="unfinished">
-<numerusform>%n notes selected</numerusform>
 <numerusform>%n notes selected</numerusform>
 <numerusform>%n notes selected</numerusform>
 <numerusform>%n notes selected</numerusform>
@@ -10165,13 +10122,11 @@ Do you want to install it anyway?</source>
 <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>%n note(s) were tagged with "%2"</source>
 <translation type="unfinished">
-<numerusform>%n note(s) were tagged with "%2"</numerusform>
 <numerusform>%n note(s) were tagged with "%2"</numerusform>
 <numerusform>%n note(s) were tagged with "%2"</numerusform>
 <numerusform>%n note(s) were tagged with "%2"</numerusform>
@@ -10187,7 +10142,6 @@ Do you want to install it anyway?</source>
 <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
 <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
 <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-<numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -10200,7 +10154,6 @@ Do you want to install it anyway?</source>
 <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
 <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
 <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
 </translation>
 </message>
 <message>
@@ -10210,7 +10163,6 @@ Do you want to install it anyway?</source>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
 <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
@@ -11185,7 +11137,6 @@ This cannot be undone!</source>
 <numerusform>נוצר סימניה %n</numerusform>
 <numerusform>%n סימניות נוצרו</numerusform>
 <numerusform>%n סימניות נוצרו</numerusform>
-<numerusform>%n סימניות נוצרו</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -11194,13 +11145,11 @@ This cannot be undone!</source>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
 <numerusform>Bookmark deleted from %n note(s)</numerusform>
-<numerusform>Bookmark deleted from %n note(s)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Bookmark edited in %n note(s)</source>
 <translation type="unfinished">
-<numerusform>Bookmark edited in %n note(s)</numerusform>
 <numerusform>Bookmark edited in %n note(s)</numerusform>
 <numerusform>Bookmark edited in %n note(s)</numerusform>
 <numerusform>Bookmark edited in %n note(s)</numerusform>

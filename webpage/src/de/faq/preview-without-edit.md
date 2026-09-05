@@ -1,11 +1,9 @@
 # Wie kann ich nur das Vorschaufenster ohne Notizbearbeitungsfeld anzeigen?
 
-Das tun Sie, indem Sie in den **Bedienfeldeinstellungen** deaktivieren, dass der **Notizeditor** das **zentrale Widget** ist.
+Open **Settings > Interface > Layouts**, select the layout, and choose **Note preview** as its **central widget**.
 
-Then best create a new layout `Preview only` by clicking **Window / Layout / Add new layout** in the main menu. Sie können zwischen verschiedenen Bedienfeldlayouts wechseln.
+You can create a new layout first with **Add from current**, or use **Add from preset...** and select the **Preview only** preset.
 
-Anschließend können Sie das Notizbearbeitungsfeld im Menü **Fenster / Bedienfelder** deaktivieren.
+Afterward, turn off the note edit panel in the **Window > Panels** menu. The preview will automatically use the available central area.
 
 Beachten Sie, dass Sie alle Bedienfelder beliebig bewegen können, indem Sie im Hauptmenü auf **Fenster / Bedienfelder entsperren** klicken. Sie können auch die Größe aller Bedienfelder an Ihre Bedürfnisse anpassen.
-
-Alternatively you can switch to the **Preview only** layout in the **Layout preset settings**.

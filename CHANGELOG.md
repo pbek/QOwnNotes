@@ -16,6 +16,7 @@
   - Favorite notes with a star and keep them above other notes
   - Create notes from text shared by other Android apps
   - Light and dark themes on Android 9 and newer
+- Added more French translation (thank you, jd-develop)
 
 ## 26.9.1
 

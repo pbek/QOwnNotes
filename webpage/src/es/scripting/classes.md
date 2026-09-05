@@ -167,29 +167,29 @@ clase MainWindow {
 ### Ejemplo
 
 ```js
-// Fuerza la recarga de la lista de notas
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Crea una nueva subcarpeta de notas llamada "Mi carpeta especial" en la subcarpeta actual
-mainWindow.createNewNoteSubFolder("Mi carpeta especial");
+// Creates a new note subfolder "My fancy folder" in the current subfolder
+mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserta HTML en la nota actual como Markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>mi título
-algún texto");
+// Inserts html in the current note as markdown
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline
+some text");
 
-// Establece el diseño "Editar" como diseño actual
-mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Editar"));
+// Set 'Edit' layout as current layout
+mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));
 
-// Ir a la etiqueta "test" en el árbol de etiquetas
-// Hay un ejemplo en https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Obtener todas las notas abiertas en pestañas
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
- var note = script.fetchNoteById(noteId);
+  var note = script.fetchNoteById(noteId);
 
- // Realizar alguna acción con la nota
+  // do something with the note
 });
 ```

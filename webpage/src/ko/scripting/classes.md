@@ -164,29 +164,29 @@ class MainWindow {
 ### 예제
 
 ```js
-// 노트 목록 강제 새로고침
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// 현재 하위 폴더에 새 노트 하위 폴더 "My fancy folder"를 만듭니다
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// 현재 노트에 HTML을 마크다운으로 삽입합니다
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline
 some text");
 
-// '편집' 레이아웃을 현재 레이아웃으로 설정
+// Set 'Edit' layout as current layout
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));
 
-// 태그 트리의 태그 "테스트"로 이동합니다
-// https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml 에 한 가지 예가 있습니다
+// Jump to the tag "test" in the tag tree
+// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// 탭에 열려 있는 모든 노트 가져오기
+// Get all notes that are opened in tabs
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // 노트로 무언가를 수행합니다
+  // do something with the note
 });
 ```
