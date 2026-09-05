@@ -1,5 +1,11 @@
 # QOwnNotes Android
 
+<div style="display: flex; gap: 16px; margin-bottom: 16px;">
+  <img src="/img/qownnotes-android-note-list.webp" alt="QOwnNotes Android note list" style="flex: 1; min-width: 0;" />
+  <img src="/img/qownnotes-android-note-view.webp" alt="QOwnNotes Android note view" style="flex: 1; min-width: 0;" />
+  <img src="/img/qownnotes-android-note-edit.webp" alt="QOwnNotes Android note edit" style="flex: 1; min-width: 0;" />
+</div>
+
 [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is an
 **offline-capable Markdown notes app** for Android that synchronizes with your
 Nextcloud server through the **Nextcloud Notes API** and the
