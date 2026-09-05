@@ -328,7 +328,7 @@ export default defineUserConfig({
         // Only include blog posts in the feed
         return Boolean(
           frontmatter.feed ??
-            (filePathRelative && filePathRelative.startsWith("blog/")),
+          (filePathRelative && filePathRelative.startsWith("blog/")),
         );
       },
       sorter: (a, b) => {
