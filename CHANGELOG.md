@@ -8,7 +8,7 @@
     through the Nextcloud Notes API with incremental pulls, ETags, and conflict-safe
     updates
   - Import Nextcloud accounts via Single Sign-On from the Nextcloud Files Android app
-  - Render CommonMark and GitHub Flavored Markdown, QOwnNotes task states, wiki links,
+  - Render CommonMark and GitHub Flavored Markdown, checkbox lists with three states, wiki links,
     tables, fenced code, and safe remote images
   - Edit highlighted Markdown source with formatting actions, undo/redo, cursor
     preservation, and local draft persistence

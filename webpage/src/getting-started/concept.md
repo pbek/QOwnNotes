@@ -27,6 +27,8 @@ graph TB
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
+    qon-mob("QOwnNotes Android")-->nc-notes-app
+    qon-mob-->qon-api
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
@@ -49,6 +51,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
     click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
@@ -136,6 +139,31 @@ following its note sorting settings.
 
 ::: tip
 Please visit [QOwnNotes TUI](qownnotes-tui.md) for more information.
+:::
+
+## QOwnNotes Android
+
+[QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is an
+**offline-capable Markdown notes app** for Android that synchronizes with your
+Nextcloud server through the **Nextcloud Notes API** and the
+**QOwnNotesAPI** app.
+
+- It uses **Room** as the local source of truth, with edits cached immediately
+  and synchronized when the server is reachable
+- It talks to **Nextcloud Notes** and **QOwnNotesAPI** on your server, giving
+  you access to **note version history** and the **server-side trash bin**
+- Supports **Single Sign-On** import from the Nextcloud Files Android app
+- Renders **CommonMark and GitHub Flavored Markdown**, checkbox lists with
+  three states (open, done, partial), wiki links, tables, fenced code, and
+  remote images
+- Provides a **Markdown editor** with formatting actions, undo/redo, cursor
+  preservation, and local draft persistence
+- Lets you **favorite notes** with offline toggling and favorites-first ordering
+- Create notes from **text shared by other Android apps**
+- Offers **light and dark themes** on Android 9+
+
+::: tip
+Please visit [QOwnNotes Android](qownnotes-android.md) for more information.
 :::
 
 ## LanguageTool service
@@ -227,6 +255,9 @@ To access your Nextcloud / ownCloud notes from your **mobile device** you can us
 
 ### Android
 
+- [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) — offline-capable with
+  note version history, trash browsing, and three-state checkbox lists
+  ([more information](qownnotes-android.md))
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (3rd party)
 
 ::: tip

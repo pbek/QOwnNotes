@@ -46,6 +46,7 @@ const gettingStartedNavItems = [
   "getting-started/homepage-suggestion-api",
   "getting-started/command-line-snippet-manager",
   "getting-started/qownnotes-tui",
+  "getting-started/qownnotes-android",
   "getting-started/web-app",
   "getting-started/qownnotesapi",
   "getting-started/note-relations",
@@ -327,7 +328,7 @@ export default defineUserConfig({
         // Only include blog posts in the feed
         return Boolean(
           frontmatter.feed ??
-          (filePathRelative && filePathRelative.startsWith("blog/")),
+            (filePathRelative && filePathRelative.startsWith("blog/")),
         );
       },
       sorter: (a, b) => {
