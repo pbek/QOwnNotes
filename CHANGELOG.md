@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 26.9.2
+
+- Introducing **QOwnNotes for Android**!
+  ([https://github.com/qownnotes/qownnotes-android](https://github.com/qownnotes/qownnotes-android))
+  - Offline-capable Markdown notes with Room as the source of truth, synchronized
+    through the Nextcloud Notes API with incremental pulls, ETags, and conflict-safe
+    updates
+  - Import Nextcloud accounts via Single Sign-On from the Nextcloud Files Android app
+  - Render CommonMark and GitHub Flavored Markdown, QOwnNotes task states, wiki links,
+    tables, fenced code, and safe remote images
+  - Edit highlighted Markdown source with formatting actions, undo/redo, cursor
+    preservation, and local draft persistence
+  - Browse and restore note versions and remotely trashed notes with the QOwnNotesAPI app
+  - Favorite notes with a star and keep them above other notes
+  - Create notes from text shared by other Android apps
+  - Light and dark themes on Android 9 and newer
+
 ## 26.9.1
 
 - Pasting or dropping a Markdown file into the note edit panel now asks whether
