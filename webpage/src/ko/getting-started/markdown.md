@@ -1,8 +1,8 @@
-# 마크다운 치트 시트
+# Markdown Cheatsheet
 
 This Markdown cheatsheet is intended as a quick reference and showcase of the Markdown syntax in QOwnNotes.
 
-## 제목
+## Headings
 
 Use ATX headings to structure your texts.
 
@@ -21,7 +21,7 @@ Use ATX headings to structure your texts.
 ```
 
 ::: tip
-**네비게이션 패널**은 제목의 구조를 보여줍니다.
+The **Navigation panel** shows the structure of your headings.
 :::
 
 Alternatively, for H1 and H2, you can also use Setext headings:
@@ -35,253 +35,237 @@ Alt-H2
 ```
 
 ::: tip
-기본적으로 QOwnNotes는 **머리글 1** (h1)에서 **노트의 파일 이름**을 작성합니다.
+By default QOwnNotes creates the **filename of a note** from the **heading 1** (h1).
 :::
 
-## 강조
+## Emphasis
 
 ```markdown
-강조, 즉 기울임꼴는 *별표* 또는 _밑줄_과 함께 사용됩니다.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-강하게 강조하려면 **별표** 또는 __밑줄__을 사용하세요.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
-**별표와 밑줄**을 함께 사용하여 강조합니다.
-```
-
-[단축키](./shortcuts.md) <kbd>Ctrl + B</kbd>를 사용하여 텍스트를 굵게 표시하고 <kbd>Ctrl + I</kbd>을 사용하여 기울임꼴로 표시할 수 있습니다.
-:::
-
-## 밑줄
-
-_미리보기 설정_에서 밑줄 렌더링을 활성화하는 옵션 설정도 있습니다.
-
-```markdown
-_밑줄_
+Combined emphasis with **asterisks and _underscores_**.
 ```
 
 ::: tip
-[단축키](./shortcuts.md) <kbd>Ctrl + U</kbd>를 사용하여 텍스트에 밑줄을 표시할 수 있습니다.
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> for making text bold
+and <kbd>Ctrl + I</kbd> for making it italic.
 :::
 
-## 취소선
+## Underline
+
+There also is an optional setting to enable underline rendering in the _Preview settings_.
 
 ```markdown
-~~취소선~~
+_underline_
 ```
 
 ::: tip
-[단축키](./shortcuts.md) <kbd>Alt + Shift + S</kbd>을 사용하여 텍스트를 삭제할 수 있습니다.
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> to underline a text.
 :::
 
-## 목록
-
-목록을 만드는 방법은 여러 가지가 있습니다.
+## Strike out
 
 ```markdown
-1. 첫 번째 정렬된 목록 항목
-2. 다른 항목
-
-- 정렬되지 않은 하위 목록입니다.
-
-1. 실제 숫자는 중요하지 않습니다. 단지 숫자일 뿐입니다
-1. 그리고 또 다른 항목입니다.
-
-* 순서 없는 목록에는 별표를 사용할 수 있습니다.
-
-- 또는 빼기 기호
-
-+ 또는 더하기 기호
+~~strike out~~
 ```
 
 ::: tip
-목록 끝에 있는 <kbd>Enter을 누르면 새 목록 항목이 생성됩니다. :::</p>
+You can use the [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> to strike out a text.
+:::
 
-<h2 spaces-before="0">
-  링크
-</h2>
+## Lists
 
-<p spaces-before="0">
-  링크를 쉽게 사용할 수 있는 두 가지 방법은 웹 페이지나 기타 노트를 가리킵니다. 이러한 링크는 여러 가지 방법으로 볼 수 있습니다.
-</p>
+There are many ways to create lists.
 
-<h3 spaces-before="0">
-  외부 링크
-</h3>
+```markdown
+1. First ordered list item
+2. Another item
 
-<pre><code class="markdown">[저는 인라인 스타일 링크입니다](https://www.google.com)
+- Unordered sub-list.
 
-[저는 제목이 있는 인라인 스타일 링크입니다](https://www.google.com "Google's Homepage")
+1. Actual numbers don't matter, just that it's a number
+1. And another item.
 
-[참조 스타일 링크 정의에 숫자를 사용할 수 있습니다][1]
+* Unordered list can use asterisks
 
-각 괄호 안의 일반 URL과 URL은 미리보기에서 자동으로 링크로 바뀝니다.
-http://www.example.com 또는 &lt;http://www.example.com&gt;
+- Or minuses
+
++ Or pluses
+```
+
+::: tip
+If you press <kbd>Enter</kbd> at the end of a list a new list item will be created.
+:::
+
+## Links
+
+Two of the simpler uses for links are pointing to webpages or other notes. There are multiple ways each of these links can look.
+
+### External links
+
+```markdown
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[You can use numbers for reference-style link definitions][1]
+
+Plain URLs and URLs in angle brackets will automatically get turned into links in the preview.
+http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
-</pre>
+```
 
-<h3 spaces-before="0">
-  내부 링크
-</h3>
+### Internal links
 
-<p spaces-before="0">
-  다음과 같은 다른 노트나 첨부 파일에 연결할 수 있습니다:
-</p>
+You can link to other notes or attachments like this:
 
-<pre><code class="markdown">[Journal.md 노트에 링크합니다] (Journal.md)
-&lt;Journal.md&gt; 비슷하게 작동합니다.
-</pre>
+```markdown
+[I link to the Journal.md note](Journal.md)
 
-<p spaces-before="0">
-  ::: 팁 [단축키](./shortcuts.md) <kbd>Ctrl + L</kbd>을 사용하여 웹 페이지 또는 <strong x-id="1">기타 노트에 대한 링크를 만들 수 있습니다</strong>.
-</p>
+<Journal.md> works similarly.
+```
 
-<p spaces-before="0">
-  <kbd>Ctrl + Shift + X</kbd>를 사용하면 노트에 <strong x-id="1">첨부 파일을 삽입</strong>하는 데 도움이 되는 대화 상자가 나타납니다.
-</p>
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> to
+**create links to webpages or other notes**.
 
-<p spaces-before="0">
-  노트의 링크에서 커서를 편집하여 링크를 따라가는 동안 <kbd>Ctrl + Space</kbd>를 누를 수 있습니다.
+Using <kbd>Ctrl + Shift + X</kbd> will bring up a dialog that helps you to
+**insert attachments** into your note.
+
+You can press <kbd>Ctrl + Space</kbd> while the cursor in on a link in the
+note edit to follow the link.
 :::
-</p>
 
-<p spaces-before="0">
-  ::: 경고 정보 제목이 있는 내부 링크는 지원되지 않습니다:
-</p>
+::: warning Info
+Internal links with a title are not supported:
 
-<pre><code class="markdown">[Journal.md 노트에 링크합니다](Journal.md "제목 지원되지 않음")
-</pre>
+```markdown
+[I link to the Journal.md note](Journal.md "Title not supported")
+```
 
-<p spaces-before="0">
- 
 :::
-</p>
 
-<h3 spaces-before="0">
-  북마크
-</h3>
+### Footnotes
 
-<p spaces-before="0">
-  [QOwnNotes Web Companion 브라우저 확장](./browser-extension.md)에서 사용되는 북마크는 목록의 연결을 사용합니다.
-</p>
+You can add numeric or named footnotes to link to another position in the same note:
 
-<pre><code class="markdown">- [웹페이지 이름](https://www.example.com) #tag1 #tag2 일부 설명 및 태그
-</pre>
+```markdown
+Here is some text with a footnote.[^1]
 
-<h2 spaces-before="0">
-  이미지
-</h2>
+[^1]: This is the footnote text.
 
-<p spaces-before="0">
-  이미지를 QOwnNotes에 포함할 수 있습니다. 미리보기에 표시됩니다.
-</p>
+This is a statement with a named footnote.[^source]
 
-<pre><code class="markdown">![alt text](media/my-image.jpg)
-</pre>
+[^source]: The source or additional explanation.
+```
 
-<h3 spaces-before="0">
-  이미지 치수
-</h3>
+Footnote references and definitions are shown as links. Hold <kbd>Ctrl</kbd> and click
+a footnote in the note editor to jump between its reference and definition. You can
+also click footnotes in the preview.
 
-<p spaces-before="0">
-  닫힘 괄호 바로 뒤에 컬리 브레이스 속성 구문을 사용하여 이미지의 ` 너비` 및/또는 ` 높이`을 선택적으로 지정할 수 있습니다:
-</p>
+### Bookmarks
 
-<pre><code class="markdown">![alt text](media/my-image.jpg){ width=300 }
+The bookmarks used by the [QOwnNotes Web Companion browser extension](./browser-extension.md)
+are using links in lists.
+
+```markdown
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+```
+
+## Images
+
+Images can be embedded into QOwnNotes. They will be shown in the preview.
+
+```markdown
+![alt text](media/my-image.jpg)
+```
+
+### Image dimensions
+
+You can optionally specify a `width` and/or `height` for an image using
+curly-brace attribute syntax right after the closing parenthesis:
+
+```markdown
+![alt text](media/my-image.jpg){ width=300 }
 
 ![alt text](media/my-image.jpg){ height=200 }
 
 ![alt text](media/my-image.jpg){ width=300 height=200 }
-</pre>
+```
 
-<p spaces-before="0">
-  치수 속성은 편집기에서 마스킹된 (회색 처리된) 구문으로 표시되며, 자동 이미지 너비 크기보다 우선시되는 미리보기에 적용됩니다.
-</p>
+The dimension attributes are displayed with masked (grayed-out) syntax in the
+editor and are applied in the preview, where they take precedence over the
+automatic image width sizing.
 
-<p spaces-before="0">
-  ::: 팁 [단축키](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> 를 사용하여 노트에 이미지를 삽입할 수 있습니다. 이미지가 클립보드에 있을 수도 있으며 대화상자가 이미지를 감지하고 미리보기를 표시합니다.
-</p>
-
-<p spaces-before="0">
-  <kbd>Ctrl + Shift + V</kbd>을 사용하여 클립보드의 이미지를 노트에 직접 붙여넣을 수도 있습니다.
-:::
-</p>
-
-<p spaces-before="0">
-  ::: 경고 정보 제목이 있는 이미지 링크는 지원되지 않습니다:
-</p>
-
-<pre><code class="markdown">![alt text](media/my-image.jpg "제목 지원되지 않음")
-</pre>
-
-<p spaces-before="0">
- 
-:::
-</p>
-
-<h2 spaces-before="0">
-  인라인 코드 및 코드 블록
-</h2>
-
-<pre><code class="markdown">인라인 '코드' 주위에 '백틱'이 있습니다.
-</pre>
-
-<p spaces-before="0">
-  ::: 팁 선택한 인라인 텍스트 또는 텍스트 바로 안쪽에서 [단축키](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd>를 사용하여 인라인 코드 블록을 만들 수 있습니다.
-:::
-</p>
-
-<p spaces-before="0">
-  코드 블록은 세 개의 백 틱이 있는 선으로 울타리를 두르거나 네 개의 공백으로 들여씁니다.
-</p>
-
-<h3 spaces-before="0">
-  4-공간 울타리
-</h3>
-
-<p spaces-before="0">
-  코드 앞에 공백 4개를 추가하여 코드 블록으로 표시합니다.
-</p>
-
-<pre><code class="markdown">    s = "공백 들여쓰기 코드"
-    print s
-</pre>
-
-<h3 spaces-before="0">
-  백틱 울타리
-</h3>
-
-<p spaces-before="0">
-  세 개의 백틱을 사용하여 코드 블록을 만들 수도 있습니다.
-</p>
-
-<p spaces-before="0">
-  ````마크다운
-</p>
-
-<pre>코드는 여기에 있습니다
-코드는 여기에 있습니다
-</pre>
-
-<pre>
 ::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> to insert an image into a note.
+The image can also be in the clipboard, the dialog will detect it and show a preview.
 
- [shortcut](./shortcuts.md) &lt;kbd>Ctrl + Shift + C&lt;/kbd>를 선택한
- 여러 텍스트 행 또는 빈 행에서 사용하여 코드 블록을 만들 수 있습니다.
+You can also directly paste an image from the clipboard into your note with <kbd>Ctrl + Shift + V</kbd>.
 :::
 
-### 코드 강조 표시가 있는 백틱 울타리
+::: warning Info
+Image links with a title are not supported:
 
-QOwnNotes에는 코드 블록을 사용하여 구문을 강조 표시하는 기능도 있습니다.
+```markdown
+![alt text](media/my-image.jpg "Title not supported")
+```
+
+:::
+
+## Inline code and code blocks
+
+```markdown
+Inline `code` has `backticks around` it.
+```
+
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+selected inline text or just inside of text to create an inline code block.
+:::
+
+Blocks of code are either fenced by lines with three backticks, or are indented with four spaces.
+
+### 4-Spaces fence
+
+Add four spaces in front of your code to mark it as code block.
+
+```markdown
+    s = "Code with space indent"
+    print s
+```
+
+### Backtick fence
+
+You can also use three backticks to create a code block.
+
+````markdown
+```
+Code goes here
+Code goes here
+```
+````
+
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
+multiple selected lines of text or in an empty line to create a code block.
+:::
+
+### Backtick fence with code highlighting
+
+There also is some syntax highlighting with code blocks in QOwnNotes.
 
 ````markdown
 ```bash
 # I am a comment
 cd Notes
-</pre>
+```
+````
 
-<pre>
-현재 지원되는 언어(및 코드 블록 식별자)는 다음과 같습니다:
+Currently, supported languages (and code block identifiers) are:
 
 - BASh scripting, `bash`
 - C, `c`
@@ -326,170 +310,138 @@ cd Notes
 
 ## Tables
 
-테이블은 핵심 마크다운 사양의 일부는 아니지만, QOwnNotes 미리보기가 이를 지원합니다.
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them.
 
-```마크다운
-콜론은 열을 정렬하는 데 사용할 수 있습니다.
+```markdown
+Colons can be used to align columns.
 
-| 테이블        | 이           | 멎져요  |
+| Tables        |      Are      |  Cool |
 | ------------- | :-----------: | ----: |
-| 열 3 은      | 오른쪽 정렬 | $1600 |
-| 열 2 는      | 가운데      |   $12 |
-| 얼룩말 줄무늬는 | 깔끔해요      |    $1 |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
-각 머리말 셀을 구분하는 대시가 3개 이상 있어야 합니다.
+There must be at least 3 dashes separating each header cell.
 
-인라인 마크다운을 사용할 수도 있습니다.
+You can also use inline Markdown.
 
 | Markdown | Less      | Pretty     |
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-</pre>
+```
 
-<p spaces-before="0">
-  ::: 팁 <kbd>Alt + Shift + T</kbd>을 눌러 표 작성에 도움이 되는 대화상자를 활성화합니다. 이 대화 상자에서 CSV 파일을 가져올 수도 있습니다.
-</p>
+::: tip
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you to create tables.
+You can even import CSV files in that dialog.
 
-<p spaces-before="0">
-  Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
+Use <kbd>Ctrl + Space</kbd> inside a Markdown table to automatically format it.
 :::
-</p>
 
-<h2 spaces-before="0">
-  블럭 따옴표
-</h2>
+## Blockquotes
 
-<pre><code class="markdown">&gt; 이메일에서 블록 따옴표는 회신 텍스트를 에뮬레이트하는 데 매우 유용합니다.
-&gt; 이 줄은 같은 인용구의 일부입니다.
+```markdown
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-따옴표로 묶습니다.
+Quote break.
 
-&gt; 줄 바꿈이 끝날 때도 여전히 적절하게 따옴표로 묶일 수 있는 매우 긴 줄입니다. 모든 사람이 실제로 감싸기에 충분한 길이인지 확인하기 위해 계속 작성해 보겠습니다. 오, 블록 인용문에 **마크다운**을 넣을 수 있습니다.
-</pre>
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
+```
 
-<p spaces-before="0">
-  ::: 팁 QOwnNotes에게 블록 따옴표를 완전히 강조 표시하거나 <em x-id="4">편집기 설정</em>에서 블록 따옴표 문자만 강조 표시하도록 지시할 수 있습니다
-</p>
+::: tip
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character
+in the _Editor settings_
 
-<p spaces-before="0">
-  [단축키](./shortcuts.md) <kbd> Ctrl + Shift + B</kbd>을 사용하여 텍스트를 블록 따옴표로 표시할 수 있습니다.
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marking text as blockquote.
 :::
-</p>
 
-<h2 spaces-before="0">
-  수평 규칙
-</h2>
+## Horizontal rule
 
-<p spaces-before="0">
-  수평 규칙을 얻는 세 가지 방법이 있습니다: 하이픈, 별표 또는 밑줄을 사용할 수 있습니다.
-</p>
+There are three ways to get a horizontal rule:
+hyphens, asterisks or underscores.
 
-<pre><code class="markdown">3개 이상...
+```markdown
+Three or more...
 
-하이픈
+Hyphens
 
 ---
 
-별표
+Asterisks
 
 ***
 
-밑줄
+Underscores
 
 ___
-</pre>
+```
 
-<h2 spaces-before="0">
-  줄 바꿈
-</h2>
+## Line breaks
 
-<ul>
-  <li>
-    문단을 하나 이상의 행으로 분할하여 편집할 수 있지만, 문단은 계속해서 중단 없이 단일 문단으로 렌더링됩니다.
-  </li>
-  <li>
-    두 개의 공백으로 선을 종료하여 문단 내부에서 줄 바꿈을 수행할 수 있습니다.
-  </li>
-  <li>
-    빈 줄로 구분하여 별도의 단락을 만들 수 있습니다.
-  </li>
-</ul>
+- You can break a paragraph into more than a single line for easier editing, they still render as a single paragraph with no breaks.
+- You can force a line break inside a paragraph by ending a line with two spaces.
+- You can make a separate paragraph by delimiting it by empty lines.
 
-<p spaces-before="0">
-  ::: 팁 <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>으로 공백 2개와 줄 바꿈을 입력할 수 있습니다.
+::: tip
+You can enter two spaces and a newline with <kbd>⇧ Shift</kbd> + <kbd>Return</kbd>.
 :::
-</p>
 
-<pre><code class="markdown">여기부터 시작할 수 있는 줄이 있습니다.
+```markdown
+Here's a line for us to start with.
 
-이 선은 위의 선과 두 개의 새로운 선으로 분리되어 있으므로 _분리된 문단_이 될 것입니다.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
-이 줄도 별도의 단락으로 시작하지만... 
-이 선은 두 개의 후행 공간과 하나의 새로운 선으로만 분리되어 있으므로 _같은 문단_에서 별도의 선입니다.
-</pre>
+This line also begins a separate paragraph, but...  
+This line is only separated by two trailing spaces and a single newline, so it's a separate line in the _same paragraph_.
+```
 
-<p spaces-before="0">
-  ::: 팁
-후행 공백은 편집기에서 기본적으로 강조 표시됩니다.
+::: tip
+Trailing spaces are highlighted by default in the editor.
 :::
-</p>
 
-<h2 spaces-before="0">
-  주석
-</h2>
+## Comments
 
-<p spaces-before="0">
-  설명은 미리보기에 표시되지 않습니다.
-</p>
+Comments are not shown in the preview.
 
-<pre><code class="markdown">[comment]: # "이 주삭은 미리보기에 나타나지 않습니다"
+```markdown
+[comment]: # "This comment will not appear in the preview"
 
-&lt;!-- HTML 주석도 숨겨져 있습니다 --&gt;
-</pre>
+<!-- HTML comments are also hidden -->
+```
 
-<p spaces-before="0">
-  ::: 팁
-노트의 선행 html 주석 블록은 자동 노트 파일 이름 생성에서도 무시됩니다.
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
 :::
-</p>
 
-<h2 spaces-before="0">
-  확인란 목록
-</h2>
+## Checkbox lists
 
-<p spaces-before="0">
-  확인란 목록을 사용하여 간단한 작업관리 목록을 작성할 수 있습니다.
-</p>
+You can create simple todo lists with checkbox lists.
 
-<pre><code class="markdown">- [x] 완료
-- [ ] 할 일
-</pre>
+```markdown
+- [x] done
+- [ ] todo
+```
 
-<p spaces-before="0">
-  ::: 팁
-미리보기에서 확인란을 선택하거나 선택 취소할 수 있습니다.
+::: tip
+You can check/un-check checkboxes in the preview.
 :::
-</p>
 
-<h2 spaces-before="0">
-  전문
-</h2>
+## Frontmatter
 
-<p spaces-before="0">
-  QOwnNotes에서 전문 (예: YAML)을 사용하여 추가 메타 정보를 추가할 수 있습니다. <strong x-id="1">미리보기에 표시되지 않으며</strong> <strong x-id="1">자동 노트 파일 이름 생성을 방해하지 않습니다</strong>.
-</p>
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information.
+It will **not be shown in the preview** and will
+**not disturb the automatic note filename generation**.
 
-<pre><code class="markdown">---
-제목: 일부 이름
-description: 일부 설명
+```markdown
+---
+title: Some name
+description: Some description
 ---
 
-# 노트 헤드라인이 여기에서 시작됩니다
+# Note headline starts here
 
-일부 텍스트
-</pre>
+Some text
+```
 
-<p spaces-before="0">
-  이 예제 노트의 파일 이름은 `Note headline starts here.md`입니다.
-</p>
+The filename of this example note would be `Note headline starts here.md`.

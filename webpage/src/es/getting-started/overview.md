@@ -50,7 +50,7 @@
 
 - **Resaltado de Markdown** de notas y un **modo de vista previa de Markdown**
   - Incluye **vistas previas de imágenes en línea**, **plegado de encabezados de Markdown** y ocultación opcional de la sintaxis de formato Markdown
-- **Compatibilidad con tema de modo oscuro** con cambio en vivo y modos de color personalizados</strong>
+- **Compatibilidad con tema de modo oscuro** con cambio en vivo y modos de color personalizados
 - **Soporte de temas** para el **resaltador de sintáxis de Markdown**
 - Todos los paneles **pueden colocarse donde desee**, incluso pueden **flotar** o **apilar** (totalmente acoplables)
 - Soporte para **iconos de tema de escritorio gratuito**, puede usar QOwnNotes con sus **iconos de escritorio nativos** y con su **tema de escritorio oscuro favorito**

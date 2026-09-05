@@ -1,38 +1,40 @@
-# Ubuntu Linux, elementary OS 및 Linux Mint에 설치
+# Install on Ubuntu Linux, elementary OS and Linux Mint
 
-## Ubuntu Linux 24.04 이상, elementary OS, Linux Mint 22.1 이상
+## Ubuntu Linux 24.04 or newer, elementary OS, Linux Mint 22.1 or newer
 
-PPA 저장소를 사용하여 **Ubuntu Linux** (최소 24.04)에 **QOwnNotes**을 설치합니다. 이 버전의 QOwnNotes는 Qt6으로 제작되었습니다.
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 24.04) using the PPA repository.
+This version of QOwnNotes is built with Qt6.
 
-**Raspberry Pi**에서 QOnNotes를 사용하려는 경우 저장소에 ARM용 패키지도 있습니다.
+Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
 
-터미널을 열고 다음 행을 입력하여 저장소를 추가하고 QOwnNotes를 설치합니다.
+Open a terminal and enter the following lines to add the repository and install QOwnNotes.
 
 ```bash
-# Qt5 PPA가 설치된 경우 제거
+# Remove Qt5 PPA in case you had it installed
 sudo add-apt-repository --remove ppa:pbek/qownnotes
 
-# Qt6 PPA 추가
+# Add Qt6 PPA
 sudo add-apt-repository ppa:pbek/qownnotes-qt6
 
-# QOwnNotes 설치
+# Install QOwnNotes
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
+[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6/+packages)
 
-문제가 발견되면 [GitHub의 QOwnNotes 이슈](https://github.com/pbek/QOwnNotes/issues)에 대해 보고해 주세요!
+If you find any issues, please report them on [QOwnNotes Issues on GitHub](https://github.com/pbek/QOwnNotes/issues)!
 
-## QOwnNotes Qt5 레거시
+## QOwnNotes Qt5 legacy
 
-이전에 지원된 Ubuntu Linux, 기본 OS, Linux Mint 18 이상 버전의 경우 QOwnNotes의 Qt5 버전을 사용할 수 있습니다.
+For older supported versions of Ubuntu Linux, elementary OS, Linux Mint 18 or newer,
+you can use the Qt5 version of QOwnNotes.
 
-PPA 저장소를 사용하여 **Ubuntu Linux에 **QOwnNotes**을 설치합니다 (최소 20.04).</p>
+Install **QOwnNotes** on **Ubuntu Linux** (minimum 20.04) using the PPA repository.
 
-저장소에는 **Raspberry Pi**에서 QOwnNotes를 사용하려는 경우를 대비한 ARM 패키지도 있습니다.
+Note that there are also packages for ARM in the repository, in case you want to use QOwnNotes on a **Raspberry Pi**.
 
-터미널을 열고 다음 줄을 입력하여 저장소를 추가하고 QOwnNotes를 설치합니다.
+Open a terminal and enter the following lines to add the repository and install QOwnNotes.
 
 ```bash
 sudo add-apt-repository ppa:pbek/qownnotes
@@ -40,27 +42,29 @@ sudo apt-get update
 sudo apt-get install qownnotes
 ```
 
-[직접 다운로드](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
+[Direct Download](https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+packages)
 
-## 이전 Ubuntu Linux 배포 및 파생 제품
+## Older Ubuntu Linux distributions and derivatives
 
-[GitHub에서 QOwnNotes 릴리스](https://github.com/pbek/QOwnNotes/releases)의 AppImage를 사용해 보세요.
+Best try to use the AppImage from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases).
 
-자세한 내용은 [AppImage로 설치](./appimage.md)을 참조하세요.
+See [Install as AppImage](./appimage.md) for more information.
 
-## OBS 저장소
+## OBS Repository
 
-Ubuntu Launchpad에서 더 이상 업데이트되지 않은 Ubuntu 버전에서도 QOwnNotes를 사용할 수 있으며, 그 후에는 [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)의 저장소를 사용할 수 있습니다. Ubuntu 24.04+용 패키지는 cmake와 Qt6로 제작되었습니다.
+You may also be able to use the QOwnNotes on Ubuntu versions that aren't anymore updated on Ubuntu Launchpad then you can
+use the repositories from the [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
+The packages for Ubuntu 24.04+ are built with cmake and Qt6.
 
-다음은 xUbuntu 24.04 리포지토리에 대한 예제 호출입니다.
+Below are example calls for the xUbuntu 24.04 repository.
 
-다음 셸 명령을 실행하여 저장소를 신뢰합니다.
+Run the following shell command to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04/Release.key -O - | sudo apt-key add -
 ```
 
-다음 셸 명령을 실행하여 저장소를 추가하고 거기에서 QOwnNotes를 설치합니다.
+Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
 sudo su -
@@ -69,7 +73,7 @@ apt-get update
 apt-get install qownnotes
 ```
 
-[직접 다운로드](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)
+[Direct Download](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_24.04)
 
 ::: tip
 If QOwnNotes logs `Could not write secret to keychain`, install the missing Secret Service packages and restart your desktop session.

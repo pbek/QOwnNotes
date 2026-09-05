@@ -171,7 +171,8 @@ mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
 // 현재 노트에 HTML을 마크다운으로 삽입합니다
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline
+some text");
 
 // '편집' 레이아웃을 현재 레이아웃으로 설정
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));

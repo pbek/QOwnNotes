@@ -174,7 +174,8 @@ mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 mainWindow.createNewNoteSubFolder("Mi carpeta especial");
 
 // Inserta HTML en la nota actual como Markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>mi título</h2>algún texto");
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>mi título
+algún texto");
 
 // Establece el diseño "Editar" como diseño actual
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Editar"));

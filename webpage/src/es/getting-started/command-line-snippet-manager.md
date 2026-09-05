@@ -91,7 +91,6 @@ Los bloques de código de **`bash` o `shell`**, precedidos por un encabezado 2 o
      echo haz eso
     ```
 
-
     ## Realizar otra cosa con un bloque de código "sh"
 
     ```sh

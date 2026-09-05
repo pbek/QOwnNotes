@@ -1,69 +1,75 @@
-# Panoramica
+# Overview
 
 <ScreenshotCarousel />
 
 <v-divider />
 
-**Q** per il [framework Qt](https://www.qt.io/) usato  
-**Own** perché possiedi le tue note  
-**Notes** per le note che prendi
+**Q** for the [Qt framework](https://www.qt.io/) that is used  
+**Own** because you own your own notes  
+**Notes** for the notes you take
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) è l'applicazione **open source** (GPL) file di testo semplice per **prendere note in markdown** per **GNU / Linux**, **macOS** e **Windows**, che (opzionalmente) funziona insieme all '[**applicazione note**](https://github.com/nextcloud/notes) di [Nextcloud](https://nextcloud.com/) e [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) is the **open source** (GPL) plain-text file
+**markdown note taking** application for **GNU/Linux**, **macOS** and **Windows**, that
+(optionally) works together with the [**notes application**](https://github.com/nextcloud/notes)
+of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 
 ::: tip
 Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
-[Comprendere il concetto di QOwnNotes](concept.md)
+[Understand the concept of QOwnNotes](concept.md)
 
-## Caratteristiche
+## Features
 
-- Puoi usare i tuoi **pre-esistenti documenti di testo o markdown** senza la necessità di importarli
-- QOwnNotes è scritto in C++ ed è ottimizzato a basso **consumo di risorse** (nessuna CPU e app Electron affamata di memoria)
-- **Importa Evernote e Joplin**
-- **Compatibilità** con l'applicazione [Notes](https://apps.nextcloud.com/apps/notes) di **Nextcloud / Owncloud**, la versione mobile** e Nextcloud Text</p></li>
-- Crea un **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** e collegalo alle tue note
-- Supporto per la **condivisione delle note** sul tuo server **ownCLoud** / **Nextcloud**
-- Gestisci la tua **lista delle cose da fare** di Nextcloud / OwnCloud (**Nextcloud tasks** o **Tasks Plus** / **Calendar Plus**) o usa un altro **server CalDAV** per sincronizzare i tuoi incarichi
-- Le **note cancellate** possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
+- You can use your **existing text or markdown files**, no need for an import
+- QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
+- **Evernote and Joplin import**
+- **Compatible** with the [Notes](https://apps.nextcloud.com/apps/notes) application
+  of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- Create **[Nextcloud Deck](https://apps.nextcloud.com/apps/deck) cards** and link to them in your notes
+- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
   - There are also **local trash** and **system trash** modes
-- Le ** modifiche esterne** ai files delle note vengono **prese in considerazione** (le note o l'elenco di esse vengono aggiornati)
-- Supporto per la **gerarchia dell'etichettatura alle note** e alle **sottocartelle delle note**
+- **External changes** of note files are **watched** (notes or note list are reloaded)
+- Support for **hierarchical note tagging** and **note subfolders**
   - Includes moving and reorganizing subfolders with link updates and selective subfolder visibility
 - Optional **wiki-style note links** like `[[Note]]` with autocomplete, heading anchors, aliases, backlinks, and refactoring support
-- **Cifratura** opzionale delle note. Sistema AES-256 preinstallato, altrimenti puoi usare il tuo metodo di cifratura come **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
-- La **cartella delle note** può essere **scelta liberamente** (è possibile scegliere più cartelle delle note)
-- **La ricerca di parole parziali** nelle note è possibile e i risultati di essa sono evidenziati nelle note
-- [**Estensione browser**](browser-extension.md) per **inserire note da testo selezionato**, **fare catture di schermata** o **gestire i tuoi segnalibri**
+- Optional **encryption** of notes, AES-256 is built in, or you can use custom encryption methods like
+  **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-keybase.qml))
+  or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/encryption-pgp.qml))
+- The **notes folder** can be **freely chosen** (multiple note folders can be used)
+- **Searching parts of words** in notes is possible and search results are highlighted in the notes
+- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
 - [**Spellchecking**](../editor/spellchecking.md), optional [**LanguageTool**](../editor/languagetool.md), optional [**Harper**](../editor/harper.md), and optional [**Markdown LSP**](../editor/markdownlsp.md) support (e.g. [Marksman](https://github.com/artempyanykh/marksman) for completions and diagnostics, or [Rumdl](https://github.com/rvben/rumdl) for linting)
-- **Modalità portatile** per portare QOwnNotes con te su una chiavetta USB
-- **Supporto allo scripting** e un [**repository di script**](https://github.com/qownnotes/scripts) online da cui puoi installare script nella tua applicazione
+- **Portable mode** for carrying QOwnNotes around on USB sticks
+- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
 - Built-in **AI support** with script integration for providers like **OpenAI** and **Groq**
   - Includes a built-in **MCP server** so external AI agents can search and fetch notes securely
-- **Modalità Vim**
-- **[Applicazione web](web-app.md)** per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop</ul>
+- **Vim mode**
+- **[Web application](web-app.md)** to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
-## Aspetto
+## Appearance
 
-- **Evidenziazione del markdown** delle note e **modalità di anteprima del markdown**
+- **Markdown highlighting** of notes and a **markdown preview mode**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
 - **Dark mode theme support** with live switching and custom **color modes**
-- **Supporto dei temi** per l'**evidenziazione della sintassi di Markdown**
-- Tutti i **pannelli possono essere posizionati dove vuoi**, possono anche essere **separati** o essere **impilati** (completamente agganciabili)
-- Supporto per **icone del tema freedesktop**, puoi usare QOwnNotes con le tue **icone desktop native** e con il tuo **tema desktop scuro** preferito
-- **Modalità senza distrazioni**, **Modalità a schermo intero** e **Modalità macchina da scrivere**
-- **Numeri di riga**
+- **Theming support** for the **Markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
 - **Block selection** and other power-user editor workflows
 - Support for **global keyboard shortcuts on Wayland**
 - **Differences** between current note and externally changed note are **shown** in a dialog
 
-## Lingue
+## Languages
 
-- **Disponibile in più di 60 lingue diverse** come inglese, tedesco, francese, polacco, cinese, giapponese, russo, portoghese, ungherese, olandese e spagnolo
-  - [Il tuo aiuto](../contributing/translation.md) è molto apprezzato per migliorare queste traduzioni o per tradurre QOwnNotes in più lingue
+- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
+  - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 
 <style>
 .v-divider {

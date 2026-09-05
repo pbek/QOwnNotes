@@ -174,7 +174,8 @@ mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
 // Insère du HTML dans la note courante en tant que Markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline
+some text");
 
 // Charge la dispositon « Edit » en tant que disposition courante
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));
