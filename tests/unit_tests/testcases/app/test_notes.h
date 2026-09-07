@@ -106,6 +106,7 @@ class TestNotes : public QObject {
     /* Joplin-import image resource dedup, follow-up to #3726 */
     void testGetInsertMediaMarkdownReusesFileDespiteMimeExtensionMismatch();
     void testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote();
+    void testHandleImagesTerminatesOnZeroByteResource();
 };
 
 #endif    // TESTNOTES_H

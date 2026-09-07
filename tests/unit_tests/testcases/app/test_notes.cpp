@@ -1927,4 +1927,45 @@ void TestNotes::testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote
     }
 }
 
+/**
+ * Regression test for a case an automated review flagged as a suspected
+ * infinite loop: when a matched resource is zero bytes,
+ * getInsertMediaMarkdown() returns an empty string, and importImage()'s
+ * resume offset is computed as matchStart + mediaMarkdown.length() ==
+ * matchStart. That looks like it could re-match the same spot forever, but
+ * it doesn't: noteText.replace(matchStart, matchLength, "") still removes
+ * the matched tag text, shifting whatever followed it back to matchStart, so
+ * the next search from matchStart finds new content, not the same tag.
+ * Verified empirically here (two zero-byte-resource tags in one note) rather
+ * than left as an unconfirmed concern; QtTest's 5-minute per-test timeout
+ * would fail this with "Test function timed out" if the loop were real.
+ */
+void TestNotes::testHandleImagesTerminatesOnZeroByteResource() {
+    const QString resourceId = uniqueTestName(QStringLiteral("id")).remove(QLatin1Char('-'));
+
+    const QString dirPath = QDir::tempPath() + QDir::separator() +
+                            uniqueTestName(QStringLiteral("joplin-export-zero"));
+    QDir().mkpath(dirPath + QStringLiteral("/resources"));
+    const QString resourcePath =
+        dirPath + QStringLiteral("/resources/") + resourceId + QStringLiteral(".jpeg");
+    QFile resourceFile(resourcePath);
+    QVERIFY(resourceFile.open(QIODevice::WriteOnly));
+    resourceFile.close();    // zero bytes
+
+    Note note = createTestNote(uniqueTestName(QStringLiteral("Zero Byte Resource Note")));
+    const QString imageTag = QStringLiteral("![zero](:/%1)").arg(resourceId);
+    note.setNoteText(QStringLiteral("# Zero Byte\n\n%1\n\nSome text in between.\n\n%1\nTail.\n")
+                         .arg(imageTag));
+
+    JoplinImportDialog dialog;
+    dialog._imageData.insert(resourceId, QStringLiteral("mime: image/jpeg\n"));
+    dialog.handleImages(note, dirPath);
+
+    QVERIFY2(!note.getNoteText().contains(imageTag),
+             "both zero-byte-resource tags must have been removed, not left in an infinite loop");
+    QVERIFY(note.getNoteText().contains(QStringLiteral("Tail.")));
+
+    QVERIFY(QDir(dirPath).removeRecursively());
+}
+
 // QTEST_MAIN(TestNotes)
