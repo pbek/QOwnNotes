@@ -15,6 +15,10 @@ class QFile;
 class JoplinImportDialog : public MasterDialog {
     Q_OBJECT
 
+    // Lets the unit test suite exercise handleImages() directly against a
+    // crafted note/resource, instead of only via a full interactive import.
+    friend class TestNotes;
+
     struct MediaFileData {
         QString data;
         QString suffix;
@@ -56,8 +60,8 @@ class JoplinImportDialog : public MasterDialog {
     void handleAttachments(Note& note, const QString& dirPath);
     bool importFolders();
     NoteSubFolder importFolder(const QString& id, const QString& text);
-    void importImage(Note& note, const QString& dirPath, QString& noteText, const QString& imageTag,
-                     const QString& imageId, const QString& imageName = "");
+    int importImage(Note& note, const QString& dirPath, QString& noteText, int matchStart,
+                    int matchLength, const QString& imageId, const QString& imageName = "");
     static QFile* findResourceFile(const QString& dirPath, const QString& id,
                                    const QString& metaData);
 };

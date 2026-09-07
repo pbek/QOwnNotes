@@ -8,6 +8,7 @@
 #include <QVariant>
 
 #include "entities/note.h"
+#include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
 
 class TestNotes : public QObject {
@@ -101,6 +102,10 @@ class TestNotes : public QObject {
     /* Follow-up fixes for pbek's review comments on this PR */
     void testFetchByFileNameExcludesGivenNoteIdAmongDuplicates();
     void testCanWriteToNoteFileSucceedsWithoutReadPermission();
+
+    /* Joplin-import image resource dedup, follow-up to #3726 */
+    void testGetInsertMediaMarkdownReusesFileDespiteMimeExtensionMismatch();
+    void testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote();
 };
 
 #endif    // TESTNOTES_H

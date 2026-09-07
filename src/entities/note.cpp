@@ -6300,13 +6300,26 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine, bool returnUr
         }
     }
 
+    // The name findAvailableFileName() would give this file on a first (no
+    // collision) pass -- base name plus the MIME-normalized suffix, not
+    // necessarily the source file's own suffix. The existence check below
+    // must test for *this* name: the file actually gets written with
+    // `suffix`, so probing for file->fileName()'s original extension instead
+    // (e.g. ".jpeg" when the MIME type normalizes to ".jpg") would never
+    // find a match and duplicate-import every repeat reference to the same
+    // resource.
+    QString candidateBaseName = fileInfo.baseName();
+    candidateBaseName.truncate(200);
+    const QString candidateFileName =
+        suffix.isEmpty() ? candidateBaseName : candidateBaseName + QLatin1Char('.') + suffix;
+
     bool useExistingFile = false;
     // check if image with the same name already exists in media folder
-    if (Utils::Misc::fileNameExists(file->fileName(), mediaDir.path())) {
+    if (Utils::Misc::fileNameExists(candidateFileName, mediaDir.path())) {
         // file->fileName() wields a path!
         auto fileHash = Utils::Misc::generateFileSha1Signature(file->fileName());
         auto newFileHash = Utils::Misc::generateFileSha1Signature(
-            mediaDir.path() + QDir::separator() + Utils::Misc::fileNameForPath(file->fileName()));
+            mediaDir.path() + QDir::separator() + candidateFileName);
 
         // check if files are binary identical and ask if we want to use the existing file
         if (fileHash == newFileHash &&
@@ -6322,9 +6335,10 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine, bool returnUr
     }
 
     // find a name for the new file
-    const QString newFileName = useExistingFile ? Utils::Misc::fileNameForPath(file->fileName())
-                                                : Utils::Misc::findAvailableFileName(
-                                                      file->fileName(), mediaDir.path(), suffix);
+    const QString newFileName = useExistingFile
+                                    ? candidateFileName
+                                    : Utils::Misc::findAvailableFileName(file->fileName(),
+                                                                         mediaDir.path(), suffix);
 
     const QString newFilePath = mediaDir.path() + QDir::separator() + newFileName;
 
