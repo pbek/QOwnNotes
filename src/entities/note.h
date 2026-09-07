@@ -97,7 +97,8 @@ class Note {
 
     static Note fetchByName(const QRegularExpression &regExp, int noteSubFolderId = -1);
 
-    static Note fetchByFileName(const QString &fileName, int noteSubFolderId = -1);
+    static Note fetchByFileName(const QString &fileName, int noteSubFolderId = -1,
+                                int excludeNoteId = -1);
 
     static Note fetchByFileName(const QString &fileName, const QString &noteSubFolderPathData);
 
@@ -184,7 +185,7 @@ class Note {
 
     Note fillFromQuery(const QSqlQuery &query);
 
-    bool fillByFileName(const QString &fileName, int noteSubFolderId = -1);
+    bool fillByFileName(const QString &fileName, int noteSubFolderId = -1, int excludeNoteId = -1);
 
     bool removeNoteFile();
 

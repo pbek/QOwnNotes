@@ -1016,14 +1016,14 @@ Note Note::fetchByName(const QRegularExpression &regExp, int noteSubFolderId) {
     return Note();
 }
 
-Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
+Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId, int excludeNoteId) {
     Note note;
     // get the active note subfolder id if none was set
     if (noteSubFolderId == -1) {
         noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     }
 
-    note.fillByFileName(fileName, noteSubFolderId);
+    note.fillByFileName(fileName, noteSubFolderId, excludeNoteId);
     return note;
 }
 
@@ -1032,7 +1032,7 @@ Note Note::fetchByFileName(const QString &fileName, const QString &noteSubFolder
     return fetchByFileName(fileName, noteSubFolder.getId());
 }
 
-bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
+bool Note::fillByFileName(const QString &fileName, int noteSubFolderId, int excludeNoteId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
@@ -1041,11 +1041,25 @@ bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
         noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     }
 
-    query.prepare(
-        QStringLiteral("SELECT * FROM note WHERE file_name = :file_name AND "
-                       "note_sub_folder_id = :note_sub_folder_id"));
+    // Excluding by id directly in the query (rather than fetching and
+    // checking the id afterwards) matters for databases already affected by
+    // the duplicate-name bug this is guarding against: with duplicate rows
+    // for the same (file_name, note_sub_folder_id) already present, SQLite's
+    // row order without ORDER BY is unspecified, so a post-fetch self-check
+    // could land on the caller's own row first and miss the other duplicate
+    // entirely.
+    QString queryString = QStringLiteral(
+        "SELECT * FROM note WHERE file_name = :file_name AND "
+        "note_sub_folder_id = :note_sub_folder_id");
+    if (excludeNoteId > 0) {
+        queryString += QStringLiteral(" AND id != :exclude_note_id");
+    }
+    query.prepare(queryString);
     query.bindValue(QStringLiteral(":file_name"), fileName);
     query.bindValue(QStringLiteral(":note_sub_folder_id"), noteSubFolderId);
+    if (excludeNoteId > 0) {
+        query.bindValue(QStringLiteral(":exclude_note_id"), excludeNoteId);
+    }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -2959,10 +2973,17 @@ bool Note::handleNoteTextFileName() {
             // otherwise find its own row at that candidate and treat it as
             // a collision with itself, escalating to "Title 2", "Title 3",
             // ... on every subsequent call instead of keeping its name.
+            //
+            // The exclusion is done inside the query itself (fetchByFileName's
+            // excludeNoteId) rather than via a post-fetch id check, so that a
+            // database already holding duplicate rows for this filename --
+            // the exact state this loop is meant to clean up -- still turns
+            // up the *other* row instead of matching this note's own first.
+            const int excludeNoteId = this->_id > 0 ? this->_id : -1;
             while (true) {
-                const Note existingNote = Note::fetchByFileName(fileName, this->_noteSubFolderId);
-                if (!existingNote.isFetched() ||
-                    (this->_id > 0 && existingNote.getId() == this->_id)) {
+                const Note existingNote =
+                    Note::fetchByFileName(fileName, this->_noteSubFolderId, excludeNoteId);
+                if (!existingNote.isFetched()) {
                     break;
                 }
 
@@ -3036,13 +3057,12 @@ bool Note::canWriteToNoteFile() {
     const bool fileExistedBefore = QFile::exists(path);
 
     QFile file(path);
-    // Deliberately QIODevice::ReadWrite, not WriteOnly: for QFile, WriteOnly
-    // implies Truncate unless combined with Append, so opening an *existing*
-    // file here to merely probe writability was silently discarding its
-    // content as a side effect. ReadWrite still creates a missing file (so
-    // the writability check is unchanged) without truncating one that's
-    // already there.
-    const bool canWrite = file.open(QIODevice::ReadWrite);
+    // WriteOnly | Append probes writability without truncating: WriteOnly
+    // alone implies Truncate, but combining it with Append suppresses that,
+    // same as ReadWrite would. Unlike ReadWrite though, this doesn't also
+    // require read permission on the file, so it won't misreport a
+    // write-only-permissioned file as unwritable.
+    const bool canWrite = file.open(QIODevice::WriteOnly | QIODevice::Append);
 
     if (file.isOpen()) {
         file.close();

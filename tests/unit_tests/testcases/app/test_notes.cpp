@@ -25,6 +25,10 @@
 #include <QRandomGenerator>
 #endif
 
+#ifdef Q_OS_UNIX
+#include <unistd.h>
+#endif
+
 #include "helpers/codetohtmlconverter.h"
 #include "services/databaseservice.h"
 
@@ -1669,6 +1673,113 @@ void TestNotes::testEditingExistingNoteTitleToMatchAnotherNoteDestroysItsContent
     QVERIFY2(victimFileAfterEdit.size() > 0,
              "editing an unrelated note's title to collide with the victim, with no import and "
              "no dedicated rename action involved, must not destroy the victim's content");
+}
+
+/**
+ * Direct regression test for the excludeNoteId parameter added to
+ * Note::fetchByFileName()/fillByFileName(), per pbek's review comment on this
+ * PR: without it, the collision-avoidance loop excluded "myself" only *after*
+ * fetching a single row -- SQLite gives no ordering guarantee without ORDER
+ * BY -- so on a database that already has two rows sharing the same
+ * (file_name, note_sub_folder_id) from before this fix existed, there was a
+ * real chance the query would hand back the calling note's own row, get
+ * waved through by the self-id check, and never surface the genuine
+ * remaining duplicate at all.
+ *
+ * This constructs that already-corrupted state directly (two notes stored
+ * with an identical file_name in the same subfolder, via the raw store()
+ * used to seed test data rather than the app's own collision-avoidance path)
+ * and asserts the new parameter deterministically finds the *other* row,
+ * regardless of which of the two ids is excluded.
+ */
+void TestNotes::testFetchByFileNameExcludesGivenNoteIdAmongDuplicates() {
+    NoteSubFolder targetFolder =
+        createTestNoteSubFolder(uniqueTestName(QStringLiteral("corrupted-notebook")));
+
+    const QString sharedName = uniqueTestName(QStringLiteral("Shared"));
+    const QString sharedFileName = sharedName + QStringLiteral(".md");
+
+    Note noteX;
+    noteX.setNoteSubFolder(targetFolder);
+    noteX.setName(sharedName);
+    QVERIFY(noteX.store());
+    QCOMPARE(noteX.getFileName(), sharedFileName);
+
+    Note noteY;
+    noteY.setNoteSubFolder(targetFolder);
+    noteY.setName(sharedName);
+    QVERIFY(noteY.store());
+    QCOMPARE(noteY.getFileName(), sharedFileName);
+
+    QVERIFY(noteX.getId() != noteY.getId());
+
+    const Note foundExcludingX =
+        Note::fetchByFileName(sharedFileName, targetFolder.getId(), noteX.getId());
+    QVERIFY2(foundExcludingX.isFetched(),
+             "excluding note X must still surface note Y's duplicate row");
+    QCOMPARE(foundExcludingX.getId(), noteY.getId());
+
+    const Note foundExcludingY =
+        Note::fetchByFileName(sharedFileName, targetFolder.getId(), noteY.getId());
+    QVERIFY2(foundExcludingY.isFetched(),
+             "excluding note Y must still surface note X's duplicate row");
+    QCOMPARE(foundExcludingY.getId(), noteX.getId());
+}
+
+/**
+ * Direct regression test for canWriteToNoteFile()'s writability probe, per
+ * pbek's review comment on this PR: opening with QIODevice::ReadWrite (the
+ * fix in place before this test was added) requires read permission in
+ * addition to write permission, so it misreported "can't write" for a file
+ * that has write permission but not read permission -- something an actual
+ * write (opened WriteOnly, which needs no read access) would have handled
+ * fine. QIODevice::WriteOnly | QIODevice::Append avoids that false negative
+ * while still not truncating, unlike bare WriteOnly (the original bug this
+ * whole PR exists to close).
+ */
+void TestNotes::testCanWriteToNoteFileSucceedsWithoutReadPermission() {
+#ifdef Q_OS_UNIX
+    if (::geteuid() == 0) {
+        QSKIP("running as root -- file permission bits aren't enforced, test is meaningless");
+    }
+
+    const QString title = uniqueTestName(QStringLiteral("Write Only Permissions"));
+    Note note;
+    note.setNoteText(QStringLiteral("# %1\n\nOriginal content\n").arg(title));
+    QVERIFY(note.handleNoteTextFileName());
+    QVERIFY(note.store());
+    QVERIFY(note.storeNoteTextFileToDisk());
+
+    const QString path = note.fullNoteFilePath();
+    QVERIFY(QFile::exists(path));
+
+    QByteArray originalContent;
+    {
+        QFile file(path);
+        QVERIFY(file.open(QIODevice::ReadOnly));
+        originalContent = file.readAll();
+    }
+    QVERIFY(!originalContent.isEmpty());
+
+    // Write-only, no read permission for anyone -- an unusual but valid state
+    // (e.g. after a restrictive umask or an external sync tool).
+    QVERIFY(QFile::setPermissions(path, QFileDevice::WriteOwner));
+
+    QVERIFY2(note.canWriteToNoteFile(),
+             "a write-only-permissioned file is still writable and must not be misreported as "
+             "unwritable");
+
+    // Restore read permission so the test itself can verify the content --
+    // the probe must never have truncated the file as a side effect.
+    QVERIFY(QFile::setPermissions(path, QFileDevice::ReadOwner | QFileDevice::WriteOwner));
+
+    QFile fileAfter(path);
+    QVERIFY(fileAfter.open(QIODevice::ReadOnly));
+    QCOMPARE(fileAfter.readAll(), originalContent);
+    fileAfter.close();
+#else
+    QSKIP("POSIX permission bits test only applies on unix-like platforms");
+#endif
 }
 
 // QTEST_MAIN(TestNotes)

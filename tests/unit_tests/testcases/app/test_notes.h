@@ -97,6 +97,10 @@ class TestNotes : public QObject {
     void testDuplicateTitleInActiveSubfolderStillGetsSuffixed();
     void testRenameNoteFileToExistingNameInNonActiveSubfolder();
     void testEditingExistingNoteTitleToMatchAnotherNoteDestroysItsContent();
+
+    /* Follow-up fixes for pbek's review comments on this PR */
+    void testFetchByFileNameExcludesGivenNoteIdAmongDuplicates();
+    void testCanWriteToNoteFileSucceedsWithoutReadPermission();
 };
 
 #endif    // TESTNOTES_H
