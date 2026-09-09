@@ -4,6 +4,8 @@
 
 - Fixed percent-encoded local Markdown links not showing the pointer cursor or opening
   with <kbd>Ctrl</kbd> + click in the note editor (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
+- Fixed HTML `<sub>` and `<sup>` tags not rendering as subscript and superscript in
+  the QLiteHtml note preview (for [#3728](https://github.com/pbek/QOwnNotes/issues/3728))
 
 ## 26.9.2
 

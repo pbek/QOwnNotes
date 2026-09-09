@@ -257,6 +257,12 @@ void HtmlPreviewWidget::setHtml(const QString &text) {
     const QString strikeoutCss =
         QStringLiteral("<style>del, s, del *, s * { text-decoration: line-through; }</style>");
 
+    // QLiteHtml doesn't implement vertical-align for subscript and superscript,
+    // so use relative positioning to preserve raw HTML <sub> and <sup> formatting.
+    const QString scriptCss = QStringLiteral(
+        "<style>sub, sup { font-size: 75%; line-height: 0; position: relative; "
+        "vertical-align: baseline; } sup { bottom: 0.5em; } sub { top: 0.25em; }</style>");
+
     // Inject hr CSS so that horizontal rules use the "Horizontal rule" schema
     // color and render as a single line in QLiteHtml (issue #3466). The
     // built-in master CSS uses an inset border on all sides, which can appear
@@ -269,10 +275,10 @@ void HtmlPreviewWidget::setHtml(const QString &text) {
 
     const int headEnd = processed.indexOf(QStringLiteral("</head>"));
     if (headEnd != -1) {
-        processed.insert(headEnd, underlineCss + strikeoutCss + hrCss);
+        processed.insert(headEnd, underlineCss + strikeoutCss + scriptCss + hrCss);
     } else {
         // Fallback: prepend the style blocks if there is no <head> section
-        processed.prepend(underlineCss + strikeoutCss + hrCss);
+        processed.prepend(underlineCss + strikeoutCss + scriptCss + hrCss);
     }
     _htmlWidget->setHtml(Utils::Misc::parseTaskList(processed, true));
 }
