@@ -650,11 +650,11 @@ bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position, QTex
         int hitOffset = 0;
 
         const int destinationSeparator = parsedText.lastIndexOf(QStringLiteral("]("));
-        const int destinationStart = destinationSeparator >= 0
-                                         ? parsedText.indexOf(it.value(), destinationSeparator + 2)
-                                         : -1;
+        const int destinationStart = destinationSeparator >= 0 ? destinationSeparator + 2 : -1;
         if (destinationStart >= 0) {
-            hoverText = it.value();
+            // Keep the source spelling so percent-encoded destinations retain
+            // the same range as the text displayed in the editor.
+            hoverText = parsedText.mid(destinationStart, parsedText.size() - destinationStart - 1);
             hoverOffset = destinationStart;
             if (includeLinkLabel) {
                 // Exclude a preceding checkbox that the shared parser may include.
@@ -670,14 +670,11 @@ bool QOwnNotesMarkdownTextEdit::hoveredMarkdownLink(const QPoint &position, QTex
             }
         } else if (parsedText.startsWith(QLatin1Char('<')) &&
                    parsedText.endsWith(QLatin1Char('>'))) {
-            const int urlStart = parsedText.indexOf(it.value(), 1);
-            if (urlStart >= 0) {
-                hoverText = it.value();
-                hoverOffset = urlStart;
-                if (!includeLinkLabel) {
-                    hitText = hoverText;
-                    hitOffset = hoverOffset;
-                }
+            hoverText = parsedText.mid(1, parsedText.size() - 2);
+            hoverOffset = 1;
+            if (!includeLinkLabel) {
+                hitText = hoverText;
+                hitOffset = hoverOffset;
             }
         } else {
             // The shared parser can include a preceding checkbox in reference

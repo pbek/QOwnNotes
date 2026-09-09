@@ -307,6 +307,18 @@ void TestQMarkdownTextEdit::testLinkedCheckBoxDetectionInReadOnlyEditor() {
     QVERIFY(editor.toPlainText().startsWith(QStringLiteral("- [x]")));
 }
 
+void TestQMarkdownTextEdit::testPercentEncodedAttachmentLinkDetection() {
+    QMarkdownTextEdit editor;
+    const QString label = QStringLiteral("Task 74776: Bulletin authorization plan.md");
+    const QString destination =
+        QStringLiteral("attachments/Task%2074776%3A%20Bulletin%20authorization%20plan.md");
+    const QString markdown =
+        QStringLiteral("[") + label + QStringLiteral("](") + destination + QStringLiteral(")");
+
+    QCOMPARE(editor.getMarkdownUrlAtPosition(markdown, 1), destination);
+    QCOMPARE(editor.getMarkdownUrlAtPosition(markdown, markdown.indexOf(destination)), destination);
+}
+
 void TestQMarkdownTextEdit::testFootnoteNavigationAndHighlighting() {
     QMarkdownTextEdit editor;
     editor.setPlainText(QStringLiteral("Text[^source]\n\n[^source]: Explanation"));

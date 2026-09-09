@@ -20,6 +20,7 @@ class TestQMarkdownTextEdit : public QObject {
     void testMultilineInlineHighlightingDisabled();
     void testWhitespaceMarkerHighlighting();
     void testLinkedCheckBoxDetectionInReadOnlyEditor();
+    void testPercentEncodedAttachmentLinkDetection();
     void testFootnoteNavigationAndHighlighting();
     void testAutoFormatTableAtCursor();
 };

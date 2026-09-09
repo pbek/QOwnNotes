@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.9.3
+
+- Fixed percent-encoded local Markdown links not showing the pointer cursor or opening
+  with <kbd>Ctrl</kbd> + click in the note editor (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
+
 ## 26.9.2
 
 - Introducing **QOwnNotes for Android**!
