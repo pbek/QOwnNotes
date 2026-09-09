@@ -236,6 +236,19 @@
               </layout>
              </widget>
             </item>
+           <item row="13" column="0" colspan="3">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
            <item row="11" column="0" colspan="3">
             <widget class="Label" name="descriptionLabel">
              <property name="text">
