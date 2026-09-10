@@ -10,6 +10,11 @@
   QLiteHtml note preview (for [#3728](https://github.com/pbek/QOwnNotes/issues/3728))
 - The tooltips in the **Headings** panel now show the full heading text and the heading
   level (for [#3731](https://github.com/pbek/QOwnNotes/issues/3731))
+- There were four new releases of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.3.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.3.0),
+  [v0.3.1](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.3.1),
+  [v0.3.2](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.3.2), and
+  [v0.3.3](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.3.3)
 
 ## 26.9.2
 
