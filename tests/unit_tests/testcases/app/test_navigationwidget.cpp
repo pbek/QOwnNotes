@@ -2,6 +2,7 @@
 
 #include <QTextBlock>
 #include <QTextDocument>
+#include <QTreeWidgetItem>
 #include <QtTest>
 
 #include "libraries/qmarkdowntextedit/markdownhighlighter.h"
@@ -95,4 +96,21 @@ void TestNavigationWidget::testParseDocumentIgnoresFrontmatterSetextLookalike() 
     QCOMPARE(nodes.count(), 1);
     QCOMPARE(nodes.at(0).text, QStringLiteral("Test 1 classic NBSP2"));
     QCOMPARE(nodes.at(0).elementType, int(MarkdownHighlighter::H1));
+}
+
+void TestNavigationWidget::testHeadingTooltipShowsTextAndLevel() {
+    QTextDocument document;
+    document.setPlainText(QStringLiteral("# Full **heading** text\n## Child heading\n"));
+
+    NavigationWidget widget;
+    widget.parse(&document, 0);
+
+    QTreeWidgetItem *heading = widget.topLevelItem(0);
+    QVERIFY(heading != nullptr);
+    QCOMPARE(heading->toolTip(0), QStringLiteral("Full heading text<br><small>Headline 1</small>"));
+
+    QTreeWidgetItem *childHeading = heading->child(0);
+    QVERIFY(childHeading != nullptr);
+    QCOMPARE(childHeading->toolTip(0),
+             QStringLiteral("Child heading<br><small>Headline 2</small>"));
 }

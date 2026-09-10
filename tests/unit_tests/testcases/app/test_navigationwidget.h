@@ -10,6 +10,7 @@ class TestNavigationWidget : public QObject {
     void testParseDocumentSupportsScriptedHeadings();
     void testParseDocumentIgnoresHeadingsInsideFencedCodeBlocks();
     void testParseDocumentIgnoresFrontmatterSetextLookalike();
+    void testHeadingTooltipShowsTextAndLevel();
 };
 
 #endif    // TESTNAVIGATIONWIDGET_H

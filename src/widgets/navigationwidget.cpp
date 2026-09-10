@@ -27,6 +27,8 @@
 #include <utility>
 
 namespace {
+constexpr int HeadingLevelRole = Qt::UserRole + 1;
+
 struct HeadingMatch {
     HeadingMatch() = default;
     HeadingMatch(QString text, int elementType) : text(std::move(text)), elementType(elementType) {}
@@ -494,9 +496,18 @@ void NavigationWidget::buildNavTree(const QVector<Node> &nodes) {
         auto *item = new QTreeWidgetItem();
 
         // Strip out Markdown syntax from the headline text
-        item->setText(0, stripMarkdown(node.text));
+        const QString headingText = stripMarkdown(node.text);
+        item->setText(0, headingText);
         item->setData(0, Qt::UserRole, pos);
-        item->setToolTip(0, tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
+        const int headingLevel = elementType - MarkdownHighlighter::H1 + 1;
+        item->setData(0, HeadingLevelRole, headingLevel);
+        QString headingLevelText = tr("headline %1").arg(headingLevel);
+        if (!headingLevelText.isEmpty()) {
+            headingLevelText[0] = headingLevelText.at(0).toUpper();
+        }
+        item->setToolTip(0,
+                         QStringLiteral("%1<br><small>%2</small>")
+                             .arg(headingText.toHtmlEscaped(), headingLevelText.toHtmlEscaped()));
         // Make the item editable to allow renaming headings
         item->setFlags(item->flags() | Qt::ItemIsEditable);
 
@@ -626,10 +637,9 @@ int NavigationWidget::getPreviousHeadingPosition(int currentPosition) const {
  */
 QString NavigationWidget::itemKey(const QTreeWidgetItem *item) {
     const QString text = item->text(0);
-    const QString tooltip = item->toolTip(0);
+    const int headingLevel = item->data(0, HeadingLevelRole).toInt();
 
-    // Extract the heading level from the tooltip (e.g. "headline 2")
-    return tooltip + QStringLiteral(":") + text;
+    return QString::number(headingLevel) + QStringLiteral(":") + text;
 }
 
 /**
