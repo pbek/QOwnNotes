@@ -6,8 +6,8 @@
   (for [#3709](https://github.com/pbek/QOwnNotes/issues/3709))
 - Fixed percent-encoded local Markdown links not showing the pointer cursor or opening
   with <kbd>Ctrl</kbd> + click in the note editor (for [#3695](https://github.com/pbek/QOwnNotes/issues/3695))
-- Fixed HTML `<sub>` and `<sup>` tags not rendering as subscript and superscript in
-  the QLiteHtml note preview (for [#3728](https://github.com/pbek/QOwnNotes/issues/3728))
+- Add HTML `<sub>` and `<sup>` tags rendering as subscript and superscript in the
+  QLiteHtml note preview (for [#3728](https://github.com/pbek/QOwnNotes/issues/3728))
 - The tooltips in the **Headings** panel now show the full heading text and the heading
   level (for [#3731](https://github.com/pbek/QOwnNotes/issues/3731))
 
