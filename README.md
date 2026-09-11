@@ -34,7 +34,7 @@ and [**ownCloud Notes**](https://github.com/owncloud/notes).
 
 You are able to **write down** your **thoughts** with **QOwnNotes** and
 **edit or search** for them later from your **mobile device**, like with
-[Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes)
+[QOwnNotes Android](https://github.com/qownnotes/qownnotes-android/releases), the default Android app,
 or the **Nextcloud / ownCloud web-service**.
 
 The notes are stored as **plain text markdown files** and are
@@ -58,6 +58,7 @@ app on your server.
 
 To access your ownCloud notes from your **mobile device** you may want to get one of these:
 
+- For Android (default): [QOwnNotes Android](https://github.com/qownnotes/qownnotes-android/releases)
 - For Android and OwnCloud: [MyOwnNotes](https://f-droid.org/app/org.aykit.MyOwnNotes)
 - For Android and Nextcloud: [Notes](https://f-droid.org/packages/it.niedermann.owncloud.notes)
 - For iOS: [CloudNotes](https://itunes.apple.com/app/cloudnotes-owncloud-notes/id813973264)
