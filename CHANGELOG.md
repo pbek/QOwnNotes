@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.9.4
+
+- Fixed a crash when editing wrapped Markdown list items with hanging indentation
+  (for [#3733](https://github.com/pbek/QOwnNotes/issues/3733))
+
 ## 26.9.3
 
 - Fixed excessive spacing between information items in tall **Script repository** dialogs

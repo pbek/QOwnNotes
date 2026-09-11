@@ -42,6 +42,30 @@ void TestQMarkdownTextEdit::testUpFromStartOfSecondLineMovesToFirstLine() {
     QCOMPARE(editor.textCursor().position(), 0);
 }
 
+void TestQMarkdownTextEdit::testEditingWrappedListDoesNotRestoreInvalidLayout() {
+    QMarkdownTextEdit editor;
+    editor.resize(140, 200);
+    editor.setPlainText(QStringLiteral(
+        "first paragraph\n- a list item long enough to wrap onto multiple visual lines"));
+    editor.show();
+    editor.setFocus();
+    QApplication::processEvents();
+
+    const QTextBlock listBlock = editor.document()->findBlockByNumber(1);
+    QVERIFY(listBlock.layout()->lineCount() > 1);
+
+    QTextCursor cursor = editor.textCursor();
+    cursor.setPosition(listBlock.position());
+    editor.setTextCursor(cursor);
+
+    QTest::keyClick(&editor, Qt::Key_Backspace);
+
+    QCOMPARE(editor.document()->blockCount(), 1);
+    QCOMPARE(editor.toPlainText(),
+             QStringLiteral(
+                 "first paragraph- a list item long enough to wrap onto multiple visual lines"));
+}
+
 void TestQMarkdownTextEdit::testToPlainTextPreservesNoBreakSpaces() {
     QMarkdownTextEdit editor;
     const QString text = QStringLiteral("U+00A0") + QChar(0x00A0) + QStringLiteral("NBSP\n") +
