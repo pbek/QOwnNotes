@@ -204,6 +204,7 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 - **This project has translations** - They can be found in the `src/translations/` directory as `.ts` files
 - **Comments** - Always write clear and concise comments for complex logic, especially when dealing with Qt-specific features, start comments with uppercase letters
 - **Changelog** - Update the changelog with each release, following the format in `CHANGELOG.md`
+- **Commit messages** - Follow the existing commit message style: short and descriptive, use a scope followed by a colon (e.g., `misc:`, `mainwindow:`, `tests:`, `ci:`), use imperative description after the colon (e.g., `fix`, `add`, `allow`, `update`, `refactor`), include issue number at the start when there is one (e.g., `#3568 mainwindow: allow dragging text file to import as note`). Keep commits focused so each commit represents one logical change.
 
 ## Minimum Requirements
 
