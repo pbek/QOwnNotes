@@ -35,6 +35,8 @@ HEADERS  += \
     $$APP_SRC_DIR/services/settingsservice.h \
     $$APP_SRC_DIR/services/cloudservice.h \
     $$APP_SRC_DIR/dialogs/masterdialog.h \
+    $$APP_SRC_DIR/dialogs/filedialog.h \
+    $$APP_SRC_DIR/dialogs/joplinimportdialog.h \
     $$APP_SRC_DIR/widgets/navigationwidget.h \
     $$APP_SRC_DIR/widgets/logwidget.h \
     $$APP_SRC_DIR/entities/notefolder.h \
@@ -96,6 +98,8 @@ SOURCES += \
     $$APP_SRC_DIR/services/settingsservice.cpp \
     $$APP_SRC_DIR/services/cloudservice.cpp \
     $$APP_SRC_DIR/dialogs/masterdialog.cpp \
+    $$APP_SRC_DIR/dialogs/filedialog.cpp \
+    $$APP_SRC_DIR/dialogs/joplinimportdialog.cpp \
     $$APP_SRC_DIR/widgets/navigationwidget.cpp \
     $$APP_SRC_DIR/widgets/logwidget.cpp \
     $$APP_SRC_DIR/entities/notefolder.cpp \
@@ -127,7 +131,8 @@ SOURCES += \
     $$APP_SRC_DIR/threads/scriptthread.cpp \
 
 FORMS += \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui \
+    $$APP_SRC_DIR/dialogs/joplinimportdialog.ui
 
 include($$APP_SRC_DIR/libraries/botan/botan.pri)
 

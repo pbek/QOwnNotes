@@ -14,8 +14,10 @@
 #include <QUuid>
 #include <QtTest>
 
+#include "dialogs/joplinimportdialog.h"
 #include "entities/bookmark.h"
 #include "entities/commandsnippet.h"
+#include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
 #include "entities/trashitem.h"
 #include "services/settingsservice.h"
@@ -110,6 +112,21 @@ void TestNotes::initTestCase() {
     settings.setValue(QStringLiteral("notesPath"), notesPath);
     wikiLinkSupportSetting = settings.value(QStringLiteral("Editor/wikiLinkSupport"));
     settings.setValue(QStringLiteral("Editor/wikiLinkSupport"), false);
+
+    // A current NoteFolder DB row is needed for NoteFolder::currentMediaPath()
+    // (used by Note::getInsertMediaMarkdown()) to resolve to notesPath/media
+    // instead of an empty/unfetched path. Setting "currentNoteFolderId"
+    // directly (rather than via NoteFolder::setAsCurrent()) avoids that
+    // method's CloudService::instance(true) reset, which constructs a
+    // QNetworkAccessManager -- unnecessary here, and prone to hanging this
+    // offscreen/no-network test environment.
+    NoteFolder testNoteFolder;
+    testNoteFolder.setName(QStringLiteral("Test Note Folder"));
+    testNoteFolder.setLocalPath(notesPath);
+    if (!testNoteFolder.store()) {
+        qFatal("Failed to store note folder in test setup");
+    }
+    settings.setValue(QStringLiteral("currentNoteFolderId"), testNoteFolder.getId());
 
     // create a note file
     noteName = QStringLiteral("MyTestNote");
@@ -1780,6 +1797,173 @@ void TestNotes::testCanWriteToNoteFileSucceedsWithoutReadPermission() {
 #else
     QSKIP("POSIX permission bits test only applies on unix-like platforms");
 #endif
+}
+
+/**
+ * Regression test for the Joplin-import resource-dedup follow-up to #3726:
+ * Note::getInsertMediaMarkdown()'s "does this file already exist" check used
+ * to probe for the source file's own extension, even though it may write the
+ * file under Qt's MIME-derived canonical suffix instead (".jpeg" source ->
+ * ".jpg" written, ".htm" -> ".html", etc.). That mismatch meant the check
+ * could never succeed once the suffix had been normalized even once, so
+ * every later reference to the same resource minted a fresh byte-identical
+ * "<name>-1.<ext>" duplicate instead of reusing the first copy.
+ */
+void TestNotes::testGetInsertMediaMarkdownReusesFileDespiteMimeExtensionMismatch() {
+    Note note = createTestNote(uniqueTestName(QStringLiteral("Mime Suffix Note")));
+
+    SettingsService settings;
+    const QVariant previousOverride =
+        settings.value(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"));
+    // Force "always reuse the existing file", matching what
+    // JoplinImportDialog::on_importButton_clicked() does for the whole
+    // import, so this test doesn't block on a real message box.
+    settings.setValue(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"),
+                      QMessageBox::Yes);
+
+    // ".jpeg" is a real image/jpeg file extension, but Qt's MIME database
+    // normalizes image/jpeg's canonical suffix to "jpg" -- exactly the
+    // mismatch this bug needs to trigger.
+    const QString sourceBaseName = uniqueTestName(QStringLiteral("resource"));
+    const QString sourcePath =
+        QDir::tempPath() + QDir::separator() + sourceBaseName + QStringLiteral(".jpeg");
+    QFile sourceSetupFile(sourcePath);
+    QVERIFY(sourceSetupFile.open(QIODevice::WriteOnly));
+    sourceSetupFile.write(QByteArrayLiteral("not real jpeg bytes, just needs to be non-empty"));
+    sourceSetupFile.close();
+
+    const QDir mediaDir(NoteFolder::currentMediaPath());
+
+    QFile firstReference(sourcePath);
+    const QString firstMarkdown = note.getInsertMediaMarkdown(&firstReference, false, false);
+    QVERIFY2(!firstMarkdown.isEmpty(), "first reference must produce a media link");
+    QCOMPARE(mediaDir.entryList({sourceBaseName + QStringLiteral("*")}, QDir::Files).count(), 1);
+
+    QFile secondReference(sourcePath);
+    const QString secondMarkdown = note.getInsertMediaMarkdown(&secondReference, false, false);
+    QVERIFY2(!secondMarkdown.isEmpty(), "second reference must still produce a media link");
+
+    QVERIFY2(mediaDir.entryList({sourceBaseName + QStringLiteral("*")}, QDir::Files).count() == 1,
+             "a second reference to the same resource must reuse the existing media file, not "
+             "mint a '-1' duplicate");
+    QCOMPARE(secondMarkdown, firstMarkdown);
+
+    QVERIFY(QFile::remove(sourcePath));
+    if (previousOverride.isValid()) {
+        settings.setValue(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"),
+                          previousOverride);
+    } else {
+        settings.remove(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"));
+    }
+}
+
+/**
+ * Regression test for the compounding orphan bug in
+ * JoplinImportDialog::handleImages(): when the exact same image tag appears
+ * more than once in a single note, the old code matched all occurrences
+ * against a one-time text snapshot but replaced them with
+ * `noteText.replace(imageTag, mediaMarkdown)`, which rewrites every
+ * occurrence of that literal tag text at once on the first match. Every
+ * later match still ran importImage() (writing another duplicate file, given
+ * the bug above) but its markdown was never actually inserted anywhere --
+ * silently orphaning the file.
+ *
+ * handleImages() and importImage() are private, so this test is declared a
+ * friend of JoplinImportDialog (see joplinimportdialog.h) to call them
+ * directly against a crafted note and resource, without needing to drive the
+ * whole interactive import dialog.
+ */
+void TestNotes::testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote() {
+    SettingsService settings;
+    const QVariant previousOverride =
+        settings.value(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"));
+    settings.setValue(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"),
+                      QMessageBox::Yes);
+
+    const QString resourceBaseName = uniqueTestName(QStringLiteral("resource"));
+    const QString resourceId = uniqueTestName(QStringLiteral("id")).remove(QLatin1Char('-'));
+
+    const QString dirPath =
+        QDir::tempPath() + QDir::separator() + uniqueTestName(QStringLiteral("joplin-export"));
+    QDir().mkpath(dirPath + QStringLiteral("/resources"));
+    const QString resourcePath =
+        dirPath + QStringLiteral("/resources/") + resourceId + QStringLiteral(".jpeg");
+    QFile resourceFile(resourcePath);
+    QVERIFY(resourceFile.open(QIODevice::WriteOnly));
+    resourceFile.write(QByteArrayLiteral("not real jpeg bytes, just needs to be non-empty"));
+    resourceFile.close();
+
+    Note note = createTestNote(uniqueTestName(QStringLiteral("Repeated Image Note")));
+    const QString imageTag = QStringLiteral("![%1](:/%2)").arg(resourceBaseName, resourceId);
+    note.setNoteText(
+        QStringLiteral("# Repeated Image\n\n%1\n\nSome text in between.\n\n%1\n").arg(imageTag));
+
+    JoplinImportDialog dialog;
+    dialog._imageData.insert(resourceId, QStringLiteral("mime: image/jpeg\n"));
+    dialog.handleImages(note, dirPath);
+
+    const QDir mediaDir(NoteFolder::currentMediaPath());
+    QVERIFY2(mediaDir.entryList({resourceId + QStringLiteral("*")}, QDir::Files).count() == 1,
+             "two identical references to the same resource in one note must not create a '-1' "
+             "duplicate file");
+
+    const QString resultText = note.getNoteText();
+    QVERIFY2(!resultText.contains(imageTag),
+             "both occurrences of the image tag must have been replaced with markdown");
+    const int linkCount = resultText.count(QStringLiteral("](../media/")) +
+                          resultText.count(QStringLiteral("](media/"));
+    QVERIFY2(linkCount == 2,
+             "both occurrences must produce a link -- the second one must not be silently "
+             "dropped/orphaned");
+
+    QVERIFY(QDir(dirPath).removeRecursively());
+    if (previousOverride.isValid()) {
+        settings.setValue(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"),
+                          previousOverride);
+    } else {
+        settings.remove(QStringLiteral("MessageBoxOverride/insert-media-use-existing-image"));
+    }
+}
+
+/**
+ * Regression test for a case an automated review flagged as a suspected
+ * infinite loop: when a matched resource is zero bytes,
+ * getInsertMediaMarkdown() returns an empty string, and importImage()'s
+ * resume offset is computed as matchStart + mediaMarkdown.length() ==
+ * matchStart. That looks like it could re-match the same spot forever, but
+ * it doesn't: noteText.replace(matchStart, matchLength, "") still removes
+ * the matched tag text, shifting whatever followed it back to matchStart, so
+ * the next search from matchStart finds new content, not the same tag.
+ * Verified empirically here (two zero-byte-resource tags in one note) rather
+ * than left as an unconfirmed concern; QtTest's 5-minute per-test timeout
+ * would fail this with "Test function timed out" if the loop were real.
+ */
+void TestNotes::testHandleImagesTerminatesOnZeroByteResource() {
+    const QString resourceId = uniqueTestName(QStringLiteral("id")).remove(QLatin1Char('-'));
+
+    const QString dirPath =
+        QDir::tempPath() + QDir::separator() + uniqueTestName(QStringLiteral("joplin-export-zero"));
+    QDir().mkpath(dirPath + QStringLiteral("/resources"));
+    const QString resourcePath =
+        dirPath + QStringLiteral("/resources/") + resourceId + QStringLiteral(".jpeg");
+    QFile resourceFile(resourcePath);
+    QVERIFY(resourceFile.open(QIODevice::WriteOnly));
+    resourceFile.close();    // zero bytes
+
+    Note note = createTestNote(uniqueTestName(QStringLiteral("Zero Byte Resource Note")));
+    const QString imageTag = QStringLiteral("![zero](:/%1)").arg(resourceId);
+    note.setNoteText(
+        QStringLiteral("# Zero Byte\n\n%1\n\nSome text in between.\n\n%1\nTail.\n").arg(imageTag));
+
+    JoplinImportDialog dialog;
+    dialog._imageData.insert(resourceId, QStringLiteral("mime: image/jpeg\n"));
+    dialog.handleImages(note, dirPath);
+
+    QVERIFY2(!note.getNoteText().contains(imageTag),
+             "both zero-byte-resource tags must have been removed, not left in an infinite loop");
+    QVERIFY(note.getNoteText().contains(QStringLiteral("Tail.")));
+
+    QVERIFY(QDir(dirPath).removeRecursively());
 }
 
 // QTEST_MAIN(TestNotes)

@@ -2,6 +2,9 @@
 
 ## 26.9.5
 
+- Fixed duplicate resource files being created during Joplin imports when a
+  resource's file extension differs from Qt's MIME-derived canonical suffix
+  (for [#3736](https://github.com/pbek/QOwnNotes/pull/3736))
 - Internal note links like `[QOwnNotes Android Done](QOwnNotes%20Android%20Done.md)` are now
   styled like external links, where the note file name is grayed out while the link text keeps
   the internal link color (for [#3735](https://github.com/pbek/QOwnNotes/issues/3735))

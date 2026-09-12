@@ -485,59 +485,79 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
     // bracket (`\]`) inside the alt text -- common in web-clipped or OCR'd
     // content -- doesn't prematurely end the capture and make the whole
     // pattern fail to match.
+    //
+    // Each block below re-searches noteText from a moving offset and
+    // replaces only the specific occurrence just matched (by position), then
+    // resumes searching from right after the replacement. Matching against a
+    // one-time globalMatch() snapshot while mutating noteText as we go (the
+    // previous approach) breaks whenever the exact same image tag text
+    // appears more than once in a note: QString::replace(needle, replacement)
+    // replaces every occurrence of the needle at once, so the first match's
+    // replacement also silently consumes every later match's tag text,
+    // leaving their imported files orphaned (imported, but never linked).
     {
-        auto i =
-            QRegularExpression(R"regex(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex")
-                .globalMatch(noteText);
+        const QRegularExpression re(
+            R"regex(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\s+"([^"]*)"\))regex");
+        int searchOffset = 0;
+        QRegularExpressionMatch match = re.match(noteText, searchOffset);
 
-        while (i.hasNext()) {
-            QRegularExpressionMatch match = i.next();
-            QString imageTag = match.captured(0);
+        while (match.hasMatch()) {
             QString imageName = match.captured(1);
             QString imageId = match.captured(2);
             QString hoverText = match.captured(3);
 
             // Use hover text as image name if no alt text is provided
             QString finalImageName = imageName.isEmpty() ? hoverText : imageName;
-            importImage(note, dirPath, noteText, imageTag, imageId, finalImageName);
+            searchOffset = importImage(note, dirPath, noteText, match.capturedStart(0),
+                                       match.capturedLength(0), imageId, finalImageName);
+            match = re.match(noteText, searchOffset);
         }
     }
 
     // Handle format: ![alt text](:/imageId)
     {
-        auto i =
-            QRegularExpression(R"(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\))").globalMatch(noteText);
+        const QRegularExpression re(R"(!\[((?:\\.|[^\]])*)\]\(:\/([\w\d]+)\))");
+        int searchOffset = 0;
+        QRegularExpressionMatch match = re.match(noteText, searchOffset);
 
-        while (i.hasNext()) {
-            QRegularExpressionMatch match = i.next();
-            QString imageTag = match.captured(0);
+        while (match.hasMatch()) {
             QString imageName = match.captured(1);
             QString imageId = match.captured(2);
 
-            importImage(note, dirPath, noteText, imageTag, imageId, imageName);
+            searchOffset = importImage(note, dirPath, noteText, match.capturedStart(0),
+                                       match.capturedLength(0), imageId, imageName);
+            match = re.match(noteText, searchOffset);
         }
     }
 
     // Handle format: <img src=":/imageId" ... />
     {
-        auto i = QRegularExpression(R"(<img\s+(?:[^>]*\s+)?src=\":\/([\w\d]+)\"[^>]*\/?>)")
-                     .globalMatch(noteText);
+        const QRegularExpression re(R"(<img\s+(?:[^>]*\s+)?src=\":\/([\w\d]+)\"[^>]*\/?>)");
+        int searchOffset = 0;
+        QRegularExpressionMatch match = re.match(noteText, searchOffset);
 
-        while (i.hasNext()) {
-            QRegularExpressionMatch match = i.next();
-            QString imageTag = match.captured(0);
+        while (match.hasMatch()) {
             QString imageId = match.captured(1);
 
-            importImage(note, dirPath, noteText, imageTag, imageId);
+            searchOffset = importImage(note, dirPath, noteText, match.capturedStart(0),
+                                       match.capturedLength(0), imageId);
+            match = re.match(noteText, searchOffset);
         }
     }
 
     note.setNoteText(noteText);
 }
 
-void JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString& noteText,
-                                     const QString& imageTag, const QString& imageId,
-                                     const QString& imageName) {
+/**
+ * Imports the image/resource for a single matched image tag and replaces
+ * just that occurrence (identified by position, not by tag text) with the
+ * generated Markdown.
+ *
+ * @return the offset handleImages() should resume searching from
+ */
+int JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString& noteText,
+                                    int matchStart, int matchLength, const QString& imageId,
+                                    const QString& imageName) {
     QString imageData = _imageData[imageId];
 
     // Joplin resources are classified as image vs. attachment purely by their
@@ -558,13 +578,17 @@ void JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString
     qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
 
     if (mediaFile == nullptr) {
-        return;
+        // Nothing to import -- leave the tag as-is and just skip past it, so
+        // the caller doesn't re-match this exact spot forever.
+        return matchStart + matchLength;
     }
 
     QString mediaMarkdown = note.getInsertMediaMarkdown(mediaFile, false, false, imageName);
 
     qDebug() << __func__ << " - 'mediaMarkdown': " << mediaMarkdown;
-    noteText.replace(imageTag, mediaMarkdown);
+    noteText.replace(matchStart, matchLength, mediaMarkdown);
+
+    return matchStart + mediaMarkdown.length();
 }
 
 /**
