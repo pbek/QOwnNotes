@@ -1883,8 +1883,8 @@ void TestNotes::testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote
     const QString resourceBaseName = uniqueTestName(QStringLiteral("resource"));
     const QString resourceId = uniqueTestName(QStringLiteral("id")).remove(QLatin1Char('-'));
 
-    const QString dirPath = QDir::tempPath() + QDir::separator() +
-                            uniqueTestName(QStringLiteral("joplin-export"));
+    const QString dirPath =
+        QDir::tempPath() + QDir::separator() + uniqueTestName(QStringLiteral("joplin-export"));
     QDir().mkpath(dirPath + QStringLiteral("/resources"));
     const QString resourcePath =
         dirPath + QStringLiteral("/resources/") + resourceId + QStringLiteral(".jpeg");
@@ -1894,25 +1894,23 @@ void TestNotes::testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote
     resourceFile.close();
 
     Note note = createTestNote(uniqueTestName(QStringLiteral("Repeated Image Note")));
-    const QString imageTag =
-        QStringLiteral("![%1](:/%2)").arg(resourceBaseName, resourceId);
-    note.setNoteText(QStringLiteral("# Repeated Image\n\n%1\n\nSome text in between.\n\n%1\n")
-                         .arg(imageTag));
+    const QString imageTag = QStringLiteral("![%1](:/%2)").arg(resourceBaseName, resourceId);
+    note.setNoteText(
+        QStringLiteral("# Repeated Image\n\n%1\n\nSome text in between.\n\n%1\n").arg(imageTag));
 
     JoplinImportDialog dialog;
     dialog._imageData.insert(resourceId, QStringLiteral("mime: image/jpeg\n"));
     dialog.handleImages(note, dirPath);
 
     const QDir mediaDir(NoteFolder::currentMediaPath());
-    QVERIFY2(
-        mediaDir.entryList({resourceId + QStringLiteral("*")}, QDir::Files).count() == 1,
-        "two identical references to the same resource in one note must not create a '-1' "
-        "duplicate file");
+    QVERIFY2(mediaDir.entryList({resourceId + QStringLiteral("*")}, QDir::Files).count() == 1,
+             "two identical references to the same resource in one note must not create a '-1' "
+             "duplicate file");
 
     const QString resultText = note.getNoteText();
     QVERIFY2(!resultText.contains(imageTag),
              "both occurrences of the image tag must have been replaced with markdown");
-    const int linkCount = resultText.count(QStringLiteral("](../media/"))  +
+    const int linkCount = resultText.count(QStringLiteral("](../media/")) +
                           resultText.count(QStringLiteral("](media/"));
     QVERIFY2(linkCount == 2,
              "both occurrences must produce a link -- the second one must not be silently "
@@ -1943,8 +1941,8 @@ void TestNotes::testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote
 void TestNotes::testHandleImagesTerminatesOnZeroByteResource() {
     const QString resourceId = uniqueTestName(QStringLiteral("id")).remove(QLatin1Char('-'));
 
-    const QString dirPath = QDir::tempPath() + QDir::separator() +
-                            uniqueTestName(QStringLiteral("joplin-export-zero"));
+    const QString dirPath =
+        QDir::tempPath() + QDir::separator() + uniqueTestName(QStringLiteral("joplin-export-zero"));
     QDir().mkpath(dirPath + QStringLiteral("/resources"));
     const QString resourcePath =
         dirPath + QStringLiteral("/resources/") + resourceId + QStringLiteral(".jpeg");
@@ -1954,8 +1952,8 @@ void TestNotes::testHandleImagesTerminatesOnZeroByteResource() {
 
     Note note = createTestNote(uniqueTestName(QStringLiteral("Zero Byte Resource Note")));
     const QString imageTag = QStringLiteral("![zero](:/%1)").arg(resourceId);
-    note.setNoteText(QStringLiteral("# Zero Byte\n\n%1\n\nSome text in between.\n\n%1\nTail.\n")
-                         .arg(imageTag));
+    note.setNoteText(
+        QStringLiteral("# Zero Byte\n\n%1\n\nSome text in between.\n\n%1\nTail.\n").arg(imageTag));
 
     JoplinImportDialog dialog;
     dialog._imageData.insert(resourceId, QStringLiteral("mime: image/jpeg\n"));

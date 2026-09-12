@@ -6335,10 +6335,9 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine, bool returnUr
     }
 
     // find a name for the new file
-    const QString newFileName = useExistingFile
-                                    ? candidateFileName
-                                    : Utils::Misc::findAvailableFileName(file->fileName(),
-                                                                         mediaDir.path(), suffix);
+    const QString newFileName = useExistingFile ? candidateFileName
+                                                : Utils::Misc::findAvailableFileName(
+                                                      file->fileName(), mediaDir.path(), suffix);
 
     const QString newFilePath = mediaDir.path() + QDir::separator() + newFileName;
 
