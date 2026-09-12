@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.9.5
+
+- Internal note links like `[QOwnNotes Android Done](QOwnNotes%20Android%20Done.md)` are now
+  styled like external links, where the note file name is grayed out while the link text keeps
+  the internal link color (for [#3735](https://github.com/pbek/QOwnNotes/issues/3735))
+
 ## 26.9.4
 
 - Fixed a crash when editing wrapped Markdown list items with hanging indentation

@@ -285,6 +285,8 @@ void QOwnNotesMarkdownHighlighter::highlightScriptingHook(const QString &text) {
 
 void QOwnNotesMarkdownHighlighter::updateCachedRegexes(const QString &newExt) {
     _regexTagStyleLink = QRegularExpression(R"(<([^\s`][^`]*?\.)" + newExt + R"()>)");
+    // The bracket link regex captures the whole link in group 0, the file name
+    // in group 1 (without optional URL fragment) and the fragment in group 2.
     _regexBracketLink = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.)" + newExt + R"(|.+?\.)" +
                                            newExt + R"()(#[^\)]+)?\)\B)");
 }
@@ -312,6 +314,10 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text)
     static const QRegularExpression regex(QStringLiteral(R"(note:\/\/[^\s\)>]+)"));
     QRegularExpressionMatch match = regex.match(text);
     bool noteExists = false;
+    // For bracket-style links we want to highlight only the file name/url part
+    // in a muted color while keeping the link text styled as a normal link.
+    int fileNameStart = -1;
+    int fileNameLength = 0;
 
     if (match.hasMatch()) {    // check legacy note:// links
         if (isMatchInCodeSpan(match)) {
@@ -365,6 +371,13 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text)
 
                 const Note note = _currentNote->fetchByRelativeFileName(fileName);
                 noteExists = note.isFetched();
+
+                // The file name resides between the opening "(" and the optional
+                // fragment / closing ")". Apply a muted color to it so that the
+                // link text stays prominent while the note file itself is grayed
+                // out, just like the URL of external links.
+                fileNameStart = match.capturedStart(1);
+                fileNameLength = match.capturedLength(1);
             } else {
                 // no note link was found
                 return;
@@ -374,7 +387,24 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString &text)
 
     auto state = noteExists ? HighlighterState::LinkInternal : HighlighterState::BrokenLink;
 
-    setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
+    // For bracket-style note links we keep the link text styled as a normal
+    // link and only fade out the note file name, matching how external links
+    // are rendered.
+    if (fileNameStart >= 0 && fileNameLength > 0) {
+        const QTextCharFormat maskedFormat = currentMaskedFormat();
+        QTextCharFormat fileFormat = _formats[HighlighterState::MaskedSyntax];
+        if (fileFormat.fontPointSize() <= 0) {
+            fileFormat = maskedFormat;
+        }
+        if (_formats[state].fontPointSize() > 0) {
+            fileFormat.setFontPointSize(_formats[state].fontPointSize());
+        }
+
+        setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
+        setFormat(fileNameStart, fileNameLength, fileFormat);
+    } else {
+        setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
+    }
 }
 
 void QOwnNotesMarkdownHighlighter::highlightWikiLinks(const QString &text) {
