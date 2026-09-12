@@ -7,6 +7,21 @@ BuildSystemsDir="$ProjectDir/build-systems"
 BitwardenItem="QOwnNotes release secrets"
 BitwardenItemId="d4e20a19-7e22-49a4-a6aa-fa169ff68d19"
 
+ShellMode=false
+
+while test $# -gt 0; do
+  case "$1" in
+  --shell)
+    ShellMode=true
+    ;;
+  *)
+    echo "Unknown option: $1" >&2
+    exit 1
+    ;;
+  esac
+  shift
+done
+
 for command in bw docker jq; do
   if ! command -v "$command" >/dev/null 2>&1; then
     echo "Required command '$command' was not found." >&2
@@ -71,5 +86,17 @@ done
 
 chmod 600 "$SecretsDir/github_rsa" "$SecretsDir/aur_rsa" "$SecretsDir/private.pgp"
 
+# Verify the downloaded GPG key contains a secret key for the signing identity
+if ! gpg --list-packets "$SecretsDir/private.pgp" 2>/dev/null | grep -q "secret.key.packet"; then
+  echo "Downloaded 'private.pgp' from Bitwarden does not contain a GPG secret key." >&2
+  echo "Re-export it with: gpg --export-secret-keys patrizio@bekerle.com" >&2
+  exit 1
+fi
+
+ComposeCommand=("/QOwnNotes/build-systems/build-all.sh" "--docker")
+if [ "$ShellMode" = true ]; then
+  ComposeCommand+=("--shell")
+fi
+
 echo "Running docker-compose build process..."
-QON_SECRETS_DIR="$SecretsDir" docker compose --project-directory "$BuildSystemsDir" run --rm releaser /QOwnNotes/build-systems/build-all.sh --docker
+QON_SECRETS_DIR="$SecretsDir" docker compose --project-directory "$BuildSystemsDir" run --rm releaser "${ComposeCommand[@]}"

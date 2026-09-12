@@ -4,12 +4,42 @@
 #
 
 # This is used inside the release docker container
-if [ "$1" = "--docker" ]; then
+DockerMode=false
+ShellMode=false
+
+while test $# -gt 0; do
+  case "$1" in
+  --docker)
+    DockerMode=true
+    ;;
+  --shell)
+    ShellMode=true
+    ;;
+  *)
+    echo "Unknown option: $1" >&2
+    exit 1
+    ;;
+  esac
+  shift
+done
+
+if [ "$DockerMode" = true ]; then
   echo "Importing PGP key..."
   gpg --import ~/private.pgp
+  if ! gpg --list-secret-keys patrizio@bekerle.com >/dev/null 2>&1; then
+    echo "The imported PGP key does not contain a secret key for patrizio@bekerle.com." >&2
+    echo "Ensure the Bitwarden attachment 'private.pgp' was exported with 'gpg --export-secret-keys'." >&2
+    exit 1
+  fi
   echo "Adding AUR ssh key..."
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/aur_rsa
+fi
+
+if [ "$ShellMode" = true ]; then
+  echo "Opening shell..."
+  echo "You can now run e.g. /QOwnNotes/ubuntu-launchpad/build-for-launchpad-qt6.sh"
+  exec bash
 fi
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

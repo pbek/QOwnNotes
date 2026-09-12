@@ -45,6 +45,19 @@ for file in "${Files[@]}"; do
   fi
 done
 
+# Verify the GPG key contains a secret key and the signing identity
+if ! gpg --list-packets "$SecretsDir/private.pgp" 2>/dev/null | grep -q "secret.key.packet"; then
+  echo "Required file '$SecretsDir/private.pgp' must contain a GPG secret key." >&2
+  echo "Export it with: gpg --export-secret-keys patrizio@bekerle.com > $SecretsDir/private.pgp" >&2
+  exit 1
+fi
+
+# Verify the secret key has the expected signing identity
+if ! gpg --dry-run --import "$SecretsDir/private.pgp" 2>/dev/null; then
+  echo "Required file '$SecretsDir/private.pgp' is not a valid GPG key." >&2
+  exit 1
+fi
+
 if ! Items=$(bw list items --search "$BitwardenItem"); then
   echo "Unable to read Bitwarden items. No changes were made by this invocation." >&2
   exit 1

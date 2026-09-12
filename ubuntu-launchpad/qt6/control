@@ -6,7 +6,7 @@ Build-Depends:
  cmake (>= 3.16),
  debhelper-compat (= 13),
  libsecret-1-dev,
- pkg-config,
+ pkgconf,
  qt6-base-dev,
  qt6-declarative-dev,
  qt6-l10n-tools,

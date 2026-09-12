@@ -31,6 +31,20 @@ SIGNING_EMAIL=patrizio@bekerle.com
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
 
+# This is used inside the release docker container
+if [ "$1" = "--docker" ]; then
+  echo "Importing PGP key..."
+  gpg --import ~/private.pgp
+  if ! gpg --list-secret-keys "$SIGNING_EMAIL" >/dev/null 2>&1; then
+    echo "The imported PGP key does not contain a secret key for $SIGNING_EMAIL." >&2
+    echo "Ensure the Bitwarden attachment 'private.pgp' was exported with 'gpg --export-secret-keys'." >&2
+    exit 1
+  fi
+  echo "Adding AUR ssh key..."
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/aur_rsa
+fi
+
 while test $# -gt 0; do
   case "$1" in
   --no-upload)
