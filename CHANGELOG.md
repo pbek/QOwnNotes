@@ -4,6 +4,13 @@
 
 - Fixed a crash when editing wrapped Markdown list items with hanging indentation
   (for [#3733](https://github.com/pbek/QOwnNotes/issues/3733))
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.4.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.4.0)
+  - Note-search filter for title-only and title-and-content search modes
+  - Note-list sorting by latest modification or by title in ascending or descending order
+  - Account management from the profile menu with shared folder and extension settings
+  - Swipe actions to toggle favorites and move notes to trash, configurable in Settings
+  - Reorganized note-list toolbar with compact search and overflow menu
 
 ## 26.9.3
 
