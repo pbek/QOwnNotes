@@ -112,6 +112,10 @@ void TestNotes::initTestCase() {
     settings.setValue(QStringLiteral("notesPath"), notesPath);
     wikiLinkSupportSetting = settings.value(QStringLiteral("Editor/wikiLinkSupport"));
     settings.setValue(QStringLiteral("Editor/wikiLinkSupport"), false);
+    ensureEmptyLastLineSetting = settings.value(QStringLiteral("Editor/ensureEmptyLastLine"));
+    settings.setValue(QStringLiteral("Editor/ensureEmptyLastLine"), false);
+    useUNIXNewlineSetting = settings.value(QStringLiteral("useUNIXNewline"));
+    settings.setValue(QStringLiteral("useUNIXNewline"), true);
 
     // A current NoteFolder DB row is needed for NoteFolder::currentMediaPath()
     // (used by Note::getInsertMediaMarkdown()) to resolve to notesPath/media
@@ -156,6 +160,16 @@ void TestNotes::cleanupTestCase() {
         settings.setValue(QStringLiteral("Editor/wikiLinkSupport"), wikiLinkSupportSetting);
     } else {
         settings.remove(QStringLiteral("Editor/wikiLinkSupport"));
+    }
+    if (ensureEmptyLastLineSetting.isValid()) {
+        settings.setValue(QStringLiteral("Editor/ensureEmptyLastLine"), ensureEmptyLastLineSetting);
+    } else {
+        settings.remove(QStringLiteral("Editor/ensureEmptyLastLine"));
+    }
+    if (useUNIXNewlineSetting.isValid()) {
+        settings.setValue(QStringLiteral("useUNIXNewline"), useUNIXNewlineSetting);
+    } else {
+        settings.remove(QStringLiteral("useUNIXNewline"));
     }
 
     QDir dir(notesPath);
@@ -213,6 +227,42 @@ void TestNotes::testNoteDecryptionFail() {
     QVERIFY(note.getId() == 2);
     QVERIFY(note.fetchDecryptedNoteText() !=
             QStringLiteral("MyTestNote\n============\n\nSome text"));
+}
+
+void TestNotes::testFinalNewlineOnSave_data() {
+    QTest::addColumn<bool>("enabled");
+    QTest::addColumn<QString>("body");
+    QTest::addColumn<QString>("expectedBody");
+
+    QTest::newRow("disabled") << false << QStringLiteral("Body without newline")
+                              << QStringLiteral("Body without newline");
+    QTest::newRow("enabled") << true << QStringLiteral("Body without newline")
+                             << QStringLiteral("Body without newline\n");
+    QTest::newRow("already-terminated")
+        << true << QStringLiteral("Body with newline\n") << QStringLiteral("Body with newline\n");
+}
+
+void TestNotes::testFinalNewlineOnSave() {
+    QFETCH(bool, enabled);
+    QFETCH(QString, body);
+    QFETCH(QString, expectedBody);
+
+    SettingsService().setValue(QStringLiteral("Editor/ensureEmptyLastLine"), enabled);
+
+    const QString title = uniqueTestName(QStringLiteral("Final Newline"));
+    Note note;
+    note.setNoteText(QStringLiteral("# %1\n\n%2").arg(title, body));
+    QVERIFY(note.handleNoteTextFileName());
+    QVERIFY(note.store());
+    QVERIFY(note.storeNoteTextFileToDisk());
+
+    const QString expectedText = QStringLiteral("# %1\n\n%2").arg(title, expectedBody);
+    QCOMPARE(note.getNoteText(), expectedText);
+    QCOMPARE(Note::fetch(note.getId()).getNoteText(), expectedText);
+
+    QFile file(note.fullNoteFilePath());
+    QVERIFY(file.open(QIODevice::ReadOnly));
+    QCOMPARE(QString::fromUtf8(file.readAll()), expectedText);
 }
 
 void TestNotes::testNoteToMarkdownHtml() {

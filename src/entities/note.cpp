@@ -2675,6 +2675,12 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         currentNoteTextChanged = handleNoteMoving(oldNote);
     }
 
+    const bool ensureFinalNewline =
+        settings.value(QStringLiteral("Editor/ensureEmptyLastLine"), false).toBool();
+    if (ensureFinalNewline) {
+        ensureEmptyLastLine();
+    }
+
     // if we find a decrypted text to encrypt, then we attempt to encrypt it
     if (!_decryptedNoteText.isEmpty()) {
         const QString decryptedNoteText = _decryptedNoteText;
@@ -2695,6 +2701,11 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         }
 
         _decryptedNoteText = QLatin1String("");
+    }
+
+    // Encrypted notes also need a newline after their encrypted envelope.
+    if (ensureFinalNewline) {
+        ensureEmptyLastLine(_noteText);
     }
 
     // transform all types of newline to \n
@@ -3486,18 +3497,16 @@ bool Note::stripTrailingSpaces(int skipLine) {
  * @return
  */
 bool Note::ensureEmptyLastLine() {
-    if (_noteText.isEmpty() || _noteText.endsWith(QChar('\n')) || _noteText.endsWith(QChar('\r'))) {
+    QString &text = _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
+    return ensureEmptyLastLine(text);
+}
+
+bool Note::ensureEmptyLastLine(QString &text) {
+    if (text.isEmpty() || text.endsWith(QChar('\n')) || text.endsWith(QChar('\r'))) {
         return false;
     }
 
-    _noteText.append(detectNewlineCharacters());
-
-    // Clear the checksum before storing to skip the external modification check
-    // since we're making an internal modification (adding a final newline).
-    // The checksum will be recalculated and stored after writing to disk.
-    _fileChecksum.clear();
-
-    store();
+    text.append(QChar('\n'));
 
     return true;
 }

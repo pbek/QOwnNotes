@@ -4581,7 +4581,12 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
 void MainWindow::noteTextEditTextWasUpdated() {
     if (!ui->encryptedNoteTextEdit->isHidden()) {
-        if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText(), false)) {
+        QString text = ui->encryptedNoteTextEdit->toPlainText();
+        if (SettingsService().value(QStringLiteral("Editor/ensureEmptyLastLine"), false).toBool()) {
+            Note::ensureEmptyLastLine(text);
+        }
+
+        if (currentNote.storeNewDecryptedText(std::move(text), false)) {
             currentNoteLastEdited = QDateTime::currentDateTime();
             _noteViewNeedsUpdate = true;
 
@@ -4598,6 +4603,9 @@ void MainWindow::noteTextEditTextWasUpdated() {
     // managed to sneak some "special" line feeds in
     const QString noteTextFromDisk = Utils::Misc::transformLineFeeds(note.getNoteText());
     QString text = Utils::Misc::transformLineFeeds(ui->noteTextEdit->toPlainText());
+    if (SettingsService().value(QStringLiteral("Editor/ensureEmptyLastLine"), false).toBool()) {
+        Note::ensureEmptyLastLine(text);
+    }
 
     // store the note to the database if the note text differs from the one
     // on the disk or the note was already modified but not stored to disk

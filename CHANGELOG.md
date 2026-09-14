@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.9.6
+
+- Notes can now optionally be saved with a final newline by enabling the existing
+  **Ensure an empty last line in the note text** editor setting (for
+  [#3734](https://github.com/pbek/QOwnNotes/issues/3734))
+
 ## 26.9.5
 
 - Fixed duplicate resource files being created during Joplin imports when a

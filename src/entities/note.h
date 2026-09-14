@@ -441,6 +441,8 @@ class Note {
 
     bool ensureEmptyLastLine();
 
+    static bool ensureEmptyLastLine(QString &text);
+
     QString detectNewlineCharacters();
 
     static bool isNameSearch(const QString &searchTerm);

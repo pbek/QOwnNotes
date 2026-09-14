@@ -19,6 +19,8 @@ class TestNotes : public QObject {
     QString noteName;
     QString noteFileName;
     QVariant wikiLinkSupportSetting;
+    QVariant ensureEmptyLastLineSetting;
+    QVariant useUNIXNewlineSetting;
 
     QString uniqueTestName(const QString &baseName) const;
     Note createTestNote(const QString &name, int noteSubFolderId = 0,
@@ -32,6 +34,8 @@ class TestNotes : public QObject {
     void testNoteEncryption();
     void testNoteDecryption();
     void testNoteDecryptionFail();
+    void testFinalNewlineOnSave_data();
+    void testFinalNewlineOnSave();
     void testNoteToMarkdownHtml();
     void testFootnotesToMarkdownHtml();
     void testMalformedUnderlineToMarkdownHtml();
