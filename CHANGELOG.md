@@ -2,6 +2,9 @@
 
 ## 26.9.6
 
+- Fixed external links with a URL fragment not opening and bare URLs with
+  characters like `@` in paths or `/` and `=` in fragments not being recognized
+  in the note preview (for [#3737](https://github.com/pbek/QOwnNotes/issues/3737))
 - Notes can now optionally be saved with a final newline by enabling the existing
   **Ensure an empty last line in the note text** editor setting (for
   [#3734](https://github.com/pbek/QOwnNotes/issues/3734))

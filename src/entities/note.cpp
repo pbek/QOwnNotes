@@ -4310,6 +4310,15 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
         str.replace(bareNoteUrlRE, QStringLiteral("<\\1>"));
     }
 
+    // MD4C rejects some valid characters in permissive URL autolinks, such as
+    // '@' in paths and '=' or '/' in fragments. Wrap bare HTTP URLs explicitly
+    // without touching existing Markdown or HTML links.
+    {
+        static const QRegularExpression bareHttpUrlRE(
+            QStringLiteral(R"((?<![<\["'])(?<!\]\()(https?:\/\/[^\s<>"')\]]*[\w~\/%#=+\-]))"));
+        str.replace(bareHttpUrlRE, QStringLiteral("<\\1>"));
+    }
+
     // Restore masked code blocks after link transformations are done
     unmaskCodeBlocks(str, maskedBlocks);
 

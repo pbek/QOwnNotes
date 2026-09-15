@@ -37,6 +37,7 @@ class TestNotes : public QObject {
     void testFinalNewlineOnSave_data();
     void testFinalNewlineOnSave();
     void testNoteToMarkdownHtml();
+    void testBareUrlsToMarkdownHtml();
     void testFootnotesToMarkdownHtml();
     void testMalformedUnderlineToMarkdownHtml();
     void testMarkdownImageDimensionsToHtml();
@@ -69,6 +70,7 @@ class TestNotes : public QObject {
 
     /* File URL handling tests (issue #3483) */
     void testPercentEncodedFileUrlUsesDecodedLocalPath();
+    void testInternalFragmentUrlDetection();
 
     /* Wiki-link tests (issue #3512) */
     void testWikiLinkSupportDisabledLeavesPlainText();

@@ -276,6 +276,25 @@ void TestNotes::testNoteToMarkdownHtml() {
     QVERIFY(html.contains(expectedBody));
 }
 
+void TestNotes::testBareUrlsToMarkdownHtml() {
+    const QString youtubeUrl = QStringLiteral("https://www.youtube.com/@ecbeuro/videos");
+    const QString mapUrl = QStringLiteral("https://www.openstreetmap.org/#map=11/48.7704/2.2079");
+    Note note;
+    note.setNoteText(youtubeUrl + QStringLiteral(".\n\n<") + youtubeUrl +
+                     QStringLiteral(">\n\n[Videos](") + youtubeUrl + QStringLiteral(")\n\n`") +
+                     youtubeUrl + QStringLiteral("`\n\n") + mapUrl);
+
+    const QString html = note.toMarkdownHtml(QString(), 980, true);
+    const QString youtubeAnchor = QStringLiteral("<a href=\"") + youtubeUrl + QStringLiteral("\">");
+    const QString mapAnchor = QStringLiteral("<a href=\"") + mapUrl + QStringLiteral("\">");
+
+    QCOMPARE(html.count(youtubeAnchor), 3);
+    QCOMPARE(html.count(mapAnchor), 1);
+    QVERIFY2(html.contains(QStringLiteral("<code>") + youtubeUrl + QStringLiteral("</code>")),
+             qPrintable(html));
+    QVERIFY2(!html.contains(youtubeUrl + QStringLiteral(".</a>")), qPrintable(html));
+}
+
 void TestNotes::testFootnotesToMarkdownHtml() {
     Note note;
     note.setNoteText(QStringLiteral("Text[^source]\n\n[^source]: Explanation\n\n`Code[^source]`"));
@@ -1087,6 +1106,15 @@ void TestNotes::testPercentEncodedFileUrlUsesDecodedLocalPath() {
     const QString encodedFileUrl = QUrl::fromLocalFile(filePath).toString();
     const QUrl fileUrl = UrlHandler::localFileUrlForDesktopOpen(encodedFileUrl);
     QCOMPARE(fileUrl.toLocalFile(), filePath);
+}
+
+void TestNotes::testInternalFragmentUrlDetection() {
+    QVERIFY(UrlHandler::isInternalFragmentUrl(QUrl(QStringLiteral("#footnote"))));
+    QVERIFY(UrlHandler::isInternalFragmentUrl(QUrl(QStringLiteral("/#footnote"))));
+    QVERIFY(!UrlHandler::isInternalFragmentUrl(
+        QUrl(QStringLiteral("https://www.openstreetmap.org/#map=11/48.7704/2.2079"))));
+    QVERIFY(!UrlHandler::isInternalFragmentUrl(QUrl(QStringLiteral("file:///#footnote"))));
+    QVERIFY(!UrlHandler::isInternalFragmentUrl(QUrl(QStringLiteral("https://example.com/"))));
 }
 
 void TestNotes::testWikiLinkSupportDisabledLeavesPlainText() {

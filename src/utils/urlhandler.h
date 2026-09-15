@@ -18,6 +18,10 @@ class UrlHandler {
     UrlHandler();
 
     static bool isUrlSchemeLocal(const QUrl& url);
+    static bool isInternalFragmentUrl(const QUrl& url) {
+        return url.isRelative() && !url.fragment().isEmpty() &&
+               (url.path().isEmpty() || url.path() == QStringLiteral("/"));
+    }
     static QUrl localFileUrlForDesktopOpen(const QString& urlString) {
         const QUrl url(urlString);
         const QString localFilePath = url.toLocalFile();

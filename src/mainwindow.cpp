@@ -4781,7 +4781,7 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
 void MainWindow::onNotePreviewAnchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
 
-    if (!url.fragment().isEmpty() && (url.path().isEmpty() || url.path() == QStringLiteral("/"))) {
+    if (UrlHandler::isInternalFragmentUrl(url)) {
 #ifdef USE_QLITEHTML
         _notePreviewWidget->scrollToAnchor(url.fragment());
 #else
