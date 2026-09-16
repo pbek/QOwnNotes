@@ -76,6 +76,22 @@ void TestQMarkdownTextEdit::testToPlainTextPreservesNoBreakSpaces() {
     QCOMPARE(editor.toPlainText(), text);
 }
 
+void TestQMarkdownTextEdit::testConsecutiveTypingUsesSingleUndoStep() {
+    QTextDocument document;
+    QTextCursor cursor(&document);
+    const QString text = QStringLiteral("A sentence with several words.");
+
+    for (const QChar character : text) {
+        cursor.insertText(character);
+    }
+
+    QCOMPARE(document.availableUndoSteps(), 1);
+    document.undo();
+    QVERIFY(document.toPlainText().isEmpty());
+    document.redo();
+    QCOMPARE(document.toPlainText(), text);
+}
+
 void TestQMarkdownTextEdit::testRCodeBlockHighlighting() {
     QMarkdownTextEdit editor;
     editor.setPlainText(QStringLiteral("```r\nif (is.numeric(value)) print(TRUE) # result\n```"));

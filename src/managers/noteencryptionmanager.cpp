@@ -233,22 +233,6 @@ void NoteEncryptionManager::editEncryptedNote() {
  * Puts the encrypted text back to the note text edit
  */
 void NoteEncryptionManager::on_encryptedNoteTextEdit_textChanged() {
-    // this also triggers when formatting is applied / syntax highlighting
-    // changes!
-    //    if
-    //    (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText()))
-    //    {
-    //        handleNoteTextChanged();
-    //    }
-}
-
-void NoteEncryptionManager::on_encryptedNoteTextEdit_modificationChanged(bool arg1) {
-    if (!arg1) {
-        return;
-    }
-
-    _ui->encryptedNoteTextEdit->document()->setModified(false);
-
     if (_mainWindow->currentNote.storeNewDecryptedText(_ui->encryptedNoteTextEdit->toPlainText(),
                                                        false)) {
         _mainWindow->currentNoteLastEdited = QDateTime::currentDateTime();

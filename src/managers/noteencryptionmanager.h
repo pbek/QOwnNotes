@@ -39,7 +39,6 @@ class NoteEncryptionManager : public QObject {
     void on_actionDecrypt_note_triggered();
     void on_actionEdit_encrypted_note_triggered();
     void on_encryptedNoteTextEdit_textChanged();
-    void on_encryptedNoteTextEdit_modificationChanged(bool arg1);
     void on_action_Export_note_as_markdown_triggered();
 
    private:

@@ -784,10 +784,6 @@ class MainWindow : public QMainWindow {
     void on_actionCheck_grammar_with_Harper_toggled(bool checked);
 #endif
 
-    void on_noteTextEdit_modificationChanged(bool arg1);
-
-    void on_encryptedNoteTextEdit_modificationChanged(bool arg1);
-
     void on_actionEditorWidthCustom_triggered();
 
     void on_actionShow_Hide_application_triggered();

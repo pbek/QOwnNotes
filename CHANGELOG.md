@@ -2,6 +2,8 @@
 
 ## 26.9.6
 
+- Undo in the note editor now groups consecutive typing instead of undoing one
+  character at a time (for [#3729](https://github.com/pbek/QOwnNotes/issues/3729))
 - Fixed external links with a URL fragment not opening and bare URLs with
   characters like `@` in paths or `/` and `=` in fragments not being recognized
   in the note preview (for [#3737](https://github.com/pbek/QOwnNotes/issues/3737))

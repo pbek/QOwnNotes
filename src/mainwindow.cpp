@@ -4566,9 +4566,7 @@ void MainWindow::openTodoDialog(const QString &taskUid) {
  * Triggers if the text in the note text edit was modified
  */
 void MainWindow::on_noteTextEdit_textChanged() {
-    // this also triggers when formatting is applied / syntax highlighting
-    // changes!
-    //    noteTextEditTextWasUpdated();
+    noteTextEditTextWasUpdated();
 
     // Override the _noteViewUpdateTimer with a debounce time
     const int debounceTime = Utils::Misc::getPreviewRefreshDebounceTime();
@@ -8270,19 +8268,6 @@ void MainWindow::on_actionCheck_grammar_with_Harper_toggled(bool checked) {
     Q_EMIT settingsChanged();
 }
 #endif
-
-void MainWindow::on_noteTextEdit_modificationChanged(bool arg1) {
-    if (!arg1) {
-        return;
-    }
-
-    ui->noteTextEdit->document()->setModified(false);
-    noteTextEditTextWasUpdated();
-}
-
-void MainWindow::on_encryptedNoteTextEdit_modificationChanged(bool arg1) {
-    _noteEncryptionManager->on_encryptedNoteTextEdit_modificationChanged(arg1);
-}
 
 void MainWindow::on_actionEditorWidthCustom_triggered() {
     _distractionFreeManager->on_actionEditorWidthCustom_triggered();

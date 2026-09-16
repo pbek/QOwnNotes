@@ -7,6 +7,7 @@ class TestQMarkdownTextEdit : public QObject {
     Q_OBJECT
 
    private Q_SLOTS:
+    void testConsecutiveTypingUsesSingleUndoStep();
     void testUpFromStartOfSecondLineMovesToFirstLine();
     void testEditingWrappedListDoesNotRestoreInvalidLayout();
     void testToPlainTextPreservesNoBreakSpaces();
