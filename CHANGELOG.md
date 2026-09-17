@@ -2,6 +2,8 @@
 
 ## 26.9.6
 
+- Added an optional **Document overview** panel with a minimap of the current note,
+  viewport indication, and quick mouse navigation (for [#3730](https://github.com/pbek/QOwnNotes/issues/3730))
 - Undo in the note editor now groups consecutive typing instead of undoing one
   character at a time (for [#3729](https://github.com/pbek/QOwnNotes/issues/3729))
 - Fixed external links with a URL fragment not opening and bare URLs with

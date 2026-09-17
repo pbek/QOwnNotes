@@ -481,6 +481,8 @@ set(SOURCE_FILES
     threads/scriptthread.h
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
+    widgets/documentoverviewwidget.cpp
+    widgets/documentoverviewwidget.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
     widgets/filenavigationwidget.cpp

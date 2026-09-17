@@ -49,6 +49,7 @@
 #include <utils/listutils.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
+#include <widgets/documentoverviewwidget.h>
 #include <widgets/logwidget.h>
 #include <widgets/notefilepathlabel.h>
 #include <widgets/notesubfoldertree.h>
@@ -1141,6 +1142,14 @@ void MainWindow::initDockWidgets() {
     // Prevent that widget can't be seen when enabled
     _noteGraphicsViewDockWidget->setMinimumHeight(20);
     setupNoteRelationScene();
+
+    _documentOverviewDockWidget = new QDockWidget(tr("Document overview"), this);
+    _documentOverviewDockWidget->setObjectName(QStringLiteral("documentOverviewDockWidget"));
+    _documentOverviewDockWidget->setWidget(new DocumentOverviewWidget(
+        ui->noteTextEdit, ui->encryptedNoteTextEdit, _documentOverviewDockWidget));
+    _documentOverviewDockTitleBarWidget = _documentOverviewDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _documentOverviewDockWidget, Qt::Horizontal);
+    _documentOverviewDockWidget->hide();
 
     _logDockWidget = new QDockWidget(tr("Log"), this);
     _logDockWidget->setObjectName(QStringLiteral("logDockWidget"));
@@ -6549,6 +6558,7 @@ void MainWindow::restoreDockWidgetTitleBars() {
         _notePreviewDockWidget->setTitleBarWidget(_notePreviewDockTitleBarWidget);
     }
     _noteGraphicsViewDockWidget->setTitleBarWidget(_noteGraphicsViewDockTitleBarWidget);
+    _documentOverviewDockWidget->setTitleBarWidget(_documentOverviewDockTitleBarWidget);
     _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
     _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
 

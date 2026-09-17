@@ -997,6 +997,7 @@ class MainWindow : public QMainWindow {
     QDockWidget *_logDockWidget;
     QDockWidget *_scriptingDockWidget;
     QDockWidget *_noteGraphicsViewDockWidget;
+    QDockWidget *_documentOverviewDockWidget;
     class LogWidget *_logWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
@@ -1010,6 +1011,7 @@ class MainWindow : public QMainWindow {
     QWidget *_logDockTitleBarWidget;
     QWidget *_scriptingDockTitleBarWidget;
     QWidget *_noteGraphicsViewDockTitleBarWidget;
+    QWidget *_documentOverviewDockTitleBarWidget;
     NoteRelationScene *_noteRelationScene;
     QFrame *_noteFolderDockWidgetFrame;
     bool _useNoteFolderButtons;

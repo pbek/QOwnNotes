@@ -186,6 +186,7 @@ SOURCES += main.cpp\
     services/markdownlspignoredrules.cpp \
     threads/scriptthread.cpp \
     widgets/graphicsview.cpp \
+    widgets/documentoverviewwidget.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
     services/metricsservice.cpp \
@@ -356,6 +357,7 @@ HEADERS  += mainwindow.h \
     services/databaseservice.h \
     release.h \
     widgets/graphicsview.h \
+    widgets/documentoverviewwidget.h \
     widgets/qownnotesmarkdowntextedit.h \
     dialogs/passworddialog.h \
     services/metricsservice.h \
