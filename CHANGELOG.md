@@ -21,6 +21,11 @@
   - Relative `attachments/` and `media/` links in note previews can now be opened in installed
     Android apps
   - Find in note now also searches the Markdown source in the editor and highlights every match
+- A new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.7.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.7.0), adds
+  - Background synchronization with network constraints and retry backoff
+  - Conflict review, merging, and recovery for notes changed locally and remotely
+  - Durable synchronization diagnostics and more responsive editing for large notes
 
 ## 26.9.5
 
