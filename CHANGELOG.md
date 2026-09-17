@@ -6,18 +6,31 @@
   viewport indication, and quick mouse navigation (for [#3730](https://github.com/pbek/QOwnNotes/issues/3730))
 - Improved typing performance in large notes when using full-sync Markdown language
   servers such as Rumdl (for [#3739](https://github.com/pbek/QOwnNotes/issues/3739))
-- There were two new releases of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
-  [v0.5.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.5.0) and
-  [v0.6.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.6.0)
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.5.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.5.0)
   - The remote trash dialog can now be searched by note name and shows deletion dates more clearly
+  - Adding a Nextcloud account now reports malformed or empty SSO responses as a clear protocol
+    error instead of crashing
+  - Note lists and searches can now handle notes too large for Android's CursorWindow
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.6.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.6.0)
   - Relative `attachments/` and `media/` links in note previews can now be opened in installed
     Android apps
   - Find in note now also searches the Markdown source in the editor and highlights every match
+  - Large Nextcloud accounts can prune stale local notes without exceeding Android SQLite
+    bind-variable limits
+  - Malformed Nextcloud update responses no longer replace a local note's remote identity
 - A new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
   [v0.7.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.7.0), adds
   - Background synchronization with network constraints and retry backoff
   - Conflict review, merging, and recovery for notes changed locally and remotely
+  - Local changes are preserved when a note is deleted remotely or becomes read-only, with an
+    explicit recovery action when needed
   - Durable synchronization diagnostics and more responsive editing for large notes
+  - Synchronization failures and completed updates no longer overwrite newer local edits or deletion
+    intent
+  - Nextcloud Notes API files from the top-level `attachments/` and `media/` trees no longer appear
+    as notes
 
 ## 26.9.6
 
