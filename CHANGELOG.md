@@ -12,6 +12,8 @@
 - Notes can now optionally be saved with a final newline by enabling the existing
   **Ensure an empty last line in the note text** editor setting (for
   [#3734](https://github.com/pbek/QOwnNotes/issues/3734))
+- Improved typing performance in large notes when using full-sync Markdown language
+  servers such as Rumdl (for [#3739](https://github.com/pbek/QOwnNotes/issues/3739))
 
 ## 26.9.5
 

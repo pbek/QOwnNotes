@@ -146,13 +146,14 @@ void MarkdownLspDocumentTracker::onContentsChange(int position, int charsRemoved
         }
 
         _pendingChanges.append(change);
+
+        // Incremental ranges for the next edit depend on the current line layout.
+        rebuildLineLengths();
     } else {
-        // Full sync mode — just flag that we need a full send
+        // Full sync mode does not use the line snapshot. Avoid walking every
+        // block on each keystroke; rebuild it only when the full sync is sent.
         _pendingFullSync = true;
     }
-
-    // Update the line-lengths snapshot to reflect the new document state
-    rebuildLineLengths();
 
     _debounceTimer.start();
 }
