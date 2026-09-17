@@ -14,6 +14,13 @@
   [#3734](https://github.com/pbek/QOwnNotes/issues/3734))
 - Improved typing performance in large notes when using full-sync Markdown language
   servers such as Rumdl (for [#3739](https://github.com/pbek/QOwnNotes/issues/3739))
+- There were two new releases of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.5.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.5.0) and
+  [v0.6.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.6.0)
+  - The remote trash dialog can now be searched by note name and shows deletion dates more clearly
+  - Relative `attachments/` and `media/` links in note previews can now be opened in installed
+    Android apps
+  - Find in note now also searches the Markdown source in the editor and highlights every match
 
 ## 26.9.5
 
