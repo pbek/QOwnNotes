@@ -1,17 +1,9 @@
 # QOwnNotes Changelog
 
-## 26.9.6
+## 26.9.7
 
 - Added an optional **Document overview** panel with a minimap of the current note,
   viewport indication, and quick mouse navigation (for [#3730](https://github.com/pbek/QOwnNotes/issues/3730))
-- Undo in the note editor now groups consecutive typing instead of undoing one
-  character at a time (for [#3729](https://github.com/pbek/QOwnNotes/issues/3729))
-- Fixed external links with a URL fragment not opening and bare URLs with
-  characters like `@` in paths or `/` and `=` in fragments not being recognized
-  in the note preview (for [#3737](https://github.com/pbek/QOwnNotes/issues/3737))
-- Notes can now optionally be saved with a final newline by enabling the existing
-  **Ensure an empty last line in the note text** editor setting (for
-  [#3734](https://github.com/pbek/QOwnNotes/issues/3734))
 - Improved typing performance in large notes when using full-sync Markdown language
   servers such as Rumdl (for [#3739](https://github.com/pbek/QOwnNotes/issues/3739))
 - There were two new releases of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
@@ -26,6 +18,17 @@
   - Background synchronization with network constraints and retry backoff
   - Conflict review, merging, and recovery for notes changed locally and remotely
   - Durable synchronization diagnostics and more responsive editing for large notes
+
+## 26.9.6
+
+- Undo in the note editor now groups consecutive typing instead of undoing one
+  character at a time (for [#3729](https://github.com/pbek/QOwnNotes/issues/3729))
+- Fixed external links with a URL fragment not opening and bare URLs with
+  characters like `@` in paths or `/` and `=` in fragments not being recognized
+  in the note preview (for [#3737](https://github.com/pbek/QOwnNotes/issues/3737))
+- Notes can now optionally be saved with a final newline by enabling the existing
+  **Ensure an empty last line in the note text** editor setting (for
+  [#3734](https://github.com/pbek/QOwnNotes/issues/3734))
 
 ## 26.9.5
 
