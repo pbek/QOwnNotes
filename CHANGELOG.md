@@ -2,6 +2,8 @@
 
 ## 26.9.8
 
+- Added a text magnifier when hovering over the **Document overview** panel (for
+  [#3730](https://github.com/pbek/QOwnNotes/issues/3730))
 - Further improved typing performance in large notes with full-sync Markdown language
   servers by reducing synchronization frequency and only re-highlighting lines with
   changed diagnostics (for [#3739](https://github.com/pbek/QOwnNotes/issues/3739))
