@@ -65,6 +65,7 @@ class MarkdownLspDocumentTracker : public QObject {
     MarkdownLspClient *_client = nullptr;
     QTextDocument *_document = nullptr;
     QTimer _debounceTimer;
+    int _debounceIntervalMs = 200;
     QString _uri;
     int _version = 0;
     bool _isOpen = false;

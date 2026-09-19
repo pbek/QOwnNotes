@@ -6,9 +6,14 @@
 
 #include "markdownlspclient.h"
 
+namespace {
+constexpr int kLargeFullSyncDocumentSize = 100000;
+constexpr int kLargeFullSyncDebounceIntervalMs = 1000;
+}    // namespace
+
 MarkdownLspDocumentTracker::MarkdownLspDocumentTracker(QObject *parent) : QObject(parent) {
     _debounceTimer.setSingleShot(true);
-    _debounceTimer.setInterval(200);
+    _debounceTimer.setInterval(_debounceIntervalMs);
     connect(&_debounceTimer, &QTimer::timeout, this,
             &MarkdownLspDocumentTracker::onDebounceTimeout);
 }
@@ -30,7 +35,10 @@ void MarkdownLspDocumentTracker::setDocument(QTextDocument *document) {
     }
 }
 
-void MarkdownLspDocumentTracker::setDebounceInterval(int ms) { _debounceTimer.setInterval(ms); }
+void MarkdownLspDocumentTracker::setDebounceInterval(int ms) {
+    _debounceIntervalMs = ms;
+    _debounceTimer.setInterval(ms);
+}
 
 void MarkdownLspDocumentTracker::setSyncKind(SyncKind kind) { _syncKind = kind; }
 
@@ -155,7 +163,11 @@ void MarkdownLspDocumentTracker::onContentsChange(int position, int charsRemoved
         _pendingFullSync = true;
     }
 
-    _debounceTimer.start();
+    const bool isLargeFullSyncDocument =
+        _syncKind == SyncFull && _document->characterCount() > kLargeFullSyncDocumentSize;
+    _debounceTimer.start(isLargeFullSyncDocument
+                             ? qMax(_debounceIntervalMs, kLargeFullSyncDebounceIntervalMs)
+                             : _debounceIntervalMs);
 }
 
 // ─── debounce timeout ─────────────────────────────────────────────────

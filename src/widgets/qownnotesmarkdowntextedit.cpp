@@ -79,6 +79,47 @@ constexpr int kFoldIndicatorPadding = 2;
 constexpr int kHoveredLinkProperty = QTextFormat::UserProperty + 0x514f;
 QHash<QString, QSet<QString>> s_foldedHeadingStateByNoteReference;
 
+using MarkdownLspDiagnostic = MarkdownLspClient::Diagnostic;
+using MarkdownLspDiagnosticIndicesByLine = QHash<int, QVector<int>>;
+
+MarkdownLspDiagnosticIndicesByLine markdownLspDiagnosticIndicesByLine(
+    const QVector<MarkdownLspDiagnostic> &diagnostics) {
+    MarkdownLspDiagnosticIndicesByLine result;
+    for (int index = 0; index < diagnostics.size(); ++index) {
+        const auto &range = diagnostics.at(index).range;
+        for (int line = range.startLine; line <= range.endLine; ++line) {
+            result[line].append(index);
+        }
+    }
+    return result;
+}
+
+bool markdownLspDiagnosticEquals(const MarkdownLspDiagnostic &left,
+                                 const MarkdownLspDiagnostic &right) {
+    return left.range.startLine == right.range.startLine &&
+           left.range.startCharacter == right.range.startCharacter &&
+           left.range.endLine == right.range.endLine &&
+           left.range.endCharacter == right.range.endCharacter && left.severity == right.severity &&
+           left.message == right.message && left.source == right.source && left.code == right.code;
+}
+
+bool markdownLspDiagnosticsEqualForLine(const QVector<MarkdownLspDiagnostic> &oldDiagnostics,
+                                        const QVector<int> &oldIndices,
+                                        const QVector<MarkdownLspDiagnostic> &newDiagnostics,
+                                        const QVector<int> &newIndices) {
+    if (oldIndices.size() != newIndices.size()) {
+        return false;
+    }
+
+    for (int index = 0; index < oldIndices.size(); ++index) {
+        if (!markdownLspDiagnosticEquals(oldDiagnostics.at(oldIndices.at(index)),
+                                         newDiagnostics.at(newIndices.at(index)))) {
+            return false;
+        }
+    }
+    return true;
+}
+
 static QChar accentForDeadKey(int key) {
     switch (key) {
         case Qt::Key_Dead_Acute:
@@ -4241,27 +4282,34 @@ void QOwnNotesMarkdownTextEdit::applyMarkdownLspDiagnostics(
         return;
     }
 
-    // Collect blocks that had old diagnostics so we can clear their underlines
+    const auto oldIndicesByLine = markdownLspDiagnosticIndicesByLine(_markdownLspDiagnostics);
+    const auto newIndicesByLine = markdownLspDiagnosticIndicesByLine(diagnostics);
+
+    // Re-highlight only lines whose diagnostics changed. Full-sync servers send
+    // every diagnostic after each edit, which made large notes unnecessarily
+    // re-run the complete Markdown highlighter on many unchanged blocks.
     QSet<int> dirtyLines;
-    for (const MarkdownLspClient::Diagnostic &diag : _markdownLspDiagnostics) {
-        for (int line = diag.range.startLine; line <= diag.range.endLine; ++line) {
-            dirtyLines.insert(line);
+    for (auto it = oldIndicesByLine.constBegin(); it != oldIndicesByLine.constEnd(); ++it) {
+        const auto newIt = newIndicesByLine.constFind(it.key());
+        if (newIt == newIndicesByLine.constEnd() ||
+            !markdownLspDiagnosticsEqualForLine(_markdownLspDiagnostics, it.value(), diagnostics,
+                                                newIt.value())) {
+            dirtyLines.insert(it.key());
         }
     }
-
-    _markdownLspDiagnostics = diagnostics;
-    h->setMarkdownLspDiagnostics(diagnostics);
-
-    // Also collect blocks that have new diagnostics
-    for (const MarkdownLspClient::Diagnostic &diag : diagnostics) {
-        for (int line = diag.range.startLine; line <= diag.range.endLine; ++line) {
-            dirtyLines.insert(line);
+    for (auto it = newIndicesByLine.constBegin(); it != newIndicesByLine.constEnd(); ++it) {
+        if (!oldIndicesByLine.contains(it.key())) {
+            dirtyLines.insert(it.key());
         }
     }
 
     if (dirtyLines.isEmpty()) {
+        _markdownLspDiagnostics = diagnostics;
         return;
     }
+
+    _markdownLspDiagnostics = diagnostics;
+    h->setMarkdownLspDiagnostics(diagnostics);
 
     const QSet<int> &constDirtyLines = dirtyLines;
     for (const int line : constDirtyLines) {
