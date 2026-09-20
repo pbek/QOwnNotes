@@ -61,9 +61,6 @@ echo '#define RELEASE "OBS"' >src/release.h
 # replace the version in the spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec
 
-# replace the version in the PKGBUILD file
-sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/PKGBUILD
-
 # replace the version in the dsc file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.dsc
 
@@ -124,6 +121,10 @@ obsRepoPath="home:pbek:QOwnNotes/desktop"
 echo "Removing old archives..."
 cd "$obsRepoPath" || exit 1
 osc rm -- *.xz
+if [ -e PKGBUILD ]; then
+  # The Arch package is built by the CMake/Qt6 OBS target.
+  osc rm -- PKGBUILD
+fi
 cd ../..
 
 # copying new files to repository
@@ -134,7 +135,6 @@ cp obs/appimage.yml "$obsRepoPath"
 cp obs/_service "$obsRepoPath"
 cp obs/qownnotes.appdata.xml "$obsRepoPath"
 cp "$debChangelogPath" "$obsRepoPath"
-cp obs/PKGBUILD "$obsRepoPath"
 cp "$qownnotesSrcDir"/debian/control "$obsRepoPath"/debian.control
 cp "$qownnotesSrcDir"/debian/copyright "$obsRepoPath"/debian.copyright
 cp "$qownnotesSrcDir"/debian/compat "$obsRepoPath"/debian.compat
@@ -148,7 +148,6 @@ cd "$obsRepoPath" || exit 1
 osc add "$archiveFile"
 #osc add qownnotes.bin
 #osc add qownnotes.spec
-#osc add PKGBUILD
 #osc add debian.changelog
 #osc add debian.control
 #osc add debian.rules

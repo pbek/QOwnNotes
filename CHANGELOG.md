@@ -2,6 +2,9 @@
 
 ## 26.9.8
 
+- Fixed the inconsistent Arch Linux package repository by preventing the legacy OBS
+  target from publishing duplicate QOwnNotes packages (for
+  [#3743](https://github.com/pbek/QOwnNotes/issues/3743))
 - Added a text magnifier when hovering over the **Document overview** panel (for
   [#3730](https://github.com/pbek/QOwnNotes/issues/3730))
 - Further improved typing performance in large notes with full-sync Markdown language
