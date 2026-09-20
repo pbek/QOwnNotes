@@ -2,6 +2,8 @@
 
 ## 26.9.8
 
+- Fixed release assets not being uploaded by replacing the deprecated GitHub release asset
+  upload action (for [#3744](https://github.com/pbek/QOwnNotes/issues/3744))
 - Fixed the inconsistent Arch Linux package repository by preventing the legacy OBS
   target from publishing duplicate QOwnNotes packages (for
   [#3743](https://github.com/pbek/QOwnNotes/issues/3743))
