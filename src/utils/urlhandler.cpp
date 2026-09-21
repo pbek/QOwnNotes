@@ -327,8 +327,11 @@ void UrlHandler::handleNoteUrl(const QString &urlString, const QString &fragment
                 "^" + QRegularExpression::escape(currentNoteRelativeSubFolderPath) + "\\/"));
         }
 
-        // Open attachments with extensions that are used for notes externally
-        if (relativeFilePath.contains(QStringLiteral("attachments"))) {
+        // Open attachments with extensions that are used for notes externally.
+        // "media" is the same kind of resource folder as "attachments".
+        static const QRegularExpression resourceFolderRe(
+            QStringLiteral(R"(^(attachments|media)(\/|$))"));
+        if (relativeFilePath.contains(resourceFolderRe)) {
             if (QDesktopServices::openUrl(url)) {
                 return;
             }
