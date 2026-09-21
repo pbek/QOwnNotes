@@ -12,6 +12,12 @@
   - Notes can be soft-wrapped in the editor, with cursor tracking and mouse selection across
     wrapped rows
   - Search within notes is now available in the viewer and editor, including match navigation
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.8.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.8.0)
+  - Configurable home-screen widgets can show an account's note list or a selected note
+  - An offline bookmark browser adds text search, tag filters, and a configurable bookmarks file
+  - Images can be selected while editing and inserted as Markdown links in the compatible `media/`
+    folder
 
 ## 26.9.8
 
