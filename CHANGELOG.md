@@ -6,6 +6,12 @@
   [#3740](https://github.com/pbek/QOwnNotes/issues/3740))
 - Fixed links to files in the `media/` folder with note file extensions being
   treated as missing notes (for [#3742](https://github.com/pbek/QOwnNotes/pull/3742))
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v0.9.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v0.9.0)
+  - Markdown lists and checklists now continue automatically when pressing Enter
+  - Notes can be soft-wrapped in the editor, with cursor tracking and mouse selection across
+    wrapped rows
+  - Search within notes is now available in the viewer and editor, including match navigation
 
 ## 26.9.8
 
