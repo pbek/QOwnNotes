@@ -65,6 +65,14 @@ void PreviewFontSettingsWidget::readSettings() {
     noteTextViewFont.fromString(fontString);
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
+    // Load export font, falling back to the previous preview-font behavior
+    fontString = settings
+                     .value(QStringLiteral("MainWindow/noteTextView.export.font"),
+                            Utils::Misc::previewFontString())
+                     .toString();
+    noteTextViewExportFont.fromString(fontString);
+    setFontLabel(ui->noteTextViewExportFontLabel, noteTextViewExportFont);
+
     // Load note text view code font
     fontString = settings.value(QStringLiteral("MainWindow/noteTextView.code.font")).toString();
 
@@ -103,6 +111,8 @@ void PreviewFontSettingsWidget::storeSettings() {
     settings.setValue(QStringLiteral("MainWindow/noteTextView.font"), noteTextViewFont.toString());
     settings.setValue(QStringLiteral("MainWindow/noteTextView.code.font"),
                       noteTextViewCodeFont.toString());
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.export.font"),
+                      noteTextViewExportFont.toString());
 }
 
 void PreviewFontSettingsWidget::on_noteTextViewButton_clicked() {
@@ -124,6 +134,15 @@ void PreviewFontSettingsWidget::on_noteTextViewCodeButton_clicked() {
     }
 }
 
+void PreviewFontSettingsWidget::on_noteTextViewExportButton_clicked() {
+    bool ok;
+    QFont font = Utils::Gui::fontDialogGetFont(&ok, noteTextViewExportFont, this);
+    if (ok) {
+        noteTextViewExportFont = font;
+        setFontLabel(ui->noteTextViewExportFontLabel, noteTextViewExportFont);
+    }
+}
+
 /**
  * Resets the font for the note Markdown view
  */
@@ -139,6 +158,11 @@ void PreviewFontSettingsWidget::on_noteTextViewResetButton_clicked() {
 void PreviewFontSettingsWidget::on_noteTextViewCodeResetButton_clicked() {
     noteTextViewCodeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
     setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
+}
+
+void PreviewFontSettingsWidget::on_noteTextViewExportResetButton_clicked() {
+    noteTextViewExportFont = noteTextViewFont;
+    setFontLabel(ui->noteTextViewExportFontLabel, noteTextViewExportFont);
 }
 
 void PreviewFontSettingsWidget::on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked) {

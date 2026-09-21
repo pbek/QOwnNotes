@@ -4598,7 +4598,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
 
     if (forExport) {
         // get defined body font from settings
-        const QString bodyFontString = Utils::Misc::previewFontString();
+        const QString bodyFontString = Utils::Misc::exportFontString();
 
         // create export stylesheet
         QString exportStyleSheet = QLatin1String("");

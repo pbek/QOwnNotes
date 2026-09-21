@@ -5,6 +5,7 @@
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QFont>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QMessageBox>
@@ -274,6 +275,30 @@ void TestNotes::testNoteToMarkdownHtml() {
     QString expectedBody = QStringLiteral("<h1>MyTestNote</h1>\n<p>Some text</p>");
 
     QVERIFY(html.contains(expectedBody));
+}
+
+void TestNotes::testExportFontToMarkdownHtml() {
+    const QString settingKey = QStringLiteral("MainWindow/noteTextView.export.font");
+    SettingsService settings;
+    const QVariant previousValue = settings.value(settingKey);
+    const bool hadPreviousValue = settings.contains(settingKey);
+
+    QFont exportFont(QStringLiteral("Courier"));
+    exportFont.setPointSize(9);
+    settings.setValue(settingKey, exportFont.toString());
+
+    Note note;
+    note.setNoteText(QStringLiteral("Export font"));
+    const QString html = note.toMarkdownHtml(QString(), 980, true);
+    const bool hasExportFontSize = html.contains(QStringLiteral("font-size: 9pt"));
+
+    if (hadPreviousValue) {
+        settings.setValue(settingKey, previousValue);
+    } else {
+        settings.remove(settingKey);
+    }
+
+    QVERIFY2(hasExportFontSize, qPrintable(html));
 }
 
 void TestNotes::testBareUrlsToMarkdownHtml() {

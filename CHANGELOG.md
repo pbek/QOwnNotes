@@ -2,6 +2,8 @@
 
 ## 26.9.9
 
+- Added a separate font setting for Markdown PDF export and printing (for
+  [#3740](https://github.com/pbek/QOwnNotes/issues/3740))
 - Fixed links to files in the `media/` folder with note file extensions being
   treated as missing notes (for [#3742](https://github.com/pbek/QOwnNotes/pull/3742))
 

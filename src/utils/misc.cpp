@@ -1781,6 +1781,17 @@ QString Utils::Misc::previewFontString() {
 }
 
 /**
+ * Returns the export font string
+ *
+ * @return
+ */
+QString Utils::Misc::exportFontString() {
+    return SettingsService()
+        .value(QStringLiteral("MainWindow/noteTextView.export.font"), previewFontString())
+        .toString();
+}
+
+/**
  * Returns the preview code font string
  *
  * @return

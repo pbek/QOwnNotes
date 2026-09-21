@@ -139,6 +139,52 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_29">
       <item>
+       <layout class="QHBoxLayout" name="exportFontLayout">
+        <item>
+         <widget class="QLabel" name="noteTextViewExportFontHeadlineLabel">
+          <property name="text">
+           <string>Export font:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="noteTextViewExportFontLabel">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="noteTextViewExportButton">
+          <property name="toolTip">
+           <string>Set a new font</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="noteTextViewExportResetButton">
+          <property name="toolTip">
+           <string>Reset font</string>
+          </property>
+          <property name="text">
+           <string notr="true">…</string>
+          </property>
+          <property name="icon">
+           <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QCheckBox" name="useInternalExportStylingCheckBox">
         <property name="text">
          <string>Use internal export styling for the PDF export and printing of the preview</string>

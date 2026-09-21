@@ -38,6 +38,8 @@ class PreviewFontSettingsWidget : public QWidget {
     void on_noteTextViewCodeButton_clicked();
     void on_noteTextViewResetButton_clicked();
     void on_noteTextViewCodeResetButton_clicked();
+    void on_noteTextViewExportButton_clicked();
+    void on_noteTextViewExportResetButton_clicked();
     void on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked);
     void on_noteTextViewRefreshDebounceTimeResetButton_clicked();
 
@@ -45,6 +47,7 @@ class PreviewFontSettingsWidget : public QWidget {
     Ui::PreviewFontSettingsWidget *ui;
     QFont noteTextViewFont;
     QFont noteTextViewCodeFont;
+    QFont noteTextViewExportFont;
 
     void setFontLabel(QLineEdit *label, const QFont &font);
 };

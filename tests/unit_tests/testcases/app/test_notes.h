@@ -37,6 +37,7 @@ class TestNotes : public QObject {
     void testFinalNewlineOnSave_data();
     void testFinalNewlineOnSave();
     void testNoteToMarkdownHtml();
+    void testExportFontToMarkdownHtml();
     void testBareUrlsToMarkdownHtml();
     void testFootnotesToMarkdownHtml();
     void testMalformedUnderlineToMarkdownHtml();

@@ -155,6 +155,7 @@ QString fileNameForPath(const QString &filePath);
 QString rstrip(const QString &str);
 bool isPreviewUseEditorStyles();
 QString previewFontString();
+QString exportFontString();
 QString previewCodeFontString();
 bool fileExists(const QString &path);
 QString removeAcceleratorMarker(const QString &label_);
