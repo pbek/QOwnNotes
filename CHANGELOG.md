@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.9.9
+
+- Fixed links to files in the `media/` folder with note file extensions being
+  treated as missing notes (for [#3742](https://github.com/pbek/QOwnNotes/pull/3742))
+
 ## 26.9.8
 
 - Fixed release assets not being uploaded by replacing the deprecated GitHub release asset
