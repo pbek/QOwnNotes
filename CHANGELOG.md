@@ -2,6 +2,9 @@
 
 ## 26.9.10
 
+- Fixed stale packages in the Arch Linux OBS repository by explicitly unpublishing
+  artifacts from the retired build target (for
+  [#3743](https://github.com/pbek/QOwnNotes/issues/3743))
 - Fixed a second application instance and a second system tray icon being able to start
   after the application was restarted from the settings while the single app instance mode
   was enabled (for [#3746](https://github.com/pbek/QOwnNotes/issues/3746))

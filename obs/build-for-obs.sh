@@ -164,6 +164,11 @@ echo "Committing changes..."
 # commit changes
 osc commit -m "$changelogText"
 
+# Remove artifacts that the retired Arch build may have left in the published
+# repositories. Wiping build results alone does not remove published files.
+osc unpublish --all -r Arch -a x86_64 home:pbek:QOwnNotes desktop
+osc unpublish --all -r Arch_Extra -a x86_64 home:pbek:QOwnNotes desktop
+
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
   rm -rf $PROJECT_PATH
