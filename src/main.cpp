@@ -435,6 +435,18 @@ int mainStartupMisc(const QStringList &arguments) {
     }
 
     DatabaseService::createConnection();
+
+    if (qobject_cast<QApplication *>(QCoreApplication::instance()) != nullptr &&
+        CryptoService::hasLegacySecretsToMigrate()) {
+        QMessageBox::information(
+            nullptr, QObject::tr("Secure password storage"),
+            QObject::tr(
+                "QOwnNotes needs to move your stored passwords and API keys to your "
+                "operating system's secure credential store.\n\nYour system may now ask you to "
+                "unlock the keychain, possibly more than once. This is expected. QOwnNotes does "
+                "not receive your keychain password."));
+    }
+
     DatabaseService::setupTables();
     QDir dir(notesPath);
     bool existingNotesPathNotFound = !notesPath.isEmpty() && !dir.exists();

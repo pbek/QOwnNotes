@@ -26,6 +26,28 @@ namespace {
 const auto KeychainMarkerPrefix = QStringLiteral("qtkeychain:");
 const int DefaultKeychainTimeout = 2;
 
+const QStringList &encryptedSettingsKeys() {
+    static const QStringList keys = {
+        QStringLiteral("networking/proxyPassword"),
+        QStringLiteral("ownCloud/password"),
+        QStringLiteral("ownCloud/todoCalendarCalDAVPassword"),
+        QStringLiteral("ai/groq/apiKey"),
+        QStringLiteral("ai/openai/apiKey"),
+    };
+    return keys;
+}
+
+const QStringList &plaintextFallbackSettingsKeys() {
+    static const QStringList keys = {
+        QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken"),
+        QStringLiteral("webSocketServerService/token"),
+        QStringLiteral("webAppClientService/token"),
+        QStringLiteral("ai/mcpServerToken"),
+        QStringLiteral("languageToolApiKey"),
+    };
+    return keys;
+}
+
 struct KeychainJobResult {
     bool ok;
     bool timedOut;
@@ -89,6 +111,22 @@ void appendScriptKeychainReferences(QStringList *references, const QString &sett
             appendKeychainReference(references, it.value().toString());
         }
     }
+}
+
+bool isLegacySecret(const QString &value) {
+    return !value.isEmpty() && !CryptoService::isKeychainReference(value);
+}
+
+bool containsLegacyScriptSecret(const QString &settingsVariablesJson) {
+    const QJsonObject jsonObject = QJsonDocument::fromJson(settingsVariablesJson.toUtf8()).object();
+
+    for (auto it = jsonObject.constBegin(); it != jsonObject.constEnd(); ++it) {
+        if (it.key().startsWith(QStringLiteral("!")) && isLegacySecret(it.value().toString())) {
+            return true;
+        }
+    }
+
+    return false;
 }
 }    // namespace
 
@@ -292,6 +330,51 @@ int CryptoService::keychainTimeout() {
         1, settings.value(QStringLiteral("keychainTimeout"), DefaultKeychainTimeout).toInt(), 120);
 }
 
+bool CryptoService::hasLegacySecretsToMigrate() {
+    SettingsService settings;
+
+    for (const QString &key : encryptedSettingsKeys()) {
+        if (isLegacySecret(settings.value(key).toString())) {
+            return true;
+        }
+    }
+
+    for (const QString &key : plaintextFallbackSettingsKeys()) {
+        if (isLegacySecret(settings.value(key).toString())) {
+            return true;
+        }
+    }
+
+    if (!QSqlDatabase::contains(QStringLiteral("disk"))) {
+        return false;
+    }
+
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    if (!db.isOpen()) {
+        return false;
+    }
+
+    QSqlQuery cloudConnectionQuery(db);
+    if (cloudConnectionQuery.exec(QStringLiteral("SELECT password FROM cloudConnection"))) {
+        while (cloudConnectionQuery.next()) {
+            if (isLegacySecret(cloudConnectionQuery.value(0).toString())) {
+                return true;
+            }
+        }
+    }
+
+    QSqlQuery scriptQuery(db);
+    if (scriptQuery.exec(QStringLiteral("SELECT settings_variables_json FROM script"))) {
+        while (scriptQuery.next()) {
+            if (containsLegacyScriptSecret(scriptQuery.value(0).toString())) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 QString CryptoService::legacyEncryptToString(const QString &text) {
     // Keep this compatible with the pre-qtkeychain SimpleCrypt storage format.
     return _simpleCrypt->encryptToString(text);
@@ -406,24 +489,9 @@ void CryptoService::migrateSecrets() {
 }
 
 void CryptoService::migrateSettingsSecrets() {
-    const QStringList encryptedSettingsKeys = {
-        QStringLiteral("networking/proxyPassword"),
-        QStringLiteral("ownCloud/password"),
-        QStringLiteral("ownCloud/todoCalendarCalDAVPassword"),
-        QStringLiteral("ai/groq/apiKey"),
-        QStringLiteral("ai/openai/apiKey"),
-    };
-    const QStringList plaintextFallbackSettingsKeys = {
-        QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken"),
-        QStringLiteral("webSocketServerService/token"),
-        QStringLiteral("webAppClientService/token"),
-        QStringLiteral("ai/mcpServerToken"),
-        QStringLiteral("languageToolApiKey"),
-    };
-
     SettingsService settings;
 
-    for (const QString &settingsKey : encryptedSettingsKeys) {
+    for (const QString &settingsKey : encryptedSettingsKeys()) {
         QString value = settings.value(settingsKey).toString();
 
         if (migrateSecret(&value, QStringLiteral("settings/") + settingsKey, false)) {
@@ -431,7 +499,7 @@ void CryptoService::migrateSettingsSecrets() {
         }
     }
 
-    for (const QString &settingsKey : plaintextFallbackSettingsKeys) {
+    for (const QString &settingsKey : plaintextFallbackSettingsKeys()) {
         QString value = settings.value(settingsKey).toString();
 
         if (migrateSecret(&value, QStringLiteral("settings/") + settingsKey, true)) {

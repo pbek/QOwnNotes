@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.9.10
+
+- A notice is now shown before stored passwords and API keys are migrated to the
+  operating system keychain, explaining the system password prompts that may follow
+  (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))
+
 ## 26.9.9
 
 - Added a separate font setting for Markdown PDF export and printing (for
