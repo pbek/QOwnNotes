@@ -48,6 +48,22 @@ void TestUtilsMisc::testStartDetachedProcess() {
 #endif
 }
 
+void TestUtilsMisc::testPrepareRestartApplicationArguments() {
+    const QStringList arguments{QStringLiteral("QOwnNotes"), QStringLiteral("--portable"),
+                                QStringLiteral("--clear-settings"),
+                                QStringLiteral("--clear-settings")};
+    const QStringList expected{QStringLiteral("--portable")};
+
+    QCOMPARE(prepareRestartApplicationArguments(arguments), expected);
+
+    const QStringList multipleInstanceArguments{QStringLiteral("QOwnNotes"),
+                                                QStringLiteral("--allow-multiple-instances")};
+    const QStringList multipleInstanceExpected{QStringLiteral("--allow-multiple-instances")};
+    QCOMPARE(prepareRestartApplicationArguments(multipleInstanceArguments),
+             multipleInstanceExpected);
+    QVERIFY(prepareRestartApplicationArguments({}).isEmpty());
+}
+
 void TestUtilsMisc::testShorten() {
     QString s = QStringLiteral("A Long test string with lots of words");
     const auto result = shorten(s, 10);

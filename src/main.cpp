@@ -813,6 +813,19 @@ int main(int argc, char *argv[]) {
             "system!");
     }
 
+    int appResult = 0;
+    bool restartRequested = false;
+    QString restartExecutablePath;
+    QStringList restartArguments;
+    QString restartWorkingDirectory;
+
+    const auto captureRestartRequest = [&](const QCoreApplication &app) {
+        restartRequested = app.property("restartRequested").toBool();
+        restartExecutablePath = app.property("restartExecutablePath").toString();
+        restartArguments = app.property("restartArguments").toStringList();
+        restartWorkingDirectory = app.property("restartWorkingDirectory").toString();
+    };
+
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
         SingleApplication app(
@@ -898,7 +911,8 @@ int main(int argc, char *argv[]) {
             }
         });
 
-        return app.exec();
+        appResult = app.exec();
+        captureRestartRequest(app);
     } else {
         // Use QCoreApplication for CLI-only modes (no graphical environment needed),
         // otherwise use QApplication for the full GUI
@@ -934,6 +948,16 @@ int main(int argc, char *argv[]) {
         setupSystemDarkModeChangeCheck(app.get());
 #endif
 
-        return app->exec();
+        appResult = app->exec();
+        captureRestartRequest(*app);
     }
+
+    // Both application branches have left scope here. In particular, the
+    // SingleApplication destructor has released its inter-process lock.
+    if (restartRequested) {
+        Utils::Misc::startDetachedProcess(restartExecutablePath, restartArguments,
+                                          restartWorkingDirectory);
+    }
+
+    return appResult;
 }

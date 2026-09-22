@@ -12,6 +12,7 @@ class TestUtilsMisc : public QObject {
     void testPrependIfDoesNotStartWith();
     void testAppendIfDoesNotEndWith();
     void testStartDetachedProcess();
+    void testPrepareRestartApplicationArguments();
     void testShorten();
     void testCycleTextCase();
     void testHtmlToMarkdown();

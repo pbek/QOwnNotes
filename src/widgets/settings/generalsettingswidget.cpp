@@ -575,8 +575,7 @@ void GeneralSettingsWidget::on_importSettingsButton_clicked() {
                             "You also will need to adjust some settings, especially "
                             "across platforms, but your notes will stay intact!") +
                          QLatin1String("\n\n") +
-                         tr("The application will be restarted after the import.") +
-                         Utils::Misc::appendSingleAppInstanceTextIfNeeded();
+                         tr("The application will be restarted after the import.");
 
     if (QMessageBox::question(this, title, text, QMessageBox::Yes | QMessageBox::No,
                               QMessageBox::No) == QMessageBox::No) {

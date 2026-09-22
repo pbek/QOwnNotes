@@ -4314,8 +4314,7 @@ bool MainWindow::showRestartNotificationIfNeeded(bool force) {
 
     if (QMessageBox::question(this, tr("Restart application"),
                               tr("You may need to restart the application to let the "
-                                 "changes take effect.") +
-                                  Utils::Misc::appendSingleAppInstanceTextIfNeeded(),
+                                 "changes take effect."),
                               QMessageBox::Yes | QMessageBox::Cancel,
                               QMessageBox::Yes) == QMessageBox::Yes) {
         storeSettings();

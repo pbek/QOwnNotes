@@ -2,6 +2,11 @@
 
 ## 26.9.10
 
+- Fixed a second application instance and a second system tray icon being able to start
+  after the application was restarted from the settings while the single app instance mode
+  was enabled (for [#3746](https://github.com/pbek/QOwnNotes/issues/3746))
+  - The application is now restarted after the current instance released its single app
+    instance lock, so the new instance can register itself again
 - A notice is now shown before stored passwords and API keys are migrated to the
   operating system keychain, explaining the system password prompts that may follow
   (for [#3597](https://github.com/pbek/QOwnNotes/issues/3597))

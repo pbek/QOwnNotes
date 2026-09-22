@@ -1308,22 +1308,28 @@ void Utils::Misc::needRestart() { qApp->setProperty("needsRestart", true); }
  */
 void Utils::Misc::restartApplication() {
     // QApplication::arguments() didn't contain any parameters!
-    QStringList parameters = qApp->property("arguments").toStringList();
-    const QString appPath = Utils::Misc::applicationPath();
+    const QStringList parameters =
+        prepareRestartApplicationArguments(qApp->property("arguments").toStringList());
 
-    // we don't want to have our settings cleared again after a restart
-    parameters.removeOne(QStringLiteral("--clear-settings"));
+    // main() starts the replacement after the application object has been
+    // destroyed so SingleApplication has released its lock.
+    qApp->setProperty("restartRequested", true);
+    qApp->setProperty("restartExecutablePath", Utils::Misc::applicationPath());
+    qApp->setProperty("restartArguments", parameters);
+    qApp->setProperty("restartWorkingDirectory", QCoreApplication::applicationDirPath());
+    QApplication::quit();
+}
 
-    // If only one app instance is allowed force allowing multiple for the
-    // next launch, so we can launch the application before we quit the
-    // current instance
-    if (qApp->property("singleApplication").toBool() &&
-        !parameters.contains("--allow-multiple-instances")) {
-        parameters.append("--allow-multiple-instances");
+QStringList Utils::Misc::prepareRestartApplicationArguments(QStringList arguments) {
+    // QProcess expects only arguments, while QCoreApplication::arguments()
+    // includes the executable as its first item.
+    if (!arguments.isEmpty()) {
+        arguments.removeFirst();
     }
 
-    startDetachedProcess(appPath, parameters);
-    QApplication::quit();
+    // We don't want to have our settings cleared again after a restart.
+    arguments.removeAll(QStringLiteral("--clear-settings"));
+    return arguments;
 }
 
 QString Utils::Misc::applicationPath() {
@@ -1341,19 +1347,6 @@ QString Utils::Misc::applicationPath() {
     }
 
     return appPath;
-}
-
-QString Utils::Misc::appendSingleAppInstanceTextIfNeeded(QString text) {
-    if (SettingsService().value("allowOnlyOneAppInstance").toBool()) {
-        text.append(QStringLiteral("\n\n") +
-                    QObject::tr("You are using the single app instance mode, that "
-                                "prevents the application be be started a second time. For the "
-                                "next launch of the application the single app instance mode "
-                                "will be disabled, so that the application can be restarted "
-                                "before quitting this instance."));
-    }
-
-    return text;
 }
 
 QByteArray Utils::Misc::friendlyUserAgentString() {

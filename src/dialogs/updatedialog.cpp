@@ -547,8 +547,7 @@ bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
 
     if (QMessageBox::question(
             this, tr("Restart application"),
-            tr("You now can restart the application to complete the update process.") +
-                Utils::Misc::appendSingleAppInstanceTextIfNeeded(),
+            tr("You now can restart the application to complete the update process."),
             QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Yes) == QMessageBox::Yes) {
         Utils::Misc::restartApplication();
     }
