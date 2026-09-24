@@ -58,7 +58,7 @@ fi
 
 buildSystemPath="../../../QOwnNotes/build-systems/slackware"
 
-cd ../slackbuilds/14.1/qownnotes/ || exit 1
+cd ../slackbuilds/15.0/qownnotes/ || exit 1
 cp ${buildSystemPath}/qownnotes.SlackBuild .
 cp ${buildSystemPath}/qownnotes.info .
 cp ${buildSystemPath}/dobuild.sh .
@@ -71,20 +71,9 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" dobuild.sh
 # replace the md5sum
 sed -i "s/ARCHIVE-MD5/$QOWNNOTES_ARCHIVE_MD5/g" qownnotes.info
 
-path14_2="../../14.2/qownnotes"
-cp qownnotes.SlackBuild ${path14_2}
-cp qownnotes.info ${path14_2}
-cp dobuild.sh ${path14_2}
-
-path15_0="../../15.0/qownnotes"
-cp qownnotes.SlackBuild ${path15_0}
-cp qownnotes.info ${path15_0}
-sed -i 's/REQUIRES="qt5 libproxy"/REQUIRES=""/' ${path15_0}/qownnotes.info
-cp dobuild.sh ${path15_0}
-
 echo "Committing changes..."
 # shellcheck disable=SC2035
-git commit -m "releasing version $QOWNNOTES_VERSION" -- * ${path14_2}/* ${path15_0}/*
+git commit -m "releasing version $QOWNNOTES_VERSION" -- *
 git push
 
 # remove everything after we are done

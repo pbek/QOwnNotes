@@ -2,6 +2,8 @@
 
 ## 26.9.10
 
+- Migrated the Slackware 15.0 build system to Qt 6 and retired the Slackware 14.x
+  release targets (for [#3751](https://github.com/pbek/QOwnNotes/issues/3751))
 - Fixed the first line of code blocks being offset to the right in the Markdown preview
   (for [#3750](https://github.com/pbek/QOwnNotes/issues/3750))
 - Fixed editor highlighting for indented code block lines that start with a digit

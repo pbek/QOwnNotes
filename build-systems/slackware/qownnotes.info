@@ -5,6 +5,6 @@ DOWNLOAD="https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qo
 MD5SUM="ARCHIVE-MD5"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
-REQUIRES="qt5 libproxy"
+REQUIRES="qt6"
 MAINTAINER="Patrizio Bekerle"
 EMAIL="patrizio@bekerle.com"
