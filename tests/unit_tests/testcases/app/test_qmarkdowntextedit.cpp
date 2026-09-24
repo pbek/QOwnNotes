@@ -174,6 +174,17 @@ void TestQMarkdownTextEdit::testCodeBlockInfoStrings() {
     QCOMPARE(editor.document()->firstBlock().userState(), int(MarkdownHighlighter::CodePython));
 }
 
+void TestQMarkdownTextEdit::testDigitPrefixedIndentedCodeBlock() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(
+        QStringLiteral("    regular code\n    1234digit-prefixed code\n    subsequent code"));
+
+    for (QTextBlock block = editor.document()->firstBlock(); block.isValid();
+         block = block.next()) {
+        QCOMPARE(block.userState(), int(MarkdownHighlighter::CodeBlockIndented));
+    }
+}
+
 void TestQMarkdownTextEdit::testTildeSystemVerilogHighlighting() {
     QMarkdownTextEdit editor;
     editor.setPlainText(QStringLiteral("~~~sv\nmodule counter;\n~~~"));

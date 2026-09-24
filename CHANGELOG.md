@@ -2,6 +2,8 @@
 
 ## 26.9.10
 
+- Fixed editor highlighting for indented code block lines that start with a digit
+  (for [#3749](https://github.com/pbek/QOwnNotes/issues/3749))
 - Fixed stale packages in the Arch Linux OBS repository by explicitly unpublishing
   artifacts from the retired build target (for
   [#3743](https://github.com/pbek/QOwnNotes/issues/3743))

@@ -15,6 +15,7 @@ class TestQMarkdownTextEdit : public QObject {
     void testCodeBlockLanguageAliases_data();
     void testCodeBlockLanguageAliases();
     void testCodeBlockInfoStrings();
+    void testDigitPrefixedIndentedCodeBlock();
     void testTildeSystemVerilogHighlighting();
     void testSqlCodeBlockHighlighting();
     void testForthCommentHighlighting();
