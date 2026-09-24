@@ -77,11 +77,7 @@ exit
 # shellcheck disable=SC2317
 # fallback if zellij doesn't work
 # shellcheck disable=SC2317
-../ubuntu-launchpad/build-for-launchpad.sh
-# shellcheck disable=SC2317
 ../ubuntu-launchpad/build-for-launchpad-qt6.sh
-# shellcheck disable=SC2317
-../obs/build-for-obs.sh
 # shellcheck disable=SC2317
 aur/build-for-aur.sh
 # shellcheck disable=SC2317
@@ -104,7 +100,7 @@ exit
 # shellcheck disable=SC2317
 # List of commands to run, with parameters, in quotes, space-separated; do not use quotes inside (see bash arrays)
 # shellcheck disable=SC2317
-COMMANDS=("$DIR/../ubuntu-launchpad/build-for-launchpad.sh" "$DIR/../obs/build-for-obs.sh" "$DIR/aur/build-for-aur.sh" "$DIR/gentoo/build-for-gentoo.sh" "$DIR/slackware/build-for-slackware.sh" "$DIR/snap/build-for-launchpad-snap.sh" "$DIR/obs/cmake-qt6/build-for-obs.sh")
+COMMANDS=("$DIR/../ubuntu-launchpad/build-for-launchpad-qt6.sh" "$DIR/aur/build-for-aur.sh" "$DIR/gentoo/build-for-gentoo.sh" "$DIR/slackware/build-for-slackware.sh" "$DIR/snap/build-for-launchpad-snap.sh" "$DIR/obs/cmake-qt6/build-for-obs.sh")
 # "$DIR/snap/build-for-local-snap.sh"
 
 # KDS=$KONSOLE_DBUS_SERVICE # This is the ref of the current konsole and only works in a konsole

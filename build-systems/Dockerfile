@@ -1,6 +1,4 @@
 # Local release environment
-# Pin to 24.04 because newer Ubuntu CDBS packages no longer ship the qmake/makefile
-# classes required by the Qt5 Launchpad source package.
 FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -18,10 +16,8 @@ RUN (type -p wget >/dev/null || (apt update && apt-get install wget -y)) \
 RUN apt-get update \
     && apt-get -y install bash \
          build-essential autoconf automake autotools-dev dh-make debhelper \
-         devscripts fakeroot xutils lintian pbuilder cdbs gnupg \
-         python3 python3-pip osc xz-utils git rsync qttools5-dev-tools \
-         qt5-qmake qtbase5-dev libqt5svg5-dev qtdeclarative5-dev \
-         libqt5websockets5-dev libqt5x11extras5-dev \
+         devscripts fakeroot xutils lintian pbuilder gnupg \
+         python3 python3-pip osc xz-utils git rsync \
          libsecret-1-dev \
          qt6-base-dev qt6-declarative-dev libqt6svg6-dev qt6-websockets-dev \
          libqt6svg6 libqt6svgwidgets6 libqt6websockets6 libqt6core5compat6 \
@@ -29,9 +25,6 @@ RUN apt-get update \
          cmake pkg-config qt6-l10n-tools qt6-tools-dev qt6-tools-dev-tools \
          pipx python3-venv \
     && rm -rf /var/lib/apt/lists/*
-
-# The Qt5 Launchpad source package runs debian/rules clean locally via CDBS.
-RUN test -f /usr/share/cdbs/1/class/makefile.mk
 
 # Download and extract zellij
 RUN curl -L https://github.com/zellij-org/zellij/releases/download/v0.42.2/zellij-x86_64-unknown-linux-musl.tar.gz -o zellij.tar.gz \

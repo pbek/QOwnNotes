@@ -4,11 +4,7 @@ layout {
     pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
     }
-    // Those need more space, because of the signature key entry dialog
-    pane split_direction="vertical" {
-      pane name="launchpad" command="../ubuntu-launchpad/build-for-launchpad.sh"
-      pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
-    }
+    pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
     pane size=1 borderless=true {
       plugin location="zellij:status-bar"
     }
@@ -17,10 +13,7 @@ layout {
     pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
     }
-    pane split_direction="vertical" {
-      pane name="obs" command="../obs/build-for-obs.sh"
-      pane name="aur" command="aur/build-for-aur.sh"
-    }
+    pane name="aur" command="aur/build-for-aur.sh"
     pane split_direction="vertical" {
       pane name="gentoo" command="gentoo/build-for-gentoo.sh"
       pane name="slackware" command="slackware/build-for-slackware.sh"

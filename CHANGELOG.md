@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.9.11
+
+- Deprecated the non-GitHub Qt 5 release packages by removing the legacy Ubuntu
+  Launchpad and OBS deployments from the release process, while retaining the
+  Qt 5 artifacts built by the GitHub release workflow (for
+  [#3752](https://github.com/pbek/QOwnNotes/issues/3752))
+
 ## 26.9.10
 
 - Migrated the Slackware 15.0 build system to Qt 6 and retired the Slackware 14.x

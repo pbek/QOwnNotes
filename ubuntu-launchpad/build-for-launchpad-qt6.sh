@@ -4,7 +4,7 @@
 # https://launchpad.net/~pbek/+archive/ubuntu/qownnotes-qt6
 #
 # We will need some packages to execute this locally:
-# sudo apt-get install build-essential autoconf automake autotools-dev dh-make debhelper devscripts fakeroot xutils lintian pbuilder cdbs gnupg
+# sudo apt-get install build-essential cmake debhelper devscripts fakeroot gnupg qt6-l10n-tools
 #
 # Also a ~/.dput.cf has to be in place
 #
@@ -43,9 +43,6 @@ if [ "$1" = "--docker" ]; then
   ssh-add ~/.ssh/aur_rsa
 fi
 
-#echo "/usr/share/cdbs/1/class/qmake.mk"
-#cat /usr/share/cdbs/1/class/qmake.mk
-
 while test $# -gt 0; do
   case "$1" in
   --no-upload)
@@ -70,7 +67,7 @@ git clone --recurse-submodules --depth=1 https://github.com/pbek/QOwnNotes.git "
 cd "$PROJECT_PATH" || exit 1
 
 # build binary translation files
-lrelease src/QOwnNotes.pro
+/usr/lib/qt6/bin/lrelease src/QOwnNotes.pro
 
 if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h

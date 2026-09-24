@@ -43,7 +43,7 @@ git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH -
 cd QOwnNotes || exit 1
 
 # build binary translation files
-lrelease src/QOwnNotes.pro
+/usr/lib/qt6/bin/lrelease src/QOwnNotes.pro
 
 if [ -z "$QOWNNOTES_VERSION" ]; then
   # get version from version.h
