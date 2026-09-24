@@ -48,6 +48,7 @@ class TestNotes : public QObject {
     /* Preview Syntax Highlighter Tests */
     void testMarkdownTildeCodeFenceToHtml();
     void testMarkdownBacktickCodeFenceToHtml();
+    void testMarkdownCodeBlockPreviewPadding();
     void testCodeToHtmlConversionPython();
     void testCodeToHtmlConversionR();
     void testCodeToHtmlConversionHashComment();

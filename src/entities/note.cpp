@@ -4576,7 +4576,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                           " white-space: pre-wrap } "
                           "code { padding: 3px; overflow: auto;"
                           " line-height: 1.45em; background-color: %1;"
-                          " border-radius: 5px; color: %2; }")
+                          " border-radius: 5px; color: %2; }"
+                          "pre > code { padding: 0; }")
                           .arg(codeBackgroundColor, codeForegroundColor);
 
     // TODO: We should probably make a stylesheet for this
@@ -4619,7 +4620,6 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
                      "img { max-width: 100%; }"
                      "pre { background-color: %5; border-radius: 5px; padding: "
                      "10px; }"
-                     "pre > code { padding: 0; }"
                      "table {border-spacing: 0; border-style: solid; "
                      "border-width: 1px; "
                      "border-collapse: collapse; margin-top: 0.5em;}"

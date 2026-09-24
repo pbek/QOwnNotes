@@ -2,6 +2,8 @@
 
 ## 26.9.10
 
+- Fixed the first line of code blocks being offset to the right in the Markdown preview
+  (for [#3750](https://github.com/pbek/QOwnNotes/issues/3750))
 - Fixed editor highlighting for indented code block lines that start with a digit
   (for [#3749](https://github.com/pbek/QOwnNotes/issues/3749))
 - Fixed stale packages in the Arch Linux OBS repository by explicitly unpublishing

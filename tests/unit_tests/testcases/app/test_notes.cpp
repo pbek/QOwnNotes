@@ -524,6 +524,22 @@ void TestNotes::testMarkdownBacktickCodeFenceToHtml() {
     QVERIFY(result.contains(expected));
 }
 
+void TestNotes::testMarkdownCodeBlockPreviewPadding() {
+    Note note;
+    note.setNoteText(
+        QStringLiteral("    Indented line one\n"
+                       "    Indented line two\n\n"
+                       "```\n"
+                       "Fenced line one\n"
+                       "Fenced line two\n"
+                       "```\n"));
+
+    const QString html = note.toMarkdownHtml(QString(), 980, false);
+
+    QCOMPARE(html.count(QStringLiteral("<pre><code>")), 2);
+    QVERIFY2(html.contains(QStringLiteral("pre > code { padding: 0; }")), qPrintable(html));
+}
+
 void TestNotes::testCodeToHtmlConversionPython() {
     QString pythonCode =
         "import hello\n"
