@@ -6,6 +6,7 @@
   Launchpad and OBS deployments from the release process, while retaining the
   Qt 5 artifacts built by the GitHub release workflow (for
   [#3752](https://github.com/pbek/QOwnNotes/issues/3752))
+- Added more French translation (thank you, jd-develop)
 
 ## 26.9.10
 

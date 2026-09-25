@@ -1401,11 +1401,11 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Applies to word, wiki-link, equation, script and Markdown LSP completions</source>
-<translation type="unfinished">Applies to word, wiki-link, equation, script and Markdown LSP completions</translation>
+<translation>S’applique aux mots, liens-wiki, équations, scripts et aux complétions de LSP Markdown</translation>
 </message>
 <message>
 <source>Insert autocompletion directly if there is only one result</source>
-<translation type="unfinished">Insert autocompletion directly if there is only one result</translation>
+<translation>Insérer directement l’autocomplétion s’il n’y a qu’un seul résultat</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>
@@ -2142,7 +2142,7 @@ Le message d'erreur de connexion est : </translation>
 </message>
 <message>
 <source>Link hover</source>
-<translation type="unfinished">Link hover</translation>
+<translation>Lien survolé</translation>
 </message>
 <message>
 <source>Link (internal)</source>
@@ -3809,31 +3809,31 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Create, rename, remove, and order layouts. Changes on this page are applied immediately.</source>
-<translation type="unfinished">Create, rename, remove, and order layouts. Changes on this page are applied immediately.</translation>
+<translation>Créez, renommez, supprimez et réorganisez vos dispositions. Les changements sur cette page sont appliqués immédiatement.</translation>
 </message>
 <message>
 <source>Add from current</source>
-<translation type="unfinished">Add from current</translation>
+<translation>Ajouter depuis la disposition courante</translation>
 </message>
 <message>
 <source>Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</source>
-<translation type="unfinished">Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</translation>
+<translation>Crée une nouvelle disposition en copiant l’arrangement actuel des panneaux et des barres d’outils, la visibilité des panneaux, et la préférence de widget central. La nouvelle disposition devient immédiatement active.</translation>
 </message>
 <message>
 <source>Add from preset...</source>
-<translation type="unfinished">Add from preset...</translation>
+<translation>Ajouter depuis un préréglage…</translation>
 </message>
 <message>
 <source>Opens the layout preset selector in a new dialog</source>
-<translation type="unfinished">Opens the layout preset selector in a new dialog</translation>
+<translation>Ouvre le sélecteur de préréglage de disposition dans une nouvelle boîte de dialogue</translation>
 </message>
 <message>
 <source>Switch to selected</source>
-<translation type="unfinished">Switch to selected</translation>
+<translation>Choisir la disposition sélectionnée</translation>
 </message>
 <message>
 <source>Switches to the selected layout</source>
-<translation type="unfinished">Switches to the selected layout</translation>
+<translation>Choisis la disposition sélectionnée</translation>
 </message>
 <message>
 <source>Remove</source>
@@ -3853,15 +3853,15 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Selected layout</source>
-<translation type="unfinished">Selected layout</translation>
+<translation>Disposition sélectionnée</translation>
 </message>
 <message>
 <source>Create layout from preset</source>
-<translation type="unfinished">Create layout from preset</translation>
+<translation>Créer une disposition à partir d’un préréglage</translation>
 </message>
 <message>
 <source>Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</source>
-<translation type="unfinished">Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</translation>
+<translation>Créer une nouvelle disposition à partir d’un préréglage par défaut. Les positions des panneaux peuvent être changées après le déverrouillage de ceux-ci.</translation>
 </message>
 <message>
 <source>Add layout</source>
@@ -3869,7 +3869,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Central widget:</source>
-<translation type="unfinished">Central widget:</translation>
+<translation>Widget central :</translation>
 </message>
 <message>
 <source>Note edit</source>
@@ -3881,11 +3881,11 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>No central widget</source>
-<translation type="unfinished">No central widget</translation>
+<translation>Pas de widget central</translation>
 </message>
 <message>
 <source>The central widget automatically uses the space left by the surrounding panels</source>
-<translation type="unfinished">The central widget automatically uses the space left by the surrounding panels</translation>
+<translation>Le widget central utilise automatiquement l’espace laissé par les panneaux environnants</translation>
 </message>
 <message>
 <source>Layout name:</source>
@@ -6706,7 +6706,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</source>
-<translation type="unfinished">Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</translation>
+<translation>Sélectionnez la connexion de cloud à utiliser pour ce dossier de notes. Sélectionnez « Aucune » si ce dossier de notes ne doit pas être synchronisé à un serveur. Le versionnage cloud, la corbeille et le partage seront alors désactivées pour ce dossier de notes.</translation>
 </message>
 <message>
 <source>Path on your Nextcloud / ownCloud server:</source>
@@ -6795,7 +6795,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>None</source>
-<translation type="unfinished">None</translation>
+<translation>Aucune</translation>
 </message>
 <message>
 <source>new folder</source>
@@ -8718,7 +8718,7 @@ Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 <message>
 <source>Changelog:</source>
-<translation type="unfinished">Changelog:</translation>
+<translation>Journal de modifications :</translation>
 </message>
 <message>
 <source>Installs the script</source>
@@ -8818,11 +8818,11 @@ Le dossier et le fichier sont-ils accessibles en écriture ?</translation>
 </message>
 <message>
 <source>Open changelog</source>
-<translation type="unfinished">Open changelog</translation>
+<translation>Ouvrir le journal de modifications</translation>
 </message>
 <message>
 <source>Changes from version %1 to %2:</source>
-<translation type="unfinished">Changes from version %1 to %2:</translation>
+<translation>Changements entre les versions %1 et %2 :</translation>
 </message>
 <message>
 <source>Platform not supported!</source>

@@ -200,27 +200,27 @@ Vous pouvez utiliser QOwnNotes pour rapidement créer des **cartes** dans [**Nex
 
 ## QOwnNotes Android
 
-[QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is the recommended app to access your Nextcloud / ownCloud notes from your **mobile device**.
+[QOwnNotes pour Android](https://github.com/qownnotes/qownnotes-android) est l’application recommendée pour accéder à vos notes Nextcloud / ownCloud depuis votre **appareil mobile**.
 
-It is an **offline-capable Markdown notes app** for Android that synchronizes with your Nextcloud server through the **Nextcloud Notes API** and the **QOwnNotesAPI** app.
+C’est une **application pouvant fonctionner hors-ligne de notes Markdown** pour Android qui se synchronise avec votre serveur Nextcloud à travers l’**API Nextcloud Notes** et l’application **QOwnNotesAPI**.
 
-- It uses **Room** as the local source of truth, with edits cached immediately and synchronized when the server is reachable
-- It talks to **Nextcloud Notes** and **QOwnNotesAPI** on your server, giving you access to **note version history** and the **server-side trash bin**
-- Supports **Single Sign-On** import from the Nextcloud Files Android app
-- Renders **CommonMark and GitHub Flavored Markdown**, checkbox lists with three states (open, done, partial), wiki links, tables, fenced code, and remote images
-- Provides a **Markdown editor** with formatting actions, undo/redo, cursor preservation, and local draft persistence
-- Lets you **favorite notes** with offline toggling and favorites-first ordering
-- Create notes from **text shared by other Android apps**
-- Offers **light and dark themes** on Android 9+
+- Elle utilise **Room** comme source de vérité locale, les modifications étant immédiatement mises en cache et synchronisées dès que le serveur est atteignable
+- Elle interagit avec **Nextcloud Notes** et **QOwnNotesAPI** sur votre serveur, vous donnant accès à votre **historique de versions de notes** et à la **corbeille distante**
+- Elle supporte l’importation du **Single Sign-On** depuis l’application Android de Nextcloud Files
+- Elle peut faire une prévisualisation des **Markdown CommonMark et GitHub Flavored**, des listes de cases à cocher avec trois états (non fait, fait et partiel), les liens-wiki, les tableaux, le code délimité, et les images distantes
+- Elle fournit un **éditeur Markdown** avec des actions de formattage, annuler/refaire, une préservation de curseur, et une persistence des brouillons locaux
+- Elle permet d’enregistrer des **notes favorites** avec une possibilité de les voir hors-ligne et un tri avec les favoris en premier
+- Elle peut créer des notes à partir du **texte partagé par d’autres applications Android**
+- Elle offre des **thèmes clair et sombre** sur Android 9+
 
 ::: tip
-Please visit [QOwnNotes Android](qownnotes-android.md) for more information.
+Visitez [QOwnNotes Android](qownnotes-android.md) pour plus d’informations.
 :::
 
-### Other Android apps
+### Autres applications Android
 
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (tiers)
-- You could also use any sync-tool like _Synchronize Ultimate_ or _FolderSync_ to sync your note files and use software like _neutriNotes_ or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes
+- Vous pouvez aussi utiliser un outil de synchronisation comme _Synchronize Ultimate_ ou _FolderSync_ pour synchroniser vos fichiers de notes et utiliser des logiciels comme _neutriNotes_ ou [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) pour modifier vos notes
 
 ### iOS
 

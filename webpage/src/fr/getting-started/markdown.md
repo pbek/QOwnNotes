@@ -144,21 +144,21 @@ Info Les liens internes avec un titre ne sont pas supportés :
 
 :::
 
-### Footnotes
+### Notes de bas de page
 
-You can add numeric or named footnotes to link to another position in the same note:
+Vous pouvez ajouter des notes de bas de pages numériques ou nommées pour lier à une autre position dans la même note :
 
 ```markdown
-Here is some text with a footnote.[^1]
+Voici un texte avec une note de bas de page.[^1]
 
-[^1]: This is the footnote text.
+[^1]: Ceci est le texte de la note.
 
-This is a statement with a named footnote.[^source]
+Ceci est une affirmation avec une note nommée.[^source]
 
-[^source]: The source or additional explanation.
+[^source]: La source ou une explication additionnelle.
 ```
 
-Footnote references and definitions are shown as links. Hold <kbd>Ctrl</kbd> and click a footnote in the note editor to jump between its reference and definition. You can also click footnotes in the preview.
+Les références à des notes de bas de page et leurs définitions sont affichées comme des liens. Maintenez <kbd>Ctrl</kbd> et cliquez sur une note de bas de page dans l’éditeur de notes pour sauter entre sa référence et sa définition. Vois pouvez aussi cliquer sur les notes de bas de page dans la prévisualisation.
 
 ### Signets
 

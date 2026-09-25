@@ -5,16 +5,12 @@
   <img src="/img/qownnotes-android-note-view.webp" alt="QOwnNotes Android note view" style="flex: 1; min-width: 0;" />
   <img src="/img/qownnotes-android-note-edit.webp" alt="QOwnNotes Android note edit" style="flex: 1; min-width: 0;" /></div>
 
-[QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is an
-**offline-capable Markdown notes app** for Android that synchronizes with your
-Nextcloud server through the **Nextcloud Notes API** and the
-**QOwnNotesAPI** app.
+[QOwnNotes pour Android](https://github.com/qownnotes/qownnotes-android) est une **application pouvant fonctionner hors-ligne de notes Markdown** pour Android qui se synchronise avec votre serveur Nextcloud à travers l’**API Nextcloud Notes** et l’application **QOwnNotesAPI**.
 
-It talks directly to **Nextcloud Notes** and **QOwnNotesAPI** on your Nextcloud
-server, giving you access to note synchronization, server-side note versions, and
-the trash bin from your phone.
+Elle interagit directement avec **Nextcloud Notes** et **QOwnNotesAPI** sur votre serveur Nextcloud,
+vous donnant accès à la synchronisation des notes, à l’historique distant de versions de notes et à la corbeille distante, le tout depuis votre téléphone.
 
-## Features
+## Fonctionnalités
 
 - **Offline-first**: Room database as the local source of truth; edits are
   cached immediately and synchronized when the server is reachable
@@ -40,7 +36,7 @@ and download the APK.
 Development builds are published alongside stable releases and can be installed
 side-by-side (different application ID).
 
-## Nextcloud account setup
+## Configuration de compte Nextcloud
 
 1. Install the **Nextcloud Files** Android app and sign in to your server.
 2. Open QOwnNotes for Android and choose **Add Nextcloud account**.
@@ -56,16 +52,16 @@ QOwnNotes database.
 
 ## Key differences from the Nextcloud Notes mobile app
 
-| Feature                                     | QOwnNotes Android | Nextcloud Notes mobile |
+| Fonctionnalité                              | QOwnNotes Android | Nextcloud Notes mobile |
 | ------------------------------------------- | ----------------- | ---------------------- |
-| Offline editing with conflict detection     | Yes               | Limited                |
-| Note version history via QOwnNotesAPI       | Yes               | No                     |
-| Remote trash browsing and restore           | Yes               | No                     |
-| Favorites with offline toggle               | Yes               | No                     |
-| Three-state checkbox lists                  | Yes               | No                     |
-| Wiki-link and legacy `note://` link support | Yes               | No                     |
+| Offline editing with conflict detection     | Oui               | Limité                 |
+| Note version history via QOwnNotesAPI       | Oui               | Non                    |
+| Remote trash browsing and restore           | Oui               | Non                    |
+| Favorites with offline toggle               | Oui               | Non                    |
+| Three-state checkbox lists                  | Oui               | Non                    |
+| Wiki-link and legacy `note://` link support | Oui               | Non                    |
 
-## More information
+## Plus d’informations
 
-- [GitHub repository](https://github.com/qownnotes/qownnotes-android)
-- [Changelog](https://github.com/qownnotes/qownnotes-android/blob/main/CHANGELOG.md)
+- [Dépôt GitHub](https://github.com/qownnotes/qownnotes-android)
+- [Journal de modifications](https://github.com/qownnotes/qownnotes-android/blob/main/CHANGELOG.md)

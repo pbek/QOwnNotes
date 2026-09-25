@@ -24,10 +24,10 @@ Allez dans `Préférences -> Éditeur` et configurez les éléments de la sectio
 - Choisissez la `Langue`
   - La sélection automatique (`Auto-détecter`) est disponible
   - Vous pouvez également entrer un code de langue personnalisé si besoin
-- Add an optional `Username` and `API key` for [LanguageTool Premium](https://languagetool.org/premium)
-  or another LanguageTool service that requires authentication
-  - Set the `Server URL` to `https://api.languagetoolplus.com` to use the LanguageTool Premium service
-  - Both fields are sent together; leave them empty for a local or free server that needs no credentials
+- Ajoutez un `Nom d’utilisateur` et une `Clé d’API` optionnels pour [LanguageTool Premium](https://languagetool.org/premium)
+  ou un autre service LanguageTool qui nécessite une authentification
+  - Définissez l’`URL du serveur` comme `https://api.languagetoolplus.com` pour utiliser le service LanguageTool Premium
+  - Les deux champs sont envoyés ensemble ; laissez-les vides pour un serveur local ou gratuit qui ne nécessite pas d’authentification
 - Ajustez le `Délai de vérification` pour contrôler combien de temps QOwnNotes attend entre le dernier caractère tapé et l’envoi de la requête
 - Sélectionnez les catégories que vous souhaitez activer
   - `Orthographe`
