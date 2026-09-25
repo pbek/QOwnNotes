@@ -1,19 +1,13 @@
 // https://zellij.dev/documentation/creating-a-layout
 layout {
-  tab name="Launchpad" focus=true split_direction="horizontal" {
+  tab name="Launchpad, OBS, AUR, Gentoo, Slackware, Snap" focus=true split_direction="horizontal" {
     pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
     }
-    pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
-    pane size=1 borderless=true {
-      plugin location="zellij:status-bar"
+    pane split_direction="vertical" {
+      pane name="launchpad-qt6" command="../ubuntu-launchpad/build-for-launchpad-qt6.sh"
+      pane name="aur" command="aur/build-for-aur.sh"
     }
-  }
-  tab name="OBS, AUR, Gentoo, Slackware, Snap" split_direction="horizontal" {
-    pane size=1 borderless=true {
-        plugin location="zellij:tab-bar"
-    }
-    pane name="aur" command="aur/build-for-aur.sh"
     pane split_direction="vertical" {
       pane name="gentoo" command="gentoo/build-for-gentoo.sh"
       pane name="slackware" command="slackware/build-for-slackware.sh"
