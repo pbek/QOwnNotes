@@ -132,7 +132,7 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"; do
   } >"$changelogPath"
 
   # launch debuild
-  debuild -S "$DEBUILD_SOURCE_ARGS" -k$SIGNING_EMAIL
+  debuild -S -d "$DEBUILD_SOURCE_ARGS" -k$SIGNING_EMAIL
   cd .. || exit 1
 
   # send to launchpad
