@@ -11,6 +11,11 @@
 
 set -e
 
+# Older osc releases emit invalid-escape SyntaxWarnings with Python 3.12+.
+osc() {
+  PYTHONWARNINGS="ignore::SyntaxWarning" command osc "$@"
+}
+
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=19.6.1.4
 
