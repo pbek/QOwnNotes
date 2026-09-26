@@ -53,7 +53,22 @@ int Script::getId() const { return this->id; }
  *
  * @return
  */
-QString Script::getScriptPath() const { return this->scriptPath; }
+QString Script::getScriptPath() const {
+    if (!identifier.isEmpty()) {
+        QString scriptName = getInfoJsonObject().value(QStringLiteral("script")).toString();
+
+        // Older database entries may not contain complete repository metadata.
+        if (scriptName.isEmpty()) {
+            scriptName = QFileInfo(scriptPath).fileName();
+        }
+
+        if (!scriptName.isEmpty()) {
+            return scriptRepositoryPath() + QStringLiteral("/") + scriptName;
+        }
+    }
+
+    return scriptPath;
+}
 
 /**
  * Returns the directory of the script
@@ -61,7 +76,7 @@ QString Script::getScriptPath() const { return this->scriptPath; }
  * @return
  */
 QString Script::getScriptDirPath() const {
-    QFileInfo info(scriptPath);
+    QFileInfo info(getScriptPath());
     return info.canonicalPath();
 }
 
@@ -211,8 +226,9 @@ Script Script::fetchByIdentifier(const QString &identifier) {
 bool Script::refetch() { return fillFromId(id); }
 
 bool Script::scriptPathExists() const {
-    QFile file(scriptPath);
-    return file.exists() && !scriptPath.isEmpty();
+    const QString path = getScriptPath();
+    QFile file(path);
+    return file.exists() && !path.isEmpty();
 }
 
 /**
@@ -348,7 +364,7 @@ bool Script::store() {
     // make the path relative to the portable data path if we are in
     // portable mode
     query.bindValue(QStringLiteral(":scriptPath"),
-                    Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(this->scriptPath));
+                    Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(getScriptPath()));
 
     if (!query.exec()) {
         // on error
@@ -430,6 +446,18 @@ QString Script::getSettingsVariablesJson(bool hideSecrets = false) const {
  */
 QString Script::globalScriptRepositoryPath() {
     QString path = Utils::Misc::appDataPath() + QStringLiteral("/scripts");
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    const QString snapUserData = qEnvironmentVariable("SNAP_USER_DATA");
+#else
+    const QString snapUserData = QString::fromLocal8Bit(qgetenv("SNAP_USER_DATA"));
+#endif
+
+    if (!snapUserData.isEmpty() &&
+        (path == snapUserData || path.startsWith(snapUserData + QStringLiteral("/")))) {
+        const QString snapCurrentPath = QFileInfo(snapUserData).dir().filePath("current");
+        path = snapCurrentPath + path.mid(snapUserData.length());
+    }
+
     QDir dir;
 
     // create path if it doesn't exist yet

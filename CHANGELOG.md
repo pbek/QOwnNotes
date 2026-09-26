@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.9.12
+
+- Fixed scripts installed from the script repository no longer being found after a Snap
+  package update (for [#3753](https://github.com/pbek/QOwnNotes/issues/3753))
+
 ## 26.9.11
 
 - Deprecated the non-GitHub Qt 5 release packages by removing the legacy Ubuntu

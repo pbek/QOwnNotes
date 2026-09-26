@@ -1,5 +1,7 @@
 #include "test_script.h"
 
+#include <QDir>
+#include <QTemporaryDir>
 #include <QTest>
 
 #include "entities/script.h"
@@ -71,4 +73,43 @@ void TestScript::testRepositoryUrlsUseMainBranch() {
     QCOMPARE(script.repositoryChangelogUrl(),
              QUrl(QStringLiteral("https://github.com/qownnotes/scripts/blob/main/"
                                  "example-script/CHANGELOG.md")));
+}
+
+void TestScript::testSnapRepositoryPathUsesCurrentRevision() {
+#ifndef Q_OS_LINUX
+    QSKIP("Snap packages are only supported on Linux.");
+#endif
+
+    QTemporaryDir temporaryDir;
+    QVERIFY(temporaryDir.isValid());
+
+    const QByteArray oldXdgDataHome = qgetenv("XDG_DATA_HOME");
+    const QByteArray oldSnapUserData = qgetenv("SNAP_USER_DATA");
+    const QString snapUserData = temporaryDir.path() + QStringLiteral("/13781");
+    QDir().mkpath(snapUserData);
+    qputenv("XDG_DATA_HOME", (snapUserData + QStringLiteral("/.local/share")).toUtf8());
+    qputenv("SNAP_USER_DATA", snapUserData.toUtf8());
+
+    Script script;
+    script.setIdentifier(QStringLiteral("example-script"));
+    script.setInfoJson(QStringLiteral(R"({"script":"example.qml"})"));
+    script.setScriptPath(temporaryDir.path() +
+                         QStringLiteral("/13780/.local/share/PBE/QOwnNotesTests/scripts/"
+                                        "example-script/example.qml"));
+    const QString scriptPath = script.getScriptPath();
+
+    if (oldXdgDataHome.isNull()) {
+        qunsetenv("XDG_DATA_HOME");
+    } else {
+        qputenv("XDG_DATA_HOME", oldXdgDataHome);
+    }
+    if (oldSnapUserData.isNull()) {
+        qunsetenv("SNAP_USER_DATA");
+    } else {
+        qputenv("SNAP_USER_DATA", oldSnapUserData);
+    }
+
+    QCOMPARE(scriptPath, temporaryDir.path() +
+                             QStringLiteral("/current/.local/share/PBE/QOwnNotesTests/scripts/"
+                                            "example-script/example.qml"));
 }

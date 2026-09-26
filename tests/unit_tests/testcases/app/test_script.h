@@ -12,6 +12,7 @@ class TestScript : public QObject {
     void testChangelogForVersionRangeIgnoresNonVersionHeadings();
     void testChangelogHtmlForVersionRange();
     void testRepositoryUrlsUseMainBranch();
+    void testSnapRepositoryPathUsesCurrentRevision();
 };
 
 #endif    // TESTSCRIPT_H
