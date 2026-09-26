@@ -454,7 +454,22 @@ bool CryptoService::migrateSecret(QString *storedValue, const QString &key,
         return false;
     }
 
+    // SimpleCrypt returns an empty string both for an empty secret and for failed decryption.
+    // Only clear values with an integrity check: otherwise malformed input can appear to
+    // decrypt successfully, and its short-input path does not update lastError().
+    const QByteArray cipher = QByteArray::fromBase64(storedValue->toLatin1());
+    const bool hasIntegrityCheck =
+        cipher.size() >= 5 && cipher.at(0) == char(0x03) &&
+        ((cipher.at(1) & SimpleCrypt::CryptoFlagChecksum) != 0 ||
+         (cipher.size() >= 23 && (cipher.at(1) & SimpleCrypt::CryptoFlagHash) != 0));
     QString plainText = legacyDecryptToString(*storedValue);
+    const bool decrypted =
+        hasIntegrityCheck && _simpleCrypt->lastError() == SimpleCrypt::ErrorNoError;
+
+    if (decrypted && plainText.isEmpty()) {
+        storedValue->clear();
+        return true;
+    }
 
     if (plainText.isEmpty() && allowPlaintextFallback) {
         plainText = *storedValue;

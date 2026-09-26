@@ -2,6 +2,9 @@
 
 ## 26.9.13
 
+- Fixed the **Secure password storage** dialog appearing on every startup when a legacy
+  password or API key contains an encrypted empty string (for
+  [#3756](https://github.com/pbek/QOwnNotes/issues/3756))
 - Fixed duplicate taskbar icons in KDE Plasma on Wayland for the Flatpak package by
   matching the application's desktop identity to its exported launcher (for
   [#3755](https://github.com/pbek/QOwnNotes/issues/3755))

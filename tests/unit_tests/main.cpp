@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "release.h"
+#include "testcases/app/test_cryptoservice.h"
 #include "testcases/app/test_htmlentities.h"
 #include "testcases/app/test_languagetool.h"
 #include "testcases/app/test_metricsservice.h"
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestMetricsService(), argc, argv) +
                          QTest::qExec(new TestNavigationWidget(), argc, argv) +
                          QTest::qExec(new TestSettingsService(), argc, argv) +
+                         QTest::qExec(new TestCryptoService(), argc, argv) +
                          QTest::qExec(new TestScript(), argc, argv) +
                          QTest::qExec(new TestNetwork(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +

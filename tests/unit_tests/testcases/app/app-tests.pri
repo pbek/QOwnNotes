@@ -4,6 +4,7 @@ INCLUDEPATH += $$APP_SRC_DIR
 
 # Don't use wildcards here, because nmake under Windows cant't handle them
 HEADERS  += \
+    $$PWD/test_cryptoservice.h \
     $$PWD/test_htmlentities.h \
     $$PWD/test_metricsservice.h \
     $$PWD/test_network.h \
@@ -70,6 +71,7 @@ HEADERS  += \
 
 # Don't use wildcards here, because nmake under Windows cant't handle them
 SOURCES += \
+    $$PWD/test_cryptoservice.cpp \
     $$PWD/test_htmlentities.cpp \
     $$PWD/test_metricsservice.cpp \
     $$PWD/test_network.cpp \
