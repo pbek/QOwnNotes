@@ -616,8 +616,10 @@ int main(int argc, char *argv[]) {
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
-    // Help Wayland to find the desktop file for the taskbar icon
-    QGuiApplication::setDesktopFileName(QStringLiteral("PBE.QOwnNotes"));
+    // Match the desktop file exported by Flatpak so Wayland can associate the taskbar icon.
+    QGuiApplication::setDesktopFileName(qgetenv("FLATPAK_ID") == "org.qownnotes.QOwnNotes"
+                                            ? QStringLiteral("org.qownnotes.QOwnNotes")
+                                            : QStringLiteral("PBE.QOwnNotes"));
 
     QString release = RELEASE;
     bool portable = false;

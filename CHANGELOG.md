@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.9.13
+
+- Fixed duplicate taskbar icons in KDE Plasma on Wayland for the Flatpak package by
+  matching the application's desktop identity to its exported launcher (for
+  [#3755](https://github.com/pbek/QOwnNotes/issues/3755))
+  - Existing custom window rules matching the old Flatpak identity `PBE.QOwnNotes`
+    may need updating, and stale taskbar pins may need re-pinning
+
 ## 26.9.12
 
 - Fixed scripts installed from the script repository no longer being found after a Snap
