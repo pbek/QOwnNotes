@@ -463,18 +463,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // expire trashed items
     TrashItem::expireItems();
 
-    // we need to restore the current layout a little later when
-    // application window is maximized or in full-screen mode
-    if (isMaximized() || isFullScreen()) {
-        // if it is in distraction mode we restore it immediately
-        // otherwise it can result in mixed state
-        if (isInDistractionFreeMode()) {
-            _layoutManager->restoreCurrentLayout();
-        } else {
-            QTimer::singleShot(500, this, SLOT(restoreCurrentLayout()));
-        }
-    }
-
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
@@ -1201,7 +1189,8 @@ void MainWindow::initDockWidgets() {
                          : (_notePreviewIsCentralWidget ? ui->noteViewFrame : nullptr));
     updateNoteEditFrameShape();
 
-    // restore the current layout
+    // Restore the saved state only once. Replaying it after the window is shown
+    // can crash Qt while it resizes dock widgets in a maximized window.
     restoreCurrentLayout();
 
     // lock the dock widgets

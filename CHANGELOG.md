@@ -2,6 +2,8 @@
 
 ## 26.9.13
 
+- Fixed a startup crash when restoring the layout of a maximized or fullscreen window
+  (for [#3758](https://github.com/pbek/QOwnNotes/issues/3758))
 - Fixed the **Secure password storage** dialog appearing on every startup when a legacy
   password or API key contains an encrypted empty string (for
   [#3756](https://github.com/pbek/QOwnNotes/issues/3756))
