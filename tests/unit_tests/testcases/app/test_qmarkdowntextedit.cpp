@@ -185,6 +185,31 @@ void TestQMarkdownTextEdit::testDigitPrefixedIndentedCodeBlock() {
     }
 }
 
+void TestQMarkdownTextEdit::testListMarkerPrefixedIndentedCodeBlock() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(
+        QStringLiteral("    this is fine\n    123 this fine too\n    - 123 list marker\n"
+                       "    * another marker\n    + plus marker\n    1. ordered marker\n\n"
+                       "    - after blank line\n    and it stays that way"));
+
+    for (QTextBlock block = editor.document()->firstBlock(); block.isValid();
+         block = block.next()) {
+        if (block.text().isEmpty()) {
+            continue;
+        }
+
+        QCOMPARE(block.userState(), int(MarkdownHighlighter::CodeBlockIndented));
+    }
+}
+
+void TestQMarkdownTextEdit::testIndentedNestedListIsNotCodeBlock() {
+    QMarkdownTextEdit editor;
+    editor.setPlainText(QStringLiteral("- item\n    - nested item"));
+
+    QVERIFY(editor.document()->lastBlock().userState() !=
+            int(MarkdownHighlighter::CodeBlockIndented));
+}
+
 void TestQMarkdownTextEdit::testTildeSystemVerilogHighlighting() {
     QMarkdownTextEdit editor;
     editor.setPlainText(QStringLiteral("~~~sv\nmodule counter;\n~~~"));

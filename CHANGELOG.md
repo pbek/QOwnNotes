@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.9.14
+
+- Fixed editor highlighting for indented code block lines that start with a list
+  marker like `-`, `*` or `+` (for [#3749](https://github.com/pbek/QOwnNotes/issues/3749))
+
 ## 26.9.13
 
 - Fixed a startup crash when restoring the layout of a maximized or fullscreen window
