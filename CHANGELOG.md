@@ -11,6 +11,12 @@
   - A clipboard web URL can be turned into a Markdown link labeled with the page title
   - Note view provides an information dialog with note, text statistics and synchronization details
   - Editing medium-large notes with many links and tasks now stays responsive
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.0.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.0.0)
+  - The cursor can move word by word in the viewer and editor with `Ctrl-Left` and
+    `Ctrl-Right`, and text can be selected with `Ctrl-Shift-Left` and `Ctrl-Shift-Right`
+  - Typing `/` in the editor now inserts the character instead of opening the in-note search;
+    use `Ctrl-f` to search while editing
 
 ## 26.9.13
 
