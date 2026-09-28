@@ -4,6 +4,13 @@
 
 - Fixed editor highlighting for indented code block lines that start with a list
   marker like `-`, `*` or `+` (for [#3749](https://github.com/pbek/QOwnNotes/issues/3749))
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.9.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.9.0)
+  - Search text can be turned into a new note named after the query in the selected category
+  - The Markdown editor toolbar can insert the local date or date and time at the cursor
+  - A clipboard web URL can be turned into a Markdown link labeled with the page title
+  - Note view provides an information dialog with note, text statistics and synchronization details
+  - Editing medium-large notes with many links and tasks now stays responsive
 
 ## 26.9.13
 
