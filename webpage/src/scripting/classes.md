@@ -34,6 +34,8 @@ class NoteApi {
 You can use the methods from
 [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 to work with `fileCreated` or `fileLastModified`.
+To format them you can use `Qt.formatDateTime`, see
+[Formatting dates and times](methods-and-objects.md#formatting-dates-and-times).
 
 ### Example
 

@@ -1866,6 +1866,84 @@ script.log(result);
 You may want to take a look at the example
 [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
 
+## Formatting dates and times
+
+You don't need to write your own date formatting function in your scripts.
+The QML engine already provides `Qt.formatDateTime`, `Qt.formatDate` and
+`Qt.formatTime` to format a JavaScript `Date` object with a format string.
+
+### Method call and parameters
+
+```js
+/**
+ * @param date {Date} the date to format
+ * @param format {string} a format string like "yyyy-MM-dd HH:mm"
+ * @return {string} the formatted date
+ */
+string Qt.formatDateTime(Date date, string format);
+string Qt.formatDate(Date date, string format);
+string Qt.formatTime(Date date, string format);
+```
+
+Commonly used placeholders are:
+
+| Placeholder | Meaning                                 | Example     |
+| ----------- | --------------------------------------- | ----------- |
+| `yyyy`      | Year with four digits                   | `2026`      |
+| `yy`        | Year with two digits                    | `26`        |
+| `MM`        | Month with leading zero                 | `09`        |
+| `M`         | Month without leading zero              | `9`         |
+| `MMM`       | Abbreviated localized month name        | `Sep`       |
+| `MMMM`      | Full localized month name               | `September` |
+| `dd`        | Day with leading zero                   | `05`        |
+| `d`         | Day without leading zero                | `5`         |
+| `ddd`       | Abbreviated localized day name          | `Tue`       |
+| `dddd`      | Full localized day name                 | `Tuesday`   |
+| `HH`        | Hour (0-23) with leading zero           | `07`        |
+| `hh`        | Hour with leading zero (1-12 with `AP`) | `07`        |
+| `mm`        | Minute with leading zero                | `04`        |
+| `ss`        | Second with leading zero                | `09`        |
+| `AP` / `ap` | AM/PM or am/pm                          | `AM`        |
+
+Text inside single quotes is not interpreted as a placeholder, for example
+`"yyyy-MM-dd 'at' HH:mm"`.
+
+For all available placeholders please take a look at the Qt documentation
+of [QDateTime::toString](https://doc.qt.io/qt-6/qdatetime.html#toString) and
+of [Qt.formatDateTime](https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method).
+
+::: tip
+The placeholders are case-sensitive. `yyyy` is the year and `MM` is the month,
+while `mm` is the minute. Placeholders like `YYYY` or `DD`, which are known from
+other date libraries, are not supported.
+ISO week numbers are also not supported by the format strings.
+:::
+
+### Example
+
+```js
+var date = new Date();
+
+// "2026-09-29"
+script.log(Qt.formatDateTime(date, "yyyy-MM-dd"));
+
+// "20260929"
+script.log(Qt.formatDateTime(date, "yyyyMMdd"));
+
+// "Tuesday, 29. September 2026 at 14:05"
+script.log(Qt.formatDateTime(date, "dddd, d. MMMM yyyy 'at' HH:mm"));
+
+// Tag the current note with the current year and month, like "2026-09"
+script.tagCurrentNote(Qt.formatDateTime(date, "yyyy-MM"));
+
+// Also works with the dates of a note
+var note = script.currentNote();
+script.log(Qt.formatDateTime(note.fileLastModified, "yyyy-MM-dd HH:mm:ss"));
+```
+
+You may want to take a look at the example
+[journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
+
 ## Working with websockets
 
 You can remotely control QOwnNotes by using `WebSocketServer`.

@@ -18,6 +18,10 @@
   - Only Latin letters are affected, characters of other scripts are always matched exactly
   - The scripting methods `script.fetchNoteIdsByNoteTextPart` and `script.searchTagsByName`
     got a new optional `ignoreAccents` parameter
+- The scripting documentation now explains how to format dates and times with
+  `Qt.formatDateTime` and the scripting examples use it instead of formatting dates by hand
+  (for [scripts#298](https://github.com/qownnotes/scripts/issues/298))
+  - See [Formatting dates and times](https://www.qownnotes.org/scripting/methods-and-objects.html#formatting-dates-and-times)
 - There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
   [v0.9.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.9.0)
   - Search text can be turned into a new note named after the query in the selected category
