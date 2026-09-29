@@ -44,6 +44,7 @@ class TestNotes : public QObject {
     void testMarkdownImageDimensionsToHtml();
     void testSearchQueryStringListModes();
     void testSearchInNotesModes();
+    void testFoldLatinAccents();
 
     /* Preview Syntax Highlighter Tests */
     void testMarkdownTildeCodeFenceToHtml();

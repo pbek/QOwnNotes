@@ -482,6 +482,45 @@ void TestNotes::testSearchInNotesModes() {
              2);
 }
 
+void TestNotes::testFoldLatinAccents() {
+    QCOMPARE(Utils::Misc::foldLatinAccents(QStringLiteral("Avión")), QStringLiteral("Avion"));
+    QCOMPARE(Utils::Misc::foldLatinAccents(QStringLiteral("ÁÉÍÓÚ áéíóú ñÑ çÇ")),
+             QStringLiteral("AEIOU aeiou nN cC"));
+    QCOMPARE(Utils::Misc::foldLatinAccents(QStringLiteral("Straße Ærø Œuvre Łódź Þór")),
+             QStringLiteral("Strasse AEro OEuvre Lodz THor"));
+
+    // Decomposed text (base letter followed by a combining mark)
+    QCOMPARE(Utils::Misc::foldLatinAccents(QStringLiteral("Avio\u0301n")), QStringLiteral("Avion"));
+
+    // Other scripts must not be changed
+    const QStringList unchangedTexts = {
+        QStringLiteral("\u0939\u093F\u0928\u094D\u0926\u0940"),          // Hindi
+        QStringLiteral("\u304C\u304E"),                                  // Japanese
+        QStringLiteral("\u304B\u3099"),                                  // Japanese decomposed
+        QStringLiteral("\u0645\u064E\u0631\u062D\u064E\u0628\u0627"),    // Arabic
+        QStringLiteral("\uD55C\uAD6D\uC5B4"),                            // Korean
+        QStringLiteral("\u041F\u0440\u0438\u0432\u0435\u0442"),          // Cyrillic
+        QStringLiteral("plain ASCII text 123 !?"),
+    };
+    for (const QString &text : unchangedTexts) {
+        QCOMPARE(Utils::Misc::foldLatinAccents(text), text);
+    }
+
+    QVERIFY(Utils::Misc::isAccentInsensitiveSearchText(QStringLiteral("avion")));
+    QVERIFY(Utils::Misc::isAccentInsensitiveSearchText(QStringLiteral("Avion 2")));
+    QVERIFY(!Utils::Misc::isAccentInsensitiveSearchText(QStringLiteral("schön")));
+    QVERIFY(!Utils::Misc::isAccentInsensitiveSearchText(QStringLiteral("Straße")));
+    QVERIFY(!Utils::Misc::isAccentInsensitiveSearchText(QStringLiteral("123")));
+    QVERIFY(!Utils::Misc::isAccentInsensitiveSearchText(QStringLiteral("\u304C\u304E")));
+
+    QVERIFY(Utils::Misc::containsIgnoringAccents(QStringLiteral("Avión means plane"),
+                                                 QStringLiteral("AVION")));
+    QVERIFY(Utils::Misc::containsIgnoringAccents(QStringLiteral("Avion means plane"),
+                                                 QStringLiteral("avión")));
+    QVERIFY(!Utils::Misc::containsIgnoringAccents(QStringLiteral("Avion means plane"),
+                                                  QStringLiteral("train")));
+}
+
 void TestNotes::testMarkdownTildeCodeFenceToHtml() {
     QString code = QStringLiteral("# Tilde Code Fence\n");
     code += QStringLiteral("~~~cpp\n");

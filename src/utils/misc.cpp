@@ -32,6 +32,7 @@
 #include <QDebug>
 #include <QDesktopServices>
 #include <QDir>
+#include <QHash>
 #include <QHttpMultiPart>
 #include <QJSValue>
 #include <QJsonDocument>
@@ -1876,6 +1877,251 @@ bool Utils::Misc::isNoteListPreview() {
  */
 bool Utils::Misc::isEnableNoteTree() {
     return SettingsService().value(QStringLiteral("enableNoteTree")).toBool();
+}
+
+/**
+ * Returns if "searchIgnoreAccents" is turned on
+ *
+ * If enabled, searches without accented Latin characters also find text with
+ * accented Latin characters (e.g. "avion" finds "Avión")
+ */
+bool Utils::Misc::isSearchIgnoreAccentsEnabled() {
+    return SettingsService().value(QStringLiteral("searchIgnoreAccents"), false).toBool();
+}
+
+namespace {
+/**
+ * Returns true if the character is in the "Combining Diacritical Marks" block,
+ * which contains the accents that can be attached to Latin letters
+ */
+inline bool isLatinCombiningMark(const QChar ch) {
+    const ushort code = ch.unicode();
+    return code >= 0x0300 && code <= 0x036F;
+}
+
+/**
+ * Returns the folding for Latin characters that have no Unicode decomposition
+ * (e.g. "ß" or "ø"), or an empty string if there is none
+ */
+QString specialLatinFolding(const QChar ch) {
+    switch (ch.unicode()) {
+        case 0x00DF:    // ß
+            return QStringLiteral("ss");
+        case 0x1E9E:    // ẞ
+            return QStringLiteral("SS");
+        case 0x00E6:    // æ
+            return QStringLiteral("ae");
+        case 0x00C6:    // Æ
+            return QStringLiteral("AE");
+        case 0x0153:    // œ
+            return QStringLiteral("oe");
+        case 0x0152:    // Œ
+            return QStringLiteral("OE");
+        case 0x00F8:    // ø
+            return QStringLiteral("o");
+        case 0x00D8:    // Ø
+            return QStringLiteral("O");
+        case 0x0142:    // ł
+            return QStringLiteral("l");
+        case 0x0141:    // Ł
+            return QStringLiteral("L");
+        case 0x0111:    // đ
+            return QStringLiteral("d");
+        case 0x0110:    // Đ
+            return QStringLiteral("D");
+        case 0x00FE:    // þ
+            return QStringLiteral("th");
+        case 0x00DE:    // Þ
+            return QStringLiteral("TH");
+        default:
+            return {};
+    }
+}
+}    // namespace
+
+/**
+ * Removes accents from Latin characters, e.g. "Avión" becomes "Avion" and
+ * "Straße" becomes "Strasse"
+ *
+ * Only Latin characters are folded, characters of other scripts (e.g. Arabic,
+ * Hebrew, Devanagari, Japanese or Korean) are kept untouched, because there
+ * the "accents" are an essential part of the character.
+ * Both precomposed characters and Latin base characters followed by combining
+ * diacritical marks (decomposed text) are handled.
+ * The case of the characters is not changed.
+ */
+QString Utils::Misc::foldLatinAccents(const QString &text) {
+    QString result;
+    result.reserve(text.size());
+    bool previousIsLatinLetter = false;
+
+    for (const QChar ch : text) {
+        const ushort code = ch.unicode();
+
+        // Drop accents that are attached to a Latin letter in decomposed text
+        if (isLatinCombiningMark(ch)) {
+            if (!previousIsLatinLetter) {
+                result.append(ch);
+            }
+
+            continue;
+        }
+
+        // Fast path for ASCII characters
+        if (code < 0x80) {
+            result.append(ch);
+            previousIsLatinLetter = ch.isLetter();
+            continue;
+        }
+
+        if (ch.script() != QChar::Script_Latin) {
+            result.append(ch);
+            previousIsLatinLetter = false;
+            continue;
+        }
+
+        previousIsLatinLetter = ch.isLetter();
+        const QString special = specialLatinFolding(ch);
+        if (!special.isEmpty()) {
+            result.append(special);
+            continue;
+        }
+
+        // Decompose the precomposed Latin character and drop its accents
+        const QString decomposed = QString(ch).normalized(QString::NormalizationForm_D);
+        for (const QChar decomposedChar : decomposed) {
+            if (!isLatinCombiningMark(decomposedChar)) {
+                result.append(decomposedChar);
+            }
+        }
+    }
+
+    return result;
+}
+
+/**
+ * Returns true if an accent-insensitive search should be done for the search
+ * text
+ *
+ * This is only the case if the search text contains Latin letters, but no
+ * accented Latin letters. So "avion" will also find "Avión", but "schön"
+ * will not find "schon".
+ */
+bool Utils::Misc::isAccentInsensitiveSearchText(const QString &text) {
+    static const QRegularExpression latinLetterExpression(QStringLiteral("[A-Za-z]"));
+    return text.contains(latinLetterExpression) && foldLatinAccents(text) == text;
+}
+
+/**
+ * Checks if "text" contains "searchText" while ignoring accents of Latin
+ * characters and the case of all characters
+ */
+bool Utils::Misc::containsIgnoringAccents(const QString &text, const QString &searchText) {
+    return foldLatinAccents(text).contains(foldLatinAccents(searchText), Qt::CaseInsensitive);
+}
+
+/**
+ * Builds a regular expression pattern that finds "text" in unmodified text
+ * while ignoring accents of Latin characters
+ *
+ * Every Latin letter will be replaced by a character class of all its accented
+ * variants, optionally followed by combining diacritical marks, e.g. "a"
+ * becomes "[aAàáâãäåāăą...][\x{0300}-\x{036F}]*". All other characters are
+ * escaped. The pattern is meant to be used with a case-insensitive regular
+ * expression. It works with QRegularExpression and QRegExp.
+ *
+ * The letter pairs "ss", "ae", "oe" and "th" also match "ß", "æ", "œ" and
+ * "þ", if they don't overlap with another pair.
+ */
+QString Utils::Misc::accentInsensitiveRegularExpressionPattern(const QString &text) {
+    // Map of ASCII letters (lowercase) to all Latin characters that fold to them
+    static const QHash<QChar, QString> letterVariants = [] {
+        QHash<QChar, QString> hash;
+        const auto addRange = [&hash](ushort from, ushort to) {
+            for (ushort code = from; code <= to; ++code) {
+                const QChar ch(code);
+                if (ch.script() != QChar::Script_Latin || !ch.isLetter()) {
+                    continue;
+                }
+
+                const QString folded = foldLatinAccents(QString(ch)).toLower();
+                if (folded.size() == 1 && folded.at(0).unicode() < 0x80 &&
+                    folded.at(0).isLetter()) {
+                    hash[folded.at(0)].append(ch);
+                }
+            }
+        };
+
+        // Latin-1 Supplement, Latin Extended-A and -B, IPA Extensions
+        addRange(0x00C0, 0x024F);
+        // Latin Extended Additional
+        addRange(0x1E00, 0x1EFF);
+        // Latin Extended-C
+        addRange(0x2C60, 0x2C7F);
+        // Latin Extended-D
+        addRange(0xA720, 0xA7FF);
+
+        return hash;
+    }();
+
+    static const QHash<QString, QString> pairVariants = {
+        {QStringLiteral("ss"), QStringLiteral("\u00DF\u1E9E")},
+        {QStringLiteral("ae"), QStringLiteral("\u00E6\u00C6")},
+        {QStringLiteral("oe"), QStringLiteral("\u0153\u0152")},
+        {QStringLiteral("th"), QStringLiteral("\u00FE\u00DE")},
+    };
+
+    // Combining diacritical marks as literal characters, so the pattern also
+    // works with QRegExp, which doesn't support "\x{...}"
+    const QString combiningMarks = QStringLiteral("[") + QChar(0x0300) + QStringLiteral("-") +
+                                   QChar(0x036F) + QStringLiteral("]*");
+
+    const auto letterClass = [&combiningMarks](const QChar letter) {
+        const QChar lowerLetter = letter.toLower();
+        return QStringLiteral("[") + lowerLetter + lowerLetter.toUpper() +
+               letterVariants.value(lowerLetter) + QStringLiteral("]") + combiningMarks;
+    };
+
+    QString pattern;
+    QString plainText;
+    const auto flushPlainText = [&pattern, &plainText] {
+        if (!plainText.isEmpty()) {
+            // Escape whole runs, so surrogate pairs are not split up
+            pattern += QRegularExpression::escape(plainText);
+            plainText.clear();
+        }
+    };
+
+    for (int i = 0; i < text.size(); ++i) {
+        const QChar ch = text.at(i);
+        const bool isAsciiLetter = ch.unicode() < 0x80 && ch.isLetter();
+
+        if (!isAsciiLetter) {
+            plainText.append(ch);
+            continue;
+        }
+
+        flushPlainText();
+
+        // Letter pairs that can also be written as a single character
+        if (i + 1 < text.size()) {
+            const QString pair = text.mid(i, 2).toLower();
+            const auto pairIt = pairVariants.constFind(pair);
+            if (pairIt != pairVariants.constEnd()) {
+                pattern += QStringLiteral("(?:") + letterClass(pair.at(0)) +
+                           letterClass(pair.at(1)) + QStringLiteral("|[") + pairIt.value() +
+                           QStringLiteral("])");
+                ++i;
+                continue;
+            }
+        }
+
+        pattern += letterClass(ch);
+    }
+
+    flushPlainText();
+
+    return pattern;
 }
 
 /**
