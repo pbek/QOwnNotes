@@ -152,7 +152,7 @@ class Tag : protected TagHeader {
 
     static QSet<int> fetchAllIdsByNote(const Note &note);
 
-    static QStringList searchAllNamesByName(const QString &name);
+    static QStringList searchAllNamesByName(const QString &name, bool ignoreAccents = false);
 
     static QVector<Tag> fetchRecursivelyByParentId(const int parentId);
 

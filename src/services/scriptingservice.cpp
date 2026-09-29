@@ -2308,10 +2308,14 @@ QList<int> ScriptingService::selectedNotesIds() const {
  * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
  * can only transfer the note ids
  *
+ * @param text {QString} text to search for
+ * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
+ *                             (optional, default: false)
  * @return {QList<int>} list of note ids
  */
-QVector<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text) const {
-    QVector<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
+QVector<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text,
+                                                          bool ignoreAccents) const {
+    QVector<int> noteIds = Note::fetchAllIdsByNoteTextPart(text, ignoreAccents);
     return noteIds;
 }
 
@@ -2523,13 +2527,15 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
  * Fetches all tags by doing a substring search on the name field
  *
  * @param name {QString} name to search for
+ * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
+ *                             (optional, default: false)
  * @return {QStringList} list of tag names
  */
-QStringList ScriptingService::searchTagsByName(const QString &name) const {
+QStringList ScriptingService::searchTagsByName(const QString &name, bool ignoreAccents) const {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
                                                    QString(__func__));
 
-    QStringList tags = Tag::searchAllNamesByName(name);
+    QStringList tags = Tag::searchAllNamesByName(name, ignoreAccents);
     return tags;
 }
 

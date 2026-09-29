@@ -688,23 +688,38 @@ QSet<int> Tag::fetchAllIdsByNote(const Note &note) {
 
 /**
  * Fetches the names by substring searching for the name
+ *
+ * If `ignoreAccents` is true, accents of Latin characters and the case of all
+ * characters are ignored
  */
-QStringList Tag::searchAllNamesByName(const QString &name) {
+QStringList Tag::searchAllNamesByName(const QString &name, bool ignoreAccents) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
 
-    query.prepare(
-        QStringLiteral("SELECT name FROM tag "
-                       "WHERE name LIKE :name "
-                       "ORDER BY priority ASC, name ASC"));
-    query.bindValue(QStringLiteral(":name"), "%" + name + "%");
+    if (ignoreAccents) {
+        // SQLite can't ignore accents, so we need to check the tag names in Qt
+        query.prepare(
+            QStringLiteral("SELECT name FROM tag "
+                           "ORDER BY priority ASC, name ASC"));
+    } else {
+        query.prepare(
+            QStringLiteral("SELECT name FROM tag "
+                           "WHERE name LIKE :name "
+                           "ORDER BY priority ASC, name ASC"));
+        query.bindValue(QStringLiteral(":name"), "%" + name + "%");
+    }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            tagNameList << query.value(QStringLiteral("name")).toString();
+            const QString tagName = query.value(QStringLiteral("name")).toString();
+            if (ignoreAccents && !Utils::Misc::containsIgnoringAccents(tagName, name)) {
+                continue;
+            }
+
+            tagNameList << tagName;
         }
     }
 

@@ -856,9 +856,11 @@ var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
  * Fetches all tags by doing a substring search on the name field
  *
  * @param name {QString} name to search for
+ * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
+ *                             (optional, default: false)
  * @return {QStringList} list of tag names
  */
-QStringList ScriptingService::searchTagsByName(QString name);
+QStringList ScriptingService::searchTagsByName(QString name, bool ignoreAccents = false);
 ```
 
 ### Example
@@ -866,6 +868,9 @@ QStringList ScriptingService::searchTagsByName(QString name);
 ```js
 // searches for all tags with the word game in it
 var tags = script.searchTagsByName("game");
+
+// searches for all tags with the word café or cafe in it
+var tags = script.searchTagsByName("cafe", true);
 ```
 
 You may want to take a look at the example
@@ -882,15 +887,21 @@ You may want to take a look at the example
  * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
  * can only transfer the note ids
  *
+ * @param text {QString} text to search for
+ * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
+ *                             (optional, default: false)
  * @return {QList<int>} list of note ids
  */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
+QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text, bool ignoreAccents = false);
 ```
 
 ### Example
 
 ```js
 var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
+
+// also finds notes with "Avión" or "avion" in the note text
+var accentInsensitiveNoteIds = script.fetchNoteIdsByNoteTextPart("avion", true);
 
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);

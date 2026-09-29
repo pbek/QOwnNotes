@@ -195,7 +195,7 @@ class ScriptingService : public QObject {
 
     QList<QVariantMap> callOpenAiBackendsHook() const;
 
-    Q_INVOKABLE QStringList searchTagsByName(const QString &name) const;
+    Q_INVOKABLE QStringList searchTagsByName(const QString &name, bool ignoreAccents = false) const;
 
     Q_INVOKABLE TagApi *getTagByNameBreadcrumbList(const QStringList &nameList,
                                                    bool createMissing = true) const;
@@ -209,7 +209,8 @@ class ScriptingService : public QObject {
     Q_INVOKABLE QString readFromFile(const QString &filePath, const QString &codec = "UTF-8") const;
     Q_INVOKABLE bool fileExists(const QString &filePath) const;
 
-    Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(const QString &text) const;
+    Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(const QString &text,
+                                                        bool ignoreAccents = false) const;
 
     Q_INVOKABLE void triggerMenuAction(const QString &objectName,
                                        const QString &checked = QString()) const;
