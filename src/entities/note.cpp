@@ -1930,6 +1930,44 @@ QString Note::removeNameSearchPrefix(QString searchTerm) {
     return searchTerm.remove(re);
 }
 
+namespace {
+/**
+ * Returns the regular expression pattern to find a search term in a text that
+ * was already prepared for the search term (accents folded for
+ * accent-insensitive search terms)
+ */
+QString preparedTextSearchTermPattern(const NoteSearchTerm &searchTerm) {
+    const QString escapedText = QRegularExpression::escape(searchTerm.text);
+    if (!searchTerm.wholeWord) {
+        return escapedText;
+    }
+
+    return QStringLiteral("\\b") + escapedText + QStringLiteral("\\b");
+}
+
+/**
+ * Checks if a text, that was already prepared for the search term (accents
+ * folded for accent-insensitive search terms), matches the search term
+ */
+bool preparedTextMatchesSearchTerm(const QString &text, const NoteSearchTerm &searchTerm) {
+    if (!searchTerm.wholeWord) {
+        return text.contains(searchTerm.text, Qt::CaseInsensitive);
+    }
+
+    const QRegularExpression expression(
+        preparedTextSearchTermPattern(searchTerm),
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption);
+    return expression.match(text).hasMatch();
+}
+
+/**
+ * Prepares a text for being searched with a search term
+ */
+QString prepareTextForSearchTerm(const QString &text, const NoteSearchTerm &searchTerm) {
+    return searchTerm.accentInsensitive ? Utils::Misc::foldLatinAccents(text) : text;
+}
+}    // namespace
+
 /**
  * Searches for text in notes and returns the note ids
  *
@@ -1940,9 +1978,12 @@ QString Note::removeNameSearchPrefix(QString searchTerm) {
  * will find all notes that are containing `this word1` and `word2`
  *
  * The `word:` and `w:` operators match complete words instead of substrings.
+ *
+ * If `ignoreAccents` is true, search terms without accented Latin characters
+ * also match text with accented Latin characters (e.g. `avion` finds `Avión`)
  */
 QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int noteSubFolderId,
-                                 const QString &connectionName) {
+                                 const QString &connectionName, bool ignoreAccents) {
     const QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
     auto noteIdList = QVector<int>();
@@ -1954,20 +1995,28 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
     }
 
     // build the string list of the search string
-    const QVector<NoteSearchTerm> searchTerms = buildSearchTermList(std::move(search));
+    const QVector<NoteSearchTerm> searchTerms =
+        buildSearchTermList(std::move(search), ignoreAccents);
     if (searchTerms.isEmpty()) {
         return noteIdList;
     }
-    const bool hasWholeWordSearch =
+
+    // SQLite LIKE only performs ASCII case folding and can't ignore accents, so
+    // whole-word and accent-insensitive terms are checked in Qt
+    const auto isCheckedInQt = [](const NoteSearchTerm &searchTerm) {
+        return searchTerm.wholeWord || searchTerm.accentInsensitive;
+    };
+    const bool hasQtCheckedSearch =
+        std::any_of(searchTerms.cbegin(), searchTerms.cend(), isCheckedInQt);
+    const bool hasAccentInsensitiveSearch =
         std::any_of(searchTerms.cbegin(), searchTerms.cend(),
-                    [](const NoteSearchTerm &searchTerm) { return searchTerm.wholeWord; });
+                    [](const NoteSearchTerm &searchTerm) { return searchTerm.accentInsensitive; });
 
     sqlList.reserve(searchTerms.count());
 
     // we want to search for the text in the note text and the filename
     for (const NoteSearchTerm &searchTerm : searchTerms) {
-        // SQLite LIKE only performs ASCII case folding, so whole-word terms are checked in Qt.
-        if (searchTerm.wholeWord) {
+        if (isCheckedInQt(searchTerm)) {
             sqlList.append(QStringLiteral("1"));
             continue;
         }
@@ -1983,7 +2032,7 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
     }
 
     QString sql;
-    const QString columns = hasWholeWordSearch ? QStringLiteral("id, name, file_name, note_text")
+    const QString columns = hasQtCheckedSearch ? QStringLiteral("id, name, file_name, note_text")
                                                : QStringLiteral("id");
 
     // build the query
@@ -2004,7 +2053,7 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
     // add the values to the query
     int bindPosition = ignoreNoteSubFolder ? 0 : 1;
     for (const NoteSearchTerm &searchTerm : searchTerms) {
-        if (searchTerm.wholeWord) {
+        if (isCheckedInQt(searchTerm)) {
             continue;
         }
 
@@ -2018,7 +2067,7 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            if (!hasWholeWordSearch) {
+            if (!hasQtCheckedSearch) {
                 noteIdList.append(query.value(QStringLiteral("id")).toInt());
                 continue;
             }
@@ -2030,19 +2079,37 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder, int n
                 QStringLiteral("\n%1\n").arg(QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING)));
             bool matches = true;
 
-            // LIKE narrows the candidates; validate word boundaries in Qt because SQLite has no
-            // built-in whole-word matching.
+            // Fold the accents only once per note, not once per search term
+            QString foldedName;
+            QString foldedFileName;
+            QString foldedNoteText;
+            if (hasAccentInsensitiveSearch) {
+                foldedName = Utils::Misc::foldLatinAccents(name);
+                foldedFileName = Utils::Misc::foldLatinAccents(fileName);
+                if (!hasEncryptedText) {
+                    foldedNoteText = Utils::Misc::foldLatinAccents(noteText);
+                }
+            }
+
+            // LIKE narrows the candidates; validate word boundaries and accent-insensitive
+            // matches in Qt because SQLite has no built-in support for them.
             for (const NoteSearchTerm &searchTerm : searchTerms) {
-                if (!searchTerm.wholeWord) {
+                if (!isCheckedInQt(searchTerm)) {
                     continue;
                 }
 
+                const bool folded = searchTerm.accentInsensitive;
+                const QString &termName = folded ? foldedName : name;
+                const QString &termFileName = folded ? foldedFileName : fileName;
+                const QString &termNoteText = folded ? foldedNoteText : noteText;
+
                 const bool termMatches =
                     searchTerm.nameOnly
-                        ? textMatchesSearchTerm(name, searchTerm) ||
-                              textMatchesSearchTerm(fileName, searchTerm)
-                        : textMatchesSearchTerm(name, searchTerm) ||
-                              (!hasEncryptedText && textMatchesSearchTerm(noteText, searchTerm));
+                        ? preparedTextMatchesSearchTerm(termName, searchTerm) ||
+                              preparedTextMatchesSearchTerm(termFileName, searchTerm)
+                        : preparedTextMatchesSearchTerm(termName, searchTerm) ||
+                              (!hasEncryptedText &&
+                               preparedTextMatchesSearchTerm(termNoteText, searchTerm));
                 if (!termMatches) {
                     matches = false;
                     break;
@@ -2063,15 +2130,20 @@ int Note::countSearchTextInNote(const QString &search) const {
 }
 
 int Note::countSearchTextInNote(const NoteSearchTerm &searchTerm) const {
-    if (!searchTerm.wholeWord) {
+    if (!searchTerm.wholeWord && !searchTerm.accentInsensitive) {
         return countSearchTextInNote(searchTerm.text);
     }
 
+    const QString text = prepareTextForSearchTerm(_noteText, searchTerm);
+    if (!searchTerm.wholeWord) {
+        return text.count(searchTerm.text, Qt::CaseInsensitive);
+    }
+
     const QRegularExpression expression(
-        searchTermRegularExpression(searchTerm),
+        preparedTextSearchTermPattern(searchTerm),
         QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption);
     int count = 0;
-    QRegularExpressionMatchIterator iterator = expression.globalMatch(_noteText);
+    QRegularExpressionMatchIterator iterator = expression.globalMatch(text);
     while (iterator.hasNext()) {
         iterator.next();
         ++count;
@@ -2080,9 +2152,15 @@ int Note::countSearchTextInNote(const NoteSearchTerm &searchTerm) const {
     return count;
 }
 
-QVector<NoteSearchTerm> Note::buildSearchTermList(QString searchString) {
+/**
+ * Builds the list of search terms of a search string
+ *
+ * If `ignoreAccents` is true, search terms without accented Latin characters
+ * will be marked as accent-insensitive
+ */
+QVector<NoteSearchTerm> Note::buildSearchTermList(QString searchString, bool ignoreAccents) {
     QVector<NoteSearchTerm> searchTerms;
-    const auto appendSearchTerm = [&searchTerms](QString text) {
+    const auto appendSearchTerm = [&searchTerms, ignoreAccents](QString text) {
         const QString originalText = text;
         NoteSearchTerm searchTerm;
         static const QRegularExpression prefixExpression(QStringLiteral("^(name:|word:|n:|w:)"));
@@ -2104,6 +2182,9 @@ QVector<NoteSearchTerm> Note::buildSearchTermList(QString searchString) {
         if (searchTerm.text.isEmpty() || originalText.size() < 2) {
             return;
         }
+
+        searchTerm.accentInsensitive =
+            ignoreAccents && Utils::Misc::isAccentInsensitiveSearchText(searchTerm.text);
 
         const auto duplicate = std::find_if(
             searchTerms.cbegin(), searchTerms.cend(), [&searchTerm](const NoteSearchTerm &term) {
@@ -2138,24 +2219,26 @@ QVector<NoteSearchTerm> Note::buildSearchTermList(QString searchString) {
     return searchTerms;
 }
 
+/**
+ * Returns a regular expression pattern to find the search term in unmodified
+ * text, e.g. to highlight it
+ *
+ * The pattern is meant to be used case-insensitively.
+ */
 QString Note::searchTermRegularExpression(const NoteSearchTerm &searchTerm) {
-    const QString escapedText = QRegularExpression::escape(searchTerm.text);
+    const QString pattern =
+        searchTerm.accentInsensitive
+            ? Utils::Misc::accentInsensitiveRegularExpressionPattern(searchTerm.text)
+            : QRegularExpression::escape(searchTerm.text);
     if (!searchTerm.wholeWord) {
-        return escapedText;
+        return pattern;
     }
 
-    return QStringLiteral("\\b%1\\b").arg(escapedText);
+    return QStringLiteral("\\b") + pattern + QStringLiteral("\\b");
 }
 
 bool Note::textMatchesSearchTerm(const QString &text, const NoteSearchTerm &searchTerm) {
-    if (!searchTerm.wholeWord) {
-        return text.contains(searchTerm.text, Qt::CaseInsensitive);
-    }
-
-    const QRegularExpression expression(
-        searchTermRegularExpression(searchTerm),
-        QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption);
-    return expression.match(text).hasMatch();
+    return preparedTextMatchesSearchTerm(prepareTextForSearchTerm(text, searchTerm), searchTerm);
 }
 
 /**
@@ -2247,21 +2330,45 @@ QStringList Note::fetchNoteFileNames() {
     return list;
 }
 
-QVector<int> Note::fetchAllIdsByNoteTextPart(const QString &textPart) {
+/**
+ * Fetches the ids of all notes that contain a text part in their note text
+ *
+ * If `ignoreAccents` is true, accents of Latin characters are ignored in
+ * both the text part and the note text, and the case of all characters is
+ * ignored (e.g. `avion` and `Avión` find both `Avion` and `avión`)
+ */
+QVector<int> Note::fetchAllIdsByNoteTextPart(const QString &textPart, bool ignoreAccents) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QVector<int> list;
 
-    query.prepare(
-        QStringLiteral("SELECT id FROM note WHERE note_text LIKE :text "
-                       "ORDER BY file_last_modified DESC"));
-    query.bindValue(QStringLiteral(":text"), QStringLiteral("%") + textPart + QStringLiteral("%"));
+    if (ignoreAccents) {
+        // SQLite can't ignore accents, so we need to check the note texts in Qt
+        query.prepare(
+            QStringLiteral("SELECT id, note_text FROM note "
+                           "ORDER BY file_last_modified DESC"));
+    } else {
+        query.prepare(
+            QStringLiteral("SELECT id FROM note WHERE note_text LIKE :text "
+                           "ORDER BY file_last_modified DESC"));
+        query.bindValue(QStringLiteral(":text"),
+                        QStringLiteral("%") + textPart + QStringLiteral("%"));
+    }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        const QString foldedTextPart =
+            ignoreAccents ? Utils::Misc::foldLatinAccents(textPart) : QString();
+
         for (int r = 0; query.next(); r++) {
+            if (ignoreAccents &&
+                !Utils::Misc::foldLatinAccents(query.value(QStringLiteral("note_text")).toString())
+                     .contains(foldedTextPart, Qt::CaseInsensitive)) {
+                continue;
+            }
+
             list.append(query.value(QStringLiteral("id")).toInt());
         }
     }

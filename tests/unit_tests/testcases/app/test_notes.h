@@ -45,6 +45,8 @@ class TestNotes : public QObject {
     void testSearchQueryStringListModes();
     void testSearchInNotesModes();
     void testFoldLatinAccents();
+    void testAccentInsensitiveRegularExpressionPattern();
+    void testSearchInNotesIgnoringAccents();
 
     /* Preview Syntax Highlighter Tests */
     void testMarkdownTildeCodeFenceToHtml();

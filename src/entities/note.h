@@ -37,6 +37,8 @@ struct NoteSearchTerm {
     QString wordPrefix;
     bool nameOnly = false;
     bool wholeWord = false;
+    // Ignore accents of Latin characters in the searched text (see #3128)
+    bool accentInsensitive = false;
 };
 
 // Add hash function for LinkHit
@@ -260,12 +262,14 @@ class Note {
 
     static QVector<int> searchInNotes(QString query, bool ignoreNoteSubFolder = false,
                                       int noteSubFolderId = -1,
-                                      const QString &connectionName = QStringLiteral("memory"));
+                                      const QString &connectionName = QStringLiteral("memory"),
+                                      bool ignoreAccents = false);
 
     int countSearchTextInNote(const QString &search) const;
     int countSearchTextInNote(const NoteSearchTerm &searchTerm) const;
 
-    static QVector<NoteSearchTerm> buildSearchTermList(QString searchString);
+    static QVector<NoteSearchTerm> buildSearchTermList(QString searchString,
+                                                       bool ignoreAccents = false);
     static QString searchTermRegularExpression(const NoteSearchTerm &searchTerm);
     static bool textMatchesSearchTerm(const QString &text, const NoteSearchTerm &searchTerm);
 
@@ -368,7 +372,8 @@ class Note {
 
     static Note fetchByUrlString(const QString &urlString);
 
-    static QVector<int> fetchAllIdsByNoteTextPart(const QString &textPart);
+    static QVector<int> fetchAllIdsByNoteTextPart(const QString &textPart,
+                                                  bool ignoreAccents = false);
 
     QStringList getAttachmentsFileList() const;
 

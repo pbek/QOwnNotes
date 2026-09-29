@@ -521,6 +521,117 @@ void TestNotes::testFoldLatinAccents() {
                                                   QStringLiteral("train")));
 }
 
+void TestNotes::testAccentInsensitiveRegularExpressionPattern() {
+    const auto matchedText = [](const QString &searchText, const QString &text) {
+        const QRegularExpression expression(
+            Utils::Misc::accentInsensitiveRegularExpressionPattern(searchText),
+            QRegularExpression::CaseInsensitiveOption |
+                QRegularExpression::UseUnicodePropertiesOption);
+        return expression.match(text).captured(0);
+    };
+
+    QCOMPARE(matchedText(QStringLiteral("avion"), QStringLiteral("An Avión here")),
+             QStringLiteral("Avión"));
+    QCOMPARE(matchedText(QStringLiteral("avion"), QStringLiteral("An AVIÓN here")),
+             QStringLiteral("AVIÓN"));
+    QCOMPARE(matchedText(QStringLiteral("avion"), QStringLiteral("An Avio\u0301n here")),
+             QStringLiteral("Avio\u0301n"));
+    QCOMPARE(matchedText(QStringLiteral("strasse"), QStringLiteral("Die Straße")),
+             QStringLiteral("Straße"));
+    QCOMPARE(matchedText(QStringLiteral("strasse"), QStringLiteral("Die Strasse")),
+             QStringLiteral("Strasse"));
+    QCOMPARE(matchedText(QStringLiteral("a.b (c)"), QStringLiteral("x á.b (ç) y")),
+             QStringLiteral("á.b (ç)"));
+    QVERIFY(matchedText(QStringLiteral("a.b"), QStringLiteral("axb")).isEmpty());
+    QCOMPARE(matchedText(QStringLiteral("\u304C x"), QStringLiteral("\u304C x")),
+             QStringLiteral("\u304C x"));
+    QVERIFY(matchedText(QStringLiteral("avion"), QStringLiteral("train")).isEmpty());
+
+    NoteSearchTerm term;
+    term.text = QStringLiteral("avion");
+    term.accentInsensitive = true;
+    term.wholeWord = true;
+    const QRegularExpression wholeWordExpression(
+        Note::searchTermRegularExpression(term),
+        QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption);
+    QVERIFY(wholeWordExpression.match(QStringLiteral("un avión.")).hasMatch());
+    QVERIFY(!wholeWordExpression.match(QStringLiteral("aviónica")).hasMatch());
+}
+
+void TestNotes::testSearchInNotesIgnoringAccents() {
+    QString word = uniqueTestName(QStringLiteral("avion"));
+    word.remove(QChar('-'));
+    // The unique part of the name must not contain other Latin letters that
+    // could be accented, so we only use the prefix for the accented variant
+    const QString accentedWord = QStringLiteral("Avión") + word.mid(5);
+    const QString umlautWord = QStringLiteral("schön") + word.mid(5);
+    const QString plainUmlautWord = QStringLiteral("schon") + word.mid(5);
+
+    const Note accentedTextNote =
+        createTestNote(uniqueTestName(QStringLiteral("Accent text")), 0,
+                       QStringLiteral("# Accent text\n%1 means plane\n").arg(accentedWord));
+    const Note accentedWordNote =
+        createTestNote(uniqueTestName(QStringLiteral("Accent word")), 0,
+                       QStringLiteral("# Accent word\n%1ica\n").arg(accentedWord));
+    const Note accentedNameNote = createTestNote(accentedWord, 0, QStringLiteral("# Name\n"));
+    const Note plainUmlautNote =
+        createTestNote(uniqueTestName(QStringLiteral("Umlaut")), 0,
+                       QStringLiteral("# Umlaut\n%1\n").arg(plainUmlautWord));
+
+    // Without ignoring accents (default, e.g. used for backlinks) only exact
+    // matches are found
+    const QVector<int> exactNoteIds = Note::searchInNotes(word, true);
+    QVERIFY(!exactNoteIds.contains(accentedTextNote.getId()));
+    QVERIFY(!exactNoteIds.contains(accentedNameNote.getId()));
+
+    const QVector<int> noteIds =
+        Note::searchInNotes(word, true, -1, QStringLiteral("memory"), true);
+    QVERIFY(noteIds.contains(accentedTextNote.getId()));
+    QVERIFY(noteIds.contains(accentedWordNote.getId()));
+    QVERIFY(noteIds.contains(accentedNameNote.getId()));
+
+    const QVector<int> upperCaseNoteIds =
+        Note::searchInNotes(word.toUpper(), true, -1, QStringLiteral("memory"), true);
+    QVERIFY(upperCaseNoteIds.contains(accentedTextNote.getId()));
+
+    // Whole-word search
+    const QVector<int> wholeWordNoteIds =
+        Note::searchInNotes(QStringLiteral("w:") + word, true, -1, QStringLiteral("memory"), true);
+    QVERIFY(wholeWordNoteIds.contains(accentedTextNote.getId()));
+    QVERIFY(!wholeWordNoteIds.contains(accentedWordNote.getId()));
+
+    // Name-only search
+    const QVector<int> nameNoteIds =
+        Note::searchInNotes(QStringLiteral("n:") + word, true, -1, QStringLiteral("memory"), true);
+    QVERIFY(nameNoteIds.contains(accentedNameNote.getId()));
+    QVERIFY(!nameNoteIds.contains(accentedTextNote.getId()));
+
+    // Combined with a term that is still searched with SQL
+    const QVector<int> combinedNoteIds = Note::searchInNotes(word + QStringLiteral(" plane"), true,
+                                                             -1, QStringLiteral("memory"), true);
+    QVERIFY(combinedNoteIds.contains(accentedTextNote.getId()));
+    QVERIFY(!combinedNoteIds.contains(accentedWordNote.getId()));
+
+    // Search texts with accents only find exact matches
+    const QVector<int> umlautNoteIds =
+        Note::searchInNotes(umlautWord, true, -1, QStringLiteral("memory"), true);
+    QVERIFY(!umlautNoteIds.contains(plainUmlautNote.getId()));
+
+    const NoteSearchTerm term = Note::buildSearchTermList(word, true).constFirst();
+    QVERIFY(term.accentInsensitive);
+    QVERIFY(!Note::buildSearchTermList(word).constFirst().accentInsensitive);
+    QVERIFY(!Note::buildSearchTermList(umlautWord, true).constFirst().accentInsensitive);
+    QCOMPARE(accentedTextNote.countSearchTextInNote(term), 1);
+    QCOMPARE(accentedWordNote.countSearchTextInNote(term), 1);
+    QVERIFY(Note::textMatchesSearchTerm(accentedWord, term));
+
+    // Scripting API
+    QVERIFY(!Note::fetchAllIdsByNoteTextPart(word).contains(accentedTextNote.getId()));
+    QVERIFY(Note::fetchAllIdsByNoteTextPart(word, true).contains(accentedTextNote.getId()));
+    QVERIFY(Note::fetchAllIdsByNoteTextPart(accentedWord.toLower(), true)
+                .contains(accentedTextNote.getId()));
+}
+
 void TestNotes::testMarkdownTildeCodeFenceToHtml() {
     QString code = QStringLiteral("# Tilde Code Fence\n");
     code += QStringLiteral("~~~cpp\n");
