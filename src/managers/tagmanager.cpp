@@ -338,7 +338,7 @@ void TagManager::on_tagLineEdit_returnPressed() {
  */
 void TagManager::on_tagLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(_ui->tagTreeWidget, arg1,
-                                          Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+                                          Utils::Gui::panelFilterSearchFlags());
 }
 
 /**

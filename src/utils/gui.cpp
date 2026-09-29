@@ -325,12 +325,23 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget, const QStrin
                 bool loopShow = true;
 
                 foreach (QString searchText, searchList) {
+                    // Ignore accents only if the search text has no accented characters,
+                    // so "avion" finds "Avión", but "schön" doesn't find "schon"
+                    const bool ignoreAccents =
+                        (searchFlags & TreeWidgetSearchFlag::AccentInsensitiveSearch) &&
+                        Utils::Misc::isAccentInsensitiveSearchText(searchText);
+                    const auto textContains = [&searchText, ignoreAccents](const QString &text) {
+                        return ignoreAccents
+                                   ? Utils::Misc::containsIgnoringAccents(text, searchText)
+                                   : text.contains(searchText, Qt::CaseInsensitive);
+                    };
+
                     // search for text in the columns
-                    bool loopShow2 = item->text(index).contains(searchText, Qt::CaseInsensitive);
+                    bool loopShow2 = textContains(item->text(index));
 
                     // also show the item if the text was found in the tooltip
                     if (searchFlags & TreeWidgetSearchFlag::TooltipSearch) {
-                        loopShow2 |= item->toolTip(index).contains(searchText, Qt::CaseInsensitive);
+                        loopShow2 |= textContains(item->toolTip(index));
                     }
 
                     loopShow &= loopShow2;
@@ -362,6 +373,20 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget, const QStrin
             item->setHidden(false);
         }
     }
+}
+
+/**
+ * Returns the search flags for the filters of the tag, note subfolder and
+ * navigation panels
+ */
+Utils::Gui::TreeWidgetSearchFlags Utils::Gui::panelFilterSearchFlags() {
+    TreeWidgetSearchFlags searchFlags(TreeWidgetSearchFlag::IntCheck);
+
+    if (Utils::Misc::isSearchIgnoreAccentsEnabled()) {
+        searchFlags |= TreeWidgetSearchFlag::AccentInsensitiveSearch;
+    }
+
+    return searchFlags;
 }
 
 /**

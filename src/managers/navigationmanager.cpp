@@ -466,14 +466,14 @@ void NavigationManager::updateBacklinksAfterHeadingRename(const QString &oldHead
  */
 void NavigationManager::on_navigationLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(_ui->navigationWidget, arg1,
-                                          Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+                                          Utils::Gui::panelFilterSearchFlags());
     if (_ui->navigationTabWidget->indexOf(_ui->fileNavigationTab) >= 0) {
         Utils::Gui::searchForTextInTreeWidget(_ui->fileNavigationWidget, arg1,
-                                              Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+                                              Utils::Gui::panelFilterSearchFlags());
     }
     if (_ui->navigationTabWidget->indexOf(_ui->backlinkTab) >= 0) {
         Utils::Gui::searchForTextInTreeWidget(_ui->backlinkWidget, arg1,
-                                              Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+                                              Utils::Gui::panelFilterSearchFlags());
     }
 }
 

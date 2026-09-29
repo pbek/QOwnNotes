@@ -52,7 +52,10 @@ enum TreeWidgetSearchFlag {
     AllColumnsSearch = 0x0004,
 
     // search for every word in the search text
-    EveryWordSearch = 0x0008
+    EveryWordSearch = 0x0008,
+
+    // ignore accents of Latin characters if the search text has none (see #3128)
+    AccentInsensitiveSearch = 0x0010
 };
 
 Q_DECLARE_FLAGS(TreeWidgetSearchFlags, TreeWidgetSearchFlag)
@@ -63,6 +66,7 @@ bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 
 void searchForTextInTreeWidget(QTreeWidget *treeWidget, const QString &text,
                                TreeWidgetSearchFlags searchFlags = None);
+TreeWidgetSearchFlags panelFilterSearchFlags();
 void searchForTextInListWidget(QListWidget *listWidget, const QString &text,
                                bool searchAddProps = false);
 void initTreeWidgetHeaderOrderPersistence(QTreeWidget *treeWidget, const QString &settingsKey);

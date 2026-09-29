@@ -6855,7 +6855,7 @@ void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
 
         // search for the text
         Utils::Gui::searchForTextInTreeWidget(ui->noteSubFolderTreeWidget, arg1,
-                                              Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+                                              Utils::Gui::panelFilterSearchFlags());
     }
 }
 
