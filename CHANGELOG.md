@@ -2,6 +2,8 @@
 
 ## 26.9.14
 
+- Due dates in the past are now highlighted in the card list of the Nextcloud Deck dialog
+  (for [#3761](https://github.com/pbek/QOwnNotes/issues/3761))
 - On Windows, automatically use legacy GDI font rendering when system font smoothing is
   disabled, with a new interface setting to choose automatic, DirectWrite, or GDI rendering
   (for [#3757](https://github.com/pbek/QOwnNotes/issues/3757))

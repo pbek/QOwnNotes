@@ -443,6 +443,16 @@ void NextcloudDeckDialog::reloadCardList() {
         // Set the due date in the second column
         if (card.duedate.isValid()) {
             item->setText(1, card.duedate.toString("yyyy-MM-dd hh:mm"));
+
+            // Highlight due dates that are already in the past
+            if (card.duedate < QDateTime::currentDateTime()) {
+                // Use a muted red that is readable in light and dark mode
+                item->setForeground(1, QBrush(QColor(0xd9, 0x53, 0x4f)));
+                QFont font = item->font(1);
+                font.setBold(true);
+                item->setFont(1, font);
+                item->setToolTip(1, tr("The due date is in the past"));
+            }
         } else {
             item->setText(1, tr("No due date"));
         }
