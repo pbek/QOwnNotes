@@ -33,6 +33,16 @@
         </property>
        </widget>
       </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="searchIgnoreAccentsCheckBox">
+        <property name="toolTip">
+         <string>Searches without accented letters will also find text with accented letters, for example &quot;avion&quot; will also find &quot;Avión&quot;. Searches with accented letters still only find exact matches. This only affects Latin letters. It is used for the note search and for the filters of the tag, note subfolder and navigation panels.</string>
+        </property>
+        <property name="text">
+         <string>Ignore accents in search</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>

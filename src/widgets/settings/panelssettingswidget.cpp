@@ -92,6 +92,8 @@ void PanelsSettingsWidget::readSettings() {
     ui->showMatchesCheckBox->setChecked(
         settings.value(QStringLiteral("showMatches"), true).toBool());
 
+    ui->searchIgnoreAccentsCheckBox->setChecked(Utils::Misc::isSearchIgnoreAccentsEnabled());
+
     ui->noteSearchPanelOpenCreatedNotesInNewTabCheckBox->setChecked(
         settings.value(QStringLiteral("noteSearchPanelOpenCreatedNotesInNewTab")).toBool());
 
@@ -204,6 +206,9 @@ void PanelsSettingsWidget::storeSettings() {
                       ui->disableSavedSearchesAutoCompletionCheckBox->isChecked());
 
     settings.setValue(QStringLiteral("showMatches"), ui->showMatchesCheckBox->isChecked());
+
+    settings.setValue(QStringLiteral("searchIgnoreAccents"),
+                      ui->searchIgnoreAccentsCheckBox->isChecked());
 
     settings.setValue(QStringLiteral("noteSearchPanelOpenCreatedNotesInNewTab"),
                       ui->noteSearchPanelOpenCreatedNotesInNewTabCheckBox->isChecked());
