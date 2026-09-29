@@ -32,6 +32,7 @@
 #include <QKeyEvent>
 #include <QRegularExpression>
 #include <QTreeWidgetItem>
+#include <algorithm>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -87,12 +88,15 @@ void SearchFilterManager::filterNotesBySearchLineEditText(bool searchInNote) {
         const bool searchAllFolders = NoteFolder::isCurrentNoteTreeEnabled() ||
                                       _mainWindow->_showNotesFromAllNoteSubFolders ||
                                       NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
-        QVector<int> noteIdList = Note::searchInNotes(searchText, searchAllFolders);
+        const bool ignoreAccents = Utils::Misc::isSearchIgnoreAccentsEnabled();
+        QVector<int> noteIdList = Note::searchInNotes(searchText, searchAllFolders, -1,
+                                                      QStringLiteral("memory"), ignoreAccents);
 
         int columnWidth = _ui->noteTreeWidget->columnWidth(0);
         _ui->noteTreeWidget->setColumnCount(2);
         int maxWidth = 0;
-        const QVector<NoteSearchTerm> searchTerms = Note::buildSearchTermList(searchText);
+        const QVector<NoteSearchTerm> searchTerms =
+            Note::buildSearchTermList(searchText, ignoreAccents);
         const SettingsService settings;
         const bool showMatches = settings.value(QStringLiteral("showMatches"), true).toBool();
         const auto folderMatchesSearch = [&searchTerms](const QString &folderName) {
@@ -211,12 +215,16 @@ void SearchFilterManager::filterNotesBySearchLineEditText(bool searchInNote) {
  * @param searchText
  */
 void SearchFilterManager::doSearchInNote(QString searchText) {
-    const QVector<NoteSearchTerm> searchTerms = Note::buildSearchTermList(searchText);
+    const QVector<NoteSearchTerm> searchTerms =
+        Note::buildSearchTermList(searchText, Utils::Misc::isSearchIgnoreAccentsEnabled());
     if (searchTerms.isEmpty()) {
         return;
     }
 
-    if (searchTerms.count() > 1 || searchTerms.constFirst().wholeWord) {
+    // Accent-insensitive search terms need a regular expression to also find
+    // the accented variants of the letters
+    if (searchTerms.count() > 1 || searchTerms.constFirst().wholeWord ||
+        searchTerms.constFirst().accentInsensitive) {
         QStringList patterns;
         patterns.reserve(searchTerms.count());
         for (const NoteSearchTerm &searchTerm : searchTerms) {
@@ -406,7 +414,8 @@ void SearchFilterManager::searchInNoteTextEdit(QString str) {
         _ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
         const QColor color = QColor(0, 180, 0, 100);
 
-        const QVector<NoteSearchTerm> searchTerms = Note::buildSearchTermList(str);
+        const QVector<NoteSearchTerm> searchTerms =
+            Note::buildSearchTermList(str, Utils::Misc::isSearchIgnoreAccentsEnabled());
 
         if (!searchTerms.isEmpty()) {
             QStringList patterns;
@@ -434,7 +443,20 @@ void SearchFilterManager::searchInNoteTextEdit(QString str) {
 
             // TODO:
 #ifdef USE_QLITEHTML
-            if (searchTerms.count() == 1) {
+            const bool hasAccentInsensitiveSearch = std::any_of(
+                searchTerms.cbegin(), searchTerms.cend(),
+                [](const NoteSearchTerm &searchTerm) { return searchTerm.accentInsensitive; });
+
+            if (hasAccentInsensitiveSearch) {
+                // Only accent-insensitive searches use a regular expression,
+                // so the other searches keep their previous behavior
+                const QRegularExpression previewRegExp(
+                    QLatin1Char('(') + patterns.join(QLatin1String("|")) + QLatin1Char(')'),
+                    QRegularExpression::CaseInsensitiveOption |
+                        QRegularExpression::UseUnicodePropertiesOption);
+                _mainWindow->_notePreviewWidget->findText(previewRegExp, QTextDocument::FindFlags(),
+                                                          true);
+            } else if (searchTerms.count() == 1) {
                 const NoteSearchTerm &searchTerm = searchTerms.constFirst();
                 const QTextDocument::FindFlags findFlags = searchTerm.wholeWord
                                                                ? QTextDocument::FindWholeWords
