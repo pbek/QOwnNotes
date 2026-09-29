@@ -14,6 +14,11 @@
   - A clipboard web URL can be turned into a Markdown link labeled with the page title
   - Note view provides an information dialog with note, text statistics and synchronization details
   - Editing medium-large notes with many links and tasks now stays responsive
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v0.10.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.10.0)
+  - Notes are shown as bordered cards in the note list, with an optional compact note list setting
+  - Note-list widgets can show all notes, uncategorized notes, or a single category
+  - Widgets and the note list have new appearance settings for colors, headers, and category labels
 - There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
   [v1.0.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.0.0)
   - The cursor can move word by word in the viewer and editor with `Ctrl-Left` and
