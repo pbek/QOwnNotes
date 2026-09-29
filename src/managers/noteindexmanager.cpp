@@ -40,8 +40,14 @@
 #include <QFile>
 #include <QFileSystemWatcher>
 #include <QProgressDialog>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 #include <QTimer>
 #include <QTreeWidgetItem>
+
+#ifdef Q_OS_UNIX
+#include <sys/stat.h>
+#endif
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -350,8 +356,15 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             }
         }
 
-        // setup the note folder database
-        DatabaseService::createNoteFolderConnection();
+        // Keep the existing connection for in-place updates: reopening it here
+        // resets SQLite's data_version before the database watcher can compare it.
+        const QString connectionName = QStringLiteral("note_folder");
+        if (!QSqlDatabase::contains(connectionName) ||
+            !QSqlDatabase::database(connectionName, false).isOpen() ||
+            QSqlDatabase::database(connectionName, false).databaseName() !=
+                DatabaseService::getNoteFolderDatabasePath()) {
+            reopenNoteFolderDatabase();
+        }
         DatabaseService::setupNoteFolderTables();
 
         // update the note directory watcher
@@ -504,6 +517,9 @@ void NoteIndexManager::updateNoteDirectoryWatcher() {
     clearNoteDirectoryWatcher();
 
     if (shouldIgnoreExternalNoteFolderChanges()) {
+        _watchedNoteFolderDatabasePath.clear();
+        _noteFolderDatabaseFileId.clear();
+        _noteFolderDatabaseDataVersion = -1;
         return;
     }
 
@@ -517,6 +533,15 @@ void NoteIndexManager::updateNoteDirectoryWatcher() {
     if (QDir(notePath).exists()) {
         // watch the notes directory for changes
         noteDirectoryWatcherAddPath(notePath);
+    }
+
+    const QString databasePath = DatabaseService::getNoteFolderDatabasePath();
+    _watchedNoteFolderDatabasePath = databasePath;
+    if (QFile::exists(databasePath)) {
+        noteDirectoryWatcherAddPath(databasePath);
+        if (_noteFolderDatabaseDataVersion < 0) {
+            storeNoteFolderDatabaseBaseline();
+        }
     }
 
     // Add the .git folder to the watcher if it exists
@@ -646,6 +671,11 @@ void NoteIndexManager::removeConflictedNotesDatabaseCopies() {
 }
 
 void NoteIndexManager::notesWereModified(const QString &str) {
+    if (str == _watchedNoteFolderDatabasePath) {
+        noteFolderDatabaseWasModified();
+        return;
+    }
+
     // workaround when signal block doesn't work correctly
     if (_mainWindow->_isNotesWereModifiedDisabled) {
         return;
@@ -845,6 +875,13 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
     _mainWindow->showStatusBarMessage(tr("Notes directory was modified externally"),
                                       QStringLiteral("🔄"), 5000);
 
+    // SQLite journals and sync clients replacing notes.sqlite (e.g. Nextcloud
+    // renaming a download over it) change the directory. Check after the write
+    // settles, even if the fileChanged signal gets disconnected by the re-index.
+    if (str == Utils::Misc::removeIfEndsWith(_mainWindow->notesPath, QDir::separator())) {
+        noteFolderDatabaseWasModified();
+    }
+
     // rebuild and reload the notes directory list
     buildNotesIndexAndLoadNoteDirectoryList();
 
@@ -869,6 +906,7 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
         if (!_mainWindow->_isNotesDirectoryWasModifiedDisabled &&
             !shouldIgnoreExternalNoteFolderChanges()) {
             qDebug() << __func__ << " - deferred re-index after external directory change";
+            noteFolderDatabaseWasModified();
             buildNotesIndexAndLoadNoteDirectoryList();
         }
     });
@@ -879,6 +917,127 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
 
     // restore old selected row (but don't update the note text)
     _mainWindow->setCurrentNote(std::move(_mainWindow->currentNote), updateNoteText);
+}
+
+void NoteIndexManager::noteFolderDatabaseWasModified() {
+    if (shouldIgnoreExternalNoteFolderChanges() || _watchedNoteFolderDatabasePath.isEmpty()) {
+        return;
+    }
+
+    if (_noteFolderDatabaseCheckPending) {
+        return;
+    }
+
+    _noteFolderDatabaseCheckPending = true;
+    const QString path = _watchedNoteFolderDatabasePath;
+    QTimer::singleShot(500, this, [this, path]() {
+        _noteFolderDatabaseCheckPending = false;
+        if (path == _watchedNoteFolderDatabasePath && !shouldIgnoreExternalNoteFolderChanges()) {
+            checkNoteFolderDatabaseChange();
+        }
+    });
+}
+
+void NoteIndexManager::checkNoteFolderDatabaseChange() {
+    const QString path = _watchedNoteFolderDatabasePath;
+    if (!QFile::exists(path)) {
+        return;
+    }
+
+    // Sync clients like Nextcloud replace the file by renaming a download over
+    // it. The open SQLite connection and the file watcher both keep using the
+    // old, unlinked file, and data_version never changes, so compare the file
+    // identity to detect that.
+    const QString currentFileId = fileIdentity(path);
+    const bool replaced = !currentFileId.isEmpty() && !_noteFolderDatabaseFileId.isEmpty() &&
+                          currentFileId != _noteFolderDatabaseFileId;
+    if (replaced) {
+        qDebug() << __func__ << " - note folder database was replaced: " << path;
+
+        if (!reopenNoteFolderDatabase()) {
+            return;
+        }
+
+        // Re-add the path so the watcher follows the new file
+        _mainWindow->noteDirectoryWatcher.removePath(path);
+        noteDirectoryWatcherAddPath(path);
+    } else if (!_mainWindow->noteDirectoryWatcher.files().contains(path)) {
+        noteDirectoryWatcherAddPath(path);
+    }
+
+    // data_version changes when another process commits to the file in place,
+    // but not for our own writes
+    const qint64 version = noteFolderDatabaseDataVersion();
+    if (version < 0) {
+        return;
+    }
+
+    const bool changed = replaced || (_noteFolderDatabaseDataVersion >= 0 &&
+                                      version != _noteFolderDatabaseDataVersion);
+    _noteFolderDatabaseDataVersion = version;
+    if (changed) {
+        qDebug() << __func__ << " - note folder database was modified externally";
+
+        // Tag links and colors in the note tree, tag tree, and current note all
+        // come from the note-folder database.
+        loadNoteDirectoryList();
+        _mainWindow->showStatusBarMessage(tr("Notes database reloaded after external change"),
+                                          QStringLiteral("🔄"), 5000);
+    }
+}
+
+/**
+ * Reopens the note folder database connection and stores a new change baseline
+ */
+bool NoteIndexManager::reopenNoteFolderDatabase() {
+    if (!DatabaseService::createNoteFolderConnection()) {
+        return false;
+    }
+
+    storeNoteFolderDatabaseBaseline();
+    return true;
+}
+
+/**
+ * Stores the file identity and data_version of the open note folder database
+ * to compare them when the database file changes
+ */
+void NoteIndexManager::storeNoteFolderDatabaseBaseline() {
+    _noteFolderDatabaseFileId = fileIdentity(DatabaseService::getNoteFolderDatabasePath());
+    _noteFolderDatabaseDataVersion = noteFolderDatabaseDataVersion();
+}
+
+/**
+ * Returns SQLite's data_version of the note folder database connection or -1
+ */
+qint64 NoteIndexManager::noteFolderDatabaseDataVersion() {
+    QSqlQuery query(DatabaseService::getNoteFolderDatabase());
+    if (!query.exec(QStringLiteral("PRAGMA data_version")) || !query.next()) {
+        return -1;
+    }
+
+    const qint64 version = query.value(0).toLongLong();
+    query.finish();
+    return version;
+}
+
+/**
+ * Returns an identity of the file at path that changes if the file is replaced
+ * (device and inode), or an empty string if it can't be determined
+ */
+QString NoteIndexManager::fileIdentity(const QString &path) {
+#ifdef Q_OS_UNIX
+    struct stat fileStat;
+    if (::stat(QFile::encodeName(path).constData(), &fileStat) == 0) {
+        return QString::number(static_cast<quint64>(fileStat.st_dev)) + QLatin1Char(':') +
+               QString::number(static_cast<quint64>(fileStat.st_ino));
+    }
+#else
+    // Windows doesn't allow replacing the database file while SQLite has it open
+    Q_UNUSED(path)
+#endif
+
+    return {};
 }
 
 void NoteIndexManager::storeUpdatedNotesToDisk() {

@@ -2,6 +2,8 @@
 
 ## 26.9.14
 
+- Changes to the note-folder database `notes.sqlite` made outside QOwnNotes now refresh
+  note tags and the tag tree (for [#3764](https://github.com/pbek/QOwnNotes/issues/3764))
 - Due dates in the past are now highlighted in the card list of the Nextcloud Deck dialog
   (for [#3761](https://github.com/pbek/QOwnNotes/issues/3761))
 - On Windows, automatically use legacy GDI font rendering when system font smoothing is

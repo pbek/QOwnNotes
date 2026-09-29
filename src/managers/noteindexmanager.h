@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QObject>
+#include <QString>
 
 class MainWindow;
 
@@ -50,7 +51,18 @@ class NoteIndexManager : public QObject {
 
    private:
     bool shouldIgnoreExternalNoteFolderChanges() const;
+    void noteFolderDatabaseWasModified();
+    void checkNoteFolderDatabaseChange();
+    bool reopenNoteFolderDatabase();
+    void storeNoteFolderDatabaseBaseline();
+    static qint64 noteFolderDatabaseDataVersion();
+    static QString fileIdentity(const QString &path);
 
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
+    QString _watchedNoteFolderDatabasePath;
+    // Device and inode of the database file the SQLite connection has open
+    QString _noteFolderDatabaseFileId;
+    qint64 _noteFolderDatabaseDataVersion = -1;
+    bool _noteFolderDatabaseCheckPending = false;
 };
