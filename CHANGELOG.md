@@ -7,6 +7,15 @@
   (for [#3757](https://github.com/pbek/QOwnNotes/issues/3757))
 - Fixed editor highlighting for indented code block lines that start with a list
   marker like `-`, `*` or `+` (for [#3749](https://github.com/pbek/QOwnNotes/issues/3749))
+- A new opt-in setting _Ignore accents in search_ in the _Panels settings_ lets searches
+  without accented letters also find text with accented letters, for example `avion` also
+  finds `Avión` (for [#3128](https://github.com/pbek/QOwnNotes/issues/3128))
+  - It works for the note search, including the highlighting in the note editor and preview,
+    and for the filters of the tag, note subfolder and navigation panels
+  - Searches with accented letters still only find exact matches, so `schön` doesn't find `schon`
+  - Only Latin letters are affected, characters of other scripts are always matched exactly
+  - The scripting methods `script.fetchNoteIdsByNoteTextPart` and `script.searchTagsByName`
+    got a new optional `ignoreAccents` parameter
 - There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
   [v0.9.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v0.9.0)
   - Search text can be turned into a new note named after the query in the selected category

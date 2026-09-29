@@ -24,3 +24,17 @@ There are different ways to search for notes:
 ::: tip
 Searching starts after typing at least two characters.
 :::
+
+## Ignoring accents
+
+If you turn on _Ignore accents in search_ in the _Panels settings_, searches
+without accented letters will also find text with accented letters. For example,
+`avion` will also find `Avión`, and `strasse` will also find `Straße`.
+
+- Searches that contain accented letters still only find exact matches, so
+  `schön` will not find `schon`
+- Only Latin letters are affected, characters of other scripts are always
+  matched exactly
+- The setting is used for the note search, the highlighting of the found text
+  in the note editor and preview, and for the filters of the tag, note subfolder
+  and navigation panels
