@@ -1639,6 +1639,28 @@ void DocumentContainer::findText(const QString &text,
                                  QVector<QRect> *oldSelection,
                                  QVector<QRect> *newSelection)
 {
+    QString term = QRegularExpression::escape(text);
+    if (flags & QTextDocument::FindWholeWords)
+        term = QStringLiteral("\\b%1\\b").arg(term);
+    const QRegularExpression::PatternOptions patternOptions
+        = (flags & QTextDocument::FindCaseSensitively) ? QRegularExpression::NoPatternOption
+                                                       : QRegularExpression::CaseInsensitiveOption;
+    const QRegularExpression expression(term, patternOptions);
+
+    findText(expression, flags, incremental, wrapped, success, oldSelection, newSelection);
+}
+
+// Finds the next match of a regular expression. The FindWholeWords and FindCaseSensitively flags
+// are ignored, they need to be handled by the regular expression itself. The selection has the
+// length of the actual match, which can differ from the length of the pattern (QOwnNotes #3128).
+void DocumentContainer::findText(const QRegularExpression &expression,
+                                 QTextDocument::FindFlags flags,
+                                 bool incremental,
+                                 bool *wrapped,
+                                 bool *success,
+                                 QVector<QRect> *oldSelection,
+                                 QVector<QRect> *newSelection)
+{
     if (success)
         *success = false;
     if (oldSelection)
@@ -1686,25 +1708,22 @@ void DocumentContainer::findText(const QString &text,
         return Selection::Element{e.element, e.index, fm.size(0, text.left(e.index)).width()};
     };
 
-    QString term = QRegularExpression::escape(text);
-    if (flags & QTextDocument::FindWholeWords)
-        term = QStringLiteral("\\b%1\\b").arg(term);
-    const QRegularExpression::PatternOptions patternOptions
-        = (flags & QTextDocument::FindCaseSensitively) ? QRegularExpression::NoPatternOption
-                                                       : QRegularExpression::CaseInsensitiveOption;
-    const QRegularExpression expression(term, patternOptions);
+    if (!expression.isValid())
+        return;
 
-    int foundIndex = backward ? d->m_index.text.lastIndexOf(expression, startIndex)
-                              : d->m_index.text.indexOf(expression, startIndex);
+    QRegularExpressionMatch match;
+    int foundIndex = backward ? d->m_index.text.lastIndexOf(expression, startIndex, &match)
+                              : d->m_index.text.indexOf(expression, startIndex, &match);
     if (foundIndex < 0) { // wrap
-        foundIndex = backward ? d->m_index.text.lastIndexOf(expression)
-                              : d->m_index.text.indexOf(expression);
+        foundIndex = backward ? d->m_index.text.lastIndexOf(expression, -1, &match)
+                              : d->m_index.text.indexOf(expression, 0, &match);
         if (wrapped && foundIndex >= 0)
             *wrapped = true;
     }
     if (foundIndex >= 0) {
+        const int matchLength = int(match.capturedLength());
         const Index::Entry startEntry = d->m_index.findElement(foundIndex);
-        const Index::Entry endEntry = d->m_index.findElement(foundIndex + text.size());
+        const Index::Entry endEntry = d->m_index.findElement(foundIndex + matchLength);
         if (!startEntry.second || !endEntry.second) {
             qWarning() << "internal error: search ended up with nullptr elements";
             return;
@@ -1714,7 +1733,7 @@ void DocumentContainer::findText(const QString &text,
         d->clearSelection();
         d->m_selection.startElem = fillXPos({startEntry.second, foundIndex - startEntry.first, -1});
         d->m_selection.endElem = fillXPos(
-            {endEntry.second, int(foundIndex + text.size() - endEntry.first), -1});
+            {endEntry.second, int(foundIndex + matchLength - endEntry.first), -1});
         d->updateSelection();
         if (newSelection)
             *newSelection = d->m_selection.selection;

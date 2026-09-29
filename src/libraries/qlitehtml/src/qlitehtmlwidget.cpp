@@ -479,6 +479,26 @@ bool QLiteHtmlWidget::findText(const QString &text,
     QVector<QRect> newSelection;
     d->documentContainer
         .findText(text, flags, incremental, wrapped, &success, &oldSelection, &newSelection);
+    return showFindResult(success, oldSelection, newSelection);
+}
+
+bool QLiteHtmlWidget::findText(const QRegularExpression &expression,
+                               QTextDocument::FindFlags flags,
+                               bool incremental,
+                               bool *wrapped)
+{
+    bool success = false;
+    QVector<QRect> oldSelection;
+    QVector<QRect> newSelection;
+    d->documentContainer
+        .findText(expression, flags, incremental, wrapped, &success, &oldSelection, &newSelection);
+    return showFindResult(success, oldSelection, newSelection);
+}
+
+bool QLiteHtmlWidget::showFindResult(bool success,
+                                     const QVector<QRect> &oldSelection,
+                                     const QVector<QRect> &newSelection)
+{
     // scroll to search result position and/or redraw as necessary
     QRect newSelectionCombined;
     for (const QRect &r : std::as_const(newSelection))

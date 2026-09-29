@@ -31,6 +31,7 @@
 #include "qlitehtml_global.h"
 
 #include <QAbstractScrollArea>
+#include <QRegularExpression>
 #include <QTextDocument>
 
 #include <functional>
@@ -55,6 +56,12 @@ public:
     qreal zoomFactor() const;
 
     bool findText(const QString &text,
+                  QTextDocument::FindFlags flags,
+                  bool incremental,
+                  bool *wrapped = nullptr);
+    // Finds the next match of a regular expression, the FindWholeWords and
+    // FindCaseSensitively flags need to be handled by the regular expression
+    bool findText(const QRegularExpression &expression,
                   QTextDocument::FindFlags flags,
                   bool incremental,
                   bool *wrapped = nullptr);
@@ -95,6 +102,9 @@ private:
     void scrollSelection();
     void withFixedTextPosition(const std::function<void()> &action);
     void render();
+    bool showFindResult(bool success,
+                        const QVector<QRect> &oldSelection,
+                        const QVector<QRect> &newSelection);
     QPoint scrollPosition() const;
     void htmlPos(const QPoint &pos, QPoint *viewportPos, QPoint *htmlPos) const;
     QPoint toVirtual(const QPoint &p) const;

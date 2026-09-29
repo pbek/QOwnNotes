@@ -300,6 +300,11 @@ bool HtmlPreviewWidget::findText(const QString &text, QTextDocument::FindFlags f
     return _htmlWidget->findText(text, flags, incremental, wrapped);
 }
 
+bool HtmlPreviewWidget::findText(const QRegularExpression &expression,
+                                 QTextDocument::FindFlags flags, bool incremental, bool *wrapped) {
+    return _htmlWidget->findText(expression, flags, incremental, wrapped);
+}
+
 QWidget *HtmlPreviewWidget::viewport() const { return _htmlWidget->viewport(); }
 
 QScrollBar *HtmlPreviewWidget::verticalScrollBar() const {

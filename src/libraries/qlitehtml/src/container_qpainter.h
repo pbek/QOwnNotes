@@ -35,6 +35,7 @@
 #include <QPainter>
 #include <QPoint>
 #include <QRect>
+#include <QRegularExpression>
 #include <QString>
 #include <QTextDocument>
 #include <QUrl>
@@ -102,6 +103,13 @@ public: // outside API
     QString selectedHtml() const;
 
     void findText(const QString &text,
+                  QTextDocument::FindFlags flags,
+                  bool incremental,
+                  bool *wrapped,
+                  bool *success,
+                  QVector<QRect> *oldSelection,
+                  QVector<QRect> *newSelection);
+    void findText(const QRegularExpression &expression,
                   QTextDocument::FindFlags flags,
                   bool incremental,
                   bool *wrapped,
