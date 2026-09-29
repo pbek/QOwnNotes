@@ -26,9 +26,8 @@ QtObject {
         switch (identifier) {
             // create a new note with a custom content
             case "createZettelkastenNote":
-                var m = new Date();
-                // create the headline
-                var text = m.getFullYear() + ("0" + (m.getMonth()+1)).slice(-2) + ("0" + m.getDate()).slice(-2) + ("0" + m.getHours()).slice(-2) + ("0" + m.getMinutes()).slice(-2) + ("0" + m.getSeconds()).slice(-2) + " Title\n";
+                // create the headline, like "20260929140512 Title"
+                var text = Qt.formatDateTime(new Date(), "yyyyMMddHHmmss") + " Title\n";
 
                 var underline = "";
 

@@ -23,9 +23,9 @@ QtObject {
             return;
         }
 
-        // get the date headline
-        var m = new Date();
-        var headline = m.getFullYear() + ("0" + (m.getMonth()+1)).slice(-2) + ("0" + m.getDate()).slice(-2);
+        // get the date headline, like "20260929"
+        // see https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method for all placeholders
+        var headline = Qt.formatDateTime(new Date(), "yyyyMMdd");
 
         var fileName = headline + ".md";
         var note = script.fetchNoteByFileName(fileName);

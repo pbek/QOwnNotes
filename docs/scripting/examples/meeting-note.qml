@@ -24,8 +24,7 @@ QtObject {
         }
 
         // get the date headline
-        var m = new Date();
-        var headline = "Teammeeting " + m.getFullYear() + "-" + ("0" + (m.getMonth()+1)).slice(-2) + "-" + ("0" + m.getDate()).slice(-2);
+        var headline = "Teammeeting " + Qt.formatDateTime(new Date(), "yyyy-MM-dd");
 
         var fileName = headline + ".md";
         var note = script.fetchNoteByFileName(fileName);

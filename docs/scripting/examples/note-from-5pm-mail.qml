@@ -96,11 +96,7 @@ QtObject {
                 }
 
                 // add a date headline
-                var m = new Date();
-                var dateString =
-                    ("0" + m.getDate()).slice(-2) + "." +
-                    ("0" + (m.getMonth()+1)).slice(-2) + "." +
-                    (" " + m.getFullYear()).slice(-2);
+                var dateString = Qt.formatDateTime(new Date(), "dd.MM.yy");
                 text += "\n\n## " + dateString + "\n\n";
 
                 // create a new note

@@ -89,11 +89,7 @@ QtObject {
         text = text.replace(/&gt;/gim, ">").replace(/&lt;/gim, "<");
 
         // add a date headline
-        var m = new Date();
-        var dateString =
-            ("0" + m.getDate()).slice(-2) + "." +
-            ("0" + (m.getMonth()+1)).slice(-2) + "." +
-            m.getFullYear();
+        var dateString = Qt.formatDateTime(new Date(), "dd.MM.yyyy");
         text += "\n\n## " + dateString + "\n\n";
 
         // create a new note
