@@ -131,6 +131,7 @@ lessThan(QT_MAJOR_VERSION, 6) {
 }
 
 INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
+win32:LIBS += -luser32
 
 SOURCES += main.cpp\
     helpers/nomenuiconstyle.cpp \

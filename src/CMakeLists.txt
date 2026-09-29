@@ -846,6 +846,10 @@ target_link_libraries(
           Google::DiffMatchPatch
           qt${QT_VERSION_MAJOR}keychain)
 
+if(WIN32)
+  target_link_libraries(QOwnNotes PRIVATE user32)
+endif()
+
 if(USE_QLITEHTML)
   target_link_libraries(QOwnNotes PRIVATE qlitehtml::qlitehtml)
 endif()

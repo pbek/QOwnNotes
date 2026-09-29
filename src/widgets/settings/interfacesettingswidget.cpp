@@ -45,6 +45,15 @@ void InterfaceSettingsWidget::initialize() {
     ui->systemTrayGroupBox->setTitle(tr("Menu bar"));
     ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
 #endif
+#ifndef Q_OS_WIN
+    ui->fontRenderingGroupBox->hide();
+#else
+    ui->fontEngineComboBox->addItem(tr("Automatic (follow Windows font smoothing)"),
+                                    QStringLiteral("auto"));
+    ui->fontEngineComboBox->addItem(tr("DirectWrite"), QStringLiteral("directwrite"));
+    ui->fontEngineComboBox->addItem(tr("GDI (legacy)"), QStringLiteral("gdi"));
+    connect(ui->fontEngineComboBox, SIGNAL(currentIndexChanged(int)), this, SIGNAL(needRestart()));
+#endif
 
     // Connect needRestart signals for widgets that require a restart
     connect(ui->languageListWidget, SIGNAL(itemSelectionChanged()), this, SIGNAL(needRestart()));
@@ -58,6 +67,14 @@ void InterfaceSettingsWidget::initialize() {
  */
 void InterfaceSettingsWidget::readSettings() {
     SettingsService settings;
+
+#ifdef Q_OS_WIN
+    const QSignalBlocker fontEngineBlocker(ui->fontEngineComboBox);
+    Q_UNUSED(fontEngineBlocker)
+    const int fontEngineIndex = ui->fontEngineComboBox->findData(
+        settings.value(QStringLiteral("interfaceFontEngine"), QStringLiteral("auto")));
+    ui->fontEngineComboBox->setCurrentIndex(fontEngineIndex >= 0 ? fontEngineIndex : 0);
+#endif
 
     {
         const QSignalBlocker b1(ui->overrideInterfaceFontSizeGroupBox);
@@ -135,6 +152,10 @@ void InterfaceSettingsWidget::readSettings() {
  */
 void InterfaceSettingsWidget::storeSettings() {
     SettingsService settings;
+
+#ifdef Q_OS_WIN
+    settings.setValue(QStringLiteral("interfaceFontEngine"), ui->fontEngineComboBox->currentData());
+#endif
 
     settings.setValue(QStringLiteral("overrideInterfaceFontSize"),
                       ui->overrideInterfaceFontSizeGroupBox->isChecked());

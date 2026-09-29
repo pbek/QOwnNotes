@@ -2083,6 +2083,21 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
                                           QStringLiteral(QT_VERSION_STR), withGitHubLineBreaks);
     output += prepareDebugInformationLine(QStringLiteral("Qt Version (runtime)"), qVersion(),
                                           withGitHubLineBreaks);
+#ifdef Q_OS_WIN
+    BOOL fontSmoothingEnabled = FALSE;
+    const bool fontSmoothingKnown =
+        SystemParametersInfoW(SPI_GETFONTSMOOTHING, 0, &fontSmoothingEnabled, 0) != 0;
+    QString fontSmoothingStatus = QStringLiteral("unknown");
+    if (fontSmoothingKnown) {
+        fontSmoothingStatus =
+            fontSmoothingEnabled ? QStringLiteral("enabled") : QStringLiteral("disabled");
+    }
+    output += prepareDebugInformationLine(QStringLiteral("Windows font smoothing"),
+                                          fontSmoothingStatus, withGitHubLineBreaks);
+    output += prepareDebugInformationLine(QStringLiteral("Windows font engine"),
+                                          qApp->property("windowsFontEngine").toString(),
+                                          withGitHubLineBreaks);
+#endif
     output += prepareDebugInformationLine(
         QStringLiteral("Portable mode"),
         Utils::Misc::isInPortableMode() ? QStringLiteral("yes") : QStringLiteral("no"),

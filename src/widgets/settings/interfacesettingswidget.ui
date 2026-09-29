@@ -905,6 +905,22 @@
          </widget>
         </item>
         <item>
+         <widget class="QGroupBox" name="fontRenderingGroupBox">
+          <property name="title">
+           <string>Font rendering (Windows)</string>
+          </property>
+          <layout class="QVBoxLayout" name="fontRenderingLayout">
+           <item>
+            <widget class="QComboBox" name="fontEngineComboBox">
+             <property name="toolTip">
+              <string>Automatic uses GDI when Windows font smoothing is disabled. Changes take effect after restarting the application.</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
          <widget class="QGroupBox" name="groupBox_19">
           <property name="title">
            <string>Icons</string>

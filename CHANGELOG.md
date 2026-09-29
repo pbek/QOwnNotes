@@ -2,6 +2,9 @@
 
 ## 26.9.14
 
+- On Windows, automatically use legacy GDI font rendering when system font smoothing is
+  disabled, with a new interface setting to choose automatic, DirectWrite, or GDI rendering
+  (for [#3757](https://github.com/pbek/QOwnNotes/issues/3757))
 - Fixed editor highlighting for indented code block lines that start with a list
   marker like `-`, `*` or `+` (for [#3749](https://github.com/pbek/QOwnNotes/issues/3749))
 - There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),

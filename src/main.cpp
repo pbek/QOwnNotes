@@ -765,6 +765,50 @@ int main(int argc, char *argv[]) {
     };
 
     SettingsService settings;
+    int qtArgc = argc;
+    char **qtArgv = argv;
+
+#ifdef Q_OS_WIN
+    // Qt must select the font engine before constructing QApplication.
+    BOOL fontSmoothingEnabled = TRUE;
+    const bool fontSmoothingKnown =
+        SystemParametersInfoW(SPI_GETFONTSMOOTHING, 0, &fontSmoothingEnabled, 0) != 0;
+    const QString fontEngineSetting =
+        settings.value(QStringLiteral("interfaceFontEngine"), QStringLiteral("auto")).toString();
+    const bool useGdiFontEngine = fontEngineSetting == QStringLiteral("gdi") ||
+                                  (fontEngineSetting == QStringLiteral("auto") &&
+                                   fontSmoothingKnown && !fontSmoothingEnabled);
+    bool platformOverridden = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
+    for (int i = 1; i < argc; ++i) {
+        const QByteArray arg(argv[i]);
+        if (arg == "-platform" || arg.startsWith("-platform=")) {
+            platformOverridden = true;
+            break;
+        }
+    }
+
+    QString activeFontEngine = platformOverridden ? QStringLiteral("Qt platform override")
+                                                  : QStringLiteral("DirectWrite (default)");
+    QVector<char *> platformArgv;
+    QByteArray platformOption("-platform");
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    QByteArray platformValue("windows:fontengine=gdi");
+#else
+    QByteArray platformValue("windows:nodirectwrite");
+#endif
+    if (useGdiFontEngine && !platformOverridden) {
+        platformArgv.reserve(argc + 3);
+        for (int i = 0; i < argc; ++i) {
+            platformArgv.append(argv[i]);
+        }
+        platformArgv.append(platformOption.data());
+        platformArgv.append(platformValue.data());
+        platformArgv.append(nullptr);
+        qtArgc += 2;
+        qtArgv = platformArgv.data();
+        activeFontEngine = QStringLiteral("GDI");
+    }
+#endif
 
     // Override the interface scale factor if the setting is enabled
     if (settings.value(QStringLiteral("overrideInterfaceScalingFactor")).toBool()) {
@@ -831,9 +875,12 @@ int main(int argc, char *argv[]) {
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
         SingleApplication app(
-            argc, argv, true,
+            qtArgc, qtArgv, true,
             SingleApplication::Mode::User | SingleApplication::Mode::SecondaryNotification);
         setAppProperties(app, release, arguments, true, snap, portable, action, session);
+#ifdef Q_OS_WIN
+        app.setProperty("windowsFontEngine", activeFontEngine);
+#endif
         clearDiskSettings();
 
         if (!clearSettingsKeychainReferences.isEmpty()) {
@@ -918,9 +965,12 @@ int main(int argc, char *argv[]) {
     } else {
         // Use QCoreApplication for CLI-only modes (no graphical environment needed),
         // otherwise use QApplication for the full GUI
-        QScopedPointer<QCoreApplication> app(cliMode ? new QCoreApplication(argc, argv)
-                                                     : new QApplication(argc, argv));
+        QScopedPointer<QCoreApplication> app(cliMode ? new QCoreApplication(qtArgc, qtArgv)
+                                                     : new QApplication(qtArgc, qtArgv));
         setAppProperties(*app, release, arguments, false, snap, portable, action, session);
+#ifdef Q_OS_WIN
+        app->setProperty("windowsFontEngine", activeFontEngine);
+#endif
         clearDiskSettings();
 
         if (!clearSettingsKeychainReferences.isEmpty()) {
