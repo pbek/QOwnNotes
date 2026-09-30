@@ -122,6 +122,9 @@ QFont fontDialogGetFont(bool *ok, const QFont &initial, QWidget *parent = nullpt
                         const QString &title = QString(),
                         QFontDialog::FontDialogOptions options = QFontDialog::FontDialogOptions());
 
+bool isFontAntialiasingDisabled();
+void applyFontAntialiasingStrategy(QFont &font);
+
 void copyCodeBlockText(const QTextBlock &initialBlock);
 
 bool toggleCheckBoxAtCursor(QPlainTextEdit *textEdit);

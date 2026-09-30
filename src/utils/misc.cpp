@@ -2343,6 +2343,11 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
     output += prepareDebugInformationLine(QStringLiteral("Windows font engine"),
                                           qApp->property("windowsFontEngine").toString(),
                                           withGitHubLineBreaks);
+    output += prepareDebugInformationLine(QStringLiteral("Windows font antialiasing"),
+                                          qApp->property("windowsDisableFontAntialiasing").toBool()
+                                              ? QStringLiteral("disabled")
+                                              : QStringLiteral("default"),
+                                          withGitHubLineBreaks);
 #endif
     output += prepareDebugInformationLine(
         QStringLiteral("Portable mode"),

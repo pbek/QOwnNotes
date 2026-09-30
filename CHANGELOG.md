@@ -1,9 +1,17 @@
 # QOwnNotes Changelog
 
-## 26.9.14
+## 26.9.15
 
 - Changes to the note-folder database `notes.sqlite` made outside QOwnNotes now refresh
   note tags and the tag tree (for [#3764](https://github.com/pbek/QOwnNotes/issues/3764))
+- On Windows, the _Font rendering_ interface setting is no longer reset to _Automatic_
+  when the settings dialog is closed (for [#3757](https://github.com/pbek/QOwnNotes/issues/3757))
+- On Windows, italic text in fonts without a real italic face, like _Tahoma_, is now also
+  rendered without font smoothing when Windows font smoothing is disabled
+  (for [#3757](https://github.com/pbek/QOwnNotes/issues/3757))
+
+## 26.9.14
+
 - Due dates in the past are now highlighted in the card list of the Nextcloud Deck dialog
   (for [#3761](https://github.com/pbek/QOwnNotes/issues/3761))
 - On Windows, automatically use legacy GDI font rendering when system font smoothing is

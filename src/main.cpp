@@ -599,6 +599,27 @@ inline void setAppProperties(QCoreApplication &app, const QString &release,
     app.setProperty("session", session);
 }
 
+#ifdef Q_OS_WIN
+/**
+ * Stores the active Windows font engine and turns off font antialiasing if needed
+ */
+static void setWindowsFontProperties(QCoreApplication &app, const QString &activeFontEngine,
+                                     bool disableFontAntialiasing) {
+    app.setProperty("windowsFontEngine", activeFontEngine);
+    app.setProperty("windowsDisableFontAntialiasing", disableFontAntialiasing);
+
+    // Qt still renders fonts that need a simulated style (like italic text in fonts
+    // without a real italic face) with DirectWrite, even with the GDI font engine.
+    // DirectWrite ignores the Windows font smoothing setting, so we request aliased
+    // rendering for the application font, which is inherited by widgets and the preview.
+    if (disableFontAntialiasing && qobject_cast<QGuiApplication *>(&app) != nullptr) {
+        QFont font = QGuiApplication::font();
+        Utils::Gui::applyFontAntialiasingStrategy(font);
+        QGuiApplication::setFont(font);
+    }
+}
+#endif
+
 int main(int argc, char *argv[]) {
     // register NoteHistoryItem, so we can store it to the settings
     // we need to do that before we are accessing QSettings or the
@@ -808,6 +829,10 @@ int main(int argc, char *argv[]) {
         qtArgv = platformArgv.data();
         activeFontEngine = QStringLiteral("GDI");
     }
+
+    // Also turn off antialiasing for fonts Qt still renders with DirectWrite
+    const bool disableFontAntialiasing =
+        useGdiFontEngine && !platformOverridden && fontSmoothingKnown && !fontSmoothingEnabled;
 #endif
 
     // Override the interface scale factor if the setting is enabled
@@ -879,7 +904,7 @@ int main(int argc, char *argv[]) {
             SingleApplication::Mode::User | SingleApplication::Mode::SecondaryNotification);
         setAppProperties(app, release, arguments, true, snap, portable, action, session);
 #ifdef Q_OS_WIN
-        app.setProperty("windowsFontEngine", activeFontEngine);
+        setWindowsFontProperties(app, activeFontEngine, disableFontAntialiasing);
 #endif
         clearDiskSettings();
 
@@ -969,7 +994,7 @@ int main(int argc, char *argv[]) {
                                                      : new QApplication(qtArgc, qtArgv));
         setAppProperties(*app, release, arguments, false, snap, portable, action, session);
 #ifdef Q_OS_WIN
-        app->setProperty("windowsFontEngine", activeFontEngine);
+        setWindowsFontProperties(*app, activeFontEngine, disableFontAntialiasing);
 #endif
         clearDiskSettings();
 

@@ -914,6 +914,7 @@ void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
     QFont font = Utils::Schema::schemaSettings->getEditorTextFont();
+    Utils::Gui::applyFontAntialiasingStrategy(font);
     setFont(font);
 
     // workaround for Windows 10 if overrideInterfaceFontSize was set

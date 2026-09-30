@@ -28,6 +28,15 @@
 InterfaceSettingsWidget::InterfaceSettingsWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::InterfaceSettingsWidget) {
     ui->setupUi(this);
+
+#ifdef Q_OS_WIN
+    // Populate the font engine combo box in the constructor, because readSettings()
+    // and storeSettings() are called before the lazy initialize() of this page
+    ui->fontEngineComboBox->addItem(tr("Automatic (follow Windows font smoothing)"),
+                                    QStringLiteral("auto"));
+    ui->fontEngineComboBox->addItem(tr("DirectWrite"), QStringLiteral("directwrite"));
+    ui->fontEngineComboBox->addItem(tr("GDI (legacy)"), QStringLiteral("gdi"));
+#endif
 }
 
 InterfaceSettingsWidget::~InterfaceSettingsWidget() { delete ui; }
@@ -48,10 +57,6 @@ void InterfaceSettingsWidget::initialize() {
 #ifndef Q_OS_WIN
     ui->fontRenderingGroupBox->hide();
 #else
-    ui->fontEngineComboBox->addItem(tr("Automatic (follow Windows font smoothing)"),
-                                    QStringLiteral("auto"));
-    ui->fontEngineComboBox->addItem(tr("DirectWrite"), QStringLiteral("directwrite"));
-    ui->fontEngineComboBox->addItem(tr("GDI (legacy)"), QStringLiteral("gdi"));
     connect(ui->fontEngineComboBox, SIGNAL(currentIndexChanged(int)), this, SIGNAL(needRestart()));
 #endif
 
@@ -72,7 +77,7 @@ void InterfaceSettingsWidget::readSettings() {
     const QSignalBlocker fontEngineBlocker(ui->fontEngineComboBox);
     Q_UNUSED(fontEngineBlocker)
     const int fontEngineIndex = ui->fontEngineComboBox->findData(
-        settings.value(QStringLiteral("interfaceFontEngine"), QStringLiteral("auto")));
+        settings.value(QStringLiteral("interfaceFontEngine"), QStringLiteral("auto")).toString());
     ui->fontEngineComboBox->setCurrentIndex(fontEngineIndex >= 0 ? fontEngineIndex : 0);
 #endif
 

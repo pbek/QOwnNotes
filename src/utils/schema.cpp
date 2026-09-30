@@ -24,6 +24,7 @@
 #include <cmath>
 
 #include "services/settingsservice.h"
+#include "utils/gui.h"
 
 Utils::Schema::Settings* Utils::Schema::schemaSettings = nullptr;
 
@@ -309,6 +310,9 @@ void Utils::Schema::Settings::setFormatStyle(MarkdownHighlighter::HighlighterSta
     // are set to bold by setFontWeight below
     // https://github.com/pbek/QOwnNotes/issues/2338
     font.setStyleName(QString());
+
+    // Make sure simulated styles (e.g. italic) also follow disabled font smoothing
+    Utils::Gui::applyFontAntialiasingStrategy(font);
 
     // set the font
     format.setFont(font);

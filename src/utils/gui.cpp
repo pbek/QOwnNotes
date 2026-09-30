@@ -732,6 +732,35 @@ QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial, QWidget *par
 }
 
 /**
+ * Returns true if font antialiasing should be turned off for all fonts
+ *
+ * This is set at startup on Windows if the GDI font engine is used because
+ * Windows font smoothing is disabled
+ */
+bool Utils::Gui::isFontAntialiasingDisabled() {
+#ifdef Q_OS_WIN
+    return qApp != nullptr && qApp->property("windowsDisableFontAntialiasing").toBool();
+#else
+    return false;
+#endif
+}
+
+/**
+ * Turns off antialiasing for a font if font antialiasing is disabled
+ *
+ * Qt still uses DirectWrite for fonts that need a simulated style (like italic
+ * text in fonts without a real italic face), even with the GDI font engine.
+ * DirectWrite ignores the Windows font smoothing setting, so we need to request
+ * aliased rendering explicitly.
+ */
+void Utils::Gui::applyFontAntialiasingStrategy(QFont &font) {
+    if (isFontAntialiasingDisabled()) {
+        font.setStyleStrategy(static_cast<QFont::StyleStrategy>(
+            (font.styleStrategy() & ~QFont::PreferAntialias) | QFont::NoAntialias));
+    }
+}
+
+/**
  * Copies the text from a copy block around initialBlock to the clipboard
  *
  * @param initialBlock
