@@ -57,10 +57,13 @@ class NoteIndexManager : public QObject {
     void storeNoteFolderDatabaseBaseline();
     static qint64 noteFolderDatabaseDataVersion();
     static QString fileIdentity(const QString &path);
+    QString noteFolderRootSignature() const;
 
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
     QString _watchedNoteFolderDatabasePath;
+    // Entries of the note folder root, without the note folder database files
+    QString _noteFolderRootSignature;
     // Device and inode of the database file the SQLite connection has open
     QString _noteFolderDatabaseFileId;
     qint64 _noteFolderDatabaseDataVersion = -1;

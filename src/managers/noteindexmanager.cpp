@@ -520,8 +520,11 @@ void NoteIndexManager::updateNoteDirectoryWatcher() {
         _watchedNoteFolderDatabasePath.clear();
         _noteFolderDatabaseFileId.clear();
         _noteFolderDatabaseDataVersion = -1;
+        _noteFolderRootSignature.clear();
         return;
     }
+
+    _noteFolderRootSignature = noteFolderRootSignature();
 
     const bool hasSubfolders = NoteFolder::isCurrentHasSubfolders();
     //    if (showSubfolders) {
@@ -871,16 +874,26 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
         return;
     }
 
-    qDebug() << "notesDirectoryWasModified: " << str;
-    _mainWindow->showStatusBarMessage(tr("Notes directory was modified externally"),
-                                      QStringLiteral("🔄"), 5000);
-
     // SQLite journals and sync clients replacing notes.sqlite (e.g. Nextcloud
     // renaming a download over it) change the directory. Check after the write
     // settles, even if the fileChanged signal gets disconnected by the re-index.
     if (str == Utils::Misc::removeIfEndsWith(_mainWindow->notesPath, QDir::separator())) {
         noteFolderDatabaseWasModified();
+
+        // If only the note folder database files changed, the database check
+        // handles it and there is nothing to re-index
+        const QString signature = noteFolderRootSignature();
+        if (signature == _noteFolderRootSignature) {
+            qDebug() << __func__ << " - only the note folder database changed, ignoring";
+            return;
+        }
+
+        _noteFolderRootSignature = signature;
     }
+
+    qDebug() << "notesDirectoryWasModified: " << str;
+    _mainWindow->showStatusBarMessage(tr("Notes directory was modified externally"),
+                                      QStringLiteral("🔄"), 5000);
 
     // rebuild and reload the notes directory list
     buildNotesIndexAndLoadNoteDirectoryList();
@@ -1038,6 +1051,52 @@ QString NoteIndexManager::fileIdentity(const QString &path) {
 #endif
 
     return {};
+}
+
+/**
+ * Returns a signature of the entries in the note folder root, leaving out the
+ * note folder database and its SQLite / sync client temporary files, to tell
+ * database-only changes apart from changes that need a re-index
+ */
+QString NoteIndexManager::noteFolderRootSignature() const {
+    const QString notePath =
+        Utils::Misc::removeIfEndsWith(_mainWindow->notesPath, QDir::separator());
+    const QString databaseFileName =
+        QFileInfo(DatabaseService::getNoteFolderDatabasePath()).fileName();
+    const QString hiddenDatabaseFileName = QLatin1Char('.') + databaseFileName;
+
+    // Hidden files aren't indexed as notes, but hidden folders are
+    const QFileInfoList entries = QDir(notePath).entryInfoList(
+        QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden | QDir::System, QDir::Name);
+
+    QStringList parts;
+    parts.reserve(entries.count());
+    for (const QFileInfo &entry : entries) {
+        const QString name = entry.fileName();
+
+        // Covers notes.sqlite, -journal, -wal, -shm and temporary downloads
+        // of sync clients like ".notes.sqlite.~1a2b3c"
+        if (name.startsWith(databaseFileName) || name.startsWith(hiddenDatabaseFileName)) {
+            continue;
+        }
+
+        if (entry.isDir()) {
+            parts << QStringLiteral("d:") + name;
+            continue;
+        }
+
+        if (entry.isHidden()) {
+            continue;
+        }
+
+        // The file identity changes if a sync client renames a new version
+        // over a note while preserving its timestamp
+        parts << QStringLiteral("f:") + name + QLatin1Char(':') + QString::number(entry.size()) +
+                     QLatin1Char(':') + QString::number(entry.lastModified().toMSecsSinceEpoch()) +
+                     QLatin1Char(':') + fileIdentity(entry.absoluteFilePath());
+    }
+
+    return parts.join(QLatin1Char('\n'));
 }
 
 void NoteIndexManager::storeUpdatedNotesToDisk() {
@@ -1199,6 +1258,12 @@ void NoteIndexManager::addDirectoryToDirectoryWatcher(const QString &path) {
 }
 
 void NoteIndexManager::connectFileWatcher(bool delayed) {
+    // Changes while the watcher was disconnected were our own, so take them into
+    // the baseline to not mistake them for external changes later
+    if (!_watchedNoteFolderDatabasePath.isEmpty()) {
+        _noteFolderRootSignature = noteFolderRootSignature();
+    }
+
     if (!delayed) {
         connect(&_mainWindow->noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this,
                 &NoteIndexManager::notesDirectoryWasModified, Qt::UniqueConnection);
@@ -1208,6 +1273,10 @@ void NoteIndexManager::connectFileWatcher(bool delayed) {
         // In some cases, there are delayed signals coming in which we don't want to handle
         // so reconnect with delay
         QTimer::singleShot(300, this, [this] {
+            if (!_watchedNoteFolderDatabasePath.isEmpty()) {
+                _noteFolderRootSignature = noteFolderRootSignature();
+            }
+
             connect(&_mainWindow->noteDirectoryWatcher, &QFileSystemWatcher::directoryChanged, this,
                     &NoteIndexManager::notesDirectoryWasModified, Qt::UniqueConnection);
             connect(&_mainWindow->noteDirectoryWatcher, &QFileSystemWatcher::fileChanged, this,
