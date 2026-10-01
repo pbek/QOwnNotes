@@ -115,8 +115,10 @@ ScriptingService::ScriptingService(QObject *parent)
     qmlRegisterType<ScriptApi>("QOwnNotesTypes", 1, 0, "Script");
 
     int scriptCount = Script::countAll();
-    if (scriptCount > 0) {
-        MetricsService::instance()->sendEventIfEnabled(
+    // The MetricsService might not exist yet (e.g. in the unit tests)
+    MetricsService *metricsService = MetricsService::instance();
+    if (scriptCount > 0 && metricsService != nullptr) {
+        metricsService->sendEventIfEnabled(
             QStringLiteral("script/init"), QStringLiteral("script"), QStringLiteral("script count"),
             QString::number(scriptCount) % QStringLiteral(" scripts"), scriptCount);
     }
