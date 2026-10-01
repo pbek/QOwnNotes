@@ -25,11 +25,32 @@ void TestCryptoService::testMigrateEncryptedEmptySecrets() {
 
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QVERIFY(db.isOpen());
+
+    // Remove the inserted rows even if a QVERIFY/QCOMPARE returns early, because
+    // the test database is persistent and leftover script rows break later runs
+    struct RowCleanup {
+        explicit RowCleanup(const QSqlDatabase &database) : db(database) {}
+        QSqlDatabase db;
+        int cloudId = -1;
+        int scriptId = -1;
+        ~RowCleanup() {
+            QSqlQuery query(db);
+            if (cloudId != -1) {
+                query.exec(
+                    QStringLiteral("DELETE FROM cloudConnection WHERE id = %1").arg(cloudId));
+            }
+            if (scriptId != -1) {
+                query.exec(QStringLiteral("DELETE FROM script WHERE id = %1").arg(scriptId));
+            }
+        }
+    } rowCleanup(db);
+
     QSqlQuery cloudQuery(db);
     cloudQuery.prepare(QStringLiteral("INSERT INTO cloudConnection (password) VALUES (:password)"));
     cloudQuery.bindValue(QStringLiteral(":password"), encryptedEmpty);
     QVERIFY(cloudQuery.exec());
     const int cloudId = cloudQuery.lastInsertId().toInt();
+    rowCleanup.cloudId = cloudId;
 
     QJsonObject scriptSettings;
     scriptSettings.insert(QStringLiteral("!password"), encryptedEmpty);
@@ -40,6 +61,7 @@ void TestCryptoService::testMigrateEncryptedEmptySecrets() {
                           QString::fromUtf8(QJsonDocument(scriptSettings).toJson()));
     QVERIFY(scriptQuery.exec());
     const int scriptId = scriptQuery.lastInsertId().toInt();
+    rowCleanup.scriptId = scriptId;
 
     QVERIFY(CryptoService::hasLegacySecretsToMigrate());
     CryptoService service;
@@ -66,9 +88,6 @@ void TestCryptoService::testMigrateEncryptedEmptySecrets() {
     QCOMPARE(migratedScriptSettings.value(QStringLiteral("!password")).toString(), QString());
     QVERIFY(!CryptoService::hasLegacySecretsToMigrate());
 
-    QSqlQuery cleanup(db);
-    QVERIFY(cleanup.exec(QStringLiteral("DELETE FROM cloudConnection WHERE id = %1").arg(cloudId)));
-    QVERIFY(cleanup.exec(QStringLiteral("DELETE FROM script WHERE id = %1").arg(scriptId)));
     settings.clear();
 }
 

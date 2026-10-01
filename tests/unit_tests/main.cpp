@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "release.h"
+#include "services/databaseservice.h"
 #include "testcases/app/test_cryptoservice.h"
 #include "testcases/app/test_htmlentities.h"
 #include "testcases/app/test_languagetool.h"
@@ -27,6 +28,11 @@ int main(int argc, char *argv[]) {
     QCoreApplication::setApplicationVersion(QString(VERSION) + " " + QString(RELEASE));
 
     Utils::Schema::schemaSettings = new Utils::Schema::Settings();
+
+    // Start every run with a fresh test database (it lives in the app data path of
+    // "QOwnNotesTests", not the one of QOwnNotes), so rows left over by an aborted
+    // or failed earlier run can't influence or crash the tests
+    DatabaseService::removeDiskDatabase();
 
     int allTestsResult = 0 + QTest::qExec(new TestNotes(), argc, argv) +
                          QTest::qExec(new TestHTMLEntities(), argc, argv) +
