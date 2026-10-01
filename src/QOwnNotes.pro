@@ -557,11 +557,16 @@ include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
 include(libraries/qhotkey/qhotkey.pri)
 
-# XDG Desktop Portal global shortcuts support for Wayland on Linux
+# XDG Desktop Portal global shortcuts support for Wayland and
+# KDE Plasma activities support on Linux (both use D-Bus)
 unix:!mac {
     QT += dbus
-    SOURCES += services/xdgglobalshortcutmanager.cpp
-    HEADERS += services/xdgglobalshortcutmanager.h
+    SOURCES += services/xdgglobalshortcutmanager.cpp \
+               services/plasmaactivityservice.cpp \
+               widgets/plasmaactivityselectorwidget.cpp
+    HEADERS += services/xdgglobalshortcutmanager.h \
+               services/plasmaactivityservice.h \
+               widgets/plasmaactivityselectorwidget.h
 }
 
 unix {

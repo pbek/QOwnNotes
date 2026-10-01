@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.10.1
+
+- On Linux, QOwnNotes can now switch to a note folder and/or a layout when a certain
+  KDE Plasma activity gets activated, and also when it starts in that activity
+  (for [#3767](https://github.com/pbek/QOwnNotes/issues/3767))
+  - Turn it on in the _Note folders_ settings or the _Layouts_ settings and select the
+    activity to react to
+  - Only one note folder and one layout can be linked to an activity
+
 ## 26.10.0
 
 - Changes to the note-folder database `notes.sqlite` made outside QOwnNotes now refresh

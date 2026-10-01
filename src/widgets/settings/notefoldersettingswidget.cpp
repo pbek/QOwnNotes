@@ -31,9 +31,18 @@
 #include "utils/gui.h"
 #include "utils/misc.h"
 
+#ifdef Q_OS_LINUX
+#include "services/plasmaactivityservice.h"
+#include "widgets/plasmaactivityselectorwidget.h"
+#endif
+
 NoteFolderSettingsWidget::NoteFolderSettingsWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::NoteFolderSettingsWidget) {
     ui->setupUi(this);
+
+#ifdef Q_OS_LINUX
+    initPlasmaActivitySelector();
+#endif
 }
 
 NoteFolderSettingsWidget::~NoteFolderSettingsWidget() { delete ui; }
@@ -151,6 +160,12 @@ void NoteFolderSettingsWidget::on_noteFolderListWidget_currentItemChanged(
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
         Q_UNUSED(blocker)
         ui->noteFolderActiveCheckBox->setChecked(_selectedNoteFolder.isCurrent());
+
+#ifdef Q_OS_LINUX
+        _plasmaActivitySelector->setSelection(
+            PlasmaActivityService::isNoteFolderActivityEnabled(noteFolderId),
+            PlasmaActivityService::noteFolderActivityId(noteFolderId));
+#endif
 
         updateCloudConnectionEnabledState();
     }
@@ -752,3 +767,42 @@ void NoteFolderSettingsWidget::on_noteFolderGitCommitCheckBox_toggled(bool check
     _selectedNoteFolder.setUseGit(checked);
     _selectedNoteFolder.store();
 }
+
+#ifdef Q_OS_LINUX
+/**
+ * Adds the setting to switch to the selected note folder when a certain
+ * KDE Plasma activity gets activated
+ */
+void NoteFolderSettingsWidget::initPlasmaActivitySelector() {
+    _plasmaActivitySelector = new PlasmaActivitySelectorWidget(
+        tr("Switch to this note folder when a KDE Plasma activity is activated"),
+        ui->noteFolderPlasmaActivityFrame);
+    ui->noteFolderPlasmaActivityLayout->addWidget(_plasmaActivitySelector);
+    ui->noteFolderPlasmaActivityFrame->setVisible(true);
+
+    connect(_plasmaActivitySelector, &PlasmaActivitySelectorWidget::selectionChanged, this,
+            &NoteFolderSettingsWidget::onPlasmaActivitySelectionChanged);
+}
+
+void NoteFolderSettingsWidget::onPlasmaActivitySelectionChanged(bool enabled,
+                                                                const QString &activityId) {
+    if (!_selectedNoteFolder.isFetched()) {
+        return;
+    }
+
+    const QList<int> clearedIds = PlasmaActivityService::setNoteFolderActivity(
+        _selectedNoteFolder.getId(), enabled, activityId);
+
+    // Tell the user which note folders aren't linked to the activity anymore,
+    // because only one note folder can be linked to an activity
+    QStringList names;
+    for (const int id : clearedIds) {
+        names << NoteFolder::fetch(id).getName();
+    }
+
+    if (!names.isEmpty()) {
+        _plasmaActivitySelector->setNotice(tr("The activity was removed from note folder: %1")
+                                               .arg(names.join(QStringLiteral(", "))));
+    }
+}
+#endif

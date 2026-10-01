@@ -26,6 +26,10 @@ namespace Ui {
 class NoteFolderSettingsWidget;
 }
 
+#ifdef Q_OS_LINUX
+class PlasmaActivitySelectorWidget;
+#endif
+
 class NoteFolderSettingsWidget : public QWidget {
     Q_OBJECT
 
@@ -70,6 +74,12 @@ class NoteFolderSettingsWidget : public QWidget {
     NoteFolder _selectedNoteFolder;
     QStatusBar *_noteFolderRemotePathTreeStatusBar = nullptr;
     bool _updatingSubfolderTreeCheckStates = false;
+#ifdef Q_OS_LINUX
+    PlasmaActivitySelectorWidget *_plasmaActivitySelector = nullptr;
+
+    void initPlasmaActivitySelector();
+    void onPlasmaActivitySelectionChanged(bool enabled, const QString &activityId);
+#endif
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visible);
     void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent, const QString &path);

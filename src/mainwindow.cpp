@@ -44,6 +44,9 @@
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
 #include <services/xdgglobalshortcutmanager.h>
 #endif
+#ifdef Q_OS_LINUX
+#include <services/plasmaactivityservice.h>
+#endif
 #include <utils/git.h>
 #include <utils/gui.h>
 #include <utils/listutils.h>
@@ -450,6 +453,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     // load the note folder list in the menu
     this->loadNoteFolderListMenu();
+
+#ifdef Q_OS_LINUX
+    // React to KDE Plasma activity changes, deferred so the layout and
+    // note folder are fully restored before the current activity is applied
+    QTimer::singleShot(500, this, [this]() { initPlasmaActivityService(); });
+#endif
 
     // Update panels sort and order
     // Best don't do that with QTimer::singleShot
@@ -941,6 +950,87 @@ void MainWindow::initMcpService() {
     _mcpService = new McpService(this);
     _mcpService->start();
 }
+
+#ifdef Q_OS_LINUX
+/**
+ * Listens to KDE Plasma activity changes and applies the note folder and
+ * layout linked to the current activity at startup
+ */
+void MainWindow::initPlasmaActivityService() {
+    if (_plasmaActivityService != nullptr) {
+        return;
+    }
+
+    _plasmaActivityService = new PlasmaActivityService(this);
+    connect(_plasmaActivityService, &PlasmaActivityService::currentActivityChanged, this,
+            &MainWindow::onPlasmaActivityChanged);
+
+    // Apply the links of the activity that is active at startup
+    _plasmaActivityService->requestCurrentActivity();
+}
+
+/**
+ * Switches to the note folder and layout linked to a KDE Plasma activity
+ */
+void MainWindow::onPlasmaActivityChanged(const QString &activityId) {
+    if (activityId.isEmpty() || qApp->property("clearAppDataAndExit").toBool()) {
+        return;
+    }
+
+    // Don't switch while a modal dialog, like the settings dialog, is open,
+    // try again when it is closed instead
+    if (QApplication::activeModalWidget() != nullptr) {
+        const bool retryScheduled = !_pendingPlasmaActivityId.isEmpty();
+        _pendingPlasmaActivityId = activityId;
+
+        if (!retryScheduled) {
+            QTimer::singleShot(1000, this, [this]() {
+                const QString pendingActivityId = _pendingPlasmaActivityId;
+                _pendingPlasmaActivityId.clear();
+                onPlasmaActivityChanged(pendingActivityId);
+            });
+        }
+
+        return;
+    }
+
+    _pendingPlasmaActivityId.clear();
+    QStringList messages;
+
+    const int noteFolderId = PlasmaActivityService::noteFolderIdForActivity(activityId);
+
+    if (noteFolderId > 0 && noteFolderId != NoteFolder::currentNoteFolderId()) {
+        const NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
+
+        if (!noteFolder.localPathExists()) {
+            qWarning() << "Note folder for KDE Plasma activity" << activityId
+                       << "does not exist:" << noteFolder.getLocalPath();
+            messages << tr("Note folder \"%1\" does not exist").arg(noteFolder.getName());
+        } else if (changeNoteFolder(noteFolderId)) {
+            messages << tr("Switched to note folder \"%1\"").arg(noteFolder.getName());
+        }
+    }
+
+    const QString layoutUuid = PlasmaActivityService::layoutUuidForActivity(activityId);
+
+    if (!layoutUuid.isEmpty() && layoutUuid != _layoutManager->currentLayoutUuid() &&
+        _layoutManager->getLayoutUuidList().contains(layoutUuid)) {
+        _layoutManager->setCurrentLayout(layoutUuid);
+        const SettingsService settings;
+        messages << tr("Switched to layout \"%1\"")
+                        .arg(settings
+                                 .value(QStringLiteral("layout-") + layoutUuid +
+                                        QStringLiteral("/name"))
+                                 .toString());
+    }
+
+    if (!messages.isEmpty()) {
+        showStatusBarMessage(
+            tr("KDE Plasma activity changed: %1").arg(messages.join(QStringLiteral(", "))),
+            QStringLiteral("🖥️"), 5000);
+    }
+}
+#endif
 
 void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     auto handler = new FakeVim::Internal::FakeVimHandler(noteTextEdit, this);

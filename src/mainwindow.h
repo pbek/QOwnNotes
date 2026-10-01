@@ -26,6 +26,9 @@
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
 class XdgGlobalShortcutManager;
 #endif
+#ifdef Q_OS_LINUX
+class PlasmaActivityService;
+#endif
 
 #include "entities/notehistory.h"
 
@@ -743,6 +746,12 @@ class MainWindow : public QMainWindow {
 
     void initMcpService();
 
+#ifdef Q_OS_LINUX
+    void initPlasmaActivityService();
+
+    void onPlasmaActivityChanged(const QString &activityId);
+#endif
+
     void updateLocalTrashActionVisibility();
 
     void on_actionJump_to_note_list_panel_triggered();
@@ -1046,6 +1055,10 @@ class MainWindow : public QMainWindow {
     QList<QHotkey *> _globalShortcuts;
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
     XdgGlobalShortcutManager *_xdgShortcutManager = nullptr;
+#endif
+#ifdef Q_OS_LINUX
+    PlasmaActivityService *_plasmaActivityService = nullptr;
+    QString _pendingPlasmaActivityId;
 #endif
     bool _scriptUpdateFound = false;
     QAction *_lastTriggeredAction = nullptr;

@@ -741,11 +741,19 @@ endif()
 list(APPEND SOURCE_FILES libraries/md4c/src/md4c.c
      libraries/md4c/src/md4c-html.c libraries/md4c/src/entity.c)
 
-# XDG Desktop Portal global shortcuts support for Wayland on Linux
+# XDG Desktop Portal global shortcuts support for Wayland and KDE Plasma
+# activities support on Linux (both use D-Bus)
 if(UNIX AND NOT APPLE)
   find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS DBus)
-  list(APPEND SOURCE_FILES services/xdgglobalshortcutmanager.cpp
-       services/xdgglobalshortcutmanager.h)
+  list(
+    APPEND
+    SOURCE_FILES
+    services/xdgglobalshortcutmanager.cpp
+    services/xdgglobalshortcutmanager.h
+    services/plasmaactivityservice.cpp
+    services/plasmaactivityservice.h
+    widgets/plasmaactivityselectorwidget.cpp
+    widgets/plasmaactivityselectorwidget.h)
 endif()
 
 # Translation files
