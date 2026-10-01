@@ -112,9 +112,16 @@ nix-build-force:
 nix-run:
     ./result/bin/QOwnNotes --session test
 
-# Build and run the application for nix
+# Build the application for nix with the nixpkgs of the running system instead of the
+# locked one, so the Qt version matches the desktop environment and its Qt plugins,
+# like the KDE Plasma platform theme, can be loaded
 [group('nix')]
-nix-build-run: nix-build nix-run
+nix-build-system:
+    nix build '.?submodules=1#qownnotes-qt6' --override-input nixpkgs nixpkgs --no-write-lock-file
+
+# Build and run the application for nix with the nixpkgs of the running system
+[group('nix')]
+nix-build-run: nix-build-system nix-run
 
 # Open the breeze icons folder
 [group('nix')]
