@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 26.9.15
+## 26.10.0
 
 - Changes to the note-folder database `notes.sqlite` made outside QOwnNotes now refresh
   note tags and the tag tree (for [#3764](https://github.com/pbek/QOwnNotes/issues/3764))
