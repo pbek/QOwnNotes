@@ -169,7 +169,12 @@ jobs:
         # Do tests
         #
 
-      - if: contains( matrix.os, 'ubuntu-latest')
+      # Qt's CMake packages need the OpenGL and xkbcommon development headers
+      - if: contains( matrix.os, 'ubuntu-latest') && startsWith( matrix.qt-version, '6.' )
+        name: Install CMake test dependencies on Linux
+        run: sudo apt-get update && sudo apt-get install -y libgl-dev libxkbcommon-dev
+      # The unit tests are only built with Qt 6
+      - if: contains( matrix.os, 'ubuntu-latest') && startsWith( matrix.qt-version, '6.' )
         name: Do Linux tests
         uses: nick-fields/retry@v4
         with:
@@ -177,11 +182,10 @@ jobs:
           max_attempts: 3
           retry_on: error
           command: |
-            cd src/../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS && make -s -j 8
-            ../bin/tests/tests -platform minimal -txt
-      # qmake workaround: https://bugreports.qt.io/browse/QTBUG-117225?focusedId=754625&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-754625
-      # See https://github.com/pbek/QOwnNotes/issues/3018
-      - if: contains( matrix.os, 'macos')
+            cmake -S tests -B build-tests -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH="$QT_ROOT_DIR" &&
+            cmake --build build-tests --parallel 8 &&
+            build-tests/bin/tests -platform minimal -txt
+      - if: contains( matrix.os, 'macos') && startsWith( matrix.qt-version, '6.' )
         name: Do macOS tests
         uses: nick-fields/retry@v4
         with:
@@ -189,8 +193,9 @@ jobs:
           max_attempts: 3
           retry_on: error
           command: |
-            cd src/../tests && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -s -j 8
-            ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
+            cmake -S tests -B build-tests -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH="$QT_ROOT_DIR" &&
+            cmake --build build-tests --parallel 8 &&
+            build-tests/bin/tests -platform minimal -txt
       # Disable Qt5 Windows tests, because build tools are missing and we build Qt6 only now
       #      - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '5.' )
       #        name: Do Qt5 Windows tests
