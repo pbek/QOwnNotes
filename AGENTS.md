@@ -113,14 +113,12 @@ cmake ../src \
 
 - **Debug Mode**: `CONFIG+=debug` - Includes debug symbols
 - **Dev Mode**: `CONFIG+=DEV_MODE` - Enables higher warning levels and precompiled headers
-- **Integration Tests**: `DEFINES+=INTEGRATION_TESTS` - For test builds
 
 ### Build Modes (CMake)
 
 - **CMAKE_BUILD_TYPE=Debug** - Debug build with symbols
 - **CMAKE_BUILD_TYPE=Release** - Optimized release build
 - **DEV_MODE=ON** - Developer mode with extra warnings and -Werror on Linux
-- **INTEGRATION_TESTS** - For test builds
 
 ### Common Configuration
 
@@ -148,9 +146,21 @@ just src-test
 
 This will:
 
-1. Build tests in `build-tests-QOwnNotes/` directory
+1. Build the unit tests with CMake and Qt6 in the `build-tests-QOwnNotes/` directory
 2. Run tests in minimal platform mode
 3. Clean up the test build directory
+
+The unit tests are defined in `tests/CMakeLists.txt` (Qt6 only, the `INTEGRATION_TESTS` define is
+set there). To build and run them manually:
+
+```bash
+cmake -S tests -B build-tests -DCMAKE_BUILD_TYPE=Debug
+cmake --build build-tests --parallel
+./build-tests/bin/tests -platform minimal
+```
+
+When adding new test cases or application sources needed by the tests, add them to
+`tests/CMakeLists.txt`.
 
 For VM tests (integration tests):
 

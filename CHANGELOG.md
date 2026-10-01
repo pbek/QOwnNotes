@@ -25,6 +25,8 @@
   - Nextcloud Deck cards can be created from the editor toolbar, and card links open in the
     Nextcloud Deck Android app
   - The account menu now lists all accounts at the top, so switching accounts is one tap away
+- The unit tests are now built with CMake and Qt 6 instead of qmake, and a crash of the
+  unit tests caused by leftover data in the test database was fixed
 
 ## 26.9.14
 
