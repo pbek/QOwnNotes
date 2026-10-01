@@ -15,27 +15,12 @@ set(QON_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../src)
 get_filename_component(QON_SRC_DIR ${QON_SRC_DIR} ABSOLUTE)
 set(QON_TESTS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/unit_tests)
 
-# Pick the Qt major version. QON_QT6_BUILD can be used to force a version,
-# otherwise Qt6 is preferred and Qt5 is used as fallback.
-if(DEFINED QON_QT6_BUILD)
-  if(QON_QT6_BUILD)
-    set(QT_VERSION_MAJOR 6)
-  else()
-    set(QT_VERSION_MAJOR 5)
-  endif()
-else()
-  find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
-endif()
-set(QT_DEFAULT_MAJOR_VERSION ${QT_VERSION_MAJOR})
-message(STATUS "Building unit tests with Qt ${QT_VERSION_MAJOR}")
+# The unit tests are only built with Qt6
+set(QT_VERSION_MAJOR 6)
+set(QT_DEFAULT_MAJOR_VERSION 6)
 
-# Qt6 requires C++17, Qt5 builds are kept at C++11 to catch compatibility issues
-# in the legacy Qt5 builds
-if(QT_VERSION_MAJOR EQUAL 6)
-  set(CMAKE_CXX_STANDARD 17)
-else()
-  set(CMAKE_CXX_STANDARD 11)
-endif()
+# Qt6 requires C++17
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
@@ -83,15 +68,9 @@ set(BUILD_QTQUICK_DEMO
 set(BUILD_TESTING
     OFF
     CACHE BOOL "" FORCE)
-if(QT_VERSION_MAJOR EQUAL 6)
-  set(BUILD_WITH_QT5
-      OFF
-      CACHE BOOL "" FORCE)
-else()
-  set(BUILD_WITH_QT5
-      ON
-      CACHE BOOL "" FORCE)
-endif()
+set(BUILD_WITH_QT5
+    OFF
+    CACHE BOOL "" FORCE)
 find_package(PkgConfig QUIET)
 if(PKG_CONFIG_FOUND)
   pkg_check_modules(LIBSECRET libsecret-1)
@@ -101,11 +80,6 @@ set(LIBSECRET_SUPPORT
     CACHE BOOL "" FORCE)
 add_subdirectory(${QON_SRC_DIR}/libraries/qtkeychain libraries/qtkeychain
                  EXCLUDE_FROM_ALL)
-if(QT_VERSION_MAJOR EQUAL 5 AND Qt5Core_VERSION VERSION_LESS 5.15.0)
-  # qtkeychain references QDataStream::Qt_5_15, which is unavailable in legacy
-  # Qt 5 builds.
-  target_compile_definitions(qt5keychain PRIVATE Qt_5_15=Qt_5_0)
-endif()
 
 add_subdirectory(${QON_SRC_DIR}/libraries/diff_match_patch
                  libraries/diff_match_patch EXCLUDE_FROM_ALL)
