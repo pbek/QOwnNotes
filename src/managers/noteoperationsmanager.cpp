@@ -14,6 +14,7 @@
 
 #include "noteoperationsmanager.h"
 
+#include <dialogs/newnotedialog.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
@@ -430,6 +431,24 @@ void NoteOperationsManager::copySelectedNotesToFolder(const QString &destination
 }
 
 /**
+ * Generates a generic note name with the current date and time appended,
+ * like "Note 2025-04-18 11h54s09"
+ *
+ * @param noteName base name, "Note" is used if empty
+ */
+QString NoteOperationsManager::generateNewNoteName(QString noteName) {
+    if (noteName.isEmpty()) {
+        noteName = tr("Note", "name for new note");
+    }
+
+    const QDateTime currentDate = QDateTime::currentDateTime();
+
+    // Format the date and time like "2025-04-18 11h54s09"
+    return noteName + QStringLiteral(" ") +
+           currentDate.toString(QStringLiteral("yyyy-MM-dd HH'h'mm's'ss"));
+}
+
+/**
  * Creates a new note
  *
  * @param noteName
@@ -443,16 +462,10 @@ void NoteOperationsManager::createNewNote(QString noteName, bool withNameAppend)
     // show the window in case we are using the system tray
     _mainWindow->show();
 
-    if (noteName.isEmpty()) {
-        noteName = tr("Note", "name for new note");
-    }
-
     if (withNameAppend) {
-        QDateTime currentDate = QDateTime::currentDateTime();
-
-        // Format the date and time like "2025-04-18 11h54s09"
-        noteName = noteName + QStringLiteral(" ") +
-                   currentDate.toString(QStringLiteral("yyyy-MM-dd HH'h'mm's'ss"));
+        noteName = generateNewNoteName(noteName);
+    } else if (noteName.isEmpty()) {
+        noteName = tr("Note", "name for new note");
     }
 
     const QSignalBlocker blocker(_ui->searchLineEdit);
@@ -926,24 +939,26 @@ void NoteOperationsManager::on_actionSplit_note_at_cursor_position_triggered() {
 void NoteOperationsManager::on_action_Remove_note_triggered() { removeCurrentNote(); }
 
 /**
- * Triggered by the shortcut to create a new note with date in the headline
+ * Triggered by the shortcut to create a new note with date in the note name
  */
 void NoteOperationsManager::on_action_New_note_triggered() {
     SettingsService settings;
     const bool newNoteAskHeadline = settings.value(QStringLiteral("newNoteAskHeadline")).toBool();
 
-    // check if we want to ask for a headline
+    // Check if we want to ask for a note name
     if (newNoteAskHeadline) {
-        bool ok;
-        QString headline = QInputDialog::getText(_mainWindow, tr("New note"), tr("Note headline"),
-                                                 QLineEdit::Normal, QString(), &ok);
+        // Prefill the dialog with the same note name that would be generated
+        // if the setting was turned off
+        NewNoteDialog dialog(generateNewNoteName(), _mainWindow);
 
-        if (!ok) {
+        if (dialog.exec() != QDialog::Accepted) {
             return;
         }
 
-        if (!headline.isEmpty()) {
-            createNewNote(headline, false);
+        const QString noteName = dialog.noteName();
+
+        if (!noteName.isEmpty()) {
+            createNewNote(noteName, false);
             return;
         }
     }

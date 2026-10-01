@@ -68,10 +68,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
           <item row="8" column="0" colspan="2">
            <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
             <property name="toolTip">
-             <string>By default the headline will generated automatically</string>
+             <string>By default the note name will be generated automatically</string>
             </property>
             <property name="text">
-             <string>The shortcut to create a new note asks for a headline</string>
+             <string>The shortcut to create a new note asks for a note name</string>
             </property>
            </widget>
           </item>

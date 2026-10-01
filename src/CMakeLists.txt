@@ -283,6 +283,9 @@ set(SOURCE_FILES
     dialogs/tagadddialog.cpp
     dialogs/tagadddialog.h
     dialogs/tagadddialog.ui
+    dialogs/newnotedialog.cpp
+    dialogs/newnotedialog.h
+    dialogs/newnotedialog.ui
     dialogs/sharedialog.cpp
     dialogs/sharedialog.h
     dialogs/sharedialog.ui

@@ -39,6 +39,7 @@ class NoteOperationsManager : public QObject {
     void moveSelectedNotesToFolder(const QString &destinationFolder);
     void copySelectedNotesToFolder(const QString &destinationFolder,
                                    const QString &noteFolderPath = QString());
+    static QString generateNewNoteName(QString noteName = QString());
     void createNewNote(QString noteName, bool withNameAppend = true);
     void createNewNote(
         QString name, QString text,

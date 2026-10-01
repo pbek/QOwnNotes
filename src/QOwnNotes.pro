@@ -210,6 +210,7 @@ SOURCES += main.cpp\
     dialogs/welcomedialog.cpp \
     dialogs/issueassistantdialog.cpp \
     dialogs/tagadddialog.cpp \
+    dialogs/newnotedialog.cpp \
     widgets/navigationwidget.cpp \
     widgets/filenavigationwidget.cpp \
     widgets/backlinkwidget.cpp \
@@ -379,6 +380,7 @@ HEADERS  += mainwindow.h \
     dialogs/welcomedialog.h \
     dialogs/issueassistantdialog.h \
     dialogs/tagadddialog.h \
+    dialogs/newnotedialog.h \
     widgets/navigationwidget.h \
     widgets/filenavigationwidget.h \
     widgets/backlinkwidget.h \
@@ -490,6 +492,7 @@ FORMS    += mainwindow.ui \
     dialogs/welcomedialog.ui \
     dialogs/issueassistantdialog.ui \
     dialogs/tagadddialog.ui \
+    dialogs/newnotedialog.ui \
     widgets/logwidget.ui \
     dialogs/sharedialog.ui \
     widgets/fontcolorwidget.ui \

@@ -9,6 +9,10 @@
 - On Windows, italic text in fonts without a real italic face, like _Tahoma_, is now also
   rendered without font smoothing when Windows font smoothing is disabled
   (for [#3757](https://github.com/pbek/QOwnNotes/issues/3757))
+- If the setting to ask for a note name when creating a new note with `Ctrl + N` is enabled,
+  the dialog is now prefilled with the default note name including the current date and time,
+  which is selected so it can be overwritten right away, and the setting and dialog now talk
+  about a _note name_ instead of a _headline_ (for [#3765](https://github.com/pbek/QOwnNotes/issues/3765))
 
 ## 26.9.14
 
