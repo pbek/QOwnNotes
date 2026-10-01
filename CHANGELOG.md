@@ -13,6 +13,15 @@
   the dialog is now prefilled with the default note name including the current date and time,
   which is selected so it can be overwritten right away, and the setting and dialog now talk
   about a _note name_ instead of a _headline_ (for [#3765](https://github.com/pbek/QOwnNotes/issues/3765))
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.0.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.0.0)
+  - Note tags are shared with QOwnNotes desktop through the `notes.sqlite` file in the notes folder,
+    and notes can be filtered and tagged, even offline
+  - Opening a note while searching the note list opens _Find in note_ with the same text
+  - A new _Ask for name of new notes_ setting asks for the name of a new note before creating it
+  - Nextcloud Deck cards can be created from the editor toolbar, and card links open in the
+    Nextcloud Deck Android app
+  - The account menu now lists all accounts at the top, so switching accounts is one tap away
 
 ## 26.9.14
 
