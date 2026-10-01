@@ -284,6 +284,12 @@ target_link_libraries(
           Google::DiffMatchPatch
           qt${QT_VERSION_MAJOR}keychain)
 
+# CryptoService checks via D-Bus if a secret service is available on Linux
+if(UNIX AND NOT APPLE)
+  find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS DBus)
+  target_link_libraries(tests PRIVATE Qt${QT_VERSION_MAJOR}::DBus)
+endif()
+
 if(QON_TESTS_COVERAGE)
   if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(tests PRIVATE -g -O0 --coverage)

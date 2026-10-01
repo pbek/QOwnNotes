@@ -15,6 +15,13 @@
 #include <QTimer>
 #include <QUuid>
 
+#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC) && !defined(Q_OS_ANDROID)
+#define QON_KEYCHAIN_DBUS_PROBE
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusReply>
+#endif
+
 #include "services/databaseservice.h"
 #include "services/settingsservice.h"
 
@@ -127,6 +134,70 @@ bool containsLegacyScriptSecret(const QString &settingsVariablesJson) {
     }
 
     return false;
+}
+
+#ifdef QON_KEYCHAIN_DBUS_PROBE
+/**
+ * Checks if a secret service (Secret Service API or KWallet) is running or can be
+ * started via D-Bus activation. This doesn't touch any keychain items, so it never
+ * triggers an unlock prompt.
+ */
+bool isDBusSecretServiceReachable() {
+    QDBusConnection bus = QDBusConnection::sessionBus();
+
+    if (!bus.isConnected()) {
+        return false;
+    }
+
+    QDBusConnectionInterface *busInterface = bus.interface();
+
+    if (busInterface == nullptr) {
+        return false;
+    }
+
+    static const QStringList serviceNames = {
+        QStringLiteral("org.freedesktop.secrets"),
+        QStringLiteral("org.kde.kwalletd6"),
+        QStringLiteral("org.kde.kwalletd5"),
+    };
+
+    for (const QString &serviceName : serviceNames) {
+        if (busInterface->isServiceRegistered(serviceName).value()) {
+            return true;
+        }
+    }
+
+    // Use the raw D-Bus call, because QDBusConnectionInterface::activatableServiceNames()
+    // is only available since Qt 5.14
+    const QDBusReply<QStringList> activatableReply =
+        busInterface->call(QStringLiteral("ListActivatableNames"));
+
+    if (!activatableReply.isValid()) {
+        return false;
+    }
+
+    const QStringList activatableNames = activatableReply.value();
+
+    for (const QString &serviceName : serviceNames) {
+        if (activatableNames.contains(serviceName)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+#endif
+
+bool detectKeychainAvailability() {
+#ifdef QON_KEYCHAIN_DBUS_PROBE
+    // QKeychain::isAvailable() only checks if the libsecret library could be loaded on Linux,
+    // so we also need to check if there is a secret service that can actually store secrets
+    if (!isDBusSecretServiceReachable()) {
+        return false;
+    }
+#endif
+
+    return QKeychain::isAvailable();
 }
 }    // namespace
 
@@ -330,6 +401,25 @@ int CryptoService::keychainTimeout() {
         1, settings.value(QStringLiteral("keychainTimeout"), DefaultKeychainTimeout).toInt(), 120);
 }
 
+/**
+ * Checks once per application run if a system keychain can be used to store secrets.
+ * If there is none, keychain writes are skipped and secrets are kept in the legacy storage.
+ */
+bool CryptoService::isKeychainAvailable() {
+    static int availability = -1;
+
+    if (availability == -1) {
+        availability = detectKeychainAvailability() ? 1 : 0;
+
+        if (availability == 0) {
+            qWarning() << "No system keychain is available, secrets will be stored with the "
+                          "legacy encryption";
+        }
+    }
+
+    return availability == 1;
+}
+
 bool CryptoService::hasLegacySecretsToMigrate() {
     SettingsService settings;
 
@@ -406,7 +496,12 @@ QString CryptoService::storeSecret(const QString &key, const QString &text) {
         return markerForKey(key);
     }
 
-    qWarning() << "Could not store secret in keychain, falling back to legacy encryption:" << key;
+    // A missing keychain was already reported once in isKeychainAvailable()
+    if (isKeychainAvailable()) {
+        qWarning() << "Could not store secret in keychain, falling back to legacy encryption:"
+                   << key;
+    }
+
     return legacyEncryptToString(text);
 }
 
@@ -430,6 +525,12 @@ QString CryptoService::readSecret(const QString &key) const {
 }
 
 bool CryptoService::writeSecret(const QString &key, const QString &text) const {
+    // Don't attempt to write to a keychain that doesn't exist, the callers will fall back
+    // to the legacy storage
+    if (!isKeychainAvailable()) {
+        return false;
+    }
+
     auto *job = new QKeychain::WritePasswordJob(keychainServiceName());
     job->setKey(key);
     job->setTextData(text);

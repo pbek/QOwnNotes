@@ -13,6 +13,9 @@
   the dialog is now prefilled with the default note name including the current date and time,
   which is selected so it can be overwritten right away, and the setting and dialog now talk
   about a _note name_ instead of a _headline_ (for [#3765](https://github.com/pbek/QOwnNotes/issues/3765))
+- The _Secure password storage_ dialog doesn't show up on every start anymore if there is no
+  system keychain, like _GNOME Keyring_ or _KWallet_, available on Linux; in that case passwords
+  and API keys stay in the legacy storage (for [#3766](https://github.com/pbek/QOwnNotes/issues/3766))
 - There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
   [v1.0.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.0.0)
   - Note tags are shared with QOwnNotes desktop through the `notes.sqlite` file in the notes folder,

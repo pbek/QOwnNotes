@@ -436,8 +436,10 @@ int mainStartupMisc(const QStringList &arguments) {
 
     DatabaseService::createConnection();
 
+    // Only announce the migration if there is a keychain to migrate to, otherwise the
+    // secrets stay in the legacy storage and the dialog would show up on every start
     if (qobject_cast<QApplication *>(QCoreApplication::instance()) != nullptr &&
-        CryptoService::hasLegacySecretsToMigrate()) {
+        CryptoService::hasLegacySecretsToMigrate() && CryptoService::isKeychainAvailable()) {
         QMessageBox::information(
             nullptr, QObject::tr("Secure password storage"),
             QObject::tr(

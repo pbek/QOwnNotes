@@ -25,6 +25,7 @@ class CryptoService : public QObject {
     void deleteSecrets(const QStringList &storedValuesOrKeys) const;
     static int keychainTimeout();
     static bool hasLegacySecretsToMigrate();
+    static bool isKeychainAvailable();
     static QStringList keychainReferencesFromSettings(const QSettings &settings);
     static QStringList keychainReferencesFromDiskDatabase();
 
