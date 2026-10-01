@@ -169,10 +169,11 @@ jobs:
         # Do tests
         #
 
-      # Qt's CMake packages need the OpenGL and xkbcommon development headers
+      # Qt's CMake packages need the OpenGL and xkbcommon development headers,
+      # and Qt6PrintSupport needs the CUPS development headers in some Qt versions (e.g. 6.7)
       - if: contains( matrix.os, 'ubuntu-latest') && startsWith( matrix.qt-version, '6.' )
         name: Install CMake test dependencies on Linux
-        run: sudo apt-get update && sudo apt-get install -y libgl-dev libxkbcommon-dev
+        run: sudo apt-get update && sudo apt-get install -y libgl-dev libxkbcommon-dev libcups2-dev
       # The unit tests are only built with Qt 6
       - if: contains( matrix.os, 'ubuntu-latest') && startsWith( matrix.qt-version, '6.' )
         name: Do Linux tests
