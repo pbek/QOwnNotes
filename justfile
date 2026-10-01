@@ -140,11 +140,12 @@ src-build-internal-botan:
     qmake --version
     mkdir -p {{ sourceBuildDir }}; cd {{ sourceBuildDir }} && qmake "CONFIG+=debug" ../src/QOwnNotes.pro CONFIG+=DEV_MODE && make -j$(nproc)
 
-# Build the application direclty from the source
+# Build and run the unit tests with CMake
 [group('src-build')]
 src-test:
-    mkdir -p {{ sourceBuildTestDir }}; cd {{ sourceBuildTestDir }} && qmake CONFIG+=debug CONFIG+=DEV_MODE DEFINES+=INTEGRATION_TESTS ../tests/QOwnNotesTests.pro && make -j$(nproc)
-    ./bin/tests/tests -platform minimal
+    cmake -S tests -B {{ sourceBuildTestDir }} -DCMAKE_BUILD_TYPE=Debug
+    cmake --build {{ sourceBuildTestDir }} --parallel $(nproc)
+    {{ sourceBuildTestDir }}/bin/tests -platform minimal
     rm -rf {{ sourceBuildTestDir }}
 
 # Clean the build directory
