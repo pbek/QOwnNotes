@@ -1573,7 +1573,6 @@ void Utils::Misc::presetDisableAutomaticUpdateDialog() {
     if (settings.value(QStringLiteral("disableAutomaticUpdateDialog")).toString().isEmpty()) {
         QString release = qApp->property("release").toString();
         bool enabled = release.contains(QStringLiteral("Travis")) ||
-                       release.contains(QStringLiteral("AppVeyor")) ||
                        release.contains(QStringLiteral("AppImage"));
         settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"), !enabled);
     }
