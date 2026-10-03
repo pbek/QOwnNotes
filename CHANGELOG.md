@@ -14,6 +14,7 @@
   - Text is now drawn in the editor text color, so it is readable in dark mode
   - Hovering the overview doesn't change the layout of the overview anymore
   - The magnifier now follows the mouse cursor without lagging behind
+- The _General_ settings are now shown at the top of the settings list
 
 ## 26.10.0
 

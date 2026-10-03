@@ -117,6 +117,54 @@
            </column>
            <item>
             <property name="text">
+             <string>General</string>
+            </property>
+            <property name="whatsThis">
+             <string notr="true">7</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
+            </property>
+            <item>
+             <property name="text">
+              <string>Portable mode</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">10</string>
+             </property>
+             <property name="icon">
+              <iconset theme="drive-removable-media" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/drive-removable-media.svg</normaloff>:/icons/breeze-qownnotes/16x16/drive-removable-media.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Git versioning</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">15</string>
+             </property>
+             <property name="icon">
+              <iconset theme="appointment-new" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
+             </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Trash</string>
+              </property>
+              <property name="whatsThis">
+               <string notr="true">17</string>
+              </property>
+              <property name="icon">
+               <iconset theme="trash-empty" resource="../breeze-qownnotes.qrc">
+                <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
+              </property>
+             </item>
+           </item>
+           <item>
+            <property name="text">
              <string>Note folders</string>
             </property>
             <property name="whatsThis">
@@ -367,55 +415,7 @@
                  <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
                </property>
               </item>
-            </item>
-           <item>
-            <property name="text">
-             <string>General</string>
-            </property>
-            <property name="whatsThis">
-             <string notr="true">7</string>
-            </property>
-            <property name="icon">
-             <iconset resource="../breeze-qownnotes.qrc">
-              <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
-            </property>
-            <item>
-             <property name="text">
-              <string>Portable mode</string>
-             </property>
-             <property name="whatsThis">
-              <string notr="true">10</string>
-             </property>
-             <property name="icon">
-              <iconset theme="drive-removable-media" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/drive-removable-media.svg</normaloff>:/icons/breeze-qownnotes/16x16/drive-removable-media.svg</iconset>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Git versioning</string>
-             </property>
-             <property name="whatsThis">
-              <string notr="true">15</string>
-             </property>
-             <property name="icon">
-              <iconset theme="appointment-new" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
-             </property>
              </item>
-             <item>
-              <property name="text">
-               <string>Trash</string>
-              </property>
-              <property name="whatsThis">
-               <string notr="true">17</string>
-              </property>
-              <property name="icon">
-               <iconset theme="trash-empty" resource="../breeze-qownnotes.qrc">
-                <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
-              </property>
-             </item>
-           </item>
            <item>
             <property name="text">
              <string>Experimental</string>
