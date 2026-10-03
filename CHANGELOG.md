@@ -8,6 +8,11 @@
   - Turn it on in the _Note folders_ settings or the _Layouts_ settings and select the
     activity to react to
   - Only one note folder and one layout can be linked to an activity
+- The magnifier of the _Document overview_ panel was improved
+  (for [#3768](https://github.com/pbek/QOwnNotes/issues/3768))
+  - Text is now drawn in the editor text color, so it is readable in dark mode
+  - Hovering the overview doesn't change the layout of the overview anymore
+  - The magnifier now follows the mouse cursor without lagging behind
 
 ## 26.10.0
 

@@ -1,8 +1,9 @@
 #pragma once
 
+#include <QHash>
 #include <QPixmap>
 #include <QPointer>
-#include <QSet>
+#include <QSharedPointer>
 #include <QVector>
 #include <QWidget>
 
@@ -13,7 +14,9 @@ class QPainter;
 class QPaintEvent;
 class QPlainTextEdit;
 class QResizeEvent;
+class QTextBlock;
 class QTextCursor;
+class QTextLayout;
 class QTimer;
 class QWheelEvent;
 class DocumentOverviewPreview;
@@ -25,6 +28,7 @@ class DocumentOverviewWidget : public QWidget {
     explicit DocumentOverviewWidget(QPlainTextEdit *noteTextEdit,
                                     QPlainTextEdit *encryptedNoteTextEdit,
                                     QWidget *parent = nullptr);
+    ~DocumentOverviewWidget() override;
 
     QSize sizeHint() const override;
 
@@ -51,8 +55,8 @@ class DocumentOverviewWidget : public QWidget {
     void connectTextEdit(QPlainTextEdit *textEdit);
     void invalidateRepresentation();
     void hidePreview();
-    bool highlightPreviewBlocks(QPlainTextEdit *textEdit, int previewHeight);
     void paintPreview(QPainter &painter, const QRect &rect) const;
+    QTextLayout *previewLayout(QPlainTextEdit *textEdit, const QTextBlock &block) const;
     void rebuildRepresentation(QPlainTextEdit *textEdit, const QSize &size);
     void scheduleRepresentationUpdate();
     void showPreview();
@@ -62,14 +66,15 @@ class DocumentOverviewWidget : public QWidget {
 
     QPointer<QPlainTextEdit> _noteTextEdit;
     QPointer<QPlainTextEdit> _encryptedNoteTextEdit;
-    QPointer<QPlainTextEdit> _previewHighlightedTextEdit;
     QPointer<QPlainTextEdit> _representedTextEdit;
     QPixmap _representation;
     QVector<VisualLine> _visualLines;
     QVector<int> _blockFirstVisualLines;
     QVector<int> _blockVisualLineCounts;
-    QSet<int> _previewHighlightedBlocks;
-    DocumentOverviewPreview *_preview;
+    // Private layouts for blocks the editor didn't lay out yet, so the preview
+    // never has to modify the layout or highlighting of the editor document
+    mutable QHash<int, QSharedPointer<QTextLayout>> _previewLayouts;
+    QPointer<DocumentOverviewPreview> _preview;
     QTimer *_previewTimer;
     QTimer *_updateTimer;
     int _previewAnchorY = -1;

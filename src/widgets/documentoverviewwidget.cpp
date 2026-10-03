@@ -22,8 +22,7 @@
 #include <QWheelEvent>
 #include <QWindow>
 #include <QtGlobal>
-
-#include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include <climits>
 
 namespace {
 constexpr int kMargin = 4;
@@ -31,6 +30,9 @@ constexpr int kMaximumColumns = 120;
 constexpr int kUpdateDelay = 300;
 constexpr int kPreviewDelay = 250;
 constexpr qreal kPreviewScale = 0.8;
+constexpr int kPreviewSpacing = 8;
+constexpr int kMinimumPreviewWidth = 240;
+constexpr int kMinimumPreviewHeight = 80;
 
 bool isAtxHeading(const QString &text, int firstCharacter) {
     if (firstCharacter < 0 || firstCharacter > 3 || text.at(firstCharacter) != QLatin1Char('#')) {
@@ -57,16 +59,44 @@ QColor characterColor(const FormatRanges &formats, int position, const QColor &d
 
     return defaultColor;
 }
+
+Qt::WindowFlags tooltipWindowFlags() {
+    return Qt::ToolTip | Qt::FramelessWindowHint | Qt::BypassWindowManagerHint;
+}
 }    // namespace
 
 class DocumentOverviewPreview : public QFrame {
    public:
     explicit DocumentOverviewPreview(DocumentOverviewWidget *overview)
-        : QFrame(overview, Qt::ToolTip | Qt::FramelessWindowHint | Qt::BypassWindowManagerHint),
-          _overview(overview) {
+        : QFrame(overview, tooltipWindowFlags()), _overview(overview) {
         setAttribute(Qt::WA_ShowWithoutActivating);
+        setAttribute(Qt::WA_TransparentForMouseEvents);
         setFrameStyle(QFrame::StyledPanel);
         setLineWidth(1);
+        setFocusPolicy(Qt::NoFocus);
+        setAutoFillBackground(true);
+    }
+
+    /**
+     * Shows the preview as overlay inside the host window if possible, because
+     * moving a child widget is much cheaper than moving a top-level tooltip
+     * window (which needs to be recreated on e.g. Wayland)
+     */
+    void attachTo(QWidget *host) {
+        if (host != nullptr) {
+            if (parentWidget() != host || isWindow()) {
+                setParent(host, Qt::Widget);
+                setAttribute(Qt::WA_TransparentForMouseEvents);
+            }
+            return;
+        }
+
+        // Fall back to a tooltip window if there isn't enough space in the host window
+        if (!isWindow()) {
+            setParent(_overview, tooltipWindowFlags());
+            setAttribute(Qt::WA_ShowWithoutActivating);
+            setAttribute(Qt::WA_TransparentForMouseEvents);
+        }
     }
 
    protected:
@@ -109,6 +139,11 @@ DocumentOverviewWidget::DocumentOverviewWidget(QPlainTextEdit *noteTextEdit,
     connectTextEdit(noteTextEdit);
     connectTextEdit(encryptedNoteTextEdit);
     qApp->installEventFilter(this);
+}
+
+DocumentOverviewWidget::~DocumentOverviewWidget() {
+    // The preview may be parented to the main window, so we need to clean it up ourselves
+    delete _preview.data();
 }
 
 QSize DocumentOverviewWidget::sizeHint() const { return QSize(140, 400); }
@@ -220,7 +255,7 @@ void DocumentOverviewWidget::paintEvent(QPaintEvent *event) {
         qMin(contentHeight - 1, int(qreal(cursorVisualLine) / visualLineCount * contentHeight));
     painter.drawLine(kMargin, cursorY, width() - kMargin, cursorY);
 
-    if (_preview->isVisible() && _previewVisualLine >= 0) {
+    if (_preview != nullptr && _preview->isVisible() && _previewVisualLine >= 0) {
         QColor previewLineColor = palette().color(QPalette::Highlight);
         previewLineColor.setAlpha(230);
         painter.setPen(QPen(previewLineColor, 2));
@@ -236,10 +271,11 @@ void DocumentOverviewWidget::paintEvent(QPaintEvent *event) {
 
 void DocumentOverviewWidget::invalidateRepresentation() {
     _representationDirty = true;
+    _previewLayouts.clear();
     update();
-    if (_preview->isVisible() && !_updatingPreview) {
+    if (_preview != nullptr && _preview->isVisible() && !_updatingPreview) {
         QTimer::singleShot(0, this, [this]() {
-            if (_preview->isVisible()) {
+            if (_preview != nullptr && _preview->isVisible()) {
                 showPreview();
             }
         });
@@ -247,20 +283,24 @@ void DocumentOverviewWidget::invalidateRepresentation() {
 }
 
 void DocumentOverviewWidget::scheduleRepresentationUpdate() {
-    _previewHighlightedBlocks.clear();
+    // Block numbers may have changed, so the cached preview layouts are invalid
+    _previewLayouts.clear();
     _updateTimer->start();
 }
 
 void DocumentOverviewWidget::hidePreview() {
-    const bool wasVisible = _preview->isVisible();
+    const bool wasVisible = _preview != nullptr && _preview->isVisible();
     const bool wasPending = _previewTimer->isActive();
     if (!wasVisible && !wasPending && _previewVisualLine < 0) {
         return;
     }
 
     _previewTimer->stop();
-    _preview->hide();
+    if (_preview != nullptr) {
+        _preview->hide();
+    }
     _previewVisualLine = -1;
+    _previewLayouts.clear();
     if (wasVisible) {
         update();
     }
@@ -268,7 +308,7 @@ void DocumentOverviewWidget::hidePreview() {
 
 void DocumentOverviewWidget::showPreview() {
     QPlainTextEdit *textEdit = activeTextEdit();
-    if (textEdit == nullptr || _previewVisualLine < 0 || !underMouse() ||
+    if (textEdit == nullptr || _preview == nullptr || _previewVisualLine < 0 || !underMouse() ||
         !window()->isActiveWindow()) {
         hidePreview();
         return;
@@ -287,113 +327,143 @@ void DocumentOverviewWidget::showPreview() {
         return;
     }
 
-    const QPoint anchor = mapToGlobal(QPoint(0, _previewAnchorY));
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-    QScreen *screen = QGuiApplication::screenAt(anchor);
-#else
-    QScreen *screen = window()->windowHandle() == nullptr ? QGuiApplication::primaryScreen()
-                                                          : window()->windowHandle()->screen();
-#endif
-    const QRect availableGeometry = screen == nullptr ? QRect() : screen->availableGeometry();
     int previewWidth = qBound(360, textEdit->viewport()->width() * 3 / 4, 900);
     int previewHeight = qBound(120, textEdit->viewport()->height() / 4, 260);
-    if (availableGeometry.isValid()) {
-        previewWidth = qMin(previewWidth, availableGeometry.width());
-        previewHeight = qMin(previewHeight, availableGeometry.height());
-    }
-    _preview->resize(previewWidth, previewHeight);
+    int previewX = 0;
+    int previewY = 0;
 
-    if (highlightPreviewBlocks(textEdit, previewHeight)) {
-        rebuildRepresentation(textEdit, representationSize);
-        _previewVisualLine = visualLineAtPosition(_previewAnchorY);
-        if (_previewVisualLine < 0) {
-            hidePreview();
-            return;
+    // Prefer showing the preview as overlay inside our window, beside the overview
+    QWidget *host = window();
+    const QRect overviewRect(mapTo(host, QPoint(0, 0)), size());
+    const int leftSpace = overviewRect.left() - kPreviewSpacing;
+    const int rightSpace = host->width() - overviewRect.right() - 1 - kPreviewSpacing;
+    const bool showLeft = leftSpace >= rightSpace;
+    const int availableWidth = qMax(leftSpace, rightSpace);
+
+    if (availableWidth >= kMinimumPreviewWidth && host->height() >= kMinimumPreviewHeight) {
+        _preview->attachTo(host);
+        previewWidth = qMin(previewWidth, availableWidth);
+        previewHeight = qMin(previewHeight, host->height());
+        previewX = showLeft ? overviewRect.left() - kPreviewSpacing - previewWidth
+                            : overviewRect.right() + 1 + kPreviewSpacing;
+        previewY = qBound(0, overviewRect.top() + _previewAnchorY - previewHeight / 2,
+                          host->height() - previewHeight);
+    } else {
+        _preview->attachTo(nullptr);
+        const QPoint anchor = mapToGlobal(QPoint(0, _previewAnchorY));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+        QScreen *screen = QGuiApplication::screenAt(anchor);
+#else
+        QScreen *screen = window()->windowHandle() == nullptr ? QGuiApplication::primaryScreen()
+                                                              : window()->windowHandle()->screen();
+#endif
+        const QRect availableGeometry = screen == nullptr ? QRect() : screen->availableGeometry();
+        if (availableGeometry.isValid()) {
+            previewWidth = qMin(previewWidth, availableGeometry.width());
+            previewHeight = qMin(previewHeight, availableGeometry.height());
+        }
+
+        const int leftX = mapToGlobal(QPoint(0, 0)).x() - previewWidth - kPreviewSpacing;
+        const int rightX = mapToGlobal(QPoint(width(), 0)).x() + kPreviewSpacing;
+        previewX = leftX;
+        previewY = anchor.y() - previewHeight / 2;
+        if (availableGeometry.isValid()) {
+            if (leftX < availableGeometry.left() &&
+                rightX + previewWidth <= availableGeometry.right() + 1) {
+                previewX = rightX;
+            }
+            previewX = qBound(availableGeometry.left(), previewX,
+                              availableGeometry.right() - previewWidth + 1);
+            previewY = qBound(availableGeometry.top(), previewY,
+                              availableGeometry.bottom() - previewHeight + 1);
         }
     }
 
-    const int leftX = mapToGlobal(QPoint(0, 0)).x() - previewWidth - 8;
-    const int rightX = mapToGlobal(QPoint(width(), 0)).x() + 8;
-    int previewX = leftX;
-    int previewY = anchor.y() - previewHeight / 2;
-    if (availableGeometry.isValid()) {
-        if (leftX < availableGeometry.left() &&
-            rightX + previewWidth <= availableGeometry.right() + 1) {
-            previewX = rightX;
-        }
-        previewX = qBound(availableGeometry.left(), previewX,
-                          availableGeometry.right() - previewWidth + 1);
-        previewY = qBound(availableGeometry.top(), previewY,
-                          availableGeometry.bottom() - previewHeight + 1);
-    }
-
-    _preview->move(previewX, previewY);
+    _preview->setGeometry(previewX, previewY, previewWidth, previewHeight);
     _preview->raise();
     _preview->show();
     _preview->update();
     update();
 }
 
-bool DocumentOverviewWidget::highlightPreviewBlocks(QPlainTextEdit *textEdit, int previewHeight) {
-    auto *markdownTextEdit = qobject_cast<QMarkdownTextEdit *>(textEdit);
-    if (markdownTextEdit == nullptr || markdownTextEdit->highlighter() == nullptr ||
-        _visualLines.isEmpty()) {
-        return false;
+QTextLayout *DocumentOverviewWidget::previewLayout(QPlainTextEdit *textEdit,
+                                                   const QTextBlock &block) const {
+    QTextLayout *blockLayout = block.layout();
+    if (blockLayout != nullptr && blockLayout->lineCount() > 0) {
+        return blockLayout;
     }
 
-    if (_previewHighlightedTextEdit != textEdit) {
-        _previewHighlightedTextEdit = textEdit;
-        _previewHighlightedBlocks.clear();
+    const auto it = _previewLayouts.constFind(block.blockNumber());
+    if (it != _previewLayouts.constEnd()) {
+        return it.value().data();
     }
 
-    const int previewLineCount =
-        qMax(1, int(previewHeight / kPreviewScale) / qMax(1, textEdit->fontMetrics().height()));
-    const int firstVisualLine = qMax(0, _previewVisualLine - previewLineCount / 2 - 2);
-    const int lastVisualLine =
-        qMin(_visualLines.size() - 1, _previewVisualLine + previewLineCount / 2 + 2);
-    const int firstBlockNumber = _visualLines.at(firstVisualLine).blockNumber;
-    const int lastBlockNumber = _visualLines.at(lastVisualLine).blockNumber;
-    QTextBlock firstBlock = textEdit->document()->findBlockByNumber(firstBlockNumber);
-    while (firstBlock.previous().isValid() && firstBlock.previous().userState() < 0) {
-        firstBlock = firstBlock.previous();
+    // The editor lays out blocks lazily, so we lay out blocks outside the visible
+    // area in a private layout instead of forcing a relayout of the editor document,
+    // which would change the document size and the overview while hovering
+    QTextDocument *document = textEdit->document();
+    QSharedPointer<QTextLayout> layout(new QTextLayout(
+        block.text(), blockLayout == nullptr ? document->defaultFont() : blockLayout->font()));
+    layout->setTextOption(document->defaultTextOption());
+    layout->setCacheEnabled(true);
+    if (blockLayout != nullptr) {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+        layout->setFormats(blockLayout->formats());
+#else
+        layout->setAdditionalFormats(blockLayout->additionalFormats());
+#endif
     }
 
-    bool changed = false;
-    for (QTextBlock block = firstBlock; block.isValid() && block.blockNumber() <= lastBlockNumber;
-         block = block.next()) {
-        const int blockNumber = block.blockNumber();
-        if (!_previewHighlightedBlocks.contains(blockNumber)) {
-            // Mark the block first because rehighlighting can synchronously relayout the editor.
-            _previewHighlightedBlocks.insert(blockNumber);
-            markdownTextEdit->highlighter()->rehighlightBlock(block);
-            changed = true;
-        }
-
-        if (blockNumber >= firstBlockNumber) {
-            QTextLayout *layout = block.layout();
-            const int oldLineCount = layout == nullptr ? 0 : layout->lineCount();
-            textEdit->document()->documentLayout()->blockBoundingRect(block);
-            layout = block.layout();
-            changed = changed || (layout != nullptr && layout->lineCount() != oldLineCount);
-        }
+    qreal lineWidth = qreal(INT_MAX);
+    if (textEdit->lineWrapMode() != QPlainTextEdit::NoWrap) {
+        lineWidth =
+            qMax<qreal>(1.0, textEdit->viewport()->width() - 2 * document->documentMargin());
     }
 
-    return changed;
+    qreal height = 0;
+    layout->beginLayout();
+    for (QTextLine line = layout->createLine(); line.isValid(); line = layout->createLine()) {
+        line.setLeadingIncluded(true);
+        line.setLineWidth(lineWidth);
+        line.setPosition(QPointF(0, height));
+        height += line.height();
+    }
+    layout->endLayout();
+
+    _previewLayouts.insert(block.blockNumber(), layout);
+    return layout.data();
 }
 
 void DocumentOverviewWidget::paintPreview(QPainter &painter, const QRect &rect) const {
     QPlainTextEdit *textEdit = activeTextEdit();
-    if (textEdit == nullptr || _previewVisualLine < 0 || _visualLines.isEmpty()) {
+    if (textEdit == nullptr || _previewVisualLine < 0 ||
+        _previewVisualLine >= _visualLines.size()) {
         return;
     }
 
-    painter.fillRect(rect, textEdit->palette().color(QPalette::Base));
+    // Use the colors of the editor, they are set by the current editor color schema
+    const QPalette editorPalette = textEdit->palette();
+    const QColor textColor = editorPalette.color(QPalette::Text);
+    QColor lineNumberColor = textColor;
+    lineNumberColor.setAlpha(120);
+
+    painter.fillRect(rect, editorPalette.color(QPalette::Base));
     painter.setClipRect(rect);
+    painter.translate(rect.topLeft());
     painter.scale(kPreviewScale, kPreviewScale);
+    painter.setFont(textEdit->font());
+
+    QTextDocument *document = textEdit->document();
+    const VisualLine &previewVisualLine = _visualLines.at(_previewVisualLine);
+    const QTextBlock previewBlock = document->findBlockByNumber(previewVisualLine.blockNumber);
+    if (!previewBlock.isValid()) {
+        return;
+    }
 
     const int margin = 8;
+    const int logicalWidth = int(rect.width() / kPreviewScale);
     const int logicalHeight = int(rect.height() / kPreviewScale);
-    QTextDocument *document = textEdit->document();
+    const int defaultLineHeight = qMax(1, textEdit->fontMetrics().height());
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     const int lineNumberTextWidth =
@@ -403,56 +473,103 @@ void DocumentOverviewWidget::paintPreview(QPainter &painter, const QRect &rect) 
         textEdit->fontMetrics().width(QString::number(document->blockCount()));
 #endif
     const int lineNumberWidth = lineNumberTextWidth + margin * 2;
-    const auto lineAt = [this, document](int visualLineNumber) {
-        const VisualLine &visualLine = _visualLines.at(visualLineNumber);
-        QTextLayout *layout = document->findBlockByNumber(visualLine.blockNumber).layout();
-        return layout == nullptr ? QTextLine() : layout->lineForTextPosition(visualLine.textStart);
-    };
-    const auto lineHeight = [&lineAt, textEdit](int visualLineNumber) {
-        const QTextLine line = lineAt(visualLineNumber);
-        return qMax(1,
-                    line.isValid() ? int(line.height() + 0.5) : textEdit->fontMetrics().height());
+
+    // A position of a visual line in the preview
+    struct PreviewLine {
+        QTextBlock block;
+        QTextLayout *layout;
+        int lineNumber;
     };
 
-    int startVisualLine = _previewVisualLine;
-    int y = logicalHeight / 2 - lineHeight(_previewVisualLine) / 2;
-    while (startVisualLine > 0 && y > margin) {
-        --startVisualLine;
-        y -= lineHeight(startVisualLine);
+    const auto makeLine = [this, textEdit](const QTextBlock &block, bool lastLine) {
+        QTextLayout *layout = previewLayout(textEdit, block);
+        const int lineCount = layout == nullptr ? 0 : layout->lineCount();
+        return PreviewLine{block, layout, lastLine ? qMax(0, lineCount - 1) : 0};
+    };
+    const auto lineHeight = [defaultLineHeight](const PreviewLine &previewLine) {
+        if (previewLine.layout == nullptr ||
+            previewLine.lineNumber >= previewLine.layout->lineCount()) {
+            return defaultLineHeight;
+        }
+        return qMax(1, int(previewLine.layout->lineAt(previewLine.lineNumber).height() + 0.5));
+    };
+    const auto previousLine = [&makeLine](PreviewLine &previewLine) {
+        if (previewLine.lineNumber > 0) {
+            --previewLine.lineNumber;
+            return true;
+        }
+        QTextBlock block = previewLine.block.previous();
+        while (block.isValid() && !block.isVisible()) {
+            block = block.previous();
+        }
+        if (!block.isValid()) {
+            return false;
+        }
+        previewLine = makeLine(block, true);
+        return true;
+    };
+    const auto nextLine = [&makeLine](PreviewLine &previewLine) {
+        if (previewLine.layout != nullptr &&
+            previewLine.lineNumber + 1 < previewLine.layout->lineCount()) {
+            ++previewLine.lineNumber;
+            return true;
+        }
+        QTextBlock block = previewLine.block.next();
+        while (block.isValid() && !block.isVisible()) {
+            block = block.next();
+        }
+        if (!block.isValid()) {
+            return false;
+        }
+        previewLine = makeLine(block, false);
+        return true;
+    };
+
+    PreviewLine targetLine = makeLine(previewBlock, false);
+    if (targetLine.layout != nullptr && targetLine.layout->lineCount() > 0) {
+        const QTextLine line = targetLine.layout->lineForTextPosition(previewVisualLine.textStart);
+        targetLine.lineNumber = line.isValid() ? line.lineNumber() : 0;
     }
 
-    int previousBlockNumber = -1;
-    for (int visualLineNumber = startVisualLine;
-         visualLineNumber < _visualLines.size() && y < logicalHeight; ++visualLineNumber) {
-        const VisualLine &visualLine = _visualLines.at(visualLineNumber);
-        const QTextBlock block = document->findBlockByNumber(visualLine.blockNumber);
-        const QTextLine line = lineAt(visualLineNumber);
-        const int currentLineHeight = lineHeight(visualLineNumber);
+    // Walk up from the hovered line, so it ends up in the middle of the preview
+    PreviewLine currentLine = targetLine;
+    int y = logicalHeight / 2 - lineHeight(targetLine) / 2;
+    while (y > margin && previousLine(currentLine)) {
+        y -= lineHeight(currentLine);
+    }
 
-        if (visualLineNumber == _previewVisualLine) {
-            QColor highlightColor = textEdit->palette().color(QPalette::Highlight);
+    bool hasLine = true;
+    while (hasLine && y < logicalHeight) {
+        const int currentLineHeight = lineHeight(currentLine);
+
+        if (currentLine.block == targetLine.block &&
+            currentLine.lineNumber == targetLine.lineNumber) {
+            QColor highlightColor = editorPalette.color(QPalette::Highlight);
             highlightColor.setAlpha(55);
-            painter.fillRect(QRect(0, y, int(rect.width() / kPreviewScale), currentLineHeight),
-                             highlightColor);
+            painter.fillRect(QRect(0, y, logicalWidth, currentLineHeight), highlightColor);
         }
 
-        painter.setPen(textEdit->palette().color(QPalette::Mid));
-        if (visualLine.blockNumber != previousBlockNumber) {
+        if (currentLine.lineNumber == 0) {
+            painter.setPen(lineNumberColor);
             painter.drawText(QRect(margin, y, lineNumberWidth - margin * 2, currentLineHeight),
                              Qt::AlignRight | Qt::AlignVCenter,
-                             QString::number(visualLine.blockNumber + 1));
-            previousBlockNumber = visualLine.blockNumber;
+                             QString::number(currentLine.block.blockNumber() + 1));
         }
 
-        if (line.isValid()) {
+        // Text without an explicit foreground format is drawn with the painter pen
+        painter.setPen(textColor);
+        if (currentLine.layout != nullptr &&
+            currentLine.lineNumber < currentLine.layout->lineCount()) {
+            const QTextLine line = currentLine.layout->lineAt(currentLine.lineNumber);
             line.draw(&painter,
                       QPointF(lineNumberWidth - line.position().x(), y - line.position().y()));
         } else {
-            painter.setPen(textEdit->palette().color(QPalette::Text));
             painter.drawText(QPointF(lineNumberWidth, y + textEdit->fontMetrics().ascent()),
-                             block.text());
+                             currentLine.block.text());
         }
+
         y += currentLineHeight;
+        hasLine = nextLine(currentLine);
     }
 }
 
@@ -626,9 +743,10 @@ void DocumentOverviewWidget::mouseMoveEvent(QMouseEvent *event) {
         const bool previewLineChanged = _previewVisualLine != previewVisualLine;
         _previewVisualLine = previewVisualLine;
         _previewAnchorY = event->pos().y();
-        if (_preview->isVisible() && previewLineChanged) {
+        const bool previewVisible = _preview != nullptr && _preview->isVisible();
+        if (previewVisible && previewLineChanged) {
             showPreview();
-        } else if (!_preview->isVisible() && !_previewTimer->isActive()) {
+        } else if (!previewVisible && !_previewTimer->isActive()) {
             _previewTimer->start();
         }
     }
