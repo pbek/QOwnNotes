@@ -15,6 +15,11 @@
   - Hovering the overview doesn't change the layout of the overview anymore
   - The magnifier now follows the mouse cursor without lagging behind
 - The _General_ settings are now shown at the top of the settings list
+- The legacy Qt 5.7 Windows build for Windows XP to Windows 8.1 is no longer built
+  on AppVeyor (for [#3752](https://github.com/pbek/QOwnNotes/issues/3752))
+  - The Windows release needs at least Windows 10
+  - The final legacy build of QOwnNotes 26.10.0 is available as `QOwnNotes-Qt5.7-legacy.zip`
+    in the [26.10.0 release](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.0)
 
 ## 26.10.0
 

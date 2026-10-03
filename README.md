@@ -19,7 +19,6 @@
 [QOwnNotes Tor Hidden Service](http://qownnotn3bknenanjs5u4nf3f2law2tzmqklux3c5e2xbvzcksmxm6yd.onion/)
 
 [![Build Status GitHub Actions](https://github.com/pbek/QOwnNotes/actions/workflows/build-test.yml/badge.svg)](https://github.com/pbek/QOwnNotes/actions/workflows/build-test.yml)
-[![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 [![Snap Status](https://snapcraft.io/qownnotes/badge.svg)](https://snapcraft.io/qownnotes)
 [![Coverage Status](https://coveralls.io/repos/pbek/QOwnNotes/badge.svg?branch=main&service=github)](https://coveralls.io/github/pbek/QOwnNotes?branch=main)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/pbek/QOwnNotes.svg)](http://isitmaintained.com/project/pbek/QOwnNotes "Percentage of issues still open")

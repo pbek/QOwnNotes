@@ -1,7 +1,7 @@
 # Qt 5 Retirement Recommendation
 
 - Status: Accepted
-- Reviewed: 2026-09-24
+- Reviewed: 2026-10-02
 - Tracking issue: [#3752](https://github.com/pbek/QOwnNotes/issues/3752)
 
 ## Recommendation
@@ -93,13 +93,19 @@ Retiring Qt 5 affects several release channels:
 | OBS `desktop`                    | Publication is retired; older distribution targets may stop receiving releases.                                                 |
 | Qt 5 Snap                        | Retained in the GitHub release workflow for now.                                                                                |
 | Legacy macOS DMG                 | Retained in the GitHub release workflow for now.                                                                                |
-| AppVeyor legacy Windows artifact | Users of older Windows versions may need to remain on the final compatible release.                                             |
+| AppVeyor legacy Windows artifact | Retired; the final 26.10.0 build is archived as `QOwnNotes-Qt5.7-legacy.zip` in the GitHub v26.10.0 release.                    |
 
 The normal Qt 6 Windows, macOS, AppImage, AUR, Gentoo, Nix, Snap, Launchpad, and
 OBS paths should be assessed as replacements rather than assuming that the
 presence of a Qt 6 definition proves equivalent platform coverage.
 
 ## Follow-up Plan
+
+0. **Retire the AppVeyor Qt 5.7 Windows build** (done)
+   - The build targeted Windows XP to Windows 8.1, which cannot run the Qt 6
+     Windows release, so no Qt 6 replacement needs to be verified first.
+   - It was the oldest Qt version still built, so removing it is a prerequisite
+     for raising the minimum supported Qt 5 version to 5.15.
 
 1. **Verify Qt 6 replacements**
    - Install and launch the Qt 6 snap as part of release validation.
