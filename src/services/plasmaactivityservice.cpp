@@ -24,6 +24,7 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDBusReply>
+#include <QDBusServiceWatcher>
 #include <QDebug>
 
 #include "settingsservice.h"
@@ -67,6 +68,13 @@ PlasmaActivityService::PlasmaActivityService(QObject *parent) : QObject(parent) 
     bus.connect(activityManagerService, activitiesPath, activitiesInterface,
                 QStringLiteral("ActivityNameChanged"), this,
                 SLOT(onActivityNameChanged(QString, QString)));
+
+    auto *serviceWatcher = new QDBusServiceWatcher(activityManagerService, bus,
+                                                   QDBusServiceWatcher::WatchForRegistration, this);
+    connect(serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, [this](const QString &) {
+        requestCurrentActivity();
+        emit activitiesChanged();
+    });
 }
 
 bool PlasmaActivityService::isAvailable() {
@@ -124,23 +132,27 @@ void PlasmaActivityService::requestCurrentActivity() {
         return;
     }
 
+    const quint64 requestSerial = _activityChangeSerial;
+
     const QDBusMessage message =
         QDBusMessage::createMethodCall(activityManagerService, activitiesPath, activitiesInterface,
                                        QStringLiteral("CurrentActivity"));
     auto *watcher =
         new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message), this);
 
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *w) {
-        const QDBusPendingReply<QString> reply = *w;
+    connect(watcher, &QDBusPendingCallWatcher::finished, this,
+            [this, requestSerial](QDBusPendingCallWatcher *w) {
+                const QDBusPendingReply<QString> reply = *w;
 
-        if (reply.isError()) {
-            qWarning() << "Could not get current KDE Plasma activity:" << reply.error().message();
-        } else if (!reply.value().isEmpty()) {
-            emit currentActivityChanged(reply.value());
-        }
+                if (reply.isError()) {
+                    qWarning() << "Could not get current KDE Plasma activity:"
+                               << reply.error().message();
+                } else if (requestSerial == _activityChangeSerial && !reply.value().isEmpty()) {
+                    emit currentActivityChanged(reply.value());
+                }
 
-        w->deleteLater();
-    });
+                w->deleteLater();
+            });
 }
 
 bool PlasmaActivityService::isNoteFolderActivityEnabled(int noteFolderId) {
@@ -274,6 +286,7 @@ QStringList PlasmaActivityService::setLayoutActivity(const QString &layoutUuid, 
 }
 
 void PlasmaActivityService::onCurrentActivityChanged(const QString &activityId) {
+    ++_activityChangeSerial;
     qDebug() << "KDE Plasma activity changed:" << activityId;
     emit currentActivityChanged(activityId);
 }

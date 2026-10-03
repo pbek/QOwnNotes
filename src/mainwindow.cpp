@@ -965,6 +965,10 @@ void MainWindow::initPlasmaActivityService() {
     connect(_plasmaActivityService, &PlasmaActivityService::currentActivityChanged, this,
             &MainWindow::onPlasmaActivityChanged);
 
+    _plasmaActivityTimer = new QTimer(this);
+    _plasmaActivityTimer->setSingleShot(true);
+    connect(_plasmaActivityTimer, &QTimer::timeout, this, &MainWindow::applyPendingPlasmaActivity);
+
     // Apply the links of the activity that is active at startup
     _plasmaActivityService->requestCurrentActivity();
 }
@@ -973,28 +977,36 @@ void MainWindow::initPlasmaActivityService() {
  * Switches to the note folder and layout linked to a KDE Plasma activity
  */
 void MainWindow::onPlasmaActivityChanged(const QString &activityId) {
-    if (activityId.isEmpty() || qApp->property("clearAppDataAndExit").toBool()) {
+    if (activityId.isEmpty() || qApp->property("clearAppDataAndExit").toBool() ||
+        qApp->property("appIsShuttingDown").toBool() || _closeEventWasFired) {
         return;
     }
 
-    // Don't switch while a modal dialog, like the settings dialog, is open,
-    // try again when it is closed instead
+    _pendingPlasmaActivityId = activityId;
+    if (!_applyingPlasmaActivity) {
+        _plasmaActivityTimer->start(100);
+    }
+}
+
+/**
+ * Applies the latest pending activity after activity changes have settled
+ */
+void MainWindow::applyPendingPlasmaActivity() {
+    if (_pendingPlasmaActivityId.isEmpty() || _applyingPlasmaActivity ||
+        qApp->property("clearAppDataAndExit").toBool() ||
+        qApp->property("appIsShuttingDown").toBool() || _closeEventWasFired) {
+        return;
+    }
+
+    // Don't switch while a modal dialog, like the settings dialog, is open.
     if (QApplication::activeModalWidget() != nullptr) {
-        const bool retryScheduled = !_pendingPlasmaActivityId.isEmpty();
-        _pendingPlasmaActivityId = activityId;
-
-        if (!retryScheduled) {
-            QTimer::singleShot(1000, this, [this]() {
-                const QString pendingActivityId = _pendingPlasmaActivityId;
-                _pendingPlasmaActivityId.clear();
-                onPlasmaActivityChanged(pendingActivityId);
-            });
-        }
-
+        _plasmaActivityTimer->start(250);
         return;
     }
 
+    const QString activityId = _pendingPlasmaActivityId;
     _pendingPlasmaActivityId.clear();
+    _applyingPlasmaActivity = true;
     QStringList messages;
 
     const int noteFolderId = PlasmaActivityService::noteFolderIdForActivity(activityId);
@@ -1009,6 +1021,13 @@ void MainWindow::onPlasmaActivityChanged(const QString &activityId) {
         } else if (changeNoteFolder(noteFolderId)) {
             messages << tr("Switched to note folder \"%1\"").arg(noteFolder.getName());
         }
+    }
+
+    // A nested event loop may have delivered a newer activity while changing folders.
+    if (!_pendingPlasmaActivityId.isEmpty()) {
+        _applyingPlasmaActivity = false;
+        _plasmaActivityTimer->start(0);
+        return;
     }
 
     const QString layoutUuid = PlasmaActivityService::layoutUuidForActivity(activityId);
@@ -1028,6 +1047,11 @@ void MainWindow::onPlasmaActivityChanged(const QString &activityId) {
         showStatusBarMessage(
             tr("KDE Plasma activity changed: %1").arg(messages.join(QStringLiteral(", "))),
             QStringLiteral("🖥️"), 5000);
+    }
+
+    _applyingPlasmaActivity = false;
+    if (!_pendingPlasmaActivityId.isEmpty()) {
+        _plasmaActivityTimer->start(0);
     }
 }
 #endif

@@ -68,4 +68,6 @@ class LayoutManager : public QObject {
     Ui::MainWindow *_ui;
     QComboBox *_layoutComboBox = nullptr;
     QHash<QString, QString> _layoutNameUuidMap;
+    QString _displayedLayoutUuid;
+    bool _layoutRestorePending = false;
 };

@@ -130,8 +130,15 @@ void LayoutManager::onLayoutComboBoxCurrentIndexChanged(int index) {
 }
 
 void LayoutManager::setCurrentLayout(const QString &uuid) {
-    // store the current layout
-    storeCurrentLayout();
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    // A queued restore means the widgets still show the previous layout.
+    // Storing again would overwrite the first requested layout with that state.
+    if (!_layoutRestorePending) {
+        storeCurrentLayout();
+    }
 
     SettingsService settings;
     QString currentUuid = currentLayoutUuid();
@@ -139,7 +146,13 @@ void LayoutManager::setCurrentLayout(const QString &uuid) {
     settings.setValue(QStringLiteral("currentLayout"), uuid);
 
     // restore the new layout
-    QTimer::singleShot(0, _mainWindow, SLOT(restoreCurrentLayout()));
+    if (!_layoutRestorePending) {
+        _layoutRestorePending = true;
+        QTimer::singleShot(0, this, [this]() {
+            restoreCurrentLayout();
+            _layoutRestorePending = false;
+        });
+    }
 
     // Check if the layout is new (not yet in the combo box) and needs a full rebuild
     bool needsRebuild = _layoutComboBox->findData(uuid) == -1;
@@ -164,7 +177,9 @@ void LayoutManager::storeCurrentLayout() {
 
     qDebug() << __func__;
     SettingsService settings;
-    QString uuid = currentLayoutUuid();
+    const QString uuid = _layoutRestorePending && !_displayedLayoutUuid.isEmpty()
+                             ? _displayedLayoutUuid
+                             : currentLayoutUuid();
 
     settings.setValue(QStringLiteral("layout-") + uuid + QStringLiteral("/windowState"),
                       _mainWindow->saveState());
@@ -263,6 +278,8 @@ void LayoutManager::restoreCurrentLayout() {
         // the layout was restored
         focusWidget->setFocus();
     }
+
+    _displayedLayoutUuid = uuid;
 }
 
 /**

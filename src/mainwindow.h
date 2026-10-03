@@ -43,6 +43,7 @@ class MainWindow;
 
 class HtmlPreviewWidget;
 class QMimeData;
+class QTimer;
 class QActionGroup;
 class QListWidgetItem;
 class QFileSystemWatcher;
@@ -750,6 +751,8 @@ class MainWindow : public QMainWindow {
     void initPlasmaActivityService();
 
     void onPlasmaActivityChanged(const QString &activityId);
+
+    void applyPendingPlasmaActivity();
 #endif
 
     void updateLocalTrashActionVisibility();
@@ -1058,7 +1061,9 @@ class MainWindow : public QMainWindow {
 #endif
 #ifdef Q_OS_LINUX
     PlasmaActivityService *_plasmaActivityService = nullptr;
+    QTimer *_plasmaActivityTimer = nullptr;
     QString _pendingPlasmaActivityId;
+    bool _applyingPlasmaActivity = false;
 #endif
     bool _scriptUpdateFound = false;
     QAction *_lastTriggeredAction = nullptr;

@@ -86,6 +86,9 @@ class PlasmaActivityService : public QObject {
     void onActivityAdded(const QString &activityId);
     void onActivityRemoved(const QString &activityId);
     void onActivityNameChanged(const QString &activityId, const QString &name);
+
+   private:
+    quint64 _activityChangeSerial = 0;
 };
 
 #endif    // Q_OS_LINUX
