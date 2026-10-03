@@ -535,6 +535,8 @@ set(SOURCE_FILES
     widgets/settings/colormodesettingswidget.ui
     widgets/settings/layoutssettingswidget.cpp
     widgets/settings/layoutssettingswidget.h
+    widgets/settings/plasmaactivitiessettingswidget.cpp
+    widgets/settings/plasmaactivitiessettingswidget.h
     widgets/settings/gitsettingswidget.cpp
     widgets/settings/gitsettingswidget.h
     widgets/settings/gitsettingswidget.ui
@@ -745,15 +747,9 @@ list(APPEND SOURCE_FILES libraries/md4c/src/md4c.c
 # activities support on Linux (both use D-Bus)
 if(UNIX AND NOT APPLE)
   find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS DBus)
-  list(
-    APPEND
-    SOURCE_FILES
-    services/xdgglobalshortcutmanager.cpp
-    services/xdgglobalshortcutmanager.h
-    services/plasmaactivityservice.cpp
-    services/plasmaactivityservice.h
-    widgets/plasmaactivityselectorwidget.cpp
-    widgets/plasmaactivityselectorwidget.h)
+  list(APPEND SOURCE_FILES services/xdgglobalshortcutmanager.cpp
+       services/xdgglobalshortcutmanager.h services/plasmaactivityservice.cpp
+       services/plasmaactivityservice.h)
 endif()
 
 # Translation files

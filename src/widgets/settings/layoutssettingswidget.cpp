@@ -30,11 +30,6 @@
 #include "utils/gui.h"
 #include "widgets/layoutpresetwidget.h"
 
-#ifdef Q_OS_LINUX
-#include "services/plasmaactivityservice.h"
-#include "widgets/plasmaactivityselectorwidget.h"
-#endif
-
 LayoutsSettingsWidget::LayoutsSettingsWidget(QWidget *parent) : QWidget(parent) {
     auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins(0, 0, 0, 0);
@@ -87,9 +82,7 @@ LayoutsSettingsWidget::LayoutsSettingsWidget(QWidget *parent) : QWidget(parent) 
     managementLayout->addLayout(listLayout);
 
     auto *selectedLayoutGroup = new QGroupBox(tr("Selected layout"), managementGroup);
-    auto *selectedLayoutGroupLayout = new QVBoxLayout(selectedLayoutGroup);
-    auto *selectedLayout = new QHBoxLayout();
-    selectedLayoutGroupLayout->addLayout(selectedLayout);
+    auto *selectedLayout = new QHBoxLayout(selectedLayoutGroup);
     selectedLayout->addWidget(new QLabel(tr("Central widget:"), selectedLayoutGroup));
     _centralWidgetComboBox = new QComboBox(selectedLayoutGroup);
     _centralWidgetComboBox->addItem(tr("Note edit"), QStringLiteral("note-edit"));
@@ -99,14 +92,6 @@ LayoutsSettingsWidget::LayoutsSettingsWidget(QWidget *parent) : QWidget(parent) 
         tr("The central widget automatically uses the space left by the surrounding panels"));
     selectedLayout->addWidget(_centralWidgetComboBox, 1);
 
-#ifdef Q_OS_LINUX
-    // Allow to switch to the selected layout when a certain KDE Plasma activity gets activated
-    _plasmaActivitySelector = new PlasmaActivitySelectorWidget(
-        tr("Switch to this layout when a KDE Plasma activity is activated"), selectedLayoutGroup);
-    selectedLayoutGroupLayout->addWidget(_plasmaActivitySelector);
-    connect(_plasmaActivitySelector, &PlasmaActivitySelectorWidget::selectionChanged, this,
-            &LayoutsSettingsWidget::onPlasmaActivitySelectionChanged);
-#endif
     managementLayout->addWidget(selectedLayoutGroup);
     mainLayout->addWidget(managementGroup);
 
@@ -186,12 +171,6 @@ void LayoutsSettingsWidget::updateSelectedLayout() {
     _moveUpButton->setEnabled(hasSelection && (row > 0));
     _moveDownButton->setEnabled(hasSelection && (row < _layoutListWidget->count() - 1));
     _centralWidgetComboBox->setEnabled(hasSelection);
-#ifdef Q_OS_LINUX
-    _plasmaActivitySelector->setEnabled(hasSelection);
-    _plasmaActivitySelector->setSelection(
-        hasSelection && PlasmaActivityService::isLayoutActivityEnabled(uuid),
-        hasSelection ? PlasmaActivityService::layoutActivityId(uuid) : QString());
-#endif
 
     _loadingSelection = true;
     if (hasSelection) {
@@ -338,30 +317,3 @@ void LayoutsSettingsWidget::moveLayout(int offset) {
         refreshLayouts(uuids.at(targetRow));
     }
 }
-
-#ifdef Q_OS_LINUX
-void LayoutsSettingsWidget::onPlasmaActivitySelectionChanged(bool enabled,
-                                                             const QString &activityId) {
-    const QString uuid = selectedLayoutUuid();
-    if (uuid.isEmpty()) {
-        return;
-    }
-
-    const QStringList clearedUuids =
-        PlasmaActivityService::setLayoutActivity(uuid, enabled, activityId);
-
-    // Tell the user which layouts aren't linked to the activity anymore,
-    // because only one layout can be linked to an activity
-    SettingsService settings;
-    QStringList names;
-    for (const QString &clearedUuid : clearedUuids) {
-        names << settings.value(QStringLiteral("layout-") + clearedUuid + QStringLiteral("/name"))
-                     .toString();
-    }
-
-    if (!names.isEmpty()) {
-        _plasmaActivitySelector->setNotice(
-            tr("The activity was removed from layout: %1").arg(names.join(QStringLiteral(", "))));
-    }
-}
-#endif

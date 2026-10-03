@@ -251,6 +251,7 @@ SOURCES += main.cpp\
     widgets/htmlpreviewwidget.cpp \
     widgets/settings/colormodesettingswidget.cpp \
     widgets/settings/layoutssettingswidget.cpp \
+    widgets/settings/plasmaactivitiessettingswidget.cpp \
     widgets/settings/gitsettingswidget.cpp \
     widgets/settings/localtrashsettingswidget.cpp \
     widgets/settings/debugoptionsettingswidget.cpp \
@@ -425,6 +426,7 @@ HEADERS  += mainwindow.h \
     widgets/htmlpreviewwidget.h \
     widgets/settings/colormodesettingswidget.h \
     widgets/settings/layoutssettingswidget.h \
+    widgets/settings/plasmaactivitiessettingswidget.h \
     widgets/settings/gitsettingswidget.h \
     widgets/settings/localtrashsettingswidget.h \
     widgets/settings/debugoptionsettingswidget.h \
@@ -562,11 +564,9 @@ include(libraries/qhotkey/qhotkey.pri)
 unix:!mac {
     QT += dbus
     SOURCES += services/xdgglobalshortcutmanager.cpp \
-               services/plasmaactivityservice.cpp \
-               widgets/plasmaactivityselectorwidget.cpp
+               services/plasmaactivityservice.cpp
     HEADERS += services/xdgglobalshortcutmanager.h \
-               services/plasmaactivityservice.h \
-               widgets/plasmaactivityselectorwidget.h
+               services/plasmaactivityservice.h
 }
 
 unix {

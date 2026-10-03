@@ -14,9 +14,6 @@ class QComboBox;
 class QListWidget;
 class QListWidgetItem;
 class QPushButton;
-#ifdef Q_OS_LINUX
-class PlasmaActivitySelectorWidget;
-#endif
 
 class LayoutsSettingsWidget : public QWidget {
     Q_OBJECT
@@ -38,11 +35,6 @@ class LayoutsSettingsWidget : public QWidget {
     QPushButton *_moveDownButton;
     QComboBox *_centralWidgetComboBox;
     bool _loadingSelection = false;
-#ifdef Q_OS_LINUX
-    PlasmaActivitySelectorWidget *_plasmaActivitySelector;
-
-    void onPlasmaActivitySelectionChanged(bool enabled, const QString &activityId);
-#endif
 
     QString selectedLayoutUuid() const;
     void updateSelectedLayout();

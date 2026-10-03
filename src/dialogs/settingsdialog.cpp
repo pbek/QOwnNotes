@@ -41,6 +41,7 @@
 #include <QTextBrowser>
 #include <QToolBar>
 #include <QUrlQuery>
+#include <QVBoxLayout>
 #include <utility>
 
 #include "build_number.h"
@@ -67,6 +68,9 @@
 #include "widgets/settings/languagetoolsettingswidget.h"
 #include "widgets/settings/markdownlspsettingswidget.h"
 #include "widgets/settings/networksettingswidget.h"
+#ifdef Q_OS_LINUX
+#include "widgets/settings/plasmaactivitiessettingswidget.h"
+#endif
 #include "widgets/settings/todosettingswidget.h"
 #include "widgets/settings/webapplicationsettingswidget.h"
 #include "widgets/settings/webcompanionsettingswidget.h"
@@ -106,6 +110,23 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 
     MainWindow *mainWindow = MainWindow::instance();
+
+#ifdef Q_OS_LINUX
+    auto *plasmaActivitiesPage = new QWidget(ui->settingsStackedWidget);
+    plasmaActivitiesPage->setObjectName(QStringLiteral("plasmaActivitiesPage"));
+    auto *plasmaActivitiesPageLayout = new QVBoxLayout(plasmaActivitiesPage);
+    _plasmaActivitiesSettingsWidget = new PlasmaActivitiesSettingsWidget(plasmaActivitiesPage);
+    plasmaActivitiesPageLayout->addWidget(_plasmaActivitiesSettingsWidget);
+    ui->settingsStackedWidget->addWidget(plasmaActivitiesPage);
+
+    auto *plasmaActivitiesItem = new QTreeWidgetItem();
+    plasmaActivitiesItem->setText(0, tr("KDE Plasma activities"));
+    plasmaActivitiesItem->setWhatsThis(0, QString::number(SettingsPages::PlasmaActivitiesPage));
+    plasmaActivitiesItem->setIcon(0, QIcon::fromTheme(QStringLiteral("preferences-activities")));
+    const int experimentalItemIndex = ui->settingsTreeWidget->indexOfTopLevelItem(
+        findSettingsTreeWidgetItemByPage(SettingsPages::ExperimentalPage));
+    ui->settingsTreeWidget->insertTopLevelItem(experimentalItemIndex, plasmaActivitiesItem);
+#endif
 
     // if there was no size set yet, and we already have a main window we'll
     // mimic that size
@@ -1255,6 +1276,11 @@ bool SettingsDialog::initializePage(int index) {
         case SettingsPages::MarkdownLspPage: {
             ui->markdownLspSettingsWidget->initialize();
         } break;
+#ifdef Q_OS_LINUX
+        case SettingsPages::PlasmaActivitiesPage: {
+            _plasmaActivitiesSettingsWidget->initialize();
+        } break;
+#endif
         default:
             break;
     }

@@ -32,6 +32,9 @@ class NoteFolder;
 class QSplitter;
 class QMenu;
 class SettingsService;
+#ifdef Q_OS_LINUX
+class PlasmaActivitiesSettingsWidget;
+#endif
 
 struct CalDAVCalendarData;
 
@@ -76,7 +79,8 @@ class SettingsDialog : public MasterDialog {
         HarperPage,
         ColorModesPage,
         McpServerPage,
-        MarkdownLspPage
+        MarkdownLspPage,
+        PlasmaActivitiesPage
     };
 
     explicit SettingsDialog(int page = 0, QWidget *parent = 0);
@@ -141,6 +145,9 @@ class SettingsDialog : public MasterDialog {
     QString _initialSchemaKey;
     QList<QWidget *> _searchMatchedWidgets;
     QHash<QWidget *, QString> _searchMatchedWidgetOriginalTexts;
+#ifdef Q_OS_LINUX
+    PlasmaActivitiesSettingsWidget *_plasmaActivitiesSettingsWidget = nullptr;
+#endif
 
     void storeSettings();
 
