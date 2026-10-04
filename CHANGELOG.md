@@ -12,6 +12,17 @@
     Markdown list/checklist items and selected lines
   - Clipboard URLs can be pasted as Markdown links with fetched page titles using `Ctrl-Shift-V`
   - Words can be deleted with `Ctrl-Backspace` and whole lines with `Alt-Backspace`
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.1.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.1.0)
+  - The tag-assignment dialog now has a search field to filter tags by name or parent path
+  - The editor toolbar can indent the current line or selected lines by four spaces, or remove up
+    to four leading spaces, with undo and redo support
+  - Pressing Enter before an existing list or checklist item now creates an empty item above it
+  - Pressing Enter removes one trailing space from the previous line while preserving Markdown
+    hard line breaks
+  - Nextcloud SSO account preferences are now excluded from Android cloud backups and device
+    transfers
+  - Fixed cursor jumps and misplaced typing when switching to Edit with _Find in note_ open
 
 ## 26.10.1
 
