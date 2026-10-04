@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 26.10.2
+
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.1.1](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.1.1)
+  - Fixed conversion of single-URL terminal pastes into Markdown links with fetched page titles
+    when the terminal handles `Ctrl-Shift-V`
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.1.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.1.0)
+  - Editor indentation and un-indentation are now available with `Tab` and `Shift-Tab`, including
+    Markdown list/checklist items and selected lines
+  - Clipboard URLs can be pasted as Markdown links with fetched page titles using `Ctrl-Shift-V`
+  - Words can be deleted with `Ctrl-Backspace` and whole lines with `Alt-Backspace`
+
 ## 26.10.1
 
 - On Linux, QOwnNotes can now switch to a note folder and/or a layout when a certain
