@@ -2687,8 +2687,8 @@ void ScriptingService::triggerMenuAction(const QString &objectName, const QStrin
 
 /**
  * Returns a list of all color modes, every entry is a map with the keys
- * "id", "name", "isDarkMode", "isBuiltIn", "isCurrent", "editorColorSchemaKey"
- * and "editorColorSchemaName"
+ * "id", "name", "isDarkMode", "isBuiltIn", "isCurrent", "editorColorSchemaKey",
+ * "editorColorSchemaName" and "accentColor" (empty if the default accent color is used)
  *
  * @return {QVariantList}
  */
@@ -2720,6 +2720,7 @@ QVariantList ScriptingService::getColorModes() const {
         map[QStringLiteral("isCurrent")] = mode.getId() == currentId;
         map[QStringLiteral("editorColorSchemaKey")] = schemaKey;
         map[QStringLiteral("editorColorSchemaName")] = schemaName;
+        map[QStringLiteral("accentColor")] = mode.getAccentColor();
         list.append(map);
     }
 

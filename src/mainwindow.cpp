@@ -1928,6 +1928,37 @@ void MainWindow::toggleDistractionFreeMode() {
 }
 
 /**
+ * Applies the accent color of the current color mode (if one is set) to the
+ * application stylesheet
+ *
+ * @param appStyleSheet the application stylesheet to modify
+ * @param darkMode true if the qdarkstyle stylesheet is used
+ */
+void MainWindow::applyAccentColor(QString &appStyleSheet, bool darkMode) {
+    const QColor accentColor(SettingsService().value(QStringLiteral("accentColor")).toString());
+
+    if (!accentColor.isValid()) {
+        return;
+    }
+
+    // Replace the orange accent color that is hardcoded in qdarkstyle
+    if (darkMode) {
+        appStyleSheet.replace(QStringLiteral("#c64a13"), accentColor.name(), Qt::CaseInsensitive);
+    }
+
+    // Use black or white text on the accent color, depending on its perceived brightness
+    const double luminance =
+        0.299 * accentColor.red() + 0.587 * accentColor.green() + 0.114 * accentColor.blue();
+    const QString textColorName =
+        luminance > 150 ? QStringLiteral("#000000") : QStringLiteral("#ffffff");
+
+    // Set the selection colors for all widgets (including the note text edit),
+    // this also works if qdarkstyle isn't used
+    appStyleSheet += QStringLiteral("QWidget{selection-background-color:%1;selection-color:%2;}")
+                         .arg(accentColor.name(), textColorName);
+}
+
+/**
  * Does some basic styling
  */
 void MainWindow::initStyling() {
@@ -1956,6 +1987,8 @@ void MainWindow::initStyling() {
         const QColor &color = palette.color(QPalette::Base);
         noteTagFrameColorName = color.name();
     }
+
+    applyAccentColor(appStyleSheet, darkMode);
 
     // get the color name of the background color of the default text
     // highlighting item

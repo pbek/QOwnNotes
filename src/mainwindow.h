@@ -1186,6 +1186,8 @@ class MainWindow : public QMainWindow {
 
     void initStyling();
 
+    static void applyAccentColor(QString &appStyleSheet, bool darkMode);
+
     void tagSelectedNotes(const Tag &tag);
 
     static bool isMarkdownViewEnabled();

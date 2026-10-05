@@ -143,6 +143,7 @@ class SettingsDialog : public MasterDialog {
     bool _initialDarkModeTrayIcon = false;
     bool _initialDarkModeIconTheme = false;
     QString _initialSchemaKey;
+    QString _initialAccentColor;
     QList<QWidget *> _searchMatchedWidgets;
     QHash<QWidget *, QString> _searchMatchedWidgetOriginalTexts;
 #ifdef Q_OS_LINUX

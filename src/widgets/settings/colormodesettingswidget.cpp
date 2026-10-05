@@ -18,6 +18,7 @@
 #include <utils/gui.h>
 #include <utils/schema.h>
 
+#include <QColorDialog>
 #include <QMessageBox>
 #include <QSettings>
 #include <QSignalBlocker>
@@ -196,6 +197,8 @@ void ColorModeSettingsWidget::on_colorModeListWidget_currentItemChanged(QListWid
             break;
         }
     }
+
+    updateAccentColorButtons();
 
     // Built-in modes cannot have their names edited
     ui->colorModeNameLineEdit->setReadOnly(_selectedColorMode.isBuiltIn());
@@ -449,6 +452,65 @@ void ColorModeSettingsWidget::on_colorModeEditorColorSchemaComboBox_currentIndex
     const QString schemaKey = ui->colorModeEditorColorSchemaComboBox->itemData(index).toString();
     _selectedColorMode.setEditorColorSchemaKey(schemaKey);
     _selectedColorMode.store();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Updates the accent color buttons for the selected color mode
+ */
+void ColorModeSettingsWidget::updateAccentColorButtons() {
+    const QColor accentColor(_selectedColorMode.getAccentColor());
+    const bool hasAccentColor = accentColor.isValid();
+
+    if (hasAccentColor) {
+        // Show the accent color as icon of the button
+        QPixmap pixmap(16, 16);
+        pixmap.fill(accentColor);
+        ui->colorModeAccentColorButton->setIcon(QIcon(pixmap));
+        ui->colorModeAccentColorButton->setText(accentColor.name());
+    } else {
+        ui->colorModeAccentColorButton->setIcon(QIcon());
+        ui->colorModeAccentColorButton->setText(tr("Default"));
+    }
+
+    ui->colorModeAccentColorResetButton->setEnabled(hasAccentColor);
+}
+
+/**
+ * Selects a new accent color for the selected color mode
+ */
+void ColorModeSettingsWidget::on_colorModeAccentColorButton_clicked() {
+    QColor color(_selectedColorMode.getAccentColor());
+
+    if (!color.isValid()) {
+        color = palette().color(QPalette::Highlight);
+    }
+
+    const QColor newColor = QColorDialog::getColor(color, this, tr("Select accent color"));
+
+    if (!newColor.isValid()) {
+        return;
+    }
+
+    _selectedColorMode.setAccentColor(newColor.name());
+    _selectedColorMode.store();
+    updateAccentColorButtons();
+
+    if (_selectedColorMode.isCurrent()) {
+        applyColorModeSettings();
+    }
+}
+
+/**
+ * Resets the accent color of the selected color mode to the default
+ */
+void ColorModeSettingsWidget::on_colorModeAccentColorResetButton_clicked() {
+    _selectedColorMode.setAccentColor(QString());
+    _selectedColorMode.store();
+    updateAccentColorButtons();
 
     if (_selectedColorMode.isCurrent()) {
         applyColorModeSettings();

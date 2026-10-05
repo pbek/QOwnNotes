@@ -106,6 +106,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     _initialDarkModeTrayIcon = settings.value(QStringLiteral("darkModeTrayIcon")).toBool();
     _initialDarkModeIconTheme = Utils::Misc::isDarkModeIconTheme();
     _initialSchemaKey = settings.value(QStringLiteral("Editor/CurrentSchemaKey")).toString();
+    _initialAccentColor = settings.value(QStringLiteral("accentColor")).toString();
 
     bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 
@@ -1094,7 +1095,8 @@ bool SettingsDialog::hasDarkModeSettingChanges() const {
            settings.value(QStringLiteral("darkModeColors")).toBool() != _initialDarkModeColors ||
            settings.value(QStringLiteral("darkModeTrayIcon")).toBool() !=
                _initialDarkModeTrayIcon ||
-           Utils::Misc::isDarkModeIconTheme() != _initialDarkModeIconTheme;
+           Utils::Misc::isDarkModeIconTheme() != _initialDarkModeIconTheme ||
+           settings.value(QStringLiteral("accentColor")).toString() != _initialAccentColor;
 }
 
 /**
@@ -1389,6 +1391,7 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
         settings.setValue(QStringLiteral("darkModeTrayIcon"), _initialDarkModeTrayIcon);
         settings.setValue(QStringLiteral("darkModeIconTheme"), _initialDarkModeIconTheme);
         settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _initialSchemaKey);
+        settings.setValue(QStringLiteral("accentColor"), _initialAccentColor);
 
         // Restore the initial color mode
         const QString initialColorModeId = ui->colorModeSettingsWidget->initialColorModeId();

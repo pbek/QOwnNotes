@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.10.3
+
+- Every color mode can now have its own **accent color** in the _Color modes_ settings, which is
+  used for selected text and selected items, like the current note in the note list
+  (for [#2647](https://github.com/pbek/QOwnNotes/issues/2647))
+  - In dark mode it replaces the default orange accent color
+  - The accent color of a color mode is also returned by `script.getColorModes()`
+
 ## 26.10.2
 
 - Scripts can now list the color modes with `script.getColorModes()`, get the active one with

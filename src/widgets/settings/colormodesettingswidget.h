@@ -63,6 +63,10 @@ class ColorModeSettingsWidget : public QWidget {
 
     void on_colorModeListWidget_itemChanged(QListWidgetItem *item);
 
+    void on_colorModeAccentColorButton_clicked();
+
+    void on_colorModeAccentColorResetButton_clicked();
+
    private:
     Ui::ColorModeSettingsWidget *ui;
     ColorMode _selectedColorMode;
@@ -73,4 +77,6 @@ class ColorModeSettingsWidget : public QWidget {
     void applyColorModeSettings();
 
     void updateColorModeListActiveState();
+
+    void updateAccentColorButtons();
 };

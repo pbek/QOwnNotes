@@ -48,6 +48,8 @@ bool ColorMode::isSystemIconTheme() const { return _systemIconTheme; }
 
 QString ColorMode::getEditorColorSchemaKey() const { return _editorColorSchemaKey; }
 
+QString ColorMode::getAccentColor() const { return _accentColor; }
+
 bool ColorMode::isBuiltIn() const { return _id == LightModeId || _id == DarkModeId; }
 
 void ColorMode::setId(const QString &id) { _id = id; }
@@ -67,6 +69,8 @@ void ColorMode::setInternalIconTheme(bool value) { _internalIconTheme = value; }
 void ColorMode::setSystemIconTheme(bool value) { _systemIconTheme = value; }
 
 void ColorMode::setEditorColorSchemaKey(const QString &key) { _editorColorSchemaKey = key; }
+
+void ColorMode::setAccentColor(const QString &color) { _accentColor = color; }
 
 QString ColorMode::settingsGroupKey(const QString &id) {
     return QStringLiteral("ColorModes/") + id;
@@ -92,6 +96,7 @@ bool ColorMode::store() const {
     settings.setValue(group + QStringLiteral("/internalIconTheme"), _internalIconTheme);
     settings.setValue(group + QStringLiteral("/systemIconTheme"), _systemIconTheme);
     settings.setValue(group + QStringLiteral("/editorColorSchemaKey"), _editorColorSchemaKey);
+    settings.setValue(group + QStringLiteral("/accentColor"), _accentColor);
 
     // Update the list of color mode IDs
     QStringList ids = settings.value(QStringLiteral("ColorModes/ids")).toStringList();
@@ -151,6 +156,8 @@ void ColorMode::applyToGlobalSettings() const {
     if (!_editorColorSchemaKey.isEmpty()) {
         settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _editorColorSchemaKey);
     }
+
+    settings.setValue(QStringLiteral("accentColor"), _accentColor);
 }
 
 /**
@@ -188,6 +195,7 @@ ColorMode ColorMode::fetch(const QString &id) {
     mode._systemIconTheme = settings.value(group + QStringLiteral("/systemIconTheme")).toBool();
     mode._editorColorSchemaKey =
         settings.value(group + QStringLiteral("/editorColorSchemaKey")).toString();
+    mode._accentColor = settings.value(group + QStringLiteral("/accentColor")).toString();
 
     return mode;
 }

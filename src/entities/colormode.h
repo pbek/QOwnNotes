@@ -30,6 +30,7 @@ class ColorMode {
     bool isInternalIconTheme() const;
     bool isSystemIconTheme() const;
     QString getEditorColorSchemaKey() const;
+    QString getAccentColor() const;
     bool isBuiltIn() const;
 
     void setId(const QString &id);
@@ -41,6 +42,7 @@ class ColorMode {
     void setInternalIconTheme(bool value);
     void setSystemIconTheme(bool value);
     void setEditorColorSchemaKey(const QString &key);
+    void setAccentColor(const QString &color);
 
     bool store() const;
     bool remove() const;
@@ -69,6 +71,8 @@ class ColorMode {
     bool _internalIconTheme = false;
     bool _systemIconTheme = false;
     QString _editorColorSchemaKey;
+    // Empty if the default accent color should be used
+    QString _accentColor;
 
     static QString settingsGroupKey(const QString &id);
 };
