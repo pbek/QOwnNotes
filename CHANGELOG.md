@@ -3,6 +3,14 @@
 ## 26.10.2
 
 - There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.2.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.2.0)
+  - Pressing `Enter` at the start of a Markdown list item or just after its marker now creates
+    an empty item before it, preserving indentation and checklist style
+  - Pressing `Down` on the last line now moves the cursor to the end of the note in view and
+    edit modes, including `Shift-Down` selection
+  - Pressing `Up` on the first line now moves the cursor to the start of the note in view and
+    edit modes, including `Shift-Up` selection
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
   [v1.1.1](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.1.1)
   - Fixed conversion of single-URL terminal pastes into Markdown links with fetched page titles
     when the terminal handles `Ctrl-Shift-V`
