@@ -1,10 +1,12 @@
 #include "scriptingservice.h"
 
 #include <api/scriptapi.h>
+#include <entities/colormode.h>
 #include <entities/notefolder.h>
 #include <entities/script.h>
 #include <services/metricsservice.h>
 #include <utils/misc.h>
+#include <utils/schema.h>
 #include <widgets/logwidget.h>
 
 #include <QAction>
@@ -43,6 +45,7 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
+#include <utils/gui.h>
 
 #include <QInputDialog>
 #include <QMessageBox>
@@ -2680,6 +2683,106 @@ void ScriptingService::triggerMenuAction(const QString &objectName, const QStrin
     Q_UNUSED(objectName)
     Q_UNUSED(checked)
 #endif
+}
+
+/**
+ * Returns a list of all color modes, every entry is a map with the keys
+ * "id", "name", "isDarkMode", "isBuiltIn", "isCurrent", "editorColorSchemaKey"
+ * and "editorColorSchemaName"
+ *
+ * @return {QVariantList}
+ */
+QVariantList ScriptingService::getColorModes() const {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+    ColorMode::ensureBuiltInModesExist();
+    const QString currentId = ColorMode::currentColorModeId();
+    QVariantList list;
+
+    const auto colorModes = ColorMode::fetchAll();
+    for (const ColorMode &mode : colorModes) {
+        const QString schemaKey = mode.getEditorColorSchemaKey();
+        QString schemaName;
+
+        // Look up the name of the editor color schema (default or custom schema)
+        if (!schemaKey.isEmpty() && Utils::Schema::schemaSettings != nullptr) {
+            schemaName = Utils::Schema::schemaSettings
+                             ->getSchemaValue(QStringLiteral("Name"), QVariant(), schemaKey)
+                             .toString();
+        }
+
+        QVariantMap map;
+        map[QStringLiteral("id")] = mode.getId();
+        map[QStringLiteral("name")] = mode.getName();
+        map[QStringLiteral("isDarkMode")] = mode.isDarkMode();
+        map[QStringLiteral("isBuiltIn")] = mode.isBuiltIn();
+        map[QStringLiteral("isCurrent")] = mode.getId() == currentId;
+        map[QStringLiteral("editorColorSchemaKey")] = schemaKey;
+        map[QStringLiteral("editorColorSchemaName")] = schemaName;
+        list.append(map);
+    }
+
+    return list;
+}
+
+/**
+ * Returns the id of the currently active color mode
+ *
+ * @return {QString}
+ */
+QString ScriptingService::getCurrentColorModeId() const {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+    ColorMode::ensureBuiltInModesExist();
+    return ColorMode::currentColorModeId();
+}
+
+/**
+ * Switches to a color mode, including its editor color schema
+ *
+ * @param idOrName {QString} the id of the color mode (see getColorModes()), if no
+ *                           color mode with that id exists, the first color mode
+ *                           with that name is used
+ * @return {bool} true if the color mode exists and was switched to
+ */
+bool ScriptingService::switchToColorMode(const QString &idOrName) const {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+    ColorMode::ensureBuiltInModesExist();
+    QString id = idOrName;
+
+    // Fall back to looking up the color mode by its name, because the ids of
+    // custom color modes are generated and therefore hard to use in scripts
+    if (!ColorMode::exists(id)) {
+        id.clear();
+        const auto colorModes = ColorMode::fetchAll();
+        for (const ColorMode &colorMode : colorModes) {
+            if (colorMode.getName() == idOrName) {
+                id = colorMode.getId();
+                break;
+            }
+        }
+
+        if (id.isEmpty()) {
+            qWarning() << "Color mode not found:" << idOrName;
+            return false;
+        }
+    }
+
+    const ColorMode mode = ColorMode::fetch(id);
+    mode.setAsCurrent();
+    mode.applyToGlobalSettings();
+
+#ifndef INTEGRATION_TESTS
+    // Update the UI in the next event loop iteration, so the styling isn't
+    // changed while the script engine is still running the calling script code
+    QTimer::singleShot(0, qApp, [] { Utils::Gui::applyDarkModeSettings(); });
+#endif
+
+    return true;
 }
 
 /**

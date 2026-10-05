@@ -46,7 +46,9 @@ class ColorMode {
     bool remove() const;
     void setAsCurrent() const;
     bool isCurrent() const;
+    void applyToGlobalSettings() const;
 
+    static bool exists(const QString &id);
     static QList<ColorMode> fetchAll();
     static ColorMode fetch(const QString &id);
     static ColorMode currentColorMode();

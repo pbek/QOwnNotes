@@ -134,6 +134,38 @@ void ColorMode::setAsCurrent() const {
 }
 
 /**
+ * Writes the settings of this color mode to the global application settings,
+ * including the editor color schema
+ *
+ * The UI needs to be updated afterwards, e.g. with Utils::Gui::applyDarkModeSettings()
+ */
+void ColorMode::applyToGlobalSettings() const {
+    SettingsService settings;
+    settings.setValue(QStringLiteral("darkMode"), _darkMode);
+    settings.setValue(QStringLiteral("darkModeColors"), _darkModeColors);
+    settings.setValue(QStringLiteral("darkModeTrayIcon"), _darkModeTrayIcon);
+    settings.setValue(QStringLiteral("darkModeIconTheme"), _darkModeIconTheme);
+    settings.setValue(QStringLiteral("internalIconTheme"), _internalIconTheme);
+    settings.setValue(QStringLiteral("systemIconTheme"), _systemIconTheme);
+
+    if (!_editorColorSchemaKey.isEmpty()) {
+        settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _editorColorSchemaKey);
+    }
+}
+
+/**
+ * Checks if a color mode with the given ID exists in the settings
+ */
+bool ColorMode::exists(const QString &id) {
+    if (id.isEmpty()) {
+        return false;
+    }
+
+    SettingsService settings;
+    return settings.value(QStringLiteral("ColorModes/ids")).toStringList().contains(id);
+}
+
+/**
  * Checks if this is the currently active color mode
  */
 bool ColorMode::isCurrent() const { return _id == currentColorModeId(); }

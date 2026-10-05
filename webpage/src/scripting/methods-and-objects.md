@@ -1663,6 +1663,80 @@ You can get the object names of the menu action from
 Just search for the English menu title. Note that these texts can change over time.
 :::
 
+## Working with color modes
+
+Color modes (like _System_ and _Dark_) can be managed in the _Color modes_ settings.
+They bundle the dark mode, icon theme and editor color schema settings.
+
+### Method call and parameters
+
+```cpp
+/**
+ * Returns a list of all color modes, every entry is a map with the keys
+ * "id", "name", "isDarkMode", "isBuiltIn", "isCurrent", "editorColorSchemaKey"
+ * and "editorColorSchemaName"
+ *
+ * @return {QVariantList}
+ */
+QVariantList ScriptingService::getColorModes();
+
+/**
+ * Returns the id of the currently active color mode
+ *
+ * @return {QString}
+ */
+QString ScriptingService::getCurrentColorModeId();
+
+/**
+ * Switches to a color mode, including its editor color schema
+ *
+ * @param idOrName {QString} the id of the color mode (see getColorModes()), if no
+ *                           color mode with that id exists, the first color mode
+ *                           with that name is used
+ * @return {bool} true if the color mode exists and was switched to
+ */
+bool ScriptingService::switchToColorMode(QString idOrName);
+```
+
+### Example
+
+```js
+// List all color modes
+script.getColorModes().forEach(function (mode) {
+  script.log(
+    mode.name +
+      " (" +
+      mode.id +
+      "), editor color schema: " +
+      mode.editorColorSchemaName,
+  );
+});
+
+// Toggle between the built-in light ("System") and dark color mode
+const isDark = script.getCurrentColorModeId() === "ColorMode-dark";
+script.switchToColorMode(isDark ? "ColorMode-light" : "ColorMode-dark");
+
+// Switch to a custom color mode by its name
+if (!script.switchToColorMode("My color mode")) {
+  script.log("Color mode not found");
+}
+```
+
+You may want to take a look at the example
+[toggle-color-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/toggle-color-mode.qml).
+
+::: tip
+The built-in color modes have the ids `ColorMode-light` and `ColorMode-dark`.
+Custom color modes get a generated id like `ColorMode-3f2a9c1e-...`, which is different from
+the name you entered in the settings. That's why `script.switchToColorMode()` also accepts the
+name of a color mode. The id is checked first, then the first color mode with exactly that name
+(case-sensitive) is used. Keep in mind that names don't need to be unique, they can be renamed
+at any time, and the name of the built-in light color mode ("System") is translated, so for the
+built-in color modes better use their ids.
+
+Stylesheets added with `script.addStyleSheet()` are kept when the color mode is switched.
+:::
+
 ## Opening an input dialog with a select box
 
 ### Method call and parameters

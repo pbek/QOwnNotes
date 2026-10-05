@@ -215,6 +215,10 @@ class ScriptingService : public QObject {
     Q_INVOKABLE void triggerMenuAction(const QString &objectName,
                                        const QString &checked = QString()) const;
 
+    Q_INVOKABLE QVariantList getColorModes() const;
+    Q_INVOKABLE QString getCurrentColorModeId() const;
+    Q_INVOKABLE bool switchToColorMode(const QString &idOrName) const;
+
    private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;

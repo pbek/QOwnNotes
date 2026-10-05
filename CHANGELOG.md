@@ -2,6 +2,14 @@
 
 ## 26.10.2
 
+- Scripts can now list the color modes with `script.getColorModes()`, get the active one with
+  `script.getCurrentColorModeId()` and switch to another one, including its editor color schema,
+  with `script.switchToColorMode()` (for [#2647](https://github.com/pbek/QOwnNotes/issues/2647))
+  - `script.switchToColorMode()` accepts the id or the name of a color mode
+  - For more information please take a look at the
+    [Working with color modes](https://www.qownnotes.org/scripting/methods-and-objects.html#working-with-color-modes)
+    documentation and the example script
+    [toggle-color-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/toggle-color-mode.qml)
 - Stylesheets added by scripts with `script.addStyleSheet()` are now kept when the color mode
   is switched, previously they were removed
   (for [#2647](https://github.com/pbek/QOwnNotes/issues/2647))

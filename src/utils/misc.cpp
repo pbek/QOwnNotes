@@ -3209,17 +3209,7 @@ void Utils::Misc::switchToDarkOrLightMode(bool darkMode) {
     mode.setAsCurrent();
 
     // Apply the color mode settings to the global settings
-    SettingsService settings;
-    settings.setValue("darkMode", mode.isDarkMode());
-    settings.setValue("darkModeColors", mode.isDarkModeColors());
-    settings.setValue("darkModeIconTheme", mode.isDarkModeIconTheme());
-    settings.setValue("darkModeTrayIcon", mode.isDarkModeTrayIcon());
-    settings.setValue("internalIconTheme", mode.isInternalIconTheme());
-    settings.setValue("systemIconTheme", mode.isSystemIconTheme());
-
-    if (!mode.getEditorColorSchemaKey().isEmpty()) {
-        settings.setValue("Editor/CurrentSchemaKey", mode.getEditorColorSchemaKey());
-    }
+    mode.applyToGlobalSettings();
 }
 
 void Utils::Misc::switchToDarkMode() { switchToDarkOrLightMode(true); }

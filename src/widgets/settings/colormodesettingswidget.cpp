@@ -134,20 +134,7 @@ void ColorModeSettingsWidget::updateColorModeListActiveState() {
  * Applies the current color mode settings to the global application settings
  */
 void ColorModeSettingsWidget::applyColorModeSettings() {
-    const ColorMode mode = ColorMode::currentColorMode();
-
-    SettingsService settings;
-    settings.setValue(QStringLiteral("darkMode"), mode.isDarkMode());
-    settings.setValue(QStringLiteral("darkModeColors"), mode.isDarkModeColors());
-    settings.setValue(QStringLiteral("darkModeTrayIcon"), mode.isDarkModeTrayIcon());
-    settings.setValue(QStringLiteral("darkModeIconTheme"), mode.isDarkModeIconTheme());
-    settings.setValue(QStringLiteral("internalIconTheme"), mode.isInternalIconTheme());
-    settings.setValue(QStringLiteral("systemIconTheme"), mode.isSystemIconTheme());
-
-    if (!mode.getEditorColorSchemaKey().isEmpty()) {
-        settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"),
-                          mode.getEditorColorSchemaKey());
-    }
+    ColorMode::currentColorMode().applyToGlobalSettings();
 
     Utils::Gui::fixDarkModeIcons(this);
     Utils::Gui::applyDarkModeSettings();
