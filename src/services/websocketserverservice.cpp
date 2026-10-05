@@ -16,6 +16,7 @@
 
 #include <utils/misc.h>
 
+#include <QPointer>
 #include <QTcpServer>
 #include <QTcpSocket>
 #include <QUrlQuery>
@@ -482,21 +483,32 @@ void WebSocketServerService::onNewConnection() {
     Utils::Misc::printInfo(tr("%1 connected to QOwnNotes server!").arg(getIdentifier(pSocket)));
     pSocket->setParent(this);
 
+    // Token lookup can run a nested event loop. Let Qt finish processing the WebSocket frame
+    // before handling the message, so a disconnect cannot delete an active frame processor.
     connect(pSocket, &QWebSocket::textMessageReceived, this,
-            &WebSocketServerService::processMessage);
+            &WebSocketServerService::processMessage, Qt::QueuedConnection);
     connect(pSocket, &QWebSocket::disconnected, this, &WebSocketServerService::socketDisconnected);
 
     m_clients << pSocket;
 }
 
 void WebSocketServerService::processMessage(const QString &message) {
+    QPointer<QWebSocket> pSender = qobject_cast<QWebSocket *>(sender());
+    if (pSender.isNull()) {
+        return;
+    }
+
     QJsonDocument jsonResponse = QJsonDocument::fromJson(message.toUtf8());
     QJsonObject jsonObject = jsonResponse.object();
     QString type = jsonObject.value(QStringLiteral("type")).toString();
-    auto *pSender = qobject_cast<QWebSocket *>(sender());
     MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
     const QString token = jsonObject.value(QStringLiteral("token")).toString();
     const QString storedToken = getOrGenerateToken();
+
+    // The client may have been deleted while waiting for the keychain.
+    if (pSender.isNull()) {
+        return;
+    }
 
     // request the token if not set
     if (token.isEmpty() || storedToken.isEmpty() || token != storedToken) {

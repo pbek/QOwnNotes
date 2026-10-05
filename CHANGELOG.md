@@ -2,6 +2,9 @@
 
 ## 26.10.2
 
+- WebSocket message handling is now deferred until Qt finishes processing the incoming
+  frame, preventing a possible crash when running `qc exec` while authentication waits
+  for the system keychain (for [#3772](https://github.com/pbek/QOwnNotes/issues/3772))
 - Hovered menu items and hovered or open menu-bar items now use a medium-dark gray
   background and white text in dark mode for better contrast
   (for [#3771](https://github.com/pbek/QOwnNotes/issues/3771))
