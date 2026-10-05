@@ -234,14 +234,15 @@ QMenuBar::item {
 }
 
 QMenuBar::item:selected {
-  background: transparent;
+  background-color: #454545;
+  color: #ffffff;
   border: 1px solid #3a3939;
 }
 
 QMenuBar::item:pressed {
   border: 1px solid #3a3939;
-  background-color: #c64a13;
-  color: black;
+  background-color: #454545;
+  color: #ffffff;
   margin-bottom: -1px;
   padding-bottom: 1px;
 }
@@ -276,7 +277,8 @@ QMenu::icon:checked {
 }
 
 QMenu::item:selected {
-  color: black;
+  background-color: #454545;
+  color: #ffffff;
 }
 
 QMenu::separator {

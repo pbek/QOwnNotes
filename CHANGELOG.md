@@ -2,6 +2,9 @@
 
 ## 26.10.2
 
+- Hovered menu items and hovered or open menu-bar items now use a medium-dark gray
+  background and white text in dark mode for better contrast
+  (for [#3771](https://github.com/pbek/QOwnNotes/issues/3771))
 - The note filename selection for wiki-style links is now also shown when `[[` is typed
   on keyboard layouts that need `AltGr` or `Option` to type `[`, like Spanish or German
   (for [#3769](https://github.com/pbek/QOwnNotes/issues/3769))
