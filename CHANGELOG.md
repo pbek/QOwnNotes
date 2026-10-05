@@ -2,6 +2,9 @@
 
 ## 26.10.2
 
+- The note filename selection for wiki-style links is now also shown when `[[` is typed
+  on keyboard layouts that need `AltGr` or `Option` to type `[`, like Spanish or German
+  (for [#3769](https://github.com/pbek/QOwnNotes/issues/3769))
 - There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
   [v1.2.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.2.0)
   - Pressing `Enter` at the start of a Markdown list item or just after its marker now creates

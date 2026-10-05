@@ -3871,8 +3871,10 @@ void QOwnNotesMarkdownTextEdit::keyPressEvent(QKeyEvent *e) {
         return;
     }
 
-    if (e->text() == QStringLiteral("[") &&
-        (e->modifiers() == Qt::NoModifier || e->modifiers() == Qt::ShiftModifier)) {
+    // Don't check the modifiers, because on many keyboard layouts "[" needs AltGr
+    // (reported as Ctrl+Alt on Windows) or Option on macOS, and the event text
+    // already guarantees that a literal "[" was typed
+    if (e->text() == QStringLiteral("[")) {
         // Only trigger automatic note filename selection if the setting is enabled
         const bool autoSelect =
             SettingsService()
