@@ -2,6 +2,9 @@
 
 ## 26.10.2
 
+- Stylesheets added by scripts with `script.addStyleSheet()` are now kept when the color mode
+  is switched, previously they were removed
+  (for [#2647](https://github.com/pbek/QOwnNotes/issues/2647))
 - WebSocket message handling is now deferred until Qt finishes processing the incoming
   frame, preventing a possible crash when running `qc exec` while authentication waits
   for the system keychain (for [#3772](https://github.com/pbek/QOwnNotes/issues/3772))

@@ -1978,6 +1978,19 @@ void MainWindow::initStyling() {
                          "{background-color: %1;}")
                          .arg(noteTagFrameColorName);
 
+    // Keep stylesheets that were added by scripts with script.addStyleSheet(),
+    // so they survive switching color modes
+    static const QRegularExpression customStyleSheetRegExp(
+        QRegularExpression::escape(QStringLiteral("\n/* BEGIN CUSTOM STYLESHEET */")) +
+            QStringLiteral(".*?") +
+            QRegularExpression::escape(QStringLiteral("/* END CUSTOM STYLESHEET */")),
+        QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpressionMatchIterator customStyleSheetIterator =
+        customStyleSheetRegExp.globalMatch(qApp->styleSheet());
+    while (customStyleSheetIterator.hasNext()) {
+        appStyleSheet += customStyleSheetIterator.next().captured(0);
+    }
+
     qApp->setStyleSheet(appStyleSheet);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
