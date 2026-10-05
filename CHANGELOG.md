@@ -23,6 +23,12 @@
   on keyboard layouts that need `AltGr` or `Option` to type `[`, like Spanish or German
   (for [#3769](https://github.com/pbek/QOwnNotes/issues/3769))
 - There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.3.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.3.0)
+  - The current note can be opened in an external editor with `E` or `Ctrl-e`, using
+    `$VISUAL`, `$EDITOR`, or `vi`, saving local edits first and reloading after the editor exits
+  - Editor changes can be undone and redone with `Ctrl-z` and `Ctrl-Shift-Z` (or `Ctrl-y`),
+    grouping typed words and consecutive deletions
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
   [v1.2.0](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.2.0)
   - Pressing `Enter` at the start of a Markdown list item or just after its marker now creates
     an empty item before it, preserving indentation and checklist style
