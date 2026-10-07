@@ -256,18 +256,199 @@ jobs:
           qmake6 CONFIG+=debug QOwnNotes.pro CONFIG+=DEV_MODE
           nmake
 
-        #
-        # Build QOwnNotes Windows Release and store it as artifact
-        #
+  # Build runnable packages independently of the compatibility-test matrix.
+  build-appimage:
+    name: "🐧 AppImage Qt6"
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    env:
+      QT_VERSION: 6.10.2
+      QT_MODULES: "qtwebsockets qtwaylandcompositor"
+      BUILD_DIR: build
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
 
-      - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
-        name: Build QOwnNotes Windows Release
-        run: '& ..\build-systems\github\windows\build-zip.ps1'
-      - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          modules: ${{ env.QT_MODULES }}
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfuse2 desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
+
+      - name: Compile application
+        run: |
+          echo '#define RELEASE "AppImage"' > release.h
+          qmake QOwnNotes.pro CONFIG+=release PREFIX=/usr
+          lrelease QOwnNotes.pro
+          make -j8
+
+      - name: Install linuxdeploy
+        run: |
+          LINUXDEPLOY_VERSION=1-alpha-20240109-1
+          APPIMAGE_RUNTIME_SHA256=156f4bdbde9c52d01814600013e0a273f0118dc2de98975f3c8c63427ec79074
+          wget https://github.com/linuxdeploy/linuxdeploy/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-x86_64.AppImage
+          wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-plugin-qt-x86_64.AppImage
+          wget https://github.com/AppImage/type2-runtime/releases/download/continuous/runtime-x86_64
+          echo "${APPIMAGE_RUNTIME_SHA256}  runtime-x86_64" | sha256sum --check --strict
+          chmod +x linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage
+
+      - name: Create AppImage
+        run: |
+          QT_DIR="${QT_ROOT_DIR}"
+          export QMAKE="${QT_DIR}/bin/qmake"
+          export PATH="${QT_DIR}/libexec:$PATH"
+          export EXTRA_PLATFORM_PLUGINS="libqwayland.so"
+          export EXTRA_QT_MODULES="Qml;QmlWorkerScript;QmlModels;Quick"
+          export QML_SOURCES_PATHS="../docs/scripting/examples"
+          export QML_MODULES_PATHS="${QT_DIR}/qml"
+
+          copy_qt_plugin_dir() {
+            local plugin_dir="$1"
+            if [ -d "${QT_DIR}/plugins/${plugin_dir}" ]; then
+              mkdir -p "${BUILD_DIR}/usr/plugins/${plugin_dir}"
+              cp -a "${QT_DIR}/plugins/${plugin_dir}/." "${BUILD_DIR}/usr/plugins/${plugin_dir}/"
+            fi
+          }
+
+          cp ../icons/icon.png QOwnNotes.png
+          # Only SQLite is needed; other SQL drivers require external client libraries.
+          find "${QT_DIR}/plugins/sqldrivers" -name '*.so' ! -name '*sqlite*' -delete
+          mkdir -p "${BUILD_DIR}/usr/plugins/iconengines" "${BUILD_DIR}/usr/languages"
+          cp "${QT_DIR}/plugins/iconengines/libqsvgicon.so" "${BUILD_DIR}/usr/plugins/iconengines/"
+          cp languages/*.qm "${BUILD_DIR}/usr/languages/"
+
+          ./linuxdeploy-x86_64.AppImage \
+            --appdir "${BUILD_DIR}" \
+            -e QOwnNotes -i QOwnNotes.png -d PBE.QOwnNotes.desktop --plugin qt
+
+          # Deploy Wayland support in addition to linuxdeploy's default xcb platform.
+          copy_qt_plugin_dir platforms
+          copy_qt_plugin_dir wayland-decoration-client
+          copy_qt_plugin_dir wayland-graphics-integration-client
+          copy_qt_plugin_dir wayland-shell-integration
+          test -f "${BUILD_DIR}/usr/plugins/platforms/libqwayland.so"
+
+          # Ensure script-engine QML imports resolve from the bundle.
+          QML_DEST="${BUILD_DIR}/usr/qml"
+          for mod in QtQml QtQuick QtQml/WorkerScript; do
+            if [ -d "${QT_DIR}/qml/${mod}" ] && [ ! -d "${QML_DEST}/${mod}" ]; then
+              mkdir -p "${QML_DEST}/${mod}"
+              cp -a "${QT_DIR}/qml/${mod}/." "${QML_DEST}/${mod}/"
+            fi
+          done
+
+          cat > "${BUILD_DIR}/usr/bin/qt.conf" <<'QTCONF'
+          [Paths]
+          Prefix = ..
+          Plugins = plugins
+          Qml2Imports = qml
+          QmlImports = qml
+          QTCONF
+
+          mkdir -p "${BUILD_DIR}/usr/lib"
+          cp -L /usr/lib/x86_64-linux-gnu/libssl.so.3 "${BUILD_DIR}/usr/lib/"
+          cp -L /usr/lib/x86_64-linux-gnu/libcrypto.so.3 "${BUILD_DIR}/usr/lib/"
+          LDAI_RUNTIME_FILE="$PWD/runtime-x86_64" \
+            ./linuxdeploy-x86_64.AppImage --appdir "${BUILD_DIR}" --output appimage
+
+          rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage runtime-x86_64
+          mv ./*.AppImage QOwnNotes-x86_64.AppImage
+          if strings QOwnNotes-x86_64.AppImage | grep -F 'libfuse.so.2' > /dev/null; then
+            echo "The AppImage still contains the legacy dynamic FUSE runtime" >&2
+            exit 1
+          fi
+          sha256sum QOwnNotes-x86_64.AppImage > QOwnNotes-x86_64.AppImage.sha256sum
+
+      - name: Upload AppImage artifacts
         uses: actions/upload-artifact@v7
         with:
-          name: QOwnNotes-Windows
-          path: QOwnNotes.zip
+          name: QOwnNotes-AppImage-Qt6
+          path: |
+            src/QOwnNotes-x86_64.AppImage
+            src/QOwnNotes-x86_64.AppImage.sha256sum
+          if-no-files-found: error
+
+  build-windows:
+    name: "🧊 Windows Qt6"
+    runs-on: windows-2025
+    timeout-minutes: 60
+    env:
+      QT_VERSION: 6.10.1
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          modules: ${{ env.QT_MODULES }}
+          cache: true
+
+      - name: Make sure MSVC is found
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Build Windows ZIP
+        run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
+
+      - name: Upload Windows artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: QOwnNotes-Windows-Qt6
+          path: |
+            QOwnNotes.zip
+            QOwnNotes.zip.sha256
+            QOwnNotes.zip.sha256sum
+          if-no-files-found: error
+
+  build-macos:
+    name: "🍎 macOS Qt6"
+    runs-on: macos-15
+    timeout-minutes: 60
+    env:
+      QT_VERSION: 6.10.1
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          modules: ${{ env.QT_MODULES }}
+          cache: true
+
+      - name: Set version
+        run: |
+          VERSION=$(sed 's/[^0-9,.]//g' version.h)
+          echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
+
+      - name: Build universal macOS DMG
+        run: |
+          echo '#define RELEASE "GitHub Actions"' > release.h
+          lrelease QOwnNotes.pro
+          qmake QOwnNotes.pro CONFIG+=release QMAKE_APPLE_DEVICE_ARCHS="x86_64 arm64"
+          make -j8
+          ../build-systems/github/macos/create-dmg-qt6.sh
+          shasum -a 256 QOwnNotes.dmg > QOwnNotes.dmg.sha256sum
+
+      - name: Upload macOS artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: QOwnNotes-macOS-Qt6
+          path: |
+            src/QOwnNotes.dmg
+            src/QOwnNotes.dmg.sha256sum
+          if-no-files-found: error
 
   build-snap:
     name: "🐧 Snap Qt6"
