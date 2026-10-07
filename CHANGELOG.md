@@ -7,6 +7,13 @@
   (for [#2647](https://github.com/pbek/QOwnNotes/issues/2647))
   - In dark mode it replaces the default orange accent color
   - The accent color of a color mode is also returned by `script.getColorModes()`
+- The Qt6 Snap now runs natively on **Wayland** when used in a Wayland session, under X11 it still
+  uses X11 (for [#3777](https://github.com/pbek/QOwnNotes/issues/3777))
+  - Set the environment variable `QOWNNOTES_SNAP_FORCE_X11=1` to force X11 (XWayland)
+  - The Snap is now based on `core26` (Ubuntu 26.04) with Qt 6.10
+  - The Snap is now built from the checked-out commit and the GitHub Actions test builds
+    provide a downloadable Qt6 Snap artifact
+  - The taskbar icon of the Snap is now shown correctly under Wayland
 
 ## 26.10.2
 
