@@ -98,17 +98,13 @@ jobs:
           # We only want 6.9.1+ for Windows
           - os: windows-2025
             qt-version: "6.8.3"
-        include:
-          #          - os: ubuntu-latest
-          #            qt-version: '6.3.0'
-          #            experimental: true
-          #          - os: macos-15
-          #            qt-version: '6.3.0'
-          #            experimental: true
-          # Snapcraft
-          - os: ubuntu-22.04
-            qt-version: "5.15.2"
-            experimental: false
+        #        include:
+        #          - os: ubuntu-latest
+        #            qt-version: '6.3.0'
+        #            experimental: true
+        #          - os: macos-15
+        #            qt-version: '6.3.0'
+        #            experimental: true
     steps:
       - uses: actions/checkout@v7
         with:
@@ -243,7 +239,7 @@ jobs:
       # Build QOwnNotes
       #
 
-      - if: true && !(contains( matrix.os, 'windows') && (matrix.qt-version == '5.15.2' || startsWith( matrix.qt-version, '6.' ))) && !contains( matrix.os, 'ubuntu-22') && !contains( matrix.os, 'macos')
+      - if: true && !(contains( matrix.os, 'windows') && (matrix.qt-version == '5.15.2' || startsWith( matrix.qt-version, '6.' ))) && !contains( matrix.os, 'macos')
         name: Build QOwnNotes
         run: |
           lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE && make -j 8
@@ -254,9 +250,6 @@ jobs:
         run: |
           lrelease QOwnNotes.pro && qmake CONFIG+=debug CONFIG+=DEV_MODE -early QMAKE_DEFAULT_LIBDIRS=$(xcrun -show-sdk-path)/usr/lib && make -j 8
           ../build-systems/github/macos/create-dmg.sh
-      - if: contains( matrix.os, 'ubuntu-22') && ( matrix.qt-version == '5.15.2' )
-        name: Build for Snapcraft
-        uses: ./.github/actions/build-snap
       - if: contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' )
         name: Build QOwnNotes for Windows with Qt 6
         run: |
@@ -275,3 +268,38 @@ jobs:
         with:
           name: QOwnNotes-Windows
           path: QOwnNotes.zip
+
+  build-snap:
+    name: "🐧 Snap Qt6"
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: "📂 Prepare snap source"
+        run: ../build-systems/github/snap.qt6/prepare-source.sh
+
+      - name: "🚧 Build snap"
+        uses: ./.github/actions/build-snap
+        id: snapcraft
+        with:
+          path: build-systems/github/snap.qt6
+
+      - name: "🔎 Create snap checksum"
+        shell: bash
+        run: |
+          SNAP_PATH="${{ steps.snapcraft.outputs.snap }}"
+          sha256sum "${SNAP_PATH}" > "${SNAP_PATH}.sha256sum"
+          echo "SNAP_PATH=${SNAP_PATH}" >> "$GITHUB_ENV"
+          ls -hal "${SNAP_PATH}" "${SNAP_PATH}.sha256sum"
+
+      - name: "📦 Upload snap artifact"
+        uses: actions/upload-artifact@v7
+        with:
+          name: QOwnNotes-Snap-Qt6
+          path: |
+            ${{ env.SNAP_PATH }}
+            ${{ env.SNAP_PATH }}.sha256sum
+          if-no-files-found: error

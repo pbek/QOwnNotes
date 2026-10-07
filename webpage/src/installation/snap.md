@@ -24,3 +24,9 @@ For KDE Plasma, install KWallet support such as `kwalletmanager`.
 
 QOwnNotes will fall back to legacy encryption if the desktop keychain is unavailable.
 :::
+
+::: tip
+In a Wayland session the snap runs natively on Wayland, otherwise it uses X11.
+If you run into Wayland related issues, you can force X11 (XWayland) by starting QOwnNotes with
+`QOWNNOTES_SNAP_FORCE_X11=1 qownnotes`.
+:::

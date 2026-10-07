@@ -192,6 +192,9 @@ jobs:
           echo "VERSION=${VERSION}"
           printenv
 
+      - name: "📂 Prepare snap source"
+        run: ../build-systems/github/snap.qt6/prepare-source.sh
+
       - name: "🚧 Compile application"
         uses: ./.github/actions/build-snap
         id: snapcraft

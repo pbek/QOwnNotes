@@ -3,7 +3,7 @@ adopt-info: qownnotes
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
-base: core24
+base: core26
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
@@ -11,9 +11,9 @@ description: |
   https://www.qownnotes.org/
 
 # Expose libraries installed into non-standard sub-directories so the
-# dynamic linker can find them at runtime.  libproxy on Noble puts its
-# backend plugin into /usr/lib/<triplet>/libproxy/ which is NOT on the
-# default LD_LIBRARY_PATH set by the desktop-launch wrapper.
+# dynamic linker can find them at runtime.  libproxy puts its backend plugin
+# into /usr/lib/<triplet>/libproxy/ which is NOT on the default
+# LD_LIBRARY_PATH set by the desktop-launch wrapper.
 layout:
   /usr/lib/x86_64-linux-gnu/libproxy:
     bind: $SNAP/usr/lib/x86_64-linux-gnu/libproxy
@@ -21,14 +21,15 @@ layout:
 apps:
   qownnotes:
     # The desktop helper still configures Qt4/Qt5 plugin locations, so run a
-    # small wrapper after it to point Qt6 at the staged plugin and QML paths.
+    # small wrapper after it to point Qt6 at the staged plugin and QML paths
+    # and to select the Wayland or X11 platform plugin.
     command: bin/desktop-launch $SNAP/wrapper.sh
     environment:
-      DISABLE_WAYLAND: 1
       QT_QPA_PLATFORMTHEME: gtk3
       QT_STYLE_OVERRIDE: Breeze
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
+      - wayland
       - x11
       - unity7
       - network
@@ -56,20 +57,20 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 
 parts:
   qownnotes:
-    source: https://github.com/pbek/qownnotes.git
+    # The source code of the checked out commit is copied into this directory
+    # by prepare-source.sh before running snapcraft
+    source: qownnotes-src
     # Use make plugin and call qmake6 manually (the qmake plugin does not
     # support Qt6 properly and invokes the system Qt5 qmake instead)
     plugin: make
     override-build: |
       export QT_SELECT=qt6
-      >&2 pwd
-      >&2 find
       # Remove the default desktop file
-      rm ../src/src/PBE.QOwnNotes.desktop
+      rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Snapcraft.io\"" > release.h
-      /usr/lib/qt6/bin/lrelease ../src/src/languages/*.ts
-      qmake6 CONFIG+=release CONFIG+=snapcraft ../src/src/QOwnNotes.pro
-      craftctl set version="$(cat ../src/src/version.h | sed 's/[^0-9,.]//g')"
+      /usr/lib/qt6/bin/lrelease languages/*.ts
+      qmake6 CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
+      craftctl set version="$(cat version.h | sed 's/[^0-9,.]//g')"
       craftctl default
       make install INSTALL_ROOT="${CRAFT_PART_INSTALL}"
     build-packages:
@@ -77,24 +78,24 @@ parts:
       - qmake6
       - qt6-base-dev
       - qt6-declarative-dev
-      - libqt6svg6-dev
-      - libqt6websockets6-dev
-      - libqt6core5compat6-dev
+      - qt6-svg-dev
+      - qt6-websockets-dev
+      - qt6-5compat-dev
       - libsecret-1-dev
       - qt6-l10n-tools
       - qt6-tools-dev-tools
     stage-packages:
       # -- Qt6 core runtime libraries --
       - libqt6core6t64
-      - libqt6gui6t64
-      - libqt6widgets6t64
-      - libqt6network6t64
-      - libqt6sql6t64
+      - libqt6gui6
+      - libqt6widgets6
+      - libqt6network6
+      - libqt6sql6
       - libqt6sql6-sqlite
-      - libqt6xml6t64
-      - libqt6dbus6t64
-      - libqt6concurrent6t64
-      - libqt6printsupport6t64
+      - libqt6xml6
+      - libqt6dbus6
+      - libqt6concurrent6
+      - libqt6printsupport6
       - libqt6svg6
       - libqt6svgwidgets6
       - libqt6websockets6
@@ -105,15 +106,17 @@ parts:
       - libqt6qmlworkerscript6
       - libqt6quick6
       # -- Qt6 OpenGL (required by libqt6quick6) --
-      - libqt6opengl6t64
+      - libqt6opengl6
       # -- Secret Service keychain backend --
       - libsecret-1-0
-      # -- Proxy support (libqt6network6t64 links to libproxy) --
+      # -- Proxy support (libqt6network6 links to libproxy) --
       # libproxy1v5 ships libpxbackend-1.0.so in a private sub-directory;
       # the layout section above makes that path visible to the linker.
       - libproxy1v5
-      # Bundle the Wayland QPA plugins explicitly; libqt6gui6t64 ships xcb,
-      # but the Wayland backend lives in a separate package on Ubuntu 24.04.
+      # -- Wayland support --
+      # libqt6waylandclient6 ships the Wayland QPA plugin (libqwayland.so),
+      # qt6-wayland ships additional decoration and shell integration plugins
+      - libqt6waylandclient6
       - qt6-wayland
     stage:
       - -usr/share/pkgconfig
@@ -122,8 +125,7 @@ parts:
       arch_triplet="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"
       platform_dir="${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platforms"
       test -f "${platform_dir}/libqxcb.so"
-      test -f "${platform_dir}/libqwayland-egl.so"
-      test -f "${platform_dir}/libqwayland-generic.so"
+      test -f "${platform_dir}/libqwayland.so"
     after: [desktop-qt6]
 
   desktop-qt6:
@@ -137,7 +139,7 @@ parts:
       - dpkg-dev
     stage-packages:
       # Qt's xcb platform plugin depends on a set of xcb helper libraries that
-      # are not reliably pulled in by the desktop helper on core24.
+      # are not reliably pulled in by the desktop helper.
       - libxcb-cursor0
       - libxcb-icccm4
       - libxcb-image0
@@ -159,8 +161,8 @@ parts:
       - adwaita-icon-theme
       - gnome-themes-extra
       - shared-mime-info
-      - libqt6gui6t64
-      - libgdk-pixbuf2.0-0
+      - libqt6gui6
+      - libgdk-pixbuf-2.0-0
       - libqt6svg6 # for loading icon themes which are svg
       - locales-all
       - xdg-user-dirs

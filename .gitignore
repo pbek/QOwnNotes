@@ -14,6 +14,7 @@ parts
 prime
 *.snap
 snap/.snapcraft/state
+build-systems/github/snap.qt6/qownnotes-src
 src/languages/*.qm
 .vscode/
 CMakeLists.txt.user*
