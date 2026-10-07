@@ -353,9 +353,14 @@ class Note {
 
     QString downloadUrlToMedia(const QUrl &url, bool returnUrlOnly = false);
 
-    QString importMediaFromBase64(QString &data, QString imageSuffix = QString()) const;
+    QString importMediaFromBase64(QString &data, QString imageSuffix = QString(),
+                                  bool returnUrlOnly = false) const;
 
-    QString importMediaFromDataUrl(const QString &dataUrl);
+    QString importMediaFromDataUrl(const QString &dataUrl, bool returnUrlOnly = false);
+
+    QString importRemoteImagesInMarkdown(
+        const QString &markdown,
+        const std::function<void(const QString &url)> &downloadStartedCallback = nullptr);
 
     bool canWriteToNoteFile();
 

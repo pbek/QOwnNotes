@@ -948,17 +948,20 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
         QStringLiteral("\n\n---\n\n"));
 
     // Handle images - must be done before links
+    // Attribute values may be enclosed in double or single quotes
     text.replace(
-        QRegularExpression(QStringLiteral("<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"[^>]*>"),
-                           QRegularExpression::CaseInsensitiveOption),
-        QStringLiteral("![\\2](\\1)"));
+        QRegularExpression(
+            QStringLiteral("<img[^>]*\\ssrc=([\"'])(.+?)\\1[^>]*\\salt=([\"'])(.*?)\\3[^>]*>"),
+            QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("![\\4](\\2)"));
     text.replace(
-        QRegularExpression(QStringLiteral("<img[^>]+alt=\"([^\"]+)\"[^>]*src=\"([^\"]+)\"[^>]*>"),
-                           QRegularExpression::CaseInsensitiveOption),
-        QStringLiteral("![\\1](\\2)"));
-    text.replace(QRegularExpression(QStringLiteral("<img[^>]+src=\"([^\"]+)\"[^>]*>"),
+        QRegularExpression(
+            QStringLiteral("<img[^>]*\\salt=([\"'])(.*?)\\1[^>]*\\ssrc=([\"'])(.+?)\\3[^>]*>"),
+            QRegularExpression::CaseInsensitiveOption),
+        QStringLiteral("![\\2](\\4)"));
+    text.replace(QRegularExpression(QStringLiteral("<img[^>]*\\ssrc=([\"'])(.+?)\\1[^>]*>"),
                                     QRegularExpression::CaseInsensitiveOption),
-                 QStringLiteral("![](\\1)"));
+                 QStringLiteral("![](\\2)"));
 
     // Handle code blocks with language first
     text.replace(QRegularExpression(QStringLiteral("<pre[^>]*><code[^>]+class=\"[^\"]*language-([^"
@@ -1139,6 +1142,40 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
     text = text.trimmed();
 
     return text;
+}
+
+/**
+ * Calls the replacer for every Markdown image with a remote (http/https) or
+ * inline (data:image/) url and replaces the image with the returned Markdown
+ * code. If the replacer returns an empty string, the image is left unchanged.
+ *
+ * @param markdown
+ * @param replacer
+ * @return
+ */
+QString Utils::Misc::replaceRemoteMarkdownImages(
+    const QString &markdown,
+    const std::function<QString(const QString &altText, const QString &url)> &replacer) {
+    static const QRegularExpression re(
+        QStringLiteral(R"(!\[([^\]]*)\]\(((?:https?://|data:image/)[^)\s]+)\))"),
+        QRegularExpression::CaseInsensitiveOption);
+
+    QString result;
+    int lastPosition = 0;
+    QRegularExpressionMatchIterator i = re.globalMatch(markdown);
+
+    while (i.hasNext()) {
+        const QRegularExpressionMatch match = i.next();
+        const QString replacement = replacer(match.captured(1), match.captured(2));
+
+        result += markdown.mid(lastPosition, match.capturedStart() - lastPosition);
+        result += replacement.isEmpty() ? match.captured(0) : replacement;
+        lastPosition = match.capturedEnd();
+    }
+
+    result += markdown.mid(lastPosition);
+
+    return result;
 }
 
 /**

@@ -18,6 +18,8 @@ class TestUtilsMisc : public QObject {
     void testHtmlToMarkdown();
     void testHtmlToMarkdownTables();
     void testHtmlToMarkdownTableSpecialChars();
+    void testHtmlToMarkdownImages();
+    void testReplaceRemoteMarkdownImages();
     void testParseTaskList();
     void testToggleCheckboxesDoesNotCreateCheckboxListItems();
     void testUnescapeHtml();

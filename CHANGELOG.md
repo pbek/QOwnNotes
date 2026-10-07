@@ -14,6 +14,12 @@
   - The Snap is now built from the checked-out commit and the GitHub Actions test builds
     provide a downloadable Qt6 Snap artifact
   - The taskbar icon of the Snap is now shown correctly under Wayland
+- Images of web pages sent to QOwnNotes by the browser extension, and of pasted HTML, are now
+  downloaded into the media folder again, instead of linking to the remote images
+  (for [#3778](https://github.com/pbek/QOwnNotes/issues/3778))
+  - Images with single-quoted `src` attributes are no longer dropped when converting HTML to Markdown
+  - Lazy-loading attributes like `data-src` are no longer mistaken for the image source
+  - The alt text of images is now kept
 
 ## 26.10.2
 

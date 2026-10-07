@@ -21,6 +21,7 @@
 #include <QString>
 #include <QStringList>
 #include <QVector>
+#include <functional>
 
 struct TerminalCmd;
 class QDataStream;
@@ -88,6 +89,9 @@ QString applicationPath();
 QString prependPortableDataPathIfNeeded(QString path, bool ifNotEmptyOnly = false);
 QString makePathRelativeToPortableDataPathIfNeeded(QString path);
 QString htmlToMarkdown(QString text);
+QString replaceRemoteMarkdownImages(
+    const QString &markdown,
+    const std::function<QString(const QString &altText, const QString &url)> &replacer);
 QString parseTaskList(const QString &html, bool clickable);
 QByteArray startSynchronousProcess(const QString &executablePath, const QStringList &parameters,
                                    const QByteArray &data = QByteArray(),

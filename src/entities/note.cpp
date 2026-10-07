@@ -13,7 +13,9 @@
 #include <QDir>
 #include <QElapsedTimer>
 #include <QEventLoop>
+#include <QFileInfo>
 #include <QFutureWatcher>
+#include <QHash>
 #include <QMessageBox>
 #include <QMimeDatabase>
 #include <QQueue>
@@ -6638,7 +6640,7 @@ QString Note::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
  * @param imageSuffix
  * @return
  */
-QString Note::importMediaFromBase64(QString &data, QString imageSuffix) const {
+QString Note::importMediaFromBase64(QString &data, QString imageSuffix, bool returnUrlOnly) const {
     // if data still starts with base64 prefix remove it
     if (data.startsWith(QLatin1String("base64,"), Qt::CaseInsensitive)) {
         data = data.mid(6);
@@ -6662,7 +6664,7 @@ QString Note::importMediaFromBase64(QString &data, QString imageSuffix) const {
 
     // store the temporary image in the media folder and return the Markdown
     // code
-    QString markdownCode = getInsertMediaMarkdown(tempFile);
+    QString markdownCode = getInsertMediaMarkdown(tempFile, true, returnUrlOnly);
 
     delete tempFile;
 
@@ -6673,7 +6675,7 @@ QString Note::importMediaFromBase64(QString &data, QString imageSuffix) const {
  * Tries to import a media file into the note and returns the code for the
  * Markdown image tag
  */
-QString Note::importMediaFromDataUrl(const QString &dataUrl) {
+QString Note::importMediaFromDataUrl(const QString &dataUrl, bool returnUrlOnly) {
     if (dataUrl.contains(QLatin1String("data:image/"), Qt::CaseInsensitive)) {
         QStringList parts = dataUrl.split(QLatin1String("data:image/"));
 
@@ -6686,11 +6688,66 @@ QString Note::importMediaFromDataUrl(const QString &dataUrl) {
             auto mimeType = QLatin1String("image/") + parts[0];
             QString fileExtension = Utils::Misc::fileExtensionForMimeType(mimeType);
 
-            return importMediaFromBase64(parts[1], fileExtension);
+            return importMediaFromBase64(parts[1], fileExtension, returnUrlOnly);
         }
     }
 
     return "";
+}
+
+/**
+ * Downloads or imports all remote (http/https) and inline (data:image/) images
+ * of the Markdown text into the media folder and returns the Markdown text
+ * with the images pointing to the local media files.
+ * Images that couldn't be downloaded keep their original url.
+ *
+ * @param markdown
+ * @param downloadStartedCallback called before an image url is downloaded
+ * @return
+ */
+QString Note::importRemoteImagesInMarkdown(
+    const QString &markdown,
+    const std::function<void(const QString &url)> &downloadStartedCallback) {
+    // Cache already imported images, so the same image isn't stored twice
+    QHash<QString, QString> mediaUrlCache;
+
+    return Utils::Misc::replaceRemoteMarkdownImages(
+        markdown, [&](const QString &altText, const QString &url) -> QString {
+            QString mediaUrl = mediaUrlCache.value(url);
+
+            if (mediaUrl.isEmpty()) {
+                if (url.startsWith(QLatin1String("data:"), Qt::CaseInsensitive)) {
+                    mediaUrl = importMediaFromDataUrl(url, true);
+                } else {
+                    const QUrl imageUrl(url);
+
+                    if (!imageUrl.isValid()) {
+                        return {};
+                    }
+
+                    if (downloadStartedCallback) {
+                        downloadStartedCallback(url);
+                    }
+
+                    mediaUrl = downloadUrlToMedia(imageUrl, true);
+                }
+
+                if (mediaUrl.isEmpty()) {
+                    return {};
+                }
+
+                mediaUrlCache.insert(url, mediaUrl);
+            }
+
+            // Use the media file name as title if there was no alt text
+            QString title = altText;
+            if (title.isEmpty()) {
+                title = QFileInfo(QUrl::fromPercentEncoding(mediaUrl.toUtf8())).completeBaseName();
+            }
+
+            return QStringLiteral("![") + title + QStringLiteral("](") + mediaUrl +
+                   QStringLiteral(")");
+        });
 }
 
 /**

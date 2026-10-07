@@ -466,41 +466,10 @@ void MediaInsertionManager::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
     // convert html tags to Markdown
     html = Utils::Misc::htmlToMarkdown(std::move(html));
 
-    // match image tags
-    static const QRegularExpression re(QStringLiteral("<img.+?src=[\"'](.+?)[\"'].*?>"),
-                                       QRegularExpression::CaseInsensitiveOption);
-    QRegularExpressionMatchIterator i = re.globalMatch(html);
-
-    // find, download locally and replace all images
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        const QString imageTag = match.captured(0);
-        const QString imageUrlText = match.captured(1).trimmed();
-        // try to import a media file into the current note
-        QString markdownCode = _mainWindow->currentNote.importMediaFromDataUrl(imageUrlText);
-
-        // if no inline-image was detected try to download the url
-        if (markdownCode.isEmpty()) {
-            const QUrl imageUrl = QUrl(imageUrlText);
-
-            qDebug() << __func__ << " - 'imageUrl': " << imageUrl;
-
-            if (!imageUrl.isValid()) {
-                continue;
-            }
-
-            _mainWindow->showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()),
-                                              QStringLiteral("⬇️️"), 0);
-
-            // download the image and get the media Markdown code for it
-            markdownCode = _mainWindow->currentNote.downloadUrlToMedia(imageUrl);
-        }
-
-        if (!markdownCode.isEmpty()) {
-            // replace the image tag with Markdown code
-            html.replace(imageTag, markdownCode);
-        }
-    }
+    // Download all remote and inline images to the media folder and link them locally
+    html = _mainWindow->currentNote.importRemoteImagesInMarkdown(html, [this](const QString &url) {
+        _mainWindow->showStatusBarMessage(tr("Downloading %1").arg(url), QStringLiteral("⬇️️"), 0);
+    });
 
     _mainWindow->showStatusBarMessage(tr("Downloading images finished"), QStringLiteral("🖼️"),
                                       3000);

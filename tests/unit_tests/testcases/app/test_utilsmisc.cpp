@@ -198,6 +198,67 @@ void TestUtilsMisc::testHtmlToMarkdownTableSpecialChars() {
     QVERIFY(result.contains("\\|"));
 }
 
+void TestUtilsMisc::testHtmlToMarkdownImages() {
+    QCOMPARE(htmlToMarkdown(QStringLiteral("<img src=\"https://a.com/1.png\">")),
+             QStringLiteral("![](https://a.com/1.png)"));
+    QCOMPARE(htmlToMarkdown(QStringLiteral("<img src='https://a.com/1.png'>")),
+             QStringLiteral("![](https://a.com/1.png)"));
+    QCOMPARE(htmlToMarkdown(QStringLiteral("<img src=\"https://a.com/1.png\" alt=\"Alt\">")),
+             QStringLiteral("![Alt](https://a.com/1.png)"));
+    QCOMPARE(
+        htmlToMarkdown(QStringLiteral("<img alt='Alt' width=\"5\" src='https://a.com/1.png'>")),
+        QStringLiteral("![Alt](https://a.com/1.png)"));
+    QCOMPARE(htmlToMarkdown(QStringLiteral("<img src=\"https://a.com/1.png\" alt=\"\">")),
+             QStringLiteral("![](https://a.com/1.png)"));
+
+    // Lazy loading attributes like "data-src" must not be taken for the "src" attribute
+    QCOMPARE(htmlToMarkdown(QStringLiteral(
+                 "<img data-src=\"https://a.com/lazy.png\" src=\"https://a.com/1.png\">")),
+             QStringLiteral("![](https://a.com/1.png)"));
+    QCOMPARE(htmlToMarkdown(QStringLiteral(
+                 "<img src=\"https://a.com/1.png\" data-src=\"https://a.com/lazy.png\">")),
+             QStringLiteral("![](https://a.com/1.png)"));
+
+    // Html entities in urls are decoded
+    QCOMPARE(htmlToMarkdown(QStringLiteral("<img src=\"https://a.com/1.png?a=1&amp;b=2\">")),
+             QStringLiteral("![](https://a.com/1.png?a=1&b=2)"));
+}
+
+void TestUtilsMisc::testReplaceRemoteMarkdownImages() {
+    const QString markdown = QStringLiteral(
+        "Text ![Alt](https://a.com/1.png) more\n"
+        "![](http://b.com/2.png?x=1&y=2)\n"
+        "![local](media/3.png) [link](https://c.com)\n"
+        "![](data:image/png;base64,iVBORw0KGgo=)\n"
+        "![fail](https://a.com/fail.png)");
+
+    QStringList calls;
+    const QString result = replaceRemoteMarkdownImages(
+        markdown, [&calls](const QString &altText, const QString &url) -> QString {
+            calls << altText + QStringLiteral("|") + url;
+
+            if (url.contains(QLatin1String("fail"))) {
+                return {};
+            }
+
+            return QStringLiteral("![%1](media/%2)").arg(altText).arg(calls.count());
+        });
+
+    const QStringList expectedCalls{
+        QStringLiteral("Alt|https://a.com/1.png"),
+        QStringLiteral("|http://b.com/2.png?x=1&y=2"),
+        QStringLiteral("|data:image/png;base64,iVBORw0KGgo="),
+        QStringLiteral("fail|https://a.com/fail.png"),
+    };
+    QCOMPARE(calls, expectedCalls);
+
+    QCOMPARE(result, QStringLiteral("Text ![Alt](media/1) more\n"
+                                    "![](media/2)\n"
+                                    "![local](media/3.png) [link](https://c.com)\n"
+                                    "![](media/3)\n"
+                                    "![fail](https://a.com/fail.png)"));
+}
+
 void TestUtilsMisc::testParseTaskList() {
     const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
     const QString &t1 = "<li> [ ] task 1</li>";
