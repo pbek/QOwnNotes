@@ -29,6 +29,7 @@
 #include <QInputDialog>
 #include <QKeySequence>
 #include <QMenu>
+#include <QPointer>
 #include <QSignalBlocker>
 #include <QTimer>
 
@@ -87,7 +88,10 @@ void LayoutManager::updateLayoutLists(bool rebuild) {
         _layoutComboBox->addItem(name, uuid);
 
         auto *action = new QAction(name, _ui->menuLayouts);
-        connect(action, &QAction::triggered, this, [this, uuid]() { setCurrentLayout(uuid); });
+        // Finish dispatching the shortcut before a layout switch can rebuild the menu.
+        connect(
+            action, &QAction::triggered, this, [this, uuid]() { setCurrentLayout(uuid); },
+            Qt::QueuedConnection);
 
         // set an object name for creating shortcuts
         action->setObjectName(objectName);
@@ -198,7 +202,8 @@ void LayoutManager::storeCurrentLayout() {
 void LayoutManager::restoreCurrentLayout() {
     SettingsService settings;
     QStringList layouts = getLayoutUuidList();
-    QWidget *focusWidget = qApp->focusWidget();
+    // Changing the central widget can destroy the focused dock widget or title bar.
+    const QPointer<QWidget> focusWidget = qApp->focusWidget();
 
     // create a default layout if there is none yet
     if (layouts.count() == 0) {

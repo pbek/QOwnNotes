@@ -1370,7 +1370,8 @@ void MainWindow::setCentralWidgetIdentifier(const QString &identifier) {
         return;
     }
 
-    QWidget *focusWidget = qApp->focusWidget();
+    // The focused widget may belong to a dock widget that is deleted below.
+    const QPointer<QWidget> focusWidget = qApp->focusWidget();
     const bool panelsUnlocked = ui->actionUnlock_panels->isChecked();
 
     if (_noteEditIsCentralWidget) {

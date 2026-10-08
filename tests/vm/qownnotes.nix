@@ -33,6 +33,10 @@ in
       aliceDo = cmd: ''machine.succeed("su - alice -c '${cmd}' >&2 &");'';
     in
     ''
+      import configparser
+      import io
+      import shlex
+
       with subtest("Ensure X starts"):
           start_all()
           machine.wait_for_x()
@@ -89,5 +93,46 @@ in
           #machine.wait_for_window("- QOwnNotes - ${pkgs.qownnotes.version}")
 
           machine.screenshot("QOwnNotes-NewNote")
+
+      with subtest("Switch layouts repeatedly with keyboard shortcuts"):
+          machine.send_key("ctrl-q")
+          machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
+
+          settings_path = "/home/alice/.config/PBE/QOwnNotes.conf"
+          settings = configparser.ConfigParser(interpolation=None)
+          settings.optionxform = str
+          settings.read_string(machine.succeed(f"cat {settings_path}"))
+          layouts = {
+              "shortcut-editor": "note-edit",
+              "shortcut-viewer": "note-preview",
+              "shortcut-panels": "none",
+          }
+          settings["General"]["layouts"] = ", ".join(layouts)
+          settings["General"]["currentLayout"] = "shortcut-editor"
+          if "Shortcuts" not in settings:
+              settings.add_section("Shortcuts")
+          for index, (uuid, central_widget) in enumerate(layouts.items(), 1):
+              settings[f"layout-{uuid}"] = {"name": uuid, "centralWidget": central_widget}
+              settings["Shortcuts"][f"MainWindow-restoreLayout-{uuid}"] = f"Alt+Shift+F{index}"
+          output = io.StringIO()
+          settings.write(output, space_around_delimiters=False)
+          machine.succeed(f"printf %s {shlex.quote(output.getvalue())} > {settings_path}")
+
+          ${aliceDo "qownnotes"}
+          machine.wait_for_open_port(22222)
+          machine.sleep(2)
+          for _ in range(20):
+              for key in ("alt-shift-f2", "alt-shift-f3", "alt-shift-f1"):
+                  machine.send_key(key)
+                  machine.sleep(0.1)
+              machine.succeed("ss -ltn | grep -q ':22222 '")
+
+          machine.send_key("alt-shift-f2")
+          machine.sleep(1)
+          machine.send_key("ctrl-q")
+          machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
+          settings.read_string(machine.succeed(f"cat {settings_path}"))
+          assert settings["General"]["currentLayout"] == "shortcut-viewer"
+          assert settings["General"]["centralWidget"] == "note-preview"
     '';
 }

@@ -2,6 +2,8 @@
 
 ## 26.10.3
 
+- Fixed a possible crash when switching layouts with keyboard shortcuts
+  (for [#3779](https://github.com/pbek/QOwnNotes/issues/3779))
 - The GitHub Actions branch builds now provide downloadable **Qt6 AppImage, macOS DMG and
   Windows ZIP artifacts** for testing, in addition to the Qt6 Snap
 - Every color mode can now have its own **accent color** in the _Color modes_ settings, which is
