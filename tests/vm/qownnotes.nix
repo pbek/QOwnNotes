@@ -36,6 +36,11 @@ in
       import configparser
       import io
       import shlex
+      from datetime import timedelta
+
+      class QtSettingsParser(configparser.ConfigParser):
+          def optionxform(self, optionstr: str) -> str:
+              return optionstr
 
       with subtest("Ensure X starts"):
           start_all()
@@ -99,8 +104,7 @@ in
           machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
 
           settings_path = "/home/alice/.config/PBE/QOwnNotes.conf"
-          settings = configparser.ConfigParser(interpolation=None)
-          settings.optionxform = str
+          settings = QtSettingsParser(interpolation=None)
           settings.read_string(machine.succeed(f"cat {settings_path}"))
           layouts = {
               "shortcut-editor": "note-edit",
@@ -124,7 +128,7 @@ in
           for _ in range(20):
               for key in ("alt-shift-f2", "alt-shift-f3", "alt-shift-f1"):
                   machine.send_key(key)
-                  machine.sleep(0.1)
+                  machine.sleep(timedelta(milliseconds=100))
               machine.succeed("ss -ltn | grep -q ':22222 '")
 
           machine.send_key("alt-shift-f2")
