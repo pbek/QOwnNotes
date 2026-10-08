@@ -17,6 +17,11 @@ in
       ];
 
       test-support.displayManager.auto.user = "alice";
+      # Let QOwnNotes receive the layout shortcuts instead of IceWM's tiling actions.
+      environment.etc."icewm/preferences".text = ''
+        KeySysTileVertical=""
+        KeySysTileHorizontal=""
+      '';
       environment.systemPackages = [
         qownnotesLocal
         pkgs.xdotool
@@ -136,7 +141,7 @@ in
           machine.send_key("ctrl-q")
           machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
           settings.read_string(machine.succeed(f"cat {settings_path}"))
-          assert settings["General"]["currentLayout"] == "shortcut-viewer"
-          assert settings["General"]["centralWidget"] == "note-preview"
+          assert settings["General"]["currentLayout"] == "shortcut-viewer", dict(settings["General"])
+          assert settings["General"]["centralWidget"] == "note-preview", dict(settings["General"])
     '';
 }
