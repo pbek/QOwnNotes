@@ -145,7 +145,7 @@ jobs:
             ./linuxdeploy-x86_64.AppImage --appdir ${{ env.BUILD_DIR }} --output appimage
 
           rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage runtime-x86_64
-          mv *.AppImage ${{ env.EXECUTABLE }}-x86_64.AppImage ||:
+          test -f ${{ env.EXECUTABLE }}-x86_64.AppImage
           if strings ${{ env.EXECUTABLE }}-x86_64.AppImage | grep -F 'libfuse.so.2' > /dev/null; then
             echo "The AppImage still contains the legacy dynamic FUSE runtime" >&2
             exit 1
