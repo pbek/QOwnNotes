@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.10.4
+
+- Fixed a remaining crash when switching layouts with global keyboard shortcuts by resolving
+  the current menu action after menus are rebuilt
+  (for [#3779](https://github.com/pbek/QOwnNotes/issues/3779))
+
 ## 26.10.3
 
 - Fixed a possible crash when switching layouts with keyboard shortcuts

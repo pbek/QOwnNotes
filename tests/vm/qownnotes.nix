@@ -143,5 +143,35 @@ in
           settings.read_string(machine.succeed(f"cat {settings_path}"))
           assert settings["General"]["currentLayout"] == "shortcut-viewer", dict(settings["General"])
           assert settings["General"]["centralWidget"] == "note-preview", dict(settings["General"])
+
+      with subtest("Switch layouts with global shortcuts after startup rebuilds the layout menu"):
+          # Global shortcuts are initialized before the layout actions are replaced at startup.
+          # Remove the local assignments so only QHotkey can activate these shortcuts.
+          if "GlobalShortcuts" not in settings:
+              settings.add_section("GlobalShortcuts")
+          for index, uuid in enumerate(layouts, 1):
+              action_key = f"MainWindow-restoreLayout-{uuid}"
+              settings["Shortcuts"].pop(action_key, None)
+              settings["GlobalShortcuts"][action_key] = f"Alt+Shift+F{index}"
+          output = io.StringIO()
+          settings.write(output, space_around_delimiters=False)
+          machine.succeed(f"printf %s {shlex.quote(output.getvalue())} > {settings_path}")
+
+          ${aliceDo "qownnotes"}
+          machine.wait_for_open_port(22222)
+          machine.sleep(2)
+          for _ in range(20):
+              for key in ("alt-shift-f1", "alt-shift-f3", "alt-shift-f2"):
+                  machine.send_key(key)
+                  machine.sleep(timedelta(milliseconds=100))
+              machine.succeed("ss -ltn | grep -q ':22222 '")
+
+          machine.send_key("alt-shift-f1")
+          machine.sleep(1)
+          machine.send_key("ctrl-q")
+          machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
+          settings.read_string(machine.succeed(f"cat {settings_path}"))
+          assert settings["General"]["currentLayout"] == "shortcut-editor", dict(settings["General"])
+          assert settings["General"]["centralWidget"] == "note-edit", dict(settings["General"])
     '';
 }

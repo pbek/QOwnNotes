@@ -901,7 +901,14 @@ void MainWindow::initX11GlobalShortcuts(SettingsService &settings, const QString
 
         auto hotKey = new QHotkey(QKeySequence(shortcut), true, this);
         _globalShortcuts.append(hotKey);
-        connect(hotKey, &QHotkey::activated, this, [this, action]() {
+        connect(hotKey, &QHotkey::activated, this, [this, actionName]() {
+            // Menus can replace their actions after global shortcuts are initialized.
+            const QPointer<QAction> action = findAction(actionName);
+            if (action == nullptr) {
+                qDebug() << "Failed to find global shortcut action with name:" << actionName;
+                return;
+            }
+
             qDebug() << "Global shortcut action triggered:" << action->objectName();
 
             // Don't call showWindow() for the "Show/Hide application" action
@@ -911,7 +918,9 @@ void MainWindow::initX11GlobalShortcuts(SettingsService &settings, const QString
                 showWindow();
             }
 
-            action->trigger();
+            if (action != nullptr) {
+                action->trigger();
+            }
         });
     }
 }
