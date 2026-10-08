@@ -596,13 +596,19 @@ jobs:
         run: |
           echo "No build artifacts were produced for this run. Skipping publish."
 
+      - name: Update continuous tag
+        if: steps.latest.outputs.publish == 'true' && steps.stage.outputs.has_files == 'true'
+        run: |
+          # Push the existing commit instead of letting the release API create a tag.
+          # GITHUB_TOKEN cannot create tags through that API for non-HEAD commits.
+          git push --force origin "${GITHUB_SHA}:refs/tags/${TAG}"
+
       - name: Delete previous continuous release
         if: steps.latest.outputs.publish == 'true' && steps.stage.outputs.has_files == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release delete "${TAG}" --yes --cleanup-tag || true
-          gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/tags/${TAG}" || true
+          gh release delete "${TAG}" --yes || true
 
       - name: Create release
         if: steps.latest.outputs.publish == 'true' && steps.stage.outputs.has_files == 'true'
