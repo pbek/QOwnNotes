@@ -24,6 +24,20 @@
   - Images with single-quoted `src` attributes are no longer dropped when converting HTML to Markdown
   - Lazy-loading attributes like `data-src` are no longer mistaken for the image source
   - The alt text of images is now kept
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.2.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.2.0)
+  - The editor's **Insert link** button now opens a dialog prefilled with a clipboard web URL
+    and fetches the page title as the Markdown label, keeping selected text as the label
+  - The app is now translated into German, Chinese (Simplified), Russian, Italian, Portuguese
+    (Brazil), Polish, French, and Spanish
+  - Nextcloud categories are now called subfolders and shown as a tree with note counts
+  - Per-account **Use subfolders** and **Show notes from subfolders** settings now work like
+    their QOwnNotes desktop counterparts, with **Use subfolders** off by default
+  - Search stays within the listed subfolder, with a **Search all folders** option to search
+    the whole account
+  - The **Move to subfolder** dialog now shows an indented tree, including empty parent folders
+  - Note-list widgets now follow the app's preview and subfolder display settings
+  - Fixed stale page-title lookups in the link dialog and Markdown rendering in note previews
 
 ## 26.10.2
 
