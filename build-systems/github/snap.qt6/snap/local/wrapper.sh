@@ -9,6 +9,9 @@ export QT_QPA_PLATFORM_PLUGIN_PATH="$qt6_plugin_dir/platforms"
 export QML2_IMPORT_PATH="$qt6_qml_dir:$SNAP/lib/$arch${QML2_IMPORT_PATH:+:$QML2_IMPORT_PATH}"
 export QML_IMPORT_PATH="$qt6_qml_dir${QML_IMPORT_PATH:+:$QML_IMPORT_PATH}"
 
+# Use the bundled keyboard data instead of relying on the base snap or host.
+export XKB_CONFIG_ROOT="$SNAP/usr/share/X11/xkb"
+
 # Use native Wayland if the Wayland socket is reachable (Wayland session and
 # connected "wayland" interface), otherwise use X11. An explicitly set
 # QT_QPA_PLATFORM is respected, QOWNNOTES_SNAP_FORCE_X11=1 forces X11.

@@ -123,6 +123,8 @@ parts:
       platform_dir="${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platforms"
       test -f "${platform_dir}/libqxcb.so"
       test -f "${platform_dir}/libqwayland.so"
+      # Wayland clients need local keyboard rules; core26 does not ship them.
+      test -f "${CRAFT_PRIME}/usr/share/X11/xkb/rules/evdev"
     after: [desktop-qt6]
 
   desktop-qt6:
@@ -150,6 +152,8 @@ parts:
       - libxcb-xkb1
       - libxkbcommon0
       - libxkbcommon-x11-0
+      # Bundle keyboard rules and keymaps for Qt and GTK on Wayland.
+      - xkb-data
       - fonts-ubuntu
       - dmz-cursor-theme
       - light-themes

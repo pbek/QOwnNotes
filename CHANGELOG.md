@@ -2,6 +2,8 @@
 
 ## 26.10.4
 
+- Fixed the Snap crashing on startup under Wayland by bundling the missing XKB keyboard data
+  (for [#3784](https://github.com/pbek/QOwnNotes/issues/3784))
 - Fixed a remaining crash when switching layouts with global keyboard shortcuts by resolving
   the current menu action after menus are rebuilt
   (for [#3779](https://github.com/pbek/QOwnNotes/issues/3779))
