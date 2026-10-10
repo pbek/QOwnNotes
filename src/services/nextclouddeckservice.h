@@ -63,6 +63,7 @@ class NextcloudDeckService : public QObject {
     QHash<int, Card> getCards(bool includeArchived = false);
     bool archiveCard(int cardId);
     bool deleteCard(int cardId);
+    bool moveCard(int cardId, int targetStackId, int order = 0);
     int parseCardIdFromUrl(const QString& url) const;
     static bool isCardUrl(const QString& url);
     static int parseBoardIdFromUrlDirectly(const QString& url);

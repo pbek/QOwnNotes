@@ -111,6 +111,7 @@
     <file alias="16x16/format-text-superscript.svg">icons/breeze-qownnotes/16x16/format-text-superscript.svg</file>
     <file alias="16x16/bookmarks.svg">icons/breeze-qownnotes/16x16/bookmarks.svg</file>
     <file alias="16x16/edit-select-all.svg">icons/breeze-qownnotes/16x16/edit-select-all.svg</file>
+    <file alias="16x16/edit-move.svg">icons/breeze-qownnotes/16x16/edit-move.svg</file>
   </qresource>
   <qresource prefix="/">
     <file>icons/breeze-qownnotes/16x16/tools-check-spelling.svg</file>

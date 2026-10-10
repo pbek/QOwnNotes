@@ -10,6 +10,7 @@
 #include "testcases/app/test_metricsservice.h"
 #include "testcases/app/test_navigationwidget.h"
 #include "testcases/app/test_network.h"
+#include "testcases/app/test_nextclouddeckservice.h"
 #include "testcases/app/test_notes.h"
 #include "testcases/app/test_qmarkdowntextedit.h"
 #include "testcases/app/test_script.h"
@@ -42,6 +43,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestCryptoService(), argc, argv) +
                          QTest::qExec(new TestScript(), argc, argv) +
                          QTest::qExec(new TestNetwork(), argc, argv) +
+                         QTest::qExec(new TestNextcloudDeckService(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
                          QTest::qExec(new TestUtilsMisc(), argc, argv) +
 #ifdef LANGUAGETOOL_ENABLED

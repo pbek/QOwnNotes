@@ -2,6 +2,9 @@
 
 ## 26.10.4
 
+- Nextcloud Deck cards can now be moved to another board or stack with the **Move…** button
+  or the card-list context menu, including multiple selected cards
+  (for [#3786](https://github.com/pbek/QOwnNotes/issues/3786))
 - Fixed encrypted notes potentially being saved with an empty password after a long period of
   inactivity; passwords are retained while the decrypted editor is open, and encrypted saves
   now preserve the existing file and pending edits if the password is missing

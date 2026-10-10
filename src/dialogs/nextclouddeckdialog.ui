@@ -133,8 +133,22 @@
            </property>
           </spacer>
          </item>
-         <item>
-          <widget class="QPushButton" name="archiveCardButton">
+          <item>
+           <widget class="QPushButton" name="moveCardButton">
+            <property name="toolTip">
+             <string>Move card to another board or stack</string>
+            </property>
+            <property name="text">
+             <string>Move…</string>
+            </property>
+            <property name="icon">
+             <iconset theme="edit-move" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/edit-move.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-move.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="archiveCardButton">
            <property name="toolTip">
             <string>Archive card</string>
            </property>
@@ -325,7 +339,8 @@
    <tabstop>showArchivedCardsCheckBox</tabstop>
    <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
    <tabstop>reloadCardListButton</tabstop>
-  <tabstop>archiveCardButton</tabstop>
+   <tabstop>moveCardButton</tabstop>
+   <tabstop>archiveCardButton</tabstop>
   <tabstop>deleteCardButton</tabstop>
  </tabstops>
  <resources>

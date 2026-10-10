@@ -103,6 +103,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_navigationwidget.h
     ${QON_TESTS_DIR}/testcases/app/test_network.cpp
     ${QON_TESTS_DIR}/testcases/app/test_network.h
+    ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckservice.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckservice.h
     ${QON_TESTS_DIR}/testcases/app/test_notes.cpp
     ${QON_TESTS_DIR}/testcases/app/test_notes.h
     ${QON_TESTS_DIR}/testcases/app/test_qmarkdowntextedit.cpp
@@ -189,6 +191,8 @@ set(APP_SOURCE_FILES
     libraries/versionnumber/versionnumber.h
     services/cloudservice.cpp
     services/cloudservice.h
+    services/nextclouddeckservice.cpp
+    services/nextclouddeckservice.h
     services/cryptoservice.cpp
     services/cryptoservice.h
     services/databaseservice.cpp

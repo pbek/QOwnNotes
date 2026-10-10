@@ -57,6 +57,8 @@ class NextcloudDeckDialog : public MasterDialog {
 
     void on_archiveCardButton_clicked();
 
+    void on_moveCardButton_clicked();
+
     void on_cardItemTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
     void on_cardItemTreeWidget_customContextMenuRequested(const QPoint &pos);
@@ -88,6 +90,7 @@ class NextcloudDeckDialog : public MasterDialog {
     void configureDeckServiceForCard(NextcloudDeckService &nextcloudDeckService, int cardId) const;
     void updateDeckControlsEnabledState();
     void deleteSelectedCards();
+    void moveCards(const QList<int> &cardIds);
     QHash<int, NextcloudDeckService::Card> _cards;
     NextcloudDeckService::Card _currentCard;
 

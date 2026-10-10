@@ -166,6 +166,62 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     return resultCardId;
 }
 
+bool NextcloudDeckService::moveCard(int cardId, int targetStackId, int order) {
+    if (cardId < 1 || boardId < 1 || stackId < 1 || targetStackId < 1 || order < 0) {
+        return false;
+    }
+
+    QNetworkAccessManager manager;
+    QEventLoop loop;
+    QTimer timer;
+    timer.setSingleShot(true);
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(&manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // Deck's reorder endpoint moves the existing card without overwriting its contents.
+    const QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" + QString::number(boardId) +
+                   "/stacks/" + QString::number(stackId) + "/cards/" + QString::number(cardId) +
+                   "/reorder");
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::UserAgentHeader, Utils::Misc::friendlyUserAgentString());
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader("OCS-APIRequest", "true");
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+    request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+    addAuthHeader(request);
+
+    QJsonObject body;
+    body["stackId"] = targetStackId;
+    body["order"] = order;
+    QNetworkReply* reply = manager.put(request, QJsonDocument(body).toJson());
+    timer.start(10000);
+    loop.exec();
+
+    const bool timedOut = !timer.isActive();
+    timer.stop();
+    if (timedOut) {
+        reply->abort();
+    }
+
+    const int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    const bool success = !timedOut && reply->error() == QNetworkReply::NoError &&
+                         statusCode >= 200 && statusCode < 300;
+    if (!success) {
+        Utils::Gui::warning(
+            nullptr, tr("Error while moving card"),
+            timedOut ? tr("Moving the card timed out. Reload the cards to check its location.")
+                     : tr("Moving the card failed with status code %1 and message: %2")
+                           .arg(QString::number(statusCode), reply->errorString()),
+            QStringLiteral("nextcloud-deck-move-failed"));
+    }
+
+    reply->deleteLater();
+    return success;
+}
+
 bool NextcloudDeckService::archiveCard(int cardId) {
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;

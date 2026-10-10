@@ -1,12 +1,15 @@
 #include "nextclouddeckdialog.h"
 
 #include <QDesktopServices>
+#include <QDialogButtonBox>
 #include <QKeyEvent>
+#include <QLabel>
 #include <QMenu>
 #include <QMessageBox>
 #include <QShortcut>
 #include <QSignalBlocker>
 #include <QTimeZone>
+#include <QVBoxLayout>
 
 #include "mainwindow.h"
 #include "services/metricsservice.h"
@@ -30,6 +33,7 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
     ui->saveButton->setEnabled(false);
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
+    ui->moveCardButton->setEnabled(false);
     ui->dueDateTimeCheckBox->setChecked(true);
     ui->newItemEdit->setFocus();
 
@@ -198,6 +202,96 @@ void NextcloudDeckDialog::deleteSelectedCards() {
     if (anyDeleted) {
         reloadCardList();
     }
+}
+
+void NextcloudDeckDialog::on_moveCardButton_clicked() { moveCards({_currentCard.id}); }
+
+void NextcloudDeckDialog::moveCards(const QList<int> &cardIds) {
+    if (cardIds.isEmpty()) {
+        return;
+    }
+
+    for (int cardId : cardIds) {
+        if (!_cards.contains(cardId) || _cards.value(cardId).archived) {
+            return;
+        }
+    }
+
+    // Moving uses the saved server card, not pending changes in the editor.
+    if (cardIds.contains(_currentCard.id) &&
+        (ui->titleLineEdit->text() != _currentCard.title ||
+         ui->descriptionTextEdit->toPlainText() != _currentCard.description ||
+         ui->dueDateTimeCheckBox->isChecked() != _currentCard.duedate.isValid() ||
+         (ui->dueDateTimeCheckBox->isChecked() &&
+          ui->dueDateTimeEdit->dateTime() != _currentCard.duedate))) {
+        if (QMessageBox::question(this, tr("Move card(s)"),
+                                  tr("The current card has unsaved changes. Discard them and move "
+                                     "the saved card?"),
+                                  QMessageBox::Yes | QMessageBox::Cancel,
+                                  QMessageBox::Cancel) != QMessageBox::Yes) {
+            return;
+        }
+    }
+
+    QDialog dialog(this);
+    dialog.setWindowTitle(tr("Move card(s)"));
+    auto *layout = new QVBoxLayout(&dialog);
+    auto *label = new QLabel(tr("Destination board / stack:"), &dialog);
+    auto *destination = new QComboBox(&dialog);
+    label->setBuddy(destination);
+    layout->addWidget(label);
+    layout->addWidget(destination);
+
+    for (int i = 0; i < ui->boardStackComboBox->count(); ++i) {
+        const int boardId = ui->boardStackComboBox->itemData(i, Qt::UserRole).toInt();
+        const int stackId = ui->boardStackComboBox->itemData(i, Qt::UserRole + 1).toInt();
+        bool alreadyInStack = true;
+        for (int cardId : cardIds) {
+            const auto card = _cards.value(cardId);
+            alreadyInStack = alreadyInStack && card.boardId == boardId && card.stackId == stackId;
+        }
+        if (alreadyInStack) {
+            continue;
+        }
+        const int index = destination->count();
+        destination->addItem(ui->boardStackComboBox->itemText(i), boardId);
+        destination->setItemData(index, stackId, Qt::UserRole + 1);
+    }
+
+    if (destination->count() == 0) {
+        QMessageBox::information(this, tr("Move card(s)"),
+                                 tr("There is no other board or stack available. Reload the "
+                                    "boards and stacks and try again."));
+        return;
+    }
+
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
+    buttons->button(QDialogButtonBox::Ok)->setText(tr("Move"));
+    layout->addWidget(buttons);
+    connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+    if (dialog.exec() != QDialog::Accepted) {
+        return;
+    }
+
+    const int targetBoardId = destination->currentData(Qt::UserRole).toInt();
+    const int targetStackId = destination->currentData(Qt::UserRole + 1).toInt();
+    NextcloudDeckService service(this);
+    QList<int> movedCardIds;
+    for (int cardId : cardIds) {
+        configureDeckServiceForCard(service, cardId);
+        if (!service.moveCard(cardId, targetStackId, movedCardIds.count())) {
+            // Stop on failure and keep the source selected so remaining cards stay visible.
+            reloadCardList();
+            return;
+        }
+        movedCardIds.append(cardId);
+    }
+
+    selectBoardStack(targetBoardId, targetStackId);
+    persistSelectedBoardAndStack();
+    reloadCardList();
+    selectCardInList(movedCardIds.first());
 }
 
 /**
@@ -502,6 +596,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
+    ui->moveCardButton->setEnabled(false);
 }
 
 int NextcloudDeckDialog::selectedBoardId() const {
@@ -554,6 +649,7 @@ void NextcloudDeckDialog::jumpToCard(int id) {
         ui->saveButton->setEnabled(true);
         ui->archiveCardButton->setEnabled(true);
         ui->deleteCardButton->setEnabled(true);
+        ui->moveCardButton->setEnabled(!_currentCard.archived);
         ui->editFrame->setEnabled(true);
     } else {
         resetEditFrameControls();
@@ -698,9 +794,19 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
     // Add delete action for selected cards
     const int selectedCount = ui->cardItemTreeWidget->selectedItems().count();
     QAction *deleteCardsAction = nullptr;
+    QAction *moveCardsAction = nullptr;
 
     if (selectedCount > 0) {
         menu.addSeparator();
+        moveCardsAction = menu.addAction(tr("&Move %n card(s)…", "", selectedCount));
+        moveCardsAction->setIcon(QIcon::fromTheme(
+            QStringLiteral("edit-move"), QIcon(":icons/breeze-qownnotes/16x16/edit-move.svg")));
+        for (const auto *selectedCard : ui->cardItemTreeWidget->selectedItems()) {
+            if (_cards.value(selectedCard->data(0, Qt::UserRole).toInt()).archived) {
+                moveCardsAction->setEnabled(false);
+                break;
+            }
+        }
         const QString deleteLabel = tr("&Delete %n card(s)", "", selectedCount);
         deleteCardsAction = menu.addAction(deleteLabel);
         deleteCardsAction->setIcon(QIcon::fromTheme(
@@ -723,6 +829,12 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
         searchLinkInNotes(item);
     } else if (deleteCardsAction != nullptr && selectedItem == deleteCardsAction) {
         deleteSelectedCards();
+    } else if (moveCardsAction != nullptr && selectedItem == moveCardsAction) {
+        QList<int> cardIds;
+        for (const auto *selectedCard : ui->cardItemTreeWidget->selectedItems()) {
+            cardIds.append(selectedCard->data(0, Qt::UserRole).toInt());
+        }
+        moveCards(cardIds);
     }
 }
 
