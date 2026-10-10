@@ -120,6 +120,11 @@ void NoteEncryptionManager::on_action_Encrypt_note_triggered() {
 
     // encrypt the note
     const QString noteText = currentNote.encryptNoteText();
+    if (noteText.isEmpty()) {
+        QMessageBox::warning(_mainWindow, tr("Note can't be encrypted!"),
+                             tr("Encryption failed. The note has not been changed."));
+        return;
+    }
     _ui->noteTextEdit->setPlainText(noteText);
     _mainWindow->updateNoteTextEditReadOnly();
 }

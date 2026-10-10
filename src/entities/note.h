@@ -226,7 +226,7 @@ class Note {
 
     bool canDecryptNoteText() const;
 
-    static bool expireCryptoKeys();
+    static bool expireCryptoKeys(int unlockedNoteId = -1);
 
     QUrl fullNoteFileUrl() const;
 

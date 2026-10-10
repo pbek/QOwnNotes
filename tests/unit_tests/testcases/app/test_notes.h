@@ -34,6 +34,10 @@ class TestNotes : public QObject {
     void testNoteEncryption();
     void testNoteDecryption();
     void testNoteDecryptionFail();
+    void testNoteEncryptionRejectsEmptyPassword();
+    void testEncryptedSaveRejectsMissingPassword_data();
+    void testEncryptedSaveRejectsMissingPassword();
+    void testCryptoKeyExpiryKeepsUnlockedNote();
     void testFinalNewlineOnSave_data();
     void testFinalNewlineOnSave();
     void testNoteToMarkdownHtml();

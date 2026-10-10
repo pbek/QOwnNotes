@@ -2,6 +2,10 @@
 
 ## 26.10.4
 
+- Fixed encrypted notes potentially being saved with an empty password after a long period of
+  inactivity; passwords are retained while the decrypted editor is open, and encrypted saves
+  now preserve the existing file and pending edits if the password is missing
+  (for [#3785](https://github.com/pbek/QOwnNotes/issues/3785))
 - Fixed the Snap crashing on startup under Wayland by bundling the missing XKB keyboard data
   (for [#3784](https://github.com/pbek/QOwnNotes/issues/3784))
 - Fixed a remaining crash when switching layouts with global keyboard shortcuts by resolving

@@ -10,6 +10,7 @@
 #include <QJsonDocument>
 #include <QMessageBox>
 #include <QSet>
+#include <QSqlQuery>
 #include <QString>
 #include <QTextStream>
 #include <QUuid>
@@ -228,6 +229,123 @@ void TestNotes::testNoteDecryptionFail() {
     QVERIFY(note.getId() == 2);
     QVERIFY(note.fetchDecryptedNoteText() !=
             QStringLiteral("MyTestNote\n============\n\nSome text"));
+}
+
+void TestNotes::testNoteEncryptionRejectsEmptyPassword() {
+    const QString text = QStringLiteral("# Empty password\n\nSecret text");
+    Note note = createTestNote(uniqueTestName(QStringLiteral("Empty password")), 0, text);
+    const QString originalText = note.getNoteText();
+
+    QVERIFY(note.encryptNoteText().isEmpty());
+    QCOMPARE(note.getNoteText(), originalText);
+    QCOMPARE(Note::fetch(note.getId()).getNoteText(), originalText);
+
+    QFile file(note.fullNoteFilePath());
+    QVERIFY(file.open(QIODevice::ReadOnly));
+    QCOMPARE(QString::fromUtf8(file.readAll()), originalText);
+}
+
+void TestNotes::testEncryptedSaveRejectsMissingPassword_data() {
+    QTest::addColumn<bool>("expirePassword");
+    QTest::newRow("expired-password") << true;
+    QTest::newRow("missing-password") << false;
+}
+
+void TestNotes::testEncryptedSaveRejectsMissingPassword() {
+    QFETCH(bool, expirePassword);
+    const QString title = uniqueTestName(QStringLiteral("Encrypted save"));
+    const QString text = QStringLiteral("%1\n============\n\nSecret text").arg(title);
+    const QString password = QStringLiteral("original password");
+    Note note = createTestNote(title, 0, text);
+    note.setCryptoPassword(password);
+    QVERIFY(!note.encryptNoteText().isEmpty());
+    QVERIFY(note.storeNoteTextFileToDisk());
+    const QString ciphertext = note.getNoteText();
+
+    if (expirePassword) {
+        QSqlQuery query(QSqlDatabase::database(QStringLiteral("memory")));
+        query.prepare(QStringLiteral("UPDATE note SET modified = :modified WHERE id = :id"));
+        query.bindValue(QStringLiteral(":modified"), QDateTime::currentDateTime().addSecs(-1200));
+        query.bindValue(QStringLiteral(":id"), note.getId());
+        QVERIFY(query.exec());
+        QVERIFY(Note::expireCryptoKeys());
+        QVERIFY(note.refetch());
+        QVERIFY(note.getCryptoPassword().isEmpty());
+    } else {
+        note.setCryptoPassword(QString());
+    }
+
+    const QString editedText = text + QStringLiteral("\nUnsaved edit");
+    QVERIFY(note.storeNewDecryptedText(editedText, false));
+    QVERIFY(!note.storeNoteTextFileToDisk());
+    QCOMPARE(note.getNoteText(), ciphertext);
+    QCOMPARE(note.getDecryptedNoteText(), editedText);
+    QVERIFY(note.getHasDirtyData());
+    QCOMPARE(Note::fetch(note.getId()).getNoteText(), ciphertext);
+
+    QFile file(note.fullNoteFilePath());
+    QVERIFY(file.open(QIODevice::ReadOnly));
+    QCOMPARE(QString::fromUtf8(file.readAll()), ciphertext);
+    file.close();
+
+    // Restoring the original credentials saves the pending edit without changing its password.
+    note.setCryptoPassword(password);
+    QVERIFY(note.storeNoteTextFileToDisk());
+    Note reopened;
+    QFile savedFile(note.fullNoteFilePath());
+    reopened.createFromFile(savedFile);
+    QVERIFY(reopened.isFetched());
+    QVERIFY(!reopened.canDecryptNoteText());
+    reopened.setCryptoPassword(password);
+    QVERIFY(reopened.canDecryptNoteText());
+    QCOMPARE(reopened.fetchDecryptedNoteText(), editedText);
+}
+
+void TestNotes::testCryptoKeyExpiryKeepsUnlockedNote() {
+    Note unlocked = createTestNote(uniqueTestName(QStringLiteral("Unlocked expiry")));
+    Note inactive = createTestNote(uniqueTestName(QStringLiteral("Inactive expiry")));
+    const QString password = QStringLiteral("expiry password");
+    for (Note *note : {&unlocked, &inactive}) {
+        note->setCryptoPassword(password);
+        QVERIFY(!note->encryptNoteText().isEmpty());
+        QVERIFY(note->storeNoteTextFileToDisk());
+
+        QSqlQuery query(QSqlDatabase::database(QStringLiteral("memory")));
+        query.prepare(QStringLiteral("UPDATE note SET modified = :modified WHERE id = :id"));
+        query.bindValue(QStringLiteral(":modified"), QDateTime::currentDateTime().addSecs(-1200));
+        query.bindValue(QStringLiteral(":id"), note->getId());
+        QVERIFY(query.exec());
+    }
+
+    QVERIFY(Note::expireCryptoKeys(unlocked.getId()));
+    QVERIFY(unlocked.refetch());
+    QVERIFY(inactive.refetch());
+    QCOMPARE(unlocked.getCryptoPassword(), password);
+    QVERIFY(unlocked.canDecryptNoteText());
+    QVERIFY(inactive.getCryptoPassword().isEmpty());
+    QVERIFY(!inactive.canDecryptNoteText());
+
+    const QString editedText = unlocked.fetchDecryptedNoteText() + QStringLiteral("\nLater edit");
+    QVERIFY(unlocked.storeNewDecryptedText(editedText, false));
+    QVERIFY(unlocked.storeNoteTextFileToDisk());
+    Note reopened;
+    QFile savedFile(unlocked.fullNoteFilePath());
+    reopened.createFromFile(savedFile);
+    QVERIFY(reopened.isFetched());
+    QVERIFY(!reopened.canDecryptNoteText());
+    reopened.setCryptoPassword(password);
+    QCOMPARE(reopened.fetchDecryptedNoteText(), editedText);
+
+    // Leaving the unlocked editor restores normal expiry behavior.
+    QSqlQuery query(QSqlDatabase::database(QStringLiteral("memory")));
+    query.prepare(QStringLiteral("UPDATE note SET modified = :modified WHERE id = :id"));
+    query.bindValue(QStringLiteral(":modified"), QDateTime::currentDateTime().addSecs(-1200));
+    query.bindValue(QStringLiteral(":id"), unlocked.getId());
+    QVERIFY(query.exec());
+    QVERIFY(Note::expireCryptoKeys());
+    QVERIFY(unlocked.refetch());
+    QVERIFY(unlocked.getCryptoPassword().isEmpty());
+    QVERIFY(!unlocked.canDecryptNoteText());
 }
 
 void TestNotes::testFinalNewlineOnSave_data() {

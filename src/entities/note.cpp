@@ -2604,6 +2604,16 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 #endif
 
     const Note oldNote = *this;
+    // Never silently drop the password when saving an already encrypted note.
+    // Keep both the ciphertext and pending edits intact if credentials were lost.
+    // Check decryption only for missing passwords, so normal autosaves avoid another expensive KDF.
+    // Passwordless encryption scripts may still be able to decrypt the note.
+    if (!_decryptedNoteText.isEmpty() && _cryptoPassword.isEmpty() && hasEncryptedNoteText() &&
+        !canDecryptNoteText()) {
+        qWarning() << __func__ << " - Refusing to save encrypted note with missing credentials";
+        return false;
+    }
+
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
     TrashItem trashItem = TrashItem::prepare(this);
@@ -2793,13 +2803,15 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     // if we find a decrypted text to encrypt, then we attempt to encrypt it
     if (!_decryptedNoteText.isEmpty()) {
         const QString decryptedNoteText = _decryptedNoteText;
-        _noteText = _decryptedNoteText;
-
-        encryptNoteText(false);
+        Note encryptedNote = *this;
+        encryptedNote._noteText = decryptedNoteText;
+        const QString encryptedNoteText = encryptedNote.encryptNoteText(false);
+        if (encryptedNoteText.isEmpty()) {
+            return false;
+        }
 
         if (_id > 0) {
             const Note latestNote = Note::fetch(_id);
-
             if (latestNote.isFetched() && !latestNote._decryptedNoteText.isEmpty() &&
                 latestNote._decryptedNoteText != decryptedNoteText) {
                 qDebug()
@@ -2809,6 +2821,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
             }
         }
 
+        _noteText = encryptedNoteText;
         _decryptedNoteText = QLatin1String("");
     }
 
@@ -5012,16 +5025,16 @@ QString Note::encryptNoteText(bool persist) {
     const int noteTextLinesCount = noteTextLines.count();
 
     // keep the first two lines unencrypted
-    _noteText = noteTextLines.at(0) + QStringLiteral("\n");
+    QString noteText = noteTextLines.at(0) + QStringLiteral("\n");
 
     if (noteTextLinesCount > 1) {
-        _noteText += noteTextLines.at(1) + QStringLiteral("\n");
+        noteText += noteTextLines.at(1) + QStringLiteral("\n");
     }
 
     // Add a warning comment before the encrypted block so users know not to edit it manually
-    _noteText += QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_WARNING_COMMENT) +
-                 QStringLiteral("\n\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
-                 QStringLiteral("\n");
+    noteText += QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_WARNING_COMMENT) +
+                QStringLiteral("\n\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
+                QStringLiteral("\n");
 
     // remove the first two lines for encryption
     noteTextLines.removeFirst();
@@ -5052,6 +5065,13 @@ QString Note::encryptNoteText(bool persist) {
 
     // check if a hook changed the text
     if (encryptedText.isEmpty()) {
+        // Passwordless scripts are allowed, but must not fall back to empty-password Botan
+        // encryption.
+        if (_cryptoPassword.isEmpty()) {
+            qWarning() << __func__ << " - Refusing to encrypt note with an empty password";
+            return {};
+        }
+
         // fallback to Botan
         // encrypt the text
         encryptedText = encryptNoteTextWithBotanInBackground(text, _cryptoPassword);
@@ -5062,8 +5082,13 @@ QString Note::encryptNoteText(bool persist) {
     }
 
     // add the encrypted text to the new note text
-    _noteText +=
+    if (encryptedText.isEmpty()) {
+        return {};
+    }
+
+    noteText +=
         encryptedText + QStringLiteral("\n") + QStringLiteral(NOTE_TEXT_ENCRYPTION_POST_STRING);
+    _noteText = noteText;
 
     if (persist) {
         // store note
@@ -5235,9 +5260,9 @@ QString Note::decryptEncryptedNoteText(const QString &encryptedNoteText) const {
 }
 
 /**
- * Expire crypto keys in the database after 10min
+ * Expires crypto keys after 10 minutes, except for the note with an open decrypted editor.
  */
-bool Note::expireCryptoKeys() {
+bool Note::expireCryptoKeys(int unlockedNoteId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
@@ -5248,8 +5273,9 @@ bool Note::expireCryptoKeys() {
     // reset expired crypto keys
     query.prepare(
         QStringLiteral("UPDATE note SET crypto_key = 0, crypto_password = '' WHERE "
-                       "modified < :expiryDate AND crypto_key != 0"));
+                       "modified < :expiryDate AND crypto_key != 0 AND id != :unlockedNoteId"));
     query.bindValue(QStringLiteral(":expiryDate"), expiryDate);
+    query.bindValue(QStringLiteral(":unlockedNoteId"), unlockedNoteId);
 
     // on error
     if (!query.exec()) {

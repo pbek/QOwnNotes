@@ -1187,7 +1187,10 @@ void NoteIndexManager::storeUpdatedNotesToDisk() {
  */
 void NoteIndexManager::frequentPeriodicChecker() {
     CalendarItem::alertTodoReminders();
-    Note::expireCryptoKeys();
+    // An open decrypted editor needs its password for subsequent autosaves, even after inactivity.
+    // Expire it normally once the user leaves the unlocked editor.
+    Note::expireCryptoKeys(
+        _ui->encryptedNoteTextEdit->isHidden() ? -1 : _mainWindow->currentNote.getId());
 
     if (QDateTime::currentDateTime().addSecs(-1200) >= _mainWindow->_lastHeartbeat) {
         _mainWindow->_lastHeartbeat = QDateTime::currentDateTime();
