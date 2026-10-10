@@ -15,6 +15,20 @@
 - Fixed a remaining crash when switching layouts with global keyboard shortcuts by resolving
   the current menu action after menus are rebuilt
   (for [#3779](https://github.com/pbek/QOwnNotes/issues/3779))
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.3.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.3.0)
+  - Nextcloud Deck cards can now be browsed and searched by board and list, linked from notes,
+    archived, and edited in the app, including their title, description, and due date
+  - Tapping a Deck card link offers opening it in QOwnNotes or Deck, with a remembered choice
+    per account
+  - Tapping the note-list widget's title bar opens its account's notes for browsing and searching
+  - Long-pressing the heading button lets you choose heading levels 1 to 6 or normal text
+  - Editor tools now have long-press hints, a **Help** button, and optional toolbar labels
+  - The note editor, toolbar, menus, dialogs, bookmarks, and settings have a refreshed layout,
+    with the formatting toolbar above the keyboard and **Cancel editing** and **Done** in the top bar
+  - Moving multiple notes to trash now asks for confirmation
+  - Note conflict recovery now preserves the latest edits, including changes made after a
+    background sync reports a conflict
 
 ## 26.10.3
 
