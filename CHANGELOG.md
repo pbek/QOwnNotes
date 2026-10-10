@@ -2,6 +2,7 @@
 
 ## 26.10.4
 
+- Fixed headless unit tests crashing on macOS when displaying Nextcloud Deck error dialogs
 - Nextcloud Deck cards can now be moved to another board or stack with the **Move…** button
   or the card-list context menu, including multiple selected cards
   (for [#3786](https://github.com/pbek/QOwnNotes/issues/3786))

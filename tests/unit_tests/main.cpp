@@ -23,6 +23,12 @@
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
+    // Native macOS styling can crash while painting dialogs on headless platforms.
+    if (QApplication::platformName() == QStringLiteral("minimal") ||
+        QApplication::platformName() == QStringLiteral("offscreen")) {
+        QApplication::setStyle(QStringLiteral("Fusion"));
+    }
+
     QCoreApplication::setOrganizationDomain("PBE");
     QCoreApplication::setOrganizationName("PBE");
     QCoreApplication::setApplicationName("QOwnNotesTests");
