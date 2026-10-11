@@ -3,6 +3,7 @@
 #include <QDomNodeList>
 #include <QObject>
 #include <QPointer>
+#include <functional>
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
@@ -102,6 +103,10 @@ class CloudService : public QObject {
 
     QString fetchNoteFileId(const Note &note);
 
+    static QString apiBaseFromCapabilities(const QByteArray &data);
+
+    QString apiAppName() const;
+
    private:
     QString serverUrl;
     QString todoCalendarServerUrl;
@@ -116,7 +121,12 @@ class CloudService : public QObject {
     QString todoCalendarPassword;
     QNetworkAccessManager *networkManager;
     ShareDialog *shareDialog;
-    static const QString rootPath;
+    QString rootPath;
+    bool apiDiscovered = false;
+    bool apiDiscoveryPending = false;
+    int apiDiscoveryGeneration = 0;
+    int settingsConnectionTestGeneration = 0;
+    QList<std::function<void()>> apiDiscoveryCallbacks;
     static const QString format;
     int _settingsCalendarListRequestId = 0;
     QString versionListPath;
@@ -134,6 +144,10 @@ class CloudService : public QObject {
     void checkAppInfo(QNetworkReply *reply);
 
     void readSettings(int cloudConnectionId = -1);
+
+    void setApiBase(const QString &path);
+
+    void discoverApi(const std::function<void()> &callback);
 
     static void addGenericAuthHeader(QNetworkRequest *r, const QString &userName,
                                      const QString &password);

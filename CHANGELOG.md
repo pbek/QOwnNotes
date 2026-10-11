@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.10.5
+
+- Automatically discover QOwnNotes for Nextcloud for note versions and deleted notes, with
+  fallback to QOwnNotesAPI on older Nextcloud and ownCloud servers
+- The connection test shows the detected server app, and setup links to both supported apps
+
 ## 26.10.4
 
 - Fixed headless unit tests crashing on macOS when displaying Nextcloud Deck error dialogs

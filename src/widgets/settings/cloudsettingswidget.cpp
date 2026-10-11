@@ -443,7 +443,7 @@ void CloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVersio
     if (appIsValid) {
         ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: green;"));
         ui->connectionTestLabel->setText(tr("The connection was made successfully!\n"
-                                            "Server version: %1\nQOwnNotesAPI version: %2")
+                                            "Server version: %1\nServer app version: %2")
                                              .arg(serverVersion, appVersion));
     } else {
         // Hide password from error message
@@ -454,7 +454,7 @@ void CloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVersio
         ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: red;"));
         ui->connectionTestLabel->setText(
             tr("There was an error connecting to the Nextcloud / ownCloud Server!\n"
-               "You also need to have the QOwnNotesAPI app installed "
+               "You also need to have the QOwnNotes or QOwnNotesAPI app installed "
                "and enabled!\n\nConnection error message: ") +
             connectionErrorMessage);
     }

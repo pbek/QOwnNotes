@@ -16,6 +16,7 @@
 #include <QJSEngine>
 #include <QJSValueIterator>
 #include <QJsonDocument>
+#include <QJsonObject>
 #include <QMessageBox>
 #include <QNetworkAccessManager>
 #include <QNetworkCookieJar>
@@ -40,7 +41,6 @@
 #include "mainwindow.h"
 #include "services/settingsservice.h"
 
-const QString CloudService::rootPath = QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");
 const QString CloudService::format = QStringLiteral("json");
 const QString NS_DAV(QStringLiteral("DAV:"));
 
@@ -123,12 +123,13 @@ void CloudService::readSettings(int cloudConnectionId) {
     password = cloudConnection.getPassword();
     appQOwnNotesAPICheckEnabled = cloudConnection.getAppQOwnNotesAPIEnabled();
 
-    versionListPath = rootPath % QStringLiteral("note/versions");
-    trashListPath = rootPath % QStringLiteral("note/trashed");
-    appInfoPath = rootPath % QStringLiteral("note/app_info");
+    setApiBase(QStringLiteral("/index.php/apps/qownnotesapi/api/v1/"));
+    apiDiscovered = false;
+    ++apiDiscoveryGeneration;
+    apiDiscoveryPending = false;
+    apiDiscoveryCallbacks.clear();
     capabilitiesPath = QStringLiteral("/ocs/v1.php/cloud/capabilities");
     cloudTestPath = QStringLiteral("/ocs/v1.php");
-    restoreTrashedNotePath = rootPath % QStringLiteral("note/restore_trashed");
     //    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     sharePath = QStringLiteral("/ocs/v2.php/apps/files_sharing/api/v1/shares");
     bookmarkPath = QStringLiteral("/apps/bookmarks/public/rest/v2/bookmark");
@@ -199,6 +200,81 @@ void CloudService::readSettings(int cloudConnectionId) {
 
 QString CloudService::webdavPath() { return QStringLiteral("/remote.php/dav/files/") + userName; }
 
+QString CloudService::apiBaseFromCapabilities(const QByteArray &data) {
+    const auto document = QJsonDocument::fromJson(data);
+    const auto capability = document.object()
+                                .value(QStringLiteral("ocs"))
+                                .toObject()
+                                .value(QStringLiteral("data"))
+                                .toObject()
+                                .value(QStringLiteral("capabilities"))
+                                .toObject()
+                                .value(QStringLiteral("qownnotes"))
+                                .toObject();
+    const QString path = capability.value(QStringLiteral("api_base")).toString();
+    // Only accept an app-relative path, never an origin or traversal supplied by a server.
+    if (QRegularExpression(QStringLiteral("^/(?:index\\.php/)?apps/qownnotes/api/v1/$"))
+            .match(path)
+            .hasMatch()) {
+        return path;
+    }
+    return QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");
+}
+
+QString CloudService::apiAppName() const {
+    return rootPath.contains(QStringLiteral("/apps/qownnotes/")) ? QStringLiteral("QOwnNotes")
+                                                                 : QStringLiteral("QOwnNotesAPI");
+}
+
+void CloudService::setApiBase(const QString &path) {
+    rootPath = path;
+    versionListPath = path % QStringLiteral("note/versions");
+    trashListPath = path % QStringLiteral("note/trashed");
+    appInfoPath = path % QStringLiteral("note/app_info");
+    restoreTrashedNotePath = path % QStringLiteral("note/restore_trashed");
+}
+
+void CloudService::discoverApi(const std::function<void()> &callback) {
+    if (apiDiscovered) {
+        callback();
+        return;
+    }
+    apiDiscoveryCallbacks.append(callback);
+    if (apiDiscoveryPending) return;
+    apiDiscoveryPending = true;
+    QUrl url(serverUrl % capabilitiesPath);
+    QUrlQuery query;
+    query.addQueryItem(QStringLiteral("format"), QStringLiteral("json"));
+    url.setQuery(query);
+    QNetworkRequest request(url);
+    addAuthHeader(&request);
+    request.setRawHeader("OCS-APIRequest", "true");
+    auto *reply = networkManager->get(request);
+    reply->setProperty("apiDiscovery", true);
+    ignoreSslErrorsIfAllowed(reply);
+    auto *timer = new QTimer(reply);
+    timer->setSingleShot(true);
+    connect(timer, &QTimer::timeout, reply, &QNetworkReply::abort);
+    timer->start(10000);
+    const int generation = apiDiscoveryGeneration;
+    connect(reply, &QNetworkReply::finished, this, [this, reply, timer, generation]() {
+        timer->stop();
+        if (generation != apiDiscoveryGeneration) {
+            reply->deleteLater();
+            return;
+        }
+        setApiBase(reply->error() == QNetworkReply::NoError
+                       ? apiBaseFromCapabilities(reply->readAll())
+                       : QStringLiteral("/index.php/apps/qownnotesapi/api/v1/"));
+        apiDiscovered = true;
+        apiDiscoveryPending = false;
+        const auto callbacks = apiDiscoveryCallbacks;
+        apiDiscoveryCallbacks.clear();
+        for (const auto &pending : callbacks) pending();
+        reply->deleteLater();
+    });
+}
+
 void CloudService::slotAuthenticationRequired(QNetworkReply *reply, QAuthenticator *authenticator) {
     Q_UNUSED(authenticator)
     qWarning() << "Username and/or password incorrect";
@@ -232,6 +308,7 @@ void CloudService::slotCalendarAuthenticationRequired(QNetworkReply *reply,
  * @param reply
  */
 void CloudService::slotReplyFinished(QNetworkReply *reply) {
+    if (reply->property("apiDiscovery").toBool()) return;
 #ifndef INTEGRATION_TESTS
     QUrl url = reply->url();
     QString urlPath = url.path();
@@ -414,7 +491,7 @@ void CloudService::checkAppInfo(QNetworkReply *reply) {
             settingsDialog->setOKLabelData(4, tr("version %1 too low").arg(appVersion),
                                            SettingsDialog::Warning);
         } else {
-            settingsDialog->setOKLabelData(4, tr("ok"), SettingsDialog::OK);
+            settingsDialog->setOKLabelData(4, tr("%1: ok").arg(apiAppName()), SettingsDialog::OK);
         }
 
         // check if versions and trash app are enabled after QOwnNotesAPI v0.3.1
@@ -513,6 +590,15 @@ void CloudService::checkAppVersion(QNetworkReply *reply) {
  */
 void CloudService::settingsConnectionTest(SettingsDialog *dialog) {
     settingsDialog = dialog;
+    if (!apiDiscovered) {
+        const QPointer<SettingsDialog> requestDialog(dialog);
+        const int generation = ++settingsConnectionTestGeneration;
+        discoverApi([this, requestDialog, generation]() {
+            if (requestDialog && generation == settingsConnectionTestGeneration)
+                settingsConnectionTest(requestDialog);
+        });
+        return;
+    }
 
     // qDebug() << serverUrl;
     // qDebug() << userName;
@@ -562,6 +648,7 @@ void CloudService::settingsConnectionTest(SettingsDialog *dialog) {
 }
 
 void CloudService::abortSettingsConnectionTest() {
+    ++settingsConnectionTestGeneration;
     const auto replies = findChildren<QNetworkReply *>();
 
     for (QNetworkReply *reply : replies) {
@@ -579,6 +666,10 @@ void CloudService::abortSettingsConnectionTest() {
  * Starts an api app version test
  */
 void CloudService::startAppVersionTest() {
+    if (!apiDiscovered) {
+        discoverApi([this]() { startAppVersionTest(); });
+        return;
+    }
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
@@ -988,6 +1079,11 @@ void CloudService::removeCalendarItem(CalendarItem calItem, TodoDialog *dialog) 
  * @brief Restores a note on the server
  */
 void CloudService::restoreTrashedNoteOnServer(const QString &fileName, int timestamp) {
+    if (!apiDiscovered) {
+        discoverApi(
+            [this, fileName, timestamp]() { restoreTrashedNoteOnServer(fileName, timestamp); });
+        return;
+    }
     QUrl url(serverUrl % restoreTrashedNotePath);
     QString serverNotesPath = Utils::Misc::appendIfDoesNotEndWith(
         NoteFolder::currentRemotePath() + NoteSubFolder::activeNoteSubFolder().relativePath('/'),
@@ -1064,6 +1160,10 @@ int CloudService::deleteTrashedNoteOnServer(const QString &fileName, int timesta
  * @brief CloudService::loadVersions
  */
 void CloudService::loadVersions(const QString &fileName) {
+    if (!apiDiscovered) {
+        discoverApi([this, fileName]() { loadVersions(fileName); });
+        return;
+    }
     QUrl url(serverUrl % versionListPath);
     QString serverPath = NoteFolder::currentRemotePath() % fileName;
     qDebug() << __func__ << " - 'serverPath': " << serverPath;
@@ -1092,6 +1192,10 @@ void CloudService::loadVersions(const QString &fileName) {
  * @brief CloudService::loadTrash
  */
 void CloudService::loadTrash() {
+    if (!apiDiscovered) {
+        discoverApi([this]() { loadTrash(); });
+        return;
+    }
     QUrl url(serverUrl % trashListPath);
     QString serverNotesPath =
         NoteFolder::currentRemotePath() + NoteSubFolder::activeNoteSubFolder().relativePath('/');
