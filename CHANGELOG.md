@@ -8,6 +8,19 @@
 - Automatically discover QOwnNotes for Nextcloud for note versions and deleted notes, with
   fallback to QOwnNotesAPI on older Nextcloud and ownCloud servers
 - The connection test shows the detected server app, and setup links to both supported apps
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.4.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.4.0)
+  - Audio notes can now be recorded from the note-list menu or home-screen widget, previewed
+    before saving, and stored locally as M4A files in `attachments/` before synchronization
+  - Audio attachment links can be played in QOwnNotes or opened with another app, with an
+    optional remembered choice; the in-app player also supports recordings not yet uploaded
+  - QOwnNotes for Nextcloud is now discovered automatically for notes, versions, trash, and
+    attachments, with fallback to the existing Notes and QOwnNotesAPI apps
+  - Widget photo notes now save the note and picture locally before background synchronization,
+    retain failed uploads for retry, and resume interrupted capture processing
+  - The optional **Clean trailing spaces on save** setting now only removes single trailing
+    spaces from edited lines, preserving untouched lines and Markdown hard line breaks
+  - Recovery checkpoints no longer restore trailing spaces removed during save-time cleanup
 
 ## 26.10.4
 
