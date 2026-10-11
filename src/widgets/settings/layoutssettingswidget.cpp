@@ -82,15 +82,24 @@ LayoutsSettingsWidget::LayoutsSettingsWidget(QWidget *parent) : QWidget(parent) 
     managementLayout->addLayout(listLayout);
 
     auto *selectedLayoutGroup = new QGroupBox(tr("Selected layout"), managementGroup);
-    auto *selectedLayout = new QHBoxLayout(selectedLayoutGroup);
-    selectedLayout->addWidget(new QLabel(tr("Central widget:"), selectedLayoutGroup));
+    auto *selectedLayout = new QVBoxLayout(selectedLayoutGroup);
+    auto *centralWidgetLayout = new QHBoxLayout();
+    centralWidgetLayout->addWidget(new QLabel(tr("Central widget:"), selectedLayoutGroup));
     _centralWidgetComboBox = new QComboBox(selectedLayoutGroup);
     _centralWidgetComboBox->addItem(tr("Note edit"), QStringLiteral("note-edit"));
     _centralWidgetComboBox->addItem(tr("Note preview"), QStringLiteral("note-preview"));
     _centralWidgetComboBox->addItem(tr("No central widget"), QStringLiteral("none"));
     _centralWidgetComboBox->setToolTip(
         tr("The central widget automatically uses the space left by the surrounding panels"));
-    selectedLayout->addWidget(_centralWidgetComboBox, 1);
+    centralWidgetLayout->addWidget(_centralWidgetComboBox, 1);
+    selectedLayout->addLayout(centralWidgetLayout);
+
+    auto *centralWidgetDescriptionLabel = new QLabel(
+        tr("The central widget cannot be hidden. Select \"No central widget\" to allow hiding "
+           "the note edit or note preview panel."),
+        selectedLayoutGroup);
+    centralWidgetDescriptionLabel->setWordWrap(true);
+    selectedLayout->addWidget(centralWidgetDescriptionLabel);
 
     managementLayout->addWidget(selectedLayoutGroup);
     mainLayout->addWidget(managementGroup);

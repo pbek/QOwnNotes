@@ -2,6 +2,9 @@
 
 ## 26.10.5
 
+- The layout settings now explain that the central widget cannot be hidden and that selecting
+  **No central widget** allows hiding the note edit or note preview panel
+  (for [#3732](https://github.com/pbek/QOwnNotes/issues/3732))
 - Automatically discover QOwnNotes for Nextcloud for note versions and deleted notes, with
   fallback to QOwnNotesAPI on older Nextcloud and ownCloud servers
 - The connection test shows the detected server app, and setup links to both supported apps
