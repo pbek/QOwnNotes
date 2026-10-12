@@ -135,7 +135,8 @@ parts:
       test -f "${schema_dir}/org.gtk.Settings.FileChooser.gschema.xml"
       glib-compile-schemas --strict "${schema_dir}"
       test -s "${schema_dir}/gschemas.compiled"
-    after: [desktop-qt6]
+    # GTK schemas must be primed before the schema cache is compiled above.
+    after: [desktop-qt6, qt6-gtk-platform]
 
   desktop-qt6:
     source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
