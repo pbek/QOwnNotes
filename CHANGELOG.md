@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.10.6
+
+- Fixed missing GTK settings schemas that could crash the Qt6 Snap when opening a file or
+  folder chooser, such as when selecting a new note folder on Pop!\_OS with COSMIC/Wayland
+  (for [#3791](https://github.com/pbek/QOwnNotes/issues/3791))
+  - The bundled schemas are now compiled during packaging instead of relying on a runtime
+    compiler that may be absent from the base snap
+
 ## 26.10.5
 
 - The layout settings now explain that the central widget cannot be hidden and that selecting

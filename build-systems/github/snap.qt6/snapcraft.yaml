@@ -84,6 +84,7 @@ parts:
       - libsecret-1-dev
       - qt6-l10n-tools
       - qt6-tools-dev-tools
+      - libglib2.0-bin # Compile GTK settings schemas during packaging
     stage-packages:
       # -- Qt6 core runtime libraries --
       - libqt6core6t64
@@ -128,6 +129,12 @@ parts:
       test -f "${platform_dir}/libqwayland.so"
       # Wayland clients need local keyboard rules; core26 does not ship them.
       test -f "${CRAFT_PRIME}/usr/share/X11/xkb/rules/evdev"
+      # Snapcraft does not run the package triggers that compile GTK schemas.
+      # The desktop helper's runtime compiler may be absent from the base snap.
+      schema_dir="${CRAFT_PRIME}/usr/share/glib-2.0/schemas"
+      test -f "${schema_dir}/org.gtk.Settings.FileChooser.gschema.xml"
+      glib-compile-schemas --strict "${schema_dir}"
+      test -s "${schema_dir}/gschemas.compiled"
     after: [desktop-qt6]
 
   desktop-qt6:
@@ -186,6 +193,7 @@ parts:
     plugin: nil
     stage-packages:
       - qt6-gtk-platformtheme
+      - libgtk-3-common # Includes the settings schemas required by GTK file dialogs
 
   scripts:
     plugin: dump
