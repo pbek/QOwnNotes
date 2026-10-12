@@ -211,6 +211,7 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 - **Development mode** - Use `CONFIG+=DEV_MODE` for qmake or `-DDEV_MODE=ON` for CMake in active development
   -. **Version bumping** - Update `src/version.h` and `src/build_number.h`, `BUILD` just needs to be increase by one - Version format is `MAJOR.MINOR.PATCH` (e.g. `22.12.0`), build number is a separate integer that increments with each release - The MAJOR part is always the last two digits of the year of the release (e.g. `22` for 2022), - The MINOR part is the month of the release (e.g. `12` for December), - The PATCH part is a counter that starts at `0` and increments with each release in the same month
   (e.g. `0` for the first release in December 2022, `1` for the second release in December 2022, etc.)
+- **Version bump commits** - Commit changes to `src/version.h` and `src/build_number.h` in their own separate commit with the exact message `release: bump version`. Do not include feature fixes, changelog entries, or other unrelated changes in that commit.
 - **This project has translations** - They can be found in the `src/translations/` directory as `.ts` files
 - **Comments** - Always write clear and concise comments for complex logic, especially when dealing with Qt-specific features, start comments with uppercase letters
 - **Changelog** - Update the changelog with each release, following the format in `CHANGELOG.md`
