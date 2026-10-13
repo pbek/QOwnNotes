@@ -870,7 +870,7 @@ void CloudService::todoGetTodoList(const QString &calendarName, TodoDialog *dial
 /**
  * Shares a note on a cloud server
  */
-void CloudService::shareNote(const Note &note, ShareDialog *dialog) {
+void CloudService::shareNote(const Note &note, ShareDialog *dialog, const QString &password) {
     this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
@@ -891,6 +891,13 @@ void CloudService::shareNote(const Note &note, ShareDialog *dialog) {
 
     qDebug() << __func__ << " - 'url': " << url;
     qDebug() << __func__ << " - 'postData': " << postData;
+
+    // Add the password after logging the post data, so it doesn't end up in the log.
+    // A password is needed if the server enforces passwords for link shares
+    if (!password.isEmpty()) {
+        postData.append(QByteArrayLiteral("&password="));
+        postData.append(QUrl::toPercentEncoding(password));
+    }
 
     QNetworkRequest r(url);
     addAuthHeader(&r);
@@ -1982,9 +1989,25 @@ void CloudService::updateNoteShareStatusFromShare(QString &data) {
         QString message = doc.firstChildElement(QStringLiteral("ocs"))
                               .firstChildElement(QStringLiteral("meta"))
                               .firstChildElement(QStringLiteral("message"))
-                              .text();
+                              .text()
+                              .trimmed();
 
-        showCloudServerErrorMessage(message.trimmed());
+#ifndef INTEGRATION_TESTS
+        // Hint the user to the share password, the server might enforce passwords for link shares
+        if (shareDialog != nullptr) {
+            shareDialog->focusPasswordLineEdit();
+            showCloudMessage(
+                tr("Nextcloud / ownCloud server connection error"),
+                tr("Nextcloud / ownCloud server error: <strong>%1</strong><br /><br />"
+                   "If your server requires a password for shared links, please enter one in "
+                   "the password field of the share dialog and try again.")
+                    .arg(message),
+                false);
+            return;
+        }
+#endif
+
+        showCloudServerErrorMessage(message);
         return;
     }
 

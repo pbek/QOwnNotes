@@ -24,7 +24,20 @@
     <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="0">
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="passwordLineEdit">
+     <property name="toolTip">
+      <string>Optional password to protect the shared link, required if your server enforces passwords for shared links</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Password for the shared link (optional)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
     <widget class="QLineEdit" name="linkUrlLineEdit">
      <property name="toolTip">
       <string>The public url of your note</string>
@@ -34,7 +47,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item row="2" column="0">
     <widget class="QCheckBox" name="linkCheckBox">
      <property name="text">
        <string>Share note on Nextcloud / ownCloud</string>
@@ -54,7 +67,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item row="5" column="0">
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -67,7 +80,7 @@
      </property>
     </spacer>
    </item>
-   <item row="3" column="0">
+   <item row="4" column="0">
     <widget class="QCheckBox" name="editCheckBox">
      <property name="text">
       <string>Allow note editing</string>
@@ -76,6 +89,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>passwordLineEdit</tabstop>
+  <tabstop>linkCheckBox</tabstop>
+  <tabstop>linkUrlLineEdit</tabstop>
+  <tabstop>editCheckBox</tabstop>
+ </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>

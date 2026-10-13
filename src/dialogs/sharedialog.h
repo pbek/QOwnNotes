@@ -18,6 +18,8 @@ class ShareDialog : public MasterDialog {
 
     void updateDialog();
 
+    void focusPasswordLineEdit();
+
    private slots:
     void on_linkCheckBox_toggled(bool checked);
 

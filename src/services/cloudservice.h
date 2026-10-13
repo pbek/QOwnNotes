@@ -70,7 +70,7 @@ class CloudService : public QObject {
 
     static bool hasCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
 
-    void shareNote(const Note &note, ShareDialog *dialog);
+    void shareNote(const Note &note, ShareDialog *dialog, const QString &password = QString());
 
     void setPermissionsOnSharedNote(const Note &note, ShareDialog *dialog);
 

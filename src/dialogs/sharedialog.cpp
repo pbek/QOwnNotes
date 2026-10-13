@@ -34,6 +34,14 @@ void ShareDialog::updateDialog() {
     Q_UNUSED(blocker3)
 
     ui->linkCheckBox->setChecked(note.isShared());
+
+    // The password can only be set when creating a new share
+    ui->passwordLineEdit->setVisible(!note.isShared());
+
+    if (note.isShared()) {
+        ui->passwordLineEdit->clear();
+    }
+
     ui->linkUrlLineEdit->setVisible(note.isShared());
     ui->linkUrlLineEdit->setText(note.getShareUrl());
     ui->editCheckBox->setVisible(note.isShared());
@@ -54,7 +62,7 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
 
     if (checked) {
         // share the note file
-        cloud->shareNote(note, this);
+        cloud->shareNote(note, this, ui->passwordLineEdit->text());
 
         Utils::Gui::information(
             this, QString(),
@@ -65,6 +73,19 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
         // remove the share
         cloud->removeNoteShare(note, this);
     }
+}
+
+/**
+ * Focuses the password line edit, used if sharing failed, because the server
+ * might enforce passwords for shared links
+ */
+void ShareDialog::focusPasswordLineEdit() {
+    if (!ui->passwordLineEdit->isVisible()) {
+        return;
+    }
+
+    ui->passwordLineEdit->setFocus();
+    ui->passwordLineEdit->selectAll();
 }
 
 void ShareDialog::on_editCheckBox_toggled(bool checked) {

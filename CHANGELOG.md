@@ -8,6 +8,10 @@
   - The bundled schemas are now compiled during packaging instead of relying on a runtime
     compiler that may be absent from the base snap
   - Fixed Snap builds failing by ensuring the GTK part is primed before compiling the schemas
+- Notes can now be shared on Nextcloud / ownCloud with a password in the **Share note** dialog,
+  which is needed if your server enforces passwords for shared links
+  (for [#3788](https://github.com/pbek/QOwnNotes/issues/3788))
+  - If sharing fails, the error message hints at the password field and focuses it
 
 ## 26.10.5
 
