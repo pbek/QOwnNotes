@@ -10,6 +10,9 @@
   - The bundled schemas are now compiled during packaging instead of relying on a runtime
     compiler that may be absent from the base snap
   - Fixed Snap builds failing by ensuring the GTK part is primed before compiling the schemas
+  - Qt6 Snaps now use the desktop portal file chooser instead of forcing GTK dialogs
+  - The file chooser's home directory and suggested new note folders now use the real home
+    directory, while existing settings, databases, caches, and note folder paths stay unchanged
 - Notes can now be shared on Nextcloud / ownCloud with a password in the **Share note** dialog,
   which is needed if your server enforces passwords for shared links
   (for [#3788](https://github.com/pbek/QOwnNotes/issues/3788))

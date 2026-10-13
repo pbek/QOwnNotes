@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# The desktop helper has already configured Snap-local XDG paths. Keep them
+# while making file dialogs and new note folders use the real home directory.
+# Existing settings and note folder paths are not moved or rewritten.
+if [ -n "$SNAP_REAL_HOME" ] && [ -d "$SNAP_REAL_HOME" ]; then
+  export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$SNAP_USER_DATA/.config}"
+  export XDG_DATA_HOME="${XDG_DATA_HOME:-$SNAP_USER_DATA/.local/share}"
+  export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$SNAP_USER_COMMON/.cache}"
+  export HOME="$SNAP_REAL_HOME"
+fi
+
 arch="${SNAP_LAUNCHER_ARCH_TRIPLET:-x86_64-linux-gnu}"
 qt6_plugin_dir="$SNAP/usr/lib/$arch/qt6/plugins"
 qt6_qml_dir="$SNAP/usr/lib/$arch/qt6/qml"

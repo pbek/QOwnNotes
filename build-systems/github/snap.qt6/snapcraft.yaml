@@ -25,7 +25,7 @@ apps:
     # and to select the Wayland or X11 platform plugin.
     command: bin/desktop-launch $SNAP/wrapper.sh
     environment:
-      QT_QPA_PLATFORMTHEME: gtk3
+      QT_QPA_PLATFORMTHEME: xdgdesktopportal
       QT_STYLE_OVERRIDE: Breeze
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
@@ -127,6 +127,8 @@ parts:
       platform_dir="${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platforms"
       test -f "${platform_dir}/libqxcb.so"
       test -f "${platform_dir}/libqwayland.so"
+      # Use the host desktop's file chooser through the portal.
+      test -f "${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platformthemes/libqxdgdesktopportal.so"
       # Wayland clients need local keyboard rules; core26 does not ship them.
       test -f "${CRAFT_PRIME}/usr/share/X11/xkb/rules/evdev"
       # Snapcraft does not run the package triggers that compile GTK schemas.
@@ -194,6 +196,7 @@ parts:
     plugin: nil
     stage-packages:
       - qt6-gtk-platformtheme
+      - qt6-xdgdesktopportal-platformtheme
       - libgtk-3-common # Includes the settings schemas required by GTK file dialogs
 
   scripts:
