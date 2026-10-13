@@ -109,6 +109,14 @@ in
           machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
 
           settings_path = "/home/alice/.config/PBE/QOwnNotes.conf"
+          def wait_for_layout(uuid, central_widget):
+              # Wait for the queued restore and QSettings writes, not a fixed GUI delay.
+              general_settings = f"sed -n '/^\\[General\\]$/,/^\\[/p' {settings_path}"
+              machine.wait_until_succeeds(
+                  f"{general_settings} | grep -qx 'currentLayout={uuid}' && "
+                  f"{general_settings} | grep -qx 'centralWidget={central_widget}'"
+              )
+
           settings = QtSettingsParser(interpolation=None)
           settings.read_string(machine.succeed(f"cat {settings_path}"))
           layouts = {
@@ -131,18 +139,25 @@ in
           machine.wait_for_open_port(22222)
           machine.sleep(2)
           for _ in range(20):
-              for key in ("alt-shift-f2", "alt-shift-f3", "alt-shift-f1"):
+              for key, uuid in (("alt-shift-f2", "shortcut-viewer"),
+                                ("alt-shift-f3", "shortcut-panels"),
+                                ("alt-shift-f1", "shortcut-editor")):
                   machine.send_key(key)
                   machine.sleep(timedelta(milliseconds=100))
+                  wait_for_layout(uuid, layouts[uuid])
               machine.succeed("ss -ltn | grep -q ':22222 '")
 
           machine.send_key("alt-shift-f2")
-          machine.sleep(1)
-          machine.send_key("ctrl-q")
+          wait_for_layout("shortcut-viewer", "note-preview")
+          machine.succeed("su - alice -c 'xdotool search --onlyvisible --class QOwnNotes windowactivate --sync key --clearmodifiers ctrl+q'")
           machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
           settings.read_string(machine.succeed(f"cat {settings_path}"))
           assert settings["General"]["currentLayout"] == "shortcut-viewer", dict(settings["General"])
           assert settings["General"]["centralWidget"] == "note-preview", dict(settings["General"])
+          for uuid, central_widget in layouts.items():
+              assert settings[f"layout-{uuid}"]["centralWidget"] == central_widget, {
+                  layout: settings[f"layout-{layout}"].get("centralWidget") for layout in layouts
+              }
 
       with subtest("Switch layouts with global shortcuts after startup rebuilds the layout menu"):
           # Global shortcuts are initialized before the layout actions are replaced at startup.
@@ -160,17 +175,28 @@ in
           ${aliceDo "qownnotes"}
           machine.wait_for_open_port(22222)
           machine.sleep(2)
+          # Exercise a burst of activations without waiting between requests.
+          for key in ("alt-shift-f1", "alt-shift-f3", "alt-shift-f2"):
+              machine.send_key(key)
+          machine.sleep(1)
           for _ in range(20):
-              for key in ("alt-shift-f1", "alt-shift-f3", "alt-shift-f2"):
+              for key, uuid in (("alt-shift-f1", "shortcut-editor"),
+                                ("alt-shift-f3", "shortcut-panels"),
+                                ("alt-shift-f2", "shortcut-viewer")):
                   machine.send_key(key)
                   machine.sleep(timedelta(milliseconds=100))
+                  wait_for_layout(uuid, layouts[uuid])
               machine.succeed("ss -ltn | grep -q ':22222 '")
 
           machine.send_key("alt-shift-f1")
-          machine.sleep(1)
-          machine.send_key("ctrl-q")
-          machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
+          wait_for_layout("shortcut-editor", "note-edit")
+          machine.succeed("su - alice -c 'xdotool search --onlyvisible --class QOwnNotes windowactivate --sync key --clearmodifiers ctrl+q'")
+          machine.wait_until_fails("pgrep -u alice -f QOwnNotes", timeout=timedelta(seconds=30))
           settings.read_string(machine.succeed(f"cat {settings_path}"))
+          for uuid, central_widget in layouts.items():
+              assert settings[f"layout-{uuid}"]["centralWidget"] == central_widget, {
+                  layout: settings[f"layout-{layout}"].get("centralWidget") for layout in layouts
+              }
           assert settings["General"]["currentLayout"] == "shortcut-editor", dict(settings["General"])
           assert settings["General"]["centralWidget"] == "note-edit", dict(settings["General"])
     '';

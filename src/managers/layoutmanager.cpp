@@ -30,6 +30,7 @@
 #include <QKeySequence>
 #include <QMenu>
 #include <QPointer>
+#include <QScopedValueRollback>
 #include <QSignalBlocker>
 #include <QTimer>
 
@@ -175,7 +176,8 @@ void LayoutManager::setCurrentLayout(const QString &uuid) {
  */
 void LayoutManager::storeCurrentLayout() {
     const bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
-    if (MainWindow::isInDistractionFreeMode() || forceQuit || _mainWindow->closeEventWasFired()) {
+    if (MainWindow::isInDistractionFreeMode() || forceQuit || _mainWindow->closeEventWasFired() ||
+        _layoutRestoreInProgress) {
         return;
     }
 
@@ -237,6 +239,9 @@ void LayoutManager::restoreCurrentLayout() {
         updateLayoutLists();
     }
 
+    // Restoring toolbar state can emit signals that save the partially restored widgets.
+    // Do not overwrite either layout while moving widgets into the requested layout.
+    const QScopedValueRollback<bool> restoringLayout(_layoutRestoreInProgress, true);
     const QString centralWidget = layoutCentralWidget(uuid);
     settings.setValue(QStringLiteral("centralWidget"), centralWidget);
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),

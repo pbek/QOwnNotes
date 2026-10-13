@@ -70,4 +70,5 @@ class LayoutManager : public QObject {
     QHash<QString, QString> _layoutNameUuidMap;
     QString _displayedLayoutUuid;
     bool _layoutRestorePending = false;
+    bool _layoutRestoreInProgress = false;
 };

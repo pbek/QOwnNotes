@@ -2,6 +2,8 @@
 
 ## 26.10.6
 
+- Prevent saved layouts from being overwritten by toolbar signals during layout restoration
+  (for [#3779](https://github.com/pbek/QOwnNotes/issues/3779))
 - Fixed missing GTK settings schemas that could crash the Qt6 Snap when opening a file or
   folder chooser, such as when selecting a new note folder on Pop!\_OS with COSMIC/Wayland
   (for [#3791](https://github.com/pbek/QOwnNotes/issues/3791))
