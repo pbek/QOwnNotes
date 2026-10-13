@@ -17,6 +17,18 @@
   which is needed if your server enforces passwords for shared links
   (for [#3788](https://github.com/pbek/QOwnNotes/issues/3788))
   - If sharing fails, the error message hints at the password field and focuses it
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.5.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.5.0)
+  - Notes can now be renamed from the editor's menu without leaving edit mode, optionally
+    updating the first heading while preserving the latest draft and undo history
+  - Checking or unchecking a task in view mode now preserves the note's scroll position
+  - Account setup now clarifies that QOwnNotes or Notes is required on the Nextcloud server
+    and Nextcloud Files on Android, not the Nextcloud Notes Android app; the missing-server-app
+    error is localized and onboarding remains scrollable on smaller screens
+  - The **Refreshing** status now stays as small as **Available offline**, without shifting
+    the note list during refresh
+  - Photo notes captured offline now display the local picture until it has been uploaded,
+    instead of a red placeholder square
 
 ## 26.10.5
 
