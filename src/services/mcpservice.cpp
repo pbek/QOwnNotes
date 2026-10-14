@@ -108,7 +108,7 @@ QString McpService::getToken() {
     QString token = CryptoService::instance()->decryptToString(stored);
 
     // Plaintext fallback for manually set values
-    if (token.isEmpty() && !stored.isEmpty()) {
+    if (token.isEmpty() && !stored.isEmpty() && !CryptoService::isKeychainReference(stored)) {
         token = stored;
         settings.setValue(key, CryptoService::instance()->encryptToString(
                                    token, QStringLiteral("settings/") + key));
@@ -120,7 +120,10 @@ QString McpService::getToken() {
 QString McpService::getOrGenerateToken() {
     QString token = getToken();
 
-    if (token.isEmpty()) {
+    // Don't overwrite a stored token that couldn't be read (e.g. because the keychain
+    // was still locked or timed out at application start)
+    if (token.isEmpty() &&
+        SettingsService().value(QStringLiteral("ai/mcpServerToken")).toString().isEmpty()) {
         token = Utils::Misc::generateRandomString(32);
         SettingsService settings;
         settings.setValue(QStringLiteral("ai/mcpServerToken"),

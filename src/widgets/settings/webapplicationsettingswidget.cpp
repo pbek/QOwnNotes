@@ -60,10 +60,16 @@ void WebApplicationSettingsWidget::storeSettings() {
                       ui->enableWebApplicationCheckBox->isChecked());
     settings.setValue(QStringLiteral("webAppClientService/serverUrl"),
                       ui->webAppServerUrlLineEdit->text());
-    settings.setValue(
-        QStringLiteral("webAppClientService/token"),
-        CryptoService::instance()->encryptToString(
-            ui->webAppTokenLineEdit->text(), QStringLiteral("settings/webAppClientService/token")));
+
+    // Don't overwrite the stored token with an empty one, e.g. if it couldn't be read
+    // from the keychain, otherwise a new token would be generated later
+    const QString token = ui->webAppTokenLineEdit->text();
+    if (!token.isEmpty()) {
+        settings.setValue(QStringLiteral("webAppClientService/token"),
+                          CryptoService::instance()->encryptToString(
+                              token, QStringLiteral("settings/webAppClientService/token")));
+    }
+
     settings.setValue(QStringLiteral("webAppClientService/connectionName"),
                       ui->webAppConnectionNameLineEdit->text());
 }

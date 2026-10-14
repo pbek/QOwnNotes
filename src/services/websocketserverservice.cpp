@@ -156,7 +156,8 @@ QString WebSocketServerService::getBookmarkSuggestionApiToken() {
     QString token = CryptoService::instance()->decryptToString(storedValue);
 
     // Allow plaintext fallback for old / manually set values.
-    if (token.isEmpty() && !storedValue.isEmpty()) {
+    if (token.isEmpty() && !storedValue.isEmpty() &&
+        !CryptoService::isKeychainReference(storedValue)) {
         token = storedValue;
         settings.setValue(tokenSettingKey,
                           CryptoService::instance()->encryptToString(
@@ -172,7 +173,9 @@ QString WebSocketServerService::getOrGenerateBookmarkSuggestionApiToken() {
         QStringLiteral("webSocketServerService/bookmarkSuggestionApiToken");
     QString token = getBookmarkSuggestionApiToken();
 
-    if (token.isEmpty()) {
+    // Don't overwrite a stored token that couldn't be read (e.g. because the keychain
+    // was still locked or timed out at application start)
+    if (token.isEmpty() && settings.value(tokenSettingKey).toString().isEmpty()) {
         token = Utils::Misc::generateRandomString(32);
         settings.setValue(tokenSettingKey,
                           CryptoService::instance()->encryptToString(
@@ -194,6 +197,14 @@ QString WebSocketServerService::getOrGenerateToken() {
     }
 
     if (token.isEmpty()) {
+        // Don't overwrite a stored token that couldn't be read (e.g. because the keychain
+        // was still locked or timed out at application start)
+        if (!stored.isEmpty()) {
+            qWarning() << "The browser extension token could not be read from the keychain, "
+                          "not generating a new one";
+            return QString();
+        }
+
         token = Utils::Misc::generateRandomString(8);
         settings.setValue(key, CryptoService::instance()->encryptToString(
                                    token, QStringLiteral("settings/") + key));

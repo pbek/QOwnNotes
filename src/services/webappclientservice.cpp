@@ -70,7 +70,17 @@ WebAppClientService::WebAppClientService(QObject *parent) : QObject(parent) {
 }
 
 void WebAppClientService::open() {
-    _url = getServerUrl() + "/ws/" + getOrGenerateToken();
+    const QString token = getOrGenerateToken();
+
+    // Try again later if the token couldn't be read yet, e.g. because the keychain isn't
+    // unlocked yet at application start
+    if (token.isEmpty()) {
+        qWarning() << "No web app token available, trying to connect later";
+        _timerReconnect.start(_reconnectTime);
+        return;
+    }
+
+    _url = getServerUrl() + "/ws/" + token;
     // we don't want to show the token in the log
     qDebug() << "Opening socket connection to " << getServerUrl();
     _webSocket->open(_url);
@@ -209,22 +219,46 @@ QString WebAppClientService::getServerUrl() {
 }
 
 QString WebAppClientService::getOrGenerateToken() {
+    // Remember the last successfully read token, so we don't need to query the keychain
+    // again (which could time out) as long as the stored value didn't change
+    static QString cachedStoredValue;
+    static QString cachedToken;
+
     SettingsService settings;
     const QString key = QStringLiteral("webAppClientService/token");
-    const QString stored = settings.value(key).toString();
+    QString stored = settings.value(key).toString();
+
+    if (!stored.isEmpty() && stored == cachedStoredValue && !cachedToken.isEmpty()) {
+        return cachedToken;
+    }
+
     QString token = CryptoService::instance()->decryptToStringWithPlaintextFallback(stored);
 
     if (!token.isEmpty() && token == stored && !CryptoService::isKeychainReference(stored)) {
-        settings.setValue(key, CryptoService::instance()->encryptToString(
-                                   token, QStringLiteral("settings/") + key));
+        stored =
+            CryptoService::instance()->encryptToString(token, QStringLiteral("settings/") + key);
+        settings.setValue(key, stored);
     }
 
-    // if not token was set
     if (token.isEmpty()) {
+        // If there is a stored token that couldn't be read (e.g. the keychain was still locked,
+        // not yet available or timed out at application start) we must not generate a new
+        // token, because that would overwrite the existing one and other devices connected
+        // to the web app would go out of sync
+        if (!stored.isEmpty()) {
+            qWarning() << "The web app token could not be read from the keychain, "
+                          "not generating a new one";
+            return QString();
+        }
+
         token = Utils::Misc::generateRandomString(32);
-        settings.setValue(key, CryptoService::instance()->encryptToString(
-                                   token, QStringLiteral("settings/") + key));
+        stored =
+            CryptoService::instance()->encryptToString(token, QStringLiteral("settings/") + key);
+        settings.setValue(key, stored);
     }
+
+    cachedStoredValue = stored;
+    cachedToken = token;
 
     return token;
 }

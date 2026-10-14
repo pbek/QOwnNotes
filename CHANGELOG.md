@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 26.10.7
+
+- Fixed the token for the [QOwnNotes web application](https://app.qownnotes.org) sometimes
+  being replaced with a new one at application start, which caused other connected devices
+  to go out of sync (for [#3792](https://github.com/pbek/QOwnNotes/issues/3792))
+  - If the token can't be read from the keychain (e.g. because it is still locked, not yet
+    available or timed out), the stored token is now kept and the connection is retried later
+  - The browser extension, MCP server and bookmark suggestion API tokens are also no longer
+    replaced if they can't be read from the keychain
+
 ## 26.10.6
 
 - Prevent saved layouts from being overwritten by toolbar signals during layout restoration
