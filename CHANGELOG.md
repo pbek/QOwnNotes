@@ -9,6 +9,23 @@
     available or timed out), the stored token is now kept and the connection is retried later
   - The browser extension, MCP server and bookmark suggestion API tokens are also no longer
     replaced if they can't be read from the keychain
+- The first release of [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud),
+  [v26.10.1](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.10.1), is now available
+  in the [Nextcloud App Store](https://apps.nextcloud.com/apps/qownnotes)
+  (for [#3793](https://github.com/pbek/QOwnNotes/issues/3793))
+  - View and edit the notes of your note folder in the Nextcloud web interface, including note
+    subfolders and the tags of the note folder's `notes.sqlite`, which are shared with
+    QOwnNotes Desktop and Android
+  - Markdown editor with syntax highlighting, search and replace, task toggling, note links
+    and an optional live preview that scrolls together with the editor
+  - Tag tree with hierarchy, colors and filters, note versions, deleted notes and conflict handling
+  - Dashboard widget, unified search (also by tags), link previews and "Open in QOwnNotes"
+    in the Files app
+  - Provides the server APIs for QOwnNotes Desktop and Android, replacing the QOwnNotesAPI app
+    and, for QOwnNotes Android, the Nextcloud Notes app
+  - API-only mode to disable the web interface and only provide the APIs
+  - For more information, see the
+    [QOwnNotes Nextcloud App documentation](https://www.qownnotes.org/getting-started/qownnotes-nextcloud.html)
 
 ## 26.10.6
 
