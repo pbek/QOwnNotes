@@ -48,6 +48,7 @@ const gettingStartedNavItems = [
   "getting-started/qownnotes-tui",
   "getting-started/qownnotes-android",
   "getting-started/web-app",
+  "getting-started/qownnotes-nextcloud",
   "getting-started/qownnotesapi",
   "getting-started/note-relations",
   "getting-started/searching",

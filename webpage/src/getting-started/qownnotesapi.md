@@ -6,6 +6,11 @@
 and **note versions** for you.
 
 ::: tip
+On Nextcloud, the new [QOwnNotes Nextcloud App](qownnotes-nextcloud.md) replaces QOwnNotesAPI.
+It provides the same APIs, and also lets you edit your notes with note subfolders and tags in the web.
+:::
+
+::: tip
 You can enable QOwnNotesAPI directly in your **Nextcloud** or **ownCloud** instance by searching for `qownnotes`
 in your server's **Apps page** at `https://<your-cloud-domain>/settings/apps`.
 

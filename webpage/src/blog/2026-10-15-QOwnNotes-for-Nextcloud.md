@@ -121,6 +121,7 @@ for all the details.
 
 ## Links
 
+- [QOwnNotes Nextcloud App documentation](/getting-started/qownnotes-nextcloud.md)
 - [QOwnNotes in the Nextcloud App Store](https://apps.nextcloud.com/apps/qownnotes)
 - [GitHub Repository](https://github.com/qownnotes/qownnotes-nextcloud)
 - [Changelog](https://github.com/qownnotes/qownnotes-nextcloud/blob/main/CHANGELOG.md)
