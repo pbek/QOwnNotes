@@ -26,6 +26,18 @@ RECIPES = (
 
 
 class TestSnapRecipes(unittest.TestCase):
+    def test_all_recipes_bundle_svg_plugins(self):
+        for recipe in RECIPES:
+            with self.subTest(recipe=recipe):
+                text = recipe.read_text()
+                self.assertIn("      - qt6-svg-plugins", text)
+                for plugin in ("iconengines/libqsvgicon.so", "imageformats/libqsvg.so"):
+                    self.assertIn(
+                        '      test -f "${CRAFT_PRIME}/usr/lib/${arch_triplet}'
+                        '/qt6/plugins/' + plugin + '"',
+                        text,
+                    )
+
     def test_all_recipes_include_runtime_fixes(self):
         for recipe in RECIPES:
             with self.subTest(recipe=recipe):

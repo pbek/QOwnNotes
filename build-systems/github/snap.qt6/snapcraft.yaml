@@ -99,6 +99,7 @@ parts:
       - libqt6printsupport6
       - libqt6svg6
       - libqt6svgwidgets6
+      - qt6-svg-plugins # SVG image and icon engines are packaged separately
       - libqt6websockets6
       - libqt6core5compat6
       # -- Qt6 QML / Quick (needed for the scripting engine) --
@@ -127,6 +128,9 @@ parts:
       platform_dir="${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platforms"
       test -f "${platform_dir}/libqxcb.so"
       test -f "${platform_dir}/libqwayland.so"
+      # SVG icons need the plugins, not just the Qt SVG runtime library.
+      test -f "${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/iconengines/libqsvgicon.so"
+      test -f "${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/imageformats/libqsvg.so"
       # Use the host desktop's file chooser through the portal.
       test -f "${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platformthemes/libqxdgdesktopportal.so"
       # Wayland clients need local keyboard rules; core26 does not ship them.
