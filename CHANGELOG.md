@@ -2,6 +2,9 @@
 
 ## 26.10.7
 
+- Migrated the Snap Store edge build from the legacy Qt5/core22 recipe to Qt6/core26,
+  so it also includes the desktop portal file chooser, real home directory, and Wayland fixes
+  (for [#3791](https://github.com/pbek/QOwnNotes/issues/3791))
 - Fixed the token for the [QOwnNotes web application](https://app.qownnotes.org) sometimes
   being replaced with a new one at application start, which caused other connected devices
   to go out of sync (for [#3792](https://github.com/pbek/QOwnNotes/issues/3792))

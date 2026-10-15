@@ -1,24 +1,27 @@
 name: qownnotes
-#version: git
 adopt-info: qownnotes
 summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
-# There is no qmake plugin in core22!
-base: core22
+base: core26
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
   for GNU/Linux, macOS and Windows, that (optionally) works together with the
   notes application of Nextcloud/ownCloud.
   https://www.qownnotes.org/
 
+# Expose libproxy's backend plugin, which lives outside LD_LIBRARY_PATH.
+layout:
+  /usr/lib/x86_64-linux-gnu/libproxy:
+    bind: $SNAP/usr/lib/x86_64-linux-gnu/libproxy
+
 apps:
   qownnotes:
-    # "=" is not allowed in the command anymore in core20
-    command: "./wrapper.sh"
+    # Configure Qt6 paths after the desktop helper has configured the session.
+    command: bin/desktop-launch $SNAP/wrapper.sh
     environment:
-      DISABLE_WAYLAND: 1
-      QT_QPA_PLATFORMTHEME: gtk3
+      QT_QPA_PLATFORMTHEME: xdgdesktopportal
+      QT_STYLE_OVERRIDE: Breeze
       GIT_EXEC_PATH: $SNAP/usr/lib/git-core
       GIT_TEMPLATE_DIR: $SNAP/usr/share/git-core/templates
       GIT_AUTHOR_NAME: "QOwnNotes"
@@ -28,26 +31,19 @@ apps:
       EMAIL: "snap@qownnotes.git"
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
+      - wayland
       - x11
       - unity7
       - network
       - network-bind
       - home
-      #      - kde-frameworks-5-plug
       - desktop
       - desktop-legacy
       - removable-media
       - opengl
       - cups-control
 
-# plugs:
-#   kde-frameworks-5-plug:
-#     content: kde-frameworks-5-all
-#     interface: content
-#     default-provider: kde-frameworks-5
-#     target: kf5
-
-plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
+plugs: # Content snaps for theming, fonts, and cursors
   gtk-3-themes:
     interface: content
     target: $SNAP/data-dir/themes
@@ -64,102 +60,131 @@ plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
 parts:
   qownnotes:
     source: src
-    #    source: https://github.com/pbek/qownnotes.git
-    # see https://snapcraft.io/docs/qmake-plugin
-    #    plugin: qmake
+    # Use make and invoke qmake6 explicitly, like the other Qt6 Snap recipes.
     plugin: make
-    #    qmake-parameters:
-    #      - CONFIG+=release
-    #      - CONFIG+=snapcraft
-    #    qmake-project-file: ./src/QOwnNotes.pro
     override-build: |
-      #cd /build/qownnotes/parts/qownnotes/src
-      export QT_SELECT=qt5
-      >&2 pwd
-      >&2 find
-      # remove the default desktop file
+      export QT_SELECT=qt6
+      # Remove the default desktop file.
       rm PBE.QOwnNotes.desktop
       echo "#define RELEASE \"Snapcraft.io\"" > release.h
-      # qmake INSTALLDIR=/usr
-      lrelease QOwnNotes.pro
-      # make -j $(nproc)
-      # make install
-      qmake CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
-      snapcraftctl set-version "$(cat version.h | sed 's/[^0-9,.]//g')"
-      # snapcraftctl build
+      /usr/lib/qt6/bin/lrelease languages/*.ts
+      qmake6 CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
+      craftctl set version="$(cat version.h | sed 's/[^0-9,.]//g')"
       craftctl default
       make install INSTALL_ROOT="${CRAFT_PART_INSTALL}"
     build-packages:
-      - qt5-qmake
-      - qttools5-dev
       - build-essential
-      - qtdeclarative5-dev
-      - libqt5svg5-dev
-      - qttools5-dev-tools
-      - libqt5websockets5-dev
-      - libqt5x11extras5-dev
+      - qmake6
+      - qt6-base-dev
+      - qt6-declarative-dev
+      - qt6-svg-dev
+      - qt6-websockets-dev
+      - qt6-5compat-dev
       - libsecret-1-dev
+      - qt6-l10n-tools
+      - qt6-tools-dev-tools
+      - libglib2.0-bin # Compile GTK settings schemas during packaging
     stage-packages:
-      - libqt5gui5
-      - libqt5sql5
-      - libqt5sql5-sqlite
-      - libqt5widgets5
-      - libqt5qml5
-      - libqt5svg5
-      - libqt5network5
-      - libqt5xml5
-      - libqt5printsupport5
-      - libqt5websockets5
-      - libqt5x11extras5
+      - libqt6core6t64
+      - libqt6gui6
+      - libqt6widgets6
+      - libqt6network6
+      - libqt6sql6
+      - libqt6sql6-sqlite
+      - libqt6xml6
+      - libqt6dbus6
+      - libqt6concurrent6
+      - libqt6printsupport6
+      - libqt6svg6
+      - libqt6svgwidgets6
+      - libqt6websockets6
+      - libqt6core5compat6
+      - libqt6qml6
+      - libqt6qmlmodels6
+      - libqt6qmlworkerscript6
+      - libqt6quick6
+      - libqt6opengl6
       - libsecret-1-0
-      - qtwayland5
-      - git-core
+      - libproxy1v5
+      # Bundle the Wayland platform, decoration, and shell integration plugins.
+      - libqt6waylandclient6
+      - qt6-wayland
+      - git
     stage:
       - -usr/share/pkgconfig
-    after: [desktop-qt5]
+    override-prime: |
+      craftctl default
+      arch_triplet="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"
+      platform_dir="${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platforms"
+      test -f "${platform_dir}/libqxcb.so"
+      test -f "${platform_dir}/libqwayland.so"
+      # Use the host desktop's file chooser through the portal.
+      test -f "${CRAFT_PRIME}/usr/lib/${arch_triplet}/qt6/plugins/platformthemes/libqxdgdesktopportal.so"
+      # Wayland clients need local keyboard rules; core26 does not ship them.
+      test -f "${CRAFT_PRIME}/usr/share/X11/xkb/rules/evdev"
+      # Snapcraft does not run the package triggers that compile GTK schemas.
+      # The desktop helper's runtime compiler may be absent from the base snap.
+      schema_dir="${CRAFT_PRIME}/usr/share/glib-2.0/schemas"
+      test -f "${schema_dir}/org.gtk.Settings.FileChooser.gschema.xml"
+      glib-compile-schemas --strict "${schema_dir}"
+      test -s "${schema_dir}/gschemas.compiled"
+    # GTK schemas must be primed before the schema cache is compiled above.
+    after: [desktop-qt6, qt6-gtk-platform]
 
-  desktop-qt5:
+  desktop-qt6:
     source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
     source-subdir: qt
     plugin: make
-    make-parameters: ["FLAVOR=qt5"]
+    make-parameters: ["FLAVOR=qt6"]
     build-packages:
       - build-essential
-      - qtbase5-dev
+      - qt6-base-dev
       - dpkg-dev
     stage-packages:
+      # Bundle the xcb helper libraries required by Qt6's X11 platform plugin.
+      - libxcb-cursor0
+      - libxcb-icccm4
+      - libxcb-image0
+      - libxcb-keysyms1
+      - libxcb-randr0
+      - libxcb-render-util0
+      - libxcb-shape0
+      - libxcb-shm0
+      - libxcb-sync1
+      - libxcb-util1
+      - libxcb-xfixes0
+      - libxcb-xinerama0
+      - libxcb-xkb1
       - libxkbcommon0
-      #        - ttf-ubuntu-font-family
+      - libxkbcommon-x11-0
+      - xkb-data
+      - fonts-ubuntu
       - dmz-cursor-theme
       - light-themes
       - adwaita-icon-theme
-      - gnome-themes-standard
+      - gnome-themes-extra
       - shared-mime-info
-      - libqt5gui5
-      - libgdk-pixbuf2.0-0
-      #        - libgtk2.0-0 # snapcraft was complaining about missing libgtk-x11-2.0.so.0
-      - libqt5svg5 # for loading icon themes which are svg
-      #        - appmenu-qt5
+      - libqt6gui6
+      - libgdk-pixbuf-2.0-0
+      - libqt6svg6
       - locales-all
       - xdg-user-dirs
-      - fcitx-frontend-qt5
-      - libglib2.0-0 # we need this or under Gnome the file chooser will crash the app!
 
   plasma-integration:
     plugin: nil
     stage-packages:
-      #    - plasma-integration # causes the KDE file selector to be used that didn't work
       - kde-style-breeze
       - breeze-icon-theme
-    #    - kio # runtime slaves for kio, but does not seem to work
     prime:
       - "-usr/share/wallpapers/*"
       - "-usr/share/fonts/*"
 
-  qt5-gtk-platform:
+  qt6-gtk-platform:
     plugin: nil
     stage-packages:
-      - qt5-gtk-platformtheme
+      - qt6-gtk-platformtheme
+      - qt6-xdgdesktopportal-platformtheme
+      - libgtk-3-common # Includes the settings schemas required by GTK file dialogs
 
   scripts:
     plugin: dump

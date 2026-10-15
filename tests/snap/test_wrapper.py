@@ -1,4 +1,4 @@
-"""Test both Qt6 launch wrappers without building or installing a snap.
+"""Test all Qt6 launch wrappers without building or installing a snap.
 
 Run with: python3 -m unittest discover -s tests/snap -v
 """
@@ -6,6 +6,7 @@ Run with: python3 -m unittest discover -s tests/snap -v
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import tempfile
 import unittest
@@ -13,9 +14,58 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 WRAPPERS = (
+    ROOT / "snap/local/wrapper.sh",
     ROOT / "build-systems/github/snap.qt6/snap/local/wrapper.sh",
     ROOT / "build-systems/snap/snapcraft/snap/local/wrapper.sh",
 )
+RECIPES = (
+    ROOT / "snap/snapcraft.yaml",
+    ROOT / "build-systems/github/snap.qt6/snapcraft.yaml",
+    ROOT / "build-systems/snap/snapcraft/snapcraft.yaml",
+)
+
+
+class TestSnapRecipes(unittest.TestCase):
+    def test_all_recipes_include_runtime_fixes(self):
+        for recipe in RECIPES:
+            with self.subTest(recipe=recipe):
+                text = recipe.read_text()
+                for required in (
+                    "base: core26",
+                    "command: bin/desktop-launch $SNAP/wrapper.sh",
+                    "QT_QPA_PLATFORMTHEME: xdgdesktopportal",
+                    "      - wayland",
+                    "      qmake6 CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro",
+                    "      - qt6-xdgdesktopportal-platformtheme",
+                    "      - xkb-data",
+                    "libqxdgdesktopportal.so",
+                    '      glib-compile-schemas --strict "${schema_dir}"',
+                    "    after: [desktop-qt6, qt6-gtk-platform]",
+                ):
+                    self.assertIn(required, text)
+                self.assertNotIn("DISABLE_WAYLAND", text)
+                self.assertNotIn("QT_SELECT=qt5", text)
+
+    def test_edge_packages_match_release(self):
+        # Ignore comments, but compare every part's build and runtime packages.
+        def packages(recipe):
+            blocks = re.findall(
+                r"^    (?:build|stage)-packages:\n((?:      .*\n)+)",
+                recipe.read_text(),
+                re.MULTILINE,
+            )
+            return [
+                [
+                    line.split("#", 1)[0].strip()
+                    for line in block.splitlines()
+                    if line.strip().startswith("- ")
+                ]
+                for block in blocks
+            ]
+
+        edge_packages = packages(RECIPES[0])
+        self.assertTrue(edge_packages)
+        self.assertEqual(edge_packages, packages(RECIPES[2]))
 
 
 class TestSnapWrapper(unittest.TestCase):
@@ -99,7 +149,9 @@ class TestSnapWrapper(unittest.TestCase):
                     self.assertEqual(environment["HOME"], self.environment["HOME"])
 
     def test_wrappers_stay_in_sync(self):
-        self.assertEqual(WRAPPERS[0].read_text(), WRAPPERS[1].read_text())
+        for wrapper in WRAPPERS[1:]:
+            with self.subTest(wrapper=wrapper):
+                self.assertEqual(WRAPPERS[0].read_text(), wrapper.read_text())
 
 
 if __name__ == "__main__":
