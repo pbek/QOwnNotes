@@ -229,7 +229,12 @@ Please visit [QOwnNotes Nextcloud App](qownnotes-nextcloud.md) for more informat
 server-side **trashed notes** and **note versions**.
 
 ::: tip
-Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information.
+On Nextcloud, the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) replaces QOwnNotesAPI.
+QOwnNotesAPI stays maintained for a transition period, and it stays the only option for ownCloud servers.
+
+- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 ## Nextcloud Notes server app
