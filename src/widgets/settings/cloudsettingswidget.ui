@@ -63,7 +63,7 @@
         <item>
          <widget class="Label" name="installInfoTextLabel1">
           <property name="text">
-            <string>Please install &lt;a href=&quot;https://github.com/qownnotes/qownnotes-nextcloud&quot;&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</string>
+            <string>Please install the &lt;a href=&quot;https://apps.nextcloud.com/apps/qownnotes&quot;&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -108,7 +108,7 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
            <string>Open your NC / oC server &amp;Apps page</string>
@@ -427,7 +427,7 @@
         <item row="10" column="1">
          <widget class="QCheckBox" name="appQOwnNotesAPICheckBox">
           <property name="text">
-            <string>Enable QOwnNotes / QOwnNotesAPI server app support</string>
+            <string>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</string>
           </property>
          </widget>
         </item>
@@ -557,7 +557,7 @@
         <item row="19" column="1">
          <widget class="QLabel" name="check4Label">
           <property name="text">
-            <string>connection to QOwnNotes / QOwnNotesAPI</string>
+            <string>connection to QOwnNotes (or legacy QOwnNotesAPI)</string>
           </property>
          </widget>
         </item>

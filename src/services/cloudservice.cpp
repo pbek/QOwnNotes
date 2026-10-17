@@ -575,9 +575,10 @@ void CloudService::checkAppVersion(QNetworkReply *reply) {
         }
 
         QMessageBox::warning(mainWindow, tr("API app version too low"),
-                             tr("Please consider updating your QOwnNotesAPI app on your "
-                                "server, your app version %1 is too low and may "
-                                "cause troubles in QOwnNotes.")
+                             tr("Your legacy QOwnNotesAPI app version %1 is too low and may "
+                                "cause problems in QOwnNotes. On Nextcloud, please switch to "
+                                "the QOwnNotes Nextcloud app. On ownCloud, a compatible "
+                                "QOwnNotesAPI version is required.")
                                  .arg(appVersion));
     }
 #endif

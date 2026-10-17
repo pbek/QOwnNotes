@@ -335,7 +335,7 @@
     </message>
     <message>
         <location filename="../services/cloudservice.cpp" line="578"/>
-        <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
+        <source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -440,7 +440,7 @@
     </message>
     <message>
         <location filename="../widgets/settings/cloudsettingswidget.ui" line="66"/>
-        <source>Please install &lt;a href=&quot;https://github.com/qownnotes/qownnotes-nextcloud&quot;&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
+        <source>Please install the &lt;a href=&quot;https://apps.nextcloud.com/apps/qownnotes&quot;&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -455,7 +455,7 @@
     </message>
     <message>
         <location filename="../widgets/settings/cloudsettingswidget.ui" line="111"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -562,12 +562,12 @@
     </message>
     <message>
         <location filename="../widgets/settings/cloudsettingswidget.ui" line="430"/>
-        <source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
+        <source>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../widgets/settings/cloudsettingswidget.ui" line="560"/>
-        <source>connection to QOwnNotes / QOwnNotesAPI</source>
+        <source>connection to QOwnNotes (or legacy QOwnNotesAPI)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -662,7 +662,7 @@ Server app version: %2</source>
     <message>
         <location filename="../widgets/settings/cloudsettingswidget.cpp" line="456"/>
         <source>There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </source>
         <translation type="unfinished"></translation>

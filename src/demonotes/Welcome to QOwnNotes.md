@@ -6,7 +6,7 @@ Welcome to your installation of **QOwnNotes**!
 
 - [ ] Be sure to setup your _Nextcloud/ownCloud server_ in the **settings dialog**.
   - Keep in mind that you still need to install the _Nextcloud/ownCloud_ sync client to synchronize your notes!
-- [ ] Install [QOwnNotesAPI](https://apps.nextcloud.com/apps/qownnotesapi) to access **note versions** and **trashed notes**.
+- [ ] Install the [QOwnNotes Nextcloud app](https://apps.nextcloud.com/apps/qownnotes) to access **note versions** and **trashed notes** on Nextcloud.
 
 ## Later
 

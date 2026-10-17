@@ -454,8 +454,9 @@ void CloudSettingsWidget::connectTestCallback(bool appIsValid, QString appVersio
         ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: red;"));
         ui->connectionTestLabel->setText(
             tr("There was an error connecting to the Nextcloud / ownCloud Server!\n"
-               "You also need to have the QOwnNotes or QOwnNotesAPI app installed "
-               "and enabled!\n\nConnection error message: ") +
+               "On Nextcloud, install and enable the QOwnNotes Nextcloud app. "
+               "Legacy QOwnNotesAPI servers, including ownCloud, remain supported."
+               "\n\nConnection error message: ") +
             connectionErrorMessage);
     }
 

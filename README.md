@@ -7,8 +7,7 @@
 [Documentation](https://www.qownnotes.org/getting-started/concept.html) |
 [Privacy Policy](./PRIVACY.md) |
 [Screenshots](https://www.qownnotes.org/getting-started/overview.html) |
-[Nextcloud API App](https://apps.nextcloud.com/apps/qownnotesapi) |
-[ownCloud API App](https://marketplace.owncloud.com/apps/qownnotesapi) |
+[QOwnNotes Nextcloud App](https://apps.nextcloud.com/apps/qownnotes) |
 [Matrix room](https://matrix.to/#/#qownnotes:matrix.org) |
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://web.libera.chat/#qownnotes) |
@@ -52,8 +51,8 @@ install the Tasks backend on [Nextcloud](https://apps.nextcloud.com/apps/tasks)
 or [ownCloud](https://marketplace.owncloud.com/apps/tasks).
 
 To get more on-line features for your notes, like **versioning** and **trash** access,
-you might also want to install the [QOwnNotesAPI](https://github.com/pbek/qownnotesapi)
-app on your server.
+install the [QOwnNotes Nextcloud app](https://apps.nextcloud.com/apps/qownnotes)
+on your Nextcloud server. QOwnNotesAPI remains supported for legacy Nextcloud and ownCloud servers.
 
 To access your ownCloud notes from your **mobile device** you may want to get one of these:
 
@@ -81,9 +80,11 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - **multiple note folders** can be used
 - you can **use your existing text or markdown files**, no need for an import most of the time
 - older **versions of your notes** can be restored from your Nextcloud / ownCloud server
-  (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+  (use the [QOwnNotes Nextcloud app](https://apps.nextcloud.com/apps/qownnotes) on Nextcloud;
+  legacy QOwnNotesAPI servers remain supported)
 - **trashed notes** can be restored from your Nextcloud / ownCloud server
-  (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+  (use the [QOwnNotes Nextcloud app](https://apps.nextcloud.com/apps/qownnotes) on Nextcloud;
+  legacy QOwnNotesAPI servers remain supported)
   - there also are **local trash** and **system trash** modes
 - sub-string searching of notes is possible and search results are highlighted in the notes
 - application can be operated with **customizable keyboard shortcuts**
