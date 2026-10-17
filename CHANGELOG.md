@@ -4,7 +4,8 @@
 
 - Updated documentation, welcome notes, and server settings to recommend the QOwnNotes Nextcloud
   app instead of QOwnNotesAPI, while keeping legacy Nextcloud and ownCloud server support
-- Added more French, Spanish, Japanese translation (thank you, jd-develop, AlejandroMoc, spamcutters)
+- Added more Russian, Polish, Portuguese, Brazilian, Italian, German, Chinese Simplified, French,
+  Spanish, Japanese translation (thank you, pbek, jd-develop, AlejandroMoc, spamcutters)
 
 ## 26.10.7
 

@@ -213,320 +213,320 @@
 <name>CloudService</name>
 <message>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>falsch</translation>
 </message>
 <message>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>nicht verbunden</translation>
 </message>
 <message>
 <source>Username / password error</source>
-<translation type="unfinished">Username / password error</translation>
+<translation>Benutzername-/Passwortfehler</translation>
 </message>
 <message>
 <source>Your calendar username or password is incorrect!</source>
-<translation type="unfinished">Your calendar username or password is incorrect!</translation>
+<translation>Ihr Kalenderbenutzername oder -passwort ist falsch!</translation>
 </message>
 <message>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>OK</translation>
 </message>
 <message>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>nicht korrekt</translation>
 </message>
 <message>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>nicht erkannt</translation>
 </message>
 <message>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>nicht gefunden</translation>
 </message>
 <message>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>unbekannt</translation>
 </message>
 <message>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>Version %1 zu alt</translation>
 </message>
 <message>
 <source>%1: ok</source>
-<translation type="unfinished">%1: ok</translation>
+<translation>%1: OK</translation>
 </message>
 <message>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>nicht aktiviert</translation>
 </message>
 <message>
 <source>API app version too low</source>
-<translation type="unfinished">API app version too low</translation>
+<translation>Version der API-App zu alt</translation>
 </message>
 <message>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+<translation>Bitte aktualisieren Sie Ihre QOwnNotesAPI-App auf Ihrem Server. Ihre App-Version %1 ist zu alt und kann Probleme in QOwnNotes verursachen.</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server connection error</source>
-<translation type="unfinished">Nextcloud / ownCloud server connection error</translation>
+<translation>Verbindungsfehler zum Nextcloud-/ownCloud-Server</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</source>
-<translation type="unfinished">Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</translation>
+<translation>Nextcloud-/ownCloud-Serverfehler: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Bitte überprüfen Sie Ihre Nextcloud-/ownCloud-Konfiguration.</translation>
 </message>
 <message>
 <source>You need to setup your Nextcloud / ownCloud server!</source>
-<translation type="unfinished">You need to setup your Nextcloud / ownCloud server!</translation>
+<translation>Sie müssen Ihren Nextcloud-/ownCloud-Server einrichten!</translation>
 </message>
 <message>
 <source>Done with loading note versions</source>
-<translation type="unfinished">Done with loading note versions</translation>
+<translation>Laden der Notizversionen abgeschlossen</translation>
 </message>
 <message>
 <source>No versions found</source>
-<translation type="unfinished">No versions found</translation>
+<translation>Keine Versionen gefunden</translation>
 </message>
 <message>
 <source>There are no versions for this note or the note wasn't found on the server.</source>
-<translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+<translation>Für diese Notiz gibt es keine Versionen oder die Notiz wurde auf dem Server nicht gefunden.</translation>
 </message>
 <message>
 <source>Done with loading trashed notes</source>
-<translation type="unfinished">Done with loading trashed notes</translation>
+<translation>Laden der gelöschten Notizen abgeschlossen</translation>
 </message>
 <message>
 <source>No trashed notes</source>
-<translation type="unfinished">No trashed notes</translation>
+<translation>Keine Notizen im Papierkorb</translation>
 </message>
 <message>
 <source>No trashed notes were found on the server.</source>
-<translation type="unfinished">No trashed notes were found on the server.</translation>
+<translation>Auf dem Server wurden keine Notizen im Papierkorb gefunden.</translation>
 </message>
 <message>
 <source>Error while loading todo lists!</source>
-<translation type="unfinished">Error while loading todo lists!</translation>
+<translation>Fehler beim Laden der Aufgabenlisten!</translation>
 </message>
 <message>
 <source>Your CalDAV server didn't reply anything!</source>
-<translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+<translation>Ihr CalDAV-Server hat nicht geantwortet!</translation>
 </message>
 <message>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+<translation>Fehlermeldung Ihres CalDAV-Servers: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</source>
-<translation type="unfinished">Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</translation>
+<translation>Nextcloud-/ownCloud-Serverfehler: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Wenn Ihr Server ein Passwort für Freigabelinks erfordert, geben Sie eines im Passwortfeld des Freigabedialogs ein und versuchen Sie es erneut.</translation>
 </message>
 <message>
 <source>No bookmarks</source>
-<translation type="unfinished">No bookmarks</translation>
+<translation>Keine Lesezeichen</translation>
 </message>
 <message>
 <source>No bookmarks were found on the server.</source>
-<translation type="unfinished">No bookmarks were found on the server.</translation>
+<translation>Auf dem Server wurden keine Lesezeichen gefunden.</translation>
 </message>
 </context>
 <context>
 <name>CloudSettingsWidget</name>
 <message>
 <source>cloud support</source>
-<translation type="unfinished">cloud support</translation>
+<translation>Cloud-Unterstützung</translation>
 </message>
 <message>
 <source>Enable cloud support</source>
-<translation type="unfinished">Enable cloud support</translation>
+<translation>Cloud-Unterstützung aktivieren</translation>
 </message>
 <message>
 <source>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</source>
-<translation type="unfinished">You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</translation>
+<translation>Sie können aus der Anwendung auf Ihren Nextcloud-/ownCloud-Server zugreifen, um beispielsweise Notizen im Papierkorb und Notizversionen zu verwalten oder Notizen freizugeben. Diese Integration synchronisiert keine Notizdateien. Zum Synchronisieren der Dateien müssen Sie weiterhin den Nextcloud-/ownCloud-Synchronisierungsclient installieren.</translation>
 </message>
 <message>
 <source>Your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Your Nextcloud / ownCloud server</translation>
+<translation>Ihr Nextcloud-/ownCloud-Server</translation>
 </message>
 <message>
 <source>Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
-<translation type="unfinished">Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</translation>
+<translation>Bitte installieren Sie &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes für Nextcloud&lt;/b&gt;&lt;/a&gt; oder die neueste Version von &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (mindestens Version QOWNNOTESAPI_MIN_VERSION, auch für ownCloud), um auf Notizversionen und Notizen im Papierkorb zuzugreifen.</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Auf Ihrem Nextcloud-/ownCloud-Server müssen auch die beiden Standard-Apps &lt;b&gt;Versionen&lt;/b&gt; und &lt;b&gt;Gelöschte Dateien&lt;/b&gt; aktiviert sein (dies sollte standardmäßig der Fall sein).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sie benötigen weiterhin den &lt;b&gt;Nextcloud-/ownCloud-Synchronisierungsclient&lt;/b&gt; (oder einen anderen Desktop-Synchronisierungsclient), um Ihre Notizen zu synchronisieren!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Öffnet die Seite &lt;span style=" font-weight:600;"&gt;App-Konfiguration&lt;/span&gt; Ihres Nextcloud-/ownCloud-Servers im Webbrowser, um QOwnNotesAPI zu installieren oder zu aktualisieren und die Standard-Apps &lt;span style=" font-weight:600;"&gt;Versionen&lt;/span&gt; und &lt;span style=" font-weight:600;"&gt;Gelöschte Dateien&lt;/span&gt; zu aktivieren.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
-<translation type="unfinished">Open your NC / oC server &amp;Apps page</translation>
+<translation>&amp;Apps-Seite Ihres NC-/oC-Servers öffnen</translation>
 </message>
 <message>
 <source>Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-<translation type="unfinished">Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+<translation>Öffnet die App-Passwort-Seite Ihres Nextcloud-/ownCloud-Servers im Webbrowser, um ein neues App-Passwort für die Anwendung zu erstellen</translation>
 </message>
 <message>
 <source>Open your NC / oC server App Password page</source>
-<translation type="unfinished">Open your NC / oC server App Password page</translation>
+<translation>App-Passwort-Seite Ihres NC-/oC-Servers öffnen</translation>
 </message>
 <message>
 <source>Error Message</source>
-<translation type="unfinished">Error Message</translation>
+<translation>Fehlermeldung</translation>
 </message>
 <message>
 <source>Select a connection to edit</source>
-<translation type="unfinished">Select a connection to edit</translation>
+<translation>Verbindung zum Bearbeiten auswählen</translation>
 </message>
 <message>
 <source>Add connection</source>
-<translation type="unfinished">Add connection</translation>
+<translation>Verbindung hinzufügen</translation>
 </message>
 <message>
 <source>Remove connection</source>
-<translation type="unfinished">Remove connection</translation>
+<translation>Verbindung entfernen</translation>
 </message>
 <message>
 <source>Connection name:</source>
-<translation type="unfinished">Connection name:</translation>
+<translation>Verbindungsname:</translation>
 </message>
 <message>
 <source>NC / oC server url:</source>
-<translation type="unfinished">NC / oC server url:</translation>
+<translation>NC-/oC-Server-URL:</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bitte geben Sie die URL Ihres Nextcloud-/ownCloud-Servers ein, zum Beispiel: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
-<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+<translation>Der Anmeldeablauf v2 funktioniert nur mit Nextcloud, nicht mit ownCloud. Bei Problemen müssen Sie ein App-Passwort manuell erstellen.</translation>
 </message>
 <message>
 <source>Login to Nextcloud to grant access</source>
-<translation type="unfinished">Login to Nextcloud to grant access</translation>
+<translation>Bei Nextcloud anmelden, um Zugriff zu gewähren</translation>
 </message>
 <message>
 <source>Cancel Nextcloud login</source>
-<translation type="unfinished">Cancel Nextcloud login</translation>
+<translation>Nextcloud-Anmeldung abbrechen</translation>
 </message>
 <message>
 <source>Username:</source>
-<translation type="unfinished">Username:</translation>
+<translation>Benutzername:</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bitte geben Sie Ihren Benutzernamen auf dem Nextcloud-/ownCloud-Server ein.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Your Nextcloud / ownCloud username</source>
-<translation type="unfinished">Your Nextcloud / ownCloud username</translation>
+<translation>Ihr Nextcloud-/ownCloud-Benutzername</translation>
 </message>
 <message>
 <source>Password:</source>
-<translation type="unfinished">Password:</translation>
+<translation>Passwort:</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bitte geben Sie das Passwort für Ihren Benutzernamen ein.&lt;br/&gt;Das Passwort wird derzeit zusammen mit den anderen Einstellungen verschlüsselt gespeichert, ist jedoch nicht sehr sicher.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Your Nextcloud / ownCloud password</source>
-<translation type="unfinished">Your Nextcloud / ownCloud password</translation>
+<translation>Ihr Nextcloud-/ownCloud-Passwort</translation>
 </message>
 <message>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>Wenn Ihr Passwort nicht funktioniert, erstellen Sie ein App-Passwort (Schaltfläche rechts)</translation>
 </message>
 <message>
 <source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
-<translation type="unfinished">Enable QOwnNotes / QOwnNotesAPI server app support</translation>
+<translation>Unterstützung für die Server-App QOwnNotes / QOwnNotesAPI aktivieren</translation>
 </message>
 <message>
 <source>connection to QOwnNotes / QOwnNotesAPI</source>
-<translation type="unfinished">connection to QOwnNotes / QOwnNotesAPI</translation>
+<translation>Verbindung zu QOwnNotes / QOwnNotesAPI</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
-<translation type="unfinished">Enable Nextcloud Deck support</translation>
+<translation>Nextcloud-Deck-Unterstützung aktivieren</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klicken Sie hier, um die Verbindung zu Ihrem Nextcloud-/ownCloud-Server zu testen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>&amp;Connect to NC / oC server</source>
-<translation type="unfinished">&amp;Connect to NC / oC server</translation>
+<translation>Mit NC-/oC-Server &amp;verbinden</translation>
 </message>
 <message>
 <source>Connection status</source>
-<translation type="unfinished">Connection status</translation>
+<translation>Verbindungsstatus</translation>
 </message>
 <message>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>unbekannt</translation>
 </message>
 <message>
 <source>connection to web server</source>
-<translation type="unfinished">connection to web server</translation>
+<translation>Verbindung zum Webserver</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server detected</source>
-<translation type="unfinished">Nextcloud / ownCloud server detected</translation>
+<translation>Nextcloud-/ownCloud-Server erkannt</translation>
 </message>
 <message>
 <source>username and password correct</source>
-<translation type="unfinished">username and password correct</translation>
+<translation>Benutzername und Passwort korrekt</translation>
 </message>
 <message>
 <source>versions app enabled on server</source>
-<translation type="unfinished">versions app enabled on server</translation>
+<translation>Versions-App auf dem Server aktiviert</translation>
 </message>
 <message>
 <source>trash app enabled on server</source>
-<translation type="unfinished">trash app enabled on server</translation>
+<translation>Papierkorb-App auf dem Server aktiviert</translation>
 </message>
 <message>
 <source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
-<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+<translation>Sie finden diesen Pfad in den Einstellungen von &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt;</translation>
 </message>
 <message>
 <source>notes path found on server</source>
-<translation type="unfinished">notes path found on server</translation>
+<translation>Notizpfad auf dem Server gefunden</translation>
 </message>
 <message>
 <source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
-<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+<translation>Notizpfad &lt;b&gt;%1&lt;/b&gt; auf dem Server gefunden</translation>
 </message>
 <message>
 <source>Remove cloud connection</source>
-<translation type="unfinished">Remove cloud connection</translation>
+<translation>Cloud-Verbindung entfernen</translation>
 </message>
 <message>
 <source>Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</source>
-<translation type="unfinished">Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+<translation>Möchten Sie die Cloud-Verbindung &lt;strong&gt;%1&lt;/strong&gt; wirklich entfernen?</translation>
 </message>
 <message>
 <source>The connection was made successfully!
 Server version: %1
 Server app version: %2</source>
-<translation type="unfinished">The connection was made successfully!
-Server version: %1
-Server app version: %2</translation>
+<translation>Die Verbindung wurde erfolgreich hergestellt!
+Serverversion: %1
+Server-App-Version: %2</translation>
 </message>
 <message>
 <source>There was an error connecting to the Nextcloud / ownCloud Server!
 You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-<translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+<translation>Beim Verbinden mit dem Nextcloud-/ownCloud-Server ist ein Fehler aufgetreten!
+Die App QOwnNotes oder QOwnNotesAPI muss ebenfalls installiert und aktiviert sein!
 
-Connection error message: </translation>
+Verbindungsfehlermeldung: </translation>
 </message>
 </context>
 <context>
@@ -613,23 +613,23 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Accent color</source>
-<translation type="unfinished">Accent color</translation>
+<translation>Akzentfarbe</translation>
 </message>
 <message>
 <source>Select the color that is used for selected text and selected items, like the current note in the note list</source>
-<translation type="unfinished">Select the color that is used for selected text and selected items, like the current note in the note list</translation>
+<translation>Farbe für ausgewählten Text und ausgewählte Elemente wie die aktuelle Notiz in der Notizliste auswählen</translation>
 </message>
 <message>
 <source>Select color</source>
-<translation type="unfinished">Select color</translation>
+<translation>Farbe auswählen</translation>
 </message>
 <message>
 <source>Use the default accent color</source>
-<translation type="unfinished">Use the default accent color</translation>
+<translation>Standardakzentfarbe verwenden</translation>
 </message>
 <message>
 <source>Reset</source>
-<translation type="unfinished">Reset</translation>
+<translation>Zurücksetzen</translation>
 </message>
 <message>
 <source>New color mode</source>
@@ -649,11 +649,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Default</source>
-<translation type="unfinished">Default</translation>
+<translation>Standard</translation>
 </message>
 <message>
 <source>Select accent color</source>
-<translation type="unfinished">Select accent color</translation>
+<translation>Akzentfarbe auswählen</translation>
 </message>
 </context>
 <context>
@@ -672,11 +672,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Fake old versions for installed repository scripts to trigger the script update dialog</source>
-<translation type="unfinished">Fake old versions for installed repository scripts to trigger the script update dialog</translation>
+<translation>Für installierte Skripte aus dem Skriptverzeichnis alte Versionen vortäuschen, um den Skriptaktualisierungsdialog auszulösen</translation>
 </message>
 <message>
 <source>Fake old script versions to trigger script updates</source>
-<translation type="unfinished">Fake old script versions to trigger script updates</translation>
+<translation>Alte Skriptversionen vortäuschen, um Skriptaktualisierungen auszulösen</translation>
 </message>
 <message>
 <source>Log file path:</source>
@@ -684,11 +684,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Script hook execution time warning threshold (ms):</source>
-<translation type="unfinished">Script hook execution time warning threshold (ms):</translation>
+<translation>Warnschwelle für die Ausführungszeit von Skript-Hooks (ms):</translation>
 </message>
 <message>
 <source>Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</source>
-<translation type="unfinished">Log a warning when a script hook takes longer than this many milliseconds. When debug logging is enabled, all hook times are logged unconditionally.</translation>
+<translation>Eine Warnung protokollieren, wenn ein Skript-Hook länger als die angegebene Anzahl Millisekunden benötigt. Bei aktiviertem Debug-Protokoll werden alle Hook-Zeiten ohne Einschränkung protokolliert.</translation>
 </message>
 <message>
 <source>Log file cleared</source>
@@ -755,11 +755,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Open settings file in external editor</source>
-<translation type="unfinished">Open settings file in external editor</translation>
+<translation>Einstellungsdatei im externen Editor öffnen</translation>
 </message>
 <message>
 <source>Open settings file</source>
-<translation type="unfinished">Open settings file</translation>
+<translation>Einstellungsdatei öffnen</translation>
 </message>
 <message>
 <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
@@ -1286,15 +1286,15 @@ Connection error message: </translation>
 <name>DocumentOverviewWidget</name>
 <message>
 <source>Document overview: click or drag to navigate</source>
-<translation type="unfinished">Document overview: click or drag to navigate</translation>
+<translation>Dokumentübersicht: Klicken oder ziehen, um zu navigieren</translation>
 </message>
 <message>
 <source>Document overview</source>
-<translation type="unfinished">Document overview</translation>
+<translation>Dokumentübersicht</translation>
 </message>
 <message>
 <source>Document overview: visible lines %1-%2; click or drag to navigate</source>
-<translation type="unfinished">Document overview: visible lines %1-%2; click or drag to navigate</translation>
+<translation>Dokumentübersicht: sichtbare Zeilen %1–%2; klicken oder ziehen, um zu navigieren</translation>
 </message>
 </context>
 <context>
@@ -1348,11 +1348,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</source>
-<translation type="unfinished">Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</translation>
+<translation>Erlaubt Hervorhebung, Fettdruck, Unterstreichung und Durchstreichung über mehrere Zeilen im Notizeditor</translation>
 </message>
 <message>
 <source>Highlight and apply Markdown text formatting across multiple lines</source>
-<translation type="unfinished">Highlight and apply Markdown text formatting across multiple lines</translation>
+<translation>Markdown-Textformatierung über mehrere Zeilen hervorheben und anwenden</translation>
 </message>
 <message>
 <source>Editor options</source>
@@ -1400,7 +1400,7 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Ensure an empty last line in the note text</source>
-<translation type="unfinished">Ensure an empty last line in the note text</translation>
+<translation>Leere letzte Zeile im Notiztext sicherstellen</translation>
 </message>
 <message>
 <source>Show line numbers and bookmark markers (1-9)</source>
@@ -1408,23 +1408,23 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Show visible markers for spaces and tabs in the note editor</source>
-<translation type="unfinished">Show visible markers for spaces and tabs in the note editor</translation>
+<translation>Sichtbare Markierungen für Leerzeichen und Tabulatoren im Notizeditor anzeigen</translation>
 </message>
 <message>
 <source>Show whitespace markers</source>
-<translation type="unfinished">Show whitespace markers</translation>
+<translation>Leerraummarkierungen anzeigen</translation>
 </message>
 <message>
 <source>Show visible markers for line endings in the note editor</source>
-<translation type="unfinished">Show visible markers for line endings in the note editor</translation>
+<translation>Sichtbare Markierungen für Zeilenenden im Notizeditor anzeigen</translation>
 </message>
 <message>
 <source>Show line ending markers</source>
-<translation type="unfinished">Show line ending markers</translation>
+<translation>Zeilenendmarkierungen anzeigen</translation>
 </message>
 <message>
 <source>Show character, word and line count in the status bar</source>
-<translation type="unfinished">Show character, word and line count in the status bar</translation>
+<translation>Zeichen-, Wort- und Zeilenanzahl in der Statusleiste anzeigen</translation>
 </message>
 <message>
 <source>Show small Markdown preview images in the editor, if there is no text after the image</source>
@@ -1460,11 +1460,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Applies to word, wiki-link, equation, script and Markdown LSP completions</source>
-<translation type="unfinished">Applies to word, wiki-link, equation, script and Markdown LSP completions</translation>
+<translation>Gilt für Wort-, Wiki-Link-, Gleichungs-, Skript- und Markdown-LSP-Vervollständigungen</translation>
 </message>
 <message>
 <source>Insert autocompletion directly if there is only one result</source>
-<translation type="unfinished">Insert autocompletion directly if there is only one result</translation>
+<translation>Autovervollständigung direkt einfügen, wenn es nur ein Ergebnis gibt</translation>
 </message>
 <message>
 <source>Tabs and Indents</source>
@@ -1519,7 +1519,7 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Import metadata as YAML front matter</source>
-<translation type="unfinished">Import metadata as YAML front matter</translation>
+<translation>Metadaten als YAML-Frontmatter importieren</translation>
 </message>
 <message>
 <source>Number of imported notes</source>
@@ -2201,7 +2201,7 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Link hover</source>
-<translation type="unfinished">Link hover</translation>
+<translation>Link beim Überfahren</translation>
 </message>
 <message>
 <source>Link (internal)</source>
@@ -2318,7 +2318,7 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Whitespace marker</source>
-<translation type="unfinished">Whitespace marker</translation>
+<translation>Leerraummarkierung</translation>
 </message>
 <message>
 <source>This item will be used to preset colors for the other items</source>
@@ -2395,28 +2395,28 @@ Connection error message: </translation>
 <message>
 <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+<translation>Bei älteren Versionen von Nextcloud-/ownCloud-Sync können Synchronisierungsprobleme auftreten, wenn Sie deutlich unter 10 Sekunden gehen.
+Prüfen Sie selbst, ob Synchronisierungskonflikte auftreten, und stellen Sie in diesem Fall einen höheren Wert ein.</translation>
 </message>
 <message>
 <source>By default the note name will be generated automatically</source>
-<translation type="unfinished">By default the note name will be generated automatically</translation>
+<translation>Standardmäßig wird der Notizname automatisch erzeugt</translation>
 </message>
 <message>
 <source>The shortcut to create a new note asks for a note name</source>
-<translation type="unfinished">The shortcut to create a new note asks for a note name</translation>
+<translation>Die Tastenkombination zum Erstellen einer neuen Notiz fragt nach einem Notiznamen</translation>
 </message>
 <message>
 <source>Use Setext style headings for generated new note titles instead of ATX style headings</source>
-<translation type="unfinished">Use Setext style headings for generated new note titles instead of ATX style headings</translation>
+<translation>Für automatisch erzeugte Titel neuer Notizen Überschriften im Setext-Stil statt im ATX-Stil verwenden</translation>
 </message>
 <message>
 <source>Use Setext headings for new notes</source>
-<translation type="unfinished">Use Setext headings for new notes</translation>
+<translation>Setext-Überschriften für neue Notizen verwenden</translation>
 </message>
 <message>
 <source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
-<translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</translation>
+<translation>Sie können dies beispielsweise unter Windows verwenden, wenn Sie Probleme mit Zeilenumbrüchen in der Nextcloud-/ownCloud-Notizen-App haben</translation>
 </message>
 <message>
 <source>Use UNIX newline instead of native newline characters</source>
@@ -2436,11 +2436,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>When the note title starts with an emoji, the emoji will not be stored in the note filename</source>
-<translation type="unfinished">When the note title starts with an emoji, the emoji will not be stored in the note filename</translation>
+<translation>Wenn der Notiztitel mit einem Emoji beginnt, wird das Emoji nicht im Dateinamen der Notiz gespeichert</translation>
 </message>
 <message>
 <source>Don't use leading emojis in note filename</source>
-<translation type="unfinished">Don't use leading emojis in note filename</translation>
+<translation>Führende Emojis nicht im Notizdateinamen verwenden</translation>
 </message>
 <message>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
@@ -2509,15 +2509,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Keychain</source>
-<translation type="unfinished">Keychain</translation>
+<translation>Schlüsselbund</translation>
 </message>
 <message>
 <source>Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</source>
-<translation type="unfinished">Maximum time to wait for the system keychain before falling back to SimpleCrypt legacy encryption</translation>
+<translation>Maximale Wartezeit auf den Systemschlüsselbund, bevor die ältere SimpleCrypt-Verschlüsselung verwendet wird</translation>
 </message>
 <message>
 <source>Keychain access timeout:</source>
-<translation type="unfinished">Keychain access timeout:</translation>
+<translation>Zeitlimit für Schlüsselbundzugriff:</translation>
 </message>
 <message>
 <source>Update dialog</source>
@@ -2549,11 +2549,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>External tools</source>
-<translation type="unfinished">External tools</translation>
+<translation>Externe Werkzeuge</translation>
 </message>
 <message>
 <source>Path to external editor, leave empty for default</source>
-<translation type="unfinished">Path to external editor, leave empty for default</translation>
+<translation>Pfad zum externen Editor, für den Standard leer lassen</translation>
 </message>
 <message>
 <source>Path to external editor:</source>
@@ -2561,19 +2561,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Dialog preferences</source>
-<translation type="unfinished">Dialog preferences</translation>
+<translation>Dialogeinstellungen</translation>
 </message>
 <message>
 <source>QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</source>
-<translation type="unfinished">QOwnNotes remembers answers selected with "Don't ask again" and warnings hidden with "Don't show again". Reset these preferences to show those dialogs again.</translation>
+<translation>QOwnNotes merkt sich Antworten mit „Nicht erneut fragen“ und Warnungen mit „Nicht erneut anzeigen“. Setzen Sie diese Einstellungen zurück, um diese Dialoge wieder anzuzeigen.</translation>
 </message>
 <message>
 <source>Forget all "Don't ask again" and "Don't show again" choices</source>
-<translation type="unfinished">Forget all "Don't ask again" and "Don't show again" choices</translation>
+<translation>Alle Entscheidungen für „Nicht erneut fragen“ und „Nicht erneut anzeigen“ vergessen</translation>
 </message>
 <message>
 <source>Reset dialog preferences</source>
-<translation type="unfinished">Reset dialog preferences</translation>
+<translation>Dialogeinstellungen zurücksetzen</translation>
 </message>
 <message>
 <source>set external editor</source>
@@ -2581,15 +2581,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Path to external diff tool:</source>
-<translation type="unfinished">Path to external diff tool:</translation>
+<translation>Pfad zum externen Vergleichswerkzeug:</translation>
 </message>
 <message>
 <source>Path to external diff tool, leave empty for default</source>
-<translation type="unfinished">Path to external diff tool, leave empty for default</translation>
+<translation>Pfad zum externen Vergleichswerkzeug, für den Standard leer lassen</translation>
 </message>
 <message>
 <source>set external diff tool</source>
-<translation type="unfinished">set external diff tool</translation>
+<translation>Externes Vergleichswerkzeug festlegen</translation>
 </message>
 <message>
 <source>Clear application data and exit</source>
@@ -2665,7 +2665,7 @@ Ihre Notizen bleiben erhalten!</translation>
 </message>
 <message>
 <source>Select diff tool application</source>
-<translation type="unfinished">Select diff tool application</translation>
+<translation>Vergleichsprogramm auswählen</translation>
 </message>
 <message>
 <source>File extension</source>
@@ -2693,7 +2693,7 @@ Ihre Notizen bleiben erhalten!</translation>
 </message>
 <message>
 <source>Do you really want to forget all saved dialog choices and show suppressed dialogs again?</source>
-<translation type="unfinished">Do you really want to forget all saved dialog choices and show suppressed dialogs again?</translation>
+<translation>Möchten Sie wirklich alle gespeicherten Dialogentscheidungen vergessen und ausgeblendete Dialoge wieder anzeigen?</translation>
 </message>
 <message>
 <source>INI files</source>
@@ -2722,8 +2722,8 @@ Ihre Notizen bleiben erhalten!</translation>
 <message>
 <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+<translation>Bei älteren Versionen von Nextcloud-/ownCloud-Sync können Synchronisierungsprobleme auftreten, wenn Sie deutlich unter 10 Sekunden gehen.
+Prüfen Sie selbst, ob Synchronisierungskonflikte auftreten, und stellen Sie in diesem Fall einen höheren Wert ein.</translation>
 </message>
 <message>
 <source>git commit interval time [sec]</source>
@@ -2801,255 +2801,255 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <name>HarperChecker</name>
 <message>
 <source>Harper is unavailable: %1</source>
-<translation type="unfinished">Harper is unavailable: %1</translation>
+<translation>Harper ist nicht verfügbar: %1</translation>
 </message>
 </context>
 <context>
 <name>HarperClient</name>
 <message>
 <source>Harper request timed out</source>
-<translation type="unfinished">Harper request timed out</translation>
+<translation>Zeitüberschreitung bei der Harper-Anfrage</translation>
 </message>
 <message>
 <source>Harper service stopped unexpectedly</source>
-<translation type="unfinished">Harper service stopped unexpectedly</translation>
+<translation>Der Harper-Dienst wurde unerwartet beendet</translation>
 </message>
 <message>
 <source>Harper transport is not configured</source>
-<translation type="unfinished">Harper transport is not configured</translation>
+<translation>Der Harper-Transport ist nicht konfiguriert</translation>
 </message>
 <message>
 <source>Waiting before retrying the Harper TCP connection</source>
-<translation type="unfinished">Waiting before retrying the Harper TCP connection</translation>
+<translation>Wartezeit vor einem erneuten Harper-TCP-Verbindungsversuch</translation>
 </message>
 <message>
 <source>Unsupported Harper request: %1</source>
-<translation type="unfinished">Unsupported Harper request: %1</translation>
+<translation>Nicht unterstützte Harper-Anfrage: %1</translation>
 </message>
 <message>
 <source>Harper initialization failed</source>
-<translation type="unfinished">Harper initialization failed</translation>
+<translation>Harper-Initialisierung fehlgeschlagen</translation>
 </message>
 </context>
 <context>
 <name>HarperSettingsWidget</name>
 <message>
 <source>Harper</source>
-<translation type="unfinished">Harper</translation>
+<translation>Harper</translation>
 </message>
 <message>
 <source>Enable offline grammar and style checking with Harper</source>
-<translation type="unfinished">Enable offline grammar and style checking with Harper</translation>
+<translation>Offline-Grammatik- und Stilprüfung mit Harper aktivieren</translation>
 </message>
 <message>
 <source>Transport:</source>
-<translation type="unfinished">Transport:</translation>
+<translation>Transport:</translation>
 </message>
 <message>
 <source>Connection:</source>
-<translation type="unfinished">Connection:</translation>
+<translation>Verbindung:</translation>
 </message>
 <message>
 <source>Command / binary path:</source>
-<translation type="unfinished">Command / binary path:</translation>
+<translation>Befehl / Programmpfad:</translation>
 </message>
 <message>
 <source>Browse</source>
-<translation type="unfinished">Browse</translation>
+<translation>Durchsuchen</translation>
 </message>
 <message>
 <source>Auto-detect</source>
-<translation type="unfinished">Auto-detect</translation>
+<translation>Automatisch erkennen</translation>
 </message>
 <message>
 <source>Server address:</source>
-<translation type="unfinished">Server address:</translation>
+<translation>Serveradresse:</translation>
 </message>
 <message>
 <source>Port:</source>
-<translation type="unfinished">Port:</translation>
+<translation>Port:</translation>
 </message>
 <message>
 <source>Dialect:</source>
-<translation type="unfinished">Dialect:</translation>
+<translation>Sprachvariante:</translation>
 </message>
 <message>
 <source>Check delay:</source>
-<translation type="unfinished">Check delay:</translation>
+<translation>Prüfverzögerung:</translation>
 </message>
 <message>
 <source> ms</source>
-<translation type="unfinished"> ms</translation>
+<translation> ms</translation>
 </message>
 <message>
 <source>Linters:</source>
-<translation type="unfinished">Linters:</translation>
+<translation>Prüfregeln:</translation>
 </message>
 <message>
 <source>Spell Check</source>
-<translation type="unfinished">Spell Check</translation>
+<translation>Rechtschreibprüfung</translation>
 </message>
 <message>
 <source>Sentence Capitalization</source>
-<translation type="unfinished">Sentence Capitalization</translation>
+<translation>Großschreibung am Satzanfang</translation>
 </message>
 <message>
 <source>Repeated Words</source>
-<translation type="unfinished">Repeated Words</translation>
+<translation>Wortwiederholungen</translation>
 </message>
 <message>
 <source>Long Sentences</source>
-<translation type="unfinished">Long Sentences</translation>
+<translation>Lange Sätze</translation>
 </message>
 <message>
 <source>An vs A</source>
-<translation type="unfinished">An vs A</translation>
+<translation>„An“ oder „A“</translation>
 </message>
 <message>
 <source>Unclosed Quotes</source>
-<translation type="unfinished">Unclosed Quotes</translation>
+<translation>Nicht geschlossene Anführungszeichen</translation>
 </message>
 <message>
 <source>Correct Number Suffix</source>
-<translation type="unfinished">Correct Number Suffix</translation>
+<translation>Korrekte Endung bei Ordnungszahlen</translation>
 </message>
 <message>
 <source>Spaces</source>
-<translation type="unfinished">Spaces</translation>
+<translation>Leerzeichen</translation>
 </message>
 <message>
 <source>Quote Spacing</source>
-<translation type="unfinished">Quote Spacing</translation>
+<translation>Abstände bei Anführungszeichen</translation>
 </message>
 <message>
 <source>No French Spaces</source>
-<translation type="unfinished">No French Spaces</translation>
+<translation>Keine doppelten Leerzeichen nach Satzende</translation>
 </message>
 <message>
 <source>Wrong Apostrophe</source>
-<translation type="unfinished">Wrong Apostrophe</translation>
+<translation>Falscher Apostroph</translation>
 </message>
 <message>
 <source>Not tested yet.</source>
-<translation type="unfinished">Not tested yet.</translation>
+<translation>Noch nicht getestet.</translation>
 </message>
 <message>
 <source>Spelled Numbers</source>
-<translation type="unfinished">Spelled Numbers</translation>
+<translation>Ausgeschriebene Zahlen</translation>
 </message>
 <message>
 <source>Ignored:</source>
-<translation type="unfinished">Ignored:</translation>
+<translation>Ignoriert:</translation>
 </message>
 <message>
 <source>Reset ignored rules</source>
-<translation type="unfinished">Reset ignored rules</translation>
+<translation>Ignorierte Regeln zurücksetzen</translation>
 </message>
 <message>
 <source>Reset ignored words</source>
-<translation type="unfinished">Reset ignored words</translation>
+<translation>Ignorierte Wörter zurücksetzen</translation>
 </message>
 <message>
 <source>Status:</source>
-<translation type="unfinished">Status:</translation>
+<translation>Status:</translation>
 </message>
 <message>
 <source>Test Connection</source>
-<translation type="unfinished">Test Connection</translation>
+<translation>Verbindung testen</translation>
 </message>
 <message>
 <source>Stdio (recommended)</source>
-<translation type="unfinished">Stdio (recommended)</translation>
+<translation>Stdio (empfohlen)</translation>
 </message>
 <message>
 <source>TCP</source>
-<translation type="unfinished">TCP</translation>
+<translation>TCP</translation>
 </message>
 <message>
 <source>American</source>
-<translation type="unfinished">American</translation>
+<translation>Amerikanisch</translation>
 </message>
 <message>
 <source>British</source>
-<translation type="unfinished">British</translation>
+<translation>Britisch</translation>
 </message>
 <message>
 <source>Australian</source>
-<translation type="unfinished">Australian</translation>
+<translation>Australisch</translation>
 </message>
 <message>
 <source>Canadian</source>
-<translation type="unfinished">Canadian</translation>
+<translation>Kanadisch</translation>
 </message>
 <message>
 <source>Indian</source>
-<translation type="unfinished">Indian</translation>
+<translation>Indisch</translation>
 </message>
 <message>
 <source>Harper support is not available in this build.</source>
-<translation type="unfinished">Harper support is not available in this build.</translation>
+<translation>Harper-Unterstützung ist in dieser Version nicht verfügbar.</translation>
 </message>
 <message>
 <source>harper-ls was not found.</source>
-<translation type="unfinished">harper-ls was not found.</translation>
+<translation>„harper-ls“ wurde nicht gefunden.</translation>
 </message>
 <message>
 <source>Found Harper at %1</source>
-<translation type="unfinished">Found Harper at %1</translation>
+<translation>Harper unter %1 gefunden</translation>
 </message>
 <message>
 <source>Found Harper %1 at %2</source>
-<translation type="unfinished">Found Harper %1 at %2</translation>
+<translation>Harper %1 unter %2 gefunden</translation>
 </message>
 <message>
 <source>TCP target %1:%2</source>
-<translation type="unfinished">TCP target %1:%2</translation>
+<translation>TCP-Ziel %1:%2</translation>
 </message>
 <message>
 <source>Select Harper binary</source>
-<translation type="unfinished">Select Harper binary</translation>
+<translation>Harper-Programm auswählen</translation>
 </message>
 <message>
 <source>Could not find harper-ls in PATH.</source>
-<translation type="unfinished">Could not find harper-ls in PATH.</translation>
+<translation>„harper-ls“ wurde nicht in PATH gefunden.</translation>
 </message>
 <message>
 <source>Harper connection successful.</source>
-<translation type="unfinished">Harper connection successful.</translation>
+<translation>Verbindung zu Harper erfolgreich.</translation>
 </message>
 <message>
 <source>Harper connection failed: %1</source>
-<translation type="unfinished">Harper connection failed: %1</translation>
+<translation>Verbindung zu Harper fehlgeschlagen: %1</translation>
 </message>
 <message>
 <source>There are no ignored rules to reset.</source>
-<translation type="unfinished">There are no ignored rules to reset.</translation>
+<translation>Es gibt keine ignorierten Regeln zum Zurücksetzen.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored rule(s)?</source>
-<translation type="unfinished">
-<numerusform>Reset %n ignored rule(s)?</numerusform>
-<numerusform>Reset %n ignored rule(s)?</numerusform>
+<translation>
+<numerusform>%n ignorierte Regel zurücksetzen?</numerusform>
+<numerusform>%n ignorierte Regeln zurücksetzen?</numerusform>
 </translation>
 </message>
 <message>
 <source>All ignored rules have been reset.</source>
-<translation type="unfinished">All ignored rules have been reset.</translation>
+<translation>Alle ignorierten Regeln wurden zurückgesetzt.</translation>
 </message>
 <message>
 <source>There are no ignored words to reset.</source>
-<translation type="unfinished">There are no ignored words to reset.</translation>
+<translation>Es gibt keine ignorierten Wörter zum Zurücksetzen.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored word(s)?</source>
-<translation type="unfinished">
-<numerusform>Reset %n ignored word(s)?</numerusform>
-<numerusform>Reset %n ignored word(s)?</numerusform>
+<translation>
+<numerusform>%n ignoriertes Wort zurücksetzen?</numerusform>
+<numerusform>%n ignorierte Wörter zurücksetzen?</numerusform>
 </translation>
 </message>
 <message>
 <source>All ignored words have been reset.</source>
-<translation type="unfinished">All ignored words have been reset.</translation>
+<translation>Alle ignorierten Wörter wurden zurückgesetzt.</translation>
 </message>
 </context>
 <context>
@@ -3455,11 +3455,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Font rendering (Windows)</source>
-<translation type="unfinished">Font rendering (Windows)</translation>
+<translation>Schriftdarstellung (Windows)</translation>
 </message>
 <message>
 <source>Automatic uses GDI when Windows font smoothing is disabled. Changes take effect after restarting the application.</source>
-<translation type="unfinished">Automatic uses GDI when Windows font smoothing is disabled. Changes take effect after restarting the application.</translation>
+<translation>„Automatisch“ verwendet GDI, wenn die Windows-Schriftglättung deaktiviert ist. Änderungen werden nach einem Neustart der Anwendung wirksam.</translation>
 </message>
 <message>
 <source>Icons</source>
@@ -3535,15 +3535,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Automatic (follow Windows font smoothing)</source>
-<translation type="unfinished">Automatic (follow Windows font smoothing)</translation>
+<translation>Automatisch (Windows-Schriftglättung folgen)</translation>
 </message>
 <message>
 <source>DirectWrite</source>
-<translation type="unfinished">DirectWrite</translation>
+<translation>DirectWrite</translation>
 </message>
 <message>
 <source>GDI (legacy)</source>
-<translation type="unfinished">GDI (legacy)</translation>
+<translation>GDI (veraltet)</translation>
 </message>
 <message>
 <source>Menu bar</source>
@@ -3666,11 +3666,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Username:</source>
-<translation type="unfinished">Username:</translation>
+<translation>Benutzername:</translation>
 </message>
 <message>
 <source>Optional premium account username (e.g. your email address)</source>
-<translation type="unfinished">Optional premium account username (e.g. your email address)</translation>
+<translation>Optionaler Premium-Benutzername (z. B. Ihre E-Mail-Adresse)</translation>
 </message>
 <message>
 <source>API key:</source>
@@ -3864,7 +3864,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>The note preview panel is the central widget that will be resized automatically.</source>
 <comment>Layout preset description</comment>
-<translation type="unfinished">The note preview panel is the central widget that will be resized automatically.</translation>
+<translation>Die Notizvorschau ist das zentrale Widget, dessen Größe automatisch angepasst wird.</translation>
 </message>
 <message>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
@@ -3896,107 +3896,107 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <name>LayoutsSettingsWidget</name>
 <message>
 <source>Layouts</source>
-<translation type="unfinished">Layouts</translation>
+<translation>Layouts</translation>
 </message>
 <message>
 <source>Create, rename, remove, and order layouts. Changes on this page are applied immediately.</source>
-<translation type="unfinished">Create, rename, remove, and order layouts. Changes on this page are applied immediately.</translation>
+<translation>Layouts erstellen, umbenennen, entfernen und sortieren. Änderungen auf dieser Seite werden sofort angewendet.</translation>
 </message>
 <message>
 <source>Add from current</source>
-<translation type="unfinished">Add from current</translation>
+<translation>Aus aktuellem Layout hinzufügen</translation>
 </message>
 <message>
 <source>Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</source>
-<translation type="unfinished">Creates a new layout by copying the current panel and toolbar arrangement, panel visibility, and central-widget setting. The new layout becomes active immediately.</translation>
+<translation>Erstellt ein neues Layout durch Kopieren der aktuellen Anordnung und Sichtbarkeit der Bedienfelder und Werkzeugleisten sowie der Einstellung des zentralen Widgets. Das neue Layout wird sofort aktiviert.</translation>
 </message>
 <message>
 <source>Add from preset...</source>
-<translation type="unfinished">Add from preset...</translation>
+<translation>Aus Vorlage hinzufügen...</translation>
 </message>
 <message>
 <source>Opens the layout preset selector in a new dialog</source>
-<translation type="unfinished">Opens the layout preset selector in a new dialog</translation>
+<translation>Öffnet die Layoutvorlagenauswahl in einem neuen Dialog</translation>
 </message>
 <message>
 <source>Switch to selected</source>
-<translation type="unfinished">Switch to selected</translation>
+<translation>Zum ausgewählten wechseln</translation>
 </message>
 <message>
 <source>Switches to the selected layout</source>
-<translation type="unfinished">Switches to the selected layout</translation>
+<translation>Wechselt zum ausgewählten Layout</translation>
 </message>
 <message>
 <source>Remove</source>
-<translation type="unfinished">Remove</translation>
+<translation>Entfernen</translation>
 </message>
 <message>
 <source>Rename</source>
-<translation type="unfinished">Rename</translation>
+<translation>Umbenennen</translation>
 </message>
 <message>
 <source>Move up</source>
-<translation type="unfinished">Move up</translation>
+<translation>Nach oben verschieben</translation>
 </message>
 <message>
 <source>Move down</source>
-<translation type="unfinished">Move down</translation>
+<translation>Nach unten verschieben</translation>
 </message>
 <message>
 <source>Selected layout</source>
-<translation type="unfinished">Selected layout</translation>
+<translation>Ausgewähltes Layout</translation>
 </message>
 <message>
 <source>The central widget cannot be hidden. Select "No central widget" to allow hiding the note edit or note preview panel.</source>
-<translation type="unfinished">The central widget cannot be hidden. Select "No central widget" to allow hiding the note edit or note preview panel.</translation>
+<translation>Das zentrale Widget kann nicht ausgeblendet werden. Wählen Sie „Kein zentrales Widget“, um das Ausblenden der Notizbearbeitung oder Notizvorschau zu ermöglichen.</translation>
 </message>
 <message>
 <source>Create layout from preset</source>
-<translation type="unfinished">Create layout from preset</translation>
+<translation>Layout aus Vorlage erstellen</translation>
 </message>
 <message>
 <source>Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</source>
-<translation type="unfinished">Create a new layout from a built-in preset. Panel positions can be changed after unlocking panels.</translation>
+<translation>Neues Layout aus einer integrierten Vorlage erstellen. Die Positionen der Bedienfelder können nach dem Entsperren geändert werden.</translation>
 </message>
 <message>
 <source>Add layout</source>
-<translation type="unfinished">Add layout</translation>
+<translation>Layout hinzufügen</translation>
 </message>
 <message>
 <source>Central widget:</source>
-<translation type="unfinished">Central widget:</translation>
+<translation>Zentrales Widget:</translation>
 </message>
 <message>
 <source>Note edit</source>
-<translation type="unfinished">Note edit</translation>
+<translation>Notizbearbeitung</translation>
 </message>
 <message>
 <source>Note preview</source>
-<translation type="unfinished">Note preview</translation>
+<translation>Notizvorschau</translation>
 </message>
 <message>
 <source>No central widget</source>
-<translation type="unfinished">No central widget</translation>
+<translation>Kein zentrales Widget</translation>
 </message>
 <message>
 <source>The central widget automatically uses the space left by the surrounding panels</source>
-<translation type="unfinished">The central widget automatically uses the space left by the surrounding panels</translation>
+<translation>Das zentrale Widget nutzt automatisch den von den umliegenden Bedienfeldern freigelassenen Platz</translation>
 </message>
 <message>
 <source>Layout name:</source>
-<translation type="unfinished">Layout name:</translation>
+<translation>Layoutname:</translation>
 </message>
 <message>
 <source>Remove layout</source>
-<translation type="unfinished">Remove layout</translation>
+<translation>Layout entfernen</translation>
 </message>
 <message>
 <source>Remove the selected layout?</source>
-<translation type="unfinished">Remove the selected layout?</translation>
+<translation>Ausgewähltes Layout entfernen?</translation>
 </message>
 <message>
 <source>Rename layout</source>
-<translation type="unfinished">Rename layout</translation>
+<translation>Layout umbenennen</translation>
 </message>
 </context>
 <context>
@@ -4031,7 +4031,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Tags</source>
-<translation type="unfinished">Tags</translation>
+<translation>Schlagwörter</translation>
 </message>
 <message>
 <source>Modified</source>
@@ -4177,7 +4177,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <name>LocalTrashSettingsWidget</name>
 <message>
 <source>Trash</source>
-<translation type="unfinished">Trash</translation>
+<translation>Papierkorb</translation>
 </message>
 <message>
 <source>Local trash settings</source>
@@ -4186,8 +4186,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+<translation>Bei älteren Versionen von Nextcloud-/ownCloud-Sync können Synchronisierungsprobleme auftreten, wenn Sie deutlich unter 10 Sekunden gehen.
+Prüfen Sie selbst, ob Synchronisierungskonflikte auftreten, und stellen Sie in diesem Fall einen höheren Wert ein.</translation>
 </message>
 <message>
 <source>Remove trashed notes after:</source>
@@ -4204,15 +4204,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>No trashing</source>
-<translation type="unfinished">No trashing</translation>
+<translation>Nicht in den Papierkorb verschieben</translation>
 </message>
 <message>
 <source>System trash</source>
-<translation type="unfinished">System trash</translation>
+<translation>Systempapierkorb</translation>
 </message>
 <message>
 <source>Local trash</source>
-<translation type="unfinished">Local trash</translation>
+<translation>Lokaler Papierkorb</translation>
 </message>
 <message>
 <source>Enable local trash to keep a copy of trashed notes</source>
@@ -4438,11 +4438,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Store note bookmark</source>
-<translation type="unfinished">Store note bookmark</translation>
+<translation>Notizlesezeichen speichern</translation>
 </message>
 <message>
 <source>Go to note bookmark</source>
-<translation type="unfinished">Go to note bookmark</translation>
+<translation>Zum Notizlesezeichen gehen</translation>
 </message>
 <message>
 <source>Print</source>
@@ -4470,7 +4470,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Select</source>
-<translation type="unfinished">Select</translation>
+<translation>Auswählen</translation>
 </message>
 <message>
 <source>Extra</source>
@@ -4502,15 +4502,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Note text edit</source>
-<translation type="unfinished">Note text edit</translation>
+<translation>Notiztextbearbeitung</translation>
 </message>
 <message>
 <source>List operations</source>
-<translation type="unfinished">List operations</translation>
+<translation>Listenaktionen</translation>
 </message>
 <message>
 <source>Markdown operations</source>
-<translation type="unfinished">Markdown operations</translation>
+<translation>Markdown-Aktionen</translation>
 </message>
 <message>
 <source>To&amp;do</source>
@@ -4567,11 +4567,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Select enclosed &amp;text</source>
-<translation type="unfinished">Select enclosed &amp;text</translation>
+<translation>Umschlossenen &amp;Text auswählen</translation>
 </message>
 <message>
 <source>Select the innermost text around the current cursor position</source>
-<translation type="unfinished">Select the innermost text around the current cursor position</translation>
+<translation>Innersten Text um die aktuelle Cursorposition auswählen</translation>
 </message>
 <message>
 <source>Insert text &amp;link</source>
@@ -4849,11 +4849,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Insert checkbox list item</source>
-<translation type="unfinished">Insert checkbox list item</translation>
+<translation>Eintrag in Kontrollkästchenliste einfügen</translation>
 </message>
 <message>
 <source>Insert &amp;footnote</source>
-<translation type="unfinished">Insert &amp;footnote</translation>
+<translation>&amp;Fußnote einfügen</translation>
 </message>
 <message>
 <source>Search selected text on the web</source>
@@ -4969,7 +4969,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Check grammar with Harper</source>
-<translation type="unfinished">Check grammar with Harper</translation>
+<translation>Grammatik mit Harper prüfen</translation>
 </message>
 <message>
 <source>Custom</source>
@@ -5005,79 +5005,79 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Store bookmark at slot 1</source>
-<translation type="unfinished">Store bookmark at slot 1</translation>
+<translation>Lesezeichen auf Platz 1 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 2</source>
-<translation type="unfinished">Store bookmark at slot 2</translation>
+<translation>Lesezeichen auf Platz 2 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 3</source>
-<translation type="unfinished">Store bookmark at slot 3</translation>
+<translation>Lesezeichen auf Platz 3 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 4</source>
-<translation type="unfinished">Store bookmark at slot 4</translation>
+<translation>Lesezeichen auf Platz 4 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 5</source>
-<translation type="unfinished">Store bookmark at slot 5</translation>
+<translation>Lesezeichen auf Platz 5 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 6</source>
-<translation type="unfinished">Store bookmark at slot 6</translation>
+<translation>Lesezeichen auf Platz 6 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 7</source>
-<translation type="unfinished">Store bookmark at slot 7</translation>
+<translation>Lesezeichen auf Platz 7 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 8</source>
-<translation type="unfinished">Store bookmark at slot 8</translation>
+<translation>Lesezeichen auf Platz 8 speichern</translation>
 </message>
 <message>
 <source>Store bookmark at slot 9</source>
-<translation type="unfinished">Store bookmark at slot 9</translation>
+<translation>Lesezeichen auf Platz 9 speichern</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 1</source>
-<translation type="unfinished">Go to bookmark at slot 1</translation>
+<translation>Zum Lesezeichen auf Platz 1 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 2</source>
-<translation type="unfinished">Go to bookmark at slot 2</translation>
+<translation>Zum Lesezeichen auf Platz 2 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 3</source>
-<translation type="unfinished">Go to bookmark at slot 3</translation>
+<translation>Zum Lesezeichen auf Platz 3 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 4</source>
-<translation type="unfinished">Go to bookmark at slot 4</translation>
+<translation>Zum Lesezeichen auf Platz 4 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 5</source>
-<translation type="unfinished">Go to bookmark at slot 5</translation>
+<translation>Zum Lesezeichen auf Platz 5 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 6</source>
-<translation type="unfinished">Go to bookmark at slot 6</translation>
+<translation>Zum Lesezeichen auf Platz 6 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 7</source>
-<translation type="unfinished">Go to bookmark at slot 7</translation>
+<translation>Zum Lesezeichen auf Platz 7 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 8</source>
-<translation type="unfinished">Go to bookmark at slot 8</translation>
+<translation>Zum Lesezeichen auf Platz 8 gehen</translation>
 </message>
 <message>
 <source>Go to bookmark at slot 9</source>
-<translation type="unfinished">Go to bookmark at slot 9</translation>
+<translation>Zum Lesezeichen auf Platz 9 gehen</translation>
 </message>
 <message>
 <source>Note bookmarks</source>
-<translation type="unfinished">Note bookmarks</translation>
+<translation>Notizlesezeichen</translation>
 </message>
 <message>
 <source>Format text underline</source>
@@ -5153,43 +5153,43 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Toggle checkbox(es)</source>
-<translation type="unfinished">Toggle checkbox(es)</translation>
+<translation>Kontrollkästchen umschalten</translation>
 </message>
 <message>
 <source>1. 2. 3. list</source>
-<translation type="unfinished">1. 2. 3. list</translation>
+<translation>1. 2. 3. Liste</translation>
 </message>
 <message>
 <source>a. b. c. list</source>
-<translation type="unfinished">a. b. c. list</translation>
+<translation>a. b. c. Liste</translation>
 </message>
 <message>
 <source>- list</source>
-<translation type="unfinished">- list</translation>
+<translation>- Liste</translation>
 </message>
 <message>
 <source>Create checkbox list</source>
-<translation type="unfinished">Create checkbox list</translation>
+<translation>Kontrollkästchenliste erstellen</translation>
 </message>
 <message>
 <source>Clear list formatting</source>
-<translation type="unfinished">Clear list formatting</translation>
+<translation>Listenformatierung entfernen</translation>
 </message>
 <message>
 <source>Order checkboxes</source>
-<translation type="unfinished">Order checkboxes</translation>
+<translation>Kontrollkästchen sortieren</translation>
 </message>
 <message>
 <source>Increase heading depth</source>
-<translation type="unfinished">Increase heading depth</translation>
+<translation>Überschriftenebene erhöhen</translation>
 </message>
 <message>
 <source>Decrease heading depth</source>
-<translation type="unfinished">Decrease heading depth</translation>
+<translation>Überschriftenebene verringern</translation>
 </message>
 <message>
 <source>Copy code block</source>
-<translation type="unfinished">Copy code block</translation>
+<translation>Codeblock kopieren</translation>
 </message>
 <message>
 <source>Use &amp;vertical preview layout</source>
@@ -5472,9 +5472,9 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message numerus="yes">
 <source>%n script update(s) were installed</source>
-<translation type="unfinished">
-<numerusform>%n script update(s) were installed</numerusform>
-<numerusform>%n script update(s) were installed</numerusform>
+<translation>
+<numerusform>%n Skriptaktualisierung wurde installiert</numerusform>
+<numerusform>%n Skriptaktualisierungen wurden installiert</numerusform>
 </translation>
 </message>
 <message>
@@ -5697,23 +5697,23 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Note folder "%1" does not exist</source>
-<translation type="unfinished">Note folder "%1" does not exist</translation>
+<translation>Notizordner „%1“ existiert nicht</translation>
 </message>
 <message>
 <source>Switched to note folder "%1"</source>
-<translation type="unfinished">Switched to note folder "%1"</translation>
+<translation>Zum Notizordner „%1“ gewechselt</translation>
 </message>
 <message>
 <source>Switched to layout "%1"</source>
-<translation type="unfinished">Switched to layout "%1"</translation>
+<translation>Zum Layout „%1“ gewechselt</translation>
 </message>
 <message>
 <source>KDE Plasma activity changed: %1</source>
-<translation type="unfinished">KDE Plasma activity changed: %1</translation>
+<translation>KDE-Plasma-Aktivität geändert: %1</translation>
 </message>
 <message>
 <source>Document overview</source>
-<translation type="unfinished">Document overview</translation>
+<translation>Dokumentübersicht</translation>
 </message>
 <message>
 <source>Log</source>
@@ -5761,11 +5761,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Could not switch note folder</source>
-<translation type="unfinished">Could not switch note folder</translation>
+<translation>Notizordner konnte nicht gewechselt werden</translation>
 </message>
 <message>
 <source>Modified notes could not be written to disk. Please resolve the problem and try switching note folders again.</source>
-<translation type="unfinished">Modified notes could not be written to disk. Please resolve the problem and try switching note folders again.</translation>
+<translation>Geänderte Notizen konnten nicht auf die Festplatte geschrieben werden. Bitte beheben Sie das Problem und versuchen Sie erneut, den Notizordner zu wechseln.</translation>
 </message>
 <message>
 <source>Toolbar could not be loaded without name</source>
@@ -5789,63 +5789,63 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Web</source>
-<translation type="unfinished">Web</translation>
+<translation>Web</translation>
 </message>
 <message>
 <source>Web app is connected</source>
-<translation type="unfinished">Web app is connected</translation>
+<translation>Web-App ist verbunden</translation>
 </message>
 <message>
 <source>Web app is not connected</source>
-<translation type="unfinished">Web app is not connected</translation>
+<translation>Web-App ist nicht verbunden</translation>
 </message>
 <message>
 <source>Web app connected</source>
-<translation type="unfinished">Web app connected</translation>
+<translation>Web-App verbunden</translation>
 </message>
 <message>
 <source>Web app disconnected</source>
-<translation type="unfinished">Web app disconnected</translation>
+<translation>Web-App getrennt</translation>
 </message>
 <message>
 <source>Connected systems</source>
-<translation type="unfinished">Connected systems</translation>
+<translation>Verbundene Systeme</translation>
 </message>
 <message>
 <source>No connected systems</source>
-<translation type="unfinished">No connected systems</translation>
+<translation>Keine verbundenen Systeme</translation>
 </message>
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
-<translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
+<translation>Sie müssen Ihren Nextcloud-/ownCloud-Notizordner auswählen, damit diese Software funktioniert!</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Note versions are currently loaded from your Nextcloud / ownCloud server</translation>
+<translation>Notizversionen werden derzeit von Ihrem Nextcloud-/ownCloud-Server geladen</translation>
 </message>
 <message>
 <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Trashed notes are currently loaded from your Nextcloud / ownCloud server</translation>
+<translation>Notizen im Papierkorb werden derzeit von Ihrem Nextcloud-/ownCloud-Server geladen</translation>
 </message>
 <message>
 <source>Insert note file</source>
-<translation type="unfinished">Insert note file</translation>
+<translation>Notizdatei einfügen</translation>
 </message>
 <message>
 <source>How should the file &lt;strong&gt;%1&lt;/strong&gt; be handled?</source>
-<translation type="unfinished">How should the file &lt;strong&gt;%1&lt;/strong&gt; be handled?</translation>
+<translation>Wie soll mit der Datei &lt;strong&gt;%1&lt;/strong&gt; verfahren werden?</translation>
 </message>
 <message>
 <source>Add as &amp;new note</source>
-<translation type="unfinished">Add as &amp;new note</translation>
+<translation>Als &amp;neue Notiz hinzufügen</translation>
 </message>
 <message>
 <source>Insert as &amp;attachment</source>
-<translation type="unfinished">Insert as &amp;attachment</translation>
+<translation>Als &amp;Anhang einfügen</translation>
 </message>
 <message>
 <source>The current note is read-only and cannot accept attachments.</source>
-<translation type="unfinished">The current note is read-only and cannot accept attachments.</translation>
+<translation>Die aktuelle Notiz ist schreibgeschützt und kann keine Anhänge aufnehmen.</translation>
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
@@ -5875,213 +5875,213 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <name>MarkdownLspSettingsWidget</name>
 <message>
 <source>Markdown language server</source>
-<translation type="unfinished">Markdown language server</translation>
+<translation>Markdown-Sprachserver</translation>
 </message>
 <message>
 <source>Enable Markdown language server (LSP)</source>
-<translation type="unfinished">Enable Markdown language server (LSP)</translation>
+<translation>Markdown-Sprachserver (LSP) aktivieren</translation>
 </message>
 <message>
 <source>Command:</source>
-<translation type="unfinished">Command:</translation>
+<translation>Befehl:</translation>
 </message>
 <message>
 <source>Auto-detect</source>
-<translation type="unfinished">Auto-detect</translation>
+<translation>Automatisch erkennen</translation>
 </message>
 <message>
 <source>Arguments:</source>
-<translation type="unfinished">Arguments:</translation>
+<translation>Argumente:</translation>
 </message>
 <message>
 <source>Optional arguments separated by spaces.</source>
-<translation type="unfinished">Optional arguments separated by spaces.</translation>
+<translation>Optionale Argumente, durch Leerzeichen getrennt.</translation>
 </message>
 <message>
 <source>Optional arguments</source>
-<translation type="unfinished">Optional arguments</translation>
+<translation>Optionale Argumente</translation>
 </message>
 <message>
 <source>Log all LSP server output (stderr) to the debug log. Useful for troubleshooting LSP server issues.</source>
-<translation type="unfinished">Log all LSP server output (stderr) to the debug log. Useful for troubleshooting LSP server issues.</translation>
+<translation>Alle Ausgaben des LSP-Servers (stderr) im Debug-Protokoll aufzeichnen. Hilfreich bei der Fehlersuche für den LSP-Server.</translation>
 </message>
 <message>
 <source>Show all LSP server log output in debug log</source>
-<translation type="unfinished">Show all LSP server log output in debug log</translation>
+<translation>Alle LSP-Serverausgaben im Debug-Protokoll anzeigen</translation>
 </message>
 <message>
 <source>Ignored:</source>
-<translation type="unfinished">Ignored:</translation>
+<translation>Ignoriert:</translation>
 </message>
 <message>
 <source>Reset ignored rules</source>
-<translation type="unfinished">Reset ignored rules</translation>
+<translation>Ignorierte Regeln zurücksetzen</translation>
 </message>
 <message>
 <source>Status:</source>
-<translation type="unfinished">Status:</translation>
+<translation>Status:</translation>
 </message>
 <message>
 <source>Not tested yet.</source>
-<translation type="unfinished">Not tested yet.</translation>
+<translation>Noch nicht getestet.</translation>
 </message>
 <message>
 <source>Test Connection</source>
-<translation type="unfinished">Test Connection</translation>
+<translation>Verbindung testen</translation>
 </message>
 <message>
 <source>No Markdown LSP server configured.</source>
-<translation type="unfinished">No Markdown LSP server configured.</translation>
+<translation>Kein Markdown-LSP-Server konfiguriert.</translation>
 </message>
 <message>
 <source>Command: %1</source>
-<translation type="unfinished">Command: %1</translation>
+<translation>Befehl: %1</translation>
 </message>
 <message>
 <source> | Arguments: %1</source>
-<translation type="unfinished"> | Arguments: %1</translation>
+<translation> | Argumente: %1</translation>
 </message>
 <message>
 <source> | Currently disabled</source>
-<translation type="unfinished"> | Currently disabled</translation>
+<translation> | Derzeit deaktiviert</translation>
 </message>
 <message>
 <source>Configured %1 at %2</source>
-<translation type="unfinished">Configured %1 at %2</translation>
+<translation>%1 unter %2 konfiguriert</translation>
 </message>
 <message>
 <source> with arguments: %1</source>
-<translation type="unfinished"> with arguments: %1</translation>
+<translation> mit Argumenten: %1</translation>
 </message>
 <message>
 <source>Markdown LSP</source>
-<translation type="unfinished">Markdown LSP</translation>
+<translation>Markdown-LSP</translation>
 </message>
 <message>
 <source>Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.</source>
-<translation type="unfinished">Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.</translation>
+<translation>Kein unterstützter Markdown-LSP-Server in PATH gefunden. Geprüft: marksman, rumdl.</translation>
 </message>
 <message>
 <source>There are no ignored rules to reset.</source>
-<translation type="unfinished">There are no ignored rules to reset.</translation>
+<translation>Es gibt keine ignorierten Regeln zum Zurücksetzen.</translation>
 </message>
 <message numerus="yes">
 <source>Reset %n ignored Markdown LSP rule(s)?</source>
-<translation type="unfinished">
-<numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
-<numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
+<translation>
+<numerusform>%n ignorierte Markdown-LSP-Regel zurücksetzen?</numerusform>
+<numerusform>%n ignorierte Markdown-LSP-Regeln zurücksetzen?</numerusform>
 </translation>
 </message>
 <message>
 <source>All ignored Markdown LSP rules have been reset.</source>
-<translation type="unfinished">All ignored Markdown LSP rules have been reset.</translation>
+<translation>Alle ignorierten Markdown-LSP-Regeln wurden zurückgesetzt.</translation>
 </message>
 <message>
 <source>Please enter a Markdown LSP server command first.</source>
-<translation type="unfinished">Please enter a Markdown LSP server command first.</translation>
+<translation>Bitte geben Sie zuerst einen Befehl für den Markdown-LSP-Server ein.</translation>
 </message>
 <message>
 <source>Timed out waiting for the Markdown LSP server to initialize.</source>
-<translation type="unfinished">Timed out waiting for the Markdown LSP server to initialize.</translation>
+<translation>Zeitüberschreitung beim Warten auf die Initialisierung des Markdown-LSP-Servers.</translation>
 </message>
 <message>
 <source>Failed to start Markdown LSP server: %1</source>
-<translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+<translation>Markdown-LSP-Server konnte nicht gestartet werden: %1</translation>
 </message>
 <message>
 <source>Markdown LSP connection successful: %1</source>
-<translation type="unfinished">Markdown LSP connection successful: %1</translation>
+<translation>Markdown-LSP-Verbindung erfolgreich: %1</translation>
 </message>
 <message>
 <source>Markdown LSP connection failed.</source>
-<translation type="unfinished">Markdown LSP connection failed.</translation>
+<translation>Markdown-LSP-Verbindung fehlgeschlagen.</translation>
 </message>
 </context>
 <context>
 <name>MarkdownTableDialog</name>
 <message>
 <source>Edit Markdown table</source>
-<translation type="unfinished">Edit Markdown table</translation>
+<translation>Markdown-Tabelle bearbeiten</translation>
 </message>
 <message>
 <source>Row</source>
-<translation type="unfinished">Row</translation>
+<translation>Zeile</translation>
 </message>
 <message>
 <source>Add row</source>
-<translation type="unfinished">Add row</translation>
+<translation>Zeile hinzufügen</translation>
 </message>
 <message>
 <source>Remove row</source>
-<translation type="unfinished">Remove row</translation>
+<translation>Zeile entfernen</translation>
 </message>
 <message>
 <source>Column</source>
-<translation type="unfinished">Column</translation>
+<translation>Spalte</translation>
 </message>
 <message>
 <source>Add column</source>
-<translation type="unfinished">Add column</translation>
+<translation>Spalte hinzufügen</translation>
 </message>
 <message>
 <source>Remove column</source>
-<translation type="unfinished">Remove column</translation>
+<translation>Spalte entfernen</translation>
 </message>
 <message>
 <source>Alignment:</source>
-<translation type="unfinished">Alignment:</translation>
+<translation>Ausrichtung:</translation>
 </message>
 <message>
 <source>Alignment of the selected column. Click a column header to select it.</source>
-<translation type="unfinished">Alignment of the selected column. Click a column header to select it.</translation>
+<translation>Ausrichtung der ausgewählten Spalte. Klicken Sie auf eine Spaltenüberschrift, um die Spalte auszuwählen.</translation>
 </message>
 <message>
 <source>Default (left)</source>
-<translation type="unfinished">Default (left)</translation>
+<translation>Standard (links)</translation>
 </message>
 <message>
 <source>Left</source>
-<translation type="unfinished">Left</translation>
+<translation>Links</translation>
 </message>
 <message>
 <source>Center</source>
-<translation type="unfinished">Center</translation>
+<translation>Zentriert</translation>
 </message>
 <message>
 <source>Right</source>
-<translation type="unfinished">Right</translation>
+<translation>Rechts</translation>
 </message>
 <message>
 <source>Apply alignment</source>
-<translation type="unfinished">Apply alignment</translation>
+<translation>Ausrichtung anwenden</translation>
 </message>
 <message>
 <source>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</source>
-<translation type="unfinished">Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</translation>
+<translation>Ausgewählte Ausrichtung auf die aktuell ausgewählten Spalten anwenden. Klicken Sie zuerst auf eine Spaltenüberschrift, um die Spalte auszuwählen.</translation>
 </message>
 <message>
 <source>Cannot remove header</source>
-<translation type="unfinished">Cannot remove header</translation>
+<translation>Kopfzeile kann nicht entfernt werden</translation>
 </message>
 <message>
 <source>The header row cannot be removed.</source>
-<translation type="unfinished">The header row cannot be removed.</translation>
+<translation>Die Kopfzeile kann nicht entfernt werden.</translation>
 </message>
 <message>
 <source>Cannot remove row</source>
-<translation type="unfinished">Cannot remove row</translation>
+<translation>Zeile kann nicht entfernt werden</translation>
 </message>
 <message>
 <source>The table must have at least one data row.</source>
-<translation type="unfinished">The table must have at least one data row.</translation>
+<translation>Die Tabelle muss mindestens eine Datenzeile enthalten.</translation>
 </message>
 <message>
 <source>Cannot remove column</source>
-<translation type="unfinished">Cannot remove column</translation>
+<translation>Spalte kann nicht entfernt werden</translation>
 </message>
 <message>
 <source>The table must have at least one column.</source>
-<translation type="unfinished">The table must have at least one column.</translation>
+<translation>Die Tabelle muss mindestens eine Spalte enthalten.</translation>
 </message>
 </context>
 <context>
@@ -6266,11 +6266,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <source>Ch %1, W %2, L %3</source>
 <comment>Characters / Words / Lines</comment>
-<translation type="unfinished">Ch %1, W %2, L %3</translation>
+<translation>Z %1, W %2, Zl %3</translation>
 </message>
 <message>
 <source>Characters %1, Words %2, Lines %3</source>
-<translation type="unfinished">Characters %1, Words %2, Lines %3</translation>
+<translation>Zeichen %1, Wörter %2, Zeilen %3</translation>
 </message>
 </context>
 <context>
@@ -6281,11 +6281,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Expand all</source>
-<translation type="unfinished">Expand all</translation>
+<translation>Alle aufklappen</translation>
 </message>
 <message>
 <source>Collapse all</source>
-<translation type="unfinished">Collapse all</translation>
+<translation>Alle einklappen</translation>
 </message>
 <message>
 <source>&amp;Rename heading</source>
@@ -6395,11 +6395,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <name>NewNoteDialog</name>
 <message>
 <source>New note</source>
-<translation type="unfinished">New note</translation>
+<translation>Neue Notiz</translation>
 </message>
 <message>
 <source>Note name</source>
-<translation type="unfinished">Note name</translation>
+<translation>Notizname</translation>
 </message>
 </context>
 <context>
@@ -6422,11 +6422,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Move card to another board or stack</source>
-<translation type="unfinished">Move card to another board or stack</translation>
+<translation>Karte auf ein anderes Board oder einen anderen Stapel verschieben</translation>
 </message>
 <message>
 <source>Move…</source>
-<translation type="unfinished">Move…</translation>
+<translation>Verschieben…</translation>
 </message>
 <message>
 <source>Archive card</source>
@@ -6526,38 +6526,38 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Do you want to delete the selected Nextcloud Deck card?</source>
-<translation type="unfinished">Do you want to delete the selected Nextcloud Deck card?</translation>
+<translation>Möchten Sie die ausgewählte Nextcloud-Deck-Karte löschen?</translation>
 </message>
 <message numerus="yes">
 <source>Do you want to delete %n Nextcloud Deck card(s)?</source>
-<translation type="unfinished">
-<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
-<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
+<translation>
+<numerusform>Möchten Sie %n Nextcloud-Deck-Karte löschen?</numerusform>
+<numerusform>Möchten Sie %n Nextcloud-Deck-Karten löschen?</numerusform>
 </translation>
 </message>
 <message>
 <source>Delete card(s)</source>
-<translation type="unfinished">Delete card(s)</translation>
+<translation>Karten löschen</translation>
 </message>
 <message>
 <source>Move card(s)</source>
-<translation type="unfinished">Move card(s)</translation>
+<translation>Karten verschieben</translation>
 </message>
 <message>
 <source>The current card has unsaved changes. Discard them and move the saved card?</source>
-<translation type="unfinished">The current card has unsaved changes. Discard them and move the saved card?</translation>
+<translation>Die aktuelle Karte enthält ungespeicherte Änderungen. Diese verwerfen und die gespeicherte Karte verschieben?</translation>
 </message>
 <message>
 <source>Destination board / stack:</source>
-<translation type="unfinished">Destination board / stack:</translation>
+<translation>Ziel-Board / -Stapel:</translation>
 </message>
 <message>
 <source>There is no other board or stack available. Reload the boards and stacks and try again.</source>
-<translation type="unfinished">There is no other board or stack available. Reload the boards and stacks and try again.</translation>
+<translation>Es ist kein anderes Board und kein anderer Stapel verfügbar. Laden Sie die Boards und Stapel neu und versuchen Sie es erneut.</translation>
 </message>
 <message>
 <source>Move</source>
-<translation type="unfinished">Move</translation>
+<translation>Verschieben</translation>
 </message>
 <message>
 <source>%1 / %2</source>
@@ -6565,7 +6565,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>The due date is in the past</source>
-<translation type="unfinished">The due date is in the past</translation>
+<translation>Das Fälligkeitsdatum liegt in der Vergangenheit</translation>
 </message>
 <message>
 <source>No due date</source>
@@ -6593,14 +6593,14 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message numerus="yes">
 <source>&amp;Move %n card(s)…</source>
-<translation type="unfinished">
+<translation>
 <numerusform/>
 <numerusform/>
 </translation>
 </message>
 <message numerus="yes">
 <source>&amp;Delete %n card(s)</source>
-<translation type="unfinished">
+<translation>
 <numerusform/>
 <numerusform/>
 </translation>
@@ -6638,15 +6638,15 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Error while moving card</source>
-<translation type="unfinished">Error while moving card</translation>
+<translation>Fehler beim Verschieben der Karte</translation>
 </message>
 <message>
 <source>Moving the card timed out. Reload the cards to check its location.</source>
-<translation type="unfinished">Moving the card timed out. Reload the cards to check its location.</translation>
+<translation>Zeitüberschreitung beim Verschieben der Karte. Laden Sie die Karten neu, um den Speicherort zu prüfen.</translation>
 </message>
 <message>
 <source>Moving the card failed with status code %1 and message: %2</source>
-<translation type="unfinished">Moving the card failed with status code %1 and message: %2</translation>
+<translation>Verschieben der Karte fehlgeschlagen mit Statuscode %1 und Meldung: %2</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %1 and message: %2</source>
@@ -6681,47 +6681,47 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <name>NoteBookmarkDialog</name>
 <message>
 <source>Note Bookmarks</source>
-<translation type="unfinished">Note Bookmarks</translation>
+<translation>Notizlesezeichen</translation>
 </message>
 <message>
 <source>Slot</source>
-<translation type="unfinished">Slot</translation>
+<translation>Platz</translation>
 </message>
 <message>
 <source>Note</source>
-<translation type="unfinished">Note</translation>
+<translation>Notiz</translation>
 </message>
 <message>
 <source>Position</source>
-<translation type="unfinished">Position</translation>
+<translation>Position</translation>
 </message>
 <message>
 <source>Jump to bookmark</source>
-<translation type="unfinished">Jump to bookmark</translation>
+<translation>Zum Lesezeichen springen</translation>
 </message>
 <message>
 <source>Jump to the selected bookmark in the main window</source>
-<translation type="unfinished">Jump to the selected bookmark in the main window</translation>
+<translation>Zum ausgewählten Lesezeichen im Hauptfenster springen</translation>
 </message>
 <message>
 <source>Delete bookmark</source>
-<translation type="unfinished">Delete bookmark</translation>
+<translation>Lesezeichen löschen</translation>
 </message>
 <message>
 <source>Delete the selected bookmark</source>
-<translation type="unfinished">Delete the selected bookmark</translation>
+<translation>Ausgewähltes Lesezeichen löschen</translation>
 </message>
 <message>
 <source>Reload</source>
-<translation type="unfinished">Reload</translation>
+<translation>Neu laden</translation>
 </message>
 <message>
 <source>Reload the bookmark list</source>
-<translation type="unfinished">Reload the bookmark list</translation>
+<translation>Lesezeichenliste neu laden</translation>
 </message>
 <message>
 <source>Are you sure you want to delete the bookmark at slot %1?</source>
-<translation type="unfinished">Are you sure you want to delete the bookmark at slot %1?</translation>
+<translation>Möchten Sie das Lesezeichen auf Platz %1 wirklich löschen?</translation>
 </message>
 </context>
 <context>
@@ -6810,11 +6810,11 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Note can't be encrypted!</source>
-<translation type="unfinished">Note can't be encrypted!</translation>
+<translation>Notiz kann nicht verschlüsselt werden!</translation>
 </message>
 <message>
 <source>Encryption failed. The note has not been changed.</source>
-<translation type="unfinished">Encryption failed. The note has not been changed.</translation>
+<translation>Verschlüsselung fehlgeschlagen. Die Notiz wurde nicht geändert.</translation>
 </message>
 <message>
 <source>Decrypt note and store it as plain text</source>
@@ -6908,19 +6908,19 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>&amp;Use as Nextcloud / ownCloud path</source>
-<translation type="unfinished">&amp;Use as Nextcloud / ownCloud path</translation>
+<translation>Als Nextcloud-/ownCloud-Pfad &amp;verwenden</translation>
 </message>
 <message>
 <source>Please select your note folder on your Nextcloud / ownCloud server:</source>
-<translation type="unfinished">Please select your note folder on your Nextcloud / ownCloud server:</translation>
+<translation>Bitte wählen Sie Ihren Notizordner auf Ihrem Nextcloud-/ownCloud-Server:</translation>
 </message>
 <message>
 <source>Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</source>
-<translation type="unfinished">Select the cloud connection to use for this note folder. Select "None" if this note folder should not be synced to a server. Cloud versioning, trash and sharing will then be disabled for this note folder.</translation>
+<translation>Wählen Sie die Cloud-Verbindung für diesen Notizordner. Wählen Sie „Keine“, wenn dieser Notizordner nicht mit einem Server synchronisiert werden soll. Cloud-Versionierung, Papierkorb und Freigabe werden dann für diesen Notizordner deaktiviert.</translation>
 </message>
 <message>
 <source>Path on your Nextcloud / ownCloud server:</source>
-<translation type="unfinished">Path on your Nextcloud / ownCloud server:</translation>
+<translation>Pfad auf Ihrem Nextcloud-/ownCloud-Server:</translation>
 </message>
 <message>
 <source>Note folder path:</source>
@@ -6956,15 +6956,15 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</source>
-<translation type="unfinished">Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</translation>
+<translation>Beachten Sie, dass die Nextcloud-/ownCloud-Notizen-App keine Unterordner unterstützt!</translation>
 </message>
 <message>
 <source>Click here to select your remote note path on your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Click here to select your remote note path on your Nextcloud / ownCloud server</translation>
+<translation>Klicken Sie hier, um den entfernten Notizpfad auf Ihrem Nextcloud-/ownCloud-Server auszuwählen</translation>
 </message>
 <message>
 <source>Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</source>
-<translation type="unfinished">Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</translation>
+<translation>Legen Sie den Nextcloud-/ownCloud-Pfad fest, mit dem der Notizordner auf Ihrem Nextcloud-/ownCloud-Server synchronisiert wird.</translation>
 </message>
 <message>
 <source>Use note subfolders</source>
@@ -7005,7 +7005,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message>
 <source>None</source>
-<translation type="unfinished">None</translation>
+<translation>Keine</translation>
 </message>
 <message>
 <source>new folder</source>
@@ -7072,9 +7072,9 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 </message>
 <message numerus="yes">
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</source>
-<translation type="unfinished">
-<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
-<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
+<translation>
+<numerusform>Soll &lt;strong&gt;%n&lt;/strong&gt; konfliktbehaftete Datenbankkopie, die Ihre Nextcloud-/ownCloud-Synchronisierung blockieren könnte, automatisch gelöscht werden?</numerusform>
+<numerusform>Sollen &lt;strong&gt;%n&lt;/strong&gt; konfliktbehaftete Datenbankkopien, die Ihre Nextcloud-/ownCloud-Synchronisierung blockieren könnten, automatisch gelöscht werden?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -7124,7 +7124,7 @@ Aktuelle Notiz wiederherstellen?</translation>
 </message>
 <message>
 <source>Notes database reloaded after external change</source>
-<translation type="unfinished">Notes database reloaded after external change</translation>
+<translation>Notizdatenbank nach externer Änderung neu geladen</translation>
 </message>
 <message numerus="yes">
 <source>Stored %n note(s) to disk</source>
@@ -7202,26 +7202,26 @@ Wenn der Papierkorb auf Ihrem ownCloud-Server aktiviert ist, sollten Sie sie von
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notiz und &lt;strong&gt;%1&lt;/strong&gt; Ordner entfernen?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Alle Dateien und Ordner in diesen Ordnern werden ebenfalls entfernt!
 
-If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+Wenn der Papierkorb auf Ihrem Nextcloud-/ownCloud-Server aktiviert ist, sollten Sie die Notizen von dort wiederherstellen können.</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen und &lt;strong&gt;%1&lt;/strong&gt; Ordner entfernen?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Alle Dateien und Ordner in diesen Ordnern werden ebenfalls entfernt!
 
-If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</numerusform>
+Wenn der Papierkorb auf Ihrem Nextcloud-/ownCloud-Server aktiviert ist, sollten Sie die Notizen von dort wiederherstellen können.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</source>
-<translation type="unfinished">
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notiz entfernen?
 
-If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</numerusform>
-<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Wenn der Papierkorb auf Ihrem Nextcloud-/ownCloud-Server aktiviert ist, sollten Sie sie von dort wiederherstellen können.</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen entfernen?
 
-If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</numerusform>
+Wenn der Papierkorb auf Ihrem Nextcloud-/ownCloud-Server aktiviert ist, sollten Sie sie von dort wiederherstellen können.</numerusform>
 </translation>
 </message>
 <message>
@@ -7503,15 +7503,15 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 <name>NoteTreeManager</name>
 <message>
 <source>External diff tool</source>
-<translation type="unfinished">External diff tool</translation>
+<translation>Externes Vergleichswerkzeug</translation>
 </message>
 <message>
 <source>Please select at least two notes to diff.</source>
-<translation type="unfinished">Please select at least two notes to diff.</translation>
+<translation>Bitte wählen Sie mindestens zwei Notizen zum Vergleichen aus.</translation>
 </message>
 <message>
 <source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
-<translation type="unfinished">The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</translation>
+<translation>Das externe Vergleichswerkzeug &lt;strong&gt;%1&lt;/strong&gt; konnte nicht gestartet werden.</translation>
 </message>
 <message>
 <source>New note</source>
@@ -7571,7 +7571,7 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 </message>
 <message>
 <source>Diff selected notes</source>
-<translation type="unfinished">Diff selected notes</translation>
+<translation>Ausgewählte Notizen vergleichen</translation>
 </message>
 <message>
 <source>Open note in external editor</source>
@@ -7672,11 +7672,11 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 </message>
 <message>
 <source>Searches without accented letters will also find text with accented letters, for example "avion" will also find "Avión". Searches with accented letters still only find exact matches. This only affects Latin letters. It is used for the note search and for the filters of the tag, note subfolder and navigation panels.</source>
-<translation type="unfinished">Searches without accented letters will also find text with accented letters, for example "avion" will also find "Avión". Searches with accented letters still only find exact matches. This only affects Latin letters. It is used for the note search and for the filters of the tag, note subfolder and navigation panels.</translation>
+<translation>Suchen ohne Akzente finden auch Text mit Akzenten, z. B. findet „avion“ auch „Avión“. Suchen mit Akzenten finden weiterhin nur genaue Übereinstimmungen. Dies betrifft nur lateinische Buchstaben. Gilt für die Notizsuche und die Filter der Schlagwort-, Notizunterordner- und Navigationsbereiche.</translation>
 </message>
 <message>
 <source>Ignore accents in search</source>
-<translation type="unfinished">Ignore accents in search</translation>
+<translation>Akzente bei der Suche ignorieren</translation>
 </message>
 <message>
 <source>Note folder panel</source>
@@ -7712,11 +7712,11 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 </message>
 <message>
 <source>When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</source>
-<translation type="unfinished">When enabled, a leading emoji in the note title will be used as the icon in the note list instead of the standard document icon</translation>
+<translation>Wenn aktiviert, wird ein führendes Emoji im Notiztitel statt des Standardsymbols als Symbol in der Notizliste verwendet</translation>
 </message>
 <message>
 <source>Show leading emoji from note title as icon in the note list</source>
-<translation type="unfinished">Show leading emoji from note title as icon in the note list</translation>
+<translation>Führendes Emoji des Notiztitels als Symbol in der Notizliste anzeigen</translation>
 </message>
 <message>
 <source>Notes larger than this will not be shown in the note list</source>
@@ -7873,39 +7873,39 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 <name>PlasmaActivitiesSettingsWidget</name>
 <message>
 <source>QOwnNotes must be shown on all KDE Plasma activities. Otherwise, activating its window from another activity can make Plasma switch back and restore the previous note folder and layout. Open the QOwnNotes window menu with Alt+F3 and select "Move to Activity &gt; All Activities".</source>
-<translation type="unfinished">QOwnNotes must be shown on all KDE Plasma activities. Otherwise, activating its window from another activity can make Plasma switch back and restore the previous note folder and layout. Open the QOwnNotes window menu with Alt+F3 and select "Move to Activity &gt; All Activities".</translation>
+<translation>QOwnNotes muss auf allen KDE-Plasma-Aktivitäten angezeigt werden. Andernfalls kann Plasma beim Aktivieren des Fensters aus einer anderen Aktivität zurückwechseln und den vorherigen Notizordner und das vorherige Layout wiederherstellen. Öffnen Sie mit Alt+F3 das QOwnNotes-Fenstermenü und wählen Sie „Auf Aktivität verschieben &gt; Alle Aktivitäten“.</translation>
 </message>
 <message>
 <source>KDE Plasma activities</source>
-<translation type="unfinished">KDE Plasma activities</translation>
+<translation>KDE-Plasma-Aktivitäten</translation>
 </message>
 <message>
 <source>Refresh activities</source>
-<translation type="unfinished">Refresh activities</translation>
+<translation>Aktivitäten aktualisieren</translation>
 </message>
 <message>
 <source>Note folder:</source>
-<translation type="unfinished">Note folder:</translation>
+<translation>Notizordner:</translation>
 </message>
 <message>
 <source>Layout:</source>
-<translation type="unfinished">Layout:</translation>
+<translation>Layout:</translation>
 </message>
 <message>
 <source>The KDE Plasma activity manager is not available on the session D-Bus.</source>
-<translation type="unfinished">The KDE Plasma activity manager is not available on the session D-Bus.</translation>
+<translation>Die KDE-Plasma-Aktivitätsverwaltung ist auf dem Sitzungs-D-Bus nicht verfügbar.</translation>
 </message>
 <message>
 <source>Activity manager connected. Current activity: %1</source>
-<translation type="unfinished">Activity manager connected. Current activity: %1</translation>
+<translation>Aktivitätsverwaltung verbunden. Aktuelle Aktivität: %1</translation>
 </message>
 <message>
 <source>KDE Plasma activities are only supported on Linux.</source>
-<translation type="unfinished">KDE Plasma activities are only supported on Linux.</translation>
+<translation>KDE-Plasma-Aktivitäten werden nur unter Linux unterstützt.</translation>
 </message>
 <message>
 <source>Do not change</source>
-<translation type="unfinished">Do not change</translation>
+<translation>Nicht ändern</translation>
 </message>
 </context>
 <context>
@@ -7948,7 +7948,7 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 </message>
 <message>
 <source>Export font:</source>
-<translation type="unfinished">Export font:</translation>
+<translation>Exportschriftart:</translation>
 </message>
 <message>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
@@ -7990,214 +7990,214 @@ Möchten Sie diese Dateien ebenfalls löschen?</numerusform>
 <name>QKeychain::DeletePasswordJobPrivate</name>
 <message>
 <source>Could not open keystore</source>
-<translation type="unfinished">Could not open keystore</translation>
+<translation>Schlüsselspeicher konnte nicht geöffnet werden</translation>
 </message>
 <message>
 <source>Could not remove private key from keystore</source>
-<translation type="unfinished">Could not remove private key from keystore</translation>
+<translation>Privater Schlüssel konnte nicht aus dem Schlüsselspeicher entfernt werden</translation>
 </message>
 <message>
 <source>Unknown error</source>
-<translation type="unfinished">Unknown error</translation>
+<translation>Unbekannter Fehler</translation>
 </message>
 <message>
 <source>Could not open wallet: %1; %2</source>
-<translation type="unfinished">Could not open wallet: %1; %2</translation>
+<translation>Passwortspeicher konnte nicht geöffnet werden: %1; %2</translation>
 </message>
 <message>
 <source>Password entry not found</source>
-<translation type="unfinished">Password entry not found</translation>
+<translation>Passworteintrag nicht gefunden</translation>
 </message>
 <message>
 <source>Could not delete password</source>
-<translation type="unfinished">Could not delete password</translation>
+<translation>Passwort konnte nicht gelöscht werden</translation>
 </message>
 </context>
 <context>
 <name>QKeychain::Job</name>
 <message>
 <source>Both service name and key are empty</source>
-<translation type="unfinished">Both service name and key are empty</translation>
+<translation>Dienstname und Schlüssel sind beide leer</translation>
 </message>
 </context>
 <context>
 <name>QKeychain::JobPrivate</name>
 <message>
 <source>Unknown error</source>
-<translation type="unfinished">Unknown error</translation>
+<translation>Unbekannter Fehler</translation>
 </message>
 <message>
 <source>Access to keychain denied</source>
-<translation type="unfinished">Access to keychain denied</translation>
+<translation>Zugriff auf den Schlüsselbund verweigert</translation>
 </message>
 </context>
 <context>
 <name>QKeychain::PlainTextStore</name>
 <message>
 <source>Could not store data in settings: access error</source>
-<translation type="unfinished">Could not store data in settings: access error</translation>
+<translation>Daten konnten nicht in den Einstellungen gespeichert werden: Zugriffsfehler</translation>
 </message>
 <message>
 <source>Could not store data in settings: format error</source>
-<translation type="unfinished">Could not store data in settings: format error</translation>
+<translation>Daten konnten nicht in den Einstellungen gespeichert werden: Formatfehler</translation>
 </message>
 <message>
 <source>Could not delete data from settings: access error</source>
-<translation type="unfinished">Could not delete data from settings: access error</translation>
+<translation>Daten konnten nicht aus den Einstellungen gelöscht werden: Zugriffsfehler</translation>
 </message>
 <message>
 <source>Could not delete data from settings: format error</source>
-<translation type="unfinished">Could not delete data from settings: format error</translation>
+<translation>Daten konnten nicht aus den Einstellungen gelöscht werden: Formatfehler</translation>
 </message>
 <message>
 <source>Entry not found</source>
-<translation type="unfinished">Entry not found</translation>
+<translation>Eintrag nicht gefunden</translation>
 </message>
 </context>
 <context>
 <name>QKeychain::ReadPasswordJobPrivate</name>
 <message>
 <source>Entry not found</source>
-<translation type="unfinished">Entry not found</translation>
+<translation>Eintrag nicht gefunden</translation>
 </message>
 <message>
 <source>Could not open keystore</source>
-<translation type="unfinished">Could not open keystore</translation>
+<translation>Schlüsselspeicher konnte nicht geöffnet werden</translation>
 </message>
 <message>
 <source>Could not retrieve private key from keystore</source>
-<translation type="unfinished">Could not retrieve private key from keystore</translation>
+<translation>Privater Schlüssel konnte nicht aus dem Schlüsselspeicher abgerufen werden</translation>
 </message>
 <message>
 <source>Encrypted data is too short</source>
-<translation type="unfinished">Encrypted data is too short</translation>
+<translation>Verschlüsselte Daten sind zu kurz</translation>
 </message>
 <message>
 <source>Could not create RSA decryption cipher</source>
-<translation type="unfinished">Could not create RSA decryption cipher</translation>
+<translation>RSA-Entschlüsselungsalgorithmus konnte nicht erstellt werden</translation>
 </message>
 <message>
 <source>Could not decrypt AES key: %1</source>
-<translation type="unfinished">Could not decrypt AES key: %1</translation>
+<translation>AES-Schlüssel konnte nicht entschlüsselt werden: %1</translation>
 </message>
 <message>
 <source>Could not create AES decryption cipher</source>
-<translation type="unfinished">Could not create AES decryption cipher</translation>
+<translation>AES-Entschlüsselungsalgorithmus konnte nicht erstellt werden</translation>
 </message>
 <message>
 <source>Could not create decryption cipher</source>
-<translation type="unfinished">Could not create decryption cipher</translation>
+<translation>Entschlüsselungsalgorithmus konnte nicht erstellt werden</translation>
 </message>
 <message>
 <source>D-Bus is not running</source>
-<translation type="unfinished">D-Bus is not running</translation>
+<translation>D-Bus läuft nicht</translation>
 </message>
 <message>
 <source>Unknown error</source>
-<translation type="unfinished">Unknown error</translation>
+<translation>Unbekannter Fehler</translation>
 </message>
 <message>
 <source>No keychain service available</source>
-<translation type="unfinished">No keychain service available</translation>
+<translation>Kein Schlüsselbunddienst verfügbar</translation>
 </message>
 <message>
 <source>Could not open wallet: %1; %2</source>
-<translation type="unfinished">Could not open wallet: %1; %2</translation>
+<translation>Passwortspeicher konnte nicht geöffnet werden: %1; %2</translation>
 </message>
 <message>
 <source>Access to keychain denied</source>
-<translation type="unfinished">Access to keychain denied</translation>
+<translation>Zugriff auf den Schlüsselbund verweigert</translation>
 </message>
 <message>
 <source>Could not determine data type: %1; %2</source>
-<translation type="unfinished">Could not determine data type: %1; %2</translation>
+<translation>Datentyp konnte nicht ermittelt werden: %1; %2</translation>
 </message>
 <message>
 <source>Unknown kwallet entry type '%1'</source>
-<translation type="unfinished">Unknown kwallet entry type '%1'</translation>
+<translation>Unbekannter KWallet-Eintragstyp „%1“</translation>
 </message>
 <message>
 <source>Password entry not found</source>
-<translation type="unfinished">Password entry not found</translation>
+<translation>Passworteintrag nicht gefunden</translation>
 </message>
 <message>
 <source>Could not decrypt data</source>
-<translation type="unfinished">Could not decrypt data</translation>
+<translation>Daten konnten nicht entschlüsselt werden</translation>
 </message>
 <message>
 <source>Could not decrypt data: %1</source>
-<translation type="unfinished">Could not decrypt data: %1</translation>
+<translation>Daten konnten nicht entschlüsselt werden: %1</translation>
 </message>
 </context>
 <context>
 <name>QKeychain::WritePasswordJobPrivate</name>
 <message>
 <source>Could not open keystore</source>
-<translation type="unfinished">Could not open keystore</translation>
+<translation>Schlüsselspeicher konnte nicht geöffnet werden</translation>
 </message>
 <message>
 <source>Could not create private key generator</source>
-<translation type="unfinished">Could not create private key generator</translation>
+<translation>Generator für private Schlüssel konnte nicht erstellt werden</translation>
 </message>
 <message>
 <source>Could not generate new private key</source>
-<translation type="unfinished">Could not generate new private key</translation>
+<translation>Neuer privater Schlüssel konnte nicht erzeugt werden</translation>
 </message>
 <message>
 <source>Could not retrieve private key from keystore</source>
-<translation type="unfinished">Could not retrieve private key from keystore</translation>
+<translation>Privater Schlüssel konnte nicht aus dem Schlüsselspeicher abgerufen werden</translation>
 </message>
 <message>
 <source>Could not generate AES key</source>
-<translation type="unfinished">Could not generate AES key</translation>
+<translation>AES-Schlüssel konnte nicht erzeugt werden</translation>
 </message>
 <message>
 <source>Could not generate IV</source>
-<translation type="unfinished">Could not generate IV</translation>
+<translation>Initialisierungsvektor konnte nicht erzeugt werden</translation>
 </message>
 <message>
 <source>Could not create AES encryption cipher</source>
-<translation type="unfinished">Could not create AES encryption cipher</translation>
+<translation>AES-Verschlüsselungsalgorithmus konnte nicht erstellt werden</translation>
 </message>
 <message>
 <source>Could not encrypt data: %1</source>
-<translation type="unfinished">Could not encrypt data: %1</translation>
+<translation>Daten konnten nicht verschlüsselt werden: %1</translation>
 </message>
 <message>
 <source>Could not create RSA encryption cipher</source>
-<translation type="unfinished">Could not create RSA encryption cipher</translation>
+<translation>RSA-Verschlüsselungsalgorithmus konnte nicht erstellt werden</translation>
 </message>
 <message>
 <source>Could not encrypt AES key: %1</source>
-<translation type="unfinished">Could not encrypt AES key: %1</translation>
+<translation>AES-Schlüssel konnte nicht verschlüsselt werden: %1</translation>
 </message>
 <message>
 <source>D-Bus is not running</source>
-<translation type="unfinished">D-Bus is not running</translation>
+<translation>D-Bus läuft nicht</translation>
 </message>
 <message>
 <source>Unknown error</source>
-<translation type="unfinished">Unknown error</translation>
+<translation>Unbekannter Fehler</translation>
 </message>
 <message>
 <source>Could not open wallet: %1; %2</source>
-<translation type="unfinished">Could not open wallet: %1; %2</translation>
+<translation>Passwortspeicher konnte nicht geöffnet werden: %1; %2</translation>
 </message>
 <message>
 <source>Encryption failed: %1</source>
-<translation type="unfinished">Encryption failed: %1</translation>
+<translation>Verschlüsselung fehlgeschlagen: %1</translation>
 </message>
 <message>
 <source>Credential size exceeds maximum size of %1: %2</source>
-<translation type="unfinished">Credential size exceeds maximum size of %1: %2</translation>
+<translation>Größe der Zugangsdaten überschreitet die maximale Größe von %1: %2</translation>
 </message>
 <message>
 <source>Credential key exceeds maximum size of %1</source>
-<translation type="unfinished">Credential key exceeds maximum size of %1</translation>
+<translation>Schlüssel der Zugangsdaten überschreitet die maximale Größe von %1</translation>
 </message>
 <message>
 <source>Writing credentials failed: %1</source>
-<translation type="unfinished">Writing credentials failed: %1</translation>
+<translation>Schreiben der Zugangsdaten fehlgeschlagen: %1</translation>
 </message>
 </context>
 <context>
@@ -8371,25 +8371,25 @@ Klicken Sie auf 'Abbrechen', um Ihre Änderungen zu verwerfen und die externe Ve
 <source>Your system switched to dark mode. Do you also want to turn on dark mode in QOwnNotes?
 
 Updating the interface takes a short while.</source>
-<translation type="unfinished">Your system switched to dark mode. Do you also want to turn on dark mode in QOwnNotes?
+<translation>Ihr System ist in den dunklen Modus gewechselt. Möchten Sie den dunklen Modus auch in QOwnNotes aktivieren?
 
-Updating the interface takes a short while.</translation>
+Das Aktualisieren der Oberfläche dauert einen kurzen Moment.</translation>
 </message>
 <message>
 <source>Your system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</translation>
+<translation>Ihr System scheint den dunklen Modus zu verwenden. Möchten Sie den dunklen Modus auch in QOwnNotes aktivieren?</translation>
 </message>
 <message>
 <source>Your system switched to light mode. Do you also want to turn off dark mode in QOwnNotes?
 
 Updating the interface takes a short while.</source>
-<translation type="unfinished">Your system switched to light mode. Do you also want to turn off dark mode in QOwnNotes?
+<translation>Ihr System ist in den hellen Modus gewechselt. Möchten Sie den dunklen Modus auch in QOwnNotes deaktivieren?
 
-Updating the interface takes a short while.</translation>
+Das Aktualisieren der Oberfläche dauert einen kurzen Moment.</translation>
 </message>
 <message>
 <source>Your system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
-<translation type="unfinished">Your system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</translation>
+<translation>Ihr System scheint den hellen Modus zu verwenden. Möchten Sie den dunklen Modus auch in QOwnNotes deaktivieren?</translation>
 </message>
 <message>
 <source>Double-click to unpin note from tab</source>
@@ -8441,15 +8441,15 @@ Updating the interface takes a short while.</translation>
 </message>
 <message>
 <source>Secure password storage</source>
-<translation type="unfinished">Secure password storage</translation>
+<translation>Sichere Passwortspeicherung</translation>
 </message>
 <message>
 <source>QOwnNotes needs to move your stored passwords and API keys to your operating system's secure credential store.
 
 Your system may now ask you to unlock the keychain, possibly more than once. This is expected. QOwnNotes does not receive your keychain password.</source>
-<translation type="unfinished">QOwnNotes needs to move your stored passwords and API keys to your operating system's secure credential store.
+<translation>QOwnNotes muss Ihre gespeicherten Passwörter und API-Schlüssel in den sicheren Zugangsdaten-Speicher Ihres Betriebssystems verschieben.
 
-Your system may now ask you to unlock the keychain, possibly more than once. This is expected. QOwnNotes does not receive your keychain password.</translation>
+Ihr System fordert Sie jetzt möglicherweise auf, den Schlüsselbund zu entsperren, eventuell mehrmals. Das ist normal. QOwnNotes erhält Ihr Schlüsselbundpasswort nicht.</translation>
 </message>
 <message>
 <source>Note folder not found!</source>
@@ -8563,7 +8563,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>System</source>
-<translation type="unfinished">System</translation>
+<translation>System</translation>
 </message>
 <message>
 <source>Dark</source>
@@ -8571,59 +8571,59 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Harper command is empty</source>
-<translation type="unfinished">Harper command is empty</translation>
+<translation>Der Harper-Befehl ist leer</translation>
 </message>
 <message>
 <source>Failed to start Harper command: %1</source>
-<translation type="unfinished">Failed to start Harper command: %1</translation>
+<translation>Harper-Befehl konnte nicht gestartet werden: %1</translation>
 </message>
 <message>
 <source>Failed to connect to Harper at %1:%2</source>
-<translation type="unfinished">Failed to connect to Harper at %1:%2</translation>
+<translation>Verbindung zu Harper unter %1:%2 fehlgeschlagen</translation>
 </message>
 <message>
 <source>Access to keychain denied</source>
-<translation type="unfinished">Access to keychain denied</translation>
+<translation>Zugriff auf den Schlüsselbund verweigert</translation>
 </message>
 <message>
 <source>No keyring daemon</source>
-<translation type="unfinished">No keyring daemon</translation>
+<translation>Kein Schlüsselbunddienst</translation>
 </message>
 <message>
 <source>Already unlocked</source>
-<translation type="unfinished">Already unlocked</translation>
+<translation>Bereits entsperrt</translation>
 </message>
 <message>
 <source>No such keyring</source>
-<translation type="unfinished">No such keyring</translation>
+<translation>Schlüsselbund nicht vorhanden</translation>
 </message>
 <message>
 <source>Bad arguments</source>
-<translation type="unfinished">Bad arguments</translation>
+<translation>Ungültige Argumente</translation>
 </message>
 <message>
 <source>I/O error</source>
-<translation type="unfinished">I/O error</translation>
+<translation>E/A-Fehler</translation>
 </message>
 <message>
 <source>Cancelled</source>
-<translation type="unfinished">Cancelled</translation>
+<translation>Abgebrochen</translation>
 </message>
 <message>
 <source>Keyring already exists</source>
-<translation type="unfinished">Keyring already exists</translation>
+<translation>Schlüsselbund bereits vorhanden</translation>
 </message>
 <message>
 <source>No match</source>
-<translation type="unfinished">No match</translation>
+<translation>Keine Übereinstimmung</translation>
 </message>
 <message>
 <source>Unknown error</source>
-<translation type="unfinished">Unknown error</translation>
+<translation>Unbekannter Fehler</translation>
 </message>
 <message>
 <source>Entry not found</source>
-<translation type="unfinished">Entry not found</translation>
+<translation>Eintrag nicht gefunden</translation>
 </message>
 </context>
 <context>
@@ -8667,7 +8667,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Insert &amp;footnote</source>
-<translation type="unfinished">Insert &amp;footnote</translation>
+<translation>&amp;Fußnote einfügen</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -8675,7 +8675,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Markdown operations</source>
-<translation type="unfinished">Markdown operations</translation>
+<translation>Markdown-Aktionen</translation>
 </message>
 <message>
 <source>Copy code block</source>
@@ -8711,7 +8711,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Edit table</source>
-<translation type="unfinished">Edit table</translation>
+<translation>Tabelle bearbeiten</translation>
 </message>
 <message>
 <source>Print</source>
@@ -8739,7 +8739,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Select</source>
-<translation type="unfinished">Select</translation>
+<translation>Auswählen</translation>
 </message>
 <message>
 <source>Custom actions</source>
@@ -8763,11 +8763,11 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Ignore this rule globally</source>
-<translation type="unfinished">Ignore this rule globally</translation>
+<translation>Diese Regel global ignorieren</translation>
 </message>
 <message>
 <source>Ignore rule %1 globally</source>
-<translation type="unfinished">Ignore rule %1 globally</translation>
+<translation>Regel %1 global ignorieren</translation>
 </message>
 <message>
 <source>LanguageTool</source>
@@ -8791,7 +8791,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Harper</source>
-<translation type="unfinished">Harper</translation>
+<translation>Harper</translation>
 </message>
 <message>
 <source>Markdown LSP server connected</source>
@@ -8838,7 +8838,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </message>
 <message>
 <source>Search in the selection only</source>
-<translation type="unfinished">Search in the selection only</translation>
+<translation>Nur in der Auswahl suchen</translation>
 </message>
 <message>
 <source>Plain text</source>
@@ -8987,7 +8987,7 @@ Sind Ordner und Datei beschreibbar?</translation>
 </message>
 <message>
 <source>Changelog:</source>
-<translation type="unfinished">Changelog:</translation>
+<translation>Änderungsprotokoll:</translation>
 </message>
 <message>
 <source>Installs the script</source>
@@ -8999,19 +8999,19 @@ Sind Ordner und Datei beschreibbar?</translation>
 </message>
 <message>
 <source>Updates all scripts that have updates</source>
-<translation type="unfinished">Updates all scripts that have updates</translation>
+<translation>Alle Skripte aktualisieren, für die Aktualisierungen verfügbar sind</translation>
 </message>
 <message>
 <source>Update all</source>
-<translation type="unfinished">Update all</translation>
+<translation>Alle aktualisieren</translation>
 </message>
 <message>
 <source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
-<translation type="unfinished">Automatically install available updates for scripts installed from the script repository during the startup update check</translation>
+<translation>Verfügbare Aktualisierungen für Skripte aus dem Skriptverzeichnis bei der Aktualisierungsprüfung beim Start automatisch installieren</translation>
 </message>
 <message>
 <source>Automatically update scripts</source>
-<translation type="unfinished">Automatically update scripts</translation>
+<translation>Skripte automatisch aktualisieren</translation>
 </message>
 <message>
 <source>Version:</source>
@@ -9087,11 +9087,11 @@ Sind Ordner und Datei beschreibbar?</translation>
 </message>
 <message>
 <source>Open changelog</source>
-<translation type="unfinished">Open changelog</translation>
+<translation>Änderungsprotokoll öffnen</translation>
 </message>
 <message>
 <source>Changes from version %1 to %2:</source>
-<translation type="unfinished">Changes from version %1 to %2:</translation>
+<translation>Änderungen von Version %1 zu %2:</translation>
 </message>
 <message>
 <source>Platform not supported!</source>
@@ -9129,9 +9129,9 @@ Möchten Sie es trotzdem installieren?</translation>
 </message>
 <message numerus="yes">
 <source>%n script update(s) were installed.</source>
-<translation type="unfinished">
-<numerusform>%n script update(s) were installed.</numerusform>
-<numerusform>%n script update(s) were installed.</numerusform>
+<translation>
+<numerusform>%n Skriptaktualisierung wurde installiert.</numerusform>
+<numerusform>%n Skriptaktualisierungen wurden installiert.</numerusform>
 </translation>
 </message>
 </context>
@@ -9357,15 +9357,15 @@ Möchten Sie es trotzdem installieren?</translation>
 </message>
 <message>
 <source>Layouts</source>
-<translation type="unfinished">Layouts</translation>
+<translation>Layouts</translation>
 </message>
 <message>
 <source>Harper</source>
-<translation type="unfinished">Harper</translation>
+<translation>Harper</translation>
 </message>
 <message>
 <source>Markdown LSP</source>
-<translation type="unfinished">Markdown LSP</translation>
+<translation>Markdown-LSP</translation>
 </message>
 <message>
 <source>Shortcuts</source>
@@ -9373,11 +9373,11 @@ Möchten Sie es trotzdem installieren?</translation>
 </message>
 <message>
 <source>Trash</source>
-<translation type="unfinished">Trash</translation>
+<translation>Papierkorb</translation>
 </message>
 <message>
 <source>Loading shortcuts: %v / %m</source>
-<translation type="unfinished">Loading shortcuts: %v / %m</translation>
+<translation>Tastenkombinationen werden geladen: %v / %m</translation>
 </message>
 <message>
 <source>Main window shortcuts</source>
@@ -9533,7 +9533,7 @@ Möchten Sie es trotzdem installieren?</translation>
 </message>
 <message>
 <source>KDE Plasma activities</source>
-<translation type="unfinished">KDE Plasma activities</translation>
+<translation>KDE-Plasma-Aktivitäten</translation>
 </message>
 <message>
 <source>disabled</source>
@@ -9576,19 +9576,19 @@ Möchten Sie es trotzdem installieren?</translation>
 </message>
 <message>
 <source>Optional password to protect the shared link, required if your server enforces passwords for shared links</source>
-<translation type="unfinished">Optional password to protect the shared link, required if your server enforces passwords for shared links</translation>
+<translation>Optionales Passwort zum Schutz des Freigabelinks; erforderlich, wenn Ihr Server Passwörter für Freigabelinks erzwingt</translation>
 </message>
 <message>
 <source>Password for the shared link (optional)</source>
-<translation type="unfinished">Password for the shared link (optional)</translation>
+<translation>Passwort für den Freigabelink (optional)</translation>
 </message>
 <message>
 <source>Share note on Nextcloud / ownCloud</source>
-<translation type="unfinished">Share note on Nextcloud / ownCloud</translation>
+<translation>Notiz auf Nextcloud / ownCloud freigeben</translation>
 </message>
 <message>
 <source>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-<translation type="unfinished">Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
+<translation>Die aktuelle Notizdatei auf Ihrem Nextcloud-/ownCloud-Server öffentlich freigeben. Sie können den erzeugten Link an andere senden, damit diese die Datei ansehen oder herunterladen können.</translation>
 </message>
 <message>
 <source>Allow note editing</source>
@@ -9600,7 +9600,7 @@ Möchten Sie es trotzdem installieren?</translation>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
-<translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</translation>
+<translation>Beachten Sie, dass Sie Ihre Notizen weiterhin mit dem Nextcloud-/ownCloud-Desktop-Synchronisierungsprogramm mit Ihrem Server synchronisieren müssen, um sie mit anderen teilen zu können!</translation>
 </message>
 </context>
 <context>
@@ -10486,15 +10486,15 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</source>
-<translation type="unfinished">You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+<translation>Sie können auf Ihren Nextcloud-/ownCloud-Server oder einen beliebigen CalDAV-Server zugreifen, um Ihre Aufgabenlisten zu verwalten.</translation>
 </message>
 <message>
 <source>For most current Nextcloud / ownCloud installations</source>
-<translation type="unfinished">For most current Nextcloud / ownCloud installations</translation>
+<translation>Für die meisten aktuellen Nextcloud-/ownCloud-Installationen</translation>
 </message>
 <message>
 <source>Default Nextcloud / ownCloud calendar</source>
-<translation type="unfinished">Default Nextcloud / ownCloud calendar</translation>
+<translation>Standardkalender von Nextcloud / ownCloud</translation>
 </message>
 <message>
 <source>CalDAV server settings</source>
@@ -10708,11 +10708,11 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
-<translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;Langsamer, aber mit Notizversionen&lt;/h3&gt;&lt;p&gt;Die Notiz wird mit allen Versionen auf Ihrem Nextcloud-/ownCloud-Server wiederhergestellt.&lt;/p&gt;&lt;p&gt;Sie müssen warten, bis sie durch Nextcloud-/ownCloud-Sync mit QOwnNotes synchronisiert wurde.&lt;/p&gt;</translation>
 </message>
 <message>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-<translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;Schneller, aber ohne Versionen&lt;/h3&gt;&lt;p&gt;Die Notiz wird mit dem Text aus der Vorschau erstellt.&lt;/p&gt;&lt;p&gt;Die Notizversionen auf Ihrem Nextcloud-/ownCloud-Server werden nicht wiederhergestellt und die Notiz bleibt im Papierkorb.&lt;/p&gt;&lt;p&gt;Sie können die Notiz und ihre Versionen jederzeit später wiederherstellen.&lt;/p&gt;</translation>
 </message>
 <message>
 <source>&amp;Delete</source>
@@ -10948,7 +10948,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 <name>VersionDialog</name>
 <message>
 <source>Note versions on your Nextcloud / ownCloud server</source>
-<translation type="unfinished">Note versions on your Nextcloud / ownCloud server</translation>
+<translation>Notizversionen auf Ihrem Nextcloud-/ownCloud-Server</translation>
 </message>
 <message>
 <source>Diff</source>
@@ -11018,11 +11018,11 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Test the connection to the server</source>
-<translation type="unfinished">Test the connection to the server</translation>
+<translation>Verbindung zum Server testen</translation>
 </message>
 <message>
 <source>Test connection</source>
-<translation type="unfinished">Test connection</translation>
+<translation>Verbindung testen</translation>
 </message>
 <message>
 <source>A web socket connection to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
@@ -11030,15 +11030,15 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Connection name:</source>
-<translation type="unfinished">Connection name:</translation>
+<translation>Verbindungsname:</translation>
 </message>
 <message>
 <source>The name used to identify this QOwnNotes instance to other connected devices</source>
-<translation type="unfinished">The name used to identify this QOwnNotes instance to other connected devices</translation>
+<translation>Der Name, unter dem andere verbundene Geräte diese QOwnNotes-Instanz erkennen</translation>
 </message>
 <message>
 <source>Reset to default connection name</source>
-<translation type="unfinished">Reset to default connection name</translation>
+<translation>Auf den Standardverbindungsnamen zurücksetzen</translation>
 </message>
 <message>
 <source>Security token:</source>
@@ -11054,11 +11054,11 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Connected devices</source>
-<translation type="unfinished">Connected devices</translation>
+<translation>Verbundene Geräte</translation>
 </message>
 <message>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Aktualisieren</translation>
 </message>
 <message>
 <source>Server URL:</source>
@@ -11082,15 +11082,15 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Connection test</source>
-<translation type="unfinished">Connection test</translation>
+<translation>Verbindungstest</translation>
 </message>
 <message>
 <source>Successfully connected to the web application server.</source>
-<translation type="unfinished">Successfully connected to the web application server.</translation>
+<translation>Verbindung zum Webanwendungsserver erfolgreich hergestellt.</translation>
 </message>
 <message>
 <source>Not connected to the web application server. Please check the server URL and your network connection.</source>
-<translation type="unfinished">Not connected to the web application server. Please check the server URL and your network connection.</translation>
+<translation>Keine Verbindung zum Webanwendungsserver. Bitte überprüfen Sie die Server-URL und Ihre Netzwerkverbindung.</translation>
 </message>
 </context>
 <context>
@@ -11307,7 +11307,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</source>
-<translation type="unfinished">Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</translation>
+<translation>Markdown-Notizen als Klartextdateien mit Nextcloud-/ownCloud-Integration</translation>
 </message>
 <message>
 <source>&amp;Back</source>
@@ -11343,15 +11343,15 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+<translation>Wenn Sie auf Ihre Notizversionen und Notizen im Papierkorb auf Ihrem Nextcloud-/ownCloud-Server zugreifen möchten, können Sie QOwnNotes jetzt dafür konfigurieren. Dies ist auch später jederzeit möglich.</translation>
 </message>
 <message>
 <source>Open cloud settings</source>
-<translation type="unfinished">Open cloud settings</translation>
+<translation>Cloud-Einstellungen öffnen</translation>
 </message>
 <message>
 <source>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</source>
-<translation type="unfinished">In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</translation>
+<translation>In jedem Fall benötigen Sie den Nextcloud-/ownCloud-Synchronisierungsclient (oder einen anderen Synchronisierungsclient), um Ihre Notizen mit Ihrem Nextcloud-/ownCloud-Server zu synchronisieren.</translation>
 </message>
 <message>
 <source>Open network settings</source>
@@ -11434,11 +11434,11 @@ Kann nicht rückgängig gemacht werden!</translation>
 </message>
 <message>
 <source>Prints the decrypted text of an encrypted note file.</source>
-<translation type="unfinished">Prints the decrypted text of an encrypted note file.</translation>
+<translation>Gibt den entschlüsselten Text einer verschlüsselten Notizdatei aus.</translation>
 </message>
 <message>
 <source>Password for --decrypt-note.</source>
-<translation type="unfinished">Password for --decrypt-note.</translation>
+<translation>Passwort für --decrypt-note.</translation>
 </message>
 <message>
 <source>Single application mode is not supported on your system!</source>

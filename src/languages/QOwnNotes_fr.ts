@@ -253,7 +253,7 @@
 </message>
 <message>
 <source>%1: ok</source>
-<translation type="unfinished">%1: ok</translation>
+<translation>%1 : ok</translation>
 </message>
 <message>
 <source>not enabled</source>
