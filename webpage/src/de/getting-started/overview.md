@@ -50,7 +50,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 
 - **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - **Schemata-Unterstützung** für die Hervorhebung von **Markdown-Syntax**
 - Alle **Schaltflächen können platziert werden, wo immer Sie möchten**, sie können sogar **schweben** oder **gestapelt werden** (vollständig dockbar)
 - Unterstützung für **Freedesktop-Schemasymbole**. Sie können QOwnNotes mit Ihren **originalen Desktop-Symbolen** und mit Ihrem bevorzugten **dunklen Desktop-Design** verwenden

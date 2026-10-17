@@ -21,15 +21,18 @@ graph TB
         homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+        qon-nc("QOwnNotes Nextcloud App")-->ncs[("Nextcloud server")]
+        qon-api("QOwnNotesApi")-->ncs
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     qon-mob("QOwnNotes Android")-->nc-notes-app
     qon-mob-->qon-api
+    qon-mob-->qon-nc
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
+    qon-->qon-nc
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
@@ -47,6 +50,7 @@ graph TB
     click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-nc "/getting-started/concept.html#qownnotes-nextcloud-app" "QOwnNotes Nextcloud App to edit your notes in the web and to provide the APIs for QOwnNotes Desktop and Android"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
@@ -61,7 +65,7 @@ graph TB
 
 - QOwnNotes **يخزن الملاحظات** في **مجلد ملاحظاتك كملفات ماركداون (Markdown)**
 - يستطيع التواصل مع خادم Nextcloud أو ownCloud الخاص بك **حتى يشارك ملاحظاتك علنًا** مع الناس الآخرين
-- تستطيع أيضا **الوصول إلى تاريخ ملاحظاتك وملاحظاتك المهملة** على خادم Nextcloud أو ownCloud الخاص بك عبر [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
+- You can also **access your note history and trash** on your Nextcloud / ownCloud server via the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) or the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - يمكن الوصول إلى قوائم مهامك على خادم Nextcloud أو ownCloud من داخل QOwnNotes
 - **QOwnNotes لا يزامن ملاحظاتك** ولا ملفات الوسائط أو المرفقات!
   - مزامنة الملفات هي مَسعًى معقد، ويوجد بالفعل حلول مزامنة ملفات عظيمة (انظر [عميل مزامنة Nextcloud الحاسوبي](#nextcloud-desktop-sync-client))
@@ -178,12 +182,29 @@ Please visit [Harper](../editor/harper.md) for more information.
 بالطبع يمكن استخدام حلول أخرى، مثل **Dropbox** أو **Syncthing** أو **Seafile** أو BitTorrent Sync، لاستضافة ملاحظاتك والملفات الأخرى.
 :::
 
+## QOwnNotes Nextcloud App
+
+[**QOwnNotes for Nextcloud**](https://github.com/qownnotes/qownnotes-nextcloud) lets you **edit your notes in the web**, including **note subfolders** and **tags**, and provides the server APIs for QOwnNotes Desktop and QOwnNotes Android.
+
+- Notes stay **plain Markdown files** in your Nextcloud
+- Tags are shared with QOwnNotes Desktop and Android through the note folder's `notes.sqlite`
+- Access to your server-side **trashed notes** and **note versions**
+- Replaces the [QOwnNotesAPI Nextcloud app](#qownnotesapi-nextcloud-app) and, for QOwnNotes Android, the [Nextcloud Notes server app](#nextcloud-notes-server-app)
+
+::: tip
+Please visit [QOwnNotes Nextcloud App](qownnotes-nextcloud.md) for more information.
+:::
+
 ## QOwnNotesAPI Nextcloud app
 
 يتيح لك [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) الوصول إلى **ملاحظاتك المهملة** و**نسخ ملاحظاتك** الموجودة على الخادم.
 
 ::: tip
-برجاء زيارة [QOwnNotesAPI Nextcloud App](qownnotesapi.md) للمزيد من المعلومات.
+On Nextcloud, the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) replaces QOwnNotesAPI. QOwnNotesAPI stays maintained for a transition period, and it stays the only option for ownCloud servers.
+
+- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 ## تطبيق خادم Nextcloud Notes

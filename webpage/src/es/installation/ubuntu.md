@@ -26,9 +26,9 @@ Si encuentra algún problema, ¡por favor repórtelo en la página de [incidenci
 
 ## QOwnNotes Qt5 Legado
 
-Para versiones anteriores compatibles de Ubuntu Linux, elementary OS, o Linux Mint 18 o más reciente, puede usar la versión de QOwnNotes con Qt5.
+The Qt5 PPA is no longer updated. Existing packages remain available for older Ubuntu Linux, elementary OS and Linux Mint installations that cannot use the Qt6 PPA.
 
-Instale **QOwnNotes** en **Ubuntu Linux** (mínimo 20.04) usando el repositorio PPA.
+Install the final Qt5 package on **Ubuntu Linux** (minimum 20.04) using the PPA repository.
 
 Tenga en cuenta que también hay paquetes para ARM en el repositorio, en caso de que desee utilizar QOwnNotes en una **Raspberry Pi**.
 
@@ -50,7 +50,7 @@ Véase [Instalar como AppImage](./appimage.md) para obtener más información.
 
 ## Repositorio de OBS
 
-También puede usar QOwnNotes en versiones de Ubuntu que ya no se actualizan más en Ubuntu Launchpad. Puede usar los repositorios de [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop). Los paquetes para Ubuntu 24.04+ están construidos con cmake y Qt6.
+The [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop-cmake3) also provides QOwnNotes packages built with CMake and Qt6 for Ubuntu 24.04 and newer. The older Qt5 OBS package is no longer updated.
 
 A continuación se muestran llamadas de ejemplo para el repositorio de xUbuntu 24.04.
 

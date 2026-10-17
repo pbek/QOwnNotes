@@ -50,7 +50,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 
 - **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - Ondersteuning voor **Thema's** bij de **Markdown syntaxisaccentuering**
 - Alle **panelen kunnen worden geplaatst waar u maar wilt**, ze kunnen zelfs **zweven** of **stapelen** (volledig dockbaar)
 - Ondersteuning voor **freedesktop-themapictogrammen**, u kunt QOwnNotes gebruiken met uw **native bureaubladpictogrammen** en met uw favoriete **donkere bureaubladthema**

@@ -50,7 +50,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 
 - A jegyzetek **jelölésének kiemelése** és egy **jelölés előnézeti mód**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - **Theming support** for the **Markdown syntax highlighting**
 - Minden **panel tetszőlegesen elhelyezhető**, akár **lebeghet** vagy **teljesen dokkolható**
 - Támogatja a **freedesktop téma ikonokat**, használhatja a QOwnNotes programot a **natív asztali ikonokkal** és a kedvenc **sötét asztali témájával**

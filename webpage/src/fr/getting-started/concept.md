@@ -21,15 +21,18 @@ graph TB
         homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+        qon-nc("QOwnNotes Nextcloud App")-->ncs[("Nextcloud server")]
+        qon-api("QOwnNotesApi")-->ncs
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     qon-mob("QOwnNotes Android")-->nc-notes-app
     qon-mob-->qon-api
+    qon-mob-->qon-nc
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
+    qon-->qon-nc
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
@@ -47,6 +50,7 @@ graph TB
     click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-nc "/getting-started/concept.html#qownnotes-nextcloud-app" "QOwnNotes Nextcloud App to edit your notes in the web and to provide the APIs for QOwnNotes Desktop and Android"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
@@ -61,7 +65,7 @@ graph TB
 
 - QOwnNotes **stocke les notes** dans votre dossier de notes **sous forme de fichiers Markdown**
 - Il peut parler à votre serveur Nextcloud / ownCloud **pour partager publiquement des notes** avec d'autres personnes
-- Vous pouvez également **accéder à l'historique de vos notes et à la corbeille** sur votre serveur Nextcloud / ownCloud via l'application [QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
+- You can also **access your note history and trash** on your Nextcloud / ownCloud server via the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) or the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - Les listes de tâches sur votre serveur Nextcloud / ownCloud sont accessibles depuis QOwnNotes
 - **QOwnNotes ne synchronise pas vos notes** et vos fichiers multimédias / pièces jointes !
   - La synchronisation de fichiers est une entreprise complexe, il existe déjà d'excellentes solutions de synchronisation de fichiers (voir [Client de synchronisation de bureau Nextcloud](#nextcloud-desktop-sync-client))
@@ -122,7 +126,7 @@ Visitez [Gestionnaire de snippets en ligne de commande QOwnNotes](command-line-s
 
 ## TUI QOwnNotes
 
-Vous pouvez **parcourir et modifier vos notes dans le terminal** avec la [TUI de QOwnNotes](https://github.com/qownnotes/qownnotes-tui) orientée-clavier. Elle fonctionne directement sur vos fichiers de note Markdown locaux et **utilise les dossiers de notes configurés dans QOwnNotes**, selon ses préférences en terme de tri de notes.
+Vous pouvez **parcourir et modifier vos notes dans le terminal** avec la [TUI de QOwnNotes](https://github.com/qownnotes/qownnotes-tui) orientée-clavier. Elle fonctionne directement sur vos fichiers de note Markdown locaux et **utilise les dossiers de notes configurés dans QOwnNotes**, selon ses préférences en termes de tri de notes.
 
 ::: tip
 Visitez [TUI QOwnNotes](qownnotes-tui.md) pour plus d’informations.
@@ -178,12 +182,29 @@ Il existe une [liste de fournisseurs Nextcloud gérée par la communauté](https
 Bien sûr, d'autres solutions comme **Dropbox**, **Syncthing**, **Seafile** ou BitTorrent Sync peuvent également être utilisées pour héberger vos notes ou d'autres fichiers.
 :::
 
+## QOwnNotes Nextcloud App
+
+[**QOwnNotes for Nextcloud**](https://github.com/qownnotes/qownnotes-nextcloud) lets you **edit your notes in the web**, including **note subfolders** and **tags**, and provides the server APIs for QOwnNotes Desktop and QOwnNotes Android.
+
+- Notes stay **plain Markdown files** in your Nextcloud
+- Tags are shared with QOwnNotes Desktop and Android through the note folder's `notes.sqlite`
+- Access to your server-side **trashed notes** and **note versions**
+- Replaces the [QOwnNotesAPI Nextcloud app](#qownnotesapi-nextcloud-app) and, for QOwnNotes Android, the [Nextcloud Notes server app](#nextcloud-notes-server-app)
+
+::: tip
+Please visit [QOwnNotes Nextcloud App](qownnotes-nextcloud.md) for more information.
+:::
+
 ## Application QOwnNotesAPI pour Nextcloud
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) vous permet d'accéder à vos **notes mises à la corbeille** et **versions de notes** côté serveur.
 
 ::: tip
-Visitez [App QOwnNotesAPI Nextcloud](qownnotesapi.md) pour plus d'informations.
+On Nextcloud, the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) replaces QOwnNotesAPI. QOwnNotesAPI stays maintained for a transition period, and it stays the only option for ownCloud servers.
+
+- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 ## Application serveur Nextcloud Notes

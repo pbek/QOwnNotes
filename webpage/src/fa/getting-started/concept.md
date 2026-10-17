@@ -21,15 +21,18 @@ graph TB
         homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+        qon-nc("QOwnNotes Nextcloud App")-->ncs[("Nextcloud server")]
+        qon-api("QOwnNotesApi")-->ncs
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     qon-mob("QOwnNotes Android")-->nc-notes-app
     qon-mob-->qon-api
+    qon-mob-->qon-nc
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
+    qon-->qon-nc
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
@@ -47,6 +50,7 @@ graph TB
     click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-nc "/getting-started/concept.html#qownnotes-nextcloud-app" "QOwnNotes Nextcloud App to edit your notes in the web and to provide the APIs for QOwnNotes Desktop and Android"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
@@ -61,7 +65,7 @@ graph TB
 
 - QOwnNotes **یادداشت ها** را **به صورت پرونده های مارک داون در پوشه یادداشت** شما ذخیره می کند
 - به منظور اشتراک گذاری عمومی یادداشت ها با دیگران می تواند با سرور نکست کلود یا اون کلود گفتگو کند
-- علاوه بر این، می توانید به **تاریخچه یادداشت و سطل زباله خود** در سرور نکست کلود یا اون کلود تان از طریق [برنامه QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app) دسترسی داشته باشید
+- You can also **access your note history and trash** on your Nextcloud / ownCloud server via the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) or the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - لیست های انجام دادنی در سرور نکست کلود یا اون کلود تان از QOwnNotes قابل دسترسی هستند
 - **QOwnNotes یادداشت های شما** و پرونده های رسانه یا پیوست را همگام سازی نمی کند!
   - همگام سازی پرونده یک فعل پیچیده است و در حال حاضر به غیر از آن راه حل های همگام سازی پرونده بهتری در دسترس قرار دارند ([مشتری همگام سازی دسکتاپ نکست کلود](#nextcloud-desktop-sync-client) را ملاحظه کنید)
@@ -178,12 +182,29 @@ Please visit [Harper](../editor/harper.md) for more information.
 البته راهکارهای دیگری مانند **Dropbox**، **Syncthing**، **Seafile**، یا BitTorrent Sync را نیز می توان برای میزبانی یادداشت ها و سایر پرونده ها بکار برد.
 :::
 
+## QOwnNotes Nextcloud App
+
+[**QOwnNotes for Nextcloud**](https://github.com/qownnotes/qownnotes-nextcloud) lets you **edit your notes in the web**, including **note subfolders** and **tags**, and provides the server APIs for QOwnNotes Desktop and QOwnNotes Android.
+
+- Notes stay **plain Markdown files** in your Nextcloud
+- Tags are shared with QOwnNotes Desktop and Android through the note folder's `notes.sqlite`
+- Access to your server-side **trashed notes** and **note versions**
+- Replaces the [QOwnNotesAPI Nextcloud app](#qownnotesapi-nextcloud-app) and, for QOwnNotes Android, the [Nextcloud Notes server app](#nextcloud-notes-server-app)
+
+::: tip
+Please visit [QOwnNotes Nextcloud App](qownnotes-nextcloud.md) for more information.
+:::
+
 ## برنامه QOwnNotesAPI Nextcloud
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) اجازه دسترسی به شما برای **نسخه ‌های یادداشت** و **یادداشت های حذف شده** سمت سرورتان را می دهد.
 
 ::: tip
-برای اطلاعات بیشتر لطفاً نگاهی به [برنامه QOwnNotesAPI Nextcloud](qownnotesapi.md) بیندازید.
+On Nextcloud, the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) replaces QOwnNotesAPI. QOwnNotesAPI stays maintained for a transition period, and it stays the only option for ownCloud servers.
+
+- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 ## برنامه سرور Nextcloud Notes

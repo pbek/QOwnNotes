@@ -252,6 +252,10 @@
 <translation>versión %1 demasiado baja</translation>
 </message>
 <message>
+<source>%1: ok</source>
+<translation type="unfinished">%1: ok</translation>
+</message>
+<message>
 <source>not enabled</source>
 <translation>desactivado</translation>
 </message>
@@ -312,6 +316,10 @@
 <translation>Mensaje de error del servidor de CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
+<source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</source>
+<translation type="unfinished">Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</translation>
+</message>
+<message>
 <source>No bookmarks</source>
 <translation>No hay marcadores</translation>
 </message>
@@ -339,8 +347,8 @@
 <translation type="unfinished">Your Nextcloud / ownCloud server</translation>
 </message>
 <message>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+<source>Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
+<translation type="unfinished">Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -435,8 +443,12 @@
 <translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
-<source>Enable QOwnNotesAPI app support</source>
-<translation type="unfinished">Enable QOwnNotesAPI app support</translation>
+<source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
+<translation type="unfinished">Enable QOwnNotes / QOwnNotesAPI server app support</translation>
+</message>
+<message>
+<source>connection to QOwnNotes / QOwnNotesAPI</source>
+<translation type="unfinished">connection to QOwnNotes / QOwnNotesAPI</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -471,10 +483,6 @@
 <translation>nombre de usuario y contraseña correctos</translation>
 </message>
 <message>
-<source>connection to QOwnNotesAPI</source>
-<translation>conexión a QOwnNotesAPI</translation>
-</message>
-<message>
 <source>versions app enabled on server</source>
 <translation type="unfinished">versions app enabled on server</translation>
 </message>
@@ -505,18 +513,18 @@
 <message>
 <source>The connection was made successfully!
 Server version: %1
-QOwnNotesAPI version: %2</source>
+Server app version: %2</source>
 <translation type="unfinished">The connection was made successfully!
 Server version: %1
-QOwnNotesAPI version: %2</translation>
+Server app version: %2</translation>
 </message>
 <message>
 <source>There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
+You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
 <translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
+You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
 
 Connection error message: </translation>
 </message>
@@ -604,6 +612,26 @@ Connection error message: </translation>
 <translation>Seleccione el esquema de colores del editor para este modo de colores</translation>
 </message>
 <message>
+<source>Accent color</source>
+<translation type="unfinished">Accent color</translation>
+</message>
+<message>
+<source>Select the color that is used for selected text and selected items, like the current note in the note list</source>
+<translation type="unfinished">Select the color that is used for selected text and selected items, like the current note in the note list</translation>
+</message>
+<message>
+<source>Select color</source>
+<translation type="unfinished">Select color</translation>
+</message>
+<message>
+<source>Use the default accent color</source>
+<translation type="unfinished">Use the default accent color</translation>
+</message>
+<message>
+<source>Reset</source>
+<translation type="unfinished">Reset</translation>
+</message>
+<message>
 <source>New color mode</source>
 <translation>Nuevo modo de colores</translation>
 </message>
@@ -618,6 +646,14 @@ Connection error message: </translation>
 <message>
 <source>Color mode</source>
 <translation>Modo de colores</translation>
+</message>
+<message>
+<source>Default</source>
+<translation type="unfinished">Default</translation>
+</message>
+<message>
+<source>Select accent color</source>
+<translation type="unfinished">Select accent color</translation>
 </message>
 </context>
 <context>
@@ -1247,6 +1283,21 @@ Connection error message: </translation>
 </message>
 </context>
 <context>
+<name>DocumentOverviewWidget</name>
+<message>
+<source>Document overview: click or drag to navigate</source>
+<translation type="unfinished">Document overview: click or drag to navigate</translation>
+</message>
+<message>
+<source>Document overview</source>
+<translation type="unfinished">Document overview</translation>
+</message>
+<message>
+<source>Document overview: visible lines %1-%2; click or drag to navigate</source>
+<translation type="unfinished">Document overview: visible lines %1-%2; click or drag to navigate</translation>
+</message>
+</context>
+<context>
 <name>EditorFontColorSettingsWidget</name>
 <message>
 <source>Fonts</source>
@@ -1294,6 +1345,14 @@ Connection error message: </translation>
 <message>
 <source>Fully highlight blockquotes</source>
 <translation>Resaltar completamente las citas en bloque</translation>
+</message>
+<message>
+<source>Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</source>
+<translation type="unfinished">Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</translation>
+</message>
+<message>
+<source>Highlight and apply Markdown text formatting across multiple lines</source>
+<translation type="unfinished">Highlight and apply Markdown text formatting across multiple lines</translation>
 </message>
 <message>
 <source>Editor options</source>
@@ -2258,6 +2317,10 @@ Connection error message: </translation>
 <translation>Espacio al final</translation>
 </message>
 <message>
+<source>Whitespace marker</source>
+<translation type="unfinished">Whitespace marker</translation>
+</message>
+<message>
 <source>This item will be used to preset colors for the other items</source>
 <translation>Este elemento se usará para predefinir colores para los otros elementos</translation>
 </message>
@@ -2314,14 +2377,6 @@ Connection error message: </translation>
 <translation>Notificar sobre todas las modificaciones externas de la nota actual</translation>
 </message>
 <message>
-<source>By default the headline will generated automatically</source>
-<translation>Por defecto el título se generará automáticamente</translation>
-</message>
-<message>
-<source>The shortcut to create a new note asks for a headline</source>
-<translation>El atajo para crear una nueva nota necesita un título</translation>
-</message>
-<message>
 <source>Do this at your own risk!</source>
 <translation>¡Haga esto bajo su propio riesgo!</translation>
 </message>
@@ -2342,6 +2397,14 @@ Connection error message: </translation>
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
 <translation>Es posible que experimente problemas de sincronización con versiones anteriores de Nextcloud/ownCloud Sync al ir muy por debajo de los 10 segundos.
 Simplemente compruebe si se producen conflictos de sincronización y, en ese caso, establezca un valor más alto.</translation>
+</message>
+<message>
+<source>By default the note name will be generated automatically</source>
+<translation type="unfinished">By default the note name will be generated automatically</translation>
+</message>
+<message>
+<source>The shortcut to create a new note asks for a note name</source>
+<translation type="unfinished">The shortcut to create a new note asks for a note name</translation>
 </message>
 <message>
 <source>Use Setext style headings for generated new note titles instead of ATX style headings</source>
@@ -3391,6 +3454,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>Estilo de la interfaz</translation>
 </message>
 <message>
+<source>Font rendering (Windows)</source>
+<translation type="unfinished">Font rendering (Windows)</translation>
+</message>
+<message>
+<source>Automatic uses GDI when Windows font smoothing is disabled. Changes take effect after restarting the application.</source>
+<translation type="unfinished">Automatic uses GDI when Windows font smoothing is disabled. Changes take effect after restarting the application.</translation>
+</message>
+<message>
 <source>Icons</source>
 <translation>Iconos</translation>
 </message>
@@ -3461,6 +3532,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Hide status bar in distraction free mode</source>
 <translation>Ocultar la barra de estado en el modo sin distracciones</translation>
+</message>
+<message>
+<source>Automatic (follow Windows font smoothing)</source>
+<translation type="unfinished">Automatic (follow Windows font smoothing)</translation>
+</message>
+<message>
+<source>DirectWrite</source>
+<translation type="unfinished">DirectWrite</translation>
+</message>
+<message>
+<source>GDI (legacy)</source>
+<translation type="unfinished">GDI (legacy)</translation>
 </message>
 <message>
 <source>Menu bar</source>
@@ -3580,6 +3663,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Language:</source>
 <translation>Idioma:</translation>
+</message>
+<message>
+<source>Username:</source>
+<translation type="unfinished">Username:</translation>
+</message>
+<message>
+<source>Optional premium account username (e.g. your email address)</source>
+<translation type="unfinished">Optional premium account username (e.g. your email address)</translation>
 </message>
 <message>
 <source>API key:</source>
@@ -3856,6 +3947,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation type="unfinished">Selected layout</translation>
 </message>
 <message>
+<source>The central widget cannot be hidden. Select "No central widget" to allow hiding the note edit or note preview panel.</source>
+<translation type="unfinished">The central widget cannot be hidden. Select "No central widget" to allow hiding the note edit or note preview panel.</translation>
+</message>
+<message>
 <source>Create layout from preset</source>
 <translation type="unfinished">Create layout from preset</translation>
 </message>
@@ -3889,19 +3984,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 <message>
 <source>Layout name:</source>
-<translation type="unfinished">Layout name:</translation>
+<translation>Nombre del diseño:</translation>
 </message>
 <message>
 <source>Remove layout</source>
-<translation type="unfinished">Remove layout</translation>
+<translation>Eliminar diseño</translation>
 </message>
 <message>
 <source>Remove the selected layout?</source>
-<translation type="unfinished">Remove the selected layout?</translation>
+<translation>¿Eliminar el diseño seleccionado?</translation>
 </message>
 <message>
 <source>Rename layout</source>
-<translation type="unfinished">Rename layout</translation>
+<translation>Renombrar diseño</translation>
 </message>
 </context>
 <context>
@@ -4375,7 +4470,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 </message>
 <message>
 <source>Select</source>
-<translation type="unfinished">Select</translation>
+<translation>Seleccionar</translation>
 </message>
 <message>
 <source>Extra</source>
@@ -4754,6 +4849,10 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
 <message>
 <source>Insert checkbox list item</source>
 <translation type="unfinished">Insert checkbox list item</translation>
+</message>
+<message>
+<source>Insert &amp;footnote</source>
+<translation type="unfinished">Insert &amp;footnote</translation>
 </message>
 <message>
 <source>Search selected text on the web</source>
@@ -5596,6 +5695,26 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Relaciones de la nota</translation>
 </message>
 <message>
+<source>Note folder "%1" does not exist</source>
+<translation type="unfinished">Note folder "%1" does not exist</translation>
+</message>
+<message>
+<source>Switched to note folder "%1"</source>
+<translation type="unfinished">Switched to note folder "%1"</translation>
+</message>
+<message>
+<source>Switched to layout "%1"</source>
+<translation type="unfinished">Switched to layout "%1"</translation>
+</message>
+<message>
+<source>KDE Plasma activity changed: %1</source>
+<translation type="unfinished">KDE Plasma activity changed: %1</translation>
+</message>
+<message>
+<source>Document overview</source>
+<translation type="unfinished">Document overview</translation>
+</message>
+<message>
 <source>Log</source>
 <translation>Registro</translation>
 </message>
@@ -5706,6 +5825,26 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
 <translation>Las notas eliminadas actualmente se cargan desde el servidor de Nextcloud/ownCloud</translation>
+</message>
+<message>
+<source>Insert note file</source>
+<translation type="unfinished">Insert note file</translation>
+</message>
+<message>
+<source>How should the file &lt;strong&gt;%1&lt;/strong&gt; be handled?</source>
+<translation type="unfinished">How should the file &lt;strong&gt;%1&lt;/strong&gt; be handled?</translation>
+</message>
+<message>
+<source>Add as &amp;new note</source>
+<translation type="unfinished">Add as &amp;new note</translation>
+</message>
+<message>
+<source>Insert as &amp;attachment</source>
+<translation type="unfinished">Insert as &amp;attachment</translation>
+</message>
+<message>
+<source>The current note is read-only and cannot accept attachments.</source>
+<translation type="unfinished">The current note is read-only and cannot accept attachments.</translation>
 </message>
 <message>
 <source>Paste as &amp;text file attachment</source>
@@ -6252,6 +6391,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 </message>
 </context>
 <context>
+<name>NewNoteDialog</name>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Note name</source>
+<translation type="unfinished">Note name</translation>
+</message>
+</context>
+<context>
 <name>NextcloudDeckDialog</name>
 <message>
 <source>-10min</source>
@@ -6268,6 +6418,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>-1d</source>
 <translation>-1d</translation>
+</message>
+<message>
+<source>Move card to another board or stack</source>
+<translation type="unfinished">Move card to another board or stack</translation>
+</message>
+<message>
+<source>Move…</source>
+<translation type="unfinished">Move…</translation>
 </message>
 <message>
 <source>Archive card</source>
@@ -6381,8 +6539,32 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <translation>Eliminar tarjeta(s)</translation>
 </message>
 <message>
+<source>Move card(s)</source>
+<translation type="unfinished">Move card(s)</translation>
+</message>
+<message>
+<source>The current card has unsaved changes. Discard them and move the saved card?</source>
+<translation type="unfinished">The current card has unsaved changes. Discard them and move the saved card?</translation>
+</message>
+<message>
+<source>Destination board / stack:</source>
+<translation type="unfinished">Destination board / stack:</translation>
+</message>
+<message>
+<source>There is no other board or stack available. Reload the boards and stacks and try again.</source>
+<translation type="unfinished">There is no other board or stack available. Reload the boards and stacks and try again.</translation>
+</message>
+<message>
+<source>Move</source>
+<translation type="unfinished">Move</translation>
+</message>
+<message>
 <source>%1 / %2</source>
 <translation>%1/%2</translation>
+</message>
+<message>
+<source>The due date is in the past</source>
+<translation type="unfinished">The due date is in the past</translation>
 </message>
 <message>
 <source>No due date</source>
@@ -6407,6 +6589,13 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>&amp;Search for card link in notes</source>
 <translation>Bu&amp;scar un enlace de carta en notas</translation>
+</message>
+<message numerus="yes">
+<source>&amp;Move %n card(s)…</source>
+<translation type="unfinished">
+<numerusform/>
+<numerusform/>
+</translation>
 </message>
 <message numerus="yes">
 <source>&amp;Delete %n card(s)</source>
@@ -6445,6 +6634,18 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Archiving the card failed with status code %1 and message: %2</source>
 <translation>El archivado de la tarjeta falló con el código de estado %1 y el mensaje: %2</translation>
+</message>
+<message>
+<source>Error while moving card</source>
+<translation type="unfinished">Error while moving card</translation>
+</message>
+<message>
+<source>Moving the card timed out. Reload the cards to check its location.</source>
+<translation type="unfinished">Moving the card timed out. Reload the cards to check its location.</translation>
+</message>
+<message>
+<source>Moving the card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Moving the card failed with status code %1 and message: %2</translation>
 </message>
 <message>
 <source>Deleting the card failed with status code %1 and message: %2</source>
@@ -6605,6 +6806,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Escriba la &lt;strong&gt;contraseña&lt;/strong&gt; para cifrar la nota.&lt;br /&gt;Tenga en cuenta que debe &lt;strong&gt;recordar&lt;/strong&gt; su contraseña para leer el contenido de la nota&lt; br /&gt; ¡y que &lt;strong&gt;solo&lt;/strong&gt; puede hacer esto &lt;strong&gt;en QOwnNotes&lt;/strong&gt;!</translation>
+</message>
+<message>
+<source>Note can't be encrypted!</source>
+<translation type="unfinished">Note can't be encrypted!</translation>
+</message>
+<message>
+<source>Encryption failed. The note has not been changed.</source>
+<translation type="unfinished">Encryption failed. The note has not been changed.</translation>
 </message>
 <message>
 <source>Decrypt note and store it as plain text</source>
@@ -6912,6 +7121,10 @@ Restore current note?</source>
 <source>Notes directory was modified externally</source>
 <translation>El directorio de notas fue modificado externamente</translation>
 </message>
+<message>
+<source>Notes database reloaded after external change</source>
+<translation type="unfinished">Notes database reloaded after external change</translation>
+</message>
 <message numerus="yes">
 <source>Stored %n note(s) to disk</source>
 <translation>
@@ -7103,14 +7316,6 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
 <message>
 <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
 <translation>¿Dividir la nota en la posición actual del cursor? El texto después del cursor se moverá a una nueva nota. Esta nueva nota se enlazará a la anterior.</translation>
-</message>
-<message>
-<source>New note</source>
-<translation>Nueva nota</translation>
-</message>
-<message>
-<source>Note headline</source>
-<translation>Título de la nota</translation>
 </message>
 <message>
 <source>The deleted note(s) had &lt;strong&gt;%1 image(s)&lt;/strong&gt; and &lt;strong&gt;%2 attachment(s)&lt;/strong&gt; that are not used in any other note.
@@ -7465,6 +7670,14 @@ Do you want to delete those files as well?</source>
 <translation>Abrir notas recién creadas en una nueva pestaña</translation>
 </message>
 <message>
+<source>Searches without accented letters will also find text with accented letters, for example "avion" will also find "Avión". Searches with accented letters still only find exact matches. This only affects Latin letters. It is used for the note search and for the filters of the tag, note subfolder and navigation panels.</source>
+<translation type="unfinished">Searches without accented letters will also find text with accented letters, for example "avion" will also find "Avión". Searches with accented letters still only find exact matches. This only affects Latin letters. It is used for the note search and for the filters of the tag, note subfolder and navigation panels.</translation>
+</message>
+<message>
+<source>Ignore accents in search</source>
+<translation type="unfinished">Ignore accents in search</translation>
+</message>
+<message>
 <source>Note folder panel</source>
 <translation>Panel de carpeta de notas</translation>
 </message>
@@ -7656,6 +7869,45 @@ Do you want to delete those files as well?</source>
 </message>
 </context>
 <context>
+<name>PlasmaActivitiesSettingsWidget</name>
+<message>
+<source>QOwnNotes must be shown on all KDE Plasma activities. Otherwise, activating its window from another activity can make Plasma switch back and restore the previous note folder and layout. Open the QOwnNotes window menu with Alt+F3 and select "Move to Activity &gt; All Activities".</source>
+<translation type="unfinished">QOwnNotes must be shown on all KDE Plasma activities. Otherwise, activating its window from another activity can make Plasma switch back and restore the previous note folder and layout. Open the QOwnNotes window menu with Alt+F3 and select "Move to Activity &gt; All Activities".</translation>
+</message>
+<message>
+<source>KDE Plasma activities</source>
+<translation type="unfinished">KDE Plasma activities</translation>
+</message>
+<message>
+<source>Refresh activities</source>
+<translation type="unfinished">Refresh activities</translation>
+</message>
+<message>
+<source>Note folder:</source>
+<translation type="unfinished">Note folder:</translation>
+</message>
+<message>
+<source>Layout:</source>
+<translation type="unfinished">Layout:</translation>
+</message>
+<message>
+<source>The KDE Plasma activity manager is not available on the session D-Bus.</source>
+<translation type="unfinished">The KDE Plasma activity manager is not available on the session D-Bus.</translation>
+</message>
+<message>
+<source>Activity manager connected. Current activity: %1</source>
+<translation type="unfinished">Activity manager connected. Current activity: %1</translation>
+</message>
+<message>
+<source>KDE Plasma activities are only supported on Linux.</source>
+<translation type="unfinished">KDE Plasma activities are only supported on Linux.</translation>
+</message>
+<message>
+<source>Do not change</source>
+<translation type="unfinished">Do not change</translation>
+</message>
+</context>
+<context>
 <name>PreviewFontSettingsWidget</name>
 <message>
 <source>Rendering</source>
@@ -7692,6 +7944,10 @@ Do you want to delete those files as well?</source>
 <message>
 <source>Exporting</source>
 <translation>Exportando</translation>
+</message>
+<message>
+<source>Export font:</source>
+<translation type="unfinished">Export font:</translation>
 </message>
 <message>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
@@ -8183,6 +8439,18 @@ La actualización de la interfaz tarda un momento.</translation>
 <translation>Predeterminado</translation>
 </message>
 <message>
+<source>Secure password storage</source>
+<translation type="unfinished">Secure password storage</translation>
+</message>
+<message>
+<source>QOwnNotes needs to move your stored passwords and API keys to your operating system's secure credential store.
+
+Your system may now ask you to unlock the keychain, possibly more than once. This is expected. QOwnNotes does not receive your keychain password.</source>
+<translation type="unfinished">QOwnNotes needs to move your stored passwords and API keys to your operating system's secure credential store.
+
+Your system may now ask you to unlock the keychain, possibly more than once. This is expected. QOwnNotes does not receive your keychain password.</translation>
+</message>
+<message>
 <source>Note folder not found!</source>
 <translation>¡Carpeta no encontrada!</translation>
 </message>
@@ -8239,10 +8507,6 @@ La actualización de la interfaz tarda un momento.</translation>
 <message>
 <source>Could not parse login url!</source>
 <translation>¡No se pudo procesar la URL de acceso!</translation>
-</message>
-<message>
-<source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
-<translation>Está utilizando el modo de instancia de aplicación única, que evita que la aplicación se inicie por segunda vez. Para el próximo lanzamiento de la aplicación, el modo de instancia de aplicación única estará deshabilitado, de modo que la aplicación pueda reiniciarse antes de salir de esta instancia.</translation>
 </message>
 <message>
 <source>Note '%1' does not exist. Create it?</source>
@@ -8399,6 +8663,10 @@ La actualización de la interfaz tarda un momento.</translation>
 <message>
 <source>Insert block &amp;quote</source>
 <translation>Insertar cita en blo&amp;que</translation>
+</message>
+<message>
+<source>Insert &amp;footnote</source>
+<translation type="unfinished">Insert &amp;footnote</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -9262,6 +9530,10 @@ Do you want to install it anyway?</source>
 <translation>activado</translation>
 </message>
 <message>
+<source>KDE Plasma activities</source>
+<translation type="unfinished">KDE Plasma activities</translation>
+</message>
+<message>
 <source>disabled</source>
 <translation>deshabilitado</translation>
 </message>
@@ -9299,6 +9571,14 @@ Do you want to install it anyway?</source>
 <message>
 <source>Share note</source>
 <translation>Compartir nota</translation>
+</message>
+<message>
+<source>Optional password to protect the shared link, required if your server enforces passwords for shared links</source>
+<translation type="unfinished">Optional password to protect the shared link, required if your server enforces passwords for shared links</translation>
+</message>
+<message>
+<source>Password for the shared link (optional)</source>
+<translation type="unfinished">Password for the shared link (optional)</translation>
 </message>
 <message>
 <source>Share note on Nextcloud / ownCloud</source>

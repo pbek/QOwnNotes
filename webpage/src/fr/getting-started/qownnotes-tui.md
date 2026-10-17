@@ -11,7 +11,7 @@ de commencer à travailler directement avec vos notes existantes.
 
 ![TUI QOwnNotes](/img/qownnotes-tui.webp "Parcourez et modifiez vos notes dans le terminal")
 
-- Elle utilise les **dossiers de notes configurés dans QOwnNotes** et suit ses préférences en terme de tri de notes
+- Elle utilise les **dossiers de notes configurés dans QOwnNotes** et suit ses préférences en termes de tri de notes
   (la base de données d’application de QOwnNotes est ouverte en lecture-seule)
 - Il est possible de **créer, modifier, rechercher, coloriser syntaxiquement, renommer** et **supprimer en sécurité** des notes depuis le terminal
 - Les changements sont **sauvegardés automatiquement** et les conflits de changements externes sont détectés

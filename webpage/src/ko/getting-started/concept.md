@@ -21,15 +21,18 @@ graph TB
         homepage("Homepage dashboard")-->qon
     end
     subgraph Your Nextcloud server
-        qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
+        qon-nc("QOwnNotes Nextcloud App")-->ncs[("Nextcloud server")]
+        qon-api("QOwnNotesApi")-->ncs
         nc-notes-app("Nextcloud Notes")-->ncs
         nc-deck-app("Nextcloud Deck")-->ncs
     end
 
     qon-mob("QOwnNotes Android")-->nc-notes-app
     qon-mob-->qon-api
+    qon-mob-->qon-nc
     qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
+    qon-->qon-nc
     qon-->ncs
     qon-->nc-deck-app
     sync-->ncs
@@ -47,6 +50,7 @@ graph TB
     click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
     click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
     click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-nc "/getting-started/concept.html#qownnotes-nextcloud-app" "QOwnNotes Nextcloud App to edit your notes in the web and to provide the APIs for QOwnNotes Desktop and Android"
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
@@ -61,7 +65,7 @@ graph TB
 
 - QOwnNotes는 **노트 폴더에 마크다운 파일**로 **노트를 저장**합니다
 - Nextcloud / ownCloud 서버와 대화하여 다른 사람과 **공개적으로 노트를 공유 **할 수 있습니다
-- 또한 [QOwnNotesApi Nextcloud 앱](#qownnotesapi-nextcloud-app)을 통해 Nextcloud / ownCloud 서버의 **노트 기록 및 휴지통에 액세스**할 수 있습니다
+- You can also **access your note history and trash** on your Nextcloud / ownCloud server via the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) or the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - QOwnNotes 내에서 Nextcloud / ownCloud 서버의 작업관리 목록에 액세스할 수 있습니다
 - **QOwnNotes**QOwnNotes 는 노트와 미디어/첨부 파일을 동기화하지 않습니다!
   - 파일 동기화는 복잡한 작업입니다. 이미 우수한 파일 동기화 솔루션이 있습니다 ([Nextcloud 데스크탑 동기화 클라이언트](#nextcloud-desktop-sync-client) 참조)
@@ -178,12 +182,29 @@ QOwnNotes는 편집기에서 로컬 [하퍼](https://writewithharper.com/) 서�
 물론 **Dropbox**, **Syncthing**, **Seafile** 또는 BitTorrent Sync와 같은 다른 솔루션도 노트 및 기타 파일을 호스팅하는 데 사용할 수 있습니다.
 :::
 
+## QOwnNotes Nextcloud App
+
+[**QOwnNotes for Nextcloud**](https://github.com/qownnotes/qownnotes-nextcloud) lets you **edit your notes in the web**, including **note subfolders** and **tags**, and provides the server APIs for QOwnNotes Desktop and QOwnNotes Android.
+
+- Notes stay **plain Markdown files** in your Nextcloud
+- Tags are shared with QOwnNotes Desktop and Android through the note folder's `notes.sqlite`
+- Access to your server-side **trashed notes** and **note versions**
+- Replaces the [QOwnNotesAPI Nextcloud app](#qownnotesapi-nextcloud-app) and, for QOwnNotes Android, the [Nextcloud Notes server app](#nextcloud-notes-server-app)
+
+::: tip
+Please visit [QOwnNotes Nextcloud App](qownnotes-nextcloud.md) for more information.
+:::
+
 ## QOwnNotesAPI Nextcloud 앱
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi)를 사용하여 서버 측의 **휴지통 노트** 및 **노트 버전**에 액세스할 수 있습니다.
 
 ::: tip
-자세한 내용은 [QOwnNotesAPI Nextcloud 앱](qownnotesapi.md)을 참조하세요
+On Nextcloud, the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) replaces QOwnNotesAPI. QOwnNotesAPI stays maintained for a transition period, and it stays the only option for ownCloud servers.
+
+- [Nextcloud Apps page](https://apps.nextcloud.com/apps/qownnotesapi)
+- [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
+
 :::
 
 ## Nextcloud 노트 서버 앱

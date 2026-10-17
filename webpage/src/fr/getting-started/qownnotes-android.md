@@ -12,54 +12,53 @@ vous donnant accès à la synchronisation des notes, à l’historique distant d
 
 ## Fonctionnalités
 
-- **Offline-first**: Room database as the local source of truth; edits are
-  cached immediately and synchronized when the server is reachable
-- **Nextcloud Notes API 1.2+** with incremental pulls, ETags, and
-  conflict-safe updates
-- **Single Sign-On** import from the Nextcloud Files Android app
-- **Note version history** and **remote trash browsing** via the optional
-  QOwnNotesAPI Nextcloud app
-- **Favorites** with offline toggling and favorites-first ordering
-- **Markdown rendering** for CommonMark, GitHub Flavored Markdown, checkbox
-  lists with three states (open, done, partial), wiki links, tables, fenced
-  code blocks, and remote images
-- **Markdown editor** with formatting actions, undo/redo, cursor preservation,
-  and local draft persistence
-- **Share-to-create** notes from text shared by other Android apps
-- **Light and dark themes** on Android 9+
+- **Orienté hors-ligne** : utilisation d’une base de données Room comme source locale de vérité,
+  les modifications sont immédiatement mises en caches et sont synchronisées quand le serveur
+  est atteignable
+- **API Nextcloud Notes 1.2+** avec poussages automatiques, ETags, et mises à jour sans conflits
+- Import de l’**authentification unique** (SSO) depuis l’application Android Nextcloud Files
+- **Historique de versions de notes** et **exploration de la corbeille distante** via l’application
+  Nextcloud optionnelle QOwnNotesAPI
+- **Favoris** avec possibilité de les garder hors-ligne et d’effectuer un tri avec les favoris en premier
+- **Prévisualisation Markdown** supportant CommonMark, GitHub Flavored Markdown, les listes
+  de cases à cocher à trois états (à faire, fait et partiel), les liens-wiki, les tableaux, les blocs de
+  code délimités et les images distantes
+- **Éditeur Markdown** avec des actions de formatage, annuler/rétablir, préservation de curseur
+  et persistance des brouillons locaux
+- **Partager pour créer** des notes à partir de texte partagé par les autres applications Android
+- **Thèmes clair et sombre** sur Android 9+
 
 ## Installation
 
-Visit the [latest release page](https://github.com/qownnotes/qownnotes-android/releases/latest)
-and download the APK.
+Visitez la [page de dernière version](https://github.com/qownnotes/qownnotes-android/releases/latest) et téléchargez l’APK.
 
-Development builds are published alongside stable releases and can be installed
-side-by-side (different application ID).
+Des versions de développement sont construites et publiées en parallèle des versions stables et peuvent
+être installées simultanément (avec deux identifiants d’application différents).
 
 ## Configuration de compte Nextcloud
 
-1. Install the **Nextcloud Files** Android app and sign in to your server.
-2. Open QOwnNotes for Android and choose **Add Nextcloud account**.
-3. The app requires the **Nextcloud Notes** server app with Notes API 1.2 or
-   newer.
-4. If you also install the **QOwnNotesAPI** Nextcloud app, you gain access to
-   note version history and the server-side trash bin.
+1. Installez l’application Android **Nextcloud Files** et connectez-vous à votre serveur.
+2. Ouvrez QOwnNotes pour Android et choisissez **Ajouter un compte Nextcloud**.
+3. L’application requiert l’application **Nextcloud Notes** sur votre serveur avec l’API
+   Notes 1.2 ou une version ultérieure.
+4. Si vous installez aussi l’application Nextcloud **QOwnNotesAPI**, vous obtenez l’accès à
+   votre historique de versions de notes et à la corbeille distante.
 
 ::: tip
-Credentials stay in Nextcloud's SSO integration and are not copied into the
-QOwnNotes database.
+Les identifiants/mots de passe restent dans l’intégration SSO de Nextcloud et ne sont pas copiés dans
+la base de données de QOwnNotes.
 :::
 
-## Key differences from the Nextcloud Notes mobile app
+## Différences principales avec l’application mobile Nextcloud Notes
 
-| Fonctionnalité                              | QOwnNotes Android | Nextcloud Notes mobile |
-| ------------------------------------------- | ----------------- | ---------------------- |
-| Offline editing with conflict detection     | Oui               | Limité                 |
-| Note version history via QOwnNotesAPI       | Oui               | Non                    |
-| Remote trash browsing and restore           | Oui               | Non                    |
-| Favorites with offline toggle               | Oui               | Non                    |
-| Three-state checkbox lists                  | Oui               | Non                    |
-| Wiki-link and legacy `note://` link support | Oui               | Non                    |
+| Fonctionnalité                                            | QOwnNotes Android | Nextcloud Notes mobile |
+| --------------------------------------------------------- | ----------------- | ---------------------- |
+| Modification hors-ligne avec détection de conflits        | Oui               | Limité                 |
+| Historique de versions de notes via QOwnNotesAPI          | Oui               | Non                    |
+| Corbeille distante et restauration                        | Oui               | Non                    |
+| Favoris avec option hors-ligne                            | Oui               | Non                    |
+| Liste de cases à cocher à trois états                     | Oui               | Non                    |
+| Liens-wiki et prise en charge des anciers liens `note://` | Oui               | Non                    |
 
 ## Plus d’informations
 

@@ -50,7 +50,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 
 - **Podświetlanie przecen** notatek i **tryb podglądu przecen**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - **Theming support** for the **Markdown syntax highlighting**
 - Wszystkie **panele można umieścić w dowolnym miejscu**, mogą nawet **unosić się** lub **ustawiać w stos** (w pełni dokowalne)
 - Obsługa **ikon motywów freedesktop**, możesz używać QOwnNotes ze swoimi **natywnymi ikonami pulpitu** oraz ze swoim ulubionym **ciemnym motywem pulpitu**

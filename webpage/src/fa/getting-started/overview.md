@@ -50,7 +50,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 
 - **برجسته سازی مارک داون** یادداشت ها و **حالت پیش نمایش مارک داون**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - **Theming support** for the **Markdown syntax highlighting**
 - همه **پنل ها در هر جایی که می خواهید می توانند قرار بگیرند**، حتی می توانند **شناور** یا **انباشته** باشند (کاملاً قابل اتصال)
 - با پشتیبانی از **شمایل های پوسته freedesktop**، می توانید با **شمایل های دسکتاپ مجلی** و با **پوسته دسکتاپ تاریک** و محبوب خود از QOwnNotes بهره مند شوید

@@ -818,9 +818,11 @@ var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
  * Fetches all tags by doing a substring search on the name field
  *
  * @param name {QString} name to search for
+ * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
+ *                             (optional, default: false)
  * @return {QStringList} list of tag names
  */
-QStringList ScriptingService::searchTagsByName(QString name);
+QStringList ScriptingService::searchTagsByName(QString name, bool ignoreAccents = false);
 ```
 
 ### مثال
@@ -828,6 +830,9 @@ QStringList ScriptingService::searchTagsByName(QString name);
 ```js
 // searches for all tags with the word game in it
 var tags = script.searchTagsByName("game");
+
+// searches for all tags with the word café or cafe in it
+var tags = script.searchTagsByName("cafe", true);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/autocompletion.qml).
@@ -843,15 +848,21 @@ var tags = script.searchTagsByName("game");
  * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
  * can only transfer the note ids
  *
+ * @param text {QString} text to search for
+ * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
+ *                             (optional, default: false)
  * @return {QList<int>} list of note ids
  */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
+QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text, bool ignoreAccents = false);
 ```
 
 ### مثال
 
 ```js
 var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
+
+// also finds notes with "Avión" or "avion" in the note text
+var accentInsensitiveNoteIds = script.fetchNoteIdsByNoteTextPart("avion", true);
 
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
@@ -1577,6 +1588,72 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 يمكنك الحصول على أسماء كائنات إجراءات القائمة من [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/main/src/mainwindow.ui). فقط ابحث بالعنوان الإنجليزي للقائمة. لاحظ أن هذه النصوص قد تتغير بمرور الوقت.
 :::
 
+## Working with color modes
+
+Color modes (like _System_ and _Dark_) can be managed in the _Color modes_ settings. They bundle the dark mode, icon theme and editor color schema settings.
+
+### نداء الدالة ومُعامِلاتها
+
+```cpp
+/**
+ * Returns a list of all color modes, every entry is a map with the keys
+ * "id", "name", "isDarkMode", "isBuiltIn", "isCurrent", "editorColorSchemaKey",
+ * "editorColorSchemaName" and "accentColor" (empty if the default accent color is used)
+ *
+ * @return {QVariantList}
+ */
+QVariantList ScriptingService::getColorModes();
+
+/**
+ * Returns the id of the currently active color mode
+ *
+ * @return {QString}
+ */
+QString ScriptingService::getCurrentColorModeId();
+
+/**
+ * Switches to a color mode, including its editor color schema
+ *
+ * @param idOrName {QString} the id of the color mode (see getColorModes()), if no
+ *                           color mode with that id exists, the first color mode
+ *                           with that name is used
+ * @return {bool} true if the color mode exists and was switched to
+ */
+bool ScriptingService::switchToColorMode(QString idOrName);
+```
+
+### مثال
+
+```js
+// List all color modes
+script.getColorModes().forEach(function (mode) {
+  script.log(
+    mode.name +
+      " (" +
+      mode.id +
+      "), editor color schema: " +
+      mode.editorColorSchemaName,
+  );
+});
+
+// Toggle between the built-in light ("System") and dark color mode
+const isDark = script.getCurrentColorModeId() === "ColorMode-dark";
+script.switchToColorMode(isDark ? "ColorMode-light" : "ColorMode-dark");
+
+// Switch to a custom color mode by its name
+if (!script.switchToColorMode("My color mode")) {
+  script.log("Color mode not found");
+}
+```
+
+You may want to take a look at the example [toggle-color-mode.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/toggle-color-mode.qml).
+
+::: tip
+The built-in color modes have the ids `ColorMode-light` and `ColorMode-dark`. Custom color modes get a generated id like `ColorMode-3f2a9c1e-...`, which is different from the name you entered in the settings. That's why `script.switchToColorMode()` also accepts the name of a color mode. The id is checked first, then the first color mode with exactly that name (case-sensitive) is used. Keep in mind that names don't need to be unique, they can be renamed at any time, and the name of the built-in light color mode ("System") is translated, so for the built-in color modes better use their ids.
+
+Stylesheets added with `script.addStyleSheet()` are kept when the color mode is switched.
+:::
+
 ## إظهار حوار إدخال بصندوق اختيار
 
 ### نداء الدالة ومُعامِلاتها
@@ -1768,7 +1845,7 @@ if (script.fileExists(filePath)) {
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### مثال
+### Example
 
 ```js
 var result = script.writeToFile(filePath, html);
@@ -1776,6 +1853,75 @@ script.log(result);
 ```
 
 ربما تحب أن تلقي نظرة على المثال [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/export-notes-as-one-html.qml).
+
+## Formatting dates and times
+
+You don't need to write your own date formatting function in your scripts. The QML engine already provides `Qt.formatDateTime`, `Qt.formatDate` and `Qt.formatTime` to format a JavaScript `Date` object with a format string.
+
+### Method call and parameters
+
+```js
+/**
+ * @param date {Date} the date to format
+ * @param format {string} a format string like "yyyy-MM-dd HH:mm"
+ * @return {string} the formatted date
+ */
+string Qt.formatDateTime(Date date, string format);
+string Qt.formatDate(Date date, string format);
+string Qt.formatTime(Date date, string format);
+```
+
+Commonly used placeholders are:
+
+| Placeholder | Meaning                                 | Example     |
+| ----------- | --------------------------------------- | ----------- |
+| `yyyy`      | Year with four digits                   | `2026`      |
+| `yy`        | Year with two digits                    | `26`        |
+| `MM`        | Month with leading zero                 | `09`        |
+| `M`         | Month without leading zero              | `9`         |
+| `MMM`       | Abbreviated localized month name        | `Sep`       |
+| `MMMM`      | Full localized month name               | `September` |
+| `dd`        | Day with leading zero                   | `05`        |
+| `d`         | Day without leading zero                | `5`         |
+| `ddd`       | Abbreviated localized day name          | `Tue`       |
+| `dddd`      | Full localized day name                 | `Tuesday`   |
+| `HH`        | Hour (0-23) with leading zero           | `07`        |
+| `hh`        | Hour with leading zero (1-12 with `AP`) | `07`        |
+| `mm`        | Minute with leading zero                | `04`        |
+| `ss`        | Second with leading zero                | `09`        |
+| `AP` / `ap` | AM/PM or am/pm                          | `AM`        |
+
+Text inside single quotes is not interpreted as a placeholder, for example `"yyyy-MM-dd 'at' HH:mm"`.
+
+For all available placeholders please take a look at the Qt documentation of [QDateTime::toString](https://doc.qt.io/qt-6/qdatetime.html#toString) and of [Qt.formatDateTime](https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method).
+
+::: tip
+The placeholders are case-sensitive. `yyyy` is the year and `MM` is the month, while `mm` is the minute. Placeholders like `YYYY` or `DD`, which are known from other date libraries, are not supported. ISO week numbers are also not supported by the format strings.
+:::
+
+### Example
+
+```js
+var date = new Date();
+
+// "2026-09-29"
+script.log(Qt.formatDateTime(date, "yyyy-MM-dd"));
+
+// "20260929"
+script.log(Qt.formatDateTime(date, "yyyyMMdd"));
+
+// "Tuesday, 29. September 2026 at 14:05"
+script.log(Qt.formatDateTime(date, "dddd, d. MMMM yyyy 'at' HH:mm"));
+
+// Tag the current note with the current year and month, like "2026-09"
+script.tagCurrentNote(Qt.formatDateTime(date, "yyyy-MM"));
+
+// Also works with the dates of a note
+var note = script.currentNote();
+script.log(Qt.formatDateTime(note.fileLastModified, "yyyy-MM-dd HH:mm:ss"));
+```
+
+You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/journal-entry.qml).
 
 ## العمل مع مقابس الويب
 
@@ -1791,7 +1937,7 @@ script.log(result);
 
 يمكنك إضافة قواعد تلوين إلى المحرر مباشرةً، بتعريف تعابير نمطية وإسنادها إلى حالة تلوين.
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 
 ```cpp
 /**
@@ -1846,7 +1992,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | LinkInternal           | 34    |
 | Whitespace             | 35    |
 
-### مثال
+### Example
 
 ```js
 // Highlight a text line like "BLOCK: some text" as blockquote (state 18)

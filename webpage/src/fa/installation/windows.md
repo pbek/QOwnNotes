@@ -18,16 +18,15 @@ Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](http
 
 ## Windows 8.1 and older
 
-Qt dropped support for Windows XP with version 5.8, but QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to still use it. Windows 8.1 has issues with the regular QOwnNotes build, because it was built on a newer Windows SDK.
+The Windows release is built with **Qt6** and needs at least **Windows 10**.
 
-شما باید فایل فشرده را از [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts) دانلود کرده و به داخل پوشه مورد نظر از حالت فشرده خارج کنید.
+The legacy Qt 5.7 build for Windows XP to Windows 8.1 is no longer updated. The final version is **QOwnNotes 26.10.0**, which you can download as [QOwnNotes-Qt5.7-legacy.zip](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip) ([SHA-256 checksum](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip.sha256sum)) from the [26.10.0 release on GitHub](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.0).
 
-در این صورت می ‌توانید `QOwnNotes.exe` را از آن پوشه به طور مستقیم و بدون نیاز به نصب اجرا کنید.
+Unzip it to a folder of your liking and run `QOwnNotes.exe` from that folder, no installation is required.
 
 ::: tip
 Info
-مکانیسم بروزرسانی خودکار با سازه AppVeyor برای ویندوز XP کار نمی کند!
-شما باید خودتان انتشارهای جدید را بارگیری کنید.
+The automatic update mechanism does not work with the legacy build!
 :::
 
 ## چاکلتلی

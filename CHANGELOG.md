@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 26.10.8
+
+- Added more French, Spanish, Japanese translation (thank you, jd-develop, AlejandroMoc, spamcutters)
+
 ## 26.10.7
 
 - Migrated the Snap Store edge build from the legacy Qt5/core22 recipe to Qt6/core26,

@@ -19,16 +19,15 @@
 
 ## Windows 8.1 이상
 
-Qt는 버전 5.8의 Windows XP 지원을 중단했지만, 이제 QOwnNotes도 Qt 5.7과 함께 구축되어 Windows XP 사용자가 계속 사용할 수 있게 되었습니다. Windows 8.1은 최신 Windows SDK를 기반으로 구축되었기 때문에 일반적인 QOwnNotes 빌드에 문제가 있습니다.
+The Windows release is built with **Qt6** and needs at least **Windows 10**.
 
-직접 [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/build/artifacts)에서 ZIP 파일을 다운로드하여 원하는 폴더에 압축을 풀어야 합니다.
+The legacy Qt 5.7 build for Windows XP to Windows 8.1 is no longer updated. The final version is **QOwnNotes 26.10.0**, which you can download as [QOwnNotes-Qt5.7-legacy.zip](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip) ([SHA-256 checksum](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip.sha256sum)) from the [26.10.0 release on GitHub](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.0).
 
-그런 다음 해당 폴더에서 `QOwnNotes.exe`를 직접 실행할 수 있으며, 설치할 필요가 없습니다.
+Unzip it to a folder of your liking and run `QOwnNotes.exe` from that folder, no installation is required.
 
 ::: tip
-정보
-자동 업데이트 메커니즘은 Windows XP용 AppVeyor 빌드와 함께 작동하지 않습니다!
-새 릴리스를 직접 다운로드해야 합니다.
+Info
+The automatic update mechanism does not work with the legacy build!
 :::
 
 ## Chocolatey

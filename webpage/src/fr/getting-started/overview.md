@@ -50,7 +50,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 
 - **Mise en évidence du Markdown** des notes et un **mode de prévisualisation de Markdown**
   - Inclut des **aperçus d’image en-ligne**, **le repliement des titres Markdown** et le masquage optionnel de la syntaxe de formatage Markdown
-- **Prise en charge du thème sombre** avec activation/désactivation en temps réel et des **modes de couleur** personnalisés
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - **Prise en charge de la personnalisation des couleurs** pour la **mise en évidence de la syntaxe Markdown**
 - Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **s'empiler** (entièrement ancrable)
 - Prise en charge des **icônes de thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**

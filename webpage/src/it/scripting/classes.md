@@ -31,7 +31,7 @@ class NoteApi {
 };
 ```
 
-Puoi usare i metodi di [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) per lavorare con `fileCreated` o `fileLastModified`.
+You can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) to work with `fileCreated` or `fileLastModified`. To format them you can use `Qt.formatDateTime`, see [Formatting dates and times](methods-and-objects.md#formatting-dates-and-times).
 
 ### Esempio
 
@@ -174,9 +174,7 @@ mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
 // Inserts html in the current note as markdown
-mainWindow.insertHtmlAsMarkdownIntoCurrentNote(
-  "<h2>my headline</h2>some text"
-);
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
 // Set 'Edit' layout as current layout
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));

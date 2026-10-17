@@ -50,7 +50,7 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 
 - **تلوين ماركداون** للملاحظات **ووضع معاينة لماركداون**
   - Includes **inline image previews**, **Markdown heading folding**, and optional hiding of Markdown formatting syntax
-- **Dark mode theme support** with live switching and custom **color modes**
+- **Dark mode theme support** with live switching and custom **color modes** with their own **accent color**
 - **دعم السمات** في **تلوين ماركداون**
 - جميع **اللوحات تستطيع وضعها أينما شئت**؛ يمكن حتى جعلها **حرة طافية** أو **مرصوصة** (قابلة للتركيب)
 - دعم **أيقونات سمات فري دسكتوب**؛ يمكنك حتى استخدام QOwnNotes مع **أيقونات سطح مكتبك الأصيلة** و**سمة سطح مكتبك المظلمة** المفضلة

@@ -26,9 +26,9 @@ sudo apt-get install qownnotes
 
 ## QOwnNotes Qt5 레거시
 
-이전에 지원된 Ubuntu Linux, 기본 OS, Linux Mint 18 이상 버전의 경우 QOwnNotes의 Qt5 버전을 사용할 수 있습니다.
+The Qt5 PPA is no longer updated. Existing packages remain available for older Ubuntu Linux, elementary OS and Linux Mint installations that cannot use the Qt6 PPA.
 
-PPA 저장소를 사용하여 **Ubuntu Linux에 **QOwnNotes**을 설치합니다 (최소 20.04).</p>
+Install the final Qt5 package on **Ubuntu Linux** (minimum 20.04) using the PPA repository.
 
 저장소에는 **Raspberry Pi**에서 QOwnNotes를 사용하려는 경우를 대비한 ARM 패키지도 있습니다.
 
@@ -50,7 +50,7 @@ sudo apt-get install qownnotes
 
 ## OBS 저장소
 
-Ubuntu Launchpad에서 더 이상 업데이트되지 않은 Ubuntu 버전에서도 QOwnNotes를 사용할 수 있으며, 그 후에는 [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop)의 저장소를 사용할 수 있습니다. Ubuntu 24.04+용 패키지는 cmake와 Qt6로 제작되었습니다.
+The [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop-cmake3) also provides QOwnNotes packages built with CMake and Qt6 for Ubuntu 24.04 and newer. The older Qt5 OBS package is no longer updated.
 
 다음은 xUbuntu 24.04 리포지토리에 대한 예제 호출입니다.
 
