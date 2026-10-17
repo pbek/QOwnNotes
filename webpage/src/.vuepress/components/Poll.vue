@@ -46,7 +46,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 
 defineProps({
   action: String,
@@ -58,6 +58,18 @@ const success = ref(false);
 const answer = ref("");
 const pollId = ref(1);
 const sentPolls = ref([]);
+const dismissalDuration = 30 * 24 * 60 * 60 * 1000;
+const dismissalKey = `qon-poll-${pollId.value}-dismissed-until`;
+
+watch(snackbar, (visible) => {
+  if (!visible && !sentPolls.value.includes(pollId.value)) {
+    // Remember dismissals, including closing the popup with Escape.
+    window.localStorage.setItem(
+      dismissalKey,
+      String(Date.now() + dismissalDuration),
+    );
+  }
+});
 
 onMounted(() => {
   if (typeof window !== "undefined") {
@@ -65,8 +77,14 @@ onMounted(() => {
       window.localStorage.getItem("qon-polls") || "[]",
     );
 
-    // turn on poll snackbar if poll wasn't sent already
-    if (!sentPolls.value.includes(pollId.value)) {
+    const dismissedUntil =
+      Number(window.localStorage.getItem(dismissalKey)) || 0;
+
+    // Show unanswered polls only after the dismissal period has expired.
+    if (
+      !sentPolls.value.includes(pollId.value) &&
+      Date.now() >= dismissedUntil
+    ) {
       snackbar.value = true;
     }
   }
