@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=QOwnNotes
+Comment=Search notes of the running QOwnNotes
+Comment[de]=Notizen des laufenden QOwnNotes durchsuchen
+Icon=QOwnNotes
+Type=Service
+X-KDE-ServiceTypes=Plasma/Runner
+X-KDE-PluginInfo-Name=org.qownnotes.QOwnNotes
+X-KDE-PluginInfo-Author=QOwnNotes contributors
+X-KDE-PluginInfo-Website=https://www.qownnotes.org
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=org.qownnotes.QOwnNotes.KRunner.*
+X-Plasma-DBusRunner-Path=/runner
+X-Plasma-Request-Actions-Once=true
+X-Plasma-Runner-Min-Letter-Count=3

@@ -206,6 +206,47 @@ does the same), so token propagation is part of all builds (`WindowActivationSer
 - Tests cover the input data (file URLs, common MIME type, title) and hiding the menu,
   with and without installed Purpose plugins.
 
+## Implemented: KRunner search (phase 7)
+
+- `KRunnerService` implements KRunner's `org.kde.krunner1` D-Bus interface with plain
+  Qt D-Bus, so it is part of all Linux builds (qmake and CMake, Qt5 and Qt6) without the
+  KDE build flag. KRunner uses it through the plugin file
+  `share/krunner/dbusplugins/org.qownnotes.QOwnNotes.desktop`
+  (`src/krunner/org.qownnotes.QOwnNotes.desktop`).
+  - CMake installs the plugin file in KDE builds only. Other packages can opt in by
+    installing it; for a development build, copy it to
+    `~/.local/share/krunner/dbusplugins/` and restart KRunner (`kquitapp6 krunner`).
+  - QOwnNotes only registers its service if the plugin file is found, so builds without
+    it don't offer anything on the session bus. The runner can be disabled in Plasma's
+    search settings (System Settings → Search → Plasma Search).
+- Instances and sessions: each running instance registers its own service name
+  (`org.qownnotes.QOwnNotes.KRunner.i<random ID>`), and the plugin file uses KRunner's
+  wildcard for that prefix. KRunner thus shows the results of all running instances
+  (e.g. `--session` instances with different note folders); the folder is shown as
+  subtext. Random IDs avoid clashes between sandboxes. There is no D-Bus activation, so
+  KRunner never starts QOwnNotes and shows no results if it isn't running.
+- Matching reuses the note list search (`Note::searchInNotes()`, including its search
+  operators and the "ignore accents" setting) in the current note folder:
+  - Queries need at least 3 characters (also set in the plugin file). At most 10
+    results are returned, notes whose name matches rank higher, and at most 500 found
+    notes are ranked, so short queries stay fast.
+  - Calls are answered with delayed D-Bus replies from the event loop. A newer query of
+    the same caller answers its pending query with no results, because KRunner queries
+    while the user types.
+- Results contain the note name, the note folder and subfolder as subtext, and the file
+  URL (for dragging); never note text. The note search never matches the text of
+  encrypted notes, so they are only found by name. QOwnNotes has no locked state that
+  would hide note names; desktop search is only available in the unlocked session.
+- Match IDs are `<note folder ID>/<relative note path>`, stable while the note isn't
+  renamed or moved. Running a match shows the window, using KRunner's activation token
+  (`SetActivationToken`) on Wayland, and opens the note. If the note folder was switched
+  or the note was removed in the meantime, nothing is opened. There are no additional
+  actions.
+- Tests run the service on a private D-Bus session and call it like KRunner: the plugin
+  file matching the service name, minimum query length, result format and limit,
+  superseded queries, actions, activation tokens, and unregistration. KRunner's own
+  presentation still requires desktop testing.
+
 For DrKonqi, install the reporter separately. KCrash searches executable directories
 including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
 discoverable with `LIBEXEC_PATH=/run/current-system/sw/libexec`. Useful stack traces
@@ -257,20 +298,19 @@ The actual minimum Qt version is also constrained by the installed KF6 release.
 Nix obtains KDE and Qt libraries from the same package scope to avoid mixed-Qt
 dependencies.
 
-## Remaining roadmap (not implemented)
+## Further work
 
-Each phase should be independently reviewable, preserve the plain Qt build, and
-add only the dependencies it uses. Keep substantial KDE-specific logic in small
-services rather than scattering conditionals through `mainwindow.cpp`.
+All planned phases are implemented. Further changes should be independently
+reviewable, preserve the plain Qt build, and add only the dependencies they use. Keep
+substantial KDE-specific logic in small services rather than scattering conditionals
+through `mainwindow.cpp`.
 
-### 7. KRunner search
+Open items:
 
-- Implement a separate, optional D-Bus runner registration, with stable identifiers
-  and note-opening actions. Evaluate whether this can be provided by plain Qt
-  D-Bus without requiring the KDE build flag.
-- Reuse existing search, cap result sizes, and keep matching asynchronous.
-- Define behavior for multiple sessions, absent application instances, and locked
-  or encrypted notes. Do not expose confidential note text to desktop search.
+- Desktop testing of the color schemes, window activation, sharing, and KRunner on
+  Plasma (Wayland and X11) and other desktops.
+- The packaging decisions below, including whether plain Linux packages install the
+  KRunner plugin file.
 
 ## Packaging and validation
 
@@ -298,7 +338,7 @@ Acceptance and regression checks:
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
 
-Run isolated KDE shortcut, notification, activities, color scheme, window activation, and sharing regression tests with:
+Run isolated KDE shortcut, notification, activities, color scheme, window activation, sharing, and KRunner regression tests with:
 
 ```sh
 nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'

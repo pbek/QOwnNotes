@@ -28,6 +28,7 @@
 class XdgGlobalShortcutManager;
 #endif
 #ifdef Q_OS_LINUX
+class KRunnerManager;
 class PlasmaActivityService;
 #endif
 #ifdef QON_KDE_INTEGRATION
@@ -136,6 +137,7 @@ class MainWindow : public QMainWindow {
     friend class MediaInsertionManager;
     friend class NavigationManager;
     friend class NoteTreeManager;
+    friend class KRunnerManager;
 
    Q_SIGNALS:
     void currentNoteChanged(Note &note);
@@ -1080,6 +1082,7 @@ class MainWindow : public QMainWindow {
 #endif
 #ifdef Q_OS_LINUX
     PlasmaActivityService *_plasmaActivityService = nullptr;
+    KRunnerManager *_krunnerManager = nullptr;
     QTimer *_plasmaActivityTimer = nullptr;
     QString _pendingPlasmaActivityId;
     bool _applyingPlasmaActivity = false;

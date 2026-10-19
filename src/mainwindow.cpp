@@ -46,6 +46,7 @@
 #include <services/xdgglobalshortcutmanager.h>
 #endif
 #ifdef Q_OS_LINUX
+#include <managers/krunnermanager.h>
 #include <services/plasmaactivityservice.h>
 #endif
 #ifdef QON_KDE_INTEGRATION
@@ -474,6 +475,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // React to KDE Plasma activity changes, deferred so the layout and
     // note folder are fully restored before the current activity is applied
     QTimer::singleShot(500, this, [this]() { initPlasmaActivityService(); });
+
+    // Offer the notes in KDE Plasma's KRunner search, if its plugin file is installed
+    _krunnerManager = new KRunnerManager(this, this);
 #endif
 
     // Update panels sort and order

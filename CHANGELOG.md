@@ -26,6 +26,9 @@
     Wayland, and with the startup notification ID on X11 in KDE builds
   - KDE builds can send note files to installed targets like KDE Connect or email with
     the new _Send note to_ menus in the _Note_ menu and the note list context menu
+  - Notes of a running QOwnNotes can be found in KDE Plasma's KRunner search by their name
+    or text, without showing note text, if the KRunner plugin file is installed,
+    which KDE builds do
 - Added a new scripting command `script.showNotification()` to show a desktop notification,
   falling back to the system tray or the status bar
   (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))

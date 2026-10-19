@@ -61,9 +61,28 @@ add_executable(
 target_include_directories(kde-share-tests PRIVATE ../../src)
 target_link_libraries(kde-share-tests PRIVATE Qt6::Widgets Qt6::Test
                                               KF6::PurposeWidgets)
+# KRunner support only needs Qt D-Bus
+add_executable(
+  kde-krunner-tests
+  test_krunnerservice.cpp ../../src/services/krunnerservice.cpp
+  ../../src/services/krunnerservice.h)
+target_include_directories(kde-krunner-tests PRIVATE ../../src)
+target_compile_definitions(
+  kde-krunner-tests
+  PRIVATE
+    KRUNNER_PLUGIN_FILE="${CMAKE_CURRENT_SOURCE_DIR}/../../src/krunner/org.qownnotes.QOwnNotes.desktop"
+)
+target_link_libraries(kde-krunner-tests PRIVATE Qt6::DBus Qt6::Test)
 enable_testing()
-foreach(test kde-integration-tests kde-notification-tests kde-activities-tests
-             kde-colorscheme-tests kde-windowactivation-tests kde-share-tests)
+foreach(
+  test
+  kde-integration-tests
+  kde-notification-tests
+  kde-activities-tests
+  kde-colorscheme-tests
+  kde-windowactivation-tests
+  kde-share-tests
+  kde-krunner-tests)
   add_test(
     NAME ${test}
     COMMAND

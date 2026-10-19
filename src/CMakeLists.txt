@@ -799,13 +799,21 @@ endif()
 list(APPEND SOURCE_FILES libraries/md4c/src/md4c.c
      libraries/md4c/src/md4c-html.c libraries/md4c/src/entity.c)
 
-# XDG Desktop Portal global shortcuts support for Wayland and KDE Plasma
-# activities support on Linux (both use D-Bus)
+# XDG Desktop Portal global shortcuts support for Wayland, KDE Plasma
+# activities, and KRunner search support on Linux (all use D-Bus)
 if(UNIX AND NOT APPLE)
   find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS DBus)
-  list(APPEND SOURCE_FILES services/xdgglobalshortcutmanager.cpp
-       services/xdgglobalshortcutmanager.h services/plasmaactivityservice.cpp
-       services/plasmaactivityservice.h)
+  list(
+    APPEND
+    SOURCE_FILES
+    services/xdgglobalshortcutmanager.cpp
+    services/xdgglobalshortcutmanager.h
+    services/plasmaactivityservice.cpp
+    services/plasmaactivityservice.h
+    services/krunnerservice.cpp
+    services/krunnerservice.h
+    managers/krunnermanager.cpp
+    managers/krunnermanager.h)
 endif()
 
 # Translation files
@@ -962,5 +970,8 @@ install(FILES PBE.QOwnNotes.desktop DESTINATION share/applications)
 if(QON_KDE_INTEGRATION)
   # Lists the notification events in Plasma's notification settings
   install(FILES kde/qownnotes.notifyrc DESTINATION share/knotifications6)
+  # Lets KRunner search the notes of running instances
+  install(FILES krunner/org.qownnotes.QOwnNotes.desktop
+          DESTINATION share/krunner/dbusplugins)
 endif()
 install(FILES ${QON_QM_FILES} DESTINATION share/QOwnNotes/translations)
