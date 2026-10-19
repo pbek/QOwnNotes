@@ -21,6 +21,8 @@
 #include <QDBusReply>
 #include <QDebug>
 #include <QGuiApplication>
+
+#include "windowactivationservice.h"
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <QRandomGenerator>
 #else
@@ -221,14 +223,19 @@ void XdgGlobalShortcutManager::onShortcutActivated(QDBusObjectPath sessionHandle
                                                    QString shortcutId, qulonglong timestamp,
                                                    QVariantMap options) {
     Q_UNUSED(timestamp)
-    Q_UNUSED(options)
 
     if (sessionHandle.path() != _sessionHandle) {
         return;
     }
 
     qDebug() << "XDG GlobalShortcuts: shortcut activated:" << shortcutId;
+
+    // Newer portals provide a token, so the window can be raised on Wayland if the action
+    // shows it
+    const QString token = options.value(QStringLiteral("activation_token")).toString();
+    WindowActivationService::setXdgActivationToken(token);
     emit shortcutActivated(shortcutId);
+    WindowActivationService::clearXdgActivationToken(token);
 }
 
 QString XdgGlobalShortcutManager::keySequenceToXdgTrigger(const QKeySequence &seq) {

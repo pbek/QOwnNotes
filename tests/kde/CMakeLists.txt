@@ -43,9 +43,20 @@ add_executable(
 target_include_directories(kde-colorscheme-tests PRIVATE ../../src)
 target_link_libraries(kde-colorscheme-tests PRIVATE Qt6::Widgets Qt6::Test
                                                     KF6::ColorScheme)
+find_package(KF6WindowSystem 6.0 REQUIRED)
+add_executable(
+  kde-windowactivation-tests
+  test_windowactivationservice.cpp
+  ../../src/services/windowactivationservice.cpp
+  ../../src/services/windowactivationservice.h)
+target_include_directories(kde-windowactivation-tests PRIVATE ../../src)
+target_compile_definitions(kde-windowactivation-tests
+                           PRIVATE QON_KDE_INTEGRATION)
+target_link_libraries(kde-windowactivation-tests PRIVATE Qt6::Widgets Qt6::Test
+                                                         KF6::WindowSystem)
 enable_testing()
 foreach(test kde-integration-tests kde-notification-tests kde-activities-tests
-             kde-colorscheme-tests)
+             kde-colorscheme-tests kde-windowactivation-tests)
   add_test(
     NAME ${test}
     COMMAND

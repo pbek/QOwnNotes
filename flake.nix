@@ -106,6 +106,7 @@
                 pkgs.kdePackages.kglobalaccel
                 pkgs.kdePackages.knotifications
                 pkgs.kdePackages.plasma-activities
+                pkgs.kdePackages.kwindowsystem
               ];
 
             shellHook = ''
@@ -160,6 +161,7 @@
               pkgs.kdePackages.kglobalaccel
               pkgs.kdePackages.knotifications
               pkgs.kdePackages.plasma-activities
+              pkgs.kdePackages.kwindowsystem
             ];
             dontWrapQtApps = true;
             preConfigure = ''
@@ -175,6 +177,7 @@
               dbus-run-session --config-file=${pkgs.dbus}/share/dbus-1/session.conf -- \
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-activities-tests
               env QT_QPA_PLATFORM=minimal ./kde-colorscheme-tests
+              env QT_QPA_PLATFORM=minimal ./kde-windowactivation-tests
               runHook postCheck
             '';
             installPhase = ''

@@ -116,7 +116,9 @@ applications. Sharing and KRunner integration are not implemented.
 - Known limitation: if a running service is replaced by an older one while QOwnNotes
   is running and already uses the library, the library itself would abort.
 
-## Implemented: color schemes (phase 5)
+## Implemented: color schemes and window activation (phase 5)
+
+### Color schemes
 
 - KDE builds offer a color scheme selector in the interface settings (Settings →
   Interface → Interface style). It lists the installed KDE color schemes (`*.colors`
@@ -147,6 +149,39 @@ applications. Sharing and KRunner integration are not implemented.
 - Tests cover scheme discovery, overrides and sorting, applying and switching schemes,
   restoring the system palette and a platform-provided scheme property, and the dark mode
   theme precedence.
+
+### Window activation
+
+Wayland compositors only activate a window with an XDG activation token of a recent user
+interaction; calling an activation function alone doesn't bypass focus stealing
+prevention. Qt 6 already uses a token from the `XDG_ACTIVATION_TOKEN` environment
+variable when a window is activated (`KWindowSystem::setCurrentXdgActivationToken()`
+does the same), so token propagation is part of all builds (`WindowActivationService`):
+
+- Another instance (single-instance mode) captures `XDG_ACTIVATION_TOKEN` and the X11
+  `DESKTOP_STARTUP_ID` of its launch before the application object is created, because
+  Qt removes the latter, and sends them with the startup action to the primary instance.
+  The primary instance activates its window with them.
+  - The message consists of `key:value` lines; values can't contain line breaks. A launch
+    with only an action still sends the previous `startupAction:<name>` message.
+  - Second instances of older versions send no message without an action, so the window
+    is activated without a token if no message follows within 500 ms. An older primary
+    instance ignores a new message that contains a token, including its action.
+- Global shortcuts of the XDG desktop portal pass the `activation_token` of newer portal
+  versions. Desktop notification clicks already pass theirs (phase 3).
+- Unused tokens are removed after the activation, so they aren't used by a later
+  unrelated activation or inherited by started processes. Tokens are only set on Wayland.
+- KDE builds use `KF6::WindowSystem` on X11: the startup ID of another instance is passed
+  to the window manager with `KStartupInfo::setNewStartupId()`, like KDBusService does,
+  which also completes the launch feedback.
+- Not possible: Plasma's KGlobalAccel doesn't provide activation tokens on Wayland, so
+  global shortcuts of the KDE backend that show an already mapped window depend on KWin's
+  focus stealing prevention (it may only demand attention). On X11, KGlobalAccel updates
+  the user timestamp itself.
+- `SingleApplication` is kept; replacing it with KDBusService is not planned.
+- Tests cover the message format (including older versions and injected lines), capturing
+  the environment, removing unused tokens, and restoring minimized windows. Activation
+  itself can only be checked on a real desktop.
 
 For DrKonqi, install the reporter separately. KCrash searches executable directories
 including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
@@ -185,7 +220,7 @@ just src-build-kde
 ```
 
 This uses a separate `build-QOwnNotes-kde` directory. Outside Nix, install Qt6,
-ECM 6 or later, KColorScheme/KCoreAddons/KCrash/KGlobalAccel/KNotifications 6 or later,
+ECM 6 or later, KColorScheme/KCoreAddons/KCrash/KGlobalAccel/KNotifications/KWindowSystem 6 or later,
 PlasmaActivities 6 or later, and the usual application dependencies:
 
 ```sh
@@ -204,13 +239,6 @@ dependencies.
 Each phase should be independently reviewable, preserve the plain Qt build, and
 add only the dependencies it uses. Keep substantial KDE-specific logic in small
 services rather than scattering conditionals through `mainwindow.cpp`.
-
-### 5. Window activation
-
-- Evaluate `KF6::WindowSystem` and activation-token propagation for shortcut and
-  secondary-instance activation. Wayland requires appropriate tokens; merely
-  calling an activation function does not bypass compositor focus policy.
-- Keep `SingleApplication`; replacing it with KDBusService is not planned.
 
 ### 6. Sharing
 
@@ -254,7 +282,7 @@ Acceptance and regression checks:
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
 
-Run isolated KDE shortcut, notification, activities, and color scheme regression tests with:
+Run isolated KDE shortcut, notification, activities, color scheme, and window activation regression tests with:
 
 ```sh
 nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'

@@ -21,6 +21,9 @@
     desktops keep using the existing implementation
   - KDE builds can use an installed KDE color scheme for the user interface, which can be
     selected in the _Interface_ settings, while the system palette stays the default
+  - When QOwnNotes is started again while it is already running, or by a global shortcut of
+    the desktop portal, its window is now raised with the activation token of the launch on
+    Wayland, and with the startup notification ID on X11 in KDE builds
 - Added a new scripting command `script.showNotification()` to show a desktop notification,
   falling back to the system tray or the status bar
   (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))

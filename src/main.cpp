@@ -2,6 +2,7 @@
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
 #include <services/settingsservice.h>
+#include <services/windowactivationservice.h>
 #include <utils/cli.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
@@ -646,6 +647,10 @@ static void setWindowsFontProperties(QCoreApplication &app, const QString &activ
 #endif
 
 int main(int argc, char *argv[]) {
+    // Qt removes the startup notification ID from the environment when the application
+    // object is created, but another instance passes it to the primary instance
+    WindowActivationService::captureStartupEnvironment();
+
     // register NoteHistoryItem, so we can store it to the settings
     // we need to do that before we are accessing QSettings or the
     // NoteHistoryItem instances in the settings will get destroyed
@@ -951,10 +956,9 @@ int main(int argc, char *argv[]) {
                 "You can turn off the single instance mode in the settings"
                 " or use the parameter --allow-multiple-instances.");
 
-            // send message if an action was set
-            if (!action.isEmpty()) {
-                app.sendMessage(QStringLiteral("startupAction:%1").arg(action).toUtf8());
-            }
+            // Let the primary instance activate its window with the activation information
+            // of this launch and trigger the action if one was set
+            app.sendMessage(WindowActivationService::secondaryInstanceMessage(action));
 
             app.exit(0);
 
@@ -987,19 +991,34 @@ int main(int argc, char *argv[]) {
         setupSystemDarkModeChangeCheck(&app);
 #endif
 
-        // receive messages from the primary app
-        QObject::connect(&app, &SingleApplication::receivedMessage,
-                         [&](quint32 instanceId, QByteArray message) {
-                             Q_UNUSED(instanceId)
-                             qDebug() << __func__ << " - 'message': " << message;
+        // Older versions of a second instance only send a message if an action was set, so
+        // the window is activated without activation information if no message follows
+        QTimer activationFallbackTimer;
+        activationFallbackTimer.setSingleShot(true);
+        activationFallbackTimer.setInterval(500);
+        QObject::connect(&activationFallbackTimer, &QTimer::timeout, &w,
+                         [&w] { WindowActivationService::activateWindow(&w); });
 
-                             // trigger the startup menu action
-                             if (message.startsWith("startupAction:")) {
-                                 message.remove(0, 14);
-                                 app.setProperty("startupAction", message);
-                                 w.triggerStartupMenuAction();
-                             }
-                         });
+        // receive messages from the secondary app
+        QObject::connect(
+            &app, &SingleApplication::receivedMessage, [&](quint32 instanceId, QByteArray message) {
+                Q_UNUSED(instanceId)
+                activationFallbackTimer.stop();
+
+                const WindowActivationService::Request request =
+                    WindowActivationService::parseSecondaryInstanceMessage(message);
+                qDebug() << __func__ << " - 'startupAction': " << request.startupAction;
+
+                // Raise the main window with the activation information of the launch
+                WindowActivationService::activateWindow(&w, request.xdgActivationToken,
+                                                        request.startupId);
+
+                // trigger the startup menu action
+                if (!request.startupAction.isEmpty()) {
+                    app.setProperty("startupAction", request.startupAction);
+                    w.triggerStartupMenuAction();
+                }
+            });
 
         // raise the main window if app was started a 2nd time in single
         // application mode
@@ -1009,15 +1028,7 @@ int main(int argc, char *argv[]) {
                 "A second instance of QOwnNotes was attempted to be "
                 "started!");
 
-            w.show();
-            w.raise();
-            w.activateWindow();
-
-            // in case the window was minimized show it normal again
-            // (it didn't come up when it was minimized on KDE)
-            if (w.isMinimized()) {
-                w.showNormal();
-            }
+            activationFallbackTimer.start();
         });
 
         appResult = app.exec();
