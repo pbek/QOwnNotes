@@ -280,7 +280,7 @@ void NextcloudDeckDialog::moveCards(const QList<int> &cardIds) {
     QList<int> movedCardIds;
     for (int cardId : cardIds) {
         configureDeckServiceForCard(service, cardId);
-        if (!service.moveCard(cardId, targetStackId, movedCardIds.count())) {
+        if (!service.moveCard(cardId, targetBoardId, targetStackId, movedCardIds.count())) {
             // Stop on failure and keep the source selected so remaining cards stay visible.
             reloadCardList();
             return;

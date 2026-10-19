@@ -4,6 +4,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QMessageBox>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QRegularExpression>
@@ -166,8 +167,9 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     return resultCardId;
 }
 
-bool NextcloudDeckService::moveCard(int cardId, int targetStackId, int order) {
-    if (cardId < 1 || boardId < 1 || stackId < 1 || targetStackId < 1 || order < 0) {
+bool NextcloudDeckService::moveCard(int cardId, int targetBoardId, int targetStackId, int order) {
+    if (cardId < 1 || boardId < 1 || stackId < 1 || targetBoardId < 1 || targetStackId < 1 ||
+        order < 0) {
         return false;
     }
 
@@ -178,10 +180,12 @@ bool NextcloudDeckService::moveCard(int cardId, int targetStackId, int order) {
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
     QObject::connect(&manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
 
-    // Deck's reorder endpoint moves the existing card without overwriting its contents.
-    const QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" + QString::number(boardId) +
-                   "/stacks/" + QString::number(stackId) + "/cards/" + QString::number(cardId) +
-                   "/reorder");
+    // Route parameters can override JSON parameters in Nextcloud. Use the destination in both
+    // places so stackId cannot resolve to the source stack and silently reorder instead of move.
+    // Deck resolves the existing card by cardId and checks permissions on it and the target stack.
+    const QUrl url(serverUrl + "/index.php/apps/deck/api/v1.1/boards/" +
+                   QString::number(targetBoardId) + "/stacks/" + QString::number(targetStackId) +
+                   "/cards/" + QString::number(cardId) + "/reorder");
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::UserAgentHeader, Utils::Misc::friendlyUserAgentString());
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
@@ -207,15 +211,39 @@ bool NextcloudDeckService::moveCard(int cardId, int targetStackId, int order) {
     }
 
     const int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
-    const bool success = !timedOut && reply->error() == QNetworkReply::NoError &&
-                         statusCode >= 200 && statusCode < 300;
+    const QJsonDocument response = QJsonDocument::fromJson(reply->readAll());
+    const bool requestSucceeded = !timedOut && reply->error() == QNetworkReply::NoError &&
+                                  statusCode >= 200 && statusCode < 300;
+    // Reorder returns the destination stack's cards. HTTP success alone does not prove a move.
+    bool success = false;
+    if (requestSucceeded && response.isArray()) {
+        for (const auto& value : response.array()) {
+            const auto card = value.toObject();
+            if (card.value(QStringLiteral("id")).toInt() == cardId &&
+                card.value(QStringLiteral("stackId")).toInt() == targetStackId) {
+                success = true;
+                break;
+            }
+        }
+    }
     if (!success) {
-        Utils::Gui::warning(
-            nullptr, tr("Error while moving card"),
-            timedOut ? tr("Moving the card timed out. Reload the cards to check its location.")
-                     : tr("Moving the card failed with status code %1 and message: %2")
-                           .arg(QString::number(statusCode), reply->errorString()),
-            QStringLiteral("nextcloud-deck-move-failed"));
+        QString message;
+        if (timedOut) {
+            message = tr("Moving the card timed out. Reload the cards to check its location.");
+        } else if (requestSucceeded) {
+            message =
+                tr("The server did not confirm that the card was moved to the destination "
+                   "stack. Reload the cards to check its location.");
+        } else {
+            const QString serverMessage =
+                response.object().value(QStringLiteral("message")).toString();
+            message = tr("Moving the card failed with status code %1 and message: %2")
+                          .arg(QString::number(statusCode),
+                               serverMessage.isEmpty() ? reply->errorString() : serverMessage);
+        }
+        // Move failures must remain visible even if a previous warning was suppressed.
+        QMessageBox::warning(qobject_cast<QWidget*>(parent()), tr("Error while moving card"),
+                             message);
     }
 
     reply->deleteLater();

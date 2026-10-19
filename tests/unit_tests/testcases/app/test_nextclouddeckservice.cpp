@@ -11,20 +11,33 @@
 
 #include "entities/cloudconnection.h"
 #include "services/nextclouddeckservice.h"
+#include "services/settingsservice.h"
 
 void TestNextcloudDeckService::testMoveCard_data() {
     QTest::addColumn<int>("statusCode");
+    QTest::addColumn<QByteArray>("responseBody");
     QTest::addColumn<bool>("success");
-    QTest::newRow("success") << 200 << true;
-    QTest::newRow("no-content") << 204 << true;
-    QTest::newRow("permission-denied") << 403 << false;
-    QTest::newRow("server-error") << 500 << false;
-    QTest::newRow("timeout") << 0 << false;
+    QTest::newRow("cross-board") << 200 << QByteArray("destination") << true;
+    QTest::newRow("same-board") << 200 << QByteArray("destination") << true;
+    QTest::newRow("unchanged-stack") << 200 << QByteArray("[{\"id\":56,\"stackId\":34}]") << false;
+    QTest::newRow("missing-card") << 200 << QByteArray("[{\"id\":57,\"stackId\":78}]") << false;
+    QTest::newRow("invalid-json") << 200 << QByteArray("not JSON") << false;
+    QTest::newRow("no-content") << 204 << QByteArray() << false;
+    QTest::newRow("permission-denied")
+        << 403 << QByteArray("{\"message\":\"Permission denied on destination stack\"}") << false;
+    QTest::newRow("suppressed-warning") << 500 << QByteArray() << false;
+    QTest::newRow("server-error") << 500 << QByteArray() << false;
+    QTest::newRow("timeout") << 0 << QByteArray() << false;
 }
 
 void TestNextcloudDeckService::testMoveCard() {
     QFETCH(int, statusCode);
+    QFETCH(QByteArray, responseBody);
     QFETCH(bool, success);
+    const int targetBoardId = QByteArray(QTest::currentDataTag()) == "same-board" ? 12 : 90;
+    SettingsService settings;
+    const QString warningKey = QStringLiteral("MessageBoxOverride/nextcloud-deck-move-failed");
+    settings.setValue(warningKey, QMessageBox::Ok);
 
     QTcpServer server;
     QVERIFY(server.listen(QHostAddress::LocalHost));
@@ -59,20 +72,30 @@ void TestNextcloudDeckService::testMoveCard() {
             if (statusCode == 0) {
                 return;
             }
+            if (responseBody == "destination") {
+                // Model Nextcloud route parameters overriding the JSON stackId. A source URL
+                // would return HTTP 200 with the card still in its original stack.
+                const int routeStackId = request.split('/').value(9).toInt();
+                responseBody = "[{\"id\":56,\"stackId\":" + QByteArray::number(routeStackId) + "}]";
+            }
             socket->write("HTTP/1.1 " + QByteArray::number(statusCode) +
-                          " Test\r\nContent-Length: 0\r\nConnection: close\r\n\r\n");
+                          " Test\r\nContent-Type: application/json\r\nContent-Length: " +
+                          QByteArray::number(responseBody.size()) +
+                          "\r\nConnection: close\r\n\r\n" + responseBody);
             socket->disconnectFromHost();
         });
     });
 
     // Close error dialogs automatically while still checking that failures are reported.
     int warningCount = 0;
+    QString warningText;
     QTimer closeWarnings;
     connect(&closeWarnings, &QTimer::timeout, &closeWarnings, [&]() {
         for (auto *widget : QApplication::topLevelWidgets()) {
             auto *message = qobject_cast<QMessageBox *>(widget);
             if (message != nullptr && message->isVisible()) {
                 ++warningCount;
+                warningText = message->text();
                 message->accept();
             }
         }
@@ -80,12 +103,13 @@ void TestNextcloudDeckService::testMoveCard() {
     closeWarnings.start(10);
 
     NextcloudDeckService service(nullptr, connection.getId());
-    // The request URL must use the source board/stack, not the configured defaults.
+    // Source IDs and configured defaults must not override the destination.
     service.setBoardAndStackIds(12, 34);
-    QCOMPARE(service.moveCard(56, 78, 2), success);
+    QCOMPARE(service.moveCard(56, targetBoardId, 78, 2), success);
     QCOMPARE(requestCount, 1);
-    QVERIFY(request.startsWith(
-        "PUT /index.php/apps/deck/api/v1.1/boards/12/stacks/34/cards/56/reorder HTTP/1.1\r\n"));
+    QVERIFY(request.startsWith("PUT /index.php/apps/deck/api/v1.1/boards/" +
+                               QByteArray::number(targetBoardId) +
+                               "/stacks/78/cards/56/reorder HTTP/1.1\r\n"));
     const auto headerValue = [&](const QByteArray &name) {
         for (const auto &line : request.left(request.indexOf("\r\n\r\n")).split('\n')) {
             const int colon = line.indexOf(':');
@@ -104,17 +128,24 @@ void TestNextcloudDeckService::testMoveCard() {
     QCOMPARE(body.value(QStringLiteral("stackId")).toInt(), 78);
     QCOMPARE(body.value(QStringLiteral("order")).toInt(), 2);
     QCOMPARE(warningCount, success ? 0 : 1);
+    if (statusCode == 403) {
+        QVERIFY(warningText.contains(QStringLiteral("Permission denied on destination stack")));
+    } else if (statusCode >= 200 && statusCode < 300 && !success) {
+        QVERIFY(warningText.contains(QStringLiteral("did not confirm")));
+    }
+    settings.remove(warningKey);
     QVERIFY(connection.remove());
 }
 
 void TestNextcloudDeckService::testInvalidMove() {
     NextcloudDeckService service(nullptr, CloudConnection::NoneCloudConnectionId);
     service.setBoardAndStackIds(12, 34);
-    QVERIFY(!service.moveCard(0, 78));
-    QVERIFY(!service.moveCard(56, 0));
-    QVERIFY(!service.moveCard(56, 78, -1));
+    QVERIFY(!service.moveCard(0, 90, 78));
+    QVERIFY(!service.moveCard(56, 0, 78));
+    QVERIFY(!service.moveCard(56, 90, 0));
+    QVERIFY(!service.moveCard(56, 90, 78, -1));
     service.setBoardAndStackIds(0, 34);
-    QVERIFY(!service.moveCard(56, 78));
+    QVERIFY(!service.moveCard(56, 90, 78));
     service.setBoardAndStackIds(12, 0);
-    QVERIFY(!service.moveCard(56, 78));
+    QVERIFY(!service.moveCard(56, 90, 78));
 }

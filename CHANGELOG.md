@@ -2,6 +2,10 @@
 
 ## 26.10.8
 
+- Fixed Nextcloud Deck cards sometimes not moving to another board or stack without an error
+  (for [#3795](https://github.com/pbek/QOwnNotes/issues/3795))
+  - Move requests now use consistent destination IDs and verify the returned card location
+  - Unconfirmed moves and server failures now show an error that cannot be suppressed
 - Updated documentation, welcome notes, and server settings to recommend the QOwnNotes Nextcloud
   app instead of QOwnNotesAPI, while keeping legacy Nextcloud and ownCloud server support
 - Added more Russian, Polish, Portuguese, Brazilian, Italian, German, Chinese Simplified, French,
