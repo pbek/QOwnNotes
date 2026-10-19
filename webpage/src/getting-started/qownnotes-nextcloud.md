@@ -10,7 +10,7 @@ stored in the note folder's `notes.sqlite`.
 It also provides the server APIs for [QOwnNotes Desktop](concept.md#qownnotes)
 (note versions and trash) and [QOwnNotes Android](qownnotes-android.md)
 (a Nextcloud Notes API compatible note API). It replaces the
-[QOwnNotesAPI](concept.md#qownnotesapi-nextcloud-app) app and, for QOwnNotes Android, the
+[QOwnNotesAPI](https://github.com/pbek/qownnotesapi) app and, for QOwnNotes Android, the
 Nextcloud Notes app.
 
 ## Features
