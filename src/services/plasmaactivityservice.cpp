@@ -29,6 +29,12 @@
 
 #include "settingsservice.h"
 
+#ifdef QON_KDE_INTEGRATION
+#include <QTimer>
+
+#include "plasmaactivitieslibrary.h"
+#endif
+
 namespace {
 const QString activityManagerService = QStringLiteral("org.kde.ActivityManager");
 const QString activitiesPath = QStringLiteral("/ActivityManager/Activities");
@@ -75,6 +81,31 @@ PlasmaActivityService::PlasmaActivityService(QObject *parent) : QObject(parent) 
         requestCurrentActivity();
         emit activitiesChanged();
     });
+
+#ifdef QON_KDE_INTEGRATION
+    // Use the cached activities of the PlasmaActivities library once it is ready
+    PlasmaActivitiesLibrary *library = PlasmaActivitiesLibrary::instance();
+    connect(library, &PlasmaActivitiesLibrary::currentActivityChanged, this,
+            [this](const QString &activityId) {
+                ++_activityChangeSerial;
+                emit currentActivityChanged(activityId);
+            });
+    connect(library, &PlasmaActivitiesLibrary::activitiesChanged, this,
+            &PlasmaActivityService::activitiesChanged);
+    library->start();
+#endif
+}
+
+/**
+ * Returns true if the activities are provided by the PlasmaActivities library, in which
+ * case the direct D-Bus signals are ignored to avoid duplicate notifications
+ */
+bool PlasmaActivityService::usesLibrary() {
+#ifdef QON_KDE_INTEGRATION
+    return PlasmaActivitiesLibrary::instance()->isReady();
+#else
+    return false;
+#endif
 }
 
 bool PlasmaActivityService::isAvailable() {
@@ -92,6 +123,12 @@ QString PlasmaActivityService::currentActivityId() {
         return {};
     }
 
+#ifdef QON_KDE_INTEGRATION
+    if (usesLibrary()) {
+        return PlasmaActivitiesLibrary::instance()->currentActivity();
+    }
+#endif
+
     const QDBusReply<QString> reply = blockingCall(QStringLiteral("CurrentActivity"));
     return reply.isValid() ? reply.value() : QString();
 }
@@ -102,6 +139,19 @@ QList<PlasmaActivityService::Activity> PlasmaActivityService::activities() {
     if (!isAvailable()) {
         return result;
     }
+
+#ifdef QON_KDE_INTEGRATION
+    if (usesLibrary()) {
+        const auto libraryActivities = PlasmaActivitiesLibrary::instance()->activities();
+        for (const auto &libraryActivity : libraryActivities) {
+            Activity activity;
+            activity.id = libraryActivity.first;
+            activity.name = libraryActivity.second;
+            result.append(activity);
+        }
+        return result;
+    }
+#endif
 
     // We don't use ListActivitiesWithInformation, because its reply signature
     // differs between Plasma versions
@@ -133,6 +183,19 @@ void PlasmaActivityService::requestCurrentActivity() {
     }
 
     const quint64 requestSerial = _activityChangeSerial;
+
+#ifdef QON_KDE_INTEGRATION
+    if (usesLibrary()) {
+        // Emit asynchronously like the D-Bus request, unless the activity changed meanwhile
+        QTimer::singleShot(0, this, [this, requestSerial]() {
+            const QString activityId = PlasmaActivitiesLibrary::instance()->currentActivity();
+            if (requestSerial == _activityChangeSerial && !activityId.isEmpty()) {
+                emit currentActivityChanged(activityId);
+            }
+        });
+        return;
+    }
+#endif
 
     const QDBusMessage message =
         QDBusMessage::createMethodCall(activityManagerService, activitiesPath, activitiesInterface,
@@ -286,6 +349,10 @@ QStringList PlasmaActivityService::setLayoutActivity(const QString &layoutUuid, 
 }
 
 void PlasmaActivityService::onCurrentActivityChanged(const QString &activityId) {
+    if (usesLibrary()) {
+        return;
+    }
+
     ++_activityChangeSerial;
     qDebug() << "KDE Plasma activity changed:" << activityId;
     emit currentActivityChanged(activityId);
@@ -293,18 +360,24 @@ void PlasmaActivityService::onCurrentActivityChanged(const QString &activityId) 
 
 void PlasmaActivityService::onActivityAdded(const QString &activityId) {
     Q_UNUSED(activityId)
-    emit activitiesChanged();
+    if (!usesLibrary()) {
+        emit activitiesChanged();
+    }
 }
 
 void PlasmaActivityService::onActivityRemoved(const QString &activityId) {
     Q_UNUSED(activityId)
-    emit activitiesChanged();
+    if (!usesLibrary()) {
+        emit activitiesChanged();
+    }
 }
 
 void PlasmaActivityService::onActivityNameChanged(const QString &activityId, const QString &name) {
     Q_UNUSED(activityId)
     Q_UNUSED(name)
-    emit activitiesChanged();
+    if (!usesLibrary()) {
+        emit activitiesChanged();
+    }
 }
 
 #endif    // Q_OS_LINUX

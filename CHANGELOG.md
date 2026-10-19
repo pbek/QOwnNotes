@@ -16,6 +16,9 @@
   - KDE builds send desktop notifications that can be configured in Plasma's notification
     settings, e.g. when the current note was modified externally while QOwnNotes was in
     the background
+  - KDE builds use the PlasmaActivities library for the KDE Plasma activity integration,
+    so activities are loaded without blocking, while older activity managers and other
+    desktops keep using the existing implementation
 - Added a new scripting command `script.showNotification()` to show a desktop notification,
   falling back to the system tray or the status bar
   (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))

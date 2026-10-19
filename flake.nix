@@ -104,6 +104,7 @@
                 pkgs.kdePackages.kcrash
                 pkgs.kdePackages.kglobalaccel
                 pkgs.kdePackages.knotifications
+                pkgs.kdePackages.plasma-activities
               ];
 
             shellHook = ''
@@ -156,6 +157,7 @@
               pkgs.kdePackages.qtbase
               pkgs.kdePackages.kglobalaccel
               pkgs.kdePackages.knotifications
+              pkgs.kdePackages.plasma-activities
             ];
             dontWrapQtApps = true;
             preConfigure = ''
@@ -168,6 +170,8 @@
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-integration-tests
               dbus-run-session --config-file=${pkgs.dbus}/share/dbus-1/session.conf -- \
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-notification-tests
+              dbus-run-session --config-file=${pkgs.dbus}/share/dbus-1/session.conf -- \
+                env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-activities-tests
               runHook postCheck
             '';
             installPhase = ''

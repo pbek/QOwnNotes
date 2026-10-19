@@ -63,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     kdePackages.kcrash
     kdePackages.kglobalaccel
     kdePackages.knotifications
+    kdePackages.plasma-activities
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     libsecret

@@ -93,6 +93,29 @@ applications. Sharing and KRunner integration are not implemented.
 - An isolated mock notification server tests delivery, escaping, actions, activation
   tokens, disabled events, duplicate suppression, and the fallback without a service.
 
+## Implemented: PlasmaActivities library (phase 4)
+
+- KDE builds use the PlasmaActivities library (`KActivities::Consumer`) behind the
+  existing `PlasmaActivityService` API. It caches activities asynchronously, so the
+  activity list and current activity don't need blocking D-Bus calls once loaded.
+  The library is part of Plasma rather than KDE Frameworks.
+- The library is guarded in `PlasmaActivitiesLibrary`:
+  - It is only initialized after `kactivitymanagerd` asynchronously reported
+    version 6.2.0 or later. The library aborts the application (`qFatal`) on older
+    services, and it treats `6.2` as older than `6.2.0`; the check mirrors this.
+  - It never starts the activity manager: initialization waits until the service
+    is registered, and the library's autostart is disabled before it is created.
+  - Until the library has loaded the activities (and on older services, or if the
+    service stops), the existing direct D-Bus implementation is used. Plain builds
+    always use it. Signals from both are not forwarded twice.
+- Settings keys, note folder/layout links, and the startup/switching behavior are
+  unchanged.
+- An isolated mock activity manager tests version gating (including an unsupported
+  5.27 service, which must not abort the tests), no autostart, activity
+  names/renames/additions, current-activity changes, and service loss/restart.
+- Known limitation: if a running service is replaced by an older one while QOwnNotes
+  is running and already uses the library, the library itself would abort.
+
 For DrKonqi, install the reporter separately. KCrash searches executable directories
 including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
 discoverable with `LIBEXEC_PATH=/run/current-system/sw/libexec`. Useful stack traces
@@ -130,8 +153,8 @@ just src-build-kde
 ```
 
 This uses a separate `build-QOwnNotes-kde` directory. Outside Nix, install Qt6,
-ECM 6 or later, KCoreAddons/KCrash/KGlobalAccel/KNotifications 6 or later, and the usual application
-dependencies:
+ECM 6 or later, KCoreAddons/KCrash/KGlobalAccel/KNotifications 6 or later,
+PlasmaActivities 6 or later, and the usual application dependencies:
 
 ```sh
 cmake -S src -B build-QOwnNotes-kde \
@@ -149,14 +172,6 @@ dependencies.
 Each phase should be independently reviewable, preserve the plain Qt build, and
 add only the dependencies it uses. Keep substantial KDE-specific logic in small
 services rather than scattering conditionals through `mainwindow.cpp`.
-
-### 4. Plasma Activities library
-
-- Optionally use PlasmaActivities (`KActivities::Consumer`) behind the existing
-  `PlasmaActivityService` API instead of its direct D-Bus implementation.
-- Preserve settings keys, layout/folder associations, and behavior in plain Qt
-  builds. Handle unavailable services and late startup without blocking the UI.
-- This is an implementation refinement: Activities integration already exists.
 
 ### 5. Color schemes and window activation
 
@@ -210,7 +225,7 @@ Acceptance and regression checks:
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
 
-Run isolated KDE shortcut and notification regression tests with:
+Run isolated KDE shortcut, notification, and activities regression tests with:
 
 ```sh
 nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'
@@ -223,7 +238,7 @@ ctest --test-dir build-tests-kde --output-on-failure
 The normal test project can include these targets with
 `-DQON_KDE_INTEGRATION_TESTS=ON`. The tests use a private D-Bus session and
 temporary configuration directories, so they never alter the user's desktop
-shortcuts or notification settings. Real Plasma/Wayland key delivery, notification
+shortcuts, notification settings, or activities. Real Plasma/Wayland key delivery, notification
 presentation and window activation, sandboxed (portal) notifications, and crash
 reporter presentation still require desktop integration testing; tests do not
 deliberately crash an application.

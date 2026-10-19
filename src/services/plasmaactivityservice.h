@@ -28,6 +28,9 @@
  * session D-Bus and stores which note folder and layout should be activated
  * when a certain Plasma activity becomes the current activity.
  *
+ * KDE builds use the cached data of the PlasmaActivities library instead, once it
+ * is ready (see PlasmaActivitiesLibrary).
+ *
  * Only one note folder and one layout can be linked to an activity.
  */
 class PlasmaActivityService : public QObject {
@@ -88,6 +91,8 @@ class PlasmaActivityService : public QObject {
     void onActivityNameChanged(const QString &activityId, const QString &name);
 
    private:
+    static bool usesLibrary();
+
     quint64 _activityChangeSerial = 0;
 };
 

@@ -26,8 +26,17 @@ target_compile_definitions(kde-notification-tests PRIVATE QON_KDE_INTEGRATION)
 target_link_libraries(
   kde-notification-tests PRIVATE Qt6::Widgets Qt6::DBus Qt6::Test
                                  KF6::Notifications)
+find_package(PlasmaActivities 6.0 REQUIRED)
+add_executable(
+  kde-activities-tests
+  test_plasmaactivitieslibrary.cpp
+  ../../src/services/plasmaactivitieslibrary.cpp
+  ../../src/services/plasmaactivitieslibrary.h)
+target_include_directories(kde-activities-tests PRIVATE ../../src)
+target_link_libraries(kde-activities-tests PRIVATE Qt6::DBus Qt6::Test
+                                                   Plasma::Activities)
 enable_testing()
-foreach(test kde-integration-tests kde-notification-tests)
+foreach(test kde-integration-tests kde-notification-tests kde-activities-tests)
   add_test(
     NAME ${test}
     COMMAND

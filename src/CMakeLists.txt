@@ -83,12 +83,19 @@ if(QON_KDE_INTEGRATION)
   list(APPEND CMAKE_MODULE_PATH ${ECM_FIND_MODULE_DIR})
   find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons Crash GlobalAccel
                                            Notifications)
+  # Part of Plasma rather than KDE Frameworks, so its version follows Plasma
+  find_package(PlasmaActivities 6.0 REQUIRED)
   target_compile_definitions(QOwnNotes PRIVATE QON_KDE_INTEGRATION)
-  target_link_libraries(QOwnNotes PRIVATE KF6::CoreAddons KF6::Crash
-                                          KF6::GlobalAccel KF6::Notifications)
+  target_link_libraries(
+    QOwnNotes PRIVATE KF6::CoreAddons KF6::Crash KF6::GlobalAccel
+                      KF6::Notifications Plasma::Activities)
   target_sources(
-    QOwnNotes PRIVATE services/kdeglobalshortcutmanager.cpp
-                      services/kdeglobalshortcutmanager.h kde/kde.qrc)
+    QOwnNotes
+    PRIVATE services/kdeglobalshortcutmanager.cpp
+            services/kdeglobalshortcutmanager.h
+            services/plasmaactivitieslibrary.cpp
+            services/plasmaactivitieslibrary.h
+            kde/kde.qrc)
 endif()
 
 if(BUILD_WITH_LIBGIT2)
