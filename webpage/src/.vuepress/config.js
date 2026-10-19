@@ -4,11 +4,11 @@ import customTheme from "./theme/index.js";
 import { createRequire } from "module";
 import * as utils from "./utils.js";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
-import { markdownChartPlugin } from "@vuepress/plugin-markdown-chart";
 import { markdownExtPlugin } from "@vuepress/plugin-markdown-ext";
 import { seoPlugin } from "@vuepress/plugin-seo";
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
 import { feedPlugin } from "@vuepress/plugin-feed";
+import { pelePlugin } from "./plugins/pele/index.js";
 
 const require = createRequire(import.meta.url);
 const { description } = require("../../package.json");
@@ -263,11 +263,8 @@ export default defineUserConfig({
         },
       },
     }),
-    // Mermaid diagrams support (via chart plugin)
-    markdownChartPlugin({
-      // Enable Mermaid
-      mermaid: true,
-    }),
+    // Mermaid diagrams rendered with Pele (https://pele.run)
+    pelePlugin(),
     // Task lists and other extensions
     markdownExtPlugin({
       tasklist: true,
@@ -328,7 +325,7 @@ export default defineUserConfig({
         // Only include blog posts in the feed
         return Boolean(
           frontmatter.feed ??
-          (filePathRelative && filePathRelative.startsWith("blog/")),
+            (filePathRelative && filePathRelative.startsWith("blog/")),
         );
       },
       sorter: (a, b) => {
