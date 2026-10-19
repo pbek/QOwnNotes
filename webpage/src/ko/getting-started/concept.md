@@ -10,7 +10,7 @@
 
 <div class="concept-page-marker" style="display: none;"></div>
 
-```mermaid
+```mermaid desktop
 graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
@@ -41,7 +41,7 @@ graph TB
     qon-.->qon-web-api("api.qownnotes.org")
     qon-web-api-->github("GitHub")
 
-    style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
+    style qon fill:#d0d0ff,stroke:#333,stroke-width:4px,color:#1f1f1f
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
     click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
@@ -55,6 +55,78 @@ graph TB
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
     click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
+    click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
+    click harper "/editor/harper.html" "Optional Harper service for offline grammar and style checking"
+    click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
+```
+
+```mermaid mobile
+---
+title: Your computer
+---
+graph TB
+    qon-comp("Browser<br>extension")-->qon
+    qc("Command-line<br>snippet manager")-->qon
+    homepage("Homepage<br>dashboard")-->qon
+    qon((QOwnNotes))-->md{{"Markdown files"}}
+    tui("QOwnNotes<br>TUI")-->md
+    sync("Nextcloud<br>Sync")-->md
+    qon ~~~ tui
+    qon ~~~ sync
+
+    style qon fill:#d0d0ff,stroke:#333,stroke-width:4px,color:#1f1f1f
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
+    click md "/getting-started/concept.html#markdown-note-files" "Markdown, media and attachment files in your note folder"
+    click qon-comp "/getting-started/concept.html#qownnotes-browser-extension" "QOwnNotes browser extension for managing bookmarks in markdown files and as web clipper"
+    click qc "/getting-started/concept.html#qownnotes-command-line-snippet-manager" "QOwnNotes command-line snippet manager"
+    click tui "/getting-started/concept.html#qownnotes-tui" "QOwnNotes TUI, a keyboard-first terminal browser and editor for your Markdown note folders"
+    click homepage "/getting-started/concept.html#homepage-dashboard" "Homepage dashboard using QOwnNotes bookmark suggestions"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
+```
+
+```mermaid mobile
+graph LR
+    qon((QOwnNotes))-->qon-nc
+    qon-->qon-api
+    qon-->nc-deck-app
+    qon-->ncs
+    qon-mob("QOwnNotes<br>Android")-->qon-nc
+    qon-mob-->qon-api
+    qon-mob-->nc-notes-app
+    sync("Nextcloud<br>Sync")-->ncs
+    subgraph server [Your Nextcloud server]
+        qon-nc("QOwnNotes<br>Nextcloud App")
+        qon-api("QOwnNotesApi")
+        nc-notes-app("Nextcloud Notes")
+        nc-deck-app("Nextcloud Deck")
+        ncs[("Nextcloud server")]
+    end
+
+    style qon fill:#d0d0ff,stroke:#333,stroke-width:4px,color:#1f1f1f
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
+    click sync "/getting-started/concept.html#nextcloud-desktop-sync-client" "Nextcloud desktop sync client to sync your notes to your server"
+    click ncs "/getting-started/concept.html#nextcloud-server" "Nextcloud server to host your notes and other files"
+    click qon-nc "/getting-started/concept.html#qownnotes-nextcloud-app" "QOwnNotes Nextcloud App to edit your notes in the web and to provide the APIs for QOwnNotes Desktop and Android"
+    click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
+    click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
+    click qon-mob "/getting-started/concept.html#qownnotes-android" "QOwnNotes Android, an offline-capable Markdown notes app for Android"
+    click nc-deck-app "/getting-started/concept.html#nextcloud-deck-server-app" "Nextcloud Deck server app to manage reminders and todo lists in the web"
+```
+
+```mermaid mobile
+---
+title: Other services
+---
+graph TB
+    qon-web-app("QOwnNotes<br>web application")-->qon
+    qon((QOwnNotes))-.->lt("LanguageTool<br>service")
+    qon-.->harper("Harper<br>service")
+    qon-.->qon-web-api("api.qownnotes.org")
+    qon-web-api-->github("GitHub")
+
+    style qon fill:#d0d0ff,stroke:#333,stroke-width:4px,color:#1f1f1f
+    click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
     click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click lt "/editor/languagetool.html" "Optional LanguageTool server for grammar and style checking"
     click harper "/editor/harper.html" "Optional Harper service for offline grammar and style checking"
