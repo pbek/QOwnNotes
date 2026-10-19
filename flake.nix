@@ -103,6 +103,7 @@
                 pkgs.kdePackages.kcoreaddons
                 pkgs.kdePackages.kcrash
                 pkgs.kdePackages.kglobalaccel
+                pkgs.kdePackages.knotifications
               ];
 
             shellHook = ''
@@ -138,12 +139,12 @@
             runHook postInstallCheck
           '';
         });
-        qownnotes-kde-shortcuts =
+        qownnotes-kde-tests =
           let
             pkgs = pkgsFor "x86_64-linux";
           in
           pkgs.stdenv.mkDerivation {
-            pname = "qownnotes-kde-shortcut-tests";
+            pname = "qownnotes-kde-integration-tests";
             version = "1";
             src = self;
             nativeBuildInputs = [
@@ -154,6 +155,7 @@
             buildInputs = [
               pkgs.kdePackages.qtbase
               pkgs.kdePackages.kglobalaccel
+              pkgs.kdePackages.knotifications
             ];
             dontWrapQtApps = true;
             preConfigure = ''
@@ -164,6 +166,8 @@
               runHook preCheck
               dbus-run-session --config-file=${pkgs.dbus}/share/dbus-1/session.conf -- \
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-integration-tests
+              dbus-run-session --config-file=${pkgs.dbus}/share/dbus-1/session.conf -- \
+                env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-notification-tests
               runHook postCheck
             '';
             installPhase = ''

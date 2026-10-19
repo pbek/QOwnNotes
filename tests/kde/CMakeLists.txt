@@ -5,8 +5,10 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 find_package(Qt6 REQUIRED COMPONENTS Widgets DBus Test)
 find_package(KF6GlobalAccel 6.0 REQUIRED)
+find_package(KF6Notifications 6.0 REQUIRED)
 add_executable(
   kde-integration-tests
   test_kdeglobalshortcutmanager.cpp
@@ -15,10 +17,21 @@ add_executable(
 target_include_directories(kde-integration-tests PRIVATE ../../src)
 target_link_libraries(kde-integration-tests PRIVATE Qt6::Widgets Qt6::DBus
                                                     Qt6::Test KF6::GlobalAccel)
+add_executable(
+  kde-notification-tests
+  test_notificationservice.cpp ../../src/services/notificationservice.cpp
+  ../../src/services/notificationservice.h ../../src/kde/kde.qrc)
+target_include_directories(kde-notification-tests PRIVATE ../../src)
+target_compile_definitions(kde-notification-tests PRIVATE QON_KDE_INTEGRATION)
+target_link_libraries(
+  kde-notification-tests PRIVATE Qt6::Widgets Qt6::DBus Qt6::Test
+                                 KF6::Notifications)
 enable_testing()
-add_test(
-  NAME kde-integration-tests
-  COMMAND
-    dbus-run-session -- ${CMAKE_COMMAND} -E env QON_KDE_TEST_BUS=1
-    QT_QPA_PLATFORM=minimal QT_QPA_PLATFORMTHEME= QT_STYLE_OVERRIDE=Fusion
-    QT_PLUGIN_PATH= $<TARGET_FILE:kde-integration-tests>)
+foreach(test kde-integration-tests kde-notification-tests)
+  add_test(
+    NAME ${test}
+    COMMAND
+      dbus-run-session -- ${CMAKE_COMMAND} -E env QON_KDE_TEST_BUS=1
+      QT_QPA_PLATFORM=minimal QT_QPA_PLATFORMTHEME= QT_STYLE_OVERRIDE=Fusion
+      QT_PLUGIN_PATH= $<TARGET_FILE:${test}>)
+endforeach()

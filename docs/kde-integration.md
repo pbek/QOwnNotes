@@ -64,7 +64,34 @@ features must check service availability before use.
 
 The editor and widget layout remain unchanged. Plasma's Qt platform theme already
 provides much of the appearance and native-dialog integration to ordinary Qt
-applications. Notifications, sharing, and KRunner integration are not implemented.
+applications. Sharing and KRunner integration are not implemented.
+
+## Implemented: desktop notifications (phase 3)
+
+- `NotificationService` is part of all builds. KDE builds send events with
+  `KF6::Notifications` when a notification server (or, in Flatpak/Snap, the desktop
+  portal) is registered or D-Bus activatable. Without one, and in plain builds,
+  script notifications use the system tray and then the status bar.
+- Events are defined in `src/kde/qownnotes.notifyrc`. The file is embedded as a Qt
+  resource, so it also works for uninstalled builds, and is installed to
+  `share/knotifications6` so the events appear in Plasma's notification settings
+  (System Settings → Notifications → Applications → QOwnNotes). Events disabled
+  there are not shown and don't fall back to the tray or status bar.
+- Events:
+  - `scriptNotification`: the new `script.showNotification(text, title)` scripting
+    API. Clicking the notification shows the main window.
+  - `externalNoteConflict` (KDE builds only): the current note was changed outside of
+    QOwnNotes while QOwnNotes is in the background, and the diff dialog is waiting.
+    The dialog is still shown; the notification doesn't contain the note name or text.
+- Notification text is plain text (escaped), and identical notifications within
+  10 seconds are only shown once. Clicking passes the notification's XDG activation
+  token to Qt, so Wayland compositors can raise the window.
+- Evaluated but not added: update notifications (the update dialog and the
+  update-available button already cover this, and distribution packages usually
+  disable the update checker) and connection errors (they result from user actions
+  with their own dialogs; repeated background errors would be excessive).
+- An isolated mock notification server tests delivery, escaping, actions, activation
+  tokens, disabled events, duplicate suppression, and the fallback without a service.
 
 For DrKonqi, install the reporter separately. KCrash searches executable directories
 including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
@@ -103,7 +130,7 @@ just src-build-kde
 ```
 
 This uses a separate `build-QOwnNotes-kde` directory. Outside Nix, install Qt6,
-ECM 6 or later, KCoreAddons/KCrash/KGlobalAccel 6 or later, and the usual application
+ECM 6 or later, KCoreAddons/KCrash/KGlobalAccel/KNotifications 6 or later, and the usual application
 dependencies:
 
 ```sh
@@ -122,16 +149,6 @@ dependencies.
 Each phase should be independently reviewable, preserve the plain Qt build, and
 add only the dependencies it uses. Keep substantial KDE-specific logic in small
 services rather than scattering conditionals through `mainwindow.cpp`.
-
-### 3. Desktop notifications
-
-- Add `KF6::Notifications`, an installed notification event configuration, and a
-  notification service with a Qt system-tray fallback.
-- Evaluate events for external edits/conflicts, connection errors, and updates;
-  do not replace blocking errors or important status messages with notifications.
-- Add and document a scripting notification API, with consistent fallback behavior.
-- Configure event visibility and avoid duplicate or excessive notifications.
-- Test notification actions, missing services/tray, and sandbox permissions.
 
 ### 4. Plasma Activities library
 
@@ -193,19 +210,21 @@ Acceptance and regression checks:
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
 
-Run isolated KDE shortcut regression tests with:
+Run isolated KDE shortcut and notification regression tests with:
 
 ```sh
-nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-shortcuts'
+nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'
 # Or build only the standalone test project:
 cmake -S tests/kde -B build-tests-kde
 cmake --build build-tests-kde --parallel
 ctest --test-dir build-tests-kde --output-on-failure
 ```
 
-The normal test project can include this target with
-`-DQON_KDE_INTEGRATION_TESTS=ON`. The tests use a private D-Bus session and never
-alter the user's desktop shortcuts. Real Plasma/Wayland key delivery and crash
+The normal test project can include these targets with
+`-DQON_KDE_INTEGRATION_TESTS=ON`. The tests use a private D-Bus session and
+temporary configuration directories, so they never alter the user's desktop
+shortcuts or notification settings. Real Plasma/Wayland key delivery, notification
+presentation and window activation, sandboxed (portal) notifications, and crash
 reporter presentation still require desktop integration testing; tests do not
 deliberately crash an application.
 

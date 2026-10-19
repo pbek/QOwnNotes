@@ -13,6 +13,15 @@
     Plasma-side changes and retaining the portal/QHotkey backends on other desktops
   - All actions are offered in the Plasma shortcut settings, so global shortcuts can also
     be assigned there, and they are shown with their menu path (e.g. `Note → New note`)
+  - KDE builds send desktop notifications that can be configured in Plasma's notification
+    settings, e.g. when the current note was modified externally while QOwnNotes was in
+    the background
+- Added a new scripting command `script.showNotification()` to show a desktop notification,
+  falling back to the system tray or the status bar
+  (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))
+  - For more information please take a look at the
+    [Showing a desktop notification](https://www.qownnotes.org/scripting/methods-and-objects.html#showing-a-desktop-notification)
+    documentation
 
 ## 26.10.8
 

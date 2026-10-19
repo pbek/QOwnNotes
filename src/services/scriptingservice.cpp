@@ -49,8 +49,10 @@ QT_WARNING_DISABLE_GCC("-Wmismatched-new-delete")
 
 #include <QInputDialog>
 #include <QMessageBox>
+#include <QPointer>
 
 #include "dialogs/textdiffdialog.h"
+#include "notificationservice.h"
 #include "openaiservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
@@ -2132,6 +2134,40 @@ void ScriptingService::informationMessageBox(const QString &text, const QString 
 #else
     Q_UNUSED(text)
     Q_UNUSED(title)
+#endif
+}
+
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(const QString &text, const QString &title) {
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("scripting/") %
+                                                   QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    // Clicking the notification shows the main window
+    const QPointer<MainWindow> mainWindow = MainWindow::instance();
+    const std::function<void()> showWindow = [mainWindow]() {
+        if (mainWindow != nullptr) {
+            QMetaObject::invokeMethod(mainWindow, "showWindow");
+        }
+    };
+
+    return NotificationService::instance()->notify(NotificationService::Event::ScriptNotification,
+                                                   title, text, QString(), showWindow);
+#else
+    Q_UNUSED(text)
+    Q_UNUSED(title)
+    return false;
 #endif
 }
 

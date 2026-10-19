@@ -81,12 +81,14 @@ add_executable(QOwnNotes "")
 if(QON_KDE_INTEGRATION)
   find_package(ECM 6.0 REQUIRED NO_MODULE)
   list(APPEND CMAKE_MODULE_PATH ${ECM_FIND_MODULE_DIR})
-  find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons Crash GlobalAccel)
+  find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons Crash GlobalAccel
+                                           Notifications)
   target_compile_definitions(QOwnNotes PRIVATE QON_KDE_INTEGRATION)
   target_link_libraries(QOwnNotes PRIVATE KF6::CoreAddons KF6::Crash
-                                          KF6::GlobalAccel)
-  target_sources(QOwnNotes PRIVATE services/kdeglobalshortcutmanager.cpp
-                                   services/kdeglobalshortcutmanager.h)
+                                          KF6::GlobalAccel KF6::Notifications)
+  target_sources(
+    QOwnNotes PRIVATE services/kdeglobalshortcutmanager.cpp
+                      services/kdeglobalshortcutmanager.h kde/kde.qrc)
 endif()
 
 if(BUILD_WITH_LIBGIT2)
@@ -453,6 +455,8 @@ set(SOURCE_FILES
     services/cryptoservice.h
     services/scriptingservice.cpp
     services/scriptingservice.h
+    services/notificationservice.cpp
+    services/notificationservice.h
     services/openaiservice.cpp
     services/openaiservice.h
     services/languagetoolclient.cpp
@@ -928,4 +932,8 @@ foreach(
   install(DIRECTORY images/icons/${size} DESTINATION share/icons/hicolor)
 endforeach()
 install(FILES PBE.QOwnNotes.desktop DESTINATION share/applications)
+if(QON_KDE_INTEGRATION)
+  # Lists the notification events in Plasma's notification settings
+  install(FILES kde/qownnotes.notifyrc DESTINATION share/knotifications6)
+endif()
 install(FILES ${QON_QM_FILES} DESTINATION share/QOwnNotes/translations)

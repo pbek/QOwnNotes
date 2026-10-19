@@ -173,6 +173,7 @@ SOURCES += main.cpp\
     services/cloudservice.cpp \
     services/nextclouddeckservice.cpp \
     services/updateservice.cpp \
+    services/notificationservice.cpp \
     helpers/htmlentities.cpp \
     helpers/clientproxy.cpp \
     helpers/toolbarcontainer.cpp \
@@ -342,6 +343,7 @@ HEADERS  += mainwindow.h \
     services/cloudservice.h \
     services/nextclouddeckservice.h \
     services/updateservice.h \
+    services/notificationservice.h \
     services/scriptingservice.h \
     services/websocketserverservice.h \
     services/webappclientservice.h \

@@ -114,6 +114,8 @@ class ScriptingService : public QObject {
 
     Q_INVOKABLE void informationMessageBox(const QString &text, const QString &title = QString());
 
+    Q_INVOKABLE bool showNotification(const QString &text, const QString &title = QString());
+
     Q_INVOKABLE int questionMessageBox(const QString &text, const QString &title = QString(),
                                        int buttons = QMessageBox::StandardButtons(QMessageBox::Yes |
                                                                                   QMessageBox::No),

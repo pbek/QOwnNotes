@@ -17,6 +17,7 @@
 #include <entities/calendaritem.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <services/notificationservice.h>
 #include <services/settingsservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
@@ -39,6 +40,9 @@ void SystemTrayManager::createSystemTrayIcon() {
 
     connect(_trayIcon, &QSystemTrayIcon::activated, this,
             &SystemTrayManager::systemTrayIconClicked);
+
+    // Notifications use the tray icon if there is no desktop notification service
+    NotificationService::instance()->setTrayIcon(_trayIcon);
 
     if (_showSystemTray) {
         _trayIcon->setIcon(getSystemTrayIcon());

@@ -1160,6 +1160,40 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
+## Showing a desktop notification
+
+### Method call and parameters
+
+```cpp
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(QString text, QString title);
+```
+
+### Example
+
+```js
+// show a desktop notification without interrupting the user
+script.showNotification("The export has finished", "My export script");
+```
+
+::: tip
+Clicking the notification shows the QOwnNotes window. The text is shown as plain text.
+Unlike `script.informationMessageBox()`, the notification doesn't block the script.
+In builds with KDE integration, the _Script notification_ event can be disabled or
+changed in Plasma's notification settings; if it is disabled, nothing is shown.
+:::
+
 ## Showing a question message box
 
 ### Method call and parameters

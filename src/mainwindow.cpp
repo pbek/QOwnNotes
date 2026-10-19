@@ -40,6 +40,7 @@
 #include <helpers/toolbarcontainer.h>
 #include <libraries/qtwaitingspinner/waitingspinnerwidget.h>
 #include <services/cryptoservice.h>
+#include <services/notificationservice.h>
 #include <services/scriptingservice.h>
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
 #include <services/xdgglobalshortcutmanager.h>
@@ -378,6 +379,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // Delete the OpenAiService instance again, so we can add backends after the scripts are loaded
     // by initScriptingEngine()
     OpenAiService::deleteInstance();
+
+    // Show notifications in the status bar if there is no notification service or tray,
+    // connected before the scripting engine, so scripts can already show notifications
+    connect(NotificationService::instance(), &NotificationService::statusMessageRequested, this,
+            [this](const QString &message) {
+                showStatusBarMessage(message, QStringLiteral("🔔"), 10000);
+            });
 
     // initialize the scripting engine
     // initDockWidgets() has to be called before that so the scripting dock

@@ -24,6 +24,7 @@
 #include <services/cloudservice.h>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
+#include <services/notificationservice.h>
 #include <services/scriptingservice.h>
 #include <services/settingsservice.h>
 #include <services/updateservice.h>
@@ -39,6 +40,7 @@
 #include <QDirIterator>
 #include <QFile>
 #include <QFileSystemWatcher>
+#include <QPointer>
 #include <QProgressDialog>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -769,6 +771,22 @@ void NoteIndexManager::notesWereModified(const QString &str) {
                     _mainWindow->updateNoteTextFromDisk(std::move(note));
                     return;
                 }
+            }
+
+            // Tell the user about the waiting dialog if QOwnNotes is in the background.
+            // The note name isn't included, so no note details are shown on the desktop.
+            if (!_mainWindow->isActiveWindow()) {
+                const QPointer<MainWindow> mainWindow = _mainWindow;
+                NotificationService::instance()->notify(
+                    NotificationService::Event::ExternalNoteConflict,
+                    tr("Note was modified externally"),
+                    tr("The current note was modified outside of QOwnNotes. "
+                       "Please review the changes."),
+                    tr("Review changes"), [mainWindow]() {
+                        if (mainWindow != nullptr) {
+                            mainWindow->showWindow();
+                        }
+                    });
             }
 
             const int result = _mainWindow->openNoteDiffDialog(note);

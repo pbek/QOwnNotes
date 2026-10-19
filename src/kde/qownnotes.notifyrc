@@ -1,0 +1,15 @@
+[Global]
+IconName=QOwnNotes
+DesktopEntry=PBE.QOwnNotes
+Name=QOwnNotes
+Comment=QOwnNotes
+
+[Event/scriptNotification]
+Name=Script notification
+Comment=A script shows a notification
+Action=Popup
+
+[Event/externalNoteConflict]
+Name=Note modified externally
+Comment=The current note was modified outside of QOwnNotes while QOwnNotes was in the background
+Action=Popup

@@ -68,7 +68,7 @@ jobs:
               ;;
             nix-build)
               nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde'
-              nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-shortcuts'
+              nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'
               ;;
             nix-build-cmake-qt5)
               nix build '.?submodules=1#qownnotes-cmake-qt5'
