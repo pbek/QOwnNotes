@@ -107,6 +107,7 @@
                 pkgs.kdePackages.knotifications
                 pkgs.kdePackages.plasma-activities
                 pkgs.kdePackages.kwindowsystem
+                pkgs.kdePackages.purpose
               ];
 
             shellHook = ''
@@ -162,6 +163,7 @@
               pkgs.kdePackages.knotifications
               pkgs.kdePackages.plasma-activities
               pkgs.kdePackages.kwindowsystem
+              pkgs.kdePackages.purpose
             ];
             dontWrapQtApps = true;
             preConfigure = ''
@@ -178,6 +180,10 @@
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-activities-tests
               env QT_QPA_PLATFORM=minimal ./kde-colorscheme-tests
               env QT_QPA_PLATFORM=minimal ./kde-windowactivation-tests
+              # The Purpose plugins provide the targets, e.g. email and the clipboard
+              env QT_QPA_PLATFORM=minimal QON_EXPECT_SHARE_TARGETS=1 \
+                QT_PLUGIN_PATH=${pkgs.kdePackages.purpose}/${pkgs.kdePackages.qtbase.qtPluginPrefix} \
+                ./kde-share-tests
               runHook postCheck
             '';
             installPhase = ''

@@ -82,8 +82,14 @@ if(QON_KDE_INTEGRATION)
   find_package(ECM 6.0 REQUIRED NO_MODULE)
   list(APPEND CMAKE_MODULE_PATH ${ECM_FIND_MODULE_DIR})
   find_package(
-    KF6 6.0 REQUIRED COMPONENTS ColorScheme CoreAddons Crash GlobalAccel
-                                Notifications WindowSystem)
+    KF6 6.0 REQUIRED
+    COMPONENTS ColorScheme
+               CoreAddons
+               Crash
+               GlobalAccel
+               Notifications
+               Purpose
+               WindowSystem)
   # Part of Plasma rather than KDE Frameworks, so its version follows Plasma
   find_package(PlasmaActivities 6.0 REQUIRED)
   target_compile_definitions(QOwnNotes PRIVATE QON_KDE_INTEGRATION)
@@ -94,6 +100,7 @@ if(QON_KDE_INTEGRATION)
             KF6::Crash
             KF6::GlobalAccel
             KF6::Notifications
+            KF6::PurposeWidgets
             KF6::WindowSystem
             Plasma::Activities)
   target_sources(
@@ -102,6 +109,8 @@ if(QON_KDE_INTEGRATION)
             services/kdecolorschemeservice.h
             services/kdeglobalshortcutmanager.cpp
             services/kdeglobalshortcutmanager.h
+            services/kdesharemenu.cpp
+            services/kdesharemenu.h
             services/plasmaactivitieslibrary.cpp
             services/plasmaactivitieslibrary.h
             kde/kde.qrc)

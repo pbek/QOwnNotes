@@ -50,6 +50,7 @@
 #endif
 #ifdef QON_KDE_INTEGRATION
 #include <services/kdeglobalshortcutmanager.h>
+#include <services/kdesharemenu.h>
 #endif
 #include <utils/git.h>
 #include <utils/gui.h>
@@ -386,6 +387,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
             [this](const QString &message) {
                 showStatusBarMessage(message, QStringLiteral("🔔"), 10000);
             });
+
+#ifdef QON_KDE_INTEGRATION
+    initKdeShareMenus();
+#endif
 
     // initialize the scripting engine
     // initDockWidgets() has to be called before that so the scripting dock
@@ -4373,6 +4378,52 @@ void MainWindow::moveSelectedNotesToFolder(const QString &destinationFolder) {
  * @return
  */
 QVector<Note> MainWindow::selectedNotes() { return _noteTreeManager->selectedNotes(); }
+
+#ifdef QON_KDE_INTEGRATION
+/**
+ * Adds menus to send note files to installed Purpose targets, e.g. KDE Connect or email
+ *
+ * The files are shared as they are stored, so encrypted notes stay encrypted.
+ */
+void MainWindow::initKdeShareMenus() {
+    _noteShareMenu = new KdeShareMenu(tr("Send note to"), this);
+    ui->menuQOwnNotes->insertMenu(ui->actionSave_modified_notes, _noteShareMenu->menu());
+    connect(ui->menuQOwnNotes, &QMenu::aboutToShow, this, [this]() {
+        _noteShareMenu->setFiles(
+            currentNote.isFetched() ? QStringList{currentNote.fullNoteFilePath()} : QStringList());
+    });
+
+    _selectedNotesShareMenu = new KdeShareMenu(tr("Send notes to"), this);
+
+    for (KdeShareMenu *shareMenu : {_noteShareMenu, _selectedNotesShareMenu}) {
+        // Share the current note text, not an outdated file
+        connect(shareMenu, &KdeShareMenu::aboutToShare, this, &MainWindow::storeUpdatedNotesToDisk);
+        connect(shareMenu, &KdeShareMenu::finished, this,
+                [this](const QString &message, bool failed) {
+                    showStatusBarMessage(message, failed ? QStringLiteral("⚠️") : QString(), 10000);
+                });
+    }
+}
+
+/**
+ * Returns the menu to send the selected notes, or nullptr if no target is available
+ */
+QMenu *MainWindow::selectedNotesShareMenu() {
+    if (_selectedNotesShareMenu == nullptr) {
+        return nullptr;
+    }
+
+    QStringList filePaths;
+    const QVector<Note> notes = selectedNotes();
+    for (const Note &note : notes) {
+        filePaths.append(note.fullNoteFilePath());
+    }
+
+    _selectedNotesShareMenu->menu()->setTitle(filePaths.size() > 1 ? tr("Send notes to")
+                                                                   : tr("Send note to"));
+    return _selectedNotesShareMenu->setFiles(filePaths) ? _selectedNotesShareMenu->menu() : nullptr;
+}
+#endif
 
 /**
  * Un-sets the current note

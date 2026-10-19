@@ -32,6 +32,8 @@ class PlasmaActivityService;
 #endif
 #ifdef QON_KDE_INTEGRATION
 class KdeGlobalShortcutManager;
+class KdeShareMenu;
+class QMenu;
 #endif
 
 #include "entities/notehistory.h"
@@ -244,6 +246,10 @@ class MainWindow : public QMainWindow {
                                                              bool reloadTabs = true);
 
     QVector<Note> selectedNotes();
+
+#ifdef QON_KDE_INTEGRATION
+    QMenu *selectedNotesShareMenu();
+#endif
 
     bool jumpToNoteSubFolder(int noteSubFolderId);
 
@@ -1064,6 +1070,10 @@ class MainWindow : public QMainWindow {
     QList<QHotkey *> _globalShortcuts;
 #ifdef QON_KDE_INTEGRATION
     KdeGlobalShortcutManager *_kdeShortcutManager = nullptr;
+    KdeShareMenu *_noteShareMenu = nullptr;
+    KdeShareMenu *_selectedNotesShareMenu = nullptr;
+
+    void initKdeShareMenus();
 #endif
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
     XdgGlobalShortcutManager *_xdgShortcutManager = nullptr;

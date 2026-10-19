@@ -54,9 +54,16 @@ target_compile_definitions(kde-windowactivation-tests
                            PRIVATE QON_KDE_INTEGRATION)
 target_link_libraries(kde-windowactivation-tests PRIVATE Qt6::Widgets Qt6::Test
                                                          KF6::WindowSystem)
+find_package(KF6Purpose 6.0 REQUIRED)
+add_executable(
+  kde-share-tests test_kdesharemenu.cpp ../../src/services/kdesharemenu.cpp
+                  ../../src/services/kdesharemenu.h)
+target_include_directories(kde-share-tests PRIVATE ../../src)
+target_link_libraries(kde-share-tests PRIVATE Qt6::Widgets Qt6::Test
+                                              KF6::PurposeWidgets)
 enable_testing()
 foreach(test kde-integration-tests kde-notification-tests kde-activities-tests
-             kde-colorscheme-tests kde-windowactivation-tests)
+             kde-colorscheme-tests kde-windowactivation-tests kde-share-tests)
   add_test(
     NAME ${test}
     COMMAND

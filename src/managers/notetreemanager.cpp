@@ -604,6 +604,13 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
         diffSelectedNotesAction = noteMenu.addAction(tr("Diff selected notes"));
     }
 
+#ifdef QON_KDE_INTEGRATION
+    // Send the note files to installed targets, e.g. KDE Connect or email
+    if (QMenu *shareMenu = _mainWindow->selectedNotesShareMenu()) {
+        noteMenu.addMenu(shareMenu);
+    }
+#endif
+
     if (!multiNoteMenuEntriesOnly) {
         openInExternalEditorAction = noteMenu.addAction(tr("Open note in external editor"));
         openNoteWindowAction = noteMenu.addAction(tr("Open note in different window"));

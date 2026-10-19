@@ -183,6 +183,29 @@ does the same), so token propagation is part of all builds (`WindowActivationSer
   the environment, removing unused tokens, and restoring minimized windows. Activation
   itself can only be checked on a real desktop.
 
+## Implemented: sharing (phase 6)
+
+- KDE builds add a "Send note to" submenu to the Note menu (current note) and a "Send
+  note(s) to" submenu to the note list context menu (selected notes). They list the
+  Purpose (`KF6::PurposeWidgets`) export targets, e.g. KDE Connect, email, Bluetooth, or
+  the clipboard.
+- Purpose only offers targets whose constraints are fulfilled (e.g. KDE Connect only while
+  its service runs, uploads only for matching file types); the submenus are hidden if no
+  target is available. Purpose's default disabled targets are kept.
+- Note files are shared as they are stored on disk, after modified notes were saved, so
+  encrypted notes stay encrypted and nothing is shared without selecting a target. Purpose
+  targets that upload publicly (e.g. Pastebin) name this in their menu entry.
+- The existing Nextcloud/ownCloud note sharing (Note → Share note) is unchanged.
+- Results are shown in the status bar, including a returned link (e.g. of an upload);
+  canceled jobs are silent. The menus are reused, because a share job ends if its menu is
+  deleted.
+- Evaluated but not added: sharing selected text, because Purpose's export targets accept
+  files, which would need temporary files that outlive asynchronous jobs; and attachments,
+  which can be sent from the file manager.
+- Purpose pulls in Kirigami and KIO at runtime for its job dialog.
+- Tests cover the input data (file URLs, common MIME type, title) and hiding the menu,
+  with and without installed Purpose plugins.
+
 For DrKonqi, install the reporter separately. KCrash searches executable directories
 including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
 discoverable with `LIBEXEC_PATH=/run/current-system/sw/libexec`. Useful stack traces
@@ -220,7 +243,7 @@ just src-build-kde
 ```
 
 This uses a separate `build-QOwnNotes-kde` directory. Outside Nix, install Qt6,
-ECM 6 or later, KColorScheme/KCoreAddons/KCrash/KGlobalAccel/KNotifications/KWindowSystem 6 or later,
+ECM 6 or later, KColorScheme/KCoreAddons/KCrash/KGlobalAccel/KNotifications/Purpose/KWindowSystem 6 or later,
 PlasmaActivities 6 or later, and the usual application dependencies:
 
 ```sh
@@ -239,13 +262,6 @@ dependencies.
 Each phase should be independently reviewable, preserve the plain Qt build, and
 add only the dependencies it uses. Keep substantial KDE-specific logic in small
 services rather than scattering conditionals through `mainwindow.cpp`.
-
-### 6. Sharing
-
-- Evaluate Purpose for sharing selected text, notes, or attachments to installed
-  targets such as KDE Connect or email.
-- Hide unavailable targets and keep existing Nextcloud/ownCloud sharing intact.
-- Avoid disclosing encrypted/private note content without explicit user action.
 
 ### 7. KRunner search
 
@@ -282,7 +298,7 @@ Acceptance and regression checks:
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
 
-Run isolated KDE shortcut, notification, activities, color scheme, and window activation regression tests with:
+Run isolated KDE shortcut, notification, activities, color scheme, window activation, and sharing regression tests with:
 
 ```sh
 nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'
