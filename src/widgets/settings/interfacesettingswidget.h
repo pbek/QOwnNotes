@@ -48,8 +48,14 @@ class InterfaceSettingsWidget : public QWidget {
     void on_itemHeightResetButton_clicked();
     void on_toolbarIconSizeResetButton_clicked();
 
+   protected:
+    void showEvent(QShowEvent *event) override;
+
    private:
     Ui::InterfaceSettingsWidget *ui;
 
     void loadInterfaceStyleComboBox();
+    void loadKdeColorSchemeComboBox();
+    void updateKdeColorSchemeState();
+    void storeKdeColorScheme();
 };

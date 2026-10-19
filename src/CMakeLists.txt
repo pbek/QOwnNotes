@@ -81,17 +81,19 @@ add_executable(QOwnNotes "")
 if(QON_KDE_INTEGRATION)
   find_package(ECM 6.0 REQUIRED NO_MODULE)
   list(APPEND CMAKE_MODULE_PATH ${ECM_FIND_MODULE_DIR})
-  find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons Crash GlobalAccel
-                                           Notifications)
+  find_package(KF6 6.0 REQUIRED COMPONENTS ColorScheme CoreAddons Crash
+                                           GlobalAccel Notifications)
   # Part of Plasma rather than KDE Frameworks, so its version follows Plasma
   find_package(PlasmaActivities 6.0 REQUIRED)
   target_compile_definitions(QOwnNotes PRIVATE QON_KDE_INTEGRATION)
   target_link_libraries(
-    QOwnNotes PRIVATE KF6::CoreAddons KF6::Crash KF6::GlobalAccel
-                      KF6::Notifications Plasma::Activities)
+    QOwnNotes PRIVATE KF6::ColorScheme KF6::CoreAddons KF6::Crash
+                      KF6::GlobalAccel KF6::Notifications Plasma::Activities)
   target_sources(
     QOwnNotes
-    PRIVATE services/kdeglobalshortcutmanager.cpp
+    PRIVATE services/kdecolorschemeservice.cpp
+            services/kdecolorschemeservice.h
+            services/kdeglobalshortcutmanager.cpp
             services/kdeglobalshortcutmanager.h
             services/plasmaactivitieslibrary.cpp
             services/plasmaactivitieslibrary.h

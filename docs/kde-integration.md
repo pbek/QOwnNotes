@@ -116,6 +116,38 @@ applications. Sharing and KRunner integration are not implemented.
 - Known limitation: if a running service is replaced by an older one while QOwnNotes
   is running and already uses the library, the library itself would abort.
 
+## Implemented: color schemes (phase 5)
+
+- KDE builds offer a color scheme selector in the interface settings (Settings →
+  Interface → Interface style). It lists the installed KDE color schemes (`*.colors`
+  files in `share/color-schemes`; a user scheme overrides a system scheme with the same
+  file name) and is hidden if there are none. The default, "System default", leaves the
+  application palette untouched.
+- `KF6::ColorScheme` creates the palette (`KColorScheme::createApplicationPalette()`).
+  `KColorSchemeManager` is not used, because it stores the selection in its own
+  configuration file and automatically applies Breeze or Breeze Dark if the Plasma
+  platform theme isn't used, which would change the appearance on other desktops.
+- The scheme ID is stored in the new `kdeColorScheme` setting; existing settings are
+  unchanged. A selected scheme that is no longer installed stays selected (shown as
+  "not installed"), and the system palette is used meanwhile.
+- Precedence:
+  - The QDarkStyle dark mode theme of the color modes takes precedence, because its
+    stylesheet overrides most palette colors. While it is turned on, the scheme isn't
+    applied and the selector is disabled with a hint.
+  - The editor keeps its colors from the editor color schema (which color modes can
+    switch), and the accent color still applies, so contrast between the interface and
+    the editor depends on choosing a matching schema, as with the system palette before.
+- Like `KColorSchemeManager`, the `KDE_COLOR_SCHEME_PATH` application property is set.
+  The Plasma platform theme then keeps the selected palette when the system color scheme
+  changes and uses it for the window decoration. With "System default", the platform
+  theme still applies system scheme changes live.
+- Selecting a scheme applies it immediately; canceling the settings dialog restores the
+  previous one. After palette changes, including system ones, palette-derived styling
+  (e.g. the note tag frame background) is refreshed.
+- Tests cover scheme discovery, overrides and sorting, applying and switching schemes,
+  restoring the system palette and a platform-provided scheme property, and the dark mode
+  theme precedence.
+
 For DrKonqi, install the reporter separately. KCrash searches executable directories
 including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
 discoverable with `LIBEXEC_PATH=/run/current-system/sw/libexec`. Useful stack traces
@@ -153,7 +185,7 @@ just src-build-kde
 ```
 
 This uses a separate `build-QOwnNotes-kde` directory. Outside Nix, install Qt6,
-ECM 6 or later, KCoreAddons/KCrash/KGlobalAccel/KNotifications 6 or later,
+ECM 6 or later, KColorScheme/KCoreAddons/KCrash/KGlobalAccel/KNotifications 6 or later,
 PlasmaActivities 6 or later, and the usual application dependencies:
 
 ```sh
@@ -173,11 +205,8 @@ Each phase should be independently reviewable, preserve the plain Qt build, and
 add only the dependencies it uses. Keep substantial KDE-specific logic in small
 services rather than scattering conditionals through `mainwindow.cpp`.
 
-### 5. Color schemes and window activation
+### 5. Window activation
 
-- Evaluate `KF6::ColorScheme` for an in-app system color scheme selector.
-- Define precedence against QDarkStyle and custom editor colors; retain existing
-  preferences and verify live scheme changes and contrast.
 - Evaluate `KF6::WindowSystem` and activation-token propagation for shortcut and
   secondary-instance activation. Wayland requires appropriate tokens; merely
   calling an activation function does not bypass compositor focus policy.
@@ -225,7 +254,7 @@ Acceptance and regression checks:
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
 
-Run isolated KDE shortcut, notification, and activities regression tests with:
+Run isolated KDE shortcut, notification, activities, and color scheme regression tests with:
 
 ```sh
 nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-tests'

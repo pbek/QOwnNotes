@@ -59,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
     aspell
   ]
   ++ lib.optionals useKdeIntegration [
+    kdePackages.kcolorscheme
     kdePackages.kcoreaddons
     kdePackages.kcrash
     kdePackages.kglobalaccel

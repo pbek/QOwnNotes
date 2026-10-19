@@ -56,6 +56,9 @@
 #include "services/openaiservice.h"
 #include "services/settingsservice.h"
 #include "ui_settingsdialog.h"
+#ifdef QON_KDE_INTEGRATION
+#include "services/kdecolorschemeservice.h"
+#endif
 #include "version.h"
 #include "widgets/fontcolorwidget.h"
 #include "widgets/settings/aisettingswidget.h"
@@ -107,6 +110,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     _initialDarkModeIconTheme = Utils::Misc::isDarkModeIconTheme();
     _initialSchemaKey = settings.value(QStringLiteral("Editor/CurrentSchemaKey")).toString();
     _initialAccentColor = settings.value(QStringLiteral("accentColor")).toString();
+#ifdef QON_KDE_INTEGRATION
+    _initialKdeColorScheme = settings.value(KdeColorSchemeService::settingsKey);
+#endif
 
     bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 
@@ -1392,6 +1398,14 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
         settings.setValue(QStringLiteral("darkModeIconTheme"), _initialDarkModeIconTheme);
         settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _initialSchemaKey);
         settings.setValue(QStringLiteral("accentColor"), _initialAccentColor);
+#ifdef QON_KDE_INTEGRATION
+        // The color scheme is applied immediately when it is selected
+        if (_initialKdeColorScheme.isValid()) {
+            settings.setValue(KdeColorSchemeService::settingsKey, _initialKdeColorScheme);
+        } else {
+            settings.remove(KdeColorSchemeService::settingsKey);
+        }
+#endif
 
         // Restore the initial color mode
         const QString initialColorModeId = ui->colorModeSettingsWidget->initialColorModeId();

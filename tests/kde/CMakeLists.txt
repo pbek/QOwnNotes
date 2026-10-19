@@ -35,8 +35,17 @@ add_executable(
 target_include_directories(kde-activities-tests PRIVATE ../../src)
 target_link_libraries(kde-activities-tests PRIVATE Qt6::DBus Qt6::Test
                                                    Plasma::Activities)
+find_package(KF6ColorScheme 6.0 REQUIRED)
+add_executable(
+  kde-colorscheme-tests
+  test_kdecolorschemeservice.cpp ../../src/services/kdecolorschemeservice.cpp
+  ../../src/services/kdecolorschemeservice.h)
+target_include_directories(kde-colorscheme-tests PRIVATE ../../src)
+target_link_libraries(kde-colorscheme-tests PRIVATE Qt6::Widgets Qt6::Test
+                                                    KF6::ColorScheme)
 enable_testing()
-foreach(test kde-integration-tests kde-notification-tests kde-activities-tests)
+foreach(test kde-integration-tests kde-notification-tests kde-activities-tests
+             kde-colorscheme-tests)
   add_test(
     NAME ${test}
     COMMAND

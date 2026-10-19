@@ -24,6 +24,9 @@
 
 #include "services/settingsservice.h"
 #include "ui_interfacesettingswidget.h"
+#ifdef QON_KDE_INTEGRATION
+#include "services/kdecolorschemeservice.h"
+#endif
 
 InterfaceSettingsWidget::InterfaceSettingsWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::InterfaceSettingsWidget) {
@@ -36,6 +39,18 @@ InterfaceSettingsWidget::InterfaceSettingsWidget(QWidget *parent)
                                     QStringLiteral("auto"));
     ui->fontEngineComboBox->addItem(tr("DirectWrite"), QStringLiteral("directwrite"));
     ui->fontEngineComboBox->addItem(tr("GDI (legacy)"), QStringLiteral("gdi"));
+#endif
+
+#ifdef QON_KDE_INTEGRATION
+    // Apply the selected color scheme immediately, the settings dialog restores the previous
+    // one if it is canceled
+    connect(ui->kdeColorSchemeComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this,
+            [this]() {
+                storeKdeColorScheme();
+                Utils::Gui::applyDarkModeSettings();
+            });
+#else
+    ui->kdeColorSchemeWidget->hide();
 #endif
 }
 
@@ -150,6 +165,7 @@ void InterfaceSettingsWidget::readSettings() {
     }
 
     loadInterfaceStyleComboBox();
+    loadKdeColorSchemeComboBox();
 }
 
 /**
@@ -202,6 +218,78 @@ void InterfaceSettingsWidget::storeSettings() {
 
     settings.setValue(QStringLiteral("ShowSystemTray"), ui->showSystemTrayCheckBox->isChecked());
     settings.setValue(QStringLiteral("StartHidden"), ui->startHiddenCheckBox->isChecked());
+
+    storeKdeColorScheme();
+}
+
+void InterfaceSettingsWidget::showEvent(QShowEvent *event) {
+    QWidget::showEvent(event);
+
+    // The dark mode theme may have been toggled on the color modes page in the meantime
+    updateKdeColorSchemeState();
+}
+
+/**
+ * Loads the KDE color schemes (KDE builds only)
+ *
+ * The selector is hidden if no color schemes are installed.
+ */
+void InterfaceSettingsWidget::loadKdeColorSchemeComboBox() {
+#ifdef QON_KDE_INTEGRATION
+    const QSignalBlocker blocker(ui->kdeColorSchemeComboBox);
+    Q_UNUSED(blocker)
+
+    const QList<KdeColorSchemeService::Scheme> schemes = KdeColorSchemeService::availableSchemes();
+    const QString schemeId = SettingsService().value(KdeColorSchemeService::settingsKey).toString();
+
+    ui->kdeColorSchemeComboBox->clear();
+    ui->kdeColorSchemeComboBox->addItem(tr("System default"), QString());
+
+    for (const KdeColorSchemeService::Scheme &scheme : schemes) {
+        ui->kdeColorSchemeComboBox->addItem(scheme.name, scheme.id);
+    }
+
+    // Keep a selected scheme that isn't installed anymore, so it isn't removed silently
+    int index = ui->kdeColorSchemeComboBox->findData(schemeId);
+    if (index < 0) {
+        ui->kdeColorSchemeComboBox->addItem(tr("%1 (not installed)").arg(schemeId), schemeId);
+        index = ui->kdeColorSchemeComboBox->count() - 1;
+    }
+
+    ui->kdeColorSchemeComboBox->setCurrentIndex(index);
+    ui->kdeColorSchemeWidget->setVisible(ui->kdeColorSchemeComboBox->count() > 1);
+    updateKdeColorSchemeState();
+#endif
+}
+
+/**
+ * Disables the KDE color scheme selector if the dark mode theme is used, because its
+ * stylesheet takes precedence over the color scheme
+ */
+void InterfaceSettingsWidget::updateKdeColorSchemeState() {
+#ifdef QON_KDE_INTEGRATION
+    const bool darkModeTheme = SettingsService().value(QStringLiteral("darkMode")).toBool();
+    ui->kdeColorSchemeLabel->setEnabled(!darkModeTheme);
+    ui->kdeColorSchemeComboBox->setEnabled(!darkModeTheme);
+    ui->kdeColorSchemeDarkModeLabel->setVisible(darkModeTheme);
+#endif
+}
+
+void InterfaceSettingsWidget::storeKdeColorScheme() {
+#ifdef QON_KDE_INTEGRATION
+    if (ui->kdeColorSchemeComboBox->count() == 0) {
+        return;
+    }
+
+    const QString schemeId = ui->kdeColorSchemeComboBox->currentData().toString();
+    SettingsService settings;
+
+    if (schemeId.isEmpty()) {
+        settings.remove(KdeColorSchemeService::settingsKey);
+    } else {
+        settings.setValue(KdeColorSchemeService::settingsKey, schemeId);
+    }
+#endif
 }
 
 /**

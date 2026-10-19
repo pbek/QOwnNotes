@@ -100,6 +100,7 @@
                 pkgs.libsecret
               ]
               ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
+                pkgs.kdePackages.kcolorscheme
                 pkgs.kdePackages.kcoreaddons
                 pkgs.kdePackages.kcrash
                 pkgs.kdePackages.kglobalaccel
@@ -155,6 +156,7 @@
             ];
             buildInputs = [
               pkgs.kdePackages.qtbase
+              pkgs.kdePackages.kcolorscheme
               pkgs.kdePackages.kglobalaccel
               pkgs.kdePackages.knotifications
               pkgs.kdePackages.plasma-activities
@@ -172,6 +174,7 @@
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-notification-tests
               dbus-run-session --config-file=${pkgs.dbus}/share/dbus-1/session.conf -- \
                 env QON_KDE_TEST_BUS=1 QT_QPA_PLATFORM=minimal ./kde-activities-tests
+              env QT_QPA_PLATFORM=minimal ./kde-colorscheme-tests
               runHook postCheck
             '';
             installPhase = ''

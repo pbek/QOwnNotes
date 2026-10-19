@@ -65,7 +65,7 @@ make -j4
 
 - `QON_QT6_BUILD=ON` - Build with Qt6 (default: OFF, uses Qt5)
 - `QON_KDE_INTEGRATION=ON` - Optional KDE Frameworks 6 integration (default: OFF,
-  Linux and Qt6 only; requires Extra CMake Modules, KCoreAddons, KCrash, KGlobalAccel, KNotifications, and PlasmaActivities)
+  Linux and Qt6 only; requires Extra CMake Modules, KColorScheme, KCoreAddons, KCrash, KGlobalAccel, KNotifications, and PlasmaActivities)
 - `DEV_MODE=ON` - Enable developer mode with extra warnings
 - `BUILD_WITH_LIBGIT2=ON` - Use system libgit2 library
 - `BUILD_WITH_ASPELL=ON` - Enable aspell spell checking support

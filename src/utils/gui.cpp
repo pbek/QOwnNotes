@@ -54,6 +54,9 @@
 #include "mainwindow.h"
 #endif
 #include "services/settingsservice.h"
+#ifdef QON_KDE_INTEGRATION
+#include "services/kdecolorschemeservice.h"
+#endif
 
 #define ORDER_ASCENDING 0     // Qt::AscendingOrder // = 0
 #define ORDER_DESCENDING 1    // Qt::DescendingOrder // = 1
@@ -2074,4 +2077,15 @@ void Utils::Gui::applyInterfaceStyle(QString interfaceStyle) {
     } else if (!interfaceStyle.isEmpty()) {
         QApplication::setStyle(interfaceStyle);
     }
+}
+
+/**
+ * Applies the KDE color scheme selected in the settings (KDE builds only)
+ */
+void Utils::Gui::applyKdeColorScheme() {
+#ifdef QON_KDE_INTEGRATION
+    const SettingsService settings;
+    KdeColorSchemeService::apply(settings.value(KdeColorSchemeService::settingsKey).toString(),
+                                 settings.value(QStringLiteral("darkMode")).toBool());
+#endif
 }

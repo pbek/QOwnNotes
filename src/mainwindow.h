@@ -19,6 +19,7 @@
 #include <services/webappclientservice.h>
 #include <widgets/logwidget.h>
 
+#include <QColor>
 #include <QFileSystemWatcher>
 #include <QMainWindow>
 #include <QSystemTrayIcon>
@@ -1045,6 +1046,8 @@ class MainWindow : public QMainWindow {
     QString _notePreviewHash;
     int _gitCommitInterval;
     bool _noteEditIsCentralWidget;
+    // Palette base color that was used by initStyling()
+    QColor _styledPaletteBaseColor;
     bool _notePreviewIsCentralWidget = false;
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;

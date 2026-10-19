@@ -343,6 +343,7 @@ int mainStartupMisc(const QStringList &arguments) {
 
     Utils::Gui::applyInterfaceStyle();
     Utils::Gui::doSystemDarkModeCheck();
+    Utils::Gui::applyKdeColorScheme();
 
     qApp->setProperty("systemIconThemeName", QIcon::themeName());
 

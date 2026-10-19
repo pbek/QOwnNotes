@@ -176,5 +176,6 @@ void fixDarkModeIcons(QWidget *widget);
 void applyDarkModeSettings();
 QAction *findActionByData(QMenu *menu, const QVariant &data);
 void applyInterfaceStyle(QString interfaceStyle = QString());
+void applyKdeColorScheme();
 }    // namespace Gui
 }    // namespace Utils

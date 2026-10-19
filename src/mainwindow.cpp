@@ -2115,6 +2115,8 @@ void MainWindow::initStyling() {
         noteTagFrameColorName = color.name();
     }
 
+    _styledPaletteBaseColor = QPalette().color(QPalette::Base);
+
     applyAccentColor(appStyleSheet, darkMode);
 
     // get the color name of the background color of the default text
@@ -2246,6 +2248,8 @@ void MainWindow::applyDarkModeSettings() {
         }
     }
 
+    // The color scheme depends on whether the dark mode theme is used
+    Utils::Gui::applyKdeColorScheme();
     initStyling();
     setWindowIcon(getSystemTrayIcon());
 
@@ -6567,6 +6571,14 @@ void MainWindow::changeEvent(QEvent *event) {
         }
 
         ScriptingService::instance()->callWindowStateChangeHook(windowStateString);
+    } else if (event->type() == QEvent::ApplicationPaletteChange) {
+        // The system or the selected KDE color scheme changed, so colors that are derived from
+        // the palette need to be updated
+        QTimer::singleShot(0, this, [this]() {
+            if (QPalette().color(QPalette::Base) != _styledPaletteBaseColor) {
+                initStyling();
+            }
+        });
     }
 
     QMainWindow::changeEvent(event);

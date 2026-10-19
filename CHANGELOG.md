@@ -19,6 +19,8 @@
   - KDE builds use the PlasmaActivities library for the KDE Plasma activity integration,
     so activities are loaded without blocking, while older activity managers and other
     desktops keep using the existing implementation
+  - KDE builds can use an installed KDE color scheme for the user interface, which can be
+    selected in the _Interface_ settings, while the system palette stays the default
 - Added a new scripting command `script.showNotification()` to show a desktop notification,
   falling back to the system tray or the status bar
   (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))

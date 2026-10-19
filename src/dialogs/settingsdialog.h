@@ -144,6 +144,9 @@ class SettingsDialog : public MasterDialog {
     bool _initialDarkModeIconTheme = false;
     QString _initialSchemaKey;
     QString _initialAccentColor;
+#ifdef QON_KDE_INTEGRATION
+    QVariant _initialKdeColorScheme;
+#endif
     QList<QWidget *> _searchMatchedWidgets;
     QHash<QWidget *, QString> _searchMatchedWidgetOriginalTexts;
 #ifdef Q_OS_LINUX
