@@ -26,6 +26,9 @@ AboutDialog::AboutDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Abo
         if (release.isEmpty()) {
             release = QLatin1String("generic");
         }
+#ifdef QON_KDE_INTEGRATION
+        release += QStringLiteral(" (KDE integration)");
+#endif
 
         // fill in the variables
         html.replace(QLatin1String("QT_VERSION_STR"), QStringLiteral(QT_VERSION_STR));

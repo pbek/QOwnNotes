@@ -20,6 +20,10 @@
 #include <cstdio>
 #include <iostream>
 
+#ifdef QON_KDE_INTEGRATION
+#include <KAboutData>
+#endif
+
 #include "dialogs/welcomedialog.h"
 #include "entities/note.h"
 #include "entities/notefolder.h"
@@ -599,6 +603,23 @@ inline void setAppProperties(QCoreApplication &app, const QString &release,
     app.setProperty("arguments", arguments);
     app.setProperty("startupAction", action);
     app.setProperty("session", session);
+
+#ifdef QON_KDE_INTEGRATION
+    // KAboutData also sets Qt metadata. Preserve settings, session names, the
+    // detailed version string, and the desktop file selected for Flatpak/Snap.
+    KAboutData aboutData(app.applicationName(), QStringLiteral("QOwnNotes"),
+                         app.applicationVersion());
+    aboutData.setShortDescription(
+        QStringLiteral("Markdown note taking with Nextcloud/ownCloud integration"));
+    aboutData.setLicense(KAboutLicense::GPL_V2);
+    aboutData.setHomepage(QStringLiteral("https://www.qownnotes.org"));
+    aboutData.setBugAddress(QByteArrayLiteral("https://github.com/pbek/QOwnNotes/issues"));
+    aboutData.setOrganizationDomain(app.organizationDomain().toUtf8());
+    aboutData.setDesktopFileName(QGuiApplication::desktopFileName());
+    aboutData.setCopyrightStatement(QStringLiteral("Copyright 2014-%1 the QOwnNotes contributors")
+                                        .arg(QDate::currentDate().year()));
+    KAboutData::setApplicationData(aboutData);
+#endif
 }
 
 #ifdef Q_OS_WIN

@@ -54,6 +54,12 @@
               { };
           default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
         }
+        // pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
+          qownnotes-qt6-kde = pkgs.callPackage (import ./default.nix) {
+            useKdeIntegration = true;
+            qt6Packages = pkgs.kdePackages;
+          };
+        }
       );
 
       devShells = forAllSystems (
@@ -63,29 +69,39 @@
         in
         {
           default = pkgs.mkShell {
-            nativeBuildInputs = with pkgs.qt6; [
-              pkgs.gnumake
-              pkgs.crowdin-cli
-              pkgs.cmakeWithGui
-              qmake
-              qttools
-              wrapQtAppsHook
-              pkgs.pkg-config
+            nativeBuildInputs =
+              with pkgs.qt6;
+              [
+                pkgs.gnumake
+                pkgs.crowdin-cli
+                pkgs.cmakeWithGui
+                qmake
+                qttools
+                wrapQtAppsHook
+                pkgs.pkg-config
 
-              # for ./build-systems/github/build-github-src.sh
-              pkgs.coreutils
-              pkgs.gh
-            ];
+                # for ./build-systems/github/build-github-src.sh
+                pkgs.coreutils
+                pkgs.gh
+              ]
+              ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
+                pkgs.kdePackages.extra-cmake-modules
+              ];
 
-            buildInputs = with pkgs.qt6; [
-              qtbase
-              qtwebsockets
-              qtdeclarative
-              qtsvg
-              pkgs.botan3
-              pkgs.libgit2
-              pkgs.libsecret
-            ];
+            buildInputs =
+              with pkgs.qt6;
+              [
+                qtbase
+                qtwebsockets
+                qtdeclarative
+                qtsvg
+                pkgs.botan3
+                pkgs.libgit2
+                pkgs.libsecret
+              ]
+              ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
+                pkgs.kdePackages.kcoreaddons
+              ];
 
             shellHook = ''
               echo "qmake:  $(qmake --version)"
@@ -99,6 +115,27 @@
 
       checks.x86_64-linux = {
         qownnotes = (pkgsFor "x86_64-linux").testers.runNixOSTest ./tests/vm/qownnotes.nix;
+        qownnotes-kde = self.packages.x86_64-linux.qownnotes-qt6-kde.overrideAttrs (old: {
+          cmakeFlags = old.cmakeFlags ++ [
+            "-DDEV_MODE=ON"
+            "-DCMAKE_BUILD_TYPE=Debug"
+            # The bundled Aspell backend has an existing GCC maybe-uninitialized warning.
+            # Keep Aspell in release packages; validate developer warnings with Hunspell here.
+            "-DBUILD_WITH_ASPELL=OFF"
+          ];
+          doInstallCheck = true;
+          installCheckPhase = ''
+            runHook preInstallCheck
+            export HOME="$TMPDIR/kde-smoke-home"
+            mkdir -p "$HOME"
+            # CLI startup must not require a graphical session after KAboutData registration.
+            env -u DISPLAY -u WAYLAND_DISPLAY "$out/bin/QOwnNotes" --help > help.txt
+            grep -q 'QOwnNotes' help.txt
+            env -u DISPLAY -u WAYLAND_DISPLAY "$out/bin/QOwnNotes" --completion bash > completion.bash
+            test -s completion.bash
+            runHook postInstallCheck
+          '';
+        });
       };
     };
 }

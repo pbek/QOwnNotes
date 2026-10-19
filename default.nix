@@ -11,6 +11,8 @@
   xvfb-run,
   installShellFiles,
   aspell,
+  kdePackages ? null,
+  useKdeIntegration ? false,
   useQlitehtml ? false,
 }:
 
@@ -22,6 +24,12 @@ let
   );
   version = if versionMatch != null then builtins.head versionMatch else "unknown";
 in
+assert lib.assertMsg (
+  !useKdeIntegration || stdenv.hostPlatform.isLinux
+) "KDE integration is currently supported only on Linux";
+assert lib.assertMsg (
+  !useKdeIntegration || kdePackages != null
+) "KDE integration requires kdePackages";
 stdenv.mkDerivation (finalAttrs: {
   inherit pname appname version;
 
@@ -37,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     installShellFiles
   ]
+  ++ lib.optionals useKdeIntegration [ kdePackages.extra-cmake-modules ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ xvfb-run ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
 
@@ -49,6 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     libgit2
     aspell
   ]
+  ++ lib.optionals useKdeIntegration [ kdePackages.kcoreaddons ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     libsecret
     qt6Packages.qtwayland
@@ -59,6 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-DBUILD_WITH_SYSTEM_BOTAN=ON"
     "-DBUILD_WITH_LIBGIT2=ON"
     "-DBUILD_WITH_ASPELL=ON"
+    (lib.cmakeBool "QON_KDE_INTEGRATION" useKdeIntegration)
   ]
   ++ lib.optionals useQlitehtml [
     "-DUSE_QLITEHTML=ON"

@@ -2365,6 +2365,13 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
                                           QStringLiteral(QT_VERSION_STR), withGitHubLineBreaks);
     output += prepareDebugInformationLine(QStringLiteral("Qt Version (runtime)"), qVersion(),
                                           withGitHubLineBreaks);
+    output += prepareDebugInformationLine(QStringLiteral("KDE integration"),
+#ifdef QON_KDE_INTEGRATION
+                                          QStringLiteral("enabled"),
+#else
+                                          QStringLiteral("disabled"),
+#endif
+                                          withGitHubLineBreaks);
 #ifdef Q_OS_WIN
     BOOL fontSmoothingEnabled = FALSE;
     const bool fontSmoothingKnown =

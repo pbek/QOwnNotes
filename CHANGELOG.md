@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 26.10.9
+
+- Added an optional Linux Qt6 CMake build with KDE Frameworks application metadata
+  (`QON_KDE_INTEGRATION`), a `qownnotes-qt6-kde` Nix flake package, and build diagnostics
+  (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))
+  - `just build` / `just nix-build` now select the KDE variant on Linux; plain Qt6 and
+    macOS builds remain available without KDE dependencies
+
 ## 26.10.8
 
 - Fixed Nextcloud Deck cards sometimes not moving to another board or stack without an error

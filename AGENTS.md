@@ -39,8 +39,9 @@ This command will:
 
 For Nix users, multiple build options are available:
 
-- **Qt6 build**: `just nix-build` or `just nix-build-qt6`
 - **Qt5 build**: `just nix-build-qt5`
+- **Qt6 with KDE integration (Linux)**: `just build` or `just nix-build`
+- **Plain Qt6 build**: `just nix-build-qt6`
 - **Force rebuild**: `just nix-build-force`
 
 ### Manual Build with CMake
@@ -63,6 +64,8 @@ make -j4
 **Available CMake Options:**
 
 - `QON_QT6_BUILD=ON` - Build with Qt6 (default: OFF, uses Qt5)
+- `QON_KDE_INTEGRATION=ON` - Optional KDE Frameworks 6 integration (default: OFF,
+  Linux and Qt6 only; requires Extra CMake Modules and KCoreAddons)
 - `DEV_MODE=ON` - Enable developer mode with extra warnings
 - `BUILD_WITH_LIBGIT2=ON` - Use system libgit2 library
 - `BUILD_WITH_ASPELL=ON` - Enable aspell spell checking support
@@ -81,6 +84,10 @@ cmake ../src \
 ```
 
 ## Project Structure
+
+For the KDE integration roadmap and build instructions, see `docs/kde-integration.md`.
+`just src-build-kde` provides a CMake development recipe in a KDE-enabled environment;
+use `just nix-build` for agent build validation.
 
 - `src/` - Main source code directory
   - `QOwnNotes.pro` - Main qmake project file

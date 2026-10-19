@@ -12,6 +12,7 @@ default:
 transferDir := `if [ -d "$HOME/NextcloudPrivate/Transfer" ]; then echo "$HOME/NextcloudPrivate/Transfer"; else echo "$HOME/Nextcloud/Transfer"; fi`
 sourceBuildDir := "build-QOwnNotes"
 sourceBuildTestDir := "build-tests-QOwnNotes"
+nixBuildPackage := `if [ "$(uname)" = Linux ]; then echo qownnotes-qt6-kde; else echo qownnotes-qt6; fi`
 
 # Aliases
 
@@ -20,6 +21,7 @@ alias linter-fix := clang-format
 alias fix-cmake-format := cmake-format-fix
 alias trace-process := process-trace
 alias test := src-test
+alias build := nix-build
 alias download-translations := translations-download
 
 # Build the Docker compose images for build systems
@@ -52,10 +54,10 @@ translations-upload:
 translations-update-files:
     ./scripts/update-translations.sh
 
-# Build the application for nix
+# Build the application for nix with KDE integration (Linux), or plain Qt6 (macOS)
 [group('nix')]
 nix-build:
-    nix build '.?submodules=1#qownnotes-qt6'
+    nix build '.?submodules=1#{{ nixBuildPackage }}'
 
 # Build the application for nix with QLITEHTML support
 [group('nix')]
@@ -100,12 +102,12 @@ nix-build-qt69 args='':
 # Build the application with Qt6 for nix with a trace
 [group('nix')]
 nix-build-trace:
-    nix build '.?submodules=1#qownnotes-qt6' --show-trace
+    nix build '.?submodules=1#{{ nixBuildPackage }}' --show-trace
 
 # Force a rebuild of the application with Qt6 for nix
 [group('nix')]
 nix-build-force:
-    nix build '.?submodules=1#qownnotes-qt6' --rebuild
+    nix build '.?submodules=1#{{ nixBuildPackage }}' --rebuild
 
 # Run the built application for nix
 [group('nix')]
@@ -117,7 +119,7 @@ nix-run:
 # like the KDE Plasma platform theme, can be loaded
 [group('nix')]
 nix-build-system:
-    nix build '.?submodules=1#qownnotes-qt6' --override-input nixpkgs nixpkgs --no-write-lock-file
+    nix build '.?submodules=1#{{ nixBuildPackage }}' --override-input nixpkgs nixpkgs --no-write-lock-file
 
 # Build and run the application for nix with the nixpkgs of the running system
 [group('nix')]
@@ -133,6 +135,12 @@ open-breeze-icons:
 src-build:
     qmake --version
     mkdir -p {{ sourceBuildDir }}; cd {{ sourceBuildDir }} && qmake "CONFIG+=debug USE_SYSTEM_BOTAN=1" ../src/QOwnNotes.pro CONFIG+=DEV_MODE && make -j$(nproc)
+
+# Build with CMake and KDE integration (Linux, e.g. inside nix develop)
+[group('src-build')]
+src-build-kde:
+    cmake -S src -B build-QOwnNotes-kde -DQON_QT6_BUILD=ON -DQON_KDE_INTEGRATION=ON -DBUILD_WITH_SYSTEM_BOTAN=ON -DDEV_MODE=ON -DCMAKE_BUILD_TYPE=Debug
+    cmake --build build-QOwnNotes-kde --parallel $(nproc)
 
 # Build the application direclty from the source
 [group('src-build')]

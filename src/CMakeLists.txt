@@ -7,6 +7,8 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # BEGIN options
 option(QON_QT6_BUILD "Build QOwnNotes with Qt6" OFF)
+option(QON_KDE_INTEGRATION "Build with optional KDE Frameworks 6 integration"
+       OFF)
 option(DEV_MODE "Build QOwnNotes in developer mode" OFF)
 option(LANGUAGETOOL_ENABLED "Build with LanguageTool support" ON)
 option(HARPER_ENABLED "Build with Harper grammar checker support" ON)
@@ -14,6 +16,18 @@ option(HARPER_ENABLED "Build with Harper grammar checker support" ON)
 option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
 option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
 # END options
+
+if(QON_KDE_INTEGRATION)
+  if(NOT QON_QT6_BUILD)
+    message(FATAL_ERROR "QON_KDE_INTEGRATION requires QON_QT6_BUILD=ON")
+  endif()
+  if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    message(
+      WARNING
+        "KDE integration is currently supported only on Linux; disabling it")
+    set(QON_KDE_INTEGRATION OFF)
+  endif()
+endif()
 
 if(QON_QT6_BUILD)
   set(QT_VERSION_MAJOR 6)
@@ -63,6 +77,14 @@ if(BUILD_WITH_ASPELL)
 endif()
 
 add_executable(QOwnNotes "")
+
+if(QON_KDE_INTEGRATION)
+  find_package(ECM 6.0 REQUIRED NO_MODULE)
+  list(APPEND CMAKE_MODULE_PATH ${ECM_FIND_MODULE_DIR})
+  find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons)
+  target_compile_definitions(QOwnNotes PRIVATE QON_KDE_INTEGRATION)
+  target_link_libraries(QOwnNotes PRIVATE KF6::CoreAddons)
+endif()
 
 if(BUILD_WITH_LIBGIT2)
   target_compile_definitions(QOwnNotes PUBLIC USE_LIBGIT2)
