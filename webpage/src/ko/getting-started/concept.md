@@ -281,7 +281,7 @@ On Nextcloud, the [QOwnNotes Nextcloud App](#qownnotes-nextcloud-app) replaces Q
 
 ## Nextcloud 노트 서버 앱
 
-**웹</1/>에서 노트를 편집하려면 [**Nextcloud 노트**](https://github.com/nextcloud/notes)를 사용합니다.</p>
+**웹**에서 노트를 편집하려면 [**Nextcloud 노트**](https://github.com/nextcloud/notes)를 사용합니다.
 
 ::: warning
 의
