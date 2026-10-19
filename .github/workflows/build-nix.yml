@@ -16,6 +16,8 @@ on:
       - "build-systems/nix/**"
       - ".github/workflows/build-nix.yml"
       - "tests/vm/qownnotes.nix"
+      - "tests/kde/**"
+      - "tests/CMakeLists.txt"
   pull_request:
     paths:
       - "src/**"
@@ -27,6 +29,8 @@ on:
       - "build-systems/nix/**"
       - ".github/workflows/build-nix.yml"
       - "tests/vm/qownnotes.nix"
+      - "tests/kde/**"
+      - "tests/CMakeLists.txt"
   workflow_dispatch:
 
 jobs:
@@ -64,6 +68,7 @@ jobs:
               ;;
             nix-build)
               nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde'
+              nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-shortcuts'
               ;;
             nix-build-cmake-qt5)
               nix build '.?submodules=1#qownnotes-cmake-qt5'

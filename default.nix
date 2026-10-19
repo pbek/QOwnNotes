@@ -58,7 +58,11 @@ stdenv.mkDerivation (finalAttrs: {
     libgit2
     aspell
   ]
-  ++ lib.optionals useKdeIntegration [ kdePackages.kcoreaddons ]
+  ++ lib.optionals useKdeIntegration [
+    kdePackages.kcoreaddons
+    kdePackages.kcrash
+    kdePackages.kglobalaccel
+  ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     libsecret
     qt6Packages.qtwayland

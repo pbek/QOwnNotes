@@ -7,6 +7,12 @@
   (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))
   - `just build` / `just nix-build` now select the KDE variant on Linux; plain Qt6 and
     macOS builds remain available without KDE dependencies
+  - KDE builds initialize KCrash for GUI startup, with DrKonqi support when the reporter
+    and system crash-reporting setup are available
+  - KDE builds use native Plasma global shortcuts when its service is available, preserving
+    Plasma-side changes and retaining the portal/QHotkey backends on other desktops
+  - All actions are offered in the Plasma shortcut settings, so global shortcuts can also
+    be assigned there, and they are shown with their menu path (e.g. `Note → New note`)
 
 ## 26.10.8
 

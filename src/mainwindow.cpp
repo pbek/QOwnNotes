@@ -47,6 +47,9 @@
 #ifdef Q_OS_LINUX
 #include <services/plasmaactivityservice.h>
 #endif
+#ifdef QON_KDE_INTEGRATION
+#include <services/kdeglobalshortcutmanager.h>
+#endif
 #include <utils/git.h>
 #include <utils/gui.h>
 #include <utils/listutils.h>
@@ -763,6 +766,52 @@ void MainWindow::triggerStartupMenuAction() {
     });
 }
 
+#ifdef QON_KDE_INTEGRATION
+namespace {
+/**
+ * Collects the actions that can get a global shortcut in the settings dialog, so Plasma
+ * offers the same actions even if no shortcut was assigned yet
+ *
+ * The description contains the menu path (e.g. "Note → Export → PDF"), because the action
+ * text alone is often ambiguous in Plasma's shortcut settings
+ */
+void collectGlobalShortcutActions(const QMenu *menu, const QStringList &menuPath,
+                                  QMap<QString, QString> &descriptions) {
+    // Shortcuts on toolbars and note folders aren't offered in the settings dialog either
+    static const QStringList disabledMenuNames = {QStringLiteral("menuToolbars"),
+                                                  QStringLiteral("noteFoldersMenu")};
+    if (disabledMenuNames.contains(menu->objectName())) {
+        return;
+    }
+
+    QStringList path = menuPath;
+    const QString title = menu->title().remove(QLatin1Char('&')).trimmed();
+    if (!title.isEmpty()) {
+        path.append(title);
+    }
+
+    const auto menuActions = menu->actions();
+    for (QAction *action : menuActions) {
+        if (action->menu() != nullptr) {
+            collectGlobalShortcutActions(action->menu(), path, descriptions);
+            continue;
+        }
+
+        const QString name = action->objectName();
+        if (name.isEmpty() || action->isSeparator() || descriptions.contains(name)) {
+            continue;
+        }
+
+        QString text = action->text().remove(QLatin1Char('&')).trimmed();
+        if (text.isEmpty()) {
+            text = name;
+        }
+        descriptions.insert(name, (QStringList(path) << text).join(QStringLiteral(" → ")));
+    }
+}
+}    // namespace
+#endif
+
 /**
  * Initializes the global shortcuts
  */
@@ -777,6 +826,66 @@ void MainWindow::initGlobalKeyboardShortcuts() {
     settings.beginGroup(QStringLiteral("GlobalShortcuts"));
 
     const auto allKeys = settings.allKeys();
+
+#ifdef QON_KDE_INTEGRATION
+    if (_kdeShortcutManager == nullptr) {
+        _kdeShortcutManager = new KdeGlobalShortcutManager(this);
+        connect(_kdeShortcutManager, &KdeGlobalShortcutManager::serviceChanged, this,
+                &MainWindow::initGlobalKeyboardShortcuts, Qt::QueuedConnection);
+        connect(_kdeShortcutManager, &KdeGlobalShortcutManager::shortcutChanged, this,
+                [](const QString &name, const QKeySequence &sequence) {
+                    const QString key = QStringLiteral("GlobalShortcuts/MainWindow-") + name;
+                    SettingsService settings;
+                    // Like the settings dialog, don't store empty global shortcuts
+                    if (sequence.isEmpty()) {
+                        settings.remove(key);
+                    } else {
+                        settings.setValue(key, sequence.toString());
+                    }
+                });
+        connect(_kdeShortcutManager, &KdeGlobalShortcutManager::shortcutActivated, this,
+                [this](const QString &name) {
+                    // Menus and scripts may replace actions while the proxy remains registered.
+                    const QPointer<QAction> action = findAction(name);
+                    if (action == nullptr || !action->isEnabled()) {
+                        return;
+                    }
+                    if (name != QStringLiteral("actionShow_Hide_application")) {
+                        showWindow();
+                    }
+                    if (action != nullptr) {
+                        action->trigger();
+                    }
+                });
+    }
+    QMap<QString, QString> globalShortcutDescriptions;
+    const QList<QMenu *> topLevelMenus =
+        ui->menuBar->findChildren<QMenu *>(QString(), Qt::FindDirectChildrenOnly);
+    for (const QMenu *menu : topLevelMenus) {
+        collectGlobalShortcutActions(menu, {}, globalShortcutDescriptions);
+    }
+
+    // Register all actions, so they can also be assigned in Plasma's shortcut settings
+    QMap<QString, KdeGlobalShortcutManager::ShortcutInfo> kdeShortcuts;
+    for (auto it = globalShortcutDescriptions.cbegin(); it != globalShortcutDescriptions.cend();
+         ++it) {
+        KdeGlobalShortcutManager::ShortcutInfo info;
+        info.keySequence =
+            QKeySequence(settings.value(QStringLiteral("MainWindow-") + it.key()).toString());
+        info.description = it.value();
+        kdeShortcuts.insert(it.key(), info);
+    }
+    // Close any portal session before registering KDE shortcuts, so only one backend owns them.
+    if (_xdgShortcutManager != nullptr) {
+        _xdgShortcutManager->closeSession();
+        disconnect(_xdgShortcutManager, nullptr, this, nullptr);
+        _xdgShortcutManager->deleteLater();
+        _xdgShortcutManager = nullptr;
+    }
+    if (_kdeShortcutManager->configure(kdeShortcuts)) {
+        return;
+    }
+#endif
 
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
     const bool isWayland = QGuiApplication::platformName() == QStringLiteral("wayland");

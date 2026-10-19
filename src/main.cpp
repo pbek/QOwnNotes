@@ -22,6 +22,7 @@
 
 #ifdef QON_KDE_INTEGRATION
 #include <KAboutData>
+#include <KCrash>
 #endif
 
 #include "dialogs/welcomedialog.h"
@@ -959,6 +960,10 @@ int main(int argc, char *argv[]) {
             return 0;
         }
 
+#ifdef QON_KDE_INTEGRATION
+        // The primary GUI instance is known now; cover startup dialogs as well as the window.
+        KCrash::initialize();
+#endif
 #ifndef QT_DEBUG
         loadReleaseTranslations(translatorsRelease, locale);
 #endif
@@ -1022,6 +1027,11 @@ int main(int argc, char *argv[]) {
         QScopedPointer<QCoreApplication> app(cliMode ? new QCoreApplication(qtArgc, qtArgv)
                                                      : new QApplication(qtArgc, qtArgv));
         setAppProperties(*app, release, arguments, false, snap, portable, action, session);
+#ifdef QON_KDE_INTEGRATION
+        if (!cliMode) {
+            KCrash::initialize();
+        }
+#endif
 #ifdef Q_OS_WIN
         setWindowsFontProperties(*app, activeFontEngine, disableFontAntialiasing);
 #endif

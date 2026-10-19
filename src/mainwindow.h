@@ -29,6 +29,9 @@ class XdgGlobalShortcutManager;
 #ifdef Q_OS_LINUX
 class PlasmaActivityService;
 #endif
+#ifdef QON_KDE_INTEGRATION
+class KdeGlobalShortcutManager;
+#endif
 
 #include "entities/notehistory.h"
 
@@ -1056,6 +1059,9 @@ class MainWindow : public QMainWindow {
 #endif
 
     QList<QHotkey *> _globalShortcuts;
+#ifdef QON_KDE_INTEGRATION
+    KdeGlobalShortcutManager *_kdeShortcutManager = nullptr;
+#endif
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
     XdgGlobalShortcutManager *_xdgShortcutManager = nullptr;
 #endif

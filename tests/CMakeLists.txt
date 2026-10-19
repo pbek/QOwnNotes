@@ -9,7 +9,12 @@ project(QOwnNotesTests LANGUAGES C CXX)
 
 # BEGIN options
 option(QON_TESTS_COVERAGE "Build the unit tests with gcov code coverage" OFF)
+option(QON_KDE_INTEGRATION_TESTS "Build isolated KDE global shortcut tests" OFF)
 # END options
+
+if(QON_KDE_INTEGRATION_TESTS)
+  add_subdirectory(kde)
+endif()
 
 set(QON_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../src)
 get_filename_component(QON_SRC_DIR ${QON_SRC_DIR} ABSOLUTE)

@@ -1,7 +1,7 @@
 # Optional KDE integration
 
 - Tracking issue: [#3796](https://github.com/pbek/QOwnNotes/issues/3796)
-- Initial release: 26.10.9 (phase 0 only)
+- Initial release: 26.10.9
 
 ## Goal and scope
 
@@ -31,10 +31,46 @@ features must check service availability before use.
   Aspell backend has an existing GCC `maybe-uninitialized` warning. Normal release
   packages still include Aspell.
 
-**This first phase does not change the editor or add shortcuts, notifications,
-crash reporting, or other desktop features.** Linking KDE libraries alone does not
-change widget styling. Plasma's Qt platform theme already provides much of the
-system appearance and native-dialog integration to ordinary Qt applications.
+## Implemented: crash reporting and Plasma shortcuts (phases 1–2)
+
+- GUI startup initializes `KF6::Crash` after metadata registration and after CLI
+  commands or secondary instances have exited. DrKonqi support depends on the
+  installed reporter and system core-dump configuration. There is no automatic
+  restart or emergency-save callback, and no report is submitted automatically.
+- The KDE build uses `KF6::GlobalAccel` when `org.kde.kglobalaccel` is already
+  available on the session bus. It does not launch the service on other desktops.
+- All actions offered in QOwnNotes' shortcut settings are registered in Plasma's
+  shortcut settings (System Settings → Keyboard → Shortcuts → QOwnNotes), including
+  actions without a global shortcut, so they can be assigned in either place.
+  Plasma shows each action with its menu path (for example `Note → New note`),
+  because action names alone are often ambiguous. Plasma itself appends the `:`
+  after each name.
+  Saved Plasma bindings take precedence when an action is registered. Changes made
+  in Plasma are reflected in QOwnNotes settings. Explicit edits in QOwnNotes during
+  the current run update Plasma instead. Unassigned actions don't add settings entries.
+- QOwnNotes shows the first binding when Plasma assigns multiple alternatives;
+  unchanged reconfiguration retains the additional bindings. Editing that first
+  binding in QOwnNotes replaces the alternatives with the newly selected binding.
+- Proxy actions keep stable identities and resolve the current menu action on
+  activation, so replaced or disabled actions are handled safely. Shutdown and
+  actions that disappear (for example while scripts reload) only deactivate the
+  registration and keep the saved Plasma binding. Clearing a shortcut in QOwnNotes
+  clears it in Plasma.
+- Service arrival/loss switches between KDE and the existing XDG portal/QHotkey
+  fallbacks. Portal sessions are closed before registering KDE bindings to prevent
+  duplicate activation. Conflicting bindings are not stolen from other applications.
+- An isolated mock D-Bus service tests restoration, application/Plasma edits,
+  alternative bindings, activation, conflicts, removal, and service lifecycle.
+
+The editor and widget layout remain unchanged. Plasma's Qt platform theme already
+provides much of the appearance and native-dialog integration to ordinary Qt
+applications. Notifications, sharing, and KRunner integration are not implemented.
+
+For DrKonqi, install the reporter separately. KCrash searches executable directories
+including those in `LIBEXEC_PATH`; on NixOS an installed reporter can be made
+discoverable with `LIBEXEC_PATH=/run/current-system/sw/libexec`. Useful stack traces
+also require debug symbols and a supported debugger/core-dump setup. Setting
+`KDE_DEBUG=1` disables KCrash's normal reporter enablement for debugging.
 
 ## Building
 
@@ -67,7 +103,8 @@ just src-build-kde
 ```
 
 This uses a separate `build-QOwnNotes-kde` directory. Outside Nix, install Qt6,
-ECM 6 or later, KCoreAddons 6 or later, and the usual application dependencies:
+ECM 6 or later, KCoreAddons/KCrash/KGlobalAccel 6 or later, and the usual application
+dependencies:
 
 ```sh
 cmake -S src -B build-QOwnNotes-kde \
@@ -85,26 +122,6 @@ dependencies.
 Each phase should be independently reviewable, preserve the plain Qt build, and
 add only the dependencies it uses. Keep substantial KDE-specific logic in small
 services rather than scattering conditionals through `mainwindow.cpp`.
-
-### 1. Crash reporting
-
-- Add `KF6::Crash` and initialize it after application metadata registration for
-  GUI starts, not headless CLI commands or secondary instances.
-- Use DrKonqi when installed; document debug-symbol and reporter requirements.
-- Test with and without the reporter. Do not deliberately crash a user's running
-  application during validation.
-
-### 2. Plasma global shortcuts
-
-- Add `KF6::GlobalAccel`, selecting it only when the Plasma service is available.
-- Retain QHotkey on X11/Windows/macOS and the existing XDG GlobalShortcuts portal
-  on Wayland as fallbacks. Wayland shortcut support already exists today.
-- Use stable action identifiers, resolve replaced menu actions on activation, and
-  clean up registrations on reconfiguration. Never register both backends.
-- Define how Plasma-side changes synchronize with the existing `GlobalShortcuts`
-  settings before implementation. Do not overwrite user changes on every start.
-- Verify conflicts, disabled shortcuts, session identities, service restarts, and
-  behavior on a non-Plasma desktop.
 
 ### 3. Desktop notifications
 
@@ -175,6 +192,22 @@ Acceptance and regression checks:
 - Verify unchanged settings paths, session names, desktop IDs, and instance handling.
 - Test About/debug build markers in both configurations.
 - Add feature-specific tests and sandbox/desktop checks as later phases land.
+
+Run isolated KDE shortcut regression tests with:
+
+```sh
+nix build '.?submodules=1#checks.x86_64-linux.qownnotes-kde-shortcuts'
+# Or build only the standalone test project:
+cmake -S tests/kde -B build-tests-kde
+cmake --build build-tests-kde --parallel
+ctest --test-dir build-tests-kde --output-on-failure
+```
+
+The normal test project can include this target with
+`-DQON_KDE_INTEGRATION_TESTS=ON`. The tests use a private D-Bus session and never
+alter the user's desktop shortcuts. Real Plasma/Wayland key delivery and crash
+reporter presentation still require desktop integration testing; tests do not
+deliberately crash an application.
 
 Main risks are duplicate shortcut backends, conflicting settings authorities,
 mixed Qt packages/plugins, new framework minimum versions, and maintaining both

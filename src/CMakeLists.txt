@@ -81,9 +81,12 @@ add_executable(QOwnNotes "")
 if(QON_KDE_INTEGRATION)
   find_package(ECM 6.0 REQUIRED NO_MODULE)
   list(APPEND CMAKE_MODULE_PATH ${ECM_FIND_MODULE_DIR})
-  find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons)
+  find_package(KF6 6.0 REQUIRED COMPONENTS CoreAddons Crash GlobalAccel)
   target_compile_definitions(QOwnNotes PRIVATE QON_KDE_INTEGRATION)
-  target_link_libraries(QOwnNotes PRIVATE KF6::CoreAddons)
+  target_link_libraries(QOwnNotes PRIVATE KF6::CoreAddons KF6::Crash
+                                          KF6::GlobalAccel)
+  target_sources(QOwnNotes PRIVATE services/kdeglobalshortcutmanager.cpp
+                                   services/kdeglobalshortcutmanager.h)
 endif()
 
 if(BUILD_WITH_LIBGIT2)
