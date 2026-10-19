@@ -405,8 +405,7 @@ void MediaInsertionManager::handleInsertingFromMimeData(const QMimeData *mimeDat
         QImage image = mimeData->imageData().value<QImage>();
 
         if (!image.isNull()) {
-            _mainWindow->showStatusBarMessage(tr("Saving temporary image"), QStringLiteral("🖼️"),
-                                              0);
+            _mainWindow->showStatusBarMessage(tr("Saving temporary image"), QStringLiteral("🖼️"), 0);
 
             QTemporaryFile tempFile(QDir::tempPath() + QDir::separator() +
                                     QStringLiteral("qownnotes-media-XXXXXX.png"));
@@ -471,8 +470,7 @@ void MediaInsertionManager::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
         _mainWindow->showStatusBarMessage(tr("Downloading %1").arg(url), QStringLiteral("⬇️️"), 0);
     });
 
-    _mainWindow->showStatusBarMessage(tr("Downloading images finished"), QStringLiteral("🖼️"),
-                                      3000);
+    _mainWindow->showStatusBarMessage(tr("Downloading images finished"), QStringLiteral("🖼️"), 3000);
 
     // remove all html tags
     static const QRegularExpression tagRE(QStringLiteral("<.+?>"));

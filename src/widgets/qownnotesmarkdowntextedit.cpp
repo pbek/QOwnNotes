@@ -589,10 +589,10 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     MarkdownHighlighter::HighlightingOptions options;
 
     if (settings.value(QStringLiteral("fullyHighlightedBlockquotes")).toBool()) {
-        options |= MarkdownHighlighter::HighlightingOption ::FullyHighlightedBlockQuote;
+        options |= MarkdownHighlighter::HighlightingOption::FullyHighlightedBlockQuote;
     }
     if (settings.value(QStringLiteral("MainWindow/noteTextView.underline")).toBool()) {
-        options |= MarkdownHighlighter::HighlightingOption ::Underline;
+        options |= MarkdownHighlighter::HighlightingOption::Underline;
     }
 
     // set the highlighting options
