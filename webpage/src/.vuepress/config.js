@@ -53,6 +53,7 @@ const gettingStartedNavItems = [
   "getting-started/searching",
   "getting-started/shortcuts",
   "getting-started/git-versioning",
+  "getting-started/kde-integration",
 ];
 
 const installationNavItems = [
