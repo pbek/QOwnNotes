@@ -134,10 +134,10 @@ jobs:
       - name: "⚙️ Install linuxdeploy"
         run: |
           export LINUXDEPLOY_VERSION=1-alpha-20240109-1
-          export APPIMAGE_RUNTIME_SHA256=156f4bdbde9c52d01814600013e0a273f0118dc2de98975f3c8c63427ec79074
+          export APPIMAGE_RUNTIME_SHA256=2fca8b443c92510f1483a883f60061ad09b46b978b2631c807cd873a47ec260d
           wget https://github.com/linuxdeploy/linuxdeploy/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-x86_64.AppImage
           wget https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/${LINUXDEPLOY_VERSION}/linuxdeploy-plugin-qt-x86_64.AppImage
-          wget https://github.com/AppImage/type2-runtime/releases/download/continuous/runtime-x86_64
+          wget https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64
           echo "${APPIMAGE_RUNTIME_SHA256}  runtime-x86_64" | sha256sum --check --strict
           chmod +x linuxdeploy-x86_64.AppImage
           chmod +x linuxdeploy-plugin-qt-x86_64.AppImage
