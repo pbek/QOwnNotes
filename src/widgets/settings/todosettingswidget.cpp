@@ -48,7 +48,7 @@ void TodoSettingsWidget::initialize() {
     // Currently no lazy initialization needed
 }
 
-void TodoSettingsWidget::readSettings() {
+void TodoSettingsWidget::readSettings(const QString &serverUrl) {
     SettingsService settings;
 
     ui->todoCalendarSupportCheckBox->setChecked(CloudService::isTodoCalendarSupportEnabled());
@@ -118,11 +118,8 @@ void TodoSettingsWidget::readSettings() {
         calendarDataList << data;
     }
 
-    // We need a server URL for refreshTodoCalendarList but we don't have
-    // access to the cloud page's serverUrlEdit here. Pass empty string
-    // and let the dialog handle the forwarding with the correct URL.
-    // This path uses forceReadCheckedState=true so it reads from settings.
-    refreshTodoCalendarList(calendarDataList, QString(), true);
+    // Restore cached calendars and their checked state without a server request.
+    refreshTodoCalendarList(calendarDataList, serverUrl, true);
 
     // Reload the calendar list if it was empty
     if (todoCalendarUrlListCount == 0) {
@@ -191,14 +188,8 @@ void TodoSettingsWidget::storeSettings() {
 void TodoSettingsWidget::refreshTodoCalendarList(const QList<CalDAVCalendarData> &items,
                                                  const QString &serverUrl,
                                                  bool forceReadCheckedState) {
-    // We want to read the checked state from the settings if the
-    // tasks calendar list was not empty
-    bool readCheckedState = forceReadCheckedState ? true : ui->todoCalendarListWidget->count() > 0;
-
-    // Clear the tasks calendar list
-    ui->todoCalendarListWidget->clear();
-
     if (!CloudService::isTodoCalendarSupportEnabled()) {
+        ui->todoCalendarListWidget->clear();
         return;
     }
 
@@ -210,10 +201,14 @@ void TodoSettingsWidget::refreshTodoCalendarList(const QList<CalDAVCalendarData>
     QUrl serverUrlObj(ui->calDavCalendarRadioButton->isChecked() ? ui->calDavServerUrlEdit->text()
                                                                  : serverUrl);
 
-    // Return if server url isn't valid
+    // Keep cached calendars and selections if the server URL isn't valid.
     if (!serverUrlObj.isValid()) {
         return;
     }
+
+    // Read the checked state from settings when replacing an existing list.
+    bool readCheckedState = forceReadCheckedState ? true : ui->todoCalendarListWidget->count() > 0;
+    ui->todoCalendarListWidget->clear();
 
     QString serverUrlText(serverUrlObj.toString());
     QString serverUrlPath = serverUrlObj.path();
@@ -229,8 +224,8 @@ void TodoSettingsWidget::refreshTodoCalendarList(const QList<CalDAVCalendarData>
         QString url = data.url;
         QString name = data.displayName;
 
-        // Only add the server url if it wasn't already added
-        if (!url.startsWith(serverUrlText)) {
+        // Resolve server-relative paths, but preserve absolute URLs from other connections.
+        if (QUrl(url).isRelative()) {
             url = serverUrlText + url;
         }
 

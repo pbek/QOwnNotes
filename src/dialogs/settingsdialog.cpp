@@ -403,7 +403,7 @@ void SettingsDialog::readSettings() {
     // Read cloud settings via the widget
     ui->cloudSettingsWidget->readSettings();
 
-    ui->todoSettingsWidget->readSettings();
+    ui->todoSettingsWidget->readSettings(ui->cloudSettingsWidget->serverUrl());
 
     ui->localTrashSettingsWidget->readSettings();
     ui->webCompanionSettingsWidget->readSettings();

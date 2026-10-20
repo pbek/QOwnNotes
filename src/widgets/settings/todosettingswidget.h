@@ -35,7 +35,7 @@ class TodoSettingsWidget : public QWidget {
     ~TodoSettingsWidget();
 
     void initialize();
-    void readSettings();
+    void readSettings(const QString &serverUrl);
     void storeSettings();
     void refreshTodoCalendarList(const QList<CalDAVCalendarData> &items, const QString &serverUrl,
                                  bool forceReadCheckedState = false);

@@ -2,6 +2,8 @@
 
 ## 26.10.9
 
+- Fixed saved task list selections being cleared when accepting settings without changes
+  (for [#3798](https://github.com/pbek/QOwnNotes/issues/3798))
 - Added an optional Linux Qt6 CMake build with KDE Frameworks application metadata
   (`QON_KDE_INTEGRATION`), a `qownnotes-qt6-kde` Nix flake package, and build diagnostics
   (for [#3796](https://github.com/pbek/QOwnNotes/issues/3796))

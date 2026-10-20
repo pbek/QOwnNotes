@@ -118,6 +118,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_script.h
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.cpp
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.h
+    ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.h
     ${QON_TESTS_DIR}/testcases/app/test_utilsmisc.cpp
     ${QON_TESTS_DIR}/testcases/app/test_utilsmisc.h
     ${QON_TESTS_DIR}/testcases/app/mocklanguagetoolserver.cpp
@@ -224,7 +226,12 @@ set(APP_SOURCE_FILES
     widgets/logwidget.cpp
     widgets/logwidget.h
     widgets/navigationwidget.cpp
-    widgets/navigationwidget.h)
+    widgets/navigationwidget.h
+    widgets/passwordlineedit.cpp
+    widgets/passwordlineedit.h
+    widgets/settings/todosettingswidget.cpp
+    widgets/settings/todosettingswidget.h
+    widgets/settings/todosettingswidget.ui)
 list(TRANSFORM APP_SOURCE_FILES PREPEND ${QON_SRC_DIR}/)
 
 add_executable(tests ${TEST_SOURCE_FILES} ${APP_SOURCE_FILES})
