@@ -2,6 +2,15 @@
 
 ## 26.10.9
 
+- The [26.10.3 release](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.10.3) of
+  [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud) adds more editor actions
+  to the web interface
+  - Link dialog with web page title fetching and a searchable **Link to note** tab, inserting
+    relative note links compatible with QOwnNotes Desktop (`Ctrl+L`, or `Ctrl+Shift+L` for note links)
+  - Insert inline code or fenced code blocks, including wrapping selected text (`Ctrl+Shift+C`)
+  - Toggle checkbox list formatting on the current line or selected lines, preserving list markers
+    and indentation (`Alt+L`)
+  - These actions are also available in the note's "…" menu; use `Cmd` instead of `Ctrl` on macOS
 - Fixed saved task list selections being cleared when accepting settings without changes
   (for [#3798](https://github.com/pbek/QOwnNotes/issues/3798))
 - Added an optional Linux Qt6 CMake build with KDE Frameworks application metadata
