@@ -504,6 +504,8 @@ QOwnNotesMarkdownTextEdit *QOwnNotesMarkdownTextEdit::_activeAutocompleteEditor 
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
+    Utils::Gui::enableTouchScrolling(this);
+
     // We need to set the internal variable to true, because we start with a highlighter
     _highlightingEnabled = true;
     _highlighter = nullptr;

@@ -36,6 +36,11 @@
 #include <QPlainTextEdit>
 #include <QProcess>
 #include <QPushButton>
+#include <QScrollBar>
+#include <QScrollEvent>
+#include <QScrollPrepareEvent>
+#include <QScroller>
+#include <QScrollerProperties>
 #include <QSet>
 #include <QSignalBlocker>
 #include <QStandardPaths>
@@ -62,6 +67,47 @@
 #define ORDER_DESCENDING 1    // Qt::DescendingOrder // = 1
 
 namespace {
+class PlainTextEditTouchScrollFilter : public QObject {
+   public:
+    explicit PlainTextEditTouchScrollFilter(QPlainTextEdit *editor)
+        : QObject(editor->viewport()), _editor(editor) {}
+
+   protected:
+    bool eventFilter(QObject *object, QEvent *event) override {
+        if (event->type() == QEvent::ScrollPrepare) {
+            auto *prepareEvent = static_cast<QScrollPrepareEvent *>(event);
+            // QPlainTextEdit's vertical scrollbar counts visual lines, not pixels.
+            _lineHeight = qMax(1, _editor->fontMetrics().lineSpacing());
+            auto *horizontal = _editor->horizontalScrollBar();
+            auto *vertical = _editor->verticalScrollBar();
+            prepareEvent->setViewportSize(QSizeF(_editor->viewport()->size()));
+            prepareEvent->setContentPosRange(
+                QRectF(horizontal->minimum(), vertical->minimum() * _lineHeight,
+                       horizontal->maximum() - horizontal->minimum(),
+                       (vertical->maximum() - vertical->minimum()) * _lineHeight));
+            prepareEvent->setContentPos(
+                QPointF(horizontal->value(), vertical->value() * _lineHeight));
+            prepareEvent->accept();
+            return true;
+        }
+
+        if (event->type() == QEvent::Scroll) {
+            auto *scrollEvent = static_cast<QScrollEvent *>(event);
+            _editor->horizontalScrollBar()->setValue(qRound(scrollEvent->contentPos().x()));
+            _editor->verticalScrollBar()->setValue(
+                qRound(scrollEvent->contentPos().y() / _lineHeight));
+            event->accept();
+            return true;
+        }
+
+        return QObject::eventFilter(object, event);
+    }
+
+   private:
+    QPlainTextEdit *_editor;
+    qreal _lineHeight = 1;
+};
+
 bool promptForColorSchemeChange(const QString &title, const QString &text,
                                 const QString &identifier, bool darkMode,
                                 bool applySettingsAfterChange) {
@@ -277,6 +323,23 @@ void restoreHeaderWidths(QHeaderView *header, const QString &settingsKey) {
     }
 }
 }    // namespace
+
+void Utils::Gui::enableTouchScrolling(QAbstractScrollArea *scrollArea) {
+    // Only grab touch gestures so dragging with the mouse still selects text.
+    QScroller::grabGesture(scrollArea->viewport(), QScroller::TouchGesture);
+
+    if (auto *editor = qobject_cast<QPlainTextEdit *>(scrollArea)) {
+        editor->viewport()->installEventFilter(new PlainTextEditTouchScrollFilter(editor));
+        auto *scroller = QScroller::scroller(editor->viewport());
+        auto properties = scroller->scrollerProperties();
+        // The line-based editor cannot display fractional-line overshoot.
+        properties.setScrollMetric(QScrollerProperties::HorizontalOvershootPolicy,
+                                   QScrollerProperties::OvershootAlwaysOff);
+        properties.setScrollMetric(QScrollerProperties::VerticalOvershootPolicy,
+                                   QScrollerProperties::OvershootAlwaysOff);
+        scroller->setScrollerProperties(properties);
+    }
+}
 
 Qt::SortOrder Utils::Gui::toQtOrder(int order) {
     return order == ORDER_ASCENDING ? Qt::AscendingOrder : Qt::DescendingOrder;

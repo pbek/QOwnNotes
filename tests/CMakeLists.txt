@@ -122,6 +122,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.h
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.cpp
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.h
+    ${QON_TESTS_DIR}/testcases/app/test_touchscrolling.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_touchscrolling.h
     ${QON_TESTS_DIR}/testcases/app/test_utilsmisc.cpp
     ${QON_TESTS_DIR}/testcases/app/test_utilsmisc.h
     ${QON_TESTS_DIR}/testcases/app/mocklanguagetoolserver.cpp

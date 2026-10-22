@@ -4,6 +4,7 @@
 
 #include <dialogs/filedialog.h>
 #include <services/settingsservice.h>
+#include <utils/gui.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
 
@@ -28,6 +29,8 @@
 
 // HtmlPreviewWidgetInternal implementation
 HtmlPreviewWidgetInternal::HtmlPreviewWidgetInternal(QWidget *parent) : QLiteHtmlWidget(parent) {
+    Utils::Gui::enableTouchScrolling(this);
+
     viewport()->setStyleSheet(
         QStringLiteral("background-color: %1;")
             .arg(Utils::Schema::schemaSettings

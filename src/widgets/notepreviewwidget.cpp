@@ -26,6 +26,7 @@
 #include <QProxyStyle>
 #include <QRegularExpression>
 
+#include "utils/gui.h"
 #include "utils/misc.h"
 #include "utils/schema.h"
 
@@ -43,6 +44,8 @@ class NoDottedOutlineForLinksStyle : public QProxyStyle {
 };
 
 NotePreviewWidget::NotePreviewWidget(QWidget *parent) : QTextBrowser(parent) {
+    Utils::Gui::enableTouchScrolling(this);
+
     // add the hidden search widget
     _searchWidget = new QTextEditSearchWidget(this);
     _searchWidget->setReplaceEnabled(false);

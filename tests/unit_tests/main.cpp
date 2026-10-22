@@ -17,6 +17,7 @@
 #include "testcases/app/test_searchwidgets.h"
 #include "testcases/app/test_settingsservice.h"
 #include "testcases/app/test_todosettingswidget.h"
+#include "testcases/app/test_touchscrolling.h"
 #include "testcases/app/test_utilsmisc.h"
 #include "utils/schema.h"
 #include "version.h"
@@ -55,6 +56,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestNextcloudDeckService(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
                          QTest::qExec(new TestSearchWidgets(), argc, argv) +
+                         QTest::qExec(new TestTouchScrolling(), argc, argv) +
                          QTest::qExec(new TestUtilsMisc(), argc, argv) +
 #ifdef LANGUAGETOOL_ENABLED
                          QTest::qExec(new TestLanguageTool(), argc, argv) +

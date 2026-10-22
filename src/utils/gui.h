@@ -28,6 +28,7 @@ class QTextBlock;
 class QTabWidget;
 class QComboBox;
 class QPlainTextEdit;
+class QAbstractScrollArea;
 class QVBoxLayout;
 class QDockWidget;
 class Tag;
@@ -61,6 +62,8 @@ enum TreeWidgetSearchFlag {
 Q_DECLARE_FLAGS(TreeWidgetSearchFlags, TreeWidgetSearchFlag)
 
 Qt::SortOrder toQtOrder(int order);
+
+void enableTouchScrolling(QAbstractScrollArea *scrollArea);
 
 bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 

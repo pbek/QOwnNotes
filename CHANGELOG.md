@@ -2,6 +2,9 @@
 
 ## 26.10.10
 
+- Added touchscreen drag-to-scroll with kinetic scrolling in the note editor and both
+  preview backends, while keeping mouse text selection unchanged
+  (for [#3800](https://github.com/pbek/QOwnNotes/issues/3800))
 - Fixed in-note searches with no results moving the cursor and scrolling to the start or end
   of the document, in both the editor and preview
   (for [#3799](https://github.com/pbek/QOwnNotes/issues/3799))
