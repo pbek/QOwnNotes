@@ -163,9 +163,15 @@ void TestTouchScrolling::testMouseSelection() {
     const QPoint start = editor.cursorRect(cursor).center();
     cursor.setPosition(4);
     const QPoint end = editor.cursorRect(cursor).center();
-    QTest::mousePress(editor.viewport(), Qt::LeftButton, Qt::NoModifier, start);
-    QTest::mouseMove(editor.viewport(), end);
-    QTest::mouseRelease(editor.viewport(), Qt::LeftButton, Qt::NoModifier, end);
+    // Qt 6.2's QWidget mouseMove only moves the system cursor on headless platforms.
+    // Use window-level events so the drag is delivered with the left button held.
+    auto *window = editor.windowHandle();
+    QVERIFY(window);
+    const QPoint windowStart = editor.viewport()->mapTo(&editor, start);
+    const QPoint windowEnd = editor.viewport()->mapTo(&editor, end);
+    QTest::mousePress(window, Qt::LeftButton, Qt::NoModifier, windowStart);
+    QTest::mouseMove(window, windowEnd);
+    QTest::mouseRelease(window, Qt::LeftButton, Qt::NoModifier, windowEnd);
     QCOMPARE(editor.textCursor().selectedText(), QStringLiteral("Text"));
     QCOMPARE(QScroller::scroller(editor.viewport())->state(), QScroller::Inactive);
 }
