@@ -8756,7 +8756,16 @@ bool MainWindow::nextCloudDeckCheck() {
     return true;
 }
 
-void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() { openNextcloudDeckDialog(); }
+void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() {
+    if (!nextCloudDeckCheck()) {
+        return;
+    }
+
+    NextcloudDeckDialog dialog(this, NextcloudDeckDialog::Mode::InsertLinks);
+    connect(&dialog, &NextcloudDeckDialog::cardLinksSelected, this,
+            [this](const QString &links) { writeToNoteTextEdit(links); });
+    dialog.exec();
+}
 
 void MainWindow::openNextcloudDeckDialog(int cardId, int boardId) {
     if (!nextCloudDeckCheck()) {
@@ -8842,9 +8851,7 @@ void MainWindow::on_actionReattach_panels_triggered() {
     _layoutManager->on_actionReattach_panels_triggered();
 }
 
-void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() {
-    on_actionInsert_Nextcloud_Deck_card_triggered();
-}
+void MainWindow::on_actionManage_Nextcloud_Deck_cards_triggered() { openNextcloudDeckDialog(); }
 
 void MainWindow::on_actionSend_clipboard_triggered() {
     // We need to show the window because on some systems the clipboard

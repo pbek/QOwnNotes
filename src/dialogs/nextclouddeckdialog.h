@@ -14,13 +14,17 @@ namespace Ui {
 class NextcloudDeckDialog;
 }
 
+class QPushButton;
+
 class NextcloudDeckDialog : public MasterDialog {
     Q_OBJECT
    Q_SIGNALS:
     void searchInNotes(QString text);
+    void cardLinksSelected(const QString &links);
 
    public:
-    explicit NextcloudDeckDialog(QWidget *parent = nullptr, bool listMode = false);
+    enum class Mode { Manage, InsertLinks };
+    explicit NextcloudDeckDialog(QWidget *parent = nullptr, Mode mode = Mode::Manage);
     ~NextcloudDeckDialog();
     void setTitle(const QString &title);
     void setCardId(int id, int boardId = -1);
@@ -73,6 +77,10 @@ class NextcloudDeckDialog : public MasterDialog {
 
    private:
     Ui::NextcloudDeckDialog *ui;
+    const Mode _mode;
+    QPushButton *_insertLinksButton = nullptr;
+    void insertSelectedCardLinks();
+    void updateInsertLinksButton();
     void setupMainSplitter();
     QSplitter *mainSplitter;
     void setupUi();

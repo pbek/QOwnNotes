@@ -2,6 +2,11 @@
 
 ## 26.10.10
 
+- Added a lightweight Nextcloud Deck link picker using the existing Deck dialog, with
+  search, board/stack selection, and insertion of links for multiple selected cards
+  (for [#3790](https://github.com/pbek/QOwnNotes/issues/3790))
+  - _Insert Nextcloud Deck card link_ now opens the picker, while _Manage Nextcloud Deck cards_
+    keeps the full editing interface
 - Added touchscreen drag-to-scroll with kinetic scrolling in the note editor and both
   preview backends, while keeping mouse text selection unchanged
   (for [#3800](https://github.com/pbek/QOwnNotes/issues/3800))

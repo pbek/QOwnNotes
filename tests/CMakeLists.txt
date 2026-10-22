@@ -110,6 +110,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_network.h
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckservice.cpp
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckservice.h
+    ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckdialog.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckdialog.h
     ${QON_TESTS_DIR}/testcases/app/test_notes.cpp
     ${QON_TESTS_DIR}/testcases/app/test_notes.h
     ${QON_TESTS_DIR}/testcases/app/test_qmarkdowntextedit.cpp
@@ -148,6 +150,9 @@ set(APP_SOURCE_FILES
     dialogs/joplinimportdialog.ui
     dialogs/masterdialog.cpp
     dialogs/masterdialog.h
+    dialogs/nextclouddeckdialog.cpp
+    dialogs/nextclouddeckdialog.h
+    dialogs/nextclouddeckdialog.ui
     entities/bookmark.cpp
     entities/bookmark.h
     entities/calendaritem.cpp

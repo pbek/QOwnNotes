@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QMenu>
 #include <QMessageBox>
+#include <QPushButton>
 #include <QShortcut>
 #include <QSignalBlocker>
 #include <QTimeZone>
@@ -15,20 +16,50 @@
 #include "services/metricsservice.h"
 #include "services/nextclouddeckservice.h"
 #include "services/settingsservice.h"
+#ifdef INTEGRATION_TESTS
+#include "widgets/qownnotesmarkdowntextedit.h"
+// Test the dialog with the base editor without linking the full application editor.
+#define QOwnNotesMarkdownTextEdit QMarkdownTextEdit
+#endif
 #include "ui_nextclouddeckdialog.h"
+#ifdef INTEGRATION_TESTS
+#undef QOwnNotesMarkdownTextEdit
+#endif
 #include "utils/gui.h"
 
-NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, bool listMode)
-    : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog) {
-    Q_UNUSED(listMode)
+NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
+    : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog), _mode(mode) {
     ui->setupUi(this);
+    if (_mode == Mode::InsertLinks) {
+        // Keep picker geometry separate from the full management dialog.
+        setObjectName(QStringLiteral("NextcloudDeckLinkDialog"));
+    }
     afterSetupUI();
 
-    // Ignore the return key, so pressing enter in the search field only prepares a new card
-    // instead of also triggering the default "Save" button, which would create the card at once
+    // Handle Enter explicitly in the search field and card list, without also activating
+    // a default button (which could create a card immediately in management mode).
     setIgnoreReturnKey(true);
 
     setupUi();
+    if (_mode == Mode::InsertLinks) {
+        setWindowTitle(tr("Insert Nextcloud Deck card links"));
+        ui->editFrame->hide();
+        ui->saveButton->setShortcut(QKeySequence());
+        ui->newItemEdit->setPlaceholderText(tr("Search cards"));
+        ui->cardItemTreeWidget->setContextMenuPolicy(Qt::NoContextMenu);
+
+        auto *buttons = new QDialogButtonBox(QDialogButtonBox::Cancel, this);
+        _insertLinksButton = buttons->addButton(tr("Insert links"), QDialogButtonBox::ActionRole);
+        _insertLinksButton->setObjectName(QStringLiteral("insertLinksButton"));
+        _insertLinksButton->setDefault(true);
+        ui->gridLayout->addWidget(buttons, 1, 0, 1, 2);
+        connect(_insertLinksButton, &QPushButton::clicked, this,
+                &NextcloudDeckDialog::insertSelectedCardLinks);
+        connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+        connect(ui->cardItemTreeWidget, &QTreeWidget::itemSelectionChanged, this,
+                &NextcloudDeckDialog::updateInsertLinksButton);
+        updateInsertLinksButton();
+    }
     _currentCard = NextcloudDeckService::Card();
     ui->saveButton->setEnabled(false);
     ui->archiveCardButton->setEnabled(false);
@@ -302,8 +333,15 @@ bool NextcloudDeckDialog::eventFilter(QObject *obj, QEvent *event) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (obj == ui->cardItemTreeWidget) {
+            if (_mode == Mode::InsertLinks &&
+                (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter)) {
+                insertSelectedCardLinks();
+                return true;
+            }
             if (keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Backspace) {
-                deleteSelectedCards();
+                if (_mode == Mode::Manage) {
+                    deleteSelectedCards();
+                }
                 return true;
             }
         }
@@ -352,13 +390,17 @@ void NextcloudDeckDialog::setupMainSplitter() {
     this->mainSplitter->addWidget(ui->selectFrame);
     this->mainSplitter->addWidget(ui->editFrame);
 
-    // Restore splitter sizes
-    SettingsService settings;
-    QByteArray state =
-        settings.value(QStringLiteral("NextcloudDeckDialog/mainSplitterState")).toByteArray();
-    this->mainSplitter->restoreState(state);
+    // Only management mode uses two panes and its saved splitter sizes.
+    if (_mode == Mode::Manage) {
+        SettingsService settings;
+        QByteArray state =
+            settings.value(QStringLiteral("NextcloudDeckDialog/mainSplitterState")).toByteArray();
+        this->mainSplitter->restoreState(state);
+    }
 
-    ui->gridLayout->layout()->addWidget(this->mainSplitter);
+    // Place the splitter explicitly, so additional rows like the picker buttons can't overlap it
+    ui->gridLayout->addWidget(this->mainSplitter, 0, 0, 1, 2);
+    ui->gridLayout->setRowStretch(0, 1);
 }
 
 void NextcloudDeckDialog::refreshUi() { reloadDeckData(); }
@@ -659,6 +701,9 @@ void NextcloudDeckDialog::jumpToCard(int id) {
 void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                                    QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
+    if (_mode == Mode::InsertLinks) {
+        return;
+    }
 
     // in case all items were removed
     if (current == nullptr) {
@@ -692,9 +737,14 @@ void NextcloudDeckDialog::on_newItemEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(
         ui->cardItemTreeWidget, arg1,
         Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+    updateInsertLinksButton();
 }
 
 void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
+    if (_mode == Mode::InsertLinks) {
+        insertSelectedCardLinks();
+        return;
+    }
     // The description and due date were changed by the user if they differ from the currently
     // selected card, in that case they must not be reset when creating a new card
     const QString description = ui->descriptionTextEdit->toPlainText();
@@ -774,10 +824,17 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_itemDoubleClicked(QTreeWidgetIte
                                                                   int column) {
     Q_UNUSED(column)
 
-    openUrlInBrowserForItem(item);
+    if (_mode == Mode::InsertLinks) {
+        insertSelectedCardLinks();
+    } else {
+        openUrlInBrowserForItem(item);
+    }
 }
 
 void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const QPoint &pos) {
+    if (_mode == Mode::InsertLinks) {
+        return;
+    }
     const QPoint globalPos = ui->cardItemTreeWidget->mapToGlobal(pos);
     QMenu menu;
 
@@ -886,4 +943,40 @@ void NextcloudDeckDialog::addCardLinkToCurrentNote(const QTreeWidgetItem *item) 
 #endif
 
     close();
+}
+
+void NextcloudDeckDialog::updateInsertLinksButton() {
+    if (_insertLinksButton == nullptr) {
+        return;
+    }
+
+    bool hasSelection = false;
+    for (const auto *item : ui->cardItemTreeWidget->selectedItems()) {
+        if (!item->isHidden() && item->data(0, Qt::UserRole).toInt() > 0) {
+            hasSelection = true;
+            break;
+        }
+    }
+    _insertLinksButton->setEnabled(hasSelection);
+}
+
+void NextcloudDeckDialog::insertSelectedCardLinks() {
+    QStringList links;
+    NextcloudDeckService service(this);
+    // Insert in visible list order, ignoring selections hidden by the search filter.
+    for (int i = 0; i < ui->cardItemTreeWidget->topLevelItemCount(); ++i) {
+        const auto *item = ui->cardItemTreeWidget->topLevelItem(i);
+        const int cardId = item->data(0, Qt::UserRole).toInt();
+        if (!item->isSelected() || item->isHidden() || cardId < 1) {
+            continue;
+        }
+        configureDeckServiceForCard(service, cardId);
+        links.append(
+            QStringLiteral("[%1](%2)").arg(item->text(0), service.getCardLinkForId(cardId)));
+    }
+
+    if (!links.isEmpty()) {
+        Q_EMIT cardLinksSelected(links.join(QLatin1Char('\n')));
+        accept();
+    }
 }
