@@ -14,6 +14,7 @@
 #include "testcases/app/test_notes.h"
 #include "testcases/app/test_qmarkdowntextedit.h"
 #include "testcases/app/test_script.h"
+#include "testcases/app/test_searchwidgets.h"
 #include "testcases/app/test_settingsservice.h"
 #include "testcases/app/test_todosettingswidget.h"
 #include "testcases/app/test_utilsmisc.h"
@@ -53,6 +54,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestNetwork(), argc, argv) +
                          QTest::qExec(new TestNextcloudDeckService(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
+                         QTest::qExec(new TestSearchWidgets(), argc, argv) +
                          QTest::qExec(new TestUtilsMisc(), argc, argv) +
 #ifdef LANGUAGETOOL_ENABLED
                          QTest::qExec(new TestLanguageTool(), argc, argv) +

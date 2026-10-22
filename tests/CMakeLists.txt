@@ -116,6 +116,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_qmarkdowntextedit.h
     ${QON_TESTS_DIR}/testcases/app/test_script.cpp
     ${QON_TESTS_DIR}/testcases/app/test_script.h
+    ${QON_TESTS_DIR}/testcases/app/test_searchwidgets.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_searchwidgets.h
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.cpp
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.h
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.cpp
@@ -229,6 +231,9 @@ set(APP_SOURCE_FILES
     widgets/navigationwidget.h
     widgets/passwordlineedit.cpp
     widgets/passwordlineedit.h
+    widgets/qtexteditsearchwidget.cpp
+    widgets/qtexteditsearchwidget.h
+    widgets/qtexteditsearchwidget.ui
     widgets/settings/todosettingswidget.cpp
     widgets/settings/todosettingswidget.h
     widgets/settings/todosettingswidget.ui)

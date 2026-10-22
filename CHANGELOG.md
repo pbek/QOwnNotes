@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.10.10
+
+- Fixed in-note searches with no results moving the cursor and scrolling to the start or end
+  of the document, in both the editor and preview
+  (for [#3799](https://github.com/pbek/QOwnNotes/issues/3799))
+
 ## 26.10.9
 
 - The [26.10.3 release](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.10.3) of

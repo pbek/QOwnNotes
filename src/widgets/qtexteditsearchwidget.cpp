@@ -307,6 +307,10 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
         options |= QTextDocument::FindCaseSensitively;
     }
 
+    const QTextCursor originalCursor = _textEdit->textCursor();
+    const int verticalScrollBarValue = _textEdit->verticalScrollBar()->value();
+    const int horizontalScrollBarValue = _textEdit->horizontalScrollBar()->value();
+
     bool found;
     if (searchMode == RegularExpressionMode) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -324,7 +328,7 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
         found = _textEdit->find(text, options);
     }
 
-    if (_textEdit->layout() != nullptr) {
+    if (found && _textEdit->layout() != nullptr) {
         QRect rect = _textEdit->cursorRect();
         QMargins margins = _textEdit->layout()->contentsMargins();
         int searchWidgetHotArea = _textEdit->height() - this->height();
@@ -346,6 +350,13 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
 
     ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") + colorCode +
                                       QStringLiteral("; }"));
+
+    if (!found) {
+        // A failed wraparound search must not move the cursor or the viewport.
+        _textEdit->setTextCursor(originalCursor);
+        _textEdit->verticalScrollBar()->setValue(verticalScrollBarValue);
+        _textEdit->horizontalScrollBar()->setValue(horizontalScrollBarValue);
+    }
 
     return found;
 }
