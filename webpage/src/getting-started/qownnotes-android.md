@@ -34,7 +34,9 @@ the trash bin from your phone.
 
 ## Installation
 
-Visit the [latest release page](https://github.com/qownnotes/qownnotes-android/releases/latest)
+Install QOwnNotes for Android from
+[F-Droid](https://f-droid.org/en/packages/org.qownnotes.mobile/), or visit the
+[latest release page](https://github.com/qownnotes/qownnotes-android/releases/latest)
 and download the APK.
 
 Development builds are published alongside stable releases and can be installed

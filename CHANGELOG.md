@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.10.11
+
+- [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is now available on
+  [F-Droid](https://f-droid.org/en/packages/org.qownnotes.mobile/)
+
 ## 26.10.10
 
 - Added a lightweight Nextcloud Deck link picker using the existing Deck dialog, with
