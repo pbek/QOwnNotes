@@ -4,6 +4,32 @@
 
 - [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is now available on
   [F-Droid](https://f-droid.org/en/packages/org.qownnotes.mobile/)
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.6.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.6.0)
+  - Copy notes to an existing or new subfolder, or duplicate them in the same folder; move and
+    copy also support multiple selected notes, with folder actions available when **Use subfolders**
+    is enabled for the account
+  - Share notes through public Nextcloud links, optionally with password protection and editing
+    permission; links can be copied, sent, or opened, and passwords changed or removed later
+  - Reorder checkbox list items in the note preview by dragging their grip handles, moving nested
+    items with their parent within the same list and scrolling automatically near the note's edges
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.3.2](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.3.2)
+  - Updated `rustls`, `rustls-webpki`, and `webpki-roots` to address six security advisories
+    in the HTTPS dependencies
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.3.1](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.3.1)
+  - Fixed Windows-style line endings and embedded ASCII control characters disrupting note
+    rendering and leaving text from previous notes visible in the viewer and editor
+- The [26.10.2 release](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.10.2) of
+  [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud) adds translations
+  and improves the note list and editor
+  - The web interface, admin settings, and Nextcloud integrations now follow the user's Nextcloud
+    language, with German, Chinese (Simplified), Russian, Italian, Portuguese (Brazil), Polish,
+    French, and Spanish translations
+  - Notes whose title starts with an emoji can show it as their note-list icon, even if QOwnNotes
+    Desktop removed it from the file name; conflict copies are marked with a warning icon
+  - Fixed the editor cursor being hard to see in dark mode
 
 ## 26.10.10
 
