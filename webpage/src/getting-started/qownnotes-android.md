@@ -34,6 +34,8 @@ the trash bin from your phone.
 
 ## Installation
 
+[![Get it on F-Droid](https://f-droid.org/badge/get-it-on.png)](https://f-droid.org/en/packages/org.qownnotes.mobile/) [![Get it on Obtainium](https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22org.qownnotes.mobile%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fqownnotes%2Fqownnotes-android%22%2C%22author%22%3A%22qownnotes%22%2C%22name%22%3A%22QOwnNotes%22%7D)
+
 Install QOwnNotes for Android from
 [F-Droid](https://f-droid.org/en/packages/org.qownnotes.mobile/), or visit the
 [latest release page](https://github.com/qownnotes/qownnotes-android/releases/latest)
