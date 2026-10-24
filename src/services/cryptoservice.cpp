@@ -420,6 +420,20 @@ bool CryptoService::isKeychainAvailable() {
     return availability == 1;
 }
 
+bool CryptoService::shouldShowKeychainMigrationNotice() {
+    SettingsService settings;
+    return !settings.value(QStringLiteral("security/keychainMigrationNoticeAcknowledged"), false)
+                .toBool() &&
+           hasLegacySecretsToMigrate();
+}
+
+void CryptoService::acknowledgeKeychainMigrationNotice() {
+    SettingsService settings;
+    // Acknowledging the notice must not mark migration as complete or prevent future retries.
+    settings.setValue(QStringLiteral("security/keychainMigrationNoticeAcknowledged"), true);
+    settings.sync();
+}
+
 bool CryptoService::hasLegacySecretsToMigrate() {
     SettingsService settings;
 

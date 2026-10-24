@@ -443,10 +443,11 @@ int mainStartupMisc(const QStringList &arguments) {
 
     DatabaseService::createConnection();
 
-    // Only announce the migration if there is a keychain to migrate to, otherwise the
-    // secrets stay in the legacy storage and the dialog would show up on every start
+    // Announce migration only once, and only if there is a keychain to migrate to.
+    // Failed writes leave legacy secrets in place, but must not repeat the notice.
     if (qobject_cast<QApplication *>(QCoreApplication::instance()) != nullptr &&
-        CryptoService::hasLegacySecretsToMigrate() && CryptoService::isKeychainAvailable()) {
+        CryptoService::shouldShowKeychainMigrationNotice() &&
+        CryptoService::isKeychainAvailable()) {
         QMessageBox::information(
             nullptr, QObject::tr("Secure password storage"),
             QObject::tr(
@@ -454,6 +455,7 @@ int mainStartupMisc(const QStringList &arguments) {
                 "operating system's secure credential store.\n\nYour system may now ask you to "
                 "unlock the keychain, possibly more than once. This is expected. QOwnNotes does "
                 "not receive your keychain password."));
+        CryptoService::acknowledgeKeychainMigrationNotice();
     }
 
     DatabaseService::setupTables();

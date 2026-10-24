@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.10.12
+
+- Fixed the secure credential store migration notice appearing on every startup when
+  keychain writes fail; the notice is now only shown until acknowledged, while migration
+  continues to retry and secrets remain in legacy-encrypted storage until it succeeds
+  (for [#3801](https://github.com/pbek/QOwnNotes/issues/3801))
+
 ## 26.10.11
 
 - Fixed command injection through note filenames in the external Git version viewer

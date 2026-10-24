@@ -9,6 +9,51 @@
 #include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 
+void TestCryptoService::testKeychainMigrationNoticeAcknowledgment() {
+    SettingsService settings;
+    settings.clear();
+    QVERIFY(!CryptoService::shouldShowKeychainMigrationNotice());
+
+    // An undecryptable legacy secret remains pending, just like a failed keychain write.
+    const QString secret = QStringLiteral("AwI=");
+    const QString secretKey = QStringLiteral("ai/openai/apiKey");
+    settings.setValue(secretKey, secret);
+    QVERIFY(CryptoService::shouldShowKeychainMigrationNotice());
+
+    CryptoService::acknowledgeKeychainMigrationNotice();
+    QVERIFY(!CryptoService::shouldShowKeychainMigrationNotice());
+    QVERIFY(CryptoService::hasLegacySecretsToMigrate());
+    QCOMPARE(settings.value(secretKey).toString(), secret);
+
+    // Recreating the service must not reset the persisted acknowledgment.
+    CryptoService service;
+    QVERIFY(!CryptoService::shouldShowKeychainMigrationNotice());
+    QVERIFY(CryptoService::hasLegacySecretsToMigrate());
+    QCOMPARE(settings.value(secretKey).toString(), secret);
+    QSettings persistedSettings;
+    QVERIFY(persistedSettings.value(QStringLiteral("security/keychainMigrationNoticeAcknowledged"))
+                .toBool());
+    settings.clear();
+}
+
+void TestCryptoService::testAcknowledgmentDoesNotPreventMigration() {
+    SettingsService settings;
+    settings.clear();
+    const quint64 key = 1234567;
+    settings.setValue(QStringLiteral("cryptoKey"), key);
+    SimpleCrypt crypt(key);
+    const QString secretKey = QStringLiteral("ai/openai/apiKey");
+    settings.setValue(secretKey, crypt.encryptToString(QString()));
+    QVERIFY(CryptoService::hasLegacySecretsToMigrate());
+
+    CryptoService::acknowledgeKeychainMigrationNotice();
+    CryptoService service;
+    QCOMPARE(settings.value(secretKey).toString(), QString());
+    QVERIFY(!CryptoService::hasLegacySecretsToMigrate());
+    QVERIFY(!CryptoService::shouldShowKeychainMigrationNotice());
+    settings.clear();
+}
+
 void TestCryptoService::testMigrateEncryptedEmptySecrets() {
     SettingsService settings;
     settings.clear();
