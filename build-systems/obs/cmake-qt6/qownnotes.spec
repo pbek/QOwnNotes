@@ -16,6 +16,12 @@ BuildRequires:  pkgconfig(libgit2)
 BuildRequires:  pkgconfig(libsecret-1)
 
 %if 0%{?fedora} || 0%{?rhel}
+# Select the default OpenSSL provider instead of compatibility packages.
+BuildRequires:  openssl-devel
+# Rawhide only provides versioned libgit2 development packages.
+%if 0%{?fedora} != 99
+BuildRequires:  libgit2-devel
+%endif
 BuildRequires:  desktop-file-utils
 BuildRequires:  qt6-qtbase-devel
 BuildRequires:  qt6-qtdeclarative-devel
