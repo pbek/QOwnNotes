@@ -5,6 +5,7 @@
 #
 
 APP=QOwnNotes
+BUILD_DIR=${BUILD_DIR:-build-release}
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
 NAME=$(uname)
@@ -15,6 +16,12 @@ if [ "$NAME" != "Darwin" ]; then
   exit 1
 fi
 
+# CMake creates the bundle and translations in the build tree.
+if ! cp -R "$BUILD_DIR/$APP.app" .; then
+  echo "Failed to copy the CMake application bundle"
+  exit 1
+fi
+
 #env
 #find ${Qt6_DIR}
 
@@ -22,8 +29,8 @@ echo "Changing bundle identifier"
 sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
 
 # adding version number
-/usr/libexec/PlistBuddy -c "Add :CFBundleVersion string $VERSION" $PLIST
-/usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $VERSION" $PLIST
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $VERSION" $PLIST
+/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" $PLIST
 
 # removing CFBundleGetInfoString
 /usr/libexec/PlistBuddy -c "Delete :CFBundleGetInfoString" $PLIST
@@ -35,7 +42,7 @@ rm -f ${PLIST}-e
 #find "${QT_ROOT_DIR}"
 
 # copy translation files to app
-cp languages/*.qm $APP.app/Contents/Resources
+cp "$BUILD_DIR"/*.qm $APP.app/Contents/Resources
 cp "${QT_ROOT_DIR}"/translations/qtbase_*.qm $APP.app/Contents/Resources
 #cp ${QT_ROOT_DIR}/translations/qt_*.qm $APP.app/Contents/Resources
 #rm $APP.app/Contents/Resources/qt_help_*.qm

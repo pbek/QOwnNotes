@@ -14,6 +14,7 @@ option(LANGUAGETOOL_ENABLED "Build with LanguageTool support" ON)
 option(HARPER_ENABLED "Build with Harper grammar checker support" ON)
 
 option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
+option(QON_MACOS_BUNDLE "Build a macOS application bundle for deployment" OFF)
 option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
 # END options
 
@@ -77,6 +78,26 @@ if(BUILD_WITH_ASPELL)
 endif()
 
 add_executable(QOwnNotes "")
+
+if(APPLE AND QON_MACOS_BUNDLE)
+  file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/version.h" QON_VERSION_LINE)
+  string(REGEX MATCH "[0-9]+\\.[0-9]+\\.[0-9]+" QON_VERSION
+               "${QON_VERSION_LINE}")
+  set_target_properties(
+    QOwnNotes
+    PROPERTIES MACOSX_BUNDLE TRUE
+               MACOSX_BUNDLE_GUI_IDENTIFIER com.PBE.QOwnNotes
+               MACOSX_BUNDLE_BUNDLE_NAME QOwnNotes
+               MACOSX_BUNDLE_BUNDLE_VERSION "${QON_VERSION}"
+               MACOSX_BUNDLE_SHORT_VERSION_STRING "${QON_VERSION}"
+               MACOSX_BUNDLE_ICON_FILE QOwnNotes.icns)
+  target_sources(QOwnNotes PRIVATE QOwnNotes.icns)
+  set_source_files_properties(QOwnNotes.icns PROPERTIES MACOSX_PACKAGE_LOCATION
+                                                        Resources)
+elseif(WIN32)
+  set_target_properties(QOwnNotes PROPERTIES WIN32_EXECUTABLE TRUE)
+  target_sources(QOwnNotes PRIVATE QOwnNotes.rc)
+endif()
 
 if(QON_KDE_INTEGRATION)
   find_package(ECM 6.0 REQUIRED NO_MODULE)
@@ -266,6 +287,11 @@ find_package(
   WebSockets
   Qml
   Concurrent)
+
+if(QON_QT6_BUILD)
+  find_package(Qt6 REQUIRED COMPONENTS Quick)
+  target_link_libraries(QOwnNotes PRIVATE Qt6::Quick)
+endif()
 
 find_program(CCACHE_FOUND ccache)
 
@@ -951,7 +977,10 @@ add_compile_definitions(QAPPLICATION_CLASS=QApplication)
 
 # Installation
 
-install(TARGETS QOwnNotes DESTINATION bin)
+install(
+  TARGETS QOwnNotes
+  BUNDLE DESTINATION .
+  RUNTIME DESTINATION bin)
 foreach(
   size
   16x16

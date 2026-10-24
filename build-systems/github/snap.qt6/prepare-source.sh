@@ -20,5 +20,5 @@ git ls-files -z --recurse-submodules -- src |
   tar --null --files-from=- -cf - |
   tar -xf - -C "${TARGET_DIR}" --strip-components=1
 
-test -f "${TARGET_DIR}/QOwnNotes.pro"
+test -f "${TARGET_DIR}/CMakeLists.txt"
 echo "Prepared snap source in ${TARGET_DIR}"

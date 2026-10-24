@@ -60,22 +60,19 @@ parts:
     # The source code of the checked out commit is copied into this directory
     # by prepare-source.sh before running snapcraft
     source: qownnotes-src
-    # Use make plugin and call qmake6 manually (the qmake plugin does not
-    # support Qt6 properly and invokes the system Qt5 qmake instead)
-    plugin: make
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DQON_QT6_BUILD=ON
     override-build: |
       export QT_SELECT=qt6
-      # Remove the default desktop file
-      rm PBE.QOwnNotes.desktop
-      echo "#define RELEASE \"Snapcraft.io\"" > release.h
-      /usr/lib/qt6/bin/lrelease languages/*.ts
-      qmake6 CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
-      craftctl set version="$(cat version.h | sed 's/[^0-9,.]//g')"
+      echo "#define RELEASE \"Snapcraft.io\"" > "${CRAFT_PART_SRC}/release.h"
+      craftctl set version="$(cat "${CRAFT_PART_SRC}/version.h" | sed 's/[^0-9,.]//g')"
       craftctl default
-      make install INSTALL_ROOT="${CRAFT_PART_INSTALL}"
     build-packages:
       - build-essential
-      - qmake6
+      - cmake
       - qt6-base-dev
       - qt6-declarative-dev
       - qt6-svg-dev

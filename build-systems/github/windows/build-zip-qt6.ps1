@@ -11,14 +11,14 @@ Write-Host "Print content of $Env:QT_ROOT_DIR"
 dir -s $Env:QT_ROOT_DIR
 
 Write-Output "#define RELEASE ""GitHub Actions""" > release.h
-qmake6 CONFIG+=release QOwnNotes.pro -r
-lrelease QOwnNotes.pro
-set CL=/MP
-nmake
+cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON
+if ($LASTEXITCODE -ne 0) { throw "CMake configuration failed" }
+cmake --build build-release --parallel
+if ($LASTEXITCODE -ne 0) { throw "CMake build failed" }
 # Create release directory and languages subdirectory
 New-Item -Path '..\release\languages' -ItemType 'Directory' -Force
 # copy the binary to our release path
-Copy-Item release\QOwnNotes.exe ..\release
+Copy-Item build-release\QOwnNotes.exe ..\release
 # copy Win64 OpenSSL v1.1.1g DLLs to the release path
 Copy-Item ..\build-systems\github\windows\libcrypto-1_1-x64.dll ..\release
 Copy-Item ..\build-systems\github\windows\libssl-1_1-x64.dll ..\release
@@ -29,7 +29,7 @@ Copy-Item ..\appveyor\update.bat ..\release
 # copy portable mode launcher to the release path
 Copy-Item ..\appveyor\QOwnNotesPortable.bat ..\release
 # copy translation files into languages subdirectory
-Copy-Item languages\*.qm ..\release\languages
+Copy-Item build-release\*.qm ..\release\languages
 Set-Location ..\release
 # Fetching dependencies of QT app
 # https://doc.qt.io/qt-6/windows-deployment.html

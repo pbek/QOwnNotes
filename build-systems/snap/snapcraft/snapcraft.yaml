@@ -65,21 +65,18 @@ parts:
   qownnotes:
     source: https://github.com/pbek/QOwnNotes/releases/download/vVERSION-STRING/qownnotes-VERSION-STRING.tar.xz
     source-checksum: sha256/ARCHIVE-SHA256
-    # Use make plugin and call qmake6 manually because the qmake plugin does not
-    # reliably pick the Qt6 toolchain in the Launchpad build environment.
-    plugin: make
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DQON_QT6_BUILD=ON
     override-build: |
       export QT_SELECT=qt6
-      # Remove the default desktop file.
-      rm PBE.QOwnNotes.desktop
-      echo "#define RELEASE \"Launchpad Snap\"" > release.h
-      /usr/lib/qt6/bin/lrelease languages/*.ts
-      qmake6 CONFIG+=release CONFIG+=snapcraft QOwnNotes.pro
+      echo "#define RELEASE \"Launchpad Snap\"" > "${CRAFT_PART_SRC}/release.h"
       craftctl default
-      make install INSTALL_ROOT="${CRAFT_PART_INSTALL}"
     build-packages:
       - build-essential
-      - qmake6
+      - cmake
       - qt6-base-dev
       - qt6-declarative-dev
       - qt6-svg-dev
