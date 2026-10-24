@@ -435,9 +435,8 @@ jobs:
       - name: Build universal macOS DMG
         run: |
           echo '#define RELEASE "GitHub Actions"' > release.h
-          lrelease QOwnNotes.pro
-          qmake QOwnNotes.pro CONFIG+=release QMAKE_APPLE_DEVICE_ARCHS="x86_64 arm64"
-          make -j8
+          cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON -DQON_MACOS_BUNDLE=ON -DBUILD_WITH_BUNDLED_LIBGIT2=ON '-DCMAKE_OSX_ARCHITECTURES=x86_64;arm64' -DCMAKE_OSX_DEPLOYMENT_TARGET=13.0
+          cmake --build build-release --parallel 8
           ../build-systems/github/macos/create-dmg-qt6.sh
           shasum -a 256 QOwnNotes.dmg > QOwnNotes.dmg.sha256sum
 
