@@ -10,10 +10,16 @@ project(QOwnNotesTests LANGUAGES C CXX)
 # BEGIN options
 option(QON_TESTS_COVERAGE "Build the unit tests with gcov code coverage" OFF)
 option(QON_KDE_INTEGRATION_TESTS "Build isolated KDE global shortcut tests" OFF)
+option(QON_BUNDLED_LIBGIT2_TESTS "Build the bundled libgit2 regression test"
+       OFF)
 # END options
 
 if(QON_KDE_INTEGRATION_TESTS)
   add_subdirectory(kde)
+endif()
+
+if(QON_BUNDLED_LIBGIT2_TESTS)
+  add_subdirectory(bundled-libgit2)
 endif()
 
 set(QON_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../src)

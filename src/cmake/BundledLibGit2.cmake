@@ -27,6 +27,11 @@ function(qon_add_bundled_libgit2)
   set(USE_SHA1 CollisionDetection)
   set(USE_SHA256 builtin)
   set(USE_ICONV OFF)
+  if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    # Libgit2 probes struct stat before adding _GNU_SOURCE to its build flags.
+    # Match those flags so strict C mode exposes nanosecond timestamps.
+    list(APPEND CMAKE_REQUIRED_DEFINITIONS -D_GNU_SOURCE)
+  endif()
   FetchContent_Declare(
     libgit2
     URL https://codeload.github.com/libgit2/libgit2/tar.gz/refs/tags/v1.9.7
