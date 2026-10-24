@@ -22,7 +22,8 @@ QStringList notePaths() {
             QStringLiteral("`echo INJECTED>injected.txt`.md"),
             QStringLiteral("quotes'\"\\ & | < > ; $HOME %PATH%.md"),
             QStringLiteral("line one\nline two.md"),
-            QStringLiteral("Grüße-日本語-%notePath%.md")};
+            QStringLiteral("Grüße-日本語-%notePath%.md"),
+            QStringLiteral("Grüße-日本語-%notePath%.md").normalized(QString::NormalizationForm_D)};
 }
 }    // namespace
 
@@ -181,8 +182,18 @@ void TestUtilsGit::testShowLog() {
     QFile output(outputPath);
     QVERIFY(output.open(QIODevice::ReadOnly));
     const QJsonObject result = QJsonDocument::fromJson(output.readAll()).object();
-    QCOMPARE(result.value(QStringLiteral("arguments")).toArray(),
-             QJsonArray::fromStringList({QStringLiteral("--"), filePath}));
+    const QJsonArray arguments = result.value(QStringLiteral("arguments")).toArray();
+    QCOMPARE(arguments.size(), 2);
+    QCOMPARE(arguments.at(0).toString(), QStringLiteral("--"));
+    QString actualPath = arguments.at(1).toString();
+    QString expectedPath = filePath;
+#ifdef Q_OS_MAC
+    // Qt encodes process arguments with QFile::encodeName(), which decomposes Unicode on macOS.
+    // Compare canonical equivalents without relaxing the argument count or shell character checks.
+    actualPath = actualPath.normalized(QString::NormalizationForm_C);
+    expectedPath = expectedPath.normalized(QString::NormalizationForm_C);
+#endif
+    QCOMPARE(actualPath, expectedPath);
     QCOMPARE(result.value(QStringLiteral("workingDirectory")).toString(),
              QDir(directory.path()).canonicalPath());
     QVERIFY(!QFile::exists(directory.filePath(QStringLiteral("injected.txt"))));
