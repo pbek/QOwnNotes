@@ -4,7 +4,9 @@
 
 The package contains build descriptions for Debian/Ubuntu, RPM-based
 distributions, and Arch Linux. Only OBS repositories whose distribution
-provides Qt6 and CMake 3.16 or newer can build this package.
+provides Qt6, libgit2 development files, and CMake 3.16 or newer can build this
+package. All three package formats enable the built-in Git version viewer with
+the distribution's libgit2; runtime dependencies are tracked by the packaging tools.
 
 CDBS doesn't support qmake after Debian 12 anymore, see [#3267](https://github.com/pbek/QOwnNotes/issues/3267).
 

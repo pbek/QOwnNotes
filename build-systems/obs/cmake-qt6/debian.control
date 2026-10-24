@@ -5,6 +5,7 @@ Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
 Build-Depends:
  cmake (>= 3.16),
  debhelper-compat (= 13),
+ libgit2-dev,
  libsecret-1-dev,
  pkg-config,
  qt6-base-dev,

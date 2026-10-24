@@ -12,6 +12,7 @@ Source0:        %{name}-%{version}.tar.xz
 
 BuildRequires:  cmake >= 3.16
 BuildRequires:  gcc-c++
+BuildRequires:  pkgconfig(libgit2)
 BuildRequires:  pkgconfig(libsecret-1)
 
 %if 0%{?fedora} || 0%{?rhel}
@@ -32,6 +33,7 @@ BuildRequires:  cmake(Qt6LinguistTools)
 BuildRequires:  cmake(Qt6Network)
 BuildRequires:  cmake(Qt6PrintSupport)
 BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6Quick)
 BuildRequires:  cmake(Qt6Sql)
 BuildRequires:  cmake(Qt6Svg)
 BuildRequires:  cmake(Qt6WebSockets)
@@ -50,6 +52,7 @@ synchronized with Nextcloud, ownCloud, or other synchronization tools.
 %build
 %cmake \
   -DQON_QT6_BUILD=ON \
+  -DBUILD_WITH_LIBGIT2=ON \
   -DCMAKE_BUILD_TYPE=Release
 %cmake_build
 

@@ -11,7 +11,7 @@ Write-Host "Print content of $Env:QT_ROOT_DIR"
 dir -s $Env:QT_ROOT_DIR
 
 Write-Output "#define RELEASE ""GitHub Actions""" > release.h
-cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON
+cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON -DBUILD_WITH_BUNDLED_LIBGIT2=ON
 if ($LASTEXITCODE -ne 0) { throw "CMake configuration failed" }
 cmake --build build-release --parallel
 if ($LASTEXITCODE -ne 0) { throw "CMake build failed" }

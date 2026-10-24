@@ -7,7 +7,7 @@ pkgdesc="Plain-text Markdown note-taking app with Nextcloud integration"
 arch=('i686' 'x86_64' 'armv7h' 'aarch64')
 url='https://www.qownnotes.org/'
 license=('GPL-2.0-only')
-depends=('qt6-base' 'qt6-svg' 'qt6-declarative' 'qt6-websockets' 'libsecret')
+depends=('qt6-base' 'qt6-svg' 'qt6-declarative' 'qt6-websockets' 'libsecret' 'libgit2')
 makedepends=('cmake' 'qt6-tools')
 provides=('qownnotes')
 conflicts=('qownnotes')
@@ -19,6 +19,7 @@ build() {
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DQON_QT6_BUILD=ON \
+        -DBUILD_WITH_LIBGIT2=ON \
         -Wno-dev
     cmake --build build
 }

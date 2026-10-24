@@ -55,13 +55,13 @@ jobs:
       - name: "⚙️ Install dependencies"
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake
+          sudo apt-get install -y cmake pkg-config libgit2-dev
           sudo apt install libfuse2 desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
 
       - name: "🚧 Compile application"
         run: |
           echo "#define RELEASE \"AppImage\"" > release.h
-          cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON -DCMAKE_INSTALL_PREFIX=/usr
+          cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON -DBUILD_WITH_LIBGIT2=ON -DCMAKE_INSTALL_PREFIX=/usr
           cmake --build build-release --parallel ${{ env.CORES }}
 
       - name: "⚙️ Install linuxdeploy"
@@ -399,7 +399,7 @@ jobs:
       - name: "🚧 Compile application"
         run: |
           echo "#define RELEASE \"GitHub Actions\"" > release.h
-          cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON -DQON_MACOS_BUNDLE=ON '-DCMAKE_OSX_ARCHITECTURES=x86_64;arm64' -DCMAKE_OSX_DEPLOYMENT_TARGET=13.0
+          cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DQON_QT6_BUILD=ON -DQON_MACOS_BUNDLE=ON -DBUILD_WITH_BUNDLED_LIBGIT2=ON '-DCMAKE_OSX_ARCHITECTURES=x86_64;arm64' -DCMAKE_OSX_DEPLOYMENT_TARGET=13.0
           cmake --build build-release --parallel ${{ env.CORES }}
           ../build-systems/github/macos/create-dmg-qt6.sh
 

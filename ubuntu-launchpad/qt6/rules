@@ -13,7 +13,8 @@ export QT_SELECT := 6
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-		-DQON_QT6_BUILD=ON
+		-DQON_QT6_BUILD=ON \
+		-DBUILD_WITH_LIBGIT2=ON
 
 override_dh_install:
 	dh_install --

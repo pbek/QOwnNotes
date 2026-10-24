@@ -65,6 +65,7 @@ parts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DQON_QT6_BUILD=ON
+      - -DBUILD_WITH_BUNDLED_LIBGIT2=ON
     override-build: |
       export QT_SELECT=qt6
       echo "#define RELEASE \"Snapcraft.io\"" > "${CRAFT_PART_SRC}/release.h"

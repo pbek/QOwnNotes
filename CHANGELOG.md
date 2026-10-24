@@ -2,6 +2,9 @@
 
 ## 26.10.12
 
+- Enabled the built-in Git version viewer in the Qt6 AppImage, Windows, macOS,
+  Snap, Launchpad, OBS, and Slackware release builds with CMake and libgit2 support
+  (for [#3802](https://github.com/pbek/QOwnNotes/issues/3802))
 - Fixed the secure credential store migration notice appearing on every startup when
   keychain writes fail; the notice is now only shown until acknowledged, while migration
   continues to retry and secrets remain in legacy-encrypted storage until it succeeds

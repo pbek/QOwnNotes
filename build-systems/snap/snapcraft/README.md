@@ -12,6 +12,7 @@
 
 ## Building the qownnotes snap
 
-Just run `snapcraft` to build the snap. It uses C++ and Qt6 with CMake.
+Just run `snapcraft` to build the snap. It uses C++ and Qt6 with CMake and
+bundles a pinned static libgit2 for the built-in Git version viewer.
 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).

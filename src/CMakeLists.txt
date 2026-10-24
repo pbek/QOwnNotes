@@ -14,6 +14,8 @@ option(LANGUAGETOOL_ENABLED "Build with LanguageTool support" ON)
 option(HARPER_ENABLED "Build with Harper grammar checker support" ON)
 
 option(BUILD_WITH_LIBGIT2 "Build using system installed libgit2 library" OFF)
+option(BUILD_WITH_BUNDLED_LIBGIT2 "Build a pinned static libgit2 for releases"
+       OFF)
 option(QON_MACOS_BUNDLE "Build a macOS application bundle for deployment" OFF)
 option(BUILD_WITH_ASPELL "Build with aspell support" OFF)
 # END options
@@ -50,19 +52,13 @@ include_directories(libraries/sonnet/src/core)
 # some hunspell settings for windows
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
-if(BUILD_WITH_LIBGIT2)
-  # Find libgit2
+if(BUILD_WITH_BUNDLED_LIBGIT2)
+  include(cmake/BundledLibGit2.cmake)
+  set(QON_LIBGIT2_TARGET libgit2package)
+elseif(BUILD_WITH_LIBGIT2)
   find_package(PkgConfig REQUIRED)
-  pkg_check_modules(LIBGIT2 REQUIRED libgit2)
-
-  if(NOT LIBGIT2_FOUND)
-    message(
-      FATAL_ERROR "libgit2 was not found. Please install libgit2-dev or the "
-                  "appropriate package for your system.")
-  endif()
-
-  include_directories(${LIBGIT2_INCLUDE_DIRS})
-  link_directories(${LIBGIT2_LIBRARY_DIRS})
+  pkg_check_modules(LIBGIT2 REQUIRED IMPORTED_TARGET libgit2)
+  set(QON_LIBGIT2_TARGET PkgConfig::LIBGIT2)
 endif()
 
 if(BUILD_WITH_ASPELL)
@@ -137,9 +133,9 @@ if(QON_KDE_INTEGRATION)
             kde/kde.qrc)
 endif()
 
-if(BUILD_WITH_LIBGIT2)
+if(QON_LIBGIT2_TARGET)
   target_compile_definitions(QOwnNotes PUBLIC USE_LIBGIT2)
-  target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
+  target_link_libraries(QOwnNotes PRIVATE ${QON_LIBGIT2_TARGET})
 endif()
 
 if(BUILD_WITH_ASPELL)
@@ -949,10 +945,6 @@ endif()
 
 if(USE_QLITEHTML)
   target_link_libraries(QOwnNotes PRIVATE qlitehtml::qlitehtml)
-endif()
-
-if(BUILD_WITH_LIBGIT2)
-  target_link_libraries(QOwnNotes PRIVATE ${LIBGIT2_LIBRARIES})
 endif()
 
 if(BUILD_WITH_ASPELL)
