@@ -7,6 +7,7 @@
   - External Git log commands now run directly without an implicit shell; `%notePath%`
     must be a separate argument. Configurations using shell syntax need a wrapper script
     that accepts the note path as an argument
+  - Security advisory: [GHSA-jp2h-69pm-p69c](https://github.com/pbek/QOwnNotes/security/advisories/GHSA-jp2h-69pm-p69c)
 - [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android) is now available on
   [F-Droid](https://f-droid.org/en/packages/org.qownnotes.mobile/)
 - There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
