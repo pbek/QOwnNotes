@@ -21,7 +21,6 @@
 #include <QStandardPaths>
 
 #include "gui.h"
-#include "misc.h"
 #include "services/settingsservice.h"
 
 #ifdef USE_LIBGIT2
@@ -165,39 +164,98 @@ bool Utils::Git::hasLogCommand() {
 }
 
 /**
+ * Prepares an external log process without interpreting the note path as command text
+ */
+bool Utils::Git::prepareLogProcess(QProcess &process, const QString &command,
+                                   const QString &filePath) {
+    if (command.contains(QChar::Null) || filePath.isEmpty() || filePath.contains(QChar::Null)) {
+        return false;
+    }
+
+    // Parse only the trusted configuration, never the note path. Support quoted executable
+    // paths and arguments on all supported Qt versions; backslashes remain literal for Windows.
+    QStringList tokens;
+    QString token;
+    QChar quote;
+    bool tokenStarted = false;
+    for (const QChar character : command) {
+        if (!quote.isNull()) {
+            if (character == quote) {
+                quote = QChar();
+            } else {
+                token += character;
+            }
+        } else if (character == QLatin1Char('"') || character == QLatin1Char('\'')) {
+            quote = character;
+            tokenStarted = true;
+        } else if (character.isSpace()) {
+            if (tokenStarted) {
+                tokens << token;
+                token.clear();
+                tokenStarted = false;
+            }
+        } else {
+            token += character;
+            tokenStarted = true;
+        }
+    }
+
+    if (!quote.isNull()) {
+        return false;
+    }
+    if (tokenStarted) {
+        tokens << token;
+    }
+
+    const QString placeholder = QStringLiteral("%notePath%");
+    if (tokens.isEmpty() || tokens.first().isEmpty() || tokens.first().contains(placeholder)) {
+        return false;
+    }
+
+    const QString program = tokens.takeFirst();
+    // A relative filename beginning with '-' must not become an option to the log viewer.
+    const QString path =
+        filePath.startsWith(QLatin1Char('-')) ? QStringLiteral("./") + filePath : filePath;
+    bool hasPlaceholder = false;
+    for (QString &argument : tokens) {
+        if (argument == placeholder) {
+            argument = path;
+            hasPlaceholder = true;
+        } else if (argument.contains(placeholder)) {
+            // In particular, do not insert filenames into an inline shell script argument.
+            return false;
+        }
+    }
+    if (!hasPlaceholder) {
+        tokens << path;
+    }
+
+    process.setProgram(program);
+    process.setArguments(tokens);
+    return true;
+}
+
+/**
  * Shows a git log
  *
  * @param filePath
  */
 void Utils::Git::showLog(const QString &filePath) {
     SettingsService settings;
-    QString gitLogCommand = settings.value("gitLogCommand").toString();
+    const QString gitLogCommand = settings.value("gitLogCommand").toString();
 
     if (gitLogCommand.isEmpty()) {
         return;
     }
 
-    // make sure the note path is added
-    if (gitLogCommand.contains("%notePath%")) {
-        gitLogCommand.replace("%notePath%", "\"" + filePath + "\"");
-    } else {
-        gitLogCommand += " \"" + filePath + "\"";
+    QProcess process;
+    if (!prepareLogProcess(process, gitLogCommand, filePath)) {
+        qWarning() << "Invalid external git log command configuration";
+        return;
     }
 
-    QStringList parameters = QStringList();
-
-#ifdef Q_OS_WIN
-    // we are executing the full command with parameters directly
-    // using "cmd.exe /c" doesn't work
-    QString command = gitLogCommand;
-#else
-    // we need a shell to be able to use the executable with the parameters
-    // together
-    QString command = "bash";
-    parameters << "-c" << gitLogCommand;
-#endif
-
-    Utils::Misc::startDetachedProcess(command, parameters, NoteFolder::currentLocalPath());
+    // Launch directly on every platform, including macOS (not via the generic 'open' helper).
+    QProcess::startDetached(process.program(), process.arguments(), NoteFolder::currentLocalPath());
 }
 
 #ifdef USE_LIBGIT2

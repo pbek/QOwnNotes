@@ -33,6 +33,8 @@ bool executeCommand(const QString& command, const QStringList& arguments,
 bool executeGitCommand(const QString& gitExe, const QStringList& arguments,
                        QProcess* process = nullptr, bool withErrorDialog = true);
 QString gitCommand();
+// Returns false for invalid configuration; the process is left unchanged on failure.
+bool prepareLogProcess(QProcess& process, const QString& command, const QString& filePath);
 void showLog(const QString& filePath);
 bool hasLogCommand();
 bool isCurrentNoteFolderUseGit();

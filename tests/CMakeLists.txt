@@ -126,6 +126,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.h
     ${QON_TESTS_DIR}/testcases/app/test_touchscrolling.cpp
     ${QON_TESTS_DIR}/testcases/app/test_touchscrolling.h
+    ${QON_TESTS_DIR}/testcases/app/test_utilsgit.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_utilsgit.h
     ${QON_TESTS_DIR}/testcases/app/test_utilsmisc.cpp
     ${QON_TESTS_DIR}/testcases/app/test_utilsmisc.h
     ${QON_TESTS_DIR}/testcases/app/mocklanguagetoolserver.cpp
@@ -226,6 +228,8 @@ set(APP_SOURCE_FILES
     threads/scriptthread.h
     utils/gui.cpp
     utils/gui.h
+    utils/git.cpp
+    utils/git.h
     utils/listutils.cpp
     utils/listutils.h
     utils/misc.cpp
@@ -247,6 +251,12 @@ set(APP_SOURCE_FILES
 list(TRANSFORM APP_SOURCE_FILES PREPEND ${QON_SRC_DIR}/)
 
 add_executable(tests ${TEST_SOURCE_FILES} ${APP_SOURCE_FILES})
+
+add_executable(git-log-recorder helpers/gitlogrecorder.cpp)
+target_link_libraries(git-log-recorder PRIVATE Qt${QT_VERSION_MAJOR}::Core)
+add_dependencies(tests git-log-recorder)
+target_compile_definitions(
+  tests PRIVATE GIT_LOG_RECORDER_PATH="$<TARGET_FILE:git-log-recorder>")
 
 set_target_properties(
   tests
