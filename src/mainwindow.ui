@@ -1317,6 +1317,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </widget>
      <addaction name="menuEditNote"/>
     <addaction name="action_Remove_note"/>
+    <addaction name="action_new_tag"/>
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
     <addaction name="actionReplace_in_current_note"/>
@@ -1354,7 +1355,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="action_Load_Todo_Items"/>
     <addaction name="separator"/>
     <addaction name="actionManage_Nextcloud_Deck_cards"/>
-    <addaction name="actionInsert_Nextcloud_Deck_card"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -1447,12 +1447,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="action_Decrease_note_text_size"/>
     <addaction name="action_Reset_note_text_size"/>
    </widget>
-   <widget class="QMenu" name="menuTag">
-    <property name="title">
-     <string>&amp;Tag</string>
-    </property>
-    <addaction name="action_new_tag"/>
-   </widget>
    <widget class="QMenu" name="menuScripting">
     <property name="title">
      <string>&amp;Scripting</string>
@@ -1471,7 +1465,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
-   <addaction name="menuTag"/>
    <addaction name="menuTodo"/>
    <addaction name="menuScripting"/>
    <addaction name="menuWindow"/>

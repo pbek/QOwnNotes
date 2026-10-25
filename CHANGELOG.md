@@ -2,6 +2,9 @@
 
 ## 26.10.12
 
+- Moved **Add tag to note** directly into the **Edit** menu and removed the **Tag** menu;
+  **Insert Nextcloud Deck card link** is now only in **Edit → Insert**, not also in **Todo**
+  (for [#3803](https://github.com/pbek/QOwnNotes/issues/3803))
 - Remember the last-used **Diff** or **Note text** tab in the Git and Nextcloud/ownCloud
   note version dialogs (for [#3809](https://github.com/pbek/QOwnNotes/issues/3809))
 - Enabled the built-in Git version viewer in the Qt6 AppImage, Windows, macOS,
