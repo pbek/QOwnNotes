@@ -16,7 +16,8 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::VersionDialog) {
     ui->setupUi(this);
     afterSetupUI();
-    ui->tabWidget->setCurrentIndex(0);
+    ui->tabWidget->setCurrentIndex(
+        SettingsService().value(QStringLiteral("VersionDialog/tabWidgetIndex"), 0).toInt());
 
     // Init the note text edit search-frame
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
@@ -117,9 +118,11 @@ void VersionDialog::setupMainSplitter() {
 }
 
 void VersionDialog::storeSettings() {
-    // store the splitter sizes
+    // Store the splitter sizes and last-used version view tab
     SettingsService settings;
     settings.setValue(QStringLiteral("versionSplitterSizes"), versionSplitter->saveState());
+    settings.setValue(QStringLiteral("VersionDialog/tabWidgetIndex"),
+                      ui->tabWidget->currentIndex());
 }
 
 VersionDialog::~VersionDialog() { delete ui; }

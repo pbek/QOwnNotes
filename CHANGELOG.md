@@ -2,6 +2,8 @@
 
 ## 26.10.12
 
+- Remember the last-used **Diff** or **Note text** tab in the Git and Nextcloud/ownCloud
+  note version dialogs (for [#3809](https://github.com/pbek/QOwnNotes/issues/3809))
 - Enabled the built-in Git version viewer in the Qt6 AppImage, Windows, macOS,
   Snap, Launchpad, OBS, and Slackware release builds with CMake and libgit2 support
   (for [#3802](https://github.com/pbek/QOwnNotes/issues/3802))
