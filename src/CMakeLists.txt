@@ -1,5 +1,13 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(QOwnNotes)
+
+# Use modern compatibility policies for unmodified third-party submodules on
+# CMake 4+, without overriding a higher minimum supplied by the caller.
+if(NOT DEFINED CMAKE_POLICY_VERSION_MINIMUM OR CMAKE_POLICY_VERSION_MINIMUM
+                                               VERSION_LESS 3.10)
+  set(CMAKE_POLICY_VERSION_MINIMUM 3.10)
+endif()
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 

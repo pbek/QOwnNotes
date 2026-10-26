@@ -2,6 +2,8 @@
 
 ## 26.10.13
 
+- Raised the CMake compatibility minimum to 3.10 to avoid deprecation warnings
+  with recent CMake versions, including for bundled dependencies
 - Switched translation source updates to CMake, removing the deprecated qmake input
   to `lupdate` and preserving existing edits to other languages
   - Include library strings across platforms and optional build features
