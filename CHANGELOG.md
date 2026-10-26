@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 26.10.13
+
+- Reorganized menus for easier discovery (for [#3811](https://github.com/pbek/QOwnNotes/issues/3811))
+  - Added top-level **Insert** and **Search** menus, moved note deletion, version history,
+    and encryption into **Note**, and flattened **Edit → Edit**
+  - Replaced **Extra** with a **Copy** submenu and directly accessible editing actions,
+    and combined layout selection and management under **Window → Layout**
+  - Preserved keyboard shortcuts and editor context-menu access
+  - The top-level **Insert** menu displays its label instead of a paperclip icon
+
 ## 26.10.12
 
 - Moved **Add tag to note** directly into the **Edit** menu and removed the **Tag** menu;

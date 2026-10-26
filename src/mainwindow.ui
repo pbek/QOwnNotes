@@ -1113,12 +1113,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </widget>
     <addaction name="action_New_note"/>
     <addaction name="actionNew_note_in_new_tab"/>
-    <addaction name="action_Find_note"/>
-    <addaction name="actionFind_notes_in_all_subfolders"/>
+    <addaction name="action_Remove_note"/>
+    <addaction name="separator"/>
     <addaction name="menuNavigation"/>
     <addaction name="menuTrash"/>
     <addaction name="menuSort_by"/>
     <addaction name="actionAllow_note_editing"/>
+    <addaction name="separator"/>
+    <addaction name="menuVersioning"/>
+    <addaction name="menuEncryption"/>
     <addaction name="separator"/>
     <addaction name="menuExport"/>
     <addaction name="menuImport"/>
@@ -1175,11 +1178,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </property>
     <widget class="QMenu" name="menuInsert">
      <property name="title">
-      <string>Insert</string>
-     </property>
-     <property name="icon">
-      <iconset theme="mail-attachment" resource="breeze-qownnotes.qrc">
-       <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
+      <string>&amp;Insert</string>
      </property>
      <addaction name="actionInsert_text_link"/>
      <addaction name="actionInsert_note_link"/>
@@ -1193,6 +1192,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <addaction name="actionInsert_checkbox_list_item"/>
      <addaction name="actionInsert_headline_from_note_filename"/>
      <addaction name="actionInsert_Nextcloud_Deck_card"/>
+     <addaction name="separator"/>
+     <addaction name="actionPaste_image"/>
     </widget>
     <widget class="QMenu" name="menuFormat">
      <property name="title">
@@ -1214,33 +1215,17 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </property>
      <addaction name="actionSelect_enclosed_text"/>
     </widget>
-    <widget class="QMenu" name="menuExtra">
+    <widget class="QMenu" name="menuCopy">
      <property name="title">
-      <string>Extra</string>
+      <string>Copy</string>
      </property>
      <property name="icon">
-      <iconset theme="split" resource="breeze-qownnotes.qrc">
-       <normaloff>:/icons/breeze-qownnotes/16x16/split.svg</normaloff>:/icons/breeze-qownnotes/16x16/split.svg</iconset>
+      <iconset theme="edit-copy" resource="breeze-qownnotes.qrc">
+       <normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</iconset>
      </property>
      <addaction name="actionCopy_headline"/>
      <addaction name="actionCopy_path_to_note_to_clipboard"/>
-     <addaction name="actionSearch_text_on_the_web"/>
-     <addaction name="actionAutocomplete"/>
-     <addaction name="actionSplit_note_at_cursor_position"/>
-     <addaction name="actionActivate_context_menu"/>
-    </widget>
-    <widget class="QMenu" name="menuEditNote">
-     <property name="title">
-      <string>Edit</string>
-     </property>
-     <property name="icon">
-      <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
-       <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
-     </property>
-     <addaction name="action_DuplicateText"/>
-     <addaction name="action_FormatTable"/>
-     <addaction name="actionDelete_line"/>
-     <addaction name="actionDelete_word"/>
+     <addaction name="actionCopy_code_block"/>
     </widget>
     <widget class="QMenu" name="menuVersioning">
      <property name="title">
@@ -1315,26 +1300,25 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <addaction name="separator"/>
       <addaction name="actionCopy_code_block"/>
      </widget>
-     <addaction name="menuEditNote"/>
-    <addaction name="action_Remove_note"/>
-    <addaction name="action_new_tag"/>
-    <addaction name="separator"/>
-    <addaction name="action_Find_text_in_note"/>
-    <addaction name="actionReplace_in_current_note"/>
-    <addaction name="separator"/>
-     <addaction name="menuInsert"/>
+     <addaction name="action_DuplicateText"/>
+     <addaction name="action_FormatTable"/>
+     <addaction name="actionDelete_line"/>
+     <addaction name="actionDelete_word"/>
+     <addaction name="separator"/>
      <addaction name="menuFormat"/>
      <addaction name="menuSelect"/>
      <addaction name="actionSelect_all_notes"/>
-     <addaction name="actionPaste_image"/>
-    <addaction name="separator"/>
-    <addaction name="menuVersioning"/>
-    <addaction name="menuEncryption"/>
-    <addaction name="actionManage_stored_images"/>
-    <addaction name="actionManage_stored_attachments"/>
-    <addaction name="actionSend_clipboard"/>
-    <addaction name="actionSend_clipboard_as_text"/>
-     <addaction name="menuExtra"/>
+     <addaction name="menuCopy"/>
+     <addaction name="actionAutocomplete"/>
+     <addaction name="actionSplit_note_at_cursor_position"/>
+     <addaction name="action_new_tag"/>
+     <addaction name="separator"/>
+     <addaction name="actionManage_stored_images"/>
+     <addaction name="actionManage_stored_attachments"/>
+     <addaction name="separator"/>
+     <addaction name="actionSend_clipboard"/>
+     <addaction name="actionSend_clipboard_as_text"/>
+     <addaction name="separator"/>
      <addaction name="menuNoteTextEditContext"/>
      <addaction name="separator"/>
       <addaction name="actionCheck_spelling"/>
@@ -1346,6 +1330,18 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="separator"/>
     <addaction name="actionEnable_AI"/>
     <addaction name="menuAI_model"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch">
+    <property name="title">
+     <string>&amp;Search</string>
+    </property>
+    <addaction name="action_Find_text_in_note"/>
+    <addaction name="actionReplace_in_current_note"/>
+    <addaction name="separator"/>
+    <addaction name="action_Find_note"/>
+    <addaction name="actionFind_notes_in_all_subfolders"/>
+    <addaction name="separator"/>
+    <addaction name="actionSearch_text_on_the_web"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
@@ -1375,7 +1371,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </widget>
     <widget class="QMenu" name="menuLayouts">
      <property name="title">
-      <string>Layouts</string>
+      <string>Switch layout</string>
      </property>
     </widget>
     <widget class="QMenu" name="menuPanels">
@@ -1407,12 +1403,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="title">
        <string>Layout</string>
       </property>
+      <addaction name="menuLayouts"/>
+      <addaction name="actionSwitch_to_previous_layout"/>
+      <addaction name="separator"/>
       <addaction name="actionManage_layouts"/>
       <addaction name="separator"/>
       <addaction name="actionStore_as_new_layout"/>
       <addaction name="actionRemove_current_layout"/>
       <addaction name="actionRename_current_layout"/>
-      <addaction name="actionSwitch_to_previous_layout"/>
      </widget>
     <widget class="QMenu" name="menuJumpTo">
      <property name="title">
@@ -1428,7 +1426,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="menuJumpTo"/>
     <addaction name="menuToolbars"/>
     <addaction name="menuPanels"/>
-    <addaction name="menuLayouts"/>
     <addaction name="actionUnlock_panels"/>
     <addaction name="actionReattach_panels"/>
     <addaction name="separator"/>
@@ -1436,6 +1433,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="actionTypewriter_mode"/>
+    <addaction name="actionActivate_context_menu"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
@@ -1465,6 +1463,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuInsert"/>
+   <addaction name="menuSearch"/>
    <addaction name="menuTodo"/>
    <addaction name="menuScripting"/>
    <addaction name="menuWindow"/>

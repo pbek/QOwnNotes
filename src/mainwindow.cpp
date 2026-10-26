@@ -3841,7 +3841,10 @@ void MainWindow::updateCurrentNoteTextHash() {
 void MainWindow::updateActionUiEnabled() {
     const bool allowEditing = !ui->noteTextEdit->isReadOnly();
 
-    setMenuEnabled(ui->menuEditNote, allowEditing);
+    ui->action_DuplicateText->setEnabled(allowEditing);
+    ui->action_FormatTable->setEnabled(allowEditing);
+    ui->actionDelete_line->setEnabled(allowEditing);
+    ui->actionDelete_word->setEnabled(allowEditing);
     setMenuEnabled(ui->menuInsert, allowEditing);
     setMenuEnabled(ui->menuFormat, allowEditing);
     ui->actionPaste_image->setEnabled(allowEditing);
