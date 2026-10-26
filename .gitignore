@@ -5,6 +5,7 @@ build-tools
 .directory
 bin/*
 build-tests-*
+build-screenshots/
 .idea
 cmake-build-*
 doc/build

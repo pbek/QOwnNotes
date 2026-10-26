@@ -114,6 +114,11 @@ nix-build-force:
 nix-run:
     ./result/bin/QOwnNotes --session test
 
+# Capture demo windows on the current Plasma desktop using its actual theme
+[group('screenshots')]
+screenshots *args:
+    python3 ./scripts/screenshots.py {{ args }}
+
 # Build the application for nix with the nixpkgs of the running system instead of the
 # locked one, so the Qt version matches the desktop environment and its Qt plugins,
 # like the KDE Plasma platform theme, can be loaded
