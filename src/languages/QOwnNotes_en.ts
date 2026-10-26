@@ -10087,12 +10087,102 @@ Do you want to delete those files as well?</source>
         <source>Could not delete password</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_haiku.cpp" line="168"/>
+        <source>Password not found</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QKeychain::Job</name>
     <message>
         <location filename="../libraries/qtkeychain/qtkeychain/keychain.cpp" line="83"/>
         <source>Both service name and key are empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="30"/>
+        <source>No error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="34"/>
+        <source>The specified item could not be found in the keychain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="37"/>
+        <source>User canceled the operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="40"/>
+        <source>User interaction is not allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="44"/>
+        <source>No keychain is available. You may need to restart your computer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="48"/>
+        <source>The user name or passphrase you entered is not correct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="51"/>
+        <source>A cryptographic verification failure has occurred</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="54"/>
+        <source>Function or operation not implemented</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="56"/>
+        <source>I/O error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="59"/>
+        <source>Already open with with write permission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="62"/>
+        <source>Invalid parameters passed to a function</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="64"/>
+        <source>Failed to allocate memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="67"/>
+        <source>Bad parameter or invalid state for operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="69"/>
+        <source>An internal component failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="72"/>
+        <source>The specified item already exists in the keychain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="75"/>
+        <source>Unable to decode the provided data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_apple.mm" line="78"/>
+        <source>Unknown error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -10235,6 +10325,11 @@ Do you want to delete those files as well?</source>
         <source>Could not decrypt data: %1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_haiku.cpp" line="93"/>
+        <source>Password not found</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QKeychain::WritePasswordJobPrivate</name>
@@ -10323,6 +10418,11 @@ Do you want to delete those files as well?</source>
     <message>
         <location filename="../libraries/qtkeychain/qtkeychain/keychain_win.cpp" line="223"/>
         <source>Writing credentials failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_haiku.cpp" line="137"/>
+        <source>Password not found</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -10658,8 +10758,8 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <location filename="../dialogs/storedimagesdialog.cpp" line="379"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <source>File name changed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10845,6 +10945,11 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
     <message>
         <location filename="../libraries/qtkeychain/qtkeychain/libsecret.cpp" line="104"/>
         <source>Entry not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qtkeychain/qtkeychain/keychain_haiku.cpp" line="72"/>
+        <source>error 0x%1: %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

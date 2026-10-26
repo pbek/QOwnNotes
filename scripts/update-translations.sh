@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
 #
-# Use this script in $ProjectFileDir$ to update all translation files
+# Update the English source catalog using CMake. Other languages are managed by Crowdin.
+# Additional arguments are passed to CMake (for example, -DQON_QT6_BUILD=OFF).
 #
 
-pushd src || exit 1
+set -euo pipefail
 
-echo "Update translation files..."
-# Set QMAKESPEC to avoid "Could not find qmake spec 'default'" warning (e.g. on NixOS)
-QMAKESPEC="${QMAKESPEC:-linux-g++}" lupdate -verbose QOwnNotes.pro
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+build_dir="$project_dir/build-QOwnNotes-translations"
 
-#echo "Remove leading spaces in translation files..."
-#find ./languages/*.ts -type f ! -name QOwnNotes_en.ts -exec sed -i 's/^[[:space:]]*//' {} \;
-
-echo "Revert changes to all translation files except QOwnNotes_en.ts..."
-find ./languages/*.ts -type f ! -name QOwnNotes_en.ts -exec git checkout {} \;
+echo "Update English source translation file..."
+cmake -S "$project_dir/src" -B "$build_dir" -DQON_QT6_BUILD=ON "$@"
+cmake --build "$build_dir" --target translations-update

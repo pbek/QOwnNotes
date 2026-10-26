@@ -49,7 +49,7 @@ translations-changelog args='':
 translations-upload:
     crowdin upload
 
-# Update the translations files
+# Update the English source translation file with CMake
 [group('translations')]
 translations-update-files:
     ./scripts/update-translations.sh

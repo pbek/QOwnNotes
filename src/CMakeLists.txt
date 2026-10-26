@@ -921,6 +921,45 @@ add_custom_target(
 target_sources(QOwnNotes PRIVATE ${SOURCE_FILES} ${RESOURCE_FILES}
                                  ${QON_QM_FILES})
 
+# Update only the Crowdin source catalog, and only on explicit request. Separate
+# library targets are not scanned by qt6_add_lupdate(QOwnNotes). Include their
+# production sources across platforms and optional build features so updating on
+# one platform does not remove another platform's strings.
+file(
+  GLOB
+  QON_TRANSLATION_LIBRARY_SOURCES
+  libraries/fakevim/fakevim/*.cpp
+  libraries/fakevim/fakevim/*.h
+  libraries/qhotkey/QHotkey/*.cpp
+  libraries/qhotkey/QHotkey/*.h
+  libraries/qhotkey/QHotkey/*.mm
+  libraries/qtkeychain/qtkeychain/*.cpp
+  libraries/qtkeychain/qtkeychain/*.h
+  libraries/qtkeychain/qtkeychain/*.mm
+  libraries/qlitehtml/src/*.cpp
+  libraries/qlitehtml/src/*.h
+  libraries/qlitehtml/src/*.ui)
+if(QON_QT6_BUILD)
+  qt6_add_lupdate(
+    QOwnNotes
+    TS_FILES
+    languages/QOwnNotes_en.ts
+    LUPDATE_TARGET
+    translations-update
+    SOURCES
+    ${QON_TRANSLATION_LIBRARY_SOURCES}
+    OPTIONS
+    -verbose)
+else()
+  add_custom_target(
+    translations-update
+    COMMAND ${Qt5_LUPDATE_EXECUTABLE} -verbose ${SOURCE_FILES} ${RESOURCE_FILES}
+            ${QON_TRANSLATION_LIBRARY_SOURCES} -ts languages/QOwnNotes_en.ts
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+    COMMENT "Update the English source translation file"
+    VERBATIM)
+endif()
+
 # The Qt5::Widgets target will also link Qt::Gui and Qt::Core targets
 target_link_libraries(
   QOwnNotes

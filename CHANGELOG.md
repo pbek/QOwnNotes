@@ -2,6 +2,9 @@
 
 ## 26.10.13
 
+- Switched translation source updates to CMake, removing the deprecated qmake input
+  to `lupdate` and preserving existing edits to other languages
+  - Include library strings across platforms and optional build features
 - Reorganized menus for easier discovery (for [#3811](https://github.com/pbek/QOwnNotes/issues/3811))
   - Added top-level **Insert** and **Search** menus, moved note deletion, version history,
     and encryption into **Note**, and flattened **Edit → Edit**
