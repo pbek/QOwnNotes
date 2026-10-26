@@ -5,10 +5,14 @@
 - Reorganized menus for easier discovery (for [#3811](https://github.com/pbek/QOwnNotes/issues/3811))
   - Added top-level **Insert** and **Search** menus, moved note deletion, version history,
     and encryption into **Note**, and flattened **Edit → Edit**
+  - Added a **Tools** menu for spelling, grammar, dictionaries, AI, stored images and
+    attachments, and sending the clipboard, so **Edit** only contains editing actions
   - Replaced **Extra** with a **Copy** submenu and directly accessible editing actions,
-    and combined layout selection and management under **Window → Layout**
-  - Preserved keyboard shortcuts and editor context-menu access
-  - The top-level **Insert** menu displays its label instead of a paperclip icon
+    renamed **Note text edit** to **Editor context menu**, and moved **Activate context menu**
+    and **Allow all note editing** into **Edit**
+  - Combined layout selection and management under **Window → Layout**
+  - Adjusted menu access keys so they don't conflict with each other or existing shortcuts
+  - Keyboard shortcuts are unchanged
 
 ## 26.10.12
 
