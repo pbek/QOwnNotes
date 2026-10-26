@@ -154,7 +154,8 @@ void OpenAiService::initializeBackends() {
                                                            "gpt-4o-mini-search-preview",
                                                            "gpt-4o-search-preview"};
     _backendModels[QStringLiteral("groq")] =
-        QStringList{"llama-3.1-8b-instant",
+        QStringList{"openai/gpt-oss-20b",
+                    "llama-3.1-8b-instant",
                     "deepseek-r1-distill-llama-70b",
                     "gemma2-9b-it",
                     "llama-3.3-70b-versatile",
@@ -165,8 +166,7 @@ void OpenAiService::initializeBackends() {
                     "meta-llama/llama-4-scout-17b-16e-instruct",
                     "moonshotai/kimi-k2-instruct",
                     "moonshotai/kimi-k2-instruct-0905",
-                    "openai/gpt-oss-120b",
-                    "openai/gpt-oss-20b"};
+                    "openai/gpt-oss-120b"};
 
     _backendApiBaseUrls.clear();
     _backendApiBaseUrls[QStringLiteral("openai")] =
