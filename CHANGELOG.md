@@ -2,6 +2,9 @@
 
 ## 26.10.13
 
+- Added icons to the note list context menu and its folder and tag submenus
+  (for [#2589](https://github.com/pbek/QOwnNotes/issues/2589),
+  thank you, @serebryakov02)
 - Raised the CMake compatibility minimum to 3.10 to avoid deprecation warnings
   with recent CMake versions, including for bundled dependencies
 - Switched translation source updates to CMake, removing the deprecated qmake input
