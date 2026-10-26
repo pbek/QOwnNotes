@@ -1227,11 +1227,11 @@ void TagManager::buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId) {
         const int count = Tag::countAllParentId(tagId);
         if (count > 0) {
             // if there are sub-tag build a new menu level
-            QMenu *tagMenu = parentMenu->addMenu(name);
+            QMenu *tagMenu = parentMenu->addMenu(Utils::Gui::tagIcon(), name);
             buildBulkNoteTagMenuTree(tagMenu, tagId);
         } else {
             // if there are no sub-tags just create a named action
-            QAction *action = parentMenu->addAction(name);
+            QAction *action = parentMenu->addAction(Utils::Gui::tagIcon(), name);
 
             connect(action, &QAction::triggered, this,
                     [this, tagId]() { tagSelectedNotesToTagId(tagId); });
@@ -1241,7 +1241,7 @@ void TagManager::buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId) {
     if (parentTagId > 0) {
         // add an action to tag this
         parentMenu->addSeparator();
-        QAction *action = parentMenu->addAction(tr("Tag this"));
+        QAction *action = parentMenu->addAction(Utils::Gui::tagIcon(), tr("Tag this"));
         action->setData(parentTagId);
 
         connect(action, &QAction::triggered, this,
