@@ -41,9 +41,9 @@ Alt-H2
 ## 강조
 
 ```markdown
-강조, 즉 기울임꼴는 *별표* 또는 _밑줄_과 함께 사용됩니다.
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-강하게 강조하려면 **별표** 또는 __밑줄__을 사용하세요.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
 **별표와 밑줄**을 함께 사용하여 강조합니다.
 ```
@@ -86,11 +86,11 @@ _밑줄_
 1. 실제 숫자는 중요하지 않습니다. 단지 숫자일 뿐입니다
 1. 그리고 또 다른 항목입니다.
 
-* 순서 없는 목록에는 별표를 사용할 수 있습니다.
+- Unordered list can use asterisks
 
-- 또는 빼기 기호
+* Or minuses
 
-+ 또는 더하기 기호
+- Or pluses
 ```
 
 ::: tip
@@ -408,17 +408,17 @@ cd Notes
 
 <pre><code class="markdown">3개 이상...
 
-하이픈
+Hyphens
 
 ---
 
-별표
+Asterisks
 
-***
+---
 
-밑줄
+Underscores
 
-___
+---
 </pre>
 
 <h2 spaces-before="0">

@@ -41,9 +41,9 @@ Standardmäßig erstellt QOwnNotes den **Dateinamen einer Notiz** aus der **Übe
 ## Hervorhebung
 
 ```markdown
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
 Combined emphasis with **asterisks and _underscores_**.
 ```
@@ -87,11 +87,11 @@ Es gibt viele Möglichkeiten, Listen zu erstellen.
 1. Actual numbers don't matter, just that it's a number
 1. And another item.
 
-* Unordered list can use asterisks
+- Unordered list can use asterisks
 
-- Or minuses
+* Or minuses
 
-+ Or pluses
+- Or pluses
 ```
 
 ::: tip
@@ -352,11 +352,11 @@ Hyphens
 
 Asterisks
 
-***
+---
 
 Underscores
 
-___
+---
 ```
 
 ## Zeilenumbrüche

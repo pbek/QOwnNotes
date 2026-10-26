@@ -1104,6 +1104,37 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
+## Showing a desktop notification
+
+### نداء الدالة ومُعامِلاتها
+
+```cpp
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(QString text, QString title);
+```
+
+### مثال
+
+```js
+// show a desktop notification without interrupting the user
+script.showNotification("The export has finished", "My export script");
+```
+
+::: tip
+Clicking the notification shows the QOwnNotes window. The text is shown as plain text. Unlike `script.informationMessageBox()`, the notification doesn't block the script. In builds with KDE integration, the _Script notification_ event can be disabled or changed in Plasma's notification settings; if it is disabled, nothing is shown.
+:::
+
 ## إظهار صندوق رسالة سؤال
 
 ### نداء الدالة ومُعامِلاتها
@@ -1674,7 +1705,7 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
 
 ### مثال
 
@@ -1691,7 +1722,7 @@ script.log(result);
 
 ## إظهار حوار لإدخال سطر نصي
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 
 ```cpp
 /**
@@ -1738,7 +1769,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
 
 سترجع سلسلة نصية فارغة عند نقر `Cancel` أو ضغط `Escape`.
 
-### مثال
+### Example
 
 ```js
 var result = script.inputDialogGetMultiLineText(
@@ -1751,7 +1782,7 @@ script.log(result);
 
 ## فتح مربع حوار لإظهار الاختلافات بين نصين
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 
 ```cpp
 /**
@@ -1820,7 +1851,7 @@ script.log(result);
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### مثال
+### Example
 
 ```js
 if (script.fileExists(filePath)) {
@@ -1831,7 +1862,7 @@ if (script.fileExists(filePath)) {
 
 ## كتابة نص إلى ملف
 
-### نداء الدالة ومُعامِلاتها
+### Method call and parameters
 
 ```cpp
 /**

@@ -5,7 +5,7 @@
   <img src="/img/qownnotes-android-note-view.webp" alt="QOwnNotes Android note view" style="flex: 1; min-width: 0;" />
   <img src="/img/qownnotes-android-note-edit.webp" alt="QOwnNotes Android note edit" style="flex: 1; min-width: 0;" /></div>
 
-[QOwnNotes pour Android](https://github.com/qownnotes/qownnotes-android) est une **application pouvant fonctionner hors-ligne de notes Markdown** pour Android qui se synchronise avec votre serveur Nextcloud à travers l’**API Nextcloud Notes** et l’application **QOwnNotesAPI**.
+[QOwnNotes pour Android](https://github.com/qownnotes/qownnotes-android) est une **application de notes Markdown pouvant fonctionner hors-ligne** pour Android qui se synchronise avec votre serveur Nextcloud à travers l’**API Nextcloud Notes** et l’application **QOwnNotesAPI**.
 
 Elle interagit directement avec **Nextcloud Notes** et **QOwnNotesAPI** sur votre serveur Nextcloud,
 vous donnant accès à la synchronisation des notes, à l’historique distant de versions de notes et à la corbeille distante, le tout depuis votre téléphone.
@@ -30,7 +30,12 @@ vous donnant accès à la synchronisation des notes, à l’historique distant d
 
 ## Installation
 
-Visitez la [page de dernière version](https://github.com/qownnotes/qownnotes-android/releases/latest) et téléchargez l’APK.
+[![Get it on F-Droid](https://f-droid.org/badge/get-it-on.png)](https://f-droid.org/en/packages/org.qownnotes.mobile/) [![Get it on Obtainium](https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22org.qownnotes.mobile%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fqownnotes%2Fqownnotes-android%22%2C%22author%22%3A%22qownnotes%22%2C%22name%22%3A%22QOwnNotes%22%7D)
+
+Install QOwnNotes for Android from
+[F-Droid](https://f-droid.org/en/packages/org.qownnotes.mobile/), or visit the
+[latest release page](https://github.com/qownnotes/qownnotes-android/releases/latest)
+and download the APK.
 
 Des versions de développement sont construites et publiées en parallèle des versions stables et peuvent
 être installées simultanément (avec deux identifiants d’application différents).

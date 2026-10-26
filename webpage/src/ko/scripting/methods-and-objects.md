@@ -1104,6 +1104,37 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("The text I want to show", "Some optional title");
 ```
 
+## Showing a desktop notification
+
+### 메서드 호출 및 매개 변수
+
+```cpp
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(QString text, QString title);
+```
+
+### 예제
+
+```js
+// show a desktop notification without interrupting the user
+script.showNotification("The export has finished", "My export script");
+```
+
+::: tip
+Clicking the notification shows the QOwnNotes window. The text is shown as plain text. Unlike `script.informationMessageBox()`, the notification doesn't block the script. In builds with KDE integration, the _Script notification_ event can be disabled or changed in Plasma's notification settings; if it is disabled, nothing is shown.
+:::
+
 ## 질문 메시지 상자 표시
 
 ### 메서드 호출 및 매개 변수
@@ -1747,7 +1778,7 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-`취소`를 클릭하거나 `Escape`을 누르면 빈 문자열이 반환됩니다.
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
 
 ### 예제
 
@@ -1764,7 +1795,7 @@ script.log(result);
 
 ## 줄 편집을 사용하여 입력 대화 상자 열기
 
-### 메서드 호출 및 매개 변수
+### Method call and parameters
 
 ```cpp
 /**
@@ -1811,7 +1842,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
 
 `취소`를 클릭하거나 `Escape`을 누르면 빈 문자열이 반환됩니다.
 
-### 예제
+### Example
 
 ```js
 var result = script.inputDialogGetMultiLineText(
@@ -1824,7 +1855,7 @@ script.log(result);
 
 ## 두 텍스트의 차이점을 표시하는 대화 상자 열기
 
-### 메서드 호출 및 매개 변수
+### Method call and parameters
 
 ```cpp
 /**
@@ -1840,7 +1871,7 @@ script.log(result);
                                            const QString &text1, const QString &text2);
 ```
 
-`text2`는 대화 상자에서 편집할 수 있는 텍스트입니다. `취소`을 클릭하거나 `Esc`를 누른 경우 빈 문자열이 반환됩니다.
+`text2`는 대화 상자에서 편집할 수 있는 텍스트입니다. `취소`를 클릭하거나 `Escape`을 누르면 빈 문자열이 반환됩니다.
 
 ### 예제
 
@@ -1880,7 +1911,7 @@ script.log(result);
 
 ## 파일에서 텍스트 읽기
 
-### 메서드 호출 및 매개 변수
+### 메소드 호출 및 매개변수
 
 ```cpp
 /**
@@ -1893,7 +1924,7 @@ script.log(result);
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### 예제
+### 예시
 
 ```js
 if (script.fileExists(filePath)) {
@@ -1904,7 +1935,7 @@ if (script.fileExists(filePath)) {
 
 ## 파일에 텍스트 쓰기
 
-### 메소드 호출 및 매개변수
+### Method call and parameters
 
 ```cpp
 /**
@@ -1918,7 +1949,7 @@ if (script.fileExists(filePath)) {
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### 예시
+### Example
 
 ```js
 var result = script.writeToFile(filePath, html);
@@ -1931,7 +1962,7 @@ script.log(result);
 
 You don't need to write your own date formatting function in your scripts. The QML engine already provides `Qt.formatDateTime`, `Qt.formatDate` and `Qt.formatTime` to format a JavaScript `Date` object with a format string.
 
-### 메소드 호출 및 매개변수
+### Method call and parameters
 
 ```js
 /**

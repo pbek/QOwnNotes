@@ -41,9 +41,9 @@ Par défaut, QOwnNotes crée le **nom de fichier d'une note** à partir du **tit
 ## Accentuation
 
 ```markdown
-Accentuation (i.e. italique) avec des *astérisques* ou des _tirets bas_.
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-Accentuation forte (i.e. gras) avec des **astérisques** ou des __tirets bas__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
 Accentuation combinée avec **astérisques et _tirets bas_**.
 ```
@@ -87,11 +87,11 @@ Il existe de nombreuses façons de créer des listes.
 1. Les nombres n’ont pas d’importance, il faut juste que ce soit un nombre
 1. Et un autre élément.
 
-* Les listes non-ordonnées peuvent utiliser des astérisques
+- Unordered list can use asterisks
 
-- Des tirets
+* Or minuses
 
-+ Ou des plus
+- Or pluses
 ```
 
 ::: tip
@@ -347,17 +347,17 @@ Il existe trois façons d'obtenir une règle horizontale : traits d'union, ast�
 ```markdown
 Trois ou plus...
 
-Tirets
+Hyphens
 
 ---
 
-Astérisques
+Asterisks
 
-***
+---
 
-Tirets bas
+Underscores
 
-___
+---
 ```
 
 ## Sauts de ligne

@@ -35,40 +35,40 @@
 </message>
 <message>
 <source>Search script repository</source>
-<translation type="unfinished">Search script repository</translation>
+<translation>スクリプトリポジトリを検索</translation>
 </message>
 <message>
 <source>AI backends added via the scripting engine</source>
-<translation type="unfinished">AI backends added via the scripting engine</translation>
+<translation>スクリプトで追加したAI接続先</translation>
 </message>
 <message>
 <source>API keys</source>
-<translation type="unfinished">API keys</translation>
+<translation>APIキー</translation>
 </message>
 <message>
 <source>OpenAI API key:</source>
-<translation type="unfinished">OpenAI API key:</translation>
+<translation>OpenAI APIキー:</translation>
 </message>
 <message>
 <source>Create Groq API key</source>
-<translation type="unfinished">Create Groq API key</translation>
+<translation>Groq APIキーを作成</translation>
 </message>
 <message>
 <source>Create OpenAI API key</source>
-<translation type="unfinished">Create OpenAI API key</translation>
+<translation>OpenAI APIキーを作成</translation>
 </message>
 <message>
 <source>API key</source>
-<translation type="unfinished">API key</translation>
+<translation>APIキー</translation>
 </message>
 <message>
 <source>Groq API key:</source>
-<translation type="unfinished">Groq API key:</translation>
+<translation>Groq APIキー:</translation>
 </message>
 <message>
 <source>Test connection</source>
 <comment>"Test" as verb</comment>
-<translation type="unfinished">Test connection</translation>
+<translation>接続テスト</translation>
 </message>
 <message>
 <source>API settings</source>
@@ -76,16 +76,16 @@
 </message>
 <message>
 <source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
-<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+<translation>タイムアウトまでのサーバーからの応答待ち時間</translation>
 </message>
 <message>
 <source>Response timeout:</source>
-<translation type="unfinished">Response timeout:</translation>
+<translation>応答タイムアウト:</translation>
 </message>
 <message>
 <source>sec</source>
 <comment>seconds</comment>
-<translation type="unfinished">sec</translation>
+<translation>秒</translation>
 </message>
 <message>
 <source>API test result for %1 (%2)</source>
@@ -229,19 +229,19 @@
 </message>
 <message>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>正常</translation>
 </message>
 <message>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>不正</translation>
 </message>
 <message>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>未検出</translation>
 </message>
 <message>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>見つかりません</translation>
 </message>
 <message>
 <source>unknown</source>
@@ -264,8 +264,8 @@
 <translation type="unfinished">API app version too low</translation>
 </message>
 <message>
-<source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+<source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
+<translation type="unfinished">Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server connection error</source>
@@ -347,8 +347,8 @@
 <translation type="unfinished">Your Nextcloud / ownCloud server</translation>
 </message>
 <message>
-<source>Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
-<translation type="unfinished">Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</translation>
+<source>Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</source>
+<translation type="unfinished">Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -359,8 +359,8 @@
 <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
@@ -443,12 +443,12 @@
 <translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
-<source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
-<translation type="unfinished">Enable QOwnNotes / QOwnNotesAPI server app support</translation>
+<source>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</source>
+<translation type="unfinished">Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</translation>
 </message>
 <message>
-<source>connection to QOwnNotes / QOwnNotesAPI</source>
-<translation type="unfinished">connection to QOwnNotes / QOwnNotesAPI</translation>
+<source>connection to QOwnNotes (or legacy QOwnNotesAPI)</source>
+<translation type="unfinished">connection to QOwnNotes (or legacy QOwnNotesAPI)</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -520,11 +520,11 @@ Server app version: %2</translation>
 </message>
 <message>
 <source>There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </source>
 <translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </translation>
 </message>
@@ -2730,9 +2730,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
 </message>
 <message>
-<source>You optionally can use "%notePath%" for the path of the note.</source>
+<source>You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+<translation type="unfinished">You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -3443,6 +3443,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation type="unfinished">Interface style</translation>
 </message>
 <message>
+<source>Color scheme:</source>
+<translation type="unfinished">Color scheme:</translation>
+</message>
+<message>
+<source>KDE color scheme of the user interface, the editor colors are set in the editor color schema</source>
+<translation type="unfinished">KDE color scheme of the user interface, the editor colors are set in the editor color schema</translation>
+</message>
+<message>
+<source>The color scheme is not used while the dark mode theme is turned on.</source>
+<translation type="unfinished">The color scheme is not used while the dark mode theme is turned on.</translation>
+</message>
+<message>
 <source>Font rendering (Windows)</source>
 <translation type="unfinished">Font rendering (Windows)</translation>
 </message>
@@ -3541,6 +3553,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Show menu bar item</source>
 <translation type="unfinished">Show menu bar item</translation>
+</message>
+<message>
+<source>System default</source>
+<translation type="unfinished">System default</translation>
+</message>
+<message>
+<source>%1 (not installed)</source>
+<translation type="unfinished">%1 (not installed)</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -3883,7 +3903,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <name>LayoutsSettingsWidget</name>
 <message>
 <source>Layouts</source>
-<translation type="unfinished">Layouts</translation>
+<translation>レイアウト</translation>
 </message>
 <message>
 <source>Create, rename, remove, and order layouts. Changes on this page are applied immediately.</source>
@@ -4304,10 +4324,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>エディターの幅</translation>
 </message>
 <message>
-<source>Layouts</source>
-<translation type="unfinished">Layouts</translation>
-</message>
-<message>
 <source>Layout</source>
 <translation type="unfinished">Layout</translation>
 </message>
@@ -4322,10 +4338,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>&amp;Quit</source>
 <translation>終了(&amp;Q)</translation>
-</message>
-<message>
-<source>&amp;Remove current note</source>
-<translation>現在のノートを削除(&amp;R)</translation>
 </message>
 <message>
 <source>&amp;New note</source>
@@ -4444,24 +4456,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>編集(&amp;E)</translation>
 </message>
 <message>
-<source>Insert</source>
-<translation>挿入</translation>
-</message>
-<message>
 <source>Format</source>
 <translation>書式</translation>
 </message>
 <message>
 <source>Select</source>
 <translation type="unfinished">Select</translation>
-</message>
-<message>
-<source>Extra</source>
-<translation>その他</translation>
-</message>
-<message>
-<source>Edit</source>
-<translation>編集</translation>
 </message>
 <message>
 <source>Versioning</source>
@@ -4482,10 +4482,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>AI model</source>
 <translation>AIモデル</translation>
-</message>
-<message>
-<source>Note text edit</source>
-<translation type="unfinished">Note text edit</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -4531,10 +4527,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Setup note folders / subfolders</source>
 <translation>ノートフォルダー／サブフォルダーを設定</translation>
-</message>
-<message>
-<source>&amp;Find text in notes</source>
-<translation>&amp;ノート内のテキストを検索</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -4723,10 +4715,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>&amp;Reset note text size</source>
 <translation>ノートの文字サイズをリセット(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Add tag to note</source>
-<translation>ノートにタグを追加(&amp;A)</translation>
 </message>
 <message>
 <source>&amp;Reload note folder</source>
@@ -5222,6 +5210,38 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>ノートへの操作...</translation>
 </message>
 <message>
+<source>Copy</source>
+<translation type="unfinished">Copy</translation>
+</message>
+<message>
+<source>Editor context menu</source>
+<translation type="unfinished">Editor context menu</translation>
+</message>
+<message>
+<source>&amp;Insert</source>
+<translation type="unfinished">&amp;Insert</translation>
+</message>
+<message>
+<source>Se&amp;arch</source>
+<translation type="unfinished">Se&amp;arch</translation>
+</message>
+<message>
+<source>&amp;Tools</source>
+<translation type="unfinished">&amp;Tools</translation>
+</message>
+<message>
+<source>Switch layout</source>
+<translation type="unfinished">Switch layout</translation>
+</message>
+<message>
+<source>Find text in &amp;notes</source>
+<translation type="unfinished">Find text in &amp;notes</translation>
+</message>
+<message>
+<source>Re&amp;move current note</source>
+<translation type="unfinished">Re&amp;move current note</translation>
+</message>
+<message>
 <source>&amp;Print note (preview)</source>
 <translation>印刷 (プレビュー) (&amp;P)</translation>
 </message>
@@ -5238,6 +5258,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <source>Move up in note list</source>
 <translation>ノートリストを上に移動
 </translation>
+</message>
+<message>
+<source>Add &amp;tag to note</source>
+<translation type="unfinished">Add &amp;tag to note</translation>
 </message>
 <message>
 <source>Insert headline from note filename</source>
@@ -5580,10 +5604,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation>すべてのノートの編集を許可する</translation>
 </message>
 <message>
-<source>&amp;Tag</source>
-<translation>タグ(&amp;T)</translation>
-</message>
-<message>
 <source>Current notes folder: </source>
 <translation>現在のノート フォルダー: </translation>
 </message>
@@ -5795,6 +5815,14 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
+</message>
+<message>
+<source>Send note to</source>
+<translation type="unfinished">Send note to</translation>
+</message>
+<message>
+<source>Send notes to</source>
+<translation type="unfinished">Send notes to</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
@@ -6478,6 +6506,18 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation type="unfinished">Manage Nextcloud Deck Cards</translation>
 </message>
 <message>
+<source>Insert Nextcloud Deck card links</source>
+<translation type="unfinished">Insert Nextcloud Deck card links</translation>
+</message>
+<message>
+<source>Search cards</source>
+<translation type="unfinished">Search cards</translation>
+</message>
+<message>
+<source>Insert links</source>
+<translation type="unfinished">Insert links</translation>
+</message>
+<message>
 <source>Save and insert into note</source>
 <translation type="unfinished">Save and insert into note</translation>
 </message>
@@ -6609,6 +6649,10 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <message>
 <source>Moving the card timed out. Reload the cards to check its location.</source>
 <translation type="unfinished">Moving the card timed out. Reload the cards to check its location.</translation>
+</message>
+<message>
+<source>The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</source>
+<translation type="unfinished">The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</translation>
 </message>
 <message>
 <source>Moving the card failed with status code %1 and message: %2</source>
@@ -7055,6 +7099,18 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <translation type="unfinished">Current note was modified externally</translation>
 </message>
 <message>
+<source>Note was modified externally</source>
+<translation type="unfinished">Note was modified externally</translation>
+</message>
+<message>
+<source>The current note was modified outside of QOwnNotes. Please review the changes.</source>
+<translation type="unfinished">The current note was modified outside of QOwnNotes. Please review the changes.</translation>
+</message>
+<message>
+<source>Review changes</source>
+<translation type="unfinished">Review changes</translation>
+</message>
+<message>
 <source>Overwriting external changes of: %1</source>
 <translation type="unfinished">Overwriting external changes of: %1</translation>
 </message>
@@ -7455,7 +7511,7 @@ Do you want to delete those files as well?</numerusform>
 </message>
 <message>
 <source>Rename note</source>
-<translation type="unfinished">Rename note</translation>
+<translation>ノート名を変更</translation>
 </message>
 <message>
 <source>Allows you to rename the filename of the note</source>
@@ -7471,7 +7527,7 @@ Do you want to delete those files as well?</numerusform>
 </message>
 <message>
 <source>&amp;Remove notes</source>
-<translation type="unfinished">&amp;Remove notes</translation>
+<translation>&amp;ノートを削除</translation>
 </message>
 <message>
 <source>&amp;Move notes to…</source>
@@ -7551,7 +7607,7 @@ Do you want to delete those files as well?</numerusform>
 </message>
 <message>
 <source>Select &amp;all notes</source>
-<translation type="unfinished">Select &amp;all notes</translation>
+<translation>&amp;すべてのノートを選択</translation>
 </message>
 <message>
 <source>Name:</source>
@@ -7572,6 +7628,13 @@ Do you want to delete those files as well?</numerusform>
 <message>
 <source>&amp;Cancel</source>
 <translation type="unfinished">&amp;Cancel</translation>
+</message>
+</context>
+<context>
+<name>NotificationService</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation type="unfinished">Open QOwnNotes</translation>
 </message>
 </context>
 <context>

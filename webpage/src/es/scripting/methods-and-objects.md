@@ -1104,6 +1104,37 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox ("El texto que quiero mostrar", "Algún título opcional");
 ```
 
+## Showing a desktop notification
+
+### Llamada y parámetros del método
+
+```cpp
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(QString text, QString title);
+```
+
+### Ejemplo
+
+```js
+// show a desktop notification without interrupting the user
+script.showNotification("The export has finished", "My export script");
+```
+
+::: tip
+Clicking the notification shows the QOwnNotes window. The text is shown as plain text. Unlike `script.informationMessageBox()`, the notification doesn't block the script. In builds with KDE integration, the _Script notification_ event can be disabled or changed in Plasma's notification settings; if it is disabled, nothing is shown.
+:::
+
 ## Mostrar un cuadro de mensaje de pregunta
 
 ### Llamada y parámetros del método
@@ -1674,7 +1705,7 @@ QString ScriptingService::inputDialogGetItem(
          int actual, bool editable);
 ```
 
-Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`.
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
 
 ### Ejemplo
 
@@ -1691,7 +1722,7 @@ Puede que quiera echar un vistazo al ejemplo [input-dialogs.qml](https://github.
 
 ## Abrir un diálogo de entrada con una edición de línea
 
-### Llamada y parámetros del método
+### Method call and parameters
 
 ```cpp
 /**
@@ -1721,7 +1752,7 @@ script.log(resultado);
 
 ## Abrir un diálogo de entrada con un editor de texto multirrenglón
 
-### Llamada y parámetros del método
+### Llamada y parámetors del método
 
 ```cpp
 /**
@@ -1738,7 +1769,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
 
 Se devolverá una cadena vacía si se pulsa en `Cancelar` o se presiona `Escape`.
 
-### Ejemplo
+### Example
 
 ```js
 var resultado = script.inputDialogGetMultiLineText(
@@ -1751,7 +1782,7 @@ script.log(resultado);
 
 ## Abrir un diálogo para mostrar las diferencias entre dos textos
 
-### Llamada y parámetors del método
+### Method call and parameters
 
 ```cpp
 /**
@@ -1787,7 +1818,7 @@ script.log(resultado);
 
 ## Comprobar si un archivo existe
 
-### Llamada y parámetros del método
+### Llamada y parámetors del método
 
 ```cpp
 /**
@@ -1807,7 +1838,7 @@ script.log(result);
 
 ## Leer texto de un archivo
 
-### Llamada y parámetors del método
+### Llamada y parámetros del método
 
 ```cpp
 /**
@@ -1831,7 +1862,7 @@ if(script.fileExists(rutaArchivo)){
 
 ## Escribir texto en un archivo
 
-### Llamada y parámetros del método
+### Method call and parameters
 
 ```cpp
 /**
@@ -1845,7 +1876,7 @@ if(script.fileExists(rutaArchivo)){
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Ejemplo
+### Example
 
 ```js
 var result = script.writeToFile(filePath, html);
@@ -1858,7 +1889,7 @@ Puede que quiera echar un vistazo al ejemplo [export-notes-as-one-html.qml](http
 
 You don't need to write your own date formatting function in your scripts. The QML engine already provides `Qt.formatDateTime`, `Qt.formatDate` and `Qt.formatTime` to format a JavaScript `Date` object with a format string.
 
-### Llamada y parámetros del método
+### Method call and parameters
 
 ```js
 /**

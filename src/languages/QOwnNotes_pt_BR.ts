@@ -261,8 +261,8 @@
 <translation>Versão do aplicativo de API muito antiga</translation>
 </message>
 <message>
-<source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>Considere atualizar o aplicativo QOwnNotesAPI no servidor; a versão %1 é muito antiga e pode causar problemas no QOwnNotes.</translation>
+<source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
+<translation type="unfinished">Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server connection error</source>
@@ -344,8 +344,8 @@
 <translation>Seu servidor Nextcloud / ownCloud</translation>
 </message>
 <message>
-<source>Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
-<translation>Instale o &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes para Nextcloud&lt;/b&gt;&lt;/a&gt; ou a versão mais recente do &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (no mínimo QOWNNOTESAPI_MIN_VERSION, também para ownCloud) para acessar versões de notas e notas na lixeira.</translation>
+<source>Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</source>
+<translation type="unfinished">Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -356,8 +356,8 @@
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Você ainda precisará do &lt;b&gt;cliente de sincronização Nextcloud / ownCloud&lt;/b&gt; (ou outro cliente de sincronização para desktop) para sincronizar suas notas!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abre no navegador a página de &lt;span style=" font-weight:600;"&gt;configuração de aplicativos&lt;/span&gt; do servidor Nextcloud / ownCloud para instalar ou atualizar o QOwnNotesAPI e ativar os aplicativos básicos &lt;span style=" font-weight:600;"&gt;Versões&lt;/span&gt; e &lt;span style=" font-weight:600;"&gt;Arquivos excluídos&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
@@ -440,12 +440,12 @@
 <translation>Se sua senha não funcionar, crie uma senha de aplicativo (botão à direita)</translation>
 </message>
 <message>
-<source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
-<translation>Ativar suporte ao aplicativo de servidor QOwnNotes / QOwnNotesAPI</translation>
+<source>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</source>
+<translation type="unfinished">Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</translation>
 </message>
 <message>
-<source>connection to QOwnNotes / QOwnNotesAPI</source>
-<translation>conexão com QOwnNotes / QOwnNotesAPI</translation>
+<source>connection to QOwnNotes (or legacy QOwnNotesAPI)</source>
+<translation type="unfinished">connection to QOwnNotes (or legacy QOwnNotesAPI)</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -517,13 +517,13 @@ Versão do aplicativo de servidor: %2</translation>
 </message>
 <message>
 <source>There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </source>
-<translation>Ocorreu um erro ao conectar ao servidor Nextcloud / ownCloud!
-Você também precisa instalar e ativar o aplicativo QOwnNotes ou QOwnNotesAPI!
+<translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
-Mensagem de erro de conexão: </translation>
+Connection error message: </translation>
 </message>
 </context>
 <context>
@@ -2734,9 +2734,9 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <translation>Digite um comando para mostrar um log git (como por exemplo "gitk")</translation>
 </message>
 <message>
-<source>You optionally can use "%notePath%" for the path of the note.</source>
+<source>You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Opcionalmente, você pode usar "%notePath%" para o caminho da nota.</translation>
+<translation type="unfinished">You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -3449,6 +3449,18 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <translation>Estilo da interface</translation>
 </message>
 <message>
+<source>Color scheme:</source>
+<translation type="unfinished">Color scheme:</translation>
+</message>
+<message>
+<source>KDE color scheme of the user interface, the editor colors are set in the editor color schema</source>
+<translation type="unfinished">KDE color scheme of the user interface, the editor colors are set in the editor color schema</translation>
+</message>
+<message>
+<source>The color scheme is not used while the dark mode theme is turned on.</source>
+<translation type="unfinished">The color scheme is not used while the dark mode theme is turned on.</translation>
+</message>
+<message>
 <source>Font rendering (Windows)</source>
 <translation>Renderização de fontes (Windows)</translation>
 </message>
@@ -3547,6 +3559,14 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <message>
 <source>Show menu bar item</source>
 <translation>Mostrar item da barra de menu</translation>
+</message>
+<message>
+<source>System default</source>
+<translation type="unfinished">System default</translation>
+</message>
+<message>
+<source>%1 (not installed)</source>
+<translation type="unfinished">%1 (not installed)</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -4316,10 +4336,6 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <translation>Largura do editor</translation>
 </message>
 <message>
-<source>Layouts</source>
-<translation>Layouts</translation>
-</message>
-<message>
 <source>Layout</source>
 <translation>Layout</translation>
 </message>
@@ -4334,10 +4350,6 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <message>
 <source>&amp;Quit</source>
 <translation>&amp;Sair</translation>
-</message>
-<message>
-<source>&amp;Remove current note</source>
-<translation>&amp;Excluir a nota atual</translation>
 </message>
 <message>
 <source>&amp;New note</source>
@@ -4456,24 +4468,12 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <translation>&amp;Editar</translation>
 </message>
 <message>
-<source>Insert</source>
-<translation>Inserir</translation>
-</message>
-<message>
 <source>Format</source>
 <translation>Formatar</translation>
 </message>
 <message>
 <source>Select</source>
 <translation>Selecionar</translation>
-</message>
-<message>
-<source>Extra</source>
-<translation>Extra</translation>
-</message>
-<message>
-<source>Edit</source>
-<translation>Editar</translation>
 </message>
 <message>
 <source>Versioning</source>
@@ -4494,10 +4494,6 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <message>
 <source>AI model</source>
 <translation>Modelo de IA</translation>
-</message>
-<message>
-<source>Note text edit</source>
-<translation>Edição do texto da nota</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -4543,10 +4539,6 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <message>
 <source>Setup note folders / subfolders</source>
 <translation>Configurar pastas / subpastas de anotações</translation>
-</message>
-<message>
-<source>&amp;Find text in notes</source>
-<translation>&amp;Localizar texto nas notas</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -4735,10 +4727,6 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <message>
 <source>&amp;Reset note text size</source>
 <translation>&amp;Redefinir o tamanho original da fonte</translation>
-</message>
-<message>
-<source>&amp;Add tag to note</source>
-<translation>&amp;Adicionar tag na nota</translation>
 </message>
 <message>
 <source>&amp;Reload note folder</source>
@@ -5230,6 +5218,38 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <translation>Operações da(s) nota(s)…</translation>
 </message>
 <message>
+<source>Copy</source>
+<translation>Copiar</translation>
+</message>
+<message>
+<source>Editor context menu</source>
+<translation>Menu de contexto do editor</translation>
+</message>
+<message>
+<source>&amp;Insert</source>
+<translation>&amp;Inserir</translation>
+</message>
+<message>
+<source>Se&amp;arch</source>
+<translation>Pes&amp;quisar</translation>
+</message>
+<message>
+<source>&amp;Tools</source>
+<translation>Ferramen&amp;tas</translation>
+</message>
+<message>
+<source>Switch layout</source>
+<translation>Alternar layout</translation>
+</message>
+<message>
+<source>Find text in &amp;notes</source>
+<translation>Pesquisar texto nas &amp;notas</translation>
+</message>
+<message>
+<source>Re&amp;move current note</source>
+<translation>Re&amp;mover nota atual</translation>
+</message>
+<message>
 <source>&amp;Print note (preview)</source>
 <translation>&amp;Imprimir nota (pré-visualização)</translation>
 </message>
@@ -5244,6 +5264,10 @@ Teste se ocorrem conflitos de sincronização e, nesse caso, defina um valor mai
 <message>
 <source>Move up in note list</source>
 <translation>Mover para cima na lista de notas</translation>
+</message>
+<message>
+<source>Add &amp;tag to note</source>
+<translation>Adicionar ta&amp;g à nota</translation>
 </message>
 <message>
 <source>Insert headline from note filename</source>
@@ -5596,10 +5620,6 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <translation>Habilitar edição de nota</translation>
 </message>
 <message>
-<source>&amp;Tag</source>
-<translation>&amp;Tag</translation>
-</message>
-<message>
 <source>Current notes folder: </source>
 <translation>Pasta atual das notas:</translation>
 </message>
@@ -5810,6 +5830,14 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation>Você precisa selecionar sua pasta de notas Nextcloud / ownCloud para este programa funcionar!</translation>
+</message>
+<message>
+<source>Send note to</source>
+<translation type="unfinished">Send note to</translation>
+</message>
+<message>
+<source>Send notes to</source>
+<translation type="unfinished">Send notes to</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
@@ -6501,6 +6529,18 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <translation>Gerenciar cartões do Nextcloud Deck</translation>
 </message>
 <message>
+<source>Insert Nextcloud Deck card links</source>
+<translation type="unfinished">Insert Nextcloud Deck card links</translation>
+</message>
+<message>
+<source>Search cards</source>
+<translation type="unfinished">Search cards</translation>
+</message>
+<message>
+<source>Insert links</source>
+<translation type="unfinished">Insert links</translation>
+</message>
+<message>
 <source>Save and insert into note</source>
 <translation>Salvar e inserir na nota</translation>
 </message>
@@ -6635,6 +6675,10 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>Moving the card timed out. Reload the cards to check its location.</source>
 <translation>O tempo para mover o cartão expirou. Recarregue os cartões para verificar sua localização.</translation>
+</message>
+<message>
+<source>The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</source>
+<translation type="unfinished">The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</translation>
 </message>
 <message>
 <source>Moving the card failed with status code %1 and message: %2</source>
@@ -7079,6 +7123,18 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <source>Current note was modified externally</source>
 <translation>A nota atual foi modificada externamente</translation>
+</message>
+<message>
+<source>Note was modified externally</source>
+<translation type="unfinished">Note was modified externally</translation>
+</message>
+<message>
+<source>The current note was modified outside of QOwnNotes. Please review the changes.</source>
+<translation type="unfinished">The current note was modified outside of QOwnNotes. Please review the changes.</translation>
+</message>
+<message>
+<source>Review changes</source>
+<translation type="unfinished">Review changes</translation>
 </message>
 <message>
 <source>Overwriting external changes of: %1</source>
@@ -7628,6 +7684,13 @@ Deseja excluir esses arquivos também?</numerusform>
 <message>
 <source>&amp;Cancel</source>
 <translation>&amp;Cancelar</translation>
+</message>
+</context>
+<context>
+<name>NotificationService</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation type="unfinished">Open QOwnNotes</translation>
 </message>
 </context>
 <context>

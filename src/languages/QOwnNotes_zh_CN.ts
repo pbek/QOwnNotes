@@ -261,8 +261,8 @@
 <translation>API 应用版本过低</translation>
 </message>
 <message>
-<source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>请考虑更新服务器上的 QOwnNotesAPI 应用，您的应用版本 %1 过低，可能导致 QOwnNotes 出现问题。</translation>
+<source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
+<translation type="unfinished">Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server connection error</source>
@@ -344,8 +344,8 @@
 <translation>您的 Nextcloud / ownCloud 服务器</translation>
 </message>
 <message>
-<source>Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
-<translation>请安装 &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;，或最新版的 &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt;（至少为 QOWNNOTESAPI_MIN_VERSION 版本，也适用于 ownCloud），以访问笔记版本和已删除的笔记。</translation>
+<source>Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</source>
+<translation type="unfinished">Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -356,8 +356,8 @@
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您仍需使用 &lt;b&gt;Nextcloud / ownCloud 同步客户端&lt;/b&gt;（或其他桌面同步客户端）来同步笔记！&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在浏览器中打开 Nextcloud / ownCloud 服务器的&lt;span style=" font-weight:600;"&gt;应用配置&lt;/span&gt;页面，以安装或更新 QOwnNotesAPI，并启用核心应用&lt;span style=" font-weight:600;"&gt;版本&lt;/span&gt;和&lt;span style=" font-weight:600;"&gt;已删除的文件&lt;/span&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
@@ -440,12 +440,12 @@
 <translation>如果您的密码不起作用，请创建应用密码（右侧按钮）</translation>
 </message>
 <message>
-<source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
-<translation>启用 QOwnNotes / QOwnNotesAPI 服务器应用支持</translation>
+<source>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</source>
+<translation type="unfinished">Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</translation>
 </message>
 <message>
-<source>connection to QOwnNotes / QOwnNotesAPI</source>
-<translation>与 QOwnNotes / QOwnNotesAPI 的连接</translation>
+<source>connection to QOwnNotes (or legacy QOwnNotesAPI)</source>
+<translation type="unfinished">connection to QOwnNotes (or legacy QOwnNotesAPI)</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -517,13 +517,13 @@ Server app version: %2</source>
 </message>
 <message>
 <source>There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </source>
-<translation>连接 Nextcloud / ownCloud 服务器时出错！
-您还需要安装并启用 QOwnNotes 或 QOwnNotesAPI 应用！
+<translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
-连接错误信息： </translation>
+Connection error message: </translation>
 </message>
 </context>
 <context>
@@ -2727,9 +2727,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>输入用于显示git日志的命令（例如 "gitk"）</translation>
 </message>
 <message>
-<source>You optionally can use "%notePath%" for the path of the note.</source>
+<source>You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>您可以选择使用 "%notePath%" 表示笔记的路径。</translation>
+<translation type="unfinished">You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -3440,6 +3440,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>界面风格</translation>
 </message>
 <message>
+<source>Color scheme:</source>
+<translation type="unfinished">Color scheme:</translation>
+</message>
+<message>
+<source>KDE color scheme of the user interface, the editor colors are set in the editor color schema</source>
+<translation type="unfinished">KDE color scheme of the user interface, the editor colors are set in the editor color schema</translation>
+</message>
+<message>
+<source>The color scheme is not used while the dark mode theme is turned on.</source>
+<translation type="unfinished">The color scheme is not used while the dark mode theme is turned on.</translation>
+</message>
+<message>
 <source>Font rendering (Windows)</source>
 <translation>字体渲染（Windows）</translation>
 </message>
@@ -3538,6 +3550,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Show menu bar item</source>
 <translation>显示菜单栏项目</translation>
+</message>
+<message>
+<source>System default</source>
+<translation type="unfinished">System default</translation>
+</message>
+<message>
+<source>%1 (not installed)</source>
+<translation type="unfinished">%1 (not installed)</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -4301,10 +4321,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>编辑器宽度</translation>
 </message>
 <message>
-<source>Layouts</source>
-<translation>布局</translation>
-</message>
-<message>
 <source>Layout</source>
 <translation>布局</translation>
 </message>
@@ -4319,10 +4335,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>&amp;Quit</source>
 <translation>退出(&amp;Q)</translation>
-</message>
-<message>
-<source>&amp;Remove current note</source>
-<translation>移除当前笔记(&amp;R)</translation>
 </message>
 <message>
 <source>&amp;New note</source>
@@ -4441,24 +4453,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>编辑(&amp;E)</translation>
 </message>
 <message>
-<source>Insert</source>
-<translation>插入</translation>
-</message>
-<message>
 <source>Format</source>
 <translation>格式</translation>
 </message>
 <message>
 <source>Select</source>
 <translation>选择</translation>
-</message>
-<message>
-<source>Extra</source>
-<translation>额外</translation>
-</message>
-<message>
-<source>Edit</source>
-<translation>编辑</translation>
 </message>
 <message>
 <source>Versioning</source>
@@ -4479,10 +4479,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>AI model</source>
 <translation>AI 模型</translation>
-</message>
-<message>
-<source>Note text edit</source>
-<translation>笔记文本编辑</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -4528,10 +4524,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Setup note folders / subfolders</source>
 <translation>设置笔记文件夹/子文件夹</translation>
-</message>
-<message>
-<source>&amp;Find text in notes</source>
-<translation>在笔记中查找文本(&amp;F)</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -4720,10 +4712,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>&amp;Reset note text size</source>
 <translation>重置字体大小(&amp;R)</translation>
-</message>
-<message>
-<source>&amp;Add tag to note</source>
-<translation>添加标签到笔记(&amp;A)</translation>
 </message>
 <message>
 <source>&amp;Reload note folder</source>
@@ -5215,6 +5203,38 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>笔记操作…</translation>
 </message>
 <message>
+<source>Copy</source>
+<translation>复制</translation>
+</message>
+<message>
+<source>Editor context menu</source>
+<translation>编辑器上下文菜单</translation>
+</message>
+<message>
+<source>&amp;Insert</source>
+<translation>插入(&amp;I)</translation>
+</message>
+<message>
+<source>Se&amp;arch</source>
+<translation>搜索(&amp;A)</translation>
+</message>
+<message>
+<source>&amp;Tools</source>
+<translation>工具(&amp;T)</translation>
+</message>
+<message>
+<source>Switch layout</source>
+<translation>切换布局</translation>
+</message>
+<message>
+<source>Find text in &amp;notes</source>
+<translation>在笔记中查找文本(&amp;N)</translation>
+</message>
+<message>
+<source>Re&amp;move current note</source>
+<translation>删除当前笔记(&amp;M)</translation>
+</message>
+<message>
 <source>&amp;Print note (preview)</source>
 <translation>打印笔记（预览）(&amp;P)</translation>
 </message>
@@ -5229,6 +5249,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Move up in note list</source>
 <translation>在笔记列表中上移</translation>
+</message>
+<message>
+<source>Add &amp;tag to note</source>
+<translation>为笔记添加标签(&amp;T)</translation>
 </message>
 <message>
 <source>Insert headline from note filename</source>
@@ -5569,10 +5593,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>允许所有笔记编辑</translation>
 </message>
 <message>
-<source>&amp;Tag</source>
-<translation>标签(&amp;T)</translation>
-</message>
-<message>
 <source>Current notes folder: </source>
 <translation>当前笔记目录： </translation>
 </message>
@@ -5783,6 +5803,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation>您必须选择 Nextcloud / ownCloud 笔记文件夹，此软件才能正常工作！</translation>
+</message>
+<message>
+<source>Send note to</source>
+<translation type="unfinished">Send note to</translation>
+</message>
+<message>
+<source>Send notes to</source>
+<translation type="unfinished">Send notes to</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
@@ -6466,6 +6494,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>管理 Nextcloud Deck 卡片</translation>
 </message>
 <message>
+<source>Insert Nextcloud Deck card links</source>
+<translation type="unfinished">Insert Nextcloud Deck card links</translation>
+</message>
+<message>
+<source>Search cards</source>
+<translation type="unfinished">Search cards</translation>
+</message>
+<message>
+<source>Insert links</source>
+<translation type="unfinished">Insert links</translation>
+</message>
+<message>
 <source>Save and insert into note</source>
 <translation>保存并插入到笔记中</translation>
 </message>
@@ -6597,6 +6637,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Moving the card timed out. Reload the cards to check its location.</source>
 <translation>移动卡片超时。请重新加载卡片以检查其位置。</translation>
+</message>
+<message>
+<source>The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</source>
+<translation type="unfinished">The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</translation>
 </message>
 <message>
 <source>Moving the card failed with status code %1 and message: %2</source>
@@ -7039,6 +7083,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Current note was modified externally</source>
 <translation>当前笔记已被外部修改</translation>
+</message>
+<message>
+<source>Note was modified externally</source>
+<translation type="unfinished">Note was modified externally</translation>
+</message>
+<message>
+<source>The current note was modified outside of QOwnNotes. Please review the changes.</source>
+<translation type="unfinished">The current note was modified outside of QOwnNotes. Please review the changes.</translation>
+</message>
+<message>
+<source>Review changes</source>
+<translation type="unfinished">Review changes</translation>
 </message>
 <message>
 <source>Overwriting external changes of: %1</source>
@@ -7558,6 +7614,13 @@ Do you want to delete those files as well?</source>
 <message>
 <source>&amp;Cancel</source>
 <translation>取消(&amp;C)</translation>
+</message>
+</context>
+<context>
+<name>NotificationService</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation type="unfinished">Open QOwnNotes</translation>
 </message>
 </context>
 <context>

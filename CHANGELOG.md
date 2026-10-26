@@ -18,6 +18,8 @@
   - Combined layout selection and management under **Window → Layout**
   - Adjusted menu access keys so they don't conflict with each other or existing shortcuts
   - Keyboard shortcuts are unchanged
+- Added more French, German, Russian, Chinese Simplified, Italian, Portuguese, Brazilian,
+  Polish, Spanish, Japanese translation (thank you, jd-develop, pbek, spamcutters)
 
 ## 26.10.12
 

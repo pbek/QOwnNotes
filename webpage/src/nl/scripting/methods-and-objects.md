@@ -1104,6 +1104,37 @@ void ScriptingService:: informationMessageBox (QString-tekst, QString-titel);
 script.informationMessageBox ("De tekst die ik wil laten zien", "Een optionele titel");
 ```
 
+## Showing a desktop notification
+
+### Methodeaanroep en parameters
+
+```cpp
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(QString text, QString title);
+```
+
+### Voorbeeld
+
+```js
+// show a desktop notification without interrupting the user
+script.showNotification("The export has finished", "My export script");
+```
+
+::: tip
+Clicking the notification shows the QOwnNotes window. The text is shown as plain text. Unlike `script.informationMessageBox()`, the notification doesn't block the script. In builds with KDE integration, the _Script notification_ event can be disabled or changed in Plasma's notification settings; if it is disabled, nothing is shown.
+:::
+
 ## Er wordt een berichtvenster met een vraag weergegeven
 
 ### Methodeaanroep en parameters
@@ -1674,7 +1705,7 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Escape` is getoetst.
+An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
 
 ### Voorbeeld
 
@@ -1691,7 +1722,7 @@ Misschien wilt u het voorbeeld eens bekijken [input-dialogs.qml](https://github.
 
 ## Een invoerdialoog openen met een regelbewerking
 
-### Methodeaanroep en parameters
+### Method call and parameters
 
 ```cpp
 /**
@@ -1738,7 +1769,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
 
 Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Escape` is getoetst.
 
-### Voorbeeld
+### Example
 
 ```js
 var result = script.inputDialogGetMultiLineText(
@@ -1751,7 +1782,7 @@ script.log(result);
 
 ## Een dialoogvenster openen om de verschillen tussen twee teksten weer te geven
 
-### Methodeaanroep en parameters
+### Method call and parameters
 
 ```cpp
 /**
@@ -1767,7 +1798,7 @@ script.log(result);
                                            const QString & text1, const QString &text2);
 ```
 
-`tekst2` is de tekst die je in het dialoogvenster kunt bewerken. Er wordt een lege tekenreeks geretourneerd als er op `Annuleren` is geklikt of op `Escape` is gedrukt.
+`tekst2` is de tekst die je in het dialoogvenster kunt bewerken. Er wordt een lege tekenreeks geretourneerd als op `Annuleren` is geklikt of `Escape` is getoetst.
 
 ### Voorbeeld
 
@@ -1820,7 +1851,7 @@ script.log(result);
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Voorbeeld
+### Example
 
 ```js
 if (script.fileExists(filePath)) {
@@ -1831,7 +1862,7 @@ if (script.fileExists(filePath)) {
 
 ## Tekst naar een bestand schrijven
 
-### Methodeaanroep en parameters
+### Method call and parameters
 
 ```cpp
 /**

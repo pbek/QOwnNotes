@@ -264,8 +264,8 @@
 <translation>La version de l'API de l'application est obsolète</translation>
 </message>
 <message>
-<source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>Veuillez considérer la mise à jour de l'application QOwnNotesAPI sur votre serveur, la version %1 est trop ancienne et peut causer des problèmes dans QOwnNotes.</translation>
+<source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
+<translation type="unfinished">Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server connection error</source>
@@ -317,7 +317,7 @@
 </message>
 <message>
 <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</source>
-<translation type="unfinished">Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</translation>
+<translation>Erreur du serveur Nextcloud / ownCloud : &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Si votre serveur requiert un mot de passe pour les liens partagés, merci d’en entrer un dans le champ de mot de passe de la boîte de dialogue de partage et essayez à nouveau.</translation>
 </message>
 <message>
 <source>No bookmarks</source>
@@ -347,8 +347,8 @@
 <translation>Votre serveur Nextcloud / ownCloud</translation>
 </message>
 <message>
-<source>Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</source>
-<translation type="unfinished">Please install &lt;a href="https://github.com/qownnotes/qownnotes-nextcloud"&gt;&lt;b&gt;QOwnNotes for Nextcloud&lt;/b&gt;&lt;/a&gt;, or the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;b&gt;QOwnNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION, also for ownCloud), to access note versions and trashed notes.</translation>
+<source>Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</source>
+<translation type="unfinished">Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -359,8 +359,8 @@
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous aurez toujours besoin du &lt;b&gt;client de synchronisation Nextcloud / ownCloud&lt;/b&gt; (ou une autre application de synchronisation) pour synchroniser vos notes !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouvre la page &lt;span style=" font-weight:600;"&gt;Configuration de l’application&lt;/span&gt; de votre serveur Nextcloud / ownCloud dans votre navigateur web pour installer ou mettre à jour QOwnNotesAPI et permettre d’activer les applications natives &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; et &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
@@ -443,12 +443,12 @@
 <translation>Si votre mot de passe ne fonctionne pas, créez un mot de passe d’application (bouton à droite)</translation>
 </message>
 <message>
-<source>Enable QOwnNotes / QOwnNotesAPI server app support</source>
-<translation type="unfinished">Enable QOwnNotes / QOwnNotesAPI server app support</translation>
+<source>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</source>
+<translation type="unfinished">Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</translation>
 </message>
 <message>
-<source>connection to QOwnNotes / QOwnNotesAPI</source>
-<translation type="unfinished">connection to QOwnNotes / QOwnNotesAPI</translation>
+<source>connection to QOwnNotes (or legacy QOwnNotesAPI)</source>
+<translation type="unfinished">connection to QOwnNotes (or legacy QOwnNotesAPI)</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -514,17 +514,17 @@
 <source>The connection was made successfully!
 Server version: %1
 Server app version: %2</source>
-<translation type="unfinished">The connection was made successfully!
-Server version: %1
-Server app version: %2</translation>
+<translation>La connexion a été réalisée avec succès !
+Version du serveur : %1
+Version de l’application serveur : %2</translation>
 </message>
 <message>
 <source>There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </source>
 <translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
-You also need to have the QOwnNotes or QOwnNotesAPI app installed and enabled!
+On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </translation>
 </message>
@@ -613,23 +613,23 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Accent color</source>
-<translation type="unfinished">Accent color</translation>
+<translation>Couleur d’accentuation</translation>
 </message>
 <message>
 <source>Select the color that is used for selected text and selected items, like the current note in the note list</source>
-<translation type="unfinished">Select the color that is used for selected text and selected items, like the current note in the note list</translation>
+<translation>Sélectionner la couleur qui est utilisée pour le texte et les éléments sélectionnés, comme la note actuelle dans la liste de notes</translation>
 </message>
 <message>
 <source>Select color</source>
-<translation type="unfinished">Select color</translation>
+<translation>Sélectionner une couleur</translation>
 </message>
 <message>
 <source>Use the default accent color</source>
-<translation type="unfinished">Use the default accent color</translation>
+<translation>Utiliser la couleur d’accentuation par défaut</translation>
 </message>
 <message>
 <source>Reset</source>
-<translation type="unfinished">Reset</translation>
+<translation>Réinitialiser</translation>
 </message>
 <message>
 <source>New color mode</source>
@@ -649,11 +649,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Default</source>
-<translation type="unfinished">Default</translation>
+<translation>Par défaut</translation>
 </message>
 <message>
 <source>Select accent color</source>
-<translation type="unfinished">Select accent color</translation>
+<translation>Sélectionner la couleur d’accentuation</translation>
 </message>
 </context>
 <context>
@@ -1286,15 +1286,15 @@ Connection error message: </translation>
 <name>DocumentOverviewWidget</name>
 <message>
 <source>Document overview: click or drag to navigate</source>
-<translation type="unfinished">Document overview: click or drag to navigate</translation>
+<translation>Aperçu de document : cliquez et glissez pour naviguer</translation>
 </message>
 <message>
 <source>Document overview</source>
-<translation type="unfinished">Document overview</translation>
+<translation>Aperçu de document</translation>
 </message>
 <message>
 <source>Document overview: visible lines %1-%2; click or drag to navigate</source>
-<translation type="unfinished">Document overview: visible lines %1-%2; click or drag to navigate</translation>
+<translation>Aperçu de document : lignes visibles %1-%2 ; cliquez et glissez pour naviguer</translation>
 </message>
 </context>
 <context>
@@ -1348,11 +1348,11 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</source>
-<translation type="unfinished">Allows emphasis, strong, underline and strikeout formatting to span multiple lines in the note editor</translation>
+<translation>Autoriser le formattage en italique, en gras, en souligné et en barré à s’étendre sur plusieurs lignes dans l’éditeur de notes</translation>
 </message>
 <message>
 <source>Highlight and apply Markdown text formatting across multiple lines</source>
-<translation type="unfinished">Highlight and apply Markdown text formatting across multiple lines</translation>
+<translation>Mettre en évidence et appliquer le formattage de texte Markdown sur plusieurs lignes</translation>
 </message>
 <message>
 <source>Editor options</source>
@@ -2318,7 +2318,7 @@ Connection error message: </translation>
 </message>
 <message>
 <source>Whitespace marker</source>
-<translation type="unfinished">Whitespace marker</translation>
+<translation>Marqueur de blanc/d’espace</translation>
 </message>
 <message>
 <source>This item will be used to preset colors for the other items</source>
@@ -2400,11 +2400,11 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>By default the note name will be generated automatically</source>
-<translation type="unfinished">By default the note name will be generated automatically</translation>
+<translation>Par défaut, le nom de la note sera généré automatiquement</translation>
 </message>
 <message>
 <source>The shortcut to create a new note asks for a note name</source>
-<translation type="unfinished">The shortcut to create a new note asks for a note name</translation>
+<translation>Le raccourci pour créer une nouvelle note demande un nom</translation>
 </message>
 <message>
 <source>Use Setext style headings for generated new note titles instead of ATX style headings</source>
@@ -2739,9 +2739,9 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Entrez une commande à utiliser pour afficher un journal git (comme par exemple « gitk »)</translation>
 </message>
 <message>
-<source>You optionally can use "%notePath%" for the path of the note.</source>
+<source>You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Il est possible d'utiliser « %notePath% » pour le chemin de la note.</translation>
+<translation type="unfinished">You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -2766,7 +2766,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-<translation>N’oubliez pas d’activer le support git pour votre dossier de notes et de configurer votre nom et email dans votre client git, par exemple avec ces commandes :</translation>
+<translation>N’oubliez pas d’activer le support git pour votre dossier de notes et de configurer votre nom et courriel dans votre client git, par exemple avec ces commandes :</translation>
 </message>
 <message>
 <source>Git library</source>
@@ -3454,8 +3454,20 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Style de l’interface</translation>
 </message>
 <message>
+<source>Color scheme:</source>
+<translation type="unfinished">Color scheme:</translation>
+</message>
+<message>
+<source>KDE color scheme of the user interface, the editor colors are set in the editor color schema</source>
+<translation type="unfinished">KDE color scheme of the user interface, the editor colors are set in the editor color schema</translation>
+</message>
+<message>
+<source>The color scheme is not used while the dark mode theme is turned on.</source>
+<translation type="unfinished">The color scheme is not used while the dark mode theme is turned on.</translation>
+</message>
+<message>
 <source>Font rendering (Windows)</source>
-<translation type="unfinished">Font rendering (Windows)</translation>
+<translation>Rendu des polices (Windows)</translation>
 </message>
 <message>
 <source>Automatic uses GDI when Windows font smoothing is disabled. Changes take effect after restarting the application.</source>
@@ -3539,11 +3551,11 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>DirectWrite</source>
-<translation type="unfinished">DirectWrite</translation>
+<translation>DirectWrite</translation>
 </message>
 <message>
 <source>GDI (legacy)</source>
-<translation type="unfinished">GDI (legacy)</translation>
+<translation>GDI (obsolète)</translation>
 </message>
 <message>
 <source>Menu bar</source>
@@ -3552,6 +3564,14 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Show menu bar item</source>
 <translation>Afficher les éléments de la barre de menu</translation>
+</message>
+<message>
+<source>System default</source>
+<translation type="unfinished">System default</translation>
+</message>
+<message>
+<source>%1 (not installed)</source>
+<translation type="unfinished">%1 (not installed)</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -3666,11 +3686,11 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Username:</source>
-<translation type="unfinished">Username:</translation>
+<translation>Nom d’utilisateur :</translation>
 </message>
 <message>
 <source>Optional premium account username (e.g. your email address)</source>
-<translation type="unfinished">Optional premium account username (e.g. your email address)</translation>
+<translation>Nom d’utilisateur premium optionnel (par ex. votre adresse de courriel)</translation>
 </message>
 <message>
 <source>API key:</source>
@@ -3948,7 +3968,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>The central widget cannot be hidden. Select "No central widget" to allow hiding the note edit or note preview panel.</source>
-<translation type="unfinished">The central widget cannot be hidden. Select "No central widget" to allow hiding the note edit or note preview panel.</translation>
+<translation>Le widget central ne peut pas être masqué. Sélectionnez « Pas de widget central » pour autoriser le masquage du panneau d’édition ou de prévisualisation de notes.</translation>
 </message>
 <message>
 <source>Create layout from preset</source>
@@ -4321,10 +4341,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Largeur de l'éditeur</translation>
 </message>
 <message>
-<source>Layouts</source>
-<translation>Dispositions</translation>
-</message>
-<message>
 <source>Layout</source>
 <translation>Disposition</translation>
 </message>
@@ -4339,10 +4355,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>&amp;Quit</source>
 <translation>&amp;Quitter</translation>
-</message>
-<message>
-<source>&amp;Remove current note</source>
-<translation>&amp;Supprimer la note courante</translation>
 </message>
 <message>
 <source>&amp;New note</source>
@@ -4461,24 +4473,12 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>&amp;Édition</translation>
 </message>
 <message>
-<source>Insert</source>
-<translation>Insérer</translation>
-</message>
-<message>
 <source>Format</source>
 <translation>Format</translation>
 </message>
 <message>
 <source>Select</source>
 <translation>Sélectionner</translation>
-</message>
-<message>
-<source>Extra</source>
-<translation>Plus</translation>
-</message>
-<message>
-<source>Edit</source>
-<translation>Édition</translation>
 </message>
 <message>
 <source>Versioning</source>
@@ -4499,10 +4499,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>AI model</source>
 <translation>Modèle d’IA</translation>
-</message>
-<message>
-<source>Note text edit</source>
-<translation>Édition du texte de la note</translation>
 </message>
 <message>
 <source>List operations</source>
@@ -4548,10 +4544,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Setup note folders / subfolders</source>
 <translation>Paramétrer les dossiers et sous-dossiers de notes</translation>
-</message>
-<message>
-<source>&amp;Find text in notes</source>
-<translation>&amp;Chercher du texte dans les notes</translation>
 </message>
 <message>
 <source>About &amp;QOwnNotes…</source>
@@ -4742,10 +4734,6 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>&amp;Réinitialiser la taille du texte de la note</translation>
 </message>
 <message>
-<source>&amp;Add tag to note</source>
-<translation>&amp;Ajouter un tag à la note</translation>
-</message>
-<message>
 <source>&amp;Reload note folder</source>
 <translation>&amp;Recharger le dossier de notes</translation>
 </message>
@@ -4852,7 +4840,7 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 </message>
 <message>
 <source>Insert &amp;footnote</source>
-<translation type="unfinished">Insert &amp;footnote</translation>
+<translation>Insérer une &amp;note de bas de page</translation>
 </message>
 <message>
 <source>Search selected text on the web</source>
@@ -5235,6 +5223,38 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <translation>Opérations sur les notes…</translation>
 </message>
 <message>
+<source>Copy</source>
+<translation>Copier</translation>
+</message>
+<message>
+<source>Editor context menu</source>
+<translation>Menu contextuel de l’éditeur</translation>
+</message>
+<message>
+<source>&amp;Insert</source>
+<translation>&amp;Insérer</translation>
+</message>
+<message>
+<source>Se&amp;arch</source>
+<translation>Rec&amp;herche</translation>
+</message>
+<message>
+<source>&amp;Tools</source>
+<translation>&amp;Outils</translation>
+</message>
+<message>
+<source>Switch layout</source>
+<translation>Changer de disposition</translation>
+</message>
+<message>
+<source>Find text in &amp;notes</source>
+<translation>Chercher du texte dans les &amp;notes</translation>
+</message>
+<message>
+<source>Re&amp;move current note</source>
+<translation>Suppri&amp;mer la note courante</translation>
+</message>
+<message>
 <source>&amp;Print note (preview)</source>
 <translation>&amp;Imprimer la note (aperçu)</translation>
 </message>
@@ -5249,6 +5269,10 @@ Vous pouvez tester vous-même et augmenter la valeur si vous avez des conflits d
 <message>
 <source>Move up in note list</source>
 <translation>Monter dans la liste des notes</translation>
+</message>
+<message>
+<source>Add &amp;tag to note</source>
+<translation>Ajouter un ta&amp;g à la note</translation>
 </message>
 <message>
 <source>Insert headline from note filename</source>
@@ -5603,10 +5627,6 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Autoriser la modification de la note</translation>
 </message>
 <message>
-<source>&amp;Tag</source>
-<translation>&amp;Tag</translation>
-</message>
-<message>
 <source>Current notes folder: </source>
 <translation>Dossier de notes courant : </translation>
 </message>
@@ -5696,15 +5716,15 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 </message>
 <message>
 <source>Note folder "%1" does not exist</source>
-<translation type="unfinished">Note folder "%1" does not exist</translation>
+<translation>Le dossier de notes « %1 » n’existe pas</translation>
 </message>
 <message>
 <source>Switched to note folder "%1"</source>
-<translation type="unfinished">Switched to note folder "%1"</translation>
+<translation>Dossier de notes « %1 » sélectionné</translation>
 </message>
 <message>
 <source>Switched to layout "%1"</source>
-<translation type="unfinished">Switched to layout "%1"</translation>
+<translation>Disposition « %1 » sélectionnée</translation>
 </message>
 <message>
 <source>KDE Plasma activity changed: %1</source>
@@ -5817,6 +5837,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
 <translation>Vous devez sélectionner le dossier de notes Nextcloud / ownCloud pour que le logiciel fonctionne !</translation>
+</message>
+<message>
+<source>Send note to</source>
+<translation type="unfinished">Send note to</translation>
+</message>
+<message>
+<source>Send notes to</source>
+<translation type="unfinished">Send notes to</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
@@ -6508,6 +6536,18 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <translation>Gérer les cartes Nextcloud Deck</translation>
 </message>
 <message>
+<source>Insert Nextcloud Deck card links</source>
+<translation type="unfinished">Insert Nextcloud Deck card links</translation>
+</message>
+<message>
+<source>Search cards</source>
+<translation type="unfinished">Search cards</translation>
+</message>
+<message>
+<source>Insert links</source>
+<translation type="unfinished">Insert links</translation>
+</message>
+<message>
 <source>Save and insert into note</source>
 <translation>Enregistrer et insérer dans la note</translation>
 </message>
@@ -6642,6 +6682,10 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Moving the card timed out. Reload the cards to check its location.</source>
 <translation type="unfinished">Moving the card timed out. Reload the cards to check its location.</translation>
+</message>
+<message>
+<source>The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</source>
+<translation type="unfinished">The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</translation>
 </message>
 <message>
 <source>Moving the card failed with status code %1 and message: %2</source>
@@ -7086,6 +7130,18 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <message>
 <source>Current note was modified externally</source>
 <translation>La note courante a été modifiée depuis l’extérieur</translation>
+</message>
+<message>
+<source>Note was modified externally</source>
+<translation type="unfinished">Note was modified externally</translation>
+</message>
+<message>
+<source>The current note was modified outside of QOwnNotes. Please review the changes.</source>
+<translation type="unfinished">The current note was modified outside of QOwnNotes. Please review the changes.</translation>
+</message>
+<message>
+<source>Review changes</source>
+<translation type="unfinished">Review changes</translation>
 </message>
 <message>
 <source>Overwriting external changes of: %1</source>
@@ -7638,6 +7694,13 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 </message>
 </context>
 <context>
+<name>NotificationService</name>
+<message>
+<source>Open QOwnNotes</source>
+<translation type="unfinished">Open QOwnNotes</translation>
+</message>
+</context>
+<context>
 <name>OpenAiCompleter</name>
 <message>
 <source>Timeout, while waiting for the AI response</source>
@@ -7884,11 +7947,11 @@ Souhaitez-vous supprimer également ces fichiers ?</numerusform>
 </message>
 <message>
 <source>Note folder:</source>
-<translation type="unfinished">Note folder:</translation>
+<translation>Dossier de notes :</translation>
 </message>
 <message>
 <source>Layout:</source>
-<translation type="unfinished">Layout:</translation>
+<translation>Disposition :</translation>
 </message>
 <message>
 <source>The KDE Plasma activity manager is not available on the session D-Bus.</source>

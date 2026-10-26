@@ -41,9 +41,9 @@ Alapértelmezés szerint a QOwnNotes létrehozza a jegyzet **fájlnevét** az **
 ## Hangsúly
 
 ```markdown
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
 Combined emphasis with **asterisks and _underscores_**.
 ```
@@ -87,11 +87,11 @@ A listák létrehozásának számos módja van.
 1. Actual numbers don't matter, just that it's a number
 1. And another item.
 
-* Unordered list can use asterisks
+- Unordered list can use asterisks
 
-- Or minuses
+* Or minuses
 
-+ Or pluses
+- Or pluses
 ```
 
 ::: tip
@@ -354,11 +354,11 @@ Hyphens
 
 Asterisks
 
-***
+---
 
 Underscores
 
-___
+---
 ```
 
 ## Sortörések

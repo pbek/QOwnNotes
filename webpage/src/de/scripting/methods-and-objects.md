@@ -1104,6 +1104,37 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox("Der Text, den ich anzeigen möchte", "Ein optionaler Titel");
 ```
 
+## Showing a desktop notification
+
+### Methodenaufruf und Parameter
+
+```cpp
+/**
+ * Shows a desktop notification
+ *
+ * In KDE builds the notification can be configured in Plasma's notification settings.
+ * Without a notification service it falls back to the system tray and then to the
+ * status bar. Identical notifications within 10 seconds are only shown once.
+ *
+ * @param text plain text of the notification
+ * @param title (optional)
+ * @return true if the notification was handed to the desktop notification system or the
+ *         system tray, false if it was only shown in the status bar
+ */
+bool ScriptingService::showNotification(QString text, QString title);
+```
+
+### Beispiel
+
+```js
+// show a desktop notification without interrupting the user
+script.showNotification("The export has finished", "My export script");
+```
+
+::: tip
+Clicking the notification shows the QOwnNotes window. The text is shown as plain text. Unlike `script.informationMessageBox()`, the notification doesn't block the script. In builds with KDE integration, the _Script notification_ event can be disabled or changed in Plasma's notification settings; if it is disabled, nothing is shown.
+:::
+
 ## Anzeigen eines Fragenmeldungsfelds
 
 ### Methodenaufruf und Parameter
@@ -1125,7 +1156,7 @@ int ScriptingService::questionMessageBox(
         QString text, QString title, int buttons, int defaultButton);
 ```
 
-### Beispiel
+### Example
 
 ```js
 // show a question message box with an apply and a help button
@@ -1160,7 +1191,7 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
                                              QString filter);
 ```
 
-### Example
+### Beispiel
 
 ```js
 // show an open file dialog
@@ -1690,7 +1721,7 @@ Schauen Sie sich dazu das Beispiel auf [input-dialogs.qml](https://github.com/pb
 
 ## Öffnen eines Eingabedialogs mit einer Zeilenbearbeitung
 
-### Methodenaufruf und Parameter
+### Method call and parameters
 
 ```cpp
 /**
@@ -1720,7 +1751,7 @@ script.log(result);
 
 ## Opening an input dialog with a multi-line text edit
 
-### Methodenaufruf und Parameter
+### Method call and parameters
 
 ```cpp
 /**
@@ -1737,7 +1768,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
 
 An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
 
-### Beispiel
+### Example
 
 ```js
 var result = script.inputDialogGetMultiLineText(
