@@ -30,6 +30,7 @@
 
 #include <QDesktopServices>
 #include <QDir>
+#include <QIcon>
 #include <QInputDialog>
 #include <QMenu>
 #include <QMessageBox>
@@ -447,6 +448,12 @@ void NoteTreeManager::on_noteTreeWidget_customContextMenuRequested(const QPoint 
 void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes, bool hasFolders) {
     QMenu noteMenu;
     QAction *renameAction = nullptr;
+    const QIcon moveIcon =
+        QIcon::fromTheme(QStringLiteral("edit-move"),
+                         QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/edit-move.svg")));
+    const QIcon copyIcon =
+        QIcon::fromTheme(QStringLiteral("edit-copy"),
+                         QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/edit-copy.svg")));
 
     // Calculate counts for proper labels
     const auto selectedItems = _ui->noteTreeWidget->selectedItems();
@@ -464,11 +471,15 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     bool multiNoteMenuEntriesOnly = (noteCount + folderCount) > 1;
 
     if (!multiNoteMenuEntriesOnly) {
-        auto *createNoteAction = noteMenu.addAction(tr("New note"));
+        auto *createNoteAction = noteMenu.addAction(_ui->action_New_note->icon(), tr("New note"));
         QObject::connect(createNoteAction, &QAction::triggered, _mainWindow,
                          &MainWindow::on_action_New_note_triggered);
 
-        renameAction = noteMenu.addAction(tr("Rename note"));
+        renameAction = noteMenu.addAction(
+            QIcon::fromTheme(
+                QStringLiteral("document-edit"),
+                QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/document-edit.svg"))),
+            tr("Rename note"));
         renameAction->setToolTip(
             tr("Allows you to rename the filename of "
                "the note"));
@@ -483,7 +494,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     } else {
         removeActionText = tr("&Remove notes");
     }
-    auto *removeAction = noteMenu.addAction(removeActionText);
+    auto *removeAction = noteMenu.addAction(_ui->action_Remove_note->icon(), removeActionText);
     noteMenu.addSeparator();
 
     const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
@@ -493,8 +504,8 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     QMenu *moveDestinationMenu = nullptr;
     QMenu *copyDestinationMenu = nullptr;
     if (noteFolders.count() > 1) {
-        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to…"));
-        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to…"));
+        moveDestinationMenu = noteMenu.addMenu(moveIcon, tr("&Move notes to…"));
+        copyDestinationMenu = noteMenu.addMenu(copyIcon, tr("&Copy notes to…"));
 
         for (const NoteFolder &noteFolder : noteFolders) {
             // don't show not existing folders or if path is empty
@@ -503,20 +514,24 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
             }
 
             if (noteFolder.isShowSubfolders()) {
-                auto *subFolderMoveMenu = moveDestinationMenu->addMenu(noteFolder.getName());
+                auto *subFolderMoveMenu =
+                    moveDestinationMenu->addMenu(Utils::Gui::folderIcon(), noteFolder.getName());
                 _mainWindow->buildBulkNoteFolderSubFolderMenuTree(subFolderMoveMenu, false,
                                                                   noteFolder.getLocalPath());
 
-                auto *subFolderCopyMenu = copyDestinationMenu->addMenu(noteFolder.getName());
+                auto *subFolderCopyMenu =
+                    copyDestinationMenu->addMenu(Utils::Gui::folderIcon(), noteFolder.getName());
                 _mainWindow->buildBulkNoteFolderSubFolderMenuTree(subFolderCopyMenu, true,
                                                                   noteFolder.getLocalPath());
             } else {
-                auto *moveAction = moveDestinationMenu->addAction(noteFolder.getName());
+                auto *moveAction =
+                    moveDestinationMenu->addAction(Utils::Gui::folderIcon(), noteFolder.getName());
                 moveAction->setData(noteFolder.getLocalPath());
                 moveAction->setToolTip(noteFolder.getLocalPath());
                 moveAction->setStatusTip(noteFolder.getLocalPath());
 
-                auto *copyAction = copyDestinationMenu->addAction(noteFolder.getName());
+                auto *copyAction =
+                    copyDestinationMenu->addAction(Utils::Gui::folderIcon(), noteFolder.getName());
                 copyAction->setData(noteFolder.getLocalPath());
                 copyAction->setToolTip(noteFolder.getLocalPath());
                 copyAction->setStatusTip(noteFolder.getLocalPath());
@@ -529,13 +544,14 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     const bool isEnableNoteTree = Utils::Misc::isEnableNoteTree();
     if (showSubFolders || isEnableNoteTree) {
         if (_ui->noteTreeWidget->selectedItems().count() == 1 && !isEnableNoteTree) {
-            moveToThisSubFolderAction = noteMenu.addAction(tr("Jump to the note's subfolder"));
+            moveToThisSubFolderAction =
+                noteMenu.addAction(Utils::Gui::folderIcon(), tr("Jump to the note's subfolder"));
         }
 
-        auto *subFolderMoveMenu = noteMenu.addMenu(tr("Move notes to subfolder…"));
+        auto *subFolderMoveMenu = noteMenu.addMenu(moveIcon, tr("Move notes to subfolder…"));
         _mainWindow->buildBulkNoteSubFolderMenuTree(subFolderMoveMenu, false);
 
-        auto *subFolderCopyMenu = noteMenu.addMenu(tr("Copy notes to subfolder…"));
+        auto *subFolderCopyMenu = noteMenu.addMenu(copyIcon, tr("Copy notes to subfolder…"));
         _mainWindow->buildBulkNoteSubFolderMenuTree(subFolderCopyMenu, true);
     }
 
@@ -543,7 +559,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
 
     // show the tagging menu if at least one tag is present
     if (tagCount) {
-        auto *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with…"));
+        auto *tagMenu = noteMenu.addMenu(Utils::Gui::tagIcon(), tr("&Tag selected notes with…"));
         _mainWindow->buildBulkNoteTagMenuTree(tagMenu);
     }
 
@@ -569,10 +585,14 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     // show the remove tags menu if at least one tag is present
     QMenu *tagRemoveMenu = nullptr;
     if (tagRemoveList.count() > 0) {
-        tagRemoveMenu = noteMenu.addMenu(tr("&Remove tag from selected notes…"));
+        tagRemoveMenu = noteMenu.addMenu(
+            QIcon::fromTheme(
+                QStringLiteral("tag-delete"),
+                QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/xml-attribute-delete.svg"))),
+            tr("&Remove tag from selected notes…"));
 
         for (const Tag &tag : tagRemoveList) {
-            auto *action = tagRemoveMenu->addAction(tag.getName());
+            auto *action = tagRemoveMenu->addAction(Utils::Gui::tagIcon(), tag.getName());
             action->setData(tag.getId());
             action->setToolTip(tag.getName());
             action->setStatusTip(tag.getName());
@@ -595,13 +615,21 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     }
 
     if ((multiNoteMenuEntriesOnly && selectedItems.count() > 1) || !multiNoteMenuEntriesOnly) {
-        auto *openNoteInTabAction = noteMenu.addAction(tr("Open selected notes in tabs"));
+        auto *openNoteInTabAction = noteMenu.addAction(
+            QIcon::fromTheme(
+                QStringLiteral("window-duplicate"),
+                QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/window-duplicate.svg"))),
+            tr("Open selected notes in tabs"));
         QObject::connect(openNoteInTabAction, &QAction::triggered, _mainWindow,
                          &MainWindow::openSelectedNotesInTab);
     }
 
     if (noteCount > 1) {
-        diffSelectedNotesAction = noteMenu.addAction(tr("Diff selected notes"));
+        diffSelectedNotesAction = noteMenu.addAction(
+            QIcon::fromTheme(
+                QStringLiteral("text-x-changelog"),
+                QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/text-x-changelog.svg"))),
+            tr("Diff selected notes"));
     }
 
 #ifdef QON_KDE_INTEGRATION
@@ -612,19 +640,29 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
 #endif
 
     if (!multiNoteMenuEntriesOnly) {
-        openInExternalEditorAction = noteMenu.addAction(tr("Open note in external editor"));
-        openNoteWindowAction = noteMenu.addAction(tr("Open note in different window"));
+        openInExternalEditorAction = noteMenu.addAction(
+            _ui->action_Open_note_in_external_editor->icon(), tr("Open note in external editor"));
+        openNoteWindowAction = noteMenu.addAction(_ui->actionView_note_in_new_window->icon(),
+                                                  tr("Open note in different window"));
         if (CloudService::isCloudSupportEnabled() && NoteFolder::isCurrentCloudConnectionSet()) {
-            openNoteInNextcloudFilesAction = noteMenu.addAction(tr("Open note in Nextcloud Files"));
-            openNoteInNextcloudNotesAction = noteMenu.addAction(tr("Open note in Nextcloud Notes"));
+            const QIcon cloudIcon = QIcon::fromTheme(
+                QStringLiteral("folder-cloud"),
+                QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/folder-cloud.svg")));
+            openNoteInNextcloudFilesAction =
+                noteMenu.addAction(cloudIcon, tr("Open note in Nextcloud Files"));
+            openNoteInNextcloudNotesAction =
+                noteMenu.addAction(cloudIcon, tr("Open note in Nextcloud Notes"));
         };
-        showInFileManagerAction = noteMenu.addAction(tr("Show note in file manager"));
-        copyNotePathToClipboardAction = noteMenu.addAction(tr("Copy absolute path of note"));
-        copyNoteFileNameToClipboardAction = noteMenu.addAction(tr("Copy note filename"));
+        showInFileManagerAction = noteMenu.addAction(_ui->actionShow_note_in_file_manager->icon(),
+                                                     tr("Show note in file manager"));
+        copyNotePathToClipboardAction =
+            noteMenu.addAction(copyIcon, tr("Copy absolute path of note"));
+        copyNoteFileNameToClipboardAction = noteMenu.addAction(copyIcon, tr("Copy note filename"));
 
         showNoteGitLogAction = new QAction(_mainWindow);
         if (Utils::Git::isCurrentNoteFolderUseGit() && Utils::Git::hasLogCommand()) {
-            showNoteGitLogAction = noteMenu.addAction(tr("Show note git versions"));
+            showNoteGitLogAction = noteMenu.addAction(_ui->actionShow_note_git_versions->icon(),
+                                                      tr("Show note git versions"));
         }
 
         // Add favorite toggle action for single note
@@ -632,9 +670,14 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
         const Note note = _mainWindow->getCurrentNote();
         if (note.isFetched()) {
             if (note.isFavorite()) {
-                toggleFavoriteAction = noteMenu.addAction(tr("Unmark as favorite"));
+                toggleFavoriteAction =
+                    noteMenu.addAction(Utils::Gui::favoriteNoteIcon(), tr("Unmark as favorite"));
             } else {
-                toggleFavoriteAction = noteMenu.addAction(tr("Mark as favorite"));
+                toggleFavoriteAction = noteMenu.addAction(
+                    QIcon::fromTheme(
+                        QStringLiteral("favorite"),
+                        QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/favorite.svg"))),
+                    tr("Mark as favorite"));
             }
         }
     }
@@ -651,7 +694,11 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     QAction *selectAllAction = nullptr;
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
-        selectAllAction = noteMenu.addAction(tr("Select &all notes"));
+        selectAllAction = noteMenu.addAction(
+            QIcon::fromTheme(
+                QStringLiteral("edit-select-all"),
+                QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/edit-select-all.svg"))),
+            tr("Select &all notes"));
     }
 
     QAction *selectedItem = noteMenu.exec(globalPos);

@@ -26,6 +26,7 @@
 
 #include <QDir>
 #include <QFile>
+#include <QIcon>
 #include <QInputDialog>
 #include <QMenu>
 #include <QMessageBox>
@@ -785,6 +786,9 @@ void NoteOperationsManager::copySelectedNotesToNoteSubFolder(const NoteSubFolder
  */
 void NoteOperationsManager::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                                                            int parentNoteSubFolderId) {
+    const QString iconName = doCopy ? QStringLiteral("edit-copy") : QStringLiteral("edit-move");
+    const QIcon actionIcon = QIcon::fromTheme(
+        iconName, QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/%1.svg").arg(iconName)));
     const QVector<NoteSubFolder> noteSubFolderList =
         NoteSubFolder::fetchAllByParentId(parentNoteSubFolderId, QStringLiteral("name ASC"));
 
@@ -800,11 +804,11 @@ void NoteOperationsManager::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bo
         const int count = NoteSubFolder::countAllParentId(noteSubFolderId);
         if (count > 0) {
             // if there are sub-noteSubFolder build a new menu level
-            QMenu *noteSubFolderMenu = parentMenu->addMenu(name);
+            QMenu *noteSubFolderMenu = parentMenu->addMenu(Utils::Gui::folderIcon(), name);
             buildBulkNoteSubFolderMenuTree(noteSubFolderMenu, doCopy, noteSubFolderId);
         } else {
             // if there are no sub-noteSubFolders just create a named action
-            QAction *action = parentMenu->addAction(name);
+            QAction *action = parentMenu->addAction(Utils::Gui::folderIcon(), name);
 
             connect(action, &QAction::triggered, this, [this, doCopy, noteSubFolderId]() {
                 doCopy ? copySelectedNotesToNoteSubFolderId(noteSubFolderId)
@@ -819,7 +823,7 @@ void NoteOperationsManager::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bo
         (parentNoteSubFolderId == 0)
             ? (doCopy ? tr("Copy to note folder") : tr("Move to note folder"))
             : (doCopy ? tr("Copy to this subfolder") : tr("Move to this subfolder"));
-    QAction *action = parentMenu->addAction(text);
+    QAction *action = parentMenu->addAction(actionIcon, text);
     action->setData(parentNoteSubFolderId);
 
     connect(action, &QAction::triggered, this, [this, doCopy, parentNoteSubFolderId]() {
@@ -834,6 +838,9 @@ void NoteOperationsManager::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bo
  */
 void NoteOperationsManager::buildBulkNoteFolderSubFolderMenuTree(
     QMenu *parentMenu, bool doCopy, const QString &parentNoteSubFolderPath, bool isRoot) {
+    const QString iconName = doCopy ? QStringLiteral("edit-copy") : QStringLiteral("edit-move");
+    const QIcon actionIcon = QIcon::fromTheme(
+        iconName, QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/%1.svg").arg(iconName)));
     QDir dir(parentNoteSubFolderPath);
     QStringList nameFilters{};
 
@@ -858,11 +865,11 @@ void NoteOperationsManager::buildBulkNoteFolderSubFolderMenuTree(
 
         if (subDirectoryNames.count() > 0) {
             // if there are sub folders build a new menu level
-            QMenu *noteSubFolderMenu = parentMenu->addMenu(directoryName);
+            QMenu *noteSubFolderMenu = parentMenu->addMenu(Utils::Gui::folderIcon(), directoryName);
             buildBulkNoteFolderSubFolderMenuTree(noteSubFolderMenu, doCopy, fullPath, false);
         } else {
             // if there are no sub folders just create a named action
-            QAction *action = parentMenu->addAction(directoryName);
+            QAction *action = parentMenu->addAction(Utils::Gui::folderIcon(), directoryName);
             action->setToolTip(fullPath);
             action->setStatusTip(fullPath);
 
@@ -877,7 +884,7 @@ void NoteOperationsManager::buildBulkNoteFolderSubFolderMenuTree(
     const QString text =
         (isRoot) ? (doCopy ? tr("Copy to note folder") : tr("Move to note folder"))
                  : (doCopy ? tr("Copy to this subfolder") : tr("Move to this subfolder"));
-    auto *action = parentMenu->addAction(text);
+    auto *action = parentMenu->addAction(actionIcon, text);
     action->setToolTip(parentNoteSubFolderPath);
     action->setStatusTip(parentNoteSubFolderPath);
 
