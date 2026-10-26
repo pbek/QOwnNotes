@@ -1,7 +1,10 @@
 """Tests for screenshot profile creation (no desktop or Qt required)."""
 
+import configparser
+from contextlib import closing
 import os
 from pathlib import Path
+import sqlite3
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -10,6 +13,93 @@ import screenshots
 
 
 class ScreenshotTests(unittest.TestCase):
+    def test_every_scenario_has_colored_tags_and_valid_assignments(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for scenario in screenshots.SCENARIOS:
+                with self.subTest(scenario=scenario):
+                    base = Path(directory) / scenario
+                    screenshots.prepare_profile(base, scenario)
+                    notes = base / "Demo notes"
+                    with closing(sqlite3.connect(notes / "notes.sqlite")) as db:
+                        colors = db.execute("SELECT color, dark_color FROM tag").fetchall()
+                        self.assertEqual(len(set(colors)), 4)
+                        self.assertTrue(all(light != dark for light, dark in colors))
+                        assignments = db.execute(
+                            "SELECT note_file_name, note_sub_folder_path FROM noteTagLink"
+                        ).fetchall()
+                        self.assertGreaterEqual(len(assignments), 4)
+                        for name, folder in assignments:
+                            self.assertTrue((notes / folder / f"{name}.md").is_file())
+                        self.assertEqual(db.execute("PRAGMA integrity_check").fetchone(),
+                                         ("ok",))
+
+    def test_subfolders_and_dark_mode_profiles(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for scenario in ("subfolders", "darkmode"):
+                with self.subTest(scenario=scenario):
+                    base = Path(directory) / scenario
+                    _, session = screenshots.prepare_profile(base, scenario)
+                    notes = base / "Demo notes"
+                    self.assertTrue((notes / "Projects/Small adventures/Project field notes.md"
+                                     ).is_file())
+                    self.assertEqual(len(list(notes.rglob("*.md"))), 4)
+                    settings = configparser.ConfigParser(interpolation=None)
+                    settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+                    self.assertTrue(settings.getboolean("General", "showNoteSubFolders"))
+                    self.assertTrue(settings.getboolean("General", "dockWasInitializedOnce"))
+                    for source in ("system", "linux"):
+                        self.assertEqual(settings["MessageBoxOverride"][f"{source}-light-mode"],
+                                         "65536")
+                    if scenario == "darkmode":
+                        self.assertTrue(settings.getboolean("General", "darkMode"))
+                        self.assertTrue(settings.getboolean("General", "darkModeColors"))
+                        self.assertTrue(settings.getboolean("General", "internalIconTheme"))
+                        self.assertFalse(settings.getboolean("General", "systemIconTheme"))
+                        self.assertIn("cdbf28fc", settings["Editor"]["CurrentSchemaKey"])
+
+    def test_note_relations_has_links_and_a_wide_graph(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "note-relations")
+            text = (base / "Demo notes/Connected ideas.md").read_text()
+            for name in ("Projects", "Reading", "Weekends"):
+                self.assertIn(f"]({name}.md)", text)
+                self.assertTrue((base / f"Demo notes/{name}.md").is_file())
+            settings = configparser.ConfigParser(interpolation=None)
+            settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+            self.assertIn(r"\0\0\0\x1\0\0\x2\x80\0\0\0\0\xfc",
+                          settings["layout-screenshot"]["windowState"])
+
+    def test_overview_coverage_tracks_the_carousel(self):
+        coverage = screenshots.overview_coverage()
+        self.assertTrue(set(screenshots.OVERVIEW.values()).issubset(coverage))
+        self.assertEqual(len(screenshots.OVERVIEW.values()),
+                         len(set(screenshots.OVERVIEW.values())))
+        self.assertEqual(coverage["screenshot.png"], "automated")
+        self.assertEqual(coverage["screenshot-darkmode.png"], "automated")
+        self.assertEqual(coverage["screenshot-versioning.png"], "needs dedicated fixture")
+
+    def test_only_full_screenshot_gets_a_wider_preview(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for preset in screenshots.PRESETS:
+                with self.subTest(preset=preset):
+                    base = Path(directory) / preset
+                    _, session = screenshots.prepare_profile(base, preset)
+                    settings = configparser.ConfigParser(interpolation=None)
+                    settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+                    state = settings["layout-screenshot"]["windowState"]
+                    if preset == "full":
+                        self.assertIn(
+                            r"\0\0\0\x1\0\0\x1\xe0\0\0\0\0\xfc", state)
+                        self.assertTrue(settings.getboolean(
+                            "General", "dockWasInitializedOnce"))
+                        self.assertNotEqual(
+                            state, screenshots.layout_settings(preset)["windowState"])
+                    else:
+                        self.assertEqual(
+                            state, screenshots.layout_settings(preset)["windowState"])
+                        self.assertNotIn("dockWasInitializedOnce", settings["General"])
+
     def test_all_presets_have_required_settings(self):
         for preset in screenshots.PRESETS:
             with self.subTest(preset=preset):
