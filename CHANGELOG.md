@@ -25,6 +25,20 @@
   - Keyboard shortcuts are unchanged
 - Added more French, German, Russian, Chinese Simplified, Italian, Portuguese, Brazilian,
   Polish, Spanish, Japanese translation (thank you, jd-develop, pbek, spamcutters)
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.7.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.7.0)
+  - Edit bookmark names, URLs, tags, and descriptions, or delete bookmarks directly from the
+    bookmark browser; changes are saved offline to the source Markdown note, preserving unrelated
+    text and protecting changed, read-only, or conflicted notes
+  - Long-press a checkbox block in the note preview to delete it together with nested items and
+    continuation text after confirmation; read-only and conflicted notes remain protected
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.6.1](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.6.1)
+  - Fixed checkbox dragging and toggling in notes containing checkbox-like lines that are not
+    rendered as checkboxes, such as empty items or lines inside HTML comments or code blocks
+- The [26.10.4 release](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.10.4) of
+  [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud) hides its navigation
+  entry for users excluded by Nextcloud's app group restrictions
 
 ## 26.10.12
 
