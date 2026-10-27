@@ -16,6 +16,22 @@ for more information.
 
 Afterward you should be able to run QOwnNotes with the command `qownnotes` or `QOwnNotes`.
 
+## Run directly from GitHub
+
+With Nix flakes enabled, you can build and run the repository version directly:
+
+```bash
+nix run github:pbek/qownnotes
+```
+
+The flake automatically fetches the required Git submodules at the same repository
+revision. For a local checkout, initialize the submodules and include them explicitly:
+
+```bash
+git submodule update --init --recursive
+nix run '.?submodules=1'
+```
+
 ::: tip
 The QOwnNotes command-line snippet manager [qc](https://github.com/qownnotes/qc)
 can also be installed via the [Nix Store](https://search.nixos.org/packages?channel=unstable&show=qc).

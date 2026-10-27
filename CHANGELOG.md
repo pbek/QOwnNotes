@@ -2,6 +2,8 @@
 
 ## 26.10.13
 
+- Fixed `nix run github:pbek/qownnotes` failing to build because GitHub flake
+  archives omit the required Git submodules
 - Added icons to the note list context menu and its folder and tag submenus
   (for [#2589](https://github.com/pbek/QOwnNotes/issues/2589),
   thank you, @serebryakov02)

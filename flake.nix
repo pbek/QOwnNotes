@@ -32,6 +32,37 @@
       pkgsFor = system: nixpkgs.legacyPackages.${system};
       pkgsQt69For = system: nixpkgs-qt69.legacyPackages.${system};
       pkgsQt5153For = system: nixpkgs-qt5153.legacyPackages.${system};
+
+      # GitHub flake archives omit submodules. Re-fetch the same revision with Git
+      # only when needed, so local builds retain working-tree changes.
+      submodulePaths = builtins.filter (path: path != null) (
+        map (
+          line:
+          let
+            match = builtins.match "[[:space:]]*path = (.*)" line;
+          in
+          if match == null then null else builtins.head match
+        ) (nixpkgs.lib.splitString "\n" (builtins.readFile ./.gitmodules))
+      );
+      hasSubmodules = builtins.all (
+        path: builtins.pathExists (./. + "/${path}") && builtins.readDir (./. + "/${path}") != { }
+      ) submodulePaths;
+      source =
+        if hasSubmodules then
+          ./.
+        else if self ? rev then
+          builtins.fetchGit {
+            url = "https://github.com/pbek/QOwnNotes.git";
+            inherit (self) rev;
+            submodules = true;
+            shallow = true;
+          }
+        else
+          throw "QOwnNotes requires Git submodules. Use nix build '.?submodules=1' from an initialized checkout.";
+      packageSource = builtins.path {
+        path = source + "/src";
+        name = "qownnotes";
+      };
     in
     {
       packages = forAllSystems (
@@ -41,25 +72,34 @@
           pkgs-qt69 = pkgsQt69For system;
           pkgs-qt5153 = pkgsQt5153For system;
         in
-        {
-          qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
-          qownnotes-qt6-qlitehtml = pkgs.callPackage (import ./default.nix) { useQlitehtml = true; };
-          qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
-          qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
-          qownnotes-cmake-qt5 =
-            pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix)
-              { };
-          qownnotes-qt5153 =
-            pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)
-              { };
-          default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
-        }
-        // pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
-          qownnotes-qt6-kde = pkgs.callPackage (import ./default.nix) {
-            useKdeIntegration = true;
-            qt6Packages = pkgs.kdePackages;
-          };
-        }
+        pkgs.lib.mapAttrs
+          (
+            _: package:
+            package.overrideAttrs (_: {
+              src = packageSource;
+            })
+          )
+          (
+            {
+              qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
+              qownnotes-qt6-qlitehtml = pkgs.callPackage (import ./default.nix) { useQlitehtml = true; };
+              qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
+              qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+              qownnotes-cmake-qt5 =
+                pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix)
+                  { };
+              qownnotes-qt5153 =
+                pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)
+                  { };
+              default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
+            }
+            // pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
+              qownnotes-qt6-kde = pkgs.callPackage (import ./default.nix) {
+                useKdeIntegration = true;
+                qt6Packages = pkgs.kdePackages;
+              };
+            }
+          )
       );
 
       devShells = forAllSystems (
