@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  WiX Toolset v5 source for the QOwnNotes Windows installer (MSI)
+
+  The package installs per-user by default (into %LOCALAPPDATA%\Programs\QOwnNotes),
+  so no administrator permissions are needed and the built-in updater keeps
+  write access to the installation folder.
+
+  Build with build-msi.ps1, which passes these variables:
+    - Version:  Product version, e.g. 26.10.13
+    - IconPath: Absolute path to the application icon
+    - AppDir:   Bind path to the deployed application folder
+-->
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package
+    Name="QOwnNotes"
+    Manufacturer="Patrizio Bekerle"
+    Version="$(Version)"
+    UpgradeCode="B54EFB98-5068-4979-BC71-57C1E0318C24"
+    Scope="perUserOrMachine"
+    Compressed="yes">
+
+    <!-- Allow same version upgrades, so continuous builds can be installed over each other -->
+    <MajorUpgrade
+      AllowSameVersionUpgrades="yes"
+      DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
+
+    <Icon Id="QOwnNotes.ico" SourceFile="$(IconPath)" />
+    <Property Id="ARPPRODUCTICON" Value="QOwnNotes.ico" />
+    <Property Id="ARPURLINFOABOUT" Value="https://www.qownnotes.org" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/pbek/QOwnNotes/issues" />
+
+    <!-- Per-user installations are redirected to %LOCALAPPDATA%\Programs by Windows Installer -->
+    <StandardDirectory Id="ProgramFiles6432Folder">
+      <Directory Id="INSTALLFOLDER" Name="QOwnNotes" />
+    </StandardDirectory>
+
+    <ComponentGroup Id="ApplicationFiles" Directory="INSTALLFOLDER">
+      <Files Include="!(bindpath.AppDir)\**">
+        <!-- Portable mode only makes sense for the ZIP archive -->
+        <Exclude Files="!(bindpath.AppDir)\QOwnNotesPortable.bat" />
+      </Files>
+    </ComponentGroup>
+
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Component Id="StartMenuShortcutComponent" Guid="8D74A78B-C74D-45FF-8085-8F2352840465">
+        <Shortcut
+          Id="StartMenuShortcut"
+          Name="QOwnNotes"
+          Description="Plain-text file notepad and todo-list manager"
+          Target="[INSTALLFOLDER]QOwnNotes.exe"
+          WorkingDirectory="INSTALLFOLDER"
+          Icon="QOwnNotes.ico" />
+        <RegistryValue
+          Root="HKMU"
+          Key="Software\QOwnNotes Installer"
+          Name="StartMenuShortcut"
+          Type="integer"
+          Value="1"
+          KeyPath="yes" />
+      </Component>
+    </StandardDirectory>
+
+    <Feature Id="Main" Title="QOwnNotes" AllowAbsent="no">
+      <ComponentGroupRef Id="ApplicationFiles" />
+      <ComponentRef Id="StartMenuShortcutComponent" />
+    </Feature>
+
+    <!-- Start QOwnNotes after an interactive installation (not for silent installs) -->
+    <CustomAction
+      Id="LaunchApplication"
+      Directory="INSTALLFOLDER"
+      ExeCommand="&quot;[INSTALLFOLDER]QOwnNotes.exe&quot;"
+      Execute="immediate"
+      Impersonate="yes"
+      Return="asyncNoWait" />
+    <InstallExecuteSequence>
+      <Custom
+        Action="LaunchApplication"
+        After="InstallFinalize"
+        Condition="NOT Installed AND NOT REMOVE AND UILevel &gt;= 4" />
+    </InstallExecuteSequence>
+  </Package>
+</Wix>

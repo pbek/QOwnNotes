@@ -399,6 +399,9 @@ jobs:
       - name: Build Windows ZIP
         run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
+      - name: Build Windows MSI installer
+        run: '& ..\build-systems\github\windows\build-msi.ps1'
+
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v7
         with:
@@ -407,6 +410,8 @@ jobs:
             QOwnNotes.zip
             QOwnNotes.zip.sha256
             QOwnNotes.zip.sha256sum
+            QOwnNotes.msi
+            QOwnNotes.msi.sha256sum
           if-no-files-found: error
 
   build-macos:

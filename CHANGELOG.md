@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.10.14
+
+- Added a Windows installer `QOwnNotes.msi` to the releases, next to the
+  `QOwnNotes.zip` archive, so QOwnNotes can be installed without unzipping
+  - It installs QOwnNotes for the current user, without administration permissions,
+    adds a start menu shortcut and keeps the automatic updater working
+
 ## 26.10.13
 
 - Fixed `nix run github:pbek/qownnotes` failing to build because GitHub flake

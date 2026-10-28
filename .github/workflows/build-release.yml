@@ -61,6 +61,8 @@ jobs:
           - QOwnNotes.zip: Windows ZIP package built with Qt 6
           - QOwnNotes.zip.sha256: SHA-256 checksum for the Qt 6 Windows ZIP package
           - QOwnNotes.zip.sha256sum: Alternative SHA-256 checksum file for the Qt 6 Windows ZIP package
+          - QOwnNotes.msi: Windows installer built with Qt 6
+          - QOwnNotes.msi.sha256sum: SHA-256 checksum for the Qt 6 Windows installer
           - QOwnNotes.dmg: macOS disk image built with Qt 6
           - QOwnNotesQt5.dmg: macOS disk image built with Qt 5 for older systems
           EOF
@@ -513,6 +515,9 @@ jobs:
       - name: "🚧 Compile application"
         run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
+      - name: "📦 Create MSI installer"
+        run: '& ..\build-systems\github\windows\build-msi.ps1'
+
       #      - name: '📤 Upload artifact: Windows'
       #        uses: actions/upload-artifact@v4
       #        with:
@@ -548,6 +553,24 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: QOwnNotes.zip.sha256sum
           asset_name: QOwnNotes.zip.sha256sum
+          tag: ${{ needs.create_release.outputs.tag }}
+          release_id: ${{ needs.create_release.outputs.release_id }}
+          overwrite: true
+      - name: "📤 Release MSI installer"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: QOwnNotes.msi
+          asset_name: QOwnNotes.msi
+          tag: ${{ needs.create_release.outputs.tag }}
+          release_id: ${{ needs.create_release.outputs.release_id }}
+          overwrite: true
+      - name: "📤 Release MSI installer sha256 sum"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: QOwnNotes.msi.sha256sum
+          asset_name: QOwnNotes.msi.sha256sum
           tag: ${{ needs.create_release.outputs.tag }}
           release_id: ${{ needs.create_release.outputs.release_id }}
           overwrite: true
