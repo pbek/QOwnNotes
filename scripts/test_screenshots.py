@@ -197,6 +197,124 @@ class ScreenshotTests(unittest.TestCase):
         self.assertEqual(coverage["screenshot.png"], "automated")
         self.assertEqual(coverage["screenshot-darkmode.png"], "automated")
         self.assertEqual(coverage["screenshot-versioning.png"], "needs dedicated fixture")
+        self.assertTrue(set(screenshots.OVERVIEW).issubset(screenshots.SCENARIOS))
+
+    def test_every_scenario_selects_an_existing_note(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for scenario in screenshots.SCENARIOS:
+                with self.subTest(scenario=scenario):
+                    base = Path(directory) / scenario
+                    screenshots.prepare_profile(base, scenario)
+                    note = base / "Demo notes" / f"{screenshots.selected_note(scenario)}.md"
+                    self.assertTrue(note.is_file())
+                    # The newest note is selected on startup.
+                    newest = max((base / "Demo notes").rglob("*.md"),
+                                 key=lambda path: path.stat().st_mtime_ns)
+                    self.assertEqual(newest, note)
+
+    def app_database(self, base, session):
+        database = base / f"data/PBE/QOwnNotes-{session}/QOwnNotes.sqlite"
+        self.assertTrue(database.is_file())
+        return closing(sqlite3.connect(database))
+
+    def test_search_scenes_select_a_word_with_a_helper_script(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for scenario, (word, action) in screenshots.SEARCHES.items():
+                with self.subTest(scenario=scenario):
+                    base = Path(directory) / scenario
+                    _, session = screenshots.prepare_profile(base, scenario)
+                    with self.app_database(base, session) as db:
+                        scripts = db.execute("SELECT script_path, enabled FROM script").fetchall()
+                    self.assertEqual(len(scripts), 1)
+                    path, enabled = scripts[0]
+                    self.assertTrue(enabled)
+                    self.assertTrue(Path(path).is_relative_to(base))
+                    script = Path(path).read_text()
+                    self.assertIn(f'"{word}"', script)
+                    self.assertIn(f'triggerMenuAction("{action}")', script)
+                    note = base / "Demo notes" / f"{screenshots.selected_note(scenario)}.md"
+                    self.assertIn(word, note.read_text())
+
+    def test_scripting_scene_shows_a_demo_script_outside_the_users_home(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "scripting")
+            with self.app_database(base, session) as db:
+                (name, path), = db.execute("SELECT name, script_path FROM script").fetchall()
+            self.assertEqual(name, "Daily journal")
+            self.assertTrue(Path(path).is_relative_to(base))
+            self.assertIn("settingsVariables", Path(path).read_text())
+            self.assertEqual(screenshots.STARTUP_ACTIONS["scripting"], "actionScript_settings")
+
+    def test_note_folders_scene_has_several_existing_folders(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "note-folders")
+            with self.app_database(base, session) as db:
+                folders = db.execute(
+                    "SELECT id, name, local_path FROM noteFolder ORDER BY priority").fetchall()
+            self.assertEqual(len(folders), 1 + len(screenshots.EXTRA_NOTE_FOLDERS))
+            self.assertEqual(folders[0][2], str(base / "Demo notes"))
+            for _, _, path in folders:
+                self.assertTrue(any(Path(path).glob("*.md")))
+            settings = configparser.ConfigParser(interpolation=None)
+            settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+            self.assertEqual(settings["General"]["currentNoteFolderId"], str(folders[0][0]))
+            self.assertEqual(settings["General"]["notesPath"], folders[0][2])
+
+    def test_other_workspace_scene_has_two_workspaces(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "other-workspace")
+            settings = configparser.ConfigParser(interpolation=None)
+            settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+            self.assertEqual(settings["General"]["currentLayout"], "reading")
+            self.assertEqual(settings["General"]["layouts"], "reading, writing")
+            self.assertEqual(settings["layout-reading"]["name"], "Reading")
+            self.assertEqual(settings["layout-writing"]["name"], "Writing")
+            self.assertEqual(settings["layout-reading"]["centralWidget"], "note-preview")
+            self.assertNotEqual(settings["layout-reading"]["windowState"],
+                                settings["layout-writing"]["windowState"])
+
+    def test_russian_scene_uses_russian_ui_notes_and_tags(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "russian")
+            settings = configparser.ConfigParser(interpolation=None)
+            settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+            self.assertEqual(settings["General"]["interfaceLanguage"], "ru")
+            self.assertFalse(settings.getboolean("General", "checkSpelling"))
+            notes = sorted(path.name for path in (base / "Demo notes").glob("*.md"))
+            self.assertEqual(len(notes), 4)
+            self.assertTrue(all(any("а" <= char <= "я" for char in name.lower())
+                                for name in notes))
+            with closing(sqlite3.connect(base / "Demo notes/notes.sqlite")) as db:
+                names = {name for name, in db.execute("SELECT name FROM tag")}
+            self.assertEqual(names, set(screenshots.RUSSIAN_TAG_NAMES.values()))
+
+    def test_diff_scene_changes_the_selected_note_in_place(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "diff")
+            settings = configparser.ConfigParser(interpolation=None)
+            settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+            self.assertTrue(settings.getboolean("General", "notifyAllExternalModifications"))
+            note = base / "Demo notes" / f"{screenshots.selected_note('diff')}.md"
+            inode = note.stat().st_ino
+            screenshots.apply_diff_changes(note)
+            text = note.read_text()
+            for old, new in screenshots.DIFF_CHANGES:
+                self.assertIn(new, text)
+            # The app's file watcher keeps watching the same file.
+            self.assertEqual(note.stat().st_ino, inode)
+            with self.assertRaises(RuntimeError):
+                screenshots.apply_diff_changes(note)
+
+    def test_scenes_without_fixtures_get_no_app_database(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "full")
+            self.assertFalse((base / f"data/PBE/QOwnNotes-{session}").exists())
 
     def test_publish_replaces_reviewed_overview_images_everywhere(self):
         with tempfile.TemporaryDirectory() as directory:

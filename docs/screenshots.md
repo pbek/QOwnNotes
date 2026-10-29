@@ -34,7 +34,8 @@ just screenshots --overview
 ```
 
 Available presets: `minimal`, `full`, `preview-only`, `full-vertical`, `1col`,
-`subfolders`, `darkmode`, `note-relations`, `distraction-free`.
+`subfolders`, `darkmode`, `note-relations`, `distraction-free`, `search-all-notes`,
+`search-current-note`, `other-workspace`, `russian`, `diff`, `scripting`, `note-folders`.
 By default, `minimal`, `full`, `preview-only`, `subfolders`, and `darkmode` are
 captured. The layouts come from the application's built-in layout presets, with
 a larger preview so the rendered Markdown is readable: 560 logical pixels wide
@@ -61,20 +62,47 @@ current Plasma desktop.
 
 ## Refreshing the website overview
 
-`just screenshots --overview` captures the **eight currently automated scenes**
+`just screenshots --overview` captures the **fifteen currently automated scenes**
 from the [overview carousel](https://www.qownnotes.org/getting-started/overview.html),
 using their existing website filenames in a new output directory:
 
-| Scene                                        | Website filename                       |
-| -------------------------------------------- | -------------------------------------- |
-| Colored tags, subfolders, editor and preview | `screenshot.png`                       |
-| Minimal layout                               | `screenshot-minimal.png`               |
-| Preview above the editor, colored tags       | `screenshot-vertical.png`              |
-| Linked notes and relations graph             | `screenshot-note-relations.png`        |
-| Narrow one-column layout                     | `screenshot-1col.png`                  |
-| Dark mode, colored tags and subfolders       | `screenshot-darkmode.png`              |
-| Distraction-free editing                     | `screenshot-distraction-free-mode.png` |
-| Current desktop icon theme                   | `screenshot-freedesktop-theme.png`     |
+| Scene                                        | Preset                | Website filename                        |
+| -------------------------------------------- | --------------------- | --------------------------------------- |
+| Colored tags, subfolders, editor and preview | `subfolders`          | `screenshot.png`                        |
+| Minimal layout                               | `minimal`             | `screenshot-minimal.png`                |
+| Preview above the editor, colored tags       | `full-vertical`       | `screenshot-vertical.png`               |
+| Linked notes and relations graph             | `note-relations`      | `screenshot-note-relations.png`         |
+| Narrow one-column layout                     | `1col`                | `screenshot-1col.png`                   |
+| Dark mode, colored tags and subfolders       | `darkmode`            | `screenshot-darkmode.png`               |
+| Distraction-free editing                     | `distraction-free`    | `screenshot-distraction-free-mode.png`  |
+| Current desktop icon theme                   | `full`                | `screenshot-freedesktop-theme.png`      |
+| Second workspace, selected in the toolbar    | `other-workspace`     | `screenshot-other-workspace.png`        |
+| Script settings of a demo script             | `scripting`           | `screenshot-qml.png`                    |
+| Russian user interface, notes and tags       | `russian`             | `screenshot-russian.png`                |
+| Search across all notes                      | `search-all-notes`    | `screenshot-search-in-all-notes.png`    |
+| Search in the current note                   | `search-current-note` | `screenshot-search-in-current-note.png` |
+| Several note folders in the settings         | `note-folders`        | `screenshot-settings-note-folders.png`  |
+| Diff dialog after an external note change    | `diff`                | `screenshot-diff.png`                   |
+
+How the newer scenes are set up, all inside the temporary profile:
+
+- `other-workspace` has two workspaces, `Reading` (the preview-only layout, active)
+  and `Writing`, so the workspace selector in the toolbar shows a non-default
+  workspace.
+- `search-all-notes` and `search-current-note` install a small helper script that
+  selects a word in the current note and triggers _Find note_ (`place`) or _Find
+  in note_ (`idea`), which search for the selected text.
+- `scripting` installs a copy of `scripts/screenshot-scripts/daily-journal.qml` and
+  opens the script settings. `note-folders` adds the `Work` and `Journal` note
+  folders and opens the note folder settings. Both capture the settings dialog at
+  its own size; KWin draws no shadow around it, so its margin is transparent.
+- `russian` uses the Russian interface translation with the notes from
+  `scripts/screenshot-notes-ru/`, Russian tag names, and spell checking turned off.
+- `diff` changes the copy of the selected note on disk while the app is active,
+  with notifications for all external changes enabled, and captures the dialog.
+
+The app's disk database (`QOwnNotes.sqlite`) is only created for scenes with demo
+scripts or note folders; the app adds all other tables on startup.
 
 The capture command does not modify website assets or remove any carousel entries.
 `overview-coverage.json` lists every screenshot referenced by the carousel and
@@ -99,27 +127,22 @@ both `webpage/src/.vuepress/public/screenshots/` (website carousel) and
 images are checked to be PNG files before anything is replaced, and unchanged
 images are skipped. Review the result with `git diff --stat` and commit it.
 
-The remaining fourteen carousel scenes are **not yet automated**:
+The remaining seven carousel scenes are **not yet automated**:
 
-- Portable mode: needs a temporary portable installation, not the real binary's
-  adjacent settings directory.
+- Portable mode: the current image is a Windows file listing; it needs a temporary
+  portable installation, not the real binary's adjacent settings directory.
 - Encryption (locked and unlocked): needs an encrypted demo note and password
   dialog automation.
-- External-change diff: needs controlled edits and conflict dialog automation.
 - PDF export/print: needs print-preview dialog automation without invoking a real
-  printer.
-- Other workspace: needs multiple named demo layouts and a visible layout switch.
-- Scripting: needs an installed demo script and its settings UI.
-- Russian: needs a Russian-language profile and matching demo notes.
-- Search across notes and search in the current note: need populated search UI.
-- Note-folder settings: needs multiple demo note folders and the settings page.
+  printer or listing the user's printers.
 - CalDAV tasks, Nextcloud trash, and Nextcloud versioning: need disposable demo
   servers and seeded remote data. Never use personal server credentials for these.
 
 ## Isolation and testing
 
-Each capture uses temporary settings, data, cache, copies of the demo notes, and a
-generated SQLite database containing only demo tags and their note assignments.
+Each capture uses temporary settings, data, cache, copies of the demo notes and
+scripts, and a generated SQLite database containing only demo tags and their note
+assignments, plus, where a scene needs them, demo scripts and note folders.
 Only desktop appearance settings are copied from your configuration. Personal
 QOwnNotes settings, credentials, and notes are not copied or modified. Tracking
 and automatic update dialogs are disabled in the demo profile, and the demo app

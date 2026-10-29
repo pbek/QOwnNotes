@@ -24,6 +24,13 @@ SCENARIOS = {
     "darkmode": "full",
     "note-relations": "full",
     "distraction-free": "minimal",
+    "search-all-notes": "full",
+    "search-current-note": "full",
+    "other-workspace": "preview-only",
+    "russian": "full",
+    "diff": "full",
+    "scripting": "full",
+    "note-folders": "full",
 }
 # Website filenames are explicit so captures can be reviewed before publishing.
 OVERVIEW = {
@@ -35,10 +42,52 @@ OVERVIEW = {
     "darkmode": "screenshot-darkmode.png",
     "distraction-free": "screenshot-distraction-free-mode.png",
     "full": "screenshot-freedesktop-theme.png",
+    "other-workspace": "screenshot-other-workspace.png",
+    "scripting": "screenshot-qml.png",
+    "russian": "screenshot-russian.png",
+    "search-all-notes": "screenshot-search-in-all-notes.png",
+    "search-current-note": "screenshot-search-in-current-note.png",
+    "note-folders": "screenshot-settings-note-folders.png",
+    "diff": "screenshot-diff.png",
 }
 STARTUP_ACTIONS = {
     "distraction-free": "actionToggle_distraction_free_mode",
+    "scripting": "actionScript_settings",
+    "note-folders": "actionSet_Cloud_Folder",
 }
+# Scenes that capture a dialog instead of the main window: the dialog's title and its
+# size in logical pixels at a 10 pt font, or None to keep the dialog's own size.
+DIALOGS = {
+    "scripting": ("Settings", None),
+    "note-folders": ("Settings", None),
+    "diff": ("modified externally", (960, 640)),
+}
+# A helper script selects the word in the current note, then triggers the search action,
+# which searches for the selected text.
+SEARCHES = {
+    "search-all-notes": ("place", "action_Find_note"),
+    "search-current-note": ("idea", "action_Find_text_in_note"),
+}
+# The note that is selected on startup and expected in the main window title.
+SELECTED_NOTES = {
+    "note-relations": "Connected ideas",
+    "russian": "Немного места для идей",
+}
+DEFAULT_SELECTED_NOTE = "A little room for ideas"
+RUSSIAN_TAG_NAMES = {1: "Идеи", 2: "Проекты", 3: "Личное", 4: "Чтение", 5: "Рабочее место"}
+# Extra note folders shown in the note folder settings (name, directory, first note).
+EXTRA_NOTE_FOLDERS = (
+    ("Work", "Work notes", "Meeting notes"),
+    ("Journal", "Journal", "Morning pages"),
+)
+# The external change shown in the diff dialog.
+DIFF_CHANGES = (
+    ("Your own space.", "Your own rules."),
+    ("- [ ] Turn a good idea into a first draft",
+     "- [x] Turn a good idea into a first draft"),
+    ("Everything starts with a note.",
+     "Everything starts with a note, and grows with the next one."),
+)
 # The website carousel and the README/AppStream metadata use identical copies.
 PUBLISH_DIRECTORIES = (
     ROOT / "webpage/src/.vuepress/public/screenshots",
@@ -122,8 +171,13 @@ def publish(source, destinations=PUBLISH_DIRECTORIES):
     return images
 
 
-def seed_demo_tags(notes):
+def selected_note(scenario):
+    return SELECTED_NOTES.get(scenario, DEFAULT_SELECTED_NOTE)
+
+
+def seed_demo_tags(notes, tag_names=None):
     """Create a private version-12 note database; the app migrates it on startup."""
+    tag_names = tag_names or {}
     with closing(sqlite3.connect(notes / "notes.sqlite")) as db:
         db.executescript("""
             CREATE TABLE appData (name VARCHAR(255) PRIMARY KEY, value VARCHAR(255));
@@ -145,7 +199,7 @@ def seed_demo_tags(notes):
         """)
         db.executemany(
             "INSERT INTO tag (id, name, parent_id, color, dark_color) VALUES (?, ?, ?, ?, ?)",
-            [(tag_id, name, parent, light, dark)
+            [(tag_id, tag_names.get(tag_id, name), parent, light, dark)
              for tag_id, (name, parent, light, dark) in TAGS.items()])
         assignments = {
             "A little room for ideas.md": (1, 2),
@@ -156,6 +210,10 @@ def seed_demo_tags(notes):
             "Projects.md": (2,),
             "Reading.md": (4,),
             "Weekends.md": (3,),
+            "Немного места для идей.md": (1, 2),
+            "Заметки о проекте.md": (5,),
+            "Дневник чтения.md": (4,),
+            "Планы на выходные.md": (3,),
         }
         for note in notes.rglob("*.md"):
             for tag_id in assignments.get(note.name, (2,)):
@@ -165,6 +223,72 @@ def seed_demo_tags(notes):
                     "note_sub_folder_path) VALUES (?, ?, ?)",
                     (tag_id, note.stem, "" if folder == "." else folder))
         db.commit()
+
+
+def search_script(word, action):
+    """A QML script that selects a word in the current note and triggers a search action."""
+    return (
+        "import QtQml 2.0\n"
+        "import QOwnNotesTypes 1.0\n\n"
+        "Script {\n"
+        "    property QtObject timer: Timer {\n"
+        "        interval: 1500\n"
+        "        running: true\n"
+        "        onTriggered: {\n"
+        f"            var word = {json.dumps(word)};\n"
+        "            var start = script.currentNote().noteText.indexOf(word);\n"
+        "            script.noteTextEditSetSelection(start, start + word.length);\n"
+        f"            script.triggerMenuAction({json.dumps(action)});\n"
+        "        }\n"
+        "    }\n"
+        "}\n")
+
+
+def seed_app_database(data, session, scripts=(), note_folders=()):
+    """Create the app's disk database with demo scripts and note folders.
+
+    Only the tables that are seeded are created, with their current columns. The app
+    creates everything else on startup; its migrations use CREATE TABLE IF NOT EXISTS,
+    and adding the already existing columns fails harmlessly.
+    """
+    for app in ("QOwnNotes", "QOwnNotesDebug"):
+        directory = data / "PBE" / f"{app}-{session}"
+        directory.mkdir(parents=True, exist_ok=True)
+        with closing(sqlite3.connect(directory / "QOwnNotes.sqlite")) as db:
+            db.executescript("""
+                CREATE TABLE script (
+                    id INTEGER PRIMARY KEY, name VARCHAR(255), script_path TEXT,
+                    enabled BOOLEAN DEFAULT 1, priority INTEGER DEFAULT 0,
+                    identifier VARCHAR(255), info_json TEXT, settings_variables_json TEXT);
+                CREATE TABLE noteFolder (
+                    id INTEGER PRIMARY KEY, name VARCHAR(255), local_path VARCHAR(255),
+                    remote_path VARCHAR(255), priority INTEGER DEFAULT 0,
+                    active_tag_id INTEGER, show_subfolders BOOLEAN DEFAULT 0,
+                    active_note_sub_folder_data TEXT, use_git BOOLEAN DEFAULT 0,
+                    cloud_connection_id INTEGER DEFAULT 1);
+            """)
+            db.executemany("INSERT INTO script (name, script_path, priority) VALUES (?, ?, ?)",
+                           [(name, str(path), priority)
+                            for priority, (name, path) in enumerate(scripts)])
+            db.executemany(
+                "INSERT INTO noteFolder (id, name, local_path, remote_path, priority) "
+                "VALUES (?, ?, ?, ?, ?)",
+                [(index + 1, name, str(path), remote, index)
+                 for index, (name, path, remote) in enumerate(note_folders)])
+            db.commit()
+
+
+def apply_diff_changes(note):
+    text = note.read_text()
+    for old, new in DIFF_CHANGES:
+        if text.count(old) != 1:
+            raise RuntimeError(f"The diff demo note no longer contains: {old}")
+        text = text.replace(old, new)
+    # Overwrite the file with a single write instead of truncating it first, so the
+    # app's file watcher never sees an empty note. Replacing the file would lose the watch.
+    with note.open("r+", encoding="utf-8") as file:
+        file.write(text)
+        file.truncate()
 
 
 def source_version():
@@ -377,7 +501,8 @@ def prepare_profile(base, preset):
     config = base / "config"
     (config / "PBE").mkdir(parents=True)
     notes = base / "Demo notes"
-    shutil.copytree(ROOT / "scripts/screenshot-notes", notes)
+    shutil.copytree(ROOT / ("scripts/screenshot-notes-ru" if scenario == "russian" else
+                            "scripts/screenshot-notes"), notes)
     if scenario == "note-relations":
         for old, new in (("A little room for ideas", "Connected ideas"),
                          ("Project field notes", "Projects"),
@@ -401,10 +526,32 @@ def prepare_profile(base, preset):
             target = notes / folder
             target.mkdir(parents=True, exist_ok=True)
             (notes / filename).rename(target / filename)
-    seed_demo_tags(notes)
+    seed_demo_tags(notes, RUSSIAN_TAG_NAMES if scenario == "russian" else None)
     # The most recently modified note is selected on a fresh profile.
-    selected = "Connected ideas" if scenario == "note-relations" else "A little room for ideas"
-    os.utime(notes / f"{selected}.md", None)
+    os.utime(notes / f"{selected_note(scenario)}.md", None)
+
+    session = "Demo"
+    scripts = []
+    if scenario in SEARCHES:
+        script = base / "scripts/search.qml"
+        script.parent.mkdir()
+        script.write_text(search_script(*SEARCHES[scenario]))
+        scripts.append(("Search demo", script))
+    if scenario == "scripting":
+        # The settings show the script path, so it must not point into the user's home.
+        script = base / "scripts/daily-journal.qml"
+        script.parent.mkdir()
+        shutil.copyfile(ROOT / "scripts/screenshot-scripts/daily-journal.qml", script)
+        scripts.append(("Daily journal", script))
+    note_folders = []
+    if scenario == "note-folders":
+        note_folders.append(("Everyday notes", notes, "Notes"))
+        for name, directory, note in EXTRA_NOTE_FOLDERS:
+            (base / directory).mkdir()
+            (base / directory / f"{note}.md").write_text(f"# {note}\n")
+            note_folders.append((name, base / directory, f"Notes/{name}"))
+    if scripts or note_folders:
+        seed_app_database(base / "data", session, scripts, note_folders)
 
     # Copy only desktop appearance settings, never the user's application profile.
     desktop_config = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config"))
@@ -416,9 +563,19 @@ def prepare_profile(base, preset):
         elif source.is_file():
             shutil.copy2(source, config / name)
 
-    layout = layout_settings(preset)
-    layout["windowState"] = screenshot_window_state(scenario, preset, layout["windowState"],
-                                                    font_scale(desktop_config))
+    # Workspaces as (id, name, scenario, preset); the first one is the current workspace.
+    workspaces = [("screenshot", "Screenshot", scenario, preset)]
+    if scenario == "other-workspace":
+        workspaces = [("reading", "Reading", scenario, preset),
+                      ("writing", "Writing", "full", "full")]
+    layouts = {}
+    for workspace, _, workspace_scenario, workspace_preset in workspaces:
+        values = layout_settings(workspace_preset)
+        values["windowState"] = screenshot_window_state(
+            workspace_scenario, workspace_preset, values["windowState"],
+            font_scale(desktop_config))
+        layouts[workspace] = values
+    layout = layouts[workspaces[0][0]]
     settings = (
         "[General]\n"
         f"notesPath={notes}\n"
@@ -428,8 +585,8 @@ def prepare_profile(base, preset):
         "showStatusBarNotePath=false\n"
         "enableSocketServer=false\n"
         f"systemIconTheme={'false' if scenario == 'darkmode' else 'true'}\n"
-        "currentLayout=screenshot\n"
-        "layouts=screenshot\n"
+        f"currentLayout={workspaces[0][0]}\n"
+        f"layouts={', '.join(sorted(layouts))}\n"
         f"centralWidget={layout['centralWidget']}\n"
         f"noteEditIsCentralWidget={layout['noteEditIsCentralWidget']}\n"
         # Skip the first-run dock limits, which cap the note tags panel at 40 logical
@@ -442,6 +599,14 @@ def prepare_profile(base, preset):
             "noteSubfoldersPanelDisplayAsFullTree=true\n"
             "noteSubfoldersPanelShowNotesRecursively=true\n"
         )
+    if scenario == "russian":
+        # An English spell checking dictionary would underline every Russian word.
+        settings += "interfaceLanguage=ru\ncheckSpelling=false\n"
+    if scenario == "diff":
+        # Ask about every external change, even when the note was not edited in the app.
+        settings += "notifyAllExternalModifications=true\n"
+    if note_folders:
+        settings += "currentNoteFolderId=1\n"
     if scenario == "darkmode":
         settings += (
             "darkMode=true\n"
@@ -471,14 +636,13 @@ def prepare_profile(base, preset):
         "notificationShown=true\n"
         "disableTracking=true\n"
         "disableAppHeartbeat=true\n"
-        "\n[layout-screenshot]\n"
-        "name=Screenshot\n"
     )
-    for key in ("centralWidget", "noteEditIsCentralWidget", "windowState",
-                "noteSubFolderDockWidgetVisible"):
-        settings += f"{key}={layout[key]}\n"
+    for workspace, name, _, _ in workspaces:
+        settings += f"\n[layout-{workspace}]\nname={name}\n"
+        for key in ("centralWidget", "noteEditIsCentralWidget", "windowState",
+                    "noteSubFolderDockWidgetVisible"):
+            settings += f"{key}={layouts[workspace][key]}\n"
 
-    session = "Demo"
     for app in ("QOwnNotes", "QOwnNotesDebug"):
         (config / "PBE" / f"{app}-{session}.conf").write_text(settings)
     env = dict(os.environ)
@@ -494,6 +658,26 @@ def prepare_profile(base, preset):
     return env, session
 
 
+def find_window(process, title, timeout):
+    """Return the first window of the process whose title matches, or an empty string."""
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline and process.poll() is None:
+        # PID-only searches also match empty title patterns in kdotool 0.3.
+        windows = run("kdotool", "search", "--all", "--pid", str(process.pid),
+                      "--title", re.escape(title)).splitlines()
+        if windows:
+            return windows[0]
+        time.sleep(0.25)
+    return ""
+
+
+def activate(window):
+    run("kdotool", "windowactivate", window)
+    time.sleep(1)
+    if run("kdotool", "getactivewindow") != window:
+        raise RuntimeError("Could not activate the demo window; capture cancelled.")
+
+
 def capture(args, preset, output, base):
     env, session = prepare_profile(base, preset)
     command = [str(args.binary), "--session", session, "--allow-multiple-instances"]
@@ -505,35 +689,41 @@ def capture(args, preset, output, base):
             env=env, stdout=log, stderr=log,
         )
         try:
-            window = ""
-            deadline = time.monotonic() + 45
-            while time.monotonic() < deadline and process.poll() is None:
-                # PID-only searches also match empty title patterns in kdotool 0.3.
-                windows = run("kdotool", "search", "--all", "--pid", str(process.pid),
-                              "--title", "QOwnNotes").splitlines()
-                if windows:
-                    window = windows[0]
-                    break
-                time.sleep(0.25)
+            # The main window title contains the selected note; dialogs don't.
+            window = find_window(process, selected_note(preset), 45)
             if not window:
                 raise RuntimeError("The demo window did not appear.")
             time.sleep(args.settle)
             title = run("kdotool", "getwindowname", window)
-            expected_note = ("Connected ideas" if preset == "note-relations" else
-                             "A little room for ideas")
-            if (expected_note not in title or
+            if (selected_note(preset) not in title or
                     run("kdotool", "getwindowpid", window) != str(process.pid)):
                 raise RuntimeError(f"Unexpected demo window: {title}")
+            dialog_title, dialog_size = DIALOGS.get(preset, (None, None))
+            # A dialog opened on startup is modal, so the main window can't be activated.
+            if not (dialog_title and preset in STARTUP_ACTIONS):
+                run("kdotool", "windowstate", "--remove", "MAXIMIZED", window)
+                width = args.width
+                if preset in WINDOW_WIDTHS:
+                    width = min(width, round(WINDOW_WIDTHS[preset] * args.scale))
+                run("kdotool", "windowsize", window, str(width), str(args.height))
+                activate(window)
+            if preset == "diff":
+                # Change the note behind the app's back while it is active, so it asks
+                # about the change in a dialog instead of a desktop notification.
+                apply_diff_changes(base / "Demo notes" / f"{selected_note(preset)}.md")
+            if dialog_title:
+                window = find_window(process, dialog_title, 20)
+                if not window:
+                    raise RuntimeError(f"The {dialog_title!r} dialog did not appear.")
+                time.sleep(1)
+                if dialog_size:
+                    run("kdotool", "windowsize", window,
+                        *(str(round(size * args.scale)) for size in dialog_size))
+                    # Let KWin redraw the decoration shadow for the new size.
+                    time.sleep(2)
+                activate(window)
+                title = run("kdotool", "getwindowname", window)
             print(f"Capturing: {title}", flush=True)
-            run("kdotool", "windowstate", "--remove", "MAXIMIZED", window)
-            width = args.width
-            if preset in WINDOW_WIDTHS:
-                width = min(width, round(WINDOW_WIDTHS[preset] * args.scale))
-            run("kdotool", "windowsize", window, str(width), str(args.height))
-            run("kdotool", "windowactivate", window)
-            time.sleep(1)
-            if run("kdotool", "getactivewindow") != window:
-                raise RuntimeError("Could not activate the demo window; capture cancelled.")
             # Capture to a temporary file and verify focus before publishing it.
             image = base / "capture.png"
             subprocess.run(
