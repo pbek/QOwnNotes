@@ -1361,6 +1361,17 @@ void QOwnNotesMarkdownTextEdit::insertCodeBlock() {
     }
 }
 
+void QOwnNotesMarkdownTextEdit::insertAutoCompletedText(const QString text) {
+    // Overwrite the currently written word
+    QTextCursor c = textCursor();
+    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
+    if (SettingsService().value(QStringLiteral("Editor/autocompleteNoSpace"), false).toBool()) {
+        c.insertText(text);
+    } else {
+        c.insertText(text + QStringLiteral(" "));
+    }
+}
+
 void QOwnNotesMarkdownTextEdit::insertWikiLink() {
     QTextCursor cursor = textCursor();
     const QString selectedText = cursor.selectedText();
@@ -1572,9 +1583,7 @@ void QOwnNotesMarkdownTextEdit::onAutoCompleteRequested() {
                 setTextCursor(c);
             } else if (type == QStringLiteral("autocomplete")) {
                 // overwrite the currently written word
-                QTextCursor c = textCursor();
-                c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
-                c.insertText(text + QStringLiteral(" "));
+                insertAutoCompletedText(text);
             } else {
                 insertPlainText(text);
             }
@@ -4240,9 +4249,7 @@ void QOwnNotesMarkdownTextEdit::showMarkdownLspCompletions(int requestId,
         return;
     }
 
-    QTextCursor c = textCursor();
-    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
-    c.insertText(text + QStringLiteral(" "));
+    insertAutoCompletedText(text);
 }
 
 void QOwnNotesMarkdownTextEdit::showMarkdownLspDiagnostics(
