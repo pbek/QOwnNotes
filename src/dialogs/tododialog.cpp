@@ -12,8 +12,10 @@
 #include <QKeyEvent>
 #include <QMenu>
 #include <QMessageBox>
+#include <QPointer>
 #include <QShortcut>
 #include <QSplitter>
+#include <QTimer>
 
 #include "entities/calendaritem.h"
 #include "services/cloudservice.h"
@@ -63,6 +65,13 @@ void TodoDialog::updateCalendarItem(CalendarItem item) {
     if (result) {
         // post the calendar item to the server (and reload note tree)
         cloud->postCalendarItemToServer(item, this);
+    } else {
+        // Defer rebuilding the tree until its drop event has finished.
+        QTimer::singleShot(0, this, [this]() {
+            reloadTodoListItems();
+            QMessageBox::warning(this, tr("Task could not be saved"),
+                                 tr("Could not load the task from the server. Please try again."));
+        });
     }
 }
 
@@ -390,7 +399,7 @@ void TodoDialog::jumpToTodoListItem() {
         }
 
         // try to find a possible last created calendar item
-        if ((item == nullptr) && lastCreatedCalendarItem.isFetched()) {
+        if ((item == nullptr) && !lastCreatedCalendarItem.getUid().isEmpty()) {
             item = findTodoItemTreeWidgetItemByUID(lastCreatedCalendarItem.getUid());
 
             // clear the last created calendar item if we found it in the list
@@ -475,7 +484,6 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
         ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
-    currentCalendarItem.store();
 }
 
 void TodoDialog::on_TodoDialog_finished(int result) {
@@ -530,7 +538,9 @@ void TodoDialog::on_showCompletedItemsCheckBox_clicked() {
     reloadTodoList();
 }
 
-void TodoDialog::on_saveButton_clicked() {
+void TodoDialog::on_saveButton_clicked() { saveCurrentTask(false); }
+
+void TodoDialog::saveCurrentTask(bool insertLink) {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("todo/item/stored"));
 
     updateCurrentCalendarItemWithFormData();
@@ -538,17 +548,40 @@ void TodoDialog::on_saveButton_clicked() {
     CloudService *cloud = CloudService::instance();
 
     // update the local icsData from server
-    cloud->updateICSDataOfCalendarItem(&currentCalendarItem);
+    if (!cloud->updateICSDataOfCalendarItem(&currentCalendarItem)) {
+        QMessageBox::warning(this, tr("Task could not be saved"),
+                             tr("Could not load the task from the server. Please try again."));
+        return;
+    }
 
     // post the calendar item to the server
-    cloud->postCalendarItemToServer(currentCalendarItem, this);
+    SettingsService settings;
+    const bool closeOnSuccess =
+        insertLink || settings.value(QStringLiteral("closeTodoListAfterSave")).toBool();
+    const QPointer<TodoDialog> dialog(this);
+    QString link;
+    if (insertLink) {
+        const QString selectedText =
+            MainWindow::instance()->activeNoteTextEdit()->textCursor().selectedText();
+        const QString summary =
+            selectedText.isEmpty() ? currentCalendarItem.getSummary() : selectedText;
+        link = "[" + summary + "](task://" + currentCalendarItem.getUid() + ")";
+    }
+    cloud->postCalendarItemToServer(
+        currentCalendarItem, this, [dialog, closeOnSuccess, insertLink, link]() {
+            if (!dialog) {
+                return;
+            }
+            // Never insert a link or close the dialog for a rejected save.
+            if (insertLink) {
+                MainWindow::instance()->activeNoteTextEdit()->textCursor().insertText(link);
+            }
+            if (closeOnSuccess) {
+                dialog->close();
+            }
+        });
 
     qDebug() << currentCalendarItem;
-
-    SettingsService settings;
-    if (settings.value(QStringLiteral("closeTodoListAfterSave")).toBool()) {
-        close();
-    }
 }
 
 void TodoDialog::todoItemLoadingProgressBarIncrement() {
@@ -784,21 +817,7 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
  * Saves the current note and inserts a link to it in the current note of the
  * main window
  */
-void TodoDialog::onSaveAndInsertButtonClicked() {
-    on_saveButton_clicked();
-
-    QString selectedText =
-        MainWindow::instance()->activeNoteTextEdit()->textCursor().selectedText();
-
-    QString taskUrl = "task://" + currentCalendarItem.getUid();
-
-    // insert a link to the task in the current note
-    QString summaryText = selectedText.isEmpty() ? currentCalendarItem.getSummary() : selectedText;
-    QString insertText = "[" + summaryText + "](" + taskUrl + ")";
-
-    MainWindow::instance()->activeNoteTextEdit()->textCursor().insertText(insertText);
-    close();
-}
+void TodoDialog::onSaveAndInsertButtonClicked() { saveCurrentTask(true); }
 
 /**
  * Imports the current task as new note
@@ -889,7 +908,6 @@ void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int co
     CalendarItem calItem = CalendarItem::fetchByUid(uid);
     if (calItem.isFetched()) {
         calItem.updateCompleted(item->checkState(0) == Qt::Checked);
-        calItem.store();
 
         CloudService *cloud = CloudService::instance();
 

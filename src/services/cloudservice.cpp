@@ -2218,8 +2218,14 @@ void CloudService::loadDirectory(QString &data) {
  * @param calendarItem
  * @param dialog
  */
-void CloudService::postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog) {
-    this->todoDialog = dialog;
+void CloudService::postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog,
+                                            const std::function<void()> &onSuccess) {
+#ifndef INTEGRATION_TESTS
+    // Each reply belongs to its initiating dialog, which may close during the request.
+    const QPointer<TodoDialog> requestDialog(dialog);
+#else
+    Q_UNUSED(dialog)
+#endif
 
     calendarItem.generateNewICSData();
 
@@ -2233,11 +2239,9 @@ void CloudService::postCalendarItemToServer(CalendarItem calendarItem, TodoDialo
 
     qDebug() << __func__ << " - 'body': " << body;
 
-    auto dataToSend = new QByteArray(body.toUtf8());
-    r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
-    r.setHeader(QNetworkRequest::ContentTypeHeader,
-                QStringLiteral("application/x-www-form-urlencoded"));
-    auto *buffer = new QBuffer(dataToSend);
+    const QByteArray dataToSend = body.toUtf8();
+    r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend.size());
+    r.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("text/calendar; charset=utf-8"));
     auto *calNetworkManager = new QNetworkAccessManager(this);
 
     QObject::connect(calNetworkManager,
@@ -2245,28 +2249,56 @@ void CloudService::postCalendarItemToServer(CalendarItem calendarItem, TodoDialo
                      SLOT(slotCalendarAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
 
     // Connect the finished signal to a lambda function
-    connect(calNetworkManager, &QNetworkAccessManager::finished, [=](QNetworkReply *reply) {
-        if (reply->error() == QNetworkReply::NoError) {
-            qDebug() << "Reply from calendar page after PUT" << url;
+    connect(calNetworkManager, &QNetworkAccessManager::finished, this,
+            [=](QNetworkReply *reply) mutable {
+                const int statusCode =
+                    reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+                const bool success = reply->error() == QNetworkReply::NoError &&
+                                     statusCode >= 200 && statusCode < 300;
+                const QString error =
+                    success ? QString()
+                            : (reply->error() == QNetworkReply::NoError
+                                   ? tr("Unexpected HTTP response: %1").arg(statusCode)
+                                   : reply->errorString());
+                if (success) {
+                    qDebug() << "Reply from calendar page after PUT" << url;
+                    // Failed writes must never replace the server-backed cache.
+                    calendarItem.store();
 
 #ifndef INTEGRATION_TESTS
-            if (todoDialog != nullptr) {
-                // Reload the task list from server
-                todoDialog->reloadTodoList();
-            }
+                    if (requestDialog) {
+                        // Reload the task list from server
+                        requestDialog->reloadTodoList();
+                    }
 #endif
-        } else {
-            // For error codes see http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
-            qWarning() << "QNetworkReply error " + QString::number(reply->error()) + " from url " +
-                              url.toString() + ":"
-                       << reply->errorString();
-        }
+                    if (onSuccess) {
+                        onSuccess();
+                    }
+                } else {
+                    // For error codes see
+                    // http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+                    qWarning() << "QNetworkReply error " + QString::number(reply->error()) +
+                                      " from url " + url.toString() + ":"
+                               << reply->errorString();
+#ifndef INTEGRATION_TESTS
+                    if (requestDialog) {
+                        // Undo optimistic checkbox and drag-and-drop changes in the task tree.
+                        requestDialog->reloadTodoListItems();
+                        QMessageBox::warning(
+                            requestDialog, tr("Task could not be saved"),
+                            tr("Could not save the task on the server. The cached task has "
+                               "not been changed.\n\n%1")
+                                .arg(error));
+                    }
+#endif
+                }
 
-        reply->deleteLater();
-        calNetworkManager->deleteLater();
-    });
+                emit calendarItemWriteFinished(url.toString(), success, error);
+                reply->deleteLater();
+                calNetworkManager->deleteLater();
+            });
 
-    QNetworkReply *reply = calNetworkManager->sendCustomRequest(r, "PUT", buffer);
+    QNetworkReply *reply = calNetworkManager->put(r, dataToSend);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -2307,7 +2339,9 @@ bool CloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     loop.exec();
     bool result = false;
 
-    if (timer.isActive()) {
+    const int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    if (timer.isActive() && reply->error() == QNetworkReply::NoError && statusCode >= 200 &&
+        statusCode < 300) {
         // get the text from the network reply
         QString icsData = reply->readAll();
 
@@ -2320,7 +2354,7 @@ bool CloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     reply->deleteLater();
     delete (manager);
 
-    // if false: timer elapsed, no reply from network request
+    // False indicates a timeout or a failed request; keep the existing ICS data.
     return result;
 }
 

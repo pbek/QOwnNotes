@@ -34,9 +34,8 @@ void TodoItemTreeWidget::dropEvent(QDropEvent *e) {
         return;
     }
 
-    // update relate item
+    // Keep the cached relationship unchanged until the server accepts the move.
     calItem.setRelatedUid(destUid);
-    calItem.store();
 
     emit calendarItemUpdated(calItem);
 

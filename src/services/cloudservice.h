@@ -58,7 +58,8 @@ class CloudService : public QObject {
 
     void todoGetTodoList(const QString &calendarName, TodoDialog *dialog);
 
-    void postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog);
+    void postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog,
+                                  const std::function<void()> &onSuccess = {});
 
     bool updateICSDataOfCalendarItem(CalendarItem *calItem);
 
@@ -139,7 +140,7 @@ class CloudService : public QObject {
     QString bookmarkPath;
     QString trashDeletePath;
     QPointer<SettingsDialog> settingsDialog;
-    TodoDialog *todoDialog;
+    QPointer<TodoDialog> todoDialog;
 
     void checkAppInfo(QNetworkReply *reply);
 
@@ -196,6 +197,8 @@ class CloudService : public QObject {
 
    signals:
     void settingsConnectionTestFinished();
+
+    void calendarItemWriteFinished(const QString &url, bool success, const QString &error);
 
    private slots:
 

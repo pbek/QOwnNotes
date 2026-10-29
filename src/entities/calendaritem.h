@@ -56,6 +56,7 @@ class CalendarItem {
     void setETag(const QString &text);
     static QList<QUrl> fetchAllUrlsByCalendar(const QString &calendar);
     void setCalendar(const QString &text);
+    // Creates an unsaved task; store it only after a successful server write.
     static CalendarItem createNewTodoItem(const QString &summary, const QString &calendar,
                                           const QString &relatedUid = QLatin1String(""));
     void setUrl(const QUrl &url);

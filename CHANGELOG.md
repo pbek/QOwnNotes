@@ -2,6 +2,13 @@
 
 ## 26.10.14
 
+- Failed CalDAV task saves now show an error and leave the cached task unchanged,
+  instead of making rejected edits appear saved after refreshing the task list
+  (for [#3815](https://github.com/pbek/QOwnNotes/issues/3815))
+  - Apply the same protection to new tasks, completion changes, and task moves
+  - Only close the task dialog after a successful save
+  - **Save and insert** only inserts the task link after the save succeeds
+
 - Added a Windows installer `QOwnNotes.msi` to the releases, next to the
   `QOwnNotes.zip` archive, so QOwnNotes can be installed without unzipping
   - It installs QOwnNotes for the current user, without administration permissions,

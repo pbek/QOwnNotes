@@ -74,6 +74,7 @@ class TodoDialog : public MasterDialog {
     void resetEditFrameControls();
     void setupUi();
     void updateCurrentCalendarItemWithFormData();
+    void saveCurrentTask(bool insertLink);
     void searchForSearchLineTextInNoteTextEdit();
     void searchInDescriptionTextEdit(QString &str);
     void createNewTodoItem(const QString &name = QLatin1String(""),

@@ -1090,10 +1090,7 @@ CalendarItem CalendarItem::createNewTodoItem(const QString &summary, const QStri
 
     calItem.generateNewICSData();
 
-    if (calItem.store()) {
-        qDebug() << __func__ << " - 'calItem': " << calItem;
-        qDebug() << __func__ << " - 'calItem.getICSData()': " << calItem.getICSData();
-    }
+    // New tasks enter the cache only after the server accepts their creation.
 
     return calItem;
 }
