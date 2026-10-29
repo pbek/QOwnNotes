@@ -6,6 +6,7 @@
 class MainWindow;
 class QAbstractButton;
 class QJSValue;
+class QPushButton;
 class QSplitter;
 
 namespace Ui {
@@ -23,6 +24,7 @@ class VersionDialog : public MasterDialog {
     void storeSettings();
     void on_versionListWidget_currentRowChanged(int currentRow);
     void dialogButtonClicked(QAbstractButton *button);
+    void on_searchLineEdit_textChanged(const QString &text);
 
    private:
     enum ButtonRole {
@@ -33,9 +35,11 @@ class VersionDialog : public MasterDialog {
 
     Ui::VersionDialog *ui;
     QSplitter *versionSplitter;
+    QPushButton *_restoreButton;
     QStringList *_diffList;
     QStringList *_dataList;
     void setupMainSplitter();
+    void updateVersionPreview();
 };
 
 #endif    // VERSIONDIALOG_H

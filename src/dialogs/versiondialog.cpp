@@ -16,6 +16,7 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::VersionDialog) {
     ui->setupUi(this);
     afterSetupUI();
+    setIgnoreReturnKey(true);
     ui->tabWidget->setCurrentIndex(
         SettingsService().value(QStringLiteral("VersionDialog/tabWidgetIndex"), 0).toInt());
 
@@ -28,6 +29,8 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
     ui->buttonBox->clear();
 
     button = new QPushButton(tr("&Restore selected version"));
+    _restoreButton = button;
+    _restoreButton->setEnabled(false);
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(QStringLiteral("edit-download"),
@@ -97,16 +100,18 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
         _dataList->append(noteText);
     }
 
-    if (!_diffList->isEmpty()) {
+    if (ui->versionListWidget->count() > 0) {
         ui->versionListWidget->setCurrentRow(0);
-        ui->diffBrowser->setHtml(_diffList->at(0));
     }
+
+    updateVersionPreview();
+    ui->searchLineEdit->setFocus();
 }
 
 void VersionDialog::setupMainSplitter() {
     versionSplitter = new QSplitter;
 
-    versionSplitter->addWidget(ui->versionListWidget);
+    versionSplitter->addWidget(ui->listFrame);
     versionSplitter->addWidget(ui->tabWidget);
 
     // restore splitter sizes
@@ -125,17 +130,69 @@ void VersionDialog::storeSettings() {
                       ui->tabWidget->currentIndex());
 }
 
-VersionDialog::~VersionDialog() { delete ui; }
+VersionDialog::~VersionDialog() {
+    delete _diffList;
+    delete _dataList;
+    delete ui;
+}
 
-void VersionDialog::on_versionListWidget_currentRowChanged(int currentRow) {
-    ui->diffBrowser->setHtml(_diffList->value(currentRow));
-    ui->noteTextEdit->setPlainText(_dataList->value(currentRow));
+void VersionDialog::on_searchLineEdit_textChanged(const QString &text) {
+    int firstMatchingRow = -1;
+
+    // Hide items without removing them so preview and restoration indices stay unchanged
+    for (int row = 0; row < ui->versionListWidget->count(); ++row) {
+        const bool matches = _dataList->at(row).contains(text, Qt::CaseInsensitive);
+        ui->versionListWidget->item(row)->setHidden(!matches);
+        if (matches && firstMatchingRow == -1) {
+            firstMatchingRow = row;
+        }
+    }
+
+    auto *searchWidget = ui->noteTextEdit->searchWidget();
+
+    if (text.isEmpty()) {
+        searchWidget->deactivate();
+        ui->searchLineEdit->setFocus();
+    } else {
+        // Show the matches with the regular search bar of the note text tab
+        ui->tabWidget->setCurrentWidget(ui->noteTextTab);
+        searchWidget->setSearchText(text);
+    }
+
+    auto *currentItem = ui->versionListWidget->currentItem();
+    if (currentItem == nullptr || currentItem->isHidden()) {
+        ui->versionListWidget->setCurrentRow(firstMatchingRow);
+    }
+
+    updateVersionPreview();
+}
+
+void VersionDialog::on_versionListWidget_currentRowChanged(int) { updateVersionPreview(); }
+
+void VersionDialog::updateVersionPreview() {
+    const int currentRow = ui->versionListWidget->currentRow();
+    const bool hasVersion = currentRow >= 0 && !ui->versionListWidget->item(currentRow)->isHidden();
+    _restoreButton->setEnabled(hasVersion);
+    ui->diffBrowser->setHtml(hasVersion ? _diffList->value(currentRow) : QString());
+    ui->noteTextEdit->setPlainText(hasVersion ? _dataList->value(currentRow) : QString());
+
+    // Highlight and jump to the matches of the selected version
+    if (hasVersion && !ui->searchLineEdit->text().isEmpty()) {
+        auto *searchWidget = ui->noteTextEdit->searchWidget();
+        searchWidget->doSearchCount();
+        searchWidget->activate(false);
+        ui->noteTextEdit->ensureCursorVisible();
+    }
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
     int actionRole = button->property("ActionRole").toInt();
 
     if (actionRole == Restore) {
+        auto *currentItem = ui->versionListWidget->currentItem();
+        if (currentItem == nullptr || currentItem->isHidden()) {
+            return;
+        }
         MainWindow::instance()->setCurrentNoteText(
             _dataList->value(ui->versionListWidget->currentRow()));
     }

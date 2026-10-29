@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.10.15
+
+- Added case-insensitive text search across all loaded versions in the Nextcloud / ownCloud
+  and Git note version dialogs (for [#3822](https://github.com/pbek/QOwnNotes/issues/3822))
+  - The search field above the version list filters versions by their note text
+  - Matches are highlighted with the regular search bar in the **Note text** tab
+
 ## 26.10.14
 
 - Added export of selected notes to individual PDFs from the note list context menu
