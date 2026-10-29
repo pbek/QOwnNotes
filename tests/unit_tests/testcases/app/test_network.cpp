@@ -122,7 +122,16 @@ void TestNetwork::testCalendarWrite() {
     QCOMPARE(finished.first().at(2).toString().isEmpty(), success);
     QCOMPARE(successCallbackCalled, success);
     QVERIFY(server.request.startsWith("PUT /calendar/qownnotes-"));
-    QVERIFY(server.request.contains("Content-Type: text/calendar; charset=utf-8\r\n"));
+    // HTTP header names are case-insensitive; their casing varies between Qt versions.
+    QByteArray contentType;
+    for (const auto &line : server.request.left(server.request.indexOf("\r\n\r\n")).split('\n')) {
+        const int colon = line.indexOf(':');
+        if (colon > 0 && line.left(colon).compare("Content-Type", Qt::CaseInsensitive) == 0) {
+            contentType = line.mid(colon + 1).trimmed();
+            break;
+        }
+    }
+    QCOMPARE(contentType, QByteArray("text/calendar; charset=utf-8"));
     QVERIFY(server.request.contains("BEGIN:VTODO"));
 
     CalendarItem cached = CalendarItem::fetchByUid(item.getUid());
