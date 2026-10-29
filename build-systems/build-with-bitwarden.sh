@@ -6,6 +6,7 @@ ProjectDir=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 BuildSystemsDir="$ProjectDir/build-systems"
 BitwardenItem="QOwnNotes release secrets"
 BitwardenItemId="d4e20a19-7e22-49a4-a6aa-fa169ff68d19"
+PgpPassphraseField="PGP passphrase"
 
 ShellMode=false
 
@@ -93,10 +94,21 @@ if ! gpg --list-packets "$SecretsDir/private.pgp" 2>/dev/null | grep -q "secret.
   exit 1
 fi
 
+# The PGP passphrase is read from the hidden custom field of the Bitwarden item,
+# so gpg-agent in the container can be preset without prompting
+PassphraseFile="$SecretsDir/pgp_passphrase"
+(
+  umask 077
+  jq -j --arg name "$PgpPassphraseField" '[.fields[]? | select(.name == $name) | .value][0] // ""' <<<"$Item" >"$PassphraseFile"
+)
+if [[ ! -s $PassphraseFile ]]; then
+  echo "No '$PgpPassphraseField' field found in '$BitwardenItem', you will be prompted for the PGP passphrase."
+fi
+
 ComposeCommand=("/QOwnNotes/build-systems/build-all.sh" "--docker")
 if [ "$ShellMode" = true ]; then
   ComposeCommand+=("--shell")
 fi
 
 echo "Running docker-compose build process..."
-QON_SECRETS_DIR="$SecretsDir" docker compose --project-directory "$BuildSystemsDir" run --rm releaser "${ComposeCommand[@]}"
+QON_SECRETS_DIR="$SecretsDir" QON_PGP_PASSPHRASE_FILE="$PassphraseFile" docker compose --project-directory "$BuildSystemsDir" run --rm releaser "${ComposeCommand[@]}"

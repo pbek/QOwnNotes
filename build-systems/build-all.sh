@@ -24,13 +24,7 @@ while test $# -gt 0; do
 done
 
 if [ "$DockerMode" = true ]; then
-  echo "Importing PGP key..."
-  gpg --import ~/private.pgp
-  if ! gpg --list-secret-keys patrizio@bekerle.com >/dev/null 2>&1; then
-    echo "The imported PGP key does not contain a secret key for patrizio@bekerle.com." >&2
-    echo "Ensure the Bitwarden attachment 'private.pgp' was exported with 'gpg --export-secret-keys'." >&2
-    exit 1
-  fi
+  /QOwnNotes/build-systems/import-pgp-key.sh || exit 1
   echo "Adding AUR ssh key..."
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/aur_rsa

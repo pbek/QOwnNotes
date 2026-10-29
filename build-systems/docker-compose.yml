@@ -13,6 +13,8 @@ services:
       - ${QON_SECRETS_DIR:-../secrets}/known_hosts:/home/ubuntu/.ssh/known_hosts
       - ${QON_SECRETS_DIR:-../secrets}/known_hosts.old:/home/ubuntu/.ssh/known_hosts.old
       - ${QON_SECRETS_DIR:-../secrets}/private.pgp:/home/ubuntu/private.pgp
+      # Optional, an empty file means you will be prompted for the passphrase
+      - ${QON_PGP_PASSPHRASE_FILE:-/dev/null}:/home/ubuntu/.pgp_passphrase:ro
       - ${QON_SECRETS_DIR:-../secrets}/gh/hosts.yml:/home/ubuntu/.config/gh/hosts.yml
       - ${QON_SECRETS_DIR:-../secrets}/gh/config.yml:/home/ubuntu/.config/gh/config.yml
     #      - ../secrets/id_rsa:/home/ubuntu/.ssh/id_rsa:ro
