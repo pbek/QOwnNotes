@@ -356,9 +356,6 @@ jobs:
       - name: "🚧 Compile application"
         run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
-      - name: "📦 Create MSI installer"
-        run: '& ..\build-systems\github\windows\build-msi.ps1'
-
       - name: "📦 Upload Windows artifacts"
         uses: actions/upload-artifact@v7
         with:
@@ -367,6 +364,18 @@ jobs:
             QOwnNotes.zip
             QOwnNotes.zip.sha256
             QOwnNotes.zip.sha256sum
+          if-no-files-found: error
+
+      # Build the MSI installer after uploading the ZIP archive, so the ZIP archive
+      # is still published if the MSI build fails
+      - name: "📦 Create MSI installer"
+        run: '& ..\build-systems\github\windows\build-msi.ps1'
+
+      - name: "📦 Upload Windows MSI installer artifacts"
+        uses: actions/upload-artifact@v7
+        with:
+          name: continuous-windows-msi-qt6
+          path: |
             QOwnNotes.msi
             QOwnNotes.msi.sha256sum
           if-no-files-found: error
@@ -587,8 +596,8 @@ jobs:
           copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.zip" "QOwnNotes.zip"
           copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.zip.sha256" "QOwnNotes.zip.sha256"
           copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.zip.sha256sum" "QOwnNotes.zip.sha256sum"
-          copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.msi" "QOwnNotes.msi"
-          copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.msi.sha256sum" "QOwnNotes.msi.sha256sum"
+          copy_file "../release-artifacts/continuous-windows-msi-qt6/QOwnNotes.msi" "QOwnNotes.msi"
+          copy_file "../release-artifacts/continuous-windows-msi-qt6/QOwnNotes.msi.sha256sum" "QOwnNotes.msi.sha256sum"
           copy_file "../release-artifacts/continuous-macos-qt6/QOwnNotes.dmg" "QOwnNotes.dmg"
           copy_file "../release-artifacts/continuous-macos-qt5/QOwnNotes.dmg" "QOwnNotesQt5.dmg"
 

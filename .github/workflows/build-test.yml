@@ -399,9 +399,6 @@ jobs:
       - name: Build Windows ZIP
         run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
-      - name: Build Windows MSI installer
-        run: '& ..\build-systems\github\windows\build-msi.ps1'
-
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v7
         with:
@@ -410,6 +407,18 @@ jobs:
             QOwnNotes.zip
             QOwnNotes.zip.sha256
             QOwnNotes.zip.sha256sum
+          if-no-files-found: error
+
+      # Build the MSI installer after uploading the ZIP archive, so it is
+      # still available if the MSI build fails
+      - name: Build Windows MSI installer
+        run: '& ..\build-systems\github\windows\build-msi.ps1'
+
+      - name: Upload Windows MSI installer artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: QOwnNotes-Windows-MSI-Qt6
+          path: |
             QOwnNotes.msi
             QOwnNotes.msi.sha256sum
           if-no-files-found: error
