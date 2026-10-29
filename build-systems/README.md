@@ -21,10 +21,12 @@ version and archive SHA-256 are pinned in `../src/cmake/BundledLibGit2.cmake`.
 It uses bundled compression/regex/hash implementations and disables SSH/HTTPS
 transports: QOwnNotes uses libgit2 for local operations, not remote synchronization.
 
-The Qt5 release jobs and recipes remain unchanged. The qmake-based Gentoo recipe,
+The Qt5 macOS release jobs remain supported. The qmake-based Gentoo recipe,
 legacy Qt5 Flatpak manifest, and root `../snap/snapcraft.yaml` are not migrated by
-this change. The root Snap recipe is still used by the existing job named
-`build-snap-qt5`, even though that recipe currently specifies Qt6.
+the libgit2 change. The root Snap recipe now specifies Qt6, but its legacy
+Qt5-named GitHub release jobs have been retired. Maintained GitHub Snap releases
+use `github/snap.qt6`; the final genuine Qt5 AMD64 snap is archived in the
+[26.10.6 release](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.6).
 
 Source-archive uploaders (GitHub, SourceForge, and TuxFamily) and release-post
 scripts do not build application binaries and need no libgit2 linking changes.

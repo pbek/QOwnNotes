@@ -244,82 +244,6 @@ jobs:
             ${{ env.SNAP_SHA256_PATH }}
           if-no-files-found: error
 
-  build-snap-qt5:
-    runs-on: ubuntu-latest
-    env:
-      QT_VERSION: 5.15.2
-    name: "🐧 Snap Qt 5.15.2"
-    steps:
-      - name: "🧰 Checkout"
-        uses: actions/checkout@v7
-        with:
-          submodules: recursive
-
-      - name: "⚙️ Set Env"
-        shell: bash
-        run: |
-          export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
-          echo "VERSION=${VERSION}" >> $GITHUB_ENV
-
-      - name: "⚙️ Install Qt"
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: ${{ env.QT_VERSION }}
-          modules: ${{ env.QT_MODULES }}
-          aqtversion: "==2.0.0"
-          cache: true
-
-      - name: "⚙️ Printenv"
-        shell: bash
-        run: |
-          echo "VERSION=${VERSION}"
-          printenv
-
-      - name: "🚧 Compile application"
-        uses: ./.github/actions/build-snap
-        id: snapcraft
-
-      - name: "🔎 Verify snap artifact"
-        shell: bash
-        run: |
-          SNAP_PATH="${{ steps.snapcraft.outputs.snap }}"
-
-          if [ -z "${SNAP_PATH}" ]; then
-            echo "::error::build-snap action did not return a snap artifact path"
-            exit 1
-          fi
-
-          case "${SNAP_PATH}" in
-            /*) ;;
-            *) SNAP_PATH="${GITHUB_WORKSPACE}/${SNAP_PATH}" ;;
-          esac
-
-          if [ ! -f "${SNAP_PATH}" ]; then
-            echo "::error::Built snap not found at ${SNAP_PATH}"
-            echo "::group::Available snap files"
-            find "$GITHUB_WORKSPACE" -name '*.snap' -print || true
-            echo "::endgroup::"
-            exit 1
-          fi
-
-          SNAP_SHA256_PATH="${SNAP_PATH}.sha256sum"
-
-          echo "SNAP_PATH=${SNAP_PATH}" >> "$GITHUB_ENV"
-
-          sha256sum "${SNAP_PATH}" > "${SNAP_SHA256_PATH}"
-          echo "SNAP_SHA256_PATH=${SNAP_SHA256_PATH}" >> "$GITHUB_ENV"
-
-          ls -hal "${SNAP_PATH}" "${SNAP_SHA256_PATH}"
-
-      - name: "📦 Upload Qt5 Snap artifacts"
-        uses: actions/upload-artifact@v7
-        with:
-          name: continuous-snap-qt5
-          path: |
-            ${{ env.SNAP_PATH }}
-            ${{ env.SNAP_SHA256_PATH }}
-          if-no-files-found: error
-
   build-windows:
     name: "🧊 Windows Qt6"
     runs-on: windows-2025
@@ -476,7 +400,6 @@ jobs:
     needs:
       - build-appimage
       - build-snap
-      - build-snap-qt5
       - build-windows
       - build-macos
       - build-macos-qt5
@@ -505,8 +428,6 @@ jobs:
           - QOwnNotes-x86_64.AppImage.sha256sum: SHA-256 checksum for the AppImage
           - QOwnNotes-amd64.snap: Linux Snap build with Qt 6
           - QOwnNotes-amd64.snap.sha256sum: SHA-256 checksum for the Qt 6 Snap package
-          - QOwnNotes-Qt5-amd64.snap: Linux Snap build with Qt 5 for older environments
-          - QOwnNotes-Qt5-amd64.snap.sha256sum: SHA-256 checksum for the Qt 5 Snap package
           - QOwnNotes.zip: Windows ZIP package built with Qt 6
           - QOwnNotes.zip.sha256: SHA-256 checksum for the Qt 6 Windows ZIP package
           - QOwnNotes.zip.sha256sum: Alternative SHA-256 checksum file for the Qt 6 Windows ZIP package
@@ -591,8 +512,6 @@ jobs:
           copy_file "../release-artifacts/continuous-appimage/QOwnNotes-x86_64.AppImage.sha256sum" "QOwnNotes-x86_64.AppImage.sha256sum"
           copy_first_match "../release-artifacts/continuous-snap-qt6/*.snap" "QOwnNotes-amd64.snap"
           copy_first_match "../release-artifacts/continuous-snap-qt6/*.snap.sha256sum" "QOwnNotes-amd64.snap.sha256sum"
-          copy_first_match "../release-artifacts/continuous-snap-qt5/*.snap" "QOwnNotes-Qt5-amd64.snap"
-          copy_first_match "../release-artifacts/continuous-snap-qt5/*.snap.sha256sum" "QOwnNotes-Qt5-amd64.snap.sha256sum"
           copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.zip" "QOwnNotes.zip"
           copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.zip.sha256" "QOwnNotes.zip.sha256"
           copy_file "../release-artifacts/continuous-windows-qt6/QOwnNotes.zip.sha256sum" "QOwnNotes.zip.sha256sum"

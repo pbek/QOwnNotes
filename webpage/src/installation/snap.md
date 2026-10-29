@@ -1,6 +1,7 @@
 # Install as Snap
 
 There is a snap `qownnotes` in the [Snap store](https://snapcraft.io/qownnotes).
+The current AMD64 snap uses Qt 6.
 
 You can install it by typing:
 
@@ -42,3 +43,13 @@ The home directory shown in file dialogs is your real home directory. Settings,
 databases, and caches remain in the snap's private storage; existing note folders
 are not moved. Snap confinement still limits which folders can be accessed.
 :::
+
+## Legacy Qt 5 snap
+
+The legacy Qt 5-named GitHub Snap jobs are retired starting with QOwnNotes 26.10.15.
+Use the Qt 6 Store snap for ongoing updates. If your system cannot run the current
+snap, the final genuine Qt 5 AMD64 build, `QOwnNotes-Qt5-amd64.snap`, and its
+SHA-256 checksum remain available in the
+[26.10.6 release](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.6).
+It will not receive further updates. Later releases' artifacts with the same
+Qt 5 filename already contain Qt 6 and are not a Qt 5 fallback.

@@ -2,6 +2,13 @@
 
 ## 26.10.15
 
+- Retired the legacy Qt 5-named Snap jobs from stable and continuous GitHub releases
+  (for [#3752](https://github.com/pbek/QOwnNotes/issues/3752))
+  - Use the Qt 6 snap from the [Snap Store](https://snapcraft.io/qownnotes)
+  - The final genuine Qt 5 AMD64 snap, `QOwnNotes-Qt5-amd64.snap`, remains available
+    in the [26.10.6 release](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.6)
+  - Later artifacts with that filename already used Qt 6; Qt 5 macOS builds and
+    source compatibility remain supported for now
 - Added an editor setting **Do not insert a space after autocompletion** to suppress the
   trailing space for script and language server completions
   (for [#3781](https://github.com/pbek/QOwnNotes/issues/3781),

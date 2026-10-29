@@ -7,8 +7,9 @@
 ## Recommendation
 
 Stop publishing Qt 5 through the Bitwarden-driven release process. Retain the Qt
-5 artifacts built directly by the GitHub release workflow for now, together with
-Qt 5 source compatibility and CI coverage.
+5 macOS artifacts built directly by the GitHub release workflow for now,
+together with Qt 5 source compatibility and CI coverage. The legacy Qt 5-named
+Snap jobs are retired starting with 26.10.15.
 
 Do not create a long-lived Qt 5 maintenance branch unless a maintainer commits
 to supporting it. Keep the final external Qt 5 packages available for users of
@@ -109,7 +110,7 @@ Retiring Qt 5 affects several release channels:
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Ubuntu legacy PPA                | Publication is retired; users must move to a Qt 6 package channel, another distribution format, or remain on the final package. |
 | OBS `desktop`                    | Publication is retired; older distribution targets may stop receiving releases.                                                 |
-| Qt 5 Snap                        | Retained in the GitHub release workflow for now.                                                                                |
+| Qt 5 Snap                        | Legacy GitHub jobs retired starting with 26.10.15; the final genuine Qt 5 AMD64 snap remains in the v26.10.6 release.           |
 | Legacy macOS DMG                 | Retained in the GitHub release workflow for now.                                                                                |
 | AppVeyor legacy Windows artifact | Retired; the final 26.10.0 build is archived as `QOwnNotes-Qt5.7-legacy.zip` in the GitHub v26.10.0 release.                    |
 
@@ -135,8 +136,14 @@ presence of a Qt 6 definition proves equivalent platform coverage.
      artifacts.
 
 2. **Retire the remaining GitHub Qt 5 artifacts**
-   - Next, announce the final Qt 5 snap and remove the legacy Snap release jobs;
-     the AMD64 Qt 6 replacement is accepted.
+   - Announce the final Qt 5 snap and remove the legacy Snap release jobs (done
+     for 26.10.15). The final genuine Qt 5 AMD64 artifact,
+     `QOwnNotes-Qt5-amd64.snap`, and its checksum remain in the
+     [v26.10.6 release](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.6).
+     Its executable was verified to link to Qt 5 libraries. The root Snap recipe
+     switched to Qt 6 before 26.10.7; later Qt 5-named artifacts are not Qt 5
+     fallbacks. The changelog and Snap installation documentation announce the
+     retirement and direct users to the Qt 6 Store snap or the archived build.
    - Remove the legacy macOS release jobs after the Qt 6 macOS artifacts meet
      the release requirements.
    - Remove Qt 5-only Nix and test configurations when they no longer protect a
