@@ -29,6 +29,13 @@
   - The popup now has a minimum height so dialogs display properly even with few or no
     bookmarks, including searches with no results
   - Updated dependencies
+- There was a new release of the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi),
+  [v26.8.1](https://github.com/pbek/qownnotesapi/releases/tag/v26.8.1)
+  - QOwnNotesAPI is now deprecated; Nextcloud users are encouraged to switch to
+    [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud)
+  - Read the [migration guide](https://github.com/qownnotes/qownnotes-nextcloud/blob/main/docs/migration.md)
+    for installation and client compatibility requirements before removing QOwnNotesAPI
+  - QOwnNotes for Nextcloud does not support ownCloud, so ownCloud users cannot migrate to it
 
 ## 26.10.13
 
