@@ -36,6 +36,12 @@
   - Read the [migration guide](https://github.com/qownnotes/qownnotes-nextcloud/blob/main/docs/migration.md)
     for installation and client compatibility requirements before removing QOwnNotesAPI
   - QOwnNotes for Nextcloud does not support ownCloud, so ownCloud users cannot migrate to it
+- [qc](https://github.com/qownnotes/qc) [v0.7.0](https://github.com/qownnotes/qc/releases/tag/v0.7.0) was released
+  - `qc switch` now uses the configured searchable selector to choose a note folder,
+    marking the current folder and using a bordered layout with fzf
+    (for [#25](https://github.com/qownnotes/qc/issues/25))
+  - Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> exits with code 130 without printing an error,
+    including when cancelling snippet selection (for [#1](https://github.com/qownnotes/qc/issues/1))
 
 ## 26.10.13
 
