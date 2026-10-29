@@ -22,6 +22,13 @@
   `QOwnNotes.zip` archive, so QOwnNotes can be installed without unzipping
   - It installs QOwnNotes for the current user, without administration permissions,
     adds a start menu shortcut and keeps the automatic updater working
+- There was a new release of the **QOwnNotes Web Companion browser extension**
+  [2026.10.0](https://github.com/qownnotes/web-companion/releases/tag/v2026.10.0)
+  - Context-menu actions now open the setup popup when user data consent or the security
+    token is missing (for [#122](https://github.com/qownnotes/web-companion/issues/122))
+  - The popup now has a minimum height so dialogs display properly even with few or no
+    bookmarks, including searches with no results
+  - Updated dependencies
 
 ## 26.10.13
 
