@@ -2,6 +2,10 @@
 
 ## 26.10.15
 
+- Added an editor setting **Do not insert a space after autocompletion** to suppress the
+  trailing space for script and language server completions
+  (for [#3781](https://github.com/pbek/QOwnNotes/issues/3781),
+  [#3819](https://github.com/pbek/QOwnNotes/pull/3819), thank you, @sciurius)
 - Added case-insensitive text search across all loaded versions in the Nextcloud / ownCloud
   and Git note version dialogs (for [#3822](https://github.com/pbek/QOwnNotes/issues/3822))
   - The search field above the version list filters versions by their note text
