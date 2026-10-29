@@ -515,9 +515,6 @@ jobs:
       - name: "🚧 Compile application"
         run: '& ..\build-systems\github\windows\build-zip-qt6.ps1'
 
-      - name: "📦 Create MSI installer"
-        run: '& ..\build-systems\github\windows\build-msi.ps1'
-
       #      - name: '📤 Upload artifact: Windows'
       #        uses: actions/upload-artifact@v4
       #        with:
@@ -556,6 +553,12 @@ jobs:
           tag: ${{ needs.create_release.outputs.tag }}
           release_id: ${{ needs.create_release.outputs.release_id }}
           overwrite: true
+
+      # Build the MSI installer after releasing the ZIP archive, so the ZIP archive
+      # (that is also used by the updater) is still released if the MSI build fails
+      - name: "📦 Create MSI installer"
+        run: '& ..\build-systems\github\windows\build-msi.ps1'
+
       - name: "📤 Release MSI installer"
         uses: svenstaro/upload-release-action@v2
         with:
