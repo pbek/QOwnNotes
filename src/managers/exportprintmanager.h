@@ -17,6 +17,7 @@
 #include <QObject>
 
 class MainWindow;
+class Note;
 class QPrinter;
 class QTextDocument;
 class QPlainTextEdit;
@@ -40,6 +41,7 @@ class ExportPrintManager : public QObject {
     bool prepareExportNoteAsPDFPrinter(QPrinter *printer);
     void exportNoteAsPDF(QPlainTextEdit *textEdit);
     void exportNoteAsPDF(QTextDocument *doc, bool useLightEditorSchemaForDarkSchema = false);
+    void exportSelectedNotesAsPDF();
     QTextDocument *getDocumentForPreviewExport();
 
    public slots:
@@ -50,6 +52,8 @@ class ExportPrintManager : public QObject {
     void on_actionExport_preview_HTML_triggered();
 
    private:
+    bool preparePDFPageSetup(QPrinter *printer);
+    QTextDocument *getDocumentForPreviewExport(Note note, bool decrypt);
     QTextDocument *createLightEditorSchemaDocument(QTextDocument *sourceDocument) const;
     void setHighlighterSchemaStyles(QOwnNotesMarkdownHighlighter *highlighter,
                                     const QString &schemaKey) const;
