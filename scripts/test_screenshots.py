@@ -12,7 +12,119 @@ from unittest.mock import patch
 import screenshots
 
 
+def luminance(color):
+    channels = [int(color[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    linear = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def window_state(base, session):
+    settings = configparser.ConfigParser(interpolation=None)
+    settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
+    return settings, screenshots.decode_state(settings["layout-screenshot"]["windowState"])
+
+
+def dock_geometry(state, name):
+    offset = state.index(screenshots.dock_name(name)) + len(screenshots.dock_name(name)) + 1
+    return (int.from_bytes(state[offset:offset + 4], "big"),
+            int.from_bytes(state[offset + 4:offset + 8], "big"))
+
+
 class ScreenshotTests(unittest.TestCase):
+    def setUp(self):
+        # Use Plasma's default font, not the developer's desktop, unless a test sets one.
+        desktop = tempfile.TemporaryDirectory()
+        self.addCleanup(desktop.cleanup)
+        environment = patch.dict(os.environ, {"XDG_CONFIG_HOME": desktop.name})
+        environment.start()
+        self.addCleanup(environment.stop)
+
+    def test_font_scale_follows_the_plasma_font(self):
+        with tempfile.TemporaryDirectory() as directory:
+            config = Path(directory)
+            self.assertEqual(screenshots.font_scale(config), 1.0)
+            for font, scale in (("Noto Sans,10,-1,5", 1.0), ("Noto Sans,14,-1,5", 1.4),
+                                ("Noto Sans,9,-1,5", 1.0), ("Inter,12.5,-1,5", 1.25)):
+                (config / "kdeglobals").write_text(f"[General]\nfont={font}\n")
+                self.assertAlmostEqual(screenshots.font_scale(config), scale)
+    def test_window_state_round_trips_through_qt_escapes(self):
+        for preset in screenshots.PRESETS:
+            with self.subTest(preset=preset):
+                value = screenshots.layout_settings(preset)["windowState"]
+                data = screenshots.decode_state(value)
+                self.assertEqual(data[:4], b"\0\0\0\xff")
+                self.assertEqual(screenshots.decode_state(screenshots.encode_state(data)),
+                                 data)
+
+    def test_plasma_session_is_imported_only_where_missing(self):
+        session = {"KDE_SESSION_VERSION": "6", "WAYLAND_DISPLAY": "wayland-1",
+                   "XDG_SESSION_TYPE": "wayland", "DISPLAY": ":0", "PATH": "/session"}
+        env = {"XDG_SESSION_TYPE": "tty", "DISPLAY": ":1", "PATH": "/mine"}
+        imported = screenshots.import_desktop_session(env, session)
+        self.assertEqual(env["KDE_SESSION_VERSION"], "6")
+        self.assertEqual(env["WAYLAND_DISPLAY"], "wayland-1")
+        self.assertEqual(env["XDG_SESSION_TYPE"], "wayland")
+        self.assertEqual(env["DISPLAY"], ":1")
+        self.assertEqual(env["PATH"], "/mine")
+        self.assertNotIn("DISPLAY", imported)
+        # Nothing is imported without a running Plasma 6 session.
+        env = {}
+        self.assertEqual(screenshots.import_desktop_session(
+            env, {"KDE_SESSION_VERSION": "5", "DISPLAY": ":0"}), [])
+        self.assertEqual(env, {})
+
+    def test_preview_only_note_tags_panel_grows_with_the_desktop_font(self):
+        original = screenshots.decode_state(
+            screenshots.layout_settings("preview-only")["windowState"])
+        order = ("taggingDockWidget", "noteSearchDockWidget", "noteFolderDockWidget",
+                 "noteListDockWidget", "noteNavigationDockWidget", "noteTagDockWidget")
+        for font, height, width in (("", 60, 400), ("font=Noto Sans,10,-1,5", 60, 400),
+                                    ("font=Noto Sans,14,-1,5", 84, 560)):
+            with self.subTest(font=font), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / "desktop").mkdir()
+                (root / "desktop/kdeglobals").write_text(f"[General]\n{font}\n")
+                with patch.dict(os.environ, {"XDG_CONFIG_HOME": str(root / "desktop")}):
+                    _, session = screenshots.prepare_profile(root / "demo", "preview-only")
+                settings, state = window_state(root / "demo", session)
+                self.assertTrue(settings.getboolean("General", "dockWasInitializedOnce"))
+                tags = dock_geometry(state, "noteTagDockWidget")
+                self.assertEqual(tags[1], height)
+                self.assertEqual(sum(tags), sum(dock_geometry(original, "noteTagDockWidget")))
+                for above, below in zip(order, order[1:]):
+                    position, size = dock_geometry(state, above)
+                    self.assertEqual(dock_geometry(state, below)[0], position + size + 1)
+                self.assertIn(b"\0\0\0\0" + width.to_bytes(4, "big"), state)
+
+    def test_demo_profile_is_offline_and_versions_are_read(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "minimal")
+            settings, _ = window_state(base, session)
+            self.assertEqual(settings["networking"]["proxyType"], "3")
+            self.assertEqual(settings["networking"]["proxyHostName"], "127.0.0.1")
+            self.assertRegex(screenshots.source_version(), r"^\d+\.\d+\.\d+$")
+            fake = base / "QOwnNotes"
+            fake.write_text("#!/bin/sh\necho 'QOwnNotes 1.2.3'\n")
+            fake.chmod(0o755)
+            self.assertEqual(screenshots.binary_version(fake), "1.2.3")
+
+    def test_vertical_preview_gets_more_height(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            _, session = screenshots.prepare_profile(base, "full-vertical")
+            _, state = window_state(base, session)
+            original = screenshots.decode_state(
+                screenshots.layout_settings("full-vertical")["windowState"])
+            preview = dock_geometry(state, "notePreviewDockWidget")
+            edit = dock_geometry(state, "noteEditDockWidget")
+            old_edit = dock_geometry(original, "noteEditDockWidget")
+            self.assertEqual(preview[1], screenshots.VERTICAL_PREVIEW_HEIGHT)
+            self.assertGreater(preview[1], dock_geometry(original, "notePreviewDockWidget")[1])
+            self.assertEqual(edit[0], preview[0] + preview[1] + 1)
+            self.assertEqual(sum(edit), sum(old_edit))
+            self.assertGreater(edit[1], 300)
+
     def test_every_scenario_has_colored_tags_and_valid_assignments(self):
         with tempfile.TemporaryDirectory() as directory:
             for scenario in screenshots.SCENARIOS:
@@ -22,8 +134,13 @@ class ScreenshotTests(unittest.TestCase):
                     notes = base / "Demo notes"
                     with closing(sqlite3.connect(notes / "notes.sqlite")) as db:
                         colors = db.execute("SELECT color, dark_color FROM tag").fetchall()
-                        self.assertEqual(len(set(colors)), 4)
-                        self.assertTrue(all(light != dark for light, dark in colors))
+                        self.assertEqual(len(set(colors)), len(screenshots.TAGS))
+                        for light, dark in colors:
+                            # Pastel rows behind dark text, deep rows behind light text.
+                            self.assertGreater(luminance(light), 0.6)
+                            self.assertLess(luminance(dark), 0.12)
+                        self.assertEqual(db.execute(
+                            "SELECT COUNT(*) FROM tag WHERE parent_id = 2").fetchone(), (1,))
                         assignments = db.execute(
                             "SELECT note_file_name, note_sub_folder_path FROM noteTagLink"
                         ).fetchall()
@@ -65,10 +182,12 @@ class ScreenshotTests(unittest.TestCase):
             for name in ("Projects", "Reading", "Weekends"):
                 self.assertIn(f"]({name}.md)", text)
                 self.assertTrue((base / f"Demo notes/{name}.md").is_file())
-            settings = configparser.ConfigParser(interpolation=None)
-            settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
-            self.assertIn(r"\0\0\0\x1\0\0\x2\x80\0\0\0\0\xfc",
-                          settings["layout-screenshot"]["windowState"])
+            _, state = window_state(base, session)
+            self.assertIn(b"\0\0\0\x01" + screenshots.GRAPH_WIDTH.to_bytes(4, "big") +
+                          b"\0\0\0\0\xfc", state)
+            self.assertIn(screenshots.dock_name("noteGraphicsViewDockWidget"), state)
+            self.assertEqual(state.count(screenshots.dock_name("notePreviewDockWidget")), 1)
+            self.assertNotIn(screenshots.dock_name("logDockWidget"), state)
 
     def test_overview_coverage_tracks_the_carousel(self):
         coverage = screenshots.overview_coverage()
@@ -79,26 +198,65 @@ class ScreenshotTests(unittest.TestCase):
         self.assertEqual(coverage["screenshot-darkmode.png"], "automated")
         self.assertEqual(coverage["screenshot-versioning.png"], "needs dedicated fixture")
 
-    def test_only_full_screenshot_gets_a_wider_preview(self):
+    def test_publish_replaces_reviewed_overview_images_everywhere(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            capture = root / "build-screenshots/20260101-000000-000000"
+            capture.mkdir(parents=True)
+            (capture / "overview-coverage.json").write_text("{}\n")
+            image = screenshots.PNG_SIGNATURE + b"new"
+            (capture / "screenshot.png").write_bytes(image)
+            (capture / "unrelated.png").write_bytes(image)
+            destinations = (root / "website", root / "repository")
+            for destination in destinations:
+                destination.mkdir()
+                (destination / "screenshot.png").write_bytes(b"old")
+                (destination / "screenshot-darkmode.png").write_bytes(b"old")
+            self.assertEqual(screenshots.latest_overview_capture(root / "build-screenshots"),
+                             capture)
+            screenshots.publish(capture, destinations)
+            for destination in destinations:
+                self.assertEqual((destination / "screenshot.png").read_bytes(), image)
+                # Images removed from the capture during review are kept unchanged.
+                self.assertEqual((destination / "screenshot-darkmode.png").read_bytes(), b"old")
+                self.assertFalse((destination / "unrelated.png").exists())
+
+    def test_publish_rejects_invalid_images_without_changes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "capture").mkdir()
+            (root / "capture/screenshot.png").write_bytes(screenshots.PNG_SIGNATURE)
+            (root / "capture/screenshot-minimal.png").write_bytes(b"broken")
+            (root / "website").mkdir()
+            (root / "website/screenshot.png").write_bytes(b"old")
+            with self.assertRaises(RuntimeError):
+                screenshots.publish(root / "capture", (root / "website",))
+            self.assertEqual((root / "website/screenshot.png").read_bytes(), b"old")
+
+    def test_publish_directories_contain_the_carousel_images(self):
+        for destination in screenshots.PUBLISH_DIRECTORIES:
+            for name in screenshots.OVERVIEW.values():
+                self.assertTrue((destination / name).is_file(), destination / name)
+
+    def test_only_preview_layouts_get_a_larger_preview(self):
         with tempfile.TemporaryDirectory() as directory:
             for preset in screenshots.PRESETS:
                 with self.subTest(preset=preset):
                     base = Path(directory) / preset
                     _, session = screenshots.prepare_profile(base, preset)
-                    settings = configparser.ConfigParser(interpolation=None)
-                    settings.read(base / f"config/PBE/QOwnNotes-{session}.conf")
-                    state = settings["layout-screenshot"]["windowState"]
+                    settings, state = window_state(base, session)
+                    original = screenshots.decode_state(
+                        screenshots.layout_settings(preset)["windowState"])
+                    # First-run dock limits would cap the note tags panel at 40 pixels.
+                    self.assertTrue(settings.getboolean("General", "dockWasInitializedOnce"))
                     if preset == "full":
-                        self.assertIn(
-                            r"\0\0\0\x1\0\0\x1\xe0\0\0\0\0\xfc", state)
-                        self.assertTrue(settings.getboolean(
-                            "General", "dockWasInitializedOnce"))
-                        self.assertNotEqual(
-                            state, screenshots.layout_settings(preset)["windowState"])
+                        self.assertIn(b"\0\0\0\x01" +
+                                      screenshots.PREVIEW_WIDTH.to_bytes(4, "big") +
+                                      b"\0\0\0\0\xfc", state)
+                    elif preset in ("full-vertical", "preview-only"):
+                        self.assertNotEqual(state, original)
                     else:
-                        self.assertEqual(
-                            state, screenshots.layout_settings(preset)["windowState"])
-                        self.assertNotIn("dockWasInitializedOnce", settings["General"])
+                        self.assertEqual(state, original)
 
     def test_all_presets_have_required_settings(self):
         for preset in screenshots.PRESETS:

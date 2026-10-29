@@ -8,10 +8,17 @@ just screenshots
 ```
 
 Requires Python 3, Spectacle, kdotool, and a running Plasma session. Build the
-application first with `just nix-build`. No virtual desktop or artificial theme
+application first with `just nix-build`; the command refuses to capture a binary
+whose version differs from `src/version.h` (override with `--any-version`). No virtual desktop or artificial theme
 is used. Keep the desktop unlocked and avoid typing or switching focus during capture.
 The demo windows briefly take focus; the previously active window is restored
 afterwards.
+
+When started from a terminal without Plasma's session variables (for example a
+terminal multiplexer, IDE, or SSH session on the same machine), the command reads
+the missing display variables such as `KDE_SESSION_VERSION` and `WAYLAND_DISPLAY`
+from the systemd user session that Plasma exports them to. Variables you have
+already set are not changed.
 
 Images are saved under `build-screenshots/<timestamp>/`, with window decorations
 and shadows but without the mouse pointer. Existing images are not overwritten.
@@ -30,12 +37,22 @@ Available presets: `minimal`, `full`, `preview-only`, `full-vertical`, `1col`,
 `subfolders`, `darkmode`, `note-relations`, `distraction-free`.
 By default, `minimal`, `full`, `preview-only`, `subfolders`, and `darkmode` are
 captured. The layouts come from the application's built-in layout presets, with
-a wider preview pane in the `full`, `subfolders`, and `darkmode` screenshots.
-The note relations scene replaces the preview with a wider graph and linked demo
-notes. Edit `scripts/screenshot-notes/` to curate the other scenes.
+a larger preview so the rendered Markdown is readable: 560 logical pixels wide
+in the `full`, `subfolders`, and `darkmode` screenshots and 400 pixels high above
+the editor in `full-vertical`. The note relations scene replaces the preview with
+a 640-pixel graph and linked demo notes. `preview-only` gets a 400-pixel-wide
+left column with 100 pixels of height for the note tag buttons; both grow with
+your Plasma font size (for example 520×140 with a 14 pt font), since larger fonts
+make the buttons larger. The app's first-run limit that caps the note tags panel
+at 40 pixels is skipped in every scene. `1col` is captured as a narrow window
+(at most 640 pixels wide). Edit `scripts/screenshot-notes/` to curate the other
+scenes. Preview sizes and tag colors are defined at the top of
+`scripts/screenshots.py`.
 
-All demo profiles have four colored tags with real note assignments, including
-separate colors for light and dark mode. The subfolder and dark mode scenes
+All demo profiles have five colored tags with real note assignments, including
+the `Workspace` sub-tag shown below the expanded `Projects` tag. Light mode uses
+soft pastel rows behind dark text; dark mode uses separate, muted deep tones
+behind light text. The subfolder and dark mode scenes
 organize the notes under `Personal`, `Projects/Small adventures`, and
 `Resources/Reading`, with the folder tree expanded. Dark mode uses the app's
 built-in dark palette, editor scheme, and light icons for readability; it does
@@ -52,17 +69,35 @@ using their existing website filenames in a new output directory:
 | -------------------------------------------- | -------------------------------------- |
 | Colored tags, subfolders, editor and preview | `screenshot.png`                       |
 | Minimal layout                               | `screenshot-minimal.png`               |
-| Vertical layout                              | `screenshot-vertical.png`              |
+| Preview above the editor, colored tags       | `screenshot-vertical.png`              |
 | Linked notes and relations graph             | `screenshot-note-relations.png`        |
-| One-column layout                            | `screenshot-1col.png`                  |
+| Narrow one-column layout                     | `screenshot-1col.png`                  |
 | Dark mode, colored tags and subfolders       | `screenshot-darkmode.png`              |
 | Distraction-free editing                     | `screenshot-distraction-free-mode.png` |
 | Current desktop icon theme                   | `screenshot-freedesktop-theme.png`     |
 
-Review the images before copying them into `webpage/src/.vuepress/public/screenshots/`.
-The command does not modify website assets or remove any carousel entries.
+The capture command does not modify website assets or remove any carousel entries.
 `overview-coverage.json` lists every screenshot referenced by the carousel and
 whether it is automated or still needs a dedicated fixture.
+
+### Replacing the carousel screenshots
+
+1. Capture: `just screenshots --overview`
+2. Review the images in the new `build-screenshots/<timestamp>/` directory and
+   delete any you don't want to publish. Deleted scenes keep their current
+   website image.
+3. Publish:
+
+   ```bash
+   just screenshots-publish                                    # latest overview capture
+   just screenshots-publish build-screenshots/<timestamp>      # a specific capture
+   ```
+
+Publishing copies only the known overview filenames from the table above into
+both `webpage/src/.vuepress/public/screenshots/` (website carousel) and
+`screenshots/` (README and AppStream metadata), which are kept identical. All
+images are checked to be PNG files before anything is replaced, and unchanged
+images are skipped. Review the result with `git diff --stat` and commit it.
 
 The remaining fourteen carousel scenes are **not yet automated**:
 
@@ -87,7 +122,8 @@ Each capture uses temporary settings, data, cache, copies of the demo notes, and
 generated SQLite database containing only demo tags and their note assignments.
 Only desktop appearance settings are copied from your configuration. Personal
 QOwnNotes settings, credentials, and notes are not copied or modified. Tracking
-and automatic update dialogs are disabled in the demo profile. Temporary profiles
+and automatic update dialogs are disabled in the demo profile, and the demo app
+uses an unreachable local proxy, so it stays offline and never shows an update notice. Temporary profiles
 are removed when the command exits.
 
 If the app does not match Plasma's theme, its Qt version may differ from the

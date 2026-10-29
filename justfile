@@ -119,6 +119,11 @@ nix-run:
 screenshots *args:
     python3 ./scripts/screenshots.py {{ args }}
 
+# Replace the website carousel and repository screenshots with a reviewed overview capture
+[group('screenshots')]
+screenshots-publish capture_dir="":
+    python3 ./scripts/screenshots.py --publish {{ capture_dir }}
+
 # Build the application for nix with the nixpkgs of the running system instead of the
 # locked one, so the Qt version matches the desktop environment and its Qt plugins,
 # like the KDE Plasma platform theme, can be loaded
