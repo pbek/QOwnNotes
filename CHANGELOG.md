@@ -10,6 +10,11 @@
   and Git note version dialogs (for [#3822](https://github.com/pbek/QOwnNotes/issues/3822))
   - The search field above the version list filters versions by their note text
   - Matches are highlighted with the regular search bar in the **Note text** tab
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v1.8.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v1.8.0)
+  - Search text across all note versions in the note versions dialog, filtering the list to
+    matching versions with match counts and highlighted excerpts
+  - The version preview highlights all matches and lets you step between them
 
 ## 26.10.14
 
