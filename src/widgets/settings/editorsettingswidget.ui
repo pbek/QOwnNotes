@@ -247,6 +247,16 @@
          </property>
         </widget>
        </item>
+       <item row="20" column="0" colspan="4">
+        <widget class="QCheckBox" name="autocompleteNoSpaceCheckBox">
+         <property name="toolTip">
+          <string>Do not append a space after autocompletion</string>
+         </property>
+         <property name="text">
+          <string>Do not insert a space after autocompletion</string>
+         </property>
+        </widget>
+       </item>
      </layout>
     </widget>
    </item>

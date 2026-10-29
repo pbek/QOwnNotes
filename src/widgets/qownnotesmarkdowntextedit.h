@@ -94,6 +94,11 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void onAutoCompleteRequested();
 
     /**
+     * Inserts autocompleted text
+     */
+    void insertAutoCompletedText(QString);
+
+    /**
      * Tries to find an equation in the current line and solves it
      * @return true on success
      */
