@@ -9,6 +9,7 @@ project(QOwnNotesTests LANGUAGES C CXX)
 
 # BEGIN options
 option(QON_TESTS_COVERAGE "Build the unit tests with gcov code coverage" OFF)
+option(QON_QLITEHTML_TESTS "Build QLiteHtml preview regression tests" OFF)
 option(QON_KDE_INTEGRATION_TESTS "Build isolated KDE global shortcut tests" OFF)
 option(QON_BUNDLED_LIBGIT2_TESTS "Build the bundled libgit2 regression test"
        OFF)
@@ -95,6 +96,11 @@ add_subdirectory(${QON_SRC_DIR}/libraries/qtkeychain libraries/qtkeychain
 add_subdirectory(${QON_SRC_DIR}/libraries/diff_match_patch
                  libraries/diff_match_patch EXCLUDE_FROM_ALL)
 
+if(QON_QLITEHTML_TESTS)
+  add_subdirectory(${QON_SRC_DIR}/libraries/qlitehtml libraries/qlitehtml
+                   EXCLUDE_FROM_ALL)
+endif()
+
 #
 # Test executable
 #
@@ -120,6 +126,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckdialog.h
     ${QON_TESTS_DIR}/testcases/app/test_notes.cpp
     ${QON_TESTS_DIR}/testcases/app/test_notes.h
+    ${QON_TESTS_DIR}/testcases/app/test_previewdetails.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_previewdetails.h
     ${QON_TESTS_DIR}/testcases/app/test_qmarkdowntextedit.cpp
     ${QON_TESTS_DIR}/testcases/app/test_qmarkdowntextedit.h
     ${QON_TESTS_DIR}/testcases/app/test_script.cpp
@@ -240,12 +248,16 @@ set(APP_SOURCE_FILES
     utils/listutils.h
     utils/misc.cpp
     utils/misc.h
+    utils/previewdetails.cpp
+    utils/previewdetails.h
     utils/schema.cpp
     utils/schema.h
     widgets/logwidget.cpp
     widgets/logwidget.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
+    widgets/notepreviewwidget.cpp
+    widgets/notepreviewwidget.h
     widgets/passwordlineedit.cpp
     widgets/passwordlineedit.h
     widgets/qtexteditsearchwidget.cpp
@@ -257,6 +269,18 @@ set(APP_SOURCE_FILES
 list(TRANSFORM APP_SOURCE_FILES PREPEND ${QON_SRC_DIR}/)
 
 add_executable(tests ${TEST_SOURCE_FILES} ${APP_SOURCE_FILES})
+
+if(QON_QLITEHTML_TESTS)
+  target_sources(
+    tests
+    PRIVATE ${QON_SRC_DIR}/widgets/htmlpreviewwidget.cpp
+            ${QON_SRC_DIR}/widgets/htmlpreviewwidget.h
+            ${QON_SRC_DIR}/libraries/qlitehtml/src/qlitehtmlsearchwidget.cpp
+            ${QON_SRC_DIR}/libraries/qlitehtml/src/qlitehtmlsearchwidget.h
+            ${QON_SRC_DIR}/libraries/qlitehtml/src/qlitehtmlsearchwidget.ui)
+  target_compile_definitions(tests PRIVATE USE_QLITEHTML)
+  target_link_libraries(tests PRIVATE qlitehtml::qlitehtml)
+endif()
 
 add_executable(git-log-recorder helpers/gitlogrecorder.cpp)
 target_link_libraries(git-log-recorder PRIVATE Qt${QT_VERSION_MAJOR}::Core)

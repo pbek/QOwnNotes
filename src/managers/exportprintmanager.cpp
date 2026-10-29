@@ -20,6 +20,7 @@
 #include <helpers/qownnotesmarkdownhighlighter.h>
 #include <services/settingsservice.h>
 #include <utils/misc.h>
+#include <utils/previewdetails.h>
 #include <utils/schema.h>
 
 #include <QDebug>
@@ -303,6 +304,9 @@ QTextDocument *ExportPrintManager::getDocumentForPreviewExport(Note note, bool d
         note.toMarkdownHtml(NoteFolder::currentLocalPath(), _mainWindow->getMaxImageWidth(),
                             Utils::Misc::useInternalExportStylingForPreview(), decrypt);
     html = Utils::Misc::parseTaskList(html, false);
+    Utils::PreviewDetails details;
+    details.setHtml(html);
+    html = details.renderedHtml(true);
 
     // Windows 10 has troubles with the QTextDocument from the QTextBrowser
     // see: https://github.com/pbek/QOwnNotes/issues/2015

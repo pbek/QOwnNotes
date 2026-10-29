@@ -7,6 +7,8 @@
 #include <QNetworkAccessManager>
 #include <QWidget>
 
+#include "utils/previewdetails.h"
+
 class QLiteHtmlSearchWidget;
 class QScrollBar;
 
@@ -15,6 +17,7 @@ class HtmlPreviewWidgetInternal final : public QLiteHtmlWidget {
     Q_OBJECT
    public:
     explicit HtmlPreviewWidgetInternal(QWidget *parent);
+    void setSourceHtml(const QString &html) { _sourceHtml = html; }
 
    Q_SIGNALS:
     void anchorClicked(const QUrl &url);
@@ -28,6 +31,7 @@ class HtmlPreviewWidgetInternal final : public QLiteHtmlWidget {
     bool eventFilter(QObject *src, QEvent *e) override;
 
     QNetworkAccessManager m_nam;
+    QString _sourceHtml;
 
     void exportAsHTMLFile();
 };
@@ -37,7 +41,7 @@ class HtmlPreviewWidget final : public QWidget {
     Q_OBJECT
    public:
     HtmlPreviewWidget(QWidget *parent);
-    void setHtml(const QString &text);
+    void setHtml(const QString &text, const QString &noteReference = QString());
     QLiteHtmlSearchWidget *searchWidget();
 
     // Expose QLiteHtmlWidget methods
@@ -69,6 +73,7 @@ class HtmlPreviewWidget final : public QWidget {
    private:
     HtmlPreviewWidgetInternal *_htmlWidget;
     QLiteHtmlSearchWidget *_searchWidget;
+    Utils::PreviewDetails _details;
 };
 
 #endif

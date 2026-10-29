@@ -94,7 +94,7 @@ void HtmlPreviewWidgetInternal::onContextMenuRequested(QPoint pos, const QUrl &l
         menu.addAction(copyImageClipboardAction);
     }
 
-    if (!linkUrl.isEmpty() && linkUrl.isValid()) {
+    if (!linkUrl.isEmpty() && linkUrl.isValid() && !Utils::PreviewDetails::isToggleUrl(linkUrl)) {
         QAction *copyLinkAction = new QAction(tr("Copy link location"), this);
         copyLinkAction->setEnabled(selectedText().isEmpty());
         connect(copyLinkAction, &QAction::triggered, this,
@@ -198,7 +198,7 @@ void HtmlPreviewWidgetInternal::exportAsHTMLFile() {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             out.setCodec("UTF-8");
 #endif
-            out << html();
+            out << _sourceHtml;
             file.flush();
             file.close();
             Utils::Misc::openFolderSelect(
@@ -223,9 +223,18 @@ HtmlPreviewWidget::HtmlPreviewWidget(QWidget *parent)
     const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
     _searchWidget->setDarkMode(darkMode);
 
-    // Forward signals from internal widget
-    connect(_htmlWidget, &HtmlPreviewWidgetInternal::anchorClicked, this,
-            &HtmlPreviewWidget::anchorClicked);
+    // Handle disclosure links locally; forward ordinary links to the main window.
+    connect(_htmlWidget, &HtmlPreviewWidgetInternal::anchorClicked, this, [this](const QUrl &url) {
+        if (Utils::PreviewDetails::isToggleUrl(url)) {
+            if (_details.toggle(url)) {
+                const int scroll = verticalScrollBar()->value();
+                _htmlWidget->setHtml(_details.renderedHtml());
+                verticalScrollBar()->setValue(scroll);
+            }
+            return;
+        }
+        emit anchorClicked(url);
+    });
 }
 
 void HtmlPreviewWidget::keyPressEvent(QKeyEvent *event) {
@@ -245,7 +254,7 @@ void HtmlPreviewWidget::keyPressEvent(QKeyEvent *event) {
 
 QLiteHtmlSearchWidget *HtmlPreviewWidget::searchWidget() { return _searchWidget; }
 
-void HtmlPreviewWidget::setHtml(const QString &text) {
+void HtmlPreviewWidget::setHtml(const QString &text, const QString &noteReference) {
     // Inject strikeout CSS so that <del> tags produced by the Markdown renderer
     // are displayed with a line-through decoration in QLiteHtml (issue #3466).
     // QLiteHtml's built-in master CSS has no rule for <del> or <s>, so without
@@ -283,7 +292,10 @@ void HtmlPreviewWidget::setHtml(const QString &text) {
         // Fallback: prepend the style blocks if there is no <head> section
         processed.prepend(underlineCss + strikeoutCss + scriptCss + hrCss);
     }
-    _htmlWidget->setHtml(Utils::Misc::parseTaskList(processed, true));
+    processed = Utils::Misc::parseTaskList(processed, true);
+    _htmlWidget->setSourceHtml(processed);
+    _details.setHtml(processed, noteReference);
+    _htmlWidget->setHtml(_details.renderedHtml());
 }
 
 void HtmlPreviewWidget::setZoomFactor(qreal scale) { _htmlWidget->setZoomFactor(scale); }
@@ -292,7 +304,15 @@ qreal HtmlPreviewWidget::zoomFactor() const { return _htmlWidget->zoomFactor(); 
 
 QString HtmlPreviewWidget::selectedText() const { return _htmlWidget->selectedText(); }
 
-void HtmlPreviewWidget::scrollToAnchor(const QString &name) { _htmlWidget->scrollToAnchor(name); }
+void HtmlPreviewWidget::scrollToAnchor(const QString &name) {
+    // Expand collapsed <details> sections that contain the anchor, so there is something to
+    // scroll to
+    if (_details.revealAnchor(name)) {
+        _htmlWidget->setHtml(_details.renderedHtml());
+    }
+
+    _htmlWidget->scrollToAnchor(name);
+}
 
 void HtmlPreviewWidget::setDefaultFont(const QFont &font) { _htmlWidget->setDefaultFont(font); }
 

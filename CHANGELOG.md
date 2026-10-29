@@ -2,6 +2,12 @@
 
 ## 26.10.14
 
+- Added clickable `<details>` / `<summary>` sections to both note preview backends,
+  including nested sections and initially expanded sections with `open`
+  (for [#3818](https://github.com/pbek/QOwnNotes/issues/3818))
+  - Expansion state is preserved while editing the current note
+  - HTML exports keep native disclosure markup; printing and PDF export include all content
+
 - Failed CalDAV task saves now show an error and leave the cached task unchanged,
   instead of making rejected edits appear saved after refreshing the task list
   (for [#3815](https://github.com/pbek/QOwnNotes/issues/3815))

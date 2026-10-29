@@ -17,7 +17,7 @@ class NoteDialog : public MasterDialog {
     void setNote(Note &note);
 
    private slots:
-    void on_noteTextView_anchorClicked(const QUrl &url);
+    void on_noteTextView_previewLinkClicked(const QUrl &url);
 
     void on_tabWidget_currentChanged(int index);
 

@@ -729,6 +729,8 @@ set(SOURCE_FILES
     managers/notetreemanager.h
     utils/misc.cpp
     utils/misc.h
+    utils/previewdetails.cpp
+    utils/previewdetails.h
     utils/git.cpp
     utils/git.h
     utils/cli.cpp

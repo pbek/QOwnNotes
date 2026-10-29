@@ -204,6 +204,7 @@ SOURCES += main.cpp\
     services/settingsservice.cpp \
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
+    utils/previewdetails.cpp \
     utils/git.cpp \
     utils/gui.cpp \
     utils/cli.cpp \
@@ -377,6 +378,7 @@ HEADERS  += mainwindow.h \
     services/settingsservice.h \
     dialogs/masterdialog.h \
     utils/misc.h \
+    utils/previewdetails.h \
     utils/git.h \
     utils/gui.h \
     utils/cli.h \

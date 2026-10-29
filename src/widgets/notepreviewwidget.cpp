@@ -25,6 +25,8 @@
 #include <QMovie>
 #include <QProxyStyle>
 #include <QRegularExpression>
+#include <QScrollBar>
+#include <QTimer>
 
 #include "utils/gui.h"
 #include "utils/misc.h"
@@ -45,6 +47,16 @@ class NoDottedOutlineForLinksStyle : public QProxyStyle {
 
 NotePreviewWidget::NotePreviewWidget(QWidget *parent) : QTextBrowser(parent) {
     Utils::Gui::enableTouchScrolling(this);
+    setOpenLinks(false);
+    connect(this, &QTextBrowser::anchorClicked, this, [this](const QUrl &url) {
+        if (Utils::PreviewDetails::isToggleUrl(url)) {
+            if (_details.toggle(url)) {
+                renderDetails(true);
+            }
+            return;
+        }
+        emit previewLinkClicked(url);
+    });
 
     // add the hidden search widget
     _searchWidget = new QTextEditSearchWidget(this);
@@ -259,11 +271,40 @@ void NotePreviewWidget::animateGif(const QString &text) {
     }
 }
 
-void NotePreviewWidget::setHtml(const QString &text) {
-    animateGif(text);
+void NotePreviewWidget::setHtml(const QString &text, const QString &noteReference) {
+    clearHoveredLink();
     _html = Utils::Misc::parseTaskList(text, true);
+    _details.setHtml(_html, noteReference);
+    renderDetails(false);
+}
 
-    QTextBrowser::setHtml(_html);
+/**
+ * Renders the preview with the current disclosure state of the <details> sections
+ */
+void NotePreviewWidget::renderDetails(bool keepScrollPosition) {
+    const int scroll = verticalScrollBar()->value();
+    clearHoveredLink();
+    const QString html = _details.renderedHtml();
+    animateGif(html);
+    QTextBrowser::setHtml(html);
+
+    if (keepScrollPosition) {
+        verticalScrollBar()->setValue(scroll);
+
+        // The document layout may not be finished yet, which would clamp the value
+        QTimer::singleShot(0, this, [this, scroll] { verticalScrollBar()->setValue(scroll); });
+    }
+}
+
+/**
+ * Expands collapsed <details> sections that contain the anchor before scrolling to it
+ */
+void NotePreviewWidget::scrollToAnchor(const QString &name) {
+    if (_details.revealAnchor(name)) {
+        renderDetails(false);
+    }
+
+    QTextBrowser::scrollToAnchor(name);
 }
 
 /**
@@ -318,7 +359,7 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
     QTextFormat format = c.charFormat();
     const QString &anchorHref = format.toCharFormat().anchorHref();
     bool isImageFormat = format.isImageFormat();
-    bool isAnchor = !anchorHref.isEmpty();
+    bool isAnchor = !anchorHref.isEmpty() && !Utils::PreviewDetails::isToggleUrl(QUrl(anchorHref));
 
     if (isImageFormat || isAnchor) {
         menu->addSeparator();

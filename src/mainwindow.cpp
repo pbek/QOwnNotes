@@ -747,7 +747,7 @@ void MainWindow::initNotePreviewAndTextEdits() {
     // TODO centralize dark mode handling
     ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
 
-    connect(ui->noteTextView, &QTextBrowser::anchorClicked, this,
+    connect(ui->noteTextView, &NotePreviewWidget::previewLinkClicked, this,
             &MainWindow::onNotePreviewAnchorClicked);
 #endif
 }
@@ -4282,18 +4282,20 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
         const QString html = note->toMarkdownHtml(NoteFolder::currentLocalPath(),
                                                   getMaxImageWidth(), false, decrypt);
 
-        // create a hash of the html (because
-        const QString hash =
-            QString(QCryptographicHash::hash(html.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+        // Include the note identity so identical notes do not share disclosure state.
+        const QString hash = QString(
+            QCryptographicHash::hash((html + QChar(0) + noteFoldingReference(*note)).toUtf8(),
+                                     QCryptographicHash::Sha1)
+                .toHex());
 
         // update the note preview if the text has changed
         // we use our hash because ui->noteTextView->toHtml() may return
         // a different text than before
         if (_notePreviewHash != hash) {
 #ifdef USE_QLITEHTML
-            _notePreviewWidget->setHtml(html);
+            _notePreviewWidget->setHtml(html, noteFoldingReference(*note));
 #else
-            ui->noteTextView->setHtml(html);
+            ui->noteTextView->setHtml(html, noteFoldingReference(*note));
 #endif
             _notePreviewHash = hash;
         }

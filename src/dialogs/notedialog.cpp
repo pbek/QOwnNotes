@@ -55,12 +55,13 @@ void NoteDialog::setNote(Note &note) {
                        : note.getNoteText();
     ui->textEdit->setPlainText(text);
 
-    ui->noteTextView->setHtml(note.toMarkdownHtml(NoteFolder::currentLocalPath()));
+    ui->noteTextView->setHtml(note.toMarkdownHtml(NoteFolder::currentLocalPath()),
+                              note.fullNoteFilePath());
 }
 
 NoteDialog::~NoteDialog() { delete ui; }
 
-void NoteDialog::on_noteTextView_anchorClicked(const QUrl &url) {
+void NoteDialog::on_noteTextView_previewLinkClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
 
     if (UrlHandler::isUrlSchemeLocal(url)) {

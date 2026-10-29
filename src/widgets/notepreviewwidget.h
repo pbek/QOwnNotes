@@ -19,6 +19,8 @@
 #include <QResizeEvent>
 #include <QTextBrowser>
 
+#include "utils/previewdetails.h"
+
 class NotePreviewWidget : public QTextBrowser {
     Q_OBJECT
 
@@ -27,7 +29,8 @@ class NotePreviewWidget : public QTextBrowser {
     void initSearchFrame(QWidget *searchFrame, bool darkMode = false);
     QTextEditSearchWidget *searchWidget();
 
-    void setHtml(const QString &text);
+    void setHtml(const QString &text, const QString &noteReference = QString());
+    void scrollToAnchor(const QString &name);
 
     void exportAsHTMLFile();
 
@@ -56,9 +59,11 @@ class NotePreviewWidget : public QTextBrowser {
 
    signals:
     void resize(QSize size, QSize oldSize);
+    void previewLinkClicked(const QUrl &url);
 
    private:
     QList<QMovie *> _movies;
+    Utils::PreviewDetails _details;
     QString _currentFile;
 
     struct LargePixmap {
@@ -69,4 +74,5 @@ class NotePreviewWidget : public QTextBrowser {
     int _hoveredLinkStart = -1;
     int _hoveredLinkEnd = -1;
     void clearHoveredLink();
+    void renderDetails(bool keepScrollPosition);
 };
