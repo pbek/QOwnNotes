@@ -19,6 +19,7 @@
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
+#include <managers/exportprintmanager.h>
 #include <services/cloudservice.h>
 #include <services/scriptingservice.h>
 #include <services/settingsservice.h>
@@ -603,6 +604,11 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
     if (noteCount > 1) {
         diffSelectedNotesAction = noteMenu.addAction(tr("Diff selected notes"));
     }
+
+    auto *exportPDFAction = noteMenu.addAction(_ui->action_Export_note_as_PDF_markdown->icon(),
+                                               tr("Export selected notes to individual PDFs…"));
+    QObject::connect(exportPDFAction, &QAction::triggered, _mainWindow->exportPrintManager(),
+                     &ExportPrintManager::exportSelectedNotesAsPDF);
 
 #ifdef QON_KDE_INTEGRATION
     // Send the note files to installed targets, e.g. KDE Connect or email

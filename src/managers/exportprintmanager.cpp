@@ -23,14 +23,17 @@
 #include <utils/schema.h>
 
 #include <QDebug>
+#include <QDir>
 #include <QFile>
 #include <QFileInfo>
 #include <QInputDialog>
+#include <QMessageBox>
 #include <QPageSetupDialog>
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QTextDocument>
 #include <QTextStream>
+#include <memory>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -78,7 +81,7 @@ void ExportPrintManager::printTextDocument(QTextDocument *textDocument,
  *        widget as PDF
  * @param printer
  */
-bool ExportPrintManager::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
+bool ExportPrintManager::preparePDFPageSetup(QPrinter *printer) {
 #ifdef Q_OS_LINUX
     Utils::Misc::loadPrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
 
@@ -158,6 +161,14 @@ bool ExportPrintManager::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     settings.setValue(QStringLiteral("Printer/NotePDFExportOrientation"), orientationIndex);
 #endif
 
+    return true;
+}
+
+bool ExportPrintManager::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
+    if (!preparePDFPageSetup(printer)) {
+        return false;
+    }
+
     FileDialog dialog(QStringLiteral("NotePDFExport"));
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
@@ -220,11 +231,77 @@ void ExportPrintManager::exportNoteAsPDF(QTextDocument *doc,
     delete printer;
 }
 
+void ExportPrintManager::exportSelectedNotesAsPDF() {
+    QVector<int> noteIds;
+    for (const Note &note : _mainWindow->selectedNotes()) {
+        noteIds.append(note.getId());
+    }
+
+    _mainWindow->storeUpdatedNotesToDisk();
+
+    QVector<Note> notes;
+    for (int noteId : noteIds) {
+        const Note note = Note::fetch(noteId);
+        if (note.isFetched()) {
+            notes.append(note);
+        }
+    }
+
+    if (notes.isEmpty()) {
+        return;
+    }
+
+    FileDialog dialog(QStringLiteral("SelectedNotesPDFExport"));
+    dialog.setFileMode(QFileDialog::Directory);
+    dialog.setOption(QFileDialog::ShowDirsOnly);
+    dialog.setWindowTitle(tr("Select folder for exported PDFs"));
+    if (dialog.exec() != QDialog::Accepted || dialog.selectedFile().isEmpty()) {
+        return;
+    }
+
+    const QDir directory(dialog.selectedFile());
+    QPrinter printer(QPrinter::HighResolution);
+    if (!preparePDFPageSetup(&printer)) {
+        return;
+    }
+    printer.setColorMode(QPrinter::Color);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+
+    QString filePath;
+    for (const Note &note : notes) {
+        const QString baseName = QFileInfo(note.getFileName()).completeBaseName();
+        filePath = directory.filePath(baseName + QStringLiteral(".pdf"));
+        int suffix = 1;
+        while (QFileInfo::exists(filePath)) {
+            filePath = directory.filePath(
+                QStringLiteral("%1-%2.pdf").arg(baseName, QString::number(suffix++)));
+        }
+
+        printer.setOutputFileName(filePath);
+        std::unique_ptr<QTextDocument> document(
+            getDocumentForPreviewExport(note, note.canDecryptNoteText()));
+        document->print(&printer);
+
+        if (printer.printerState() == QPrinter::Error || QFileInfo(filePath).size() <= 0) {
+            QFile::remove(filePath);
+            QMessageBox::warning(_mainWindow, tr("PDF export failed"),
+                                 tr("Could not export the note to \"%1\".").arg(filePath));
+            return;
+        }
+    }
+
+    _mainWindow->showStatusBarMessage(tr("Exported %n note(s) as PDF.", "", notes.size()), 4000);
+    Utils::Misc::openFolderSelect(filePath, QStringLiteral("show-exported-pdf-in-file-manager"));
+}
+
 QTextDocument *ExportPrintManager::getDocumentForPreviewExport() {
-    bool decrypt = _ui->noteTextEdit->isHidden();
-    QString html = _mainWindow->currentNote.toMarkdownHtml(
-        NoteFolder::currentLocalPath(), _mainWindow->getMaxImageWidth(),
-        Utils::Misc::useInternalExportStylingForPreview(), decrypt);
+    return getDocumentForPreviewExport(_mainWindow->currentNote, _ui->noteTextEdit->isHidden());
+}
+
+QTextDocument *ExportPrintManager::getDocumentForPreviewExport(Note note, bool decrypt) {
+    QString html =
+        note.toMarkdownHtml(NoteFolder::currentLocalPath(), _mainWindow->getMaxImageWidth(),
+                            Utils::Misc::useInternalExportStylingForPreview(), decrypt);
     html = Utils::Misc::parseTaskList(html, false);
 
     // Windows 10 has troubles with the QTextDocument from the QTextBrowser
