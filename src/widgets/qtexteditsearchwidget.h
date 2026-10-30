@@ -37,6 +37,10 @@ class QTextEditSearchWidget : public QWidget {
    private:
     Ui::QTextEditSearchWidget *ui;
     QTimer _debounceTimer;
+    bool _isReplacingAll = false;
+
+    bool findText(const QString &text, QFlags<QTextDocument::FindFlag> options);
+    void updateMatchCount(bool found);
 
    protected:
     QTextEdit *_textEdit;

@@ -177,6 +177,10 @@
     the highlighted text color, the menu names use a muted color from the color scheme
   - Actions that are currently disabled are shown muted and can't be triggered
   - A hint is shown instead of an empty list if no action matches the search
+- The text search in the note preview and the update dialog now shows how many
+  matches there are and which of them is selected, like "2 of 5"
+- Fixed the text search in the note preview and the update dialog ignoring the
+  regular expression mode when the search wrapped around to the start of the text
 
 ## 26.10.15
 

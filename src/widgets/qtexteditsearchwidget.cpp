@@ -21,6 +21,7 @@
 #include <QTextBoundaryFinder>
 
 #include "ui_qtexteditsearchwidget.h"
+#include "utils/gui.h"
 
 namespace {
 bool isEmojiCodePoint(unsigned int codePoint) {
@@ -84,6 +85,8 @@ QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent)
     : QWidget(parent), ui(new Ui::QTextEditSearchWidget), _textEdit(parent), _darkMode(false) {
     ui->setupUi(this);
     hide();
+    Utils::Gui::setMutedTextColor(ui->matchCountLabel);
+    ui->matchCountLabel->hide();
 
     QObject::connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(deactivate()));
     QObject::connect(ui->searchLineEdit, SIGNAL(textChanged(QString)), this,
@@ -226,6 +229,7 @@ void QTextEditSearchWidget::searchLineEditTextChanged(const QString &arg1) {
     if (!shouldStartSearch(arg1)) {
         _debounceTimer.stop();
         ui->searchLineEdit->setStyleSheet(QString());
+        ui->matchCountLabel->hide();
         return;
     }
 
@@ -278,9 +282,94 @@ void QTextEditSearchWidget::doReplaceAll() {
     // start at the top
     _textEdit->moveCursor(QTextCursor::Start);
 
+    // Counting the matches after every replacement would be slow, so it is done once at the end
+    _isReplacingAll = true;
+
     // replace until everything to the bottom is replaced
     while (doSearch(true, false) && doReplace(true)) {
     }
+
+    _isReplacingAll = false;
+    updateMatchCount(false);
+}
+
+/**
+ * Finds the next match of the search text with the current search mode
+ */
+bool QTextEditSearchWidget::findText(const QString &text, QFlags<QTextDocument::FindFlag> options) {
+    if (ui->modeComboBox->currentIndex() == RegularExpressionMode) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
+        return _textEdit->find(QRegularExpression(text), options);
+#else
+        return _textEdit->find(QRegExp(text), options);
+#endif
+    }
+
+    return _textEdit->find(text, options);
+}
+
+/**
+ * Shows how many matches there are in the text, and which of them is selected
+ */
+void QTextEditSearchWidget::updateMatchCount(bool found) {
+    const QString text = ui->searchLineEdit->text();
+
+    if (!shouldStartSearch(text)) {
+        ui->matchCountLabel->hide();
+        return;
+    }
+
+    QFlags<QTextDocument::FindFlag> options;
+    if (ui->modeComboBox->currentIndex() == WholeWordsMode) {
+        options |= QTextDocument::FindWholeWords;
+    }
+
+    if (ui->matchCaseSensitiveButton->isChecked()) {
+        options |= QTextDocument::FindCaseSensitively;
+    }
+
+    const bool isRegularExpression = ui->modeComboBox->currentIndex() == RegularExpressionMode;
+    const QRegularExpression regularExpression(text,
+                                               ui->matchCaseSensitiveButton->isChecked()
+                                                   ? QRegularExpression::NoPatternOption
+                                                   : QRegularExpression::CaseInsensitiveOption);
+    const int selectionStart = _textEdit->textCursor().selectionStart();
+    QTextDocument *document = _textEdit->document();
+    QTextCursor cursor(document);
+
+    // Limit the counting, so huge texts don't slow down the search
+    const int maxCount = 1000;
+    int total = 0;
+    int current = 0;
+
+    while (total < maxCount) {
+        cursor = isRegularExpression ? document->find(regularExpression, cursor, options)
+                                     : document->find(text, cursor, options);
+
+        // Stop at the end and for empty regular expression matches, that would never end
+        if (cursor.isNull() || !cursor.hasSelection()) {
+            break;
+        }
+
+        ++total;
+
+        if (found && cursor.selectionStart() <= selectionStart) {
+            current = total;
+        }
+    }
+
+    const QString totalText = total >= maxCount ? QString::number(maxCount) + QStringLiteral("+")
+                                                : QString::number(total);
+
+    if (total == 0) {
+        ui->matchCountLabel->setText(tr("No matches"));
+    } else if (current > 0) {
+        ui->matchCountLabel->setText(tr("%1 of %2").arg(current).arg(totalText));
+    } else {
+        ui->matchCountLabel->setText(tr("%n match(es)", "", total));
+    }
+
+    ui->matchCountLabel->show();
 }
 
 /**
@@ -311,21 +400,12 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
     const int verticalScrollBarValue = _textEdit->verticalScrollBar()->value();
     const int horizontalScrollBarValue = _textEdit->horizontalScrollBar()->value();
 
-    bool found;
-    if (searchMode == RegularExpressionMode) {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-        found = _textEdit->find(QRegularExpression(text), options);
-#else
-        found = _textEdit->find(QRegExp(text), options);
-#endif
-    } else {
-        found = _textEdit->find(text, options);
-    }
+    bool found = findText(text, options);
 
     // start at the top (or bottom) if not found
     if (!found && allowRestartAtTop) {
         _textEdit->moveCursor(searchDown ? QTextCursor::Start : QTextCursor::End);
-        found = _textEdit->find(text, options);
+        found = findText(text, options);
     }
 
     if (found && _textEdit->layout() != nullptr) {
@@ -356,6 +436,10 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
         _textEdit->setTextCursor(originalCursor);
         _textEdit->verticalScrollBar()->setValue(verticalScrollBarValue);
         _textEdit->horizontalScrollBar()->setValue(horizontalScrollBarValue);
+    }
+
+    if (!_isReplacingAll) {
+        updateMatchCount(found);
     }
 
     return found;

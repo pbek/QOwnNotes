@@ -74,11 +74,22 @@
     </widget>
    </item>
    <item row="0" column="3">
-    <widget class="QLineEdit" name="searchLineEdit">
-     <property name="placeholderText">
-      <string>Find in text</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="searchLayout">
+     <item>
+      <widget class="QLineEdit" name="searchLineEdit">
+       <property name="placeholderText">
+        <string>Find in text</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="matchCountLabel">
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="0" column="4">
     <widget class="QPushButton" name="searchDownButton">
