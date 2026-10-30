@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QHeaderView>
 #include <QMessageBox>
+#include <QPushButton>
 #include <QRegularExpression>
 #include <QTextBlock>
 #include <QTextCursor>
@@ -31,7 +32,63 @@ MarkdownTableDialog::MarkdownTableDialog(QPlainTextEdit *textEdit, QWidget *pare
     connect(ui->tableWidget->horizontalHeader(), &QHeaderView::sectionClicked, this,
             &MarkdownTableDialog::onColumnHeaderClicked);
 
+    // Only enable the row and column actions that can be used with the current cell
+    connect(ui->tableWidget, &QTableWidget::itemSelectionChanged, this,
+            &MarkdownTableDialog::updateButtons);
+
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Update table"));
+
     loadTableFromCursor();
+    updateButtons();
+}
+
+/**
+ * Only enables the actions that can be used with the current table and selection
+ */
+void MarkdownTableDialog::updateButtons() {
+    const int rows = ui->tableWidget->rowCount();
+    const int cols = ui->tableWidget->columnCount();
+    const int row = ui->tableWidget->currentRow();
+    const bool hasTable = rows > 0 && cols > 0;
+
+    // The header row can't be removed and at least one data row is needed
+    ui->removeRowButton->setEnabled(row > 0 && rows > 2);
+    ui->removeColumnButton->setEnabled(currentColumn() >= 0 && cols > 1);
+    ui->addRowButton->setEnabled(hasTable);
+    ui->addColumnButton->setEnabled(hasTable);
+    ui->applyAlignmentButton->setEnabled(hasTable && currentColumn() >= 0);
+    ui->alignmentComboBox->setEnabled(hasTable);
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(hasTable);
+}
+
+/**
+ * Shows the header row in bold and aligns the cells like their columns,
+ * so the grid looks like the rendered table
+ */
+void MarkdownTableDialog::updateCellAppearance() {
+    QStringList rowLabels;
+
+    for (int r = 0; r < ui->tableWidget->rowCount(); ++r) {
+        rowLabels << (r == 0 ? tr("Header") : QString::number(r));
+
+        for (int c = 0; c < ui->tableWidget->columnCount(); ++c) {
+            QTableWidgetItem *item = ui->tableWidget->item(r, c);
+
+            if (item == nullptr) {
+                item = new QTableWidgetItem();
+                ui->tableWidget->setItem(r, c, item);
+            }
+
+            const Qt::AlignmentFlag align = _colAlignments.value(c, Qt::AlignLeft);
+            item->setTextAlignment((align == 0 ? Qt::AlignLeft : align) | Qt::AlignVCenter);
+
+            QFont font = item->font();
+            font.setBold(r == 0);
+            item->setFont(font);
+        }
+    }
+
+    ui->tableWidget->setVerticalHeaderLabels(rowLabels);
 }
 
 MarkdownTableDialog::~MarkdownTableDialog() { delete ui; }
@@ -174,6 +231,7 @@ void MarkdownTableDialog::populateGridFromParsed(const QList<QStringList> &rows)
  * Format: "1 ←" (left), "1 ↔" (center), "1 →" (right), "1 ·" (default)
  */
 void MarkdownTableDialog::updateColumnHeaderLabels() {
+    updateCellAppearance();
     QStringList labels;
     for (int c = 0; c < ui->tableWidget->columnCount(); ++c) {
         const Qt::AlignmentFlag align = _colAlignments.value(c, Qt::AlignLeft);
@@ -343,6 +401,10 @@ void MarkdownTableDialog::on_addRowButton_clicked() {
     for (int c = 0; c < cols; ++c) {
         ui->tableWidget->setItem(newRow, c, new QTableWidgetItem());
     }
+
+    updateCellAppearance();
+    ui->tableWidget->setCurrentCell(newRow, 0);
+    updateButtons();
 }
 
 /**
@@ -364,6 +426,8 @@ void MarkdownTableDialog::on_removeRowButton_clicked() {
         return;
     }
     ui->tableWidget->removeRow(row);
+    updateCellAppearance();
+    updateButtons();
 }
 
 /**
@@ -377,6 +441,7 @@ void MarkdownTableDialog::on_addColumnButton_clicked() {
         ui->tableWidget->setItem(r, newCol, new QTableWidgetItem());
     }
     updateColumnHeaderLabels();
+    updateButtons();
 }
 
 /**
@@ -397,6 +462,7 @@ void MarkdownTableDialog::on_removeColumnButton_clicked() {
         _colAlignments.remove(col);
     }
     updateColumnHeaderLabels();
+    updateButtons();
 }
 
 /**

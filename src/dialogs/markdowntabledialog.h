@@ -46,4 +46,6 @@ class MarkdownTableDialog : public MasterDialog {
     QString buildMarkdownTable() const;
     int currentColumn() const;
     void updateColumnHeaderLabels();
+    void updateCellAppearance();
+    void updateButtons();
 };

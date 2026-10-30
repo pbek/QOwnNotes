@@ -119,6 +119,12 @@
   - A message is shown if the clipboard doesn't contain any text to import
   - Only existing files can be selected for the CSV import
   - Temporary files of clipboard imports are now cleaned up
+- Polished the edit Markdown table dialog
+  - The header row is shown in bold and labeled as header, the cells are aligned
+    like their columns, so the grid looks more like the rendered table
+  - The buttons to remove rows and columns are only enabled when the selected
+    row or column can be removed
+  - The **OK** button is now called **Update table**
 
 ## 26.10.15
 
