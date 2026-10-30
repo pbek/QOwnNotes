@@ -141,6 +141,9 @@
   - The dialogs now show how many notes were imported, or why nothing could be imported
   - The **Import notes** button is only enabled when a file or directory was selected
   - The dialogs got a **Close** button and hints are shown in a muted color
+- The note dialog, that shows a note in a separate window, now shows the folder and the
+  modification date of the note, the full file path as tooltip and a hint if the note
+  is encrypted and can't be decrypted
 
 ## 26.10.15
 

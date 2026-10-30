@@ -6,11 +6,13 @@
 #include <QDebug>
 #include <QDesktopServices>
 #include <QDialogButtonBox>
+#include <QLocale>
 #include <QPushButton>
 
 #include "mainwindow.h"
 #include "services/settingsservice.h"
 #include "ui_notedialog.h"
+#include "utils/gui.h"
 #include "utils/urlhandler.h"
 
 NoteDialog::NoteDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::NoteDialog) {
@@ -18,6 +20,7 @@ NoteDialog::NoteDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::NoteD
     afterSetupUI();
     ui->textEdit->initSearchFrame(ui->searchFrame);
     ui->textEdit->setReadOnly(true);
+    Utils::Gui::setMutedTextColor(ui->noteInfoLabel);
     ui->tabWidget->setCurrentIndex(SettingsService().value("NoteDialog/tabWidgetIndex").toInt());
 
     // set the note text view font
@@ -50,10 +53,27 @@ void NoteDialog::setNote(Note &note) {
     setWindowTitle(note.getName());
 
     // show the decrypted text if possible
-    QString text = note.hasEncryptedNoteText() && note.canDecryptNoteText()
-                       ? note.fetchDecryptedNoteText()
-                       : note.getNoteText();
+    const bool canDecrypt = note.hasEncryptedNoteText() && note.canDecryptNoteText();
+    QString text = canDecrypt ? note.fetchDecryptedNoteText() : note.getNoteText();
     ui->textEdit->setPlainText(text);
+
+    // Show where the note is stored and when it was modified
+    QStringList infos;
+    const QString subFolderPath = note.relativeNoteSubFolderPath();
+
+    if (!subFolderPath.isEmpty()) {
+        infos << tr("Folder: %1").arg(subFolderPath);
+    }
+
+    infos << tr("Last modified at %1")
+                 .arg(QLocale().toString(note.getFileLastModified(), QLocale::ShortFormat));
+
+    if (note.hasEncryptedNoteText() && !canDecrypt) {
+        infos << tr("The note is encrypted and can't be decrypted");
+    }
+
+    ui->noteInfoLabel->setText(infos.join(QStringLiteral(" · ")));
+    ui->noteInfoLabel->setToolTip(note.fullNoteFilePath());
 
     ui->noteTextView->setHtml(note.toMarkdownHtml(NoteFolder::currentLocalPath()),
                               note.fullNoteFilePath());
