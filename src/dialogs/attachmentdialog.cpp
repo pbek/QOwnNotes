@@ -4,10 +4,12 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QMimeDatabase>
+#include <QPushButton>
 #include <QTemporaryFile>
 
 #include "filedialog.h"
 #include "ui_attachmentdialog.h"
+#include "utils/gui.h"
 #include "utils/misc.h"
 
 AttachmentDialog::AttachmentDialog(QWidget *parent)
@@ -18,6 +20,8 @@ AttachmentDialog::AttachmentDialog(QWidget *parent)
     ui->downloadButton->hide();
     ui->downloadFrame->hide();
     ui->infoFrame->hide();
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Insert attachment"));
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
     _networkManager = new QNetworkAccessManager(this);
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
@@ -55,6 +59,9 @@ void AttachmentDialog::on_openButton_clicked() {
 void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
     auto pathOrUrl = arg1.trimmed();
 
+    QPushButton *okButton = ui->buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setEnabled(false);
+
     // Clear info when path is empty
     if (pathOrUrl.isEmpty()) {
         ui->infoFrame->hide();
@@ -67,23 +74,51 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
 
     if (!url.isValid()) {
         ui->downloadButton->hide();
+        setInfoText(tr("This is not a valid path or URL"), true);
 
         return;
     }
 
-    ui->downloadButton->setVisible(url.scheme().startsWith(QLatin1String("http")));
+    const bool isRemoteUrl = url.scheme().startsWith(QLatin1String("http"));
+    ui->downloadButton->setVisible(isRemoteUrl);
 
-    if (url.scheme() == QLatin1String("file")) {
+    if (isRemoteUrl) {
+        setInfoText(tr("The file will be downloaded when inserting the attachment"));
+        okButton->setEnabled(true);
+    } else if (url.scheme() == QLatin1String("file")) {
         ui->fileEdit->setText(url.toLocalFile());
-    } else if (url.scheme().isEmpty()) {
-        ui->infoFrame->show();
+    } else {
         QFileInfo fileInfo(pathOrUrl);
+
+        if (!fileInfo.isFile()) {
+            setInfoText(tr("The file doesn't exist"), true);
+            return;
+        }
 
         QMimeDatabase db;
         QMimeType type = db.mimeTypeForFile(pathOrUrl);
 
-        ui->infoLabel->setText(Utils::Misc::toHumanReadableByteSize(fileInfo.size()) + " - " +
-                               type.comment());
+        setInfoText(fileInfo.fileName() + QStringLiteral(" · ") +
+                    Utils::Misc::toHumanReadableByteSize(fileInfo.size()) + QStringLiteral(" · ") +
+                    type.comment());
+        okButton->setEnabled(true);
+    }
+}
+
+/**
+ * Shows a muted info text below the file field, or a warning in red
+ */
+void AttachmentDialog::setInfoText(const QString &text, bool isWarning) {
+    ui->infoLabel->setText(text);
+    ui->infoFrame->setVisible(!text.isEmpty());
+
+    if (isWarning) {
+        // Use a muted red that is readable in light and dark mode
+        QPalette palette = ui->infoLabel->palette();
+        palette.setColor(QPalette::WindowText, QColor(0xd9, 0x53, 0x4f));
+        ui->infoLabel->setPalette(palette);
+    } else {
+        Utils::Gui::setMutedTextColor(ui->infoLabel);
     }
 }
 

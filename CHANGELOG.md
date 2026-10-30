@@ -98,6 +98,12 @@
   - The **OK** button is now called **Insert image** and is only enabled when there
     is an image to insert
   - The title field shows that the title is optional
+- Polished the insert attachment dialog
+  - The dialog shows the file name, size and type, a message if the file doesn't exist
+    or a hint that a URL will be downloaded
+  - The **OK** button is now called **Insert attachment** and is only enabled when there
+    is a file or URL to insert
+  - The title field shows that the title is optional and that the file name is used otherwise
 
 ## 26.10.15
 

@@ -38,4 +38,6 @@ class AttachmentDialog : public MasterDialog {
     Ui::AttachmentDialog *ui;
     QNetworkAccessManager *_networkManager;
     bool _accept = false;
+
+    void setInfoText(const QString &text, bool isWarning = false);
 };
