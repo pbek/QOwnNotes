@@ -39,6 +39,8 @@ class WelcomeDialog : public MasterDialog {
 
     bool handleNoteFolderSetup();
 
+    void updateStepInfo();
+
     void showNoteFolderErrorMessage(const QString &message);
 
     void storeNoteFolderSettings();

@@ -143,6 +143,13 @@
      </layout>
     </widget>
    </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="stepLabel">
+     <property name="text">
+      <string notr="true"/>
+     </property>
+    </widget>
+   </item>
    <item row="4" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
@@ -171,10 +178,13 @@
           <item row="4" column="0">
            <widget class="QLabel" name="errorMessageLabel">
             <property name="styleSheet">
-             <string notr="true">* { color: red }</string>
+             <string notr="true">* { color: #d9534f; }</string>
             </property>
             <property name="text">
              <string notr="true">error message</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
             </property>
            </widget>
           </item>

@@ -155,6 +155,10 @@
   - The dialog shows on which step of the assistant you are
   - A hint explains what is still missing when the **Next** button is disabled
   - Fixed the **Next** button not being updated when changing the issue type
+- Polished the welcome dialog
+  - The dialog shows on which step you are, like "Step 1 of 4: Note folder"
+  - <kbd>Return</kbd> opens the next step, or finishes the dialog on the last step
+  - Note folder errors are wrapped and use a red that is readable in dark mode too
 
 ## 26.10.15
 

@@ -30,9 +30,47 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
     ui->noteFolderLineEdit->setText(_notesPath);
 
     ui->stackedWidget->setCurrentIndex(WelcomePages::NoteFolderPage);
+
+    QFont stepFont = ui->stepLabel->font();
+    stepFont.setBold(true);
+    ui->stepLabel->setFont(stepFont);
+    updateStepInfo();
 }
 
 WelcomeDialog::~WelcomeDialog() { delete ui; }
+
+/**
+ * Shows on which step of the welcome dialog the user is and makes the
+ * button for the next step the default button
+ */
+void WelcomeDialog::updateStepInfo() {
+    const int index = ui->stackedWidget->currentIndex();
+    const int maxIndex = ui->stackedWidget->count() - 1;
+    QString pageName;
+
+    switch (index) {
+        case NoteFolderPage:
+            pageName = tr("Note folder");
+            break;
+        case LayoutPresetPage:
+            pageName = tr("Layout");
+            break;
+        case CloudPage:
+            pageName = tr("Nextcloud / ownCloud");
+            break;
+        case MetricsPage:
+            pageName = tr("Metrics");
+            break;
+        default:
+            break;
+    }
+
+    ui->stepLabel->setText(tr("Step %1 of %2: %3").arg(index + 1).arg(maxIndex + 1).arg(pageName));
+
+    // Pressing return should open the next step, or finish the dialog on the last step
+    ui->nextButton->setDefault(index < maxIndex);
+    ui->finishButton->setDefault(index >= maxIndex);
+}
 
 void WelcomeDialog::on_cancelButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/cancel"));
@@ -70,6 +108,7 @@ void WelcomeDialog::on_nextButton_clicked() {
     ui->finishButton->setEnabled(_allowFinishButton);
     ui->backButton->setEnabled(true);
     ui->nextButton->setEnabled(index < maxIndex);
+    updateStepInfo();
 }
 
 /**
@@ -165,6 +204,7 @@ void WelcomeDialog::on_backButton_clicked() {
 
     ui->nextButton->setEnabled(true);
     ui->backButton->setEnabled(index > 0);
+    updateStepInfo();
 }
 
 void WelcomeDialog::on_finishButton_clicked() {
