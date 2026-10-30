@@ -83,6 +83,9 @@
   - After importing, the dialog shows how many bookmarks were added and the
     **Import bookmarks** button gets disabled to prevent importing them twice
   - The dialog got a **Close** button
+- Polished the share note dialog
+  - The shared link field got buttons to copy the link to the clipboard and to open it in the browser
+  - The dialog got a **Close** button
 
 ## 26.10.15
 

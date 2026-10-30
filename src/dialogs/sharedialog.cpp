@@ -3,7 +3,13 @@
 #include <services/cloudservice.h>
 #include <utils/gui.h>
 
+#include <QAction>
+#include <QClipboard>
 #include <QDebug>
+#include <QDesktopServices>
+#include <QGuiApplication>
+#include <QToolTip>
+#include <QUrl>
 
 #include "ui_sharedialog.h"
 
@@ -12,6 +18,27 @@ ShareDialog::ShareDialog(const Note &note, QWidget *parent)
     ui->setupUi(this);
     afterSetupUI();
     this->note = note;
+
+    // Allow copying and opening the shared link right from the link field
+    QAction *copyAction = ui->linkUrlLineEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-copy"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-copy.svg"))),
+        QLineEdit::TrailingPosition);
+    copyAction->setToolTip(tr("Copy link to clipboard"));
+    connect(copyAction, &QAction::triggered, this, [this]() {
+        QGuiApplication::clipboard()->setText(ui->linkUrlLineEdit->text());
+        QToolTip::showText(
+            ui->linkUrlLineEdit->mapToGlobal(QPoint(0, ui->linkUrlLineEdit->height())),
+            tr("The link was copied to the clipboard"), ui->linkUrlLineEdit);
+    });
+
+    QAction *openAction = ui->linkUrlLineEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("text-html"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/text-html.svg"))),
+        QLineEdit::TrailingPosition);
+    openAction->setToolTip(tr("Open link in the browser"));
+    connect(openAction, &QAction::triggered, this,
+            [this]() { QDesktopServices::openUrl(QUrl(ui->linkUrlLineEdit->text())); });
 
     // update the share link checkbox and link url line edit
     updateDialog();
@@ -44,6 +71,13 @@ void ShareDialog::updateDialog() {
 
     ui->linkUrlLineEdit->setVisible(note.isShared());
     ui->linkUrlLineEdit->setText(note.getShareUrl());
+
+    // The link actions only make sense if there is a link
+    const bool hasLink = !note.getShareUrl().isEmpty();
+    for (QAction *action : ui->linkUrlLineEdit->actions()) {
+        action->setEnabled(hasLink);
+    }
+
     ui->editCheckBox->setVisible(note.isShared());
     ui->editCheckBox->setChecked(note.isShareEditAllowed());
 }

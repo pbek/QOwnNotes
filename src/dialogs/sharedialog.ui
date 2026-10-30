@@ -42,6 +42,9 @@
      <property name="toolTip">
       <string>The public url of your note</string>
      </property>
+     <property name="placeholderText">
+      <string>Waiting for the link from the server…</string>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>
@@ -64,6 +67,13 @@
      </property>
      <property name="textInteractionFlags">
       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
      </property>
     </widget>
    </item>
@@ -98,5 +108,12 @@
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ShareDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
 </ui>
