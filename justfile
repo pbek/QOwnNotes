@@ -190,6 +190,9 @@ src-build-internal-botan:
 # Build and run the unit tests with CMake
 [group('src-build')]
 src-test:
+    # Start with a clean build directory, a failed run may leave a stale CMake cache
+    # behind, that points to Qt paths that no longer exist
+    rm -rf {{ sourceBuildTestDir }}
     cmake -S tests -B {{ sourceBuildTestDir }} -DCMAKE_BUILD_TYPE=Debug
     cmake --build {{ sourceBuildTestDir }} --parallel $(nproc)
     {{ sourceBuildTestDir }}/bin/tests -platform minimal
