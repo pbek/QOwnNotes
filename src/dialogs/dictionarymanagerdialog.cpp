@@ -143,6 +143,13 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)
     ui->downloadButton->setDisabled(true);
     ui->deleteLocalDictionaryButton->setDisabled(true);
     ui->downloadFrame->hide();
+    ui->restartLabel->hide();
+    Utils::Gui::setMutedTextColor(ui->noLocalDictionariesLabel);
+    Utils::Gui::setMutedTextColor(ui->restartLabel);
+    ui->searchDictionaryEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-find"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-find.svg"))),
+        QLineEdit::LeadingPosition);
     ui->searchDictionaryEdit->setFocus();
     ui->remoteDictionaryTreeWidget->sortByColumn(0, Qt::AscendingOrder);
 
@@ -187,6 +194,7 @@ void DictionaryManagerDialog::addDictionaryItem(const QString &name, const QStri
  */
 void DictionaryManagerDialog::setupMainSplitter() {
     _mainSplitter = new QSplitter(this);
+    _mainSplitter->setChildrenCollapsible(false);
 
     _mainSplitter->addWidget(ui->selectFrame);
     _mainSplitter->addWidget(ui->localDictionariesGroupBox);
@@ -300,13 +308,21 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
         }
     } else {
         loadLocalDictionaries();
-        qApp->setProperty("needsRestart", true);
+        setNeedsRestart();
     }
+}
+
+/**
+ * Marks that a restart is needed to use the changed dictionaries and tells the user
+ */
+void DictionaryManagerDialog::setNeedsRestart() {
+    qApp->setProperty("needsRestart", true);
+    ui->restartLabel->show();
 }
 void DictionaryManagerDialog::on_downloadCancelButton_clicked() {
     ui->downloadFrame->hide();
     ui->remoteDictionaryTreeWidget->setEnabled(true);
-    ui->downloadButton->setEnabled(true);
+    on_remoteDictionaryTreeWidget_itemSelectionChanged();
 }
 
 /**
@@ -340,6 +356,7 @@ void DictionaryManagerDialog::loadLocalDictionaries() {
 
     // show newest entry first
     QStringList files = dir.entryList(filters, QDir::Files);
+    QStringList downloadedFileNameParts;
 
     foreach (QString fileName, files) {
         QFileInfo info(fileName);
@@ -354,9 +371,31 @@ void DictionaryManagerDialog::loadLocalDictionaries() {
         item->setText(0, name);
         item->setData(0, Qt::UserRole, fileNamePart);
         ui->localDictionaryTreeWidget->addTopLevelItem(item);
+        downloadedFileNameParts << fileNamePart;
     }
 
     qDebug() << files;
+
+    const bool hasLocalDictionaries = ui->localDictionaryTreeWidget->topLevelItemCount() > 0;
+    ui->localDictionaryTreeWidget->setVisible(hasLocalDictionaries);
+    ui->noLocalDictionariesLabel->setVisible(!hasLocalDictionaries);
+    on_localDictionaryTreeWidget_itemSelectionChanged();
+
+    // Mark the dictionaries that were already downloaded in the list of available dictionaries
+    const QIcon downloadedIcon = QIcon::fromTheme(
+        QStringLiteral("dialog-ok-apply"),
+        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/dialog-ok-apply.svg")));
+
+    for (int i = 0; i < ui->remoteDictionaryTreeWidget->topLevelItemCount(); ++i) {
+        QTreeWidgetItem *item = ui->remoteDictionaryTreeWidget->topLevelItem(i);
+        const QString fileNamePart =
+            item->data(0, Qt::UserRole).toString().section(QLatin1Char('/'), -1);
+        const bool isDownloaded = downloadedFileNameParts.contains(fileNamePart);
+
+        item->setIcon(0, isDownloaded ? downloadedIcon : QIcon());
+        item->setToolTip(0,
+                         isDownloaded ? tr("This dictionary was already downloaded") : QString());
+    }
 }
 
 QString DictionaryManagerDialog::getDictionaryName(const QString &fileNamePart) {
@@ -370,6 +409,19 @@ QString DictionaryManagerDialog::getDictionaryName(const QString &fileNamePart) 
 }
 
 void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
+    const int selectedCount = ui->localDictionaryTreeWidget->selectedItems().count();
+
+    if (selectedCount == 0) {
+        return;
+    }
+
+    if (Utils::Gui::question(
+            this, tr("Delete dictionaries"),
+            tr("Delete <strong>%n</strong> selected dictionary(ies)?", "", selectedCount),
+            QStringLiteral("delete-local-dictionaries")) != QMessageBox::Yes) {
+        return;
+    }
+
     foreach (QTreeWidgetItem *item, ui->localDictionaryTreeWidget->selectedItems()) {
         const QString &fileNamePart = item->data(0, Qt::UserRole).toString();
 
@@ -379,7 +431,7 @@ void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
     }
 
     loadLocalDictionaries();
-    qApp->setProperty("needsRestart", true);
+    setNeedsRestart();
 }
 
 bool DictionaryManagerDialog::deleteLocalDictionaryFile(const QString &fileName) {
@@ -417,5 +469,5 @@ void DictionaryManagerDialog::on_remoteDictionaryTreeWidget_itemDoubleClicked(QT
 void DictionaryManagerDialog::on_disableExternalDictionariesCheckBox_toggled(bool checked) {
     SettingsService settings;
     settings.setValue(QStringLiteral("disableExternalDictionaries"), checked);
-    qApp->setProperty("needsRestart", true);
+    setNeedsRestart();
 }

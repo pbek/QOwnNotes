@@ -168,12 +168,35 @@
          </widget>
         </item>
         <item>
+         <widget class="QLabel" name="noLocalDictionariesLabel">
+          <property name="text">
+           <string>No dictionaries were downloaded yet. Select a dictionary on the left side to download it.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QCheckBox" name="disableExternalDictionariesCheckBox">
           <property name="toolTip">
            <string>If checked only the downloaded dictionaries will be used</string>
           </property>
           <property name="text">
            <string>Disable external dictionaries</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="restartLabel">
+          <property name="text">
+           <string>Please restart QOwnNotes to use the changed dictionaries.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>

@@ -60,4 +60,5 @@ class DictionaryManagerDialog : public MasterDialog {
     void loadLocalDictionaries();
     QString getDictionaryName(const QString &fileNamePart);
     bool deleteLocalDictionaryFile(const QString &fileName);
+    void setNeedsRestart();
 };

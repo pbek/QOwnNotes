@@ -129,6 +129,14 @@
   - The dialog now also shows which version you are currently using
   - The new version is shown as a larger header, and the "Version" text can now be translated
   - The buttons got tooltips that explain what they do, hints are shown in a muted color
+- Polished the dictionary manager dialog
+  - Dictionaries that were already downloaded are marked in the list of available dictionaries
+  - A hint is shown when no dictionaries were downloaded yet, and after changes
+    the dialog tells you that a restart is needed to use them
+  - Deleting dictionaries now needs to be confirmed
+  - The **Download dictionary** button is no longer enabled after canceling a download
+    without a selected dictionary
+  - The panes can no longer be collapsed by accident
 
 ## 26.10.15
 
