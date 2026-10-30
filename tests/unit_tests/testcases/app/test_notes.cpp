@@ -8,20 +8,26 @@
 #include <QFont>
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QLineEdit>
 #include <QMessageBox>
+#include <QPlainTextEdit>
 #include <QSet>
 #include <QSqlQuery>
 #include <QString>
 #include <QTextStream>
+#include <QTreeWidget>
 #include <QUuid>
 #include <QtTest>
 
 #include "dialogs/joplinimportdialog.h"
+#include "dialogs/localtrashdialog.h"
 #include "entities/bookmark.h"
 #include "entities/commandsnippet.h"
 #include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
 #include "entities/trashitem.h"
+#include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 
@@ -47,6 +53,59 @@ QString TestNotes::uniqueTestName(const QString &baseName) const {
     // QUuid::WithoutBraces was introduced in Qt 5.11; strip the surrounding braces manually
     return baseName + QStringLiteral("-") + QUuid::createUuid().toString().mid(1, 36);
 #endif
+}
+
+void TestNotes::testLocalTrashTextSearch() {
+    DatabaseService::createNoteFolderConnection();
+    DatabaseService::setupNoteFolderTables();
+
+    const QString name = uniqueTestName(QStringLiteral("TrashSearch"));
+    const QString text = QStringLiteral("A distinctive body-only NEEDLE\nSecond line");
+    Note note = createTestNote(name, 0, text);
+    TrashItem trashItem = TrashItem::prepare(&note);
+    QVERIFY(trashItem.doTrashing());
+
+    LocalTrashDialog dialog;
+    auto *search = dialog.findChild<QWidget *>(QStringLiteral("listFrame"))
+                       ->findChild<QLineEdit *>(QStringLiteral("searchLineEdit"));
+    auto *tree = dialog.findChild<QTreeWidget *>(QStringLiteral("trashTreeWidget"));
+    auto *preview = dialog.findChild<QMarkdownTextEdit *>(QStringLiteral("noteBrowser"));
+    QVERIFY(search);
+    QVERIFY(tree);
+    QVERIFY(preview);
+
+    static_cast<QWidget &>(dialog).show();
+    search->setFocus();
+    QApplication::processEvents();
+    search->setText(QStringLiteral("body-only needle"));
+    QVERIFY(search->hasFocus());
+    QVERIFY(tree->currentItem());
+    QCOMPARE(tree->currentItem()->data(0, Qt::UserRole).toInt(), trashItem.getId());
+    QVERIFY(!tree->currentItem()->isHidden());
+    QCOMPARE(preview->toPlainText(), text);
+    auto *inNoteSearch = preview->searchWidget();
+    QVERIFY(!inNoteSearch->isHidden());
+    QCOMPARE(inNoteSearch->findChild<QLineEdit *>(QStringLiteral("searchLineEdit"))->text(),
+             search->text());
+    QCOMPARE(preview->textCursor().selectedText(), QStringLiteral("body-only NEEDLE"));
+
+    search->setText(QStringLiteral("missing-trash-search-term"));
+    QVERIFY(!tree->currentItem());
+    QVERIFY(tree->selectedItems().isEmpty());
+    QVERIFY(preview->toPlainText().isEmpty());
+
+    search->setText(name.toLower());
+    QVERIFY(tree->currentItem());
+    QCOMPARE(tree->currentItem()->data(0, Qt::UserRole).toInt(), trashItem.getId());
+    search->clear();
+    QVERIFY(search->hasFocus());
+    QVERIFY(inNoteSearch->isHidden());
+    QVERIFY(preview->extraSelections().isEmpty());
+    for (int row = 0; row < tree->topLevelItemCount(); ++row) {
+        QVERIFY(!tree->topLevelItem(row)->isHidden());
+    }
+
+    QVERIFY(trashItem.remove(true));
 }
 
 NoteSubFolder TestNotes::createTestNoteSubFolder(const QString &name, int parentId) const {

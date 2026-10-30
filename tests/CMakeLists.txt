@@ -164,11 +164,15 @@ set(APP_SOURCE_FILES
     dialogs/joplinimportdialog.cpp
     dialogs/joplinimportdialog.h
     dialogs/joplinimportdialog.ui
+    dialogs/localtrashdialog.cpp
+    dialogs/localtrashdialog.h
     dialogs/masterdialog.cpp
     dialogs/masterdialog.h
     dialogs/nextclouddeckdialog.cpp
     dialogs/nextclouddeckdialog.h
     dialogs/nextclouddeckdialog.ui
+    dialogs/trashdialog.cpp
+    dialogs/trashdialog.h
     entities/bookmark.cpp
     entities/bookmark.h
     entities/calendaritem.cpp
@@ -254,6 +258,8 @@ set(APP_SOURCE_FILES
     utils/schema.h
     widgets/logwidget.cpp
     widgets/logwidget.h
+    widgets/lineedit.cpp
+    widgets/lineedit.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
     widgets/notepreviewwidget.cpp
@@ -268,7 +274,24 @@ set(APP_SOURCE_FILES
     widgets/settings/todosettingswidget.ui)
 list(TRANSFORM APP_SOURCE_FILES PREPEND ${QON_SRC_DIR}/)
 
-add_executable(tests ${TEST_SOURCE_FILES} ${APP_SOURCE_FILES})
+# Trash filtering only needs the base Markdown editor, not the main-window,
+# spell-checking, and language-server integrations of the application editor.
+set(TRASH_TEST_UI_HEADERS)
+foreach(dialog localtrashdialog trashdialog)
+  file(READ ${QON_SRC_DIR}/dialogs/${dialog}.ui TRASH_TEST_UI)
+  string(REPLACE "QOwnNotesMarkdownTextEdit" "QMarkdownTextEdit" TRASH_TEST_UI
+                 "${TRASH_TEST_UI}")
+  string(REPLACE "widgets/qownnotesmarkdowntextedit.h"
+                 "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+                 TRASH_TEST_UI "${TRASH_TEST_UI}")
+  file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/${dialog}.ui "${TRASH_TEST_UI}")
+  qt6_wrap_ui(TRASH_TEST_UI_HEADERS ${CMAKE_CURRENT_BINARY_DIR}/${dialog}.ui)
+  set_source_files_properties(${QON_SRC_DIR}/dialogs/${dialog}.cpp
+                              PROPERTIES SKIP_AUTOUIC ON)
+endforeach()
+
+add_executable(tests ${TEST_SOURCE_FILES} ${APP_SOURCE_FILES}
+                     ${TRASH_TEST_UI_HEADERS})
 
 if(QON_QLITEHTML_TESTS)
   target_sources(
@@ -295,7 +318,8 @@ set_target_properties(
              AUTORCC ON
              RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-target_include_directories(tests PRIVATE ${QON_SRC_DIR} ${QON_TESTS_DIR})
+target_include_directories(tests PRIVATE ${QON_SRC_DIR} ${QON_TESTS_DIR}
+                                         ${CMAKE_CURRENT_BINARY_DIR})
 
 target_compile_definitions(
   tests PRIVATE INTEGRATION_TESTS ELPP_STL_LOGGING

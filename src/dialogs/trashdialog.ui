@@ -52,7 +52,7 @@
 </string>
           </property>
           <property name="placeholderText">
-           <string>Find note name</string>
+           <string>Find note name or text</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>

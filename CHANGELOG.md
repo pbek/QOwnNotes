@@ -2,6 +2,11 @@
 
 ## 26.10.15
 
+- Extended the search field in the local and Nextcloud / ownCloud note trash dialogs
+  to search note text as well as note names, ignoring case
+  (for [#3823](https://github.com/pbek/QOwnNotes/issues/3823))
+  - Selecting a match shows its note text; clearing the search shows all trashed notes again
+  - The in-note search bar opens with the same query to highlight and navigate text matches
 - Retired the legacy Qt 5-named Snap jobs from stable and continuous GitHub releases
   (for [#3752](https://github.com/pbek/QOwnNotes/issues/3752))
   - Use the Qt 6 snap from the [Snap Store](https://snapcraft.io/qownnotes)

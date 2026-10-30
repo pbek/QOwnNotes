@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QSplitter>
 
+#include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
 #include "services/settingsservice.h"
 #include "ui_localtrashdialog.h"
 
@@ -121,6 +122,8 @@ void LocalTrashDialog::loadTrashedNotes() {
     } else {
         ui->trashTreeWidget->resizeColumnToContents(0);
     }
+
+    on_searchLineEdit_textChanged(ui->searchLineEdit->text());
 }
 
 void LocalTrashDialog::setupMainSplitter() {
@@ -175,11 +178,23 @@ void LocalTrashDialog::dialogButtonClicked(QAbstractButton *button) {
 void LocalTrashDialog::on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                              QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
-    int trashItemId = current->data(0, Qt::UserRole).toInt();
-    TrashItem trashItem = TrashItem::fetch(trashItemId);
-
-    QString text = trashItem.loadFileFromDisk();
+    QString text;
+    if (current != nullptr && !current->isHidden()) {
+        int trashItemId = current->data(0, Qt::UserRole).toInt();
+        TrashItem trashItem = TrashItem::fetch(trashItemId);
+        text = trashItem.loadFileFromDisk();
+    }
     ui->noteBrowser->setPlainText(text);
+
+    if (!ui->searchLineEdit->text().isEmpty()) {
+        // Highlight and jump to the query without taking focus from the trash filter
+        auto *searchWidget = ui->noteBrowser->searchWidget();
+        searchWidget->setSearchMode(QPlainTextEditSearchWidget::PlainTextMode);
+        searchWidget->setSearchText(ui->searchLineEdit->text());
+        searchWidget->doSearchCount();
+        searchWidget->activate(false);
+        ui->noteBrowser->ensureCursorVisible();
+    }
 }
 
 /**
@@ -267,5 +282,40 @@ void LocalTrashDialog::removeSelectedTrashItems() {
 }
 
 void LocalTrashDialog::on_searchLineEdit_textChanged(const QString &arg1) {
-    Utils::Gui::searchForTextInTreeWidget(ui->trashTreeWidget, arg1);
+    if (arg1.isEmpty()) {
+        ui->noteBrowser->searchWidget()->deactivate();
+        ui->searchLineEdit->setFocus();
+    }
+
+    QTreeWidgetItem *firstMatchingItem = nullptr;
+
+    for (int row = 0; row < ui->trashTreeWidget->topLevelItemCount(); ++row) {
+        auto *item = ui->trashTreeWidget->topLevelItem(row);
+        bool matches = item->text(0).contains(arg1, Qt::CaseInsensitive);
+
+        if (!matches) {
+            // Cache note text on demand to avoid reading every file on each keystroke
+            QVariant text = item->data(0, Qt::UserRole + 1);
+            if (!text.isValid()) {
+                TrashItem trashItem = TrashItem::fetch(item->data(0, Qt::UserRole).toInt());
+                text = trashItem.loadFileFromDisk();
+                item->setData(0, Qt::UserRole + 1, text);
+            }
+            matches = text.toString().contains(arg1, Qt::CaseInsensitive);
+        }
+
+        if (!matches) {
+            item->setSelected(false);
+        }
+        item->setHidden(!matches);
+        if (matches && firstMatchingItem == nullptr) {
+            firstMatchingItem = item;
+        }
+    }
+
+    auto *current = ui->trashTreeWidget->currentItem();
+    if (current == nullptr || current->isHidden()) {
+        ui->trashTreeWidget->setCurrentItem(firstMatchingItem);
+    }
+    on_trashTreeWidget_currentItemChanged(ui->trashTreeWidget->currentItem(), nullptr);
 }

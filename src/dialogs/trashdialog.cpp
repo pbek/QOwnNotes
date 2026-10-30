@@ -9,9 +9,14 @@
 #include <QPushButton>
 #include <QSplitter>
 
+#include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
 #include "mainwindow.h"
 #include "services/settingsservice.h"
 #include "ui_trashdialog.h"
+
+namespace {
+enum ItemRole { NoteTextRole = Qt::UserRole + 1, TimestampRole };
+}
 
 TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::TrashDialog) {
@@ -76,8 +81,6 @@ TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)
     QString data;
     int timestamp;
     ui->trashListWidget->clear();
-    dataList = new QStringList();
-    timestampList = new QList<int>;
 
     // init the iterator for the versions
     QJSValueIterator notesIterator(notes);
@@ -106,16 +109,13 @@ TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)
         auto *item = new QListWidgetItem();
         item->setText(itemName);
         item->setData(Qt::UserRole, fileName);
+        item->setData(NoteTextRole, data);
+        item->setData(TimestampRole, timestamp);
         item->setToolTip(dateString);
         ui->trashListWidget->addItem(item);
-        dataList->append(data);
-        timestampList->append(timestamp);
     }
 
     ui->trashListWidget->setCurrentRow(0);
-    if (dataList->count() > 0) {
-        ui->noteBrowser->setPlainText(dataList->at(0));
-    }
 }
 
 void TrashDialog::setupMainSplitter() {
@@ -142,11 +142,24 @@ void TrashDialog::storeSettings() {
 TrashDialog::~TrashDialog() { delete ui; }
 
 void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
-    ui->noteBrowser->setPlainText(dataList->value(currentRow));
+    auto *item = ui->trashListWidget->item(currentRow);
+    ui->noteBrowser->setPlainText(
+        item != nullptr && !item->isHidden() ? item->data(NoteTextRole).toString() : QString());
+
+    if (!ui->searchLineEdit->text().isEmpty()) {
+        // Highlight and jump to the query without taking focus from the trash filter
+        auto *searchWidget = ui->noteBrowser->searchWidget();
+        searchWidget->setSearchMode(QPlainTextEditSearchWidget::PlainTextMode);
+        searchWidget->setSearchText(ui->searchLineEdit->text());
+        searchWidget->doSearchCount();
+        searchWidget->activate(false);
+        ui->noteBrowser->ensureCursorVisible();
+    }
 }
 
 void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
-    if (ui->trashListWidget->currentItem() != nullptr) {
+    if (ui->trashListWidget->currentItem() != nullptr &&
+        !ui->trashListWidget->currentItem()->isHidden()) {
         int actionRole = button->property("ActionRole").toInt();
 
         QString name = ui->trashListWidget->currentItem()->text();
@@ -154,16 +167,20 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
 
         switch (actionRole) {
             case Download: {
-                QString text = dataList->value(ui->trashListWidget->currentRow());
+#ifndef INTEGRATION_TESTS
+                QString text = ui->trashListWidget->currentItem()->data(NoteTextRole).toString();
                 MainWindow::instance()->createNewNote(name, text);
+#endif
                 break;
             }
 
             case RestoreOnServer: {
-                int timestamp = this->timestampList->value(ui->trashListWidget->currentRow());
+                int timestamp = ui->trashListWidget->currentItem()->data(TimestampRole).toInt();
                 qDebug() << name << timestamp;
 
+#ifndef INTEGRATION_TESTS
                 MainWindow::instance()->restoreTrashedNoteOnServer(fileName, timestamp);
+#endif
                 break;
             }
 
@@ -175,7 +192,8 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
                     return;
                 }
 
-                const int timestamp = this->timestampList->value(ui->trashListWidget->currentRow());
+                const int timestamp =
+                    ui->trashListWidget->currentItem()->data(TimestampRole).toInt();
                 auto currentItem = ui->trashListWidget->currentItem();
                 CloudService *cloud = CloudService::instance();
                 ui->trashListWidget->setDisabled(true);
@@ -186,6 +204,7 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
 
                 if (statusCode >= 200 && statusCode < 300) {
                     delete currentItem;
+                    on_searchLineEdit_textChanged(ui->searchLineEdit->text());
                 } else {
                     Utils::Gui::warning(this, tr("Error while deleting note"),
                                         tr("Deleting trashed note failed with status code: %1")
@@ -208,5 +227,31 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
 }
 
 void TrashDialog::on_searchLineEdit_textChanged(const QString &arg1) {
-    Utils::Gui::searchForTextInListWidget(ui->trashListWidget, arg1);
+    if (arg1.isEmpty()) {
+        ui->noteBrowser->searchWidget()->deactivate();
+        ui->searchLineEdit->setFocus();
+    }
+
+    int firstMatchingRow = -1;
+
+    // Keep note text and restoration metadata attached to each filtered item
+    for (int row = 0; row < ui->trashListWidget->count(); ++row) {
+        auto *item = ui->trashListWidget->item(row);
+        const bool matches =
+            item->text().contains(arg1, Qt::CaseInsensitive) ||
+            item->data(NoteTextRole).toString().contains(arg1, Qt::CaseInsensitive);
+        if (!matches) {
+            item->setSelected(false);
+        }
+        item->setHidden(!matches);
+        if (matches && firstMatchingRow == -1) {
+            firstMatchingRow = row;
+        }
+    }
+
+    auto *current = ui->trashListWidget->currentItem();
+    if (current == nullptr || current->isHidden()) {
+        ui->trashListWidget->setCurrentRow(firstMatchingRow);
+    }
+    on_trashListWidget_currentRowChanged(ui->trashListWidget->currentRow());
 }

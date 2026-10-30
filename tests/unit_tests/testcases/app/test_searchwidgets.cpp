@@ -1,7 +1,9 @@
 #include "test_searchwidgets.h"
 
 #include <QComboBox>
+#include <QJSEngine>
 #include <QLineEdit>
+#include <QListWidget>
 #include <QPlainTextEdit>
 #include <QPushButton>
 #include <QScrollBar>
@@ -11,6 +13,8 @@
 #include <QVBoxLayout>
 #include <QtTest>
 
+#include "dialogs/trashdialog.h"
+#include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
 #include "widgets/qtexteditsearchwidget.h"
 
@@ -93,6 +97,65 @@ void verifySuccessfulWrap(bool searchDown) {
     QCOMPARE(editor.textCursor().selectionStart(), searchDown ? 0 : 14);
 }
 }    // namespace
+
+void TestSearchWidgets::testCloudTrashTextSearch() {
+    QJSEngine engine;
+    const QJSValue notes = engine.evaluate(QStringLiteral(
+        "[{noteName: 'First', fileName: 'first.md', data: 'Unrelated text', timestamp: 1},"
+        " {noteName: 'Second', fileName: 'second.md', data: 'Body-only NEEDLE', timestamp: 2},"
+        " {noteName: 'Third', fileName: 'third.md', data: 'Another needle', timestamp: 3}]"));
+    TrashDialog dialog(notes);
+    auto *search = dialog.findChild<QWidget *>(QStringLiteral("listFrame"))
+                       ->findChild<QLineEdit *>(QStringLiteral("searchLineEdit"));
+    auto *list = dialog.findChild<QListWidget *>(QStringLiteral("trashListWidget"));
+    auto *preview = dialog.findChild<QMarkdownTextEdit *>(QStringLiteral("noteBrowser"));
+    QVERIFY(search);
+    QVERIFY(list);
+    QVERIFY(preview);
+
+    // JavaScript property iteration order is not guaranteed
+    list->sortItems();
+    QCOMPARE(list->count(), 3);
+    static_cast<QWidget &>(dialog).show();
+    search->setFocus();
+    QApplication::processEvents();
+    search->setText(QStringLiteral("needle"));
+    QVERIFY(search->hasFocus());
+    QVERIFY(list->item(0)->isHidden());
+    QVERIFY(!list->item(1)->isHidden());
+    QVERIFY(!list->item(2)->isHidden());
+    QCOMPARE(list->currentRow(), 1);
+    QCOMPARE(preview->toPlainText(), QStringLiteral("Body-only NEEDLE"));
+    auto *inNoteSearch = preview->searchWidget();
+    QVERIFY(!inNoteSearch->isHidden());
+    QCOMPARE(inNoteSearch->findChild<QLineEdit *>(QStringLiteral("searchLineEdit"))->text(),
+             search->text());
+    QCOMPARE(preview->textCursor().selectedText(), QStringLiteral("NEEDLE"));
+
+    // Removing an earlier entry must not shift text or restoration metadata
+    delete list->takeItem(0);
+    list->setCurrentRow(1);
+    QCOMPARE(preview->toPlainText(), QStringLiteral("Another needle"));
+    QCOMPARE(preview->textCursor().selectedText(), QStringLiteral("needle"));
+    QCOMPARE(list->currentItem()->data(Qt::UserRole).toString(), QStringLiteral("third.md"));
+    QCOMPARE(list->currentItem()->data(Qt::UserRole + 2).toInt(), 3);
+
+    search->setText(QStringLiteral("missing-trash-search-term"));
+    QCOMPARE(list->currentRow(), -1);
+    QVERIFY(list->selectedItems().isEmpty());
+    QVERIFY(preview->toPlainText().isEmpty());
+
+    search->setText(QStringLiteral("SECOND"));
+    QCOMPARE(list->currentRow(), 0);
+    QCOMPARE(preview->toPlainText(), QStringLiteral("Body-only NEEDLE"));
+    search->clear();
+    QVERIFY(search->hasFocus());
+    QVERIFY(inNoteSearch->isHidden());
+    QVERIFY(preview->extraSelections().isEmpty());
+    for (int row = 0; row < list->count(); ++row) {
+        QVERIFY(!list->item(row)->isHidden());
+    }
+}
 
 void TestSearchWidgets::testFailedSearchPreservesPosition_data() {
     QTest::addColumn<bool>("preview");

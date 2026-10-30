@@ -12,6 +12,7 @@ class TestSearchWidgets : public QObject {
     void testSuccessfulSearchWraps_data();
     void testSuccessfulSearchWraps();
     void testFailedSelectionOnlySearchPreservesPosition();
+    void testCloudTrashTextSearch();
 };
 
 #endif    // TESTSEARCHWIDGETS_H

@@ -36,8 +36,6 @@ class TrashDialog : public MasterDialog {
 
     Ui::TrashDialog *ui;
     QSplitter *trashSplitter;
-    QStringList *dataList;
-    QList<int> *timestampList;
     void setupMainSplitter();
 };
 
