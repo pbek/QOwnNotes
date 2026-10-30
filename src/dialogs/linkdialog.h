@@ -64,4 +64,6 @@ class LinkDialog : public MasterDialog {
     void loadNoteHeadings() const;
     void doAccept();
     void startTitleFetchRequest(const QUrl &url);
+    void updateNoteCountLabel();
+    void updateOkButton();
 };

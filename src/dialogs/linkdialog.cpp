@@ -15,6 +15,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
+#include <QPushButton>
 #include <QRegularExpression>
 #include <QTimer>
 #include <QTreeWidget>
@@ -65,6 +66,11 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     ui->tabWidget->setCurrentIndex(page);
     on_tabWidget_currentChanged(page);
     ui->downloadProgressBar->hide();
+    ui->downloadProgressBar->setFormat(tr("Fetching the title of the webpage…"));
+    Utils::Gui::setMutedTextColor(ui->noteCountLabel);
+    Utils::Gui::setMutedTextColor(ui->noHeadingsLabel);
+    ui->noHeadingsLabel->hide();
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Insert link"));
     _markdownTextEdit = new QOwnNotesMarkdownTextEdit();
     _networkManager = new QNetworkAccessManager(this);
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
@@ -146,6 +152,8 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
         ui->notesListWidget->setCurrentItem(ui->notesListWidget->topLevelItem(0));
     }
 
+    updateNoteCountLabel();
+
     if (page == LinkDialog::TextLinkPage) {
         QClipboard *clipboard = QApplication::clipboard();
         const QString text = clipboard->text().remove(QStringLiteral("\n")).trimmed();
@@ -158,6 +166,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     }
 
     setupFileUrlMenu();
+    updateOkButton();
 }
 
 LinkDialog::~LinkDialog() {
@@ -190,12 +199,76 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
             item->setHidden(false);
         }
     }
+
+    // Select the first matching note if the selected note doesn't match the search anymore,
+    // so a hidden note can't be linked by accident
+    QTreeWidgetItem *currentItem = ui->notesListWidget->currentItem();
+    if (currentItem == nullptr || currentItem->isHidden()) {
+        QTreeWidgetItem *firstVisibleItem = nullptr;
+
+        for (int i = 0; i < ui->notesListWidget->topLevelItemCount(); ++i) {
+            QTreeWidgetItem *item = ui->notesListWidget->topLevelItem(i);
+            if (!item->isHidden()) {
+                firstVisibleItem = item;
+                break;
+            }
+        }
+
+        ui->notesListWidget->setCurrentItem(firstVisibleItem);
+
+        if (firstVisibleItem == nullptr) {
+            ui->notesListWidget->clearSelection();
+            ui->headingListWidget->clear();
+            ui->noHeadingsLabel->hide();
+        }
+    }
+
+    updateNoteCountLabel();
+    updateOkButton();
+}
+
+/**
+ * Shows how many notes are in the list, and how many of them match the search
+ */
+void LinkDialog::updateNoteCountLabel() {
+    const int total = ui->notesListWidget->topLevelItemCount();
+
+    if (ui->searchLineEdit->text().size() < 2) {
+        ui->noteCountLabel->setText(tr("%n note(s)", "", total));
+        return;
+    }
+
+    int visible = 0;
+    for (int i = 0; i < total; ++i) {
+        if (!ui->notesListWidget->topLevelItem(i)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->noteCountLabel->setText(tr("%1 of %n note(s)", "", total).arg(visible));
+}
+
+/**
+ * Only allows inserting a link if there is a URL or a note to link to
+ */
+void LinkDialog::updateOkButton() {
+    bool canInsert;
+
+    if (ui->tabWidget->currentWidget() == ui->noteTab) {
+        const QTreeWidgetItem *item = ui->notesListWidget->currentItem();
+        canInsert = item != nullptr && !item->isHidden();
+    } else {
+        canInsert = !ui->urlEdit->text().trimmed().isEmpty();
+    }
+
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(canInsert);
 }
 
 QString LinkDialog::getSelectedNoteName() const {
-    return ui->notesListWidget->currentItem() != nullptr
-               ? ui->notesListWidget->currentItem()->data(0, NoteNameRole).toString()
-               : QString();
+    const QTreeWidgetItem *item = ui->notesListWidget->currentItem();
+
+    return item != nullptr && !item->isHidden() ? item->data(0, NoteNameRole).toString()
+                                                : QString();
 }
 
 Note LinkDialog::getSelectedNote() const {
@@ -284,7 +357,14 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
             // set focus to the note text edit if Key_Return or Key_Tab
             // were pressed in the notes list
             if ((keyEvent->key() == Qt::Key_Return) || (keyEvent->key() == Qt::Key_Tab)) {
-                ui->headingSearchLineEdit->setFocus();
+                if (ui->headingSearchLineEdit->isEnabled()) {
+                    ui->headingSearchLineEdit->setFocus();
+                } else if (keyEvent->key() == Qt::Key_Return) {
+                    // There are no headings to choose from, so the link can be inserted right away
+                    doAccept();
+                } else {
+                    ui->nameLineEdit->setFocus();
+                }
 
                 return true;
             }
@@ -489,6 +569,7 @@ void LinkDialog::addDirectoryUrl(bool relative) {
 }
 
 void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
+    updateOkButton();
     auto url = QUrl(arg1);
 
     if (!url.isValid()) {
@@ -555,6 +636,12 @@ void LinkDialog::loadNoteHeadings() const {
 
     ui->headingListWidget->clear();
     ui->headingListWidget->addItems(headingTexts);
+
+    // Show a hint instead of an empty heading list
+    const bool hasHeadings = !headingTexts.isEmpty();
+    ui->headingSearchLineEdit->setEnabled(hasHeadings);
+    ui->headingListWidget->setVisible(hasHeadings);
+    ui->noHeadingsLabel->setVisible(!hasHeadings && note.isFetched());
 }
 
 void LinkDialog::on_notesListWidget_currentItemChanged(QTreeWidgetItem *current,
@@ -571,6 +658,8 @@ void LinkDialog::on_tabWidget_currentChanged(int index) {
     } else {
         ui->searchLineEdit->setFocus();
     }
+
+    updateOkButton();
 }
 
 void LinkDialog::startTitleFetchRequest(const QUrl &url) {

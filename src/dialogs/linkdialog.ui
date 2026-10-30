@@ -131,10 +131,10 @@
           <widget class="QLineEdit" name="searchLineEdit">
            <property name="styleSheet">
             <string notr="true">QLineEdit {
-	border: 1px solid lightgray;
-	border-radius: 5px;
-	padding: 2px 5px 2px 25px;
-	background-image: url(:/images/search.png);
+        /* the background image doesn't work without the border definition */
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
 	background-repeat: no-repeat;
 	background-position: center left;
 	margin-right: 0px;
@@ -160,6 +160,9 @@
             <property name="sortingEnabled">
              <bool>true</bool>
             </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
              <column>
               <property name="text">
                <string>Note</string>
@@ -180,6 +183,13 @@
                <string>Modified</string>
               </property>
              </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="noteCountLabel">
+            <property name="text">
+             <string notr="true"/>
+            </property>
            </widget>
           </item>
          <item>
@@ -211,6 +221,16 @@
               <horstretch>0</horstretch>
               <verstretch>1</verstretch>
              </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="noHeadingsLabel">
+            <property name="text">
+             <string>The selected note has no headings, the link will point to the whole note</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
             </property>
            </widget>
           </item>

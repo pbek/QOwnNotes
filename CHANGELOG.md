@@ -104,6 +104,15 @@
   - The **OK** button is now called **Insert attachment** and is only enabled when there
     is a file or URL to insert
   - The title field shows that the title is optional and that the file name is used otherwise
+- Polished the link dialog
+  - The **OK** button is now called **Insert link** and is only enabled when a URL was
+    entered or a note is selected, so no link to a random note is inserted by accident
+  - Searching for notes selects the first matching note, so a note that is hidden
+    by the search can't be linked anymore
+  - The note list shows how many notes there are and how many match the search
+  - A hint is shown instead of an empty heading list, if the selected note has no headings,
+    then <kbd>Return</kbd> in the note list inserts the link right away
+  - Both search fields now look the same, and a text is shown while the title of a webpage is fetched
 
 ## 26.10.15
 
