@@ -16,12 +16,15 @@ PasswordDialog::PasswordDialog(QWidget *parent, const QString &labelText, bool d
     ui->passwordLineEdit->setFocus();
 
     ui->passwordLineEdit2->setVisible(doubleEnterPassword);
-    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!doubleEnterPassword);
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
     ui->errorLabel->setVisible(false);
 
     if (!labelText.isEmpty()) {
         ui->headlineLabel->setText(labelText);
     }
+
+    // Only take as much height as needed, there is nothing that can grow
+    resize(width(), sizeHint().height());
 }
 
 PasswordDialog::~PasswordDialog() { delete ui; }
@@ -33,6 +36,10 @@ void PasswordDialog::on_passwordLineEdit_textChanged(const QString &arg1) {
 
     if (_doubleEnterPassword) {
         checkIfPasswordsAreEqual();
+    } else {
+        // An empty password can't be correct
+        ui->buttonBox->button(QDialogButtonBox::Ok)
+            ->setEnabled(!ui->passwordLineEdit->text().isEmpty());
     }
 }
 
@@ -48,7 +55,8 @@ bool PasswordDialog::checkIfPasswordsAreEqual() {
     bool equal = ui->passwordLineEdit->text() == ui->passwordLineEdit2->text();
 
     ui->errorLabel->setVisible(!equal && !ui->passwordLineEdit2->text().isEmpty());
-    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(equal);
+    ui->buttonBox->button(QDialogButtonBox::Ok)
+        ->setEnabled(equal && !ui->passwordLineEdit->text().isEmpty());
 
     return equal;
 }

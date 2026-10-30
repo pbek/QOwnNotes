@@ -62,6 +62,10 @@
 - Polished the add tag dialog
   - The **OK** button is now called **Add tag** and is disabled when the tag name is empty
   - Surrounding whitespace is removed from the tag name and the dialog got a sensible minimum width
+- Polished the note encryption password dialog
+  - The **OK** button is disabled as long as no password was entered
+  - The dialog only takes as much height as it needs, and long texts are wrapped
+  - The "Passwords don't match!" warning uses a red that is readable in dark mode too
 
 ## 26.10.15
 
