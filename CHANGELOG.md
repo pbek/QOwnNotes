@@ -86,6 +86,10 @@
 - Polished the share note dialog
   - The shared link field got buttons to copy the link to the clipboard and to open it in the browser
   - The dialog got a **Close** button
+- Polished the browser extension security token dialog
+  - The dialog now shows when the token was copied to the clipboard
+  - The token is shown in a fixed width font, so similar looking characters can be told apart
+  - The **OK** and copy buttons are disabled when the token is empty
 
 ## 26.10.15
 

@@ -33,6 +33,7 @@ class WebSocketTokenDialog : public MasterDialog {
    private:
     Ui::WebSocketTokenDialog *ui;
     QString _initialToken;
+    QString _copiedToken;
 
     QString generateToken() const;
     void loadTokenFromSettings();

@@ -2,17 +2,35 @@
 
 #include <utils/misc.h>
 
+#include <QFontDatabase>
+#include <QPushButton>
 #include <QShowEvent>
 #include <QtGui/QClipboard>
 
 #include "services/cryptoservice.h"
 #include "services/settingsservice.h"
 #include "ui_websockettokendialog.h"
+#include "utils/gui.h"
 
 WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::WebSocketTokenDialog) {
     ui->setupUi(this);
     afterSetupUI();
+
+    // Show the token in a fixed width font, so similar looking characters can be told apart
+    ui->tokenLineEdit->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
+    Utils::Gui::setMutedTextColor(ui->copiedLabel);
+
+    // An empty token can't be used by the browser extension
+    connect(ui->tokenLineEdit, &QLineEdit::textChanged, this, [this](const QString &text) {
+        const bool hasToken = !text.trimmed().isEmpty();
+        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(hasToken);
+        ui->copyButton->setEnabled(hasToken);
+
+        if (text != _copiedToken) {
+            ui->copiedLabel->clear();
+        }
+    });
 }
 
 QString WebSocketTokenDialog::generateToken() const { return Utils::Misc::generateRandomString(8); }
@@ -35,7 +53,9 @@ void WebSocketTokenDialog::loadTokenFromSettings() {
 
 void WebSocketTokenDialog::on_copyButton_clicked() {
     QClipboard *clipboard = QApplication::clipboard();
-    clipboard->setText(ui->tokenLineEdit->text());
+    _copiedToken = ui->tokenLineEdit->text();
+    clipboard->setText(_copiedToken);
+    ui->copiedLabel->setText(tr("The token was copied to the clipboard."));
 }
 
 void WebSocketTokenDialog::on_generateButton_clicked() {
