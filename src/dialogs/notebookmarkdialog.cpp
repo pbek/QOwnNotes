@@ -30,6 +30,7 @@ NoteBookmarkDialog::NoteBookmarkDialog(QWidget *parent)
         QIcon::fromTheme(QStringLiteral("go-next"),
                          QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/go-next.svg"))));
     jumpButton->setToolTip(tr("Jump to the selected bookmark in the main window"));
+    _jumpButton = jumpButton;
 
     QPushButton *deleteButton =
         ui->buttonBox->addButton(tr("Delete bookmark"), QDialogButtonBox::ActionRole);
@@ -37,6 +38,7 @@ NoteBookmarkDialog::NoteBookmarkDialog(QWidget *parent)
         QIcon::fromTheme(QStringLiteral("edit-delete"),
                          QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/edit-delete.svg"))));
     deleteButton->setToolTip(tr("Delete the selected bookmark"));
+    _deleteButton = deleteButton;
 
     QPushButton *reloadButton =
         ui->buttonBox->addButton(tr("Reload"), QDialogButtonBox::ActionRole);
@@ -51,8 +53,14 @@ NoteBookmarkDialog::NoteBookmarkDialog(QWidget *parent)
     connect(ui->bookmarkTableWidget, &QTableWidget::cellDoubleClicked, this,
             &NoteBookmarkDialog::onBookmarkTableDoubleClicked);
 
+    connect(ui->bookmarkTableWidget, &QTableWidget::itemSelectionChanged, this,
+            &NoteBookmarkDialog::updateActionButtons);
+
     // Install event filter on the table to handle the Del key
     ui->bookmarkTableWidget->installEventFilter(this);
+
+    Utils::Gui::setMutedTextColor(ui->infoLabel);
+    updateActionButtons();
 }
 
 NoteBookmarkDialog::~NoteBookmarkDialog() { delete ui; }
@@ -64,6 +72,10 @@ void NoteBookmarkDialog::setBookmarks(const QHash<int, NoteHistoryItem> &bookmar
     // Collect and sort by slot number for a predictable display order
     QList<int> slotNumbers = bookmarks.keys();
     std::sort(slotNumbers.begin(), slotNumbers.end());
+
+    // Remember the selected bookmark, so it can be selected again after reloading
+    const int previousSlot = selectedSlot();
+    int rowToSelect = 0;
 
     ui->bookmarkTableWidget->setRowCount(0);
 
@@ -84,13 +96,41 @@ void NoteBookmarkDialog::setBookmarks(const QHash<int, NoteHistoryItem> &bookmar
         slotItem->setTextAlignment(Qt::AlignCenter);
 
         auto *noteItem = new QTableWidgetItem(item.getNoteName());
+        noteItem->setToolTip(note.relativeNoteFilePath());
         auto *posItem = new QTableWidgetItem(QString::number(item.getCursorPosition()));
         posItem->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
+        posItem->setToolTip(tr("Cursor position in the note"));
 
         ui->bookmarkTableWidget->setItem(row, 0, slotItem);
         ui->bookmarkTableWidget->setItem(row, 1, noteItem);
         ui->bookmarkTableWidget->setItem(row, 2, posItem);
+
+        if (slot == previousSlot) {
+            rowToSelect = row;
+        }
     }
+
+    const int rowCount = ui->bookmarkTableWidget->rowCount();
+
+    if (rowCount > 0) {
+        ui->bookmarkTableWidget->selectRow(qMin(rowToSelect, rowCount - 1));
+        ui->infoLabel->setText(tr("%n bookmark(s)", "", rowCount));
+    } else {
+        ui->infoLabel->setText(
+            tr("No bookmarks are stored yet. Use the \"Store bookmark at slot\" actions to store "
+               "the current note and cursor position as bookmark."));
+    }
+
+    updateActionButtons();
+}
+
+/**
+ * Only enables the jump and delete buttons when a bookmark is selected
+ */
+void NoteBookmarkDialog::updateActionButtons() {
+    const bool hasSelection = selectedSlot() >= 0;
+    _jumpButton->setEnabled(hasSelection);
+    _deleteButton->setEnabled(hasSelection);
 }
 
 /**

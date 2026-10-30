@@ -66,6 +66,11 @@
   - The **OK** button is disabled as long as no password was entered
   - The dialog only takes as much height as it needs, and long texts are wrapped
   - The "Passwords don't match!" warning uses a red that is readable in dark mode too
+- Polished the note bookmarks dialog
+  - The **Jump to bookmark** and **Delete bookmark** buttons are only enabled when a bookmark is selected
+  - The first bookmark is selected when the dialog opens, and the selection is kept when reloading
+  - The dialog shows how many bookmarks there are, or a hint how to store bookmarks
+  - The note path is shown as tooltip and the redundant row numbers were removed
 
 ## 26.10.15
 

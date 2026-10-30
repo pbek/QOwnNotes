@@ -10,6 +10,8 @@ namespace Ui {
 class NoteBookmarkDialog;
 }
 
+class QPushButton;
+
 class NoteBookmarkDialog : public MasterDialog {
     Q_OBJECT
 
@@ -35,9 +37,12 @@ class NoteBookmarkDialog : public MasterDialog {
 
    private:
     Ui::NoteBookmarkDialog *ui;
+    QPushButton *_jumpButton = nullptr;
+    QPushButton *_deleteButton = nullptr;
 
     void reloadTable();
     int selectedSlot() const;
+    void updateActionButtons();
 };
 
 #endif    // NOTEBOOKMARKDIALOG_H
