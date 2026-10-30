@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 26.10.16
+
+- Fixed Nextcloud Deck boards being loaded twice when opening the Nextcloud Deck dialog
+
 ## 26.10.15
 
 - Extended the search field in the local and Nextcloud / ownCloud note trash dialogs

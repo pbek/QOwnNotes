@@ -79,7 +79,6 @@ NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
 
 void NextcloudDeckDialog::setupUi() {
     setupMainSplitter();
-    loadBoardStackComboBox();
     refreshUi();
     Utils::Gui::initTreeWidgetHeaderOrderPersistence(
         ui->cardItemTreeWidget,
