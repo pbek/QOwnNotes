@@ -1,6 +1,8 @@
 #ifndef TRASHDIALOG_H
 #define TRASHDIALOG_H
 
+#include <QList>
+
 #include "masterdialog.h"
 
 namespace Ui {
@@ -9,6 +11,7 @@ class TrashDialog;
 
 class MainWindow;
 class QAbstractButton;
+class QPushButton;
 class QJSValue;
 class QSplitter;
 
@@ -39,7 +42,9 @@ class TrashDialog : public MasterDialog {
 
     Ui::TrashDialog *ui;
     QSplitter *trashSplitter;
+    QList<QPushButton *> _actionButtons;
     void setupMainSplitter();
+    void updatePreviewInfo();
 };
 
 #endif    // TRASHDIALOG_H

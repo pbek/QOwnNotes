@@ -61,6 +61,9 @@
         </item>
         <item>
          <widget class="QTreeWidget" name="trashTreeWidget">
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>1</horstretch>
@@ -88,6 +91,13 @@
           </column>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="trashCountLabel">
+          <property name="text">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
      </item>
@@ -100,10 +110,10 @@
         </sizepolicy>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::Plain</enum>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <property name="leftMargin">
@@ -119,9 +129,35 @@
          <number>0</number>
         </property>
         <property name="spacing">
-         <number>0</number>
+         <number>3</number>
         </property>
         <item row="0" column="0">
+         <widget class="QLabel" name="previewHeaderLabel">
+          <property name="text">
+           <string notr="true"/>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::TextSelectableByMouse</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="previewDetailLabel">
+          <property name="text">
+           <string notr="true"/>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::TextSelectableByMouse</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
          <widget class="QOwnNotesMarkdownTextEdit" name="noteBrowser">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -137,7 +173,7 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item row="3" column="0">
          <widget class="QFrame" name="noteBrowserSearchFrame">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">

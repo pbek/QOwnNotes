@@ -22,6 +22,14 @@
   - The **Reload** button now reloads directly instead of opening a menu
   - Fixed the <kbd>Ctrl + S</kbd> shortcut for saving a card not working
   - The splitter position between the card list and the editor is now remembered
+- Polished the note versions dialogs and the local and Nextcloud / ownCloud trash dialogs
+  - A header above the preview shows the selected version or trashed note, the trash dialogs
+    also show when a note was trashed or where it will be restored to
+  - The lists show how many versions or trashed notes there are, and how many match the search
+  - Actions like restoring or deleting are only enabled when something is selected
+  - The local trash dialog shows dates in your locale format, marks unreadable files with a
+    warning icon and got a **Close** button
+  - The preview gets more room by default, and the panes can no longer be collapsed by accident
 
 ## 26.10.15
 

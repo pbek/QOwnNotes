@@ -2,6 +2,7 @@
 
 #include <services/cloudservice.h>
 #include <utils/gui.h>
+#include <utils/misc.h>
 
 #include <QDebug>
 #include <QJSValue>
@@ -15,7 +16,7 @@
 #include "ui_trashdialog.h"
 
 namespace {
-enum ItemRole { NoteTextRole = Qt::UserRole + 1, TimestampRole };
+enum ItemRole { NoteTextRole = Qt::UserRole + 1, TimestampRole, DateStringRole };
 }
 
 TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent) : TrashDialog(parent) {
@@ -31,6 +32,12 @@ TrashDialog::TrashDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Tra
 
     setupMainSplitter();
 
+    Utils::Gui::setSectionHeaderFont(ui->previewHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->previewDetailLabel);
+    ui->previewDetailLabel->setTextFormat(Qt::RichText);
+    Utils::Gui::setMutedTextColor(ui->trashCountLabel);
+    ui->noteBrowser->setPlaceholderText(tr("Select a trashed note to see its text"));
+
     QPushButton *button;
     ui->buttonBox->clear();
 
@@ -43,6 +50,7 @@ TrashDialog::TrashDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Tra
            "QOwnNotes by Nextcloud / ownCloud sync.</p>"));
     button->setProperty("ActionRole", RestoreOnServer);
     button->setDefault(false);
+    _actionButtons.append(button);
     button->setIcon(QIcon::fromTheme(QStringLiteral("view-restore"),
                                      QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
@@ -56,6 +64,7 @@ TrashDialog::TrashDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Tra
            "<p>You can always restore the note and its versions later.</p>"));
     button->setProperty("ActionRole", Download);
     button->setDefault(false);
+    _actionButtons.append(button);
     button->setIcon(QIcon::fromTheme(QStringLiteral("edit-download"),
                                      QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
@@ -64,6 +73,7 @@ TrashDialog::TrashDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Tra
     button->setToolTip(tr("Delete selected note on server"));
     button->setProperty("ActionRole", DeleteOnServer);
     button->setDefault(false);
+    _actionButtons.append(button);
     button->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete"),
                                      QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
@@ -78,6 +88,8 @@ TrashDialog::TrashDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Tra
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
             SLOT(dialogButtonClicked(QAbstractButton *)));
     connect(this, SIGNAL(finished(int)), this, SLOT(storeSettings()));
+
+    updatePreviewInfo();
 }
 
 /**
@@ -119,23 +131,29 @@ void TrashDialog::setNotes(const QJSValue &notes) {
         item->setData(Qt::UserRole, fileName);
         item->setData(NoteTextRole, data);
         item->setData(TimestampRole, timestamp);
+        item->setData(DateStringRole, dateString);
         item->setToolTip(dateString);
         ui->trashListWidget->addItem(item);
     }
 
     ui->trashListWidget->setCurrentRow(0);
+    updatePreviewInfo();
 }
 
 void TrashDialog::setupMainSplitter() {
     trashSplitter = new QSplitter;
+    trashSplitter->setChildrenCollapsible(false);
 
     trashSplitter->addWidget(ui->listFrame);
     trashSplitter->addWidget(ui->noteBrowserFrame);
 
-    // restore splitter sizes
+    // Restore the splitter sizes, give the preview more room by default
     SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("trashSplitterSizes")).toByteArray();
-    trashSplitter->restoreState(state);
+    if (!trashSplitter->restoreState(state)) {
+        trashSplitter->setStretchFactor(0, 1);
+        trashSplitter->setStretchFactor(1, 2);
+    }
 
     ui->gridLayout->layout()->addWidget(trashSplitter);
     ui->gridLayout->layout()->addWidget(ui->buttonBox);
@@ -153,6 +171,7 @@ void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
     auto *item = ui->trashListWidget->item(currentRow);
     ui->noteBrowser->setPlainText(
         item != nullptr && !item->isHidden() ? item->data(NoteTextRole).toString() : QString());
+    updatePreviewInfo();
 
     if (!ui->searchLineEdit->text().isEmpty()) {
         // Highlight and jump to the query without taking focus from the trash filter
@@ -163,6 +182,44 @@ void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
         searchWidget->activate(false);
         ui->noteBrowser->ensureCursorVisible();
     }
+}
+
+/**
+ * Updates the preview header, the trashed note count and the action buttons
+ */
+void TrashDialog::updatePreviewInfo() {
+    const int total = ui->trashListWidget->count();
+    int visible = 0;
+    for (int row = 0; row < total; ++row) {
+        if (!ui->trashListWidget->item(row)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->trashCountLabel->setText(ui->searchLineEdit->text().isEmpty()
+                                     ? tr("%n trashed note(s)", "", total)
+                                     : tr("%1 of %n trashed note(s)", "", total).arg(visible));
+
+    const auto *item = ui->trashListWidget->currentItem();
+    const bool hasNote = item != nullptr && !item->isHidden();
+
+    for (auto *button : Utils::asConst(_actionButtons)) {
+        button->setEnabled(hasNote);
+    }
+
+    if (hasNote) {
+        ui->previewHeaderLabel->setText(item->text());
+        const QString dateString = item->data(DateStringRole).toString();
+        ui->previewDetailLabel->setText(
+            dateString.isEmpty() ? QString() : tr("Trashed: %1").arg(dateString.toHtmlEscaped()));
+    } else {
+        ui->previewHeaderLabel->setText(total == 0     ? tr("No trashed notes")
+                                        : visible == 0 ? tr("No trashed note matches the search")
+                                                       : tr("No trashed note selected"));
+        ui->previewDetailLabel->clear();
+    }
+
+    ui->previewDetailLabel->setHidden(ui->previewDetailLabel->text().isEmpty());
 }
 
 void TrashDialog::dialogButtonClicked(QAbstractButton *button) {

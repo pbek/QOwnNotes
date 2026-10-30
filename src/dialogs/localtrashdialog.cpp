@@ -5,12 +5,18 @@
 
 #include <QDebug>
 #include <QDialogButtonBox>
+#include <QLocale>
 #include <QPushButton>
 #include <QSplitter>
 
 #include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
 #include "services/settingsservice.h"
 #include "ui_localtrashdialog.h"
+
+namespace {
+// Column 0 data roles, Qt::UserRole holds the trash item id
+enum ItemRole { NoteTextRole = Qt::UserRole + 1, DetailRole };
+}    // namespace
 
 class LocalTrashTreeWidgetItem : public QTreeWidgetItem {
    public:
@@ -40,6 +46,12 @@ LocalTrashDialog::LocalTrashDialog(QWidget *parent)
 
     setupMainSplitter();
 
+    Utils::Gui::setSectionHeaderFont(ui->previewHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->previewDetailLabel);
+    ui->previewDetailLabel->setTextFormat(Qt::RichText);
+    Utils::Gui::setMutedTextColor(ui->trashCountLabel);
+    ui->noteBrowser->setPlaceholderText(tr("Select a trashed note to see its text"));
+
     QPushButton *button;
     ui->buttonBox->clear();
 
@@ -47,6 +59,7 @@ LocalTrashDialog::LocalTrashDialog(QWidget *parent)
     button->setToolTip(tr("Restore selected notes"));
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
+    _restoreButton = button;
     button->setIcon(QIcon::fromTheme(QStringLiteral("view-restore"),
                                      QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
@@ -55,22 +68,19 @@ LocalTrashDialog::LocalTrashDialog(QWidget *parent)
     button->setToolTip(tr("Remove selected notes"));
     button->setProperty("ActionRole", Remove);
     button->setDefault(false);
+    _removeButton = button;
     button->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete"),
                                      QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-    //    button = new QPushButton(tr("Cancel"));
-    //    button->setProperty("ActionRole", Cancel);
-    //    button->setIcon(
-    //            QIcon::fromTheme(
-    //                    "dialog-cancel",
-    //                    QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
-    //    button->setDefault(true);
-    //    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
+    // The close button has no action role, so it just closes the dialog
+    ui->buttonBox->addButton(QDialogButtonBox::Close);
 
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
             SLOT(dialogButtonClicked(QAbstractButton *)));
     connect(this, SIGNAL(finished(int)), this, SLOT(storeSettings()));
+    connect(ui->trashTreeWidget, &QTreeWidget::itemSelectionChanged, this,
+            &LocalTrashDialog::updatePreviewInfo);
     Utils::Gui::initTreeWidgetHeaderOrderPersistence(
         ui->trashTreeWidget, QStringLiteral("LocalTrashDialog/trashTreeWidgetHeaderOrder"));
 
@@ -91,23 +101,25 @@ void LocalTrashDialog::loadTrashedNotes() {
 
         auto *item = new LocalTrashTreeWidgetItem(ui->trashTreeWidget);
         item->setText(0, trashItem.getFileName());
-        item->setText(1, trashItem.getCreated().toString());
+        item->setText(1, QLocale().toString(trashItem.getCreated(), QLocale::ShortFormat));
         item->setData(0, Qt::UserRole, trashItem.getId());
         // add timestamp data to allow sorting
         item->setData(1, Qt::UserRole, trashItem.getCreated().toMSecsSinceEpoch());
 
         QString toolTipText =
-            tr("File will be restored to: %1").arg(trashItem.restorationFilePath());
+            tr("File will be restored to: %1").arg(trashItem.restorationFilePath().toHtmlEscaped());
 
         // mark missing items if file is missing
         if (!trashItem.fileExists()) {
             item->setIcon(
-                0, QIcon::fromTheme(QStringLiteral("edit-delete"),
+                0, QIcon::fromTheme(QStringLiteral("dialog-warning"),
                                     QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
             toolTipText = tr("File <strong>%1</strong> isn't readable and can't"
                              " be restored!")
-                              .arg(trashItem.fullFilePath());
+                              .arg(trashItem.fullFilePath().toHtmlEscaped());
         }
+
+        item->setData(0, DetailRole, toolTipText);
 
         item->setToolTip(0, toolTipText);
         item->setToolTip(1, toolTipText);
@@ -128,14 +140,18 @@ void LocalTrashDialog::loadTrashedNotes() {
 
 void LocalTrashDialog::setupMainSplitter() {
     trashSplitter = new QSplitter(this);
+    trashSplitter->setChildrenCollapsible(false);
 
     trashSplitter->addWidget(ui->listFrame);
     trashSplitter->addWidget(ui->noteBrowserFrame);
 
-    // restore splitter sizes
+    // Restore the splitter sizes, give the preview more room by default
     SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("localTrashSplitterSizes")).toByteArray();
-    trashSplitter->restoreState(state);
+    if (!trashSplitter->restoreState(state)) {
+        trashSplitter->setStretchFactor(0, 1);
+        trashSplitter->setStretchFactor(1, 2);
+    }
 
     ui->gridLayout->layout()->addWidget(trashSplitter);
     ui->gridLayout->layout()->addWidget(ui->buttonBox);
@@ -185,6 +201,7 @@ void LocalTrashDialog::on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *cu
         text = trashItem.loadFileFromDisk();
     }
     ui->noteBrowser->setPlainText(text);
+    updatePreviewInfo();
 
     if (!ui->searchLineEdit->text().isEmpty()) {
         // Highlight and jump to the query without taking focus from the trash filter
@@ -295,11 +312,11 @@ void LocalTrashDialog::on_searchLineEdit_textChanged(const QString &arg1) {
 
         if (!matches) {
             // Cache note text on demand to avoid reading every file on each keystroke
-            QVariant text = item->data(0, Qt::UserRole + 1);
+            QVariant text = item->data(0, NoteTextRole);
             if (!text.isValid()) {
                 TrashItem trashItem = TrashItem::fetch(item->data(0, Qt::UserRole).toInt());
                 text = trashItem.loadFileFromDisk();
-                item->setData(0, Qt::UserRole + 1, text);
+                item->setData(0, NoteTextRole, text);
             }
             matches = text.toString().contains(arg1, Qt::CaseInsensitive);
         }
@@ -318,4 +335,39 @@ void LocalTrashDialog::on_searchLineEdit_textChanged(const QString &arg1) {
         ui->trashTreeWidget->setCurrentItem(firstMatchingItem);
     }
     on_trashTreeWidget_currentItemChanged(ui->trashTreeWidget->currentItem(), nullptr);
+}
+
+/**
+ * Updates the preview header, the trashed note count and the action buttons
+ */
+void LocalTrashDialog::updatePreviewInfo() {
+    const int total = ui->trashTreeWidget->topLevelItemCount();
+    int visible = 0;
+    for (int row = 0; row < total; ++row) {
+        if (!ui->trashTreeWidget->topLevelItem(row)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->trashCountLabel->setText(ui->searchLineEdit->text().isEmpty()
+                                     ? tr("%n trashed note(s)", "", total)
+                                     : tr("%1 of %n trashed note(s)", "", total).arg(visible));
+
+    const bool hasSelection = !ui->trashTreeWidget->selectedItems().isEmpty();
+    _restoreButton->setEnabled(hasSelection);
+    _removeButton->setEnabled(hasSelection);
+
+    const auto *item = ui->trashTreeWidget->currentItem();
+
+    if (item != nullptr && !item->isHidden()) {
+        ui->previewHeaderLabel->setText(item->text(0));
+        ui->previewDetailLabel->setText(item->data(0, DetailRole).toString());
+    } else {
+        ui->previewHeaderLabel->setText(total == 0     ? tr("No trashed notes")
+                                        : visible == 0 ? tr("No trashed note matches the search")
+                                                       : tr("No trashed note selected"));
+        ui->previewDetailLabel->clear();
+    }
+
+    ui->previewDetailLabel->setHidden(ui->previewDetailLabel->text().isEmpty());
 }

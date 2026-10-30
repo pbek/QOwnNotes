@@ -12,6 +12,7 @@ class MainWindow;
 class QTreeWidgetItem;
 class QSplitter;
 class QAbstractButton;
+class QPushButton;
 
 class LocalTrashDialog : public MasterDialog {
     Q_OBJECT
@@ -36,6 +37,8 @@ class LocalTrashDialog : public MasterDialog {
 
     Ui::LocalTrashDialog *ui;
     QSplitter *trashSplitter;
+    QPushButton *_restoreButton = nullptr;
+    QPushButton *_removeButton = nullptr;
     QStringList *dataList;
     QList<int> *timestampList;
 
@@ -46,4 +49,6 @@ class LocalTrashDialog : public MasterDialog {
     void restoreSelectedTrashItems();
 
     void removeSelectedTrashItems();
+
+    void updatePreviewInfo();
 };
