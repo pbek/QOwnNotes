@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>599</width>
-    <height>469</height>
+    <width>880</width>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,38 +17,79 @@
    <item row="0" column="1">
     <widget class="QFrame" name="editFrame">
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Plain</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0" colspan="3">
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="editHeaderLabel">
+        <property name="text">
+         <string>New card</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="editHintLabel">
+        <property name="text">
+         <string>Select a card from the list, or type a title into the search field and press Enter to create a new card.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="titleLabel">
+        <property name="text">
+         <string>Title:</string>
+        </property>
+        <property name="buddy">
+         <cstring>titleLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
        <widget class="QLineEdit" name="titleLineEdit">
         <property name="placeholderText">
          <string>Title</string>
         </property>
-       </widget>
-      </item>
-      <item row="1" column="0" colspan="3">
-       <widget class="QLabel" name="descriptionLabel">
-        <property name="text">
-         <string>Description:</string>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="3">
-       <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit"/>
-      </item>
       <item row="3" column="0">
        <widget class="QCheckBox" name="dueDateTimeCheckBox">
+        <property name="toolTip">
+         <string>Set a due date for the card</string>
+        </property>
         <property name="text">
          <string>Due date</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="1" colspan="2">
+      <item row="3" column="1">
        <widget class="QDateTimeEdit" name="dueDateTimeEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="currentSection">
          <enum>QDateTimeEdit::HourSection</enum>
         </property>
@@ -57,49 +98,140 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="add10MinButton">
-        <property name="text">
-         <string>+10min</string>
-        </property>
-       </widget>
-      </item>
       <item row="4" column="1">
-       <widget class="QPushButton" name="add1HourButton">
+       <widget class="QFrame" name="dueDateAdjustFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="subd1DayButton">
+           <property name="toolTip">
+            <string>Move the due date one day earlier</string>
+           </property>
+           <property name="text">
+            <string>-1d</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="sub1HourButton">
+           <property name="toolTip">
+            <string>Move the due date one hour earlier</string>
+           </property>
+           <property name="text">
+            <string>-1h</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="sub10MinButton">
+           <property name="toolTip">
+            <string>Move the due date ten minutes earlier</string>
+           </property>
+           <property name="text">
+            <string>-10min</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="dueDateAdjustSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>12</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="add10MinButton">
+           <property name="toolTip">
+            <string>Move the due date ten minutes later</string>
+           </property>
+           <property name="text">
+            <string>+10min</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="add1HourButton">
+           <property name="toolTip">
+            <string>Move the due date one hour later</string>
+           </property>
+           <property name="text">
+            <string>+1h</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="add1DayButton">
+           <property name="toolTip">
+            <string>Move the due date one day later</string>
+           </property>
+           <property name="text">
+            <string>+1d</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="dueDateAdjustTrailingSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QLabel" name="descriptionLabel">
         <property name="text">
-         <string>+1h</string>
+         <string>Description:</string>
+        </property>
+        <property name="buddy">
+         <cstring>descriptionTextEdit</cstring>
         </property>
        </widget>
       </item>
-      <item row="4" column="2">
-       <widget class="QPushButton" name="add1DayButton">
-        <property name="text">
-         <string>+1d</string>
+      <item row="6" column="0" colspan="2">
+       <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit">
+        <property name="placeholderText">
+         <string>Add a description using Markdown</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
-       <widget class="QPushButton" name="sub10MinButton">
-        <property name="text">
-         <string>-10min</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="1">
-       <widget class="QPushButton" name="sub1HourButton">
-        <property name="text">
-         <string>-1h</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="2">
-       <widget class="QPushButton" name="subd1DayButton">
-        <property name="text">
-         <string>-1d</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0" colspan="3">
+      <item row="7" column="0" colspan="2">
        <widget class="QFrame" name="buttonFrame">
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -121,34 +253,21 @@
           <number>0</number>
          </property>
          <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+          <widget class="QPushButton" name="moveCardButton">
+           <property name="toolTip">
+            <string>Move card to another board or stack</string>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
+           <property name="text">
+            <string>Move…</string>
            </property>
-          </spacer>
+           <property name="icon">
+            <iconset theme="edit-move" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/edit-move.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-move.svg</iconset>
+           </property>
+          </widget>
          </item>
-          <item>
-           <widget class="QPushButton" name="moveCardButton">
-            <property name="toolTip">
-             <string>Move card to another board or stack</string>
-            </property>
-            <property name="text">
-             <string>Move…</string>
-            </property>
-            <property name="icon">
-             <iconset theme="edit-move" resource="../breeze-qownnotes.qrc">
-              <normaloff>:/icons/breeze-qownnotes/16x16/edit-move.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-move.svg</iconset>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="archiveCardButton">
+         <item>
+          <widget class="QPushButton" name="archiveCardButton">
            <property name="toolTip">
             <string>Archive card</string>
            </property>
@@ -176,6 +295,19 @@
           </widget>
          </item>
          <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="saveButton">
            <property name="toolTip">
             <string>Create card and insert link into current note</string>
@@ -201,35 +333,65 @@
    <item row="0" column="0">
     <widget class="QFrame" name="selectFrame">
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Plain</enum>
      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="3" column="0">
-         <widget class="QCheckBox" name="showArchivedCardsCheckBox">
-          <property name="text">
-           <string>Show archived cards</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-          <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
-          <property name="toolTip">
-           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
-         </property>
-         <property name="text">
-          <string>Show only items due today</string>
-         </property>
-        </widget>
-       </item>
-        <item row="2" column="0">
-         <widget class="QTreeWidget" name="cardItemTreeWidget">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QComboBox" name="boardStackComboBox">
+        <property name="toolTip">
+         <string>Select the board and stack to work with</string>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+        </property>
+        <property name="minimumContentsLength">
+         <number>16</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="newItemEdit">
+        <property name="placeholderText">
+         <string>Search or create card</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QTreeWidget" name="cardItemTreeWidget">
         <property name="contextMenuPolicy">
          <enum>Qt::CustomContextMenu</enum>
         </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <property name="uniformRowHeights">
+         <bool>true</bool>
+        </property>
         <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="allColumnsShowFocus">
          <bool>true</bool>
         </property>
         <column>
@@ -244,8 +406,8 @@
         </column>
        </widget>
       </item>
-        <item row="5" column="0">
-         <widget class="QFrame" name="frame">
+      <item row="3" column="0">
+       <widget class="QFrame" name="listFooterFrame">
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <property name="leftMargin">
           <number>0</number>
@@ -260,25 +422,49 @@
           <number>0</number>
          </property>
          <item>
+          <widget class="QCheckBox" name="showArchivedCardsCheckBox">
+           <property name="text">
+            <string>Show archived cards</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
+           <property name="toolTip">
+            <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
+           </property>
+           <property name="text">
+            <string>Show only items due today</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
+             <width>20</width>
              <height>20</height>
             </size>
            </property>
           </spacer>
          </item>
          <item>
+          <widget class="QLabel" name="cardCountLabel">
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QPushButton" name="reloadCardListButton">
            <property name="toolTip">
-            <string>Reload the card item list from server</string>
+            <string>Reload boards, stacks and cards from server</string>
            </property>
            <property name="text">
-            <string>Reload…</string>
+            <string>Reload</string>
            </property>
            <property name="icon">
             <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
@@ -289,29 +475,9 @@
         </layout>
        </widget>
       </item>
-        <item row="0" column="0">
-         <widget class="QLineEdit" name="newItemEdit">
-         <property name="placeholderText">
-          <string>Search or create card</string>
-        </property>
-        <property name="clearButtonEnabled">
-         <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="boardStackComboBox">
-         <property name="toolTip">
-          <string>Select the board and stack to work with</string>
-         </property>
-         <property name="sizeAdjustPolicy">
-          <enum>QComboBox::AdjustToContents</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -322,26 +488,26 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-   <tabstop>newItemEdit</tabstop>
-   <tabstop>boardStackComboBox</tabstop>
-   <tabstop>cardItemTreeWidget</tabstop>
+  <tabstop>boardStackComboBox</tabstop>
+  <tabstop>newItemEdit</tabstop>
+  <tabstop>cardItemTreeWidget</tabstop>
+  <tabstop>showArchivedCardsCheckBox</tabstop>
+  <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
+  <tabstop>reloadCardListButton</tabstop>
   <tabstop>titleLineEdit</tabstop>
-  <tabstop>descriptionTextEdit</tabstop>
   <tabstop>dueDateTimeCheckBox</tabstop>
   <tabstop>dueDateTimeEdit</tabstop>
-  <tabstop>saveButton</tabstop>
+  <tabstop>subd1DayButton</tabstop>
+  <tabstop>sub1HourButton</tabstop>
+  <tabstop>sub10MinButton</tabstop>
   <tabstop>add10MinButton</tabstop>
   <tabstop>add1HourButton</tabstop>
   <tabstop>add1DayButton</tabstop>
-  <tabstop>sub10MinButton</tabstop>
-  <tabstop>sub1HourButton</tabstop>
-   <tabstop>subd1DayButton</tabstop>
-   <tabstop>showArchivedCardsCheckBox</tabstop>
-   <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
-   <tabstop>reloadCardListButton</tabstop>
-   <tabstop>moveCardButton</tabstop>
-   <tabstop>archiveCardButton</tabstop>
+  <tabstop>descriptionTextEdit</tabstop>
+  <tabstop>moveCardButton</tabstop>
+  <tabstop>archiveCardButton</tabstop>
   <tabstop>deleteCardButton</tabstop>
+  <tabstop>saveButton</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>

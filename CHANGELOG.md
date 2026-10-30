@@ -12,6 +12,16 @@
     and can be canceled too
 - Fixed Nextcloud Deck boards being loaded twice when opening the Nextcloud Deck dialog
 - Fixed Nextcloud Deck cards being loaded twice when toggling the display of archived cards
+- Polished the Nextcloud Deck dialog with a cleaner layout and clearer card states
+  - The board / stack selection is now above the search field, and the card list shows
+    how many cards are listed or match the search
+  - The editor shows whether a new or existing card is being edited, with a hint when
+    no card is selected
+  - The due date adjustment buttons are in one compact row and are disabled without a due date
+  - Archived cards are shown muted and in italics, cards due today are shown in bold
+  - The **Reload** button now reloads directly instead of opening a menu
+  - Fixed the <kbd>Ctrl + S</kbd> shortcut for saving a card not working
+  - The splitter position between the card list and the editor is now remembered
 
 ## 26.10.15
 

@@ -112,6 +112,8 @@ class NextcloudDeckDialog : public MasterDialog {
     void configureDeckService(NextcloudDeckService &nextcloudDeckService) const;
     void configureDeckServiceForCard(NextcloudDeckService &nextcloudDeckService, int cardId) const;
     void updateDeckControlsEnabledState();
+    void updateCardCountLabel();
+    void updateEditState();
     void deleteSelectedCards();
     void moveCards(const QList<int> &cardIds);
     QHash<int, NextcloudDeckService::Card> _cards;

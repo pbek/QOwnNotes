@@ -74,6 +74,9 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
 
     // Hide currently unused UI elements
     ui->showDueTodayItemsOnlyCheckBox->setHidden(true);
+
+    updateEditState();
+    updateCardCountLabel();
 }
 
 NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
@@ -95,7 +98,24 @@ void NextcloudDeckDialog::setupUi() {
     ui->newItemEdit->installEventFilter(this);
     ui->cardItemTreeWidget->installEventFilter(this);
     ui->cardItemTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    ui->newItemEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-find"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-find.svg"))),
+        QLineEdit::LeadingPosition);
     ui->newItemEdit->setFocus();
+
+    // Make the editor header stand out as a section title
+    QFont headerFont = ui->editHeaderLabel->font();
+    headerFont.setBold(true);
+    headerFont.setPointSizeF(headerFont.pointSizeF() * 1.2);
+    ui->editHeaderLabel->setFont(headerFont);
+
+    // Show the hint and the card count in a muted text color
+    QPalette mutedPalette = ui->editHintLabel->palette();
+    mutedPalette.setColor(QPalette::WindowText,
+                          mutedPalette.color(QPalette::Disabled, QPalette::WindowText));
+    ui->editHintLabel->setPalette(mutedPalette);
+    ui->cardCountLabel->setPalette(mutedPalette);
 
     // Adding shortcuts not working when defined in the ui file
     //    auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+S")), this);
@@ -123,22 +143,6 @@ void NextcloudDeckDialog::setupUi() {
     // Clean up unused menu to prevent memory leak
     // TODO: Remove this entire section when noteButton functionality is implemented
     delete noteMenu;
-
-    /*
-     * Set up the reload button menu
-     */
-    auto *reloadMenu = new QMenu(this);
-
-    QAction *reloadAction = reloadMenu->addAction(tr("Reload from server"));
-    reloadAction->setIcon(QIcon::fromTheme(
-        QStringLiteral("view-refresh"), QIcon(":icons/breeze-qownnotes/16x16/view-refresh.svg")));
-    reloadAction->setToolTip(tr("Reload boards, stacks and cards from server"));
-    connect(reloadAction, SIGNAL(triggered()), this, SLOT(on_reloadCardListButton_clicked()));
-
-    // Explicitly transfer ownership to the button (Qt 5.7 compatibility)
-    ui->reloadCardListButton->setMenu(reloadMenu);
-    // Menu ownership is now transferred to the button, no manual deletion needed
-    // The archived cards checkbox is already connected by name in ui->setupUi()
 }
 
 void NextcloudDeckDialog::showEvent(QShowEvent *event) {
@@ -341,6 +345,7 @@ void NextcloudDeckDialog::moveCards(const QList<int> &cardIds) {
 
     QDialog dialog(this);
     dialog.setWindowTitle(tr("Move card(s)"));
+    dialog.setMinimumWidth(380);
     auto *layout = new QVBoxLayout(&dialog);
     auto *label = new QLabel(tr("Destination board / stack:"), &dialog);
     auto *destination = new QComboBox(&dialog);
@@ -455,12 +460,14 @@ void NextcloudDeckDialog::on_titleLineEdit_textChanged(const QString &arg1) {
 
 void NextcloudDeckDialog::on_dueDateTimeCheckBox_toggled(bool checked) {
     ui->dueDateTimeEdit->setEnabled(checked);
+    ui->dueDateAdjustFrame->setEnabled(checked);
 }
 
 void NextcloudDeckDialog::setTitle(const QString &title) { ui->titleLineEdit->setText(title); }
 
 void NextcloudDeckDialog::setupMainSplitter() {
     this->mainSplitter = new QSplitter(this);
+    this->mainSplitter->setChildrenCollapsible(false);
 
     this->mainSplitter->addWidget(ui->selectFrame);
     this->mainSplitter->addWidget(ui->editFrame);
@@ -470,7 +477,17 @@ void NextcloudDeckDialog::setupMainSplitter() {
         SettingsService settings;
         QByteArray state =
             settings.value(QStringLiteral("NextcloudDeckDialog/mainSplitterState")).toByteArray();
-        this->mainSplitter->restoreState(state);
+
+        // Give the editor a bit more room than the card list by default
+        if (!this->mainSplitter->restoreState(state)) {
+            this->mainSplitter->setStretchFactor(0, 2);
+            this->mainSplitter->setStretchFactor(1, 3);
+        }
+
+        connect(this->mainSplitter, &QSplitter::splitterMoved, this, [this]() {
+            SettingsService().setValue(QStringLiteral("NextcloudDeckDialog/mainSplitterState"),
+                                       this->mainSplitter->saveState());
+        });
     }
 
     // Place the splitter explicitly, so additional rows like the picker buttons can't overlap it
@@ -666,6 +683,9 @@ void NextcloudDeckDialog::reloadCardList() {
 
     // Populate the tree widget with cards
     QList<QTreeWidgetItem *> items;    // Collect items for batch insertion (more efficient)
+    const QColor mutedColor =
+        ui->cardItemTreeWidget->palette().color(QPalette::Disabled, QPalette::Text);
+    const QDateTime now = QDateTime::currentDateTime();
 
     for (const auto &card : _cards) {
         // Create item with explicit parent - ownership transferred to tree widget
@@ -674,21 +694,37 @@ void NextcloudDeckDialog::reloadCardList() {
         // Set the summary (title) in the first column
         item->setText(0, card.title);
 
+        // Show archived cards muted and in italics, so they stand out from active cards
+        if (card.archived) {
+            QFont font = item->font(0);
+            font.setItalic(true);
+            item->setFont(0, font);
+            item->setFont(1, font);
+            item->setForeground(0, QBrush(mutedColor));
+        }
+
         // Set the due date in the second column
         if (card.duedate.isValid()) {
             item->setText(1, card.duedate.toString("yyyy-MM-dd hh:mm"));
 
             // Highlight due dates that are already in the past
-            if (card.duedate < QDateTime::currentDateTime()) {
+            if (card.duedate < now) {
                 // Use a muted red that is readable in light and dark mode
                 item->setForeground(1, QBrush(QColor(0xd9, 0x53, 0x4f)));
                 QFont font = item->font(1);
                 font.setBold(true);
                 item->setFont(1, font);
                 item->setToolTip(1, tr("The due date is in the past"));
+            } else if (card.duedate.date() == now.date()) {
+                // Emphasize cards that are due later today
+                QFont font = item->font(1);
+                font.setBold(true);
+                item->setFont(1, font);
+                item->setToolTip(1, tr("The card is due today"));
             }
         } else {
             item->setText(1, tr("No due date"));
+            item->setForeground(1, QBrush(mutedColor));
         }
 
         // Store the card ID as user data for later reference
@@ -712,6 +748,62 @@ void NextcloudDeckDialog::reloadCardList() {
         ui->cardItemTreeWidget->resizeColumnToContents(0);
         ui->cardItemTreeWidget->resizeColumnToContents(1);
     }
+
+    updateCardCountLabel();
+}
+
+/**
+ * Shows how many cards are in the list, and how many of them match the search
+ */
+void NextcloudDeckDialog::updateCardCountLabel() {
+    const int total = ui->cardItemTreeWidget->topLevelItemCount();
+
+    if (total == 0) {
+        ui->cardCountLabel->clear();
+        return;
+    }
+
+    if (ui->newItemEdit->text().isEmpty()) {
+        ui->cardCountLabel->setText(tr("%n card(s)", "", total));
+        return;
+    }
+
+    int visible = 0;
+    for (int i = 0; i < total; ++i) {
+        if (!ui->cardItemTreeWidget->topLevelItem(i)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->cardCountLabel->setText(tr("%1 of %n card(s)", "", total).arg(visible));
+}
+
+/**
+ * Updates the editor header, hint and save button for the current editing state
+ */
+void NextcloudDeckDialog::updateEditState() {
+    if (_mode != Mode::Manage) {
+        return;
+    }
+
+    const bool isExistingCard = _currentCard.id > 0;
+    const bool isNewCard = !isExistingCard && ui->editFrame->isEnabledTo(this);
+
+    if (isExistingCard) {
+        ui->editHeaderLabel->setText(_currentCard.archived ? tr("Edit archived card")
+                                                           : tr("Edit card"));
+        ui->saveButton->setText(tr("Save"));
+        ui->saveButton->setToolTip(tr("Save the changes to the card (Ctrl+S)"));
+    } else {
+        ui->editHeaderLabel->setText(isNewCard ? tr("New card") : tr("No card selected"));
+        ui->saveButton->setText(tr("Create card"));
+        ui->saveButton->setToolTip(tr("Create card and insert link into current note (Ctrl+S)"));
+    }
+
+    ui->editHintLabel->setVisible(!isExistingCard && !isNewCard);
+
+    // Setting the text resets the shortcut, so it needs to be set again
+    ui->saveButton->setShortcut(QKeySequence(QStringLiteral("Ctrl+S")));
 }
 
 void NextcloudDeckDialog::selectCardInList(int cardId) {
@@ -732,11 +824,13 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->descriptionTextEdit->setPlainText(QString());
     ui->dueDateTimeCheckBox->setChecked(false);
     ui->dueDateTimeEdit->setEnabled(false);
+    ui->dueDateAdjustFrame->setEnabled(false);
     ui->saveButton->setEnabled(false);
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
     ui->moveCardButton->setEnabled(false);
+    updateEditState();
 }
 
 int NextcloudDeckDialog::selectedBoardId() const {
@@ -791,6 +885,7 @@ void NextcloudDeckDialog::jumpToCard(int id) {
         ui->deleteCardButton->setEnabled(true);
         ui->moveCardButton->setEnabled(!_currentCard.archived);
         ui->editFrame->setEnabled(true);
+        updateEditState();
     } else {
         resetEditFrameControls();
     }
@@ -843,6 +938,7 @@ void NextcloudDeckDialog::on_newItemEdit_textChanged(const QString &arg1) {
         ui->cardItemTreeWidget, arg1,
         Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
     updateInsertLinksButton();
+    updateCardCountLabel();
 }
 
 void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
@@ -861,6 +957,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
 
     resetEditFrameControls();
     ui->editFrame->setEnabled(true);
+    updateEditState();
     ui->titleLineEdit->setText(ui->newItemEdit->text());
     ui->newItemEdit->clear();
 
@@ -947,7 +1044,7 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
     openUrlAction->setIcon(QIcon::fromTheme(QStringLiteral("text-html"),
                                             QIcon(":icons/breeze-qownnotes/16x16/text-html.svg")));
     QAction *cardLinkAction = menu.addAction(tr("&Add card link to note"));
-    openUrlAction->setIcon(QIcon::fromTheme(
+    cardLinkAction->setIcon(QIcon::fromTheme(
         QStringLiteral("insert-link"), QIcon(":icons/breeze-qownnotes/16x16/insert-link.svg")));
     QAction *searchInNotesAction = menu.addAction(tr("&Search for card link in notes"));
     searchInNotesAction->setIcon(QIcon::fromTheme(
