@@ -59,6 +59,9 @@
 - Polished the new note dialog
   - The **OK** button is now called **Create note** and is disabled when the note name is empty
   - The note name field shows a placeholder text and a clear button
+- Polished the add tag dialog
+  - The **OK** button is now called **Add tag** and is disabled when the tag name is empty
+  - Surrounding whitespace is removed from the tag name and the dialog got a sensible minimum width
 
 ## 26.10.15
 

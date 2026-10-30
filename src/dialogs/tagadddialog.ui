@@ -27,7 +27,10 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Add new tag</string>
+      <string>Tag name:</string>
+     </property>
+     <property name="buddy">
+      <cstring>nameLineEdit</cstring>
      </property>
     </widget>
    </item>
@@ -45,6 +48,9 @@
     <widget class="QLineEdit" name="nameLineEdit">
      <property name="placeholderText">
       <string>New tag</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
