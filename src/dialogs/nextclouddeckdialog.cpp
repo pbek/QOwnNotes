@@ -104,18 +104,9 @@ void NextcloudDeckDialog::setupUi() {
         QLineEdit::LeadingPosition);
     ui->newItemEdit->setFocus();
 
-    // Make the editor header stand out as a section title
-    QFont headerFont = ui->editHeaderLabel->font();
-    headerFont.setBold(true);
-    headerFont.setPointSizeF(headerFont.pointSizeF() * 1.2);
-    ui->editHeaderLabel->setFont(headerFont);
-
-    // Show the hint and the card count in a muted text color
-    QPalette mutedPalette = ui->editHintLabel->palette();
-    mutedPalette.setColor(QPalette::WindowText,
-                          mutedPalette.color(QPalette::Disabled, QPalette::WindowText));
-    ui->editHintLabel->setPalette(mutedPalette);
-    ui->cardCountLabel->setPalette(mutedPalette);
+    Utils::Gui::setSectionHeaderFont(ui->editHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->editHintLabel);
+    Utils::Gui::setMutedTextColor(ui->cardCountLabel);
 
     // Adding shortcuts not working when defined in the ui file
     //    auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+S")), this);

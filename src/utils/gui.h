@@ -143,6 +143,9 @@ void updateInterfaceFontSize(int fontSize = -1);
 
 void setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData);
 
+void setMutedTextColor(QWidget *widget);
+void setSectionHeaderFont(QWidget *widget);
+
 int getTabWidgetIndexByProperty(QTabWidget *tabWidget, const QString &propertyName,
                                 const QVariant &propertyValue);
 int getTabWidgetNoteId(QTabWidget *tabWidget, int index);

@@ -1212,6 +1212,34 @@ void Utils::Gui::updateInterfaceFontSize(int fontSize) {
 }
 
 /**
+ * Shows the text of a widget in the muted color the style uses for disabled text,
+ * which works in light and dark mode
+ */
+void Utils::Gui::setMutedTextColor(QWidget *widget) {
+    QPalette palette = widget->palette();
+    palette.setColor(QPalette::WindowText, palette.color(QPalette::Disabled, QPalette::WindowText));
+    palette.setColor(QPalette::Text, palette.color(QPalette::Disabled, QPalette::Text));
+    widget->setPalette(palette);
+}
+
+/**
+ * Shows the text of a widget in a bold and slightly larger font to use it as a section header
+ */
+void Utils::Gui::setSectionHeaderFont(QWidget *widget) {
+    QFont font = widget->font();
+    font.setBold(true);
+
+    // The font size may be set in pixels instead of points
+    if (font.pointSizeF() > 0) {
+        font.setPointSizeF(font.pointSizeF() * 1.2);
+    } else if (font.pixelSize() > 0) {
+        font.setPixelSize(qRound(font.pixelSize() * 1.2));
+    }
+
+    widget->setFont(font);
+}
+
+/**
  * Sets the current index of a combo box by user data
  */
 void Utils::Gui::setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData) {
