@@ -28,6 +28,7 @@ class QLineEdit;
 class QStatusBar;
 class QButtonGroup;
 class QCheckBox;
+class QLabel;
 class NoteFolder;
 class QSplitter;
 class QMenu;
@@ -131,6 +132,7 @@ class SettingsDialog : public MasterDialog {
 
    private:
     Ui::SettingsDialog *ui;
+    QLabel *_noSearchResultsLabel = nullptr;
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
     QHash<int, bool> _pageInitialized;

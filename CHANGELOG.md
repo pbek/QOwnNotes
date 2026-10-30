@@ -159,6 +159,11 @@
   - The dialog shows on which step you are, like "Step 1 of 4: Note folder"
   - <kbd>Return</kbd> opens the next step, or finishes the dialog on the last step
   - Note folder errors are wrapped and use a red that is readable in dark mode too
+- Polished the search in the settings dialog
+  - If the current settings page doesn't match the search, the first matching page is shown
+  - A hint is shown below the settings list if no settings match the search
+  - Texts outside of the settings pages, like the page headline, are no longer highlighted
+    by the search
 
 ## 26.10.15
 

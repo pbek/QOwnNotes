@@ -18,6 +18,7 @@
 #include <widgets/scriptsettingwidget.h>
 
 #include <QAction>
+#include <QBoxLayout>
 #include <QClipboard>
 #include <QDebug>
 #include <QDesktopServices>
@@ -102,6 +103,19 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
     afterSetupUI();
+
+    // Show a hint below the settings tree if the search doesn't match any settings
+    _noSearchResultsLabel = new QLabel(tr("No settings match your search"), this);
+    _noSearchResultsLabel->setWordWrap(true);
+    _noSearchResultsLabel->setAlignment(Qt::AlignCenter);
+    Utils::Gui::setMutedTextColor(_noSearchResultsLabel);
+    _noSearchResultsLabel->hide();
+
+    if (auto *treeLayout =
+            qobject_cast<QBoxLayout *>(ui->settingsTreeWidget->parentWidget()->layout())) {
+        treeLayout->insertWidget(treeLayout->indexOf(ui->settingsTreeWidget) + 1,
+                                 _noSearchResultsLabel);
+    }
 
     SettingsService settings;
     _initialDarkMode = settings.value(QStringLiteral("darkMode")).toBool();
@@ -1305,7 +1319,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
         Q_UNUSED(blocker)
 
         ui->settingsTreeWidget->setCurrentItem(item);
-        ui->headlineLabel->setText("<h3>" + item->text(0) + "</h3>");
+        ui->headlineLabel->setText("<h3>" + item->text(0).toHtmlEscaped() + "</h3>");
     }
 
     // Initialize the page if not already done
@@ -1579,11 +1593,27 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
                 item->setExpanded(true);
             }
         }
+
+        // Jump to the first matching page if the current page doesn't match the search
+        QTreeWidgetItem *currentItem = ui->settingsTreeWidget->currentItem();
+        if (currentItem == nullptr || currentItem->isHidden() ||
+            !pageIndexList.contains(currentItem->whatsThis(0).toInt())) {
+            Q_FOREACH (QTreeWidgetItem *item, allItems) {
+                if (!item->isHidden() && pageIndexList.contains(item->whatsThis(0).toInt())) {
+                    ui->settingsTreeWidget->setCurrentItem(item);
+                    break;
+                }
+            }
+        }
+
+        _noSearchResultsLabel->setHidden(!pageIndexList.isEmpty());
     } else {
         // show all items otherwise
         Q_FOREACH (QTreeWidgetItem *item, allItems) {
             item->setHidden(false);
         }
+
+        _noSearchResultsLabel->hide();
     }
 }
 
@@ -1599,6 +1629,11 @@ void SettingsDialog::addToSearchIndexList(QWidget *widget, QList<int> &pageIndex
                                           const QString &searchText) {
     // get the page id of the widget
     int pageIndex = findSettingsPageIndexOfWidget(widget);
+
+    // Ignore widgets outside of the settings pages, like the page headline
+    if (pageIndex < 0) {
+        return;
+    }
 
     // add page id if not already added
     if (!pageIndexList.contains(pageIndex)) {
