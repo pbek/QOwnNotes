@@ -10,6 +10,7 @@
 #include <QShortcut>
 #include <QSignalBlocker>
 #include <QTimeZone>
+#include <QTimer>
 #include <QVBoxLayout>
 
 #include "mainwindow.h"
@@ -79,7 +80,14 @@ NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
 
 void NextcloudDeckDialog::setupUi() {
     setupMainSplitter();
-    refreshUi();
+
+    // Load the data from the server after the dialog is shown, so the loading progress is visible
+    if (NextcloudDeckService(this).isEnabled()) {
+        _initialLoadPending = true;
+    } else {
+        refreshUi();
+    }
+
     Utils::Gui::initTreeWidgetHeaderOrderPersistence(
         ui->cardItemTreeWidget,
         QStringLiteral("NextcloudDeckDialog/cardItemTreeWidgetHeaderOrder"));
@@ -131,6 +139,77 @@ void NextcloudDeckDialog::setupUi() {
     ui->reloadCardListButton->setMenu(reloadMenu);
     // Menu ownership is now transferred to the button, no manual deletion needed
     // The archived cards checkbox is already connected by name in ui->setupUi()
+}
+
+void NextcloudDeckDialog::showEvent(QShowEvent *event) {
+    MasterDialog::showEvent(event);
+
+    if (_initialLoadPending && !_initialLoadScheduled) {
+        _initialLoadScheduled = true;
+
+        // Let the dialog be painted first
+        QTimer::singleShot(0, this, &NextcloudDeckDialog::initialLoad);
+    }
+}
+
+void NextcloudDeckDialog::initialLoad() {
+    _initialLoadPending = false;
+    beginLoading(tr("Loading Nextcloud Deck cards…"));
+    loadBoardStackComboBox();
+
+    if (_pendingCardId > 0) {
+        setCardId(_pendingCardId, _pendingBoardId);
+    } else {
+        reloadCardList();
+    }
+
+    endLoading();
+}
+
+/**
+ * Shows the loading overlay, nested calls share the overlay of the outermost call
+ */
+void NextcloudDeckDialog::beginLoading(const QString &title) {
+    if (_loadingDepth++ > 0) {
+        return;
+    }
+
+    _loadingCanceled = false;
+
+    if (!isVisible()) {
+        return;
+    }
+
+    showLoadingOverlay(title, tr("Data is currently loaded from your Nextcloud server"), [this]() {
+        _loadingCanceled = true;
+
+        if (_activeDeckService) {
+            _activeDeckService->cancelRequests();
+        }
+    });
+}
+
+void NextcloudDeckDialog::endLoading() {
+    if (--_loadingDepth > 0) {
+        return;
+    }
+
+    if (isLoading()) {
+        hideLoadingOverlay();
+
+        if (ui->newItemEdit->isEnabled()) {
+            ui->newItemEdit->setFocus();
+        }
+    }
+}
+
+/**
+ * Allows canceling the requests of the service and shows their download progress
+ */
+void NextcloudDeckDialog::trackDeckService(NextcloudDeckService &nextcloudDeckService) {
+    _activeDeckService = &nextcloudDeckService;
+    connect(&nextcloudDeckService, &NextcloudDeckService::downloadProgress, this,
+            &MasterDialog::setLoadingProgress);
 }
 
 void NextcloudDeckDialog::on_saveButton_clicked() {
@@ -402,8 +481,10 @@ void NextcloudDeckDialog::setupMainSplitter() {
 void NextcloudDeckDialog::refreshUi() { reloadDeckData(); }
 
 void NextcloudDeckDialog::reloadDeckData() {
+    beginLoading(tr("Loading Nextcloud Deck cards…"));
     loadBoardStackComboBox();
     reloadCardList();
+    endLoading();
 }
 
 void NextcloudDeckDialog::loadBoardStackComboBox() {
@@ -416,14 +497,25 @@ void NextcloudDeckDialog::loadBoardStackComboBox() {
 
     {
         const QSignalBlocker blocker(ui->boardStackComboBox);
-        ui->boardStackComboBox->clear();
 
         if (!nextcloudDeckService.isEnabled()) {
+            ui->boardStackComboBox->clear();
             updateDeckControlsEnabledState();
             return;
         }
 
-        auto boards = nextcloudDeckService.getBoards();
+        beginLoading(tr("Loading Nextcloud Deck boards…"));
+        trackDeckService(nextcloudDeckService);
+        const auto boards = nextcloudDeckService.getBoards();
+        endLoading();
+
+        // Keep the previous boards if the loading was canceled
+        if (_loadingCanceled) {
+            updateDeckControlsEnabledState();
+            return;
+        }
+
+        ui->boardStackComboBox->clear();
         int targetIndex = -1;
         int fallbackIndex = -1;
 
@@ -556,9 +648,19 @@ void NextcloudDeckDialog::reloadCardList() {
         return;
     }
 
+    beginLoading(tr("Loading Nextcloud Deck cards…"));
+
+    // Don't load the cards if the loading of the boards was canceled
+    if (_loadingCanceled) {
+        endLoading();
+        return;
+    }
+
     NextcloudDeckService nextcloudDeckService(this);
     configureDeckService(nextcloudDeckService);
+    trackDeckService(nextcloudDeckService);
     _cards = nextcloudDeckService.getCards(ui->showArchivedCardsCheckBox->isChecked());
+    endLoading();
 
     qDebug() << __func__ << " - 'cards': " << _cards;
 
@@ -717,6 +819,13 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_currentItemChanged(QTreeWidgetIt
 
 void NextcloudDeckDialog::setCardId(const int id, const int boardId) {
     if (id < 1) {
+        return;
+    }
+
+    // Select the card after the initial loading
+    if (_initialLoadPending) {
+        _pendingCardId = id;
+        _pendingBoardId = boardId;
         return;
     }
 

@@ -12,8 +12,11 @@
 #include "services/settingsservice.h"
 #include "ui_versiondialog.h"
 
-VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::VersionDialog) {
+VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent) : VersionDialog(parent) {
+    setVersions(versions);
+}
+
+VersionDialog::VersionDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::VersionDialog) {
     ui->setupUi(this);
     afterSetupUI();
     setIgnoreReturnKey(true);
@@ -48,11 +51,20 @@ VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent)
             SLOT(dialogButtonClicked(QAbstractButton *)));
     connect(this, SIGNAL(finished(int)), this, SLOT(storeSettings()));
 
+    _diffList = new QStringList();
+    _dataList = new QStringList();
+    updateVersionPreview();
+}
+
+/**
+ * Fills the version list, can also be called after the dialog was opened
+ */
+void VersionDialog::setVersions(const QJSValue &versions) {
     QString itemName;
     QString diffHtml;
     ui->versionListWidget->clear();
-    _diffList = new QStringList();
-    _dataList = new QStringList();
+    _diffList->clear();
+    _dataList->clear();
     const auto currentNote = MainWindow::instance()->getCurrentNote();
     const bool canDecryptNoteText = currentNote.canDecryptNoteText();
 

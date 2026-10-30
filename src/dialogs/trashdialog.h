@@ -16,8 +16,11 @@ class TrashDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit TrashDialog(const QJSValue &notes, QWidget *parent = 0);
+    explicit TrashDialog(const QJSValue &notes, QWidget *parent = nullptr);
+    explicit TrashDialog(QWidget *parent = nullptr);
     ~TrashDialog();
+
+    void setNotes(const QJSValue &notes);
 
    private slots:
     void storeSettings();

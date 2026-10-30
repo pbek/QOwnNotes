@@ -19,6 +19,7 @@
 
 #ifdef USE_LIBGIT2
 #include <QJSValue>
+#include <functional>
 
 #include "entities/note.h"
 #endif
@@ -41,7 +42,9 @@ bool isCurrentNoteFolderUseGit();
 #ifdef USE_LIBGIT2
 bool initRepository(const QString& path);
 bool commitAll(const QString& path, const QString& message);
-QJSValue getNoteVersions(QJSEngine& engine, const Note& note, int limit = 100);
+// The progress callback gets the number of versions found so far, returning false cancels
+QJSValue getNoteVersions(QJSEngine& engine, const Note& note, int limit = 100,
+                         const std::function<bool(int)>& progressCallback = {});
 #endif
 }    // namespace Git
 }    // namespace Utils

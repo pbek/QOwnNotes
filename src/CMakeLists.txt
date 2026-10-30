@@ -574,6 +574,8 @@ set(SOURCE_FILES
     widgets/documentoverviewwidget.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
+    widgets/loadingoverlaywidget.cpp
+    widgets/loadingoverlaywidget.h
     widgets/filenavigationwidget.cpp
     widgets/filenavigationwidget.h
     widgets/backlinkwidget.cpp

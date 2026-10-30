@@ -21,6 +21,10 @@ struct CalDAVCalendarData {
 class SettingsDialog;
 class MainWindow;
 class TodoDialog;
+class TrashDialog;
+class VersionDialog;
+class MasterDialog;
+class ServerBookmarksImportDialog;
 class CalendarItem;
 class Note;
 class ShareDialog;
@@ -46,9 +50,9 @@ class CloudService : public QObject {
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
-    void loadVersions(const QString &fileName);
+    void loadVersions(const QString &fileName, VersionDialog *dialog);
 
-    void loadTrash();
+    void loadTrash(TrashDialog *dialog);
 
     void restoreTrashedNoteOnServer(const QString &fileName, int timestamp);
 
@@ -77,7 +81,7 @@ class CloudService : public QObject {
 
     void fetchShares(const QString &path = QString());
 
-    void fetchBookmarks();
+    void fetchBookmarks(ServerBookmarksImportDialog *dialog);
 
     void removeNoteShare(const Note &note, ShareDialog *dialog);
 
@@ -141,6 +145,11 @@ class CloudService : public QObject {
     QString trashDeletePath;
     QPointer<SettingsDialog> settingsDialog;
     QPointer<TodoDialog> todoDialog;
+    QPointer<VersionDialog> versionDialog;
+    QPointer<TrashDialog> trashDialog;
+    QPointer<ServerBookmarksImportDialog> bookmarksImportDialog;
+
+    void connectLoadingDialog(QNetworkReply *reply, MasterDialog *dialog);
 
     void checkAppInfo(QNetworkReply *reply);
 

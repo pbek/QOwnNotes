@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QHash>
 #include <QList>
+#include <QPointer>
 #include <QSplitter>
 #include <QTreeWidgetItem>
 
@@ -75,7 +76,21 @@ class NextcloudDeckDialog : public MasterDialog {
 
     void on_reloadCardListButton_clicked();
 
+   protected:
+    void showEvent(QShowEvent *event) override;
+
    private:
+    bool _initialLoadPending = false;
+    bool _initialLoadScheduled = false;
+    int _pendingCardId = -1;
+    int _pendingBoardId = -1;
+    int _loadingDepth = 0;
+    bool _loadingCanceled = false;
+    QPointer<NextcloudDeckService> _activeDeckService;
+    void initialLoad();
+    void beginLoading(const QString &title);
+    void endLoading();
+    void trackDeckService(NextcloudDeckService &nextcloudDeckService);
     Ui::NextcloudDeckDialog *ui;
     const Mode _mode;
     QPushButton *_insertLinksButton = nullptr;

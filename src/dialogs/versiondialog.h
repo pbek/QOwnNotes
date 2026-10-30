@@ -17,8 +17,11 @@ class VersionDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit VersionDialog(const QJSValue &versions, QWidget *parent = 0);
+    explicit VersionDialog(const QJSValue &versions, QWidget *parent = nullptr);
+    explicit VersionDialog(QWidget *parent = nullptr);
     ~VersionDialog();
+
+    void setVersions(const QJSValue &versions);
 
    private slots:
     void storeSettings();

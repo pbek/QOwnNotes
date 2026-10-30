@@ -221,6 +221,8 @@ set(APP_SOURCE_FILES
     libraries/qmarkdowntextedit/qplaintexteditsearchwidget.cpp
     libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h
     libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui
+    libraries/qtwaitingspinner/waitingspinnerwidget.cpp
+    libraries/qtwaitingspinner/waitingspinnerwidget.h
     libraries/simplecrypt/simplecrypt.cpp
     libraries/simplecrypt/simplecrypt.h
     libraries/versionnumber/versionnumber.cpp
@@ -260,6 +262,8 @@ set(APP_SOURCE_FILES
     widgets/logwidget.h
     widgets/lineedit.cpp
     widgets/lineedit.h
+    widgets/loadingoverlaywidget.cpp
+    widgets/loadingoverlaywidget.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
     widgets/notepreviewwidget.cpp

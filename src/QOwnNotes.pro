@@ -215,6 +215,7 @@ SOURCES += main.cpp\
     dialogs/tagadddialog.cpp \
     dialogs/newnotedialog.cpp \
     widgets/navigationwidget.cpp \
+    widgets/loadingoverlaywidget.cpp \
     widgets/filenavigationwidget.cpp \
     widgets/backlinkwidget.cpp \
     widgets/notepreviewwidget.cpp \
@@ -389,6 +390,7 @@ HEADERS  += mainwindow.h \
     dialogs/tagadddialog.h \
     dialogs/newnotedialog.h \
     widgets/navigationwidget.h \
+    widgets/loadingoverlaywidget.h \
     widgets/filenavigationwidget.h \
     widgets/backlinkwidget.h \
     widgets/notepreviewwidget.h \

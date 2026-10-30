@@ -70,8 +70,14 @@ class NextcloudDeckService : public QObject {
     static int parseCardIdFromUrlDirectly(const QString& url);
     QString getCardUrlPattern() const;
     void setBoardAndStackIds(int boardId, int stackId);
+    void cancelRequests();
+
+   signals:
+    void requestsCanceled();
+    void downloadProgress(qint64 bytesReceived, qint64 bytesTotal);
 
    private:
+    bool _canceled = false;
     CloudConnection cloudConnection;
     QString serverUrl;
     int boardId;

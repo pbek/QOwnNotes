@@ -10,11 +10,23 @@
 #include "ui_serverbookmarksimportdialog.h"
 
 ServerBookmarksImportDialog::ServerBookmarksImportDialog(const QJSValue &bookmarks, QWidget *parent)
+    : ServerBookmarksImportDialog(parent) {
+    setBookmarks(bookmarks);
+}
+
+ServerBookmarksImportDialog::ServerBookmarksImportDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::ServerBookmarksImportDialog) {
     ui->setupUi(this);
     afterSetupUI();
     ui->infoLabel->clear();
+    ui->importButton->setEnabled(false);
+    ui->progressBar->setEnabled(false);
+}
 
+/**
+ * Prepares the bookmarks for importing, can also be called after the dialog was opened
+ */
+void ServerBookmarksImportDialog::setBookmarks(const QJSValue &bookmarks) {
     // init the iterator for the versions
     QJSValueIterator bookmarksIterator(bookmarks);
 

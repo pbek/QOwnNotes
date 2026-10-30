@@ -349,18 +349,28 @@ void CloudService::slotReplyFinished(QNetworkReply *reply) {
         QString data = QString(arr);
         //        qDebug() << __func__ << " - 'data': " << data;
 
+        const bool isCanceled = reply->error() == QNetworkReply::OperationCanceledError;
+
         if (urlPath.endsWith(versionListPath)) {
             qDebug() << "Reply from version list";
             // qDebug() << data;
 
             // handle the versions loading
-            handleVersionsLoading(data);
+            if (isCanceled) {
+                MainWindow::instance()->enableShowVersionsButton();
+            } else {
+                handleVersionsLoading(data);
+            }
         } else if (urlPath.endsWith(trashListPath)) {
             qDebug() << "Reply from trash list";
             // qDebug() << data;
 
             // handle the loading of trashed notes
-            handleTrashedLoading(data);
+            if (isCanceled) {
+                MainWindow::instance()->enableShowTrashButton();
+            } else {
+                handleTrashedLoading(data);
+            }
         } else if (urlPath.endsWith(capabilitiesPath)) {
             qDebug() << "Reply from capabilities page";
 
@@ -412,7 +422,9 @@ void CloudService::slotReplyFinished(QNetworkReply *reply) {
         } else if (urlPath.startsWith(bookmarkPath)) {
             qDebug() << "Reply from bookmark api";
 
-            handleImportBookmarksReply(data);
+            if (!isCanceled) {
+                handleImportBookmarksReply(data);
+            }
         } else if (url.toString() == serverUrl) {
             qDebug() << "Reply from main server url";
             if (!settingsDialog) {
@@ -1020,7 +1032,9 @@ void CloudService::fetchShares(const QString &path) {
 /**
  * Fetches the bookmarks from Nextcloud Bookmarks
  */
-void CloudService::fetchBookmarks() {
+void CloudService::fetchBookmarks(ServerBookmarksImportDialog *dialog) {
+    bookmarksImportDialog = dialog;
+
     // return if no settings are set
     if (!hasCloudSettings()) {
         return;
@@ -1040,6 +1054,7 @@ void CloudService::fetchBookmarks() {
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
+    connectLoadingDialog(reply, dialog);
 }
 
 /**
@@ -1167,9 +1182,17 @@ int CloudService::deleteTrashedNoteOnServer(const QString &fileName, int timesta
 /**
  * @brief CloudService::loadVersions
  */
-void CloudService::loadVersions(const QString &fileName) {
+void CloudService::loadVersions(const QString &fileName, VersionDialog *dialog) {
+    versionDialog = dialog;
+
     if (!apiDiscovered) {
-        discoverApi([this, fileName]() { loadVersions(fileName); });
+        QPointer<VersionDialog> dialogPointer = dialog;
+        discoverApi([this, fileName, dialogPointer]() {
+            // Don't send the request if the dialog was canceled in the meantime
+            if (dialogPointer && dialogPointer->isVisible()) {
+                loadVersions(fileName, dialogPointer);
+            }
+        });
         return;
     }
     QUrl url(serverUrl % versionListPath);
@@ -1194,14 +1217,41 @@ void CloudService::loadVersions(const QString &fileName) {
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
+    connectLoadingDialog(reply, dialog);
+}
+
+/**
+ * Shows the download progress in the loading overlay of the dialog and aborts
+ * the request if the dialog was closed while loading
+ */
+void CloudService::connectLoadingDialog(QNetworkReply *reply, MasterDialog *dialog) {
+    if (dialog == nullptr) {
+        return;
+    }
+
+    connect(reply, &QNetworkReply::downloadProgress, dialog, &MasterDialog::setLoadingProgress);
+    connect(dialog, &QDialog::finished, reply, [reply]() {
+        if (reply->isRunning()) {
+            qDebug() << "Loading was canceled by the user";
+            reply->abort();
+        }
+    });
 }
 
 /**
  * @brief CloudService::loadTrash
  */
-void CloudService::loadTrash() {
+void CloudService::loadTrash(TrashDialog *dialog) {
+    trashDialog = dialog;
+
     if (!apiDiscovered) {
-        discoverApi([this]() { loadTrash(); });
+        QPointer<TrashDialog> dialogPointer = dialog;
+        discoverApi([this, dialogPointer]() {
+            // Don't send the request if the dialog was canceled in the meantime
+            if (dialogPointer && dialogPointer->isVisible()) {
+                loadTrash(dialogPointer);
+            }
+        });
         return;
     }
     QUrl url(serverUrl % trashListPath);
@@ -1240,6 +1290,7 @@ void CloudService::loadTrash() {
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
+    connectLoadingDialog(reply, dialog);
 }
 
 void CloudService::addAuthHeader(QNetworkRequest *r) {
@@ -1402,8 +1453,22 @@ void CloudService::handleVersionsLoading(QString data) {
                                                  QStringLiteral("🕒"), 2000);
 #endif
 
+    // The user closed the dialog in the meantime
+    if (versionDialog.isNull() || !versionDialog->isVisible()) {
+        return;
+    }
+
+    // Close the loading dialog before an error message is shown
+    QPointer<VersionDialog> dialog = versionDialog;
+    auto closeDialog = [dialog]() {
+        if (dialog) {
+            dialog->close();
+        }
+    };
+
     // check if we get any data at all
     if (data.isEmpty()) {
+        closeDialog();
         showCloudServerErrorMessage();
         return;
     }
@@ -1422,6 +1487,7 @@ void CloudService::handleVersionsLoading(QString data) {
 
     // check if we got an error message
     if (!message.isEmpty()) {
+        closeDialog();
         showCloudServerErrorMessage(message);
         return;
     }
@@ -1437,6 +1503,7 @@ void CloudService::handleVersionsLoading(QString data) {
     // check if we got no useful data, we also need to do this to prevent
     // crashes
     if (fileName.isEmpty() || !versionsIterator.hasNext() || versions.toString().isEmpty()) {
+        closeDialog();
         QMessageBox::information(nullptr, tr("No versions found"),
                                  tr("There are no versions for this note or the note wasn't "
                                     "found on the server."));
@@ -1446,8 +1513,8 @@ void CloudService::handleVersionsLoading(QString data) {
 #ifndef INTEGRATION_TESTS
     qDebug() << __func__ << " - 'versions': " << Utils::Misc::jsValueToJsonString(versions);
 
-    auto *dialog = new VersionDialog(versions);
-    dialog->exec();
+    versionDialog->setVersions(versions);
+    versionDialog->hideLoadingOverlay();
 #endif
 }
 
@@ -1464,8 +1531,22 @@ void CloudService::handleTrashedLoading(QString data) {
                                                  QStringLiteral("🗑️"), 2000);
 #endif
 
+    // The user closed the dialog in the meantime
+    if (trashDialog.isNull() || !trashDialog->isVisible()) {
+        return;
+    }
+
+    // Close the loading dialog before an error message is shown
+    QPointer<TrashDialog> dialog = trashDialog;
+    auto closeDialog = [dialog]() {
+        if (dialog) {
+            dialog->close();
+        }
+    };
+
     // check if we get any data at all
     if (data == QString()) {
+        closeDialog();
         showCloudServerErrorMessage();
         return;
     }
@@ -1483,6 +1564,7 @@ void CloudService::handleTrashedLoading(QString data) {
 
     // check if we got an error message
     if (!message.isEmpty()) {
+        closeDialog();
         showCloudServerErrorMessage(message);
         return;
     }
@@ -1492,6 +1574,7 @@ void CloudService::handleTrashedLoading(QString data) {
 
     // check if we got no useful data
     if (directory.isEmpty()) {
+        closeDialog();
         showCloudServerErrorMessage();
         return;
     }
@@ -1501,16 +1584,15 @@ void CloudService::handleTrashedLoading(QString data) {
 
     // check if we got no useful data
     if (notes.toString().isEmpty()) {
+        closeDialog();
         QMessageBox::information(0, tr("No trashed notes"),
                                  tr("No trashed notes were found on the "
                                     "server."));
         return;
     }
 
-#ifndef INTEGRATION_TESTS
-    TrashDialog *dialog = new TrashDialog(notes);
-    dialog->exec();
-#endif
+    trashDialog->setNotes(notes);
+    trashDialog->hideLoadingOverlay();
 }
 
 /**
@@ -2407,16 +2489,22 @@ void CloudService::handleImportBookmarksReply(QString &data) {
 
     QJSValue bookmarks = result.property(0).property(QStringLiteral("data"));
 
+    // The user closed the dialog in the meantime
+    if (bookmarksImportDialog.isNull() || !bookmarksImportDialog->isVisible()) {
+        return;
+    }
+
     // check if we got no useful data
     if (bookmarks.toString().isEmpty()) {
+        bookmarksImportDialog->close();
         QMessageBox::information(0, tr("No bookmarks"),
                                  tr("No bookmarks were found on the server."));
         return;
     }
 
 #ifndef INTEGRATION_TESTS
-    auto *dialog = new ServerBookmarksImportDialog(bookmarks);
-    dialog->exec();
+    bookmarksImportDialog->setBookmarks(bookmarks);
+    bookmarksImportDialog->hideLoadingOverlay();
 #endif
 }
 

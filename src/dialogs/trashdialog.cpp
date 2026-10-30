@@ -18,8 +18,11 @@ namespace {
 enum ItemRole { NoteTextRole = Qt::UserRole + 1, TimestampRole };
 }
 
-TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::TrashDialog) {
+TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent) : TrashDialog(parent) {
+    setNotes(notes);
+}
+
+TrashDialog::TrashDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::TrashDialog) {
     ui->setupUi(this);
     afterSetupUI();
 
@@ -75,7 +78,12 @@ TrashDialog::TrashDialog(const QJSValue &notes, QWidget *parent)
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
             SLOT(dialogButtonClicked(QAbstractButton *)));
     connect(this, SIGNAL(finished(int)), this, SLOT(storeSettings()));
+}
 
+/**
+ * Fills the trash list, can also be called after the dialog was opened
+ */
+void TrashDialog::setNotes(const QJSValue &notes) {
     QString itemName;
     QString dateString;
     QString data;

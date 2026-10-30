@@ -29,6 +29,14 @@ NextcloudDeckService::NextcloudDeckService(QObject* parent, int cloudConnectionI
     this->stackId = this->cloudConnection.getNextcloudDeckStackId();
 }
 
+/**
+ * Cancels the currently running request of getBoards() or getCards()
+ */
+void NextcloudDeckService::cancelRequests() {
+    _canceled = true;
+    emit requestsCanceled();
+}
+
 bool NextcloudDeckService::isEnabledAndValid() {
     return isEnabled() && this->cloudConnection.getNextcloudDeckBoardId() > 0 &&
            this->cloudConnection.getNextcloudDeckStackId() > 0;
@@ -476,11 +484,14 @@ QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
 
     reply = manager->get(networkRequest);
 
+    QObject::connect(this, &NextcloudDeckService::requestsCanceled, &loop, &QEventLoop::quit);
+    QObject::connect(reply, &QNetworkReply::downloadProgress, this,
+                     &NextcloudDeckService::downloadProgress);
     loop.exec();
     QList<NextcloudDeckService::Board> boards;
 
     // if we didn't get a timeout let us return the content
-    if (timer.isActive()) {
+    if (timer.isActive() && !_canceled) {
         int returnStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
         // only get the data if the status code was "success"
@@ -577,11 +588,14 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
 
     reply = manager->get(networkRequest);
 
+    QObject::connect(this, &NextcloudDeckService::requestsCanceled, &loop, &QEventLoop::quit);
+    QObject::connect(reply, &QNetworkReply::downloadProgress, this,
+                     &NextcloudDeckService::downloadProgress);
     loop.exec();
     QHash<int, NextcloudDeckService::Card> cards;
 
     // if we didn't get a timeout let us return the content
-    if (timer.isActive()) {
+    if (timer.isActive() && !_canceled) {
         int returnStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
         // only get the data if the status code was "success"
@@ -672,7 +686,7 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
     delete (manager);
 
     // If includeArchived is true, fetch archived cards as well
-    if (includeArchived) {
+    if (includeArchived && !_canceled) {
         auto* archivedManager = new QNetworkAccessManager();
         QEventLoop archivedLoop;
         QTimer archivedTimer;
@@ -709,10 +723,14 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
 
         archivedReply = archivedManager->get(archivedNetworkRequest);
 
+        QObject::connect(this, &NextcloudDeckService::requestsCanceled, &archivedLoop,
+                         &QEventLoop::quit);
+        QObject::connect(archivedReply, &QNetworkReply::downloadProgress, this,
+                         &NextcloudDeckService::downloadProgress);
         archivedLoop.exec();
 
         // if we didn't get a timeout let us return the content
-        if (archivedTimer.isActive()) {
+        if (archivedTimer.isActive() && !_canceled) {
             int archivedReturnStatusCode =
                 archivedReply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 

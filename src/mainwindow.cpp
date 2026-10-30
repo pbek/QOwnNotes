@@ -75,6 +75,7 @@
 #include <QDir>
 #include <QDirIterator>
 #include <QDockWidget>
+#include <QElapsedTimer>
 #include <QFile>
 #include <QGraphicsView>
 #include <QGuiApplication>
@@ -127,10 +128,12 @@
 #include "dialogs/linkdialog.h"
 #include "dialogs/notediffdialog.h"
 #include "dialogs/passworddialog.h"
+#include "dialogs/serverbookmarksimportdialog.h"
 #include "dialogs/settingsdialog.h"
 #include "dialogs/storedattachmentsdialog.h"
 #include "dialogs/storedimagesdialog.h"
 #include "dialogs/tododialog.h"
+#include "dialogs/trashdialog.h"
 #include "dialogs/versiondialog.h"
 #include "entities/calendaritem.h"
 #include "helpers/qownnotesmarkdownhighlighter.h"
@@ -5238,12 +5241,18 @@ void MainWindow::on_actionShow_versions_triggered() {
     }
 
     ui->actionShow_versions->setDisabled(true);
-    showStatusBarMessage(
-        tr("Note versions are currently loaded from your Nextcloud / ownCloud server"),
-        QStringLiteral("🛜"), 20000);
+
+    // Show the dialog right away with a loading overlay, closing it cancels the request
+    auto *dialog = new VersionDialog(this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    connect(dialog, &QDialog::finished, this, &MainWindow::enableShowVersionsButton);
+    dialog->showLoadingOverlay(
+        tr("Loading note versions…"),
+        tr("Note versions are currently loaded from your Nextcloud / ownCloud server"));
+    dialog->open();
 
     CloudService *cloud = CloudService::instance();
-    cloud->loadVersions(this->currentNote.relativeNoteFilePath(QStringLiteral("/")));
+    cloud->loadVersions(this->currentNote.relativeNoteFilePath(QStringLiteral("/")), dialog);
 }
 
 void MainWindow::enableShowVersionsButton() { ui->actionShow_versions->setDisabled(false); }
@@ -5256,12 +5265,18 @@ void MainWindow::on_actionShow_trash_triggered() {
     }
 
     ui->actionShow_trash->setDisabled(true);
-    showStatusBarMessage(
-        tr("Trashed notes are currently loaded from your Nextcloud / ownCloud server"),
-        QStringLiteral("🗑"), 20000);
+
+    // Show the dialog right away with a loading overlay, closing it cancels the request
+    auto *dialog = new TrashDialog(this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    connect(dialog, &QDialog::finished, this, &MainWindow::enableShowTrashButton);
+    dialog->showLoadingOverlay(
+        tr("Loading trashed notes…"),
+        tr("Trashed notes are currently loaded from your Nextcloud / ownCloud server"));
+    dialog->open();
 
     CloudService *cloud = CloudService::instance();
-    cloud->loadTrash();
+    cloud->loadTrash(dialog);
 }
 
 void MainWindow::enableShowTrashButton() { ui->actionShow_trash->setDisabled(false); }
@@ -8027,14 +8042,46 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     // can take a long time and use a lot of memory
     const int limit = 100;
 
-    showStatusBarMessage(
-        tr("Latest %n note versions are currently gathered from your local git repository", "",
-           limit),
-        QStringLiteral("🗃️"), 20000);
+    // Copy the note, because the current note could change while events are processed
+    const Note note = currentNote;
 
-    auto versions = Utils::Git::getNoteVersions(engine, currentNote, limit);
-    showStatusBarMessage(tr("Done with gathering note versions from git"), QStringLiteral("🕒"),
-                         2000);
+    // Show the dialog right away with a loading overlay, closing it cancels the gathering
+    auto *dialog = new VersionDialog(this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setWindowTitle(
+        tr("Latest %n git versions of note: %1", "", limit).arg(note.getFileName()));
+    dialog->showLoadingOverlay(
+        tr("Loading note versions…"),
+        tr("Latest %n note versions are currently gathered from your local git repository", "",
+           limit));
+    dialog->open();
+
+    QPointer<VersionDialog> dialogPointer = dialog;
+    auto isDialogOpen = [dialogPointer]() { return dialogPointer && dialogPointer->isVisible(); };
+    QElapsedTimer eventTimer;
+    eventTimer.start();
+
+    auto versions = Utils::Git::getNoteVersions(
+        engine, note, limit, [&dialogPointer, &isDialogOpen, &eventTimer, limit](int count) {
+            if (!isDialogOpen()) {
+                return false;
+            }
+
+            // Keep the dialog responsive, so the progress is shown and loading can be canceled
+            if (eventTimer.elapsed() > 30) {
+                dialogPointer->setLoadingCountProgress(
+                    count, limit, tr("%1 of up to %2 versions found").arg(count).arg(limit));
+                QCoreApplication::processEvents();
+                eventTimer.restart();
+            }
+
+            return isDialogOpen();
+        });
+
+    // The user canceled the loading
+    if (!isDialogOpen()) {
+        return;
+    }
 
     // Init the iterator for checking if there are versions
     QJSValueIterator versionsCheckIterator(versions);
@@ -8053,16 +8100,15 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     }
 
     if (!hasValidVersion) {
+        dialog->close();
         Utils::Gui::information(this, tr("No versions available"),
                                 tr("No versions are available for this note."),
                                 QStringLiteral("git-no-versions"));
         return;
     }
 
-    auto *dialog = new VersionDialog(versions);
-    dialog->setWindowTitle(
-        tr("Latest %n git versions of note: %1", "", limit).arg(currentNote.getFileName()));
-    dialog->exec();
+    dialog->setVersions(versions);
+    dialog->hideLoadingOverlay();
 #else
     QString relativeFilePath = currentNote.relativeNoteFilePath();
     Utils::Git::showLog(relativeFilePath);
@@ -8513,8 +8559,19 @@ void MainWindow::on_actionJump_to_note_subfolder_panel_triggered() {
 void MainWindow::on_actionActivate_context_menu_triggered() { activateContextMenu(); }
 
 void MainWindow::on_actionImport_bookmarks_from_server_triggered() {
+    if (!CloudService::hasCloudSettings()) {
+        return;
+    }
+
+    // Show the dialog right away with a loading overlay, closing it cancels the request
+    auto *dialog = new ServerBookmarksImportDialog(this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->showLoadingOverlay(tr("Loading bookmarks…"),
+                               tr("Bookmarks are currently loaded from your Nextcloud server"));
+    dialog->open();
+
     CloudService *cloud = CloudService::instance();
-    cloud->fetchBookmarks();
+    cloud->fetchBookmarks(dialog);
 }
 
 void MainWindow::on_actionElementMatrix_triggered() {

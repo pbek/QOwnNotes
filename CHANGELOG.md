@@ -2,6 +2,14 @@
 
 ## 26.10.16
 
+- Dialogs that load data now open right away and show a loading overlay with a spinner,
+  a progress bar, the elapsed time and a **Cancel** button
+  (for [#3825](https://github.com/pbek/QOwnNotes/issues/3825))
+  - This covers the Nextcloud / ownCloud note versions and trash dialogs, the
+    Nextcloud Bookmarks import and the Nextcloud Deck dialog
+  - Canceling or closing the dialog aborts the request to the server
+  - The Git note versions dialog shows how many versions were already gathered
+    and can be canceled too
 - Fixed Nextcloud Deck boards being loaded twice when opening the Nextcloud Deck dialog
 - Fixed Nextcloud Deck cards being loaded twice when toggling the display of archived cards
 
