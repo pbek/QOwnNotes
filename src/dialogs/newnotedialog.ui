@@ -21,7 +21,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Note name</string>
+      <string>Note name:</string>
      </property>
      <property name="buddy">
       <cstring>nameLineEdit</cstring>
@@ -29,7 +29,14 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="nameLineEdit"/>
+    <widget class="QLineEdit" name="nameLineEdit">
+     <property name="placeholderText">
+      <string>Enter the name of the new note</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">

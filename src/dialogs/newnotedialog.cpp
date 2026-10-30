@@ -15,6 +15,7 @@
 #include "newnotedialog.h"
 
 #include <QFontMetrics>
+#include <QPushButton>
 
 #include "ui_newnotedialog.h"
 
@@ -23,7 +24,17 @@ NewNoteDialog::NewNoteDialog(const QString &defaultNoteName, QWidget *parent)
     ui->setupUi(this);
     afterSetupUI();
 
+    QPushButton *okButton = ui->buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setText(tr("&Create note"));
+    okButton->setIcon(QIcon::fromTheme(QStringLiteral("document-new"),
+                                       QIcon(":/icons/breeze-qownnotes/16x16/document-new.svg")));
+
+    // A note can't be created without a name
+    connect(ui->nameLineEdit, &QLineEdit::textChanged, this,
+            [okButton](const QString &text) { okButton->setEnabled(!text.trimmed().isEmpty()); });
+
     ui->nameLineEdit->setText(defaultNoteName);
+    okButton->setEnabled(!defaultNoteName.trimmed().isEmpty());
     ui->nameLineEdit->setFocus();
 
     // Make the dialog wide enough to show the full default note name, with some

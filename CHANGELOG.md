@@ -56,6 +56,9 @@
   - The external modification dialog got **Reload from disk** and **Keep current text**
     buttons instead of **Yes** and **No**
   - The note versions dialog uses the same readable colors for its differences
+- Polished the new note dialog
+  - The **OK** button is now called **Create note** and is disabled when the note name is empty
+  - The note name field shows a placeholder text and a clear button
 
 ## 26.10.15
 
