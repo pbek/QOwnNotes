@@ -71,6 +71,12 @@
   - The first bookmark is selected when the dialog opens, and the selection is kept when reloading
   - The dialog shows how many bookmarks there are, or a hint how to store bookmarks
   - The note path is shown as tooltip and the redundant row numbers were removed
+- Polished the **Find action** dialog
+  - Menus are shown as bold section headers, shortcuts use a muted color
+    that is readable in dark mode too
+  - The first matching action is selected while searching and can be triggered
+    with <kbd>Return</kbd> directly from the search field
+  - Actions that are currently disabled are shown as disabled and can't be triggered
 
 ## 26.10.15
 

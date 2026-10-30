@@ -5,6 +5,7 @@
 #include <QKeyEvent>
 #include <QMenuBar>
 #include <QTreeWidgetItem>
+#include <QTreeWidgetItemIterator>
 
 #include "ui_actiondialog.h"
 
@@ -55,6 +56,12 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu, QTreeWidgetItem *parentIt
     auto *menuItem = new QTreeWidgetItem();
     menuItem->setText(0, menuText);
 
+    // Show menus as bold section headers that can't be selected
+    QFont menuFont = menuItem->font(0);
+    menuFont.setBold(true);
+    menuItem->setFont(0, menuFont);
+    menuItem->setFlags(menuItem->flags() & ~Qt::ItemIsSelectable);
+
     if (parentItem == nullptr) {
         ui->actionTreeWidget->addTopLevelItem(menuItem);
     } else {
@@ -89,7 +96,13 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu, QTreeWidgetItem *parentIt
         // add the shortcut in the 2nd column
         if (!shortcut.isEmpty()) {
             item->setText(1, shortcut.toString(QKeySequence::NativeText));
-            item->setForeground(1, QColor(Qt::gray));
+            item->setForeground(
+                1, ui->actionTreeWidget->palette().color(QPalette::Disabled, QPalette::Text));
+        }
+
+        // Actions that are currently disabled can't be triggered
+        if (!action->isEnabled()) {
+            item->setDisabled(true);
         }
 
         menuItem->addChild(item);
@@ -113,7 +126,7 @@ void ActionDialog::on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, 
 
     QString objectName = item->data(0, Qt::UserRole).toString();
 
-    if (objectName.isEmpty()) {
+    if (objectName.isEmpty() || item->isDisabled()) {
         return;
     }
 
@@ -142,6 +155,27 @@ void ActionDialog::on_actionLineEdit_textChanged(const QString &arg1) {
         Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::TooltipSearch |
                                           Utils::Gui::TreeWidgetSearchFlag::AllColumnsSearch |
                                           Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+
+    // Select the first matching action, so it can be triggered with the return key
+    if (!arg1.isEmpty()) {
+        ui->actionTreeWidget->setCurrentItem(firstVisibleActionItem());
+    }
+}
+
+/**
+ * Returns the first visible action item that can be triggered
+ */
+QTreeWidgetItem *ActionDialog::firstVisibleActionItem() const {
+    for (QTreeWidgetItemIterator it(ui->actionTreeWidget); *it != nullptr; ++it) {
+        QTreeWidgetItem *item = *it;
+
+        if (!item->isHidden() && !item->isDisabled() &&
+            !item->data(0, Qt::UserRole).toString().isEmpty()) {
+            return item;
+        }
+    }
+
+    return nullptr;
 }
 
 /**
@@ -161,6 +195,16 @@ bool ActionDialog::eventFilter(QObject *obj, QEvent *event) {
             if (keyEvent->key() == Qt::Key_Down) {
                 ui->actionTreeWidget->setFocus();
                 return true;
+            }
+
+            // Trigger the selected action if return was pressed in the line edit
+            if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter) {
+                QTreeWidgetItem *item = ui->actionTreeWidget->currentItem();
+
+                if (item != nullptr && !item->isHidden()) {
+                    on_actionTreeWidget_itemDoubleClicked(item, 0);
+                    return true;
+                }
             }
 
             return false;
