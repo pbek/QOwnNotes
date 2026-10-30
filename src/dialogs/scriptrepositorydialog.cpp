@@ -38,7 +38,13 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent, bool checkForUpd
     // Set in the past so that the cache is always expired
     _lastScriptMetaDataCacheUpdateTime = QDateTime::currentDateTime().addDays(-1);
 
+    ui->searchScriptEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-find"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-find.svg"))),
+        QLineEdit::LeadingPosition);
     ui->searchScriptEdit->setFocus();
+    Utils::Gui::setMutedTextColor(ui->scriptCountLabel);
+    Utils::Gui::setSectionHeaderFont(ui->nameLabel);
     ui->scriptTreeWidget->sortByColumn(0, Qt::AscendingOrder);
     ui->updateAllButton->hide();
     SettingsService settings;
@@ -107,6 +113,8 @@ void ScriptRepositoryDialog::searchScript() {
 
     QHashIterator<QString, ScriptInfoJson> scriptMetaDataIterator(_scriptMetaDataCache);
     ui->scriptTreeWidget->clear();
+    int matchCount = 0;
+
     while (scriptMetaDataIterator.hasNext()) {
         scriptMetaDataIterator.next();
 
@@ -115,10 +123,37 @@ void ScriptRepositoryDialog::searchScript() {
         if (scriptInfoJson.name.contains(_searchString, Qt::CaseInsensitive) ||
             scriptInfoJson.description.contains(_searchString, Qt::CaseInsensitive)) {
             addScriptTreeWidgetItem(scriptInfoJson);
+            matchCount++;
         }
     }
 
+    const int total = _scriptMetaDataCache.count();
+
+    if (total == 0) {
+        ui->scriptCountLabel->setText(tr("The script repository couldn't be loaded"));
+    } else if (_searchString.isEmpty()) {
+        ui->scriptCountLabel->setText(tr("%n script(s)", "", total));
+    } else {
+        ui->scriptCountLabel->setText(tr("%1 of %n script(s)", "", total).arg(matchCount));
+    }
+
+    if (matchCount == 0) {
+        ui->overviewLabel->setText(total == 0 ? tr("The script repository couldn't be loaded, "
+                                                   "please check your internet connection.")
+                                              : tr("No script matches your search."));
+        enableOverview(true);
+    }
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    // The items are added with a queued connection, so the first item needs to be selected
+    // after they were added
+    QMetaObject::invokeMethod(
+        ui->scriptTreeWidget,
+        [this]() { ui->scriptTreeWidget->setCurrentItem(ui->scriptTreeWidget->topLevelItem(0)); },
+        Qt::QueuedConnection);
+#else
     ui->scriptTreeWidget->setCurrentItem(ui->scriptTreeWidget->topLevelItem(0));
+#endif
 }
 
 void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scriptInfoJson) {
@@ -136,7 +171,18 @@ void ScriptRepositoryDialog::addScriptTreeWidgetItem(const ScriptInfoJson &scrip
     item->setData(0, Qt::UserRole, scriptInfoJson.identifier);
 
     if (!scriptInfoJson.platformSupported || !scriptInfoJson.appVersionSupported) {
-        item->setForeground(0, QColor("#aaaaaa"));
+        item->setForeground(
+            0, ui->scriptTreeWidget->palette().color(QPalette::Disabled, QPalette::Text));
+        item->setToolTip(0, !scriptInfoJson.platformSupported
+                                ? tr("This script isn't supported on your platform")
+                                : tr("This script needs a newer version of QOwnNotes"));
+    } else if (Script::scriptFromRepositoryExists(scriptInfoJson.identifier)) {
+        // Mark scripts that are already installed
+        item->setIcon(
+            0, QIcon::fromTheme(
+                   QStringLiteral("dialog-ok-apply"),
+                   QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/dialog-ok-apply.svg"))));
+        item->setToolTip(0, tr("This script is already installed"));
     }
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
@@ -271,6 +317,7 @@ void ScriptRepositoryDialog::parseScriptRepositoryMetaData(const QByteArray &arr
  */
 void ScriptRepositoryDialog::setupMainSplitter() {
     _mainSplitter = new QSplitter(this);
+    _mainSplitter->setChildrenCollapsible(false);
 
     _mainSplitter->addWidget(ui->selectFrame);
     _mainSplitter->addWidget(ui->infoFrame);
@@ -322,7 +369,7 @@ void ScriptRepositoryDialog::reloadCurrentScriptInfo() {
 
     enableOverview(false);
 
-    ui->nameLabel->setText("<b>" + infoJson.name + "</b>");
+    ui->nameLabel->setText(infoJson.name.toHtmlEscaped());
     ui->versionLabel->setText(infoJson.version);
     ui->minAppVersionLabel->setText(infoJson.minAppVersion);
     ui->minAppVersionLabel->setHidden(infoJson.minAppVersion.isEmpty());
@@ -569,6 +616,17 @@ bool ScriptRepositoryDialog::installScript(const ScriptInfoJson &infoJson, bool 
         MetricsService::instance()->sendVisitIfEnabled("script-repository/install/" + identifier);
         if (refreshAfterInstall) {
             reloadCurrentScriptInfo();
+
+            // Mark the script as installed in the script list
+            QTreeWidgetItem *currentItem = ui->scriptTreeWidget->currentItem();
+            if (currentItem != nullptr &&
+                currentItem->data(0, Qt::UserRole).toString() == identifier) {
+                currentItem->setIcon(
+                    0, QIcon::fromTheme(QStringLiteral("dialog-ok-apply"),
+                                        QIcon(QStringLiteral(
+                                            ":icons/breeze-qownnotes/16x16/dialog-ok-apply.svg"))));
+                currentItem->setToolTip(0, tr("This script is already installed"));
+            }
         }
         _lastInstalledScript = script;
 

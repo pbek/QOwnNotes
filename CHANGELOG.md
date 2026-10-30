@@ -144,6 +144,13 @@
 - The note dialog, that shows a note in a separate window, now shows the folder and the
   modification date of the note, the full file path as tooltip and a hint if the note
   is encrypted and can't be decrypted
+- Polished the script repository dialog
+  - Installed scripts are marked in the script list, scripts that aren't supported
+    explain why in their tooltip and use a muted color that is readable in dark mode too
+  - The list shows how many scripts there are and how many match the search, and a message
+    is shown if no script matches or the script repository couldn't be loaded
+  - Fixed the first script not being selected after searching
+  - The dialog got a **Close** button and the panes can no longer be collapsed by accident
 
 ## 26.10.15
 
