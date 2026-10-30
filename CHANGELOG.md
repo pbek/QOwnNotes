@@ -90,6 +90,8 @@
   - The dialog now shows when the token was copied to the clipboard
   - The token is shown in a fixed width font, so similar looking characters can be told apart
   - The **OK** and copy buttons are disabled when the token is empty
+- Added a **Copy version information** button to the about dialog, to easily add the
+  version, build number, release and Qt version to bug reports
 
 ## 26.10.15
 

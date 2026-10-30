@@ -16,6 +16,8 @@ class AboutDialog : public MasterDialog {
 
    private:
     Ui::AboutDialog *ui;
+
+    static QString release();
 };
 
 #endif    // ABOUTDIALOG_H
