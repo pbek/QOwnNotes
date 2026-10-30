@@ -71,35 +71,70 @@
           pkgs = pkgsFor system;
           pkgs-qt69 = pkgsQt69For system;
           pkgs-qt5153 = pkgsQt5153For system;
+
+          basePackages =
+            pkgs.lib.mapAttrs
+              (
+                _: package:
+                package.overrideAttrs (_: {
+                  src = packageSource;
+                })
+              )
+              (
+                {
+                  qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
+                  qownnotes-qt6-qlitehtml = pkgs.callPackage (import ./default.nix) { useQlitehtml = true; };
+                  qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
+                  qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
+                  qownnotes-cmake-qt5 =
+                    pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix)
+                      { };
+                  qownnotes-qt5153 =
+                    pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)
+                      { };
+                  default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
+                }
+                // pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
+                  qownnotes-qt6-kde = pkgs.callPackage (import ./default.nix) {
+                    useKdeIntegration = true;
+                    qt6Packages = pkgs.kdePackages;
+                  };
+                }
+              );
+
+          # Incremental Nix builds for development (see "just nix-build-incremental").
+          # The "-checkpoint" package stores the whole build directory of a full build,
+          # the "-incremental" package restores it and only recompiles changed sources.
+          # The checkpoint store path is passed impurely via QON_NIX_CHECKPOINT.
+          checkpointPath = builtins.getEnv "QON_NIX_CHECKPOINT";
+          checkpointPackages =
+            pkgs.lib.concatMapAttrs
+              (
+                name: package:
+                let
+                  # The checkpoint tooling diffs and restores the build directory as a whole,
+                  # so the sources and the CMake build output need to be in the same directory
+                  inSourcePackage = package.overrideAttrs (_: {
+                    dontUseCmakeBuildDir = true;
+                  });
+                in
+                {
+                  "${name}-checkpoint" = pkgs.checkpointBuildTools.prepareCheckpointBuild inSourcePackage;
+                }
+                // pkgs.lib.optionalAttrs (checkpointPath != "") {
+                  "${name}-incremental" = pkgs.checkpointBuildTools.mkCheckpointBuild inSourcePackage (
+                    builtins.storePath checkpointPath
+                  );
+                }
+              )
+              (
+                pkgs.lib.getAttrs (builtins.filter (name: basePackages ? ${name}) [
+                  "qownnotes-qt6"
+                  "qownnotes-qt6-kde"
+                ]) basePackages
+              );
         in
-        pkgs.lib.mapAttrs
-          (
-            _: package:
-            package.overrideAttrs (_: {
-              src = packageSource;
-            })
-          )
-          (
-            {
-              qownnotes-qt6 = pkgs.callPackage (import ./default.nix) { };
-              qownnotes-qt6-qlitehtml = pkgs.callPackage (import ./default.nix) { useQlitehtml = true; };
-              qownnotes-qt69 = pkgs-qt69.callPackage (import ./default.nix) { };
-              qownnotes-qt5 = pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix) { };
-              qownnotes-cmake-qt5 =
-                pkgs.libsForQt5.callPackage (import ./build-systems/nix/default-cmake-qt5.nix)
-                  { };
-              qownnotes-qt5153 =
-                pkgs-qt5153.libsForQt5.callPackage (import ./build-systems/nix/default-qt5.nix)
-                  { };
-              default = pkgs.qt6Packages.callPackage (import ./default.nix) { };
-            }
-            // pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
-              qownnotes-qt6-kde = pkgs.callPackage (import ./default.nix) {
-                useKdeIntegration = true;
-                qt6Packages = pkgs.kdePackages;
-              };
-            }
-          )
+        basePackages // checkpointPackages
       );
 
       devShells = forAllSystems (

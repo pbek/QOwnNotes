@@ -109,6 +109,17 @@ nix-build-trace:
 nix-build-force:
     nix build '.?submodules=1#{{ nixBuildPackage }}' --rebuild
 
+# Do a full nix build and store its build directory as checkpoint for "just nix-build-incremental"
+[group('nix')]
+nix-build-checkpoint:
+    nix build '.?submodules=1#{{ nixBuildPackage }}-checkpoint' --out-link .nix-checkpoint
+
+# Build the application for nix, but only recompile the sources changed since the last checkpoint
+[group('nix')]
+nix-build-incremental:
+    test -e .nix-checkpoint || just nix-build-checkpoint
+    QON_NIX_CHECKPOINT="$(readlink -f .nix-checkpoint)" nix build '.?submodules=1#{{ nixBuildPackage }}-incremental' --impure
+
 # Run the built application for nix
 [group('nix')]
 nix-run:

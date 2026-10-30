@@ -38,5 +38,8 @@ devenv.local.nix
 # direnv
 .direnv
 
+# Checkpoint for incremental nix builds
+.nix-checkpoint*
+
 # pre-commit
 .pre-commit-config.yaml
