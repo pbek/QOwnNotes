@@ -146,6 +146,24 @@ nix-build-system:
 [group('nix')]
 nix-build-run: nix-build-system nix-run
 
+# Incrementally build and run the application for nix with the nixpkgs of the running system.
+# The checkpoint is tied to the system nixpkgs, so after a system update a new full build
+# is done once, because object files built against a different Qt must not be reused.
+[group('nix')]
+nix-build-incremental-run:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    nixpkgsHash=$(nix eval --impure --raw --expr 'builtins.substring 0 16 (builtins.hashString "sha256" (builtins.getFlake "nixpkgs").narHash)')
+    checkpoint=".nix-checkpoint-system-${nixpkgsHash}"
+    flakeArgs=(--override-input nixpkgs nixpkgs --no-write-lock-file)
+    if [ ! -e "${checkpoint}" ]; then
+        # Remove checkpoints of older system nixpkgs, so they can be garbage collected
+        rm -f .nix-checkpoint-system-*
+        nix build '.?submodules=1#{{ nixBuildPackage }}-checkpoint' "${flakeArgs[@]}" --out-link "${checkpoint}"
+    fi
+    QON_NIX_CHECKPOINT="$(readlink -f "${checkpoint}")" nix build '.?submodules=1#{{ nixBuildPackage }}-incremental' "${flakeArgs[@]}" --impure
+    just nix-run
+
 # Open the breeze icons folder
 [group('nix')]
 open-breeze-icons:
