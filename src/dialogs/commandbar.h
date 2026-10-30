@@ -8,6 +8,7 @@ class QTreeView;
 class CommandModel;
 class CommandBarFilterModel;
 class QLineEdit;
+class QLabel;
 
 class CommandBar : public QMenu {
     Q_OBJECT
@@ -28,6 +29,7 @@ class CommandBar : public QMenu {
    private:
     QTreeView* m_treeView;
     QLineEdit* m_lineEdit;
+    QLabel* m_noResultsLabel;
     CommandModel* m_model;
     CommandBarFilterModel* m_proxyModel;
 };

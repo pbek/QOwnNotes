@@ -4,6 +4,7 @@
 #include <QAction>
 #include <QCoreApplication>
 #include <QKeyEvent>
+#include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
 #include <QPainter>
@@ -16,6 +17,7 @@
 #include "libraries/fuzzy/kfuzzymatcher.h"
 #include "models/commandmodel.h"
 #include "services/settingsservice.h"
+#include "utils/gui.h"
 #include "utils/misc.h"
 
 class CommandBarFilterModel : public QSortFilterProxyModel {
@@ -68,15 +70,29 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
 
         const auto strs = index.data().toString().split(QLatin1Char(':'));
         QString str = strs.at(1);
-        const QString nameColor = option.palette.color(QPalette::Link).name();
+        const bool isSelected = option.state & QStyle::State_Selected;
+        const auto *action = index.data(Qt::UserRole).value<QAction *>();
+        const bool isActionEnabled = action == nullptr || action->isEnabled();
+
+        // Use colors that are readable on the selection background too, and show
+        // actions that can't be triggered right now muted
+        const QColor textColor =
+            !isActionEnabled
+                ? option.palette.color(QPalette::Disabled, QPalette::Text)
+                : option.palette.color(isSelected ? QPalette::HighlightedText : QPalette::Text);
+        const QString nameColor =
+            isSelected ? textColor.name() : option.palette.color(QPalette::Link).name();
+        const QString componentColor =
+            isSelected ? textColor.name()
+                       : option.palette.color(QPalette::Disabled, QPalette::Text).name();
+
         str = KFuzzyMatcher::toFuzzyMatchedDisplayString(
             m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor),
             QStringLiteral("</b>"));
-        //        fts::to_fuzzy_matched_display_string(m_filterString, str, QStringLiteral("<b
-        //        style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
 
-        const QString component = QStringLiteral("<span style=\"color: gray;\">") + strs.at(0) +
-                                  QStringLiteral(": </span>");
+        const QString component =
+            QStringLiteral("<span style=\"color: %1;\">").arg(componentColor) +
+            strs.at(0).toHtmlEscaped() + QStringLiteral(": </span>");
 
         str = component + str;
         bool overrideInterfaceFontSize =
@@ -125,7 +141,7 @@ class CommandBarStyleDelegate : public QStyledItemDelegate {
         if (!rtl && !hideMenuIcons) painter->translate(25, 0);
 
         QAbstractTextDocumentLayout::PaintContext ctx;
-        ctx.palette.setColor(QPalette::Text, options.palette.text().color());
+        ctx.palette.setColor(QPalette::Text, textColor);
         doc.documentLayout()->draw(painter, ctx);
 
         painter->restore();
@@ -225,12 +241,25 @@ CommandBar::CommandBar(QWidget *parent) : QMenu(parent) {
     setLayout(layout);
 
     m_lineEdit = new QLineEdit(this);
+    m_lineEdit->setPlaceholderText(tr("Search for actions…"));
+    m_lineEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-find"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-find.svg"))),
+        QLineEdit::LeadingPosition);
     setFocusProxy(m_lineEdit);
 
     layout->addWidget(m_lineEdit);
 
     m_treeView = new QTreeView();
     layout->addWidget(m_treeView, 1);
+
+    // Show a hint instead of an empty list if no action matches the search
+    m_noResultsLabel = new QLabel(tr("No action matches your search"), this);
+    m_noResultsLabel->setAlignment(Qt::AlignCenter);
+    m_noResultsLabel->setMargin(8);
+    Utils::Gui::setMutedTextColor(m_noResultsLabel);
+    m_noResultsLabel->hide();
+    layout->addWidget(m_noResultsLabel);
     m_treeView->setTextElideMode(Qt::ElideLeft);
     m_treeView->setUniformRowHeights(true);
 
@@ -326,6 +355,12 @@ bool CommandBar::eventFilter(QObject *obj, QEvent *event) {
 
 void CommandBar::slotReturnPressed() {
     auto act = m_proxyModel->data(m_treeView->currentIndex(), Qt::UserRole).value<QAction *>();
+
+    // Actions that are disabled right now can't be triggered, so keep the command bar open
+    if (act != nullptr && !act->isEnabled()) {
+        return;
+    }
+
     if (act) {
         // if the action is a menu, we take all its actions
         // and reload our dialog with these instead.
@@ -360,6 +395,10 @@ void CommandBar::slotReturnPressed() {
 void CommandBar::reselectFirst() {
     QModelIndex index = m_proxyModel->index(0, 0);
     m_treeView->setCurrentIndex(index);
+
+    const bool hasResults = m_proxyModel->rowCount() > 0;
+    m_treeView->setVisible(hasResults);
+    m_noResultsLabel->setVisible(!hasResults);
 }
 
 void CommandBar::updateViewGeometry() {

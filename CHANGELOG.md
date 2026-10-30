@@ -171,6 +171,12 @@
   - A hint is shown below the settings list if no settings match the search
   - Texts outside of the settings pages, like the page headline, are no longer highlighted
     by the search
+- Polished the command bar
+  - The search field shows a search icon and a placeholder text
+  - The selected action is now readable with every color scheme, because its text uses
+    the highlighted text color, the menu names use a muted color from the color scheme
+  - Actions that are currently disabled are shown muted and can't be triggered
+  - A hint is shown instead of an empty list if no action matches the search
 
 ## 26.10.15
 
