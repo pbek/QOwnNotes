@@ -34,11 +34,21 @@
      </property>
      <item>
       <widget class="QLabel" name="label_2">
-       <property name="styleSheet">
-        <string notr="true">QLabel {font-weight: bold;}</string>
-       </property>
        <property name="text">
         <string>The current note was modified outside of this application!</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="legendLabel">
+       <property name="text">
+        <string>Text with a red background was removed outside of QOwnNotes, text with a green background was added.</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -79,6 +89,9 @@ p, li { white-space: pre-wrap; }
      </item>
      <item>
       <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {font-weight: bold;}</string>
+       </property>
        <property name="text">
         <string>Accept external changes?</string>
        </property>

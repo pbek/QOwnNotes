@@ -48,6 +48,14 @@
     when something is selected
   - Large images are scaled down to fit into the preview
   - The **OK** button was replaced by a **Close** button
+- Polished the dialogs that show text differences, like the dialog for notes that
+  were modified outside of QOwnNotes
+  - Added and removed text is now readable in dark mode too, and the differences are
+    grouped to whole words, so they are easier to read
+  - A legend explains what the colored text means
+  - The external modification dialog got **Reload from disk** and **Keep current text**
+    buttons instead of **Yes** and **No**
+  - The note versions dialog uses the same readable colors for its differences
 
 ## 26.10.15
 

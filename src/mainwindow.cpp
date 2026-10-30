@@ -2701,10 +2701,13 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     //    qDebug() << __func__ << " - 'text1': " << text1;
     //    qDebug() << __func__ << " - 'text2': " << text2;
 
-    auto *diff = new diff_match_patch();
-    const QList<Diff> diffList = diff->diff_main(text1, text2);
+    diff_match_patch diff;
+    QList<Diff> diffList = diff.diff_main(text1, text2);
 
-    const QString html = diff->diff_prettyHtml(diffList);
+    // Group the changes to whole words, so the differences are easier to read
+    diff.diff_cleanupSemantic(diffList);
+
+    const QString html = diff.diff_prettyHtml(diffList);
     //    qDebug() << __func__ << " - 'html': " << html;
 
     this->noteDiffDialog = new NoteDiffDialog(this, html);

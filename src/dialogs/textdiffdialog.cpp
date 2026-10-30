@@ -8,6 +8,7 @@
 
 #include "services/settingsservice.h"
 #include "ui_textdiffdialog.h"
+#include "utils/gui.h"
 
 TextDiffDialog::TextDiffDialog(QWidget *parent, const QString &title, const QString &labelText,
                                const QString &text1, const QString &text2,
@@ -34,7 +35,11 @@ TextDiffDialog::TextDiffDialog(QWidget *parent, const QString &title, const QStr
     this->text1 = text1;
     this->identifier = identifier;
     this->ui->label_2->setText(labelText);
+    this->ui->label_2->setHidden(labelText.isEmpty());
+    Utils::Gui::setSectionHeaderFont(ui->label_2);
+    Utils::Gui::setMutedTextColor(ui->legendLabel);
     this->ui->plainTextEdit->setPlainText(text2);
+    this->ui->plainTextEdit->setFocus();
 
     // Show or hide the "don't show again" checkbox based on identifier
     if (identifier.isEmpty()) {
@@ -65,9 +70,11 @@ bool TextDiffDialog::resultAccepted() { return this->accepted; }
 QString TextDiffDialog::resultText() { return this->ui->plainTextEdit->toPlainText(); }
 
 void TextDiffDialog::on_plainTextEdit_textChanged() {
-    auto diff = new diff_match_patch();
-    const QList<Diff> diffList =
-        diff->diff_main(this->text1, this->ui->plainTextEdit->toPlainText());
-    const QString html = diff->diff_prettyHtml(diffList);
-    this->ui->textEdit->setHtml(html);
+    diff_match_patch diff;
+    QList<Diff> diffList = diff.diff_main(this->text1, this->ui->plainTextEdit->toPlainText());
+
+    // Group the changes to whole words, so the differences are easier to read
+    diff.diff_cleanupSemantic(diffList);
+
+    this->ui->textEdit->setHtml(Utils::Gui::readableDiffHtml(diff.diff_prettyHtml(diffList)));
 }

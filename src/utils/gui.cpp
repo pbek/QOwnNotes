@@ -1240,6 +1240,20 @@ void Utils::Gui::setSectionHeaderFont(QWidget *widget) {
 }
 
 /**
+ * Makes the html of diff_match_patch::diff_prettyHtml readable in light and dark mode
+ * by using a dark text color on the light backgrounds of added and removed text
+ */
+QString Utils::Gui::readableDiffHtml(const QString &html) {
+    QString result = html;
+    result.replace(QStringLiteral("<ins style=\"background:#e6ffe6;\">"),
+                   QStringLiteral("<ins style=\"background:#c6efce; color:#1d4d27;\">"));
+    result.replace(QStringLiteral("<del style=\"background:#ffe6e6;\">"),
+                   QStringLiteral("<del style=\"background:#ffc7ce; color:#7a1b25;\">"));
+
+    return result;
+}
+
+/**
  * Sets the current index of a combo box by user data
  */
 void Utils::Gui::setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData) {

@@ -145,6 +145,7 @@ void setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData);
 
 void setMutedTextColor(QWidget *widget);
 void setSectionHeaderFont(QWidget *widget);
+QString readableDiffHtml(const QString &html);
 
 int getTabWidgetIndexByProperty(QTabWidget *tabWidget, const QString &propertyName,
                                 const QVariant &propertyValue);

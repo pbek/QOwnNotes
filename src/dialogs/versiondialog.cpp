@@ -209,7 +209,8 @@ void VersionDialog::updateVersionPreview() {
         ui->previewHeaderLabel->setText(tr("No version selected"));
     }
 
-    ui->diffBrowser->setHtml(hasVersion ? _diffList->value(currentRow) : QString());
+    ui->diffBrowser->setHtml(hasVersion ? Utils::Gui::readableDiffHtml(_diffList->value(currentRow))
+                                        : QString());
     ui->noteTextEdit->setPlainText(hasVersion ? _dataList->value(currentRow) : QString());
 
     // Highlight and jump to the matches of the selected version
