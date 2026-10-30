@@ -4,6 +4,7 @@
 
 #include <QClipboard>
 #include <QDebug>
+#include <QPushButton>
 
 #include "filedialog.h"
 #include "libraries/qtcsv/src/include/reader.h"
@@ -22,9 +23,41 @@ TableDialog::TableDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Tab
     ui->createTableWidget->setRowCount(100);
     ui->csvFileTextEdit->setVisible(false);
     _tempFile = nullptr;
+
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Insert table"));
+    ui->buttonBox->button(QDialogButtonBox::Ok)
+        ->setIcon(QIcon::fromTheme(QStringLiteral("insert-table"),
+                                   QIcon(":/icons/breeze-qownnotes/16x16/insert-table.svg")));
+
+    // Only allow inserting a table if there is something to insert
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &TableDialog::updateOkButton);
+    connect(ui->rowSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this,
+            &TableDialog::updateOkButton);
+    connect(ui->columnSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this,
+            &TableDialog::updateOkButton);
+    connect(ui->fileLineEdit, &QLineEdit::textChanged, this, &TableDialog::updateOkButton);
+    updateOkButton();
 }
 
-TableDialog::~TableDialog() { delete ui; }
+TableDialog::~TableDialog() {
+    delete _tempFile;
+    delete ui;
+}
+
+/**
+ * Only enables the OK button if there is a table to create or a CSV file to import
+ */
+void TableDialog::updateOkButton() {
+    bool canInsert;
+
+    if (ui->tabWidget->currentIndex() == Tab::ImportTab) {
+        canInsert = _tempFile != nullptr || !ui->fileLineEdit->text().isEmpty();
+    } else {
+        canInsert = ui->rowSpinBox->value() > 0 && ui->columnSpinBox->value() > 0;
+    }
+
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(canInsert);
+}
 
 /**
  * Updates the row and column spin boxes with the selection
@@ -184,7 +217,7 @@ void TableDialog::on_fileButton_clicked() {
     ui->csvFileTextEdit->clear();
     QStringList filters = QStringList() << tr("CSV files") + " (*.csv)" << tr("All files") + " (*)";
     FileDialog dialog(QStringLiteral("CSVTableImport"));
-    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilters(filters);
     dialog.setWindowTitle(tr("Select CSV file to import"));
@@ -210,7 +243,9 @@ void TableDialog::on_fileButton_clicked() {
 
             updateSeparator(text);
 
+            delete _tempFile;
             _tempFile = nullptr;
+            updateOkButton();
         }
     }
 }
@@ -241,29 +276,44 @@ void TableDialog::on_clipboardButton_clicked() {
     QClipboard *clipboard = QApplication::clipboard();
     QString text = clipboard->text().trimmed();
 
-    // set text from clipboard
-    if (!text.isEmpty()) {
-        ui->fileLineEdit->clear();
+    // Remove the temporary file of a previous clipboard import
+    delete _tempFile;
+    _tempFile = nullptr;
+
+    if (text.isEmpty()) {
+        ui->csvFileTextEdit->clear();
+        ui->csvFileTextEdit->setPlaceholderText(tr("The clipboard doesn't contain any text"));
         ui->csvFileTextEdit->show();
-        ui->csvFileTextEdit->setPlainText(text);
+        updateOkButton();
 
-        _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
-                                       QStringLiteral("table-XXXXXX.csv"));
-
-        if (!_tempFile->open()) {
-            _tempFile = nullptr;
-
-            return;
-        }
-
-        updateSeparator(text);
-
-        // write file data to the temporary file in UTF-8
-        _tempFile->write(text.toUtf8());
-
-        // close the file so the CSV reader can access it
-        _tempFile->close();
+        return;
     }
+
+    // set text from clipboard
+    ui->fileLineEdit->clear();
+    ui->csvFileTextEdit->show();
+    ui->csvFileTextEdit->setPlainText(text);
+
+    _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
+                                   QStringLiteral("table-XXXXXX.csv"));
+
+    if (!_tempFile->open()) {
+        delete _tempFile;
+        _tempFile = nullptr;
+        updateOkButton();
+
+        return;
+    }
+
+    updateSeparator(text);
+
+    // write file data to the temporary file in UTF-8
+    _tempFile->write(text.toUtf8());
+
+    // close the file so the CSV reader can access it
+    _tempFile->close();
+
+    updateOkButton();
 }
 
 void TableDialog::updateSeparator(const QString &text) const {

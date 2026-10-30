@@ -42,4 +42,5 @@ class TableDialog : public MasterDialog {
     void importCSV();
     void updateMaxItems();
     void updateSeparator(const QString &text) const;
+    void updateOkButton();
 };

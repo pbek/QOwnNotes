@@ -113,6 +113,12 @@
   - A hint is shown instead of an empty heading list, if the selected note has no headings,
     then <kbd>Return</kbd> in the note list inserts the link right away
   - Both search fields now look the same, and a text is shown while the title of a webpage is fetched
+- Polished the insert table dialog
+  - The **OK** button is now called **Insert table** and is only enabled when there is
+    a table to create or a CSV file or clipboard text to import
+  - A message is shown if the clipboard doesn't contain any text to import
+  - Only existing files can be selected for the CSV import
+  - Temporary files of clipboard imports are now cleaned up
 
 ## 26.10.15
 
