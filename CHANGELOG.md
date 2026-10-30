@@ -77,6 +77,12 @@
   - The first matching action is selected while searching and can be triggered
     with <kbd>Return</kbd> directly from the search field
   - Actions that are currently disabled are shown as disabled and can't be triggered
+- Polished the Nextcloud Bookmarks import dialog
+  - The dialog shows to which note the bookmarks will be added, or a message
+    if no bookmarks were found on the server
+  - After importing, the dialog shows how many bookmarks were added and the
+    **Import bookmarks** button gets disabled to prevent importing them twice
+  - The dialog got a **Close** button
 
 ## 26.10.15
 

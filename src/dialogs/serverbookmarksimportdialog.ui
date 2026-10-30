@@ -64,10 +64,30 @@
    <item row="0" column="0" colspan="3">
     <widget class="QLabel" name="infoLabel">
      <property name="text">
-      <string notr="true">TextLabel</string>
+      <string notr="true"/>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
      </property>
     </widget>
    </item>
@@ -76,5 +96,12 @@
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ServerBookmarksImportDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
 </ui>

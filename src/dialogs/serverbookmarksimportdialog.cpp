@@ -4,6 +4,7 @@
 
 #include <QDebug>
 #include <QJsonArray>
+#include <QPushButton>
 #include <QtQml/QJSValueIterator>
 
 #include "services/websocketserverservice.h"
@@ -87,9 +88,18 @@ void ServerBookmarksImportDialog::setBookmarks(const QJSValue &bookmarks) {
     jsonObject.insert("data", bookmarkList);
 #endif
 
-    ui->progressBar->setMaximum(bookmarksCount);
-    ui->infoLabel->setText(tr("<strong>%n bookmarks</strong> found on server", "", bookmarksCount));
+    ui->progressBar->setMaximum(qMax(bookmarksCount, 1));
+    ui->progressBar->setValue(0);
+    ui->progressBar->setVisible(bookmarksCount > 0);
+    ui->infoLabel->setText(
+        bookmarksCount > 0
+            ? tr("<strong>%n bookmark(s)</strong> found on server. They will be added to the "
+                 "note <strong>%1</strong>.",
+                 "", bookmarksCount)
+                  .arg(WebSocketServerService::getBookmarksNoteName().toHtmlEscaped())
+            : tr("No bookmarks were found on the server."));
     ui->importButton->setEnabled(bookmarksCount > 0);
+    ui->importButton->setDefault(bookmarksCount > 0);
     ui->progressBar->setEnabled(bookmarksCount > 0);
 }
 
@@ -98,4 +108,12 @@ ServerBookmarksImportDialog::~ServerBookmarksImportDialog() { delete ui; }
 void ServerBookmarksImportDialog::on_importButton_clicked() {
     QJsonArray bookmarkList = WebSocketServerService::createBookmarks(jsonObject);
     ui->progressBar->setValue(bookmarkList.count());
+
+    // Prevent importing the same bookmarks twice
+    ui->importButton->setEnabled(false);
+    ui->infoLabel->setText(
+        tr("<strong>%n bookmark(s)</strong> were added to the note <strong>%1</strong>.", "",
+           bookmarkList.count())
+            .arg(WebSocketServerService::getBookmarksNoteName().toHtmlEscaped()));
+    ui->buttonBox->button(QDialogButtonBox::Close)->setFocus();
 }
