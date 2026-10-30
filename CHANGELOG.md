@@ -181,6 +181,8 @@
   matches there are and which of them is selected, like "2 of 5"
 - Fixed the text search in the note preview and the update dialog ignoring the
   regular expression mode when the search wrapped around to the start of the text
+- The backlinks in the navigation panel are now sorted by note name instead of being shown
+  in random order, and the linking notes are shown in bold to stand out from their links
 
 ## 26.10.15
 

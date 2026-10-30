@@ -71,6 +71,11 @@ void BacklinkWidget::setBacklinks(const QHash<Note, QSet<LinkHit>> &reverseLinkN
         auto *topItem = new QTreeWidgetItem();
 
         topItem->setText(0, backlinkNote.getName());
+
+        // Show the linking notes in bold, so they stand out from the links in them
+        QFont font = topItem->font(0);
+        font.setBold(true);
+        topItem->setFont(0, font);
         Utils::Gui::setTreeWidgetItemToolTipForNote(topItem, backlinkNote);
         // Disable selection for the top items
         topItem->setFlags(topItem->flags() & ~Qt::ItemIsSelectable);
@@ -90,6 +95,8 @@ void BacklinkWidget::setBacklinks(const QHash<Note, QSet<LinkHit>> &reverseLinkN
         }
     }
 
+    // The notes come in random order, so sort them and their links by name
+    sortItems(0, Qt::AscendingOrder);
     expandAll();
 }
 
