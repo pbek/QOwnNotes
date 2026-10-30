@@ -11,6 +11,7 @@
 #include <QFileInfo>
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
+#include <QLocale>
 #include <QMenu>
 #include <QTimer>
 #include <QTreeWidgetItem>
@@ -26,6 +27,15 @@ StoredImagesDialog::StoredImagesDialog(QWidget *parent)
     ui->fileTreeWidget->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
 
+    Utils::Gui::setSectionHeaderFont(ui->previewHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->previewDetailLabel);
+    Utils::Gui::setMutedTextColor(ui->fileCountLabel);
+    ui->graphicsView->setAlignment(Qt::AlignCenter);
+    ui->graphicsView->setRenderHint(QPainter::SmoothPixmapTransform);
+
+    connect(ui->fileTreeWidget, &QTreeWidget::itemSelectionChanged, this,
+            &StoredImagesDialog::updateActionButtons);
+
     refreshMediaFiles();
 }
 
@@ -35,7 +45,10 @@ void StoredImagesDialog::refreshMediaFiles() {
     QDir mediaDir(NoteFolder::currentMediaPath());
 
     if (!mediaDir.exists()) {
-        ui->progressBar->setValue(ui->progressBar->maximum());
+        ui->progressBar->hide();
+        ui->fileTreeWidget->clear();
+        loadCurrentFileDetails();
+        updateFileCountLabel();
         return;
     }
 
@@ -86,6 +99,8 @@ void StoredImagesDialog::refreshMediaFiles() {
 
     ui->progressBar->hide();
     ui->fileTreeWidget->clear();
+    const QColor mutedColor =
+        ui->fileTreeWidget->palette().color(QPalette::Disabled, QPalette::Text);
 
     Q_FOREACH (QString fileName, mediaFiles) {
         auto *item = new QTreeWidgetItem();
@@ -95,9 +110,15 @@ void StoredImagesDialog::refreshMediaFiles() {
 
         QString filePath = getFilePath(item);
         QFileInfo info(filePath);
-        item->setToolTip(0, tr("Last modified at %1").arg(info.lastModified().toString()) +
-                                QStringLiteral("\n") +
-                                Utils::Misc::toHumanReadableByteSize(info.size()));
+        item->setToolTip(
+            0, tr("Last modified at %1")
+                       .arg(QLocale().toString(info.lastModified(), QLocale::ShortFormat)) +
+                   QStringLiteral("\n") + Utils::Misc::toHumanReadableByteSize(info.size()));
+
+        // Show images that are not used in any note muted
+        if (!_fileNoteList.contains(fileName)) {
+            item->setForeground(0, QBrush(mutedColor));
+        }
 
         ui->fileTreeWidget->addTopLevelItem(item);
     }
@@ -115,6 +136,8 @@ void StoredImagesDialog::refreshMediaFiles() {
         // Clear the image preview when the list is empty
         loadCurrentFileDetails();
     }
+
+    updateActionButtons();
 }
 
 /**
@@ -133,29 +156,68 @@ void StoredImagesDialog::on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *c
 void StoredImagesDialog::loadCurrentFileDetails() {
     QTreeWidgetItem *current = ui->fileTreeWidget->currentItem();
 
-    if (current == nullptr) {
+    // Replace the previous scene, so the old images don't pile up in memory
+    QGraphicsScene *oldScene = ui->graphicsView->scene();
+
+    if (current == nullptr || current->isHidden()) {
         // Clear the graphics view when no item is selected or list is empty
-        auto *emptyScene = new QGraphicsScene(this);
-        ui->graphicsView->setScene(emptyScene);
+        ui->graphicsView->setScene(new QGraphicsScene(this));
+        delete oldScene;
         ui->notesFrame->hide();
+
+        const int total = ui->fileTreeWidget->topLevelItemCount();
+        ui->previewHeaderLabel->setText(total == 0 ? (_orphanedImagesOnly ? tr("No orphaned images")
+                                                      : _currentNoteOnly
+                                                          ? tr("No images in the current note")
+                                                          : tr("No images"))
+                                                   : tr("No image selected"));
+        ui->previewDetailLabel->clear();
+        ui->previewDetailLabel->hide();
 
         return;
     }
 
     auto *scene = new QGraphicsScene(this);
     QString filePath = getFilePath(current);
+    QPixmap pixmap;
 
     if (!filePath.isEmpty()) {
-        scene->addPixmap(QPixmap(filePath));
+        pixmap.load(filePath);
+        scene->addPixmap(pixmap);
     }
 
     ui->graphicsView->setScene(scene);
+    delete oldScene;
+    fitImageInView();
+
+    // Show the file name and details of the image
+    const QString fileName = current->text(0);
+    const QFileInfo fileInfo(filePath);
+    QStringList details;
+
+    if (!pixmap.isNull()) {
+        details << tr("%1 × %2 pixels").arg(pixmap.width()).arg(pixmap.height());
+    } else {
+        details << tr("Image can't be shown");
+    }
+
+    details << Utils::Misc::toHumanReadableByteSize(fileInfo.size());
+    details << tr("Last modified at %1")
+                   .arg(QLocale().toString(fileInfo.lastModified(), QLocale::ShortFormat));
+
+    if (!_fileNoteList.contains(fileName)) {
+        details << tr("Not used in any note");
+    }
+
+    ui->previewHeaderLabel->setText(fileName);
+    ui->previewDetailLabel->setText(details.join(QStringLiteral(" · ")));
+    ui->previewDetailLabel->show();
 
     // Show which notes use the current file
-    const QString fileName = current->text(0);
     if (_fileNoteList.contains(fileName)) {
         auto notes = _fileNoteList[fileName];
         ui->noteTreeWidget->clear();
+        ui->usedInNotesLabel->setText(tr("Used in %n note(s):", "", notes.count()));
 
         Q_FOREACH (Note note, notes) {
             auto *item = new QTreeWidgetItem();
@@ -219,6 +281,10 @@ void StoredImagesDialog::on_deleteButton_clicked() {
             delete item;
         }
     }
+
+    loadCurrentFileDetails();
+    updateFileCountLabel();
+    updateActionButtons();
 }
 
 /**
@@ -277,6 +343,65 @@ void StoredImagesDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(
         ui->fileTreeWidget, arg1,
         Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+    updateFileCountLabel();
+}
+
+/**
+ * Shows how many images are in the list, and how many of them match the search
+ */
+void StoredImagesDialog::updateFileCountLabel() {
+    const int total = ui->fileTreeWidget->topLevelItemCount();
+
+    if (ui->searchLineEdit->text().isEmpty()) {
+        ui->fileCountLabel->setText(tr("%n image(s)", "", total));
+        return;
+    }
+
+    int visible = 0;
+    for (int i = 0; i < total; ++i) {
+        if (!ui->fileTreeWidget->topLevelItem(i)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->fileCountLabel->setText(tr("%1 of %n image(s)", "", total).arg(visible));
+}
+
+/**
+ * Only enables the actions that can be used with the current selection
+ */
+void StoredImagesDialog::updateActionButtons() {
+    const bool hasSelection = !ui->fileTreeWidget->selectedItems().isEmpty();
+    const bool hasCurrentItem = ui->fileTreeWidget->currentItem() != nullptr;
+
+    ui->deleteButton->setEnabled(hasSelection);
+    ui->insertButton->setEnabled(hasSelection);
+    ui->openFileButton->setEnabled(hasCurrentItem);
+    ui->openFolderButton->setEnabled(hasCurrentItem);
+}
+
+/**
+ * Scales images down that are bigger than the view, small images are shown in their real size
+ */
+void StoredImagesDialog::fitImageInView() {
+    QGraphicsScene *scene = ui->graphicsView->scene();
+    ui->graphicsView->resetTransform();
+
+    if (scene == nullptr || scene->items().isEmpty()) {
+        return;
+    }
+
+    const QRectF rect = scene->itemsBoundingRect();
+    const QSize viewportSize = ui->graphicsView->viewport()->size();
+
+    if (rect.width() > viewportSize.width() || rect.height() > viewportSize.height()) {
+        ui->graphicsView->fitInView(rect, Qt::KeepAspectRatio);
+    }
+}
+
+void StoredImagesDialog::resizeEvent(QResizeEvent *event) {
+    MasterDialog::resizeEvent(event);
+    fitImageInView();
 }
 
 /**

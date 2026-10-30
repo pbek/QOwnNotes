@@ -20,7 +20,7 @@
       <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::StandardButton::Ok</set>
+      <set>QDialogButtonBox::StandardButton::Close</set>
      </property>
     </widget>
    </item>
@@ -51,7 +51,7 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="5" column="0">
+      <item row="6" column="0">
        <widget class="QPushButton" name="deleteButton">
         <property name="toolTip">
          <string>Delete selected images</string>
@@ -86,7 +86,7 @@
         </property>
        </widget>
       </item>
-      <item row="10" column="0">
+      <item row="11" column="0">
        <widget class="QPushButton" name="refreshButton">
         <property name="text">
          <string>Refresh</string>
@@ -94,6 +94,13 @@
         <property name="icon">
          <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
           <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="fileCountLabel">
+        <property name="text">
+         <string notr="true"/>
         </property>
        </widget>
       </item>
@@ -108,6 +115,9 @@
         <property name="selectionMode">
          <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
         </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
         <property name="rootIsDecorated">
          <bool>false</bool>
         </property>
@@ -121,7 +131,7 @@
         </column>
        </widget>
       </item>
-      <item row="7" column="0">
+      <item row="8" column="0">
        <widget class="QPushButton" name="insertButton">
         <property name="toolTip">
          <string>Add selected images to the current note</string>
@@ -135,7 +145,7 @@
         </property>
        </widget>
       </item>
-      <item row="9" column="0">
+      <item row="10" column="0">
        <widget class="QPushButton" name="openFolderButton">
         <property name="toolTip">
          <string>Open the media folder</string>
@@ -149,7 +159,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QCheckBox" name="orphanedCheckBox">
         <property name="toolTip">
          <string>Only show images that are not used in notes</string>
@@ -159,7 +169,7 @@
         </property>
        </widget>
       </item>
-      <item row="8" column="0">
+      <item row="9" column="0">
        <widget class="QPushButton" name="openFileButton">
         <property name="toolTip">
          <string>Open image externally</string>
@@ -173,14 +183,14 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="QProgressBar" name="progressBar">
         <property name="value">
          <number>0</number>
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item row="5" column="0">
        <widget class="QCheckBox" name="currentNoteCheckBox">
         <property name="toolTip">
          <string>Only show images that are used in the current note</string>
@@ -220,7 +230,7 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="1" column="0">
+      <item row="3" column="0">
        <widget class="QFrame" name="notesFrame">
         <property name="frameShape">
          <enum>QFrame::Shape::NoFrame</enum>
@@ -239,7 +249,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="usedInNotesLabel">
            <property name="text">
             <string>Used in notes:</string>
            </property>
@@ -282,7 +292,43 @@
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QGraphicsView" name="graphicsView"/>
+       <widget class="QLabel" name="previewHeaderLabel">
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::TextFormat::PlainText</enum>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="previewDetailLabel">
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::TextFormat::PlainText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

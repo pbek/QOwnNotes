@@ -18,6 +18,7 @@ class StoredImagesDialog : public MasterDialog {
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
    private slots:
     void on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
@@ -59,4 +60,7 @@ class StoredImagesDialog : public MasterDialog {
     void loadCurrentFileDetails();
     void refreshAndJumpToFileName(const QString &fileName);
     void openCurrentNote();
+    void updateFileCountLabel();
+    void updateActionButtons();
+    void fitImageInView();
 };

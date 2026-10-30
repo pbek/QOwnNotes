@@ -38,6 +38,16 @@
   - The reminder date is disabled instead of hidden when no reminder is set
   - Completed todo items are shown muted and crossed out, overdue todo items in red
     and todo items due today in bold
+- Polished the stored images and stored attachments dialogs
+  - A header above the preview shows the selected file name, the stored images dialog
+    also shows the image size in pixels, the file size and the modification date
+  - The lists show how many files there are and how many match the search
+  - Files that are not used in any note are shown muted, attachments show a file type icon
+  - The notes list shows how many notes are using the selected file
+  - Actions like deleting or adding files to the current note are only enabled
+    when something is selected
+  - Large images are scaled down to fit into the preview
+  - The **OK** button was replaced by a **Close** button
 
 ## 26.10.15
 

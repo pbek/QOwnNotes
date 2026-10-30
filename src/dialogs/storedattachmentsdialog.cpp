@@ -12,6 +12,7 @@
 #include <QFileInfo>
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
+#include <QLocale>
 #include <QMenu>
 #include <QTimer>
 #include <QTreeWidgetItem>
@@ -29,6 +30,12 @@ StoredAttachmentsDialog::StoredAttachmentsDialog(QWidget *parent)
     ui->infoFrame->setEnabled(false);
     ui->fileTreeWidget->installEventFilter(this);
 
+    Utils::Gui::setSectionHeaderFont(ui->previewHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->fileCountLabel);
+
+    connect(ui->fileTreeWidget, &QTreeWidget::itemSelectionChanged, this,
+            &StoredAttachmentsDialog::updateActionButtons);
+
     refreshAttachmentFiles();
 }
 
@@ -38,7 +45,11 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
     QDir attachmentsDir(NoteFolder::currentAttachmentsPath());
 
     if (!attachmentsDir.exists()) {
-        ui->progressBar->setValue(ui->progressBar->maximum());
+        ui->progressBar->hide();
+        ui->fileTreeWidget->clear();
+        loadCurrentFileDetails();
+        updateFileCountLabel();
+        updateActionButtons();
         return;
     }
 
@@ -91,6 +102,9 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
 
     ui->progressBar->hide();
     ui->fileTreeWidget->clear();
+    const QColor mutedColor =
+        ui->fileTreeWidget->palette().color(QPalette::Disabled, QPalette::Text);
+    const QMimeDatabase mimeDatabase;
 
     Q_FOREACH (QString fileName, attachmentFiles) {
         auto *item = new QTreeWidgetItem();
@@ -100,9 +114,21 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
 
         QString filePath = getFilePath(item);
         QFileInfo info(filePath);
-        item->setToolTip(0, tr("Last modified at %1").arg(info.lastModified().toString()) +
-                                QStringLiteral("\n") +
-                                Utils::Misc::toHumanReadableByteSize(info.size()));
+        item->setToolTip(
+            0, tr("Last modified at %1")
+                       .arg(QLocale().toString(info.lastModified(), QLocale::ShortFormat)) +
+                   QStringLiteral("\n") + Utils::Misc::toHumanReadableByteSize(info.size()));
+
+        // Show an icon for the file type
+        const QMimeType mimeType =
+            mimeDatabase.mimeTypeForFile(info, QMimeDatabase::MatchExtension);
+        item->setIcon(
+            0, QIcon::fromTheme(mimeType.iconName(), QIcon::fromTheme(mimeType.genericIconName())));
+
+        // Show attachments that are not used in any note muted
+        if (!_fileNoteList.contains(fileName)) {
+            item->setForeground(0, QBrush(mutedColor));
+        }
 
         ui->fileTreeWidget->addTopLevelItem(item);
     }
@@ -120,6 +146,8 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
         // Clear the file details when the list is empty
         loadCurrentFileDetails();
     }
+
+    updateActionButtons();
 }
 
 /**
@@ -138,17 +166,25 @@ void StoredAttachmentsDialog::on_fileTreeWidget_currentItemChanged(QTreeWidgetIt
 void StoredAttachmentsDialog::loadCurrentFileDetails() {
     QTreeWidgetItem *current = ui->fileTreeWidget->currentItem();
 
-    if (current == nullptr) {
+    if (current == nullptr || current->isHidden()) {
         ui->infoFrame->setEnabled(false);
         ui->pathLabel->clear();
         ui->typeLabel->clear();
         ui->sizeLabel->clear();
         ui->notesFrame->hide();
 
+        const int total = ui->fileTreeWidget->topLevelItemCount();
+        ui->previewHeaderLabel->setText(
+            total == 0 ? (_orphanedAttachmentsOnly ? tr("No orphaned attachments")
+                          : _currentNoteOnly       ? tr("No attachments in the current note")
+                                                   : tr("No attachments"))
+                       : tr("No attachment selected"));
+
         return;
     }
 
     QString filePath = getFilePath(current);
+    ui->previewHeaderLabel->setText(current->text(0));
     ui->pathLabel->setText(filePath);
 
     QMimeDatabase db;
@@ -158,6 +194,9 @@ void StoredAttachmentsDialog::loadCurrentFileDetails() {
     QFileInfo fileInfo(filePath);
     QString fileSizeText = Utils::Misc::toHumanReadableByteSize(fileInfo.size());
     ui->sizeLabel->setText(fileSizeText);
+    ui->sizeLabel->setToolTip(
+        tr("Last modified at %1")
+            .arg(QLocale().toString(fileInfo.lastModified(), QLocale::ShortFormat)));
 
     ui->infoFrame->setEnabled(true);
 
@@ -166,6 +205,7 @@ void StoredAttachmentsDialog::loadCurrentFileDetails() {
     if (_fileNoteList.contains(fileName)) {
         auto notes = _fileNoteList[fileName];
         ui->noteTreeWidget->clear();
+        ui->usedInNotesLabel->setText(tr("Used in %n note(s):", "", notes.count()));
 
         Q_FOREACH (Note note, notes) {
             auto *item = new QTreeWidgetItem();
@@ -229,6 +269,10 @@ void StoredAttachmentsDialog::on_deleteButton_clicked() {
             delete item;
         }
     }
+
+    loadCurrentFileDetails();
+    updateFileCountLabel();
+    updateActionButtons();
 }
 
 /**
@@ -358,6 +402,41 @@ void StoredAttachmentsDialog::on_searchLineEdit_textChanged(const QString &arg1)
     Utils::Gui::searchForTextInTreeWidget(
         ui->fileTreeWidget, arg1,
         Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+    updateFileCountLabel();
+}
+
+/**
+ * Shows how many attachments are in the list, and how many of them match the search
+ */
+void StoredAttachmentsDialog::updateFileCountLabel() {
+    const int total = ui->fileTreeWidget->topLevelItemCount();
+
+    if (ui->searchLineEdit->text().isEmpty()) {
+        ui->fileCountLabel->setText(tr("%n attachment(s)", "", total));
+        return;
+    }
+
+    int visible = 0;
+    for (int i = 0; i < total; ++i) {
+        if (!ui->fileTreeWidget->topLevelItem(i)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->fileCountLabel->setText(tr("%1 of %n attachment(s)", "", total).arg(visible));
+}
+
+/**
+ * Only enables the actions that can be used with the current selection
+ */
+void StoredAttachmentsDialog::updateActionButtons() {
+    const bool hasSelection = !ui->fileTreeWidget->selectedItems().isEmpty();
+    const bool hasCurrentItem = ui->fileTreeWidget->currentItem() != nullptr;
+
+    ui->deleteButton->setEnabled(hasSelection);
+    ui->insertButton->setEnabled(hasSelection);
+    ui->openFileButton->setEnabled(hasCurrentItem);
+    ui->openFolderButton->setEnabled(hasCurrentItem);
 }
 
 void StoredAttachmentsDialog::on_fileTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,

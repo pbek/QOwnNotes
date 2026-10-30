@@ -60,4 +60,6 @@ class StoredAttachmentsDialog : public MasterDialog {
     void loadCurrentFileDetails();
     void refreshAndJumpToFileName(const QString &fileName);
     void openCurrentNote();
+    void updateFileCountLabel();
+    void updateActionButtons();
 };

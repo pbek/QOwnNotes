@@ -41,7 +41,20 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="4" column="1" colspan="2">
+      <item row="0" column="1" colspan="2">
+       <widget class="QLabel" name="previewHeaderLabel">
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::TextFormat::PlainText</enum>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="2">
        <widget class="QFrame" name="notesFrame">
         <property name="frameShape">
          <enum>QFrame::Shape::NoFrame</enum>
@@ -60,7 +73,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="usedInNotesLabel">
            <property name="text">
             <string>Used in notes:</string>
            </property>
@@ -96,14 +109,14 @@
         </layout>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="QLabel" name="label_2">
         <property name="text">
          <string>File size:</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
+      <item row="3" column="2">
        <widget class="QLabel" name="typeLabel">
         <property name="text">
          <string notr="true">?</string>
@@ -113,7 +126,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
+      <item row="2" column="2">
        <widget class="QLabel" name="sizeLabel">
         <property name="text">
          <string notr="true">?</string>
@@ -123,7 +136,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
+      <item row="1" column="2">
        <widget class="QScrollArea" name="scrollArea">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
@@ -188,14 +201,14 @@
         </widget>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QLabel" name="label_4">
         <property name="text">
          <string>File type:</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item row="1" column="1">
        <widget class="QLabel" name="label_3">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -208,7 +221,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="1" colspan="2">
+      <item row="4" column="1" colspan="2">
        <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Orientation::Vertical</enum>
@@ -230,7 +243,7 @@
       <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::StandardButton::Ok</set>
+      <set>QDialogButtonBox::StandardButton::Close</set>
      </property>
     </widget>
    </item>
@@ -261,7 +274,7 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="1" column="0">
+      <item row="0" column="0">
        <widget class="LineEdit" name="searchLineEdit">
         <property name="styleSheet">
          <string notr="true">QLineEdit {
@@ -353,13 +366,10 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QFrame" name="frame_2">
-        <property name="frameShape">
-         <enum>QFrame::Shape::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Shadow::Raised</enum>
+      <item row="2" column="0">
+       <widget class="QLabel" name="fileCountLabel">
+        <property name="text">
+         <string notr="true"/>
         </property>
        </widget>
       </item>
@@ -373,7 +383,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="1" column="0">
        <widget class="QTreeWidget" name="fileTreeWidget">
         <property name="contextMenuPolicy">
          <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
@@ -383,6 +393,9 @@
         </property>
         <property name="selectionMode">
          <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
         </property>
         <property name="rootIsDecorated">
          <bool>false</bool>
