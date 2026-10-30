@@ -3,6 +3,7 @@
 ## 26.10.16
 
 - Fixed Nextcloud Deck boards being loaded twice when opening the Nextcloud Deck dialog
+- Fixed Nextcloud Deck cards being loaded twice when toggling the display of archived cards
 
 ## 26.10.15
 
