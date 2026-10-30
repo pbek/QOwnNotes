@@ -92,6 +92,12 @@
   - The **OK** and copy buttons are disabled when the token is empty
 - Added a **Copy version information** button to the about dialog, to easily add the
   version, build number, release and Qt version to bug reports
+- Polished the insert image dialog
+  - The dialog shows the size of the image in pixels and the file size, or a message
+    why an image can't be loaded, like a missing file or a failed download
+  - The **OK** button is now called **Insert image** and is only enabled when there
+    is an image to insert
+  - The title field shows that the title is optional
 
 ## 26.10.15
 

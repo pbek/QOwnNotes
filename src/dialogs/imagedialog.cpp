@@ -4,6 +4,8 @@
 
 #include <QClipboard>
 #include <QDebug>
+#include <QFileInfo>
+#include <QPushButton>
 #include <QRubberBand>
 #include <QTemporaryFile>
 #include <utility>
@@ -11,6 +13,7 @@
 #include "filedialog.h"
 #include "services/settingsservice.h"
 #include "ui_imagedialog.h"
+#include "utils/gui.h"
 
 ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::ImageDialog) {
     _imageFile = nullptr;
@@ -22,6 +25,9 @@ ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Ima
     ui->fileEdit->setFocus();
     ui->previewFrame->setVisible(false);
     ui->toolFrame->hide();
+    ui->infoLabel->hide();
+    Utils::Gui::setMutedTextColor(ui->infoLabel);
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Insert image"));
 
     SettingsService settings;
     ui->disableCopyingCheckBox->setChecked(
@@ -35,6 +41,9 @@ ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Ima
         ui->disableCopyingCheckBox->setChecked(false);
         ui->disableCopyingCheckBox->setDisabled(true);
         setPixmap(pixmap, true);
+        setInfoText(tr("Image from the clipboard, %1 × %2 pixels")
+                        .arg(pixmap.width())
+                        .arg(pixmap.height()));
     } else {
         QString text = clipboard->text().trimmed();
         QUrl url(text);
@@ -44,6 +53,8 @@ ImageDialog::ImageDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui::Ima
             ui->fileEdit->setText(text);
         }
     }
+
+    updateOkButton();
 
     connect(ui->graphicsView, SIGNAL(scrolledContentsBy(int, int)), this,
             SLOT(scrolledGraphicsViewContentsBy(int, int)));
@@ -120,6 +131,33 @@ void ImageDialog::setPixmap(const QPixmap &pixmap, bool updateBase) {
 
     ui->previewFrame->setVisible(true);
     ui->verticalSpacer->changeSize(0, 0);
+    updateOkButton();
+}
+
+/**
+ * Shows a muted info text below the input fields, or a warning in red
+ */
+void ImageDialog::setInfoText(const QString &text, bool isWarning) {
+    ui->infoLabel->setText(text);
+    ui->infoLabel->setVisible(!text.isEmpty());
+
+    if (isWarning) {
+        // Use a muted red that is readable in light and dark mode
+        QPalette palette = ui->infoLabel->palette();
+        palette.setColor(QPalette::WindowText, QColor(0xd9, 0x53, 0x4f));
+        ui->infoLabel->setPalette(palette);
+    } else {
+        Utils::Gui::setMutedTextColor(ui->infoLabel);
+    }
+}
+
+/**
+ * Only allows inserting if there is an image, or a path or url that should be inserted directly
+ */
+void ImageDialog::updateOkButton() {
+    const bool canInsert = !_pixmap.isNull() || (ui->disableCopyingCheckBox->isChecked() &&
+                                                 !ui->fileEdit->text().trimmed().isEmpty());
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(canInsert);
 }
 
 void ImageDialog::on_buttonBox_accepted() {
@@ -167,18 +205,22 @@ void ImageDialog::on_widthScaleHorizontalSlider_valueChanged(int value) {
 void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
     auto pathOrUrl = arg1.trimmed();
 
-    // Clear preview if path is empty
+    // Clear the preview, it will be shown again if an image can be loaded
+    ui->previewFrame->setVisible(false);
+    ui->verticalSpacer->changeSize(0, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    _pixmap = QPixmap();
+    _basePixmap = QPixmap();
+    setInfoText(QString());
+    updateOkButton();
+
     if (pathOrUrl.isEmpty()) {
-        ui->previewFrame->setVisible(false);
-        ui->verticalSpacer->changeSize(0, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-        _pixmap = QPixmap();
-        _basePixmap = QPixmap();
         return;
     }
 
     auto url = QUrl(pathOrUrl);
 
     if (!url.isValid()) {
+        setInfoText(tr("This is not a valid path or URL"), true);
         return;
     }
 
@@ -187,6 +229,7 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
         QByteArray data = Utils::Misc::downloadUrl(url);
 
         if (data.size() == 0) {
+            setInfoText(tr("The image couldn't be downloaded"), true);
             return;
         }
 
@@ -194,11 +237,16 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
         pixmap.loadFromData(data);
 
         if (pixmap.isNull()) {
+            setInfoText(tr("The downloaded file isn't an image that can be shown"), true);
             return;
         }
 
         setPixmap(pixmap, true);
         _imageWasDownloaded = true;
+        setInfoText(tr("%1 × %2 pixels, %3")
+                        .arg(pixmap.width())
+                        .arg(pixmap.height())
+                        .arg(Utils::Misc::toHumanReadableByteSize(data.size())));
 
         return;
     }
@@ -209,18 +257,36 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
         pathOrUrl = url.toLocalFile();
     }
 
-    auto file = new QFile(pathOrUrl);
+    const QFileInfo fileInfo(pathOrUrl);
 
     // check if local file exists and not empty
-    if (file->size() == 0) {
+    if (!fileInfo.isFile()) {
+        setInfoText(tr("The file doesn't exist"), true);
         return;
     }
 
-    setPixmap(QPixmap(pathOrUrl), true);
+    if (fileInfo.size() == 0) {
+        setInfoText(tr("The file is empty"), true);
+        return;
+    }
+
+    const QPixmap pixmap(pathOrUrl);
+
+    if (pixmap.isNull()) {
+        setInfoText(tr("The file isn't an image that can be shown"), true);
+        return;
+    }
+
+    setPixmap(pixmap, true);
+    setInfoText(tr("%1 × %2 pixels, %3")
+                    .arg(pixmap.width())
+                    .arg(pixmap.height())
+                    .arg(Utils::Misc::toHumanReadableByteSize(fileInfo.size())));
 }
 
 void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
     ui->scaleFrame->setDisabled(checked);
+    updateOkButton();
     ui->graphicsView->setDragMode(checked ? QGraphicsView::NoDrag : QGraphicsView::RubberBandDrag);
 
     if (checked) {

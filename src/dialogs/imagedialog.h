@@ -63,4 +63,8 @@ class ImageDialog : public MasterDialog {
     void setPixmap(const QPixmap &pixmap, bool updateBase = false);
 
     void updateWidthScaleLabelValue() const;
+
+    void setInfoText(const QString &text, bool isWarning = false);
+
+    void updateOkButton();
 };
