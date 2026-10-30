@@ -11,6 +11,7 @@
 #include "mainwindow.h"
 #include "services/settingsservice.h"
 #include "ui_versiondialog.h"
+#include "utils/gui.h"
 
 VersionDialog::VersionDialog(const QJSValue &versions, QWidget *parent) : VersionDialog(parent) {
     setVersions(versions);
@@ -28,6 +29,11 @@ VersionDialog::VersionDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
 
     setupMainSplitter();
 
+    Utils::Gui::setSectionHeaderFont(ui->previewHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->versionCountLabel);
+    ui->diffBrowser->setPlaceholderText(tr("Select a version to see its changes"));
+    ui->noteTextEdit->setPlaceholderText(tr("Select a version to see its note text"));
+
     QPushButton *button;
     ui->buttonBox->clear();
 
@@ -35,6 +41,7 @@ VersionDialog::VersionDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
     _restoreButton = button;
     _restoreButton->setEnabled(false);
     button->setProperty("ActionRole", Restore);
+    button->setToolTip(tr("Replace the text of the current note with the selected version"));
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(QStringLiteral("edit-download"),
                                      QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
@@ -122,14 +129,18 @@ void VersionDialog::setVersions(const QJSValue &versions) {
 
 void VersionDialog::setupMainSplitter() {
     versionSplitter = new QSplitter;
+    versionSplitter->setChildrenCollapsible(false);
 
     versionSplitter->addWidget(ui->listFrame);
-    versionSplitter->addWidget(ui->tabWidget);
+    versionSplitter->addWidget(ui->previewFrame);
 
-    // restore splitter sizes
+    // Restore the splitter sizes, give the preview more room by default
     SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("versionSplitterSizes")).toByteArray();
-    versionSplitter->restoreState(state);
+    if (!versionSplitter->restoreState(state)) {
+        versionSplitter->setStretchFactor(0, 1);
+        versionSplitter->setStretchFactor(1, 2);
+    }
 
     ui->gridLayout->addWidget(versionSplitter);
 }
@@ -185,6 +196,19 @@ void VersionDialog::updateVersionPreview() {
     const int currentRow = ui->versionListWidget->currentRow();
     const bool hasVersion = currentRow >= 0 && !ui->versionListWidget->item(currentRow)->isHidden();
     _restoreButton->setEnabled(hasVersion);
+    updateCountLabel();
+
+    if (hasVersion) {
+        ui->previewHeaderLabel->setText(
+            tr("Version from %1").arg(ui->versionListWidget->item(currentRow)->text()));
+    } else if (ui->versionListWidget->count() == 0) {
+        ui->previewHeaderLabel->setText(tr("No versions loaded"));
+    } else if (!ui->searchLineEdit->text().isEmpty()) {
+        ui->previewHeaderLabel->setText(tr("No version matches the search"));
+    } else {
+        ui->previewHeaderLabel->setText(tr("No version selected"));
+    }
+
     ui->diffBrowser->setHtml(hasVersion ? _diffList->value(currentRow) : QString());
     ui->noteTextEdit->setPlainText(hasVersion ? _dataList->value(currentRow) : QString());
 
@@ -195,6 +219,27 @@ void VersionDialog::updateVersionPreview() {
         searchWidget->activate(false);
         ui->noteTextEdit->ensureCursorVisible();
     }
+}
+
+/**
+ * Shows how many versions are in the list, and how many of them match the search
+ */
+void VersionDialog::updateCountLabel() {
+    const int total = ui->versionListWidget->count();
+
+    if (ui->searchLineEdit->text().isEmpty()) {
+        ui->versionCountLabel->setText(tr("%n version(s)", "", total));
+        return;
+    }
+
+    int visible = 0;
+    for (int row = 0; row < total; ++row) {
+        if (!ui->versionListWidget->item(row)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    ui->versionCountLabel->setText(tr("%1 of %n version(s)", "", total).arg(visible));
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {

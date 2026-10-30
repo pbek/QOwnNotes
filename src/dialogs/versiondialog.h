@@ -43,6 +43,7 @@ class VersionDialog : public MasterDialog {
     QStringList *_dataList;
     void setupMainSplitter();
     void updateVersionPreview();
+    void updateCountLabel();
 };
 
 #endif    // VERSIONDIALOG_H
