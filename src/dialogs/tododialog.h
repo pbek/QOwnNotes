@@ -82,6 +82,8 @@ class TodoDialog : public MasterDialog {
     void cleanTagButtons();
     void reloadCurrentTags();
     QString getTagString();
+    void updateTodoItemCountLabel();
+    void updateEditState();
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

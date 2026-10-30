@@ -30,6 +30,14 @@
   - The local trash dialog shows dates in your locale format, marks unreadable files with a
     warning icon and got a **Close** button
   - The preview gets more room by default, and the panes can no longer be collapsed by accident
+- Polished the todo dialog with a cleaner layout and clearer todo item states
+  - The todo list selection is now above the search field, and the list shows how many
+    todo items are listed or match the search
+  - The editor shows a header and a hint when no todo item is selected, and uses labeled fields
+  - The priority is shown as translated text next to the slider
+  - The reminder date is disabled instead of hidden when no reminder is set
+  - Completed todo items are shown muted and crossed out, overdue todo items in red
+    and todo items due today in bold
 
 ## 26.10.15
 

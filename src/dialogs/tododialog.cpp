@@ -16,6 +16,7 @@
 #include <QShortcut>
 #include <QSplitter>
 #include <QTimer>
+#include <QTreeWidgetItemIterator>
 
 #include "entities/calendaritem.h"
 #include "services/cloudservice.h"
@@ -54,6 +55,7 @@ TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     ui->tagsLayout->addWidget(_todoTagsScrollArea);
     _todoTagsScrollArea->setVisible(false);
     ui->editFrame->setEnabled(false);
+    updateEditState();
 }
 
 void TodoDialog::updateCalendarItem(CalendarItem item) {
@@ -118,7 +120,15 @@ void TodoDialog::setupUi() {
     ui->todoItemTreeWidget->installEventFilter(this);
     ui->reminderDateTimeEdit->installEventFilter(this);
 
+    ui->newItemEdit->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-find"),
+                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-find.svg"))),
+        QLineEdit::LeadingPosition);
     ui->newItemEdit->setFocus();
+
+    Utils::Gui::setSectionHeaderFont(ui->editHeaderLabel);
+    Utils::Gui::setMutedTextColor(ui->editHintLabel);
+    Utils::Gui::setMutedTextColor(ui->todoItemCountLabel);
 
     // adding shortcuts, that weren't working when defined in the ui file
     auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+S")), this);
@@ -212,8 +222,8 @@ void TodoDialog::refreshUi() {
                           ui->todoListSelector->currentText());
     }
 
-    // hide the reminder date time select
-    ui->reminderDateTimeEdit->hide();
+    // Disable the reminder date time select until a reminder is set
+    ui->reminderDateTimeEdit->setEnabled(false);
 
     // now load the task list items
     reloadTodoList();
@@ -221,14 +231,18 @@ void TodoDialog::refreshUi() {
 
 void TodoDialog::setupMainSplitter() {
     this->mainSplitter = new QSplitter(this);
+    this->mainSplitter->setChildrenCollapsible(false);
 
     this->mainSplitter->addWidget(ui->selectFrame);
     this->mainSplitter->addWidget(ui->editFrame);
 
-    // restore splitter sizes
+    // Restore the splitter sizes, give the editor more room by default
     SettingsService settings;
     QByteArray state = settings.value(QStringLiteral("TodoDialog/mainSplitterState")).toByteArray();
-    this->mainSplitter->restoreState(state);
+    if (!this->mainSplitter->restoreState(state)) {
+        this->mainSplitter->setStretchFactor(0, 1);
+        this->mainSplitter->setStretchFactor(1, 2);
+    }
 
     ui->gridLayout->layout()->addWidget(this->mainSplitter);
 }
@@ -282,6 +296,9 @@ void TodoDialog::reloadTodoListItems() {
 
         ui->todoItemTreeWidget->clear();
         QList<QTreeWidgetItem *> subItems;
+        const QColor mutedColor =
+            ui->todoItemTreeWidget->palette().color(QPalette::Disabled, QPalette::Text);
+        const QDateTime now = QDateTime::currentDateTime();
 
         // add all top level calendar items to the todoItemTreeWidget
         QListIterator<CalendarItem> itr(calendarItemList);
@@ -325,6 +342,30 @@ void TodoDialog::reloadTodoListItems() {
             item->setData(1, Qt::DisplayRole, calItem.getAlarmDate());
             item->setFlags(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled |
                            Qt::ItemIsUserCheckable | Qt::ItemIsSelectable);
+
+            const QDateTime alarmDate = calItem.getAlarmDate();
+
+            if (calItem.isCompleted()) {
+                // Show completed items muted and crossed out
+                QFont font = item->font(0);
+                font.setStrikeOut(true);
+                item->setFont(0, font);
+                item->setForeground(0, QBrush(mutedColor));
+                item->setForeground(1, QBrush(mutedColor));
+            } else if (alarmDate.isValid()) {
+                QFont font = item->font(1);
+                font.setBold(true);
+
+                if (alarmDate < now) {
+                    // Use a muted red that is readable in light and dark mode
+                    item->setForeground(1, QBrush(QColor(0xd9, 0x53, 0x4f)));
+                    item->setFont(1, font);
+                    item->setToolTip(1, tr("The due date is in the past"));
+                } else if (alarmDate.date() == now.date()) {
+                    item->setFont(1, font);
+                    item->setToolTip(1, tr("The todo item is due today"));
+                }
+            }
 
             if (relatedUid.isEmpty()) {
                 ui->todoItemTreeWidget->addTopLevelItem(item);
@@ -426,6 +467,7 @@ void TodoDialog::clearTodoList() {
     Q_UNUSED(blocker)
     ui->todoItemTreeWidget->clear();
     resetEditFrameControls();
+    updateTodoItemCountLabel();
 }
 
 void TodoDialog::resetEditFrameControls() {
@@ -436,11 +478,13 @@ void TodoDialog::resetEditFrameControls() {
     cleanTagButtons();
     ui->prioritySlider->setValue(0);
     ui->reminderCheckBox->setChecked(false);
-    ui->reminderDateTimeEdit->hide();
+    ui->reminderDateTimeEdit->clear();
+    ui->reminderDateTimeEdit->setEnabled(false);
     ui->saveButton->setEnabled(false);
     ui->noteButton->setEnabled(false);
     ui->removeButton->setEnabled(false);
     currentCalendarItem = CalendarItem();
+    updateEditState();
 }
 
 /**
@@ -511,26 +555,27 @@ void TodoDialog::on_prioritySlider_valueChanged(int value) {
     switch (value) {
         default:
         case 0:
-            priorityText = QLatin1String("not set");
+            priorityText = tr("Not set");
             break;
         case 1:
         case 2:
         case 3:
         case 4:
-            priorityText = QLatin1String("low");
+            priorityText = tr("Low");
             break;
         case 5:
-            priorityText = QLatin1String("medium");
+            priorityText = tr("Medium");
             break;
         case 6:
         case 7:
         case 8:
         case 9:
-            priorityText = QLatin1String("high");
+            priorityText = tr("High");
             break;
     }
 
-    ui->prioritySlider->setToolTip("priority: " + priorityText);
+    ui->priorityValueLabel->setText(priorityText);
+    ui->prioritySlider->setToolTip(tr("Priority: %1").arg(priorityText));
 }
 
 void TodoDialog::on_showCompletedItemsCheckBox_clicked() {
@@ -677,11 +722,11 @@ void TodoDialog::on_reminderCheckBox_clicked() {
         }
 
         ui->reminderDateTimeEdit->setDateTime(alarmDate);
-        ui->reminderDateTimeEdit->show();
+        ui->reminderDateTimeEdit->setEnabled(true);
     } else {
         currentCalendarItem.setAlarmDate(QDateTime{});
         ui->reminderDateTimeEdit->clear();
-        ui->reminderDateTimeEdit->hide();
+        ui->reminderDateTimeEdit->setEnabled(false);
     }
 }
 
@@ -730,6 +775,47 @@ void TodoDialog::on_newItemEdit_textChanged() {
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
+    updateTodoItemCountLabel();
+}
+
+/**
+ * Shows how many todo items are in the list, and how many of them match the search
+ */
+void TodoDialog::updateTodoItemCountLabel() {
+    int total = 0;
+    int visible = 0;
+
+    for (QTreeWidgetItemIterator it(ui->todoItemTreeWidget); *it != nullptr; ++it) {
+        ++total;
+        if (!(*it)->isHidden()) {
+            ++visible;
+        }
+    }
+
+    if (total == 0) {
+        ui->todoItemCountLabel->clear();
+    } else if (visible == total) {
+        ui->todoItemCountLabel->setText(tr("%n todo item(s)", "", total));
+    } else {
+        ui->todoItemCountLabel->setText(tr("%1 of %n todo item(s)", "", total).arg(visible));
+    }
+}
+
+/**
+ * Updates the editor header and hint for the current editing state
+ */
+void TodoDialog::updateEditState() {
+    const bool hasItem = currentCalendarItem.isFetched() && ui->editFrame->isEnabledTo(this);
+
+    if (hasItem) {
+        ui->editHeaderLabel->setText(currentCalendarItem.isCompleted()
+                                         ? tr("Edit completed todo item")
+                                         : tr("Edit todo item"));
+    } else {
+        ui->editHeaderLabel->setText(tr("No todo item selected"));
+    }
+
+    ui->editHintLabel->setVisible(!hasItem);
 }
 
 /**
@@ -892,6 +978,8 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *curre
         ui->removeButton->setEnabled(true);
         ui->editFrame->setEnabled(true);
     }
+
+    updateEditState();
 }
 
 /**

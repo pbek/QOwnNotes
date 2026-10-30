@@ -36,11 +36,57 @@
          <number>0</number>
         </property>
         <property name="rightMargin">
-         <number>1</number>
+         <number>6</number>
         </property>
         <property name="bottomMargin">
          <number>0</number>
         </property>
+        <item row="0" column="0">
+         <widget class="QComboBox" name="todoListSelector">
+          <property name="toolTip">
+           <string>Select your todo list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="newItemEdit">
+          <property name="placeholderText">
+           <string>Search or create todo item</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="allColumnsShowFocus">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Summary</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Due date</string>
+           </property>
+          </column>
+         </widget>
+        </item>
         <item row="3" column="0">
          <widget class="QProgressBar" name="todoItemLoadingProgressBar">
           <property name="toolTip">
@@ -52,18 +98,8 @@
          </widget>
         </item>
         <item row="4" column="0">
-         <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
-          <property name="toolTip">
-           <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
-          </property>
-          <property name="text">
-           <string>Show only items due today</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QFrame" name="frame">
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <widget class="QFrame" name="listFooterFrame">
+          <layout class="QGridLayout" name="listFooterLayout">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -76,14 +112,44 @@
            <property name="bottomMargin">
             <number>0</number>
            </property>
-           <item>
+           <item row="0" column="0">
             <widget class="QCheckBox" name="showCompletedItemsCheckBox">
              <property name="text">
               <string>Show completed items</string>
              </property>
             </widget>
            </item>
-           <item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="showDueTodayItemsOnlyCheckBox">
+             <property name="toolTip">
+              <string>This doesn't work for sub-items, because they may be hidden by the parent item!</string>
+             </property>
+             <property name="text">
+              <string>Show only items due today</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="listFooterSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2" alignment="Qt::AlignRight">
+            <widget class="QLabel" name="todoItemCountLabel">
+             <property name="text">
+              <string notr="true"/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2" alignment="Qt::AlignRight">
             <widget class="QPushButton" name="reloadTodoListButton">
              <property name="toolTip">
               <string>Reload the todo list from server</string>
@@ -100,46 +166,6 @@
           </layout>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="todoListSelector">
-          <property name="toolTip">
-           <string>select your todo list</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="TodoItemTreeWidget" name="todoItemTreeWidget">
-          <property name="contextMenuPolicy">
-           <enum>Qt::CustomContextMenu</enum>
-          </property>
-          <property name="dragDropMode">
-           <enum>QAbstractItemView::InternalMove</enum>
-          </property>
-          <property name="sortingEnabled">
-           <bool>true</bool>
-          </property>
-          <column>
-           <property name="text">
-            <string>Summary</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Due date</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLineEdit" name="newItemEdit">
-          <property name="placeholderText">
-           <string>Search or create todo item</string>
-          </property>
-          <property name="clearButtonEnabled">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
      </item>
@@ -153,7 +179,7 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>500</width>
+         <width>450</width>
          <height>0</height>
         </size>
        </property>
@@ -161,11 +187,11 @@
         <enum>QFrame::NoFrame</enum>
        </property>
        <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::Plain</enum>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <property name="leftMargin">
-         <number>1</number>
+         <number>6</number>
         </property>
         <property name="topMargin">
          <number>0</number>
@@ -176,105 +202,30 @@
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item row="10" column="0" colspan="2">
-         <widget class="QFrame" name="horizontalFrame">
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="saveButton">
-             <property name="toolTip">
-              <string>Save the current todo item</string>
-             </property>
-             <property name="text">
-              <string>Save</string>
-             </property>
-             <property name="icon">
-              <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
-             </property>
-             <property name="shortcut">
-              <string notr="true">Ctrl+S</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeButton">
-             <property name="toolTip">
-              <string>Remove the current todo item</string>
-             </property>
-             <property name="text">
-              <string>Remove</string>
-             </property>
-             <property name="icon">
-              <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
-             </property>
-             <property name="shortcut">
-              <string notr="true">Ctrl+R</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="noteButton">
-             <property name="text">
-              <string>Note…</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="8" column="0" colspan="2">
-         <widget class="QFrame" name="descriptionEditSearchFrame">
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="lineWidth">
-           <number>0</number>
+        <item row="0" column="0">
+         <widget class="QLabel" name="editHeaderLabel">
+          <property name="text">
+           <string notr="true"/>
           </property>
          </widget>
         </item>
-        <item row="0" column="0" colspan="2">
-         <widget class="QLineEdit" name="summaryEdit">
-          <property name="readOnly">
-           <bool>false</bool>
+        <item row="1" column="0">
+         <widget class="QLabel" name="editHintLabel">
+          <property name="text">
+           <string>Select a todo item from the list, or type a summary into the search field and press Enter to create a new todo item.</string>
           </property>
-          <property name="placeholderText">
-           <string>Summary</string>
-          </property>
-          <property name="clearButtonEnabled">
+          <property name="wordWrap">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item row="1" column="0" colspan="2">
+        <item row="2" column="0">
          <layout class="QFormLayout" name="formLayout">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetFixedSize</enum>
-          </property>
           <property name="fieldGrowthPolicy">
            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <property name="labelAlignment">
+           <set>Qt::AlignRight|Qt::AlignVCenter</set>
           </property>
           <property name="horizontalSpacing">
            <number>6</number>
@@ -283,59 +234,41 @@
            <number>6</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="priorityLabel">
+           <widget class="QLabel" name="summaryLabel">
             <property name="text">
-             <string>Priority</string>
+             <string>Summary:</string>
+            </property>
+            <property name="buddy">
+             <cstring>summaryEdit</cstring>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QSlider" name="prioritySlider">
-            <property name="toolTip">
-             <string>Priority</string>
+           <widget class="QLineEdit" name="summaryEdit">
+            <property name="readOnly">
+             <bool>false</bool>
             </property>
-            <property name="statusTip">
-             <string/>
+            <property name="placeholderText">
+             <string>Summary</string>
             </property>
-            <property name="accessibleName">
-             <string extracomment="Priority"/>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>9</number>
-            </property>
-            <property name="pageStep">
-             <number>1</number>
-            </property>
-            <property name="sliderPosition">
-             <number>1</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="reminderLabel">
+           <widget class="QLabel" name="priorityLabel">
             <property name="text">
-             <string>Reminder</string>
+             <string>Priority:</string>
+            </property>
+            <property name="buddy">
+             <cstring>prioritySlider</cstring>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QFrame" name="reminderFrame">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
-             <property name="sizeConstraint">
-              <enum>QLayout::SetFixedSize</enum>
-             </property>
+           <widget class="QFrame" name="priorityFrame">
+            <layout class="QHBoxLayout" name="priorityLayout">
              <property name="leftMargin">
               <number>0</number>
              </property>
@@ -343,13 +276,107 @@
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>12</number>
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QSlider" name="prioritySlider">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Priority</string>
+               </property>
+               <property name="accessibleName">
+                <string>Priority</string>
+               </property>
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>9</number>
+               </property>
+               <property name="pageStep">
+                <number>1</number>
+               </property>
+               <property name="sliderPosition">
+                <number>1</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::TicksBelow</enum>
+               </property>
+               <property name="tickInterval">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="priorityValueLabel">
+               <property name="text">
+                <string notr="true"/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="prioritySpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>0</width>
+                 <height>10</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="reminderLabel">
+            <property name="text">
+             <string>Reminder:</string>
+            </property>
+            <property name="buddy">
+             <cstring>reminderCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QFrame" name="reminderFrame">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
              </property>
              <item>
               <widget class="QCheckBox" name="reminderCheckBox">
+               <property name="toolTip">
+                <string>Set a reminder for the todo item</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -362,17 +389,33 @@
                </property>
               </widget>
              </item>
+             <item>
+              <spacer name="reminderSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>0</width>
+                 <height>10</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="tagsLabel">
             <property name="text">
-             <string>Tags</string>
+             <string>Tags:</string>
+            </property>
+            <property name="buddy">
+             <cstring>tagsLineEdit</cstring>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="3" column="1">
            <widget class="QFrame" name="tagsLayoutFrame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -381,6 +424,18 @@
              </sizepolicy>
             </property>
             <layout class="QVBoxLayout" name="tagsLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QLineEdit" name="tagsLineEdit">
                <property name="sizePolicy">
@@ -413,11 +468,113 @@
           </item>
          </layout>
         </item>
-        <item row="6" column="0" colspan="2">
+        <item row="3" column="0">
+         <widget class="QLabel" name="descriptionLabel">
+          <property name="text">
+           <string>Description:</string>
+          </property>
+          <property name="buddy">
+           <cstring>descriptionEdit</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
          <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
           <property name="readOnly">
            <bool>false</bool>
           </property>
+          <property name="placeholderText">
+           <string>Add a description using Markdown</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QFrame" name="descriptionEditSearchFrame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QFrame" name="horizontalFrame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="noteButton">
+             <property name="toolTip">
+              <string>Insert a link to the todo item into the current note or import it as a note</string>
+             </property>
+             <property name="text">
+              <string>Note…</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="removeButton">
+             <property name="toolTip">
+              <string>Remove the current todo item (Ctrl+R)</string>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="buttonSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="saveButton">
+             <property name="toolTip">
+              <string>Save the current todo item (Ctrl+S)</string>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+             <property name="icon">
+              <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -440,15 +597,21 @@
   </customwidget>
  </customwidgets>
  <tabstops>
+  <tabstop>todoListSelector</tabstop>
   <tabstop>newItemEdit</tabstop>
   <tabstop>todoItemTreeWidget</tabstop>
+  <tabstop>showCompletedItemsCheckBox</tabstop>
+  <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>
+  <tabstop>reloadTodoListButton</tabstop>
   <tabstop>summaryEdit</tabstop>
   <tabstop>prioritySlider</tabstop>
-  <tabstop>reminderDateTimeEdit</tabstop>
-  <tabstop>descriptionEdit</tabstop>
-  <tabstop>reloadTodoListButton</tabstop>
-  <tabstop>todoListSelector</tabstop>
   <tabstop>reminderCheckBox</tabstop>
+  <tabstop>reminderDateTimeEdit</tabstop>
+  <tabstop>tagsLineEdit</tabstop>
+  <tabstop>descriptionEdit</tabstop>
+  <tabstop>noteButton</tabstop>
+  <tabstop>removeButton</tabstop>
+  <tabstop>saveButton</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
