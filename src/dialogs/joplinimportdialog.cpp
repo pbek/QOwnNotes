@@ -17,6 +17,7 @@
 #include "filedialog.h"
 #include "services/settingsservice.h"
 #include "ui_joplinimportdialog.h"
+#include "utils/gui.h"
 
 JoplinImportDialog::JoplinImportDialog(QWidget* parent)
     : MasterDialog(parent), ui(new Ui::JoplinImportDialog) {
@@ -33,8 +34,8 @@ JoplinImportDialog::JoplinImportDialog(QWidget* parent)
 
     if (!showFolders) {
         ui->folderImportCheckBox->setToolTip(
-            QObject::tr("Turned on note subfolders for the current note folder to be "
-                        "able to import folders."));
+            tr("Turn on note subfolders for the current note folder to be "
+               "able to import folders."));
     }
 
     ui->folderImportCheckBox->setEnabled(showFolders);
@@ -51,6 +52,15 @@ JoplinImportDialog::JoplinImportDialog(QWidget* parent)
     ui->attachmentImportCheckBox->setChecked(
         settings.value(QStringLiteral("JoplinImport/AttachmentImportCheckBoxChecked"), true)
             .toBool());
+
+    Utils::Gui::setMutedTextColor(ui->label_3);
+    Utils::Gui::setMutedTextColor(ui->statusLabel);
+    ui->statusLabel->hide();
+
+    // Notes can only be imported if a directory was selected
+    connect(ui->directoryLineEdit, &QLineEdit::textChanged, this,
+            [this](const QString& text) { ui->importButton->setEnabled(!text.isEmpty()); });
+    ui->importButton->setEnabled(false);
 
     // Load the last selected directory
     QString lastDirectory = settings.value(QStringLiteral("JoplinImport/LastDirectory")).toString();
@@ -123,6 +133,8 @@ void JoplinImportDialog::on_importButton_clicked() {
     QDir dir(directoryName);
 
     if (directoryName.isEmpty() || !dir.exists()) {
+        ui->statusLabel->setText(tr("The selected directory doesn't exist"));
+        ui->statusLabel->show();
         return;
     }
 
@@ -143,7 +155,10 @@ void JoplinImportDialog::on_importButton_clicked() {
     _dirPath = dir.path();
     ui->importButton->setEnabled(false);
     ui->progressBar->setMaximum(files.count());
+    ui->progressBar->setValue(0);
     ui->progressBar->show();
+    ui->statusLabel->setText(tr("Importing notes…"));
+    ui->statusLabel->show();
 
     foreach (QString fileName, files) {
         QCoreApplication::processEvents();
@@ -230,6 +245,9 @@ void JoplinImportDialog::on_importButton_clicked() {
         QCoreApplication::processEvents();
     }
 
+    ui->statusLabel->setText(files.isEmpty()
+                                 ? tr("No Joplin files were found in the selected directory")
+                                 : tr("%n note(s) were imported", "", _importCount));
     ui->importButton->setEnabled(true);
 
     if (previousReuseImageOverride.isValid()) {

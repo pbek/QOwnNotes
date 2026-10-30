@@ -137,6 +137,10 @@
   - The **Download dictionary** button is no longer enabled after canceling a download
     without a selected dictionary
   - The panes can no longer be collapsed by accident
+- Polished the Evernote and Joplin import dialogs
+  - The dialogs now show how many notes were imported, or why nothing could be imported
+  - The **Import notes** button is only enabled when a file or directory was selected
+  - The dialogs got a **Close** button and hints are shown in a muted color
 
 ## 26.10.15
 

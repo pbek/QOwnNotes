@@ -74,6 +74,15 @@ EvernoteImportDialog::EvernoteImportDialog(QWidget *parent)
         settings.value(QStringLiteral("EvernoteImport/MetaDataAsFrontmatterCheckBoxChecked"), false)
             .toBool());
 
+    Utils::Gui::setMutedTextColor(ui->label_3);
+    Utils::Gui::setMutedTextColor(ui->statusLabel);
+    ui->statusLabel->hide();
+
+    // Notes can only be imported if a file was selected
+    connect(ui->fileLineEdit, &QLineEdit::textChanged, this,
+            [this](const QString &text) { ui->importButton->setEnabled(!text.isEmpty()); });
+    ui->importButton->setEnabled(false);
+
     // Load the last selected ENEX file
     QString lastFile = settings.value(QStringLiteral("EvernoteImport/LastFile")).toString();
     if (!lastFile.isEmpty()) {
@@ -443,16 +452,20 @@ void EvernoteImportDialog::on_importButton_clicked() {
         return;
     }
 
-    auto file = new QFile(fileName);
+    QFile file(fileName);
 
-    if (!file->open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qCritical() << file->errorString() << " (path: " << fileName << ")";
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qCritical() << file.errorString() << " (path: " << fileName << ")";
+        ui->statusLabel->setText(tr("The file couldn't be opened: %1").arg(file.errorString()));
+        ui->statusLabel->show();
         return;
     }
 
-    QXmlStreamReader xml(file);
+    QXmlStreamReader xml(&file);
 
     ui->importButton->setEnabled(false);
+    ui->statusLabel->setText(tr("Importing notes…"));
+    ui->statusLabel->show();
     QCoreApplication::processEvents();
 
     determineMetaDataAttributes();
@@ -460,6 +473,7 @@ void EvernoteImportDialog::on_importButton_clicked() {
     ui->progressLCDNumber->show();
     importNotes(xml);
 
+    ui->statusLabel->setText(tr("%n note(s) were imported", "", _importCount));
     ui->importButton->setEnabled(true);
 }
 
