@@ -40,6 +40,13 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QLabel" name="currentVersionLabel">
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
       <item>
        <widget class="QTextBrowser" name="changeLogEdit">
        <property name="readOnly">
@@ -81,6 +88,9 @@ p, li { white-space: pre-wrap; }
       <widget class="QLabel" name="label_3">
        <property name="text">
         <string>QOwnNotes will be downloaded in your default browser.</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

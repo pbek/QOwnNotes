@@ -21,6 +21,7 @@
 
 #include "services/settingsservice.h"
 #include "ui_updatedialog.h"
+#include "version.h"
 
 UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QString &releaseUrl,
                            const QString &releaseVersionString)
@@ -64,7 +65,13 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
     _changeLogEditViewport->installEventFilter(this);
 
     ui->changeLogEdit->setHtml(changesHtml);
-    ui->versionLabel->setText("Version " + releaseVersionString);
+    ui->versionLabel->setText(tr("Version %1").arg(releaseVersionString));
+    Utils::Gui::setSectionHeaderFont(ui->versionLabel);
+    ui->currentVersionLabel->setText(
+        tr("You are currently using version %1").arg(QStringLiteral(VERSION)));
+    Utils::Gui::setMutedTextColor(ui->currentVersionLabel);
+    Utils::Gui::setMutedTextColor(ui->label_3);
+    Utils::Gui::setMutedTextColor(ui->permissionLabel);
     this->releaseVersionString = releaseVersionString;
     this->releaseUrl = releaseUrl;
 
@@ -72,9 +79,11 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
 
     auto button = new QPushButton(tr("Just download"));
     button->setProperty("ActionRole", Download);
+    button->setToolTip(tr("Download the new version without installing it"));
 
     _updateButton = new QPushButton(tr("&Update"));
     _updateButton->setProperty("ActionRole", Update);
+    _updateButton->setToolTip(tr("Download and install the new version"));
     _updateButton->setDefault(true);
     _updateButton->setIcon(
         QIcon::fromTheme("svn-update", QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
@@ -87,6 +96,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
     if (release != "AppImage") {
         ui->buttonBox->removeButton(_updateButton);
         button->setText(tr("&Download latest"));
+        button->setToolTip(tr("Open the download of the new version in your browser"));
         button->setDefault(true);
     }
 #endif
@@ -96,6 +106,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml, const QS
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Skip version"));
+    button->setToolTip(tr("Don't show this dialog again for this version"));
     button->setProperty("ActionRole", Skip);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(QStringLiteral("media-skip-forward"),

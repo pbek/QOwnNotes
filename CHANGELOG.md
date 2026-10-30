@@ -125,6 +125,10 @@
   - The buttons to remove rows and columns are only enabled when the selected
     row or column can be removed
   - The **OK** button is now called **Update table**
+- Polished the update dialog
+  - The dialog now also shows which version you are currently using
+  - The new version is shown as a larger header, and the "Version" text can now be translated
+  - The buttons got tooltips that explain what they do, hints are shown in a muted color
 
 ## 26.10.15
 
