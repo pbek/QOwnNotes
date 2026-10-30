@@ -11,6 +11,7 @@ class TestNextcloudDeckDialog : public QObject {
     void testInsertLinks_data();
     void testInsertLinks();
     void testPickerDoesNotCreateOrDeleteCards();
+    void testNewCardButtons();
 };
 
 #endif    // TESTNEXTCLOUDDECKDIALOG_H

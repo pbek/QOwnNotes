@@ -310,7 +310,7 @@
          <item>
           <widget class="QPushButton" name="saveButton">
            <property name="toolTip">
-            <string>Create card and insert link into current note</string>
+            <string>Create card</string>
            </property>
            <property name="text">
             <string>&amp;Save</string>
@@ -319,8 +319,19 @@
             <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
              <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
            </property>
-           <property name="shortcut">
-            <string notr="true">Ctrl+S</string>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="createAndInsertLinkButton">
+           <property name="toolTip">
+            <string>Create card, insert a link to it into the current note and close the dialog</string>
+           </property>
+           <property name="text">
+            <string>Create and insert link</string>
+           </property>
+           <property name="icon">
+            <iconset theme="insert-link" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/insert-link.svg</normaloff>:/icons/breeze-qownnotes/16x16/insert-link.svg</iconset>
            </property>
           </widget>
          </item>

@@ -46,6 +46,7 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
         setWindowTitle(tr("Insert Nextcloud Deck card links"));
         ui->editFrame->hide();
         ui->saveButton->setShortcut(QKeySequence());
+        ui->createAndInsertLinkButton->setShortcut(QKeySequence());
         ui->newItemEdit->setPlaceholderText(tr("Search cards"));
         ui->cardItemTreeWidget->setContextMenuPolicy(Qt::NoContextMenu);
 
@@ -62,7 +63,7 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
         updateInsertLinksButton();
     }
     _currentCard = NextcloudDeckService::Card();
-    ui->saveButton->setEnabled(false);
+    setSaveButtonsEnabled(false);
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
     ui->moveCardButton->setEnabled(false);
@@ -207,8 +208,25 @@ void NextcloudDeckDialog::trackDeckService(NextcloudDeckService &nextcloudDeckSe
             &MasterDialog::setLoadingProgress);
 }
 
-void NextcloudDeckDialog::on_saveButton_clicked() {
-    ui->saveButton->setEnabled(false);
+void NextcloudDeckDialog::on_saveButton_clicked() { storeCurrentCard(false); }
+
+void NextcloudDeckDialog::on_createAndInsertLinkButton_clicked() {
+    // Linking is only offered for new cards, existing cards can be linked from the context menu
+    if (_currentCard.id > 0) {
+        return;
+    }
+
+    storeCurrentCard(true);
+}
+
+/**
+ * Creates or updates the card in the editor
+ *
+ * If insertLinkAndClose is true, a link to the stored card is inserted into the current note
+ * and the dialog is closed, otherwise the dialog stays open with the stored card selected
+ */
+void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
+    setSaveButtonsEnabled(false);
     NextcloudDeckService nextcloudDeckService(this);
 
     if (_currentCard.id > 0) {
@@ -234,32 +252,38 @@ void NextcloudDeckDialog::on_saveButton_clicked() {
     // Clean up allocated dateTime to prevent memory leak
     delete dateTime;
 
-    if (cardId > 0) {
-        auto linkText =
+    if (cardId < 1) {
+        // Keep the dialog open and allow retrying after a failed request
+        setSaveButtonsEnabled(!title.isEmpty());
+        return;
+    }
+
+    if (insertLinkAndClose) {
+        const auto linkText =
             QStringLiteral("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
 
 #ifndef INTEGRATION_TESTS
-        // Only insert the link if we're creating a new card, not updating an existing one
-        if (cardIdToUpdate == -1) {
-            MainWindow *mainWindow = MainWindow::instance();
-            if (mainWindow != nullptr) {
-                mainWindow->writeToNoteTextEdit(linkText);
-            }
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow != nullptr) {
+            mainWindow->writeToNoteTextEdit(linkText);
         }
 #endif
 
-        // Reload the card list and re-select the stored card
-        reloadCardList();
-        selectCardInList(cardId);
-
-        ui->newItemEdit->clear();
-        ui->newItemEdit->setFocus();
-    }
-
-    // Close the dialog if we just created a new card and not updated an existing one
-    if (cardIdToUpdate == -1) {
         close();
+        return;
     }
+
+    // Reload the card list and re-select the stored card, so it can be edited further
+    reloadCardList();
+    selectCardInList(cardId);
+
+    ui->newItemEdit->clear();
+    ui->newItemEdit->setFocus();
+}
+
+void NextcloudDeckDialog::setSaveButtonsEnabled(bool enabled) {
+    ui->saveButton->setEnabled(enabled);
+    ui->createAndInsertLinkButton->setEnabled(enabled);
 }
 
 /**
@@ -446,7 +470,7 @@ void NextcloudDeckDialog::on_subd1DayButton_clicked() {
 }
 
 void NextcloudDeckDialog::on_titleLineEdit_textChanged(const QString &arg1) {
-    ui->saveButton->setEnabled(!arg1.isEmpty());
+    setSaveButtonsEnabled(!arg1.isEmpty());
 }
 
 void NextcloudDeckDialog::on_dueDateTimeCheckBox_toggled(bool checked) {
@@ -780,21 +804,37 @@ void NextcloudDeckDialog::updateEditState() {
     const bool isExistingCard = _currentCard.id > 0;
     const bool isNewCard = !isExistingCard && ui->editFrame->isEnabledTo(this);
 
+    const QKeySequence primaryShortcut(QStringLiteral("Ctrl+S"));
+    const QKeySequence secondaryShortcut(QStringLiteral("Ctrl+Shift+S"));
+    const auto withShortcut = [](const QString &text, const QKeySequence &shortcut) {
+        return QStringLiteral("%1 (%2)").arg(text, shortcut.toString(QKeySequence::NativeText));
+    };
+
+    // Setting the text resets the shortcut, so the shortcuts are set after the texts
     if (isExistingCard) {
         ui->editHeaderLabel->setText(_currentCard.archived ? tr("Edit archived card")
                                                            : tr("Edit card"));
         ui->saveButton->setText(tr("Save"));
-        ui->saveButton->setToolTip(tr("Save the changes to the card (Ctrl+S)"));
+        ui->saveButton->setToolTip(
+            withShortcut(tr("Save the changes to the card"), primaryShortcut));
+        ui->saveButton->setShortcut(primaryShortcut);
+        ui->createAndInsertLinkButton->setShortcut(QKeySequence());
     } else {
         ui->editHeaderLabel->setText(isNewCard ? tr("New card") : tr("No card selected"));
         ui->saveButton->setText(tr("Create card"));
-        ui->saveButton->setToolTip(tr("Create card and insert link into current note (Ctrl+S)"));
+        ui->saveButton->setToolTip(
+            withShortcut(tr("Create card and keep the dialog open"), secondaryShortcut));
+        ui->saveButton->setShortcut(secondaryShortcut);
+        ui->createAndInsertLinkButton->setToolTip(
+            withShortcut(tr("Create card, insert a link to it into the current note and close "
+                            "the dialog"),
+                         primaryShortcut));
+        ui->createAndInsertLinkButton->setShortcut(primaryShortcut);
     }
 
+    // Existing cards can be linked from the context menu of the card list
+    ui->createAndInsertLinkButton->setVisible(!isExistingCard);
     ui->editHintLabel->setVisible(!isExistingCard && !isNewCard);
-
-    // Setting the text resets the shortcut, so it needs to be set again
-    ui->saveButton->setShortcut(QKeySequence(QStringLiteral("Ctrl+S")));
 }
 
 void NextcloudDeckDialog::selectCardInList(int cardId) {
@@ -816,7 +856,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->dueDateTimeCheckBox->setChecked(false);
     ui->dueDateTimeEdit->setEnabled(false);
     ui->dueDateAdjustFrame->setEnabled(false);
-    ui->saveButton->setEnabled(false);
+    setSaveButtonsEnabled(false);
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
@@ -871,7 +911,7 @@ void NextcloudDeckDialog::jumpToCard(int id) {
             ui->dueDateTimeCheckBox->setChecked(false);
         }
 
-        ui->saveButton->setEnabled(true);
+        setSaveButtonsEnabled(true);
         ui->archiveCardButton->setEnabled(true);
         ui->deleteCardButton->setEnabled(true);
         ui->moveCardButton->setEnabled(!_currentCard.archived);

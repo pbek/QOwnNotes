@@ -33,6 +33,8 @@ class NextcloudDeckDialog : public MasterDialog {
    private slots:
     void on_saveButton_clicked();
 
+    void on_createAndInsertLinkButton_clicked();
+
     void on_add1HourButton_clicked();
 
     void on_add10MinButton_clicked();
@@ -114,6 +116,8 @@ class NextcloudDeckDialog : public MasterDialog {
     void updateDeckControlsEnabledState();
     void updateCardCountLabel();
     void updateEditState();
+    void setSaveButtonsEnabled(bool enabled);
+    void storeCurrentCard(bool insertLinkAndClose);
     void deleteSelectedCards();
     void moveCards(const QList<int> &cardIds);
     QHash<int, NextcloudDeckService::Card> _cards;

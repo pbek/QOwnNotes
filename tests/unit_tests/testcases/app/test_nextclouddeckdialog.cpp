@@ -42,6 +42,9 @@ void TestNextcloudDeckDialog::testModes() {
     NextcloudDeckDialog picker(nullptr, NextcloudDeckDialog::Mode::InsertLinks);
     QVERIFY(picker.findChild<QFrame *>(QStringLiteral("editFrame"))->isHidden());
     QVERIFY(picker.findChild<QPushButton *>(QStringLiteral("saveButton"))->shortcut().isEmpty());
+    QVERIFY(picker.findChild<QPushButton *>(QStringLiteral("createAndInsertLinkButton"))
+                ->shortcut()
+                .isEmpty());
     auto *insert = picker.findChild<QPushButton *>(QStringLiteral("insertLinksButton"));
     QVERIFY(insert);
     QVERIFY(!insert->isEnabled());
@@ -131,4 +134,35 @@ void TestNextcloudDeckDialog::testPickerDoesNotCreateOrDeleteCards() {
     QCOMPARE(tree->topLevelItemCount(), 3);
     QTest::keyClick(&picker, Qt::Key_Escape);
     QCOMPARE(picker.result(), int(QDialog::Rejected));
+}
+
+void TestNextcloudDeckDialog::testNewCardButtons() {
+    NextcloudDeckDialog dialog;
+    populatePicker(dialog);
+    static_cast<QWidget &>(dialog).show();
+    auto *save = dialog.findChild<QPushButton *>(QStringLiteral("saveButton"));
+    auto *createAndInsert =
+        dialog.findChild<QPushButton *>(QStringLiteral("createAndInsertLinkButton"));
+    QVERIFY(createAndInsert);
+
+    // Start a new card from the search field
+    auto *search = dialog.findChild<QLineEdit *>(QStringLiteral("newItemEdit"));
+    search->setText(QStringLiteral("New card title"));
+    QTest::keyClick(search, Qt::Key_Return);
+
+    QCOMPARE(dialog.findChild<QLineEdit *>(QStringLiteral("titleLineEdit"))->text(),
+             QStringLiteral("New card title"));
+    QVERIFY(save->isVisible());
+    QVERIFY(createAndInsert->isVisible());
+    QVERIFY(save->isEnabled());
+    QVERIFY(createAndInsert->isEnabled());
+
+    // Creating and inserting a link keeps the established Ctrl+S shortcut
+    QCOMPARE(createAndInsert->shortcut(), QKeySequence(QStringLiteral("Ctrl+S")));
+    QCOMPARE(save->shortcut(), QKeySequence(QStringLiteral("Ctrl+Shift+S")));
+
+    // Both buttons need a title
+    dialog.findChild<QLineEdit *>(QStringLiteral("titleLineEdit"))->clear();
+    QVERIFY(!save->isEnabled());
+    QVERIFY(!createAndInsert->isEnabled());
 }

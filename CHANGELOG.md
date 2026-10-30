@@ -22,6 +22,13 @@
   - The **Reload** button now reloads directly instead of opening a menu
   - Fixed the <kbd>Ctrl + S</kbd> shortcut for saving a card not working
   - The splitter position between the card list and the editor is now remembered
+  - New cards can now be created without inserting a link into the current note and
+    without closing the dialog, so you can keep managing your cards
+    (for [#3828](https://github.com/pbek/QOwnNotes/issues/3828))
+    - **Create card** (<kbd>Ctrl + Shift + S</kbd>) creates the card and selects it in the list
+    - **Create and insert link** (<kbd>Ctrl + S</kbd>) still inserts a link into the current
+      note and closes the dialog, like before
+    - Fixed the dialog closing when creating a new card failed
 - Polished the note versions dialogs and the local and Nextcloud / ownCloud trash dialogs
   - A header above the preview shows the selected version or trashed note, the trash dialogs
     also show when a note was trashed or where it will be restored to
