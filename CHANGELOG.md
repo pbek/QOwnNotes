@@ -151,6 +151,10 @@
     is shown if no script matches or the script repository couldn't be loaded
   - Fixed the first script not being selected after searching
   - The dialog got a **Close** button and the panes can no longer be collapsed by accident
+- Polished the issue assistant dialog
+  - The dialog shows on which step of the assistant you are
+  - A hint explains what is still missing when the **Next** button is disabled
+  - Fixed the **Next** button not being updated when changing the issue type
 
 ## 26.10.15
 

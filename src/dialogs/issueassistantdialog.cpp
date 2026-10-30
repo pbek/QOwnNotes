@@ -43,6 +43,12 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent)
                      SLOT(allowLogPageNextButton()));
     QObject::connect(ui->debugOutputPlainTextEdit, SIGNAL(textChanged()), this,
                      SLOT(allowDebugSettingsPageNextButton()));
+
+    QFont stepFont = ui->stepLabel->font();
+    stepFont.setBold(true);
+    ui->stepLabel->setFont(stepFont);
+    Utils::Gui::setMutedTextColor(ui->hintLabel);
+    updateStepInfo();
 }
 
 IssueAssistantDialog::~IssueAssistantDialog() { delete ui; }
@@ -62,6 +68,46 @@ void IssueAssistantDialog::on_nextButton_clicked() {
 
     ui->backButton->setEnabled(true);
     ui->nextButton->setEnabled(index < maxIndex);
+    updateStepInfo();
+}
+
+/**
+ * Shows on which step of the assistant the user is, and why the next step can't be opened yet
+ */
+void IssueAssistantDialog::updateStepInfo() const {
+    const int index = ui->stackedWidget->currentIndex();
+    QString pageName;
+    QString hint;
+
+    switch (index) {
+        case IssuePage:
+            pageName = tr("Describe your issue");
+            hint =
+                tr("Please enter a title with at least 8 characters and at least 10 "
+                   "characters in every text field to continue.");
+            break;
+        case LogOutputPage:
+            pageName = tr("Log output");
+            break;
+        case DebugSettingsPage:
+            pageName = tr("Debug information");
+            hint = tr("The debug information is needed to report a problem.");
+            break;
+        case SubmitPage:
+            pageName = tr("Submit your issue");
+            break;
+        default:
+            break;
+    }
+
+    ui->stepLabel->setText(
+        tr("Step %1 of %2: %3").arg(index + 1).arg(ui->stackedWidget->count()).arg(pageName));
+
+    // Only explain the requirements if the next step can't be opened yet
+    const bool showHint =
+        !hint.isEmpty() && !ui->nextButton->isEnabled() && index < ui->stackedWidget->count() - 1;
+    ui->hintLabel->setText(showHint ? hint : QString());
+    ui->hintLabel->setVisible(showHint);
 }
 
 void IssueAssistantDialog::allowIssuePageNextButton() const {
@@ -84,6 +130,7 @@ void IssueAssistantDialog::allowIssuePageNextButton() const {
     }
 
     ui->nextButton->setEnabled(allow);
+    updateStepInfo();
 }
 
 void IssueAssistantDialog::allowLogPageNextButton() const {
@@ -94,6 +141,7 @@ void IssueAssistantDialog::allowLogPageNextButton() const {
     //    }
 
     ui->nextButton->setEnabled(allow);
+    updateStepInfo();
 }
 
 void IssueAssistantDialog::allowDebugSettingsPageNextButton() const {
@@ -104,6 +152,7 @@ void IssueAssistantDialog::allowDebugSettingsPageNextButton() const {
     }
 
     ui->nextButton->setEnabled(allow);
+    updateStepInfo();
 }
 
 void IssueAssistantDialog::refreshPage(int index) const {
@@ -212,6 +261,7 @@ void IssueAssistantDialog::on_backButton_clicked() {
 
     ui->nextButton->setEnabled(true);
     ui->backButton->setEnabled(index > 0);
+    updateStepInfo();
 }
 
 void IssueAssistantDialog::on_issueTypeComboBox_currentIndexChanged(int index) {
@@ -228,6 +278,11 @@ void IssueAssistantDialog::on_issueTypeComboBox_currentIndexChanged(int index) {
             ui->actualBehaviourGroupBox->setVisible(true);
             ui->stepsGroupBox->setVisible(true);
             break;
+    }
+
+    // Other fields are required for the new issue type
+    if (ui->stackedWidget->currentIndex() == IssuePage) {
+        allowIssuePageNextButton();
     }
 }
 
@@ -279,6 +334,7 @@ void IssueAssistantDialog::on_newIssueButton_clicked() {
     ui->nextButton->setEnabled(false);
     ui->stackedWidget->setCurrentIndex(IssueAssistantPages::IssuePage);
     ui->issueTypeComboBox->setCurrentIndex(QuestionIssueType);
+    updateStepInfo();
 }
 
 void IssueAssistantDialog::on_debugInfoAnonymizeCheckBox_toggled(bool checked) {

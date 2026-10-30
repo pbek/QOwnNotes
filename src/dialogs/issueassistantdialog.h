@@ -58,4 +58,6 @@ class IssueAssistantDialog : public MasterDialog {
     void refreshPage(int index) const;
 
     void refreshDebugOutput() const;
+
+    void updateStepInfo() const;
 };
