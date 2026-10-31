@@ -2,6 +2,9 @@
 
 ## 26.11.2
 
+- Changed the default Groq AI model to `openai/gpt-oss-20b` for users without a saved
+  model selection, replacing the retired `llama-3.1-8b-instant` (thank you, Agustin Torres)
+  (for [#3813](https://github.com/pbek/QOwnNotes/pull/3813))
 - Fixed the stored attachments and stored images dialogs allowing links to be inserted
   into the current note in read-only mode
 - Double-clicking a file in the stored attachments and stored images dialogs now opens
