@@ -277,6 +277,9 @@ set(APP_SOURCE_FILES
     widgets/qtexteditsearchwidget.cpp
     widgets/qtexteditsearchwidget.h
     widgets/qtexteditsearchwidget.ui
+    widgets/settings/aisettingswidget.cpp
+    widgets/settings/aisettingswidget.h
+    widgets/settings/aisettingswidget.ui
     widgets/settings/todosettingswidget.cpp
     widgets/settings/todosettingswidget.h
     widgets/settings/todosettingswidget.ui)

@@ -35,6 +35,7 @@ AiSettingsWidget::~AiSettingsWidget() { delete ui; }
  * Initializes the AI page (lazy initialization on first visit)
  */
 void AiSettingsWidget::initialize() {
+    ui->openRouterApiTestButton->setDisabled(true);
     ui->groqApiTestButton->setDisabled(true);
     ui->openAiApiTestButton->setDisabled(true);
     ui->aiScriptingGroupBox->setHidden(true);
@@ -50,6 +51,9 @@ void AiSettingsWidget::initialize() {
 void AiSettingsWidget::readSettings() {
     SettingsService settings;
 
+    ui->openRouterApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
+        settings.value(QStringLiteral("ai/openrouter/apiKey")).toString()));
+
     ui->groqApiKeyLineEdit->setText(CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ai/groq/apiKey")).toString()));
 
@@ -63,6 +67,11 @@ void AiSettingsWidget::storeSettings() {
     SettingsService settings;
 
     settings.setValue(
+        QStringLiteral("ai/openrouter/apiKey"),
+        CryptoService::instance()->encryptToString(
+            ui->openRouterApiKeyLineEdit->text(), QStringLiteral("settings/ai/openrouter/apiKey")));
+
+    settings.setValue(
         QStringLiteral("ai/groq/apiKey"),
         CryptoService::instance()->encryptToString(ui->groqApiKeyLineEdit->text(),
                                                    QStringLiteral("settings/ai/groq/apiKey")));
@@ -73,6 +82,19 @@ void AiSettingsWidget::storeSettings() {
                                                    QStringLiteral("settings/ai/openai/apiKey")));
     settings.setValue(QStringLiteral("ai/responseTimeout"),
                       ui->openAiResponseTimeoutSpinBox->value());
+}
+
+void AiSettingsWidget::on_openRouterApiKeyWebButton_clicked() {
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://openrouter.ai/settings/keys")));
+}
+
+void AiSettingsWidget::on_openRouterApiTestButton_clicked() {
+    runAiApiTest(QStringLiteral("openrouter"), QStringLiteral("openrouter/free"),
+                 ui->openRouterApiKeyLineEdit->text());
+}
+
+void AiSettingsWidget::on_openRouterApiKeyLineEdit_textChanged(const QString &arg1) {
+    ui->openRouterApiTestButton->setDisabled(arg1.trimmed().isEmpty());
 }
 
 void AiSettingsWidget::on_groqApiKeyWebButton_clicked() {
@@ -120,7 +142,7 @@ void AiSettingsWidget::buildAiScriptingTreeWidget() {
     auto backendNames = openAiService->getBackendNames();
     qDebug() << __func__ << " - 'backendNames': " << backendNames;
 
-    if (backendNames.count() > 2) {
+    if (backendNames.count() > 3) {
         ui->aiScriptingTreeWidget->clear();
         ui->aiScriptingGroupBox->setVisible(true);
     } else {
@@ -129,8 +151,9 @@ void AiSettingsWidget::buildAiScriptingTreeWidget() {
     }
 
     for (const auto &backendId : backendNames.keys()) {
-        // Continue on groq and openai
-        if (backendId == QStringLiteral("groq") || backendId == QStringLiteral("openai")) {
+        // Skip built-in backends, which have their own API key controls.
+        if (backendId == QStringLiteral("openrouter") || backendId == QStringLiteral("groq") ||
+            backendId == QStringLiteral("openai")) {
             continue;
         }
 

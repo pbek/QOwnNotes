@@ -36,6 +36,9 @@ class AiSettingsWidget : public QWidget {
     void searchScriptRepositoryRequested();
 
    private slots:
+    void on_openRouterApiKeyWebButton_clicked();
+    void on_openRouterApiTestButton_clicked();
+    void on_openRouterApiKeyLineEdit_textChanged(const QString &arg1);
     void on_groqApiKeyWebButton_clicked();
     void on_openAiApiKeyWebButton_clicked();
     void on_groqApiTestButton_clicked();

@@ -1,14 +1,20 @@
 #include "test_openaiservice.h"
 
+#include <QGridLayout>
+#include <QGroupBox>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QLineEdit>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QToolButton>
 #include <QtTest>
 
+#include "services/cryptoservice.h"
 #include "services/openaiservice.h"
 #include "services/settingsservice.h"
+#include "widgets/settings/aisettingswidget.h"
 
 void TestOpenAiService::init() {
     SettingsService settings;
@@ -39,15 +45,92 @@ void TestOpenAiService::testBackendLookupPreservesSelection() {
              QStringLiteral("openai/gpt-oss-120b"));
 }
 
+void TestOpenAiService::testOpenRouterBackend() {
+    QObject owner;
+    OpenAiService service(&owner);
+    QCOMPARE(service.getBackendNames().value(QStringLiteral("openrouter")),
+             QStringLiteral("OpenRouter"));
+    QCOMPARE(service.getApiBaseUrlForBackend(QStringLiteral("openrouter")),
+             QStringLiteral("https://openrouter.ai/api/v1/chat/completions"));
+    const auto models = service.getModelsForBackend(QStringLiteral("openrouter"));
+    QCOMPARE(models.first(), QStringLiteral("openrouter/free"));
+    QVERIFY(models.size() > 1);
+    for (const auto &model : models) {
+        QVERIFY(model == QStringLiteral("openrouter/free") || model.endsWith(":free"));
+    }
+    QVERIFY(!service.hasConfiguredBackend());
+
+    SettingsService settings;
+    settings.setValue(
+        QStringLiteral("ai/openrouter/apiKey"),
+        CryptoService::instance()->encryptToString(
+            QStringLiteral("router-key"), QStringLiteral("settings/ai/openrouter/apiKey")));
+    QVERIFY(service.hasConfiguredBackend());
+    OpenAiService configuredService(&owner);
+    QCOMPARE(configuredService.getApiKeyForBackend(QStringLiteral("openrouter")),
+             QStringLiteral("router-key"));
+    QCOMPARE(service.getBackendId(), QStringLiteral("openai"));
+    QCOMPARE(service.getModelId(), QStringLiteral("gpt-5"));
+    QVERIFY(configuredService.setBackendId(QStringLiteral("openrouter")));
+    QCOMPARE(configuredService.getModelId(), QStringLiteral("openrouter/free"));
+    QVERIFY(configuredService.setModelId(models.at(1)));
+    QVERIFY(configuredService.setBackendId(QStringLiteral("openai")));
+    QCOMPARE(configuredService.getModelId(), QStringLiteral("gpt-5"));
+    QVERIFY(configuredService.setBackendId(QStringLiteral("openrouter")));
+    QCOMPARE(configuredService.getModelId(), models.at(1));
+    settings.setValue(QStringLiteral("ai/openrouter/apiKey"), QString());
+    QVERIFY(!configuredService.hasConfiguredBackend());
+}
+
+void TestOpenAiService::testOpenRouterSettings() {
+    AiSettingsWidget widget;
+    widget.initialize();
+    widget.readSettings();
+    auto *keyEdit = widget.findChild<QLineEdit *>(QStringLiteral("openRouterApiKeyLineEdit"));
+    auto *testButton = widget.findChild<QToolButton *>(QStringLiteral("openRouterApiTestButton"));
+    QVERIFY(keyEdit);
+    QVERIFY(testButton);
+    QVERIFY(!testButton->isEnabled());
+    auto *layout = qobject_cast<QGridLayout *>(keyEdit->parentWidget()->layout());
+    QVERIFY(layout);
+    int row, column, rowSpan, columnSpan;
+    layout->getItemPosition(layout->indexOf(keyEdit), &row, &column, &rowSpan, &columnSpan);
+    QCOMPARE(row, 0);
+
+    keyEdit->setText(QStringLiteral("router-key"));
+    QVERIFY(testButton->isEnabled());
+    widget.storeSettings();
+    const QString storedKey =
+        SettingsService().value(QStringLiteral("ai/openrouter/apiKey")).toString();
+    QVERIFY(storedKey != QStringLiteral("router-key"));
+    QCOMPARE(CryptoService::instance()->decryptToString(storedKey), QStringLiteral("router-key"));
+    keyEdit->clear();
+    QVERIFY(!testButton->isEnabled());
+    keyEdit->setText(QStringLiteral("   "));
+    QVERIFY(!testButton->isEnabled());
+    widget.readSettings();
+    QCOMPARE(keyEdit->text(), QStringLiteral("router-key"));
+    widget.buildAiScriptingTreeWidget();
+    auto *scriptingGroup = widget.findChild<QGroupBox *>(QStringLiteral("aiScriptingGroupBox"));
+    QVERIFY(scriptingGroup);
+    QVERIFY(scriptingGroup->isHidden());
+    QCOMPARE(SettingsService().value(QStringLiteral("ai/currentBackend")).toString(),
+             QStringLiteral("openai"));
+}
+
 void TestOpenAiService::testIsolatedCompletion_data() {
     QTest::addColumn<int>("status");
-    QTest::newRow("success") << 200;
-    QTest::newRow("error") << 401;
-    QTest::newRow("timeout") << 0;
+    QTest::addColumn<QString>("model");
+    QTest::newRow("success") << 200 << QStringLiteral("openai/gpt-oss-20b");
+    QTest::newRow("error") << 401 << QStringLiteral("openai/gpt-oss-20b");
+    QTest::newRow("timeout") << 0 << QStringLiteral("openai/gpt-oss-20b");
+    QTest::newRow("openrouter-free-router") << 200 << QStringLiteral("openrouter/free");
+    QTest::newRow("openrouter-free-model") << 200 << QStringLiteral("google/gemma-4-31b-it:free");
 }
 
 void TestOpenAiService::testIsolatedCompletion() {
     QFETCH(int, status);
+    QFETCH(QString, model);
     QTcpServer server;
     QVERIFY(server.listen(QHostAddress::LocalHost));
     QByteArray request;
@@ -90,12 +173,10 @@ void TestOpenAiService::testIsolatedCompletion() {
 
     const QString url =
         QStringLiteral("http://127.0.0.1:%1/chat/completions").arg(server.serverPort());
-    OpenAiCompleter completer(QStringLiteral("test-key"), QStringLiteral("openai/gpt-oss-20b"),
-                              url);
+    OpenAiCompleter completer(QStringLiteral("test-key"), model, url);
     const QString result = completer.completeSync(QStringLiteral("Test"));
     QVERIFY(replied);
-    QCOMPARE(requestJson.value(QStringLiteral("model")).toString(),
-             QStringLiteral("openai/gpt-oss-20b"));
+    QCOMPARE(requestJson.value(QStringLiteral("model")).toString(), model);
     QCOMPARE(requestJson.value(QStringLiteral("messages"))
                  .toArray()
                  .first()

@@ -231,9 +231,64 @@
      <property name="title">
       <string>API keys</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_85">
-      <item row="1" column="0">
-       <widget class="QLabel" name="openAiApiKeyHeadlineLabel">
+      <layout class="QGridLayout" name="gridLayout_85">
+       <item row="0" column="0">
+        <widget class="QLabel" name="openRouterApiKeyHeadlineLabel">
+         <property name="text">
+          <string>OpenRouter API key:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="PasswordLineEdit" name="openRouterApiKeyLineEdit">
+         <property name="placeholderText">
+          <string>API key</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QToolButton" name="openRouterApiKeyWebButton">
+         <property name="toolTip">
+          <string>Create OpenRouter API key</string>
+         </property>
+         <property name="text">
+          <string notr="true">…</string>
+         </property>
+         <property name="icon">
+          <iconset theme="text-html" resource="../../breeze-qownnotes.qrc">
+           <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QToolButton" name="openRouterApiTestButton">
+         <property name="toolTip">
+          <string comment="&quot;Test&quot; as verb">Test connection</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../breeze-qownnotes.qrc">
+           <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="5">
+        <widget class="QLabel" name="openRouterFreeModelsLabel">
+         <property name="text">
+          <string>OpenRouter includes a free-only model router and free models for working with notes. Free model availability and rate limits may change. Notes sent to AI are shared with OpenRouter and the selected model provider.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="openAiApiKeyHeadlineLabel">
         <property name="text">
          <string>OpenAI API key:</string>
         </property>
@@ -242,8 +297,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
-       <widget class="QToolButton" name="groqApiKeyWebButton">
+       <item row="1" column="3">
+        <widget class="QToolButton" name="groqApiKeyWebButton">
         <property name="toolTip">
          <string>Create Groq API key</string>
         </property>
@@ -256,8 +311,8 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
-       <widget class="QToolButton" name="openAiApiKeyWebButton">
+       <item row="2" column="3">
+        <widget class="QToolButton" name="openAiApiKeyWebButton">
         <property name="toolTip">
          <string>Create OpenAI API key</string>
         </property>
@@ -270,8 +325,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="PasswordLineEdit" name="groqApiKeyLineEdit">
+       <item row="1" column="1">
+        <widget class="PasswordLineEdit" name="groqApiKeyLineEdit">
         <property name="placeholderText">
          <string>API key</string>
         </property>
@@ -280,8 +335,8 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="PasswordLineEdit" name="openAiApiKeyLineEdit">
+       <item row="2" column="1">
+        <widget class="PasswordLineEdit" name="openAiApiKeyLineEdit">
         <property name="placeholderText">
          <string>API key</string>
         </property>
@@ -290,8 +345,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="groqApiKeyHeadlineLabel">
+       <item row="1" column="0">
+        <widget class="QLabel" name="groqApiKeyHeadlineLabel">
         <property name="text">
          <string>Groq API key:</string>
         </property>
@@ -300,8 +355,8 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="4">
-       <widget class="QToolButton" name="openAiApiTestButton">
+       <item row="2" column="4">
+        <widget class="QToolButton" name="openAiApiTestButton">
         <property name="toolTip">
          <string comment="&quot;Test&quot; as verb">Test connection</string>
         </property>
@@ -311,8 +366,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="4">
-       <widget class="QToolButton" name="groqApiTestButton">
+       <item row="1" column="4">
+        <widget class="QToolButton" name="groqApiTestButton">
         <property name="toolTip">
          <string comment="&quot;Test&quot; as verb">Test connection</string>
         </property>

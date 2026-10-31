@@ -1,7 +1,8 @@
 # AI support
 
 You can opt-in to use your favorite AI model (LLM) to help you with your notes.
-There is built-in support for **[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**,
+There is built-in support for **[OpenRouter](https://openrouter.ai/)**,
+**[Groq](https://groq.com/)** (because you can get free API keys) and **[OpenAI](https://openai.com/)**,
 but the internal API is designed to be easily extendable to other AI models with scripts.
 There are several AI backend integrations scripts available in the script repository to get you started.
 
@@ -12,7 +13,7 @@ This way you can do whatever you want and experiment with it.
 
 - There is an **AI toolbar** and a section in the **Edit main menu**, where can turn
   the service on, and you can select the AI backend and model
-- You can add an [OpenAI](https://openai.com/) and [Groq](https://groq.com/) API key in the new **AI settings**
+- You can add an [OpenRouter](https://openrouter.ai/settings/keys), [Groq](https://groq.com/) or [OpenAI](https://openai.com/) API key in **AI settings**
   - Look for more **AI backend integrations**, like _Ollama_ and _llama.cpp_ in the script repository
 - Use the new `script.aiComplete(prompt)` scripting command to your own imagination
   - For more information please take a look at the
@@ -25,6 +26,28 @@ This way you can do whatever you want and experiment with it.
   for example to summarize it, to translate it or to fix typos and grammar errors
 
 ![ai-settings](/img/editor/ai-settings.webp)
+
+## OpenRouter free models
+
+OpenRouter is listed first in AI settings. Create an API key, enter it there, and use
+the connection test. Then select **OpenRouter** in the AI toolbar and enable AI.
+API keys are stored encrypted, like the other built-in providers.
+
+The default OpenRouter model, `openrouter/free`, routes requests only to available
+free models. It is the best option if you do not want to depend on a particular
+free model remaining available. You can also select:
+
+- `google/gemma-4-26b-a4b-it:free` — an efficient instruction-following model for note editing
+- `google/gemma-4-31b-it:free` — a larger model for summarizing, rewriting and organizing notes
+- `liquid/lfm-2.5-2.6b:free` — a compact model for extracting information from notes
+
+These models have zero input and output token prices when added, but perpetual free
+hosting cannot be guaranteed. Free variants can be retired or rate-limited. QOwnNotes
+does not configure a fallback to paid models. See OpenRouter's
+[free model documentation](https://openrouter.ai/docs/guides/routing/model-variants/free).
+
+Note text submitted to AI is sent to OpenRouter and the selected model provider.
+Review their privacy and data policies before sending sensitive notes.
 
 ## MCP Server
 

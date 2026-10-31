@@ -2,6 +2,12 @@
 
 ## 26.11.2
 
+- Added built-in [OpenRouter](https://openrouter.ai/) AI support, listed first in the
+  AI settings with encrypted API-key storage and a connection test
+  (for [#3829](https://github.com/pbek/QOwnNotes/issues/3829))
+  - Includes the free-only `openrouter/free` router and free Gemma 4 and Liquid LFM 2.5
+    models for summarizing, rewriting and organizing notes
+  - Free model availability and rate limits can change; no paid fallback is configured
 - Changed the default Groq AI model to `openai/gpt-oss-20b` for users without a saved
   model selection, replacing the retired `llama-3.1-8b-instant` (thank you, Agustin Torres)
   (for [#3813](https://github.com/pbek/QOwnNotes/pull/3813))

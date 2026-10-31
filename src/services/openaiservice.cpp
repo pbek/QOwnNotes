@@ -123,6 +123,10 @@ void OpenAiService::deleteInstance() {
 
 void OpenAiService::initializeBackends() {
     _backendModels.clear();
+    // The free router only uses free models, even if individual free variants disappear.
+    _backendModels[QStringLiteral("openrouter")] =
+        QStringList{"openrouter/free", "google/gemma-4-26b-a4b-it:free",
+                    "google/gemma-4-31b-it:free", "liquid/lfm-2.5-2.6b:free"};
     _backendModels[QStringLiteral("openai")] = QStringList{"gpt-5.1",
                                                            "gpt-5",
                                                            "gpt-5-mini",
@@ -169,6 +173,8 @@ void OpenAiService::initializeBackends() {
                     "openai/gpt-oss-120b"};
 
     _backendApiBaseUrls.clear();
+    _backendApiBaseUrls[QStringLiteral("openrouter")] =
+        QStringLiteral("https://openrouter.ai/api/v1/chat/completions");
     _backendApiBaseUrls[QStringLiteral("openai")] =
         QStringLiteral("https://api.openai.com/v1/chat/completions");
     _backendApiBaseUrls[QStringLiteral("groq")] =
@@ -176,12 +182,15 @@ void OpenAiService::initializeBackends() {
 
     _backendApiKeys.clear();
     SettingsService settings;
+    _backendApiKeys[QStringLiteral("openrouter")] = CryptoService::instance()->decryptToString(
+        settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("openrouter"))).toString());
     _backendApiKeys[QStringLiteral("groq")] = CryptoService::instance()->decryptToString(
         settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("groq"))).toString());
     _backendApiKeys[QStringLiteral("openai")] = CryptoService::instance()->decryptToString(
         settings.value(getApiKeySettingsKeyForBackend(QStringLiteral("openai"))).toString());
 
     _backendNames.clear();
+    _backendNames[QStringLiteral("openrouter")] = QStringLiteral("OpenRouter");
     _backendNames[QStringLiteral("groq")] = QStringLiteral("Groq");
     _backendNames[QStringLiteral("openai")] = QStringLiteral("OpenAI");
 
@@ -221,7 +230,10 @@ bool OpenAiService::hasConfiguredBackend() const {
         const QString& backendId = it.key();
         QString apiKey = _backendApiKeys.value(backendId);
 
-        if (backendId == QStringLiteral("groq") || backendId == QStringLiteral("openai")) {
+        const bool builtInBackend = backendId == QStringLiteral("openrouter") ||
+                                    backendId == QStringLiteral("groq") ||
+                                    backendId == QStringLiteral("openai");
+        if (builtInBackend) {
             apiKey = CryptoService::instance()->decryptToString(
                 settings.value(getApiKeySettingsKeyForBackend(backendId)).toString());
         }
@@ -230,7 +242,7 @@ bool OpenAiService::hasConfiguredBackend() const {
             return true;
         }
 
-        if (backendId != QStringLiteral("groq") && backendId != QStringLiteral("openai")) {
+        if (!builtInBackend) {
             return true;
         }
     }

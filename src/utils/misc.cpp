@@ -2701,6 +2701,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks, bool an
                                  "ownCloud/todoCalendarCalDAVPassword",
                                  "PiwikClientId",
                                  "networking/proxyPassword",
+                                 "ai/openrouter/apiKey",
                                  "ai/groq/apiKey",
                                  "ai/openai/apiKey",
                                  "ai/mcpServerToken",

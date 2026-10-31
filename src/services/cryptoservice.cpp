@@ -38,6 +38,7 @@ const QStringList &encryptedSettingsKeys() {
         QStringLiteral("networking/proxyPassword"),
         QStringLiteral("ownCloud/password"),
         QStringLiteral("ownCloud/todoCalendarCalDAVPassword"),
+        QStringLiteral("ai/openrouter/apiKey"),
         QStringLiteral("ai/groq/apiKey"),
         QStringLiteral("ai/openai/apiKey"),
     };

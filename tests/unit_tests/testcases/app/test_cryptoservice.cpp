@@ -65,6 +65,7 @@ void TestCryptoService::testMigrateEncryptedEmptySecrets() {
     QVERIFY(!encryptedEmpty.isEmpty());
     settings.setValue(QStringLiteral("ownCloud/todoCalendarCalDAVPassword"), encryptedEmpty);
     settings.setValue(QStringLiteral("ai/groq/apiKey"), encryptedEmpty);
+    settings.setValue(QStringLiteral("ai/openrouter/apiKey"), encryptedEmpty);
     settings.setValue(QStringLiteral("ai/openai/apiKey"), encryptedEmpty);
     settings.setValue(QStringLiteral("webSocketServerService/token"), encryptedEmpty);
 
@@ -114,6 +115,7 @@ void TestCryptoService::testMigrateEncryptedEmptySecrets() {
     QCOMPARE(settings.value(QStringLiteral("ownCloud/todoCalendarCalDAVPassword")).toString(),
              QString());
     QCOMPARE(settings.value(QStringLiteral("ai/groq/apiKey")).toString(), QString());
+    QCOMPARE(settings.value(QStringLiteral("ai/openrouter/apiKey")).toString(), QString());
     QCOMPARE(settings.value(QStringLiteral("ai/openai/apiKey")).toString(), QString());
     QCOMPARE(settings.value(QStringLiteral("webSocketServerService/token")).toString(), QString());
     QSqlQuery verifyQuery(db);

@@ -9,6 +9,8 @@ class TestOpenAiService : public QObject {
     void init();
     void cleanup();
     void testBackendLookupPreservesSelection();
+    void testOpenRouterBackend();
+    void testOpenRouterSettings();
     void testIsolatedCompletion_data();
     void testIsolatedCompletion();
 };
