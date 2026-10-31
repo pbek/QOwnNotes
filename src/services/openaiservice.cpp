@@ -250,8 +250,10 @@ QString OpenAiService::getApiBaseUrlForBackend(const QString& backendId) {
     }
 }
 
-QString OpenAiService::getApiKeyForCurrentBackend() {
-    return _backendApiKeys.value(getBackendId());
+QString OpenAiService::getApiKeyForCurrentBackend() { return getApiKeyForBackend(getBackendId()); }
+
+QString OpenAiService::getApiKeyForBackend(const QString& backendId) {
+    return _backendApiKeys.value(backendId);
 }
 
 QStringList OpenAiService::getModelsForBackend(const QString& backendId) {
@@ -441,14 +443,14 @@ void OpenAiCompleter::complete(const QString& prompt) {
 }
 
 QString OpenAiCompleter::completeSync(const QString& prompt) {
-    auto* manager = new QNetworkAccessManager();
+    QNetworkAccessManager manager;
     QEventLoop loop;
     QTimer timer;
 
     timer.setSingleShot(true);
 
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+    QObject::connect(&manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
 
     // 15 sec timeout for the response by default
     timer.start(OpenAiService::getResponseTimeout() * 1000);
@@ -474,7 +476,7 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
     QJsonDocument doc(json);
     QByteArray data = doc.toJson();
 
-    QNetworkReply* reply = manager->post(request, data);
+    QNetworkReply* reply = manager.post(request, data);
     loop.exec();
 
     // if we didn't get a timeout let us return the content
@@ -517,8 +519,7 @@ QString OpenAiCompleter::completeSync(const QString& prompt) {
         }
     }
 
-    reply->deleteLater();
-    delete (manager);
+    reply->abort();
 
     // TODO: How to mark timeouts?
     return tr("Timeout, while waiting for the AI response");

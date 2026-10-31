@@ -126,6 +126,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckdialog.h
     ${QON_TESTS_DIR}/testcases/app/test_notes.cpp
     ${QON_TESTS_DIR}/testcases/app/test_notes.h
+    ${QON_TESTS_DIR}/testcases/app/test_openaiservice.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_openaiservice.h
     ${QON_TESTS_DIR}/testcases/app/test_previewdetails.cpp
     ${QON_TESTS_DIR}/testcases/app/test_previewdetails.h
     ${QON_TESTS_DIR}/testcases/app/test_qmarkdowntextedit.cpp
@@ -240,6 +242,8 @@ set(APP_SOURCE_FILES
     services/languagetooltypes.h
     services/metricsservice.cpp
     services/metricsservice.h
+    services/openaiservice.cpp
+    services/openaiservice.h
     services/scriptingservice.cpp
     services/scriptingservice.h
     services/settingsservice.cpp

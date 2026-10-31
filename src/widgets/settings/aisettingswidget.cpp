@@ -84,7 +84,7 @@ void AiSettingsWidget::on_openAiApiKeyWebButton_clicked() {
 }
 
 void AiSettingsWidget::on_groqApiTestButton_clicked() {
-    runAiApiTest(QStringLiteral("groq"), QStringLiteral("llama3-8b-8192"),
+    runAiApiTest(QStringLiteral("groq"), QStringLiteral("openai/gpt-oss-20b"),
                  ui->groqApiKeyLineEdit->text());
 }
 
@@ -103,12 +103,12 @@ void AiSettingsWidget::on_openAiApiKeyLineEdit_textChanged(const QString &arg1) 
 
 void AiSettingsWidget::runAiApiTest(QString backend, QString model, QString apiKey) {
     OpenAiService *openAiService = OpenAiService::instance();
-    openAiService->setBackendId(backend);
-    openAiService->setModelId(model);
-    if (!apiKey.isEmpty()) {
-        openAiService->setApiKeyForCurrentBackend(apiKey);
+    if (apiKey.isEmpty()) {
+        apiKey = openAiService->getApiKeyForBackend(backend);
     }
-    QString result = openAiService->complete("Test");
+    // Test independently of the active backend, saved model and AI enabled state.
+    OpenAiCompleter completer(apiKey, model, openAiService->getApiBaseUrlForBackend(backend));
+    QString result = completer.completeSync(QStringLiteral("Test"));
     QMessageBox::information(this, tr("API test result for %1 (%2)").arg(backend, model), result);
 }
 

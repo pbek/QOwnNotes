@@ -13,6 +13,7 @@
 #include "testcases/app/test_nextclouddeckdialog.h"
 #include "testcases/app/test_nextclouddeckservice.h"
 #include "testcases/app/test_notes.h"
+#include "testcases/app/test_openaiservice.h"
 #include "testcases/app/test_previewdetails.h"
 #include "testcases/app/test_qmarkdowntextedit.h"
 #include "testcases/app/test_script.h"
@@ -56,6 +57,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestCryptoService(), argc, argv) +
                          QTest::qExec(new TestScript(), argc, argv) +
                          QTest::qExec(new TestNetwork(), argc, argv) +
+                         QTest::qExec(new TestOpenAiService(), argc, argv) +
                          QTest::qExec(new TestNextcloudDeckService(), argc, argv) +
                          QTest::qExec(new TestNextcloudDeckDialog(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
